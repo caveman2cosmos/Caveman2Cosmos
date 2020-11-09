@@ -17538,15 +17538,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		szBuffer.append(gDLL->getText("TXT_KEY_TECH_GLOBAL"));
 	}
 
-	for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
-	{
-		if (kTech.getUnitStrengthChange((UnitTypes) iI) != 0)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_TECH_UNIT_STRENGTH_CHANGE", kTech.getUnitStrengthChange((UnitTypes) iI), ((CvWString)GC.getUnitInfo((UnitTypes) iI).getDescription()).c_str()));
-		}
-	}
-
 	for (iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
 	{
 		if (kTech.getFreeSpecialistCount(iI) > 0)
@@ -18045,11 +18036,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 		else
 		{
-			float fCombat = (float)kUnit.getTotalModifiedCombatStrength100();
-			int iModifier = kUnit.getCombatStrengthModifier();
-			int iAdditional = game.getActiveTeam() == NO_TEAM ? 0 : (GET_TEAM(pCity != NULL ? pCity->getTeam() : game.getActiveTeam()).getUnitStrengthChange(eUnit));
-			fCombat += (iModifier * iAdditional);
-			fCombat /= 100;
+			const float fCombat = kUnit.getTotalModifiedCombatStrength100() / 100.0f;
 
 			if (fCombat > 0)
 			{
@@ -27643,15 +27630,8 @@ void CvGameTextMgr::buildMoveString(CvWStringBuffer &szBuffer, TechTypes eTech, 
 
 void CvGameTextMgr::buildFreeUnitString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
 {
-	UnitTypes eFreeUnit = NO_UNIT;
-	if (GC.getGame().getActivePlayer() != NO_PLAYER)
-	{
-		eFreeUnit = GET_PLAYER(GC.getGame().getActivePlayer()).getTechFreeUnit(eTech);
-	}
-	else if (GC.getTechInfo(eTech).getFirstFreeUnit() != NO_UNIT)
-	{
-		eFreeUnit = (UnitTypes)GC.getTechInfo(eTech).getFirstFreeUnit();
-	}
+	const UnitTypes eFreeUnit = (UnitTypes)GC.getTechInfo(eTech).getFirstFreeUnit();
+
 	if (eFreeUnit != NO_UNIT && (!bPlayerContext || GC.getGame().countKnownTechNumTeams(eTech) == 0))
 	{
 		if (bList)
@@ -32486,15 +32466,17 @@ void CvGameTextMgr::getAttitudeString(CvWStringBuffer& szBuffer, PlayerTypes ePl
 
 void CvGameTextMgr::getEspionageString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer, PlayerTypes eTargetPlayer)
 {
-	if (!GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		CvPlayer& kPlayer = GET_PLAYER(ePlayer);
-		TeamTypes eTeam = (TeamTypes) kPlayer.getTeam();
-		CvTeam& kTeam = GET_TEAM(eTeam);
-		CvPlayer& kTargetPlayer = GET_PLAYER(eTargetPlayer);
+	const TeamTypes eTeam = GET_PLAYER(ePlayer).getTeam();
+	const CvPlayer& kTargetPlayer = GET_PLAYER(eTargetPlayer);
 
-		szBuffer.append(gDLL->getText("TXT_KEY_ESPIONAGE_AGAINST_PLAYER", kTargetPlayer.getNameKey(), kTeam.getEspionagePointsAgainstTeam(kTargetPlayer.getTeam()), GET_TEAM(kTargetPlayer.getTeam()).getEspionagePointsAgainstTeam(kPlayer.getTeam())));
-	}
+	szBuffer.append(
+		gDLL->getText(
+			"TXT_KEY_ESPIONAGE_AGAINST_PLAYER",
+			kTargetPlayer.getNameKey(),
+			GET_TEAM(eTeam).getEspionagePointsAgainstTeam(kTargetPlayer.getTeam()),
+			GET_TEAM(kTargetPlayer.getTeam()).getEspionagePointsAgainstTeam(eTeam)
+		)
+	);
 }
 
 void CvGameTextMgr::getTradeString(CvWStringBuffer& szBuffer, const TradeData& tradeData, PlayerTypes ePlayer1, PlayerTypes ePlayer2)
@@ -34458,7 +34440,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		iModYield = (100 * iBaseCommerceRate) / iModifier;
 	}
 
-	int iProductionToCommerce = city.getProductionToCommerceModifier(eCommerceType) * city.getYieldRate(YIELD_PRODUCTION);
+	const int iProductionToCommerce = city.getProductionToCommerceModifier(eCommerceType) * city.getYieldRate(YIELD_PRODUCTION);
 	if (0 != iProductionToCommerce)
 	{
 		if (iProductionToCommerce%100 == 0)
@@ -34474,38 +34456,15 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		}
 		iModYield += iProductionToCommerce;
 	}
-
-	if (eCommerceType == COMMERCE_CULTURE && GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		int iEspionageToCommerce = city.getCommerceRateTimes100(COMMERCE_CULTURE) - iModYield;
-		if (0 != iEspionageToCommerce)
-		{
-			if (iEspionageToCommerce%100 == 0)
-			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_TO_COMMERCE", iEspionageToCommerce/100, info.getChar(), GC.getCommerceInfo(COMMERCE_ESPIONAGE).getChar()));
-				szBuffer.append(NEWLINE);
-			}
-			else
-			{
-				szRate = CvWString::format(L"+%d.%02d", iEspionageToCommerce/100, iEspionageToCommerce%100);
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_TO_COMMERCE_FLOAT", szRate.GetCString(), info.getChar(), GC.getCommerceInfo(COMMERCE_ESPIONAGE).getChar()));
-				szBuffer.append(NEWLINE);
-			}
-			iModYield += iEspionageToCommerce;
-		}
-	}
-	int iCheck = city.getCommerceRateTimes100(eCommerceType);
 	FAssertMsg(iModYield == city.getCommerceRateTimes100(eCommerceType), "Commerce yield does not match actual value");
 
 	CvWString szYield = CvWString::format(L"%d.%02d", iModYield/100, std::abs(iModYield%100));
 	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_FINAL_YIELD_FLOAT", info.getTextKeyWide(), szYield.GetCString(), info.getChar()));
 
-// BUG - Building Additional Commerce - start
 	if (bBuildingAdditionalCommerce && city.getOwner() == GC.getGame().getActivePlayer())
 	{
 		setBuildingAdditionalCommerceHelp(szBuffer, city, eCommerceType, DOUBLE_SEPARATOR);
 	}
-// BUG - Building Additional Commerce - end
 }
 
 void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldTypes eYieldType)

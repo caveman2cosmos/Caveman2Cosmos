@@ -936,4 +936,6 @@ public:
 	bool isValidByGameOption(const CvUnitCombatInfo& info) const;
 };
 
+#define CURRENT_MAP GC.getGame().getCurrentMap()
+
 #endif

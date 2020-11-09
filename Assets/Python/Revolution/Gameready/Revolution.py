@@ -528,16 +528,14 @@ class Revolution:
 		iPlayer = argsList[1]
 
 		if iPlayer > GC.getMAX_PC_PLAYERS():
-			iPrevPlayer = -1
-		else:
-			iPrevPlayer = iPlayer - 1
+			return
 
-		while iPrevPlayer > -1:
-			if GC.getPlayer(iPrevPlayer).isAlive():
-				self.checkForRevReinforcement(iPrevPlayer)
-				self.checkCivics(iPrevPlayer)
+		while iPlayer > -1:
+			iPlayer -= 1
+			if GC.getPlayer(iPlayer).isAlive():
+				self.checkForRevReinforcement(iPlayer)
+				self.checkCivics(iPlayer)
 				break
-			iPrevPlayer -= 1
 
 
 	def onEndPlayerTurn(self, argsList):
@@ -546,13 +544,14 @@ class Revolution:
 		iMax = GC.getMAX_PC_PLAYERS()
 
 		if iPlayer > iMax:
-			iNextPlayer = iPlayer
-		elif iPlayer + 1 >= iMax:
-			iNextPlayer = 0
-		else:
-			iNextPlayer = iPlayer + 1
+			return
+		# Do the check when iPlayer = iMax (Beast NPC) to cover the case where there's only one civ alive.
+		iNextPlayer = iPlayer + 1
 
 		while iNextPlayer != iPlayer:
+			if iNextPlayer >= iMax:
+				iGameTurn += 1
+				iNextPlayer = 0
 			CyPlayer = GC.getPlayer(iNextPlayer)
 
 			if RevData.revObjectExists(CyPlayer) and RevData.revObjectGetVal(CyPlayer, 'SpawnList'):
@@ -566,9 +565,6 @@ class Revolution:
 				break
 
 			iNextPlayer += 1
-			if iNextPlayer == iMax and iPlayer != iMax:
-				iGameTurn += 1
-				iNextPlayer = 0
 
 
 	def onCityAcquired( self, argsList):
@@ -862,17 +858,14 @@ class Revolution:
 				newUnit.setPromotionReady(True)
 
 		# Occasionally spawn a spy as well
-		if( not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE) ) :
-			if( (40 - 20*pRevPlayer.AI_getNumAIUnits(UnitAITypes.UNITAI_SPY) > GAME.getSorenRandNum(100,'Rev - Spy')) ) :
+		if 40 - 20*pRevPlayer.AI_getNumAIUnits(UnitAITypes.UNITAI_SPY) > GAME.getSorenRandNum(100,'Rev - Spy'):
+			iSpy = pRevPlayer.getBestUnitType(UnitAITypes.UNITAI_SPY)
+			if iSpy != -1 and revStrength > 1.5 and pRevPlayer.canTrain(iSpy,False,False):
+				pSpy = pRevPlayer.initUnit(iSpy, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+				pSpy.setFortifyTurns(GC.getDefineINT("MAX_FORTIFY_TURNS"))
 
-				iSpy = pRevPlayer.getBestUnitType(UnitAITypes.UNITAI_SPY)
-				if(iSpy != -1):
-					if( revStrength > 1.5 and pRevPlayer.canTrain(iSpy,False,False)) :
-						pSpy = pRevPlayer.initUnit( iSpy, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
-						pSpy.setFortifyTurns(GC.getDefineINT("MAX_FORTIFY_TURNS"))
-
-			# Give a little boost to espionage
-			pRevTeam.changeEspionagePointsAgainstTeam( owner.getTeam(), GAME.getSorenRandNum((10+pRevPlayer.getCurrentEra())*iNumUnits, 'Rev - Esp') )
+		# Give a little boost to espionage
+		pRevTeam.changeEspionagePointsAgainstTeam( owner.getTeam(), GAME.getSorenRandNum((10+pRevPlayer.getCurrentEra())*iNumUnits, 'Rev - Esp') )
 
 		if( pRevPlayer.isRebel() ) :
 			# Set reinforcement timer again
@@ -6236,7 +6229,7 @@ class Revolution:
 			pRevPlayer.changeGold(min([iGold, 200]))
 
 			# Espionage
-			if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE) and not bIsJoinWar:
+			if not bIsJoinWar:
 				espPoints = GAME.getSorenRandNum(20*len(cityList),'Revolt: esp') + (12+len(cityList))*max([pPlayer.getCommerceRate( CommerceTypes.COMMERCE_ESPIONAGE ), 6])
 				if pRevTeam.isAlive():
 					espPoints /= 2
@@ -6617,12 +6610,14 @@ class Revolution:
 							CvUtil.pyPrint("  Revolt - Great General (%d) spawned in %s"%(iGeneral,pCity.getName()))
 						pRevPlayer.initUnit(iGeneral, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
-				if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE) and iSpy != -1:
-					if pRevPlayer.canTrain(iSpy, False, False) and pRevPlayer.AI_getNumAIUnits(UnitAITypes.UNITAI_SPY) < 3:
-						if pCity.getNumRevolts(pCity.getOwner()) > 1 and revIdx > self.alwaysViolentThreshold or pCity.getNumRevolts(pCity.getOwner()) > 2 and revIdx > self.revInstigatorThreshold:
-							if self.LOG_DEBUG:
-								CvUtil.pyPrint("  Revolt - Spy spawned in %s" % pCity.getName())
-							pRevPlayer.initUnit(iSpy, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+				if (iSpy != -1 and pRevPlayer.canTrain(iSpy, False, False)
+				and pRevPlayer.AI_getNumAIUnits(UnitAITypes.UNITAI_SPY) < 3):
+					iNumRevolts = pCity.getNumRevolts(pCity.getOwner())
+					if (iNumRevolts > 1 and revIdx > self.alwaysViolentThreshold
+					or iNumRevolts > 2 and revIdx > self.revInstigatorThreshold):
+						if self.LOG_DEBUG:
+							CvUtil.pyPrint("  Revolt - Spy spawned in %s" % pCity.getName())
+						pRevPlayer.initUnit(iSpy, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
 				# Should buildings stay or some destroyed?
 				for [buildingType,iNum] in buildingList:

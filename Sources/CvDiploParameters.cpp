@@ -220,8 +220,6 @@ const wchar_t* CvDiploParameters::getChatText() const
 void CvDiploParameters::read(FDataStreamBase& stream)
 {
 	int iType;
-	uint uiFlag=0;
-	stream.Read(&uiFlag);	// flags for expansion
 
 	stream.Read(&iType);
 	m_eWhoTalkingTo = (PlayerTypes)iType;
@@ -247,9 +245,6 @@ void CvDiploParameters::read(FDataStreamBase& stream)
 
 void CvDiploParameters::write(FDataStreamBase& stream) const
 {
-	uint uiFlag=0;
-	stream.Write(uiFlag);		// flag for expansion
-
 	stream.Write(m_eWhoTalkingTo);
 	stream.Write(m_eCommentType);
 	m_ourOffer.Write(&stream);

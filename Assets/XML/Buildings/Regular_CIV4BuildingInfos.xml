@@ -93844,7 +93844,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPY_HIDEOUT</Type>
-			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
 			<Description>TXT_KEY_BUILDING_SPY_HIDEOUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPY_HIDEOUT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SPY_HIDEOUT_STRATEGY</Strategy>
@@ -93888,7 +93887,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPY_SAFE_HOUSE</Type>
-			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
 			<Description>TXT_KEY_BUILDING_SPY_SAFE_HOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPY_SAFE_HOUSE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SPY_SAFE_HOUSE_STRATEGY</Strategy>
