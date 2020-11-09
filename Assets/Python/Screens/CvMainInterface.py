@@ -100,7 +100,6 @@ class CvMainInterface:
 		# Cache Game Options
 		self.GO_REVOLUTION			= GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION)
 		self.GO_PICK_RELIGION		= GAME.isOption(GameOptionTypes.GAMEOPTION_PICK_RELIGION)
-		self.GO_NO_ESPIONAGE		= GAME.isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE)
 		self.GO_SIZE_MATTERS		= GAME.isOption(GameOptionTypes.GAMEOPTION_SIZE_MATTERS)
 		self.GO_WIN_FOR_LOSING		= GAME.isOption(GameOptionTypes.GAMEOPTION_WIN_FOR_LOSING)
 		self.GO_TECH_DIFFUSION   	= GAME.isOption(GameOptionTypes.GAMEOPTION_TECH_DIFFUSION)
@@ -817,12 +816,11 @@ class CvMainInterface:
 			screen.hide(btn)
 			x -= dx
 		# Intelligence
-		if not self.GO_NO_ESPIONAGE:
-			btn = "AdvisorButton8"
-			screen.setImageButton(btn, "", x, y, iSize, iSize, eWidGen, 0, 0)
-			screen.setStyle(btn, "Button_HUDAdvisorEspionage_Style")
-			screen.hide(btn)
-			x -= dx
+		btn = "AdvisorButton8"
+		screen.setImageButton(btn, "", x, y, iSize, iSize, eWidGen, 0, 0)
+		screen.setStyle(btn, "Button_HUDAdvisorEspionage_Style")
+		screen.hide(btn)
+		x -= dx
 		# Corporation
 		btn = "AdvisorButton7"
 		screen.setImageButton(btn, "", x, y, iSize, iSize, eWidGen, 0, 0)
@@ -4223,7 +4221,6 @@ class CvMainInterface:
 				iTeamAct = self.iTeam
 				CyTeamAct = self.CyTeam
 				# Options
-				bEspionage	= not self.GO_NO_ESPIONAGE
 				bShowDeadCivs		= ScoreOpt.isShowDeadCivs()
 				bShowDeadTag		= ScoreOpt.isShowDeadTag()
 				bGreyOutDeadCivs	= ScoreOpt.isGreyOutDeadCivs()
@@ -4243,7 +4240,7 @@ class CvMainInterface:
 				else:
 					bShowCityCount	= ScoreOpt.isShowCountCities()
 				bShowPower			= ScoreOpt.isShowPower()
-				if bShowPower and bEspionage:
+				if bShowPower:
 					iDemographicsMission = -1
 					iSpyMissions = GC.getNumEspionageMissionInfos()
 					for iMissionLoop in xrange(iSpyMissions):
@@ -4486,20 +4483,19 @@ class CvMainInterface:
 
 								if not bSelf:
 									bEspionageCanSeeResearch = False
-									if bEspionage:
-										if iTeamSpyPointAgainstYou < iYouSpyPointAgainstTeam:
-											scores.setEspionage()
-										for iMissionLoop in xrange(GC.getNumEspionageMissionInfos()):
-											if GC.getEspionageMissionInfo(iMissionLoop).isSeeResearch():
-												bEspionageCanSeeResearch = CyPlayerAct.canDoEspionageMission(iMissionLoop, iPlayer, None, -1)
-												break
+									if iTeamSpyPointAgainstYou < iYouSpyPointAgainstTeam:
+										scores.setEspionage()
+									for iMissionLoop in xrange(GC.getNumEspionageMissionInfos()):
+										if GC.getEspionageMissionInfo(iMissionLoop).isSeeResearch():
+											bEspionageCanSeeResearch = CyPlayerAct.canDoEspionageMission(iMissionLoop, iPlayer, None, -1)
+											break
 									if bSameTeam or bEspionageCanSeeResearch or GC.getTeam(iPlayerTeam).isVassal(iTeamAct) or bDebug:
 										iTech = CyPlayer.getCurrentResearch()
 										if iTech != -1:
 											techIconSB.append([iPlayer, iTech])
 											scores.setResearch(iTech, CyPlayer.getResearchTurnsLeft(iTech, True))
 									# Power Rating - if on, show according to espionage "see demographics" mission.
-									if bShowPower and (not bEspionage or CyPlayerAct.canDoEspionageMission(iDemographicsMission, iPlayer, None, -1)):
+									if bShowPower and CyPlayerAct.canDoEspionageMission(iDemographicsMission, iPlayer, None, -1):
 										iPower = CyPlayer.getPower()
 										if iPower > 0: # avoid divide by zero
 											fPowerRatio = iPlayerPower / float(iPower)

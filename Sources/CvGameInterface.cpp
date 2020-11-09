@@ -1652,15 +1652,9 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 	case CONTROL_INFO:
 	case CONTROL_DETAILS:
 	case CONTROL_SAVE_NORMAL:
+	case CONTROL_ESPIONAGE_SCREEN:
 		return true;
 		break;
-	case CONTROL_ESPIONAGE_SCREEN:
-		if (!isOption(GAMEOPTION_NO_ESPIONAGE))
-		{
-			return true;
-		}
-		break;
-
 	case CONTROL_NEXTCITY:
 	case CONTROL_PREVCITY:
 		if (!gDLL->getInterfaceIFace()->isSpaceshipScreenUp())

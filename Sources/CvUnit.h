@@ -2091,7 +2091,6 @@ protected:
 	int m_iExtraMaxHP;
 	int m_iExtraStrengthModifier;
 	int m_iExtraDamageModifier;
-	int m_iExtraCostModifier;
 
 	int m_iExtraUpkeep100;
 	int m_iUpkeepModifier;
@@ -3164,33 +3163,20 @@ private:
 	static int* g_paiTempAfflictOnAttackTypeImmediateCount;
 	static int* g_paiTempAfflictOnAttackTypeAttemptedCount;
 	static int* g_paiTempDistanceAttackCommunicability;
-	static int*	g_paiTempTerrainDoubleMoveCount;
-	static int*	g_paiTempFeatureDoubleMoveCount;
-	static int*	g_paiTempExtraTerrainAttackPercent;
-	static int*	g_paiTempExtraTerrainDefensePercent;
 	static int* g_paiTempAfflictOnAttackTypeMeleeCount;
 	static int* g_paiTempAfflictOnAttackTypeDistanceCount;
 //Team Project (4)
 	//WorkRateMod
 	//ls612: Terrain Work Modifiers
 	static int* g_paiTempExtraBuildWorkPercent;
-	static int* g_paiTempTerrainWorkPercent;
-	static int* g_paiTempFeatureWorkPercent;
-	static int* g_paiTempExtraTerrainWorkPercent;
-	static int* g_paiTempExtraFeatureWorkPercent;
-	static int*	g_paiTempExtraFeatureAttackPercent;
-	static int*	g_paiTempExtraFeatureDefensePercent;
 	static int*	g_paiTempExtraUnitCombatModifier;
 	static bool*	g_pabTempHasPromotion;
 	static bool*	g_pabTempHasUnitCombat;
-	static int*	g_paiTempTerrainProtected;
 	static int* g_paiTempSubCombatTypeCount;
 	static int* g_paiTempOngoingTrainingCount;
 	static int* g_paiTempRemovesUnitCombatTypeCount;
 	static int* g_paiTempExtraFlankingStrengthbyUnitCombatType;
 	static int* g_paiTempExtraWithdrawVSUnitCombatType;
-	static int* g_paiTempExtraWithdrawOnTerrainType;
-	static int* g_paiTempExtraWithdrawOnFeatureType;
 	static int* g_paiTempExtraPursuitVSUnitCombatType;
 	static int* g_paiTempExtraRepelVSUnitCombatType;
 	static int* g_paiTempExtraKnockbackVSUnitCombatType;

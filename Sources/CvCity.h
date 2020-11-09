@@ -1116,9 +1116,8 @@ public:
 	int getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
-	int getAdditionalBaseCommerceRateByBuildingImpl(CommerceTypes eIndex, BuildingTypes eBuilding);
+	int getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex, BuildingTypes eBuilding);
 	int getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
-	int getAdditionalCommerceRateModifierByBuildingImpl(CommerceTypes eIndex, BuildingTypes eBuilding);
 // BUG - Building Additional Commerce - end
 	void updateBuildingCommerce();
 
@@ -1128,7 +1127,6 @@ public:
 	int getAdditionalCommerceBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
 	int getAdditionalCommerceTimes100BySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
 	int getAdditionalBaseCommerceRateBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
-	int getAdditionalBaseCommerceRateBySpecialistImpl(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;
 // BUG - Specialist Additional Commerce - end
 
 
@@ -1311,10 +1309,11 @@ public:
 
 	bool isValidBuildingLocation(BuildingTypes eIndex) const;
 
-	int getNumFreeBuilding(BuildingTypes eIndex) const; // Exposed to Python
-	int getNumFreeAreaBuilding(BuildingTypes eIndex) const; // Exposed to Python
-	void setNumFreeBuilding(BuildingTypes eIndex, int iNewValue);
-	void setNumFreeAreaBuilding(BuildingTypes eIndex, int iNewValue);
+	uint16_t getFreeAreaBuildingCount(const short iIndex) const;
+	void changeFreeAreaBuildingCount(const BuildingTypes eIndex, const int iChange);
+	void setFreeBuilding(const BuildingTypes eIndex, const bool bNewValue);
+	bool isFreeBuilding(short iIndex) const;
+	void checkFreeBuildings();
 
 	bool isHasReligion(ReligionTypes eIndex) const;
 	void setHasReligion(ReligionTypes eIndex, bool bNewValue, bool bAnnounce, bool bArrows = true);
@@ -1404,11 +1403,6 @@ public:
 
 	DllExport void getBuildQueue(std::vector<std::string>& astrQueue) const;
 
-/************************************************************************************************/
-/* Afforess  New Functions                             12/7/09                                 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int getCivicHappiness() const;
 	int getAdditionalDefenseByBuilding(BuildingTypes eBuilding) const;
 	int getNumCityPlots() const;
@@ -1420,14 +1414,19 @@ public:
 	bool hasFreshWater() const;
 
 	bool canUpgradeUnit(UnitTypes eUnit) const;
-	int getBuildingProductionModifier(BuildingTypes eIndex) const;
-	void changeBuildingProductionModifier(BuildingTypes eIndex, int iChange);
-	int getUnitProductionModifier(UnitTypes eIndex) const; //Exposed to Python
-	void changeUnitProductionModifier(UnitTypes eIndex, int iChange);
+
+	int getBuildingProductionModifier(const BuildingTypes eIndex) const;
+	void changeBuildingProductionModifier(const BuildingTypes eIndex, const int iChange);
+
+	int getUnitProductionModifier(const UnitTypes eIndex) const; //Exposed to Python
+	void changeUnitProductionModifier(const UnitTypes eIndex, const int iChange);
+
 	bool hadVicinityBonus(BonusTypes eIndex) const;
 	bool hadRawVicinityBonus(BonusTypes eIndex) const;
-	int getBonusDefenseChanges(BonusTypes eIndex) const;
-	void changeBonusDefenseChanges(BonusTypes eIndex, int iChange);
+
+	int getBonusDefenseChanges(const BonusTypes eIndex) const;
+	void changeBonusDefenseChanges(const BonusTypes eIndex, const int iChange);
+
 	int getBonusCommerceRateModifier(CommerceTypes eIndex) const;
 	void changeBonusCommerceRateModifier(CommerceTypes eIndex, int iChange);
 	bool isBuiltFoodProducedUnit() const;
@@ -1503,10 +1502,9 @@ public:
 
 	void doInvasion();
 
-	void setDisabledBuilding(BuildingTypes eIndex, bool bNewValue);
-	bool isDisabledBuilding(BuildingTypes eIndex) const;
+	void setDisabledBuilding(const BuildingTypes eIndex, const bool bNewValue);
+	bool isDisabledBuilding(const short iIndex) const;
 
-//Team Project (5)
 	void setReligiouslyDisabledBuilding(BuildingTypes eIndex, bool bNewValue);
 	bool isReligiouslyDisabledBuilding(BuildingTypes eIndex) const;
 
@@ -1576,8 +1574,6 @@ public:
 	int getBonusCommercePercentChanges(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 	void changeBonusCommercePercentChanges(CommerceTypes eIndex, int iChange);
 
-	int getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex, BuildingTypes eBuilding);
-
 	bool isAutomatedCanBuild(BuildTypes eBuild) const; //Exposed to Python
 	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue); //Exposed to Python
 
@@ -1598,10 +1594,6 @@ public:
 	int getNumCitiesMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const;
 	int getHomeAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const;
 	int getOtherAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const;
-
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -1832,11 +1824,7 @@ protected:
 #define INVALID_STORED_FOOD_PERCENT_LOG (-1000000)	//	Used as a reserved value to trigger calculation on upgrade of save format
 	int m_iOverflowProduction;
 	int m_iFeatureProduction;
-/************************************************************************************************/
-/* Afforess	New Variables	    	 12/7/09                                                    */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	int m_iLostProductionBase;
 	int m_iSpecialistGoodHealth;
 	int m_iSpecialistBadHealth;
@@ -1875,9 +1863,6 @@ protected:
 
 	int* m_aiBonusCommerceRateModifier;
 	int* m_aiBonusCommercePercentChanges;
-	int* m_paiBuildingProductionModifier;
-	int* m_paiUnitProductionModifier;
-	int* m_paiBonusDefenseChanges;
 	mutable int* m_cachedPropertyNeeds;
 	bool* m_pabHadVicinityBonus;
 	bool* m_pabHadRawVicinityBonus;
@@ -1885,8 +1870,7 @@ protected:
 	mutable bool* m_pabHasRawVicinityBonusCached;
 	mutable bool* m_pabHasVicinityBonus;
 	mutable bool* m_pabHasRawVicinityBonus;
-	bool* m_pabDisabledBuilding;
-//Team Project (5)
+
 	bool* m_pabReligiouslyDisabledBuilding;
 	int* m_paiUnitCombatExtraStrength;
 	int* m_aiCommerceAttacks;
@@ -1898,10 +1882,15 @@ protected:
 
 	std::vector<PropertySpawns> m_aPropertySpawns;
 
+	std::vector<short> m_vFreeBuildings;
+	std::vector<short> m_vDisabledBuildings;
+	std::map<short, uint16_t> m_freeAreaBuildingCount;
+	std::map<short, int> m_bonusDefenseChanges;
+	std::map<short, int> m_buildingProductionMod;
+	std::map<short, int> m_unitProductionMod;
+
 	CultureLevelTypes m_eOccupationCultureLevel;
-/************************************************************************************************/
-/* Afforess	                          END                                                       */
-/************************************************************************************************/
+
 	int m_iMilitaryProductionModifier;
 	int m_iSpaceProductionModifier;
 	int m_iExtraTradeRoutes;
@@ -1975,7 +1964,6 @@ protected:
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
 	//TB Combat Mod (Buildings) begin
-	int m_iAidRate;
 	int m_iTotalFrontSupportPercentModifier;
 	int m_iTotalShortRangeSupportPercentModifier;
 	int m_iTotalMediumRangeSupportPercentModifier;
@@ -2042,7 +2030,7 @@ protected:
 	mutable bool* m_abCommerceRateDirty;
 	int* m_aiProductionToCommerceModifier;
 	int* m_aiBuildingCommerce;
-	int* m_aiSpecialistCommerce;
+	int* m_aiSpecialistCommerce100;
 	int* m_aiReligionCommerce;
 	int* m_aiCorporationCommerce;
 	int* m_aiCommerceRateModifier;
@@ -2084,8 +2072,6 @@ protected:
 	int* m_paiUnitCombatFreeExperience;
 	int* m_paiFreePromotionCount;
 	int* m_paiNumRealBuilding;
-	int* m_paiNumFreeBuilding;
-	int* m_paiNumFreeAreaBuilding;
 	mutable int* m_paiBuildingReplaced;
 	mutable bool m_bHasCalculatedBuildingReplacement;
 
@@ -2407,7 +2393,8 @@ public:
 
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, setBuildingListFilterActive, BuildingFilterTypes, bool);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, updateCommerce, CommerceTypes, bool);
-		DECLARE_MAP_FUNCTOR_2(CvCity, void, setNumFreeAreaBuilding, BuildingTypes, int);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, setFreeBuilding, BuildingTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeAreaBuildingCount, BuildingTypes, int);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeSpecialistCount, SpecialistTypes, int);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, processVoteSourceBonus, VoteSourceTypes, bool);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeBaseYieldRate, YieldTypes, int);
