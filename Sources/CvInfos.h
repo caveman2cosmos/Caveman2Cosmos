@@ -454,10 +454,7 @@ public:
 
 	bool readPass3();
 
-	int getUnitStrengthChange(int iUnit, bool bForLoad = false) const;
-	//TB Tech Tags
 	bool isGlobal() const;
-	//TB Tech Tags end
 
 	// Dale - AB: Bombing START
 	bool getDCMAirBombTech1() const;
@@ -582,8 +579,6 @@ protected:
 	int m_iCorporationMaintenanceModifier;
 	int m_iPrereqGameOption;
 	int* m_piFreeSpecialistCount;
-
-	int* m_piUnitStrengthChange;
 
 	std::vector<PrereqBuilding> m_aPrereqBuilding;
 	std::vector<PrereqBuilding> m_aPrereqOrBuilding;
@@ -1861,7 +1856,6 @@ public:
 	bool isFlatMovementCost() const; // Exposed to Python
 	bool isIgnoreTerrainCost() const; // Exposed to Python
 	bool isNukeImmune() const; // Exposed to Python
-	bool isPrereqBonuses() const; // Exposed to Python
 	bool isMechUnit() const; // Exposed to Python
 	bool isRenderBelowWater() const; // Exposed to Python
 	bool isRenderAlways() const; // Exposed to Python
@@ -2512,7 +2506,6 @@ protected:
 	bool m_bFlatMovementCost;
 	bool m_bIgnoreTerrainCost;
 	bool m_bNukeImmune;
-	bool m_bPrereqBonuses;
 	bool m_bMechanized;
 	bool m_bRenderBelowWater;
 	bool m_bRenderAlways;

@@ -2667,9 +2667,9 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			}
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_JOIN)
 			{
-// BUG - Specialist Actual Effects - start
+				// BUG - Specialist Actual Effects - start
 				GAMETEXT.parseSpecialistHelpActual(szBuffer, ((SpecialistTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData())), pMissionCity, true, 1);
-// BUG - Specialist Actual Effects - end
+				// BUG - Specialist Actual Effects - end
 			}
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_CONSTRUCT)
 			{
@@ -2687,9 +2687,9 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					else
 					{
 						szBuffer.append(NEWLINE);
-// BUG - Building Actual Effects - start
+						// BUG - Building Actual Effects - start
 						GAMETEXT.setBuildingHelpActual(szBuffer, ((BuildingTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData())), false, false, false, pMissionCity);
-// BUG - Building Actual Effects - end
+						// BUG - Building Actual Effects - end
 					}
 				}
 			}
@@ -2767,11 +2767,11 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 				}
 			}
-/************************************************************************************************/
-/* Afforess	                  Start		 12/31/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+			/************************************************************************************************/
+			/* Afforess	                  Start		 12/31/09                                                */
+			/*                                                                                              */
+			/*                                                                                              */
+			/************************************************************************************************/
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_HURRY_FOOD)
 			{
 				if (pMissionCity != NULL)
@@ -2819,9 +2819,9 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 				}
 			}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+			/************************************************************************************************/
+			/* Afforess	                     END                                                            */
+			/************************************************************************************************/
 
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_TRADE)
 			{
@@ -3522,7 +3522,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					szBuffer.append(CvWString::format(L"%s%s", NEWLINE, GC.getBuildInfo(eBuild).getHelp()).c_str());
 				}
 			}
-// BUG - Fortify/Sleep All Action - start
+			// BUG - Fortify/Sleep All Action - start
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_FORTIFY || 
 				//GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_ESCAPE ||
 				//GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_ESTABLISH ||
@@ -3530,7 +3530,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_SAME_UNITS_TYPE"));
 			}
-// BUG - Fortify/Sleep All Action - end
+			// BUG - Fortify/Sleep All Action - end
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_AMBUSH ||
 				GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_ASSASSINATE)
 			{
@@ -3658,44 +3658,33 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 				}
 			}
-// BUG - Delete All Action - start
+			// BUG - Delete All Action - start
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getCommandType() == COMMAND_DELETE)
 			{
-/************************************************************************************************/
-/* Afforess	                  Start		 02/12/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 				CLLNode<IDInfo>* pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
 				CvUnit* pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
 
-				if (pSelectedUnit->plot()->getOwner() == pSelectedUnit->getOwner())	//units have to be inside cultural borders
+				if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE)
+				//units have to be inside cultural borders
+				&& pSelectedUnit->plot()->getOwner() == pSelectedUnit->getOwner())
 				{
-					if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE))
+					int iGold = 0;
+
+					for (;
+						pSelectedUnitNode != NULL;
+						pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode))
 					{
-						int iGold = 0;
-						const int iTrainPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
-
-						for (;
-							pSelectedUnitNode != NULL;
-							pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode))
-						{
-							pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
-							iGold += pSelectedUnit->getUnitInfo().getProductionCost();
-						}
-					
-						iGold = (iGold * iTrainPercent) / std::max(1, (GC.getUNIT_GOLD_DISBAND_DIVISOR() * 100));
-
+						pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
+						iGold += pSelectedUnit->calculateScrapValue();
+					}
+					if (iGold != 0)
+					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOLD_FOR_DISBANDING", iGold));
 					}
 				}
-
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 			}
-// BUG - Delete All Action - end
+			// BUG - Delete All Action - end
 
 			if (GC.getCommandInfo((CommandTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getCommandType())).getAll())
 			{

@@ -1093,9 +1093,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANCIENT_MACHINERY_QUOTE</Tag>
-		<English>"An actress is not a machine, but they treat you like a machine. A money machine." - Marilyn Monroe</English>
-		<French>"Une actrice n'est pas une machine. Pourtant on vous traite comme une machine. Une machine à fric." - Marilyn Monroe</French>
-		<Polish>"Aktorka to nie maszyny, ale jest traktowana jest jak maszyna. Maszyna do zarabiania pieniędzy." - Marilyn Monroe</Polish>
+		<English>Aeolipilae are hollow brazen vessels, which have an opening or mouth of small size, by means of which they can be filled with water. Prior to the water being heated over the fire, but little wind is emitted. As soon, however, as the water begins to boil, a violent wind issues forth.[PARAGRAPH:2]- Vitruvius,[PARAGRAPH:1][SPACE][SPACE]"Ten Books on Architecture"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANCIENT_MACHINERY_STRATEGY</Tag>
@@ -4906,9 +4904,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CITY_PLANNING_QUOTE</Tag>
-		<English>"Make no little plans; they have no magic to stir men's blood." - Daniel Burnham</English>
-		<French>"Ne faites pas de petits plans, ils n'ont pas cette magie qui active le sang des hommes." - Daniel Burnham</French>
-		<Polish>"Wszystkie ulice we wszystkich miastach nieuchronnie prowadzą do kościoła albo na cmentarz." - Gabriel Garcia Marquez</Polish>
+		<English>So perish everyone that shall hereafter leap over my wall.[PARAGRAPH:2]- Romulus,[PARAGRAPH:1][SPACE][SPACE]"Livy's History of Rome: Book 1"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CITY_PLANNING_STRATEGY</Tag>
@@ -6770,8 +6766,7 @@ There are some evidence that the species Homo Erectus, some of which were likely
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CRYPTOGRAPHY_QUOTE</Tag>
-		<English>Hide in plain sight.</English>
-		<French>Cacher à la vue.</French>
+		<English>One must acknowledge with cryptography no amount of violence will ever solve a math problem.[PARAGRAPH:2]- Jacob Appelbaum,[PARAGRAPH:1][SPACE][SPACE]"Cypherpunks: Freedom and the Future of the Internet"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CRYPTOGRAPHY_STRATEGY</Tag>
@@ -7776,8 +7771,7 @@ There are some evidence that the species Homo Erectus, some of which were likely
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DRUG_TRADE_QUOTE</Tag>
-		<English>"The purpose of Plan Columbia was to deal with the increased cultivation and illegal activity associated with that cultivation concerning narco trafficking in Columbia." - Rand Beers</English>
-		<French>"L'objectif du Plan Columbia était de promouvoir la culture et les activités illégales liées aux narco-traffiquants de Colombie." - Rand Beers</French>
+		<English>It's only in drugs or death we'll see anything new, and death is just too controlling.[PARAGRAPH:2]- Chuck Palahniuk,[PARAGRAPH:1][SPACE][SPACE]"Survivor"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DRUG_TRADE_STRATEGY</Tag>
@@ -16134,9 +16128,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MOUNTED_ARCHERY_QUOTE</Tag>
-		<English>"A good archer is known not by his arrows, but his aim." -Thomas Fuller</English>
-		<French>"Un bon archer est connu non pas pour ses flèches, mais pour sa précision." -Thomas Fuller</French>
-		<Polish>"Dobry strzelec nie daje Panu Bogu kul nosić." - Alfred Konar</Polish>
+		<English>Horse and bow warfare is learned from birth by the barbarians. Ten of our subjects cannot equal one of them.[PARAGRAPH:2]- Imperial Missive,[PARAGRAPH:1][SPACE][SPACE]Cited in "Pushing beyond the Pale: The Yamato Conquest of the Emishi and Northern Japan"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MOUNTED_ARCHERY_STRATEGY</Tag>
@@ -25382,11 +25374,11 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WATERPROOF_CONCRETE_QUOTE</Tag>
-		<English>TBD</English>
+		<English>... as soon as it comes into contact with the waves of the sea and is submerged becomes a single stone mass (fierem unum lapidem), impregnable to the waves and every day stronger.[PARAGRAPH:2]- Pliny the Elder,[PARAGRAPH:1][SPACE][SPACE]"Naturalis Historia"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WATERPROOF_CONCRETE_STRATEGY</Tag>
-		<English>Speeds the building of buildings that contain water eg Pipes.</English>
+		<English>Speeds the building of buildings that contain water.</English>
 		<French>Augmente la vitesse de construction des bâtiments contenant des canalisations.</French>
 	</TEXT>
 	<TEXT>

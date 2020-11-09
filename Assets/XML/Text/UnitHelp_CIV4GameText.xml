@@ -37,10 +37,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BRANCH_MILITARY</Tag>
 		<English>[ICON_BULLET]Military Branch</English>
+		<German>[ICON_BULLET]militärischer Zweig</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BRANCH_CIVILIAN</Tag>
 		<English>[ICON_BULLET]Civilian Branch</English>
+		<German>[ICON_BULLET]ziviler Zweig</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BREAKDOWN_CHANCE</Tag>
@@ -278,6 +280,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_UPKEEP</Tag>
 		<English>[ICON_BULLET]Upkeep: %s1 [ICON_GOLD]</English>
+		<German>[ICON_BULLET]Laufende Kosten: %s1 [ICON_GOLD]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_UPKEEP_CHANGE</Tag>

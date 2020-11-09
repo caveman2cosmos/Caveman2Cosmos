@@ -451,51 +451,61 @@
 		<Tag>TXT_BUTTONTIP_ADVISOR_CIVICS</Tag>
 		<English>Civics Advisor</English>
 		<French>Conseiller des Doctrines</French>
+		<German>Gesellschaft</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BUTTONTIP_ADVISOR_CORPORATE</Tag>
 		<English>Corporate Advisor</English>
 		<French>Conseiller des Corporations</French>
+		<German>Kapitalgesellschaften</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BUTTONTIP_ADVISOR_DOMESTIC</Tag>
 		<English>Domestic Advisor</English>
 		<French>Conseiller Interne</French>
+		<German>Inland</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BUTTONTIP_ADVISOR_FINANCE</Tag>
 		<English>Finance Advisor</English>
 		<French>Conseiller Financier</French>
+		<German>Finanzen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BUTTONTIP_ADVISOR_FOREIGN</Tag>
 		<English>Foreign Advisor</English>
 		<French>Conseiller des Affaires Etrangères</French>
+		<German>Ausland</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BUTTONTIP_ADVISOR_INTELLIGENCE</Tag>
 		<English>Intelligence Advisor</English>
 		<French>Conseiller d'Espionnage</French>
+		<German>Geheimdienst</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BUTTONTIP_ADVISOR_MILITARY</Tag>
 		<English>Military Advisor</English>
 		<French>Conseiller Militaire</French>
+		<German>Militär</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BUTTONTIP_ADVISOR_PARTISAN</Tag>
 		<English>Partisan Advisor</English>
 		<French>Conseiller des Partis</French>
+		<German>Revolutionen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BUTTONTIP_ADVISOR_RELIGIOUS</Tag>
 		<English>Religious Advisor</English>
 		<French>Conseiller Religieux</French>
+		<German>Glaube</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BUTTONTIP_ADVISOR_TECHNOLOGY</Tag>
 		<English>Technology Advisor</English>
 		<French>Conseiller Technologique</French>
+		<German>Technologien</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_INTERFACE_TECH_HELP_RESEARCH</Tag>
@@ -1886,7 +1896,7 @@
 		<Tag>TXT_KEY_BULLET_STARTS_WITH</Tag>
 		<English>[ICON_BULLET]Starts with[SPACE]</English>
 		<French>[ICON_BULLET]Commence avec[SPACE]</French>
-		<German>[ICON_BULLET]Beginnt mit[SPACE]</German>
+		<German>[ICON_BULLET]beginnt mit[SPACE]</German>
 		<Italian>[ICON_BULLET]Inizia con[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Empieza con[SPACE]</Spanish>
 	</TEXT>
@@ -13235,113 +13245,113 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_ADVISORS_PEDIA</Tag>
-		<English>[H1]Advisors[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Ctrl +	E [COLOR_REVERT] &gt; Espionage Advisor		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F1 [COLOR_REVERT] &gt; Domestic Advisor		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Alt +	F1 [COLOR_REVERT] &gt; Split Colonies		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F2 [COLOR_REVERT] &gt; Financial Advisor		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F3 [COLOR_REVERT] &gt; Civics Advisor		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F4 [COLOR_REVERT] &gt; Foreign Advisor		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F5 [COLOR_REVERT] &gt; Military Advisor		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F6 [COLOR_REVERT] &gt; Technology Advisor	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F7 [COLOR_REVERT] &gt; Religion Advisor		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Shift +	F7 [COLOR_REVERT] &gt; Corporation Advisor	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F8 [COLOR_REVERT] &gt; Victory Status		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F9 [COLOR_REVERT] &gt; Demographics			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F10[COLOR_REVERT] &gt; Capital City			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F11[COLOR_REVERT] &gt; Globe View			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F12[COLOR_REVERT] &gt; Civilopedia			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H [COLOR_REVERT] &gt; Hall of Fame			[\BOLD]
+		<English>[H1]Advisors[\H1][BOLD][COLOR_HIGHLIGHT_TEXT]
+	Ctrl+	E[COLOR_REVERT]	-&gt; Espionage Advisor[COLOR_HIGHLIGHT_TEXT]
+			F1[COLOR_REVERT]	-&gt; Domestic Advisor[COLOR_HIGHLIGHT_TEXT]
+	Alt +	F1[COLOR_REVERT]	-&gt; Split Colonies[COLOR_HIGHLIGHT_TEXT]
+			F2[COLOR_REVERT]	-&gt; Financial Advisor[COLOR_HIGHLIGHT_TEXT]
+			F3[COLOR_REVERT]	-&gt; Civics Advisor[COLOR_HIGHLIGHT_TEXT]
+			F4[COLOR_REVERT]	-&gt; Foreign Advisor[COLOR_HIGHLIGHT_TEXT]
+			F5[COLOR_REVERT]	-&gt; Military Advisor[COLOR_HIGHLIGHT_TEXT]
+			F6[COLOR_REVERT]	-&gt; Technology Advisor[COLOR_HIGHLIGHT_TEXT]
+			F7[COLOR_REVERT]	-&gt; Religion Advisor[COLOR_HIGHLIGHT_TEXT]
+	Shift+	F7[COLOR_REVERT]	-&gt; Corporation Advisor[COLOR_HIGHLIGHT_TEXT]
+			F8[COLOR_REVERT]	-&gt; Victory Status[COLOR_HIGHLIGHT_TEXT]
+			F9[COLOR_REVERT]	-&gt; Demographics[COLOR_HIGHLIGHT_TEXT]
+			F10[COLOR_REVERT]	-&gt; Capital City[COLOR_HIGHLIGHT_TEXT]
+			F11[COLOR_REVERT]	-&gt; Globe View[COLOR_HIGHLIGHT_TEXT]
+			F12[COLOR_REVERT]	-&gt; Civilopedia[COLOR_HIGHLIGHT_TEXT]
+ Ctrl+Shift+	H[COLOR_REVERT]	-&gt; Hall of Fame
 		</English>
 		<French>[H1]Conseillers[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Ctrl +	E [COLOR_REVERT] &gt; Conseiller d'Espionnage		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F1[COLOR_REVERT] &gt; Conseiller Domestique			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Alt +	F1[COLOR_REVERT] &gt; Créer des Colonies			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F2[COLOR_REVERT] &gt; Conseiller Financier			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F3[COLOR_REVERT] &gt; Conseiller Civique			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F4[COLOR_REVERT] &gt; Conseiller International		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F5[COLOR_REVERT] &gt; Conseiller Militaire			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F6[COLOR_REVERT] &gt; Conseiller Technologique		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F7[COLOR_REVERT] &gt; Conseiller Religieux			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Shift +	F7[COLOR_REVERT] &gt; Conseiller des Corporations	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F8[COLOR_REVERT] &gt; Etat des Victoires			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F9[COLOR_REVERT] &gt; Démographies					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F10[COLOR_REVERT] &gt; Capitale						[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F11[COLOR_REVERT] &gt; Vue Globale					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F12[COLOR_REVERT] &gt; Civilopedia					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H [COLOR_REVERT] &gt; Hall of Fame					[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Ctrl +	E [COLOR_REVERT]	&gt; Conseiller d'Espionnage[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F1[COLOR_REVERT]	&gt; Conseiller Domestique[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt +	F1[COLOR_REVERT]	&gt; Créer des Colonies[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F2[COLOR_REVERT]	&gt; Conseiller Financier[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F3[COLOR_REVERT]	&gt; Conseiller Civique[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F4[COLOR_REVERT]	&gt; Conseiller International[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F5[COLOR_REVERT]	&gt; Conseiller Militaire[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F6[COLOR_REVERT]	&gt; Conseiller Technologique[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F7[COLOR_REVERT]	&gt; Conseiller Religieux[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift +	F7[COLOR_REVERT]	&gt; Conseiller des Corporations[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F8[COLOR_REVERT]	&gt; Etat des Victoires[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F9[COLOR_REVERT]	&gt; Démographies[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F10[COLOR_REVERT]	&gt; Capitale[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F11[COLOR_REVERT]	&gt; Vue Globale[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F12[COLOR_REVERT]	&gt; Civilopedia[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H [COLOR_REVERT]	&gt; Hall of Fame[\BOLD]
 		</French>
 		<German>[H1]Berater[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Strg +	E [COLOR_REVERT] &gt; Spionagebildschirm	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F1[COLOR_REVERT] &gt; Inlandsberater		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Alt +	F1[COLOR_REVERT] &gt; Kolonie freigeben		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F2[COLOR_REVERT] &gt; Finanzberater			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F3[COLOR_REVERT] &gt; Gesellschaftsformenberater	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F4[COLOR_REVERT] &gt; Auslandsberater		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F5[COLOR_REVERT] &gt; Militärberater		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F6[COLOR_REVERT] &gt; Technologieberater	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F7[COLOR_REVERT] &gt; Religionsberater		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt +	F7[COLOR_REVERT] &gt; Kapitalgesellschaften	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F8[COLOR_REVERT] &gt; Sieg					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F9[COLOR_REVERT] &gt; Info-Bildschirm		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F10[COLOR_REVERT] &gt; Hauptstadt			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F11[COLOR_REVERT] &gt; Globale Ansicht		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F12[COLOR_REVERT] &gt; Civilopedia			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Strg + Shift +	H [COLOR_REVERT] &gt; Hall of Fame			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Strg +	E [COLOR_REVERT]	&gt; Spionagebildschirm[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F1[COLOR_REVERT]	&gt; Inlandsberater[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt +	F1[COLOR_REVERT]	&gt; Kolonie freigeben[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F2[COLOR_REVERT]	&gt; Finanzberater[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F3[COLOR_REVERT]	&gt; Gesellschaftsformenberater[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F4[COLOR_REVERT]	&gt; Auslandsberater[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F5[COLOR_REVERT]	&gt; Militärberater[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F6[COLOR_REVERT]	&gt; Technologieberater[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F7[COLOR_REVERT]	&gt; Religionsberater[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt +	F7[COLOR_REVERT]	&gt; Kapitalgesellschaften[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F8[COLOR_REVERT]	&gt; Sieg[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F9[COLOR_REVERT]	&gt; Info-Bildschirm[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F10[COLOR_REVERT]	&gt; Hauptstadt[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F11[COLOR_REVERT]	&gt; Globale Ansicht[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F12[COLOR_REVERT]	&gt; Civilopedia[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Strg + Shift +	H [COLOR_REVERT]	&gt; Hall of Fame[\BOLD]
 		</German>
 		<Italian>[H1]Consiglieri[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Ctrl +	E [COLOR_REVERT] &gt; Consigliere spionistico	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F1[COLOR_REVERT] &gt; Consigliere interno		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Alt +	F1[COLOR_REVERT] &gt; Libera Colonia			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F2[COLOR_REVERT] &gt; Consigliere economico		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F3[COLOR_REVERT] &gt; Consigliere politico		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F4[COLOR_REVERT] &gt; Consigliere estero		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F5[COLOR_REVERT] &gt; Consigliere militare		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F6[COLOR_REVERT] &gt; Consigliere tecnologico	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F7[COLOR_REVERT] &gt; Consigliere religioso		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Shift +	F7[COLOR_REVERT] &gt; Consigliere corporativo	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F8[COLOR_REVERT] &gt; Condizioni di vittoria	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F9[COLOR_REVERT] &gt; Demografica				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F10[COLOR_REVERT] &gt; Capitale					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F11[COLOR_REVERT] &gt; Vista globale				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F12[COLOR_REVERT] &gt; Civilopedia				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H [COLOR_REVERT] &gt; Hall of Fame				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Ctrl +	E [COLOR_REVERT]	&gt; Consigliere spionistico[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F1[COLOR_REVERT]	&gt; Consigliere interno[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt +	F1[COLOR_REVERT]	&gt; Libera Colonia[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F2[COLOR_REVERT]	&gt; Consigliere economico[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F3[COLOR_REVERT]	&gt; Consigliere politico[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F4[COLOR_REVERT]	&gt; Consigliere estero[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F5[COLOR_REVERT]	&gt; Consigliere militare[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F6[COLOR_REVERT]	&gt; Consigliere tecnologico[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F7[COLOR_REVERT]	&gt; Consigliere religioso[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift +	F7[COLOR_REVERT]	&gt; Consigliere corporativo[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F8[COLOR_REVERT]	&gt; Condizioni di vittoria[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F9[COLOR_REVERT]	&gt; Demografica[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F10[COLOR_REVERT]	&gt; Capitale[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F11[COLOR_REVERT]	&gt; Vista globale[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F12[COLOR_REVERT]	&gt; Civilopedia[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H [COLOR_REVERT]	&gt; Hall of Fame[\BOLD]
 		</Italian>
 		<Spanish>[H1]Consejeros[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Ctrl +	E [COLOR_REVERT] &gt; Consejero de espionaje			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F1[COLOR_REVERT] &gt; Consejero de Interior				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Alt +	F1[COLOR_REVERT] &gt; Conceder la independencia			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F2[COLOR_REVERT] &gt; Consejero financiero				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F3[COLOR_REVERT] &gt; Cambiar de principios				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F4[COLOR_REVERT] &gt; Consejero de Asuntos Exteriores	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F5[COLOR_REVERT] &gt; Consejero militar					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F6[COLOR_REVERT] &gt; Consejero de tecnología			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F7[COLOR_REVERT] &gt; Consejero religioso				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Shift +	F7[COLOR_REVERT] &gt; Consejero de corporaciones		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F8[COLOR_REVERT] &gt; Condiciones para la victoria		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F9[COLOR_REVERT] &gt; Estadísticas						[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F10[COLOR_REVERT] &gt; Capital							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F11[COLOR_REVERT] &gt; Vista global						[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F12[COLOR_REVERT] &gt; Civilopedia						[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H [COLOR_REVERT] &gt; Hall of Fame			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Ctrl +	E [COLOR_REVERT]	&gt; Consejero de espionaje[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F1[COLOR_REVERT]	&gt; Consejero de Interior[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt +	F1[COLOR_REVERT]	&gt; Conceder la independencia[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F2[COLOR_REVERT]	&gt; Consejero financiero[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F3[COLOR_REVERT]	&gt; Cambiar de principios[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F4[COLOR_REVERT]	&gt; Consejero de Asuntos Exteriores[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F5[COLOR_REVERT]	&gt; Consejero militar[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F6[COLOR_REVERT]	&gt; Consejero de tecnología[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F7[COLOR_REVERT]	&gt; Consejero religioso[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift +	F7[COLOR_REVERT]	&gt; Consejero de corporaciones[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F8[COLOR_REVERT]	&gt; Condiciones para la victoria[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F9[COLOR_REVERT]	&gt; Estadísticas[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F10[COLOR_REVERT]	&gt; Capital[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F11[COLOR_REVERT]	&gt; Vista global[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F12[COLOR_REVERT]	&gt; Civilopedia[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H [COLOR_REVERT]	&gt; Hall of Fame[\BOLD]
 		</Spanish>
 		<Polish>[H1]Doradcy[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Ctrl +	E [COLOR_REVERT] &gt; Ekran szpiegostwa				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F1[COLOR_REVERT] &gt; Doradca ds. wewnętrznych	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Alt +	F1[COLOR_REVERT] &gt; Podział kolonii			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F2[COLOR_REVERT] &gt; Doradca finansowy				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F3[COLOR_REVERT] &gt; Zmień doktrynę		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F4[COLOR_REVERT] &gt; Doradca ds. zagranicznych		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F5[COLOR_REVERT] &gt; Doradca wojskowy				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F6[COLOR_REVERT] &gt; Doradca naukowy				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F7[COLOR_REVERT] &gt; Zmień religię		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Shift +	F7[COLOR_REVERT] &gt; Doradca ds. korporacji		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F8[COLOR_REVERT] &gt; Warunki zwycięstwa		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F9[COLOR_REVERT] &gt; Statystyki					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F10[COLOR_REVERT] &gt; Stolica						[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F11[COLOR_REVERT] &gt; Widok globalny				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F12[COLOR_REVERT] &gt; Cywilopedia					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H [COLOR_REVERT] &gt; Hall of Fame					[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Ctrl +	E [COLOR_REVERT]	&gt; Ekran szpiegostwa[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F1[COLOR_REVERT]	&gt; Doradca ds. wewnętrznych[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt +	F1[COLOR_REVERT]	&gt; Podział kolonii[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F2[COLOR_REVERT]	&gt; Doradca finansowy[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F3[COLOR_REVERT]	&gt; Zmień doktrynę[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F4[COLOR_REVERT]	&gt; Doradca ds. zagranicznych[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F5[COLOR_REVERT]	&gt; Doradca wojskowy[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F6[COLOR_REVERT]	&gt; Doradca naukowy[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F7[COLOR_REVERT]	&gt; Zmień religię[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift +	F7[COLOR_REVERT]	&gt; Doradca ds. korporacji[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F8[COLOR_REVERT]	&gt; Warunki zwycięstwa[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F9[COLOR_REVERT]	&gt; Statystyki[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F10[COLOR_REVERT]	&gt; Stolica[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F11[COLOR_REVERT]	&gt; Widok globalny[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F12[COLOR_REVERT]	&gt; Cywilopedia[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H [COLOR_REVERT]	&gt; Hall of Fame[\BOLD]
 		</Polish>
 	</TEXT>
 	<TEXT>
@@ -13350,66 +13360,69 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_BUG_PEDIA</Tag>
-		<English>[H1]BUG Mod[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+O[COLOR_REVERT][\BOLD]BUG Option Screen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+F1[COLOR_REVERT][\BOLD]BUG Help (external)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+M, Alt+Ctrl+R[COLOR_REVERT][\BOLD]Create reminder
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+L[COLOR_REVERT][\BOLD]Start/Stop logging
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+E[COLOR_REVERT][\BOLD]Create manual log entry
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+B[COLOR_REVERT][\BOLD]Log battle statistics
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+X[COLOR_REVERT][\BOLD]Toggle dotmap edit mode
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+X[COLOR_REVERT][\BOLD]Show/hide dotmap
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+G[COLOR_REVERT][\BOLD]Regenerate the map
-		[NEWLINE]
-		[NEWLINE]Hold [BOLD][COLOR_HIGHLIGHT_TEXT]Alt[COLOR_REVERT][\BOLD] while hovering the mouse over a unit icon in the plot list to highlight its possible moves on the map.</English>
+		<English>[H1]BUG Mod[\H1][BOLD][COLOR_HIGHLIGHT_TEXT]
+ Alt + Ctrl + O[COLOR_REVERT] -&gt; BUG Option Screen[COLOR_HIGHLIGHT_TEXT]
+
+ Alt +
+	M[COLOR_REVERT][TAB]-&gt; Create reminder[COLOR_HIGHLIGHT_TEXT]
+	L[COLOR_REVERT][TAB]-&gt; Start/Stop logging[COLOR_HIGHLIGHT_TEXT]
+	E[COLOR_REVERT][TAB]-&gt; Create manual log entry[COLOR_HIGHLIGHT_TEXT]
+	B[COLOR_REVERT][TAB]-&gt; Log battle statistics[COLOR_HIGHLIGHT_TEXT]
+	G[COLOR_REVERT][TAB]-&gt; Regenerate the map (only works on turn 0)[COLOR_HIGHLIGHT_TEXT]
+
+ X +
+	Alt[COLOR_REVERT][TAB]-&gt; Toggle dotmap edit mode[COLOR_HIGHLIGHT_TEXT]
+	Ctrl[COLOR_REVERT][TAB]-&gt; Show/hide dotmap[COLOR_HIGHLIGHT_TEXT]
+	Shift[COLOR_REVERT][TAB]-&gt; Toggle dotmap marker size
+		</English>
 		<German>[H1]BUG Mod[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Alt+O[COLOR_REVERT][\BOLD]Optionsbildschirm der BUG Mod
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Alt+F1[COLOR_REVERT][\BOLD]BUG Hilfe-Datei aufrufen (externe Anwendung)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+M, Strg+Alt+R[COLOR_REVERT][\BOLD]Erinnerung schreiben
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+L[COLOR_REVERT][\BOLD]Protokollierung starten/stoppen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+E[COLOR_REVERT][\BOLD]Protokolleintrag erstellen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+B[COLOR_REVERT][\BOLD]Kampfstatistiken protokollieren
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+X[COLOR_REVERT][\BOLD]Strategie-Overlay bearbeiten
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+X[COLOR_REVERT][\BOLD]Strategie-Overlay ein-/ausblenden
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+G[COLOR_REVERT][\BOLD]Karte neu generieren
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Alt+O[COLOR_REVERT][\BOLD][TAB][TAB]Optionsbildschirm der BUG Mod
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Alt+F1[COLOR_REVERT][\BOLD][TAB][TAB]BUG Hilfe-Datei aufrufen (externe Anwendung)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+M, Strg+Alt+R[COLOR_REVERT][\BOLD][TAB]Erinnerung schreiben
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+L[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Protokollierung starten/stoppen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+E[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Protokolleintrag erstellen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+B[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Kampfstatistiken protokollieren
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+X[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Strategie-Overlay bearbeiten
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+X[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Strategie-Overlay ein-/ausblenden
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+G[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Karte neu generieren
 		[NEWLINE]
 		[NEWLINE]Drücken und Halten von [BOLD][COLOR_HIGHLIGHT_TEXT]Alt[COLOR_REVERT][\BOLD], während der Mauszeiger über ein Einheitensymbol in der Einheitenliste bewegt wird, zeigt alle möglichen Einheitenbewegungen an.
 		</German>
 		<Italian>[H1]Scorciatoie del BUG Mod[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+O[COLOR_REVERT][\BOLD]Apre la Schermata delle Opzioni del BUG Mod
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+F1[COLOR_REVERT][\BOLD]Apre l'Help (esterno) del BUG Mod
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+M, Alt+Ctrl+R[COLOR_REVERT][\BOLD]Crea un Promemoria
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+L[COLOR_REVERT][\BOLD]Avvia/Pausa il Registro
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+E[COLOR_REVERT][\BOLD]Crea una nota personalizzata nel Registro
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+B[COLOR_REVERT][\BOLD]Inserisce le statistiche di combattimento nel Registro
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+X[COLOR_REVERT][\BOLD]Alterna la modalità del Livello Strategico
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+X[COLOR_REVERT][\BOLD]Mostra/Nasconde il Livello Strategico
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+N[COLOR_REVERT][\BOLD]Apre la finestra di test per la denominazione delle Unità
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+G[COLOR_REVERT][\BOLD]Regenerate the map
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+O[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Apre la Schermata delle Opzioni del BUG Mod
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+F1[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Apre l'Help (esterno) del BUG Mod
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+M, Alt+Ctrl+R[COLOR_REVERT][\BOLD][TAB]Crea un Promemoria
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+L[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Avvia/Pausa il Registro
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+E[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Crea una nota personalizzata nel Registro
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+B[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Inserisce le statistiche di combattimento nel Registro
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+X[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Alterna la modalità del Livello Strategico
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+X[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Mostra/Nasconde il Livello Strategico
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+N[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Apre la finestra di test per la denominazione delle Unità
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+G[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Regenerate the map
 		[NEWLINE]
 		[NEWLINE]Tenere premuto [BOLD][COLOR_HIGHLIGHT_TEXT]Alt[COLOR_REVERT][\BOLD] stazionando il mouse sopra un'icona di Unità per evidenziare sulla mappa le possibilità di movimento di tale Unità.
 		</Italian>
 		<Spanish>[H1]Mod BUG[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+O[COLOR_REVERT][\BOLD]Vista de opciones del Mod BUG
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+F1[COLOR_REVERT][\BOLD]Ayuda de BUG (en otra ventana)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+M, Alt+Ctrl+R[COLOR_REVERT][\BOLD]Crear recordatorio
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+L[COLOR_REVERT][\BOLD]Arrancar/parar registro
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+E[COLOR_REVERT][\BOLD]Crear entrada manual en el registro
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+B[COLOR_REVERT][\BOLD]Pasar estadísticas de batalla al registro
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+X[COLOR_REVERT][\BOLD]Activar edición del mapa de puntos
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+X[COLOR_REVERT][\BOLD]Mostrar/ocultar mapa de puntos
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+G[COLOR_REVERT][\BOLD]Regenerar el mapa
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+O[COLOR_REVERT][\BOLD][TAB][TAB]Vista de opciones del Mod BUG
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+F1[COLOR_REVERT][\BOLD][TAB][TAB]Ayuda de BUG (en otra ventana)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+M, Alt+Ctrl+R[COLOR_REVERT][\BOLD][TAB]Crear recordatorio
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+L[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Arrancar/parar registro
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+E[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Crear entrada manual en el registro
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+B[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Pasar estadísticas de batalla al registro
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+X[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Activar edición del mapa de puntos
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+X[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Mostrar/ocultar mapa de puntos
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+G[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Regenerar el mapa
 		[NEWLINE]
 		[NEWLINE]Mantener [BOLD][COLOR_HIGHLIGHT_TEXT]Alt[COLOR_REVERT][\BOLD] mientras se pasa el ratón por encimar de una unidad para destacar sus posibles movimientos en el mapa.
 		</Spanish>
 		<Polish>[H1]BUG Mod[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+O[COLOR_REVERT][\BOLD]Ekran opcji BUG
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+F1[COLOR_REVERT][\BOLD]Pomoc BUG (zewnętrzna)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+M, Alt+Ctrl+R[COLOR_REVERT][\BOLD]Stwórz przypomnienie
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+L[COLOR_REVERT][\BOLD]Rozpocznij/Zatrzymaj zapisywanie do logu
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+E[COLOR_REVERT][\BOLD]Stwórz ręcznie wpis do logu
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+B[COLOR_REVERT][\BOLD]Zapisz statystyki bitwy w logu
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]ALT + X[COLOR_REVERT][\BOLD]Przełączaj tryb kropkowania mapy
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+O[COLOR_REVERT][\BOLD][TAB][TAB]Ekran opcji BUG
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+F1[COLOR_REVERT][\BOLD][TAB][TAB]Pomoc BUG (zewnętrzna)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+M, Alt+Ctrl+R[COLOR_REVERT][\BOLD][TAB]Stwórz przypomnienie
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+L[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Rozpocznij/Zatrzymaj zapisywanie do logu
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+E[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Stwórz ręcznie wpis do logu
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+B[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Zapisz statystyki bitwy w logu
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]ALT + X[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Przełączaj tryb kropkowania mapy
 		[NEWLINE]
 		[NEWLINE]Przytrzymaj [BOLD][COLOR_HIGHLIGHT_TEXT]Alt[COLOR_REVERT][\BOLD] gdy wskaźnik myszki znajduje się nad ikoną jednostki, aby wskazać jej możliwe ruchy na mapie
 		</Polish>
@@ -13425,63 +13438,63 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_CAMERA_PEDIA</Tag>
 		<English>[H1]Camera[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Left Arrow[COLOR_REVERT][\BOLD]Lock camera angle 45 o CW
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Right Arrow[COLOR_REVERT][\BOLD]Lock camera angle 45 o CCW
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+F[COLOR_REVERT][\BOLD]Satellite view
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+O[COLOR_REVERT][\BOLD]Change perspective
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+F[COLOR_REVERT][\BOLD]Flying camera mode (enable in INI file)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Left Arrow[COLOR_REVERT][\BOLD]Rotate camera CW
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Right Arrow[COLOR_REVERT][\BOLD]Rotate camera CCW
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Page Up[COLOR_REVERT][\BOLD]Zoom camera in
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Page Down[COLOR_REVERT][\BOLD]Zoom camera out
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Left Arrow[COLOR_REVERT][\BOLD][TAB]Lock camera angle 45 o CW
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Right Arrow[COLOR_REVERT][\BOLD][TAB]Lock camera angle 45 o CCW
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+F[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Satellite view
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+O[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Change perspective
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+F[COLOR_REVERT][\BOLD][TAB][TAB]Flying camera mode (enable in INI file)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Left Arrow[COLOR_REVERT][\BOLD][TAB]Rotate camera CW
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Right Arrow[COLOR_REVERT][\BOLD][TAB]Rotate camera CCW
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Page Up[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Zoom camera in
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Page Down[COLOR_REVERT][\BOLD][TAB][TAB]Zoom camera out
 		[NEWLINE]
 		</English>
 		<German>[H1]Kamerasteuerung[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Pfeiltaste links[COLOR_REVERT][\BOLD]Kamerawinkel 45° im Uhrzeigersinn verankern
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Pfeiltaste rechts[COLOR_REVERT][\BOLD]Kamerawinkel 45° gegen den Uhrzeigersinn verankern
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+F[COLOR_REVERT][\BOLD]Draufsicht umschalten
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+O[COLOR_REVERT][\BOLD]Kameraansicht abflachen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Alt+F[COLOR_REVERT][\BOLD]Flugkamera umschalten (in der INI-Datei aktivieren)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt+Pfeiltaste links[COLOR_REVERT][\BOLD]Kamera im Uhrzeigersinn drehen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt+Pfeiltaste rechts[COLOR_REVERT][\BOLD]Kamera gegen den Uhrzeigersinn drehen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Bild-auf[COLOR_REVERT][\BOLD]Zoomfaktor erhöhen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Bild-ab[COLOR_REVERT][\BOLD]Zoomfaktor verringern
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Pfeiltaste links[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Kamerawinkel 45° im Uhrzeigersinn verankern
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Pfeiltaste rechts[COLOR_REVERT][\BOLD][TAB][TAB]Kamerawinkel 45° gegen den Uhrzeigersinn verankern
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+F[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Draufsicht umschalten
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+O[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Kameraansicht abflachen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Alt+F[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Flugkamera umschalten (in der INI-Datei aktivieren)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt+Pfeiltaste links[COLOR_REVERT][\BOLD][TAB][TAB]Kamera im Uhrzeigersinn drehen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt+Pfeiltaste rechts[COLOR_REVERT][\BOLD][TAB]Kamera gegen den Uhrzeigersinn drehen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Bild-auf[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Zoomfaktor erhöhen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Bild-ab[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Zoomfaktor verringern
 		[NEWLINE]
 		</German>
 		<Italian>[H1]Camera[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Frecce[COLOR_REVERT][\BOLD]Traslano la visuale
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Freccia sinistra[COLOR_REVERT][\BOLD]Ruota la visuale in senso orario
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Freccia Destra[COLOR_REVERT][\BOLD]Ruota la visuale in senso antiorario
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Freccia sinistra[COLOR_REVERT][\BOLD]Ruota e blocca la visuale a 45° in senso orario
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Freccia destra[COLOR_REVERT][\BOLD]Ruota e blocca la visuale a 45° in senso antiorario
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+F[COLOR_REVERT][\BOLD]Attiva/Disattiva la Visuale satellitare
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+O[COLOR_REVERT][\BOLD]Alza/Abbassa la Visuale
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]PgSù[COLOR_REVERT][\BOLD]Aumenta Zoom
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]PgGiù[COLOR_REVERT][\BOLD]Riduci Zoom
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Frecce[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Traslano la visuale
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Freccia sinistra[COLOR_REVERT][\BOLD][TAB]Ruota la visuale in senso orario
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Freccia Destra[COLOR_REVERT][\BOLD][TAB][TAB]Ruota la visuale in senso antiorario
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Freccia sinistra[COLOR_REVERT][\BOLD][TAB][TAB]Ruota e blocca la visuale a 45° in senso orario
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Freccia destra[COLOR_REVERT][\BOLD][TAB][TAB]Ruota e blocca la visuale a 45° in senso antiorario
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+F[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Attiva/Disattiva la Visuale satellitare
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+O[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Alza/Abbassa la Visuale
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]PgSù[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Aumenta Zoom
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]PgGiù[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Riduci Zoom
 		[NEWLINE]
 		</Italian>
 		<Spanish>[H1]Cámara[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+flecha izquierda[COLOR_REVERT][\BOLD]Girar la cámara 45 grados a la izquierda
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+flecha derecha[COLOR_REVERT][\BOLD]Girar la cámara 45 grados a la derecha
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+F[COLOR_REVERT][\BOLD]Vista satélite
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+O[COLOR_REVERT][\BOLD]Cambiar perspectiva
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+F[COLOR_REVERT][\BOLD]Modo cámara voladora (se habilita en el fichero INI)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+flecha izquierda[COLOR_REVERT][\BOLD]Rotar cámara a la izquierda
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+flecha derecha[COLOR_REVERT][\BOLD]Rotar cámara a la derecha
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Av. Pág.[COLOR_REVERT][\BOLD]Acercar
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Re. Pág.[COLOR_REVERT][\BOLD]Alejar
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+flecha izquierda[COLOR_REVERT][\BOLD][TAB]Girar la cámara 45 grados a la izquierda
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+flecha derecha[COLOR_REVERT][\BOLD][TAB]Girar la cámara 45 grados a la derecha
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+F[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Vista satélite
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+O[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Cambiar perspectiva
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+F[COLOR_REVERT][\BOLD][TAB][TAB]Modo cámara voladora (se habilita en el fichero INI)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+flecha izquierda[COLOR_REVERT][\BOLD][TAB]Rotar cámara a la izquierda
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+flecha derecha[COLOR_REVERT][\BOLD][TAB]Rotar cámara a la derecha
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Av. Pág.[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Acercar
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Re. Pág.[COLOR_REVERT][\BOLD][TAB][TAB]Alejar
 		[NEWLINE]
 		</Spanish>
 		<Polish>[H1]Kamera[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Strzałka w Lewo[COLOR_REVERT][\BOLD]Zablokuj kamerę na 45 stopniach zgodnie z ruchem WZ
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Strzałka w Prawo[COLOR_REVERT][\BOLD]Zablokuj kamerę na 45 stopniach przeciwnie do ruchu WZ
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+F[COLOR_REVERT][\BOLD]Widok z satelity
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+O[COLOR_REVERT][\BOLD]Zmień perspektywę
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+F[COLOR_REVERT][\BOLD]Tryb latającej kamery (aktywowane w pliki INI)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Strzałka w Lewo[COLOR_REVERT][\BOLD]Obróć kamerę zgodnie z ruchem WZ
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Strzałka w Prawo[COLOR_REVERT][\BOLD]Obróć kamerę przeciwnie do ruchu WZ
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Page Up[COLOR_REVERT][\BOLD]Przybliż kamerę
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Page Down[COLOR_REVERT][\BOLD]Oddal kamerę
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Strzałka w Lewo[COLOR_REVERT][\BOLD][TAB]Zablokuj kamerę na 45 stopniach zgodnie z ruchem WZ
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Strzałka w Prawo[COLOR_REVERT][\BOLD][TAB]Zablokuj kamerę na 45 stopniach przeciwnie do ruchu WZ
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+F[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Widok z satelity
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+O[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Zmień perspektywę
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Ctrl+F[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Tryb latającej kamery (aktywowane w pliki INI)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Strzałka w Lewo[COLOR_REVERT][\BOLD][TAB]Obróć kamerę zgodnie z ruchem WZ
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Strzałka w Prawo[COLOR_REVERT][\BOLD][TAB]Obróć kamerę przeciwnie do ruchu WZ
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Page Up[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Przybliż kamerę
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Page Down[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Oddal kamerę
 		[NEWLINE]
 		</Polish>
 	</TEXT>
@@ -13497,75 +13510,75 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_CITYSCREEN_PEDIA</Tag>
 		<English>[H1]City Screen[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Enter[COLOR_REVERT][\BOLD]Exit city screen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+add item to build queue[COLOR_REVERT][\BOLD]Build item indefinitely
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+add item to build queue[COLOR_REVERT][\BOLD]Add to beginning of queue
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+add item to build queue[COLOR_REVERT][\BOLD]Add item to end of queue
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+(#)[COLOR_REVERT][\BOLD]Save a production queue. Load w/same key
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Insert[COLOR_REVERT][\BOLD]Open nearest friendly city screen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Middle mouse button[COLOR_REVERT][\BOLD]Exit city screen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Numpad arrows[COLOR_REVERT][\BOLD]Cycle through cities
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Click Fwd, Back mouse buttons[COLOR_REVERT][\BOLD]Cycle through cities
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Enter[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Exit city screen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+add item to build queue[COLOR_REVERT][\BOLD][TAB]Build item indefinitely
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+add item to build queue[COLOR_REVERT][\BOLD][TAB]Add to beginning of queue
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+add item to build queue[COLOR_REVERT][\BOLD][TAB]Add item to end of queue
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+(#)[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Save a production queue. Load w/same key
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Insert[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Open nearest friendly city screen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Middle mouse button[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Exit city screen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Numpad arrows[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Cycle through cities
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Click Fwd, Back mouse buttons[COLOR_REVERT][\BOLD][TAB]Cycle through cities
 		[NEWLINE]
 		</English>
 		<French>[H1]Ecran de Ville[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Entrée[COLOR_REVERT][\BOLD]Sortir de l'Ecran de Ville
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+add item to build queue[COLOR_REVERT][\BOLD]Build item indefinitely
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+add item to build queue[COLOR_REVERT][\BOLD]Add to beginning of queue
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+add item to build queue[COLOR_REVERT][\BOLD]Add item to end of queue
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+(#)[COLOR_REVERT][\BOLD]Save a production queue. Load w/same key
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Insert[COLOR_REVERT][\BOLD]Open nearest friendly city screen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Middle mouse button[COLOR_REVERT][\BOLD]Exit city screen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Numpad arrows[COLOR_REVERT][\BOLD]Cycle through cities
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Click Fwd, Back mouse buttons[COLOR_REVERT][\BOLD]Cycle through cities
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Entrée[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Sortir de l'Ecran de Ville
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+add item to build queue[COLOR_REVERT][\BOLD][TAB]Build item indefinitely
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+add item to build queue[COLOR_REVERT][\BOLD][TAB]Add to beginning of queue
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+add item to build queue[COLOR_REVERT][\BOLD][TAB]Add item to end of queue
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+(#)[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Save a production queue. Load w/same key
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Insert[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Open nearest friendly city screen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Middle mouse button[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Exit city screen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Numpad arrows[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Cycle through cities
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Click Fwd, Back mouse buttons[COLOR_REVERT][\BOLD][TAB]Cycle through cities
 		[NEWLINE]
 		</French>
 		<German>[H1]Stadt-Bildschirm[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Eingabe, 3. Maustaste[COLOR_REVERT][\BOLD]Stadt-Bildschirm verlassen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Klick auf ein Bauprojekt[COLOR_REVERT][\BOLD]Bauprojekt in Endlosschleife produzieren
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Klick auf ein Bauprojekt[COLOR_REVERT][\BOLD]Bauprojekt an den Anfang der Produktionsliste
-		[NEWLINE]setzen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt+Klick auf ein Bauprojekt[COLOR_REVERT][\BOLD]Bauprojekt ans Ende der Produktionsliste
-		[NEWLINE]setzen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Zifferntaste[COLOR_REVERT][\BOLD]Produktionsliste speichern
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Zifferntaste[COLOR_REVERT][\BOLD]Gespeicherte Produktionsliste laden
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Einfg[COLOR_REVERT][\BOLD]Stadt-Bildschirm der nächsten verbündeten
-		[NEWLINE]Stadt öffnen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Pfeiltaste links/rechts, Mausrad[COLOR_REVERT][\BOLD]Zur nächsten Stadt springen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Eingabe, 3. Maustaste[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Stadt-Bildschirm verlassen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Klick auf ein Bauprojekt[COLOR_REVERT][\BOLD][TAB][TAB]Bauprojekt in Endlosschleife produzieren
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Klick auf ein Bauprojekt[COLOR_REVERT][\BOLD][TAB][TAB]Bauprojekt an den Anfang der Produktionsliste
+		[NEWLINE][TAB][TAB][TAB][TAB][TAB][TAB][TAB]setzen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt+Klick auf ein Bauprojekt[COLOR_REVERT][\BOLD][TAB]Bauprojekt ans Ende der Produktionsliste
+		[NEWLINE][TAB][TAB][TAB][TAB][TAB][TAB][TAB]setzen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Zifferntaste[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Produktionsliste speichern
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Zifferntaste[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Gespeicherte Produktionsliste laden
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Einfg[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB][TAB][TAB]Stadt-Bildschirm der nächsten verbündeten
+		[NEWLINE][TAB][TAB][TAB][TAB][TAB][TAB][TAB]Stadt öffnen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Pfeiltaste links/rechts, Mausrad[COLOR_REVERT][\BOLD][TAB]Zur nächsten Stadt springen
 		[NEWLINE]
 		</German>
 		<Italian>[H1]Schermata cittadina[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Invio[COLOR_REVERT][\BOLD]Esci dalla schermata cittadina
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Aggiunta nella coda di costruzione[COLOR_REVERT][\BOLD]Costruisci all'infinito l'oggetto aggiunto
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Aggiunta nella coda di costruzione[COLOR_REVERT][\BOLD]Aggiungi l'oggetto all'inizio della coda
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Aggiunta nella coda di costruzione[COLOR_REVERT][\BOLD]Aggiungi l'oggetto alla fine della coda
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+(#)[COLOR_REVERT][\BOLD]Salva la coda di costruzione
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT](#)[COLOR_REVERT][\BOLD]Carica la coda di costruzione
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Frecce del Tastierino numerico[COLOR_REVERT][\BOLD]Scorrono fra le Città
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Invio[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB][TAB][TAB][TAB][TAB]Esci dalla schermata cittadina
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Aggiunta nella coda di costruzione[COLOR_REVERT][\BOLD][TAB]Costruisci all'infinito l'oggetto aggiunto
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Aggiunta nella coda di costruzione[COLOR_REVERT][\BOLD][TAB]Aggiungi l'oggetto all'inizio della coda
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Aggiunta nella coda di costruzione[COLOR_REVERT][\BOLD][TAB]Aggiungi l'oggetto alla fine della coda
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+(#)[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB][TAB][TAB][TAB][TAB]Salva la coda di costruzione
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT](#)[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB][TAB][TAB][TAB][TAB][TAB]Carica la coda di costruzione
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Frecce del Tastierino numerico[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Scorrono fra le Città
 		[NEWLINE]
 		</Italian>
 		<Spanish>[H1]Vista de Ciudad[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Intro[COLOR_REVERT][\BOLD]Salir de la Vista de Ciudad
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+añadir elemento a la cola de construcción[COLOR_REVERT][\BOLD]Construir elemento indefinidamente
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+añadir elemento a la cola de construcción[COLOR_REVERT][\BOLD]Añadir elemento al principio de la cola
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+añadir elemento a la cola de construcción[COLOR_REVERT][\BOLD]Añadir elemento al final de la cola
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+(#)[COLOR_REVERT][\BOLD]Guardar una cola de producción. Cargar con la misma tecla #
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Insert[COLOR_REVERT][\BOLD]Ver ciudad más cercana
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Botón central del ratón[COLOR_REVERT][\BOLD]Salir de la Vista de Ciudad
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Flechas del teclado numérico[COLOR_REVERT][\BOLD]Cambiar entre las ciudades
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Rueda del ratón adelante/atrás[COLOR_REVERT][\BOLD]Cambiar entre las ciudades
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Intro[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Salir de la Vista de Ciudad
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+añadir elemento a la cola de construcción[COLOR_REVERT][\BOLD][TAB]Construir elemento indefinidamente
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+añadir elemento a la cola de construcción[COLOR_REVERT][\BOLD][TAB]Añadir elemento al principio de la cola
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+añadir elemento a la cola de construcción[COLOR_REVERT][\BOLD][TAB]Añadir elemento al final de la cola
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+(#)[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Guardar una cola de producción. Cargar con la misma tecla #
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Insert[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Ver ciudad más cercana
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Botón central del ratón[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Salir de la Vista de Ciudad
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Flechas del teclado numérico[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Cambiar entre las ciudades
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Rueda del ratón adelante/atrás[COLOR_REVERT][\BOLD][TAB]Cambiar entre las ciudades
 		[NEWLINE]
 		</Spanish>
 		<Polish>[H1]Widok miasta[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Enter[COLOR_REVERT][\BOLD]Zamknij widok miasta
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+dodanie do kolejki budowania[COLOR_REVERT][\BOLD]Buduj do odwołania
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+dodanie do kolejki budowania[COLOR_REVERT][\BOLD]Dodaj do początku kolejki
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+dodanie do kolejki budowania[COLOR_REVERT][\BOLD]Dodaj na koniec kolejki budowania
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+(#)[COLOR_REVERT][\BOLD]Zapisz kolejkę budowania na numer (#)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Insert[COLOR_REVERT][\BOLD]Otwórz widok miasta najbliższego miasta
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]ŚPM[COLOR_REVERT][\BOLD]Zamknij widok miasta
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strzałki na kl.numerycznej[COLOR_REVERT][\BOLD]Przełączaj między miastami
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Fwd, Back[COLOR_REVERT][\BOLD]Przełączaj między miastami
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Enter[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB][TAB]Zamknij widok miasta
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+dodanie do kolejki budowania[COLOR_REVERT][\BOLD][TAB]Buduj do odwołania
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+dodanie do kolejki budowania[COLOR_REVERT][\BOLD][TAB]Dodaj do początku kolejki
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+dodanie do kolejki budowania[COLOR_REVERT][\BOLD][TAB]Dodaj na koniec kolejki budowania
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+(#)[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB][TAB]Zapisz kolejkę budowania na numer (#)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Insert[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB][TAB]Otwórz widok miasta najbliższego miasta
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]ŚPM[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB][TAB][TAB]Zamknij widok miasta
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strzałki na kl.numerycznej[COLOR_REVERT][\BOLD][TAB]Przełączaj między miastami
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Fwd, Back[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB][TAB]Przełączaj między miastami
 		[NEWLINE]
 		</Polish>
 	</TEXT>
@@ -13577,18 +13590,18 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_COMMERCE_CONTROL_PEDIA</Tag>
 		<English>[H1]Commerce distribution control[\H1]
-	Left Mouse Click:
-		1		[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl[COLOR_REVERT][\BOLD]
-		4		[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Shift[COLOR_REVERT][\BOLD]
-		5
-		10		[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Alt[COLOR_REVERT][\BOLD]
-		20		[BOLD][COLOR_HIGHLIGHT_TEXT]Shift[COLOR_REVERT][\BOLD]
-		25		[BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Alt[COLOR_REVERT][\BOLD]
-		50		[BOLD][COLOR_HIGHLIGHT_TEXT]Alt[COLOR_REVERT][\BOLD]
-		100		[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Shift+Alt[COLOR_REVERT][\BOLD]
-	Right mouse Click:
-		100
-		Tooltip	[BOLD][COLOR_HIGHLIGHT_TEXT]Ctlr/Shift/Alt[COLOR_REVERT][\BOLD]</English>
+ Left Mouse Click:
+	1		[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl[COLOR_REVERT][\BOLD]
+	4		[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Shift[COLOR_REVERT][\BOLD]
+	5
+	10		[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Alt[COLOR_REVERT][\BOLD]
+	20		[BOLD][COLOR_HIGHLIGHT_TEXT]Shift[COLOR_REVERT][\BOLD]
+	25		[BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Alt[COLOR_REVERT][\BOLD]
+	50		[BOLD][COLOR_HIGHLIGHT_TEXT]Alt[COLOR_REVERT][\BOLD]
+	100		[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Shift+Alt[COLOR_REVERT][\BOLD]
+ Right mouse Click:
+	100
+	Tooltip	[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl/Shift/Alt[COLOR_REVERT][\BOLD]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_GAME</Tag>
@@ -13602,137 +13615,137 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_GAME_PEDIA</Tag>
 		<English>[H1]Game[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+D[COLOR_REVERT][\BOLD]Change player name/email
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Q[COLOR_REVERT][\BOLD]Retire (give up)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+W[COLOR_REVERT][\BOLD]Access Worldbuilder
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Z[COLOR_REVERT][\BOLD]Enter "chipotle" Debug Mode
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Home, End[COLOR_REVERT][\BOLD]Cycle through cities
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Insert[COLOR_REVERT][\BOLD]Open nearest friendly city screen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Enter[COLOR_REVERT][\BOLD]Cycle units, end turn
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+S[COLOR_REVERT][\BOLD]Save game
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+L[COLOR_REVERT][\BOLD]Load game
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+F5[COLOR_REVERT][\BOLD]Quick save (Single player only)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+F8[COLOR_REVERT][\BOLD]Quick load (Single player only)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+M[COLOR_REVERT][\BOLD]Turn music on/off
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+O[COLOR_REVERT][\BOLD]Options menu
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Esc[COLOR_REVERT][\BOLD]Exit current screen/open menu
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Tab[COLOR_REVERT][\BOLD]Chat/Event Log
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+D[COLOR_REVERT][\BOLD]Contact Civ popup
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Enter[COLOR_REVERT][\BOLD]Force turn to end
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Pause[COLOR_REVERT][\BOLD]Pause game/pauses turn timer
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Print Screen[COLOR_REVERT][\BOLD]Take Screenshot
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]\[COLOR_REVERT][\BOLD]Cycle to previous unit
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+C[COLOR_REVERT][\BOLD]Set all units of same type as active
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Enter[COLOR_REVERT][\BOLD]Cycle units, end turn
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT], (comma)[COLOR_REVERT][\BOLD]Cycle to previous unit (same tile)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]. (period)[COLOR_REVERT][\BOLD]Cycle to next unit (same tile)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]/[COLOR_REVERT][\BOLD]Cycle through active workers
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+D[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Change player name/email
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Q[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Retire (give up)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+W[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Access Worldbuilder
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Z[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Enter "chipotle" Debug Mode
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Home, End[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Cycle through cities
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Insert[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Open nearest friendly city screen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Enter[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Cycle units, end turn
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+S[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Save game
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+L[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Load game
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+F5[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Quick save (Single player only)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+F8[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Quick load (Single player only)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+M[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Turn music on/off
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+O[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Options menu
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Esc[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Exit current screen/open menu
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Tab[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Chat/Event Log
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+D[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Contact Civ popup
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Enter[COLOR_REVERT][\BOLD][TAB][TAB]Force turn to end
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Pause[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Pause game/pauses turn timer
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Print Screen[COLOR_REVERT][\BOLD][TAB][TAB]Take Screenshot
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]\[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Cycle to previous unit
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+C[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Set all units of same type as active
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Enter[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Cycle units, end turn
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT], (comma)[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Cycle to previous unit (same tile)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]. (period)[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Cycle to next unit (same tile)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]/[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Cycle through active workers
 		[NEWLINE]
 		</English>
 		<German>[H1]Allgemein[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+D[COLOR_REVERT][\BOLD]Spielername/Zivilisationsname ändern
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Q[COLOR_REVERT][\BOLD]Ausscheiden (aufgeben)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+W[COLOR_REVERT][\BOLD]Weltenbauer öffnen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Z[COLOR_REVERT][\BOLD]Debug-Modus ("chipotle") aktivieren
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Pos1, Ende[COLOR_REVERT][\BOLD]Durch Städte schalten
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Einfg[COLOR_REVERT][\BOLD]Stadt-Bildschirm der nächsten verbündeten Stadt öffnen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Eingabe[COLOR_REVERT][\BOLD]Durch Einheiten schalten, Runde beenden
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+S[COLOR_REVERT][\BOLD]Spiel speichern
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+L[COLOR_REVERT][\BOLD]Spiel laden
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt+F5[COLOR_REVERT][\BOLD]Schnellspeichern (nur im Singleplayer)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt+F8[COLOR_REVERT][\BOLD]Schnellladen (nur im Singleplayer)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+M[COLOR_REVERT][\BOLD]Musik ein/aus
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+O[COLOR_REVERT][\BOLD]Optionsmenü
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Esc[COLOR_REVERT][\BOLD]Aktuellen Bildschirm verlassen/Menü öffnen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Tab[COLOR_REVERT][\BOLD]Chat-/Ereignis-Log
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt+D[COLOR_REVERT][\BOLD]Kontaktaufnahme mit einer anderen Zivilisation
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt+Eingabe[COLOR_REVERT][\BOLD]Runde beenden
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Pause[COLOR_REVERT][\BOLD]Spiel pausieren
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Druck[COLOR_REVERT][\BOLD]Screenshot anfertigen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]\[COLOR_REVERT][\BOLD]Zur letzten gewählten Einheit wechseln
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+C[COLOR_REVERT][\BOLD]Alle Einheiten desselben Typs aktivieren
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT], (Komma)[COLOR_REVERT][\BOLD]Zur vorherigen Einheit wechseln (gleiches Feld)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]. (Punkt)[COLOR_REVERT][\BOLD]Zur nächsten Einheit wechseln (gleiches Feld)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]-[COLOR_REVERT][\BOLD]Durch aktive Bautrupps schalten
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+D[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Spielername/Zivilisationsname ändern
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Q[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Ausscheiden (aufgeben)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+W[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Weltenbauer öffnen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Z[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Debug-Modus ("chipotle") aktivieren
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Pos1, Ende[COLOR_REVERT][\BOLD][TAB][TAB]Durch Städte schalten
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Einfg[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Stadt-Bildschirm der nächsten verbündeten Stadt öffnen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Eingabe[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Durch Einheiten schalten, Runde beenden
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+S[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Spiel speichern
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+L[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Spiel laden
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt+F5[COLOR_REVERT][\BOLD][TAB][TAB]Schnellspeichern (nur im Singleplayer)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt+F8[COLOR_REVERT][\BOLD][TAB][TAB]Schnellladen (nur im Singleplayer)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+M[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Musik ein/aus
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+O[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Optionsmenü
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Esc[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Aktuellen Bildschirm verlassen/Menü öffnen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Tab[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Chat-/Ereignis-Log
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt+D[COLOR_REVERT][\BOLD][TAB][TAB]Kontaktaufnahme mit einer anderen Zivilisation
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt+Eingabe[COLOR_REVERT][\BOLD][TAB]Runde beenden
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Pause[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Spiel pausieren
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Druck[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Screenshot anfertigen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]\[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Zur letzten gewählten Einheit wechseln
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+C[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Alle Einheiten desselben Typs aktivieren
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT], (Komma)[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Zur vorherigen Einheit wechseln (gleiches Feld)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]. (Punkt)[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Zur nächsten Einheit wechseln (gleiches Feld)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]-[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Durch aktive Bautrupps schalten
 		[NEWLINE]
 		</German>
 		<Italian>[H1]Gioco[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+D[COLOR_REVERT][\BOLD]Cambia il nome del Giocatore e della Civiltà
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Shift+D[COLOR_REVERT][\BOLD]Cambia i parametri della Partita
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Q[COLOR_REVERT][\BOLD]Resa
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+W[COLOR_REVERT][\BOLD]Accesso all'Editor
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Z[COLOR_REVERT][\BOLD]Entra in modalità debug "chipotle"
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Invio[COLOR_REVERT][\BOLD]Scorre le Unità, Termina il turno
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+S[COLOR_REVERT][\BOLD]Salva
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+L[COLOR_REVERT][\BOLD]Carica
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+F5[COLOR_REVERT][\BOLD]Salvataggio rapido (solo in SinglePlayer)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+F8[COLOR_REVERT][\BOLD]Caricamento rapido (solo in SinglePlayer)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+M[COLOR_REVERT][\BOLD]Attiva/Disattiva musica
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+O[COLOR_REVERT][\BOLD]Menù delle opzioni
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Esc[COLOR_REVERT][\BOLD]Uscita dalla schermata corrente, Menù principale
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Tab[COLOR_REVERT][\BOLD]Visualizza Registro
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+D[COLOR_REVERT][\BOLD]Contatta le Civiltà
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Invio[COLOR_REVERT][\BOLD]Forza la fine del turno
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Pausa[COLOR_REVERT][\BOLD]Mette in pausa il gioco
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Stamp[COLOR_REVERT][\BOLD]Salva uno Screenshot
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ins[COLOR_REVERT][\BOLD]Apre la Schermata cittadina della Città amica più vicina
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Home[COLOR_REVERT] e [COLOR_HIGHLIGHT_TEXT]Fine[COLOR_REVERT][\BOLD]Scorrono le Città
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+D[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Cambia il nome del Giocatore e della Civiltà
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Shift+D[COLOR_REVERT][\BOLD][TAB][TAB]Cambia i parametri della Partita
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Q[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Resa
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+W[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Accesso all'Editor
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Z[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Entra in modalità debug "chipotle"
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Invio[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Scorre le Unità, Termina il turno
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+S[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Salva
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+L[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Carica
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+F5[COLOR_REVERT][\BOLD][TAB][TAB]Salvataggio rapido (solo in SinglePlayer)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+F8[COLOR_REVERT][\BOLD][TAB][TAB]Caricamento rapido (solo in SinglePlayer)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+M[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Attiva/Disattiva musica
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+O[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Menù delle opzioni
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Esc[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Uscita dalla schermata corrente, Menù principale
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Tab[COLOR_REVERT][\BOLD][TAB][TAB]Visualizza Registro
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+D[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Contatta le Civiltà
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Invio[COLOR_REVERT][\BOLD][TAB][TAB]Forza la fine del turno
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Pausa[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Mette in pausa il gioco
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Stamp[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Salva uno Screenshot
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ins[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Apre la Schermata cittadina della Città amica più vicina
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Home[COLOR_REVERT] e [COLOR_HIGHLIGHT_TEXT]Fine[COLOR_REVERT][\BOLD][TAB][TAB]Scorrono le Città
 		[NEWLINE]
 		</Italian>
 		<Spanish>[H1]Partida[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+D[COLOR_REVERT][\BOLD]Cambiar nombre del jugador/email
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Q[COLOR_REVERT][\BOLD]Retirarse (rendirse)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+W[COLOR_REVERT][\BOLD]Acceder al Creador de mundos
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Z[COLOR_REVERT][\BOLD]Entrar en el modo de depuración "chipotle"
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Inicio, Fin[COLOR_REVERT][\BOLD]Cambiar entre las ciudades
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Insert[COLOR_REVERT][\BOLD]Entrar en la ciudad amiga más próxima
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Intro[COLOR_REVERT][\BOLD]Cambiar entre las unidades, finalizar turno
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+S[COLOR_REVERT][\BOLD]Guardar partida
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+L[COLOR_REVERT][\BOLD]Cargar partida
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+F5[COLOR_REVERT][\BOLD]Guardado rápido (solo partidas de un jugador)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+F8[COLOR_REVERT][\BOLD]Cargar rápido (solo partidas de un jugador)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+M[COLOR_REVERT][\BOLD]Activar/desactivar música
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+O[COLOR_REVERT][\BOLD]Menú de opciones
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Esc[COLOR_REVERT][\BOLD]Salir de la vista actual/menú de opciones
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Tab[COLOR_REVERT][\BOLD]Chat/registro de sucesos
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+D[COLOR_REVERT][\BOLD]Cuadro emergente de Contactar con civilización
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Intro[COLOR_REVERT][\BOLD]Forzar fin del turno
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Pausa[COLOR_REVERT][\BOLD]Pausar juego/pausar contador de tiempo
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Impr Pant[COLOR_REVERT][\BOLD]Tomar instantánea partida
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]\[COLOR_REVERT][\BOLD]Cambiar a la unidad previa
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+C[COLOR_REVERT][\BOLD]Establecer todas las unidades del mismo tipo como activas
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Intro[COLOR_REVERT][\BOLD]Cambiar entre las unidades, finalizar turno
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT], (coma)[COLOR_REVERT][\BOLD]Cambiar a la unidad anterior (misma casilla)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]. (punto)[COLOR_REVERT][\BOLD]Cambiar a la unidad siguiente (misma casilla)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]/[COLOR_REVERT][\BOLD]Cambiar entre los trabajadores activos
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+D[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Cambiar nombre del jugador/email
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Q[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Retirarse (rendirse)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+W[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Acceder al Creador de mundos
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Z[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Entrar en el modo de depuración "chipotle"
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Inicio, Fin[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Cambiar entre las ciudades
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Insert[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Entrar en la ciudad amiga más próxima
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Intro[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Cambiar entre las unidades, finalizar turno
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+S[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Guardar partida
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+L[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Cargar partida
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+F5[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Guardado rápido (solo partidas de un jugador)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+F8[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Cargar rápido (solo partidas de un jugador)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+M[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Activar/desactivar música
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+O[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Menú de opciones
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Esc[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Salir de la vista actual/menú de opciones
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Tab[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Chat/registro de sucesos
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+D[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Cuadro emergente de Contactar con civilización
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Intro[COLOR_REVERT][\BOLD][TAB][TAB]Forzar fin del turno
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Pausa[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Pausar juego/pausar contador de tiempo
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Impr Pant[COLOR_REVERT][\BOLD][TAB][TAB]Tomar instantánea partida
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]\[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Cambiar a la unidad previa
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+C[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Establecer todas las unidades del mismo tipo como activas
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Intro[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Cambiar entre las unidades, finalizar turno
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT], (coma)[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Cambiar a la unidad anterior (misma casilla)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]. (punto)[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Cambiar a la unidad siguiente (misma casilla)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]/[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Cambiar entre los trabajadores activos
 		[NEWLINE]
 		</Spanish>
 		<Polish>[H1]Gra[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+D[COLOR_REVERT][\BOLD]Zmień nazwę/e-mail gracza
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Q[COLOR_REVERT][\BOLD]Kapitulacja (poddanie się)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+W[COLOR_REVERT][\BOLD]Panel Budowy Świata
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Z[COLOR_REVERT][\BOLD]Dostęp do Trybu Debugowego "chipotle"
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Home, End[COLOR_REVERT][\BOLD]Przełączaj między miastami
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Insert[COLOR_REVERT][\BOLD]Otwórz widok najbliższego przyjacielskiego miasta
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Enter[COLOR_REVERT][\BOLD]Przełączaj między jednostkami, zakończ turę
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+S[COLOR_REVERT][\BOLD]Zapisz grę
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+L[COLOR_REVERT][\BOLD]Wczytaj grę
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+F5[COLOR_REVERT][\BOLD]Szybki zapis (Tylko w trybie gry jednoosobowej)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+F8[COLOR_REVERT][\BOLD]Szybkie wczytanie (Tylko w trybie gry jednoosobowej)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+M[COLOR_REVERT][\BOLD]Muzyka wł/wył
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+O[COLOR_REVERT][\BOLD]Menu opcji
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Esc[COLOR_REVERT][\BOLD]Zamknięcie aktywnego okna/menu
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Tab[COLOR_REVERT][\BOLD]Log w Chat/Zdarzenia
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+D[COLOR_REVERT][\BOLD]Okienko kontaktu z cywilizacją
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Enter[COLOR_REVERT][\BOLD]Wymuś zakończenie tury
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Pause[COLOR_REVERT][\BOLD]Zatrzymaj grę/Zatrzymaj licznik tur
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Printscreen[COLOR_REVERT][\BOLD]Zrzut Ekranu
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]\[COLOR_REVERT][\BOLD]Przełącz do poprzedniej jednostki
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+C[COLOR_REVERT][\BOLD]Ustaw wszystkie jednostki tego samego typu jako aktywne
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Enter[COLOR_REVERT][\BOLD]Przełączaj między jednostkami, zakończ turę
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT], (przecinek)[COLOR_REVERT][\BOLD]Przełącz do poprzedniej jednostki (na tym samym polu)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]. (kropka)[COLOR_REVERT][\BOLD]Przełącz do następnej jednostki (na tym samym polu)
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]/[COLOR_REVERT][\BOLD]Przełączaj między aktywnymi Robotnikami
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+D[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Zmień nazwę/e-mail gracza
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Q[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Kapitulacja (poddanie się)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+W[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Panel Budowy Świata
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Z[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Dostęp do Trybu Debugowego "chipotle"
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Home, End[COLOR_REVERT][\BOLD][TAB][TAB]Przełączaj między miastami
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Insert[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Otwórz widok najbliższego przyjacielskiego miasta
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Enter[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Przełączaj między jednostkami, zakończ turę
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+S[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Zapisz grę
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+L[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Wczytaj grę
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+F5[COLOR_REVERT][\BOLD][TAB][TAB]Szybki zapis (Tylko w trybie gry jednoosobowej)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+F8[COLOR_REVERT][\BOLD][TAB][TAB]Szybkie wczytanie (Tylko w trybie gry jednoosobowej)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+M[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Muzyka wł/wył
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+O[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Menu opcji
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Esc[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Zamknięcie aktywnego okna/menu
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Tab[COLOR_REVERT][\BOLD][TAB][TAB]Log w Chat/Zdarzenia
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+D[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Okienko kontaktu z cywilizacją
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Enter[COLOR_REVERT][\BOLD][TAB][TAB]Wymuś zakończenie tury
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Pause[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Zatrzymaj grę/Zatrzymaj licznik tur
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Printscreen[COLOR_REVERT][\BOLD][TAB][TAB]Zrzut Ekranu
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]\[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Przełącz do poprzedniej jednostki
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+C[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Ustaw wszystkie jednostki tego samego typu jako aktywne
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Enter[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Przełączaj między jednostkami, zakończ turę
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT], (przecinek)[COLOR_REVERT][\BOLD][TAB][TAB]Przełącz do poprzedniej jednostki (na tym samym polu)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]. (kropka)[COLOR_REVERT][\BOLD][TAB][TAB]Przełącz do następnej jednostki (na tym samym polu)
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]/[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Przełączaj między aktywnymi Robotnikami
 		[NEWLINE]
 		</Polish>
 	</TEXT>
@@ -13748,54 +13761,54 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_MAP_PEDIA</Tag>
 		<English>[H1]Map[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT][\BOLD]Ping the map
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+I[COLOR_REVERT][\BOLD]Remove interface
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+I[COLOR_REVERT][\BOLD]Minimize interface
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+B[COLOR_REVERT][\BOLD]Toggle bare map on/off
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+R[COLOR_REVERT][\BOLD]Flag resources on/off
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+T[COLOR_REVERT][\BOLD]Turn grid on/off
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Y[COLOR_REVERT][\BOLD]Turn tile yields on/off
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Ping the map
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+I[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Remove interface
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+I[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Minimize interface
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+B[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Toggle bare map on/off
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+R[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Flag resources on/off
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+T[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Turn grid on/off
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Y[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Turn tile yields on/off
 		[NEWLINE]
 		</English>
 		<German>[H1]Hauptbildschirm[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT][\BOLD]Karte anpingen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+I[COLOR_REVERT][\BOLD]Interface entfernen
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+I[COLOR_REVERT][\BOLD]Interface minimieren
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+B[COLOR_REVERT][\BOLD]Leere Karte ein/aus
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+R[COLOR_REVERT][\BOLD]Ressourcen anzeigen ein/aus
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+T[COLOR_REVERT][\BOLD]Rasterlinien anzeigen ein/aus
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Z[COLOR_REVERT][\BOLD]Geländefeld-Erträge anzeigen ein/aus
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Karte anpingen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+I[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Interface entfernen
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+I[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Interface minimieren
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+B[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Leere Karte ein/aus
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+R[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Ressourcen anzeigen ein/aus
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+T[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Rasterlinien anzeigen ein/aus
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Z[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Geländefeld-Erträge anzeigen ein/aus
 		[NEWLINE]
 		</German>
 		<Italian>[H1]Mappa[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT][\BOLD]Segna un punto sulla mappa
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+I[COLOR_REVERT][\BOLD]Visualizza/Nasconde l'interfaccia
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+I[COLOR_REVERT][\BOLD]Minimizza l'interfaccia
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+B[COLOR_REVERT][\BOLD]Attiva/Disattiva la mappa semplificata
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+R[COLOR_REVERT][\BOLD]Visualizza/Nasconde gli indicatori delle Risorse
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+T[COLOR_REVERT][\BOLD]Visualizza/Nasconde la griglia
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+U[COLOR_REVERT][\BOLD]Visualizza/Nasconde gli indicatori delle Unità
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Y[COLOR_REVERT][\BOLD]Visualizza/Nasconde la produzione delle caselle
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Segna un punto sulla mappa
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+I[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Visualizza/Nasconde l'interfaccia
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+I[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Minimizza l'interfaccia
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+B[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Attiva/Disattiva la mappa semplificata
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+R[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Visualizza/Nasconde gli indicatori delle Risorse
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+T[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Visualizza/Nasconde la griglia
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+U[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Visualizza/Nasconde gli indicatori delle Unità
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Y[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Visualizza/Nasconde la produzione delle caselle
 		[NEWLINE]
 		</Italian>
 		<Spanish>[H1]Mapa[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT][\BOLD]Señala un punto en el mapa
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+I[COLOR_REVERT][\BOLD]Oculta interfaz
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+I[COLOR_REVERT][\BOLD]Minimiza interfaz
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+B[COLOR_REVERT][\BOLD] Activa/desactiva mapa desnudo
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+R[COLOR_REVERT][\BOLD]Activa/desactiva mostrado de iconos de recursos
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+T[COLOR_REVERT][\BOLD]Activa/desactiva la rejilla
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Y[COLOR_REVERT][\BOLD]Muestra/oculta rendimientos de casilla
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Señala un punto en el mapa
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+I[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Oculta interfaz
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+I[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Minimiza interfaz
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+B[COLOR_REVERT][\BOLD][TAB][TAB][TAB] Activa/desactiva mapa desnudo
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+R[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Activa/desactiva mostrado de iconos de recursos
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+T[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Activa/desactiva la rejilla
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Y[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Muestra/oculta rendimientos de casilla
 		[NEWLINE]
 		</Spanish>
 		<Polish>[H1]Mapa[\H1]
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT][\BOLD]Ping mapy
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+I[COLOR_REVERT][\BOLD]Wyłącz interfejs
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+I[COLOR_REVERT][\BOLD]Minimalizuj interfejs
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+B[COLOR_REVERT][\BOLD]Tryb pustej mapy wł/wył
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+R[COLOR_REVERT][\BOLD]Widok wszystkich surowców wł/wył
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+T[COLOR_REVERT][\BOLD]Siatka mapy wł/wył
-		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Y[COLOR_REVERT][\BOLD]Widok zasobów wł/wył
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Ping mapy
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Alt+I[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Wyłącz interfejs
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+I[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Minimalizuj interfejs
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+B[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Tryb pustej mapy wł/wył
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+R[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Widok wszystkich surowców wł/wył
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+T[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Siatka mapy wł/wył
+		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Y[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Widok zasobów wł/wył
 		[NEWLINE]
 		</Polish>
 	</TEXT>
@@ -13809,29 +13822,33 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_MOUSE_PEDIA</Tag>
-		<English>[H1]Mouse Shortcuts[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Click any tile 	 [COLOR_REVERT][\BOLD] &gt; Center camera on that tile
-[BOLD][COLOR_HIGHLIGHT_TEXT] Roll wheel 	 [COLOR_REVERT][\BOLD] &gt; Zoom in and out
-[BOLD][COLOR_HIGHLIGHT_TEXT] Hold left+right buttons [COLOR_REVERT][\BOLD] &gt; Drag map by moving the mouse
-[BOLD][COLOR_HIGHLIGHT_TEXT] Hold Right button [COLOR_REVERT][\BOLD] &gt; Go-To order (See combat odds over enemy)
-[BOLD][COLOR_HIGHLIGHT_TEXT] Click thumb buttons [COLOR_REVERT][\BOLD] &gt; Cycle through units on the same tile
-[BOLD][COLOR_HIGHLIGHT_TEXT] Right Click city bar [COLOR_REVERT][\BOLD] &gt; Set rally point for that city
+		<English>[H1]Mouse Shortcuts[\H1][BOLD][COLOR_HIGHLIGHT_TEXT]
+ Left click plot	[COLOR_REVERT]-&gt; Select unit or city if possible, else center camera on that plot[COLOR_HIGHLIGHT_TEXT]
+ Right click plot	[COLOR_REVERT]-&gt; Move selected units there if possible[COLOR_HIGHLIGHT_TEXT]
+ Hold R button	[COLOR_REVERT]-&gt; Go-To order (See combat odds over enemy)[COLOR_HIGHLIGHT_TEXT]
+ Hold L+R buttons	[COLOR_REVERT]-&gt; Drag map by moving the mouse[COLOR_HIGHLIGHT_TEXT]
+ Thumb buttons	[COLOR_REVERT]-&gt; Cycle through units in stack, or cities, when either is selected[COLOR_HIGHLIGHT_TEXT]
+ Click wheel		[COLOR_REVERT]-&gt; Center camera on selected units[COLOR_HIGHLIGHT_TEXT]
+ Roll wheel		[COLOR_REVERT]-&gt; Zoom in and out[COLOR_HIGHLIGHT_TEXT]
 
-[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl +[COLOR_REVERT]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Roll wheel 	 [COLOR_REVERT][\BOLD] &gt; Cycle units on tile
-[BOLD][COLOR_HIGHLIGHT_TEXT] Click city bar 	 [COLOR_REVERT][\BOLD] &gt; Select all cities on same continent
-[BOLD][COLOR_HIGHLIGHT_TEXT] Click scoreboard Civ [COLOR_REVERT][\BOLD] &gt; Open trade window with that Civ
+ Ctrl +
+	Roll wheel			[COLOR_REVERT]-&gt; Cycle units on plot[COLOR_HIGHLIGHT_TEXT]
+	Left click city bar		[COLOR_REVERT]-&gt; Select all cities on same continent[COLOR_HIGHLIGHT_TEXT]
+	Left click unit			[COLOR_REVERT]-&gt; Group all units in stack of the same unit type together[COLOR_HIGHLIGHT_TEXT]
+	L-click scoreboard Civ	[COLOR_REVERT]-&gt; Open trade window with that Civ[COLOR_HIGHLIGHT_TEXT]
 
-[BOLD][COLOR_HIGHLIGHT_TEXT]Alt +[COLOR_REVERT]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Click city bar 	 [COLOR_REVERT][\BOLD] &gt; Select all player's cities
-[BOLD][COLOR_HIGHLIGHT_TEXT] Click scoreboard Civ [COLOR_REVERT][\BOLD] &gt; Declare war on that Civ
-[BOLD][COLOR_HIGHLIGHT_TEXT] Hold Right button [COLOR_REVERT][\BOLD] &gt; Go-To order for all in the same tile
+ Alt +
+	Left click city bar		[COLOR_REVERT]-&gt; Select all player's cities[COLOR_HIGHLIGHT_TEXT]
+	Left click unit			[COLOR_REVERT]-&gt; Group all units in stack together[COLOR_HIGHLIGHT_TEXT]
+	L-click scoreboard Civ	[COLOR_REVERT]-&gt; Declare war on that Civ[COLOR_HIGHLIGHT_TEXT]
+	Hold Right button		[COLOR_REVERT]-&gt; Go-To order for all in the same plot[COLOR_HIGHLIGHT_TEXT]
 
-[BOLD][COLOR_HIGHLIGHT_TEXT]Shift +[COLOR_REVERT]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Click city bar 	 [COLOR_REVERT][\BOLD] &gt; Select multiple cities
-[BOLD][COLOR_HIGHLIGHT_TEXT] Right click city bar [COLOR_REVERT][\BOLD] &gt; Set rally point for multiple cities
-[BOLD][COLOR_HIGHLIGHT_TEXT] Click city bars [COLOR_REVERT][\BOLD] &gt; Select those cities to change queue
-[BOLD][COLOR_HIGHLIGHT_TEXT] Click any tile 	 [COLOR_REVERT][\BOLD] &gt; Open context menu for that tile
+ Shift +
+	Left click plot		[COLOR_REVERT]-&gt; Plot context menu[COLOR_HIGHLIGHT_TEXT]
+	Right click plot	[COLOR_REVERT]-&gt; Set rally point if cities are selected[COLOR_HIGHLIGHT_TEXT]
+	Left click city bar	[COLOR_REVERT]-&gt; Add city to currently selected cities[COLOR_HIGHLIGHT_TEXT]
+	Left click unit icon	[COLOR_REVERT]-&gt; Add unit to currently selected units[COLOR_HIGHLIGHT_TEXT]
+	Left click any plot	[COLOR_REVERT]-&gt; Open context menu for that plot[COLOR_HIGHLIGHT_TEXT]
 		</English>
 		<German>[H1]Maussteuerung[\H1]
 [BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Klick auf Stadtleiste[COLOR_REVERT][\BOLD]Alle eigenen Städte auswählen
@@ -13920,7 +13937,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_MP_PEDIA</Tag>
-		<English>[H1]Multi-Player[\H1][NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Tab[COLOR_REVERT][\BOLD]Chat to team[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Scroll Lock[COLOR_REVERT][\BOLD]Voice chat to team[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Scroll Lock[COLOR_REVERT][\BOLD]Voice chat to all[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Scroll Lock[COLOR_REVERT][\BOLD]Voice chat in Diplomacy screen[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Tab[COLOR_REVERT][\BOLD]Chat to all[NEWLINE]</English>
+		<English>[H1]Multi-Player[\H1][NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Tab[COLOR_REVERT][\BOLD][TAB][TAB][TAB][TAB]Chat to team[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Scroll Lock[COLOR_REVERT][\BOLD][TAB][TAB]Voice chat to team[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Scroll Lock[COLOR_REVERT][\BOLD][TAB]Voice chat to all[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Scroll Lock[COLOR_REVERT][\BOLD][TAB]Voice chat in Diplomacy screen[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Tab[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Chat to all[NEWLINE]</English>
 		<French>[H1]Multi-Joueur[\H1][NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Tab[COLOR_REVERT][\BOLD]Chat au team[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Scroll Lock[COLOR_REVERT][\BOLD]Chat vocal au team[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Scroll Lock[COLOR_REVERT][\BOLD]Chat vocal à tous[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+Scroll Lock[COLOR_REVERT][\BOLD]Chat vocal dans l'écran de Diplomatie[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Tab[COLOR_REVERT][\BOLD]Chat à tous[NEWLINE]</French>
 		<German>[H1]Multiplayer[\H1][NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Tab[COLOR_REVERT][\BOLD]Chat mit Team[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt+Tab[COLOR_REVERT][\BOLD]Chat mit allen[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Rollen[COLOR_REVERT][\BOLD]Sprachchat mit Team[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt+Rollen[COLOR_REVERT][\BOLD]Sprachchat mit allen[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Strg+Rollen[COLOR_REVERT][\BOLD]Sprachchat im Diplomatie-Bildschirm[NEWLINE]</German>
 		<Italian>[H1]MultiPlayer[\H1][NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Tab[COLOR_REVERT][\BOLD]Comunica con la squadra[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+Tab[COLOR_REVERT][\BOLD]Comunica con tutti[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]BlocScorr[COLOR_REVERT][\BOLD]Comunica oralmente con la squadra[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Shift+BlocScorr[COLOR_REVERT][\BOLD]Comunica oralmente con tutti[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl+BlocScorr[COLOR_REVERT][\BOLD]Comunica oralmente nell'Interfaccia diplomatica[NEWLINE]</Italian>
@@ -13938,56 +13955,73 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_UNITS_PEDIA</Tag>
-		<English>[H1]Units[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl +	0-9 [COLOR_REVERT] &gt; Bind selected unit(s) to number	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] B	 [COLOR_REVERT] &gt; Bombard target or Build City		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] C	 [COLOR_REVERT] &gt; Center camera on unit				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] E	 [COLOR_REVERT] &gt; Explore							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F	 [COLOR_REVERT] &gt; Fortify							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] G	 [COLOR_REVERT] &gt; Go-to mode						[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] I	 [COLOR_REVERT] &gt; Intercept							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] L	 [COLOR_REVERT] &gt; Load onto ship					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Shift +	P	 [COLOR_REVERT] &gt; Pillage							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] S	 [COLOR_REVERT] &gt; Sentry							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] U	 [COLOR_REVERT] &gt; Unload from ship					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] W	 [COLOR_REVERT] &gt; Wait (move later in turn)			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Space [COLOR_REVERT] &gt; Skip turn							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Delete [COLOR_REVERT] &gt; Delete selected unit(s)			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT](Numpad)	1-9 [COLOR_REVERT] &gt; Move selected unit(s)				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT](Numpad)	5	 [COLOR_REVERT] &gt; Center camera on unit				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl +	Click [COLOR_REVERT] &gt; Group same type together			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Alt +	Click [COLOR_REVERT] &gt; Group all units together			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Shift +	Click [COLOR_REVERT] &gt; Tile context menu					[\BOLD]
+		<English>[H1]Units[\H1][BOLD][COLOR_HIGHLIGHT_TEXT]
+	B	[COLOR_REVERT]-&gt; Bombard target or Build City[COLOR_HIGHLIGHT_TEXT]
+	C	[COLOR_REVERT]-&gt; Center camera on unit[COLOR_HIGHLIGHT_TEXT]
+	E	[COLOR_REVERT]-&gt; Explore[COLOR_HIGHLIGHT_TEXT]
+	F	[COLOR_REVERT]-&gt; Fortify[COLOR_HIGHLIGHT_TEXT]
+	G	[COLOR_REVERT]-&gt; Go-to mode[COLOR_HIGHLIGHT_TEXT]
+	I	[COLOR_REVERT]-&gt; Intercept[COLOR_HIGHLIGHT_TEXT]
+	L	[COLOR_REVERT]-&gt; Load onto ship[COLOR_HIGHLIGHT_TEXT]
+	S	[COLOR_REVERT]-&gt; Sentry[COLOR_HIGHLIGHT_TEXT]
+	U	[COLOR_REVERT]-&gt; Unload from ship[COLOR_HIGHLIGHT_TEXT]
+	W	[COLOR_REVERT]-&gt; Wait (move later in turn)[COLOR_HIGHLIGHT_TEXT]
+  Space	[COLOR_REVERT]-&gt; Skip turn[COLOR_HIGHLIGHT_TEXT]
+ Delete	[COLOR_REVERT]-&gt; Delete selected unit(s)[COLOR_HIGHLIGHT_TEXT]
 
-[H1]Air Units[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT] B [COLOR_REVERT] &gt; Air bomb			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] R [COLOR_REVERT] &gt; Recon mode		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Alt +	R [COLOR_REVERT] &gt; Rebase			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] S [COLOR_REVERT] &gt; Air strike mode	[\BOLD]
+ Ctrl +
+	0-9	[COLOR_REVERT]-&gt; Bind selected unit(s) to number[COLOR_HIGHLIGHT_TEXT]
 
-[H1]Work Boats[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT] F [COLOR_REVERT] &gt; Build fishing nets		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] O [COLOR_REVERT] &gt; Build offshore platform	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Shift +	W [COLOR_REVERT] &gt; Build whaling boats		[\BOLD]
+ Shift +
+	P	[COLOR_REVERT]-&gt; Pillage[COLOR_HIGHLIGHT_TEXT]
 
-[H1]Workers[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT] A [COLOR_REVERT]Automate				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Alt +	C [COLOR_REVERT]Remove forest/jungle	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Shift + Ctrl +	C [COLOR_REVERT]Improve nearest city	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Ctrl +	F [COLOR_REVERT]Build fort				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] H [COLOR_REVERT]Build camp				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] I [COLOR_REVERT]Build farm (irrigate)	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] K [COLOR_REVERT]Build workshop			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] L [COLOR_REVERT]Build lumbermill		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] M [COLOR_REVERT]Build mine					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] N [COLOR_REVERT]Build trade network				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Shift +	P [COLOR_REVERT]Build pasture/plantation		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Q [COLOR_REVERT]Build quarry						[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] R [COLOR_REVERT]Build route							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Alt +	R [COLOR_REVERT]Road-to mode							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] T [COLOR_REVERT]Build cottage								[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Shift +	W [COLOR_REVERT]Build Watermill on river or Windmill on hill[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Shift +	W [COLOR_REVERT]Build Winery on Wine or Well on Oil			[\BOLD]
+ Numpad
+	5	[COLOR_REVERT]-&gt; Center camera on unit[COLOR_HIGHLIGHT_TEXT]
+	1-9	[COLOR_REVERT]-&gt; Move selected unit(s)
+
+[H1]Air Units[\H1][BOLD][COLOR_HIGHLIGHT_TEXT]
+	B	[COLOR_REVERT]-&gt; Air bomb[COLOR_HIGHLIGHT_TEXT]
+	R	[COLOR_REVERT]-&gt; Recon mode[COLOR_HIGHLIGHT_TEXT]
+	S	[COLOR_REVERT]-&gt; Air strike mode[COLOR_HIGHLIGHT_TEXT]
+
+ Alt +
+	R	[COLOR_REVERT]-&gt; Rebase
+
+[H1]Work Boats[\H1][BOLD][COLOR_HIGHLIGHT_TEXT]
+	F	[COLOR_REVERT]-&gt; Build fishing nets[COLOR_HIGHLIGHT_TEXT]
+	O	[COLOR_REVERT]-&gt; Build offshore platform[COLOR_HIGHLIGHT_TEXT]
+
+ Shift +
+	W	[COLOR_REVERT]-&gt; Build whaling boats
+
+[H1]Workers[\H1][BOLD][COLOR_HIGHLIGHT_TEXT]
+	A	[COLOR_REVERT]-&gt; Automate[COLOR_HIGHLIGHT_TEXT]
+	H	[COLOR_REVERT]-&gt; Build camp[COLOR_HIGHLIGHT_TEXT]
+	I	[COLOR_REVERT]-&gt; Build farm (irrigate)[COLOR_HIGHLIGHT_TEXT]
+	K	[COLOR_REVERT]-&gt; Build workshop[COLOR_HIGHLIGHT_TEXT]
+	L	[COLOR_REVERT]-&gt; Build lumbermill[COLOR_HIGHLIGHT_TEXT]
+	M	[COLOR_REVERT]-&gt; Build mine[COLOR_HIGHLIGHT_TEXT]
+	N	[COLOR_REVERT]-&gt; Build trade network[COLOR_HIGHLIGHT_TEXT]
+	Q	[COLOR_REVERT]-&gt; Build quarry[COLOR_HIGHLIGHT_TEXT]
+	R	[COLOR_REVERT]-&gt; Build route[COLOR_HIGHLIGHT_TEXT]
+	T	[COLOR_REVERT]-&gt; Build cottage[COLOR_HIGHLIGHT_TEXT]
+
+ Ctrl +
+	F	[COLOR_REVERT]-&gt; Build fort[COLOR_HIGHLIGHT_TEXT]
+
+ Shift +
+	P	[COLOR_REVERT]-&gt; Build pasture/plantation[COLOR_HIGHLIGHT_TEXT]
+	W	[COLOR_REVERT]-&gt; Build Watermill on river
+			or Windmill on hill
+			or Winery on Wine
+			or Well on Oil[COLOR_HIGHLIGHT_TEXT]
+
+ Alt +
+	C	[COLOR_REVERT]-&gt; Remove forest/jungle[COLOR_HIGHLIGHT_TEXT]
+	R	[COLOR_REVERT]-&gt; Road-to mode[COLOR_HIGHLIGHT_TEXT]
+
+ Shift + Ctrl +
+	C	[COLOR_REVERT]-&gt; Improve nearest city
 		</English>
 		<German>[H1]Einheiten[\H1]
 		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Zifferntasten[COLOR_REVERT][\BOLD]Einheit fortbewegen
@@ -16131,15 +16165,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Research Taoism to found a Religion</English>
 		<French>Recherchez Taoïsme pour fonder une religion</French>
 		<Spanish>Investiga el Taoísmo para fundar una religión.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_UNIT_STRENGTH_CHANGE</Tag>
-		<English>[ICON_BULLET]Extra %d1 [ICON_STRENGTH] for %s2</English>
-		<French>[ICON_BULLET]Extra %d1 [ICON_STRENGTH] pour %s2</French>
-		<German>[ICON_BULLET]Zusätzlich %d1 [ICON_STRENGTH] für %s2</German>
-		<Italian>[ICON_BULLET]Extra %d1 [ICON_STRENGTH] per %s2</Italian>
-		<Spanish>[ICON_BULLET]%d1[ICON_STRENGTH] extra por %s2</Spanish>
-		<Polish>[ICON_BULLET]Dodatkowa %d1 [ICON_STRENGTH] dla %s2</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ZOROASTRIANISM</Tag>
@@ -18777,27 +18802,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNIT_STEALTH_COMBAT_DEFENSE</Tag>
 		<English>[ICON_BULLET]STEALTH DEFENSE!: %D1_Num%% Stealth Combat Modifier Factored in.</English>
 		<French>[ICON_BULLET]Défense furtive !: %D1_Num%% Modificateur de combat furtif pris en compte.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUPPLY_TRAIN</Tag>
-		<English>Supply Train</English>
-		<French>
-			<Text>Convoi d'approvisionnement</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Versorgungszug</German>
-		<Italian>
-			<Text>Carovana di supporto:Carovane di supporto</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Caravana de suministros:Caravanas de suministros</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Wozy Zaopatrzeniowe</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_UPKEEP</Tag>

@@ -8,6 +8,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_AFRICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -20,6 +21,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_ASIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_ASIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ASIAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -32,6 +34,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_EUROPEAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_EUROPEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_EUROPEAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -44,6 +47,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -61,6 +65,7 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -73,6 +78,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -85,6 +91,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_OCEANIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_OCEANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_OCEANIAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -97,6 +104,7 @@
 			<Type>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -114,6 +122,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -145,6 +154,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_ASIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ASIAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -176,6 +186,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_EUROPEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_EUROPEAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -207,6 +218,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -238,6 +250,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -269,6 +282,7 @@
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_NORTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -300,6 +314,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_OCEANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_OCEANIAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -331,6 +346,7 @@
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -363,6 +379,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_AFRICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -436,6 +453,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_ASIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_ASIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ASIAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -509,6 +527,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_EUROPEAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_EUROPEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_EUROPEAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -582,6 +601,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -660,6 +680,7 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_LOCAL_NEANDERTHAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -733,6 +754,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -806,6 +828,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_OCEANIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_OCEANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_OCEANIAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -879,6 +902,7 @@
 			<Type>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -955,6 +979,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_AFRICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -968,6 +993,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_ASIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_ASIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ASIAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -981,6 +1007,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_EUROPEAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_EUROPEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_EUROPEAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -994,6 +1021,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1012,6 +1040,7 @@
 			</EnabledCivilizationTypes>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1025,6 +1054,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1038,6 +1068,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_OCEANIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_OCEANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_OCEANIAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1051,6 +1082,7 @@
 			<Type>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1096,7 +1128,7 @@
 			<FreeBonus>BONUS_ABORIGINE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1128,7 +1160,7 @@
 			<FreeBonus>BONUS_AINU</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1165,7 +1197,7 @@
 			<FreeBonus>BONUS_AKA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1197,7 +1229,7 @@
 			<FreeBonus>BONUS_AKKADIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1435,7 +1467,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1473,7 +1505,7 @@
 			<FreeBonus>BONUS_ANASAZI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1511,7 +1543,7 @@
 			<FreeBonus>BONUS_APACHE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1571,7 +1603,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1604,7 +1636,7 @@
 			<FreeBonus>BONUS_ARAWAK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1637,7 +1669,7 @@
 			<FreeBonus>BONUS_ARGENTINIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1669,7 +1701,7 @@
 			<FreeBonus>BONUS_ARMENIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1701,7 +1733,7 @@
 			<FreeBonus>BONUS_ASHANTI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1743,7 +1775,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1776,7 +1808,7 @@
 			<FreeBonus>BONUS_ATHENIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1816,7 +1848,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1854,7 +1886,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1892,7 +1924,7 @@
 			<FreeBonus>BONUS_AYMARA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1944,7 +1976,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1996,7 +2028,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2029,7 +2061,7 @@
 			<FreeBonus>BONUS_BANDANESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2061,7 +2093,7 @@
 			<FreeBonus>BONUS_BASQUE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2093,7 +2125,7 @@
 			<FreeBonus>BONUS_BELGIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2131,7 +2163,7 @@
 			<FreeBonus>BONUS_BENGALI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2169,7 +2201,7 @@
 			<FreeBonus>BONUS_BENINESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2207,7 +2239,7 @@
 			<FreeBonus>BONUS_BERBER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2239,7 +2271,7 @@
 			<FreeBonus>BONUS_BLACKFOOT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2284,7 +2316,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2316,7 +2348,7 @@
 			<FreeBonus>BONUS_BULGARIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2354,7 +2386,7 @@
 			<FreeBonus>BONUS_BURMESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2388,7 +2420,7 @@
 			<FreeBonus>BONUS_BYZANTINE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2422,7 +2454,7 @@
 			<FreeBonus>BONUS_CALIFORNIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2477,7 +2509,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2509,7 +2541,7 @@
 			<FreeBonus>BONUS_CANTONESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2542,7 +2574,7 @@
 			<FreeBonus>BONUS_CARIB</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2581,7 +2613,7 @@
 			<FreeBonus>BONUS_CARTHAGINIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2614,7 +2646,7 @@
 			<FreeBonus>BONUS_CASTILIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2679,7 +2711,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2707,7 +2739,7 @@
 			<FreeBonus>BONUS_CETACEA_SAPIENS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2740,7 +2772,7 @@
 			<FreeBonus>BONUS_CEYLONESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2778,7 +2810,7 @@
 			<FreeBonus>BONUS_CHAM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2816,7 +2848,7 @@
 			<FreeBonus>BONUS_CHEROKEE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2858,7 +2890,7 @@
 			<FreeBonus>BONUS_CHEYENNE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2956,7 +2988,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -2988,7 +3020,7 @@
 			<FreeBonus>BONUS_CHIPPEWA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3020,7 +3052,7 @@
 			<FreeBonus>BONUS_CHOLA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3053,7 +3085,7 @@
 			<FreeBonus>BONUS_CHUMASH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3086,7 +3118,7 @@
 			<FreeBonus>BONUS_COLOMBIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3128,7 +3160,7 @@
 			<FreeBonus>BONUS_COMANCHE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3168,7 +3200,7 @@
 			<FreeBonus>BONUS_CONFEDERATE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3200,7 +3232,7 @@
 			<FreeBonus>BONUS_CREE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3232,7 +3264,7 @@
 			<FreeBonus>BONUS_CROATIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3265,7 +3297,7 @@
 			<FreeBonus>BONUS_CUBAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3298,7 +3330,7 @@
 			<FreeBonus>BONUS_DAHOMEY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3330,7 +3362,7 @@
 			<FreeBonus>BONUS_DANISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3374,7 +3406,7 @@
 			<FreeBonus>BONUS_DENE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3418,7 +3450,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3460,7 +3492,7 @@
 			<FreeBonus>BONUS_DZUNGAR</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3530,7 +3562,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3627,7 +3659,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3659,7 +3691,7 @@
 			<FreeBonus>BONUS_EPIROTE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3703,7 +3735,7 @@
 			<FreeBonus>BONUS_ETHIOPIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3736,7 +3768,7 @@
 			<FreeBonus>BONUS_FIJIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3768,7 +3800,7 @@
 			<FreeBonus>BONUS_FINNISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3800,7 +3832,7 @@
 			<FreeBonus>BONUS_FRANKISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3900,7 +3932,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -3938,7 +3970,7 @@
 			<FreeBonus>BONUS_FULANI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4010,7 +4042,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4042,7 +4074,7 @@
 			<FreeBonus>BONUS_GHANAIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4074,7 +4106,7 @@
 			<FreeBonus>BONUS_GOTH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4156,7 +4188,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4188,7 +4220,7 @@
 			<FreeBonus>BONUS_ROMANI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4227,7 +4259,7 @@
 			<FreeBonus>BONUS_HAIDA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4262,7 +4294,7 @@
 			<FreeBonus>BONUS_HAITIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4294,7 +4326,7 @@
 			<FreeBonus>BONUS_HAUSA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4327,7 +4359,7 @@
 			<FreeBonus>BONUS_HAWAIIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4365,7 +4397,7 @@
 			<FreeBonus>BONUS_HERERO</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4397,7 +4429,7 @@
 			<FreeBonus>BONUS_HITTITE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4447,7 +4479,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4485,7 +4517,7 @@
 			<FreeBonus>BONUS_HOPI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4517,7 +4549,7 @@
 			<FreeBonus>BONUS_HUASTEC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4559,7 +4591,7 @@
 			<FreeBonus>BONUS_HUN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4591,7 +4623,7 @@
 			<FreeBonus>BONUS_HUNGARIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4629,7 +4661,7 @@
 			<FreeBonus>BONUS_HURON</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4662,7 +4694,7 @@
 			<FreeBonus>BONUS_ICELANDIC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4706,7 +4738,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4774,7 +4806,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4812,7 +4844,7 @@
 			<FreeBonus>BONUS_INDONESIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4850,7 +4882,7 @@
 			<FreeBonus>BONUS_INUIT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4883,7 +4915,7 @@
 			<FreeBonus>BONUS_IRISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4921,7 +4953,7 @@
 			<FreeBonus>BONUS_IROQUOIS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -4969,7 +5001,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5007,7 +5039,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5042,7 +5074,7 @@
 			<FreeBonus>BONUS_JAMAICAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5107,7 +5139,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5145,7 +5177,7 @@
 			<FreeBonus>BONUS_JIVARO</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5178,7 +5210,7 @@
 			<FreeBonus>BONUS_JOMON</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5216,7 +5248,7 @@
 			<FreeBonus>BONUS_JORDANIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5248,7 +5280,7 @@
 			<FreeBonus>BONUS_JOSEON</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5280,7 +5312,7 @@
 			<FreeBonus>BONUS_KANEM_BORNU</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5328,7 +5360,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5360,7 +5392,7 @@
 			<FreeBonus>BONUS_KLAMATH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5392,7 +5424,7 @@
 			<FreeBonus>BONUS_KONGOLESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5430,7 +5462,7 @@
 			<FreeBonus>BONUS_KONJAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5478,7 +5510,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5511,7 +5543,7 @@
 			<FreeBonus>BONUS_LEONESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5544,7 +5576,7 @@
 			<FreeBonus>BONUS_LIANGZHU</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5582,7 +5614,7 @@
 			<FreeBonus>BONUS_LUBA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5614,7 +5646,7 @@
 			<FreeBonus>BONUS_LYDIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5646,7 +5678,7 @@
 			<FreeBonus>BONUS_MACEDONIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5678,7 +5710,7 @@
 			<FreeBonus>BONUS_MALAYSIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5724,7 +5756,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5756,7 +5788,7 @@
 			<FreeBonus>BONUS_MANCHURIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5788,7 +5820,7 @@
 			<FreeBonus>BONUS_MADAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5821,7 +5853,7 @@
 			<FreeBonus>BONUS_MAORI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5853,7 +5885,7 @@
 			<FreeBonus>BONUS_MAPUCHE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5891,7 +5923,7 @@
 			<FreeBonus>BONUS_MASAI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5923,7 +5955,7 @@
 			<FreeBonus>BONUS_MASSAGETAE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -5975,7 +6007,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6014,7 +6046,7 @@
 			<FreeBonus>BONUS_MERINA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6053,7 +6085,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6092,7 +6124,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6124,7 +6156,7 @@
 			<FreeBonus>BONUS_MISSISSIPPIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6156,7 +6188,7 @@
 			<FreeBonus>BONUS_MIXTEC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6195,7 +6227,7 @@
 			<FreeBonus>BONUS_MOCHE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6237,7 +6269,7 @@
 			<FreeBonus>BONUS_MONGOLIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6269,7 +6301,7 @@
 			<FreeBonus>BONUS_MOROCCAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6313,7 +6345,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6351,7 +6383,7 @@
 			<FreeBonus>BONUS_MUTAPA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6383,7 +6415,7 @@
 			<FreeBonus>BONUS_NAMA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6421,7 +6453,7 @@
 			<FreeBonus>BONUS_NAVAJO</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6459,7 +6491,7 @@
 			<FreeBonus>BONUS_NAZCA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6470,7 +6502,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -6489,7 +6521,7 @@
 			<iCost>60</iCost>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</FreeBuilding>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6527,7 +6559,7 @@
 			<FreeBonus>BONUS_NEPALESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6561,7 +6593,7 @@
 			<FreeBonus>BONUS_NEW_ZEALANDER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6593,7 +6625,7 @@
 			<FreeBonus>BONUS_NOK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6631,7 +6663,7 @@
 			<FreeBonus>BONUS_NOOTKA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6663,7 +6695,7 @@
 			<FreeBonus>BONUS_NORWEGIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6695,7 +6727,7 @@
 			<FreeBonus>BONUS_NUBIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6733,7 +6765,7 @@
 			<FreeBonus>BONUS_OLMEC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6783,7 +6815,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6815,7 +6847,7 @@
 			<FreeBonus>BONUS_PAKISTANI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6853,7 +6885,7 @@
 			<FreeBonus>BONUS_PAPUAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6885,7 +6917,7 @@
 			<FreeBonus>BONUS_PARTHIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6951,7 +6983,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -6984,7 +7016,7 @@
 			<FreeBonus>BONUS_PHOENICIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7016,7 +7048,7 @@
 			<FreeBonus>BONUS_PICTISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7048,7 +7080,7 @@
 			<FreeBonus>BONUS_PIMA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7086,7 +7118,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7118,7 +7150,7 @@
 			<FreeBonus>BONUS_POLYNESIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7150,7 +7182,7 @@
 			<FreeBonus>BONUS_PORTUGUESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7182,7 +7214,7 @@
 			<FreeBonus>BONUS_PRUSSIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7214,7 +7246,7 @@
 			<FreeBonus>BONUS_QIANG</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7252,7 +7284,7 @@
 			<FreeBonus>BONUS_QUECHUA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7291,7 +7323,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7324,7 +7356,7 @@
 			<FreeBonus>BONUS_RHODESIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7402,7 +7434,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7434,7 +7466,7 @@
 			<FreeBonus>BONUS_ROXOLANI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7508,7 +7540,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7560,7 +7592,7 @@
 			<FreeBonus>BONUS_SAMI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7593,7 +7625,7 @@
 			<FreeBonus>BONUS_SAMOAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7631,7 +7663,7 @@
 			<FreeBonus>BONUS_SASSANIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7663,7 +7695,7 @@
 			<FreeBonus>BONUS_SAXON</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7707,7 +7739,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7740,7 +7772,7 @@
 			<FreeBonus>BONUS_SCYTHIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7778,7 +7810,7 @@
 			<FreeBonus>BONUS_SEMINOLE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7810,7 +7842,7 @@
 			<FreeBonus>BONUS_SHANG</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7858,7 +7890,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7898,7 +7930,7 @@
 			<FreeBonus>BONUS_SIBERIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7940,7 +7972,7 @@
 			<FreeBonus>BONUS_SIOUX</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -7972,7 +8004,7 @@
 			<FreeBonus>BONUS_SLOVAKIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8005,7 +8037,7 @@
 			<FreeBonus>BONUS_SOMALI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8037,7 +8069,7 @@
 			<FreeBonus>BONUS_SONGHAI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8070,7 +8102,7 @@
 			<FreeBonus>BONUS_SOUTH_AFRICAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8114,7 +8146,7 @@
 			<FreeBonus>BONUS_SOVIET</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8164,7 +8196,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8196,7 +8228,7 @@
 			<FreeBonus>BONUS_SPARTAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8234,7 +8266,7 @@
 			<FreeBonus>BONUS_SUMERIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8266,7 +8298,7 @@
 			<FreeBonus>BONUS_SWAHILI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8298,7 +8330,7 @@
 			<FreeBonus>BONUS_SWAZI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8350,7 +8382,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8382,7 +8414,7 @@
 			<FreeBonus>BONUS_SYRIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8415,7 +8447,7 @@
 			<FreeBonus>BONUS_TAHITIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8448,7 +8480,7 @@
 			<FreeBonus>BONUS_TAIWANESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8486,7 +8518,7 @@
 			<FreeBonus>BONUS_TAMIL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8519,7 +8551,7 @@
 			<FreeBonus>BONUS_TARASCAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8552,7 +8584,7 @@
 			<FreeBonus>BONUS_TEXAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8590,7 +8622,7 @@
 			<FreeBonus>BONUS_THAI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8634,7 +8666,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8666,7 +8698,7 @@
 			<FreeBonus>BONUS_TIMURID</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8698,7 +8730,7 @@
 			<FreeBonus>BONUS_TLATILCO</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8730,7 +8762,7 @@
 			<FreeBonus>BONUS_TLAXCALTEC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8762,7 +8794,7 @@
 			<FreeBonus>BONUS_TOLTEC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8795,7 +8827,7 @@
 			<FreeBonus>BONUS_TONGAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8827,7 +8859,7 @@
 			<FreeBonus>BONUS_TOTONAC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8859,7 +8891,7 @@
 			<FreeBonus>BONUS_TROJAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8897,7 +8929,7 @@
 			<FreeBonus>BONUS_TUAREG</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8935,7 +8967,7 @@
 			<FreeBonus>BONUS_TUPI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8967,7 +8999,7 @@
 			<FreeBonus>BONUS_TURKMEN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -8999,7 +9031,7 @@
 			<FreeBonus>BONUS_UIGHUR</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9032,7 +9064,7 @@
 			<FreeBonus>BONUS_VENETIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9064,7 +9096,7 @@
 			<FreeBonus>BONUS_VENEZUELAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9102,7 +9134,7 @@
 			<FreeBonus>BONUS_VIETNAMESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9156,7 +9188,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9188,7 +9220,7 @@
 			<FreeBonus>BONUS_WAYANA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9220,7 +9252,7 @@
 			<FreeBonus>BONUS_WELSH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9262,7 +9294,7 @@
 			<FreeBonus>BONUS_XIONGNU</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9295,7 +9327,7 @@
 			<FreeBonus>BONUS_YAGHAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9328,7 +9360,7 @@
 			<FreeBonus>BONUS_YAMATO</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9360,7 +9392,7 @@
 			<FreeBonus>BONUS_YANOMAMI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9392,7 +9424,7 @@
 			<FreeBonus>BONUS_YEMENI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9436,7 +9468,7 @@
 			<FreeBonus>BONUS_ZAPOTEC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9480,7 +9512,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9512,7 +9544,7 @@
 			<FreeBonus>BONUS_ZUNI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9545,7 +9577,7 @@
 			<FreeBonus>BONUS_ABBASID</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9578,7 +9610,7 @@
 			<FreeBonus>BONUS_ADENAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9611,7 +9643,7 @@
 			<FreeBonus>BONUS_AFGHAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9644,7 +9676,7 @@
 			<FreeBonus>BONUS_AKSUMITE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9677,7 +9709,7 @@
 			<FreeBonus>BONUS_ALACALUFE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9710,7 +9742,7 @@
 			<FreeBonus>BONUS_ALBANIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9743,7 +9775,7 @@
 			<FreeBonus>BONUS_ALEMANNIC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9776,7 +9808,7 @@
 			<FreeBonus>BONUS_ALGERIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9809,7 +9841,7 @@
 			<FreeBonus>BONUS_AMIS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9842,7 +9874,7 @@
 			<FreeBonus>BONUS_ANDAMANESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9875,7 +9907,7 @@
 			<FreeBonus>BONUS_ANGOLAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9908,7 +9940,7 @@
 			<FreeBonus>BONUS_ARAGONESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9941,7 +9973,7 @@
 			<FreeBonus>BONUS_AVARIC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -9974,7 +10006,7 @@
 			<FreeBonus>BONUS_ARVERNIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10007,7 +10039,7 @@
 			<FreeBonus>BONUS_AZANDE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10040,7 +10072,7 @@
 			<FreeBonus>BONUS_BAHRAINI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10073,7 +10105,7 @@
 			<FreeBonus>BONUS_BACTRIC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10106,7 +10138,7 @@
 			<FreeBonus>BONUS_BANGLADESHI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10139,7 +10171,7 @@
 			<FreeBonus>BONUS_BASHKIR</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10172,7 +10204,7 @@
 			<FreeBonus>BONUS_BATAVIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10205,7 +10237,7 @@
 			<FreeBonus>BONUS_BATEK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10238,7 +10270,7 @@
 			<FreeBonus>BONUS_BAVARIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10271,7 +10303,7 @@
 			<FreeBonus>BONUS_BEDOUIN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10304,7 +10336,7 @@
 			<FreeBonus>BONUS_BELIZEAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10337,7 +10369,7 @@
 			<FreeBonus>BONUS_BOLIVIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10370,7 +10402,7 @@
 			<FreeBonus>BONUS_BRETON</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10403,7 +10435,7 @@
 			<FreeBonus>BONUS_BRITON</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10436,7 +10468,7 @@
 			<FreeBonus>BONUS_BURGUNDIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10469,7 +10501,7 @@
 			<FreeBonus>BONUS_CAMBEBA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10502,7 +10534,7 @@
 			<FreeBonus>BONUS_CANARI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10535,7 +10567,7 @@
 			<FreeBonus>BONUS_CAPAYAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10568,7 +10600,7 @@
 			<FreeBonus>BONUS_CARAL_SUPE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10601,7 +10633,7 @@
 			<FreeBonus>BONUS_CATALONIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10634,7 +10666,7 @@
 			<FreeBonus>BONUS_CELTIBERIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10667,7 +10699,7 @@
 			<FreeBonus>BONUS_CHACHAPOYA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10700,7 +10732,7 @@
 			<FreeBonus>BONUS_CHAVIN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10733,7 +10765,7 @@
 			<FreeBonus>BONUS_CHECHEN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10766,7 +10798,7 @@
 			<FreeBonus>BONUS_CHILEAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10799,7 +10831,7 @@
 			<FreeBonus>BONUS_CHIMU</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10832,7 +10864,7 @@
 			<FreeBonus>BONUS_KHWARAZMIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10865,7 +10897,7 @@
 			<FreeBonus>BONUS_CZECH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10898,7 +10930,7 @@
 			<FreeBonus>BONUS_DACIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10931,7 +10963,7 @@
 			<FreeBonus>BONUS_DAYAK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10964,7 +10996,7 @@
 			<FreeBonus>BONUS_DRAVIDIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -10997,7 +11029,7 @@
 			<FreeBonus>BONUS_ECUADORIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11030,7 +11062,7 @@
 			<FreeBonus>BONUS_ESTONIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11063,7 +11095,7 @@
 			<FreeBonus>BONUS_ETRUSCAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11096,7 +11128,7 @@
 			<FreeBonus>BONUS_FATIMID</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11129,7 +11161,7 @@
 			<FreeBonus>BONUS_FLEMISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11162,7 +11194,7 @@
 			<FreeBonus>BONUS_FUEGIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11195,7 +11227,7 @@
 			<FreeBonus>BONUS_FURAWI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11228,7 +11260,7 @@
 			<FreeBonus>BONUS_GALATIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11261,7 +11293,7 @@
 			<FreeBonus>BONUS_GAUCHO</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11294,7 +11326,7 @@
 			<FreeBonus>BONUS_GEORGIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11327,7 +11359,7 @@
 			<FreeBonus>BONUS_GHURID</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11360,7 +11392,7 @@
 			<FreeBonus>BONUS_GOKTURK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11393,7 +11425,7 @@
 			<FreeBonus>BONUS_KIPCHAK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11426,7 +11458,7 @@
 			<FreeBonus>BONUS_CHAMORRAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11459,7 +11491,7 @@
 			<FreeBonus>BONUS_GUANCHES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11492,7 +11524,7 @@
 			<FreeBonus>BONUS_GUARANI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11525,7 +11557,7 @@
 			<FreeBonus>BONUS_GUATEMALAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11558,7 +11590,7 @@
 			<FreeBonus>BONUS_GUYANESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11591,7 +11623,7 @@
 			<FreeBonus>BONUS_HELVETIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11624,7 +11656,7 @@
 			<FreeBonus>BONUS_HEMUDU</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11657,7 +11689,7 @@
 			<FreeBonus>BONUS_HIMYARITE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11690,7 +11722,7 @@
 			<FreeBonus>BONUS_HONGKONGER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11723,7 +11755,7 @@
 			<FreeBonus>BONUS_HOPEWELL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11756,7 +11788,7 @@
 			<FreeBonus>BONUS_HURRIANS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11789,7 +11821,7 @@
 			<FreeBonus>BONUS_HYKSOSI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11822,7 +11854,7 @@
 			<FreeBonus>BONUS_ILLYRIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11855,7 +11887,7 @@
 			<FreeBonus>BONUS_ILOCANO</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11888,7 +11920,7 @@
 			<FreeBonus>BONUS_INDUS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11921,7 +11953,7 @@
 			<FreeBonus>BONUS_IRANIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11954,7 +11986,7 @@
 			<FreeBonus>BONUS_IRAQI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -11987,7 +12019,7 @@
 			<FreeBonus>BONUS_JAVANESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12020,7 +12052,7 @@
 			<FreeBonus>BONUS_JUTE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12053,7 +12085,7 @@
 			<FreeBonus>BONUS_KENYAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12086,7 +12118,7 @@
 			<FreeBonus>BONUS_KAZAKH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12119,7 +12151,7 @@
 			<FreeBonus>BONUS_KHAZAR</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12152,7 +12184,7 @@
 			<FreeBonus>BONUS_KHITAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12185,7 +12217,7 @@
 			<FreeBonus>BONUS_KILLKE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12218,7 +12250,7 @@
 			<FreeBonus>BONUS_KITARAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12251,7 +12283,7 @@
 			<FreeBonus>BONUS_KOGI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12284,7 +12316,7 @@
 			<FreeBonus>BONUS_KURDISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12317,7 +12349,7 @@
 			<FreeBonus>BONUS_KUSHITE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12350,7 +12382,7 @@
 			<FreeBonus>BONUS_KUSHAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12383,7 +12415,7 @@
 			<FreeBonus>BONUS_KUWAITI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12416,7 +12448,7 @@
 			<FreeBonus>BONUS_LATVIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12449,7 +12481,7 @@
 			<FreeBonus>BONUS_LA_PLATAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12482,7 +12514,7 @@
 			<FreeBonus>BONUS_LEBANESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12515,7 +12547,7 @@
 			<FreeBonus>BONUS_LIBYAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12548,7 +12580,7 @@
 			<FreeBonus>BONUS_LITHUANIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12581,7 +12613,7 @@
 			<FreeBonus>BONUS_LONGOBARDIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12614,7 +12646,7 @@
 			<FreeBonus>BONUS_LULE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12647,7 +12679,7 @@
 			<FreeBonus>BONUS_LUNDA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12680,7 +12712,7 @@
 			<FreeBonus>BONUS_LUSITANIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12713,7 +12745,7 @@
 			<FreeBonus>BONUS_MALAGASY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12746,7 +12778,7 @@
 			<FreeBonus>BONUS_MAMELUK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12779,7 +12811,7 @@
 			<FreeBonus>BONUS_MANI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12812,7 +12844,7 @@
 			<FreeBonus>BONUS_MEDIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12845,7 +12877,7 @@
 			<FreeBonus>BONUS_MELANESIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12878,7 +12910,7 @@
 			<FreeBonus>BONUS_MICRONESIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12911,7 +12943,7 @@
 			<FreeBonus>BONUS_MING</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12944,7 +12976,7 @@
 			<FreeBonus>BONUS_MITANNI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -12977,7 +13009,7 @@
 			<FreeBonus>BONUS_MOCOVI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13010,7 +13042,7 @@
 			<FreeBonus>BONUS_MOHAWK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13043,7 +13075,7 @@
 			<FreeBonus>BONUS_MOLLO</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13076,7 +13108,7 @@
 			<FreeBonus>BONUS_MUISCA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13109,7 +13141,7 @@
 			<FreeBonus>BONUS_MARIC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13142,7 +13174,7 @@
 			<FreeBonus>BONUS_NABATEANS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13175,7 +13207,7 @@
 			<FreeBonus>BONUS_NAHUA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13208,7 +13240,7 @@
 			<FreeBonus>BONUS_NIGERIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13241,7 +13273,7 @@
 			<FreeBonus>BONUS_NOONGAR</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13274,7 +13306,7 @@
 			<FreeBonus>BONUS_NORMAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13307,7 +13339,7 @@
 			<FreeBonus>BONUS_NUMIDIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13340,7 +13372,7 @@
 			<FreeBonus>BONUS_ODAWA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13373,7 +13405,7 @@
 			<FreeBonus>BONUS_OMANI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13406,7 +13438,7 @@
 			<FreeBonus>BONUS_OPHIR</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13439,7 +13471,7 @@
 			<FreeBonus>BONUS_ORANG_ASLI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13472,7 +13504,7 @@
 			<FreeBonus>BONUS_PAIUTE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13505,7 +13537,7 @@
 			<FreeBonus>BONUS_PALESTINIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13538,7 +13570,7 @@
 			<FreeBonus>BONUS_PANAMAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13571,7 +13603,7 @@
 			<FreeBonus>BONUS_PARAGUAYAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13604,7 +13636,7 @@
 			<FreeBonus>BONUS_PASHTUN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13637,7 +13669,7 @@
 			<FreeBonus>BONUS_PERUVIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13670,7 +13702,7 @@
 			<FreeBonus>BONUS_FILIPINO</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13703,7 +13735,7 @@
 			<FreeBonus>BONUS_PHILISTINE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13736,7 +13768,7 @@
 			<FreeBonus>BONUS_PILAGA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13769,7 +13801,7 @@
 			<FreeBonus>BONUS_POVERTY_POINT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13802,7 +13834,7 @@
 			<FreeBonus>BONUS_POYA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13835,7 +13867,7 @@
 			<FreeBonus>BONUS_PUELCHE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13868,7 +13900,7 @@
 			<FreeBonus>BONUS_PUNTIC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13901,7 +13933,7 @@
 			<FreeBonus>BONUS_QIN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13934,7 +13966,7 @@
 			<FreeBonus>BONUS_QING</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -13967,7 +13999,7 @@
 			<FreeBonus>BONUS_QUEBECKER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14000,7 +14032,7 @@
 			<FreeBonus>BONUS_QUERANDI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14033,7 +14065,7 @@
 			<FreeBonus>BONUS_QULLA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14066,7 +14098,7 @@
 			<FreeBonus>BONUS_RED_OCHER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14100,7 +14132,7 @@
 			<FreeBonus>BONUS_SABBATEAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14134,7 +14166,7 @@
 			<FreeBonus>BONUS_SAFAVID</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14167,7 +14199,7 @@
 			<FreeBonus>BONUS_SAFFARID</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14200,7 +14232,7 @@
 			<FreeBonus>BONUS_SAKA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14233,7 +14265,7 @@
 			<FreeBonus>BONUS_SARMATIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14266,7 +14298,7 @@
 			<FreeBonus>BONUS_SELJUK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14299,7 +14331,7 @@
 			<FreeBonus>BONUS_SEMANG</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14332,7 +14364,7 @@
 			<FreeBonus>BONUS_SENEGALI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14365,7 +14397,7 @@
 			<FreeBonus>BONUS_SENNAR</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14398,7 +14430,7 @@
 			<FreeBonus>BONUS_SERBIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14431,7 +14463,7 @@
 			<FreeBonus>BONUS_SICAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14464,7 +14496,7 @@
 			<FreeBonus>BONUS_SICILIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14497,7 +14529,7 @@
 			<FreeBonus>BONUS_SINTASHTA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14530,7 +14562,7 @@
 			<FreeBonus>BONUS_SLOVENIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14563,7 +14595,7 @@
 			<FreeBonus>BONUS_SUDANESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14596,7 +14628,7 @@
 			<FreeBonus>BONUS_SUNDANESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14629,7 +14661,7 @@
 			<FreeBonus>BONUS_SURINAMESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14662,7 +14694,7 @@
 			<FreeBonus>BONUS_SWEDISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14695,7 +14727,7 @@
 			<FreeBonus>BONUS_TAGALOG</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14728,7 +14760,7 @@
 			<FreeBonus>BONUS_TAIRONA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14761,7 +14793,7 @@
 			<FreeBonus>BONUS_TAJIK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14794,7 +14826,7 @@
 			<FreeBonus>BONUS_TANG</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14827,7 +14859,7 @@
 			<FreeBonus>BONUS_TANZANIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14860,7 +14892,7 @@
 			<FreeBonus>BONUS_TASMANIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14893,7 +14925,7 @@
 			<FreeBonus>BONUS_TATAR</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14926,7 +14958,7 @@
 			<FreeBonus>BONUS_THRACIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14959,7 +14991,7 @@
 			<FreeBonus>BONUS_THREE_KINGDOMS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -14992,7 +15024,7 @@
 			<FreeBonus>BONUS_TIWI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15025,7 +15057,7 @@
 			<FreeBonus>BONUS_TOBA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15058,7 +15090,7 @@
 			<FreeBonus>BONUS_TRANSOXANIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15091,7 +15123,7 @@
 			<FreeBonus>BONUS_TUCANO</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15124,7 +15156,7 @@
 			<FreeBonus>BONUS_TUNGUS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15157,7 +15189,7 @@
 			<FreeBonus>BONUS_TUNISIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15190,7 +15222,7 @@
 			<FreeBonus>BONUS_TURKISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15223,7 +15255,7 @@
 			<FreeBonus>BONUS_UKRAINIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15256,7 +15288,7 @@
 			<FreeBonus>BONUS_URUGUAYAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15289,7 +15321,7 @@
 			<FreeBonus>BONUS_UZBEK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15322,7 +15354,7 @@
 			<FreeBonus>BONUS_VALDIVIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15355,7 +15387,7 @@
 			<FreeBonus>BONUS_VANUATUAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15388,7 +15420,7 @@
 			<FreeBonus>BONUS_VANDAL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15421,7 +15453,7 @@
 			<FreeBonus>BONUS_SAUDI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15454,7 +15486,7 @@
 			<FreeBonus>BONUS_WALLACHIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15487,7 +15519,7 @@
 			<FreeBonus>BONUS_WARAY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15520,7 +15552,7 @@
 			<FreeBonus>BONUS_WARI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15553,7 +15585,7 @@
 			<FreeBonus>BONUS_WAYUU</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15586,7 +15618,7 @@
 			<FreeBonus>BONUS_XIA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15619,7 +15651,7 @@
 			<FreeBonus>BONUS_XIANBEI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15652,7 +15684,7 @@
 			<FreeBonus>BONUS_YAGUA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15685,7 +15717,7 @@
 			<FreeBonus>BONUS_YOLNGU</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15718,7 +15750,7 @@
 			<FreeBonus>BONUS_ZANZIBARI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15751,7 +15783,7 @@
 			<FreeBonus>BONUS_ZENU</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -15784,7 +15816,7 @@
 			<FreeBonus>BONUS_ZIMBABWEAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>

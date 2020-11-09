@@ -113,7 +113,7 @@ class CityDemolish:
 		aList = []
 		iSum = 0
 		for iType in xrange(GC.getNumBuildingInfos()):
-			if CyCity.getNumRealBuilding(iType) and not CyTeam.isObsoleteBuilding(iType):
+			if CyCity.getNumRealBuilding(iType) and not CyTeam.isObsoleteBuilding(iType) and not CyCity.isFreeBuilding(iType):
 				if isWorldWonder(iType) or isTeamWonder(iType):
 					continue
 				CvBuildingInfo = GC.getBuildingInfo(iType)

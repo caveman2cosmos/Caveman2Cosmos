@@ -527,7 +527,10 @@ class TheScreen:
 		screen.setTableColumnHeader(TABLE, 1, "", w2)
 		screen.setTableColumnHeader(TABLE, 2, "", 10)
 
-		CyPlot = CyPlayer.getCity(iCityActID).plot()
+		if iCityActID > -1:
+			CyPlot = CyPlayer.getCity(iCityActID).plot()
+		else: CyPlot = None
+
 		for iMissionX in range(GC.getNumEspionageMissionInfos()):
 			pMission = GC.getEspionageMissionInfo(iMissionX)
 			if pMission.getCost() == -1: continue
@@ -535,11 +538,7 @@ class TheScreen:
 			bTargetCity = pMission.isTargetsCity()
 			if pMission.isPassive():
 				if bMissionList != bTargetCity:
-					if bTargetCity:
-						PLOT = CyPlot
-					else:
-						PLOT = None
-					iCost = CyPlayerAct.getEspionageMissionCost(iMissionX, iPlayer, PLOT, -1)
+					iCost = CyPlayerAct.getEspionageMissionCost(iMissionX, iPlayer, CyPlot, -1)
 					if iCost == -1: continue
 					szCost = uFont2
 					if iCost <= iEP:
@@ -553,7 +552,8 @@ class TheScreen:
 					iRow = screen.appendTableRow(EffectsTable)
 					screen.setTableText(EffectsTable, 0, iRow, szText, "", iWidGen, 0, 0, 1<<0)
 					screen.setTableText(EffectsTable, 1, iRow, szCost, "", iWidGen, 0, 0, 1<<1)
-			elif bTargetCity:
+
+			elif bTargetCity and CyPlot:
 				iCost = CyPlayerAct.getEspionageMissionCost(iMissionX, iPlayer, CyPlot, -1)
 				if iCost == -1: continue
 				szCost = uFont2
@@ -568,6 +568,7 @@ class TheScreen:
 				iRow = screen.appendTableRow(TABLE)
 				screen.setTableText(TABLE, 0, iRow, szText, "", iWidGen, 0, 0, 1<<0)
 				screen.setTableText(TABLE, 1, iRow, szCost, "", iWidGen, 0, 0, 1<<1)
+
 		if bMissionList:
 			screen.hide(TABLE)
 
