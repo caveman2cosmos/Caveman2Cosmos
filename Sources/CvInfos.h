@@ -477,8 +477,8 @@ public:
 
 	int getDomainExtraMoves(int i) const; // Exposed to Python
 	int getFlavorValue(int i) const; // Exposed to Python
-	int getPrereqOrTechs(int i) const; // Exposed to Python
-	int getPrereqAndTechs(int i) const; // Exposed to Python
+	const std::vector<TechTypes>& getPrereqOrTechs() const { return m_aePrereqOrTechs; }
+	const std::vector<TechTypes>& getPrereqAndTechs() const { return m_aePrereqAndTechs; }
 
 	bool isCommerceFlexible(int i) const; // Exposed to Python
 	bool isTerrainTrade(int i) const; // Exposed to Python
@@ -552,13 +552,11 @@ protected:
 	CvString m_szSound;
 	CvString m_szSoundMP;
 
-	// Arrays
-
 	int* m_piDomainExtraMoves;
 	int* m_piFlavorValue;
 
-	int* m_piPrereqOrTechs;
-	int* m_piPrereqAndTechs;
+	std::vector<TechTypes> m_aePrereqOrTechs;
+	std::vector<TechTypes> m_aePrereqAndTechs;
 
 	bool* m_pbCommerceFlexible;
 	bool* m_pbTerrainTrade;

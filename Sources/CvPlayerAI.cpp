@@ -4804,10 +4804,9 @@ int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusC
 
 			bool bIsANDPreReq = false;
 			int iANDPrereqs = 0;
-			for (int iK = 0; iK < GC.getNUM_AND_TECH_PREREQS(); iK++)
+			foreach_(const TechTypes& ePreReq, GC.getTechInfo(eTech).getPrereqAndTechs())
 			{
-				TechTypes ePrereq = (TechTypes)GC.getTechInfo((TechTypes)iJ).getPrereqAndTechs(iK);
-				if (ePrereq != NO_TECH && !GET_TEAM(getTeam()).isHasTech(ePrereq))
+				if (!GET_TEAM(getTeam()).isHasTech(ePrereq))
 				{
 					iANDPrereqs++;
 					if (ePrereq == eTech)
@@ -10399,7 +10398,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 								}
 								else
 								{
-									foreach_(const TechTypes tech, kLoopBuilding.getPrereqAndTechs())
+									foreach_(const TechTypes& tech, kLoopBuilding.getPrereqAndTechs())
 									{
 										if (!kTeam.isHasTech(tech))
 										{

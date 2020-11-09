@@ -28318,33 +28318,8 @@ void CvGameTextMgr::buildSingleLineTechTreeString(CvWStringBuffer &szBuffer, Tec
 		}
 		if (!bTechAlreadyAccessible)
 		{
-			bool bTechFound = false;
-
-			if (!bTechFound)
-			{
-				for (int iJ = 0; iJ < GC.getNUM_OR_TECH_PREREQS(); iJ++)
-				{
-					if (GC.getTechInfo((TechTypes) iI).getPrereqOrTechs(iJ) == eTech)
-					{
-						bTechFound = true;
-						break;
-					}
-				}
-			}
-
-			if (!bTechFound)
-			{
-				for (int iJ = 0; iJ < GC.getNUM_AND_TECH_PREREQS(); iJ++)
-				{
-					if (GC.getTechInfo((TechTypes) iI).getPrereqAndTechs(iJ) == eTech)
-					{
-						bTechFound = true;
-						break;
-					}
-				}
-			}
-
-			if (bTechFound)
+			if (std::contains(GC.getTechInfo((TechTypes)iI).getPrereqOrTechs(), eTech)
+			|| std::contains(GC.getTechInfo((TechTypes)iI).getPrereqAndTechs(), eTech)
 			{
 				szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_TECH_TEXT"), CvWString(GC.getTechInfo((TechTypes)iI).getType()).GetCString(), GC.getTechInfo((TechTypes) iI).getDescription());
 				setListHelp(szBuffer, gDLL->getText("TXT_KEY_MISC_LEADS_TO").c_str(), szTempBuffer, L", ", bFirst);
@@ -28371,28 +28346,24 @@ void CvGameTextMgr::buildTechTreeString(CvWStringBuffer &szBuffer, TechTypes eTe
 	CvWString szOtherOrTechs;
 	int nOtherOrTechs = 0;
 	bool bOrTechFound = false;
-	for (int iJ = 0; iJ < GC.getNUM_OR_TECH_PREREQS(); iJ++)
+	foreach_(const TechTypes& eTestTech, GC.getTechInfo(eTech).getPrereqOrTechs())
 	{
-		TechTypes eTestTech = (TechTypes)GC.getTechInfo(eTech).getPrereqOrTechs(iJ);
-		if (eTestTech >= 0)
+		bool bTechAlreadyResearched = false;
+		if (bPlayerContext)
 		{
-			bool bTechAlreadyResearched = false;
-			if (bPlayerContext)
+			bTechAlreadyResearched = GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(eTestTech);
+		}
+		if (!bTechAlreadyResearched)
+		{
+			if (eTestTech == eFromTech)
 			{
-				bTechAlreadyResearched = GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(eTestTech);
+				bOrTechFound = true;
 			}
-			if (!bTechAlreadyResearched)
+			else
 			{
-				if (eTestTech == eFromTech)
-				{
-					bOrTechFound = true;
-				}
-				else
-				{
-					szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_TECH_TEXT"), GC.getTechInfo(eTestTech).getDescription());
-					setListHelp(szOtherOrTechs, L"", szTempBuffer, gDLL->getText("TXT_KEY_OR").c_str(), 0 == nOtherOrTechs);
-					nOtherOrTechs++;
-				}
+				szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_TECH_TEXT"), GC.getTechInfo(eTestTech).getDescription());
+				setListHelp(szOtherOrTechs, L"", szTempBuffer, gDLL->getText("TXT_KEY_OR").c_str(), 0 == nOtherOrTechs);
+				nOtherOrTechs++;
 			}
 		}
 	}
@@ -28401,28 +28372,24 @@ void CvGameTextMgr::buildTechTreeString(CvWStringBuffer &szBuffer, TechTypes eTe
 	CvWString szOtherAndTechs;
 	int nOtherAndTechs = 0;
 	bool bAndTechFound = false;
-	for (int iJ = 0; iJ < GC.getNUM_AND_TECH_PREREQS(); iJ++)
+	foreach_(const TechTypes& eTestTech, GC.getTechInfo(eTech).getPrereqAndTechs())
 	{
-		TechTypes eTestTech = (TechTypes)GC.getTechInfo(eTech).getPrereqAndTechs(iJ);
-		if (eTestTech >= 0)
+		bool bTechAlreadyResearched = false;
+		if (bPlayerContext)
 		{
-			bool bTechAlreadyResearched = false;
-			if (bPlayerContext)
+			bTechAlreadyResearched = GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(eTestTech);
+		}
+		if (!bTechAlreadyResearched)
+		{
+			if (eTestTech == eFromTech)
 			{
-				bTechAlreadyResearched = GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(eTestTech);
+				bAndTechFound = true;
 			}
-			if (!bTechAlreadyResearched)
+			else
 			{
-				if (eTestTech == eFromTech)
-				{
-					bAndTechFound = true;
-				}
-				else
-				{
-					szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_TECH_TEXT"), GC.getTechInfo(eTestTech).getDescription());
-					setListHelp(szOtherAndTechs, L"", szTempBuffer, L", ", 0 == nOtherAndTechs);
-					nOtherAndTechs++;
-				}
+				szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_TECH_TEXT"), GC.getTechInfo(eTestTech).getDescription());
+				setListHelp(szOtherAndTechs, L"", szTempBuffer, L", ", 0 == nOtherAndTechs);
+				nOtherAndTechs++;
 			}
 		}
 	}

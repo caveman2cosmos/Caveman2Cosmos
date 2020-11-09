@@ -98,8 +98,6 @@ void CyInfoPythonInterface1()
 		.def("isCommerceFlexible", &CvTechInfo::isCommerceFlexible, "bool (int i)")
 		.def("isTerrainTrade", &CvTechInfo::isTerrainTrade, "bool (int i)")
 
-
-
 		.def("getNumPrereqBuildings", &CvTechInfo::getNumPrereqBuildings, "int ()")
 		.def("getPrereqBuildingType", &CvTechInfo::getPrereqBuildingType, "int (int i)")
 		.def("getPrereqBuildingMinimumRequired", &CvTechInfo::getPrereqBuildingMinimumRequired, "int (int i)")

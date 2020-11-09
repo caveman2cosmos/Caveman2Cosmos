@@ -5100,7 +5100,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	}
 
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqOrVicinityBonuses, pClassInfo->getPrereqOrVicinityBonuses());
-
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqOrRawVicinityBonuses, pClassInfo->getPrereqOrRawVicinityBonuses());
 
 	for ( int i = 0; i < GC.getNumTechInfos(); i++)	// "Init2DIntList" verify method
