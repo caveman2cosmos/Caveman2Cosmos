@@ -54,9 +54,6 @@ void CvGameRecord::read(FDataStreamBase* pStream)
 	// reset before loading
 	reset();
 
-	uint uiFlag=0;
-	pStream->Read(&uiFlag);	// flags for expansion
-
 	pStream->Read((int*)&m_eEra);
 
 	pStream->ReadString(m_szMapName);
@@ -64,9 +61,6 @@ void CvGameRecord::read(FDataStreamBase* pStream)
 
 void CvGameRecord::write(FDataStreamBase* pStream)
 {
-	uint uiFlag=0;
-	pStream->Write(uiFlag);	// flags for expansion
-
 	pStream->Write(m_eEra);
 
 	pStream->WriteString(m_szMapName);
@@ -273,9 +267,6 @@ void CvPlayerRecord::read(FDataStreamBase* pStream)
 	// reset before loading
 	reset();
 
-	uint uiFlag=0;
-	WRAPPER_READ(wrapper, "CvPlayerRecord", &uiFlag);	// flags for expansion
-
 	WRAPPER_READ(wrapper, "CvPlayerRecord", &m_iID);
 	WRAPPER_READ(wrapper, "CvPlayerRecord", &m_iTime);
 
@@ -302,9 +293,6 @@ void CvPlayerRecord::write(FDataStreamBase* pStream)
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	uint uiFlag=0;
-	WRAPPER_WRITE(wrapper, "CvPlayerRecord", uiFlag);	// flags for expansion
 
 	WRAPPER_WRITE(wrapper, "CvPlayerRecord", m_iID);
 	WRAPPER_WRITE(wrapper, "CvPlayerRecord", m_iTime);
