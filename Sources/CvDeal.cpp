@@ -678,9 +678,6 @@ void CvDeal::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	uint uiFlag=0;
-	WRAPPER_WRITE(wrapper, "CvDeal", uiFlag);		// flag for expansion
-
 	WRAPPER_WRITE(wrapper, "CvDeal", m_iID);
 	WRAPPER_WRITE(wrapper, "CvDeal", m_iInitialGameTurn);
 
@@ -700,9 +697,6 @@ void CvDeal::read(FDataStreamBase* pStream)
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_READ_OBJECT_START(wrapper);
-
-	uint uiFlag=0;
-	WRAPPER_READ(wrapper,"CvDeal",&uiFlag);	// flags for expansion
 
 	WRAPPER_READ(wrapper,"CvDeal",&m_iID);
 	WRAPPER_READ(wrapper,"CvDeal",&m_iInitialGameTurn);

@@ -377,37 +377,13 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 	}
 
-	for (int iI = MAX_PC_PLAYERS; iI < MAX_PLAYERS; iI++)
+	for (int iI = MAX_PC_PLAYERS; iI < MAX_PLAYERS-1; iI++)
 	{
 		PlayerTypes ePlayer = (PlayerTypes)iI;
 
 		FAssertMsg(!GET_PLAYER(ePlayer).isAlive(), "NPC is not expected to be alive at this point of the game initialization.");
 
-		if (ePlayer == BARBARIAN_PLAYER)
-		{
-			addPlayer(
-				ePlayer, (LeaderHeadTypes)GC.getDefineINT("BARBARIAN_LEADER"),
-				(CivilizationTypes)GC.getDefineINT("BARBARIAN_CIVILIZATION"), false
-			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
-			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
-			GET_TEAM(eTeam).init(eTeam);
-			GC.getInitCore().setTeam(ePlayer, eTeam);
-			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
-		}
-		else if (ePlayer == NEANDERTHAL_PLAYER)
-		{
-			addPlayer(
-				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NEANDERTHAL_LEADER"),
-				(CivilizationTypes)GC.getDefineINT("NEANDERTHAL_CIVILIZATION"), false
-			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
-			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
-			GET_TEAM(eTeam).init(eTeam);
-			GC.getInitCore().setTeam(ePlayer, eTeam);
-			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
-		}
-		else if (ePlayer == BEAST_PLAYER)
+		if (ePlayer == BEAST_PLAYER)
 		{
 			addPlayer(
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("ANIMAL_LEADER"),
@@ -455,10 +431,9 @@ void CvGame::init(HandicapTypes eHandicap)
 			GC.getInitCore().setTeam(ePlayer, eTeam);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
+		/*
 		else if (ePlayer == NPC4_PLAYER)
 		{
-			break; // Remove me the day I'm added, shift it one "else" down per NPC added.
-			// I will only be initialized when starting a new game, old saves won't ever see me.
 			addPlayer(
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NPC4_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("NPC4_CIVILIZATION"), false
@@ -517,6 +492,33 @@ void CvGame::init(HandicapTypes eHandicap)
 			GC.getInitCore().setTeam(ePlayer, eTeam);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
+		*/
+		else if (ePlayer == NEANDERTHAL_PLAYER)
+		{
+			addPlayer(
+				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NEANDERTHAL_LEADER"),
+				(CivilizationTypes)GC.getDefineINT("NEANDERTHAL_CIVILIZATION"), false
+			);
+			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
+			GET_TEAM(eTeam).init(eTeam);
+			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
+		}
+		/* Toffer - No point, the exe does this slightly after this code anyway.
+		else if (ePlayer == BARBARIAN_PLAYER)
+		{
+			addPlayer(
+				ePlayer, (LeaderHeadTypes)GC.getDefineINT("BARBARIAN_LEADER"),
+				(CivilizationTypes)GC.getDefineINT("BARBARIAN_CIVILIZATION"), false
+			);
+			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
+			GET_TEAM(eTeam).init(eTeam);
+			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
+		}
+		*/
 	}
 	AI_init();
 
@@ -7789,9 +7791,7 @@ void CvGame::updateMoves()
 
 	MEMORY_TRACE_FUNCTION();
 
-	CvSelectionGroup* pLoopSelectionGroup;
 	int aiShuffle[MAX_PLAYERS];
-	int iLoop;
 	int iI;
 
 	if (isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
@@ -7830,10 +7830,7 @@ void CvGame::updateMoves()
 							player.AI_unitUpdate();
 						}
 
-						for(pLoopSelectionGroup = player.firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = player.nextSelectionGroup(&iLoop))
-						{
-							pLoopSelectionGroup->autoMission();
-						}
+						algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
 
 						if (!(player.hasBusyUnit()))
 						{
@@ -7861,14 +7858,7 @@ void CvGame::updateMoves()
 					CvPathGenerator::EnableMaxPerformance(true);
 
 					//	Always try to do automations first for the AI
-					for(pLoopSelectionGroup = player.firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = player.nextSelectionGroup(&iLoop))
-					{
-						FAssert(pLoopSelectionGroup != NULL);
-						if (pLoopSelectionGroup != NULL)
-						{
-							pLoopSelectionGroup->autoMission();
-						}
-					}
+					algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
 
 					CvPathGenerator::EnableMaxPerformance(false);
 
@@ -7957,10 +7947,9 @@ void CvGame::testAlive()
 {
 	PROFILE_FUNC();
 
-#ifdef PARALLEL_MAPS	// XXX - Currently players are killed after switching to a new map.
-	if (m_eCurrentMap != MAP_INITIAL)
+	if (m_eCurrentMap != MAP_INITIAL)	// XXX - Currently players are killed after switching to a new map.
 		return;
-#endif
+
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		GET_PLAYER((PlayerTypes)iI).verifyAlive();
@@ -9307,18 +9296,9 @@ void CvGame::read(FDataStreamBase* pStream)
 	}
 
 	WRAPPER_READ(wrapper,"CvGame",&m_iShrineBuildingCount);
-	//	Retain bug-compatibility with the old format which needlessly saved the entire max
-	//	size the array could possibly be here
-	if ( wrapper.isUsingTaggedFormat() )
-	{
-		WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper,"CvGame",REMAPPED_CLASS_TYPE_BUILDINGS,m_iShrineBuildingCount, m_aiShrineBuilding);
-		WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper,"CvGame",REMAPPED_CLASS_TYPE_RELIGIONS,m_iShrineBuildingCount, m_aiShrineReligion);
-	}
-	else
-	{
-		WRAPPER_READ_CLASS_ENUM_ARRAY(wrapper,"CvGame",REMAPPED_CLASS_TYPE_BUILDINGS,GC.getNumBuildingInfos(), m_aiShrineBuilding);
-		WRAPPER_READ_CLASS_ENUM_ARRAY(wrapper,"CvGame",REMAPPED_CLASS_TYPE_RELIGIONS,GC.getNumBuildingInfos(), m_aiShrineReligion);
-	}
+	WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper, "CvGame", REMAPPED_CLASS_TYPE_BUILDINGS, m_iShrineBuildingCount, m_aiShrineBuilding);
+	WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper, "CvGame", REMAPPED_CLASS_TYPE_RELIGIONS, m_iShrineBuildingCount, m_aiShrineReligion);
+
 	WRAPPER_READ(wrapper,"CvGame",&m_iNumCultureVictoryCities);
 	WRAPPER_READ(wrapper,"CvGame",&m_eCultureVictoryCultureLevel);
 
@@ -10134,15 +10114,6 @@ CultureLevelTypes CvGame::culturalVictoryCultureLevel() const
 
 int CvGame::getCultureThreshold(CultureLevelTypes eLevel) const
 {
-	if (isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		return
-		(
-			GC.getCultureLevelInfo(eLevel).getSpeedThreshold(getGameSpeedType())
-			*
-			(100 + GC.getDefineINT("NO_ESPIONAGE_CULTURE_LEVEL_MODIFIER")) / 100
-		);
-	}
 	return GC.getCultureLevelInfo(eLevel).getSpeedThreshold(getGameSpeedType());
 }
 

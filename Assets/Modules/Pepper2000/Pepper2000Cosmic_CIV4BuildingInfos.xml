@@ -2612,6 +2612,7 @@
 			<Strategy>TXT_KEY_BUILDING_COSMIC_EXPANSION_POWER_PLANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COSMIC_EXPANSION_POWER_PLANT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_COSMIC_EXPANSION_POWER_PLANT</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CONTROLLED_VACUUM_COLLAPSE</PrereqTech>
 			<iCost>17350</iCost>

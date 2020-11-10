@@ -383,13 +383,6 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_ESPIONAGE</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_ESPIONAGE</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_ESPIONAGE_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
 			<Type>GAMEOPTION_REVOLUTION</Type>
 			<Description>TXT_KEY_GAMEOPTION_REVOLUTION</Description>
 			<Help>TXT_KEY_GAMEOPTION_REVOLUTION_HELP</Help>
@@ -521,13 +514,6 @@
 			<Help>TXT_KEY_GAMEOPTION_SIZE_MATTERS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_SIZE_MATTERS_UNCUT</Type>
-			<Description>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT</Description>
-			<Help>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_FIGHT_OR_FLIGHT</Type>

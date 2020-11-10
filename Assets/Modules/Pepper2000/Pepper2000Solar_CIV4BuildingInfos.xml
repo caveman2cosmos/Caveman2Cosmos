@@ -1864,6 +1864,7 @@
 			<Strategy>TXT_KEY_BUILDING_LASER_STARWAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LASER_STARWAY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LASER_STARWAY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_TRADE</PrereqTech>
 			<iCost>23432</iCost>
@@ -3772,6 +3773,7 @@
 			<Strategy>TXT_KEY_BUILDING_URANUS_MINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_URANUS_MINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_URANUS_MINE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_NUCLEAR_PULSE_PROPULSION</PrereqTech>
 			<iCost>9926</iCost>
@@ -4338,6 +4340,7 @@
 			<Strategy>TXT_KEY_BUILDING_NEPTUNE_ORBITAL_RING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEPTUNE_ORBITAL_RING</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NEPTUNE_ORBITAL_RING</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
 			<iCost>23432</iCost>
@@ -4564,6 +4567,7 @@
 			<Strategy>TXT_KEY_BUILDING_PLUTO_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PLUTO_BASE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PLUTO_BASE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
 			<iCost>2877</iCost>

@@ -15870,7 +15870,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_SPY_NETWORK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
