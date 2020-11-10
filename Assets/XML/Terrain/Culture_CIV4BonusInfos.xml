@@ -316,17 +316,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CARTHAGINIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Castilian -->
-<!-- No units
-		<BonusInfo>
-			<Type>BONUS_CASTILIAN</Type>
-			<Description>TXT_KEY_BONUS_CASTILIAN</Description>
-			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_CASTILIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
-		</BonusInfo>
--->
 	<!-- Celtic -->
 		<BonusInfo>
 			<Type>BONUS_CELTIC</Type>
@@ -949,17 +938,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LIANGZHU</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Leonese -->
-<!-- No units
-		<BonusInfo>
-			<Type>BONUS_LEONESE</Type>
-			<Description>TXT_KEY_BONUS_LEONESE</Description>
-			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_LEONESE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
-		</BonusInfo>
--->
 	<!-- Luba -->
 		<BonusInfo>
 			<Type>BONUS_LUBA</Type>
@@ -4404,7 +4382,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
-<!-- Wrong flag
 		<BonusInfo>
 			<Type>BONUS_SABBATEAN</Type>
 			<Description>TXT_KEY_BONUS_SABBATEAN</Description>
@@ -4421,7 +4398,6 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
--->
 		<BonusInfo>
 			<Type>BONUS_SAFAVID</Type>
 			<Description>TXT_KEY_BONUS_SAFAVID</Description>
