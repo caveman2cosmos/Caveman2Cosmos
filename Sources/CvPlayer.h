@@ -178,9 +178,6 @@ public:
 
 	void doTurn();
 	void doTurnUnits();
-	void doInflation();
-	int getCurrentInflationCostModifier() const; //	Exposed to Python
-	int getEquilibriumInflationCostModifier() const; //	Exposed to Python
 
 	//	Dump stats to BBAI log
 	void dumpStats() const;
@@ -318,10 +315,11 @@ public:
 
 	int calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const; // Exposed to Python
 	int calculateUnitSupply() const; // Exposed to Python
-	int64_t calculatePreInflatedCosts() const; // Exposed to Python
 	int calculateInflationRate() const; // Exposed to Python
-	int64_t calculateInflatedCosts() const; // Exposed to Python
-	int getCurrentInflationPerTurnTimes10000() const;
+	int64_t calculatePreInflatedCosts() const; // Exposed to Python
+	int getInflationMod10000() const;
+	int64_t getInflationCost() const;
+	int64_t getFinalExpense() const; // Exposed to Python
 
 	int64_t calculateBaseNetGold() const;
 	int calculateBaseNetResearch(TechTypes eTech = NO_TECH) const; // Exposed to Python
@@ -1610,7 +1608,6 @@ protected:
 	int m_iHurryCostModifier;
 	int m_iHurryInflationModifier;
 	int m_iHurryCount;
-	mutable int m_accruedCostRatioTimes10000; //	Inflation effects accrue to this ratio to start-of-game cost
 
 	int m_iFractionalCombatExperience;
 

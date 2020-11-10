@@ -138,7 +138,7 @@ public:
 	int foodDifference(bool bBottom) const;
 	int growthThreshold() const;
 	int productionLeft() const;
-	int hurryGold(int /*HurryTypes*/ iHurry) const;
+	int64_t getHurryGold(int /*HurryTypes*/ iHurry) const;
 	int hurryPopulation(int /*HurryTypes*/ iHurry) const;
 	int hurryProduction(int /*HurryTypes*/ iHurry) const;
 	int flatHurryAngerLength() const;

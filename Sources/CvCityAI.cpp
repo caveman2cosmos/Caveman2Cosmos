@@ -4638,8 +4638,7 @@ bool CvCityAI::AI_canRushBuildingConstruction(BuildingTypes building)
 	for (int iHurry = 0; iHurry < GC.getNumHurryInfos(); ++iHurry)
 	{
 		if (canHurryBuilding((HurryTypes)iHurry, building, true)
-			&&
-			AI_getHappyFromHurry((HurryTypes)iHurry, building, true) > 0)
+		&& AI_getHappyFromHurry((HurryTypes)iHurry, building, true) > 0)
 		{
 			return true;
 		}
@@ -8160,7 +8159,7 @@ void CvCityAI::AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMul
 	}
 
 	const int iNetCommerce = 1 + kPlayer.getCommerceRate(COMMERCE_GOLD) + kPlayer.getCommerceRate(COMMERCE_RESEARCH) + std::max(0, kPlayer.getGoldPerTurn());
-	const int64_t iNetExpenses = kPlayer.calculateInflatedCosts() + std::max(0, -kPlayer.getGoldPerTurn());
+	const int64_t iNetExpenses = kPlayer.getFinalExpense() + std::max(0, -kPlayer.getGoldPerTurn());
 	const int iRatio = static_cast<int>(100 * iNetExpenses / std::max(1, iNetCommerce));
 
 	if (iRatio > 40)
@@ -8689,7 +8688,7 @@ void CvCityAI::AI_updateBestBuild()
 		+
 		std::max(0, kPlayer.getGoldPerTurn())
 	);
-	const int64_t iNetExpenses = kPlayer.calculateInflatedCosts() + std::max(0, -kPlayer.getGoldPerTurn());
+	const int64_t iNetExpenses = kPlayer.getFinalExpense() + std::max(0, -kPlayer.getGoldPerTurn());
 
 	const int iRatio = static_cast<int>(100 * iNetExpenses / std::max(1, iNetCommerce));
 
@@ -9034,604 +9033,349 @@ void CvCityAI::AI_doHurry(bool bForce)
 
 	FAssert(!isHuman() || isProductionAutomated());
 
-	if (isNPC())
+	if (isNPC() || getProduction() == 0 && !bForce)
 	{
 		return;
 	}
-
-	if ((getProduction() == 0) && !bForce)
-	{
-		return;
-	}
-
 	CvArea* pWaterArea = waterArea();
 
-	UnitTypes eProductionUnit = getProductionUnit();
-	UnitAITypes eProductionUnitAI = getProductionUnitAI();
-	BuildingTypes eProductionBuilding = getProductionBuilding();
+	const UnitTypes eProductionUnit = getProductionUnit();
+	const UnitAITypes eProductionUnitAI = getProductionUnitAI();
+	const BuildingTypes eProductionBuilding = getProductionBuilding();
 
-	bool bDanger = AI_isDanger();
+	const bool bDanger = AI_isDanger();
 
 	for (int iI = 0; iI < GC.getNumHurryInfos(); iI++)
 	{
-		if (canHurry((HurryTypes)iI))
+		if (!canHurry((HurryTypes)iI))
 		{
-			int iHurryAngerLength = hurryAngerLength((HurryTypes)iI);
-			int iHurryPopulation = hurryPopulation((HurryTypes)iI);
-			if (bForce && iHurryPopulation < 1)//TB The AI is whipping far too often and easily and should almost never do so.  Disabling validity of this action in most situations.
+			continue;
+		}
+		const int iHurryPopulation = hurryPopulation((HurryTypes)iI);
+		const int iHurryAngerLength = hurryAngerLength((HurryTypes)iI);
+
+		// Gold hurry
+		if (iHurryPopulation < 1)
+		{
+			if (bForce)
 			{
 				hurry((HurryTypes)iI);
-				break;
+				return;
 			}
-
-			int iMinTurns = MAX_INT;
-			bool bEssential = false;
-			bool bGrowth = false;
-
-			// Whip to eliminate unhappiness - thank you Blake!
-			//if (getProduction() > 0)
-			//{
-			//	//TBRUSHFIX
-			//	//There may be a bug in this where health is being counted rather than happiness BUT
-			//	//Regardless this should be a last resort in C2C.
-			//	//Happiness is simply not as hard to get on top of in C2C.
-			//	//So first ensure that there's cause to panic.
-			//	//Second, check to see if a quick building can resolve some of the unhappiness.
-			//	//Third, check to see if military defenders can be quickly trained to resolve some of the unhappiness.
-			//	//Fourth, ensure that properties aren't out of control and needing help there.
-			//	//If all of the above is exhausted, we may have real cause to rush just to reduce population.
-			//	int iHappyness = happyLevel() - unhappyLevel(0);
-
-			//	if ( iHappyness < 0 )
-			//	{
-			//		//	In this case, any unhappiness needs to be addressed quickly if at all possible.
-			//		if (!AI_chooseBuilding(BUILDINGFOCUS_HAPPY, 2, 0, -1, true))
-			//		{
-			//			//	Can we build military happyness units?
-			//			if ( GET_PLAYER(getOwner()).getHappyPerMilitaryUnit() > 0 )
-			//			{
-			//				if (!AI_chooseUnit("emergency military happyness", UNITAI_CITY_DEFENSE))
-			//				{
-			//					if (AI_getHappyFromHurry((HurryTypes)iI) > 0)
-			//					{
-			//						if( gCityLogLevel >= 2 )
-			//						{
-			//							logBBAI("      City %S hurry to remove unhappiness", getName().GetCString() );
-			//						}
-			//						hurry((HurryTypes)iI);
-			//						break;
-			//					}
-			//				}
-			//			}
-			//			//else
-			//			//{
-			//			//	PropertyTypes pProperty = GC.getPROPERTY_CRIME();
-			//			//	if ( !AI_choosePropertyControlUnit(10, pProperty) )
-			//			//	{
-			//			//		if (AI_getHappyFromHurry((HurryTypes)iI) > 0)
-			//			//		{
-			//			//			if( gCityLogLevel >= 2 )
-			//			//			{
-			//			//				logBBAI("      City %S hurry to remove unhappiness", getName().GetCString() );
-			//			//			}
-			//			//			hurry((HurryTypes)iI);
-			//			//			break;
-			//			//		}
-			//			//	}
-			//			//}
-			//		}
-			//	}
-			//}
-
 			// Rush defenses when in big trouble
-			//TBRUSHFIX
-			// This routine is noted and I'll be looking for examples of its use ingame before doing any restructuring.  This might be appropriate.  Maybe.  The rushing could put them in bigger trouble when they can't then rush to get defenders when they need to.
-			if ( (area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE) && GET_TEAM(getTeam()).AI_getEnemyPowerPercent(true) > 150 )
+			if (eProductionUnit != NO_UNIT
+			&& area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE && GET_TEAM(getTeam()).AI_getEnemyPowerPercent(true) > 150
+			&& !GET_PLAYER(getOwner()).AI_isFinancialTrouble() && iHurryAngerLength == 0)
 			{
-				if( eProductionUnit != NO_UNIT && GC.getGame().AI_combatValue(eProductionUnit) > 33 && getProduction() > 0 )
+				int64_t iHurryGold = getHurryGold((HurryTypes)iI);
+				bool bWait = true;
+
+				if (GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_TURTLE))
 				{
-					//if( (iHurryPopulation > 0) && (iHurryAngerLength == 0 || getHurryAngerTimer() < 2) && (iHurryPopulation < 3 && iHurryPopulation < getPopulation()/3))
-					//{
-					//	bool bWait = true;
-
-					//	if( GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_TURTLE) )
-					//	{
-					//		bWait = false;
-					//	}
-					//	else if( (3*(getPopulation() - iHurryPopulation)) < getHighestPopulation()*2 )
-					//	{
-					//		bWait = true;
-					//	}
-					//	else if( GET_PLAYER(getOwner()).AI_isFinancialTrouble() )
-					//	{
-					//		bWait = true;
-					//	}
-					//	else
-					//	{
-					//		for( int iJ = 0; iJ < MAX_PC_TEAMS; iJ++ )
-					//		{
-					//			if( GET_TEAM((TeamTypes)iJ).isAlive() && !GET_TEAM((TeamTypes)iJ).isMinorCiv() )
-					//			{
-					//				if( GET_TEAM(getTeam()).isAtWar((TeamTypes)iJ) && GET_TEAM(getTeam()).AI_getAtWarCounter((TeamTypes)iJ) < 10 )
-					//				{
-					//					bWait = false;
-					//					break;
-					//				}
-					//			}
-					//		}
-					//	}
-
-					//	if( !bWait )
-					//	{
-					//		if( gCityLogLevel >= 2 )
-					//		{
-					//			logBBAI("      City %S hurry pop at %d to rush defenses for recent attack", getName().GetCString(), iHurryPopulation );
-					//		}
-					//		hurry((HurryTypes)iI);
-					//		break;
-					//	}
-					//}
-					//else
+					if ((bDanger ? 5 : 8)*iHurryGold < GET_PLAYER(getOwner()).getGold())
 					{
-						//TBRUSHFIX
-						//I can appreciate nearly any gold rush.  These are more useful as they don't dramatically impede the AI so much.
-						if( !(GET_PLAYER(getOwner()).AI_isFinancialTrouble()) )
-						{
-							int iHurryGold = hurryGold((HurryTypes)iI);
-							if( iHurryGold > 0 && iHurryAngerLength == 0 )
-							{
-								bool bWait = true;
-
-								if( GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_TURTLE) )
-								{
-									if( (bDanger ? 5 : 8)*iHurryGold < GET_PLAYER(getOwner()).getGold() )
-									{
-										bWait = false;
-									}
-								}
-								else
-								{
-									if( (bDanger ? 8 : 12)*iHurryGold < GET_PLAYER(getOwner()).getGold() )
-									{
-										bWait = false;
-									}
-								}
-
-								if( !bWait )
-								{
-									if( gCityLogLevel >= 2 )
-									{
-										logBBAI("      City %S hurry gold at %d to rush defenses for recent attack", getName().GetCString(), iHurryGold );
-									}
-									hurry((HurryTypes)iI);
-									break;
-								}
-							}
-						}
+						bWait = false;
 					}
+				}
+				else if ((bDanger ? 8 : 12)*iHurryGold < GET_PLAYER(getOwner()).getGold())
+				{
+					bWait = false;
+				}
+
+				if (!bWait)
+				{
+					if (gCityLogLevel >= 2)
+					{
+						logBBAI("      City %S hurry gold at %lld to rush defenses for recent attack", getName().GetCString(), iHurryGold);
+					}
+					hurry((HurryTypes)iI);
+					return;
 				}
 			}
 
-			//TBRUSHFIX
-			//Slaving won't take place here since these require no pop cost (which is the problem I'm trying to resolve anyhow.)
-			if ((iHurryAngerLength == 0) && (iHurryPopulation == 0))
-			{
-				if (GET_PLAYER(getOwner()).AI_avoidScience())
-				{
-					if (GET_PLAYER(getOwner()).getGold() > GET_PLAYER(getOwner()).AI_goldTarget())
-					{
-						iMinTurns = std::min(iMinTurns, 10);
-					}
-				}
-				if (eProductionBuilding != NO_BUILDING)
-				{
-					int iValuePerTurn = AI_buildingValueThreshold(eProductionBuilding, BUILDINGFOCUS_GOLD | BUILDINGFOCUS_MAINTENANCE | BUILDINGFOCUS_PRODUCTION);
-
-					iValuePerTurn /= 3;
-
-					if (iValuePerTurn > 0)
-					{
-						const int iHurryGold = hurryGold((HurryTypes)iI);
-
-						if ( (iHurryGold > 0) && ((iHurryGold / iValuePerTurn) < getProductionTurnsLeft(eProductionBuilding, 1)) )
-						{
-							int64_t iGoldThreshold = GET_PLAYER(getOwner()).getGold();
-							iGoldThreshold -= (GET_PLAYER(getOwner()).AI_goldToUpgradeAllUnits() / ((GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0) ? 1 : 3));
-							iGoldThreshold /= 3;
-							if (iHurryGold < iGoldThreshold)
-							{
-								if( gCityLogLevel >= 2 )
-								{
-									logBBAI("      City %S hurry gold at %d < threshold %d", getName().GetCString(), iHurryGold, iGoldThreshold );
-								}
-								hurry((HurryTypes)iI);
-								return;
-							}
-						}
-					}
-				}
-			}
-
-			//TBRUSHFIX
-			//Perhaps the most disturbing part of this is how it doesn't scale for longer games.
 			if (eProductionBuilding != NO_BUILDING)
 			{
-				if (isWorldWonder(eProductionBuilding))
-				{
-					iMinTurns = std::min(iMinTurns, 10);
-					bEssential = true;
-				}
+				const int iValuePerTurn = AI_buildingValueThreshold(eProductionBuilding, BUILDINGFOCUS_GOLD | BUILDINGFOCUS_MAINTENANCE | BUILDINGFOCUS_PRODUCTION) / 3;
 
-				if (GC.getBuildingInfo(eProductionBuilding).getDefenseModifier() > 0)
+				if (iValuePerTurn > 0)
 				{
-					if (bDanger)
-					{
-						iMinTurns = std::min(iMinTurns, 3);
-						bEssential = true;
-					}
-				}
+					const int64_t iHurryGold = getHurryGold((HurryTypes)iI);
 
-				if (GC.getBuildingInfo(eProductionBuilding).getBombardDefenseModifier() > 0)
-				{
-					if (bDanger)
+					if (iHurryGold / iValuePerTurn < getProductionTurnsLeft(eProductionBuilding, 1))
 					{
-						iMinTurns = std::min(iMinTurns, 3);
-						bEssential = true;
-					}
-				}
-
-				if (GC.getBuildingInfo(eProductionBuilding).getYieldModifier(YIELD_PRODUCTION) > 0)
-				{
-					if (getModifiedBaseYieldRate(YIELD_PRODUCTION) >= 6)
-					{
-						iMinTurns = std::min(iMinTurns, 10);
-						bGrowth = true;
-					}
-				}
-
-				if ((GC.getBuildingInfo(eProductionBuilding).getCommerceChange(COMMERCE_CULTURE) > 0) ||
-					(GC.getBuildingInfo(eProductionBuilding).getCommercePerPopChange(COMMERCE_CULTURE) > 0) ||
-						(GC.getBuildingInfo(eProductionBuilding).getObsoleteSafeCommerceChange(COMMERCE_CULTURE) > 0))
-				{
-					if ((getCommerceRateTimes100(COMMERCE_CULTURE) == 0) || (plot()->calculateCulturePercent(getOwner()) < 40))
-					{
-						iMinTurns = std::min(iMinTurns, 10);
-						if (getCommerceRateTimes100(COMMERCE_CULTURE) == 0)
+						int64_t iGoldThreshold = GET_PLAYER(getOwner()).getGold();
+						iGoldThreshold -= GET_PLAYER(getOwner()).AI_goldToUpgradeAllUnits() / (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0 ? 1 : 3);
+						iGoldThreshold /= 3;
+						if (iHurryGold < iGoldThreshold)
 						{
-							bEssential = true;
-							iMinTurns = std::min(iMinTurns, 5);
-							if (AI_countNumBonuses(NO_BONUS, false, true, 2, true, true) > 0)
+							if (gCityLogLevel >= 2)
 							{
-								bGrowth = true;
+								logBBAI("      City %S hurry gold at %lld < threshold %lld", getName().GetCString(), iHurryGold, iGoldThreshold);
 							}
+							hurry((HurryTypes)iI);
+							return;
 						}
 					}
-				}
-
-				if (GC.getBuildingInfo(eProductionBuilding).getHappiness() > 0)
-				{
-					if (angryPopulation() > 0)
-					{
-						iMinTurns = std::min(iMinTurns, 10);
-					}
-				}
-
-				if (GC.getBuildingInfo(eProductionBuilding).getHealth() > 0)
-				{
-					if (healthRate() < 0)
-					{
-						iMinTurns = std::min(iMinTurns, 10);
-					}
-				}
-
-				if (GC.getBuildingInfo(eProductionBuilding).getSeaPlotYieldChange(YIELD_FOOD) > 0 || GC.getBuildingInfo(eProductionBuilding).getRiverPlotYieldChange(YIELD_FOOD) > 0)
-				{
-
-					iMinTurns = std::min(iMinTurns, 10);
-
-					if (AI_buildingSpecialYieldChangeValue(eProductionBuilding, YIELD_FOOD) > (getPopulation() * 2))
-					{
-						bEssential = true;
-						bGrowth = true;
-					}
-				}
-
-				if (GC.getBuildingInfo(eProductionBuilding).getFreeExperience() > 0)
-				{
-					if (bDanger)
-					{
-						iMinTurns = std::min(iMinTurns, 3);
-						bEssential = true;
-					}
-				}
-
-				if (GC.getBuildingInfo(eProductionBuilding).getMaintenanceModifier() < 0)
-				{
-					if (getMaintenance() >= 10)
-					{
-						iMinTurns = std::min(iMinTurns, 10);
-						bEssential = true;
-					}
-				}
-
-				if (GC.getDEFAULT_SPECIALIST() != NO_SPECIALIST)
-				{
-					if (getSpecialistCount((SpecialistTypes)GC.getDEFAULT_SPECIALIST()) > 0)
-					{
-						for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
-						{
-							if (GC.getBuildingInfo(eProductionBuilding).getSpecialistCount(iJ) > 0)
-							{
-								iMinTurns = std::min(iMinTurns, 10);
-								break;
-							}
-						}
-					}
-				}
-
-				if (GC.getBuildingInfo(eProductionBuilding).getCommerceModifier(COMMERCE_GOLD) > 0)
-				{
-					if (GET_PLAYER(getOwner()).AI_isFinancialTrouble())
-					{
-						if (getBaseCommerceRate(COMMERCE_GOLD) >= 16)
-						{
-							iMinTurns = std::min(iMinTurns, 10);
-						}
-					}
-				}
-
-				if (GC.getBuildingInfo(eProductionBuilding).getCommerceModifier(COMMERCE_RESEARCH) > 0)
-				{
-					if (!(GET_PLAYER(getOwner()).AI_avoidScience()))
-					{
-						if (getBaseCommerceRate(COMMERCE_RESEARCH) >= 16)
-						{
-							iMinTurns = std::min(iMinTurns, 10);
-						}
-					}
-				}
-
-				if (GC.getBuildingInfo(eProductionBuilding).getFoodKept() > 0)
-				{
-					iMinTurns = std::min(iMinTurns, 5);
-					bEssential = true;
-					bGrowth = true;
 				}
 			}
+			continue;
+		}
+		// Whipping
+		int iMinTurns = MAX_INT;
+		bool bEssential = false;
+		bool bGrowth = false;
 
-			if (bDanger && eProductionUnit != NO_UNIT && GC.getUnitInfo(eProductionUnit).getDomainType() == DOMAIN_LAND
-			&& GC.getUnitInfo(eProductionUnit).getCombat() > 0)
+		if (eProductionBuilding != NO_BUILDING)
+		{
+			const CvBuildingInfo& building = GC.getBuildingInfo(eProductionBuilding);
+
+			if (
+				bDanger
+			&&
+				(
+					building.getDefenseModifier() > 0
+				||
+					building.getBombardDefenseModifier() > 0
+				||
+					building.getFreeExperience() > 0
+				)
+			)
 			{
 				iMinTurns = std::min(iMinTurns, 3);
 				bEssential = true;
 			}
-
-			if (eProductionUnitAI == UNITAI_CITY_DEFENSE)
+			else if (isWorldWonder(eProductionBuilding))
 			{
-				if (plot()->plotCheck(PUF_isUnitAIType, UNITAI_SETTLE, -1, NULL, getOwner()) != NULL)
-				{
-					if (!AI_isDefended(-2*GET_PLAYER(getOwner()).strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE))) // XXX check for other team's units?
-					{
-						iMinTurns = std::min(iMinTurns, 5);
-					}
-				}
+				iMinTurns = std::min(iMinTurns, 10);
+				bEssential = true;
 			}
 
-			if (eProductionUnitAI == UNITAI_SETTLE)
+			if (building.getYieldModifier(YIELD_PRODUCTION) > 0
+			&& getModifiedBaseYieldRate(YIELD_PRODUCTION) >= 6)
 			{
-				if (area()->getNumAIUnits(getOwner(), UNITAI_SETTLE) == 0)
-				{
-					if (!(GET_PLAYER(getOwner()).AI_isFinancialTrouble()))
-					{
-						if (area()->getBestFoundValue(getOwner()) > 0)
-						{
-							iMinTurns = std::min(iMinTurns, 5);
-							bEssential = true;
-							bGrowth = true;
-						}
-					}
-				}
+				iMinTurns = std::min(iMinTurns, 10);
+				bGrowth = true;
 			}
 
-			if (eProductionUnitAI == UNITAI_SETTLER_SEA)
+			if (
+			(
+				building.getCommerceChange(COMMERCE_CULTURE) > 0
+				||
+				building.getCommercePerPopChange(COMMERCE_CULTURE) > 0
+				||
+				building.getObsoleteSafeCommerceChange(COMMERCE_CULTURE) > 0
+			)
+			&& (getCommerceRateTimes100(COMMERCE_CULTURE) == 0 || plot()->calculateCulturePercent(getOwner()) < 40))
 			{
-				if (pWaterArea != NULL)
+				iMinTurns = std::min(iMinTurns, 10);
+				if (getCommerceRateTimes100(COMMERCE_CULTURE) == 0)
 				{
-					if (pWaterArea->getNumAIUnits(getOwner(), UNITAI_SETTLER_SEA) == 0)
-					{
-						if (area()->getNumAIUnits(getOwner(), UNITAI_SETTLE) > 0)
-						{
-							iMinTurns = std::min(iMinTurns, 5);
-						}
-					}
-				}
-			}
-
-			if (eProductionUnitAI == UNITAI_WORKER)
-			{
-				if (GET_PLAYER(getOwner()).AI_neededWorkers(area()) > (area()->getNumAIUnits(getOwner(), UNITAI_WORKER) * 2))
-				{
+					bEssential = true;
 					iMinTurns = std::min(iMinTurns, 5);
+					if (AI_countNumBonuses(NO_BONUS, false, true, 2, true, true) > 0)
+					{
+						bGrowth = true;
+					}
+				}
+			}
+
+			if (iMinTurns > 10
+			&&
+				(
+					building.getHappiness() > 0 && angryPopulation() > 0
+					||
+					building.getHealth() > 0 && healthRate() < 0
+				)
+			) iMinTurns = 10;
+
+
+			if (building.getSeaPlotYieldChange(YIELD_FOOD) > 0 || building.getRiverPlotYieldChange(YIELD_FOOD) > 0)
+			{
+				iMinTurns = std::min(iMinTurns, 10);
+
+				if (AI_buildingSpecialYieldChangeValue(eProductionBuilding, YIELD_FOOD) > (getPopulation() * 2))
+				{
 					bEssential = true;
 					bGrowth = true;
 				}
 			}
 
-			if (eProductionUnitAI == UNITAI_WORKER_SEA)
+			if (building.getMaintenanceModifier() < 0 && getMaintenance() >= 10)
 			{
-				if (AI_neededSeaWorkers() > 0)
+				iMinTurns = std::min(iMinTurns, 10);
+				bEssential = true;
+			}
+
+			if (iMinTurns > 10 && GC.getDEFAULT_SPECIALIST() != NO_SPECIALIST
+			&& getSpecialistCount((SpecialistTypes)GC.getDEFAULT_SPECIALIST()) > 0)
+			{
+				for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
 				{
-					iMinTurns = std::min(iMinTurns, 5);
-					bEssential = true;
-					bGrowth = true;
+					if (building.getSpecialistCount(iJ) > 0)
+					{
+						iMinTurns = 10;
+						break;
+					}
 				}
 			}
 
-			// adjust for game speed
-			if (NO_UNIT != getProductionUnit())
+			if (iMinTurns > 10
+			&& building.getCommerceModifier(COMMERCE_GOLD) > 0
+			&& GET_PLAYER(getOwner()).AI_isFinancialTrouble()
+			&& getBaseCommerceRate(COMMERCE_GOLD) >= 16)
 			{
-				iMinTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+				iMinTurns = 10;
 			}
-			else if (NO_BUILDING != getProductionBuilding())
+			else if (iMinTurns > 10
+			&& building.getCommerceModifier(COMMERCE_RESEARCH) > 0
+			&& !GET_PLAYER(getOwner()).AI_avoidScience()
+			&& getBaseCommerceRate(COMMERCE_RESEARCH) >= 16)
 			{
-				iMinTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
-			}
-			else if (NO_PROJECT != getProductionProject())
-			{
-				iMinTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getCreatePercent();
-			}
-			else
-			{
-				iMinTurns *= 100;
+				iMinTurns = 10;
 			}
 
+			if (building.getFoodKept() > 0)
+			{
+				iMinTurns = std::min(iMinTurns, 5);
+				bEssential = true;
+				bGrowth = true;
+			}
+		}
+
+		if (bDanger && eProductionUnit != NO_UNIT && GC.getUnitInfo(eProductionUnit).getDomainType() == DOMAIN_LAND
+		&& GC.getUnitInfo(eProductionUnit).getCombat() > 0)
+		{
+			iMinTurns = std::min(iMinTurns, 3);
+			bEssential = true;
+		}
+
+		if (eProductionUnitAI != NO_UNITAI)
+		{
+			if (eProductionUnitAI == UNITAI_CITY_DEFENSE
+			&& plot()->plotCheck(PUF_isUnitAIType, UNITAI_SETTLE, -1, NULL, getOwner()) != NULL
+			&& !AI_isDefended(-2*GET_PLAYER(getOwner()).strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE))) // XXX check for other team's units?
+			{
+				iMinTurns = std::min(iMinTurns, 5);
+			}
+			else if (eProductionUnitAI == UNITAI_SETTLE
+			&& !GET_PLAYER(getOwner()).AI_isFinancialTrouble()
+			&& area()->getNumAIUnits(getOwner(), UNITAI_SETTLE) == 0
+			&& area()->getBestFoundValue(getOwner()) > 0)
+			{
+				iMinTurns = std::min(iMinTurns, 5);
+				bEssential = true;
+				bGrowth = true;
+			}
+			else if (eProductionUnitAI == UNITAI_SETTLER_SEA && pWaterArea != NULL
+			&& pWaterArea->getNumAIUnits(getOwner(), UNITAI_SETTLER_SEA) == 0
+			&& area()->getNumAIUnits(getOwner(), UNITAI_SETTLE) > 0)
+			{
+				iMinTurns = std::min(iMinTurns, 5);
+			}
+			else if (eProductionUnitAI == UNITAI_WORKER
+			&& GET_PLAYER(getOwner()).AI_neededWorkers(area()) > 2*area()->getNumAIUnits(getOwner(), UNITAI_WORKER)
+			|| eProductionUnitAI == UNITAI_WORKER_SEA && AI_neededSeaWorkers() > 0)
+			{
+				iMinTurns = std::min(iMinTurns, 5);
+				bEssential = true;
+				bGrowth = true;
+			}
+		}
+		// adjust for game speed
+		if (NO_UNIT != getProductionUnit())
+		{
+			iMinTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
 			iMinTurns /= 100;
-
-			if (NO_UNIT != getProductionUnit())
-			{
-				iMinTurns *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getTrainPercent();
-			}
-			else if (NO_BUILDING != getProductionBuilding())
-			{
-				iMinTurns *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getConstructPercent();
-			}
-			else if (NO_PROJECT != getProductionProject())
-			{
-				iMinTurns *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getConstructPercent();
-			}
-			else
-			{
-				iMinTurns *= 100;
-			}
-
+		}
+		else if (NO_BUILDING != getProductionBuilding())
+		{
+			iMinTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
 			iMinTurns /= 100;
+		}
+		else if (NO_PROJECT != getProductionProject())
+		{
+			iMinTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getCreatePercent();
+			iMinTurns /= 100;
+		}
 
-			//TBRUSHFIX: Specialists are super useful in C2C, arguably often moreso than tile working.
-			/*if (AI_countGoodTiles((healthRate(0) == 0), false, 100) <= (getPopulation() - iHurryPopulation))*/
-			int iThreshold = (getPopulation() - iHurryPopulation);
-			int iThreshAdjust = (int)GET_PLAYER(getOwner()).getCurrentEra();
-			iThreshold += iThreshAdjust;
-			iThreshold *= iThreshAdjust;
-			//This ought to make the AI much more reluctant to slave for frivolousness.
+		// This ought to make the AI much more reluctant to slave for frivolousness.
+		const int iThreshAdjust = (int)GET_PLAYER(getOwner()).getCurrentEra();
+		int iThreshold = (getPopulation() - iHurryPopulation + iThreshAdjust) * iThreshAdjust;
 
-			//this overrides everything.
+		if (AI_countGoodTiles(healthRate(0) == 0, false, bEssential ? 100 : 80) <= iThreshold)
+		{
 			if (bGrowth)
 			{
-				int iHurryGold = hurryGold((HurryTypes)iI);
-				if (iHurryGold > 0 && iHurryGold * 16 < GET_PLAYER(getOwner()).getGold())
+				if (gCityLogLevel >= 2)
 				{
-					if( gCityLogLevel >= 2 )
+					logBBAI("      City %S hurry pop at %d for growth with bad tiles with pop %d", getName().GetCString(), iHurryPopulation, getPopulation() );
+				}
+				hurry((HurryTypes)iI);
+				return;
+			}
+			if (getProductionTurnsLeft() > iMinTurns)
+			{
+				bool bWait = isHuman() || 3 * iHurryPopulation > 2 * getProductionTurnsLeft(); // Toffer - ToDo - scale by gamespeed.
+
+				if (!bWait && iHurryAngerLength > 0)
+				{
+					// Is the whip just too small or the population just too reduced to bother?
+					if (!bEssential && (iHurryPopulation < 1 + GC.getDefineINT("HURRY_POP_ANGER") || getPopulation() - iHurryPopulation <= std::max(3, getHighestPopulation()/2)))
 					{
-						logBBAI("      City %S hurry gold at %d for growth when rich at %d", getName().GetCString(), iHurryGold, GET_PLAYER(getOwner()).getGold() );
+						bWait = true;
+					}
+					// Sometimes it's worth whipping even with existing anger
+					else if (getHurryAngerTimer() > 1)
+					{
+						if (!bEssential
+						// Ideally we'll whip something more expensive
+						|| GC.getDefineINT("HURRY_POP_ANGER") == iHurryPopulation && angryPopulation() > 0)
+						{
+							bWait = true;
+						}
+					}
+
+					//if the city is just lame then don't whip the poor thing
+					//(it'll still get whipped when unhappy/unhealthy)
+					if (!bWait && !bEssential)
+					{
+						bWait = true;
+						int iFoodSurplus = 0;
+
+						for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
+						{
+							if (iJ != CITY_HOME_PLOT)
+							{
+								CvPlot* pLoopPlot = getCityIndexPlot(iJ);
+
+								if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this)
+								{
+									iFoodSurplus += std::max(0, pLoopPlot->getYield(YIELD_FOOD) - GC.getFOOD_CONSUMPTION_PER_POPULATION());
+
+									if (iFoodSurplus >= 3)
+									{
+										bWait = false;
+										break;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				if (!bWait)
+				{
+					if (gCityLogLevel >= 2)
+					{
+						logBBAI(
+							"      City %S hurry pop at %d with bad tiles and no reason to wait with pop %d",
+							getName().GetCString(), iHurryPopulation, getPopulation()
+						);
 					}
 					hurry((HurryTypes)iI);
-					break;
-				}
-/* original bts code
-				if (AI_countGoodTiles((healthRate(0) == 0), false, 100) <= (getPopulation() - iHurryPopulation))
-				{
-					hurry((HurryTypes)iI);
-					break;
+					return;
 				}
 			}
-			if (AI_countGoodTiles((healthRate(0) == 0), false, 100) <= (getPopulation() - iHurryPopulation))
-			{
-*/
-				// Only consider population hurry if that's actually what the city can do!!!
-				//if( (iHurryPopulation > 0) && (getPopulation() > iHurryPopulation) )
-				//{
-				//	//BBAI TODO: could be (bEssential ? 100 : 80) instead
-				//	if (AI_countGoodTiles((healthRate(0) == 0), false, bEssential ? 100 : 80) <= (iThreshold))
-				//	{
-				//		if( gCityLogLevel >= 2 )
-				//		{
-				//			logBBAI("      City %S hurry pop at %d for growth with bad tiles with pop %d", getName().GetCString(), iHurryPopulation, getPopulation() );
-				//		}
-				//		hurry((HurryTypes)iI);
-				//		break;
-				//	}
-				//}
-			}
-
-			//if ((iHurryPopulation > 0) && (AI_countGoodTiles((healthRate(0) == 0), false, bEssential ? 100 : 80) <= (iThreshold)))
-			//{
-			//	if (getProductionTurnsLeft() > iMinTurns)
-			//	{
-			//		bWait = isHuman();
-			//
-			//		if ((iHurryPopulation * 3) > (getProductionTurnsLeft() * 2))
-			//		{
-			//			bWait = true;
-			//		}
-
-			//		if (!bWait)
-			//		{
-			//			if (iHurryAngerLength > 0)
-			//			{
-			//				//is the whip just too small or the population just too reduced to bother?
-			//				if (!bEssential && ((iHurryPopulation < (1 + GC.getDefineINT("HURRY_POP_ANGER"))) || ((getPopulation() - iHurryPopulation) <= std::max(3, (getHighestPopulation() / 2)))))
-			//				{
-			//					bWait = true;
-			//				}
-			//				else
-			//				{
-			//					//sometimes it's worth whipping even with existing anger
-			//					if (getHurryAngerTimer() > 1)
-			//					{
-			//						if (!bEssential)
-			//						{
-			//							bWait = true;
-			//						}
-			//						else if (GC.getDefineINT("HURRY_POP_ANGER") == iHurryPopulation && angryPopulation() > 0)
-			//						{
-			//							//ideally we'll whip something more expensive
-			//							bWait = true;
-			//						}
-			//					}
-			//				}
-
-			//				//if the city is just lame then don't whip the poor thing
-			//				//(it'll still get whipped when unhappy/unhealthy)
-			//				if (!bWait && !bEssential)
-			//				{
-			//					int iFoodSurplus = 0;
-			//					CvPlot * pLoopPlot;
-
-			//					for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
-			//					{
-			//						if (iJ != CITY_HOME_PLOT)
-			//						{
-			//							pLoopPlot = getCityIndexPlot(iJ);
-
-			//							if (pLoopPlot != NULL)
-			//							{
-			//								if (pLoopPlot->getWorkingCity() == this)
-			//								{
-			//									iFoodSurplus += std::max(0, pLoopPlot->getYield(YIELD_FOOD) - GC.getFOOD_CONSUMPTION_PER_POPULATION());
-			//								}
-			//							}
-			//						}
-			//					}
-
-			//					if (iFoodSurplus < 3)
-			//					{
-			//						bWait = true;
-			//					}
-			//				}
-			//			}
-			//		}
-
-			//		if (!bWait)
-			//		{
-			//			if( gCityLogLevel >= 2 )
-			//			{
-			//				logBBAI("      City %S hurry pop at %d with bad tiles and no reason to wait with pop %d", getName().GetCString(), iHurryPopulation, getPopulation() );
-			//			}
-			//			hurry((HurryTypes)iI);
-			//			break;
-			//		}
-			//	}
-			//}
 		}
 	}
 }
@@ -13226,7 +12970,7 @@ void CvCityAI::AI_updateSpecialYieldMultiplier()
 		}
 
 		const int iIncome = 1 + kPlayer.getCommerceRate(COMMERCE_GOLD) + kPlayer.getCommerceRate(COMMERCE_RESEARCH) + std::max(0, kPlayer.getGoldPerTurn());
-		const int64_t iExpenses = 1 + kPlayer.calculateInflatedCosts() - std::min(0, kPlayer.getGoldPerTurn());
+		const int64_t iExpenses = 1 + kPlayer.getFinalExpense() - std::min(0, kPlayer.getGoldPerTurn());
 		FAssert(iIncome > 0);
 
 		const int iRatio = static_cast<int>((100 * iExpenses) / std::max(1, iIncome));

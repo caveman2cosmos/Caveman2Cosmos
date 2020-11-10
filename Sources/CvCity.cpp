@@ -4438,14 +4438,28 @@ int CvCity::getExtraProductionDifference(int iExtra, int iModifier) const
 }
 
 
-bool CvCity::canHurry(HurryTypes eHurry, bool bTestVisible) const
+bool CvCity::canHurryInternal(const HurryTypes eHurry) const
 {
-	if (!(GET_PLAYER(getOwner()).canHurry(eHurry)))
+	if (!GET_PLAYER(getOwner()).canHurry(eHurry))
 	{
 		return false;
 	}
 
 	if (isDisorder())
+	{
+		return false;
+	}
+
+	if (getPopulation() <= hurryPopulation(eHurry))
+	{
+		return false;
+	}
+	return true;
+}
+
+bool CvCity::canHurry(const HurryTypes eHurry, const bool bTestVisible) const
+{
+	if (!canHurryInternal(eHurry))
 	{
 		return false;
 	}
@@ -4462,7 +4476,7 @@ bool CvCity::canHurry(HurryTypes eHurry, bool bTestVisible) const
 			return false;
 		}
 
-		if (GET_PLAYER(getOwner()).getGold() < hurryGold(eHurry))
+		if (GET_PLAYER(getOwner()).getGold() < getHurryGold(eHurry))
 		{
 			return false;
 		}
@@ -4472,18 +4486,12 @@ bool CvCity::canHurry(HurryTypes eHurry, bool bTestVisible) const
 			return false;
 		}
 	}
-
 	return true;
 }
 
 bool CvCity::canHurryUnit(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew) const
 {
-	if (!(GET_PLAYER(getOwner()).canHurry(eHurry)))
-	{
-		return false;
-	}
-
-	if (isDisorder())
+	if (!canHurryInternal(eHurry))
 	{
 		return false;
 	}
@@ -4493,9 +4501,7 @@ bool CvCity::canHurryUnit(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew) c
 		return false;
 	}
 
-	int iHurryGold = getHurryGold(eHurry, getHurryCost(false, eUnit, bIgnoreNew));
-
-	if (GET_PLAYER(getOwner()).getGold() < iHurryGold)
+	if (GET_PLAYER(getOwner()).getGold() < getHurryGold(eHurry, getHurryCost(false, eUnit, bIgnoreNew)))
 	{
 		return false;
 	}
@@ -4504,18 +4510,12 @@ bool CvCity::canHurryUnit(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew) c
 	{
 		return false;
 	}
-
 	return true;
 }
 
 bool CvCity::canHurryBuilding(HurryTypes eHurry, BuildingTypes eBuilding, bool bIgnoreNew) const
 {
-	if (!(GET_PLAYER(getOwner()).canHurry(eHurry)))
-	{
-		return false;
-	}
-
-	if (isDisorder())
+	if (!canHurryInternal(eHurry))
 	{
 		return false;
 	}
@@ -4534,14 +4534,13 @@ bool CvCity::canHurryBuilding(HurryTypes eHurry, BuildingTypes eBuilding, bool b
 	{
 		return false;
 	}
-
 	return true;
 }
 
 
 void CvCity::hurry(HurryTypes eHurry)
 {
-	int iHurryGold = 0;
+	int64_t iHurryGold = 0;
 	int iHurryPopulation = 0;
 	int iHurryAngerLength = 0;
 	if (!canHurry(eHurry))
@@ -4554,9 +4553,9 @@ void CvCity::hurry(HurryTypes eHurry)
 
 	if (bBuy)
 	{
-		iHurryGold = hurryGold(eHurry);
+		iHurryGold = getHurryGold(eHurry);
 		GET_PLAYER(getOwner()).changeHurriedCount(1);
-		GET_PLAYER(getOwner()).changeGold(-(iHurryGold));
+		GET_PLAYER(getOwner()).changeGold(-iHurryGold);
 	}
 
 	if (bWhip)
@@ -4586,7 +4585,7 @@ void CvCity::hurry(HurryTypes eHurry)
 			szString = GC.getProjectInfo(getProductionProject()).getDescription();
 		}
 
-		logBBAI("    City %S hurrying production of %S at cost of %d pop, %d gold, %d anger length", getName().GetCString(), szString.GetCString(), iHurryPopulation, iHurryGold, iHurryAngerLength);
+		logBBAI("    City %S hurrying production of %S at cost of %d pop, %lld gold, %d anger length", getName().GetCString(), szString.GetCString(), iHurryPopulation, iHurryGold, iHurryAngerLength);
 	}
 
 	if ((getOwner() == GC.getGame().getActivePlayer()) && isCitySelected())
@@ -6746,11 +6745,9 @@ int CvCity::getHurryCostModifier(int iBaseModifier, int iProduction, bool bIgnor
 	iModifier *= std::max(0, (GET_PLAYER(getOwner()).getHurryModifier() + 100));
 	iModifier /= 100;
 
-	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY))
-	{
-		iModifier *= std::max(0, (GET_PLAYER(getOwner()).getHurryCostModifier() + 100));
-		iModifier /= 100;
-	}
+	iModifier *= std::max(0, (GET_PLAYER(getOwner()).getHurryCostModifier() + 100));
+	iModifier /= 100;
+
 	return std::max(1, iModifier);	//	Avoid potential divide by 0s
 }
 
@@ -6780,41 +6777,40 @@ int CvCity::getHurryCost(bool bExtra, int iProductionLeft, int iHurryModifier, i
 
 	if (bExtra)
 	{
-		int iExtraProduction = getExtraProductionDifference(iProduction, iModifier);
+		const int iExtraProduction = getExtraProductionDifference(iProduction, iModifier);
 		if (iExtraProduction > 0)
 		{
-			int iAdjustedProd = iProduction * iProduction;
-
 			// round up
-			iProduction = (iAdjustedProd + (iExtraProduction - 1)) / iExtraProduction;
+			iProduction = (iProduction*iProduction + (iExtraProduction - 1)) / iExtraProduction;
 		}
 	}
-
 	return std::max(0, iProduction);
 }
 
-int CvCity::hurryGold(HurryTypes eHurry) const
-{
-	return getHurryGold(eHurry, hurryCost(false));
-}
-
-int CvCity::getHurryGold(HurryTypes eHurry, int iHurryCost) const
+int64_t CvCity::getHurryGold(const HurryTypes eHurry, int iHurryCost) const
 {
 	if (GC.getHurryInfo(eHurry).getGoldPerProduction() == 0)
 	{
 		return 0;
 	}
-	const int iGold = iHurryCost * GC.getHurryInfo(eHurry).getGoldPerProduction();
+	if (iHurryCost < 0)
+	{
+		iHurryCost = hurryCost(false);
+	}
+	int64_t iGold = iHurryCost * GC.getHurryInfo(eHurry).getGoldPerProduction();
+
+	iGold *= 100 + GET_PLAYER(getOwner()).getHurriedCount();
+	iGold /= 100;
 
 	FAssert(iGold <= 2000000000); // We'll need to take measures if this comes up
 
-	return std::max(1, iGold);
+	return std::max<int64_t>(1, iGold);
 }
 
 
 int CvCity::hurryPopulation(HurryTypes eHurry) const
 {
-	return (getHurryPopulation(eHurry, hurryCost(true)));
+	return getHurryPopulation(eHurry, hurryCost(true));
 }
 
 int CvCity::getHurryPopulation(HurryTypes eHurry, int iHurryCost) const
@@ -6851,9 +6847,7 @@ int CvCity::hurryProduction(HurryTypes eHurry) const
 
 int CvCity::flatHurryAngerLength() const
 {
-	int iAnger;
-
-	iAnger = GC.getHURRY_ANGER_DIVISOR();
+	int iAnger = GC.getHURRY_ANGER_DIVISOR();
 	iAnger *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHurryConscriptAngerPercent();
 	iAnger /= 100;
 	iAnger *= std::max(0, 100 + getHurryAngerModifier());
@@ -6865,14 +6859,7 @@ int CvCity::flatHurryAngerLength() const
 
 int CvCity::hurryAngerLength(HurryTypes eHurry) const
 {
-	if (GC.getHurryInfo(eHurry).isAnger())
-	{
-		return flatHurryAngerLength();
-	}
-	else
-	{
-		return 0;
-	}
+	return GC.getHurryInfo(eHurry).isAnger() ? flatHurryAngerLength() : 0;
 }
 
 
@@ -12163,16 +12150,14 @@ int CvCity::totalTradeModifier(const CvCity* pOtherCity) const
 			iModifier += getForeignTradeRouteModifier();
 			iModifier += GET_PLAYER(getOwner()).getForeignTradeRouteModifier();
 			iModifier += GET_TEAM(getTeam()).getForeignTradeModifier();
-			if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY))
+
+			const CvPlayer& kOtherPlayer = GET_PLAYER(pOtherCity->getOwner());
+			const CvPlayer& kPlayer = GET_PLAYER(getOwner());
+			for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 			{
-				const CvPlayer& kOtherPlayer = GET_PLAYER(pOtherCity->getOwner());
-				const CvPlayer& kPlayer = GET_PLAYER(getOwner());
-				for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+				if (kPlayer.getCivics((CivicOptionTypes)iI) == kOtherPlayer.getCivics((CivicOptionTypes)iI))
 				{
-					if (kPlayer.getCivics((CivicOptionTypes)iI) == kOtherPlayer.getCivics((CivicOptionTypes)iI))
-					{
-						iModifier += GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iI)).getSharedCivicTradeRouteModifier();
-					}
+					iModifier += GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iI)).getSharedCivicTradeRouteModifier();
 				}
 			}
 			iModifier += getPeaceTradeModifier(pOtherCity->getTeam());

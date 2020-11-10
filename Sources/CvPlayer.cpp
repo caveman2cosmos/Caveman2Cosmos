@@ -896,7 +896,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iCombatExperience = 0;
 	m_iPopRushHurryCount = 0;
 	m_iInflationModifier = 0;
-	m_accruedCostRatioTimes10000 = 10000;	//	1:1 at the start
 	m_uiStartTime = 0;
 
 	m_bAlive = false;
@@ -3967,8 +3966,6 @@ void CvPlayer::doTurn()
 	doTaxes();
 
 	doAdvancedEconomy();
-
-	doInflation();
 
 	{
 		PROFILE("CvPlayer::doTurn.DoCityTurn");
@@ -8306,64 +8303,12 @@ int64_t CvPlayer::calculatePreInflatedCosts() const
 	);
 }
 
-// Called once per turn to update the current cost-to-turn-1-cost ratio
-void CvPlayer::doInflation()
+int CvPlayer::getInflationMod10000() const
 {
-	// Keep up to second order terms in binomial series
-	const int iAccruedCostRatioTimes10000 = 100 * (100 + getEquilibriumInflationCostModifier());
+	int iInflationPerTurnTimes10000 = 100 * getHurriedCount();
 
-	// iAccruedCostRatioTimes10000 now holds the cost multiplier our CURRENT inflation rate would imply.
-	// We 'decay' the current cost multiplier towards this equilibrium value.
-	const int iInflationRateMomentum = std::max
-	(
-		1,
-		(
-			GC.getDefineINT("INFLATION_RATE_MOMENTUM", 50)
-			* GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getImprovementPercent()
-			/ 100
-		)
-	);
-	m_accruedCostRatioTimes10000 +=
-	(
-		(
-			iAccruedCostRatioTimes10000 - m_accruedCostRatioTimes10000 +
-			(iAccruedCostRatioTimes10000 > m_accruedCostRatioTimes10000 ? 1 : -1) * (iInflationRateMomentum - 1)
-		)
-		/ iInflationRateMomentum
-	);
-	//Debug to check the evolution of the inflation value.
-	OutputDebugString(CvString::format("\nnew m_accruedCostRatioTimes10000 : %d ",m_accruedCostRatioTimes10000).c_str());
-}
-
-int CvPlayer::getCurrentInflationCostModifier() const
-{
-	return m_accruedCostRatioTimes10000/100 - 100;
-}
-
-int CvPlayer::getEquilibriumInflationCostModifier() const
-{
-	const int iInflationPerTurnTimes10000 = getCurrentInflationPerTurnTimes10000();
-	int iTurns = (GC.getGame().getGameTurn() + GC.getGame().getElapsedGameTurns()) / 2;
-
-	if (GC.getGame().getMaxTurns() > 0)
-	{
-		iTurns = std::min(GC.getGame().getMaxTurns(), iTurns);
-	}
-	iTurns += GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getInflationOffset();
-
-	// Keep up to second order terms in binomial series
-	const int iAccruedCostRatioTimes10000 =
-	(
-		10000 + iTurns * iInflationPerTurnTimes10000
-		+ iTurns * (iTurns - 1) * iInflationPerTurnTimes10000 * iInflationPerTurnTimes10000 / 20000
-	);
-	return iAccruedCostRatioTimes10000/100 - 100;
-}
-
-int CvPlayer::getCurrentInflationPerTurnTimes10000() const
-{
-	int iInflationPerTurnTimes10000 = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getInflationPercent();
 	iInflationPerTurnTimes10000 *= GC.getHandicapInfo(getHandicapType()).getInflationPercent();
+	iInflationPerTurnTimes10000 /= 100;
 
 	int iModifier = m_iInflationModifier;
 	if (!isHuman() && !isNPC())
@@ -8380,46 +8325,40 @@ int CvPlayer::getCurrentInflationPerTurnTimes10000() const
 	iInflationPerTurnTimes10000 *= std::max(0, 100 + iModifier);
 	iInflationPerTurnTimes10000 /= 100;
 
-	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY))
-	{
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + getCivicInflation());
-		iInflationPerTurnTimes10000 /= 100;
+	iInflationPerTurnTimes10000 *= std::max(0, 100 + getCivicInflation());
+	iInflationPerTurnTimes10000 /= 100;
 
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + getProjectInflation());
-		iInflationPerTurnTimes10000 /= 100;
+	iInflationPerTurnTimes10000 *= std::max(0, 100 + getProjectInflation());
+	iInflationPerTurnTimes10000 /= 100;
 
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + getTechInflation());
-		iInflationPerTurnTimes10000 /= 100;
+	iInflationPerTurnTimes10000 *= std::max(0, 100 + getTechInflation());
+	iInflationPerTurnTimes10000 /= 100;
 
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + getBuildingInflation());
-		iInflationPerTurnTimes10000 /= 100;
+	iInflationPerTurnTimes10000 *= std::max(0, 100 + getBuildingInflation());
+	iInflationPerTurnTimes10000 /= 100;
 
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + getHurriedCount());
-		iInflationPerTurnTimes10000 /= 100;
-	}
-	return iInflationPerTurnTimes10000/100;
+	return std::max(10000, 10000 + iInflationPerTurnTimes10000);
 }
 
 int CvPlayer::calculateInflationRate() const
 {
-	return m_accruedCostRatioTimes10000 == -1 ? 0 : m_accruedCostRatioTimes10000 / 100 - 100;
+	return getInflationMod10000() / 100 - 100;
 }
 
-
-int64_t CvPlayer::calculateInflatedCosts() const
+int64_t CvPlayer::getInflationCost() const
 {
-	int64_t iCosts = calculatePreInflatedCosts();
-
-	iCosts *= std::max(0, calculateInflationRate() + 100);
-	iCosts /= 100;
-
-	return iCosts;
+	const int64_t iPreInflatedCost = calculatePreInflatedCosts();
+	return iPreInflatedCost * getInflationMod10000() / 10000 - iPreInflatedCost;
 }
 
+int64_t CvPlayer::getFinalExpense() const
+{
+	return calculatePreInflatedCosts() * getInflationMod10000() / 10000;
+}
 
 int64_t CvPlayer::calculateBaseNetGold() const
 {
-	return getCommerceRate(COMMERCE_GOLD) + getGoldPerTurn() - calculateInflatedCosts();
+	return getCommerceRate(COMMERCE_GOLD) + getGoldPerTurn() - getFinalExpense();
 }
 
 int CvPlayer::calculateResearchModifier(TechTypes eTech) const
@@ -10126,7 +10065,7 @@ int CvPlayer::getHurryModifier() const
 
 void CvPlayer::changeHurryModifier(int iChange)
 {
-	m_iGlobalHurryModifier = (m_iGlobalHurryModifier + iChange);
+	m_iGlobalHurryModifier += iChange;
 }
 
 
@@ -19514,17 +19453,6 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 				changeSpecialistCommercePercentChanges((SpecialistTypes)iI, (CommerceTypes)iJ, kCivic.getSpecialistCommercePercentChanges(iI, iJ) * iChange);
 			}
 		}
-		//if (kCivic.isChooseCurrency())
-		//{
-		//	if (iChange > 0)
-		//	{
-				//m_bChooseCurrency = true;
-		//	}
-		//	else
-		//	{
-				//m_bChooseCurrency = false;
-		//	}
-		//}
 
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
@@ -20064,7 +19992,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iProjectInflation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTechInflation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivicInflation);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_accruedCostRatioTimes10000);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_accruedCostRatioTimes10000, SAVE_VALUE_ANY);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHurryCostModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHurryInflationModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHurryCount);
@@ -21244,7 +21172,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iProjectInflation);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTechInflation);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCivicInflation);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_accruedCostRatioTimes10000);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iHurryCostModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iHurryInflationModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iHurryCount);
@@ -30310,8 +30237,6 @@ void CvPlayer::recalculateModifiers()
 	//	class screws up the core engine which accessing it via the DLL interafce
 	((CvPlayerAI*)this)->AI_recalculateUnitCounts();
 	recalculateUnitCounts();
-
-	doInflation();
 
 	setMaintenanceDirty(true);
 

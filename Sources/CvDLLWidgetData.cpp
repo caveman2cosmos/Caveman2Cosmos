@@ -2119,7 +2119,7 @@ void CvDLLWidgetData::parseHurryHelp(CvWidgetDataStruct &widgetDataStruct, CvWSt
 	{
 		szBuffer.assign(gDLL->getText("TXT_KEY_MISC_HURRY_PROD", pHeadSelectedCity->getProductionNameKey()));
 
-		const int iHurryGold = pHeadSelectedCity->hurryGold((HurryTypes)(widgetDataStruct.m_iData1));
+		const int64_t iHurryGold = pHeadSelectedCity->getHurryGold((HurryTypes) widgetDataStruct.m_iData1);
 
 		if (iHurryGold > 0)
 		{
