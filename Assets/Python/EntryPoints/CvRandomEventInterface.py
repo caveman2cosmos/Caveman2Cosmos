@@ -20,11 +20,11 @@ TRNSLTR = CyTranslator()
 
 
 def recalculateModifiers():
-	eInterstate = GC.getInfoTypeForString("EVENT_INTERSTATE_1")
+	eInterstateEvent = GC.getInfoTypeForString("EVENT_INTERSTATE_1")
 	for i in range(GC.getMAX_PLAYERS()):
-		pInterstateTriggerData = GC.getPlayer(i).getEventOccured(eInterstate)
-		if pInterstateTriggerData is not None:
-			applyInterstate(eInterstate, pInterstateTriggerData)
+		pInterstateEventTriggerData = GC.getPlayer(i).getEventOccured(eInterstateEvent)
+		if pInterstateEventTriggerData is not None:
+			applyInterstate(eInterstateEvent, pInterstateEventTriggerData)
 			
 
 ######## BLESSED SEA ###########
