@@ -61,13 +61,8 @@ def preGameStart():
 def recalculateModifiers():
 	import BugGameUtils
 	BugGameUtils.getDispatcher().getBaseUtils().reset()
-	#import CvEventInterface
-	#CvEventInterface.getEventManager().reset()
-	import DynamicCivNames
-	GC = CyGlobalContext()
-	for loopPlayer in range(GC.getMAX_PC_PLAYERS()):
-		if GC.getPlayer(loopPlayer).isAlive():
-			DynamicCivNames.g_DynamicCivNames.setNewNameByCivics(loopPlayer)
+	import CvRandomEventInterface
+	CvRandomEventInterface.recalculateModifiers()
 
 def onPbemSend(argsList):
 	import smtplib, MimeWriter, base64, StringIO
