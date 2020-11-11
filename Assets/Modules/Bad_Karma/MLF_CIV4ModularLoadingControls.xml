@@ -31,9 +31,10 @@
 					<bLoad>0</bLoad>
 				</Module>
 				 <!-- For buildings, that can ruin cities and countryside -->
+				  <!-- By default is disabled, but you can enable it - it doesn't show message and there may be other issues. -->
 				<Module>
 					<Directory>Building_Meltdown</Directory>
-					<bLoad>1</bLoad>
+					<bLoad>0</bLoad>
 				</Module>
 			</Modules>
 		</ConfigurationInfo>

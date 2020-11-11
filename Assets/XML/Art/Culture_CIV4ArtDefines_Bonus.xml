@@ -604,16 +604,6 @@
 			<Button>,Art/Interface/Buttons/Civilizations/Spain.dds,Art/Interface/Buttons/Warlords_Atlas_2.dds,5,1</Button>
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
-<!-- No units
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_CASTILIAN</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Empty.nif</NIF>
-			<KFM></KFM>
-			<Button>art/Embassy/art/castilianembassy.dds</Button>
-			<FontButtonIndex>145</FontButtonIndex>
-		</BonusArtInfo>-->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_CATALONIAN</Type>
 			<fScale>1.0</fScale>
@@ -1748,16 +1738,6 @@
 			<Button>Art/Embassy/lebanonembassy.dds</Button>
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
-<!-- No units
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_LEONESE</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Empty.nif</NIF>
-			<KFM></KFM>
-			<Button>art/Embassy/art/leonembassy.dds</Button>
-			<FontButtonIndex>145</FontButtonIndex>
-		</BonusArtInfo> -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_LIANGZHU</Type>
 			<fScale>1.0</fScale>
@@ -2658,7 +2638,6 @@
 			<Button>,Art/Interface/Buttons/Civilizations/Russia.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,4,7</Button>
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
-<!-- Wrong flag
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SABBATEAN</Type>
 			<fScale>1.0</fScale>
@@ -2667,7 +2646,7 @@
 			<KFM></KFM>
 			<Button>Art/Embassy/sabbateanembassy.dds</Button>
 			<FontButtonIndex>145</FontButtonIndex>
-		</BonusArtInfo> -->
+		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_SAFAVID</Type>
 			<fScale>1.0</fScale>
