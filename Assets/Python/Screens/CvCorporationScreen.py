@@ -361,9 +361,7 @@ class CvCorporationScreen:
 			else:
 				screen.setState(self.getCorporationButtonName(i), False)
 
-		iPlayer = PyPlayer(self.iActivePlayer)
-
-		cityList = iPlayer.getCityList()
+		cityList = gc.getPlayer(self.iActivePlayer).cities()
 
 		# Loop through the cities
 		szLeftCities = u""

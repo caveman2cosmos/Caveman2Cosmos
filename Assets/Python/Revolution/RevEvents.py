@@ -192,9 +192,7 @@ def onSetPlayerAlive( argsList ) :
 			playerI = GC.getPlayer(i)
 			if( playerI.isAlive() and playerI.getNumCities() > 0 ) :
 				playerIPy = PyPlayer( i )
-				cityList = playerIPy.getCityList()
-				for city in cityList :
-					pCity = city.GetCy()
+				for pCity in playerI.cities():
 					revCiv = RevData.getCityVal( pCity, "RevolutionCiv" )
 					revTurn = RevData.getCityVal( pCity, "RevolutionTurn" )
 					if( revCiv == pPlayer.getCivilizationType() and revTurn > 0 ) :
@@ -319,9 +317,7 @@ def onChangeWar( argsList ):
 
 			playerPy = PyPlayer(pPlayer.getID())
 
-			cityList = playerPy.getCityList()
-			for city in cityList :
-				pCity = city.GetCy()
+			for pCity in pPlayer.cities():
 				revCiv = RevData.getCityVal( pCity, "RevolutionCiv" )
 				if( revCiv in onRivalTeamCivs ) :
 					if( not RevData.getCityVal( pCity, "RevolutionTurn" ) == None ) :
@@ -353,9 +349,7 @@ def onChangeWar( argsList ):
 		for pPlayer in onRivalTeamList :
 			playerPy = PyPlayer(pPlayer.getID())
 
-			cityList = playerPy.getCityList()
-			for city in cityList :
-				pCity = city.GetCy()
+			for pCity in pPlayer.cities():
 				revCiv = RevData.getCityVal( pCity, "RevolutionCiv" )
 				if( revCiv in onTeamCivs ) :
 					if( not RevData.getCityVal( pCity, "RevolutionTurn" ) == None ) :
@@ -642,8 +636,7 @@ def updateRevolutionIndices( argsList ) :
 
 	print "	Revolt - Acquisition of %s by %s reduces rev indices by %d" %(pCity.getName(), newOwner.getCivilizationDescription(0), changeRevIdx)
 
-	for listCity in PyPlayer( newOwnerID ).getCityList() :
-		pListCity = listCity.GetCy()
+	for pListCity in newOwner.cities():
 		if not pListCity.getID() == pCity.getID():
 			pListCity.changeRevolutionIndex( changeRevIdx )
 			revIdxHist = RevData.getCityVal(pListCity,'RevIdxHistory')
@@ -672,8 +665,7 @@ def updateRevolutionIndices( argsList ) :
 				pCity.setNumRealBuilding(eCapitalBuilding, 1)
 
 		# Ripple effects through other rebellious cities
-		for listCity in PyPlayer( oldOwnerID ).getCityList() :
-			pListCity = listCity.GetCy()
+		for pListCity in GC.getPlayer(oldOwnerID).cities():
 			reinfCount = pListCity.getReinforcementCounter()
 			if reinfCount > 2 and RevData.getCityVal(pListCity, 'RevolutionCiv') == newOwner.getCivilizationType():
 				if reinfCount < 5:
@@ -739,8 +731,7 @@ def onBuildingBuilt(argsList):
 		if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - World wonder %s build in %s"%(buildingInfo.getDescription(),pCity.getName()))
 		curRevIdx = pCity.getRevolutionIndex()
 		pCity.changeRevolutionIndex( -max([150,int(0.25*curRevIdx)]) )
-		for city in PyPlayer(pCity.getOwner()).getCityList() :
-			listCity = city.GetCy()
+		for listCity in GC.getPlayer(pCity.getOwner()).cities():
 			curRevIdx = listCity.getRevolutionIndex()
 			iRevIdxChange = -max([75,int(0.12*curRevIdx)])
 			listCity.changeRevolutionIndex( iRevIdxChange )
@@ -752,8 +743,7 @@ def onBuildingBuilt(argsList):
 		if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - National wonder %s build in %s"%(buildingInfo.getDescription(),pCity.getName()))
 		curRevIdx = pCity.getRevolutionIndex()
 		pCity.changeRevolutionIndex( -max([80,int(0.12*curRevIdx)]) )
-		for city in PyPlayer(pCity.getOwner()).getCityList() :
-			listCity = city.GetCy()
+		for listCity in GC.getPlayer(pCity.getOwner()).cities():
 			curRevIdx = listCity.getRevolutionIndex()
 			iRevIdxChange = -max([50,int(0.07*curRevIdx)])
 			listCity.changeRevolutionIndex( iRevIdxChange )

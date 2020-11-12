@@ -437,8 +437,7 @@ class CvReligionScreen:
 		else:
 			screen.setState(self.getReligionButtonName(GC.getNumReligionInfos()), False)
 
-		iPlayer = PyPlayer(self.iActivePlayer)
-		cityList = iPlayer.getCityList()
+		cityList = GC.getPlayer(self.iActivePlayer).cities()
 
 # start of BUG indent for new code
 		if AdvisorOpt.isReligious():

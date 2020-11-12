@@ -763,13 +763,13 @@ class RevolutionWatchAdvisor:
 	def getCurrentCity (self):
 		""" Get the current selected city."""
 		screen = self.getScreen()
-		iPlayer = PyPlayer(CyGame().getActivePlayer())
-		cityList = iPlayer.getCityList()
+		iPlayer = PyPlayer()
+		cityList = gc.getPlayer(CyGame().getActivePlayer()).cities()
 		for i in range(len(cityList)):
 			if screen.isRowSelected(self.currentPage, i):
 				for j in range(len(cityList)):
 					if(cityList[j].getName() == screen.getTableText(self.currentPage, 1, i)):
-						return cityList[j].city
+						return cityList[j]
 
 		return None
 
@@ -1650,35 +1650,29 @@ class RevolutionWatchAdvisor:
 			return self.objectHave
 		return szEffects.strip()
 
-	def findGlobalBaseYieldRateRank (self, city, szKey, arg):
-
+	def findGlobalBaseYieldRateRank(self, city, szKey, arg):
 		L = []
 		for i in range(gc.getMAX_PLAYERS()):
-			cl = PyPlayer(i).getCityList()
-			for c in cl:
-				L.append(c.city.getBaseYieldRate(arg))
+			for city in GC.getPlayer(i).cities():
+				L.append(city.getBaseYieldRate(arg))
 
 		y = city.getBaseYieldRate(arg)
 		return len([i for i in L if i > y]) + 1
 
-	def findGlobalYieldRateRank (self, city, szKey, arg):
-
+	def findGlobalYieldRateRank(self, city, szKey, arg):
 		L = []
 		for i in range(gc.getMAX_PLAYERS()):
-			cl = PyPlayer(i).getCityList()
-			for c in cl:
-				L.append(c.city.getYieldRate(arg))
+			for city in GC.getPlayer(i).cities():
+				L.append(city.getYieldRate(arg))
 
 		y = city.getYieldRate(arg)
 		return len([i for i in L if i > y]) + 1
 
-	def findGlobalCommerceRateRank (self, city, szKey, arg):
-
+	def findGlobalCommerceRateRank(self, city, szKey, arg):
 		L = []
 		for i in range(gc.getMAX_PLAYERS()):
-			cl = PyPlayer(i).getCityList()
-			for c in cl:
-				L.append(c.city.getCommerceRate(arg))
+			for city in GC.getPlayer(i).cities():
+				L.append(city.getCommerceRate(arg))
 
 		y = city.getCommerceRate(arg)
 		return len([i for i in L if i > y]) + 1
@@ -2021,8 +2015,7 @@ class RevolutionWatchAdvisor:
 		""" Function to draw the contents of the cityList passed in. """
 
 		screen = self.getScreen()
-		iPlayer = PyPlayer(CyGame().getActivePlayer())
-		cityList = iPlayer.getCityList()
+		cityList = gc.getPlayer(CyGame().getActivePlayer()).cities()
 
 		# Hide building icons
 		for i in range(gc.getNumBuildingInfos()):
@@ -2243,7 +2236,7 @@ class RevolutionWatchAdvisor:
 			screen.moveToBack (self.BACKGROUND_ID)
 
 			# Now hand off to the C++ API
-			self.updateAppropriateCitySelection (page, len( iPlayer.getCityList() ) )
+			self.updateAppropriateCitySelection (page, len(cityList) )
 
 	def HandleSpecialistPlus (self, inputClass):
 		""" Handles when any Specialist Plus is pushed."""

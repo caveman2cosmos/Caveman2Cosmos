@@ -70,7 +70,7 @@ def getCityTextList( cityList, bPreCity = False, bPreCitizens = False, sep = ', 
 
 def testCityTextList( iPlayer ):
 
-	cityList = PyPlayer(iPlayer).getCityList()
+	cityList = gc.getPlayer(iPlayer).cities()
 
 	str = getCityTextList(cityList)
 	CyInterface().addImmediateMessage(str,"")
