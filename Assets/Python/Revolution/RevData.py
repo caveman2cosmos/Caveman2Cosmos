@@ -7,7 +7,6 @@
 
 import CvPythonExtensions
 #import CvUtil
-#import PyHelpers
 try:
 	import cPickle as pickle
 except:
@@ -18,8 +17,6 @@ import RevDefs
 
 # globals
 # gc = CyGlobalContext()
-# PyPlayer = PyHelpers.PyPlayer
-# PyInfo = PyHelpers.PyInfo
 # game = CyGame()
 # localText = CyTranslator()
 

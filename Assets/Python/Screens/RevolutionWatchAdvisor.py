@@ -50,7 +50,6 @@
 
 from CvPythonExtensions import *
 
-import PyHelpers
 import CvScreenEnums
 import CvEventInterface
 import Popup as PyPopup
@@ -60,8 +59,6 @@ import BugConfigTracker
 
 import math
 import os.path
-
-PyPlayer = PyHelpers.PyPlayer
 
 # BUG - Options
 import BugCore
@@ -763,7 +760,6 @@ class RevolutionWatchAdvisor:
 	def getCurrentCity (self):
 		""" Get the current selected city."""
 		screen = self.getScreen()
-		iPlayer = PyPlayer()
 		cityList = gc.getPlayer(CyGame().getActivePlayer()).cities()
 		for i in range(len(cityList)):
 			if screen.isRowSelected(self.currentPage, i):
@@ -1181,10 +1177,10 @@ class RevolutionWatchAdvisor:
 
 		szReturn = u""
 
-		player = PyPlayer(CyGame().getActivePlayer())
+		team = gc.getTeam(CyGame().getActiveTeam())
 
 		for i in range(gc.getMAX_PLAYERS()):
-			if player.getTeam().isAtWar(gc.getPlayer(i).getTeam()):
+			if team.isAtWar(gc.getPlayer(i).getTeam()):
 				if city.isVisible(gc.getPlayer(i).getTeam(), False):
 					szReturn = self.angryIcon
 					break
@@ -1686,13 +1682,13 @@ class RevolutionWatchAdvisor:
 		if info.isGovernmentCenter() or info.isCapital():
 			return False
 
-		if info.getObsoleteTech() != TechTypes.NO_TECH and PyPlayer(CyGame().getActivePlayer()).getTeam().isHasTech(info.getObsoleteTech()):
+		if info.getObsoleteTech() != TechTypes.NO_TECH and gc.getTeam(CyGame().getActiveTeam()).isHasTech(info.getObsoleteTech()):
 			return False
 
 		sinfo = gc.getSpecialBuildingInfo(info.getSpecialBuildingType())
 
 		if sinfo:
-			if sinfo.getObsoleteTech() != TechTypes.NO_TECH and PyPlayer(CyGame().getActivePlayer()).getTeam().isHasTech(sinfo.getObsoleteTech()):
+			if sinfo.getObsoleteTech() != TechTypes.NO_TECH and gc.getTeam(CyGame().getActiveTeam()).isHasTech(sinfo.getObsoleteTech()):
 				return False
 
 		return True
@@ -1702,7 +1698,7 @@ class RevolutionWatchAdvisor:
 		bestOrder = -1
 		bestData = 0.0
 
-		player = PyPlayer(CyGame().getActivePlayer())
+		player = gc.getPlayer(CyGame().getActivePlayer())
 
 		# For all cities, start with growth
 		if self.calculateNetHappiness(city) > 2 and self.calculateNetHealth(city) > 2:
@@ -2295,7 +2291,7 @@ class RevolutionWatchAdvisor:
 						self.showSpecialists()
 
 					# And pass it back to the screen
-					self.updateAppropriateCitySelection( self.currentPage, len( PyPlayer(CyGame().getActivePlayer()).getCityList() ) )
+					self.updateAppropriateCitySelection(self.currentPage, gc.getPlayer(CyGame().getActivePlayer()).getNumCities())
 
 					return 1
 

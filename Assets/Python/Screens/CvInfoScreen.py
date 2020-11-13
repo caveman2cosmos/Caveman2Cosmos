@@ -9,8 +9,6 @@ import string
 #import time
 import math
 
-from PyHelpers import PyPlayer
-
 #BUG: Change Graphs - start
 import BugCore
 import BugUtil
@@ -2640,8 +2638,7 @@ class CvInfoScreen:
 		for iUnitLoop in range(iNumUnits):
 			aiUnitsCurrent.append(0)
 
-		apUnitList = PyPlayer(self.iActivePlayer).getUnitList()
-		for pUnit in apUnitList:
+		for pUnit in gc.getPlayer(self.iActivePlayer).units():
 			iType = pUnit.getUnitType()
 			aiUnitsCurrent[iType] += 1
 

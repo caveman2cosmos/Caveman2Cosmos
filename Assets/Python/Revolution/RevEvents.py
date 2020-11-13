@@ -5,7 +5,6 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import PyHelpers
 import Popup as PyPopup
 try:
 	import cPickle as pickle
@@ -25,7 +24,6 @@ GC = CyGlobalContext()
 GAME = GC.getGame()
 TRNSLTR = CyTranslator()
 
-PyPlayer = PyHelpers.PyPlayer
 RevOpt = BugCore.game.Revolution
 
 # Stores player id's human has reject assimilation overtures from
@@ -191,7 +189,6 @@ def onSetPlayerAlive( argsList ) :
 		for i in xrange(MAX_PC_PLAYERS) :
 			playerI = GC.getPlayer(i)
 			if( playerI.isAlive() and playerI.getNumCities() > 0 ) :
-				playerIPy = PyPlayer( i )
 				for pCity in playerI.cities():
 					revCiv = RevData.getCityVal( pCity, "RevolutionCiv" )
 					revTurn = RevData.getCityVal( pCity, "RevolutionTurn" )
@@ -314,9 +311,6 @@ def onChangeWar( argsList ):
 				onRivalTeamCivs.append(pPlayer.getCivilizationType())
 
 		for pPlayer in onTeamList :
-
-			playerPy = PyPlayer(pPlayer.getID())
-
 			for pCity in pPlayer.cities():
 				revCiv = RevData.getCityVal( pCity, "RevolutionCiv" )
 				if( revCiv in onRivalTeamCivs ) :
@@ -347,8 +341,6 @@ def onChangeWar( argsList ):
 			GC.getTeam(pPlayer.getTeam()).setRebelAgainst( iRivalTeam, False )
 
 		for pPlayer in onRivalTeamList :
-			playerPy = PyPlayer(pPlayer.getID())
-
 			for pCity in pPlayer.cities():
 				revCiv = RevData.getCityVal( pCity, "RevolutionCiv" )
 				if( revCiv in onTeamCivs ) :
@@ -808,8 +800,7 @@ def removeFloatingRebellions( ) :
 				bNoSettler = True
 				bOnlySpy = True
 
-				playerPy = PyPlayer(i)
-				for unit in playerPy.getUnitList() :
+				for unit in player.units():
 					if( unit.isFound() ) :
 						bNoSettler = False
 						bOnlySpy = False
@@ -828,7 +819,7 @@ def removeFloatingRebellions( ) :
 						if( LOG_DEBUG ) : CvUtil.pyPrint("Rev - Rebel player %d has only spies"%(player.getID()))
 
 						if( GAME.getSorenRandNum(100, "Rev - Only spy death") < 10 ) :
-							for unit in playerPy.getUnitList() :
+							for unit in player.units():
 								unit.kill( False, -1 )
 								break
 							if( LOG_DEBUG ) : CvUtil.pyPrint("Rev - Killed one spy of Rebel player %d"%(player.getID()))

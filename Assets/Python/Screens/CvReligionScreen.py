@@ -5,15 +5,12 @@
 ## Inspiration from zappara to handle new religions, extended to handle new types of buildings and units
 
 from CvPythonExtensions import *
-import PyHelpers
 import ScreenInput
 import CvScreenEnums
 
 import BugUtil
 import BugCore
 AdvisorOpt = BugCore.game.Advisors
-
-PyPlayer = PyHelpers.PyPlayer
 
 # globals
 GC = CyGlobalContext()
@@ -295,8 +292,7 @@ class CvReligionScreen:
 		if AdvisorOpt.isReligious():
 			# Count the number of temples and monastery
 			self.BUGConstants()
-			iPlayer = PyPlayer(self.iActivePlayer)
-			cityList = iPlayer.getCityList()
+			cityList = GC.getPlayer(self.iActivePlayer).cities()
 # BUG - start
 			iCities = [0] * self.NUM_RELIGIONS
 			iTemple = [0] * self.NUM_RELIGIONS

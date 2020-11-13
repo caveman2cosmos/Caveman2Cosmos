@@ -122,6 +122,8 @@ public:
 	bool isHolyCityByType(int /*ReligionTypes*/ iIndex) const;
 	bool isHolyCity() const;
 	bool isHeadquartersByType(int /*CorporationTypes*/ iIndex) const;
+	python::list getHeadquarters() const;
+	python::list getCorporations() const;
 	int getNoMilitaryPercentAnger() const;
 	int getWarWearinessPercentAnger() const;
 

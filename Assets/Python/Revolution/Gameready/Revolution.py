@@ -6,7 +6,6 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import PyHelpers
 import Popup as PyPopup
 import math
 # --------- Revolution mod -------------
@@ -29,7 +28,6 @@ import BugCore
 
 # globals
 GC = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer
 GAME = GC.getGame()
 localText = CyTranslator()
 RevOpt = BugCore.game.Revolution
@@ -351,7 +349,6 @@ class Revolution:
 
 	def showPickCityPopup( self, iPlayer ) :
 		if (self.isLocalHumanPlayer(iPlayer)):
-			playerPy = PyPlayer( iPlayer )
 			cityList = GC.getPlayer(iPlayer).cities()
 
 			popup = PyPopup.PyPopup( RevDefs.pickCityPopup, contextType = EventContextTypes.EVENTCONTEXT_ALL, bDynamic = False)
@@ -1004,7 +1001,6 @@ class Revolution:
 		if not pPlayer.getNumCities():
 			return localText.getText("TXT_KEY_REV_WATCH_NO_CITIES",())
 
-		playerPy = PyPlayer(iPlayer)
 		pTeam = GC.getTeam( pPlayer.getTeam() )
 
 		# Gather some data on the civ that will effect every city
@@ -1032,7 +1028,7 @@ class Revolution:
 		totalString = ""
 
 		if not subCityList:
-			cityList = playerPy.CyGet().cities()
+			cityList = pPlayer.cities()
 			totalString = localText.getText("TXT_KEY_REV_WATCH_CITY_BY_CITY",())
 			if self.showRevIndexInPopup or GAME.isDebugMode():
 				totalString += '  ' + localText.getText("TXT_KEY_REV_WATCH_DEBUG_NOTE",())
@@ -2050,7 +2046,6 @@ class Revolution:
 			return
 
 		#if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Checking %s for revolutions"%(pPlayer.getCivilizationDescription(0)))
-		playerPy = PyPlayer( iPlayer )
 
 		revReadyCities = []
 		revInstigatorCities = []
@@ -6114,7 +6109,7 @@ class Revolution:
 			# Must call setNewPlayerAlive to avoid having DLL set this player alive with setPlayerAlive which calls its turn and the turns of all players with higher numbers
 			# Instead, this way makes it alive so it takes its next turn in turn
 			# Add replay message
-			mess = localText.getText("TXT_KEY_REV_MESS_VIOLENT",()) + ' ' + PyPlayer(pPlayer.getID()).getCivilizationName() + '!'
+			mess = localText.getText("TXT_KEY_REV_MESS_VIOLENT",()) + ' ' + pPlayer.getCivilizationDescription(0) + '!'
 			mess += "  " + localText.getText("TXT_KEY_REV_BIG_THE",()) + ' ' + pRevPlayer.getCivilizationDescription(0) + ' ' + localText.getText("TXT_KEY_REV_MESS_RISEN",())
 			GAME.addReplayMessage( ReplayMessageTypes.REPLAY_MESSAGE_MAJOR_EVENT, pRevPlayer.getID(), mess, cityList[0].getX(), cityList[0].getY(), GC.getInfoTypeForString("COLOR_WARNING_TEXT"))
 
@@ -6141,7 +6136,7 @@ class Revolution:
 						mess = "<color=255,0,0,255>" + localText.getText("TXT_KEY_REV_MESS_YOU_BARB",())
 					else:
 						colorNum = 7
-						mess = "<color=255,0,0,255>" + localText.getText("TXT_KEY_REV_MESS_VIOLENT",()) + ' ' + PyPlayer(pPlayer.getID()).getCivilizationName() + '!!!'
+						mess = "<color=255,0,0,255>" + localText.getText("TXT_KEY_REV_MESS_VIOLENT",()) + ' ' + pPlayer.getCivilizationDescription(0) + '!!!'
 						mess += "  " + localText.getText("TXT_KEY_REV_MESS_BARB",())
 				else:
 					if iPlayer == pPlayer.getID():
@@ -6161,7 +6156,7 @@ class Revolution:
 							mess += "<color=255,0,0,255>"
 							colorNum = 7
 
-						mess += localText.getText("TXT_KEY_REV_MESS_VIOLENT",()) + ' ' + PyPlayer(pPlayer.getID()).getCivilizationName() + '!!!'
+						mess += localText.getText("TXT_KEY_REV_MESS_VIOLENT",()) + ' ' + pPlayer.getCivilizationDescription(0) + '!!!'
 						if bJoinRev:
 							mess += "  " + localText.getText("TXT_KEY_REV_MESS_JOIN",()) + ' ' + pRevPlayer.getCivilizationDescription(0) + ' ' + localText.getText("TXT_KEY_REV_MESS_JOIN2",())
 						else:

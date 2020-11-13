@@ -5,7 +5,6 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import PyHelpers
 # --------- Revolution mod -------------
 import RevDefs
 import RevData
@@ -22,8 +21,6 @@ GC = CyGlobalContext()
 GAME = GC.getGame()
 localText = CyTranslator()
 RevOpt = BugCore.game.Revolution
-
-PyPlayer = PyHelpers.PyPlayer
 
 revCultureModifier = 1.0
 endWarsOnDeath = True
