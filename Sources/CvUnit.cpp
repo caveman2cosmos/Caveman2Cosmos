@@ -10779,12 +10779,18 @@ bool CvUnit::spread(ReligionTypes eReligion)
 		iSpreadProb += (((GC.getNumReligionInfos() - pCity->getReligionCount()) * (100 - iSpreadProb)) / GC.getNumReligionInfos());
 		const bool bSuccess = GC.getGame().getSorenRandNum(100, "Unit Spread Religion") < iSpreadProb;
 
+		// Python Event
+		CvEventReporter::getInstance().unitSpreadReligionAttempt(this, eReligion, bSuccess);
+
 		if (!bSuccess)
 		{
-			MEMORY_TRACK_EXEMPT();
+			if (!pCity->isHasReligion(eReligion)) // Python event above may make this true
+			{
+				MEMORY_TRACK_EXEMPT();
 
-			szBuffer = gDLL->getText("TXT_KEY_MISC_RELIGION_FAILED_TO_SPREAD", getNameKey(), GC.getReligionInfo(eReligion).getChar(), pCity->getNameKey());
-			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NOSPREAD", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pCity->getX(), pCity->getY());
+				szBuffer = gDLL->getText("TXT_KEY_MISC_RELIGION_FAILED_TO_SPREAD", getNameKey(), GC.getReligionInfo(eReligion).getChar(), pCity->getNameKey());
+				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NOSPREAD", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pCity->getX(), pCity->getY());
+			}
 		}
 		else if (GC.getGame().isReligionFounded(eReligion))
 		{
@@ -10796,9 +10802,6 @@ bool CvUnit::spread(ReligionTypes eReligion)
 			GC.getGame().setReligionSlotTaken(eReligion, true);
 			pCity->setHasReligion(eReligion, true, true, false);
 		}
-
-		// Python Event
-		CvEventReporter::getInstance().unitSpreadReligionAttempt(this, eReligion, bSuccess);
 	}
 
 	if (plot()->isActiveVisible(false))
