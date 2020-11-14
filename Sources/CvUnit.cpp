@@ -10778,7 +10778,7 @@ bool CvUnit::spread(ReligionTypes eReligion)
 
 		iSpreadProb += (((GC.getNumReligionInfos() - pCity->getReligionCount()) * (100 - iSpreadProb)) / GC.getNumReligionInfos());
 		const bool bSuccess = GC.getGame().getSorenRandNum(100, "Unit Spread Religion") < iSpreadProb
-			|| algo::any_of(owner.cities(), CvCity::fn::getNumActiveBuilding(GC.getFA_MEN_SI()) > 0);
+			|| algo::any_of(owner.cities(), CvCity::fn::getNumActiveBuilding(GC.getBUILDING_FA_MEN_SI()) > 0);
 
 		if (!bSuccess)
 		{
