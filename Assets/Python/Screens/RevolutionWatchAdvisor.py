@@ -760,7 +760,7 @@ class RevolutionWatchAdvisor:
 	def getCurrentCity (self):
 		""" Get the current selected city."""
 		screen = self.getScreen()
-		cityList = gc.getPlayer(CyGame().getActivePlayer()).cities()
+		cityList = gc.getActivePlayer().cities()
 		for i in range(len(cityList)):
 			if screen.isRowSelected(self.currentPage, i):
 				for j in range(len(cityList)):
@@ -1698,7 +1698,7 @@ class RevolutionWatchAdvisor:
 		bestOrder = -1
 		bestData = 0.0
 
-		player = gc.getPlayer(CyGame().getActivePlayer())
+		player = gc.getActivePlayer()
 
 		# For all cities, start with growth
 		if self.calculateNetHappiness(city) > 2 and self.calculateNetHealth(city) > 2:
@@ -2011,7 +2011,7 @@ class RevolutionWatchAdvisor:
 		""" Function to draw the contents of the cityList passed in. """
 
 		screen = self.getScreen()
-		cityList = gc.getPlayer(CyGame().getActivePlayer()).cities()
+		cityList = gc.getActivePlayer().cities()
 
 		# Hide building icons
 		for i in range(gc.getNumBuildingInfos()):
@@ -2291,7 +2291,7 @@ class RevolutionWatchAdvisor:
 						self.showSpecialists()
 
 					# And pass it back to the screen
-					self.updateAppropriateCitySelection(self.currentPage, gc.getPlayer(CyGame().getActivePlayer()).getNumCities())
+					self.updateAppropriateCitySelection(self.currentPage, gc.getActivePlayer().getNumCities())
 
 					return 1
 
