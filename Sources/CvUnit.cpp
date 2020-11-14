@@ -10747,28 +10747,28 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 
 bool CvUnit::spread(ReligionTypes eReligion)
 {
-	CvCity* pCity;
 	CvWString szBuffer;
-	int iSpreadProb;
 
 	if (!canSpread(plot(), eReligion))
 	{
 		return false;
 	}
 
-	pCity = plot()->getPlotCity();
+	CvCity* pCity = plot()->getPlotCity();
 
 	if (pCity != NULL)
 	{
-		iSpreadProb = m_pUnitInfo->getReligionSpreads(eReligion);
+		const CvPlayer& owner = GET_PLAYER(getOwner());
 
-		if ((ReligionTypes)GET_PLAYER(getOwner()).getStateReligion() == eReligion)
+		int iSpreadProb = m_pUnitInfo->getReligionSpreads(eReligion);
+
+		if (owner.getStateReligion() == eReligion)
 		{
-			iSpreadProb += GET_PLAYER(getOwner()).getExtraStateReligionSpreadModifier();
+			iSpreadProb += owner.getExtraStateReligionSpreadModifier();
 		}
-		if ((ReligionTypes)GET_PLAYER(getOwner()).getStateReligion() != eReligion)
+		else
 		{
-			iSpreadProb += GET_PLAYER(getOwner()).getExtraNonStateReligionSpreadModifier();
+			iSpreadProb += owner.getExtraNonStateReligionSpreadModifier();
 		}
 
 		if (pCity->getTeam() != getTeam())
@@ -10777,13 +10777,14 @@ bool CvUnit::spread(ReligionTypes eReligion)
 		}
 
 		iSpreadProb += (((GC.getNumReligionInfos() - pCity->getReligionCount()) * (100 - iSpreadProb)) / GC.getNumReligionInfos());
-		const bool bSuccess = GC.getGame().getSorenRandNum(100, "Unit Spread Religion") < iSpreadProb;
+		const bool bSuccess = GC.getGame().getSorenRandNum(100, "Unit Spread Religion") < iSpreadProb
+			|| algo::any_of(owner.cities(), CvCity::fn::getNumActiveBuilding(GC.getFA_MEN_SI()) > 0);
 
 		if (!bSuccess)
 		{
 			MEMORY_TRACK_EXEMPT();
 
-			szBuffer = gDLL->getText("TXT_KEY_MISC_RELIGION_FAILED_TO_SPREAD", getNameKey(), GC.getReligionInfo(eReligion).getChar(), pCity->getNameKey());
+			const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_RELIGION_FAILED_TO_SPREAD", getNameKey(), GC.getReligionInfo(eReligion).getChar(), pCity->getNameKey());
 			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NOSPREAD", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pCity->getX(), pCity->getY());
 		}
 		else if (GC.getGame().isReligionFounded(eReligion))
