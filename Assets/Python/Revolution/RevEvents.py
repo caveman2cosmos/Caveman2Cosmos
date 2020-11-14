@@ -773,7 +773,7 @@ def onReligionFounded(argsList):
 			iStateReligion = player.getStateReligion()
 			if iStateReligion > -1 and iStateReligion != iReligion:
 				pCity = GC.getGame().getHolyCity(iReligion)
-				if pCity and pCity.getOwner() == argsList[1]:
+				if pCity.getOwner() == argsList[1]:
 					curRevIdx = pCity.getRevolutionIndex()
 					pCity.setRevolutionIndex(max([int(.35*RevDefs.revInstigatorThreshold),curRevIdx+100]))
 					if LOG_DEBUG:
