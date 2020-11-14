@@ -2456,7 +2456,11 @@ class CvEventManager:
 			popupInfo = CyPopupInfo()
 			popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
 			popupInfo.setData1(iReligion)
-			popupInfo.setData2(GAME.getHolyCity(iReligion).getID())
+			iCityID = GAME.getHolyCity(iReligion)
+			if iCityID:
+				iCityID = iCityID.getID()
+			else: iCityID = -1
+			popupInfo.setData2(iCityID)
 			popupInfo.setData3(1)
 			popupInfo.setText('showWonderMovie')
 			popupInfo.addPopup(iPlayer)
