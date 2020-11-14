@@ -765,18 +765,19 @@ def onBuildingBuilt(argsList):
 ########################## Religious events ###############################
 
 def onReligionFounded(argsList):
-	iReligion, iFounder = argsList
-	pPlayer = GC.getPlayer(iFounder)
+	iReligion = argsList[0]
 
-	#print "Player %d has founded religion %d"%(iFounder,iReligion)
-
-	if( pPlayer.getStateReligion() >= 0 and iReligion >= 0 ) :
-		if( not (pPlayer.getStateReligion() == iReligion) and not pPlayer.isAnarchy() ) :
-			pCity = GC.getGame().getHolyCity(iReligion)
-			if( pCity.getOwner() == iFounder ) :
-				curRevIdx = pCity.getRevolutionIndex()
-				pCity.setRevolutionIndex( max([int(.35*RevDefs.revInstigatorThreshold),curRevIdx+100]) )
-				if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - %s founded non-state religion, index of %s now %d ... state %d, new %d"%(pCity.getName(),pCity.getName(),pCity.getRevolutionIndex(),pPlayer.getStateReligion(),iReligion))
+	if iReligion > -1:
+		player = GC.getPlayer(argsList[1])
+		if not player.isAnarchy():
+			iStateReligion = player.getStateReligion()
+			if iStateReligion > -1 and iStateReligion != iReligion:
+				pCity = GC.getGame().getHolyCity(iReligion)
+				if pCity and pCity.getOwner() == argsList[1]:
+					curRevIdx = pCity.getRevolutionIndex()
+					pCity.setRevolutionIndex(max([int(.35*RevDefs.revInstigatorThreshold),curRevIdx+100]))
+					if LOG_DEBUG:
+						CvUtil.pyPrint("  Revolt - %s founded non-state religion, index of %s now %d ... state %d, new %d"%(pCity.getName(),pCity.getName(),pCity.getRevolutionIndex(),player.getStateReligion(),iReligion))
 
 
 
