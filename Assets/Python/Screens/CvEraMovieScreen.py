@@ -1,14 +1,10 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-import PyHelpers
 import CvUtil
 import ScreenInput
 import CvScreenEnums
 import string
-
-PyPlayer = PyHelpers.PyPlayer
-PyInfo = PyHelpers.PyInfo
 
 # globals
 gc = CyGlobalContext()
@@ -32,8 +28,6 @@ class CvEraMovieScreen:
 
 		if (CyInterface().noTechSplash()):
 			return 0
-
-		player = PyPlayer(CyGame().getActivePlayer())
 
 		screen = CyGInterfaceScreen( "EraMovieScreen" + str(iEra), CvScreenEnums.ERA_MOVIE_SCREEN)
 		screen.addPanel("EraMoviePanel", "", "", True, True, self.X_SCREEN, self.Y_SCREEN, self.W_SCREEN, self.H_SCREEN, PanelStyles.PANEL_STYLE_MAIN)

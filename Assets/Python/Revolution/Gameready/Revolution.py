@@ -6,7 +6,6 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import PyHelpers
 import Popup as PyPopup
 import math
 # --------- Revolution mod -------------
@@ -29,7 +28,6 @@ import BugCore
 
 # globals
 GC = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer
 GAME = GC.getGame()
 localText = CyTranslator()
 RevOpt = BugCore.game.Revolution
@@ -351,8 +349,7 @@ class Revolution:
 
 	def showPickCityPopup( self, iPlayer ) :
 		if (self.isLocalHumanPlayer(iPlayer)):
-			playerPy = PyPlayer( iPlayer )
-			cityList = playerPy.getCityList()
+			cityList = GC.getPlayer(iPlayer).cities()
 
 			popup = PyPopup.PyPopup( RevDefs.pickCityPopup, contextType = EventContextTypes.EVENTCONTEXT_ALL, bDynamic = False)
 
@@ -366,10 +363,8 @@ class Revolution:
 
 			popup.createPythonPullDown( 'Cities', 1 )
 			cityByRevList = []
-			for [i,city] in enumerate(cityList) :
-				pCity = city.GetCy()
-				if pCity:
-					cityByRevList.append( (pCity.getRevolutionIndex(),pCity.getName(), pCity.getID() ) )
+			for pCity in cityList:
+				cityByRevList.append( (pCity.getRevolutionIndex(),pCity.getName(), pCity.getID() ) )
 
 			cityByRevList.sort()
 			cityByRevList.reverse()
@@ -580,15 +575,10 @@ class Revolution:
 	def checkForRevReinforcement(self, iPlayer):
 		# Checks iPlayer's cities for any rebel reinforcement units that should be spawned
 		# Should be called at end of player's turn
-
-		playerPy = PyPlayer(iPlayer)
-		cityList = playerPy.getCityList()
-
-		for city in cityList:
-			pCity = city.GetCy()
+		for pCity in GC.getPlayer(iPlayer).cities():
 			if pCity.getReinforcementCounter() == 1:
 				self.doRevReinforcement(pCity)
-		return
+
 
 	def doRevReinforcement( self, pCity ) :
 
@@ -666,8 +656,7 @@ class Revolution:
 		iy = pCity.getY()
 
 		bRecentSuccess = False
-		for revCity in PyPlayer(pRevPlayer.getID()).getCityList() :
-			pRevCity = revCity.GetCy()
+		for pRevCity in pRevPlayer.cities():
 			if( GAME.getGameTurn() - pRevCity.getGameTurnAcquired() < 6 and pRevCity.getPreviousOwner() == ownerID ) :
 				bRecentSuccess = True
 				break
@@ -941,8 +930,7 @@ class Revolution:
 								keyStr += key + ', '
 							CvUtil.pyPrint("  Revolt - Increasing effect for cities with high %s factors"%(keyStr))
 
-						for city in PyPlayer( iPlayer ).getCityList() :
-							pCity = city.GetCy()
+						for pCity in GC.getPlayer(iPlayer).cities():
 							revIdxHist = RevData.getCityVal(pCity,'RevIdxHistory')
 
 							iThisRevIdxChange = iRevIdxChange
@@ -989,13 +977,7 @@ class Revolution:
 		self.incrementRevIdxHistory(iGameTurn, iPlayer)
 
 	def updateRevolutionCounters(self, iGameTurn, iPlayer):
-
-		playerPy = PyPlayer( iPlayer )
-		cityList = playerPy.getCityList()
-
-		for city in cityList :
-			pCity = city.GetCy()
-
+		for pCity in GC.getPlayer(iPlayer).cities():
 			if not RevData.revObjectExists(pCity):
 				RevData.initCity(pCity)
 				continue
@@ -1019,7 +1001,6 @@ class Revolution:
 		if not pPlayer.getNumCities():
 			return localText.getText("TXT_KEY_REV_WATCH_NO_CITIES",())
 
-		playerPy = PyPlayer(iPlayer)
 		pTeam = GC.getTeam( pPlayer.getTeam() )
 
 		# Gather some data on the civ that will effect every city
@@ -1047,7 +1028,7 @@ class Revolution:
 		totalString = ""
 
 		if not subCityList:
-			cityList = playerPy.getCityList()
+			cityList = pPlayer.cities()
 			totalString = localText.getText("TXT_KEY_REV_WATCH_CITY_BY_CITY",())
 			if self.showRevIndexInPopup or GAME.isDebugMode():
 				totalString += '  ' + localText.getText("TXT_KEY_REV_WATCH_DEBUG_NOTE",())
@@ -1055,13 +1036,7 @@ class Revolution:
 			cityList = subCityList
 			totalString = ""
 
-		for city in cityList:
-			try:
-				pCity = city.GetCy()
-			except:
-				# already a CyCity object
-				pCity = city
-
+		for pCity in cityList:
 			# Incase interturn stuff set out of range
 			if pCity.getRevolutionIndex() < 0:
 				pCity.setRevolutionIndex(0)
@@ -1902,8 +1877,7 @@ class Revolution:
 		if( self.LOG_DEBUG and iGameTurn%25 == 0 ) : CvUtil.pyPrint("  Revolt - %s stability effects: %d, size: %d, civics: %d, cult: %d, taxes: %d, finances: %d\n"%(pPlayer.getCivilizationDescription(0),civStabilityIdx,civSizeIdx2,civicIdx,cultIdx,taxesIdx,finIdx))
 
 		if( not bIsRevWatch ) :
-			for city in PyPlayer(iPlayer).getCityList() :
-				pCity = city.GetCy()
+			for pCity in GC.getPlayer(iPlayer).cities():
 #-------------------------------------------------------------------------------------------------
 # Lemmy101 RevolutionMP edit
 #-------------------------------------------------------------------------------------------------
@@ -2011,9 +1985,7 @@ class Revolution:
 		if( iGold < 100 or pPlayer.isAnarchy() ) :
 			return
 
-		cityList = PyPlayer( iPlayer ).getCityList()
-		for city in cityList :
-			pCity = city.GetCy()
+		for pCity in GC.getPlayer(iPlayer).cities():
 
 			[bCanBribeCity, reason] = RevUtils.isCanBribeCity(pCity)
 			if( not bCanBribeCity ) :
@@ -2074,8 +2046,6 @@ class Revolution:
 			return
 
 		#if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Checking %s for revolutions"%(pPlayer.getCivilizationDescription(0)))
-		playerPy = PyPlayer( iPlayer )
-		cityList = playerPy.getCityList()
 
 		revReadyCities = []
 		revInstigatorCities = []
@@ -2083,9 +2053,7 @@ class Revolution:
 
 		capRevIdx = 0
 
-		for city in cityList :
-			pCity = city.GetCy()
-
+		for pCity in pPlayer.cities():
 			revIdx = pCity.getRevolutionIndex()
 			prevRevIdx = RevData.getCityVal(pCity, 'PrevRevIndex')
 			localRevIdx = pCity.getLocalRevIndex()
@@ -2252,10 +2220,7 @@ class Revolution:
 
 	def incrementRevIdxHistory( self, iGameTurn, iPlayer ) :
 		# Increment RevIdxHistory fields that are not handled by updateLocalRevIndices
-
-		for city in PyPlayer(iPlayer).getCityList() :
-			pCity = city.GetCy()
-
+		for pCity in GC.getPlayer(iPlayer).cities():
 			revIdxHist = RevData.getCityVal( pCity, 'RevIdxHistory' )
 
 			# Bump turn for fields that are not handled by updateLocalRevIndices
@@ -2445,8 +2410,7 @@ class Revolution:
 
 					bJoin = False
 					citiesInRevolt = []
-					for city in PyPlayer(pPlayer.getID()).getCityList() :
-						pCity = city.GetCy()
+					for pCity in pPlayer.cities():
 						if( RevData.getCityVal(pCity, 'RevolutionCiv') == revCivType ) :
 							if( pCity.getReinforcementCounter() > 0 and pCity.getReinforcementCounter() < 9 - pRevPlayer.getCurrentEra()/2 ) :
 								if( self.LOG_DEBUG ) :
@@ -6145,7 +6109,7 @@ class Revolution:
 			# Must call setNewPlayerAlive to avoid having DLL set this player alive with setPlayerAlive which calls its turn and the turns of all players with higher numbers
 			# Instead, this way makes it alive so it takes its next turn in turn
 			# Add replay message
-			mess = localText.getText("TXT_KEY_REV_MESS_VIOLENT",()) + ' ' + PyPlayer(pPlayer.getID()).getCivilizationName() + '!'
+			mess = localText.getText("TXT_KEY_REV_MESS_VIOLENT",()) + ' ' + pPlayer.getCivilizationDescription(0) + '!'
 			mess += "  " + localText.getText("TXT_KEY_REV_BIG_THE",()) + ' ' + pRevPlayer.getCivilizationDescription(0) + ' ' + localText.getText("TXT_KEY_REV_MESS_RISEN",())
 			GAME.addReplayMessage( ReplayMessageTypes.REPLAY_MESSAGE_MAJOR_EVENT, pRevPlayer.getID(), mess, cityList[0].getX(), cityList[0].getY(), GC.getInfoTypeForString("COLOR_WARNING_TEXT"))
 
@@ -6172,7 +6136,7 @@ class Revolution:
 						mess = "<color=255,0,0,255>" + localText.getText("TXT_KEY_REV_MESS_YOU_BARB",())
 					else:
 						colorNum = 7
-						mess = "<color=255,0,0,255>" + localText.getText("TXT_KEY_REV_MESS_VIOLENT",()) + ' ' + PyPlayer(pPlayer.getID()).getCivilizationName() + '!!!'
+						mess = "<color=255,0,0,255>" + localText.getText("TXT_KEY_REV_MESS_VIOLENT",()) + ' ' + pPlayer.getCivilizationDescription(0) + '!!!'
 						mess += "  " + localText.getText("TXT_KEY_REV_MESS_BARB",())
 				else:
 					if iPlayer == pPlayer.getID():
@@ -6192,7 +6156,7 @@ class Revolution:
 							mess += "<color=255,0,0,255>"
 							colorNum = 7
 
-						mess += localText.getText("TXT_KEY_REV_MESS_VIOLENT",()) + ' ' + PyPlayer(pPlayer.getID()).getCivilizationName() + '!!!'
+						mess += localText.getText("TXT_KEY_REV_MESS_VIOLENT",()) + ' ' + pPlayer.getCivilizationDescription(0) + '!!!'
 						if bJoinRev:
 							mess += "  " + localText.getText("TXT_KEY_REV_MESS_JOIN",()) + ' ' + pRevPlayer.getCivilizationDescription(0) + ' ' + localText.getText("TXT_KEY_REV_MESS_JOIN2",())
 						else:
@@ -6465,8 +6429,7 @@ class Revolution:
 					# Try to move to another of players cities
 					if self.LOG_DEBUG:
 						CvUtil.pyPrint("  Revolt - No nearby plots, trying move to another of players cities")
-					for otherCity in PyPlayer(pPlayer.getID()).getCityList():
-						pOtherCity = otherCity.GetCy()
+					for pOtherCity in pPlayer.cities():
 						if not pOtherCity.getID() == pCity.getID():
 							retreatPlots.append([pOtherCity.getX(), pOtherCity.getY()])
 

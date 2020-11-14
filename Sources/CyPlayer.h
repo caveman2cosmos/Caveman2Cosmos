@@ -504,6 +504,7 @@ public:
 	int getNumCities();
 	CyCity* getCity(int iID);
 
+	python::list units() const;
 	python::tuple firstUnit(bool bRev); // returns tuple of (CyUnit, iterOut)
 	python::tuple nextUnit(int iterIn, bool bRev); // returns tuple of (CyUnit, iterOut)
 	int getNumUnits();

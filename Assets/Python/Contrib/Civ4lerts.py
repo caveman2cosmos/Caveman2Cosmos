@@ -51,7 +51,6 @@ import AttitudeUtil
 import BugCore
 import BugUtil
 import CityUtil
-import PlayerUtil
 import TradeUtil
 
 # Must set alerts to "not immediate" to have icons show up
@@ -182,10 +181,11 @@ class AbstractCityAlertManager(AbstractStatefulAlert):
 
 	def checkAllActivePlayerCities(self):
 		"Loops over active player's cities, telling each alert to perform its check."
-		ePlayer, player = PlayerUtil.getActivePlayerAndID()
-		for city in PlayerUtil.playerCities(player):
+		ePlayer = GAME.getActivePlayer()
+		player = GC.getPlayer(ePlayer)
+		for city in player.cities():
 			for alert in self.alerts:
-				alert.checkCity(getCityId(city), city, ePlayer, player)
+				alert.checkCity(city.getID(), city, ePlayer, player)
 
 	def _init(self):
 		"Initializes each alert."
@@ -256,8 +256,7 @@ class AbstractCityAlert:
 	def reset(self):
 		"Clears state kept for each city."
 		self._beforeReset()
-		player = PlayerUtil.getActivePlayer()
-		for city in PlayerUtil.playerCities(player):
+		for city in GC.getActivePlayer().cities():
 			self.resetCity(city)
 
 	def _beforeReset(self):
@@ -673,7 +672,7 @@ class GoldTrade(AbstractStatefulAlert):
 	def onBeginActivePlayerTurn(self, argsList):
 		if (not Civ4lertsOpt.isShowGoldTradeAlert()):
 			return
-		playerID = PlayerUtil.getActivePlayerID()
+		playerID = GAME.getActivePlayer()
 		for rival in TradeUtil.getGoldTradePartners(playerID):
 			rivalID = rival.getID()
 			oldMaxGoldTrade = self._getMaxGoldTrade(playerID, rivalID)
@@ -711,7 +710,7 @@ class GoldPerTurnTrade(AbstractStatefulAlert):
 	def onBeginActivePlayerTurn(self, argsList):
 		if (not Civ4lertsOpt.isShowGoldPerTurnTradeAlert()):
 			return
-		playerID = PlayerUtil.getActivePlayerID()
+		playerID = GAME.getActivePlayer()
 		for rival in TradeUtil.getGoldTradePartners(playerID):
 			rivalID = rival.getID()
 			oldMaxGoldPerTurnTrade = self._getMaxGoldPerTurnTrade(playerID, rivalID)
@@ -765,22 +764,23 @@ class RefusesToTalk(AbstractStatefulAlert):
 
 	def onCityRazed(self, argsList):
 		city, ePlayer = argsList
-		self.checkIfIsAnyOrHasMetAllTeams(PlayerUtil.getPlayerTeamID(city.getOwner()), PlayerUtil.getPlayerTeamID(ePlayer))
+		self.checkIfIsAnyOrHasMetAllTeams(city.getTeam(), GC.getPlayer(ePlayer).getTeam())
 
 	def onDealCanceled(self, argsList):
 		eOfferPlayer, eTargetPlayer, pTrade = argsList
 		if eOfferPlayer != -1 and eTargetPlayer != -1:
-			self.checkIfIsAnyOrHasMetAllTeams(PlayerUtil.getPlayerTeamID(eOfferPlayer), PlayerUtil.getPlayerTeamID(eTargetPlayer))
+			self.checkIfIsAnyOrHasMetAllTeams(GC.getPlayer(eOfferPlayer).getTeam(), GC.getPlayer(eTargetPlayer).getTeam())
 
 	def onEmbargoAccepted(self, argsList):
 		eOfferPlayer, eTargetPlayer, pTrade = argsList
-		self.checkIfIsAnyOrHasMetAllTeams(PlayerUtil.getPlayerTeamID(eOfferPlayer), PlayerUtil.getPlayerTeamID(eTargetPlayer))
+		self.checkIfIsAnyOrHasMetAllTeams(GC.getPlayer(eOfferPlayer).getTeam(), GC.getPlayer(eTargetPlayer).getTeam())
 
 	def checkIfIsAnyOrHasMetAllTeams(self, *eTeams):
 		"""
 		Calls check() only if the active team is any or has met all of the given teams.
 		"""
-		eActiveTeam, activeTeam = PlayerUtil.getActiveTeamAndID()
+		eActiveTeam = GAME.getActiveTeam()
+		activeTeam = GC.getTeam(eActiveTeam)
 		for eTeam in eTeams:
 			if eActiveTeam != eTeam and eTeam >= 0 and not activeTeam.isHasMet(eTeam):
 				return
@@ -844,7 +844,7 @@ class WorstEnemy(AbstractStatefulAlert):
 
 	def onCityRazed(self, argsList):
 		city, ePlayer = argsList
-		self.checkIfIsAnyOrHasMetAllTeams(PlayerUtil.getPlayerTeamID(city.getOwner()), PlayerUtil.getPlayerTeamID(ePlayer))
+		self.checkIfIsAnyOrHasMetAllTeams(city.getTeam(), GC.getPlayer(ePlayer).getTeam())
 
 	def onVassalState(self, argsList):
 		eMaster, eVassal, bVassal = argsList
@@ -852,13 +852,14 @@ class WorstEnemy(AbstractStatefulAlert):
 
 	def onPlayerChangeStateReligion(self, argsList):
 		ePlayer, eNewReligion, eOldReligion = argsList
-		self.checkIfIsAnyOrHasMetAllTeams(PlayerUtil.getPlayerTeamID(ePlayer))
+		self.checkIfIsAnyOrHasMetAllTeams(GC.getPlayer(ePlayer).getTeam())
 
 	def checkIfIsAnyOrHasMetAllTeams(self, *eTeams):
 		"""
 		Calls check() only if the active team is any or has met all of the given teams.
 		"""
-		eActiveTeam, activeTeam = PlayerUtil.getActiveTeamAndID()
+		eActiveTeam = GAME.getActiveTeam()
+		activeTeam = GC.getTeam(eActiveTeam)
 		for eTeam in eTeams:
 			#RevolutionDCM fix
 			if eTeam != -1 and eActiveTeam != eTeam and not activeTeam.isHasMet(eTeam):
@@ -868,8 +869,9 @@ class WorstEnemy(AbstractStatefulAlert):
 	def check(self):
 		if (not Civ4lertsOpt.isShowWorstEnemyAlert()):
 			return
-		eActivePlayer = PlayerUtil.getActivePlayerID()
-		eActiveTeam, activeTeam = PlayerUtil.getActiveTeamAndID()
+		eActivePlayer = GAME.getActivePlayer()
+		eActiveTeam = GAME.getActiveTeam()
+		activeTeam = GC.getTeam(eActiveTeam)
 		enemies = self.enemies[eActivePlayer]
 		newEnemies = AttitudeUtil.getWorstEnemyTeams()
 		delayedMessages = {}
