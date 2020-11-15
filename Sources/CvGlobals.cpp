@@ -812,7 +812,7 @@ int cvInternalGlobals::getNumMainMenus() const
 	pDiscord->ensureDiscordRPCState();
 
 	// Discord RPC detect menu
-	if ((int)m_paMainMenus.size() > 0) {
+	if (m_paMainMenus.size() > 0 && getBugOptionBOOL("MainInterface__EnableRP", false)) {
 		RPCDATA rpc;
 		GIVEDEFAULTRPCVALS(rpc);
 		rpc.turn = -2; // -2 cuz -1 is reserved for undefined

@@ -311,10 +311,12 @@ void CvGameTextMgr::setTimeStr(CvWString& szString, int iGameTurn, bool bSave)
 	setDateStr(szString, iGameTurn, bSave, GC.getGame().getCalendar(), GC.getGame().getStartYear(), GC.getGame().getGameSpeedType());
 
 	// Discord RPC. Date is standard ASCII so this should work.
-	RPCDATA rpc;
-	GIVEDEFAULTRPCVALS(rpc);
-	rpc.date = std::string(szString.begin(), szString.end());
-	pDiscord->sendNewRpcDetails(rpc);
+	if (getBugOptionBOOL("MainInterface__EnableRP", false)) {
+		RPCDATA rpc;
+		GIVEDEFAULTRPCVALS(rpc);
+		rpc.date = std::string(szString.begin(), szString.end());
+		pDiscord->sendNewRpcDetails(rpc);
+	}
 }
 
 

@@ -127,7 +127,7 @@ CyPlayer* CyGlobalContext::getCyPlayer(int idx) const
 	if (!bInit)
 	{
 		for (int i = 0; i < MAX_PLAYERS; i++)
-			cyPlayers[i] = CyPlayer(GET_PLAYER((PlayerTypes)i));
+			cyPlayers[i] = CyPlayer(&GET_PLAYER((PlayerTypes)i));
 		bInit = true;
 	}
 

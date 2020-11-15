@@ -3251,13 +3251,14 @@ int CvGame::countCivPlayersAlive() const
 	}
 
 	// Discord RPC
-	RPCDATA rpc;
-	GIVEDEFAULTRPCVALS(rpc);
-	rpc.playersAlive = iCount;
-	pDiscord->sendNewRpcDetails(rpc);
+	if (getBugOptionBOOL("MainInterface__EnableRP", false)) {
+		RPCDATA rpc;
+		GIVEDEFAULTRPCVALS(rpc);
+		rpc.playersAlive = iCount;
+		pDiscord->sendNewRpcDetails(rpc);
 
-	pDiscord->ensureDiscordRPCState();
-
+		pDiscord->ensureDiscordRPCState();
+	}
 	return iCount;
 }
 
@@ -3276,13 +3277,14 @@ int CvGame::countCivPlayersEverAlive() const
 	}
 
 	// Discord RPC
-	RPCDATA rpc;
-	GIVEDEFAULTRPCVALS(rpc);
-	rpc.playersTotal = iCount;
-	pDiscord->sendNewRpcDetails(rpc);
+	if (getBugOptionBOOL("MainInterface__EnableRP", false)) {
+		RPCDATA rpc;
+		GIVEDEFAULTRPCVALS(rpc);
+		rpc.playersTotal = iCount;
+		pDiscord->sendNewRpcDetails(rpc);
 
-	pDiscord->ensureDiscordRPCState();
-
+		pDiscord->ensureDiscordRPCState();
+	}
 	return iCount;
 }
 
@@ -3714,16 +3716,17 @@ int CvGame::getNumHumanPlayers()
 
 int CvGame::getGameTurn()
 {
+	const int turn = GC.getInitCore().getGameTurn();
 	// Discord RPC Update
-	RPCDATA rpc;
-	GIVEDEFAULTRPCVALS(rpc);
-	rpc.turn = GC.getInitCore().getGameTurn();
-	pDiscord->sendNewRpcDetails(rpc);
+	if (getBugOptionBOOL("MainInterface__EnableRP", false)) {
+		RPCDATA rpc;
+		GIVEDEFAULTRPCVALS(rpc);
+		rpc.turn = turn;
+		pDiscord->sendNewRpcDetails(rpc);
 
-	pDiscord->ensureDiscordRPCState();
-
-	return rpc.turn;
-	//return GC.getInitCore().getGameTurn();
+		pDiscord->ensureDiscordRPCState();
+	}
+	return turn;
 }
 
 

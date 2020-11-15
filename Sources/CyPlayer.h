@@ -18,7 +18,8 @@ class CySelectionGroup;
 class CyPlayer
 {
 public:
-	explicit CyPlayer(CvPlayer& pPlayer); // Call from C++
+	CyPlayer();
+	explicit CyPlayer(CvPlayer* pPlayer); // Call from C++
 
 	//const CvPlayer* getPlayer() const { return m_pPlayer; } // Call from C++
 
@@ -474,7 +475,7 @@ public:
 	void removeBLList(int iID);
 
 private:
-	CvPlayer& m_pPlayer;
+	CvPlayer* m_pPlayer;
 };
 
 #endif	// CyPlayer_h
