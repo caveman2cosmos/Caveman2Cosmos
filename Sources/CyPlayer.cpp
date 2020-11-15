@@ -17,11 +17,7 @@ CyPlayer::CyPlayer() : m_pPlayer(NULL) {}
 
 CyPlayer::CyPlayer(CvPlayer* pPlayer) : m_pPlayer(pPlayer) {}
 
-/************************************************************************************************/
-/* CHANGE_PLAYER                         08/27/08                                 jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 void CyPlayer::changeLeader(int /*LeaderHeadTypes*/ eNewLeader)
 {
 	m_pPlayer->changeLeader((LeaderHeadTypes)eNewLeader);
@@ -36,14 +32,7 @@ void CyPlayer::setIsHuman(bool bNewValue)
 {
 	m_pPlayer->setIsHuman(bNewValue);
 }
-/************************************************************************************************/
-/* CHANGE_PLAYER                          END                                                   */
-/************************************************************************************************/
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 void CyPlayer::setIsRebel(bool bNewValue)
 {
 	m_pPlayer->setIsRebel(bNewValue);
@@ -78,9 +67,6 @@ void CyPlayer::setColor(int /*PlayerColorTypes*/ iColor)
 {
 	m_pPlayer->setColor((PlayerColorTypes)iColor);
 }
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 bool CyPlayer::isDoNotBotherStatus(int /*PlayerTypes*/ playerID) const
 {
@@ -185,18 +171,11 @@ std::wstring CyPlayer::getName() const
 	return m_pPlayer->getName();
 }
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/* For dynamic civ names                                                                        */
-/************************************************************************************************/
 void CyPlayer::setName(std::wstring szNewValue)
 {
 	m_pPlayer->setName(szNewValue);
 }
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 std::wstring CyPlayer::getNameForm(int iForm) const
 {
 	return m_pPlayer->getName((uint)iForm);
@@ -1416,6 +1395,16 @@ std::wstring CyPlayer::getCityName(int iIndex) const
 	return m_pPlayer->getCityName(iIndex);
 }
 
+python::list CyPlayer::cities() const
+{
+	python::list list = python::list();
+	foreach_(CvCity* city, m_pPlayer->cities())
+	{
+		list.append(new CyCity(city));
+	}
+	return list;
+}
+
 // returns tuple of (CyCity, iterOut)
 python::tuple CyPlayer::firstCity(bool bRev) const
 {
@@ -1445,6 +1434,16 @@ int CyPlayer::getNumCities() const
 CyCity* CyPlayer::getCity(int iID) const
 {
 	return new CyCity(m_pPlayer->getCity(iID));
+}
+
+python::list CyPlayer::units() const
+{
+	python::list list = python::list();
+	foreach_(CvUnit* unit, m_pPlayer->units())
+	{
+		list.append(new CyUnit(unit));
+	}
+	return list;
 }
 
 // returns tuple of (CyUnit, iterOut)
