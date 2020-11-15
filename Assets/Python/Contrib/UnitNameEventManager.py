@@ -71,7 +71,6 @@ from CvPythonExtensions import *
 import CvUtil
 import BugUtil
 import BugCore
-import PlayerUtil
 import Roman
 import RandomNameUtils
 import random

@@ -198,7 +198,6 @@ class Dispatcher:
 		self._setDefault("canFoundCitiesOnWater", False)
 		self._setDefault("doCombat", False)
 		self._setDefault("getConscriptUnitType", UnitTypes.NO_UNIT)
-		self._setDefault("getCityFoundValue", -1)
 		self._setDefault("canPickPlot", True)
 		self._setDefault("getUnitCostMod", -1)
 		self._setDefault("getBuildingCostMod", -1)

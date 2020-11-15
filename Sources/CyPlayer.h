@@ -359,18 +359,20 @@ public:
 	std::wstring getCityName(int iIndex);
 
 	python::list cities() const;
-	python::tuple firstCity(bool bRev) const; // returns tuple of (CyCity, iterOut)
-	python::tuple nextCity(int iterIn, bool bRev) const; // returns tuple of (CyCity, iterOut)
-	int getNumCities() const;
-	CyCity* getCity(int iID) const;
+	python::tuple firstCity(bool bRev); // returns tuple of (CyCity, iterOut)
+	python::tuple nextCity(int iterIn, bool bRev); // returns tuple of (CyCity, iterOut)
+	CyCity* nthCity(int n, bool bRev); // shortcut for firstCity + nextCity + nextCity ...
+	int getNumCities();
+	CyCity* getCity(int iID);
 
-	python::tuple firstUnit(bool bRev) const; // returns tuple of (CyUnit, iterOut)
-	python::tuple nextUnit(int iterIn, bool bRev) const; // returns tuple of (CyUnit, iterOut)
-	int getNumUnits() const;
-	CyUnit* getUnit(int iID) const;
+	python::list units() const;
+	python::tuple firstUnit(bool bRev); // returns tuple of (CyUnit, iterOut)
+	python::tuple nextUnit(int iterIn, bool bRev); // returns tuple of (CyUnit, iterOut)
+	int getNumUnits();
+	CyUnit* getUnit(int iID);
 
-	int getNumSelectionGroups() const;
-	CySelectionGroup* getSelectionGroup(int iID) const;
+	int getNumSelectionGroups();
+	CySelectionGroup* getSelectionGroup(int iID);
 
 	void trigger(/*EventTriggerTypes*/int eEventTrigger);
 	const EventTriggeredData* getEventOccured(int /*EventTypes*/ eEvent) const;

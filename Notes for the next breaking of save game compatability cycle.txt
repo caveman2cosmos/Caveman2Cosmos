@@ -46,7 +46,7 @@ When it comes times to break the save we need to apply all the changes that are 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 Toffer
 
-Review CIV4PlayerColorInfos.xml and CIV4ColorVals.xml.
+Review CIV4PlayerColorInfos.xml and CIV4ColorVals.xml. 
 Reduce amount of excess colour definitions, many duplicates and unused ones currently.
 Would cause issues with old saves without some extra recalc code for civ colours.
 

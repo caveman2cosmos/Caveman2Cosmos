@@ -1,12 +1,9 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-import PyHelpers
 import CvUtil
 import ScreenInput
 import CvScreenEnums
-
-PyPlayer = PyHelpers.PyPlayer
 
 # globals
 gc = CyGlobalContext()
@@ -361,9 +358,7 @@ class CvCorporationScreen:
 			else:
 				screen.setState(self.getCorporationButtonName(i), False)
 
-		iPlayer = PyPlayer(self.iActivePlayer)
-
-		cityList = iPlayer.getCityList()
+		cityList = gc.getPlayer(self.iActivePlayer).cities()
 
 		# Loop through the cities
 		szLeftCities = u""

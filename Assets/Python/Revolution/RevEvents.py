@@ -5,7 +5,6 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import PyHelpers
 import Popup as PyPopup
 try:
 	import cPickle as pickle
@@ -25,7 +24,6 @@ GC = CyGlobalContext()
 GAME = GC.getGame()
 TRNSLTR = CyTranslator()
 
-PyPlayer = PyHelpers.PyPlayer
 RevOpt = BugCore.game.Revolution
 
 # Stores player id's human has reject assimilation overtures from
@@ -191,10 +189,7 @@ def onSetPlayerAlive( argsList ) :
 		for i in xrange(MAX_PC_PLAYERS) :
 			playerI = GC.getPlayer(i)
 			if( playerI.isAlive() and playerI.getNumCities() > 0 ) :
-				playerIPy = PyPlayer( i )
-				cityList = playerIPy.getCityList()
-				for city in cityList :
-					pCity = city.GetCy()
+				for pCity in playerI.cities():
 					revCiv = RevData.getCityVal( pCity, "RevolutionCiv" )
 					revTurn = RevData.getCityVal( pCity, "RevolutionTurn" )
 					if( revCiv == pPlayer.getCivilizationType() and revTurn > 0 ) :
@@ -316,12 +311,7 @@ def onChangeWar( argsList ):
 				onRivalTeamCivs.append(pPlayer.getCivilizationType())
 
 		for pPlayer in onTeamList :
-
-			playerPy = PyPlayer(pPlayer.getID())
-
-			cityList = playerPy.getCityList()
-			for city in cityList :
-				pCity = city.GetCy()
+			for pCity in pPlayer.cities():
 				revCiv = RevData.getCityVal( pCity, "RevolutionCiv" )
 				if( revCiv in onRivalTeamCivs ) :
 					if( not RevData.getCityVal( pCity, "RevolutionTurn" ) == None ) :
@@ -351,11 +341,7 @@ def onChangeWar( argsList ):
 			GC.getTeam(pPlayer.getTeam()).setRebelAgainst( iRivalTeam, False )
 
 		for pPlayer in onRivalTeamList :
-			playerPy = PyPlayer(pPlayer.getID())
-
-			cityList = playerPy.getCityList()
-			for city in cityList :
-				pCity = city.GetCy()
+			for pCity in pPlayer.cities():
 				revCiv = RevData.getCityVal( pCity, "RevolutionCiv" )
 				if( revCiv in onTeamCivs ) :
 					if( not RevData.getCityVal( pCity, "RevolutionTurn" ) == None ) :
@@ -642,8 +628,7 @@ def updateRevolutionIndices( argsList ) :
 
 	print "	Revolt - Acquisition of %s by %s reduces rev indices by %d" %(pCity.getName(), newOwner.getCivilizationDescription(0), changeRevIdx)
 
-	for listCity in PyPlayer( newOwnerID ).getCityList() :
-		pListCity = listCity.GetCy()
+	for pListCity in newOwner.cities():
 		if not pListCity.getID() == pCity.getID():
 			pListCity.changeRevolutionIndex( changeRevIdx )
 			revIdxHist = RevData.getCityVal(pListCity,'RevIdxHistory')
@@ -672,8 +657,7 @@ def updateRevolutionIndices( argsList ) :
 				pCity.setNumRealBuilding(eCapitalBuilding, 1)
 
 		# Ripple effects through other rebellious cities
-		for listCity in PyPlayer( oldOwnerID ).getCityList() :
-			pListCity = listCity.GetCy()
+		for pListCity in GC.getPlayer(oldOwnerID).cities():
 			reinfCount = pListCity.getReinforcementCounter()
 			if reinfCount > 2 and RevData.getCityVal(pListCity, 'RevolutionCiv') == newOwner.getCivilizationType():
 				if reinfCount < 5:
@@ -739,8 +723,7 @@ def onBuildingBuilt(argsList):
 		if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - World wonder %s build in %s"%(buildingInfo.getDescription(),pCity.getName()))
 		curRevIdx = pCity.getRevolutionIndex()
 		pCity.changeRevolutionIndex( -max([150,int(0.25*curRevIdx)]) )
-		for city in PyPlayer(pCity.getOwner()).getCityList() :
-			listCity = city.GetCy()
+		for listCity in GC.getPlayer(pCity.getOwner()).cities():
 			curRevIdx = listCity.getRevolutionIndex()
 			iRevIdxChange = -max([75,int(0.12*curRevIdx)])
 			listCity.changeRevolutionIndex( iRevIdxChange )
@@ -752,8 +735,7 @@ def onBuildingBuilt(argsList):
 		if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - National wonder %s build in %s"%(buildingInfo.getDescription(),pCity.getName()))
 		curRevIdx = pCity.getRevolutionIndex()
 		pCity.changeRevolutionIndex( -max([80,int(0.12*curRevIdx)]) )
-		for city in PyPlayer(pCity.getOwner()).getCityList() :
-			listCity = city.GetCy()
+		for listCity in GC.getPlayer(pCity.getOwner()).cities():
 			curRevIdx = listCity.getRevolutionIndex()
 			iRevIdxChange = -max([50,int(0.07*curRevIdx)])
 			listCity.changeRevolutionIndex( iRevIdxChange )
@@ -765,18 +747,19 @@ def onBuildingBuilt(argsList):
 ########################## Religious events ###############################
 
 def onReligionFounded(argsList):
-	iReligion, iFounder = argsList
-	pPlayer = GC.getPlayer(iFounder)
+	iReligion = argsList[0]
 
-	#print "Player %d has founded religion %d"%(iFounder,iReligion)
-
-	if( pPlayer.getStateReligion() >= 0 and iReligion >= 0 ) :
-		if( not (pPlayer.getStateReligion() == iReligion) and not pPlayer.isAnarchy() ) :
-			pCity = GC.getGame().getHolyCity(iReligion)
-			if( pCity.getOwner() == iFounder ) :
-				curRevIdx = pCity.getRevolutionIndex()
-				pCity.setRevolutionIndex( max([int(.35*RevDefs.revInstigatorThreshold),curRevIdx+100]) )
-				if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - %s founded non-state religion, index of %s now %d ... state %d, new %d"%(pCity.getName(),pCity.getName(),pCity.getRevolutionIndex(),pPlayer.getStateReligion(),iReligion))
+	if iReligion > -1:
+		player = GC.getPlayer(argsList[1])
+		if not player.isAnarchy():
+			iStateReligion = player.getStateReligion()
+			if iStateReligion > -1 and iStateReligion != iReligion:
+				pCity = GC.getGame().getHolyCity(iReligion)
+				if pCity.getOwner() == argsList[1]:
+					curRevIdx = pCity.getRevolutionIndex()
+					pCity.setRevolutionIndex(max([int(.35*RevDefs.revInstigatorThreshold),curRevIdx+100]))
+					if LOG_DEBUG:
+						CvUtil.pyPrint("  Revolt - %s founded non-state religion, index of %s now %d ... state %d, new %d"%(pCity.getName(),pCity.getName(),pCity.getRevolutionIndex(),player.getStateReligion(),iReligion))
 
 
 
@@ -818,8 +801,7 @@ def removeFloatingRebellions( ) :
 				bNoSettler = True
 				bOnlySpy = True
 
-				playerPy = PyPlayer(i)
-				for unit in playerPy.getUnitList() :
+				for unit in player.units():
 					if( unit.isFound() ) :
 						bNoSettler = False
 						bOnlySpy = False
@@ -838,7 +820,7 @@ def removeFloatingRebellions( ) :
 						if( LOG_DEBUG ) : CvUtil.pyPrint("Rev - Rebel player %d has only spies"%(player.getID()))
 
 						if( GAME.getSorenRandNum(100, "Rev - Only spy death") < 10 ) :
-							for unit in playerPy.getUnitList() :
+							for unit in player.units():
 								unit.kill( False, -1 )
 								break
 							if( LOG_DEBUG ) : CvUtil.pyPrint("Rev - Killed one spy of Rebel player %d"%(player.getID()))

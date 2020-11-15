@@ -18724,18 +18724,6 @@
 			<KFM/>
 			<Button>art/Embassy/art/bulgarianembassy.dds</Button>
 		</BuildingArtInfo>
-<!-- No units
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CASTILIAN_EMBASSY</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>art/Embassy/art/castilianembassy.dds</Button>
-		</BuildingArtInfo>
--->
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_COLOMBIAN_EMBASSY</Type>
 			<LSystem/>
@@ -18796,18 +18784,6 @@
 			<KFM/>
 			<Button>art/Embassy/art/konjoembassy.dds</Button>
 		</BuildingArtInfo>
-<!-- No units
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LEON_EMBASSY</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>art/Embassy/art/leonembassy.dds</Button>
-		</BuildingArtInfo>
--->
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LIANGZHU_EMBASSY</Type>
 			<LSystem/>
@@ -30337,7 +30313,6 @@
 			<KFM/>
 			<Button>Art/Embassy/red_ocherembassy.dds</Button>
 		</BuildingArtInfo>
-<!-- Wrong flag
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SABBATEAN_EMBASSY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
@@ -30348,7 +30323,6 @@
 			<KFM/>
 			<Button>Art/Embassy/sabbateanembassy.dds</Button>
 		</BuildingArtInfo>
--->
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SAFAVIDS_EMBASSY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>

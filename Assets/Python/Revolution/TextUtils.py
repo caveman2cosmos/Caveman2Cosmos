@@ -4,13 +4,11 @@
 # Version 1.0
 
 from CvPythonExtensions import *
-import PyHelpers
 
 # globals
 gc = CyGlobalContext()
 game = CyGame()
 localText = CyTranslator()
-PyPlayer = PyHelpers.PyPlayer
 
 def getTextItemList( textList, pre = '', sep = ', ', second = '', penUlt = '', post = '' ) :
 
@@ -70,7 +68,7 @@ def getCityTextList( cityList, bPreCity = False, bPreCitizens = False, sep = ', 
 
 def testCityTextList( iPlayer ):
 
-	cityList = PyPlayer(iPlayer).getCityList()
+	cityList = gc.getPlayer(iPlayer).cities()
 
 	str = getCityTextList(cityList)
 	CyInterface().addImmediateMessage(str,"")
