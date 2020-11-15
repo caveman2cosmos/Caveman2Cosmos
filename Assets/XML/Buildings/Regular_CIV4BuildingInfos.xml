@@ -62893,7 +62893,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALACE_GARDEN</Type>
-			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_PALACE_GARDEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PALACE_GARDEN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PALACE_GARDEN_STRATEGY</Strategy>

@@ -454,11 +454,6 @@ class CvGameUtils:
 		#iPlayer = argsList[0]
 		return -1
 
-	# Returns the value for founding a city in a specific plot.
-	def getCityFoundValue(self, argsList):
-		#iPlayer, iPlotX, iPlotY = argsList
-		return -1
-
 	def canPickPlot(self, argsList):
 		#pPlot = argsList[0]
 		return true
