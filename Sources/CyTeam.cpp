@@ -739,7 +739,6 @@ int CyTeam::getLaunchSuccessRate(int /*VictoryTypes*/ eVictory) const
 	return m_pTeam->getLaunchSuccessRate((VictoryTypes)eVictory);
 }
 
-
 int CyTeam::getEspionagePointsAgainstTeam(int /*TeamTypes*/ eIndex) const
 {
 	return m_pTeam->getEspionagePointsAgainstTeam((TeamTypes) eIndex);
