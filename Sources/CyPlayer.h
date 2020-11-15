@@ -190,8 +190,8 @@ public:
 	int getEspionageMissionCost(int /*EspionageMissionTypes*/ eMission, int /*PlayerTypes*/ eTargetPlayer, const CyPlot* pPlot, int iExtraData) const;
 
 	int getEspionageSpendingWeightAgainstTeam(int /*TeamTypes*/ eIndex) const;
-	void setEspionageSpendingWeightAgainstTeam(int /*TeamTypes*/ eIndex, int iValue) const;
-	void changeEspionageSpendingWeightAgainstTeam(int /*TeamTypes*/ eIndex, int iChange) const;
+	void setEspionageSpendingWeightAgainstTeam(int /*TeamTypes*/ eIndex, int iValue);
+	void changeEspionageSpendingWeightAgainstTeam(int /*TeamTypes*/ eIndex, int iChange);
 
 	int getGoldenAgeTurns() const;
 	int getGoldenAgeLength() const;
@@ -356,23 +356,22 @@ public:
 
 	void addCityName(const std::wstring szName);
 	int getNumCityNames() const;
-	std::wstring getCityName(int iIndex);
+	std::wstring getCityName(int iIndex) const;
 
 	python::list cities() const;
-	python::tuple firstCity(bool bRev); // returns tuple of (CyCity, iterOut)
-	python::tuple nextCity(int iterIn, bool bRev); // returns tuple of (CyCity, iterOut)
-	CyCity* nthCity(int n, bool bRev); // shortcut for firstCity + nextCity + nextCity ...
-	int getNumCities();
-	CyCity* getCity(int iID);
+	python::tuple firstCity(bool bRev) const; // returns tuple of (CyCity, iterOut)
+	python::tuple nextCity(int iterIn, bool bRev) const; // returns tuple of (CyCity, iterOut)
+	int getNumCities() const;
+	CyCity* getCity(int iID) const;
 
 	python::list units() const;
-	python::tuple firstUnit(bool bRev); // returns tuple of (CyUnit, iterOut)
-	python::tuple nextUnit(int iterIn, bool bRev); // returns tuple of (CyUnit, iterOut)
-	int getNumUnits();
-	CyUnit* getUnit(int iID);
+	python::tuple firstUnit(bool bRev) const; // returns tuple of (CyUnit, iterOut)
+	python::tuple nextUnit(int iterIn, bool bRev) const; // returns tuple of (CyUnit, iterOut)
+	int getNumUnits() const;
+	CyUnit* getUnit(int iID) const;
 
-	int getNumSelectionGroups();
-	CySelectionGroup* getSelectionGroup(int iID);
+	int getNumSelectionGroups() const;
+	CySelectionGroup* getSelectionGroup(int iID) const;
 
 	void trigger(/*EventTriggerTypes*/int eEventTrigger);
 	const EventTriggeredData* getEventOccured(int /*EventTypes*/ eEvent) const;
@@ -385,7 +384,7 @@ public:
 	void AI_updateFoundValues(bool bStartingLoc);
 	bool AI_isFinancialTrouble() const;
 	bool AI_demandRebukedWar(int /*PlayerTypes*/ ePlayer);
-	AttitudeTypes AI_getAttitude(int /*PlayerTypes*/ ePlayer);
+	AttitudeTypes AI_getAttitude(int /*PlayerTypes*/ ePlayer) const;
 	int AI_unitValue(int /*UnitTypes*/ eUnit, int /*UnitAITypes*/ eUnitAI, const CyArea* pArea) const;
 	int AI_civicValue(int /*CivicTypes*/ eCivic) const;
 	int AI_totalUnitAIs(int /*UnitAITypes*/ eUnitAI) const;

@@ -15,7 +15,7 @@
 
 CyPlayer::CyPlayer() : m_pPlayer(NULL) {}
 
-CyPlayer::CyPlayer(CvPlayer& pPlayer) : m_pPlayer(pPlayer) {}
+CyPlayer::CyPlayer(CvPlayer* pPlayer) : m_pPlayer(pPlayer) {}
 
 /************************************************************************************************/
 /* CHANGE_PLAYER                         08/27/08                                 jdog5000      */
@@ -102,7 +102,7 @@ bool CyPlayer::startingPlotWithinRange(const CyPlot* pPlot, int /*PlayerTypes*/ 
 	return NULL;
 }
 
-CyPlot* CyPlayer::findStartingPlot(bool bRandomize) 
+CyPlot* CyPlayer::findStartingPlot(bool bRandomize) const
 {
 	return new CyPlot(m_pPlayer->findStartingPlot(bRandomize));
 }
@@ -150,7 +150,7 @@ void CyPlayer::killUnits()
 	m_pPlayer->killUnits();
 }
 
-bool CyPlayer::hasTrait(int /*TraitTypes*/ iIndex)
+bool CyPlayer::hasTrait(int /*TraitTypes*/ iIndex) const
 {
 	return m_pPlayer->hasTrait((TraitTypes) iIndex);
 }
@@ -552,7 +552,7 @@ bool CyPlayer::canConvert(int /*ReligionTypes*/ iIndex) const
 	return m_pPlayer->canConvert((ReligionTypes)iIndex);
 }
 
-void CyPlayer::convert(int /*ReligionTypes*/ iIndex) const
+void CyPlayer::convert(int /*ReligionTypes*/ iIndex)
 {
 	m_pPlayer->convert((ReligionTypes)iIndex);
 }
@@ -972,11 +972,6 @@ int CyPlayer::getStateReligionFreeExperience() const
 	return m_pPlayer->getStateReligionFreeExperience();
 }
 
-CyCity* CyPlayer::getCapitalCity() const
-{
-	return new CyCity(m_pPlayer->getCapitalCity());
-}
-
 int CyPlayer::getCitiesLost() const
 {
 	return m_pPlayer->getCitiesLost();
@@ -1294,7 +1289,7 @@ int CyPlayer::getUnitCount(int /*UnitTypes*/ eIndex) const
 
 bool CyPlayer::isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra) const
 {
-	return eIndex >= 0 ? m_pPlayer->isUnitMaxedOut((UnitTypes) eIndex, iExtra);
+	return eIndex >= 0 ? m_pPlayer->isUnitMaxedOut((UnitTypes) eIndex, iExtra) : true;
 }
 
 int CyPlayer::getUnitMaking(int /*UnitTypes*/ eIndex) const
@@ -1314,7 +1309,7 @@ int CyPlayer::getBuildingCount(int /*BuildingTypes*/ iIndex) const
 
 bool CyPlayer::isBuildingMaxedOut(int /*BuildingTypes*/ iIndex, int iExtra) const
 {
-	return iIndex >= 0 ? m_pPlayer->isBuildingMaxedOut((BuildingTypes)iIndex, iExtra);
+	return iIndex >= 0 ? m_pPlayer->isBuildingMaxedOut((BuildingTypes)iIndex, iExtra) : true;
 }
 
 int CyPlayer::getBuildingCountPlusMaking(int /*BuildingTypes*/ iIndex) const
@@ -1541,7 +1536,7 @@ bool CyPlayer::AI_isFinancialTrouble() const
 	return m_pPlayer->AI_isFinancialTrouble();
 }
 
-bool CyPlayer::AI_demandRebukedWar(int /*PlayerTypes*/ ePlayer) const
+bool CyPlayer::AI_demandRebukedWar(int /*PlayerTypes*/ ePlayer)
 {
 	return m_pPlayer->AI_demandRebukedWar((PlayerTypes)ePlayer);
 }
@@ -1669,12 +1664,12 @@ void CyPlayer::setScriptData(std::string szNewValue)
 
 int CyPlayer::AI_maxGoldTrade(int iPlayer) const
 {
-	return dynamic_cast<const CvPlayerAI&>(m_pPlayer).AI_maxGoldTrade((PlayerTypes)iPlayer);
+	return dynamic_cast<const CvPlayerAI*>(m_pPlayer)->AI_maxGoldTrade((PlayerTypes)iPlayer);
 }
 
 int CyPlayer::AI_maxGoldPerTurnTrade(int iPlayer) const
 {
-	return dynamic_cast<const CvPlayerAI&>(m_pPlayer).AI_maxGoldPerTurnTrade((PlayerTypes)iPlayer);
+	return dynamic_cast<const CvPlayerAI*>(m_pPlayer)->AI_maxGoldPerTurnTrade((PlayerTypes)iPlayer);
 }
 
 bool CyPlayer::canSplitEmpire() const

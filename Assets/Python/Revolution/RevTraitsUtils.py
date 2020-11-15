@@ -26,7 +26,7 @@ localText = CyTranslator()
 def getTraitsRevIdxLocal( iPlayer ) :
 	pPlayer = gc.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() ) :
+	if pPlayer is None:
 		return [0,list(),list()]
 
 	if( pPlayer.getNumCities() == 0 ) :
@@ -59,7 +59,7 @@ def getTraitsCivStabilityIndex( iPlayer ) :
 	posList = list()
 	negList = list()
 
-	if( pPlayer.isNone() ) :
+	if pPlayer is None:
 		return [civStabilityIdx,posList,negList]
 
 	for iTrait in range(0,gc.getNumTraitInfos()) :
@@ -83,7 +83,7 @@ def getTraitsHolyCityEffects( iPlayer ) :
 
 	pPlayer = gc.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() ) :
+	if pPlayer is None:
 		return [0,0]
 
 	if( pPlayer.getNumCities() == 0 ) :
@@ -105,7 +105,7 @@ def getTraitsNationalityMod( iPlayer ) :
 
 	pPlayer = gc.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() ) :
+	if pPlayer is None:
 		return 0
 
 	if( pPlayer.getNumCities() == 0 ) :
@@ -125,7 +125,7 @@ def getTraitsReligionMods( iPlayer ) :
 
 	pPlayer = gc.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() ) :
+	if pPlayer is None:
 		return [0,0]
 
 	if( pPlayer.getNumCities() == 0 ) :
@@ -146,14 +146,14 @@ def getTraitsReligionMods( iPlayer ) :
 def getTraitsDistanceMod( iPlayer ) :
 
 	pPlayer = gc.getPlayer(iPlayer)
-	distModifier = 0
 
-	if( pPlayer.isNone() ) :
+	if pPlayer is None:
 		return 0
 
 	if( pPlayer.getNumCities() == 0 ) :
 		return 0
 
+	distModifier = 0
 
 	for i in range(gc.getNumTraitInfos()):
 		if pPlayer.hasTrait(i):
