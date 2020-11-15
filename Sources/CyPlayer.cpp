@@ -2294,27 +2294,6 @@ CyUnit* CyPlayer::getUnit(int iID)
 	return m_pPlayer ? new CyUnit(m_pPlayer->getUnit(iID)) : NULL;
 }
 
-// returns tuple of (CySelectionGroup, iterOut)
-python::tuple CyPlayer::firstSelectionGroup(bool bRev)
-{
-	int iterIn = 0;
-	CvSelectionGroup* pvObj = m_pPlayer ? m_pPlayer->firstSelectionGroup(&iterIn, bRev) : NULL;
-	CySelectionGroup* pyObj = pvObj ? new CySelectionGroup(pvObj) : NULL;
-	python::tuple tup=python::make_tuple(pyObj, iterIn);
-	if(pyObj) delete pyObj;
-	return tup;
-}
-
-// returns tuple of (CySelectionGroup, iterOut)
-python::tuple CyPlayer::nextSelectionGroup(int iterIn, bool bRev)
-{
-	CvSelectionGroup* pvObj = m_pPlayer ? m_pPlayer->nextSelectionGroup(&iterIn, bRev) : NULL;
-	CySelectionGroup* pyObj = pvObj ? new CySelectionGroup(pvObj) : NULL;
-	python::tuple tup=python::make_tuple(pyObj, iterIn);
-	if(pyObj) delete pyObj;
-	return tup;
-}
-
 int CyPlayer::getNumSelectionGroups()
 {
 	return m_pPlayer ? m_pPlayer->getNumSelectionGroups() : -1;

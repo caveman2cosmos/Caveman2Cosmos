@@ -509,8 +509,6 @@ public:
 	int getNumUnits();
 	CyUnit* getUnit(int iID);
 
-	python::tuple firstSelectionGroup(bool bRev); // returns tuple of (CySelectionGroup, iterOut)
-	python::tuple nextSelectionGroup(int iterIn, bool bRev); // returns tuple of (CySelectionGroup, iterOut)
 	int getNumSelectionGroups();
 	CySelectionGroup* getSelectionGroup(int iID);
 
