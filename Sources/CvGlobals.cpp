@@ -13,8 +13,6 @@
 #include <time.h> 
 #include <sstream>
 
-#include "discord.h"
-
 static char gVersionString[1024] = { 0 };
 
 // Use macro override when available. Version string might not be loaded in time for
@@ -809,16 +807,6 @@ CvInfoBase& cvInternalGlobals::getHints(int i) const
 
 int cvInternalGlobals::getNumMainMenus() const
 {
-	pDiscord->ensureDiscordRPCState();
-
-	// Discord RPC detect menu
-	if (m_paMainMenus.size() > 0 && getBugOptionBOOL("MainInterface__EnableRP", false)) {
-		RPCDATA rpc;
-		GIVEDEFAULTRPCVALS(rpc);
-		rpc.turn = -2; // -2 cuz -1 is reserved for undefined
-		pDiscord->sendNewRpcDetails(rpc);
-	}
-
 	return (int)m_paMainMenus.size();
 }
 
