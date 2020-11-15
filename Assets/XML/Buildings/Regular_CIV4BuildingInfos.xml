@@ -4549,7 +4549,7 @@
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
+				<iCommerce>2</iCommerce>
 			</ObsoleteSafeCommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -4578,14 +4578,6 @@
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<PrereqTech>TECH_OIL_PAINTING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -61177,7 +61169,18 @@
 				<iCommerce>8</iCommerce>
 			</CommerceChanges>
 			<iHurryCostModifier>100</iHurryCostModifier>
+			<Properties>
+				<Property>
+					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
+					<iPropertyValue>5</iPropertyValue>
+				</Property>
+			</Properties>
 			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
@@ -61349,6 +61352,24 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
+			<Properties>
+				<Property>
+					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
+					<iPropertyValue>10</iPropertyValue>
+				</Property>
+			</Properties>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<iAmountPerTurn>10</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<iAmountPerTurn>10</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -83363,7 +83384,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TEXTILE_LOOM</PrereqTech>
-			<iPrereqPopulation>13</iPrereqPopulation>
+			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOL</Bonus>
 				<Bonus>BONUS_HEMP_FIBERS</Bonus>
@@ -93823,7 +93844,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPY_HIDEOUT</Type>
-			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
 			<Description>TXT_KEY_BUILDING_SPY_HIDEOUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPY_HIDEOUT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SPY_HIDEOUT_STRATEGY</Strategy>
@@ -93867,7 +93887,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPY_SAFE_HOUSE</Type>
-			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
 			<Description>TXT_KEY_BUILDING_SPY_SAFE_HOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPY_SAFE_HOUSE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SPY_SAFE_HOUSE_STRATEGY</Strategy>

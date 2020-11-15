@@ -80,9 +80,9 @@
 			<Plural>1</Plural>
 		</French>
 		<German>
-			<Text>Arcologie Ruinen</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Text>Arkologieruinen</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
 		</German>
 		<Italian>Rovine arcologiche</Italian>
 		<Spanish>
@@ -158,6 +158,11 @@
 		<Tag>TXT_KEY_IMPROVEMENT_CITY</Tag>
 		<English>City</English>
 		<French>Ville</French>
+		<German>
+			<Text>Großstadt</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_CITY_PEDIA</Tag>
@@ -779,7 +784,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_GOODY_ISLAND_PEDIA</Tag>
-		<English>Unexplored Islands are the sea equivalents to the Goody Hut. They are only found in relatively shallow waters (lakeshore, coast, or sea).</English>
+		<English>Unexplored Islands are the sea equivalents to the Goody Hut. They are only found in relatively shallow waters (coast or sea).</English>
 		<German>[COLOR_BUILDING_TEXT]Unerforschte Inseln[COLOR_REVERT] sind das Meeresäquivalent zum Eingeborenendorf. Sie können nur in küstennahen Gewässern entdeckt werden und haben die gleichen Auswirkungen.</German>
 		<Spanish>Las Islas inexploradas son el equivalente marino a la Aldea tribal. Sólo se pueden encontrar en aguas costeras.</Spanish>
 	</TEXT>
@@ -1774,6 +1779,11 @@
 		<Tag>TXT_KEY_IMPROVEMENT_STEEL_WATCHTOWER</Tag>
 		<English>Steel Watchtower</English>
 		<French>Tour d'observation en acier</French>
+		<German>
+			<Text>Stahlwachturm</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Italian>Torre d'osservazione in acciaio</Italian>
 		<Spanish>
 			<Text>Torre de vigilancia de acero</Text>
@@ -1818,6 +1828,11 @@
 		<Tag>TXT_KEY_IMPROVEMENT_STONE_WATCHTOWER</Tag>
 		<English>Stone Watchtower</English>
 		<French>Tour d'observation en pierres</French>
+		<German>
+			<Text>Steinwachturm</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Italian>Torre d'osservazione in pietra</Italian>
 		<Spanish>
 			<Text>Puesto de avanzada de piedra</Text>
@@ -2033,11 +2048,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_RATE_MODIFIER_END</Tag>
 		<English>Improvements</English>
+		<German>[COLOR_TECH_TEXT][COLOR_REVERT]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_RATE_MODIFIER_SPECIFIC</Tag>
 		<English>[ICON_BULLET]%D1_Modifier%% modifier to upgrade rate for [LINK=%s2_Improvement]%s3_Improvement[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Modifier%% modif. pour l'amélioration de [LINK=%s2_Improvement]%s3_Improvement[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Modifier%% Modernisierungsgeschwindigkeit von [LINK=%s2_Improvement]%s3_Improvement[\LINK]</German>		
 		<Italian>[ICON_BULLET]%D1_Modifier%% al tasso di crescita di [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Italian>
 		<Polish>[ICON_BULLET]%D1_Modifier%% modyfikator czasu trwania ulepszania [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Polish>
 	</TEXT>
@@ -2290,6 +2307,11 @@
 		<Tag>TXT_KEY_IMPROVEMENT_WOODEN_WATCHTOWER</Tag>
 		<English>Wooden Watchtower</English>
 		<French>Tour d'observation en bois</French>
+		<German>
+			<Text>Holzwachturm</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Italian>Torre d'osservazione in legno</Italian>
 		<Spanish>
 			<Text>Puesto de avanzada de madera</Text>

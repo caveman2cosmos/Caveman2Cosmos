@@ -8849,13 +8849,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_MINING2</SoundID>
-			<Filename>Sounds/Tech/02_Mining</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_TECH_ARCHERY</SoundID>
 			<Filename>Sounds/Tech/Tech_Archery</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -17914,6 +17907,13 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>SND_TECH_WATERPROOF_CONCRETE</SoundID>
+			<Filename>Sounds/Tech/03_Waterproof_Concrete</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
 			<SoundID>SND_TECH_INDUSTRIAL_LIFESTYLE</SoundID>
 			<Filename>Sounds/Tech/06_Industrial_Lifestyle</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -17951,6 +17951,27 @@
 		<SoundData>
 			<SoundID>SND_TECH_ENCRYPTION_MACHINES</SoundID>
 			<Filename>Sounds/Tech/07_Encryption_Machines</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_TECH_DIPLOMACY</SoundID>
+			<Filename>Sounds/Tech/03_Diplomacy</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_TECH_CRYPTOGRAPHY</SoundID>
+			<Filename>Sounds/Tech/03_Cryptography</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_TECH_GEOCENTRISM</SoundID>
+			<Filename>Sounds/Tech/03_Geocentrism</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -18014,6 +18035,20 @@
 		<SoundData>
 			<SoundID>SND_FOREST_FIRE</SoundID>
 			<Filename>Sounds/forest_fire</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_TECH_NEGOTIATION</SoundID>
+			<Filename>Sounds/Tech/02_Negotiation</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_TECH_ORATORY</SoundID>
+			<Filename>Sounds/Tech/02_Oratory</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>

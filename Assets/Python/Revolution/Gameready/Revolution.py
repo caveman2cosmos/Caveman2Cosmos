@@ -368,7 +368,7 @@ class Revolution:
 			cityByRevList = []
 			for [i,city] in enumerate(cityList) :
 				pCity = city.GetCy()
-				if( not pCity.isNone() ) :
+				if pCity:
 					cityByRevList.append( (pCity.getRevolutionIndex(),pCity.getName(), pCity.getID() ) )
 
 			cityByRevList.sort()
@@ -528,16 +528,14 @@ class Revolution:
 		iPlayer = argsList[1]
 
 		if iPlayer > GC.getMAX_PC_PLAYERS():
-			iPrevPlayer = -1
-		else:
-			iPrevPlayer = iPlayer - 1
+			return
 
-		while iPrevPlayer > -1:
-			if GC.getPlayer(iPrevPlayer).isAlive():
-				self.checkForRevReinforcement(iPrevPlayer)
-				self.checkCivics(iPrevPlayer)
+		while iPlayer > -1:
+			iPlayer -= 1
+			if GC.getPlayer(iPlayer).isAlive():
+				self.checkForRevReinforcement(iPlayer)
+				self.checkCivics(iPlayer)
 				break
-			iPrevPlayer -= 1
 
 
 	def onEndPlayerTurn(self, argsList):
@@ -546,13 +544,14 @@ class Revolution:
 		iMax = GC.getMAX_PC_PLAYERS()
 
 		if iPlayer > iMax:
-			iNextPlayer = iPlayer
-		elif iPlayer + 1 >= iMax:
-			iNextPlayer = 0
-		else:
-			iNextPlayer = iPlayer + 1
+			return
+		# Do the check when iPlayer = iMax (Beast NPC) to cover the case where there's only one civ alive.
+		iNextPlayer = iPlayer + 1
 
 		while iNextPlayer != iPlayer:
+			if iNextPlayer >= iMax:
+				iGameTurn += 1
+				iNextPlayer = 0
 			CyPlayer = GC.getPlayer(iNextPlayer)
 
 			if RevData.revObjectExists(CyPlayer) and RevData.revObjectGetVal(CyPlayer, 'SpawnList'):
@@ -566,9 +565,6 @@ class Revolution:
 				break
 
 			iNextPlayer += 1
-			if iNextPlayer == iMax and iPlayer != iMax:
-				iGameTurn += 1
-				iNextPlayer = 0
 
 
 	def onCityAcquired( self, argsList):
@@ -862,17 +858,14 @@ class Revolution:
 				newUnit.setPromotionReady(True)
 
 		# Occasionally spawn a spy as well
-		if( not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE) ) :
-			if( (40 - 20*pRevPlayer.AI_getNumAIUnits(UnitAITypes.UNITAI_SPY) > GAME.getSorenRandNum(100,'Rev - Spy')) ) :
+		if 40 - 20*pRevPlayer.AI_getNumAIUnits(UnitAITypes.UNITAI_SPY) > GAME.getSorenRandNum(100,'Rev - Spy'):
+			iSpy = pRevPlayer.getBestUnitType(UnitAITypes.UNITAI_SPY)
+			if iSpy != -1 and revStrength > 1.5 and pRevPlayer.canTrain(iSpy,False,False):
+				pSpy = pRevPlayer.initUnit(iSpy, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+				pSpy.setFortifyTurns(GC.getDefineINT("MAX_FORTIFY_TURNS"))
 
-				iSpy = pRevPlayer.getBestUnitType(UnitAITypes.UNITAI_SPY)
-				if(iSpy != -1):
-					if( revStrength > 1.5 and pRevPlayer.canTrain(iSpy,False,False)) :
-						pSpy = pRevPlayer.initUnit( iSpy, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
-						pSpy.setFortifyTurns(GC.getDefineINT("MAX_FORTIFY_TURNS"))
-
-			# Give a little boost to espionage
-			pRevTeam.changeEspionagePointsAgainstTeam( owner.getTeam(), GAME.getSorenRandNum((10+pRevPlayer.getCurrentEra())*iNumUnits, 'Rev - Esp') )
+		# Give a little boost to espionage
+		pRevTeam.changeEspionagePointsAgainstTeam( owner.getTeam(), GAME.getSorenRandNum((10+pRevPlayer.getCurrentEra())*iNumUnits, 'Rev - Esp') )
 
 		if( pRevPlayer.isRebel() ) :
 			# Set reinforcement timer again
@@ -1030,7 +1023,7 @@ class Revolution:
 
 		# Gather some data on the civ that will effect every city
 		capital = pPlayer.getCapitalCity()
-		if( capital == None or capital.isNone() ) :
+		if capital == None:
 			if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - WARNING!  %s have cities but no capital on turn %d"%(pPlayer.getCivilizationDescription(0),iGameTurn))
 			return localText.getText("TXT_KEY_REV_WATCH_NO_CITIES",())
 
@@ -1344,7 +1337,7 @@ class Revolution:
 					if( not hasLiberalism and stateRel >= 0 ) :
 						if( pCity.isHasReligion(stateRel) ) :
 							stateHolyCity = GAME.getHolyCity( stateRel )
-							if( not stateHolyCity.isNone() ) :
+							if stateHolyCity:
 								holyCityOwnerID = stateHolyCity.getOwner()
 								if( (not holyCityGood == 0) and (holyCityOwnerID == iPlayer) ) :
 									#phungus Rev Trait Effects
@@ -2657,7 +2650,7 @@ class Revolution:
 					maxCulture = instigator.plot().getCulture( idx )
 					cultOwnerID = idx
 
-			if( cultOwnerID >= 0 and cultOwnerID < GC.getBARBARIAN_PLAYER() and not GC.getPlayer(cultOwnerID).getTeam() == pPlayer.getTeam() ) :
+			if( cultOwnerID >= 0 and cultOwnerID < GC.getMAX_PC_PLAYERS() and not GC.getPlayer(cultOwnerID).getTeam() == pPlayer.getTeam() ) :
 				if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - %s has majority culture from other player %d, asking to join"%(instigator.getName(),cultOwnerID))
 				cultCities = []
 				for pCity in revCities :
@@ -3815,17 +3808,22 @@ class Revolution:
 								if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Homeless rebel (attitude) %s in area"%(playerI.getCivilizationDescription(0)))
 								rebelIDList.append(i)
 
-						if( playerI.getCitiesLost() < 3 and playerI.getNumCities() < 4 ) :
-							if( GAME.getGameTurn() - playerI.getCapitalCity().getGameTurnAcquired() < 30 and not playerI.getCapitalCity().getPreviousOwner() == GC.getBARBARIAN_PLAYER() ) :
-								if( playerI.getCivilizationType() == RevData.getCityVal(pCity, 'RevolutionCiv') ) :
-									if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Young rebel (type) %s in area"%(playerI.getCivilizationDescription(0)))
-									rebelIDList.append(i)
-								elif( teamI.isAtWar(ownerTeam.getID()) ) :
-									if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Young rebel (at war) %s in area"%(playerI.getCivilizationDescription(0)))
-									rebelIDList.append(i)
-								elif( relations == AttitudeTypes.ATTITUDE_FURIOUS or relations == AttitudeTypes.ATTITUDE_ANNOYED ) :
-									if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Young rebel (attitude) %s in area"%(playerI.getCivilizationDescription(0)))
-									rebelIDList.append(i)
+						if (playerI.getCitiesLost() < 3 and playerI.getNumCities() < 4
+						and GAME.getGameTurn() - playerI.getCapitalCity().getGameTurnAcquired() < 30
+						and not GC.getPlayer(playerI.getCapitalCity().getPreviousOwner()).isNPC()):
+
+							if (playerI.getCivilizationType() == RevData.getCityVal(pCity, 'RevolutionCiv')):
+								if (self.LOG_DEBUG):
+									CvUtil.pyPrint("  Revolt - Young rebel (type) %s in area"%(playerI.getCivilizationDescription(0)))
+								rebelIDList.append(i)
+							elif (teamI.isAtWar(ownerTeam.getID())):
+								if (self.LOG_DEBUG):
+									CvUtil.pyPrint("  Revolt - Young rebel (at war) %s in area"%(playerI.getCivilizationDescription(0)))
+								rebelIDList.append(i)
+							elif (relations == AttitudeTypes.ATTITUDE_FURIOUS or relations == AttitudeTypes.ATTITUDE_ANNOYED):
+								if (self.LOG_DEBUG):
+									CvUtil.pyPrint("  Revolt - Young rebel (attitude) %s in area"%(playerI.getCivilizationDescription(0)))
+								rebelIDList.append(i)
 
 			if( len(rebelIDList) > 0 ) :
 				for pCity in closeCityList :
@@ -5852,7 +5850,7 @@ class Revolution:
 		cityList = []
 		for iCity in revData.cityList :
 			pCity = pPlayer.getCity( iCity )
-			if( pCity.isNone() ) :
+			if pCity is None:
 				# City no longer owned by the former owner
 				if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - %s no longer owned by former owner")
 			else :
@@ -6082,7 +6080,7 @@ class Revolution:
 		# Check which cities are still up for revolt
 		newCityList = []
 		for pCity in cityList:
-			if pCity == None or pCity.isNone():
+			if pCity == None:
 				print "[WARN] A rebelling city is dead and gone"
 			elif not pCity.getOwner() == pPlayer.getID():
 				if self.LOG_DEBUG:
@@ -6231,7 +6229,7 @@ class Revolution:
 			pRevPlayer.changeGold(min([iGold, 200]))
 
 			# Espionage
-			if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE) and not bIsJoinWar:
+			if not bIsJoinWar:
 				espPoints = GAME.getSorenRandNum(20*len(cityList),'Revolt: esp') + (12+len(cityList))*max([pPlayer.getCommerceRate( CommerceTypes.COMMERCE_ESPIONAGE ), 6])
 				if pRevTeam.isAlive():
 					espPoints /= 2
@@ -6612,12 +6610,14 @@ class Revolution:
 							CvUtil.pyPrint("  Revolt - Great General (%d) spawned in %s"%(iGeneral,pCity.getName()))
 						pRevPlayer.initUnit(iGeneral, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
-				if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE) and iSpy != -1:
-					if pRevPlayer.canTrain(iSpy, False, False) and pRevPlayer.AI_getNumAIUnits(UnitAITypes.UNITAI_SPY) < 3:
-						if pCity.getNumRevolts(pCity.getOwner()) > 1 and revIdx > self.alwaysViolentThreshold or pCity.getNumRevolts(pCity.getOwner()) > 2 and revIdx > self.revInstigatorThreshold:
-							if self.LOG_DEBUG:
-								CvUtil.pyPrint("  Revolt - Spy spawned in %s" % pCity.getName())
-							pRevPlayer.initUnit(iSpy, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+				if (iSpy != -1 and pRevPlayer.canTrain(iSpy, False, False)
+				and pRevPlayer.AI_getNumAIUnits(UnitAITypes.UNITAI_SPY) < 3):
+					iNumRevolts = pCity.getNumRevolts(pCity.getOwner())
+					if (iNumRevolts > 1 and revIdx > self.alwaysViolentThreshold
+					or iNumRevolts > 2 and revIdx > self.revInstigatorThreshold):
+						if self.LOG_DEBUG:
+							CvUtil.pyPrint("  Revolt - Spy spawned in %s" % pCity.getName())
+						pRevPlayer.initUnit(iSpy, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
 				# Should buildings stay or some destroyed?
 				for [buildingType,iNum] in buildingList:

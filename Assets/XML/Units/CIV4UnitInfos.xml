@@ -5456,6 +5456,10 @@ Base XP gained when defending
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
@@ -5541,6 +5545,10 @@ Base XP gained when defending
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -5636,6 +5644,10 @@ Base XP gained when defending
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
@@ -5711,6 +5723,16 @@ Base XP gained when defending
 			<iPursuit>80</iPursuit>
 			<iCityAttack>-75</iCityAttack>
 			<iAnimalCombat>325</iAnimalCombat>
+			<UnitCombatTargets>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<UnitMeshGroups>
@@ -5816,6 +5838,10 @@ Base XP gained when defending
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
@@ -5903,6 +5929,10 @@ Base XP gained when defending
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -6339,7 +6369,6 @@ Base XP gained when defending
 		<UnitInfo>
 			<Type>UNIT_SLEEPER</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SLEEPER</Description>
@@ -58937,6 +58966,10 @@ Base XP gained when defending
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<FreePromotions>
 				<FreePromotion>
@@ -59069,6 +59102,10 @@ Base XP gained when defending
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -65236,6 +65273,11 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<Buildings>
+				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+			</Buildings>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<iCost>200</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
@@ -65463,10 +65505,10 @@ Base XP gained when defending
 				</Flavor>
 			</Flavors>
 			<iAIWeight>10</iAIWeight>
-			<iCost>37</iCost>
+			<iCost>40</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iBaseFoodChange>33</iBaseFoodChange>
+			<iBaseFoodChange>30</iBaseFoodChange>
 			<iCombat>2</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
@@ -65552,7 +65594,7 @@ Base XP gained when defending
 			<iCost>90</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iBaseFoodChange>69</iBaseFoodChange>
+			<iBaseFoodChange>72</iBaseFoodChange>
 			<iCombat>2</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
@@ -65572,6 +65614,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Type>UNIT_FOOD_SUPPLY_TRAIN</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<Capture>UNIT_FOOD_SUPPLY_TRAIN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -65632,7 +65675,7 @@ Base XP gained when defending
 			<iCost>240</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iBaseFoodChange>144</iBaseFoodChange>
+			<iBaseFoodChange>204</iBaseFoodChange>
 			<iCombat>3</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
@@ -65712,7 +65755,7 @@ Base XP gained when defending
 			<iCost>660</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iBaseFoodChange>396</iBaseFoodChange>
+			<iBaseFoodChange>594</iBaseFoodChange>
 			<iCombat>5</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
@@ -65787,7 +65830,7 @@ Base XP gained when defending
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>37</iCost>
+			<iCost>40</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iBaseTrade>15</iBaseTrade>
@@ -65818,7 +65861,7 @@ Base XP gained when defending
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
-										<Constant>33</Constant>
+										<Constant>30</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -65924,7 +65967,7 @@ Base XP gained when defending
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
-										<Constant>92</Constant>
+										<Constant>72</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -66001,6 +66044,7 @@ Base XP gained when defending
 			<iBaseTrade>60</iBaseTrade>
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iCombat>3</iCombat>
+			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -66026,7 +66070,7 @@ Base XP gained when defending
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
-										<Constant>192</Constant>
+										<Constant>204</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -66127,7 +66171,7 @@ Base XP gained when defending
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
-										<Constant>396</Constant>
+										<Constant>594</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -66286,6 +66330,10 @@ Base XP gained when defending
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
@@ -66377,6 +66425,10 @@ Base XP gained when defending
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -66477,6 +66529,10 @@ Base XP gained when defending
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -66580,6 +66636,10 @@ Base XP gained when defending
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -66689,6 +66749,10 @@ Base XP gained when defending
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iAsset>8</iAsset>
 			<iPower>16</iPower>
@@ -66790,6 +66854,10 @@ Base XP gained when defending
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>

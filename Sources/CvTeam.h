@@ -256,9 +256,6 @@ public:
 
 	void AI_updateBonusValue(BonusTypes eBonus);
 
-	int getUnitStrengthChange(UnitTypes eUnit) const;
-	void changeUnitStrengthChange(UnitTypes eUnit, int iChange);
-
 	void AI_setAssignWorkDirtyInEveryPlayerCityWithActiveBuilding(BuildingTypes eBuilding);
 
 	int getTechTradingCount() const; // Exposed to Python
@@ -343,6 +340,7 @@ public:
 	void setHasMet(TeamTypes eIndex, bool bNewValue);
 	void makeHasMet(TeamTypes eIndex, bool bNewDiplo);
 
+	bool isAtWar(const bool bCountMinors = false) const;
 	DllExport bool isAtWar(TeamTypes eIndex) const; // Exposed to Python
 	void setAtWar(TeamTypes eIndex, bool bNewValue);
 
@@ -384,9 +382,10 @@ public:
 	int getProjectMaking(ProjectTypes eIndex) const; // Exposed to Python
 	void changeProjectMaking(ProjectTypes eIndex, int iChange);
 
-	int getUnitCount(UnitTypes eIndex) const; // Exposed to Python
-	bool isUnitMaxedOut(UnitTypes eIndex, int iExtra = 0) const; // Exposed to Python
-	void changeUnitCount(UnitTypes eIndex, int iChange);
+	int getUnitCount(const UnitTypes eIndex) const; // Exposed to Python
+	void changeUnitCount(const UnitTypes eIndex, const int iChange);
+
+	bool isUnitMaxedOut(const UnitTypes eIndex, const int iExtra = 0) const; // Exposed to Python
 
 	int getBuildingCount(BuildingTypes eIndex) const; // Exposed to Python
 	bool isBuildingMaxedOut(BuildingTypes eIndex, int iExtra = 0) const; // Exposed to Python
@@ -415,8 +414,8 @@ public:
 	bool isHasTech(TechTypes eIndex) const; // Exposed to Python
 	void setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, bool bFirst, bool bAnnounce); // Exposed to Python
 
-	bool isNoTradeTech(TechTypes eIndex) const; // Exposed to Python
-	void setNoTradeTech(TechTypes eIndex, bool bNewValue); // Exposed to Python
+	bool isNoTradeTech(short iTech) const; // Exposed to Python
+	void setNoTradeTech(short iTech, bool bNewValue); // Exposed to Python
 
 	int getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const; // Exposed to Python
 	void changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange); // Exposed to Python
@@ -566,7 +565,6 @@ protected:
 	bool* m_abCanLaunch;
 	bool* m_abIsRebelAgainst;
 	bool* m_pabHasTech;
-	bool* m_pabNoTradeTech;
 
 	int** m_ppiBuildingCommerceChange;
 	int** m_ppiBuildingYieldChange;
@@ -576,7 +574,6 @@ protected:
 	int** m_ppaaiImprovementYieldChange;
 
 	int* m_paiFreeSpecialistCount;
-	int* m_paiUnitStrengthChange;
 	int* m_aiStolenVisibilityTimer;
 	int* m_aiWarWearinessTimes100;
 	int* m_aiTechShareCount;
@@ -588,7 +585,6 @@ protected:
 	int* m_paiProjectDefaultArtTypes;
 	int* m_paiProjectMaking;
 	int* m_paiBuildingCount;
-	int* m_paiUnitCount;
 	int* m_paiObsoleteBuildingCount;
 	int* m_paiResearchProgress;
 	int* m_paiTechCount;
@@ -601,8 +597,10 @@ protected:
 	int* m_aiCounterespionageModAgainstTeam;
 
 	std::vector<int> *m_pavProjectArtTypes;
-
+	std::vector<short> m_vNoTradeTech;
 	std::vector<BonusTypes> m_aeRevealedBonuses;
+
+	std::map<short, uint32_t> m_unitCount;
 
 	void doWarWeariness();
 	void updateTechShare(TechTypes eTech);

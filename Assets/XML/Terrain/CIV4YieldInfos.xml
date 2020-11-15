@@ -6,7 +6,6 @@
 			<Description>TXT_KEY_YIELD_FOOD</Description>
 			<iHillsChange>-1</iHillsChange>
 			<iPeakChange>-2</iPeakChange>
-			<iLakeChange>1</iLakeChange>
 			<iMinCity>3</iMinCity>
 			<iAIWeightPercent>100</iAIWeightPercent>
 			<ColorType>COLOR_YIELD_FOOD</ColorType>

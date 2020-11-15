@@ -456,14 +456,6 @@ class PlotSigns:
 		return "PlotSigns { iX = %d, iY = %d, signDict = %s }" % (self.iX, self.iY, str(self.signDict))
 
 
-class PlotCaptions:
-	""" Fake class needed to load games made with first development version. """
-	def __init__ (self):
-		self.iX = None
-		self.iY = None
-		self.teamDict = None
-
-
 class EventSignsEventHandler:
 	""" Event Handler for this module. """
 

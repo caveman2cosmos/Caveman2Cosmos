@@ -271,10 +271,6 @@ public:
 /*                                                                                              */
 /* Savegame compatibility                                                                       */
 /************************************************************************************************/
-	int getNumSaveGameVector();
-	CvString getSaveGameVector(int i);
-	void doReloadInfoClasses();
-	
 	void reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID);
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
@@ -404,15 +400,7 @@ protected:
 
 	CvString* m_aszPythonCheck;
 	CvString* m_aszXMLCheck;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-	std::vector<CvString> m_aszSaveGameVector;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
+
 	mutable CvString m_szTempCheck;
 
 // BUG - EXE/DLL Paths - start

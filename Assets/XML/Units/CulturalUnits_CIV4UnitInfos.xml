@@ -23081,7 +23081,7 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
-										<Constant>104</Constant>
+										<Constant>81</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -27104,6 +27104,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
@@ -30062,7 +30066,7 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
-										<Constant>130</Constant>
+										<Constant>117</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -36703,6 +36707,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
@@ -37463,7 +37471,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>37</iCost>
+			<iCost>40</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iBaseTrade>15</iBaseTrade>
@@ -37494,7 +37502,7 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
-										<Constant>48</Constant>
+										<Constant>36</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -38561,7 +38569,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>37</iCost>
+			<iCost>40</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iBaseTrade>25</iBaseTrade>
@@ -38592,7 +38600,7 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
-										<Constant>48</Constant>
+										<Constant>36</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -46049,6 +46057,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
@@ -47319,6 +47331,10 @@
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
@@ -51676,6 +51692,10 @@
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
+				<UnitCombatTarget>
+					<UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+					<bUnitCombatTarget>1</bUnitCombatTarget>
+				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
@@ -52166,7 +52186,7 @@
 			<iCost>130</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iBaseFoodChange>78</iBaseFoodChange>
+			<iBaseFoodChange>117</iBaseFoodChange>
 			<iCombat>2</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
 			<BonusProductionModifiers>

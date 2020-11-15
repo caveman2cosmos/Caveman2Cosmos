@@ -1048,7 +1048,7 @@ class CvCityDesc:
 	# write out city data
 	def write(self, f, plot):
 		city = plot.getPlotCity()
-		if city.isNone():
+		if city is None:
 			print "CvCityDesc.write - null city?"
 
 		f.write("\tBeginCity\n\t\tCityOwner=%d, (%s)\n\t\tCityName=%s\n\t\tCityPopulation=%d\n\t\tStoredFood=%d\n"

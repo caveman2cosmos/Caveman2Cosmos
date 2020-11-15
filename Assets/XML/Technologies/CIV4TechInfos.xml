@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- -->
-<!-- Tech Infos -->
 <!--
-	If modifying READ THIS
-	Not all techs appear in this file some of them appear in a module.
-	This is true of the RELIGION and CULTURE techs.
-	See also modders documentation.
+	Techs are to be sorted by grid position; first x, then y.
+
+	FLAVOR_MILITARY higher than 3 makes the AI refuse to trade away the tech if it is gearing for war,
+	no tech brokering option limits this refusal only to teams it is specifically planning war against.
+
 Current techs which are not in this file:-
 	Modules\Custom_Religions
 	(   X,  Y ) TECH_Z
@@ -34,7 +33,10 @@ Current techs which are not in this file:-
 	( 080, 13 ) TECH_ATOMPUNK
 	( 102, 11 ) TECH_NANOPUNK
 	( 103, 11 ) TECH_BIOPUNK
-	( 113, 07 ) TECH_CYBERPUNK	
+	( 113, 07 ) TECH_CYBERPUNK
+
+
+
 -->
 <Civ4TechInfos xmlns="x-schema:../Schema/C2C_CIV4TechnologiesSchema.xml">
 	<TechInfos>
@@ -4410,8 +4412,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_POTTERY</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_MINING_QUOTE</Quote>
-			<Sound>AS2D_TECH_MINING2</Sound>
-			<SoundMP>AS2D_TECH_MINING2</SoundMP>
+			<Sound>AS2D_TECH_MINING</Sound>
+			<SoundMP>AS2D_TECH_MINING</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Mining.dds,Art/Interface/Buttons/TechTree_Atlas.dds,8,5</Button>
 		</TechInfo>
 		<TechInfo>
@@ -4915,8 +4917,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_EXPLORATION</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_NEGOTIATION_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Sound>AS2D_TECH_NEGOTIATION</Sound>
+			<SoundMP>AS2D_TECH_NEGOTIATION</SoundMP>
 			<Button>Art/Interface/Buttons/techtree/Negotiation.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -5889,8 +5891,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_ORATORY_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Sound>AS2D_TECH_ORATORY</Sound>
+			<SoundMP>AS2D_TECH_ORATORY</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/oratory2.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -7839,8 +7841,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ALPHABET</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_CRYPTOGRAPHY_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Sound>AS2D_TECH_CRYPTOGRAPHY</Sound>
+			<SoundMP>AS2D_TECH_CRYPTOGRAPHY</SoundMP>
 			<Button>Art/Interface/Buttons/techtree/Cryptography.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -8340,8 +8342,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_DIPLOMACY_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Sound>AS2D_TECH_DIPLOMACY</Sound>
+			<SoundMP>AS2D_TECH_DIPLOMACY</SoundMP>
 			<Button>Art/Interface/Buttons/techtree/Diplomacy.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -8903,8 +8905,8 @@ Current techs which are not in this file:-
 				</PrereqBuilding>
 			</PrereqBuildings>
 			<Quote>TXT_KEY_TECH_WATERPROOF_CONCRETE_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Sound>AS2D_TECH_WATERPROOF_CONCRETE</Sound>
+			<SoundMP>AS2D_TECH_WATERPROOF_CONCRETE</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Concrete.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -9552,8 +9554,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_GEOCENTRISM_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Sound>AS2D_TECH_GEOCENTRISM</Sound>
+			<SoundMP>AS2D_TECH_GEOCENTRISM</SoundMP>
 			<Button>Art/Interface/Buttons/techtree/Geocentrism.dds</Button>
 		</TechInfo>
 		<TechInfo>

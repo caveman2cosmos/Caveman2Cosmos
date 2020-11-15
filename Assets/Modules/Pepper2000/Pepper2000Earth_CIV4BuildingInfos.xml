@@ -1937,6 +1937,7 @@
 			<Strategy>TXT_KEY_BUILDING_INTERNET_OF_THINGS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTERNET_OF_THINGS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_INTERNET_OF_THINGS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -3666,6 +3667,7 @@
 			<Strategy>TXT_KEY_BUILDING_SEMANTIC_WEB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEMANTIC_WEB</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SEMANTIC_WEB</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -5092,6 +5094,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
+			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
 			<FreeBonus>BONUS_SEASONING</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -5401,6 +5404,7 @@
 			<Strategy>TXT_KEY_BUILDING_TIME_ZONES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TIME_ZONES</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TIME_ZONES</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -5469,6 +5473,7 @@
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_CENSUS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_CENSUS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_CENSUS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -6181,6 +6186,7 @@
 			<Strategy>TXT_KEY_BUILDING_PRIME_DIRECTIVE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PRIME_DIRECTIVE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PRIME_DIRECTIVE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -7111,6 +7117,7 @@
 			<Strategy>TXT_KEY_BUILDING_CENTER_FOR_AI_SAFETY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CENTER_FOR_AI_SAFETY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CENTER_FOR_AI_SAFETY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -7153,6 +7160,7 @@
 			<Strategy>TXT_KEY_BUILDING_CENTER_FOR_BIOTECH_SAFETY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CENTER_FOR_BIOTECH_SAFETY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CENTER_FOR_BIOTECH_SAFETY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -7193,6 +7201,7 @@
 			<Strategy>TXT_KEY_BUILDING_CENTER_FOR_NANOTECH_SAFETY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CENTER_FOR_NANOTECH_SAFETY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CENTER_FOR_NANOTECH_SAFETY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -11288,6 +11297,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<Help>TXT_KEY_BUILDING_DIGITAL_EMBASSY_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_DIGITAL_EMBASSY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DIGITAL_EMBASSY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -13488,6 +13498,7 @@
 			<Strategy>TXT_KEY_BUILDING_SOCIAL_CREDIT_SYSTEM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOCIAL_CREDIT_SYSTEM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SOCIAL_CREDIT_SYSTEM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20390,6 +20401,7 @@
 			<Strategy>TXT_KEY_BUILDING_MANTLE_VACTRAIN_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MANTLE_VACTRAIN_NETWORK</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MANTLE_VACTRAIN_NETWORK</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24137,6 +24149,7 @@
 			<Strategy>TXT_KEY_BUILDING_METI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_METI</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_METI</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24398,6 +24411,7 @@
 			<Strategy>TXT_KEY_BUILDING_SKYHOOK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SKYHOOK</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SKYHOOK</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24973,6 +24987,7 @@
 			<Strategy>TXT_KEY_BUILDING_INTERPLANETARY_RAIL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTERPLANETARY_RAIL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_INTERPLANETARY_RAIL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -25007,6 +25022,7 @@
 			<Strategy>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEUROIMPLANT_EXPORTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NEUROIMPLANT_EXPORTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -25064,6 +25080,7 @@
 			<Strategy>TXT_KEY_BUILDING_GPS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GPS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GPS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -25519,6 +25536,7 @@
 			<Strategy>TXT_KEY_BUILDING_SOLAR_NOVA_SURVIVAL_PLAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_NOVA_SURVIVAL_PLAN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SOLAR_NOVA_SURVIVAL_PLAN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -25694,6 +25712,7 @@
 			<Strategy>TXT_KEY_BUILDING_INTERGALACTIC_CAPITOL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_CAPITOL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_INTERGALACTIC_CAPITOL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -25722,6 +25741,7 @@
 			<Strategy>TXT_KEY_BUILDING_SECTION_31_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SECTION_31</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SECTION_31</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

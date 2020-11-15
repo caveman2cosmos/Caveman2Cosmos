@@ -65,6 +65,7 @@ void CyInfoPythonInterface1()
 		.def("getGridX", &CvTechInfo::getGridX, "int ()")
 		.def("getGridY", &CvTechInfo::getGridY, "int ()")
 
+		.def("isGlobal", &CvTechInfo::isGlobal, "bool ()")
 		.def("isRepeat", &CvTechInfo::isRepeat, "bool ()")
 		.def("isTrade", &CvTechInfo::isTrade, "bool ()")
 		.def("isDisable", &CvTechInfo::isDisable, "bool ()")

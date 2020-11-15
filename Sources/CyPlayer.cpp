@@ -1,3 +1,4 @@
+#include "CvCity.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvPlayerAI.h"
@@ -15,17 +16,6 @@
 CyPlayer::CyPlayer(CvPlayer& pPlayer) : m_pPlayer(pPlayer) {}
 
 
-#ifdef PARALLEL_MAPS
-void CyPlayer::updateMembers()
-{
-	m_pPlayer.updateMembers();
-}
-
-void CyPlayer::initMembers(int iIndex)
-{
-	m_pPlayer.initMembers(iIndex);
-}
-#endif
 /************************************************************************************************/
 /* CHANGE_PLAYER                         08/27/08                                 jdog5000      */
 /*                                                                                              */
@@ -221,18 +211,10 @@ std::wstring CyPlayer::getCivilizationDescription(int iForm) const
 	return m_pPlayer.getCivilizationDescription((uint)iForm);
 }
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/* For dynamic civ names                                                                        */
-/************************************************************************************************/
-void CyPlayer::setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::wstring szNewAdj)
+void CyPlayer::setCivName(const std::wstring szNewDesc, const std::wstring szNewShort, const std::wstring szNewAdj)
 {
 	m_pPlayer.setCivName(szNewDesc, szNewShort, szNewAdj);
 }
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 std::wstring CyPlayer::getCivilizationDescriptionKey() const
 {
@@ -1545,6 +1527,12 @@ void CyPlayer::AI_updateFoundValues(bool bStartingLoc)
 	//	Koshling - found values are now calculated on demand, so clearing them
 	//	will force recalcaultaion as needed
 	m_pPlayer.AI_updateFoundValues(true);
+}
+
+CyCity* CyPlayer::getCapitalCity() const
+{
+	CvCity* city = m_pPlayer->getCapitalCity();
+	return city ? new CyCity(city) : NULL;
 }
 
 bool CyPlayer::AI_isFinancialTrouble() const

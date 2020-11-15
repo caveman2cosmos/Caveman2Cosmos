@@ -70,8 +70,7 @@ class CvForeignAdvisor:
 		self.selectedLeaders = []
 		self.aRelationList = []
 		self.aDealMap = {}
-		self.ownedTechs = []
-		self.iTechRange = 0
+		self.techsToGive = []
 
 		self.HILITE_SQUARE = AFM.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath()
 
@@ -211,22 +210,24 @@ class CvForeignAdvisor:
 
 		# City trade list
 		self.tuCity = tuCity = []
-		CyCity, i = CyPlayer.firstCity(False)
-		while CyCity:
+		for CyCity in CyPlayer.cities():
 			liCity = []
 			for iCity in range(CyCity.getTradeRoutes()):
 				liCity.append(CyCity.getTradeCity(iCity))
 			if liCity:
 				tuCity.append([CyCity, liCity])
-			CyCity, i = CyPlayer.nextCity(i, False)
 
+		self.techsToGive = techsToGive = []
+		self.techsToTake = techsToTake = []
 		if not self.bNoTechTrade:
-			# Owned tech list
-			self.iTechRange = iTechRange = GC.getNumTechInfos()
-			self.ownedTechs = ownedTechs = []
-			for iTech in range(iTechRange):
-				if CyTeam.isHasTech(iTech) and not CyTeam.isNoTradeTech(iTech):
-					ownedTechs.append(iTech)
+			for iTech in range(GC.getNumTechInfos()):
+				if GC.getTechInfo(iTech).isGlobal():
+					continue
+				if CyTeam.isHasTech(iTech):
+					if not CyTeam.isNoTradeTech(iTech):
+						techsToGive.append(iTech)
+				elif CyPlayer.canResearch(iTech):
+					techsToTake.append(iTech)
 
 
 	# Drawing Leaderheads
@@ -1055,8 +1056,8 @@ class CvForeignAdvisor:
 		uFont3b = self.aFontList[3]
 		charGold = "<font=3>" + self.charGold
 
-		iTechRange = self.iTechRange
-		ownedTechs = self.ownedTechs
+		techsToGive = self.techsToGive
+		techsToTake = self.techsToTake
 
 		eWidJuToTech = WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH
 
@@ -1092,8 +1093,9 @@ class CvForeignAdvisor:
 		tradeData = TradeData()
 		tradeData.ItemType = TradeableItems.TRADE_TECHNOLOGIES
 
-		szNoTrade = TRNSLTR.getText("TXT_KEY_FOREIGN_ADVISOR_NO_TECH_TRADING", ())
-		bTechTrading = CyTeam.isTechTrading()
+		szNoTechTrading = TRNSLTR.getText("TXT_KEY_FOREIGN_ADVISOR_NO_TECH_TRADING", ())
+		bHuman = CyPlayer.isHuman()
+		bTechTrading = not self.bNoTechTrade and CyTeam.isTechTrading()
 		bGoldTrading = CyTeam.isGoldTrading()
 		iter0 = 0
 		iPerRow = (w1 - 8) / 56
@@ -1106,46 +1108,48 @@ class CvForeignAdvisor:
 			iTeamX = CyPlayerX.getTeam()
 			if iTeamX == iTeam: continue
 			CyTeamX = GC.getTeam(iTeamX)
-			bHuman = CyPlayerX.isHuman()
+			bHumanX = CyPlayerX.isHuman()
 			# Define row content
 			aList0 = []
 			aList1 = []
 			if bTechTrading and CyTeamX.isTechTrading():
-				msg = ""
+				szNoTechTrade = ""
 			else:
-				msg = szNoTrade
+				szNoTechTrade = szNoTechTrading
 
 			iGold = 0
 			if bGoldTrading and CyTeamX.isGoldTrading():
-				if bHuman:
-					if CyPlayerX.getGold() > 0:
-						iGold = -1
-				else:
+				if not bHumanX:
 					iGold = CyPlayerX.AI_maxGoldTrade(iPlayer)
+				elif CyPlayerX.getGold() > 0:
+					iGold = -1
 
-			if not msg:
-				for iTech in range(iTechRange):
+			if not szNoTechTrade:
 
+				for iTech in techsToGive:
+					if not CyPlayerX.canResearch(iTech):
+						continue
 					if bHuman:
-						if iTech in ownedTechs:
-							if not CyTeamX.isHasTech(iTech):
-								aList0.append(iTech)
+						aList0.append(iTech)
+						continue
 
-						elif CyTeamX.isHasTech(iTech) and not CyTeamX.isNoTradeTech(iTech):
-							aList1.append(iTech)
+					tradeData.iData = iTech
+					if CyPlayer.getTradeDenial(iPlayerX, tradeData) == DenialTypes.NO_DENIAL:
+						aList0.append(iTech)
 
-					elif iTech in ownedTechs:
-						if CyTeamX.isHasTech(iTech): continue
-						tradeData.iData = iTech
-						if CyPlayer.getTradeDenial(iPlayerX, tradeData) == DenialTypes.NO_DENIAL:
-							aList0.append(iTech)
+				for iTech in techsToTake:
+					if not CyTeamX.isHasTech(iTech) or CyTeamX.isNoTradeTech(iTech):
+						continue
+					if bHumanX:
+						aList1.append(iTech)
+						continue
 
-					elif CyTeamX.isHasTech(iTech) and not CyTeamX.isNoTradeTech(iTech):
-						tradeData.iData = iTech
-						if CyPlayerX.getTradeDenial(iPlayer, tradeData) == DenialTypes.NO_DENIAL:
-							aList1.append(iTech)
+					tradeData.iData = iTech
+					if CyPlayerX.getTradeDenial(iPlayer, tradeData) == DenialTypes.NO_DENIAL:
+						aList1.append(iTech)
+
 			# Define row
-			if msg:
+			if szNoTechTrade:
 				h = 72
 				yImg = y + 4
 			else:
@@ -1176,8 +1180,8 @@ class CvForeignAdvisor:
 
 				screen.setTextAt(name, ScPnl, charGold, 1<<0, 78, yImg+18, 0, eFontGame, eWidGen, 1, 1)
 
-			if msg:
-				screen.setLabelAt(self.getNextWidget(), ScPnl, msg, 1<<0, 100, y+28, 0, eFontGame, eWidGen, 1, 1)
+			if szNoTechTrade:
+				screen.setLabelAt(self.getNextWidget(), ScPnl, szNoTechTrade, 1<<0, 100, y+28, 0, eFontGame, eWidGen, 1, 1)
 			else:
 				if aList0:
 					Pnl = self.getNextWidget()
@@ -1479,6 +1483,6 @@ class CvForeignAdvisor:
 		del self.xRes, self.yRes, self.xMid, self.yMid, self.H_EDGE_PANEL, self.HILITE_SQUARE
 		del self.aFontList, self.aBonusTuple, self.selectedLeaders, self.hasMet, self.tuCity
 		del self.InputData, self.szTextTT, self.iOffsetTT, self.bLockedTT
-		del self.aColMap, self.aSmileyList, self.aDealMap, self.aRelationList
+		del self.aColMap, self.aSmileyList, self.aDealMap, self.aRelationList, self.bRandomPers
 		del self.charWar, self.charPeace, self.charCommerce, self.charGold, self.charTrade, self.charFaith, self.charCross
-		del self.iTechRange, self.ownedTechs
+		del self.bNoTechTrade, self.techsToGive, self.techsToTake

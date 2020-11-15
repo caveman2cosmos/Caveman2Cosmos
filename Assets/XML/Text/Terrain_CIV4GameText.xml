@@ -31,6 +31,14 @@
 		<German>[NEWLINE]Weg-Fortbewegung: %s1(%s2)</German>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PLOT_FRESH_WATER</Tag>
+		<English>Fresh Water</English>
+		<French>Eau douce</French>
+		<German>Süßwasser</German>
+		<Italian>Acqua dolce</Italian>
+		<Spanish>Agua dulce</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_BADLAND</Tag>
 		<English>Badland</English>
 		<French>Désert Calcaire</French>
@@ -201,6 +209,18 @@
 		<German>[COLOR_HIGHLIGHT_TEXT]Dünen[COLOR_REVERT] sind Sandhügel und -berge, die in vegetationslosen Gebieten mit Vorhandensein von Sand unter dem Einfluss des Windes entstehen. Der Wind erodiert den Sand, transportiert ihn und lagert ihn wieder ab, wodurch die Sanddünen einem beständigen Wandel unterworfen sind. Besonders gut sichtbar ist dies bei freien, sogenannten Wanderdünen.</German>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_FRESHWATER_COAST</Tag>
+		<English>Freshwater Coast</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_FRESHWATER_OCEAN</Tag>
+		<English>Freshwater Ocean</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_FRESHWATER_SEA</Tag>
+		<English>Freshwater Sea</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_GRASSLAND</Tag>
 		<English>Grassland</English>
 		<French>
@@ -304,22 +324,6 @@
 		<English>Jagged</English>
 		<French>Terrain escarpé</French>
 		<German>Gletscher</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_LAKE</Tag>
-		<English>Lake</English>
-		<French>Lac</French>
-		<German>See</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_LAKE_SHORE</Tag>
-		<English>Lake Shore</English>
-		<French>
-			<Text>Rive du lac</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Seeufer</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_LUNAR_DOME</Tag>
@@ -463,7 +467,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Sumpf</German>
+		<German>Feuchtgebiet</German>
 		<Italian>
 			<Text>Palude</Text>
 			<Gender>Female</Gender>
@@ -479,8 +483,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MARSH_PEDIA</Tag>
 		<English>In geography, a marsh, or morass, is a type of wetland that is subject to frequent or continuous flood. Typically the water is shallow and features grasses, rushes, reeds, typhas, sedges, other herbaceous plants, and moss.</English>
+		<German>Ein [COLOR_HIGHLIGHT_TEXT]Feuchtgebiet[COLOR_REVERT] oder Feuchtbiotop ist ein Geländetypus, der im Übergangsbereich von Gewässern zu Landlebensräumen liegt. Zu Feuchtgebieten zählen Lebensräume, die an einen Überschuss von Wasser angepasst sind, wie z.B. Auen, Bruchwald, Feuchtwiesen, Ried, Moore, Sümpfe und Marschland.[NEWLINE]Feuchtgebiete sind von großer ökologischer Bedeutung, da sie als Grundwasserfilter, Wasserspeicher und Überschwemmungsschutz dienen.</German>
 		<Italian>In geografia, una palude è un tipo di terreno acquitrinoso soggetto a frequenti e continue inondazioni. In genere l'acqua è bassa e contiene erbe, giunchi, canne, carici, piante erbacee e muschio.</Italian>
-		<German>[COLOR_HIGHLIGHT_TEXT]Sümpfe[COLOR_REVERT] sind natürliche Feuchtgebiete an Flüssen und Seen. Sie sind gekennzeichnet durch schlammige Böden mit stehendem Wasser, im Gegensatz zum häufig synonym verwendeten Moor wird in Sümpfen aber kein Torf gebildet. Da Sümpfe kaum kulturell nutzbar sind, werden solche Lebensräume häufig über Entwässerung nutzbar gemacht und dadurch zerstört.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MARTIAN_BARREN</Tag>

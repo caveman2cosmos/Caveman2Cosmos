@@ -153,13 +153,10 @@ def onEndPlayerTurn(argsList):
 
 	iMax = GC.getMAX_PC_PLAYERS()
 	iBarb = GC.getBARBARIAN_PLAYER()
-	if iPlayer >= iMax:
-		if iPlayer == iBarb:
-			iNextPlayer = 0
-		else:
-			iNextPlayer = iPlayer
-	elif iPlayer + 1 == iMax:
-		iNextPlayer = iBarb
+	if iPlayer == iBarb:
+		iNextPlayer = 0
+	elif iPlayer + 1 >= iMax:
+		return
 	else:
 		iNextPlayer = iPlayer + 1
 
@@ -169,15 +166,11 @@ def onEndPlayerTurn(argsList):
 			recordCivics(CyPlayer)
 			if bSmallRevolts:
 				doSmallRevolts(iNextPlayer, CyPlayer)
-			break
+			return
 		iNextPlayer += 1
 		if iNextPlayer == iMax:
-			# iPlayer 40-44 does not exist in C2C currently
-			# Therefore we check the last NPC, rather than the first, next.
-			# If there is only one player vs NPC's, then there should still be 1 rev check per game turn.
-			iNextPlayer = iBarb
-		elif iNextPlayer > iMax:
-			iGameTurn += 1
+			if iPlayer == iBarb:
+				return
 			iNextPlayer = 0
 
 
@@ -729,7 +722,7 @@ def playerCityLost(CyPlayer, CyCity, bConquest = True):
 
 	CyCityX, i = CyPlayer.firstCity(False)
 	while CyCityX:
-		if not CyCityX.isNone() and CyCityX.getOwner() == iPlayer:
+		if CyCityX.getOwner() == iPlayer:
 			CyCityX.changeRevolutionIndex(revIdxChange)
 			revIdxHist = RevData.getCityVal(CyCityX,'RevIdxHistory')
 			revIdxHist['Events'][0] += revIdxChange
@@ -881,7 +874,7 @@ def checkForAssimilation():
 
 		CyTeamX = GC.getTeam(CyPlayerX.getTeam())
 		CyCity0 = CyPlayerX.getCapitalCity()
-		if CyCity0.isNone(): continue # getCapitalCity() returns a city-object even for civs without a capital.
+		if CyCity0 is None: continue
 		iTurnAcquiredCity0 = CyCity0.getGameTurnAcquired()
 		CyPlot0 = None
 		szCiv = CyPlayerX.getCivilizationDescription(0)

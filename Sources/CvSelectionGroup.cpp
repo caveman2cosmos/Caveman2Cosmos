@@ -3961,9 +3961,6 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 				return false;
 			}
 
-			// Dale - BE: Battle Effect START
-			pBestAttackUnit->setBattlePlot(pDestPlot, pBestDefender);
-
 			// RevolutionDCM - attack support
 			if (GC.isDCM_ATTACK_SUPPORT())
 			{
@@ -6304,9 +6301,6 @@ void CvSelectionGroup::read(FDataStreamBase* pStream)
 	// Init saved data
 	reset();
 
-	uint uiFlag=0;
-	pStream->Read(&uiFlag);	// flags for expansion
-
 	pStream->Read(&m_iID);
 	pStream->Read(&m_iMissionTimer);
 
@@ -6373,9 +6367,6 @@ void CvSelectionGroup::read(FDataStreamBase* pStream)
 
 void CvSelectionGroup::write(FDataStreamBase* pStream)
 {
-	uint uiFlag=0;
-	pStream->Write(uiFlag);		// flag for expansion
-
 	pStream->Write(m_iID);
 	pStream->Write(m_iMissionTimer);
 
@@ -6493,28 +6484,21 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 					{
 						return true;
 					}
-					// RevDCM Battle Effects option
-					pBestAttackUnit->setBattlePlot(pDestPlot, pBestDefender);
 
 					// RevolutionDCM - attack support
 					if (GC.isDCM_ATTACK_SUPPORT())
 					{
-						if (pDestPlot->getNumUnits() > 0 && !bStealth)
-						{
-							bAction = performSupport(pDestPlot, pOrigPlot, NO_PLAYER, getTeam());
-						}
-						else
+						if (pDestPlot->getNumUnits() < 1 || bStealth)
 						{
 							return bAttack;
 						}
-						if (pOrigPlot->getNumUnits() > 0 && !bStealth)
-						{
-							bAction = performSupport(pOrigPlot, pDestPlot, getOwner(), NO_TEAM);
-						}
-						else
+						bAction = performSupport(pDestPlot, pOrigPlot, NO_PLAYER, getTeam());
+
+						if (pOrigPlot->getNumUnits() < 1 || bStealth)
 						{
 							return bAttack;
 						}
+						bAction = performSupport(pOrigPlot, pDestPlot, getOwner(), NO_TEAM);
 					}
 					// RevolutionDCM - attack support end
 					bool bBombardExhausted = false;

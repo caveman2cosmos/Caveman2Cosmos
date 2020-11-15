@@ -140,7 +140,6 @@ DECLARE_FLAGS(ECacheAccess::flags);
 // #define STRENGTH_IN_NUMBERS
 // #define GLOBAL_WARMING
 // #define THE_GREAT_WALL
-// #define PARALLEL_MAPS
 // #define NOMADIC_START
 
 //
@@ -176,8 +175,10 @@ void EnableDetailedTrace(bool enable);
 void IFPSetCount(ProfileSample* sample, int count);
 #endif
 
-int intSqrt(unsigned int iValue, const bool bTreatNegAsPos=false);
+int intSqrt(const unsigned int iValue, const bool bTreatNegAsPos=false);
 int64_t intSqrt64(const uint64_t iValue);
+int intPow(const int x, const int p);
+int64_t intPow64(const int64_t x, const int p);
 
 #define	MEMORY_TRACK()
 #define MEMORY_TRACK_EXEMPT()
@@ -331,9 +332,9 @@ namespace python = boost::python;
 #include "CyDeal.h"
 #include "CyMap.h"
 #include "CyArea.h"
-#include "CyGame.h"
-#include "CyTeam.h"
-#include "CyPlayer.h"
+//#include "CyGame.h"
+//#include "CyTeam.h"
+//#include "CyPlayer.h"
 #include "CyCity.h"
 #include "CyUnit.h"
 #include "CySelectionGroup.h"

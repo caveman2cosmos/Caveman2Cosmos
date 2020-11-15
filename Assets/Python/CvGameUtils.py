@@ -199,8 +199,8 @@ class CvGameUtils:
 
 	def cannotMaintain(self, argsList):
 		CyCity, iProcess, bContinue, = argsList
-		if not CyCity or CyCity and CyCity.isNone():
-			print "not CyCity or CyCity and CyCity.isNone()"
+		if not CyCity:
+			print "CyCity == None"
 			print "CyCity, iProcess, bContinue", argsList
 			return False
 
@@ -679,7 +679,7 @@ class CvGameUtils:
 					lBuildings = []
 					lWonders = []
 					for i in xrange(GC.getNumBuildingInfos()):
-						if pCity.isHasBuilding(i):
+						if pCity.getNumBuilding(i):
 							if isLimitedWonder(i):
 								lWonders.append(GC.getBuildingInfo(i).getDescription())
 							else:

@@ -732,17 +732,6 @@ public:
 	// Returns true if the dependency list is satisfied, false if not.
 	inline bool CheckDependency();
 
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-	bool doResetGlobalInfoClasses();
-	bool doResetInfoClasses();
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
-
 	static void RemoveTGAFiller();
 /************************************************************************************************/
 /* XML_MODULAR_ART_LOADING                 10/19/07                                MRGENIE      */

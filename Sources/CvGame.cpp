@@ -10,6 +10,9 @@
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 
+// Discord RPC
+#include "discord.h"
+
 //	Koshling - save game compatibility between (most) builds
 //	UI flag values in game serialization.  These are bitwise combinable
 #define	GAME_SAVE_UI_FLAG_VALUE_AND_BASE		0x00000001
@@ -238,10 +241,10 @@ void CvGame::init(HandicapTypes eHandicap)
 	setStatusPromotions();
 
 	//establish improvement costs
-	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
-	{
-		GC.getImprovementInfo((ImprovementTypes)iI).setHighestCost();
-	}
+	//for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+	//{
+	//	GC.getImprovementInfo((ImprovementTypes)iI).setHighestCost();
+	//}
 
 	if (getGameTurn() == 0)
 	{
@@ -333,8 +336,6 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 	}
 
-	setFutureEras();
-
 	if (isOption(GAMEOPTION_UNITED_NATIONS))
 	{
 		//Find the diplomatic victory
@@ -376,37 +377,13 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 	}
 
-	for (int iI = MAX_PC_PLAYERS; iI < MAX_PLAYERS; iI++)
+	for (int iI = MAX_PC_PLAYERS; iI < MAX_PLAYERS-1; iI++)
 	{
 		PlayerTypes ePlayer = (PlayerTypes)iI;
 
 		FAssertMsg(!GET_PLAYER(ePlayer).isAlive(), "NPC is not expected to be alive at this point of the game initialization.");
 
-		if (ePlayer == BARBARIAN_PLAYER)
-		{
-			addPlayer(
-				ePlayer, (LeaderHeadTypes)GC.getDefineINT("BARBARIAN_LEADER"),
-				(CivilizationTypes)GC.getDefineINT("BARBARIAN_CIVILIZATION"), false
-			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
-			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
-			GET_TEAM(eTeam).init(eTeam);
-			GC.getInitCore().setTeam(ePlayer, eTeam);
-			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
-		}
-		else if (ePlayer == NEANDERTHAL_PLAYER)
-		{
-			addPlayer(
-				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NEANDERTHAL_LEADER"),
-				(CivilizationTypes)GC.getDefineINT("NEANDERTHAL_CIVILIZATION"), false
-			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
-			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
-			GET_TEAM(eTeam).init(eTeam);
-			GC.getInitCore().setTeam(ePlayer, eTeam);
-			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
-		}
-		else if (ePlayer == BEAST_PLAYER)
+		if (ePlayer == BEAST_PLAYER)
 		{
 			addPlayer(
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("ANIMAL_LEADER"),
@@ -454,10 +431,9 @@ void CvGame::init(HandicapTypes eHandicap)
 			GC.getInitCore().setTeam(ePlayer, eTeam);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
+		/*
 		else if (ePlayer == NPC4_PLAYER)
 		{
-			break; // Remove me the day I'm added, shift it one "else" down per NPC added.
-			// I will only be initialized when starting a new game, old saves won't ever see me.
 			addPlayer(
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NPC4_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("NPC4_CIVILIZATION"), false
@@ -516,6 +492,33 @@ void CvGame::init(HandicapTypes eHandicap)
 			GC.getInitCore().setTeam(ePlayer, eTeam);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
 		}
+		*/
+		else if (ePlayer == NEANDERTHAL_PLAYER)
+		{
+			addPlayer(
+				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NEANDERTHAL_LEADER"),
+				(CivilizationTypes)GC.getDefineINT("NEANDERTHAL_CIVILIZATION"), false
+			);
+			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
+			GET_TEAM(eTeam).init(eTeam);
+			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
+		}
+		/* Toffer - No point, the exe does this slightly after this code anyway.
+		else if (ePlayer == BARBARIAN_PLAYER)
+		{
+			addPlayer(
+				ePlayer, (LeaderHeadTypes)GC.getDefineINT("BARBARIAN_LEADER"),
+				(CivilizationTypes)GC.getDefineINT("BARBARIAN_CIVILIZATION"), false
+			);
+			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			TeamTypes eTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getID();
+			GET_TEAM(eTeam).init(eTeam);
+			GC.getInitCore().setTeam(ePlayer, eTeam);
+			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
+		}
+		*/
 	}
 	AI_init();
 
@@ -3247,6 +3250,14 @@ int CvGame::countCivPlayersAlive() const
 		}
 	}
 
+	// Discord RPC
+	RPCDATA rpc;
+	GIVEDEFAULTRPCVALS(rpc);
+	rpc.playersAlive = iCount;
+	pDiscord->sendNewRpcDetails(rpc);
+
+	pDiscord->ensureDiscordRPCState();
+
 	return iCount;
 }
 
@@ -3263,6 +3274,14 @@ int CvGame::countCivPlayersEverAlive() const
 			iCount++;
 		}
 	}
+
+	// Discord RPC
+	RPCDATA rpc;
+	GIVEDEFAULTRPCVALS(rpc);
+	rpc.playersTotal = iCount;
+	pDiscord->sendNewRpcDetails(rpc);
+
+	pDiscord->ensureDiscordRPCState();
 
 	return iCount;
 }
@@ -3695,7 +3714,16 @@ int CvGame::getNumHumanPlayers()
 
 int CvGame::getGameTurn()
 {
-	return GC.getInitCore().getGameTurn();
+	// Discord RPC Update
+	RPCDATA rpc;
+	GIVEDEFAULTRPCVALS(rpc);
+	rpc.turn = GC.getInitCore().getGameTurn();
+	pDiscord->sendNewRpcDetails(rpc);
+
+	pDiscord->ensureDiscordRPCState();
+
+	return rpc.turn;
+	//return GC.getInitCore().getGameTurn();
 }
 
 
@@ -7783,9 +7811,7 @@ void CvGame::updateMoves()
 
 	MEMORY_TRACE_FUNCTION();
 
-	CvSelectionGroup* pLoopSelectionGroup;
 	int aiShuffle[MAX_PLAYERS];
-	int iLoop;
 	int iI;
 
 	if (isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
@@ -7824,10 +7850,7 @@ void CvGame::updateMoves()
 							player.AI_unitUpdate();
 						}
 
-						for(pLoopSelectionGroup = player.firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = player.nextSelectionGroup(&iLoop))
-						{
-							pLoopSelectionGroup->autoMission();
-						}
+						algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
 
 						if (!(player.hasBusyUnit()))
 						{
@@ -7855,14 +7878,7 @@ void CvGame::updateMoves()
 					CvPathGenerator::EnableMaxPerformance(true);
 
 					//	Always try to do automations first for the AI
-					for(pLoopSelectionGroup = player.firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = player.nextSelectionGroup(&iLoop))
-					{
-						FAssert(pLoopSelectionGroup != NULL);
-						if (pLoopSelectionGroup != NULL)
-						{
-							pLoopSelectionGroup->autoMission();
-						}
-					}
+					algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
 
 					CvPathGenerator::EnableMaxPerformance(false);
 
@@ -7951,10 +7967,9 @@ void CvGame::testAlive()
 {
 	PROFILE_FUNC();
 
-#ifdef PARALLEL_MAPS	// XXX - Currently players are killed after switching to a new map.
-	if (m_eCurrentMap != MAP_INITIAL)
+	if (m_eCurrentMap != MAP_INITIAL)	// XXX - Currently players are killed after switching to a new map.
 		return;
-#endif
+
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		GET_PLAYER((PlayerTypes)iI).verifyAlive();
@@ -9301,24 +9316,14 @@ void CvGame::read(FDataStreamBase* pStream)
 	}
 
 	WRAPPER_READ(wrapper,"CvGame",&m_iShrineBuildingCount);
-	//	Retain bug-compatibility with the old format which needlessly saved the entire max
-	//	size the array could possibly be here
-	if ( wrapper.isUsingTaggedFormat() )
-	{
-		WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper,"CvGame",REMAPPED_CLASS_TYPE_BUILDINGS,m_iShrineBuildingCount, m_aiShrineBuilding);
-		WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper,"CvGame",REMAPPED_CLASS_TYPE_RELIGIONS,m_iShrineBuildingCount, m_aiShrineReligion);
-	}
-	else
-	{
-		WRAPPER_READ_CLASS_ENUM_ARRAY(wrapper,"CvGame",REMAPPED_CLASS_TYPE_BUILDINGS,GC.getNumBuildingInfos(), m_aiShrineBuilding);
-		WRAPPER_READ_CLASS_ENUM_ARRAY(wrapper,"CvGame",REMAPPED_CLASS_TYPE_RELIGIONS,GC.getNumBuildingInfos(), m_aiShrineReligion);
-	}
+	WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper, "CvGame", REMAPPED_CLASS_TYPE_BUILDINGS, m_iShrineBuildingCount, m_aiShrineBuilding);
+	WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper, "CvGame", REMAPPED_CLASS_TYPE_RELIGIONS, m_iShrineBuildingCount, m_aiShrineReligion);
+
 	WRAPPER_READ(wrapper,"CvGame",&m_iNumCultureVictoryCities);
 	WRAPPER_READ(wrapper,"CvGame",&m_eCultureVictoryCultureLevel);
 
 	m_Properties.readWrapper(pStream);
 
-	setFutureEras();
 	int iCurrentHandicap = range(getHandicapType(), 0, GC.getNumHandicapInfos() - 1);
 	setHandicapType((HandicapTypes)iCurrentHandicap);
 
@@ -9331,10 +9336,10 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ_OBJECT_END(wrapper);
 
 	//establish improvement costs
-	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
-	{
-		GC.getImprovementInfo((ImprovementTypes)iI).setHighestCost();
-	}
+	//for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+	//{
+	//	GC.getImprovementInfo((ImprovementTypes)iI).setHighestCost();
+	//}
 }
 
 #define TAGGED_SAVES 1
@@ -10129,15 +10134,6 @@ CultureLevelTypes CvGame::culturalVictoryCultureLevel() const
 
 int CvGame::getCultureThreshold(CultureLevelTypes eLevel) const
 {
-	if (isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		return
-		(
-			GC.getCultureLevelInfo(eLevel).getSpeedThreshold(getGameSpeedType())
-			*
-			(100 + GC.getDefineINT("NO_ESPIONAGE_CULTURE_LEVEL_MODIFIER")) / 100
-		);
-	}
 	return GC.getCultureLevelInfo(eLevel).getSpeedThreshold(getGameSpeedType());
 }
 
@@ -10891,22 +10887,6 @@ bool CvGame::foundBarbarianCity()
 		return true;
 	}
 	return false;
-}
-
-
-void CvGame::drawBattleEffects()
-{
-	if (GC.isDCM_BATTLE_EFFECTS())
-	{
-		for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
-		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
-			if (pLoopPlot->isBattle())
-			{
-				gDLL->getEngineIFace()->TriggerEffect(pLoopPlot->getBattleEffect(), pLoopPlot->getPoint(), 0);
-			}
-		}
-	}
 }
 
 int CvGame::getWaterAnimalSpawnChance() const
@@ -12197,126 +12177,6 @@ bool CvGame::canEverResearch(TechTypes eTech) const
 }
 
 
-void CvGame::setFutureEras()
-{
-	TechTypes eFutureTech =  NO_TECH;
-	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-	{
-		if (GC.getTechInfo((TechTypes)iI).isRepeat())
-		{
-			eFutureTech = (TechTypes)iI;
-			break;
-		}
-	}
-	if (eFutureTech != NO_TECH)
-	{
-		bool bSet = false;
-		for (int iI = 0; iI < GC.getNUM_OR_TECH_PREREQS(); iI++)
-		{
-			if (GC.getTechInfo(eFutureTech).getOriginalPrereqOrTechs(iI) != NO_TECH)
-			{
-				bSet = true;
-				break;
-			}
-
-		}
-		if (!bSet)
-		{
-			for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
-			{
-				for (int iI = 0; iI < GC.getNUM_OR_TECH_PREREQS(); iI++)
-				{
-					GC.getTechInfo((TechTypes)iJ).setOriginalPrereqOrTech(iI, GC.getTechInfo((TechTypes)iJ).getPrereqOrTechs(iI));
-					GC.getTechInfo((TechTypes)iJ).setOriginalPrereqAndTech(iI, GC.getTechInfo((TechTypes)iJ).getPrereqAndTechs(iI));
-				}
-			}
-		}
-		else
-		{
-			for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
-			{
-				for (int iI = 0; iI < GC.getNUM_OR_TECH_PREREQS(); iI++)
-				{
-					GC.getTechInfo((TechTypes)iJ).setPrereqOrTech(iI, GC.getTechInfo((TechTypes)iJ).getOriginalPrereqOrTechs(iI));
-					GC.getTechInfo((TechTypes)iJ).setPrereqAndTech(iI, GC.getTechInfo((TechTypes)iJ).getOriginalPrereqAndTechs(iI));
-				}
-			}
-			int iBestX = 0;
-			for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
-			{
-				if (GC.getTechInfo((TechTypes)iJ).getGridX() > iBestX)
-				{
-					iBestX = GC.getTechInfo((TechTypes)iJ).getGridX();
-				}
-			}
-			GC.getTechInfo(eFutureTech).setGridX(iBestX + 1);
-		}
-	}
-	if (isOption(GAMEOPTION_NO_FUTURE))
-	{
-		if (eFutureTech != NO_TECH)
-		{
-			//Remove existing techs prereqs
-			for (int iI = 0; iI < GC.getNUM_OR_TECH_PREREQS(); iI++)
-			{
-				GC.getTechInfo(eFutureTech).setPrereqOrTech(iI, NO_TECH);
-				GC.getTechInfo(eFutureTech).setPrereqAndTech(iI, NO_TECH);
-			}
-			//Find the next best tech to require the future tech
-			int iBestX = 0;
-			for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
-			{
-				if (canEverResearch((TechTypes)iJ) && !GC.getTechInfo((TechTypes)iJ).isRepeat())
-				{
-					if (GC.getTechInfo((TechTypes)iJ).getGridX() > iBestX)
-					{
-						iBestX = GC.getTechInfo((TechTypes)iJ).getGridX();
-					}
-				}
-			}
-			int iCount = 0;
-			for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
-			{
-				if (GC.getTechInfo((TechTypes)iJ).getGridX() == iBestX)
-				{
-					if (canEverResearch((TechTypes)iJ))
-					{
-						if (iCount > GC.getNUM_OR_TECH_PREREQS())
-						{
-							break;
-						}
-						GC.getTechInfo(eFutureTech).setPrereqOrTech(iCount, iJ);
-						iCount++;
-					}
-				}
-			}
-			GC.getTechInfo(eFutureTech).setGridX(iBestX + 1);
-		}
-	}
-
-	//Remove Prerequisite Techs for which can never be researched
-	//for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-	//{
-	//	if (!canEverResearch((TechTypes)iI))
-	//	{
-	//		for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
-	//		{
-	//			for (int iK = 0; iK < GC.getNUM_OR_TECH_PREREQS(); iK++)
-	//			{
-	//				if (GC.getTechInfo((TechTypes)iJ).getPrereqOrTechs(iK) == iI)
-	//				{
-	//					GC.getTechInfo((TechTypes)iJ).setPrereqOrTech(iK, NO_TECH);
-	//				}
-	//				if (GC.getTechInfo((TechTypes)iJ).getPrereqAndTechs(iK) == iI)
-	//				{
-	//					GC.getTechInfo((TechTypes)iJ).setPrereqAndTech(iK, NO_TECH);
-	//				}
-	//			}
-	//		}
-	//	}
-	//}
-}
-
 int CvGame::getFlexibleDifficultyTimer(PlayerTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
@@ -12552,15 +12412,15 @@ void CvGame::recalculateModifiers()
 	m_bRecalculatingModifiers = true;
 
 	//establish improvement costs
-	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
-	{
-		GC.getImprovementInfo((ImprovementTypes)iI).setHighestCost();
-	}
+	//for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+	//{
+	//	GC.getImprovementInfo((ImprovementTypes)iI).setHighestCost();
+	//}
 
 	//	Inhibit plot group manipulation until we rebuild at the end of everything else
-	for(iI = 0; iI < MAX_PLAYERS; iI++ )
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if ( GET_PLAYER((PlayerTypes)iI).isAlive() )
+		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
 			GET_PLAYER((PlayerTypes)iI).inhibitPlotGroupCalcsUntilFullRebuild();
 		}
@@ -12569,12 +12429,12 @@ void CvGame::recalculateModifiers()
 	// AIAndy: Recalculate which info class replacements are currently active
 	GC.updateReplacements();
 
-	for (iI = 0; iI < GC.getNumVoteSourceInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumVoteSourceInfos(); iI++)
 	{
 		m_aiDiploVote[iI] = 0;
 	}
 
-	for (iI = 0; iI < GC.getNumSpecialUnitInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumSpecialUnitInfos(); iI++)
 	{
 		m_pabSpecialUnitValid[iI] = false;
 		if (GC.getSpecialUnitInfo((SpecialUnitTypes)iI).isValid())
@@ -12583,7 +12443,7 @@ void CvGame::recalculateModifiers()
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumSpecialBuildingInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumSpecialBuildingInfos(); iI++)
 	{
 		m_pabSpecialBuildingValid[iI] = false;
 		if (GC.getSpecialBuildingInfo((SpecialBuildingTypes)iI).isValid())
@@ -12599,7 +12459,7 @@ void CvGame::recalculateModifiers()
 	// units are not supposed to have that kind of property (needs extra code if that changes)
 	getProperties()->clearForRecalculate();
 
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 		pLoopPlot->getProperties()->clearForRecalculate();
@@ -12619,9 +12479,9 @@ void CvGame::recalculateModifiers()
 		pLoopPlot->resetBlockadedCounts();
 	}
 
-	for(iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
-		if ( GET_TEAM((TeamTypes)iI).isAlive() )
+		if (GET_TEAM((TeamTypes)iI).isAlive())
 		{
 			GET_TEAM((TeamTypes)iI).getProperties()->clearForRecalculate();
 		}
@@ -12643,15 +12503,15 @@ void CvGame::recalculateModifiers()
 
 	algo::for_each(GC.getMap().areas(), CvArea::fn::clearModifierTotals());
 
-	for(iI = 0; iI < MAX_TEAMS; iI++)
+	for(int iI = 0; iI < MAX_TEAMS; iI++)
 	{
-		if ( GET_TEAM((TeamTypes)iI).isAlive() )
+		if (GET_TEAM((TeamTypes)iI).isAlive())
 		{
 			GET_TEAM((TeamTypes)iI).recalculateModifiers();
 		}
 	}
 
-	for(iI = 0; iI < GC.getNumVoteSourceInfos(); iI++ )
+	for (int iI = 0; iI < GC.getNumVoteSourceInfos(); iI++)
 	{
 		for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
 		{
@@ -12668,7 +12528,7 @@ void CvGame::recalculateModifiers()
 	//	Recheck for disabled buildings everywhere (this has to be done after plot group establishment
 	//	or else resource dependencies will mean it gets the wrong answer, which will in turn force
 	//	(automatic) recalculation the following turn (which is very inefficient)
-	for (iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
+	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
 	{
 		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 		if (kLoopPlayer.isAlive())
@@ -12695,7 +12555,7 @@ void CvGame::recalculateModifiers()
 
 	//	Force a one-time reclaculation of all city commerce after coming out
 	//	of the in-recalc section (which inhibits this doing any work)
-	for (iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
+	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
 	{
 		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 		if (kLoopPlayer.isAlive())

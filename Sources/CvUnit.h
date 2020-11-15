@@ -558,6 +558,7 @@ public:
 	void automate(AutomateTypes eAutomate);
 
 	bool canScrap() const; // Exposed to Python
+	int calculateScrapValue() const;
 	void scrap();
 
 	bool canTradeUnit(PlayerTypes eReceivingPlayer) const;
@@ -1749,9 +1750,6 @@ public:
 	DllExport void getLayerAnimationPaths(std::vector<AnimationPathTypes>& aAnimationPaths) const;
 	DllExport int getSelectionSoundScript() const;
 
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
 // Dale - AB: Bombing START
 	bool canAirBomb1(const CvPlot* pPlot) const;
 	bool canAirBomb1At(const CvPlot* pPlot, int iX, int iY) const;
@@ -1768,38 +1766,27 @@ public:
 	bool canAirBomb5(const CvPlot* pPlot) const;
 	bool canAirBomb5At(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb5(int iX, int iY);
-// Dale - AB: Bombing END
+
 // Dale - RB: Field Bombard START
 	bool canRBombard(bool bEver = false) const;
 	bool canBombardAtRanged(const CvPlot* pPlot, int iX, int iY) const;
 	bool bombardRanged(int iX, int iY, bool sAttack = false);
-	// RevolutionDCM - ranged bombard
+
+// RevolutionDCM - ranged bombard
 	bool isRbombardable(int iMinStack) const;
 	int getRbombardSeigeCount(const CvPlot* pPlot) const;
-	// RevolutionDCM - end
-// Dale - SA: Opp Fire START
+
+// Dale - SA: Opp Fire
 	void doOpportunityFire();
-// Dale - SA: Opp Fire END
-// Dale - SA: Active Defense START
+
+// Dale - SA: Active Defense
 	void doActiveDefense();
-// Dale - SA: Active Defense END
-// Dale - FE: Fighters START
+
+// Dale - FE: Fighters
 	bool canFEngage() const;
 	bool canFEngageAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool fighterEngage(int iX, int iY);
-// Dale - FE: Fighters END
-/************************************************************************************************/
-/* RevolutionDCM	                  Start		 05/31/10                        Afforess       */
-/*                                                                                              */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
-	void setBattlePlot(CvPlot* pPlot, const CvUnit* pDefender = NULL);
-/************************************************************************************************/
-/* RevolutionDCM	             Battle Effects END                                             */
-/************************************************************************************************/
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
+// ! Dale
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -1824,15 +1811,7 @@ public:
 	virtual bool AI_isAwaitingContract() const = 0;
 	virtual bool AI_isCityGarrison(const CvCity* pCity) const = 0;
 	virtual void AI_setAsGarrison(const CvCity* pCity) = 0;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      04/05/10                                jdog5000      */
-/*                                                                                              */
-/* Unit AI                                                                                      */
-/************************************************************************************************/
 	virtual bool AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITypes eTransportedUnitAI = NO_UNITAI, int iMinCargo = -1, int iMinCargoSpace = -1, int iMaxCargoSpace = -1, int iMaxCargoOurUnitAI = -1, int iFlags = 0, int iMaxPath = MAX_INT, int iMaxTransportPath = MAX_INT) = 0;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 	virtual void AI_flushValueCache() = 0;
 	virtual int	AI_genericUnitValueTimes100(UnitValueFlags eFlags) const = 0;
 	virtual int AI_getBirthmark() const = 0;
@@ -2112,7 +2091,6 @@ protected:
 	int m_iExtraMaxHP;
 	int m_iExtraStrengthModifier;
 	int m_iExtraDamageModifier;
-	int m_iExtraCostModifier;
 
 	int m_iExtraUpkeep100;
 	int m_iUpkeepModifier;
@@ -2704,15 +2682,12 @@ public:
 
 	int getQualityBaseTotal() const;
 	void setQualityBaseTotal(int iNewValue);
-	void changeQualityBaseTotal(int iChange);
 
 	int getGroupBaseTotal() const;
 	void setGroupBaseTotal(int iNewValue);
-	void changeGroupBaseTotal(int iChange);
 
 	int getSizeBaseTotal() const;
 	void setSizeBaseTotal(int iNewValue);
-	void changeSizeBaseTotal(int iChange);
 
 	int getExtraQuality() const;
 	void setExtraQuality(int iNewValue);
@@ -3188,33 +3163,20 @@ private:
 	static int* g_paiTempAfflictOnAttackTypeImmediateCount;
 	static int* g_paiTempAfflictOnAttackTypeAttemptedCount;
 	static int* g_paiTempDistanceAttackCommunicability;
-	static int*	g_paiTempTerrainDoubleMoveCount;
-	static int*	g_paiTempFeatureDoubleMoveCount;
-	static int*	g_paiTempExtraTerrainAttackPercent;
-	static int*	g_paiTempExtraTerrainDefensePercent;
 	static int* g_paiTempAfflictOnAttackTypeMeleeCount;
 	static int* g_paiTempAfflictOnAttackTypeDistanceCount;
 //Team Project (4)
 	//WorkRateMod
 	//ls612: Terrain Work Modifiers
 	static int* g_paiTempExtraBuildWorkPercent;
-	static int* g_paiTempTerrainWorkPercent;
-	static int* g_paiTempFeatureWorkPercent;
-	static int* g_paiTempExtraTerrainWorkPercent;
-	static int* g_paiTempExtraFeatureWorkPercent;
-	static int*	g_paiTempExtraFeatureAttackPercent;
-	static int*	g_paiTempExtraFeatureDefensePercent;
 	static int*	g_paiTempExtraUnitCombatModifier;
 	static bool*	g_pabTempHasPromotion;
 	static bool*	g_pabTempHasUnitCombat;
-	static int*	g_paiTempTerrainProtected;
 	static int* g_paiTempSubCombatTypeCount;
 	static int* g_paiTempOngoingTrainingCount;
 	static int* g_paiTempRemovesUnitCombatTypeCount;
 	static int* g_paiTempExtraFlankingStrengthbyUnitCombatType;
 	static int* g_paiTempExtraWithdrawVSUnitCombatType;
-	static int* g_paiTempExtraWithdrawOnTerrainType;
-	static int* g_paiTempExtraWithdrawOnFeatureType;
 	static int* g_paiTempExtraPursuitVSUnitCombatType;
 	static int* g_paiTempExtraRepelVSUnitCombatType;
 	static int* g_paiTempExtraKnockbackVSUnitCombatType;

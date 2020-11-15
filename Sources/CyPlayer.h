@@ -22,10 +22,6 @@ public:
 
 	//const CvPlayer* getPlayer() const { return m_pPlayer; } // Call from C++
 
-#ifdef PARALLEL_MAPS
-	void updateMembers();
-	void initMembers(int iIndex);
-#endif
 	void changeLeader(int /*LeaderHeadTypes*/ eNewLeader);
 	void changeCiv(int /*CivilizationTypes*/ eNewCiv);
 	void setIsHuman(bool bNewValue);
@@ -67,7 +63,7 @@ public:
 	std::wstring getNameKey() const;
 	std::wstring getCivilizationDescription(int iForm) const;
 
-	void setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::wstring szNewAdj);
+	void setCivName(const std::wstring szNewDesc, const std::wstring szNewShort, const std::wstring szNewAdj);
 
 	std::wstring getCivilizationDescriptionKey() const;
 	std::wstring getCivilizationShortDescription(int iForm) const;
@@ -354,18 +350,24 @@ public:
 	int getQueuePosition(int /*TechTypes*/ eTech) const;
 	void clearResearchQueue();
 	bool pushResearch(int /*TechTypes*/ iIndex, bool bClear);
+	void popResearch(int /*TechTypes*/ eTech);
 	int getLengthResearchQueue() const;
-	void addCityName(std::wstring szName);
+
+	void addCityName(const std::wstring szName);
 	int getNumCityNames() const;
-	std::wstring getCityName(int iIndex) const;
+	std::wstring getCityName(int iIndex);
+
+	python::list cities() const;
 	python::tuple firstCity(bool bRev) const; // returns tuple of (CyCity, iterOut)
 	python::tuple nextCity(int iterIn, bool bRev) const; // returns tuple of (CyCity, iterOut)
 	int getNumCities() const;
 	CyCity* getCity(int iID) const;
+
 	python::tuple firstUnit(bool bRev) const; // returns tuple of (CyUnit, iterOut)
 	python::tuple nextUnit(int iterIn, bool bRev) const; // returns tuple of (CyUnit, iterOut)
 	int getNumUnits() const;
 	CyUnit* getUnit(int iID) const;
+
 	int getNumSelectionGroups() const;
 	CySelectionGroup* getSelectionGroup(int iID) const;
 

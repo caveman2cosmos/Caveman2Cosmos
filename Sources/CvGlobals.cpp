@@ -13,6 +13,8 @@
 #include <time.h> 
 #include <sstream>
 
+#include "discord.h"
+
 static char gVersionString[1024] = { 0 };
 
 // Use macro override when available. Version string might not be loaded in time for
@@ -231,11 +233,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iNumFootstepAudioTypes(0)
 	, m_iViewportSizeX(0)
 	, m_iViewportSizeY(0)
-	, m_iStoreExeSettingsCommerceInfo(0)
-	, m_iStoreExeSettingsYieldInfo(0)
-	, m_iStoreExeSettingsReligionInfo(0)
-	, m_iStoreExeSettingsCorporationInfo(0)
-	, m_iStoreExeSettingsBonusInfo(0)
 	, m_bSignsCleared(false)
 
 #define ADD_TO_CONSTRUCTOR(dataType, VAR) \
@@ -744,6 +741,11 @@ void cvInternalGlobals::updateMaps()
 		m_maps.push_back(NULL);
 	}
 	FAssert(m_maps.size() == GC.getNumMapInfos());
+
+	for (int i = 0; i < MAX_PLAYERS; i++)
+	{
+		GET_PLAYER((PlayerTypes)i).addContainersForEachMap();
+	}
 }
 
 void cvInternalGlobals::setResourceLayer(bool bOn)
@@ -807,6 +809,16 @@ CvInfoBase& cvInternalGlobals::getHints(int i) const
 
 int cvInternalGlobals::getNumMainMenus() const
 {
+	pDiscord->ensureDiscordRPCState();
+
+	// Discord RPC detect menu
+	if ((int)m_paMainMenus.size() > 0) {
+		RPCDATA rpc;
+		GIVEDEFAULTRPCVALS(rpc);
+		rpc.turn = -2; // -2 cuz -1 is reserved for undefined
+		pDiscord->sendNewRpcDetails(rpc);
+	}
+
 	return (int)m_paMainMenus.size();
 }
 
@@ -3069,114 +3081,6 @@ void cvInternalGlobals::deleteInfoArrays()
 	clearTypesMap();
 	m_aInfoVectors.clear();
 }
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-void cvInternalGlobals::doResetInfoClasses(int iNumSaveGameVector, std::vector<CvString> m_aszSaveGameVector)
-{
-	// Store stuff being set by the exe in temp arrays
-	StoreExeSettings();
-
-	//delete obsolete InfoClasses
-	deleteInfoArrays();
-
-	// reset the ModLoadControlVector
-	m_paModLoadControlVector.erase(m_paModLoadControlVector.begin(), m_paModLoadControlVector.end());
-
-	//Load the Savegame vector to the ModLoadControlVector(being used by the enum)
-	for ( int i = 0; i < iNumSaveGameVector; i++ )
-	{
-		m_paModLoadControlVector.push_back(m_aszSaveGameVector[i]);
-	}
-
-	//Delete InfoMap Keys
-	infoTypeFromStringReset();
-
-	//reload the new infoclasses
-	CvXMLLoadUtility XMLLoadUtility;
-	XMLLoadUtility.doResetGlobalInfoClasses();
-
-	//Reload Arts with the Current MLF
-	CvArtFileMgr ArtFileMgr = ArtFileMgr.GetInstance();
-	ArtFileMgr.Reset();
-
-	XMLLoadUtility.doResetInfoClasses();		// Reloads/allocs Art Defines
-
-	// Load stuff being set by the exe from temp arrays
-	LoadExeSettings();
-}
-void cvInternalGlobals::StoreExeSettings()
-{
-	// Chars from TGA files, CommerceInfo
-	m_iStoreExeSettingsCommerceInfo =  new int[NUM_COMMERCE_TYPES];
-	for ( int i = 0; i < NUM_COMMERCE_TYPES; i++ )
-	{
-		m_iStoreExeSettingsCommerceInfo[i] = getCommerceInfo((CommerceTypes)i).getChar();
-	}
-	// Chars from TGA files, YieldInfo
-	m_iStoreExeSettingsYieldInfo =  new int[NUM_YIELD_TYPES];
-	for ( int i = 0; i < NUM_YIELD_TYPES; i++ )
-	{
-		m_iStoreExeSettingsYieldInfo[i] = getYieldInfo((YieldTypes)i).getChar();
-	}	
-	// Chars from TGA files, ReligionInfo
-	m_iStoreExeSettingsReligionInfo =  new int[getNumReligionInfos()];
-	for ( int i = 0; i < getNumReligionInfos(); i++ )
-	{
-		m_iStoreExeSettingsReligionInfo[i] = getReligionInfo((ReligionTypes)i).getChar();
-	}
-	// Chars from TGA files, CorporationInfo
-	m_iStoreExeSettingsCorporationInfo =  new int[getNumCorporationInfos()];
-	for ( int i = 0; i < getNumCorporationInfos(); i++ )
-	{
-		m_iStoreExeSettingsCorporationInfo[i] = getCorporationInfo((CorporationTypes)i).getChar();
-	}
-	// Chars from TGA files, BonusInfo
-	m_iStoreExeSettingsBonusInfo =  new int[getNumBonusInfos()];
-	for ( int i = 0; i < getNumBonusInfos(); i++ )
-	{
-		m_iStoreExeSettingsBonusInfo[i] = getBonusInfo((BonusTypes)i).getChar();
-	}
-}
-void cvInternalGlobals::LoadExeSettings()
-{
-	// Chars from TGA files, CommerceInfo
-	for ( int i = 0; i < NUM_COMMERCE_TYPES; i++ )
-	{
-		getCommerceInfo((CommerceTypes)i).setChar(m_iStoreExeSettingsCommerceInfo[i]);
-	}
-	SAFE_DELETE_ARRAY(m_iStoreExeSettingsCommerceInfo);
-	// Chars from TGA files, YieldInfo
-	for ( int i = 0; i < NUM_YIELD_TYPES; i++ )
-	{
-		getYieldInfo((YieldTypes)i).setChar(m_iStoreExeSettingsYieldInfo[i]);
-	}
-	SAFE_DELETE_ARRAY(m_iStoreExeSettingsYieldInfo);
-	// Chars from TGA files, ReligionInfo
-	for ( int i = 0; i < getNumReligionInfos(); i++ )
-	{
-		getReligionInfo((ReligionTypes)i).setChar(m_iStoreExeSettingsReligionInfo[i]);
-	}
-	SAFE_DELETE_ARRAY(m_iStoreExeSettingsReligionInfo);
-	// Chars from TGA files, CorporationInfo
-	for ( int i = 0; i < getNumCorporationInfos(); i++ )
-	{
-		getCorporationInfo((CorporationTypes)i).setChar(m_iStoreExeSettingsCorporationInfo[i]);
-	}
-	SAFE_DELETE_ARRAY(m_iStoreExeSettingsCorporationInfo);
-	// Chars from TGA files, BonusInfo
-	for ( int i = 0; i < getNumBonusInfos(); i++ )
-	{
-		getBonusInfo((BonusTypes)i).setChar(m_iStoreExeSettingsBonusInfo[i]);
-	}
-	SAFE_DELETE_ARRAY(m_iStoreExeSettingsBonusInfo);
-}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
-
 
 //
 // Global Infos Hash Map
@@ -3351,29 +3255,27 @@ void cvInternalGlobals::cacheInfoTypes()
 
 void cvInternalGlobals::switchMap(MapTypes eMap)
 {	
-	//bool bInitial = false;
+	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eMap);
+	FAssert(eMap != CURRENT_MAP);
 
 	GC.getMap().beforeSwitch();
-
-	if (eMap > NO_MAP && eMap < GC.getNumMapInfos())
-		GC.getGame().setCurrentMap(eMap);
-
+	GC.getGame().setCurrentMap(eMap);
 	GC.getMap().afterSwitch();
 }
 
 CvViewport* cvInternalGlobals::getCurrentViewport() const
 {
-	return m_maps[GC.getGame().getCurrentMap()]->getCurrentViewport();
+	return m_maps[CURRENT_MAP]->getCurrentViewport();
 }
 
 int	cvInternalGlobals::getViewportSizeX() const
 {
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[GC.getGame().getCurrentMap()]->getGridWidth()) : m_maps[GC.getGame().getCurrentMap()]->getGridWidth();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[CURRENT_MAP]->getGridHeight()) : m_maps[CURRENT_MAP]->getGridWidth();
 }
 
 int	cvInternalGlobals::getViewportSizeY() const
 {
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[GC.getGame().getCurrentMap()]->getGridHeight()) : m_maps[GC.getGame().getCurrentMap()]->getGridHeight();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[CURRENT_MAP]->getGridHeight()) : m_maps[CURRENT_MAP]->getGridHeight();
 }
 
 int	cvInternalGlobals::getViewportSelectionBorder() const
@@ -3430,6 +3332,11 @@ void cvInternalGlobals::initializeMap(MapTypes eMap)
 	FAssertMsg(m_maps[eMap] == NULL, "Memory leak allocating a map that already exists");
 
 	m_maps[eMap] = new CvMap(eMap);
+
+	for (int i = 0; i < MAX_PLAYERS; i++)
+	{
+		GET_PLAYER((PlayerTypes)i).initContainersForMap(eMap);
+	}
 	OutputDebugString("Initializing Map: End\n");
 }
 
@@ -3437,7 +3344,6 @@ bool cvInternalGlobals::mapInitialized(MapTypes eMap) const
 {
 	return (m_maps.size() > (size_t)eMap && m_maps[eMap] != NULL);
 }
-
 
 /*******************************/
 /***** Parallel Maps - End *****/
