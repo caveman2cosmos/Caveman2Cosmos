@@ -390,14 +390,14 @@ class CvCorporationScreen:
 			if (iLinkCorporation == -1):
 				bFirst = True
 				for iI in range(len(lCorporations)):
-					szTempBuffer = CyGameTextMgr().getCorporationHelpCity(lCorporations[iI], pLoopCity.GetCy(), False, False)
+					szTempBuffer = CyGameTextMgr().getCorporationHelpCity(lCorporations[iI], pLoopCity, False, False)
 					if (szTempBuffer):
 						if (not bFirst):
 							szCityName += u", "
 						szCityName += szTempBuffer
 						bFirst = False
 			else:
-				szCityName += CyGameTextMgr().getCorporationHelpCity(iLinkCorporation, pLoopCity.GetCy(), False, True)
+				szCityName += CyGameTextMgr().getCorporationHelpCity(iLinkCorporation, pLoopCity, False, True)
 
 			if bFirstColumn:
 				szLeftCities += u"<font=3>" + szCityName + u"</font>\n"

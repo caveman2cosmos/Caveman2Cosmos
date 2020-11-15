@@ -478,14 +478,14 @@ class CvReligionScreen:
 					bFirst = True
 					sHelp = ""
 					for iI in range(len(lReligions)):
-						szTempBuffer = CyGameTextMgr().getReligionHelpCity(lReligions[iI], pLoopCity.GetCy(), False, False, False, True)
+						szTempBuffer = CyGameTextMgr().getReligionHelpCity(lReligions[iI], pLoopCity, False, False, False, True)
 						if (szTempBuffer):
 							if (not bFirst):
 								sHelp += u", "
 							sHelp += szTempBuffer
 							bFirst = False
 				else:
-					sHelp = CyGameTextMgr().getReligionHelpCity(iLinkReligion, pLoopCity.GetCy(), False, False, True, False)
+					sHelp = CyGameTextMgr().getReligionHelpCity(iLinkReligion, pLoopCity, False, False, True, False)
 
 				screen.setTableText(self.TABLE_ID, self.COL_EFFECTS, iCity, sHelp, "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
@@ -524,18 +524,18 @@ class CvReligionScreen:
 					for iI in range(len(lReligions)):
 						if (iLinkReligion > -1):
 							if (lReligions[iI] == iLinkReligion):
-								szTempBuffer = CyGameTextMgr().getReligionHelpCity(iLinkReligion, pLoopCity.GetCy(), False, False, True, False)
+								szTempBuffer = CyGameTextMgr().getReligionHelpCity(iLinkReligion, pLoopCity, False, False, True, False)
 							else:
-								szTempBuffer = CyGameTextMgr().getReligionHelpCity(lReligions[iI], pLoopCity.GetCy(), False, False, False, True)
+								szTempBuffer = CyGameTextMgr().getReligionHelpCity(lReligions[iI], pLoopCity, False, False, False, True)
 						else:
-							szTempBuffer = CyGameTextMgr().getReligionHelpCity(lReligions[iI], pLoopCity.GetCy(), False, False, False, True)
+							szTempBuffer = CyGameTextMgr().getReligionHelpCity(lReligions[iI], pLoopCity, False, False, False, True)
 							if (szTempBuffer):
 								if (not bFirst):
 									szCityName += u", "
 								szCityName += szTempBuffer
 								bFirst = False
 				else:
-					szCityName += CyGameTextMgr().getReligionHelpCity(iLinkReligion, pLoopCity.GetCy(), False, False, True, False)
+					szCityName += CyGameTextMgr().getReligionHelpCity(iLinkReligion, pLoopCity, False, False, True, False)
 				#phungus Enlightened End
 
 				if bFirstColumn:
@@ -651,20 +651,3 @@ class CvReligionScreen:
 			if (-1 == self.iReligionSelected):
 				self.iReligionSelected = GC.getNumReligionInfos()
 			self.drawCityInfo(self.iReligionSelected)
-
-	def calculateBuilding (self, city, bldg):
-		if city.getNumBuilding(bldg) > 0:
-			return self.objectHave
-#			if city.getNumActiveBuilding(bldg) > 0:
-#				return self.objectHave
-#			else:
-#				return self.objectHaveObsolete
-		elif city.GetCy().getFirstBuildingOrder(bldg) != -1:
-			return self.objectUnderConstruction
-		elif city.GetCy().canConstruct(bldg, False, False, False):
-			return self.objectPossible
-		elif city.GetCy().canConstruct(bldg, True, False, False):
-			return self.objectPossibleConcurrent
-		else:
-			return self.objectNotPossible
-
