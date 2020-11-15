@@ -10747,56 +10747,57 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 
 bool CvUnit::spread(ReligionTypes eReligion)
 {
-	CvCity* pCity;
-	CvWString szBuffer;
-	int iSpreadProb;
-
 	if (!canSpread(plot(), eReligion))
 	{
 		return false;
 	}
-
-	pCity = plot()->getPlotCity();
+	CvCity* pCity = plot()->getPlotCity();
 
 	if (pCity != NULL)
 	{
-		iSpreadProb = m_pUnitInfo->getReligionSpreads(eReligion);
-
-		if ((ReligionTypes)GET_PLAYER(getOwner()).getStateReligion() == eReligion)
+		if (GC.getGame().isReligionFounded(eReligion))
 		{
-			iSpreadProb += GET_PLAYER(getOwner()).getExtraStateReligionSpreadModifier();
-		}
-		if ((ReligionTypes)GET_PLAYER(getOwner()).getStateReligion() != eReligion)
-		{
-			iSpreadProb += GET_PLAYER(getOwner()).getExtraNonStateReligionSpreadModifier();
-		}
+			int iSpreadProb = m_pUnitInfo->getReligionSpreads(eReligion);
 
-		if (pCity->getTeam() != getTeam())
-		{
-			iSpreadProb /= 2;
-		}
-
-		iSpreadProb += (((GC.getNumReligionInfos() - pCity->getReligionCount()) * (100 - iSpreadProb)) / GC.getNumReligionInfos());
-		const bool bSuccess = GC.getGame().getSorenRandNum(100, "Unit Spread Religion") < iSpreadProb;
-
-		// Python Event
-		CvEventReporter::getInstance().unitSpreadReligionAttempt(this, eReligion, bSuccess);
-
-		if (!bSuccess)
-		{
-			if (!pCity->isHasReligion(eReligion)) // Python event above may make this true
+			if ((ReligionTypes)GET_PLAYER(getOwner()).getStateReligion() == eReligion)
 			{
-				MEMORY_TRACK_EXEMPT();
-
-				szBuffer = gDLL->getText("TXT_KEY_MISC_RELIGION_FAILED_TO_SPREAD", getNameKey(), GC.getReligionInfo(eReligion).getChar(), pCity->getNameKey());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NOSPREAD", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pCity->getX(), pCity->getY());
+				iSpreadProb += GET_PLAYER(getOwner()).getExtraStateReligionSpreadModifier();
 			}
+			else iSpreadProb += GET_PLAYER(getOwner()).getExtraNonStateReligionSpreadModifier();
+
+			if (pCity->getTeam() != getTeam())
+			{
+				iSpreadProb /= 2;
+			}
+
+			iSpreadProb += (GC.getNumReligionInfos() - pCity->getReligionCount()) * (100 - iSpreadProb) / GC.getNumReligionInfos();
+			const bool bSuccess = GC.getGame().getSorenRandNum(100, "Unit Spread Religion") < iSpreadProb;
+
+			// Python Event
+			CvEventReporter::getInstance().unitSpreadReligionAttempt(this, eReligion, bSuccess);
+
+			if (!bSuccess)
+			{
+				// Python event above may have spread the religion, it's fine if it did.
+				if (!pCity->isHasReligion(eReligion))
+				{
+					MEMORY_TRACK_EXEMPT();
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_RELIGION_FAILED_TO_SPREAD",
+							getNameKey(),
+							GC.getReligionInfo(eReligion).getChar(),
+							pCity->getNameKey()
+						),
+						"AS2D_NOSPREAD", MESSAGE_TYPE_INFO, getButton(),
+						GC.getCOLOR_RED(), pCity->getX(), pCity->getY()
+					);
+				}
+			}
+			else pCity->setHasReligion(eReligion, true, true, false);
 		}
-		else if (GC.getGame().isReligionFounded(eReligion))
-		{
-			pCity->setHasReligion(eReligion, true, true, false);
-		}
-		else
+		else // Divine Prophet is founding religion here; always 100% chance.
 		{
 			GC.getGame().setHolyCity(eReligion, pCity, true);
 			GC.getGame().setReligionSlotTaken(eReligion, true);
