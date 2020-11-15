@@ -122,14 +122,13 @@ void CyGlobalContext::setIsInPedia(bool isInPedia)
 CyPlayer* CyGlobalContext::getCyPlayer(int idx) const
 {
 	static CyPlayer cyPlayers[MAX_PLAYERS];
-	static bool bInit=false;
+	static bool bInit = false;
 
 	if (!bInit)
 	{
-		int i;
-		for(i=0;i<MAX_PLAYERS;i++)
-			cyPlayers[i]=CyPlayer(&GET_PLAYER((PlayerTypes)i));
-		bInit=true;
+		for (int i = 0; i < MAX_PLAYERS; i++)
+			cyPlayers[i] = CyPlayer(GET_PLAYER((PlayerTypes)i));
+		bInit = true;
 	}
 
 	if (idx >= 0 && idx < MAX_PLAYERS)

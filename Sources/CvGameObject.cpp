@@ -1901,7 +1901,7 @@ void CvGameObjectTeam::disposePythonWrapper(void *pArgument)
 
 void* CvGameObjectPlayer::createPythonWrapper(PyObject*& pyObj)
 {
-	CyPlayer* wrapper = new CyPlayer(m_pPlayer);
+	CyPlayer* wrapper = new CyPlayer(*m_pPlayer);
 	pyObj = gDLL->getPythonIFace()->makePythonObject(wrapper);
 	return wrapper;
 }
