@@ -10776,35 +10776,25 @@ bool CvUnit::spread(ReligionTypes eReligion)
 			iSpreadProb /= 2;
 		}
 
-		bool bSuccess;
-
 		iSpreadProb += (((GC.getNumReligionInfos() - pCity->getReligionCount()) * (100 - iSpreadProb)) / GC.getNumReligionInfos());
+		const bool bSuccess = GC.getGame().getSorenRandNum(100, "Unit Spread Religion") < iSpreadProb;
 
-		if (GC.getGame().getSorenRandNum(100, "Unit Spread Religion") < iSpreadProb)
-		{
-//TB Prophet Mod start
-//FfH: Modified by Kael 10/04/2008
-            if (GC.getGame().isReligionFounded(eReligion))
-            {
-                pCity->setHasReligion(eReligion, true, true, false);
-            }
-            else
-            {
-                pCity->setHasReligion(eReligion, true, true, false);
-                GC.getGame().setHolyCity(eReligion, pCity, true);
-                GC.getGame().setReligionSlotTaken(eReligion, true);
-            }
-//FfH: End Modify
-//TB Prophet Mod end
-			bSuccess = true;
-		}
-		else
+		if (!bSuccess)
 		{
 			MEMORY_TRACK_EXEMPT();
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_RELIGION_FAILED_TO_SPREAD", getNameKey(), GC.getReligionInfo(eReligion).getChar(), pCity->getNameKey());
 			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NOSPREAD", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pCity->getX(), pCity->getY());
-			bSuccess = false;
+		}
+		else if (GC.getGame().isReligionFounded(eReligion))
+		{
+			pCity->setHasReligion(eReligion, true, true, false);
+		}
+		else
+		{
+			GC.getGame().setHolyCity(eReligion, pCity, true);
+			GC.getGame().setReligionSlotTaken(eReligion, true);
+			pCity->setHasReligion(eReligion, true, true, false);
 		}
 
 		// Python Event
