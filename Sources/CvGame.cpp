@@ -10,9 +10,6 @@
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 
-// Discord RPC
-#include "discord.h"
-
 //	Koshling - save game compatibility between (most) builds
 //	UI flag values in game serialization.  These are bitwise combinable
 #define	GAME_SAVE_UI_FLAG_VALUE_AND_BASE		0x00000001
@@ -3219,15 +3216,6 @@ int CvGame::countCivPlayersAlive() const
 		}
 	}
 
-	// Discord RPC
-	if (getBugOptionBOOL("MainInterface__EnableRP", false)) {
-		RPCDATA rpc;
-		GIVEDEFAULTRPCVALS(rpc);
-		rpc.playersAlive = iCount;
-		pDiscord->sendNewRpcDetails(rpc);
-
-		pDiscord->ensureDiscordRPCState();
-	}
 	return iCount;
 }
 
@@ -3245,15 +3233,6 @@ int CvGame::countCivPlayersEverAlive() const
 		}
 	}
 
-	// Discord RPC
-	if (getBugOptionBOOL("MainInterface__EnableRP", false)) {
-		RPCDATA rpc;
-		GIVEDEFAULTRPCVALS(rpc);
-		rpc.playersTotal = iCount;
-		pDiscord->sendNewRpcDetails(rpc);
-
-		pDiscord->ensureDiscordRPCState();
-	}
 	return iCount;
 }
 
@@ -3685,17 +3664,7 @@ int CvGame::getNumHumanPlayers()
 
 int CvGame::getGameTurn()
 {
-	const int turn = GC.getInitCore().getGameTurn();
-	// Discord RPC Update
-	if (getBugOptionBOOL("MainInterface__EnableRP", false)) {
-		RPCDATA rpc;
-		GIVEDEFAULTRPCVALS(rpc);
-		rpc.turn = turn;
-		pDiscord->sendNewRpcDetails(rpc);
-
-		pDiscord->ensureDiscordRPCState();
-	}
-	return turn;
+	return GC.getInitCore().getGameTurn();
 }
 
 
