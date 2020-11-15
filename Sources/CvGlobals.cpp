@@ -13,6 +13,8 @@
 #include <time.h> 
 #include <sstream>
 
+#include "discord.h"
+
 static char gVersionString[1024] = { 0 };
 
 // Use macro override when available. Version string might not be loaded in time for
@@ -739,6 +741,11 @@ void cvInternalGlobals::updateMaps()
 		m_maps.push_back(NULL);
 	}
 	FAssert(m_maps.size() == GC.getNumMapInfos());
+
+	for (int i = 0; i < MAX_PLAYERS; i++)
+	{
+		GET_PLAYER((PlayerTypes)i).addContainersForEachMap();
+	}
 }
 
 void cvInternalGlobals::setResourceLayer(bool bOn)
@@ -802,6 +809,16 @@ CvInfoBase& cvInternalGlobals::getHints(int i) const
 
 int cvInternalGlobals::getNumMainMenus() const
 {
+	pDiscord->ensureDiscordRPCState();
+
+	// Discord RPC detect menu
+	if ((int)m_paMainMenus.size() > 0) {
+		RPCDATA rpc;
+		GIVEDEFAULTRPCVALS(rpc);
+		rpc.turn = -2; // -2 cuz -1 is reserved for undefined
+		pDiscord->sendNewRpcDetails(rpc);
+	}
+
 	return (int)m_paMainMenus.size();
 }
 
@@ -3238,29 +3255,27 @@ void cvInternalGlobals::cacheInfoTypes()
 
 void cvInternalGlobals::switchMap(MapTypes eMap)
 {	
-	//bool bInitial = false;
+	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eMap);
+	FAssert(eMap != CURRENT_MAP);
 
 	GC.getMap().beforeSwitch();
-
-	if (eMap > NO_MAP && eMap < GC.getNumMapInfos())
-		GC.getGame().setCurrentMap(eMap);
-
+	GC.getGame().setCurrentMap(eMap);
 	GC.getMap().afterSwitch();
 }
 
 CvViewport* cvInternalGlobals::getCurrentViewport() const
 {
-	return m_maps[GC.getGame().getCurrentMap()]->getCurrentViewport();
+	return m_maps[CURRENT_MAP]->getCurrentViewport();
 }
 
 int	cvInternalGlobals::getViewportSizeX() const
 {
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[GC.getGame().getCurrentMap()]->getGridWidth()) : m_maps[GC.getGame().getCurrentMap()]->getGridWidth();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[CURRENT_MAP]->getGridHeight()) : m_maps[CURRENT_MAP]->getGridWidth();
 }
 
 int	cvInternalGlobals::getViewportSizeY() const
 {
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[GC.getGame().getCurrentMap()]->getGridHeight()) : m_maps[GC.getGame().getCurrentMap()]->getGridHeight();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[CURRENT_MAP]->getGridHeight()) : m_maps[CURRENT_MAP]->getGridHeight();
 }
 
 int	cvInternalGlobals::getViewportSelectionBorder() const
@@ -3317,6 +3332,11 @@ void cvInternalGlobals::initializeMap(MapTypes eMap)
 	FAssertMsg(m_maps[eMap] == NULL, "Memory leak allocating a map that already exists");
 
 	m_maps[eMap] = new CvMap(eMap);
+
+	for (int i = 0; i < MAX_PLAYERS; i++)
+	{
+		GET_PLAYER((PlayerTypes)i).initContainersForMap(eMap);
+	}
 	OutputDebugString("Initializing Map: End\n");
 }
 
@@ -3324,7 +3344,6 @@ bool cvInternalGlobals::mapInitialized(MapTypes eMap) const
 {
 	return (m_maps.size() > (size_t)eMap && m_maps[eMap] != NULL);
 }
-
 
 /*******************************/
 /***** Parallel Maps - End *****/

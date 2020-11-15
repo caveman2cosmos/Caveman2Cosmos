@@ -5,15 +5,12 @@
 ## Inspiration from zappara to handle new religions, extended to handle new types of buildings and units
 
 from CvPythonExtensions import *
-import PyHelpers
 import ScreenInput
 import CvScreenEnums
 
 import BugUtil
 import BugCore
 AdvisorOpt = BugCore.game.Advisors
-
-PyPlayer = PyHelpers.PyPlayer
 
 # globals
 GC = CyGlobalContext()
@@ -264,7 +261,7 @@ class CvReligionScreen:
 		for iRel in self.RELIGIONS:
 			if GAME.getReligionGameTurnFounded(iRel) >= 0:
 				pHolyCity = GAME.getHolyCity(iRel)
-				if pHolyCity.isNone():
+				if pHolyCity is None:
 					szFounded = localText.getText("TXT_KEY_NONE", ())
 					screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, self.Y_HOLY_CITY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 				elif not pHolyCity.isRevealed(GC.getPlayer(self.iActivePlayer).getTeam(), False):
@@ -295,8 +292,7 @@ class CvReligionScreen:
 		if AdvisorOpt.isReligious():
 			# Count the number of temples and monastery
 			self.BUGConstants()
-			iPlayer = PyPlayer(self.iActivePlayer)
-			cityList = iPlayer.getCityList()
+			cityList = GC.getPlayer(self.iActivePlayer).cities()
 # BUG - start
 			iCities = [0] * self.NUM_RELIGIONS
 			iTemple = [0] * self.NUM_RELIGIONS
@@ -437,8 +433,7 @@ class CvReligionScreen:
 		else:
 			screen.setState(self.getReligionButtonName(GC.getNumReligionInfos()), False)
 
-		iPlayer = PyPlayer(self.iActivePlayer)
-		cityList = iPlayer.getCityList()
+		cityList = GC.getPlayer(self.iActivePlayer).cities()
 
 # start of BUG indent for new code
 		if AdvisorOpt.isReligious():

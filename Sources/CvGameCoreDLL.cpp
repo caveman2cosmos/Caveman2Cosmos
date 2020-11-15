@@ -2,6 +2,12 @@
 
 #include <psapi.h>
 
+//
+// Discord RPC
+//
+#include "discord.h"
+C_DiscordRPCCommunication* pDiscord = nullptr;
+
 static CRITICAL_SECTION g_cPythonSection;
 #ifdef USE_INTERNAL_PROFILER
 static CRITICAL_SECTION cSampleSection;
@@ -86,6 +92,9 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 				}
 			}
 		}
+
+		pDiscord = new C_DiscordRPCCommunication(dllDir);
+		discordWorkDirectory = dllDir;
 		}
 		break;
 	case DLL_THREAD_ATTACH:
@@ -627,7 +636,7 @@ int intSqrt(unsigned int iValue, const bool bTreatNegAsPos)
 }
 
 // Testing alternate version; should compare to see which one is fastest.
-int64_t intSqrt64(uint64_t iValue)
+int64_t intSqrt64(const uint64_t iValue)
 {
 	uint64_t min = 0;
 	uint64_t max = ((uint64_t) 1) << 32;
@@ -648,5 +657,36 @@ int64_t intSqrt64(uint64_t iValue)
 			max = sqt;
 		else min = sqt;
 	}
+}
+
+// int64 pow
+int64_t intPow64(const int64_t x, const int p)
+{
+	if (p <= 0)
+	{
+		if (p == 0)
+			return 1;
+		return 0;
+	}
+	if (p == 1) return x;
+
+	const int64_t iTmp = intPow64(x, p/2);
+	if (p % 2 == 0)
+	{
+		return iTmp * iTmp;
+	}
+	return x * iTmp * iTmp;
+}
+
+// int32 pow
+int intPow(const int x, const int p)
+{
+	const int64_t iResult = intPow64(x, p);
+
+	if (iResult > MAX_INT || iResult < 0)
+	{
+		return MAX_INT;
+	}
+	return static_cast<int>(iResult);
 }
 // ! Toffer

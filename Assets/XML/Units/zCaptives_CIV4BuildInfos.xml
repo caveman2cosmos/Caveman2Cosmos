@@ -453,7 +453,7 @@
 		<BuildInfo>
 			<Type>BUILD_HIGHWAY_SLAVE</Type>
 			<Description>TXT_KEY_BUILD_HIGHWAY_SLAVE</Description>
-			<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
+			<PrereqTech>TECH_HIGHWAY_SYSTEMS</PrereqTech>
 			<iTime>1</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
@@ -1719,7 +1719,7 @@
 		<BuildInfo>
 			<Type>BUILD_PASTURE_SLAVE</Type>
 			<Description>TXT_KEY_BUILD_PASTURE_SLAVE</Description>
-			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iTime>400</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
@@ -1774,7 +1774,7 @@
 		<BuildInfo>
 			<Type>BUILD_HUNTING_CAMP_SLAVE</Type>
 			<Description>TXT_KEY_BUILD_HUNTING_CAMP_SLAVE</Description>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iTime>300</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>

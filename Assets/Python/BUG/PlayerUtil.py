@@ -23,11 +23,6 @@
 ##     Only valid objects that were alive at some point are returned, and they can
 ##     be filtered further by alive, human, barbarian, and/or minor status.
 ##
-##   playerUnits(playerOrID, testFunc), playerCities(playerOrID, testFunc)
-##     Loops over a player's units or cities.
-##   getPlayerUnits(playerOrID, testFunc), getPlayerCities(playerOrID, testFunc)
-##     Returns a list of a player's units or cities.
-##
 ##   getStateReligion(playerOrID)
 ##   getFavoriteCivic(playerOrID)
 ##   getWorstEnemy(playerOrID, askingPlayerOrID)
@@ -40,7 +35,6 @@
 ##   getPossibleEmbargos(playerOrID, askingPlayerOrID)
 ##   getActiveWars(playerOrID, askingPlayerOrID)
 ##   getPossibleWars(playerOrID, askingPlayerOrID)
-##   isWHEOOH(playerOrID, askingPlayerOrID)
 ##     Returns various information regarding the war situation for the given player.
 ##
 ## Visibility
@@ -433,57 +427,6 @@ def getPossibleWars(playerOrID, askingPlayerOrID):
 				wheooh = True
 	return (wheooh, wars)
 
-def isWHEOOH(playerOrID, askingPlayerOrID):
-	"""
-	Returns True if askingPlayerOrID can see that playerOrID is WHEOOH.
-
-	In game terms, this is the case if the player gives the TOO_MANY_WARS denial type
-	for a request to go to war against a rival.
-	"""
-	askedPlayer, askedTeam = getPlayerAndTeam(playerOrID)
-	askingPlayer, askingTeam = getPlayerAndTeam(askingPlayerOrID)
-	if not TradeUtil.canTrade(askingPlayer, askedPlayer):
-		return False
-	tradeData = TradeData()
-	tradeData.ItemType = TradeableItems.TRADE_WAR
-	for player in players(alive=True, barbarian=False, minor=False):
-		eTeam = player.getTeam()
-		if eTeam == askingPlayer.getTeam() or eTeam == askedPlayer.getTeam() or askedTeam.isAtWar(eTeam):
-			# won't DoW your team, their team, or a team they are fighting
-			continue
-		if not ((askingTeam.isHasMet(eTeam) and askedTeam.isHasMet(eTeam)) or gc.getGame().isDebugMode()):
-			# won't DoW someone you or they haven't met
-			continue
-		tradeData.iData = eTeam
-		if askedPlayer.canTradeItem(askingPlayer.getID(), tradeData, False):
-			denial = askedPlayer.getTradeDenial(askingPlayer.getID(), tradeData)
-			if denial == DenialTypes.DENIAL_TOO_MANY_WARS:
-				return True
-	return False
-
-def isGivingFavoriteCivicDenial(playerOrID, askingPlayerOrID):
-	"""
-	Returns True if askingPlayerOrID can see that playerOrID is refusing Civic changes
-	because of the "that would go against everything we stand for" FAVORITE_CIVIC denial.
-
-	In the unmodified game, this denial type will show for every available civic choice
-	so long as they are running their favorite civic; so we can't tell which civic is the
-	favorite, but we do know that one of their current civics is the favorite one.
-	"""
-	tradeData = TradeData()
-	tradeData.ItemType = TradeableItems.TRADE_CIVIC
-	askedPlayer, askedTeam = getPlayerAndTeam(playerOrID)
-	askingPlayer, askingTeam = getPlayerAndTeam(askingPlayerOrID)
-	if askingTeam.isHasMet(askedTeam.getID()):
-		for iCategory in range(gc.getNumCivicOptionInfos()):
-			iCivic = askingPlayer.getCivics(iCategory)
-			tradeData.iData = iCivic
-			if askedPlayer.canTradeItem(askingPlayer.getID(), tradeData, False):
-				denial = askedPlayer.getTradeDenial(askingPlayer.getID(), tradeData)
-				if denial == DenialTypes.DENIAL_FAVORITE_CIVIC:
-					return True
-	return False
-
 
 ## Cities
 
@@ -539,41 +482,6 @@ def playerCities(playerOrID, testFunc=None):
 	player = getPlayer(playerOrID)
 	city, iter = player.firstCity(False)
 	while city:
-		if not city.isNone() and (testFunc is None or testFunc(city)):
+		if testFunc is None or testFunc(city):
 			yield city
 		city, iter = player.nextCity(iter, False)
-
-def getPlayerCities(playerOrID, testFunc=None):
-	"""
-	Creates and returns a list containing all the CyCitys owned by the given player.
-
-	If testFunc is given, only cities for which it returns True are returned.
-	"""
-	return [city for city in playerCities(playerOrID, testFunc)]
-
-
-## Units
-
-def playerUnits(playerOrID, testFunc=None):
-	"""
-	Creates an iterator for the CyUnits owned by the given player.
-
-	If testFunc is given, only units for which it returns True are returned.
-
-	for unit in PlayerUtil.playerUnits(PlayerUtil.getActivePlayerID()):
-		...
-	"""
-	player = getPlayer(playerOrID)
-	unit, iter = player.firstUnit(False)
-	while unit:
-		if not unit.isDead() and (testFunc is None or testFunc(unit)):
-			yield unit
-		unit, iter = player.nextUnit(iter, False)
-
-def getPlayerUnits(playerOrID, testFunc=None):
-	"""
-	Creates and returns a list containing all the CyUnits owned by the given player.
-
-	If testFunc is given, only units for which it returns True are returned.
-	"""
-	return [unit for unit in playerUnits(playerOrID, testFunc)]

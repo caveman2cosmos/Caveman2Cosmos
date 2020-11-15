@@ -12,7 +12,6 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 	OutputDebugString("Python Extension Module - CyCityPythonInterface1\n");
 
 	x
-		.def("isNone", &CyCity::isNone, "void () - is the instance valid?")
 		.def("kill", &CyCity::kill, "void () - kill the city")
 
 		.def("getCityIndexPlot", &CyCity::getCityIndexPlot, python::return_value_policy<python::manage_new_object>(), "CyPlot* (int iIndex)")		
@@ -86,6 +85,8 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("isHolyCityByType", &CyCity::isHolyCityByType, "bool (ReligionID) - is the city ReligionID's holy city?")
 		.def("isHolyCity", &CyCity::isHolyCity, "bool () - is the city ReligionID's holy city?")
 		.def("isHeadquartersByType", &CyCity::isHeadquartersByType, "bool (CorporationID) - is the city CorporationID's headquarters?")
+		.def("getHeadquarters", &CyCity::getHeadquarters)
+		.def("getCorporations", &CyCity::getCorporations)
 		.def("getNoMilitaryPercentAnger", &CyCity::getNoMilitaryPercentAnger, "int ()")
 		.def("getWarWearinessPercentAnger", &CyCity::getWarWearinessPercentAnger, "int ()")
 		.def("unhappyLevel", &CyCity::unhappyLevel, "int (int iExtra)")
@@ -105,8 +106,8 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("flatHurryAngerLength", &CyCity::flatHurryAngerLength, "int ()")
 
 		.def("getNumBuilding", &CyCity::getNumBuilding, "int - (BuildingID) - How many BuildingID does this city have (real or free)?")
-		.def("isHasBuilding", &CyCity::isHasBuilding, "bool (int iBuildingID) - This function actually no longer exists in C++, this is a helper function which hooks up to getNumBuilding() to help mod backwards compatibility")
 		.def("getNumActiveBuilding", &CyCity::getNumActiveBuilding, "bool (BuildingID) - is BuildingID active in the city (present & not obsolete)?")
+		.def("isFreeBuilding", &CyCity::isFreeBuilding, "bool (BuildingID)")
 		.def("getID", &CyCity::getID, "int () - index ID # for the city - use with pPlayer.getCity(ID) to obtain city instance")
 		.def("getX", &CyCity::getX, "int () - X coordinate for the cities plot")
 		.def("getY", &CyCity::getY, "int () - Y coordinate for the cities plot")

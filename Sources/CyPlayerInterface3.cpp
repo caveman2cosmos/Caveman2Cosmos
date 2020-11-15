@@ -4,6 +4,9 @@
 #include "CySelectionGroup.h"
 #include "CyUnit.h"
 
+//
+// published python interface for CyPlayer
+//
 
 void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 {
@@ -56,9 +59,7 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getRevIdxNational", &CyPlayer::getRevIdxNational, "int ()")
 		.def("canFoundReligion", &CyPlayer::canFoundReligion, "bool ()")
 
-
 		.def("getNumMilitaryUnits", &CyPlayer::getNumMilitaryUnits, "int ()")
-
 
 		.def("getOverflowResearch", &CyPlayer::getOverflowResearch, "int ()")
 		.def("isBuildingOnlyHealthy", &CyPlayer::isBuildingOnlyHealthy, "bool ()")
@@ -190,12 +191,13 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getNumCityNames", &CyPlayer::getNumCityNames, "int ()")
 		.def("getCityName", &CyPlayer::getCityName, "std::wstring (int iIndex)")
 
-		.def("cities", &CyPlayer::cities/*, python::return_value_policy<python::manage_new_object>()*/)
+		.def("cities", &CyPlayer::cities)
 		.def("firstCity", &CyPlayer::firstCity, "tuple(CyCity, int iterOut) (bool bReverse) - gets the first city")
 		.def("nextCity", &CyPlayer::nextCity, "tuple(CyCity, int iterOut) (int iterIn, bool bReverse) - gets the next city")
 		.def("getNumCities", &CyPlayer::getNumCities, "int ()")
 		.def("getCity", &CyPlayer::getCity, python::return_value_policy<python::manage_new_object>(), "CyCity* (int iID)")
 
+		.def("units", &CyPlayer::units)
 		.def("firstUnit", &CyPlayer::firstUnit, "tuple(CyUnit, int iterOut) (bool bReverse) - gets the first unit")
 		.def("nextUnit", &CyPlayer::nextUnit, "tuple(CyUnit, int iterOut) (int iterIn, bool bReverse) - gets the next unit")
 		.def("getNumUnits", &CyPlayer::getNumUnits, "int ()")

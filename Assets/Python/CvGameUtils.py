@@ -199,8 +199,8 @@ class CvGameUtils:
 
 	def cannotMaintain(self, argsList):
 		CyCity, iProcess, bContinue, = argsList
-		if not CyCity or CyCity and CyCity.isNone():
-			print "not CyCity or CyCity and CyCity.isNone()"
+		if not CyCity:
+			print "CyCity == None"
 			print "CyCity, iProcess, bContinue", argsList
 			return False
 
@@ -454,11 +454,6 @@ class CvGameUtils:
 		#iPlayer = argsList[0]
 		return -1
 
-	# Returns the value for founding a city in a specific plot.
-	def getCityFoundValue(self, argsList):
-		#iPlayer, iPlotX, iPlotY = argsList
-		return -1
-
 	def canPickPlot(self, argsList):
 		#pPlot = argsList[0]
 		return true
@@ -679,7 +674,7 @@ class CvGameUtils:
 					lBuildings = []
 					lWonders = []
 					for i in xrange(GC.getNumBuildingInfos()):
-						if pCity.isHasBuilding(i):
+						if pCity.getNumBuilding(i):
 							if isLimitedWonder(i):
 								lWonders.append(GC.getBuildingInfo(i).getDescription())
 							else:

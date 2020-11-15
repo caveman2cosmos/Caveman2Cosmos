@@ -26,7 +26,6 @@ public:
 	DllExport explicit CyCity(CvCity* pCity);		// Call from C++
 
 	CvCity* getCity() const { return m_pCity; }	// Call from C++
-	bool isNone() const { return m_pCity == NULL; }
 
 	void kill();
 
@@ -123,6 +122,8 @@ public:
 	bool isHolyCityByType(int /*ReligionTypes*/ iIndex) const;
 	bool isHolyCity() const;
 	bool isHeadquartersByType(int /*CorporationTypes*/ iIndex) const;
+	python::list getHeadquarters() const;
+	python::list getCorporations() const;
 	int getNoMilitaryPercentAnger() const;
 	int getWarWearinessPercentAnger() const;
 
@@ -145,8 +146,8 @@ public:
 	int flatHurryAngerLength() const;
 
 	int getNumBuilding(int /*BuildingTypes*/ iIndex) const;
-	bool isHasBuilding(int /*BuildingTypes*/ iIndex) const;		// This is a function to help modders out, since it was replaced with getNumBuildings() in the C++
 	int getNumActiveBuilding(int /*BuildingTypes*/ iIndex) const;
+	bool isFreeBuilding(int /*BuildingTypes*/ iIndex) const;
 	int getID() const;
 	int getX() const;
 	int getY() const;

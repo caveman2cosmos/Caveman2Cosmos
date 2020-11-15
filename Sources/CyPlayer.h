@@ -21,10 +21,6 @@ public:
 	const CvPlayer* getPlayer() const { return m_pPlayer; } // Call from C++
 	bool isNone() const { return m_pPlayer == NULL; }
 
-#ifdef PARALLEL_MAPS
-	void updateMembers();
-	void initMembers(int iIndex);
-#endif
 	void changeLeader( int /*LeaderHeadTypes*/ eNewLeader );
 	void changeCiv( int /*CivilizationTypes*/ eNewCiv );
 	void setIsHuman( bool bNewValue );
@@ -69,7 +65,7 @@ public:
 	std::wstring getNameKey();
 	std::wstring getCivilizationDescription(int iForm);
 
-	void setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::wstring szNewAdj);
+	void setCivName(const std::wstring szNewDesc, const std::wstring szNewShort, const std::wstring szNewAdj);
 
 	std::wstring getCivilizationDescriptionKey();
 	std::wstring getCivilizationShortDescription(int iForm);
@@ -359,7 +355,7 @@ public:
 	int getStateReligionBuildingProductionModifier();
 	void changeStateReligionBuildingProductionModifier(int iChange);
 	int getStateReligionFreeExperience();
-	CyCity* getCapitalCity();
+	CyCity* getCapitalCity() const;
 	int getCitiesLost();
 
 	int getWinsVsBarbs();
@@ -508,6 +504,7 @@ public:
 	int getNumCities();
 	CyCity* getCity(int iID);
 
+	python::list units() const;
 	python::tuple firstUnit(bool bRev); // returns tuple of (CyUnit, iterOut)
 	python::tuple nextUnit(int iterIn, bool bRev); // returns tuple of (CyUnit, iterOut)
 	int getNumUnits();

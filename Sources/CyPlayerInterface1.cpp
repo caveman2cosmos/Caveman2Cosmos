@@ -17,24 +17,20 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 	x
 		.def("isNone", &CyPlayer::isNone, "checks for a null player")
 
-#ifdef PARALLEL_MAPS
-		.def("updateMembers", &CyPlayer::updateMembers, "void ()")
-		.def("initMembers", &CyPlayer::initMembers, "void (int iIndex)")
-#endif
-		.def( "changeLeader", &CyPlayer::changeLeader, "void ( int /*LeaderHeadTypes*/ eNewLeader ) - change leader of player")
-		.def( "changeCiv", &CyPlayer::changeCiv, "void ( int /*CivilizationTypes*/ eNewCiv ) - change civilization of player" )
-		.def( "setIsHuman", &CyPlayer::setIsHuman, "void ( bool bNewValue ) - set whether player is human" )
-		.def( "setIsRebel", &CyPlayer::setIsRebel, "void ( bool bNewValue ) - set whether the player is considered a rebel" )
-		.def( "isRebel", &CyPlayer::isRebel, "bool ( ) - true if player is a rebel" )
+		.def("changeLeader", &CyPlayer::changeLeader, "void (int /*LeaderHeadTypes*/ eNewLeader ) - change leader of player")
+		.def("changeCiv", &CyPlayer::changeCiv, "void (int /*CivilizationTypes*/ eNewCiv ) - change civilization of player")
+		.def("setIsHuman", &CyPlayer::setIsHuman, "void (bool bNewValue) - set whether player is human")
+		.def("setIsRebel", &CyPlayer::setIsRebel, "void (bool bNewValue) - set whether the player is considered a rebel")
+		.def("isRebel", &CyPlayer::isRebel, "bool () - true if player is a rebel")
 
-		.def("isDoNotBotherStatus", &CyPlayer::isDoNotBotherStatus, "bool (int /*PlayerTypes*/ playerID ) - set if player instructed not to contact playerID" )
+		.def("isDoNotBotherStatus", &CyPlayer::isDoNotBotherStatus, "bool (int /*PlayerTypes*/ playerID) - set if player instructed not to contact playerID" )
 
 		.def("startingPlotRange", &CyPlayer::startingPlotRange, "int ()")
 		.def("startingPlotWithinRange", &CyPlayer::startingPlotWithinRange, "bool (CyPlot *pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass)")
 
 		.def("findStartingPlot", &CyPlayer::findStartingPlot, python::return_value_policy<python::manage_new_object>(), "findStartingPlot(bool bRandomize) - Finds a starting plot for player")
 
-		.def("initCity", &CyPlayer::initCity, python::return_value_policy<python::manage_new_object>(), "initCity( plotX, plotY ) - spawns a city at x,y")
+		.def("initCity", &CyPlayer::initCity, python::return_value_policy<python::manage_new_object>(), "initCity(plotX, plotY) - spawns a city at x,y")
 		.def("acquireCity", &CyPlayer::acquireCity, "void (CyCity* pCity, bool bConquest, bool bTrade)")
 		.def("killCities", &CyPlayer::killCities, "void ()")
 
@@ -51,7 +47,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("isHominid", &CyPlayer::isHominid, "bool () - returns True if player is a Hominid")
 		.def("getName", &CyPlayer::getName, "str ()")
 
-		.def("setName", &CyPlayer::setName, "void(std::wstring szNewValue)" ) // Exposed to Python
+		.def("setCivName", &CyPlayer::setCivName)
+		.def("setName", &CyPlayer::setName, "void (std::wstring szNewValue)")
 		.def("getNameForm", &CyPlayer::getNameForm, "str ()")
 		.def("getNameKey", &CyPlayer::getNameKey, "str ()")
 		.def("getCivilizationDescription", &CyPlayer::getCivilizationDescription, "str() - returns the Civilization Description String")
@@ -71,8 +68,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 
 		.def("countNumCoastalCities", &CyPlayer::countNumCoastalCities, "int ()")
 
-		.def("countOwnedBonuses", &CyPlayer::countOwnedBonuses, "int (int (BonusTypes) eBonus) - ")
-		.def("countNumBuildings", &CyPlayer::countNumBuildings, "int (int /*BuildingTypes*/ eBuilding) - Returns the number of buildings?")
+		.def("countOwnedBonuses", &CyPlayer::countOwnedBonuses, "int (int (BonusTypes) eBonus) ")
+		.def("countNumBuildings", &CyPlayer::countNumBuildings, "int (int /*BuildingTypes*/ eBuilding) - Returns the number of buildings")
 
 		.def("canContact", &CyPlayer::canContact, "bool (int ePlayer)")
 		.def("contact", &CyPlayer::contact, "void (int ePlayer)")

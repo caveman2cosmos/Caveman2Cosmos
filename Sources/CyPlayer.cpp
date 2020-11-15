@@ -1,3 +1,4 @@
+#include "CvCity.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvPlayerAI.h"
@@ -20,17 +21,6 @@ CyPlayer::CyPlayer(CvPlayer* pPlayer) : m_pPlayer(pPlayer)
 {
 }
 
-#ifdef PARALLEL_MAPS
-void CyPlayer::updateMembers()
-{
-	m_pPlayer->updateMembers();
-}
-
-void CyPlayer::initMembers(int iIndex)
-{
-	m_pPlayer->initMembers(iIndex);
-}
-#endif
 /************************************************************************************************/
 /* CHANGE_PLAYER                         08/27/08                                 jdog5000      */
 /*                                                                                              */
@@ -274,19 +264,10 @@ std::wstring CyPlayer::getCivilizationDescription(int iForm)
 	return m_pPlayer ? m_pPlayer->getCivilizationDescription((uint)iForm) : std::wstring();
 }
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/* For dynamic civ names                                                                        */
-/************************************************************************************************/
-void CyPlayer::setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::wstring szNewAdj)
+void CyPlayer::setCivName(const std::wstring szNewDesc, const std::wstring szNewShort, const std::wstring szNewAdj)
 {
-	if( m_pPlayer )
-		m_pPlayer->setCivName(szNewDesc, szNewShort, szNewAdj);
+	m_pPlayer->setCivName(szNewDesc, szNewShort, szNewAdj);
 }
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 std::wstring CyPlayer::getCivilizationDescriptionKey()
 {
@@ -1593,9 +1574,11 @@ int CyPlayer::getStateReligionFreeExperience()
 	return m_pPlayer ? m_pPlayer->getStateReligionFreeExperience() : -1;
 }
 
-CyCity* CyPlayer::getCapitalCity()
+CyCity* CyPlayer::getCapitalCity() const
 {
-	return m_pPlayer ? new CyCity(m_pPlayer->getCapitalCity()) : NULL;
+	FAssert(m_pPlayer);
+	CvCity* city = m_pPlayer->getCapitalCity();
+	return city ? new CyCity(city) : NULL;
 }
 
 int CyPlayer::getCitiesLost()
@@ -1905,34 +1888,12 @@ int CyPlayer::getGoldPerTurnByPlayer(int /*PlayerTypes*/ eIndex)
 
 bool CyPlayer::isFeatAccomplished(int /*FeatTypes*/ eIndex)	
 {
-	//TB Something's wrong in the python and this allows me to protect against it.
-	if (eIndex < 0)
-	{
-		FErrorMsg("eIndex is expected to be non-negative (invalid Feat Called by Python and Caught Early)");
-		return false;
-	}
-	if (eIndex >= NUM_FEAT_TYPES)
-	{
-		FErrorMsg("eIndex is expected to be within maximum bounds (invalid Feat Called by Python and Caught Early)");
-		return false;
-	}
 	return m_pPlayer ? m_pPlayer->isFeatAccomplished((FeatTypes)eIndex) : false;
 }
 
 void CyPlayer::setFeatAccomplished(int /*FeatTypes*/ eIndex, bool bNewValue)
 {
-	//TB Something's wrong in the python and this allows me to protect against it.
-	if (eIndex < 0)
-	{
-		FErrorMsg("eIndex is expected to be non-negative (invalid Feat Called by Python and Caught Early)");
-		return;
-	}
-	if(eIndex >= NUM_FEAT_TYPES)
-	{
-		FErrorMsg("eIndex is expected to be within maximum bounds (invalid Feat Called by Python and Caught Early)");
-		return;
-	}
-	else if (m_pPlayer)
+	if (m_pPlayer)
 	{
 		m_pPlayer->setFeatAccomplished((FeatTypes)eIndex, bNewValue);
 	}
@@ -2299,6 +2260,16 @@ int CyPlayer::getNumCities()
 CyCity* CyPlayer::getCity(int iID)
 {
 	return m_pPlayer ? new CyCity(m_pPlayer->getCity(iID)) : NULL;
+}
+
+python::list CyPlayer::units() const
+{
+	python::list list = python::list();
+	foreach_(CvUnit* unit, m_pPlayer->units())
+	{
+		list.append(new CyUnit(unit));
+	}
+	return list;
 }
 
 // returns tuple of (CyUnit, iterOut)

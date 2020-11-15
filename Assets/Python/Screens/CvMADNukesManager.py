@@ -6,10 +6,6 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import PyHelpers
-
-PyPlayer = PyHelpers.PyPlayer
-PyInfo = PyHelpers.PyInfo
 
 # globals
 gc = CyGlobalContext()
