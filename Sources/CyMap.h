@@ -5,14 +5,12 @@
 
 //
 // Python wrapper class for CvMap 
-// SINGLETON
 //
 
 class CyPlot;
 class CvMap;
-class CyCity;
-class CySelectionGroup;
 class CyArea;
+
 class CyMap
 {
 public:
@@ -59,9 +57,6 @@ public:
 
 	void updateVisibility();
 	CyPlot* syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTimeout);
-
-	CyCity* findCity(int iX, int iY, int /*PlayerTypes*/ eOwner, int /*TeamTypes*/ eTeam, bool bSameArea, bool bCoastalOnly, int /*TeamTypes*/ eTeamAtWarWith, int /*DirectionTypes*/ eDirection, CyCity* pSkipCity);
-	CySelectionGroup* findSelectionGroup(int iX, int iY, int /*PlayerTypes*/ eOwner, bool bReadyToSelect, bool bWorkers);
 
 	CyArea* findBiggestArea(bool bWater);
 
