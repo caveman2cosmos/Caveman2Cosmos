@@ -10747,8 +10747,6 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 
 bool CvUnit::spread(ReligionTypes eReligion)
 {
-	CvWString szBuffer;
-
 	if (!canSpread(plot(), eReligion))
 	{
 		return false;
