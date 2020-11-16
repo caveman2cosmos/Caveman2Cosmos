@@ -7429,12 +7429,15 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 	{
 		return -1;
 	}
-	uint64_t iProductionNeeded = (uint64_t)iInitialProduction;
+	uint64_t iProductionNeeded = 100 * iInitialProduction;
 
+	int iModifier = 100;
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	{
+		iModifier += getUnitCountSM(eUnit) * GC.getUnitInfo(eUnit).getInstanceCostModifier();
+	}
+	else iModifier += getUnitCount(eUnit) * GC.getUnitInfo(eUnit).getInstanceCostModifier();
 
-	iProductionNeeded *= 100;
-
-	int iModifier = 100 + getUnitCount(eUnit) * GC.getUnitInfo(eUnit).getInstanceCostModifier();
 	iProductionNeeded *= iModifier;
 	iProductionNeeded /= 100;
 
@@ -7446,11 +7449,7 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 	iProductionNeeded *= iModifier;
 	iProductionNeeded /= 100;
 
-	if (GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
-	{
-		iModifier = GC.getEraInfo((EraTypes)getCurrentEra()).getTrainPercent();
-	}
-	else
+	if (!GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
 	{
 		EraTypes eEra = (EraTypes)GC.getGame().getStartEra();
 		if (GC.getUnitInfo(eUnit).getEraInfo() != NO_ERA)
@@ -7459,6 +7458,8 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 		}
 		iModifier = GC.getEraInfo(eEra).getTrainPercent();
 	}
+	else iModifier = GC.getEraInfo((EraTypes)getCurrentEra()).getTrainPercent();
+
 	iProductionNeeded *= iModifier;
 	iProductionNeeded /= 100;
 
@@ -7492,19 +7493,19 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 			iProductionNeeded /= 100;
 		}
 
-		iModifier = std::max(0, ((GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra()) + 100));
+		iModifier = std::max(0, 100 + GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra());
 		iProductionNeeded *= iModifier;
 		iProductionNeeded /= 100;
 	}
 
 	//The following is where we get the cost for a settler unit (that's ALL this does) and the cost scales to GROWTH factors rather than training factors.
 	//Thus placing it so that training factors influence the cost will cause settlers to be double scaled and the costs to go out of balance as a result.
-	iProductionNeeded += (getUnitExtraCost(eUnit) * 100);
+	iProductionNeeded += 100 * getUnitExtraCost(eUnit);
 
 	// Python cost modifier
-	if(GC.getUSE_GET_UNIT_COST_MOD_CALLBACK())
+	if (GC.getUSE_GET_UNIT_COST_MOD_CALLBACK())
 	{
-		int iResult = Cy::call<bool>(PYGameModule, "getUnitCostMod", Cy::Args() << getID() << eUnit);
+		const int iResult = Cy::call<bool>(PYGameModule, "getUnitCostMod", Cy::Args() << getID() << eUnit);
 		if (iResult > 1)
 		{
 			iProductionNeeded *= iResult;
@@ -7516,12 +7517,9 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 
 	if (iProductionNeeded > MAX_INT)
 	{
-		iProductionNeeded = MAX_INT;
+		return MAX_INT;
 	}
-
-	int iTotal = (int)iProductionNeeded;
-
-	return std::max(1, iTotal);
+	return std::max(1, static_cast<int>(iProductionNeeded));
 }
 
 
@@ -14413,10 +14411,6 @@ void CvPlayer::changeUnitCountSM(const UnitTypes eUnit, const int iChange)
 		if (iChange > 0)
 		{
 			m_unitCountSM.insert(std::make_pair((short)eUnit, iChange));
-			if (getID() == 0)
-			{
-				FErrorMsg(CvString::format("New unit; count = %d", iChange).c_str());
-			}
 		}
 		else FErrorMsg("Expected positive iChange for first unit of a kind");
 	}
@@ -14424,18 +14418,10 @@ void CvPlayer::changeUnitCountSM(const UnitTypes eUnit, const int iChange)
 	{
 		FAssertMsg((int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
 		m_unitCountSM.erase(itr->first);
-		if (getID() == 0)
-		{
-			FErrorMsg(CvString::format("Last unit of type %d lost", eUnit).c_str());
-		}
 	}
 	else // change unit count
 	{
 		m_unitCountSM[itr->first] += iChange;
-		if (getID() == 0)
-		{
-			FErrorMsg(CvString::format("Unit %d Count changed by %d to %d", eUnit, iChange, m_unitCountSM[itr->first]).c_str());
-		}
 	}
 }
 
