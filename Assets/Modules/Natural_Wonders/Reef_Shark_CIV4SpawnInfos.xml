@@ -4,7 +4,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_REEF_SHARK_NATIVE</Type>
 			<UnitType>UNIT_REEF_SHARK</UnitType>
-			<PlayerType>43</PlayerType>
+			<PlayerType>41</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
 			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>

@@ -16167,15 +16167,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Investiga el Taoísmo para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_UNIT_STRENGTH_CHANGE</Tag>
-		<English>[ICON_BULLET]Extra %d1 [ICON_STRENGTH] for %s2</English>
-		<French>[ICON_BULLET]Extra %d1 [ICON_STRENGTH] pour %s2</French>
-		<German>[ICON_BULLET]Zusätzlich %d1 [ICON_STRENGTH] für %s2</German>
-		<Italian>[ICON_BULLET]Extra %d1 [ICON_STRENGTH] per %s2</Italian>
-		<Spanish>[ICON_BULLET]%d1[ICON_STRENGTH] extra por %s2</Spanish>
-		<Polish>[ICON_BULLET]Dodatkowa %d1 [ICON_STRENGTH] dla %s2</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TECH_ZOROASTRIANISM</Tag>
 		<English>Zoroastrianism</English>
 		<French>Zoroastrisme</French>

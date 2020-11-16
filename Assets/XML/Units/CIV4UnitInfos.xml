@@ -6369,7 +6369,6 @@ Base XP gained when defending
 		<UnitInfo>
 			<Type>UNIT_SLEEPER</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SLEEPER</Description>
