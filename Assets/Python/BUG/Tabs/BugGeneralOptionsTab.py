@@ -55,9 +55,6 @@ class BugGeneralOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, right, "MainInterface__MinimizeAITurnSlices")
 		self.addCheckbox(screen, right, "MainInterface__InverseShiftForQueueing")
 
-		self.addLabel(screen, right, "Discord RPC", "Discord RPC:")
-		self.addCheckbox(screen, right, "MainInterface__EnableRP")
-
 		# Graphical Paging and viewport
 		self.addLabel(screen, column, "View", "View options:")
 		left, right = self.addTwoColumnLayout(screen, column, "ViewOptions", False)
