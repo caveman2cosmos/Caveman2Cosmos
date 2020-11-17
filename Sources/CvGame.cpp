@@ -622,7 +622,6 @@ void CvGame::regenerateMap()
 	CvEventReporter::getInstance().mapRegen();
 
 	gDLL->getEngineIFace()->AutoSave(true);
-	Cy::call(PYBugModule, "gameStartSave");
 	// Toffer - Move camera after autosave as the latter interrupts the former from completing succsessfully.
 	GC.getCurrentViewport()->bringIntoView(GET_PLAYER(GC.getGame().getActivePlayer()).getStartingPlot()->getX(), GET_PLAYER(GC.getGame().getActivePlayer()).getStartingPlot()->getY());
 }
@@ -5190,62 +5189,34 @@ VictoryTypes CvGame::getVictory() const
 
 void CvGame::setWinner(TeamTypes eNewWinner, VictoryTypes eNewVictory)
 {
-	CvWString szBuffer;
-
-	if ((getWinner() != eNewWinner) || (getVictory() != eNewVictory))
+	if (m_eWinner != eNewWinner || m_eVictory != eNewVictory)
 	{
 		m_eWinner = eNewWinner;
 		m_eVictory = eNewVictory;
 
-/************************************************************************************************/
-/* AI_AUTO_PLAY_MOD                        07/09/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		CvEventReporter::getInstance().victory(eNewWinner, eNewVictory);
-/************************************************************************************************/
-/* AI_AUTO_PLAY_MOD                        END                                                  */
-/************************************************************************************************/
 
-		if (getVictory() != NO_VICTORY)
+		if (eNewVictory != NO_VICTORY)
 		{
-			if (getWinner() != NO_TEAM)
+			if (eNewWinner != NO_TEAM)
 			{
-				szBuffer = gDLL->getText("TXT_KEY_GAME_WON", GET_TEAM(getWinner()).getName().GetCString(), GC.getVictoryInfo(getVictory()).getTextKeyWide());
-				addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, GET_TEAM(getWinner()).getLeaderID(), szBuffer, -1, -1, GC.getCOLOR_HIGHLIGHT_TEXT());
+				addReplayMessage(
+					REPLAY_MESSAGE_MAJOR_EVENT, GET_TEAM(eNewWinner).getLeaderID(),
+					gDLL->getText(
+						"TXT_KEY_GAME_WON",
+						GET_TEAM(eNewWinner).getName().GetCString(),
+						GC.getVictoryInfo(eNewVictory).getTextKeyWide()
+					),
+					-1, -1, GC.getCOLOR_HIGHLIGHT_TEXT()
+				);
 			}
-/************************************************************************************************/
-/* REVOLUTION_MOD                                                                 lemmy101      */
-/*                                                                                jdog5000      */
-/*                                                                                              */
-/************************************************************************************************/
-			if ((getAIAutoPlay(getActivePlayer()) > 0) || gDLL->GetAutorun())
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+			if (getAIAutoPlay(getActivePlayer()) > 0 || gDLL->GetAutorun())
 			{
 				setGameState(GAMESTATE_EXTENDED);
 			}
-			else
-			{
-				setGameState(GAMESTATE_OVER);
-			}
+			else setGameState(GAMESTATE_OVER);
 		}
-
 		gDLL->getInterfaceIFace()->setDirty(Center_DIRTY_BIT, true);
-
-/************************************************************************************************/
-/* AI_AUTO_PLAY_MOD                        07/09/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/* original code
-		CvEventReporter::getInstance().victory(eNewWinner, eNewVictory);
-*/
-/************************************************************************************************/
-/* AI_AUTO_PLAY_MOD                        END                                                  */
-/************************************************************************************************/
-
 		gDLL->getInterfaceIFace()->setDirty(Soundtrack_DIRTY_BIT, true);
 	}
 }
@@ -5259,17 +5230,13 @@ GameStateTypes CvGame::getGameState() const
 
 void CvGame::setGameState(GameStateTypes eNewValue)
 {
-	if (getGameState() != eNewValue)
+	if (m_eGameState != eNewValue)
 	{
 		m_eGameState = eNewValue;
 
 		if (eNewValue == GAMESTATE_OVER)
 		{
-			CvEventReporter::getInstance().gameEnd();
-
-// BUG - AutoSave - start
-			Cy::call(PYBugModule, "gameEndSave");
-// BUG - AutoSave - end
+			CvEventReporter::getInstance().gameEnd(getGameTurn());
 
 			showEndGameSequence();
 
@@ -5286,7 +5253,6 @@ void CvGame::setGameState(GameStateTypes eNewValue)
 				}
 			}
 		}
-
 		gDLL->getInterfaceIFace()->setDirty(Cursor_DIRTY_BIT, true);
 	}
 }

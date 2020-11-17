@@ -1682,21 +1682,15 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 		break;
 
 	case CONTROL_RETIRE:
-		if ((getGameState() == GAMESTATE_ON) || isGameMultiPlayer())
+		if ((getGameState() == GAMESTATE_ON || isGameMultiPlayer()) && GET_PLAYER(getActivePlayer()).isAlive())
 		{
-			if (GET_PLAYER(getActivePlayer()).isAlive())
+			if (!isPbem() && !isHotSeat())
 			{
-				if (isPbem() || isHotSeat())
-				{
-					if (!GET_PLAYER(getActivePlayer()).isEndTurn())
-					{
-						return true;
-					}
-				}
-				else
-				{
-					return true;
-				}
+				return true;
+			}
+			if (!GET_PLAYER(getActivePlayer()).isEndTurn())
+			{
+				return true;
 			}
 		}
 		break;
@@ -2003,17 +1997,14 @@ void CvGame::doControl(ControlTypes eControl)
 				gDLL->getInterfaceIFace()->setDirty(Soundtrack_DIRTY_BIT, true);
 			}
 		}
+		else if (isNetworkMultiPlayer())
+		{
+			gDLL->sendMPRetire();
+			gDLL->getInterfaceIFace()->exitingToMainMenu();
+		}
 		else
 		{
-			if (isNetworkMultiPlayer())
-			{
-				gDLL->sendMPRetire();
-				gDLL->getInterfaceIFace()->exitingToMainMenu();
-			}
-			else
-			{
-				gDLL->handleRetirement(getActivePlayer());
-			}
+			gDLL->handleRetirement(getActivePlayer());
 		}
 		break;
 
