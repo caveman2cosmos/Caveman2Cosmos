@@ -2536,25 +2536,9 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 	if (bConquest)
 	{
-
-		long lCaptureGold;
-		// Use python to determine city capture gold amounts...
-		lCaptureGold = 0;
-
-		CyCity* pyOldCity = new CyCity(pOldCity);
-
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyOldCity));	// pass in plot class
-		argsList.add(getID());
-
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doCityCaptureGold", argsList.makeFunctionArgs(), &lCaptureGold);
-
-		delete pyOldCity;	// python fxn must not hold on to this pointer
-
-		iCaptureGold = (int)lCaptureGold;
+		iCaptureGold = Cy::call<int>(PYGameModule, "doPillageGold", Cy::Args() << pOldCity << getID());
+		changeGold(iCaptureGold);
 	}
-
-	changeGold(iCaptureGold);
 
 	pabHasReligion = new bool[GC.getNumReligionInfos()];
 	pabHolyCity = new bool[GC.getNumReligionInfos()];
