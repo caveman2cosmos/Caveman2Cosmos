@@ -486,10 +486,8 @@ public:
 	void write(FDataStreamBase* ) {}
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
 
 	void copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	void getCheckSum(unsigned int& iSum) const;
 

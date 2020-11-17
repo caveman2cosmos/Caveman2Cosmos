@@ -1933,17 +1933,8 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bGlobal, L"bGlobal");
 	//TB Tech Tags end
 
-	return true;
-}
-
-bool CvTechInfo::readPass2(CvXMLLoadUtility* pXML)
-{
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-	pXML->SetOptionalVector(m_aePrereqOrTechs, L"OrPreReqs");
-	pXML->SetOptionalVector(m_aePrereqAndTechs, L"OrPreReqs");
+	pXML->SetOptionalVectorWithDelayedResolution(m_aePrereqOrTechs, L"OrPreReqs");
+	pXML->SetOptionalVectorWithDelayedResolution(m_aePrereqAndTechs, L"OrPreReqs");
 
 	return true;
 }
@@ -2124,12 +2115,8 @@ void CvTechInfo::copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML)
 			GC.copyNonDefaultDelayedResolution((int*)&(m_aPrereqOrBuilding[i].eBuilding), (int*)&(pClassInfo->m_aPrereqOrBuilding[i].eBuilding));
 		}
 	}
-}
-
-void CvTechInfo::copyNonDefaultsReadPass2(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
-{
-	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqOrTechs, pClassInfo->getPrereqOrTechs());
-	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqAndTechs, pClassInfo->getPrereqAndTechs());
+	GC.copyNonDefaultDelayedResolutionVector(m_aePrereqOrTechs, pClassInfo->getPrereqOrTechs());
+	GC.copyNonDefaultDelayedResolutionVector(m_aePrereqAndTechs, pClassInfo->getPrereqAndTechs());
 }
 
 bool CvTechInfo::readPass3()
