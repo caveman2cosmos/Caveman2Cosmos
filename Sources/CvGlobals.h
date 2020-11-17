@@ -310,19 +310,19 @@ public:
 		while (it > aTarget.begin())
 		{
 			it--;
-			aszTemp.push(*getDelayedResolution(&*it));
-			removeDelayedResolution(&*it);
+			aszTemp.push(*getDelayedResolution((int*)&*it));
+			removeDelayedResolution((int*)&*it);
 		}
 		aTarget.insert(aTarget.end(), aSource.begin(), aSource.end());
 		it = aTarget.begin(); // because insert() invalidates the previous iterator
 		while (aszTemp.size())
 		{
-			addDelayedResolution(&*it++, aszTemp.top());
+			addDelayedResolution((int*)&*it++, aszTemp.top());
 			aszTemp.pop();
 		}
 		while (it2 != aSource.end())
 		{
-			addDelayedResolution(&*it++, *getDelayedResolution(&*it2++));
+			addDelayedResolution((int*)&*it++, *getDelayedResolution((int*)&*it2++));
 		}
 	}
 	void resolveDelayedResolution();

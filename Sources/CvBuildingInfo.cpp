@@ -3894,8 +3894,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiFreeTraitTypes, L"FreeTraitTypes");
-	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiPrereqInCityBuildings, L"PrereqInCityBuildings");
+	pXML->SetOptionalVectorWithDelayedResolution(m_aiFreeTraitTypes, L"FreeTraitTypes");
+	pXML->SetOptionalVectorWithDelayedResolution(m_aiPrereqInCityBuildings, L"PrereqInCityBuildings");
 
 	if(pXML->TryMoveToXmlFirstChild(L"HealUnitCombatTypes"))
 	{

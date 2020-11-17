@@ -147,10 +147,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOffTypes>
-				<EnforcesGameOptionOffType>
-					<GameOptionType>GAMEOPTION_MIN_CITY_BORDER</GameOptionType>
-					<bEnforcesGameOptionOff>1</bEnforcesGameOptionOff>
-				</EnforcesGameOptionOffType>
+				<GameOptionType>GAMEOPTION_MIN_CITY_BORDER</GameOptionType>
 			</EnforcesGameOptionOffTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -223,10 +220,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOffTypes>
-				<EnforcesGameOptionOffType>
-					<GameOptionType>GAMEOPTION_BARBARIAN_WORLD</GameOptionType>
-					<bEnforcesGameOptionOff>1</bEnforcesGameOptionOff>
-				</EnforcesGameOptionOffType>
+				<GameOptionType>GAMEOPTION_BARBARIAN_WORLD</GameOptionType>
 			</EnforcesGameOptionOffTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -299,10 +293,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOffTypes>
-				<EnforcesGameOptionOffType>
-					<GameOptionType>GAMEOPTION_ANIMALS_STAY_OUT</GameOptionType>
-					<bEnforcesGameOptionOff>1</bEnforcesGameOptionOff>
-				</EnforcesGameOptionOffType>
+				<GameOptionType>GAMEOPTION_ANIMALS_STAY_OUT</GameOptionType>
 			</EnforcesGameOptionOffTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -529,10 +520,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOnTypes>
-				<EnforcesGameOptionOnType>
- 					<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
-					<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn>
- 				</EnforcesGameOptionOnType>
+ 				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
  			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -584,10 +572,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
 			<EnforcesGameOptionOnTypes>
-				<EnforcesGameOptionOnType>
-					<GameOptionType>GAMEOPTION_UPRANGE</GameOptionType>
-					<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn>
-				</EnforcesGameOptionOnType>
+				<GameOptionType>GAMEOPTION_UPRANGE</GameOptionType>
 			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>

@@ -8171,23 +8171,18 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvGameOptionInfo :
-	public CvInfoBase
+class CvGameOptionInfo : public CvInfoBase
 {
 public:
 	CvGameOptionInfo();
 	virtual ~CvGameOptionInfo();
 
-	DllExport bool getDefault() const;
-	DllExport bool getVisible() const;
+	DllExport bool getDefault() const { return m_bDefault; }
+	DllExport bool getVisible() const { return m_bVisible; }
 
 	//TB Tags
-	// int vector utilizing struct with delayed resolution
-	int getNumEnforcesGameOptionOnTypes() const;
-	const GameOptionTypeBool& isEnforcesGameOptionOnType(int iOption) const;
-
-	int getNumEnforcesGameOptionOffTypes() const;
-	const GameOptionTypeBool& isEnforcesGameOptionOffType(int iOption) const;
+	const std::vector<GameOptionTypes>& getEnforcesGameOptionOnTypes() const  { return m_aEnforcesGameOptionOnTypes; }
+	const std::vector<GameOptionTypes>& getEnforcesGameOptionOffTypes() const { return m_aEnforcesGameOptionOffTypes; }
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -8199,9 +8194,8 @@ private:
 	bool m_bDefault;
 	bool m_bVisible;
 	//TB Tags
-	// int vector utilizing struct with delayed resolution
-	std::vector<GameOptionTypeBool> m_aEnforcesGameOptionOnTypes;
-	std::vector<GameOptionTypeBool> m_aEnforcesGameOptionOffTypes;
+	std::vector<GameOptionTypes> m_aEnforcesGameOptionOnTypes;
+	std::vector<GameOptionTypes> m_aEnforcesGameOptionOffTypes;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
