@@ -508,11 +508,13 @@ public:
 	int getNumCities();
 	CyCity* getCity(int iID);
 
+	python::list units() const;
 	python::tuple firstUnit(bool bRev); // returns tuple of (CyUnit, iterOut)
 	python::tuple nextUnit(int iterIn, bool bRev); // returns tuple of (CyUnit, iterOut)
 	int getNumUnits();
 	CyUnit* getUnit(int iID);
 
+	python::list groups() const;
 	python::tuple firstSelectionGroup(bool bRev); // returns tuple of (CySelectionGroup, iterOut)
 	python::tuple nextSelectionGroup(int iterIn, bool bRev); // returns tuple of (CySelectionGroup, iterOut)
 	int getNumSelectionGroups();
