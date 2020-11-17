@@ -24046,7 +24046,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 		m_eUnitType = (UnitTypes)0;
 		m_bDeathDelay = true;
 		// Unit type 0 was never initialized, so we need to add its unit count before it dies.
-		GET_TEAM(getTeam()).changeUnitCount(m_eUnitType, 1);
 		GET_PLAYER(getOwner()).changeUnitCount(m_eUnitType, 1);
 		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
