@@ -10,9 +10,6 @@
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 
-// Discord RPC
-#include "discord.h"
-
 //	Koshling - save game compatibility between (most) builds
 //	UI flag values in game serialization.  These are bitwise combinable
 #define	GAME_SAVE_UI_FLAG_VALUE_AND_BASE		0x00000001
@@ -213,11 +210,7 @@ void CvGame::init(HandicapTypes eHandicap)
 
 	if (isOption(GAMEOPTION_LOCK_MODS))
 	{
-		if (isGameMultiPlayer())
-		{
-			setOption(GAMEOPTION_LOCK_MODS, false);
-		}
-		else
+		if (!isGameMultiPlayer())
 		{
 			static const int iPasswordSize = 8;
 			char szRandomPassword[iPasswordSize];
@@ -229,6 +222,7 @@ void CvGame::init(HandicapTypes eHandicap)
 
 			GC.getInitCore().setAdminPassword(szRandomPassword);
 		}
+		else setOption(GAMEOPTION_LOCK_MODS, false);
 	}
 
 	// Alberts2: Recalculate which info class replacements are currently active
@@ -316,9 +310,6 @@ void CvGame::init(HandicapTypes eHandicap)
 
 	m_plotGroupHashesInitialized = false;
 
-	//resetOptionEdits();
-	//setOptionEdits();
-
 	//Ruthless AI means Aggressive AI is on too.
 	if (isOption(GAMEOPTION_RUTHLESS_AI) && !isOption(GAMEOPTION_AGGRESSIVE_AI))
 	{
@@ -339,22 +330,15 @@ void CvGame::init(HandicapTypes eHandicap)
 	if (isOption(GAMEOPTION_UNITED_NATIONS))
 	{
 		//Find the diplomatic victory
-		BuildingTypes eUnitedNations = NO_BUILDING;
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			if (GC.getBuildingInfo((BuildingTypes)iI).getVictoryPrereq() != NO_VICTORY)
+			const CvBuildingInfo& info = GC.getBuildingInfo((BuildingTypes) iI);
+			if (info.getVictoryPrereq() != NO_VICTORY && info.getVoteSourceType() != NO_VOTESOURCE)
 			{
-				if (GC.getBuildingInfo((BuildingTypes)iI).getVoteSourceType() != NO_VOTESOURCE)
-				{
-					eUnitedNations = (BuildingTypes)iI;
-					break;
-				}
+				m_bDiploVictoryEnabled = isVictoryValid((VictoryTypes) info.getVictoryPrereq());
+				setVictoryValid((VictoryTypes) info.getVictoryPrereq(), true);
+				break;
 			}
-		}
-		if (eUnitedNations != NO_BUILDING)
-		{
-			m_bDiploVictoryEnabled = isVictoryValid((VictoryTypes)GC.getBuildingInfo(eUnitedNations).getVictoryPrereq());
-			setVictoryValid((VictoryTypes)GC.getBuildingInfo(eUnitedNations).getVictoryPrereq(), true);
 		}
 	}
 
@@ -557,10 +541,9 @@ void CvGame::setInitialItems()
 
 	for (int i = 0; i < MAX_PLAYERS; i++)
 	{
-		CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)i);
-		if (kPlayer.isAlive())
+		if (GET_PLAYER((PlayerTypes)i).isAlive())
 		{
-			kPlayer.AI_updateFoundValues(true);
+			GET_PLAYER((PlayerTypes)i).AI_updateFoundValues(true);
 		}
 	}
 	if (isOption(GAMEOPTION_PERSONALIZED_MAP))
@@ -580,17 +563,10 @@ void CvGame::setInitialItems()
 }
 
 
-// BUG - MapFinder - start
-// from HOF Mod - Dianthus
 bool CvGame::canRegenerateMap() const
 {
-	if (isGameMultiPlayer() || getElapsedGameTurns() != 0 || GC.getInitCore().getWBMapScript())
-	{
-		return false;
-	}
-	return true;
+	return !isGameMultiPlayer() && getElapsedGameTurns() == 0 && !GC.getInitCore().getWBMapScript();
 }
-// BUG - MapFinder - end
 
 void CvGame::regenerateMap()
 {
@@ -667,20 +643,10 @@ void CvGame::uninit()
 	SAFE_DELETE_ARRAY(m_aiSecretaryGeneralTimer);
 	SAFE_DELETE_ARRAY(m_aiVoteTimer);
 	SAFE_DELETE_ARRAY(m_aiDiploVote);
-
 	SAFE_DELETE_ARRAY(m_pabSpecialUnitValid);
 	SAFE_DELETE_ARRAY(m_pabSpecialBuildingValid);
 	SAFE_DELETE_ARRAY(m_abReligionSlotTaken);
-/************************************************************************************************/
-/* RevDCM	                  Start		 4/29/10                                                */
-/*                                                                                              */
-/* OC_LIMITED_RELIGIONS                                                                         */
-/************************************************************************************************/
 	SAFE_DELETE_ARRAY(m_abTechCanFoundReligion);
-/************************************************************************************************/
-/* LIMITED_RELIGIONS               END                                                          */
-/************************************************************************************************/
-
 	SAFE_DELETE_ARRAY(m_paHolyCity);
 	SAFE_DELETE_ARRAY(m_paHeadquarters);
 
@@ -3250,14 +3216,6 @@ int CvGame::countCivPlayersAlive() const
 		}
 	}
 
-	// Discord RPC
-	RPCDATA rpc;
-	GIVEDEFAULTRPCVALS(rpc);
-	rpc.playersAlive = iCount;
-	pDiscord->sendNewRpcDetails(rpc);
-
-	pDiscord->ensureDiscordRPCState();
-
 	return iCount;
 }
 
@@ -3274,14 +3232,6 @@ int CvGame::countCivPlayersEverAlive() const
 			iCount++;
 		}
 	}
-
-	// Discord RPC
-	RPCDATA rpc;
-	GIVEDEFAULTRPCVALS(rpc);
-	rpc.playersTotal = iCount;
-	pDiscord->sendNewRpcDetails(rpc);
-
-	pDiscord->ensureDiscordRPCState();
 
 	return iCount;
 }
@@ -3714,16 +3664,7 @@ int CvGame::getNumHumanPlayers()
 
 int CvGame::getGameTurn()
 {
-	// Discord RPC Update
-	RPCDATA rpc;
-	GIVEDEFAULTRPCVALS(rpc);
-	rpc.turn = GC.getInitCore().getGameTurn();
-	pDiscord->sendNewRpcDetails(rpc);
-
-	pDiscord->ensureDiscordRPCState();
-
-	return rpc.turn;
-	//return GC.getInitCore().getGameTurn();
+	return GC.getInitCore().getGameTurn();
 }
 
 

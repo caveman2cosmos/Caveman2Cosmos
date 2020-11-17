@@ -174,9 +174,6 @@ def doCombat(argsList):
 def getConscriptUnitType(argsList):
 	return GameUtils.getConscriptUnitType(argsList)
 
-def getCityFoundValue(argsList):
-	return GameUtils.getCityFoundValue(argsList)
-
 def canPickPlot(argsList):
 	return GameUtils.canPickPlot(argsList)
 

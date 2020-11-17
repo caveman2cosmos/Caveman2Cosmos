@@ -4,7 +4,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_SMALL_NATIVE</Type>
 			<UnitType>UNIT_LOCUST_SMALL_SWARM</UnitType>
-			<PlayerType>45</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
 			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
@@ -24,7 +24,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_NATIVE</Type>
 			<UnitType>UNIT_LOCUST</UnitType>
-			<PlayerType>45</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>600</iTurns>
 			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
@@ -44,7 +44,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_LARGE_NATIVE</Type>
 			<UnitType>UNIT_LOCUST_LARGE_SWARM</UnitType>
-			<PlayerType>45</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>800</iTurns>
 			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
@@ -64,7 +64,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_HUGE_NATIVE</Type>
 			<UnitType>UNIT_LOCUST_HUGE_SWARM</UnitType>
-			<PlayerType>45</PlayerType>
+			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>1200</iTurns>
 			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
