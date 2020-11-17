@@ -11391,7 +11391,7 @@ int CvCity::getCultureThreshold(CultureLevelTypes eLevel) const
 	{
 		return 1;
 	}
-	const CvGameAI& GAME = GC.getGame();
+	const CvGame& GAME = GC.getGame();
 	const GameSpeedTypes eSpeed = GAME.getGameSpeedType();
 	const int iCulture = getCultureTimes100(getOwner()) / 100;
 	int iThreshold = 0;
