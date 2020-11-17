@@ -215,12 +215,12 @@ class CvTechSplashScreen:
 
 		for j in range(GC.getNumTechInfos()):
 
-			for k in range(GC.getDefineINT("NUM_OR_TECH_PREREQS")):
-				if self.iTech == GC.getTechInfo(j).getPrereqOrTechs(k):
+			for iPrereq in GC.getTechInfo(j).getPrereqOrTechs():
+				if self.iTech == iPrereq:
 					screen.attachImageButton(panelName4, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
 
-			for k in range(GC.getDefineINT("NUM_AND_TECH_PREREQS")):
-				if self.iTech == GC.getTechInfo(j).getPrereqAndTechs(k):
+			for iPrereq in GC.getTechInfo(j).getPrereqAndTechs():
+				if self.iTech == iPrereq:
 					screen.attachImageButton(panelName4, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
 
 #---Eingefügt ENDE ------------------------------------------------

@@ -243,14 +243,12 @@ class CvTechSplashScreen:
 			       self.X_ALLOWS_PANELSIR+self.iMarginSpace, self.Y_ALLOWS_PANELSIR - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		for j in range(GC.getNumTechInfos()):
-			for k in range(GC.getDefineINT("NUM_OR_TECH_PREREQS")):
-				iPrereq = GC.getTechInfo(j).getPrereqOrTechs(k)
+			for iPrereq in GC.getTechInfo(j).getPrereqOrTechs():
 				if (iPrereq == self.iTech):
-        				screen.attachImageButton( panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False )
-			for k in range(GC.getDefineINT("NUM_AND_TECH_PREREQS")):
-				iPrereq = GC.getTechInfo(j).getPrereqAndTechs(k)
+        			screen.attachImageButton( panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False )
+			for iPrereq in GC.getTechInfo(j).getPrereqAndTechs():
 				if (iPrereq == self.iTech):
-        				screen.attachImageButton( panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False )
+        			screen.attachImageButton( panelNameSIR, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False )
 
 #---Eingefügt ENDE ------------------------------------------------
 		# Allows

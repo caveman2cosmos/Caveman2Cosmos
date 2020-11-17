@@ -91,9 +91,8 @@ void CyInfoPythonInterface1()
 
 		.def("getDomainExtraMoves", &CvTechInfo::getDomainExtraMoves, "int (int i)")
 		.def("getFlavorValue", &CvTechInfo::getFlavorValue, "int (int i)")
-		.def("getPrereqOrTechs", &CvTechInfo::getPrereqOrTechs, "int (int i)")
-		//.def("getPrereqAndTechs", &CvTechInfo::cyGetPrereqAndTechs)
-		.def("getPrereqAndTechs", &CvTechInfo::getPrereqAndTechs, "int (int i)")
+		.def("getPrereqOrTechs", &CvTechInfo::cyGetPrereqOrTechs)
+		.def("getPrereqAndTechs", &CvTechInfo::cyGetPrereqAndTechs)
 
 		.def("isCommerceFlexible", &CvTechInfo::isCommerceFlexible, "bool (int i)")
 		.def("isTerrainTrade", &CvTechInfo::isTerrainTrade, "bool (int i)")

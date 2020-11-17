@@ -1994,7 +1994,7 @@ EraTypes CvUnitInfo::getEraInfo() const
 	}
 
 	EraTypes eHighestEra = NO_ERA;
-	foreach_(const TechTypes tech, getPrereqAndTechs())
+	foreach_(const TechTypes& tech, getPrereqAndTechs())
 	{
 		const EraTypes prereqTechEra = (EraTypes)GC.getTechInfo(tech).getEra();
 		if (prereqTechEra > eHighestEra)

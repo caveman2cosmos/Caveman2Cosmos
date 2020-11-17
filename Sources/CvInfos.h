@@ -470,12 +470,14 @@ public:
 	const TCHAR* getSound() const; // Exposed to Python
 	const TCHAR* getSoundMP() const; // Exposed to Python
 
-	// Arrays
-
 	int getDomainExtraMoves(int i) const; // Exposed to Python
 	int getFlavorValue(int i) const; // Exposed to Python
+
 	const std::vector<TechTypes>& getPrereqOrTechs() const { return m_aePrereqOrTechs; }
+	const python::list cyGetPrereqOrTechs() const { return Cy::makeList(m_aePrereqOrTechs); }
+
 	const std::vector<TechTypes>& getPrereqAndTechs() const { return m_aePrereqAndTechs; }
+	const python::list cyGetPrereqAndTechs() const { return Cy::makeList(m_aePrereqAndTechs); }
 
 	bool isCommerceFlexible(int i) const; // Exposed to Python
 	bool isTerrainTrade(int i) const; // Exposed to Python

@@ -36,8 +36,6 @@ class TechPrefs:
 
 	def __init__(self):
 		self.NUM_TECHS = gc.getNumTechInfos()
-		self.NUM_AND_PREREQS = gc.getDefineINT("NUM_AND_TECH_PREREQS")
-		self.NUM_OR_PREREQS = gc.getDefineINT("NUM_OR_TECH_PREREQS")
 
 		self.mTechs = {}
 		self.lTechsByFlavor = []
