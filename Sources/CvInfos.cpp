@@ -5508,7 +5508,7 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bQuick, L"bQuick");
 
 	//pXML->SetVariableListTagPair(&m_piAIWeightbyUnitCombatTypes, L"AIWeightbyUnitCombatTypes", GC.getNumUnitCombatInfos());
-	pXML->SetOptionalVector<UnitCombatTypes>(&m_aeSubCombatChangeTypes, L"SubCombatChangeTypes");
+	pXML->SetOptionalVector(&m_aeSubCombatChangeTypes, L"SubCombatChangeTypes");
 	pXML->SetOptionalIntVector(&m_aiRemovesUnitCombatTypes, L"RemovesUnitCombatTypes");
 	pXML->SetOptionalIntVector(&m_aiOnGameOptions, L"OnGameOptions");
 	pXML->SetOptionalIntVector(&m_aiNotOnGameOptions, L"NotOnGameOptions");
@@ -6356,7 +6356,7 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 	if (isRemoveAfterSet() == bDefault) m_bRemoveAfterSet = pClassInfo->isRemoveAfterSet();
 	if (isQuick() == bDefault) m_bQuick = pClassInfo->isQuick();
 
-	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aeSubCombatChangeTypes, pClassInfo->getSubCombatChanges());
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aeSubCombatChangeTypes, pClassInfo->getSubCombatChangeTypes());
 
 	if (getNumRemovesUnitCombatTypes() == 0)
 	{
@@ -15101,7 +15101,7 @@ bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetVariableListTagPair(&m_piTechMovementChange, L"TechMovementChanges", GC.getNumTechInfos());
 
-	//pXML->SetOptionalVector(&m_aePrereqOrBonuses, L"PrereqOrBonuses");
+	pXML->SetOptionalVector(&m_aePrereqOrBonuses, L"PrereqOrBonuses");
 
 	m_PropertyManipulators.read(pXML);
 

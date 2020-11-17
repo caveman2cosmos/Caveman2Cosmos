@@ -9715,7 +9715,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 						int iBonusORVal	= 0;
 						int	iHasOther = 0;
 
-						foreach_(const BonusTypes orBonusReq, kLoopUnit.getPrereqOrBonuses())
+						foreach_(const BonusTypes& orBonusReq, kLoopUnit.getPrereqOrBonuses())
 						{
 							if (orBonusReq == eBonus)
 							{
@@ -9894,7 +9894,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 							bool bGetsOR = false;
 							bool bRequiresOR = false;
 
-							foreach_(const BonusTypes bonus, kLoopBuilding.getPrereqOrBonuses())
+							foreach_(const BonusTypes& bonus, kLoopBuilding.getPrereqOrBonuses())
 							{
 								bRequiresOR = true;
 
@@ -10157,7 +10157,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 						{
 							iTempValue += 80;
 						}
-						foreach_(const BonusTypes prereqBonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses())
+						foreach_(const BonusTypes& prereqBonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses())
 						{
 							if (prereqBonus == eBonus)
 							{
@@ -10243,7 +10243,7 @@ int CvPlayerAI::AI_corporationBonusVal(BonusTypes eBonus) const
 			int iNumCorpBonuses = 0;
 			iCorpCount += getNumCities() / 6 + 1;
 			const CvCorporationInfo& kCorp = GC.getCorporationInfo((CorporationTypes)iCorporation);
-			foreach_(BonusTypes prereqBonus, kCorp.getPrereqBonuses())
+			foreach_(const BonusTypes& prereqBonus, kCorp.getPrereqBonuses())
 			{
 				if (eBonus == prereqBonus)
 				{
@@ -13403,7 +13403,7 @@ int CvPlayerAI::AI_corporationValue(CorporationTypes eCorporation, const CvCity*
 		const int iBonusCount = pCity->getNumBonuses(eBonus);
 		if (iBonusCount > 0)
 		{
-			foreach_(BonusTypes prereqBonus, kCorp.getPrereqBonuses())
+			foreach_(const BonusTypes& prereqBonus, kCorp.getPrereqBonuses())
 			{
 				if (eBonus == prereqBonus)
 				{
@@ -29058,7 +29058,7 @@ int CvPlayerAI::AI_militaryBonusVal(BonusTypes eBonus)
 			int iHasOrBonusCount = 0;
 			bool bFound = false;
 
-			foreach_(const BonusTypes orBonusReq, GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses())
+			foreach_(const BonusTypes& orBonusReq, GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses())
 			{
 				if (orBonusReq == eBonus)
 				{
@@ -29205,7 +29205,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 
 		if (pUnit == NULL)
 		{
-			foreach_(UnitCombatTypes subCombat, kPromotion.getSubCombatChanges())
+			foreach_(const UnitCombatTypes& subCombat, kPromotion.getSubCombatChangeTypes())
 			{
 				if (!kUnit.hasUnitCombat(subCombat))
 				{
@@ -29215,7 +29215,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 		else
 		{
-			foreach_(UnitCombatTypes subCombat, kPromotion.getSubCombatChanges())
+			foreach_(const UnitCombatTypes& subCombat, kPromotion.getSubCombatChangeTypes())
 			{
 				if (!pUnit->isHasUnitCombat(subCombat))
 				{
@@ -34441,7 +34441,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 
 	if (pUnit == NULL)
 	{
-		foreach_(UnitCombatTypes subCombat, kPromotion.getSubCombatChanges())
+		foreach_(const UnitCombatTypes& subCombat, kPromotion.getSubCombatChangeTypes())
 		{
 			if (!kUnit.hasUnitCombat(subCombat))
 			{
@@ -34451,7 +34451,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	}
 	else
 	{
-		foreach_(UnitCombatTypes subCombat, kPromotion.getSubCombatChanges())
+		foreach_(const UnitCombatTypes& subCombat, kPromotion.getSubCombatChangeTypes())
 		{
 			if (!pUnit->isHasUnitCombat(subCombat))
 			{

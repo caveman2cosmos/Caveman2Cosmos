@@ -2629,7 +2629,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						CvWStringBuffer szBonusList;
 						bool bValid = false;
 						bool bFirst = true;
-						foreach_(BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
+						foreach_(const BonusTypes& eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 						{
 							if (!bFirst)
 							{
@@ -3090,7 +3090,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 						bool bFoundValid = true;
 						std::vector<BonusTypes> aeOrBonuses;
-						foreach_(const BonusTypes bonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses())
+						foreach_(const BonusTypes& bonus, GC.getRouteInfo(eRoute).getPrereqOrBonuses())
 						{
 							aeOrBonuses.push_back(bonus);
 							bFoundValid = false;

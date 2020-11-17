@@ -456,8 +456,8 @@ namespace algo {
 namespace std {
 	// FUNCTION TEMPLATE contains
 	template <class _Range, class Item_>
-	bool contains(const _Range& rng, Item_ item) {
-		foreach_(Item_ i, rng)
+	bool contains(const _Range& rng, const Item_& item) {
+		foreach_(const Item_& i, rng)
 			if (i == item)
 				return true;
 		return false;

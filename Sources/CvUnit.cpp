@@ -10909,7 +10909,7 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 /************************************************************************************************/
 		bool bValid = false;
 		bool bRequiresBonus = false;
-		foreach_(BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
+		foreach_(const BonusTypes& eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 		{
 			bRequiresBonus = true;
 			if (pCity->hasBonus(eBonus))
@@ -21688,7 +21688,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		}
 	}
 
-	foreach_(UnitCombatTypes subCombat, kPromotion.getSubCombatChanges())
+	foreach_(const UnitCombatTypes& subCombat, kPromotion.getSubCombatChangeTypes())
 	{
 		//If we have the unitcombat the promotion will give us already
 		if (isHasUnitCombat(subCombat))
@@ -23560,7 +23560,7 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 		changeExtraTrapTriggerUnitCombatType(((UnitCombatTypes)iI), (kPromotion.getTrapTriggerUnitCombatType(iI) * iChange));
 	}
 
-	foreach_(UnitCombatTypes subCombat, kPromotion.getSubCombatChanges())
+	foreach_(const UnitCombatTypes& subCombat, kPromotion.getSubCombatChangeTypes())
 	{
 		setHasUnitCombat(subCombat, bAdding, true);
 	}

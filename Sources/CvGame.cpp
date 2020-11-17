@@ -7281,7 +7281,7 @@ void CvGame::doHeadquarters()
 				&& kLoopTeam.isHasTech(eTechPrereq)
 				&& kLoopTeam.getNumCities() > 0)
 				{
-					foreach_(BonusTypes bonus, kCorporation.getPrereqBonuses())
+					foreach_(const BonusTypes& bonus, kCorporation.getPrereqBonuses())
 					{
 						if (kLoopTeam.hasBonus(bonus))
 						{
@@ -7316,7 +7316,7 @@ void CvGame::doHeadquarters()
 					&& playerX.getTeam() == eBestTeam
 					&& playerX.getNumCities() > 0)
 					{
-						foreach_(const BonusTypes eBonus, kCorporation.getPrereqBonuses())
+						foreach_(const BonusTypes& eBonus, kCorporation.getPrereqBonuses())
 						{
 							if (playerX.hasBonus(eBonus))
 							{
@@ -9784,12 +9784,15 @@ void CvGame::changeHumanPlayer( PlayerTypes eOldHuman, PlayerTypes eNewHuman )
 /************************************************************************************************/
 bool CvGame::isCompetingCorporation(CorporationTypes eCorporation1, CorporationTypes eCorporation2) const
 {
-	if (GC.getCorporationInfo(eCorporation1).isCompetingCorporation(eCorporation2) || GC.getCorporationInfo(eCorporation2).isCompetingCorporation(eCorporation1))
+	const CvCorporationInfo& kCorporation1 = GC.getCorporationInfo(eCorporation1);
+	const CvCorporationInfo& kCorporation2 = GC.getCorporationInfo(eCorporation2);
+
+	if (kCorporation1.isCompetingCorporation(eCorporation2) || kCorporation2.isCompetingCorporation(eCorporation1))
 		return true;
 
-	foreach_(const BonusTypes bonus, GC.getCorporationInfo(eCorporation1).getPrereqBonuses())
+	foreach_(const BonusTypes& bonus, kCorporation1.getPrereqBonuses())
 	{
-		if (std::contains(GC.getCorporationInfo(eCorporation2).getPrereqBonuses(), bonus))
+		if (std::contains(kCorporation2.getPrereqBonuses(), bonus))
 		{
 			return true;
 		}

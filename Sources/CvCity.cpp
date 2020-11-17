@@ -2555,7 +2555,7 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 	{
 		bool bHasAnyVicinityBonus = false;
 		bool bRequiresAnyVicinityBonus = false;
-		foreach_(BonusTypes bonus, kUnit.getPrereqOrVicinityBonuses())
+		foreach_(const BonusTypes& bonus, kUnit.getPrereqOrVicinityBonuses())
 		{
 			bRequiresAnyVicinityBonus = true;
 			if (hasVicinityBonus(bonus))
@@ -3076,7 +3076,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			}
 			bool bHasBonus = false;
 			bool bRequiresBonus = false;
-			foreach_(const BonusTypes eBonus, GC.getCorporationInfo(foundsCorp).getPrereqBonuses())
+			foreach_(const BonusTypes& eBonus, GC.getCorporationInfo(foundsCorp).getPrereqBonuses())
 			{
 				bRequiresBonus = true;
 				if (hasBonus(eBonus))
@@ -3150,7 +3150,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 		bool bRequiresBonus = false;
 		bool bNeedsBonus = true;
-		foreach_(const BonusTypes bonus, kBuilding.getPrereqOrBonuses())
+		foreach_(const BonusTypes& bonus, kBuilding.getPrereqOrBonuses())
 		{
 			bRequiresBonus = true;
 
@@ -3299,7 +3299,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	{
 		bool bHasAnyVicinityBonus = false;
 		bool bRequiresAnyVicinityBonus = false;
-		foreach_(const BonusTypes bonus, kBuilding.getPrereqOrVicinityBonuses())
+		foreach_(const BonusTypes& bonus, kBuilding.getPrereqOrVicinityBonuses())
 		{
 			bRequiresAnyVicinityBonus = true;
 			if (hasVicinityBonus(bonus))
@@ -8503,7 +8503,7 @@ int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporatio
 
 	// Bonus Maintenance
 	int iNumBonuses = 0;
-	foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
+	foreach_(const BonusTypes& eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 	{
 		iNumBonuses += getNumBonuses(eBonus);
 	}
@@ -13262,7 +13262,7 @@ int CvCity::getCorporationYieldByCorporation(YieldTypes eIndex, CorporationTypes
 
 	if (isActiveCorporation(eCorporation) && !isDisorder())
 	{
-		foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
+		foreach_(const BonusTypes& eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 		{
 			if (getNumBonuses(eBonus) > 0)
 			{
@@ -13284,7 +13284,7 @@ int CvCity::getCorporationCommerceByCorporation(CommerceTypes eIndex, Corporatio
 
 	if (isActiveCorporation(eCorporation) && !isDisorder())
 	{
-		foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
+		foreach_(const BonusTypes& eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 		{
 			if (getNumBonuses(eBonus) > 0)
 			{
@@ -13387,7 +13387,7 @@ void CvCity::updateCorporationBonus()
 						{
 							bool bConsumes = false;
 
-							foreach_(const BonusTypes eBonusConsumed, GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses())
+							foreach_(const BonusTypes& eBonusConsumed, GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses())
 							{
 								bConsumes = true;
 								aiExtraCorpProducedBonuses[iBonusProduced] += aiLastCorpProducedBonuses[eBonusConsumed];
@@ -14116,7 +14116,7 @@ bool CvCity::isActiveCorporation(CorporationTypes eCorporation) const
 	bool bRequiresBonus = false;
 	bool bHasRequiredBonus = false;
 
-	foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
+	foreach_(const BonusTypes& eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 	{
 		bRequiresBonus = true;
 		if (getNumBonuses(eBonus) > 0)
@@ -15706,7 +15706,7 @@ void CvCity::setHasCorporation(CorporationTypes eIndex, bool bNewValue, bool bAn
 
 								CvWString szBonusList;
 								bool bFirst = true;
-								foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eIndex).getPrereqBonuses())
+								foreach_(const BonusTypes& eBonus, GC.getCorporationInfo(eIndex).getPrereqBonuses())
 								{
 									CvWString szTemp;
 									szTemp.Format(L"%s", GC.getBonusInfo(eBonus).getDescription());
@@ -21149,7 +21149,7 @@ void CvCity::checkBuildings(bool bBonus, bool bCivics, bool bWar, bool bPower, b
 					bool bHasORVicinityBonus = false;
 					bool bNeedsORVicinityBonus = false;
 
-					foreach_(BonusTypes bonus, kBuilding.getPrereqOrVicinityBonuses())
+					foreach_(const BonusTypes& bonus, kBuilding.getPrereqOrVicinityBonuses())
 					{
 						bNeedsORVicinityBonus = true;
 						if (hasVicinityBonus(bonus))
@@ -21221,7 +21221,7 @@ void CvCity::checkBuildings(bool bBonus, bool bCivics, bool bWar, bool bPower, b
 					bool bHasORBonus = false;
 					bool bNeedsORBonus = false;
 
-					foreach_(const BonusTypes bonus, kBuilding.getPrereqOrBonuses())
+					foreach_(const BonusTypes& bonus, kBuilding.getPrereqOrBonuses())
 					{
 						bNeedsORBonus = true;
 						if (hasBonus(bonus))
@@ -22356,12 +22356,14 @@ void CvCity::doCorporation()
 
 int CvCity::getCorporationInfluence(CorporationTypes eCorporation) const
 {
+	const CvCorporationInfo& kCorporation = GC.getCorporationInfo(eCorporation);
+
 	int iInfluence = 100;
 
 	int iBonusesConsumed = 0;
 	int iNumAvailBonuses = 0;
 	//Influence scales based on the number of resources a corporation consumes
-	foreach_(const BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
+	foreach_(const BonusTypes& eBonus, kCorporation.getPrereqBonuses())
 	{
 		iBonusesConsumed++;
 		iNumAvailBonuses += getNumBonuses(eBonus);
@@ -22381,7 +22383,7 @@ int CvCity::getCorporationInfluence(CorporationTypes eCorporation) const
 
 	if (iBonusesConsumed > 0)
 	{
-		foreach_(BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
+		foreach_(const BonusTypes& eBonus, kCorporation.getPrereqBonuses())
 		{
 			if (hasBonus(eBonus))
 			{
@@ -22437,24 +22439,26 @@ int CvCity::calculateCorporateTaxes() const
 
 	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
-		if (isActiveCorporation((CorporationTypes)iI) && GET_PLAYER(getOwner()).isActiveCorporation((CorporationTypes)iI))
+		const CorporationTypes eCorporation = (CorporationTypes)iI;
+
+		if (isActiveCorporation(eCorporation) && GET_PLAYER(getOwner()).isActiveCorporation(eCorporation))
 		{
-			const CorporationTypes eCorporation = (CorporationTypes)iI;
+			const CvCorporationInfo& kCorporation = GC.getCorporationInfo(eCorporation);
 
 			for (int iCommerce = 0; iCommerce < NUM_COMMERCE_TYPES; ++iCommerce)
 			{
-				iTaxes += 100 * GC.getCorporationInfo(eCorporation).getHeadquarterCommerce(iCommerce);
+				iTaxes += 100 * kCorporation.getHeadquarterCommerce(iCommerce);
 			}
 
 			int iNumBonuses = 0;
-			foreach_(BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
+			foreach_(const BonusTypes& eBonus, kCorporation.getPrereqBonuses())
 			{
 				iNumBonuses += getNumBonuses(eBonus);
 			}
 
 			iTaxes +=
 			(
-				GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses *
+				kCorporation.getMaintenance() * iNumBonuses *
 				GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()
 				/ 200
 			);

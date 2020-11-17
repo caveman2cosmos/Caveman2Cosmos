@@ -359,10 +359,10 @@ namespace Cy
 	}
 
 	template <class Container>
-	const python::list makeList(const Container source)
+	const python::list makeList(const Container& source)
 	{
 		python::list list = python::list();
-		for (Container::const_iterator it = source.begin(); it != source.end(); it++)
+		for (Container::const_iterator it = source.begin(), end = source.end(); it != end; it++)
 			list.append((int)*it);
 		return list;
 	}

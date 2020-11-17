@@ -5384,7 +5384,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								bool bFreeBonusIsORBonus = false;
 								int	iFreeExtraBonusCount = 0;
 
-								foreach_(const BonusTypes bonus, kUnit.getPrereqOrBonuses())
+								foreach_(const BonusTypes& bonus, kUnit.getPrereqOrBonuses())
 								{
 									iFreeExtraBonusCount++;
 
@@ -15977,7 +15977,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 										bool	bFreeBonusIsORBonus = false;
 										int		iFreeExtraBonusCount = 0;
 
-										foreach_(const BonusTypes bonus, kUnit.getPrereqOrBonuses())
+										foreach_(const BonusTypes& bonus, kUnit.getPrereqOrBonuses())
 										{
 											iFreeExtraBonusCount++;
 

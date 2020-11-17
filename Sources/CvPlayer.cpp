@@ -9321,7 +9321,7 @@ void CvPlayer::foundCorporation(CorporationTypes eCorporation)
 			int iValue = 10;
 			iValue += pLoopCity->getPopulation();
 
-			foreach_(BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
+			foreach_(const BonusTypes& eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 			{
 				iValue += 10 * pLoopCity->getNumBonuses(eBonus);
 			}
@@ -27211,7 +27211,7 @@ CvCity* CvPlayer::getBestHQCity(CorporationTypes eCorporation) const
 				}
 
 				bool bFoundBonus = false;
-				foreach_(BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
+				foreach_(const BonusTypes& eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 				{
 					if (pLoopCity->hasBonus(eBonus))
 					{
@@ -27237,7 +27237,7 @@ CvCity* CvPlayer::getBestHQCity(CorporationTypes eCorporation) const
 				iValue += 100;
 			}
 
-			foreach_(BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
+			foreach_(const BonusTypes& eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 			{
 				if (pLoopCity->hasBonus(eBonus))
 				{
@@ -27267,7 +27267,7 @@ CvCity* CvPlayer::getBestHQCity(CorporationTypes eCorporation) const
 
 PlayerVoteTypes CvPlayer::getPledgedVote() const
 {
-	return (PlayerVoteTypes)m_ePledgedVote;
+	return m_ePledgedVote;
 }
 
 void CvPlayer::setPledgedVote(PlayerVoteTypes eIndex)
@@ -27277,7 +27277,7 @@ void CvPlayer::setPledgedVote(PlayerVoteTypes eIndex)
 
 TeamTypes CvPlayer::getPledgedSecretaryGeneralVote() const
 {
-	return (TeamTypes)m_eSecretaryGeneralVote;
+	return m_eSecretaryGeneralVote;
 }
 
 void CvPlayer::setPledgedSecretaryGeneralVote(TeamTypes eIndex)
@@ -27310,7 +27310,7 @@ DenialTypes CvPlayer::AI_corporationTrade(CorporationTypes eCorporation, PlayerT
 		//If we don't have the corporation
 		if (!pLoopCity->isHasCorporation(eCorporation))
 		{
-			foreach_(BonusTypes eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
+			foreach_(const BonusTypes& eBonus, GC.getCorporationInfo(eCorporation).getPrereqBonuses())
 			{
 				bRequiresBonus = true;
 				//if the city can have the corporation
@@ -28402,8 +28402,7 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 
 			if (kBuilding.getPrereqAndBonus() == eBonus
 			|| kBuilding.getPrereqVicinityBonus() == eBonus
-			|| std::contains(kBuilding.getPrereqOrBonuses(), eBonus)
-			|| std::contains(kBuilding.getPrereqOrVicinityBonuses(), eBonus))
+			|| std::contains(kBuilding.getPrereqOrBonuses(), eBonus))
 			{
 				iConsumption += pLoopCity->getYieldRate(YIELD_PRODUCTION);
 			}
@@ -28419,8 +28418,7 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 
 			if (kUnit.getPrereqAndBonus() == eBonus
 			|| kUnit.getPrereqVicinityBonus() == eBonus
-			|| std::contains(kUnit.getPrereqOrBonuses(), eBonus)
-			|| std::contains(kUnit.getPrereqOrVicinityBonuses(), eBonus))
+			|| std::contains(kUnit.getPrereqOrBonuses(), eBonus))
 			{
 				iConsumption += pLoopCity->getYieldRate(YIELD_PRODUCTION);
 			}

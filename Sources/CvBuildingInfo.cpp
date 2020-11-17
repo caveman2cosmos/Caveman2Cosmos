@@ -2028,7 +2028,7 @@ bool CvBuildingInfo::EnablesUnits() const
 				}
 			}
 
-			foreach_(BonusTypes orBonusReq, kUnit.getPrereqOrBonuses())
+			foreach_(const BonusTypes& orBonusReq, kUnit.getPrereqOrBonuses())
 			{
 				if (isFreeBonusOfBuilding(orBonusReq))
 				{

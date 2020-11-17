@@ -32,9 +32,6 @@
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 #pragma warning( disable: 4127 )
 
-//#include <boost/python/list.hpp>
-//using namespace boost::python;
-
 extern bool shouldHaveType;
 
 class CvXMLLoadUtility;
@@ -908,7 +905,7 @@ public:
 	//int getAIWeightbyUnitCombatType(int i) const;
 	//bool isAnyAIWeightbyUnitCombatType() const;
 
-	const std::vector<UnitCombatTypes>& getSubCombatChanges() const { return m_aeSubCombatChangeTypes; }
+	const std::vector<UnitCombatTypes>& getSubCombatChangeTypes() const { return m_aeSubCombatChangeTypes; }
 
 	int getRemovesUnitCombatType(int i) const;
 	int getNumRemovesUnitCombatTypes() const;

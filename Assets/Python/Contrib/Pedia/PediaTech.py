@@ -289,13 +289,11 @@ class PediaTech:
 		for i in range(GC.getNumTechInfos()):
 			CvTechInfo = GC.getTechInfo(i)
 
-			for iType in CvTechInfo.getPrereqOrTechs():
-				if iType == iTheTech:
-					screen.attachImageButton(Pnl, "", CvTechInfo.getButton(), enumGBS, eWidJuToDerTech, i, 1, False)
+			if iTheTech in CvTechInfo.getPrereqOrTechs():
+				screen.attachImageButton(Pnl, "", CvTechInfo.getButton(), enumGBS, eWidJuToDerTech, i, 1, False)
 
-			for iType in CvTechInfo.getPrereqAndTechs():
-				if iType == iTheTech:
-					screen.attachImageButton(Pnl, "", CvTechInfo.getButton(), enumGBS, eWidJuToDerTech, i, 1, False)
+			if iTheTech in CvTechInfo.getPrereqAndTechs():
+				screen.attachImageButton(Pnl, "", CvTechInfo.getButton(), enumGBS, eWidJuToDerTech, i, 1, False)
 
 		# Quote
 		szTxt = CvTheTechInfo.getQuote()

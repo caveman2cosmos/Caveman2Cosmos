@@ -3119,18 +3119,12 @@ def getGreedUnit(CyPlayer, CyPlot):
 		CvUnitInfo = GC.getUnitInfo(iUnit)
 		if CvUnitInfo.getMaxGlobalInstances() + 1 or CvUnitInfo.getMaxPlayerInstances() + 1:
 			continue
-		if iUnit != -1 and CvUnitInfo.getDomainType() == DomainTypes.DOMAIN_LAND and CyPlayer.canTrain(iUnit, False, False):
-			iValue = 0
-			if CvUnitInfo.getPrereqAndBonus() == iBonus:
+		if CvUnitInfo.getDomainType() == DomainTypes.DOMAIN_LAND and CyPlayer.canTrain(iUnit, False, False):
+			if CvUnitInfo.getPrereqAndBonus() == iBonus or iBonus in CvUnitInfo.getPrereqOrBonuses():
 				iValue = CyPlayer.AI_unitValue(iUnit, UnitAITypes.UNITAI_ATTACK, CyPlot.area())
-			else:
-				for orBonusReq in CvUnitInfo.getPrereqOrBonuses():
-					if orBonusReq == iBonus:
-						iValue = CyPlayer.AI_unitValue(iUnit, UnitAITypes.UNITAI_ATTACK, CyPlot.area())
-						break
-			if iValue > iBestValue:
-				iBestValue = iValue
-				iBestUnit = iUnit
+				if iValue > iBestValue:
+					iBestValue = iValue
+					iBestUnit = iUnit
 	return iBestUnit
 
 
@@ -3619,20 +3613,19 @@ def expireHostileTakeover1(argsList):
   return False
 
 def getHostileTakeoverListResources(corporation, player):
-  map = GC.getMap()
-  listHave = []
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
-    if plot.getOwner() == player.getID():
-      iBonus = plot.getBonusType(player.getTeam())
-      if iBonus != -1:
-        if not iBonus in listHave:
-          listHave.append(iBonus)
-  listNeed = []
+	MAP = GC.getMap()
+	listHave = []
+	for i in xrange(map.numPlots()):
+		plot = MAP.plotByIndex(i)
+		if plot.getOwner() == player.getID():
+			iBonus = plot.getBonusType(player.getTeam())
+			if iBonus != -1 and not iBonus in listHave:
+				listHave.append(iBonus)
+	listNeed = []
 	for iBonus in corporation.getPrereqBonuses():
-      if not iBonus in listHave:
-        listNeed.append(iBonus)
-  return listNeed
+		if not iBonus in listHave:
+			listNeed.append(iBonus)
+	return listNeed
 
 def getHelpHostileTakeover1(argsList):
   iEvent = argsList[0]

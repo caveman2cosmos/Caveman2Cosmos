@@ -10,7 +10,7 @@
 
 CyCity::CyCity() : m_pCity(NULL)
 {
-	FErrorMsg("CyCity constructor should not be called without parameter");
+	FErrorMsg("CyCity constructor should not be called with no parameter");
 }
 
 CyCity::CyCity(CvCity* pCity) : m_pCity(pCity)

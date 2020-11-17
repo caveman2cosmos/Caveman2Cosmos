@@ -14805,7 +14805,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		}
 	}
 
-	foreach_(UnitCombatTypes subCombat, GC.getPromotionInfo(ePromotion).getSubCombatChanges())
+	foreach_(const UnitCombatTypes& subCombat, GC.getPromotionInfo(ePromotion).getSubCombatChangeTypes())
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_SUB_COMBAT_TEXT", GC.getUnitCombatInfo(subCombat).getDescription()));
@@ -20810,7 +20810,7 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 
 			if (pCity == NULL || !pCity->canTrain(eUnit))
 			{
-				foreach_(BonusTypes orBonusReq, GC.getUnitInfo(eUnit).getPrereqOrVicinityBonuses())
+				foreach_(const BonusTypes& orBonusReq, GC.getUnitInfo(eUnit).getPrereqOrVicinityBonuses())
 				{
 					szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES_IN_CITY_VICINITY").c_str());
 					setListHelp(szBuffer, szTempBuffer, GC.getBonusInfo(orBonusReq).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
@@ -20887,7 +20887,7 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 
 				bFirst = true;
 
-				foreach_(const TechTypes tech, GC.getUnitInfo(eUnit).getPrereqAndTechs())
+				foreach_(const TechTypes& tech, GC.getUnitInfo(eUnit).getPrereqAndTechs())
 				{
 					if (bTechChooserText || GC.getGame().getActivePlayer() == NO_PLAYER || !GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech(tech))
 					{
@@ -20913,7 +20913,7 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 
 				bFirst = true;
 
-				foreach_(const BonusTypes orBonusReq, GC.getUnitInfo(eUnit).getPrereqOrBonuses())
+				foreach_(const BonusTypes& orBonusReq, GC.getUnitInfo(eUnit).getPrereqOrBonuses())
 				{
 					if (pCity == NULL || !pCity->hasBonus(orBonusReq))
 					{
@@ -24456,7 +24456,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		CvWStringBuffer szBonusList;
 		bFirst = true;
 
-		foreach_(BonusTypes bonus, kBuilding.getPrereqOrVicinityBonuses())
+		foreach_(const BonusTypes& bonus, kBuilding.getPrereqOrVicinityBonuses())
 		{
 			if (pCity == NULL || !pCity->hasVicinityBonus(bonus))
 			{
@@ -24772,7 +24772,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 
 			bFirst = true;
 
-			foreach_(const TechTypes tech, kBuilding.getPrereqAndTechs())
+			foreach_(const TechTypes& tech, kBuilding.getPrereqAndTechs())
 			{
 				if (bTechChooserText || ePlayer == NO_PLAYER || !GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech(tech))
 				{
@@ -24799,7 +24799,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 
 			bFirst = true;
 
-			foreach_(const BonusTypes bonus, kBuilding.getPrereqOrBonuses())
+			foreach_(const BonusTypes& bonus, kBuilding.getPrereqOrBonuses())
 			{
 				if (pCity == NULL || !pCity->hasBonus(bonus))
 				{
@@ -24824,7 +24824,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			{
 				bFirst = true;
 				szBonusList.clear();
-				foreach_(BonusTypes eBonus, GC.getCorporationInfo((CorporationTypes)kBuilding.getFoundsCorporation()).getPrereqBonuses())
+				foreach_(const BonusTypes& eBonus, GC.getCorporationInfo((CorporationTypes)kBuilding.getFoundsCorporation()).getPrereqBonuses())
 				{
 					if (pCity == NULL || !pCity->hasBonus(eBonus))
 					{
@@ -27161,7 +27161,7 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 	bool bFirst = true;
 	szBuffer.append(NEWLINE);
 	szBuffer.append(gDLL->getText("TXT_KEY_CORPORATION_BONUS_REQUIRED"));
-	foreach_(BonusTypes eBonus, kCorporation.getPrereqBonuses())
+	foreach_(const BonusTypes& eBonus, kCorporation.getPrereqBonuses())
 	{
 		if (bFirst)
 		{
@@ -27202,9 +27202,9 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 
 			if (!bCompeting)
 			{
-				foreach_(BonusTypes eBonus, kCorporation.getPrereqBonuses())
+				foreach_(const BonusTypes& eBonus, kCorporation.getPrereqBonuses())
 				{
-					foreach_(BonusTypes eLoopBonus, kLoopCorporation.getPrereqBonuses())
+					foreach_(const BonusTypes& eLoopBonus, kLoopCorporation.getPrereqBonuses())
 					{
 						if (eLoopBonus == eBonus)
 						{
@@ -27308,7 +27308,7 @@ void CvGameTextMgr::setCorporationHelpCity(CvWStringBuffer &szBuffer, Corporatio
 
 	int iNumResources = 0;
 	int iNumReqResources = 0;
-	foreach_(BonusTypes eBonus, kCorporation.getPrereqBonuses())
+	foreach_(const BonusTypes& eBonus, kCorporation.getPrereqBonuses())
 	{
 		iNumReqResources++;
 		iNumResources += pCity->getNumBonuses(eBonus);
@@ -27384,7 +27384,7 @@ void CvGameTextMgr::setCorporationHelpCity(CvWStringBuffer &szBuffer, Corporatio
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_CORPORATION_BONUS_REQUIRED"));
 		bool bFirst = true;
-		foreach_(BonusTypes eBonus, kCorporation.getPrereqBonuses())
+		foreach_(const BonusTypes& eBonus, kCorporation.getPrereqBonuses())
 		{
 			if (bFirst)
 			{
@@ -31809,7 +31809,7 @@ void CvGameTextMgr::setRouteHelp(CvWStringBuffer &szBuffer, RouteTypes eRoute, b
 			szBuffer.append(NEWLINE);
 			szBuffer.append(BULLET_CHAR);
 
-			foreach_(BonusTypes eBonusOrPrereq, info.getPrereqOrBonuses())
+			foreach_(const BonusTypes& eBonusOrPrereq, info.getPrereqOrBonuses())
 			{
 				if (GC.getGame().getActivePlayer() == NO_PLAYER || !GET_PLAYER(GC.getGame().getActivePlayer()).hasBonus(eBonusOrPrereq))
 				{
