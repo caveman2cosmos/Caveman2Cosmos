@@ -28281,7 +28281,7 @@ void CvGameTextMgr::buildSingleLineTechTreeString(CvWStringBuffer &szBuffer, Tec
 		if (!bTechAlreadyAccessible)
 		{
 			if (std::contains(GC.getTechInfo((TechTypes)iI).getPrereqOrTechs(), eTech)
-			|| std::contains(GC.getTechInfo((TechTypes)iI).getPrereqAndTechs(), eTech)
+			|| std::contains(GC.getTechInfo((TechTypes)iI).getPrereqAndTechs(), eTech))
 			{
 				szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_TECH_TEXT"), CvWString(GC.getTechInfo((TechTypes)iI).getType()).GetCString(), GC.getTechInfo((TechTypes) iI).getDescription());
 				setListHelp(szBuffer, gDLL->getText("TXT_KEY_MISC_LEADS_TO").c_str(), szTempBuffer, L", ", bFirst);

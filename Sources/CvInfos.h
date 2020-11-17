@@ -8351,15 +8351,10 @@ public:
 	int getUnitDistanceWeight() const; // Exposed to Python
 	int getUnitExperienceWeight() const; // Exposed to Python
 	int getMinTreasury() const; // Exposed to Python
-
 	int getBuildingRequired(int i) const; // Exposed to Python
 	int getNumBuildingsRequired() const; // Exposed to Python
 	int getUnitRequired(int i) const; // Exposed to Python
 	int getNumUnitsRequired() const; // Exposed to Python
-	int getPrereqOrTechs(int i) const; // Exposed to Python
-	int getNumPrereqOrTechs() const; // Exposed to Python
-	int getPrereqAndTechs(int i) const; // Exposed to Python
-	int getNumPrereqAndTechs() const; // Exposed to Python
 	int getObsoleteTech(int i) const; // Exposed to Python
 	int getNumObsoleteTechs() const; // Exposed to Python
 	int getEvent(int i) const; // Exposed to Python
@@ -8380,6 +8375,9 @@ public:
 	int getNumReligionsRequired() const; // Exposed to Python
 	int getCorporationRequired(int i) const; // Exposed to Python
 	int getNumCorporationsRequired() const; // Exposed to Python
+
+	const std::vector<TechTypes>& getPrereqOrTechs() const { return m_aePrereqOrTechs; }
+	const std::vector<TechTypes>& getPrereqAndTechs() const { return m_aePrereqAndTechs; }
 
 	//Property prereqs
 	const CvProperties* getPrereqMinProperties() const;
@@ -8478,8 +8476,8 @@ private:
 
 	std::vector<int> m_aiUnitsRequired;
 	std::vector<int> m_aiBuildingsRequired;
-	std::vector<int> m_aiPrereqOrTechs;
-	std::vector<int> m_aiPrereqAndTechs;
+	std::vector<TechTypes> m_aePrereqOrTechs;
+	std::vector<TechTypes> m_aePrereqAndTechs;
 	std::vector<int> m_aiObsoleteTechs;
 	std::vector<int> m_aiEvents;
 	std::vector<int> m_aiPrereqEvents;

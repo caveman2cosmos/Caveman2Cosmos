@@ -33088,26 +33088,6 @@ int CvEventTriggerInfo::getNumPrereqEvents() const
 	return (int)m_aiPrereqEvents.size();
 }
 
-int CvEventTriggerInfo::getPrereqOrTechs(int i) const
-{
-	return m_aiPrereqOrTechs[i];
-}
-
-int CvEventTriggerInfo::getNumPrereqOrTechs() const
-{
-	return (int)m_aiPrereqOrTechs.size();
-}
-
-int CvEventTriggerInfo::getPrereqAndTechs(int i) const
-{
-	return m_aiPrereqAndTechs[i];
-}
-
-int CvEventTriggerInfo::getNumPrereqAndTechs() const
-{
-	return (int)m_aiPrereqAndTechs.size();
-}
-
 int CvEventTriggerInfo::getObsoleteTech(int i) const
 {
 	return m_aiObsoleteTechs[i];
@@ -33456,8 +33436,8 @@ void CvEventTriggerInfo::getCheckSum(unsigned int& iSum) const
 
 	CheckSumC(iSum, m_aiUnitsRequired);
 	CheckSumC(iSum, m_aiBuildingsRequired);
-	CheckSumC(iSum, m_aiPrereqOrTechs);
-	CheckSumC(iSum, m_aiPrereqAndTechs);
+	CheckSumC(iSum, m_aePrereqOrTechs);
+	CheckSumC(iSum, m_aePrereqAndTechs);
 	CheckSumC(iSum, m_aiObsoleteTechs);
 	CheckSumC(iSum, m_aiEvents);
 	CheckSumC(iSum, m_aiPrereqEvents);
@@ -33544,10 +33524,10 @@ bool CvEventTriggerInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iUnitDistanceWeight, L"iUnitDistanceWeight");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitExperienceWeight, L"iUnitExperienceWeight");
 	pXML->GetOptionalChildXmlValByName(&m_iMinTreasury, L"iMinTreasury");
-	pXML->SetOptionalIntVector(&m_aiUnitsRequired, L"UnitsRequired");
-	pXML->SetOptionalIntVector(&m_aiBuildingsRequired, L"BuildingsRequired");
-	pXML->SetOptionalIntVector(&m_aiPrereqOrTechs, L"OrPreReqs");
-	pXML->SetOptionalIntVector(&m_aiPrereqAndTechs, L"AndPreReqs");
+	pXML->SetOptionalVector(&m_aiUnitsRequired, L"UnitsRequired");
+	pXML->SetOptionalVector(&m_aiBuildingsRequired, L"BuildingsRequired");
+	pXML->SetOptionalVector(&m_aePrereqOrTechs, L"OrPreReqs");
+	pXML->SetOptionalVector(&m_aePrereqAndTechs, L"AndPreReqs");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"OtherPlayerHasTech");
 	m_iOtherPlayerHasTech = pXML->GetInfoClass(szTextVal);
@@ -33734,33 +33714,8 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 		}
 	}
 
-	for ( int i = 0; i < pClassInfo->getNumPrereqOrTechs(); i++)
-	{
-		if ( pClassInfo->getPrereqOrTechs(i) != NULL)
-		{
-			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnit->isDuplicate(getNumPrereqOrTechs(), &m_aiPrereqOrTechs[0], pClassInfo->getPrereqOrTechs(i))))
-			{
-				m_aiPrereqOrTechs.push_back(pClassInfo->getPrereqOrTechs(i));
-			}
-			delete pCurrentUnit;
-			//no need to do anything if a dupe has been found!
-		}
-	}
-
-	for ( int i = 0; i < pClassInfo->getNumPrereqAndTechs(); i++)
-	{
-		if ( pClassInfo->getPrereqAndTechs(i) != NULL)
-		{
-			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnit->isDuplicate(getNumPrereqAndTechs(), &m_aiPrereqAndTechs[0], pClassInfo->getPrereqAndTechs(i))))
-			{
-				m_aiPrereqAndTechs.push_back(pClassInfo->getPrereqAndTechs(i));
-			}
-			delete pCurrentUnit;
-			//no need to do anything if a dupe has been found!
-		}
-	}
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqOrTechs, pClassInfo->getPrereqOrTechs());
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqAndTechs, pClassInfo->getPrereqAndTechs());
 
 	if (getOtherPlayerHasTech() == iTextDefault) m_iOtherPlayerHasTech = pClassInfo->getOtherPlayerHasTech();
 	if (getCivic() == iTextDefault) m_iCivic = pClassInfo->getCivic();

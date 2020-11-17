@@ -15366,7 +15366,8 @@ void CvPlayer::constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pat
 	//TechTypes eShortestOr = NO_TECH;
 	//int iLowestCost = MAX_INT;
 	//	Find the shortest OR tech
-	foreach_(const TechTypes& ePreReq, GC.getTechInfo(eTech).getPrereqOrTechs())
+	const std::vector<TechTypes>& prereqOrTechs = GC.getTechInfo(eTech).getPrereqOrTechs();
+	for (uint32_t j = 0, numPrereqOrTechs = prereqOrTechs.size(); j < numPrereqOrTechs; j++)
 	{
 		techPath* seedPath;
 
@@ -15382,7 +15383,7 @@ void CvPlayer::constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pat
 		}
 
 		//	Recurse
-		constructTechPathSet(ePreReq, pathSet, *seedPath);
+		constructTechPathSet(prereqOrTechs[j], pathSet, *seedPath);
 	}
 }
 
@@ -24143,14 +24144,14 @@ bool CvPlayer::isEventTriggerPossible(EventTriggerTypes eTrigger, bool bIgnoreAc
 			return false;
 		}
 	}
-
-	if (kTrigger.getNumPrereqOrTechs() > 0)
+	const std::vector<TechTypes>& prereqOrTechs = kTrigger.getPrereqOrTechs();
+	if (prereqOrTechs.size() > 0)
 	{
 		bool bFoundValid = false;
 
-		for (int iI = 0; iI < kTrigger.getNumPrereqOrTechs(); iI++)
+		foreach_(const TechTypes& tech, prereqOrTechs)
 		{
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)(kTrigger.getPrereqOrTechs(iI))))
+			if (GET_TEAM(getTeam()).isHasTech(tech))
 			{
 				bFoundValid = true;
 				break;
@@ -24162,14 +24163,14 @@ bool CvPlayer::isEventTriggerPossible(EventTriggerTypes eTrigger, bool bIgnoreAc
 			return false;
 		}
 	}
-
-	if (kTrigger.getNumPrereqAndTechs() > 0)
+	const std::vector<TechTypes>& prereqAndTechs = kTrigger.getPrereqAndTechs();
+	if (prereqAndTechs.size() > 0)
 	{
 		bool bFoundValid = true;
 
-		foreach_(const TechTypes& ePreReq, kTrigger.getPrereqAndTechs())
+		foreach_(const TechTypes& tech, prereqAndTechs)
 		{
-			if (!GET_TEAM(getTeam()).isHasTech(ePreReq))
+			if (!GET_TEAM(getTeam()).isHasTech(tech))
 			{
 				bFoundValid = false;
 				break;

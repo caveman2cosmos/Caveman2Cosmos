@@ -4662,7 +4662,7 @@ int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusC
 
 			bool bIsANDPreReq = false;
 			int iANDPrereqs = 0;
-			foreach_(const TechTypes& ePreReq, GC.getTechInfo(eTech).getPrereqAndTechs())
+			foreach_(const TechTypes& ePrereq, GC.getTechInfo(eTech).getPrereqAndTechs())
 			{
 				if (!GET_TEAM(getTeam()).isHasTech(ePrereq))
 				{
