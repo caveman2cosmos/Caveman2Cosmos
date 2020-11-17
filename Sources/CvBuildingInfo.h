@@ -27,6 +27,16 @@ public:
 	CvBuildingInfo();
 	virtual ~CvBuildingInfo();
 
+	bool read(CvXMLLoadUtility* pXML);
+	bool readPass2(CvXMLLoadUtility* pXML);
+	bool readPass3();
+	void copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase*) {}
+	void write(FDataStreamBase*) {}
+
 	int getMaxGlobalInstances() const				{ return m_iMaxGlobalInstances; } // Exposed to Python
 	int getMaxTeamInstances() const					{ return m_iMaxTeamInstances; } // Exposed to Python
 	int getMaxPlayerInstances() const				{ return m_iMaxPlayerInstances; } // Exposed to Python
@@ -263,13 +273,6 @@ public:
 	const TCHAR* getButton() const;
 	const TCHAR* getMovie() const;
 
-	// serialization
-	void read(FDataStreamBase*) {}
-	void write(FDataStreamBase*) {}
-
-	bool read(CvXMLLoadUtility* pXML);
-
-	// Afforess 12/9/09
 	int getFreePromotion_2() const					{ return m_iFreePromotion_2; }
 	int getFreePromotion_3() const					{ return m_iFreePromotion_3; }
 	int getPrereqVicinityBonus() const				{ return m_iPrereqVicinityBonus; }
@@ -311,22 +314,20 @@ public:
 	const std::vector<BonusTypes>& getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
 
 	bool isPrereqOrBuilding(int i) const;
-
 	bool isPrereqOrGameSpeed(int i) const;
-
 	bool isPrereqOrCivics(int iCivic) const;
 	bool isPrereqAndCivics(int iCivic) const;
-
 	bool isPrereqOrTerrain(int i) const;		//Exposed to Python
 	bool isPrereqAndTerrain(int i) const;		//Exposed to Python
 	bool isPrereqOrImprovement(int i) const;	//Exposed to Python
 	bool isPrereqOrFeature(int i) const;		//Exposed to Python
 	bool isPrereqNotBuilding(int i) const;
-	int  getBuildingProductionModifier(int i) const;
-	int  getGlobalBuildingProductionModifier(int i) const;
-	int  getGlobalBuildingCostModifier(int i) const;
 
-	int  getBonusDefenseChanges(int i) const;
+	int getBuildingProductionModifier(int i) const;
+	int getGlobalBuildingProductionModifier(int i) const;
+	int getGlobalBuildingCostModifier(int i) const;
+
+	int getBonusDefenseChanges(int i) const;
 
 	std::vector<CvString> m_aszPrereqOrCivicsforPass3;
 	std::vector<bool> m_abPrereqOrCivicsforPass3;
@@ -523,9 +524,9 @@ public:
 	bool isFreeBonusOfBuilding(BonusTypes eBonus) const;
 	bool EnablesUnits() const;
 
-	bool readPass3();
-
-	void getCheckSum(unsigned int& iSum) const;
+	//Alberts2 PrereqBonuses
+	const std::vector<BonusTypes>& getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
+	const python::list cyGetPrereqOrBonuses() const { return Cy::makeList(m_aePrereqOrBonuses); }
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -616,8 +617,6 @@ protected:
 	int** m_ppaiBonusYieldChanges;
 	int** m_ppaiBonusCommercePercentChanges;
 	int** m_ppaiVicinityBonusYieldChanges;
-
-private:
 	int* m_piBuildingProductionModifier;
 	int* m_piGlobalBuildingProductionModifier;
 	int* m_piGlobalBuildingCostModifier;
@@ -629,16 +628,6 @@ private:
 
 	CvPropertyManipulators m_PropertyManipulators;
 
-public:
-	bool readPass2(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
-
-	//Alberts2 PrereqBonuses
-	const std::vector<BonusTypes>& getPrereqOrBonuses() const { return m_aePrereqOrBonuses; }
-	const python::list cyGetPrereqOrBonuses() const { return Cy::makeList(m_aePrereqOrBonuses); }
-
-protected:
 	int m_iVictoryPrereq;
 	int m_iFreeStartEra;
 	int m_iMaxStartEra;
@@ -701,10 +690,8 @@ protected:
 	int m_iPowerValue;
 	int m_iSpecialBuildingType;
 	int m_iAdvisorType;
-
 	int m_iPrereqGameOption;
 	int m_iNotGameOption;
-
 	int m_iHolyCity;
 	int m_iReligionType;
 	int m_iStateReligion;

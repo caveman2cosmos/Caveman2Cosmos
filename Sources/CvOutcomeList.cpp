@@ -95,11 +95,8 @@ void CvOutcomeList::clear()
 
 void insertReplaceOutcomesRecursive(std::set<OutcomeTypes>& aeReplacedOutcomes, OutcomeTypes eOutcome)
 {
-	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(eOutcome);
-	const int iNumReplaced = kInfo.getNumReplaceOutcomes();
-	for (int j=0; j<iNumReplaced; j++)
+	foreach_(const OutcomeTypes& eReplOutcome, GC.getOutcomeInfo(eOutcome).getReplaceOutcomes())
 	{
-		const OutcomeTypes eReplOutcome = kInfo.getReplaceOutcome(j);
 		aeReplacedOutcomes.insert(eReplOutcome);
 		insertReplaceOutcomesRecursive(aeReplacedOutcomes, eReplOutcome);
 	}
@@ -215,7 +212,6 @@ bool CvOutcomeList::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 	{
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"Outcome"))
 			{
 				do

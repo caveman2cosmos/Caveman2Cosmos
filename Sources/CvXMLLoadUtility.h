@@ -847,7 +847,7 @@ private:
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
 	template <class T>
-	void LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* szFileRoot, const char* szFileDirectory, const wchar_t* szXmlPath, bool bTwoPass, CvInfoReplacements<T>* pReplacements = NULL);
+	void LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* szFileRoot, const char* szFileDirectory, const wchar_t* szXmlPath, CvInfoReplacements<T>* pReplacements = NULL);
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 05/13/08                                MRGENIE      */
 /*                                                                                              */

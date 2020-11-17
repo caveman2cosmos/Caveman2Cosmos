@@ -126,21 +126,18 @@ protected:
 class CvScalableInfo
 {
 public:
-
 	CvScalableInfo() : m_fScale(1.0f), m_fInterfaceScale(1.0f) { }
-
-	DllExport float getScale() const;
-	DllExport float getInterfaceScale() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvScalableInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	// serialization
 	void read(FDataStreamBase* pStream) {}
 	void write(FDataStreamBase* pStream) {}
 
-protected:
+	DllExport float getScale() const;
+	DllExport float getInterfaceScale() const;
 
+protected:
 	float m_fScale; // Exposed to Python
 	float m_fInterfaceScale;	//!< the scale of the unit appearing in the interface screens
 };
@@ -152,16 +149,14 @@ protected:
 class CvHotkeyInfo : public CvInfoBase
 {
 public:
-	//constructor
 	CvHotkeyInfo();
-	//destructor
 	virtual ~CvHotkeyInfo();
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvHotkeyInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	int getActionInfoIndex() const;
 	void setActionInfoIndex(int i);
@@ -187,7 +182,6 @@ public:
 	void setHotKeyDescription(const wchar_t* szHotKeyDescKey, const wchar_t* szHotKeyAltDescKey, const wchar_t* szHotKeyString);
 
 protected:
-
 	int m_iActionInfoIndex;
 
 	int m_iHotKeyVal;
@@ -212,11 +206,16 @@ protected:
 class CvDiplomacyInfo;
 class CvDiplomacyResponse
 {
-//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvDiplomacyResponse();
 	virtual ~CvDiplomacyResponse();
+
+	bool read(CvXMLLoadUtility* pXML);
+
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
+
+	void UpdateDiplomacies(CvDiplomacyInfo* pDiplomacyInfo, int iIndex);
 
 	int getNumDiplomacyText() const;
 
@@ -234,11 +233,6 @@ public:
 
 	const TCHAR* getDiplomacyText(int i) const;
 	const CvString* getDiplomacyText() const;
-
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
-	bool read(CvXMLLoadUtility* pXML);
-	void UpdateDiplomacies(CvDiplomacyInfo* pDiplomacyInfo, int iIndex);
 
 protected:
 	int m_iNumDiplomacyText;
@@ -258,11 +252,17 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvSpecialistInfo : public CvHotkeyInfo
 {
-//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvSpecialistInfo();
 	virtual ~CvSpecialistInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	bool readPass3();
+	void copyNonDefaults(CvSpecialistInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* ) {}
+	void write(FDataStreamBase* ) {}
 
 	int getGreatPeopleUnitType() const; // Exposed to Python
 	int getGreatPeopleRateChange() const; // Exposed to Python
@@ -306,20 +306,9 @@ public:
 
 	//TB Specialist Tags end
 
-	void read(FDataStreamBase* ) {}
-	void write(FDataStreamBase* ) {}
-
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvSpecialistInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	bool readPass3();
-
-	void getCheckSum(unsigned int& iSum) const;
-
 private:
 	CvPropertyManipulators m_PropertyManipulators;
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
 
 	int m_iGreatPeopleUnitType;
@@ -364,17 +353,21 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvTechInfo : public CvInfoBase
 {
+	friend class CvXMLLoadUtility;
 
-friend class CvXMLLoadUtility;
-
-//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvTechInfo();
 	virtual ~CvTechInfo();
 
-	//	Validate tech info da after load (debug only)
-	static void validate();
+	bool read(CvXMLLoadUtility* pXML);
+	bool readPass3();
+	void copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* ) {}
+	void write(FDataStreamBase* ) {}
+
+	static void validate(); // Validate tech info da after load (debug only)
 
 	int getAdvisorType() const; // Exposed to Python
 	int getAIWeight() const; // Exposed to Python
@@ -449,8 +442,6 @@ public:
 	int getPrereqOrBuildingType(int iIndex) const;
 	int getPrereqOrBuildingMinimumRequired(int iIndex) const;
 
-	bool readPass3();
-
 	bool isGlobal() const;
 
 	// Dale - AB: Bombing START
@@ -481,17 +472,6 @@ public:
 	//ls612: Tech Commerce Modifiers
 	int getCommerceModifier(int i) const;
 	int* getCommerceModifierArray() const;
-
-	void read(FDataStreamBase* ) {}
-	void write(FDataStreamBase* ) {}
-
-	bool read(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
 protected:
 
@@ -590,10 +570,18 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvPromotionInfo :	public CvHotkeyInfo
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
 	CvPromotionInfo();
 	virtual ~CvPromotionInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	bool readPass2(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvPromotionInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
 
 	int getLayerAnimationPath() const;
 	int getPrereqPromotion() const; // Exposed to Python
@@ -641,43 +629,27 @@ public:
 	int getUpgradeDiscount() const; // Exposed to Python
 	int getExperiencePercent() const; // Exposed to Python
 	int getKamikazePercent() const; // Exposed to Python
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 16.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
 	int getAirCombatLimitChange() const; // Exposed to Python
 	int getCelebrityHappy() const; // Exposed to Python
 	int getCollateralDamageLimitChange() const; // Exposed to Python
 	int getCollateralDamageMaxUnitsChange() const; // Exposed to Python
 	int getCombatLimitChange() const; // Exposed to Python
 	int getExtraDropRange() const; // Exposed to Python
-	//Team Project (2)
 	int getSurvivorChance() const;
 	int getVictoryAdjacentHeal() const;
-	//
 	int getVictoryHeal() const; // Exposed to Python
-	//Team Project (2)
 	int getVictoryStackHeal() const;
-	//
+
 	bool isDefensiveVictoryMove() const; // Exposed to Python
 	bool isFreeDrop() const; // Exposed to Python
 	bool isOffensiveVictoryMove() const; // Exposed to Python
-	//Team Project (2)
 	bool isOneUp() const;
-	//
 	bool isPillageCulture() const; // Exposed to Python
 	bool isPillageEspionage() const; // Exposed to Python
 	bool isPillageMarauder() const; // Exposed to Python
 	bool isPillageOnMove() const; // Exposed to Python
 	bool isPillageOnVictory() const; // Exposed to Python
 	bool isPillageResearch() const; // Exposed to Python
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
-
 	bool isLeader() const; // Exposed to Python
 	bool isBlitz() const; // Exposed to Python
 	bool isAmphib() const; // Exposed to Python
@@ -716,14 +688,6 @@ public:
 	bool getFeatureDoubleMove(int i) const; // Exposed to Python
 	bool getUnitCombat(int i) const; // Exposed to Python
 
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
-
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	bool isCanMovePeaks() const;
 	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
 	//	mountains, and ability to lead a stack through mountains
@@ -737,8 +701,6 @@ public:
 	int getAssetMultiplier() const;
 	int getPowerMultiplier() const;
 	int getIgnoreTerrainDamage() const;
-
-	void getCheckSum(unsigned int& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -1146,21 +1108,9 @@ protected:
 	int m_iPowerMultiplier;
 	int m_iIgnoreTerrainDamage;
 	int m_zobristValue;
-public:
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvPromotionInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
-private:
 	CvPropertyManipulators m_PropertyManipulators;
 
-//----------------------PROTECTED MEMBER VARIABLES----------------------------
-
-protected:
 	int m_iLayerAnimationPath;
 	int m_iPrereqPromotion;
 	int m_iPrereqOrPromotion1;
@@ -1205,29 +1155,20 @@ protected:
 	int m_iUpgradeDiscount;
 	int m_iExperiencePercent;
 	int m_iKamikazePercent;
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 16.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
 	int m_iAirCombatLimitChange;
 	int m_iCelebrityHappy;
 	int m_iCollateralDamageLimitChange;
 	int m_iCollateralDamageMaxUnitsChange;
 	int m_iCombatLimitChange;
 	int m_iExtraDropRange;
-	//Team Project (2)
 	int m_iSurvivorChance;
 	int m_iVictoryAdjacentHeal;
 	int m_iVictoryHeal;
-	//Team Project (2)
 	int m_iVictoryStackHeal;
+
 	bool m_bDefensiveVictoryMove;
 	bool m_bFreeDrop;
 	bool m_bOffensiveVictoryMove;
-	//Team Project (2)
 	bool m_bOneUp;
 	bool m_bPillageCulture;
 	bool m_bPillageEspionage;
@@ -1235,10 +1176,6 @@ protected:
 	bool m_bPillageOnMove;
 	bool m_bPillageOnVictory;
 	bool m_bPillageResearch;
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
-
 	bool m_bLeader;
 	bool m_bBlitz;
 	bool m_bAmphib;
@@ -1490,7 +1427,6 @@ protected:
 
 	//Pediahelp
 	std::vector<int> m_aiQualifiedUnitCombatTypes;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1502,12 +1438,18 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvMissionInfo : public CvHotkeyInfo
 {
-//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvMissionInfo();
 	explicit CvMissionInfo(const char* szType);
 	virtual ~CvMissionInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvMissionInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	// Should not be needed to checksum this as this will likely not get changed without DLL changes
+	//void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	DllExport int getTime() const; // Exposed to Python
 
@@ -1519,20 +1461,7 @@ public:
 
 	const TCHAR* getWaypoint() const;		// effect type, Exposed to Python
 
-	bool read(CvXMLLoadUtility* pXML);
-
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
-	void copyNonDefaults(CvMissionInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	// Should not be needed to checksum this as this will likely not get changed without DLL changes
-	//void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-
 protected:
-
 	int m_iTime;
 
 	bool m_bSound;
@@ -1542,7 +1471,6 @@ protected:
 	EntityEventTypes m_eEntityEvent;
 
 	CvString m_szWaypoint;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1554,18 +1482,12 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvControlInfo : public CvHotkeyInfo
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvControlInfo();
 	virtual ~CvControlInfo();
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvControlInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-
-protected:
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1577,22 +1499,18 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvCommandInfo : public CvHotkeyInfo
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvCommandInfo();
 	virtual ~CvCommandInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvCommandInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	int getAutomate() const;
 
 	bool getConfirmCommand() const;
 	bool getVisible() const;
 	bool getAll() const;
-
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvCommandInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
 protected:
 	int m_iAutomate;
@@ -1611,22 +1529,18 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvAutomateInfo : public CvHotkeyInfo
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvAutomateInfo();
 	virtual ~CvAutomateInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvAutomateInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	int getCommand() const;
 	int getAutomate() const;
 
 	bool getConfirmCommand() const;
 	bool getVisible() const;
-
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvAutomateInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
 protected:
 	int m_iCommand;
@@ -1645,15 +1559,12 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvActionInfo
 {
-//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvActionInfo();
 	virtual ~CvActionInfo();
 
 	int getMissionData() const; // Exposed to Python
 	int getCommandData() const; // Exposed to Python
-
 	int getAutomateType() const;
 	int getInterfaceModeType() const; // Exposed to Python
 	int getMissionType() const; // Exposed to Python
@@ -1696,16 +1607,12 @@ public:
 
 	std::wstring getHotKeyDescription() const; // Exposed to Python
 
-//----------------------PROTECTED MEMBER VARIABLES----------------------------
-
 protected:
-
 	int m_iOriginalIndex;
 	ActionSubTypes m_eSubType;
 
 private:
 	CvHotkeyInfo* getHotkeyInfo() const;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1718,10 +1625,19 @@ private:
 class CvArtInfoUnit;
 class CvUnitInfo : public CvHotkeyInfo
 {
-//---------------------------PUBLIC INTERFACE---------------------------------
 public:
 	CvUnitInfo();
 	virtual ~CvUnitInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	bool readPass2(CvXMLLoadUtility* pXML);
+	bool readPass3();
+	void copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* ) {}
+	void write(FDataStreamBase* ) {}
 
 	int getMaxGlobalInstances() const; // Exposed to Python
 	int getMaxPlayerInstances() const; // Exposed to Python
@@ -2190,7 +2106,6 @@ public:
 	int getAidChange(int iProperty) const;
 	bool isAidChange(int iProperty) const;
 
-
 	// TB Combat Mod End TB SubCombat Mod end
 	bool hasUnitCombat(UnitCombatTypes eUnitCombat) const;
 	void setTotalModifiedCombatStrengthDetails();
@@ -2213,8 +2128,6 @@ public:
 	void setCanAnimalIgnores();
 
 	virtual const wchar_t* getExtraHoverText() const;
-
-	void getCheckSum(unsigned int& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -2295,9 +2208,9 @@ public:
 
 	bool isPrereqOrCivics(int i) const; // Exposed to Python
 
-	int CvUnitInfo::getPrereqAndBuilding(int i) const;
-	int CvUnitInfo::getNumPrereqAndBuildings() const;
-	bool CvUnitInfo::isPrereqAndBuilding(int i) const;
+	int getPrereqAndBuilding(int i) const;
+	int getNumPrereqAndBuildings() const;
+	bool isPrereqAndBuilding(int i) const;
 
 	int getTargetUnit(int i) const;
 	int getNumTargetUnits() const;
@@ -2316,7 +2229,7 @@ public:
 	bool isUnitUpgrade(int i) const;			//Exposed to Python
 
 	std::vector<int> getUnitUpgradeChain() const;
-	void CvUnitInfo::addUnitToUpgradeChain(int i);
+	void addUnitToUpgradeChain(int i);
 
 	bool getTargetUnitCombat(int i) const; // Exposed to Python
 	bool getDefenderUnitCombat(int i) const; // Exposed to Python
@@ -2358,15 +2271,6 @@ public:
 	void updateArtDefineButton();
 
 	const CvArtInfoUnit* getArtInfo(int i, EraTypes eEra, UnitArtStyleTypes eStyle) const;
-
-	void read(FDataStreamBase* ) {}
-	void write(FDataStreamBase* ) {}
-
-	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-	bool readPass3();
-	void copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	std::vector<int>& getSubCombatTypes();
 
@@ -2751,11 +2655,12 @@ public:
 	CvSpawnInfo();
 	virtual ~CvSpawnInfo();
 
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
-	virtual bool read(CvXMLLoadUtility* pXML);
+	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpawnInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	int	getNumBonuses() const;
 	int	getNumTerrains() const;
@@ -2794,8 +2699,6 @@ public:
 	TechTypes getObsoleteTechType() const;
 
 	BoolExpr* getSpawnCondition() const;
-
-	void getCheckSum(unsigned int& iSum) const;
 
 private:
 	UnitTypes				m_eUnitType;
@@ -2869,32 +2772,27 @@ public:
 
 class CvUnitFormationInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	DllExport CvUnitFormationInfo();
 	virtual ~CvUnitFormationInfo();
-
-	DllExport const TCHAR* getFormationType() const;
-	int getNumEventTypes() const;
-	const EntityEventTypes &getEventType(int index) const;
-	DllExport const std::vector<EntityEventTypes> & getEventTypes() const;
-
-	DllExport int getNumUnitEntries() const;
-	DllExport const CvUnitEntry &getUnitEntry(int index) const;
-	DllExport void addUnitEntry(const CvUnitEntry &unitEntry);
-	int getNumGreatUnitEntries() const;
-	DllExport const CvUnitEntry &getGreatUnitEntry(int index) const;
-	int getNumSiegeUnitEntries() const;
-	DllExport const CvUnitEntry &getSiegeUnitEntry(int index) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvUnitFormationInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	//---------------------------------------PUBLIC MEMBER VARIABLES---------------------------------
+	DllExport const TCHAR* getFormationType() const;
+	int getNumEventTypes() const;
+	const EntityEventTypes& getEventType(int index) const;
+	DllExport const std::vector<EntityEventTypes>& getEventTypes() const;
+
+	DllExport int getNumUnitEntries() const;
+	DllExport const CvUnitEntry& getUnitEntry(int index) const;
+	DllExport void addUnitEntry(const CvUnitEntry& unitEntry);
+	int getNumGreatUnitEntries() const;
+	DllExport const CvUnitEntry& getGreatUnitEntry(int index) const;
+	int getNumSiegeUnitEntries() const;
+	DllExport const CvUnitEntry& getSiegeUnitEntry(int index) const;
 
 protected:
-
 	CvString m_szFormationType;
 	std::vector<EntityEventTypes>	m_vctEventTypes;		//!< The list of EntityEventTypes that this formation is intended for
 
@@ -2910,20 +2808,22 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvSpecialUnitInfo :
-	public CvInfoBase
+class CvSpecialUnitInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvSpecialUnitInfo();
 	virtual ~CvSpecialUnitInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvSpecialUnitInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	bool isValid() const;
 	bool isCityLoad() const;
 	bool isSMLoadSame() const;
-
-	// Arrays
 
 	bool isCarrierUnitAIType(int i) const; // Exposed to Python
 
@@ -2931,20 +2831,7 @@ public:
 	int getWithdrawalChange() const;
 	int getPursuitChange() const;
 
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
-	bool read(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvSpecialUnitInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-
 protected:
-
 	bool m_bValid;
 	bool m_bCityLoad;
 	bool m_bSMLoadSame;
@@ -2953,7 +2840,6 @@ protected:
 	int m_iWithdrawalChange;
 	int m_iPursuitChange;
 
-	// Arrays
 	bool* m_pbCarrierUnitAITypes;
 };
 
@@ -2964,27 +2850,21 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCivicOptionInfo :
-	public CvInfoBase
+class CvCivicOptionInfo : public CvInfoBase
 {
-//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvCivicOptionInfo();
 	virtual ~CvCivicOptionInfo();
-
-//	bool getTraitNoUpkeep(int i) const; // Exposed to Python
-	bool isPolicy() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvCivicOptionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
+//	bool getTraitNoUpkeep(int i) const; // Exposed to Python
+	bool isPolicy() const;
 
+protected:
 	bool* m_pabTraitNoUpkeep;
 	bool m_bPolicy;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2994,14 +2874,19 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCivicInfo :
-	public CvInfoBase
+class CvCivicInfo : public CvInfoBase
 {
-//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvCivicInfo();
 	virtual ~CvCivicInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	bool readPass3();
+	void copyNonDefaults(CvCivicInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
 
 	std::wstring pyGetWeLoveTheKing() const { return getWeLoveTheKing(); } // Exposed to Python
 	const wchar_t* getWeLoveTheKing() const;
@@ -3168,13 +3053,6 @@ public:
 	CvString getCivicAttitudeReasonNamesVectorElement(int i) const;
 	CvString getCivicAttitudeReasonValuesVectorElement(int i) const;
 
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
-	bool readPass3();
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvCivicInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
-
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 private:
@@ -3336,19 +3214,23 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvDiplomacyInfo :
-	public CvInfoBase
+class CvDiplomacyInfo : public CvInfoBase
 {
-
 	friend class CvXMLLoadUtility;		// so it can access private vars to initialize the class
-	//---------------------------PUBLIC INTERFACE---------------------------------
-public:
 
+public:
 	CvDiplomacyInfo();
 	virtual ~CvDiplomacyInfo();
 
 	void uninit();
 
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvXMLLoadUtility* pXML);
+
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
+
+	bool FindResponseIndex(const CvDiplomacyResponse* pNewResponse, int iCase, int* iIndex) const;
 	const CvDiplomacyResponse& getResponse(int iNum) const; // Exposed to Python
 	int getNumResponses() const; // Exposed to Python
 
@@ -3358,14 +3240,7 @@ public:
 	bool getDiplomacyPowerTypes(int i, int j) const; // Exposed to Python
 
 	int getNumDiplomacyText(int i) const; // Exposed to Python
-
 	const TCHAR* getDiplomacyText(int i, int j) const; // Exposed to Python
-
-	void read(FDataStreamBase* stream){}
-	void write(FDataStreamBase* stream){}
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvXMLLoadUtility* pXML);
-	bool FindResponseIndex(const CvDiplomacyResponse* pNewResponse, int iCase, int* iIndex) const;
 
 private:
 	std::vector<CvDiplomacyResponse*> m_pResponses;
@@ -3378,15 +3253,18 @@ private:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvSpecialBuildingInfo :
-	public CvInfoBase
+class CvSpecialBuildingInfo : public CvInfoBase
 {
-
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvSpecialBuildingInfo();
 	virtual ~CvSpecialBuildingInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvSpecialBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
 
 	int getObsoleteTech() const; // Exposed to Python
 	int getTechPrereq() const; // Exposed to Python
@@ -3395,18 +3273,7 @@ public:
 
 	bool isValid() const; // Exposed to Python
 
-	bool read(CvXMLLoadUtility* pXML);
-
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
-
-	void copyNonDefaults(CvSpecialBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	int m_iObsoleteTech;
 	int m_iTechPrereq;
 	int m_iTechPrereqAnyone;
@@ -3422,14 +3289,14 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvRiverModelInfo :
-	public CvInfoBase
+class CvRiverModelInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvRiverModelInfo();
 	virtual ~CvRiverModelInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvRiverModelInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	DllExport const TCHAR* getModelFile() const; // Exposed to Python
 	DllExport const TCHAR* getBorderFile() const; // Exposed to Python
@@ -3439,13 +3306,7 @@ public:
 	DllExport const TCHAR* getConnectString() const; // Exposed to Python
 	DllExport const TCHAR* getRotateString() const; // Exposed to Python
 
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvRiverModelInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-
 protected:
-
 	CvString m_szModelFile;					// The model filename
 	CvString m_szBorderFile;				// The border filename
 
@@ -3462,14 +3323,14 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvRouteModelInfo :
-	public CvInfoBase
+class CvRouteModelInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvRouteModelInfo();
 	virtual ~CvRouteModelInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvRouteModelInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	DllExport RouteTypes getRouteType() const;			// The route type
 
@@ -3483,13 +3344,7 @@ public:
 	DllExport const TCHAR* getModelConnectString() const; // Exposed to Python
 	DllExport const TCHAR* getRotateString() const; // Exposed to Python
 
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvRouteModelInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-
 protected:
-
 	RouteTypes	m_eRouteType;			// The route type
 
 	CvString m_szModelFile;				// The model filename
@@ -3510,15 +3365,19 @@ protected:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvArtInfoCivilization;
-class CvCivilizationInfo :
-	public CvInfoBase
+class CvCivilizationInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvCivilizationInfo();
 	virtual ~CvCivilizationInfo();
 	virtual void reset();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvCivilizationInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
 
 	DllExport int getDefaultPlayerColor() const; // Exposed to Python
 	int getArtStyleType() const; // Exposed to Python
@@ -3549,7 +3408,6 @@ public:
 
 	int getCivilizationFreeUnits(int i) const; // Exposed to Python
 	int getCivilizationInitialCivics(int i) const; // Exposed to Python
-	// Afforess 04/05/10
 	void setCivilizationInitialCivics(int iCivicOption, int iCivic);
 
 	DllExport bool isLeaders(int i) const; // Exposed to Python
@@ -3576,19 +3434,7 @@ public:
 	// as allowed in Unit or Building Info by the EnabledCivilization tag.  Generally used for NPC players.
 	bool isStronglyRestricted() const;
 
-	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvCivilizationInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvCivilizationInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
-
-	void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-
 protected:
-
 	int m_iDefaultPlayerColor;
 	int m_iArtStyleType;
 	int m_iUnitArtStyleType; // FlavorUnits by Impaler[WrG]
@@ -3632,14 +3478,15 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvVictoryInfo :
-	public CvInfoBase
+class CvVictoryInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvVictoryInfo();
 	virtual ~CvVictoryInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvVictoryInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
 
 	int getPopulationPercentLead() const; // Exposed to Python
 	int getLandPercent() const; // Exposed to Python
@@ -3660,14 +3507,7 @@ public:
 
 	const char* getMovie() const;
 
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvVictoryInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-
 protected:
-
 	int m_iPopulationPercentLead;
 	int m_iLandPercent;
 	int m_iMinLandPercent;
@@ -3695,34 +3535,29 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvHurryInfo :
-	public CvInfoBase
+class CvHurryInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
-	public:
+public:
+	CvHurryInfo();
+	virtual ~CvHurryInfo();
 
-		CvHurryInfo();
-		virtual ~CvHurryInfo();
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvHurryInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
 
-		int getGoldPerProduction() const; // Exposed to Python
-		int getProductionPerPopulation() const; // Exposed to Python
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
 
-		bool isAnger() const; // Exposed to Python
+	int getGoldPerProduction() const; // Exposed to Python
+	int getProductionPerPopulation() const; // Exposed to Python
 
-		void read(FDataStreamBase* stream) {}
-		void write(FDataStreamBase* stream) {}
+	bool isAnger() const; // Exposed to Python
 
-		bool read(CvXMLLoadUtility* pXML);
-		void copyNonDefaults(CvHurryInfo* pClassInfo, CvXMLLoadUtility* pXML);
-		void getCheckSum(unsigned int& iSum) const;
+protected:
+	int m_iGoldPerProduction;
+	int m_iProductionPerPopulation;
 
-	//---------------------------------------PUBLIC MEMBER VARIABLES---------------------------------
-	protected:
-
-		int m_iGoldPerProduction;
-		int m_iProductionPerPopulation;
-
-		bool m_bAnger;
+	bool m_bAnger;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3732,14 +3567,18 @@ class CvHurryInfo :
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvHandicapInfo :
-	public CvInfoBase
+class CvHandicapInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvHandicapInfo();
 	virtual ~CvHandicapInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
 
 	int getFreeWinsVsBarbs() const; // Exposed to Python
 	int getAnimalAttackProb() const; // Exposed to Python
@@ -3813,13 +3652,6 @@ public:
 	int isAIFreeTechs(int i) const; // Exposed to Python
 
 	int getPercent(int iID) const;
-
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
-
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
 
 private:
 	CvPropertyManipulators m_PropertyManipulators;
@@ -3907,14 +3739,15 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvGameSpeedInfo :
-	public CvInfoBase
+class CvGameSpeedInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvGameSpeedInfo();
 	virtual ~CvGameSpeedInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvGameSpeedInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
 
 	int getGrowthPercent() const; // Exposed to Python
 	int getTrainPercent() const; // Exposed to Python
@@ -3955,13 +3788,7 @@ public:
 	int getTraitGainPercent() const;
 	//TB GameSpeed end
 
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvGameSpeedInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	int m_iGrowthPercent;
 	int m_iTrainPercent;
 	int m_iConstructPercent;
@@ -4006,29 +3833,22 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvTurnTimerInfo :
-	public CvInfoBase
+class CvTurnTimerInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvTurnTimerInfo();
 	virtual ~CvTurnTimerInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvTurnTimerInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
 
 	int getBaseTime() const; // Exposed to Python
 	int getCityBonus() const; // Exposed to Python
 	int getUnitBonus() const; // Exposed to Python
 	int getFirstTurnMultiplier() const; // Exposed to Python
 
-	bool read(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvTurnTimerInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	int m_iBaseTime;
 	int m_iCityBonus;
 	int m_iUnitBonus;
@@ -4044,22 +3864,22 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvBuildInfo : public CvHotkeyInfo
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvBuildInfo();
 	virtual ~CvBuildInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvBuildInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
 
 	int getTime() const; // Exposed to Python
 	int getCost() const; // Exposed to Python
 	int getTechPrereq() const; // Exposed to Python
 	int getImprovement() const; // Exposed to Python
 	int getRoute() const; // Exposed to Python
-/************************************************************************************************/
-/* Afforess					  Start		 05/25/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	int getTerrainChange() const; // Exposed to Python
 	int getFeatureChange() const; // Exposed to Python
 	int getObsoleteTech() const;
@@ -4068,9 +3888,6 @@ public:
 	bool isDisabled() const;
 	bool isHideObsoleteExempt() const;
 	void setDisabled(bool bNewVal);
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	DllExport int getEntityEvent() const; // Exposed to Python
 	DllExport int getMissionType() const; // Exposed to Python
 	void setMissionType(int iNewType);
@@ -4082,7 +3899,6 @@ public:
 	int getFeatureTech(int i) const; // Exposed to Python
 	int getFeatureTime(int i) const; // Exposed to Python
 	int getFeatureProduction(int i) const; // Exposed to Python
-
 	bool isFeatureRemove(int i) const; // Exposed to Python
 
 	// Vectors
@@ -4101,27 +3917,12 @@ public:
 	int getNumPlaceBonusTypes() const;
 	const PlaceBonusTypes& getPlaceBonusType(int iIndex) const;
 
-	bool read(CvXMLLoadUtility* pXML);
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
-	void copyNonDefaults(CvBuildInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-
 protected:
-
 	int m_iTime;
 	int m_iCost;
 	int m_iTechPrereq;
 	int m_iImprovement;
 	int m_iRoute;
-/************************************************************************************************/
-/* Afforess					  Start		 05/25/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	int m_iTerrainChange;
 	int m_iFeatureChange;
 	int m_iObsoleteTech;
@@ -4129,9 +3930,7 @@ protected:
 	bool m_bDisabled;
 	bool m_bHideObsoleteExempt;
 	bool* m_pabNoTechCanRemoveWithNoProductionGain;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 	int m_iEntityEvent;
 	int m_iMissionType;
 
@@ -4159,14 +3958,18 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvGoodyInfo :
-	public CvInfoBase
+class CvGoodyInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvGoodyInfo();
 	virtual ~CvGoodyInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvGoodyInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
 
 	int getGold() const; // Exposed to Python
 	int getGoldRand1() const; // Exposed to Python
@@ -4196,17 +3999,7 @@ public:
 
 	const TCHAR* getSound() const; // Exposed to Python
 
-	bool read(CvXMLLoadUtility* pXML);
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
-
-	void copyNonDefaults(CvGoodyInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-
 protected:
-
 	int m_iGold;
 	int m_iGoldRand1;
 	int m_iGoldRand2;
@@ -4231,7 +4024,6 @@ protected:
 	std::vector<int> m_aiMapCategoryTypes;
 
 	CvString m_szSound;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4241,14 +4033,18 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvRouteInfo :
-	public CvInfoBase
+class CvRouteInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvRouteInfo();
 	virtual ~CvRouteInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
 
 	int getAdvancedStartCost() const; // Exposed to Python
 	int getAdvancedStartCostIncrease() const; // Exposed to Python
@@ -4273,12 +4069,6 @@ public:
 	//	This really belongs on CvInfoBase but you can't change the size of that
 	//	object without crashing the core engine :-(
 	inline int	getZobristValue() const { return m_zobristValue; }
-
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
 
 private:
 	CvPropertyManipulators m_PropertyManipulators;
@@ -4312,21 +4102,18 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvImprovementBonusInfo :
-	public CvInfoBase
+class CvImprovementBonusInfo : public CvInfoBase
 {
+	friend class CvImprovementInfo;
+	friend class CvXMLLoadUtility;
 
-friend class CvImprovementInfo;
-friend class CvXMLLoadUtility;
-
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvImprovementBonusInfo();
 	virtual ~CvImprovementBonusInfo();
 
+	void getCheckSum(unsigned int& iSum) const;
+
 	int getDiscoverRand() const; // Exposed to Python
-	// Afforess 01/20/10
 	int getDepletionRand() const;
 
 	bool isBonusMakesValid() const; // Exposed to Python
@@ -4335,22 +4122,15 @@ public:
 
 	int getYieldChange(int i) const; // Exposed to Python
 
-	void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	int m_iDiscoverRand;
-	// Afforess 01/20/10
 	int m_iDepletionRand;
 
 	bool m_bBonusMakesValid;
 	bool m_bObsoleteBonusMakesValid;
 	bool m_bBonusTrade;
 
-	// Arrays
 	int* m_piYieldChange;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4361,14 +4141,20 @@ protected:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvArtInfoImprovement;
-class CvImprovementInfo :
-	public CvInfoBase
+class CvImprovementInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvImprovementInfo();
 	virtual ~CvImprovementInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvImprovementInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
+
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	int getAdvancedStartCost() const; // Exposed to Python
 	int getAdvancedStartCostIncrease() const; // Exposed to Python
@@ -4490,26 +4276,11 @@ protected:
 	//int** m_ppiTraitYieldChanges;
 
 	std::vector<int> m_aiMapCategoryTypes;
-public:
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
-	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvImprovementInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvImprovementInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
-
-	void getCheckSum(unsigned int& iSum) const;
-
-	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
-
-private:
 	CvPropertyManipulators m_PropertyManipulators;
 
-protected:
 	int m_iAdvancedStartCost;
 	int m_iAdvancedStartCostIncrease;
-
 	int m_iTilesPerGoody;
 	int m_iGoodyUniqueRange;
 	int m_iFeatureGrowthProbability;
@@ -4594,22 +4365,18 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvBonusClassInfo :
-	public CvInfoBase
+class CvBonusClassInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvBonusClassInfo();
 	virtual ~CvBonusClassInfo();
-
-	int getUniqueRange() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvBonusClassInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum) const;
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
+	int getUniqueRange() const; // Exposed to Python
+
 protected:
 	int m_iUniqueRange;
 };
@@ -4622,14 +4389,18 @@ protected:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvArtInfoBonus;
-class CvBonusInfo :
-	public CvInfoBase
+class CvBonusInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvBonusInfo();
 	virtual ~CvBonusInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvBonusInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
 
 	int getBonusClassType() const; // Exposed to Python
 	int getChar() const; // Exposed to Python
@@ -4681,7 +4452,6 @@ public:
 	int getNumMapCategoryTypes() const;
 	bool isMapCategoryType(int i) const;
 
-
 	int getNumAfflictionCommunicabilityTypes() const;
 	PromotionLineAfflictionModifier getAfflictionCommunicabilityType(int iPromotionLine, bool bWorkedTile = false, bool bVicinity = false, bool bAccessVolume = false);
 
@@ -4690,13 +4460,6 @@ public:
 	DllExport const CvArtInfoBonus* getArtInfo() const; // Exposed to Python
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
-
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
-
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvBonusInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
 
 	const std::vector<std::pair<ImprovementTypes,BuildTypes> >*	getTradeProvidingImprovements();
 
@@ -4763,14 +4526,18 @@ protected:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvArtInfoFeature;
-class CvFeatureInfo :
-	public CvInfoBase
+class CvFeatureInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvFeatureInfo();
 	virtual ~CvFeatureInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvFeatureInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
 
 	int getMovementCost() const; // Exposed to Python
 	int getSeeThroughChange() const; // Exposed to Python
@@ -4831,16 +4598,18 @@ public:
 	DllExport const CvArtInfoFeature* getArtInfo() const;
 	const TCHAR* getButton() const;
 
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	bool read(CvXMLLoadUtility* pXML);
+	//	This really belongs on CvInfoBase but you can't change the size of that
+	//	object without crashing the core engine :-(
+	inline int	getZobristValue() const { return m_zobristValue; }
 
 	const TCHAR* getGrowthSound() const;
 	int getSpreadProbability() const;
 	int getCultureDistance() const;
 	bool isIgnoreTerrainCulture() const;
 	bool isCanGrowAnywhere() const;
+
 protected:
 	CvString m_szGrowthSound;
 	int m_iSpreadProbability;
@@ -4849,23 +4618,10 @@ protected:
 	bool m_bCanGrowAnywhere;
 
 	std::vector<int> m_aiMapCategoryTypes;
-public:
-
-	void copyNonDefaults(CvFeatureInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
-
-	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
-
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
-	//	This really belongs on CvInfoBase but you can't change the size of that
-	//	object without crashing the core engine :-(
-	inline int	getZobristValue() const { return m_zobristValue; }
 
-private:
 	CvPropertyManipulators m_PropertyManipulators;
 
-protected:
 	int m_iMovementCost;
 	int m_iSeeThroughChange;
 	int m_iHealthPercent;
@@ -4906,7 +4662,6 @@ protected:
 
 	bool* m_pbTerrain;
 
-private:
 	CvString m_szArtDefineTag;
 	int m_zobristValue;
 };
@@ -4918,14 +4673,15 @@ private:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCommerceInfo :
-	public CvInfoBase
+class CvCommerceInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvCommerceInfo();
 	virtual ~CvCommerceInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvCommerceInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
 
 	int getChar() const; // Exposed to Python
 	void setChar(int i);
@@ -4935,22 +4691,13 @@ public:
 
 	bool isFlexiblePercent() const; // Exposed to Python
 
-	bool read(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvCommerceInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	int m_iChar;
 	int m_iInitialPercent;
 	int m_iInitialHappiness;
 	int m_iAIWeightPercent;
 
 	bool m_bFlexiblePercent;
-
 };
 
 
@@ -4961,14 +4708,15 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvYieldInfo :
-	public CvInfoBase
+class CvYieldInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvYieldInfo();
 	virtual ~CvYieldInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvYieldInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
 
 	int getChar() const; // Exposed to Python
 	void setChar(int i);
@@ -4984,19 +4732,9 @@ public:
 	int getAIWeightPercent() const; // Exposed to Python
 	int getColorType() const; // Exposed to Python
 
-	// Arrays
-
 	const TCHAR* getSymbolPath(int i) const;
 
-	bool read(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvYieldInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	int m_iChar;
 	int m_iHillsChange;
 	int m_iPeakChange;
@@ -5011,7 +4749,6 @@ protected:
 	int m_iColorType;
 
 	CvString* m_paszSymbolPath;
-
 };
 
 
@@ -5023,14 +4760,15 @@ protected:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvArtInfoTerrain;
-class CvTerrainInfo :
-	public CvInfoBase
+class CvTerrainInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvTerrainInfo();
 	virtual ~CvTerrainInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvTerrainInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
 
 	int getMovementCost() const; // Exposed to Python
 	int getBuildModifier() const; // Exposed to Python
@@ -5064,12 +4802,6 @@ public:
 
 	const CvArtInfoTerrain* getArtInfo() const;
 	const TCHAR* getButton() const;
-
-	bool read(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvTerrainInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -5124,14 +4856,14 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvInterfaceModeInfo :
-	public CvHotkeyInfo
+class CvInterfaceModeInfo : public CvHotkeyInfo
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvInterfaceModeInfo();
 	virtual ~CvInterfaceModeInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvInterfaceModeInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	DllExport int getCursorIndex() const;
 	DllExport int getMissionType() const;
@@ -5142,12 +4874,7 @@ public:
 	bool getSelectType() const;
 	bool getSelectAll() const;
 
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvInterfaceModeInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	int m_iCursorIndex;
 	int m_iMissionType;
 
@@ -5165,24 +4892,20 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvAdvisorInfo :
-	public CvInfoBase
+class CvAdvisorInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvAdvisorInfo();
 	virtual ~CvAdvisorInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvAdvisorInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	const TCHAR* getTexture() const; // Exposed to Python
 	int getNumCodes() const;
 	int getEnableCode(uint uiCode) const;
 	int getDisableCode(uint uiCode) const;
 
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvAdvisorInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
 	CvString m_szTexture;
 	std::vector< std::pair< int, int > > m_vctEnableDisableCodes;
@@ -5196,14 +4919,22 @@ protected:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvArtInfoLeaderhead;
-class CvLeaderHeadInfo :
-	public CvInfoBase
+class CvLeaderHeadInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvLeaderHeadInfo();
 	virtual ~CvLeaderHeadInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvLeaderHeadInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void write(FDataStreamBase* stream) {}
+	void read(FDataStreamBase* stream) {}
+
+	DllExport const CvArtInfoLeaderhead* getArtInfo() const;
+	const TCHAR* getLeaderHead() const;
+	const TCHAR* getButton() const;
 
 	bool isNPC() const;
 	int getWonderConstructRand() const; // Exposed to Python
@@ -5217,19 +4948,11 @@ public:
 	int getTechTradeKnownPercent() const; // Exposed to Python
 	int getMaxGoldTradePercent() const; // Exposed to Python
 	int getMaxGoldPerTurnTradePercent() const; // Exposed to Python
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  03/21/10								jdog5000	  */
-/*																							  */
-/* Victory Strategy AI																		  */
-/************************************************************************************************/
 	int getCultureVictoryWeight() const;
 	int getSpaceVictoryWeight() const;
 	int getConquestVictoryWeight() const;
 	int getDominationVictoryWeight() const;
 	int getDiplomacyVictoryWeight() const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 	int getMaxWarRand() const; // Exposed to Python
 	int getMaxWarNearbyPowerRatio() const; // Exposed to Python
 	int getMaxWarDistantPowerRatio() const; // Exposed to Python
@@ -5321,28 +5044,15 @@ public:
 	void setConquestVictoryWeight(int i);
 	void setDominationVictoryWeight(int i);
 	void setDiplomacyVictoryWeight(int i);
+
 protected:
 	int m_iMilitaryUnitRefuseAttitudeThreshold;
 	int m_iWorkerRefuseAttitudeThreshold;
 	int m_iCorporationRefuseAttitudeThreshold;
 	int m_iSecretaryGeneralVoteRefuseAttitudeThreshold;
+
 	void setDefaultMemoryInfo();
 	void setDefaultContactInfo();
-public:
-	DllExport const CvArtInfoLeaderhead* getArtInfo() const;
-	const TCHAR* getLeaderHead() const;
-	const TCHAR* getButton() const;
-
-	void write(FDataStreamBase* stream) {}
-	void read(FDataStreamBase* stream) {}
-	bool read(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvLeaderHeadInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
 
 	bool m_bNPC;
 
@@ -5445,7 +5155,6 @@ protected:
 	int* m_piDiploPeaceMusicScriptIds;
 	int* m_piDiploWarIntroMusicScriptIds;
 	int* m_piDiploWarMusicScriptIds;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5455,14 +5164,15 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvWorldInfo :
-	public CvInfoBase
+class CvWorldInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvWorldInfo();
 	virtual ~CvWorldInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvWorldInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
 
 	DllExport int getDefaultPlayers() const; // Exposed to Python
 	int getUnitNameModifier() const; // Exposed to Python
@@ -5486,17 +5196,9 @@ public:
 	int getCommandersLevelThresholdsPercent() const;
 	int getOceanMinAreaSize() const;
 
-	bool read(CvXMLLoadUtility* pXML);
-
 	int getPercent(int iID) const;
 
-	void copyNonDefaults(CvWorldInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	int m_iDefaultPlayers;
 	int m_iUnitNameModifier;
 	int m_iTargetNumCities;
@@ -5520,7 +5222,6 @@ protected:
 	int m_iOceanMinAreaSize;
 
 	IDValueMapPercent m_Percent;
-
 };
 /*********************************/
 /***** Parallel Maps - Begin *****/
@@ -5547,7 +5248,6 @@ public:
 	int getSwitchType() const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
 	bool readPass3();
 
 protected:
@@ -5587,12 +5287,14 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //  class : CvClimateInfo
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvClimateInfo :	public CvInfoBase
+class CvClimateInfo : public CvInfoBase
 {
 public:
-
 	CvClimateInfo();
 	virtual ~CvClimateInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvClimateInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	int getDesertPercentChange() const; // Exposed to Python
 	int getJungleLatitude() const; // Exposed to Python
@@ -5607,11 +5309,7 @@ public:
 	float getIceLatitude() const; // Exposed to Python
 	float getRandIceLatitude() const; // Exposed to Python
 
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvClimateInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
 protected:
-
 	int m_iDesertPercentChange;
 	int m_iJungleLatitude;
 	int m_iHillRange;
@@ -5624,7 +5322,6 @@ protected:
 	float m_fDesertTopLatitudeChange;
 	float m_fIceLatitude;
 	float m_fRandIceLatitude;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5633,19 +5330,16 @@ protected:
 class CvSeaLevelInfo :	public CvInfoBase
 {
 public:
-
 	CvSeaLevelInfo();
 	virtual ~CvSeaLevelInfo();
-
-	int getSeaLevelChange() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSeaLevelInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
+	int getSeaLevelChange() const; // Exposed to Python
+
 protected:
-
 	int m_iSeaLevelChange;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5655,33 +5349,24 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvProcessInfo :
-	public CvInfoBase
+class CvProcessInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvProcessInfo();
 	virtual ~CvProcessInfo();
-
-	int getTechPrereq() const; // Exposed to Python
-
-	// Arrays
-
-	int getProductionToCommerceModifier(int i) const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvProcessInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum) const;
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
+	int getTechPrereq() const; // Exposed to Python
 
+	int getProductionToCommerceModifier(int i) const; // Exposed to Python
+
+protected:
 	int m_iTechPrereq;
 
-	// Arrays
 	int* m_paiProductionToCommerceModifier;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5691,11 +5376,15 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvVoteInfo :	public CvInfoBase
+class CvVoteInfo : public CvInfoBase
 {
 public:
 	CvVoteInfo();
 	virtual ~CvVoteInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvVoteInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
 
 	int getPopulationThreshold() const; // Exposed to Python
 	int getStateReligionVotePercent() const; // Exposed to Python
@@ -5720,12 +5409,7 @@ public:
 	bool isForceCivic(int i) const; // Exposed to Python
 	bool isVoteSourceType(int i) const; // Exposed to Python
 
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvVoteInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
-
 protected:
-
 	int m_iPopulationThreshold;
 	int m_iStateReligionVotePercent;
 	int m_iTradeRoutes;
@@ -5748,7 +5432,6 @@ protected:
 
 	bool* m_pbForceCivic;
 	bool* m_abVoteSourceTypes;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5758,14 +5441,16 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvProjectInfo :
-	public CvInfoBase
+class CvProjectInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvProjectInfo();
 	virtual ~CvProjectInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	bool readPass3();
+	void copyNonDefaults(CvProjectInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
 
 	int getVictoryPrereq() const; // Exposed to Python
 	int getTechPrereq() const; // Exposed to Python
@@ -5806,10 +5491,6 @@ public:
 	int getNumMapCategoryTypes() const;
 	bool isMapCategoryType(int i) const;
 
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvProjectInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
-
 	int getWorldHappiness() const;
 	int getGlobalHappiness() const;
 	int getWorldHealth() const;
@@ -5823,7 +5504,6 @@ public:
 	CvString getProjectsNeededNamesVectorElement(int i) const;
 	int getProjectsNeededValuesVectorElement(int i) const;
 
-	bool readPass3();
 protected:
 	int m_iWorldHappiness;
 	int m_iGlobalHappiness;
@@ -5881,11 +5561,17 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvReligionInfo : public CvHotkeyInfo
 {
-	//---------------------------PUBLIC INTERFACE----------------------------------------
 public:
-
 	CvReligionInfo();
 	virtual ~CvReligionInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	bool readPass3();
+	void copyNonDefaults(CvReligionInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	int getChar() const; // Exposed to Python
 	// TGA_INDEXATION 01/21/08 MRGENIE
@@ -5922,16 +5608,6 @@ public:
 	int getStateReligionCommerce(int i) const; // Exposed to Python
 	int* getStateReligionCommerceArray() const;
 	int getFlavorValue(int i) const; // Exposed to Python
-
-	bool read(CvXMLLoadUtility* pXML);
-	bool readPass3();
-
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
-	void copyNonDefaults(CvReligionInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -5974,11 +5650,17 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvCorporationInfo : public CvHotkeyInfo
 {
-	//---------------------------PUBLIC INTERFACE----------------------------------------
 public:
-
 	CvCorporationInfo();
 	virtual ~CvCorporationInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	bool readPass3();
+	void copyNonDefaults(CvCorporationInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
 
 	int getChar() const; // Exposed to Python
 	// TGA_INDEXATION 01/21/08 MRGENIE
@@ -6004,14 +5686,13 @@ public:
 
 	const std::vector<BonusTypes>& getPrereqBonuses() const { return m_aePrereqBonuses; }
 	const python::list cyGetPrereqBonuses() const { return Cy::makeList(m_aePrereqBonuses); }
+
 	int getHeadquarterCommerce(int i) const; // Exposed to Python
 	int* getHeadquarterCommerceArray() const;
 	int getCommerceProduced(int i) const; // Exposed to Python
 	int* getCommerceProducedArray() const;
 	int getYieldProduced(int i) const; // Exposed to Python
 	int* getYieldProducedArray() const;
-
-	bool read(CvXMLLoadUtility* pXML);
 
 	int getObsoleteTech() const;
 	int getSpread() const;
@@ -6031,18 +5712,10 @@ public:
 	CvString getCompetingCorporationNamesVectorElement(const int i) const;
 	bool getCompetingCorporationValuesVectorElement(const int i) const;
 
-	bool readPass3();
 	int getYieldChange(int i) const;
 	int* getYieldChangeArray() const;
 	int getCommerceChange(int i) const;
 	int* getCommerceChangeArray() const;
-
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
-
-	void copyNonDefaults(CvCorporationInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -6101,14 +5774,15 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvTraitInfo :
-	public CvInfoBase
+class CvTraitInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvTraitInfo();
 	virtual ~CvTraitInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
 
 	int getHealth() const; // Exposed to Python
 	int getHappiness() const; // Exposed to Python
@@ -6347,13 +6021,6 @@ public:
 
 	const CvPropertyManipulators* getPropertyManipulators() const;
 
-	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
-	void getCheckSum(unsigned int& iSum) const;
-
 	bool isFreePromotionUnitCombats(int i, int j) const;
 
 private:
@@ -6565,22 +6232,17 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvCursorInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvCursorInfo();
 	virtual ~CvCursorInfo();
 
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvCursorInfo* pClassInfo, CvXMLLoadUtility* pXML);
+
 	DllExport const TCHAR* getPath(); // Exposed to Python
 
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvCursorInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	CvString m_szPath;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6592,20 +6254,16 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvThroneRoomCamera : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvThroneRoomCamera();
 	virtual ~CvThroneRoomCamera();
-
-	DllExport const TCHAR* getFileName();
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvThroneRoomCamera* pClassInfo, CvXMLLoadUtility* pXML);
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
+	DllExport const TCHAR* getFileName();
 
+protected:
 	CvString m_szFileName;
 };
 
@@ -6618,11 +6276,12 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvThroneRoomInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvThroneRoomInfo();
 	virtual ~CvThroneRoomInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvThroneRoomInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	DllExport const TCHAR* getEvent();
 	DllExport const TCHAR* getNodeName();
@@ -6630,18 +6289,12 @@ public:
 	DllExport int getToState();
 	DllExport int getAnimation();
 
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvThroneRoomInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	int m_iFromState;
 	int m_iToState;
 	int m_iAnimation;
 	CvString m_szEvent;
 	CvString m_szNodeName;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6653,23 +6306,19 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvThroneRoomStyleInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvThroneRoomStyleInfo();
 	virtual ~CvThroneRoomStyleInfo();
-
-	DllExport const TCHAR* getArtStyleType();
-	void setArtStyleType(const TCHAR* szVal);
-	DllExport const TCHAR* getEraType();
-	DllExport const TCHAR* getFileName();
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvThroneRoomStyleInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
+	void setArtStyleType(const TCHAR* szVal);
+	DllExport const TCHAR* getArtStyleType();
+	DllExport const TCHAR* getEraType();
+	DllExport const TCHAR* getFileName();
 
+protected:
 	CvString m_szArtStyleType;
 	CvString m_szEraType;
 	CvString m_szFileName;
@@ -6686,29 +6335,26 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvSlideShowInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvSlideShowInfo();
 	virtual ~CvSlideShowInfo();
-
-	DllExport const TCHAR* getPath();
-	void setPath(const TCHAR* szVal);
-	DllExport const TCHAR* getTransitionType();
-	void setTransitionType(const TCHAR* szVal);
-	DllExport float getStartTime();
-	void setStartTime(float fVal);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSlideShowInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
+	DllExport const TCHAR* getPath();
+	void setPath(const TCHAR* szVal);
 
+	DllExport const TCHAR* getTransitionType();
+	void setTransitionType(const TCHAR* szVal);
+
+	DllExport float getStartTime();
+	void setStartTime(float fVal);
+
+protected:
 	float m_fStartTime;
 	CvString m_szPath;
 	CvString m_szTransitionType;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6720,21 +6366,17 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvSlideShowRandomInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvSlideShowRandomInfo();
 	virtual ~CvSlideShowRandomInfo();
-
-	DllExport const TCHAR* getPath();
-	void setPath(const TCHAR* szVal);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSlideShowRandomInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
+	DllExport const TCHAR* getPath();
+	void setPath(const TCHAR* szVal);
 
+protected:
 	CvString m_szPath;
 };
 
@@ -6747,11 +6389,12 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvWorldPickerInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvWorldPickerInfo();
 	virtual ~CvWorldPickerInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvWorldPickerInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	DllExport const TCHAR* getMapName();
 	void setMapName(const TCHAR* szVal);
@@ -6765,12 +6408,7 @@ public:
 	DllExport int getNumWaterLevelGloss();
 	DllExport const TCHAR* getWaterLevelGlossPath(int index);
 
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvWorldPickerInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	CvString m_szMapName;
 	CvString m_szModelFile;
 	std::vector<float> m_aSizes;
@@ -6788,11 +6426,12 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvSpaceShipInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvSpaceShipInfo();
 	virtual ~CvSpaceShipInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvSpaceShipInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	DllExport const TCHAR* getNodeName();
 	DllExport const TCHAR* getProjectName();
@@ -6804,12 +6443,7 @@ public:
 	DllExport int getArtType();
 	DllExport int getEventCode();
 
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvSpaceShipInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	CvString m_szNodeName;
 	CvString m_szProjectName;
 	ProjectTypes m_eProjectType;
@@ -6832,26 +6466,22 @@ typedef std::pair<int,int >			CvAnimationCategoryDefinition;
 
 class CvAnimationPathInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
-	public:
+public:
+	CvAnimationPathInfo();
+	virtual ~CvAnimationPathInfo();
 
-		CvAnimationPathInfo();
-		virtual ~CvAnimationPathInfo();
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvAnimationPathInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-		DllExport int getPathCategory( int i );
-		float getPathParameter( int i );
-		DllExport int getNumPathDefinitions();
-		DllExport CvAnimationPathDefinition * getPath( );
-		DllExport bool isMissionPath() const;
+	DllExport int getPathCategory(int i);
+	float getPathParameter(int i);
+	DllExport int getNumPathDefinitions();
+	DllExport CvAnimationPathDefinition* getPath();
+	DllExport bool isMissionPath() const;
 
-		bool read(CvXMLLoadUtility* pXML);
-		void copyNonDefaults(CvAnimationPathInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	//---------------------------------------PRIVATE MEMBER VARIABLES---------------------------------
-	private:
-
-		CvAnimationPathDefinition 	m_vctPathDefinition;	//!< Animation path definitions, pair(category,param).
-		bool						m_bMissionPath;			//!< True if this animation is used in missions
+private:
+	CvAnimationPathDefinition 	m_vctPathDefinition;	//!< Animation path definitions, pair(category,param).
+	bool						m_bMissionPath;			//!< True if this animation is used in missions
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6863,23 +6493,19 @@ class CvAnimationPathInfo : public CvInfoBase
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvAnimationCategoryInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
-	public:
+public:
+	CvAnimationCategoryInfo();
+	virtual ~CvAnimationCategoryInfo();
 
-		CvAnimationCategoryInfo();
-		virtual ~CvAnimationCategoryInfo();
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvAnimationCategoryInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-		DllExport int getCategoryBaseID( );
-		DllExport int getCategoryDefaultTo( );
+	DllExport int getCategoryBaseID( );
+	DllExport int getCategoryDefaultTo( );
 
-		bool read(CvXMLLoadUtility* pXML);
-		void copyNonDefaults(CvAnimationCategoryInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	//---------------------------------------PRIVATE MEMBER VARIABLES---------------------------------
-	private:
-
-		CvAnimationCategoryDefinition	m_kCategory;		//!< The pair(base IDs, default categories) defining the animation categories
-		CvString						m_szDefaultTo;		//!< Holds the default to parameter, until all categories are read
+private:
+	CvAnimationCategoryDefinition	m_kCategory;		//!< The pair(base IDs, default categories) defining the animation categories
+	CvString						m_szDefaultTo;		//!< Holds the default to parameter, until all categories are read
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6891,32 +6517,27 @@ class CvAnimationCategoryInfo : public CvInfoBase
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvEntityEventInfo : public CvInfoBase
 {
-		//---------------------------PUBLIC INTERFACE---------------------------------
-	public:
+public:
+	CvEntityEventInfo();
+	virtual ~CvEntityEventInfo();
 
-		CvEntityEventInfo();
-		virtual ~CvEntityEventInfo();
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvEntityEventInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-		// serialization
-		void read(FDataStreamBase* pStream) {}
-		void write(FDataStreamBase* pStream) {}
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
-		bool read(CvXMLLoadUtility* pXML);
-		void copyNonDefaults(CvEntityEventInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	DllExport AnimationPathTypes getAnimationPathType(int iIndex = 0) const;
+	DllExport EffectTypes getEffectType(int iIndex = 0) const;
+	int getAnimationPathCount() const;
+	int getEffectTypeCount() const;
 
-		DllExport AnimationPathTypes getAnimationPathType(int iIndex = 0) const;
-		DllExport EffectTypes getEffectType(int iIndex = 0) const;
-		int getAnimationPathCount() const;
-		int getEffectTypeCount() const;
+	bool getUpdateFormation() const;
 
-		bool getUpdateFormation() const;
-
-		//---------------------------------------PRIVATE MEMBER VARIABLES---------------------------------
-	private:
-
-		std::vector<AnimationPathTypes>	m_vctAnimationPathType;
-		std::vector<EffectTypes>		m_vctEffectTypes;
-		bool							m_bUpdateFormation;
+private:
+	std::vector<AnimationPathTypes>	m_vctAnimationPathType;
+	std::vector<EffectTypes>		m_vctEffectTypes;
+	bool							m_bUpdateFormation;
 };
 
 // The below classes are for the ArtFile Management
@@ -6931,11 +6552,15 @@ class CvEntityEventInfo : public CvInfoBase
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvAssetInfoBase : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvAssetInfoBase()  {}
 	virtual ~CvAssetInfoBase() {}
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvAssetInfoBase* pClassInfo, CvXMLLoadUtility* pXML);
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	const TCHAR* getTag() const; // Exposed to Python
 	void setTag(const TCHAR* szDesc); // Exposed to Python
@@ -6943,26 +6568,21 @@ public:
 	DllExport const TCHAR* getPath() const; // Exposed to Python
 	void setPath(const TCHAR* szDesc); // Exposed to Python
 
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvAssetInfoBase* pClassInfo, CvXMLLoadUtility* pXML);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	CvString m_szPath;
-
 };
 
-class CvArtInfoAsset : 	public CvAssetInfoBase
+class CvArtInfoAsset : public CvAssetInfoBase
 {
 public:
-
 	CvArtInfoAsset() {}
 	virtual ~CvArtInfoAsset() {}
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvArtInfoAsset* pClassInfo, CvXMLLoadUtility* pXML);
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	DllExport const TCHAR* getNIF() const; // Exposed to Python
 	DllExport const TCHAR* getKFM() const; // Exposed to Python
@@ -6970,17 +6590,7 @@ public:
 	void setNIF(const TCHAR* szDesc); // Exposed to Python
 	void setKFM(const TCHAR* szDesc); // Exposed to Python
 
-	bool read(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvArtInfoAsset* pClassInfo, CvXMLLoadUtility* pXML);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	CvString m_szKFM;
 	CvString m_szNIF;
 };
@@ -6990,63 +6600,56 @@ protected:
 // Another base class
 //////////////////////////////////////////////////////////////////////////
 
-class CvArtInfoScalableAsset :
-	public CvArtInfoAsset,
-	public CvScalableInfo
+class CvArtInfoScalableAsset : public CvArtInfoAsset, public CvScalableInfo
 {
 public:
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvArtInfoScalableAsset* pClassInfo, CvXMLLoadUtility* pXML);
 
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 };
 
 // todoJS: Remove empty classes if additional items are not added
 
-class CvArtInfoInterface : 	public CvArtInfoAsset
+class CvArtInfoInterface : public CvArtInfoAsset
 {
 public:
-
 	CvArtInfoInterface() {}
 	virtual ~CvArtInfoInterface() {}
-
 };
 
-class CvArtInfoMisc : 	public CvArtInfoScalableAsset
+class CvArtInfoMisc : public CvArtInfoScalableAsset
 {
 public:
-
 	CvArtInfoMisc() {}
 	virtual ~CvArtInfoMisc() {}
-
 };
 
-class CvArtInfoMovie : 	public CvArtInfoAsset
+class CvArtInfoMovie : public CvArtInfoAsset
 {
 public:
-
 	CvArtInfoMovie() {}
 	virtual ~CvArtInfoMovie() {}
 
 	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvArtInfoMovie* pClassInfo, CvXMLLoadUtility* pXML);
 
-	// serialization
 	void read(FDataStreamBase* pStream) {}
 	void write(FDataStreamBase* pStream) {}
-
-	void copyNonDefaults(CvArtInfoMovie* pClassInfo, CvXMLLoadUtility* pXML);
 };
 
 class CvArtInfoUnit : public CvArtInfoScalableAsset
 {
 public:
-
 	CvArtInfoUnit();
 	virtual ~CvArtInfoUnit();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvArtInfoUnit* pClassInfo, CvXMLLoadUtility* pXML);
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	DllExport bool getActAsRanged() const;
 	DllExport bool getActAsLand() const;
@@ -7075,14 +6678,6 @@ public:
 	float getAngleInterpRate() const;
 	DllExport float getBankRate() const;
 
-	bool read(CvXMLLoadUtility* pXML);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
-	void copyNonDefaults(CvArtInfoUnit* pClassInfo, CvXMLLoadUtility* pXML);
-
 	const TCHAR* getTrainSound() const;
 	void setTrainSound(const TCHAR* szVal);
 	DllExport int getRunLoopSoundTag() const;
@@ -7091,7 +6686,6 @@ public:
 	int getSelectionSoundScriptId() const;
 	int getActionSoundScriptId() const;
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
 	CvString m_szShaderNIF;		//!< The NIF used if the graphics card supports shaders
 	CvString m_szShadowNIF;		//!< The shadow blob NIF to use for the unit
@@ -7130,73 +6724,60 @@ protected:
 class CvArtInfoBuilding : public CvArtInfoScalableAsset
 {
 public:
-
 	CvArtInfoBuilding();
 	virtual ~CvArtInfoBuilding();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvArtInfoBuilding* pClassInfo, CvXMLLoadUtility* pXML);
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	bool isAnimated() const; // Exposed to Python
 	DllExport const TCHAR* getLSystemName() const;
 
-	bool read(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvArtInfoBuilding* pClassInfo, CvXMLLoadUtility* pXML);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
 protected:
-
 	bool m_bAnimated;
 	CvString m_szLSystemName;
-
 };
 
 class CvArtInfoCivilization : public CvArtInfoAsset
 {
 public:
-
 	CvArtInfoCivilization();
 	virtual ~CvArtInfoCivilization();
 
-	bool isWhiteFlag() const; // Exposed to Python
-
 	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvArtInfoCivilization* pClassInfo, CvXMLLoadUtility* pXML);
 
-	// serialization
 	void read(FDataStreamBase* pStream) {}
 	void write(FDataStreamBase* pStream) {}
 
-	void copyNonDefaults(CvArtInfoCivilization* pClassInfo, CvXMLLoadUtility* pXML);
+	bool isWhiteFlag() const; // Exposed to Python
 
 protected:
-
 	bool m_bWhiteFlag;
-
 };
 
 class CvArtInfoLeaderhead : public CvArtInfoAsset
 {
 public:
-
 	CvArtInfoLeaderhead() {}
 	virtual ~CvArtInfoLeaderhead() {}
 
-	DllExport const TCHAR* getNoShaderNIF() const;
-	void setNoShaderNIF(const TCHAR* szNIF);
-	DllExport const TCHAR* getBackgroundKFM() const;
-	void setBackgroundKFM( const TCHAR* szKFM);
-
 	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvArtInfoLeaderhead* pClassInfo, CvXMLLoadUtility* pXML);
 
-	// serialization
 	void read(FDataStreamBase* pStream) {}
 	void write(FDataStreamBase* pStream) {}
 
-	void copyNonDefaults(CvArtInfoLeaderhead* pClassInfo, CvXMLLoadUtility* pXML);
+	DllExport const TCHAR* getNoShaderNIF() const;
+	void setNoShaderNIF(const TCHAR* szNIF);
+
+	DllExport const TCHAR* getBackgroundKFM() const;
+	void setBackgroundKFM( const TCHAR* szKFM);
 
 protected:
-
 	CvString m_szNoShaderNIF;
 	CvString m_szBackgroundKFM;
 };
@@ -7207,18 +6788,16 @@ public:
 	CvArtInfoBonus();
 	virtual ~CvArtInfoBonus() {}
 
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvArtInfoBonus* pClassInfo, CvXMLLoadUtility* pXML);
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
+
 	int getFontButtonIndex() const;
 
 	DllExport const TCHAR* getShaderNIF() const;
 	void setShaderNIF(const TCHAR* szDesc);
-
-	bool read(CvXMLLoadUtility* pXML);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
-	void copyNonDefaults(CvArtInfoBonus* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
 	CvString m_szShaderNIF;		//!< The NIF used if the graphics card supports shaders
@@ -7228,28 +6807,24 @@ protected:
 class CvArtInfoImprovement : public CvArtInfoScalableAsset
 {
 public:
-
 	CvArtInfoImprovement();
 	virtual ~CvArtInfoImprovement();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvArtInfoImprovement* pClassInfo, CvXMLLoadUtility* pXML);
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	DllExport const TCHAR* getShaderNIF() const;
 	void setShaderNIF(const TCHAR* szDesc);
 
 	bool isExtraAnimations() const; // Exposed to Python
 
-	bool read(CvXMLLoadUtility* pXML);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
-	void copyNonDefaults(CvArtInfoImprovement* pClassInfo, CvXMLLoadUtility* pXML);
-
 protected:
 	CvString m_szShaderNIF;		//!< The NIF used if the graphics card supports shaders
 
 	bool m_bExtraAnimations;
-
 };
 
 typedef std::vector<std::pair<int, int> > CvTextureBlendSlotList;
@@ -7262,6 +6837,12 @@ public:
 
 	CvArtInfoTerrain();
 
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvArtInfoTerrain* pClassInfo, CvXMLLoadUtility* pXML);
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
+
 	DllExport const TCHAR* getBaseTexture();
 	void setBaseTexture(const TCHAR* szTmp);
 	DllExport const TCHAR* getGridTexture();
@@ -7272,16 +6853,7 @@ public:
 	DllExport bool useAlphaShader();
 	DllExport CvTextureBlendSlotList& getBlendList(int blendMask);
 
-	bool read(CvXMLLoadUtility* pXML);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
-	void copyNonDefaults(CvArtInfoTerrain* pClassInfo, CvXMLLoadUtility* pXML);
-
 protected:
-
 	//!< Detail texture associated with the Terrain base texture
 	CvString m_szDetailTexture; 
 	CvString m_szGridTexture;
@@ -7298,24 +6870,21 @@ protected:
 class CvArtInfoFeature : public CvArtInfoScalableAsset
 {
 public:
-
 	CvArtInfoFeature();
 	virtual ~CvArtInfoFeature();
 
-	DllExport bool isAnimated() const; // Exposed to Python
-	DllExport bool isRiverArt() const; // Exposed to Python
-	DllExport TileArtTypes getTileArtType() const;
-	DllExport LightTypes getLightType() const;
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvArtInfoFeature* pClassInfo, CvXMLLoadUtility* pXML);
 
-	// serialization
 	void read(FDataStreamBase* pStream) {}
 	void write(FDataStreamBase* pStream) {}
 
 	void dump();
 
-	bool read(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvArtInfoFeature* pClassInfo, CvXMLLoadUtility* pXML);
+	DllExport bool isAnimated() const; // Exposed to Python
+	DllExport bool isRiverArt() const; // Exposed to Python
+	DllExport TileArtTypes getTileArtType() const;
+	DllExport LightTypes getLightType() const;
 
 	class FeatureArtModel
 	{
@@ -7473,7 +7042,6 @@ public:
 	const std::string getFeatureDummyNodeName(int variety, const std::string tagName) const;
 
 protected:
-
 	int getConnectionMaskFromString(const CvString& connectionString) const;
 	int getRotatedConnectionMask(int connectionMask, RotationTypes rotation) const;
 
@@ -7491,14 +7059,14 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvEmphasizeInfo :
-	public CvInfoBase
+class CvEmphasizeInfo : public CvInfoBase
 {
-//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvEmphasizeInfo();
 	virtual ~CvEmphasizeInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvEmphasizeInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	bool isAvoidGrowth() const; // Exposed to Python
 	bool isGreatPeople() const; // Exposed to Python
@@ -7512,10 +7080,6 @@ public:
 	int getYieldChange(int i) const; // Exposed to Python
 	int getCommerceChange(int i) const; // Exposed to Python
 
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvEmphasizeInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
 	bool m_bAvoidGrowth;
 	bool m_bGreatPeople;
@@ -7528,7 +7092,6 @@ protected:
 	// Arrays
 	int* m_piYieldModifiers;
 	int* m_piCommerceModifiers;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7538,28 +7101,22 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvUpkeepInfo :
-	public CvInfoBase
+class CvUpkeepInfo : public CvInfoBase
 {
-//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvUpkeepInfo();
 	virtual ~CvUpkeepInfo();
-
-	int getPopulationPercent() const;		//	Exposed to Python
-	int getCityPercent() const;				//	Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvUpkeepInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum) const;
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
+	int getPopulationPercent() const;		//	Exposed to Python
+	int getCityPercent() const;				//	Exposed to Python
 
+protected:
 	int m_iPopulationPercent;
 	int m_iCityPercent;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7569,18 +7126,17 @@ protected:
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCultureLevelInfo :
-	public CvInfoBase
+class CvCultureLevelInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvCultureLevelInfo();
 	virtual ~CvCultureLevelInfo();
 
-	int getCityDefenseModifier() const; // Exposed to Python
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvCultureLevelInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
 
-	// JOOYO_ADDON, Added by Jooyo, 06/17/09
+	int getCityDefenseModifier() const; // Exposed to Python
 	int getCityRadius() const; // Exposed to Python
 	int getMaxWorldWonders() const;
 	int getMaxTeamWonders() const;
@@ -7590,15 +7146,7 @@ public:
 
 	int getSpeedThreshold(int i) const; // Exposed to Python
 
-	bool read(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvCultureLevelInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	int m_iCityDefenseModifier;
 	int m_iCityRadius;
 	int m_iMaxWorldWonders;
@@ -7608,7 +7156,6 @@ protected:
 	int m_iPrereqGameOption;
 
 	int* m_paiSpeedThreshold;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7618,13 +7165,15 @@ protected:
 //  DESC:   Used to manage different types of Art Styles
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvEraInfo :
-	public CvInfoBase
+class CvEraInfo : public CvInfoBase
 {
 public:
-
 	CvEraInfo();
 	virtual ~CvEraInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvEraInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
 
 	int getStartingUnitMultiplier() const; // Exposed to Python
 	int getStartingDefenseUnits() const; // Exposed to Python
@@ -7664,12 +7213,7 @@ public:
 	int getSoundtracks(int i) const;
 	int getCitySoundscapeSciptId(int i) const;
 
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvEraInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
-
 protected:
-
 	int m_iStartingUnitMultiplier;
 	int m_iStartingDefenseUnits;
 	int m_iStartingWorkerUnits;
@@ -7707,7 +7251,6 @@ protected:
 
 	int* m_paiSoundtracks;
 	int* m_paiCitySoundscapeSciptIds;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7717,23 +7260,19 @@ protected:
 //  DESC:   Used to manage different types of Art Styles
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvColorInfo :
-	public CvInfoBase
+class CvColorInfo : public CvInfoBase
 {
 public:
-
 	CvColorInfo();
 	virtual ~CvColorInfo();
 
-	DllExport const NiColorA& getColor() const;
-
 	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvColorInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	// serialization
 	void read(FDataStreamBase* pStream) {}
 	void write(FDataStreamBase* pStream) {}
 
-	void copyNonDefaults(CvColorInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	DllExport const NiColorA& getColor() const;
 
 protected:
 	NiColorA m_Color;
@@ -7746,32 +7285,26 @@ protected:
 //  DESC:   Used to manage different types of Art Styles
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvPlayerColorInfo :
-	public CvInfoBase
+class CvPlayerColorInfo : public CvInfoBase
 {
 public:
-
 	CvPlayerColorInfo();
 	virtual ~CvPlayerColorInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvPlayerColorInfo* pClassInfo, CvXMLLoadUtility* pXML);
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	DllExport int getColorTypePrimary() const;
 	DllExport int getColorTypeSecondary() const;
 	int getTextColorType() const;
 
-	bool read(CvXMLLoadUtility* pXML);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
-	void copyNonDefaults(CvPlayerColorInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
 protected:
-
 	int m_iColorTypePrimary;
 	int m_iColorTypeSecondary;
 	int m_iTextColorType;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7782,82 +7315,74 @@ protected:
 //					XML/Terrain/TerrainSettings.xml
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvLandscapeInfo :
-	public CvInfoBase
+class CvLandscapeInfo : public CvInfoBase
 {
-	public:
+public:
+	CvLandscapeInfo();
+	virtual ~CvLandscapeInfo() {}
 
-		CvLandscapeInfo();
-		virtual ~CvLandscapeInfo() {}
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvLandscapeInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-		int getFogR() const;
-		int getFogG() const;
-		int getFogB() const;
-		DllExport int getHorizontalGameCell() const;
-		DllExport int getVerticalGameCell() const;
-		DllExport int getPlotsPerCellX() const;
-		DllExport int getPlotsPerCellY() const;
-		DllExport int getHorizontalVertCnt() const;
-		DllExport int getVerticalVertCnt() const;
-		DllExport int getWaterHeight() const;
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
 
-		float getTextureScaleX() const;
-		float getTextureScaleY() const;
-		DllExport float getZScale() const;
+	DllExport int getHorizontalGameCell() const;
+	DllExport int getVerticalGameCell() const;
+	DllExport int getPlotsPerCellX() const;
+	DllExport int getPlotsPerCellY() const;
+	DllExport int getHorizontalVertCnt() const;
+	DllExport int getVerticalVertCnt() const;
+	DllExport int getWaterHeight() const;
 
-		bool isUseTerrainShader() const;
-		bool isUseLightmap() const;
-		bool isRandomMap() const;
-		DllExport float getPeakScale() const;
-		DllExport float getHillScale() const;
+	DllExport float getZScale() const;
+	DllExport float getPeakScale() const;
+	DllExport float getHillScale() const;
 
-		const TCHAR* getSkyArt();
-		void setSkyArt(const TCHAR* szPath);
-		const TCHAR* getHeightMap();
-		void setHeightMap(const TCHAR* szPath);
-		const TCHAR* getTerrainMap();
-		void setTerrainMap(const TCHAR* szPath);
-		const TCHAR* getNormalMap();
-		void setNormalMap(const TCHAR* szPath);
-		const TCHAR* getBlendMap();
-		void setBlendMap(const TCHAR* szPath);
+	int getFogR() const;
+	int getFogG() const;
+	int getFogB() const;
 
-		void read(FDataStreamBase* stream) {}
-		void write(FDataStreamBase* stream) {}
+	float getTextureScaleX() const;
+	float getTextureScaleY() const;
 
-		bool read(CvXMLLoadUtility* pXML);
-		void copyNonDefaults(CvLandscapeInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	bool isUseTerrainShader() const;
+	bool isUseLightmap() const;
+	bool isRandomMap() const;
 
-	protected:
+	const TCHAR* getSkyArt();
+	const TCHAR* getHeightMap();
+	const TCHAR* getTerrainMap();
+	const TCHAR* getNormalMap();
+	const TCHAR* getBlendMap();
 
-		int m_iFogR;
-		int m_iFogG;
-		int m_iFogB;
-		int m_iHorizontalGameCell;
-		int m_iVerticalGameCell;
-		int m_iPlotsPerCellX;
-		int m_iPlotsPerCellY;
-		int m_iHorizontalVertCnt;
-		int m_iVerticalVertCnt;
-		int m_iWaterHeight;
+protected:
+	int m_iFogR;
+	int m_iFogG;
+	int m_iFogB;
+	int m_iHorizontalGameCell;
+	int m_iVerticalGameCell;
+	int m_iPlotsPerCellX;
+	int m_iPlotsPerCellY;
+	int m_iHorizontalVertCnt;
+	int m_iVerticalVertCnt;
+	int m_iWaterHeight;
 
-		float m_fTextureScaleX;
-		float m_fTextureScaleY;
-		float m_fZScale;
+	float m_fTextureScaleX;
+	float m_fTextureScaleY;
+	float m_fZScale;
+	float m_fPeakScale;
+	float m_fHillScale;
 
-		float m_fPeakScale;
-		float m_fHillScale;
+	bool m_bUseTerrainShader;
+	bool m_bUseLightmap;
+	bool m_bRandomMap;
 
-		bool m_bUseTerrainShader;
-		bool m_bUseLightmap;
-		bool m_bRandomMap;
-
-		CvString m_szSkyArt;
-		CvString m_szHeightMap;
-		CvString m_szTerrainMap;
-		CvString m_szNormalMap;
-		CvString m_szBlendMap;
-
+	CvString m_szSkyArt;
+	CvString m_szHeightMap;
+	CvString m_szTerrainMap;
+	CvString m_szNormalMap;
+	CvString m_szBlendMap;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7870,10 +7395,13 @@ class CvGameText : public CvInfoBase
 public:
 	DllExport CvGameText();
 
+	bool read(CvXMLLoadUtility* pXML);
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
+
 	const wchar_t* getText() const;
 	void setText(const wchar_t* szText);
-
-	// for Python
 	std::wstring pyGetText() const { return getText(); }
 
 	void setGender(const wchar_t* szGender) { m_szGender = szGender;	}
@@ -7885,15 +7413,9 @@ public:
 	DllExport int getNumLanguages() const; // not static for Python access
 	DllExport void setNumLanguages(int iNum); // not static for Python access
 
-	bool read(CvXMLLoadUtility* pXML);
-
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
 	static void setLanguage(const CvWString& szLanguage) { m_szLanguage = szLanguage; }
 
 protected:
-
 	static CvWString m_szLanguage;
 
 	CvWString m_szText;
@@ -7952,6 +7474,11 @@ public:
 	void init(int iNum);
 	void uninit();
 
+	bool read(CvXMLLoadUtility* pXML);
+
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
+
 	const Response& getResponse(int iNum) const { return m_pResponses[iNum]; } // Exposed to Python
 	int getNumResponses() const; // Exposed to Python
 
@@ -7961,18 +7488,11 @@ public:
 	bool getDiplomacyPowerTypes(int i, int j) const; // Exposed to Python
 
 	int getNumDiplomacyText(int i) const; // Exposed to Python
-
 	const TCHAR* getDiplomacyText(int i, int j) const; // Exposed to Python
 
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
-	bool read(CvXMLLoadUtility* pXML);
-
 private:
-
 	int m_iNumResponses;			// set by init
 	Response* m_pResponses;
-
 };
 
 
@@ -7982,14 +7502,17 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvEffectInfo :
-	public CvInfoBase,
-	public CvScalableInfo
+class CvEffectInfo : public CvInfoBase, public CvScalableInfo
 {
 public:
-
 	CvEffectInfo();
 	virtual ~CvEffectInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvEffectInfo* pClassInfo, CvXMLLoadUtility* pXML);
+
+	void read(FDataStreamBase* stream) {}
+	void write(FDataStreamBase* stream) {}
 
 	DllExport const TCHAR* getPath() const { return m_szPath; }
 	void setPath(const TCHAR* szVal) { m_szPath = szVal; }
@@ -7999,11 +7522,6 @@ public:
 	float getProjectileSpeed() const { return m_fProjectileSpeed; };
 	float getProjectileArc() const { return m_fProjectileArc; };
 	bool isSticky() const { return m_bSticky; };
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvEffectInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
 
 private:
 	CvString m_szPath;
@@ -8020,20 +7538,17 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvAttachableInfo :
-	public CvInfoBase,
-	public CvScalableInfo
+class CvAttachableInfo : public CvInfoBase, public CvScalableInfo
 {
 public:
-
 	CvAttachableInfo();
 	virtual ~CvAttachableInfo();
 
-	DllExport const TCHAR* getPath() const { return m_szPath; }
-	void setPath(const TCHAR* szVal) { m_szPath = szVal; }
-
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvAttachableInfo* pClassInfo, CvXMLLoadUtility* pXML);
+
+	DllExport const TCHAR* getPath() const { return m_szPath; }
+	void setPath(const TCHAR* szVal) { m_szPath = szVal; }
 
 private:
 	CvString m_szPath;
@@ -8046,21 +7561,20 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvQuestInfo :
-	public CvInfoBase
+class CvQuestInfo : public CvInfoBase
 {
 public:
 	struct QuestLink
 	{
 		// Stores the QuestLinks Type and Name
 		QuestLink() :
-		m_szQuestLinkType("No Type"),
-		m_szQuestLinkName("No Name")
+			m_szQuestLinkType("No Type"),
+			m_szQuestLinkName("No Name")
 		{
 		}
 
-	CvString m_szQuestLinkType;
-	CvString m_szQuestLinkName;
+		CvString m_szQuestLinkType;
+		CvString m_szQuestLinkName;
 	};
 
 	CvQuestInfo();
@@ -8068,6 +7582,9 @@ public:
 
 	void reset();
 	bool initQuestLinks(int iNum);
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvQuestInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	int getNumQuestMessages() const;
 	int getNumQuestLinks() const;
@@ -8087,9 +7604,6 @@ public:
 	void setQuestMessages(int iIndex, const TCHAR* szText);
 	void setQuestSounds(int iIndex, const TCHAR* szText);
 	void setQuestScript(const TCHAR* szText);
-
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvQuestInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 private:
 	int m_iNumQuestMessages;
@@ -8117,6 +7631,8 @@ public:
 	CvTutorialMessage();
 	virtual ~CvTutorialMessage();
 
+	bool read(CvXMLLoadUtility* pXML);
+
 	const TCHAR* getText() const;
 	const TCHAR* getImage() const;
 	const TCHAR* getSound() const;
@@ -8127,7 +7643,6 @@ public:
 
 	int getNumTutorialScripts() const;
 	const TCHAR* getTutorialScriptByIndex(int i) const;
-	bool read(CvXMLLoadUtility* pXML);
 
 private:
 	int m_iNumTutorialScripts;
@@ -8138,12 +7653,14 @@ private:
 };
 
 class CvTutorialMessage;
-class CvTutorialInfo :
-	public CvInfoBase
+class CvTutorialInfo : public CvInfoBase
 {
 public:
 	CvTutorialInfo();
 	virtual ~CvTutorialInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvTutorialInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	const TCHAR* getNextTutorialInfoType() const;
 	void setNextTutorialInfoType(const TCHAR* szVal);
@@ -8153,9 +7670,6 @@ public:
 
 	int getNumTutorialMessages() const;
 	const CvTutorialMessage* getTutorialMessage(int iIndex) const;
-
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvTutorialInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 private:
 	CvString m_szNextTutorialInfoType;
@@ -8175,23 +7689,20 @@ public:
 	CvGameOptionInfo();
 	virtual ~CvGameOptionInfo();
 
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvGameOptionInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
 	DllExport bool getDefault() const { return m_bDefault; }
 	DllExport bool getVisible() const { return m_bVisible; }
 
-	//TB Tags
 	const std::vector<GameOptionTypes>& getEnforcesGameOptionOnTypes() const  { return m_aEnforcesGameOptionOnTypes; }
 	const std::vector<GameOptionTypes>& getEnforcesGameOptionOffTypes() const { return m_aEnforcesGameOptionOffTypes; }
-
-	bool read(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvGameOptionInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
 
 private:
 	bool m_bDefault;
 	bool m_bVisible;
-	//TB Tags
+
 	std::vector<GameOptionTypes> m_aEnforcesGameOptionOnTypes;
 	std::vector<GameOptionTypes> m_aEnforcesGameOptionOffTypes;
 };
@@ -8202,24 +7713,20 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvMPOptionInfo :
-	public CvInfoBase
+class CvMPOptionInfo : public CvInfoBase
 {
 public:
 	CvMPOptionInfo();
 	virtual ~CvMPOptionInfo();
 
-	bool getDefault() const;
-
 	bool read(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(CvMPOptionInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
 	void getCheckSum(unsigned int& iSum) const;
+
+	bool getDefault() const;
 
 private:
 	bool m_bDefault;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -8228,24 +7735,20 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvForceControlInfo :
-	public CvInfoBase
+class CvForceControlInfo : public CvInfoBase
 {
 public:
 	CvForceControlInfo();
 	virtual ~CvForceControlInfo();
 
-	bool getDefault() const;
-
 	bool read(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(CvForceControlInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
 	void getCheckSum(unsigned int& iSum) const;
+
+	bool getDefault() const;
 
 private:
 	bool m_bDefault;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -8254,24 +7757,20 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvPlayerOptionInfo :
-	public CvInfoBase
+class CvPlayerOptionInfo : public CvInfoBase
 {
 public:
 	CvPlayerOptionInfo();
 	virtual ~CvPlayerOptionInfo();
 
-	DllExport bool getDefault() const;
-
 	bool read(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(CvPlayerOptionInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
 	void getCheckSum(unsigned int& iSum) const;
+
+	DllExport bool getDefault() const;
 
 private:
 	bool m_bDefault;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -8280,24 +7779,20 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvGraphicOptionInfo :
-	public CvInfoBase
+class CvGraphicOptionInfo : public CvInfoBase
 {
 public:
 	CvGraphicOptionInfo();
 	virtual ~CvGraphicOptionInfo();
 
-	DllExport bool getDefault() const;
-
 	bool read(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(CvGraphicOptionInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
 	void getCheckSum(unsigned int& iSum) const;
+
+	DllExport bool getDefault() const;
 
 private:
 	bool m_bDefault;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -8313,6 +7808,13 @@ class CvEventTriggerInfo : public CvInfoBase
 public:
 	CvEventTriggerInfo();
 	virtual ~CvEventTriggerInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* ) {}
+	void write(FDataStreamBase* ) {}
 
 	int getPercentGamesActive() const; // Exposed to Python
 	int getProbability() const; // Exposed to Python
@@ -8421,15 +7923,6 @@ public:
 	int getNumOnGameOptions() const;
 	bool isOnGameOption(int i) const;
 
-	void read(FDataStreamBase* ) {}
-	void write(FDataStreamBase* ) {}
-
-	bool read(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
-
 private:
 	int m_iPercentGamesActive;
 	int m_iProbability;
@@ -8531,6 +8024,14 @@ class CvEventInfo : public CvInfoBase
 public:
 	CvEventInfo();
 	virtual ~CvEventInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	bool readPass3();
+	void copyNonDefaults(CvEventInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* ) {}
+	void write(FDataStreamBase* ) {}
 
 	bool isQuest() const; // Exposed to Python
 	bool isGlobal() const; // Exposed to Python
@@ -8640,8 +8141,6 @@ public:
 	CvString getClearEventChanceNamesVectorElement(int i) const;
 	int getClearEventChanceValuesVectorElement(int i) const;
 
-	bool readPass3();
-
 private:
 	std::vector<CvString> m_aszAdditionalEventChanceforPass3;
 	std::vector<int> m_aiAdditionalEventChanceforPass3;
@@ -8649,19 +8148,7 @@ private:
 	std::vector<int> m_aiAdditionalEventTimeforPass3;
 	std::vector<CvString> m_aszClearEventChanceforPass3;
 	std::vector<int> m_aiClearEventChanceforPass3;
-public:
 
-	void read(FDataStreamBase* ) {}
-	void write(FDataStreamBase* ) {}
-
-	bool read(CvXMLLoadUtility* pXML);
-//	bool readPass2(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvEventInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
-
-private:
 	int m_iPrereqGameOption;
 	int m_iRevolutionIndexChange;
 
@@ -8760,11 +8247,13 @@ private:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class CvEspionageMissionInfo : public CvInfoBase
 {
-	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
-
 	CvEspionageMissionInfo();
 	virtual ~CvEspionageMissionInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvEspionageMissionInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
 
 	int getCost() const;
 	bool isPassive() const;
@@ -8809,15 +8298,7 @@ public:
 	int getRemoveReligionsCostFactor() const;
 	int getRemoveCorporationsCostFactor() const;
 
-	bool read(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvEspionageMissionInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
 	int m_iCost;
 	bool m_bIsPassive;
 	bool m_bIsTwoPhases;
@@ -8871,9 +8352,14 @@ protected:
 class CvUnitArtStyleTypeInfo : public CvInfoBase
 {
 public:
-
 	CvUnitArtStyleTypeInfo();
 	virtual ~CvUnitArtStyleTypeInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvUnitArtStyleTypeInfo* pClassInfo, CvXMLLoadUtility* pXML);
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	const TCHAR* getEarlyArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const;
 	void setEarlyArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const TCHAR* szVal);
@@ -8890,12 +8376,6 @@ public:
 	void setIndustrialArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const TCHAR* szVal);
 	const TCHAR* getFutureArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const;
 	void setFutureArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const TCHAR* szVal);
-
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvUnitArtStyleTypeInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
 
@@ -8925,9 +8405,16 @@ protected:
 class CvVoteSourceInfo : public CvInfoBase
 {
 public:
-
 	CvVoteSourceInfo();
 	virtual ~CvVoteSourceInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	bool readPass3();
+	void copyNonDefaults(CvVoteSourceInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	int getVoteInterval() const; // Exposed to Python
 	int getFreeSpecialist() const; // Exposed to Python
@@ -8937,20 +8424,10 @@ public:
 	const CvString& getCopyPopupText() const;
 	const CvString& getCopySecretaryGeneralText() const;
 
-	std::wstring pyGetSecretaryGeneralText() { return getSecretaryGeneralText(); } // Exposed to Python
+	std::wstring pyGetSecretaryGeneralText() const { return getSecretaryGeneralText(); } // Exposed to Python
 
 	int getReligionYield(int i) const; // Exposed to Python
 	int getReligionCommerce(int i) const; // Exposed to Python
-
-	bool read(CvXMLLoadUtility* pXML);
-	bool readPass3();
-
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
-	void copyNonDefaults(CvVoteSourceInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
 
 protected:
 	int m_iVoteInterval;
@@ -8973,18 +8450,17 @@ protected:
 class CvMainMenuInfo : public CvInfoBase
 {
 public:
-
 	CvMainMenuInfo();
 	virtual ~CvMainMenuInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvMainMenuInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	DllExport std::string getScene() const;
 	DllExport std::string getSceneNoShader() const;
 	DllExport std::string getSoundtrack() const;
 	DllExport std::string getLoading() const;
 	DllExport std::string getLoadingSlideshow() const;
-
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvMainMenuInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
 	std::string m_szScene;
@@ -9002,9 +8478,10 @@ protected:
 class CvModLoadControlInfo : public CvInfoBase
 {
 public:
-
 	CvModLoadControlInfo();
 	virtual ~CvModLoadControlInfo();
+
+	bool read(CvXMLLoadUtility* pXML, CvString szDirDepth, int iDirDepth);
 
 	bool isLoad(int i) const;
 	void setLoad(int i, bool bLoad = true);
@@ -9012,7 +8489,6 @@ public:
 	const std::string getParentFolder() const;
 	int getNumModules() const;
 	int getDirDepth() const;
-	bool read(CvXMLLoadUtility* pXML, CvString szDirDepth, int iDirDepth);
 
 protected:
 	bool* m_bLoad;
@@ -9032,13 +8508,18 @@ protected:
 //  DESC:   Contains info about generic properties which can be added to buildings
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvPropertyInfo :
-	public CvInfoBase
+class CvPropertyInfo : public CvInfoBase
 {
 public:
-
 	CvPropertyInfo();
 	virtual ~CvPropertyInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvPropertyInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	int getAIWeight() const;
 	AIScaleTypes getAIScaleType() const;
@@ -9067,15 +8548,6 @@ public:
 	int getChar() const;
 	void setChar(int i);
 	int getFontButtonIndex() const;
-
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
-	bool read(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvPropertyInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -9114,13 +8586,18 @@ protected:
 //  DESC:   Contains info about outcome types which can be the result of a kill or of actions
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvOutcomeInfo :
-	public CvInfoBase
+class CvOutcomeInfo : public CvInfoBase
 {
 public:
-
 	CvOutcomeInfo();
 	virtual ~CvOutcomeInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvOutcomeInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	CvWString getMessageText() const;
 	TechTypes getPrereqTech() const;
@@ -9139,22 +8616,9 @@ public:
 	int getNumExtraChancePromotions() const;
 	PromotionTypes getExtraChancePromotion(int i) const;
 	int getExtraChancePromotionChance(int i) const;
-	int getNumReplaceOutcomes() const;
-	OutcomeTypes getReplaceOutcome(int i) const;
-
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
-	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvOutcomeInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvOutcomeInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
-
-	void getCheckSum(unsigned int& iSum) const;
+	const std::vector<OutcomeTypes>& getReplaceOutcomes() const { return m_aeReplaceOutcomes; }
 
 protected:
-
 	TechTypes m_ePrereqTech;
 	TechTypes m_eObsoleteTech;
 	CivicTypes m_ePrereqCivic;
@@ -9180,13 +8644,18 @@ protected:
 //  DESC:   Contains info about Promotion Lines, definitions of promotion upgrade chains
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvPromotionLineInfo :
-	public CvInfoBase
+class CvPromotionLineInfo : public CvInfoBase
 {
 public:
-
 	CvPromotionLineInfo();
 	virtual ~CvPromotionLineInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvPromotionLineInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	TechTypes getPrereqTech() const;
 	TechTypes getObsoleteTech() const;
@@ -9265,18 +8734,7 @@ public:
 	bool isBuilding(int i) const;
 	void setBuildings();
 
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
-	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(CvPromotionLineInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void getCheckSum(unsigned int& iSum) const;
-
 protected:
-
 	TechTypes m_ePrereqTech;
 	TechTypes m_eObsoleteTech;
 	PropertyTypes m_ePropertyType;
@@ -9300,8 +8758,6 @@ protected:
 	bool m_bBuildUp;
 	bool m_bPoison;
 
-
-	// bool vectors without delayed resolution
 	std::vector<int> m_aiUnitCombatPrereqTypes;
 	std::vector<int> m_aiNotOnUnitCombatTypes;
 	std::vector<int> m_aiNotOnDomainTypes;
@@ -9327,11 +8783,9 @@ protected:
 //  DESC:   Contains unit combat types
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvUnitCombatInfo :
-	public CvInfoBase
+class CvUnitCombatInfo : public CvInfoBase
 {
 public:
-
 	CvUnitCombatInfo();
 	virtual ~CvUnitCombatInfo();
 
@@ -9339,11 +8793,8 @@ public:
 	void copyNonDefaults(CvUnitCombatInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum) const;
 
-	//bool readPass2(CvXMLLoadUtility* pXML);
-	//void copyNonDefaultsReadPass2(CvUnitCombatInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	const CvOutcomeList* getKillOutcomeList() const;
 	int getNumActionOutcomes() const;
@@ -9964,30 +9415,18 @@ protected:
 //  DESC:   Contains info about Map Category Types
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvMapCategoryInfo :
-	public CvInfoBase
+class CvMapCategoryInfo : public CvInfoBase
 {
 public:
-
 	CvMapCategoryInfo();
 	virtual ~CvMapCategoryInfo();
 
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(CvMapCategoryInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
 	void getCheckSum(unsigned int& iSum) const;
 
-	//bools
-	bool isInitialized();
-
-protected:
-	//bools
-	bool m_bInitialized;
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -9997,31 +9436,18 @@ protected:
 //  DESC:   Contains info about Idea Class Types
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvIdeaClassInfo :
-	public CvInfoBase
+class CvIdeaClassInfo : public CvInfoBase
 {
 public:
-
 	CvIdeaClassInfo();
 	virtual ~CvIdeaClassInfo();
 
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(CvIdeaClassInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvIdeaClassInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
-
 	void getCheckSum(unsigned int& iSum) const;
 
-	//bools
-	bool isInitialized();
-
-protected:
-	//bools
-	bool m_bInitialized;
+	virtual void read(FDataStreamBase* pStream) {}
+	virtual void write(FDataStreamBase* pStream) {}
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -10031,36 +9457,23 @@ protected:
 //  DESC:   Contains info about Idea Types
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvIdeaInfo :
-	public CvInfoBase
+class CvIdeaInfo : public CvInfoBase
 {
 public:
-
 	CvIdeaInfo();
 	virtual ~CvIdeaInfo();
 
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(CvIdeaInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvIdeaInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
-
 	void getCheckSum(unsigned int& iSum) const;
 
-	//References
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
+
 	IdeaClassTypes getIdeaClass() const;
-	//bools
-	/*bool isInitialized();*/
 
 protected:
-	//References
 	IdeaClassTypes m_eIdeaClass;
-
-	//bools
-	/*bool m_bInitialized;*/
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -10070,26 +9483,18 @@ protected:
 //  DESC:   Contains info about Invisible Types
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvInvisibleInfo :
-	public CvInfoBase
+class CvInvisibleInfo : public CvInfoBase
 {
 public:
-
 	CvInvisibleInfo();
 	virtual ~CvInvisibleInfo();
 
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-
 	void copyNonDefaults(CvInvisibleInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum) const;
 
-	//References
-	//bools
-	//integers
+	void read(FDataStreamBase* pStream) {}
+	void write(FDataStreamBase* pStream) {}
 
 	//Processes
 	int getChar() const;
@@ -10097,8 +9502,6 @@ public:
 	int getFontButtonIndex() const;
 
 protected:
-	//References
-	//bools
 	//Processes
 	int m_iChar;
 	int m_iFontButtonIndex;

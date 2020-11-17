@@ -5671,17 +5671,8 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		m_pExprTrainCondition = pClassInfo->m_pExprTrainCondition;
 		pClassInfo->m_pExprTrainCondition = NULL;
 	}
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 21.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes: Adapted to C2C by Thunderbrd															**/
-/*****************************************************************************************************/
+
 	if ( m_bFreeDrop == bDefault ) m_bFreeDrop = pClassInfo->isFreeDrop();
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 
 	//TB Combat Mods Begin  TB SubCombat Mod begin
 	if ( m_iPursuit == iDefault ) m_iPursuit = pClassInfo->m_iPursuit;
