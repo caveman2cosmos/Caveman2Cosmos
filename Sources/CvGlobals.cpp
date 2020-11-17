@@ -3422,32 +3422,27 @@ bool cvInternalGlobals::bugInitCalled() const
 	return bBugInitCalled;
 }
 
-void cvInternalGlobals::setIsBug(bool bIsBug)
+void cvInternalGlobals::setIsBug()
 {
 	bBugInitCalled = true;
 
-	::setIsBug(bIsBug);
+	::setIsBug();
 
 	bool bBUGViewportsEnabled = getBugOptionBOOL("MainInterface__EnableViewports", false);
 
 	//	If viewports are truned on in BUG the settinsg there override those in the global defines
-	if ( bBUGViewportsEnabled )
+	if (bBUGViewportsEnabled)
 	{
 		m_bViewportsEnabled = true;
 
-		int iViewportSizeX = getBugOptionINT("MainInterface__ViewportX", 40);
-		int iViewportSizeY = getBugOptionINT("MainInterface__ViewportY", 40);
-
-		int iViewportFocusBorder = getBugOptionINT("MainInterface__ViewportAutoSwitchBorder", 2);
-
-		//	Push them back inot the globals so that a reload of the globals cache preserves these values
+		// Push them back inot the globals so that a reload of the globals cache preserves these values
 		setDefineINT("ENABLE_VIEWPORTS", 1, false);
-		setDefineINT("VIEWPORT_SIZE_X", iViewportSizeX, false);
-		setDefineINT("VIEWPORT_SIZE_Y", iViewportSizeY, false);
-		setDefineINT("VIEWPORT_FOCUS_BORDER", iViewportFocusBorder, false);
+		setDefineINT("VIEWPORT_SIZE_X", getBugOptionINT("MainInterface__ViewportX", 40), false);
+		setDefineINT("VIEWPORT_SIZE_Y", getBugOptionINT("MainInterface__ViewportY", 40), false);
+		setDefineINT("VIEWPORT_FOCUS_BORDER", getBugOptionINT("MainInterface__ViewportAutoSwitchBorder", 2), false);
 		m_iViewportCenterOnSelectionCenterBorder = getBugOptionINT("MainInterface__ViewportAutoCenterBorder", 5);
 
-		//	This happens after the maps load on first load, so resize existing viewports
+		// This happens after the maps load on first load, so resize existing viewports
 		for(int iI = 0; iI < GC.getNumMapInfos(); iI++)
 		{
 			for(int iJ = 0; iJ < GC.getMapByIndex((MapTypes)iI).getNumViewports(); iJ++)

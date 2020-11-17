@@ -880,29 +880,25 @@ public:
 	//
 	// additional accessors for initting globals
 	//
-
 	void setInterface(CvInterface* pVal);
-	 void setDiplomacyScreen(CvDiplomacyScreen* pVal);
-	 void setMPDiplomacyScreen(CMPDiplomacyScreen* pVal);
-	 void setMessageQueue(CMessageQueue* pVal);
-	 void setHotJoinMessageQueue(CMessageQueue* pVal);
-	 void setMessageControl(CMessageControl* pVal);
-	 void setSetupData(CvSetupData* pVal);
-	 void setMessageCodeTranslator(CvMessageCodeTranslator* pVal);
-	 void setDropMgr(CvDropMgr* pVal);
-	 void setPortal(CvPortal* pVal);
-	 void setStatsReport(CvStatsReporter* pVal);
-	 void setPathFinder(FAStar* pVal);
-	 void setInterfacePathFinder(FAStar* pVal);
-	 void setStepFinder(FAStar* pVal);
-	 void setRouteFinder(FAStar* pVal);
-	 void setBorderFinder(FAStar* pVal);
-	 void setAreaFinder(FAStar* pVal);
-	 void setPlotGroupFinder(FAStar* pVal);
-
-// BUG - BUG Info - start
-	void setIsBug(bool bIsBug);
-// BUG - BUG Info - end
+	void setDiplomacyScreen(CvDiplomacyScreen* pVal);
+	void setMPDiplomacyScreen(CMPDiplomacyScreen* pVal);
+	void setMessageQueue(CMessageQueue* pVal);
+	void setHotJoinMessageQueue(CMessageQueue* pVal);
+	void setMessageControl(CMessageControl* pVal);
+	void setSetupData(CvSetupData* pVal);
+	void setMessageCodeTranslator(CvMessageCodeTranslator* pVal);
+	void setDropMgr(CvDropMgr* pVal);
+	void setPortal(CvPortal* pVal);
+	void setStatsReport(CvStatsReporter* pVal);
+	void setPathFinder(FAStar* pVal);
+	void setInterfacePathFinder(FAStar* pVal);
+	void setStepFinder(FAStar* pVal);
+	void setRouteFinder(FAStar* pVal);
+	void setBorderFinder(FAStar* pVal);
+	void setAreaFinder(FAStar* pVal);
+	void setPlotGroupFinder(FAStar* pVal);
+	void setIsBug();
 
 	unsigned int getAssetCheckSum();
 

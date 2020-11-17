@@ -37,7 +37,7 @@ def init():
 	callInits()
 
 	g_initDone = True
-	CyGlobalContext().setIsBug(True)
+	CyGlobalContext().setIsBug()
 
 	return True
 
