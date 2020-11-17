@@ -183,25 +183,10 @@ void CvGame::init(HandicapTypes eHandicap)
 	//TB GameOption compatibility enforcement project
 	for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
 	{
-		const GameOptionTypes eGameOption = static_cast<GameOptionTypes>(iI);
+		const GameOptionTypes eGameOption = ((GameOptionTypes)iI);
 		if (isOption(eGameOption))
 		{
-			const CvGameOptionInfo& info = GC.getGameOptionInfo(eGameOption);
-
-			foreach_(const GameOptionTypes& eGameOptionMustOn, info.getEnforcesGameOptionOnTypes())
-			{
-				if (!isOption(eGameOptionMustOn))
-				{
-					setOption(eGameOptionMustOn, true);
-				}
-			}
-			foreach_(const GameOptionTypes& eGameOptionMustOff, info.getEnforcesGameOptionOffTypes())
-			{
-				if (isOption(eGameOptionMustOff))
-				{
-					setOption(eGameOptionMustOff, false);
-				}
-			}
+			enforceOptionCompatibility(eGameOption);
 		}
 	}
 
@@ -2414,25 +2399,10 @@ void CvGame::update()
 
 		for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
 		{
-			const GameOptionTypes eGameOption = static_cast<GameOptionTypes>(iI);
+			const GameOptionTypes eGameOption = ((GameOptionTypes)iI);
 			if (isOption(eGameOption))
 			{
-				const CvGameOptionInfo& info = GC.getGameOptionInfo(eGameOption);
-
-				foreach_(const GameOptionTypes& eGameOptionMustOn, info.getEnforcesGameOptionOnTypes())
-				{
-					if (!isOption(eGameOptionMustOn))
-					{
-						setOption(eGameOptionMustOn, true);
-					}
-				}
-				foreach_(const GameOptionTypes& eGameOptionMustOff, info.getEnforcesGameOptionOffTypes())
-				{
-					if (isOption(eGameOptionMustOff))
-					{
-						setOption(eGameOptionMustOff, false);
-					}
-				}
+				enforceOptionCompatibility(eGameOption);
 			}
 		}
 
@@ -5853,7 +5823,6 @@ void CvGame::makeCorporationFounded(CorporationTypes eIndex, PlayerTypes ePlayer
 		m_paiCorporationGameTurnFounded[eIndex] = getGameTurn();
 
 		CvEventReporter::getInstance().corporationFounded(eIndex, ePlayer);
-
 	}
 }
 
@@ -12885,4 +12854,25 @@ bool CvGame::isValidByGameOption(const CvUnitCombatInfo& info) const
 int CvGame::SorenRand::operator()(const int maxVal) const
 {
 	return GC.getGame().getSorenRandNum(maxVal, logMsg);
+}
+
+
+void CvGame::enforceOptionCompatibility(GameOptionTypes eOption)
+{
+	const CvGameOptionInfo& info = GC.getGameOptionInfo(eOption);
+
+	foreach_(const GameOptionTypes& eOptionMustOn, info.getEnforcesGameOptionOnTypes())
+	{
+		if (!isOption(eOptionMustOn))
+		{
+			setOption(eOptionMustOn, true);
+		}
+	}
+	foreach_(const GameOptionTypes& eOptionMustOff, info.getEnforcesGameOptionOffTypes())
+	{
+		if (isOption(eOptionMustOff))
+		{
+			setOption(eOptionMustOff, false);
+		}
+	}
 }
