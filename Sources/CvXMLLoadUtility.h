@@ -622,10 +622,6 @@ public:
 	void SetVariableListTagPair(std::vector<int>, const wchar_t* szRootTagName,
 		int iInfoBaseLength, int iDefaultListVal = 0);
 
-	void SetOptionalIntVector(std::vector<int>* aInfos, const wchar_t* szRootTagName) { return SetOptionalVector<int>(aInfos, szRootTagName); }
-
-	static void CopyNonDefaultsFromIntVector(std::vector<int>& target, const std::vector<int>& source) { return CopyNonDefaultsFromVector<int>(target, source); }
-
 	template <class T>
 	void SetOptionalVectorWithDelayedResolution(std::vector<T>& aInfos, const wchar_t* szRootTagName)
 	{
@@ -634,10 +630,10 @@ public:
 			aInfos.clear();
 			const int iNumSibs = GetXmlChildrenNumber();
 			aInfos.resize(iNumSibs);
-			CvString szTextVal;
 
 			if (0 < iNumSibs)
 			{
+				CvString szTextVal;
 				if (GetChildXmlVal(szTextVal))
 				{
 					for (int j = 0; j < iNumSibs; j++)
@@ -660,7 +656,6 @@ public:
 	template<class T1, class T2, class T3>
 	void SetOptionalPairVector(T1* aInfos, const wchar_t* szRootTagName)
 	{
-		CvString szTextVal;
 		aInfos->clear();
 		if (TryMoveToXmlFirstChild(szRootTagName))
 		{
@@ -670,17 +665,17 @@ public:
 			{
 				if (TryMoveToXmlFirstChild())
 				{
+					CvString szTextVal;
 					for (int j = 0; j < iNumSibs; ++j)
 					{
 						if (GetChildXmlVal(szTextVal))
 						{
-							T2 eType = (T2)GetInfoClass(szTextVal);
+							const T2 eType = (T2)GetInfoClass(szTextVal);
 							T3 iModifier;
 							GetNextXmlVal(&iModifier);
 							aInfos->push_back(std::make_pair(eType, iModifier));
 
 							MoveToXmlParent();
-
 						}
 
 						if (!TryMoveToXmlNextSibling())
@@ -712,23 +707,23 @@ public:
 	}
 
 	template<class T>
-	void SetOptionalVector(std::vector<T>* aInfos, const wchar_t* szRootTagName)
+	void SetOptionalVector(std::vector<T>& aInfos, const wchar_t* szRootTagName)
 	{
 		if (TryMoveToXmlFirstChild(szRootTagName))
 		{
 			const int iNumSibs = GetXmlChildrenNumber();
-			CvString szTextVal;
 
 			if (0 < iNumSibs)
 			{
+				CvString szTextVal;
 				if (GetChildXmlVal(szTextVal))
 				{
 					for (int j = 0; j < iNumSibs; j++)
 					{
 						const T value = static_cast<T>(GetInfoClass(szTextVal));
-						if (value > -1  && !std::contains(*aInfos, value))
+						if (value > -1  && !std::contains(aInfos, value))
 						{
-							aInfos->push_back(value);
+							aInfos.push_back(value);
 						}
 						if (!GetNextXmlVal(szTextVal))
 						{
@@ -736,7 +731,7 @@ public:
 						}
 					}
 
-					std::sort(aInfos->begin(), aInfos->end());
+					std::sort(aInfos.begin(), aInfos.end());
 
 					MoveToXmlParent();
 				}
