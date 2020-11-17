@@ -3849,21 +3849,18 @@ def canTriggerNuclearProtest(argsList):
   return True
 
 def doNuclearProtest1(argsList):
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	kTriggeredData = argsList[1]
 
-  iICBM = GC.getInfoTypeForString("UNIT_ICBM")
-  iTacNuke = GC.getInfoTypeForString("UNIT_TACTICAL_NUKE")
+	iICBM = GC.getInfoTypeForString("UNIT_ICBM")
+	iTacNuke = GC.getInfoTypeForString("UNIT_TACTICAL_NUKE")
 
-  (loopUnit, iter) = player.firstUnit(False)
-  while (loopUnit):
-    if loopUnit.getUnitType() == iICBM or loopUnit.getUnitType() == iTacNuke:
-      loopUnit.kill(False, -1)
-    (loopUnit, iter) = player.nextUnit(iter, False)
+	for loopUnit in GC.getPlayer(kTriggeredData.ePlayer).units():
+		if loopUnit.getUnitType() == iICBM or loopUnit.getUnitType() == iTacNuke:
+			loopUnit.kill(False, -1)
 
 def getHelpNuclearProtest1(argsList):
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_NUCLEAR_PROTEST_1_HELP", ())
-  return szHelp
+	szHelp = TRNSLTR.getText("TXT_KEY_EVENT_NUCLEAR_PROTEST_1_HELP", ())
+	return szHelp
 
 
 ######## Preaching Researcher #######
