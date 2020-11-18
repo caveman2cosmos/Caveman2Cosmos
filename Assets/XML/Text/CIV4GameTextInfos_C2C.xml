@@ -36,7 +36,7 @@
 		<Tag>TXT_KEY_BUILDING_FREE_IN_CITY</Tag>
 		<English>[ICON_BULLET]Free [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] in Every City</English>
 		<French>[ICON_BULLET]1 [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] dans chaque ville</French>
-		<German>[ICON_BULLET]Freies Gebäude [COLOR_BUILDING_TEXT][LINK=%s2_NameType]%s1_Name[\LINK][COLOR_REVERT] in jeder Stadt</German>
+		<German>[ICON_BULLET]freies Gebäude [LINK=%s1_NameType][COLOR_BUILDING_TEXT]%s2_Name[COLOR_REVERT][\LINK] in jeder Stadt</German>
 		<Italian>[ICON_BULLET][COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] [NUM1:gratuito:gratuita:gratuiti:gratuite] in ogni città</Italian>
 		<Spanish>[ICON_BULLET][NUM1:Un:Una:Unos:Unas] [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2:1_Name[\LINK][COLOR_REVERT] gratis en todas las ciudades.</Spanish>
 	</TEXT>
@@ -697,9 +697,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UPGRADE_TIME</Tag>
 		<English>[ICON_BULLET]Upgrade time: %d1 [NUM1:Turn:Turns]</English>
+		<German>[ICON_BULLET]Zeit bis zum Upgrade: %d1 [NUM1:Runde:Runden]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UPGRADES</Tag>
 		<English>[ICON_BULLET]Upgrades:[SPACE]</English>
+		<German>[ICON_BULLET]mögliche Upgrades:[SPACE]</German>
 	</TEXT>
 </Civ4GameText>

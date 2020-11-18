@@ -18,6 +18,7 @@
 		<Tag>TXT_KEY_PEDIA_AND_BUILD_TIME</Tag>
 		<English>and build time is</English>
 		<French>et le temps de construction est :\n</French>
+		<German>[NEWLINE][ICON_BULLET]Dauer:</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_ATTITUDE</Tag>
@@ -136,6 +137,7 @@
 		<Tag>TXT_KEY_PEDIA_CAPABLE_UNITS</Tag>
 		<English>Capable Units:</English>
 		<French>Unités compétentes:</French>
+		<German>kann ausgeführt werden von</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_AFFLICTION_PROMOTION</Tag>
@@ -778,16 +780,19 @@
 		<Tag>TXT_KEY_PEDIA_CONSTRUCT</Tag>
 		<English>Construct:</English>
 		<French>Construit :</French>
+		<German>Ergebnis</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CONSUMES_WORKER</Tag>
 		<English>Consumes the worker.</English>
 		<French>Détruit l'Ouvrier.</French>
+		<German>Arbeitstrupp wird zerstört</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_COSTS</Tag>
 		<English>Costs</English>
 		<French>Coûte</French>
+		<German>Kosten:</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_DOGPILE</Tag>
@@ -932,6 +937,7 @@
 		<Tag>TXT_KEY_PEDIA_REQUIRES</Tag>
 		<English>Requires:</English>
 		<French>Requiert :</French>
+		<German>benötigt</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_RESOURCE_SOURCE</Tag>
@@ -1058,6 +1064,7 @@
 		<Tag>TXT_KEY_PEDIA_TURNS_FEATURE_BUILD_TIME</Tag>
 		<English>turns + feature build time)</English>
 		<French>tours + temps de constr. de l'aménagement)</French>
+		<German> Runde(n) zusätzlich)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_UNIT_CAN_BE_CAPTURED</Tag>

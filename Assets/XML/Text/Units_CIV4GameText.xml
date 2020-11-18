@@ -21351,11 +21351,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_RELIGIOUS_COMBAT_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% Religious Combat Modifier - applies against units that differ in religion to your unit - inverses to a penalty when foe is of same religion.</English>
 		<French>[ICON_BULLET]%D1_Amount%% Modificateur de combat religieux - s'applique aux unités dont la religion diffère de celle de votre unité - à l'inverse c'est une pénalité lorsque l'ennemi est de la même religion.</French>
+		<German>[ICON_BULLET]%D1_Amount%% Modifikator für Kämpfe gegen Einheiten anderer Religionen (Nebeneffekt: Nachteile in gleicher Höhe bei Kämpfen gegen Einheiten derselben Glaubensrichtung)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RELIGIOUS_COMBAT_MODIFIER_SHORT</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% Religious Combat Modifier</English>
 		<French>[ICON_BULLET]%D1_Amount%% Modificateur de combat religieux</French>
+		<German>[ICON_BULLET]%D1_Amount%% Modifikator für religiöse Auseinandersetzungen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REN_IMP_GUARD</Tag>
@@ -21464,6 +21466,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REQUIRES</Tag>
 		<English>Valid for[SPACE]</English>
+		<German>für[SPACE]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REQUIRES_STATE_RELIGION</Tag>
@@ -26892,7 +26895,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRIBAL_GUARDIAN_PEDIA</Tag>
 		<English>The Tribal Guardian protects your capital against all intruders. It refuses to leave the palace of the ruler.</English>
-		<German>In einer Umwelt voll wilder Raubtiere und feindlicher Horden konnten die frühen Menschen ihre Lager unmöglich ohne Bewachung zurücklassen. Wenn die Männer der Sippe zur Jagd aufbrachen, mussten einige als Wächter zurückbleiben, um Frauen, Kinder, Alte und Schwache, aber auch Nahrungsvorräte und Ressourcen vor Übergriffen zu schützen.</German>
+		<German>In einer Umwelt voll wilder Raubtiere und feindlicher Horden konnten die frühen Menschen ihre Lager unmöglich ohne Bewachung zurücklassen. Wenn die Männer der Sippe zur Jagd aufbrachen, mussten einige als Wächter zurückbleiben, um Frauen, Kinder, Alte und Schwache, aber auch Nahrungsvorräte und Ressourcen vor Übergriffen (auch aus den eigenen Reihen) zu schützen.</German>
 		<Italian>Il guardiano tribale protegge la tua capitale dagli intrusi; si rifuta di abbandonare il palazzo del capo.</Italian>
 		<Spanish>El Guardián tribal protege tu capital de los intrusos. Él rehúsa abandonar el palacio del líder.</Spanish>
 		<Polish>Gwardia (wł. guardia - straż) - początkowo straż przyboczna monarchy lub wodza, później doborowe oddziały liniowe. Stacjonowały głównie w stolicy państwa.</Polish>
