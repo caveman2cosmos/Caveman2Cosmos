@@ -20364,7 +20364,7 @@ int CvCity::getImprovementBadHealth() const
 
 void CvCity::updateImprovementHealth()
 {
-	CvPlayer& kPlayer = GET_PLAYER(getOwner());
+	const CvPlayer& player = GET_PLAYER(getOwner());
 
 	int iNewGoodHealthPercent = 0;
 	int iNewBadHealthPercent = 0;
@@ -20372,46 +20372,35 @@ void CvCity::updateImprovementHealth()
 	{
 		CvPlot* pLoopPlot = getCityIndexPlot(iI);
 
-		if (pLoopPlot != NULL)
+		if (pLoopPlot != NULL && pLoopPlot->getOwner() != NO_PLAYER && pLoopPlot->getOwner() == getOwner())
 		{
-			if (pLoopPlot->getOwner() != NO_PLAYER)
+			const ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
+
+			if (eImprovement != NO_IMPROVEMENT)
 			{
-				if (pLoopPlot->getOwner() == getOwner())
+				int iHealthPercent = GC.getImprovementInfo(eImprovement).getHealthPercent();
+
+				for (int iJ = 0; iJ < GC.getNumCivicOptionInfos(); iJ++)
 				{
-					ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
-
-					if (eImprovement != NO_IMPROVEMENT)
+					if (player.getCivics((CivicOptionTypes)iJ) != NO_CIVIC)
 					{
-						if (GC.getImprovementInfo(eImprovement).getHealthPercent() > 0)
-						{
-							iNewGoodHealthPercent += GC.getImprovementInfo(eImprovement).getHealthPercent();
-							for (int iJ = 0; iJ < GC.getNumCivicOptionInfos(); iJ++)
-							{
-								if (kPlayer.getCivics((CivicOptionTypes)iJ) != NO_CIVIC)
-								{
-									iNewGoodHealthPercent += std::max(0, GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iJ)).getImprovementHealthPercentChanges(eImprovement));
-								}
-							}
-
-						}
-						else
-						{
-							iNewBadHealthPercent += GC.getImprovementInfo(eImprovement).getHealthPercent();
-							for (int iJ = 0; iJ < GC.getNumCivicOptionInfos(); iJ++)
-							{
-								if (kPlayer.getCivics((CivicOptionTypes)iJ) != NO_CIVIC)
-								{
-									iNewBadHealthPercent += std::min(0, GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iJ)).getImprovementHealthPercentChanges(eImprovement));
-								}
-							}
-						}
+						iHealthPercent += GC.getCivicInfo(player.getCivics((CivicOptionTypes)iJ)).getImprovementHealthPercentChanges(eImprovement);
 					}
+				}
+
+				if (iHealthPercent > 0)
+				{
+					iNewGoodHealthPercent += iHealthPercent;
+				}
+				else if (iHealthPercent < 0)
+				{
+					iNewBadHealthPercent += iHealthPercent;
 				}
 			}
 		}
 	}
 
-	if ((getImprovementGoodHealth() != iNewGoodHealthPercent) || (getImprovementBadHealth() != iNewBadHealthPercent))
+	if (m_iImprovementGoodHealth != iNewGoodHealthPercent || m_iImprovementBadHealth != iNewBadHealthPercent)
 	{
 		m_iImprovementGoodHealth = iNewGoodHealthPercent;
 		m_iImprovementBadHealth = iNewBadHealthPercent;
