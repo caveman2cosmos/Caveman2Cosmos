@@ -1902,6 +1902,7 @@
 			<Strategy>TXT_KEY_BUILDING_BRACEWELL_PROBES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BRACEWELL_PROBES</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BRACEWELL_PROBES</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
 			<iHurryCostModifier>10000</iHurryCostModifier>
