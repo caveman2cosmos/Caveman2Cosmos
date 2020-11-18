@@ -41,7 +41,6 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 			self.addCheckbox(screen, col2, "RevDCM__DCM_OPP_FIRE")
 			self.addLabel(screen, left, "RevDCM__RevDCM_general", TRNSLTR.getText("TXT_KEY_REVDCMTAB_BATTLE_OPTIONS", ()))
 			col1, col2 = self.addMultiColumnLayout(screen, right, 2, "DCM_Events")
-			self.addCheckbox(screen, col1, "RevDCM__DCM_BATTLE_EFFECTS")
 			self.addCheckbox(screen, col2, "RevDCM__DCM_ATTACK_SUPPORT")
 			self.addLabel(screen, left, "RevDCM__RevDCM_air", TRNSLTR.getText("TXT_KEY_REVDCMTAB_AIRFORCE_OPTIONS", ()))
 			col1, col2, col3 = self.addMultiColumnLayout(screen, right, 3, "DCM_Air_Events")
@@ -67,15 +66,14 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 			screen.attachHSeparator(right, right + "SepIDW2")
 
 			#Super Spies options
-			if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE):
-				self.addLabel(screen, left, "RevDCM__RevDCMSS", TRNSLTR.getText("TXT_KEY_REVDCMTAB_SPY_OPTIONS", ()))
-				col1, col2, col3 = self.addMultiColumnLayout(screen, right, 3, "SS_Events1")
-				self.addCheckbox(screen, col1, "RevDCM__SS_ENABLED")
-				self.addCheckbox(screen, col2, "RevDCM__SS_BRIBE")
-				self.addCheckbox(screen, col3, "RevDCM__SS_ASSASSINATE")
+			self.addLabel(screen, left, "RevDCM__RevDCMSS", TRNSLTR.getText("TXT_KEY_REVDCMTAB_SPY_OPTIONS", ()))
+			col1, col2, col3 = self.addMultiColumnLayout(screen, right, 3, "SS_Events1")
+			self.addCheckbox(screen, col1, "RevDCM__SS_ENABLED")
+			self.addCheckbox(screen, col2, "RevDCM__SS_BRIBE")
+			self.addCheckbox(screen, col3, "RevDCM__SS_ASSASSINATE")
 
-				screen.attachHSeparator(left, left + "SepInq1")
-				screen.attachHSeparator(right, right + "SepInq2")
+			screen.attachHSeparator(left, left + "SepInq1")
+			screen.attachHSeparator(right, right + "SepInq2")
 
 			#Religion options
 			bInquisition = GAME.isOption(GameOptionTypes.GAMEOPTION_INQUISITIONS)

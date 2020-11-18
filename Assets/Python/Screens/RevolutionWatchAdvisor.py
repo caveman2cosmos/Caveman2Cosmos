@@ -813,12 +813,10 @@ class RevolutionWatchAdvisor:
 			self.bCanLiberate = True
 		else:
 			self.bCanLiberate = False
-			(loopCity, iter) = player.firstCity(False)
-			while (loopCity):
+			for loopCity in player.cities():
 				if loopCity.getLiberationPlayer(False) != -1:
 					self.bCanLiberate = True
 					break
-				(loopCity, iter) = player.nextCity(iter, False)
 
 		if (self.bCanLiberate):
 			screen.setImageButton( self.SPLIT_NAME, "", self.X_SPLIT, self.Y_SPLIT, 28, 28, WidgetTypes.WIDGET_ACTION, gc.getControlInfo(ControlTypes.CONTROL_FREE_COLONY).getActionInfoIndex(), -1 )

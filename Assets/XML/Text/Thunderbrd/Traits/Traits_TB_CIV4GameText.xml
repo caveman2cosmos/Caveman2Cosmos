@@ -815,6 +815,36 @@ Penalties:
 	[ICON_BULLET]Slightly diminished base city defense level.
 	[ICON_BULLET]Penalty to diplomacy. This leader is understood to be volatile and likely to seek cause to pick a fight.
 	[ICON_BULLET]More expensive to upgrade units. Retraining them in new ways to unleash devastating attacks adds more to training costs.</English>
+		<German>Positive Charaktereigenschaft
+
+"Der Angriff ist die beste Verteidigung." - deutsches Sprichwort
+
+Wer es mit einem aggressiven Gegner zu tun bekommt, der sollte sich besser nicht zurücklehnen und abwarten, sondern muss jederzeit mit einem Angriff rechnen. Ein aggressiver Anführer verfügt über ein gut ausgebildetes Militär und ist bereit, beim kleinsten Anlass loszuschlagen. Manchmal erklärt er den Krieg auch ohne jede Rechtfertigung, einfach weil ihm gerade danach ist. Dies ist eine hervorragende Charaktereigenschaft für Spieler, die ihre Gegner mit Militärmacht in die Knie zwingen wollen.
+
+Primäre Vorteile:
+	[ICON_BULLET]schnellere Kriegsmüdigkeit bei gegnerischen Nationen
+	[ICON_BULLET]reduzierte laufende Kosten für militärische Einheiten
+
+Vorteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Aggressiv I
+
+Weitere Vorteile:
+	[ICON_BULLET]erhöhte Geburtenrate für Große Feldherren
+	[ICON_BULLET]als angesiedelte Spezialisten bringen Große Feldherren zusätzlich [ICON_PRODUCTION]
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training zusätzliche Erfahrungspunkte
+	[ICON_BULLET]beschleunigtes Training für Kämpfer- und Marineeinheiten (Die Bevölkerung ist auch ohne militärische Ausbildung schon für den Kampf gestählt.) 
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit des eigenen Volkes
+	[ICON_BULLET]Erhöhung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]zusätzliche freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten
+	[ICON_BULLET]verringerte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten
+
+Nachteile:
+	[ICON_BULLET]normale Geburtenrate für Große Feldherren bei Gefechten innerhalb der eigenen Grenzen (Der Bonus für Gefechte außerhalb der eigenen Grenzen wird gerade aufgehoben.)
+	[ICON_BULLET]Verminderung der Erfahrungspunkte für Gefechte innerhalb der eigenen Grenzen
+	[ICON_BULLET]geschwächte Stadtverteidigung
+	[ICON_BULLET]Nachteile bei diplomatischen Verhandlungen (Das Staatsoberhaupt gilt als impulsiv und jedes Gegenüber rechnet damit, dass es jederzeit einen Streit vom Zaun bricht.)
+	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten (Das Austesten neuer Möglichkeiten für vernichtende Angriffe und das Einüben derselben erhöht die Trainingskosten.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE2</Tag>
@@ -854,6 +884,36 @@ Penalties:
 	[ICON_BULLET]Diminished base city defense level.
 	[ICON_BULLET]Penalty to diplomacy. This leader is understood to be volatile and likely to seek cause to pick a fight.
 	[ICON_BULLET]More expensive to upgrade units. Retraining them in new ways to unleash devastating attacks adds more to training costs.</English>
+		<German>Positive Charaktereigenschaft
+
+"Der Angriff ist die beste Verteidigung." - deutsches Sprichwort
+
+Wer es mit einem aggressiven Gegner zu tun bekommt, der sollte sich besser nicht zurücklehnen und abwarten, sondern muss jederzeit mit einem Angriff rechnen. Ein aggressiver Anführer verfügt über ein gut ausgebildetes Militär und ist bereit, beim kleinsten Anlass loszuschlagen. Manchmal erklärt er den Krieg auch ohne jede Rechtfertigung, einfach weil ihm gerade danach ist. Dies ist eine hervorragende Charaktereigenschaft für Spieler, die ihre Gegner mit Militärmacht in die Knie zwingen wollen.
+
+Primäre Vorteile:
+	[ICON_BULLET]schnellere Kriegsmüdigkeit bei gegnerischen Nationen
+	[ICON_BULLET]reduzierte laufende Kosten für militärische Einheiten
+
+Vorteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Aggressiv II
+
+Weitere Vorteile:
+	[ICON_BULLET]erhöhte Geburtenrate für Große Feldherren
+	[ICON_BULLET]als angesiedelte Spezialisten bringen Große Feldherren zusätzlich [ICON_GOLD]
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training zusätzliche Erfahrungspunkte
+	[ICON_BULLET]beschleunigtes Training für Kämpfer- und Marineeinheiten (Die Bevölkerung ist auch ohne militärische Ausbildung schon für den Kampf gestählt.) 
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit des eigenen Volkes
+	[ICON_BULLET]Erhöhung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]zusätzliche freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten
+	[ICON_BULLET]verringerte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten
+
+Nachteile:
+	[ICON_BULLET]normale Geburtenrate für Große Feldherren bei Gefechten innerhalb der eigenen Grenzen (Der Bonus für Gefechte außerhalb der eigenen Grenzen wird gerade aufgehoben.)
+	[ICON_BULLET]Verminderung der Erfahrungspunkte für Gefechte innerhalb der eigenen Grenzen
+	[ICON_BULLET]geschwächte Stadtverteidigung
+	[ICON_BULLET]Nachteile bei diplomatischen Verhandlungen (Das Staatsoberhaupt gilt als impulsiv und jedes Gegenüber rechnet damit, dass es jederzeit einen Streit vom Zaun bricht.)
+	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten (Das Austesten neuer Möglichkeiten für vernichtende Angriffe und das Einüben derselben erhöht die Trainingskosten.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE3</Tag>
@@ -892,6 +952,35 @@ Penalties:
 	[ICON_BULLET]Diminished base city defense level.
 	[ICON_BULLET]Penalty to diplomacy. This leader is understood to be volatile and likely to seek cause to pick a fight.
 	[ICON_BULLET]More expensive to upgrade units. Retraining them in new ways to unleash devastating attacks adds more to training costs.</English>
+		<German>Positive Charaktereigenschaft
+
+"Der Angriff ist die beste Verteidigung." - deutsches Sprichwort
+
+Wer es mit einem aggressiven Gegner zu tun bekommt, der sollte sich besser nicht zurücklehnen und abwarten, sondern muss jederzeit mit einem Angriff rechnen. Ein aggressiver Anführer verfügt über ein gut ausgebildetes Militär und ist bereit, beim kleinsten Anlass loszuschlagen. Manchmal erklärt er den Krieg auch ohne jede Rechtfertigung, einfach weil ihm gerade danach ist. Dies ist eine hervorragende Charaktereigenschaft für Spieler, die ihre Gegner mit Militärmacht in die Knie zwingen wollen.
+
+Primäre Vorteile:
+	[ICON_BULLET]schnellere Kriegsmüdigkeit bei gegnerischen Nationen
+	[ICON_BULLET]reduzierte laufende Kosten für militärische Einheiten
+
+Vorteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Aggressiv III
+
+Weitere Vorteile:
+	[ICON_BULLET]erhöhte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training zusätzliche Erfahrungspunkte
+	[ICON_BULLET]beschleunigtes Training für Kämpfer- und Marineeinheiten (Die Bevölkerung ist auch ohne militärische Ausbildung schon für den Kampf gestählt.) 
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit des eigenen Volkes
+	[ICON_BULLET]Erhöhung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]zusätzliche freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten
+	[ICON_BULLET]verringerte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten
+
+Nachteile:
+	[ICON_BULLET]normale Geburtenrate für Große Feldherren bei Gefechten innerhalb der eigenen Grenzen (Der Bonus für Gefechte außerhalb der eigenen Grenzen wird gerade aufgehoben.)
+	[ICON_BULLET]Verminderung der Erfahrungspunkte für Gefechte innerhalb der eigenen Grenzen
+	[ICON_BULLET]geschwächte Stadtverteidigung
+	[ICON_BULLET]Nachteile bei diplomatischen Verhandlungen (Das Staatsoberhaupt gilt als impulsiv und jedes Gegenüber rechnet damit, dass es jederzeit einen Streit vom Zaun bricht.)
+	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten (Das Austesten neuer Möglichkeiten für vernichtende Angriffe und das Einüben derselben erhöht die Trainingskosten.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE_PEDIA</Tag>
@@ -926,11 +1015,43 @@ Penalties:
 	[ICON_BULLET]Diminished base city defense level.
 	[ICON_BULLET]Significant penalty to diplomacy. This leader is understood to be volatile and likely to seek cause to pick a fight.
 	[ICON_BULLET]More expensive to upgrade units. Retraining them in new ways to unleash devastating attacks adds more to training costs.</English>
+		<German>Positive Charaktereigenschaft
+
+"Der Angriff ist die beste Verteidigung." - deutsches Sprichwort
+
+Wer es mit einem aggressiven Gegner zu tun bekommt, der sollte sich besser nicht zurücklehnen und abwarten, sondern muss jederzeit mit einem Angriff rechnen. Ein aggressiver Anführer verfügt über ein gut ausgebildetes Militär und ist bereit, beim kleinsten Anlass loszuschlagen. Manchmal erklärt er den Krieg auch ohne jede Rechtfertigung, einfach weil ihm gerade danach ist. Dies ist eine hervorragende Charaktereigenschaft für Spieler, die ihre Gegner mit Militärmacht in die Knie zwingen wollen.
+
+Primäre Vorteile:
+	[ICON_BULLET]schnellere Kriegsmüdigkeit bei gegnerischen Nationen
+	[ICON_BULLET]reduzierte laufende Kosten für militärische Einheiten
+
+Vorteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Aggressiv
+
+Weitere Vorteile:
+	[ICON_BULLET]erhöhte Geburtenrate für Große Feldherren
+	[ICON_BULLET]als angesiedelte Spezialisten bringen Große Feldherren zusätzlich [ICON_PRODUCTION]
+	[ICON_BULLET]als angesiedelte Spezialisten bringen Große Feldherren zusätzlich [ICON_GOLD]
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training zusätzliche Erfahrungspunkte
+	[ICON_BULLET]beschleunigtes Training für Kämpfer- und Marineeinheiten (Die Bevölkerung ist auch ohne militärische Ausbildung schon für den Kampf gestählt.) 
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit des eigenen Volkes
+	[ICON_BULLET]Erhöhung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]zusätzliche freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten
+	[ICON_BULLET]verringerte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten
+
+Nachteile:
+	[ICON_BULLET]normale Geburtenrate für Große Feldherren bei Gefechten innerhalb der eigenen Grenzen (Der Bonus für Gefechte außerhalb der eigenen Grenzen wird gerade aufgehoben.)
+	[ICON_BULLET]Verminderung der Erfahrungspunkte für Gefechte innerhalb der eigenen Grenzen
+	[ICON_BULLET]geschwächte Stadtverteidigung
+	[ICON_BULLET]Nachteile bei diplomatischen Verhandlungen (Das Staatsoberhaupt gilt als impulsiv und jedes Gegenüber rechnet damit, dass es jederzeit einen Streit vom Zaun bricht.)
+	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten (Das Austesten neuer Möglichkeiten für vernichtende Angriffe und das Einüben derselben erhöht die Trainingskosten.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE_STRATEGY</Tag>
 		<English>Prepares a hostile military, ready to attack. Operates under the theory that the best defense is a good offense.</English>
 		<French>Prépare une armée hostile, prête à attaquer. Fonctionne selon la théorie selon laquelle la meilleure défense est une bonne attaque.</French>
+		<German>Dieser Anführer vertritt die Ansicht, dass Angriff die beste Verteidigung ist. Mit einer aggressiven Militärpolitik ist er jederzeit auf einen Angriff vorbereitet.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL</Tag>
@@ -5658,11 +5779,13 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_COWARDLY</Tag>
 		<English>Cowardly</English>
 		<French>Couard</French>
+		<German>Feige</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY1</Tag>
 		<English>Cowardly I</English>
 		<French>Couard I</French>
+		<German>Feige I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY1_PEDIA</Tag>
@@ -5691,11 +5814,39 @@ Bonuses:
 	[ICON_BULLET]Each military unit you staff in a city makes your citizens feel much safer and thus happier.
 	[ICON_BULLET]Gain an additional Trade route in each city due to the economic amiability of your people so as to appease potential rivals.
 	[ICON_BULLET]Decrease in the cost of upgrading units since training can only cover the bare minimums without freaking out your government employees.</English>
+		<German>Negative Charaktereigenschaft
+
+"Der Feige stirbt schon vielmal, eh' er stirbt, die Tapfern kosten einmal nur den Tod." - William Shakespeare (1564-1616)
+
+Feige Anführer leben in ständiger Angst vor Angriffen und versuchen diese auf Biegen und Brechen zu vermeiden. Paradoxerweise führt das dazu, dass ihre Truppen tatsächlich gestärkt sind, solange sie selbst die Angreifer darstellen, in der Verteidigung aber hoffnungslos unterlegen. Sie sind ähnlich wie Raufbolde auf dem Schulhof, die nur solange stark sind, wie sie andere schikanieren können, die aber sofort einknicken, wenn sie selbst in die Schusslinie geraten.
+
+Primäre Nachteile:
+	[ICON_BULLET]erhöhte laufende Kosten für militärische Einheiten (Wegen des gefürchteten Konfliktpotenzials wird der Militärdienst nur ungern verrichtet.)
+
+Nachteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Feige I
+
+Weitere Nachteile:
+	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Befestigungsanlagen im Umland werden langsamer modernisiert
+	[ICON_BULLET]Arbeitstrupps bauen Befestigungsanlagen langsamer
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training weniger Erfahrungspunkte
+	[ICON_BULLET]verzögertes Training für Kämpfer- und Marineeinheiten
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes (Jeder Kriegszustand versetzt das Volk in Angst und Schrecken.)
+	[ICON_BULLET]Verminderung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]weniger freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten (Überleben ist alles, was zählt.)
+
+Vorteile:
+	[ICON_BULLET]erhöhte Zufriedenheit durch stationierte Militäreinheiten in Städten (da die ansässige Bevölkerung sich dadurch sicherer fühlt)
+	[ICON_BULLET]eine Handelsroute mehr pro Stadt (Die Händler sind in der Lage, potenzielle Rivalen zu beschwichtigen.)
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Es kann nur am Minimum trainiert werden, da alles andere zu Panik wegen vermeintlicher bevorstehender Konflikte führen würde.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY2</Tag>
 		<English>Cowardly II</English>
 		<French>Couard II</French>
+		<German>Feige II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY2_PEDIA</Tag>
@@ -5725,11 +5876,41 @@ Bonuses:
 	[ICON_BULLET]Gain an additional Trade route in each city due to the economic amiability of your people so as to appease potential rivals.
 	[ICON_BULLET]Decrease in the cost of upgrading units since training can only cover the bare minimums without freaking out your government employees.
 	[ICON_BULLET]More likely to capture enemy units when defeating them because their terror driven rage tends to surprise foes into submission and because they can empathize, they are likely to take pity on those who surrender.</English>
+		<German>Negative Charaktereigenschaft
+
+"Der Feige stirbt schon vielmal, eh' er stirbt, die Tapfern kosten einmal nur den Tod." - William Shakespeare (1564-1616)
+
+Feige Anführer leben in ständiger Angst vor Angriffen und versuchen diese auf Biegen und Brechen zu vermeiden. Paradoxerweise führt das dazu, dass ihre Truppen tatsächlich gestärkt sind, solange sie selbst die Angreifer darstellen, in der Verteidigung aber hoffnungslos unterlegen. Sie sind ähnlich wie Raufbolde auf dem Schulhof, die nur solange stark sind, wie sie andere schikanieren können, die aber sofort einknicken, wenn sie selbst in die Schusslinie geraten.
+
+Primäre Nachteile:
+	[ICON_BULLET]erhöhte laufende Kosten für militärische Einheiten (Wegen des gefürchteten Konfliktpotenzials wird der Militärdienst nur ungern verrichtet.)
+
+Nachteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Feige II
+
+Weitere Nachteile:
+	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Befestigungsanlagen im Umland werden langsamer modernisiert
+	[ICON_BULLET]Arbeitstrupps bauen Befestigungsanlagen langsamer
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training weniger Erfahrungspunkte
+	[ICON_BULLET]verzögertes Training für Kämpfer- und Marineeinheiten
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes (Jeder Kriegszustand versetzt das Volk in Angst und Schrecken.)
+	[ICON_BULLET]Verminderung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]weniger freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten (Überleben ist alles, was zählt.)
+
+Vorteile:
+	[ICON_BULLET]erhöhte Zufriedenheit durch stationierte Militäreinheiten in Städten (da die ansässige Bevölkerung sich dadurch sicherer fühlt)
+	[ICON_BULLET]eine Handelsroute mehr pro Stadt (Die Händler sind in der Lage, potenzielle Rivalen zu beschwichtigen.)
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Es kann nur am Minimum trainiert werden, da alles andere zu Panik wegen vermeintlicher bevorstehender Konflikte führen würde.)
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Die eigenen Truppen lassen aus Angst vor Racheaktionen eher Gnade walten.)
+	</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY3</Tag>
 		<English>Cowardly III</English>
 		<French>Couard III</French>
+		<German>Feige III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY3_PEDIA</Tag>
@@ -5759,6 +5940,35 @@ Bonuses:
 	[ICON_BULLET]Gain an additional Trade route in each city due to the economic amiability of your people so as to appease potential rivals.
 	[ICON_BULLET]Decrease in the cost of upgrading units since training can only cover the bare minimums without freaking out your government employees.
 	[ICON_BULLET]More likely to capture enemy units when defeating them because their terror driven rage tends to surprise foes into submission and because they can empathize, they are likely to take pity on those who surrender.</English>
+		<German>Negative Charaktereigenschaft
+
+"Der Feige stirbt schon vielmal, eh' er stirbt, die Tapfern kosten einmal nur den Tod." - William Shakespeare (1564-1616)
+
+Feige Anführer leben in ständiger Angst vor Angriffen und versuchen diese auf Biegen und Brechen zu vermeiden. Paradoxerweise führt das dazu, dass ihre Truppen tatsächlich gestärkt sind, solange sie selbst die Angreifer darstellen, in der Verteidigung aber hoffnungslos unterlegen. Sie sind ähnlich wie Raufbolde auf dem Schulhof, die nur solange stark sind, wie sie andere schikanieren können, die aber sofort einknicken, wenn sie selbst in die Schusslinie geraten.
+
+Primäre Nachteile:
+	[ICON_BULLET]erhöhte laufende Kosten für militärische Einheiten (Wegen des gefürchteten Konfliktpotenzials wird der Militärdienst nur ungern verrichtet.)
+
+Nachteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Feige III
+
+Weitere Nachteile:
+	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Befestigungsanlagen im Umland werden langsamer modernisiert
+	[ICON_BULLET]Arbeitstrupps bauen Befestigungsanlagen langsamer
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training weniger Erfahrungspunkte
+	[ICON_BULLET]verzögertes Training für Kämpfer- und Marineeinheiten
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes (Jeder Kriegszustand versetzt das Volk in Angst und Schrecken.)
+	[ICON_BULLET]Verminderung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]weniger freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten (Überleben ist alles, was zählt.)
+
+Vorteile:
+	[ICON_BULLET]erhöhte Zufriedenheit durch stationierte Militäreinheiten in Städten (da die ansässige Bevölkerung sich dadurch sicherer fühlt)
+	[ICON_BULLET]eine Handelsroute mehr pro Stadt (Die Händler sind in der Lage, potenzielle Rivalen zu beschwichtigen.)
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Es kann nur am Minimum trainiert werden, da alles andere zu Panik wegen vermeintlicher bevorstehender Konflikte führen würde.)
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Die eigenen Truppen lassen aus Angst vor Racheaktionen eher Gnade walten.)
+	</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY_PEDIA</Tag>
@@ -5788,11 +5998,40 @@ Bonuses:
 	[ICON_BULLET]Gain an additional Trade route in each city due to the economic amiability of your people so as to appease potential rivals.
 	[ICON_BULLET]Strong decrease in the cost of upgrading units since training can only cover the bare minimums without freaking out your government employees.
 	[ICON_BULLET]More likely to capture enemy units when defeating them because their terror driven rage tends to surprise foes into submission and because they can empathize, they are likely to take pity on those who surrender.</English>
+		<German>Negative Charaktereigenschaft
+
+"Der Feige stirbt schon vielmal, eh' er stirbt, die Tapfern kosten einmal nur den Tod." - William Shakespeare (1564-1616)
+
+Feige Anführer leben in ständiger Angst vor Angriffen und versuchen diese auf Biegen und Brechen zu vermeiden. Paradoxerweise führt das dazu, dass ihre Truppen tatsächlich gestärkt sind, solange sie selbst die Angreifer darstellen, in der Verteidigung aber hoffnungslos unterlegen. Sie sind ähnlich wie Raufbolde auf dem Schulhof, die nur solange stark sind, wie sie andere schikanieren können, die aber sofort einknicken, wenn sie selbst in die Schusslinie geraten.
+
+Primäre Nachteile:
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes (Jeder Kriegszustand versetzt das Volk in Angst und Schrecken.)
+	[ICON_BULLET]erhöhte laufende Kosten für militärische Einheiten (Wegen des gefürchteten Konfliktpotenzials wird der Militärdienst nur ungern verrichtet.)
+
+Nachteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Feige
+
+Weitere Nachteile:
+	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Befestigungsanlagen im Umland werden langsamer modernisiert
+	[ICON_BULLET]Arbeitstrupps bauen Befestigungsanlagen langsamer
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training weniger Erfahrungspunkte
+	[ICON_BULLET]verzögertes Training für Kämpfer- und Marineeinheiten
+	[ICON_BULLET]Verminderung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]weniger freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten (Überleben ist alles, was zählt.)
+
+Vorteile:
+	[ICON_BULLET]erhöhte Zufriedenheit durch stationierte Militäreinheiten in Städten (da die ansässige Bevölkerung sich dadurch sicherer fühlt)
+	[ICON_BULLET]eine Handelsroute mehr pro Stadt (Die Händler sind in der Lage, potenzielle Rivalen zu beschwichtigen.)
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Es kann nur am Minimum trainiert werden, da alles andere zu Panik wegen vermeintlicher bevorstehender Konflikte führen würde.)
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Die eigenen Truppen lassen aus Angst vor Racheaktionen eher Gnade walten.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY_STRATEGY</Tag>
 		<English>Units are very weak when defending but there are some diplomatic benefits.</English>
 		<French>Les unités sont très faibles lors de la défense mais il y a des avantages diplomatiques.</French>
+		<German>Feige Anführer haben es bei diplomatischen Verhandlungen etwas leichter. Leider sind ihre Truppen sehr schwach in der Verteidigung und neigen dazu, vor Kämpfen davonzulaufen.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CROOKED</Tag>
@@ -5986,11 +6225,13 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE</Tag>
 		<English>Defensive</English>
 		<French>Défensif</French>
+		<German>Defensiv</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE1</Tag>
 		<English>Defensive I</English>
 		<French>Défensif I</French>
+		<German>Defensiv I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE1_PEDIA</Tag>
@@ -6021,11 +6262,41 @@ Penalties:
 	[ICON_BULLET]Reduction in the amount of War Weariness your enemies suffer since they tend to believe you won't counter-attack.
 	[ICON_BULLET]Increase in the cost of upgrading units since it requires more training to prepare them to master the art of defense.
 	[ICON_BULLET]Less likely to capture enemy units when defeating them since they are not as likely to pursue the defeated.</English>
+		<German>Positive Charaktereigenschaft
+
+"Wer auf den Krieg vorbereitet ist, kann den Frieden am besten wahren." - George Washington (1732-1799)
+
+Ein defensiver Anführer igelt sich am liebsten ein und lässt seine Feinde von seiner starken Verteidigung dezimieren. Wenn er Engpässe besetzen kann, dann gibt es für gegnerische Einheiten nahezu kein Durchkommen mehr. Wer gegen einen defensiven Anführer in den Krieg zieht, der sollte sich auf Materialschlachten einstellen und  bereit sein, einen hohen Blutzoll zu entrichten.
+
+Primäre Vorteile:
+	[ICON_BULLET]reduzierte laufende Kosten für militärische Einheiten
+
+Vorteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Defensiv I
+
+Weitere Vorteile:
+	[ICON_BULLET]erhöhte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Befestigungsanlagen im Umland werden schneller modernisiert
+	[ICON_BULLET]Arbeitstrupps bauen Befestigungsanlagen schneller
+	[ICON_BULLET]als angesiedelte Spezialisten bringen Große Feldherren zusätzlich [ICON_COMMERCE]
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training zusätzliche Erfahrungspunkte
+	[ICON_BULLET]beschleunigtes Training für Kämpfer- und Marineeinheiten
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit des eigenen Volkes
+	[ICON_BULLET]Erhöhung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]zusätzliche freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]verringerte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten
+
+Nachteile:
+	[ICON_BULLET]eine Handelsroute weniger pro Stadt (durch die erhöhten Sicherheitsvorkehrungen)
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit der gegnerischen Bevölkerung (Niemand rechnet mit Gegenangriffen.)
+	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten (Ausgefeilte Verteidigungstaktiken zu erlernen, hat seinen Preis.)
+	[ICON_BULLET]verringerte Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Die eigenen Truppen lassen sich nicht auf die Verfolgung Besiegter ein.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE2</Tag>
 		<English>Defensive II</English>
 		<French>Défensif II</French>
+		<German>Defensiv II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE2_PEDIA</Tag>
@@ -6056,11 +6327,41 @@ Penalties:
 	[ICON_BULLET]Reduction in the amount of War Weariness your enemies suffer since they tend to believe you won't counter-attack.
 	[ICON_BULLET]Increase in the cost of upgrading units since it requires more training to prepare them to master the art of defense.
 	[ICON_BULLET]Less likely to capture enemy units when defeating them since they are not as likely to pursue the defeated.</English>
+		<German>Positive Charaktereigenschaft
+
+"Wer auf den Krieg vorbereitet ist, kann den Frieden am besten wahren." - George Washington (1732-1799)
+
+Ein defensiver Anführer igelt sich am liebsten ein und lässt seine Feinde von seiner starken Verteidigung dezimieren. Wenn er Engpässe besetzen kann, dann gibt es für gegnerische Einheiten nahezu kein Durchkommen mehr. Wer gegen einen defensiven Anführer in den Krieg zieht, der sollte sich auf Materialschlachten einstellen und  bereit sein, einen hohen Blutzoll zu entrichten.
+
+Primäre Vorteile:
+	[ICON_BULLET]reduzierte laufende Kosten für militärische Einheiten
+
+Vorteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Defensiv II
+
+Weitere Vorteile:
+	[ICON_BULLET]erhöhte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Befestigungsanlagen im Umland werden schneller modernisiert
+	[ICON_BULLET]Arbeitstrupps bauen Befestigungsanlagen schneller
+	[ICON_BULLET]als angesiedelte Spezialisten bringen Große Feldherren zusätzlich [ICON_RESEARCH]
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training zusätzliche Erfahrungspunkte
+	[ICON_BULLET]beschleunigtes Training für Kämpfer- und Marineeinheiten
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit des eigenen Volkes
+	[ICON_BULLET]Erhöhung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]zusätzliche freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]verringerte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten
+
+Nachteile:
+	[ICON_BULLET]eine Handelsroute weniger pro Stadt (durch die erhöhten Sicherheitsvorkehrungen)
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit der gegnerischen Bevölkerung (Niemand rechnet mit Gegenangriffen.)
+	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten (Ausgefeilte Verteidigungstaktiken zu erlernen, hat seinen Preis.)
+	[ICON_BULLET]verringerte Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Die eigenen Truppen lassen sich nicht auf die Verfolgung Besiegter ein.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE3</Tag>
 		<English>Defensive III</English>
 		<French>Défensif III</French>
+		<German>Defensiv III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE3_PEDIA</Tag>
@@ -6090,6 +6391,34 @@ Penalties:
 	[ICON_BULLET]Significant reduction in the amount of War Weariness your enemies suffer since they tend to believe you won't counter-attack.
 	[ICON_BULLET]Increase in the cost of upgrading units since it requires more training to prepare them to master the art of defense.
 	[ICON_BULLET]Much less likely to capture enemy units when defeating them since they are not as likely to pursue the defeated.</English>
+		<German>Positive Charaktereigenschaft
+
+"Wer auf den Krieg vorbereitet ist, kann den Frieden am besten wahren." - George Washington (1732-1799)
+
+Ein defensiver Anführer igelt sich am liebsten ein und lässt seine Feinde von seiner starken Verteidigung dezimieren. Wenn er Engpässe besetzen kann, dann gibt es für gegnerische Einheiten nahezu kein Durchkommen mehr. Wer gegen einen defensiven Anführer in den Krieg zieht, der sollte sich auf Materialschlachten einstellen und  bereit sein, einen hohen Blutzoll zu entrichten.
+
+Primäre Vorteile:
+	[ICON_BULLET]reduzierte laufende Kosten für militärische Einheiten
+
+Vorteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Defensiv III
+
+Weitere Vorteile:
+	[ICON_BULLET]erhöhte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Befestigungsanlagen im Umland werden schneller modernisiert
+	[ICON_BULLET]Arbeitstrupps bauen Befestigungsanlagen schneller
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training zusätzliche Erfahrungspunkte
+	[ICON_BULLET]beschleunigtes Training für Kämpfer- und Marineeinheiten
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit des eigenen Volkes
+	[ICON_BULLET]Erhöhung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]zusätzliche freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]verringerte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten
+
+Nachteile:
+	[ICON_BULLET]eine Handelsroute weniger pro Stadt (durch die erhöhten Sicherheitsvorkehrungen)
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit der gegnerischen Bevölkerung (Niemand rechnet mit Gegenangriffen.)
+	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten (Ausgefeilte Verteidigungstaktiken zu erlernen, hat seinen Preis.)
+	[ICON_BULLET]verringerte Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Die eigenen Truppen lassen sich nicht auf die Verfolgung Besiegter ein.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE_PEDIA</Tag>
@@ -6121,11 +6450,42 @@ Penalties:
 	[ICON_BULLET]Significant reduction in the amount of War Weariness your enemies suffer since they tend to believe you won't counter-attack.
 	[ICON_BULLET]Strong increase in the cost of upgrading units since it requires more training to prepare them to master the art of defense.
 	[ICON_BULLET]Less likely to capture enemy units when defeating them since they are not as likely to pursue the defeated.</English>
+			<German>Positive Charaktereigenschaft
+
+"Wer auf den Krieg vorbereitet ist, kann den Frieden am besten wahren." - George Washington (1732-1799)
+
+Ein defensiver Anführer igelt sich am liebsten ein und lässt seine Feinde von seiner starken Verteidigung dezimieren. Wenn er Engpässe besetzen kann, dann gibt es für gegnerische Einheiten nahezu kein Durchkommen mehr. Wer gegen einen defensiven Anführer in den Krieg zieht, der sollte sich auf Materialschlachten einstellen und  bereit sein, einen hohen Blutzoll zu entrichten.
+
+Primäre Vorteile:
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit des eigenen Volkes (Das starke Militär sorgt dafür, dass die Bevölkerung sich sicher und beschützt fühlt.)
+	[ICON_BULLET]reduzierte laufende Kosten für militärische Einheiten
+
+Vorteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Defensiv
+
+Weitere Vorteile:
+	[ICON_BULLET]erhöhte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Befestigungsanlagen im Umland werden schneller modernisiert
+	[ICON_BULLET]Arbeitstrupps bauen Befestigungsanlagen schneller
+	[ICON_BULLET]als angesiedelte Spezialisten bringen Große Feldherren zusätzlich [ICON_COMMERCE]
+	[ICON_BULLET]als angesiedelte Spezialisten bringen Große Feldherren zusätzlich [ICON_RESEARCH]	
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training zusätzliche Erfahrungspunkte
+	[ICON_BULLET]beschleunigtes Training für Kämpfer- und Marineeinheiten
+	[ICON_BULLET]Erhöhung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]zusätzliche freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]verringerte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten
+
+Nachteile:
+	[ICON_BULLET]eine Handelsroute weniger pro Stadt (durch die erhöhten Sicherheitsvorkehrungen)
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit der gegnerischen Bevölkerung (Niemand rechnet mit Gegenangriffen.)
+	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten (Ausgefeilte Verteidigungstaktiken zu erlernen, hat seinen Preis.)
+	[ICON_BULLET]verringerte Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Die eigenen Truppen lassen sich nicht auf die Verfolgung Besiegter ein.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE_STRATEGY</Tag>
 		<English>Military focused with a 'Hold your ground' ideal.</English>
 		<French>Militaire concentré avec un idéal «Tenez votre terrain».</French>
+		<German>Defensive Anführer haben kein großes Interesse an Angriffskriegen, sie nutzen ihr Militär hauptsächlich zur Sicherung ihrer eigenen Landesgrenzen.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC</Tag>
@@ -9176,10 +9536,8 @@ Unique Penalties:
 Benefits:
 	[ICON_BULLET]Improved relations with opponent leaders. They like pushovers they need not fear.
 	[ICON_BULLET]Moderate Education bonus. The people are more focused on developing knowledge rather than on military strategy and physical prowess.
-	[ICON_BULLET]Minor Happiness bonus. People are more cooperative and engaging with one another and are more content with life as a result.
-		</English>
-		<German>
-Negative Charaktereigenschaft
+	[ICON_BULLET]Minor Happiness bonus. People are more cooperative and engaging with one another and are more content with life as a result.</English>
+		<German>Negative Charaktereigenschaft
 
 "Ich glaube an die Gewaltlosigkeit als einziges Heilmittel." - Mohandas Karamchand (genannt Mahatma) Gandhi (1869-1948)
 
@@ -9187,18 +9545,17 @@ Das Staatsoberhaupt hasst Konflikte jeglicher Art. Es vertritt die Meinung, dass
 
 Primäre Nachteile:
 	[ICON_BULLET]Verminderung aller freien Militäreinheiten basierend auf der Gesamtbevölkerung
-	[ICON_BULLET]gewaltiger Anstieg der Kriegsmüdigkeit (Dein Volk fürchtet den Krieg nicht nur, es hält ihn außerdem für sinnlos.)
-	[ICON_BULLET]deutlich verlangsamte Ausbildung von Militäreinheiten (Es besteht im Volk keinerlei Interesse am Soldatenhandwerk.)
-	[ICON_BULLET]starker Preisanstieg für die Modernisierung von Einheiten
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes (Die Bevölkerung fürchtet den Krieg nicht nur, es hält ihn außerdem für sinnlos.)
+	[ICON_BULLET]verlangsamte Ausbildung von Militäreinheiten (Es besteht im Volk keinerlei Interesse am Soldatenhandwerk.)
+	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten
 
 Einschränkungen für Einheiten:
-	[ICON_BULLET]alle Kämpfereinheiten erhalten automatisch die Beförderung Pazifist I
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Pazifist I
 
 Vorteile:
 	[ICON_BULLET]verbesserte Beziehungen zu anderen Staatsoberhäuptern (Sie mögen Schwächlinge, die sie nicht fürchten müssen.)
-	[ICON_BULLET]leicht erhöhter Bildungsstand (Das Volk konzentriert sich mehr auf das Lernen und Forschen als auf militärische Ausbildung und Körperertüchtigung.)
-	[ICON_BULLET]geringfügig erhöhte Zufriedenheit (Deine Leute arbeiten eher mit- als gegeneinander und sind deshalb zufriedener mit ihrem Leben.)
-	</German>
+	[ICON_BULLET]erhöhter Bildungsstand (Das Volk konzentriert sich mehr auf das Lernen und Forschen als auf militärische Ausbildung und Körperertüchtigung.)
+	[ICON_BULLET]erhöhte Zufriedenheit (Deine Leute arbeiten eher mit- als gegeneinander und sind deshalb zufriedener mit ihrem Leben.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST2</Tag>
@@ -9231,34 +9588,31 @@ Benefits:
 	[ICON_BULLET]Reduction in overall upkeep due to a diminished focus on military training and quality assurance of national defense.
 	[ICON_BULLET]Moderate Education bonus. The people are more focused on developing knowledge rather than on military strategy and physical prowess.
 	[ICON_BULLET]Minor Health bonus. People tend to live safer lives with fights and conflict being infrequent.
-	[ICON_BULLET]Minor Happiness bonus. People are more cooperative and engaging with one another and are more content with life as a result.
-		</English>
-		<German>
-Negative Charaktereigenschaft
+	[ICON_BULLET]Minor Happiness bonus. People are more cooperative and engaging with one another and are more content with life as a result.</English>
+		<German>Negative Charaktereigenschaft
 
 "Ich glaube an die Gewaltlosigkeit als einziges Heilmittel." - Mohandas Karamchand (genannt Mahatma) Gandhi (1869-1948)
 
 Das Staatsoberhaupt hasst Konflikte jeglicher Art. Es vertritt die Meinung, dass Kriege absolut unnötig sind und es keinerlei Grund für die Anwendung von Gewalt gibt. Da der Anführer und sein Volk andere Prioritäten haben, vernachlässigen sie Militär und Verteidigung, was sie zu leichten Opfern für mächtige Aggressoren macht.
 
 Primäre Nachteile:
-	[ICON_BULLET]gewaltiger Anstieg der Kriegsmüdigkeit (Dein Volk fürchtet den Krieg nicht nur, es hält ihn außerdem für sinnlos.)	
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes (Die Bevölkerung fürchtet den Krieg nicht nur, es hält ihn außerdem für sinnlos.)	
 	[ICON_BULLET]Verminderung aller freien Militäreinheiten basierend auf der Gesamtbevölkerung
-	[ICON_BULLET]stark verlangsamte Ausbildung von Militäreinheiten (Es besteht im Volk keinerlei Interesse am Soldatenhandwerk.)
-	[ICON_BULLET]gewaltiger Preisanstieg für die Modernisierung von Einheiten
+	[ICON_BULLET]verlangsamte Ausbildung von Militäreinheiten (Es besteht im Volk keinerlei Interesse am Soldatenhandwerk.)
+	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten
 
 Einschränkungen für Einheiten:
-	[ICON_BULLET]alle Kämpfereinheiten erhalten automatisch die Beförderung Pazifist II
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Pazifist II
 
-Side Penalties:
-	[ICON_BULLET]Reduced rate of earning Great Military People.
-	[ICON_BULLET]Small reduction to the maximum number of population you convert to units during a Conscription action in a city.
+Weitere Nachteile:
+	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Verminderung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
 
-Penalties:
-	[ICON_BULLET]Reduction in overall upkeep due to a diminished focus on military training and quality assurance of national defense.
-	[ICON_BULLET]Moderate Education bonus. The people are more focused on developing knowledge rather than on military strategy and physical prowess.
-	[ICON_BULLET]Minor Health bonus. People tend to live safer lives with fights and conflict being infrequent.
-	[ICON_BULLET]Minor Happiness bonus. People are more cooperative and engaging with one another and are more content with life as a result.
-		</German>
+Vorteile:
+	[ICON_BULLET]Reduzierung der laufenden Kosten (Es wird nur wenig Wert auf militärisches Training und hochwertige Verteidigungsanlagen gelegt.)
+	[ICON_BULLET]erhöhter Bildungsstand (Das Volk konzentriert sich mehr auf das Lernen und Forschen als auf militärische Ausbildung und Körperertüchtigung.)
+	[ICON_BULLET]erhöhte Gesundheit (Das Volk lebt sicherer. Es kommt nur selten zu Raufereien und Streitigkeiten.)
+	[ICON_BULLET]erhöhte Zufriedenheit (Deine Leute arbeiten eher mit- als gegeneinander und sind deshalb zufriedener mit ihrem Leben.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST3</Tag>
@@ -9290,33 +9644,30 @@ Side Penalties:
 Benefits:
 	[ICON_BULLET]Moderate reduction in overall upkeep due to a diminished focus on military training and quality assurance of national defense.
 	[ICON_BULLET]Strong Education bonus. The people are more focused on developing knowledge rather than on military strategy and physical prowess.
-	[ICON_BULLET]Minor Health bonus. People tend to live safer lives with fights and conflict being infrequent.
-		</English>
-		<German>
-Negative Charaktereigenschaft
+	[ICON_BULLET]Minor Health bonus. People tend to live safer lives with fights and conflict being infrequent.</English>
+		<German>Negative Charaktereigenschaft
 
 "Ich glaube an die Gewaltlosigkeit als einziges Heilmittel." - Mohandas Karamchand (genannt Mahatma) Gandhi (1869-1948)
 
 Das Staatsoberhaupt hasst Konflikte jeglicher Art. Es vertritt die Meinung, dass Kriege absolut unnötig sind und es keinerlei Grund für die Anwendung von Gewalt gibt. Da der Anführer und sein Volk andere Prioritäten haben, vernachlässigen sie Militär und Verteidigung, was sie zu leichten Opfern für mächtige Aggressoren macht.
 
-Primary Penalties:
-	[ICON_BULLET]Large increase in War Weariness you suffer. Your people are not merely fearful of war, but object to it as a solution.
-	[ICON_BULLET]Reduction of any available Free Military units from a penalty based on the total amount of your overall population.
-	[ICON_BULLET]Huge reduction in the speed of training all Military units. Your people object to becoming soldiers in any capacity.
-	[ICON_BULLET]Huge Increase in the price to upgrade your units.
+Primäre Nachteile:
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes (Die Bevölkerung fürchtet den Krieg nicht nur, es hält ihn außerdem für sinnlos.)
+	[ICON_BULLET]Verminderung aller freien Militäreinheiten basierend auf der Gesamtbevölkerung
+	[ICON_BULLET]verlangsamte Ausbildung von Militäreinheiten (Es besteht im Volk keinerlei Interesse am Soldatenhandwerk.)
+	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten
 
-Unique Penalties:
-	[ICON_BULLET]Applies Pacifist III Promotion to all Combatant units. Pacifist III is a fairly basic promotion with a relatively minor -10% combat modifier.
+Einschränkungen für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Pazifist III
 
-Side Penalties:
-	[ICON_BULLET]Reduced rate of earning Great Military People.
-	[ICON_BULLET]Moderate reduction to the maximum number of population you convert to units during a Conscription action in a city.
+Weitere Nachteile:
+	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Verminderung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
 
-Penalties:
-	[ICON_BULLET]Moderate reduction in overall upkeep due to a diminished focus on military training and quality assurance of national defense.
-	[ICON_BULLET]Strong Education bonus. The people are more focused on developing knowledge rather than on military strategy and physical prowess.
-	[ICON_BULLET]Minor Health bonus. People tend to live safer lives with fights and conflict being infrequent.
-		</German>
+Vorteile:
+	[ICON_BULLET]Reduzierung der laufenden Kosten (Es wird nur wenig Wert auf militärisches Training und hochwertige Verteidigungsanlagen gelegt.)
+	[ICON_BULLET]erhöhter Bildungsstand (Das Volk konzentriert sich mehr auf das Lernen und Forschen als auf militärische Ausbildung und Körperertüchtigung.)	
+	[ICON_BULLET]erhöhte Gesundheit (Das Volk lebt sicherer. Es kommt nur selten zu Raufereien und Streitigkeiten.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST_PEDIA</Tag>
@@ -9343,39 +9694,37 @@ Benefits:
 	[ICON_BULLET]Improved relations with opponent leaders. They like pushovers they need not fear.
 	[ICON_BULLET]Strong Education bonus. The people are more focused on developing knowledge rather than on military strategy and physical prowess.
 	[ICON_BULLET]Minor Health bonus. People tend to live safer lives with fights and conflict being infrequent.
-	[ICON_BULLET]Minor Happiness bonus. People are more cooperative and engaging with one another and are more content with life as a result.
-		</English>
-		<German>
-Negative Charaktereigenschaft
+	[ICON_BULLET]Minor Happiness bonus. People are more cooperative and engaging with one another and are more content with life as a result.</English>
+		<German>Negative Charaktereigenschaft
 
 "Ich glaube an die Gewaltlosigkeit als einziges Heilmittel." - Mohandas Karamchand (genannt Mahatma) Gandhi (1869-1948)
 
 Das Staatsoberhaupt hasst Konflikte jeglicher Art. Es vertritt die Meinung, dass Kriege absolut unnötig sind und es keinerlei Grund für die Anwendung von Gewalt gibt. Da der Anführer und sein Volk andere Prioritäten haben, vernachlässigen sie Militär und Verteidigung, was sie zu leichten Opfern für mächtige Aggressoren macht.
 
-Primary Penalties:
-	[ICON_BULLET]Large increase in War Weariness you suffer. Your people are not merely fearful of war, but object to it as a solution.
-	[ICON_BULLET]Strong reduction of any available Free Military units from a penalty based on the total amount of your overall population.
-	[ICON_BULLET]Strong reduction in the speed of training all Military units. Your people object to becoming soldiers in any capacity.
-	[ICON_BULLET]Strong increase in the price to upgrade your units.
+Primäre Nachteile:
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes (Die Bevölkerung fürchtet den Krieg nicht nur, es hält ihn außerdem für sinnlos.)	
+	[ICON_BULLET]Verminderung aller freien Militäreinheiten basierend auf der Gesamtbevölkerung
+	[ICON_BULLET]verlangsamte Ausbildung von Militäreinheiten (Es besteht im Volk keinerlei Interesse am Soldatenhandwerk.)
+	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten
 
-Unique Penalties:
-	[ICON_BULLET]Applies Pacifist Promotion to all Combatant units. Pacifist is a fairly basic promotion with a relatively minor -10% combat modifier.
+Einschränkungen für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Pazifist
 
-Side Penalties:
-	[ICON_BULLET]Reduced rate of earning Great Military People.
-	[ICON_BULLET]Moderate reduction to the maximum number of population you convert to units during a Conscription action in a city.
+Weitere Nachteile:
+	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Verminderung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
 
-Benefits:
-	[ICON_BULLET]Improved relations with opponent leaders. They like pushovers they need not fear.
-	[ICON_BULLET]Strong Education bonus. The people are more focused on developing knowledge rather than on military strategy and physical prowess.
-	[ICON_BULLET]Minor Health bonus. People tend to live safer lives with fights and conflict being infrequent.
-	[ICON_BULLET]Minor Happiness bonus. People are more cooperative and engaging with one another and are more content with life as a result.
-		</German>
+Vorteile:
+	[ICON_BULLET]verbesserte Beziehungen zu anderen Staatsoberhäuptern (Sie mögen Schwächlinge, die sie nicht fürchten müssen.)
+	[ICON_BULLET]erhöhter Bildungsstand (Das Volk konzentriert sich mehr auf das Lernen und Forschen als auf militärische Ausbildung und Körperertüchtigung.)
+	[ICON_BULLET]erhöhte Gesundheit (Das Volk lebt sicherer. Es kommt nur selten zu Raufereien und Streitigkeiten.)
+	[ICON_BULLET]erhöhte Zufriedenheit (Deine Leute arbeiten eher mit- als gegeneinander und sind deshalb zufriedener mit ihrem Leben.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST_STRATEGY</Tag>
 		<English>Allows a weak military in favor of more domestic concerns.</English>
 		<French>Permet à une armée faible de favoriser des préoccupations plus nationales.</French>
+		<German>Ein pazifistischer Anführer vernachlässigt das Militär und die Verteidigung zugunsten von innenpolitischen Anliegen.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PIOUS</Tag>
@@ -10547,11 +10896,13 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_TIMID</Tag>
 		<English>Timid</English>
 		<French>Timide</French>
+		<German>Schüchtern</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID1</Tag>
 		<English>Timid I</English>
 		<French>Timidee I</French>
+		<German>Schüchtern I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID1_PEDIA</Tag>
@@ -10584,11 +10935,41 @@ Benefits:
 	[ICON_BULLET]Slightly improved base city defense level.
 	[ICON_BULLET]Bonus to diplomacy. It's very comforting to other leaders to believe it's unlikely you're going to ever attack them, or anyone else for that matter.
 	[ICON_BULLET]Less expensive to upgrade units. Retraining simpler units that act more effectively at harnessing their terror than tapping into anger and hate is less costly.</English>
+	<German>Negative Charaktereigenschaft
+
+"Es gibt eine Grenze, wo Zurückhaltung aufhört, eine Tugend zu sein." - Edmund Burke (1729-1797)
+
+Obwohl diese Charaktereigenschaft dir Steine bei eventuellen Kriegsbestrebungen in den Weg legt, bringt sie doch auch unbestreitbare defensive Vorteile und sorgt dafür, dass deine Nation wesentlich seltener in bewaffnete Auseinandersetzungen verwickelt wird. Wem es gelingt, die üblen Nachteile anderweitig zu kompensieren, etwa durch technologische Fortschritte oder kulturelle Ausbreitung, der kann durchaus auch als schüchterner Anführer siegreich sein.
+
+Primäre Nachteile::
+	[ICON_BULLET]verzögerte Kriegsmüdigkeit bei gegnerischen Nationen
+	[ICON_BULLET]erhöhte laufende Kosten für militärische Einheiten
+
+Einschränkungen für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Schüchtern I
+
+Weitere Nachteile:
+	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training weniger Erfahrungspunkte
+	[ICON_BULLET]verzögertes Training für Kämpfer- und Marineeinheiten (Die Bevölkerung hat keine Erfahrung mit Auseinandersetzungen und ist dementsprechend untrainiert.) 
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes
+	[ICON_BULLET]Senkung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]weniger freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]geringere Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Deine Truppen lassen überlebende Gegner eher entkommen.)
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten (Deine Truppen hängen am Leben und ergeben sich eher.)
+
+Vorteile:
+	[ICON_BULLET]normale Geburtenrate für Große Feldherren bei Gefechten innerhalb der eigenen Grenzen (Der Bonus für Gefechte außerhalb der eigenen Grenzen wird gerade aufgehoben.)
+	[ICON_BULLET]Erhöhung der Erfahrungspunkte für Gefechte innerhalb der eigenen Grenzen
+	[ICON_BULLET]verbesserte Stadtverteidigung
+	[ICON_BULLET]Vorteile bei diplomatischen Verhandlungen (Andere Staatsoberhäupter fühlen sich wohler, wenn sie nicht ständig mit Angriffen rechnen müssen.)
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Da weniger Wert auf die neuesten Taktiken und Tötungsarten gelegt wird, werden Kosten gespart.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID2</Tag>
 		<English>Timid II</English>
 		<French>Timidee II</French>
+		<German>Schüchtern II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID2_PEDIA</Tag>
@@ -10622,11 +11003,42 @@ Benefits:
 	[ICON_BULLET]Improved base city defense level.
 	[ICON_BULLET]Bonus to diplomacy. It's very comforting to other leaders to believe it's unlikely you're going to ever attack them, or anyone else for that matter.
 	[ICON_BULLET]Less expensive to upgrade units. Retraining simpler units that act more effectively at harnessing their terror than tapping into anger and hate is less costly.</English>
+		<German>Negative Charaktereigenschaft
+
+"Es gibt eine Grenze, wo Zurückhaltung aufhört, eine Tugend zu sein." - Edmund Burke (1729-1797)
+
+Obwohl diese Charaktereigenschaft dir Steine bei eventuellen Kriegsbestrebungen in den Weg legt, bringt sie doch auch unbestreitbare defensive Vorteile und sorgt dafür, dass deine Nation wesentlich seltener in bewaffnete Auseinandersetzungen verwickelt wird. Wem es gelingt, die üblen Nachteile anderweitig zu kompensieren, etwa durch technologische Fortschritte oder kulturelle Ausbreitung, der kann durchaus auch als schüchterner Anführer siegreich sein.
+
+Primäre Nachteile::
+	[ICON_BULLET]verzögerte Kriegsmüdigkeit bei gegnerischen Nationen
+	[ICON_BULLET]erhöhte laufende Kosten für militärische Einheiten
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes
+
+Einschränkungen für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Schüchtern II
+
+Weitere Nachteile:
+	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
+	[ICON_BULLET]als angesiedelte Spezialisten bringen Große Feldherren weniger [ICON_GOLD]
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training weniger Erfahrungspunkte
+	[ICON_BULLET]verzögertes Training für Kämpfer- und Marineeinheiten (Die Bevölkerung hat keine Erfahrung mit Auseinandersetzungen und ist dementsprechend untrainiert.) 
+	[ICON_BULLET]Senkung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]weniger freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]geringere Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Deine Truppen lassen überlebende Gegner eher entkommen.)
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten (Deine Truppen hängen am Leben und ergeben sich eher.)
+
+Vorteile:
+	[ICON_BULLET]normale Geburtenrate für Große Feldherren bei Gefechten innerhalb der eigenen Grenzen (Der Bonus für Gefechte außerhalb der eigenen Grenzen wird gerade aufgehoben.)
+	[ICON_BULLET]Erhöhung der Erfahrungspunkte für Gefechte innerhalb der eigenen Grenzen
+	[ICON_BULLET]verbesserte Stadtverteidigung
+	[ICON_BULLET]Vorteile bei diplomatischen Verhandlungen (Andere Staatsoberhäupter fühlen sich wohler, wenn sie nicht ständig mit Angriffen rechnen müssen.)
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Da weniger Wert auf die neuesten Taktiken und Tötungsarten gelegt wird, werden Kosten gespart.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID3</Tag>
 		<English>Timid III</English>
 		<French>Timidee III</French>
+		<German>Schüchtern III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID3_PEDIA</Tag>
@@ -10659,6 +11071,35 @@ Benefits:
 	[ICON_BULLET]Improved base city defense level.
 	[ICON_BULLET]Bonus to diplomacy. It's very comforting to other leaders to believe it's unlikely you're going to ever attack them, or anyone else for that matter.
 	[ICON_BULLET]Less expensive to upgrade units. Retraining simpler units that act more effectively at harnessing their terror than tapping into anger and hate is less costly.</English>
+			<German>Negative Charaktereigenschaft
+
+"Es gibt eine Grenze, wo Zurückhaltung aufhört, eine Tugend zu sein." - Edmund Burke (1729-1797)
+
+Obwohl diese Charaktereigenschaft dir Steine bei eventuellen Kriegsbestrebungen in den Weg legt, bringt sie doch auch unbestreitbare defensive Vorteile und sorgt dafür, dass deine Nation wesentlich seltener in bewaffnete Auseinandersetzungen verwickelt wird. Wem es gelingt, die üblen Nachteile anderweitig zu kompensieren, etwa durch technologische Fortschritte oder kulturelle Ausbreitung, der kann durchaus auch als schüchterner Anführer siegreich sein.
+
+Primäre Nachteile::
+	[ICON_BULLET]verzögerte Kriegsmüdigkeit bei gegnerischen Nationen
+	[ICON_BULLET]erhöhte laufende Kosten für militärische Einheiten
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes
+
+Einschränkungen für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Schüchtern III
+
+Weitere Nachteile:
+	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training weniger Erfahrungspunkte
+	[ICON_BULLET]verzögertes Training für Kämpfer- und Marineeinheiten (Die Bevölkerung hat keine Erfahrung mit Auseinandersetzungen und ist dementsprechend untrainiert.) 
+	[ICON_BULLET]Senkung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]weniger freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]geringere Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Deine Truppen lassen überlebende Gegner eher entkommen.)
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten (Deine Truppen hängen am Leben und ergeben sich eher.)
+
+Vorteile:
+	[ICON_BULLET]normale Geburtenrate für Große Feldherren bei Gefechten innerhalb der eigenen Grenzen (Der Bonus für Gefechte außerhalb der eigenen Grenzen wird gerade aufgehoben.)
+	[ICON_BULLET]Erhöhung der Erfahrungspunkte für Gefechte innerhalb der eigenen Grenzen
+	[ICON_BULLET]verbesserte Stadtverteidigung
+	[ICON_BULLET]Vorteile bei diplomatischen Verhandlungen (Andere Staatsoberhäupter fühlen sich wohler, wenn sie nicht ständig mit Angriffen rechnen müssen.)
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Da weniger Wert auf die neuesten Taktiken und Tötungsarten gelegt wird, werden Kosten gespart.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID_PEDIA</Tag>
@@ -10692,11 +11133,42 @@ Benefits:
 	[ICON_BULLET]Improved base city defense level.
 	[ICON_BULLET]Significant bonus to diplomacy. It's very comforting to other leaders to believe it's unlikely you're going to ever attack them, or anyone else for that matter.
 	[ICON_BULLET]Less expensive to upgrade units. Retraining simpler units that act more effectively at harnessing their terror than tapping into anger and hate is less costly.</English>
+		<German>Negative Charaktereigenschaft
+
+"Es gibt eine Grenze, wo Zurückhaltung aufhört, eine Tugend zu sein." - Edmund Burke (1729-1797)
+
+Obwohl diese Charaktereigenschaft dir Steine bei eventuellen Kriegsbestrebungen in den Weg legt, bringt sie doch auch unbestreitbare defensive Vorteile und sorgt dafür, dass deine Nation wesentlich seltener in bewaffnete Auseinandersetzungen verwickelt wird. Wem es gelingt, die üblen Nachteile anderweitig zu kompensieren, etwa durch technologische Fortschritte oder kulturelle Ausbreitung, der kann durchaus auch als schüchterner Anführer siegreich sein.
+
+Primäre Nachteile::
+	[ICON_BULLET]verzögerte Kriegsmüdigkeit bei gegnerischen Nationen
+	[ICON_BULLET]erhöhte laufende Kosten für militärische Einheiten
+
+Einschränkungen für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Schüchtern
+
+Weitere Nachteile:
+	[ICON_BULLET]gesenkte Geburtenrate für Große Feldherren
+	[ICON_BULLET]als angesiedelte Spezialisten bringen Große Feldherren weniger [ICON_GOLD]
+	[ICON_BULLET]Kämpfer- und Marineeinheiten erhalten beim Training weniger Erfahrungspunkte
+	[ICON_BULLET]verzögertes Training für Kämpfer- und Marineeinheiten (Die Bevölkerung hat keine Erfahrung mit Auseinandersetzungen und ist dementsprechend untrainiert.) 
+	[ICON_BULLET]Steigerung der Kriegsmüdigkeit des eigenen Volkes
+	[ICON_BULLET]Senkung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+	[ICON_BULLET]weniger freie Einheiten, für die keine laufenden Kosten anfallen
+	[ICON_BULLET]geringere Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Deine Truppen lassen überlebende Gegner eher entkommen.)
+	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme eigener Einheiten (Deine Truppen hängen am Leben und ergeben sich eher.)
+
+Vorteile:
+	[ICON_BULLET]normale Geburtenrate für Große Feldherren bei Gefechten innerhalb der eigenen Grenzen (Der Bonus für Gefechte außerhalb der eigenen Grenzen wird gerade aufgehoben.)
+	[ICON_BULLET]Erhöhung der Erfahrungspunkte für Gefechte innerhalb der eigenen Grenzen
+	[ICON_BULLET]verbesserte Stadtverteidigung
+	[ICON_BULLET]Vorteile bei diplomatischen Verhandlungen (Andere Staatsoberhäupter fühlen sich wohler, wenn sie nicht ständig mit Angriffen rechnen müssen.)
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Da weniger Wert auf die neuesten Taktiken und Tötungsarten gelegt wird, werden Kosten gespart.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID_STRATEGY</Tag>
 		<English>Gains some diplomatic bonus at the cost of having weak units - particularly on the attack. A little bit stronger when backed into a corner though.</English>
 		<French>Gagne un bonus diplomatique au prix d'avoir des unités faibles - en particulier sur l'attaque. Un peu plus fort quand on est dans un coin cependant.</French>
+		<German>Schüchterne Anführer haben es bei diplomatischen Verhandlungen etwas leichter. Leider sorgt ihr zögerliches Verhalten aber für eine Schwächung des Militärs. Besonders im Angriff sind ihre Einheiten anderen deutlich unterlegen. In die Ecke gedrängt, können sie aber immer noch zu formidablen Gegnern werden.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADITIONAL</Tag>
@@ -11337,11 +11809,13 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_WARMONGER</Tag>
 		<English>Warmonger</English>
 		<French>Seigneur de Guerre</French>
+		<German>Kriegstreiber</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER1</Tag>
 		<English>Warmonger I</English>
 		<French>Seigneur de Guerre I</French>
+		<German>Kriegstreiber I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER1_PEDIA</Tag>
@@ -11369,11 +11843,36 @@ Penalties:
 	[ICON_BULLET]Increased Upkeep from the costs of providing the programs your nation needs to obtain these benefits.
 	[ICON_BULLET]Moderate Education penalty. The people are more focused on developing personal prowess than on studies.
 	[ICON_BULLET]Minor Health Penalty. The fascination with combat and fighting increases rates of injury and mortality.</English>
+		<German>Positive Charaktereigenschaft
+
+"Je stärker wir sind, desto unwahrscheinlicher ist der Krieg." - Otto von Bismarck (1815 - 1898)
+
+Dieser Anführer ist nur auf den Ausbau und das Training seines Militärs fokussiert. Sein martialischer Führungsstil sorgt dafür, dass in der ganzen Gesellschaft Kampf und Auseinandersetzungen im Vordergrund stehen.
+
+Primäre Vorteile:
+	[ICON_BULLET]Erhöhung der freien Militäreinheiten basierend auf der Gesamtbevölkerung
+	[ICON_BULLET]beschleunigte Ausbildung von Militäreinheiten
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten
+
+Vorteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Rang I - Leutnant
+	[ICON_BULLET]alle Städte nutzen [ICON_FOOD] als [ICON_PRODUCTION], wenn Einheiten ausgebildet werden (beschleunigte Einheitenproduktion zum Preis eines stark verlangsamten Stadtwachstums)
+
+Weitere Vorteile:
+	[ICON_BULLET]erhöhte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit des eigenen Volkes (Die Bevölkerung empfindet den Krieg als beste Variante, um die eigenen Ziele zu erreichen.)
+	[ICON_BULLET]Erhöhung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+		
+Nachteile:
+	[ICON_BULLET]erhöhte laufende Kosten für die Gesellschaft
+	[ICON_BULLET]verminderter Bildungsstand (Das Volk konzentriert sich mehr auf Körperertüchtigung und Kampf als auf das Lernen und Forschen.)
+	[ICON_BULLET]verminderte Gesundheit (Die Kampfeslust führt zu häufigeren Verletzungen und einer höheren Sterblichkeit.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER2</Tag>
 		<English>Warmonger II</English>
 		<French>Seigneur de Guerre II</French>
+		<German>Kriegstreiber II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER2_PEDIA</Tag>
@@ -11401,11 +11900,36 @@ Penalties:
 	[ICON_BULLET]Moderate Education penalty. The people are more focused on developing personal prowess than on studies.
 	[ICON_BULLET]Minor Health Penalty. The fascination with combat and fighting increases rates of injury and mortality.
 	[ICON_BULLET]Minor Happiness Penalty. The competitiveness and high value placed on martial superiority leaves many feeling marginalized and suppressed.</English>
+		<German>Positive Charaktereigenschaft
+
+"Je stärker wir sind, desto unwahrscheinlicher ist der Krieg." - Otto von Bismarck (1815 - 1898)
+
+Dieser Anführer ist nur auf den Ausbau und das Training seines Militärs fokussiert. Sein martialischer Führungsstil sorgt dafür, dass in der ganzen Gesellschaft Kampf und Auseinandersetzungen im Vordergrund stehen.
+
+Primäre Vorteile:
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit des eigenen Volkes (Die Bevölkerung empfindet den Krieg als beste Variante, um die eigenen Ziele zu erreichen.)
+	[ICON_BULLET]Erhöhung der freien Militäreinheiten basierend auf der Gesamtbevölkerung
+	[ICON_BULLET]beschleunigte Ausbildung von Militäreinheiten
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten
+
+Vorteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Rang II - Oberleutnant
+
+Weitere Vorteile:
+	[ICON_BULLET]erhöhte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Erhöhung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+
+Nachteile:
+	[ICON_BULLET]erhöhte laufende Kosten für die Gesellschaft
+	[ICON_BULLET]verminderter Bildungsstand (Das Volk konzentriert sich mehr auf Körperertüchtigung und Kampf als auf das Lernen und Forschen.)
+	[ICON_BULLET]verminderte Gesundheit (Die Kampfeslust führt zu häufigeren Verletzungen und einer höheren Sterblichkeit.)
+	[ICON_BULLET]verminderte Zufriedenheit (Da in der Gesellschaft die körperlich Überlegenen besser angesehen sind und ein starker Wettbewerb herrscht, fühlen sich viele Bürger ausgegrenzt und unterdrückt.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER3</Tag>
 		<English>Warmonger III</English>
 		<French>Seigneur de Guerre III</French>
+		<German>Kriegstreiber III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER3_PEDIA</Tag>
@@ -11433,6 +11957,30 @@ Penalties:
 	[ICON_BULLET]Strong Education penalty. The people are more focused on developing personal prowess than on studies.
 	[ICON_BULLET]Minor Health Penalty. The fascination with combat and fighting increases rates of injury and mortality.
 	[ICON_BULLET]Minor Happiness Penalty. The competitiveness and high value placed on martial superiority leaves many feeling marginalized and suppressed.</English>
+		<German>Positive Charaktereigenschaft
+
+"Je stärker wir sind, desto unwahrscheinlicher ist der Krieg." - Otto von Bismarck (1815 - 1898)
+
+Dieser Anführer ist nur auf den Ausbau und das Training seines Militärs fokussiert. Sein martialischer Führungsstil sorgt dafür, dass in der ganzen Gesellschaft Kampf und Auseinandersetzungen im Vordergrund stehen.
+
+Primäre Vorteile:
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit des eigenen Volkes (Die Bevölkerung empfindet den Krieg als beste Variante, um die eigenen Ziele zu erreichen.)
+	[ICON_BULLET]Erhöhung der freien Militäreinheiten basierend auf der Gesamtbevölkerung
+	[ICON_BULLET]beschleunigte Ausbildung von Militäreinheiten
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten
+
+Vorteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Rang III - Hauptmann
+
+Weitere Vorteile:
+	[ICON_BULLET]erhöhte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Erhöhung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+
+Nachteile:
+	[ICON_BULLET]erhöhte laufende Kosten für die Gesellschaft
+	[ICON_BULLET]verminderter Bildungsstand (Das Volk konzentriert sich mehr auf Körperertüchtigung und Kampf als auf das Lernen und Forschen.)
+	[ICON_BULLET]verminderte Gesundheit (Die Kampfeslust führt zu häufigeren Verletzungen und einer höheren Sterblichkeit.)
+	[ICON_BULLET]verminderte Zufriedenheit (Da in der Gesellschaft die körperlich Überlegenen besser angesehen sind und ein starker Wettbewerb herrscht, fühlen sich viele Bürger ausgegrenzt und unterdrückt.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER_PEDIA</Tag>
@@ -11461,11 +12009,37 @@ Penalties:
 	[ICON_BULLET]Strong Education penalty. The people are more focused on developing personal prowess than on studies.
 	[ICON_BULLET]Minor Health Penalty. The fascination with combat and fighting increases rates of injury and mortality.
 	[ICON_BULLET]Minor Happiness Penalty. The competitiveness and high value placed on martial superiority leaves many feeling marginalized and suppressed.</English>
+		<German>Positive Charaktereigenschaft
+
+"Je stärker wir sind, desto unwahrscheinlicher ist der Krieg." - Otto von Bismarck (1815 - 1898)
+
+Dieser Anführer ist nur auf den Ausbau und das Training seines Militärs fokussiert. Sein martialischer Führungsstil sorgt dafür, dass in der ganzen Gesellschaft Kampf und Auseinandersetzungen im Vordergrund stehen.
+
+Primäre Vorteile:
+	[ICON_BULLET]Verminderung der Kriegsmüdigkeit des eigenen Volkes (Die Bevölkerung empfindet den Krieg als beste Variante, um die eigenen Ziele zu erreichen.)
+	[ICON_BULLET]Erhöhung der freien Militäreinheiten basierend auf der Gesamtbevölkerung
+	[ICON_BULLET]beschleunigte Ausbildung von Militäreinheiten
+	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten
+
+Vorteile für Einheiten:
+	[ICON_BULLET]alle Kämpfer- und Marineeinheiten erhalten automatisch die Beförderung Rang I - Leutnant
+	[ICON_BULLET]alle Städte nutzen [ICON_FOOD] als [ICON_PRODUCTION], wenn Einheiten ausgebildet werden (beschleunigte Einheitenproduktion zum Preis eines stark verlangsamten Stadtwachstums)
+
+Weitere Vorteile:
+	[ICON_BULLET]erhöhte Geburtenrate für Große Feldherren
+	[ICON_BULLET]Erhöhung der Anzahl an neuen Militäreinheiten, die über Einberufungsaktionen gewonnen werden können
+
+Nachteile:
+	[ICON_BULLET]erhöhte laufende Kosten für die Gesellschaft
+	[ICON_BULLET]verminderter Bildungsstand (Das Volk konzentriert sich mehr auf Körperertüchtigung und Kampf als auf das Lernen und Forschen.)
+	[ICON_BULLET]verminderte Gesundheit (Die Kampfeslust führt zu häufigeren Verletzungen und einer höheren Sterblichkeit.)
+	[ICON_BULLET]verminderte Zufriedenheit (Da in der Gesellschaft die körperlich Überlegenen besser angesehen sind und ein starker Wettbewerb herrscht, fühlen sich viele Bürger ausgegrenzt und unterdrückt.)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER_STRATEGY</Tag>
 		<English>Military concept with a balanced strategy focused on high volume forces with improved training.</English>
 		<French>Concept militaire avec une stratégie équilibrée axée sur des forces à fort volume avec un entraînement amélioré.</French>
+		<German>Kriegstreiber legen ihr Hauptaugenmerk auf ein starkes, gut ausgebildetes Militär. Jeder Überschuss an Gold wird in die Entwicklung und den Bau neuer Kriegsmaschinen und das Training neuer Einheiten investiert.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS</Tag>

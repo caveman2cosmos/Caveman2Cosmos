@@ -41,16 +41,9 @@ class CvGameUtils:
 	def isVictoryTest(self):
 		return GAME.getElapsedGameTurns() > 10
 
-	def isVictory(self, argsList):
-		eVictory = argsList[0]
-		return True
-
 	def isPlayerResearch(self, argsList):
 		ePlayer = argsList[0]
 		return True
-
-	def createBarbarianCities(self):
-		return False
 
 	def createBarbarianUnits(self):
 		return False
@@ -97,11 +90,6 @@ class CvGameUtils:
 		return BuildingTypes.NO_BUILDING
 
 	def updateColoredPlots(self):
-		return False
-
-	def isActionRecommended(self, argsList):
-		pUnit = argsList[0]
-		iAction = argsList[1]
 		return False
 
 	def unitCannotMoveInto(self, argsList):
@@ -202,13 +190,6 @@ class CvGameUtils:
 		bIgnoreCost = argsList[4]
 		return False
 
-	def canCreate(self, argsList):
-		pCity = argsList[0]
-		eProject = argsList[1]
-		bContinue = argsList[2]
-		bTestVisible = argsList[3]
-		return False
-
 	def cannotCreate(self, argsList):
 		pCity = argsList[0]
 		eProject = argsList[1]
@@ -216,13 +197,10 @@ class CvGameUtils:
 		bTestVisible = argsList[3]
 		return False
 
-	def canMaintain(self, argsList):
-		return False
-
 	def cannotMaintain(self, argsList):
 		CyCity, iProcess, bContinue, = argsList
-		if not CyCity or CyCity and CyCity.isNone():
-			print "not CyCity or CyCity and CyCity.isNone()"
+		if not CyCity:
+			print "CyCity == None"
 			print "CyCity, iProcess, bContinue", argsList
 			return False
 
@@ -476,11 +454,6 @@ class CvGameUtils:
 		#iPlayer = argsList[0]
 		return -1
 
-	# Returns the value for founding a city in a specific plot.
-	def getCityFoundValue(self, argsList):
-		#iPlayer, iPlotX, iPlotY = argsList
-		return -1
-
 	def canPickPlot(self, argsList):
 		#pPlot = argsList[0]
 		return true
@@ -701,7 +674,7 @@ class CvGameUtils:
 					lBuildings = []
 					lWonders = []
 					for i in xrange(GC.getNumBuildingInfos()):
-						if pCity.isHasBuilding(i):
+						if pCity.getNumBuilding(i):
 							if isLimitedWonder(i):
 								lWonders.append(GC.getBuildingInfo(i).getDescription())
 							else:
@@ -835,18 +808,3 @@ class CvGameUtils:
 				return 0
 			return int(price/2.0)
 		return -1
-
-	# Returns the experience a unit needs to level up.
-	def getExperienceNeeded(self, argsList):
-		iLevel, iOwner = argsList
-
-		iExperienceNeeded = 1
-
-		# regular epic game experience
-		iExperienceNeeded += iLevel * iLevel
-
-		iModifier = GC.getPlayer(iOwner).getLevelExperienceModifier()
-		if iModifier:
-			iExperienceNeeded += (iExperienceNeeded * iModifier + 99) / 100   # ROUND UP
-
-		return iExperienceNeeded

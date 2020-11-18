@@ -85,7 +85,7 @@ void UnitGroupingList::init()
 		m_apUnitGrouping[UNIT_GROUPING_COMBAT] = new UnitGroupingCombat();
 		m_apUnitGrouping[UNIT_GROUPING_DOMAIN] = new UnitGroupingDomain();
 		UnitGroupingFilters* pGrouping = new UnitGroupingFilters();
-		pGrouping->addGroupingFilter(new UnitFilterIsCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO")));
+		pGrouping->addGroupingFilter(new UnitFilterIsCombat(GC.getUNITCOMBAT_HERO()));
 		pGrouping->addGroupingFilter(new UnitFilterIsLimited());
 		m_apUnitGrouping[UNIT_GROUPING_HERO] = pGrouping;
 
@@ -111,8 +111,7 @@ void UnitGroupingList::setPlayer(const CvPlayer *pPlayer)
 
 bool UnitGroupingList::setActiveGrouping(UnitGroupingTypes eActiveGrouping)
 {
-	FAssertMsg(eActiveGrouping < NUM_UNIT_GROUPING, "Index out of bounds");
-	FAssertMsg(eActiveGrouping > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_UNIT_GROUPING, eActiveGrouping)
 	const bool bChanged = m_eActiveGrouping != eActiveGrouping;
 	m_eActiveGrouping = eActiveGrouping;
 	return bChanged;

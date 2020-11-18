@@ -155,8 +155,7 @@ void UnitFilterList::init()
 
 bool UnitFilterList::isFilterActive(UnitFilterTypes i) const
 {
-	FAssertMsg(i < NUM_UNIT_FILTERS, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_UNIT_FILTERS, i)
 	return m_apUnitFilters[i]->isActive();
 }
 
@@ -172,8 +171,7 @@ void UnitFilterList::setPlayer(const CvPlayer *pPlayer)
 
 bool UnitFilterList::setFilterActive(UnitFilterTypes i, bool bActive)
 {
-	FAssertMsg(i < NUM_UNIT_FILTERS, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_UNIT_FILTERS, i)
 	return m_apUnitFilters[i]->setActive(bActive);
 }
 
@@ -195,8 +193,7 @@ void UnitFilterList::setFilterActiveAll(UnitFilterTypes eFilter, bool bActive)
 		if (kLoopPlayer.isAlive())
 		{
 			kLoopPlayer.setUnitListFilterActive(eFilter, bActive);
-			int iIter;
-			for (CvCity* pCity = kLoopPlayer.firstCity(&iIter); NULL != pCity; pCity = kLoopPlayer.nextCity(&iIter))
+			foreach_(CvCity* pCity, kLoopPlayer.cities())
 			{
 				pCity->setUnitListFilterActive(eFilter, bActive);
 			}

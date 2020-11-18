@@ -1,3 +1,4 @@
+#include "CvCity.h"
 #include "CvGameCoreDLL.h"
 #include "CyArea.h"
 #include "CyCity.h"
@@ -52,7 +53,7 @@ bool CyPlot::isAdjacentToArea(const CyArea& kArea) const
 
 bool CyPlot::isCoastal() const
 {
-	return m_pPlot ? m_pPlot->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()) : false;
+	return m_pPlot ? m_pPlot->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()) : false;
 }
 
 bool CyPlot::isLake() const
@@ -271,9 +272,9 @@ int CyPlot::getUpgradeTimeLeft(int /*ImprovementTypes*/ eImprovement, int /*Play
 	return m_pPlot ? m_pPlot->getUpgradeTimeLeft((ImprovementTypes) eImprovement, (PlayerTypes) ePlayer) : -1;
 }
 
-void CyPlot::changeUpgradeProgress(int iChange)
+void CyPlot::changeImprovementUpgradeProgress(int iChange)
 {
-	if (m_pPlot) m_pPlot->changeUpgradeProgressHundredths(iChange*100);
+	if (m_pPlot) m_pPlot->changeImprovementUpgradeProgress(iChange*100);
 }
 
 bool CyPlot::isStartingPlot() const
@@ -458,12 +459,14 @@ void CyPlot::setRouteType(int /*RouteTypes*/ eNewValue)
 
 CyCity* CyPlot::getPlotCity() const
 {
-	return m_pPlot ? new CyCity(m_pPlot->getPlotCity()) : NULL;
+	CvCity* city = m_pPlot ? m_pPlot->getPlotCity() : NULL;
+	return city ? new CyCity(city) : NULL;
 }
 
 CyCity* CyPlot::getWorkingCity() const
 {
-	return m_pPlot ? new CyCity(m_pPlot->getWorkingCity()) : NULL;
+	CvCity* city = m_pPlot ? m_pPlot->getWorkingCity() : NULL;
+	return city ? new CyCity(city) : NULL;
 }
 
 int CyPlot::getRiverID() const

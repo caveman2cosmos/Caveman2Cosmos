@@ -296,7 +296,6 @@ public:
 
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const; // Exposed to Python
 	bool canMaintain(ProcessTypes eProcess, bool bContinue = false) const; // Exposed to Python
-	bool canJoin() const; // Exposed to Python
 
 	int getFoodTurnsLeft() const; // Exposed to Python
 	bool isProduction() const; // Exposed to Python
@@ -316,8 +315,8 @@ public:
 	BuildingTypes getProductionBuilding() const; // Exposed to Python
 	ProjectTypes getProductionProject() const; // Exposed to Python
 	ProcessTypes getProductionProcess() const; // Exposed to Python
-	const wchar* getProductionName() const; // Exposed to Python
-	const wchar* getProductionNameKey() const; // Exposed to Python
+	const wchar_t* getProductionName() const; // Exposed to Python
+	const wchar_t* getProductionNameKey() const; // Exposed to Python
 	int getGeneralProductionTurnsLeft() const; // Exposed to Python
 
 	bool isFoodProduction() const; // Exposed to Python
@@ -438,31 +437,17 @@ public:
 	int getConscriptPercentAnger(int iExtra = 0) const; // Exposed to Python
 	int getDefyResolutionPercentAnger(int iExtra = 0) const;
 	int getWarWearinessPercentAnger() const; // Exposed to Python
-/************************************************************************************************/
-/* REVOLUTION_MOD                         04/19/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	int getRevRequestPercentAnger(int iExtra = 0) const; // Exposed to Python
 	int getRevIndexPercentAnger(int iExtra = 0) const; // Exposed to Python
 	int getRevSuccessHappiness() const; // Exposed to Python
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 	int getLargestCityHappiness() const; // Exposed to Python
 	int getVassalHappiness() const; // Exposed to Python
 	int getVassalUnhappiness() const; // Exposed to Python
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 20.10.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: Implement iCelebrityHappy                                                        **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
+
 	int getCelebrityHappiness() const; // Exposed to Python
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 20.10.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
+
 	int unhappyLevel(int iExtra = 0) const; // Exposed to Python
 	int happyLevel() const; // Exposed to Python
 	int angryPopulation(int iExtra = 0) const; // Exposed to Python
@@ -479,10 +464,13 @@ public:
 	int goodHealth() const; // Exposed to Python
 	int badHealth(bool bNoAngry = false, int iExtra = 0) const; // Exposed to Python
 	int healthRate(bool bNoAngry = false, int iExtra = 0) const; // Exposed to Python
-	int foodConsumption(bool bNoAngry = false, int iExtra = 0, bool bIncludeWastage = true) const; // Exposed to Python
-	int foodDifference(bool bBottom = true, bool bIncludeWastage = true, bool bIgnoreFoodBuildOrRev = false) const; // Exposed to Python
+	int getPopulationPlusProgress100(const int iExtra) const;
+	int getFoodConsumedPerPopulation100(const int iExtra = 0) const;
+	int getFoodConsumedByPopulation(const int iExtra = 0) const;
+	int foodConsumption(const bool bNoAngry=false, const int iExtra=0, const bool bIncludeWastage=true) const; // Exposed to Python
+	int foodDifference(const bool bBottom=true, const bool bIncludeWastage=true, const bool bIgnoreFoodBuildOrRev=false) const; // Exposed to Python
 	float foodWastage(int surplass = -1) const;
-	int growthThreshold() const; // Exposed to Python
+	int growthThreshold(const int iPopChange = 0) const; // Exposed to Python
 
 	int productionLeft() const; // Exposed to Python
 	int hurryCost(bool bExtra) const; // Exposed to Python
@@ -506,15 +494,9 @@ public:
 	int getNumBuilding(BuildingTypes eIndex) const; // Exposed to Python
 	int getNumActiveBuilding(BuildingTypes eIndex) const; // Exposed to Python
 	bool hasActiveWorldWonder() const; // Exposed to Python
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       03/04/10                     Mongoose & jdog5000      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
+
 	int getNumActiveWorldWonders() const;
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
+
 
 	bool processGreatWall(bool bIn, bool bForce = false, bool bSeeded = true);
 
@@ -651,7 +633,7 @@ public:
 	void setPopulation(int iNewValue); // Exposed to Python
 	void changePopulation(int iChange); // Exposed to Python
 
-	long getRealPopulation() const; // Exposed to Python
+	int getRealPopulation() const; // Exposed to Python
 
 	int getHighestPopulation() const; // Exposed to Python
 	void setHighestPopulation(int iNewValue);
@@ -759,7 +741,6 @@ public:
 	void changeEspionageHappinessCounter(int iChange); // Exposed to Python
 
 	int getFreshWaterGoodHealth() const; // Exposed to Python
-	int getFreshWaterBadHealth() const; // Exposed to Python
 	void updateFreshWaterHealth();
 
 	int getFeatureGoodHealth() const; // Exposed to Python
@@ -913,7 +894,7 @@ public:
 	void setOverflowProduction(int iNewValue); // Exposed to Python
 	void changeOverflowProduction(int iChange, int iProductionModifier);
 
-	int getFeatureProduction()const; // Exposed to Python
+	int getFeatureProduction() const; // Exposed to Python
 	void setFeatureProduction(int iNewValue); // Exposed to Python
 	void changeFeatureProduction(int iChange);
 
@@ -1135,9 +1116,8 @@ public:
 	int getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
-	int getAdditionalBaseCommerceRateByBuildingImpl(CommerceTypes eIndex, BuildingTypes eBuilding);
+	int getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex, BuildingTypes eBuilding);
 	int getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
-	int getAdditionalCommerceRateModifierByBuildingImpl(CommerceTypes eIndex, BuildingTypes eBuilding);
 // BUG - Building Additional Commerce - end
 	void updateBuildingCommerce();
 
@@ -1147,7 +1127,6 @@ public:
 	int getAdditionalCommerceBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
 	int getAdditionalCommerceTimes100BySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
 	int getAdditionalBaseCommerceRateBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
-	int getAdditionalBaseCommerceRateBySpecialistImpl(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;
 // BUG - Specialist Additional Commerce - end
 
 
@@ -1193,7 +1172,6 @@ public:
 
 	int getNumRevolts(PlayerTypes eIndex) const;
 	void changeNumRevolts(PlayerTypes eIndex, int iChange);
-	int getRevoltTestProbability() const;
 
 	bool isTradeRoute(PlayerTypes eIndex) const; // Exposed to Python
 	void setTradeRoute(PlayerTypes eIndex, bool bNewValue);
@@ -1209,8 +1187,8 @@ public:
 	void updateEspionageVisibility(bool bUpdatePlotGroups);
 
 	DllExport const CvWString getName(uint uiForm = 0) const; // Exposed to Python
-	DllExport const wchar* getNameKey() const; // Exposed to Python
-	void setName(const wchar* szNewValue, bool bFound = false); // Exposed to Python
+	DllExport const wchar_t* getNameKey() const; // Exposed to Python
+	void setName(const wchar_t* szNewValue, bool bFound = false); // Exposed to Python
 	void doFoundMessage();
 
 	// Script data needs to be a narrow string for pickling in Python
@@ -1298,7 +1276,7 @@ public:
 	int getImprovementFreeSpecialists(ImprovementTypes eIndex) const; // Exposed to Python
 	void changeImprovementFreeSpecialists(ImprovementTypes eIndex, int iChange); // Exposed to Python
 
-	int getReligionInfluence(ReligionTypes eIndex) const; // Exposed to Python
+	uint32_t getReligionInfluence(ReligionTypes eIndex) const; // Exposed to Python
 	void changeReligionInfluence(ReligionTypes eIndex, int iChange); // Exposed to Python
 
 	int getCurrentStateReligionHappiness() const; // Exposed to Python
@@ -1331,17 +1309,18 @@ public:
 
 	bool isValidBuildingLocation(BuildingTypes eIndex) const;
 
-	int getNumFreeBuilding(BuildingTypes eIndex) const; // Exposed to Python
-	int getNumFreeAreaBuilding(BuildingTypes eIndex) const; // Exposed to Python
-	void setNumFreeBuilding(BuildingTypes eIndex, int iNewValue);
-	void setNumFreeAreaBuilding(BuildingTypes eIndex, int iNewValue);
+	uint16_t getFreeAreaBuildingCount(const short iIndex) const;
+	void changeFreeAreaBuildingCount(const BuildingTypes eIndex, const int iChange);
+	void setFreeBuilding(const BuildingTypes eIndex, const bool bNewValue);
+	bool isFreeBuilding(short iIndex) const;
+	void checkFreeBuildings();
 
 	bool isHasReligion(ReligionTypes eIndex) const;
 	void setHasReligion(ReligionTypes eIndex, bool bNewValue, bool bAnnounce, bool bArrows = true);
 	//Team Project (5)
 	void checkReligiousDisablingAllBuildings();
-	void checkReligiousDisabling(BuildingTypes eBuilding);
-	void applyReligionModifiers(ReligionTypes eIndex, bool bValue);
+	void checkReligiousDisabling(const BuildingTypes eBuilding, const CvPlayer& player);
+	void applyReligionModifiers(const ReligionTypes eIndex, const bool bValue);
 
 	bool isHasCorporation(CorporationTypes eIndex) const;
 	void setHasCorporation(CorporationTypes eIndex, bool bNewValue, bool bAnnounce, bool bArrows = true);
@@ -1353,7 +1332,7 @@ public:
 	void updateTradeRoutes();
 
 	void clearOrderQueue(); // Exposed to Python
-	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce = false, CvPlot* deliveryDestination = NULL, UnitAITypes contractedAIType = NO_UNITAI, byte contractFlags = 0); // Exposed to Python
+	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce = false, CvPlot* deliveryDestination = NULL, UnitAITypes contractedAIType = NO_UNITAI, uint8_t contractFlags = 0); // Exposed to Python
 	void popOrder(int iNum, bool bFinish = false, bool bChoose = false, bool bResolveList = true); // Exposed to Python
 	void startHeadOrder();
 	void stopHeadOrder();
@@ -1424,11 +1403,6 @@ public:
 
 	DllExport void getBuildQueue(std::vector<std::string>& astrQueue) const;
 
-/************************************************************************************************/
-/* Afforess  New Functions                             12/7/09                                 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int getCivicHappiness() const;
 	int getAdditionalDefenseByBuilding(BuildingTypes eBuilding) const;
 	int getNumCityPlots() const;
@@ -1440,14 +1414,19 @@ public:
 	bool hasFreshWater() const;
 
 	bool canUpgradeUnit(UnitTypes eUnit) const;
-	int getBuildingProductionModifier(BuildingTypes eIndex) const;
-	void changeBuildingProductionModifier(BuildingTypes eIndex, int iChange);
-	int getUnitProductionModifier(UnitTypes eIndex) const; //Exposed to Python
-	void changeUnitProductionModifier(UnitTypes eIndex, int iChange);
+
+	int getBuildingProductionModifier(const BuildingTypes eIndex) const;
+	void changeBuildingProductionModifier(const BuildingTypes eIndex, const int iChange);
+
+	int getUnitProductionModifier(const UnitTypes eIndex) const; //Exposed to Python
+	void changeUnitProductionModifier(const UnitTypes eIndex, const int iChange);
+
 	bool hadVicinityBonus(BonusTypes eIndex) const;
 	bool hadRawVicinityBonus(BonusTypes eIndex) const;
-	int getBonusDefenseChanges(BonusTypes eIndex) const;
-	void changeBonusDefenseChanges(BonusTypes eIndex, int iChange);
+
+	int getBonusDefenseChanges(const BonusTypes eIndex) const;
+	void changeBonusDefenseChanges(const BonusTypes eIndex, const int iChange);
+
 	int getBonusCommerceRateModifier(CommerceTypes eIndex) const;
 	void changeBonusCommerceRateModifier(CommerceTypes eIndex, int iChange);
 	bool isBuiltFoodProducedUnit() const;
@@ -1523,10 +1502,9 @@ public:
 
 	void doInvasion();
 
-	void setDisabledBuilding(BuildingTypes eIndex, bool bNewValue);
-	bool isDisabledBuilding(BuildingTypes eIndex) const;
+	void setDisabledBuilding(const BuildingTypes eIndex, const bool bNewValue);
+	bool isDisabledBuilding(const short iIndex) const;
 
-//Team Project (5)
 	void setReligiouslyDisabledBuilding(BuildingTypes eIndex, bool bNewValue);
 	bool isReligiouslyDisabledBuilding(BuildingTypes eIndex) const;
 
@@ -1596,8 +1574,6 @@ public:
 	int getBonusCommercePercentChanges(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 	void changeBonusCommercePercentChanges(CommerceTypes eIndex, int iChange);
 
-	int getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex, BuildingTypes eBuilding);
-
 	bool isAutomatedCanBuild(BuildTypes eBuild) const; //Exposed to Python
 	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue); //Exposed to Python
 
@@ -1618,10 +1594,6 @@ public:
 	int getNumCitiesMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const;
 	int getHomeAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const;
 	int getOtherAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const;
-
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
@@ -1814,7 +1786,6 @@ protected:
 	int m_iEspionageHealthCounter;
 	int m_iEspionageHappinessCounter;
 	int m_iFreshWaterGoodHealth;
-	int m_iFreshWaterBadHealth;
 	int m_iFeatureGoodHealth;
 	int m_iFeatureBadHealth;
 	int m_iBuildingGoodHealth;
@@ -1853,11 +1824,7 @@ protected:
 #define INVALID_STORED_FOOD_PERCENT_LOG (-1000000)	//	Used as a reserved value to trigger calculation on upgrade of save format
 	int m_iOverflowProduction;
 	int m_iFeatureProduction;
-/************************************************************************************************/
-/* Afforess	New Variables	    	 12/7/09                                                    */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	int m_iLostProductionBase;
 	int m_iSpecialistGoodHealth;
 	int m_iSpecialistBadHealth;
@@ -1896,9 +1863,6 @@ protected:
 
 	int* m_aiBonusCommerceRateModifier;
 	int* m_aiBonusCommercePercentChanges;
-	int* m_paiBuildingProductionModifier;
-	int* m_paiUnitProductionModifier;
-	int* m_paiBonusDefenseChanges;
 	mutable int* m_cachedPropertyNeeds;
 	bool* m_pabHadVicinityBonus;
 	bool* m_pabHadRawVicinityBonus;
@@ -1906,8 +1870,7 @@ protected:
 	mutable bool* m_pabHasRawVicinityBonusCached;
 	mutable bool* m_pabHasVicinityBonus;
 	mutable bool* m_pabHasRawVicinityBonus;
-	bool* m_pabDisabledBuilding;
-//Team Project (5)
+
 	bool* m_pabReligiouslyDisabledBuilding;
 	int* m_paiUnitCombatExtraStrength;
 	int* m_aiCommerceAttacks;
@@ -1919,10 +1882,15 @@ protected:
 
 	std::vector<PropertySpawns> m_aPropertySpawns;
 
+	std::vector<short> m_vFreeBuildings;
+	std::vector<short> m_vDisabledBuildings;
+	std::map<short, uint16_t> m_freeAreaBuildingCount;
+	std::map<short, int> m_bonusDefenseChanges;
+	std::map<short, int> m_buildingProductionMod;
+	std::map<short, int> m_unitProductionMod;
+
 	CultureLevelTypes m_eOccupationCultureLevel;
-/************************************************************************************************/
-/* Afforess	                          END                                                       */
-/************************************************************************************************/
+
 	int m_iMilitaryProductionModifier;
 	int m_iSpaceProductionModifier;
 	int m_iExtraTradeRoutes;
@@ -1996,7 +1964,6 @@ protected:
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
 	//TB Combat Mod (Buildings) begin
-	int m_iAidRate;
 	int m_iTotalFrontSupportPercentModifier;
 	int m_iTotalShortRangeSupportPercentModifier;
 	int m_iTotalMediumRangeSupportPercentModifier;
@@ -2063,7 +2030,7 @@ protected:
 	mutable bool* m_abCommerceRateDirty;
 	int* m_aiProductionToCommerceModifier;
 	int* m_aiBuildingCommerce;
-	int* m_aiSpecialistCommerce;
+	int* m_aiSpecialistCommerce100;
 	int* m_aiReligionCommerce;
 	int* m_aiCorporationCommerce;
 	int* m_aiCommerceRateModifier;
@@ -2105,8 +2072,6 @@ protected:
 	int* m_paiUnitCombatFreeExperience;
 	int* m_paiFreePromotionCount;
 	int* m_paiNumRealBuilding;
-	int* m_paiNumFreeBuilding;
-	int* m_paiNumFreeAreaBuilding;
 	mutable int* m_paiBuildingReplaced;
 	mutable bool m_bHasCalculatedBuildingReplacement;
 
@@ -2382,40 +2347,95 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
-		DECLARE_MAP_FUNCTOR(CvCity, bool, hasOrbitalInfrastructure);
-		DECLARE_MAP_FUNCTOR(CvCity, bool, isConnectedToCapital);
-		DECLARE_MAP_FUNCTOR(CvCity, bool, isGovernmentCenter);
-		DECLARE_MAP_FUNCTOR(CvCity, bool, AI_isMilitaryProductionCity);
-		DECLARE_MAP_FUNCTOR(CvCity, bool, AI_isNavalMilitaryProductionCity);
+		DECLARE_MAP_FUNCTOR(CvCity, void, startDeferredBonusProcessing);
+		DECLARE_MAP_FUNCTOR(CvCity, void, endDeferredBonusProcessing);
+		DECLARE_MAP_FUNCTOR(CvCity, void, doTurn);
+		DECLARE_MAP_FUNCTOR(CvCity, void, clearCanTrainCache);
+		DECLARE_MAP_FUNCTOR(CvCity, void, checkReligiousDisablingAllBuildings);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateTechHappinessandHealth);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updatePowerHealth);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateExtraSpecialistYield);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateExtraSpecialistCommerce);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateReligionCommerce);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateBuildingCommerce);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateCorporation);
+		DECLARE_MAP_FUNCTOR(CvCity, void, updateYield);
+		DECLARE_MAP_FUNCTOR(CvCity, void, clearTradeRoutes);
+		DECLARE_MAP_FUNCTOR(CvCity, void, setBuildingListInvalid);
+		DECLARE_MAP_FUNCTOR(CvCity, void, clearModifierTotals);
+		DECLARE_MAP_FUNCTOR(CvCity, void, recalculateModifiers);
+		DECLARE_MAP_FUNCTOR(CvCity, void, ClearYieldValueCache);
+		DECLARE_MAP_FUNCTOR(CvCity, void, AI_preUnitTurn);
+		DECLARE_MAP_FUNCTOR(CvCity, void, AI_assignWorkingPlots);
+		DECLARE_MAP_FUNCTOR(CvCity, void, AI_updateAssignWork);
+		DECLARE_MAP_FUNCTOR(CvCity, void, AI_markBestBuildValuesStale);
+		DECLARE_MAP_FUNCTOR(CvCity, void, setupGraphical);
+		DECLARE_MAP_FUNCTOR(CvCity, void, chooseProduction);
+		DECLARE_MAP_FUNCTOR(CvCity, void, invalidatePopulationRankCache);
+		DECLARE_MAP_FUNCTOR(CvCity, void, invalidateYieldRankCache);
+		DECLARE_MAP_FUNCTOR(CvCity, void, invalidateCommerceRankCache);
 
-		DECLARE_MAP_FUNCTOR(CvCity, int, getID);
-		DECLARE_MAP_FUNCTOR(CvCity, int, getPopulation);
-		DECLARE_MAP_FUNCTOR(CvCity, int, getRealPopulation);
-		DECLARE_MAP_FUNCTOR(CvCity, int, goodHealth);
-		DECLARE_MAP_FUNCTOR(CvCity, int, badHealth);
-		DECLARE_MAP_FUNCTOR(CvCity, int, happyLevel);
-		DECLARE_MAP_FUNCTOR(CvCity, int, unhappyLevel);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, updateExtraBuildingHappiness, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, updateExtraBuildingHealth, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, updateFeatureHappiness, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, updateReligionHappiness, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, setCommerceModifierDirty, CommerceTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, setCommerceDirty, CommerceTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, setLayoutDirty, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, FlushCanConstructCache, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, AI_setAssignWorkDirty, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, AI_setChooseProductionDirty, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, AI_setMilitaryProductionCity, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, AI_setNavalMilitaryProductionCity, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, kill, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, setInfoDirty, bool);
+		DECLARE_MAP_FUNCTOR_1(CvCity, void, changeFood, int);
 
-		DECLARE_MAP_FUNCTOR(CvCity, const CvWString, getName);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, setBuildingListFilterActive, BuildingFilterTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, updateCommerce, CommerceTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, setFreeBuilding, BuildingTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeAreaBuildingCount, BuildingTypes, int);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeSpecialistCount, SpecialistTypes, int);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, processVoteSourceBonus, VoteSourceTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeBaseYieldRate, YieldTypes, int);
 
-		DECLARE_MAP_FUNCTOR(CvCity, const CvArea*, area);
-		DECLARE_MAP_FUNCTOR(CvCity, const CvPlot*, plot);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isCapital);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isNoUnhappiness);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, hasOrbitalInfrastructure);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isConnectedToCapital);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isGovernmentCenter);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, AI_isMilitaryProductionCity);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, AI_isNavalMilitaryProductionCity);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, calculateCorporateTaxes);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getID);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getPopulation);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getRealPopulation);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, goodHealth);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, badHealth);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, happyLevel);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, unhappyLevel);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, const CvWString, getName);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, const CvArea*, area);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, const CvPlot*, plot);
 
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, canConstruct, BuildingTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, canTrain, UnitTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, isHasReligion, ReligionTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, isHasCorporation, CorporationTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, hasBonus, BonusTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, bool, isCoastal, int);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isReligiouslyDisabledBuilding, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, canConstruct, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, canTrain, UnitTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isHasReligion, ReligionTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isHasCorporation, CorporationTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, hasBonus, BonusTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isCoastal, int);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getNumBuilding, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getNumRealBuilding, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getNumActiveBuilding, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getCommerceRateTimes100, CommerceTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getBaseCommerceRateTimes100, CommerceTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getCultureTimes100, PlayerTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getYieldRate, YieldTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getModifiedBaseYieldRate, YieldTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, const CvPlotGroup*, plotGroup, PlayerTypes);
 
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getCommerceRateTimes100, CommerceTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getBaseCommerceRateTimes100, CommerceTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getCultureTimes100, PlayerTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getNumBuilding, BuildingTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getYieldRate, YieldTypes);
-		DECLARE_MAP_FUNCTOR_1(CvCity, int, getModifiedBaseYieldRate, YieldTypes);
-
-		DECLARE_MAP_FUNCTOR_1(CvCity, const CvPlotGroup*, plotGroup, PlayerTypes);
+		DECLARE_MAP_FUNCTOR_CONST_2(CvCity, bool, isRevealed, TeamTypes, bool);
 	};
 };
 

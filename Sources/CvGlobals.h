@@ -209,8 +209,8 @@ public:
 
 	void switchMap(MapTypes eMap);
 	CvMap& getMapByIndex(MapTypes eIndex) const;
+	int getNumMaps() const { return m_maps.size(); }
 	void updateMaps();
-	const std::vector<CvMap*>& getMaps() const;
 	void initializeMap(MapTypes eMap);
 	bool mapInitialized(MapTypes eMap) const;
 	void clearSigns();
@@ -295,6 +295,7 @@ public:
 /************************************************************************************************/
 	void addToInfosVectors(void *infoVector);
 	void infosReset();
+	void cacheInfoTypes();
 	int getOrCreateInfoTypeForString(const char* szType);
 
 	void addDelayedResolution(int* pType, CvString szString);
@@ -493,16 +494,6 @@ public:
 	void setXMLLogging(bool bNewVal);
 
 	void updateReplacements();
-
-#define DECLARE_GET_METHOD(dataType, VAR) \
-	dataType get##VAR() const { return m_##VAR; }
-	DO_FOR_EACH_INT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
-	DO_FOR_EACH_ENUM_GLOBAL_DEFINE(DECLARE_GET_METHOD)
-	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
-
-#define DECLARE_BOOL_GET_METHOD(dataType, VAR) \
-	dataType is##VAR() const { return m_##VAR; }
-	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(DECLARE_BOOL_GET_METHOD)
 
 	int getNumCityTabInfos() const;
 	CvInfoBase& getCityTabInfo(CityTabTypes e) const;
@@ -759,6 +750,20 @@ public:
 	void cacheEnumGlobals();
 	void cacheGlobals();
 
+#define DECLARE_GET_METHOD(dataType, VAR) \
+	dataType get##VAR() const { return m_##VAR; }
+
+	DO_FOR_EACH_INT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+	DO_FOR_EACH_ENUM_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+
+	DO_FOR_EACH_INFO_TYPE(DECLARE_GET_METHOD)
+
+#define DECLARE_IS_METHOD(dataType, VAR) \
+	dataType is##VAR() const { return m_##VAR; }
+
+	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(DECLARE_IS_METHOD)
+
 	// ***** EXPOSED TO PYTHON *****
 /************************************************************************************************/
 /* MOD_COMPONENT_CONTROL                   08/02/07                            MRGENIE          */
@@ -822,10 +827,7 @@ public:
 
 	////////////// END DEFINES //////////////////
 
-#ifdef _USRDLL
-	CvDLLUtilityIFaceBase* getDLLIFace() const { return g_DLL; }		// inlined for perf reasons, do not use outside of dll
-#endif
-	CvDLLUtilityIFaceBase* getDLLIFaceNonInl();
+	inline CvDLLUtilityIFaceBase* getDLLIFace() const { return g_DLL; }		// inlined for perf reasons, do not use outside of dll
 	void setDLLProfiler(FProfiler* prof);
 	FProfiler* getDLLProfiler() const;
 	void enableDLLProfiler(bool bEnable);
@@ -905,20 +907,8 @@ public:
 	unsigned int getAssetCheckSum();
 
 	void deleteInfoArrays();
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-	void doResetInfoClasses(int iNumSaveGameVector, std::vector<CvString> m_aszSaveGameVector);
-	void StoreExeSettings();
-	void LoadExeSettings();
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 
 protected:
-
 	bool m_bGraphicsInitialized;
 	bool m_bDLLProfiler;
 	bool m_bLogging;
@@ -997,7 +987,7 @@ protected:
 		static const size_t Seed = 0x811C9DC5;  // 2166136261
 
 		// hash a single byte
-		static inline size_t fnv1a(unsigned char oneByte, size_t hash = Seed)
+		static inline size_t fnv1a(uint8_t oneByte, size_t hash = Seed)
 		{
 			return (oneByte ^ hash) * Prime;
 		}
@@ -1006,7 +996,7 @@ protected:
 		static inline size_t fnv1a(const void* data, size_t numBytes, size_t hash = Seed)
 		{
 			assert(data);
-			const unsigned char* ptr = (const unsigned char*)data;
+			const uint8_t* ptr = (const uint8_t*)data;
 			while (numBytes--)
 				hash = fnv1a(*ptr++, hash);
 			return hash;
@@ -1243,7 +1233,9 @@ protected:
 
 #define DECLARE_MEMBER_VAR(dataType, VAR) \
 	dataType m_##VAR;
+
 	DO_FOR_EACH_GLOBAL_DEFINE(DECLARE_MEMBER_VAR)
+	DO_FOR_EACH_INFO_TYPE(DECLARE_MEMBER_VAR)
 
 	bool m_bXMLLogging;
 
@@ -1272,12 +1264,10 @@ public:
 public:
 	bool getBBAI_AIR_COMBAT() const;
 	bool getBBAI_HUMAN_VASSAL_WAR_BUILD() const;
-	bool getBBAI_HUMAN_AS_VASSAL_OPTION() const;
 
 protected:
 	bool m_bBBAI_AIR_COMBAT;
 	bool m_bBBAI_HUMAN_VASSAL_WAR_BUILD;
-	bool m_bBBAI_HUMAN_AS_VASSAL_OPTION;
 
 // Tech Diffusion
 public:
@@ -1287,19 +1277,6 @@ protected:
 	bool m_bTECH_DIFFUSION_ENABLE;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-	int* m_iStoreExeSettingsCommerceInfo;
-	int* m_iStoreExeSettingsYieldInfo;
-	int* m_iStoreExeSettingsReligionInfo;
-	int* m_iStoreExeSettingsCorporationInfo;
-	int* m_iStoreExeSettingsBonusInfo;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
 
 	bool m_bSignsCleared;
@@ -2185,7 +2162,7 @@ public:
 	DllExport CvDLLUtilityIFaceBase* getDLLIFaceNonInl()
 	{
 		//PROXY_TRACK("getDLLIFaceNonInl");
-		return gGlobals->getDLLIFaceNonInl();
+		return g_DLL;
 	}
 	DllExport void setDLLProfiler(FProfiler* prof)
 	{
@@ -2513,10 +2490,6 @@ inline CvGlobals& CvGlobals::getInstance()
 //
 #define GC cvInternalGlobals::getInstance()
 #define gDLL g_DLL
-
-#ifndef FIXED_MISSION_NUMBER
-#define NUM_MISSION_TYPES (GC.getNumMissionInfos())
-#endif
 
 #endif
 

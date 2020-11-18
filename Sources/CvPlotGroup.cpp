@@ -479,15 +479,14 @@ void CvPlotGroup::setID(int iID)
 
 int CvPlotGroup::getNumBonuses(const BonusTypes eBonus) const
 {
-	FAssertMsg(eBonus >= 0, "eBonus is expected to be non-negative (invalid Index)");
-	FAssertMsg(eBonus < GC.getNumBonusInfos(), "eBonus is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
 	return (m_paiNumBonuses == NULL ? 0 : m_paiNumBonuses[eBonus]);
 }
 
 
 bool CvPlotGroup::hasBonus(const BonusTypes eBonus) const
 {
-	return(getNumBonuses(eBonus) > 0);
+	return getNumBonuses(eBonus) > 0;
 }
 
 
@@ -495,8 +494,7 @@ void CvPlotGroup::changeNumBonuses(const BonusTypes eBonus, const int iChange)
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(eBonus >= 0, "eBonus is expected to be non-negative (invalid Index)");
-	FAssertMsg(eBonus < GC.getNumBonusInfos(), "eBonus is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
 
 	if (iChange != 0)
 	{
@@ -506,7 +504,7 @@ void CvPlotGroup::changeNumBonuses(const BonusTypes eBonus, const int iChange)
 			memset(m_paiNumBonuses, 0, sizeof(int)*GC.getNumBonusInfos());
 		}
 
-		m_paiNumBonuses[eBonus] = (m_paiNumBonuses[eBonus] + iChange);
+		m_paiNumBonuses[eBonus] += iChange;
 
 		foreach_(CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 		{
@@ -669,9 +667,6 @@ void CvPlotGroup::read(FDataStreamBase* pStream)
 	// Init saved data
 	reset();
 
-	uint uiFlag=0;
-	WRAPPER_READ(wrapper, "CvPlotGroup", &uiFlag);	// flags for expansion
-
 	WRAPPER_READ(wrapper, "CvPlotGroup", &m_iID);
 
 	WRAPPER_READ(wrapper, "CvPlotGroup", (int*)&m_eOwner);
@@ -690,21 +685,7 @@ void CvPlotGroup::read(FDataStreamBase* pStream)
 	{
 		SAFE_DELETE_ARRAY(m_paiNumBonuses);
 	}
-
-	m_numPlots = -1;
 	WRAPPER_READ(wrapper, "CvPlotGroup", &m_numPlots);
-
-	//	To maintain backwrd compatibility read the plot list from the old format
-	//	that didn't record m_numPlots
-	if ( m_numPlots == -1 )
-	{
-		CLinkList<XYCoords> dummyPlots;
-		dummyPlots.Read(pStream);
-
-		m_numPlots = dummyPlots.getLength();
-
-		FAssert(m_numPlots > 0);
-	}
 
 	if ( m_paiNumBonuses != NULL )
 	{
@@ -737,8 +718,6 @@ void CvPlotGroup::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	uint uiFlag = 0;
-	WRAPPER_WRITE(wrapper, "CvPlotGroup", uiFlag); // flag for expansion
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_iID);
 	WRAPPER_WRITE(wrapper, "CvPlotGroup", m_eOwner);
 

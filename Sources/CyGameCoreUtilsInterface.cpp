@@ -59,9 +59,6 @@ void CyGameCoreUtilsPythonInterface()
 	python::def("getCombatOdds", cyGetCombatOdds, "int (CyUnit* pAttacker, CyUnit* pDefender)");
 	python::def("getEspionageModifier", cyGetEspionageModifier, "int (int /*TeamTypes*/ iOurTeam, int /*TeamTypes*/ iTargetTeam)");
 
-	python::def("calculateExperience", cyCalculateExperience, "int (int iLevel, int /*PlayerTypes*/ iPlayer)");
-	python::def("calculateLevel", cyCalculateLevel, "int (int iExperience, int /*PlayerTypes*/ iPlayer)");
-
 	python::def("getOppositeCardinalDirection", getOppositeCardinalDirection,"CardinalDirectionTypes (CardinalDirectionTypes eDir)");
 	python::def("cardinalDirectionToDirection", cardinalDirectionToDirection, "DirectionTypes (CardinalDirectionTypes eDir) - converts a CardinalDirectionType to the corresponding DirectionType");
 
@@ -74,4 +71,6 @@ void CyGameCoreUtilsPythonInterface()
 	python::def("getLandPlotsScore", getLandPlotsScore, "int (int iPopulation)");
 	python::def("getTechScore", getTechScore, "int (int /*TechTypes*/ eTech)");
 	python::def("getWonderScore", getWonderScore, "int (int /*BuildingTypes*/ eWonder)");
+
+	python::def("intSqrt", cyIntSqrt64, "int64_t (uint64_t iValue)");
 }

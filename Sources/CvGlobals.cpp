@@ -2,8 +2,12 @@
 // globals.cpp
 //
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvInitCore.h"
 #include "CvMapExternal.h"
+#include "CvPlayerAI.h"
+#include "CvRandom.h"
+#include "CvTeamAI.h"
 #include "CvXMLLoadUtility.h"
 #include "FVariableSystem.h"
 #include <time.h> 
@@ -201,7 +205,6 @@ cvInternalGlobals::cvInternalGlobals()
 	// BBAI Options
 	, m_bBBAI_AIR_COMBAT(false)
 	, m_bBBAI_HUMAN_VASSAL_WAR_BUILD(false)
-	, m_bBBAI_HUMAN_AS_VASSAL_OPTION(false)
 
 	// Tech Diffusion
 	, m_bTECH_DIFFUSION_ENABLE(false)
@@ -228,22 +231,13 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iNumFootstepAudioTypes(0)
 	, m_iViewportSizeX(0)
 	, m_iViewportSizeY(0)
-	, m_iStoreExeSettingsCommerceInfo(0)
-	, m_iStoreExeSettingsYieldInfo(0)
-	, m_iStoreExeSettingsReligionInfo(0)
-	, m_iStoreExeSettingsCorporationInfo(0)
-	, m_iStoreExeSettingsBonusInfo(0)
 	, m_bSignsCleared(false)
 
-#define ADD_INT_TO_CONSTRUCTOR(dataType, VAR) \
-	, m_##VAR(0)
-	DO_FOR_EACH_INT_GLOBAL_DEFINE(ADD_INT_TO_CONSTRUCTOR)
-	DO_FOR_EACH_ENUM_GLOBAL_DEFINE(ADD_INT_TO_CONSTRUCTOR)
-	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(ADD_INT_TO_CONSTRUCTOR)
+#define ADD_TO_CONSTRUCTOR(dataType, VAR) \
+	, m_##VAR((dataType)0)
 
-#define ADD_BOOL_TO_CONSTRUCTOR(dataType, VAR) \
-	, m_##VAR(false)
-	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(ADD_BOOL_TO_CONSTRUCTOR)
+	DO_FOR_EACH_GLOBAL_DEFINE(ADD_TO_CONSTRUCTOR)
+	DO_FOR_EACH_INFO_TYPE(ADD_TO_CONSTRUCTOR)
 {
 }
 
@@ -623,7 +617,7 @@ std::vector<CvInterfaceModeInfo*>& cvInternalGlobals::getInterfaceModeInfos()
 
 CvInterfaceModeInfo& cvInternalGlobals::getInterfaceModeInfo(InterfaceModeTypes e) const
 {
-	FAssertMsg(e >= 0 && e < NUM_INTERFACEMODE_TYPES, "InterfaceModeInfo index out of bounds");
+	FASSERT_BOUNDS(0, NUM_INTERFACEMODE_TYPES, e)
 	return *(m_paInterfaceModeInfo[e]);
 }
 
@@ -664,8 +658,8 @@ int* cvInternalGlobals::getCityPlotPriority() const
 
 int cvInternalGlobals::getXYCityPlot(int i, int j) const
 {
-	FAssertMsg(i >= 0 && i < CITY_PLOTS_DIAMETER, "XYCityPlot i index out of bounds");
-	FAssertMsg(j >= 0 && j < CITY_PLOTS_DIAMETER, "XYCityPlot j index out of bounds");
+	FASSERT_BOUNDS(0, CITY_PLOTS_DIAMETER, i)
+	FASSERT_BOUNDS(0, CITY_PLOTS_DIAMETER, j)
 	return m_aaiXYCityPlot[i][j];
 }
 
@@ -676,7 +670,7 @@ DirectionTypes* cvInternalGlobals::getTurnLeftDirection() const
 
 DirectionTypes cvInternalGlobals::getTurnLeftDirection(int i) const
 {
-	FAssertMsg(i >= 0 && i < DIRECTION_DIAMETER, "TurnLeftDirection index out of bounds");
+	FASSERT_BOUNDS(0, DIRECTION_DIAMETER, i)
 	return m_aeTurnLeftDirection[i];
 }
 
@@ -687,21 +681,20 @@ DirectionTypes* cvInternalGlobals::getTurnRightDirection() const
 
 DirectionTypes cvInternalGlobals::getTurnRightDirection(int i) const
 {
-	FAssertMsg(i >= 0 && i < DIRECTION_DIAMETER, "TurnRightDirection index out of bounds");
+	FASSERT_BOUNDS(0, DIRECTION_DIAMETER, i)
 	return m_aeTurnRightDirection[i];
 }
 
 DirectionTypes cvInternalGlobals::getXYDirection(int i, int j) const
 {
-	FAssertMsg(i >= 0 && i < DIRECTION_DIAMETER, "XYDirection i index out of bounds");
-	FAssertMsg(j >= 0 && j < DIRECTION_DIAMETER, "XYDirection j index out of bounds");
+	FASSERT_BOUNDS(0, DIRECTION_DIAMETER, i)
+	FASSERT_BOUNDS(0, DIRECTION_DIAMETER, j)
 	return m_aaeXYDirection[i][j];
 }
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-
 bool cvInternalGlobals::multiMapsEnabled() const
 {
 	return m_bMultimapsEnabled;
@@ -729,31 +722,28 @@ int cvInternalGlobals::getNumMapSwitchInfos() const
 
 CvMapInfo& cvInternalGlobals::getMapInfo(MapTypes eMap) const
 {
-	FAssertMsg(eMap > NO_MAP && eMap < GC.getNumMapInfos(), "MapInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eMap)
 	return *(m_paMapInfo[eMap]);
 }
 
 CvMapSwitchInfo& cvInternalGlobals::getMapSwitchInfo(MapSwitchTypes eMapSwitch) const
 {
-	FAssertMsg(eMapSwitch > NO_MAPSWITCH && eMapSwitch < GC.getNumMapSwitchInfos(), "MapSwitchInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumMapSwitchInfos(), eMapSwitch)
 	return *(m_paMapSwitchInfo[eMapSwitch]);
 }
 
 void cvInternalGlobals::updateMaps()
 {
-	CvMap* pMap = NULL;
-	int i;
-	
-	for (i = 1; i < GC.getNumMapInfos(); i++)
+	for (int i = 1; i < GC.getNumMapInfos(); i++)
 	{
-		m_maps.push_back(pMap);
+		m_maps.push_back(NULL);
 	}
 	FAssert(m_maps.size() == GC.getNumMapInfos());
-}
 
-const std::vector<CvMap*>& cvInternalGlobals::getMaps() const
-{
-	return m_maps;
+	for (int i = 0; i < MAX_PLAYERS; i++)
+	{
+		GET_PLAYER((PlayerTypes)i).addContainersForEachMap();
+	}
 }
 
 void cvInternalGlobals::setResourceLayer(bool bOn)
@@ -779,13 +769,9 @@ int cvInternalGlobals::getNumWorldInfos() const
 
 CvWorldInfo& cvInternalGlobals::getWorldInfo(WorldSizeTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumWorldInfos(), "WorldInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumWorldInfos(), e)
 	return *(m_paWorldInfo[e]);
 }
-
-/////////////////////////////////////////////
-// CLIMATE
-/////////////////////////////////////////////
 
 int cvInternalGlobals::getNumClimateInfos() const
 {
@@ -794,13 +780,9 @@ int cvInternalGlobals::getNumClimateInfos() const
 
 CvClimateInfo& cvInternalGlobals::getClimateInfo(ClimateTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumClimateInfos(), "ClimateInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumClimateInfos(), e)
 	return *(m_paClimateInfo[e]);
 }
-
-/////////////////////////////////////////////
-// SEALEVEL
-/////////////////////////////////////////////
 
 int cvInternalGlobals::getNumSeaLevelInfos() const
 {
@@ -809,7 +791,7 @@ int cvInternalGlobals::getNumSeaLevelInfos() const
 
 CvSeaLevelInfo& cvInternalGlobals::getSeaLevelInfo(SeaLevelTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumSeaLevelInfos(), "SeaLevelInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumSeaLevelInfos(), e)
 	return *(m_paSeaLevelInfo[e]);
 }
 
@@ -880,7 +862,7 @@ int cvInternalGlobals::getNumModLoadControlInfos() const
 
 CvModLoadControlInfo& cvInternalGlobals::getModLoadControlInfos(int iIndex) const
 {
-	FAssertMsg(iIndex >= 0 && iIndex < getNumModLoadControlInfos(), "ModLoadControlInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumModLoadControlInfos(), iIndex)
 	return *(m_paModLoadControls[iIndex]);
 }
 
@@ -959,7 +941,7 @@ int cvInternalGlobals::getNumColorInfos() const
 
 CvColorInfo& cvInternalGlobals::getColorInfo(ColorTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumColorInfos(), "ColorInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumColorInfos(), e)
 	return *(m_paColorInfo[e]);
 }
 
@@ -971,7 +953,7 @@ int cvInternalGlobals::getNumPlayerColorInfos() const
 
 CvPlayerColorInfo& cvInternalGlobals::getPlayerColorInfo(PlayerColorTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumPlayerColorInfos(), "PlayerColorInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumPlayerColorInfos(), e)
 	return *(m_paPlayerColorInfo[e]);
 }
 
@@ -982,7 +964,7 @@ int cvInternalGlobals::getNumAdvisorInfos() const
 
 CvAdvisorInfo& cvInternalGlobals::getAdvisorInfo(AdvisorTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumAdvisorInfos(), "AdvisorInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumAdvisorInfos(), e)
 	return *(m_paAdvisorInfo[e]);
 }
 
@@ -993,7 +975,7 @@ int cvInternalGlobals::getNumRouteModelInfos() const
 
 CvRouteModelInfo& cvInternalGlobals::getRouteModelInfo(int i) const
 {
-	FAssertMsg(i >= 0 && i < GC.getNumRouteModelInfos(), "RouteModelInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumRouteModelInfos(), i)
 	return *(m_paRouteModelInfo[i]);
 }
 
@@ -1004,7 +986,7 @@ int cvInternalGlobals::getNumRiverModelInfos() const
 
 CvRiverModelInfo& cvInternalGlobals::getRiverModelInfo(int i) const
 {
-	FAssertMsg(i >= 0 && i < GC.getNumRiverModelInfos(), "RiverModelInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumRiverModelInfos(), i)
 	return *(m_paRiverModelInfo[i]);
 }
 
@@ -1015,7 +997,7 @@ int cvInternalGlobals::getNumWaterPlaneInfos() const
 
 CvWaterPlaneInfo& cvInternalGlobals::getWaterPlaneInfo(int i) const
 {
-	FAssertMsg(i >= 0 && i < GC.getNumWaterPlaneInfos(), "WaterPlaneInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumWaterPlaneInfos(), i)
 	return *(m_paWaterPlaneInfo[i]);
 }
 
@@ -1026,7 +1008,7 @@ int cvInternalGlobals::getNumTerrainPlaneInfos() const
 
 CvTerrainPlaneInfo& cvInternalGlobals::getTerrainPlaneInfo(int i) const
 {
-	FAssertMsg(i >= 0 && i < GC.getNumTerrainPlaneInfos(), "TerrainPlaneInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumTerrainPlaneInfos(), i)
 	return *(m_paTerrainPlaneInfo[i]);
 }
 
@@ -1037,7 +1019,7 @@ int cvInternalGlobals::getNumCameraOverlayInfos() const
 
 CvCameraOverlayInfo& cvInternalGlobals::getCameraOverlayInfo(int i) const
 {
-	FAssertMsg(i >= 0 && i < GC.getNumCameraOverlayInfos(), "CameraOverlayInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumCameraOverlayInfos(), i)
 	return *(m_paCameraOverlayInfo[i]);
 }
 
@@ -1048,7 +1030,7 @@ int cvInternalGlobals::getNumAnimationPathInfos() const
 
 CvAnimationPathInfo& cvInternalGlobals::getAnimationPathInfo(AnimationPathTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumAnimationPathInfos(), "AnimationPathInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumAnimationPathInfos(), e)
 	return *(m_paAnimationPathInfo[e]);
 }
 
@@ -1059,7 +1041,7 @@ int cvInternalGlobals::getNumAnimationCategoryInfos() const
 
 CvAnimationCategoryInfo& cvInternalGlobals::getAnimationCategoryInfo(AnimationCategoryTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumAnimationCategoryInfos(), "AnimationCategoryInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumAnimationCategoryInfos(), e)
 	return *(m_paAnimationCategoryInfo[e]);
 }
 
@@ -1070,7 +1052,7 @@ int cvInternalGlobals::getNumEntityEventInfos() const
 
 CvEntityEventInfo& cvInternalGlobals::getEntityEventInfo(EntityEventTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumEntityEventInfos(), "EntityEventInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumEntityEventInfos(), e)
 	return *(m_paEntityEventInfo[e]);
 }
 
@@ -1081,7 +1063,7 @@ int cvInternalGlobals::getNumEffectInfos() const
 
 CvEffectInfo& cvInternalGlobals::getEffectInfo(int i) const
 {
-	FAssertMsg(i >= 0 && i < GC.getNumEffectInfos(), "EffectInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumEffectInfos(), i)
 	return *(m_paEffectInfo[i]);
 }
 
@@ -1093,7 +1075,7 @@ int cvInternalGlobals::getNumAttachableInfos() const
 
 CvAttachableInfo& cvInternalGlobals::getAttachableInfo(int i) const
 {
-	FAssertMsg(i >= 0 && i < GC.getNumAttachableInfos(), "AttachableInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumAttachableInfos(), i)
 	return *(m_paAttachableInfo[i]);
 }
 
@@ -1104,11 +1086,11 @@ int cvInternalGlobals::getNumUnitFormationInfos() const
 
 CvUnitFormationInfo& cvInternalGlobals::getUnitFormationInfo(int i) const
 {
-	FAssertMsg(i >= 0 && i < GC.getNumUnitFormationInfos(), "UnitFormationInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumUnitFormationInfos(), i)
 	return *(m_paUnitFormationInfo[i]);
 }
 
-// Landscape INFOS
+
 int cvInternalGlobals::getNumLandscapeInfos() const
 {
 	return (int)m_paLandscapeInfo.size();
@@ -1116,7 +1098,7 @@ int cvInternalGlobals::getNumLandscapeInfos() const
 
 CvLandscapeInfo& cvInternalGlobals::getLandscapeInfo(int iIndex) const
 {
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumLandscapeInfos(), "LandscapeInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumLandscapeInfos(), iIndex)
 	return *(m_paLandscapeInfo[iIndex]);
 }
 
@@ -1138,7 +1120,7 @@ int cvInternalGlobals::getNumTerrainInfos() const
 
 CvTerrainInfo& cvInternalGlobals::getTerrainInfo(TerrainTypes eTerrainNum) const
 {
-	FAssertMsg(eTerrainNum >= 0 && eTerrainNum < GC.getNumTerrainInfos(), "TerrainInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eTerrainNum)
 	return *(m_paTerrainInfo[eTerrainNum]);
 }
 
@@ -1149,7 +1131,7 @@ int cvInternalGlobals::getNumBonusClassInfos() const
 
 CvBonusClassInfo& cvInternalGlobals::getBonusClassInfo(BonusClassTypes eBonusNum) const
 {
-	FAssertMsg(eBonusNum >= 0 && eBonusNum < GC.getNumBonusClassInfos(), "BonusClassInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumBonusClassInfos(), eBonusNum)
 	return *(m_paBonusClassInfo[eBonusNum]);
 }
 
@@ -1166,7 +1148,7 @@ const std::vector<CvBonusInfo*>& cvInternalGlobals::getBonusInfos() const
 
 CvBonusInfo& cvInternalGlobals::getBonusInfo(BonusTypes eBonusNum) const
 {
-	FAssertMsg(eBonusNum >= 0 && eBonusNum < GC.getNumBonusInfos(), "BonusInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonusNum)
 	return *(m_paBonusInfo[eBonusNum]);
 }
 
@@ -1177,7 +1159,7 @@ int cvInternalGlobals::getNumFeatureInfos() const
 
 CvFeatureInfo& cvInternalGlobals::getFeatureInfo(FeatureTypes eFeatureNum) const
 {
-	FAssertMsg(eFeatureNum >= 0 && eFeatureNum < GC.getNumFeatureInfos(), "FeatureInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eFeatureNum)
 	return *(m_paFeatureInfo[eFeatureNum]);
 }
 
@@ -1198,7 +1180,7 @@ int cvInternalGlobals::getNumCivilizationInfos() const
 
 CvCivilizationInfo& cvInternalGlobals::getCivilizationInfo(CivilizationTypes eCivilizationNum) const
 {
-	FAssertMsg(eCivilizationNum >= 0 && eCivilizationNum < GC.getNumCivilizationInfos(), "CivilizationInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumCivilizationInfos(), eCivilizationNum)
 	return *(m_paCivilizationInfo[eCivilizationNum]);
 }
 
@@ -1210,7 +1192,7 @@ int cvInternalGlobals::getNumLeaderHeadInfos() const
 
 CvLeaderHeadInfo& cvInternalGlobals::getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum) const
 {
-	FAssertMsg(eLeaderHeadNum >= 0 && eLeaderHeadNum < GC.getNumLeaderHeadInfos(), "LeaderHeadInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumLeaderHeadInfos(), eLeaderHeadNum)
 	return *(m_paLeaderHeadInfo[eLeaderHeadNum]);
 }
 
@@ -1222,7 +1204,7 @@ int cvInternalGlobals::getNumTraitInfos() const
 
 CvTraitInfo& cvInternalGlobals::getTraitInfo(TraitTypes eTraitNum) const
 {
-	FAssertMsg(eTraitNum >= 0 && eTraitNum < GC.getNumTraitInfos(), "TraitInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumTraitInfos(), eTraitNum)
 	return *(m_paTraitInfo[eTraitNum]);
 }
 
@@ -1234,7 +1216,7 @@ int cvInternalGlobals::getNumCursorInfos() const
 
 CvCursorInfo& cvInternalGlobals::getCursorInfo(CursorTypes eCursorNum) const
 {
-	FAssertMsg(eCursorNum >= 0 && eCursorNum < GC.getNumCursorInfos(), "CursorInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumCursorInfos(), eCursorNum)
 	return *(m_paCursorInfo[eCursorNum]);
 }
 
@@ -1245,7 +1227,7 @@ int cvInternalGlobals::getNumThroneRoomCameras() const
 
 CvThroneRoomCamera& cvInternalGlobals::getThroneRoomCamera(int iIndex) const
 {
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumThroneRoomCameras(), "ThroneRoomCamera index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumThroneRoomCameras(), iIndex)
 	return *(m_paThroneRoomCamera[iIndex]);
 }
 
@@ -1256,7 +1238,7 @@ int cvInternalGlobals::getNumThroneRoomInfos() const
 
 CvThroneRoomInfo& cvInternalGlobals::getThroneRoomInfo(int iIndex) const
 {
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumThroneRoomInfos(), "ThroneRoomInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumThroneRoomInfos(), iIndex)
 	return *(m_paThroneRoomInfo[iIndex]);
 }
 
@@ -1267,7 +1249,7 @@ int cvInternalGlobals::getNumThroneRoomStyleInfos() const
 
 CvThroneRoomStyleInfo& cvInternalGlobals::getThroneRoomStyleInfo(int iIndex) const
 {
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumThroneRoomStyleInfos(), "ThroneRoomStyleInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumThroneRoomStyleInfos(), iIndex)
 	return *(m_paThroneRoomStyleInfo[iIndex]);
 }
 
@@ -1278,7 +1260,7 @@ int cvInternalGlobals::getNumSlideShowInfos() const
 
 CvSlideShowInfo& cvInternalGlobals::getSlideShowInfo(int iIndex) const
 {
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumSlideShowInfos(), "SlideShowInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumSlideShowInfos(), iIndex)
 	return *(m_paSlideShowInfo[iIndex]);
 }
 
@@ -1289,7 +1271,7 @@ int cvInternalGlobals::getNumSlideShowRandomInfos() const
 
 CvSlideShowRandomInfo& cvInternalGlobals::getSlideShowRandomInfo(int iIndex) const
 {
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumSlideShowRandomInfos(), "SlideShowRandomInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumSlideShowRandomInfos(), iIndex)
 	return *(m_paSlideShowRandomInfo[iIndex]);
 }
 
@@ -1300,7 +1282,7 @@ int cvInternalGlobals::getNumWorldPickerInfos() const
 
 CvWorldPickerInfo& cvInternalGlobals::getWorldPickerInfo(int iIndex) const
 {
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumWorldPickerInfos(), "WorldPickerInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumWorldPickerInfos(), iIndex)
 	return *(m_paWorldPickerInfo[iIndex]);
 }
 
@@ -1311,7 +1293,7 @@ int cvInternalGlobals::getNumSpaceShipInfos() const
 
 CvSpaceShipInfo& cvInternalGlobals::getSpaceShipInfo(int iIndex) const
 {
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumSpaceShipInfos(), "SpaceShipInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumSpaceShipInfos(), iIndex)
 	return *(m_paSpaceShipInfo[iIndex]);
 }
 
@@ -1322,7 +1304,7 @@ int cvInternalGlobals::getNumUnitInfos() const
 
 CvUnitInfo& cvInternalGlobals::getUnitInfo(UnitTypes eUnitNum) const
 {
-	FAssertMsg(eUnitNum >= 0 && eUnitNum < GC.getNumUnitInfos(), "UnitInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnitNum)
 	return *(m_paUnitInfo[eUnitNum]);
 }
 
@@ -1333,7 +1315,7 @@ int cvInternalGlobals::getNumSpawnInfos() const
 
 CvSpawnInfo& cvInternalGlobals::getSpawnInfo(SpawnTypes eSpawnNum) const
 {
-	FAssertMsg(eSpawnNum >= 0 && eSpawnNum < GC.getNumSpawnInfos(), "SpawnInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumSpawnInfos(), eSpawnNum)
 	return *(m_paSpawnInfo[eSpawnNum]);
 }
 
@@ -1344,7 +1326,7 @@ int cvInternalGlobals::getNumSpecialUnitInfos() const
 
 CvSpecialUnitInfo& cvInternalGlobals::getSpecialUnitInfo(SpecialUnitTypes eSpecialUnitNum) const
 {
-	FAssertMsg(eSpecialUnitNum >= 0 && eSpecialUnitNum < GC.getNumSpecialUnitInfos(), "SpecialUnitInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumSpecialUnitInfos(), eSpecialUnitNum)
 	return *(m_paSpecialUnitInfo[eSpecialUnitNum]);
 }
 
@@ -1356,7 +1338,7 @@ int cvInternalGlobals::getNumConceptInfos() const
 
 CvInfoBase& cvInternalGlobals::getConceptInfo(ConceptTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumConceptInfos(), "ConceptInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumConceptInfos(), e)
 	return *(m_paConceptInfo[e]);
 }
 
@@ -1368,7 +1350,7 @@ int cvInternalGlobals::getNumNewConceptInfos() const
 
 CvInfoBase& cvInternalGlobals::getNewConceptInfo(NewConceptTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumNewConceptInfos(), "NewConceptInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumNewConceptInfos(), e)
 	return *(m_paNewConceptInfo[e]);
 }
 
@@ -1380,7 +1362,7 @@ int cvInternalGlobals::getNumCityTabInfos() const
 
 CvInfoBase& cvInternalGlobals::getCityTabInfo(CityTabTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumCityTabInfos(), "CityTabInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumCityTabInfos(), e)
 	return *(m_paCityTabInfo[e]);
 }
 
@@ -1392,7 +1374,7 @@ int cvInternalGlobals::getNumCalendarInfos() const
 
 CvInfoBase& cvInternalGlobals::getCalendarInfo(CalendarTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumCalendarInfos(), "CalendarInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumCalendarInfos(), e)
 	return *(m_paCalendarInfo[e]);
 }
 
@@ -1404,7 +1386,7 @@ int cvInternalGlobals::getNumSeasonInfos() const
 
 CvInfoBase& cvInternalGlobals::getSeasonInfo(SeasonTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumSeasonInfos(), "SeasonInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumSeasonInfos(), e)
 	return *(m_paSeasonInfo[e]);
 }
 
@@ -1416,7 +1398,7 @@ int cvInternalGlobals::getNumMonthInfos() const
 
 CvInfoBase& cvInternalGlobals::getMonthInfo(MonthTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumMonthInfos(), "MonthInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumMonthInfos(), e)
 	return *(m_paMonthInfo[e]);
 }
 
@@ -1428,7 +1410,7 @@ int cvInternalGlobals::getNumDenialInfos() const
 
 CvInfoBase& cvInternalGlobals::getDenialInfo(DenialTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumDenialInfos(), "DenialInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumDenialInfos(), e)
 	return *(m_paDenialInfo[e]);
 }
 
@@ -1440,7 +1422,7 @@ int cvInternalGlobals::getNumInvisibleInfos() const
 
 CvInvisibleInfo& cvInternalGlobals::getInvisibleInfo(InvisibleTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumInvisibleInfos(), "InvisibleInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), e)
 	return *(m_paInvisibleInfo[e]);
 }
 
@@ -1452,7 +1434,7 @@ int cvInternalGlobals::getNumVoteSourceInfos() const
 
 CvVoteSourceInfo& cvInternalGlobals::getVoteSourceInfo(VoteSourceTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumVoteSourceInfos(), "VoteSourceInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), e)
 	return *(m_paVoteSourceInfo[e]);
 }
 
@@ -1464,14 +1446,14 @@ int cvInternalGlobals::getNumUnitCombatInfos() const
 
 CvUnitCombatInfo& cvInternalGlobals::getUnitCombatInfo(UnitCombatTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumUnitCombatInfos(), "UnitCombatInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), e)
 	return *(m_paUnitCombatInfo[e]);
 }
 
 
 CvInfoBase& cvInternalGlobals::getDomainInfo(DomainTypes e) const
 {
-	FAssertMsg(e >= 0 && e < NUM_DOMAIN_TYPES, "DomainInfo index out of bounds");
+	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, e)
 	return *(m_paDomainInfo[e]);
 }
 
@@ -1483,7 +1465,7 @@ int cvInternalGlobals::getNumPromotionLineInfos() const
 
 CvPromotionLineInfo& cvInternalGlobals::getPromotionLineInfo(PromotionLineTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumPromotionLineInfos(), "PromotionLineInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), e)
 	return *(m_paPromotionLineInfo[e]);
 }
 //TB Promotion Line Mod end
@@ -1495,7 +1477,7 @@ int cvInternalGlobals::getNumMapCategoryInfos() const
 
 CvMapCategoryInfo& cvInternalGlobals::getMapCategoryInfo(MapCategoryTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumMapCategoryInfos(), "MapCategoryInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumMapCategoryInfos(), e)
 	return *(m_paMapCategoryInfo[e]);
 }
 
@@ -1506,7 +1488,7 @@ int cvInternalGlobals::getNumIdeaClassInfos() const
 
 CvIdeaClassInfo& cvInternalGlobals::getIdeaClassInfo(IdeaClassTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumIdeaClassInfos(), "IdeaClassInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumIdeaClassInfos(), e)
 	return *(m_paIdeaClassInfo[e]);
 }
 
@@ -1517,7 +1499,7 @@ int cvInternalGlobals::getNumIdeaInfos() const
 
 CvIdeaInfo& cvInternalGlobals::getIdeaInfo(IdeaTypes e) const
 {
-	FAssertMsg(e >= 0 && e < GC.getNumIdeaInfos(), "IdeaInfo index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumIdeaInfos(), e)
 	return *(m_paIdeaInfo[e]);
 }
 //int cvInternalGlobals::getNumTraitOptionEditsInfos() const
@@ -1527,14 +1509,13 @@ CvIdeaInfo& cvInternalGlobals::getIdeaInfo(IdeaTypes e) const
 //
 //CvTraitOptionEditsInfo& cvInternalGlobals::getTraitOptionEditsInfo(TraitOptionEditsTypes e) const
 //{
-//	FAssert(e > -1);
-//	FAssert(e < GC.getNumTraitOptionEditsInfos());
+//	FASSERT_BOUNDS(0, GC.getNumTraitOptionEditsInfos(), e)
 //	return *(m_paTraitOptionEditsInfo[e]);
 //}
 
 CvInfoBase& cvInternalGlobals::getUnitAIInfo(UnitAITypes eUnitAINum) const
 {
-	FAssertMsg(eUnitAINum >= 0 && eUnitAINum < NUM_UNITAI_TYPES, "UnitAIInfo index out of bounds");
+	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eUnitAINum)
 	return *(m_paUnitAIInfos[eUnitAINum]);
 }
 
@@ -1890,16 +1871,14 @@ void cvInternalGlobals::registerMissions()
 
 CvInfoBase& cvInternalGlobals::getAttitudeInfo(AttitudeTypes eAttitudeNum) const
 {
-	FAssert(eAttitudeNum >= 0);
-	FAssert(eAttitudeNum < NUM_ATTITUDE_TYPES);
+	FASSERT_BOUNDS(0, NUM_ATTITUDE_TYPES, eAttitudeNum)
 	return *(m_paAttitudeInfos[eAttitudeNum]);
 }
 
 
 CvInfoBase& cvInternalGlobals::getMemoryInfo(MemoryTypes eMemoryNum) const
 {
-	FAssert(eMemoryNum >= 0);
-	FAssert(eMemoryNum < NUM_MEMORY_TYPES);
+	FASSERT_BOUNDS(0, NUM_MEMORY_TYPES, eMemoryNum)
 	return *(m_paMemoryInfos[eMemoryNum]);
 }
 
@@ -1911,8 +1890,7 @@ int cvInternalGlobals::getNumGameOptionInfos() const
 
 CvGameOptionInfo& cvInternalGlobals::getGameOptionInfo(GameOptionTypes eGameOptionNum) const
 {
-	FAssert(eGameOptionNum >= 0);
-	FAssert(eGameOptionNum < GC.getNumGameOptionInfos());
+	FASSERT_BOUNDS(0, GC.getNumGameOptionInfos(), eGameOptionNum)
 	return *(m_paGameOptionInfos[eGameOptionNum]);
 }
 
@@ -1923,8 +1901,7 @@ int cvInternalGlobals::getNumMPOptionInfos() const
 
 CvMPOptionInfo& cvInternalGlobals::getMPOptionInfo(MultiplayerOptionTypes eMPOptionNum) const
 {
-	FAssert(eMPOptionNum >= 0);
-	FAssert(eMPOptionNum < GC.getNumMPOptionInfos());
+	FASSERT_BOUNDS(0, GC.getNumMPOptionInfos(), eMPOptionNum)
 	return *(m_paMPOptionInfos[eMPOptionNum]);
 }
 
@@ -1935,36 +1912,31 @@ int cvInternalGlobals::getNumForceControlInfos() const
 
 CvForceControlInfo& cvInternalGlobals::getForceControlInfo(ForceControlTypes eForceControlNum) const
 {
-	FAssert(eForceControlNum >= 0);
-	FAssert(eForceControlNum < GC.getNumForceControlInfos());
+	FASSERT_BOUNDS(0, GC.getNumForceControlInfos(), eForceControlNum)
 	return *(m_paForceControlInfos[eForceControlNum]);
 }
 
 CvPlayerOptionInfo& cvInternalGlobals::getPlayerOptionInfo(PlayerOptionTypes ePlayerOptionNum) const
 {
-	FAssert(ePlayerOptionNum >= 0);
-	FAssert(ePlayerOptionNum < NUM_PLAYEROPTION_TYPES);
+	FASSERT_BOUNDS(0, NUM_PLAYEROPTION_TYPES, ePlayerOptionNum)
 	return *(m_paPlayerOptionInfos[ePlayerOptionNum]);
 }
 
 CvGraphicOptionInfo& cvInternalGlobals::getGraphicOptionInfo(GraphicOptionTypes eGraphicOptionNum) const
 {
-	FAssert(eGraphicOptionNum >= 0);
-	FAssert(eGraphicOptionNum < NUM_GRAPHICOPTION_TYPES);
+	FASSERT_BOUNDS(0, NUM_GRAPHICOPTION_TYPES, eGraphicOptionNum)
 	return *(m_paGraphicOptionInfos[eGraphicOptionNum]);
 }
 
 CvYieldInfo& cvInternalGlobals::getYieldInfo(YieldTypes eYieldNum) const
 {
-	FAssert(eYieldNum > -1);
-	FAssert(eYieldNum < NUM_YIELD_TYPES);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYieldNum)
 	return *(m_paYieldInfo[eYieldNum]);
 }
 
 CvCommerceInfo& cvInternalGlobals::getCommerceInfo(CommerceTypes eCommerceNum) const
 {
-	FAssert(eCommerceNum > -1);
-	FAssert(eCommerceNum < NUM_COMMERCE_TYPES);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerceNum)
 	return *(m_paCommerceInfo[eCommerceNum]);
 }
 
@@ -1975,8 +1947,7 @@ int cvInternalGlobals::getNumRouteInfos() const
 
 CvRouteInfo& cvInternalGlobals::getRouteInfo(RouteTypes eRouteNum) const
 {
-	FAssert(eRouteNum > -1);
-	FAssert(eRouteNum < GC.getNumRouteInfos());
+	FASSERT_BOUNDS(0, GC.getNumRouteInfos(), eRouteNum)
 	return *(m_paRouteInfo[eRouteNum]);
 }
 
@@ -1987,8 +1958,7 @@ int cvInternalGlobals::getNumImprovementInfos() const
 
 CvImprovementInfo& cvInternalGlobals::getImprovementInfo(ImprovementTypes eImprovementNum) const
 {
-	FAssert(eImprovementNum > -1);
-	FAssert(eImprovementNum < GC.getNumImprovementInfos());
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eImprovementNum)
 	return *(m_paImprovementInfo[eImprovementNum]);
 }
 
@@ -1999,8 +1969,7 @@ int cvInternalGlobals::getNumGoodyInfos() const
 
 CvGoodyInfo& cvInternalGlobals::getGoodyInfo(GoodyTypes eGoodyNum) const
 {
-	FAssert(eGoodyNum > -1);
-	FAssert(eGoodyNum < GC.getNumGoodyInfos());
+	FASSERT_BOUNDS(0, GC.getNumGoodyInfos(), eGoodyNum)
 	return *(m_paGoodyInfo[eGoodyNum]);
 }
 
@@ -2011,8 +1980,7 @@ int cvInternalGlobals::getNumBuildInfos() const
 
 CvBuildInfo& cvInternalGlobals::getBuildInfo(BuildTypes eBuildNum) const
 {
-	FAssert(eBuildNum > -1);
-	FAssert(eBuildNum < GC.getNumBuildInfos());
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuildNum)
 	return *(m_paBuildInfo[eBuildNum]);
 }
 
@@ -2023,8 +1991,7 @@ int cvInternalGlobals::getNumHandicapInfos() const
 
 CvHandicapInfo& cvInternalGlobals::getHandicapInfo(HandicapTypes eHandicapNum) const
 {
-	FAssert(eHandicapNum > -1);
-	FAssert(eHandicapNum < GC.getNumHandicapInfos());
+	FASSERT_BOUNDS(0, GC.getNumHandicapInfos(), eHandicapNum)
 	return *(m_paHandicapInfo[eHandicapNum]);
 }
 
@@ -2035,8 +2002,7 @@ int cvInternalGlobals::getNumGameSpeedInfos() const
 
 CvGameSpeedInfo& cvInternalGlobals::getGameSpeedInfo(GameSpeedTypes eGameSpeedNum) const
 {
-	FAssert(eGameSpeedNum > -1);
-	FAssert(eGameSpeedNum < GC.getNumGameSpeedInfos());
+	FASSERT_BOUNDS(0, GC.getNumGameSpeedInfos(), eGameSpeedNum)
 	return *(m_paGameSpeedInfo[eGameSpeedNum]);
 }
 
@@ -2047,8 +2013,7 @@ int cvInternalGlobals::getNumTurnTimerInfos() const
 
 CvTurnTimerInfo& cvInternalGlobals::getTurnTimerInfo(TurnTimerTypes eTurnTimerNum) const
 {
-	FAssert(eTurnTimerNum > -1);
-	FAssert(eTurnTimerNum < GC.getNumTurnTimerInfos());
+	FASSERT_BOUNDS(0, GC.getNumTurnTimerInfos(), eTurnTimerNum)
 	return *(m_paTurnTimerInfo[eTurnTimerNum]);
 }
 
@@ -2059,8 +2024,7 @@ int cvInternalGlobals::getNumProcessInfos() const
 
 CvProcessInfo& cvInternalGlobals::getProcessInfo(ProcessTypes e) const
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumProcessInfos());
+	FASSERT_BOUNDS(0, GC.getNumProcessInfos(), e)
 	return *(m_paProcessInfo[e]);
 }
 
@@ -2071,8 +2035,7 @@ int cvInternalGlobals::getNumVoteInfos() const
 
 CvVoteInfo& cvInternalGlobals::getVoteInfo(VoteTypes e) const
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumVoteInfos());
+	FASSERT_BOUNDS(0, GC.getNumVoteInfos(), e)
 	return *(m_paVoteInfo[e]);
 }
 
@@ -2083,8 +2046,7 @@ int cvInternalGlobals::getNumProjectInfos() const
 
 CvProjectInfo& cvInternalGlobals::getProjectInfo(ProjectTypes e) const
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumProjectInfos());
+	FASSERT_BOUNDS(0, GC.getNumProjectInfos(), e)
 	return *(m_paProjectInfo[e]);
 }
 
@@ -2095,8 +2057,7 @@ int cvInternalGlobals::getNumBuildingInfos() const
 
 CvBuildingInfo& cvInternalGlobals::getBuildingInfo(BuildingTypes eBuildingNum) const
 {
-	FAssert(eBuildingNum > -1);
-	FAssert(eBuildingNum < GC.getNumBuildingInfos());
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuildingNum)
 	return *(m_paBuildingInfo[eBuildingNum]);
 }
 
@@ -2107,8 +2068,7 @@ int cvInternalGlobals::getNumSpecialBuildingInfos() const
 
 CvSpecialBuildingInfo& cvInternalGlobals::getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const
 {
-	FAssert(eSpecialBuildingNum > -1);
-	FAssert(eSpecialBuildingNum < GC.getNumSpecialBuildingInfos());
+	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eSpecialBuildingNum)
 	return *(m_paSpecialBuildingInfo[eSpecialBuildingNum]);
 }
 
@@ -2119,30 +2079,26 @@ int cvInternalGlobals::getNumActionInfos() const
 
 CvActionInfo& cvInternalGlobals::getActionInfo(int i) const
 {
-	FAssertMsg(i < getNumActionInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumActionInfos(), i)
 	return *(m_paActionInfo[i]);
 }
 
 CvMissionInfo& cvInternalGlobals::getMissionInfo(MissionTypes eMissionNum) const
 {
-	FAssert(eMissionNum > -1);
-	FAssert(eMissionNum < NUM_MISSION_TYPES);
+	FASSERT_BOUNDS(0, GC.getNumMissionInfos(), eMissionNum)
 	return *(m_paMissionInfo[eMissionNum]);
 }
 
 CvControlInfo& cvInternalGlobals::getControlInfo(ControlTypes eControlNum) const
 {
-	FAssert(eControlNum > -1);
-	FAssert(eControlNum < NUM_CONTROL_TYPES);
+	FASSERT_BOUNDS(0, NUM_CONTROL_TYPES, eControlNum)
 	FAssert(!m_paControlInfo.empty());
 	return *(m_paControlInfo[eControlNum]);
 }
 
 CvCommandInfo& cvInternalGlobals::getCommandInfo(CommandTypes eCommandNum) const
 {
-	FAssert(eCommandNum > -1);
-	FAssert(eCommandNum < NUM_COMMAND_TYPES);
+	FASSERT_BOUNDS(0, NUM_COMMAND_TYPES, eCommandNum)
 	return *(m_paCommandInfo[eCommandNum]);
 }
 
@@ -2153,8 +2109,7 @@ int cvInternalGlobals::getNumAutomateInfos() const
 
 CvAutomateInfo& cvInternalGlobals::getAutomateInfo(int iAutomateNum) const
 {
-	FAssertMsg(iAutomateNum < getNumAutomateInfos(), "Index out of bounds");
-	FAssertMsg(iAutomateNum > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, getNumAutomateInfos(), iAutomateNum)
 	return *(m_paAutomateInfo[iAutomateNum]);
 }
 
@@ -2165,8 +2120,7 @@ int cvInternalGlobals::getNumPromotionInfos() const
 
 CvPromotionInfo& cvInternalGlobals::getPromotionInfo(PromotionTypes ePromotionNum) const
 {
-	FAssert(ePromotionNum > -1);
-	FAssert(ePromotionNum < GC.getNumPromotionInfos());
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), ePromotionNum)
 	return *(m_paPromotionInfo[ePromotionNum]);
 }
 
@@ -2189,8 +2143,7 @@ int cvInternalGlobals::getNumTechInfos() const
 
 CvTechInfo& cvInternalGlobals::getTechInfo(TechTypes eTechNum) const
 {
-	FAssert(eTechNum > -1);
-	FAssert(eTechNum < GC.getNumTechInfos());
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTechNum)
 	return *(m_paTechInfo[eTechNum]);
 }
 
@@ -2201,8 +2154,7 @@ int cvInternalGlobals::getNumReligionInfos() const
 
 CvReligionInfo& cvInternalGlobals::getReligionInfo(ReligionTypes eReligionNum) const
 {
-	FAssert(eReligionNum > -1);
-	FAssert(eReligionNum < GC.getNumReligionInfos());
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eReligionNum)
 	return *(m_paReligionInfo[eReligionNum]);
 }
 
@@ -2213,8 +2165,7 @@ int cvInternalGlobals::getNumCorporationInfos() const
 
 CvCorporationInfo& cvInternalGlobals::getCorporationInfo(CorporationTypes eCorporationNum) const
 {
-	FAssert(eCorporationNum > -1);
-	FAssert(eCorporationNum < GC.getNumCorporationInfos());
+	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eCorporationNum)
 	return *(m_paCorporationInfo[eCorporationNum]);
 }
 
@@ -2225,8 +2176,7 @@ int cvInternalGlobals::getNumSpecialistInfos() const
 
 CvSpecialistInfo& cvInternalGlobals::getSpecialistInfo(SpecialistTypes eSpecialistNum) const
 {
-	FAssert(eSpecialistNum > -1);
-	FAssert(eSpecialistNum < GC.getNumSpecialistInfos());
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialistNum)
 	return *(m_paSpecialistInfo[eSpecialistNum]);
 }
 
@@ -2237,8 +2187,7 @@ int cvInternalGlobals::getNumCivicOptionInfos() const
 
 CvCivicOptionInfo& cvInternalGlobals::getCivicOptionInfo(CivicOptionTypes eCivicOptionNum) const
 {
-	FAssert(eCivicOptionNum > -1);
-	FAssert(eCivicOptionNum < GC.getNumCivicOptionInfos());
+	FASSERT_BOUNDS(0, GC.getNumCivicOptionInfos(), eCivicOptionNum)
 	return *(m_paCivicOptionInfo[eCivicOptionNum]);
 }
 
@@ -2249,8 +2198,7 @@ int cvInternalGlobals::getNumCivicInfos() const
 
 CvCivicInfo& cvInternalGlobals::getCivicInfo(CivicTypes eCivicNum) const
 {
-	FAssert(eCivicNum > -1);
-	FAssert(eCivicNum < GC.getNumCivicInfos());
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivicNum)
 	return *(m_paCivicInfo[eCivicNum]);
 }
 
@@ -2261,8 +2209,7 @@ int cvInternalGlobals::getNumDiplomacyInfos() const
 
 CvDiplomacyInfo& cvInternalGlobals::getDiplomacyInfo(int iDiplomacyNum) const
 {
-	FAssertMsg(iDiplomacyNum < getNumDiplomacyInfos(), "Index out of bounds");
-	FAssertMsg(iDiplomacyNum > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumDiplomacyInfos(), iDiplomacyNum)
 	return *(m_paDiplomacyInfo[iDiplomacyNum]);
 }
 
@@ -2273,8 +2220,7 @@ int cvInternalGlobals::getNumEraInfos() const
 
 CvEraInfo& cvInternalGlobals::getEraInfo(EraTypes eEraNum) const
 {
-	FAssert(eEraNum > -1);
-	FAssert(eEraNum < GC.getNumEraInfos());
+	FASSERT_BOUNDS(0, GC.getNumEraInfos(), eEraNum)
 	return *(m_aEraInfo[eEraNum]);
 }
 
@@ -2285,8 +2231,7 @@ int cvInternalGlobals::getNumHurryInfos() const
 
 CvHurryInfo& cvInternalGlobals::getHurryInfo(HurryTypes eHurryNum) const
 {
-	FAssert(eHurryNum > -1);
-	FAssert(eHurryNum < GC.getNumHurryInfos());
+	FASSERT_BOUNDS(0, GC.getNumHurryInfos(), eHurryNum)
 	return *(m_paHurryInfo[eHurryNum]);
 }
 
@@ -2297,8 +2242,7 @@ int cvInternalGlobals::getNumEmphasizeInfos() const
 
 CvEmphasizeInfo& cvInternalGlobals::getEmphasizeInfo(EmphasizeTypes eEmphasizeNum) const
 {
-	FAssert(eEmphasizeNum > -1);
-	FAssert(eEmphasizeNum < GC.getNumEmphasizeInfos());
+	FASSERT_BOUNDS(0, GC.getNumEmphasizeInfos(), eEmphasizeNum)
 	return *(m_paEmphasizeInfo[eEmphasizeNum]);
 }
 
@@ -2309,8 +2253,7 @@ int cvInternalGlobals::getNumUpkeepInfos() const
 
 CvUpkeepInfo& cvInternalGlobals::getUpkeepInfo(UpkeepTypes eUpkeepNum) const
 {
-	FAssert(eUpkeepNum > -1);
-	FAssert(eUpkeepNum < GC.getNumUpkeepInfos());
+	FASSERT_BOUNDS(0, GC.getNumUpkeepInfos(), eUpkeepNum)
 	return *(m_paUpkeepInfo[eUpkeepNum]);
 }
 
@@ -2321,8 +2264,7 @@ int cvInternalGlobals::getNumCultureLevelInfos() const
 
 CvCultureLevelInfo& cvInternalGlobals::getCultureLevelInfo(CultureLevelTypes eCultureLevelNum) const
 {
-	FAssert(eCultureLevelNum > -1);
-	FAssert(eCultureLevelNum < GC.getNumCultureLevelInfos());
+	FASSERT_BOUNDS(0, GC.getNumCultureLevelInfos(), eCultureLevelNum)
 	return *(m_paCultureLevelInfo[eCultureLevelNum]);
 }
 
@@ -2333,8 +2275,7 @@ int cvInternalGlobals::getNumVictoryInfos() const
 
 CvVictoryInfo& cvInternalGlobals::getVictoryInfo(VictoryTypes eVictoryNum) const
 {
-	FAssert(eVictoryNum > -1);
-	FAssert(eVictoryNum < GC.getNumVictoryInfos());
+	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), eVictoryNum)
 	return *(m_paVictoryInfo[eVictoryNum]);
 }
 
@@ -2345,8 +2286,7 @@ int cvInternalGlobals::getNumQuestInfos() const
 
 CvQuestInfo& cvInternalGlobals::getQuestInfo(int iIndex) const
 {
-	FAssert(iIndex > -1);
-	FAssert(iIndex < GC.getNumQuestInfos());
+	FASSERT_BOUNDS(0, GC.getNumQuestInfos(), iIndex)
 	return *(m_paQuestInfo[iIndex]);
 }
 
@@ -2357,8 +2297,7 @@ int cvInternalGlobals::getNumTutorialInfos() const
 
 CvTutorialInfo& cvInternalGlobals::getTutorialInfo(int iIndex) const
 {
-	FAssert(iIndex > -1);
-	FAssert(iIndex < GC.getNumTutorialInfos());
+	FASSERT_BOUNDS(0, GC.getNumTutorialInfos(), iIndex)
 	return *(m_paTutorialInfo[iIndex]);
 }
 
@@ -2369,8 +2308,7 @@ int cvInternalGlobals::getNumEventTriggerInfos() const
 
 CvEventTriggerInfo& cvInternalGlobals::getEventTriggerInfo(EventTriggerTypes eEventTrigger) const
 {
-	FAssert(eEventTrigger > -1);
-	FAssert(eEventTrigger < GC.getNumEventTriggerInfos());
+	FASSERT_BOUNDS(0, GC.getNumEventTriggerInfos(), eEventTrigger)
 	return *(m_paEventTriggerInfo[eEventTrigger]);
 }
 
@@ -2381,8 +2319,7 @@ int cvInternalGlobals::getNumEventInfos() const
 
 CvEventInfo& cvInternalGlobals::getEventInfo(EventTypes eEvent) const
 {
-	FAssert(eEvent > -1);
-	FAssert(eEvent < GC.getNumEventInfos());
+	FASSERT_BOUNDS(0, GC.getNumEventInfos(), eEvent)
 	return *(m_paEventInfo[eEvent]);
 }
 
@@ -2393,8 +2330,7 @@ int cvInternalGlobals::getNumEspionageMissionInfos() const
 
 CvEspionageMissionInfo& cvInternalGlobals::getEspionageMissionInfo(EspionageMissionTypes eEspionageMissionNum) const
 {
-	FAssert(eEspionageMissionNum > -1);
-	FAssert(eEspionageMissionNum < GC.getNumEspionageMissionInfos());
+	FASSERT_BOUNDS(0, GC.getNumEspionageMissionInfos(), eEspionageMissionNum)
 	return *(m_paEspionageMissionInfo[eEspionageMissionNum]);
 }
 
@@ -2410,8 +2346,7 @@ CvString*& cvInternalGlobals::getEntityEventTypes()
 
 CvString& cvInternalGlobals::getEntityEventTypes(EntityEventTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumEntityEventTypes());
+	FASSERT_BOUNDS(0, GC.getNumEntityEventTypes(), e)
 	return m_paszEntityEventTypes[e];
 }
 
@@ -2427,8 +2362,7 @@ CvString*& cvInternalGlobals::getAnimationOperatorTypes()
 
 CvString& cvInternalGlobals::getAnimationOperatorTypes(AnimationOperatorTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumAnimationOperatorTypes());
+	FASSERT_BOUNDS(0, GC.getNumAnimationOperatorTypes(), e)
 	return m_paszAnimationOperatorTypes[e];
 }
 
@@ -2439,8 +2373,7 @@ CvString*& cvInternalGlobals::getFunctionTypes()
 
 CvString& cvInternalGlobals::getFunctionTypes(FunctionTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < NUM_FUNC_TYPES);
+	FASSERT_BOUNDS(0, NUM_FUNC_TYPES, e)
 	return m_paszFunctionTypes[e];
 }
 
@@ -2456,8 +2389,7 @@ CvString*& cvInternalGlobals::getFlavorTypes()
 
 CvString& cvInternalGlobals::getFlavorTypes(FlavorTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumFlavorTypes());
+	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), e)
 	return m_paszFlavorTypes[e];
 }
 
@@ -2473,8 +2405,7 @@ CvString*& cvInternalGlobals::getArtStyleTypes()
 
 CvString& cvInternalGlobals::getArtStyleTypes(ArtStyleTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < GC.getNumArtStyleTypes());
+	FASSERT_BOUNDS(0, GC.getNumArtStyleTypes(), e)
 	return m_paszArtStyleTypes[e];
 }
 
@@ -2485,8 +2416,7 @@ int cvInternalGlobals::getNumUnitArtStyleTypeInfos() const
 
 CvUnitArtStyleTypeInfo& cvInternalGlobals::getUnitArtStyleTypeInfo(UnitArtStyleTypes eUnitArtStyleTypeNum) const
 {
-	FAssert(eUnitArtStyleTypeNum > -1);
-	FAssert(eUnitArtStyleTypeNum < GC.getNumUnitArtStyleTypeInfos());
+	FASSERT_BOUNDS(0, GC.getNumUnitArtStyleTypeInfos(), eUnitArtStyleTypeNum)
 	return *(m_paUnitArtStyleTypeInfo[eUnitArtStyleTypeNum]);
 }
 
@@ -2502,8 +2432,7 @@ CvString*& cvInternalGlobals::getCitySizeTypes()
 
 CvString& cvInternalGlobals::getCitySizeTypes(int i)
 {
-	FAssertMsg(i < getNumCitySizeTypes(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumCitySizeTypes(), i)
 	return m_paszCitySizeTypes[i];
 }
 
@@ -2514,8 +2443,7 @@ CvString*& cvInternalGlobals::getContactTypes()
 
 CvString& cvInternalGlobals::getContactTypes(ContactTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < NUM_CONTACT_TYPES);
+	FASSERT_BOUNDS(0, NUM_CONTACT_TYPES, e)
 	return m_paszContactTypes[e];
 }
 
@@ -2526,8 +2454,7 @@ CvString*& cvInternalGlobals::getDiplomacyPowerTypes()
 
 CvString& cvInternalGlobals::getDiplomacyPowerTypes(DiplomacyPowerTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < NUM_DIPLOMACYPOWER_TYPES);
+	FASSERT_BOUNDS(0, NUM_DIPLOMACYPOWER_TYPES, e)
 	return m_paszDiplomacyPowerTypes[e];
 }
 
@@ -2538,8 +2465,7 @@ CvString*& cvInternalGlobals::getAutomateTypes()
 
 CvString& cvInternalGlobals::getAutomateTypes(AutomateTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < NUM_AUTOMATE_TYPES);
+	FASSERT_BOUNDS(0, NUM_AUTOMATE_TYPES, e)
 	return m_paszAutomateTypes[e];
 }
 
@@ -2550,8 +2476,7 @@ CvString*& cvInternalGlobals::getDirectionTypes()
 
 CvString& cvInternalGlobals::getDirectionTypes(AutomateTypes e)
 {
-	FAssert(e > -1);
-	FAssert(e < NUM_AUTOMATE_TYPES);
+	FASSERT_BOUNDS(0, NUM_AUTOMATE_TYPES, e)
 	return m_paszDirectionTypes[e];
 }
 
@@ -2562,8 +2487,7 @@ int cvInternalGlobals::getNumPropertyInfos() const
 
 CvPropertyInfo& cvInternalGlobals::getPropertyInfo(PropertyTypes ePropertyNum) const
 {
-	FAssert(ePropertyNum > -1);
-	FAssert(ePropertyNum < GC.getNumPropertyInfos());
+	FASSERT_BOUNDS(0, GC.getNumPropertyInfos(), ePropertyNum)
 	return *(m_paPropertyInfo[ePropertyNum]);
 }
 
@@ -2574,8 +2498,7 @@ int cvInternalGlobals::getNumOutcomeInfos() const
 
 CvOutcomeInfo& cvInternalGlobals::getOutcomeInfo(OutcomeTypes eOutcomeNum) const
 {
-	FAssert(eOutcomeNum > -1);
-	FAssert(eOutcomeNum < GC.getNumOutcomeInfos());
+	FASSERT_BOUNDS(0, GC.getNumOutcomeInfos(), eOutcomeNum)
 	return *(m_paOutcomeInfo[eOutcomeNum]);
 }
 
@@ -2591,8 +2514,7 @@ CvString*& cvInternalGlobals::getFootstepAudioTypes()
 
 CvString& cvInternalGlobals::getFootstepAudioTypes(int i)
 {
-	FAssertMsg(i < getNumFootstepAudioTypes(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumFootstepAudioTypes(), i)
 	return m_paszFootstepAudioTypes[i];
 }
 
@@ -2624,8 +2546,7 @@ CvString& cvInternalGlobals::getFootstepAudioTags(int i) const
 	{
 		emptyString = new CvString("");
 	}
-	FAssertMsg(i < GC.getNumFootstepAudioTypes(), "Index out of bounds")
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumFootstepAudioTypes(), i)
 	return m_paszFootstepAudioTags ? m_paszFootstepAudioTags[i] : *emptyString;
 }
 
@@ -2653,7 +2574,7 @@ void cvInternalGlobals::cacheEnumGlobals()
 
 void cvInternalGlobals::cacheGlobals()
 {
-	OutputDebugString("Caching Globals: Start");
+	OutputDebugString("Caching Globals: Start/n");
 
 	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
 
@@ -2675,7 +2596,6 @@ void cvInternalGlobals::cacheGlobals()
 // BBAI Options
 	m_bBBAI_AIR_COMBAT = !(getDefineINT("BBAI_AIR_COMBAT") == 0);
 	m_bBBAI_HUMAN_VASSAL_WAR_BUILD = !(getDefineINT("BBAI_HUMAN_VASSAL_WAR_BUILD") == 0);
-	m_bBBAI_HUMAN_AS_VASSAL_OPTION = !(getDefineINT("BBAI_HUMAN_AS_VASSAL_OPTION") == 0);
 
 // Tech Diffusion
 	m_bTECH_DIFFUSION_ENABLE = !(getDefineINT("TECH_DIFFUSION_ENABLE") == 0);
@@ -2696,7 +2616,7 @@ void cvInternalGlobals::cacheGlobals()
 		m_szAlternateProfilSampleName = "";
 	}
 
-	OutputDebugString("Caching Globals: End");
+	OutputDebugString("Caching Globals: End/n");
 }
 
 /************************************************************************************************/
@@ -3149,114 +3069,6 @@ void cvInternalGlobals::deleteInfoArrays()
 	clearTypesMap();
 	m_aInfoVectors.clear();
 }
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-void cvInternalGlobals::doResetInfoClasses(int iNumSaveGameVector, std::vector<CvString> m_aszSaveGameVector)
-{
-	// Store stuff being set by the exe in temp arrays
-	StoreExeSettings();
-
-	//delete obsolete InfoClasses
-	deleteInfoArrays();
-
-	// reset the ModLoadControlVector
-	m_paModLoadControlVector.erase(m_paModLoadControlVector.begin(), m_paModLoadControlVector.end());
-
-	//Load the Savegame vector to the ModLoadControlVector(being used by the enum)
-	for ( int i = 0; i < iNumSaveGameVector; i++ )
-	{
-		m_paModLoadControlVector.push_back(m_aszSaveGameVector[i]);
-	}
-
-	//Delete InfoMap Keys
-	infoTypeFromStringReset();
-
-	//reload the new infoclasses
-	CvXMLLoadUtility XMLLoadUtility;
-	XMLLoadUtility.doResetGlobalInfoClasses();
-
-	//Reload Arts with the Current MLF
-	CvArtFileMgr ArtFileMgr = ArtFileMgr.GetInstance();
-	ArtFileMgr.Reset();
-
-	XMLLoadUtility.doResetInfoClasses();		// Reloads/allocs Art Defines
-
-	// Load stuff being set by the exe from temp arrays
-	LoadExeSettings();
-}
-void cvInternalGlobals::StoreExeSettings()
-{
-	// Chars from TGA files, CommerceInfo
-	m_iStoreExeSettingsCommerceInfo =  new int[NUM_COMMERCE_TYPES];
-	for ( int i = 0; i < NUM_COMMERCE_TYPES; i++ )
-	{
-		m_iStoreExeSettingsCommerceInfo[i] = getCommerceInfo((CommerceTypes)i).getChar();
-	}
-	// Chars from TGA files, YieldInfo
-	m_iStoreExeSettingsYieldInfo =  new int[NUM_YIELD_TYPES];
-	for ( int i = 0; i < NUM_YIELD_TYPES; i++ )
-	{
-		m_iStoreExeSettingsYieldInfo[i] = getYieldInfo((YieldTypes)i).getChar();
-	}	
-	// Chars from TGA files, ReligionInfo
-	m_iStoreExeSettingsReligionInfo =  new int[getNumReligionInfos()];
-	for ( int i = 0; i < getNumReligionInfos(); i++ )
-	{
-		m_iStoreExeSettingsReligionInfo[i] = getReligionInfo((ReligionTypes)i).getChar();
-	}
-	// Chars from TGA files, CorporationInfo
-	m_iStoreExeSettingsCorporationInfo =  new int[getNumCorporationInfos()];
-	for ( int i = 0; i < getNumCorporationInfos(); i++ )
-	{
-		m_iStoreExeSettingsCorporationInfo[i] = getCorporationInfo((CorporationTypes)i).getChar();
-	}
-	// Chars from TGA files, BonusInfo
-	m_iStoreExeSettingsBonusInfo =  new int[getNumBonusInfos()];
-	for ( int i = 0; i < getNumBonusInfos(); i++ )
-	{
-		m_iStoreExeSettingsBonusInfo[i] = getBonusInfo((BonusTypes)i).getChar();
-	}
-}
-void cvInternalGlobals::LoadExeSettings()
-{
-	// Chars from TGA files, CommerceInfo
-	for ( int i = 0; i < NUM_COMMERCE_TYPES; i++ )
-	{
-		getCommerceInfo((CommerceTypes)i).setChar(m_iStoreExeSettingsCommerceInfo[i]);
-	}
-	SAFE_DELETE_ARRAY(m_iStoreExeSettingsCommerceInfo);
-	// Chars from TGA files, YieldInfo
-	for ( int i = 0; i < NUM_YIELD_TYPES; i++ )
-	{
-		getYieldInfo((YieldTypes)i).setChar(m_iStoreExeSettingsYieldInfo[i]);
-	}
-	SAFE_DELETE_ARRAY(m_iStoreExeSettingsYieldInfo);
-	// Chars from TGA files, ReligionInfo
-	for ( int i = 0; i < getNumReligionInfos(); i++ )
-	{
-		getReligionInfo((ReligionTypes)i).setChar(m_iStoreExeSettingsReligionInfo[i]);
-	}
-	SAFE_DELETE_ARRAY(m_iStoreExeSettingsReligionInfo);
-	// Chars from TGA files, CorporationInfo
-	for ( int i = 0; i < getNumCorporationInfos(); i++ )
-	{
-		getCorporationInfo((CorporationTypes)i).setChar(m_iStoreExeSettingsCorporationInfo[i]);
-	}
-	SAFE_DELETE_ARRAY(m_iStoreExeSettingsCorporationInfo);
-	// Chars from TGA files, BonusInfo
-	for ( int i = 0; i < getNumBonusInfos(); i++ )
-	{
-		getBonusInfo((BonusTypes)i).setChar(m_iStoreExeSettingsBonusInfo[i]);
-	}
-	SAFE_DELETE_ARRAY(m_iStoreExeSettingsBonusInfo);
-}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
-
 
 //
 // Global Infos Hash Map
@@ -3416,35 +3228,42 @@ void cvInternalGlobals::infosReset()
 			infoBaseVector->at(j)->reset();
 	}
 }
+
+void cvInternalGlobals::cacheInfoTypes()
+{
+#define CACHE_INFO_TYPE(type, VAR) \
+	m_##VAR = (type)getInfoTypeForString(#VAR);
+
+	DO_FOR_EACH_INFO_TYPE(CACHE_INFO_TYPE)
+}
+
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
 
 void cvInternalGlobals::switchMap(MapTypes eMap)
 {	
-	//bool bInitial = false;
+	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eMap);
+	FAssert(eMap != CURRENT_MAP);
 
 	GC.getMap().beforeSwitch();
-
-	if (eMap > NO_MAP && eMap < GC.getNumMapInfos())
-		GC.getGame().setCurrentMap(eMap);
-
+	GC.getGame().setCurrentMap(eMap);
 	GC.getMap().afterSwitch();
 }
 
 CvViewport* cvInternalGlobals::getCurrentViewport() const
 {
-	return m_maps[GC.getGame().getCurrentMap()]->getCurrentViewport();
+	return m_maps[CURRENT_MAP]->getCurrentViewport();
 }
 
 int	cvInternalGlobals::getViewportSizeX() const
 {
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[GC.getGame().getCurrentMap()]->getGridWidth()) : m_maps[GC.getGame().getCurrentMap()]->getGridWidth();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[CURRENT_MAP]->getGridHeight()) : m_maps[CURRENT_MAP]->getGridWidth();
 }
 
 int	cvInternalGlobals::getViewportSizeY() const
 {
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[GC.getGame().getCurrentMap()]->getGridHeight()) : m_maps[GC.getGame().getCurrentMap()]->getGridHeight();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[CURRENT_MAP]->getGridHeight()) : m_maps[CURRENT_MAP]->getGridHeight();
 }
 
 int	cvInternalGlobals::getViewportSelectionBorder() const
@@ -3464,13 +3283,12 @@ CvMapExternal& cvInternalGlobals::getMapExternal() const
 
 	FAssert(currentViewport != NULL);
 
-	return *(currentViewport->getProxy());
+	return *currentViewport->getProxy();
 }
 
 CvMap& cvInternalGlobals::getMapByIndex(MapTypes eIndex) const
 {
-	FAssert(eIndex > NO_MAP);
-	FAssert(eIndex < GC.getNumMapInfos());
+	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eIndex)
 	return *m_maps[eIndex];
 }
 
@@ -3492,7 +3310,7 @@ void cvInternalGlobals::reprocessSigns()
 
 void cvInternalGlobals::initializeMap(MapTypes eMap)
 {
-	OutputDebugString("Initializing Map: Start");
+	OutputDebugString("Initializing Map: Start\n");
 	while ( m_maps.size() < (size_t)eMap )
 	{
 		//	Sparse or out of order initialization
@@ -3502,14 +3320,18 @@ void cvInternalGlobals::initializeMap(MapTypes eMap)
 	FAssertMsg(m_maps[eMap] == NULL, "Memory leak allocating a map that already exists");
 
 	m_maps[eMap] = new CvMap(eMap);
-	OutputDebugString("Initializing Map: End");
+
+	for (int i = 0; i < MAX_PLAYERS; i++)
+	{
+		GET_PLAYER((PlayerTypes)i).initContainersForMap(eMap);
+	}
+	OutputDebugString("Initializing Map: End\n");
 }
 
 bool cvInternalGlobals::mapInitialized(MapTypes eMap) const
 {
 	return (m_maps.size() > (size_t)eMap && m_maps[eMap] != NULL);
 }
-
 
 /*******************************/
 /***** Parallel Maps - End *****/
@@ -3561,11 +3383,7 @@ void cvInternalGlobals::resolveDelayedResolution()
 
 int cvInternalGlobals::getNumMissionInfos() const
 { 
-#ifdef FIXED_MISSION_NUMBER
-	return NUM_MISSION_TYPES;
-#else
 	return (int) m_paMissionInfo.size();
-#endif
 }
 
 inline CvMap& cvInternalGlobals::getMap() const
@@ -3595,7 +3413,6 @@ void cvInternalGlobals::setRouteFinder(FAStar* pVal) { m_routeFinder = pVal; }
 void cvInternalGlobals::setBorderFinder(FAStar* pVal) { m_borderFinder = pVal; }
 void cvInternalGlobals::setAreaFinder(FAStar* pVal) { m_areaFinder = pVal; }
 void cvInternalGlobals::setPlotGroupFinder(FAStar* pVal) { m_plotGroupFinder = pVal; }
-CvDLLUtilityIFaceBase* cvInternalGlobals::getDLLIFaceNonInl() { return g_DLL; }
 
 // BUG - BUG Info - start
 static bool bBugInitCalled = false;
@@ -3656,11 +3473,6 @@ bool cvInternalGlobals::getBBAI_AIR_COMBAT() const
 bool cvInternalGlobals::getBBAI_HUMAN_VASSAL_WAR_BUILD() const
 {
 	return m_bBBAI_HUMAN_VASSAL_WAR_BUILD;
-}
-
-bool cvInternalGlobals::getBBAI_HUMAN_AS_VASSAL_OPTION() const
-{
-	return m_bBBAI_HUMAN_AS_VASSAL_OPTION;
 }
 
 // Tech Diffusion

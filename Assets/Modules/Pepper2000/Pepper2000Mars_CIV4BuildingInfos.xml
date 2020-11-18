@@ -616,6 +616,7 @@
 			<Strategy>TXT_KEY_BUILDING_MARS_CYCLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_CYCLER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MARS_CYCLER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

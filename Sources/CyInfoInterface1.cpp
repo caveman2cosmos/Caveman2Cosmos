@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 
 //
 // Python interface for info classes (formerly structs)
@@ -32,27 +33,21 @@ void CyInfoPythonInterface1()
 		;
 
 	python::class_<CvSpecialistInfo, python::bases<CvInfoBase> >("CvSpecialistInfo")
+
 		.def("getGreatPeopleUnitType", &CvSpecialistInfo::getGreatPeopleUnitType, "int ()")
 		.def("getGreatPeopleRateChange", &CvSpecialistInfo::getGreatPeopleRateChange, "int ()")
 		.def("getMissionType", &CvSpecialistInfo::getMissionType, "int ()")
 
 		.def("isVisible", &CvSpecialistInfo::isVisible, "bool ()")
-		
+		.def("isSlave", &CvSpecialistInfo::isSlave, "bool ()")
+
 		.def("getYieldChange", &CvSpecialistInfo::getYieldChange, "int (int i)")
 		.def("getCommerceChange", &CvSpecialistInfo::getCommerceChange, "int (int i)")
 		.def("getExperience", &CvSpecialistInfo::getExperience, "int ()")
 		.def("getFlavorValue", &CvSpecialistInfo::getFlavorValue, "int (int i)")
 
 		.def("getTexture", &CvSpecialistInfo::getTexture, "string ()")
-/************************************************************************************************/
-/* Afforess	                  Start		 03/26/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-		;
+	;
 
 	python::class_<CvTechInfo, python::bases<CvInfoBase> >("CvTechInfo")
 		.def("getAdvisorType", &CvTechInfo::getAdvisorType, "int ()")
@@ -70,6 +65,7 @@ void CyInfoPythonInterface1()
 		.def("getGridX", &CvTechInfo::getGridX, "int ()")
 		.def("getGridY", &CvTechInfo::getGridY, "int ()")
 
+		.def("isGlobal", &CvTechInfo::isGlobal, "bool ()")
 		.def("isRepeat", &CvTechInfo::isRepeat, "bool ()")
 		.def("isTrade", &CvTechInfo::isTrade, "bool ()")
 		.def("isDisable", &CvTechInfo::isDisable, "bool ()")

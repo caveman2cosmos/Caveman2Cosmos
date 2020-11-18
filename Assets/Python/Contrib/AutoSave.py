@@ -16,7 +16,7 @@ def init():
 def onEndTurnReady(argsList):
 	iTurn, = argsList
 	inter = options.getInterval()
-	if inter < 2 or not iTurn % inter:
+	if inter > 0 and not iTurn % inter:
 		autoSave("[Late]", iTurn)
 
 def save(type, prefix, iTurn):

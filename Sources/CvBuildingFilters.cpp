@@ -7,6 +7,7 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvPlayerAI.h"
 
 void BuildingFilterBase::Activate()
@@ -324,8 +325,7 @@ BuildingFilterList::~BuildingFilterList()
 
 bool BuildingFilterList::isFilterActive(BuildingFilterTypes i) const
 {
-	FAssertMsg(i < NUM_BUILDING_FILTERS, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_BUILDING_FILTERS, i)
 	return m_apBuildingFilters[i]->isActive();
 }
 
@@ -341,8 +341,7 @@ void BuildingFilterList::setPlayer(CvPlayer *pPlayer)
 
 bool BuildingFilterList::setFilterActive(BuildingFilterTypes i, bool bActive)
 {
-	FAssertMsg(i < NUM_BUILDING_FILTERS, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, NUM_BUILDING_FILTERS, i)
 	return m_apBuildingFilters[i]->setActive(bActive);
 }
 
@@ -365,10 +364,7 @@ void BuildingFilterList::setFilterActiveAll(BuildingFilterTypes eFilter, bool bA
 		{
 			kLoopPlayer.setBuildingListFilterActive(eFilter, bActive);
 
-			foreach_(CvCity* pCity, kLoopPlayer.cities())
-			{
-				pCity->setBuildingListFilterActive(eFilter, bActive);
-			}
+			algo::for_each(kLoopPlayer.cities(), CvCity::fn::setBuildingListFilterActive(eFilter, bActive));
 		}
 	}
 }

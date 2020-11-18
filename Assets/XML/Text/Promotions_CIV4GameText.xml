@@ -27,13 +27,13 @@
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Spot on %s3_TypeName.</English>
 		<French>[ICON_BULLET]%D1_Mod de Perception %F2_Icon lorsque sur une case de type %s3_TypeName.</French>
-		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sicht %s3_TypeName.</German>
+		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sicht %s3_TypeName</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_RANGE_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Spot Range on %s3_TypeName.</English>
 		<French>[ICON_BULLET]%D1_Mod à la portée de Perception %F2_Icon lorsque sur une case de type %s3_TypeName.</French>
-		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sichtweite %s3_TypeName.</German>
+		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sichtweite %s3_TypeName</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_RANGE_CHANGE</Tag>
@@ -57,7 +57,7 @@
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_VEIL_PLOT_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Veil on %s3_Type.</English>
 		<French>[ICON_BULLET]%D1_Mod %F2_Icon Invisibilité sur %s3_Type.</French>
-		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Unsichtbarkeit %s3_Type.</German>
+		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Unsichtbarkeit %s3_Type</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ACCURACY</Tag>
@@ -113,6 +113,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_ANTITANK_DEFENSE</Tag>
 		<English>Anti-Tank Defense Promotion Line</English>
 		<French>Spécialisation Anti-Char</French>
+		<German>Panzerabwehr</German>
 		<Italian>Difesa anticarro</Italian>
 		<Polish>Linia Promocji: Obrona Przeciwczołgowa</Polish>
 	</TEXT>
@@ -334,12 +335,14 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CRIME_FIGHTING</Tag>
 		<English>Build Up (Crime Fighting) Promotionline</English>
 		<French>Spécialisation Anti-Criminalité</French>
+		<German>(Training) Verbrechensbekämpfung</German>
 		<Polish>Linia Promocji: Koncentracja (Walka z przestępczością)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CRIME_FIGHTING_HELP</Tag>
 		<English>Each Round spent building up Crime Fighting cumulatively improves the unit's ability to [COLOR_HIGHLIGHT_TEXT]Reduce Crime[COLOR_REVERT] in the city and tile that the unit is on, up to a limit of 5 rounds for maximum bonus of -15 Crime, provided each promotion level is qualified for by the unit.</English>
 		<French>A chaque tour la Spécialisation Anti-Criminalité réduit [COLOR_HIGHLIGHT_TEXT]la criminalité[COLOR_REVERT] dans la ville et la case où se trouve l'unité, avec un bonus maximum au bout de 5 tours.</French>
+		<German>Durch Training in Verbrechensbekämpfung kann die Einheit die [COLOR_HIGHLIGHT_TEXT]Kriminalitätsrate[COLOR_REVERT] der Stadt oder des Feldes, auf dem sie sich befindet, (um maximal 15 Punkte bei 5 Runden Training) reduzieren.</German>
 		<Polish>Each Round spent building up Crime Fighting improves the unit's ability to [COLOR_HIGHLIGHT_TEXT]Reduce Crime[COLOR_REVERT] in the city and tile that the unit is on, up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</Polish>
 	</TEXT>
 	<TEXT>
@@ -437,11 +440,13 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_INSPECTIONS</Tag>
 		<English>Build Up (Inspections) Promotionline</English>
 		<French>Spécialisation Inspection</French>
+		<German>(Training) Überprüfung</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_INSPECTIONS_HELP</Tag>
 		<English>Each round spent building up Inspections, the unit gains +.2% [COLOR_HIGHLIGHT_TEXT]Investigation[COLOR_REVERT] (to aid in catching local criminals) up to a maximum bonus of +1.0, provided each promotion level is qualified for by the unit.</English>
 		<French>Pour chaque tour passé en Spécialisation Ruse, l'unité gagne +0.2% [COLOR_HIGHLIGHT_TEXT]d'Investigation[COLOR_REVERT] (pour l'aider à capturer des criminels locaux), jusqu'à un maximum de +1, et ceci procuré pour chaque niveau de promotion que peut avoir l'unité.</French>
+		<German>Das Training in Überprüfung steigert den [COLOR_HIGHLIGHT_TEXT]Ermittlungserfolg[COLOR_REVERT] bei der Jagd auf kriminelle Subjekte um 0,2% pro Runde (maximal 1%).</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT</Tag>
@@ -594,6 +599,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUSHIDO</Tag>
 		<English>Bushido Promotion Line</English>
 		<French>Spécialisation Bushido</French>
+		<German>Bushido</German>
 		<Italian>Bushido</Italian>
 		<Polish>Linia Promocji: Honor</Polish>
 	</TEXT>
@@ -660,6 +666,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_CLOUT</Tag>
 		<English>Political Clout Promotion Line</English>
 		<French>Spécialisation 'Clout' Politique</French>
+		<German>Politischer Einfluss</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_COASTAL</Tag>
@@ -742,6 +749,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_CRACKDOWN</Tag>
 		<English>Crackdown Promotionline</English>
 		<French>Spécialisation Répression</French>
+		<German>Razzia</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CREATIVE</Tag>
@@ -1211,6 +1219,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_IDENTIFY</Tag>
 		<English>Identify Promotion Line</English>
 		<French>Spécialisation identification</French>
+		<German>Identifizieren</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_IMPERIAL</Tag>
@@ -1323,6 +1332,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_LONG_ARM</Tag>
 		<English>Long Arm Promotionline</English>
 		<French>Spécialisation Bras Long</French>
+		<German>Langer Arm</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_LOW_PROFILE</Tag>
@@ -1353,6 +1363,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_MARKSMAN</Tag>
 		<English>Marksman Promotion Line</English>
 		<French>Spécialisation Tireur d'elite</French>
+		<German>Scharfschütze</German>
 		<Italian>Tiratore scelto</Italian>
 		<Spanish>Punterea</Spanish>
 		<Polish>Linia Promocji: Snajper</Polish>
@@ -1527,6 +1538,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_POLICING</Tag>
 		<English>Policing Promotion Line</English>
 		<French>Spécialisation Maintien de l'ordre</French>
+		<German>Überwachung</German>
 		<Italian>Polizia</Italian>
 		<Polish>Linia Promocji: Policja</Polish>
 	</TEXT>
@@ -1864,6 +1876,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_SLEUTH</Tag>
 		<English>Sleuth Promotionline</English>
 		<French>Spécialisation Détective</French>
+		<German>Schnüffler</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SNEAK</Tag>
@@ -1889,6 +1902,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_SPEED</Tag>
 		<English>Speed Promotion Line</English>
 		<French>Spécialisation Vitesse</French>
+		<German>Geschwindigkeit</German>
 		<Italian>Speed Velocity</Italian>
 		<Polish>Linia Promocji: Szybkość</Polish>
 	</TEXT>
@@ -1909,6 +1923,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_STALL</Tag>
 		<English>Stall Promotionline</English>
 		<French>Spécialisation Manoeuvre</French>
+		<German>Blockieren</German>
 		<Italian>Stallo</Italian>
 		<Polish>Linia Promocji: Stoisko</Polish>
 	</TEXT>
@@ -2084,6 +2099,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_URBAN_TACTICS</Tag>
 		<English>Urban Tactics Promotion Line</English>
 		<French>Spécialisation Tactiques urbaines</French>
+		<German>Urbane Taktiken</German>
 		<Italian>Tattiche urbane</Italian>
 		<Polish>Linia Promocji: Taktyka Miejska</Polish>
 	</TEXT>
@@ -2646,7 +2662,7 @@
 		<Tag>TXT_KEY_PROMOTION_ANTITANK_DEFENSE1</Tag>
 		<English>Antitank Defense I</English>
 		<French>Défense Anti-char I</French>
-		<German>Panzerverteidigung I</German>
+		<German>Panzerabwehr I</German>
 		<Italian>Difesa anticarro I</Italian>
 		<Spanish>Defensa antitanque I</Spanish>
 		<Polish>Obrona Przeciwczołgowa I</Polish>
@@ -2655,7 +2671,7 @@
 		<Tag>TXT_KEY_PROMOTION_ANTITANK_DEFENSE2</Tag>
 		<English>Antitank Defense II</English>
 		<French>Défense Anti-char II</French>
-		<German>Panzerverteidigung II</German>
+		<German>Panzerabwehr II</German>
 		<Italian>Difesa anticarro II</Italian>
 		<Spanish>Defensa antitanque II</Spanish>
 		<Polish>Obrona Przeciwczołgowa II</Polish>
@@ -2664,7 +2680,7 @@
 		<Tag>TXT_KEY_PROMOTION_ANTITANK_DEFENSE3</Tag>
 		<English>Antitank Defense III</English>
 		<French>Défense Anti-char III</French>
-		<German>Panzerverteidigung III</German>
+		<German>Panzerabwehr III</German>
 		<Italian>Difesa anticarro III</Italian>
 		<Spanish>Defensa antitanque III</Spanish>
 		<Polish>Obrona Przeciwczołgowa III</Polish>
@@ -4078,30 +4094,35 @@
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING1</Tag>
 		<English>Build Up (Crime Fighting) I</English>
 		<French>Retranchement (Anti-crim.) I</French>
+		<German>(Training) Verbrechensbekämpfung I</German>
 		<Polish>Koncentracja (Walka z przestępczością) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING2</Tag>
 		<English>Build Up (Crime Fighting) II</English>
 		<French>Retranchement (Anti-crim.) II</French>
+		<German>(Training) Verbrechensbekämpfung II</German>
 		<Polish>Koncentracja (Walka z przestępczością) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING3</Tag>
 		<English>Build Up (Crime Fighting) III</English>
 		<French>Retranchement (Anti-crim.) III</French>
+		<German>(Training) Verbrechensbekämpfung III</German>
 		<Polish>Koncentracja (Walka z przestępczością) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING4</Tag>
 		<English>Build Up (Crime Fighting) IV</English>
 		<French>Retranchement (Anti-crim.) IV</French>
+		<German>(Training) Verbrechensbekämpfung IV</German>
 		<Polish>Koncentracja (Walka z przestępczością) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CRIME_FIGHTING5</Tag>
 		<English>Build Up (Crime Fighting) V</English>
 		<French>Retranchement (Anti-crim.) V</French>
+		<German>(Training) Verbrechensbekämpfung V</German>
 		<Polish>Koncentracja (Walka z przestępczością) V</Polish>
 	</TEXT>
 	<TEXT>
@@ -4353,26 +4374,31 @@
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_INSPECTIONS1</Tag>
 		<English>Build Up (Inspections) I</English>
 		<French>Spécialisation Inspection I</French>
+		<German>(Training) Überprüfung I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_INSPECTIONS2</Tag>
 		<English>Build Up (Inspections) II</English>
 		<French>Spécialisation Inspection II</French>
+		<German>(Training) Überprüfung II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_INSPECTIONS3</Tag>
 		<English>Build Up (Inspections) III</English>
 		<French>Spécialisation Inspection III</French>
+		<German>(Training) Überprüfung III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_INSPECTIONS4</Tag>
 		<English>Build Up (Inspections) IV</English>
 		<French>Spécialisation Inspection IV</French>
+		<German>(Training) Überprüfung IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_INSPECTIONS5</Tag>
 		<English>Build Up (Inspections) V</English>
 		<French>Spécialisation Inspection V</French>
+		<German>(Training) Überprüfung V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_LIE_IN_WAIT1</Tag>
@@ -5440,16 +5466,19 @@
 		<Tag>TXT_KEY_PROMOTION_CLOUT1</Tag>
 		<English>Political Clout I</English>
 		<French>Influence politique I</French>
+		<German>Politischer Einfluss I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CLOUT2</Tag>
 		<English>Political Clout II</English>
 		<French>Influence politique II</French>
+		<German>Politischer Einfluss II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CLOUT3</Tag>
 		<English>Political Clout III</English>
 		<French>Influence politique III</French>
+		<German>Politischer Einfluss III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CLOVIS_POINTS</Tag>
@@ -6184,26 +6213,31 @@
 		<Tag>TXT_KEY_PROMOTION_CRACKDOWN1</Tag>
 		<English>Crackdown I</English>
 		<French>Répression I</French>
+		<German>Razzia I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CRACKDOWN2</Tag>
 		<English>Crackdown II</English>
 		<French>Répression II</French>
+		<German>Razzia II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CRACKDOWN3</Tag>
 		<English>Crackdown III</English>
 		<French>Répression III</French>
+		<German>Razzia III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CRACKDOWN4</Tag>
 		<English>Crackdown IV</English>
 		<French>Répression IV</French>
+		<German>Razzia IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CRACKDOWN5</Tag>
 		<English>Crackdown V</English>
 		<French>Répression V</French>
+		<German>Razzia V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CRITICAL_MODIFIER_TEXT</Tag>
@@ -6469,7 +6503,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Hingabe</German>
+		<German>Engagement</German>
 		<Italian>
 			<Text>Dedizione</Text>
 			<Gender>Male</Gender>
@@ -9728,16 +9762,19 @@
 		<Tag>TXT_KEY_PROMOTION_IDENTIFY1</Tag>
 		<English>Identify I</English>
 		<French>Identification I</French>
+		<German>Identifizieren I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_IDENTIFY2</Tag>
 		<English>Identify II</English>
 		<French>Identification II</French>
+		<German>Identifizieren II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_IDENTIFY3</Tag>
 		<English>Identify III</English>
 		<French>Identification III</French>
+		<German>Identifizieren III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_IGNORE_NO_ENTRY_LEVEL_ADD</Tag>
@@ -9930,7 +9967,7 @@
 		<Tag>TXT_KEY_PROMOTION_INDUSTRYESPIONAGE_HELP</Tag>
 		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_RESEARCH] Reserves on Combat Victory</English>
 		<French>[ICON_BULLET]Pille 4% de la réserve de [ICON_RESEARCH] ennemie en cas de Victoire au Combat</French>
-		<German>[ICON_BULLET]erbeutet 4% der feindlichen [ICON_RESEARCH] bei einem Sieg im Kampf</German>
+		<German>[ICON_BULLET]erbeutet 4% der gegnerischen [ICON_RESEARCH] bei einem Sieg im Kampf</German>
 		<Italian>[ICON_BULLET]Ruba 4% delle risorse nemiche di [ICON_RESEARCH] quando vince una battaglia</Italian>
 		<Polish>[ICON_BULLET]Po zwycięstwie w walce grabi 4% rezerw wrogiego [ICON_RESEARCH]</Polish>
 	</TEXT>
@@ -10179,6 +10216,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INVESTIGATION_TEXT</Tag>
 		<English>[ICON_BULLET]%s1_Change%% Investigation</English>
+		<German>[ICON_BULLET]%s1_Change%% Ermittlungen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_IRON_ARMOR</Tag>
@@ -10647,16 +10685,19 @@
 		<Tag>TXT_KEY_PROMOTION_LONG_ARM1</Tag>
 		<English>Long Arm I</English>
 		<French>Bras long I</French>
+		<German>Langer Arm I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LONG_ARM2</Tag>
 		<English>Long Arm II</English>
 		<French>Bras long II</French>
+		<German>Langer Arm II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LONG_ARM3</Tag>
 		<English>Long Arm III</English>
 		<French>Bras long III</French>
+		<German>Langer Arm III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LONG_RANGE_SUPPORT_PERCENT_CHANGE_TEXT</Tag>
@@ -10804,7 +10845,7 @@
 		<Tag>TXT_KEY_PROMOTION_MANUEVERING2</Tag>
 		<English>Manuevering II</English>
 		<French>Manoeuvre II</French>
-		<German>ManöverII</German>
+		<German>Manöver II</German>
 		<Italian>Manovre II</Italian>
 		<Spanish>Maniobras II</Spanish>
 		<Polish>Manewrowanie II</Polish>
@@ -10830,7 +10871,7 @@
 		<Tag>TXT_KEY_PROMOTION_MARAUDER_HELP</Tag>
 		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_GOLD] Reserves on Combat Victory</English>
 		<French>[ICON_BULLET]Pille 4% de la réserve d'[ICON_GOLD] en cas de Victoire au Combat</French>
-		<German>[ICON_BULLET]erbeutet 4% des feindlichen [ICON_RESEARCH] bei einem Sieg im Kampf</German>
+		<German>[ICON_BULLET]erbeutet 4% des gegnerischen [ICON_GOLD] bei einem Sieg im Kampf</German>
 		<Italian>[ICON_BULLET]Ruba 4% delle riserve nemiche di [ICON_GOLD] quando vince una battaglia</Italian>
 		<Polish>[ICON_BULLET]Po zwycięstwie w walce grabi 4% rezerw wrogiego [ICON_GOLD]</Polish>
 	</TEXT>
@@ -12398,6 +12439,7 @@
 		<Tag>TXT_KEY_PROMOTION_POLICING10_DESC</Tag>
 		<English>Policing X</English>
 		<French>Maintien de l'ordre X</French>
+		<German>Überwachung X</German>
 		<Italian>Polizia X</Italian>
 		<Spanish>Policial X</Spanish>
 		<Polish>Policja X</Polish>
@@ -12406,6 +12448,7 @@
 		<Tag>TXT_KEY_PROMOTION_POLICING1_DESC</Tag>
 		<English>Policing I</English>
 		<French>Maintien de l'ordre I</French>
+		<German>Überwachung I</German>
 		<Italian>Polizia I</Italian>
 		<Spanish>Policial I</Spanish>
 		<Polish>Policja I</Polish>
@@ -12414,6 +12457,7 @@
 		<Tag>TXT_KEY_PROMOTION_POLICING2_DESC</Tag>
 		<English>Policing II</English>
 		<French>Maintien de l'ordre II</French>
+		<German>Überwachung II</German>
 		<Italian>Polizia II</Italian>
 		<Spanish>Policial II</Spanish>
 		<Polish>Policja II</Polish>
@@ -12422,6 +12466,7 @@
 		<Tag>TXT_KEY_PROMOTION_POLICING3_DESC</Tag>
 		<English>Policing III</English>
 		<French>Maintien de l'ordre III</French>
+		<German>Überwachung III</German>
 		<Italian>Polizia III</Italian>
 		<Spanish>Policial III</Spanish>
 		<Polish>Policja III</Polish>
@@ -12430,6 +12475,7 @@
 		<Tag>TXT_KEY_PROMOTION_POLICING4_DESC</Tag>
 		<English>Policing IV</English>
 		<French>Maintien de l'ordre IV</French>
+		<German>Überwachung IV</German>
 		<Italian>Polizia IV</Italian>
 		<Spanish>Policial IV</Spanish>
 		<Polish>Policja IV</Polish>
@@ -12438,6 +12484,7 @@
 		<Tag>TXT_KEY_PROMOTION_POLICING5_DESC</Tag>
 		<English>Policing V</English>
 		<French>Maintien de l'ordre V</French>
+		<German>Überwachung V</German>
 		<Italian>Polizia V</Italian>
 		<Spanish>Policial V</Spanish>
 		<Polish>Policja V</Polish>
@@ -12446,6 +12493,7 @@
 		<Tag>TXT_KEY_PROMOTION_POLICING6_DESC</Tag>
 		<English>Policing VI</English>
 		<French>Maintien de l'ordre VI</French>
+		<German>Überwachung VI</German>
 		<Italian>Polizia VI</Italian>
 		<Spanish>Policial VI</Spanish>
 		<Polish>Policja VI</Polish>
@@ -12454,6 +12502,7 @@
 		<Tag>TXT_KEY_PROMOTION_POLICING7_DESC</Tag>
 		<English>Policing VII</English>
 		<French>Maintien de l'ordre VII</French>
+		<German>Überwachung VII</German>
 		<Italian>Polizia VII</Italian>
 		<Spanish>Policial VII</Spanish>
 		<Polish>Policja VII</Polish>
@@ -12462,6 +12511,7 @@
 		<Tag>TXT_KEY_PROMOTION_POLICING8_DESC</Tag>
 		<English>Policing VIII</English>
 		<French>Maintien de l'ordre VIII</French>
+		<German>Überwachung VIII</German>
 		<Italian>Polizia VIII</Italian>
 		<Spanish>Policial VIII</Spanish>
 		<Polish>Policja VIII</Polish>
@@ -12470,6 +12520,7 @@
 		<Tag>TXT_KEY_PROMOTION_POLICING9_DESC</Tag>
 		<English>Policing IX</English>
 		<French>Maintien de l'ordre IX</French>
+		<German>Überwachung IX</German>
 		<Italian>Polizia IX</Italian>
 		<Spanish>Policial IX</Spanish>
 		<Polish>Policja IX</Polish>
@@ -14807,46 +14858,55 @@
 		<Tag>TXT_KEY_PROMOTION_SLEUTH1</Tag>
 		<English>Sleuth I</English>
 		<French>Détective I</French>
+		<German>Schnüffler I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SLEUTH2</Tag>
 		<English>Sleuth II</English>
 		<French>Détective II</French>
+		<German>Schnüffler II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SLEUTH3</Tag>
 		<English>Sleuth III</English>
 		<French>Détective III</French>
+		<German>Schnüffler III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SLEUTH4</Tag>
 		<English>Sleuth IV</English>
 		<French>Détective IV</French>
+		<German>Schnüffler IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SLEUTH5</Tag>
 		<English>Sleuth V</English>
 		<French>Détective V</French>
+		<German>Schnüffler V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SLEUTH6</Tag>
 		<English>Sleuth VI</English>
 		<French>Détective VI</French>
+		<German>Schnüffler VI</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SLEUTH7</Tag>
 		<English>Sleuth VII</English>
 		<French>Détective VII</French>
+		<German>Schnüffler VII</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SLEUTH8</Tag>
 		<English>Sleuth VIII</English>
 		<French>Détective VIII</French>
+		<German>Schnüffler VIII</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SLEUTH9</Tag>
 		<English>Sleuth IX</English>
 		<French>Détective IX</French>
+		<German>Schnüffler IX</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SLIGHTLY_ENTROPIC</Tag>
@@ -14888,7 +14948,7 @@
 		<Tag>TXT_KEY_PROMOTION_SNEAK_HELP</Tag>
 		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_ESPIONAGE] Reserves on Combat Victory</English>
 		<French>[ICON_BULLET]Pille 4% de la réserve d'[ICON_ESPIONAGE] après une Victoire au Combat</French>
-		<German>[ICON_BULLET]Plündert 4% der gegnesichen [ICON_ESPIONAGE] anch einem Sieg im Kampf</German>
+		<German>[ICON_BULLET]erbeutet 4% der gegnerischen [ICON_ESPIONAGE] bei einem Sieg im Kampf</German>
 		<Italian>[ICON_BULLET]Ruba 4% delle riserve nemiche di [ICON_ESPIONAGE] vincendo una battaglia</Italian>
 		<Polish>[ICON_BULLET]Po zwycięstwie grabi 4% wrogich zapasów [ICON_ESPIONAGE]</Polish>
 	</TEXT>
@@ -15183,6 +15243,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Blockieren I</German>
 		<Italian>
 			<Text>Stallo I</Text>
 			<Gender>Male</Gender>
@@ -15203,6 +15264,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Blockieren II</German>
 		<Italian>
 			<Text>Stallo II</Text>
 			<Gender>Male</Gender>
@@ -15223,6 +15285,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Blockieren III</German>
 		<Italian>
 			<Text>Stallo III</Text>
 			<Gender>Male</Gender>
@@ -15243,6 +15306,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Blockieren IV</German>
 		<Italian>
 			<Text>Stallo IV</Text>
 			<Gender>Male</Gender>
@@ -15263,6 +15327,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Blockieren V</German>
 		<Italian>
 			<Text>Stallo V</Text>
 			<Gender>Male</Gender>
@@ -16763,7 +16828,7 @@
 		<Tag>TXT_KEY_PROMOTION_URBAN_TACTICS1</Tag>
 		<English>Urban Tactics I</English>
 		<French>Tactiques Urbaines I</French>
-		<German>Stadttaktiken I</German>
+		<German>Urbane Taktiken I</German>
 		<Italian>Tattiche urbane I</Italian>
 		<Spanish>Estrategia urbana I</Spanish>
 		<Polish>Taktyka Miejska I</Polish>
@@ -16772,7 +16837,7 @@
 		<Tag>TXT_KEY_PROMOTION_URBAN_TACTICS2</Tag>
 		<English>Urban Tactics II</English>
 		<French>Tactiques Urbaines II</French>
-		<German>Stadttaktiken II</German>
+		<German>Urbane Taktiken II</German>
 		<Italian>Tattiche urbane II</Italian>
 		<Spanish>Estrategia urbana II</Spanish>
 		<Polish>Taktyka Miejska II</Polish>
@@ -16781,7 +16846,7 @@
 		<Tag>TXT_KEY_PROMOTION_URBAN_TACTICS3</Tag>
 		<English>Urban Tactics III</English>
 		<French>Tactiques Urbaines III</French>
-		<German>Stadttaktiken III</German>
+		<German>Urbane Taktiken III</German>
 		<Italian>Tattiche urbane III</Italian>
 		<Spanish>Estrategia urbana III</Spanish>
 		<Polish>Taktyka Miejska III</Polish>
@@ -17021,26 +17086,31 @@
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_CENTAUR</Tag>
 		<English>Way of the Centaur</English>
 		<French>Voie du Centaure</French>
+		<German>Weg des Zentauren</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_FEATHER</Tag>
 		<English>Way of the Feather</English>
 		<French>Voie de la plume</French>
+		<German>Weg der Feder</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_FIST</Tag>
 		<English>Way of the Fist</English>
 		<French>Voie du Poing</French>
+		<German>Weg der Faust</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_LEECH</Tag>
 		<English>Way of the Leech</English>
 		<French>Voie de la Goule</French>
+		<German>Weg des Blutsaugers</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_SHADOWS</Tag>
 		<English>Way of the Shadows</English>
 		<French>Voie des Ombres</French>
+		<German>Weg der Schatten</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WARRIOR</Tag>
@@ -17052,21 +17122,25 @@
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WAVES</Tag>
 		<English>Way of the Waves</English>
 		<French>Voie des Vagues</French>
+		<German>Weg der Wellen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WILD</Tag>
 		<English>Way of the Wild</English>
 		<French>Voie de la Nature</French>
+		<German>Weg der Wildnis</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WIND</Tag>
 		<English>Way of the Wind</English>
 		<French>Voie du Vent</French>
+		<German>Weg des Windes</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WOLF</Tag>
 		<English>Way of the Wolf</English>
 		<French>Voie du Loup</French>
+		<German>Weg des Wolfes</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WEAKEN_PER_TURN_NEGATIVE_TEXT</Tag>

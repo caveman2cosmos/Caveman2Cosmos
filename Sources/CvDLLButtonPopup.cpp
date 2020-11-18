@@ -1,5 +1,6 @@
 // buttonPopup.cpp
 
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
@@ -2784,7 +2785,7 @@ bool CvDLLButtonPopup::launchEventPopup(CvPopup* pPopup, CvPopupInfo &info)
 		CvPlot* pPlot = GC.getMap().plot(pTriggeredData->m_iPlotX, pTriggeredData->m_iPlotY);
 		if (NULL != pPlot && pPlot->isInViewport())
 		{
-			gDLL->getEngineIFace()->addColoredPlot(pPlot->getViewportX(), pPlot->getViewportY(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
+			gDLL->getEngineIFace()->addColoredPlot(pPlot->getViewportX(), pPlot->getViewportY(), GC.getColorInfo(GC.getCOLOR_WARNING_TEXT()).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
 			gDLL->getInterfaceIFace()->lookAt(pPlot->getPoint(), CAMERALOOKAT_NORMAL);
 		}
 	}
@@ -3419,7 +3420,7 @@ bool CvDLLButtonPopup::launchImprovementUpgradeOptionsPopup(CvPopup* pPopup, CvP
 		const CvImprovementInfo& kImprovementX = GC.getImprovementInfo(eImprovement);
 
 		// Toffer - Upgrade cost code commented out in setImprovementType() for the time being
-		//if (kImprovementX.getHighestCost() <= GET_PLAYER(pPlot->getOwner()).getEffectiveGold())
+		//if (kImprovementX.getHighestCost() <= GET_PLAYER(pPlot->getOwner()).getGold())
 		{
 			if ((ImprovementTypes)kImprovement.getImprovementUpgrade() == eImprovement)
 			{

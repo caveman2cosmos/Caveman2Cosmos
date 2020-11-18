@@ -459,7 +459,7 @@ protected:
 
 
 	bool AI_approximatePath(CvPlot* pToPlot, int iFlags, int* piPathTurns) const;
-	CvUnitAI* AI_cityConstructionTargeted(CvCity* pCity, BuildingTypes eBuilding, CvSelectionGroup* omitGroup) const;
+	CvUnitAI* AI_cityConstructionTargeted(const CvCity* pCity, BuildingTypes eBuilding, const CvSelectionGroup* omitGroup) const;
 
 	// added so under cheat mode we can call protected functions for testing
 	friend class CvGameTextMgr;
@@ -489,7 +489,7 @@ public:
 	bool AI_airBombCities();
 	bool AI_moveToTarget(CvUnit* pTarget);
 	void AI_shadowMove();
-	bool AI_protectTarget(CvUnit* pTarget);
+	bool AI_protectTarget(const CvUnit* pTarget);
 	bool AI_joinMilitaryCity(bool bNaval = false);
 	bool AI_isPlotWellDefended(CvPlot* pPlot, bool bIncludeAdjacent, int iOddsOfDefeat);
 /************************************************************************************************/
@@ -514,9 +514,9 @@ public:
 	//	joing one lead by a unit with an override, but reset if we join another group
 	virtual void AI_setLeaderPriority(int iPriority);	//	 -1 means reset to default
 
-	bool AI_fulfillHealerNeed(CvPlot* pPlot);
-	bool AI_fulfillImmediateHealerNeed(CvPlot* pPlot);
-	bool AI_fulfillCityHealerNeed(CvPlot* pPlot);
+	bool AI_fulfillHealerNeed(const CvPlot* pPlot);
+	bool AI_fulfillImmediateHealerNeed(const CvPlot* pPlot);
+	bool AI_fulfillCityHealerNeed(const CvPlot* pPlot);
 
 	bool AI_fulfillPropertyControlNeed();
 
@@ -548,14 +548,6 @@ public:
 
 	static PlayerTypes			m_cachedPlayer;
 	static CvReachablePlotSet*	m_cachedMissionaryPlotset;
-
-public:
-
-	//
-	// Algorithm/range helpers
-	//
-	struct fn {
-	}; 
 };
 
 #endif

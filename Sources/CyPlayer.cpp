@@ -1,3 +1,4 @@
+#include "CvCity.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvPlayerAI.h"
@@ -263,19 +264,10 @@ std::wstring CyPlayer::getCivilizationDescription(int iForm)
 	return m_pPlayer ? m_pPlayer->getCivilizationDescription((uint)iForm) : std::wstring();
 }
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/* For dynamic civ names                                                                        */
-/************************************************************************************************/
-void CyPlayer::setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::wstring szNewAdj)
+void CyPlayer::setCivName(const std::wstring szNewDesc, const std::wstring szNewShort, const std::wstring szNewAdj)
 {
-	if( m_pPlayer )
-		m_pPlayer->setCivName(szNewDesc, szNewShort, szNewAdj);
+	m_pPlayer->setCivName(szNewDesc, szNewShort, szNewAdj);
 }
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 std::wstring CyPlayer::getCivilizationDescriptionKey()
 {
@@ -375,11 +367,6 @@ int CyPlayer::getCurrentInflationCostModifier()
 int CyPlayer::getEquilibriumInflationCostModifier()
 {
 	return m_pPlayer ? m_pPlayer->getEquilibriumInflationCostModifier() : 0;
-}
-
-int CyPlayer::countTotalCulture()
-{
-	return m_pPlayer ? m_pPlayer->processedNationalCulture() : -1;
 }
 
 int CyPlayer::countOwnedBonuses(int /*BonusTypes*/ eBonus)
@@ -617,11 +604,6 @@ int /*RouteTypes*/ CyPlayer::getBestRoute(CyPlot* pPlot) const
 	return m_pPlayer ? (int) m_pPlayer->getBestRoute(NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
 }
 
-int CyPlayer::getImprovementUpgradeRate(int /*ImprovementTypes*/ eImprovement) const
-{
-	return m_pPlayer ? m_pPlayer->getImprovementUpgradeRateTimes100((ImprovementTypes)eImprovement)/100 : -1;
-}
-
 int CyPlayer::calculateTotalYield(int /*YieldTypes*/ eYield)
 {
 	return m_pPlayer ? m_pPlayer->calculateTotalYield((YieldTypes)eYield) : -1;
@@ -657,7 +639,7 @@ int CyPlayer::calculateTotalCityUnhealthiness()
 	return m_pPlayer ? m_pPlayer->calculateTotalCityUnhealthiness() : -1;
 }
 
-unsigned long CyPlayer::getFinalUnitUpkeep()
+int64_t CyPlayer::getFinalUnitUpkeep()
 {
 	return m_pPlayer ? m_pPlayer->getFinalUnitUpkeep() : -1;
 }
@@ -667,7 +649,7 @@ int CyPlayer::calculateUnitSupply()
 	return m_pPlayer ? m_pPlayer->calculateUnitSupply() : -1;
 }
 
-int CyPlayer::calculatePreInflatedCosts()
+int64_t CyPlayer::calculatePreInflatedCosts()
 {
 	return m_pPlayer ? m_pPlayer->calculatePreInflatedCosts() : -1;
 }
@@ -677,7 +659,7 @@ int CyPlayer::calculateInflationRate()
 	return m_pPlayer ? m_pPlayer->calculateInflationRate() : -1;
 }
 
-int CyPlayer::calculateInflatedCosts()
+int64_t CyPlayer::calculateInflatedCosts()
 {
 	return m_pPlayer ? m_pPlayer->calculateInflatedCosts() : -1;
 }
@@ -930,7 +912,7 @@ int CyPlayer::getAveragePopulation()
 	return m_pPlayer ? m_pPlayer->getAveragePopulation() : -1;
 }
 
-long CyPlayer::getRealPopulation()
+int64_t CyPlayer::getRealPopulation() const
 {
 	return m_pPlayer ? m_pPlayer->getRealPopulation() : -1;
 }
@@ -945,43 +927,21 @@ int CyPlayer::getTotalLandScored()
 	return m_pPlayer ? m_pPlayer->getTotalLandScored() : -1;
 }
 
-int CyPlayer::getEffectiveGold() 
-{
-	return m_pPlayer ? m_pPlayer->getEffectiveGold() : -1;
-}
-
-int CyPlayer::getGold() 
+int64_t CyPlayer::getGold() const
 {
 	return m_pPlayer ? m_pPlayer->getGold() : -1;
 }
 
-int CyPlayer::getGreaterGold() 
-{
-	return m_pPlayer ? m_pPlayer->getGreaterGold() : -1;
-}
-
-void CyPlayer::setGold(int iNewValue)
+void CyPlayer::setGold(int64_t iNewValue)
 {
 	if (m_pPlayer)
 		m_pPlayer->setGold(iNewValue);
 }
 
-void CyPlayer::changeGold(int iChange)
+void CyPlayer::changeGold(int64_t iChange)
 {
 	if (m_pPlayer)
 		m_pPlayer->changeGold(iChange);
-}
-
-void CyPlayer::setGreaterGold(int iNewValue)
-{
-	if (m_pPlayer)
-		m_pPlayer->setGreaterGold(iNewValue);
-}
-
-void CyPlayer::changeGreaterGold(int iChange)
-{
-	if (m_pPlayer)
-		m_pPlayer->changeGreaterGold(iChange);
 }
 
 int CyPlayer::getGoldPerTurn()
@@ -1431,6 +1391,11 @@ int CyPlayer::getCorporationMaintenanceModifier()
 	return m_pPlayer ? m_pPlayer->getCorporationMaintenanceModifier() : -1;
 }
 
+int64_t CyPlayer::getTreasuryUpkeep()
+{
+	return m_pPlayer ? m_pPlayer->getTreasuryUpkeep() : -1;
+}
+
 int CyPlayer::getTotalMaintenance()
 {
 	return m_pPlayer ? m_pPlayer->getTotalMaintenance() : -1;
@@ -1609,9 +1574,11 @@ int CyPlayer::getStateReligionFreeExperience()
 	return m_pPlayer ? m_pPlayer->getStateReligionFreeExperience() : -1;
 }
 
-CyCity* CyPlayer::getCapitalCity()
+CyCity* CyPlayer::getCapitalCity() const
 {
-	return m_pPlayer ? new CyCity(m_pPlayer->getCapitalCity()) : NULL;
+	FAssert(m_pPlayer);
+	CvCity* city = m_pPlayer->getCapitalCity();
+	return city ? new CyCity(city) : NULL;
 }
 
 int CyPlayer::getCitiesLost()
@@ -1921,34 +1888,12 @@ int CyPlayer::getGoldPerTurnByPlayer(int /*PlayerTypes*/ eIndex)
 
 bool CyPlayer::isFeatAccomplished(int /*FeatTypes*/ eIndex)	
 {
-	//TB Something's wrong in the python and this allows me to protect against it.
-	if (eIndex < 0)
-	{
-		FErrorMsg("eIndex is expected to be non-negative (invalid Feat Called by Python and Caught Early)");
-		return false;
-	}
-	if (eIndex >= NUM_FEAT_TYPES)
-	{
-		FErrorMsg("eIndex is expected to be within maximum bounds (invalid Feat Called by Python and Caught Early)");
-		return false;
-	}
 	return m_pPlayer ? m_pPlayer->isFeatAccomplished((FeatTypes)eIndex) : false;
 }
 
 void CyPlayer::setFeatAccomplished(int /*FeatTypes*/ eIndex, bool bNewValue)
 {
-	//TB Something's wrong in the python and this allows me to protect against it.
-	if (eIndex < 0)
-	{
-		FErrorMsg("eIndex is expected to be non-negative (invalid Feat Called by Python and Caught Early)");
-		return;
-	}
-	if(eIndex >= NUM_FEAT_TYPES)
-	{
-		FErrorMsg("eIndex is expected to be within maximum bounds (invalid Feat Called by Python and Caught Early)");
-		return;
-	}
-	else if (m_pPlayer)
+	if (m_pPlayer)
 	{
 		m_pPlayer->setFeatAccomplished((FeatTypes)eIndex, bNewValue);
 	}
@@ -2266,6 +2211,16 @@ std::wstring CyPlayer::getCityName(int iIndex)
 	return m_pPlayer ? m_pPlayer->getCityName(iIndex) : std::wstring();
 }
 
+python::list CyPlayer::cities() const
+{
+	python::list list = python::list();
+	foreach_(CvCity* city, m_pPlayer->cities())
+	{
+		list.append(new CyCity(city));
+	}
+	return list;
+}
+
 // returns tuple of (CyCity, iterOut)
 python::tuple CyPlayer::firstCity(bool bRev)
 {
@@ -2528,55 +2483,45 @@ bool CyPlayer::AI_isWillingToTalk(int /*PlayerTypes*/ ePlayer)
 // BUG - Refuses to Talk - end
 
 
-int CyPlayer::getScoreHistory(int iTurn) const
+int64_t CyPlayer::getScoreHistory(int iTurn) const
 {
 	return (NULL != m_pPlayer ? m_pPlayer->getScoreHistory(iTurn) : 0);
 }
 
-int CyPlayer::getEconomyHistory(int iTurn) const
+int64_t CyPlayer::getEconomyHistory(int iTurn) const
 {
 	return (NULL != m_pPlayer ? m_pPlayer->getEconomyHistory(iTurn) : 0);
 }
 
-int CyPlayer::getIndustryHistory(int iTurn) const
+int64_t CyPlayer::getIndustryHistory(int iTurn) const
 {
 	return (NULL != m_pPlayer ? m_pPlayer->getIndustryHistory(iTurn) : 0);
 }
 
-int CyPlayer::getAgricultureHistory(int iTurn) const
+int64_t CyPlayer::getAgricultureHistory(int iTurn) const
 {
 	return (NULL != m_pPlayer ? m_pPlayer->getAgricultureHistory(iTurn) : 0);
 }
 
-int CyPlayer::getPowerHistory(int iTurn) const
+int64_t CyPlayer::getPowerHistory(int iTurn) const
 {
 	return (NULL != m_pPlayer ? m_pPlayer->getPowerHistory(iTurn) : 0);
 }
 
-int CyPlayer::getCultureHistory(int iTurn) const
+int64_t CyPlayer::getCultureHistory(int iTurn) const
 {
 	return (NULL != m_pPlayer ? m_pPlayer->getCultureHistory(iTurn) : 0);
 }
 
-int CyPlayer::getEspionageHistory(int iTurn) const
+int64_t CyPlayer::getEspionageHistory(int iTurn) const
 {
 	return (NULL != m_pPlayer ? m_pPlayer->getEspionageHistory(iTurn) : 0);
 }
 
-/****************************************************************************************/
-/* REVOLUTIONDCM				28/05/09						Glider1                 */
-/**																						*/
-/**																						*/
-/****************************************************************************************/
-// RevolutionDCM - revolution stability history start
-int CyPlayer::getRevolutionStabilityHistory(int iTurn) const
+int64_t CyPlayer::getRevolutionStabilityHistory(int iTurn) const
 {
 	return (NULL != m_pPlayer ? m_pPlayer->getRevolutionStabilityHistory(iTurn) : 0);
 }
-// RevolutionDCM end
-/****************************************************************************************/
-/* REVOLUTIONDCM				END     						Glider1                 */
-/****************************************************************************************/
 
 std::string CyPlayer::getScriptData() const
 {
@@ -2766,18 +2711,18 @@ void CyPlayer::setTeam(int /*TeamTypes*/ eIndex)
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-int CyPlayer::getCulture() const
+int64_t CyPlayer::getCulture() const
 {
 	return m_pPlayer ? m_pPlayer->getCulture() : 0;
 }
 
-void CyPlayer::setCulture(int iNewValue)
+void CyPlayer::setCulture(int64_t iNewValue)
 {
 	if (m_pPlayer)
 		m_pPlayer->setCulture(iNewValue);
 }
 
-void CyPlayer::changeCulture(int iAddValue)
+void CyPlayer::changeCulture(int64_t iAddValue)
 {
 	if (m_pPlayer)
 		m_pPlayer->changeCulture(iAddValue);

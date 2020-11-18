@@ -12,6 +12,8 @@
 #define CV_PROPERTY_SOURCE_H
 
 class CvGameObject;
+class CvXMLLoadUtility;
+class IntExpr;
 class PropertySourceContext;
 
 // Base class of which the actual property source classes are derived

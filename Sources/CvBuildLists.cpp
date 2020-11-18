@@ -6,6 +6,8 @@
 //  PURPOSE: Store build lists for a player
 //
 //------------------------------------------------------------------------------------------------
+#include "CvBuildingInfo.h"
+#include "CvBuildLists.h"
 #include "CvGameCoreDLL.h"
 #include "CvInitCore.h"
 #include <iostream>

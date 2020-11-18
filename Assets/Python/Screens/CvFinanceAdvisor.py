@@ -55,6 +55,8 @@ class CvFinanceAdvisor:
 		self.iPlayer = iPlayer = G.getActivePlayer()
 		self.nWidgetCount = 0
 
+		self.goldFromCivs = 0
+		self.yBuildingExpenses = 0
 		self.szTreasury = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_TREASURY", (0,))[:-3]
 
 		self.bStrike = bStrike = CyPlayer.isStrike()
@@ -135,8 +137,7 @@ class CvFinanceAdvisor:
 		############
 		iCommerce = iTiles = iYield0 = iYield1 = iYield2 = iYield3 = iYield4 = 0
 		iTeam = CyPlayer.getTeam()
-		CyCity, i = CyPlayer.firstCity(False)
-		while CyCity:
+		for CyCity in CyPlayer.cities():
 			if not CyCity.isDisorder():
 				# Work plots
 				for j in range(GC.getNUM_CITY_PLOTS()):
@@ -147,7 +148,7 @@ class CvFinanceAdvisor:
 				# Trade
 				for j in range(CyCity.getTradeRoutes()):
 					CyCityX = CyCity.getTradeCity(j)
-					if not CyCityX or CyCityX.isNone(): continue
+					if not CyCityX: continue
 
 					trade = CyCity.calculateTradeYield(YieldTypes.YIELD_COMMERCE, CyCity.calculateTradeProfitTimes100(CyCityX))
 					if CyCityX.getTeam() == iTeam:
@@ -159,7 +160,6 @@ class CvFinanceAdvisor:
 				# specialists
 				for iType in range(GC.getNumSpecialistInfos()):
 					iYield4 += CyPlayer.specialistYield(iType, YieldTypes.YIELD_COMMERCE) * (CyCity.getSpecialistCount(iType) + CyCity.getFreeSpecialistCount(iType))
-			CyCity, i = CyPlayer.nextCity(i, False)
 
 		Pnl = "FinAdv_Scroll_1"
 		screen.addScrollPanel(Pnl, "", x0, y0 + 32, dx, dy - 64, ePanelHudHelp)
@@ -240,11 +240,16 @@ class CvFinanceAdvisor:
 		screen.addScrollPanel(Pnl, "", x0, y0 + 32, dx, dy - 64, ePanelHudHelp)
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
 
+		if CyPlayer.isAnarchy():
+			return
+
 		iExpenses = 0
 		iFinalUnitUpkeep = CyPlayer.getFinalUnitUpkeep()
 		totalUnitSupply = CyPlayer.calculateUnitSupply()
+		iTreasuryUpkeep = CyPlayer.getTreasuryUpkeep()
 		totalMaintenance = CyPlayer.getTotalMaintenance()
 		totalCivicUpkeep = CyPlayer.getCivicUpkeep([], False)
+
 		iInflation = CyPlayer.calculateInflatedCosts() - CyPlayer.calculatePreInflatedCosts()
 		self.goldFromCivs = goldFromCivs = CyPlayer.getGoldPerTurn()
 
@@ -267,6 +272,13 @@ class CvFinanceAdvisor:
 		screen.setLabelAt("", Pnl, uFont2 + str(totalMaintenance), 1<<1, x, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_CITY_MAINT, iPlayer, 1)
 		iExpenses += totalMaintenance
 		y += 20
+
+		if iTreasuryUpkeep:
+			szText = TRNSLTR.getText("TXT_KEY_TREASURY_UPKEEP", ())
+			screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, eWidGen, 1, 2)
+			screen.setLabelAt("", Pnl, uFont2 + str(iTreasuryUpkeep), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 2)
+			iExpenses += iTreasuryUpkeep
+			y += 20
 
 		szText = TRNSLTR.getText("TXT_KEY_FINANCIAL_ADVISOR_CIVICS", ())
 		screen.setLabelAt("", Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, WidgetTypes.WIDGET_HELP_FINANCE_CIVIC_UPKEEP, iPlayer, 1)
@@ -301,40 +313,32 @@ class CvFinanceAdvisor:
 		self.deleteAllWidgets(screen, aName)
 		# Enumerators
 		eWidGen = WidgetTypes.WIDGET_GENERAL
-		ePanelHudHelp = PanelStyles.PANEL_STYLE_HUD_HELP
-		eTableEmpty = TableStyles.TABLE_STYLE_EMPTY
 		eGameFont = FontTypes.GAME_FONT
 		eComGold = CommerceTypes.COMMERCE_GOLD
 		# Variables
 		xRes = self.xRes
-		yRes = self.yRes
 		uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1 = self.aFontList
 		iconCommerceList = self.iconCommerceList
 		CyPlayer = self.CyPlayer
-		iPlayer = self.iPlayer
 
 		iIncome = CyPlayer.getCommerceRate(eComGold)
 		if not CyPlayer.isCommerceFlexible(CommerceTypes.COMMERCE_RESEARCH):
 			iIncome += CyPlayer.calculateBaseNetResearch()
 		goldFromCivs = self.goldFromCivs
 		iIncome += goldFromCivs
-		playerGoldModifier = CyPlayer.getCommerceRateModifier(eComGold)
-		playerCapitalGoldModifier = CyPlayer.getCapitalCommerceRateModifier(eComGold)
 
 		# Treasury footer
 		szTxt = self.szTreasury
 		iGold = CyPlayer.getGold()
-		iGreaterGold = CyPlayer.getGreaterGold()
-		iEffectiveGold = 1000000 * iGreaterGold + iGold
 		iGoldRate = CyPlayer.calculateGoldRate()
-		if iEffectiveGold < 0:
+		if iGold < 0:
 			szTxt += "<color=255,0,0,255>"
-		szTxt += "%d%s" %(iEffectiveGold, iconCommerceList[eComGold])
+		szTxt += "%d%s" %(iGold, iconCommerceList[eComGold])
 		if iGoldRate:
 			szTxt += " <color="
-			if iGoldRate > 0 and iEffectiveGold + iGoldRate >= 0:
+			if iGoldRate > 0 and iGold + iGoldRate >= 0:
 				szTxt += "127,255,0,255>"
-			elif iGoldRate < 0 and iEffectiveGold + iGoldRate < 0:
+			elif iGoldRate < 0 and iGold + iGoldRate < 0:
 				szTxt += "255,124,0,255>"
 			else:
 				szTxt += "255,227,0,255>"
@@ -396,6 +400,13 @@ class CvFinanceAdvisor:
 				szCommerce = uFont2b + str(iIncome) + iconCommerceList[iType]
 				screen.setLabelAt(aName(), Pnl, szCommerce, 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
 
+		if CyPlayer.isAnarchy():
+			return
+
+		iPlayer = self.iPlayer
+		playerGoldModifier = CyPlayer.getCommerceRateModifier(eComGold)
+		playerCapitalGoldModifier = CyPlayer.getCapitalCommerceRateModifier(eComGold)
+
 		# Income
 		iTaxRate = CyPlayer.getCommercePercent(eComGold)
 
@@ -421,8 +432,7 @@ class CvFinanceAdvisor:
 		iWealthCount = 0
 		fWealth = 0.0
 		eWealth = GC.getInfoTypeForString("PROCESS_WEALTH")
-		CyCity, i = CyPlayer.firstCity(False)
-		while CyCity:
+		for CyCity in CyPlayer.cities():
 			if not CyCity.isDisorder():
 				fCityTaxes = CyCity.getYieldRate(YieldTypes.YIELD_COMMERCE) * iTaxRate / 100.0
 				fTaxes += fCityTaxes
@@ -483,7 +493,6 @@ class CvFinanceAdvisor:
 					if iCount > 0:
 						entry[3] += iCount
 						entry[4] += iCount * fCityTotal * iMultiplier / 100.0
-			CyCity, i = CyPlayer.nextCity(i, False)
 
 		iTotalMinusTaxes = int(fBuildings) + int(fHeadquarters) + int(fShrines) + int(fCorporations) + int(fSpecialists) + int(fWealth) + int(fPlayerGoldModifierEffect) + int(fBonusGoldModifierEffect)
 		for entry in multipliers:

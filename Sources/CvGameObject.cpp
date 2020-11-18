@@ -7,6 +7,7 @@
 //
 //------------------------------------------------------------------------------------------------
 
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
@@ -366,11 +367,8 @@ void CvGameObjectPlot::foreach(GameObjectTypes eType, bst::function<void (CvGame
 			break;
 
 		case GAMEOBJECT_UNIT:
-			CLLNode<IDInfo>* pUnitNode = m_pPlot->headUnitNode();
-			while (pUnitNode != NULL)
+			foreach_(CvUnit* pUnit, m_pPlot->units())
 			{
-				CvUnit* pUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = m_pPlot->nextUnitNode(pUnitNode);
 				func(pUnit->getGameObject());
 			}
 			break;
@@ -762,7 +760,7 @@ void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
 	const int iNum = kInfo.getNumPropertyBuildings();
 	//TB Combat Mods (disease special manifestation and removal system)
-	//PropertyTypes eDiseaseType = (PropertyTypes)GC.getInfoTypeForString("PROPERTY_DISEASE");
+	//const PropertyTypes eDiseaseType = GC.getPROPERTY_DISEASE();
 
 	//if (eProperty != eDiseaseType)
 	//{

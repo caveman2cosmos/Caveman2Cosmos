@@ -5100,49 +5100,45 @@ class StartingArea :
 						print lineString
 				return
 
-class StartPlot :
-		def __init__(self,x,y,localValue):
-				self.x = x
-				self.y = y
-				self.localValue = localValue
-				self.totalValue = 0
-				self.numberOfOwnedCities = 0
-				self.distanceToOwner = -1
-				self.nearestStart = -1
-				self.vacant = True
-				self.owner = None
-				self.avgDistance = 0
-				return
-		def isCoast(self):
-				gameMap = CyMap()
-				plot = gameMap.plot(self.x,self.y)
-				waterArea = plot.waterArea()
-				if waterArea.isNone() == True or waterArea.isLake() == True:
-						return False
-				return True
+class StartPlot:
+	def __init__(self,x,y,localValue):
+		self.x = x
+		self.y = y
+		self.localValue = localValue
+		self.totalValue = 0
+		self.numberOfOwnedCities = 0
+		self.distanceToOwner = -1
+		self.nearestStart = -1
+		self.vacant = True
+		self.owner = None
+		self.avgDistance = 0
+		return
 
-		def isRiverSide(self):
-				gameMap = CyMap()
-				plot = gameMap.plot(self.x,self.y)
-				return plot.isRiverSide()
+	def isCoast(self):
+		waterArea = CyMap().plot(self.x, self.y).waterArea()
+		return not waterArea.isNone() and not waterArea.isLake()
 
-		def plot(self):
-				gameMap = CyMap()
-				return gameMap.plot(self.x,self.y)
-		def copy(self):
-				cp = StartPlot(self.x,self.y,self.localValue)
-				cp.totalValue = self.totalValue
-				cp.numberOfOwnedCities = self.numberOfOwnedCities
-				cp.distanceToOwner = self.distanceToOwner
-				cp.nearestStart = self.nearestStart
-				cp.vacant = self.vacant
-				cp.owner = self.owner
-				cp.avgDistance = self.avgDistance
-				return cp
-		def __str__(self):
-				linestring = "x=%(x)3d,y=%(y)3d,localValue=%(lv)6d,totalValue =%(tv)6d, nearestStart=%(ad)6d, coastalCity=%(cc)d" % \
-				{"x":self.x,"y":self.y,"lv":self.localValue,"tv":self.totalValue,"ad":self.nearestStart,"cc":self.isCoast()}
-				return linestring
+	def isRiverSide(self):
+		return CyMap().plot(self.x,self.y).isRiverSide()
+
+	def plot(self):
+		return CyMap().plot(self.x,self.y)
+
+	def copy(self):
+		cp = StartPlot(self.x,self.y,self.localValue)
+		cp.totalValue = self.totalValue
+		cp.numberOfOwnedCities = self.numberOfOwnedCities
+		cp.distanceToOwner = self.distanceToOwner
+		cp.nearestStart = self.nearestStart
+		cp.vacant = self.vacant
+		cp.owner = self.owner
+		cp.avgDistance = self.avgDistance
+		return cp
+
+	def __str__(self):
+		linestring = "x=%(x)3d,y=%(y)3d,localValue=%(lv)6d,totalValue =%(tv)6d, nearestStart=%(ad)6d, coastalCity=%(cc)d" % \
+		{"x":self.x,"y":self.y,"lv":self.localValue,"tv":self.totalValue,"ad":self.nearestStart,"cc":self.isCoast()}
+		return linestring
 
 hm = HeightMap()
 cm = ClimateMap()
@@ -5922,9 +5918,9 @@ def addFeatures():
 
 						if plot.getFeatureType() == FeatureTypes.NO_FEATURE:
 							for iI in range(gc.getNumFeatureInfos()):
-					#			print self.gc.getFeatureInfo(iI).getDescription()
+					#			print gc.getFeatureInfo(iI).getDescription()
 								if plot.canHaveFeature(iI):
-					#				print "Can have feature with probability: %d" % self.gc.getFeatureInfo(iI).getAppearanceProbability()
+					#				print "Can have feature with probability: %d" % gc.getFeatureInfo(iI).getAppearanceProbability()
 									if PRand.random() * 10000 < gc.getFeatureInfo(iI).getAppearanceProbability():
 					#					print "Setting feature"
 										plot.setFeatureType(iI, -1)

@@ -17,6 +17,7 @@
 
 #pragma warning( disable: 4251 )	// needs to have dll-interface to be used by clients of class
 
+class CounterSet;
 class CvCity;
 class CvDeal;
 class CvPopupInfo;
@@ -28,6 +29,7 @@ class CvPlayer;
 class CvGameTextMgr
 {
 	friend class CvGlobals;
+	CounterSet* inspectUnitCombatCounters;
 public:
 	// singleton accessor
 	DllExport static CvGameTextMgr& GetInstance();
@@ -70,8 +72,8 @@ public:
 	void parseSpecialistHelpActual(CvWStringBuffer &szHelpString, SpecialistTypes eSpecialist, CvCity* pCity, bool bCivilopediaText = false, int iChange = 0);
 // BUG - Specialist Actual Effects - end
 	void parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const CvCity& kCity);
-	void parsePromotionHelp(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar* pcNewline = NEWLINE);
-	void parsePromotionHelpInternal(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar* pcNewline, bool bAccrueLines);
+	void parsePromotionHelp(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar_t* pcNewline = NEWLINE);
+	void parsePromotionHelpInternal(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar_t* pcNewline, bool bAccrueLines);
 	void parseCivicInfo(CvWStringBuffer &szBuffer, CivicTypes eCivic, bool bCivilopediaText = false, bool bPlayerContext = false, bool bSkipName = false);
 	void parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePlayer);
 	/*** Dexy - Fixed Borders START ****/
@@ -297,7 +299,7 @@ public:
 	void getNukePlotHelp(CvPlot* pPlot, CvWString& strHelp);
 	DllExport void getInterfaceCenterText(CvWString& strText);
 	DllExport void getTurnTimerText(CvWString& strText);
-	DllExport void getFontSymbols(std::vector< std::vector<wchar> >& aacSymbols, std::vector<int>& aiMaxNumRows);
+	DllExport void getFontSymbols(std::vector< std::vector<wchar_t> >& aacSymbols, std::vector<int>& aiMaxNumRows);
 	DllExport void assignFontIds(int iFirstSymbolCode, int iPadAmount);
 
 	DllExport void getCityDataForAS(std::vector<CvWBData>& mapCityList, std::vector<CvWBData>& mapBuildingList, std::vector<CvWBData>& mapAutomateList);

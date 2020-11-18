@@ -3706,7 +3706,7 @@
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__RAWYIELDS_TEXT</Tag>
 		<English>Raw Yields</English>
 		<French>Commerce Pur / Production</French>
-		<German>Anzeige der Roherträge</German>
+		<German>Roherträge</German>
 		<Italian>Rendite Lorde</Italian>
 		<Spanish>Rendimiento en bruto</Spanish>
 	</TEXT>
@@ -5700,20 +5700,6 @@
 		<Spanish>Apoyo al ataque</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_BATTLE_EFFECTS_HOVER</Tag>
-		<English>Causes "Battlefield Terrain", which significantly reduces productivity and mobility on plots where a battle is fought</English>
-		<French>Transforme les cases qui sont le théâtre d'un combat en "Champs de Bataille", réduisant de manière significative leur productivité et la mobilité des unités y accédant.</French>
-		<German>Wenn eine Schlacht stattfindet, wird auf der Karte ein "Schlachtfeld" erzeugt, dass die Produktivität senkt und die Bewegung von Einheiten verringert</German>
-		<Spanish>Causa el efecto "Campo de batalla" en las casillas donde se libra una batalla, el cual reduce significativamente la producción y la movilidad.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_BATTLE_EFFECTS_TEXT</Tag>
-		<English>Battle Effects</English>
-		<French>Effets de Batailles</French>
-		<German>Kampfeffekte</German>
-		<Spanish>Efectos de batalla</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_FIGHTER_ENGAGE_HOVER</Tag>
 		<English>Enables fighters to actively target and engage enemy aircraft</English>
 		<French>Permet aux Avions de Chasse d'engager le Combat en sélectionnant une cible aérienne.</French>
@@ -7468,18 +7454,12 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<Spanish>Eventos estratégicos</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TECHTREEERACOLORS_HOVER</Tag>
-		<English>This setting changes tech tree screen to use Rise of Mankind era coloring method which is different from BUG mod's method. Requires restart before the change to this setting is applied in-game.</English>
-		<French>Ce paramètre change l'écran de l'arbre des Techs, au niveau des Couleurs utilisées pour différencier les Eres. Nécessite le redémarrage du Jeu.</French>
-		<German>Diese Einstellung verändert das Technologiefenster indem die Rise of Mankind-Farbdarstellung gewählt wird, die sich vom BUG-Mod unterscheidet. Erfordert einen Neustart des CIV-Programms.</German>
-		<Spanish>Esta opción cambia la Vista del árbol tecnológico para usar el método de coloreado de edades de Rise of Mankind, diferente al método del mod BUG. Requiere reiniciar el juego.</Spanish>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TELEPATHICRELIGION_HOVER</Tag>
+		<English>When a religion is founded: Every leader who has it as their favourite religion will get it in their capital cities immediatly, regardless of where it was founded.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TECHTREEERACOLORS_TEXT</Tag>
-		<English>RoM Tech tree era colors</English>
-		<French>Couleur des Eres pour l'Arbre de Techs RoM</French>
-		<German>RoM Technologiebaum Zeitalter-Farben</German>
-		<Spanish>Colores de Edad de RoM</Spanish>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TELEPATHICRELIGION_TEXT</Tag>
+		<English>Telepathic Religion</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TERRAINDAMAGE_HOVER</Tag>
@@ -24438,7 +24418,7 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 		<Tag>TXT_KEY_BUG_YEAR_BUILT</Tag>
 		<English>Built in %s1_year</English>
 		<French>Construit en %s1_year</French>
-		<German>[NEWLINE]Existiert seit %s1_year</German>
+		<German>existiert seit %s1_year</German>
 		<Spanish>Construido en %s1_year</Spanish>
 	</TEXT>
 </Civ4GameText>

@@ -695,9 +695,9 @@ class WBPlotScreen:
 
 		elif inputClass.getFunctionName().find("UpgradeTime") > -1:
 			if inputClass.getData1() == 1030:
-				pPlot.changeUpgradeProgress(- iChange)
+				pPlot.changeImprovementUpgradeProgress(- iChange)
 			elif inputClass.getData1() == 1031:
-				pPlot.changeUpgradeProgress(min(iChange, pPlot.getUpgradeTimeLeft(pPlot.getImprovementType(), pPlot.getOwner()) - 1))
+				pPlot.changeImprovementUpgradeProgress(min(iChange, pPlot.getUpgradeTimeLeft(pPlot.getImprovementType(), pPlot.getOwner()) - 1))
 			self.placeImprovements()
 
 		elif inputClass.getFunctionName() == "WBPlotFeature":

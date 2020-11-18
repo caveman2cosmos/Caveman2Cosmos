@@ -144,7 +144,7 @@ public:
 	int countHumanPlayersAlive() const; // Exposed to Python
 
 	int countTotalCivPower() const; // Exposed to Python
-	int countTotalNukeUnits()const; // Exposed to Python
+	int countTotalNukeUnits() const; // Exposed to Python
 	int countKnownTechNumTeams(TechTypes eTech) const; // Exposed to Python
 	int getNumFreeBonuses(BuildingTypes eBuilding) const; // Exposed to Python
 
@@ -174,8 +174,6 @@ public:
 
 	DllExport void reviveActivePlayer(); // Exposed to Python
 	void reviveActivePlayer(PlayerTypes iPlayer); // Exposed to Python
-
-	void drawBattleEffects();
 
 	DllExport int getNumHumanPlayers(); // Exposed to Python
 
@@ -360,7 +358,6 @@ public:
 	bool canEverConstruct(BuildingTypes eBuilding) const;
 	bool canEverTrain(UnitTypes eUnit) const;
 	bool canEverSpread(CorporationTypes eCorporation) const;
-	void setFutureEras();
 
 	int getFlexibleDifficultyTimer(PlayerTypes eIndex) const;
 	void setFlexibleDifficultyTimer(PlayerTypes eIndex, int iNewValue);
@@ -480,7 +477,7 @@ public:
 	TeamTypes getRankTeam(int iRank) const; // Exposed to Python
 	void setRankTeam(int iRank, TeamTypes eTeam);
 
-	int getTeamRank(TeamTypes eTeam)const; // Exposed to Python
+	int getTeamRank(TeamTypes eTeam) const; // Exposed to Python
 	void setTeamRank(TeamTypes eTeam, int iRank);
 
 	DllExport int getTeamScore(TeamTypes eTeam) const; // Exposed to Python
@@ -609,7 +606,7 @@ public:
 		CvString logMsg;
 	};
 
-	void logRandomResult(const wchar* szStreamName, const char* pszLog, int iMax, int iNum);
+	void logRandomResult(const wchar_t* szStreamName, const char* pszLog, int iMax, int iNum);
 
 	DllExport int calculateSyncChecksum(); // Exposed to Python
 	DllExport int calculateOptionsChecksum(); // Exposed to Python
@@ -935,6 +932,10 @@ public:
 
 	CvProperties* getProperties();
 	const CvProperties* getPropertiesConst() const;
+
+	bool isValidByGameOption(const CvUnitCombatInfo& info) const;
 };
+
+#define CURRENT_MAP GC.getGame().getCurrentMap()
 
 #endif

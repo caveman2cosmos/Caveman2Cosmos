@@ -25,6 +25,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_AGRICULTURAL_ACHIEVEMENT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_AGRICULTURAL_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMMERCIAL_ACHIEVEMENT</Type>
@@ -52,6 +53,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_COMMERCIAL_ACHIEVEMENT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_COMMERCIAL_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENVIRONMENTAL_ACHIEVEMENT_EFFECT</Type>
@@ -193,6 +195,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_INDUSTRIAL_ACHIEVEMENT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_INDUSTRIAL_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEDICAL_ACHIEVEMENT</Type>
@@ -243,6 +246,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_ACHIEVEMENT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MILITARY_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLITICAL_ACHIEVEMENT</Type>
@@ -271,6 +275,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_POLITICAL_ACHIEVEMENT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_POLITICAL_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SAFETY_ACHIEVEMENT</Type>
@@ -323,6 +328,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SCIENTIFIC_ACHIEVEMENT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SCIENTIFIC_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEAFARING_ACHIEVEMENT</Type>
@@ -355,6 +361,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SEAFARING_ACHIEVEMENT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SEAFARING_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_ACHIEVEMENT</Type>
@@ -7079,6 +7086,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURAL_ACHIEVEMENT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CULTURAL_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLOOD_DANCE</Type>
@@ -13964,6 +13972,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_SCOTLAND_YARD</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SCOTLAND_YARD</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ACADEMY</Type>
@@ -14006,6 +14015,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_ACADEMY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BUILDING_ACADEMY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS1</Type>
@@ -14952,6 +14962,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_STANDARD_OF_MEASUREMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STATUE_OF_ZEUS</Type>
@@ -15738,7 +15749,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_SSTAR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_ARCHERY_EFFECT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_ARCHERY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15760,7 +15771,7 @@
 			<iPower>1</iPower>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TRADITION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_ARCHERY_EFFECT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRADITION_ASTHETIC_APPRECIATION</Type>
@@ -15789,7 +15800,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_SSTAR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_ASTHETIC_APPRECIATION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_ASTHETIC_APPRECIATION</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15816,7 +15827,7 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TRADITION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_ASTHETIC_APPRECIATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRADITION_WORK_ETHIC</Type>
@@ -15870,7 +15881,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_SPY_NETWORK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15958,6 +15968,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SPY_NETWORK</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SPY_NETWORK</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EARTH_MYTH</Type>

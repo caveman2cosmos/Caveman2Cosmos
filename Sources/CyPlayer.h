@@ -6,9 +6,6 @@
 // Python wrapper class for CvPlayer
 //
 
-//#include "CvEnums.h"
-//#include "CvStructs.h"
-
 class CyUnit;
 class CvPlayer;
 class CvProperties;
@@ -68,7 +65,7 @@ public:
 	std::wstring getNameKey();
 	std::wstring getCivilizationDescription(int iForm);
 
-	void setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::wstring szNewAdj);
+	void setCivName(const std::wstring szNewDesc, const std::wstring szNewShort, const std::wstring szNewAdj);
 
 	std::wstring getCivilizationDescriptionKey();
 	std::wstring getCivilizationShortDescription(int iForm);
@@ -95,7 +92,6 @@ public:
 	int getCurrentInflationCostModifier();
 	int getEquilibriumInflationCostModifier();
 
-	int countTotalCulture();
 	int countOwnedBonuses(int /*BonusTypes*/ eBonus);
 	int countUnimprovedBonuses(CyArea* pArea, CyPlot* pFromPlot);
 	int countCityFeatures(int /*FeatureTypes*/ eFeature);
@@ -148,7 +144,6 @@ public:
 	void removeBuilding(int /*BuildingTypes*/ eBuilding);
 	bool canBuild(CyPlot* pPlot, int /*BuildTypes*/ eBuild, bool bTestEra, bool bTestVisible);
 	int /*RouteTypes*/ getBestRoute(CyPlot* pPlot) const;
-	int getImprovementUpgradeRate(int /*ImprovementTypes*/ eImprovement) const;
 
 	int calculateTotalYield(int /*YieldTypes*/ eYield);
 	int calculateTotalExports(int /*YieldTypes*/ eYield);
@@ -160,11 +155,11 @@ public:
 	int calculateTotalCityHealthiness();
 	int calculateTotalCityUnhealthiness();
 
-	unsigned long getFinalUnitUpkeep();
+	int64_t getFinalUnitUpkeep();
 	int calculateUnitSupply();
-	int calculatePreInflatedCosts();
+	int64_t calculatePreInflatedCosts();
 	int calculateInflationRate();
-	int calculateInflatedCosts();
+	int64_t calculateInflatedCosts();
 
 	int calculateGoldRate();
 	int calculateTotalCommerce();
@@ -216,20 +211,15 @@ public:
 	void setStartingPlot(CyPlot* pPlot, bool bUpdateStartDist);
 	int getTotalPopulation();
 	int getAveragePopulation();
-	long getRealPopulation();
+	int64_t getRealPopulation() const;
 
 	int getTotalLand();
 	int getTotalLandScored();
 
-	int getEffectiveGold();
-	int getGold();
-	int getGreaterGold();
-	void setGold(int iNewValue);
-	void changeGold(int iChange);
+	int64_t getGold() const;
+	void setGold(int64_t iNewValue);
+	void changeGold(int64_t iChange);
 	int getGoldPerTurn();
-
-	void setGreaterGold(int iNewValue);
-	void changeGreaterGold(int iChange);
 
 	int getAdvancedStartPoints();
 	void setAdvancedStartPoints(int iNewValue);
@@ -326,6 +316,7 @@ public:
 	int getDistanceMaintenanceModifier();
 	int getNumCitiesMaintenanceModifier();
 	int getCorporationMaintenanceModifier();
+	int64_t getTreasuryUpkeep();
 	int getTotalMaintenance();
 	int getUpkeepModifier();
 	int getLevelExperienceModifier() const;
@@ -364,7 +355,7 @@ public:
 	int getStateReligionBuildingProductionModifier();
 	void changeStateReligionBuildingProductionModifier(int iChange);
 	int getStateReligionFreeExperience();
-	CyCity* getCapitalCity();
+	CyCity* getCapitalCity() const;
 	int getCitiesLost();
 
 	int getWinsVsBarbs();
@@ -501,18 +492,23 @@ public:
 	bool pushResearch(int /*TechTypes*/ iIndex, bool bClear);
 	void popResearch(int /*TechTypes*/ eTech);
 	int getLengthResearchQueue();
+
 	void addCityName(std::wstring szName);
 	int getNumCityNames();
 	std::wstring getCityName(int iIndex);
+
+	python::list cities() const;
 	python::tuple firstCity(bool bRev); // returns tuple of (CyCity, iterOut)
 	python::tuple nextCity(int iterIn, bool bRev); // returns tuple of (CyCity, iterOut)
 	CyCity* nthCity(int n, bool bRev); // shortcut for firstCity + nextCity + nextCity ...
 	int getNumCities();
 	CyCity* getCity(int iID);
+
 	python::tuple firstUnit(bool bRev); // returns tuple of (CyUnit, iterOut)
 	python::tuple nextUnit(int iterIn, bool bRev); // returns tuple of (CyUnit, iterOut)
 	int getNumUnits();
 	CyUnit* getUnit(int iID);
+
 	python::tuple firstSelectionGroup(bool bRev); // returns tuple of (CySelectionGroup, iterOut)
 	python::tuple nextSelectionGroup(int iterIn, bool bRev); // returns tuple of (CySelectionGroup, iterOut)
 	int getNumSelectionGroups();
@@ -547,15 +543,14 @@ public:
 
 	bool AI_isWillingToTalk(int /*PlayerTypes*/ ePlayer);
 
-	int getScoreHistory(int iTurn) const;
-	int getEconomyHistory(int iTurn) const;
-	int getIndustryHistory(int iTurn) const;
-	int getAgricultureHistory(int iTurn) const;
-	int getPowerHistory(int iTurn) const;
-	int getCultureHistory(int iTurn) const;
-	int getEspionageHistory(int iTurn) const;
-
-	int getRevolutionStabilityHistory(int iTurn) const;
+	int64_t getScoreHistory(int iTurn) const;
+	int64_t getEconomyHistory(int iTurn) const;
+	int64_t getIndustryHistory(int iTurn) const;
+	int64_t getAgricultureHistory(int iTurn) const;
+	int64_t getPowerHistory(int iTurn) const;
+	int64_t getCultureHistory(int iTurn) const;
+	int64_t getEspionageHistory(int iTurn) const;
+	int64_t getRevolutionStabilityHistory(int iTurn) const;
 
 	std::string getScriptData() const;
 	void setScriptData(std::string szNewValue);
@@ -602,9 +597,9 @@ public:
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);
 	void setTeam(int /*TeamTypes*/ eIndex);
 
-	int getCulture() const;
-	void setCulture(int iNewValue);
-	void changeCulture(int iAddValue);
+	int64_t getCulture() const;
+	void setCulture(int64_t iNewValue);
+	void changeCulture(int64_t iAddValue);
 
 	CvProperties* getProperties();
 

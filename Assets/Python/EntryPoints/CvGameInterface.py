@@ -15,14 +15,8 @@ GameUtils = BugGameUtils.getDispatcher()
 def isVictoryTest():
 	return GameUtils.isVictoryTest()
 
-def isVictory(argsList):
-	return GameUtils.isVictory(argsList)
-
 def isPlayerResearch(argsList):
 	return GameUtils.isPlayerResearch(argsList)
-
-def createBarbarianCities():
-	return GameUtils.createBarbarianCities()
 
 def createBarbarianUnits():
 	return GameUtils.createBarbarianUnits()
@@ -59,9 +53,6 @@ def getRecommendedBuilding(argsList):
 
 def updateColoredPlots():
 	return GameUtils.updateColoredPlots()
-
-def isActionRecommended(argsList):
-	return GameUtils.isActionRecommended(argsList)
 
 def unitCannotMoveInto(argsList):
 	return GameUtils.unitCannotMoveInto(argsList)
@@ -102,14 +93,8 @@ def canConstruct(argsList):
 def cannotConstruct(argsList):
 	return GameUtils.cannotConstruct(argsList)
 
-def canCreate(argsList):
-	return GameUtils.canCreate(argsList)
-
 def cannotCreate(argsList):
 	return GameUtils.cannotCreate(argsList)
-
-def canMaintain(argsList):
-	return GameUtils.canMaintain(argsList)
 
 def cannotMaintain(argsList):
 	return GameUtils.cannotMaintain(argsList)
@@ -189,9 +174,6 @@ def doCombat(argsList):
 def getConscriptUnitType(argsList):
 	return GameUtils.getConscriptUnitType(argsList)
 
-def getCityFoundValue(argsList):
-	return GameUtils.getCityFoundValue(argsList)
-
 def canPickPlot(argsList):
 	return GameUtils.canPickPlot(argsList)
 
@@ -209,6 +191,3 @@ def getWidgetHelp(argsList):
 
 def getUpgradePriceOverride(argsList):
 	return GameUtils.getUpgradePriceOverride(argsList)
-
-def getExperienceNeeded(argsList):
-	return GameUtils.getExperienceNeeded(argsList)

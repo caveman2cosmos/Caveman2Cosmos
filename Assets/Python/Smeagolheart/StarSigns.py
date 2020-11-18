@@ -39,7 +39,7 @@ def give(GC, TRNSLTR, GAME, CyUnit, iPlayer, bLand):
 
 	if iPlayer == GAME.getActivePlayer() and GAME.isFinalInitialized():
 		CyCity = CyUnit.plot().getPlotCity()
-		if CyCity and not CyCity.isNone():
+		if CyCity:
 			szTxt = TRNSLTR.getText("TXT_KEY_MSG_STARSIGN_BUILD", (CyCity.getName(),))
 		else:
 			szTxt = TRNSLTR.getText("TXT_KEY_MSG_STARSIGN_CREATE", ())

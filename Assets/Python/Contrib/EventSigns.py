@@ -456,14 +456,6 @@ class PlotSigns:
 		return "PlotSigns { iX = %d, iY = %d, signDict = %s }" % (self.iX, self.iY, str(self.signDict))
 
 
-class PlotCaptions:
-	""" Fake class needed to load games made with first development version. """
-	def __init__ (self):
-		self.iX = None
-		self.iY = None
-		self.teamDict = None
-
-
 class EventSignsEventHandler:
 	""" Event Handler for this module. """
 
@@ -566,7 +558,7 @@ def applySaltpeter(argsList):
 		iY = plot[1].getY()
 		GAME.setPlotExtraYield(iX, iY, YieldTypes.YIELD_COMMERCE, 1)
 		szTxt = TRNSLTR.getText("TXT_KEY_EVENT_SALTPETER_DISCOVERED",())
-		CvUtil.sendMessage(msg, iPlayer, GC.getEVENT_MESSAGE_TIME(), "", -1, iX, iY, True, True, 0, "", False)
+		CvUtil.sendMessage(szTxt, iPlayer, GC.getEVENT_MESSAGE_TIME(), "", -1, iX, iY, True, True, 0, "", False)
 		# Add landmark for other plots too.
 		placeLandmark(plot[1], sEventType, iFood, iProd, iComm, True, -1)
 

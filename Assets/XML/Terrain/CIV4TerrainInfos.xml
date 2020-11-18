@@ -8,8 +8,6 @@
 			<ArtDefineTag>ART_DEF_TERRAIN_GRASSLAND</ArtDefineTag>
 			<bFound>1</bFound>
 			<iMovement>1</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<RiverYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -158,8 +156,6 @@
 			<bFound>1</bFound>
 			<iCultureDistance>1</iCultureDistance>
 			<iMovement>1</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<RiverYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -307,8 +303,6 @@
 			<ArtDefineTag>ART_DEF_TERRAIN_PLAINS</ArtDefineTag>
 			<bFound>1</bFound>
 			<iMovement>1</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<RiverYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -459,8 +453,6 @@
 			<iBuildModifier>10</iBuildModifier>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>1</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<RiverYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -608,8 +600,6 @@
 			<iCultureDistance>1</iCultureDistance>
 			<iDefense>20</iDefense>
 			<iMovement>2</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<RiverYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -762,8 +752,6 @@
 			<iDefense>20</iDefense>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>2</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<RiverYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -916,8 +904,6 @@
 			<iDefense>20</iDefense>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>2</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<RiverYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -1070,8 +1056,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-10</iHealthPercent>
 			<iMovement>2</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<RiverYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -1219,8 +1203,6 @@
 			<iCultureDistance>1</iCultureDistance>
 			<iDefense>10</iDefense>
 			<iMovement>1</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<RiverYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -1373,8 +1355,6 @@
 			<iDefense>15</iDefense>
 			<iHealthPercent>-20</iHealthPercent>
 			<iMovement>4</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<RiverYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -1523,8 +1503,6 @@
 			<iCultureDistance>3</iCultureDistance>
 			<iHealthPercent>-30</iHealthPercent>
 			<iMovement>1</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface/Buttons/baseterrain/DuneSalt.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -1667,8 +1645,6 @@
 			<iCultureDistance>1</iCultureDistance>
 			<iHealthPercent>-5</iHealthPercent>
 			<iMovement>2</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<RiverYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -1819,8 +1795,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<RiverYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -1975,8 +1949,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-25</iHealthPercent>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<FootstepSounds>
 				<FootstepSound>
 					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
@@ -2118,8 +2090,6 @@
 			<iCultureDistance>4</iCultureDistance>
 			<iHealthPercent>-50</iHealthPercent>
 			<iMovement>4</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Ice.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -2263,8 +2233,6 @@
 			<iCultureDistance>2</iCultureDistance>
 			<iDefense>20</iDefense>
 			<iMovement>3</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<RiverYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -2417,8 +2385,6 @@
 			<iCultureDistance>1</iCultureDistance>
 			<iDefense>10</iDefense>
 			<iMovement>2</iMovement>
-			<iSeeFrom>1</iSeeFrom>
-			<iSeeThrough>1</iSeeThrough>
 			<RiverYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -5193,15 +5159,16 @@
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_LAKE_SHORE</Type>
-			<Description>TXT_KEY_TERRAIN_LAKE_SHORE</Description>
+			<Description>TXT_KEY_TERRAIN_FRESHWATER_COAST</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_COAST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_LAKE_SHORE</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
+			<bFreshWaterTerrain>1</bFreshWaterTerrain>
 			<iCultureDistance>2</iCultureDistance>
 			<iDefense>10</iDefense>
 			<iMovement>2</iMovement>
 			<Yields>
-				<iYield>2</iYield>
+				<iYield>3</iYield>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</Yields>
@@ -5340,14 +5307,15 @@
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_LAKE</Type>
-			<Description>TXT_KEY_TERRAIN_LAKE</Description>
+			<Description>TXT_KEY_TERRAIN_FRESHWATER_SEA</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_LAKE</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
+			<bFreshWaterTerrain>1</bFreshWaterTerrain>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</Yields>

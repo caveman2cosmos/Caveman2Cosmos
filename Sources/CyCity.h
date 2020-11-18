@@ -26,7 +26,6 @@ public:
 	DllExport explicit CyCity(CvCity* pCity);		// Call from C++
 
 	CvCity* getCity() const { return m_pCity; }	// Call from C++
-	bool isNone() const { return m_pCity == NULL; }
 
 	void kill();
 
@@ -145,8 +144,8 @@ public:
 	int flatHurryAngerLength() const;
 
 	int getNumBuilding(int /*BuildingTypes*/ iIndex) const;
-	bool isHasBuilding(int /*BuildingTypes*/ iIndex) const;		// This is a function to help modders out, since it was replaced with getNumBuildings() in the C++
 	int getNumActiveBuilding(int /*BuildingTypes*/ iIndex) const;
+	bool isFreeBuilding(int /*BuildingTypes*/ iIndex) const;
 	int getID() const;
 	int getX() const;
 	int getY() const;
@@ -162,7 +161,7 @@ public:
 	int getPopulation() const;
 	void setPopulation(int iNewValue);
 	void changePopulation(int iChange);
-	long getRealPopulation() const;
+	int getRealPopulation() const;
 
 	int getHighestPopulation() const;
 	void setHighestPopulation(int iNewValue);
