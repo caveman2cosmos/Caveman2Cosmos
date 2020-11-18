@@ -413,6 +413,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
 			setSMValues();
+			GET_PLAYER(getOwner()).changeUnitCountSM(eUnit, intPow(3, groupRank()-1));
 		}
 		else
 		{
@@ -1240,7 +1241,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 				}
 			}
 		}
-/* This is interrupting other messages and not coming up when it should be anyhow.
+		/* This is interrupting other messages and not coming up when it should be anyhow.
 		if (!bMessaged)
 		{
 			MEMORY_TRACK_EXEMPT();
@@ -1250,7 +1251,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 			m_combatResult.bDeathMessaged = false;
 			bMessaged = true;
 		}
-*/
+		*/
 		if (bDelay)
 		{
 			startDelayedDeath();
@@ -1327,7 +1328,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		}
 		setReconPlot(NULL);
 		setBlockading(false);
-/*
+		/*
 		if (isZoneOfControl())
 		{
 			foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
@@ -1335,7 +1336,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 				pAdjacentPlot->clearZoneOfControlCache();
 			}
 		}
-*/
+		*/
 		FAssertMsg(getAttackPlot() == NULL, "The current unit instance's attack plot is expected to be NULL");
 		FAssertMsg(getCombatUnit() == NULL, "The current unit instance's combat unit is expected to be NULL");
 	}
@@ -1343,6 +1344,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 	owner.changeUnitUpkeep(-getUpkeep100(), m_pUnitInfo->isMilitarySupport());
 
 	owner.changeUnitCount(m_eUnitType, -1);
+	owner.changeUnitCountSM(m_eUnitType, -intPow(3, groupRank()-1));
 
 	if (m_pUnitInfo->getNukeRange() != -1)
 	{
@@ -23959,21 +23961,18 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eOwner);
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eCapturingPlayer);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_UNITS, (int*)&m_eUnitType);
-	if( NO_UNIT == m_eUnitType)
+	if (NO_UNIT == m_eUnitType)
 	{
-		//	Assets must have removed this type (which will have been flagged in a queued error messae).  Just
-		//	give it a valid type temporarily and mark it to be killed
-		int tempUnitType = 0;
-
-		//	Pick an arbitrary military unit
-		do
-		{
-			tempUnitType++;
-		} while(!GC.getUnitInfo((UnitTypes)tempUnitType).isMilitaryHappiness());
-
-		m_eUnitType = (UnitTypes)tempUnitType;
-		GET_PLAYER(getOwner()).changeUnitCount(m_eUnitType, 1);
+		// Assets must have removed this type (which will have been flagged in a queued error message).
+		// Just give it a valid type and mark it to be killed.
+		m_eUnitType = (UnitTypes)0;
 		m_bDeathDelay = true;
+		// Unit type 0 was never initialized, so we need to add its unit count before it dies.
+		GET_PLAYER(getOwner()).changeUnitCount(m_eUnitType, 1);
+		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		{
+			GET_PLAYER(getOwner()).changeUnitCountSM(m_eUnitType, intPow(3, GC.getUnitInfo(m_eUnitType).getBaseGroupRank() - 1));
+		}
 	}
 	m_pUnitInfo = &GC.getUnitInfo(m_eUnitType);
 	m_movementCharacteristicsHash = m_pUnitInfo->getZobristValue();
@@ -37859,14 +37858,9 @@ int CvUnit::getExtraQuality() const
 	return m_iExtraQuality;
 }
 
-void CvUnit::setExtraQuality(int iNewValue)
-{
-	m_iExtraQuality = iNewValue;
-}
-
 void CvUnit::changeExtraQuality(int iChange)
 {
-	setExtraQuality(getExtraQuality() + iChange);
+	m_iExtraQuality += iChange;
 }
 
 int CvUnit::getExtraGroup() const
@@ -37874,14 +37868,11 @@ int CvUnit::getExtraGroup() const
 	return m_iExtraGroup;
 }
 
-void CvUnit::setExtraGroup(int iNewValue)
-{
-	m_iExtraGroup = iNewValue;
-}
-
 void CvUnit::changeExtraGroup(int iChange)
 {
-	setExtraGroup(getExtraGroup() + iChange);
+	GET_PLAYER(getOwner()).changeUnitCountSM(m_eUnitType, -intPow(3, groupRank()-1));
+	m_iExtraGroup += iChange;
+	GET_PLAYER(getOwner()).changeUnitCountSM(m_eUnitType, intPow(3, groupRank()-1));
 }
 
 int CvUnit::getExtraSize() const
@@ -37889,14 +37880,9 @@ int CvUnit::getExtraSize() const
 	return m_iExtraSize;
 }
 
-void CvUnit::setExtraSize(int iNewValue)
-{
-	m_iExtraSize = iNewValue;
-}
-
 void CvUnit::changeExtraSize(int iChange)
 {
-	setExtraSize(getExtraSize() + iChange);
+	m_iExtraSize += iChange;
 }
 
 int CvUnit::qualityRank() const

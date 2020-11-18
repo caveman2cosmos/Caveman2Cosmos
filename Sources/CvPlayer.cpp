@@ -710,6 +710,7 @@ void CvPlayer::uninit()
 	m_bonusImport.clear();
 	m_bonusMintedPercent.clear();
 	m_unitCount.clear();
+	m_unitCountSM.clear();
 	m_unitMaking.clear();
 	m_greatGeneralPointsType.clear();
 	m_goldenAgeOnBirthOfGreatPersonCount.clear();
@@ -7409,12 +7410,15 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 	{
 		return -1;
 	}
-	uint64_t iProductionNeeded = (uint64_t)iInitialProduction;
+	uint64_t iProductionNeeded = 100 * iInitialProduction;
 
+	int iModifier = 100;
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	{
+		iModifier += getUnitCountSM(eUnit) * GC.getUnitInfo(eUnit).getInstanceCostModifier();
+	}
+	else iModifier += getUnitCount(eUnit) * GC.getUnitInfo(eUnit).getInstanceCostModifier();
 
-	iProductionNeeded *= 100;
-
-	int iModifier = 100 + getUnitCount(eUnit) * GC.getUnitInfo(eUnit).getInstanceCostModifier();
 	iProductionNeeded *= iModifier;
 	iProductionNeeded /= 100;
 
@@ -7426,11 +7430,7 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 	iProductionNeeded *= iModifier;
 	iProductionNeeded /= 100;
 
-	if (GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
-	{
-		iModifier = GC.getEraInfo((EraTypes)getCurrentEra()).getTrainPercent();
-	}
-	else
+	if (!GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
 	{
 		EraTypes eEra = (EraTypes)GC.getGame().getStartEra();
 		if (GC.getUnitInfo(eUnit).getEraInfo() != NO_ERA)
@@ -7439,6 +7439,8 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 		}
 		iModifier = GC.getEraInfo(eEra).getTrainPercent();
 	}
+	else iModifier = GC.getEraInfo((EraTypes)getCurrentEra()).getTrainPercent();
+
 	iProductionNeeded *= iModifier;
 	iProductionNeeded /= 100;
 
@@ -7472,19 +7474,19 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 			iProductionNeeded /= 100;
 		}
 
-		iModifier = std::max(0, ((GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra()) + 100));
+		iModifier = std::max(0, 100 + GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra());
 		iProductionNeeded *= iModifier;
 		iProductionNeeded /= 100;
 	}
 
 	//The following is where we get the cost for a settler unit (that's ALL this does) and the cost scales to GROWTH factors rather than training factors.
 	//Thus placing it so that training factors influence the cost will cause settlers to be double scaled and the costs to go out of balance as a result.
-	iProductionNeeded += (getUnitExtraCost(eUnit) * 100);
+	iProductionNeeded += 100 * getUnitExtraCost(eUnit);
 
 	// Python cost modifier
-	if(GC.getUSE_GET_UNIT_COST_MOD_CALLBACK())
+	if (GC.getUSE_GET_UNIT_COST_MOD_CALLBACK())
 	{
-		int iResult = Cy::call<bool>(PYGameModule, "getUnitCostMod", Cy::Args() << getID() << eUnit);
+		const int iResult = Cy::call<bool>(PYGameModule, "getUnitCostMod", Cy::Args() << getID() << eUnit);
 		if (iResult > 1)
 		{
 			iProductionNeeded *= iResult;
@@ -7496,12 +7498,9 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 
 	if (iProductionNeeded > MAX_INT)
 	{
-		iProductionNeeded = MAX_INT;
+		return MAX_INT;
 	}
-
-	int iTotal = (int)iProductionNeeded;
-
-	return std::max(1, iTotal);
+	return std::max(1, static_cast<int>(iProductionNeeded));
 }
 
 
@@ -14224,10 +14223,10 @@ bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
 	{
 		return false;
 	}
-/* Toffer: FAssertMsg(GC.getUnitInfo(eIndex).getMaxPlayerInstances() == 0 ...
+	/* Toffer: FAssertMsg(GC.getUnitInfo(eIndex).getMaxPlayerInstances() == 0 ...
 	Special assert exception rule for the initial settler unit that is never trainable.
-	Settler units are trainable even when their hammer cost is set to -1 due to their unique hammer cost calculation.
-*/	FAssertMsg(GC.getUnitInfo(eIndex).getMaxPlayerInstances() == 0 || getUnitCount(eIndex) <= GC.getUnitInfo(eIndex).getMaxPlayerInstances(),
+	Settler units are trainable even when their hammer cost is set to -1 due to their unique hammer cost calculation. */
+	FAssertMsg(GC.getUnitInfo(eIndex).getMaxPlayerInstances() == 0 || getUnitCount(eIndex) <= GC.getUnitInfo(eIndex).getMaxPlayerInstances(),
 		CvString::format("getUnitCount=%d is expected not to be greater than MaxPlayerInstances=%d for %s",
 		getUnitCount(eIndex), GC.getUnitInfo(eIndex).getMaxPlayerInstances(), GC.getUnitInfo(eIndex).getType()).c_str());
 
@@ -14239,15 +14238,34 @@ void CvPlayer::recalculateUnitCounts()
 {
 	PROFILE_FUNC();
 
+    // @SAVEBREAK REPLACE - Toffer
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	{
+		foreach_(CvUnit* unit, units())
+		{
+			m_unitCountSM[(short)unit->getUnitType()] += intPow(3, unit->groupRank() - 1);
+			unit->recalculateUnitUpkeep();
+		}
+	}
+	// If SM is on, we count how many trained-unit equivalents are present, not purely units themselves, after resetting the count.
+	else
+	{
+		foreach_(CvUnit* unit, units())
+		{
+			//m_unitCount[(short)unit->getUnitType()]++; // This is probably unnecessary,
+			//	as units can only cease to exist when loading a save if it doesn't exist in xml anymore,
+			//	and when that happens it won't be added to the m_unitCount map to begin with.
+			//	Reordering of the unit ID's are handled by the enum remapping that goes on in save read code.
+			//	There's for example no way a unit on the map to change owner due to some xml change.
+			unit->recalculateUnitUpkeep();
+		}
+	}
+    /* REPLACE WITH
 	foreach_(CvUnit* unit, units())
 	{
-		//m_unitCount[(short)unit->getUnitType()]++; // This is probably unnecessary,
-		//	as units can only cease to exist when loading a save if it doesn't exist in xml anymore,
-		//	and when that happens it won't be added to the m_unitCount map to begin with.
-		//	Reordering of the unit ID's are handled by the enum remapping that goes on in save read code.
-		//	There's for example no way a unit on the map to change owner due to some xml change.
-		unit->recalculateUnitUpkeep(); // This is necessary as unit upkeep changes in xml isn't handled otherwise.
+		unit->recalculateUnitUpkeep();
 	}
+    // SAVEBREAK@ */
 }
 
 void CvPlayer::changeUnitCount(const UnitTypes eUnit, const int iChange)
@@ -14284,6 +14302,39 @@ int CvPlayer::getUnitCount(const UnitTypes eUnit) const
 	return itr != m_unitCount.end() ? itr->second : 0;
 }
 
+void CvPlayer::changeUnitCountSM(const UnitTypes eUnit, const int iChange)
+{
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
+	FAssertMsg(iChange != 0, "This is not a change!")
+
+	std::map<short, uint32_t>::const_iterator itr = m_unitCountSM.find((short)eUnit);
+
+	if (itr == m_unitCountSM.end())
+	{
+		if (iChange > 0)
+		{
+			m_unitCountSM.insert(std::make_pair((short)eUnit, iChange));
+		}
+		else FErrorMsg("Expected positive iChange for first unit of a kind");
+	}
+	else if (iChange < 0 && (int)(itr->second) <= -iChange)
+	{
+		FAssertMsg((int)(itr->second) >= -iChange, "This change would bring the count to a negative value! Code copes with it though")
+		m_unitCountSM.erase(itr->first);
+	}
+	else // change unit count
+	{
+		m_unitCountSM[itr->first] += iChange;
+	}
+}
+
+int CvPlayer::getUnitCountSM(const UnitTypes eUnit) const
+{
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
+	std::map<short, uint32_t>::const_iterator itr = m_unitCountSM.find((short)eUnit);
+	return itr != m_unitCountSM.end() ? itr->second / intPow(3, GC.getUnitInfo(eUnit).getBaseGroupRank() - 1) : 0;
+}
+
 
 void CvPlayer::changeUnitMaking(const UnitTypes eUnit, const int iChange)
 {
@@ -14310,6 +14361,7 @@ void CvPlayer::changeUnitMaking(const UnitTypes eUnit, const int iChange)
 		m_unitMaking[itr->first] += iChange;
 	}
 }
+
 
 int CvPlayer::getUnitMaking(const UnitTypes eUnit) const
 {
@@ -20776,6 +20828,25 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &fCulture);
 		m_iCulture += static_cast<int64_t>(fCulture + 0.01); // +0.01 to avoid different rounding result on different CPU's
 
+		// Toffer - Read maps
+		{
+			short iSize;
+			short iType;
+			uint32_t iCountU;
+			// Unit counters
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "UnitCountSMSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "UnitCountSMType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "UnitCountSM");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
+
+				if (iType > -1)
+				{
+					m_unitCountSM.insert(std::make_pair(iType, iCountU));
+				}
+			}
+		}
 		//Example of how to skip element
 		//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iPopulationgrowthratepercentage, SAVE_VALUE_ANY);
 	}
@@ -21584,6 +21655,16 @@ void CvPlayer::write(FDataStreamBase* pStream)
 
 		double fCulture = static_cast<double>(this->m_iCulture);
 		WRAPPER_WRITE(wrapper, "CvPlayer", fCulture);
+		// Toffer - Write maps
+		{
+			// Unit counters
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitCountSM.size(), "UnitCountSMSize");
+			for (std::map<short, uint32_t>::const_iterator it = m_unitCountSM.begin(), itEnd = m_unitCountSM.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "UnitCountSMType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "UnitCountSM");
+			}
+		}
 	}
 	//	Use condensed format now - only save non-default array elements
 

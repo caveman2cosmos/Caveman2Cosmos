@@ -945,6 +945,8 @@ public:
 
 	int getUnitCount(const UnitTypes eUnit) const;
 	void changeUnitCount(const UnitTypes eUnit, const int iChange);
+	int getUnitCountSM(const UnitTypes eUnit) const;
+	void changeUnitCountSM(const UnitTypes eUnit, const int iChange);
 	bool isUnitMaxedOut(const UnitTypes eUnit, const int iExtra = 0) const;
 	int getUnitMaking(const UnitTypes eUnit) const;
 	void changeUnitMaking(const UnitTypes eUnit, int iChange);
@@ -2317,6 +2319,7 @@ private:
 	int m_iNumAnimalsSubdued;
 	std::map<BuildingTypes, int> m_unitConstructionCounts;
 	std::map<short, uint32_t> m_unitCount;
+	std::map<short, uint32_t> m_unitCountSM;
 	std::map<short, uint32_t> m_unitMaking;
 	std::map<short, uint32_t> m_buildingMaking;
 	std::map<short, uint16_t> m_freeBuildingCount;
