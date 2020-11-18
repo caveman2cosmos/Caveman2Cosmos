@@ -1259,9 +1259,6 @@ void CvSelectionGroupAI::read(FDataStreamBase* pStream)
 {
 	CvSelectionGroup::read(pStream);
 
-	uint uiFlag=0;
-	pStream->Read(&uiFlag);	// flags for expansion
-
 	pStream->Read(&m_iMissionAIX);
 	pStream->Read(&m_iMissionAIY);
 
@@ -1281,9 +1278,6 @@ void CvSelectionGroupAI::read(FDataStreamBase* pStream)
 void CvSelectionGroupAI::write(FDataStreamBase* pStream)
 {
 	CvSelectionGroup::write(pStream);
-
-	uint uiFlag=0;
-	pStream->Write(uiFlag);		// flag for expansion
 
 	pStream->Write(m_iMissionAIX);
 	pStream->Write(m_iMissionAIY);

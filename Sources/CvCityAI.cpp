@@ -933,7 +933,7 @@ void CvCityAI::AI_chooseProduction()
 			// if building a combat unit, and we have nearly no defenders, keep building it
 			const UnitTypes eProductionUnit = getProductionUnit();
 			if (eProductionUnit != NO_UNIT && plot()->getNumDefenders(getOwner()) < 2
-			&& GC.getUnitInfo(eProductionUnit).getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange(eProductionUnit) > 0)
+			&& GC.getUnitInfo(eProductionUnit).getCombat() > 0)
 			{
 				return;
 			}
@@ -1111,11 +1111,9 @@ void CvCityAI::AI_chooseProduction()
 		iEconomyFlags |= BUILDINGFOCUS_SPECIALIST;
 		iEconomyFlagBits++;
 	}
-	if (!GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		iEconomyFlags |= BUILDINGFOCUS_ESPIONAGE;
-		iEconomyFlagBits++;
-	}
+	iEconomyFlags |= BUILDINGFOCUS_ESPIONAGE;
+	iEconomyFlagBits++;
+
 	//	Normalize threholds using this against the number of bits we are including
 	const int iEcononmyFlagsThreasholdWeighting = (100*iEconomyFlagBits)/8;
 
@@ -6482,7 +6480,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						iValue += getBuildingCommerceValue(eBuilding, COMMERCE_CULTURE, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate)/5;
 					}
 
-					if (iFocusFlags & BUILDINGFOCUS_ESPIONAGE || (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE) && (iFocusFlags & BUILDINGFOCUS_CULTURE)))
+					if (iFocusFlags & BUILDINGFOCUS_ESPIONAGE)
 					{
 						iValue += getBuildingCommerceValue(eBuilding, COMMERCE_ESPIONAGE, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate);
 					}
@@ -7028,90 +7026,87 @@ int CvCityAI::AI_neededDefenders()
 		);
 	}
 
+	const CvPlayerAI& player = GET_PLAYER(getOwner());
 	int iDefenders = 1;
 
 	if (!GC.getGame().isEarlyGame() && (hasActiveWorldWonder() || isCapital() || isHolyCity()))
 	{
 		iDefenders++;
 
-		if( GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_ALERT1) || GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_TURTLE) )
+		if (player.AI_isDoStrategy(AI_STRATEGY_ALERT1))
 		{
 			iDefenders++;
 		}
+		if (player.AI_isDoStrategy(AI_STRATEGY_TURTLE))
+		{
+			iDefenders += 2;
+		}
 	}
 
-	if (!GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_CRUSH))
+	if (!player.AI_isDoStrategy(AI_STRATEGY_CRUSH))
 	{
 		iDefenders += AI_neededFloatingDefenders();
 	}
-	else
-	{
-		iDefenders += (AI_neededFloatingDefenders() + 2) / 4;
-	}
+	else iDefenders += (AI_neededFloatingDefenders() + 2) / 4;
 
-	bool bDefenseWar = ((area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE));
-	if (bDefenseWar || GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_ALERT2))
+	const bool bDefenseWar = area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE;
+
+	if ((bDefenseWar || player.AI_isDoStrategy(AI_STRATEGY_ALERT2)) && !plot()->isHills())
 	{
-		if (!(plot()->isHills()))
-		{
-			iDefenders++;
-		}
+		iDefenders++;
 	}
 
 	if (!GC.getGame().isEarlyGame() && (GC.getGame().getGameTurn() - getGameTurnAcquired()) < 10)
 	{
 		iDefenders = std::max(2, iDefenders);
 
-		bool bOffenseWar = ((area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE) || (area()->getAreaAIType(getTeam()) == AREAAI_MASSING));
-		if (bOffenseWar && getTotalDefense(true) > 0)
+		// When on the offensive, halve defenders.
+		if ((area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE || area()->getAreaAIType(getTeam()) == AREAAI_MASSING)
+		&& !hasActiveWorldWonder() && !isHolyCity())
 		{
-			if (!hasActiveWorldWonder() && !isHolyCity())
-			{
-				iDefenders /= 2;
-			}
+			iDefenders /= 2;
 		}
 
 		if (AI_isDanger())
 		{
 			iDefenders++;
 		}
+
 		if (bDefenseWar)
 		{
 			iDefenders++;
 		}
 	}
 
-	if (GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_LAST_STAND))
+	if (player.AI_isDoStrategy(AI_STRATEGY_LAST_STAND))
 	{
 		iDefenders += 20;
 	}
 
-	if( GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3) )
+	if (player.AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3)
+	&& findCommerceRateRank(COMMERCE_CULTURE) <= GC.getGame().culturalVictoryNumCultureCities())
 	{
-		if( findCommerceRateRank(COMMERCE_CULTURE) <= GC.getGame().culturalVictoryNumCultureCities() )
-		{
-			iDefenders += 4;
+		iDefenders += 4;
 
-			if( bDefenseWar )
-			{
-				iDefenders += 2;
-			}
+		if (bDefenseWar)
+		{
+			iDefenders += 2;
 		}
 	}
 
-	if( GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE3) )
+	if (player.AI_isDoVictoryStrategy(AI_VICTORY_SPACE3))
 	{
-		if( isCapital() || isProductionProject())
+		if (isCapital() || isProductionProject())
 		{
 			iDefenders += 4;
 
-			if( bDefenseWar )
+			if (bDefenseWar)
 			{
 				iDefenders += 3;
 			}
 		}
 
-		if( isCapital() && GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE4) )
+		if (isCapital() && player.AI_isDoVictoryStrategy(AI_VICTORY_SPACE4))
 		{
 			iDefenders += 6;
 		}
@@ -7119,29 +7114,23 @@ int CvCityAI::AI_neededDefenders()
 
 	if (GC.getGame().isOption(GAMEOPTION_REVOLUTION))
 	{
-		int iExtraRevDefenders = std::max(0, ((int)(std::pow((float)getRevolutionIndex(), 0.35f) - 6.5f)));
-		iDefenders += iExtraRevDefenders;
-		logBBAI("      City %S extra revolution defenders needed: %d", getName().GetCString(), iExtraRevDefenders);
+		const int iExtraRevDefenders = intSqrt(getRevolutionIndex()) - 10;
+		if (iExtraRevDefenders > 0)
+		{
+			iDefenders += iExtraRevDefenders;
+		}
+		logBBAI("      City %S extra revolution defenders needed: %d\n\tP.S. negative value is ignored", getName().GetCString(), iExtraRevDefenders);
 	}
 
-	int iTempDefenders = 0;
-	int iHappiness = happyLevel() - unhappyLevel(0);
-	if (GET_PLAYER(getOwner()).getHappyPerMilitaryUnit() > 0)
+	const int iHappyPerUnit = player.getHappyPerMilitaryUnit();
+	if (iHappyPerUnit != 0)
 	{
+		const int iHappiness = happyLevel() - unhappyLevel(0);
 		if (iHappiness < 0)
 		{
-			iTempDefenders -= GET_PLAYER(getOwner()).getHappyPerMilitaryUnit() * iHappiness;
+			iDefenders -= iHappyPerUnit * iHappiness / (1 + GET_TEAM(getTeam()).getAtWarCount(true));
 		}
 	}
-	else if (GET_PLAYER(getOwner()).getHappyPerMilitaryUnit() < 0)
-	{
-		if (iHappiness < 0)
-		{
-			iTempDefenders -= GET_PLAYER(getOwner()).getHappyPerMilitaryUnit() * iHappiness;
-		}
-	}
-	iTempDefenders /= (1 + GET_TEAM(getTeam()).getAtWarCount(true));
-	iDefenders += iTempDefenders;
 
 	iDefenders = std::max(iDefenders, AI_minDefenders());
 
@@ -7149,9 +7138,7 @@ int CvCityAI::AI_neededDefenders()
 
 	return iDefenders;
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 
 int CvCityAI::AI_neededHappinessDefenders() const
 {
@@ -9413,7 +9400,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 			}
 
 			if (bDanger && eProductionUnit != NO_UNIT && GC.getUnitInfo(eProductionUnit).getDomainType() == DOMAIN_LAND
-			&& GC.getUnitInfo(eProductionUnit).getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange(eProductionUnit) > 0)
+			&& GC.getUnitInfo(eProductionUnit).getCombat() > 0)
 			{
 				iMinTurns = std::min(iMinTurns, 3);
 				bEssential = true;
@@ -12530,8 +12517,7 @@ bool CvCityAI::AI_doPanic()
 
 			if (eProductionUnit != NO_UNIT)
 			{
-				if (getProduction() > 0
-				&& GC.getUnitInfo(eProductionUnit).getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange(eProductionUnit) > 0)
+				if (getProduction() > 0 && GC.getUnitInfo(eProductionUnit).getCombat() > 0)
 				{
 					AI_doHurry(true);
 					return true;
@@ -12749,10 +12735,7 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 	iEconomyFlags |= BUILDINGFOCUS_HAPPY;
 	iEconomyFlags |= BUILDINGFOCUS_HEALTHY;
 	iEconomyFlags |= BUILDINGFOCUS_SPECIALIST;
-	if (!GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-	{
-		iEconomyFlags |= BUILDINGFOCUS_ESPIONAGE;
-	}
+	iEconomyFlags |= BUILDINGFOCUS_ESPIONAGE;
 
 	//20 means 5g or ~2 happiness...
 	if (AI_chooseBuilding(iEconomyFlags, 20, 20 / iMinValueDivisor))
@@ -13976,11 +13959,7 @@ BuildingTypes CvCityAI::AI_bestAdvancedStartBuilding(int iPass)
 	}
 	if (iPass >= 5)
 	{
-		iFocusFlags |= (BUILDINGFOCUS_GOLD | BUILDINGFOCUS_RESEARCH | BUILDINGFOCUS_MAINTENANCE);
-		if (!GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-		{
-			iFocusFlags |= BUILDINGFOCUS_ESPIONAGE;
-		}
+		iFocusFlags |= (BUILDINGFOCUS_GOLD | BUILDINGFOCUS_RESEARCH | BUILDINGFOCUS_MAINTENANCE | BUILDINGFOCUS_ESPIONAGE);
 	}
 	return AI_bestBuildingThreshold(iFocusFlags, 0, std::max(0, 25 - iPass * 5));
 }
@@ -13997,9 +13976,6 @@ void CvCityAI::read(FDataStreamBase* pStream)
 	WRAPPER_READ_OBJECT_START(wrapper);
 
 	CvCity::read(pStream);
-
-	uint uiFlag=0;
-	WRAPPER_READ(wrapper, "CvCityAI", &uiFlag);	// flags for expansion
 
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iEmphasizeAvoidGrowthCount);
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iEmphasizeGreatPeopleCount);
@@ -14052,9 +14028,6 @@ void CvCityAI::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
 	CvCity::write(pStream);
-
-	uint uiFlag=0;
-	WRAPPER_WRITE(wrapper, "CvCityAI", uiFlag);		// flag for expansion
 
 	WRAPPER_WRITE(wrapper, "CvCityAI", m_iEmphasizeAvoidGrowthCount);
 	WRAPPER_WRITE(wrapper, "CvCityAI", m_iEmphasizeGreatPeopleCount);
@@ -17110,14 +17083,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 							valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_BIGCULTURE, getBuildingCommerceValue(eBuilding, COMMERCE_CULTURE, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate)/5,true);
 
-							if (GC.getGame().isOption(GAMEOPTION_NO_ESPIONAGE))
-							{
-								valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_CULTURE, getBuildingCommerceValue(eBuilding, COMMERCE_ESPIONAGE, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate),true);
-							}
-							else
-							{
-								valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_ESPIONAGE, getBuildingCommerceValue(eBuilding, COMMERCE_ESPIONAGE, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate),true);
-							}
+							valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_ESPIONAGE, getBuildingCommerceValue(eBuilding, COMMERCE_ESPIONAGE, aiFreeSpecialistYield, aiFreeSpecialistCommerce, aiBaseCommerceRate, aiPlayerCommerceRate),true);
 						}
 
 						//if ((iThreshold > 0) && (iPass == 0))

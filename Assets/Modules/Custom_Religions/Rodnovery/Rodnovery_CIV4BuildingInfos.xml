@@ -246,7 +246,8 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
-			</CommerceChangeDoubleTimes><ReligionChanges>
+			</CommerceChangeDoubleTimes>
+			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_RODNOVERA</ReligionType>
 					<iReligionChange>1</iReligionChange>

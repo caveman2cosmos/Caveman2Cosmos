@@ -7017,6 +7017,7 @@
 			<Strategy>TXT_KEY_BUILDING_GALACTIC_CORE_BASE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GALACTIC_CORE_BASE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GALACTIC_CORE_BASE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_APPLIED_RELATIVITY</PrereqTech>
 			<iCost>28230</iCost>

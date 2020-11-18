@@ -307,7 +307,7 @@ public:
 
 	int getUnitProductionModifier(int i) const;
 	int getPrereqOrVicinityBonuses(int i) const;
-	int getPrereqOrRawVicinityBonuses(int i) const;
+	const std::vector<BonusTypes> getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
 
 	bool isPrereqOrBuilding(int i) const;
 
@@ -591,7 +591,7 @@ protected:
 	bool m_bProtectedCulture;
 
 	int* m_piPrereqOrVicinityBonuses;
-	int* m_piPrereqOrRawVicinityBonuses;
+	std::vector<BonusTypes> m_aePrereqOrRawVicinityBonuses;
 	int* m_piUnitProductionModifier;
 	bool* m_pbPrereqOrCivics;
 	bool* m_pbPrereqAndCivics;

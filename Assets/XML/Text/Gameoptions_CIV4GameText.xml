@@ -750,22 +750,6 @@ Only affects SmartMap if terrain options is:
 		<Spanish>Las ciudades no se pueden arrasar tras capturarlas.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_ESPIONAGE</Tag>
-		<English>No Espionage</English>
-		<French>Pas d'espionnage</French>
-		<German>Keine Spionage</German>
-		<Italian>Nessuno spionaggio</Italian>
-		<Spanish>Sin espionaje</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_ESPIONAGE_HELP</Tag>
-		<English>Spies are not available, and Espionage Points are converted into Culture</English>
-		<French>Les espions ne sont pas disponibles, et des points d'espionnage sont convertis en culture</French>
-		<German>Spione sind nicht vorhanden und Spionage-Punkte werden in Kultur umgewandelt.</German>
-		<Italian>Le spie non sono disponibili ed i punti di spionaggio sono convertiti in coltura</Italian>
-		<Spanish>Los espías no estén disponibles, y los puntos del espionaje se convierten en cultura</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_EVENTS</Tag>
 		<English>No Random Events</English>
 		<French>Pas d'événements aléatoires</French>
@@ -1232,19 +1216,6 @@ Only affects SmartMap if terrain options is:
 		<German>Mit dieser Modifikation werden alle Einheiten neben ihren normalen Werten auch durch ihre Größe, Gruppenstärke und Kampfqualität definiert. (Hinweis: Die KI ist noch nicht ausgereift.)</German>
 		<Italian>Le unità vengono differenziate in base alla loro stazza, alle loro dimensioni e alle qualità in combattimento (Note: AI under development.)</Italian>
 		<Polish>Jednostki sa modyfikowane przez ich Wielkość, Rozmiar i Waleczność (Informacja: AI w trakcie implementacji)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT</Tag>
-		<English>Size Matters Uncut</English>
-		<French>Mode de Combat C2C - La Taille Compte! (version 'Uncut')</French>
-		<German>Größe ist wichtig (ungeschnittene Version)</German>
-		<Polish>Rozmiar ma znaczenie - wersja rozszerzona</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT_HELP</Tag>
-		<English>MUST ALSO PLAY WITH Size Matters option ON! Forces all units start with their normal base strength and HP values. Normal Size Matters alone will introduce some strength adjustments to units that differ from the core. This enforces adherence to the core unit strengths.</English>
-		<French>DOIT ETRE SELECTIONNE avec le mod C2C : La Taille Compte! Actif ! .Force les unités à démarrer avec leurs valeurs standard de puissance et PV. Sinon, l'option La Taille Compte! ajuste les valeurs des unités. Cela renforce l'adhésion aux forces des l'unités.</French>
-		<German>FUNKTIONIERT NUR IN VERBINDUNG MIT DER GRUNDMOD "Größe ist wichtig"! Mit dieser Zusatzoption starten alle Einheiten mit ihren normalen Basiswerten aus dem Standardspiel. Die Funktionalität der Mod "Größe ist wichtig" bleibt erhalten, aber die Änderung der Grundwerte wird hiermit unterbunden.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_START_AS_MINORS</Tag>

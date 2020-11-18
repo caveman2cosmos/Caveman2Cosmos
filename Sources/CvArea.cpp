@@ -1006,9 +1006,6 @@ void CvArea::read(FDataStreamBase* pStream)
 	// Init saved data
 	reset();
 
-	uint uiFlag=0;
-	WRAPPER_READ(wrapper, "CvArea", &uiFlag);	// flags for expansion
-
 	WRAPPER_READ(wrapper, "CvArea", &m_iID);
 	WRAPPER_READ(wrapper, "CvArea", &m_iNumTiles);
 	WRAPPER_READ(wrapper, "CvArea", &m_iNumOwnedTiles);
@@ -1095,9 +1092,6 @@ void CvArea::write(FDataStreamBase* pStream)
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	uint uiFlag=0;
-	WRAPPER_WRITE(wrapper, "CvArea", uiFlag);		// flag for expansion
 
 	WRAPPER_WRITE(wrapper, "CvArea", m_iID);
 	WRAPPER_WRITE(wrapper, "CvArea", m_iNumTiles);

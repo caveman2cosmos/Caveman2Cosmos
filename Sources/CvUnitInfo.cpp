@@ -145,7 +145,6 @@ m_bCanMoveAllTerrain(false),
 m_bFlatMovementCost(false),
 m_bIgnoreTerrainCost(false),
 m_bNukeImmune(false),
-m_bPrereqBonuses(false),
 m_bMechanized(false),
 m_bRenderBelowWater(false),
 m_bRenderAlways(false),
@@ -1104,11 +1103,6 @@ bool CvUnitInfo::isIgnoreTerrainCost() const
 bool CvUnitInfo::isNukeImmune() const
 {
 	return m_bNukeImmune;
-}
-
-bool CvUnitInfo::isPrereqBonuses() const
-{
-	return m_bPrereqBonuses;
 }
 
 bool CvUnitInfo::isMechUnit() const
@@ -3888,7 +3882,6 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_bFlatMovementCost);
 	CheckSum(iSum, m_bIgnoreTerrainCost);
 	CheckSum(iSum, m_bNukeImmune);
-	CheckSum(iSum, m_bPrereqBonuses);
 	CheckSum(iSum, m_bMechanized);
 	CheckSum(iSum, m_bRenderBelowWater);
 	CheckSum(iSum, m_bRenderAlways);
@@ -4327,7 +4320,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bFlatMovementCost, L"bFlatMovementCost");
 	pXML->GetOptionalChildXmlValByName(&m_bIgnoreTerrainCost, L"bIgnoreTerrainCost");
 	pXML->GetOptionalChildXmlValByName(&m_bNukeImmune, L"bNukeImmune");
-	pXML->GetOptionalChildXmlValByName(&m_bPrereqBonuses, L"bPrereqBonuses");
 	pXML->GetOptionalChildXmlValByName(&m_bMechanized, L"bMechanized");
 	pXML->GetOptionalChildXmlValByName(&m_bRenderBelowWater, L"bRenderBelowWater");
 	pXML->GetOptionalChildXmlValByName(&m_bRenderAlways, L"bRenderAlways");
@@ -5389,7 +5381,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if ( m_bFlatMovementCost == bDefault )	m_bFlatMovementCost = pClassInfo->isFlatMovementCost();
 	if ( m_bIgnoreTerrainCost == bDefault )	m_bIgnoreTerrainCost = pClassInfo->isIgnoreTerrainCost();
 	if ( m_bNukeImmune == bDefault )	m_bNukeImmune = pClassInfo->isNukeImmune();
-	if ( m_bPrereqBonuses == bDefault )	m_bPrereqBonuses = pClassInfo->isPrereqBonuses();
 	if ( m_bMechanized == bDefault )	m_bMechanized = pClassInfo->isMechUnit();
 	if ( m_bRenderBelowWater == bDefault )	m_bRenderBelowWater = pClassInfo->isRenderBelowWater();
 	if ( m_bRenderAlways == bDefault )	m_bRenderAlways = pClassInfo->isRenderAlways();
