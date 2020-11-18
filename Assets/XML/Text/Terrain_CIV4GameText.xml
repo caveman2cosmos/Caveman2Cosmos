@@ -211,14 +211,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_FRESHWATER_COAST</Tag>
 		<English>Freshwater Coast</English>
+		<German>Süßwasserküste</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_FRESHWATER_OCEAN</Tag>
 		<English>Freshwater Ocean</English>
+		<German>Süßwasserozean</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_FRESHWATER_SEA</Tag>
 		<English>Freshwater Sea</English>
+		<German>Süßwassermeer</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_GRASSLAND</Tag>
@@ -694,7 +697,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_OCEAN_PEDIA</Tag>
 		<English>An ocean is a major body of saline water, and a principal component of the hydrosphere. Approximately 71% of the Earth's surface (~3.6 x 10 8 km 2) is covered by ocean, a continuous body of water that is customarily divided into several principal oceans and smaller seas.</English>
-		<German>Die Ozeane sind große zusammenhängende Wasserflächen, die zwischen den Kontinenten liegen und einen Großteil (ca. 71%) der Erdoberfläche bedecken. Sie unterscheiden sich untereinander u.a. in Volumen, Salzgehalt, Seegang und Meeresströmungen.</German>
+		<German>Die [COLOR_HIGHLIGHT_TEXT]Ozeane[COLOR_REVERT] sind große zusammenhängende Wasserflächen, die zwischen den Kontinenten liegen und einen Großteil (ca. 71%) der Erdoberfläche bedecken. Sie unterscheiden sich untereinander u.a. in Volumen, Salzgehalt, Seegang und Meeresströmungen.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_OCEAN_POLAR</Tag>
@@ -788,6 +791,7 @@
 		<Tag>TXT_KEY_TERRAIN_PERMAFROST_PEDIA</Tag>
 		<English>In geology, permafrost, cryotic soil or permafrost soil is soil at or below the freezing point of water for two or more years. Ice is not always present, as may be in the case of nonporous bedrock, but it frequently occurs and it may be in amounts exceeding the potential hydraulic saturation of the ground material. Most permafrost is located in high latitudes (i.e. land close to the North and South poles), but alpine permafrost may exist at high altitudes in much lower latitudes. Permafrost accounts for 0.022% of total water and exists in 24% of exposed land in the Northern Hemisphere.</English>
 		<French>En géologie, le pergélisol désigne un sous-sol gelé en permanence, au moins pendant deux ans.</French>
+		<German>Als [COLOR_HIGHLIGHT_TEXT]Permafrost[COLOR_REVERT] wird Dauerfrostboden bezeichnet, der mindestens zwei Jahre ununterbrochen gefroren ist. Die größten Permafrostgebiete der Erde befinden sich in den Polargebieten, im Hochgebirge und in großen Teilen der borealen Nadelwälder. Geographisch gesehen handelt es sich um große Teile Nordkanadas, Alaskas, Grönlands und Ostsibiriens sowie der Antarktis. Aktuell liegen etwa 20 bis 25 % der Landflächen der Erde innerhalb der Permafrostzone. Durch die globale Erwärmung verschiebt sich die Permafrostgrenze immer weiter in Richtung der Pole. Kritisch an diesem Rückgang der Permafrostböden ist besonders, dass in ihnen Unmengen an Kohlenstoff gespeichert sind, die beim Auftauen freigesetzt werden und die globale Erwärmung weiter beschleunigen.</German>
 		<Italian>In geologia, il permafrost è suolo alla temperature di congelamento dell'acqua (o inferiore) per due o più anni. Non sempre è presente del ghiaccio, ad esempio nella roccia non porosa, ma è spesso presente e potrebbe essere in ammassi che eccedono il potenziale di saturazione idraulica del suolo. La maggior parte del permafrost è situato ad alte latitudini (terreni vicini al polo nord e al polo sud), ma può esistere un permafrost alpino ad alte altitudini a latitudini più basse. Il permafrost costituisce lo 0.022% di tutta l'acqua e esiste nel 24% delle terre merse nell'emisfeo nord.</Italian>
 		<Polish>En gźologie, le pergźlisol dźsigne un sous-sol gelź en permanence, au moins pendant deux ans.</Polish>
 	</TEXT>

@@ -4736,6 +4736,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_ICON_SIZE</Tag>
 		<English>Icon Size:</English>
 		<French>Taille d'Icones:</French>
+		<German>Symbolgröße:</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INCREASE_LOCAL_REBELS</Tag>
@@ -14837,6 +14838,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_SPECIALIST_GREAT_SLEUTH</Tag>
 		<English>Great Sleuth</English>
 		<French>Détective illustre</French>
+		<German>
+			<Text>Großer Detektiv:Großen Detektivs:Großen Detektiv:Großen Detektiv:Große Detektive:Großen Detektive:Großen Detektiven:Große Detektive</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_SPY</Tag>
@@ -14872,6 +14878,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_SPECIALIST_INVESTIGATION</Tag>
 		<English>[ICON_BULLET]%s1_Change%% Investigation for Local Law Enforcement</English>
 		<French>[ICON_BULLET]%s1_Change%% Investigation pour le maintien de l'ordre local</French>
+		<German>[ICON_BULLET]%s1_Change%% Ermittlungen für lokale Strafverfolgung</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_INVESTIGATOR</Tag>
