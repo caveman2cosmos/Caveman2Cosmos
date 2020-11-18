@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
-<!--
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHEBA</Tag>
 		<English>Sheba</English>
@@ -27,7 +26,6 @@
 		<English>The [COLOR_UNIT_TEXT]Magos[COLOR_REVERT] is a Sabbatean unique unit.</English>
 		<French>Le [COLOR_UNIT_TEXT]Magos[COLOR_REVERT] est une unité Sabbatéenne unique.</French>
 	</TEXT>
--->
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_HURRY_PRODUCTION</Tag>
 		<English>Hurry Production (with overflow)</English>

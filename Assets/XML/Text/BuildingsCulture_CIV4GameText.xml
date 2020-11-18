@@ -1,28 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
-<!--
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_X_CASTILIAN</Tag>
-		<English>Culture (Castilian)</English>
-		<French>Culture (Castillane)</French>
-		<Polish>Kultura (Kastylijska)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_X_CASTILIAN_PEDIA</Tag>
-		<English>The Kingdom of Castile was one of the medieval kingdoms of the Iberian Peninsula. It emerged as a political autonomous entity in the 9th century. It was called County of Castile and was held in vassalage from the Kingdom of Leon. Its name comes from the host of castles constructed in the region. It was one of the kingdoms that founded the Crown of Castile, and the Kingdom of Spain.</English>
-		<Polish>Kastylia (hiszp. Castilla) - kraina historyczna w środkowej Hiszpanii na rozległym płaskowyżu Meseta na wysokości 600-1000 m n.p.m. Nazwa pochodzi od licznych zamków występujących w jej granicach w średniowieczu. Kastylia była kolebką języka kastylijskiego, który jest utożsamiany ze współczesnym językiem hiszpańskim. Jest otoczona łańcuchami górskimi, a środkiem biegnie pasmo górskie Gór Kastylijskich(Kordyliera Centralna ze szczytem Almanzor - 2592 m) do 2600 m n.p.m. Góry te dzielą Kastylię na dwie części: Starą Kastylię (Castilla la Vieja) iNową Kastylię (Castilla la Nueva).</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_X_LEON</Tag>
-		<English>Culture (Leon)</English>
-		<Polish>Kultura (Leon)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_X_LEON_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
-		<Polish>Leon - prowincja Hiszpanii. Powierzchnia 15 600 km2, 530 000 mieszkańców (dane z 2001 r.)</Polish>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SABBATEAN</Tag>
 		<English>Culture (Sabbatean)</English>
@@ -32,7 +9,6 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SABBATEAN_PEDIA</Tag>
 		<English>Sabbateans (Sabbatians) is a complex general term that refers to a variety of followers of, disciples and believers in Sabbatai Zevi (1626-1676), a Jewish rabbi who was proclaimed to be the Jewish Messiah in 1665 by Nathan of Gaza. Vast numbers of Jews in the Jewish diaspora accepted his claims, even after he became a Jewish apostate with his conversion to Islam in 1666. Sabbatai Zevi's followers, both during his "Messiahship" and after his conversion to Islam, are known as Sabbateans. They can be grouped into three: "Maaminim" (believers), "Haberim" (associates), and "Ba'ale Milhamah" (warriors).</English>
 	</TEXT>
--->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE</Tag>
 		<English>Active Culture</English>

@@ -30290,7 +30290,6 @@
 			</FreePromotions>
 			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
 		</UnitInfo>
-<!-- Deactivated culture - wrong flag
 		<UnitInfo>
 			<Type>UNIT_SHEBA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -30423,7 +30422,6 @@
 			</FreePromotions>
 			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
 		</UnitInfo>
--->
 		<UnitInfo>
 			<Type>UNIT_ISMAIL_I</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>

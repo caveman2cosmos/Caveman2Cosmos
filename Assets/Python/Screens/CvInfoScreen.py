@@ -597,18 +597,15 @@ class CvInfoScreen:
 		self.iActiveTeam = self.pActivePlayer.getTeam()
 		self.pActiveTeam = gc.getTeam(self.iActiveTeam)
 
-# BUG - 3.17 No Espionage - start
 		# Always show graph if espionage is disabled
 		self.iDemographicsMission = -1
 		self.iInvestigateCityMission = -1
 		# See if Espionage allows graph to be shown for each player
-		if not gc.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE):
-			for iMissionLoop in range(gc.getNumEspionageMissionInfos()):
-				if (gc.getEspionageMissionInfo(iMissionLoop).isSeeDemographics()):
-					self.iDemographicsMission = iMissionLoop
-				if (gc.getEspionageMissionInfo(iMissionLoop).isInvestigateCity()):
-					self.iInvestigateCityMission = iMissionLoop
-# BUG - 3.17 No Espionage - end
+		for iMissionLoop in range(gc.getNumEspionageMissionInfos()):
+			if gc.getEspionageMissionInfo(iMissionLoop).isSeeDemographics():
+				self.iDemographicsMission = iMissionLoop
+			if gc.getEspionageMissionInfo(iMissionLoop).isInvestigateCity():
+				self.iInvestigateCityMission = iMissionLoop
 
 		self.determineKnownPlayers(iEndGame)
 
@@ -740,10 +737,7 @@ class CvInfoScreen:
 		screen.addPullDownString(self.szGraphDropdownWidget, self.TEXT_AGRICULTURE, 3, 3, False )
 		screen.addPullDownString(self.szGraphDropdownWidget, self.TEXT_POWER, 4, 4, False )
 		screen.addPullDownString(self.szGraphDropdownWidget, self.TEXT_CULTURE, 5, 5, False )
-#BUG - 3.17 No Espionage - start
-		if not gc.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE):
-			screen.addPullDownString(self.szGraphDropdownWidget, self.TEXT_ESPIONAGE, 6, 6, False )
-#BUG - 3.17 No Espionage - end
+		screen.addPullDownString(self.szGraphDropdownWidget, self.TEXT_ESPIONAGE, 6, 6, False )
 
 #BUG: Change Graphs - start
 		if AdvisorOpt.isGraphs():
@@ -964,13 +958,8 @@ class CvInfoScreen:
 				self.drawLegend()
 
 				iY = self.Y_MARGIN - 30
-				#RevolutionDCM - start
+
 				for i in range(self.NUM_SCORES):
-					if i == self.NUM_SCORES and gc.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE):
-				#RevolutionDCM - end
-
-						continue
-
 					iX = self.X_GRAPH_TEXT[i]
 					screen.hide(self.sGraphTextBannerWidget[i])
 					if i == self.iGraphTabID:
@@ -979,12 +968,8 @@ class CvInfoScreen:
 						screen.setText(self.sGraphTextBannerWidget[i], "", self.sGraphText[0][i], 1<<0, iX, iY, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 			elif self.Graph_Status_Current == self.Graph_Status_7in1:
-				#RevolutionDCM - start
-				for i in range(self.NUM_SCORES):
-					if (i == self.NUM_SCORES) and gc.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE):
-				#RevolutionDCM - end
-						continue
 
+				for i in range(self.NUM_SCORES):
 					screen.hide(self.sGraphTextBannerWidget[i])
 					self.drawGraph(i)
 
@@ -995,10 +980,6 @@ class CvInfoScreen:
 					screen.hide(self.sGraphTextBannerWidget[i])
 
 				for i in range(3):
-					#RevolutionDCM
-					if i == self.NUM_SCORES and gc.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE):
-						continue
-
 					self.drawGraph(i)
 
 				self.drawLegend()

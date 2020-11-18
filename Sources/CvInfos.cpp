@@ -1339,11 +1339,7 @@ m_piCommerceModifier(NULL)
 ,m_iCorporationMaintenanceModifier(0)
 ,m_iPrereqGameOption(NO_GAMEOPTION)
 ,m_piFreeSpecialistCount(NULL)
-,m_piUnitStrengthChange(NULL)
-
-//TB Tech Tags
 ,m_bGlobal(false)
-//TB Tech Tags end
 {
 }
 
@@ -1363,7 +1359,6 @@ CvTechInfo::~CvTechInfo()
 	SAFE_DELETE_ARRAY(m_pbCommerceFlexible);
 	SAFE_DELETE_ARRAY(m_pbTerrainTrade);
 	SAFE_DELETE_ARRAY(m_piCommerceModifier);
-	SAFE_DELETE_ARRAY(m_piUnitStrengthChange);
 
 	for (int i=0; i<(int)m_aPrereqBuilding.size(); i++)
 	{
@@ -1782,22 +1777,10 @@ int CvTechInfo::getPrereqOrBuildingMinimumRequired(int iIndex) const
 	return m_aPrereqOrBuilding[iIndex].iMinimumRequired;
 }
 
-int CvTechInfo::getUnitStrengthChange(int iUnit, bool bForLoad) const
-{
-	//if (!bForLoad && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-	//{
-	//	int iTotal = m_piUnitStrengthChange[iUnit] * 100;
-	//	return m_piUnitStrengthChange ? iTotal : 0;
-	//}
-	return m_piUnitStrengthChange ? m_piUnitStrengthChange[iUnit] : 0;
-}
-
-//TB Tech Tags
 bool CvTechInfo::isGlobal() const
 {
 	return m_bGlobal;
 }
-//TB Tech Tags end
 
 bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 {
@@ -1908,8 +1891,6 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iTradeMissionModifier, L"iTradeMissionModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iCorporationRevenueModifier, L"iCorporationRevenueModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iCorporationMaintenanceModifier, L"iCorporationMaintenanceModifier");
-
-	pXML->SetVariableListTagPair(&m_piUnitStrengthChange, L"UnitStrengthChanges", GC.getNumUnitInfos());
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqGameOption");
 	m_iPrereqGameOption = pXML->GetInfoClass(szTextVal);
@@ -2234,19 +2215,6 @@ void CvTechInfo::copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		}
 	}
 
-	for (int j = 0; j < GC.getNumUnitInfos(); j++)
-	{
-		if ((m_piUnitStrengthChange == NULL || m_piUnitStrengthChange[j] == 0)
-		&& pClassInfo->getUnitStrengthChange(j, true) != 0)
-		{
-			if (m_piUnitStrengthChange == NULL)
-			{
-				CvXMLLoadUtility::InitList(&m_piUnitStrengthChange, GC.getNumUnitInfos(), 0);
-			}
-			m_piUnitStrengthChange[j] = pClassInfo->getUnitStrengthChange(j, true);
-		}
-	}
-
 	if (getNumPrereqBuildings() == 0)
 	{
 		const int iNum = pClassInfo->getNumPrereqBuildings();
@@ -2402,7 +2370,6 @@ void CvTechInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iPrereqGameOption);
 
 	CheckSum(iSum, m_piFreeSpecialistCount, GC.getNumSpecialistInfos());
-	CheckSum(iSum, m_piUnitStrengthChange, GC.getNumUnitInfos());
 
 	const int iNumElements = m_aPrereqBuilding.size();
 	for (int i = 0; i < iNumElements; ++i)

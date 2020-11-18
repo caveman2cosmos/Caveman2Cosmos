@@ -31339,7 +31339,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</UnitInfo>
-<!-- Wrong flag
 		<UnitInfo>
 			<Type>UNIT_MAGOS</Type>
 			<iInstanceCostModifier>25</iInstanceCostModifier>
@@ -31465,7 +31464,6 @@
 				</FreePromotion>
 			</FreePromotions>
 		</UnitInfo>
--->
 		<UnitInfo>
 			<Type>UNIT_TOFANGCHI</Type>
 			<iInstanceCostModifier>25</iInstanceCostModifier>
