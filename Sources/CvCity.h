@@ -32,32 +32,34 @@ void subtractGoodOrBad(int iValue, int& iGood, int& iBad);
 class CvUnitSelectionCriteria
 {
 public:
-	CvUnitSelectionCriteria() : m_eUnitAI(NO_UNITAI),
-								m_eIgnoreAdvisor(NO_ADVISOR),
-								m_eHealUnitCombat(NO_UNITCOMBAT),
-								m_eProperty(NO_PROPERTY),
-								m_eVisibility(NO_INVISIBLE),
-								m_bIgnoreNotUnitAIs(false),
-								m_bIgnoreGrowth(false),
-								m_bPropertyBeneficial(true),
-								m_bNoNegativeProperties(false),
-								m_bIsHealer(false),
-								m_bIsCommander(false)
-	{
-	}
+	CvUnitSelectionCriteria()
+	:
+		m_eUnitAI(NO_UNITAI),
+		m_eIgnoreAdvisor(NO_ADVISOR),
+		m_eHealUnitCombat(NO_UNITCOMBAT),
+		m_eProperty(NO_PROPERTY),
+		m_eVisibility(NO_INVISIBLE),
+		m_bIgnoreNotUnitAIs(false),
+		m_bIgnoreGrowth(false),
+		m_bPropertyBeneficial(true),
+		m_bNoNegativeProperties(false),
+		m_bIsHealer(false),
+		m_bIsCommander(false)
+	{ }
 
-	CvString	getDescription()
+	CvString getDescription()
 	{
-		if ( m_eProperty != NO_PROPERTY )
+		if (m_eProperty != NO_PROPERTY)
 		{
-			return CvString::format("Property %s for %S",
-									m_bPropertyBeneficial ? "improver" : "worsener",
-									GC.getPropertyInfo(m_eProperty).getDescription());
+			return (
+				CvString::format(
+					"Property %s for %S",
+					m_bPropertyBeneficial ? "improver" : "worsener",
+					GC.getPropertyInfo(m_eProperty).getDescription()
+				)
+			);
 		}
-		else
-		{
-			return CvString("");
-		}
+		return CvString("");
 	}
 
 #define PROPERTY_MASK 0x0F
@@ -154,16 +156,12 @@ private:
 	// disable copy: we have owned pointers so we can't use the default copy implementation
 	CvCity(const CvCity&);
 	CvCity& operator=(const CvCity&);
+	bool canHurryInternal(const HurryTypes eHurry) const;
 
 protected:
 	CvGameObjectCity m_GameObject;
 
 public:
-/************************************************************************************************/
-/* REVOLUTION_MOD                         03/29/09                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int getRevolutionIndex() const;
 	void setRevolutionIndex( int iNewValue );
 	void changeRevolutionIndex( int iChange );
@@ -185,9 +183,6 @@ public:
 	void changeReinforcementCounter( int iChange );
 
 	bool isRecentlyAcquired() const;
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 	void kill(bool bUpdatePlotGroups, bool bUpdateCulture = true); // Exposed to Python
 	void killTestCheap(); // For testing, do not call in a game situation
@@ -366,33 +361,19 @@ public:
 	int getCurrentProductionDifference(ProductionCalc::flags flags) const; // Exposed to Python
 	int getExtraProductionDifference(int iExtra) const; // Exposed to Python
 
-	bool canHurry(HurryTypes eHurry, bool bTestVisible = false) const; // Exposed to Python
+	bool canHurry(const HurryTypes eHurry, const bool bTestVisible = false) const; // Exposed to Python
+	int64_t getHurryGold(const HurryTypes eHurry, int iHurryCost = -1) const;
 	void hurry(HurryTypes eHurry); // Exposed to Python
-// BUG - Hurry Assist - start
 	bool hurryOverflow(HurryTypes eHurry, int* iProduction, int* iGold, bool bCountThisTurn = false) const;
-// BUG - Hurry Assist - end
 
 	UnitTypes getConscriptUnit() const; // Exposed to Python
 	CvUnit* initConscriptedUnit();
 	int getConscriptPopulation() const; // Exposed to Python
 	int conscriptMinCityPopulation() const; // Exposed to Python
-	int flatConscriptAngerLength() const;
-//Team Project (6)																			// Exposed to Python
+	int flatConscriptAngerLength() const; // Exposed to Python
 	bool canConscript(bool bOnCapture = false) const; // Exposed to Python
 	void conscript(bool bOnCapture = false); // Exposed to Python
-/************************************************************************************************/
-/* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
-/*                                                                                              */
-/* Original Author Moctezuma              Start                                                 */
-/************************************************************************************************/
-	// ------ BEGIN InfluenceDrivenWar -------------------------------
 	void emergencyConscript();
-	// ------ END InfluenceDrivenWar ---------------------------------
-/************************************************************************************************/
-/* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
-/*                                                                                              */
-/* Original Author Moctezuma              End                                                   */
-/************************************************************************************************/
 
 	int getBonusHealth(BonusTypes eBonus) const; // Exposed to Python - getBonusHealth
 	int getBonusHappiness(BonusTypes eBonus) const; // Exposed to Python - getBonusHappiness
@@ -400,7 +381,6 @@ public:
 	int getBonusYieldRateModifier(YieldTypes eIndex, BonusTypes eBonus) const; // Exposed to Python
 	void processBonus(BonusTypes eBonus, int iChange);
 
-//Team Project (5)
 	void processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolete = false, bool bReplacingNow = false, bool bReligiouslyDisabling = false);
 	void processProcess(ProcessTypes eProcess, int iChange);
 	void processSpecialist(SpecialistTypes eSpecialist, int iChange);
@@ -475,7 +455,6 @@ public:
 	int productionLeft() const; // Exposed to Python
 	int hurryCost(bool bExtra) const; // Exposed to Python
 	int getHurryCostModifier(bool bIgnoreNew = false) const;
-	int hurryGold(HurryTypes eHurry) const; // Exposed to Python
 	int hurryPopulation(HurryTypes eHurry) const; // Exposed to Python
 	int hurryProduction(HurryTypes eHurry) const; // Exposed to Python
 	int flatHurryAngerLength() const; // Exposed to Python
@@ -607,18 +586,10 @@ public:
 	bool isConnectedToCapital(const PlayerTypes ePlayer = NO_PLAYER) const; // Exposed to Python
 	int getArea() const;
 	CvArea* area() const; // Exposed to Python
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/02/09                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	CvArea* waterArea(const bool bNoImpassable = false) const; // Exposed to Python
 	CvArea* secondWaterArea() const;
 	CvArea* sharedWaterArea(const CvCity* pCity) const;
 	bool isBlockaded() const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	CvPlot* getRallyPlot() const; // Exposed to Python
 	void setRallyPlot(const CvPlot* pPlot);
@@ -658,16 +629,12 @@ public:
 	CvProperties* getProperties();
 	const CvProperties* getPropertiesConst() const;
 
-// BUG - Building Additional Great People - start
 	int getAdditionalGreatPeopleRateByBuilding(BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalBaseGreatPeopleRateByBuilding(BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalGreatPeopleRateModifierByBuilding(BuildingTypes eBuilding); // Exposed to Python
-// BUG - Building Additional Great People - end
 
-// BUG - Specialist Additional Great People - start
 	int getAdditionalGreatPeopleRateBySpecialist(SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
 	int getAdditionalBaseGreatPeopleRateBySpecialist(SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
-// BUG - Specialist Additional Great People - end
 
 	int getGreatPeopleProgress() const; // Exposed to Python
 	void changeGreatPeopleProgress(int iChange); // Exposed to Python
@@ -688,10 +655,8 @@ public:
 	bool isGovernmentCenter() const; // Exposed to Python
 	void changeGovernmentCenterCount(int iChange);
 
-// BUG - Building Saved Maintenance - start
 	int getSavedMaintenanceByBuilding(BuildingTypes eBuilding) const; // Exposed to Python
 	int getSavedMaintenanceTimes100ByBuilding(BuildingTypes eBuilding) const; // Exposed to Python
-// BUG - Building Saved Maintenance - end
 
 	int getMaintenance() const; // Exposed to Python
 	int getMaintenanceTimes100() const; // Exposed to Python
@@ -702,16 +667,7 @@ public:
 	int calculateNumCitiesMaintenance() const; // Exposed to Python
 	int calculateColonyMaintenance() const; // Exposed to Python
 	int calculateCorporationMaintenance() const; // Exposed to Python
-/************************************************************************************************/
-/* Afforess	                  Start		 09/08/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier = 0, int iExtraCoastalDistanceModifier = 0) const; // Exposed to Python
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	//Afforess: added iExtraModifier
 	int calculateNumCitiesMaintenanceTimes100(int iExtraModifier = 0) const; // Exposed to Python
 	int calculateColonyMaintenanceTimes100() const; // Exposed to Python
 	int calculateCorporationMaintenanceTimes100(CorporationTypes eCorporation) const; // Exposed to Python
@@ -789,10 +745,6 @@ public:
 
 	int getExtraBuildingGoodHappiness() const; // Exposed to Python
 	int getExtraBuildingBadHappiness() const; // Exposed to Python
-/********************************************************************************/
-/* 	New Civic AI						19.08.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bLimited
 	void updateExtraBuildingHappiness(bool bLimited = false);
 
 	int getAdditionalHappinessByCivic(CivicTypes eCivic, bool bDifferenceToCurrent = true, bool bCivicOptionVacuum = false, ReligionTypes eStateReligion = NO_RELIGION, int iExtraPop = 0, int iMilitaryHappinessUnits = -1) const;
@@ -801,24 +753,18 @@ public:
 	int getAdditionalHealthByPlayerNoUnhealthyPopulation(int iExtraPop = 0, int iIgnoreNoUnhealthyPopulationCount = 0) const;
 	int getAdditionalHealthByPlayerBuildingOnlyHealthy(int iIgnoreBuildingOnlyHealthyCount = 0) const;
 
-// BUG - Building Additional Happiness - start
 	int getAdditionalHappinessByBuilding(BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood, int& iBad, int& iAngryPop);
-// BUG - Building Additional Happiness - end
 
 	int getExtraBuildingGoodHealth() const; // Exposed to Python
 	int getExtraBuildingBadHealth() const; // Exposed to Python
-//Fuyu bLimited
 	void updateExtraBuildingHealth(bool bLimited = false);
 
-// BUG - Building Additional Health - start
 	int getAdditionalHealthByBuilding(BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, int& iBad, int& iSpoiledFood, int& iStarvation);
-// BUG - Building Additional Health - end
 
 	int getFeatureGoodHappiness() const; // Exposed to Python
 	int getFeatureBadHappiness() const; // Exposed to Python
-//Fuyu bLimited
 	void updateFeatureHappiness(bool bLimited = false);
 
 	int getBonusGoodHappiness() const; // Exposed to Python
@@ -829,11 +775,7 @@ public:
 	int getReligionGoodHappiness() const; // Exposed to Python
 	int getReligionBadHappiness() const; // Exposed to Python
 	int getReligionHappiness(ReligionTypes eReligion) const; // Exposed to Python
-//Fuyu bLimited
 	void updateReligionHappiness(bool bLimited = false);
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
 
 	int getExtraHappiness() const; // Exposed to Python
 	void changeExtraHappiness(int iChange); // Exposed to Python
@@ -844,19 +786,12 @@ public:
 	int getHurryAngerTimer() const; // Exposed to Python
 	void changeHurryAngerTimer(int iChange); // Exposed to Python
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         04/28/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int getRevRequestAngerTimer() const; // Exposed to Python
 	void changeRevRequestAngerTimer(int iChange); // Exposed to Python
 
 	int getRevSuccessTimer() const; // Exposed to Python
 	void changeRevSuccessTimer(int iChange); // Exposed to Python
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 	int getConscriptAngerTimer() const; // Exposed to Python
 	void changeConscriptAngerTimer(int iChange); // Exposed to Python
 
@@ -918,9 +853,7 @@ public:
 
 	int getBuildingBombardDefense() const; // Exposed to Python
 	void changeBuildingBombardDefense(int iChange);
-// BUG - Building Additional Bombard Defense - start
 	int getAdditionalBombardDefenseByBuilding(BuildingTypes eBuilding) const; // Exposed to Python
-// BUG - Building Additional Bombard Defense - start
 
 	int getFreeExperience() const; // Exposed to Python
 	void changeFreeExperience(int iChange);
@@ -976,11 +909,9 @@ public:
 	int getCitySizeBoost() const;
 	void setCitySizeBoost(int iBoost);
 
-	// < M.A.D. Nukes Start >
 	int getMADIncoming() const; // Exposed to Python
 	void setMADIncoming(int iValue); // Exposed to Python
 	void changeMADIncoming(int iValue); // Exposed to Python
-	// < M.A.D. Nukes End   >
 
 	bool isNeverLost() const; // Exposed to Python
 	void setNeverLost(bool bNewValue); // Exposed to Python
@@ -1037,16 +968,12 @@ public:
 	int getRiverPlotYield(YieldTypes eIndex) const; // Exposed to Python
 	void changeRiverPlotYield(YieldTypes eIndex, int iChange);
 
-// BUG - Building Additional Yield - start
 	int getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false); // Exposed to Python
 	int getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalYieldRateModifierByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false) const; // Exposed to Python
-// BUG - Building Additional Yield - end
 
-// BUG - Specialist Additional Yield - start
 	int getAdditionalYieldBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
 	int getAdditionalBaseYieldRateBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
-// BUG - Specialist Additional Yield - end
 
 	int getBaseYieldRate(YieldTypes eIndex) const; // Exposed to Python
 	int getBaseYieldRateModifier(YieldTypes eIndex, int iExtra = 0) const; // Exposed to Python
@@ -1073,17 +1000,13 @@ public:
 	int getPopulationTradeModifier() const;
 	int getPeaceTradeModifier(TeamTypes eTeam) const;
 	int getBaseTradeProfit(const CvCity* pCity) const;
-// BUG - Fractional Trade Routes - start
 #ifdef _MOD_FRACTRADE
 	int calculateTradeProfitTimes100(const CvCity* pCity) const; // Exposed to Python
 #endif
-// BUG - Fractional Trade Routes - end
 	int calculateTradeProfit(const CvCity* pCity) const; // Exposed to Python
 	int calculateTradeYield(YieldTypes eIndex, int iTradeProfit) const; // Exposed to Python
-// BUG - Trade Totals - start
 	void calculateTradeTotals(YieldTypes eIndex, int& iDomesticYield, int& iDomesticRoutes, int& iForeignYield, int& iForeignRoutes, PlayerTypes eWithPlayer = NO_PLAYER, bool bRound = false, bool bBase = false) const;
 	int calculateTotalTradeYield(YieldTypes eIndex, PlayerTypes eWithPlayer = NO_PLAYER, bool bRound = false, bool bBase = false) const;
-// BUG - Trade Totals - end
 	void setTradeYield(YieldTypes eIndex, int iNewValue);
 
 	int getExtraSpecialistYield(YieldTypes eIndex) const; // Exposed to Python
@@ -1112,23 +1035,18 @@ public:
 	int getBuildingCommerce(CommerceTypes eIndex) const; // Exposed to Python
 	int getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const; // Exposed to Python
 	int getOrbitalBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;
-// BUG - Building Additional Commerce - start
 	int getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
 	int getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex, BuildingTypes eBuilding);
 	int getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding); // Exposed to Python
-// BUG - Building Additional Commerce - end
 	void updateBuildingCommerce();
 
 	int getSpecialistCommerce(CommerceTypes eIndex) const; // Exposed to Python
 	void changeSpecialistCommerceTimes100(CommerceTypes eIndex, int iChange);
-// BUG - Specialist Additional Commerce - start
 	int getAdditionalCommerceBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
 	int getAdditionalCommerceTimes100BySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
 	int getAdditionalBaseCommerceRateBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const; // Exposed to Python
-// BUG - Specialist Additional Commerce - end
-
 
 	int getReligionCommerce(CommerceTypes eIndex) const; // Exposed to Python
 	int getReligionCommerceByReligion(CommerceTypes eIndex, ReligionTypes eReligion) const; // Exposed to Python
@@ -1219,11 +1137,10 @@ public:
 	int getBuildingProductionTime(BuildingTypes eIndex) const; // Exposed to Python
 	void setBuildingProductionTime(BuildingTypes eIndex, int iNewValue); // Exposed to Python
 	void changeBuildingProductionTime(BuildingTypes eIndex, int iChange); // Exposed to Python
-// BUG - Production Decay - start
+
 	bool isBuildingProductionDecay(BuildingTypes eIndex) const; // Exposed to Python
 	int getBuildingProductionDecay(BuildingTypes eIndex) const; // Exposed to Python
 	int getBuildingProductionDecayTurns(BuildingTypes eIndex) const; // Exposed to Python
-// BUG - Production Decay - end
 
 	int getProjectProduction(ProjectTypes eIndex) const; // Exposed to Python
 	void setProjectProduction(ProjectTypes eIndex, int iNewValue); // Exposed to Python
@@ -1240,11 +1157,10 @@ public:
 	int getUnitProductionTime(UnitTypes eIndex) const; // Exposed to Python
 	void setUnitProductionTime(UnitTypes eIndex, int iNewValue); // Exposed to Python
 	void changeUnitProductionTime(UnitTypes eIndex, int iChange); // Exposed to Python
-// BUG - Production Decay - start
+
 	bool isUnitProductionDecay(UnitTypes eIndex) const; // Exposed to Python
 	int getUnitProductionDecay(UnitTypes eIndex) const; // Exposed to Python
 	int getUnitProductionDecayTurns(UnitTypes eIndex) const; // Exposed to Python
-// BUG - Production Decay - end
 
 	int getGreatPeopleUnitRate(UnitTypes eIndex) const; // Exposed to Python
 	void setGreatPeopleUnitRate(UnitTypes eIndex, int iNewValue);
@@ -1317,7 +1233,7 @@ public:
 
 	bool isHasReligion(ReligionTypes eIndex) const;
 	void setHasReligion(ReligionTypes eIndex, bool bNewValue, bool bAnnounce, bool bArrows = true);
-	//Team Project (5)
+
 	void checkReligiousDisablingAllBuildings();
 	void checkReligiousDisabling(const BuildingTypes eBuilding, const CvPlayer& player);
 	void applyReligionModifiers(const ReligionTypes eIndex, const bool bValue);
@@ -1935,35 +1851,20 @@ protected:
 	bool m_bInfoDirty;
 	bool m_bLayoutDirty;
 	bool m_bPlundered;
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       12/07/09                         denev & jdog5000     */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
 	bool m_bPopProductionProcess;
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
 
 	PlayerTypes m_eOwner;
 	PlayerTypes m_ePreviousOwner;
 	PlayerTypes m_eOriginalOwner;
 	CultureLevelTypes m_eCultureLevel;
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         06/10/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int m_iRevolutionIndex;
 	int m_iLocalRevIndex;
 	int m_iRevIndexAverage;
 	int m_iRevolutionCounter;
 	int m_iReinforcementCounter;
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
-	//TB Combat Mod (Buildings) begin
+
+	//TB Combat Mod (Buildings)
 	int m_iTotalFrontSupportPercentModifier;
 	int m_iTotalShortRangeSupportPercentModifier;
 	int m_iTotalMediumRangeSupportPercentModifier;
@@ -1982,9 +1883,7 @@ protected:
 	int* m_paiPromotionLineAfflictionAttackCommunicability;
 	int* m_paiUnitCombatOngoingTrainingTimeCount;
 	int* m_paiUnitCombatOngoingTrainingTimeIncrement;
-	//TB Combat Mod (Buildings) end
 	//TB Building Tags
-//Team Project (3)
 	int m_iExtraLocalCaptureProbabilityModifier;
 	int m_iExtraLocalCaptureResistanceModifier;
 	int m_iExtraLocalDynamicDefense;
@@ -1994,7 +1893,7 @@ protected:
 	int m_iExtraBuildingDefenseRecoverySpeedModifier;
 	int m_iModifiedBuildingDefenseRecoverySpeedCap;
 	int m_iExtraCityDefenseRecoverySpeedModifier;
-//Team Project (1)
+
 	int** m_ppaaiTechSpecialistHappinessTypes;
 	int* m_paiTechSpecialistHappiness;
 	int* m_paiTechHappiness;
@@ -2014,7 +1913,7 @@ protected:
 	int* m_paiHealUnitCombatTypeVolume;
 	int m_iExtraInsidiousness;
 	int m_iExtraInvestigation;
-	//
+
 	int* m_aiSeaPlotYield;
 	int* m_aiRiverPlotYield;
 	int* m_aiBaseYieldRate;
@@ -2113,13 +2012,7 @@ protected:
 	int*	m_aiCommerceRank;
 	bool*	m_abCommerceRankValid;
 
-/************************************************************************************************/
-/* phunny_pharmer                Start		 04/21/10                                           */
-/************************************************************************************************/
 	mutable std::map<int,int> m_aCultureDistances;
-/************************************************************************************************/
-/* phunny_pharmer                End		 04/21/10                                           */
-/************************************************************************************************/
 
 	void doGrowth();
 	void doCulture();
@@ -2130,16 +2023,7 @@ protected:
 	void doGreatPeople();
 	void doMeltdown();
 	bool doCheckProduction();
-/************************************************************************************************/
-/* Afforess	Meteorology Modmod Start		 09/25/09                                           */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	void doPromotion();
-
-/************************************************************************************************/
-/* Afforess	                               END                                                  */
-/************************************************************************************************/
 
 	int getExtraProductionDifference(int iExtra, UnitTypes eUnit) const;
 	int getExtraProductionDifference(int iExtra, BuildingTypes eBuilding) const;
@@ -2152,7 +2036,6 @@ protected:
 	int getHurryCost(bool bExtra, BuildingTypes eBuilding, bool bIgnoreNew) const;
 	int getHurryCost(bool bExtra, int iProductionLeft, int iHurryModifier, int iModifier) const;
 	int getHurryPopulation(HurryTypes eHurry, int iHurryCost) const;
-	int getHurryGold(HurryTypes eHurry, int iHurryCost) const;
 	bool canHurryUnit(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew) const;
 	bool canHurryBuilding(HurryTypes eHurry, BuildingTypes eBuilding, bool bIgnoreNew) const;
 	void recalculateMaxFoodKeptPercent();
@@ -2163,7 +2046,6 @@ protected:
 	void changeBuildingReplacementCount(BuildingTypes eBuilding, bool bAdd);
 
 	//TB Building tags
-//Team Project (3)
 	void setExtraLocalCaptureProbabilityModifier(int iValue);
 	void changeExtraLocalCaptureProbabilityModifier(int iChange);
 
@@ -2172,16 +2054,21 @@ protected:
 
 	short m_iZoCCount;
 	void changeZoCCount(short iChange);
-//Team Project (1)
 public:
 	int getTechSpecialistHappinessTypes(TechTypes eTech, SpecialistTypes eSpecialist) const;
 
 	int localCitizenCaptureResistance() const;
+	int getTechSpecialistHappiness(TechTypes eTech) const;
+	int getExtraTechHappinessTotal() const;
+	int getExtraTechUnHappinessTotal() const;
+	int getTechSpecialistHealthTypes(TechTypes eTech, SpecialistTypes eSpecialist) const;
+	int getTechSpecialistHealth(TechTypes eTech) const;
+	int getExtraTechHealthTotal() const;
+	int getExtraTechUnHealthTotal() const;
+	int getLocalSpecialistExtraYield(SpecialistTypes eSpecialist, YieldTypes eYield) const;
+	int getLocalSpecialistExtraCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const;
 private:
 	void changeTechSpecialistHappinessTypes(TechTypes eTech, SpecialistTypes eSpecialist, int iChange);
-public:
-	int getTechSpecialistHappiness(TechTypes eTech) const;
-private:
 	void changeTechSpecialistHappiness(TechTypes eTech, int iChange);
 	void updateExtraTechSpecialistHappiness();
 	int getExtraTechSpecialistHappiness() const;
@@ -2189,15 +2076,7 @@ private:
 	void changeTechHappiness(TechTypes eTech, int iChange);
 	void updateExtraTechHappiness();
 	int getExtraTechHappiness() const;
-public:
-	int getExtraTechHappinessTotal() const;
-	int getExtraTechUnHappinessTotal() const;
-	int getTechSpecialistHealthTypes(TechTypes eTech, SpecialistTypes eSpecialist) const;
-private:
 	void changeTechSpecialistHealthTypes(TechTypes eTech, SpecialistTypes eSpecialist, int iChange);
-public:
-	int getTechSpecialistHealth(TechTypes eTech) const;
-private:
 	void changeTechSpecialistHealth(TechTypes eTech, int iChange);
 	void updateExtraTechSpecialistHealth();
 	int getExtraTechSpecialistHealth() const;
@@ -2205,12 +2084,6 @@ private:
 	void changeTechHealth(TechTypes eTech, int iChange);
 	void updateExtraTechHealth();
 	int getExtraTechHealth() const;
-public:
-	int getExtraTechHealthTotal() const;
-	int getExtraTechUnHealthTotal() const;
-	int getLocalSpecialistExtraYield(SpecialistTypes eSpecialist, YieldTypes eYield) const;
-	int getLocalSpecialistExtraCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const;
-private:
 	void changeLocalSpecialistExtraYield(SpecialistTypes eSpecialist, YieldTypes eYield, int iChange);
 	void changeLocalSpecialistExtraCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce, int iChange);
 public:

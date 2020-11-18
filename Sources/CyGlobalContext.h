@@ -393,15 +393,8 @@ public:
 	int getNUM_CITY_PLOTS() const { return NUM_CITY_PLOTS; }
 	int getCITY_HOME_PLOT() const { return CITY_HOME_PLOT; }
 
-// BUG - BUG Info - start
-	void setIsBug(bool bIsBug) { GC.setIsBug(bIsBug); }										// Exposed to Python
-// BUG - BUG Info - end
+	void setIsBug() { GC.setIsBug(); }
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int getPEAK_EXTRA_DEFENSE() const { return GC.getPEAK_EXTRA_DEFENSE(); }
 	int getPEAK_EXTRA_MOVEMENT() const { return GC.getPEAK_EXTRA_MOVEMENT(); }
 	bool isXMLLogging() const { return GC.isXMLLogging(); }
@@ -410,9 +403,6 @@ public:
 	void setNoUpdateDefineINT( const char * szName, int iValue ) { return GC.setDefineINT( szName, iValue, false ); }
 	void setNoUpdateDefineFLOAT( const char * szName, float fValue ) { return GC.setDefineFLOAT( szName, fValue, false ); }
 	void setNoUpdateDefineSTRING( const char * szName, const char * szValue ) { return GC.setDefineSTRING( szName, szValue, false ); }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 };
 
 #endif	// CyGlobalContext_h

@@ -896,7 +896,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iCombatExperience = 0;
 	m_iPopRushHurryCount = 0;
 	m_iInflationModifier = 0;
-	m_accruedCostRatioTimes10000 = 10000;	//	1:1 at the start
 	m_uiStartTime = 0;
 
 	m_bAlive = false;
@@ -1780,12 +1779,9 @@ void CvPlayer::setIsHuman( bool bNewValue )
 }
 
 
-void CvPlayer::setIsRebel( bool bNewValue )
+void CvPlayer::setIsRebel(bool bNewValue)
 {
-	if( bNewValue == isRebel() )
-		return;
-	else
-		m_bRebel = bNewValue;
+	m_bRebel = bNewValue;
 }
 
 bool CvPlayer::isRebel() const
@@ -2537,25 +2533,9 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 	if (bConquest)
 	{
-
-		long lCaptureGold;
-		// Use python to determine city capture gold amounts...
-		lCaptureGold = 0;
-
-		CyCity* pyOldCity = new CyCity(pOldCity);
-
-		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyOldCity));	// pass in plot class
-		argsList.add(getID());
-
-		PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doCityCaptureGold", argsList.makeFunctionArgs(), &lCaptureGold);
-
-		delete pyOldCity;	// python fxn must not hold on to this pointer
-
-		iCaptureGold = (int)lCaptureGold;
+		iCaptureGold = Cy::call<int>(PYGameModule, "doPillageGold", Cy::Args() << pOldCity << getID());
+		changeGold(iCaptureGold);
 	}
-
-	changeGold(iCaptureGold);
 
 	pabHasReligion = new bool[GC.getNumReligionInfos()];
 	pabHolyCity = new bool[GC.getNumReligionInfos()];
@@ -3968,8 +3948,6 @@ void CvPlayer::doTurn()
 
 	doAdvancedEconomy();
 
-	doInflation();
-
 	{
 		PROFILE("CvPlayer::doTurn.DoCityTurn");
 
@@ -4004,7 +3982,10 @@ void CvPlayer::doTurn()
 
 	updateWarWearinessPercentAnger();
 
-	doEvents();
+	if (!isNPC())
+	{
+		doEvents();
+	}
 
 	m_mapEconomyHistory[GC.getGame().getGameTurn()] = calculateTotalCommerce();
 	m_mapPowerHistory[GC.getGame().getGameTurn()] = getPower();
@@ -8306,64 +8287,12 @@ int64_t CvPlayer::calculatePreInflatedCosts() const
 	);
 }
 
-// Called once per turn to update the current cost-to-turn-1-cost ratio
-void CvPlayer::doInflation()
+int CvPlayer::getInflationMod10000() const
 {
-	// Keep up to second order terms in binomial series
-	const int iAccruedCostRatioTimes10000 = 100 * (100 + getEquilibriumInflationCostModifier());
+	int iInflationPerTurnTimes10000 = 100 * getHurriedCount();
 
-	// iAccruedCostRatioTimes10000 now holds the cost multiplier our CURRENT inflation rate would imply.
-	// We 'decay' the current cost multiplier towards this equilibrium value.
-	const int iInflationRateMomentum = std::max
-	(
-		1,
-		(
-			GC.getDefineINT("INFLATION_RATE_MOMENTUM", 50)
-			* GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getImprovementPercent()
-			/ 100
-		)
-	);
-	m_accruedCostRatioTimes10000 +=
-	(
-		(
-			iAccruedCostRatioTimes10000 - m_accruedCostRatioTimes10000 +
-			(iAccruedCostRatioTimes10000 > m_accruedCostRatioTimes10000 ? 1 : -1) * (iInflationRateMomentum - 1)
-		)
-		/ iInflationRateMomentum
-	);
-	//Debug to check the evolution of the inflation value.
-	OutputDebugString(CvString::format("\nnew m_accruedCostRatioTimes10000 : %d ",m_accruedCostRatioTimes10000).c_str());
-}
-
-int CvPlayer::getCurrentInflationCostModifier() const
-{
-	return m_accruedCostRatioTimes10000/100 - 100;
-}
-
-int CvPlayer::getEquilibriumInflationCostModifier() const
-{
-	const int iInflationPerTurnTimes10000 = getCurrentInflationPerTurnTimes10000();
-	int iTurns = (GC.getGame().getGameTurn() + GC.getGame().getElapsedGameTurns()) / 2;
-
-	if (GC.getGame().getMaxTurns() > 0)
-	{
-		iTurns = std::min(GC.getGame().getMaxTurns(), iTurns);
-	}
-	iTurns += GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getInflationOffset();
-
-	// Keep up to second order terms in binomial series
-	const int iAccruedCostRatioTimes10000 =
-	(
-		10000 + iTurns * iInflationPerTurnTimes10000
-		+ iTurns * (iTurns - 1) * iInflationPerTurnTimes10000 * iInflationPerTurnTimes10000 / 20000
-	);
-	return iAccruedCostRatioTimes10000/100 - 100;
-}
-
-int CvPlayer::getCurrentInflationPerTurnTimes10000() const
-{
-	int iInflationPerTurnTimes10000 = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getInflationPercent();
 	iInflationPerTurnTimes10000 *= GC.getHandicapInfo(getHandicapType()).getInflationPercent();
+	iInflationPerTurnTimes10000 /= 100;
 
 	int iModifier = m_iInflationModifier;
 	if (!isHuman() && !isNPC())
@@ -8380,46 +8309,40 @@ int CvPlayer::getCurrentInflationPerTurnTimes10000() const
 	iInflationPerTurnTimes10000 *= std::max(0, 100 + iModifier);
 	iInflationPerTurnTimes10000 /= 100;
 
-	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY))
-	{
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + getCivicInflation());
-		iInflationPerTurnTimes10000 /= 100;
+	iInflationPerTurnTimes10000 *= std::max(0, 100 + getCivicInflation());
+	iInflationPerTurnTimes10000 /= 100;
 
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + getProjectInflation());
-		iInflationPerTurnTimes10000 /= 100;
+	iInflationPerTurnTimes10000 *= std::max(0, 100 + getProjectInflation());
+	iInflationPerTurnTimes10000 /= 100;
 
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + getTechInflation());
-		iInflationPerTurnTimes10000 /= 100;
+	iInflationPerTurnTimes10000 *= std::max(0, 100 + getTechInflation());
+	iInflationPerTurnTimes10000 /= 100;
 
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + getBuildingInflation());
-		iInflationPerTurnTimes10000 /= 100;
+	iInflationPerTurnTimes10000 *= std::max(0, 100 + getBuildingInflation());
+	iInflationPerTurnTimes10000 /= 100;
 
-		iInflationPerTurnTimes10000 *= std::max(0, 100 + getHurriedCount());
-		iInflationPerTurnTimes10000 /= 100;
-	}
-	return iInflationPerTurnTimes10000/100;
+	return std::max(10000, 10000 + iInflationPerTurnTimes10000);
 }
 
 int CvPlayer::calculateInflationRate() const
 {
-	return m_accruedCostRatioTimes10000 == -1 ? 0 : m_accruedCostRatioTimes10000 / 100 - 100;
+	return getInflationMod10000() / 100 - 100;
 }
 
-
-int64_t CvPlayer::calculateInflatedCosts() const
+int64_t CvPlayer::getInflationCost() const
 {
-	int64_t iCosts = calculatePreInflatedCosts();
-
-	iCosts *= std::max(0, calculateInflationRate() + 100);
-	iCosts /= 100;
-
-	return iCosts;
+	const int64_t iPreInflatedCost = calculatePreInflatedCosts();
+	return iPreInflatedCost * getInflationMod10000() / 10000 - iPreInflatedCost;
 }
 
+int64_t CvPlayer::getFinalExpense() const
+{
+	return calculatePreInflatedCosts() * getInflationMod10000() / 10000;
+}
 
 int64_t CvPlayer::calculateBaseNetGold() const
 {
-	return getCommerceRate(COMMERCE_GOLD) + getGoldPerTurn() - calculateInflatedCosts();
+	return getCommerceRate(COMMERCE_GOLD) + getGoldPerTurn() - getFinalExpense();
 }
 
 int CvPlayer::calculateResearchModifier(TechTypes eTech) const
@@ -10126,7 +10049,7 @@ int CvPlayer::getHurryModifier() const
 
 void CvPlayer::changeHurryModifier(int iChange)
 {
-	m_iGlobalHurryModifier = (m_iGlobalHurryModifier + iChange);
+	m_iGlobalHurryModifier += iChange;
 }
 
 
@@ -13226,29 +13149,19 @@ ReligionTypes CvPlayer::getStateReligion() const
 }
 
 
-void CvPlayer::setLastStateReligion(ReligionTypes eNewValue)
+void CvPlayer::setLastStateReligion(const ReligionTypes eNewReligion)
 {
-	ReligionTypes eOldReligion;
-	CvWString szBuffer;
-	int iI;
+	const ReligionTypes eOldReligion = m_eLastStateReligion;
 
-	if (getLastStateReligion() != eNewValue)
+	if (eOldReligion != eNewReligion)
 	{
-		// religion visibility now part of espionage
-		//GC.getGame().updateCitySight(false, true);
-
-		eOldReligion = getLastStateReligion();
-		m_eLastStateReligion = eNewValue;
-
-		// religion visibility now part of espionage
-		//GC.getGame().updateCitySight(true, true);
+		m_eLastStateReligion = eNewReligion;
 
 		setMaintenanceDirty(true);
 		updateReligionHappiness();
 		updateReligionCommerce();
 
 		GC.getGame().updateSecretaryGeneral();
-
 		GC.getGame().AI_makeAssignWorkDirty();
 
 		gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
@@ -13260,67 +13173,57 @@ void CvPlayer::setLastStateReligion(ReligionTypes eNewValue)
 				gDLL->updateDiplomacyAttitude(true);
 			}
 
-/************************************************************************************************/
-/* REVOLUTION_MOD						 01/01/08								jdog5000	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-/* original code
-			if (!isBarbarian())
-*/
 			// Silence announcement for civs who are not alive, ie rebels who may not be born
-			if (!isNPC() && isAlive())
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
+			if (!isNPC() && isAlive() && eNewReligion != NO_RELIGION)
 			{
-				if (getLastStateReligion() != NO_RELIGION)
+				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
-					for (iI = 0; iI < MAX_PLAYERS; iI++)
+					const CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
+
+					if (playerX.isAlive() && playerX.isHuman() && GET_TEAM(getTeam()).isHasMet(playerX.getTeam()))
 					{
-						if (GET_PLAYER((PlayerTypes)iI).isAlive())
-						{
-							if (GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
-							{
-								MEMORY_TRACK_EXEMPT();
-
-								szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_CONVERT_RELIGION", getNameKey(), GC.getReligionInfo(getLastStateReligion()).getTextKeyWide());
-								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_RELIGION_CONVERT", MESSAGE_TYPE_MAJOR_EVENT);
-							}
-						}
+						MEMORY_TRACK_EXEMPT();
+						AddDLLMessage(
+							(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_PLAYER_CONVERT_RELIGION",
+								getNameKey(), GC.getReligionInfo(eNewReligion).getTextKeyWide()
+							)
+							, "AS2D_RELIGION_CONVERT", MESSAGE_TYPE_MAJOR_EVENT
+						);
 					}
-
-					szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_CONVERT_RELIGION", getNameKey(), GC.getReligionInfo(getLastStateReligion()).getTextKeyWide());
-					GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szBuffer);
 				}
+				GC.getGame().addReplayMessage(
+					REPLAY_MESSAGE_MAJOR_EVENT, getID(),
+					gDLL->getText(
+						"TXT_KEY_MISC_PLAYER_CONVERT_RELIGION",
+						getNameKey(), GC.getReligionInfo(eNewReligion).getTextKeyWide()
+					)
+				);
 			}
 
 			// Python Event
-			CvEventReporter::getInstance().playerChangeStateReligion(getID(), eNewValue, eOldReligion);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  09/03/09					   poyuzhe & jdog5000	 */
-/*																							  */
-/* Efficiency																				   */
-/************************************************************************************************/
-			// From Sanguo Mod Performance, ie the CAR Mod
+			CvEventReporter::getInstance().playerChangeStateReligion(getID(), eNewReligion, eOldReligion);
+
 			// Attitude cache
-			for (int iI = 0; iI < GC.getMAX_PLAYERS(); iI++)
+			CvPlayerAI& playerAI = GET_PLAYER(getID());
+
+			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getStateReligion() != NO_RELIGION)
+				CvPlayerAI& playerAI_X = GET_PLAYER((PlayerTypes)iI);
+
+				if (playerAI_X.isAlive() && playerAI_X.getStateReligion() != NO_RELIGION)
 				{
-					GET_PLAYER(getID()).AI_invalidateAttitudeCache((PlayerTypes)iI);
-					GET_PLAYER((PlayerTypes)iI).AI_invalidateAttitudeCache(getID());
+					playerAI.AI_invalidateAttitudeCache((PlayerTypes)iI);
+					playerAI_X.AI_invalidateAttitudeCache(getID());
 				}
 			}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 		}
 
 		clearCanConstructCache(NO_BUILDING, true);
-
 	}
 }
+
 
 PlayerTypes CvPlayer::getParent() const
 {
@@ -19514,17 +19417,6 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 				changeSpecialistCommercePercentChanges((SpecialistTypes)iI, (CommerceTypes)iJ, kCivic.getSpecialistCommercePercentChanges(iI, iJ) * iChange);
 			}
 		}
-		//if (kCivic.isChooseCurrency())
-		//{
-		//	if (iChange > 0)
-		//	{
-				//m_bChooseCurrency = true;
-		//	}
-		//	else
-		//	{
-				//m_bChooseCurrency = false;
-		//	}
-		//}
 
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
@@ -20064,7 +19956,9 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iProjectInflation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTechInflation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivicInflation);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_accruedCostRatioTimes10000);
+		// @SAVEBREAK DELETE - Toffer
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_accruedCostRatioTimes10000, SAVE_VALUE_ANY);
+		// SAVEBREAK@
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHurryCostModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHurryInflationModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHurryCount);
@@ -21244,7 +21138,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iProjectInflation);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTechInflation);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCivicInflation);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_accruedCostRatioTimes10000);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iHurryCostModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iHurryInflationModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iHurryCount);
@@ -21917,6 +21810,7 @@ void CvPlayer::setTriggerFired(const EventTriggeredData& kTriggeredData, bool bO
 		return;
 	}
 	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(kTriggeredData.m_eTrigger);
+	const TeamTypes eTeam = getTeam();
 
 	if (!isTriggerFired(kTriggeredData.m_eTrigger))
 	{
@@ -21938,7 +21832,7 @@ void CvPlayer::setTriggerFired(const EventTriggeredData& kTriggeredData, bool bO
 			{
 				for (int i = 0; i < MAX_PC_PLAYERS; i++)
 				{
-					if (i != getID() && getTeam() == GET_PLAYER((PlayerTypes)i).getTeam())
+					if (i != getID() && eTeam == GET_PLAYER((PlayerTypes)i).getTeam())
 					{
 						GET_PLAYER((PlayerTypes)i).setTriggerFired(kTriggeredData, false, false);
 					}
@@ -21958,66 +21852,80 @@ void CvPlayer::setTriggerFired(const EventTriggeredData& kTriggeredData, bool bO
 
 		if (!kTriggeredData.m_szGlobalText.empty())
 		{
-			for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; ++iPlayer)
+			CvTeam& team = GET_TEAM(eTeam);
+
+			for (int i = 0; i < MAX_PC_PLAYERS; ++i)
 			{
-				CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+				const CvPlayer& playerX = GET_PLAYER((PlayerTypes)i);
 
-				if (kLoopPlayer.isAlive())
+				if (
+					playerX.isAlive()
+					&&
+					(
+						team.isHasMet(playerX.getTeam())
+						&&
+						(
+							NO_PLAYER == kTriggeredData.m_eOtherPlayer
+							||
+							team.isHasMet(GET_PLAYER(kTriggeredData.m_eOtherPlayer).getTeam())
+						)
+					)
+				)
 				{
-					if (GET_TEAM(kLoopPlayer.getTeam()).isHasMet(getTeam()) && (NO_PLAYER == kTriggeredData.m_eOtherPlayer || GET_TEAM(GET_PLAYER(kTriggeredData.m_eOtherPlayer).getTeam()).isHasMet(getTeam())))
+					if (
+						kTrigger.isShowPlot()
+						&&
+						(
+							playerX.getTeam() == eTeam
+							||
+							pPlot != NULL
+							&&
+							pPlot->isRevealed(playerX.getTeam(), false)
+							&&
+							pPlot->isInViewport()
+						)
+					)
 					{
-						bool bShowPlot = kTrigger.isShowPlot();
-
-						if (bShowPlot)
-						{
-							if (kLoopPlayer.getTeam() != getTeam())
-							{
-								if (NULL == pPlot ||
-									!pPlot->isRevealed(kLoopPlayer.getTeam(), false) ||
-									!pPlot->isInViewport())
-								{
-									bShowPlot = false;
-								}
-							}
-						}
-
 						MEMORY_TRACK_EXEMPT();
-
-						if (bShowPlot)
-						{
-							AddDLLMessage((PlayerTypes)iPlayer, false, GC.getEVENT_MESSAGE_TIME(), kTriggeredData.m_szGlobalText, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_WHITE(), kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY, true, true);
-						}
-						else
-						{
-							AddDLLMessage((PlayerTypes)iPlayer, false, GC.getEVENT_MESSAGE_TIME(), kTriggeredData.m_szGlobalText, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT);
-						}
+						AddDLLMessage(
+							(PlayerTypes)i, false, GC.getEVENT_MESSAGE_TIME(),
+							kTriggeredData.m_szGlobalText, "AS2D_CIVIC_ADOPT",
+							MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_WHITE(),
+							kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY, true, true
+						);
+					}
+					else
+					{
+						MEMORY_TRACK_EXEMPT();
+						AddDLLMessage(
+							(PlayerTypes)i, false, GC.getEVENT_MESSAGE_TIME(),
+							kTriggeredData.m_szGlobalText, "AS2D_CIVIC_ADOPT",
+							MESSAGE_TYPE_MINOR_EVENT
+						);
 					}
 				}
 			}
-
-/************************************************************************************************/
-/* REVOLUTION_MOD						 02/01/08								jdog5000	  */
-/*																							  */
-/* Silence replay messages for events ... too crowded by late game							  */
-/************************************************************************************************/
-/* original code
-			GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), kTriggeredData.m_szGlobalText, kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY, GC.getCOLOR_HIGHLIGHT_TEXT());
-*/
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
 		}
 		else if (!kTriggeredData.m_szText.empty())
 		{
-			MEMORY_TRACK_EXEMPT();
-
-			if (kTrigger.isShowPlot() && NULL != pPlot && pPlot->isRevealed(getTeam(), false))
+			if (kTrigger.isShowPlot() && NULL != pPlot && pPlot->isRevealed(eTeam, false))
 			{
-				AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), kTriggeredData.m_szText, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_WHITE(), kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY, true, true);
+				MEMORY_TRACK_EXEMPT();
+				AddDLLMessage(
+					getID(), false, GC.getEVENT_MESSAGE_TIME(),
+					kTriggeredData.m_szText, "AS2D_CIVIC_ADOPT",
+					MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_WHITE(),
+					kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY, true, true
+				);
 			}
 			else
 			{
-				AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), kTriggeredData.m_szText, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_WHITE());
+				MEMORY_TRACK_EXEMPT();
+				AddDLLMessage(
+					getID(), false, GC.getEVENT_MESSAGE_TIME(),
+					kTriggeredData.m_szText, "AS2D_CIVIC_ADOPT",
+					MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_WHITE()
+				);
 			}
 		}
 	}
@@ -23748,7 +23656,7 @@ int CvPlayer::getEventCost(EventTypes eEvent, PlayerTypes eOtherPlayer, bool bRa
 
 	if (NO_TECH != eBestTech)
 	{
-		iGold -= (kEvent.getTechCostPercent() * GET_TEAM(getTeam()).getResearchCost(eBestTech)) / 100;
+		iGold -= kEvent.getTechCostPercent() * GET_TEAM(getTeam()).getResearchCost(eBestTech) / 100;
 	}
 
 	return iGold;
@@ -23762,23 +23670,6 @@ void CvPlayer::doEvents()
 		return;
 	}
 
-/************************************************************************************************/
-/* REVOLUTION_MOD						 03/02/08								jdog5000	  */
-/*																							  */
-/* For minor civs																			   */
-/************************************************************************************************/
-/* original code
-	if (isBarbarian() || isMinorCiv())
-*/
-	// Allow events for minor civs
-	if (isNPC())
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
-	{
-		return;
-	}
-
 	CvEventMap::iterator it = m_mapEventsOccured.begin();
 	while (it != m_mapEventsOccured.end())
 	{
@@ -23786,34 +23677,26 @@ void CvPlayer::doEvents()
 		{
 			expireEvent(it->first, it->second, true);
 		}
-
 		++it;
 	}
 
-	bool bNewEventEligible = true;
-	if (GC.getGame().getElapsedGameTurns() < GC.getDefineINT("FIRST_EVENT_DELAY_TURNS"))
-	{
-		bNewEventEligible = false;
-	}
-
-	if (bNewEventEligible)
-	{
-		if (GC.getGame().getSorenRandNum(GC.getDefineINT("EVENT_PROBABILITY_ROLL_SIDES"), "Global event check") >= GC.getEraInfo(getCurrentEra()).getEventChancePerTurn())
-		{
-			bNewEventEligible = false;
-		}
-	}
+	const bool bNewEventEligible =
+	(
+		GC.getGame().getElapsedGameTurns() >= GC.getDefineINT("FIRST_EVENT_DELAY_TURNS")
+		&&
+		GC.getGame().getSorenRandNum(GC.getDefineINT("EVENT_PROBABILITY_ROLL_SIDES"), "Global event check") < GC.getEraInfo(getCurrentEra()).getEventChancePerTurn()
+	);
 
 	std::vector< std::pair<EventTriggeredData*, int> > aePossibleEventTriggerWeights;
 	int iTotalWeight = 0;
 	for (int i = 0; i < GC.getNumEventTriggerInfos(); ++i)
 	{
-		int iWeight = getEventTriggerWeight((EventTriggerTypes)i);
+		const int iWeight = getEventTriggerWeight((EventTriggerTypes)i);
 		if (iWeight == -1)
 		{
 			trigger((EventTriggerTypes)i);
 		}
-		else if (iWeight > 0 && bNewEventEligible)
+		else if (bNewEventEligible && iWeight > 0)
 		{
 			EventTriggeredData* pTriggerData = initTriggeredData((EventTriggerTypes)i);
 			if (NULL != pTriggerData)
@@ -23827,7 +23710,7 @@ void CvPlayer::doEvents()
 	if (iTotalWeight > 0)
 	{
 		bool bFired = false;
-		int iValue = GC.getGame().getSorenRandNum(iTotalWeight, "Event trigger");
+		const int iValue = GC.getGame().getSorenRandNum(iTotalWeight, "Event trigger");
 		for (std::vector< std::pair<EventTriggeredData*, int> >::iterator it = aePossibleEventTriggerWeights.begin(); it != aePossibleEventTriggerWeights.end(); ++it)
 		{
 			EventTriggeredData* pTriggerData = (*it).first;
@@ -23838,26 +23721,22 @@ void CvPlayer::doEvents()
 					trigger(*pTriggerData);
 					bFired = true;
 				}
-				else
-				{
-					deleteEventTriggered(pTriggerData->getID());
-				}
+				else deleteEventTriggered(pTriggerData->getID());
 			}
 		}
 	}
 
+	const int iTurn = GC.getGame().getGameTurn();
 	std::vector<int> aCleanup;
 	for (int i = 0; i < GC.getNumEventInfos(); ++i)
 	{
 		const EventTriggeredData* pTriggeredData = getEventCountdown((EventTypes)i);
-		if (NULL != pTriggeredData)
+
+		if (NULL != pTriggeredData && iTurn >= pTriggeredData->m_iTurn)
 		{
-			if (GC.getGame().getGameTurn() >= pTriggeredData->m_iTurn)
-			{
-				applyEvent((EventTypes)i, pTriggeredData->m_iId);
-				resetEventCountdown((EventTypes)i);
-				aCleanup.push_back(pTriggeredData->m_iId);
-			}
+			applyEvent((EventTypes)i, pTriggeredData->m_iId);
+			resetEventCountdown((EventTypes)i);
+			aCleanup.push_back(pTriggeredData->m_iId);
 		}
 	}
 
@@ -23877,7 +23756,6 @@ void CvPlayer::doEvents()
 				}
 			}
 		}
-
 		if (bDelete)
 		{
 			deleteEventTriggered(*it);
@@ -30311,8 +30189,6 @@ void CvPlayer::recalculateModifiers()
 	((CvPlayerAI*)this)->AI_recalculateUnitCounts();
 	recalculateUnitCounts();
 
-	doInflation();
-
 	setMaintenanceDirty(true);
 
 	AI_updateBonusValue();
@@ -32381,4 +32257,11 @@ bool CvPlayer::haveSettlerUnit() const
 		}
 	}
 	return false;
+}
+
+
+// Toffer - A very common check
+bool CvPlayer::isAliveAndTeam(const TeamTypes eTeam, const bool bSameTeam) const
+{
+	return isAlive() && (bSameTeam ? eTeam == getTeam() : eTeam != getTeam());
 }

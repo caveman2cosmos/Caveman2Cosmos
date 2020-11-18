@@ -3807,31 +3807,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 		[NEWLINE]COUT TOTAL DE L'ENTRETIEN DES VILLES : %d1[ICON_GOLD]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_NEW</Tag>
-		<English>
-		[NEWLINE]Total costs before Inflation = %d1[ICON_GOLD]
-		[NEWLINE]Inflation Rate = %d2%% (%s6)
-		[NEWLINE]Cost due to Inflation (%d3%% of %d4[ICON_GOLD]) = %d5[ICON_GOLD]</English>
-		<French>
-		[NEWLINE]Coût total avant inflation = %d1[ICON_GOLD]
-		[NEWLINE]Taux d'inflation = %d2%% (%s6)
-		[NEWLINE]Coût lié à l'inflation (%d3%% de %d4[ICON_GOLD]) = %d5[ICON_GOLD]</French>
-		<German>
-		[NEWLINE]Gesamtkosten vor Inflation = %d1[ICON_GOLD]
-		[NEWLINE]Inflationsrate = %d2%% (%s6)
-		[NEWLINE]Kosten durch Inflation (%d3%% von %d4[ICON_GOLD]) = %d5[ICON_GOLD]</German>
-		<Italian>
-		[NEWLINE]Costi totali prima dell'inflazione = %d1[ICON_GOLD]
-		[NEWLINE]Tasso d'inflazione = %d2%% (%s6)
-		[NEWLINE]Costo dovuto all'inflazione (%d3%% di %d4[ICON_GOLD]) = %d5[ICON_GOLD]</Italian>
-		<Spanish>
-		[NEWLINE]Coste total antes de la inflación = %d1 [ICON_GOLD]
-		[NEWLINE]Tasa de inflación = %d2%% (%s6)
-		[NEWLINE]Coste debido a la inflación (%d3%% de %d4 [ICON_GOLD]) = %d5 [ICON_GOLD]</Spanish>
-		<Polish>
-		[NEWLINE]Cout total avant inflation = %d1[ICON_GOLD]
-		[NEWLINE]Taux d'inflation = %d2%% (%s6)
-		[NEWLINE]Cout liź a l'inflation (%d3%% de %d4[ICON_GOLD]) = %d5[ICON_GOLD]</Polish>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_0</Tag>
+		<English>[NEWLINE]Total costs before inflation = %d1[ICON_GOLD][NEWLINE]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_1</Tag>
+		<English>[NEWLINE]Inflation rate = %d1.%d2%%[NEWLINE][NEWLINE]Cost due to Inflation = %d3[ICON_GOLD]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_SOURCES_OF_INFLATION</Tag>
@@ -4787,19 +4768,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>s'améliore</French>
 		<Spanish>mejorando</Spanish>
 		<Polish>wzrasta</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INFLATION_OUTLOOK_STABLE</Tag>
-		<English>stable</English>
-		<Spanish>estable</Spanish>
-		<Polish>stabilne</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INFLATION_OUTLOOK_WORSENING</Tag>
-		<English>worsening</English>
-		<French>se détériore</French>
-		<Spanish>empeorando</Spanish>
-		<Polish>spada</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INSIDIOUSNESS_TEXT</Tag>

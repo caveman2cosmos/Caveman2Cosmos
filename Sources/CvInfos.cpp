@@ -13920,8 +13920,6 @@ m_iUnitGreatWorkPercent(0),
 m_iGoldenAgePercent(0),
 m_iHurryPercent(0),
 m_iHurryConscriptAngerPercent(0),
-m_iInflationOffset(0),
-m_iInflationPercent(0),
 m_iOccupationTimePopulationPercent(0),
 m_iVictoryDelayPercent(0),
 m_iNumTurnIncrements(0),
@@ -14037,16 +14035,6 @@ int CvGameSpeedInfo::getHurryConscriptAngerPercent() const
 	return m_iHurryConscriptAngerPercent;
 }
 
-int CvGameSpeedInfo::getInflationOffset() const
-{
-	return m_iInflationOffset;
-}
-
-int CvGameSpeedInfo::getInflationPercent() const
-{
-	return m_iInflationPercent;
-}
-
 int CvGameSpeedInfo::getOccupationTimePopulationPercent() const
 {
 	return m_iOccupationTimePopulationPercent;
@@ -14138,8 +14126,6 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iGoldenAgePercent, L"iGoldenAgePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iHurryPercent, L"iHurryPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iHurryConscriptAngerPercent, L"iHurryConscriptAngerPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iInflationOffset, L"iInflationOffset");
-	pXML->GetOptionalChildXmlValByName(&m_iInflationPercent, L"iInflationPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iOccupationTimePopulationPercent, L"iOccupationTurnsPopulationPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iVictoryDelayPercent, L"iVictoryDelayPercent");
 
@@ -14226,8 +14212,6 @@ void CvGameSpeedInfo::copyNonDefaults(CvGameSpeedInfo* pClassInfo, CvXMLLoadUtil
 	if (getGoldenAgePercent() == iDefault) m_iGoldenAgePercent = pClassInfo->getGoldenAgePercent();
 	if (getHurryPercent() == iDefault) m_iHurryPercent = pClassInfo->getHurryPercent();
 	if (getHurryConscriptAngerPercent() == iDefault) m_iHurryConscriptAngerPercent = pClassInfo->getHurryConscriptAngerPercent();
-	if (getInflationOffset() == iDefault) m_iInflationOffset = pClassInfo->getInflationOffset();
-	if (getInflationPercent() == iDefault) m_iInflationPercent = pClassInfo->getInflationPercent();
 	if (getOccupationTimePopulationPercent() == iDefault) m_iOccupationTimePopulationPercent = pClassInfo->getOccupationTimePopulationPercent();
 	if (getVictoryDelayPercent() == iDefault) m_iVictoryDelayPercent = pClassInfo->getVictoryDelayPercent();
 
@@ -14269,8 +14253,6 @@ void CvGameSpeedInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iGoldenAgePercent);
 	CheckSum(iSum, m_iHurryPercent);
 	CheckSum(iSum, m_iHurryConscriptAngerPercent);
-	CheckSum(iSum, m_iInflationOffset);
-	CheckSum(iSum, m_iInflationPercent);
 	CheckSum(iSum, m_iOccupationTimePopulationPercent);
 	CheckSum(iSum, m_iVictoryDelayPercent);
 

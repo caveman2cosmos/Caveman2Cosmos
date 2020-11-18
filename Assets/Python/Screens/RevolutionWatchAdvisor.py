@@ -1333,10 +1333,10 @@ class RevolutionWatchAdvisor:
 
 	def calculateHurryGoldCost (self, city, szKey, arg):
 
-		if (city.canHurry(self.HURRY_TYPE_GOLD, False)):
-			return unicode(city.hurryGold(self.HURRY_TYPE_GOLD))
-		else:
-			return self.objectNotPossible
+		if city.canHurry(self.HURRY_TYPE_GOLD, False):
+			return unicode(city.getHurryGold(self.HURRY_TYPE_GOLD))
+
+		return self.objectNotPossible
 
 	def calculatePotentialConscriptUnit (self, city, szKey, arg):
 

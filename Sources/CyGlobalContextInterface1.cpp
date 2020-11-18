@@ -126,6 +126,6 @@ void CyGlobalContextPythonInterface1(python::class_<CyGlobalContext>& x)
 		//.def("getNumTraitOptionEditsInfos", &CyGlobalContext::getNumTraitOptionEditsInfos, "() - Total Trait Option Edits Infos XML\\Traits\\CIV4TraitOptionEditsInfos.xml")
 		//.def("getTraitOptionEditsInfo", &CyGlobalContext::getTraitOptionEditsInfo, python::return_value_policy<python::reference_existing_object>(), "(TraitOptionEditsID) - CvInfo for TraitOptionEditsID")
 
-		.def("setIsBug", &CyGlobalContext::setIsBug, "void (bool bIsBug) - tells BULL that BUG is present and can receive queries for options")
+		.def("setIsBug", &CyGlobalContext::setIsBug, "void () - init BUG on dll side")
 	;
 }
