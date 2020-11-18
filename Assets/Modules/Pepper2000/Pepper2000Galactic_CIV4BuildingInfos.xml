@@ -6774,6 +6774,7 @@
 			<Strategy>TXT_KEY_BUILDING_GALACTIC_CORE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GALACTIC_CORE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GALACTIC_CORE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANTIMATTER_ROCKETS</PrereqTech>
 			<iHurryCostModifier>10000</iHurryCostModifier>
