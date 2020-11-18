@@ -1779,12 +1779,9 @@ void CvPlayer::setIsHuman( bool bNewValue )
 }
 
 
-void CvPlayer::setIsRebel( bool bNewValue )
+void CvPlayer::setIsRebel(bool bNewValue)
 {
-	if( bNewValue == isRebel() )
-		return;
-	else
-		m_bRebel = bNewValue;
+	m_bRebel = bNewValue;
 }
 
 bool CvPlayer::isRebel() const
@@ -32260,4 +32257,11 @@ bool CvPlayer::haveSettlerUnit() const
 		}
 	}
 	return false;
+}
+
+
+// Toffer - A very common check
+bool CvPlayer::isAliveAndTeam(const TeamTypes eTeam, const bool bSameTeam) const
+{
+	return isAlive() && (bSameTeam ? eTeam == getTeam() : eTeam != getTeam());
 }
