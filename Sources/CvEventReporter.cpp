@@ -171,9 +171,9 @@ void CvEventReporter::gameStart()
 	m_kPythonEventMgr.reportGameStart();
 }
 
-void CvEventReporter::gameEnd()
+void CvEventReporter::gameEnd(int iGameTurn)
 {
-	m_kPythonEventMgr.reportGameEnd();
+	m_kPythonEventMgr.reportGameEnd(iGameTurn);
 }
 
 void CvEventReporter::mapRegen()

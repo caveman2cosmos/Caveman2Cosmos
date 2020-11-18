@@ -3939,8 +3939,6 @@ public:
 	int getGoldenAgePercent() const; // Exposed to Python
 	int getHurryPercent() const; // Exposed to Python
 	int getHurryConscriptAngerPercent() const; // Exposed to Python
-	int getInflationOffset() const; // Exposed to Python
-	int getInflationPercent() const; // Exposed to Python
 	int getOccupationTimePopulationPercent() const;
 	int getVictoryDelayPercent() const; // Exposed to Python
 	int getNumTurnIncrements() const; // Exposed to Python
@@ -3985,8 +3983,6 @@ protected:
 	int m_iGoldenAgePercent;
 	int m_iHurryPercent;
 	int m_iHurryConscriptAngerPercent;
-	int m_iInflationOffset;
-	int m_iInflationPercent;
 	int m_iOccupationTimePopulationPercent;
 	int m_iVictoryDelayPercent;
 	int m_iNumTurnIncrements;

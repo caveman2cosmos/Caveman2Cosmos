@@ -197,8 +197,9 @@
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Base number of turns between decay, higher means lower decay rate -->
 		<DefineName>HURRY_INFLATION_DECAY_RATE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FREE_TRADE_AGREEMENT_ESPIONAGE_MISSION_COST_MODIFIER</DefineName>

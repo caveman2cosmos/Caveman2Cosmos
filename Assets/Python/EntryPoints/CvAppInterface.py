@@ -181,18 +181,9 @@ def getOptionINT(argsList):
 	except:
 		return default
 
-def gameStartSave():
-	autoSave("[Start]")
-
-def gameEndSave():
-	autoSave("[End]")
-
 def gameExitSave():
-	autoSave("[Exit]")
-
-def autoSave(prefix):
 	import AutoSave
-	AutoSave.autoSave(prefix)
+	AutoSave.autoSave("[Exit]")
 
 # Referenced by the BtS exe.
 def getConsoleMacro(argsList): return ""

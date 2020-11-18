@@ -4152,7 +4152,7 @@ int CvPlayerAI::AI_costAsPercentIncome(int iExtraCost) const
 
 	// Afforess - iExtraCost lets us "extrapolate" our cost percents if we have extra future expenses
 	// iExtraCost should be between 0 (default) and some positive extra gold per turn cost to us
-	const int64_t iNetExpenses = calculateInflatedCosts() + std::max(0, -getGoldPerTurn()) + std::max(0, iExtraCost);
+	const int64_t iNetExpenses = getFinalExpense() + std::max(0, -getGoldPerTurn()) + std::max(0, iExtraCost);
 
 	// Koshling - if we can fund our ongoing expenses with no tax we never consider ourselves to be in financial difficulties
 	if (iBaseNetCommerce - getCommercePercent(COMMERCE_GOLD)*iTotalCommerce/100 > iNetExpenses)
@@ -14365,10 +14365,10 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	iValue += iTempValue;
 
-	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY) && kCivic.getInflationModifier() != 0)
+	if (kCivic.getInflationModifier() != 0)
 	{
 		//	Koshling - Use 100 turns of first order costs to judge inflation modifiers
-		iTempValue = static_cast<int>(-getCurrentInflationPerTurnTimes10000()*calculatePreInflatedCosts()*kCivic.getInflationModifier()/10000);
+		iTempValue = static_cast<int>(-getInflationMod10000()*calculatePreInflatedCosts()*kCivic.getInflationModifier()/10000);
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
 		{
 			logBBAI("Civic %S inflation modifier value %d",
@@ -26736,7 +26736,7 @@ int CvPlayerAI::AI_getMinFoundValue() const
 	int iValue = 600;
 	const int iNetCommerce = 1 + getCommerceRate(COMMERCE_GOLD) + getCommerceRate(COMMERCE_RESEARCH) + std::max(0, getGoldPerTurn());
 
-	const int64_t iNetExpenses = calculateInflatedCosts() + std::max(0, -getGoldPerTurn());
+	const int64_t iNetExpenses = getFinalExpense() + std::max(0, -getGoldPerTurn());
 
 	iValue *= iNetCommerce;
 	iValue /= static_cast<int>(std::max<int64_t>(std::max(1, iNetCommerce / 4), iNetCommerce - iNetExpenses));

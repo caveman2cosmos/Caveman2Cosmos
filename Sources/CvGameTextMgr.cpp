@@ -10085,17 +10085,17 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 				}
 				bFirst = true;
 				szString.append(L" (");
-				int iPopulation = pCity->hurryPopulation((HurryTypes)iI);
+				const int iPopulation = pCity->hurryPopulation((HurryTypes)iI);
 				if (iPopulation > 0)
 				{
 					szTempBuffer.Format(L"%d %c", -iPopulation, gDLL->getSymbolID(CITIZEN_CHAR));
 					setListHelp(szString, NULL, szTempBuffer, L", ", bFirst);
 					bFirst = false;
 				}
-				int iGold = pCity->hurryGold((HurryTypes)iI);
+				const int64_t iGold = pCity->getHurryGold((HurryTypes)iI);
 				if (iGold > 0)
 				{
-					szTempBuffer.Format(L"%d %c", -iGold, GC.getCommerceInfo(COMMERCE_GOLD).getChar());
+					szTempBuffer.Format(L"%lld %c", -iGold, GC.getCommerceInfo(COMMERCE_GOLD).getChar());
 					setListHelp(szString, NULL, szTempBuffer, L", ", bFirst);
 					bFirst = false;
 				}
@@ -16591,50 +16591,41 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_FOREIGNER_ANGER", 1, (100 / kCivic.getForeignerUnhappyPercent())));
 	}
 
-	if (bCivilopediaText || GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY))
+	if (kCivic.getInflationModifier() != 0)
 	{
-		if (kCivic.getInflationModifier() != 0)
+		if (kCivic.getInflationModifier() == -100)
 		{
-			if (kCivic.getInflationModifier() == -100)
-			{
-				szHelpText.append(NEWLINE);
-				szHelpText.append(gDLL->getText("TXT_KEY_NO_INFLATION"));
-			}
-			else
-			{
-				szHelpText.append(NEWLINE);
-				szHelpText.append(gDLL->getText("TXT_KEY_ADJUSTS_INFLATION", kCivic.getInflationModifier()));
-			}
+			szHelpText.append(NEWLINE);
+			szHelpText.append(gDLL->getText("TXT_KEY_NO_INFLATION"));
 		}
+		else
+		{
+			szHelpText.append(NEWLINE);
+			szHelpText.append(gDLL->getText("TXT_KEY_ADJUSTS_INFLATION", kCivic.getInflationModifier()));
+		}
+	}
 
-		/* if (kCivic.isChooseCurrency() != 0)
-		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_CHOOSE_CURRENCY"));
-		} */
+	if (kCivic.getHurryCostModifier() != 0)
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_BUILDING_HURRY_MOD", kCivic.getHurryCostModifier()));
+	}
 
-		if (kCivic.getHurryCostModifier() != 0)
-		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_BUILDING_HURRY_MOD", kCivic.getHurryCostModifier()));
-		}
+	if (kCivic.getHurryInflationModifier() > 0)
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_HURRY_INFLATION_MOD_MORE", kCivic.getHurryInflationModifier()));
+	}
+	else if (kCivic.getHurryInflationModifier() < 0)
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_HURRY_INFLATION_MOD_LESS", kCivic.getHurryInflationModifier()));
+	}
 
-		if (kCivic.getHurryInflationModifier() > 0)
-		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_HURRY_INFLATION_MOD_MORE", kCivic.getHurryInflationModifier()));
-		}
-		else if (kCivic.getHurryInflationModifier() < 0)
-		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_HURRY_INFLATION_MOD_LESS", kCivic.getHurryInflationModifier()));
-		}
-
-		if (kCivic.getSharedCivicTradeRouteModifier() != 0)
-		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_SHARED_CIVIC_TRADE_MOD", kCivic.getSharedCivicTradeRouteModifier()));
-		}
+	if (kCivic.getSharedCivicTradeRouteModifier() != 0)
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_SHARED_CIVIC_TRADE_MOD", kCivic.getSharedCivicTradeRouteModifier()));
 	}
 
 	if (bCivilopediaText || GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP))
@@ -32813,37 +32804,16 @@ void CvGameTextMgr::buildFinanceInflationString(CvWStringBuffer& szBuffer, Playe
 	}
 	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 
-	const int iInflationRate = kPlayer.calculateInflationRate();
-	if (iInflationRate != 0)
+	const long long iInflationCost = kPlayer.getInflationCost();
+	if (iInflationCost > 0)
 	{
-		int64_t iPreInflation = kPlayer.calculatePreInflatedCosts();
-		szBuffer.append(NEWLINE);
-
-		const int iCurrentInflationModifier = kPlayer.getCurrentInflationCostModifier();
-		const int iEquilibriumInflationModifier = kPlayer.getEquilibriumInflationCostModifier();
-		CvWString szInflationOutlook;
-
-		if (iCurrentInflationModifier > iEquilibriumInflationModifier)
-		{
-			if (iCurrentInflationModifier * 9/10 > iEquilibriumInflationModifier)
-			{
-				szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_IMPROVING");
-			}
-			else szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
-		}
-		else if (iEquilibriumInflationModifier * 9/10 > iCurrentInflationModifier)
-		{
-			szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_WORSENING");
-		}
-		else szInflationOutlook = gDLL->getText("TXT_KEY_INFLATION_OUTLOOK_STABLE");
-
-		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_INFLATION_NEW", iPreInflation, iInflationRate, iInflationRate, iPreInflation, (iPreInflation * iInflationRate) / 100, szInflationOutlook.c_str()));
-
-		if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY))
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_SOURCES_OF_INFLATION", kPlayer.getCivicInflation(), kPlayer.getTechInflation(), kPlayer.getBuildingInflation(), kPlayer.getProjectInflation(), kPlayer.getHurriedCount()));
-		}
+		const int iInflationRate10000 = kPlayer.getInflationMod10000();
+		const int iInflationRateInt = iInflationRate10000 / 100 - 100;
+		const int iInflationRateDec = iInflationRate10000 % 100;
+		const long long iPreInflation = kPlayer.calculatePreInflatedCosts();
+		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_INFLATION_0", iPreInflation));
+		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_INFLATION_1", iInflationRateInt, iInflationRateDec, iInflationCost));
+		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_SOURCES_OF_INFLATION", kPlayer.getCivicInflation(), kPlayer.getTechInflation(), kPlayer.getBuildingInflation(), kPlayer.getProjectInflation(), kPlayer.getHurriedCount()));
 	}
 }
 

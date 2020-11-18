@@ -41,12 +41,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ECONOMY_HELP</Tag>
-		<English>Allows for more in-depth and detailed control of economic factors, especially trade and inflation.</English>
-		<French>Permet un contrôle plus détaillé des facteurs économiques, particullièrement des accords d'échanges et de l'inflation.</French>
-		<German>Erlaubt eine detailliertere Kontrolle der ökonomischen Faktoren, insbesondere Handel und Inflation.</German>
-		<Italian>Permette un controllo più approfondito dei fattori economici, in particolare commercio e inflazione.</Italian>
-		<Spanish>Permite un control más profundo de los aspectos económicos, en particular comercio e inflación.</Spanish>
-		<Polish>Pozwala na bardziej szczegółową i drobiazgową kontrolę czynników ekonomicznych, w szczególności handlem i inflacją.</Polish>
+		<English>Allows free trade deals, requires, and thus activates, advanced diplomacy option.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ESPIONAGE</Tag>
