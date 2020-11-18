@@ -3706,7 +3706,7 @@
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__RAWYIELDS_TEXT</Tag>
 		<English>Raw Yields</English>
 		<French>Commerce Pur / Production</French>
-		<German>Anzeige der Roherträge</German>
+		<German>Roherträge</German>
 		<Italian>Rendite Lorde</Italian>
 		<Spanish>Rendimiento en bruto</Spanish>
 	</TEXT>
@@ -24418,7 +24418,7 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 		<Tag>TXT_KEY_BUG_YEAR_BUILT</Tag>
 		<English>Built in %s1_year</English>
 		<French>Construit en %s1_year</French>
-		<German>[NEWLINE]Existiert seit %s1_year</German>
+		<German>existiert seit %s1_year</German>
 		<Spanish>Construido en %s1_year</Spanish>
 	</TEXT>
 </Civ4GameText>
