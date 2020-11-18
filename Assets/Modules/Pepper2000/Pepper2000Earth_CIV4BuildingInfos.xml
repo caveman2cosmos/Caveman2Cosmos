@@ -22997,6 +22997,7 @@
 			<Strategy>TXT_KEY_BUILDING_MISSION_TO_CALLISTO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MISSION_TO_CALLISTO</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MISSION_TO_CALLISTO</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23072,6 +23073,7 @@
 			<Strategy>TXT_KEY_BUILDING_CASSINI_HUYGENS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CASSINI_HUYGENS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CASSINI_HUYGENS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23105,6 +23107,7 @@
 			<Strategy>TXT_KEY_BUILDING_DAWN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DAWN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DAWN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23137,6 +23140,7 @@
 			<Strategy>TXT_KEY_BUILDING_NEW_HORIZONS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEW_HORIZONS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NEW_HORIZONS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23169,6 +23173,7 @@
 			<Strategy>TXT_KEY_BUILDING_GALILEO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GALILEO</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GALILEO</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23202,6 +23207,7 @@
 			<Strategy>TXT_KEY_BUILDING_MARINER_PROGRAM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARINER_PROGRAM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MARINER_PROGRAM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23235,6 +23241,7 @@
 			<Strategy>TXT_KEY_BUILDING_MARS_SCIENCE_LAB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARS_SCIENCE_LAB</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MARS_SCIENCE_LAB</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23275,6 +23282,7 @@
 			<Strategy>TXT_KEY_BUILDING_MIR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MIR</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MIR</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23308,6 +23316,7 @@
 			<Strategy>TXT_KEY_BUILDING_PROJECT_GEMINI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROJECT_GEMINI</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PROJECT_GEMINI</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23338,6 +23347,7 @@
 			<Strategy>TXT_KEY_BUILDING_PROJECT_MERCURY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROJECT_MERCURY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PROJECT_MERCURY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23367,6 +23377,7 @@
 			<Strategy>TXT_KEY_BUILDING_VOYAGER_PROGRAM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VOYAGER_PROGRAM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_VOYAGER_PROGRAM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23407,6 +23418,7 @@
 			<Strategy>TXT_KEY_BUILDING_SKYLAB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SKYLAB</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SKYLAB</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23438,6 +23450,7 @@
 			<Strategy>TXT_KEY_BUILDING_IKAROS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_IKAROS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_IKAROS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23469,6 +23482,7 @@
 			<Strategy>TXT_KEY_BUILDING_TITAN_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TITAN_PROBE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TITAN_PROBE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23501,6 +23515,7 @@
 			<Strategy>TXT_KEY_BUILDING_INTERSTELLAR_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_PROBE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_INTERSTELLAR_PROBE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23562,6 +23577,7 @@
 			<Strategy>TXT_KEY_BUILDING_EUROPA_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EUROPA_PROBE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EUROPA_PROBE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23594,6 +23610,7 @@
 			<Strategy>TXT_KEY_BUILDING_KEPLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KEPLER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KEPLER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23687,6 +23704,7 @@
 			<Strategy>TXT_KEY_BUILDING_SEDNA_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEDNA_PROBE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SEDNA_PROBE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23753,6 +23771,7 @@
 			<Strategy>TXT_KEY_BUILDING_JAMESWEBB_TELESCOPE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JAMESWEBB_TELESCOPE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_JAMESWEBB_TELESCOPE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23829,6 +23848,7 @@
 			<Strategy>TXT_KEY_BUILDING_WMAP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WMAP</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_WMAP</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -23861,6 +23881,7 @@
 			<Strategy>TXT_KEY_BUILDING_MISSION_MARS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MISSION_MARS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MISSION_MARS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24126,6 +24147,7 @@
 			<Strategy>TXT_KEY_BUILDING_ATLAST_SPACE_TELESCOPE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ATLAST_SPACE_TELESCOPE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ATLAST_SPACE_TELESCOPE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24199,6 +24221,7 @@
 			<Strategy>TXT_KEY_BUILDING_LUNAR_XPRIZE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LUNAR_XPRIZE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LUNAR_XPRIZE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24229,6 +24252,7 @@
 			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_GATEWAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_GATEWAY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DEEP_SPACE_GATEWAY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24249,6 +24273,7 @@
 			<Strategy>TXT_KEY_BUILDING_MOON_ROCK_LAB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MOON_ROCK_LAB</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MOON_ROCK_LAB</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24270,6 +24295,7 @@
 			<Strategy>TXT_KEY_BUILDING_YUTU_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_YUTU</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_YUTU</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24295,6 +24321,7 @@
 			<Strategy>TXT_KEY_BUILDING_NEPTUNE_ATMOSPHERE_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEPTUNE_ATMOSPHERE_PROBE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NEPTUNE_ATMOSPHERE_PROBE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -24327,6 +24354,7 @@
 			<Strategy>TXT_KEY_BUILDING_URANUS_ATMOSPHERE_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_URANUS_ATMOSPHERE_PROBE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_URANUS_ATMOSPHERE_PROBE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -25385,6 +25413,7 @@
 			<Strategy>TXT_KEY_BUILDING_SENTINEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SENTINEL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SENTINEL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -25422,6 +25451,7 @@
 			<Strategy>TXT_KEY_BUILDING_SOLAR_WEATHER_MONITOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_WEATHER_MONITOR</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SOLAR_WEATHER_MONITOR</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -25457,6 +25487,7 @@
 			<Strategy>TXT_KEY_BUILDING_ASTEROID_DEFLECTION_SYSTEM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_DEFLECTION_SYSTEM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ASTEROID_DEFLECTION_SYSTEM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
