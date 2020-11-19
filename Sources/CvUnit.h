@@ -2690,15 +2690,12 @@ public:
 	void setSizeBaseTotal(int iNewValue);
 
 	int getExtraQuality() const;
-	void setExtraQuality(int iNewValue);
 	void changeExtraQuality(int iChange);
 
 	int getExtraGroup() const;
-	void setExtraGroup(int iNewValue);
 	void changeExtraGroup(int iChange);
 
 	int getExtraSize() const;
-	void setExtraSize(int iNewValue);
 	void changeExtraSize(int iChange);
 
 	int qualityRank() const;

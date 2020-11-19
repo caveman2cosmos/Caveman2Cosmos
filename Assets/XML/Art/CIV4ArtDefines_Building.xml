@@ -28174,6 +28174,16 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_thylacine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TRADITION_ARCHERY_EFFECT</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/trad_archer_w.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TRADITION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -28181,7 +28191,17 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/tradition.dds</Button>
+			<Button>Art/Interface/Buttons/national_wonders/tradition_sstar_button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TRADITION_ASTHETIC_APPRECIATION</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/Buttons/buildings/tradition_w.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TRADITION_SSTAR</Type>

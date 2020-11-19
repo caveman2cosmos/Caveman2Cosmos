@@ -97,6 +97,12 @@
 			<Help>TXT_KEY_GAMEOPTION_ADVANCED_ECONOMY_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<EnforcesGameOptionOnTypes>
+				<EnforcesGameOptionOnType>
+ 					<GameOptionType>GAMEOPTION_ADVANCED_DIPLOMACY</GameOptionType>
+					<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn>
+ 				</EnforcesGameOptionOnType>
+ 			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_REALISTIC_CORPORATIONS</Type>

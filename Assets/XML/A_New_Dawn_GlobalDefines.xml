@@ -197,8 +197,9 @@
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Base number of turns between decay, higher means lower decay rate -->
 		<DefineName>HURRY_INFLATION_DECAY_RATE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FREE_TRADE_AGREEMENT_ESPIONAGE_MISSION_COST_MODIFIER</DefineName>
@@ -321,6 +322,6 @@ The Great Wall is always dynamic if viewports are enabled regardless of this set
 	</Define>
 	<Define>
 		<DefineName>C2C_VERSION</DefineName>
-		<DefineTextVal>v40-dev</DefineTextVal>
+		<DefineTextVal>v41-dev</DefineTextVal>
 	</Define>
 </Civ4Defines>

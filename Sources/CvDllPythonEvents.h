@@ -20,7 +20,7 @@ public:
 	void reportUpdate(float fDeltaTime);
 	void reportUnInit();
 	void reportGameStart();
-	void reportGameEnd();
+	void reportGameEnd(int iGameTurn);
 	void reportWindowActivation(bool bActive);
 	void reportMapRegen();
 

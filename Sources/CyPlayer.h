@@ -89,9 +89,6 @@ public:
 	int countNumCoastalCities();
 	int countNumCoastalCitiesByArea(CyArea* pArea);
 
-	int getCurrentInflationCostModifier();
-	int getEquilibriumInflationCostModifier();
-
 	int countOwnedBonuses(int /*BonusTypes*/ eBonus);
 	int countUnimprovedBonuses(CyArea* pArea, CyPlot* pFromPlot);
 	int countCityFeatures(int /*FeatureTypes*/ eFeature);
@@ -159,7 +156,7 @@ public:
 	int calculateUnitSupply();
 	int64_t calculatePreInflatedCosts();
 	int calculateInflationRate();
-	int64_t calculateInflatedCosts();
+	int64_t getFinalExpense();
 
 	int calculateGoldRate();
 	int calculateTotalCommerce();

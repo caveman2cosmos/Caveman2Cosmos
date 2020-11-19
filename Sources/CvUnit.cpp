@@ -413,6 +413,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
 			setSMValues();
+			GET_PLAYER(getOwner()).changeUnitCountSM(eUnit, intPow(3, groupRank()-1));
 		}
 		else
 		{
@@ -1240,7 +1241,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 				}
 			}
 		}
-/* This is interrupting other messages and not coming up when it should be anyhow.
+		/* This is interrupting other messages and not coming up when it should be anyhow.
 		if (!bMessaged)
 		{
 			MEMORY_TRACK_EXEMPT();
@@ -1250,7 +1251,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 			m_combatResult.bDeathMessaged = false;
 			bMessaged = true;
 		}
-*/
+		*/
 		if (bDelay)
 		{
 			startDelayedDeath();
@@ -1327,7 +1328,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		}
 		setReconPlot(NULL);
 		setBlockading(false);
-/*
+		/*
 		if (isZoneOfControl())
 		{
 			foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
@@ -1335,7 +1336,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 				pAdjacentPlot->clearZoneOfControlCache();
 			}
 		}
-*/
+		*/
 		FAssertMsg(getAttackPlot() == NULL, "The current unit instance's attack plot is expected to be NULL");
 		FAssertMsg(getCombatUnit() == NULL, "The current unit instance's combat unit is expected to be NULL");
 	}
@@ -1343,6 +1344,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 	owner.changeUnitUpkeep(-getUpkeep100(), m_pUnitInfo->isMilitarySupport());
 
 	owner.changeUnitCount(m_eUnitType, -1);
+	owner.changeUnitCountSM(m_eUnitType, -intPow(3, groupRank()-1));
 
 	if (m_pUnitInfo->getNukeRange() != -1)
 	{
@@ -9671,12 +9673,6 @@ bool CvUnit::canPillage(const CvPlot* pPlot) const
 
 bool CvUnit::pillage()
 {
-	CvWString szBuffer;
-	int iPillageGold = 0;
-	long lPillageGold = 0;
-	ImprovementTypes eTempImprovement = NO_IMPROVEMENT;
-	RouteTypes eTempRoute = NO_ROUTE;
-
 	CvPlot* pPlot = plot();
 
 	if (!canPillage(pPlot))
@@ -9684,46 +9680,18 @@ bool CvUnit::pillage()
 		return false;
 	}
 
-	if (pPlot->isOwned())
-	{
-		// we should not be calling this without declaring war first, so do not declare war here
-		if (!isEnemy(pPlot->getTeam(), pPlot))
-		{
-			if ((pPlot->getImprovementType() == NO_IMPROVEMENT) || (pPlot->getOwner() != getOwner()))
-			{
-				return false;
-			}
-		}
-	}
-
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-	if (getDomainType() == DOMAIN_LAND && pPlot->isCanUseRouteLandUnits() && pPlot->isWater())
+	if (pPlot->isOwned()
+	// We should not be calling this without declaring war first, so do not declare war here
+	&& !isEnemy(pPlot->getTeam(), pPlot)
+	&& (pPlot->getImprovementType() == NO_IMPROVEMENT || pPlot->getOwner() != getOwner()))
 	{
 		return false;
 	}
-
-	if (getDomainType() == DOMAIN_SEA && pPlot->isCanUseRouteSeaUnits() && !pPlot->isWater())
-	{
-		return false;
-	}
-*/
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 
 	if (pPlot->isWater())
 	{
-		// UncutDragon
-/* original code
-		CvUnit* pInterceptor = bestSeaPillageInterceptor(this, GC.getDefineINT("COMBAT_DIE_SIDES") / 2);
-*/		// modified
 		CvUnit* pInterceptor = bestSeaPillageInterceptor(this, GC.getCOMBAT_DIE_SIDES() / 2);
-		// /UncutDragon
+
 		if (NULL != pInterceptor)
 		{
 			setMadeAttack(false);
@@ -9736,209 +9704,165 @@ bool CvUnit::pillage()
 			return false;
 		}
 	}
+	int iPillageGold = 0;
+	ImprovementTypes eTempImprovement = NO_IMPROVEMENT;
+	RouteTypes eTempRoute = NO_ROUTE;
 
-	bool bOwned = pPlot->isOwned();
 	if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 	{
 		eTempImprovement = pPlot->getImprovementType();
 
-		if (pPlot->getTeam() != getTeam())
+		if (pPlot->isOwned() && pPlot->getTeam() != getTeam())
 		{
-
 			// Use python to determine pillage amounts...
-			lPillageGold = 0;
+			iPillageGold = Cy::call<int>(PYGameModule, "doPillageGold", Cy::Args() << pPlot << this);
 
-			CyPlot* pyPlot = new CyPlot(pPlot);
-			CyUnit* pyUnit = new CyUnit(this);
-
-			CyArgsList argsList;
-			argsList.add(gDLL->getPythonIFace()->makePythonObject(pyPlot));	// pass in plot class
-			argsList.add(gDLL->getPythonIFace()->makePythonObject(pyUnit));	// pass in unit class
-
-			PYTHON_CALL_FUNCTION4(__FUNCTION__, PYGameModule, "doPillageGold", argsList.makeFunctionArgs(),&lPillageGold);
-
-			delete pyPlot;	// python fxn must not hold on to this pointer
-			delete pyUnit;	// python fxn must not hold on to this pointer
-
-			iPillageGold = (int)lPillageGold;
-			if (!bOwned)
-			{
-				iPillageGold = 0;
-			}
 			if (iPillageGold > 0)
 			{
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 01.10.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: Allow bPillage[COMMERCE_TYPES] Promotions and apply getPillageChange()           **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
-/************************************************************************************************/
-/* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
-/*                                                                                              */
-/* Original Author Moctezuma              Start                                                 */
-/************************************************************************************************/
-				// ------ BEGIN InfluenceDrivenWar -------------------------------
 				float fInfluenceRatio = 0.0f;
-				if (GC.isIDW_ENABLED() && GC.isIDW_PILLAGE_INFLUENCE_ENABLED())
+				if (GC.isIDW_ENABLED() && GC.isIDW_PILLAGE_INFLUENCE_ENABLED() && atWar(pPlot->getTeam(), getTeam()))
 				{
-					if (atWar(pPlot->getTeam(), getTeam()))
-					{
-						fInfluenceRatio = doPillageInfluence();
-					}
+					fInfluenceRatio = doPillageInfluence();
 				}
-				// ------ END InfluenceDrivenWar -------------------------------
 
-/************************************************************************************************/
-/* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
-/*                                                                                              */
-/* Original Author Moctezuma              End                                                   */
-/************************************************************************************************/
-				iPillageGold += (iPillageGold * getPillageChange()) / 100;
+				iPillageGold += iPillageGold * getPillageChange() / 100;
 				GET_PLAYER(getOwner()).changeGold(iPillageGold);
 
-				szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_GOLD_FROM_IMP", iPillageGold, GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY());
-
+				AddDLLMessage(
+					getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText(
+						"TXT_KEY_MISC_PLUNDERED_GOLD_FROM_IMP",
+						iPillageGold, GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide()
+					)
+					, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(),
+					pPlot->getX(), pPlot->getY()
+				);
 				for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 				{
-					TechTypes ePillageTech = GET_PLAYER(getOwner()).getCurrentResearch();
-					CommerceTypes eCommerce = ((CommerceTypes)iI);
-					int iPillageResearch = 0;
-					int iPillageEspionage = 0;
+					CommerceTypes eCommerce = (CommerceTypes)iI;
 					switch (eCommerce)
 					{
-					case COMMERCE_GOLD:
-						if (isPillageMarauder())
+						case COMMERCE_GOLD:
 						{
-							GET_PLAYER(getOwner()).changeGold(iPillageGold);
-							pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
-							szBuffer = gDLL->getText("TXT_KEY_MISC_MARAUDERS_PLUNDERED_IMP", iPillageGold, GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY());
-							szBuffer = gDLL->getText("TXT_KEY_MISC_IMP_DESTROYED_BY_MARAUDERS", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), getVisualCivAdjective(pPlot->getTeam()));
-							AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true);
-						}
-						break;
-					case COMMERCE_RESEARCH:
-						if (isPillageResearch())
-						{
-							iPillageResearch += iPillageGold;
-							GET_TEAM(GET_PLAYER(getOwner()).getTeam()).changeResearchProgress(ePillageTech, iPillageResearch, getOwner());
-							szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_IMP", iPillageResearch, GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY());
-						}
-						break;
-					case COMMERCE_CULTURE:
-						if (isPillageCulture())
-						{
-							if (pPlot->getTeam() != NO_TEAM)
+							if (isPillageMarauder())
 							{
-								float fInfluenceRatio = doPillageInfluence();
+								GET_PLAYER(getOwner()).changeGold(iPillageGold);
+								pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+								AddDLLMessage(
+									getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+									gDLL->getText(
+										"TXT_KEY_MISC_MARAUDERS_PLUNDERED_IMP",
+										iPillageGold, GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide()
+									),
+									"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(),
+									pPlot->getX(), pPlot->getY()
+								);
+								AddDLLMessage(
+									pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+									gDLL->getText(
+										"TXT_KEY_MISC_IMP_DESTROYED_BY_MARAUDERS",
+										GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(),
+										getNameKey(), getVisualCivAdjective(pPlot->getTeam())
+									),
+									"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(),
+									pPlot->getX(), pPlot->getY(), true, true
+								);
+							}
+							break;
+						}
+						case COMMERCE_RESEARCH:
+						{
+							if (isPillageResearch())
+							{
+								GET_TEAM(GET_PLAYER(getOwner()).getTeam()).changeResearchProgress(GET_PLAYER(getOwner()).getCurrentResearch(), iPillageGold, getOwner());
+								AddDLLMessage(
+									getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+									gDLL->getText(
+										"TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_IMP",
+										iPillageGold, GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide()
+									),
+									"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(),
+									pPlot->getX(), pPlot->getY()
+								);
+							}
+							break;
+						}
+						case COMMERCE_CULTURE:
+						{
+							if (isPillageCulture() && pPlot->getTeam() != NO_TEAM)
+							{
 								CvWString szInfluence;
-								szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_CULTURE_FROM_IMP", getNameKey(), getVisualCivAdjective(pPlot->getTeam()));
+								CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_CULTURE_FROM_IMP", getNameKey(), getVisualCivAdjective(pPlot->getTeam()));
 								szInfluence.Format(L" Tile influence: +%.1f%%", fInfluenceRatio);
 								szBuffer += szInfluence;
 								AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY());
 							}
+							break;
 						}
-						break;
-					case COMMERCE_ESPIONAGE:
-						if (isPillageEspionage())
+						case COMMERCE_ESPIONAGE:
 						{
-							iPillageEspionage += iPillageGold;
-							if (pPlot->getTeam() != NO_TEAM)
+							if (isPillageEspionage() && pPlot->getTeam() != NO_TEAM)
 							{
-								GET_TEAM(GET_PLAYER(getOwner()).getTeam()).changeEspionagePointsAgainstTeam(pPlot->getTeam(), iPillageEspionage);
-								szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_IMP", iPillageEspionage, GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-								AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY());
+								GET_TEAM(GET_PLAYER(getOwner()).getTeam()).changeEspionagePointsAgainstTeam(pPlot->getTeam(), iPillageGold);
+								AddDLLMessage(
+									getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+									gDLL->getText(
+										"TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_IMP",
+										iPillageGold, GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide()
+									),
+									"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(),
+									pPlot->getX(), pPlot->getY()
+								);
 							}
+							break;
 						}
-						break;
 					}
 				}
-/************************************************************************************************/
-/* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
-/*                                                                                              */
-/* Original Author Moctezuma              Start                                                 */
-/************************************************************************************************/
-				// ------ BEGIN InfluenceDrivenWar -------------------------------
-				if (fInfluenceRatio > 0.0f)
-				{
-					CvWString szInfluence;
-					szInfluence.Format(L" %s: +%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), fInfluenceRatio);
-					szBuffer += szInfluence;
-				}
-				// ------ END InfluenceDrivenWar -------------------------------
-/************************************************************************************************/
-/* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
-/*                                                                                              */
-/* Original Author Moctezuma              End                                                   */
-/************************************************************************************************/
 				if (pPlot->isOwned())
 				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_IMP_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), getVisualCivAdjective(pPlot->getTeam()));
-					AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true);
-/************************************************************************************************/
-/* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
-/*                                                                                              */
-/* Original Author Moctezuma              Start                                                 */
-/************************************************************************************************/
-					// ------ BEGIN InfluenceDrivenWar -------------------------------
+					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_IMP_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), getVisualCivAdjective(pPlot->getTeam()));
+
 					if (fInfluenceRatio > 0.0f)
 					{
 						CvWString szInfluence;
 						szInfluence.Format(L" %s: -%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), fInfluenceRatio);
 						szBuffer += szInfluence;
 					}
-					// ------ END InfluenceDrivenWar -------------------------------
-/************************************************************************************************/
-/* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
-/*                                                                                              */
-/* Original Author Moctezuma              End                                                   */
-/************************************************************************************************/
-					//	A pillage implies a source of danger even if we can't see it
-					GET_PLAYER(pPlot->getOwner()).addPlotDangerSource(pPlot, 100);
+					AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true);
 				}
+				//	A pillage implies a source of danger even if we can't see it
+				GET_PLAYER(pPlot->getOwner()).addPlotDangerSource(pPlot, 100);
+				
 			}
 		}
-
 		pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
 	}
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 01.10.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
-
 	else if (pPlot->isRoute())
 	{
 		eTempRoute = pPlot->getRouteType();
 		pPlot->setRouteType(NO_ROUTE, true); // XXX downgrade rail???
-/************************************************************************************************/
-/* Afforess	                  Start		 09/13/10                                               */
-/*                                                                                              */
-/*  Alert Player of Pillaged Routes                                                             */
-/************************************************************************************************/
+
+		// Afforess - Alert Player of Pillaged Routes
 		if (pPlot->isOwned())
 		{
-			//	A pillage implies a source of danger even if we can't see it
+			// A pillage implies a source of danger even if we can't see it
 			GET_PLAYER(pPlot->getOwner()).addPlotDangerSource(pPlot, 100);
 
 			MEMORY_TRACK_EXEMPT();
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_IMP_DESTROYED", GC.getRouteInfo(eTempRoute).getTextKeyWide(), getNameKey(), getVisualCivAdjective(pPlot->getTeam()));
-			AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(
+				pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+				gDLL->getText(
+					"TXT_KEY_MISC_IMP_DESTROYED",
+					GC.getRouteInfo(eTempRoute).getTextKeyWide(), getNameKey(),
+					getVisualCivAdjective(pPlot->getTeam())
+				)
+				, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(),
+				pPlot->getX(), pPlot->getY(), true, true
+			);
 		}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	}
-
 	changeMoves(GC.getMOVE_DENOMINATOR());
-/************************************************************************************************/
-/* Afforess	                  Start		 09/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_IMPROVED_XP) && !pPlot->isRoute())
 	{
 		setExperience100(getExperience100() + getRandomMinExperienceTimes100(), -1);
@@ -9947,10 +9871,6 @@ bool CvUnit::pillage()
 	{
 		changeExperience100(iPillageGold);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 	addMission(CvMissionDefinition(MISSION_PILLAGE, pPlot, this));
 
 	if (eTempImprovement != NO_IMPROVEMENT || eTempRoute != NO_ROUTE)
@@ -10747,58 +10667,62 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 
 bool CvUnit::spread(ReligionTypes eReligion)
 {
-	CvCity* pCity;
-	CvWString szBuffer;
-	int iSpreadProb;
-
 	if (!canSpread(plot(), eReligion))
 	{
 		return false;
 	}
-
-	pCity = plot()->getPlotCity();
+	CvCity* pCity = plot()->getPlotCity();
 
 	if (pCity != NULL)
 	{
-		iSpreadProb = m_pUnitInfo->getReligionSpreads(eReligion);
-
-		if ((ReligionTypes)GET_PLAYER(getOwner()).getStateReligion() == eReligion)
+		if (GC.getGame().isReligionFounded(eReligion))
 		{
-			iSpreadProb += GET_PLAYER(getOwner()).getExtraStateReligionSpreadModifier();
-		}
-		if ((ReligionTypes)GET_PLAYER(getOwner()).getStateReligion() != eReligion)
-		{
-			iSpreadProb += GET_PLAYER(getOwner()).getExtraNonStateReligionSpreadModifier();
-		}
+			int iSpreadProb = m_pUnitInfo->getReligionSpreads(eReligion);
 
-		if (pCity->getTeam() != getTeam())
-		{
-			iSpreadProb /= 2;
-		}
+			if ((ReligionTypes)GET_PLAYER(getOwner()).getStateReligion() == eReligion)
+			{
+				iSpreadProb += GET_PLAYER(getOwner()).getExtraStateReligionSpreadModifier();
+			}
+			else iSpreadProb += GET_PLAYER(getOwner()).getExtraNonStateReligionSpreadModifier();
 
-		iSpreadProb += (((GC.getNumReligionInfos() - pCity->getReligionCount()) * (100 - iSpreadProb)) / GC.getNumReligionInfos());
-		const bool bSuccess = GC.getGame().getSorenRandNum(100, "Unit Spread Religion") < iSpreadProb;
+			if (pCity->getTeam() != getTeam())
+			{
+				iSpreadProb /= 2;
+			}
 
-		if (!bSuccess)
-		{
-			MEMORY_TRACK_EXEMPT();
+			iSpreadProb += (GC.getNumReligionInfos() - pCity->getReligionCount()) * (100 - iSpreadProb) / GC.getNumReligionInfos();
+			const bool bSuccess = GC.getGame().getSorenRandNum(100, "Unit Spread Religion") < iSpreadProb;
 
-			szBuffer = gDLL->getText("TXT_KEY_MISC_RELIGION_FAILED_TO_SPREAD", getNameKey(), GC.getReligionInfo(eReligion).getChar(), pCity->getNameKey());
-			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NOSPREAD", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pCity->getX(), pCity->getY());
+			// Python Event
+			CvEventReporter::getInstance().unitSpreadReligionAttempt(this, eReligion, bSuccess);
+
+			if (!bSuccess)
+			{
+				// Python event above may have spread the religion, it's fine if it did.
+				if (!pCity->isHasReligion(eReligion))
+				{
+					MEMORY_TRACK_EXEMPT();
+					AddDLLMessage(
+						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_RELIGION_FAILED_TO_SPREAD",
+							getNameKey(),
+							GC.getReligionInfo(eReligion).getChar(),
+							pCity->getNameKey()
+						),
+						"AS2D_NOSPREAD", MESSAGE_TYPE_INFO, getButton(),
+						GC.getCOLOR_RED(), pCity->getX(), pCity->getY()
+					);
+				}
+			}
+			else pCity->setHasReligion(eReligion, true, true, false);
 		}
-		else if (GC.getGame().isReligionFounded(eReligion))
-		{
-			pCity->setHasReligion(eReligion, true, true, false);
-		}
-		else
+		else // Divine Prophet is founding religion here; always 100% chance.
 		{
 			GC.getGame().setHolyCity(eReligion, pCity, true);
 			GC.getGame().setReligionSlotTaken(eReligion, true);
 			pCity->setHasReligion(eReligion, true, true, false);
 		}
-
-		// Python Event
-		CvEventReporter::getInstance().unitSpreadReligionAttempt(this, eReligion, bSuccess);
 	}
 
 	if (plot()->isActiveVisible(false))
@@ -24037,21 +23961,18 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eOwner);
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eCapturingPlayer);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_UNITS, (int*)&m_eUnitType);
-	if( NO_UNIT == m_eUnitType)
+	if (NO_UNIT == m_eUnitType)
 	{
-		//	Assets must have removed this type (which will have been flagged in a queued error messae).  Just
-		//	give it a valid type temporarily and mark it to be killed
-		int tempUnitType = 0;
-
-		//	Pick an arbitrary military unit
-		do
-		{
-			tempUnitType++;
-		} while(!GC.getUnitInfo((UnitTypes)tempUnitType).isMilitaryHappiness());
-
-		m_eUnitType = (UnitTypes)tempUnitType;
-		GET_PLAYER(getOwner()).changeUnitCount(m_eUnitType, 1);
+		// Assets must have removed this type (which will have been flagged in a queued error message).
+		// Just give it a valid type and mark it to be killed.
+		m_eUnitType = (UnitTypes)0;
 		m_bDeathDelay = true;
+		// Unit type 0 was never initialized, so we need to add its unit count before it dies.
+		GET_PLAYER(getOwner()).changeUnitCount(m_eUnitType, 1);
+		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		{
+			GET_PLAYER(getOwner()).changeUnitCountSM(m_eUnitType, intPow(3, GC.getUnitInfo(m_eUnitType).getBaseGroupRank() - 1));
+		}
 	}
 	m_pUnitInfo = &GC.getUnitInfo(m_eUnitType);
 	m_movementCharacteristicsHash = m_pUnitInfo->getZobristValue();
@@ -37937,14 +37858,9 @@ int CvUnit::getExtraQuality() const
 	return m_iExtraQuality;
 }
 
-void CvUnit::setExtraQuality(int iNewValue)
-{
-	m_iExtraQuality = iNewValue;
-}
-
 void CvUnit::changeExtraQuality(int iChange)
 {
-	setExtraQuality(getExtraQuality() + iChange);
+	m_iExtraQuality += iChange;
 }
 
 int CvUnit::getExtraGroup() const
@@ -37952,14 +37868,11 @@ int CvUnit::getExtraGroup() const
 	return m_iExtraGroup;
 }
 
-void CvUnit::setExtraGroup(int iNewValue)
-{
-	m_iExtraGroup = iNewValue;
-}
-
 void CvUnit::changeExtraGroup(int iChange)
 {
-	setExtraGroup(getExtraGroup() + iChange);
+	GET_PLAYER(getOwner()).changeUnitCountSM(m_eUnitType, -intPow(3, groupRank()-1));
+	m_iExtraGroup += iChange;
+	GET_PLAYER(getOwner()).changeUnitCountSM(m_eUnitType, intPow(3, groupRank()-1));
 }
 
 int CvUnit::getExtraSize() const
@@ -37967,14 +37880,9 @@ int CvUnit::getExtraSize() const
 	return m_iExtraSize;
 }
 
-void CvUnit::setExtraSize(int iNewValue)
-{
-	m_iExtraSize = iNewValue;
-}
-
 void CvUnit::changeExtraSize(int iChange)
 {
-	setExtraSize(getExtraSize() + iChange);
+	m_iExtraSize += iChange;
 }
 
 int CvUnit::qualityRank() const

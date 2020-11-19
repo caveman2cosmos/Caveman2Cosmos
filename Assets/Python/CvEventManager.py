@@ -2279,14 +2279,13 @@ class CvEventManager:
 
 
 	def onUnitSpreadReligionAttempt(self, argsList):
-		CyUnit, iReligion, bSuccess = argsList
-		if not bSuccess:
-			iPlayer = CyUnit.getOwner()
+		#unit, iReligion, bSuccess = argsList
+		if not argsList[2]:
+			unit = argsList[0]
 			aWonderTuple = self.aWonderTuple
-			if "FA_MEN_SI" in aWonderTuple[0]:
-				if iPlayer == aWonderTuple[4][aWonderTuple[0].index("FA_MEN_SI")]:
-					CyCity = GC.getMap().plot(CyUnit.getX(), CyUnit.getY()).getPlotCity()
-					CyCity.setHasReligion(GC.getUnitInfo(CyUnit.getUnitType()).getPrereqReligion(), True, True, True)
+			if "FA_MEN_SI" in aWonderTuple[0] and unit.getOwner() == aWonderTuple[4][aWonderTuple[0].index("FA_MEN_SI")]:
+				CyCity = GC.getMap().plot(unit.getX(), unit.getY()).getPlotCity()
+				CyCity.setHasReligion(GC.getUnitInfo(unit.getUnitType()).getPrereqReligion(), True, True, True)
 
 
 	'''

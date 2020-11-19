@@ -430,13 +430,14 @@ void CvDllPythonEvents::reportGameStart()
 	}
 }
 
-void CvDllPythonEvents::reportGameEnd()
+void CvDllPythonEvents::reportGameEnd(int iGameTurn)
 {
 	if (preEvent())
 	{
 		EventArgs eventData;
 		eventData
-			.arg("event", "GameEnd");
+			.arg("event", "GameEnd")
+			.arg("iGameTurn", iGameTurn);
 		postEvent(eventData, "GameEnd");
 	}
 }
