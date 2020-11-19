@@ -301,12 +301,18 @@ public:
 	void addDelayedResolution(int* pType, CvString szString);
 	CvString* getDelayedResolution(int* pType);
 	void removeDelayedResolution(int* pType);
+	template<class T>
+	void removeDelayedResolutionVector(const std::vector<T>& vector)
+	{
+		foreach_(T type, vector)
+			removeDelayedResolution((int*)&type);
+	}
 	void copyNonDefaultDelayedResolution(int* pTypeSelf, int* pTypeOther);
 	template<class T>
-	void copyNonDefaultDelayedResolutionVector(std::vector<T>& aTarget, std::vector<T>& aSource)
+	void copyNonDefaultDelayedResolutionVector(std::vector<T>& aTarget, const std::vector<T>& aSource)
 	{
 		std::stack<CvString> aszTemp;
-		std::vector<T>::iterator it = aTarget.end(), it2 = aSource.begin();
+		std::vector<T>::const_iterator it = aTarget.end(), it2 = aSource.begin();
 		while (it > aTarget.begin())
 		{
 			it--;

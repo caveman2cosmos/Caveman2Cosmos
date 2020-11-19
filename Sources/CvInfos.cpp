@@ -32933,6 +32933,8 @@ m_bVisible(true)
 
 CvGameOptionInfo::~CvGameOptionInfo()
 {
+	GC.removeDelayedResolutionVector(m_aEnforcesGameOptionOnTypes);
+	GC.removeDelayedResolutionVector(m_aEnforcesGameOptionOffTypes);
 }
 
 bool CvGameOptionInfo::read(CvXMLLoadUtility* pXML)
