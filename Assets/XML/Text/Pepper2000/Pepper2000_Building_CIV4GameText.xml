@@ -10085,7 +10085,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNA_RING_EFFECT</Tag>
 		<English>Effect - Luna Ring</English>
-		<French>Luna Ring - Effect</French>
+		<French>Effet - Luna Ring</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNA_RING_EFFECT_PEDIA</Tag>
@@ -10533,7 +10533,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_SEA_PEDIA</Tag>
 		<English>Terraforming of Mars is well under way. A full-fledge sea, filled with Earthlike marine life, has been built.</English>
-		<French>Terraforming of Mars is well under way. A full-fledge sea, filled with Earthlike marine life, has been built.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_SEA_STRATEGY</Tag>
@@ -10542,17 +10541,16 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_TERRA</Tag>
 		<English>Terraformed Mars</English>
-		<French>Terraformed Mars</French>
+		<French>Mars terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_TERRA_EFFECT</Tag>
 		<English>Effect - Terraformed Mars</English>
-		<French>Terraformed Mars - Effect</French>
+		<French>Effet - Mars terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_TERRA_EFFECT_PEDIA</Tag>
 		<English>Martian terraforming effect</English>
-		<French>Martian terraforming effect</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_TERRA_EFFECT_STRATEGY</Tag>
@@ -10561,7 +10559,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_TERRA_PEDIA</Tag>
 		<English>The terraforming of Mars is the hypothetical process by which Mars' climate and surface would be deliberately changed to make large areas of the environment hospitable to humans, thus making the colonization of Mars safer and sustainable (see Planetary engineering).[PARAGRAPH:2]There are several proposed terraforming concepts, some of which present prohibitive economic and natural resource costs, and others that may be achievable with foreseeable technology.</English>
-		<French>The terraforming of Mars is the hypothetical process by which Mars' climate and surface would be deliberately changed to make large areas of the environment hospitable to humans, thus making the colonization of Mars safer and sustainable (see Planetary engineering).[PARAGRAPH:2]There are several proposed terraforming concepts, some of which present prohibitive economic and natural resource costs, and others that may be achievable with foreseeable technology.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_TERRA_STRATEGY</Tag>
@@ -10570,12 +10567,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_TRADE</Tag>
 		<English>Martian Trading Post</English>
-		<French>Martian Trading Post</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_TRADE_PEDIA</Tag>
-		<English>With this spaceport, it is finally economical to ship goods from Mars back to Earth. Martians starting taking vacations to Earth, and it telling how many didn't come back.</English>
-		<French>With this spaceport, it is finally economical to ship goods from Mars back to Earth. Martians starting taking vacations to Earth, and it telling how many didn't come back.</French>
+		<English>With this spaceport, it is finally economical to ship goods from Mars back to Earth. Martians starting taking vacations to Earth, and it's telling how many didn't come back.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_TRADE_STRATEGY</Tag>
@@ -10589,7 +10584,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ALBEDO_REDUCTION</Tag>
 		<English>Martian Albedo Reduction</English>
-		<French>Martian Albedo Reduction</French>
+		<French>Réduction de l'albédo martien</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ALBEDO_REDUCTION_PEDIA</Tag>
@@ -10706,7 +10701,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_CLAYTRONIC_CITY_PEDIA</Tag>
 		<English>A claytronic city on Mars.</English>
-		<French>A claytronic city on Mars.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_CLAYTRONIC_CITY_STRATEGY</Tag>
@@ -10715,12 +10709,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_CO2_SUBLIMATION</Tag>
 		<English>Martian CO2 Sublimation</English>
-		<French>Martian CO2 Sublimation</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_CO2_SUBLIMATION_PEDIA</Tag>
 		<English>There is presently enough carbon dioxide (CO2) as dry ice in the Martian south pole and absorbed by regolith (soil) on Mars that, if sublimated to gas by a climate warming of only a few degrees, would increase the atmospheric pressure to 30 kilopascals (0.30 atm), comparable to the altitude of the peak of Mount Everest, where the atmospheric pressure is 33.7 kilopascals (0.333 atm). Although this would not be breathable by humans, it is above the Armstrong limit and would eliminate the present need for pressure suits. Phytoplankton can also convert dissolved CO2 into oxygen.</English>
-		<French>There is presently enough carbon dioxide (CO2) as dry ice in the Martian south pole and absorbed by regolith (soil) on Mars that, if sublimated to gas by a climate warming of only a few degrees, would increase the atmospheric pressure to 30 kilopascals (0.30 atm), comparable to the altitude of the peak of Mount Everest, where the atmospheric pressure is 33.7 kilopascals (0.333 atm). Although this would not be breathable by humans, it is above the Armstrong limit and would eliminate the present need for pressure suits. Phytoplankton can also convert dissolved CO2 into oxygen.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_CO2_SUBLIMATION_STRATEGY</Tag>
@@ -10734,7 +10726,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_COMMUNICATION_BEACON_PEDIA</Tag>
 		<English>A communication satellite. This transmits knowledge back to Earth and keeps the colonists better up to speed on what is happening on Earth. Not that what is happening on Earth is very interesting; that's why they left in the first place.</English>
-		<French>A communication satellite. This transmits knowledge back to Earth and keeps the colonists better up to speed on what is happening on Earth. Not that what is happening on Earth is very interesting; that's why they left in the first place.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_COMMUNICATION_BEACON_STRATEGY</Tag>
@@ -10748,7 +10739,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_CYBERNETIC_CHLOROPLAST_IMPORTER_PEDIA</Tag>
 		<English>Import a resource</English>
-		<French>Import a resource</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_CYBERNETIC_CHLOROPLAST_IMPORTER_STRATEGY</Tag>
@@ -10757,12 +10747,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_DEFENSE</Tag>
 		<English>Martian Death Ray</English>
-		<French>Martian Death Ray</French>
+		<French>Rayon de la mort martienne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_DEFENSE_PEDIA</Tag>
 		<English>Death Ray for defending Mars.</English>
-		<French>Death Ray for defending Mars.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_DEFENSE_STRATEGY</Tag>
@@ -10785,12 +10774,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_MINE</Tag>
 		<English>Martian Deuterium Mine</English>
-		<French>Martian Deuterium Mine</French>
+		<French>Mine martienne de deutérium</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_MINE_PEDIA</Tag>
 		<English>See http://www.nss.org/settlement/mars/zubrin-colonize.html</English>
-		<French>See http://www.nss.org/settlement/mars/zubrin-colonize.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_MINE_STRATEGY</Tag>
@@ -10813,12 +10801,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ECOPOIESIS_REACTOR</Tag>
 		<English>Martian Ecopoiesis Reactor</English>
-		<French>Réacteur de Martian Ecopoiesis</French>
+		<French>Réacteur d'écopoïèse martien</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ECOPOIESIS_REACTOR_PEDIA</Tag>
 		<English>See https://www.nasa.gov/content/mars-ecopoiesis-test-bed/#.VwIXIjYgsfE</English>
-		<French>See https://www.nasa.gov/content/mars-ecopoiesis-test-bed/#.VwIXIjYgsfE</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ECOPOIESIS_REACTOR_STRATEGY</Tag>
@@ -10846,7 +10833,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_EXPANDED_HABITAT_PEDIA</Tag>
 		<English>A modest expansion to the colony's habitat.</English>
-		<French>A modest expansion to the colony's habitat.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_EXPANDED_HABITAT_STRATEGY</Tag>
@@ -10855,12 +10841,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_FROST_CANNON</Tag>
 		<English>Martian Frost Cannon</English>
-		<French>Martian Frost Cannon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_FROST_CANNON_PEDIA</Tag>
 		<English>This unusual weapon shoots out extremely cold beams of ice, freezing enemy soldiers and equipment in their tracks</English>
-		<French>This unusual weapon shoots out extremely cold beams of ice, freezing enemy soldiers and equipment in their tracks</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_FROST_CANNON_STRATEGY</Tag>
@@ -10874,7 +10858,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_FUSION_PLANT_PEDIA</Tag>
 		<English>Fusion power on Mars</English>
-		<French>Fusion power on Mars</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_FUSION_PLANT_STRATEGY</Tag>
@@ -10888,7 +10871,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_GARDEN_PEDIA</Tag>
 		<English>A simple garden and one of the earliest form of outdoor life.</English>
-		<French>A simple garden and one of the earliest form of outdoor life.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_GARDEN_STRATEGY</Tag>
@@ -10902,7 +10884,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_GEOLOGY_LAB_PEDIA</Tag>
 		<English>The first major contribution of the Martian colony is scientific research. The lab gives new knowledge of the geology of Mars and the history of the Solar System.</English>
-		<French>The first major contribution of the Martian colony is scientific research. The lab gives new knowledge of the geology of Mars and the history of the Solar System.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_GEOLOGY_LAB_STRATEGY</Tag>
@@ -10916,7 +10897,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_GOVERNMENT_PEDIA</Tag>
 		<English>The colony has gotten too big for ad hoc administration. It now has a centralized government.</English>
-		<French>The colony has gotten too big for ad hoc administration. It now has a centralized government.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_GOVERNMENT_STRATEGY</Tag>
@@ -10925,12 +10905,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_HOTEL</Tag>
 		<English>Martian Hotel</English>
-		<French>Martian Hotel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_HOTEL_PEDIA</Tag>
 		<English>A hotel for visitors to Mars to stay.</English>
-		<French>A hotel for visitors to Mars to stay.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_HOTEL_STRATEGY</Tag>
@@ -10939,12 +10917,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_HYDROPONICS</Tag>
 		<English>Martian Hydroponics Array</English>
-		<French>Martian Hydroponics Array</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_HYDROPONICS_PEDIA</Tag>
 		<English>Your colony came with a hydroponics kit; was that not good enough for you? Here's another one. Bon appetit.</English>
-		<French>Your colony came with a hydroponics kit; was that not good enough for you? Here's another one. Bon appetit.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_HYDROPONICS_STRATEGY</Tag>
@@ -10958,7 +10934,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_LFTR_PEDIA</Tag>
 		<English>The liquid fluoride thorium reactor (acronym LFTR; often pronounced lifter) is a type of molten salt reactor. LFTRs use the thorium fuel cycle with a fluoride-based, molten, liquid salt for fuel.</English>
-		<French>The liquid fluoride thorium reactor (acronym LFTR; often pronounced lifter) is a type of molten salt reactor. LFTRs use the thorium fuel cycle with a fluoride-based, molten, liquid salt for fuel.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_LFTR_STRATEGY</Tag>
@@ -10967,12 +10942,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_MAGNETIC_FIELD_GENERATOR</Tag>
 		<English>Martian Magnetic Field Generator</English>
-		<French>Martian Magnetic Field Generator</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_MAGNETIC_FIELD_GENERATOR_PEDIA</Tag>
 		<English>Magnetic field to protect life and the atmosphere.</English>
-		<French>Magnetic field to protect life and the atmosphere.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_MAGNETIC_FIELD_GENERATOR_STRATEGY</Tag>
@@ -10981,12 +10954,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_MASS_DRIVER</Tag>
 		<English>Martian Mass Driver</English>
-		<French>Martian Mass Driver</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_MASS_DRIVER_PEDIA</Tag>
 		<English>For faster launches.</English>
-		<French>For faster launches.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_MASS_DRIVER_STRATEGY</Tag>
@@ -10995,12 +10966,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_NOMAD</Tag>
 		<English>Martian Nomad</English>
-		<French>Martian Nomad</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_NOMAD_PEDIA</Tag>
 		<English>See http://www.evolo.us/competition/nomad-terraforming-mars/</English>
-		<French>See http://www.evolo.us/competition/nomad-terraforming-mars/</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_NOMAD_STRATEGY</Tag>
@@ -11014,7 +10983,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_NOVUS_CHEMICAL_IMPORTER_PEDIA</Tag>
 		<English>Import a resource</English>
-		<French>Import a resource</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_NOVUS_CHEMICAL_IMPORTER_STRATEGY</Tag>
@@ -11023,12 +10991,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ORBITAL_MIRROR_ARRAY</Tag>
 		<English>Martian Orbital Mirror Array</English>
-		<French>Martian Orbital Mirror Array</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ORBITAL_MIRROR_ARRAY_PEDIA</Tag>
 		<English>Giant orbital array of mirrors to collect solar power and increase surface heat.</English>
-		<French>Giant orbital array of mirrors to collect solar power and increase surface heat.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ORBITAL_MIRROR_ARRAY_STRATEGY</Tag>
@@ -11046,7 +11012,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_RARE_MINERAL_EXPORTER_PEDIA</Tag>
 		<English>See http://www.nss.org/settlement/mars/zubrin-colonize.html</English>
-		<French>See http://www.nss.org/settlement/mars/zubrin-colonize.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_RARE_MINERAL_EXPORTER_STRATEGY</Tag>
@@ -11055,12 +11020,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SIMULATED_WORLD</Tag>
 		<English>Martian Simulated World</English>
-		<French>Simulated World (Mars)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SIMULATED_WORLD_PEDIA</Tag>
 		<English>Simulated world on Mars.</English>
-		<French>Simulated world on Mars.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SIMULATED_WORLD_STRATEGY</Tag>
@@ -11074,7 +11037,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SKYHOOK_PEDIA</Tag>
 		<English>See http://www.nss.org/settlement/mars/zubrin-colonize.html</English>
-		<French>See http://www.nss.org/settlement/mars/zubrin-colonize.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SKYHOOK_STRATEGY</Tag>
@@ -11083,12 +11045,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SKYSCRAPER</Tag>
 		<English>Martian Skyscraper</English>
-		<French>Martian Skyscraper</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SKYSCRAPER_PEDIA</Tag>
 		<English>A thick and carefully climate-controlled skyscraper.</English>
-		<French>A thick and carefully climate-controlled skyscraper.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SKYSCRAPER_STRATEGY</Tag>
@@ -11102,7 +11062,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SOLAR_ARRAY_PEDIA</Tag>
 		<English>Mars receives half the solar irradiance of Earth, but it will do for now.</English>
-		<French>Mars receives half the solar irradiance of Earth, but it will do for now.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SOLAR_ARRAY_STRATEGY</Tag>
@@ -11111,12 +11070,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SPACEPORT</Tag>
 		<English>Martian Spaceport</English>
-		<French>Martian Spaceport</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SPACEPORT_PEDIA</Tag>
 		<English>A larger and more advanced spaceport than the old trading post.</English>
-		<French>A larger and more advanced spaceport than the old trading post.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SPACEPORT_STRATEGY</Tag>
@@ -11125,12 +11082,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_STARPORT</Tag>
 		<English>Martian Starport</English>
-		<French>Martian Starport</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_STARPORT_PEDIA</Tag>
 		<English>An advanced starport on Mars.</English>
-		<French>An advanced starport on Mars.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_STARPORT_STRATEGY</Tag>
@@ -11143,12 +11098,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SUPPLY</Tag>
 		<English>Martian Material Supply</English>
-		<French>Martian Material Supply</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SUPPLY_PEDIA</Tag>
 		<English>A massive mining operation to supply Mars</English>
-		<French>A massive mining operation to supply Mars</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SUPPLY_STRATEGY</Tag>
@@ -11970,7 +11923,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOLECULAR_DISRUPTION_DEVICE_PEDIA</Tag>
 		<English>The Molecular Disruption Device, also known as the Molecular Detachment Device, M.D. Device, Doctor Device, or Little Doctor as a play on the acronym, was a powerful weapon designed and built by the International Fleet.[PARAGRAPH:2]See http://enderverse.wikia.com/wiki/Molecular_Disruption_Device</English>
-		<French>The Molecular Disruption Device, also known as the Molecular Detachment Device, M.D. Device, Doctor Device, or Little Doctor as a play on the acronym, was a powerful weapon designed and built by the International Fleet.[PARAGRAPH:2]See http://enderverse.wikia.com/wiki/Molecular_Disruption_Device</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOLECULAR_DISRUPTION_DEVICE_STRATEGY</Tag>
@@ -11979,12 +11931,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOLECULAR_FEED</Tag>
 		<English>Molecular Feed</English>
-		<French>Molecular Feed</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOLECULAR_FEED_PEDIA</Tag>
 		<English>Public infrastructure that transports material to citizens and publics as feedstock for molecular assemblers.</English>
-		<French>Public infrastructure that transports material to citizens and publics as feedstock for molecular assemblers.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOLECULAR_FEED_STRATEGY</Tag>
@@ -11993,12 +11943,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONOLITH</Tag>
 		<English>Monolith</English>
-		<French>Monolith</French>
+		<French>Monolithe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONOLITH_PEDIA</Tag>
 		<English>This mysterious object advances the evolution of life forms throughout the galaxy. Even its designers are not entirely sure what it is, but it seems to have a quasi-mystical element to it.</English>
-		<French>This mysterious object advances the evolution of life forms throughout the galaxy. Even its designers are not entirely sure what it is, but it seems to have a quasi-mystical element to it.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONOLITH_STRATEGY</Tag>
@@ -12012,7 +11961,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_ROCK_LAB_PEDIA</Tag>
 		<English>The Google Lunar XPRIZE (GLXP), sometimes referred to as Moon 2.0, is an inducement prize space competition organized by XPRIZE, and sponsored by Google. The challenge calls for privately funded spaceflight teams to be the first to land a privately funded robotic spacecraft on the Moon, travel 500 meters, and transmit back high-definition video and images.</English>
-		<French>The Google Lunaire XPRIZE (GLXP), sometimes referred to as Moon 2.0, is an inducement prize space competition organized by XPRIZE, and sponsored by Google. The challenge calls for privately funded spaceflight teams to be the first to land a privately funded robotic spacecraft on the Moon, travel 500 meters, and transmit back high-definition video and images.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_ROCK_LAB_STRATEGY</Tag>
@@ -12021,17 +11969,16 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_TERRA</Tag>
 		<English>Terraformed Luna</English>
-		<French>Terraformed Luna</French>
+		<French>Lune terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_TERRA_EFFECT</Tag>
 		<English>Effect - Terraformed Luna</English>
-		<French>Terraformed Luna - Effect</French>
+		<French>Effet - Lune terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_TERRA_EFFECT_PEDIA</Tag>
 		<English>Lunar terraforming effect</English>
-		<French>terraforming effect Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_TERRA_EFFECT_STRATEGY</Tag>
@@ -12040,7 +11987,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_TERRA_PEDIA</Tag>
 		<English>The Moon now has an atmosphere and suitable climate, so that people can leave their arcologies for at least a short amount of time. But there isn't much to do outside.</English>
-		<French>The Moon now has an atmosphere and suitable climate, so that people can leave their arcologies for at least a short amount of time. But there isn't much to do outside.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_TERRA_STRATEGY</Tag>
@@ -13791,7 +13737,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRIDE_PARADE</Tag>
 		<English>Pride Parade</English>
-		<French>Pride Parade</French>
+		<French>Défilé de la fierté</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRIDE_PARADE_PEDIA</Tag>
@@ -13805,17 +13751,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRIME_DIRECTIVE</Tag>
 		<English>Prime Directive</English>
-		<French>Prime Directive</French>
+		<French>Directive Première</French>
+		<Italian>Prima direttiva</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRIME_DIRECTIVE_EFFECT</Tag>
 		<English>Effect - Prime Directive</English>
-		<French>Prime Directive - Effect</French>
+		<French>Effet - Directive Première</French>
+		<Italian>Effetto - Prima direttiva</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRIME_DIRECTIVE_EFFECT_PEDIA</Tag>
 		<English>In the fictional universe of Star Trek, the Prime Directive is the guiding principle of the United Federation of Planets. The Prime Directive, used in four of the five Star Trek-based series, prohibits Starfleet personnel from interfering with the internal development of alien civilizations.</English>
-		<French>In the fictional universe of Star Trek, the Prime Directive is the guiding principle of the United Federation of Planets. The Prime Directive, used in four of the five Star Trek-based series, prohibits Starfleet personnel from interfering with the internal development of alien civilizations.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRIME_DIRECTIVE_EFFECT_STRATEGY</Tag>
@@ -13824,7 +13771,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRIME_DIRECTIVE_PEDIA</Tag>
 		<English>In the fictional universe of Star Trek, the Prime Directive is the guiding principle of the United Federation of Planets. The Prime Directive, used in four of the five Star Trek-based series, prohibits Starfleet personnel from interfering with the internal development of alien civilizations.</English>
-		<French>In the fictional universe of Star Trek, the Prime Directive is the guiding principle of the United Federation of Planets. The Prime Directive, used in four of the five Star Trek-based series, prohibits Starfleet personnel from interfering with the internal development of alien civilizations.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRIME_DIRECTIVE_STRATEGY</Tag>
@@ -16622,8 +16568,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEMPERATURE_REGULATOR_PEDIA</Tag>
-		<English>These devices are able to recycle waste heat for enery recovery, thereby greatly reducing external inputs needed to make the station run.</English>
-		<French>These devices are able to recycle waste heat for enery recovery, thereby greatly reducing external inputs needed to make the station run.</French>
+		<English>These devices are able to recycle waste heat for energy recovery, thereby greatly reducing external inputs needed to make the station run.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEMPERATURE_REGULATOR_STRATEGY</Tag>
@@ -16632,12 +16577,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEMPORAL_RIFT</Tag>
 		<English>Intergalactic Temporal Rift</English>
-		<French>Intergalactic Temporal Rift</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEMPORAL_RIFT_PEDIA</Tag>
 		<English>It is not clear where this temporal rift came from or where it goes, but you suspect that there is money to be made.</English>
-		<French>It is not clear where this temporal rift came from or where it goes, but you suspect that there is money to be made.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEMPORAL_RIFT_STRATEGY</Tag>
@@ -16651,7 +16594,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERAEARTH_PEDIA</Tag>
 		<English>This massive Earthlike structure is built around the galactic core. Requires lots of challenging engineering.</English>
-		<French>This massive Earthlike structure is built around the galactic core. Requires lots of challenging engineering.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERAEARTH_STRATEGY</Tag>
@@ -16679,7 +16621,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERAVERSE_PEDIA</Tag>
 		<English>A portal beyond the Gigaverse.</English>
-		<French>A portal beyond the Gigaverse.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERAVERSE_STRATEGY</Tag>
@@ -16688,12 +16629,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_CALLISTO</Tag>
 		<English>Terraformed Callisto</English>
-		<French>Terraformed Callisto</French>
+		<French>Callisto terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_CALLISTO_PEDIA</Tag>
 		<English>See http://terraforming.wikia.com/wiki/Callisto</English>
-		<French>See http://terraforming.wikia.com/wiki/Callisto</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_CALLISTO_STRATEGY</Tag>
@@ -16702,12 +16642,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_CERES</Tag>
 		<English>Terraformed Ceres</English>
-		<French>Terraformed Ceres</French>
+		<French>Cérès terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_CERES_PEDIA</Tag>
 		<English>Ceres has been turned into a habitable, Earth-like planet.</English>
-		<French>Ceres has been turned into a habitable, Earth-like planet.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_CERES_STRATEGY</Tag>
@@ -16716,12 +16655,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_EUROPA</Tag>
 		<English>Terraformed Europa</English>
-		<French>Terraformed Europa</French>
+		<French>Europe terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_EUROPA_PEDIA</Tag>
 		<English>See http://terraforming.wikia.com/wiki/Europa</English>
-		<French>See http://terraforming.wikia.com/wiki/Europa</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_EUROPA_STRATEGY</Tag>
@@ -16730,12 +16668,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_GANYMEDE</Tag>
 		<English>Terraformed Ganymede</English>
-		<French>Terraformed Ganymede</French>
+		<French>Ganymède terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_GANYMEDE_PEDIA</Tag>
 		<English>See http://terraforming.wikia.com/wiki/Ganymede</English>
-		<French>See http://terraforming.wikia.com/wiki/Ganymede</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_GANYMEDE_STRATEGY</Tag>
@@ -16744,12 +16681,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_GAS_GIANT</Tag>
 		<English>Interstellar Terraformed Gas Giant</English>
-		<French>Interstellar Terraformed Gas Giant</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_GAS_GIANT_PEDIA</Tag>
 		<English>See http://terraforming.wikia.com/wiki/Jupiter</English>
-		<French>See http://terraforming.wikia.com/wiki/Jupiter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_GAS_GIANT_STRATEGY</Tag>
@@ -16758,12 +16693,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_JUPITER</Tag>
 		<English>Terraformed Jupiter</English>
-		<French>Terraformed Jupiter</French>
+		<French>Jupiter terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_JUPITER_PEDIA</Tag>
 		<English>Jupiter is terraformed with an Earth-like planetary shell.</English>
-		<French>Jupiter is terraformed with an Earth-like planetary shell.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_JUPITER_STRATEGY</Tag>
@@ -16772,12 +16706,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_MERCURY</Tag>
 		<English>Terraformed Mercury</English>
-		<French>Mercure Terraformé</French>
+		<French>Mercure terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_MERCURY_PEDIA</Tag>
 		<English>See http://terraforming.wikia.com/wiki/Mercury.</English>
-		<French>See http://terraforming.wikia.com/wiki/Mercury.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_MERCURY_STRATEGY</Tag>
@@ -16786,12 +16719,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_NEPTUNE</Tag>
 		<English>Terraformed Neptune</English>
-		<French>Terraformed Neptune</French>
+		<French>Neptune terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_NEPTUNE_PEDIA</Tag>
 		<English>Neptune is terraformed with an Earth-like planetary shell.</English>
-		<French>Neptune is terraformed with an Earth-like planetary shell.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_NEPTUNE_STRATEGY</Tag>
@@ -16800,12 +16732,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_OBERON</Tag>
 		<English>Terraformed Oberon</English>
-		<French>Terraformed Oberon</French>
+		<French>Obéron terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_OBERON_PEDIA</Tag>
 		<English>See http://terraforming.wikia.com/wiki/Oberon</English>
-		<French>See http://terraforming.wikia.com/wiki/Oberon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_OBERON_STRATEGY</Tag>
@@ -16814,12 +16745,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_PLANET</Tag>
 		<English>Interstellar Terraformed Planet</English>
-		<French>Interstellar Terraformed Planet</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_PLANET_PEDIA</Tag>
 		<English>A somewhat Earthlike planet that has been terraformed and made more Earthlike.</English>
-		<French>A somewhat Earthlike planet that has been terraformed and made more Earthlike.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_PLANET_STRATEGY</Tag>
@@ -16828,12 +16757,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_PLUTO</Tag>
 		<English>Terraformed Pluto</English>
-		<French>Terraformed Pluto</French>
+		<French>Pluton terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_PLUTO_PEDIA</Tag>
 		<English>Pluto has been turned into a habitable, Earth-like planet.</English>
-		<French>Pluto has been turned into a habitable, Earth-like planet.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_PLUTO_STRATEGY</Tag>
@@ -16847,7 +16775,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_ROGUE_PLANET_PEDIA</Tag>
 		<English>To terraform such a planet, first of all, you need a source of light and heat. An artificial sun, for example. One idea is to place satellites on orbit that will produce energy by hydrogen fusion. Greenhouse gasses would also be needed to reduce the heat output. The main advantage is that, despite the huge costs, a rogue planet will not be depending on anything: a hosting star, nearby gravity influences, or governments from other planets. Settlers will be completely on their own.[PARAGRAPH:2]See http://terraforming.wikia.com/wiki/Rogue_planet</English>
-		<French>To terraform such a planet, first of all, you need a source of light and heat. An artificial sun, for example. One idea is to place satellites on orbit that will produce energy by hydrogen fusion. Greenhouse gasses would also be needed to reduce the heat output. The main advantage is that, despite the huge costs, a rogue planet will not be depending on anything: a hosting star, nearby gravity influences, or governments from other planets. Settlers will be completely on their own.[PARAGRAPH:2]See http://terraforming.wikia.com/wiki/Rogue_planet</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_ROGUE_PLANET_STRATEGY</Tag>
@@ -16856,12 +16783,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_SATURN</Tag>
 		<English>Terraformed Saturn</English>
-		<French>Terraformed Saturn</French>
+		<French>Saturne terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_SATURN_PEDIA</Tag>
 		<English>Saturn is terraformed with an Earth-like planetary shell.</English>
-		<French>Saturn is terraformed with an Earth-like planetary shell.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_SATURN_STRATEGY</Tag>
@@ -16870,40 +16796,37 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_TITAN</Tag>
 		<English>Terraformed Titan</English>
-		<French>Terraformed Titan</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TERRAFORMED_TITANIA</Tag>
-		<English>Terraformed Titania</English>
-		<French>Terraformed Titania</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TERRAFORMED_TITANIA_PEDIA</Tag>
-		<English>See http://terraforming.wikia.com/wiki/Titania</English>
-		<French>See http://terraforming.wikia.com/wiki/Titania</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TERRAFORMED_TITANIA_STRATEGY</Tag>
-		<English>TBD</English>
+		<French>Titan terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_TITAN_PEDIA</Tag>
 		<English>See http://terraforming.wikia.com/wiki/Titan</English>
-		<French>See http://terraforming.wikia.com/wiki/Titan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_TITAN_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TERRAFORMED_TITANIA</Tag>
+		<English>Terraformed Titania</English>
+		<French>Titania terraformée</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TERRAFORMED_TITANIA_PEDIA</Tag>
+		<English>See http://terraforming.wikia.com/wiki/Titania</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TERRAFORMED_TITANIA_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_TRITON</Tag>
 		<English>Terraformed Triton</English>
-		<French>Terraformed Triton</French>
+		<French>Triton terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_TRITON_PEDIA</Tag>
 		<English>See http://terraforming.wikia.com/wiki/Triton</English>
-		<French>See http://terraforming.wikia.com/wiki/Triton</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_TRITON_STRATEGY</Tag>
@@ -16912,12 +16835,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_URANUS</Tag>
 		<English>Terraformed Uranus</English>
-		<French>Terraformed Uranus</French>
+		<French>Uranus terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_URANUS_PEDIA</Tag>
 		<English>Uranus is terraformed with an Earth-like planetary shell.</English>
-		<French>Uranus is terraformed with an Earth-like planetary shell.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_URANUS_STRATEGY</Tag>
@@ -16926,12 +16848,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_VENUS_EFFECT</Tag>
 		<English>Effect - Terraformed Venus</English>
-		<French>Terraformed Venus - Effect</French>
+		<French>Effet - Vénus terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_VENUS_EFFECT_PEDIA</Tag>
 		<English>Venus terraforming effect</English>
-		<French>terraforming effect de Vénus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_VENUS_EFFECT_STRATEGY</Tag>
@@ -16940,12 +16861,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TESSERACT_ASSEMBLER</Tag>
 		<English>Hyperspace Tesseract Assembler</English>
-		<French>Hyperspace Tesseract Assembler</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TESSERACT_ASSEMBLER_PEDIA</Tag>
 		<English>This factory assembles high-dimensional structures from tesseracts, also known as hypercubes.</English>
-		<French>This factory assembles high-dimensional structures from tesseracts, also known as hypercubes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TESSERACT_ASSEMBLER_STRATEGY</Tag>
@@ -16954,12 +16873,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TESSERACT_HOMES</Tag>
 		<English>Hyperspace Tesseract Homes</English>
-		<French>Hyperspace Tesseract Homes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TESSERACT_HOMES_PEDIA</Tag>
 		<English>Homes made of tesseracts.</English>
-		<French>Homes made of tesseracts.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TESSERACT_HOMES_STRATEGY</Tag>
@@ -16968,12 +16885,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TESSERACT_PATHWAYS</Tag>
 		<English>Tesseract Pathways</English>
-		<French>Tesseract Pathways</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TESSERACT_PATHWAYS_PEDIA</Tag>
 		<English>These are paths through hyperspace that are built with the aid of tesseract manufacturers in hyperspace.</English>
-		<French>These are paths through hyperspace that are built with the aid of tesseract manufacturers in hyperspace.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TESSERACT_PATHWAYS_STRATEGY</Tag>
@@ -16996,12 +16911,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIDALLY_LOCKED</Tag>
 		<English>Interstellar Base - Tidally Locked Planet</English>
-		<French>Interstellar Base - Tidally Locked Planet</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIDALLY_LOCKED_PEDIA</Tag>
 		<English>A base on a planet that is tidally locked around a red dwarf.</English>
-		<French>A base on a planet that is tidally locked around a red dwarf.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIDALLY_LOCKED_STRATEGY</Tag>
@@ -17010,12 +16923,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIDALLY_LOCKED_WIND</Tag>
 		<English>Interstellar Terminator Wind Turbines</English>
-		<French>Interstellar Terminator Wind Turbines</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIDALLY_LOCKED_WIND_PEDIA</Tag>
 		<English>Hurricane force winds blow due to the planet's extreme temperature differential. A good source of energy.</English>
-		<French>Hurricane force winds blow due to the planet's extreme temperature differential. A good source of energy.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIDALLY_LOCKED_WIND_STRATEGY</Tag>
@@ -17024,12 +16935,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIMEHOLE</Tag>
 		<English>Interstellar Timehole</English>
-		<French>Interstellar Timehole</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIMEHOLE_PEDIA</Tag>
 		<English>A timehole is a wormhole that connects one point with another in its future light cone. In other words, it is a portal between past and future.</English>
-		<French>A timehole is a wormhole that connects one point with another in its future light cone. In other words, it is a portal between past and future.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIMEHOLE_STRATEGY</Tag>
@@ -17038,12 +16947,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIMELINE_STABILIZERS</Tag>
 		<English>Distant Timeline Stabilizers</English>
-		<French>Distant Timeline Stabilizers</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIMELINE_STABILIZERS_PEDIA</Tag>
 		<English>Structures that hold the fabric of time together. It's complicated.</English>
-		<French>Structures that hold the fabric of time together. It's complicated.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIMELINE_STABILIZERS_STRATEGY</Tag>
@@ -17057,7 +16964,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIMELINE_SWITCHING_STATION_PEDIA</Tag>
 		<English>The time machine has been upgraded. Now you can travel between different timelines, forking histories at will.</English>
-		<French>The time machine has been upgraded. Now you can travel between different timelines, forking histories at will.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIMELINE_SWITCHING_STATION_STRATEGY</Tag>
@@ -17066,12 +16972,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIME_ABYSS</Tag>
 		<English>Interstellar Time Abyss</English>
-		<French>Interstellar Time Abyss</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIME_ABYSS_PEDIA</Tag>
 		<English>The ultimate punishment. The offender's mind is uploaded into a computer, which is then placed into a closed time circuit. All religions and civilized planets condemn the practice.</English>
-		<French>The ultimate punishment. The offender's mind is uploaded into a computer, which is then placed into a closed time circuit. All religions and civilized planets condemn the practice.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIME_ABYSS_STRATEGY</Tag>
@@ -17085,7 +16989,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIME_MACHINE_PEDIA</Tag>
 		<English>This time machine allows easy and rapid travel between time periods.</English>
-		<French>This time machine allows easy and rapid travel between time periods.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIME_MACHINE_STRATEGY</Tag>
@@ -17094,12 +16997,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIME_POLICE</Tag>
 		<English>Interstellar Time Police</English>
-		<French>Interstellar Time Police</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIME_POLICE_PEDIA</Tag>
 		<English>Their job is to enforce of the laws of chronology.</English>
-		<French>Their job is to enforce of the laws of chronology.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIME_POLICE_STRATEGY</Tag>
@@ -17113,7 +17014,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIME_TOURIST_AGENCY_PEDIA</Tag>
 		<English>The ultimate vacation: travel through time.</English>
-		<French>The ultimate vacation: travel through time.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIME_TOURIST_AGENCY_STRATEGY</Tag>
@@ -17122,12 +17022,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIME_TRAP</Tag>
 		<English>Hyperspace Time Trap</English>
-		<French>Hyperspace Time Trap</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIME_TRAP_PEDIA</Tag>
 		<English>With this trap installed, defenders go back in time to disrupt an intruders' plot.</English>
-		<French>With this trap installed, defenders go back in time to disrupt an intruders' plot.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIME_TRAP_STRATEGY</Tag>
@@ -17136,12 +17034,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIME_ZONES</Tag>
 		<English>Time Zones</English>
-		<French>Time Zones</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIME_ZONES_PEDIA</Tag>
 		<English>A time zone is a region of the globe that observes a uniform standard time for legal, commercial, and social purposes. Time zones tend to follow the boundaries of countries and their subdivisions because it is convenient for areas in close commercial or other communication to keep the same time.</English>
-		<French>A time zone is a region of the globe that observes a uniform standard time for legal, commercial, and social purposes. Time zones tend to follow the boundaries of countries and their subdivisions because it is convenient for areas in close commercial or other communication to keep the same time.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIME_ZONES_STRATEGY</Tag>
@@ -17150,12 +17046,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_AIR_TRANSPORT</Tag>
 		<English>Titan Airport</English>
-		<French>Titan Airport</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_AIR_TRANSPORT_PEDIA</Tag>
 		<English>Aviation on Titan is actually quite a simple* matter due to the thick atmosphere and low gravity.[PARAGRAPH:2]* Relatively speaking</English>
-		<French>Aviation on Titan is actually quite a simple* matter due to the thick atmosphere and low gravity.[PARAGRAPH:2]* Relatively speaking</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_AIR_TRANSPORT_STRATEGY</Tag>
@@ -17164,12 +17058,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_AMMONIA_ERUPTION</Tag>
 		<English>Titan Ammonia Eruption</English>
-		<French>Titan Ammonia Eruption</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_AMMONIA_ERUPTION_PEDIA</Tag>
 		<English>Ammonia is needed to begin the warming process. See http://terraforming.wikia.com/wiki/Titan</English>
-		<French>Ammonia is needed to begin the warming process. See http://terraforming.wikia.com/wiki/Titan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_AMMONIA_ERUPTION_STRATEGY</Tag>
@@ -17183,7 +17075,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_ARCOLOGY_PEDIA</Tag>
 		<English>Tucked beneath Titan's thick haze, the denizens of the Titan Arcology enjoy their relative isolation from the rest of the solar system. Nobody really liked them anyway.</English>
-		<French>Tucked beneath Titan's thick haze, the denizens of the Titan Arcology enjoy their relative isolation from the rest of the solar system. Nobody really liked them anyway.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_ARCOLOGY_STRATEGY</Tag>
@@ -17192,12 +17083,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_BASE</Tag>
 		<English>Titan Base</English>
-		<French>Titan Base</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_BASE_PEDIA</Tag>
 		<English>A human settlement on the surface of Titan</English>
-		<French>A human settlement on the surface of Titan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_BASE_STRATEGY</Tag>
@@ -17206,12 +17095,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_BIOFACTORY</Tag>
 		<English>Titan Biofactory</English>
-		<French>Titan Biofactory</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_BIOFACTORY_PEDIA</Tag>
 		<English>The Titan Biofactory allows for advanced research and development into hypothetical biochemistry.</English>
-		<French>The Titan Biofactory allows for advanced research and development into hypothetical biochemistry.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_BIOFACTORY_STRATEGY</Tag>
@@ -17220,12 +17107,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_CONTINENT</Tag>
 		<English>Titan Floating Continent</English>
-		<French>Titan Floating Continent</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_CONTINENT_PEDIA</Tag>
 		<English>Raising the temperature will melt the surface, so an artificial continent is needed. See http://terraforming.wikia.com/wiki/Titan</English>
-		<French>Raising the temperature will melt the surface, so an artificial continent is needed. See http://terraforming.wikia.com/wiki/Titan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_CONTINENT_STRATEGY</Tag>
@@ -17234,12 +17119,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_ECOSYSTEM</Tag>
 		<English>Titan Ecosystem</English>
-		<French>Titan Ecosystem</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_ECOSYSTEM_PEDIA</Tag>
 		<English>Life has been seeded in Titan's methane lakes.</English>
-		<French>Life has been seeded in Titan's methane lakes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_ECOSYSTEM_STRATEGY</Tag>
