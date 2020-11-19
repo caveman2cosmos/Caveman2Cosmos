@@ -797,25 +797,10 @@ CvSpecialistInfo::~CvSpecialistInfo()
 	//TB Specialist Tags
 	//Team Project (1)
 	// int vector utilizing struct with delayed resolution
-	for (int i=0; i<(int)m_aTechHappinessTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aTechHappinessTypes[i]));
-	}
-
-	for (int i=0; i<(int)m_aTechHealthTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aTechHealthTypes[i]));
-	}
-
-	for (int i=0; i<(int)m_aUnitCombatExperienceTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aUnitCombatExperienceTypes[i]));
-	}
-
-	for (int i=0; i<(int)m_aUnitCombatExperienceTypesNull.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aUnitCombatExperienceTypesNull[i]));
-	}
+	GC.removeDelayedResolutionVector(m_aTechHappinessTypes);
+	GC.removeDelayedResolutionVector(m_aTechHealthTypes);
+	GC.removeDelayedResolutionVector(m_aUnitCombatExperienceTypes);
+	GC.removeDelayedResolutionVector(m_aUnitCombatExperienceTypesNull);
 }
 
 int CvSpecialistInfo::getGreatPeopleUnitType() const
@@ -32933,6 +32918,8 @@ m_bVisible(true)
 
 CvGameOptionInfo::~CvGameOptionInfo()
 {
+	GC.removeDelayedResolutionVector(m_aEnforcesGameOptionOnTypes);
+	GC.removeDelayedResolutionVector(m_aEnforcesGameOptionOffTypes);
 }
 
 bool CvGameOptionInfo::read(CvXMLLoadUtility* pXML)
@@ -32964,8 +32951,8 @@ void CvGameOptionInfo::copyNonDefaults(CvGameOptionInfo* pClassInfo, CvXMLLoadUt
 	if (getVisible()) m_bVisible = pClassInfo->getVisible();
 
 	//TB's Tags
-	GC.copyNonDefaultDelayedResolutionVector(m_aEnforcesGameOptionOnTypes, pClassInfo->m_aEnforcesGameOptionOnTypes);
-	GC.copyNonDefaultDelayedResolutionVector(m_aEnforcesGameOptionOffTypes, pClassInfo->m_aEnforcesGameOptionOffTypes);
+	GC.copyNonDefaultDelayedResolutionVector(m_aEnforcesGameOptionOnTypes, pClassInfo->getEnforcesGameOptionOnTypes());
+	GC.copyNonDefaultDelayedResolutionVector(m_aEnforcesGameOptionOffTypes, pClassInfo->getEnforcesGameOptionOffTypes());
 }
 
 void CvGameOptionInfo::getCheckSum(unsigned int& iSum) const
@@ -38625,7 +38612,6 @@ CvUnitCombatInfo::CvUnitCombatInfo()
 
 CvUnitCombatInfo::~CvUnitCombatInfo()
 {
-
 	SAFE_DELETE_ARRAY(m_piDomainModifierPercent);
 
 	for (int i=0; i<(int)m_aOutcomeMissions.size(); i++)
@@ -38636,53 +38622,53 @@ CvUnitCombatInfo::~CvUnitCombatInfo()
 	// bool vector with delayed resolution
 	for (int i=0; i<(int)m_aiCureAfflictionChangeTypes.size(); i++)
 	{
-		GC.removeDelayedResolution((int*)&(m_aiCureAfflictionChangeTypes[i]));
+		GC.removeDelayedResolutionVector((int*)&(m_aiCureAfflictionChangeTypes[i]));
 	}
 
 	// int vector utilizing struct with delayed resolution
 	for (int i=0; i<(int)m_aAfflictionFortitudeChangeModifiers.size(); i++)
 	{
-		GC.removeDelayedResolution((int*)&(m_aAfflictionFortitudeChangeModifiers[i]));
+		GC.removeDelayedResolutionVector((int*)&(m_aAfflictionFortitudeChangeModifiers[i]));
 	}
 
 	for (int i=0; i<(int)m_aBuildWorkChangeModifiers.size(); i++)
 	{
-		GC.removeDelayedResolution((int*)&(m_aBuildWorkChangeModifiers[i]));
+		GC.removeDelayedResolutionVector((int*)&(m_aBuildWorkChangeModifiers[i]));
 	}
 
 	for (int i=0; i<(int)m_aUnitCombatChangeModifiers.size(); i++)
 	{
-		GC.removeDelayedResolution((int*)&(m_aUnitCombatChangeModifiers[i]));
+		GC.removeDelayedResolutionVector((int*)&(m_aUnitCombatChangeModifiers[i]));
 	}
 
 	for (int i=0; i<(int)m_aFlankingStrengthbyUnitCombatTypeChange.size(); i++)
 	{
-		GC.removeDelayedResolution((int*)&(m_aFlankingStrengthbyUnitCombatTypeChange[i]));
+		GC.removeDelayedResolutionVector((int*)&(m_aFlankingStrengthbyUnitCombatTypeChange[i]));
 	}
 
 	for (int i=0; i<(int)m_aWithdrawVSUnitCombatTypeChange.size(); i++)
 	{
-		GC.removeDelayedResolution((int*)&(m_aWithdrawVSUnitCombatTypeChange[i]));
+		GC.removeDelayedResolutionVector((int*)&(m_aWithdrawVSUnitCombatTypeChange[i]));
 	}
 
 	for (int i=0; i<(int)m_aPursuitVSUnitCombatTypeChange.size(); i++)
 	{
-		GC.removeDelayedResolution((int*)&(m_aPursuitVSUnitCombatTypeChange[i]));
+		GC.removeDelayedResolutionVector((int*)&(m_aPursuitVSUnitCombatTypeChange[i]));
 	}
 
 	for (int i=0; i<(int)m_aRepelVSUnitCombatTypeChange.size(); i++)
 	{
-		GC.removeDelayedResolution((int*)&(m_aRepelVSUnitCombatTypeChange[i]));
+		GC.removeDelayedResolutionVector((int*)&(m_aRepelVSUnitCombatTypeChange[i]));
 	}
 
 	for (int i=0; i<(int)m_aKnockbackVSUnitCombatTypeChange.size(); i++)
 	{
-		GC.removeDelayedResolution((int*)&(m_aKnockbackVSUnitCombatTypeChange[i]));
+		GC.removeDelayedResolutionVector((int*)&(m_aKnockbackVSUnitCombatTypeChange[i]));
 	}
 
 	for (int i=0; i<(int)m_aPunctureVSUnitCombatTypeChange.size(); i++)
 	{
-		GC.removeDelayedResolution((int*)&(m_aPunctureVSUnitCombatTypeChange[i]));
+		GC.removeDelayedResolutionVector((int*)&(m_aPunctureVSUnitCombatTypeChange[i]));
 	}
 
 	for (int i=0; i<(int)m_aArmorVSUnitCombatTypeChange.size(); i++)

@@ -447,25 +447,10 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_pabHurry);
 	//SAFE_DELETE(m_pExprFreePromotionCondition);
 
-	for (int i = 0; i < (int)m_aEnabledCivilizationTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aEnabledCivilizationTypes[i]));
-	}
-
-	for (int i = 0; i < (int)m_aAidRateChanges.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aAidRateChanges[i]));
-	}
-
-	for (int i = 0; i < (int)m_aiFreeTraitTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aiFreeTraitTypes[i]));
-	}
-
-	for (int i = 0; i < (int)m_aiPrereqInCityBuildings.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aiPrereqInCityBuildings[i]));
-	}
+	GC.removeDelayedResolutionVector(m_aEnabledCivilizationTypes);
+	GC.removeDelayedResolutionVector(m_aAidRateChanges);
+	GC.removeDelayedResolutionVector(m_aiFreeTraitTypes);
+	GC.removeDelayedResolutionVector(m_aiPrereqInCityBuildings);
 	//TB Combat Mods (Buildings) end
 }
 

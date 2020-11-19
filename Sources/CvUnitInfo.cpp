@@ -381,30 +381,11 @@ CvUnitInfo::~CvUnitInfo()
 	}
 
 	//Struct Vector
-	for (int i=0; i<(int)m_aEnabledCivilizationTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aEnabledCivilizationTypes[i]));
-	}
-
-	for (int i=0; i<(int)m_aiSupersedingUnits.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aiSupersedingUnits[i]));
-	}
-
-	for (int i=0; i<(int)m_aiUnitUpgrades.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aiUnitUpgrades[i]));
-	}
-
-	for (int i=0; i<(int)m_aiDefendAgainstUnit.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aiDefendAgainstUnit[i]));
-	}
-
-	for (int i=0; i<(int)m_aiTargetUnit.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aiTargetUnit[i]));
-	}
+	GC.removeDelayedResolutionVector(m_aEnabledCivilizationTypes);
+	GC.removeDelayedResolutionVector(m_aiSupersedingUnits);
+	GC.removeDelayedResolutionVector(m_aiUnitUpgrades);
+	GC.removeDelayedResolutionVector(m_aiDefendAgainstUnit);
+	GC.removeDelayedResolutionVector(m_aiTargetUnit);
 }
 
 const wchar_t* CvUnitInfo::getExtraHoverText() const
