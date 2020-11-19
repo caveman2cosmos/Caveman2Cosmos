@@ -486,9 +486,9 @@ int CyCity::productionLeft() const
 	return m_pCity->productionLeft();
 }
 
-int CyCity::hurryGold(int /*HurryTypes*/ iHurry) const
+int64_t CyCity::getHurryGold(int /*HurryTypes*/ iHurry) const
 {
-	return m_pCity->hurryGold((HurryTypes)iHurry);
+	return m_pCity->getHurryGold((HurryTypes)iHurry);
 }
 
 int CyCity::hurryPopulation(int /*HurryTypes*/ iHurry) const
@@ -511,14 +511,14 @@ int CyCity::getNumBuilding(int /*BuildingTypes*/ iIndex) const
 	return iIndex != -1 ? m_pCity->getNumBuilding((BuildingTypes) iIndex) : 0;
 }
 
-bool CyCity::isHasBuilding(int /*BuildingTypes*/ iIndex) const
-{
-	return m_pCity->getNumBuilding((BuildingTypes) iIndex) > 0;
-}
-
 int CyCity::getNumActiveBuilding(int /*BuildingTypes*/ iIndex) const
 {
 	return m_pCity->getNumActiveBuilding((BuildingTypes) iIndex);
+}
+
+bool CyCity::isFreeBuilding(int /*BuildingTypes*/ iIndex) const
+{
+	return m_pCity->isFreeBuilding((BuildingTypes) iIndex);
 }
 
 int CyCity::getID() const

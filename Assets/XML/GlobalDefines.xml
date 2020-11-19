@@ -118,10 +118,6 @@
 		<DefineTextVal>FEATURE_FALLOUT</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>GLOBAL_WARMING_TERRAIN</DefineName>
-		<DefineTextVal>TERRAIN_GRASSLAND</DefineTextVal>
-	</Define>
-	<Define>
 		<DefineName>CAPITAL_BUILDING</DefineName><!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
 		<DefineTextVal>BUILDING_PALACE</DefineTextVal>
 	</Define>
@@ -1766,10 +1762,6 @@
 	<Define>
 		<DefineName>BONUS_OBSOLETE_VALUE_MODIFIER</DefineName>
 		<iDefineIntVal>150</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NO_ESPIONAGE_CULTURE_LEVEL_MODIFIER</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FORCE_UNOWNED_CITY_TIMER</DefineName>

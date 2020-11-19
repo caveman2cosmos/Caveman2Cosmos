@@ -21,17 +21,6 @@ CyPlayer::CyPlayer(CvPlayer* pPlayer) : m_pPlayer(pPlayer)
 {
 }
 
-#ifdef PARALLEL_MAPS
-void CyPlayer::updateMembers()
-{
-	m_pPlayer->updateMembers();
-}
-
-void CyPlayer::initMembers(int iIndex)
-{
-	m_pPlayer->initMembers(iIndex);
-}
-#endif
 /************************************************************************************************/
 /* CHANGE_PLAYER                         08/27/08                                 jdog5000      */
 /*                                                                                              */
@@ -370,16 +359,6 @@ int CyPlayer::countNumCoastalCitiesByArea(CyArea* pArea)
 	return m_pPlayer ? m_pPlayer->countNumCoastalCitiesByArea(pArea->getArea()) : -1;
 }
 
-int CyPlayer::getCurrentInflationCostModifier()
-{
-	return m_pPlayer ? m_pPlayer->getCurrentInflationCostModifier() : 0;
-}
-
-int CyPlayer::getEquilibriumInflationCostModifier()
-{
-	return m_pPlayer ? m_pPlayer->getEquilibriumInflationCostModifier() : 0;
-}
-
 int CyPlayer::countOwnedBonuses(int /*BonusTypes*/ eBonus)
 {
 	return m_pPlayer ? m_pPlayer->countOwnedBonuses((BonusTypes)eBonus) : NO_BONUS;
@@ -670,9 +649,9 @@ int CyPlayer::calculateInflationRate()
 	return m_pPlayer ? m_pPlayer->calculateInflationRate() : -1;
 }
 
-int64_t CyPlayer::calculateInflatedCosts()
+int64_t CyPlayer::getFinalExpense()
 {
-	return m_pPlayer ? m_pPlayer->calculateInflatedCosts() : -1;
+	return m_pPlayer ? m_pPlayer->getFinalExpense() : -1;
 }
 
 int CyPlayer::calculateGoldRate()
@@ -1899,34 +1878,12 @@ int CyPlayer::getGoldPerTurnByPlayer(int /*PlayerTypes*/ eIndex)
 
 bool CyPlayer::isFeatAccomplished(int /*FeatTypes*/ eIndex)	
 {
-	//TB Something's wrong in the python and this allows me to protect against it.
-	if (eIndex < 0)
-	{
-		FErrorMsg("eIndex is expected to be non-negative (invalid Feat Called by Python and Caught Early)");
-		return false;
-	}
-	if (eIndex >= NUM_FEAT_TYPES)
-	{
-		FErrorMsg("eIndex is expected to be within maximum bounds (invalid Feat Called by Python and Caught Early)");
-		return false;
-	}
 	return m_pPlayer ? m_pPlayer->isFeatAccomplished((FeatTypes)eIndex) : false;
 }
 
 void CyPlayer::setFeatAccomplished(int /*FeatTypes*/ eIndex, bool bNewValue)
 {
-	//TB Something's wrong in the python and this allows me to protect against it.
-	if (eIndex < 0)
-	{
-		FErrorMsg("eIndex is expected to be non-negative (invalid Feat Called by Python and Caught Early)");
-		return;
-	}
-	if(eIndex >= NUM_FEAT_TYPES)
-	{
-		FErrorMsg("eIndex is expected to be within maximum bounds (invalid Feat Called by Python and Caught Early)");
-		return;
-	}
-	else if (m_pPlayer)
+	if (m_pPlayer)
 	{
 		m_pPlayer->setFeatAccomplished((FeatTypes)eIndex, bNewValue);
 	}

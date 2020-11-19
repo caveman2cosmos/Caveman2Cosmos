@@ -844,7 +844,7 @@ static void ValidatePathNode(CvPathNode* node)
 }
 #endif
 
-bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSelectionGroup* pGroup, int iFlags, int iMaxTurns, int iOptimizationLimit)
+bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSelectionGroup* pGroup, int iFlags, int iMaxTurns, int iOptimizationLimit)
 {
 	CvPathNode*	root;
 	bool bResult;
@@ -865,7 +865,7 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 
 	bool bRequiresWar;
 
-	if ( !m_TerminusValidFunc(pGroup, pTo->getX(), pTo->getY(), iFlags, bRequiresWar) )
+	if (!m_TerminusValidFunc(pGroup, pTo->getX(), pTo->getY(), iFlags, bRequiresWar))
 	{
 		m_generatedPath.Set(NULL);
 		bResult = false;
@@ -874,61 +874,57 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 	{
 		m_pTerminalPlot = pTo;
 
-		if ( bRequiresWar )
+		if (bRequiresWar)
 		{
 			iFlags |= MOVE_TERMINUS_DECLARES_WAR;
 		}
 
-		unsigned int	iGroupMembershipChecksum;
-		bool bSameGroup = groupMatches(pGroup, iFlags, iGroupMembershipChecksum);
+		unsigned int iGroupMembershipChecksum;
+		const bool bSameGroup = groupMatches(pGroup, iFlags, iGroupMembershipChecksum);
 
-		if ( !bSameGroup )
+		if (!bSameGroup)
 		{
 			CvSelectionGroup::setGroupToCacheFor(pGroup);
 			CvPlot::NextCachePathEpoch();
 
-			if ( !pGroup->AI_isControlled() )
+			if (!pGroup->AI_isControlled())
 			{
 				m_useAIPathingAlways = getBugOptionBOOL("MainInterface__UseAIPathing", false);
 			}
 		}
 
-		if ( TRACE_PATHING )
+		if (TRACE_PATHING)
 		{
 			OutputDebugString(CvString::format("Generate path from (%d,%d) to (%d,%d)\n", pFrom->getX(), pFrom->getY(), pTo->getX(), pTo->getY()).c_str());
 		}
 
 		bool bExistingValid = false;
 
-		//	Optimize the case where we'e just stepping along the previously calculated path (as continueMission() does)
-		//  If it is a MPOPTION_SIMULTANEOUS_TURNS game, don't apply that optimization to avoid sync issues
+		// Optimize the case where we'e just stepping along the previously calculated path (as continueMission() does)
+		// If it is a MPOPTION_SIMULTANEOUS_TURNS game, don't apply that optimization to avoid sync issues
 		// TBOOSDEBUGNOTE : Changed !isHuman() to MPOPTION_SIMULTANEOUS_TURNS because it wasn't protecting against AI opponents withdrawing then re-evaluating Safety checks.
-		if ( bSameGroup && (m_generatedPath.lastPlot() == pTo))
+		if (bSameGroup && m_generatedPath.lastPlot() == pTo && m_generatedPath.containsNode(pFrom))
 		{
-			if ( m_generatedPath.containsNode(pFrom) )
+			bool bValid = true;
+
+			m_generatedPath.trimBefore(pFrom);
+
+			//	Validate we can still follow this path (visibility may have changed)
+			for(CvPath::const_iterator itr = m_generatedPath.begin(); itr != m_generatedPath.end(); ++itr)
 			{
-				bool bValid = true;
-
-				m_generatedPath.trimBefore(pFrom);
-
-				//	Validate we can still follow this path (visibility may have changed)
-				for(CvPath::const_iterator itr = m_generatedPath.begin(); itr != m_generatedPath.end(); ++itr)
+				if (itr.plot() != pFrom && !moveToValid(pGroup, itr.plot(), iFlags))
 				{
-					if ( itr.plot() != pFrom && !moveToValid(pGroup, itr.plot(), iFlags) )
-					{
-						bValid = false;
-						break;
-					}
+					bValid = false;
+					break;
 				}
-
-				if ( bValid )
-				{
-					bExistingValid = true;
-				}
+			}
+			if (bValid)
+			{
+				bExistingValid = true;
 			}
 		}
 
-		if ( bExistingValid )
+		if (bExistingValid)
 		{
 			bResult = true;
 		}
@@ -936,7 +932,7 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 		{
 			m_generatedPath.Set(NULL);
 
-			if ( !bSameGroup || pFrom != m_pFrom )
+			if (!bSameGroup || pFrom != m_pFrom)
 			{
 				m_nodeAllocationPool->reset();
 				m_plotInfo->reset();
@@ -948,9 +944,9 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 
 			CvPathGeneratorPlotInfo* plotInfo = m_plotInfo->getPlotInfo(pFrom);
 
-			if ( m_pBestTerminalNode == NULL || m_pBestTerminalNode->m_plot != pTo )
+			if (m_pBestTerminalNode == NULL || m_pBestTerminalNode->m_plot != pTo)
 			{
-				if ( plotInfo->pNode == NULL )
+				if (plotInfo->pNode == NULL)
 				{
 					root = allocatePathNode();
 
@@ -975,42 +971,39 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 
 				//GC.getGame().logOOSSpecial(51, m_pBestTerminalNode->m_plot->getX(), m_pBestTerminalNode->m_plot->getY());
 				//GC.getGame().logOOSSpecial(52, pTo->getX(), pTo->getY());
-				if ( m_pBestTerminalNode != NULL && m_pBestTerminalNode->m_plot != pTo )
+				if (m_pBestTerminalNode != NULL && m_pBestTerminalNode->m_plot != pTo)
 				{
-					if ( m_pBestTerminalNode->m_plot != pFrom )
+					if (m_pBestTerminalNode->m_plot != pFrom)
 					{
 						if (m_pReplacedNonTerminalNode != NULL)
 						{
 							FAssert(m_pReplacedNonTerminalNode->m_plot == m_pBestTerminalNode->m_plot);
 						}
 
-						//	Put back a non-terminal variant of the old terminal node if we have one
+						// Put back a non-terminal variant of the old terminal node if we have one
 						CvPathGeneratorPlotInfo* oldTerminalPlotInfo = m_plotInfo->getPlotInfo(m_pBestTerminalNode->m_plot);
-						
+
 						FAssert(oldTerminalPlotInfo->pNode == m_pBestTerminalNode);
 
 						oldTerminalPlotInfo->pNode = m_pReplacedNonTerminalNode;
 
-						if ( m_pBestTerminalNode->m_parent != NULL )
+						if (m_pBestTerminalNode->m_parent != NULL)
 						{
-							FAssert( m_pBestTerminalNode->m_firstChild == NULL );
+							FAssert(m_pBestTerminalNode->m_firstChild == NULL);
 
 							UnlinkNode(m_pBestTerminalNode);
 						}
-						
+
 						//	Edges that are valid into a terminal plot may not be to a non-terminal (direct attacks)
 						oldTerminalPlotInfo->m_iEdgesValidated = 0;
 
 						CvPathNode* replacedTerminalNode = m_pReplacedNonTerminalNode;
 
-						if ( m_pReplacedNonTerminalNode != NULL )
+						if (m_pReplacedNonTerminalNode != NULL && m_pReplacedNonTerminalNode->m_parent != NULL)
 						{
-							if ( m_pReplacedNonTerminalNode->m_parent != NULL )
-							{
-								m_pReplacedNonTerminalNode = NULL;
+							m_pReplacedNonTerminalNode = NULL;
 
-								LinkNode(replacedTerminalNode, replacedTerminalNode->m_parent);
-							}
+							LinkNode(replacedTerminalNode, replacedTerminalNode->m_parent);
 						}
 
 						ValidatePlotInfo(oldTerminalPlotInfo);
@@ -1018,7 +1011,7 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 						VALIDATE_TREE(root, m_pBestTerminalNode, replacedTerminalNode);
 
 #ifdef LIGHT_VALIDATION
-						if ( bValidate && replacedTerminalNode != NULL)
+						if (bValidate && replacedTerminalNode != NULL)
 						{
 							ValidatePathNode(replacedTerminalNode);
 						}
@@ -1028,7 +1021,7 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 					m_pBestTerminalNode = NULL;
 					m_pReplacedNonTerminalNode = NULL;
 				}
-				else if ( m_pBestTerminalNode == NULL )
+				else if (m_pBestTerminalNode == NULL)
 				{
 					m_pReplacedNonTerminalNode = NULL;
 				}
@@ -1039,39 +1032,46 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 				CvPathGeneratorPlotInfo* terminalPlotInfo = m_plotInfo->getPlotInfo(pTo);
 
 				//GC.getGame().logOOSSpecial(55, pFrom->getX(), pFrom->getY());
-				if ( terminalPlotInfo->pNode != NULL && pFrom != pTo && !terminalPlotInfo->pNode->m_bProcessedAsTerminus )
+				if (terminalPlotInfo->pNode != NULL && pFrom != pTo && !terminalPlotInfo->pNode->m_bProcessedAsTerminus)
 				{
 					VALIDATE_TREE(root, NULL, terminalPlotInfo->pNode);
 
-					//	Check its within the allowed range - INVALID CHECK AS IT STANDS
-					//if ( terminalPlotInfo->pNode->m_iPathTurns > iMaxTurns )
-					//{
-					//	return false;
-					//}
+					/* INVALID CHECK AS IT STANDS
+					// Check it's within the allowed range
+					if (terminalPlotInfo->pNode->m_iPathTurns > iMaxTurns)
+					{
+						return false;
+					}
+					*/
 
-					//	If we already know a route to the terminal plot recalculate its final
-					//	edge for the plot now being terminal and seed the best route with it
+					// If we already know a route to the terminal plot recalculate its final
+					// edge for the plot now being terminal and seed the best route with it
 					m_pReplacedNonTerminalNode = terminalPlotInfo->pNode;
 
 					CvPlot* pParentPlot = m_pReplacedNonTerminalNode->m_parent->m_plot;
-					int		iMovementRemaining = m_pReplacedNonTerminalNode->m_parent->m_iMovementRemaining;
-					int		iPathTurns = m_pReplacedNonTerminalNode->m_parent->m_iPathTurns;
+					int iMovementRemaining = m_pReplacedNonTerminalNode->m_parent->m_iMovementRemaining;
+					const int iPathTurns = m_pReplacedNonTerminalNode->m_parent->m_iPathTurns;
 
 					UnlinkNode(m_pReplacedNonTerminalNode);
 
 					int iNodeCost;
-					int	iEdgeCost = m_CostFunc( this,
-												pGroup,
-												pParentPlot->getX(),
-												pParentPlot->getY(),
-												pTo->getX(),
-												pTo->getY(),
-												iFlags,
-												iMovementRemaining,
-												iPathTurns,
-												iNodeCost,
-												true);
-					
+					const int iEdgeCost =
+					(
+						m_CostFunc(
+							this,
+							pGroup,
+							pParentPlot->getX(),
+							pParentPlot->getY(),
+							pTo->getX(),
+							pTo->getY(),
+							iFlags,
+							iMovementRemaining,
+							iPathTurns,
+							iNodeCost,
+							true
+						)
+					);
+
 					m_pBestTerminalNode = allocatePathNode();
 
 					m_pBestTerminalNode->m_iBestToEdgeCost = iEdgeCost;
@@ -1095,7 +1095,7 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 					//DeleteChildTree(m_pReplacedNonTerminalNode,true);
 					//m_pReplacedNonTerminalNode = NULL;
 #ifdef LIGHT_VALIDATION
-					if ( bValidate )
+					if (bValidate)
 					{
 						ValidatePathNode(m_pBestTerminalNode);
 					}
@@ -1110,8 +1110,8 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 
 				root->m_iPathSeq = m_iSeq;
 
-				//	Special-case pFrom == pTo
-				if ( pFrom == pTo )
+				// Special-case pFrom == pTo
+				if (pFrom == pTo)
 				{
 					m_pBestTerminalNode = root;
 
@@ -1122,11 +1122,11 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 				{
 					root->m_bProcessedAsTerminus = false;
 
-					if ( m_pBestTerminalNode == NULL || !m_pBestTerminalNode->m_bIsKnownRoute )
+					if (m_pBestTerminalNode == NULL || !m_pBestTerminalNode->m_bIsKnownRoute)
 					{
 						MEMORY_TRACK_EXEMPT();
 
-						priorityQueueEntry	entry;
+						priorityQueueEntry entry;
 
 						entry.node = root;
 						entry.iQueuedCost = 0;
@@ -1136,76 +1136,75 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 						root->m_bIsQueued = true;
 			#endif
 					}
-					else if ( m_pBestTerminalNode->m_iMovementRemaining != 0 )
+					else if (m_pBestTerminalNode->m_iMovementRemaining != 0)
 					{
 						int iBestCostTo = MAX_INT;
-
 #ifdef LIGHT_VALIDATION
-						if ( bValidate )
+						if (bValidate)
 						{
 							OutputDebugString("Validate initial best path...\n");
-							for(CvPathNode* node = m_pBestTerminalNode; node != NULL; node = node->m_parent)
+							for (CvPathNode* node = m_pBestTerminalNode; node != NULL; node = node->m_parent)
 							{
 								OutputDebugString(CvString::format("Validate %08lx (%d,%d)\n", node, node->m_plot->getX(), node->m_plot->getY()).c_str());
 								ValidatePathNode(node);
 							}
 						}
 #endif
-						//	Re-evaluate which adjacent plot to come at this plot from if the known node is not
-						//	turn ending
+						// Re-evaluate which adjacent plot to come at this plot from if the known node is not turn ending
 						for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 						{
 							CvPlot* pAdjacentPlot = plotDirection(pTo->getX(), pTo->getY(), (DirectionTypes)iI);
 							if (pAdjacentPlot != NULL)
 							{
-								CvPathGeneratorPlotInfo*	pAdjacentPlotInfo = m_plotInfo->getPlotInfo(pAdjacentPlot, false);
+								CvPathGeneratorPlotInfo* pAdjacentPlotInfo = m_plotInfo->getPlotInfo(pAdjacentPlot, false);
 
-								if ( pAdjacentPlotInfo != NULL &&
-									 pAdjacentPlotInfo->pNode != NULL &&
-									 !isDescendantOfReplacedNode(pAdjacentPlotInfo->pNode) &&
-									 pAdjacentPlotInfo->pNode != m_pBestTerminalNode->m_parent &&
-									 pAdjacentPlotInfo->pNode->m_bIsKnownRoute )
+								if (pAdjacentPlotInfo != NULL
+								&&  pAdjacentPlotInfo->pNode != NULL
+								&& !isDescendantOfReplacedNode(pAdjacentPlotInfo->pNode)
+								&&  pAdjacentPlotInfo->pNode != m_pBestTerminalNode->m_parent
+								&&  pAdjacentPlotInfo->pNode->m_bIsKnownRoute)
 								{
 									int iMovementRemaining = pAdjacentPlotInfo->pNode->m_iMovementRemaining;
-									int	iPathTurns = pAdjacentPlotInfo->pNode->m_iPathTurns;
+									const int iPathTurns = pAdjacentPlotInfo->pNode->m_iPathTurns;
 									int iNodeCost;
-									int	iEdgeCost = m_CostFunc( this,
-																pGroup,
-																pAdjacentPlot->getX(),
-																pAdjacentPlot->getY(),
-																pTo->getX(),
-																pTo->getY(),
-																iFlags,
-																iMovementRemaining,
-																iPathTurns,
-																iNodeCost,
-																true);
-
-									if ( pAdjacentPlotInfo->pNode->m_iCostTo + iEdgeCost < m_pBestTerminalNode->m_iCostTo )
+									const int iEdgeCost =
+									(
+										m_CostFunc(
+											this,
+											pGroup,
+											pAdjacentPlot->getX(),
+											pAdjacentPlot->getY(),
+											pTo->getX(),
+											pTo->getY(),
+											iFlags,
+											iMovementRemaining,
+											iPathTurns,
+											iNodeCost,
+											true
+										)
+									);
+									if (pAdjacentPlotInfo->pNode->m_iCostTo + iEdgeCost < m_pBestTerminalNode->m_iCostTo)
 									{
 										m_pBestTerminalNode->m_iCostTo = pAdjacentPlotInfo->pNode->m_iCostTo + iEdgeCost;
 										m_pBestTerminalNode->m_iMovementRemaining = iMovementRemaining;
 										m_pBestTerminalNode->m_iPathTurns = pAdjacentPlotInfo->pNode->m_iPathTurns + (pAdjacentPlotInfo->pNode->m_iMovementRemaining == 0 ? 1 : 0);
-
 #ifdef LIGHT_VALIDATION
 										if (bValidate)
 										{
 											OutputDebugString("Validate path to new better parent...\n");
-											for(CvPathNode* node = pAdjacentPlotInfo->pNode; node != NULL; node = node->m_parent)
+											for (CvPathNode* node = pAdjacentPlotInfo->pNode; node != NULL; node = node->m_parent)
 											{
 												OutputDebugString(CvString::format("Validate %08lx (%d,%d)\n", node, node->m_plot->getX(), node->m_plot->getY()).c_str());
 												ValidatePathNode(node);
 											}
 										}
 #endif
-
 										RelinkNode(m_pBestTerminalNode, pAdjacentPlotInfo->pNode);
-
 #ifdef LIGHT_VALIDATION
-										if ( bValidate )
+										if (bValidate)
 										{
 											OutputDebugString("Validate relinked best path...\n");
-											for(CvPathNode* node = m_pBestTerminalNode; node != NULL; node = node->m_parent)
+											for (CvPathNode* node = m_pBestTerminalNode; node != NULL; node = node->m_parent)
 											{
 												OutputDebugString(CvString::format("Validate %08lx (%d,%d)\n", node, node->m_plot->getX(), node->m_plot->getY()).c_str());
 												ValidatePathNode(node);
@@ -1219,25 +1218,24 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 					}
 				}
 
-				bool bTurnEndValidCheckNeeded = m_TurnEndValidCheckNeeded(pGroup, iFlags);
+				const bool bTurnEndValidCheckNeeded = m_TurnEndValidCheckNeeded(pGroup, iFlags);
 				int iIterations = 0;
 				int iMaxIterations = -1;
 
 				//GC.getGame().logOOSSpecial(58, pTo->getX(), pTo->getY(), iFlags);
 				//GC.getGame().logOOSSpecial(59, iGroupMembershipChecksum, m_iSeq);
-				if ( iOptimizationLimit == -1 )
+				if (iOptimizationLimit == -1)
 				{
-					//	Set a default for optimization processing dependent on the step distance
+					// Set a default for optimization processing dependent on the step distance
 					//	(accept less perfect paths as they get longer)
-					int iStepDistance = stepDistance(pFrom->getX(), pFrom->getY(), pTo->getX(), pTo->getY());
+					const int iStepDistance = stepDistance(pFrom->getX(), pFrom->getY(), pTo->getX(), pTo->getY());
 
-					if ( iStepDistance > 8 )
+					if (iStepDistance > 8)
 					{
 						iOptimizationLimit = std::max(0, MAX_DEFAULT_OPTIMIZATION_PERCENT - iStepDistance*OPTIMIZATION_PERCENT_LOSS_PER_DISTANCE);
 					}
 				}
 
-				//while(m_priorityQueue->size() > 0)
 				while(!m_priorityQueue.empty())
 				{
 					CvPathNode* node;
@@ -1245,11 +1243,11 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 					m_nodesProcessed++;
 					iIterations++;
 
-					if ( iMaxIterations >= 0 )
+					if (iMaxIterations >= 0)
 					{
-						if ( iIterations > iMaxIterations && m_pBestTerminalNode != NULL) 
+						if (iIterations > iMaxIterations && m_pBestTerminalNode != NULL) 
 						{
-							if ( TRACE_PATHING )
+							if (TRACE_PATHING)
 							{
 								OutputDebugString(CvString::format("Path optimization terminated after %d iterations (max %d based on optimization allowance percentage %d)\n", iIterations, iMaxIterations,iOptimizationLimit).c_str());
 								OutputDebugString(CvString::format("Best path length is %d\n", m_pBestTerminalNode->m_iPathTurns).c_str());
@@ -1257,16 +1255,16 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 							break;
 						}
 					}
-					else if ( iIterations > CEILING_ITERATIONS )
+					else if (iIterations > CEILING_ITERATIONS)
 					{
-						if ( TRACE_PATHING )
+						if (TRACE_PATHING)
 						{
 							OutputDebugString(CvString::format("Path optimization terminated after %d iterations (ceiling reached)\n", iIterations).c_str());
 						}
 						break;
 					}
 
-					//	Dequeue this node now we are dealing with it
+					// Dequeue this node now we are dealing with it
 					{
 						PROFILE("CvPathGenerator::generatePath.popNode");
 
@@ -1276,62 +1274,60 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 		#ifdef DYNAMIC_PATH_STRUCTURE_VALIDATION
 						node->m_bIsQueued = false;
 		#endif
-						if ( TRACE_PATHING )
+						if (TRACE_PATHING)
 						{
 							OutputDebugString(CvString::format("Dequeue (%d,%d): %d\n", node->m_plot->getX(), node->m_plot->getY(), node->m_iCostTo).c_str());
 						}
 
-						//if ( node->m_iCostTo != entry.iQueuedCost )
-						if ( node->m_iLowestDequeueCost < entry.iQueuedCost )
+						//if (node->m_iCostTo != entry.iQueuedCost)
+						if (node->m_iLowestDequeueCost < entry.iQueuedCost)
 						{
-							if ( TRACE_PATHING )
+							if (TRACE_PATHING)
 							{
 								OutputDebugString("    ...discarded since already superseded\n");
 							}
-
 							continue;
 						}
-
 						node->m_iLowestDequeueCost = node->m_iCostTo;
 						node->m_iRecalcThreshold = MAX_INT;
 					}
 
-					const CvPlot*				nodePlot = node->m_plot;
-					//CvPathGeneratorPlotInfo*	nodePlotInfo = m_plotInfo->getPlotInfo(nodePlot);
-					int							iPathTurns = node->m_iPathTurns + (node->m_iMovementRemaining == 0 ? 1 : 0);
+					const CvPlot* nodePlot = node->m_plot;
+					//CvPathGeneratorPlotInfo* nodePlotInfo = m_plotInfo->getPlotInfo(nodePlot);
+					const int iPathTurns = node->m_iPathTurns + (node->m_iMovementRemaining == 0 ? 1 : 0);
 
-					if(m_plotInfo->getPlotInfo(nodePlot)->pNode != node)
+					if (m_plotInfo->getPlotInfo(nodePlot)->pNode != node)
 					{
 						//	This queued node has already been superseded
 						continue;
 					}
 
-					if ( node->m_iPathTurns <= iMaxTurns )
+					if (node->m_iPathTurns <= iMaxTurns)
 					{
 						//PROFILE("CvPathGenerator::generatePath.processNode");
-
 #ifdef LIGHT_VALIDATION
-						if ( bValidate )
+						if (bValidate)
 						{
 							ValidatePathNode(node);
 						}
 #endif
-						if ( m_pBestTerminalNode != NULL )
+						if (m_pBestTerminalNode != NULL
+						&& node->m_iCostTo + node->m_iLowestPossibleCostFrom + m_iTerminalNodeCost >= m_pBestTerminalNode->m_iCostTo)
 						{
-							if ( node->m_iCostTo + node->m_iLowestPossibleCostFrom + m_iTerminalNodeCost >= m_pBestTerminalNode->m_iCostTo )
+							if (TRACE_PATHING)
 							{
-								if ( TRACE_PATHING )
-								{
-
-									OutputDebugString(CvString::format("Reject because costTo(%d)+minCostFrom(%d)+finalNodeCost(%d) > existingPathCost(%d)\n",
-													  node->m_iCostTo,
-													  node->m_iLowestPossibleCostFrom,
-													  m_iTerminalNodeCost,
-													  m_pBestTerminalNode->m_iCostTo).c_str());
-								}
-								//	This branch cannot lead to a better solution than the one we already have
-								continue;
+								OutputDebugString(
+									CvString::format(
+										"Reject because costTo(%d)+minCostFrom(%d)+finalNodeCost(%d) > existingPathCost(%d)\n",
+										node->m_iCostTo,
+										node->m_iLowestPossibleCostFrom,
+										m_iTerminalNodeCost,
+										m_pBestTerminalNode->m_iCostTo
+									).c_str()
+								);
 							}
+							//	This branch cannot lead to a better solution than the one we already have
+							continue;
 						}
 
 						for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
@@ -1342,10 +1338,10 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 							CvPlot* pAdjacentPlot = plotDirection(nodePlot->getX(), nodePlot->getY(), (DirectionTypes)iI);
 							if (pAdjacentPlot != NULL && pAdjacentPlot != pFrom)
 							{
-								CvPathGeneratorPlotInfo*	pAdjacentPlotInfo = m_plotInfo->getPlotInfo(pAdjacentPlot);
-								bool isTerminus = (pAdjacentPlot == pTo);
+								CvPathGeneratorPlotInfo* pAdjacentPlotInfo = m_plotInfo->getPlotInfo(pAdjacentPlot);
+								const bool isTerminus = pAdjacentPlot == pTo;
 
-								if ( isTerminus || !pAdjacentPlotInfo->bKnownInvalidNode )
+								if (isTerminus || !pAdjacentPlotInfo->bKnownInvalidNode)
 								{
 									PROFILE("CvPathGenerator::ProcessNode.NotKnownInvalid");
 
@@ -1355,38 +1351,46 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 
 									m_nodesCosted++;
 
-									FAssert( pAdjacentPlotInfo->pNode == NULL || pAdjacentPlotInfo->pNode->m_plot == pAdjacentPlot );
+									FAssert(pAdjacentPlotInfo->pNode == NULL || pAdjacentPlotInfo->pNode->m_plot == pAdjacentPlot);
 
-									if ( pAdjacentPlotInfo->pNode != NULL && pAdjacentPlotInfo->pNode->m_iCostTo <= node->m_iCostTo )
+									if (pAdjacentPlotInfo->pNode != NULL && pAdjacentPlotInfo->pNode->m_iCostTo <= node->m_iCostTo)
 									{
-										if ( TRACE_PATHING )
+										if (TRACE_PATHING)
 										{
 											OutputDebugString(CvString::format("\tReject (%d,%d) - already as cheap as this parent\n", pAdjacentPlot->getX(), pAdjacentPlot->getY()).c_str());
 										}
 										continue;
 									}
 
-									if ( pAdjacentPlotInfo->pNode != NULL &&
-										 (pAdjacentPlotInfo->pNode->m_iEdgesIncluded & (1<<iI)) != 0 &&
-										 !isDescendantOfReplacedNode(pAdjacentPlotInfo->pNode) )
+									if (pAdjacentPlotInfo->pNode != NULL
+									&& (pAdjacentPlotInfo->pNode->m_iEdgesIncluded & (1<<iI)) != 0
+									&& !isDescendantOfReplacedNode(pAdjacentPlotInfo->pNode))
 									{
 										//	If the adjacent node already has a tree node associated with it and this edge
-										//	has already been taken into account then either:
-										//	1) This edge is the one that is to the lowest cost route to the adjacent node, in which case use it
-										//	2) This edge was not the lowest cost route to the adjacent route in which case we don't need to
-										//	   process it
-										if ( pAdjacentPlotInfo->pNode->m_parent == node )
+										// has already been taken into account then either:
+										//		1) This edge is the one that is to the lowest cost route to the adjacent node, in which case use it
+										//		2) This edge was not the lowest cost route to the adjacent route in which case we don't need to process it
+										if (pAdjacentPlotInfo->pNode->m_parent == node)
 										{
 											bValid = true;
 											bUseExistingNode = true;
 										}
 										else
 										{
-											if ( TRACE_PATHING )
+											if (TRACE_PATHING)
 											{
-												if ( pAdjacentPlotInfo->pNode->m_parent != NULL )
+												if (pAdjacentPlotInfo->pNode->m_parent != NULL)
 												{
-													OutputDebugString(CvString::format("\tReject (%d,%d) - lower cost route (%d) known from (%d,%d) [%d]\n", pAdjacentPlot->getX(), pAdjacentPlot->getY(), pAdjacentPlotInfo->pNode->m_iCostTo, pAdjacentPlotInfo->pNode->m_parent->m_plot->getX(), pAdjacentPlotInfo->pNode->m_parent->m_plot->getY(), pAdjacentPlotInfo->pNode->m_parent->m_iCostTo).c_str());
+													OutputDebugString(
+														CvString::format(
+															"\tReject (%d,%d) - lower cost route (%d) known from (%d,%d) [%d]\n",
+															pAdjacentPlot->getX(), pAdjacentPlot->getY(),
+															pAdjacentPlotInfo->pNode->m_iCostTo,
+															pAdjacentPlotInfo->pNode->m_parent->m_plot->getX(),
+															pAdjacentPlotInfo->pNode->m_parent->m_plot->getY(),
+															pAdjacentPlotInfo->pNode->m_parent->m_iCostTo
+														).c_str()
+													);
 												}
 												else
 												{
@@ -1396,64 +1400,68 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 											continue;
 										}
 									}
+									else if ((pAdjacentPlotInfo->m_iEdgesValidated & (1<<iI)) != 0)
+									{
+										bValid = true;
+									}
 									else
 									{
-										if ( (pAdjacentPlotInfo->m_iEdgesValidated & (1<<iI)) != 0 )
+										bValid =
+										(
+											m_ValidFunc(
+												pGroup,
+												nodePlot->getX(),
+												nodePlot->getY(),
+												pAdjacentPlot->getX(),
+												pAdjacentPlot->getY(),
+												iFlags,
+												isTerminus,
+												false,
+												iPathTurns,
+												pAdjacentPlotInfo->bKnownInvalidNode
+											)
+										);
+										if (TRACE_PATHING && !bValid)
 										{
-											bValid = true;
-										}
-										else
-										{
-											bValid = m_ValidFunc(pGroup,
-																 nodePlot->getX(),
-																 nodePlot->getY(),
-																 pAdjacentPlot->getX(),
-																 pAdjacentPlot->getY(),
-																 iFlags,
-																 isTerminus,
-																 false,
-																 iPathTurns,
-																 pAdjacentPlotInfo->bKnownInvalidNode);
-
-											if ( TRACE_PATHING )
-											{
-												if ( !bValid )
-												{
-													OutputDebugString(CvString::format("\tReject (%d,%d) - invalid node\n", pAdjacentPlot->getX(), pAdjacentPlot->getY()).c_str());
-												}
-											}
+											OutputDebugString(CvString::format("\tReject (%d,%d) - invalid node\n", pAdjacentPlot->getX(), pAdjacentPlot->getY()).c_str());
 										}
 									}
 
-									if ( bValid )
+									if (bValid)
 									{
 										CvPathNode* newNode;
 
 										pAdjacentPlotInfo->m_iEdgesValidated |= (1<<iI);
 
-										if ( bUseExistingNode )
+										if (bUseExistingNode)
 										{
 											PROFILE("CvPathGenerator::ProcessNode.UseExisting");
 
 											newNode = pAdjacentPlotInfo->pNode;
 
-											if ( m_pBestTerminalNode != NULL )
+											if (m_pBestTerminalNode != NULL)
 											{
-												int iMinFinalCost = newNode->m_iCostTo + (isTerminus ? 0 : m_iTerminalNodeCost);
+												const int iMinFinalCost = newNode->m_iCostTo + (isTerminus ? 0 : m_iTerminalNodeCost);
 
-												if ( iMinFinalCost > m_pBestTerminalNode->m_iCostTo )
+												if (iMinFinalCost > m_pBestTerminalNode->m_iCostTo)
 												{
-													int iThreshold = iMinFinalCost - m_pBestTerminalNode->m_iCostTo;
+													const int iThreshold = iMinFinalCost - m_pBestTerminalNode->m_iCostTo;
 
-													if ( node->m_iRecalcThreshold > iThreshold )
+													if (node->m_iRecalcThreshold > iThreshold)
 													{
 														node->m_iRecalcThreshold = iThreshold;
 													}
 
 													//	This branch cannot lead to a better solution than the one we already have
-													if ( TRACE_PATHING )
+													if (TRACE_PATHING)
 													{
-														OutputDebugString(CvString::format("\tReject (%d,%d): min final (existing node) cost %d > %d\n", pAdjacentPlot->getX(), pAdjacentPlot->getY(), iMinFinalCost, m_pBestTerminalNode->m_iCostTo).c_str());
+														OutputDebugString(
+															CvString::format(
+																"\tReject (%d,%d): min final (existing node) cost %d > %d\n",
+																pAdjacentPlot->getX(), pAdjacentPlot->getY(),
+																iMinFinalCost, m_pBestTerminalNode->m_iCostTo
+															).c_str()
+														);
 													}
 													continue;
 												}
@@ -1466,57 +1474,73 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 											PROFILE("CvPathGenerator::ProcessNode.MeasureCost");
 
 											int iNodeCost;
-											int	iEdgeCost = m_CostFunc( this,
-																		pGroup,
-																		nodePlot->getX(),
-																		nodePlot->getY(),
-																		pAdjacentPlot->getX(),
-																		pAdjacentPlot->getY(),
-																		iFlags,
-																		iMovementRemaining,
-																		iPathTurns,
-																		iNodeCost,
-																		(pAdjacentPlot == pTo));
-
-											if ( bTurnEndValidCheckNeeded &&
-												 iMovementRemaining == 0 &&
-		 										 !m_ValidFunc(pGroup,
-															 nodePlot->getX(),
-															 nodePlot->getY(),
-															 pAdjacentPlot->getX(),
-															 pAdjacentPlot->getY(),
-															 iFlags,
-															 isTerminus,
-															 true,
-															 iPathTurns,
-															 pAdjacentPlotInfo->bKnownInvalidNode))
+											const int iEdgeCost =
+											(
+												m_CostFunc(
+													this,
+													pGroup,
+													nodePlot->getX(),
+													nodePlot->getY(),
+													pAdjacentPlot->getX(),
+													pAdjacentPlot->getY(),
+													iFlags,
+													iMovementRemaining,
+													iPathTurns,
+													iNodeCost,
+													pAdjacentPlot == pTo
+												)
+											);
+											if (bTurnEndValidCheckNeeded && iMovementRemaining == 0
+											&&
+												!m_ValidFunc(
+													pGroup,
+													nodePlot->getX(),
+													nodePlot->getY(),
+													pAdjacentPlot->getX(),
+													pAdjacentPlot->getY(),
+													iFlags,
+													isTerminus,
+													true,
+													iPathTurns,
+													pAdjacentPlotInfo->bKnownInvalidNode
+												)
+											)
 											{
-												//	Re-evaluation of edge, knowing we would end a turn there shows it
-												//	to be invalid
-												if ( TRACE_PATHING )
+												// Re-evaluation of edge, knowing we would end a turn there shows it to be invalid
+												if (TRACE_PATHING)
 												{
 													OutputDebugString(CvString::format("\tReject (%d,%d): invalid as turn end\n", pAdjacentPlot->getX(), pAdjacentPlot->getY()).c_str());
 												}
 												continue;
 											}
 
-											if ( m_pBestTerminalNode != NULL )
+											if (m_pBestTerminalNode != NULL)
 											{
-												int iMinFinalCost = node->m_iCostTo + std::max(iEdgeCost, node->m_iLowestPossibleCostFrom) + (isTerminus ? 0 : m_iTerminalNodeCost);
-
-												if ( iMinFinalCost > m_pBestTerminalNode->m_iCostTo )
+												const int iMinFinalCost =
+												(
+													node->m_iCostTo
+													+ std::max(iEdgeCost, node->m_iLowestPossibleCostFrom)
+													+ (isTerminus ? 0 : m_iTerminalNodeCost)
+												);
+												if (iMinFinalCost > m_pBestTerminalNode->m_iCostTo)
 												{
-													int iThreshold = iMinFinalCost - m_pBestTerminalNode->m_iCostTo;
+													const int iThreshold = iMinFinalCost - m_pBestTerminalNode->m_iCostTo;
 
-													if ( node->m_iRecalcThreshold > iThreshold )
+													if (node->m_iRecalcThreshold > iThreshold)
 													{
 														node->m_iRecalcThreshold = iThreshold;
 													}
 
 													//	This branch cannot lead to a better solution than the one we already have
-													if ( TRACE_PATHING )
+													if (TRACE_PATHING)
 													{
-														OutputDebugString(CvString::format("\tReject (%d,%d): min final cost %d > %d\n", pAdjacentPlot->getX(), pAdjacentPlot->getY(), iMinFinalCost, m_pBestTerminalNode->m_iCostTo).c_str());
+														OutputDebugString(
+															CvString::format(
+																"\tReject (%d,%d): min final cost %d > %d\n",
+																pAdjacentPlot->getX(), pAdjacentPlot->getY(),
+																iMinFinalCost, m_pBestTerminalNode->m_iCostTo
+															).c_str()
+														);
 													}
 													continue;
 												}
@@ -1524,9 +1548,9 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 
 											VALIDATE_TREE(root, NULL, NULL);
 
-											if ( pAdjacentPlotInfo->pNode == NULL )
+											if (pAdjacentPlotInfo->pNode == NULL)
 											{
-												//	Not yet visited - queue a new node for it
+												// Not yet visited - queue a new node for it
 												newNode = allocatePathNode();
 
 												VALIDATE_TREE(root, newNode, NULL);
@@ -1535,51 +1559,50 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 
 												VALIDATE_TREE(root, NULL, newNode);
 											}
-											else
+											else // Visited previously
 											{
 												newNode = pAdjacentPlotInfo->pNode;
 
-												//	Visited previously - is this route here superior to the one we already
-												//	have
-												if ( newNode->m_iCostTo > node->m_iCostTo + iEdgeCost )
+												// Is this route superior to the one we already have
+												if (newNode->m_iCostTo > node->m_iCostTo + iEdgeCost)
 												{
-													//	For now just trim the old tree rooted here and recalculate it,
-													//	but (TODO) adjust the existing tree nodes if end turn boundaries
-													//	align
+													// For now just trim the old tree rooted here and recalculate it,
+													// but (TODO) adjust the existing tree nodes if end turn boundaries align
 													newNode = pAdjacentPlotInfo->pNode;
 												}
-												else
+												// Equal cost is considered in precisely one case -
+												// retracing the (best) steps taken by a previous path
+												else if (!isBetterPath(newNode, node, iEdgeCost, iMovementRemaining))
 												{
-													//	Equal cost is considered in precisely one case - retracing the (best) steps
-													//	taken by a previous path
-													if ( !isBetterPath(newNode, node, iEdgeCost, iMovementRemaining) )
+													const int iThreshold = node->m_iCostTo + iEdgeCost - newNode->m_iCostTo;
+
+													if (node->m_iRecalcThreshold > iThreshold)
 													{
-														int iThreshold = node->m_iCostTo + iEdgeCost - newNode->m_iCostTo;
-
-														if ( node->m_iRecalcThreshold > iThreshold )
-														{
-															node->m_iRecalcThreshold = iThreshold;
-														}
-
-														if ( TRACE_PATHING )
-														{
-
-															OutputDebugString(CvString::format("\tReject (%d,%d): %d > %d\n", pAdjacentPlot->getX(), pAdjacentPlot->getY(), node->m_iCostTo + iEdgeCost, newNode->m_iCostTo).c_str());
-														}
-														continue;
+														node->m_iRecalcThreshold = iThreshold;
 													}
+
+													if (TRACE_PATHING)
+													{
+														OutputDebugString(
+															CvString::format(
+																"\tReject (%d,%d): %d > %d\n",
+																pAdjacentPlot->getX(), pAdjacentPlot->getY(),
+																node->m_iCostTo + iEdgeCost, newNode->m_iCostTo
+															).c_str()
+														);
+													}
+													continue;
 												}
 
 												FAssert(!newNode->m_bIsKnownRoute || node->m_iCostTo + iEdgeCost == newNode->m_iCostTo);
 												RelinkNode(newNode, node);
 
-												if ( (newNode->m_iMovementRemaining != iMovementRemaining) ||
-													 isDescendantOfReplacedNode(newNode))
+												if (newNode->m_iMovementRemaining != iMovementRemaining
+												|| isDescendantOfReplacedNode(newNode))
 												{
 													PROFILE("CvPathGenerator::ProcessNode.DeleteChildTree");
 
-													//	Need to recalculate the descendent tree since turn ends won't occur
-													//	in the same places
+													// Need to recalculate the descendent tree since turn ends won't occur in the same places
 													DeleteChildTree(newNode, true);
 
 													newNode->m_iPathSeq = -1;	//	Force reprocess
@@ -1599,12 +1622,12 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 											newNode->m_iMovementRemaining = iMovementRemaining;
 											newNode->m_plot = pAdjacentPlot;
 											newNode->m_iBestToEdgeCost = iEdgeCost;
-											if ( TRACE_PATHING )
+											if (TRACE_PATHING)
 											{
 												OutputDebugString(CvString::format("Adjust costTo (%d,%d): %d\n", pAdjacentPlot->getX(), pAdjacentPlot->getY(), newNode->m_iCostTo).c_str());
 											}
 #ifdef LIGHT_VALIDATION
-											if ( bValidate )
+											if (bValidate)
 											{
 												ValidatePathNode(newNode);
 											}
@@ -1612,7 +1635,7 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 
 											ValidatePlotInfo(pAdjacentPlotInfo);
 
-											if ( isTerminus )
+											if (isTerminus)
 											{
 												m_iTerminalNodeCost = iNodeCost;
 											}
@@ -1623,55 +1646,68 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 										newNode->m_iEdgesIncluded |= (1<<iI);
 										newNode->m_iCostFrom = m_HeuristicFunc(pGroup, pAdjacentPlot->getX(), pAdjacentPlot->getY(), pTo->getX(), pTo->getY(), newNode->m_iLowestPossibleCostFrom);
 
-										//	If this reaches the destination then set current least cost info
-										if ( isTerminus )
+										// If this reaches the destination then set current least cost info
+										if (isTerminus)
 										{
 											newNode->m_bProcessedAsTerminus = true;
 
-											if ( iOptimizationLimit != -1 && iMaxIterations == -1 )
+											if (iOptimizationLimit != -1 && iMaxIterations == -1)
 											{
-												if ( iOptimizationLimit == 0 )
+												if (iOptimizationLimit == 0)
 												{
 													iMaxIterations = iIterations;
 												}
 												else
 												{
-													iMaxIterations = std::max(iIterations + MIN_OPTIMIZATION_ITERATIONS, ((100+iOptimizationLimit)*iIterations)/100);
+													iMaxIterations = std::max(iIterations + MIN_OPTIMIZATION_ITERATIONS, (100+iOptimizationLimit)*iIterations/100);
 												}
 
-												if ( TRACE_PATHING )
+												if (TRACE_PATHING)
 												{
-													OutputDebugString(CvString::format("Setting iteration limit of %d after finding terminus on iteration %d (optimization allowance percent %d)\n", iMaxIterations, iIterations, iOptimizationLimit).c_str());
+													OutputDebugString(CvString::format(
+														"Setting iteration limit of %d after finding terminus on iteration %d (optimization allowance percent %d)\n",
+														iMaxIterations, iIterations, iOptimizationLimit
+													).c_str());
 												}
 											}
 
-											if ( m_pBestTerminalNode == NULL || isBetterPath(m_pBestTerminalNode, node, newNode->m_iCostTo - node->m_iCostTo, iMovementRemaining) )
+											if (m_pBestTerminalNode == NULL || isBetterPath(m_pBestTerminalNode, node, newNode->m_iCostTo - node->m_iCostTo, iMovementRemaining))
 											{
-												if ( TRACE_PATHING )
+												if (TRACE_PATHING)
 												{
-
-													OutputDebugString(CvString::format("New best cost to terminus @(%d,%d): %d\n", pAdjacentPlot->getX(), pAdjacentPlot->getY(), newNode->m_iCostTo).c_str());
+													OutputDebugString(
+														CvString::format(
+															"New best cost to terminus @(%d,%d): %d\n",
+															pAdjacentPlot->getX(), pAdjacentPlot->getY(),
+															newNode->m_iCostTo
+														).c_str()
+													);
 												}
 												m_pBestTerminalNode = newNode;
 												FAssert(m_pReplacedNonTerminalNode == NULL || m_pReplacedNonTerminalNode->m_plot == m_pBestTerminalNode->m_plot);
 
 												//	TODO - maybe back-propagate actual costs to neighbour heuristic costs at this point
 											}
-											else if ( TRACE_PATHING )
+											else if (TRACE_PATHING)
 											{
-												OutputDebugString(CvString::format("New route to terminus @(%d,%d): %d, greater than existing best cost %d\n", pAdjacentPlot->getX(), pAdjacentPlot->getY(), newNode->m_iCostTo, m_pBestTerminalNode->m_iCostTo).c_str());
+												OutputDebugString(
+													CvString::format(
+														"New route to terminus @(%d,%d): %d, greater than existing best cost %d\n",
+														pAdjacentPlot->getX(), pAdjacentPlot->getY(),
+														newNode->m_iCostTo, m_pBestTerminalNode->m_iCostTo
+													).c_str()
+												);
 											}
 										}
-										//	Queue up the node unless it's the terminus
-										else
+										else //	Queue up the node unless it's the terminus
 										{
 											newNode->m_bProcessedAsTerminus = false;
 
-											if ( newNode->m_iPathSeq != m_iSeq )
+											if (newNode->m_iPathSeq != m_iSeq)
 											{
 												PROFILE("CvPathGenerator::generatePath.insertNode");
 
-												if ( TRACE_PATHING )
+												if (TRACE_PATHING)
 												{
 													OutputDebugString(CvString::format("\tQueue (%d,%d): %d\n", pAdjacentPlot->getX(), pAdjacentPlot->getY(), newNode->m_iCostTo).c_str());
 												}
@@ -1694,18 +1730,14 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 										}
 									}
 								}
-								else
+								else if (TRACE_PATHING)
 								{
-									if ( TRACE_PATHING )
-									{
-										OutputDebugString(CvString::format("\tReject (%d,%d): previously found to be invalid\n", pAdjacentPlot->getX(), pAdjacentPlot->getY()).c_str());
-									}
+									OutputDebugString(CvString::format("\tReject (%d,%d): previously found to be invalid\n", pAdjacentPlot->getX(), pAdjacentPlot->getY()).c_str());
 								}
 							}
 						}
 					}
 				}
-
 				//GC.getGame().logOOSSpecial(60, m_pBestTerminalNode->m_plot->getX(), m_pBestTerminalNode->m_plot->getY());
 				VALIDATE_TREE(root, m_pReplacedNonTerminalNode, m_pBestTerminalNode);
 			}
@@ -1722,35 +1754,35 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 			//GC.getGame().logOOSSpecial(62, pTo->getX(), pTo->getY(), iMaxTurns);
 			//	Have to check max turns here since even if we know a route it might be too far if it is known due to
 			//	caching of previous paths rather than freshly calculated
-			if ( m_pBestTerminalNode != NULL && m_pBestTerminalNode->m_iPathTurns <= iMaxTurns )
+			if (m_pBestTerminalNode != NULL && m_pBestTerminalNode->m_iPathTurns <= iMaxTurns)
 			{
 				PROFILE("CvPathGenerator::generatePath.finalizePath");
 
-				//	Relink the optimal path so that the best branch is the first child at each step
-				CvPathNode*	node;
-				CvPathNode*	descendantNode = NULL;
+				// Relink the optimal path so that the best branch is the first child at each step
+				CvPathNode* node;
+				CvPathNode* descendantNode = NULL;
 
-				FAssert( m_pBestTerminalNode->m_bProcessedAsTerminus );
+				FAssert(m_pBestTerminalNode->m_bProcessedAsTerminus);
 
 #ifdef LIGHT_VALIDATION
-				for(node = m_pBestTerminalNode; node != NULL; node = node->m_parent)
+				for (node = m_pBestTerminalNode; node != NULL; node = node->m_parent)
 				{
-					if ( bValidate )
+					if (bValidate)
 					{
 						OutputDebugString(CvString::format("Validate %08lx (%d,%d)\n", node, node->m_plot->getX(), node->m_plot->getY()).c_str());
 						ValidatePathNode(node);
 					}
 				}
 #endif
-				for(node = m_pBestTerminalNode; node != NULL; node = node->m_parent)
+				for (node = m_pBestTerminalNode; node != NULL; node = node->m_parent)
 				{
 #ifdef LIGHT_VALIDATION
-					if ( bValidate )
+					if (bValidate)
 					{
 						ValidatePathNode(node);
 					}
 #endif
-					if ( descendantNode != NULL && descendantNode != node->m_firstChild )
+					if (descendantNode != NULL && descendantNode != node->m_firstChild)
 					{
 						FAssert(descendantNode->m_prevSibling != NULL);
 
@@ -1762,13 +1794,12 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 					descendantNode = node;
 					//GC.getGame().logOOSSpecial(63, node->m_plot->getX(), node->m_plot->getY(), node->m_iPathTurns);
 #ifdef LIGHT_VALIDATION
-					if ( bValidate )
+					if (bValidate)
 					{
 						ValidatePathNode(node);
 					}
 #endif
 				}
-
 				FAssert(descendantNode != NULL);
 				FAssert(descendantNode == root);
 
@@ -1784,7 +1815,6 @@ bool	CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 			}
 		}
 	}
-
 	PROFILE_END_CONDITIONAL(bResult);
 	//GC.getGame().logOOSSpecial(65, (int)bResult);
 

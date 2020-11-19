@@ -1412,7 +1412,6 @@
 	<ElementType name="iAnarchyPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iEventChancePerTurn" content="textOnly" dt:type="int"/>
 	<ElementType name="iBarbPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iInflationOffset" content="textOnly" dt:type="int"/>
 	<ElementType name="iOccupationTurnsPopulationPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="GameSpeedInfo" content="eltOnly">
 		<element type="Type"/>
@@ -1442,8 +1441,6 @@
 		<element type="iGoldenAgePercent" minOccurs="0"/>
 		<element type="iHurryPercent" minOccurs="0"/>
 		<element type="iHurryConscriptAngerPercent" minOccurs="0"/>
-		<element type="iInflationPercent" minOccurs="0"/>
-		<element type="iInflationOffset" minOccurs="0"/>
 		<element type="iOccupationTurnsPopulationPercent" minOccurs="0"/>
 		<element type="iVictoryDelayPercent" minOccurs="0"/>
 		<element type="iTraitGainPercent" minOccurs="0"/>

@@ -85,7 +85,7 @@ class DynamicCivNames:
     if iPrevPlayer < 0:
       iPrevPlayer = gc.getBARBARIAN_PLAYER()
 
-    if iPrevPlayer >= 0 and iPrevPlayer < gc.getBARBARIAN_PLAYER():
+    if iPrevPlayer >= 0 and iPrevPlayer < gc.getMAX_PC_PLAYERS():
       iPlayer = iPrevPlayer
       pPlayer = gc.getPlayer(iPlayer)
       
@@ -125,14 +125,14 @@ class DynamicCivNames:
     owner, playerType, city, bConquest, bTrade = argsList
     owner = gc.getPlayer(city.getOwner())
     
-    if owner.isAlive() and not owner.isBarbarian() and owner.getNumCities() < 5 and owner.getNumMilitaryUnits() > 0:
+    if owner.isAlive() and not owner.isNPC() and owner.getNumCities() < 5 and owner.getNumMilitaryUnits() > 0:
         self.setNewNameByCivics(owner.getID())
   
   def onCityBuilt(self, argsList):
     city = argsList[0]
     owner = gc.getPlayer(city.getOwner())
 
-    if owner.isAlive() and not owner.isBarbarian() and owner.getNumCities() < 5 and owner.getNumMilitaryUnits() > 0:
+    if owner.isAlive() and not owner.isNPC() and owner.getNumCities() < 5 and owner.getNumMilitaryUnits() > 0:
         self.setNewNameByCivics(owner.getID())
   
   def onVassalState(self, argsList):

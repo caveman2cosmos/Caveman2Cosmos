@@ -4,7 +4,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_MAMMOTH_RIDER</Type>
 			<UnitType>UNIT_NEANDERTHAL_MAMMOTH_RIDER</UnitType>
-			<PlayerType>41</PlayerType>
+			<PlayerType>49</PlayerType>
 			<iGlobalTurns>800</iGlobalTurns>
 			<iMaxAreaTotalDensity>1</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>8</iMaxAreaUnitDensity>

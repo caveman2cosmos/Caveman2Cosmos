@@ -1279,13 +1279,11 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 // BUG - All Units Actions - start
 					if (((iData2 == MISSION_FORTIFY) || (iData2 == MISSION_SLEEP) || /*(iData2 == MISSION_ESTABLISH) || (iData2 == MISSION_ESCAPE) ||*/ (iData2 == MISSION_BUILDUP) || (iData2 == MISSION_AUTO_BUILDUP))&& bAlt)
 					{
-						CvPlayerAI& kPlayer = GET_PLAYER(pHeadSelectedUnit->getOwner());
-						int iLoop;
 						pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
 						pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
 						UnitTypes eUnit = pSelectedUnit->getUnitType();
 
-						for(CvSelectionGroup* pLoopSelectionGroup = kPlayer.firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = kPlayer.nextSelectionGroup(&iLoop))
+						foreach_(const CvSelectionGroup* pLoopSelectionGroup, GET_PLAYER(pHeadSelectedUnit->getOwner()).groups())
 						{
 							if (pLoopSelectionGroup->allMatch(eUnit))
 								CvMessageControl::getInstance().sendPushMission(pLoopSelectionGroup->getHeadUnit()->getID(), ((MissionTypes)iData2), iData3, iData4, iFlags, bShift);
@@ -1654,15 +1652,9 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 	case CONTROL_INFO:
 	case CONTROL_DETAILS:
 	case CONTROL_SAVE_NORMAL:
+	case CONTROL_ESPIONAGE_SCREEN:
 		return true;
 		break;
-	case CONTROL_ESPIONAGE_SCREEN:
-		if (!isOption(GAMEOPTION_NO_ESPIONAGE))
-		{
-			return true;
-		}
-		break;
-
 	case CONTROL_NEXTCITY:
 	case CONTROL_PREVCITY:
 		if (!gDLL->getInterfaceIFace()->isSpaceshipScreenUp())
@@ -1690,21 +1682,15 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 		break;
 
 	case CONTROL_RETIRE:
-		if ((getGameState() == GAMESTATE_ON) || isGameMultiPlayer())
+		if ((getGameState() == GAMESTATE_ON || isGameMultiPlayer()) && GET_PLAYER(getActivePlayer()).isAlive())
 		{
-			if (GET_PLAYER(getActivePlayer()).isAlive())
+			if (!isPbem() && !isHotSeat())
 			{
-				if (isPbem() || isHotSeat())
-				{
-					if (!GET_PLAYER(getActivePlayer()).isEndTurn())
-					{
-						return true;
-					}
-				}
-				else
-				{
-					return true;
-				}
+				return true;
+			}
+			if (!GET_PLAYER(getActivePlayer()).isEndTurn())
+			{
+				return true;
 			}
 		}
 		break;
@@ -2011,17 +1997,14 @@ void CvGame::doControl(ControlTypes eControl)
 				gDLL->getInterfaceIFace()->setDirty(Soundtrack_DIRTY_BIT, true);
 			}
 		}
+		else if (isNetworkMultiPlayer())
+		{
+			gDLL->sendMPRetire();
+			gDLL->getInterfaceIFace()->exitingToMainMenu();
+		}
 		else
 		{
-			if (isNetworkMultiPlayer())
-			{
-				gDLL->sendMPRetire();
-				gDLL->getInterfaceIFace()->exitingToMainMenu();
-			}
-			else
-			{
-				gDLL->handleRetirement(getActivePlayer());
-			}
+			gDLL->handleRetirement(getActivePlayer());
 		}
 		break;
 
@@ -2370,13 +2353,13 @@ void CvGame::startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>&
 			{
 				szBuffer = gDLL->getText("TXT_KEY_HURRY_PRODUCTION");
 
-				int iHurryGold = pCity->hurryGold((HurryTypes)iI);
+				const int64_t iHurryGold = pCity->getHurryGold((HurryTypes)iI);
 				if (iHurryGold > 0)
 				{
 					szBuffer += gDLL->getText("TXT_KEY_HURRY_PRODUCTION_GOLD", iHurryGold);
 				}
 
-				int iHurryPopulation = pCity->hurryPopulation((HurryTypes)iI);
+				const int iHurryPopulation = pCity->hurryPopulation((HurryTypes)iI);
 				if (iHurryPopulation > 0)
 				{
 					szBuffer += gDLL->getText("TXT_KEY_HURRY_PRODUCTION_POP", iHurryPopulation);

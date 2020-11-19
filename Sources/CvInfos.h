@@ -451,18 +451,7 @@ public:
 
 	bool readPass3();
 
-	void setPrereqOrTech(int i, int iTech);
-	void setPrereqAndTech(int i, int iTech);
-	void setGridX(int i);
-
-	void setOriginalPrereqOrTech(int i, int iTech);
-	void setOriginalPrereqAndTech(int i, int iTech);
-	int getOriginalPrereqOrTechs(int i) const;
-	int getOriginalPrereqAndTechs(int i) const;
-	int getUnitStrengthChange(int iUnit, bool bForLoad = false) const;
-	//TB Tech Tags
 	bool isGlobal() const;
-	//TB Tech Tags end
 
 	// Dale - AB: Bombing START
 	bool getDCMAirBombTech1() const;
@@ -589,11 +578,6 @@ protected:
 	int m_iCorporationMaintenanceModifier;
 	int m_iPrereqGameOption;
 	int* m_piFreeSpecialistCount;
-
-	int* m_piOriginalPrereqOrTechs;
-	int* m_piOriginalPrereqAndTechs;
-
-	int* m_piUnitStrengthChange;
 
 	std::vector<PrereqBuilding> m_aPrereqBuilding;
 	std::vector<PrereqBuilding> m_aPrereqOrBuilding;
@@ -1875,7 +1859,6 @@ public:
 	bool isFlatMovementCost() const; // Exposed to Python
 	bool isIgnoreTerrainCost() const; // Exposed to Python
 	bool isNukeImmune() const; // Exposed to Python
-	bool isPrereqBonuses() const; // Exposed to Python
 	bool isMechUnit() const; // Exposed to Python
 	bool isRenderBelowWater() const; // Exposed to Python
 	bool isRenderAlways() const; // Exposed to Python
@@ -2523,7 +2506,6 @@ protected:
 	bool m_bFlatMovementCost;
 	bool m_bIgnoreTerrainCost;
 	bool m_bNukeImmune;
-	bool m_bPrereqBonuses;
 	bool m_bMechanized;
 	bool m_bRenderBelowWater;
 	bool m_bRenderAlways;
@@ -3957,8 +3939,6 @@ public:
 	int getGoldenAgePercent() const; // Exposed to Python
 	int getHurryPercent() const; // Exposed to Python
 	int getHurryConscriptAngerPercent() const; // Exposed to Python
-	int getInflationOffset() const; // Exposed to Python
-	int getInflationPercent() const; // Exposed to Python
 	int getOccupationTimePopulationPercent() const;
 	int getVictoryDelayPercent() const; // Exposed to Python
 	int getNumTurnIncrements() const; // Exposed to Python
@@ -4003,8 +3983,6 @@ protected:
 	int m_iGoldenAgePercent;
 	int m_iHurryPercent;
 	int m_iHurryConscriptAngerPercent;
-	int m_iInflationOffset;
-	int m_iInflationPercent;
 	int m_iOccupationTimePopulationPercent;
 	int m_iVictoryDelayPercent;
 	int m_iNumTurnIncrements;

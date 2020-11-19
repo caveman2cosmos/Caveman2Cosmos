@@ -17,10 +17,6 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 	x
 		.def("isNone", &CyPlayer::isNone, "checks for a null player")
 
-#ifdef PARALLEL_MAPS
-		.def("updateMembers", &CyPlayer::updateMembers, "void ()")
-		.def("initMembers", &CyPlayer::initMembers, "void (int iIndex)")
-#endif
 		.def("changeLeader", &CyPlayer::changeLeader, "void (int /*LeaderHeadTypes*/ eNewLeader ) - change leader of player")
 		.def("changeCiv", &CyPlayer::changeCiv, "void (int /*CivilizationTypes*/ eNewCiv ) - change civilization of player")
 		.def("setIsHuman", &CyPlayer::setIsHuman, "void (bool bNewValue) - set whether player is human")
@@ -112,7 +108,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("getFinalUnitUpkeep", &CyPlayer::getFinalUnitUpkeep, "int64 ()")
 		.def("calculateUnitSupply", &CyPlayer::calculateUnitSupply, "int ()")
 		.def("calculatePreInflatedCosts", &CyPlayer::calculatePreInflatedCosts, "int64 ()")
-		.def("calculateInflatedCosts", &CyPlayer::calculateInflatedCosts, "int64 ()")
+		.def("getFinalExpense", &CyPlayer::getFinalExpense, "int64 ()")
 
 		.def("calculateGoldRate", &CyPlayer::calculateGoldRate, "int ()")
 		.def("calculateTotalCommerce", &CyPlayer::calculateTotalCommerce, "int ()")

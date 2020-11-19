@@ -111,6 +111,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_DEVOTION_PROMOTION</Tag>
 		<English>Devotion Promotion Line</English>
 		<French>Spécialisation Dévot</French>
+		<German>Hingabe</German>
 		<Italian>Linea di promozione "Devoto"</Italian>
 	</TEXT>
 	<TEXT>
@@ -616,21 +617,25 @@
 		<Tag>TXT_KEY_PROMOTION_DEVOTION</Tag>
 		<English>Devotion</English>
 		<French>Dévot</French>
+		<German>Hingabe</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEVOTION1</Tag>
 		<English>Devotion I</English>
 		<French>Dévot I</French>
+		<German>Hingabe I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEVOTION2</Tag>
 		<English>Devotion II</English>
 		<French>Dévot II</French>
+		<German>Hingabe II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEVOTION3</Tag>
 		<English>Devotion III</English>
 		<French>Dévot III</French>
+		<German>Hingabe III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HUMANITARIAN</Tag>

@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_SABBATEAN</Tag>
+		<English>Sabbatean</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_ABBASID</Tag>
 		<English>Abbasid</English>
 		<French>Abbaside</French>

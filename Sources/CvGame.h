@@ -358,7 +358,6 @@ public:
 	bool canEverConstruct(BuildingTypes eBuilding) const;
 	bool canEverTrain(UnitTypes eUnit) const;
 	bool canEverSpread(CorporationTypes eCorporation) const;
-	void setFutureEras();
 
 	int getFlexibleDifficultyTimer(PlayerTypes eIndex) const;
 	void setFlexibleDifficultyTimer(PlayerTypes eIndex, int iNewValue);
@@ -938,5 +937,7 @@ public:
 
 	void enforceOptionCompatibility(GameOptionTypes eOption);
 };
+
+#define CURRENT_MAP GC.getGame().getCurrentMap()
 
 #endif
