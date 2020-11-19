@@ -211,7 +211,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BOXING_KANGAROO</Tag>
-		<English>Boxing Kangaroo</English>
+		<English>Carnival - Boxing Kangaroo</English>
 		<French>
 			<Text>Kangourou Boxeur</Text>
 			<Gender>Male</Gender>
@@ -1646,7 +1646,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SCAVENGER_MYTH_EFFECT</Tag>
-		<English>Myth (S) - Scavenger</English>
+		<English>Myth Effect (S) - Scavenger</English>
 		<French>
 			<Text>Effet (Mythe (R) du Mendiant)</Text>
 			<Gender>Male</Gender>
@@ -1877,7 +1877,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL</Tag>
-		<English>Trained Seal</English>
+		<English>Carnival - Trained Seal</English>
 		<French>Phoques dressés</French>
 		<Italian>
 			<Text>Foche ammaestrate</Text>
