@@ -40,7 +40,7 @@ public:
 	DllExport void windowActivation(bool bActive);
 	void mapRegen();
 
-	void gameEnd();
+	void gameEnd(int iGameTurn);
 	void beginGameTurn(int iGameTurn);
 	void endGameTurn(int iGameTurn);
 	void preEndGameTurn(int iGameTurn);

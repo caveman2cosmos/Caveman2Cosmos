@@ -78,21 +78,11 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 			switch (info.getData1())
 			{
 			case 0:
-// BUG - Exit Save - start
-				if (GC.getGame().getVictory() == NO_VICTORY)
-				{
-					Cy::call(PYBugModule, "gameExitSave");
-				}
-// BUG - Exit Save - end
+				Cy::call(PYCivModule, "gameExitSave");
 				gDLL->SetDone(true);
 				break;
 			case 1:
-// BUG - Exit Save - start
-				if (GC.getGame().getVictory() == NO_VICTORY)
-				{
-					Cy::call(PYBugModule, "gameExitSave");
-				}
-// BUG - Exit Save - end
+				Cy::call(PYCivModule, "gameExitSave");
 				gDLL->getInterfaceIFace()->exitingToMainMenu();
 				break;
 			case 2:
