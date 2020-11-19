@@ -219,7 +219,10 @@ void CvTeamAI::AI_updateAreaStragies(const bool bTargets)
 		AI_updateAreaTargets();
 	}
 
-	AI_updateCache();
+	if (!isNPC())
+	{
+		AI_updateDiploCache();
+	}
 }
 
 
@@ -3945,13 +3948,14 @@ void CvTeamAI::write(FDataStreamBase* pStream)
 
 int CvTeamAI::AI_noTechTradeThreshold(bool bRecalculate) const
 {
+	FAssertMsg(!isNPC(), "No point calling this for NPC");
 	if (!bRecalculate)
 	{
 		return m_iNoTechTradeThreshold;
 	}
 	int iRand = 0;
 	int iCount = 0;
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
 		{
@@ -3974,13 +3978,14 @@ int CvTeamAI::AI_noTechTradeThreshold(bool bRecalculate) const
 
 int CvTeamAI::AI_techTradeKnownPercent(bool bRecalculate) const
 {
+	FAssertMsg(!isNPC(), "No point calling this for NPC");
 	if (!bRecalculate)
 	{
 		return m_iTechTradeKnownPercent;
 	}
 	int iRand = 0;
 	int iCount = 0;
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
 		{
@@ -4003,13 +4008,14 @@ int CvTeamAI::AI_techTradeKnownPercent(bool bRecalculate) const
 
 int CvTeamAI::AI_maxWarRand(bool bRecalculate) const
 {
+	FAssertMsg(!isNPC(), "No point calling this for NPC");
 	if (!bRecalculate)
 	{
 		return m_iMaxWarRand;
 	}
 	int iRand = 0;
 	int iCount = 0;
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
 		{
@@ -4023,13 +4029,14 @@ int CvTeamAI::AI_maxWarRand(bool bRecalculate) const
 
 int CvTeamAI::AI_maxWarNearbyPowerRatio(bool bRecalculate) const
 {
+	FAssertMsg(!isNPC(), "No point calling this for NPC");
 	if (!bRecalculate)
 	{
 		return m_iMaxWarNearbyPowerRatio;
 	}
 	int iRand = 0;
 	int iCount = 0;
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
 		{
@@ -4052,13 +4059,14 @@ int CvTeamAI::AI_maxWarNearbyPowerRatio(bool bRecalculate) const
 
 int CvTeamAI::AI_maxWarDistantPowerRatio(bool bRecalculate) const
 {
+	FAssertMsg(!isNPC(), "No point calling this for NPC");
 	if (!bRecalculate)
 	{
 		return m_iMaxWarDistantPowerRatio;
 	}
 	int iRand = 0;
 	int iCount = 0;
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
 		{
@@ -4081,13 +4089,14 @@ int CvTeamAI::AI_maxWarDistantPowerRatio(bool bRecalculate) const
 
 int CvTeamAI::AI_maxWarMinAdjacentLandPercent(bool bRecalculate) const
 {
+	FAssertMsg(!isNPC(), "No point calling this for NPC");
 	if (!bRecalculate)
 	{
 		return m_iMaxWarMinAdjacentLandPercent;
 	}
 	int iRand = 0;
 	int iCount = 0;
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
 		{
@@ -4110,13 +4119,14 @@ int CvTeamAI::AI_maxWarMinAdjacentLandPercent(bool bRecalculate) const
 
 int CvTeamAI::AI_limitedWarRand(bool bRecalculate) const
 {
+	FAssertMsg(!isNPC(), "No point calling this for NPC");
 	if (!bRecalculate)
 	{
 		return m_iLimitedWarRand;
 	}
 	int iRand = 0;
 	int iCount = 0;
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
 		{
@@ -4130,13 +4140,14 @@ int CvTeamAI::AI_limitedWarRand(bool bRecalculate) const
 
 int CvTeamAI::AI_limitedWarPowerRatio(bool bRecalculate) const
 {
+	FAssertMsg(!isNPC(), "No point calling this for NPC");
 	if (!bRecalculate)
 	{
 		return m_iLimitedWarPowerRatio;
 	}
 	int iRand = 0;
 	int iCount = 0;
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
 		{
@@ -4150,13 +4161,14 @@ int CvTeamAI::AI_limitedWarPowerRatio(bool bRecalculate) const
 
 int CvTeamAI::AI_dogpileWarRand(bool bRecalculate) const
 {
+	FAssertMsg(!isNPC(), "No point calling this for NPC");
 	if (!bRecalculate)
 	{
 		return m_iDogpileWarRand;
 	}
 	int iRand = 0;
 	int iCount = 0;
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
 		{
@@ -4170,7 +4182,7 @@ int CvTeamAI::AI_dogpileWarRand(bool bRecalculate) const
 
 int CvTeamAI::AI_makePeaceRand(bool bRecalculate) const
 {
-	FAssertMsg(!isNPC(), "No point calling this for NPC")
+	FAssertMsg(!isNPC(), "No point calling this for NPC");
 
 	if (!bRecalculate)
 	{
@@ -5535,7 +5547,7 @@ int CvTeamAI::AI_contactTradeVal(TeamTypes eContactTeam, TeamTypes eTeamBuyer) c
 	return iValue * 100 / (5*iCountTeams);
 }
 
-void CvTeamAI::AI_updateCache()
+void CvTeamAI::AI_updateDiploCache()
 {
 	m_iNoTechTradeThreshold = AI_noTechTradeThreshold(true);
 	m_iTechTradeKnownPercent = AI_techTradeKnownPercent(true);

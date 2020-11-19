@@ -1374,10 +1374,7 @@ void CvPlayerAI::AI_updateAreaTargets()
 			{
 				pLoopArea->setTargetCity(getID(), NULL);
 			}
-			else
-			{
-				pLoopArea->setTargetCity(getID(), AI_findTargetCity(pLoopArea));
-			}
+			else pLoopArea->setTargetCity(getID(), AI_findTargetCity(pLoopArea));
 		}
 	}
 }
