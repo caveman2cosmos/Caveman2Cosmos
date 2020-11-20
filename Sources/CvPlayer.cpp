@@ -30926,31 +30926,44 @@ void CvPlayer::setHasTrait(TraitTypes eIndex, bool bNewValue)
 
 	if (!bNewValue || (bNewValue && GC.getTraitInfo(eIndex).isValidTrait()))
 	{
-		int iChange = bNewValue ? 1 : -1;
 		m_pabHasTrait[eIndex] = bNewValue;
-		processTrait(eIndex, iChange);
+		processTrait(eIndex, bNewValue ? 1 : -1);
 
 		if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && GC.getTraitInfo(eIndex).getLinePriority() != 0)
 		{
-			if ((GC.getTraitInfo(eIndex).isNegativeTrait() && iChange == -1) || (!GC.getTraitInfo(eIndex).isNegativeTrait() && iChange == 1))
+			const bool bNegativeTrait = GC.getTraitInfo(eIndex).isNegativeTrait();
+
+			if (!bNewValue && bNegativeTrait || bNewValue && !bNegativeTrait)
 			{
 				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
-					if (GET_PLAYER((PlayerTypes)iI).isAlive() && //Is player in the game
-						GET_PLAYER((PlayerTypes)iI).isHuman() && //Is player Human
-						GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()) && //Is player known
-						GET_PLAYER((PlayerTypes)iI).getID() != getID()) //Is player not self
+					if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != getID() && GET_PLAYER((PlayerTypes)iI).isHuman()
+					&& GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
 					{
 						MEMORY_TRACK_EXEMPT();
-						if (GC.getTraitInfo(eIndex).isNegativeTrait())
+						if (bNegativeTrait)
 						{
-							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_TRAIT_REMOVED", GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide(), GC.getTraitInfo(eIndex).getDescription());
-							AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WELOVEKING", MESSAGE_TYPE_MAJOR_EVENT, 0, GC.getCOLOR_HIGHLIGHT_TEXT());
+							AddDLLMessage(
+								(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText(
+									"TXT_KEY_MISC_TRAIT_REMOVED",
+									GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide(),
+									GC.getTraitInfo(eIndex).getDescription()
+								),
+								"AS2D_WELOVEKING", MESSAGE_TYPE_MAJOR_EVENT, 0, GC.getCOLOR_HIGHLIGHT_TEXT()
+							);
 						}
 						else
 						{
-							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_TRAIT_ADOPTED", GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide(), GC.getTraitInfo(eIndex).getDescription());
-							AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WELOVEKING", MESSAGE_TYPE_MAJOR_EVENT, 0, GC.getCOLOR_HIGHLIGHT_TEXT());
+							AddDLLMessage(
+								(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText(
+									"TXT_KEY_MISC_TRAIT_ADOPTED",
+									GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide(),
+									GC.getTraitInfo(eIndex).getDescription()
+								),
+								"AS2D_WELOVEKING", MESSAGE_TYPE_MAJOR_EVENT, 0, GC.getCOLOR_HIGHLIGHT_TEXT()
+							);
 						}
 					}
 				}
@@ -30959,21 +30972,33 @@ void CvPlayer::setHasTrait(TraitTypes eIndex, bool bNewValue)
 			{
 				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
-					if (GET_PLAYER((PlayerTypes)iI).isAlive() && //Is player in the game
-						GET_PLAYER((PlayerTypes)iI).isHuman() && //Is player Human
-						GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()) && //Is player known
-						GET_PLAYER((PlayerTypes)iI).getID() != getID()) //Is player not self
+					if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != getID() && GET_PLAYER((PlayerTypes)iI).isHuman()
+					&& GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
 					{
 						MEMORY_TRACK_EXEMPT();
-						if (GC.getTraitInfo(eIndex).isNegativeTrait())
+						if (bNegativeTrait)
 						{
-							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_TRAIT_ADOPTED", GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide(), GC.getTraitInfo(eIndex).getDescription());
-							AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MAJOR_EVENT, 0, GC.getCOLOR_HIGHLIGHT_TEXT());
+							AddDLLMessage(
+								(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText(
+									"TXT_KEY_MISC_TRAIT_ADOPTED",
+									GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide(),
+									GC.getTraitInfo(eIndex).getDescription()
+								),
+								"AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MAJOR_EVENT, 0, GC.getCOLOR_HIGHLIGHT_TEXT()
+							);
 						}
 						else
 						{
-							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_TRAIT_REMOVED", GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide(), GC.getTraitInfo(eIndex).getDescription());
-							AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MAJOR_EVENT, 0, GC.getCOLOR_HIGHLIGHT_TEXT());
+							AddDLLMessage(
+								(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText(
+									"TXT_KEY_MISC_TRAIT_REMOVED",
+									GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide(),
+									GC.getTraitInfo(eIndex).getDescription()
+								),
+								"AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MAJOR_EVENT, 0, GC.getCOLOR_HIGHLIGHT_TEXT()
+							);
 						}
 					}
 				}
@@ -32342,7 +32367,32 @@ bool CvPlayer::haveSettlerUnit() const
 
 
 // Toffer - A very common check
-bool CvPlayer::isAliveAndTeam(const TeamTypes eTeam, const bool bSameTeam) const
+bool CvPlayer::isAliveAndTeam(const TeamTypes eTeam, const bool bSameTeam, const TeamTypes eTeamAlt) const
 {
-	return isAlive() && (bSameTeam ? eTeam == getTeam() : eTeam != getTeam());
+	if (!isAlive())
+	{
+		return false;
+	}
+	return
+	(
+		bSameTeam // can only be on one team, so either or is implied
+		?
+		(
+			eTeamAlt == NO_TEAM
+			?
+			eTeam == getTeam()
+			:
+			eTeam == getTeam() || eTeamAlt == getTeam()
+		)
+		: // Different team, both must be other teams.
+		(
+			eTeamAlt == NO_TEAM
+			?
+			eTeam != getTeam()
+			:
+			eTeam != getTeam() && eTeamAlt != getTeam()
+		)
+	);
+	// Could probably get away with the second evaluation even when eTeamAlt == NO_TEAM
+	// Best to be on the safe side though
 }
