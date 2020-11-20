@@ -3313,11 +3313,8 @@ int CvTeamAI::AI_defensivePactTradeVal(TeamTypes eTeam) const
 DenialTypes CvTeamAI::AI_defensivePactTrade(TeamTypes eTeam) const
 {
 	PROFILE_FUNC();
-
-	AttitudeTypes eAttitude;
-	int iI;
-
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
+	FAssertMsg(!isNPC(), "NPC's doesn't trade!");
 
 	if (isHuman())
 	{
@@ -3334,19 +3331,14 @@ DenialTypes CvTeamAI::AI_defensivePactTrade(TeamTypes eTeam) const
 		return DENIAL_WORST_ENEMY;
 	}
 
-	eAttitude = AI_getAttitude(eTeam);
+	const AttitudeTypes eAttitude = AI_getAttitude(eTeam);
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID())
+		&& eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getDefensivePactRefuseAttitudeThreshold())
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
-			{
-				if (eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getDefensivePactRefuseAttitudeThreshold())
-				{
-					return DENIAL_ATTITUDE;
-				}
-			}
+			return DENIAL_ATTITUDE;
 		}
 	}
 
@@ -3357,10 +3349,6 @@ DenialTypes CvTeamAI::AI_defensivePactTrade(TeamTypes eTeam) const
 DenialTypes CvTeamAI::AI_permanentAllianceTrade(TeamTypes eTeam) const
 {
 	PROFILE_FUNC();
-
-	AttitudeTypes eAttitude;
-	int iI;
-
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
 	if (isHuman())
@@ -3373,36 +3361,28 @@ DenialTypes CvTeamAI::AI_permanentAllianceTrade(TeamTypes eTeam) const
 		return DENIAL_WORST_ENEMY;
 	}
 
-	if ((getPower(true) + GET_TEAM(eTeam).getPower(true)) > (GC.getGame().countTotalCivPower() / 2))
+	if (getPower(true) + GET_TEAM(eTeam).getPower(true) > GC.getGame().countTotalCivPower() / 2)
 	{
 		if (getPower(true) > GET_TEAM(eTeam).getPower(true))
 		{
 			return DENIAL_POWER_US;
 		}
-		else
-		{
-			return DENIAL_POWER_YOU;
-		}
+		return DENIAL_POWER_YOU;
 	}
 
-	if ((AI_getDefensivePactCounter(eTeam) + AI_getShareWarCounter(eTeam)) < 40)
+	if (AI_getDefensivePactCounter(eTeam) + AI_getShareWarCounter(eTeam) < 40)
 	{
 		return DENIAL_NOT_ALLIED;
 	}
 
-	eAttitude = AI_getAttitude(eTeam);
+	const AttitudeTypes eAttitude = AI_getAttitude(eTeam);
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID())
+		&& eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getPermanentAllianceRefuseAttitudeThreshold())
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
-			{
-				if (eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER((PlayerTypes)iI).getPersonalityType()).getPermanentAllianceRefuseAttitudeThreshold())
-				{
-					return DENIAL_ATTITUDE;
-				}
-			}
+			return DENIAL_ATTITUDE;
 		}
 	}
 
@@ -3620,41 +3600,30 @@ int CvTeamAI::AI_getWarSuccess(TeamTypes eIndex) const
 void CvTeamAI::AI_setWarSuccess(TeamTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      09/03/09                       poyuzhe & jdog5000     */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
-	// From Sanguo Mod Performance, ie the CAR Mod
-	// Attitude cache
+
 	if (m_aiWarSuccess[eIndex] != iNewValue)
 	{
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		for (int iA = 0; iA < MAX_PC_PLAYERS; iA++)
 		{
-			if( GET_PLAYER((PlayerTypes)iI).isAlive() )
+			CvPlayerAI& playerA = GET_PLAYER((PlayerTypes)iA);
+
+			if (playerA.isAliveAndTeam(getID()))
 			{
-				if( GET_PLAYER((PlayerTypes)iI).getTeam() == getID() || GET_PLAYER((PlayerTypes)iI).getTeam() == eIndex )
+				const TeamTypes eTeamA = playerA.getTeam();
+
+				for (int iB = 0; iB < MAX_PC_PLAYERS; iB++)
 				{
-					for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
+					if (GET_PLAYER((PlayerTypes)iB).isAliveAndTeam(eIndex))
 					{
-						if( GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iJ).getTeam() != GET_PLAYER((PlayerTypes)iI).getTeam() )
-						{
-							if( GET_PLAYER((PlayerTypes)iJ).getTeam() == getID() || GET_PLAYER((PlayerTypes)iJ).getTeam() == eIndex )
-							{
-								GET_PLAYER((PlayerTypes)iJ).AI_invalidateAttitudeCache((PlayerTypes)iI);
-								GET_PLAYER((PlayerTypes)iI).AI_invalidateAttitudeCache((PlayerTypes)iJ);
-							}
-						}
+						GET_PLAYER((PlayerTypes)iB).AI_invalidateAttitudeCache((PlayerTypes)iA);
+						playerA.AI_invalidateAttitudeCache((PlayerTypes)iB);
 					}
 				}
 			}
 		}
+		m_aiWarSuccess[eIndex] = iNewValue;
+		FAssert(AI_getWarSuccess(eIndex) >= 0);
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-	m_aiWarSuccess[eIndex] = iNewValue;
-	FAssert(AI_getWarSuccess(eIndex) >= 0);
 }
 
 
