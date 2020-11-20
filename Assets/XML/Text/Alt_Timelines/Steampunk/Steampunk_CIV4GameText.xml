@@ -1,15 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_STEAMPUNK</Tag>
-		<English>Steampunk</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_STEAMPUNK_PEDIA</Tag>
-		<English>Steampunk was influenced by, and often adopts the style of, the 19th century scientific romances of Jules Verne, H.G. Wells, and Mary Shelley.</English>
-		<Polish>Steampunk - nurt stylistyczny w kulturze (literatura, film, komiks, moda), odmiana fantastyki naukowej, boczna gałąź cyberpunku. W przeciwieństwie do cyberpunku, technika otaczająca bohaterów nie jest oparta na elektronice lecz na mechanice (np. odpowiednikiem komputera jest maszyna różnicowa). Charakterystyczne dla steampunku zainteresowanie rozwojem techniki często prowadzi do kreowania wynalazków nieznanych w naszej historii, dlatego nurt ten bywa zaliczany do tzw. historii alternatywnych. Akcja utworów steampunkowych przeważnie rozgrywa się w epoce wiktoriańskiej - erze rewolucji technicznej, wieku pary (stąd nazwa gatunku: steam, ang. - para). Steampunk nawiązuje do twórczości ojców fantastyki: Juliusza Verne'a, Herberta George'a Wellsa czy Marka Twaina.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COAL_DYNAMO</Tag>
 		<English>Coal Fired Dynamo</English>
 		<French>

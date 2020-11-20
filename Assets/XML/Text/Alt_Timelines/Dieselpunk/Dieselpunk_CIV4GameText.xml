@@ -1,15 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_DIESELPUNK</Tag>
-		<English>Dieselpunk</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_DIESELPUNK_PEDIA</Tag>
-		<English>Dieselpunk is based on the aesthetics of the interbellum period through World War II (c. 1920-1945). This sub-genre is sometimes named Decopunk, referring to the Art Deco art style (including its Streamline Moderne variant). The genre combines the artistic and genre influences of the period (including pulp magazines, serial films, film noir, art deco, and wartime pin-ups) with postmodern technology and sensibilities.</English>
-		<Polish>Dieselpunk - termin, którym określa się odłam cyberpunku z akcją osadzoną najczęściej w latach 20. 30. i 40. XX wieku. Panuje w nim nastrój epoki wynalazków, obalenia starego ładu po Wielkiej Wojnie uważanej za ostatnią wojnę przed wielką przyszłością ludzkości. Panuje futurystyczny entuzjazm. Kina, teatry, tramwaje, telegramy, telefony, radia, samoloty, wyzwolone z wiktoriańskiego gorsetu kobiety niczym Tamara Łempicka.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AERODROME</Tag>
 		<English>Aerodrome</English>
 		<French>
