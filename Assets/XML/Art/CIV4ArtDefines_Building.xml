@@ -11062,7 +11062,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Great_Wonders/winery_vintage_red.dds</Button>
+			<Button>Art/Interface/Buttons/group_wonders/winery_vintage_red.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CHAMPAGNE</Type>
@@ -11072,7 +11072,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Great_Wonders/winery_champagne.dds</Button>
+			<Button>Art/Interface/Buttons/group_wonders/winery_champagne.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_VINTAGE_WHITE_WINE</Type>
@@ -11082,7 +11082,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Great_Wonders/winery_vintage_white.dds</Button>
+			<Button>Art/Interface/Buttons/group_wonders/winery_vintage_white.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CRAFT_HUT</Type>
