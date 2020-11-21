@@ -1,9 +1,10 @@
 // team.cpp
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
-#include "CvGameAI.h"
+#include "CvBuildingInfo.h"
 #include "CvDiploParameters.h"
+#include "CvGameAI.h"
+#include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
@@ -556,13 +557,20 @@ void CvTeam::addTeam(TeamTypes eTeam)
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() != getID() && GET_PLAYER((PlayerTypes)iI).getTeam() != eTeam
-		&& GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasMet(getID()) && GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasMet(eTeam))
+		// Alive, not on same team as us and eTeam, all three have met.
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), false, eTeam)
+		&& isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam())
+		&& GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasMet(eTeam))
 		{
 			MEMORY_TRACK_EXEMPT();
-
-			const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_PERMANENT_ALLIANCE", getName().GetCString(), GET_TEAM(eTeam).getName().GetCString());
-			AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIRALLIANCE", MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
+			AddDLLMessage(
+				(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
+				gDLL->getText(
+					"TXT_KEY_MISC_PLAYER_PERMANENT_ALLIANCE",
+					getName().GetCString(), GET_TEAM(eTeam).getName().GetCString()
+				),
+				"AS2D_THEIRALLIANCE", MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT()
+			);
 		}
 	}
 	const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_PERMANENT_ALLIANCE", getName().GetCString(), GET_TEAM(eTeam).getName().GetCString());
@@ -861,7 +869,7 @@ void CvTeam::shareItems(TeamTypes eTeam)
 
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eTeam))
 		{
 			foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 			{
@@ -888,7 +896,7 @@ void CvTeam::shareItems(TeamTypes eTeam)
 
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eTeam))
 		{
 			GET_PLAYER((PlayerTypes)iI).AI_updateBonusValue();
 		}
@@ -1229,7 +1237,7 @@ bool CvTeam::canEventuallyDeclareWar(TeamTypes eTeam) const
 		return false;
 	}
 
-	if (!(isAlive()) || !(GET_TEAM(eTeam).isAlive()))
+	if (!isAlive() || !GET_TEAM(eTeam).isAlive())
 	{
 		return false;
 	}
@@ -1303,17 +1311,21 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 			{
 				CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
 
-				if ((playerX.getTeam() == getID() || playerX.getTeam() == eTeam) && GET_PLAYER((PlayerTypes)iI).isAlive())
+				if (playerX.isAliveAndTeam(getID(), true, eTeam))
 				{
 					playerX.updatePlunder(-1, false);
-				}
-				if (playerX.isAliveAndTeam(getID()) && playerX.getPledgedSecretaryGeneralVote() == eTeam)
-				{
-					playerX.setPledgedSecretaryGeneralVote(NO_TEAM);
-				}
-				else if (playerX.isAliveAndTeam(eTeam) && playerX.getPledgedSecretaryGeneralVote() == getID())
-				{
-					playerX.setPledgedSecretaryGeneralVote(NO_TEAM);
+
+					if (playerX.getTeam() == eTeam)
+					{
+						if (playerX.getPledgedSecretaryGeneralVote() == getID())
+						{
+							playerX.setPledgedSecretaryGeneralVote(NO_TEAM);
+						}
+					}
+					else if (playerX.getPledgedSecretaryGeneralVote() == eTeam)
+					{
+						playerX.setPledgedSecretaryGeneralVote(NO_TEAM);
+					}
 				}
 			}
 		}
@@ -1327,7 +1339,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if ((GET_PLAYER((PlayerTypes)iI).getTeam() == getID() || GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam) && GET_PLAYER((PlayerTypes)iI).isAlive())
+			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), true, eTeam))
 			{
 				GET_PLAYER((PlayerTypes)iI).updatePlunder(1, false);
 			}
@@ -1480,23 +1492,19 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			CvPlayer& playerX = GET_PLAYER((PlayerTypes) iI);
-
-			if (playerX.isAlive() && (playerX.getTeam() == getID() || playerX.getTeam() == eTeam))
+			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), true, eTeam))
 			{
-				playerX.updateWarWearinessPercentAnger();
-				playerX.updatePlotGroups();
+				GET_PLAYER((PlayerTypes)iI).updateWarWearinessPercentAnger();
+				GET_PLAYER((PlayerTypes)iI).updatePlotGroups();
 			}
 		}
 		// updatePlotGroups calls updateTradeRoutes at the end, so I'm not sure this is needed.
 		// Maybe all plot groups must be up to date for all players before trade routes can be updated properly?
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			CvPlayer& playerX = GET_PLAYER((PlayerTypes) iI);
-
-			if (playerX.isAlive() && (playerX.getTeam() == getID() || playerX.getTeam() == eTeam))
+			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), true, eTeam))
 			{
-				playerX.updateTradeRoutes();
+				GET_PLAYER((PlayerTypes)iI).updateTradeRoutes();
 			}
 		}
 
@@ -1681,7 +1689,7 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if ((GET_PLAYER((PlayerTypes)iI).getTeam() == getID() || GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam) && GET_PLAYER((PlayerTypes)iI).isAlive())
+			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), true, eTeam))
 			{
 				GET_PLAYER((PlayerTypes)iI).updatePlunder(1, false);
 			}
@@ -1711,8 +1719,7 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive()
-			&& (GET_PLAYER((PlayerTypes)iI).getTeam() == getID() || GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam))
+			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), true, eTeam))
 			{
 				GET_PLAYER((PlayerTypes)iI).updateWarWearinessPercentAnger();
 				GET_PLAYER((PlayerTypes)iI).updatePlotGroups();
@@ -1722,8 +1729,7 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 		// Maybe all plot groups must be up to date for all players before trade routes can be updated properly?
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive()
-			&& (GET_PLAYER((PlayerTypes)iI).getTeam() == getID() || GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam))
+			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), true, eTeam))
 			{
 				GET_PLAYER((PlayerTypes)iI).updateTradeRoutes();
 			}
@@ -1827,18 +1833,15 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 
 		for (int iI = 0; iI < MAX_TEAMS; iI++)
 		{
-			if (iI != getID() && iI != eTeam)
+			if (iI != getID() && iI != eTeam && GET_TEAM((TeamTypes)iI).isAlive())
 			{
-				if (GET_TEAM((TeamTypes)iI).isAlive())
+				if (GET_TEAM((TeamTypes)iI).isVassal(eTeam))
 				{
-					if (GET_TEAM((TeamTypes)iI).isVassal(eTeam))
-					{
-						GET_TEAM((TeamTypes)iI).makePeace(getID(), bBumpUnits);
-					}
-					else if (GET_TEAM((TeamTypes)iI).isVassal(getID()))
-					{
-						GET_TEAM((TeamTypes)iI).makePeace(eTeam, bBumpUnits);
-					}
+					GET_TEAM((TeamTypes)iI).makePeace(getID(), bBumpUnits);
+				}
+				else if (GET_TEAM((TeamTypes)iI).isVassal(getID()))
+				{
+					GET_TEAM((TeamTypes)iI).makePeace(eTeam, bBumpUnits);
 				}
 			}
 		}

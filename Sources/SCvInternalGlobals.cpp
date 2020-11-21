@@ -1,13 +1,9 @@
 #include "CvGameCoreDLL.h"
-
-CvDLLUtilityIFaceBase* SCvInternalGlobals::engineUtils()
-{
-	return cvInternalGlobals::getInstance().getDLLIFace();
-}
+#include "CvGlobals.h"
 
 CvBonusInfo* SCvInternalGlobals::getBonusInfoByType(const std::string& szType)
 {
-	const std::vector<CvBonusInfo*>& bonuses = cvInternalGlobals::getInstance().getBonusInfos();
+	const std::vector<CvBonusInfo*>& bonuses = GC.getBonusInfos();
 	for (std::vector<CvBonusInfo*>::const_iterator i = bonuses.begin(); i != bonuses.end(); ++i)
 		if ((*i)->getType() == szType) 
 			return *i;

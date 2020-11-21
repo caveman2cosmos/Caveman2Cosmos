@@ -1,8 +1,12 @@
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
+#include "CvGlobals.h"
 #include "CvMapExternal.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
+#include "CheckSum.h"
+
+#include "CvDLLFAStarIFaceBase.h"
 
 #define PATH_MOVEMENT_WEIGHT									(1000)
 #define PATH_RIVER_WEIGHT										(100)

@@ -7,6 +7,9 @@
 
 //#define	DYNAMIC_PATH_STRUCTURE_VALIDATION
 
+class CvMap;
+class CvPlot;
+
 //	Forward declarations of helper classes
 class CvPathNode;
 class CvPathGenerator;
@@ -189,7 +192,6 @@ typedef struct
 
 //	Forward declarations of helper classes
 class CvPathPlotInfoStore;
-class CvPathGenerator;
 class CvPathGeneratorPlotInfo;
 
 class CvNodeCostInfo
@@ -217,7 +219,6 @@ typedef struct
 
 //	Forward declarations of helper classes
 class CvPathPlotInfoStore;
-class CvPathGenerator;
 class CvPathGeneratorPlotInfo;
 
 class CvPathGenerator : public CvPathGeneratorBase

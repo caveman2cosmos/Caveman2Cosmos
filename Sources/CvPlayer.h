@@ -105,7 +105,7 @@ public:
 	void updateStabilityIndexAverage();
 
 	bool haveSettlerUnit() const;
-	bool isAliveAndTeam(const TeamTypes eTeam, const bool bSameTeam = true) const;
+	bool isAliveAndTeam(const TeamTypes eTeam, const bool bSameTeam = true, const TeamTypes eTeamAlt = NO_TEAM) const;
 
 	void uninit();
 

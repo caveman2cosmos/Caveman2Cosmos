@@ -7,9 +7,11 @@
 #include <boost155/utility/enable_if.hpp>
 
 #include "FAssert.h"
-#include "CvGlobals.h"
 #include "CvString.h"
 #include "CyArgsList.h"
+#include "CvGlobals.h"
+
+class CvInternalGlobals;
 
 #define FPythonAssert(expr, moduleName, functionName) FAssertMsg(expr, CvString::format("%s.%s", moduleName, functionName).c_str()) 
 

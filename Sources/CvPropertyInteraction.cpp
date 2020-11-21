@@ -9,6 +9,8 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvGameTextMgr.h"
+#include "CvGlobals.h"
+#include "CheckSum.h"
 
 CvPropertyInteraction::CvPropertyInteraction() : 
 									m_eSourceProperty(NO_PROPERTY),

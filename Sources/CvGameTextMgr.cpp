@@ -10,10 +10,11 @@
 //  Copyright (c) 2004 Firaxis Games, Inc. All rights reserved.
 //---------------------------------------------------------------------------------------
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CounterSet.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
 #include "CvDLLSymbolIFaceBase.h"
 #include "CvGameTextMgr.h"
 #include "CvPlayerAI.h"

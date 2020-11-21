@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef XML_LOAD_UTILITY_H
+#define XML_LOAD_UTILITY_H
+
 //  $Header:
 //------------------------------------------------------------------------------------------------
 //
@@ -12,11 +15,9 @@
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
-#ifndef XML_LOAD_UTILITY_H
-#define XML_LOAD_UTILITY_H
-
-#include "CvGlobals.h"
 #include "FVariableSystem.h"
+
+class CvInternalGlobals;
 
 #include <xercesc/dom/DOM.hpp>
 #include <xercesc/util/XMLString.hpp>
