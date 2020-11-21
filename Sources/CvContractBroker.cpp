@@ -1,6 +1,7 @@
 // unitAI.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvGlobals.h"
 #include "CvPlayerAI.h"
 
 CvContractBroker::CvContractBroker() : m_eOwner(NO_PLAYER)

@@ -1,9 +1,10 @@
 // CvDeal.cpp
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
+#include "CvGlobals.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 
@@ -870,12 +871,9 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive())
+				if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(GET_PLAYER(eToPlayer).getTeam()))
 				{
-					if (GET_PLAYER((PlayerTypes)iI).getTeam() == GET_PLAYER(eToPlayer).getTeam())
-					{
-						GET_PLAYER((PlayerTypes)iI).updatePlotGroups();
-					}
+					GET_PLAYER((PlayerTypes)iI).updatePlotGroups();
 				}
 			}
 

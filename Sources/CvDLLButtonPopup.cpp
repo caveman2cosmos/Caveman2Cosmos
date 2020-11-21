@@ -1,9 +1,10 @@
 // buttonPopup.cpp
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
+#include "CvGlobals.h"
 #include "CvDLLButtonPopup.h"
 #include "CvPopupReturn.h"
 #include "CvInitCore.h"

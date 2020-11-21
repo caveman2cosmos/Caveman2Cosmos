@@ -1,9 +1,12 @@
 // playerAI.cpp
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
+#include "CvGlobals.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
+
+#include "CvDLLFAStarIFaceBase.h"
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					  08/21/09								jdog5000	  */
@@ -25233,12 +25236,7 @@ int CvPlayerAI::AI_goldToUpgradeAllUnits(int iExpThreshold) const
 
 int CvPlayerAI::AI_goldTradeValuePercent() const
 {
-	int iValue = 2;
-	if (AI_isFinancialTrouble())
-	{
-		iValue += 1;
-	}
-	return 100 * iValue;
+	return AI_isFinancialTrouble() ? 300 : 200;
 
 }
 

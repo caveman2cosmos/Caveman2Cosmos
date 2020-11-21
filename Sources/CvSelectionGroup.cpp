@@ -2,9 +2,12 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
 #include "CvReachablePlotSet.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
+
+#include "CvDLLFAStarIFaceBase.h"
 
 const CvSelectionGroup* CvSelectionGroup::m_pCachedMovementGroup = nullptr;
 bst::scoped_ptr<CvSelectionGroup::CachedPathGenerator> CvSelectionGroup::m_cachedPathGenerator;

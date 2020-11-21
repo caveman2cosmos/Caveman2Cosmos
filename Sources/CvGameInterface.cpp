@@ -1,8 +1,11 @@
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGameTextMgr.h"
+#include "CvGlobals.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
+
+#include "CvDLLFAStarIFaceBase.h"
 
 void CvGame::updateColoredPlots()
 {

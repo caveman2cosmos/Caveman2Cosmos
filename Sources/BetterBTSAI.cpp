@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvGlobals.h"
 
 #ifdef LOG_AI
 int gPlayerLogLevel = 0;
