@@ -1374,10 +1374,7 @@ void CvPlayerAI::AI_updateAreaTargets()
 			{
 				pLoopArea->setTargetCity(getID(), NULL);
 			}
-			else
-			{
-				pLoopArea->setTargetCity(getID(), AI_findTargetCity(pLoopArea));
-			}
+			else pLoopArea->setTargetCity(getID(), AI_findTargetCity(pLoopArea));
 		}
 	}
 }
@@ -25236,12 +25233,7 @@ int CvPlayerAI::AI_goldToUpgradeAllUnits(int iExpThreshold) const
 
 int CvPlayerAI::AI_goldTradeValuePercent() const
 {
-	int iValue = 2;
-	if (AI_isFinancialTrouble())
-	{
-		iValue += 1;
-	}
-	return 100 * iValue;
+	return AI_isFinancialTrouble() ? 300 : 200;
 
 }
 
