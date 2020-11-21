@@ -25233,12 +25233,7 @@ int CvPlayerAI::AI_goldToUpgradeAllUnits(int iExpThreshold) const
 
 int CvPlayerAI::AI_goldTradeValuePercent() const
 {
-	int iValue = 2;
-	if (AI_isFinancialTrouble())
-	{
-		iValue += 1;
-	}
-	return 100 * iValue;
+	return AI_isFinancialTrouble() ? 300 : 200;
 
 }
 
