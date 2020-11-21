@@ -21,6 +21,15 @@ class CvPropertyManipulators;
 class CvXMLLoadUtility;
 class FDataStreamBase;
 
+struct FreePromoTypes
+{	
+	PromotionTypes ePromotion;
+	BoolExpr* m_pExprFreePromotionCondition;
+	operator int() const {return (int)ePromotion;}
+	bool operator< (const FreePromoTypes& rhs) const {return (int)ePromotion < (int)rhs.ePromotion;}
+};
+
+
 class CvBuildingInfo : public CvHotkeyInfo
 {
 public:

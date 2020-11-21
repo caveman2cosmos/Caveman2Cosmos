@@ -14,9 +14,9 @@
 class CvProperties;
 class CvPlayerAI;
 class CvUnit;
+class CvXMLLoadUtility;
 class IntExpr;
 class BoolExpr;
-class CvXMLLoadUtilityModTools;
 
 class CvOutcome
 {

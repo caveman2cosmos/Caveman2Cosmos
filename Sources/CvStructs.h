@@ -65,13 +65,6 @@ struct PlotTeamVisibilityIntensity
 	operator int() const {return (int)eTeam;}
 	bool operator< (const PlotTeamVisibilityIntensity& rhs) const {return (int)eTeam < (int)rhs.eTeam;}
 };
-struct FreePromoTypes
-{	
-	PromotionTypes ePromotion;
-	BoolExpr* m_pExprFreePromotionCondition;
-	operator int() const {return (int)ePromotion;}
-	bool operator< (const FreePromoTypes& rhs) const {return (int)ePromotion < (int)rhs.ePromotion;}
-};
 
 struct AfflictOnAttack
 {	
