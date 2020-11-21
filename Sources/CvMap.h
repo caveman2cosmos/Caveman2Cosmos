@@ -16,9 +16,8 @@
 #include "CvPathGenerator.h"
 #include "CvMapInterfaceBase.h"
 
-
 class CvPlotGroup;
-
+class CvViewport;
 
 inline int coordRange(int iCoord, int iRange, bool bWrap)
 {

@@ -8,8 +8,9 @@
 //	AUTHOR:  Steve Draper
 //	PURPOSE: Viewport presented as a map to the game engine
 
-
 #include "CvMap.h"
+
+class CvInternalGlobals;
 
 enum ViewportMode
 {
