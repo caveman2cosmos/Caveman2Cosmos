@@ -11,7 +11,6 @@
 #ifndef IDVALUEMAP_H
 #define IDVALUEMAP_H
 
-class CvInternalGlobals;
 class CvXMLLoadUtility;
 
 // ValueType will usually be int, only value types that are supported by FDataStreamBase as overloaded read and write will work without template specialization

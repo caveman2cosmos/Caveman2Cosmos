@@ -12,8 +12,6 @@
 
 #include "CvOutcomeList.h"
 
-class CvXMLLoadUtility;
-
 class CvOutcomeMission
 {
 public:

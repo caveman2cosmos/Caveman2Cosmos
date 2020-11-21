@@ -12,7 +12,6 @@
 #define CV_PROPERTY_PROPAGATOR_H
 
 class CvGameObject;
-class CvXMLLoadUtility;
 
 // Base class of which the actual property propagator classes are derived
 class CvPropertyPropagator

@@ -12,7 +12,6 @@
 #define BOOLEXPR_H
 
 class CvGameObject;
-class CvXMLLoadUtility;
 class IntExpr;
 
 enum BoolExprTypes
