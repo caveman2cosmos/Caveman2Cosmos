@@ -16295,7 +16295,7 @@ void CvPlayer::doGold()
 }
 
 #ifdef NOMADIC_START
-int collectResearchFromUnits(const CvPlayer::unit_range units, PlayerTypes ownerID)
+int collectResearchFromUnits(const CvPlayer::unit_range& units, PlayerTypes ownerID)
 {
 	const UnitTypes tribe = GC.getUNIT_TRIBE();
 
