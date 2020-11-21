@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
-#include "CvPlayerAI.h"
+#include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvPlayerAI.h"
 #include "FInputDevice.h"
 
 //

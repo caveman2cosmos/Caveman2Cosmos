@@ -1,7 +1,9 @@
 //	Internal path generation engine
 
 #include "CvGameCoreDLL.h"
+#include "CvGlobals.h"
 #include "CvSelectionGroup.h"
+#include "CheckSum.h"
 
 #ifdef DYNAMIC_PATH_STRUCTURE_VALIDATION
 #define	VALIDATE_TREE(x,y,z)	ValidateTree(x,y,z);

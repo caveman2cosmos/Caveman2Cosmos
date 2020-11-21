@@ -8,8 +8,7 @@
 // Passed to Python
 //
 
-#include "CvGlobals.h"
-
+class CvInternalGlobals;
 class CyGame;
 class CyMap;
 class CyPlayer;

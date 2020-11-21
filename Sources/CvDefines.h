@@ -198,4 +198,6 @@
 // AlbertS2: Save file format version, can be use to make a new dll incompatible with older saves
 #define SAVE_FORMAT_VERSION	(3)
 
+#define GC cvInternalGlobals::getInstance()
+
 #endif	// CVDEFINES_H

@@ -8,8 +8,11 @@
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvGlobals.h"
 #include "CvXMLLoadUtility.h"
 #include "BoolExpr.h"
+#include "CheckSum.h"
+#include "FVariableSystem.h"
 #include "wchar_utils.h"
 
 BoolExpr::~BoolExpr()

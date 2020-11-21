@@ -2,10 +2,12 @@
 // XML Set functions
 //
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGameTextMgr.h"
+#include "CvGlobals.h"
 #include "CvXMLLoadUtilitySetMod.h"
+#include "FVariableSystem.h"
 #include <iostream>
 
 // Macro for Setting Global Art Defines

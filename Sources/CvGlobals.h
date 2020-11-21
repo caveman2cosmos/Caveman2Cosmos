@@ -152,7 +152,7 @@ class CvMapSwitchInfo;
 #include "GlobalDefines.h"
 #include <stack>
 
-extern CvDLLUtilityIFaceBase* g_DLL;
+extern CvDLLUtilityIFaceBase* gDLL;
 
 class cvInternalGlobals
 {
@@ -827,7 +827,6 @@ public:
 
 	////////////// END DEFINES //////////////////
 
-	inline CvDLLUtilityIFaceBase* getDLLIFace() const { return g_DLL; }		// inlined for perf reasons, do not use outside of dll
 	void setDLLProfiler(FProfiler* prof);
 	FProfiler* getDLLProfiler() const;
 	void enableDLLProfiler(bool bEnable);
@@ -2137,7 +2136,7 @@ public:
 	{
 		if (pDll != NULL)
 		{
-			FAssertMsg(g_DLL == NULL, "Dll interface already set?");
+			FAssertMsg(gDLL == NULL, "Dll interface already set?");
 
 			OutputDebugString("setDLLIFace()\n");
 			if (gGlobals == NULL)
@@ -2146,19 +2145,19 @@ public:
 				gGlobals = new cvInternalGlobals();
 			}
 
-			g_DLL = pDll;
+			gDLL = pDll;
 		}
 		else
 		{
-			FAssertMsg(g_DLL != NULL, "Dll interface not set?");
-			g_DLL = NULL;
+			FAssertMsg(gDLL != NULL, "Dll interface not set?");
+			gDLL = NULL;
 			delete gGlobals;
 		}
 	}
 	DllExport CvDLLUtilityIFaceBase* getDLLIFaceNonInl()
 	{
 		//PROXY_TRACK("getDLLIFaceNonInl");
-		return g_DLL;
+		return gDLL;
 	}
 	DllExport void setDLLProfiler(FProfiler* prof)
 	{
@@ -2480,12 +2479,6 @@ inline CvGlobals& CvGlobals::getInstance()
 {
 	return gGlobalsProxy;
 }
-
-//
-// helpers
-//
-#define GC cvInternalGlobals::getInstance()
-#define gDLL g_DLL
 
 #endif
 

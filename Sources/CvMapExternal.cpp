@@ -5,6 +5,7 @@
 //
 
 #include "CvGameCoreDLL.h"
+#include "CvGlobals.h"
 #include "CvMapExternal.h"
 
 

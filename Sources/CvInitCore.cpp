@@ -1,6 +1,7 @@
 // game.cpp
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CvPlayerAI.h"
 #include "CvXMLLoadUtility.h"
