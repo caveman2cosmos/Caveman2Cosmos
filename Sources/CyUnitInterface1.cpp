@@ -169,7 +169,6 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("isCargo", &CyUnit::isCargo, "bool ()")
 		.def("setTransportUnit", &CyUnit::setTransportUnit, "void (CyUnit* pTransportUnit)")
 
-
 		.def("getName", &CyUnit::getName, "str () - Returns the name of a unit along with its type description in parens if using a custom name")
 		.def("getNameForm", &CyUnit::getNameForm, "str (int iForm)")
 		.def("getNameKey", &CyUnit::getNameKey, "str ()")
@@ -177,8 +176,6 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("setName", &CyUnit::setName, "void (str)")
 		.def("getScriptData", &CyUnit::getScriptData, "str ()")
 		.def("setScriptData", &CyUnit::setScriptData, "void (str)")
-
-
 
 		.def("canAcquirePromotion", &CyUnit::canAcquirePromotion, "bool (int /*PromotionTypes*/ ePromotion)")
 		.def("isPromotionValid", &CyUnit::isPromotionValid, "bool (int /*PromotionTypes*/ ePromotion)")
@@ -204,5 +201,6 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("isHiddenNationality", &CyUnit::isHiddenNationality, "bool ()")
 		.def("doHNCapture", &CyUnit::doHNCapture, "void ()")
 
+		.def("getInventory", &CyUnit::getInventory)
 	;
 }

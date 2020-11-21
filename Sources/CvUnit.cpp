@@ -42251,7 +42251,7 @@ ReligionTypes CvUnit::getReligion() const
 
 void CvUnit::addItem(ItemTypes type, int amount)
 {
-	FASSERT_BOUNDS(0, GC.getNumItemInfos(), e)
+	FASSERT_BOUNDS(0, GC.getNumItemInfos(), type)
 
 	foreach_(CvItem& loopItem, m_Inventory)
 	{
@@ -42261,7 +42261,7 @@ void CvUnit::addItem(ItemTypes type, int amount)
 			//if (loopItem.amount + amount > maxAmount)
 			//	loopItem.amount = maxAmount;
 			//else
-				loopItem.amount += amount
+				loopItem.amount += amount;
 			return;
 		}
 	}
@@ -42281,7 +42281,7 @@ int CvUnit::collectItem(ItemTypes e)
 		if (item.type == e)
 		{
 			const int amount = item.amount;
-			num--
+			num--;
 			for (; i < num; i++)
 			{
 				m_Inventory[i] = m_Inventory[i +1];

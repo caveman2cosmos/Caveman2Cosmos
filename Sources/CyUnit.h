@@ -198,6 +198,8 @@ public:
 	int controlPoints() const;
 	float getRealExperience() const;
 
+	python::list getInventory() const;
+
 protected:
 	CvUnit* m_pUnit;
 };

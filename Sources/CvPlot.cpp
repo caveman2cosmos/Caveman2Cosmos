@@ -646,6 +646,19 @@ TeamTypes CvPlot::getTeam() const
 	return isOwned() ? GET_PLAYER(getOwner()).getTeam() : NO_TEAM;
 }
 
+#ifdef NOMADIC_START
+void giveItems(CvPlot& plot)
+{
+	const ItemTypes itemGiven = GC.getBonusInfo(plot.getBonusType()).getItemGiven();
+	if (itemGiven != NO_ITEM)
+	{
+		foreach_(CvUnit* unit, plot.units())
+		{
+			unit->addItem(itemGiven, 1);
+		}
+	}
+}
+#endif
 
 void CvPlot::doTurn()
 {

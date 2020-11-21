@@ -3140,7 +3140,7 @@ public:
 
 	void addItem(ItemTypes type, int amount);
 	int collectItem(ItemTypes e);
-	std::vector<CvItem>& getInventory() const { return m_Inventory; }
+	std::vector<CvItem>& getInventory() { return m_Inventory; }
 
 private:
 	//	static buffers allocated once and used during read and write only

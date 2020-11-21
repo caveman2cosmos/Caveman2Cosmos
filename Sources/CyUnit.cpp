@@ -725,3 +725,16 @@ void CyUnit::doHNCapture()
 {
 	if (m_pUnit) m_pUnit->doHNCapture();
 }
+
+python::list CyUnit::getInventory() const
+{
+	python::list list = python::list();
+	if (m_pUnit)
+	{
+		foreach_(CvItem& item, m_pUnit->getInventory())
+		{
+			list.append(item);
+		}
+	}
+	return list;
+}

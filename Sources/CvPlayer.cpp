@@ -16295,12 +16295,12 @@ void CvPlayer::doGold()
 }
 
 #ifdef NOMADIC_START
-int collectResearchFromUnits(const unit_range units, PlayerTypes ownerID)
+int collectResearchFromUnits(const CvPlayer::unit_range units, PlayerTypes ownerID)
 {
 	const UnitTypes tribe = GC.getUNIT_TRIBE();
 
 	int total = 0;
-	foreach_(const CvUnit* loopUnit, units | filtered(CvUnit::fn::getType() == tribe))
+	foreach_(const CvUnit* loopUnit, units | filtered(CvUnit::fn::getUnitType() == tribe))
 	{
 		foreach_(CvUnit* plotUnit, loopUnit->plot()->units() | filtered(CvUnit::fn::getOwner() == ownerID))
 		{

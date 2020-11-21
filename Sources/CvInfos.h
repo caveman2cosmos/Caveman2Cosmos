@@ -2319,7 +2319,7 @@ public:
 	bool isUnitUpgrade(int i) const;			//Exposed to Python
 
 	std::vector<int> getUnitUpgradeChain() const;
-	void CvUnitInfo::addUnitToUpgradeChain(int i);
+	void addUnitToUpgradeChain(int i);
 
 	bool getTargetUnitCombat(int i) const; // Exposed to Python
 	bool getDefenderUnitCombat(int i) const; // Exposed to Python
@@ -2339,6 +2339,8 @@ public:
 	bool getFreePromotions(int i) const; // Exposed to Python
 	int getLeaderPromotion() const; // Exposed to Python
 	int getLeaderExperience() const; // Exposed to Python
+
+	ItemTypes getItemGivenWhenKilled() const { return m_eItemGiven; }
 
 	const CvOutcomeList* getKillOutcomeList() const;
 	int getNumActionOutcomes() const;
@@ -2686,6 +2688,9 @@ protected:
 	bool m_bCanAnimalIgnoresCities;
 	bool m_bNoNonTypeProdMods;
 	bool m_bGatherHerd;
+
+	ItemTypes m_eItemGiven;
+
 	//boolean vectors without delayed resolution
 	std::vector<int> m_aiSubCombatTypes;
 	std::vector<int> m_aiCureAfflictionTypes;
@@ -4656,6 +4661,8 @@ public:
 	int getUniqueRange() const; // Exposed to Python
 	int getGroupRange() const; // Exposed to Python
 	int getGroupRand() const; // Exposed to Python
+
+	ItemTypes getItemGiven() const { return NO_ITEM; }
 
 	bool isOneArea() const; // Exposed to Python
 	bool isHills() const; // Exposed to Python

@@ -1517,8 +1517,8 @@ CvIdeaInfo& cvInternalGlobals::getIdeaInfo(IdeaTypes e) const
 
 const CvItemInfo& cvInternalGlobals::getItemInfo(ItemTypes e) const
 {
-	FASSERT_BOUNTS(0, getNumItemInfos(), e)
-	return m_ItemInfo[e];
+	FASSERT_BOUNDS(0, getNumItemInfos(), e)
+	return *m_ItemInfo[e];
 }
 
 CvInfoBase& cvInternalGlobals::getUnitAIInfo(UnitAITypes eUnitAINum) const
