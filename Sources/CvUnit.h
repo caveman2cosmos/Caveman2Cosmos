@@ -456,7 +456,7 @@ struct CvItem
 {
 	ItemTypes type;
 	int16_t amount;
-}
+};
 
 class CvUnit : public CvDLLEntity
 {

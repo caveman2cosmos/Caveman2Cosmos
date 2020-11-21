@@ -1503,6 +1503,7 @@ CvIdeaInfo& cvInternalGlobals::getIdeaInfo(IdeaTypes e) const
 	FASSERT_BOUNDS(0, GC.getNumIdeaInfos(), e)
 	return *(m_paIdeaInfo[e]);
 }
+
 //int cvInternalGlobals::getNumTraitOptionEditsInfos() const
 //{
 //	return (int)m_paTraitOptionEditsInfo.size();
@@ -1513,6 +1514,12 @@ CvIdeaInfo& cvInternalGlobals::getIdeaInfo(IdeaTypes e) const
 //	FASSERT_BOUNDS(0, GC.getNumTraitOptionEditsInfos(), e)
 //	return *(m_paTraitOptionEditsInfo[e]);
 //}
+
+const CvItemInfo& cvInternalGlobals::getItemInfo(ItemTypes e) const
+{
+	FASSERT_BOUNTS(0, getNumItemInfos(), e)
+	return m_ItemInfo[e];
+}
 
 CvInfoBase& cvInternalGlobals::getUnitAIInfo(UnitAITypes eUnitAINum) const
 {

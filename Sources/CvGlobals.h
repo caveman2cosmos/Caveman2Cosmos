@@ -147,6 +147,7 @@ class CvMapSwitchInfo;
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
+class CvItemInfo;
 
 #include "CvInfoReplacements.h"
 #include "GlobalDefines.h"
@@ -687,6 +688,9 @@ public:
 	int getNumUnitArtStyleTypeInfos() const;
 	CvUnitArtStyleTypeInfo& getUnitArtStyleTypeInfo(UnitArtStyleTypes eUnitArtStyleTypeNum) const;
 
+	int getNumItemInfos() const { return m_ItemInfo.size(); }
+	const CvItemInfo& getItemInfo(ItemTypes e) const;
+
 	//
 	// Global Types
 	// All type strings are upper case and are kept in this hash map for fast lookup
@@ -1178,6 +1182,7 @@ protected:
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
+	std::vector<CvItemInfo*> m_ItemInfo;
 
 	//////////////////////////////////////////////////////////////////////////
 	// GLOBAL TYPES
