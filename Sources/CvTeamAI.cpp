@@ -1611,15 +1611,37 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
-		if (!pLoopPlot->isRevealed(getID(), false) && pLoopPlot->isRevealed(eTeam, false))
+		if (pLoopPlot->isRevealed(eTeam, false))
 		{
-			if (pLoopPlot->isWater())
+			if (!pLoopPlot->isRevealed(getID(), false))
 			{
-				iValue++;
+				iValue += pLoopPlot->isWater() ? 20 : 50;
 			}
-			else iValue += 5;
+			else
+			{
+				if (pLoopPlot->getRevealedOwner(eTeam, false) == pLoopPlot->getOwner()
+				&& pLoopPlot->getRevealedOwner(getID(), false) != pLoopPlot->getOwner())
+				{
+					iValue += 5;
+				}
+				if (pLoopPlot->getRevealedImprovementType(eTeam, false) == pLoopPlot->getImprovementType()
+				&& pLoopPlot->getRevealedImprovementType(getID(), false) != pLoopPlot->getImprovementType())
+				{
+					iValue += 2;
+				}
+				if (pLoopPlot->getRevealedRouteType(eTeam, false) == pLoopPlot->getRouteType()
+				&& pLoopPlot->getRevealedRouteType(getID(), false) != pLoopPlot->getRouteType())
+				{
+					iValue += 1;
+				}
+				CvCity* pCity = pLoopPlot->getPlotCity();
+				if (pCity != NULL && pCity->isRevealed(eTeam, false) && !pCity->isRevealed(getID(), false))
+				{
+					iValue += 10;
+				}
+			}
 		}
 	}
 	if (iValue == 0)
@@ -1642,11 +1664,11 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 		}
 	}
 	iValue *= 1 + GET_PLAYER(getLeaderID()).getCurrentEra();
-	iValue /= 4;
+	iValue /= 3 * (3 + GC.getMap().getWorldSize()); // Map trading makes much more sense on bigger maps anyhow
 
 	if (GET_TEAM(eTeam).isVassal(getID()))
 	{
-		return iValue / 2;
+		return iValue * 2 / 3;
 	}
 	return iValue;
 }
