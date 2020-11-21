@@ -375,5 +375,7 @@
 	DO(UnitCombatTypes, UNITCOMBAT_WILD) \
 	DO(UnitTypes, UNIT_WORKER) \
 	DO(UnitTypes, UNIT_GREAT_GENERAL) \
+	DO(UnitTypes, UNIT_TRIBE) \
+	DO(ItemTypes, ITEM_RESEARCH) \
 
 #endif

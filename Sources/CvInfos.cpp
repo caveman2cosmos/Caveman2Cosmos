@@ -43062,5 +43062,43 @@ int CvInvisibleInfo::getFontButtonIndex() const
 	return m_iFontButtonIndex;
 }
 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//
+//  class : CvItemInfo
+//
+//  DESC:   Contains info about items for unit inventories
+//
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+CvItemInfo::CvItemInfo()
+	: m_iMaxAmount(1)
+{
+}
 
+CvItemInfo::~CvItemInfo()
+{
+}
 
+bool CvItemInfo::read(CvXMLLoadUtility* pXML)
+{
+	MEMORY_TRACE_FUNCTION();
+
+	if (!CvInfoBase::read(pXML))
+		return false;
+
+	pXML->GetOptionalChildXmlValByName(&m_iMaxAmount, L"MaxAmount");
+
+	return true;
+}
+
+void CvItemInfo::copyNonDefaults(CvItemInfo* pClassInfo, CvXMLLoadUtility* pXML)
+{
+	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
+
+	if (m_iMaxAmount == 1) m_iMaxAmount = pClassInfo->m_iMaxAmount;
+
+}
+
+void CvItemInfo::getCheckSum(unsigned int& iSum) const
+{
+	CheckSum(iSum, m_iMaxAmount);
+}

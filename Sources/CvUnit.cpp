@@ -42244,3 +42244,48 @@ ReligionTypes CvUnit::getReligion() const
 {
 	return m_eReligionType;
 }
+
+void CvUnit::addItem(ItemTypes type, int amount)
+{
+	FASSERT_BOUNDS(0, GC.getNumItemInfos(), e)
+
+	foreach_(CvItem& loopItem, m_Inventory)
+	{
+		if (loopItem.type == type)
+		{
+			//const maxAmount = GC.getItemInfo(type).getMaxAmount();
+			//if (loopItem.amount + amount > maxAmount)
+			//	loopItem.amount = maxAmount;
+			//else
+				loopItem.amount += amount
+			return;
+		}
+	}
+	CvItem newItem;
+	newItem.type = type;
+	newItem.amount = amount;
+	m_Inventory.push_back(newItem);
+}
+
+int CvUnit::collectItem(ItemTypes e)
+{
+	FASSERT_BOUNDS(0, GC.getNumItemInfos(), e)
+
+	for (uint32_t i = 0, num = m_Inventory.size(); i < num; i++)
+	{
+		const CvItem& item = m_Inventory[i];
+		if (item.type == e)
+		{
+			const int amount = item.amount;
+			num--
+			for (; i < num; i++)
+			{
+				m_Inventory[i] = m_Inventory[i +1];
+			}
+			m_Inventory.pop_back();
+
+			return amount;
+		}
+	}
+	return 0;
+}

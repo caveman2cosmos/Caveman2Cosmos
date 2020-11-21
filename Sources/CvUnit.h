@@ -451,11 +451,15 @@ public:
 	int	m_iExtraTrapTriggerUnitCombatType;
 };
 
+struct CvItem
+{
+	ItemTypes type;
+	int16_t amount;
+}
+
 class CvUnit : public CvDLLEntity
 {
-
 public:
-
 	CvUnit(bool bIsDummy = false);
 	virtual ~CvUnit();
 
@@ -3133,6 +3137,10 @@ public:
 	void defineReligion();
 	ReligionTypes getReligion() const;
 
+	void addItem(ItemTypes type, int amount);
+	int collectItem(ItemTypes e);
+	std::vector<CvItem>& getInventory() const { return m_Inventory; }
+
 private:
 	//	static buffers allocated once and used during read and write only
 	static int*	g_paiTempPromotionFreeCount;
@@ -3202,6 +3210,7 @@ private:
 
 	PlayerTypes m_pPlayerInvestigated;
 
+	std::vector<CvItem> m_Inventory;
 public:
 	//
 	// Algorithm/range helpers

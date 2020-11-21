@@ -16291,13 +16291,26 @@ void CvPlayer::doGold()
 	}
 }
 
+#ifdef NOMADIC_START
+int collectResearchFromUnits(const unit_range units, PlayerTypes ownerID)
+{
+	const UnitTypes tribe = GC.getUNIT_TRIBE();
+
+	int total = 0;
+	foreach_(const CvUnit* loopUnit, units | filtered(CvUnit::fn::getType() == tribe))
+	{
+		foreach_(CvUnit* plotUnit, loopUnit->plot()->units() | filtered(CvUnit::fn::getOwner() == ownerID))
+		{
+			total += plotUnit->collectItem(GC.getITEM_RESEARCH());
+		}
+	}
+	return total;
+}
+#endif
 
 void CvPlayer::doResearch()
 {
 	PROFILE_FUNC()
-
-	bool bForceResearchChoice;
-	int iOverflowResearch;
 
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
@@ -16322,7 +16335,7 @@ void CvPlayer::doResearch()
 /************************************************************************************************/
 	if (isResearch())
 	{
-		bForceResearchChoice = false;
+		bool bForceResearchChoice = false;
 
 		if (getCurrentResearch() == NO_TECH)
 		{
@@ -16339,15 +16352,25 @@ void CvPlayer::doResearch()
 			}
 		}
 
-		TechTypes eCurrentTech = getCurrentResearch();
+		const TechTypes eCurrentTech = getCurrentResearch();
 		if (eCurrentTech == NO_TECH)
 		{
-			int iOverflow = (100 * calculateResearchRate()) / std::max(1, calculateResearchModifier(eCurrentTech));
+			const int iOverflow =
+#ifdef NOMADIC_START
+				collectResearchFromUnits(units(), getID()) +
+#endif
+				(100 * calculateResearchRate() / std::max(1, calculateResearchModifier(eCurrentTech)));
+
 			changeOverflowResearch(iOverflow);
 		}
 		else
 		{
-			iOverflowResearch = (getOverflowResearch() * calculateResearchModifier(eCurrentTech)) / 100;
+			const int iOverflowResearch =
+#ifdef NOMADIC_START
+				collectResearchFromUnits(units(), getID()) + 
+#endif
+				(getOverflowResearch() * calculateResearchModifier(eCurrentTech) / 100);
+
 			setOverflowResearch(0);
 			GET_TEAM(getTeam()).changeResearchProgress(eCurrentTech, (calculateResearchRate(eCurrentTech) + iOverflowResearch), getID());
 		}

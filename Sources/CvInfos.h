@@ -10113,4 +10113,27 @@ protected:
 	int m_iFontButtonIndex;
 };
 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//
+//  class : CvItemInfo
+//
+//  DESC:   Contains info about items for unit inventories
+//
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+class CvItemInfo : public CvInfoBase
+{
+public:
+	CvItemInfo();
+	virtual ~CvItemInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvItemInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(unsigned int& iSum) const;
+
+	int getMaxAmount() const { return m_iMaxAmount; }
+
+protected:
+	int m_iMaxAmount;
+};
+
 #endif

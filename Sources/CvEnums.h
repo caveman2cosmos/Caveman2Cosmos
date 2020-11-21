@@ -3420,4 +3420,9 @@ enum PropertyPropagatorTypes
 	NUM_PROPERTYPROPAGATORS
 };
 
+enum ItemTypes
+{
+	NO_ITEM = -1
+}
+
 #endif	// CVENUMS_h
