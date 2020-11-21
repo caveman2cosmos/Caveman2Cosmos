@@ -14,6 +14,7 @@
 class CvPropertySource;
 class CvPropertyInteraction;
 class CvPropertyPropagator;
+class CvXMLLoadUtility;
 
 class CvPropertyManipulators
 {

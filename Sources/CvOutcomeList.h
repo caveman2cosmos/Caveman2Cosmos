@@ -13,7 +13,9 @@
 
 #include "CvOutcome.h"
 
+class CvPlot;
 class CvUnit;
+class CvXMLLoadUtility;
 
 class CvOutcomeList
 {
