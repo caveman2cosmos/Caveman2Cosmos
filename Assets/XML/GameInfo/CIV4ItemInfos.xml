@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4ItemInfos xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
+	<ItemInfos>
+		<ItemInfo>
+			<Type>ITEM_SUBDUED_AARDVARK</Type>
+			<Description>TXT_KEY_UNIT_SUBDUED_AARDVARK</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_SUBDUED_AARDVARK_HELP</Help>
+			<MaxAmount>6</MaxAmount>
+			<FreeUnit>UNIT_SUBDUED_AARDVARK</FreeUnit>
+			<FreeBuildings>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM_WORKERS</BuildingType>
+				<BuildingType>BUILDING_EARTH_MYTH</BuildingType>
+				<BuildingType>BUILDING_AARDVARK_MYTH</BuildingType>
+				<BuildingType>BUILDING_AARDVARK_STORY</BuildingType>
+				<BuildingType>BUILDING_AARDVARK_STORIES</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+			</FreeBuildings>
+		</ItemInfo>
+	</ItemInfos>
+</Civ4ItemInfos>

@@ -43073,21 +43073,27 @@ int CvInvisibleInfo::getFontButtonIndex() const
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 CvItemInfo::CvItemInfo()
 	: m_iMaxAmount(1)
+	, m_eFreeUnit(NO_UNIT)
 {
 }
 
 CvItemInfo::~CvItemInfo()
 {
+	GC.removeDelayedResolution((int*)&m_eFreeUnit);
+	GC.removeDelayedResolutionVector(m_FreeBuildings);
 }
 
 bool CvItemInfo::read(CvXMLLoadUtility* pXML)
 {
-	MEMORY_TRACE_FUNCTION();
-
 	if (!CvInfoBase::read(pXML))
 		return false;
 
+	CvString szTextVal;
+
 	pXML->GetOptionalChildXmlValByName(&m_iMaxAmount, L"MaxAmount");
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeBuilding");
+	GC.addDelayedResolution((int*)&m_eFreeUnit, szTextVal);
+	pXML->SetOptionalVectorWithDelayedResolution(m_FreeBuildings, L"FreeBuildings");
 
 	return true;
 }
@@ -43097,10 +43103,13 @@ void CvItemInfo::copyNonDefaults(CvItemInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
 	if (m_iMaxAmount == 1) m_iMaxAmount = pClassInfo->m_iMaxAmount;
-
+	GC.copyNonDefaultDelayedResolution((int*)&m_eFreeUnit, (int*)&pClassInfo->m_eFreeUnit);
+	GC.copyNonDefaultDelayedResolutionVector(m_FreeBuildings, pClassInfo->getFreeBuildings());
 }
 
 void CvItemInfo::getCheckSum(unsigned int& iSum) const
 {
 	CheckSum(iSum, m_iMaxAmount);
+	CheckSum(iSum, m_eFreeUnit);
+	CheckSumC(iSum, m_FreeBuildings);
 }

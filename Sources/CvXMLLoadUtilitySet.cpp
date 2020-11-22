@@ -896,6 +896,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	}
 
 	OutputDebugString("Begin load global infos\n");
+	LoadGlobalClassInfo(GC.m_ItemInfo, "CIV4ItemInfo", "GameInfo", L"/Civ4ItemInfo/ItemInfos/ItemInfo", false, &GC.m_ItemInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paInvisibleInfo, "CIV4InvisibleInfos", "Units", L"/Civ4InvisibleInfos/InvisibleInfos/InvisibleInfo", false);
 	LoadGlobalClassInfo(GC.m_paMapCategoryInfo, "CIV4MapCategoryInfos", "Terrain", L"/Civ4MapCategoryInfos/MapCategoryInfos/MapCategoryInfo", false);
 /*********************************/

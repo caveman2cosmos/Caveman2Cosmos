@@ -10137,10 +10137,14 @@ public:
 	void copyNonDefaults(CvItemInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum) const;
 
-	int getMaxAmount() const { return m_iMaxAmount; }
+	int getMaxAmount() const									{ return m_iMaxAmount; }
+	UnitTypes getFreeUnit() const								{ return m_eFreeUnit; }
+	const std::vector<BuildingTypes>& getFreeBuildings() const	{ return m_FreeBuildings; }
 
 protected:
 	int m_iMaxAmount;
+	UnitTypes m_eFreeUnit;
+	std::vector<BuildingTypes> m_FreeBuildings;
 };
 
 #endif

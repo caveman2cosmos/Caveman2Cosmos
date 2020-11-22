@@ -1183,6 +1183,7 @@ protected:
 /***** Parallel Maps - End *****/
 /*******************************/
 	std::vector<CvItemInfo*> m_ItemInfo;
+	CvInfoReplacements<CvItemInfo> m_ItemInfoReplacements;
 
 	//////////////////////////////////////////////////////////////////////////
 	// GLOBAL TYPES

@@ -2284,4 +2284,24 @@
 	<ElementType name="Civ4IdeaInfos" content="eltOnly">
 		<element type="IdeaInfos" minOccurs="0"/>
 	</ElementType>
+	<ElementType name="MaxAmount" content="textOnly" dt:type="int"/>
+	<ElementType name="FreeUnit" content="textOnly"/>
+	<ElementType name="ItemInfo" content="eltOnly">
+		<element type="Type"/>
+		<element type="Description" minOccurs="0"/>
+		<element type="Help" minOccurs="0"/>
+		<element type="Strategy" minOccurs="0"/>
+		<element type="MaxAmount" minOccurs="0"/>
+		<element type="FreeUnit" minOccurs="0"/>
+		<element type="FreeBuildings" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="FreeBuildings" content="eltOnly">
+		<element type="BuildingType" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="ItemInfos" content="eltOnly">
+		<element type="ItemInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4ItemInfos" content="eltOnly">
+		<element type="ItemInfos" minOccurs="0"/>
+	</ElementType>
 </Schema>
