@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Civ4ItemInfos xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
+<Civ4ItemInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<ItemInfos>
 		<ItemInfo>
 			<Type>ITEM_SUBDUED_AARDVARK</Type>
@@ -22,5 +22,8 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</FreeBuildings>
 		</ItemInfo>
+		<ItemInfo>
+			<Type>ITEM_RESEARCH</Type>
+		</ItemInfo>
 	</ItemInfos>
-</Civ4ItemInfos>
+</Civ4ItemInfo>

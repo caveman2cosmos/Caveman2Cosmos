@@ -93,7 +93,7 @@
 				<Outcome>
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
 					<iChance>10</iChance>
-					<UnitType>UNIT_SUBDUED_AARDVARK</UnitType>
+					<ItemGiven>ITEM_SUBDUED_AARDVARK</ItemGiven>
 					<bUnitToCity>
 						<Has>
 							<GOMType>GOM_TECH</GOMType>

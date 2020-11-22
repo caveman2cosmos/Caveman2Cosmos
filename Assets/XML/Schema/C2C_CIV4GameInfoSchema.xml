@@ -2206,6 +2206,7 @@
 	<ElementType name="ReplaceOutcomes" content="eltOnly">
 		<element type="OutcomeType" minOccurs="0"/>
 	</ElementType>
+	<ElementType name="ItemGiven" content="textOnly"/>
 	<ElementType name="OutcomeInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -2229,6 +2230,7 @@
 		<element type="PrereqBuildings" minOccurs="0"/>
 		<element type="ExtraChancePromotions" minOccurs="0"/>
 		<element type="ReplaceOutcomes" minOccurs="0"/>
+		<element type="ItemGiven" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="OutcomeInfos" content="eltOnly">
 		<element type="OutcomeInfo" maxOccurs="*"/>
