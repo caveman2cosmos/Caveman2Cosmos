@@ -189,13 +189,6 @@ struct CivicOptionTypeBool
 	operator int() const {return (int)eCivicOption;}
 	bool operator< (const CivicOptionTypeBool& rhs) const {return (int)eCivicOption < (int)rhs.eCivicOption;}
 };
-struct GameOptionTypeBool
-{	
-	GameOptionTypes eGameOption;
-	bool bBool;
-	operator int() const {return (int)eGameOption;}
-	bool operator< (const GameOptionTypeBool& rhs) const {return (int)eGameOption < (int)rhs.eGameOption;}
-};
 struct HealUnitCombat
 {	
 	UnitCombatTypes eUnitCombat;

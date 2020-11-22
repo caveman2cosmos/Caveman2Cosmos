@@ -625,8 +625,38 @@ public:
 
 	void SetOptionalIntVector(std::vector<int>* aInfos, const wchar_t* szRootTagName) { return SetOptionalVector<int>(aInfos, szRootTagName); }
 
-	void SetOptionalIntVectorWithDelayedResolution(std::vector<int>& aInfos, const wchar_t* szRootTagName);
 	static void CopyNonDefaultsFromIntVector(std::vector<int>& target, const std::vector<int>& source) { return CopyNonDefaultsFromVector<int>(target, source); }
+
+	template <class T>
+	void SetOptionalVectorWithDelayedResolution(std::vector<T>& aInfos, const wchar_t* szRootTagName)
+	{
+		if (TryMoveToXmlFirstChild(szRootTagName))
+		{
+			aInfos.clear();
+			const int iNumSibs = GetXmlChildrenNumber();
+			aInfos.resize(iNumSibs);
+			CvString szTextVal;
+
+			if (0 < iNumSibs)
+			{
+				if (GetChildXmlVal(szTextVal))
+				{
+					for (int j = 0; j < iNumSibs; j++)
+					{
+						GC.addDelayedResolution((int*)&(aInfos[j]), szTextVal);
+						if (!GetNextXmlVal(szTextVal))
+						{
+							break;
+						}
+					}
+
+					MoveToXmlParent();
+				}
+			}
+
+			MoveToXmlParent();
+		}
+	}
 
 	template<class T1, class T2, class T3>
 	void SetOptionalPairVector(T1* aInfos, const wchar_t* szRootTagName)
