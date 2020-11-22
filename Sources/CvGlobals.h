@@ -301,28 +301,34 @@ public:
 	void addDelayedResolution(int* pType, CvString szString);
 	CvString* getDelayedResolution(int* pType);
 	void removeDelayedResolution(int* pType);
+	template<class T>
+	void removeDelayedResolutionVector(const std::vector<T>& vector)
+	{
+		foreach_(T type, vector)
+			removeDelayedResolution((int*)&type);
+	}
 	void copyNonDefaultDelayedResolution(int* pTypeSelf, int* pTypeOther);
 	template<class T>
-	void copyNonDefaultDelayedResolutionVector(std::vector<T>& aTarget, std::vector<T>& aSource)
+	void copyNonDefaultDelayedResolutionVector(std::vector<T>& aTarget, const std::vector<T>& aSource)
 	{
 		std::stack<CvString> aszTemp;
-		std::vector<T>::iterator it = aTarget.end(), it2 = aSource.begin();
+		std::vector<T>::const_iterator it = aTarget.end(), it2 = aSource.begin();
 		while (it > aTarget.begin())
 		{
 			it--;
-			aszTemp.push(*getDelayedResolution(&*it));
-			removeDelayedResolution(&*it);
+			aszTemp.push(*getDelayedResolution((int*)&*it));
+			removeDelayedResolution((int*)&*it);
 		}
 		aTarget.insert(aTarget.end(), aSource.begin(), aSource.end());
 		it = aTarget.begin(); // because insert() invalidates the previous iterator
 		while (aszTemp.size())
 		{
-			addDelayedResolution(&*it++, aszTemp.top());
+			addDelayedResolution((int*)&*it++, aszTemp.top());
 			aszTemp.pop();
 		}
 		while (it2 != aSource.end())
 		{
-			addDelayedResolution(&*it++, *getDelayedResolution(&*it2++));
+			addDelayedResolution((int*)&*it++, *getDelayedResolution((int*)&*it2++));
 		}
 	}
 	void resolveDelayedResolution();
