@@ -105,7 +105,7 @@ public:
 		}
 	}
 
-	const CvItem& getAt(int index) const
+	CvItem& getAt(int index)
 	{
 		FASSERT_BOUNDS(0, numItems(), index)
 		return m_Inventory[index];

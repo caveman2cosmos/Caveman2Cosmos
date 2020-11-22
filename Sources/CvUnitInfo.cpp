@@ -319,8 +319,7 @@ m_bCanAnimalIgnoresBorders(false),
 m_bCanAnimalIgnoresImprovements(false),
 m_bCanAnimalIgnoresCities(false),
 m_bNoNonTypeProdMods(false),
-m_bGatherHerd(false),
-m_eItemGiven(NO_ITEM)
+m_bGatherHerd(false)
 {
 	m_zobristValue = GC.getGame().getSorenRand().getInt();
 }
@@ -408,7 +407,6 @@ CvUnitInfo::~CvUnitInfo()
 	{
 		GC.removeDelayedResolution((int*)&(m_aiTargetUnit[i]));
 	}
-	GC.removeDelayedResolution((int*)&m_eItemGiven);
 }
 
 const wchar_t* CvUnitInfo::getExtraHoverText() const
@@ -4084,7 +4082,6 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_bTriggerBeforeAttack);
 	CheckSum(iSum, m_bNoNonTypeProdMods);
 	CheckSum(iSum, m_bGatherHerd);
-	CheckSum(iSum, m_eItemGiven);
 	//boolean vectors without delayed resolution
 	CheckSumC(iSum, m_aiSubCombatTypes);
 	CheckSumC(iSum, m_aiCureAfflictionTypes);
@@ -4860,9 +4857,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bTriggerBeforeAttack, L"bTriggerBeforeAttack");
 	pXML->GetOptionalChildXmlValByName(&m_bNoNonTypeProdMods, L"bNoNonTypeProdMods");
 	pXML->GetOptionalChildXmlValByName(&m_bGatherHerd, L"bGatherHerd");
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"ItemGiven");
-	GC.addDelayedResolution((int*)&m_eItemGiven, szTextVal);
 
 	//boolean vectors without delayed resolution
 	pXML->SetOptionalIntVector(&m_aiSubCombatTypes, L"SubCombatTypes");
@@ -5956,7 +5950,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if ( m_bTriggerBeforeAttack == bDefault ) m_bTriggerBeforeAttack = pClassInfo->isTriggerBeforeAttack();
 	if ( m_bNoNonTypeProdMods == bDefault ) m_bNoNonTypeProdMods = pClassInfo->isNoNonTypeProdMods();
 	if ( m_bGatherHerd == bDefault ) m_bGatherHerd = pClassInfo->isGatherHerd();
-	GC.copyNonDefaultDelayedResolution((int*)&m_eItemGiven, (int*)&pClassInfo->m_eItemGiven);
 	//boolean vectors without delayed resolution
 	if (getNumSubCombatTypes() == 0)
 	{

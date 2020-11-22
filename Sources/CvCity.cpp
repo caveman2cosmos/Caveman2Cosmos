@@ -1388,6 +1388,49 @@ void CvCity::killTestCheap()
 	GET_PLAYER(getOwner()).deleteCity(getID());
 }
 
+
+void doItems(CvCity& city)
+{
+	const PlayerTypes owner = city.getOwner();
+
+	foreach_(CvUnit* unit, city.plot()->units() | filtered(CvUnit::fn::getOwner() == owner))
+	{
+		CvInventory& inventory = unit->getInventory();
+
+		for (int i = 0, num = inventory.numItems(); i < num; i++)
+		{
+			CvInventory::CvItem& item = inventory.getAt(i);
+			const CvItemInfo& info = item.getInfo();
+
+			foreach_(const BuildingTypes& building, info.getFreeBuildings())
+			{
+				if (city.getNumBuilding(building) <= 0 && city.canConstruct(building, false, false, true))
+				{
+					city.setNumRealBuilding(building, 1);
+					item.amount--;
+					if (item.amount <= 0)
+					{
+						inventory.removeAt(i);
+						return;
+					}
+				}
+			}
+			const UnitTypes freeUnit = info.getFreeUnit();
+			if (freeUnit != NO_UNIT)
+			{
+				CvPlayer& player = GET_PLAYER(owner);
+				while (item.amount > 0)
+				{
+					player.initUnit(freeUnit, city.getX(), city.getY(), (UnitAITypes)GC.getUnitInfo(freeUnit).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+					item.amount--;
+				}
+				inventory.removeAt(i);
+			}
+		}
+	}
+}
+
+
 void CvCity::doTurn()
 {
 	MEMORY_TRACE_FUNCTION();
@@ -1484,6 +1527,8 @@ void CvCity::doTurn()
 
 	//	Auto-build any auto-build buildings we can
 	doAutobuild();
+
+	doItems(*this);
 
 	doProduction(bAllowNoProduction);
 
@@ -1723,51 +1768,6 @@ void CvCity::doAutobuild()
 	}
 }
 
-/*
-bool doItemFreeBuildings(CvCity& city, const std::vector<BuildingTypes>& freeBuildings)
-{
-	foreach_(const BuildingTypes& building, freeBuildings)
-	{
-		if (city.getNumBuilding(building) <= 0 && city.canConstruct(building, false, false, true))
-		{
-			city.setNumRealBuilding(building, 1);
-			return true;
-		}
-	}
-	return false;
-}
-
-void doItems(CvCity& city)
-{
-	const CvInventory* inventory = city.getInventory();
-
-	for (int i = 0, num = inventory.numItems(); i < num; i++)
-	{
-		const CvItem& item = inventory.getAt(i);
-		const CvItemInfo& info = item.getInfo();
-
-		if (doItemFreeBuildings(city, info.getFreeBuildings()))
-		{
-			inventory.removeAt(i);
-			continue;
-		}
-		const UnitTypes freeUnit = info.getFreeUnit();
-		if (freeUnit != NO_UNIT)
-		{
-			CvPlayer& player = GET_PLAYER(city.getOwner());
-			if (player.canTrain(freeUnit))
-			{
-				while (item.amount > 0)
-				{
-					player.initUnit();
-					item.amount--;
-				}
-				inventory.removeAt(i);
-			}
-		}
-	}
-}
-*/
 
 bool CvCity::isCitySelected() const
 {
@@ -25387,12 +25387,4 @@ void CvCity::AI_setPropertyControlBuildingQueued(bool bSet)
 bool CvCity::AI_isPropertyControlBuildingQueued() const
 {
 	return m_bPropertyControlBuildingQueued;
-}
-
-void CvCity::collectItemsFromUnits()
-{
-	foreach_(CvUnit* unit, plot()->units())
-	{
-		unit->getInventory().transferItems(m_Inventory);
-	}
 }
