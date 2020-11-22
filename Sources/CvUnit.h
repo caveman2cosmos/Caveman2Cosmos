@@ -23,6 +23,7 @@ class CvArtInfoUnit;
 #ifdef USE_OLD_PATH_GENERATOR
 class FAStarNode;
 #endif
+class CvInventory;
 
 enum UnitValueFlags
 {
@@ -450,12 +451,6 @@ public:
 	int	m_iExtraTrapDisableUnitCombatType;
 	int	m_iExtraTrapAvoidanceUnitCombatType;
 	int	m_iExtraTrapTriggerUnitCombatType;
-};
-
-struct CvItem
-{
-	ItemTypes type;
-	int16_t amount;
 };
 
 class CvUnit : public CvDLLEntity
@@ -3138,9 +3133,7 @@ public:
 	void defineReligion();
 	ReligionTypes getReligion() const;
 
-	void addItem(ItemTypes type, int amount);
-	int collectItem(ItemTypes e);
-	std::vector<CvItem>& getInventory() { return m_Inventory; }
+	CvInventory& getInventory() { return m_Inventory; }
 
 private:
 	//	static buffers allocated once and used during read and write only
@@ -3211,7 +3204,7 @@ private:
 
 	PlayerTypes m_pPlayerInvestigated;
 
-	std::vector<CvItem> m_Inventory;
+	CvInventory m_Inventory;
 public:
 	//
 	// Algorithm/range helpers

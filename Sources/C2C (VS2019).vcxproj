@@ -418,6 +418,7 @@
     <ClInclude Include="CvInfos.h" />
     <ClInclude Include="CvInfoWater.h" />
     <ClInclude Include="CvInitCore.h" />
+    <ClInclude Include="CvInventory.h" />
     <ClInclude Include="CvMap.h" />
     <ClInclude Include="CvMapGenerator.h" />
     <ClInclude Include="CvMessageControl.h" />

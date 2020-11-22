@@ -11,11 +11,13 @@
 #include "CvBuildingList.h"
 #include "CvUnitList.h"
 #include "CvGameObject.h"
+#include "CvInventory.h"
 
 class CvPlot;
 class CvPlotGroup;
 class CvArea;
 class CvArtInfoBuilding;
+//class CvInventory;
 
 //	KOSHLING - Cache yield values where possible
 #define YIELD_VALUE_CACHING
@@ -1493,6 +1495,9 @@ public:
 	bool isAutomatedCanBuild(BuildTypes eBuild) const; //Exposed to Python
 	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue); //Exposed to Python
 
+	CvInventory& getInventory() { return m_Inventory; }
+	void collectItemsFromUnits();
+
 	virtual bool AI_isEmphasizeAvoidAngryCitizens() const = 0;
 	virtual bool AI_isEmphasizeAvoidUnhealthyCitizens() const = 0;
 
@@ -1997,6 +2002,8 @@ protected:
 	std::vector<BuildingCommerceChange> m_aBuildingCommerceChange;
 	BuildingChangeArray m_aBuildingHappyChange;
 	BuildingChangeArray m_aBuildingHealthChange;
+
+	CvInventory m_Inventory;
 
 	// CACHE: cache frequently used values
 	int* m_aiCachedBestSeeInvisibleUnit;

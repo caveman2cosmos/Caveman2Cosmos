@@ -6,6 +6,7 @@
 #include "CvReachablePlotSet.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
+#include "CvInventory.h"
 
 //Disable this passed in initialization list warning, as it is only stored in the constructor of CvBuildingList and not used
 #pragma warning( disable : 4355 )
@@ -1721,6 +1722,52 @@ void CvCity::doAutobuild()
 		}
 	}
 }
+
+/*
+bool doItemFreeBuildings(CvCity& city, const std::vector<BuildingTypes>& freeBuildings)
+{
+	foreach_(const BuildingTypes& building, freeBuildings)
+	{
+		if (city.getNumBuilding(building) <= 0 && city.canConstruct(building, false, false, true))
+		{
+			city.setNumRealBuilding(building, 1);
+			return true;
+		}
+	}
+	return false;
+}
+
+void doItems(CvCity& city)
+{
+	const CvInventory* inventory = city.getInventory();
+
+	for (int i = 0, num = inventory.numItems(); i < num; i++)
+	{
+		const CvItem& item = inventory.getAt(i);
+		const CvItemInfo& info = item.getInfo();
+
+		if (doItemFreeBuildings(city, info.getFreeBuildings()))
+		{
+			inventory.removeAt(i);
+			continue;
+		}
+		const UnitTypes freeUnit = info.getFreeUnit();
+		if (freeUnit != NO_UNIT)
+		{
+			CvPlayer& player = GET_PLAYER(city.getOwner());
+			if (player.canTrain(freeUnit))
+			{
+				while (item.amount > 0)
+				{
+					player.initUnit();
+					item.amount--;
+				}
+				inventory.removeAt(i);
+			}
+		}
+	}
+}
+*/
 
 bool CvCity::isCitySelected() const
 {
@@ -25340,4 +25387,12 @@ void CvCity::AI_setPropertyControlBuildingQueued(bool bSet)
 bool CvCity::AI_isPropertyControlBuildingQueued() const
 {
 	return m_bPropertyControlBuildingQueued;
+}
+
+void CvCity::collectItemsFromUnits()
+{
+	foreach_(CvUnit* unit, plot()->units())
+	{
+		unit->getInventory().transferItems(m_Inventory);
+	}
 }

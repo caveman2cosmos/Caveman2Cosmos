@@ -8,6 +8,7 @@
 #include "CvTeamAI.h"
 #include "CvRandom.h"
 #include "CvPlotPaging.h"
+#include "CvInventory.h"
 
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
@@ -647,14 +648,14 @@ TeamTypes CvPlot::getTeam() const
 }
 
 #ifdef NOMADIC_START
-void giveItems(CvPlot& plot)
+void spawnItems(CvPlot& plot)
 {
 	const ItemTypes itemGiven = GC.getBonusInfo(plot.getBonusType()).getItemGiven();
 	if (itemGiven != NO_ITEM)
 	{
 		foreach_(CvUnit* unit, plot.units())
 		{
-			unit->addItem(itemGiven, 1);
+			unit->getInventory().addItem(itemGiven, 1);
 		}
 	}
 }

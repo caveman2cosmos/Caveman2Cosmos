@@ -25,6 +25,7 @@ CvOutcome::CvOutcome(): m_eUnitType(NO_UNIT),
 						m_eBonusType(NO_BONUS),
 						m_bUnitToCity(NULL),
 						m_eEventTrigger(NO_EVENTTRIGGER),
+						m_eItemGiven(NO_ITEM),
 						m_pPlotCondition(NULL),
 						m_pUnitCondition(NULL),
 						m_bKill(false),
@@ -55,6 +56,7 @@ CvOutcome::~CvOutcome()
 	GC.removeDelayedResolution((int*)&m_ePromotionType);
 	GC.removeDelayedResolution((int*)&m_eBonusType);
 	GC.removeDelayedResolution((int*)&m_eGPUnitType);
+	GC.removeDelayedResolution((int*)&m_eItemGiven);
 	GC.removeDelayedResolution((int*)&m_eEventTrigger);
 	SAFE_DELETE(m_iChance);
 	SAFE_DELETE(m_bUnitToCity);
@@ -1058,6 +1060,11 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 		szBuffer.append(GC.getUnitInfo(m_eUnitType).getDescription());
 	}
 
+	if (m_eItemGiven != NO_ITEM)
+	{
+		kUnit.getInventory().addItem(m_eItemGiven, 1);
+	}
+
 	// Calculate the actual yields and commerces
 	int aiYield[NUM_YIELD_TYPES];
 	int aiCommerce[NUM_COMMERCE_TYPES];
@@ -1496,6 +1503,8 @@ bool CvOutcome::read(CvXMLLoadUtility* pXML)
 		m_iReduceAnarchyLength = IntExpr::read(pXML);
 		pXML->MoveToXmlParent();
 	}
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"ItemGiven");
+	GC.addDelayedResolution((int*)&m_eItemGiven, szTextVal);
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"EventTrigger");
 	GC.addDelayedResolution((int*)&m_eEventTrigger, szTextVal);
 	pXML->GetOptionalChildXmlValByName(m_szPythonCallback, L"PythonCallback");
@@ -1620,6 +1629,7 @@ void CvOutcome::copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML)
 		pOutcome->m_iReduceAnarchyLength = NULL;
 	}
 
+	GC.copyNonDefaultDelayedResolution((int*)&m_eItemGiven,(int*)&(pOutcome->m_eItemGiven));
 	GC.copyNonDefaultDelayedResolution((int*)&m_eEventTrigger,(int*)&(pOutcome->m_eEventTrigger));
 
 	bool bDefault = true;
@@ -1967,6 +1977,7 @@ void CvOutcome::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_eBonusType);
 	CheckSum(iSum, m_iGPP);
 	CheckSum(iSum, m_eGPUnitType);
+	CheckSum(iSum, m_eItemGiven);
 	for (int i=0; i<NUM_YIELD_TYPES; i++)
 	{
 		if (m_aiYield[i])

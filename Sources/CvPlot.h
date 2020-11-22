@@ -31,6 +31,7 @@ class CvSymbol;
 class CvFlagEntity;
 class CvPathGeneratorPlotInfo;
 class CvPathPlotInfoStore;
+class CvInventory;
 
 typedef bool (*ConstPlotUnitFunc)( const CvUnit* pUnit, int iData1, int iData2, const CvUnit* eUnit);
 typedef bool (*PlotUnitFunc)(CvUnit* pUnit, int iData1, int iData2, const CvUnit* eUnit);
@@ -929,6 +930,8 @@ public:
 
 	bool isEspionageCounterSpy(TeamTypes eTeam) const;
 
+	CvInventory& getInventory() { return m_Inventory; }
+
 	DllExport int getAreaIdForGreatWall() const;
 	DllExport int getSoundScriptId() const;
 	DllExport int get3DAudioScriptFootstepIndex(int iFootstepTag) const;
@@ -997,6 +1000,8 @@ protected:
 	IDInfo m_plotCity;
 	IDInfo m_workingCity;
 	IDInfo m_workingCityOverride;
+
+	CvInventory m_Inventory;
 
 	// Plot danger cache
 	mutable bool m_bIsActivePlayerHasDangerCache;

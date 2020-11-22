@@ -16304,7 +16304,7 @@ int collectResearchFromUnits(const CvPlayer::unit_range& units, PlayerTypes owne
 	{
 		foreach_(CvUnit* plotUnit, loopUnit->plot()->units() | filtered(CvUnit::fn::getOwner() == ownerID))
 		{
-			total += plotUnit->collectItem(GC.getITEM_RESEARCH());
+			total += plotUnit->getInventory().collectItem(GC.getITEM_RESEARCH());
 		}
 	}
 	return total;

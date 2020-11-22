@@ -656,6 +656,9 @@
     <ClInclude Include="CvInitCore.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CvInventory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="CvMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>

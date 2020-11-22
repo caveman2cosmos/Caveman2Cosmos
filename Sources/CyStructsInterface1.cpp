@@ -188,8 +188,8 @@ void CyStructsPythonInterface1()
 		.def_readwrite("sUnitName", &CombatDetails::sUnitName)
 	;
 
-	python::class_<CvItem>("CvItem")
-		.def_readwrite("type", &CvItem::type)
-		.def_readwrite("amount", &CvItem::amount)
+	python::class_<CvInventory::CvItem>("CvItem")
+		.def_readwrite("type", &CvInventory::CvItem::type)
+		.def_readwrite("amount", &CvInventory::CvItem::amount)
 	;
 }

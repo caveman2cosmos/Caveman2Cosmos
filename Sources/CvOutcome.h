@@ -73,6 +73,7 @@ protected:
 	int m_iPopulationBoost;
 	IntExpr* m_iReduceAnarchyLength;
 	EventTriggerTypes m_eEventTrigger;
+	ItemTypes m_eItemGiven;
 	BoolExpr* m_pPlotCondition;
 	BoolExpr* m_pUnitCondition;
 	CvString m_szPythonCallback;
