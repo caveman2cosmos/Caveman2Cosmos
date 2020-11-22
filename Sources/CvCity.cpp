@@ -6255,6 +6255,17 @@ int CvCity::getRevIndexPercentAnger(int iExtra) const
 	return iAnger * GC.getPERCENT_ANGER_DIVISOR() / 100;
 }
 
+int CvCity::getAngerPercent(const int iExtra) const
+{
+	return
+	(
+		getHurryPercentAnger(iExtra) +
+		getConscriptPercentAnger(iExtra) +
+		getDefyResolutionPercentAnger(iExtra) +
+		getWarWearinessPercentAnger()
+	);
+}
+
 int CvCity::getRevSuccessHappiness() const
 {
 	if (getRevSuccessTimer() == 0)
@@ -14045,7 +14056,7 @@ int CvCity::getNumBonuses(BonusTypes eIndex) const
 
 bool CvCity::hasBonus(BonusTypes eIndex) const
 {
-	return (getNumBonuses(eIndex) > 0);
+	return getNumBonuses(eIndex) > 0;
 }
 
 void CvCity::startDeferredBonusProcessing()
@@ -22780,74 +22791,65 @@ void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeople
 		aiCommerces[iI] = 0;
 	}
 	int iGenericSpecialist = GC.getDEFAULT_SPECIALIST();
-
-	bool bAvoidGrowth = false;
-	bool bIgnoreGrowth = false;
 	int iNumRemoved = 0;
 	int iNumSpecialistsRemoved = 0;
 
 	// if we are using more specialists than the free ones we get
 	while (getAssignedSpecialistCount() < iNumRemoved && iNumRemoved < iNumCitizens)
 	{
-		// does generic 'citizen' specialist exist?
-		if (iGenericSpecialist != NO_SPECIALIST)
+		// Does generic 'citizen' specialist exist?
+		if (iGenericSpecialist != NO_SPECIALIST
+		// Do we have at least one more generic citizen than we are forcing?
+		&& getSpecialistCount((SpecialistTypes)iGenericSpecialist) > getForceSpecialistCount((SpecialistTypes)iGenericSpecialist))
 		{
-			// do we have at least one more generic citizen than we are forcing?
-			if (getSpecialistCount((SpecialistTypes)iGenericSpecialist) > getForceSpecialistCount((SpecialistTypes)iGenericSpecialist))
-			{
-				paeRemovedSpecailists[iNumRemoved] = (SpecialistTypes)(iGenericSpecialist);
-				iNumRemoved++;
-				iNumSpecialistsRemoved++;
-			}
+			paeRemovedSpecailists[iNumRemoved] = (SpecialistTypes)(iGenericSpecialist);
+			iNumRemoved++;
+			iNumSpecialistsRemoved++;
 		}
 	}
+	bool bAvoidGrowth = false;
+	bool bIgnoreGrowth = false;
 
 	while (iNumRemoved < iNumCitizens)
 	{
 		int iWorstValue = MAX_INT;
 		SpecialistTypes eWorstSpecialist = NO_SPECIALIST;
-		int iWorstPlot = -1;
 
 		// if we are using more specialists than the free ones we get
 		if (getAssignedSpecialistCount() < iNumSpecialistsRemoved)
 		{
 			for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 			{
+				if (getSpecialistCount((SpecialistTypes)iI) > getForceSpecialistCount((SpecialistTypes)iI))
 				{
-					if (getSpecialistCount((SpecialistTypes)iI) > getForceSpecialistCount((SpecialistTypes)iI))
-					{
-						int iValue = AI_specialistValue(((SpecialistTypes)iI), bAvoidGrowth, /*bRemove*/ true);
+					const int iValue = AI_specialistValue(((SpecialistTypes)iI), bAvoidGrowth, /*bRemove*/ true);
 
-						if (iValue < iWorstValue)
-						{
-							iWorstValue = iValue;
-							eWorstSpecialist = ((SpecialistTypes)iI);
-							iWorstPlot = -1;
-						}
+					if (iValue < iWorstValue)
+					{
+						iWorstValue = iValue;
+						eWorstSpecialist = (SpecialistTypes)iI;
 					}
 				}
 			}
 		}
 
 		// check all the plots we working
+		int iWorstPlot = -1;
 		for (int plotIdx = 0; plotIdx < NUM_CITY_PLOTS; plotIdx++)
 		{
-			if (plotIdx != CITY_HOME_PLOT)
+			if (plotIdx != CITY_HOME_PLOT && isWorkingPlot(plotIdx) && !abRemovedPlots[plotIdx])
 			{
-				if (isWorkingPlot(plotIdx) && !abRemovedPlots[plotIdx])
+				const CvPlot* pLoopPlot = getCityIndexPlot(plotIdx);
+
+				if (pLoopPlot != NULL)
 				{
-					const CvPlot* pLoopPlot = getCityIndexPlot(plotIdx);
+					const int iValue = AI_plotValue(pLoopPlot, bAvoidGrowth, /*bRemove*/ true, /*bIgnoreFood*/ false, bIgnoreGrowth);
 
-					if (pLoopPlot != NULL)
+					if (iValue < iWorstValue)
 					{
-						int iValue = AI_plotValue(pLoopPlot, bAvoidGrowth, /*bRemove*/ true, /*bIgnoreFood*/ false, bIgnoreGrowth);
-
-						if (iValue < iWorstValue)
-						{
-							iWorstValue = iValue;
-							eWorstSpecialist = NO_SPECIALIST;
-							iWorstPlot = plotIdx;
-						}
+						iWorstValue = iValue;
+						eWorstSpecialist = NO_SPECIALIST;
+						iWorstPlot = plotIdx;
 					}
 				}
 			}
@@ -22864,10 +22866,7 @@ void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeople
 			abRemovedPlots[iWorstPlot] = true;
 			iNumRemoved++;
 		}
-		else
-		{
-			break;
-		}
+		else break;
 	}
 
 	for (int iI = 0; iI < iNumCitizens; iI++)

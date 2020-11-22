@@ -4473,9 +4473,9 @@ void CvPlayer::updateCommerce(CommerceTypes eCommerce, bool bForce) const
 
 void CvPlayer::setCommerceDirty(CommerceTypes eIndex, bool bPlayerOnly)
 {
-	if ( eIndex == NO_COMMERCE )
+	if (eIndex == NO_COMMERCE)
 	{
-		for(int iI = 0; iI < NUM_COMMERCE_TYPES; iI++ )
+		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
 			setCommerceDirty((CommerceTypes)iI, bPlayerOnly);
 		}
@@ -25126,18 +25126,7 @@ int CvPlayer::getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const
 
 	const ReligionTypes eReligion = GC.getGame().getVoteSourceReligion(eVoteSource);
 
-	if (NO_VOTE == eVote)
-	{
-		if (NO_RELIGION != eReligion)
-		{
-			iVotes = (int64_t)getReligionPopulation(eReligion);
-		}
-		else
-		{
-			iVotes = (int64_t)getTotalPopulation();
-		}
-	}
-	else
+	if (eVote != NO_VOTE)
 	{
 		if (!GC.getVoteInfo(eVote).isVoteSourceType(eVoteSource))
 		{
@@ -25157,22 +25146,13 @@ int CvPlayer::getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const
 			{
 				iVotes = (int64_t)getHasReligionCount(eReligion);
 			}
-			else
-			{
-				iVotes = (int64_t)getNumCities();
-			}
+			else iVotes = (int64_t)getNumCities();
 		}
-		else
+		else if (NO_RELIGION == eReligion)
 		{
-			if (NO_RELIGION == eReligion)
-			{
-				iVotes = (int64_t)getTotalPopulation();
-			}
-			else
-			{
-				iVotes = (int64_t)getReligionPopulation(eReligion);
-			}
+			iVotes = (int64_t)getTotalPopulation();
 		}
+		else iVotes = (int64_t)getReligionPopulation(eReligion);
 
 		if (NO_RELIGION != eReligion && getStateReligion() == eReligion)
 		{
@@ -25180,11 +25160,17 @@ int CvPlayer::getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const
 			iVotes /= 100;
 		}
 	}
+	else if (NO_RELIGION != eReligion)
+	{
+		iVotes = (int64_t)getReligionPopulation(eReligion);
+	}
+	else iVotes = (int64_t)getTotalPopulation();
+
 	if (iVotes > MAX_INT)
 	{
-		iVotes = MAX_INT;
+		return MAX_INT;
 	}
-	return (int)iVotes;
+	return static_cast<int>(iVotes);
 }
 
 bool CvPlayer::canDoResolution(VoteSourceTypes eVoteSource, const VoteSelectionSubData& kData) const
@@ -25429,33 +25415,22 @@ void CvPlayer::setEndorsedResolution(VoteSourceTypes eVoteSource, const VoteSele
 
 bool CvPlayer::isFullMember(VoteSourceTypes eVoteSource) const
 {
-	if (NO_RELIGION != GC.getGame().getVoteSourceReligion(eVoteSource))
-	{
-		if (getStateReligion() != GC.getGame().getVoteSourceReligion(eVoteSource))
-		{
-			return false;
-		}
-	}
+	if (!isLoyalMember(eVoteSource)
 
-	if (NO_CIVIC != GC.getVoteSourceInfo(eVoteSource).getCivic())
-	{
-		if (!isCivic((CivicTypes)GC.getVoteSourceInfo(eVoteSource).getCivic()))
-		{
-			return false;
-		}
-	}
+	|| NO_CIVIC != GC.getVoteSourceInfo(eVoteSource).getCivic()
+	&& !isCivic((CivicTypes)GC.getVoteSourceInfo(eVoteSource).getCivic())
 
-	if (!isLoyalMember(eVoteSource))
+	|| NO_RELIGION != GC.getGame().getVoteSourceReligion(eVoteSource)
+	&& getStateReligion() != GC.getGame().getVoteSourceReligion(eVoteSource))
 	{
 		return false;
 	}
-
 	return isVotingMember(eVoteSource);
 }
 
 bool CvPlayer::isVotingMember(VoteSourceTypes eVoteSource) const
 {
-	return (getVotes(NO_VOTE, eVoteSource) > 0);
+	return getVotes(NO_VOTE, eVoteSource) > 0;
 }
 
 PlayerTypes CvPlayer::pickConqueredCityOwner(const CvCity& kCity) const

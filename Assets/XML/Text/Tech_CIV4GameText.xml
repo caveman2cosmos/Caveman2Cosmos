@@ -1719,14 +1719,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARCHITECTURE_QUOTE</Tag>
-		<English>"Architecture is frozen music." - Friedrich von Schelling
-		[NEWLINE]"Architecture aims at Eternity." - Christopher Wren
-		[NEWLINE]"Architecture has recorded the great ideas of the human race. Not only every religious symbol, but every human thought has its page in that vast book." - Victor Hugo
-		</English>
-		<French>"L'Architecture est de la musique figée." - Friedrich von Schelling
-		[NEWLINE]"L'Architecture vise l'Eternité." - Christopher Wren
-		[NEWLINE]"L'Architecture a enregistré les grandes idées de la race humaine. Pas seulement chaque symbole religieux, mais chaque pensée humaine a sa page dans ce vaste ouvrage." - Victor Hugo
-		</French>
+		<English>"Architecture aims at Eternity." - Christopher Wren</English>
+		<French>"L'Architecture vise l'Eternité." - Christopher Wren</French>
 		<Polish>"Architektura to zamarznięta muzyka." - Friedrich von Schelling</Polish>
 	</TEXT>
 	<TEXT>
@@ -23488,9 +23482,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SURVEYING_QUOTE</Tag>
-		<English>"When William the Conqueror commissioned a great survey of his English realm at Gloucester in 1085, the result was a work so thorough, fair, dispassionate, and wide-ranging that it seemed to the succeeding generations to have come from another world." - James Buchan</English>
-		<French>"Lorsque Guillaume le Conquérant a commandé une grande enquête de son royaume anglais à Gloucester en 1085, le résultat a été un travail de manière approfondie, équitable, objective et large qu'il semblait aux générations futures d'avoir venir d'un autre monde." - James Buchan</French>
-		<Polish>"Kiedy Wilhelm Zwycięzca zarządził wielki spis swojego, angielskiego królestwa w Gloucester w 1085 to rezultaty były tak przejrzyste, sprawiedliwe i wszechstronne, że następnym pokoleniom wydały się jak by pochodziły z innego świata." - James Buchan</Polish>
+		<English>"Old surveyors never die, they just seek new horizons." - Unknown</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SURVEYING_STRATEGY</Tag>
@@ -24263,8 +24255,8 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TORTURE_QUOTE</Tag>
-		<English>"Of pain you could wish only one thing: that it should stop. Nothing in the world was so bad as physical pain. In the face of pain there are no heroes". - George Orwell</English>
-		<French>De la douleur, vous ne pouvez souhaiter qu'une seule chose: qu'elle cesse. Rien au monde n'était aussi mauvais que la douleur physique. Face à la douleur, il n'y a pas de héros. - George Orwell</French>
+		<English>"Of pain you could wish only one thing: that it should stop." - George Orwell</English>
+		<French>De la douleur, vous ne pouvez souhaiter qu'une seule chose: qu'elle cesse. - George Orwell</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TORTURE_STRATEGY</Tag>
@@ -25326,8 +25318,8 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WARRANTS_AND_DECREES_QUOTE</Tag>
-		<English>"Kings don't beg, they decree. They have only one destiny and that's to reign. God has made you king. Reign and rule, refuse to beg!"- Chris Oyakhilome</English>
-		<French>"Les rois ne mendient pas, ils décrètent. Ils n'ont qu'un seul destin et c'est de régner. Dieu vous a fait roi. Règnez et gouvernez, mais refusez de mendier!"- Chris Oyakhilome</French>
+		<English>"Kings don't beg, they decree. They have only one destiny and that's to reign." - Chris Oyakhilome</English>
+		<French>"Les rois ne mendient pas, ils décrètent. Ils n'ont qu'un seul destin et c'est de régner."- Chris Oyakhilome</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WARRANTS_AND_DECREES_STRATEGY</Tag>

@@ -10740,7 +10740,7 @@
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/wooden_tower/wooden_tower_btn.dds</Button>
+			<Button>Art/tower/art/wooden_tower.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_WOODEN_WATCHTOWER_KILL</Type>
@@ -10754,7 +10754,7 @@
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/wooden_tower/wooden_tower_btn.dds</Button>
+			<Button>Art/tower/art/wooden_tower.dds</Button>
 		</BuildInfo>
 		<!--BuildInfo>
 			<Type>BUILD_STONE_WATCHTOWER</Type>
