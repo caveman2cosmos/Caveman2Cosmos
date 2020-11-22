@@ -183,31 +183,10 @@ void CvGame::init(HandicapTypes eHandicap)
 	//TB GameOption compatibility enforcement project
 	for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
 	{
-		GameOptionTypes eGameOption = ((GameOptionTypes)iI);
+		const GameOptionTypes eGameOption = ((GameOptionTypes)iI);
 		if (isOption(eGameOption))
 		{
-			if (GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOnTypes() > 0)
-			{
-				for (int iJ = 0; iJ < GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOnTypes(); iJ++)
-				{
-					GameOptionTypes eGameOptionMustOn = ((GameOptionTypes)GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOnType(iJ).eGameOption);
-					if (GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOnType(iJ).bBool && !isOption(eGameOptionMustOn))
-					{
-						setOption(eGameOptionMustOn, true);
-					}
-				}
-			}
-			if (GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOffTypes() > 0)
-			{
-				for (int iJ = 0; iJ < GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOffTypes(); iJ++)
-				{
-					GameOptionTypes eGameOptionMustOff = ((GameOptionTypes)GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOffType(iJ).eGameOption);
-					if (GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOffType(iJ).bBool && isOption(eGameOptionMustOff))
-					{
-						setOption(eGameOptionMustOff, false);
-					}
-				}
-			}
+			enforceOptionCompatibility(eGameOption);
 		}
 	}
 
@@ -2356,33 +2335,12 @@ void CvGame::update()
 		}
 		GC.getMap().updateSight(true, false);
 
-		for (int iI= 0; iI < NUM_GAMEOPTION_TYPES; iI++)
+		for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
 		{
-			GameOptionTypes eGameOption = ((GameOptionTypes)iI);
+			const GameOptionTypes eGameOption = ((GameOptionTypes)iI);
 			if (isOption(eGameOption))
 			{
-				if (GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOnTypes() > 0)
-				{
-					for (int iJ = 0; iJ < GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOnTypes(); iJ++)
-					{
-						GameOptionTypes eGameOptionMustOn = ((GameOptionTypes)GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOnType(iJ).eGameOption);
-						if (GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOnType(iJ).bBool && !isOption(eGameOptionMustOn))
-						{
-							setOption(eGameOptionMustOn, true);
-						}
-					}
-				}
-				if (GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOffTypes() > 0)
-				{
-					for (int iJ = 0; iJ < GC.getGameOptionInfo(eGameOption).getNumEnforcesGameOptionOffTypes(); iJ++)
-					{
-						GameOptionTypes eGameOptionMustOff = ((GameOptionTypes)GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOffType(iJ).eGameOption);
-						if (GC.getGameOptionInfo(eGameOption).isEnforcesGameOptionOffType(iJ).bBool && isOption(eGameOptionMustOff))
-						{
-							setOption(eGameOptionMustOff, false);
-						}
-					}
-				}
+				enforceOptionCompatibility(eGameOption);
 			}
 		}
 
@@ -4524,48 +4482,43 @@ bool CvGame::isValidVoteSelection(VoteSourceTypes eVoteSource, const VoteSelecti
 		bool bOpenWithEveryone = true;
 		for (int iTeam1 = 0; iTeam1 < MAX_PC_TEAMS; ++iTeam1)
 		{
-			if (GET_TEAM((TeamTypes)iTeam1).isFullMember(eVoteSource))
+			const CvTeam& team1 = GET_TEAM((TeamTypes)iTeam1);
+
+			if (team1.isFullMember(eVoteSource))
 			{
 				for (int iTeam2 = iTeam1 + 1; iTeam2 < MAX_PC_TEAMS; ++iTeam2)
 				{
-					const CvTeam& kTeam2 = GET_TEAM((TeamTypes)iTeam2);
-
-					if (kTeam2.isFullMember(eVoteSource))
+					if (!team1.isOpenBorders((TeamTypes)iTeam2)
+					&& GET_TEAM((TeamTypes)iTeam2).isFullMember(eVoteSource))
 					{
-						if (!kTeam2.isOpenBorders((TeamTypes)iTeam1))
-						{
-							bOpenWithEveryone = false;
-							break;
-						}
+						bOpenWithEveryone = false;
+						break;
 					}
 				}
+				if (!bOpenWithEveryone) break;
 			}
 		}
-		if (bOpenWithEveryone)
-		{
-			return false;
-		}
+		if (bOpenWithEveryone) return false;
 	}
 	else if (GC.getVoteInfo(kData.eVote).isDefensivePact())
 	{
 		bool bPactWithEveryone = true;
 		for (int iTeam1 = 0; iTeam1 < MAX_PC_TEAMS; ++iTeam1)
 		{
-			if (GET_TEAM((TeamTypes)iTeam1).isFullMember(eVoteSource))
+			const CvTeam& team1 = GET_TEAM((TeamTypes)iTeam1);
+
+			if (team1.isFullMember(eVoteSource))
 			{
 				for (int iTeam2 = iTeam1 + 1; iTeam2 < MAX_PC_TEAMS; ++iTeam2)
 				{
-					const CvTeam& kTeam2 = GET_TEAM((TeamTypes)iTeam2);
-
-					if (kTeam2.isFullMember(eVoteSource))
+					if (!team1.isDefensivePact((TeamTypes)iTeam2)
+					&& GET_TEAM((TeamTypes)iTeam2).isFullMember(eVoteSource))
 					{
-						if (!kTeam2.isDefensivePact((TeamTypes)iTeam1))
-						{
-							bPactWithEveryone = false;
-							break;
-						}
+						bPactWithEveryone = false;
+						break;
 					}
 				}
+				if (!bPactWithEveryone) break;
 			}
 		}
 		if (bPactWithEveryone)
@@ -4588,7 +4541,6 @@ bool CvGame::isValidVoteSelection(VoteSourceTypes eVoteSource, const VoteSelecti
 		}
 
 		bool bValid = false;
-
 		for (int iTeam2 = 0; iTeam2 < MAX_PC_TEAMS; ++iTeam2)
 		{
 			if (atWar(kPlayer.getTeam(), (TeamTypes)iTeam2))
@@ -4600,7 +4552,6 @@ bool CvGame::isValidVoteSelection(VoteSourceTypes eVoteSource, const VoteSelecti
 				}
 			}
 		}
-
 		if (!bValid)
 		{
 			return false;
@@ -4673,13 +4624,11 @@ bool CvGame::isValidVoteSelection(VoteSourceTypes eVoteSource, const VoteSelecti
 			bool bValid = false;
 			for (int iTeam2 = 0; iTeam2 < MAX_PC_TEAMS; ++iTeam2)
 			{
-				if (atWar(kPlayer.getTeam(), (TeamTypes)iTeam2))
+				if (atWar(kPlayer.getTeam(), (TeamTypes)iTeam2)
+				&& GET_TEAM((TeamTypes)iTeam2).isFullMember(eVoteSource))
 				{
-					if (GET_TEAM((TeamTypes)iTeam2).isFullMember(eVoteSource))
-					{
-						bValid = true;
-						break;
-					}
+					bValid = true;
+					break;
 				}
 			}
 
@@ -5050,40 +4999,32 @@ void CvGame::setPausePlayer(PlayerTypes eNewValue)
 
 UnitTypes CvGame::getBestLandUnit() const
 {
-	if ( m_eBestLandUnit == NO_UNIT )
+	if (m_eBestLandUnit == NO_UNIT)
 	{
-		//	This can occur after a load in which the previous best land unit was deleted from the assets
-		//	Just recalculate on demand
-		for( int iI = 0; iI < MAX_PLAYERS; iI++)
+		// This can occur after a load in which the previous best land unit was deleted from the assets 
+		// Just recalculate on demand
+		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if ( GET_PLAYER((PlayerTypes)iI).isAlive() )
+			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
 				foreach_(const CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)iI).units())
 				{
-					if (pLoopUnit->baseCombatStr() > 0)
+					if (pLoopUnit->baseCombatStr() > 0
+					&& (m_eBestLandUnit == NO_UNIT || pLoopUnit->baseCombatStrNonGranular() > getBestLandUnitCombat()))
 					{
-						if (m_eBestLandUnit == NO_UNIT || (pLoopUnit->baseCombatStrNonGranular() > getBestLandUnitCombat()))
-						{
-							m_eBestLandUnit = pLoopUnit->getUnitType();
-						}
+						m_eBestLandUnit = pLoopUnit->getUnitType();
 					}
 				}
 			}
 		}
 	}
-
 	return m_eBestLandUnit;
 }
 
 
 int CvGame::getBestLandUnitCombat() const
 {
-	if (getBestLandUnit() == NO_UNIT)
-	{
-		return 1;
-	}
-
-	return std::max(1, GC.getUnitInfo(getBestLandUnit()).getCombat());
+	return getBestLandUnit() == NO_UNIT ? 1 : std::max(1, GC.getUnitInfo(getBestLandUnit()).getCombat());
 }
 
 
@@ -5694,7 +5635,6 @@ void CvGame::makeCorporationFounded(CorporationTypes eIndex, PlayerTypes ePlayer
 		m_paiCorporationGameTurnFounded[eIndex] = getGameTurn();
 
 		CvEventReporter::getInstance().corporationFounded(eIndex, ePlayer);
-
 	}
 }
 
@@ -12526,4 +12466,25 @@ bool CvGame::isValidByGameOption(const CvUnitCombatInfo& info) const
 int CvGame::SorenRand::operator()(const int maxVal) const
 {
 	return GC.getGame().getSorenRandNum(maxVal, logMsg);
+}
+
+
+void CvGame::enforceOptionCompatibility(GameOptionTypes eOption)
+{
+	const CvGameOptionInfo& info = GC.getGameOptionInfo(eOption);
+
+	foreach_(const GameOptionTypes& eOptionMustOn, info.getEnforcesGameOptionOnTypes())
+	{
+		if (!isOption(eOptionMustOn))
+		{
+			setOption(eOptionMustOn, true);
+		}
+	}
+	foreach_(const GameOptionTypes& eOptionMustOff, info.getEnforcesGameOptionOffTypes())
+	{
+		if (isOption(eOptionMustOff))
+		{
+			setOption(eOptionMustOff, false);
+		}
+	}
 }

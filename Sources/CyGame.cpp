@@ -738,6 +738,8 @@ bool CyGame::isOption(int /*GameOptionTypes*/ eIndex) const
 void CyGame::setOption(int /*GameOptionTypes*/ eIndex, bool bEnabled)
 {
 	m_pGame.setOption((GameOptionTypes)eIndex, bEnabled);
+	if (bEnabled)
+		m_pGame.enforceOptionCompatibility((GameOptionTypes)eIndex);
 }
 
 bool CyGame::isMPOption(int /*MultiplayerOptionTypes*/ eIndex) const

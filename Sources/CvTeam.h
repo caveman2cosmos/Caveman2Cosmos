@@ -75,7 +75,7 @@ public:
 	int getAnyWarPlanCount(bool bIgnoreMinors) const; // Exposed to Python
 	int getChosenWarCount(bool bIgnoreMinors) const; // Exposed to Python
 	int getHasMetCivCount(bool bIgnoreMinors) const; // Exposed to Python
-	bool hasMetHuman() const; // Exposed to Python
+	bool hasMetAnyCiv(bool bIgnoreMinors) const;
 	int getDefensivePactCount(TeamTypes eTeam = NO_TEAM) const; // Exposed to Python
 	int getVassalCount(TeamTypes eTeam = NO_TEAM) const;
 	bool isAVassal() const; // Exposed to Python

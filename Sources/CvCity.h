@@ -413,10 +413,11 @@ public:
 	int getNoMilitaryPercentAnger() const; // Exposed to Python
 	int getCulturePercentAnger() const; // Exposed to Python
 	int getReligionPercentAnger() const; // Exposed to Python
-	int getHurryPercentAnger(int iExtra = 0) const; // Exposed to Python
-	int getConscriptPercentAnger(int iExtra = 0) const; // Exposed to Python
+	int getHurryPercentAnger(int iExtra = 0) const;
+	int getConscriptPercentAnger(int iExtra = 0) const;
 	int getDefyResolutionPercentAnger(int iExtra = 0) const;
 	int getWarWearinessPercentAnger() const; // Exposed to Python
+	int getAngerPercent(const int iExtra = 0) const;
 
 	int getRevRequestPercentAnger(int iExtra = 0) const; // Exposed to Python
 	int getRevIndexPercentAnger(int iExtra = 0) const; // Exposed to Python
