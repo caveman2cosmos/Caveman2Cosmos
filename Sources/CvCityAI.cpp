@@ -2,6 +2,7 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvCityAI.h"
 #include "CvGlobals.h"
 #include "CvReachablePlotSet.h"
 #include "CvPlayerAI.h"

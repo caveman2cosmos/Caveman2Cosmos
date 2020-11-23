@@ -2,13 +2,13 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 #include "CyPlot.h"
 #include "CyUnit.h"
-
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
 

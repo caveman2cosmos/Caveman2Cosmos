@@ -11,6 +11,7 @@
 #include "CvMap.h"
 
 class CvInternalGlobals;
+class CvCity;
 
 enum ViewportMode
 {

@@ -9,17 +9,18 @@
 #include "CvEnums.h"
 #include "CvStructs.h"  // don't disable! used for modules
 #include "CvGameObject.h"
-#include "CvCity.h"
 #include <map>
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
 class cvInternalGlobals;
-class CvPlot;
 class CvArea;
-class CvUnitInfo;
+class CvCity;
+class CvPlot;
 class CvSelectionGroup;
 class CvArtInfoUnit;
+class CvUnitInfo;
+class CvUnitSelectionCriteria;
 #ifdef USE_OLD_PATH_GENERATOR
 class FAStarNode;
 #endif

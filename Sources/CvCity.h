@@ -7,7 +7,6 @@
 
 #include "CvDLLEntity.h"
 #include "LinkedList.h"
-#include "CvInfos.h"
 #include "CvBuildingList.h"
 #include "CvUnitList.h"
 #include "CvGameObject.h"

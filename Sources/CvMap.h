@@ -12,10 +12,10 @@
 //-----------------------------------------------------------------------------
 //
 
-
 #include "CvPathGenerator.h"
 #include "CvMapInterfaceBase.h"
 
+class CvCity;
 class CvPlotGroup;
 class CvViewport;
 

@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
 #include "CvViewport.h"
 
 CvViewport::CvViewport(CvMap* pMap, bool bIsFullMapContext) 

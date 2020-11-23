@@ -5,9 +5,9 @@
 //
 
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvMapExternal.h"
-
 
 CvMapExternal::CvMapExternal() : m_proxiedMap(NULL),
 								 m_bMapCoordinates(false)

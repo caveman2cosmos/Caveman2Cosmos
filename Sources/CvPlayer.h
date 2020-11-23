@@ -15,9 +15,14 @@
 #include "CvGameObject.h"
 #include "CvBuildLists.h"
 
+class CvCity;
+class CvPlot;
+class CvPlotGroup;
 class CvDiploParameters;
 class CvPopupInfo;
 class CvEventTriggerInfo;
+class CvUnitSelectionCriteria;
+class CvUpgradeCache;
 
 #define	UNIT_BIRTHMARK_TEMP_UNIT	20000
 
@@ -38,10 +43,6 @@ typedef stdext::hash_map<EventTypes, EventTriggeredData> CvEventMap;
 typedef std::vector< std::pair<UnitCombatTypes, PromotionTypes> > UnitCombatPromotionArray;
 typedef std::vector< std::pair<UnitTypes, PromotionTypes> > UnitPromotionArray;
 typedef std::vector< std::pair<CivilizationTypes, LeaderHeadTypes> > CivLeaderArray;
-
-//	Forward declaration
-class CvUpgradeCache;
-
 typedef std::vector<TechTypes> techPath;
 
 class CvPlayer

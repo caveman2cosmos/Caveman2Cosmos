@@ -1,12 +1,12 @@
 // selectionGroup.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvReachablePlotSet.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
-
 #include "CvDLLFAStarIFaceBase.h"
 
 const CvSelectionGroup* CvSelectionGroup::m_pCachedMovementGroup = nullptr;
