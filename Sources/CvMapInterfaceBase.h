@@ -12,9 +12,9 @@
 //-----------------------------------------------------------------------------
 //
 
-#include "CvArea.h"
 #include "CvPlot.h"
 
+class CvArea;
 class CvCity;
 
 //

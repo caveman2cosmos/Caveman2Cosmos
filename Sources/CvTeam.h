@@ -12,7 +12,6 @@ class CvProperties;
 
 class CvTeam
 {
-
 public:
 	CvTeam();
 	virtual ~CvTeam();

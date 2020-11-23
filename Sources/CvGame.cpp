@@ -1,6 +1,7 @@
 // game.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
@@ -11,7 +12,6 @@
 #include "CvReplayInfo.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
-
 #include "CvDLLEntityIFaceBase.h"
 
 //	Koshling - save game compatibility between (most) builds

@@ -8,6 +8,7 @@
 #include "CvReachablePlotSet.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
+#include "CvArea.h"
 #include "CvDLLFAStarIFaceBase.h"
 
 PlayerTypes	CvUnitAI::m_cachedPlayer = NO_PLAYER;

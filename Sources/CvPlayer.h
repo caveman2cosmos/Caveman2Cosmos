@@ -15,6 +15,7 @@
 #include "CvGameObject.h"
 #include "CvBuildLists.h"
 
+class CvArea;
 class CvCity;
 class CvPlot;
 class CvPlotGroup;
