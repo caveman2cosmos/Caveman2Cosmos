@@ -1754,6 +1754,7 @@
 	<ElementType name="iPopulationBoost" content="textOnly" dt:type="int"/>
 	<ElementType name="iReduceAnarchyLength"/>
 	<ElementType name="EventTrigger" content="textOnly"/>
+	<ElementType name="ItemGiven" content="textOnly"/>
 	<ElementType name="PlotCondition"/>
 	<ElementType name="UnitCondition"/>
 	<ElementType name="PythonCallback"/>
@@ -1788,6 +1789,7 @@
 		<element type="Commerces" minOccurs="0"/>
 		<element type="Properties" minOccurs="0"/>
 		<element type="EventTrigger" minOccurs="0"/>
+		<element type="ItemGiven" minOccurs="0"/>
 		<element type="PlotCondition" minOccurs="0"/>
 		<element type="UnitCondition" minOccurs="0"/>
 		<element type="Python" minOccurs="0"/>
