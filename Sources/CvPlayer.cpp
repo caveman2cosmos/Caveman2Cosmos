@@ -1,13 +1,16 @@
 // player.cpp
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
-#include "CvGameTextMgr.h"
+#include "CvBuildingInfo.h"
 #include "CvDiploParameters.h"
+#include "CvGameTextMgr.h"
+#include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 #include "CyCity.h"
+
+#include "CvDLLFAStarIFaceBase.h"
 
 //	Koshling - save flag indicating this player has no data in the save as they have never been alive
 #define	PLAYER_UI_FLAG_OMITTED 2
@@ -4470,9 +4473,9 @@ void CvPlayer::updateCommerce(CommerceTypes eCommerce, bool bForce) const
 
 void CvPlayer::setCommerceDirty(CommerceTypes eIndex, bool bPlayerOnly)
 {
-	if ( eIndex == NO_COMMERCE )
+	if (eIndex == NO_COMMERCE)
 	{
-		for(int iI = 0; iI < NUM_COMMERCE_TYPES; iI++ )
+		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
 			setCommerceDirty((CommerceTypes)iI, bPlayerOnly);
 		}
@@ -25100,18 +25103,7 @@ int CvPlayer::getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const
 
 	const ReligionTypes eReligion = GC.getGame().getVoteSourceReligion(eVoteSource);
 
-	if (NO_VOTE == eVote)
-	{
-		if (NO_RELIGION != eReligion)
-		{
-			iVotes = (int64_t)getReligionPopulation(eReligion);
-		}
-		else
-		{
-			iVotes = (int64_t)getTotalPopulation();
-		}
-	}
-	else
+	if (eVote != NO_VOTE)
 	{
 		if (!GC.getVoteInfo(eVote).isVoteSourceType(eVoteSource))
 		{
@@ -25131,22 +25123,13 @@ int CvPlayer::getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const
 			{
 				iVotes = (int64_t)getHasReligionCount(eReligion);
 			}
-			else
-			{
-				iVotes = (int64_t)getNumCities();
-			}
+			else iVotes = (int64_t)getNumCities();
 		}
-		else
+		else if (NO_RELIGION == eReligion)
 		{
-			if (NO_RELIGION == eReligion)
-			{
-				iVotes = (int64_t)getTotalPopulation();
-			}
-			else
-			{
-				iVotes = (int64_t)getReligionPopulation(eReligion);
-			}
+			iVotes = (int64_t)getTotalPopulation();
 		}
+		else iVotes = (int64_t)getReligionPopulation(eReligion);
 
 		if (NO_RELIGION != eReligion && getStateReligion() == eReligion)
 		{
@@ -25154,11 +25137,17 @@ int CvPlayer::getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const
 			iVotes /= 100;
 		}
 	}
+	else if (NO_RELIGION != eReligion)
+	{
+		iVotes = (int64_t)getReligionPopulation(eReligion);
+	}
+	else iVotes = (int64_t)getTotalPopulation();
+
 	if (iVotes > MAX_INT)
 	{
-		iVotes = MAX_INT;
+		return MAX_INT;
 	}
-	return (int)iVotes;
+	return static_cast<int>(iVotes);
 }
 
 bool CvPlayer::canDoResolution(VoteSourceTypes eVoteSource, const VoteSelectionSubData& kData) const
@@ -25403,33 +25392,22 @@ void CvPlayer::setEndorsedResolution(VoteSourceTypes eVoteSource, const VoteSele
 
 bool CvPlayer::isFullMember(VoteSourceTypes eVoteSource) const
 {
-	if (NO_RELIGION != GC.getGame().getVoteSourceReligion(eVoteSource))
-	{
-		if (getStateReligion() != GC.getGame().getVoteSourceReligion(eVoteSource))
-		{
-			return false;
-		}
-	}
+	if (!isLoyalMember(eVoteSource)
 
-	if (NO_CIVIC != GC.getVoteSourceInfo(eVoteSource).getCivic())
-	{
-		if (!isCivic((CivicTypes)GC.getVoteSourceInfo(eVoteSource).getCivic()))
-		{
-			return false;
-		}
-	}
+	|| NO_CIVIC != GC.getVoteSourceInfo(eVoteSource).getCivic()
+	&& !isCivic((CivicTypes)GC.getVoteSourceInfo(eVoteSource).getCivic())
 
-	if (!isLoyalMember(eVoteSource))
+	|| NO_RELIGION != GC.getGame().getVoteSourceReligion(eVoteSource)
+	&& getStateReligion() != GC.getGame().getVoteSourceReligion(eVoteSource))
 	{
 		return false;
 	}
-
 	return isVotingMember(eVoteSource);
 }
 
 bool CvPlayer::isVotingMember(VoteSourceTypes eVoteSource) const
 {
-	return (getVotes(NO_VOTE, eVoteSource) > 0);
+	return getVotes(NO_VOTE, eVoteSource) > 0;
 }
 
 PlayerTypes CvPlayer::pickConqueredCityOwner(const CvCity& kCity) const
@@ -32279,28 +32257,32 @@ bool CvPlayer::haveSettlerUnit() const
 // Toffer - A very common check
 bool CvPlayer::isAliveAndTeam(const TeamTypes eTeam, const bool bSameTeam, const TeamTypes eTeamAlt) const
 {
-	if (!isAlive())
-	{
-		return false;
-	}
 	return
 	(
-		bSameTeam // Can only be on one team, so either or is implied.
-		?
+		isAlive()
+		&&
 		(
-			eTeamAlt == NO_TEAM
-			?
-			eTeam == getTeam()
-			:
-			eTeam == getTeam() || eTeamAlt == getTeam()
-		)
-		: // Different team, both must be different.
-		(
-			eTeamAlt == NO_TEAM
-			?
-			eTeam != getTeam()
-			:
-			eTeam != getTeam() && eTeamAlt != getTeam()
+			eTeam == NO_TEAM
+			||
+			(
+				bSameTeam // Can only be on one team, so either or is implied.
+				?
+				(
+					eTeamAlt == NO_TEAM
+					?
+					eTeam == getTeam()
+					:
+					eTeam == getTeam() || eTeamAlt == getTeam()
+				)
+				: // Different team, both must be different.
+				(
+					eTeamAlt == NO_TEAM
+					?
+					eTeam != getTeam()
+					:
+					eTeam != getTeam() && eTeamAlt != getTeam()
+				)
+			)
 		)
 	);
 	// Could probably get away with the second evaluation even when eTeamAlt == NO_TEAM

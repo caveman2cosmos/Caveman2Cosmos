@@ -3,6 +3,7 @@
 //
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CvMapExternal.h"
 #include "CvPlayerAI.h"
@@ -88,7 +89,7 @@ bool writeInfoArray(FDataStreamBase* pStream,  std::vector<T*>& array)
 
 CvGlobals gGlobalsProxy;	// for debugging
 cvInternalGlobals* gGlobals = NULL;
-CvDLLUtilityIFaceBase* g_DLL = NULL;
+CvDLLUtilityIFaceBase* gDLL = NULL;
 
 int g_iPercentDefault = 100;
 int g_iModifierDefault = 0;

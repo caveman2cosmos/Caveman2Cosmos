@@ -121,25 +121,14 @@
 	<ElementType name="bFreedomFighter" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bOAType" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPolicy" content="textOnly" dt:type="boolean"/>
-	<!--Boolean vectors utilizing struct with delayed resolution-->
+	<!-- Integer Vectors -->
 	<ElementType name="GameOptionType" content="textOnly"/>
-	<ElementType name="bEnforcesGameOptionOn" content="textOnly" dt:type="boolean"/>
-	<ElementType name="EnforcesGameOptionOnType" content="eltOnly">
-		<element type="GameOptionType"/>
-		<element type="bEnforcesGameOptionOn"/>
-	</ElementType>
 	<ElementType name="EnforcesGameOptionOnTypes" content="eltOnly">
-		<element type="EnforcesGameOptionOnType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="bEnforcesGameOptionOff" content="textOnly" dt:type="boolean"/>
-	<ElementType name="EnforcesGameOptionOffType" content="eltOnly">
-		<element type="GameOptionType"/>
-		<element type="bEnforcesGameOptionOff"/>
+		<element type="GameOptionType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="EnforcesGameOptionOffTypes" content="eltOnly">
-		<element type="EnforcesGameOptionOffType" minOccurs="0" maxOccurs="*"/>
+		<element type="GameOptionType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<!-- Integer Vectors -->
 	<ElementType name="iModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="TechHappinessType" content="eltOnly">
 		<element type="TechType" minOccurs="0" maxOccurs="*"/>

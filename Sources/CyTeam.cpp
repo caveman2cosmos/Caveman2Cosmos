@@ -158,11 +158,6 @@ int CyTeam::getHasMetCivCount(bool bIgnoreMinors)
 	return m_pTeam ? m_pTeam->getHasMetCivCount(bIgnoreMinors) : -1;
 }
 
-bool CyTeam::hasMetHuman()
-{
-	return m_pTeam ? m_pTeam->hasMetHuman() : false;
-}
-
 int CyTeam::getDefensivePactCount()
 {
 	return m_pTeam ? m_pTeam->getDefensivePactCount() : -1;

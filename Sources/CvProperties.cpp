@@ -8,8 +8,10 @@
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
 #include "CvGame.h"
-#include "CvXMLLoadUtility.h"
+#include "CvGlobals.h"
 #include "CvTeam.h"
+#include "CvXMLLoadUtility.h"
+#include "CheckSum.h"
 
 CvProperties::CvProperties()
 {

@@ -14246,6 +14246,13 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>DIPLO_WRUB_EARLY</SoundID>
+			<Filename>Sounds/Diplomacy/Wrub_Early</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
 			<SoundID>SND_TECH_HEAT_TREATMENT</SoundID>
 			<Filename>Sounds/Tech/01_Heat_Treatment</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
