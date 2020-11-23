@@ -2276,7 +2276,6 @@
 		<element type="IdeaInfos" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="MaxAmount" content="textOnly" dt:type="int"/>
-	<ElementType name="FreeUnit" content="textOnly"/>
 	<ElementType name="ItemInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="Description" minOccurs="0"/>
