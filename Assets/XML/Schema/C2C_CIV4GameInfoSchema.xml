@@ -2291,7 +2291,7 @@
 	<ElementType name="ItemInfos" content="eltOnly">
 		<element type="ItemInfo" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="Civ4ItemInfos" content="eltOnly">
+	<ElementType name="Civ4ItemInfo" content="eltOnly">
 		<element type="ItemInfos" minOccurs="0"/>
 	</ElementType>
 </Schema>
