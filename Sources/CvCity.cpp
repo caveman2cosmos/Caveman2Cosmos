@@ -1357,16 +1357,13 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
-				if (originalTradeNetworkConnectivity[iI] == NULL)
-				{
-					if (pPlot->isTradeNetwork(GET_PLAYER((PlayerTypes)iI).getTeam()))
-					{
-						GET_PLAYER((PlayerTypes)iI).updatePlotGroups(pPlot->area());
-					}
-				}
-				else
+				if (originalTradeNetworkConnectivity[iI] != NULL)
 				{
 					originalTradeNetworkConnectivity[iI]->recalculatePlots();
+				}
+				else if (pPlot->isTradeNetwork(GET_PLAYER((PlayerTypes)iI).getTeam()))
+				{
+					GET_PLAYER((PlayerTypes)iI).updatePlotGroups(pPlot->area());
 				}
 			}
 		}
@@ -6069,12 +6066,11 @@ int CvCity::getCulturePercentAnger() const
 	{
 		return 0;
 	}
-
 	int iAngryCulture = 0;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam())
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getTeam(), false))
 		{
 			int iCulture = plot()->getCulture((PlayerTypes)iI);
 
@@ -6116,16 +6112,18 @@ int CvCity::getReligionPercentAnger() const
 	}
 
 	int iCount = 0;
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && atWar(GET_PLAYER((PlayerTypes)iI).getTeam(), getTeam()))
-		{
-			FAssertMsg(GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam(), "Player is at war with himself! :O");
+		const CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
 
-			if (GET_PLAYER((PlayerTypes)iI).getStateReligion() != NO_RELIGION
-			&& isHasReligion(GET_PLAYER((PlayerTypes)iI).getStateReligion()))
+		if (playerX.isAlive() && atWar(playerX.getTeam(), getTeam()))
+		{
+			FAssertMsg(playerX.getTeam() != getTeam(), "Player is at war with himself! :O");
+
+			if (playerX.getStateReligion() != NO_RELIGION
+			&& isHasReligion(playerX.getStateReligion()))
 			{
-				iCount += GET_PLAYER((PlayerTypes)iI).getHasReligionCount(GET_PLAYER((PlayerTypes)iI).getStateReligion());
+				iCount += playerX.getHasReligionCount(playerX.getStateReligion());
 			}
 		}
 	}
@@ -19591,63 +19589,60 @@ int CvCity::getBuildingHealthChange(BuildingTypes eBuilding) const
 
 void CvCity::liberate(bool bConquest)
 {
-	CvPlot* pPlot = plot();
-	PlayerTypes ePlayer = getLiberationPlayer(bConquest);
-	PlayerTypes eOwner = getOwner();
+	const PlayerTypes ePlayer = getLiberationPlayer(bConquest);
 
-	if (NO_PLAYER != ePlayer)
+	if (NO_PLAYER == ePlayer) return;
+
+	const PlayerTypes eOwner = getOwner();
+
+	int iOldMasterLand = 0;
+	int iOldVassalLand = 0;
+	if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isVassal(GET_PLAYER(eOwner).getTeam()))
 	{
-		int iOldOwnerCulture = getCultureTimes100(eOwner);
-		int iOldMasterLand = 0;
-		int iOldVassalLand = 0;
-		if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isVassal(GET_PLAYER(eOwner).getTeam()))
+		iOldMasterLand = GET_TEAM(GET_PLAYER(eOwner).getTeam()).getTotalLand();
+		iOldVassalLand = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getTotalLand(false);
+	}
+
+	const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_LIBERATED", getNameKey(), GET_PLAYER(eOwner).getNameKey(), GET_PLAYER(ePlayer).getCivilizationAdjectiveKey());
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+	{
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman() && isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 		{
-			iOldMasterLand = GET_TEAM(GET_PLAYER(eOwner).getTeam()).getTotalLand();
-			iOldVassalLand = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getTotalLand(false);
+			MEMORY_TRACK_EXEMPT();
+			AddDLLMessage(
+				(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
+				szBuffer, "AS2D_REVOLTEND", MESSAGE_TYPE_MAJOR_EVENT,
+				ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(),
+				GC.getCOLOR_HIGHLIGHT_TEXT(), getX(), getY(), true, true
+			);
 		}
+	}
+	GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, eOwner, szBuffer, getX(), getY(), GC.getCOLOR_HIGHLIGHT_TEXT());
 
-		const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_LIBERATED", getNameKey(), GET_PLAYER(eOwner).getNameKey(), GET_PLAYER(ePlayer).getCivilizationAdjectiveKey());
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	GET_PLAYER(ePlayer).acquireCity(this, false, true, true);
+	GET_PLAYER(ePlayer).AI_changeMemoryCount(eOwner, MEMORY_LIBERATED_CITIES, 1);
+
+	if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isVassal(GET_PLAYER(eOwner).getTeam()))
+	{
+		int iNewMasterLand = GET_TEAM(GET_PLAYER(eOwner).getTeam()).getTotalLand();
+		int iNewVassalLand = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getTotalLand(false);
+
+		GET_TEAM(GET_PLAYER(ePlayer).getTeam()).setMasterPower(GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getMasterPower() + iNewMasterLand - iOldMasterLand);
+		GET_TEAM(GET_PLAYER(ePlayer).getTeam()).setVassalPower(GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getVassalPower() + iNewVassalLand - iOldVassalLand);
+	}
+	FAssertMsg(NULL != plot(), "Not expected!")
+
+	CvCity* pCity = plot()->getPlotCity();
+
+	FAssertMsg(NULL != pCity, "Not expected!")
+
+	pCity->setCultureTimes100(ePlayer, pCity->getCultureTimes100(ePlayer) + getCultureTimes100(eOwner) / 2, true, true);
+
+	if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isAVassal())
+	{
+		for (int i = 0; i < GC.getCOLONY_NUM_FREE_DEFENDERS(); ++i)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive())
-			{
-				if (isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
-				{
-					MEMORY_TRACK_EXEMPT();
-
-					AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_REVOLTEND", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), GC.getCOLOR_HIGHLIGHT_TEXT(), getX(), getY(), true, true);
-				}
-			}
-		}
-		GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, eOwner, szBuffer, getX(), getY(), GC.getCOLOR_HIGHLIGHT_TEXT());
-
-		GET_PLAYER(ePlayer).acquireCity(this, false, true, true);
-		GET_PLAYER(ePlayer).AI_changeMemoryCount(eOwner, MEMORY_LIBERATED_CITIES, 1);
-
-		if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isVassal(GET_PLAYER(eOwner).getTeam()))
-		{
-			int iNewMasterLand = GET_TEAM(GET_PLAYER(eOwner).getTeam()).getTotalLand();
-			int iNewVassalLand = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getTotalLand(false);
-
-			GET_TEAM(GET_PLAYER(ePlayer).getTeam()).setMasterPower(GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getMasterPower() + iNewMasterLand - iOldMasterLand);
-			GET_TEAM(GET_PLAYER(ePlayer).getTeam()).setVassalPower(GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getVassalPower() + iNewVassalLand - iOldVassalLand);
-		}
-
-		if (NULL != pPlot)
-		{
-			CvCity* pCity = pPlot->getPlotCity();
-			if (NULL != pCity)
-			{
-				pCity->setCultureTimes100(ePlayer, pCity->getCultureTimes100(ePlayer) + iOldOwnerCulture / 2, true, true);
-			}
-
-			if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isAVassal())
-			{
-				for (int i = 0; i < GC.getCOLONY_NUM_FREE_DEFENDERS(); ++i)
-				{
-					pCity->initConscriptedUnit();
-				}
-			}
+			pCity->initConscriptedUnit();
 		}
 	}
 }
@@ -19659,48 +19654,41 @@ PlayerTypes CvCity::getLiberationPlayer(bool bConquest) const
 		return NO_PLAYER;
 	}
 
-	for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; ++iPlayer)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 	{
-		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 		if (kLoopPlayer.isAlive() && kLoopPlayer.getParent() == getOwner())
 		{
-			CvCity* pLoopCapital = kLoopPlayer.getCapitalCity();
-			if (NULL != pLoopCapital)
+			const CvCity* pLoopCapital = kLoopPlayer.getCapitalCity();
+			if (NULL != pLoopCapital && pLoopCapital->area() == area())
 			{
-				if (pLoopCapital->area() == area())
-				{
-					return (PlayerTypes)iPlayer;
-				}
+				return (PlayerTypes)iI;
 			}
 		}
 	}
 
-	CvPlayer& kOwner = GET_PLAYER(getOwner());
+	const CvPlayer& kOwner = GET_PLAYER(getOwner());
 	if (kOwner.canSplitEmpire() && kOwner.canSplitArea(area()->getID()))
 	{
-		PlayerTypes ePlayer = GET_PLAYER(getOwner()).getSplitEmpirePlayer(area()->getID());
+		const PlayerTypes ePlayer = kOwner.getSplitEmpirePlayer(area()->getID());
 
-		if (NO_PLAYER != ePlayer)
+		if (NO_PLAYER != ePlayer && GET_PLAYER(ePlayer).isAlive())
 		{
-			if (GET_PLAYER(ePlayer).isAlive())
-			{
-				return ePlayer;
-			}
+			return ePlayer;
 		}
 	}
 
+	const int iTotalCultureTimes100 = countTotalCultureTimes100();
 	PlayerTypes eBestPlayer = NO_PLAYER;
 	int iBestValue = 0;
 
-	int iTotalCultureTimes100 = countTotalCultureTimes100();
-
-	for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; ++iPlayer)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 	{
-		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+		CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
 
-		if (kLoopPlayer.isAlive())
+		if (playerX.isAlive())
 		{
-			CvCity* pCapital = kLoopPlayer.getCapitalCity();
+			CvCity* pCapital = playerX.getCapitalCity();
 			if (NULL != pCapital)
 			{
 				int iCapitalDistance = ::plotDistance(getX(), getY(), pCapital->getX(), pCapital->getY());
@@ -19709,28 +19697,28 @@ PlayerTypes CvCity::getLiberationPlayer(bool bConquest) const
 					iCapitalDistance *= 2;
 				}
 
-				int iCultureTimes100 = getCultureTimes100((PlayerTypes)iPlayer);
+				int iCultureTimes100 = getCultureTimes100((PlayerTypes)iI);
 
-				if (bConquest && iPlayer == getOriginalOwner())
+				if (bConquest && iI == getOriginalOwner())
 				{
 					iCultureTimes100 *= 3;
 					iCultureTimes100 /= 2;
 				}
 
-				if (GET_PLAYER((PlayerTypes)iPlayer).getTeam() == getTeam()
-				|| GET_TEAM(GET_PLAYER((PlayerTypes)iPlayer).getTeam()).isVassal(getTeam())
-				|| GET_TEAM(getTeam()).isVassal(GET_PLAYER((PlayerTypes)iPlayer).getTeam()))
+				if (playerX.getTeam() == getTeam()
+				|| GET_TEAM(playerX.getTeam()).isVassal(getTeam())
+				|| GET_TEAM(getTeam()).isVassal(playerX.getTeam()))
 				{
 					iCultureTimes100 *= 2;
 					iCultureTimes100 = (iCultureTimes100 + iTotalCultureTimes100) / 2;
 				}
 
-				int iValue = std::max(100, iCultureTimes100) / std::max(1, iCapitalDistance);
+				const int iValue = std::max(100, iCultureTimes100) / std::max(1, iCapitalDistance);
 
 				if (iValue > iBestValue)
 				{
 					iBestValue = iValue;
-					eBestPlayer = (PlayerTypes)iPlayer;
+					eBestPlayer = (PlayerTypes)iI;
 				}
 			}
 		}
@@ -22265,120 +22253,126 @@ void CvCity::doCorporation()
 {
 	PROFILE_FUNC();
 
-	CvPlayer& kOwner = GET_PLAYER(getOwner());
-
 	if (!GC.getGame().isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
 	{
 		return;
 	}
+	const PlayerTypes ePlayer = getOwner();
+	CvPlayer& kOwner = GET_PLAYER(ePlayer);
 
 	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
-		if (GC.getGame().getHeadquarters((CorporationTypes)iI) != NULL)
+		if (GC.getGame().getHeadquarters((CorporationTypes)iI) == NULL)
 		{
-			if (!isHasCorporation((CorporationTypes)iI) && GC.getGame().canEverSpread((CorporationTypes)iI))
+			continue;
+		}
+		if (!isHasCorporation((CorporationTypes)iI) && GC.getGame().canEverSpread((CorporationTypes)iI))
+		{
+			if (kOwner.isNoCorporations() || kOwner.isNoForeignCorporations() && GC.getGame().getHeadquarters((CorporationTypes)iI)->getOwner() != ePlayer)
 			{
-				if (!kOwner.isNoCorporations() && (!kOwner.isNoForeignCorporations() || GC.getGame().getHeadquarters((CorporationTypes)iI)->getOwner() == getOwner()))
+				continue;
+			}
+			int iRandThreshold = 0;
+			for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
+			{
+				const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iJ);
+				if (kPlayer.isAlive())
 				{
-					int iRandThreshold = 0;
-					for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
+					foreach_(const CvCity* pLoopCity, kPlayer.cities())
 					{
-						const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iJ);
-						if (kPlayer.isAlive())
+						if (pLoopCity->isConnectedTo(this))
 						{
-							foreach_(const CvCity* pLoopCity, kPlayer.cities())
+							int iSpread = pLoopCity->getCorporationInfluence((CorporationTypes)iI);
+
+							iSpread *= GC.getCorporationInfo((CorporationTypes)iI).getSpread();
+
+							iSpread /= 100;
+
+							if (iJ != ePlayer && GET_TEAM(kPlayer.getTeam()).isFreeTradeAgreement(kOwner.getTeam()))
 							{
-								if (pLoopCity->isConnectedTo(this))
-								{
-									int iSpread = pLoopCity->getCorporationInfluence((CorporationTypes)iI);
+								iSpread *= (100 + GC.getFREE_TRADE_CORPORATION_SPREAD_MOD());
+								iSpread /= 100;
+							}
 
-									iSpread *= GC.getCorporationInfo((CorporationTypes)iI).getSpread();
+							if (iSpread > 0)
+							{
+								iSpread /= std::max(1, (((GC.getCORPORATION_SPREAD_DISTANCE_DIVISOR() * plotDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY())) / GC.getMap().maxPlotDistance()) - 5));
 
-									iSpread /= 100;
-
-									if (kPlayer.getID() != kOwner.getID())
-									{
-										if (GET_TEAM(kPlayer.getTeam()).isFreeTradeAgreement(kOwner.getTeam()))
-										{
-											iSpread *= (100 + GC.getFREE_TRADE_CORPORATION_SPREAD_MOD());
-											iSpread /= 100;
-										}
-									}
-
-									if (iSpread > 0)
-									{
-										iSpread /= std::max(1, (((GC.getCORPORATION_SPREAD_DISTANCE_DIVISOR() * plotDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY())) / GC.getMap().maxPlotDistance()) - 5));
-
-										iRandThreshold = std::max(iRandThreshold, iSpread);
-									}
-								}
+								iRandThreshold = std::max(iRandThreshold, iSpread);
 							}
 						}
-					}
-
-					iRandThreshold *= kOwner.getCorporationSpreadModifier() + 100;
-					iRandThreshold /= 100;
-					iRandThreshold *= kOwner.getCorporationInfluence((CorporationTypes)iI);
-					iRandThreshold /= 100;
-
-					iRandThreshold /= (1 + (getCorporationCount() / 2));
-
-					logBBAI("  City (%S) Has Rand Threshold of %d for Corporation %S", getName().GetCString(), iRandThreshold, GC.getCorporationInfo((CorporationTypes)iI).getDescription());
-					int iRand = GC.getCORPORATION_SPREAD_RAND();
-					iRand *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
-					iRand /= 100;
-					iRand = GC.getGame().getSorenRandNum(iRand, "Corporation Spread");
-					if (iRand < iRandThreshold)
-					{
-						//Remove Hostile Corporations
-						for (int iJ = 0; iJ < GC.getNumCorporationInfos(); iJ++)
-						{
-							if (iI != iJ)
-							{
-								if (GC.getGame().isCompetingCorporation((CorporationTypes)iJ, (CorporationTypes)iI))
-								{
-									if (isActiveCorporation((CorporationTypes)iJ))
-									{
-										MEMORY_TRACK_EXEMPT();
-
-										setHasCorporation((CorporationTypes)iJ, false, false, false);
-										CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CORPORATION_HOSTILE_TAKEOVER", GC.getCorporationInfo((CorporationTypes)iJ).getTextKeyWide(), GC.getCorporationInfo((CorporationTypes)iI).getTextKeyWide(), getNameKey());
-										AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getCorporationInfo((CorporationTypes)iJ).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getCorporationInfo((CorporationTypes)iJ).getButton(), GC.getCOLOR_WHITE(), getX(), getY(), false, false);
-									}
-								}
-							}
-						}
-						setHasCorporation((CorporationTypes)iI, true, true, false);
-						break;
 					}
 				}
 			}
-			//Decay
-			else
-			{
-				//TODO: Should HQ ever relocate?
-				if (this != GC.getGame().getHeadquarters((CorporationTypes)iI))
-				{
-					int iSpread = GC.getCorporationInfo((CorporationTypes)iI).getSpread();
-					iSpread *= getCorporationInfluence((CorporationTypes)iI);
-					iSpread /= 100;
-					iSpread *= kOwner.getCorporationInfluence((CorporationTypes)iI);
-					iSpread /= 100;
+			iRandThreshold *= kOwner.getCorporationSpreadModifier() + 100;
+			iRandThreshold /= 100;
+			iRandThreshold *= kOwner.getCorporationInfluence((CorporationTypes)iI);
+			iRandThreshold /= 100;
+			iRandThreshold /= 1 + getCorporationCount() / 2;
 
-					const int iAverageSpread = GC.getGame().getAverageCorporationInfluence(this, (CorporationTypes)iI);
-					const int iDiff = iAverageSpread - iSpread;
-					//Our influence is lower than average
-					if (iDiff > 0)
+			logBBAI("  City (%S) Has Rand Threshold of %d for Corporation %S", getName().GetCString(), iRandThreshold, GC.getCorporationInfo((CorporationTypes)iI).getDescription());
+			int iRand = GC.getCORPORATION_SPREAD_RAND();
+			iRand *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+			iRand /= 100;
+			iRand = GC.getGame().getSorenRandNum(iRand, "Corporation Spread");
+			if (iRand < iRandThreshold)
+			{
+				//Remove Hostile Corporations
+				for (int iJ = 0; iJ < GC.getNumCorporationInfos(); iJ++)
+				{
+					if (iI != iJ
+					&& GC.getGame().isCompetingCorporation((CorporationTypes)iJ, (CorporationTypes)iI)
+					&& isActiveCorporation((CorporationTypes)iJ))
 					{
-						int iRand = GC.getCORPORATION_SPREAD_RAND();
-						iRand *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
-						iRand /= 100;
-						if (GC.getGame().getSorenRandNum(iRand, "Corporation Decay") < iDiff)
-						{
-							setHasCorporation((CorporationTypes)iI, false, true, false);
-							break;
-						}
+						setHasCorporation((CorporationTypes)iJ, false, false, false);
+
+						MEMORY_TRACK_EXEMPT();
+						AddDLLMessage(
+							ePlayer, false, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_CORPORATION_HOSTILE_TAKEOVER",
+								GC.getCorporationInfo((CorporationTypes)iJ).getTextKeyWide(),
+								GC.getCorporationInfo((CorporationTypes)iI).getTextKeyWide(),
+								getNameKey()
+							),
+							GC.getCorporationInfo((CorporationTypes)iJ).getSound(),
+							MESSAGE_TYPE_MAJOR_EVENT,
+							GC.getCorporationInfo((CorporationTypes)iJ).getButton(),
+							GC.getCOLOR_WHITE(), getX(), getY(), false, false
+						);
 					}
+				}
+				setHasCorporation((CorporationTypes)iI, true, true, false);
+				break;
+			}
+		}
+		// Decay
+		else if (this != GC.getGame().getHeadquarters((CorporationTypes)iI))
+		{
+			// TODO: Should HQ ever relocate?
+			const int iDiff = 
+			(
+				GC.getGame().getAverageCorporationInfluence(this, (CorporationTypes)iI)
+				-
+				GC.getCorporationInfo((CorporationTypes)iI).getSpread()
+				* getCorporationInfluence((CorporationTypes)iI)
+				* kOwner.getCorporationInfluence((CorporationTypes)iI)
+				/
+				10000
+			);
+			// Our influence is lower than average
+			if (iDiff > 0)
+			{
+				const int iRand =
+				(
+					GC.getCORPORATION_SPREAD_RAND()
+					* GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent()
+					/ 100
+				);
+				if (GC.getGame().getSorenRandNum(iRand, "Corporation Decay") < iDiff)
+				{
+					setHasCorporation((CorporationTypes)iI, false, true, false);
+					break;
 				}
 			}
 		}
