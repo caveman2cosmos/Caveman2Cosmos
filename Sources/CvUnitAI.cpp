@@ -14963,28 +14963,16 @@ bool CvUnitAI::AI_chokeDefend()
 
 	CvCity* pCity = plot()->getPlotCity();
 
-	if (pCity != NULL)
+	if (pCity != NULL && pCity->getOwner() == getOwner() && pCity->AI_neededDefenders() > 1
+	&& pCity->AI_isDefended(pCity->plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefendGroupHead, -1, -1, getOwner(), NO_TEAM, PUF_isNotCityAIType)))
 	{
-		if (pCity->getOwner() == getOwner())
-		{
-			if (pCity->AI_neededDefenders() > 1)
-			{
-				if (pCity->AI_isDefended(pCity->plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefendGroupHead, -1, -1, getOwner(), NO_TEAM, PUF_isNotCityAIType)))
-				{
-					const int iPlotDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 3);
+		const int iPlotDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 3);
 
-					if (iPlotDanger <= 4)
-					{
-						if (AI_anyAttack(1, 65, std::max(0, (iPlotDanger - 1))))
-						{
-							return true;
-						}
-					}
-				}
-			}
+		if (iPlotDanger <= 4 && AI_anyAttack(1, 65, std::max(0, iPlotDanger - 1)))
+		{
+			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -14994,43 +14982,28 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 {
 	PROFILE_FUNC();
 
-	std::vector<CvUnit*> aeDamagedUnits;
-	CvSelectionGroup* pGroup;
-	int iTotalDamage;
-	int iTotalHitpoints;
-	int iHurtUnitCount;
-	bool bRetreat;
+	CvSelectionGroup* pGroup = getGroup();
 
-	bool bCanClaimTerritory = canClaimTerritory(plot());
-
-	if (plot()->getTotalTurnDamage(getGroup()) > 0)
+	if (plot()->getTotalTurnDamage(pGroup) > 0)
 	{
 		OutputDebugString("AI_heal: denying heal due to terrain damage\n");
 		return false;
 	}
-
-	pGroup = getGroup();
-
-	if (iDamagePercent == 0)
+	if (iDamagePercent < 1)
 	{
 		iDamagePercent = 10;
 	}
 
-	bRetreat = false;
-
-	if (getGroup()->getNumUnits() == 1)
+	if (pGroup->getNumUnits() == 1)
 	{
 		if (getDamage() > 0)
 		{
 			OutputDebugString("AI_heal: one unit stack\n");
-			if (plot()->isCity() || (healTurns(plot()) == 1))
+			if ((plot()->isCity() || healTurns(plot()) == 1) && !isAlwaysHeal())
 			{
-				if (!(isAlwaysHeal()))
-				{
-					OutputDebugString("AI_heal: city or 1 turn heal\n");
-					getGroup()->pushMission(MISSION_HEAL);
-					return true;
-				}
+				OutputDebugString("AI_heal: city or 1 turn heal\n");
+				pGroup->pushMission(MISSION_HEAL);
+				return true;
 			}
 			if (plot()->getNumVisibleAdjacentEnemyDefenders(this) == 0 && !isAlwaysHeal())
 			{
@@ -15050,7 +15023,7 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 						else
 						{
 							OutputDebugString("AI_heal: healing\n");
-							getGroup()->pushMission(MISSION_HEAL);
+							pGroup->pushMission(MISSION_HEAL);
 							return true;
 						}
 					}
@@ -15066,13 +15039,12 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 	}
 
 	iMaxPath = std::min(iMaxPath, 2);
+	std::vector<CvUnit*> aeDamagedUnits;
+	int iHurtUnitCount = 0;
 
-	iTotalDamage = 0;
-	iTotalHitpoints = 0;
-	iHurtUnitCount = 0;
-	foreach_(CvUnit* pLoopUnit, getGroup()->units())
+	foreach_(CvUnit* pLoopUnit, pGroup->units())
 	{
-		int iDamageThreshold = (pLoopUnit->maxHitPoints() * iDamagePercent) / 100;
+		int iDamageThreshold = pLoopUnit->maxHitPoints() * iDamagePercent / 100;
 
 		if (NO_UNIT != getLeaderUnitType())
 		{
@@ -15083,24 +15055,12 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 		{
 			iHurtUnitCount++;
 		}
-		iTotalDamage += pLoopUnit->getDamage();
-		iTotalHitpoints += pLoopUnit->maxHitPoints();
 
-
-		if (pLoopUnit->getDamage() > iDamageThreshold)
+		if (pLoopUnit->getDamage() > iDamageThreshold
+		&& !pLoopUnit->hasMoved() && !pLoopUnit->isAlwaysHeal()
+		&&  pLoopUnit->healTurns(pLoopUnit->plot()) <= iMaxPath)
 		{
-			bRetreat = true;
-
-			if (!(pLoopUnit->hasMoved()))
-			{
-				if (!(pLoopUnit->isAlwaysHeal()))
-				{
-					if (pLoopUnit->healTurns(pLoopUnit->plot()) <= iMaxPath)
-					{
-						aeDamagedUnits.push_back(pLoopUnit);
-					}
-				}
-			}
+			aeDamagedUnits.push_back(pLoopUnit);
 		}
 	}
 	if (iHurtUnitCount == 0)
@@ -15108,9 +15068,10 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 		return false;
 	}
 
+	bool bCanClaimTerritory = canClaimTerritory(plot());
 	bool bPushedMission = false;
 
-	 if ( (plot()->isCity() && (plot()->getOwner() == getOwner())) || bCanClaimTerritory)
+	if (bCanClaimTerritory || plot()->isCity() && plot()->getOwner() == getOwner())
 	{
 		FAssertMsg(((int) aeDamagedUnits.size()) <= iHurtUnitCount, "damaged units array is larger than our hurt unit count");
 
@@ -15125,17 +15086,17 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 			{
 				bPushedMission = true;
 
-				if (canClaimTerritory(plot()))
+				if (bCanClaimTerritory)
 				{
-					getGroup()->pushMission(MISSION_CLAIM_TERRITORY, -1, -1, 0, false, false, MISSIONAI_CLAIM_TERRITORY, plot());
-					getGroup()->pushMission(MISSION_HEAL, -1, -1, 0, true, false);
+					pGroup->pushMission(MISSION_CLAIM_TERRITORY, -1, -1, 0, false, false, MISSIONAI_CLAIM_TERRITORY, plot());
+					pGroup->pushMission(MISSION_HEAL, -1, -1, 0, true, false);
 				}
 			}
 			iHurtUnitCount--;
 		}
 	}
 
-	if ((iHurtUnitCount * 2) > pGroup->getNumUnits())
+	if (iHurtUnitCount * 2 > pGroup->getNumUnits())
 	{
 		FAssertMsg(pGroup->getNumUnits() > 0, "group now has zero units");
 
@@ -15143,20 +15104,16 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 		{
 			return true;
 		}
-		else if (healRate(plot()) > 10)
+		if (healRate(plot()) > 10)
 		{
 			pGroup->pushMission(MISSION_HEAL);
 			return true;
 		}
-		else
+		if (AI_safety(iMaxPath))
 		{
-			if ( AI_safety(iMaxPath) )
-			{
-				return true;
-			}
+			return true;
 		}
 	}
-
 	return bPushedMission;
 }
 
@@ -15164,43 +15121,21 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_afterAttack()
 {
-	if (!isMadeAttack())
+	if (!isMadeAttack() || !canFight() || isBlitz())
 	{
 		return false;
 	}
+	// Can fight, but has used up its attack for this turn.
 
-	if (!canFight())
+	if (getDomainType() == DOMAIN_LAND && AI_guardCity(false, true, 1))
 	{
-		return false;
+		return true;
 	}
 
-	if (isBlitz())
-	{
-		return false;
-	}
-
-	if (getDomainType() == DOMAIN_LAND)
-	{
-		if (AI_guardCity(false, true, 1))
-		{
-			return true;
-		}
-	}
-/************************************************************************************************/
-/* REVOLUTIONDCM							05/24/08								Glider1	 */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	// RevolutionDCM - ranged bombardment plot AI
-	// Dale - RB: Field Bombard START
 	if (AI_RbombardPlot(getDCMBombRange(), 60))
 	{
 		return true;
 	}
-	// RevolutionDCM - end
-/************************************************************************************************/
-/* REVOLUTIONDCM							END									 Glider1	 */
-/************************************************************************************************/
 
 	if (AI_pillageRange(1))
 	{
@@ -15221,21 +15156,11 @@ bool CvUnitAI::AI_afterAttack()
 	{
 		return true;
 	}
-/************************************************************************************************/
-/* REVOLUTIONDCM							05/24/08								Glider1	 */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	// RevolutionDCM - ranged bombardment plot AI
-	// Dale - RB: Field Bombard START
+
 	if (AI_RbombardPlot(getDCMBombRange(), 0))
 	{
 		return true;
 	}
-	// RevolutionDCM - end
-/************************************************************************************************/
-/* REVOLUTIONDCM							END									 Glider1	 */
-/************************************************************************************************/
 
 	if (AI_pillageRange(2))
 	{
@@ -15263,7 +15188,6 @@ bool CvUnitAI::AI_goldenAge()
 		getGroup()->pushMission(MISSION_GOLDEN_AGE);
 		return true;
 	}
-
 	return false;
 }
 
@@ -15273,15 +15197,18 @@ bool CvUnitAI::AI_spreadReligion()
 {
 	PROFILE_FUNC();
 
-	ReligionTypes eReligion = NO_RELIGION;
+	const CvPlayerAI& owner = GET_PLAYER(getOwner());
+	const ReligionTypes eStateReligion = owner.getStateReligion();
 
-	// BBAI TODO: Unnecessary with changes below ...
-	if (eReligion == NO_RELIGION && GET_PLAYER(getOwner()).getStateReligion() != NO_RELIGION
-	&& m_pUnitInfo->getReligionSpreads(GET_PLAYER(getOwner()).getStateReligion()) > 0)
-	{
-		eReligion = GET_PLAYER(getOwner()).getStateReligion();
-	}
-
+	// More often than not, it is the state religion the AI spreads.
+	ReligionTypes eReligion = 
+	(
+		(eStateReligion != NO_RELIGION && m_pUnitInfo->getReligionSpreads(eStateReligion) > 0)
+		?
+		eStateReligion
+		:
+		NO_RELIGION
+	);
 	if (eReligion == NO_RELIGION)
 	{
 		for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
@@ -15293,15 +15220,14 @@ bool CvUnitAI::AI_spreadReligion()
 			}
 		}
 	}
-
 	if (eReligion == NO_RELIGION)
 	{
 		return false;
 	}
 
-
-	if ( m_cachedPlayer != getOwner() || m_cachedMissionaryPlotset == NULL
-	|| m_cachedMissionaryPlotset->find(plot()) == m_cachedMissionaryPlotset->end() )
+	if (m_cachedPlayer != getOwner()
+	|| m_cachedMissionaryPlotset == NULL
+	|| m_cachedMissionaryPlotset->find(plot()) == m_cachedMissionaryPlotset->end())
 	{
 		SAFE_DELETE(m_cachedMissionaryPlotset);
 
@@ -15310,16 +15236,14 @@ bool CvUnitAI::AI_spreadReligion()
 		m_cachedPlayer = getOwner();
 	}
 
-	int iBaseFlags = (isHuman() ? MOVE_NO_ENEMY_TERRITORY : (MOVE_NO_ENEMY_TERRITORY | MOVE_IGNORE_DANGER));
+	int iBaseFlags = isHuman() ? MOVE_NO_ENEMY_TERRITORY : (MOVE_NO_ENEMY_TERRITORY | MOVE_IGNORE_DANGER);
 	CvPlot* pBestPlot = NULL;
 	CvPlot* pBestSpreadPlot = NULL;
 
-	//CvReachablePlotSet plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, MAX_INT);
-	std::multimap<int,CvCity*>	targetValues;
+	std::multimap<int, CvCity*> targetValues;
 	CvReachablePlotSet::const_iterator itr = m_cachedMissionaryPlotset->begin();
 
-	//	If we already has a chosen spread city targeted then start with a presumption
-	//	we'll stick to it
+	// If we already has a chosen spread city targeted then start with a presumption we'll stick to it
 	if (getGroup()->AI_getMissionAIType() == MISSIONAI_SPREAD)
 	{
 		PROFILE("CvUnitAI::AI_spreadReligion.AlreadyMissioned");
@@ -15330,22 +15254,22 @@ bool CvUnitAI::AI_spreadReligion()
 
 		//logBBAI("Missionary %d at (%d,%d) already targeting city at (%d,%d)\n", getID(), getX(), getY(), pPlot->getX(), pPlot->getY());
 
-		if ( pLoopCity != NULL
+		if (pLoopCity != NULL
 		&& m_cachedMissionaryPlotset->find(pLoopCity->plot()) != m_cachedMissionaryPlotset->end()
-		&& generatePath(pLoopCity->plot(), iBaseFlags, true) )
+		&& generatePath(pLoopCity->plot(), iBaseFlags, true))
 		{
-			//If human, prefer to spread to the player where automated from.
+			// If human, prefer to spread to the player where automated from.
 			const bool bForceMove = isHuman() && plot()->getOwner() == pLoopCity->getOwner() && pLoopCity->isRevealed(getTeam(), false);
 
 			pBestPlot = bForceMove ? pLoopCity->plot() : getPathEndTurnPlot();
 			pBestSpreadPlot = pLoopCity->plot();
 
-			//	Check end of turn point is not in immediate danger
-			if (!bForceMove && GET_PLAYER(getOwner()).AI_getVisiblePlotDanger(pBestPlot, 1, false))
+			// Check end of turn point is not in immediate danger
+			if (!bForceMove && owner.AI_getVisiblePlotDanger(pBestPlot, 1, false))
 			{
 				//logBBAI("Danger at end turn plot - looking for alternate route...");
-				//	Try to find an alternate route taking danger into account in the
-				//	apthing calculation
+
+				// Try to find an alternate route taking danger into account in the pathing calculation
 				if (generatePath(pLoopCity->plot(), MOVE_NO_ENEMY_TERRITORY, true))
 				{
 					//logBBAI("...found one");
@@ -15353,150 +15277,138 @@ bool CvUnitAI::AI_spreadReligion()
 
 					iBaseFlags = MOVE_NO_ENEMY_TERRITORY;
 				}
-				else
-				{
-					//	No way past
-					//logBBAI("...none found!");
-					pBestSpreadPlot = NULL;
-				}
+				else pBestSpreadPlot = NULL; // No way past
 			}
 		}
 	}
 
 	if (pBestSpreadPlot == NULL)
 	{
-		const bool bCultureVictory = GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2);
+		const bool bCultureVictory = owner.AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2);
 		const bool bHasHolyCity = GET_TEAM(getTeam()).hasHolyCity(eReligion);
 
 		// BBAI TODO: Could also use CvPlayerAI::AI_missionaryValue to determine which player to target ...
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive())
+			if (!GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
-				int iPlayerMultiplierPercent = 0;
+				continue;
+			}
+			int iPlayerMultiplierPercent = 0;
 
-				if (GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam() && canEnterTerritory(GET_PLAYER((PlayerTypes)iI).getTeam()))
-				{
-					if (bHasHolyCity)
-					{
-						iPlayerMultiplierPercent = 100;
-						// BBAI TODO: If going for cultural victory, don't spread to other teams?  Sure, this might decrease the chance of
-						// someone else winning by culture, but at the cost of $$ in holy city and diplomatic conversions (ie future wars!).
-						// Doesn't seem to up our odds of winning by culture really.  Also, no foreign spread after Free Religion?  Still get
-						// gold for city count.
-						if (!bCultureVictory || eReligion == GET_PLAYER(getOwner()).getStateReligion())
-						{
-							if (GET_PLAYER((PlayerTypes)iI).getStateReligion() == NO_RELIGION)
-							{
-								if (0 == (GET_PLAYER((PlayerTypes)iI).getNonStateReligionHappiness()))
-								{
-									iPlayerMultiplierPercent += 600;
-								}
-							}
-							else if (GET_PLAYER((PlayerTypes)iI).getStateReligion() == eReligion)
-							{
-								iPlayerMultiplierPercent += 300;
-							}
-							else if (GET_PLAYER((PlayerTypes)iI).hasHolyCity(GET_PLAYER((PlayerTypes)iI).getStateReligion()))
-							{
-								iPlayerMultiplierPercent += 50;
-							}
-							else
-							{
-								iPlayerMultiplierPercent += 300;
-							}
-
-							const int iCityCount = GET_PLAYER(getOwner()).getNumCities();
-							//magic formula to produce normalized adjustment factor based on religious infusion
-							int iAdjustment = 100 * (iCityCount + 1);
-							iAdjustment /= iCityCount + 1 + GET_PLAYER((PlayerTypes)iI).countTotalHasReligion();
-							iAdjustment = (iAdjustment - 25) * 4 / 3;
-
-							iAdjustment = std::max(10, iAdjustment);
-
-							iPlayerMultiplierPercent *= iAdjustment;
-							iPlayerMultiplierPercent /= 100;
-						}
-					}
-				}
-				else if (iI == getOwner())
+			if (GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam() && canEnterTerritory(GET_PLAYER((PlayerTypes)iI).getTeam()))
+			{
+				if (bHasHolyCity)
 				{
 					iPlayerMultiplierPercent = 100;
-				}
-				else if (bHasHolyCity && GET_PLAYER((PlayerTypes)iI).getTeam() == getTeam())
-				{
-					iPlayerMultiplierPercent = 80;
-				}
-
-				if (iPlayerMultiplierPercent > 0)
-				{
-					foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
+					// BBAI TODO: If going for cultural victory, don't spread to other teams? Sure, this might decrease the chance of
+					// someone else winning by culture, but at the cost of $$ in holy city and diplomatic conversions (ie future wars!).
+					// Doesn't seem to up our odds of winning by culture really.  Also, no foreign spread after Free Religion?  Still get
+					// gold for city count.
+					if (!bCultureVictory || eReligion == eStateReligion)
 					{
-						if (AI_plotValid(pLoopCity->plot())
-						&& (itr = m_cachedMissionaryPlotset->find(pLoopCity->plot())) != m_cachedMissionaryPlotset->end()
-						&& canSpread(pLoopCity->plot(), eReligion)
-						&& !GET_PLAYER(getOwner()).AI_getAnyPlotDanger(pLoopCity->plot())
-						&& GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_SPREAD, getGroup()) == 0)
+						if (GET_PLAYER((PlayerTypes)iI).getStateReligion() == NO_RELIGION)
 						{
-							int iValue = (7 + (pLoopCity->getPopulation() * 4));
-
-							bool bOurCity = false;
-							// BBAI TODO: Why not just use iPlayerMultiplier??
-							if (pLoopCity->getOwner() == getOwner())
+							if (1 > GET_PLAYER((PlayerTypes)iI).getNonStateReligionHappiness())
 							{
-								iValue *= (bCultureVictory ? 16 : 4);
-								bOurCity = true;
+								iPlayerMultiplierPercent += 600;
 							}
-							else if (pLoopCity->getTeam() == getTeam())
-							{
-								iValue *= 3;
-								bOurCity = true;
-							}
-							else
-							{
-								iValue *= iPlayerMultiplierPercent;
-								iValue /= 100;
-							}
-
-							const int iCityReligionCount = pLoopCity->getReligionCount();
-							int iReligionCountFactor = iCityReligionCount;
-
-							if (bOurCity)
-							{
-								// count cities with no religion the same as cities with 2 religions
-								// prefer a city with exactly 1 religion already
-								if (iCityReligionCount == 0)
-								{
-									iReligionCountFactor = 2;
-								}
-								else if (iCityReligionCount == 1)
-								{
-									iValue *= 2;
-								}
-							}
-							else
-							{
-								// absolutely prefer cities with zero religions
-								if (iCityReligionCount == 0)
-								{
-									iValue *= 2;
-								}
-
-								// not our city, so prefer the lowest number of religions (increment so no divide by zero)
-								iReligionCountFactor++;
-							}
-
-							iValue /= iReligionCountFactor;
-
-							//If human, prefer to spread to the player where automated from.
-							if (isHuman() && plot()->getOwner() == pLoopCity->getOwner())
-							{
-								iValue *= 10;
-							}
-							iValue *= 1000;
-
-							targetValues.insert(std::pair<int,CvCity*>(-iValue/(1+itr.stepDistance()), pLoopCity));
 						}
+						else if (GET_PLAYER((PlayerTypes)iI).getStateReligion() == eReligion)
+						{
+							iPlayerMultiplierPercent += 300;
+						}
+						else if (GET_PLAYER((PlayerTypes)iI).hasHolyCity(GET_PLAYER((PlayerTypes)iI).getStateReligion()))
+						{
+							iPlayerMultiplierPercent += 50;
+						}
+						else iPlayerMultiplierPercent += 300;
+
+						const int iCityCount = owner.getNumCities();
+						//magic formula to produce normalized adjustment factor based on religious infusion
+						int iAdjustment = 100 * (iCityCount + 1);
+						iAdjustment /= iCityCount + 1 + GET_PLAYER((PlayerTypes)iI).countTotalHasReligion();
+						iAdjustment = (iAdjustment - 25) * 4 / 3;
+
+						iAdjustment = std::max(10, iAdjustment);
+
+						iPlayerMultiplierPercent *= iAdjustment;
+						iPlayerMultiplierPercent /= 100;
+					}
+				}
+			}
+			else if (iI == getOwner())
+			{
+				iPlayerMultiplierPercent = 100;
+			}
+			else if (bHasHolyCity && GET_PLAYER((PlayerTypes)iI).getTeam() == getTeam())
+			{
+				iPlayerMultiplierPercent = 80;
+			}
+			else continue;
+
+			if (iPlayerMultiplierPercent > 0)
+			{
+				foreach_(CvCity* cityX, GET_PLAYER((PlayerTypes)iI).cities())
+				{
+					if (AI_plotValid(cityX->plot())
+					&& (itr = m_cachedMissionaryPlotset->find(cityX->plot())) != m_cachedMissionaryPlotset->end()
+					&& canSpread(cityX->plot(), eReligion)
+					&& !owner.AI_getAnyPlotDanger(cityX->plot())
+					&& owner.AI_plotTargetMissionAIs(cityX->plot(), MISSIONAI_SPREAD, getGroup()) == 0)
+					{
+						int iValue = 7 + 4 * cityX->getPopulation();
+
+						bool bOurCity = false;
+						// BBAI TODO: Why not just use iPlayerMultiplier??
+						if (cityX->getOwner() == getOwner())
+						{
+							iValue *= bCultureVictory ? 16 : 4;
+							bOurCity = true;
+						}
+						else if (cityX->getTeam() == getTeam())
+						{
+							iValue *= 3;
+							bOurCity = true;
+						}
+						else
+						{
+							iValue *= iPlayerMultiplierPercent;
+							iValue /= 100;
+						}
+
+						const int iCityReligionCount = cityX->getReligionCount();
+
+						if (!bOurCity)
+						{
+							// not our city, so prefer the lowest number of religions
+							if (iCityReligionCount > 1)
+							{
+								iValue /= iCityReligionCount;
+							}
+							else if (iCityReligionCount == 0)
+							{
+								iValue *= 2; // absolutely prefer cities with zero religions
+							}
+						}
+						else if (iCityReligionCount == 0)
+						{
+							iValue /= 2; // count cities with no religion the same as cities with 2 religions
+						}
+						else if (iCityReligionCount == 1)
+						{
+							iValue *= 2; // prefer a city with exactly 1 religion already
+						}
+						else iValue /= iCityReligionCount;
+
+						//If human, prefer to spread to the player where automated from.
+						if (isHuman() && plot()->getOwner() == cityX->getOwner())
+						{
+							iValue *= 5;
+						}
+						iValue *= 1000;
+
+						targetValues.insert(std::pair<int,CvCity*>(-iValue/(1+itr.stepDistance()), cityX));
 					}
 				}
 			}
@@ -15505,7 +15417,7 @@ bool CvUnitAI::AI_spreadReligion()
 		// Koshling - evaluate in likely best-first order to try to minimize pathing calculations
 		for(std::multimap<int,CvCity*>::const_iterator itr = targetValues.begin(); itr != targetValues.end(); ++itr)
 		{
-			CvCity* pLoopCity = itr->second;
+			const CvCity* pLoopCity = itr->second;
 
 			if (generatePath(pLoopCity->plot(), iBaseFlags, true))
 			{
@@ -15517,35 +15429,23 @@ bool CvUnitAI::AI_spreadReligion()
 				pBestSpreadPlot = pLoopCity->plot();
 				//logBBAI("Potential target city at (%d,%d)", pBestSpreadPlot->getX(), pBestSpreadPlot->getY());
 
-				//	Check end of turn point is not in immediate danger
-				if (!bForceMove && GET_PLAYER(getOwner()).AI_getVisiblePlotDanger(pBestPlot, 1, false))
+				// Check end of turn point is not in immediate danger
+				if (!bForceMove && owner.AI_getVisiblePlotDanger(pBestPlot, 1, false))
 				{
 					//logBBAI("Danger at end turn plot - looking for alternate route...");
-					//	Try to find an alternate route taking danger into account in the
-					//	apthing calculation
+
+					// Try to find an alternate route taking danger into account in the pathing calculation
 					if (generatePath(pLoopCity->plot(), MOVE_NO_ENEMY_TERRITORY, true))
 					{
-						//logBBAI("...found one");
 						pBestPlot = getPathEndTurnPlot();
-
 						iBaseFlags = MOVE_NO_ENEMY_TERRITORY;
 					}
-					else
-					{
-						//	No way past
-						//logBBAI("...none found!");
-						continue;
-					}
+					else continue; // No way past
 				}
-				//	Ordering is very close to optimal in almost all conceivable cases
-				//	so just take the first that works
-				break;
+				// Ordering is very close to optimal in almost all conceivable cases
+				break; // so just take the first that works
 			}
 		}
-	}
-	else
-	{
-		//logBBAI("Retaining last target");
 	}
 
 	if (pBestPlot != NULL && pBestSpreadPlot != NULL)
@@ -15556,13 +15456,9 @@ bool CvUnitAI::AI_spreadReligion()
 			getGroup()->pushMission(MISSION_SPREAD, eReligion);
 			return true;
 		}
-		else
-		{
-			FAssert(!atPlot(pBestPlot));
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), iBaseFlags, false, false, MISSIONAI_SPREAD, pBestSpreadPlot);
-		}
+		FAssert(!atPlot(pBestPlot));
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), iBaseFlags, false, false, MISSIONAI_SPREAD, pBestSpreadPlot);
 	}
-
 	return false;
 }
 
@@ -17362,34 +17258,32 @@ namespace {
 		FAssert(unit != NULL);
 		FAssert(targetCity != NULL);
 
-		const CvPlot* sourcePlot = unit->plot();
-		const CvPlot* targetPlot = targetCity->plot();
-		const CvPlayer& player = GET_PLAYER(unit->getOwner());
-		const CvPlayer& otherPlayer = GET_PLAYER(targetCity->getOwner());
+		int score = stepDistance(unit->plot()->getX(), unit->plot()->getY(), targetCity->plot()->getX(), targetCity->plot()->getY());
 
-		int score = stepDistance(sourcePlot->getX(), sourcePlot->getY(), targetPlot->getX(), targetPlot->getY());
+		const CvPlayer& player = GET_PLAYER(unit->getOwner());
 
 		// Prefer NOT targeting our cities if we get bonuses from non-state religions
-		if (player.isNonStateReligionCommerce()
-			&& otherPlayer.getID() == player.getID())
+		if (targetCity->getOwner() == unit->getOwner())
 		{
-			score *= 2;
+			if (player.isNonStateReligionCommerce())
+			{
+				score *= 2;
+			}
 		}
-
 		// Prefer targeting our vassals
-		if (GET_TEAM(player.getTeam()).isVassal((TeamTypes)otherPlayer.getTeam()))
+		else if (GET_PLAYER(targetCity->getOwner()).getTeam() != player.getTeam()
+		&& GET_TEAM(GET_PLAYER(targetCity->getOwner()).getTeam()).isVassal(player.getTeam()))
 		{
 			score -= 12;
 		}
-
 		// Prefer NOT targeting cities where we have the holy city of some religions it has (we don't want to reduce our income from holy cities)
 		const ReligionTypes eStateReligion = player.getStateReligion();
-		for (int religionIdx = 0; religionIdx < GC.getNumReligionInfos(); religionIdx++)
+
+		for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 		{
-			const ReligionTypes religionType = static_cast<ReligionTypes>(religionIdx);
-			if (religionType != eStateReligion
-				&& player.hasHolyCity(religionType)
-				&& targetCity->isHasReligion(religionType))
+			const ReligionTypes eType = static_cast<ReligionTypes>(iI);
+
+			if (eType != eStateReligion && player.hasHolyCity(eType) && targetCity->isHasReligion(eType))
 			{
 				score += 13;
 			}
@@ -17403,32 +17297,24 @@ namespace {
 		FAssert(unit != NULL);
 
 		const CvPlayerAI& player = GET_PLAYER(unit->getOwner());
-		if (!player.hasInquisitionTarget() || (!player.isPushReligiousVictory() && !player.isConsiderReligiousVictory()))
+		if (!player.hasInquisitionTarget() || !player.isPushReligiousVictory() && !player.isConsiderReligiousVictory())
 		{
 			return NULL;
 		}
-
+		const TeamTypes eTeam = player.getTeam();
 		const CvPlot* pUnitPlot = unit->plot();
-		const CvTeam& team = GET_TEAM(player.getTeam());
-		const ReligionTypes eStateReligion = player.getStateReligion();
-
-		CvCity* pBestCity = NULL;
-		int iBestCityValue = MAX_INT;
-
 		std::vector<CvCity*> viableCities;
 
-		for (int playerIdx = 0; playerIdx < MAX_PLAYERS; playerIdx++)
+		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
-			const PlayerTypes playerType = static_cast<PlayerTypes>(playerIdx);
-			const CvPlayer& otherPlayer = GET_PLAYER(playerType);
-			const CvTeam& otherTeam = GET_TEAM(otherPlayer.getTeam());
+			const CvPlayer& playerX = GET_PLAYER(static_cast<PlayerTypes>(iI));
 
-			if (otherPlayer.isAlive()
-				&& (TeamTypes(otherPlayer.getTeam()) == player.getTeam() || otherTeam.isVassal((TeamTypes)otherPlayer.getTeam()))
-				&& pUnitPlot->isHasPathToPlayerCity(player.getTeam(), playerType)
-				)
+			if (playerX.isAlive()
+			// On my team or one of my vassals.
+			&& (playerX.getTeam() == eTeam || GET_TEAM(playerX.getTeam()).isVassal(eTeam))
+			&& pUnitPlot->isHasPathToPlayerCity(eTeam, static_cast<PlayerTypes>(iI)))
 			{
-				foreach_ (CvCity * pLoopCity, otherPlayer.cities())
+				foreach_ (CvCity * pLoopCity, playerX.cities())
 				{
 					if (pLoopCity->isInquisitionConditions())
 					{
@@ -17439,21 +17325,20 @@ namespace {
 		}
 
 		using namespace scoring;
-		ScoreResult<CvCity> bestCityScore = findBestScore<CvCity, LeastScore>(
-			player.beginCities(), player.endCities(),
-			bst::bind(scoreInquisitionTarget, unit, _1), // scoring the city for inquisition attractiveness
-			bst::bind(canSafePathToCity, unit, _1) // final validation is that we can actually path to the city
+		ScoreResult<CvCity> bestCityScore =
+		(
+			findBestScore<CvCity, LeastScore>(
+				player.beginCities(), player.endCities(),
+				// scoring the city for inquisition attractiveness
+				bst::bind(scoreInquisitionTarget, unit, _1),
+				// final validation is that we can actually path to the city
+				bst::bind(canSafePathToCity, unit, _1)
+			)
 		);
-
 		return bestCityScore.found? bestCityScore.result.item : nullptr;
 	}
 }
 
-/************************************************************************************************/
-/* RevDCM				  Start		 5/2/09												 */
-/*																							  */
-/* Inquisitions																				 */
-/************************************************************************************************/
 bool CvUnitAI::AI_doInquisition()
 {
 	int iPathTurns = 0;
@@ -17467,32 +17352,20 @@ bool CvUnitAI::AI_doInquisition()
 			pTargetCity = getReligiousVictoryTarget(this);
 		}
 	}
-
 	if (pTargetCity != NULL)
 	{
-		if (!atPlot(pTargetCity->plot()))
+		if (atPlot(pTargetCity->plot()))
 		{
-			if (generateSafePathforVulnerable(pTargetCity->plot(), &iPathTurns))
-			{
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pTargetCity->getX(), pTargetCity->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_INQUISITION, pTargetCity->plot());
-			}
-			else
-			{
-				return false;
-			}
-		}
-		else
-		{
-			// We can do the inquisition now
 			return performInquisition();
 		}
+		if (generateSafePathforVulnerable(pTargetCity->plot(), &iPathTurns))
+		{
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pTargetCity->getX(), pTargetCity->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_INQUISITION, pTargetCity->plot());
+		}
+		return false;
 	}
-
 	return false;
 }
-/************************************************************************************************/
-/* Inquisitions						 END														*/
-/************************************************************************************************/
 
 
 // Returns true if a mission was pushed...
@@ -18314,14 +18187,10 @@ bool CvUnitAI::AI_safety(int iRange)
 			getGroup()->pushMission(MISSION_SKIP);
 			return true;
 		}
-		else
-		{
-			OutputDebugString(CvString::format("%S (%d) seeking safety moves to (%d,%d)\n", getDescription().c_str(), m_iID, pBestPlot->getX(), pBestPlot->getY()).c_str());
-			// Check iPass > 1 here because we always increment it as we exit the loop, so it will be 1 higher than when pBestPlot was assigned a value
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), ((iPass > 1) ? MOVE_IGNORE_DANGER : 0));
-		}
+		OutputDebugString(CvString::format("%S (%d) seeking safety moves to (%d,%d)\n", getDescription().c_str(), m_iID, pBestPlot->getX(), pBestPlot->getY()).c_str());
+		// Check iPass > 1 here because we always increment it as we exit the loop, so it will be 1 higher than when pBestPlot was assigned a value
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), ((iPass > 1) ? MOVE_IGNORE_DANGER : 0));
 	}
-
 	return false;
 }
 
@@ -18331,109 +18200,73 @@ bool CvUnitAI::AI_hide()
 {
 	PROFILE_FUNC();
 
-	CvUnit* pHeadUnit;
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
-	bool bValid;
-	int iSearchRange;
-	int iPathTurns;
-	int iValue;
-	int iBestValue;
-	int iCount;
-	int iDX, iDY;
-	int iI;
-
 	if (getInvisibleType() == NO_INVISIBLE)
 	{
 		return false;
 	}
+	int iPathTurns;
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
+	const int iSearchRange = AI_searchRange(1);
 
-	iSearchRange = AI_searchRange(1);
-
-	iBestValue = 0;
-	pBestPlot = NULL;
-
-	for (iDX = -(iSearchRange); iDX <= iSearchRange; iDX++)
+	for (int iDX = -iSearchRange; iDX <= iSearchRange; iDX++)
 	{
-		for (iDY = -(iSearchRange); iDY <= iSearchRange; iDY++)
+		for (int iDY = -iSearchRange; iDY <= iSearchRange; iDY++)
 		{
-			pLoopPlot	= plotXY(getX(), getY(), iDX, iDY);
+			CvPlot* plotX = plotXY(getX(), getY(), iDX, iDY);
 
-			if (pLoopPlot != NULL)
+			if (plotX != NULL && AI_plotValid(plotX))
 			{
-				if (AI_plotValid(pLoopPlot))
 				{
-					bValid = true;
-
-					for (iI = 0; iI < MAX_TEAMS; iI++)
+					bool bValid = true;
+					for (int iI = 0; iI < MAX_TEAMS; iI++)
 					{
-						if (GET_TEAM((TeamTypes)iI).isAlive())
+						if (GET_TEAM((TeamTypes)iI).isAlive()
+						&& plotX->isInvisibleVisible((TeamTypes)iI, getInvisibleType()))
 						{
-							if (pLoopPlot->isInvisibleVisible(((TeamTypes)iI), getInvisibleType()))
+							bValid = false;
+							break;
+						}
+					}
+					if (!bValid) continue;
+				}
+				if (!plotX->isVisibleEnemyUnit(this) && generatePath(plotX, 0, true, &iPathTurns, 1))
+				{
+					int iCount = 1;
+
+					foreach_(const CvUnit* unitX, plotX->units())
+					{
+						if (unitX->getOwner() == getOwner() && unitX->canDefend())
+						{
+							CvUnit* pHeadUnit = unitX->getGroup()->getHeadUnit();
+							FAssert(pHeadUnit != NULL);
+							FAssert(getGroup()->getHeadUnit() == this);
+
+							if (pHeadUnit != this && (pHeadUnit->isWaiting() || !pHeadUnit->canMove()))
 							{
-								bValid = false;
-								break;
+								FAssert(unitX != this);
+								FAssert(pHeadUnit != getGroup()->getHeadUnit());
+								iCount++;
 							}
 						}
 					}
 
-					if (bValid)
+					const int iValue =
+					(
+						iCount * 100
+						+ plotX->defenseModifier(getTeam(), false)
+						+ (atPlot(plotX) ? 50 : GC.getGame().getSorenRandNum(50, "AI Hide"))
+					);
+
+					if (iValue > iBestValue)
 					{
-						if (!(pLoopPlot->isVisibleEnemyUnit(this)))
-						{
-							if (generatePath(pLoopPlot, 0, true, &iPathTurns, 1))
-							{
-								iCount = 1;
-
-								foreach_(const CvUnit* pLoopUnit, pLoopPlot->units())
-								{
-									if (pLoopUnit->getOwner() == getOwner())
-									{
-										if (pLoopUnit->canDefend())
-										{
-											pHeadUnit = pLoopUnit->getGroup()->getHeadUnit();
-											FAssert(pHeadUnit != NULL);
-											FAssert(getGroup()->getHeadUnit() == this);
-
-											if (pHeadUnit != this)
-											{
-												if (pHeadUnit->isWaiting() || !(pHeadUnit->canMove()))
-												{
-													FAssert(pLoopUnit != this);
-													FAssert(pHeadUnit != getGroup()->getHeadUnit());
-													iCount++;
-												}
-											}
-										}
-									}
-								}
-
-								iValue = (iCount * 100);
-
-								iValue += pLoopPlot->defenseModifier(getTeam(), false);
-
-								if (atPlot(pLoopPlot))
-								{
-									iValue += 50;
-								}
-								else
-								{
-									iValue += GC.getGame().getSorenRandNum(50, "AI Hide");
-								}
-
-								if (iValue > iBestValue)
-								{
-									iBestValue = iValue;
-									pBestPlot = pLoopPlot;
-								}
-							}
-						}
+						iBestValue = iValue;
+						pBestPlot = plotX;
 					}
 				}
 			}
 		}
 	}
-
 	if (pBestPlot != NULL)
 	{
 		if (atPlot(pBestPlot))
@@ -18441,12 +18274,8 @@ bool CvUnitAI::AI_hide()
 			getGroup()->pushMission(MISSION_SKIP);
 			return true;
 		}
-		else
-		{
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY());
-		}
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY());
 	}
-
 	return false;
 }
 

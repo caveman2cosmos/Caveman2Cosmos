@@ -8384,9 +8384,9 @@ int CvCity::calculateNumCitiesMaintenanceTimes100(int iExtraModifier) const
 	}
 
 	// Toffer - ToDo: Add global define called BASE_NUM_CITY_MAINTENANCE_PERCENT
-	int iNumCitiesPercent = 64;
+	int iNumCitiesPercent = 72;
 
-	iNumCitiesPercent *= (getPopulation() + 15);
+	iNumCitiesPercent *= 16 + getPopulation();
 	iNumCitiesPercent /= 16;
 
 	/* Toffer - Skews early game balance too much between map sizes.
@@ -8394,21 +8394,17 @@ Large maps have a discount on distance maintenance, that is adequate, this doesn
 	iNumCitiesPercent *= GC.getWorldInfo(GC.getMap().getWorldSize()).getNumCitiesMaintenancePercent();
 	iNumCitiesPercent /= 100;
 	*/
-
-	iNumCitiesPercent *= GC.getHandicapInfo(getHandicapType()).getNumCitiesMaintenancePercent();
-	iNumCitiesPercent /= 100;
-
 	int iNumCitiesMaint = iCities * iNumCitiesPercent;
 
 	int iNumVassalCities = 0;
 	int iVassals = 0;
-	for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; iPlayer++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
-		if (kLoopPlayer.getTeam() != getTeam() && GET_TEAM(kLoopPlayer.getTeam()).isVassal(getTeam()))
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getTeam(), false)
+		&& GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isVassal(getTeam()))
 		{
-			iNumVassalCities += kLoopPlayer.getNumCities();
-			iVassals += 1;
+			iNumVassalCities += GET_PLAYER((PlayerTypes)iI).getNumCities();
+			iVassals++;
 		}
 	}
 	if (iNumVassalCities > 0)
@@ -8416,12 +8412,14 @@ Large maps have a discount on distance maintenance, that is adequate, this doesn
 		iNumCitiesMaint += iNumVassalCities * iNumCitiesPercent / (3 + iVassals);
 	}
 
-	// Toffer - ToDo: Max value should perhaps be a global define.
-	iNumCitiesMaint = std::min(iNumCitiesMaint, 2000000);
-
-	iNumCitiesMaint *= std::max(0, (GET_PLAYER(getOwner()).getNumCitiesMaintenanceModifier() + iExtraModifier + 100));
+	iNumCitiesMaint *= std::max(1, GET_PLAYER(getOwner()).getNumCitiesMaintenanceModifier() + iExtraModifier + 100);
 	iNumCitiesMaint /= 100;
 
+	iNumCitiesMaint *= GC.getHandicapInfo(getHandicapType()).getNumCitiesMaintenancePercent();
+	iNumCitiesMaint /= 100;
+
+	// Toffer - ToDo: Max value should perhaps be a global define.
+	iNumCitiesMaint = std::min(iNumCitiesMaint, 2000000);
 	FAssert(iNumCitiesMaint >= 0);
 
 	return iNumCitiesMaint;

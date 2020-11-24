@@ -2251,19 +2251,19 @@ int CvTeam::getDefensivePactCount(TeamTypes eTeam) const
 	return iCount;
 }
 
+
 int CvTeam::getVassalCount(TeamTypes eTeam) const
 {
 	int iCount = 0;
 
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		const CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
-		if (kLoopTeam.isAlive() && iI != getID() && kLoopTeam.isVassal(getID()))
+		if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getID()
+		&& GET_TEAM((TeamTypes)iI).isVassal(getID())
+		// Only count vassals that eTeam knows about, if valid eTeam.
+		&& (NO_TEAM == eTeam || GET_TEAM(eTeam).isHasMet((TeamTypes)iI)))
 		{
-			if (NO_TEAM == eTeam || GET_TEAM(eTeam).isHasMet((TeamTypes)iI))
-			{
-				iCount++;
-			}
+			iCount++;
 		}
 	}
 	return iCount;
@@ -2286,8 +2286,6 @@ bool CvTeam::canVassalRevolt(TeamTypes eMaster) const
 {
 	FAssert(NO_TEAM != eMaster);
 
-	const CvTeam& kMaster = GET_TEAM(eMaster);
-
 	if (isVassal(eMaster))
 	{
 		if (100 * getTotalLand(false) < GC.getVASSAL_REVOLT_OWN_LOSSES_FACTOR() * getVassalPower())
@@ -2295,24 +2293,23 @@ bool CvTeam::canVassalRevolt(TeamTypes eMaster) const
 			return true;
 		}
 
-		if (100 * kMaster.getTotalLand() < GC.getVASSAL_REVOLT_MASTER_LOSSES_FACTOR() * getMasterPower())
+		if (100 * GET_TEAM(eMaster).getTotalLand() < GC.getVASSAL_REVOLT_MASTER_LOSSES_FACTOR() * getMasterPower())
 		{
 			return true;
 		}
 	}
 
-	if (GC.getFREE_VASSAL_LAND_PERCENT() < 0 ||
-		100 * getTotalLand(false) < kMaster.getTotalLand(false) * GC.getFREE_VASSAL_LAND_PERCENT())
+	if (GC.getFREE_VASSAL_LAND_PERCENT() < 0
+	|| 100 * getTotalLand(false) < GET_TEAM(eMaster).getTotalLand(false) * GC.getFREE_VASSAL_LAND_PERCENT())
 	{
 		return false;
 	}
 
-	if (GC.getFREE_VASSAL_POPULATION_PERCENT() < 0 ||
-		100 * getTotalPopulation(false) < kMaster.getTotalPopulation(false) * GC.getFREE_VASSAL_POPULATION_PERCENT())
+	if (GC.getFREE_VASSAL_POPULATION_PERCENT() < 0
+	|| 100 * getTotalPopulation(false) < GET_TEAM(eMaster).getTotalPopulation(false) * GC.getFREE_VASSAL_POPULATION_PERCENT())
 	{
 		return false;
 	}
-
 	return true;
 }
 
@@ -2329,57 +2326,49 @@ int CvTeam::getCurrentMasterPower(bool bIncludeVassals) const
 			}
 		}
 	}
-	// Should never get here
-	FAssert(false);
+	FAssert(false); // Should never get here
 	return 0;
 }
 
 bool CvTeam::isMasterPlanningLandWar(const CvArea* pArea) const
 {
-	if( !isAVassal() )
+	if (!isAVassal())
 	{
 		return false;
 	}
-
-	if( (pArea->getAreaAIType(getID()) == AREAAI_OFFENSIVE) || (pArea->getAreaAIType(getID()) == AREAAI_DEFENSIVE) || (pArea->getAreaAIType(getID()) == AREAAI_MASSING) )
+	if (pArea->getAreaAIType(getID()) == AREAAI_OFFENSIVE
+	||  pArea->getAreaAIType(getID()) == AREAAI_DEFENSIVE
+	||  pArea->getAreaAIType(getID()) == AREAAI_MASSING)
 	{
 		return true;
 	}
-
-	for( int iI = 0; iI < MAX_PC_TEAMS; iI++ )
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		if( isVassal((TeamTypes)iI) )
+		if (isVassal((TeamTypes)iI))
 		{
-			if( GET_TEAM((TeamTypes)iI).getAnyWarPlanCount(true) > 0 )
+			if (GET_TEAM((TeamTypes)iI).getAnyWarPlanCount(true) > 0)
 			{
-				if( (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_OFFENSIVE) || (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_DEFENSIVE) || (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_MASSING) )
+				if (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_OFFENSIVE
+				||  pArea->getAreaAIType((TeamTypes)iI) == AREAAI_DEFENSIVE
+				||  pArea->getAreaAIType((TeamTypes)iI) == AREAAI_MASSING)
 				{
 					return true;
 				}
-				else if( pArea->getAreaAIType((TeamTypes)iI) == AREAAI_NEUTRAL )
+				if (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_NEUTRAL
+				// And master has no presence here
+				&& pArea->getNumCities() - countNumCitiesByArea(pArea) > 2)
 				{
-					// Master has no presence here
-					if( (pArea->getNumCities() - countNumCitiesByArea(pArea)) > 2 )
-					{
-						return (GC.getGame().getSorenRandNum((isCapitulated() ? 6 : 4),"Vassal land war") == 0);
-					}
+					return (GC.getGame().getSorenRandNum((isCapitulated() ? 6 : 4),"Vassal land war") == 0);
 				}
 			}
-			else if( GET_TEAM((TeamTypes)iI).isHuman() )
+			else if (GET_TEAM((TeamTypes)iI).isHuman() && GC.getBBAI_HUMAN_VASSAL_WAR_BUILD()
+			&& pArea->getNumCities() - countNumCitiesByArea(pArea) - GET_TEAM((TeamTypes)iI).countNumCitiesByArea(pArea) > 2)
 			{
-				if( GC.getBBAI_HUMAN_VASSAL_WAR_BUILD() )
-				{
-					if( (pArea->getNumCities() - countNumCitiesByArea(pArea) - GET_TEAM((TeamTypes)iI).countNumCitiesByArea(pArea)) > 2 )
-					{
-						return (GC.getGame().getSorenRandNum(4,"Vassal land war") == 0);
-					}
-				}
+				return GC.getGame().getSorenRandNum(4,"Vassal land war") == 0;
 			}
-
-			break;
+			return false;
 		}
 	}
-
 	return false;
 }
 
@@ -4147,15 +4136,12 @@ void CvTeam::setForcePeace(TeamTypes eIndex, bool bNewValue)
 		{
 			AI_setWarPlan(eIndex, NO_WARPLAN);
 		}
-
 		for (int iTeam = 0; iTeam < MAX_TEAMS; ++iTeam)
 		{
-			if (GET_TEAM((TeamTypes)iTeam).isVassal(eIndex))
+			if (GET_TEAM((TeamTypes)iTeam).isVassal(eIndex)
+			&& AI_isSneakAttackPreparing((TeamTypes)iTeam))
 			{
-				if (AI_isSneakAttackPreparing((TeamTypes)iTeam))
-				{
-					AI_setWarPlan((TeamTypes)iTeam, NO_WARPLAN);
-				}
+				AI_setWarPlan((TeamTypes)iTeam, NO_WARPLAN);
 			}
 		}
 	}
