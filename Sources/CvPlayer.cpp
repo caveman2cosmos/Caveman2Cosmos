@@ -32257,28 +32257,32 @@ bool CvPlayer::haveSettlerUnit() const
 // Toffer - A very common check
 bool CvPlayer::isAliveAndTeam(const TeamTypes eTeam, const bool bSameTeam, const TeamTypes eTeamAlt) const
 {
-	if (!isAlive())
-	{
-		return false;
-	}
 	return
 	(
-		bSameTeam // Can only be on one team, so either or is implied.
-		?
+		isAlive()
+		&&
 		(
-			eTeamAlt == NO_TEAM
-			?
-			eTeam == getTeam()
-			:
-			eTeam == getTeam() || eTeamAlt == getTeam()
-		)
-		: // Different team, both must be different.
-		(
-			eTeamAlt == NO_TEAM
-			?
-			eTeam != getTeam()
-			:
-			eTeam != getTeam() && eTeamAlt != getTeam()
+			eTeam == NO_TEAM
+			||
+			(
+				bSameTeam // Can only be on one team, so either or is implied.
+				?
+				(
+					eTeamAlt == NO_TEAM
+					?
+					eTeam == getTeam()
+					:
+					eTeam == getTeam() || eTeamAlt == getTeam()
+				)
+				: // Different team, both must be different.
+				(
+					eTeamAlt == NO_TEAM
+					?
+					eTeam != getTeam()
+					:
+					eTeam != getTeam() && eTeamAlt != getTeam()
+				)
+			)
 		)
 	);
 	// Could probably get away with the second evaluation even when eTeamAlt == NO_TEAM

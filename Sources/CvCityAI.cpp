@@ -12401,10 +12401,7 @@ int CvCityAI::AI_calculateWaterWorldPercent() const
 			{
 				iTeamCityCount += GET_TEAM((TeamTypes)iI).countNumCitiesByArea(area());
 			}
-			else
-			{
-				iOtherCityCount += GET_TEAM((TeamTypes)iI).countNumCitiesByArea(area());
-			}
+			else iOtherCityCount += GET_TEAM((TeamTypes)iI).countNumCitiesByArea(area());
 		}
 	}
 
@@ -12413,10 +12410,7 @@ int CvCityAI::AI_calculateWaterWorldPercent() const
 	{
 		iWaterPercent = 100;
 	}
-	else
-	{
-		iWaterPercent = 100 - ((iTeamCityCount + iOtherCityCount) * 100) / std::max(1, (GC.getGame().getNumCities()));
-	}
+	else iWaterPercent = 100 - ((iTeamCityCount + iOtherCityCount) * 100) / std::max(1, (GC.getGame().getNumCities()));
 
 	iWaterPercent *= 50;
 	iWaterPercent /= 100;
@@ -12424,7 +12418,6 @@ int CvCityAI::AI_calculateWaterWorldPercent() const
 	iWaterPercent += (50 * (2 + iTeamCityCount)) / (2 + iTeamCityCount + iOtherCityCount);
 
 	iWaterPercent = std::max(1, iWaterPercent);
-
 
 	return iWaterPercent;
 }
@@ -13109,16 +13102,11 @@ int	CvCityAI::getPlayerDangerPercentage(PlayerTypes ePlayer, int& iModifier) con
 
 int CvCityAI::AI_cityThreat(TeamTypes eTargetTeam, int* piThreatModifier)
 {
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      03/04/10                                jdog5000      */
-/*                                                                                              */
-/* War tactics AI                                                                               */
-/************************************************************************************************/
 	PROFILE_FUNC();
 
-	if ( m_iCityThreat != -1 && eTargetTeam == NO_TEAM )
+	if (m_iCityThreat != -1 && eTargetTeam == NO_TEAM)
 	{
-		if ( piThreatModifier != NULL )
+		if (piThreatModifier != NULL)
 		{
 			*piThreatModifier = m_iCityThreatModifier;
 		}
@@ -13130,7 +13118,7 @@ int CvCityAI::AI_cityThreat(TeamTypes eTargetTeam, int* piThreatModifier)
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if ((iI != getOwner()) && GET_PLAYER((PlayerTypes)iI).isAlive() && (eTargetTeam == NO_TEAM || GET_PLAYER((PlayerTypes)iI).getTeam() == eTargetTeam))
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eTargetTeam) && iI != getOwner())
 		{
 			int iTempValue = AI_playerCloseness((PlayerTypes)iI, DEFAULT_PLAYER_CLOSENESS);
 			if (iTempValue > 0)
