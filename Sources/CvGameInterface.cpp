@@ -1,8 +1,10 @@
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvCity.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
 #include "CvTeamAI.h"
 
 #include "CvDLLFAStarIFaceBase.h"

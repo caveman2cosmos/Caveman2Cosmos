@@ -1,9 +1,12 @@
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvMapExternal.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
 #include "CheckSum.h"
 
 #include "CvDLLFAStarIFaceBase.h"

@@ -9,9 +9,13 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvCity.h"
+#include "CvGame.h"
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
 #include "CyCity.h"
 #include "CyGame.h"
 #include "CyPlayer.h"

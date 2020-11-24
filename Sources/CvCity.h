@@ -7,15 +7,14 @@
 
 #include "CvDLLEntity.h"
 #include "LinkedList.h"
-#include "CvInfos.h"
 #include "CvBuildingList.h"
 #include "CvUnitList.h"
 #include "CvGameObject.h"
 
-class CvPlot;
-class CvPlotGroup;
 class CvArea;
 class CvArtInfoBuilding;
+class CvPlot;
+class CvPlotGroup;
 
 //	KOSHLING - Cache yield values where possible
 #define YIELD_VALUE_CACHING

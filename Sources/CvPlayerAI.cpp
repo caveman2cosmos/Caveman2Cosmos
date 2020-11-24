@@ -1,11 +1,12 @@
 // playerAI.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
-
 #include "CvDLLFAStarIFaceBase.h"
 
 /************************************************************************************************/
