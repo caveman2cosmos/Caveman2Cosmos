@@ -789,6 +789,7 @@ public:
 	bool doOutcomeMission(MissionTypes eMission);
 
 	int getEspionagePoints(const CvPlot* pPlot) const; // Exposed to Python
+	bool canInfiltrate() const;
 	bool canInfiltrate(const CvPlot* pPlot, bool bTestVisible = false) const; // Exposed to Python
 	bool infiltrate();
 
