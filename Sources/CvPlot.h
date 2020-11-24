@@ -1126,8 +1126,9 @@ public:
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
 
 	//TB Combat Mod AI
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const;
-
+#endif
 	bool isImprovementUpgradable() const;
 	void setImprovementUpgradeCache(const int iNewValue);
 

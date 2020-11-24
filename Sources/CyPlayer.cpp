@@ -2896,43 +2896,6 @@ void CyPlayer::makeNukesValid(bool bValid)
 		m_pPlayer->makeNukesValid(bValid);
 }
 
-//TB Combat Mod begin
-int CyPlayer::getPlayerWideAfflictionCount(int /*PromotionLineTypes*/ ePromotionLineType)
-{
-	return m_pPlayer ? m_pPlayer->getPlayerWideAfflictionCount((PromotionLineTypes)ePromotionLineType) : 0;
-}
-
-void CyPlayer::changePlayerWideAfflictionCount(int /*PromotionLineTypes*/ ePromotionLineType, int iChange)
-{
-	if (m_pPlayer)
-	{
-		m_pPlayer->changePlayerWideAfflictionCount((PromotionLineTypes)ePromotionLineType, iChange);
-	}
-}
-
-void CyPlayer::setPlayerWideAfflictionCount(int /*PromotionLineTypes*/ ePromotionLineType, int iChange)
-{
-	if (m_pPlayer)
-	{
-		m_pPlayer->setPlayerWideAfflictionCount((PromotionLineTypes)ePromotionLineType, iChange);
-	}
-}
-
-int CyPlayer::countAfflictedUnits (int /*PromotionLineTypes*/ eAfflictionLine)
-{
-	return m_pPlayer ? m_pPlayer->countAfflictedUnits((PromotionLineTypes)eAfflictionLine) : 0;
-}
-
-void CyPlayer::recalculateAfflictedUnitCount()
-{
-	if (m_pPlayer)
-	{
-		m_pPlayer->recalculateAfflictedUnitCount();
-	}
-}
-
-//TB Combat Mod end
-
 //TB Traits begin
 int CyPlayer::getCivicAnarchyModifier( ) const
 {

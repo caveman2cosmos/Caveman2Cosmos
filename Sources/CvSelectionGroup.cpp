@@ -1088,10 +1088,12 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			break;
 
 		case MISSION_CURE:
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 			if (pLoopUnit->canCure(pPlot, ((PromotionLineTypes)iData1)))
 			{
 				return true;
 			}
+#endif
 			break;
 
 		//ls612: Viewports Go To City mission
@@ -1764,10 +1766,12 @@ bool CvSelectionGroup::startMission()
 
 					//TB Combat Mod Begin (Cure)
 					case MISSION_CURE:
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 						if (pLoopUnit->CureAffliction((PromotionLineTypes)(headMissionQueueNode()->m_data.iData1)))
 						{
 							bAction = true;
 						}
+#endif
 						break;
 					//TB Combat Mod end (Cure)
 					case MISSION_JOIN:

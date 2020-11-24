@@ -634,14 +634,6 @@ public:
 	bool isNukesValid();
 	void makeNukesValid(bool bValid);
 
-	//TB Combat Mod begin
-	int getPlayerWideAfflictionCount(int /*PromotionLineTypes*/ ePromotionLineType);
-	void changePlayerWideAfflictionCount(int /*PromotionLineTypes*/ ePromotionLineType, int iChange);
-	void setPlayerWideAfflictionCount(int /*PromotionLineTypes*/ ePromotionLineType, int iChange);
-	int countAfflictedUnits (int /*PromotionLineTypes*/ eAfflictionLine);
-	void recalculateAfflictedUnitCount();
-	//TB Combat Mod end
-
 	//TB Traits begin
 	int getCivicAnarchyModifier( ) const;
 	void setCivicAnarchyModifier( int iNewValue );

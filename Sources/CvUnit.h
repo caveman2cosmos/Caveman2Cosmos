@@ -247,39 +247,46 @@ typedef std::map<PromotionTypes, PromotionKeyedInfo>::iterator PromotionIterator
 class PromotionLineKeyedInfo
 {
 public:
-	PromotionLineKeyedInfo() :	m_iCureAfflictionTypeCount(0),
-								m_iAfflictionTurnTypeCount(0),
-								m_iAfflictionLineCount(0),
-								m_iAfflictionTypeTolerance(0),
-								m_iFortitudeModifierAmount(0),
-								m_iAfflictOnAttackTypeProbability(0),
-								m_iAfflictOnAttackTypeCount(0),
-								m_iAfflictOnAttackTypeImmediateCount(0),
-								m_iAfflictOnAttackTypeAttemptedCount(0),
-								m_iDistanceAttackCommunicability(0),
-								m_bValidBuildUp(false),
-								m_iAfflictOnAttackTypeMeleeCount(0),
-								m_iAfflictOnAttackTypeDistanceCount(0)
+	PromotionLineKeyedInfo() : m_bValidBuildUp(false)
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+							 , m_iCureAfflictionTypeCount(0)
+							 , m_iAfflictionTurnTypeCount(0)
+							 , m_iAfflictionLineCount(0)
+							 , m_iAfflictionTypeTolerance(0)
+							 , m_iFortitudeModifierAmount(0)
+							 , m_iAfflictOnAttackTypeProbability(0)
+							 , m_iAfflictOnAttackTypeCount(0)
+							 , m_iAfflictOnAttackTypeImmediateCount(0)
+							 , m_iAfflictOnAttackTypeAttemptedCount(0)
+							 , m_iDistanceAttackCommunicability(0)
+							 , m_iAfflictOnAttackTypeMeleeCount(0)
+							 , m_iAfflictOnAttackTypeDistanceCount(0)
+#endif
 	{
 	}
 
 	bool Empty() const
 	{
-		return (m_iCureAfflictionTypeCount == 0 &&
-			m_iAfflictionTurnTypeCount == 0 &&
-			m_iAfflictionLineCount == 0 &&
-			m_iAfflictionTypeTolerance == 0 &&
-			m_iFortitudeModifierAmount == 0 &&
-			m_iAfflictOnAttackTypeProbability == 0 &&
-			m_iAfflictOnAttackTypeCount == 0 &&
-			m_iAfflictOnAttackTypeImmediateCount == 0 &&
-			m_iAfflictOnAttackTypeAttemptedCount == 0 &&
-			m_iDistanceAttackCommunicability == 0 &&
-			!m_bValidBuildUp &&
-			m_iAfflictOnAttackTypeMeleeCount == 0 &&
-			m_iAfflictOnAttackTypeDistanceCount == 0);
+		return !m_bValidBuildUp
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+			&& m_iCureAfflictionTypeCount == 0
+			&& m_iAfflictionTurnTypeCount == 0
+			&& m_iAfflictionLineCount == 0
+			&& m_iAfflictionTypeTolerance == 0
+			&& m_iFortitudeModifierAmount == 0
+			&& m_iAfflictOnAttackTypeProbability == 0
+			&& m_iAfflictOnAttackTypeCount == 0
+			&& m_iAfflictOnAttackTypeImmediateCount == 0
+			&& m_iAfflictOnAttackTypeAttemptedCount == 0
+			&& m_iDistanceAttackCommunicability == 0
+			&& m_iAfflictOnAttackTypeMeleeCount == 0
+			&& m_iAfflictOnAttackTypeDistanceCount == 0
+#endif
+		;
 	}
 
+	bool	m_bValidBuildUp;
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int		m_iCureAfflictionTypeCount;
 	int		m_iAfflictionTurnTypeCount;
 	int		m_iAfflictionLineCount;
@@ -290,9 +297,9 @@ public:
 	int		m_iAfflictOnAttackTypeImmediateCount;
 	int		m_iAfflictOnAttackTypeAttemptedCount;
 	int		m_iDistanceAttackCommunicability;
-	bool	m_bValidBuildUp;
 	int		m_iAfflictOnAttackTypeMeleeCount;
 	int		m_iAfflictOnAttackTypeDistanceCount;
+#endif
 };
 
 class TerrainKeyedInfo
@@ -1035,7 +1042,9 @@ public:
 	bool hasCombatType(UnitCombatTypes eCombatType) const;
 	bool hasSubCombatType(UnitCombatTypes eCombatType) const;
 	bool hasCureAfflictionType(PromotionLineTypes ePromotionLineType) const;
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int fortitudeTotal() const;
+#endif
 	int aidTotal(PropertyTypes eProperty) const;
 	int dodgeTotal() const;
 	int precisionTotal() const;
@@ -2300,6 +2309,7 @@ private:
 public:
 	bool isArcher() const;
 	bool isPromotionOverriden(PromotionTypes ePromotionType) const;
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	bool canCure(const CvPlot* pPlot, PromotionLineTypes eAfflictionLine) const;
 	bool CureAffliction(PromotionLineTypes eAfflictionLine);
 	int getTotalCommunicableExposure(PromotionLineTypes eAfflictionLine) const;
@@ -2327,7 +2337,7 @@ public:
 	int getFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType) const;
 	void changeFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType, int iChange);
 	void setFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType, int iChange);
-
+#endif
 	int getCityRepel() const;
 
 #ifdef STRENGTH_IN_NUMBERS
@@ -2458,9 +2468,10 @@ public:
 	void setCombatRepels(int iNewValue);
 	void changeCombatRepels(int iChange);
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	void checkForCritical(int iDamage, CvUnit* pOpponent);
 	void assignCritical(CvUnit* pOpponent);
-
+#endif
 	bool canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree = false, bool bMessageOnFalse = false) const;
 	bool isPromotionFree(PromotionTypes ePromotion) const;
 	int getPromotionFreeCount(PromotionTypes ePromotion) const;
@@ -2563,6 +2574,7 @@ public:
 
 	bool canInflictCritical(PromotionTypes eCritical) const;
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int getAfflictionLineCount(PromotionLineTypes ePromotionLineType) const;
 	bool hasAfflictionLine(PromotionLineTypes ePromotionLineType) const; // Exposed to Python
 	void changeAfflictionLineCount(PromotionLineTypes ePromotionLineType, int iChange);
@@ -2600,6 +2612,7 @@ public:
 	void setAfflictOnAttackTypeAttemptedCount(PromotionLineTypes ePromotionLineType, int iChange);
 
 	int worsenedProbabilitytoAfflict(PromotionLineTypes eAfflictionLine) const;
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 	bool hasHealUnitCombat() const;
 	int getHealUnitCombatCount() const;
@@ -2987,11 +3000,12 @@ public:
 	void changeExtraVisibleImprovementRange(InvisibleTypes eInvisible, ImprovementTypes eImprovement, int iChange);
 	int extraVisibleImprovementRange(InvisibleTypes eInvisible, ImprovementTypes eImprovement) const;
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int getNumExtraAidChanges() const;
 	AidStruct& getExtraAidChange(int iIndex);
 	void changeExtraAidChange(PropertyTypes eProperty, int iChange);
 	int extraAidChange(PropertyTypes eProperty) const;
-
+#endif
 	void deleteVisibility();
 	void addVisibility();
 
@@ -3115,10 +3129,11 @@ public:
 
 	void makeWanted(const CvCity* pCity);
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	int getDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine) const;
 	void changeDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine, int iChange);
 	void setDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine, int iValue);
-
+#endif
 	void setCityOfOrigin(CvCity* pCity);
 	void clearCityOfOrigin();
 	CvCity* getCityOfOrigin() const;
@@ -3291,10 +3306,12 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, canClaimTerritory, const CvPlot*);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, meetsUnitSelectionCriteria, const CvUnitSelectionCriteria*);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, canPillage, const CvPlot*);
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
+#endif
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, bool, hasBuild, BuildTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, upgradePrice, UnitTypes);
-		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, aidTotal, PropertyTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvUnit, int, isEnemy, TeamTypes);
 

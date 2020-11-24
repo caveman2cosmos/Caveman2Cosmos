@@ -2166,7 +2166,8 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				szString.append(gDLL->getText("TXT_KEY_UNIT_TRAP_COMPLEXITY", iComplexity));
 			}
 
-				//Afflict On Attack
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+			//Afflict On Attack
 			for (iI = 0; iI < GC.getNumPromotionLineInfos(); ++iI)
 			{
 				if (pUnit->hasAfflictOnAttackType((PromotionLineTypes)iI))
@@ -2184,7 +2185,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					}
 				}
 			}
-
+#endif
 			if (pUnit->poisonProbabilityModifierTotal() > 0)
 			{
 				if (bShort)
@@ -2508,6 +2509,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				szString.append(gDLL->getText("TXT_KEY_PROMOTION_VICTORY_HEAL_TEXT", pUnit->getVictoryHeal()));
 			}
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 			//Curing, resisting and overcoming afflictions
 			for (iI = 0; iI <GC.getNumPromotionLineInfos(); iI++)
 			{
@@ -2572,7 +2574,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					szString.append(gDLL->getText("TXT_KEY_CURE_AFFLICTION_TEXT", GC.getPromotionLineInfo((PromotionLineTypes) iI).getDescription()));
 				}
 			}
-
+#endif
 			//Extra Lives
 			if (pUnit->isOneUp())
 			{
@@ -2586,6 +2588,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				szString.append(gDLL->getText("TXT_KEY_PROMOTION_SURVIVOR_TEXT", pUnit->getSurvivorChance()));
 			}
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 			//Resistances
 				//Fortitude
 			if (pUnit->fortitudeTotal() > 0)
@@ -2601,6 +2604,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					szString.append(gDLL->getText("TXT_KEY_UNIT_FORTITUDE_TOTAL_MODIFIER", pUnit->fortitudeTotal()));
 				}
 			}
+#endif
 				//Endurance
 			if (pUnit->enduranceTotal() != 0)
 			{
@@ -5225,6 +5229,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 							szString.append(szTempBuffer.GetCString());
 						}
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 						for (iI = 0; iI < GC.getNumPromotionLineInfos(); ++iI)
 						{
 							PromotionLineTypes ePoisonLine = (PromotionLineTypes)iI;
@@ -5394,7 +5399,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 								szString.append(NEWLINE);
 							}
 						}
-
+#endif
 						if (iAttackerCriticalChance > 0)
 						{
 							if (iAttackerBaseCriticalChance != 0)
@@ -12926,7 +12931,9 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		//	Afflication, equipment and status promos don't accrue values from lower elements of the same line
 		if ( GC.getPromotionInfo(ePromotion).getPromotionLine() != NO_PROMOTIONLINE &&
 			 !GC.getPromotionInfo(ePromotion).isEquipment() &&
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 			 !GC.getPromotionInfo(ePromotion).isAffliction() &&
+#endif
 			 !GC.getPromotionInfo(ePromotion).isStatus())
 		{
 			for( iI = 0; iI < GC.getNumPromotionInfos(); iI++ )
@@ -13426,8 +13433,6 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PREREQ_NORM_INVISIBLE_TEXT"));
 	}
 
-
-
 	//independant bools
 	if (GC.getPromotionInfo(ePromotion).isEquipment())
 	{
@@ -13435,12 +13440,13 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_EQUIPMENT_TEXT"));
 	}
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	if (GC.getPromotionInfo(ePromotion).isAffliction())
 	{
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AFFLICTION_TEXT"));
 	}
-
+#endif
 
 	//int
 	int	iGetControlPoints = 0;
@@ -13725,6 +13731,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		iUpgradeDiscount += promo.getUpgradeDiscount();
 		iExperiencePercent += promo.getExperiencePercent();
 		iKamikazePercent += promo.getKamikazePercent();
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 		if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 		{
 			if (promo.getPromotionLine() != NO_PROMOTIONLINE)
@@ -13739,6 +13746,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 				iToleranceDecay += GC.getPromotionLineInfo(promo.getPromotionLine()).getToleranceDecay();
 			}
 		}
+#endif // OUTBREAKS_AND_AFFLICTIONS
 		iHiddenNationality += promo.getHiddenNationalityChange();
 		iIsAnimalIgnoresBordersChange += promo.getAnimalIgnoresBordersChange();
 		iNoDefensiveBonusChange += promo.getNoDefensiveBonusChange();
@@ -14712,6 +14720,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		}
 	}
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	std::vector<PromotionLineTypes> aAfflictions;
 	std::vector<int> iMelee;
 	std::vector<int> iDistance;
@@ -14805,6 +14814,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_AFFLICTION_FORTITUDE_CHANGE_MODIFIER_TEXT", afflictionModifier[iI], GC.getPromotionLineInfo(aAfflictions[iI]).getDescription()));
 		}
 	}
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 	std::vector<UnitCombatTypes> aUnitCombats;
 
@@ -15209,7 +15219,9 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			iDisable += GC.getPromotionInfo(linePromotionsOwned[iJ]).getTrapDisableUnitCombatType(iI);
 			iAvoid += GC.getPromotionInfo(linePromotionsOwned[iJ]).getTrapAvoidanceUnitCombatType(iI);
 			iTrigger += GC.getPromotionInfo(linePromotionsOwned[iJ]).getTrapTriggerUnitCombatType(iI);
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 			iAidChange += GC.getPromotionInfo(linePromotionsOwned[iJ]).getAidChange(iI);
+#endif
 			iFlankingStrengthbyUnitCombatTypeChange += GC.getPromotionInfo(linePromotionsOwned[iJ]).getFlankingStrengthbyUnitCombatTypeChange(iI);
 			iUnitCombatModifierPercent += GC.getPromotionInfo(linePromotionsOwned[iJ]).getUnitCombatModifierPercent(iI);
 			iWithdrawVS += GC.getPromotionInfo(linePromotionsOwned[iJ]).getWithdrawVSUnitCombatChangeType(iI);
@@ -19121,6 +19133,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			}
 		}
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 		if (game.isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 		{
 			int iAidChange = 0;
@@ -19193,6 +19206,8 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_FORTITUDE", kUnit.getFortitude()));
 			}
 		}
+#endif // OUTBREAKS_AND_AFFLICTIONS
+
 		//Endurance
 		if (kUnit.getEndurance() != 0)
 		{
@@ -22734,6 +22749,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_TRADE_COMMUNICABILITY_REDUCED", kBuilding.getTradeCommunicability()));
 	}
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	if (kBuilding.getPromotionLineType() != NO_PROMOTIONLINE)
 	{
 		PromotionLineTypes eDiseaseLine = kBuilding.getPromotionLineType();
@@ -22743,6 +22759,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 			szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DISEASE_TYPE", GC.getPromotionLineInfo(eDiseaseLine).getDescription()));
 		}
 	}
+#endif
 
 	for (int iI = 0; iI < kBuilding.getNumBonusAidModifiers(); iI++)
 	{
@@ -28904,8 +28921,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			}
 		}
 	}
-
-
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 	{
 		for (iI = 0; iI < GC.getNumPropertyInfos(); iI++)
@@ -28923,6 +28939,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			}
 		}
 	}
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 	if (info.getMovesChange() != 0)
 	{
@@ -30900,8 +30917,8 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		}
 	}
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	// bool vector with delayed resolution
-
 	if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 	{
 		for (iI = 0; iI < info.getNumCureAfflictionChangeTypes(); ++iI)
@@ -30919,6 +30936,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			}
 		}
 	}
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 	for (iI = 0; iI < info.getNumTerrainIgnoreDamageChangeTypes(); ++iI)
 	{
@@ -30965,6 +30983,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		}
 	}
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	// int vector utilizing struct with delayed resolution
 	if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 	{
@@ -31014,6 +31033,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			}
 		}
 	}
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 	//Traps
 	for (iI = 0; iI < info.getNumTrapImmunityUnitCombatTypes(); ++iI)

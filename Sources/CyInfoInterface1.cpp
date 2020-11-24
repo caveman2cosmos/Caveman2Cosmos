@@ -175,18 +175,8 @@ void CyInfoPythonInterface1()
 		.def("getFeatureDefensePercent", &CvPromotionInfo::getFeatureDefensePercent, "int (int i)")
 
 		.def("getUnitCombat", &CvPromotionInfo::getUnitCombat, "bool (int i)")
-		//TB Combat Mods Begin
 		.def("getPromotionLine", &CvPromotionInfo::getPromotionLine, "int ()")
-		//integers
-		//booleans
-		.def("isEquipment", &CvPromotionInfo::isEquipment, "bool ()")
-		.def("isAffliction", &CvPromotionInfo::isAffliction, "bool ()")
-		//boolean vectors
-		// int vector utilizing pairing without delayed resolution
-		// int vector utilizing struct with delayed resolution
-		//.def("getAfflictionFortitudeModifier", &CvPromotionInfo::getAfflictionFortitudeModifier, "int (int iAffliction)")
-		//TB Combat Mods End
-		//PediaHelp
+
 		.def("isQualifiedUnitCombatType", &CvPromotionInfo::isQualifiedUnitCombatType, "bool (int i)")
 		.def("isStatus", &CvPromotionInfo::isStatus, "bool ()")
 		;
@@ -539,8 +529,6 @@ void CyInfoPythonInterface1()
 	python::class_<CvPromotionLineInfo, python::bases<CvInfoBase> >("CvPromotionLineInfo")
 		.def("getPrereqTech", &CvPromotionLineInfo::getPrereqTech, "int ()")
 		.def("getObsoleteTech", &CvPromotionLineInfo::getObsoleteTech, "int ()")
-		.def("isAffliction", &CvPromotionLineInfo::isAffliction, "bool ()")
-		.def("isEquipment", &CvPromotionLineInfo::isEquipment, "bool ()")
 		.def("isBuildUp", &CvPromotionLineInfo::isBuildUp, "bool ()")
 		;
 

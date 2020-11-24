@@ -1499,6 +1499,7 @@ void CvCity::doTurn()
 
 	doPropertyUnitSpawn();
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	//TB Combat Mod (Buildings) begin
 	if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 	{
@@ -1528,6 +1529,7 @@ void CvCity::doTurn()
 			}
 		}
 	}
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
@@ -5411,11 +5413,13 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			changeHealthPercentPerPopulation(kBuilding.getHealthPercentPerPopulation() * iChange);
 			changeHappinessPercentPerPopulation(kBuilding.getHappinessPercentPerPopulation() * iChange);
 			//TB Combat Mods (Buildings) begin
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 			for (int iI = 0; iI < kBuilding.getNumAidRateChanges(); iI++)
 			{
 				PropertyTypes eProperty = kBuilding.getAidRateChange(iI).ePropertyType;
 				changeAidRate(eProperty, kBuilding.getAidRateChange(iI).iChange * iChange);
 			}
+#endif
 			changeTotalFrontSupportPercentModifier(kBuilding.getFrontSupportPercentModifier() * iChange);
 			changeTotalShortRangeSupportPercentModifier(kBuilding.getShortRangeSupportPercentModifier() * iChange);
 			changeTotalMediumRangeSupportPercentModifier(kBuilding.getMediumRangeSupportPercentModifier() * iChange);
@@ -5423,6 +5427,7 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			changeTotalFlankSupportPercentModifier(kBuilding.getFlankSupportPercentModifier() * iChange);
 		}
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 		if (kBuilding.getPromotionLineType() != NO_PROMOTIONLINE && GC.getPromotionLineInfo(kBuilding.getPromotionLineType()).isAffliction())
 		{
 			changeAfflictionTypeCount(kBuilding.getPromotionLineType(), iChange);
@@ -5450,7 +5455,7 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 				}
 			}
 		}
-
+#endif
 		//int iNum = kBuilding.getNumFreePromoTypes();
 		//for (iI=0; iI<iNum; iI++)
 		//{
@@ -23622,6 +23627,12 @@ int CvCity::getGlobalSourcedProperty(PropertyTypes eProperty) const
 	return iSum;
 }
 
+int CvCity::getPropertyValue(PropertyTypes eProperty)
+{
+	return getProperties()->getValueByProperty(eProperty);
+}
+
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 //TB Combat Mods (Buildings) begin
 int CvCity::getUnitAidPresent(PropertyTypes eProperty) const
 {
@@ -23772,11 +23783,6 @@ int CvCity::getTotalTechOutbreakLevelChange(BuildingTypes eBuilding) const
 		}
 	}
 	return iTotalTechOutbreakLevelChange;
-}
-
-int CvCity::getPropertyValue(PropertyTypes eProperty)
-{
-	return getProperties()->getValueByProperty(eProperty);
 }
 
 int CvCity::getOutbreakChangesTotal(BuildingTypes eAfflictionBuilding, PromotionLineTypes eAfflictionLine) const
@@ -24099,6 +24105,7 @@ void CvCity::setPromotionLineAfflictionAttackCommunicability(PromotionLineTypes 
 	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), eAffliction)
 	m_paiPromotionLineAfflictionAttackCommunicability[eAffliction] = iValue;
 }
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 int CvCity::getUnitCombatProductionModifier(UnitCombatTypes eIndex) const
 {

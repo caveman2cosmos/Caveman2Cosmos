@@ -249,7 +249,9 @@ protected:
 	bool AI_afterAttack();
 	/*TB Prophet Mod begin*/
 	bool AI_foundReligion();
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	bool AI_cureAffliction(PromotionLineTypes eAfflictionLine);
+#endif
 	/*TB Prophet Mod end*/
 	bool AI_goldenAge();
 	bool AI_spreadReligion();

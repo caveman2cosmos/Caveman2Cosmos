@@ -13625,10 +13625,12 @@ void	CvPlot::setDeferredPlotGroupRecalculationMode(bool bDefer)
 	}
 }
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 int CvPlot::getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const
 {
 	return plotCount(PUF_isAfflicted, eAfflictionLine, -1, NULL, eOwner);
 }
+#endif
 
 void CvPlot::enableCenterUnitRecalc(bool bEnable)
 {

@@ -2029,10 +2029,12 @@ bool PUF_isMissionary(const CvUnit* pUnit, int /*ReligionTypes*/ iData1, int /*P
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 bool PUF_isAfflicted(const CvUnit* pUnit, int /*PromotionLineTypes*/ iData1, int iData2, const CvUnit* pThis)
 {
 	return pUnit->hasAfflictionLine((PromotionLineTypes)iData1);
 }
+#endif
 
 bool PUF_isTunneledEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {

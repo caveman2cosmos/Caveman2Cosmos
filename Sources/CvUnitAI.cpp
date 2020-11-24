@@ -4546,6 +4546,8 @@ void CvUnitAI::AI_pillageMove()
 void CvUnitAI::AI_reserveMove()
 {
 	PROFILE_FUNC();
+
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	//TB Note: One big reason to split off healers into their own ai...
 	for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 	{
@@ -4554,6 +4556,7 @@ void CvUnitAI::AI_reserveMove()
 			return;
 		}
 	}
+#endif
 	//TB OOS debug note: not terribly necessary to update into AND as this is not representing a fix but was adjusted to help with tracking
 	bool bcheckSwitchToConstruct = checkSwitchToConstruct();
 	if ( bcheckSwitchToConstruct )
@@ -32565,18 +32568,19 @@ bool CvUnitAI::AI_foundReligion()
 	return false;
 }
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 bool CvUnitAI::AI_cureAffliction(PromotionLineTypes eAfflictionLine)
 {
 	PROFILE_FUNC();
-	CvPlot* pPlot = plot();
 
-	if (canCure(pPlot, eAfflictionLine))
+	if (canCure(plot(), eAfflictionLine))
 	{
 		getGroup()->pushMission(MISSION_CURE, eAfflictionLine);
 		return true;
 	}
 	return false;
 }
+#endif
 /*TB Prophet Mod end*/
 
 void unitSourcesValueToCity(const CvGameObject* pObject, const CvPropertyManipulators* pMani, const CvUnit* pUnit, const CvCityAI* pCity, int* iValue, PropertyTypes eProperty)

@@ -2245,10 +2245,12 @@ int CvUnitInfo::getDynamicDefense() const
 
 int CvUnitInfo::getFortitude() const
 {
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	if (!GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
 	{
 		return 0;
 	}
+#endif
 	return m_iFortitude;
 }
 
@@ -3725,6 +3727,7 @@ bool CvUnitInfo::isBuildWorkRateModifierType(int iBuild) const
 	return false;
 }
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 int CvUnitInfo::getNumAidChanges() const
 {
 	return m_aAidChanges.size();
@@ -3753,6 +3756,7 @@ bool CvUnitInfo::isAidChange(int iProperty) const
 	}
 	return false;
 }
+#endif
 //TB Combat Mods End  TB SubCombat Mod end
 
 void CvUnitInfo::getCheckSum(unsigned int &iSum) const
@@ -4233,7 +4237,9 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum) const
 	CheckSumC(iSum, m_aTerrainWorkRateModifierTypes);
 	CheckSumC(iSum, m_aFeatureWorkRateModifierTypes);
 	CheckSumC(iSum, m_aBuildWorkRateModifierTypes);
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	CheckSumC(iSum, m_aAidChanges);
+#endif
 	//TB Combat Mods End  TB SubCombat Mod end
 
 	CheckSum(iSum, m_szExtraHoverTextKey);
@@ -5271,8 +5277,9 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetOptionalPairVector<BuildModifierArray, BuildTypes, int>(&m_aBuildWorkRateModifierTypes, L"BuildWorkRateModifierTypes");
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	pXML->SetOptionalPairVector<AidArray, PropertyTypes, int>(&m_aAidChanges, L"AidChanges");
-
+#endif
 	//TB Combat Mods End  TB SubCombat Mod end
 
 	m_KillOutcomeList.read(pXML, L"KillOutcomes");
@@ -6306,6 +6313,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		}
 	}
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	if (getNumAidChanges()==0)
 	{
 		for (int i=0; i < pClassInfo->getNumAidChanges(); i++)
@@ -6315,6 +6323,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 			m_aAidChanges.push_back(std::make_pair(eProperty, iChange));
 		}
 	}
+#endif
 	//TB Combat Mods End  TB SubCombat Mod end
 	//setTotalModifiedCombatStrengthDetails();
 
