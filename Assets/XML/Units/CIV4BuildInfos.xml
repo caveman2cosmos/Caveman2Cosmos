@@ -10756,11 +10756,11 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/tower/art/wooden_tower.dds</Button>
 		</BuildInfo>
-		<!--BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_STONE_WATCHTOWER</Type>
 			<Description>TXT_KEY_BUILD_STONE_WATCHTOWER</Description>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
-			<iTime>800</iTime>
+			<iTime>400</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
@@ -10768,13 +10768,13 @@
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/stone_tower/stone_tower_btn.dds</Button>
+			<Button>Art/tower/art/stone_tower.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_STEEL_WATCHTOWER</Type>
 			<Description>TXT_KEY_BUILD_STEEL_WATCHTOWER</Description>
 			<PrereqTech>TECH_STEEL</PrereqTech>
-			<iTime>800</iTime>
+			<iTime>600</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
@@ -10782,7 +10782,7 @@
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/stone_tower/stone_tower_btn.dds</Button>
+			<Button>Art/tower/art/steel_tower.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_RADAR_TOWER</Type>
@@ -10810,8 +10810,8 @@
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/stone_tower/stone_tower_btn.dds</Button>
-		</BuildInfo-->
+			<Button>Art/Structures/Improvements/radar/radar_button.dds</Button>
+		</BuildInfo>
 		<!-- Pepper's routes are used as yield boosters in improvements. They are here so Pepper's module can be turned off. -->
 		<BuildInfo>
 			<Type>BUILD_VACTRAIN</Type>
