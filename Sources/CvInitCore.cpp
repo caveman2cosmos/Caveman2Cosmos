@@ -2243,23 +2243,20 @@ void CvInitCore::checkVersions()
 {
 	if (!m_bRecalcRequestProcessed && !getNewGame())
 	{
-		bool bAssetsChanged = m_uiSavegameAssetCheckSum != GC.getInitCore().getAssetCheckSum();
-		if (bAssetsChanged)
+		// If assets changed
+		if (m_uiSavegameAssetCheckSum != GC.getInitCore().getAssetCheckSum())
 		{
+			const PlayerTypes ePlayer = GC.getGame().getActivePlayer();
 			// DLL or assets changed, recommend modifier reloading
-			if ( NO_PLAYER != GC.getGame().getActivePlayer() )
+			if (NO_PLAYER != ePlayer && GET_PLAYER(ePlayer).isAlive() && GET_PLAYER(ePlayer).isHuman())
 			{
-				const CvPlayer& kPlayer = GET_PLAYER(GC.getGame().getActivePlayer());
-				if (kPlayer.isAlive() && kPlayer.isHuman())
+				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_MODIFIER_RECALCULATION);
+				if (NULL != pInfo)
 				{
-					CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_MODIFIER_RECALCULATION);
-					if (NULL != pInfo)
-					{
-						gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGame().getActivePlayer(), true, true);
-					}
-					m_uiSavegameAssetCheckSum = GC.getInitCore().getAssetCheckSum();
-					m_bRecalcRequestProcessed = true;
+					gDLL->getInterfaceIFace()->addPopup(pInfo, ePlayer, true, true);
 				}
+				m_uiSavegameAssetCheckSum = GC.getInitCore().getAssetCheckSum();
+				m_bRecalcRequestProcessed = true;
 			}
 		}
 	}
