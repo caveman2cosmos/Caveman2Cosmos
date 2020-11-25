@@ -7221,86 +7221,70 @@ int CvCityAI::evaluateDanger()
 
 	UnitTypes eDummyUnit = GET_PLAYER(getOwner()).bestBuildableUnitForAIType(DOMAIN_LAND, UNITAI_ATTACK, &noGrowthCriteria);
 
-	if ( eDummyUnit == NO_UNIT )
+	if (eDummyUnit == NO_UNIT)
 	{
 		eDummyUnit = GET_PLAYER(getOwner()).bestBuildableUnitForAIType(DOMAIN_LAND, UNITAI_CITY_DEFENSE, &noGrowthCriteria);
 	}
-
-	if ( eDummyUnit != NO_UNIT )
+	if (eDummyUnit == NO_UNIT)
 	{
-		CvUnit*				pTempUnit = GET_PLAYER(getOwner()).getTempUnit(eDummyUnit, getX(), getY());
-		CvReachablePlotSet	plotSet(pTempUnit->getGroup(), 0, MAX_DANGER_EVALUATION_RANGE, false, 1);
-		int					iBorderDanger = 0;
-		//int					iGeneralDanger = 0;
-		int					iDistanceModifier[MAX_DANGER_EVALUATION_RANGE];
-
-		iDistanceModifier[0] = 1000;
-		for(int iI = 1; iI < MAX_DANGER_EVALUATION_RANGE; iI++)
-		{
-			iDistanceModifier[iI] = DISTANCE_ATTENUATION_FACTOR(iDistanceModifier[iI-1]);
-		}
-
-		for(CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
-		{
-			CvPlot*		pLoopPlot = itr.plot();
-			TeamTypes	ePlotTeam = pLoopPlot->getTeam();
-
-			// AIAndy: This sums up iGeneralDanger but never uses it. Looks incorrect for city danger evaluation.
-			//iGeneralDanger += pLoopPlot->getDangerCount(getOwner());
-
-			if ( ePlotTeam != getTeam() )
-			{
-				if ( ePlotTeam == NO_TEAM )
-				{
-					//	Neutral territory border
-					iBorderDanger += NEUTRAL_BORDER_PLOT_DANGER*iDistanceModifier[itr.stepDistance()-1];
-				}
-				else
-				{
-					if ( GET_TEAM(getTeam()).isAtWar(ePlotTeam) )
-					{
-						//	Border with someone we are at war with
-						iBorderDanger += OWNED_PLOT_WAR_DANGER*iDistanceModifier[itr.stepDistance()-1];
-					}
-					else
-					{
-						int iModifier;
-						int iTempBorderDanger;
-
-						//	Border with a player we are not at war with - weight by attitude
-						iTempBorderDanger = (OWNED_PLOT_NON_WAR_BASE_DANGER*getPlayerDangerPercentage(pLoopPlot->getOwner(), iModifier)*iDistanceModifier[itr.stepDistance()-1])/100;
-						iTempBorderDanger = (iTempBorderDanger*(100+iModifier))/100;
-
-						iBorderDanger += iTempBorderDanger;
-					}
-				}
-			}
-		}
-
-		GET_PLAYER(getOwner()).releaseTempUnit();
-
-		return iBorderDanger/100;
-	}
-	else
-	{
-		//	Should never happen but empirically it does (very rarely) - needs future investigation
+		// Should never happen but empirically it does (very rarely) - needs future investigation
 		FErrorMsg("Cannot find defender to use for strength test");
 		return 100;
 	}
+
+	CvUnit* pTempUnit = GET_PLAYER(getOwner()).getTempUnit(eDummyUnit, getX(), getY());
+
+	CvReachablePlotSet plotSet(pTempUnit->getGroup(), 0, MAX_DANGER_EVALUATION_RANGE, false, 1);
+
+	int iBorderDanger = 0;
+	int iDistanceModifier[MAX_DANGER_EVALUATION_RANGE];
+
+	iDistanceModifier[0] = 1000;
+	for (int iI = 1; iI < MAX_DANGER_EVALUATION_RANGE; iI++)
+	{
+		iDistanceModifier[iI] = DISTANCE_ATTENUATION_FACTOR(iDistanceModifier[iI-1]);
+	}
+
+	for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
+	{
+		CvPlot* pLoopPlot = itr.plot();
+		TeamTypes ePlotTeam = pLoopPlot->getTeam();
+
+		if (ePlotTeam != getTeam())
+		{
+			if (ePlotTeam == NO_TEAM)
+			{
+				// Neutral territory border
+				iBorderDanger += NEUTRAL_BORDER_PLOT_DANGER*iDistanceModifier[itr.stepDistance()-1];
+			}
+			else if (!GET_TEAM(getTeam()).isAtWar(ePlotTeam))
+			{
+				// Border with a player we are not at war with - weight by attitude
+				int iModifier;
+				int iTempBorderDanger =
+				(
+					OWNED_PLOT_NON_WAR_BASE_DANGER
+					*
+					getPlayerDangerPercentage(pLoopPlot->getOwner(), iModifier)
+					*
+					iDistanceModifier[itr.stepDistance()-1]
+					/
+					100
+				);
+				iBorderDanger += iTempBorderDanger * (100+iModifier) / 100;
+			}
+			// Border with someone we are at war with
+			else iBorderDanger += OWNED_PLOT_WAR_DANGER * iDistanceModifier[itr.stepDistance() - 1];
+		}
+	}
+	GET_PLAYER(getOwner()).releaseTempUnit();
+
+	return iBorderDanger / 100;
 }
 
 bool CvCityAI::AI_isDanger() const
 {
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/20/09                                jdog5000      */
-/*                                                                                              */
-/* City AI, Efficiency                                                                          */
-/************************************************************************************************/
-	//return GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 2, false);
 	return GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 2, false);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 }
 
 
