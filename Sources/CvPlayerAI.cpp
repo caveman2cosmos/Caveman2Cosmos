@@ -1,9 +1,13 @@
 // playerAI.cpp
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
+#include "CvBuildingInfo.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
+#include "CvDLLFAStarIFaceBase.h"
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					  08/21/09								jdog5000	  */
@@ -1374,10 +1378,7 @@ void CvPlayerAI::AI_updateAreaTargets()
 			{
 				pLoopArea->setTargetCity(getID(), NULL);
 			}
-			else
-			{
-				pLoopArea->setTargetCity(getID(), AI_findTargetCity(pLoopArea));
-			}
+			else pLoopArea->setTargetCity(getID(), AI_findTargetCity(pLoopArea));
 		}
 	}
 }
@@ -25236,12 +25237,7 @@ int CvPlayerAI::AI_goldToUpgradeAllUnits(int iExpThreshold) const
 
 int CvPlayerAI::AI_goldTradeValuePercent() const
 {
-	int iValue = 2;
-	if (AI_isFinancialTrouble())
-	{
-		iValue += 1;
-	}
-	return 100 * iValue;
+	return AI_isFinancialTrouble() ? 300 : 200;
 
 }
 

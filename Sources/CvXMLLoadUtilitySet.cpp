@@ -2,10 +2,12 @@
 // XML Set functions
 //
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGameTextMgr.h"
+#include "CvGlobals.h"
 #include "CvXMLLoadUtilitySetMod.h"
+#include "FVariableSystem.h"
 #include <iostream>
 
 // Macro for Setting Global Art Defines
@@ -4157,36 +4159,6 @@ void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t
 					}
 
 					if (!TryMoveToXmlNextSibling())
-					{
-						break;
-					}
-				}
-
-				MoveToXmlParent();
-			}
-		}
-
-		MoveToXmlParent();
-	}
-}
-
-void CvXMLLoadUtility::SetOptionalIntVectorWithDelayedResolution(std::vector<int>& aInfos, const wchar_t* szRootTagName)
-{
-	if (TryMoveToXmlFirstChild(szRootTagName))
-	{
-		aInfos.clear();
-		int iNumSibs = GetXmlChildrenNumber();
-		aInfos.resize(iNumSibs);
-		CvString szTextVal;
-
-		if (0 < iNumSibs)
-		{
-			if (GetChildXmlVal(szTextVal))
-			{
-				for (int j = 0; j < iNumSibs; j++)
-				{
-					GC.addDelayedResolution((int*)&(aInfos[j]), szTextVal);
-					if (!GetNextXmlVal(szTextVal))
 					{
 						break;
 					}

@@ -7,6 +7,8 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
 #include "CvPlayerAI.h"
 
 CvUnitList::CvUnitList(CvPlayer* pPlayer, CvCity* pCity) :

@@ -1,12 +1,17 @@
 // unit.cpp
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
+#include "CvBuildingInfo.h"
+#include "CvCity.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 #include "CyPlot.h"
 #include "CyUnit.h"
+#include "CvDLLEntityIFaceBase.h"
+#include "CvDLLFAStarIFaceBase.h"
 
 static CvEntity* g_dummyEntity = NULL;
 static CvUnit*	 g_dummyUnit = NULL;
@@ -8359,12 +8364,7 @@ bool CvUnit::airlift(int iX, int iY)
 
 bool CvUnit::isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const
 {
-	if (!(GET_TEAM(eTeam).isAlive()))
-	{
-		return false;
-	}
-
-	if (eTeam == getTeam())
+	if (!GET_TEAM(eTeam).isAlive() || eTeam == getTeam())
 	{
 		return false;
 	}
@@ -8375,13 +8375,11 @@ bool CvUnit::isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const
 		{
 			return true;
 		}
-
 		if (pLoopPlot->plotCheck(PUF_isCombatTeam, eTeam, getTeam()) != NULL)
 		{
 			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -8396,64 +8394,31 @@ bool CvUnit::canNuke(const CvPlot* pPlot) const
 	return true;
 }
 
-/************************************************************************************************/
-/* Afforess	                  Start		 09/09/10                                               */
-/*                                                                                              */
-/*  M.A.D Nukes                                                                                 */
-/************************************************************************************************/
-bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY, bool bTestAtWar) const
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-{
-	CvPlot* pTargetPlot;
-	int iI;
 
+bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY, bool bTestAtWar) const
+{
 	if (!canNuke(pPlot))
 	{
 		return false;
 	}
+	const int iDistance = plotDistance(pPlot->getX(), pPlot->getY(), iX, iY);
 
-	int iDistance = plotDistance(pPlot->getX(), pPlot->getY(), iX, iY);
-	if (iDistance <= nukeRange())
+	if (iDistance <= nukeRange() || airRange() > 0 && iDistance > airRange())
 	{
 		return false;
 	}
-
-	if (airRange() > 0 && iDistance > airRange())
-	{
-		return false;
-	}
-
-	pTargetPlot = GC.getMap().plot(iX, iY);
-	// < M.A.D. Nukes Start >
+	CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
 
 	if (bTestAtWar)
 	{
-		for (iI = 0; iI < MAX_TEAMS; iI++)
+		for (int iI = 0; iI < MAX_TEAMS; iI++)
 		{
-	/************************************************************************************************/
-	/* DCM                                     04/19/09                                Johny Smith  */
-	/************************************************************************************************/
-			// Dale - NB: A-Bomb START
-			if ((TeamTypes)iI != getTeam())
+			if (iI != getTeam() && isNukeVictim(pTargetPlot, (TeamTypes)iI) && !isEnemy((TeamTypes)iI))
 			{
-				if (isNukeVictim(pTargetPlot, ((TeamTypes)iI)))
-				{
-					if (!isEnemy((TeamTypes)iI))
-					{
-						return false;
-					}
-				}
+				return false;
 			}
-			// Dale - NB: A-Bomb END
-	/************************************************************************************************/
-	/* DCM                                     END                                                  */
-	/************************************************************************************************/
 		}
 	}
-
-	// < M.A.D. Nukes End   >
 	return true;
 }
 
@@ -8541,119 +8506,70 @@ bool CvUnit::clearMADTargetPlot()
 
 bool CvUnit::nuke(int iX, int iY, bool bTrap)
 {
-	CvPlot* pPlot;
-	CvWString szBuffer;
-	bool abTeamsAffected[MAX_TEAMS];
-	TeamTypes eBestTeam;
-	int iBestInterception;
-	int iI, iJ, iK;
-/************************************************************************************************/
-/* Afforess	                  Start		 09/09/10                                               */
-/*                                                                                              */
-/*  M.A.D Nukes                                                                                 */
-/************************************************************************************************/
-/*
-	if (!canNukeAt(plot(), iX, iY))
-*/
+
 	if (!canNukeAt(plot(), iX, iY, !isMADEnabled()))
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	{
 		return false;
 	}
 
-	pPlot = GC.getMap().plot(iX, iY);
-
-	// < M.A.D. Nukes Start >
-	if(GET_PLAYER(getOwner()).isEnabledMAD())
+	if (!isHuman() && !isMADEnabled()
+	&& GET_PLAYER(getOwner()).isEnabledMAD()
+	&& GET_PLAYER(getOwner()).getMADDeterrent() > 0
+	&& GET_PLAYER(getOwner()).getMADIncoming() >= GET_PLAYER(getOwner()).getMADOutgoing())
 	{
-		if(!isHuman() && !isMADEnabled())
-		{
-			if(GET_PLAYER(getOwner()).getMADDeterrent() > 0)
-			{
-				if(GET_PLAYER(getOwner()).getMADIncoming() >= GET_PLAYER(getOwner()).getMADOutgoing())
-				{
-					GET_PLAYER(getOwner()).changeMADDeterrent(-1);
-					return false;
-				}
-			}
-		}
+		GET_PLAYER(getOwner()).changeMADDeterrent(-1);
+		return false;
 	}
 
-	// Dale - MAD: check validity of target before blowing it up
-	if(isMADEnabled() && !bTrap)
+	// Dale - Check validity of target before blowing it up
+	if (isMADEnabled() && !bTrap)
 	{
-		CvCity* pCity = getMADTargetPlot()->getPlotCity();
-		if(pCity == NULL || pCity->getOwner() != getMADTargetPlotOwner())
+		const CvCity* pCity = getMADTargetPlot()->getPlotCity();
+		if (pCity == NULL || pCity->getOwner() != getMADTargetPlotOwner())
 		{
 			setMADEnabled(false);
 
 			MEMORY_TRACK_EXEMPT();
-
-			szBuffer = gDLL->getText("TXT_KEY_NUKE_TARGET_FAILED");
-			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_WHITE(), getX(), getY(), true, true);
+			AddDLLMessage(
+				getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+				gDLL->getText("TXT_KEY_NUKE_TARGET_FAILED"),
+				"AS2D_NUKE_EXPLODES", MESSAGE_TYPE_INFO, getButton(),
+				GC.getCOLOR_WHITE(), getX(), getY(), true, true
+			);
 			return false;
 		}
 	}
-	// < M.A.D. Nukes End   >
 
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
+	bool abTeamsAffected[MAX_TEAMS];
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		abTeamsAffected[iI] = isNukeVictim(pPlot, ((TeamTypes)iI));
 	}
 
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		if (abTeamsAffected[iI])
+		if (abTeamsAffected[iI] && iI != getTeam() && !isEnemy((TeamTypes)iI))
 		{
-			if (!isEnemy((TeamTypes)iI))
-			{
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-				// Dale - NB: A-Bomb START
-				if ((TeamTypes)iI != getTeam())
-				{
-					GET_TEAM(getTeam()).declareWar(((TeamTypes)iI), false, WARPLAN_TOTAL);
-				}
-				// Dale - NB: A-Bomb END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-			}
+			GET_TEAM(getTeam()).declareWar(((TeamTypes)iI), false, WARPLAN_TOTAL);
 		}
 	}
 
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - NB: A-Bomb START
-	if(airBaseCombatStr() != 0 && !bTrap)
+	if (!bTrap && airBaseCombatStr() != 0 && interceptTest(pPlot))
 	{
-		if (interceptTest(pPlot))
-		{
-			return true;
-		}
+		return true;
 	}
-	// Dale - NB: A-Bomb END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-	iBestInterception = 0;
-	eBestTeam = NO_TEAM;
+	int iBestInterception = 0;
+	TeamTypes eBestTeam = NO_TEAM;
 
 	if (!bTrap)
 	{
-		for (iI = 0; iI < MAX_TEAMS; iI++)
+		for (int iI = 0; iI < MAX_TEAMS; iI++)
 		{
-			if (abTeamsAffected[iI])
+			if (abTeamsAffected[iI] && GET_TEAM((TeamTypes)iI).getNukeInterception() > iBestInterception)
 			{
-				if (GET_TEAM((TeamTypes)iI).getNukeInterception() > iBestInterception)
-				{
-					iBestInterception = GET_TEAM((TeamTypes)iI).getNukeInterception();
-					eBestTeam = ((TeamTypes)iI);
-				}
+				iBestInterception = GET_TEAM((TeamTypes)iI).getNukeInterception();
+				eBestTeam = ((TeamTypes)iI);
 			}
 		}
 
@@ -8664,22 +8580,29 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 
 		if (GC.getGame().getSorenRandNum(100, "Nuke") < iBestInterception)
 		{
-			for (iI = 0; iI < MAX_PLAYERS; iI++)
+			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive())
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 				{
 					MEMORY_TRACK_EXEMPT();
-
-					szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_INTERCEPTED", GET_PLAYER(getOwner()).getNameKey(), getNameKey(), GET_TEAM(eBestTeam).getName().GetCString());
-					AddDLLMessage(((PlayerTypes)iI), (((PlayerTypes)iI) == getOwner()), GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_INTERCEPTED", MESSAGE_TYPE_MAJOR_EVENT, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true);
+					AddDLLMessage(
+						(PlayerTypes)iI, iI == getOwner(), GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_NUKE_INTERCEPTED",
+							GET_PLAYER(getOwner()).getNameKey(), getNameKey(),
+							GET_TEAM(eBestTeam).getName().GetCString()
+						),
+						"AS2D_NUKE_INTERCEPTED", MESSAGE_TYPE_MAJOR_EVENT, getButton(),
+						GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true
+					);
 				}
 			}
-
 			// Nuke entity mission
 			// Add the intercepted mission (defender is not NULL)
 			addMission(CvMissionDefinition(MISSION_NUKE, pPlot, this, this));
 
 			kill(true, NO_PLAYER, true);
+
 			return true; // Intercepted!!! (XXX need special event for this...)
 		}
 	}
@@ -8690,58 +8613,39 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 	//		3. Set the MAD trigger to true for the players affected to the agressor.
 	if (GET_PLAYER(getOwner()).isEnabledMAD())
 	{
-		for (iI = 0; iI < MAX_TEAMS; iI++)
+		for (int iI = 0; iI < MAX_TEAMS; iI++)
 		{
-			if (GET_TEAM((TeamTypes)iI).isAlive())
+			if (abTeamsAffected[iI] && GET_TEAM((TeamTypes)iI).isAlive() && iI != getTeam())
 			{
-				if (iI != getTeam())
+				for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
 				{
-					if (abTeamsAffected[iI])
+					if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam((TeamTypes)iI))
 					{
-						for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
-						{
-							if (GET_PLAYER((PlayerTypes)iJ).isAlive())
-							{
-								if (GET_PLAYER((PlayerTypes)iJ).getTeam() == ((TeamTypes)iI))
-								{
-									GET_PLAYER((PlayerTypes)iJ).setMADTrigger(getOwner(), true);
-								}
-							}
-						}
+						GET_PLAYER((PlayerTypes)iJ).setMADTrigger(getOwner(), true);
 					}
 				}
 			}
 		}
 	}
-	// < M.A.D. Nukes Start >
 
 	if (pPlot->isActiveVisible(false) && !isUsingDummyEntities() && isInViewport())
 	{
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-		// Dale - NB: A-Bomb START
-		if(airBaseCombatStr() != 0)
+		if (airBaseCombatStr() != 0)
 		{
 			addMission(CvAirMissionDefinition(MISSION_AIRSTRIKE, pPlot, this));
 		}
-		else
+		else // Nuke entity mission
 		{
-			// Nuke entity mission
 			// Add the non-intercepted mission (defender is NULL)
 			addMission(CvMissionDefinition(MISSION_NUKE, pPlot, this));
 			CvMissionDefinition kDefiniton;
 		}
-		// Dale - NB: A-Bomb END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
 	}
 
 	setMadeAttack(true);
 	setAttackPlot(pPlot, false);
 
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
 		if (abTeamsAffected[iI])
 		{
@@ -8751,75 +8655,62 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 		}
 	}
 
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		if (GET_TEAM((TeamTypes)iI).isAlive())
+		if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getTeam())
 		{
-			if (iI != getTeam())
+			if (abTeamsAffected[iI])
 			{
-				if (abTeamsAffected[iI])
+				for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 				{
-					for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
+					if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam((TeamTypes)iI))
 					{
-						if (GET_PLAYER((PlayerTypes)iJ).isAlive())
-						{
-							if (GET_PLAYER((PlayerTypes)iJ).getTeam() == ((TeamTypes)iI))
-							{
-								GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_US, 1);
-							}
-						}
+						GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_US, 1);
 					}
 				}
-				else
+			}
+			else
+			{
+				for (int iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
 				{
-					for (iJ = 0; iJ < MAX_TEAMS; iJ++)
+					if (abTeamsAffected[iJ] && GET_TEAM((TeamTypes)iJ).isAlive()
+					&& GET_TEAM((TeamTypes)iI).isHasMet((TeamTypes)iJ)
+					&& GET_TEAM((TeamTypes)iI).AI_getAttitude((TeamTypes)iJ) >= ATTITUDE_CAUTIOUS)
 					{
-						if (GET_TEAM((TeamTypes)iJ).isAlive())
+						for (int iK = 0; iK < MAX_PC_PLAYERS; iK++)
 						{
-							if (abTeamsAffected[iJ])
+							if (GET_PLAYER((PlayerTypes)iK).isAliveAndTeam((TeamTypes)iI))
 							{
-								if (GET_TEAM((TeamTypes)iI).isHasMet((TeamTypes)iJ))
-								{
-									if (GET_TEAM((TeamTypes)iI).AI_getAttitude((TeamTypes)iJ) >= ATTITUDE_CAUTIOUS)
-									{
-										for (iK = 0; iK < MAX_PLAYERS; iK++)
-										{
-											if (GET_PLAYER((PlayerTypes)iK).isAlive())
-											{
-												if (GET_PLAYER((PlayerTypes)iK).getTeam() == ((TeamTypes)iI))
-												{
-													GET_PLAYER((PlayerTypes)iK).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_FRIEND, 1);
-												}
-											}
-										}
-										break;
-									}
-								}
+								GET_PLAYER((PlayerTypes)iK).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_FRIEND, 1);
 							}
 						}
+						break;
 					}
 				}
 			}
 		}
 	}
-
 	// XXX some AI should declare war here...
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	const CvWString szBuffer =
+	(
+		bTrap
+		?
+		gDLL->getText("TXT_KEY_MISC_NUKE_TRAP", getNameKey(), GET_PLAYER(getOwner()).getNameKey())
+		:
+		gDLL->getText("TXT_KEY_MISC_NUKE_LAUNCHED", GET_PLAYER(getOwner()).getNameKey(), getNameKey())
+	);
+
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 		{
 			MEMORY_TRACK_EXEMPT();
-
-			if (!bTrap)
-			{
-				szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_LAUNCHED", GET_PLAYER(getOwner()).getNameKey(), getNameKey());
-			}
-			else
-			{
-				szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_TRAP", getNameKey(), GET_PLAYER(getOwner()).getNameKey());
-			}
-			AddDLLMessage(((PlayerTypes)iI), (((PlayerTypes)iI) == getOwner()), GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_MAJOR_EVENT, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(
+				(PlayerTypes)iI, iI == getOwner(), GC.getEVENT_MESSAGE_TIME(),
+				szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_MAJOR_EVENT,
+				getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true
+			);
 		}
 	}
 
@@ -8827,11 +8718,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 	{
 		kill(true);
 	}
-
-	// < M.A.D. Nukes Start >
 	GC.getGame().setLastNukeStrikePlot(pPlot);
-	// < M.A.D. Nukes End   >
-
 
 	return true;
 }
@@ -11532,39 +11419,35 @@ int CvUnit::getEspionagePoints(const CvPlot* pPlot) const
 	return std::max(0, iEspionagePoints);
 }
 
+bool CvUnit::canInfiltrate() const
+{
+	if (isDelayedDeath() || isNPC() || getEspionagePoints(NULL) == 0)
+	{
+		return false;
+	}
+	return true;
+}
+
 bool CvUnit::canInfiltrate(const CvPlot* pPlot, bool bTestVisible) const
 {
-	if (isDelayedDeath())
+	if (!canInfiltrate())
 	{
 		return false;
 	}
-
-	if (getEspionagePoints(NULL) == 0)
-	{
-		return false;
-	}
-
-	if (isNPC())
-	{
-		return false;
-	}
-
 	const CvCity* pCity = pPlot->getPlotCity();
+
 	if (pCity == NULL || pCity->isNPC())
 	{
 		return false;
 	}
-
 	if (!bTestVisible && pCity->getTeam() == getTeam())
 	{
 		return false;
 	}
-
 	if (!isInvisible(pCity->getTeam(), false, true))
 	{
 		return false;
 	}
-
 	return true;
 }
 
@@ -12792,12 +12675,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 {
 	PROFILE_FUNC();
 
-	if (eUnit == NO_UNIT)
-	{
-		return NULL;
-	}
-
-	if (!upgradeAvailable(getUnitType(), eUnit))
+	if (eUnit == NO_UNIT || !upgradeAvailable(getUnitType(), eUnit))
 	{
 		return NULL;
 	}
@@ -12828,12 +12706,9 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 					return NULL;
 				}
 			}
-			else
+			else if (kUnitInfo.getSpecialCargo() != NO_SPECIALUNIT)
 			{
-				if (kUnitInfo.getSpecialCargo() != NO_SPECIALUNIT)
-				{
-					return NULL;
-				}
+				return NULL;
 			}
 
 			if (kUnitInfo.getDomainCargo() != NO_DOMAIN
@@ -12845,7 +12720,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 	}
 
 	// sea units must be built on the coast
-	bool bCoastalOnly = (getDomainType() == DOMAIN_SEA);
+	const bool bCoastalOnly = getDomainType() == DOMAIN_SEA;
 
 	// results
 	int iBestValue = MAX_INT;
@@ -12855,59 +12730,54 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 	if (bSearch)
 	{
 		// air units can travel any distance
-		bool bIgnoreDistance = (getDomainType() == DOMAIN_AIR);
+		const bool bIgnoreDistance = getDomainType() == DOMAIN_AIR;
 
-		TeamTypes eTeam = getTeam();
-		int iArea = getArea();
-		int iX = getX(), iY = getY();
+		const TeamTypes eTeam = getTeam();
+		const int iArea = getArea();
+		const int iX = getX();
+		const int iY = getY();
 
 		// check every player on our team's cities
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			// is this player on our team?
-			const CvPlayerAI& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
-			if (kLoopPlayer.isAlive() && kLoopPlayer.getTeam() == eTeam)
+			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eTeam))
 			{
-				foreach_(CvCity* pLoopCity, kLoopPlayer.cities())
+				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
 					// if coastal only, then make sure we are coast
-					CvArea* pWaterArea = NULL;
-					if (!bCoastalOnly || ((pWaterArea = pLoopCity->waterArea()) != NULL && !pWaterArea->isLake()))
+					CvArea* pWaterArea = bCoastalOnly ? pLoopCity->waterArea() : NULL;
+
+					if (!bCoastalOnly || pLoopCity->waterArea() != NULL && !pWaterArea->isLake()
+					// can this city tran this unit?
+					&& pLoopCity->canTrain(eUnit, false, false, true))
 					{
-						// can this city tran this unit?
-						if (pLoopCity->canTrain(eUnit, false, false, true))
+						// if we do not care about distance, then the first match will do
+						if (bIgnoreDistance)
 						{
-							// if we do not care about distance, then the first match will do
-							if (bIgnoreDistance)
+							// if we do not care about distance, then return 1 for value
+							if (iSearchValue != NULL)
 							{
-								// if we do not care about distance, then return 1 for value
-								if (iSearchValue != NULL)
-								{
-									*iSearchValue = 1;
-								}
-
-								return pLoopCity;
+								*iSearchValue = 1;
 							}
+							return pLoopCity;
+						}
+						int iValue = plotDistance(iX, iY, pLoopCity->getX(), pLoopCity->getY());
 
-							int iValue = plotDistance(iX, iY, pLoopCity->getX(), pLoopCity->getY());
-
-							// if not same area, not as good (lower numbers are better)
-							if (iArea != pLoopCity->getArea() && (!bCoastalOnly || iArea != pWaterArea->getID()))
-							{
-								iValue *= 16;
-							}
-
-							// if we cannot path there, not as good (lower numbers are better)
-							if (!generatePath(pLoopCity->plot(), 0, true))
-							{
-								iValue *= 16;
-							}
-
-							if (iValue < iBestValue)
-							{
-								iBestValue = iValue;
-								pBestCity = pLoopCity;
-							}
+						// if not same area, not as good (lower numbers are better)
+						if (iArea != pLoopCity->getArea() && (!bCoastalOnly || iArea != pWaterArea->getID()))
+						{
+							iValue *= 16;
+						}
+						// if we cannot path there, not as good (lower numbers are better)
+						if (!generatePath(pLoopCity->plot(), 0, true))
+						{
+							iValue *= 16;
+						}
+						if (iValue < iBestValue)
+						{
+							iBestValue = iValue;
+							pBestCity = pLoopCity;
 						}
 					}
 				}
@@ -12916,18 +12786,15 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 	}
 	else
 	{
-		// find the closest city
+		// Find the closest city
 		CvCity* pClosestCity = GC.getMap().findCity(getX(), getY(), NO_PLAYER, getTeam(), true, bCoastalOnly);
-		if (pClosestCity != NULL)
-		{
-			// if we can train, then return this city (otherwise it will return NULL)
-			if (pClosestCity->canTrain(eUnit, false, false, true))
-			{
-				// did not search, always return 1 for search value
-				iBestValue = 1;
 
-				pBestCity = pClosestCity;
-			}
+		// If we can train, then return this city (otherwise it will return NULL)
+		if (pClosestCity != NULL && pClosestCity->canTrain(eUnit, false, false, true))
+		{
+			// did not search, always return 1 for search value
+			iBestValue = 1;
+			pBestCity = pClosestCity;
 		}
 	}
 
@@ -12936,7 +12803,6 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 	{
 		*iSearchValue = iBestValue;
 	}
-
 	return pBestCity;
 }
 
@@ -17128,26 +16994,18 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		{
 			PROFILE("CvUnit::setXY.NewPlot2.Meet");
 
-			if (GET_TEAM((TeamTypes)iI).isAlive())
+			if (GET_TEAM((TeamTypes)iI).isAlive() && !isInvisible(((TeamTypes)iI), false)
+			&& pNewPlot->isVisible((TeamTypes)iI, false))
 			{
-				if (!isInvisible(((TeamTypes)iI), false))
-				{
-					if (pNewPlot->isVisible((TeamTypes)iI, false))
-					{
-						GET_TEAM((TeamTypes)iI).meet(getTeam(), true);
-					}
-				}
+				GET_TEAM((TeamTypes)iI).meet(getTeam(), true);
 			}
 		}
 
 		pNewCity = pNewPlot->getPlotCity();
 
-		if (pNewCity != NULL)
+		if (pNewCity != NULL && isMilitaryHappiness())
 		{
-			if (isMilitaryHappiness())
-			{
-				pNewCity->changeMilitaryHappinessUnits(1);
-			}
+			pNewCity->changeMilitaryHappinessUnits(1);
 		}
 
 		pWorkingCity = pNewPlot->getWorkingCity();
@@ -30319,112 +30177,87 @@ bool CvUnit::spyNukeAffected(const CvPlot* pPlot, TeamTypes eTeam, int iRange) c
 
 bool CvUnit::spyNuke(int iX, int iY, bool bCaught)
 {
-	CvPlot* pPlot;
-	CvWString szBuffer;
 	bool abTeamsAffected[MAX_TEAMS];
-	int iI, iJ, iK;
 
-	pPlot = GC.getMap().plot(iX, iY);
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		abTeamsAffected[iI] = spyNukeAffected(pPlot, (TeamTypes)iI, 1);
 	}
 
 	if (bCaught)
 	{
-		for (iI = 0; iI < MAX_TEAMS; iI++)
+		const TeamTypes eTeam = getTeam();
+		CvTeamAI& team = GET_TEAM(eTeam);
+
+		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 		{
 			if (abTeamsAffected[iI])
 			{
-				if (!isEnemy((TeamTypes)iI))
+				if (!isEnemy((TeamTypes)iI) && iI != eTeam)
 				{
-					if ((TeamTypes)iI != getTeam())
-					{
-						GET_TEAM(getTeam()).declareWar(((TeamTypes)iI), false, WARPLAN_TOTAL);
-					}
+					team.declareWar((TeamTypes)iI, false, WARPLAN_TOTAL);
 				}
+				GET_TEAM((TeamTypes)iI).changeWarWeariness(eTeam, 100 * GC.getDefineINT("WW_HIT_BY_NUKE"));
+				team.changeWarWeariness((TeamTypes)iI, 100 * GC.getDefineINT("WW_ATTACKED_WITH_NUKE"));
+				team.AI_changeWarSuccess((TeamTypes)iI, GC.getDefineINT("WAR_SUCCESS_NUKE"));
 			}
 		}
-	}
-
-	if (bCaught)
-	{
-		for (iI = 0; iI < MAX_TEAMS; iI++)
+		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 		{
-			if (abTeamsAffected[iI])
+			if (GET_TEAM((TeamTypes)iI).isAlive() && iI != eTeam)
 			{
-				GET_TEAM((TeamTypes)iI).changeWarWeariness(getTeam(), 100 * GC.getDefineINT("WW_HIT_BY_NUKE"));
-				GET_TEAM(getTeam()).changeWarWeariness(((TeamTypes)iI), 100 * GC.getDefineINT("WW_ATTACKED_WITH_NUKE"));
-				GET_TEAM(getTeam()).AI_changeWarSuccess(((TeamTypes)iI), GC.getDefineINT("WAR_SUCCESS_NUKE"));
-			}
-		}
-	}
-
-	if (bCaught)
-	{
-		for (iI = 0; iI < MAX_TEAMS; iI++)
-		{
-			if (GET_TEAM((TeamTypes)iI).isAlive())
-			{
-				if (iI != getTeam())
+				if (abTeamsAffected[iI])
 				{
-					if (abTeamsAffected[iI])
+					for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 					{
-						for (iJ = 0; iJ < MAX_PLAYERS; iJ++)
+						if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam((TeamTypes)iI))
 						{
-							if (GET_PLAYER((PlayerTypes)iJ).isAlive())
-							{
-								if (GET_PLAYER((PlayerTypes)iJ).getTeam() == ((TeamTypes)iI))
-								{
-									GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_US, 1);
-								}
-							}
+							GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_US, 1);
 						}
 					}
-					else
+				}
+				else
+				{
+					for (int iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
 					{
-						for (iJ = 0; iJ < MAX_TEAMS; iJ++)
+						if (GET_TEAM((TeamTypes)iJ).isAlive() && abTeamsAffected[iJ]
+						&& GET_TEAM((TeamTypes)iI).isHasMet((TeamTypes)iJ)
+						&& GET_TEAM((TeamTypes)iI).AI_getAttitude((TeamTypes)iJ) >= ATTITUDE_CAUTIOUS)
 						{
-							if (GET_TEAM((TeamTypes)iJ).isAlive())
+							for (int iK = 0; iK < MAX_PC_PLAYERS; iK++)
 							{
-								if (abTeamsAffected[iJ])
+								if (GET_PLAYER((PlayerTypes)iK).isAliveAndTeam((TeamTypes)iI))
 								{
-									if (GET_TEAM((TeamTypes)iI).isHasMet((TeamTypes)iJ))
-									{
-										if (GET_TEAM((TeamTypes)iI).AI_getAttitude((TeamTypes)iJ) >= ATTITUDE_CAUTIOUS)
-										{
-											for (iK = 0; iK < MAX_PLAYERS; iK++)
-											{
-												if (GET_PLAYER((PlayerTypes)iK).isAlive())
-												{
-													if (GET_PLAYER((PlayerTypes)iK).getTeam() == ((TeamTypes)iI))
-													{
-														GET_PLAYER((PlayerTypes)iK).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_FRIEND, 1);
-													}
-												}
-											}
-											break;
-										}
-									}
+									GET_PLAYER((PlayerTypes)iK).AI_changeMemoryCount(getOwner(), MEMORY_NUKED_FRIEND, 1);
 								}
 							}
+							break;
 						}
 					}
 				}
 			}
 		}
 	}
-	szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_UNKNOWN", GET_PLAYER(pPlot->getOwner()).getNameKey());
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	const CvWString szBuffer =
+	(
+		bCaught
+		?
+		gDLL->getText("TXT_KEY_MISC_NUKE_ENEMY_SPY", GET_PLAYER(getOwner()).getNameKey(), GET_PLAYER(pPlot->getOwner()).getNameKey())
+		:
+		gDLL->getText("TXT_KEY_MISC_NUKE_UNKNOWN", GET_PLAYER(pPlot->getOwner()).getNameKey())
+	);
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 		{
 			MEMORY_TRACK_EXEMPT();
-
-			if (bCaught)
-				szBuffer = gDLL->getText("TXT_KEY_MISC_NUKE_ENEMY_SPY", GET_PLAYER(getOwner()).getNameKey(), GET_PLAYER(pPlot->getOwner()).getNameKey());
-			AddDLLMessage(((PlayerTypes)iI), (((PlayerTypes)iI) == getOwner()), GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_MAJOR_EVENT, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true);
+			AddDLLMessage(
+				(PlayerTypes)iI, iI == getOwner(), GC.getEVENT_MESSAGE_TIME(),
+				szBuffer, "AS2D_NUKE_EXPLODES", MESSAGE_TYPE_MAJOR_EVENT, getButton(),
+				GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true
+			);
 		}
 	}
 

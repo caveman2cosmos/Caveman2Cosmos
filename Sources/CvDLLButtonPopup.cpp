@@ -1,9 +1,12 @@
 // buttonPopup.cpp
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
+#include "CvBuildingInfo.h"
+#include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
+#include "CvGlobals.h"
 #include "CvDLLButtonPopup.h"
 #include "CvPopupReturn.h"
 #include "CvInitCore.h"
@@ -2797,7 +2800,7 @@ bool CvDLLButtonPopup::launchFreeColonyPopup(CvPopup* pPopup, CvPopupInfo &info)
 
 	if (GET_PLAYER(ePlayer).canSplitEmpire())
 	{
-		foreach_(CvArea* pLoopArea, GC.getMap().areas())
+		foreach_(const CvArea* pLoopArea, GC.getMap().areas())
 		{
 			if (GET_PLAYER(ePlayer).canSplitArea(pLoopArea->getID()))
 			{

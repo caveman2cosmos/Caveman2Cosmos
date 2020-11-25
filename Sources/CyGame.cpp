@@ -2,9 +2,10 @@
 // Python wrapper class for CvGame
 //
 
-#include "CvCity.h"
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CyCity.h"
 #include "CyDeal.h"
@@ -737,6 +738,8 @@ bool CyGame::isOption(int /*GameOptionTypes*/ eIndex) const
 void CyGame::setOption(int /*GameOptionTypes*/ eIndex, bool bEnabled)
 {
 	m_pGame.setOption((GameOptionTypes)eIndex, bEnabled);
+	if (bEnabled)
+		m_pGame.enforceOptionCompatibility((GameOptionTypes)eIndex);
 }
 
 bool CyGame::isMPOption(int /*MultiplayerOptionTypes*/ eIndex) const

@@ -7,11 +7,11 @@
 
 #include "CvTeam.h"
 
+class CvArea;
+
 class CvTeamAI : public CvTeam
 {
-
 public:
-
 	CvTeamAI();
 	virtual ~CvTeamAI();
 
@@ -183,7 +183,7 @@ public:
 	DenialTypes AI_contactTrade(TeamTypes eContactTeam, TeamTypes eTeam) const;
 	DenialTypes AI_FreeTradeAgreement(TeamTypes eTeam) const;
 
-	void AI_updateCache();
+	void AI_updateDiploCache();
 
 	bool AI_hasAdjacentLandPlots(TeamTypes eTeam) const;
 

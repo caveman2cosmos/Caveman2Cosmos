@@ -11,8 +11,10 @@
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CvXMLLoadUtilitySetMod.h"
+#include "CheckSum.h"
 
 // In the following method we set the order of loading properly
 void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)

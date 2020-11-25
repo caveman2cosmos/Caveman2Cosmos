@@ -16,6 +16,8 @@
 
 #include "CvXMLLoadUtility.h"
 
+class CheckSum;
+
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
 //  class : CvXMLLoadUtilitySetMod

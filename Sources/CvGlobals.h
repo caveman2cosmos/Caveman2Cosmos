@@ -152,7 +152,7 @@ class CvMapSwitchInfo;
 #include "GlobalDefines.h"
 #include <stack>
 
-extern CvDLLUtilityIFaceBase* g_DLL;
+extern CvDLLUtilityIFaceBase* gDLL;
 
 class cvInternalGlobals
 {
@@ -301,28 +301,34 @@ public:
 	void addDelayedResolution(int* pType, CvString szString);
 	CvString* getDelayedResolution(int* pType);
 	void removeDelayedResolution(int* pType);
+	template<class T>
+	void removeDelayedResolutionVector(const std::vector<T>& vector)
+	{
+		foreach_(T type, vector)
+			removeDelayedResolution((int*)&type);
+	}
 	void copyNonDefaultDelayedResolution(int* pTypeSelf, int* pTypeOther);
 	template<class T>
-	void copyNonDefaultDelayedResolutionVector(std::vector<T>& aTarget, std::vector<T>& aSource)
+	void copyNonDefaultDelayedResolutionVector(std::vector<T>& aTarget, const std::vector<T>& aSource)
 	{
 		std::stack<CvString> aszTemp;
-		std::vector<T>::iterator it = aTarget.end(), it2 = aSource.begin();
+		std::vector<T>::const_iterator it = aTarget.end(), it2 = aSource.begin();
 		while (it > aTarget.begin())
 		{
 			it--;
-			aszTemp.push(*getDelayedResolution(&*it));
-			removeDelayedResolution(&*it);
+			aszTemp.push(*getDelayedResolution((int*)&*it));
+			removeDelayedResolution((int*)&*it);
 		}
 		aTarget.insert(aTarget.end(), aSource.begin(), aSource.end());
 		it = aTarget.begin(); // because insert() invalidates the previous iterator
 		while (aszTemp.size())
 		{
-			addDelayedResolution(&*it++, aszTemp.top());
+			addDelayedResolution((int*)&*it++, aszTemp.top());
 			aszTemp.pop();
 		}
 		while (it2 != aSource.end())
 		{
-			addDelayedResolution(&*it++, *getDelayedResolution(&*it2++));
+			addDelayedResolution((int*)&*it++, *getDelayedResolution((int*)&*it2++));
 		}
 	}
 	void resolveDelayedResolution();
@@ -827,7 +833,6 @@ public:
 
 	////////////// END DEFINES //////////////////
 
-	inline CvDLLUtilityIFaceBase* getDLLIFace() const { return g_DLL; }		// inlined for perf reasons, do not use outside of dll
 	void setDLLProfiler(FProfiler* prof);
 	FProfiler* getDLLProfiler() const;
 	void enableDLLProfiler(bool bEnable);
@@ -2137,7 +2142,7 @@ public:
 	{
 		if (pDll != NULL)
 		{
-			FAssertMsg(g_DLL == NULL, "Dll interface already set?");
+			FAssertMsg(gDLL == NULL, "Dll interface already set?");
 
 			OutputDebugString("setDLLIFace()\n");
 			if (gGlobals == NULL)
@@ -2146,19 +2151,19 @@ public:
 				gGlobals = new cvInternalGlobals();
 			}
 
-			g_DLL = pDll;
+			gDLL = pDll;
 		}
 		else
 		{
-			FAssertMsg(g_DLL != NULL, "Dll interface not set?");
-			g_DLL = NULL;
+			FAssertMsg(gDLL != NULL, "Dll interface not set?");
+			gDLL = NULL;
 			delete gGlobals;
 		}
 	}
 	DllExport CvDLLUtilityIFaceBase* getDLLIFaceNonInl()
 	{
 		//PROXY_TRACK("getDLLIFaceNonInl");
-		return g_DLL;
+		return gDLL;
 	}
 	DllExport void setDLLProfiler(FProfiler* prof)
 	{
@@ -2480,12 +2485,6 @@ inline CvGlobals& CvGlobals::getInstance()
 {
 	return gGlobalsProxy;
 }
-
-//
-// helpers
-//
-#define GC cvInternalGlobals::getInstance()
-#define gDLL g_DLL
 
 #endif
 

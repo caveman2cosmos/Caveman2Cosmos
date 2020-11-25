@@ -1,4 +1,6 @@
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
 
 #include <boost155/functional.hpp>
 #include <boost155/bind.hpp>

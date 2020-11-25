@@ -1,6 +1,10 @@
 #include "CvGameCoreDLL.h"
-#include "CvPlayerAI.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvUnit.h"
 #include "FInputDevice.h"
 
 //

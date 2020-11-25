@@ -1,9 +1,12 @@
 // team.cpp
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
-#include "CvGameAI.h"
+#include "CvArea.h"
+#include "CvBuildingInfo.h"
+#include "CvCity.h"
 #include "CvDiploParameters.h"
+#include "CvGameAI.h"
+#include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
@@ -556,13 +559,20 @@ void CvTeam::addTeam(TeamTypes eTeam)
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() != getID() && GET_PLAYER((PlayerTypes)iI).getTeam() != eTeam
-		&& GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasMet(getID()) && GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasMet(eTeam))
+		// Alive, not on same team as us and eTeam, all three have met.
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), false, eTeam)
+		&& isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam())
+		&& GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasMet(eTeam))
 		{
 			MEMORY_TRACK_EXEMPT();
-
-			const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_PERMANENT_ALLIANCE", getName().GetCString(), GET_TEAM(eTeam).getName().GetCString());
-			AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIRALLIANCE", MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
+			AddDLLMessage(
+				(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
+				gDLL->getText(
+					"TXT_KEY_MISC_PLAYER_PERMANENT_ALLIANCE",
+					getName().GetCString(), GET_TEAM(eTeam).getName().GetCString()
+				),
+				"AS2D_THEIRALLIANCE", MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT()
+			);
 		}
 	}
 	const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_PERMANENT_ALLIANCE", getName().GetCString(), GET_TEAM(eTeam).getName().GetCString());
@@ -861,7 +871,7 @@ void CvTeam::shareItems(TeamTypes eTeam)
 
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eTeam))
 		{
 			foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 			{
@@ -888,7 +898,7 @@ void CvTeam::shareItems(TeamTypes eTeam)
 
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eTeam))
 		{
 			GET_PLAYER((PlayerTypes)iI).AI_updateBonusValue();
 		}
@@ -1229,7 +1239,7 @@ bool CvTeam::canEventuallyDeclareWar(TeamTypes eTeam) const
 		return false;
 	}
 
-	if (!(isAlive()) || !(GET_TEAM(eTeam).isAlive()))
+	if (!isAlive() || !GET_TEAM(eTeam).isAlive())
 	{
 		return false;
 	}
@@ -1303,17 +1313,21 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 			{
 				CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
 
-				if ((playerX.getTeam() == getID() || playerX.getTeam() == eTeam) && GET_PLAYER((PlayerTypes)iI).isAlive())
+				if (playerX.isAliveAndTeam(getID(), true, eTeam))
 				{
 					playerX.updatePlunder(-1, false);
-				}
-				if (playerX.isAliveAndTeam(getID()) && playerX.getPledgedSecretaryGeneralVote() == eTeam)
-				{
-					playerX.setPledgedSecretaryGeneralVote(NO_TEAM);
-				}
-				else if (playerX.isAliveAndTeam(eTeam) && playerX.getPledgedSecretaryGeneralVote() == getID())
-				{
-					playerX.setPledgedSecretaryGeneralVote(NO_TEAM);
+
+					if (playerX.getTeam() == eTeam)
+					{
+						if (playerX.getPledgedSecretaryGeneralVote() == getID())
+						{
+							playerX.setPledgedSecretaryGeneralVote(NO_TEAM);
+						}
+					}
+					else if (playerX.getPledgedSecretaryGeneralVote() == eTeam)
+					{
+						playerX.setPledgedSecretaryGeneralVote(NO_TEAM);
+					}
 				}
 			}
 		}
@@ -1327,7 +1341,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if ((GET_PLAYER((PlayerTypes)iI).getTeam() == getID() || GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam) && GET_PLAYER((PlayerTypes)iI).isAlive())
+			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), true, eTeam))
 			{
 				GET_PLAYER((PlayerTypes)iI).updatePlunder(1, false);
 			}
@@ -1480,23 +1494,19 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			CvPlayer& playerX = GET_PLAYER((PlayerTypes) iI);
-
-			if (playerX.isAlive() && (playerX.getTeam() == getID() || playerX.getTeam() == eTeam))
+			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), true, eTeam))
 			{
-				playerX.updateWarWearinessPercentAnger();
-				playerX.updatePlotGroups();
+				GET_PLAYER((PlayerTypes)iI).updateWarWearinessPercentAnger();
+				GET_PLAYER((PlayerTypes)iI).updatePlotGroups();
 			}
 		}
 		// updatePlotGroups calls updateTradeRoutes at the end, so I'm not sure this is needed.
 		// Maybe all plot groups must be up to date for all players before trade routes can be updated properly?
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			CvPlayer& playerX = GET_PLAYER((PlayerTypes) iI);
-
-			if (playerX.isAlive() && (playerX.getTeam() == getID() || playerX.getTeam() == eTeam))
+			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), true, eTeam))
 			{
-				playerX.updateTradeRoutes();
+				GET_PLAYER((PlayerTypes)iI).updateTradeRoutes();
 			}
 		}
 
@@ -1681,7 +1691,7 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if ((GET_PLAYER((PlayerTypes)iI).getTeam() == getID() || GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam) && GET_PLAYER((PlayerTypes)iI).isAlive())
+			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), true, eTeam))
 			{
 				GET_PLAYER((PlayerTypes)iI).updatePlunder(1, false);
 			}
@@ -1711,8 +1721,7 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive()
-			&& (GET_PLAYER((PlayerTypes)iI).getTeam() == getID() || GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam))
+			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), true, eTeam))
 			{
 				GET_PLAYER((PlayerTypes)iI).updateWarWearinessPercentAnger();
 				GET_PLAYER((PlayerTypes)iI).updatePlotGroups();
@@ -1722,8 +1731,7 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 		// Maybe all plot groups must be up to date for all players before trade routes can be updated properly?
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive()
-			&& (GET_PLAYER((PlayerTypes)iI).getTeam() == getID() || GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam))
+			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), true, eTeam))
 			{
 				GET_PLAYER((PlayerTypes)iI).updateTradeRoutes();
 			}
@@ -1827,18 +1835,15 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 
 		for (int iI = 0; iI < MAX_TEAMS; iI++)
 		{
-			if (iI != getID() && iI != eTeam)
+			if (iI != getID() && iI != eTeam && GET_TEAM((TeamTypes)iI).isAlive())
 			{
-				if (GET_TEAM((TeamTypes)iI).isAlive())
+				if (GET_TEAM((TeamTypes)iI).isVassal(eTeam))
 				{
-					if (GET_TEAM((TeamTypes)iI).isVassal(eTeam))
-					{
-						GET_TEAM((TeamTypes)iI).makePeace(getID(), bBumpUnits);
-					}
-					else if (GET_TEAM((TeamTypes)iI).isVassal(getID()))
-					{
-						GET_TEAM((TeamTypes)iI).makePeace(eTeam, bBumpUnits);
-					}
+					GET_TEAM((TeamTypes)iI).makePeace(getID(), bBumpUnits);
+				}
+				else if (GET_TEAM((TeamTypes)iI).isVassal(getID()))
+				{
+					GET_TEAM((TeamTypes)iI).makePeace(eTeam, bBumpUnits);
 				}
 			}
 		}
@@ -2202,26 +2207,25 @@ int CvTeam::getChosenWarCount(bool bIgnoreMinors) const
 int CvTeam::getHasMetCivCount(bool bIgnoreMinors) const
 {
 	int iCount = 0;
-
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getID() && isHasMet((TeamTypes)iI))
+		if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getID()
+		&& isHasMet((TeamTypes)iI)
+		&& (!bIgnoreMinors || !GET_TEAM((TeamTypes)iI).isMinorCiv()))
 		{
-			if (!bIgnoreMinors || !GET_TEAM((TeamTypes)iI).isMinorCiv())
-			{
-				iCount++;
-			}
+			iCount++;
 		}
 	}
 	return iCount;
 }
 
 
-bool CvTeam::hasMetHuman() const
+bool CvTeam::hasMetAnyCiv(bool bIgnoreMinors) const
 {
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getID() && GET_TEAM((TeamTypes)iI).isHuman() && isHasMet((TeamTypes)iI))
+		if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getID() && isHasMet((TeamTypes)iI)
+		&& (!bIgnoreMinors || !GET_TEAM((TeamTypes)iI).isMinorCiv()))
 		{
 			return true;
 		}
@@ -2247,19 +2251,19 @@ int CvTeam::getDefensivePactCount(TeamTypes eTeam) const
 	return iCount;
 }
 
+
 int CvTeam::getVassalCount(TeamTypes eTeam) const
 {
 	int iCount = 0;
 
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		const CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
-		if (kLoopTeam.isAlive() && iI != getID() && kLoopTeam.isVassal(getID()))
+		if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getID()
+		&& GET_TEAM((TeamTypes)iI).isVassal(getID())
+		// Only count vassals that eTeam knows about, if valid eTeam.
+		&& (NO_TEAM == eTeam || GET_TEAM(eTeam).isHasMet((TeamTypes)iI)))
 		{
-			if (NO_TEAM == eTeam || GET_TEAM(eTeam).isHasMet((TeamTypes)iI))
-			{
-				iCount++;
-			}
+			iCount++;
 		}
 	}
 	return iCount;
@@ -2282,8 +2286,6 @@ bool CvTeam::canVassalRevolt(TeamTypes eMaster) const
 {
 	FAssert(NO_TEAM != eMaster);
 
-	const CvTeam& kMaster = GET_TEAM(eMaster);
-
 	if (isVassal(eMaster))
 	{
 		if (100 * getTotalLand(false) < GC.getVASSAL_REVOLT_OWN_LOSSES_FACTOR() * getVassalPower())
@@ -2291,24 +2293,23 @@ bool CvTeam::canVassalRevolt(TeamTypes eMaster) const
 			return true;
 		}
 
-		if (100 * kMaster.getTotalLand() < GC.getVASSAL_REVOLT_MASTER_LOSSES_FACTOR() * getMasterPower())
+		if (100 * GET_TEAM(eMaster).getTotalLand() < GC.getVASSAL_REVOLT_MASTER_LOSSES_FACTOR() * getMasterPower())
 		{
 			return true;
 		}
 	}
 
-	if (GC.getFREE_VASSAL_LAND_PERCENT() < 0 ||
-		100 * getTotalLand(false) < kMaster.getTotalLand(false) * GC.getFREE_VASSAL_LAND_PERCENT())
+	if (GC.getFREE_VASSAL_LAND_PERCENT() < 0
+	|| 100 * getTotalLand(false) < GET_TEAM(eMaster).getTotalLand(false) * GC.getFREE_VASSAL_LAND_PERCENT())
 	{
 		return false;
 	}
 
-	if (GC.getFREE_VASSAL_POPULATION_PERCENT() < 0 ||
-		100 * getTotalPopulation(false) < kMaster.getTotalPopulation(false) * GC.getFREE_VASSAL_POPULATION_PERCENT())
+	if (GC.getFREE_VASSAL_POPULATION_PERCENT() < 0
+	|| 100 * getTotalPopulation(false) < GET_TEAM(eMaster).getTotalPopulation(false) * GC.getFREE_VASSAL_POPULATION_PERCENT())
 	{
 		return false;
 	}
-
 	return true;
 }
 
@@ -2325,57 +2326,49 @@ int CvTeam::getCurrentMasterPower(bool bIncludeVassals) const
 			}
 		}
 	}
-	// Should never get here
-	FAssert(false);
+	FAssert(false); // Should never get here
 	return 0;
 }
 
 bool CvTeam::isMasterPlanningLandWar(const CvArea* pArea) const
 {
-	if( !isAVassal() )
+	if (!isAVassal())
 	{
 		return false;
 	}
-
-	if( (pArea->getAreaAIType(getID()) == AREAAI_OFFENSIVE) || (pArea->getAreaAIType(getID()) == AREAAI_DEFENSIVE) || (pArea->getAreaAIType(getID()) == AREAAI_MASSING) )
+	if (pArea->getAreaAIType(getID()) == AREAAI_OFFENSIVE
+	||  pArea->getAreaAIType(getID()) == AREAAI_DEFENSIVE
+	||  pArea->getAreaAIType(getID()) == AREAAI_MASSING)
 	{
 		return true;
 	}
-
-	for( int iI = 0; iI < MAX_PC_TEAMS; iI++ )
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
-		if( isVassal((TeamTypes)iI) )
+		if (isVassal((TeamTypes)iI))
 		{
-			if( GET_TEAM((TeamTypes)iI).getAnyWarPlanCount(true) > 0 )
+			if (GET_TEAM((TeamTypes)iI).getAnyWarPlanCount(true) > 0)
 			{
-				if( (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_OFFENSIVE) || (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_DEFENSIVE) || (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_MASSING) )
+				if (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_OFFENSIVE
+				||  pArea->getAreaAIType((TeamTypes)iI) == AREAAI_DEFENSIVE
+				||  pArea->getAreaAIType((TeamTypes)iI) == AREAAI_MASSING)
 				{
 					return true;
 				}
-				else if( pArea->getAreaAIType((TeamTypes)iI) == AREAAI_NEUTRAL )
+				if (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_NEUTRAL
+				// And master has no presence here
+				&& pArea->getNumCities() - countNumCitiesByArea(pArea) > 2)
 				{
-					// Master has no presence here
-					if( (pArea->getNumCities() - countNumCitiesByArea(pArea)) > 2 )
-					{
-						return (GC.getGame().getSorenRandNum((isCapitulated() ? 6 : 4),"Vassal land war") == 0);
-					}
+					return (GC.getGame().getSorenRandNum((isCapitulated() ? 6 : 4),"Vassal land war") == 0);
 				}
 			}
-			else if( GET_TEAM((TeamTypes)iI).isHuman() )
+			else if (GET_TEAM((TeamTypes)iI).isHuman() && GC.getBBAI_HUMAN_VASSAL_WAR_BUILD()
+			&& pArea->getNumCities() - countNumCitiesByArea(pArea) - GET_TEAM((TeamTypes)iI).countNumCitiesByArea(pArea) > 2)
 			{
-				if( GC.getBBAI_HUMAN_VASSAL_WAR_BUILD() )
-				{
-					if( (pArea->getNumCities() - countNumCitiesByArea(pArea) - GET_TEAM((TeamTypes)iI).countNumCitiesByArea(pArea)) > 2 )
-					{
-						return (GC.getGame().getSorenRandNum(4,"Vassal land war") == 0);
-					}
-				}
+				return GC.getGame().getSorenRandNum(4,"Vassal land war") == 0;
 			}
-
-			break;
+			return false;
 		}
 	}
-
 	return false;
 }
 
@@ -4143,15 +4136,12 @@ void CvTeam::setForcePeace(TeamTypes eIndex, bool bNewValue)
 		{
 			AI_setWarPlan(eIndex, NO_WARPLAN);
 		}
-
 		for (int iTeam = 0; iTeam < MAX_TEAMS; ++iTeam)
 		{
-			if (GET_TEAM((TeamTypes)iTeam).isVassal(eIndex))
+			if (GET_TEAM((TeamTypes)iTeam).isVassal(eIndex)
+			&& AI_isSneakAttackPreparing((TeamTypes)iTeam))
 			{
-				if (AI_isSneakAttackPreparing((TeamTypes)iTeam))
-				{
-					AI_setWarPlan((TeamTypes)iTeam, NO_WARPLAN);
-				}
+				AI_setWarPlan((TeamTypes)iTeam, NO_WARPLAN);
 			}
 		}
 	}
