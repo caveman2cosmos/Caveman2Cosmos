@@ -15119,9 +15119,14 @@ void CvPlayer::updateGroupCycle(CvUnit* pUnit, bool bFarMove)
 		//AlbertS2 added this to fix a CTD that happened while loading a saved game
 		if (pLoopUnit == NULL)	continue;
 
-		FAssert(pLoopUnit->getGroup() != NULL);
-
-		if (pLoopUnit->isGroupHead() && pLoopUnit != pUnit)
+		if ( pLoopUnit->getGroup() == NULL )
+		{
+			::MessageBox(NULL,
+						pLoopUnit->getGroupID() == FFreeList::INVALID_INDEX ? "Unit with NULL group ID found in stack on call to CvPlayer::updateGroupCycle\n" : "Unit with no group found in stack on call to CvPlayer::updateGroupCycle\n",
+						"CvGameCoreDLL Diagnostics",
+						MB_OK);
+		}
+		else if (pLoopUnit->isGroupHead() && pLoopUnit != pUnit)
 		{
 			if (!isBeforeUnitCycle(pLoopUnit, pUnit))
 			{
