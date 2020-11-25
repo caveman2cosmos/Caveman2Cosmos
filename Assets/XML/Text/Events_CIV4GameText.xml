@@ -1842,15 +1842,15 @@
 		<Tag>TXT_KEY_EVENT_BARBARIAN_ATTITUDE_2</Tag>
 		<English>You say they are demanding that we change our attitude? Go on with it. We won't change anything just because they don't like it.</English>
 		<French>Vous dites qu'ils veulent un changement d'attitude? Rien du tout. On ne change pas juste parce que cela ne leur plait pas.</French>
-		<Italian>Dici che ci chiedono un cambiamento di atteggiamnto? Continua così. Non cambieremo solo perchè loro ci chiedono di farlo.</Italian>
+		<Italian>Quindi ci chiedono un cambiamento di atteggiamento? Continueremo così, invece. Non cambieremo solo perché loro ci chiedono di farlo.</Italian>
 		<Spanish>¿Dices que nos están exigiendo que cambiemos de actitud? Entonces sigamos con esto. No vamos a cambiar simplemente porque a ellos no les guste.</Spanish>
 		<Polish>Obiecali poprawę? Dobrze ale niech wiedzą że nam się to nie podoba.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BARBARIAN_ATTITUDE_3</Tag>
 		<English>Have they gone mad? Who the hell do they think they are to tell us what we must do? Let's send some Barbarian units to pillage their land. That will teach them a good lesson!</English>
-		<French>Ils ne sont pas bien? Ils imaginent pouvoir dicter notre contuite? Envoyez-leur quelques barbares pour piller leurs terres. Nous allons leur donner une bonne leçon!</French>
-		<Italian>Sono diventati matti? Chi diavolo pensano di essere per dirci cosa dobbiamo fare? Mandiamo alcuni barbari a saccheggiare le loro terre. Questo insegnerà loro una buona lezione!</Italian>
+		<French>Ils ne sont pas bien? Ils imaginent pouvoir dicter notre conduite? Envoyez-leur quelques barbares pour piller leurs terres. Nous allons leur donner une bonne leçon!</French>
+		<Italian>Sono diventati matti? Chi diavolo pensano di essere per dirci cosa dobbiamo fare? Mandiamo alcuni barbari a saccheggiare le loro terre, così impareranno la lezione!</Italian>
 		<Spanish>¿Se han vuelto locos? ¿Quién diablos se creen que son para decirnos lo que tenemos que hacer? Mandémosles algunas unidades bárbaras para saquear sus tierras. ¡Eso les dará un buen escarmiento!</Spanish>
 		<Polish>Oszaleliście? Myślą że kim są? Wyślij kilka barbarzyńskich jednostek do plądrowania ich ziem. To ich nauczy!</Polish>
 	</TEXT>
@@ -4305,7 +4305,7 @@
 		<English>Forget these tests. Anything worth knowing has already been discovered, so why risk needless death?</English>
 		<French>Au diable les tests! Tout ce qui en vaut la peine à déja été découvert, alors pourquoi risquer des morts inutiles?</French>
 		<German>Riskante Feldversuche kommen nicht in Frage. Wir setzen die Gesundheit von Menschen nicht aufs Spiel.</German>
-		<Italian>Dimentica i test. Tutto ciò che è necessario nel campo medico è già stato scoperto, perchè rischiare decessi inutili?</Italian>
+		<Italian>Dimentica i test. Tutto ciò che è necessario nel campo medico è già stato scoperto, perché rischiare decessi inutili?</Italian>
 		<Spanish>Olvida esas pruebas. Ya se ha descubierto todo lo que necesitamos saber, ¿para qué arriesgarse con pruebas innecesarias?</Spanish>
 		<Polish>Zapomnijcie o tych testach. Cokolwiek wartego odkrycia już dawno zostało odkryte. Po co ryzykować życiem naszych ludzi?</Polish>
 	</TEXT>
@@ -5074,7 +5074,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MICROLITH_BUILDING_LOST_1</Tag>
 		<English>Oh God. Why are people leaving these lands?</English>
-		<Italian>Oh Dio. Perchè la gente se ne va da queste terre?</Italian>
+		<Italian>Oh Dio. Perché la gente se ne va da queste terre?</Italian>
 		<Spanish>Oh Dios... ¿Por qué la gente está dejando estas tierras?</Spanish>
 		<Polish>O nie. Dlaczego ludzie opuszczają te ziemie?</Polish>
 	</TEXT>
