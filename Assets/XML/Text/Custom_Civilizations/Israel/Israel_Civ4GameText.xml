@@ -83,7 +83,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_DAVID_1</Tag>
 		<English>Greetings. I am [OUR_NAME], and I welcome you, with a hand on the heart, to the the land of [OUR_CIV_SHORT].</English>
-		<French>Salutations. Je suis [OUR_NAME], et je te souhaite la bienvenue, avec une main sur le coeur, l'à la terre de [OUR_CIV_SHORT].</French>
+		<French>Salutations. Je suis [OUR_NAME], et je te souhaite la bienvenue, avec une main sur le cœur, l'à la terre de [OUR_CIV_SHORT].</French>
 		<German>Grüße. Ich bin [OUR_NAME], und ich begrüße dich, mit einer Hand auf dem Herzen, zum Land von [OUR_CIV_SHORT].</German>
 		<Italian>Saluti. Sono [OUR_NAME] e ti accolgo favorevolmente, con una mano sul cuore, alla terra di [OUR_CIV_SHORT].</Italian>
 		<Spanish>Saludos. Soy [OUR_NAME], y te doy la bienvenida, con una mano en el corazón, el tierra de [OUR_CIV_SHORT].</Spanish>
@@ -115,7 +115,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_SOLOMON_1</Tag>
 		<English>My heart gives me joy when you present yourself.</English>
-		<French>Mon coeur me donne la joie quand vous vous présentez.</French>
+		<French>Mon cœur me donne la joie quand vous vous présentez.</French>
 		<German>Mein Herz gibt mir Freude, wenn du dich darstellst.</German>
 		<Italian>Il mio cuore si riempie di gioia quando ti fai vedere.</Italian>
 		<Spanish>Mi corazón me da alegría cuando te presentas.</Spanish>

@@ -169,7 +169,7 @@
 		<English>Revolution Watch Screen</English>
 		<French>Ecran de surveillance Révolution</French>
 		<German>Revolutionsüberwachungsanzeige</German>
-		<Italian>Schermata 'Rivolutioni'</Italian>
+		<Italian>Rapporto sul rischio di rivoluzione</Italian>
 		<Spanish>Vista del Consejero de Revolución</Spanish>
 		<Polish>Ekran szczegółów rewolucji</Polish>
 	</TEXT>
@@ -187,7 +187,7 @@
 		<English>Your adjusted approval rating is</English>
 		<French>Votre taux d'approbation est</French>
 		<German>Ihr neuer Beliebtheitsgrad ist</German>
-		<Italian>Il tuo grado di approvazione (stimato) è</Italian>
+		<Italian>Il tuo grado di approvazione è</Italian>
 		<Spanish>Tu grado de aprobación entre el pueblo es</Spanish>
 		<Polish>Twój powiększony wskaźnik poparcia wynosi</Polish>
 	</TEXT>
@@ -196,7 +196,7 @@
 		<English>You will certainly lose any fair election.</English>
 		<French>Vous perdrez certainement n'importe quelle élection.</French>
 		<German>Sie werden zweifellos jede gerechte Wahl verlieren.</German>
-		<Italian>In caso di elezioni regolari, certamente perderai.</Italian>
+		<Italian>In caso di elezioni regolari, perderai sicuramente.</Italian>
 		<Spanish>Seguramente perderías unas elecciones justas.</Spanish>
 		<Polish>Z pewnością przegrasz każde uczciwe wybory.</Polish>
 	</TEXT>
@@ -223,7 +223,7 @@
 		<English>, along with</English>
 		<French>, avec</French>
 		<German>, zusammen mit</German>
-		<Italian>, con</Italian>
+		<Italian>, assieme a</Italian>
 		<Spanish>, junto a</Spanish>
 		<Polish>, razem z</Polish>
 	</TEXT>
@@ -250,7 +250,7 @@
 		<English>The %s would like to give up their independence and join your empire! They feel they are simply too small to survive on their own, and hope that you will accept their request.[NEWLINE][NEWLINE]If you accept this request, you will receive all of the %s's cities and they will become a minority group in your empire.</English>
 		<French>Les %s voudrait mettre fin à leur indépendance et rejoindre votre empire! Ils jugent qu'ils sont simplement trop petits pour survivre tout seuls, et espèrent que vous accepterez leur demande.[NEWLINE][NEWLINE]Si vous acceptez cette requête, vous recevrez toutes les les villes %s et les indépendantistes deviendront un groupe minoritaire au sein de votre empire.</French>
 		<German>Das %s möchte die Unabhängigkeit aufgeben und sich Ihrem Imperium anschließen! Sie glauben, dass sie einfach zu klein sind, um auf sich selbst gestellt zu überleben und hoffen, dass Sie ihren Antrag annehmen.[NEWLINE][NEWLINE]Wenn Sie diesen Antrag annehmen, erhalten Sie alle Städte von %s. Sie bilden anschließend eine Minderheit in Ihrem Imperium.</German>
-		<Italian>Il/la %s vorrebbe abbandonare la propria indipendenza ed unirsi al tuo impero! Semplicemente non sono abbastanza estesi per sopravvivere da soli e sperano che accetterai la loro richiesta.[NEWLINE][NEWLINE]Se accetti, otterrai tutte le città del/la %s, ed essi diverranno una minoranza all'interno del tuo impero.</Italian>
+		<Italian>%s vorrebbe abbandonare la propria indipendenza e unirsi al tuo impero! Sono troppo piccoli e deboli per sopravvivere da soli e sperano che accetterai la loro richiesta.[NEWLINE][NEWLINE]Se accetti, otterrai tutte le città del %s ed essi diverranno una minoranza all'interno del tuo impero.</Italian>
 		<Spanish>¡Las %s querrían renunciar a su independencia y unirse a tu imperio! Simplemente sienten que son demasiado pequeñas para sobrevivir por sí mismas, y esperan que aceptes sus peticiones.[NEWLINE][NEWLINE]Si aceptas sus términos, recibirás todas las ciudades de los %s, y se convertirán en un grupo minoritario bajo tu imperio.</Spanish>
 		<Polish>%s chcą zrezygnować ze swojej niepodległości i przyłączyć się do twojego imperium! Sądzą, że są zbyt słabi, aby przetrwać samotnie. Mają nadzieję, że spełnisz ich prośbę.[NEWLINE][NEWLINE]Jeżeli spełnisz ich prośbę, otrzymasz wszystkie miasta %s, które staną się częścią twojego imperium.</Polish>
 	</TEXT>
@@ -563,7 +563,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_CAP_LEAD_CONCLUSION</Tag>
 		<English>The protesters have not yet turned to violence, and there is still time to bring the situation to a peaceful conclusion. Like all good despots, you are of course the best hope for your people. You just need to remind them of the glory of your rule, either by improving their situation, vanquishing your enemies, or moving lots of soldiers into their towns. Erecting shiny statues of yourself will also quiet the dissenters.[NEWLINE][NEWLINE]However, if you cling to power now, you may face a civil war in the future! Honouring their request would bring only a temporary end to your rule, as there is every reason to believe your heirs will regain power in the future.</English>
-		<French>Les protestataires ne se sont pas encore tournés vers la violence, et il est encore temps pour apporter à cette situation une conclusion paisible. Comme tous les bons despotes, vous êtes naturellement le meilleur espoir pour vos personnes. Vous devez juste leur rappeler la gloire de votre règne, en améliorant leur situation, vainquant vos ennemis, ou en plaçant un bon nombre de soldats dans leurs villes. La construction des statues à votre effigie apaisera également les dissidents.[NEWLINE][NEWLINE]cependant, si vous vous accrochez au pouvoir maintenant, vous pourriez faire face à une guerre civile à l'avenir! Honorer leur demande apporterait seulement une fin provisoire de votre règne, car il y a tout lieu de croire que vos héritiers regagneront le pouvoir très rapidement.</French>
+		<French>Les protestataires ne se sont pas encore tournés vers la violence, et il est encore temps pour apporter à cette situation une conclusion paisible. Comme tous les bons despotes, vous êtes naturellement le meilleur espoir pour vos personnes. Vous devez juste leur rappeler la gloire de votre règne, en améliorant leur situation, vainquant vos ennemis, ou en plaçant un bon nombre de soldats dans leurs villes. La construction des statues à votre effigie apaisera également les dissidents.[NEWLINE][NEWLINE]Cependant, si vous vous accrochez au pouvoir maintenant, vous pourriez faire face à une guerre civile à l'avenir! Honorer leur demande apporterait seulement une fin provisoire de votre règne, car il y a tout lieu de croire que vos héritiers regagneront le pouvoir très rapidement.</French>
 		<German>Die Demonstranten sind noch nicht gewalttätig, also haben Sie Zeit, das Problem friedlich zu lösen. Wie alle guten Despoten sind Sie selbstverständlich die größte Hoffnung für Ihr Volk. Sie müssen sie lediglich an den Ruhm Ihrer Herrschaft erinnern, indem Sie entweder ihre Situation verbessern, Ihre Feinde vernichten oder Massen von Soldaten in ihre Städte schicken. Das Aufrichten von glänzenden Statuen Ihrer selbst wird die Abweichler ebenfalls ruhigstellen.[NEWLINE][NEWLINE]Wenn Sie jetzt allerdings zu sehr an der Macht hängen, könnten Sie sich in der Zukunft einem Bürgerkrieg gegenübersehen! Ihre Forderung zu erfüllen würde Ihre Herrschaft nur kurzzeitig beenden, es gibt berechtigten Grund zu glauben, dass Ihre Erben in der Zukunft die Macht zurückgewinnen werden.</German>
 		<Italian>I dimostranti non sono ancora passati alla violenza e sei ancora in tempo per giungere ad una conclusione pacifica. Come tutti i despoti illuminati, sei certamente la miglior speranza per la tua gente. Ti occorre solo ricordar loro la gloria del tuo governo, sia con il miglioramento della loro condizione, sgominando i nemici, sia con il rafforzamento delle guarnigioni nelle loro città. Anche la costruzione di splendenti statue con la tua immagine calmerà i dissidenti.[NEWLINE][NEWLINE]Tuttavia, se ora ti aggrapperai al potere, potrai essere costretto ad affrontare una guerra civile in avvenire! Accettare la loro richiesta porterebbe soltanto ad una provvisoria interruzione del tuo governo, poiché c'è ragione di credere che i tuoi eredi riprenderanno il potere in futuro.</Italian>
 		<Spanish>Los manifestantes no han hecho uso de la violencia por ahora, y aún puede ser tiempo de concluir la situación de forma pacífica. Como todos los buenos déspotas, eres desde luego la mejor esperanza para tu gente. Solo necesitas recordarles la gloria de tu mandato, bien mejorando su situación, venciendo a tus enemigos, o trasladando grupos de soldados a sus ciudades. Erigir majestuosas estatuas de tu persona puede también calmar a los disidentes.[NEWLINE][NEWLINE]¡No obstante, si te apegas ahora al poder, puede que debas afrontar una guerra civil en el futuro! Aceptar sus demandas solo conllevará un final temporal de tu mandato, dado que hay muchas razones para creer que tus herederos podrán retornar al poder en el futuro.</Spanish>
@@ -599,7 +599,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_CAP_RULE_BUYOFF</Tag>
 		<English>and fight. Your troops in these cities will be surrounded by a hostile population and will take heavy losses or even defect. The defenses of some of these cities may crumble immediately, others may be able to retain some semblance of control.[NEWLINE][NEWLINE]However, if you win a fair and open election, the riots will disappear and your power will not be questioned. It may also be possible to guarantee you "victory", if you catch my drift, but it will be costly and the slight could be detected with very negative consequences.</English>
-		<French>et combattront. Vos troupes dans ces villes seront entourées par une population hostile et subiront de lourdes pertes ou même seront anéanties. Les défenses de certaines de ces villes peuvent être rasées, d'autres pourraient se maintenir.[NEWLINE][NEWLINE]cependant, si vous remportez une élection ouverte et juste, les émeutes disparaîtront et votre légitimité ne sera plus remise en cause. Il peut également être possible de vous garantir la victoire par des chemins détournés, mais ce sera coûteux et risqué: imaginez les conséquences si la fraude est découverte.</French>
+		<French>et combattront. Vos troupes dans ces villes seront entourées par une population hostile et subiront de lourdes pertes ou même seront anéanties. Les défenses de certaines de ces villes peuvent être rasées, d'autres pourraient se maintenir.[NEWLINE][NEWLINE]Cependant, si vous remportez une élection ouverte et juste, les émeutes disparaîtront et votre légitimité ne sera plus remise en cause. Il peut également être possible de vous garantir la victoire par des chemins détournés, mais ce sera coûteux et risqué: imaginez les conséquences si la fraude est découverte.</French>
 		<German>und kämpfen. Ihre Truppen in diesen Städten werden von einer feindseligen Bevölkerung umgeben sein und können starke Verluste erleiden oder sogar überlaufen. Die Verteidigung einiger dieser Städte kann unmittelbar zerfallen, andere können vielleicht einen Rest an Kontrolle bewahren.[NEWLINE][NEWLINE]Wenn Sie eine ehrliche und offene Wahl gewinnen, so werden die Proteste verschwinden und Ihre Macht wird nicht in Frage gestellt. Es könnte auch möglich sein, Ihnen den 'Wahlsieg' zu garantieren, wenn Sie meine Anspielung verstehen, aber es wäre sehr teuer und die Sache könnte auffliegen, mit sehr negativen Konsequenzen.</German>
 		<Italian>e combatteranno. Le tue truppe in queste città saranno circondate da una popolazione ostile e subiranno gravi perdite o potranno anche disertare. Le difese di alcune di queste città possono crollare subito, su altre potresti mantenere un certo livello di controllo.[NEWLINE][NEWLINE]Tuttavia, se vincerai libere ed oneste elezioni, i tumulti cesseranno ed il tuo potere non sarà contestato. È possibile anche "garantirsi la vittoria" - non so se mi spiego - ma ti costerà e l'imbroglio potrebbe essere scoperto, con conseguenze molto negative.</Italian>
 		<Spanish>y lucharán. En estas ciudades, tus tropas estarán cercadas por una población hostil y podrían sufrir graves pérdidas o incluso desaparecer. Las defensas de algunas de estas ciudades podrían caer inmediatamente, es posible que otras ciudades puedan mantener cierto grado de control.[NEWLINE][NEWLINE]Sin embargo, si ganas unas elecciones justas y abiertas, los motines desaparecerán y tu poder dejará de ser cuestionado. También podría ser posible garantizar tu 'victoria', si sabes a lo que me refiero, pero será costoso y el amaño podría ser descubierto con nefastas consecuencias.</Spanish>

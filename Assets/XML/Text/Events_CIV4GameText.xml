@@ -5,7 +5,7 @@
 		<English>The %s1_civ_adjective empire's response to the football violence has been inadequate and we have declared war on them!</English>
 		<French>La réponse de l'empire des %s1:3_civ_adjective à la violence après le match de football a été insatisfaisante et nous leur avons déclaré la guerre!</French>
 		<German>Die Antwort des %s1_civ_adjective Reiches zur Fußballgewalttätigkeit ist unzulänglich gewesen und wir haben ihnen den Krieg erklärt!</German>
-		<Italian>La risposta dell'impero %s1_civ_adjective alle violenze durante la partita di calcio è stata inadeguata, e quindi dichiariamo guerra!</Italian>
+		<Italian>La risposta dell'impero %s1_civ_adjective alle violenze durante la partita di calcio è stata inadeguata e quindi dichiariamo guerra!</Italian>
 		<Spanish>¡La respuesta del imperio %s1_civ_adjective a la violencia por el fútbol no ha sido la adecuada, por tanto les hemos declarado la guerra!</Spanish>
 		<Polish>Odpowiedź imperium %s1_civ_adjective na zamieszki po meczu, była nieadekwatna do sytuacji i wypowiedzieliśmy im wojnę!</Polish>
 	</TEXT>
@@ -3931,7 +3931,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FUTBOL_WAR</Tag>
 		<English>Our national football team recently lost a championship game to the %s1_civ_adjective team. Several were killed in post-game rioting, including some players from the other team. Their government is holding us responsible for the violence and threatens military action if their "national honor" is not satisfied. Emotions are running HIGH on both sides.</English>
-		<French>Notre équipe nationale du football a récemment perdu un match de championnat contre l'équipe des %s1:3_civ_adjective. Plusieurs Joeurs ont été tués dans une émeute qui a suivi le match, y compris quelques joueurs de l'autre équipe. Leur gouvernement nous juge responsables de la violence et menace de représailles militaires si leur "honneur national" n'est pas satisfait. Ces incidents sont pris très à coeur des deux côtés.</French>
+		<French>Notre équipe nationale du football a récemment perdu un match de championnat contre l'équipe des %s1:3_civ_adjective. Plusieurs joeurs ont été tués dans une émeute qui a suivi le match, y compris quelques joueurs de l'autre équipe. Leur gouvernement nous juge responsables de la violence et menace de représailles militaires si leur "honneur national" n'est pas satisfait. Ces incidents sont pris très à cœur des deux côtés.</French>
 		<German>Unsere nationale Fußballmannschaft verlor vor kurzem ein Meisterschaftspiel gegen die %s1_civ_adjective Mannschaft. In Krawallen nach dem Spiel gab es mehrere Tote, inklusive Spielern der gegnerischen Mannschaft. Ihre Regierung hält uns verantwortlich für die Gewalttätigkeit und bedroht uns mit Militäraktionen, wenn ihre "nationale Ehre" nicht wiederhergestellt wird. Die Emotionen sind erhitzt auf beiden Seiten.</German>
 		<Italian>La nostra nazionale di calcio ha perso la finale mondiale contro la nazionale %s1:2_civ_adjective. Vi sono stati dei morti durante i disordini del dopo partita, tra cui alcuni giocatori dell'altra squadra. Il loro governo ci ritiene responsabili della violenza e minaccia una azione militare se il loro "onore nazionale" non sarà soddisfatto. La rabbia stà montando da entrambe le parti.</Italian>
 		<Spanish>Nuestra selección nacional de fútbol perdió recientemente un partido del campeonato frente a la selección %s1:2_civ_adjective. Hubo varios muertos durante los disturbios de después del partido, incluyendo algunos jugadores del otro equipo. Su gobierno nos está haciendo responsables de la violencia y amenaza con una acción militar si su "honor nacional" no queda satisfecho. La tensión está creciendo en ambos bandos.</Spanish>
@@ -3983,7 +3983,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GAME_MIGRATION_1</Tag>
 		<English>Excellent, our hunters will be overjoyed!</English>
-		<French>Excellent, nos chasseurs vont s'en donner à coeur joie!</French>
+		<French>Excellent, nos chasseurs vont s'en donner à cœur joie!</French>
 		<German>Ausgezeichnet, unsere Jäger werden überglücklich sein!</German>
 		<Italian>Eccellente, i nostri cacciatori ne saranno contenti!</Italian>
 		<Spanish>¡Excelente, nuestros cazadores estarán muy contentos!</Spanish>

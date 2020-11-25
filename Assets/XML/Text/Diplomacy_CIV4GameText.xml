@@ -2444,7 +2444,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ASHUR_1</Tag>
 		<English>He who in his heart utters improprieties against the king - his foundation is but wind, the hem of his garment is but litter. Gather, all the gods of heaven and earth, bless king Ashurbanipal, the circumspect man! I am [OUR_NAME] of the [OUR_EMPIRE].</English>
-		<French>Celui qui dans son coeur est inconvenant avec le roi - son fondement n'est que du vent, l'ourlet de son vêtement n'est que déchets. Oyez, tous les dieux du ciel et la terre, bénissez le Roi Assurbanipal, l'homme avisé! Je suis [OUR_NAME] de [OUR_EMPIRE].</French>
+		<French>Celui qui dans son cœur est inconvenant avec le roi - son fondement n'est que du vent, l'ourlet de son vêtement n'est que déchets. Oyez, tous les dieux du ciel et la terre, bénissez le Roi Assurbanipal, l'homme avisé! Je suis [OUR_NAME] de [OUR_EMPIRE].</French>
 		<German>Derjenige, der in seinem Herzen Ungebührliches gegenüber dem König hegt - seine Grundfeste ist nur Wind, der Saum seines Gewandes ist nur Schmutz. Versammelt Euch, all Ihr Götter von Himmel und Erde, segnet König Assurbanipal, den umsichtigen Mann. Ich bin [OUR_NAME] vom [OUR_EMPIRE].</German>
 		<Italian>Colui che getta improprietà contro il re - ha come fondamento il vento. Tutti gli dei del cielo e della terra onorano Assurbanipal, l'uomo giusto! Io sono [OUR_NAME] dell'[OUR_EMPIRE].</Italian>
 		<Polish>Ten który w swoim sercu wystąpi przeciw królowi - jego fundamentem jest wiatr, a ubranie jest ściółką leśną. Wszyscy, bogowie nieba i ziemi, błogosławcie króla Ashurbanipala Rozważnego! Ja jestem [OUR_NAME] z rodu [OUR_EMPIRE].</Polish>
@@ -6844,7 +6844,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_THANKS_49</Tag>
 		<English>The [OUR_CIV_ADJ] people graciously thank the people of - whatever your culture's name is.</English>
-		<French>Les [OUR_CIV_ADJ] remercie de tout coeur le peuple... j'ai oublié votre nom, mais peu importe.</French>
+		<French>Les [OUR_CIV_ADJ] remercie de tout cœur le peuple... j'ai oublié votre nom, mais peu importe.</French>
 		<German>Mein Volk dankt den... wie auch immer sich Eure Zivilisation schimpfen mag.</German>
 		<Italian>Il popolo [OUR_CIV_ADJ:1] ringrazia sentitamente la tua gente... anche se non sappiamo il nome della tua civiltà.</Italian>
 		<Polish>Lud [OUR_CIV_ADJ] dziękuje pięknie ludowi... - jakakolwiek jest nazwa tego Twojego plemienia.</Polish>
