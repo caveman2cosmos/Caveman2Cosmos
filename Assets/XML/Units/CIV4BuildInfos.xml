@@ -10740,6 +10740,7 @@
 			<Type>BUILD_WOODEN_WATCHTOWER</Type>
 			<Description>TXT_KEY_BUILD_WOODEN_WATCHTOWER</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
+			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
@@ -10770,6 +10771,7 @@
 			<Type>BUILD_STONE_WATCHTOWER</Type>
 			<Description>TXT_KEY_BUILD_STONE_WATCHTOWER</Description>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<ObsoleteTech>TECH_STEEL</ObsoleteTech>
 			<iTime>400</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
@@ -10785,6 +10787,7 @@
 			<Type>BUILD_STEEL_WATCHTOWER</Type>
 			<Description>TXT_KEY_BUILD_STEEL_WATCHTOWER</Description>
 			<PrereqTech>TECH_STEEL</PrereqTech>
+			<ObsoleteTech>TECH_RADAR</ObsoleteTech>
 			<iTime>600</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
@@ -10800,6 +10803,7 @@
 			<Type>BUILD_RADAR_TOWER</Type>
 			<Description>TXT_KEY_BUILD_RADAR_TOWER</Description>
 			<PrereqTech>TECH_RADAR</PrereqTech>
+			<ObsoleteTech>TECH_PLANETARY_DEFENSES</ObsoleteTech>
 			<iTime>800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
