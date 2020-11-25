@@ -7,8 +7,9 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "CvGameAI.h"
 #include "CvDate.h"
+#include "CvGameAI.h"
+#include "CvGlobals.h"
 
 CvDate::CvDate()
 {

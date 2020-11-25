@@ -1,6 +1,6 @@
 
 #include "CvGameCoreDLL.h"
-
+#include "CvGlobals.h"
 #include "CvPlotPaging.h"
 
 #include <psapi.h>

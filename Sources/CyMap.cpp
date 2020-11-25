@@ -3,7 +3,9 @@
 // 
 
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
 #include "CvInitCore.h"
+#include "CvGlobals.h"
 #include "CvMapGenerator.h"
 #include "CvSelectionGroup.h"
 #include "CyArea.h"

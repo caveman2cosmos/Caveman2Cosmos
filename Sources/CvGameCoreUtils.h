@@ -5,10 +5,8 @@
 #ifndef CIV4_GAMECORE_UTILS_H
 #define CIV4_GAMECORE_UTILS_H
 
-
-#include "CvGlobals.h"
 #include "CvMap.h"
-
+#include "CvGlobals.h"
 
 class CvPlot;
 class CvCity;
@@ -18,7 +16,7 @@ class CvRandom;
 class FAStarNode;
 class FAStar;
 class CvInfoBase;
-
+class CvInternalGlobals;
 
 #ifndef SQR
 #define SQR(x) ( (x)*(x))

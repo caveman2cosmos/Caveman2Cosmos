@@ -1755,7 +1755,7 @@ class Revolution:
 
 		# This is calculation AI does to figure out if it's in financial trouble
 		iNetCommerce = 1 + pPlayer.getCommerceRate(CommerceTypes.COMMERCE_GOLD) + pPlayer.getCommerceRate(CommerceTypes.COMMERCE_RESEARCH) + max([0, pPlayer.getGoldPerTurn()])
-		iNetExpenses = pPlayer.calculateInflatedCosts() + max([0, -pPlayer.getGoldPerTurn()])
+		iNetExpenses = pPlayer.getFinalExpense() + max([0, -pPlayer.getGoldPerTurn()])
 		iFundedPercent = (100 * (iNetCommerce - iNetExpenses)) / max([1, iNetCommerce])
 
 		iThresholdPercent = 50 # Afforess - lowered from 60 to 50 to match DLL default threshold

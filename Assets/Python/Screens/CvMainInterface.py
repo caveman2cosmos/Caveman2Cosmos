@@ -4170,7 +4170,7 @@ class CvMainInterface:
 				else:
 					szTxt = TRNSLTR.getText("INTERFACE_CITY_PRODUCTION_WHIP", (CyCity.getProductionNameKey(), CyCity.getProductionTurnsLeft(), iHurryPop, iOverflow))
 			elif bShowWhipAssist and CyCity.canHurry(HURRY_BUY, False):
-				iHurryCost = CyCity.hurryGold(HURRY_BUY)
+				iHurryCost = CyCity.getHurryGold(HURRY_BUY)
 				szTxt = TRNSLTR.getText("INTERFACE_CITY_PRODUCTION_BUY", (CyCity.getProductionNameKey(), CyCity.getProductionTurnsLeft(), iHurryCost))
 			else:
 				szTxt = TRNSLTR.getText("INTERFACE_CITY_PRODUCTION", (CyCity.getProductionNameKey(), CyCity.getProductionTurnsLeft()))

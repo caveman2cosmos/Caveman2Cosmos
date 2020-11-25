@@ -654,7 +654,7 @@ class CanHurryGold(AbstractCanHurry):
 		return passes and Civ4lertsOpt.isShowCityCanHurryGoldAlert()
 
 	def _getAlertMessage(self, city, info):
-		iGold = city.hurryGold(self.keHurryType)
+		iGold = city.getHurryGold(self.keHurryType)
 		return TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_CAN_HURRY_GOLD", (city.getName(), info.getDescription(), iGold))
 
 

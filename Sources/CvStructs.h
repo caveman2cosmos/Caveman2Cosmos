@@ -6,7 +6,8 @@
 // structs.h
 
 #include "CvString.h"
-#include "CvGlobals.h"
+
+class BoolExpr;
 
 // XXX these should not be in the DLL per se (if the user changes them, we are screwed...)
 
@@ -187,13 +188,6 @@ struct CivicOptionTypeBool
 	bool bBool;
 	operator int() const {return (int)eCivicOption;}
 	bool operator< (const CivicOptionTypeBool& rhs) const {return (int)eCivicOption < (int)rhs.eCivicOption;}
-};
-struct GameOptionTypeBool
-{	
-	GameOptionTypes eGameOption;
-	bool bBool;
-	operator int() const {return (int)eGameOption;}
-	bool operator< (const GameOptionTypeBool& rhs) const {return (int)eGameOption < (int)rhs.eGameOption;}
 };
 struct HealUnitCombat
 {	

@@ -2,6 +2,7 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
 #include "CvRandom.h"
 
 #define RANDOM_A      (1103515245)

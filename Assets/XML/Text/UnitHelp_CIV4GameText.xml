@@ -285,6 +285,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_UPKEEP_CHANGE</Tag>
 		<English>[ICON_BULLET]Upkeep change: %d1 [ICON_GOLD]</English>
+		<German>[ICON_BULLET]Anpassung laufende Kosten: %d1 [ICON_GOLD]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP</Tag>

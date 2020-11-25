@@ -3939,8 +3939,6 @@ public:
 	int getGoldenAgePercent() const; // Exposed to Python
 	int getHurryPercent() const; // Exposed to Python
 	int getHurryConscriptAngerPercent() const; // Exposed to Python
-	int getInflationOffset() const; // Exposed to Python
-	int getInflationPercent() const; // Exposed to Python
 	int getOccupationTimePopulationPercent() const;
 	int getVictoryDelayPercent() const; // Exposed to Python
 	int getNumTurnIncrements() const; // Exposed to Python
@@ -3985,8 +3983,6 @@ protected:
 	int m_iGoldenAgePercent;
 	int m_iHurryPercent;
 	int m_iHurryConscriptAngerPercent;
-	int m_iInflationOffset;
-	int m_iInflationPercent;
 	int m_iOccupationTimePopulationPercent;
 	int m_iVictoryDelayPercent;
 	int m_iNumTurnIncrements;
@@ -8174,23 +8170,18 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvGameOptionInfo :
-	public CvInfoBase
+class CvGameOptionInfo : public CvInfoBase
 {
 public:
 	CvGameOptionInfo();
 	virtual ~CvGameOptionInfo();
 
-	DllExport bool getDefault() const;
-	DllExport bool getVisible() const;
+	DllExport bool getDefault() const { return m_bDefault; }
+	DllExport bool getVisible() const { return m_bVisible; }
 
 	//TB Tags
-	// int vector utilizing struct with delayed resolution
-	int getNumEnforcesGameOptionOnTypes() const;
-	const GameOptionTypeBool& isEnforcesGameOptionOnType(int iOption) const;
-
-	int getNumEnforcesGameOptionOffTypes() const;
-	const GameOptionTypeBool& isEnforcesGameOptionOffType(int iOption) const;
+	const std::vector<GameOptionTypes>& getEnforcesGameOptionOnTypes() const  { return m_aEnforcesGameOptionOnTypes; }
+	const std::vector<GameOptionTypes>& getEnforcesGameOptionOffTypes() const { return m_aEnforcesGameOptionOffTypes; }
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -8202,9 +8193,8 @@ private:
 	bool m_bDefault;
 	bool m_bVisible;
 	//TB Tags
-	// int vector utilizing struct with delayed resolution
-	std::vector<GameOptionTypeBool> m_aEnforcesGameOptionOnTypes;
-	std::vector<GameOptionTypeBool> m_aEnforcesGameOptionOffTypes;
+	std::vector<GameOptionTypes> m_aEnforcesGameOptionOnTypes;
+	std::vector<GameOptionTypes> m_aEnforcesGameOptionOffTypes;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

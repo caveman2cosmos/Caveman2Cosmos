@@ -518,27 +518,27 @@
 			<DiplomacyMusicPeace>
 				<DiploMusicPeaceEra>
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
-					<DiploScriptId>AS2D_DIPLO_EUROPE_EARLY</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_WRUB_EARLY</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>C2C_ERA_ANCIENT</EraType>
-					<DiploScriptId>AS2D_DIPLO_EUROPE_EARLY</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_WRUB_EARLY</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>C2C_ERA_CLASSICAL</EraType>
-					<DiploScriptId>AS2D_DIPLO_EUROPE_EARLY</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_WRUB_EARLY</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>C2C_ERA_MEDIEVAL</EraType>
-					<DiploScriptId>AS2D_DIPLO_EUROPE_MIDDLE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_CAESAR_MIDDLE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>C2C_ERA_RENAISSANCE</EraType>
-					<DiploScriptId>AS2D_DIPLO_EUROPE_MIDDLE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_CAESAR_MIDDLE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>C2C_ERA_INDUSTRIAL</EraType>
-					<DiploScriptId>AS2D_DIPLO_EUROPE_MIDDLE</DiploScriptId>
+					<DiploScriptId>AS2D_DIPLO_CAESAR_MIDDLE</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
 					<EraType>C2C_ERA_ATOMIC</EraType>

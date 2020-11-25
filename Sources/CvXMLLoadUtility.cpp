@@ -13,6 +13,7 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvGlobals.h"
 #include "CvXMLLoadUtility.h"
 
 static const int kBufSize = 2048;
@@ -337,29 +338,11 @@ void CvXMLLoadUtility::ResetGlobalEffectInfo()
 }
 
 //------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   GetInfoClass(TCHAR* pszVal)
-//
-//  PURPOSE :   Searches the InfoClass for the pszVal and returns the location if a match
-//				is found.
-//				returns -1 if no match is found
-//
+//	Searches the InfoClass for the pszVal and returns the location if a match is found.
+//	returns -1 if no match is found
 //------------------------------------------------------------------------------------------------------
 int CvXMLLoadUtility::GetInfoClass(const TCHAR* pszVal)
 {
-	/************************************************************************************************/
-	/* Afforess	                  Start		 03/18/10                                               */
-	/*                                                                                              */
-	/* Hide Assert for Deleted Objects                                                       */
-	/************************************************************************************************/
-		//AIAndy: I don't think we should do a hack like that, references in the XML should always be valid
-		//if ((GC.getNumGameSpeedInfos() > 0) && (GC.getDefineINT(pszVal)))
-		//	hideAssert = true;
-		//if (pszVal == "") return -1;
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-
 	const int idx = GC.getInfoTypeForString(pszVal, false);
 
 	// if we found a match in the list we will return the value of the loop counter
@@ -368,14 +351,12 @@ int CvXMLLoadUtility::GetInfoClass(const TCHAR* pszVal)
 	{
 		return idx;
 	}
-
 	if (_tcscmp(pszVal, "NONE") != 0 && _tcscmp(pszVal, "") != 0)
 	{
 		char errorMsg[1024];
 		sprintf(errorMsg, "Tag: %s in Info class was incorrect\n Current XML file is: %s", pszVal, GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(errorMsg, "XML Error");
 	}
-
 	return idx;
 }
 

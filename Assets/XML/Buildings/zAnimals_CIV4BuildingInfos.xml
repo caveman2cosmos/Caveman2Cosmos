@@ -17601,6 +17601,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_SEA_HUNTING</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_SEA_HUNTING</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRADITION_HUNTER</Type>
@@ -17624,6 +17625,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_HUNTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_HUNTER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRADITION_TOTEM</Type>
@@ -17642,6 +17644,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_ANIMAL_TOTEM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_TOTEM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRADITION_NAVAL_TOTEM</Type>
@@ -17659,6 +17662,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_NAVAL_TOTEM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_NAVAL_TOTEM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAVE_LION_MYTH</Type>

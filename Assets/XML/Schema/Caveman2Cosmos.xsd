@@ -754,35 +754,17 @@
   <xs:element name="EnforcesGameOptionOnTypes">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="EnforcesGameOptionOnType"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="EnforcesGameOptionOnType">
-    <xs:complexType>
-      <xs:sequence>
         <xs:element ref="GameOptionType"/>
-        <xs:element ref="bEnforcesGameOptionOn"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="EnforcesGameOptionOffTypes">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="EnforcesGameOptionOffType"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="EnforcesGameOptionOffType">
-    <xs:complexType>
-      <xs:sequence>
         <xs:element ref="GameOptionType"/>
-        <xs:element ref="bEnforcesGameOptionOff"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="bEnforcesGameOptionOn" type="Civ4Boolean"/>
-  <xs:element name="bEnforcesGameOptionOff" type="Civ4Boolean"/>
   <xs:element name="GameOptionType" type="xs:NCName"/>
   <xs:element name="InitialWBMap" type="xs:string"/>
   <xs:element name="MapScript" type="xs:string"/>

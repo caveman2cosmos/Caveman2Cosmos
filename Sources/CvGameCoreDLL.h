@@ -257,9 +257,6 @@ using bst::bind;
 namespace python = boost::python;
 #endif
 
-//#include <boost155/range/adaptor/filtered.hpp>
-//#include <boost155/range/adaptor/transformed.hpp>
-
 // Stupid define comes from windows and interferes with our stuff
 #undef Yield
 
@@ -304,13 +301,9 @@ namespace python = boost::python;
 
 #include "CvDLLUtilityIFaceBase.h"
 #include "CvDLLEngineIFaceBase.h"
-#include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLPythonIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
-#include "CvDLLXMLIFaceBase.h"
-#include "CvDLLFlagEntityIFaceBase.h"
 
-#include "CvBuildingInfo.h"
 #include "BetterBTSAI.h"
 #include "CvGameCoreUtils.h"
 #include "CvBugOptions.h"
@@ -318,6 +311,7 @@ namespace python = boost::python;
 #include "CvEventReporter.h"
 #include "CvMessageControl.h"
 #include "CvDeal.h"
+#include "CvInfos.h"
 #include "CvInfoWater.h"
 #include "CvViewport.h"
 #include "CvTalkingHeadMessage.h"
@@ -332,9 +326,6 @@ namespace python = boost::python;
 #include "CyDeal.h"
 #include "CyMap.h"
 #include "CyArea.h"
-//#include "CyGame.h"
-//#include "CyTeam.h"
-//#include "CyPlayer.h"
 #include "CyCity.h"
 #include "CyUnit.h"
 #include "CySelectionGroup.h"
