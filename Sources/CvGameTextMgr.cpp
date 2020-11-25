@@ -11,7 +11,9 @@
 //---------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvCity.h"
 #include "CounterSet.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
@@ -34002,7 +34004,6 @@ void CvGameTextMgr::getOtherRelationsString(CvWStringBuffer& szString, PlayerTyp
 	{
 		return;
 	}
-
 	getOtherRelationsString(szString, GET_PLAYER(eThisPlayer).getTeam(), GET_PLAYER(eOtherPlayer).getTeam(), NO_TEAM);
 }
 
@@ -34017,56 +34018,56 @@ void CvGameTextMgr::getOtherRelationsString(CvWStringBuffer& szString, TeamTypes
 	{
 		return;
 	}
-
-	CvTeamAI& kThisTeam = GET_TEAM(eThisTeam);
+	const CvTeamAI& kThisTeam = GET_TEAM(eThisTeam);
 	CvWString szWar, szPeace, szEnemy, szPact, szWarPlanTotal, szWarPlanLimited;
 	bool bFirstWar = true, bFirstPeace = true, bFirstEnemy = true, bFirstPact = true, bFirstWarPlanTotal = true, bFirstWarPlanLimited = true;
 
 	for (int iTeam = 0; iTeam < MAX_PC_TEAMS; ++iTeam)
 	{
-		CvTeamAI& kTeam = GET_TEAM((TeamTypes) iTeam);
-		if (kTeam.isAlive() && !kTeam.isMinorCiv() && iTeam != eThisTeam && iTeam != eSkipTeam && (eOtherTeam == NO_TEAM || iTeam == eOtherTeam))
+		const CvTeamAI& kTeam = GET_TEAM((TeamTypes) iTeam);
+
+		if (kTeam.isAlive() && !kTeam.isMinorCiv()
+		&& iTeam != eThisTeam && iTeam != eSkipTeam
+		&& (eOtherTeam == NO_TEAM || iTeam == eOtherTeam)
+		&& kTeam.isHasMet(eThisTeam)
+		&& kTeam.isHasMet(GC.getGame().getActiveTeam()))
 		{
-			if (kTeam.isHasMet(eThisTeam) && kTeam.isHasMet(GC.getGame().getActiveTeam()))
+			if (kTeam.isAtWar(eThisTeam))
 			{
-				if (::atWar((TeamTypes) iTeam, eThisTeam))
-				{
-					setListHelp(szWar, L"", kTeam.getName().GetCString(), L", ", bFirstWar);
-					bFirstWar = false;
-				}
-				else if (kTeam.isForcePeace(eThisTeam))
-				{
-					setListHelp(szPeace, L"", kTeam.getName().GetCString(), L", ", bFirstPeace);
-					bFirstPeace = false;
-				}
+				setListHelp(szWar, L"", kTeam.getName().GetCString(), L", ", bFirstWar);
+				bFirstWar = false;
+			}
+			else if (kTeam.isForcePeace(eThisTeam))
+			{
+				setListHelp(szPeace, L"", kTeam.getName().GetCString(), L", ", bFirstPeace);
+				bFirstPeace = false;
+			}
 
-				if (!kTeam.isHuman() && kTeam.AI_getWorstEnemy() == eThisTeam)
-				{
-					setListHelp(szEnemy, L"", kTeam.getName().GetCString(), L", ", bFirstEnemy);
-					bFirstEnemy = false;
-				}
+			if (!kTeam.isHuman() && kTeam.AI_getWorstEnemy() == eThisTeam)
+			{
+				setListHelp(szEnemy, L"", kTeam.getName().GetCString(), L", ", bFirstEnemy);
+				bFirstEnemy = false;
+			}
 
-				if (kTeam.isDefensivePact(eThisTeam))
-				{
-					setListHelp(szPact, L"", kTeam.getName().GetCString(), L", ", bFirstPact);
-					bFirstPact = false;
-				}
+			if (kTeam.isDefensivePact(eThisTeam))
+			{
+				setListHelp(szPact, L"", kTeam.getName().GetCString(), L", ", bFirstPact);
+				bFirstPact = false;
+			}
 
-				//Show own war plans
-				if (eThisTeam == GC.getGame().getActiveTeam() || (GC.getGame().isDebugMode() && !(::atWar((TeamTypes) iTeam, eThisTeam))))
+			//Show own war plans
+			if (eThisTeam == GC.getGame().getActiveTeam() || GC.getGame().isDebugMode() && !kTeam.isAtWar(eThisTeam))
+			{
+				if (kThisTeam.AI_getWarPlan((TeamTypes)iTeam) == WARPLAN_PREPARING_TOTAL || kThisTeam.AI_getWarPlan((TeamTypes)iTeam) == WARPLAN_TOTAL)
 				{
-					if (kThisTeam.AI_getWarPlan((TeamTypes)iTeam) == WARPLAN_PREPARING_TOTAL || kThisTeam.AI_getWarPlan((TeamTypes)iTeam) == WARPLAN_TOTAL)
-					{
-						setListHelp(szWarPlanTotal, L"", kTeam.getName().GetCString(), L", ", bFirstWarPlanTotal);
-						bFirstWarPlanTotal = false;
-					}
-					else if (kThisTeam.AI_getWarPlan((TeamTypes)iTeam) == WARPLAN_PREPARING_LIMITED || kThisTeam.AI_getWarPlan((TeamTypes)iTeam) == WARPLAN_LIMITED || kThisTeam.AI_getWarPlan((TeamTypes)iTeam) == WARPLAN_DOGPILE)
-					{
-						setListHelp(szWarPlanLimited, L"", kTeam.getName().GetCString(), L", ", bFirstWarPlanLimited);
-						bFirstWarPlanLimited = false;
-					}
+					setListHelp(szWarPlanTotal, L"", kTeam.getName().GetCString(), L", ", bFirstWarPlanTotal);
+					bFirstWarPlanTotal = false;
 				}
-
+				else if (kThisTeam.AI_getWarPlan((TeamTypes)iTeam) == WARPLAN_PREPARING_LIMITED || kThisTeam.AI_getWarPlan((TeamTypes)iTeam) == WARPLAN_LIMITED || kThisTeam.AI_getWarPlan((TeamTypes)iTeam) == WARPLAN_DOGPILE)
+				{
+					setListHelp(szWarPlanLimited, L"", kTeam.getName().GetCString(), L", ", bFirstWarPlanLimited);
+					bFirstWarPlanLimited = false;
+				}
 			}
 		}
 	}
@@ -34503,7 +34504,7 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 		}
 		for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
 		{
-			if (GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iJ).getTeam() == owner.getTeam())
+			if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam(owner.getTeam()))
 			{
 				foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iJ).cities())
 				{
@@ -34659,9 +34660,6 @@ void CvGameTextMgr::setVassalRevoltHelp(CvWStringBuffer& szBuffer, TeamTypes eMa
 
 void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
-	int iTotalGreatPeopleUnitProgress;
-	int iI;
-
 	if (NO_PLAYER == city.getOwner())
 	{
 		return;
@@ -34672,7 +34670,7 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 
 	if (city.getGreatPeopleRate() > 0)
 	{
-		int iGPPLeft = owner.greatPeopleThresholdNonMilitary() - city.getGreatPeopleProgress();
+		const int iGPPLeft = owner.greatPeopleThresholdNonMilitary() - city.getGreatPeopleProgress();
 
 		if (iGPPLeft > 0)
 		{
@@ -34688,9 +34686,9 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 		}
 	}
 
-	iTotalGreatPeopleUnitProgress = 0;
+	int iTotalGreatPeopleUnitProgress = 0;
 
-	for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
+	for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 	{
 		iTotalGreatPeopleUnitProgress += city.getGreatPeopleUnitProgress((UnitTypes)iI);
 	}
@@ -34703,9 +34701,9 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 
 		std::vector< std::pair<UnitTypes, int> > aUnitProgress;
 		int iTotalTruncated = 0;
-		for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
+		for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 		{
-			int iProgress = ((city.getGreatPeopleUnitProgress((UnitTypes)iI) * 100) / iTotalGreatPeopleUnitProgress);
+			const int iProgress = city.getGreatPeopleUnitProgress((UnitTypes)iI) * 100 / iTotalGreatPeopleUnitProgress;
 			if (iProgress > 0)
 			{
 				iTotalTruncated += iProgress;
@@ -34718,21 +34716,20 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 			aUnitProgress[0].second += 100 - iTotalTruncated;
 		}
 
-		for (iI = 0; iI < (int)aUnitProgress.size(); iI++)
+		for (int iI = 0; iI < (int)aUnitProgress.size(); iI++)
 		{
 			szBuffer.append(CvWString::format(L"%s%s - %d%%", NEWLINE, GC.getUnitInfo(aUnitProgress[iI].first).getDescription(), aUnitProgress[iI].second));
 		}
 	}
 
-// BUG - Building Additional Great People - start
-	bool bBuildingAdditionalGreatPeople = getBugOptionBOOL("MiscHover__BuildingAdditionalGreatPeople", true, "BUG_BUILDING_ADDITIONAL_GREAT_PEOPLE_HOVER");
+
+	const bool bBuildingAdditionalGreatPeople = getBugOptionBOOL("MiscHover__BuildingAdditionalGreatPeople", true, "BUG_BUILDING_ADDITIONAL_GREAT_PEOPLE_HOVER");
+
 	if (city.getGreatPeopleRate() == 0 && !bBuildingAdditionalGreatPeople)
-// BUG - Building Additional Great People - end
 	{
 		return;
 	}
 
-// BUG - Great People Rate Breakdown - start
 	if (getBugOptionBOOL("MiscHover__GreatPeopleRateBreakdown", true, "BUG_GREAT_PEOPLE_RATE_BREAKDOWN_HOVER"))
 	{
 		bool bFirst = true;
@@ -34775,10 +34772,9 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BUILDING_COMMERCE", iRate, gDLL->getSymbolID(GREAT_PEOPLE_CHAR)));
 		}
-		//Trait Modifier by GP type
+
 		for (int i = 0; i < GC.getNumTraitInfos(); i++)
 		{
-			iRate = 0;
 			if (owner.hasTrait((TraitTypes)i))
 			{
 				iRate = GC.getTraitInfo((TraitTypes)i).getGreatPeopleRateChange();
@@ -34795,7 +34791,6 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 			}
 		}
 	}
-// BUG - Great People Rate Breakdown - end
 
 	szBuffer.append(SEPARATOR);
 	szBuffer.append(NEWLINE);
@@ -34805,6 +34800,7 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 	int iModifier = 100;
 
 	// Buildings
+	const TeamTypes eTeam = owner.getTeam();
 	int iBuildingMod = 0;
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
@@ -34818,18 +34814,15 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 		}
 		for (int j = 0; j < MAX_PLAYERS; j++)
 		{
-			if (GET_PLAYER((PlayerTypes)j).isAlive())
+			if (GET_PLAYER((PlayerTypes)j).isAliveAndTeam(eTeam))
 			{
-				if (GET_PLAYER((PlayerTypes)j).getTeam() == owner.getTeam())
+				foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)j).cities())
 				{
-					foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)j).cities())
+					if (pLoopCity->getNumBuilding((BuildingTypes)i) > 0 && !GET_TEAM(pLoopCity->getTeam()).isObsoleteBuilding((BuildingTypes)i))
 					{
-						if (pLoopCity->getNumBuilding((BuildingTypes)i) > 0 && !GET_TEAM(pLoopCity->getTeam()).isObsoleteBuilding((BuildingTypes)i))
+						for (int iLoop = 0; iLoop < pLoopCity->getNumBuilding((BuildingTypes)i); iLoop++)
 						{
-							for (int iLoop = 0; iLoop < pLoopCity->getNumBuilding((BuildingTypes)i); iLoop++)
-							{
-								iBuildingMod += infoBuilding.getGlobalGreatPeopleRateModifier();
-							}
+							iBuildingMod += infoBuilding.getGlobalGreatPeopleRateModifier();
 						}
 					}
 				}
@@ -34864,14 +34857,13 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 	}
 
 	// Trait
-	int iTraitMod = 0;
 	for (int i = 0; i < GC.getNumTraitInfos(); i++)
 	{
 		if (owner.hasTrait((TraitTypes)i))
 		{
-			iTraitMod = 0;
 			const CvTraitInfo& trait = GC.getTraitInfo((TraitTypes)i);
-			iTraitMod += trait.getGreatPeopleRateModifier();
+			int iTraitMod = trait.getGreatPeopleRateModifier();
+
 			if (owner.getStateReligion() != NO_RELIGION && city.isHasReligion(owner.getStateReligion()))
 			{
 				iTraitMod += trait.getStateReligionGreatPeopleRateModifier();
@@ -34887,7 +34879,7 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 
 	if (owner.isGoldenAge())
 	{
-		int iGoldenAgeMod = GC.getDefineINT("GOLDEN_AGE_GREAT_PEOPLE_MODIFIER");
+		const int iGoldenAgeMod = GC.getDefineINT("GOLDEN_AGE_GREAT_PEOPLE_MODIFIER");
 
 		if (0 != iGoldenAgeMod)
 		{
@@ -34903,12 +34895,10 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 
 	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_GREATPEOPLE_FINAL", iModGreatPeople));
 
-// BUG - Building Additional Great People - start
 	if (bBuildingAdditionalGreatPeople && city.getOwner() == GC.getGame().getActivePlayer())
 	{
 		setBuildingAdditionalGreatPeopleHelp(szBuffer, city, DOUBLE_SEPARATOR);
 	}
-// BUG - Building Additional Great People - end
 }
 
 // BUG - Building Additional Great People - start
@@ -37386,7 +37376,7 @@ void CvGameTextMgr::getInterfaceCenterText(CvWString& strText)
 		{
 			strText = gDLL->getText("TXT_KEY_MISC_WINS_VICTORY", GET_TEAM(GC.getGame().getWinner()).getName().GetCString(), GC.getVictoryInfo(GC.getGame().getVictory()).getTextKeyWide());
 		}
-		else if (!(GET_PLAYER(GC.getGame().getActivePlayer()).isAlive()))
+		else if (!GET_PLAYER(GC.getGame().getActivePlayer()).isAlive())
 		{
 			strText = gDLL->getText("TXT_KEY_MISC_DEFEAT");
 		}

@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
 #include "CvDLLEntityIFaceBase.h"
 
 static int g_numEntitiesCreated = 0;

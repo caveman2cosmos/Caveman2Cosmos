@@ -14,6 +14,7 @@
 //
 // CvMap
 //
+class CvCity;
 class CvSelectionGroup;
 class CvMapExternal
 {

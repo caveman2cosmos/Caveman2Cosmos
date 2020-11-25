@@ -6,11 +6,12 @@
 #include "LinkedList.h"
 #include "CvPathGenerator.h"
 #include "CvUnit.h"
-#include "CvCity.h"
 #include "idinfo_iterator_base.h"
 
-class CvPlot;
 class CvArea;
+class CvCity;
+class CvPlot;
+class CvUnitSelectionCriteria;
 #ifdef USE_OLD_PATH_GENERATOR
 class FAStarNode;
 #endif
