@@ -258,7 +258,7 @@ void FFreeListArray<T>::insertAt(T data, int iIndex)
 			int iTempIndex = m_iFreeListHead;
 			while (iTempIndex != FFreeList::FREE_LIST_INDEX)
 			{
-				assert(iTempIndex != FFreeList::INVALID_INDEX);
+				FAssert(iTempIndex != FFreeList::INVALID_INDEX);
 				if (m_pArray[iTempIndex].iNextFreeIndex == iIndex)
 				{
 					m_pArray[iTempIndex].iNextFreeIndex = m_pArray[iIndex].iNextFreeIndex;
@@ -347,7 +347,7 @@ int FFreeListArray<T>::getIndex(const T data) const
 template <class T>
 bool FFreeListArray<T>::remove(const T data)
 {
-	assert(m_pArray != NULL);
+	FAssert(m_pArray != NULL);
 
 	for (int iI = 0; iI <= m_iLastIndex; iI++)
 	{
@@ -367,7 +367,7 @@ bool FFreeListArray<T>::remove(const T data)
 template <class T>
 bool FFreeListArray<T>::removeAt(int iIndex)
 {
-	assert(m_pArray != NULL);
+	FAssert(m_pArray != NULL);
 
 	if ((iIndex >= 0) && (iIndex <= m_iLastIndex))
 	{
