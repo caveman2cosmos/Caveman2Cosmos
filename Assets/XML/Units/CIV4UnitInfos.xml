@@ -876,6 +876,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -1212,6 +1216,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -1528,6 +1536,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1866,6 +1878,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -2198,6 +2214,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -2520,6 +2540,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2854,6 +2878,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -3075,6 +3103,14 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SUBURBS</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3464,6 +3500,14 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SUBURBS</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_RADAR_TOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3864,6 +3908,14 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SUBURBS</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_RADAR_TOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

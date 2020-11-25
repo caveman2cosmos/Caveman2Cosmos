@@ -720,6 +720,14 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FORT</BuildType>
 					<bBuild>1</bBuild>
 				</Build>

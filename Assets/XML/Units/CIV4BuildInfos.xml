@@ -10803,7 +10803,7 @@
 			<Type>BUILD_RADAR_TOWER</Type>
 			<Description>TXT_KEY_BUILD_RADAR_TOWER</Description>
 			<PrereqTech>TECH_RADAR</PrereqTech>
-			<ObsoleteTech>TECH_PLANETARY_DEFENSES</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_PLANETARY_DEFENSES</ObsoleteTech> Listening node is Earth based or no? -->
 			<iTime>800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
