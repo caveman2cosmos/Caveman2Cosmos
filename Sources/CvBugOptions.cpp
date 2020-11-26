@@ -10,7 +10,7 @@ Created:	2009-01-21
 
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
-#include "FVariableSystem.h"
+#include "CvPython.h"
 
 bool g_bIsBug = false;
 
@@ -33,47 +33,6 @@ void logMsg(const char* format, ...)
 }
 
 
-bool getDefineBOOL(const char* xmlKey, bool bDefault)
-{
-	int iResult = 0;
-	if (GC.getDefinesVarSystem()->GetValue(xmlKey, iResult))
-	{
-		return iResult != 0;
-	}
-	return bDefault;
-}
-
-int getDefineINT(const char* xmlKey, int iDefault)
-{
-	int iResult = 0;
-	if (GC.getDefinesVarSystem()->GetValue(xmlKey, iResult))
-	{
-		return iResult;
-	}
-	return iDefault;
-}
-
-float getDefineFLOAT(const char* xmlKey, float fDefault)
-{
-	float fResult = 0.0;
-	if (GC.getDefinesVarSystem()->GetValue(xmlKey, fResult))
-	{
-		return fResult;
-	}
-	return fDefault;
-}
-
-const char * getDefineSTRING(const char* xmlKey, const char * szDefault)
-{
-	const char * szResult = NULL;
-	if (GC.getDefinesVarSystem()->GetValue(xmlKey, szResult))
-	{
-		return szResult;
-	}
-	return szDefault;
-}
-
-
 bool getBugOptionBOOL(const char* id, bool bDefault, const char* xmlKey)
 {
 	PROFILE_FUNC();
@@ -90,7 +49,7 @@ bool getBugOptionBOOL(const char* id, bool bDefault, const char* xmlKey)
 		xmlKey = tmp.c_str();
 	}
 	//logMsg("debug - getBugOptionBOOL %s", xmlKey);
-	return getDefineBOOL(xmlKey, bDefault);
+	return GC.getDefineBOOL(xmlKey, bDefault);
 }
 
 int getBugOptionINT(const char* id, int iDefault, const char* xmlKey)
@@ -109,5 +68,5 @@ int getBugOptionINT(const char* id, int iDefault, const char* xmlKey)
 		xmlKey = tmp.c_str();
 	}
 	//logMsg("debug - getBugOptionINT %s", xmlKey);
-	return getDefineINT(xmlKey, iDefault);
+	return GC.getDefineINT(xmlKey, iDefault);
 }

@@ -771,34 +771,19 @@ public:
 	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(DECLARE_IS_METHOD)
 
 	// ***** EXPOSED TO PYTHON *****
-/************************************************************************************************/
-/* MOD_COMPONENT_CONTROL                   08/02/07                            MRGENIE          */
-/*                                                                                              */
-/* Return true/false from                                                                       */
-/************************************************************************************************/
-	bool getDefineBOOL( const char * szName ) const;
-/************************************************************************************************/
-/* MOD_COMPONENT_CONTROL                   END                                                  */
-/************************************************************************************************/
 
 	void setGraphicalDetailPagingEnabled(bool bEnabled);
 	bool getGraphicalDetailPagingEnabled() const;
 	int getGraphicalDetailPageInRange() const;
 
-	int getDefineINT( const char * szName ) const;
-	float getDefineFLOAT( const char * szName ) const;
-	const char * getDefineSTRING( const char * szName ) const;
-/************************************************************************************************/
-/* Afforess	                  Start		 08/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void setDefineINT( const char * szName, int iValue, bool bUpdate = true);
-	void setDefineFLOAT( const char * szName, float fValue, bool bUpdate = true );
-	void setDefineSTRING( const char * szName, const char * szValue, bool bUpdate = true );
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	bool getDefineBOOL(const char * szName, bool bDefault = false) const;
+	int getDefineINT(const char * szName, int iDefault = 0) const;
+	float getDefineFLOAT(const char * szName, float fDefault = 0.0f) const;
+	const char * getDefineSTRING(const char * szName, const char * szDefault = "") const;
+
+	void setDefineINT(const char * szName, int iValue, bool bUpdate = true);
+	void setDefineFLOAT(const char * szName, float fValue, bool bUpdate = true);
+	void setDefineSTRING(const char * szName, const char * szValue, bool bUpdate = true);
 
 	float getPLOT_SIZE() const;
 
@@ -1258,9 +1243,6 @@ protected:
 /*                                                                                              */
 /* Efficiency, Options                                                                          */
 /************************************************************************************************/
-public:
-	int getDefineINT( const char * szName, const int iDefault ) const;
-
 // BBAI Options
 public:
 	bool getBBAI_AIR_COMBAT() const;

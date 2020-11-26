@@ -25,11 +25,6 @@ void logMsg(const char* format, ...);
 
 void setIsBug();
 
-bool getDefineBOOL(const char* xmlKey, bool bDefault = false);
-int getDefineINT(const char* xmlKey, int iDefault = 0);
-float getDefineFLOAT(const char* xmlKey, float fDefault);
-const char * getDefineSTRING(const char* xmlKey, const char * szDefault);
-
 bool getBugOptionBOOL(const char* id, bool bDefault = true, const char* xmlKey = NULL);
 int getBugOptionINT(const char* id, int iDefault = 0, const char* xmlKey = NULL);
 

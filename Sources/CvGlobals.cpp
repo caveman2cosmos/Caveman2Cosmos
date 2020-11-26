@@ -2612,44 +2612,32 @@ void cvInternalGlobals::cacheGlobals()
 }
 
 
-bool cvInternalGlobals::getDefineBOOL(const char * szName) const
+bool cvInternalGlobals::getDefineBOOL(const char * szName, bool bDefault) const
 {
-	bool bReturn = false;
-	bool success = GC.getDefinesVarSystem()->GetValue( szName, bReturn );
-	//FAssertMsg( success, szName );
-	return bReturn;
+	const bool success = GC.getDefinesVarSystem()->GetValue(szName, bDefault);
+	//FAssertMsg(success, szName);
+	return bDefault;
 }
 
-int cvInternalGlobals::getDefineINT(const char * szName, const int iDefault) const
+int cvInternalGlobals::getDefineINT(const char * szName, int iDefault) const
 {
-	int iReturn = 0;
-
-	if (GC.getDefinesVarSystem()->GetValue(szName, iReturn))
-	{
-		return iReturn;
-	}
+	const bool success = GC.getDefinesVarSystem()->GetValue(szName, iDefault);
+	//FAssertMsg(success, szName);
 	return iDefault;
 }
 
-int cvInternalGlobals::getDefineINT(const char * szName) const
+float cvInternalGlobals::getDefineFLOAT(const char * szName, float fDefault) const
 {
-	int iReturn = 0;
-	GC.getDefinesVarSystem()->GetValue(szName, iReturn);
-	return iReturn;
+	const bool success = GC.getDefinesVarSystem()->GetValue(szName, fDefault);
+	//FAssertMsg(success, szName);
+	return fDefault;
 }
 
-float cvInternalGlobals::getDefineFLOAT(const char * szName) const
+const char * cvInternalGlobals::getDefineSTRING(const char * szName, const char * szDefault) const
 {
-	float fReturn = 0;
-	GC.getDefinesVarSystem()->GetValue(szName, fReturn);
-	return fReturn;
-}
-
-const char * cvInternalGlobals::getDefineSTRING(const char * szName) const
-{
-	const char * szReturn = NULL;
-	GC.getDefinesVarSystem()->GetValue(szName, szReturn);
-	return szReturn;
+	const bool success = GC.getDefinesVarSystem()->GetValue(szName, szDefault);
+	//FAssertMsg(success, szName);
+	return szDefault;
 }
 
 void cvInternalGlobals::setDefineINT(const char * szName, int iValue, bool bUpdate)
