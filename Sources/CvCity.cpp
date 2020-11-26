@@ -1,5 +1,7 @@
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
@@ -8213,17 +8215,22 @@ int CvCity::getHomeAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 {
 	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
 
-	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-	const int iModifier = kCivic.getHomeAreaMaintenanceModifier();
+	const int iMod = GC.getCivicInfo(eCivic).getHomeAreaMaintenanceModifier();
 
-	if (iModifier != 0 && area()->isHomeArea(getOwner()) && !isDisorder() && !isWeLoveTheKingDay())
+	if (iMod != 0 && area()->isHomeArea(getOwner()) && !isDisorder() && !isWeLoveTheKingDay())
 	{
-		const int iOldBaseMaintenance = calculateBaseMaintenanceTimes100();
-		const int iOldModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		const int iNewModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + iModifier + 100) / 100);
-		return iOldModifiedBaseMaintenance - iNewModifiedBaseMaintenance;
+		const int iBaseMaintenance = calculateBaseMaintenanceTimes100();
+		const int iEffectiveMaintenanceMod = 100 + getEffectiveMaintenanceModifier();
+		return // The difference
+		(
+			(
+				std::max(0, iBaseMaintenance * iEffectiveMaintenanceMod)
+				-
+				std::max(0, iBaseMaintenance *(iEffectiveMaintenanceMod + iMod))
+			)
+			/ 100
+		);
 	}
-
 	return 0;
 }
 
@@ -8269,11 +8276,10 @@ int CvCity::getEffectiveMaintenanceModifier() const
 {
 	int iModifier = getMaintenanceModifier() + GET_PLAYER(getOwner()).getMaintenanceModifier() + area()->getTotalAreaMaintenanceModifier(getOwner());
 
-	if (isConnectedToCapital() && !(isCapital()))
+	if (isConnectedToCapital() && !isCapital())
 	{
 		iModifier += GET_PLAYER(getOwner()).getConnectedCityMaintenanceModifier();
 	}
-
 	return iModifier;
 }
 
@@ -8334,7 +8340,7 @@ int CvCity::calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier, int
 		{
 			const int iDistance = plotDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY());
 
-			int iValue = GC.getMAX_DISTANCE_CITY_MAINTENANCE() * (iDistance + iDistance / 3);
+			int iValue = GC.getBASE_DISTANCE_MAINTENANCE_PER_100_PLOTS() * (iDistance + iDistance / 3);
 
 			iValue *= getPopulation() + 5;
 			iValue /= 10;
@@ -8382,9 +8388,9 @@ int CvCity::calculateNumCitiesMaintenanceTimes100(int iExtraModifier) const
 	}
 
 	// Toffer - ToDo: Add global define called BASE_NUM_CITY_MAINTENANCE_PERCENT
-	int iNumCitiesPercent = 64;
+	int iNumCitiesPercent = 72;
 
-	iNumCitiesPercent *= (getPopulation() + 15);
+	iNumCitiesPercent *= 16 + getPopulation();
 	iNumCitiesPercent /= 16;
 
 	/* Toffer - Skews early game balance too much between map sizes.
@@ -8392,21 +8398,17 @@ Large maps have a discount on distance maintenance, that is adequate, this doesn
 	iNumCitiesPercent *= GC.getWorldInfo(GC.getMap().getWorldSize()).getNumCitiesMaintenancePercent();
 	iNumCitiesPercent /= 100;
 	*/
-
-	iNumCitiesPercent *= GC.getHandicapInfo(getHandicapType()).getNumCitiesMaintenancePercent();
-	iNumCitiesPercent /= 100;
-
 	int iNumCitiesMaint = iCities * iNumCitiesPercent;
 
 	int iNumVassalCities = 0;
 	int iVassals = 0;
-	for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; iPlayer++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
-		if (kLoopPlayer.getTeam() != getTeam() && GET_TEAM(kLoopPlayer.getTeam()).isVassal(getTeam()))
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getTeam(), false)
+		&& GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isVassal(getTeam()))
 		{
-			iNumVassalCities += kLoopPlayer.getNumCities();
-			iVassals += 1;
+			iNumVassalCities += GET_PLAYER((PlayerTypes)iI).getNumCities();
+			iVassals++;
 		}
 	}
 	if (iNumVassalCities > 0)
@@ -8414,12 +8416,14 @@ Large maps have a discount on distance maintenance, that is adequate, this doesn
 		iNumCitiesMaint += iNumVassalCities * iNumCitiesPercent / (3 + iVassals);
 	}
 
-	// Toffer - ToDo: Max value should perhaps be a global define.
-	iNumCitiesMaint = std::min(iNumCitiesMaint, 2000000);
-
-	iNumCitiesMaint *= std::max(0, (GET_PLAYER(getOwner()).getNumCitiesMaintenanceModifier() + iExtraModifier + 100));
+	iNumCitiesMaint *= std::max(1, GET_PLAYER(getOwner()).getNumCitiesMaintenanceModifier() + iExtraModifier + 100);
 	iNumCitiesMaint /= 100;
 
+	iNumCitiesMaint *= GC.getHandicapInfo(getHandicapType()).getNumCitiesMaintenancePercent();
+	iNumCitiesMaint /= 100;
+
+	// Toffer - ToDo: Max value should perhaps be a global define.
+	iNumCitiesMaint = std::min(iNumCitiesMaint, 2000000);
 	FAssert(iNumCitiesMaint >= 0);
 
 	return iNumCitiesMaint;

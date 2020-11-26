@@ -7,6 +7,7 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvProperties.h"
 #include "CvPlayerAI.h"

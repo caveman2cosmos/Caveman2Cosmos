@@ -1,7 +1,9 @@
 // player.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvCity.h"
 #include "CvDiploParameters.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
@@ -9,7 +11,6 @@
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 #include "CyCity.h"
-
 #include "CvDLLFAStarIFaceBase.h"
 
 //	Koshling - save flag indicating this player has no data in the save as they have never been alive
@@ -14197,7 +14198,10 @@ void CvPlayer::recalculateUnitCounts()
 	{
 		foreach_(CvUnit* unit, units())
 		{
-			m_unitCountSM[(short)unit->getUnitType()] += intPow(3, unit->groupRank() - 1);
+			if (unit->groupRank() > 0)
+			{
+				m_unitCountSM[(short)unit->getUnitType()] += intPow(3, unit->groupRank() - 1);
+			}
 			unit->recalculateUnitUpkeep();
 		}
 	}
@@ -15127,10 +15131,7 @@ void CvPlayer::updateGroupCycle(CvUnit* pUnit, bool bFarMove)
 				pBeforeUnit = pLoopUnit;
 				break;
 			}
-			else
-			{
-				pAfterUnit = pLoopUnit;
-			}
+			pAfterUnit = pLoopUnit;
 		}
 	}
 
@@ -15138,7 +15139,7 @@ void CvPlayer::updateGroupCycle(CvUnit* pUnit, bool bFarMove)
 	if (!bFarMove && pBeforeUnit == NULL && pAfterUnit == NULL)
 	{
 		iSearchHorizon = REINSERT_SEARCH_HORIZON;
-		while(pReinsertSearchStart != NULL && iSearchHorizon-- > 0)
+		while (pReinsertSearchStart != NULL && iSearchHorizon-- > 0)
 		{
 			pReinsertSearchStart = previousGroupCycleNode(pReinsertSearchStart);
 		}
@@ -20147,26 +20148,20 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		//	The research queue itself is not a streamable type so is serialized in raw
 		//	binary image, which means we need to do some explicit translation on load
 		//	if we are using the tagged format
-		if ( wrapper.isUsingTaggedFormat() )
+		if (wrapper.isUsingTaggedFormat())
 		{
 			CLLNode<TechTypes>* pNode = headResearchQueueNode();
 			while (pNode != NULL)
 			{
-				bool bDeleteNode = false;
-
-				if (pNode->m_data != NO_TECH)
-				{
-					bDeleteNode = ((pNode->m_data = (TechTypes)wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TECHS,pNode->m_data, true)) == -1);
-				}
-
-				if ( bDeleteNode )
-				{
-					pNode = m_researchQueue.deleteNode(pNode);
-				}
-				else
-				{
-					pNode = nextResearchQueueNode(pNode);
-				}
+				const bool bDeleteNode =
+				(
+					pNode->m_data != NO_TECH
+					?
+					(pNode->m_data = (TechTypes)wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TECHS,pNode->m_data, true)) == -1
+					:
+					false
+				);
+				pNode = bDeleteNode ? m_researchQueue.deleteNode(pNode) : nextResearchQueueNode(pNode);
 			}
 		}
 
@@ -20208,7 +20203,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 		std::map<CvUnit*,bool> unitsPresent;
 
-		std::vector<CvUnit*>	plotlessUnits;
+		std::vector<CvUnit*> plotlessUnits;
 
 		foreach_(CvSelectionGroup* pLoopGroup, groups())
 		{
@@ -20219,34 +20214,25 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				CvSelectionGroup* putativeGroup = pUnit->getGroup();
 
 				OutputDebugString(CvString::format("\tUnit %d\n", pUnit->getID()).c_str());
-				if(putativeGroup != pLoopGroup)
+				if (putativeGroup != pLoopGroup)
 				{
 					FErrorMsg("Corrupt group detected on load");
 					OutputDebugString(CvString::format("\t\tunit claims to be in group %d\n", putativeGroup->getID()).c_str());
 
-					//	Try to fix it
+					// Try to fix it
 					pLoopGroup->removeUnit(pUnit);
 
-					if ( !putativeGroup->containsUnit(pUnit) )
+					if (!putativeGroup->containsUnit(pUnit) && !putativeGroup->addUnit(pUnit,true))
 					{
-						if ( !putativeGroup->addUnit(pUnit,true) )
-						{
-							pUnit->joinGroup(NULL);
-						}
+						pUnit->joinGroup(NULL);
 					}
 				}
-				else
+				else if (unitsPresent.find(pUnit) != unitsPresent.end())
 				{
-					if ( unitsPresent.find(pUnit) != unitsPresent.end() )
-					{
-						//	Duplicate
-						pLoopGroup->removeUnit(pUnit);
-					}
-					else
-					{
-						unitsPresent.insert(std::make_pair(pUnit,true));
-					}
+					pLoopGroup->removeUnit(pUnit); // Duplicate
 				}
+				else unitsPresent.insert(std::make_pair(pUnit,true));
+
 
 				if (pUnit->plot() == NULL)
 				{

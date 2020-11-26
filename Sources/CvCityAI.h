@@ -30,8 +30,8 @@
 
 #define BUILDINGFOCUS_CONSIDER_ANY			(1 << 20)
 
-//	KOSHLING Mod - pre-calculate and cache building values for all focuses
-class	BuildingValueCache;
+class BuildingValueCache; // KOSHLING Mod - pre-calculate and cache building values for all focuses
+class CvArea;
 
 //	Koshling - add caching to yield calculations
 #ifdef YIELD_VALUE_CACHING

@@ -1,11 +1,12 @@
 // playerAI.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
-
 #include "CvDLLFAStarIFaceBase.h"
 
 /************************************************************************************************/
@@ -4096,13 +4097,13 @@ int CvPlayerAI::AI_safeCostAsPercentIncome() const
 		const int iRank = GC.getGame().getPlayerRank(getID());
 		if (iRank < 3)
 		{
-			iSafePercent += ((4 - iRank) * 5);
+			iSafePercent += 5 * (4 - iRank);
 		}
 
 		const int iAtWarCount = GET_TEAM(getTeam()).getAtWarCount(true);
 		if (iAtWarCount > 0)
 		{
-			iSafePercent -= (10 + 2 * std::min(iAtWarCount, 5));
+			iSafePercent -= 10 + 2 * std::min(iAtWarCount, 5);
 		}
 		if (isCurrentResearchRepeat())
 		{
@@ -4127,12 +4128,6 @@ int CvPlayerAI::AI_safeCostAsPercentIncome() const
 		{
 			iSafePercent -= 8;
 		}
-
-		// Afforess - AI has been made aware of financials in war planning, this is not needed here
-		// if (GET_TEAM(getTeam()).getAnyWarPlanCount(true))
-		// {
-		//	iSafePercent -= 12;
-		// }
 
 		if (isCurrentResearchRepeat())
 		{

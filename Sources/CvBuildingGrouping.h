@@ -12,9 +12,7 @@
 #ifndef CV_BUILDING_GROUPING_H
 #define CV_BUILDING_GROUPING_H
 
-#include "CvEnums.h"
 #include "CvBuildingFilters.h"
-#include <vector>
 
 enum BuildingGroupingTypes
 {
@@ -26,6 +24,9 @@ enum BuildingGroupingTypes
 
 	NUM_BUILDING_GROUPING
 };
+
+class CvCity;
+class CvPlayer;
 
 class BuildingGroupingBase
 {

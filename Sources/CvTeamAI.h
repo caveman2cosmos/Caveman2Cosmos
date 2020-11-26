@@ -7,11 +7,11 @@
 
 #include "CvTeam.h"
 
+class CvArea;
+
 class CvTeamAI : public CvTeam
 {
-
 public:
-
 	CvTeamAI();
 	virtual ~CvTeamAI();
 

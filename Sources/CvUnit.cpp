@@ -1,14 +1,15 @@
 // unit.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 #include "CyPlot.h"
 #include "CyUnit.h"
-
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
 
@@ -417,7 +418,12 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
 			setSMValues();
-			GET_PLAYER(getOwner()).changeUnitCountSM(eUnit, intPow(3, groupRank()-1));
+
+			// if unit doesn't have a group rank, it doesn't count as a SM unit at all
+			if (groupRank() > 0)
+			{
+				GET_PLAYER(getOwner()).changeUnitCountSM(eUnit, intPow(3, groupRank()-1));
+			}
 		}
 		else
 		{
@@ -1348,7 +1354,12 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 	owner.changeUnitUpkeep(-getUpkeep100(), m_pUnitInfo->isMilitarySupport());
 
 	owner.changeUnitCount(m_eUnitType, -1);
-	owner.changeUnitCountSM(m_eUnitType, -intPow(3, groupRank()-1));
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
+	// if unit doesn't have a group rank, it doesn't count as a SM unit at all
+	&& groupRank() > 0)
+	{
+		owner.changeUnitCountSM(m_eUnitType, -intPow(3, groupRank()-1));
+	}
 
 	if (m_pUnitInfo->getNukeRange() != -1)
 	{
@@ -23826,7 +23837,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 		m_bDeathDelay = true;
 		// Unit type 0 was never initialized, so we need to add its unit count before it dies.
 		GET_PLAYER(getOwner()).changeUnitCount(m_eUnitType, 1);
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
+		// if unit doesn't have a group rank, it doesn't count as a SM unit at all
+		&& GC.getUnitInfo(m_eUnitType).getBaseGroupRank() > 0)
 		{
 			GET_PLAYER(getOwner()).changeUnitCountSM(m_eUnitType, intPow(3, GC.getUnitInfo(m_eUnitType).getBaseGroupRank() - 1));
 		}

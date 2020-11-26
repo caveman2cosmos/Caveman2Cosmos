@@ -7,11 +7,11 @@
 
 #include "CvSelectionGroup.h"
 
+class CvCity;
+
 class CvSelectionGroupAI : public CvSelectionGroup
 {
-
 public:
-
 	DllExport CvSelectionGroupAI();
 	DllExport virtual ~CvSelectionGroupAI();
 
