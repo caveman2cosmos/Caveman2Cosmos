@@ -387,7 +387,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AL_JAZAIR</Tag>
-		<English>al-Jaza’ir</English>
+		<English>al-Jaza'ir</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AL_KUFAH</Tag>
@@ -5852,7 +5852,7 @@
 		<Tag>TXT_KEY_CITY_NAME_MEKELE</Tag>
 		<English>Mekelle</English>
 		<French>Mekele</French>
-		<German>Mek’ele</German>
+		<German>Mek'ele</German>
 		<Italian>Macallè</Italian>
 		<Spanish>Mekele</Spanish>
 	</TEXT>
@@ -6300,8 +6300,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NAMPO</Tag>
 		<English>Nampo</English>
-		<German>Namp’o</German>
-		<Italian>Namp’o</Italian>
+		<German>Namp'o</German>
+		<Italian>Namp'o</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NAMWON</Tag>

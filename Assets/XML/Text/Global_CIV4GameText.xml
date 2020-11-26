@@ -6687,7 +6687,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_BUILDING_RECOVERY_HOVER</Tag>
 		<English>City Defense recovers at %D1%% its usual rate when reduced under %d2%%</English>
 		<French>La défense de la ville se répare à %D1%% de son taux usuel lorsqu'elle se situe en dessous de %d2%%</French>
-		<Italian>Le difese cittadine si rigenerano al %D1%% della velodità usuale quando sono sotto il %d2%%.</Italian>
+		<Italian>Le difese cittadine si rigenerano al %D1%% della velocità usuale quando sono sotto il %d2%%.</Italian>
 		<Polish>Obrona miasta odzyskuje na %D1%% swoją standardową szybkość kiedy zredukowana jest poniżej %d2%%</Polish>
 	</TEXT>
 	<TEXT>

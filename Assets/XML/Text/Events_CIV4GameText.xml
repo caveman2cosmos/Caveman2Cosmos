@@ -2091,7 +2091,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BARBARIAN_VENGEANCE_1</Tag>
-		<English>[COLOR_NEGATIVE_TEXT]An unexpected tragedy has occured in our city of %s2_city. All of our food stores have been burned or stolen. Some other improvements might also have been destroyed.[COLOR_REVERT]</English>
+		<English>[COLOR_NEGATIVE_TEXT]An unexpected tragedy has occurred in our city of %s2_city. All of our food stores have been burned or stolen. Some other improvements might also have been destroyed.[COLOR_REVERT]</English>
 		<French>[COLOR_NEGATIVE_TEXT]Une tragédie inattendue s'est produite dans notre ville de %s2_city. Toutes les réserves de nourriture ont été soit volées soit brûlées. d'autres aménagements ont pu également été détruits.[COLOR_REVERT]</French>
 		<Italian>[COLOR_NEGATIVE_TEXT]Una tragedia inaspettata ha colpito la nostra città di %s2_city. Tutte le nostre riserve di cibo sono state rubate o bruciate. Anche alcuni miglioramenti potrebbero essere stati distrutti.[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_NEGATIVE_TEXT]Una tragedia inesperada ha tomado lugar en nuestra ciudad de %s2_city. Se ha perdido todo el alimento almacenado. También podrían haberse destrozado algunas otras mejoras.[COLOR_REVERT]</Spanish>
@@ -2102,7 +2102,7 @@
 		<English>[ICON_BULLET]A dangerous number of barbarian [COLOR_UNIT_TEXT]Warrior[COLOR_REVERT] units have spawned near our border.</English>
 		<French>[ICON_BULLET]Un nombre dangereux de barbarian [COLOR_UNIT_TEXT]Warrior[COLOR_REVERT] sont apparus près de notre frontière.</French>
 		<Italian>[ICON_BULLET]Un pericoloso numero di [COLOR_UNIT_TEXT]Guerrieri[COLOR_REVERT] barbari sono comparsi vicino al nostro confine.</Italian>
-		<Spanish>[ICON_BULLET]Un importante número de [COLOR_UNIT_TEXT]Guerreros[COLOR_REVERT] bárbaros aparecerá cerca de nuestra frontera</Spanish>
+		<Spanish>[ICON_BULLET]Un importante número de [COLOR_UNIT_TEXT]Guerreros[COLOR_REVERT] bárbaros aparecerá cerca de nuestra frontera.</Spanish>
 		<Polish>[ICON_BULLET]Niebezpieczna ilość barbarzyńskich [COLOR_UNIT_TEXT]Wojowników[COLOR_REVERT] pojawi się niedaleko naszych granic.</Polish>
 	</TEXT>
 	<TEXT>
