@@ -128,6 +128,7 @@ public:
 	int64_t getFinalUnitUpkeep() const;
 	int calculateUnitSupply() const;
 	int64_t calculatePreInflatedCosts() const;
+	int64_t getFinalExpense() const;
 	int64_t calculateInflatedCosts() const;
 
 	int calculateGoldRate() const;

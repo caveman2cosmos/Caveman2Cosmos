@@ -452,9 +452,9 @@ int64_t CyPlayer::calculatePreInflatedCosts() const
 	return m_pPlayer->calculatePreInflatedCosts();
 }
 
-int64_t CyPlayer::calculateInflatedCosts() const
+int64_t CyPlayer::getFinalExpense() const
 {
-	return m_pPlayer->calculateInflatedCosts();
+	return m_pPlayer->getFinalExpense();
 }
 
 int CyPlayer::calculateGoldRate() const
