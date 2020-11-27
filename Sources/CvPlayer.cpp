@@ -2125,7 +2125,6 @@ int CvPlayer::findStartingArea() const
 {
 	PROFILE_FUNC();
 
-	FErrorMsg(CvString::format("gDLL->getPythonIFace()->getMapScriptModule() = %S", gDLL->getPythonIFace()->getMapScriptModule()).c_str());
 	int result = -1;
 	if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "findStartingArea", Cy::Args() << getID(), result))
 	{
