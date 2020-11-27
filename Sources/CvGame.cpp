@@ -4210,52 +4210,38 @@ void CvGame::setForcedAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForce
 {
 	FAssert(iNewValue >= 0);
 
-	if(bForced == true)
-	{
-		const int iOldValue = getForcedAIAutoPlay(iPlayer);
-
-		if (iOldValue != iNewValue)
-		{
-			m_iForcedAIAutoPlay[iPlayer] = std::max(0, iNewValue);
-			setAIAutoPlay(iPlayer, iNewValue, true);
-		} else
-		{
-			setAIAutoPlay(iPlayer, iNewValue, true);
-		}
-	} else
+	if (!bForced)
 	{
 		m_iForcedAIAutoPlay[iPlayer] = 0;
 
-		const int iOldValue = m_iAIAutoPlay[iPlayer];
-
-		if(iOldValue != iNewValue)
+		if (m_iAIAutoPlay[iPlayer] != iNewValue)
 		{
 			setAIAutoPlay(iPlayer, iNewValue);
 		}
 	}
+	else if (getForcedAIAutoPlay(iPlayer) != iNewValue)
+	{
+		m_iForcedAIAutoPlay[iPlayer] = std::max(0, iNewValue);
+		setAIAutoPlay(iPlayer, iNewValue, true);
+	}
+	else setAIAutoPlay(iPlayer, iNewValue, true);
 }
 
 void CvGame::changeForcedAIAutoPlay(PlayerTypes iPlayer, int iChange)
 {
-	if(isForcedAIAutoPlay(iPlayer))
+	if (isForcedAIAutoPlay(iPlayer))
 	{
 		setForcedAIAutoPlay(iPlayer, (getAIAutoPlay(iPlayer) + iChange), true);
-	} else
-	{
-		setForcedAIAutoPlay(iPlayer, (getAIAutoPlay(iPlayer) + iChange));
 	}
+	else setForcedAIAutoPlay(iPlayer, (getAIAutoPlay(iPlayer) + iChange));
 }
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 
-// < M.A.D. Nukes Start >
+
 CvPlot* CvGame::getLastNukeStrikePlot() const
 {
 	return GC.getMap().plotSorenINLINE(m_iLastNukeStrikeX, m_iLastNukeStrikeY);
 }
-
 
 void CvGame::setLastNukeStrikePlot(CvPlot* pPlot)
 {
@@ -4273,7 +4259,7 @@ void CvGame::setLastNukeStrikePlot(CvPlot* pPlot)
 		}
 	}
 }
-// < M.A.D. Nukes End   >
+
 
 unsigned int CvGame::getInitialTime() const
 {
@@ -6452,14 +6438,11 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 		foreach_(const CvUnit* pLoopUnit, pPlot->units() | filtered(CvUnit::fn::getOwner() == ePlayer))
 		{
-			if ( areaPopulationMap[pPlot->getArea()].find(pLoopUnit->getUnitType()) != areaPopulationMap[pPlot->getArea()].end() )
+			if (areaPopulationMap[pPlot->getArea()].find(pLoopUnit->getUnitType()) != areaPopulationMap[pPlot->getArea()].end())
 			{
 				areaPopulationMap[pPlot->getArea()][pLoopUnit->getUnitType()]++;
 			}
-			else
-			{
-				areaPopulationMap[pPlot->getArea()][pLoopUnit->getUnitType()] = 1;
-			}
+			else areaPopulationMap[pPlot->getArea()][pLoopUnit->getUnitType()] = 1;
 		}
 	}
 

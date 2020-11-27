@@ -4097,13 +4097,13 @@ int CvPlayerAI::AI_safeCostAsPercentIncome() const
 		const int iRank = GC.getGame().getPlayerRank(getID());
 		if (iRank < 3)
 		{
-			iSafePercent += ((4 - iRank) * 5);
+			iSafePercent += 5 * (4 - iRank);
 		}
 
 		const int iAtWarCount = GET_TEAM(getTeam()).getAtWarCount(true);
 		if (iAtWarCount > 0)
 		{
-			iSafePercent -= (10 + 2 * std::min(iAtWarCount, 5));
+			iSafePercent -= 10 + 2 * std::min(iAtWarCount, 5);
 		}
 		if (isCurrentResearchRepeat())
 		{
@@ -4128,12 +4128,6 @@ int CvPlayerAI::AI_safeCostAsPercentIncome() const
 		{
 			iSafePercent -= 8;
 		}
-
-		// Afforess - AI has been made aware of financials in war planning, this is not needed here
-		// if (GET_TEAM(getTeam()).getAnyWarPlanCount(true))
-		// {
-		//	iSafePercent -= 12;
-		// }
 
 		if (isCurrentResearchRepeat())
 		{
@@ -28588,55 +28582,53 @@ UnitTypes CvPlayerAI::bestBuildableUnitForAIType(DomainTypes eDomain, UnitAIType
 {
 	PROFILE_FUNC();
 
-	UnitTypes eBestUnit = NO_UNIT;
-
 	//	What is the best unit we can produce of this unitAI type
 	CvCity* pCapitalCity = getCapitalCity();
-	CvCity*	pCoastalCity = NULL;
-	int iDummyValue;
 
-	//	Handle capital-less civs (aka barbs) by just using an arbitrary city
-	if ( pCapitalCity == NULL )
+	// Handle capital-less civs (aka barbs) by just using an arbitrary city
+	int iDummy;
+	if (pCapitalCity == NULL)
 	{
-		int iDummy;
-
 		pCapitalCity = firstCity(&iDummy);
 	}
-
-	if (pCapitalCity != NULL)
+	if (pCapitalCity == NULL)
 	{
-		switch(eDomain)
-		{
+		return NO_UNIT;
+	}
+	switch(eDomain)
+	{
 		case NO_DOMAIN:
-			eBestUnit = pCapitalCity->AI_bestUnitAI(eUnitAIType, iDummyValue, false, true, criteria);
-			if ( eBestUnit != NO_UNIT || pCapitalCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()) )
+		{
+			const UnitTypes eBestUnit = pCapitalCity->AI_bestUnitAI(eUnitAIType, iDummy, false, true, criteria);
+			if (eBestUnit != NO_UNIT || pCapitalCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 			{
-				break;
+				return eBestUnit;
 			}
-			//	Drop through and check coastal
+			// Drop through and check coastal
+		}
 		case DOMAIN_SEA:
-			if ( pCapitalCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()) )
+		{
+			CvCity* pCoastalCity =
+			(
+				pCapitalCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize())
+				?
+				pCapitalCity
+				:
+				findBestCoastalCity()
+			);
+			if (pCoastalCity != NULL)
 			{
-				pCoastalCity = pCapitalCity;
+				return pCoastalCity->AI_bestUnitAI(eUnitAIType, iDummy, false, true, criteria);
 			}
-			else
-			{
-				pCoastalCity = findBestCoastalCity();
-			}
-
-			if ( pCoastalCity != NULL )
-			{
-				eBestUnit = pCoastalCity->AI_bestUnitAI(eUnitAIType, iDummyValue, false, true, criteria);
-			}
-			break;
-		case DOMAIN_LAND:
-		case DOMAIN_AIR:
-			eBestUnit = pCapitalCity->AI_bestUnitAI(eUnitAIType, iDummyValue, false, true, criteria);
 			break;
 		}
+		case DOMAIN_LAND:
+		case DOMAIN_AIR:
+		{
+			return pCapitalCity->AI_bestUnitAI(eUnitAIType, iDummy, false, true, criteria);
+		}
 	}
-
-	return eBestUnit;
+	return NO_UNIT;
 }
 
 int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
