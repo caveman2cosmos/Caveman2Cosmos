@@ -42,5 +42,7 @@ namespace logging
 		}
 	}
 
+#ifndef _DEBUG
 	void skipLog(const char* file, char* msg, ...) { }
+#endif
 }
