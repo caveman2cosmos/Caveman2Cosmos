@@ -2515,7 +2515,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 	if (bConquest)
 	{
-		iCaptureGold = Cy::call<int>(PYGameModule, "doPillageGold", Cy::Args() << pOldCity << getID());
+		iCaptureGold = Cy::call<int>(PYGameModule, "doCityCaptureGold", Cy::Args() << pOldCity << getID());
 		changeGold(iCaptureGold);
 	}
 
