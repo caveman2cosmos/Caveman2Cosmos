@@ -101,7 +101,6 @@ namespace logging
 #endif
 	void logMsg(const char* file, char* msg, ...);
 	void logMsgW(const char* file, wchar_t* msg, ...);
-	void writeLog(const char* file, const char* msg);
 }
 
 #endif // logging_h__

@@ -20,37 +20,25 @@ namespace logging
 
 	void logMsg(const char* file, char* msg, ...)
 	{
-		if (GC.getLogging())
+		if (GC.isXMLLogging())
 		{
 			static char buf[2048];
 			_vsnprintf(buf, 2048 -4, msg, (char*)(&msg +1));
-			writeLog(file, buf);
+			gDLL->logMsg(file, buf);
+			OutputDebugString(buf);
 		}
 	}
 
 	void logMsgW(const char* file, wchar_t* msg, ...)
 	{
-		if (GC.getLogging())
+		if (GC.isXMLLogging())
 		{
 			static wchar_t buf[2048];
 			_vsnwprintf(buf, 2048 -4, msg, (char*)(&msg +1));
 			static char buf2[2048];
 			wcstombs(buf2, buf, 2048 -4);
-			writeLog(file, buf2);
-		}
-	}
-
-	void writeLog(const char* file, const char* msg)
-	{
-		OutputDebugString(msg);
-
-		const CvString path = GC.getInitCore().getDLLPath() + "\\logs\\" + file;
-		std::ofstream stream;
-		stream.open(path.c_str(), std::ios::trunc);
-		if (stream.is_open())
-		{
-			stream << msg;
-			stream.close();
+			gDLL->logMsg(file, buf2);
+			OutputDebugString(buf2);
 		}
 	}
 }
