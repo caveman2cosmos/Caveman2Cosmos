@@ -41,4 +41,6 @@ namespace logging
 			OutputDebugString(buf2);
 		}
 	}
+
+	void skipLog(const char* file, char* msg, ...) { }
 }
