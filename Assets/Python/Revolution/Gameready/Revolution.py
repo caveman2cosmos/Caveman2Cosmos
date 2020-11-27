@@ -1018,16 +1018,17 @@ class Revolution:
 		if not pPlayer.getNumCities():
 			return localText.getText("TXT_KEY_REV_WATCH_NO_CITIES",())
 
-		playerPy = PyPlayer(iPlayer)
-		pTeam = GC.getTeam( pPlayer.getTeam() )
-
 		# Gather some data on the civ that will effect every city
 		capital = pPlayer.getCapitalCity()
 		if capital == None:
-			if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - WARNING!  %s have cities but no capital on turn %d"%(pPlayer.getCivilizationDescription(0),iGameTurn))
+			if not pPlayer.isNPC():
+				print "[REV] WARNING! %s have cities but no capital on turn %d"%(pPlayer.getCivilizationDescription(0), iGameTurn)
 			return localText.getText("TXT_KEY_REV_WATCH_NO_CITIES",())
 
-		if( self.iNationalismTech == None ) :
+		playerPy = PyPlayer(iPlayer)
+		pTeam = GC.getTeam(pPlayer.getTeam())
+
+		if self.iNationalismTech == None:
 			self.loadInfo()
 
 		hasNationalism = GC.getTeam(pPlayer.getTeam()).isHasTech(self.iNationalismTech)
