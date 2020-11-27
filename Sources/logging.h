@@ -92,6 +92,16 @@ namespace logging
 	};
 
 	void log_json_event(const char* type, const JsonValues& values);
+
+#ifdef _DEBUG
+#define DEBUG_LOG logging::logMsg
+#else
+#define DEBUG_LOG logging::skipLog
+	void skipLog(const char* file, char* msg, ...) { }
+#endif
+	void logMsg(const char* file, char* msg, ...);
+	void logMsgW(const char* file, wchar_t* msg, ...);
+	void writeLog(const char* file, const char* msg);
 }
 
 #endif // logging_h__

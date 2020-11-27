@@ -1,5 +1,6 @@
 #include "CvGameCoreDLL.h"
-
+#include "CvGlobals.h"
+#include "CvInitCore.h"
 #include "logging.h"
 
 namespace logging
@@ -15,5 +16,41 @@ namespace logging
 		obj["type"] = picojson::value(type);
 		gDLL->logMsg("EventsJson.log", picojson::value(obj).serialize().c_str());
 #endif
+	}
+
+	void logMsg(const char* file, char* msg, ...)
+	{
+		if (GC.getLogging())
+		{
+			static char buf[2048];
+			_vsnprintf(buf, 2048 -4, msg, (char*)(&msg +1));
+			writeLog(file, buf);
+		}
+	}
+
+	void logMsgW(const char* file, wchar_t* msg, ...)
+	{
+		if (GC.getLogging())
+		{
+			static wchar_t buf[2048];
+			_vsnwprintf(buf, 2048 -4, msg, (char*)(&msg +1));
+			static char buf2[2048];
+			wcstombs(buf2, buf, 2048 -4);
+			writeLog(file, buf2);
+		}
+	}
+
+	void writeLog(const char* file, const char* msg)
+	{
+		OutputDebugString(msg);
+
+		const CvString path = GC.getInitCore().getDLLPath() + "\\logs\\" + file;
+		std::ofstream stream;
+		stream.open(path.c_str(), std::ios::trunc);
+		if (stream.is_open())
+		{
+			stream << msg;
+			stream.close();
+		}
 	}
 }

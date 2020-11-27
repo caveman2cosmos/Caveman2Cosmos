@@ -41,9 +41,7 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 
 	bool bModuleExist = false;	// Valid Module?
 
-	// logging to file
-	CvXMLLoadUtility pXMLLoadUtility;
-	pXMLLoadUtility.logMLF("\n\nThe game will now load the modules into the load vector in the order set by the MLF files:");
+	DEBUG_LOG("MLF.log", "\n\nThe game will now load the modules into the load vector in the order set by the MLF files:");
 
 	// Initialization of a temp LoadArray 
 	std::vector< std::vector<bool> > aabLoaded(GC.getNumModLoadControlInfos()); //allocate the rows
@@ -133,19 +131,19 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 			{
 				// if valid, module XML file(s) exist
 				// note: if dir isn't valid, of course xml's for that dir aren't valid either
-				pXMLLoadUtility.logMLF("Load Priority: %d, \"%s\"", GC.getModLoadControlVectorSize(), GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str());
+				DEBUG_LOG("MLF.log", "Load Priority: %d, \"%s\"", GC.getModLoadControlVectorSize(), GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str());
 				GC.setModLoadControlVector(GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str());
 			}
 			else
 			{
 				// if not valid, module XML file(s) doesn't exist
-				pXMLLoadUtility.logMLF("No valid module: \"%s\"", GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str());
+				DEBUG_LOG("MLF.log", "No valid module: \"%s\"", GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str());
 			}
 			aabLoaded[iInfosLoad][iLoad] = false;
 		}
 		else
 		{
-			pXMLLoadUtility.logMLF("ERROR Vector element: %d, \"%s\", GC.getModLoadControlVectorSize(), You shouldn't have come here!", GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str());
+			DEBUG_LOG("MLF.log", "ERROR Vector element: %d, \"%s\", GC.getModLoadControlVectorSize(), You shouldn't have come here!", GC.getModLoadControlInfos(iInfosLoad).getModuleFolder(iLoad).c_str());
 			FAssertMsg(aabLoaded[iInfosLoad][iLoad], "Something is wrong with the MLF Array");
 		}
 
@@ -232,7 +230,7 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 			if (bContinue) break;
 		}
 	}
-	pXMLLoadUtility.logMLF("Finished the MLF, you will now continue loading regular XML files"); //logging
+	DEBUG_LOG("MLF.log", "Finished the MLF, you will now continue loading regular XML files");
 }
 
 void CvXMLLoadUtilitySetMod::MLFEnumerateFiles(
