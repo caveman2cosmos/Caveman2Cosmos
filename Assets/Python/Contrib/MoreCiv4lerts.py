@@ -108,10 +108,9 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 
 	def OnCityLost(self, argsList):
 		city = argsList[0]
-		iPlayer = city.getOwner()
-		if not self.getCheckForDomVictory(): return
-		if iPlayer == GC.getGame().getActivePlayer():
-			self.CheckForAlerts(iPlayer, False)
+		if not self.getCheckForDomVictory() or city.getOwner() != GC.getGame().getActivePlayer():
+			return
+		self.CheckForAlerts(city.getOwner(), False)
 
 	def CheckForAlerts(self, iPlayer, bBeginTurn):
 		GAME = GC.getGame()
@@ -120,10 +119,7 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 		iGrowthCount = 0
 
 		bCheck1 = self.options.isShowDomPopAlert()
-		if bBeginTurn and self.options.isShowCityPendingExpandBorderAlert():
-			bCheck2 = True
-		else:
-			bCheck2 = False
+		bCheck2 = bBeginTurn and self.options.isShowCityPendingExpandBorderAlert()
 
 		if bCheck1 or bCheck2:
 			# Check for cultural expansion and population growth
@@ -131,17 +127,15 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 			iActiveTeam = GAME.getActiveTeam()
 			for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 				CyPlayerX = GC.getPlayer(iPlayerX)
-				if CyPlayerX.isAlive() and CyPlayerX.getTeam() == iActiveTeam:
-					CyCity, i = CyPlayerX.firstCity(False)
-					while CyCity:
-						if CyCity.getFoodTurnsLeft() == 1 and not CyCity.isFoodProduction() and not CyCity.AI_isEmphasize(5):
-							iGrowthCount += 1
-						if bCheck2 and CyCity.getCultureLevel() != GC.getNumCultureLevelInfos() - 1:
-							if CyCity.getCulture(iPlayerX) + CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) >= CyCity.getCultureThreshold():
-								msg = TRNSLTR.getText("TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND",(CyCity.getName(),))
-								CvUtil.sendMessage(msg, iPlayer, EVENT_MESSAGE_TIME_LONG, icon, -1, CyCity.getX(), CyCity.getY(), True, True)
-
-						CyCity, i = CyPlayerX.nextCity(i, False)
+				if not CyPlayerX.isAlive() or CyPlayerX.getTeam() != iActiveTeam:
+					continue
+				for cityX in CyPlayerX.cities():
+					if cityX.getFoodTurnsLeft() == 1 and not cityX.isFoodProduction() and not cityX.AI_isEmphasize(5):
+						iGrowthCount += 1
+					if bCheck2 and cityX.getCultureLevel() != GC.getNumCultureLevelInfos() - 1:
+						if cityX.getCulture(iPlayerX) + cityX.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) >= cityX.getCultureThreshold():
+							msg = TRNSLTR.getText("TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND",(cityX.getName(),))
+							CvUtil.sendMessage(msg, iPlayer, EVENT_MESSAGE_TIME_LONG, icon, -1, cityX.getX(), cityX.getY(), True, True)
 
 		# Check Domination Limit
 		if self.getCheckForDomVictory() and GAME.isVictoryValid(3):

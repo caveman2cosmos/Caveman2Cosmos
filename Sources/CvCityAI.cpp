@@ -7228,7 +7228,7 @@ int CvCityAI::evaluateDanger()
 	if (eDummyUnit == NO_UNIT)
 	{
 		// Should never happen but empirically it does (very rarely) - needs future investigation
-		FErrorMsg("Cannot find defender to use for strength test");
+		FErrorMsg(CvString::format("Cannot find any buildable units to use for strength test asking city is %S, owned by player %d", m_szName.c_str(), getOwner()).c_str());
 		return 100;
 	}
 
