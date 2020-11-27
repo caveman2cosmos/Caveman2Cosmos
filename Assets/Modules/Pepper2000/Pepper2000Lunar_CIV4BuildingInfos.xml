@@ -10,6 +10,7 @@
 			<Strategy>TXT_KEY_BUILDING_LUNAR_OUTPOST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LUNAR_OUTPOST</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LUNAR_OUTPOST</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

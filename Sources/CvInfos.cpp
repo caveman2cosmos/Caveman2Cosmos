@@ -6,12 +6,14 @@
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
+#include "CvGlobals.h"
 #include "CvPlayerAI.h"
 #include "CvXMLLoadUtility.h"
+#include "CheckSum.h"
 
 bool shouldHaveType = false;
 
@@ -5687,29 +5689,29 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	//pXML->SetVariableListTagPair(&m_piAIWeightbyUnitCombatTypes, L"AIWeightbyUnitCombatTypes", GC.getNumUnitCombatInfos());
 	// bool vector without delayed resolution
 	CvString* pszTemp = NULL;
-	pXML->SetOptionalIntVector(&m_aiSubCombatChangeTypes, L"SubCombatChangeTypes");
-	pXML->SetOptionalIntVector(&m_aiRemovesUnitCombatTypes, L"RemovesUnitCombatTypes");
-	pXML->SetOptionalIntVector(&m_aiOnGameOptions, L"OnGameOptions");
-	pXML->SetOptionalIntVector(&m_aiNotOnGameOptions, L"NotOnGameOptions");
-	pXML->SetOptionalIntVector(&m_aiFreetoUnitCombats, L"FreetoUnitCombats");
-	pXML->SetOptionalIntVector(&m_aiNotOnUnitCombatTypes, L"NotOnUnitCombatTypes");
-	pXML->SetOptionalIntVector(&m_aiNotOnDomainTypes, L"NotOnDomainTypes");
-	pXML->SetOptionalIntVector(&m_aiNoAutoEquiptoCombatClassTypes, L"NoAutoEquiptoCombatClassTypes");
-	pXML->SetOptionalIntVector(&m_aiMapCategoryTypes, L"MapCategoryTypes");
+	pXML->SetOptionalVector(&m_aiSubCombatChangeTypes, L"SubCombatChangeTypes");
+	pXML->SetOptionalVector(&m_aiRemovesUnitCombatTypes, L"RemovesUnitCombatTypes");
+	pXML->SetOptionalVector(&m_aiOnGameOptions, L"OnGameOptions");
+	pXML->SetOptionalVector(&m_aiNotOnGameOptions, L"NotOnGameOptions");
+	pXML->SetOptionalVector(&m_aiFreetoUnitCombats, L"FreetoUnitCombats");
+	pXML->SetOptionalVector(&m_aiNotOnUnitCombatTypes, L"NotOnUnitCombatTypes");
+	pXML->SetOptionalVector(&m_aiNotOnDomainTypes, L"NotOnDomainTypes");
+	pXML->SetOptionalVector(&m_aiNoAutoEquiptoCombatClassTypes, L"NoAutoEquiptoCombatClassTypes");
+	pXML->SetOptionalVector(&m_aiMapCategoryTypes, L"MapCategoryTypes");
 
 	// bool vector with delayed resolution
-	pXML->SetOptionalIntVector(&m_aiCureAfflictionChangeTypes, L"CureAfflictionChangeTypes");
-	pXML->SetOptionalIntVector(&m_aiPrereqBonusTypes, L"PrereqBonusTypes");
-	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiAddsBuildTypes, L"AddsBuildTypes");
-	pXML->SetOptionalIntVector(&m_aiNegatesInvisibilityTypes, L"NegatesInvisibilityTypes");
-	pXML->SetOptionalIntVector(&m_aiPrereqTerrainTypes, L"PrereqTerrainTypes");
-	pXML->SetOptionalIntVector(&m_aiPrereqFeatureTypes, L"PrereqFeatureTypes");
-	pXML->SetOptionalIntVector(&m_aiPrereqImprovementTypes, L"PrereqImprovementTypes");
-	pXML->SetOptionalIntVector(&m_aiPrereqPlotBonusTypes, L"PrereqPlotBonusTypes");
-	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiPrereqLocalBuildingTypes, L"PrereqLocalBuildingTypes");
-	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiTrapSetWithPromotionTypes, L"TrapSetWithPromotionTypes");
-	pXML->SetOptionalIntVector(&m_aiTrapImmunityUnitCombatTypes, L"TrapImmunityUnitCombatTypes");
-	pXML->SetOptionalIntVector(&m_aiTargetUnitCombatTypes, L"TargetUnitCombatTypes");
+	pXML->SetOptionalVector(&m_aiCureAfflictionChangeTypes, L"CureAfflictionChangeTypes");
+	pXML->SetOptionalVector(&m_aiPrereqBonusTypes, L"PrereqBonusTypes");
+	pXML->SetOptionalVectorWithDelayedResolution(m_aiAddsBuildTypes, L"AddsBuildTypes");
+	pXML->SetOptionalVector(&m_aiNegatesInvisibilityTypes, L"NegatesInvisibilityTypes");
+	pXML->SetOptionalVector(&m_aiPrereqTerrainTypes, L"PrereqTerrainTypes");
+	pXML->SetOptionalVector(&m_aiPrereqFeatureTypes, L"PrereqFeatureTypes");
+	pXML->SetOptionalVector(&m_aiPrereqImprovementTypes, L"PrereqImprovementTypes");
+	pXML->SetOptionalVector(&m_aiPrereqPlotBonusTypes, L"PrereqPlotBonusTypes");
+	pXML->SetOptionalVectorWithDelayedResolution(m_aiPrereqLocalBuildingTypes, L"PrereqLocalBuildingTypes");
+	pXML->SetOptionalVectorWithDelayedResolution(m_aiTrapSetWithPromotionTypes, L"TrapSetWithPromotionTypes");
+	pXML->SetOptionalVector(&m_aiTrapImmunityUnitCombatTypes, L"TrapImmunityUnitCombatTypes");
+	pXML->SetOptionalVector(&m_aiTargetUnitCombatTypes, L"TargetUnitCombatTypes");
 
 	// int vector utilizing pairing without delayed resolution
 	pXML->SetOptionalPairVector<UnitCombatModifierArray, UnitCombatTypes, int>(&m_aFlankingStrengthbyUnitCombatTypeChange, L"FlankingStrikesbyUnitCombatChange");
@@ -13920,8 +13922,6 @@ m_iUnitGreatWorkPercent(0),
 m_iGoldenAgePercent(0),
 m_iHurryPercent(0),
 m_iHurryConscriptAngerPercent(0),
-m_iInflationOffset(0),
-m_iInflationPercent(0),
 m_iOccupationTimePopulationPercent(0),
 m_iVictoryDelayPercent(0),
 m_iNumTurnIncrements(0),
@@ -14037,16 +14037,6 @@ int CvGameSpeedInfo::getHurryConscriptAngerPercent() const
 	return m_iHurryConscriptAngerPercent;
 }
 
-int CvGameSpeedInfo::getInflationOffset() const
-{
-	return m_iInflationOffset;
-}
-
-int CvGameSpeedInfo::getInflationPercent() const
-{
-	return m_iInflationPercent;
-}
-
 int CvGameSpeedInfo::getOccupationTimePopulationPercent() const
 {
 	return m_iOccupationTimePopulationPercent;
@@ -14138,8 +14128,6 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iGoldenAgePercent, L"iGoldenAgePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iHurryPercent, L"iHurryPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iHurryConscriptAngerPercent, L"iHurryConscriptAngerPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iInflationOffset, L"iInflationOffset");
-	pXML->GetOptionalChildXmlValByName(&m_iInflationPercent, L"iInflationPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iOccupationTimePopulationPercent, L"iOccupationTurnsPopulationPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iVictoryDelayPercent, L"iVictoryDelayPercent");
 
@@ -14226,8 +14214,6 @@ void CvGameSpeedInfo::copyNonDefaults(CvGameSpeedInfo* pClassInfo, CvXMLLoadUtil
 	if (getGoldenAgePercent() == iDefault) m_iGoldenAgePercent = pClassInfo->getGoldenAgePercent();
 	if (getHurryPercent() == iDefault) m_iHurryPercent = pClassInfo->getHurryPercent();
 	if (getHurryConscriptAngerPercent() == iDefault) m_iHurryConscriptAngerPercent = pClassInfo->getHurryConscriptAngerPercent();
-	if (getInflationOffset() == iDefault) m_iInflationOffset = pClassInfo->getInflationOffset();
-	if (getInflationPercent() == iDefault) m_iInflationPercent = pClassInfo->getInflationPercent();
 	if (getOccupationTimePopulationPercent() == iDefault) m_iOccupationTimePopulationPercent = pClassInfo->getOccupationTimePopulationPercent();
 	if (getVictoryDelayPercent() == iDefault) m_iVictoryDelayPercent = pClassInfo->getVictoryDelayPercent();
 
@@ -14269,8 +14255,6 @@ void CvGameSpeedInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iGoldenAgePercent);
 	CheckSum(iSum, m_iHurryPercent);
 	CheckSum(iSum, m_iHurryConscriptAngerPercent);
-	CheckSum(iSum, m_iInflationOffset);
-	CheckSum(iSum, m_iInflationPercent);
 	CheckSum(iSum, m_iOccupationTimePopulationPercent);
 	CheckSum(iSum, m_iVictoryDelayPercent);
 
@@ -14669,8 +14653,8 @@ bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetFeatureStruct(&m_paiFeatureTech, &m_paiFeatureTime, &m_paiFeatureProduction, &m_pabFeatureRemove, &m_pabNoTechCanRemoveWithNoProductionGain);
 
-	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiPrereqBonusTypes, L"PrereqBonusTypes");
-	pXML->SetOptionalIntVector(&m_aiMapCategoryTypes, L"MapCategoryTypes");
+	pXML->SetOptionalVectorWithDelayedResolution(m_aiPrereqBonusTypes, L"PrereqBonusTypes");
+	pXML->SetOptionalVector(&m_aiMapCategoryTypes, L"MapCategoryTypes");
 
 	if(pXML->TryMoveToXmlFirstChild(L"TerrainStructs"))
 	{
@@ -16519,8 +16503,8 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bNotOnAnyBonus, L"bNotOnAnyBonus");
 	pXML->GetOptionalChildXmlValByName(&m_bNational, L"bNational");
 	pXML->GetOptionalChildXmlValByName(&m_bGlobal, L"bGlobal");
-	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiAlternativeImprovementUpgradeTypes, L"AlternativeImprovementUpgradeTypes");
-	pXML->SetOptionalIntVector(&m_aiFeatureChangeTypes, L"FeatureChangeTypes");
+	pXML->SetOptionalVectorWithDelayedResolution(m_aiAlternativeImprovementUpgradeTypes, L"AlternativeImprovementUpgradeTypes");
+	pXML->SetOptionalVector(&m_aiFeatureChangeTypes, L"FeatureChangeTypes");
 
 	return true;
 }
@@ -32798,48 +32782,8 @@ m_bVisible(true)
 
 CvGameOptionInfo::~CvGameOptionInfo()
 {
-	for (int i=0; i<(int)m_aEnforcesGameOptionOnTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aEnforcesGameOptionOnTypes[i]));
-	}
-	for (int i=0; i<(int)m_aEnforcesGameOptionOffTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aEnforcesGameOptionOffTypes[i]));
-	}
-}
-
-bool CvGameOptionInfo::getDefault() const
-{
-	return m_bDefault;
-}
-
-bool CvGameOptionInfo::getVisible() const
-{
-	return m_bVisible;
-}
-
-int CvGameOptionInfo::getNumEnforcesGameOptionOnTypes() const
-{
-	return (int)m_aEnforcesGameOptionOnTypes.size();
-}
-
-const GameOptionTypeBool& CvGameOptionInfo::isEnforcesGameOptionOnType(int iOption) const
-{
-	FASSERT_BOUNDS(0, getNumEnforcesGameOptionOnTypes(), iOption)
-
-	return m_aEnforcesGameOptionOnTypes[iOption];
-}
-
-int CvGameOptionInfo::getNumEnforcesGameOptionOffTypes() const
-{
-	return (int)m_aEnforcesGameOptionOffTypes.size();
-}
-
-const GameOptionTypeBool& CvGameOptionInfo::isEnforcesGameOptionOffType(int iOption) const
-{
-	FASSERT_BOUNDS(0, getNumEnforcesGameOptionOffTypes(), iOption)
-
-	return m_aEnforcesGameOptionOffTypes[iOption];
+	GC.removeDelayedResolutionVector(m_aEnforcesGameOptionOnTypes);
+	GC.removeDelayedResolutionVector(m_aEnforcesGameOptionOffTypes);
 }
 
 bool CvGameOptionInfo::read(CvXMLLoadUtility* pXML)
@@ -32855,66 +32799,15 @@ bool CvGameOptionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bDefault, L"bDefault");
 	pXML->GetOptionalChildXmlValByName(&m_bVisible, L"bVisible", true);
 
+	pXML->SetOptionalVectorWithDelayedResolution(m_aEnforcesGameOptionOnTypes, L"EnforcesGameOptionOnTypes");
+	pXML->SetOptionalVectorWithDelayedResolution(m_aEnforcesGameOptionOffTypes, L"EnforcesGameOptionOffTypes");
 
-	if(pXML->TryMoveToXmlFirstChild(L"EnforcesGameOptionOnTypes"))
-	{
-		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"EnforcesGameOptionOnType" );
-		m_aEnforcesGameOptionOnTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
-
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"EnforcesGameOptionOnType"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"GameOptionType");
-					pXML->GetChildXmlValByName(&(m_aEnforcesGameOptionOnTypes[i].bBool), L"bEnforcesGameOptionOn");
-					GC.addDelayedResolution((int*)&(m_aEnforcesGameOptionOnTypes[i].eGameOption), szTextVal);
-					i++;
-				} while(pXML->TryMoveToXmlNextSibling(L"EnforcesGameOptionOnType"));
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
-	if(pXML->TryMoveToXmlFirstChild(L"EnforcesGameOptionOffTypes"))
-	{
-		int i = 0;
-		int iNum = pXML->GetXmlChildrenNumber(L"EnforcesGameOptionOffType" );
-		m_aEnforcesGameOptionOffTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
-
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"EnforcesGameOptionOffType"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"GameOptionType");
-					pXML->GetChildXmlValByName(&(m_aEnforcesGameOptionOffTypes[i].bBool), L"bEnforcesGameOptionOff");
-					GC.addDelayedResolution((int*)&(m_aEnforcesGameOptionOffTypes[i].eGameOption), szTextVal);
-					i++;
-				} while(pXML->TryMoveToXmlNextSibling(L"EnforcesGameOptionOffType"));
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
 	return true;
 }
 
 void CvGameOptionInfo::copyNonDefaults(CvGameOptionInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	int iAudioDefault = -1;  //all audio is default -1
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const bool bDefault = false;
 
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
@@ -32922,27 +32815,8 @@ void CvGameOptionInfo::copyNonDefaults(CvGameOptionInfo* pClassInfo, CvXMLLoadUt
 	if (getVisible()) m_bVisible = pClassInfo->getVisible();
 
 	//TB's Tags
-	if (getNumEnforcesGameOptionOnTypes() == 0)
-	{
-		const int iNum = pClassInfo->getNumEnforcesGameOptionOnTypes();
-		m_aEnforcesGameOptionOnTypes.resize(iNum);
-		for (int i=0; i<iNum; i++)
-		{
-			m_aEnforcesGameOptionOnTypes[i].bBool = pClassInfo->m_aEnforcesGameOptionOnTypes[i].bBool;
-			GC.copyNonDefaultDelayedResolution((int*)&(m_aEnforcesGameOptionOnTypes[i].eGameOption), (int*)&(pClassInfo->m_aEnforcesGameOptionOnTypes[i].eGameOption));
-		}
-	}
-
-	if (getNumEnforcesGameOptionOffTypes() == 0)
-	{
-		const int iNum = pClassInfo->getNumEnforcesGameOptionOffTypes();
-		m_aEnforcesGameOptionOffTypes.resize(iNum);
-		for (int i=0; i<iNum; i++)
-		{
-			m_aEnforcesGameOptionOffTypes[i].bBool = pClassInfo->m_aEnforcesGameOptionOffTypes[i].bBool;
-			GC.copyNonDefaultDelayedResolution((int*)&(m_aEnforcesGameOptionOffTypes[i].eGameOption), (int*)&(pClassInfo->m_aEnforcesGameOptionOffTypes[i].eGameOption));
-		}
-	}
+	GC.copyNonDefaultDelayedResolutionVector(m_aEnforcesGameOptionOnTypes, pClassInfo->m_aEnforcesGameOptionOnTypes);
+	GC.copyNonDefaultDelayedResolutionVector(m_aEnforcesGameOptionOffTypes, pClassInfo->m_aEnforcesGameOptionOffTypes);
 }
 
 void CvGameOptionInfo::getCheckSum(unsigned int& iSum) const
@@ -32951,22 +32825,8 @@ void CvGameOptionInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_bVisible);
 
 	//TB's Tags
-	int i;
-	int iNumElements;
-
-	iNumElements = m_aEnforcesGameOptionOnTypes.size();
-	for (i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aEnforcesGameOptionOnTypes[i].eGameOption);
-		CheckSum(iSum, m_aEnforcesGameOptionOnTypes[i].bBool);
-	}
-
-	iNumElements = m_aEnforcesGameOptionOffTypes.size();
-	for (i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aEnforcesGameOptionOffTypes[i].eGameOption);
-		CheckSum(iSum, m_aEnforcesGameOptionOffTypes[i].bBool);
-	}
+	CheckSumC(iSum, m_aEnforcesGameOptionOnTypes);
+	CheckSumC(iSum, m_aEnforcesGameOptionOffTypes);
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -37135,7 +36995,7 @@ bool CvPropertyInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"PropertyPromotions"))
 	{
 		int i = 0;
-		const int iNum = pXML->GetXmlChildrenNumber(L"PropertyPromotion" );
+		const int iNum = pXML->GetXmlChildrenNumber(L"PropertyPromotion");
 		m_aPropertyPromotions.resize(iNum); // Important to keep the delayed resolution pointers correct
 
 		if(pXML->TryMoveToXmlFirstChild())
@@ -37175,7 +37035,6 @@ bool CvPropertyInfo::read(CvXMLLoadUtility* pXML)
 						m_aTargetLevelbyEraTypes.push_back(std::make_pair(eEra, iLevel));
 
 						pXML->MoveToXmlParent();
-
 					}
 
 					if (!pXML->TryMoveToXmlNextSibling())
@@ -40654,15 +40513,15 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_piDomainModifierPercent, L"DomainMods", NUM_DOMAIN_TYPES);
 
 	// bool vector with delayed resolution
-	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiCureAfflictionChangeTypes, L"CureAfflictionChangeTypes");
-	pXML->SetOptionalIntVector(&m_aiTerrainIgnoreDamageChangeTypes, L"TerrainIgnoreDamageChangeTypes");
-	pXML->SetOptionalIntVector(&m_aiTerrainDoubleMoveChangeTypes, L"TerrainDoubleMoveChangeTypes");
-	pXML->SetOptionalIntVector(&m_aiFeatureDoubleMoveChangeTypes, L"FeatureDoubleMoveChangeTypes");
-	pXML->SetOptionalIntVector(&m_aiOnGameOptions, L"OnGameOptions");
-	pXML->SetOptionalIntVector(&m_aiNotOnGameOptions, L"NotOnGameOptions");
-	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiGGptsforUnitTypes, L"GGptsforUnitTypes");
-	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiDefaultStatusTypes, L"DefaultStatusTypes");
-	pXML->SetOptionalIntVector(&m_aiTrapImmunityUnitCombatTypes, L"TrapImmunityUnitCombatTypes");
+	pXML->SetOptionalVectorWithDelayedResolution(m_aiCureAfflictionChangeTypes, L"CureAfflictionChangeTypes");
+	pXML->SetOptionalVector(&m_aiTerrainIgnoreDamageChangeTypes, L"TerrainIgnoreDamageChangeTypes");
+	pXML->SetOptionalVector(&m_aiTerrainDoubleMoveChangeTypes, L"TerrainDoubleMoveChangeTypes");
+	pXML->SetOptionalVector(&m_aiFeatureDoubleMoveChangeTypes, L"FeatureDoubleMoveChangeTypes");
+	pXML->SetOptionalVector(&m_aiOnGameOptions, L"OnGameOptions");
+	pXML->SetOptionalVector(&m_aiNotOnGameOptions, L"NotOnGameOptions");
+	pXML->SetOptionalVectorWithDelayedResolution(m_aiGGptsforUnitTypes, L"GGptsforUnitTypes");
+	pXML->SetOptionalVectorWithDelayedResolution(m_aiDefaultStatusTypes, L"DefaultStatusTypes");
+	pXML->SetOptionalVector(&m_aiTrapImmunityUnitCombatTypes, L"TrapImmunityUnitCombatTypes");
 
 	// int vector utilizing pairing without delayed resolution
 	m_aWithdrawOnTerrainTypesChange.clear();

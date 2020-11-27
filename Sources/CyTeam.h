@@ -55,7 +55,6 @@ public:
 	int getAnyWarPlanCount(bool bIgnoreMinors);
 	int getChosenWarCount(bool bIgnoreMinors);
 	int getHasMetCivCount(bool bIgnoreMinors);
-	bool hasMetHuman();
 	int getDefensivePactCount();
 	bool isAVassal() const;
 

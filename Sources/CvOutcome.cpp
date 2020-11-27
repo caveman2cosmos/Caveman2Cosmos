@@ -7,12 +7,15 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-//#include "CvProperties.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
+#include "CvProperties.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 #include "CvXMLLoadUtility.h"
 #include "CyUnit.h"
 #include "CyPlot.h"
+#include "CheckSum.h"
 
 CvOutcome::CvOutcome(): m_eUnitType(NO_UNIT),
 						m_iChance(NULL),

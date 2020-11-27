@@ -1,5 +1,11 @@
 #include "CvGameCoreDLL.h"
 
+#include "CvBuildingFilters.h"
+#include "CvBuildingGrouping.h"
+#include "CvBuildingSort.h"
+#include "CvUnitFilters.h"
+#include "CvUnitGrouping.h"
+#include "CvUnitSort.h"
 #include "CvGameCoreDLLUnDefNew.h"
 #include "CvGameCoreDLLDefNew.h"
 

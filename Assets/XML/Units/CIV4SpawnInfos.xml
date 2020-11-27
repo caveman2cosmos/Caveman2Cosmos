@@ -1561,7 +1561,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
-			<iMinLatitude>-0</iMinLatitude>
+			<iMinLatitude>0</iMinLatitude>
 			<iMaxLatitude>66</iMaxLatitude>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<FeatureTypes>

@@ -127,9 +127,6 @@ class PyPlayer:
 	def getNumTradeableBonuses(self, iBonus):
 		return self.player.getNumTradeableBonuses(iBonus)
 
-	def calculateInflatedCosts(self):
-		return self.player.calculateInflatedCosts()
-
 	def calculateGoldRate(self):
 		return self.player.calculateGoldRate()
 

@@ -9,16 +9,18 @@
 #include "CvEnums.h"
 #include "CvStructs.h"  // don't disable! used for modules
 #include "CvGameObject.h"
-#include "CvCity.h"
 #include <map>
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
-class CvPlot;
+class cvInternalGlobals;
 class CvArea;
-class CvUnitInfo;
+class CvCity;
+class CvPlot;
 class CvSelectionGroup;
 class CvArtInfoUnit;
+class CvUnitInfo;
+class CvUnitSelectionCriteria;
 #ifdef USE_OLD_PATH_GENERATOR
 class FAStarNode;
 #endif
@@ -788,6 +790,7 @@ public:
 	bool doOutcomeMission(MissionTypes eMission);
 
 	int getEspionagePoints(const CvPlot* pPlot) const; // Exposed to Python
+	bool canInfiltrate() const;
 	bool canInfiltrate(const CvPlot* pPlot, bool bTestVisible = false) const; // Exposed to Python
 	bool infiltrate();
 
@@ -2690,15 +2693,12 @@ public:
 	void setSizeBaseTotal(int iNewValue);
 
 	int getExtraQuality() const;
-	void setExtraQuality(int iNewValue);
 	void changeExtraQuality(int iChange);
 
 	int getExtraGroup() const;
-	void setExtraGroup(int iNewValue);
 	void changeExtraGroup(int iChange);
 
 	int getExtraSize() const;
-	void setExtraSize(int iNewValue);
 	void changeExtraSize(int iChange);
 
 	int qualityRank() const;

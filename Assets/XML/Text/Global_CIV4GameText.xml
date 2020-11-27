@@ -239,7 +239,7 @@
 		<English>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Guaranteed! Defender cannot score a hit.[COLOR_REVERT]</English>
 		<French>[NEWLINE][COLOR_HIGHLIGHT_TEXT]C'est garanti! L'unité défensive ne peut porter de coup.[COLOR_REVERT]</French>
 		<German>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Sicher! Der Verteidiger kann keinen Treffer landen.[COLOR_REVERT]</German>
-		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Certa! I difensori non possono colpire neppure una volta.[COLOR_REVERT]</Italian>
+		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Garantito! I difensori non possono colpire neppure una volta.[COLOR_REVERT]</Italian>
 		<Spanish>[NEWLINE][COLOR_HIGHLIGHT_TEXT]¡Garantizado! El defensor no puede dar en el blanco.[COLOR_REVERT]</Spanish>
 		<Polish>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Gwarantowane! Obrońca nie może wykonać uderzenia.[COLOR_REVERT]</Polish>
 	</TEXT>
@@ -248,7 +248,7 @@
 		<English>hits at</English>
 		<French>frappe à</French>
 		<German>trifft</German>
-		<Italian>colpisce a</Italian>
+		<Italian>colpisce</Italian>
 		<Spanish>golpea a</Spanish>
 		<Polish>uderzenie w</Polish>
 	</TEXT>
@@ -340,8 +340,8 @@
 		<French>[NEWLINE]EXP Non-arrondi:[SPACE]</French>
 		<German>[NEWLINE]Ungerundete EP:[SPACE]</German>
 		<Italian>[NEWLINE]XP non arrotondati:[SPACE]</Italian>
-		<Spanish>[NEWLINE]PX no redondeados:[SPACE]</Spanish>
 		<Polish>[NEWLINE]Nie zaokrąglone XP:[SPACE]</Polish>
+		<Spanish>[NEWLINE]PX no redondeados:[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ACO_VICTORY</Tag>
@@ -349,16 +349,17 @@
 		<French>[COLOR_POSITIVE_TEXT]Victoire[COLOR_REVERT]</French>
 		<German>[COLOR_POSITIVE_TEXT]Sieg[COLOR_REVERT]</German>
 		<Italian>[COLOR_POSITIVE_TEXT]Vittoria[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_POSITIVE_TEXT]Victoria[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_POSITIVE_TEXT]Zwycięstwo[COLOR_REVERT]</Polish>
+		<Spanish>[COLOR_POSITIVE_TEXT]Victoria[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ACO_VS</Tag>
 		<English>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] vs. [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</English>
 		<French>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] contre [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</French>
 		<German>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] gegen [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</German>
-		<Spanish>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] contra [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Spanish>
+		<Italian>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] contro [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Italian>
 		<Polish>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] przeciw [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Polish>
+		<Spanish>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] contra [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ACO_WITHDRAW</Tag>
@@ -366,8 +367,8 @@
 		<French>[COLOR_POSITIVE_TEXT]Se retirer[COLOR_REVERT]</French>
 		<German>[COLOR_POSITIVE_TEXT]Flucht[COLOR_REVERT]</German>
 		<Italian>[COLOR_POSITIVE_TEXT]Fuga[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_POSITIVE_TEXT]Repliegue[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_POSITIVE_TEXT]Wycofanie[COLOR_REVERT]</Polish>
+		<Spanish>[COLOR_POSITIVE_TEXT]Repliegue[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ACO_XP</Tag>
@@ -380,7 +381,7 @@
 		<English>Click to bribe</English>
 		<French>Cliquer pour Corrompre</French>
 		<German>Klicken, um zu bestechen</German>
-		<Italian>Corrompi</Italian>
+		<Italian>Clicca per corrompere</Italian>
 		<Spanish>Clic para sobornar</Spanish>
 		<Polish>Kliknij, aby przekupić</Polish>
 	</TEXT>
@@ -1708,9 +1709,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Tag>
-		<English>'Achievements' are special wonders that can be built by National Heroes. There are twelve achievements available throughout the game, providing with different bonuses; However, sometimes, it is better to wait if you want to build an achievement from a later era. Though achievements don't provide huge bonuses at first, over time, they will give a civilization a significant boost in one area.</English>
-		<French>Les [COLOR_HIGHLIGHT_TEXT]Achï¿½vements[COLOR_REVERT] sont des merveilles spï¿½ciales qui peuvent ï¿½tre construites par les Hï¿½ros nationaux. Il y a 8 achï¿½vement possibles, procurant diffï¿½rents bonus, qu'il convient de bien examinï¿½, notamment par rapport ï¿½ l'Ere durant laquelle il est plus avisï¿½ de le dï¿½clencher. Sachant que comme les merveilles, ce n'est disponible que pous la premiï¿½re civilisation ï¿½ le dï¿½clencher.</French>
-		<Italian>Gli 'Obiettivi' sono speciali meraviglie che possono essere costruite dagli eroi nazionali. Ci sono 8 obiettivi disponibili, che danno bonus differenti; comunque, quando un obiettivo viene costruito da una civiltï¿½ non puï¿½ essere costruito da un'altra; in ogni caso, a volte ï¿½ meglio aspettare le ere piï¿½ moderne per costruire un obiettivo. Anche se li obiettivi non danno grandi bonus all'inizio, nel tempo danno ad una civiltï¿½ un grande vantaggio in un settore specifico.</Italian>
+		<English>[COLOR_HIGHLIGHT_TEXT]Achievements[COLOR_REVERT] are special wonders that can be built by National Heroes. There are twelve achievements available throughout the game, providing with different bonuses; however, sometimes it is better to wait if you want to build an achievement from a later era. Though achievements don't provide huge bonuses at first, over time, they will give a civilization a significant boost in one area.</English>
+		<French>Les [COLOR_HIGHLIGHT_TEXT]Réalisations[COLOR_REVERT] sont des merveilles spéciales qui peuvent être construites par les Héros nationaux. Il y a 12 réalisations disponibles tout au long du jeu, offrant différents bonus; cependant, il est parfois préférable d'attendre si vous souhaitez construire une réalisation d'une époque ultérieure. Bien que les succès ne fournissent pas d'énormes bonus au début, avec le temps, ils donneront à une civilisation un coup de pouce significatif dans un domaine.</French>
+		<Italian>Gli [COLOR_HIGHLIGHT_TEXT]Obiettivi[COLOR_REVERT] sono speciali meraviglie che possono essere costruite dagli eroi nazionali. Ci sono 12 obiettivi disponibili, che danno bonus differenti; comunque, quando un obiettivo viene costruito da una civiltà non può essere costruito da un'altra; in ogni caso, a volte è meglio aspettare le ere più avanzate per costruire un obiettivo. Anche se gli obiettivi non danno grandi bonus all'inizio, nel tempo portano una civiltà ad avere un grande vantaggio in un settore specifico.</Italian>
 		<Polish>'Osiągnięcia' to wyjątkowe cuda, które mogą zostać stworzone przez [COLOR_UNIT_TEXT]Bohaterów Narodowych[COLOR_REVERT]. W grze występuje osiem [COLOR_BUILDING_TEXT]Osiągnięć[COLOR_REVERT], które posiadają różne zalety; jednakże, kiedy jakieś [COLOR_BUILDING_TEXT]Osiągnięcie[COLOR_REVERT] zostanie stworzone przez jedną cywilizację, nie może już zostać zbudowane przez inną. Czasem dobrze jest poczekać jeśli chce się stworzyć [COLOR_BUILDING_TEXT]Osiągnięcie[COLOR_REVERT] dostępne w późniejszej erze. Choć na początku [COLOR_BUILDING_TEXT]Osiągnięcia[COLOR_REVERT] nie zapewniają ogromnych bonusów, to jednak z biegiem czasu ich zalety się zwiększają.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1718,7 +1719,7 @@
 		<English>Build this corporation in order to get adventure bonuses.</English>
 		<French>Construisez cette corporation pour obtenir des bonus d'aventure.</French>
 		<German>Gründe diese Gesellschaft, um Abenteuerboni zu erhalten.</German>
-		<Italian>Costruisci questa corporazione per ottenere bonus dall'avventura.</Italian>
+		<Italian>Costruisci questa corporazione per ottenere bonus dalle avventure.</Italian>
 		<Spanish>Crea esta corporación para obtener bonificaciones relacionadas con el mundo de las aventuras.</Spanish>
 		<Polish>Zbuduj tą korporacje by zdobyć bonusy z podróży.</Polish>
 	</TEXT>
@@ -2116,7 +2117,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Shrink Column[COLOR_REVERT][NEWLINE]Make the selected column(s) narrower</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Réduire Colonne[COLOR_REVERT][NEWLINE]Réduit la taille de la ou les colonnes sélectionnées</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Spalte verkleinern[COLOR_REVERT][NEWLINE]Verkleinert eine oder mehrere ausgewählte Spalten und macht sie schmaler</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Stringi Col.[COLOR_REVERT][NEWLINE]Rendi la colonna/e selezionata/e più stretta/e</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Stringi colonna[COLOR_REVERT][NEWLINE]Rendi la colonna/e selezionata/e più stretta/e</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Estrechar columna[COLOR_REVERT][NEWLINE]Hace la columna seleccionada más estrecha</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Zmniejsz kolumnę[COLOR_REVERT][NEWLINE]Skurcz wybrane kolumny(e)</Polish>
 	</TEXT>
@@ -2188,7 +2189,7 @@
 		<English>Change Amount Exceeded</English>
 		<French>Nombre de Changement Max. Atteint</French>
 		<German>Wechselzahl überschritten</German>
-		<Italian>Superato Limite</Italian>
+		<Italian>Superato il limite di cambi</Italian>
 		<Spanish>Límite de cambios superado</Spanish>
 		<Polish>Przekroczono ilość zmian</Polish>
 	</TEXT>
@@ -2210,7 +2211,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CHOOSE_TECH_TO_WAIT_FOR</Tag>
-		<English>Choose Your Desired Discovery:</English>
+		<English>Choose your desired discovery:</English>
 		<French>Choisissez la Technologie désirée:</French>
 		<Italian>Scegli la tecnologia desiderata:</Italian>
 		<Spanish>Elige la tecnología deseada:</Spanish>
@@ -2220,12 +2221,14 @@
 		<Tag>TXT_KEY_CHOOSE_UNIT_TO_ARREST</Tag>
 		<English>Select a unit to arrest:</English>
 		<French>Choisissez une unité à arrêter:</French>
+		<Italian>Seleziona un'unità da fermare:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CHOOSE_UNIT_TO_MERGE</Tag>
 		<English>Select a unit to merge with:</English>
 		<French>Sélectionner une unité à regrouper avec:</French>
 		<German>Einheit zum Zusammenführen auswählen:</German>
+		<Italian>Seleziona un'unità da unire con:</Italian>
 		<Polish>Wybierz jednostkę do połączenia z:</Polish>
 	</TEXT>
 	<TEXT>
@@ -3267,10 +3270,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EMPHASIZE_AVOID_UNHEALTHY_CITIZENS_STRATEGY</Tag>
-		<English>Avoid unhealty citizens by not growing beyond the capacity for healthy citizens.</English>
+		<English>Avoid unhealthy citizens by not growing beyond the capacity for healthy citizens.</English>
 		<French>Evite les Citoyens en mauvaise Santé, en limitant la croissance tant que les conditions sanitaires suffisantes ne sont pas réunies.</French>
 		<German>Vermeidung kranker Bürger durch Beschränkung des Wachstums auf die Obergrenze für gesunde Bürger.</German>
-		<Italian>Evita i cittadini ammalati impedendo la crescita olte le capacità di salute della città.</Italian>
+		<Italian>Evita i cittadini ammalati impedendo la crescita oltre le capacità di salute della città.</Italian>
 		<Spanish>Se evitan los ciudadanos enfermos dejando de crecer si se llega al límite de ciudadanos sanos.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3807,31 +3810,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 		[NEWLINE]COUT TOTAL DE L'ENTRETIEN DES VILLES : %d1[ICON_GOLD]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_NEW</Tag>
-		<English>
-		[NEWLINE]Total costs before Inflation = %d1[ICON_GOLD]
-		[NEWLINE]Inflation Rate = %d2%% (%s6)
-		[NEWLINE]Cost due to Inflation (%d3%% of %d4[ICON_GOLD]) = %d5[ICON_GOLD]</English>
-		<French>
-		[NEWLINE]Coût total avant inflation = %d1[ICON_GOLD]
-		[NEWLINE]Taux d'inflation = %d2%% (%s6)
-		[NEWLINE]Coût lié à l'inflation (%d3%% de %d4[ICON_GOLD]) = %d5[ICON_GOLD]</French>
-		<German>
-		[NEWLINE]Gesamtkosten vor Inflation = %d1[ICON_GOLD]
-		[NEWLINE]Inflationsrate = %d2%% (%s6)
-		[NEWLINE]Kosten durch Inflation (%d3%% von %d4[ICON_GOLD]) = %d5[ICON_GOLD]</German>
-		<Italian>
-		[NEWLINE]Costi totali prima dell'inflazione = %d1[ICON_GOLD]
-		[NEWLINE]Tasso d'inflazione = %d2%% (%s6)
-		[NEWLINE]Costo dovuto all'inflazione (%d3%% di %d4[ICON_GOLD]) = %d5[ICON_GOLD]</Italian>
-		<Spanish>
-		[NEWLINE]Coste total antes de la inflación = %d1 [ICON_GOLD]
-		[NEWLINE]Tasa de inflación = %d2%% (%s6)
-		[NEWLINE]Coste debido a la inflación (%d3%% de %d4 [ICON_GOLD]) = %d5 [ICON_GOLD]</Spanish>
-		<Polish>
-		[NEWLINE]Cout total avant inflation = %d1[ICON_GOLD]
-		[NEWLINE]Taux d'inflation = %d2%% (%s6)
-		[NEWLINE]Cout liź a l'inflation (%d3%% de %d4[ICON_GOLD]) = %d5[ICON_GOLD]</Polish>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_0</Tag>
+		<English>[NEWLINE]Total costs before inflation = %d1[ICON_GOLD][NEWLINE]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_1</Tag>
+		<English>[NEWLINE]Inflation rate = %d1.%d2%%[NEWLINE][NEWLINE]Cost due to Inflation = %d3[ICON_GOLD]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_SOURCES_OF_INFLATION</Tag>
@@ -4755,6 +4739,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_ICON_SIZE</Tag>
 		<English>Icon Size:</English>
 		<French>Taille d'Icones:</French>
+		<German>Symbolgröße:</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INCREASE_LOCAL_REBELS</Tag>
@@ -4786,19 +4771,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>s'améliore</French>
 		<Spanish>mejorando</Spanish>
 		<Polish>wzrasta</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INFLATION_OUTLOOK_STABLE</Tag>
-		<English>stable</English>
-		<Spanish>estable</Spanish>
-		<Polish>stabilne</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INFLATION_OUTLOOK_WORSENING</Tag>
-		<English>worsening</English>
-		<French>se détériore</French>
-		<Spanish>empeorando</Spanish>
-		<Polish>spada</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INSIDIOUSNESS_TEXT</Tag>
@@ -14869,6 +14841,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_SPECIALIST_GREAT_SLEUTH</Tag>
 		<English>Great Sleuth</English>
 		<French>Détective illustre</French>
+		<German>
+			<Text>Großer Detektiv:Großen Detektivs:Großen Detektiv:Großen Detektiv:Große Detektive:Großen Detektive:Großen Detektiven:Große Detektive</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_SPY</Tag>
@@ -14904,6 +14881,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_SPECIALIST_INVESTIGATION</Tag>
 		<English>[ICON_BULLET]%s1_Change%% Investigation for Local Law Enforcement</English>
 		<French>[ICON_BULLET]%s1_Change%% Investigation pour le maintien de l'ordre local</French>
+		<German>[ICON_BULLET]%s1_Change%% Ermittlungen für lokale Strafverfolgung</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_INVESTIGATOR</Tag>

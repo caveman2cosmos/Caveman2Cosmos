@@ -12,6 +12,7 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvGlobals.h"
 
 int EventTriggeredData::getID() const 
 { 

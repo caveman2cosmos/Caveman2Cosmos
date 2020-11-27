@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
-<!--
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHEBA</Tag>
 		<English>Sheba</English>
@@ -11,7 +10,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHEBA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Sheba[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Sheba[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Sheba[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -27,7 +26,6 @@
 		<English>The [COLOR_UNIT_TEXT]Magos[COLOR_REVERT] is a Sabbatean unique unit.</English>
 		<French>Le [COLOR_UNIT_TEXT]Magos[COLOR_REVERT] est une unité Sabbatéenne unique.</French>
 	</TEXT>
--->
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_HURRY_PRODUCTION</Tag>
 		<English>Hurry Production (with overflow)</English>
@@ -66,7 +64,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
-			<Text>Agente Top Secret</Text>
+			<Text>Agente segreto</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -155,7 +153,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ABDULLAH_II_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Abdullah II[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Abdullah II[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Abdullah II[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -168,7 +166,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ABDUL_RAZAK_HUSSEIN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Abdul Razak Hussein[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Abdul Razak Hussein[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Abdul Razak Hussein[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -181,7 +179,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ABLAI_KHAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Ablai Khan[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Ablai Khan[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Ablai Khan[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -194,7 +192,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ABU_KARIBA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Abu Kariba[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Abu Kariba[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Abu Kariba[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -207,7 +205,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ACALAPUA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Acalapua[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Acalapua[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Acalapua[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -253,7 +251,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ADELARD_GODBOUT_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Adelard Godbout[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Adelard Godbout[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Adelard Godbout[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -420,7 +418,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AGAPARO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Agaparo[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Agaparo[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Agaparo[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -513,7 +511,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AHMAD_SHAH_DURRANI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Ahmad Shah Durrani[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Ahmad Shah Durrani[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Ahmad Shah Durrani[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -547,7 +545,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AILI_KESKITALO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Aili Keskitalo[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Aili Keskitalo[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Aili Keskitalo[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -642,7 +640,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALA_AL_DIN_HUSAYN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Ala al Din Husayn[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Ala al Din Husayn[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Ala al Din Husayn[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -681,7 +679,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALFRED_A_THORNE_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Alfred A. Thorne[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Alfred A. Thorne[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Alfred A. Thorne[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -713,7 +711,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALP_ARSLAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Alp Arslan[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Alp Arslan[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Alp Arslan[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -726,7 +724,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALTAMIRANO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Altamirano[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Altamirano[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Altamirano[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -767,7 +765,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_AGHLAB_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Al Aghlab[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Al Aghlab[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Al Aghlab[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -780,7 +778,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_KHALIFA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Al Khalifa[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Al Khalifa[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Al Khalifa[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -793,7 +791,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_MAHDI_BILLAH_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]al Mahdi Billah[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]al Mahdi Billah[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]al Mahdi Billah[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -806,7 +804,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_MANSUR_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Al Mansur[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Al Mansur[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Al Mansur[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -819,7 +817,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_SAFFAR_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Al Saffar[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Al Saffar[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Al Saffar[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -925,7 +923,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AMON_BAZIRA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Amon Bazira[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Amon Bazira[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Amon Bazira[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -1194,12 +1192,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANTONIO_RUIZ_DE_MONTOYA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Antonio Ruiz de Montoya[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Antonio Ruiz de Montoya[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Antonio Ruiz de Montoya[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANTONIO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Antonio[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Antonio[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Antonio[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -1269,7 +1267,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_APU_TAMBO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Apu Tambo[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Apu Tambo[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Apu Tambo[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -1316,7 +1314,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARACAGUA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Aracagua[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Aracagua[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Aracagua[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -1350,7 +1348,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARCHIMEDES_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Archimedes[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Archimedes[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Archimedes[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -1363,7 +1361,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARETAS_III_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Aretas III[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Aretas III[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Aretas III[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -1647,7 +1645,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARWA_AL_SULAYHI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Arwa al Sulayhi[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Arwa al Sulayhi[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Arwa al Sulayhi[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -1674,7 +1672,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASHINA_JIESHESHUAI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Ashina Jiesheshuai[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Ashina Jiesheshuai[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Ashina Jiesheshuai[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -1730,7 +1728,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASKIA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Askia[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Askia[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Askia[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -1903,7 +1901,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ATATURK_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Ataturk[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Ataturk[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Ataturk[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -2052,7 +2050,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AUGUSTO_LEGUIA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Augusto Leguia[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Augusto Leguia[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Augusto Leguia[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -2086,7 +2084,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AUSTIN_WONAEAMIRRI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Austin Wonaeamirri[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Austin Wonaeamirri[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Austin Wonaeamirri[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -2410,7 +2408,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BADIS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Badis[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Badis[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Badis[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -2423,7 +2421,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BADI_VII_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Badi VII[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Badi VII[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Badi VII[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -2801,7 +2799,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARQUQ_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Barquq[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Barquq[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Barquq[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -2892,7 +2890,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BATRADZ_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Batradz[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Batradz[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Batradz[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -2977,7 +2975,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BATU_KHAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Batu Khan[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Batu Khan[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Batu Khan[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -3059,7 +3057,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEAR_KNEE_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Bear Knee[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Bear Knee[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Bear Knee[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -3125,7 +3123,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BENAZIR_BHUTTO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Benazir Bhutto[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Benazir Bhutto[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Bhutto Bénazir[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -3138,7 +3136,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BENCOMO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Bencomo[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Bencomo[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Bencomo[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -3197,7 +3195,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BENJAMIN_MKAPA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Benjamin Mkapa[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Benjamin Mkapa[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Benjamin Mkapa[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -3210,7 +3208,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEOWULF_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Beowulf[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Beowulf[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Beowulf[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -3615,7 +3613,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOUDICA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Boudica[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Boudica[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Boudica[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -3664,7 +3662,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BRENNUS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Brennus[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Brennus[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Brennus[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -3720,7 +3718,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BROKEN_ARROW_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Broken Arrow[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Broken Arrow[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Broken Arrow[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -3838,7 +3836,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BULAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Bulan[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Bulan[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Bulan[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -3872,7 +3870,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BURHANUDDIN_RABBANI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Burhanuddin Rabbani[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Burhanuddin Rabbani[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Burhanuddin Rabbani[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -3938,7 +3936,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CACAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Cacan[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Cacan[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Cacan[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -4099,7 +4097,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANACUMACO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Canacumaco[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Canacumaco[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Canacumaco[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -4240,7 +4238,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAO_CAO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Cao Cao[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Cao Cao[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Cao Cao[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -4642,7 +4640,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CENTEOTL_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Centeotl[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Centeotl[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Centeotl[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -4672,7 +4670,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHAGATAI_KHAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Chagatai Khan[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Chagatai Khan[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Chagatai Khan[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -4805,7 +4803,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHARLES_WILKES_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Charles Wilkes[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Charles Wilkes[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Charles Wilkes[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -4996,7 +4994,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHROCUS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Chrocus[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Chrocus[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Chrocus[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -5649,7 +5647,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CRISTINA_CALDERON_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Cristina Calderon[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Cristina Calderon[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Cristina Calderon[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -5698,7 +5696,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CROESUS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Croesus[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Croesus[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Croesus[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -5905,7 +5903,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CYAXARES_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Cyaxares[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Cyaxares[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Cyaxares[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -6048,7 +6046,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAMBALLA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Damballa[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Damballa[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Damballa[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -6061,7 +6059,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DARDO_ROCHA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Dardo Rocha[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Dardo Rocha[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Dardo Rocha[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -6149,7 +6147,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DECEBALUS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Decebalus[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Decebalus[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Decebalus[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -6162,7 +6160,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEDAN_KIMATHI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Dedan Kimathi[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Dedan Kimathi[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Dedan Kimathi[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -6192,7 +6190,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEMETRIUS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Demetrius[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Demetrius[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Démétrius[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -6304,7 +6302,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEWI_SARTIKA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Dewi Sartika[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Dewi Sartika[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Dewi Sartika[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -6397,7 +6395,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DIPONEGORO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Diponegoro[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Diponegoro[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Diponegoro[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -6431,7 +6429,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DIVICO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Divico[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Divico[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Divico[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -6532,7 +6530,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOS_SANTOS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Dos Santos[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Dos Santos[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Dos Santos[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -7130,7 +7128,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EDUARDO_ANGELIM_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Eduardo Angelim[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Eduardo Angelim[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Eduardo Angelim[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -7143,7 +7141,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EGUSHAWA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Egushawa[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Egushawa[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Egushawa[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -7262,7 +7260,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELPIDIO_QUIRINO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Elpidio Quirino[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Elpidio Quirino[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Elpidio Quirino[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -7339,7 +7337,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENDUBIS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Endubis[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Endubis[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Endubis[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -7574,7 +7572,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EVO_MORALES_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Evo Morales[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Evo Morales[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Evo Morales[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -8195,7 +8193,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FAKHR_EL_DIN_II_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Fakhr el Din II[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Fakhr el Din II[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Fakhr el Din II[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -8253,23 +8251,18 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[ICON_BULLET]Requires a state religion
 [ICON_BULLET]+2 XP from every non-state religion in the city
 [ICON_BULLET]Purges non-state religions when capturing a city (but no holy cities)</English>
-
 		<French>[ICON_BULLET]Requiert une religion d'Etat
 [ICON_BULLET]+2 XP pour chaque autre religion dans la ville.
 [ICON_BULLET]Purge les religions non étatiques lors de la capture d'une ville (mais pas les villes saintes)</French>
-
 		<German>[ICON_BULLET]Benötigt eine Staatsreligion
 [ICON_BULLET]+2 XP von jeder Nicht-Staatsreligion in der Staat
 [ICON_BULLET]Vernichtet alle Nicht-Staatsreligionen wenn er eine Stadt einnimmt (aber keine heiligen Städte)</German>
-
 		<Italian>[ICON_BULLET]Richiede una religione di stato
 [ICON_BULLET]+2 XP da ogni religione non di stato in una città
 [ICON_BULLET]Elimina le religioni non di stato quando cattura una città (ma non nelle Città Sante)</Italian>
-
 		<Polish>[ICON_BULLET]Wymaga religii państwowej
 [ICON_BULLET]+2 XP za każdą religię nie-państwową w mieście
 [ICON_BULLET]Usuwa nie-państwową religię kiedy miasto zostaje podbite (oprócz Świetych Miast)</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FANATIC_PEDIA</Tag>
@@ -8287,7 +8280,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FARUK_IMAM_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Faruk Imam[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Faruk Imam[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Faruk Imam[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -8343,7 +8336,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FERDINAND_II_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Ferdinand II[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Ferdinand II[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Ferdinand II[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -9409,7 +9402,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GANDR_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Gandr[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Gandr[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Gandr[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -9422,7 +9415,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GAOZONG_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Gaozong[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Gaozong[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Gaozong[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -9583,7 +9576,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GENSERIC_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Genseric[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Genseric[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Genseric[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -9596,7 +9589,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GEORGE_CADLE_PRICE_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]George Cadle Price[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]George Cadle Price[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]George Cadle Price[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -9707,7 +9700,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GOLIATH_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Goliath[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Goliath[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Goliath[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -10477,7 +10470,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUAJIRO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Guajiro[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Guajiro[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Guajiro[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -10763,7 +10756,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUSTAVUS_ADOLPHUS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Gustavus Adolphus[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Gustavus Adolphus[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Gustavus Adolphus[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -10900,7 +10893,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HALAKWULUP_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Halakwulup[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Halakwulup[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Halakwulup[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -11055,7 +11048,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAYREDDIN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Hayreddin[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Hayreddin[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Hayreddin[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -11332,7 +11325,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HENDRIK_WITBOOI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Hendrik Witbooi[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Hendrik Witbooi[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Hendrik Witbooi[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -11414,7 +11407,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HENRY_THE_LION_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Henry the Lion[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Henry the Lion[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Henry the Lion[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -11951,7 +11944,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUANTAR_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Huantar[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Huantar[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Huantar[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -12102,7 +12095,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUYAN_ZHUO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Huyan Zhuo[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Huyan Zhuo[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Huyan Zhuo[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -12202,7 +12195,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IAN_SMITH_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Ian Smith[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Ian Smith[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Ian Smith[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -12301,7 +12294,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IMAM_SHAMIL_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Imam Shamil[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Imam Shamil[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Missionnaire musulman Shamil[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -12435,22 +12428,16 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_INQUISITOR_HELP</Tag>
 		<English>[ICON_BULLET]Requires active State Religion
 [ICON_BULLET]Intolerant civic must be active</English>
-
 		<French>[ICON_BULLET]Requiert une Religion d'Etat
 [ICON_BULLET]La doctrine 'Intolérance' doit être active</French>
-
 		<German>[ICON_BULLET]Benötigt eine aktive Staatsreligion
 [ICON_BULLET]Die Gesellschaftsform "Intolerant" muss aktiv sein</German>
-
 		<Italian>[ICON_BULLET]Richiede una Religione di stato
 [ICON_BULLET]La forma di governo Intollerante dev'essere attiva</Italian>
-
 		<Spanish>[ICON_BULLET]Requiere una religión oficial
 [ICON_BULLET]Requiere el principio Intolerancia activo</Spanish>
-
 		<Polish>[ICON_BULLET]Wymaga aktywnej Religii Narodowej
 [ICON_BULLET]Doktryna nietolerancja musi być aktywna</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERCEPT_AIRCRAFT_SPY</Tag>
@@ -12644,7 +12631,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ISMAIL_I_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Ismail I[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Ismail I[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Ismail I[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -12794,7 +12781,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JACHAL_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Jachal[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Jachal[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Jachal[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -12807,7 +12794,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JACOB_KETTLER_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Jacob Kettler[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Jacob Kettler[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Jacob Kettler[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -12889,7 +12876,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAHAI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Jahai[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Jahai[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Jahai[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -12916,7 +12903,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAMES_BROOKE_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]James Brooke[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]James Brooke[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]James Brooke[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -12929,7 +12916,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAMES_I_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]James I[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]James I[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]James I[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -12942,7 +12929,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAN_FRANS_WILLEMS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Jan Frans Willems[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Jan Frans Willems[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Jan Frans Willems[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -12984,7 +12971,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JASIR_ARAFAT_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Jasir Arafat[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Jasir Arafat[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Jasir Arafat[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13148,7 +13135,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JIMMU_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Jimmu[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Jimmu[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Jimmu[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13185,7 +13172,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOHN_FRUM_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]John Frum[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]John Frum[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]John Frum[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13233,7 +13220,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_BALLIVIAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Jose Ballivian[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Jose Ballivian[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Jose Ballivian[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13246,7 +13233,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_DE_FRANCIA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Jose de Francia[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Jose de Francia[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Jose de Francia[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13259,7 +13246,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_MUJICA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Jose Mujica[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Jose Mujica[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Jose Mujica[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13272,7 +13259,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_RIZAL_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Jose Rizal[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Jose Rizal[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Jose Rizal[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13285,7 +13272,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOZE_PUCNIK_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Joze Pucnik[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Joze Pucnik[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Joze Pucnik[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13298,7 +13285,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JUAN_JOSE_FLORES_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Juan Jose Flores[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Juan Jose Flores[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Juan Jose Flores[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13311,7 +13298,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JUAN_MANUEL_DE_ROSAS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Juan Manuel de Rosas[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Juan Manuel de Rosas[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Juan Manuel de Rosas[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13362,7 +13349,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JULES_WIJDENBOSCH_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Jules Wijdenbosch[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Jules Wijdenbosch[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Jules Wijdenbosch[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13375,7 +13362,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JULIUS_CIVILIS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Julius Civilis[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Julius Civilis[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Julius Civilis[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13388,7 +13375,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JURI_ULUOTS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Juri Uluots[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Juri Uluots[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Juri Uluots[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13422,7 +13409,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KAI_HO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Kai Ho[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Kai Ho[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Kai Ho[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13492,7 +13479,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KALYAGA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Kalyaga[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Kalyaga[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Kalyaga[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13579,7 +13566,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KANGXI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Kangxi[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Kangxi[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Kangxi[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13592,7 +13579,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KANISHKA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Kanishka[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Kanishka[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Kanishka[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13651,7 +13638,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KARIM_KHAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Karim Khan[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Karim Khan[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Karim Khan[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13850,7 +13837,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHANUNG_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Khanung[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Khanung[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Khanung[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13863,7 +13850,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHARAVELA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Kharavela[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Kharavela[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Kharavela[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13876,7 +13863,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHARKHUL_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Kharkhul[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Kharkhul[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Kharkhul[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13947,7 +13934,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHOMEINI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Khomeini[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Khomeini[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Khomeini[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -13974,7 +13961,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHYAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Khyan[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Khyan[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Khyan[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -14219,7 +14206,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KORA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Kora[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Kora[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Kora[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -14260,7 +14247,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUBRAT_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Kubrat[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Kubrat[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Kubrat[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -14273,7 +14260,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUCHUM_KHAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Kuchum Khan[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Kuchum Khan[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Kuchum Khan[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -14286,7 +14273,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUCUMATZ_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Kucumatz[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Kucumatz[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Kucumatz[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -14299,7 +14286,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUJULA_KADPHISES_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Kujula Kadphises[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Kujula Kadphises[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Kujula Kadphises[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -14396,7 +14383,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KWAME_NKRUMAH_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Kwame Nkrumah[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Kwame Nkrumah[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Kwame Nkrumah[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -14430,7 +14417,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAMBOGA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Lamboga[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Lamboga[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Lamboga[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -14494,7 +14481,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAPU_LAPU_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Lapu Lapu[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Lapu Lapu[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Lapu Lapu[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -14507,7 +14494,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LARS_PORSENA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Lars Porsena[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Lars Porsena[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Lars Porsena[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -14608,7 +14595,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEOPOLD_SENGHOR_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Leopold Senghor[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Leopold Senghor[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Leopold Senghor[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -14903,7 +14890,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIUTPRAND_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Liutprand[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Liutprand[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Liutprand[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -15125,7 +15112,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LOPHORON_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Lophoron[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Lophoron[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Lophoron[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -15181,7 +15168,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LORD_OF_SIPAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Lord of Sipan[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Lord of Sipan[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Seigneur de Sipan[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -15233,7 +15220,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUDOVIT_STUR_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Ludovit Stur[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Ludovit Stur[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Ludovit Stur[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -15337,7 +15324,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUTAKAWI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Lutakawi[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Lutakawi[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Lutakawi[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -15506,7 +15493,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAHAQUE_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Mahaque[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Mahaque[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Mahaque[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -15609,7 +15596,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MALGAQ_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Malgaq[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Malgaq[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Malgaq[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -15719,7 +15706,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANDAWUY_YUNUPINGU_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Mandawuy Yunupingu[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Mandawuy Yunupingu[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Mandawuy Yunupingu[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -15854,7 +15841,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARANON_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Maranon[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Maranon[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Maranon[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -15959,7 +15946,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASINISSA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Masinissa[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Masinissa[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Masinissa[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -15990,7 +15977,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATAAFA_IOSEFO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Mata'afa Iosefo[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Mata'afa Iosefo[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Mata'afa Iosefo[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -16003,7 +15990,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATAPANG_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Mata'pang[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Mata'pang[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Mata'pang[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -16029,7 +16016,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATOPE_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Matope[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Matope[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Matope[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -16042,7 +16029,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATO_TOPE_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Mato tope[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Mato tope[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Mato tope[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -16055,7 +16042,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAUES_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Maues[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Maues[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Maues[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -16572,7 +16559,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MINDAUGAS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Mindaugas[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Mindaugas[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Mindaugas[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -16585,7 +16572,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MINGBURNU_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Mingburnu[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Mingburnu[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Mingburnu[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -17025,7 +17012,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOHAMMED_II_TAIRAB_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Mohammed II Tairab[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Mohammed II Tairab[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Mohammed II Tairab[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -17108,25 +17095,21 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [ICON_BULLET]+4 XP from shrine of the state religion
 [ICON_BULLET]+4 XP if player is full member of the Apostolic Palace
 [ICON_BULLET]If defends successfully in a city, spreads the state religion if not present</English>
-
 		<French>[ICON_BULLET]Requiert une religion d'Etat
 [ICON_BULLET]+2 EXP pour chaque bâtiment religieux
 [ICON_BULLET]+4 EXP pour chaque sanctuaire religieux
 [ICON_BULLET]+4 EXP si le joueur membre du Palais Apostolique
 [ICON_BULLET]Lors de la défense d'une ville, propage automatiquement sa religion</French>
-
 		<German>[ICON_BULLET]Benötigt eine Staatsreligion
 [ICON_BULLET]+2 XP von jedem Gebäude der Staatsreligion
 [ICON_BULLET]+4 XP vom Schrein der Staatsreligion
 [ICON_BULLET]+4 XP falls der Spieler Vollmitglied des Apostolischen Palastes ist
 [ICON_BULLET]Falls er in einer Stadt erfolgreich verteidigt, wird die Staatsreligion verbreitet, falls diese nicht bereits anwesend ist</German>
-
 		<Italian>[ICON_BULLET]Richiede una Religione di stato
 [ICON_BULLET]+2 XP da ogni edificio della religione di stato
 [ICON_BULLET]+4 XP dal santuario della religione di stato
 [ICON_BULLET]+4 XP se il giocatore è un membro del Palazzo Apostolico
 [ICON_BULLET]Se si difende con successo in una città, diffonde automaticamente la religione in quella città se non è presente</Italian>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONK_PEDIA</Tag>
@@ -17371,7 +17354,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUHAMMAD_AHMAD_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Muhammad Ahmad[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Muhammad Ahmad[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Muhammad Ahmad[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -17384,7 +17367,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUHAMMAD_BIN_SAUD_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Muhammad bin Saud[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Muhammad bin Saud[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Muhammad bin Saud[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -17565,7 +17548,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAHUAL_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Nahual[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Nahual[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Nahual[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -17627,7 +17610,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NANDUAPAQUE_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Nanduapaque[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Nanduapaque[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Nanduapaque[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -17813,7 +17796,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAYLAMP_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Naylamp[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Naylamp[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Naylamp[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -18302,7 +18285,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NORBERTO_ROMUALDEZ_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Norberto Romualdez[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Norberto Romualdez[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Norberto Romualdez[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -18400,7 +18383,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUSTA_HUILLAC_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Nusta Huillac[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Nusta Huillac[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Nusta Huillac[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -18413,7 +18396,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OBAFEMI_AWOLOWO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Obafemi Awolowo[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Obafemi Awolowo[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Obafemi Awolowo[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -18610,7 +18593,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OHIGGINS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]O'Higgins[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]O'Higgins[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]O'Higgins[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -18650,7 +18633,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OJANA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Ojana[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Ojana[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Ojana[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -18754,7 +18737,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORANG_KAYA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Orang Kaya[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Orang Kaya[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Orang Kaya[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -19098,7 +19081,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PAAKA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Paaka[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Paaka[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Paaka[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -19111,7 +19094,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PACADEO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Pacadeo[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Pacadeo[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Pacadeo[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -19124,7 +19107,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PACHECO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Pacheco[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Pacheco[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Pacheco[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -19417,7 +19400,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PASTENE_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Pastene[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Pastene[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Pastene[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -19524,7 +19507,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PEDRO_DE_AGUADO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Pedro de Aguado[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Pedro de Aguado[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Pedro de Aguado[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -19537,7 +19520,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PEDRO_DE_ALVARADO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Pedro de Alvarado[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Pedro de Alvarado[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Pedro de Alvarado[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -19575,7 +19558,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PERAHU_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Perahu[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Perahu[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Perahu[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -19666,7 +19649,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PETER_CLAVER_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Peter Claver[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Peter Claver[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Peter Claver[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -19729,7 +19712,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PHILIBERT_TSIRANANA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Philibert Tsiranana[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Philibert Tsiranana[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Philibert Tsiranana[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -19743,7 +19726,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PHILIP_THE_BOLD_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Philip the Bold[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Philip the Bold[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Philip the Bold[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -19782,7 +19765,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIBELMAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Pibelman[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Pibelman[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Pibelman[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -19865,10 +19848,8 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_PIRATE_HELP</Tag>
 		<English>[ICON_BULLET]Can Capture Merchant Ships
 [ICON_BULLET]Can Loot Gold From Merchant Ships</English>
-
 		<French>[ICON_BULLET]Peut capturer des navires marchands
 [ICON_BULLET]Peut piller de l'or sur des navires marchands</French>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIYE</Tag>
@@ -19880,7 +19861,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIYE_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Piye[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Piye[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Piye[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -20219,7 +20200,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POMARE_IV_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Pomare IV[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Pomare IV[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Pomare IV[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -20521,7 +20502,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PRIEST_KING_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Priest King[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Priest King[COLOR_REVERT] is a hero unit.</English>
 		<French>Le [COLOR_UNIT_TEXT]Prêtre-Roi[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -20733,7 +20714,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QABOOS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Qaboos[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Qaboos[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Qaboos[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -20796,7 +20777,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUADO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Quado[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Quado[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Quado[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -20809,7 +20790,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUAHE_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Quahe[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Quahe[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Quahe[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -20955,7 +20936,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAFAEL_SOLARES_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Rafael Solares[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Rafael Solares[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Rafael Solares[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -21075,7 +21056,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAM_MOHAN_ROY_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Ram Mohan Roy[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Ram Mohan Roy[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Ram Mohan Roy[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -21264,7 +21245,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RED_CHIEF_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Red Chief[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Red Chief[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Red Chief[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -21292,7 +21273,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RED_SPEAR_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Red Spear[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Red Spear[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Red Spear[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -21351,11 +21332,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_RELIGIOUS_COMBAT_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% Religious Combat Modifier - applies against units that differ in religion to your unit - inverses to a penalty when foe is of same religion.</English>
 		<French>[ICON_BULLET]%D1_Amount%% Modificateur de combat religieux - s'applique aux unités dont la religion diffère de celle de votre unité - à l'inverse c'est une pénalité lorsque l'ennemi est de la même religion.</French>
+		<German>[ICON_BULLET]%D1_Amount%% Modifikator für Kämpfe gegen Einheiten anderer Religionen (Nebeneffekt: Nachteile in gleicher Höhe bei Kämpfen gegen Einheiten derselben Glaubensrichtung)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RELIGIOUS_COMBAT_MODIFIER_SHORT</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% Religious Combat Modifier</English>
 		<French>[ICON_BULLET]%D1_Amount%% Modificateur de combat religieux</French>
+		<German>[ICON_BULLET]%D1_Amount%% Modifikator für religiöse Auseinandersetzungen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REN_IMP_GUARD</Tag>
@@ -21464,6 +21447,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REQUIRES</Tag>
 		<English>Valid for[SPACE]</English>
+		<German>für[SPACE]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REQUIRES_STATE_RELIGION</Tag>
@@ -21638,7 +21622,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROBERT_LUI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Robert Lui[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Robert Lui[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Robert Lui[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -21767,7 +21751,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROLLO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Rollo[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Rollo[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Rollo[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -21917,7 +21901,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RUHANGA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Ruhanga[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Ruhanga[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Ruhanga[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -21965,7 +21949,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SABAH_AL_AHMAD_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Sabah Al Ahmad[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Sabah Al Ahmad[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Sabah Al Ahmad[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -22030,7 +22014,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SADDAM_HUSSEIN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Saddam Hussein[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Saddam Hussein[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Saddam Hussein[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -22043,7 +22027,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAID_BIN_SULTAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Said bin Sultan[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Said bin Sultan[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Said bin Sultan[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -22056,7 +22040,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAKAYENGA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Sakayenga[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Sakayenga[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Sakayenga[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -22089,7 +22073,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SALAWAT_YULAYEV_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Salawat Yulayev[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Salawat Yulayev[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Salawat Yulayev[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -22167,7 +22151,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SANDEH_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Sandeh[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Sandeh[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Sandeh[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -22555,7 +22539,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEKAQUAPTEWA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Sekaquaptewa[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Sekaquaptewa[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Sekaquaptewa[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -22674,7 +22658,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SERU_EPENISA_CAKOBAU_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Seru Epenisa Cakobau[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Seru Epenisa Cakobau[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Seru Epenisa Cakobau[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -22785,7 +22769,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHANG_YANG_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Shang Yang[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Shang Yang[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Shang Yang[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -22899,7 +22883,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAYBANI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Shaybani[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Shaybani[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Shaybani[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -22912,7 +22896,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHA_CO_PAY_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Sha-Co-Pay[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Sha-Co-Pay[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Sha-Co-Pay[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -22959,7 +22943,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHENGJUN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Shengjun[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Shengjun[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Shengjun[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -23013,7 +22997,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHER_ALI_KHAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Sher Ali Khan[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Sher Ali Khan[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Sher Ali Khan[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -23085,7 +23069,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHOSHENQ_I_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Shoshenq I[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Shoshenq I[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Shoshenq I[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -23098,7 +23082,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHUTTARNA_II_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Shuttarna II[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Shuttarna II[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Shuttarna II[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -23438,7 +23422,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SKANDERBEG_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Skanderbeg[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Skanderbeg[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Skanderbeg[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -24226,7 +24210,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STAMAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Staman[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Staman[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Staman[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -24409,7 +24393,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEFAN_RAZVAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Stefan Razvan[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Stefan Razvan[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Stefan Razvan[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -24422,7 +24406,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEPHEN_AUSTIN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Stephen Austin[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Stephen Austin[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Stephen Austin[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -24458,7 +24442,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEPHEN_UROS_IV_DUSAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Stephen Uros IV Dusan[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Stephen Uros IV Dusan[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Stephen Uros IV Dusan[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -24675,14 +24659,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - African Grey Parrot
 [SPACE][SPACE] * Myths of Sky and Birds, Bird Cage and Enclosure
 [SPACE][SPACE] * Feather Worker and Parrots</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Perroquets gris d'Afrique, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes et Perroquets</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Papuga Żako
 [SPACE][SPACE] * Mity Nieba i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza i Papugi</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICAN_PENGUIN</Tag>
@@ -24696,13 +24678,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - African Penguin
 [SPACE][SPACE] * Myths of Sea, Flightless Birds and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoires des pingouins d'Afrique, Mythes de la Mer, cage à oiseaux et enclos</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Pingwin Przylądkowy
 [SPACE][SPACE] * Mity Morza, Nielotnych Ptaków i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ASIANBEAR</Tag>
@@ -24720,13 +24700,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Moon Bear
 [SPACE][SPACE] * Myth - Bears, Bear Cage and Enclosure</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours Lune, Mythe des Ours, Cages et Enclos à Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Himalajski
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BARNOWL</Tag>
@@ -24744,14 +24722,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - Barn Owl
 [SPACE][SPACE] * Myths of Sky, Owls and Birds
 [SPACE][SPACE] * Bird Cage, Enclosure and Feather Worker</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Chouettes effraies, Mythes du ciel, des Chouettes, des oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Płomykówka Zwyczajna
 [SPACE][SPACE] * Mity Nieba, Sów i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BARREDOWL</Tag>
@@ -24768,13 +24744,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Barred Owl, Birds and Owls
 [SPACE][SPACE] * Myth of Sky; Bird Cage and Enclosure, Feather Worker</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Chouettes rayées, Oiseaux et Mythes du Ciel; Cage et Enclos d'oiseaux, Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]
 [SPACE][SPACE] * Mit, Opowieść i Historie - Puszczyk, Ptaków i Sów
 [SPACE][SPACE] * Mity Nieba, Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BLACKBEAR</Tag>
@@ -24792,13 +24766,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Black Bear
 [SPACE][SPACE] * Myth - Bears, Bear Cage and Enclosure</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours noirs, Mythes des Ours, Cages et Enclos des Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]
 [SPACE][SPACE] * Mit, Opowieść i Historie - Baribal
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BOOBY</Tag>
@@ -24811,14 +24783,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Blue-footed Booby and Sea Bird
 [SPACE][SPACE] * Myths of Sky and Birds, Bird Cage and Enclosure, Feather Worker</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Fous à pieds bleus et des oiseaux marins, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Głuptak Niebieskonogi i Ptaków Morskich
 [SPACE][SPACE] * Mity Nieba i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BROWN_BEAR</Tag>
@@ -24836,14 +24806,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Brown Bear
 [SPACE][SPACE] * Myth - Bears, Bear Cage and Enclosure</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours bruns, Mythes des Ours, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Brunatny
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza i Papugi</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAVE_BEAR</Tag>
@@ -24861,13 +24829,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Cave Bear and Bear
 [SPACE][SPACE] * Master Hunter, Bear Cage and Enclosure</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythes, Histoire(s)des Ours des cavernes et autres ours, Maitre Chasseur, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Jaskiniowy i Niedźwiedź
 [SPACE][SPACE] * Mistrz Łowiectwa
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EMU_HELP</Tag>
@@ -24876,19 +24842,16 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myths of Sky, Flightless Birds and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure
 [SPACE][SPACE] * Ratite Flock and Feather Worker</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT]:
 [SPACE][SPACE] * Mythes, Histoire(s) des Emeus
 [SPACE][SPACE] * Mythes du Sky, des Oiseaux
 [SPACE][SPACE] * Cage et Enclos d'oiseaux
 [SPACE][SPACE] * Troupeaux d'Autruches et Atelier des plumes</French>
-
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:'
 [SPACE][SPACE] * Mit, Opowieść i Historie - Emu
 [SPACE][SPACE] * Mity Nieba, Nielotnych Ptaków i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Stado Strusi i Warsztat Piórarza</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_PENGUIN</Tag>
@@ -24902,13 +24865,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - Galapagos Penguin
 [SPACE][SPACE] * Myths of Sea, Flightless Birds and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pingouins des Galapagos, Mythes de la Mer, des Oiseaux, Cage et Enclos d'oiseaux</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Pingwin Równikowy
 [SPACE][SPACE] * Mity Morza, Nielotnych Ptaków i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GRIZZLY</Tag>
@@ -24926,13 +24887,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Grizzly Bear
 [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Grizzlys, Mythe de l'Ours, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Grizzly
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HAAST_EAGLE_HELP</Tag>
@@ -24941,14 +24900,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myths of Sky, Phoenix and Paleolithic Bird
 [SPACE][SPACE] * Bird Cage, Enclosure, Master Hunter
 [SPACE][SPACE] * Hawking Hut and Feather Worker</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Aigles de Haast, Rapaces et Oiseaux, Mythe du Ciel, du Phénix et de L'oiseau Paléolithique, Cages et Enclos à Oiseaux, Maître Chasseur, Hutte du Fauconnier et Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Orła Haasta, Raptors i Ptaków
 [SPACE][SPACE] * Mity Nieba, Phoenix i Paleolithic Bird
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Mistrz Łowiectwa, Chatę Jastrzębia i Warsztat Piórarza</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HARPYEAGLE</Tag>
@@ -24967,14 +24924,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myths of Sky and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure
 [SPACE][SPACE] * Feather Worker and Parrots</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Harpies féroces, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes et Perroquets</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Harpia Wielka
 [SPACE][SPACE] * Mity Nieba i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza i Papugi</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HAWK_HELP</Tag>
@@ -24982,14 +24937,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - Hawk, Raptors and Birds
 [SPACE][SPACE] * Myths of Sky, Falcon Hut, Falconer
 [SPACE][SPACE] * Bird Cage, Enclosure, Feather Worker</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Faucons, Rapaces et Oiseaux, Mythe du Ciel, Fauconnier, Cages pour Oiseaux, Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Jastrzębia, Ptaków Drapieżnych i Ptaków
 [SPACE][SPACE] * Mity Nieba, Chatka Sokołów i Sokolnika
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OSTRICH_HELP</Tag>
@@ -24998,14 +24951,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myths of Sky, Flightless Birds and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure
 [SPACE][SPACE] * Ratite Flock and Feather Worker</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Autruches, Mythe du Ciel, des Oiseaux, Cages pour Oiseaux, Troupeau d'autruches et Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Strusia
 [SPACE][SPACE] * Mity Nieba, Nielotnych Ptaków i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Stado Strusi i Warsztat Piórarza</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PANDA_BEAR</Tag>
@@ -25023,13 +24974,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Panda Bear
 [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours Panda, Mythe de l'Ours, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Panda
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PARROT</Tag>
@@ -25044,14 +24993,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myths of Sky and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure
 [SPACE][SPACE] * Feather Worker and Parrots</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Perroquets, Mythes du ciel et des Oiseaux, Cages pour Oiseaux, Atelier des plumes et Perroquets</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Papuga
 [SPACE][SPACE] * Mity Nieba i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza i Papugi</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_POLARBEAR</Tag>
@@ -25069,13 +25016,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Polar Bear
 [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours Polaire, Mythe de l'Ours, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Polarny
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAVEN</Tag>
@@ -25089,14 +25034,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - Raven
 [SPACE][SPACE] * Myths of Sky, Scavengers and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure, Feather Worker</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Corbeaux, Mythe du Ciel, Charognards et Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Wrona
 [SPACE][SPACE] * Mity Nieba, Padlinożerców i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAZORBILL</Tag>
@@ -25110,14 +25053,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - Razorbill
 [SPACE][SPACE] * Myths of Sky, Sea, Sea Birds and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure, Feather Worker</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pingouins torda, Mythe du Ciel, Mer Oiseaux marins et Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Alka
 [SPACE][SPACE] * Mity Nieba, Morza, Morskich Ptaków i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REDPANDA</Tag>
@@ -25135,13 +25076,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Red Panda
 [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pandsa roux, Mythe de l'Ours, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Panda Czerwona
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RHEA_HELP</Tag>
@@ -25150,14 +25089,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myths of Sky, Flightless Birds and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure
 [SPACE][SPACE] * Ratite Flock and Feather Worker</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Nandou, Mythe du Ciel, des Oiseaux, Cage et Enclos d'oiseaux, Troupeau d'autruches et Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Nandu
 [SPACE][SPACE] * Mity Nieba, Nielotnych Ptaków i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Stado Strusi i Warsztat Piórarza</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEAEAGLE</Tag>
@@ -25171,14 +25108,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - Steller's Sea Eagle, Raptors and Birds
 [SPACE][SPACE] * Myths of Sky and Pheonix, Falcon Hut and Falconer
 [SPACE][SPACE] * Bird Cage, Enclosure and Feather Worker</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pigargues empereurs, Rapaces et Oiseaux, Mythe du Ciel et Phénix, Hutte du Fauconnier, Cage et Enclos d'oiseaux, Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Bielik Olbrzymi, Ptaków Drapieżnych i Ptaków
 [SPACE][SPACE] * Mity Nieba i Feniksa, Chatka Sokołów i Sokolnika
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SECRETARYBIRD</Tag>
@@ -25192,14 +25127,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - Secretary Bird
 [SPACE][SPACE] * Myths of Sky and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure, Feather Worker</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Messagers sagittaires, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Sekretarz
 [SPACE][SPACE] * Mity Nieba i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SLOTHBEAR</Tag>
@@ -25217,13 +25150,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Sloth Bear
 [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours lippu, Mythe de l'Ours, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Wargacz
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SPECTACLEDBEAR</Tag>
@@ -25241,13 +25172,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Spectacled Bear
 [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours à lunettes, Mythe de l'Ours, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Andyjski
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SUNBEAR</Tag>
@@ -25265,13 +25194,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Sun Bear
 [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours malais, Mythe de l'Ours, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Malajski
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBMARINE</Tag>
@@ -25489,7 +25416,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SVIATOSLAV_I_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Sviatoslav I[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Sviatoslav I[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Sviatoslav I[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -25625,7 +25552,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAEJO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Taejo[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Taejo[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Taejo[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -25688,7 +25615,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAIYIN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Taiyin[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Taiyin[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Taiyin[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -25797,7 +25724,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARIACURI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Tariacuri[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Tariacuri[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Tariacuri[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -25914,7 +25841,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAUTALUS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Tautalus[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Tautalus[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Tautalus[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -25962,7 +25889,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEHUELCHE_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Tehuelche[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Tehuelche[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Tehuelche[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -25989,7 +25916,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TERES_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Teres[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Teres[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Teres[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -26029,7 +25956,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TERUO_NAKAMURA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Teruo Nakamura[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Teruo Nakamura[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Teruo Nakamura[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -26082,7 +26009,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEUTA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Teuta[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Teuta[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Teuta[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -26127,7 +26054,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THAYENDANEGEA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Thayendanegea[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Thayendanegea[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Thayendanegea[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -26354,7 +26281,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TIMUR_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Timur[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Timur[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Timur[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -26395,7 +26322,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TISH_ATAL_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Tish atal[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Tish atal[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Tish atal[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -26499,7 +26426,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOMAS_MASARYK_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Tomas Masaryk[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Tomas Masaryk[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Tomas Masaryk[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -26512,7 +26439,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOMISLAV_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Tomislav[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Tomislav[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Tomislav[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -26892,7 +26819,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRIBAL_GUARDIAN_PEDIA</Tag>
 		<English>The Tribal Guardian protects your capital against all intruders. It refuses to leave the palace of the ruler.</English>
-		<German>In einer Umwelt voll wilder Raubtiere und feindlicher Horden konnten die frühen Menschen ihre Lager unmöglich ohne Bewachung zurücklassen. Wenn die Männer der Sippe zur Jagd aufbrachen, mussten einige als Wächter zurückbleiben, um Frauen, Kinder, Alte und Schwache, aber auch Nahrungsvorräte und Ressourcen vor Übergriffen zu schützen.</German>
+		<German>In einer Umwelt voll wilder Raubtiere und feindlicher Horden konnten die frühen Menschen ihre Lager unmöglich ohne Bewachung zurücklassen. Wenn die Männer der Sippe zur Jagd aufbrachen, mussten einige als Wächter zurückbleiben, um Frauen, Kinder, Alte und Schwache, aber auch Nahrungsvorräte und Ressourcen vor Übergriffen (auch aus den eigenen Reihen) zu schützen.</German>
 		<Italian>Il guardiano tribale protegge la tua capitale dagli intrusi; si rifuta di abbandonare il palazzo del capo.</Italian>
 		<Spanish>El Guardián tribal protege tu capital de los intrusos. Él rehúsa abandonar el palacio del líder.</Spanish>
 		<Polish>Gwardia (wł. guardia - straż) - początkowo straż przyboczna monarchy lub wodza, później doborowe oddziały liniowe. Stacjonowały głównie w stolicy państwa.</Polish>
@@ -26995,7 +26922,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRUGANINI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Truganini[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Truganini[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Truganini[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -27091,7 +27018,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUGAY_BEY_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Tugay Bey[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Tugay Bey[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Tugay Bey[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -27142,7 +27069,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUOBA_LIWEI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Tuoba Liwei[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Tuoba Liwei[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Tuoba Liwei[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -27155,7 +27082,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUPAC_KATARI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Tupac Katari[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Tupac Katari[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Tupac Katari[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -27301,7 +27228,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUXAWA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Tuxawa[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Tuxawa[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Tuxawa[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -27648,7 +27575,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_URHO_KEKKONEN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Urho Kekkonen[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Urho Kekkonen[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Urho Kekkonen[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -27707,7 +27634,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VAKHTANG_VI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Vakhtang VI[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Vakhtang VI[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Vakhtang VI[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -27748,7 +27675,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VASCO_DE_BALBOA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Vasco de Balboa[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Vasco de Balboa[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Vasco de Balboa[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -27762,7 +27689,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VERCINGETORIX_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Vercingetorix [COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Vercingetorix [COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Vercingétorix [COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -27872,7 +27799,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIRIATHUS_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Viriathus[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Viriathus[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Viriathus[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -27885,7 +27812,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VLAD_III_DRACULA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Vlad III Dracula[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Vlad III Dracula[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Vlad III Dracula[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -28039,7 +27966,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WANANO_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Wanano[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Wanano[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Wanano[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -28081,7 +28008,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WANLI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Wanli[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Wanli[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Wanli[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -28660,7 +28587,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WILLIAM_MARINER_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]William Mariner[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]William Mariner[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]William Mariner[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -28718,7 +28645,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WINNEMUCCA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Winnemucca[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Winnemucca[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Winnemucca[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -29172,7 +29099,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_XICOTENCATL_II_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Xicotencatl II[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Xicotencatl II[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Xicotencatl II[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -29252,7 +29179,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YAO_CHANG_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Yao Chang[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Yao Chang[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Yao Chang[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -29265,7 +29192,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YAWAR_RUNA_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Yawar Runa[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Yawar Runa[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Yawar Runa[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -29367,7 +29294,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YUPANQUI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Yupanqui[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Yupanqui[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Yupanqui[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
@@ -29430,7 +29357,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YU_THE_GREAT_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Yu the Great[COLOR_REVERT] is hero unit.</English>
+		<English>[COLOR_UNIT_TEXT]Yu the Great[COLOR_REVERT] is a hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Yu le Grand[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>

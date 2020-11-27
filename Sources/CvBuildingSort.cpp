@@ -6,8 +6,11 @@
 //  PURPOSE: Sorting classes for buildings
 //
 //------------------------------------------------------------------------------------------------
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
+#include "CvPlayer.h"
 
 bool BuildingSortBase::isLesserBuilding(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding1, BuildingTypes eBuilding2)
 {

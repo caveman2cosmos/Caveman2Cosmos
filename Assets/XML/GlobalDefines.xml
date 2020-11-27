@@ -118,10 +118,6 @@
 		<DefineTextVal>FEATURE_FALLOUT</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>GLOBAL_WARMING_TERRAIN</DefineName>
-		<DefineTextVal>TERRAIN_GRASSLAND</DefineTextVal>
-	</Define>
-	<Define>
 		<DefineName>CAPITAL_BUILDING</DefineName><!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
 		<DefineTextVal>BUILDING_PALACE</DefineTextVal>
 	</Define>

@@ -98,7 +98,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTELOPE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Antelope</English>
-		<French>Effet (Mythe de l'Antilope)</French>
+		<French>Effet - Mythe de l'Antilope</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAD_BOY_CAGE</Tag>
@@ -211,7 +211,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BOXING_KANGAROO</Tag>
-		<English>Boxing Kangaroo</English>
+		<English>Carnival - Boxing Kangaroo</English>
 		<French>
 			<Text>Kangourou Boxeur</Text>
 			<Gender>Male</Gender>
@@ -272,7 +272,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Bull</English>
-		<French>Effet (Mythe du Taureau)</French>
+		<French>Effet - Mythe du Taureau</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAMEL_HERD</Tag>
@@ -312,7 +312,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPUCHIN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Capuchin</English>
-		<French>Effet (Mythe du Capucin)</French>
+		<French>Effet - Mythe du Capucin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPUCHIN_STORIES</Tag>
@@ -322,7 +322,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPUCHIN_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Capuchin</English>
-		<French>Effet (Histoire du Capucin)</French>
+		<French>Effet - Histoire du Capucin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPUCHIN_STORY</Tag>
@@ -337,7 +337,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPYBARA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Capybara</English>
-		<French>Effet (Mythe du Cabiaï)</French>
+		<French>Effet - Mythe du Cabiaï</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPYBARA_STORIES</Tag>
@@ -347,7 +347,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPYBARA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Capybara</English>
-		<French>Effet (Histoire du Cabiaï)</French>
+		<French>Effet - Histoire du Cabiaï</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPYBARA_STORY</Tag>
@@ -408,7 +408,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHEETAH_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Cheetah</English>
-		<French>Effet (Mythe du Cheetah</French>
+		<French>Effet - Mythe du Cheetah</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHEETAH_STORIES</Tag>
@@ -418,7 +418,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHEETAH_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Cheetah</English>
-		<French>Effet (Histoire du Cheetah</French>
+		<French>Effet - Histoire du Cheetah</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHEETAH_STORY</Tag>
@@ -433,7 +433,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHIMPANZEE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Chimpanzee</English>
-		<French>Effet (Mythe du Chimpanzé)</French>
+		<French>Effet - Mythe du Chimpanzé</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHIMPANZEE_STORIES</Tag>
@@ -443,7 +443,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHIMPANZEE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Chimpanzee</English>
-		<French>Effet (Histoires de Chimpanzés)</French>
+		<French>Effet - Histoires de Chimpanzés</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHIMPANZEE_STORY</Tag>
@@ -473,7 +473,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COD_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Cod</English>
-		<French>Effet (Mythe de la Morue)</French>
+		<French>Effet - Mythe de la Morue</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COD_STORIES</Tag>
@@ -483,7 +483,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COD_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Cod</English>
-		<French>Effet (Histoire de la Morue)</French>
+		<French>Effet - Histoire de la Morue</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COD_STORY</Tag>
@@ -523,7 +523,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Crab</English>
-		<French>Effet (Mythe du Crabe)</French>
+		<French>Effet - Mythe du Crabe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_NETS</Tag>
@@ -548,7 +548,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Crab</English>
-		<French>Effet (Histoires de Crabes)</French>
+		<French>Effet - Histoires de Crabes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_STORY</Tag>
@@ -605,7 +605,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_MYTH_EFFECT</Tag>
 		<English>Myth Effect (T) - Deer</English>
-		<French>Effet (Mythe (T) du Cerf)</French>
+		<French>Effet - Mythe (T) du Cerf</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESERT_TORTOISE_MYTH</Tag>
@@ -615,7 +615,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESERT_TORTOISE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Desert Tortoise</English>
-		<French>Effet (Mythe de la Tortue du désert)</French>
+		<French>Effet - Mythe de la Tortue du désert</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESERT_TORTOISE_STORIES</Tag>
@@ -625,7 +625,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESERT_TORTOISE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Desert Tortoise</English>
-		<French>Effet (Histoire de la Tortue du désert)</French>
+		<French>Effet - Histoire de la Tortue du désert</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESERT_TORTOISE_STORY</Tag>
@@ -715,7 +715,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EAGLE_BALD_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Bald Eagle</English>
-		<French>Effet (Mythe du Pygargue à tête blanche)</French>
+		<French>Effet - Mythe du Pygargue à tête blanche</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EAGLE_BALD_STORIES</Tag>
@@ -725,7 +725,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EAGLE_BALD_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Bald Eagle</English>
-		<French>Effet (Histoire du Pygargue à tête blanche)</French>
+		<French>Effet - Histoire du Pygargue à tête blanche</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EAGLE_BALD_STORY</Tag>
@@ -750,7 +750,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTH_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Earth</English>
-		<French>Effet (Mythe de la Terre)</French>
+		<French>Effet - Mythe de la Terre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEPHANT_HERD</Tag>
@@ -1056,7 +1056,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MACKEREL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Mackerel</English>
-		<French>Effet (Mythe du Maquereau)</French>
+		<French>Effet - Mythe du Maquereau</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MACKEREL_STORIES</Tag>
@@ -1066,7 +1066,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MACKEREL_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Mackerel</English>
-		<French>Effet (Histoire du Maquereau)</French>
+		<French>Effet - Histoire du Maquereau</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MACKEREL_STORY</Tag>
@@ -1096,7 +1096,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARLIN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Marlin</English>
-		<French>Effet (Mythe du Marlin)</French>
+		<French>Effet - Mythe du Marlin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARLIN_STORIES</Tag>
@@ -1106,7 +1106,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARLIN_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Marlin</English>
-		<French>Effet (Histoire du Marlin)</French>
+		<French>Effet - Histoire du Marlin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARLIN_STORY</Tag>
@@ -1146,7 +1146,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARSUPIAL_MYTH_EFFECT</Tag>
 		<English>Myth Effect (T) - Marsupial</English>
-		<French>Effet (Mythe (T) - Marsupial)</French>
+		<French>Effet - Mythe (T) - Marsupial</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER</Tag>
@@ -1327,7 +1327,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Paleolithic Cat</English>
-		<French>Effet (Mythe du Félin Paléolithique)</French>
+		<French>Effet - Mythe du Félin Paléolithique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_MYTH</Tag>
@@ -1343,7 +1343,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Paleolithic Mammoth</English>
-		<French>Effet (Mythe du Mammouth Paléolithique)</French>
+		<French>Effet - Mythe du Mammouth Paléolithique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</Tag>
@@ -1359,7 +1359,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORIES_EFFECT</Tag>
 		<English>Effect - Stories Mammoths</English>
-		<French>Effet (Histoires des Mammouths)</French>
+		<French>Effet - Histoires des Mammouths</French>
 		<Polish>Efekt - Historie Mamutach</Polish>
 	</TEXT>
 	<TEXT>
@@ -1382,7 +1382,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Paleolithic Marsupial</English>
-		<French>Effet (Mythe du Marsupial Paléolithique)</French>
+		<French>Effet - Mythe du Marsupial Paléolithique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHOENIX_MYTH</Tag>
@@ -1467,7 +1467,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAYS_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Rays</English>
-		<French>Effet (Histoires des Raies)</French>
+		<French>Effet - Histoires des Raies</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAYS_STORY</Tag>
@@ -1482,7 +1482,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_EAGLE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Eagle Ray</English>
-		<French>Effet (Mythe de l'Aigle de mer)</French>
+		<French>Effet - Mythe de l'Aigle de mer</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_EAGLE_STORIES</Tag>
@@ -1492,7 +1492,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_EAGLE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Eagle Ray</English>
-		<French>Effet (Histoires de l'Aigle de mer)</French>
+		<French>Effet - Histoires de l'Aigle de mer</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_EAGLE_STORY</Tag>
@@ -1507,7 +1507,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_MANTA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Manta Ray</English>
-		<French>Effet (Mythe de la Raie manta)</French>
+		<French>Effet - Mythe de la Raie manta</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_MANTA_STORIES</Tag>
@@ -1517,7 +1517,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_MANTA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Manta Ray</English>
-		<French>Effet (Histoire de la Raie manta)</French>
+		<French>Effet - Histoire de la Raie manta</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_MANTA_STORY</Tag>
@@ -1646,18 +1646,18 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SCAVENGER_MYTH_EFFECT</Tag>
-		<English>Myth (S) - Scavenger</English>
+		<English>Myth Effect (S) - Scavenger</English>
 		<French>
-			<Text>Effet (Mythe (R) du Mendiant)</Text>
+			<Text>Effet - Mythe (R) du Mendiant</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
 		<Italian>
-			<Text>Mito (CP) dello spazzino</Text>
+			<Text>Effetto - Mito (CP) dello spazzino</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
-		<Polish>Mit (OJ) Padlinożerców</Polish>
+		<Polish>Efekt - Mit (OJ) Padlinożerców</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEAL_CAGE</Tag>
@@ -1672,7 +1672,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_MYTH</Tag>
-		<English>Myth - Seaturtle</English>
+		<English>Myth - Sea turtle</English>
 		<French>
 			<Text>Mythe de la Tortue de mer</Text>
 			<Gender>Male</Gender>
@@ -1687,8 +1687,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Seaturtle</English>
-		<French>Effet (Mythe de la Tortue de mer)</French>
+		<English>Myth Effect - Sea turtle</English>
+		<French>Effet - Mythe de la Tortue de mer</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_MYTH</Tag>
@@ -1708,7 +1708,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Sea</English>
-		<French>Effet (Mythe de la Mer)</French>
+		<French>Effet - Mythe de la Mer</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHARK_MYTH</Tag>
@@ -1752,7 +1752,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKY_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Sky</English>
-		<French>Effet (Mythe du Ciel)</French>
+		<French>Effet - Mythe du Ciel</French>
 		<Polish>Efekt Mitu - Niebo</Polish>
 	</TEXT>
 	<TEXT>
@@ -1814,7 +1814,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIGER_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Tiger</English>
-		<French>Effet (Mythe du Tigre)</French>
+		<French>Effet - Mythe du Tigre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER</Tag>
@@ -1877,7 +1877,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL</Tag>
-		<English>Trained Seal</English>
+		<English>Carnival - Trained Seal</English>
 		<French>Phoques dressés</French>
 		<Italian>
 			<Text>Foche ammaestrate</Text>
@@ -1904,7 +1904,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TUNA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Tuna</English>
-		<French>Effet (Mythe du Thon)</French>
+		<French>Effet - Mythe du Thon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TUNA_STORIES</Tag>
@@ -1914,7 +1914,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TUNA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Tuna</English>
-		<French>Effet (Histoire du Thon)</French>
+		<French>Effet - Histoire du Thon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNICORN_MYTH</Tag>
@@ -1970,7 +1970,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WEASEL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Weasel</English>
-		<French>Effet (Mythe de la Belette)</French>
+		<French>Effet - Mythe de la Belette</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_MYTH</Tag>

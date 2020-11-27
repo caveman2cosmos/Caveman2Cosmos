@@ -23,8 +23,7 @@ Calls out to the CvAppInterface Python module to check user options.
 
 void logMsg(const char* format, ...);
 
-bool isBug();
-void setIsBug(bool bIsBug);
+void setIsBug();
 
 bool getDefineBOOL(const char* xmlKey, bool bDefault = false);
 int getDefineINT(const char* xmlKey, int iDefault = 0);

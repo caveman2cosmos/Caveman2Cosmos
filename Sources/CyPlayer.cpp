@@ -1,6 +1,7 @@
-#include "CvCity.h"
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
 #include "CvPlayerAI.h"
 #include "CyArea.h"
 #include "CyCity.h"
@@ -359,16 +360,6 @@ int CyPlayer::countNumCoastalCitiesByArea(CyArea* pArea)
 	return m_pPlayer ? m_pPlayer->countNumCoastalCitiesByArea(pArea->getArea()) : -1;
 }
 
-int CyPlayer::getCurrentInflationCostModifier()
-{
-	return m_pPlayer ? m_pPlayer->getCurrentInflationCostModifier() : 0;
-}
-
-int CyPlayer::getEquilibriumInflationCostModifier()
-{
-	return m_pPlayer ? m_pPlayer->getEquilibriumInflationCostModifier() : 0;
-}
-
 int CyPlayer::countOwnedBonuses(int /*BonusTypes*/ eBonus)
 {
 	return m_pPlayer ? m_pPlayer->countOwnedBonuses((BonusTypes)eBonus) : NO_BONUS;
@@ -659,9 +650,9 @@ int CyPlayer::calculateInflationRate()
 	return m_pPlayer ? m_pPlayer->calculateInflationRate() : -1;
 }
 
-int64_t CyPlayer::calculateInflatedCosts()
+int64_t CyPlayer::getFinalExpense()
 {
-	return m_pPlayer ? m_pPlayer->calculateInflatedCosts() : -1;
+	return m_pPlayer ? m_pPlayer->getFinalExpense() : -1;
 }
 
 int CyPlayer::calculateGoldRate()

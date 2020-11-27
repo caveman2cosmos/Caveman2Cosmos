@@ -11,9 +11,13 @@
 
 #ifndef CV_BUILDING_LIST_H
 #define CV_BUILDING_LIST_H
+
 #include "CvBuildingFilters.h"
 #include "CvBuildingGrouping.h"
 #include "CvBuildingSort.h"
+
+class CvCity;
+class CvPlayer;
 
 class CvBuildingList
 {

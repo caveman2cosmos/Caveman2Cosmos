@@ -1,12 +1,7 @@
 #include "CvGameCoreDLL.h"
+#include "CvGlobals.h"
 
 #include <psapi.h>
-
-//
-// Discord RPC
-//
-#include "discord.h"
-C_DiscordRPCCommunication* pDiscord = nullptr;
 
 static CRITICAL_SECTION g_cPythonSection;
 #ifdef USE_INTERNAL_PROFILER
@@ -92,9 +87,6 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 				}
 			}
 		}
-
-		pDiscord = new C_DiscordRPCCommunication(dllDir);
-		discordWorkDirectory = dllDir;
 		}
 		break;
 	case DLL_THREAD_ATTACH:
@@ -487,7 +479,7 @@ void IFPEnd()
 	//OutputDebugString("IFPEnd\n");
 	QueryPerformanceFrequency(&freq);
 
-	g_DLL->logMsg("IFP_log.txt","Fn\tTime (mS)\tMain thread time (mS)\tAvg time\t#calls\tChild time\tSelf time\tParent\tAlternate Time\n");
+	gDLL->logMsg("IFP_log.txt","Fn\tTime (mS)\tMain thread time (mS)\tAvg time\t#calls\tChild time\tSelf time\tParent\tAlternate Time\n");
 
 	for(int i = 0; i < numSamples; i++ )
 	{
@@ -504,7 +496,7 @@ void IFPEnd()
 					(int)((1000*sampleList[i]->Accumulator[RESERVED_THREAD_SLOT].QuadPart)/freq.QuadPart) - (int)((1000*sampleList[i]->ChildrenSampleTime[RESERVED_THREAD_SLOT].QuadPart)/freq.QuadPart),
 					sampleList[i]->Parent == -1 ? "" : sampleList[sampleList[i]->Parent]->Name,
 					(int)((1000*sampleList[i]->AlternateSampleSetTime[RESERVED_THREAD_SLOT].QuadPart)/freq.QuadPart));
-			g_DLL->logMsg("IFP_log.txt",buffer);
+			gDLL->logMsg("IFP_log.txt",buffer);
 		}
 	}
 }

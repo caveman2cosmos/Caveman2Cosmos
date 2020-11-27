@@ -1,9 +1,13 @@
 // playerAI.cpp
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
+#include "CvBuildingInfo.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
+#include "CvDLLFAStarIFaceBase.h"
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					  08/21/09								jdog5000	  */
@@ -1292,16 +1296,15 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, const CvArea* area) const
 {
 	PROFILE_FUNC();
 
-	int iValue;
-	const bool bSetup = (getNumCities() == 0);
+	const bool bSetup = getNumCities() == 0;
 
-	if ( bClear )
+	if (bClear)
 	{
 		m_bCitySitesNotCalculated = true;
 
-		foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
+		foreach_(CvPlot* plotX, GC.getMap().plots())
 		{
-			if (bSetup || pLoopPlot->isRevealed(getTeam(), false))
+			if (bSetup || plotX->isRevealed(getTeam(), false))
 			{
 				pLoopPlot->clearFoundValue(getID());
 			}
@@ -1310,62 +1313,46 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, const CvArea* area) const
 	}
 	else
 	{
-		std::vector<CvArea*>	aUncalculatedAreas;
+		std::vector<CvArea*> aUncalculatedAreas;
 
 		//logBBAI("Player %d (%S) Update Found Values ...", getID(), getCivilizationDescription(0));
 
-		foreach_(CvPlot* pLoopPlot, GC.getMap().plots())
+		foreach_(CvPlot* plotX, GC.getMap().plots())
 		{
-			if ((area == NULL || pLoopPlot->area() == area) && (bSetup || pLoopPlot->isRevealed(getTeam(), false)))
+			CvArea* areaX = plotX->area();
+
+			if ((area == NULL || areaX == area) && (bSetup || plotX->isRevealed(getTeam(), false)))
 			{
 				bool bNeedsCalculating = false;
 
-				if (!pLoopPlot->area()->hasBestFoundValue(getID()))
+				if (areaX->hasBestFoundValue(getID())
 				{
-					bNeedsCalculating = true;
-					pLoopPlot->area()->setBestFoundValue(getID(),0);
-
-					aUncalculatedAreas.push_back(pLoopPlot->area());
+					if (algo::contains(aUncalculatedAreas, areaX))
+					{
+						bNeedsCalculating = true;
+					}
 				}
 				else
 				{
-					for(unsigned int iJ = 0; iJ < aUncalculatedAreas.size(); iJ++)
-					{
-						if ( aUncalculatedAreas[iJ] == pLoopPlot->area() )
-						{
-							bNeedsCalculating = true;
-							break;
-						}
-					}
+					bNeedsCalculating = true;
+					areaX->setBestFoundValue(getID(),0);
+					aUncalculatedAreas.push_back(areaX);
 				}
 
-				if ( bNeedsCalculating )
+				if (bNeedsCalculating)
 				{
-					int iResult = -1;
-					if(GC.getUSE_GET_CITY_FOUND_VALUE_CALLBACK())
-					{
-						iResult = Cy::call<int>(PYGameModule, "getCityFoundValue", Cy::Args() << getID() << pLoopPlot->getX() << pLoopPlot->getY());
-					}
+					const int iValue = AI_foundValue(plotX->getX(), plotX->getY());
 
-					if (iResult == -1)
-					{
-						iValue = AI_foundValue(pLoopPlot->getX(), pLoopPlot->getY());
-					}
-					else
-					{
-						iValue = iResult;
-					}
-
-					pLoopPlot->setFoundValue(getID(), iValue);
+					plotX->setFoundValue(getID(), iValue);
 
 					//if (iValue > 1)
 					//{
-					//	logBBAI("  City found value at (%d, %d) is %d", pLoopPlot->getX(), pLoopPlot->getY(), iValue);
+					//	logBBAI("  City found value at (%d, %d) is %d", plotX->getX(), plotX->getY(), iValue);
 					//}
 
-					if (iValue > pLoopPlot->area()->getBestFoundValue(getID()))
+					if (iValue > areaX->getBestFoundValue(getID()))
 					{
-						pLoopPlot->area()->setBestFoundValue(getID(), iValue);
+						areaX->setBestFoundValue(getID(), iValue);
 					}
 				}
 			}
@@ -1384,10 +1371,7 @@ void CvPlayerAI::AI_updateAreaTargets()
 			{
 				pLoopArea->setTargetCity(getID(), NULL);
 			}
-			else
-			{
-				pLoopArea->setTargetCity(getID(), AI_findTargetCity(pLoopArea));
-			}
+			else pLoopArea->setTargetCity(getID(), AI_findTargetCity(pLoopArea));
 		}
 	}
 }
@@ -1396,223 +1380,112 @@ void CvPlayerAI::AI_updateAreaTargets()
 // Returns priority for unit movement (lower values move first...)
 int CvPlayerAI::AI_movementPriority(const CvSelectionGroup* pGroup) const
 {
-	CvUnit* pHeadUnit;
-	int iCurrCombat;
-	int iBestCombat;
+	const CvUnit* pHeadUnit = pGroup->getHeadUnit();
 
-	pHeadUnit = pGroup->getHeadUnit();
-
-	if (pHeadUnit != NULL)
+	if (pHeadUnit == NULL)
 	{
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD							10/08/09		jdog5000		*/
-/* 																				*/
-/* 	Air AI, Espionage AI														*/
-/********************************************************************************/
-/* original BTS code
-		if (pHeadUnit->hasCargo())
-		{
-			if (pHeadUnit->specialCargo() == NO_SPECIALUNIT)
-			{
-				return 0;
-			}
-			else
-			{
-				return 1;
-			}
-		}
-
-		if (pHeadUnit->getDomainType() == DOMAIN_AIR)
-		{
-			return 2;
-		}
-
-		if ((pHeadUnit->AI_getUnitAIType() == UNITAI_WORKER) || (pHeadUnit->AI_getUnitAIType() == UNITAI_WORKER_SEA))
-		{
-			return 3;
-		}
-
-		if ((pHeadUnit->AI_getUnitAIType() == UNITAI_EXPLORE) || (pHeadUnit->AI_getUnitAIType() == UNITAI_EXPLORE_SEA))
-		{
-			return 4;
-		}
-
-		if (pHeadUnit->bombardRate() > 0)
-		{
-			return 5;
-		}
-
-		if (pHeadUnit->collateralDamage() > 0)
-		{
-			return 6;
-		}
-
-		if (pHeadUnit->canFight())
-		{
-			if (pHeadUnit->withdrawalProbability() > 20)
-			{
-				return 7;
-			}
-
-			if (pHeadUnit->withdrawalProbability() > 0)
-			{
-				return 8;
-			}
-
-			iCurrCombat = pHeadUnit->currCombatStr(NULL, NULL);
-			iBestCombat = (GC.getGame().getBestLandUnitCombat() * 100);
-
-			if (pHeadUnit->noDefensiveBonus())
-			{
-				iCurrCombat *= 3;
-				iCurrCombat /= 2;
-			}
-
-			if (pHeadUnit->AI_isCityAIType())
-			{
-				iCurrCombat /= 2;
-			}
-
-			if (iCurrCombat > iBestCombat)
-			{
-				return 9;
-			}
-			else if (iCurrCombat > ((iBestCombat * 4) / 5))
-			{
-				return 10;
-			}
-			else if (iCurrCombat > ((iBestCombat * 3) / 5))
-			{
-				return 11;
-			}
-			else if (iCurrCombat > ((iBestCombat * 2) / 5))
-			{
-				return 12;
-			}
-			else if (iCurrCombat > ((iBestCombat * 1) / 5))
-			{
-				return 13;
-			}
-			else
-			{
-				return 14;
-			}
-		}
-
-		return 15;
+		return 100; // Lowest priority
+	}
+	if (pHeadUnit->isSpy())
+	{
+		return 0; // Highest priority
 	}
 
-	return 16;
-*/
-		if( pHeadUnit->isSpy() )
-		{
-			return 0;
-		}
-
-		if (pHeadUnit->hasCargo())
-		{
-			if (pHeadUnit->specialCargo() == NO_SPECIALUNIT)
-			{
-				return 1;
-			}
-			else
-			{
-				return 2;
-			}
-		}
-
-		// Make fighters move before bombers, they are better at clearing out air defenses
-		if (pHeadUnit->getDomainType() == DOMAIN_AIR)
-		{
-			if( pHeadUnit->canAirDefend() )
-			{
-				return 3;
-			}
-			else
-			{
-				return 4;
-			}
-		}
-
-		if ((pHeadUnit->AI_getUnitAIType() == UNITAI_WORKER) || (pHeadUnit->AI_getUnitAIType() == UNITAI_WORKER_SEA))
-		{
-			return 5;
-		}
-
-		if ((pHeadUnit->AI_getUnitAIType() == UNITAI_EXPLORE) || (pHeadUnit->AI_getUnitAIType() == UNITAI_EXPLORE_SEA))
-		{
-			return 6;
-		}
-
-		if (pHeadUnit->getBombardRate() > 0)
-		{
-			return 7;
-		}
-
-		if (pHeadUnit->collateralDamage() > 0)
-		{
-			return 8;
-		}
-
-		if (pHeadUnit->canFight())
-		{
-			if (pHeadUnit->withdrawalProbability() > 20)
-			{
-				return 9;
-			}
-
-			if (pHeadUnit->withdrawalProbability() > 0)
-			{
-				return 10;
-			}
-
-			iCurrCombat = pHeadUnit->currCombatStr(NULL, NULL);
-			iBestCombat = (GC.getGame().getBestLandUnitCombat() * 100);
-
-			if (pHeadUnit->noDefensiveBonus())
-			{
-				iCurrCombat *= 3;
-				iCurrCombat /= 2;
-			}
-
-			if (pHeadUnit->AI_isCityAIType())
-			{
-				iCurrCombat /= 2;
-			}
-
-			if (iCurrCombat > iBestCombat)
-			{
-				return 11;
-			}
-			else if (iCurrCombat > ((iBestCombat * 4) / 5))
-			{
-				return 12;
-			}
-			else if (iCurrCombat > ((iBestCombat * 3) / 5))
-			{
-				return 13;
-			}
-			else if (iCurrCombat > ((iBestCombat * 2) / 5))
-			{
-				return 14;
-			}
-			else if (iCurrCombat > ((iBestCombat * 1) / 5))
-			{
-				return 15;
-			}
-			else
-			{
-				return 16;
-			}
-		}
-
-		return 17;
+	if (pHeadUnit->hasCargo())
+	{
+		// General transport before specialized
+		return pHeadUnit->specialCargo() == NO_SPECIALUNIT ? 1 : 2;
 	}
 
-	return 18;
-/********************************************************************************/
-/* BETTER_BTS_AI_MOD						   END							  */
-/********************************************************************************/
+	if (pHeadUnit->getDomainType() == DOMAIN_AIR)
+	{
+		// Fighters before bombers, they are better at clearing out air defenses
+		return pHeadUnit->canAirDefend() ? 3 : 4;
+	}
+
+	if (pHeadUnit->AI_getUnitAIType() == UNITAI_WORKER || pHeadUnit->AI_getUnitAIType() == UNITAI_WORKER_SEA)
+	{
+		return 5;
+	}
+
+	if (pHeadUnit->AI_getUnitAIType() == UNITAI_EXPLORE || pHeadUnit->AI_getUnitAIType() == UNITAI_EXPLORE_SEA)
+	{
+		return 6;
+	}
+
+	if (pHeadUnit->getBombardRate() > 0)
+	{
+		return 7;
+	}
+
+	if (pHeadUnit->collateralDamage() > 0)
+	{
+		return 8;
+	}
+
+	if (pHeadUnit->canFight())
+	{
+		// Skirmishers should harass before regular fighters engage
+		const int iWithdraw = pHeadUnit->withdrawalProbability();
+		if (iWithdraw > 49)
+		{
+			return 9;
+		}
+		if (iWithdraw > 39)
+		{
+			return 10;
+		}
+		if (iWithdraw > 29)
+		{
+			return 11;
+		}
+		if (iWithdraw > 19)
+		{
+			return 12;
+		}
+		if (iWithdraw > 9)
+		{
+			return 13;
+		}
+
+		int iCurrCombat = pHeadUnit->currCombatStr(NULL, NULL);
+
+		if (pHeadUnit->noDefensiveBonus())
+		{
+			// Move poor defenders first
+			iCurrCombat *= 3;
+			iCurrCombat /= 2;
+		}
+
+		if (pHeadUnit->AI_isCityAIType())
+		{
+			iCurrCombat /= 2;
+		}
+		const int iBestCombat = 100 * GC.getGame().getBestLandUnitCombat();
+
+		if (iCurrCombat > iBestCombat)
+		{
+			return 20;
+		}
+		if (iCurrCombat > iBestCombat * 4/5)
+		{
+			return 25;
+		}
+		if (iCurrCombat > iBestCombat * 3/5)
+		{
+			return 30;
+		}
+		if (iCurrCombat > iBestCombat * 2/5)
+		{
+			return 35;
+		}
+		if (iCurrCombat > iBestCombat / 5)
+		{
+			return 40;
+		}
+		return 45;
+	}
+	return 50;
 }
 
 
@@ -1731,8 +1604,8 @@ void CvPlayerAI::AI_unitUpdate()
 			for (size_t i = 0; i < groupList.size(); i++)
 			{
 				CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(groupList[i].second);
-				if (pLoopSelectionGroup
-					&& pLoopSelectionGroup->AI_update())
+
+				if (pLoopSelectionGroup && pLoopSelectionGroup->AI_update())
 				{
 					FAssert(pLoopSelectionGroup && pLoopSelectionGroup->getNumUnits() > 0);
 					break;
@@ -4273,7 +4146,7 @@ int CvPlayerAI::AI_costAsPercentIncome(int iExtraCost) const
 
 	// Afforess - iExtraCost lets us "extrapolate" our cost percents if we have extra future expenses
 	// iExtraCost should be between 0 (default) and some positive extra gold per turn cost to us
-	const int64_t iNetExpenses = calculateInflatedCosts() + std::max(0, -getGoldPerTurn()) + std::max(0, iExtraCost);
+	const int64_t iNetExpenses = getFinalExpense() + std::max(0, -getGoldPerTurn()) + std::max(0, iExtraCost);
 
 	// Koshling - if we can fund our ongoing expenses with no tax we never consider ourselves to be in financial difficulties
 	if (iBaseNetCommerce - getCommercePercent(COMMERCE_GOLD)*iTotalCommerce/100 > iNetExpenses)
@@ -14455,10 +14328,10 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	iValue += iTempValue;
 
-	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY) && kCivic.getInflationModifier() != 0)
+	if (kCivic.getInflationModifier() != 0)
 	{
 		//	Koshling - Use 100 turns of first order costs to judge inflation modifiers
-		iTempValue = static_cast<int>(-getCurrentInflationPerTurnTimes10000()*calculatePreInflatedCosts()*kCivic.getInflationModifier()/10000);
+		iTempValue = static_cast<int>(-getInflationMod10000()*calculatePreInflatedCosts()*kCivic.getInflationModifier()/10000);
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
 		{
 			logBBAI("Civic %S inflation modifier value %d",
@@ -25326,12 +25199,7 @@ int CvPlayerAI::AI_goldToUpgradeAllUnits(int iExpThreshold) const
 
 int CvPlayerAI::AI_goldTradeValuePercent() const
 {
-	int iValue = 2;
-	if (AI_isFinancialTrouble())
-	{
-		iValue += 1;
-	}
-	return 100 * iValue;
+	return AI_isFinancialTrouble() ? 300 : 200;
 
 }
 
@@ -26780,15 +26648,7 @@ void CvPlayerAI::AI_recalculateFoundValues(int iX, int iY, int iInnerRadius, int
 				}
 				else if (pLoopPlot->isRevealed(getTeam(), false))
 				{
-					const int iResult =
-					(
-						GC.getUSE_GET_CITY_FOUND_VALUE_CALLBACK()
-						?
-						Cy::call<int>(PYGameModule, "getCityFoundValue", Cy::Args() << getID() << pLoopPlot->getX() << pLoopPlot->getY())
-						:
-						0
-					);
-					const int iValue = iResult > 0 ? iResult : AI_foundValue(pLoopPlot->getX(), pLoopPlot->getY());
+					const int iValue = AI_foundValue(pLoopPlot->getX(), pLoopPlot->getY());
 
 					pLoopPlot->setFoundValue(getID(), iValue);
 
@@ -26808,7 +26668,7 @@ int CvPlayerAI::AI_getMinFoundValue() const
 	int iValue = 600;
 	const int iNetCommerce = 1 + getCommerceRate(COMMERCE_GOLD) + getCommerceRate(COMMERCE_RESEARCH) + std::max(0, getGoldPerTurn());
 
-	const int64_t iNetExpenses = calculateInflatedCosts() + std::max(0, -getGoldPerTurn());
+	const int64_t iNetExpenses = getFinalExpense() + std::max(0, -getGoldPerTurn());
 
 	iValue *= iNetCommerce;
 	iValue /= static_cast<int>(std::max<int64_t>(std::max(1, iNetCommerce / 4), iNetCommerce - iNetExpenses));

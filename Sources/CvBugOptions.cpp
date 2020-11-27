@@ -9,8 +9,20 @@ Created:	2009-01-21
 **********************************************************************/
 
 #include "CvGameCoreDLL.h"
+#include "CvGlobals.h"
+#include "FVariableSystem.h"
 
 bool g_bIsBug = false;
+
+void setIsBug()
+{
+	logMsg("isBug: true");
+	g_bIsBug = true;
+
+	// set the unit and building filters to default state once Bug is available
+	UnitFilterList::setFilterActiveAll(UNIT_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("RoMSettings__HideUntrainableUnits", false));
+	BuildingFilterList::setFilterActiveAll(BUILDING_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("RoMSettings__HideUnconstructableBuildings", false));
+}
 
 
 void logMsg(const char* format, ...)
@@ -21,22 +33,6 @@ void logMsg(const char* format, ...)
 }
 
 
-bool isBug()
-{
-	return g_bIsBug;
-}
-
-void setIsBug(bool bIsBug)
-{
-	logMsg("isBug: %s", bIsBug ? "true" : "false");
-	g_bIsBug = bIsBug;
-
-	// set the unit and building filters to default state once Bug is available
-	UnitFilterList::setFilterActiveAll(UNIT_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("RoMSettings__HideUntrainableUnits", false));
-	BuildingFilterList::setFilterActiveAll(BUILDING_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("RoMSettings__HideUnconstructableBuildings", false));
-}
-
-
 bool getDefineBOOL(const char* xmlKey, bool bDefault)
 {
 	int iResult = 0;
@@ -44,10 +40,7 @@ bool getDefineBOOL(const char* xmlKey, bool bDefault)
 	{
 		return iResult != 0;
 	}
-	else
-	{
-		return bDefault;
-	}
+	return bDefault;
 }
 
 int getDefineINT(const char* xmlKey, int iDefault)
@@ -57,10 +50,7 @@ int getDefineINT(const char* xmlKey, int iDefault)
 	{
 		return iResult;
 	}
-	else
-	{
-		return iDefault;
-	}
+	return iDefault;
 }
 
 float getDefineFLOAT(const char* xmlKey, float fDefault)
@@ -70,10 +60,7 @@ float getDefineFLOAT(const char* xmlKey, float fDefault)
 	{
 		return fResult;
 	}
-	else
-	{
-		return fDefault;
-	}
+	return fDefault;
 }
 
 const char * getDefineSTRING(const char* xmlKey, const char * szDefault)
@@ -83,10 +70,7 @@ const char * getDefineSTRING(const char* xmlKey, const char * szDefault)
 	{
 		return szResult;
 	}
-	else
-	{
-		return szDefault;
-	}
+	return szDefault;
 }
 
 
@@ -94,42 +78,36 @@ bool getBugOptionBOOL(const char* id, bool bDefault, const char* xmlKey)
 {
 	PROFILE_FUNC();
 
-	if (isBug())
+	if (g_bIsBug)
 	{
 		return Cy::call<bool>(PYBugOptionsModule, "getOptionBOOL", Cy::Args(id, bDefault));
 	}
-	else
+	if (!xmlKey)
 	{
 		CvString tmp;
-		if (!xmlKey)
-		{
-			tmp.append(OPTION_XML_PREFIX);
-			tmp.append(id);
-			xmlKey = tmp.c_str();
-		}
-		//logMsg("debug - getBugOptionBOOL %s", xmlKey);
-		return getDefineBOOL(xmlKey, bDefault);
+		tmp.append(OPTION_XML_PREFIX);
+		tmp.append(id);
+		xmlKey = tmp.c_str();
 	}
+	//logMsg("debug - getBugOptionBOOL %s", xmlKey);
+	return getDefineBOOL(xmlKey, bDefault);
 }
 
 int getBugOptionINT(const char* id, int iDefault, const char* xmlKey)
 {
 	PROFILE_FUNC();
 
-	if (isBug())
+	if (g_bIsBug)
 	{
 		return Cy::call<int>(PYBugOptionsModule, "getOptionINT", Cy::Args(id, iDefault));
 	}
-	else
+	if (!xmlKey)
 	{
 		CvString tmp;
-		if (!xmlKey)
-		{
-			tmp.append(OPTION_XML_PREFIX);
-			tmp.append(id);
-			xmlKey = tmp.c_str();
-		}
-		//logMsg("debug - getBugOptionINT %s", xmlKey);
-		return getDefineINT(xmlKey, iDefault);
+		tmp.append(OPTION_XML_PREFIX);
+		tmp.append(id);
+		xmlKey = tmp.c_str();
 	}
+	//logMsg("debug - getBugOptionINT %s", xmlKey);
+	return getDefineINT(xmlKey, iDefault);
 }
