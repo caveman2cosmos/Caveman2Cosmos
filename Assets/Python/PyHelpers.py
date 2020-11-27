@@ -271,20 +271,12 @@ class PyPlayer:
 	def getCityList(self):
 		' PyCitylist - list of PyCity player owns '
 		lCity = []
-		(loopCity, iter) = self.player.firstCity(False)
-		while(loopCity):
-			cityOwner = loopCity.getOwner()
-			if loopCity.getOwner() == self.getID(): #only valid cities
-				city = PyCity( self.getID(), loopCity.getID() )
-				lCity.append(city)
-			(loopCity, iter) = self.player.nextCity(iter, False)
+		for city in self.player.cities():
+			lCity.append(PyCity(self.getID(), city.getID()))
 		return lCity
 
 	def getNumCities(self):
 		return self.player.getNumCities()
-
-	def isFoundedFirstCity(self):
-		return self.player.isFoundedFirstCity()
 
 	def initCity(self, iX, iY):
 		' adds city to iX, iY '
@@ -292,8 +284,8 @@ class PyPlayer:
 
 	def getCapitalCity(self):
 		' PyCity - capital '
-		for city in self.getCityList():
-			if ( city.GetCy().isCapital() ):
+		for city in self.player.cities():
+			if city.isCapital():
 				return city
 
 	def getCity(self, iCity):
@@ -623,9 +615,7 @@ class PyCity:
 
 	def isCapital(self):
 		"bool - City is capital?"
-		if self.city.isCapital():
-			return True
-		return False
+		return self.city.isCapital()
 
 	def isHealth(self):
 		"bool - City is healthy?"

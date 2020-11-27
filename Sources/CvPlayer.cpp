@@ -16214,70 +16214,34 @@ void CvPlayer::doGold()
 {
 	PROFILE_FUNC()
 
-	bool bStrike;
-	int iGoldChange;
-	int iDisbandUnit;
-	int iI;
-
-/************************************************************************************************/
-/* Afforess					  Start		 12/21/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	if(GC.getUSE_CAN_DO_GOLD_CALLBACK())
-	{
-		if (Cy::call<bool>(PYGameModule, "doGold", Cy::Args() << getID()))
-		{
-			return;
-		}
-	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-	iGoldChange = calculateGoldRate();
-
-	//	KOSHLING - this assert appears to be out of date.  It gets hit and then handled by the strike
-	//	code immediately below which doesn't really have any other purpose
-	//FAssert(isHuman() || isBarbarian() || ((getGold() + iGoldChange) >= 0) || isAnarchy());
-
-	changeGold(iGoldChange);
-
-	bStrike = false;
+	changeGold(calculateGoldRate());
 
 	if (getGold() < 0)
 	{
 		setGold(0);
 
-		if (!isNPC() && (getNumCities() > 0))
+		if (!isNPC() && getNumCities() > 0)
 		{
-			bStrike = true;
-		}
-	}
+			setStrike(true);
+			changeStrikeTurns(1);
 
-	if (bStrike)
-	{
-		setStrike(true);
-		changeStrikeTurns(1);
-
-		if (getStrikeTurns() > 1)
-		{
-			iDisbandUnit = (getStrikeTurns() / 2); // XXX mod?
-
-			for (iI = 0; iI < iDisbandUnit; iI++)
+			if (getStrikeTurns() > 1)
 			{
-				disbandUnit(true);
+				const int iDisbandUnit = getStrikeTurns() / 2;
 
-				if (calculateGoldRate() >= 0)
+				for (int iI = 0; iI < iDisbandUnit; iI++)
 				{
-					break;
+					disbandUnit(true);
+
+					if (calculateGoldRate() >= 0)
+					{
+						break;
+					}
 				}
 			}
 		}
 	}
-	else
-	{
-		setStrike(false);
-	}
+	else setStrike(false);
 }
 
 

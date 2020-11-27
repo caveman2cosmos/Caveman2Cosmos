@@ -123,9 +123,6 @@ def calculateScore(argsList):
 def doHolyCity():
 	return GameUtils.doHolyCity()
 
-def doGold(argsList):
-	return GameUtils.doGold(argsList)
-
 def doResearch(argsList):
 	return GameUtils.doResearch(argsList)
 

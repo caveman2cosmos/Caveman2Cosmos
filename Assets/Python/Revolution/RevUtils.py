@@ -600,7 +600,7 @@ def isCanBribeCity(CyCity):
 	if iRevIdx > 1700:
 		return [False, 'Violent']
 
-	elif iRevIdx < 450 and CyCity.getLocalRevIndex() < 8:
+	if iRevIdx < 450 and CyCity.getLocalRevIndex() < 8:
 		return [False, 'No Need']
 
 	return [True, None]

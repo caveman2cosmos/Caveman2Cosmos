@@ -193,8 +193,7 @@ def onSetPlayerAlive( argsList ) :
 			if( playerI.isAlive() and playerI.getNumCities() > 0 ) :
 				playerIPy = PyPlayer( i )
 				cityList = playerIPy.getCityList()
-				for city in cityList :
-					pCity = city.GetCy()
+				for pCity in playerI.cities():
 					revCiv = RevData.getCityVal( pCity, "RevolutionCiv" )
 					revTurn = RevData.getCityVal( pCity, "RevolutionTurn" )
 					if( revCiv == pPlayer.getCivilizationType() and revTurn > 0 ) :
