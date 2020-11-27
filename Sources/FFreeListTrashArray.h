@@ -392,7 +392,7 @@ T* FFreeListTrashArray<T>::getAt(int iID) const
 
 	int iIndex = (iID & FLTA_INDEX_MASK);
 
-	assert(iIndex >= 0);
+	FAssert(iIndex >= 0);
 
 	if ((iIndex <= m_iLastIndex) && 
 		(m_pArray[iIndex].pData != NULL))
@@ -496,10 +496,10 @@ void FFreeListTrashArray<T>::load(T* pData)
 
 	int iIndex = (pData->getID() & FLTA_INDEX_MASK);
 
-	assert(iIndex < FLTA_MAX_BUCKETS);
-	assert(iIndex <= m_iLastIndex);
-	assert(m_pArray[iIndex].pData == NULL);
-	assert(m_pArray[iIndex].iNextFreeIndex == FFreeList::INVALID_INDEX);
+	FAssert(iIndex < FLTA_MAX_BUCKETS);
+	FAssert(iIndex <= m_iLastIndex);
+	FAssert(m_pArray[iIndex].pData == NULL);
+	FAssert(m_pArray[iIndex].iNextFreeIndex == FFreeList::INVALID_INDEX);
 
 	m_pArray[iIndex].pData = pData;
 	m_pArray[iIndex].iLastUsed = (pData->getID() & FLTA_ID_MASK);

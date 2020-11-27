@@ -999,7 +999,7 @@ protected:
 		// hash a block of memory
 		static inline size_t fnv1a(const void* data, size_t numBytes, size_t hash = Seed)
 		{
-			assert(data);
+			FAssert(data);
 			const uint8_t* ptr = (const uint8_t*)data;
 			while (numBytes--)
 				hash = fnv1a(*ptr++, hash);

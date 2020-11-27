@@ -1900,11 +1900,10 @@ class RevolutionWatchAdvisor:
 		return trendText
 
 	def getRevolutionStatusText(self, city):
-		value  = city.getRevolutionIndex()
 		critical = RevInstances.RevolutionInst.alwaysViolentThreshold
 		danger = RevInstances.RevolutionInst.revInstigatorThreshold
-		warning = RevInstances.RevolutionInst.revReadyFrac*RevInstances.RevolutionInst.revInstigatorThreshold
-		return self.parseText(value, warning, danger, critical)
+		warning = RevInstances.RevolutionInst.revReadyFrac * RevInstances.RevolutionInst.revInstigatorThreshold
+		return self.parseText(city.getRevolutionIndex(), warning, danger, critical)
 
 	def getRevHappinessVal(self, city):
 		revIdxHist = RevData.getCityVal(city,'RevIdxHistory')
@@ -2002,16 +2001,18 @@ class RevolutionWatchAdvisor:
 
 	def parseText(self, value, thresholdWarning, thresholdDanger, thresholdCritical):
 		outText = "-"
-		if( value >= thresholdCritical) :
+		if value >= thresholdCritical:
 			outText = localText.getText("TXT_ADVISOR_CRITICAL", ())
 			outText = localText.changeTextColor (outText, gc.getInfoTypeForString("COLOR_RED"))
-		elif( value >= thresholdDanger) :
+
+		elif value >= thresholdDanger:
 			outText = localText.getText("TXT_KEY_REV_WATCH_DANGER", ())
 			outText = localText.changeTextColor (outText, gc.getInfoTypeForString("COLOR_PLAYER_ORANGE"))
-		elif( value >= thresholdWarning) :
+
+		elif value >= thresholdWarning:
 			outText = localText.getText("TXT_KEY_REV_WATCH_WARNING", ())
 			outText = localText.changeTextColor (outText, gc.getInfoTypeForString("COLOR_YELLOW"))
-		else :
+		else:
 			outText = localText.getText("TXT_ADVISOR_POSITIVE", ())
 			outText = localText.changeTextColor (outText, gc.getInfoTypeForString("COLOR_GREEN"))
 		return outText
