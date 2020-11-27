@@ -1306,7 +1306,7 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, const CvArea* area) const
 		{
 			if (bSetup || plotX->isRevealed(getTeam(), false))
 			{
-				pLoopPlot->clearFoundValue(getID());
+				plotX->clearFoundValue(getID());
 			}
 		}
 		algo::for_each(GC.getMap().areas(), CvArea::fn::setBestFoundValue(getID(), -1));
@@ -1325,9 +1325,9 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, const CvArea* area) const
 			{
 				bool bNeedsCalculating = false;
 
-				if (areaX->hasBestFoundValue(getID())
+				if (areaX->hasBestFoundValue(getID()))
 				{
-					if (algo::contains(aUncalculatedAreas, areaX))
+					if (std::contains(aUncalculatedAreas, areaX))
 					{
 						bNeedsCalculating = true;
 					}
@@ -4891,7 +4891,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	if (kTech.isOpenBordersTrading() &&iHasMetCount > 0)
+	if (kTech.isOpenBordersTrading() && iHasMetCount > 0)
 	{
 		iValue += 500;
 

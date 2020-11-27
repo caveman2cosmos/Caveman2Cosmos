@@ -170,9 +170,6 @@ public:
 	void uninit();
 	void clearTypesMap();
 
-	template <class T>
-	void deleteVectorContent(std::vector<T*>& array);
-
 	CvDiplomacyScreen* getDiplomacyScreen() const 		{ return m_diplomacyScreen; }
 	CMPDiplomacyScreen* getMPDiplomacyScreen() const 	{ return m_mpDiplomacyScreen; }
 

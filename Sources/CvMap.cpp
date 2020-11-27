@@ -119,9 +119,14 @@ void CvMap::uninit()
 
 	m_areas.uninit();
 
-	GC.deleteVectorContent(m_pMapPlots);
-	GC.deleteVectorContent(m_viewports);
-
+	foreach_(CvPlot* plot, m_pMapPlots)
+	{
+		delete plot;
+	}
+	foreach_(CvViewport* viewport, m_viewports)
+	{
+		delete viewport;
+	}
 	m_viewports.clear();
 	m_iCurrentViewportIndex = -1;
 }

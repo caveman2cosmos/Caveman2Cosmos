@@ -6408,11 +6408,11 @@ void CvTeam::setForceRevealedBonus(BonusTypes eBonus, bool bRevealed)
 	}
 	else
 	{
-		for (std::vector<BonusTypes>::iterator it = m_aeRevealedBonuses.begin(); it != m_aeRevealedBonuses.end(); ++it)
+		foreach_(BonusTypes& it, m_aeRevealedBonuses)
 		{
-			if (*it == eBonus)
+			if (it == eBonus)
 			{
-				m_aeRevealedBonuses.erase(it);
+				m_aeRevealedBonuses.erase(&it);
 				break;
 			}
 		}
@@ -6432,15 +6432,7 @@ void CvTeam::setForceRevealedBonus(BonusTypes eBonus, bool bRevealed)
 
 bool CvTeam::isForceRevealedBonus(BonusTypes eBonus) const
 {
-	for (std::vector<BonusTypes>::const_iterator it = m_aeRevealedBonuses.begin(); it != m_aeRevealedBonuses.end(); ++it)
-	{
-		if (*it == eBonus)
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return std::contains(m_aeRevealedBonuses, eBonus);
 }
 
 int CvTeam::countNumHumanGameTurnActive() const

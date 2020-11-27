@@ -452,7 +452,16 @@ namespace algo {
 	}
 }
 
-//namespace std {
+namespace std {
+	// FUNCTION TEMPLATE contains
+	// test if an element exists in a range
+	template< class _Range, class Item_ >
+	bool contains(const _Range& rng, const Item_& item) {
+		foreach_(const Item_& i, rng)
+			if (i == item)
+				return true;
+		return false;
+	}
 //	// FUNCTION TEMPLATE all_of
 //	template <class _InIt, class _Pr>
 //	bool all_of(_InIt _First, _InIt _Last, _Pr _Pred) { // test if all elements satisfy _Pred
@@ -500,6 +509,6 @@ namespace algo {
 //		}
 //		return _Dest;
 //	}
-//};
+};
 
 #endif // algorithm2_h__
