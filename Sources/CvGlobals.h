@@ -2290,6 +2290,7 @@ public:
 		PROXY_TRACK("getNumGraphicLevels");
 		return NUM_GRAPHICLEVELS;
 	}
+	// code to cache infos was deleted. https://github.com/caveman2cosmos/Caveman2Cosmos/issues/751
 	DllExport bool readBuildingInfoArray(FDataStreamBase* pStream)		{ return false; }
 	DllExport bool readTechInfoArray(FDataStreamBase* pStream)			{ return false; }
 	DllExport bool readUnitInfoArray(FDataStreamBase* pStream)			{ return false; }
