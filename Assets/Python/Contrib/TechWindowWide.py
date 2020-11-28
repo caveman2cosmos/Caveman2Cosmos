@@ -79,7 +79,7 @@ class CvTechSplashScreen:
 #		self.H_QUOTE = self.H_UPPER_PANEL - (self.iMarginSpace * 2) - 38
 		self.H_QUOTE = self.H_UPPER_PANEL - (self.Y_QUOTE - self.Y_UPPER_PANEL) - (self.iMarginSpace * 2)
 
-#---Ge�ndert START - siehe original Datei -----------------
+#---Geändert START - siehe original Datei -----------------
 		# Lower Panel
 
 		self.X_LOWER_PANEL = self.X_MAIN_PANEL + self.iMarginSpace
@@ -105,7 +105,7 @@ class CvTechSplashScreen:
 		self.W_ALLOWS_PANEL = self.W_LOWER_PANEL/2 - (self.iMarginSpace)
 		self.Y_ALLOWS_PANEL2 = self.Y_SPECIAL_PANEL + self.H_ALLOWS_PANEL + self.H_ALLOWS_SPACE
 		self.Y_ALLOWS_PANEL3 = self.Y_SPECIAL_PANEL + 2 * (self.H_ALLOWS_PANEL + self.H_ALLOWS_SPACE)
-#---Ge�ndert ENDE ------------------------------------------
+#---Geändert ENDE ------------------------------------------
 
 		# Contents
 
