@@ -1,12 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-import PyHelpers
-import CvUtil
-import ScreenInput
 import CvScreenEnums
-
-PyPlayer = PyHelpers.PyPlayer
 
 # globals
 gc = CyGlobalContext()
@@ -58,30 +53,6 @@ class CvCorporationScreen:
 		screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
 		resolutionWidth = 1024
 		resolutionHeigth = 768
-## johny smith
-## this sets the resoultion below
-#		if (resolutionWidth >= 1440):
-#			self.HEADINGS_WIDTH = 204	# original = 199
-#			self.X_SCREEN = 718		# original = 500
-#			self.X_CANCEL = 717		# original = 552
-
-#		elif (resolutionWidth >= 1280):
-#			self.W_SCREEN = 1280
-#			self.HEADINGS_WIDTH = 182
-#			self.X_SCREEN = 638
-#			self.X_CANCEL = 637
-
-#		elif (resolutionWidth >= 1152):
-#			self.W_SCREEN = 1152
-#			self.HEADINGS_WIDTH = 164
-#			self.X_SCREEN = 574
-#			self.X_CANCEL = 573
-
-#		elif (resolutionWidth >= 1024):
-#			self.W_SCREEN = 1024
-#			self.HEADINGS_WIDTH = 146
-#			self.X_SCREEN = 510
-#			self.X_CANCEL = 509
 
 		self.W_SCREEN = resolutionWidth
 		self.H_SCREEN = resolutionHeigth
@@ -135,29 +106,15 @@ class CvCorporationScreen:
 		self.bScreenUp = False
 
 		self.CorporationScreenInputMap = {
-			self.CORPORATION_NAME		: self.CorporationScreenButton,
+			self.CORPORATION_NAME	: self.CorporationScreenButton,
 			self.EXIT_NAME			: self.Exit,
-			self.BUTTON_NAME		: self.CorporationScreenButton,
-			}
+			self.BUTTON_NAME		: self.CorporationScreenButton
+		}
 
 	def getScreen(self):
 		return CyGInterfaceScreen(self.SCREEN_NAME, CvScreenEnums.CORPORATION_SCREEN)
 
-	def setActivePlayer(self, iPlayer):
-
-		self.iActivePlayer = iPlayer
-		activePlayer = gc.getPlayer(iPlayer)
-
-		self.m_paeCurrentCorporations = []
-		self.m_paeDisplayCorporations = []
-		self.m_paeOriginalCorporations = []
-		for i in range (gc.getNumCorporationInfos()):
-			self.m_paeCurrentCorporations.append(activePlayer.getCorporations(i));
-			self.m_paeDisplayCorporations.append(activePlayer.getCorporations(i));
-			self.m_paeOriginalCorporations.append(activePlayer.getCorporations(i));
-
 	def interfaceScreen (self):
-
 		# johny smith ScreenTweaks LINE:
 		self.setValues()
 		screen = self.getScreen()
@@ -177,7 +134,7 @@ class CvCorporationScreen:
 		screen.setDimensions(screen.centerX(0), screen.centerY(0), self.W_SCREEN, self.H_SCREEN)
 
 		self.SCREEN_ART = ArtFileMgr.getInterfaceArtInfo("TECH_BG").getPath()
-		self.EXIT_TEXT = u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>"
+		self.EXIT_TEXT = "<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper()
 
 		self.iActivePlayer = gc.getGame().getActivePlayer()
 
@@ -260,7 +217,7 @@ class CvCorporationScreen:
 					if gc.getUnitInfo(iUnit).getHasBuilding(iBuilding):
 						szGreatPerson = gc.getUnitInfo(iUnit).getDescription()
 						break
-				screen.setLabelAt("", "CivicList", szGreatPerson, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_GREAT_PERSON, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+				screen.setLabelAt("", "CivicList", szGreatPerson, 1<<2, xLoop, self.Y_GREAT_PERSON, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 				xLoop += self.DX_CORPORATION
 
@@ -291,13 +248,13 @@ class CvCorporationScreen:
 
 				iRow = 0
 				for szList in szListLabels:
-					screen.setLabelAt("", "CivicList", szList, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_BONUSES + iRow, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.setLabelAt("", "CivicList", szList, 1<<2, xLoop, self.Y_BONUSES + iRow, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 					iRow += 16
 
 				xLoop += self.DX_CORPORATION
 
 		# Founded...
-		screen.setLabelAt("", "CivicList", localText.getText("TXT_KEY_RELIGION_SCREEN_DATE_FOUNDED", ()), CvUtil.FONT_LEFT_JUSTIFY, self.LEFT_EDGE_TEXT, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setLabelAt("", "CivicList", localText.getText("TXT_KEY_RELIGION_SCREEN_DATE_FOUNDED", ()), 1<<0, self.LEFT_EDGE_TEXT, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		# Date Founded:
 		xLoop = self.X_CORPORATION_START
@@ -307,12 +264,12 @@ class CvCorporationScreen:
 					szFounded = localText.getText("TXT_KEY_RELIGION_SCREEN_NOT_FOUNDED", ())
 				else:
 					szFounded = CyGameTextMgr().getTimeStr(gc.getGame().getCorporationGameTurnFounded(i), False)
-				screen.setLabelAt("", "CivicList", szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+				screen.setLabelAt("", "CivicList", szFounded, 1<<2, xLoop, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 				xLoop += self.DX_CORPORATION
 
 		# Headquarters
-		screen.setLabelAt("", "CivicList", localText.getText("TXT_KEY_CORPORATION_SCREEN_HEADQUARTERS", ()), CvUtil.FONT_LEFT_JUSTIFY, self.LEFT_EDGE_TEXT, self.Y_HEADQUARTERS, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setLabelAt("", "CivicList", localText.getText("TXT_KEY_CORPORATION_SCREEN_HEADQUARTERS", ()), 1<<0, self.LEFT_EDGE_TEXT, self.Y_HEADQUARTERS, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		xLoop = self.X_CORPORATION_START
 		for i in range(gc.getNumCorporationInfos()):
@@ -320,14 +277,14 @@ class CvCorporationScreen:
 				pHeadquarters = gc.getGame().getHeadquarters(i)
 				if pHeadquarters is None:
 					szFounded = u"-"
-					screen.setLabelAt("", "CivicList", szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_HEADQUARTERS, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.setLabelAt("", "CivicList", szFounded, 1<<2, xLoop, self.Y_HEADQUARTERS, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 				elif not pHeadquarters.isRevealed(gc.getPlayer(self.iActivePlayer).getTeam(), False):
 					szFounded = localText.getText("TXT_KEY_UNKNOWN", ())
-					screen.setLabelAt("", "CivicList", szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_HEADQUARTERS, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.setLabelAt("", "CivicList", szFounded, 1<<2, xLoop, self.Y_HEADQUARTERS, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 				else:
 					szFounded = pHeadquarters.getName()
-					screen.setLabelAt("", "CivicList", "(%s)" % gc.getPlayer(pHeadquarters.getOwner()).getCivilizationAdjective(0), CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_HEADQUARTERS+8, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-					screen.setLabelAt("", "CivicList", szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_HEADQUARTERS-8, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.setLabelAt("", "CivicList", "(%s)" % gc.getPlayer(pHeadquarters.getOwner()).getCivilizationAdjective(0), 1<<2, xLoop, self.Y_HEADQUARTERS+8, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.setLabelAt("", "CivicList", szFounded, 1<<2, xLoop, self.Y_HEADQUARTERS-8, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 				xLoop += self.DX_CORPORATION
 
 		self.iCorporationSelected = -1
@@ -361,64 +318,56 @@ class CvCorporationScreen:
 			else:
 				screen.setState(self.getCorporationButtonName(i), False)
 
-		iPlayer = PyPlayer(self.iActivePlayer)
-
-		cityList = iPlayer.getCityList()
-
 		# Loop through the cities
-		szLeftCities = u""
-		szRightCities = u""
-		for i in range(len(cityList)):
+		szLeftCities = ""
+		szRightCities = ""
+		for i, cityX in enumerate(gc.getPlayer(self.iActivePlayer).cities()):
 
 			bFirstColumn = (i % 2 == 0)
 
 			pLoopCity = cityList[i]
 
 			# Constructing the City name...
-			szCityName = u""
-			if pLoopCity.isCapital():
+			szCityName = ""
+			if cityX.isCapital():
 				szCityName += u"%c" % CyGame().getSymbolID(FontSymbols.STAR_CHAR)
 
-			lHeadquarters = pLoopCity.getHeadquarters()
-			if lHeadquarters:
-				for iI in range(len(lHeadquarters)):
-					szCityName += u"%c" %(gc.getCorporationInfo(lHeadquarters[iI]).getHeadquarterChar())
-
-			lCorporations = pLoopCity.getCorporations()
-			if lCorporations:
-				for iI in range(len(lCorporations)):
-					if lCorporations[iI] not in lHeadquarters:
-						szCityName += u"%c" %(gc.getCorporationInfo(lCorporations[iI]).getChar())
+			lCorporations = []
+			for iI in range(gc.getNumCorporationInfos()):
+				if cityX.isHasCorporation(iI):
+					lCorporations.append(iI)
+					if cityX.isHeadquartersByType(iI):
+						szCityName += u"%c" % gc.getCorporationInfo(iI).getHeadquarterChar()
+					else: szCityName += u"%c" % gc.getCorporationInfo(lCorporations[iI]).getChar()
 
 			szCityName += pLoopCity.getName()[0:17] + "  "
 
 			if (iLinkCorporation == -1):
 				bFirst = True
-				for iI in range(len(lCorporations)):
-					szTempBuffer = CyGameTextMgr().getCorporationHelpCity(lCorporations[iI], pLoopCity.GetCy(), False, False)
-					if (szTempBuffer):
-						if (not bFirst):
-							szCityName += u", "
+				for iI in lCorporations:
+					szTempBuffer = CyGameTextMgr().getCorporationHelpCity(iI, cityX, False, False)
+					if szTempBuffer:
+						if not bFirst:
+							szCityName += ", "
 						szCityName += szTempBuffer
 						bFirst = False
-			else:
-				szCityName += CyGameTextMgr().getCorporationHelpCity(iLinkCorporation, pLoopCity.GetCy(), False, True)
+
+			else: szCityName += CyGameTextMgr().getCorporationHelpCity(iLinkCorporation, cityX, False, True)
 
 			if bFirstColumn:
-				szLeftCities += u"<font=3>" + szCityName + u"</font>\n"
-			else:
-				szRightCities += u"<font=3>" + szCityName + u"</font>\n"
+				szLeftCities += "<font=3>" + szCityName + "\n"
+			else: szRightCities += "<font=3>" + szCityName + "\n"
 
-		screen.addMultilineText("Child" + self.AREA1_ID, szLeftCities, self.X_CITY1_AREA+5, self.Y_CITY_AREA+5, self.W_CITY_AREA-10, self.H_CITY_AREA-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-		screen.addMultilineText("Child" + self.AREA2_ID, szRightCities, self.X_CITY2_AREA+5, self.Y_CITY_AREA+5, self.W_CITY_AREA-10, self.H_CITY_AREA-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.addMultilineText("Child" + self.AREA1_ID, szLeftCities, self.X_CITY1_AREA+5, self.Y_CITY_AREA+5, self.W_CITY_AREA-10, self.H_CITY_AREA-10, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
+		screen.addMultilineText("Child" + self.AREA2_ID, szRightCities, self.X_CITY2_AREA+5, self.Y_CITY_AREA+5, self.W_CITY_AREA-10, self.H_CITY_AREA-10, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
 		# Header...
 		if self.iCorporationExamined != -1:
-			screen.setLabel(self.HEADER_NAME, "Background", u"<font=4b>" + gc.getCorporationInfo(self.iCorporationExamined).getDescription().upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_SCREEN, self.Y_TITLE, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+			screen.setLabel(self.HEADER_NAME, "Background", u"<font=4b>" + gc.getCorporationInfo(self.iCorporationExamined).getDescription().upper() + u"</font>", 1<<2, self.X_SCREEN, self.Y_TITLE, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		else:
-			screen.setLabel(self.HEADER_NAME, "Background", u"<font=4b>" + localText.getText("TXT_KEY_CORPORATION_SCREEN_TITLE", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_SCREEN, self.Y_TITLE, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+			screen.setLabel(self.HEADER_NAME, "Background", u"<font=4b>" + localText.getText("TXT_KEY_CORPORATION_SCREEN_TITLE", ()).upper() + u"</font>", 1<<2, self.X_SCREEN, self.Y_TITLE, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
-		screen.setText(self.EXIT_NAME, "Background", self.EXIT_TEXT, CvUtil.FONT_RIGHT_JUSTIFY, self.X_EXIT, self.Y_EXIT, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
+		screen.setText(self.EXIT_NAME, "Background", self.EXIT_TEXT, 1<<1, self.X_EXIT, self.Y_EXIT, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
 
 	def Exit(self, inputClass):
 		screen = self.getScreen()

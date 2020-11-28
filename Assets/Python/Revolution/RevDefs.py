@@ -31,9 +31,6 @@ sXMLSpiritual = 'TRAIT_SPIRITUAL'
 # Goodies
 sXMLGoodyMap = 'GOODY_MAP'
 
-# Improvements
-sXMLFort = 'IMPROVEMENT_FORT'
-
 # Terrain
 sXMLOcean = "TERRAIN_OCEAN"
 sXMLCoast = "TERRAIN_COAST"

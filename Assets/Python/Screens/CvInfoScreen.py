@@ -6,20 +6,16 @@
 from CvPythonExtensions import *
 
 import string
-#import time
 import math
 
-from PyHelpers import PyPlayer
-
-#BUG: Change Graphs - start
 import BugCore
 import BugUtil
 AdvisorOpt = BugCore.game.Advisors
 ScoreOpt = BugCore.game.Scores
-#BUG: Change Graphs - end
 
 # globals
-gc = CyGlobalContext()
+GC = CyGlobalContext()
+GAME = GC.getGame()
 ArtFileMgr = CyArtFileMgr()
 TRNSLTR = CyTranslator()
 
@@ -62,8 +58,8 @@ class CvInfoScreen:
 		self.W_BUTTON			= 200
 		self.H_BUTTON			= 30
 
-		self.graphEnd		= CyGame().getGameTurn() - 1
-		self.graphZoom		= self.graphEnd - CyGame().getStartTurn()
+		self.graphEnd		= GAME.getGameTurn() - 1
+		self.graphZoom		= self.graphEnd - GAME.getStartTurn()
 		self.nWidgetCount	= 0
 		self.nLineCount		= 0
 
@@ -386,13 +382,13 @@ class CvInfoScreen:
 		self.TEXT_DEMOGRAPHICS_SMALL = TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_TITLE", ())
 		self.TEXT_TOP_CITIES = u"<font=4>" + TRNSLTR.getText("TXT_KEY_WONDERS_SCREEN_TOP_CITIES_TEXT", ()).upper() + u"</font>"
 		self.TEXT_STATS = u"<font=4>" + TRNSLTR.getText("TXT_KEY_INFO_SCREEN_STATISTICS_TITLE", ()).upper() + u"</font>"
-		self.TEXT_GRAPH_YELLOW = u"<font=4>" + TRNSLTR.getColorText("TXT_KEY_INFO_GRAPH", (), gc.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>"
-		self.TEXT_DEMOGRAPHICS_YELLOW = u"<font=4>" + TRNSLTR.getColorText("TXT_KEY_DEMO_SCREEN_TITLE", (), gc.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>"
-		self.TEXT_TOP_CITIES_YELLOW = u"<font=4>" + TRNSLTR.getColorText("TXT_KEY_WONDERS_SCREEN_TOP_CITIES_TEXT", (), gc.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>"
-		self.TEXT_STATS_YELLOW = u"<font=4>" + TRNSLTR.getColorText("TXT_KEY_INFO_SCREEN_STATISTICS_TITLE", (), gc.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>"
+		self.TEXT_GRAPH_YELLOW = u"<font=4>" + TRNSLTR.getColorText("TXT_KEY_INFO_GRAPH", (), GC.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>"
+		self.TEXT_DEMOGRAPHICS_YELLOW = u"<font=4>" + TRNSLTR.getColorText("TXT_KEY_DEMO_SCREEN_TITLE", (), GC.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>"
+		self.TEXT_TOP_CITIES_YELLOW = u"<font=4>" + TRNSLTR.getColorText("TXT_KEY_WONDERS_SCREEN_TOP_CITIES_TEXT", (), GC.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>"
+		self.TEXT_STATS_YELLOW = u"<font=4>" + TRNSLTR.getColorText("TXT_KEY_INFO_SCREEN_STATISTICS_TITLE", (), GC.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>"
 
 		self.TEXT_SHOW_ALL_PLAYERS =  TRNSLTR.getText("TXT_KEY_SHOW_ALL_PLAYERS", ())
-		self.TEXT_SHOW_ALL_PLAYERS_GRAY = TRNSLTR.getColorText("TXT_KEY_SHOW_ALL_PLAYERS", (), gc.getInfoTypeForString("COLOR_PLAYER_GRAY")).upper()
+		self.TEXT_SHOW_ALL_PLAYERS_GRAY = TRNSLTR.getColorText("TXT_KEY_SHOW_ALL_PLAYERS", (), GC.getInfoTypeForString("COLOR_PLAYER_GRAY")).upper()
 
 		self.TEXT_ENTIRE_HISTORY = TRNSLTR.getText("TXT_KEY_INFO_ENTIRE_HISTORY", ())
 
@@ -417,15 +413,15 @@ class CvInfoScreen:
 		self.TEXT_HEALTH = TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_HEALTH_TEXT", ())
 		self.TEXT_IMP_EXP = TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_EXPORTS_TEXT", ()) + " - " + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_IMPORTS_TEXT", ())
 
-		self.TEXT_ECONOMY_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE", ())
-		self.TEXT_INDUSTRY_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY_MEASURE", ())
-		self.TEXT_AGRICULTURE_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE_MEASURE", ())
+		self.TEXT_ECONOMY_MEASURE = (u"  %c" % GAME.getSymbolID(FontSymbols.BULLET_CHAR)) + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE", ())
+		self.TEXT_INDUSTRY_MEASURE = (u"  %c" % GAME.getSymbolID(FontSymbols.BULLET_CHAR)) + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY_MEASURE", ())
+		self.TEXT_AGRICULTURE_MEASURE = (u"  %c" % GAME.getSymbolID(FontSymbols.BULLET_CHAR)) + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE_MEASURE", ())
 		self.TEXT_MILITARY_MEASURE = ""
-		self.TEXT_LAND_AREA_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_LAND_AREA_MEASURE", ())
+		self.TEXT_LAND_AREA_MEASURE = (u"  %c" % GAME.getSymbolID(FontSymbols.BULLET_CHAR)) + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_LAND_AREA_MEASURE", ())
 		self.TEXT_POPULATION_MEASURE = ""
 		self.TEXT_HAPPINESS_MEASURE = "%"
-		self.TEXT_HEALTH_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_POPULATION_MEASURE", ())
-		self.TEXT_IMP_EXP_MEASURE = (u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)) + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE", ())
+		self.TEXT_HEALTH_MEASURE = (u"  %c" % GAME.getSymbolID(FontSymbols.BULLET_CHAR)) + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_POPULATION_MEASURE", ())
+		self.TEXT_IMP_EXP_MEASURE = (u"  %c" % GAME.getSymbolID(FontSymbols.BULLET_CHAR)) + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE", ())
 
 		self.TEXT_TIME_PLAYED = TRNSLTR.getText("TXT_KEY_INFO_SCREEN_TIME_PLAYED", ())
 		self.TEXT_CITIES_BUILT = TRNSLTR.getText("TXT_KEY_INFO_SCREEN_CITIES_BUILT", ())
@@ -507,8 +503,8 @@ class CvInfoScreen:
 		self.iCityValues = [0, 0, 0, 0, 0]
 		self.pCityPointers = [0, 0, 0, 0, 0]
 
-		self.graphEnd = CyGame().getGameTurn() - 1
-		self.graphZoom = self.graphEnd - CyGame().getStartTurn()
+		self.graphEnd = GAME.getGameTurn() - 1
+		self.graphZoom = self.graphEnd - GAME.getStartTurn()
 		self.iShowingPlayer = -1
 
 		for t in self.RANGE_SCORES:
@@ -534,7 +530,7 @@ class CvInfoScreen:
 		screen.hideScreen()
 
 	def getLastTurn(self):
-		return (gc.getGame().getReplayMessageTurn(gc.getGame().getNumReplayMessages()-1))
+		return (GAME.getReplayMessageTurn(GAME.getNumReplayMessages()-1))
 
 	# Screen construction function
 	def showScreen(self, iTurn, iTabID, iEndGame):
@@ -545,9 +541,9 @@ class CvInfoScreen:
 		self.initText();
 
 		self.iStartTurn = 0
-		for iI in range(gc.getGameSpeedInfo(gc.getGame().getGameSpeedType()).getNumTurnIncrements()):
-			self.iStartTurn += gc.getGameSpeedInfo(gc.getGame().getGameSpeedType()).getGameTurnInfo(iI).iNumGameTurnsPerIncrement
-		self.iStartTurn *= gc.getEraInfo(gc.getGame().getStartEra()).getStartPercent()
+		for iI in range(GC.getGameSpeedInfo(GAME.getGameSpeedType()).getNumTurnIncrements()):
+			self.iStartTurn += GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGameTurnInfo(iI).iNumGameTurnsPerIncrement
+		self.iStartTurn *= GC.getEraInfo(GAME.getStartEra()).getStartPercent()
 		self.iStartTurn /= 100
 
 		self.iTurn = 0
@@ -584,27 +580,27 @@ class CvInfoScreen:
 
 		self.DEBUG_DROPDOWN_ID = ""
 
-		if (CyGame().isDebugMode()):
+		if (GAME.isDebugMode()):
 			self.DEBUG_DROPDOWN_ID = "InfoScreenDropdownWidget"
 			self.szDropdownName = self.DEBUG_DROPDOWN_ID
 			screen.addDropDownBoxGFC(self.szDropdownName, 22, 12, 300, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-			for j in range(gc.getMAX_PLAYERS()):
-				if (gc.getPlayer(j).isAlive()):
-					screen.addPullDownString(self.szDropdownName, gc.getPlayer(j).getName(), j, j, False )
+			for j in range(GC.getMAX_PLAYERS()):
+				if (GC.getPlayer(j).isAlive()):
+					screen.addPullDownString(self.szDropdownName, GC.getPlayer(j).getName(), j, j, False )
 
-		self.iActivePlayer = CyGame().getActivePlayer()
-		self.pActivePlayer = gc.getPlayer(self.iActivePlayer)
+		self.iActivePlayer = GAME.getActivePlayer()
+		self.pActivePlayer = GC.getPlayer(self.iActivePlayer)
 		self.iActiveTeam = self.pActivePlayer.getTeam()
-		self.pActiveTeam = gc.getTeam(self.iActiveTeam)
+		self.pActiveTeam = GC.getTeam(self.iActiveTeam)
 
 		# Always show graph if espionage is disabled
 		self.iDemographicsMission = -1
 		self.iInvestigateCityMission = -1
 		# See if Espionage allows graph to be shown for each player
-		for iMissionLoop in range(gc.getNumEspionageMissionInfos()):
-			if gc.getEspionageMissionInfo(iMissionLoop).isSeeDemographics():
+		for iMissionLoop in range(GC.getNumEspionageMissionInfos()):
+			if GC.getEspionageMissionInfo(iMissionLoop).isSeeDemographics():
 				self.iDemographicsMission = iMissionLoop
-			if gc.getEspionageMissionInfo(iMissionLoop).isInvestigateCity():
+			if GC.getEspionageMissionInfo(iMissionLoop).isInvestigateCity():
 				self.iInvestigateCityMission = iMissionLoop
 
 		self.determineKnownPlayers(iEndGame)
@@ -613,8 +609,8 @@ class CvInfoScreen:
 		self.iNumPermanentWidgets = self.nWidgetCount
 
 		# Reset variables
-		self.graphEnd	= CyGame().getGameTurn() - 1
-		self.graphZoom	= self.graphEnd - CyGame().getStartTurn()
+		self.graphEnd	= GAME.getGameTurn() - 1
+		self.graphZoom	= self.graphEnd - GAME.getStartTurn()
 
 #		self.iActiveTab = iTabID
 		if self.iActiveTab == -1:
@@ -680,7 +676,7 @@ class CvInfoScreen:
 			self.iGraphTabID = self.TOTAL_SCORE
 			self.iGraph_Smoothing_1in1 = 0
 			self.iGraph_Smoothing_7in1 = 0
-			self.bPlayerInclude = [True] * gc.getMAX_PC_PLAYERS()
+			self.bPlayerInclude = [True] * GC.getMAX_PC_PLAYERS()
 #BUG: Change Graphs - end
 
 		self.drawPermanentGraphWidgets()
@@ -705,8 +701,8 @@ class CvInfoScreen:
 		self.sGraph3in1 = self.getNextWidgetName()
 		self.sGraph1in1 = self.getNextWidgetName()
 
-		self.sPlayerTextWidget = [0] * gc.getMAX_PC_PLAYERS()
-		for i in range(gc.getMAX_PC_PLAYERS()):
+		self.sPlayerTextWidget = [0] * GC.getMAX_PC_PLAYERS()
+		for i in range(GC.getMAX_PC_PLAYERS()):
 			self.sPlayerTextWidget[i] = self.getNextWidgetName()
 
 		self.sShowAllWidget = self.getNextWidgetName()
@@ -745,7 +741,7 @@ class CvInfoScreen:
 
 			iX_ZOOM_DROPDOWN = 870
 			iY_ZOOM_DROPDOWN = 10
-			if CyGame().isDebugMode():
+			if GAME.isDebugMode():
 				iY_SMOOTH_DROPDOWN = iY_ZOOM_DROPDOWN + 50
 			else:
 				iY_SMOOTH_DROPDOWN = iY_ZOOM_DROPDOWN
@@ -790,8 +786,8 @@ class CvInfoScreen:
 		self.dropDownTurns = []
 		self.szTurnsDropdownWidget = self.getNextWidgetName()
 		screen.addDropDownBoxGFC(self.szTurnsDropdownWidget, iX_ZOOM_DROPDOWN, iY_ZOOM_DROPDOWN, self.W_ZOOM_DROPDOWN, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-		start = CyGame().getStartTurn()
-		now   = CyGame().getGameTurn()
+		start = GAME.getStartTurn()
+		now   = GAME.getGameTurn()
 		nTurns = now - start - 1
 		screen.addPullDownString(self.szTurnsDropdownWidget, self.TEXT_ENTIRE_HISTORY, 0, 0, False)
 		self.dropDownTurns.append(nTurns)
@@ -815,12 +811,12 @@ class CvInfoScreen:
 
 	def updateGraphButtons(self):
 		screen = self.getScreen()
-		screen.enable(self.graphLeftButtonID, self.graphEnd - self.graphZoom > CyGame().getStartTurn())
-		screen.enable(self.graphRightButtonID, self.graphEnd < CyGame().getGameTurn() - 1)
+		screen.enable(self.graphLeftButtonID, self.graphEnd - self.graphZoom > GAME.getStartTurn())
+		screen.enable(self.graphRightButtonID, self.graphEnd < GAME.getGameTurn() - 1)
 
 	def checkGraphBounds(self):
-		start = CyGame().getStartTurn()
-		end   = CyGame().getGameTurn() - 1
+		start = GAME.getStartTurn()
+		end   = GAME.getGameTurn() - 1
 		if (self.graphEnd - self.graphZoom < start):
 			self.graphEnd = start + self.graphZoom
 		if (self.graphEnd > end):
@@ -859,8 +855,8 @@ class CvInfoScreen:
 				self.scoreCache[scoreType].append(None)
 			else:
 				self.scoreCache[scoreType].append([])
-				firstTurn	= CyGame().getStartTurn()
-				thisTurn	= CyGame().getGameTurn()
+				firstTurn	= GAME.getStartTurn()
+				thisTurn	= GAME.getGameTurn()
 				turn	= firstTurn
 				while (turn <= thisTurn):
 					self.scoreCache[scoreType][p].append(self.computeHistory(scoreType, p, turn))
@@ -870,7 +866,7 @@ class CvInfoScreen:
 
 	def computeHistory(self, scoreType, iPlayer, iTurn):
 
-		iScore = gc.getPlayer(iPlayer).getScoreHistory(iTurn)
+		iScore = GC.getPlayer(iPlayer).getScoreHistory(iTurn)
 
 		if (iScore == 0):	# for some reason only the score is 0 when you're dead..?
 			return 0
@@ -878,20 +874,20 @@ class CvInfoScreen:
 		if (scoreType == self.TOTAL_SCORE):
 			return iScore
 		elif (scoreType == self.ECONOMY_SCORE):
-			return gc.getPlayer(iPlayer).getEconomyHistory(iTurn)
+			return GC.getPlayer(iPlayer).getEconomyHistory(iTurn)
 		elif (scoreType == self.INDUSTRY_SCORE):
-			return gc.getPlayer(iPlayer).getIndustryHistory(iTurn)
+			return GC.getPlayer(iPlayer).getIndustryHistory(iTurn)
 		elif (scoreType == self.AGRICULTURE_SCORE):
-			return gc.getPlayer(iPlayer).getAgricultureHistory(iTurn)
+			return GC.getPlayer(iPlayer).getAgricultureHistory(iTurn)
 		elif (scoreType == self.POWER_SCORE):
-			return gc.getPlayer(iPlayer).getPowerHistory(iTurn)
+			return GC.getPlayer(iPlayer).getPowerHistory(iTurn)
 		elif (scoreType == self.CULTURE_SCORE):
-			return gc.getPlayer(iPlayer).getCultureHistory(iTurn)
+			return GC.getPlayer(iPlayer).getCultureHistory(iTurn)
 		elif (scoreType == self.ESPIONAGE_SCORE):
-			return gc.getPlayer(iPlayer).getEspionageHistory(iTurn)
+			return GC.getPlayer(iPlayer).getEspionageHistory(iTurn)
 		#RevolutionDCM
 		elif (scoreType == self.REVOLUTION_STABILITY_AVERAGE):
-			return 1000 - gc.getPlayer(iPlayer).getRevolutionStabilityHistory(iTurn)
+			return 1000 - GC.getPlayer(iPlayer).getRevolutionStabilityHistory(iTurn)
 
 	# Requires the cache to be built
 	def getHistory(self, scoreType, iPlayer, iRelTurn):
@@ -901,11 +897,11 @@ class CvInfoScreen:
 		screen = self.getScreen()
 
 		if (self.xSelPt != 0 or self.ySelPt != 0):
-			screen.addLineGFC(sGRAPH_CANVAS_ID, self.GRAPH_H_LINE, 0, self.ySelPt, self.W_GRAPH, self.ySelPt, gc.getInfoTypeForString("COLOR_GREY"))
-			screen.addLineGFC(sGRAPH_CANVAS_ID, self.GRAPH_V_LINE, self.xSelPt, 0, self.xSelPt, self.H_GRAPH, gc.getInfoTypeForString("COLOR_GREY"))
+			screen.addLineGFC(sGRAPH_CANVAS_ID, self.GRAPH_H_LINE, 0, self.ySelPt, self.W_GRAPH, self.ySelPt, GC.getInfoTypeForString("COLOR_GREY"))
+			screen.addLineGFC(sGRAPH_CANVAS_ID, self.GRAPH_V_LINE, self.xSelPt, 0, self.xSelPt, self.H_GRAPH, GC.getInfoTypeForString("COLOR_GREY"))
 		else:
-			screen.addLineGFC(sGRAPH_CANVAS_ID, self.GRAPH_H_LINE, -1, -1, -1, -1, gc.getInfoTypeForString("COLOR_GREY"))
-			screen.addLineGFC(sGRAPH_CANVAS_ID, self.GRAPH_V_LINE, -1, -1, -1, -1, gc.getInfoTypeForString("COLOR_GREY"))
+			screen.addLineGFC(sGRAPH_CANVAS_ID, self.GRAPH_H_LINE, -1, -1, -1, -1, GC.getInfoTypeForString("COLOR_GREY"))
+			screen.addLineGFC(sGRAPH_CANVAS_ID, self.GRAPH_V_LINE, -1, -1, -1, -1, GC.getInfoTypeForString("COLOR_GREY"))
 
 
 	def drawXLabel(self, screen, turn, x, just = 1<<2):
@@ -1060,8 +1056,8 @@ class CvInfoScreen:
 
 		# Compute max score
 		max = 0
-		thisTurn = CyGame().getGameTurn()
-		startTurn = CyGame().getStartTurn()
+		thisTurn = GAME.getGameTurn()
+		startTurn = GAME.getStartTurn()
 
 		if (self.graphZoom == 0 or self.graphEnd == 0):
 			firstTurn = startTurn
@@ -1113,7 +1109,6 @@ class CvInfoScreen:
 
 		if AdvisorOpt.isGraphsLogScale():
 			yFactor = (1.0 * iH_GRAPH / (1.0 * (self.getLog10(max) - self.getLog10(min))))
-#			BugUtil.debug("Log10: %i %i --> %i %i", x0, y0, ix0, iy0)
 		else:
 			yFactor = (1.0 * iH_GRAPH / (1.0 * (max - min)))
 
@@ -1136,17 +1131,15 @@ class CvInfoScreen:
 
 #BUG: Change Graphs - start
 			if AdvisorOpt.isGraphs():
-				i = gc.getPlayer(p).getID()
+				i = GC.getPlayer(p).getID()
 				if not self.bPlayerInclude[i]:
 					continue
 #BUG: Change Graphs - end
 
-			color = gc.getPlayerColorInfo(gc.getPlayer(p).getPlayerColor()).getColorTypePrimary()
+			color = GC.getPlayerColorInfo(GC.getPlayer(p).getPlayerColor()).getColorTypePrimary()
 			oldX = -1
 			oldY = iH_GRAPH
 			turn = lastTurn
-
-#			BugUtil.debug("CvInfoScreen: graphs")
 
 			if self.Graph_Status_Current == self.Graph_Status_1in1:
 				iSmooth = self.iGraph_Smoothing_1in1
@@ -1189,7 +1182,7 @@ class CvInfoScreen:
 				screen.moveToFront(self.szGraphDropdownWidget_3in1[vGraphID_Locn])
 			else:
 				screen.addPanel(self.sGraphPanelWidget[vGraphID_Locn], "", "", True, True, iX_GRAPH + 5, iY_GRAPH_TITLE, self.W_LEGEND, 25, PanelStyles.PANEL_STYLE_IN)
-				zsText = self.sGraphText[0][iGraphID]   #u"<font=3>" + TRNSLTR.getColorText("TXT_KEY_INFO_GRAPH", (), gc.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>"
+				zsText = self.sGraphText[0][iGraphID]   #u"<font=3>" + TRNSLTR.getColorText("TXT_KEY_INFO_GRAPH", (), GC.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>"
 				screen.setText(self.sGraphTextHeadingWidget[iGraphID], "", zsText, 1<<0, iX_GRAPH + 10, iY_GRAPH_TITLE, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 #BUG: Change Graphs - start
 
@@ -1206,14 +1199,14 @@ class CvInfoScreen:
 		if AdvisorOpt.isGraphs():
 			for p in self.aiPlayersMet:
 				szPlayerName = self.getPlayerName(p)
-				if not gc.getPlayer(p).isAlive(): szPlayerName += " [" + self.BUG_LEGEND_DEAD + "]"
+				if not GC.getPlayer(p).isAlive(): szPlayerName += " [" + self.BUG_LEGEND_DEAD + "]"
 
 				if iW_LEGEND < self.X_LEGEND_TEXT + CyInterface().determineWidth(szPlayerName) + 10:
 					iW_LEGEND = self.X_LEGEND_TEXT + CyInterface().determineWidth(szPlayerName) + 10
 
 			for p in self.aiPlayersMetNAEspionage:
 				szPlayerName = self.getPlayerName(p)
-				if not gc.getPlayer(p).isAlive(): szPlayerName += " [" + self.BUG_LEGEND_DEAD + "]"
+				if not GC.getPlayer(p).isAlive(): szPlayerName += " [" + self.BUG_LEGEND_DEAD + "]"
 
 				if iW_LEGEND < self.X_LEGEND_TEXT + CyInterface().determineWidth(szPlayerName) + 10:
 					iW_LEGEND = self.X_LEGEND_TEXT + CyInterface().determineWidth(szPlayerName) + 10
@@ -1252,23 +1245,23 @@ class CvInfoScreen:
 			if AdvisorOpt.isGraphs():
 				name = self.getPlayerName(p)
 			else:
-				name = gc.getPlayer(p).getName()
+				name = GC.getPlayer(p).getName()
 
-			i = gc.getPlayer(p).getID()
+			i = GC.getPlayer(p).getID()
 			if (self.bPlayerInclude[i]
 			or not AdvisorOpt.isGraphs()):
-				textColorR = gc.getPlayer(p).getPlayerTextColorR()
-				textColorG = gc.getPlayer(p).getPlayerTextColorG()
-				textColorB = gc.getPlayer(p).getPlayerTextColorB()
-				textColorA = gc.getPlayer(p).getPlayerTextColorA()
+				textColorR = GC.getPlayer(p).getPlayerTextColorR()
+				textColorG = GC.getPlayer(p).getPlayerTextColorG()
+				textColorB = GC.getPlayer(p).getPlayerTextColorB()
+				textColorA = GC.getPlayer(p).getPlayerTextColorA()
 
-				lineColor = gc.getPlayerColorInfo(gc.getPlayer(p).getPlayerColor()).getColorTypePrimary()
+				lineColor = GC.getPlayerColorInfo(GC.getPlayer(p).getPlayerColor()).getColorTypePrimary()
 				self.drawLine(screen, sLEGEND_CANVAS_ID, self.X_LEGEND_LINE, yLine, self.X_LEGEND_LINE + self.W_LEGEND_LINE, yLine, lineColor, True)
 			else:
 				textColorR = 175
 				textColorG = 175
 				textColorB = 175
-				textColorA = gc.getPlayer(p).getPlayerTextColorA()
+				textColorA = GC.getPlayer(p).getPlayerTextColorA()
 #BUG: Change Graphs - end
 
 			str = u"<color=%d,%d,%d,%d>%s</color>" %(textColorR,textColorG,textColorB,textColorA,name)
@@ -1292,21 +1285,21 @@ class CvInfoScreen:
 			yLine += self.H_LEGEND_TEXT
 			yText += self.H_LEGEND_TEXT
 			for p in self.aiPlayersMetNAEspionage:
-				i = gc.getPlayer(p).getID()
+				i = GC.getPlayer(p).getID()
 
 				name = self.getPlayerName(p)
 
-				if not gc.getPlayer(p).isAlive(): # player is dead!
+				if not GC.getPlayer(p).isAlive(): # player is dead!
 					textColorR = 175
 					textColorG = 175
 					textColorB = 175
-					textColorA = gc.getPlayer(p).getPlayerTextColorA()
+					textColorA = GC.getPlayer(p).getPlayerTextColorA()
 					name += " [" + self.BUG_LEGEND_DEAD + "]"
 				else:
-					textColorR = gc.getPlayer(p).getPlayerTextColorR()
-					textColorG = gc.getPlayer(p).getPlayerTextColorG()
-					textColorB = gc.getPlayer(p).getPlayerTextColorB()
-					textColorA = gc.getPlayer(p).getPlayerTextColorA()
+					textColorR = GC.getPlayer(p).getPlayerTextColorR()
+					textColorG = GC.getPlayer(p).getPlayerTextColorG()
+					textColorB = GC.getPlayer(p).getPlayerTextColorB()
+					textColorA = GC.getPlayer(p).getPlayerTextColorA()
 
 				str = u"<color=%d,%d,%d,%d>%s</color>" %(textColorR,textColorG,textColorB,textColorA,name)
 
@@ -1330,16 +1323,16 @@ class CvInfoScreen:
 
 	def getPlayerName(self, ePlayer):
 		if (ScoreOpt.isUsePlayerName()):
-			szPlayerName = gc.getPlayer(ePlayer).getName()
+			szPlayerName = GC.getPlayer(ePlayer).getName()
 		else:
-			szPlayerName = gc.getLeaderHeadInfo(gc.getPlayer(ePlayer).getLeaderType()).getDescription()
+			szPlayerName = GC.getLeaderHeadInfo(GC.getPlayer(ePlayer).getLeaderType()).getDescription()
 
 		if (ScoreOpt.isShowBothNames()):
-			szPlayerName = szPlayerName + "/" + gc.getPlayer(ePlayer).getCivilizationShortDescription(0)
+			szPlayerName = szPlayerName + "/" + GC.getPlayer(ePlayer).getCivilizationShortDescription(0)
 		elif (ScoreOpt.isShowLeaderName()):
 			szPlayerName = szPlayerName
 		else:
-			szPlayerName = gc.getPlayer(ePlayer).getCivilizationShortDescription(0)
+			szPlayerName = GC.getPlayer(ePlayer).getCivilizationShortDescription(0)
 
 		return szPlayerName
 #BUG: Change Graphs - end
@@ -1398,7 +1391,7 @@ class CvInfoScreen:
 
 		iNumActivePlayers = 0
 
-		pPlayer = gc.getPlayer(self.iActivePlayer)
+		pPlayer = GC.getPlayer(self.iActivePlayer)
 
 		iEconomyGameAverage = 0
 		iIndustryGameAverage = 0
@@ -1422,13 +1415,13 @@ class CvInfoScreen:
 		aiGroupNetTrade = []
 
 		# Loop through all players to determine Rank and relative Strength
-		for iPlayerLoop in range(gc.getMAX_PLAYERS()):
+		for iPlayerLoop in range(GC.getMAX_PLAYERS()):
 
-			if (gc.getPlayer(iPlayerLoop).isAlive() and not gc.getPlayer(iPlayerLoop).isNPC()):
+			if (GC.getPlayer(iPlayerLoop).isAlive() and not GC.getPlayer(iPlayerLoop).isNPC()):
 
 				iNumActivePlayers += 1
 
-				pCurrPlayer = gc.getPlayer(iPlayerLoop)
+				pCurrPlayer = GC.getPlayer(iPlayerLoop)
 
 				iValue = pCurrPlayer.calculateTotalCommerce()
 				if iPlayerLoop == self.iActivePlayer:
@@ -1677,7 +1670,7 @@ class CvInfoScreen:
 
 			self.szCityAnimWidgets.append(self.getNextWidgetName())
 
-			if (pCity.isRevealed(gc.getGame().getActiveTeam(), False)):
+			if (pCity.isRevealed(GAME.getActiveTeam(), False)):
 				screen.addPlotGraphicGFC(self.szCityAnimWidgets[iWidgetLoop], self.X_CITY_ANIMATION, self.Y_ROWS_CITIES[iWidgetLoop] + self.Y_CITY_ANIMATION_BUFFER - self.H_CITY_ANIMATION / 2, self.W_CITY_ANIMATION, self.H_CITY_ANIMATION, pPlot, iDistance, False, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		# Draw Wonder icons
@@ -1706,9 +1699,9 @@ class CvInfoScreen:
 
 				# Loop through buildings
 
-				for iBuildingLoop in range(gc.getNumBuildingInfos()):
+				for iBuildingLoop in range(GC.getNumBuildingInfos()):
 
-					pBuilding = gc.getBuildingInfo(iBuildingLoop)
+					pBuilding = GC.getBuildingInfo(iBuildingLoop)
 
 					# If this building is a wonder...
 					if (isWorldWonder(iBuildingLoop)):
@@ -1736,55 +1729,50 @@ class CvInfoScreen:
 			for iWonderLoop in range(aiTopCitiesNumWonders[iCityLoop]):
 
 				iBuildingID = aaiTopCitiesWonders[iCityLoop][iWonderLoop]
-				screen.attachImageButton( szIconPanel, "", gc.getBuildingInfo(iBuildingID).getButton(),
+				screen.attachImageButton( szIconPanel, "", GC.getBuildingInfo(iBuildingID).getButton(),
 					GenericButtonSizes.BUTTON_SIZE_46, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, iBuildingID, -1, False )
 
+	# Calculate the top 5 cities
 	def calculateTopCities(self):
 
-		# Calculate the top 5 cities
+		for i in range(GC.getMAX_PC_PLAYERS()):
 
-		for iPlayerLoop in range(gc.getMAX_PC_PLAYERS()):
+			for cityX in GC.getPlayer(i).cities():
 
-			apCityList = PyPlayer(iPlayerLoop).getCityList()
-
-			for pCity in apCityList:
-
-				iTotalCityValue = ((pCity.getCulture() / 5) + (pCity.getFoodRate() + pCity.getProductionRate() \
-					+ pCity.calculateGoldRate())) * pCity.getPopulation()
-
+				iTotalCityValue = (
+					(
+						pCity.getCulture(i) / 5 +
+						pCity.getYieldRate(YieldTypes.YIELD_FOOD) +
+						pCity.getYieldRate(YieldTypes.YIELD_PRODUCTION) +
+						pCity.getYieldRate(YieldTypes.YIELD_COMMERCE)
+					) * pCity.getPopulation()
+				)
 				for iRankLoop in range(5):
 
-					if (iTotalCityValue > self.iCityValues[iRankLoop]):
+					if iTotalCityValue > self.iCityValues[iRankLoop]:
 
 						self.addCityToList(iRankLoop, pCity, iTotalCityValue)
-
 						break
 
 	# Recursive
 	def addCityToList(self, iRank, pCity, iTotalCityValue):
-
-		if (iRank > 4):
-
+		if iRank > 4:
 			return
 
-		else:
-			pTempCity = self.pCityPointers[iRank]
+		pTempCity = self.pCityPointers[iRank]
 
-			# Verify a city actually exists at this rank
-			if (pTempCity):
+		# Verify a city actually exists at this rank
+		if not pTempCity:
+			self.pCityPointers[iRank] = pCity
+			self.iCityValues[iRank] = iTotalCityValue
+			return
 
-				iTempCityValue = self.iCityValues[iRank]
+		iTempCityValue = self.iCityValues[iRank]
 
-				self.addCityToList(iRank+1, pTempCity, iTempCityValue)
+		self.addCityToList(iRank+1, pTempCity, iTempCityValue)
+		self.pCityPointers[iRank] = pCity
+		self.iCityValues[iRank] = iTotalCityValue
 
-				self.pCityPointers[iRank] = pCity
-				self.iCityValues[iRank] = iTotalCityValue
-
-			else:
-				self.pCityPointers[iRank] = pCity
-				self.iCityValues[iRank] = iTotalCityValue
-
-				return
 
 	def determineCityData(self):
 
@@ -1795,18 +1783,18 @@ class CvInfoScreen:
 			pCity = self.pCityPointers[iRankLoop]
 
 			# If this city exists and has data we can use
-			if (pCity):
+			if pCity:
 
-				pPlayer = gc.getPlayer(pCity.getOwner())
+				pPlayer = GC.getPlayer(pCity.getOwner())
 
-				iTurnYear = CyGame().getTurnYear(pCity.getGameTurnFounded())
+				iTurnYear = GAME.getTurnYear(pCity.getGameTurnFounded())
 
 				if (iTurnYear < 0):
 					szTurnFounded = TRNSLTR.getText("TXT_KEY_TIME_BC", (-iTurnYear,))#"%d %s" %(-iTurnYear, self.TEXT_BC)
 				else:
 					szTurnFounded = TRNSLTR.getText("TXT_KEY_TIME_AD", (iTurnYear,))#"%d %s" %(iTurnYear, self.TEXT_AD)
 
-				if (pCity.isRevealed(gc.getGame().getActiveTeam()) or gc.getTeam(pPlayer.getTeam()).isHasMet(gc.getGame().getActiveTeam())):
+				if pCity.isRevealed(GAME.getActiveTeam(), False) or GC.getTeam(pPlayer.getTeam()).isHasMet(GAME.getActiveTeam()):
 					self.szCityNames[iRankLoop] = pCity.getName().upper()
 					self.szCityDescs[iRankLoop] = ("%s, %s" %(pPlayer.getCivilizationAdjective(0), TRNSLTR.getText("TXT_KEY_MISC_FOUNDED_IN", (szTurnFounded,))))
 				else:
@@ -1817,13 +1805,11 @@ class CvInfoScreen:
 
 				self.iNumCities += 1
 			else:
-
 				self.szCityNames[iRankLoop] = ""
 				self.iCitySizes[iRankLoop] = -1
 				self.szCityDescs[iRankLoop] = ""
 				self.aaCitiesXY[iRankLoop] = [-1, -1]
 
-		return
 
 #############################################################################################################
 ################################################### WONDERS #################################################
@@ -1931,7 +1917,7 @@ class CvInfoScreen:
 			for iWonderLoop in range(iNumWondersBeingBuilt):
 
 				iProjectType = self.aaWondersBeingBuilt[iWonderLoop][0]
-				pProjectInfo = gc.getProjectInfo(iProjectType)
+				pProjectInfo = GC.getProjectInfo(iProjectType)
 				szProjectName = pProjectInfo.getDescription()
 
 				self.aiWonderListBoxIDs.append(iProjectType)
@@ -1946,7 +1932,7 @@ class CvInfoScreen:
 			for iWonderLoop in range(self.iNumWonders):
 
 				iProjectType = self.aaWondersBuilt[iWonderLoop][1]
-				pProjectInfo = gc.getProjectInfo(iProjectType)
+				pProjectInfo = GC.getProjectInfo(iProjectType)
 				szProjectName = pProjectInfo.getDescription()
 
 				self.aiWonderListBoxIDs.append(iProjectType)
@@ -1965,7 +1951,7 @@ class CvInfoScreen:
 			for iWonderLoop in range(iNumWondersBeingBuilt):
 
 				iWonderType = self.aaWondersBeingBuilt[iWonderLoop][0]
-				pWonderInfo = gc.getBuildingInfo(iWonderType)
+				pWonderInfo = GC.getBuildingInfo(iWonderType)
 				szWonderName = pWonderInfo.getDescription()
 
 				self.aiWonderListBoxIDs.append(iWonderType)
@@ -1980,7 +1966,7 @@ class CvInfoScreen:
 			for iWonderLoop in range(self.iNumWonders):
 
 				iWonderType = self.aaWondersBuilt[iWonderLoop][1]
-				pWonderInfo = gc.getBuildingInfo(iWonderType)
+				pWonderInfo = GC.getBuildingInfo(iWonderType)
 				szWonderName = pWonderInfo.getDescription()
 
 				self.aiWonderListBoxIDs.append(iWonderType)
@@ -2028,7 +2014,7 @@ class CvInfoScreen:
 
 			if (self.szWonderDisplayMode == self.szWDM_Project):
 
-				pProjectInfo = gc.getProjectInfo(self.iWonderID)
+				pProjectInfo = GC.getProjectInfo(self.iWonderID)
 
 				# Stats panel (cont'd) - Name
 				szProjectDesc = u"<font=3b>" + pProjectInfo.getDescription().upper() + u"</font>"
@@ -2052,18 +2038,18 @@ class CvInfoScreen:
 					szStatsText += "\n"
 
 				if (pProjectInfo.getProductionCost() > 0):
-					szCost = TRNSLTR.getText("TXT_KEY_PEDIA_COST", (gc.getActivePlayer().getProjectProductionNeeded(self.iWonderID),))
-					szStatsText += szCost.upper() + (u"%c" % gc.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar()) + "\n"
+					szCost = TRNSLTR.getText("TXT_KEY_PEDIA_COST", (GC.getActivePlayer().getProjectProductionNeeded(self.iWonderID),))
+					szStatsText += szCost.upper() + (u"%c" % GC.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar()) + "\n"
 
 				if (isWorldProject(self.iWonderID)):
-					iMaxInstances = gc.getProjectInfo(self.iWonderID).getMaxGlobalInstances()
+					iMaxInstances = GC.getProjectInfo(self.iWonderID).getMaxGlobalInstances()
 					szProjectType = TRNSLTR.getText("TXT_KEY_PEDIA_WORLD_PROJECT", ())
 					if (iMaxInstances > 1):
 						szProjectType += " " + TRNSLTR.getText("TXT_KEY_PEDIA_WONDER_INSTANCES", (iMaxInstances,))
 					szStatsText += szProjectType.upper() + "\n"
 
 				if (isTeamProject(self.iWonderID)):
-					iMaxInstances = gc.getProjectInfo(self.iWonderID).getMaxTeamInstances()
+					iMaxInstances = GC.getProjectInfo(self.iWonderID).getMaxTeamInstances()
 					szProjectType = TRNSLTR.getText("TXT_KEY_PEDIA_TEAM_PROJECT", ())
 					if (iMaxInstances > 1):
 						szProjectType += " " + TRNSLTR.getText("TXT_KEY_PEDIA_WONDER_INSTANCES", (iMaxInstances,))
@@ -2075,7 +2061,7 @@ class CvInfoScreen:
 				iIconX = self.X_PROJECT_ICON - self.W_PROJECT_ICON / 2
 				iIconY = self.Y_PROJECT_ICON - self.W_PROJECT_ICON / 2
 
-				screen.addDDSGFC(self.getNextWidgetName(), gc.getProjectInfo(self.iWonderID).getButton(),
+				screen.addDDSGFC(self.getNextWidgetName(), GC.getProjectInfo(self.iWonderID).getButton(),
 						 iIconX, iIconY, self.W_PROJECT_ICON, self.W_PROJECT_ICON, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 				# Special Abilities ListBox
@@ -2102,10 +2088,10 @@ class CvInfoScreen:
 
 	############################################### DISPLAY WONDER MODE ###############################################
 
-				pWonderInfo = gc.getBuildingInfo(self.iWonderID)
+				pWonderInfo = GC.getBuildingInfo(self.iWonderID)
 
 				# Stats panel (cont'd) - Name
-				szWonderDesc = u"<font=3b>" + gc.getBuildingInfo(self.iWonderID).getDescription().upper() + u"</font>"
+				szWonderDesc = u"<font=3b>" + GC.getBuildingInfo(self.iWonderID).getDescription().upper() + u"</font>"
 				szStatsText = szWonderDesc + "\n\n"
 
 				# Wonder built-in year
@@ -2135,8 +2121,8 @@ class CvInfoScreen:
 				# Building attributes
 
 				if (pWonderInfo.getProductionCost() > 0):
-					szCost = TRNSLTR.getText("TXT_KEY_PEDIA_COST", (gc.getActivePlayer().getBuildingProductionNeeded(self.iWonderID),))
-					szStatsText += szCost.upper() + (u"%c" % gc.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar()) + "\n"
+					szCost = TRNSLTR.getText("TXT_KEY_PEDIA_COST", (GC.getActivePlayer().getBuildingProductionNeeded(self.iWonderID),))
+					szStatsText += szCost.upper() + (u"%c" % GC.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar()) + "\n"
 
 				for k in range(CommerceTypes.NUM_COMMERCE_TYPES):
 					if (pWonderInfo.getObsoleteSafeCommerceChange(k) != 0):
@@ -2145,31 +2131,31 @@ class CvInfoScreen:
 						else:
 							szSign = ""
 
-						szCommerce = gc.getCommerceInfo(k).getDescription() + ": "
+						szCommerce = GC.getCommerceInfo(k).getDescription() + ": "
 
 						szText1 = szCommerce.upper() + szSign + str(pWonderInfo.getObsoleteSafeCommerceChange(k))
-						szText2 = szText1 + (u"%c" % (gc.getCommerceInfo(k).getChar()))
+						szText2 = szText1 + (u"%c" % (GC.getCommerceInfo(k).getChar()))
 						szStatsText += szText2 + "\n"
 
 				if (pWonderInfo.getHappiness() > 0):
 					szText = TRNSLTR.getText("TXT_KEY_PEDIA_HAPPY", (pWonderInfo.getHappiness(),))
-					szStatsText += szText + (u"%c" % CyGame().getSymbolID(FontSymbols.HAPPY_CHAR)) + "\n"
+					szStatsText += szText + (u"%c" % GAME.getSymbolID(FontSymbols.HAPPY_CHAR)) + "\n"
 
 				elif (pWonderInfo.getHappiness() < 0):
 					szText = TRNSLTR.getText("TXT_KEY_PEDIA_UNHAPPY", (-pWonderInfo.getHappiness(),))
-					szStatsText += szText + (u"%c" % CyGame().getSymbolID(FontSymbols.UNHAPPY_CHAR)) + "\n"
+					szStatsText += szText + (u"%c" % GAME.getSymbolID(FontSymbols.UNHAPPY_CHAR)) + "\n"
 
 				if (pWonderInfo.getHealth() > 0):
 					szText = TRNSLTR.getText("TXT_KEY_PEDIA_HEALTHY", (pWonderInfo.getHealth(),))
-					szStatsText += szText + (u"%c" % CyGame().getSymbolID(FontSymbols.HEALTHY_CHAR)) + "\n"
+					szStatsText += szText + (u"%c" % GAME.getSymbolID(FontSymbols.HEALTHY_CHAR)) + "\n"
 
 				elif (pWonderInfo.getHealth() < 0):
 					szText = TRNSLTR.getText("TXT_KEY_PEDIA_UNHEALTHY", (-pWonderInfo.getHealth(),))
-					szStatsText += szText + (u"%c" % CyGame().getSymbolID(FontSymbols.UNHEALTHY_CHAR)) + "\n"
+					szStatsText += szText + (u"%c" % GAME.getSymbolID(FontSymbols.UNHEALTHY_CHAR)) + "\n"
 
 				if (pWonderInfo.getGreatPeopleRateChange() != 0):
 					szText = TRNSLTR.getText("TXT_KEY_PEDIA_GREAT_PEOPLE", (pWonderInfo.getGreatPeopleRateChange(),))
-					szStatsText += szText + (u"%c" % CyGame().getSymbolID(FontSymbols.GREAT_PEOPLE_CHAR)) + "\n"
+					szStatsText += szText + (u"%c" % GAME.getSymbolID(FontSymbols.GREAT_PEOPLE_CHAR)) + "\n"
 
 				screen.addMultilineText(self.getNextWidgetName(), szStatsText, self.X_STATS_PANE + 5, self.Y_STATS_PANE + 15, self.W_STATS_PANE - 10, self.H_STATS_PANE - 20, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<2)
 
@@ -2204,90 +2190,81 @@ class CvInfoScreen:
 		self.aaWondersBuilt = []
 		self.iNumWonders = 0
 
-		self.pActivePlayer = gc.getPlayer(CyGame().getActivePlayer())
+		self.pActivePlayer = GC.getPlayer(GAME.getActivePlayer())
 
-		# Loop through players to determine Wonders
-		for iPlayerLoop in range(gc.getMAX_PLAYERS()):
+		# Loop through players to determine Wonders.
+		for iPlayerX in range(GC.getMAX_PC_PLAYERS()):
 
-			pPlayer = gc.getPlayer(iPlayerLoop)
-			iPlayerTeam = pPlayer.getTeam()
+			playerX = GC.getPlayer(iPlayerX)
+			iTeamX = playerX.getTeam()
 
-			# No NPCs and only display national wonders for the active player's team
-			if (pPlayer and not pPlayer.isNPC() and ((self.szWonderDisplayMode != self.szWDM_NatnlWonder) or (iPlayerTeam == gc.getTeam(gc.getPlayer(self.iActivePlayer).getTeam()).getID()))):
+			# Only display national wonders for the active player's team
+			if self.szWonderDisplayMode == self.szWDM_NatnlWonder and iTeamX != GC.getPlayer(self.iActivePlayer).getTeam():
+				continue
 
-				# Loop through this player's cities and determine if they have any wonders to display
-				apCityList = PyPlayer(iPlayerLoop).getCityList()
-				for pCity in apCityList:
+			# Loop through this player's cities and determine if they have any wonders to display
+			for cityX in GC.getPlayer(iPlayerX).cities():
 
-					pCityPlot = CyMap().plot(pCity.getX(), pCity.getY())
+				pCityPlot = CyMap().plot(cityX.getX(), cityX.getY())
 
-					# Check to see if active player can see this city
-					szCityName = ""
-					if (pCityPlot.isActiveVisible(False)):
-						szCityName = pCity.getName()
+				# Check to see if active player can see this city
+				szCityName = ""
+				if (pCityPlot.isActiveVisible(False)):
+					szCityName = cityX.getName()
 
-					# Loop through projects to find any under construction
-					if (self.szWonderDisplayMode == self.szWDM_Project):
-						for iProjectLoop in range(gc.getNumProjectInfos()):
+				# Loop through projects to find any under construction
+				if (self.szWonderDisplayMode == self.szWDM_Project):
+					for iProjectLoop in range(GC.getNumProjectInfos()):
 
-							iProjectProd = pCity.getProductionProject()
-							pProject = gc.getProjectInfo(iProjectLoop)
+						iProjectProd = cityX.getProductionProject()
+						pProject = GC.getProjectInfo(iProjectLoop)
 
-							# Project is being constructed
-							if (iProjectProd == iProjectLoop):
+						# Project is being constructed
+						if (iProjectProd == iProjectLoop):
 
-								# Project Mode
-								if (iPlayerTeam == gc.getTeam(gc.getPlayer(self.iActivePlayer).getTeam()).getID()):
+							# Project Mode
+							if iTeamX == GC.getPlayer(self.iActivePlayer).getTeam():
 
-									self.aaWondersBeingBuilt.append([iProjectProd, pPlayer.getCivilizationShortDescription(0)])
+								self.aaWondersBeingBuilt.append([iProjectProd, playerX.getCivilizationShortDescription(0)])
 
-					# Loop through buildings
-					else:
+				# Loop through buildings
+				else:
 
-						for iBuildingLoop in range(gc.getNumBuildingInfos()):
+					for iBuildingLoop in range(GC.getNumBuildingInfos()):
 
-							iBuildingProd = pCity.getProductionBuilding()
+						iBuildingProd = cityX.getProductionBuilding()
 
-							pBuilding = gc.getBuildingInfo(iBuildingLoop)
+						pBuilding = GC.getBuildingInfo(iBuildingLoop)
 
-							# World Wonder Mode
-							if (self.szWonderDisplayMode == self.szWDM_WorldWonder and isWorldWonder(iBuildingLoop)):
+						# World Wonder Mode
+						if self.szWonderDisplayMode == self.szWDM_WorldWonder and isWorldWonder(iBuildingLoop):
 
-								# Is this city building a wonder?
-								if (iBuildingProd == iBuildingLoop):
+							# Is this city building a wonder? Only show our wonders under construction.
+							if iBuildingProd == iBuildingLoop and iTeamX == GC.getPlayer(self.iActivePlayer).getTeam():
+								self.aaWondersBeingBuilt.append([iBuildingProd, playerX.getCivilizationShortDescription(0)])
 
-									# Only show our wonders under construction
-									if (iPlayerTeam == gc.getPlayer(self.iActivePlayer).getTeam()):
+							if (cityX.getNumBuilding(iBuildingLoop) > 0):
+								if (iTeamX == GC.getPlayer(self.iActivePlayer).getTeam() or GC.getTeam(GC.getPlayer(self.iActivePlayer).getTeam()).isHasMet(iTeamX)):
+									self.aaWondersBuilt.append([cityX.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,playerX.getCivilizationShortDescription(0),szCityName])
+								else:
+									self.aaWondersBuilt.append([cityX.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,TRNSLTR.getText("TXT_KEY_UNKNOWN", ()),TRNSLTR.getText("TXT_KEY_UNKNOWN", ())])
 
-										self.aaWondersBeingBuilt.append([iBuildingProd, pPlayer.getCivilizationShortDescription(0)])
+								self.iNumWonders += 1
 
-								if (pCity.getNumBuilding(iBuildingLoop) > 0):
-									if (iPlayerTeam == gc.getPlayer(self.iActivePlayer).getTeam() or gc.getTeam(gc.getPlayer(self.iActivePlayer).getTeam()).isHasMet(iPlayerTeam)):
-										self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,pPlayer.getCivilizationShortDescription(0),szCityName])
-									else:
-										self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,TRNSLTR.getText("TXT_KEY_UNKNOWN", ()),TRNSLTR.getText("TXT_KEY_UNKNOWN", ())])
-	#								print("Adding World wonder to list: %s, %d, %s" %(pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,pPlayer.getCivilizationAdjective(0)))
-									self.iNumWonders += 1
+						# National/Team Wonder Mode
+						elif self.szWonderDisplayMode == self.szWDM_NatnlWonder and (isNationalWonder(iBuildingLoop) or isTeamWonder(iBuildingLoop)):
 
-							# National/Team Wonder Mode
-							elif self.szWonderDisplayMode == self.szWDM_NatnlWonder and (isNationalWonder(iBuildingLoop) or isTeamWonder(iBuildingLoop)):
+							# Is this city building a wonder? Only show our wonders under construction.
+							if iBuildingProd == iBuildingLoop and iTeamX == GC.getPlayer(self.iActivePlayer).getTeam():
+								self.aaWondersBeingBuilt.append([iBuildingProd, playerX.getCivilizationShortDescription(0)])
 
-								# Is this city building a wonder?
-								if (iBuildingProd == iBuildingLoop):
+							if cityX.getNumBuilding(iBuildingLoop) > 0:
 
-									# Only show our wonders under construction
-									if (iPlayerTeam == gc.getPlayer(self.iActivePlayer).getTeam()):
-
-										self.aaWondersBeingBuilt.append([iBuildingProd, pPlayer.getCivilizationShortDescription(0)])
-
-								if (pCity.getNumBuilding(iBuildingLoop) > 0):
-
-	#								print("Adding National wonder to list: %s, %d, %s" %(pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,pPlayer.getCivilizationAdjective(0)))
-									if (iPlayerTeam == gc.getPlayer(self.iActivePlayer).getTeam() or gc.getTeam(gc.getPlayer(self.iActivePlayer).getTeam()).isHasMet(iPlayerTeam)):
-										self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,pPlayer.getCivilizationShortDescription(0), szCityName])
-									else:
-										self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,TRNSLTR.getText("TXT_KEY_UNKNOWN", ()), TRNSLTR.getText("TXT_KEY_UNKNOWN", ())])
-									self.iNumWonders += 1
+								if iTeamX == GC.getPlayer(self.iActivePlayer).getTeam() or GC.getTeam(GC.getPlayer(self.iActivePlayer).getTeam()).isHasMet(iTeamX):
+									self.aaWondersBuilt.append([cityX.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,playerX.getCivilizationShortDescription(0), szCityName])
+								else:
+									self.aaWondersBuilt.append([cityX.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,TRNSLTR.getText("TXT_KEY_UNKNOWN", ()), TRNSLTR.getText("TXT_KEY_UNKNOWN", ())])
+								self.iNumWonders += 1
 
 		# This array used to store which players have already used up a team's slot so team projects don't get added to list more than once
 		aiTeamsUsed = []
@@ -2296,26 +2273,26 @@ class CvInfoScreen:
 		if (self.szWonderDisplayMode == self.szWDM_Project):
 
 			# Loop through players to determine Projects
-			for iPlayerLoop in range(gc.getMAX_PLAYERS()):
+			for iPlayerLoop in range(GC.getMAX_PLAYERS()):
 
-				pPlayer = gc.getPlayer(iPlayerLoop)
+				pPlayer = GC.getPlayer(iPlayerLoop)
 				iTeamLoop = pPlayer.getTeam()
 
 				# Block duplicates
 				if (iTeamLoop not in aiTeamsUsed):
 
 					aiTeamsUsed.append(iTeamLoop)
-					pTeam = gc.getTeam(iTeamLoop)
+					pTeam = GC.getTeam(iTeamLoop)
 
 					if (pTeam.isAlive() and not pTeam.isNPC()):
 
 						# Loop through projects
-						for iProjectLoop in range(gc.getNumProjectInfos()):
+						for iProjectLoop in range(GC.getNumProjectInfos()):
 
 							for iI in range(pTeam.getProjectCount(iProjectLoop)):
 
-								if (iTeamLoop == gc.getPlayer(self.iActivePlayer).getTeam() or gc.getTeam(gc.getPlayer(self.iActivePlayer).getTeam()).isHasMet(iTeamLoop)):
-									self.aaWondersBuilt.append([-9999,iProjectLoop,gc.getPlayer(iPlayerLoop).getCivilizationShortDescription(0),szCityName])
+								if (iTeamLoop == GC.getPlayer(self.iActivePlayer).getTeam() or GC.getTeam(GC.getPlayer(self.iActivePlayer).getTeam()).isHasMet(iTeamLoop)):
+									self.aaWondersBuilt.append([-9999,iProjectLoop,GC.getPlayer(iPlayerLoop).getCivilizationShortDescription(0),szCityName])
 								else:
 									self.aaWondersBuilt.append([-9999,iProjectLoop,TRNSLTR.getText("TXT_KEY_UNKNOWN", ()),TRNSLTR.getText("TXT_KEY_UNKNOWN", ())])
 								self.iNumWonders += 1
@@ -2334,85 +2311,84 @@ class CvInfoScreen:
 		self.iNumWonders = 0
 
 		# Loop through players to determine Wonders
-		for iPlayerLoop in range(gc.getMAX_PLAYERS()):
+		for iPlayerX in range(GC.getMAX_PC_PLAYERS()):
 
-			pPlayer = gc.getPlayer(iPlayerLoop)
-			iPlayerTeam = pPlayer.getTeam()
+			playerX = GC.getPlayer(iPlayerX)
 
-			# No NPCs and only display national wonders for the active player's team
-			if (pPlayer and not pPlayer.isNPC()):
+			if not playerX.isAlive():
+				continue
+			iTeamX = playerX.getTeam()
 
-				# Loop through this player's cities and determine if they have any wonders to display
-				apCityList = PyPlayer(iPlayerLoop).getCityList()
-				for pCity in apCityList:
-					pCityPlot = CyMap().plot(pCity.getX(), pCity.getY())
+			# Loop through this player's cities and determine if they have any wonders to display
+			for cityX in GC.getPlayer(iPlayerX).cities():
 
-					# Loop through projects to find any under construction
-					if (self.szWonderDisplayMode == self.szWDM_Project):
-						for iProjectLoop in range(gc.getNumProjectInfos()):
+				# Loop through projects to find any under construction
+				if self.szWonderDisplayMode == self.szWDM_Project:
 
-							iProjectProd = pCity.getProductionProject()
+					for iProjectLoop in range(GC.getNumProjectInfos()):
 
-							# Project is being constructed
-							if (iProjectProd == iProjectLoop):
-								if (iPlayerTeam == self.iActiveTeam):
-									self.aaWondersBeingBuilt_BUG.append([iProjectLoop,pPlayer.getCivilizationShortDescription(0), pCity, iPlayerLoop])
+						iProjectProd = cityX.getProductionProject()
 
-								if (self.pActiveTeam.isHasMet(iPlayerTeam)
-								and self.pActivePlayer.canDoEspionageMission(self.iInvestigateCityMission, pCity.getOwner(), pCity.plot(), -1)
-								and pCity.isRevealed(gc.getGame().getActiveTeam())):
-									self.aaWondersBeingBuilt_BUG.append([iProjectLoop,pPlayer.getCivilizationShortDescription(0), pCity, iPlayerLoop])
+						# Project is being constructed
+						if iProjectProd == iProjectLoop:
+							if iTeamX == self.iActiveTeam:
+								self.aaWondersBeingBuilt_BUG.append([iProjectLoop, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
 
-					# Loop through buildings
-					else:
-						for iBuildingLoop in range(gc.getNumBuildingInfos()):
-							iBuildingProd = pCity.getProductionBuilding()
-#							pBuilding = gc.getBuildingInfo(iBuildingLoop)
+							if (self.pActiveTeam.isHasMet(iTeamX)
+							and self.pActivePlayer.canDoEspionageMission(self.iInvestigateCityMission, cityX.getOwner(), cityX.plot(), -1)
+							and cityX.isRevealed(GAME.getActiveTeam(), False)
+							):
+								self.aaWondersBeingBuilt_BUG.append([iProjectLoop, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
 
-							# World Wonder Mode
-							if (self.szWonderDisplayMode == self.szWDM_WorldWonder and isWorldWonder(iBuildingLoop)):
-								# Is this city building a wonder?
-								if (iBuildingProd == iBuildingLoop):
-									if (iPlayerTeam == self.iActiveTeam):
-										self.aaWondersBeingBuilt_BUG.append([iBuildingLoop,pPlayer.getCivilizationShortDescription(0), pCity, iPlayerLoop])
+				# Loop through buildings
+				else:
+					for iBuildingLoop in range(GC.getNumBuildingInfos()):
+						iBuildingProd = cityX.getProductionBuilding()
 
-									if (self.pActiveTeam.isHasMet(iPlayerTeam)
-									and self.pActivePlayer.canDoEspionageMission(self.iInvestigateCityMission, pCity.getOwner(), pCity.plot(), -1)
-									and pCity.isRevealed(gc.getGame().getActiveTeam())):
-										self.aaWondersBeingBuilt_BUG.append([iBuildingLoop,pPlayer.getCivilizationShortDescription(0), pCity, iPlayerLoop])
+						# World Wonder Mode
+						if (self.szWonderDisplayMode == self.szWDM_WorldWonder and isWorldWonder(iBuildingLoop)):
+							# Is this city building a wonder?
+							if (iBuildingProd == iBuildingLoop):
+								if (iTeamX == self.iActiveTeam):
+									self.aaWondersBeingBuilt_BUG.append([iBuildingLoop, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
 
-								if (pCity.getNumBuilding(iBuildingLoop) > 0):
-									if (iPlayerTeam == self.iActiveTeam or self.pActiveTeam.isHasMet(iPlayerTeam)):
-										self.aaWondersBuilt_BUG.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,True,pPlayer.getCivilizationShortDescription(0),pCity, iPlayerLoop])
-									else:
-										self.aaWondersBuilt_BUG.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,False,TRNSLTR.getText("TXT_KEY_UNKNOWN", ()),pCity, 18])
-	#								print("Adding World wonder to list: %s, %d, %s" %(pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,pPlayer.getCivilizationAdjective(0)))
+								if (self.pActiveTeam.isHasMet(iTeamX)
+								and self.pActivePlayer.canDoEspionageMission(self.iInvestigateCityMission, cityX.getOwner(), cityX.plot(), -1)
+								and cityX.isRevealed(GAME.getActiveTeam(), False)):
+									self.aaWondersBeingBuilt_BUG.append([iBuildingLoop, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
+
+							if (cityX.getNumBuilding(iBuildingLoop) > 0):
+								if (iTeamX == self.iActiveTeam or self.pActiveTeam.isHasMet(iTeamX)):
+									self.aaWondersBuilt_BUG.append([cityX.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,True, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
+								else:
+									self.aaWondersBuilt_BUG.append([cityX.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,False,TRNSLTR.getText("TXT_KEY_UNKNOWN", ()), cityX, 18])
+
+								self.iNumWonders += 1
+
+						# National/Team Wonder Mode
+						elif self.szWonderDisplayMode == self.szWDM_NatnlWonder and (isNationalWonder(iBuildingLoop) or isTeamWonder(iBuildingLoop)):
+
+							# Is this city building a wonder?
+							if (iBuildingProd == iBuildingLoop):
+								# Only show our wonders under construction
+								if (iTeamX == self.iActiveTeam):
+									self.aaWondersBeingBuilt_BUG.append([iBuildingLoop, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
+
+								if (self.pActiveTeam.isHasMet(iTeamX)
+								and self.pActivePlayer.canDoEspionageMission(self.iInvestigateCityMission, cityX.getOwner(), cityX.plot(), -1)
+								and cityX.isRevealed(GAME.getActiveTeam(), False)):
+									self.aaWondersBeingBuilt_BUG.append([iBuildingLoop, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
+
+							# Has this city built a wonder?
+							if (cityX.getNumBuilding(iBuildingLoop) > 0):
+								if (iTeamX == self.iActiveTeam):
+									self.aaWondersBuilt_BUG.append([cityX.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,True, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
 									self.iNumWonders += 1
 
-							# National/Team Wonder Mode
-							elif self.szWonderDisplayMode == self.szWDM_NatnlWonder and (isNationalWonder(iBuildingLoop) or isTeamWonder(iBuildingLoop)):
+								elif self.pActiveTeam.isHasMet(iTeamX) and cityX.isRevealed(GAME.getActiveTeam(), False):
 
-								# Is this city building a wonder?
-								if (iBuildingProd == iBuildingLoop):
-									# Only show our wonders under construction
-									if (iPlayerTeam == self.iActiveTeam):
-										self.aaWondersBeingBuilt_BUG.append([iBuildingLoop,pPlayer.getCivilizationShortDescription(0), pCity, iPlayerLoop])
-
-									if (self.pActiveTeam.isHasMet(iPlayerTeam)
-									and self.pActivePlayer.canDoEspionageMission(self.iInvestigateCityMission, pCity.getOwner(), pCity.plot(), -1)
-									and pCity.isRevealed(gc.getGame().getActiveTeam())):
-										self.aaWondersBeingBuilt_BUG.append([iBuildingLoop,pPlayer.getCivilizationShortDescription(0), pCity, iPlayerLoop])
-
-								# Has this city built a wonder?
-								if (pCity.getNumBuilding(iBuildingLoop) > 0):
-									if (iPlayerTeam == self.iActiveTeam):
-										self.aaWondersBuilt_BUG.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,True,pPlayer.getCivilizationShortDescription(0), pCity, iPlayerLoop])
-										self.iNumWonders += 1
-
-									elif (self.pActiveTeam.isHasMet(iPlayerTeam)
-									and pCity.isRevealed(gc.getGame().getActiveTeam())):
-										self.aaWondersBuilt_BUG.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,True,pPlayer.getCivilizationShortDescription(0), pCity, iPlayerLoop])
-										self.iNumWonders += 1
+									self.aaWondersBuilt_BUG.append([cityX.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,True, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
+									self.iNumWonders += 1
 
 		# This array used to store which players have already used up a team's slot so team projects don't get added to list more than once
 		aiTeamsUsed = []
@@ -2421,26 +2397,26 @@ class CvInfoScreen:
 		if (self.szWonderDisplayMode == self.szWDM_Project):
 
 			# Loop through players to determine Projects
-			for iPlayerLoop in range(gc.getMAX_PLAYERS()):
+			for iPlayerLoop in range(GC.getMAX_PLAYERS()):
 
-				pPlayer = gc.getPlayer(iPlayerLoop)
+				pPlayer = GC.getPlayer(iPlayerLoop)
 				iTeamLoop = pPlayer.getTeam()
 
 				# Block duplicates
 				if (iTeamLoop not in aiTeamsUsed):
 
 					aiTeamsUsed.append(iTeamLoop)
-					pTeam = gc.getTeam(iTeamLoop)
+					pTeam = GC.getTeam(iTeamLoop)
 
 					if (pTeam.isAlive() and not pTeam.isNPC()):
 
 						# Loop through projects
-						for iProjectLoop in range(gc.getNumProjectInfos()):
+						for iProjectLoop in range(GC.getNumProjectInfos()):
 
 							for iI in range(pTeam.getProjectCount(iProjectLoop)):
 
 								if (iTeamLoop == self.iActiveTeam or self.pActiveTeam.isHasMet(iTeamLoop)):
-									self.aaWondersBuilt_BUG.append([-9999,iProjectLoop,True,gc.getPlayer(iPlayerLoop).getCivilizationShortDescription(0),None, iPlayerLoop])
+									self.aaWondersBuilt_BUG.append([-9999,iProjectLoop,True,GC.getPlayer(iPlayerLoop).getCivilizationShortDescription(0),None, iPlayerLoop])
 								else:
 									self.aaWondersBuilt_BUG.append([-9999,iProjectLoop,False,TRNSLTR.getText("TXT_KEY_UNKNOWN", ()),None, 9999])
 								self.iNumWonders += 1
@@ -2486,24 +2462,24 @@ class CvInfoScreen:
 			iPlayer = self.aaWondersBeingBuilt_BUG[iWonderLoop][3]
 
 			color = -1
-			ePlayerColor = gc.getPlayer(iPlayer).getPlayerColor()
+			ePlayerColor = GC.getPlayer(iPlayer).getPlayerColor()
 			if ePlayerColor != -1:
-				playerColor = gc.getPlayerColorInfo(ePlayerColor)
+				playerColor = GC.getPlayerColorInfo(ePlayerColor)
 				if playerColor:
 					color = playerColor.getColorTypePrimary()
 
 			if (self.szWonderDisplayMode == self.szWDM_Project):
-				pWonderInfo = gc.getProjectInfo(iWonderType)
+				pWonderInfo = GC.getProjectInfo(iWonderType)
 				iWidget = WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT
 			else:
-				pWonderInfo = gc.getBuildingInfo(iWonderType)
+				pWonderInfo = GC.getBuildingInfo(iWonderType)
 				iWidget = WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING
 
 			szWonderName = pWonderInfo.getDescription()
-			szTurnYearBuilt = u"<font=2>%c</font>" % gc.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar()
+			szTurnYearBuilt = u"<font=2>%c</font>" % GC.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar()
 
 			# Check to see if active player can see this city
-			if pCity and pCity.isRevealed(gc.getGame().getActiveTeam()):
+			if pCity and pCity.isRevealed(GAME.getActiveTeam(), False):
 				szCityName = pCity.getName()
 			else:
 				szCityName = u""
@@ -2530,17 +2506,17 @@ class CvInfoScreen:
 			iPlayer = self.aaWondersBuilt_BUG[iWonderLoop][5]
 
 			color = -1
-			ePlayerColor = gc.getPlayer(iPlayer).getPlayerColor()
+			ePlayerColor = GC.getPlayer(iPlayer).getPlayerColor()
 			if ePlayerColor != -1:
-				playerColor = gc.getPlayerColorInfo(ePlayerColor)
+				playerColor = GC.getPlayerColorInfo(ePlayerColor)
 				if playerColor:
 					color = playerColor.getColorTypePrimary()
 
 			if (self.szWonderDisplayMode == self.szWDM_Project):
-				pWonderInfo = gc.getProjectInfo(iWonderType)
+				pWonderInfo = GC.getProjectInfo(iWonderType)
 				iWidget = WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT
 			else:
-				pWonderInfo = gc.getBuildingInfo(iWonderType)
+				pWonderInfo = GC.getBuildingInfo(iWonderType)
 				iWidget = WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING
 			szWonderName = pWonderInfo.getDescription()
 
@@ -2553,7 +2529,7 @@ class CvInfoScreen:
 				szTurnYearBuilt = TRNSLTR.getText("TXT_KEY_TIME_AD", (iTurnYearBuilt,))
 
 			# Check to see if active player can see this city
-			if pCity and pCity.isRevealed(gc.getGame().getActiveTeam()):
+			if pCity and pCity.isRevealed(GAME.getActiveTeam(), False):
 				szCityName = pCity.getName()
 			else:
 				szCityName = u""
@@ -2563,7 +2539,7 @@ class CvInfoScreen:
 				szCityName = TRNSLTR.changeTextColor(szCityName, color)
 
 			screen.appendTableRow(self.szWondersTable)
-			if bKnown and pCity and pCity.isRevealed(gc.getGame().getActiveTeam()):
+			if bKnown and pCity and pCity.isRevealed(GAME.getActiveTeam(), False):
 				screen.setTableText(self.szWondersTable, 0, iWonderLoop+iWBB, "", zoomArt, WidgetTypes.WIDGET_ZOOM_CITY, pCity.getOwner(), pCity.getID(), 1<<0)
 			screen.setTableText(self.szWondersTable, 1, iWonderLoop+iWBB, szWonderName   , "", iWidget, iWonderType, -1, 1<<0)
 			screen.setTableInt (self.szWondersTable, 2, iWonderLoop+iWBB, szTurnYearBuilt, "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<1)
@@ -2596,9 +2572,9 @@ class CvInfoScreen:
 
 		screen = self.getScreen()
 
-		iNumUnits = gc.getNumUnitInfos()
-		iNumBuildings = gc.getNumBuildingInfos()
-		iNumImprovements = gc.getNumImprovementInfos()
+		iNumUnits = GC.getNumUnitInfos()
+		iNumBuildings = GC.getNumBuildingInfos()
+		iNumImprovements = GC.getNumImprovementInfos()
 
 		self.iNumUnitStatsChartCols = 5
 		self.iNumBuildingStatsChartCols = 2
@@ -2610,7 +2586,7 @@ class CvInfoScreen:
 
 ################################################### CALCULATE STATS ###################################################
 
-		iMinutesPlayed = CyGame().getMinutesPlayed()
+		iMinutesPlayed = GAME.getMinutesPlayed()
 		iHoursPlayed = iMinutesPlayed / 60
 		iMinutesPlayed = iMinutesPlayed - (iHoursPlayed * 60)
 
@@ -2628,7 +2604,7 @@ class CvInfoScreen:
 		iNumCitiesRazed = CyStatistics().getPlayerNumCitiesRazed(self.iActivePlayer)
 
 		iNumReligionsFounded = 0
-		for iReligionLoop in range(gc.getNumReligionInfos()):
+		for iReligionLoop in range(GC.getNumReligionInfos()):
 			if (CyStatistics().getPlayerReligionFounded(self.iActivePlayer, iReligionLoop)):
 				iNumReligionsFounded += 1
 
@@ -2652,10 +2628,12 @@ class CvInfoScreen:
 		for iUnitLoop in range(iNumUnits):
 			aiUnitsCurrent.append(0)
 
-		apUnitList = PyPlayer(self.iActivePlayer).getUnitList()
-		for pUnit in apUnitList:
-			iType = pUnit.getUnitType()
+		CyUnit, i = CyPlayer.firstUnit(False)
+		while CyUnit:
+			iType = CyUnit.getUnitType()
 			aiUnitsCurrent[iType] += 1
+
+			CyUnit, i = CyPlayer.nextUnit(i, False)
 
 		aiImprovementsCurrent = []
 		for iImprovementLoop in range(iNumImprovements):
@@ -2679,14 +2657,14 @@ class CvInfoScreen:
 				 PanelStyles.PANEL_STYLE_DAWNTOP )
 
 		# Leaderhead graphic
-		player = gc.getPlayer(gc.getGame().getActivePlayer())
+		player = GC.getPlayer(GAME.getActivePlayer())
 		szLeaderWidget = self.getNextWidgetName()
 		screen.addLeaderheadGFC(szLeaderWidget, player.getLeaderType(), AttitudeTypes.ATTITUDE_PLEASED,
 			self.X_LEADER_ICON, self.Y_LEADER_ICON, self.W_LEADER_ICON, self.H_LEADER_ICON, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		# Leader Name
 		self.szLeaderNameWidget = self.getNextWidgetName()
-		szText = u"<font=4b>" + gc.getPlayer(self.iActivePlayer).getName() + u"</font>"
+		szText = u"<font=4b>" + GC.getPlayer(self.iActivePlayer).getName() + u"</font>"
 		screen.setText(self.szLeaderNameWidget, "", szText, 1<<0,
 				   self.X_LEADER_NAME, self.Y_LEADER_NAME, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
@@ -2816,7 +2794,7 @@ class CvInfoScreen:
 			iRow = iUnitLoop
 
 			iCol = 0
-			szUnitName = gc.getUnitInfo(iUnitLoop).getDescription()
+			szUnitName = GC.getUnitInfo(iUnitLoop).getDescription()
 			screen.setTableText(szUnitsTable, iCol, iRow, szUnitName, "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
 			iCol = 1
@@ -2840,7 +2818,7 @@ class CvInfoScreen:
 			iRow = iBuildingLoop
 
 			iCol = 0
-			szBuildingName = gc.getBuildingInfo(iBuildingLoop).getDescription()
+			szBuildingName = GC.getBuildingInfo(iBuildingLoop).getDescription()
 			screen.setTableText(szBuildingsTable, iCol, iRow, szBuildingName, "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 			iCol = 1
 			iNumBuildingsBuilt = aiBuildingsBuilt[iBuildingLoop]
@@ -2855,7 +2833,7 @@ class CvInfoScreen:
 				iNumImprovementsCurrent = aiImprovementsCurrent[iImprovementLoop]
 				if (iNumImprovementsCurrent > 0):
 					iCol = 0
-					szImprovementName = gc.getImprovementInfo(iImprovementLoop).getDescription()
+					szImprovementName = GC.getImprovementInfo(iImprovementLoop).getDescription()
 					screen.setTableText(szImprovementsTable, iCol, iRow, szImprovementName, "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 					iCol = 1
 					screen.setTableInt(szImprovementsTable, iCol, iRow, str(iNumImprovementsCurrent), "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
@@ -2877,7 +2855,7 @@ class CvInfoScreen:
 
 	def getTurnDate(self,turn):
 
-		year = CyGame().getTurnYear(turn)
+		year = GAME.getTurnYear(turn)
 
 		if (year < 0):
 			return TRNSLTR.getText("TXT_KEY_TIME_BC", (-year,))
@@ -2924,7 +2902,6 @@ class CvInfoScreen:
 
 	# handle the input for this screen...
 	def handleInput (self, inputClass):
-#		BugUtil.debugInput(inputClass)
 
 		screen = self.getScreen()
 
@@ -2958,9 +2935,9 @@ class CvInfoScreen:
 				iIndex = screen.getSelectedPullDownID(self.DEBUG_DROPDOWN_ID)
 				self.iActivePlayer = screen.getPullDownData(self.DEBUG_DROPDOWN_ID, iIndex)
 
-				self.pActivePlayer = gc.getPlayer(self.iActivePlayer)
+				self.pActivePlayer = GC.getPlayer(self.iActivePlayer)
 				self.iActiveTeam = self.pActivePlayer.getTeam()
-				self.pActiveTeam = gc.getTeam(self.iActiveTeam)
+				self.pActiveTeam = GC.getTeam(self.iActiveTeam)
 
 				self.determineKnownPlayers()
 				# Force recache of all scores
@@ -2997,7 +2974,7 @@ class CvInfoScreen:
 				elif (szWidgetName == self.szWondersTable):
 					if (inputClass.getMouseX() == 0):
 						screen.hideScreen()
-						pPlayer = gc.getPlayer(inputClass.getData1())
+						pPlayer = GC.getPlayer(inputClass.getData1())
 						pCity = pPlayer.getCity(inputClass.getData2())
 						CyCamera().JustLookAtPlot(pCity.plot())
 
@@ -3123,19 +3100,19 @@ class CvInfoScreen:
 					self.Graph_Status_Prior = self.Graph_Status_Current
 					self.drawGraphs()
 
-				for i in range(gc.getMAX_PC_PLAYERS()):
+				for i in range(GC.getMAX_PC_PLAYERS()):
 					if szWidgetName == self.sPlayerTextWidget[i]:
 						self.bPlayerInclude[i] = not self.bPlayerInclude[i]
 						self.drawGraphs()
 						break
 
 				if szWidgetName == self.sShowAllWidget:
-					for i in range(gc.getMAX_PC_PLAYERS()):
+					for i in range(GC.getMAX_PC_PLAYERS()):
 						self.bPlayerInclude[i] = True
 					self.drawGraphs()
 
 				if szWidgetName == self.sShowNoneWidget:
-					for i in range(gc.getMAX_PC_PLAYERS()):
+					for i in range(GC.getMAX_PC_PLAYERS()):
 						self.bPlayerInclude[i] = False
 					self.drawGraphs()
 #BUG: Change Graphs - start
@@ -3200,11 +3177,11 @@ class CvInfoScreen:
 		self.aiPlayersMetNAEspionage = []
 		self.iNumPlayersMet = 0
 		self.iNumPlayersMetNAEspionage = 0
-		for iLoopPlayer in range(gc.getMAX_PC_PLAYERS()):
-			pLoopPlayer = gc.getPlayer(iLoopPlayer)
+		for iLoopPlayer in range(GC.getMAX_PC_PLAYERS()):
+			pLoopPlayer = GC.getPlayer(iLoopPlayer)
 			iLoopPlayerTeam = pLoopPlayer.getTeam()
-			if (gc.getTeam(iLoopPlayerTeam).isEverAlive()):
-				if (self.pActiveTeam.isHasMet(iLoopPlayerTeam) or CyGame().isDebugMode() or iEndGame != 0):
+			if (GC.getTeam(iLoopPlayerTeam).isEverAlive()):
+				if (self.pActiveTeam.isHasMet(iLoopPlayerTeam) or GAME.isDebugMode() or iEndGame != 0):
 					if (self.iDemographicsMission == -1
 					or self.pActivePlayer.canDoEspionageMission(self.iDemographicsMission, iLoopPlayer, None, -1)
 					or iEndGame != 0

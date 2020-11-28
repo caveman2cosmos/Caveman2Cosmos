@@ -68,7 +68,7 @@ uint16_t CvRandom::get(uint16_t usNum, const TCHAR* pszLog)
 				TCHAR szOut[1024];
 				sprintf(szOut, "Player %d - Multiplayer RNG Log.log", GC.getGame().getActivePlayer());
 				//gDLL->messageControlLog(szOut);
-				GC.getGame().logMsgTo(szOut, "Rand = %d (%d) on %d (%s)\n", getSeed(), usNum, GC.getGame().getTurnSlice(), pszLog);
+				logging::logMsg(szOut, "Rand = %d (%d) on %d (%s)\n", getSeed(), usNum, GC.getGame().getTurnSlice(), pszLog);
 			}
 		}
 	}

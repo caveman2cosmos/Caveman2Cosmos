@@ -335,10 +335,6 @@ class CvGameUtils:
 	def doHolyCity(self):
 		return False
 
-	def doGold(self, argsList):
-		#ePlayer = argsList[0]
-		return False
-
 	def doResearch(self, argsList):
 		#ePlayer = argsList[0]
 		return False
