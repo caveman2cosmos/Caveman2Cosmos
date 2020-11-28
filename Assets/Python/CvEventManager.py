@@ -2377,7 +2377,7 @@ class CvEventManager:
 
 				CyUnit = CyPlayer.initUnit(iWorker, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
-			else: print "Found no valid plot to place the gatherer. \nNew civ from revolution or barb. city perhaps?"
+			else: print "Found no valid plot to place the gatherer.\n\tNew civ from revolution or barbCiv perhaps?"
 
 		# Obsolete python building-effects
 		aWonderTuple = self.aWonderTuple

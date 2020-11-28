@@ -4,8 +4,6 @@
 ##
 ## All functions in thie module that take a playerOrID or teamOrID as their
 ## parameter will accept either the CyPlayer/CyTeam object or its ID.
-## Many of them will probably also accept a PyPlayer/PyTeam wrapper, but I
-## recommend that you use getCy() on the object instead.
 ##
 ##   getPlayer(playerOrID)
 ##     Returns the CyPlayer given an ID or CyPlayer

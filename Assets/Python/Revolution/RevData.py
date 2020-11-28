@@ -6,23 +6,9 @@
 # All  changed SDToolKitCustom to SDKToolKit as suggested by dusckr87 and questdog
 
 import CvPythonExtensions
-#import CvUtil
-#import PyHelpers
-try:
-	import cPickle as pickle
-except:
-	import pickle
-# --------- Revolution mod -------------
+
 import SdToolKit
 import RevDefs
-
-# globals
-# gc = CyGlobalContext()
-# PyPlayer = PyHelpers.PyPlayer
-# PyInfo = PyHelpers.PyInfo
-# game = CyGame()
-# localText = CyTranslator()
-
 
 #   Loads previously initialized data for Revolution mod from the central reservoir. If no data is found, init it.
 def revLoad(object):
