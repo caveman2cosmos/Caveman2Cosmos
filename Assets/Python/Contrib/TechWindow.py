@@ -1,6 +1,6 @@
 ## TechWindowWide
 ##
-## Originally by SirRethcir: Techanzeige hinzugefügt
+## Originally by SirRethcir: Techanzeige hinzugefÃ¼gt
 ## Enhanced by Roamty, Caesium, Guarav
 ##
 ## Copyright (c) 2008 The BUG Mod.
