@@ -262,10 +262,6 @@ public:
 	const TCHAR* getButton() const;
 	const TCHAR* getMovie() const;
 
-	// serialization
-	void read(FDataStreamBase*) {}
-	void write(FDataStreamBase*) {}
-
 	bool read(CvXMLLoadUtility* pXML);
 
 	// Afforess 12/9/09
