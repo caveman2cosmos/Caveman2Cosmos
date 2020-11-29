@@ -639,9 +639,7 @@ public:
 
 	bool hasSkippedSaveChecksum() const;
 
-	void logMsg(char* format, ... );
 	void logDebugMsg(char* format, ...);
-	void logMsgTo(const TCHAR* logFile, char* format, ...);
 
 	void addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive = true); // Exposed to Python
 	void changeHumanPlayer( PlayerTypes eOldHuman, PlayerTypes eNewHuman );

@@ -1612,7 +1612,7 @@ void CvMap::calculateAreas()
 //	}
 //	if (iNumTiles > 0)
 //	{
-//		GC.getGame().logMsg("%d Tiles were in %d Range, out of %d total in range tiles", iNumTilesValid, iRange, iNumTiles);
+//		logging::logMsg("C2C.log", "%d Tiles were in %d Range, out of %d total in range tiles\n", iNumTilesValid, iRange, iNumTiles);
 //		return (iNumTilesValid * 100) / iNumTiles;
 //	}
 //	return 0;
