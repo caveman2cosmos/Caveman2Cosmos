@@ -15,9 +15,6 @@
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
-#include "FVariableSystem.h"
-
-class CvInternalGlobals;
 
 #include <xercesc/dom/DOM.hpp>
 #include <xercesc/util/XMLString.hpp>
@@ -32,11 +29,14 @@ class CvInternalGlobals;
 #include <xercesc/framework/Wrapper4InputSource.hpp>
 #include <xercesc/validators/common/Grammar.hpp>
 
-class FXmlSchemaCache;
-class FXml;
+#include "FVariableSystem.h"
+
+class CvInternalGlobals;
 class CvGameText;
 class CvCacheObject;
 class CvImprovementBonusInfo;
+class FXmlSchemaCache;
+class FXml;
 
 class ParserErrorHandler : public xercesc::ErrorHandler
 {
