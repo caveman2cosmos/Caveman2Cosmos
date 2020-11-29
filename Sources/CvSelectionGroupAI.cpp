@@ -4,8 +4,11 @@
 #include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
 #include "CvSelectionGroupAI.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
+#include "CvUnitAI.h"
 
 // Public Functions...
 

@@ -15,6 +15,7 @@
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvUnitAI.h"
 #include "CyPlot.h"
 #include "CyUnit.h"
 #include "CvDLLEntityIFaceBase.h"

@@ -23,6 +23,7 @@
 #include "CvTalkingHeadMessage.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvUnitAI.h"
 #include "CyCity.h"
 #include "CvDLLFAStarIFaceBase.h"
 

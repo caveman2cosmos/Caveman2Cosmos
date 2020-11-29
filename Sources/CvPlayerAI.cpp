@@ -17,6 +17,7 @@
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvUnitAI.h"
 #include "CvDLLFAStarIFaceBase.h"
 
 /************************************************************************************************/
@@ -29132,15 +29133,14 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 {
 	MEMORY_TRACK()
 
-	int iValue;
 	int iTemp;
 	int iExtra;
 	int iI;
 
-	iValue = 0;
+	int iValue = 0;
 
-	CvPromotionInfo &kPromotion = GC.getPromotionInfo(ePromotion);
-	CvUnitInfo &kUnit = GC.getUnitInfo(eUnit);
+	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
+	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 	int iMoves;
 	if (pUnit == NULL)
 	{
