@@ -163,10 +163,10 @@ class WBPlayerUnits:
 		global iCityOwner
 		pPlayer = GC.getPlayer(iPlayer)
 
-		lCities = []
-		pCity = pPlayer.getCity(iCityID)
 		if iCityOwner > -1:
 			pCity = GC.getPlayer(iCityOwner).getCity(iCityID)
+		else: pCity = pPlayer.getCity(iCityID)
+
 		if pCity is None:
 			cityX, i = pPlayer.firstCity(False)
 			if cityX:
@@ -174,6 +174,7 @@ class WBPlayerUnits:
 				iCityID = cityX.getID()
 				iCityOwner = cityX.getOwner()
 
+		lCities = []
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 			if iOwnerType == 1 and iPlayerX != iPlayer:
 				continue

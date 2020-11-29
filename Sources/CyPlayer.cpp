@@ -2250,7 +2250,7 @@ int CyPlayer::getNumCities()
 
 CyCity* CyPlayer::getCity(int iID)
 {
-	return m_pPlayer ? new CyCity(m_pPlayer->getCity(iID)) : NULL;
+	return m_pPlayer && iID > -1 ? new CyCity(m_pPlayer->getCity(iID)) : NULL;
 }
 
 python::list CyPlayer::units() const

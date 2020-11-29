@@ -138,10 +138,6 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>USE_CAN_DO_GOLD_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>USE_CAN_DO_RESEARCH_CALLBACK</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>

@@ -41,49 +41,6 @@ void deleteInfoArray(std::vector<T*>& array)
 	array.clear();
 }
 
-template <class T>
-bool readInfoArray(FDataStreamBase* pStream, std::vector<T*>& array, const char* szClassName)
-{
-	GC.addToInfosVectors(&array);
-
-	int iSize;
-	pStream->Read(&iSize);
-	FAssertMsg(iSize==sizeof(T), CvString::format("class size doesn't match cache size - check info read/write functions:%s", szClassName).c_str());
-	if (iSize!=sizeof(T))
-		return false;
-	pStream->Read(&iSize);
-
-	deleteInfoArray(array);
-
-	for (int i = 0; i < iSize; ++i)
-	{
-		array.push_back(new T);
-	}
-
-	int iIndex = 0;
-	for (std::vector<T*>::iterator it = array.begin(); it != array.end(); ++it)
-	{
-		(*it)->read(pStream);
-		GC.setInfoTypeFromString((*it)->getType(), iIndex);
-		++iIndex;
-	}
-
-	return true;
-}
-
-template <class T>
-bool writeInfoArray(FDataStreamBase* pStream,  std::vector<T*>& array)
-{
-	int iSize = sizeof(T);
-	pStream->Write(iSize);
-	pStream->Write(array.size());
-	for (std::vector<T*>::iterator it = array.begin(); it != array.end(); ++it)
-	{
-		(*it)->write(pStream);
-	}
-	return true;
-}
-
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -197,7 +154,7 @@ cvInternalGlobals::cvInternalGlobals()
 	/************************************************************************************************/
 	/* XML_MODULAR_ART_LOADING                 END                                                  */
 	/************************************************************************************************/
-	, m_bXMLLogging(false)
+	, m_bXMLLogging(true)
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
 	/*                                                                                              */
@@ -2735,137 +2692,6 @@ const char* cvInternalGlobals::alternateProfileSampleName() const
 {
 	return m_szAlternateProfilSampleName;
 }
-
-bool cvInternalGlobals::readBuildingInfoArray(FDataStreamBase* pStream)
-{
-	return readInfoArray(pStream, m_paBuildingInfo, "CvBuildingInfo");
-}
-
-void cvInternalGlobals::writeBuildingInfoArray(FDataStreamBase* pStream)
-{
-	writeInfoArray(pStream, m_paBuildingInfo);
-}
-
-bool cvInternalGlobals::readTechInfoArray(FDataStreamBase* pStream)
-{
-	return readInfoArray(pStream, m_paTechInfo, "CvTechInfo");
-}
-
-void cvInternalGlobals::writeTechInfoArray(FDataStreamBase* pStream)
-{
-	writeInfoArray(pStream, m_paTechInfo);
-}
-
-bool cvInternalGlobals::readUnitInfoArray(FDataStreamBase* pStream)
-{
-	return readInfoArray(pStream, m_paUnitInfo, "CvUnitInfo");
-}
-
-void cvInternalGlobals::writeUnitInfoArray(FDataStreamBase* pStream)
-{
-	writeInfoArray(pStream, m_paUnitInfo);
-}
-
-bool cvInternalGlobals::readLeaderHeadInfoArray(FDataStreamBase* pStream)
-{
-	return readInfoArray(pStream, m_paLeaderHeadInfo, "CvLeaderHeadInfo");
-}
-
-void cvInternalGlobals::writeLeaderHeadInfoArray(FDataStreamBase* pStream)
-{
-	writeInfoArray(pStream, m_paLeaderHeadInfo);
-}
-
-bool cvInternalGlobals::readCivilizationInfoArray(FDataStreamBase* pStream)
-{
-	return readInfoArray(pStream, m_paCivilizationInfo, "CvCivilizationInfo");
-}
-
-void cvInternalGlobals::writeCivilizationInfoArray(FDataStreamBase* pStream)
-{
-	writeInfoArray(pStream, m_paCivilizationInfo);
-}
-
-bool cvInternalGlobals::readPromotionInfoArray(FDataStreamBase* pStream)
-{
-	return readInfoArray(pStream, m_paPromotionInfo, "CvPromotionInfo");
-}
-
-void cvInternalGlobals::writePromotionInfoArray(FDataStreamBase* pStream)
-{
-	writeInfoArray(pStream, m_paPromotionInfo);
-}
-
-bool cvInternalGlobals::readDiplomacyInfoArray(FDataStreamBase* pStream)
-{
-	return readInfoArray(pStream, m_paDiplomacyInfo, "CvDiplomacyInfo");
-}
-
-void cvInternalGlobals::writeDiplomacyInfoArray(FDataStreamBase* pStream)
-{
-	writeInfoArray(pStream, m_paDiplomacyInfo);
-}
-
-bool cvInternalGlobals::readCivicInfoArray(FDataStreamBase* pStream)
-{
-	return readInfoArray(pStream, m_paCivicInfo, "CvCivicInfo");
-}
-
-void cvInternalGlobals::writeCivicInfoArray(FDataStreamBase* pStream)
-{
-	writeInfoArray(pStream, m_paCivicInfo);
-}
-
-bool cvInternalGlobals::readHandicapInfoArray(FDataStreamBase* pStream)
-{
-	return readInfoArray(pStream, m_paHandicapInfo, "CvHandicapInfo");
-}
-
-void cvInternalGlobals::writeHandicapInfoArray(FDataStreamBase* pStream)
-{
-	writeInfoArray(pStream, m_paHandicapInfo);
-}
-
-bool cvInternalGlobals::readBonusInfoArray(FDataStreamBase* pStream)
-{
-	return readInfoArray(pStream, m_paBonusInfo, "CvBonusInfo");
-}
-
-void cvInternalGlobals::writeBonusInfoArray(FDataStreamBase* pStream)
-{
-	writeInfoArray(pStream, m_paBonusInfo);
-}
-
-bool cvInternalGlobals::readImprovementInfoArray(FDataStreamBase* pStream)
-{
-	return readInfoArray(pStream, m_paImprovementInfo, "CvImprovementInfo");
-}
-
-void cvInternalGlobals::writeImprovementInfoArray(FDataStreamBase* pStream)
-{
-	writeInfoArray(pStream, m_paImprovementInfo);
-}
-
-bool cvInternalGlobals::readEventInfoArray(FDataStreamBase* pStream)
-{
-	return readInfoArray(pStream, m_paEventInfo, "CvEventInfo");
-}
-
-void cvInternalGlobals::writeEventInfoArray(FDataStreamBase* pStream)
-{
-	writeInfoArray(pStream, m_paEventInfo);
-}
-
-bool cvInternalGlobals::readEventTriggerInfoArray(FDataStreamBase* pStream)
-{
-	return readInfoArray(pStream, m_paEventTriggerInfo, "CvEventTriggerInfo");
-}
-
-void cvInternalGlobals::writeEventTriggerInfoArray(FDataStreamBase* pStream)
-{
-	writeInfoArray(pStream, m_paEventTriggerInfo);
-}
-
 
 //
 // Global Types Hash Map

@@ -5970,11 +5970,7 @@ bool CvCity::isDisorder() const
 
 bool CvCity::isHolyCity(ReligionTypes eIndex) const
 {
-	if (eIndex == NO_RELIGION)
-	{
-		return false;
-	}
-	return (GC.getGame().getHolyCity(eIndex) == this);
+	return eIndex != NO_RELIGION && GC.getGame().getHolyCity(eIndex) == this;
 }
 
 bool CvCity::isHolyCity() const
@@ -5986,7 +5982,6 @@ bool CvCity::isHolyCity() const
 			return true;
 		}
 	}
-
 	return false;
 }
 
