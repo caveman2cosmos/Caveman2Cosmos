@@ -6,6 +6,7 @@
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
 #include "CvCityAI.h"
+#include "CvContractBroker.h"
 #include "CvDiploParameters.h"
 #include "CvEventReporter.h"
 #include "CvGameAI.h"

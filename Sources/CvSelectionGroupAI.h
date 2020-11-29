@@ -8,6 +8,7 @@
 #include "CvSelectionGroup.h"
 
 class CvCity;
+class CvPlot;
 
 class CvSelectionGroupAI : public CvSelectionGroup
 {

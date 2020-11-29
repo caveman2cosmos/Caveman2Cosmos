@@ -19,6 +19,7 @@ class CvArea;
 class CvBuildLists;
 class CvCity;
 class CvCityAI;
+//class CvContractBroker;
 class CvDiploParameters;
 class CvEventTriggerInfo;
 class CvPlot;

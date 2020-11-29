@@ -4,10 +4,15 @@
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvCityAI.h"
+#include "CvContractBroker.h"
+#include "CvGameAI.h"
 #include "CvGlobals.h"
-#include "CvReachablePlotSet.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvReachablePlotSet.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
 #include "CvDLLFAStarIFaceBase.h"
 
 //	KOSHLING MOD - calculate all possible building focuses at once

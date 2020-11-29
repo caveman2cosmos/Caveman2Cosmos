@@ -3,6 +3,7 @@
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
+#include "CvContractBroker.h"
 #include "CvEventReporter.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"

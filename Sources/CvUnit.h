@@ -7,7 +7,7 @@
 
 #include "CvDLLEntity.h"
 //#include "CvEnums.h"
-//#include "CvStructs.h"  // don't disable! used for modules
+//#include "CvStructs.h"
 #include "CvGameObject.h"
 #include <map>
 
