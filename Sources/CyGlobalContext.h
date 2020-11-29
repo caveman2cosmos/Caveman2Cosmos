@@ -372,8 +372,6 @@ public:
 
 	int getPEAK_EXTRA_DEFENSE() const { return GC.getPEAK_EXTRA_DEFENSE(); }
 	int getPEAK_EXTRA_MOVEMENT() const { return GC.getPEAK_EXTRA_MOVEMENT(); }
-	bool isXMLLogging() const { return GC.isXMLLogging(); }
-	void setXMLLogging(bool bNewVal) { GC.setXMLLogging(bNewVal); }
 	
 	void setNoUpdateDefineINT( const char * szName, int iValue ) { return GC.setDefineINT( szName, iValue, false ); }
 	void setNoUpdateDefineFLOAT( const char * szName, float fValue ) { return GC.setDefineFLOAT( szName, fValue, false ); }

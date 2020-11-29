@@ -102,10 +102,10 @@ void CvGame::updateColoredPlots()
 			if (pLoopPlot != NULL && GET_PLAYER(getActivePlayer()).getAdvancedStartCityCost(true, pLoopPlot) > 0)
 			{
 				bool bStartingPlot = false;
-				for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
+				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
-					const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes) iPlayer);
-					if (kPlayer.isAlive() && getActiveTeam() == kPlayer.getTeam() && pLoopPlot == kPlayer.getStartingPlot())
+					if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getActiveTeam())
+					&&  GET_PLAYER((PlayerTypes)iI).getStartingPlot() == pLoopPlot)
 					{
 						bStartingPlot = true;
 						break;

@@ -10,6 +10,8 @@ class CvPlot;
 class CvSelectionGroup;
 class CvUnit;
 
+class CvCity;
+
 class CvSelectionGroupAI : public CvSelectionGroup
 {
 public:

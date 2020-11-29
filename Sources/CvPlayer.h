@@ -93,7 +93,6 @@ public:
 
 	void resetPlotAndCityData();
 
-	void logMsg(char* format, ...);
 	void changePersonalityType();
 	void resetCivTypeEffects();
 	void changeLeader(LeaderHeadTypes eNewLeader);

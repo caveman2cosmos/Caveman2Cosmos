@@ -133,10 +133,6 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvScalableInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
 protected:
 
 	float m_fScale; // Exposed to Python
@@ -157,9 +153,6 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvHotkeyInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
 
 	int getActionInfoIndex() const;
 	void setActionInfoIndex(int i);
@@ -233,8 +226,6 @@ public:
 	const TCHAR* getDiplomacyText(int i) const;
 	const CvString* getDiplomacyText() const;
 
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
 	bool read(CvXMLLoadUtility* pXML);
 	void UpdateDiplomacies(CvDiplomacyInfo* pDiplomacyInfo, int iIndex);
 
@@ -303,9 +294,6 @@ public:
 	const UnitCombatModifier& getUnitCombatExperienceType(int iUnitCombat) const;
 
 	//TB Specialist Tags end
-
-	void read(FDataStreamBase* ) {}
-	void write(FDataStreamBase* ) {}
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpecialistInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -477,9 +465,6 @@ public:
 	//ls612: Tech Commerce Modifiers
 	int getCommerceModifier(int i) const;
 	int* getCommerceModifierArray() const;
-
-	void read(FDataStreamBase* ) {}
-	void write(FDataStreamBase* ) {}
 
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
@@ -715,9 +700,6 @@ public:
 	bool getTerrainDoubleMove(int i) const; // Exposed to Python
 	bool getFeatureDoubleMove(int i) const; // Exposed to Python
 	bool getUnitCombat(int i) const; // Exposed to Python
-
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
 
 /************************************************************************************************/
 /* Afforess					  Start		 12/9/09												*/
@@ -1524,9 +1506,6 @@ public:
 	const TCHAR* getWaypoint() const;		// effect type, Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
 
 	void copyNonDefaults(CvMissionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
@@ -2360,9 +2339,6 @@ public:
 
 	const CvArtInfoUnit* getArtInfo(int i, EraTypes eEra, UnitArtStyleTypes eStyle) const;
 
-	void read(FDataStreamBase* ) {}
-	void write(FDataStreamBase* ) {}
-
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 	bool readPass3();
@@ -2754,10 +2730,7 @@ public:
 	CvSpawnInfo();
 	virtual ~CvSpawnInfo();
 
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
-	virtual bool read(CvXMLLoadUtility* pXML);
+	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpawnInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	int	getNumBonuses() const;
@@ -2933,10 +2906,6 @@ public:
 	int getCombatPercent() const;
 	int getWithdrawalChange() const;
 	int getPursuitChange() const;
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -3171,8 +3140,6 @@ public:
 	CvString getCivicAttitudeReasonNamesVectorElement(int i) const;
 	CvString getCivicAttitudeReasonValuesVectorElement(int i) const;
 
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
 	bool readPass3();
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvCivicInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -3364,8 +3331,6 @@ public:
 
 	const TCHAR* getDiplomacyText(int i, int j) const; // Exposed to Python
 
-	void read(FDataStreamBase* stream){}
-	void write(FDataStreamBase* stream){}
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvXMLLoadUtility* pXML);
 	bool FindResponseIndex(const CvDiplomacyResponse* pNewResponse, int iCase, int* iIndex) const;
@@ -3399,9 +3364,6 @@ public:
 	bool isValid() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
 
 	void copyNonDefaults(CvSpecialBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
@@ -3583,8 +3545,6 @@ public:
 	bool readPass2(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvCivilizationInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void copyNonDefaultsReadPass2(CvCivilizationInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
 
 	void getCheckSum(unsigned int& iSum) const;
 
@@ -3712,9 +3672,6 @@ class CvHurryInfo :
 
 		bool isAnger() const; // Exposed to Python
 
-		void read(FDataStreamBase* stream) {}
-		void write(FDataStreamBase* stream) {}
-
 		bool read(CvXMLLoadUtility* pXML);
 		void copyNonDefaults(CvHurryInfo* pClassInfo, CvXMLLoadUtility* pXML);
 		void getCheckSum(unsigned int& iSum) const;
@@ -3816,9 +3773,6 @@ public:
 	int isAIFreeTechs(int i) const; // Exposed to Python
 
 	int getPercent(int iID) const;
-
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -4101,8 +4055,6 @@ public:
 	const PlaceBonusTypes& getPlaceBonusType(int iIndex) const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
 	void copyNonDefaults(CvBuildInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum) const;
@@ -4196,9 +4148,6 @@ public:
 	const TCHAR* getSound() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
-
 	void copyNonDefaults(CvGoodyInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum) const;
 
@@ -4272,8 +4221,6 @@ public:
 	//	object without crashing the core engine :-(
 	inline int	getZobristValue() const { return m_zobristValue; }
 
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum) const;
@@ -4489,8 +4436,6 @@ protected:
 
 	std::vector<int> m_aiMapCategoryTypes;
 public:
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 
@@ -4689,9 +4634,6 @@ public:
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
-
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvBonusInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void getCheckSum(unsigned int& iSum) const;
@@ -4828,9 +4770,6 @@ public:
 
 	DllExport const CvArtInfoFeature* getArtInfo() const;
 	const TCHAR* getButton() const;
-
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -5331,8 +5270,6 @@ public:
 	const TCHAR* getLeaderHead() const;
 	const TCHAR* getButton() const;
 
-	void write(FDataStreamBase* stream) {}
-	void read(FDataStreamBase* stream) {}
 	bool read(CvXMLLoadUtility* pXML);
 
 	void copyNonDefaults(CvLeaderHeadInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -5924,9 +5861,6 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass3();
 
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
 	void copyNonDefaults(CvReligionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum) const;
@@ -6035,9 +5969,6 @@ public:
 	int* getYieldChangeArray() const;
 	int getCommerceChange(int i) const;
 	int* getCommerceChangeArray() const;
-
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
 
 	void copyNonDefaults(CvCorporationInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
@@ -6896,10 +6827,6 @@ class CvEntityEventInfo : public CvInfoBase
 		CvEntityEventInfo();
 		virtual ~CvEntityEventInfo();
 
-		// serialization
-		void read(FDataStreamBase* pStream) {}
-		void write(FDataStreamBase* pStream) {}
-
 		bool read(CvXMLLoadUtility* pXML);
 		void copyNonDefaults(CvEntityEventInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
@@ -6945,10 +6872,6 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvAssetInfoBase* pClassInfo, CvXMLLoadUtility* pXML);
 
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
 
@@ -6973,10 +6896,6 @@ public:
 
 	void copyNonDefaults(CvArtInfoAsset* pClassInfo, CvXMLLoadUtility* pXML);
 
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
 
@@ -6994,11 +6913,6 @@ class CvArtInfoScalableAsset :
 	public CvScalableInfo
 {
 public:
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvArtInfoScalableAsset* pClassInfo, CvXMLLoadUtility* pXML);
 
@@ -7032,10 +6946,6 @@ public:
 	virtual ~CvArtInfoMovie() {}
 
 	bool read(CvXMLLoadUtility* pXML);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
 
 	void copyNonDefaults(CvArtInfoMovie* pClassInfo, CvXMLLoadUtility* pXML);
 };
@@ -7075,11 +6985,6 @@ public:
 	DllExport float getBankRate() const;
 
 	bool read(CvXMLLoadUtility* pXML);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
 	void copyNonDefaults(CvArtInfoUnit* pClassInfo, CvXMLLoadUtility* pXML);
 
 	const TCHAR* getTrainSound() const;
@@ -7140,10 +7045,6 @@ public:
 
 	void copyNonDefaults(CvArtInfoBuilding* pClassInfo, CvXMLLoadUtility* pXML);
 
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
 protected:
 
 	bool m_bAnimated;
@@ -7161,11 +7062,6 @@ public:
 	bool isWhiteFlag() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
 	void copyNonDefaults(CvArtInfoCivilization* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
@@ -7187,11 +7083,6 @@ public:
 	void setBackgroundKFM( const TCHAR* szKFM);
 
 	bool read(CvXMLLoadUtility* pXML);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
 	void copyNonDefaults(CvArtInfoLeaderhead* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
@@ -7212,11 +7103,6 @@ public:
 	void setShaderNIF(const TCHAR* szDesc);
 
 	bool read(CvXMLLoadUtility* pXML);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
 	void copyNonDefaults(CvArtInfoBonus* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
@@ -7237,11 +7123,6 @@ public:
 	bool isExtraAnimations() const; // Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
 	void copyNonDefaults(CvArtInfoImprovement* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
@@ -7272,11 +7153,6 @@ public:
 	DllExport CvTextureBlendSlotList& getBlendList(int blendMask);
 
 	bool read(CvXMLLoadUtility* pXML);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
 	void copyNonDefaults(CvArtInfoTerrain* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
@@ -7305,10 +7181,6 @@ public:
 	DllExport bool isRiverArt() const; // Exposed to Python
 	DllExport TileArtTypes getTileArtType() const;
 	DllExport LightTypes getLightType() const;
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
 
 	void dump();
 
@@ -7728,10 +7600,6 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
 	void copyNonDefaults(CvColorInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
@@ -7758,11 +7626,6 @@ public:
 	int getTextColorType() const;
 
 	bool read(CvXMLLoadUtility* pXML);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
 	void copyNonDefaults(CvPlayerColorInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 protected:
@@ -7820,9 +7683,6 @@ class CvLandscapeInfo :
 		void setNormalMap(const TCHAR* szPath);
 		const TCHAR* getBlendMap();
 		void setBlendMap(const TCHAR* szPath);
-
-		void read(FDataStreamBase* stream) {}
-		void write(FDataStreamBase* stream) {}
 
 		bool read(CvXMLLoadUtility* pXML);
 		void copyNonDefaults(CvLandscapeInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -7933,9 +7793,6 @@ public:
 			SAFE_DELETE_ARRAY(m_paszDiplomacyText);
 		}
 
-		void read(FDataStreamBase* stream) {}
-		void write(FDataStreamBase* stream) {}
-
 		int m_iNumDiplomacyText;
 		bool* m_pbCivilizationTypes;
 		bool* m_pbLeaderHeadTypes;
@@ -7963,8 +7820,6 @@ public:
 
 	const TCHAR* getDiplomacyText(int i, int j) const; // Exposed to Python
 
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
 	bool read(CvXMLLoadUtility* pXML);
 
 private:
@@ -8000,9 +7855,6 @@ public:
 	bool isSticky() const { return m_bSticky; };
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvEffectInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	void read(FDataStreamBase* stream) {}
-	void write(FDataStreamBase* stream) {}
 
 private:
 	CvString m_szPath;
@@ -8422,9 +8274,6 @@ public:
 	int getNumOnGameOptions() const;
 	bool isOnGameOption(int i) const;
 
-	void read(FDataStreamBase* ) {}
-	void write(FDataStreamBase* ) {}
-
 	bool read(CvXMLLoadUtility* pXML);
 
 	void copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -8651,9 +8500,6 @@ private:
 	std::vector<CvString> m_aszClearEventChanceforPass3;
 	std::vector<int> m_aiClearEventChanceforPass3;
 public:
-
-	void read(FDataStreamBase* ) {}
-	void write(FDataStreamBase* ) {}
 
 	bool read(CvXMLLoadUtility* pXML);
 //	bool readPass2(CvXMLLoadUtility* pXML);
@@ -8892,9 +8738,6 @@ public:
 	const TCHAR* getFutureArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const;
 	void setFutureArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j, const TCHAR* szVal);
 
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvUnitArtStyleTypeInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
@@ -8945,9 +8788,6 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass3();
-
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
 
 	void copyNonDefaults(CvVoteSourceInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
@@ -9069,9 +8909,6 @@ public:
 	void setChar(int i);
 	int getFontButtonIndex() const;
 
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
 	bool read(CvXMLLoadUtility* pXML);
 
 	void copyNonDefaults(CvPropertyInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -9142,9 +8979,6 @@ public:
 	int getExtraChancePromotionChance(int i) const;
 	int getNumReplaceOutcomes() const;
 	OutcomeTypes getReplaceOutcome(int i) const;
-
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
 
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
@@ -9266,9 +9100,6 @@ public:
 	bool isBuilding(int i) const;
 	void setBuildings();
 
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 
@@ -9342,9 +9173,6 @@ public:
 
 	//bool readPass2(CvXMLLoadUtility* pXML);
 	//void copyNonDefaultsReadPass2(CvUnitCombatInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
 
 	const CvOutcomeList* getKillOutcomeList() const;
 	int getNumActionOutcomes() const;
@@ -9973,9 +9801,6 @@ public:
 	CvMapCategoryInfo();
 	virtual ~CvMapCategoryInfo();
 
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
-
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 
@@ -10005,9 +9830,6 @@ public:
 
 	CvIdeaClassInfo();
 	virtual ~CvIdeaClassInfo();
-
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
 
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
@@ -10039,9 +9861,6 @@ public:
 
 	CvIdeaInfo();
 	virtual ~CvIdeaInfo();
-
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
 
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
@@ -10078,9 +9897,6 @@ public:
 
 	CvInvisibleInfo();
 	virtual ~CvInvisibleInfo();
-
-	virtual void read(FDataStreamBase* pStream) {}
-	virtual void write(FDataStreamBase* pStream) {}
 
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
