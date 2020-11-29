@@ -57,12 +57,18 @@ call "%root_dir%\Tools\CI\DoSourceIndexing.bat"
 echo Checking out SVN working copy for deployment...
 call %SVN% --quiet checkout %svn_url% "%build_dir%"
 if %ERRORLEVEL% neq 0 (
-    call %SVN% cleanup --non-interactive
-    call %SVN% checkout %svn_url% "%build_dir%"
-    if %ERRORLEVEL% neq 0 (
-        echo SVN checkout failed, aborting...
-        exit /B 3
-    )
+	echo Quiet SVN checkout failed...
+	call %SVN% cleanup --non-interactive
+	call %SVN% checkout %svn_url% "%build_dir%"
+	if %ERRORLEVEL% neq 0 (
+		echo Normal SVN checkout failed, try one more time...
+		call %SVN% cleanup --non-interactive
+		call %SVN% checkout %svn_url% "%build_dir%"
+		if %ERRORLEVEL% neq 0 (
+			echo SVN checkout failed, aborting...
+			exit /B 3
+		)
+	)
 )
 
 :: PACK FPKS ---------------------------------------------------
