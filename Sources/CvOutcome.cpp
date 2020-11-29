@@ -8,11 +8,13 @@
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
+#include "CvCityAI.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
 #include "CvOutcome.h"
 #include "CvProperties.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CvXMLLoadUtility.h"

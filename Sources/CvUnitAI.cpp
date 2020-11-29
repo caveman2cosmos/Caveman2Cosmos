@@ -1,14 +1,17 @@
 // unitAI.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
+#include "CvCityAI.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
-#include "CvReachablePlotSet.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
+#include "CvReachablePlotSet.h"
 #include "CvTeamAI.h"
-#include "CvArea.h"
+#include "CvUnitAI.h"
 #include "CvDLLFAStarIFaceBase.h"
 
 PlayerTypes	CvUnitAI::m_cachedPlayer = NO_PLAYER;

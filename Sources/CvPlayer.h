@@ -14,9 +14,12 @@
 #include "CvContractBroker.h"
 #include "CvGameObject.h"
 #include "CvBuildLists.h"
+#include "CvUnitList.h"
 
 class CvArea;
+class CvBuildLists;
 class CvCity;
+class CvCityAI;
 class CvPlot;
 class CvPlotGroup;
 class CvDiploParameters;

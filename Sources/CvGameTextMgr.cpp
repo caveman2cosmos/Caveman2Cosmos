@@ -15,6 +15,7 @@
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
+#include "CvCityAI.h"
 #include "CounterSet.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"

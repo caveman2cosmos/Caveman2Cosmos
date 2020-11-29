@@ -287,7 +287,6 @@ namespace python = boost::python;
 #include "CvAllocator.h"
 
 #include "FAssert.h"
-#include "CheckSum.h"
 #include "Stopwatch.h"
 #include "CvGameCoreDLLDefNew.h"
 #include "CvGameCoreDLLUnDefNew.h"
