@@ -6,6 +6,7 @@
 #include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CvMapExternal.h"
+#include "CvMessageControl.h"
 #include "CvPlayerAI.h"
 #include "CvRandom.h"
 #include "CvTeamAI.h"

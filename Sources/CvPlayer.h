@@ -6,7 +6,6 @@
 #define CIV4_PLAYER_H
 
 #include "CvCityAI.h"
-//#include "CvUnitAI.h"
 #include "CvPlotGroup.h"
 #include "LinkedList.h"
 #include "CvContractBroker.h"

@@ -2,6 +2,7 @@
 #include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvMessageControl.h"
 #include "CvPlayerAI.h"
 #include "CvPopupInfo.h"
 #include "CvSelectionGroup.h"

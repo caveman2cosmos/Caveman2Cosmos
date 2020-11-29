@@ -16,6 +16,7 @@
 class cvInternalGlobals;
 class CvArea;
 class CvCity;
+//class CvDLLEntity;
 class CvPlot;
 class CvSelectionGroup;
 class CvArtInfoUnit;

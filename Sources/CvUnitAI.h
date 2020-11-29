@@ -5,14 +5,6 @@
 #ifndef CIV4_UNIT_AI_H
 #define CIV4_UNIT_AI_H
 
-#include "CvUnit.h"
-
-class CvCity;
-class CvPlot;
-class CvReachablePlotSet;
-class CvSelectionGroup;
-class ConstructionNeeds;
-
 typedef enum
 {
 	CONTRACTUAL_STATE_NONE,
@@ -21,6 +13,13 @@ typedef enum
 	CONTRACTUAL_STATE_FOUND_WORK,
 	CONTRACTUAL_STATE_NO_WORK_FOUND
 } ContractualState;
+
+class CvCity;
+class CvPlot;
+class CvReachablePlotSet;
+class CvSelectionGroup;
+class CvUnit;
+class ConstructionNeeds;
 
 class CvUnitAI : public CvUnit
 {

@@ -11,6 +11,7 @@
 #include "CvInfos.h"
 #include "CvMap.h"
 #include "CvMapGenerator.h"
+#include "CvMessageControl.h"
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
