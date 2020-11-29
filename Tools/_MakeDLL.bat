@@ -1,5 +1,12 @@
 @echo off
 
+if "%APPVEYOR_REPO_BRANCH%" equ "%release_branch%" (
+	if "%1" neq "FinalRelease" (
+		echo Skipping test build due to being on release branch
+		exit /b 0
+	)
+)
+
 REM Make sure the dependencies are extracted
 PUSHD "%~dp0"
 set "tools_dir=%cd%"
