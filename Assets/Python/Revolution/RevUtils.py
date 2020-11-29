@@ -48,12 +48,8 @@ def getGameSpeedMod():
 
 
 def doRefortify(iPlayer):
-	pPlayer = GC.getPlayer(iPlayer)
-
-	for groupID in xrange(pPlayer.getNumSelectionGroups()):
-		pGroup = pPlayer.getSelectionGroup(groupID)
+	for pGroup in GC.getPlayer(iPlayer).groups():
 		if pGroup.getNumUnits() > 0:
-
 			headUnit = pGroup.getHeadUnit()
 			if headUnit.getFortifyTurns() > 0:
 				pGroup.setActivityType(ActivityTypes.ACTIVITY_SLEEP)
@@ -209,13 +205,10 @@ def getSpawnablePlots( iPlotX, iPlotY, pSpawnPlayer, bLand = True, bIncludePlot 
 def getEnemyUnits( iPlotX, iPlotY, iEnemyOfPlayer, domain = -1, bOnlyMilitary = False ) :
 
 	pEnemyOfTeam = GC.getTeam( GC.getPlayer(iEnemyOfPlayer).getTeam() )
-	gameMap = GC.getMap()
-	pPlot = gameMap.plot(iPlotX,iPlotY)
 
 	enemyUnits = []
 
-	for i in xrange(pPlot.getNumUnits()) :
-		pUnit = pPlot.getUnit(i)
+	for pUnit in GC.getMap().plot(iPlotX,iPlotY).units():
 		pUnitTeam = GC.getTeam( pUnit.getTeam() )
 		if( pEnemyOfTeam.isAtWar(pUnit.getTeam()) ) :
 			if( domain < 0 or pUnit.getDomainType() == domain ) :
@@ -226,13 +219,9 @@ def getEnemyUnits( iPlotX, iPlotY, iEnemyOfPlayer, domain = -1, bOnlyMilitary = 
 
 def getPlayerUnits( iPlotX, iPlotY, iPlayer, domain = -1 ) :
 
-	gameMap = GC.getMap()
-	pPlot = gameMap.plot(iPlotX,iPlotY)
-
 	playerUnits = []
 
-	for i in xrange(pPlot.getNumUnits()) :
-		pUnit = pPlot.getUnit(i)
+	for pUnit in GC.getMap().plot(iPlotX,iPlotY).units():
 		if( pUnit.getOwner() == iPlayer ) :
 			if( domain < 0 or pUnit.getDomainType() == domain ) :
 				playerUnits.append( pUnit )

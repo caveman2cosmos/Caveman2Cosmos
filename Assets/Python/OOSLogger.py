@@ -158,8 +158,7 @@ def writeLog():
 			pFile.write("\n\nUnit Info:\n----------\n")
 
 			if pPlayer.getNumUnits():
-				pUnit, i = pPlayer.firstUnit(False)
-				while pUnit:
+				for pUnit in pPlayer.units():
 					pFile.write("Player %d, Unit ID: %d, %s\n" % (iPlayer, pUnit.getID(), CvUtil.convertToStr(pUnit.getName())))
 					pFile.write("X: %d, Y: %d\nDamage: %d\n" % (pUnit.getX(), pUnit.getY(), pUnit.getDamage()))
 					pFile.write("Experience: %d\nLevel: %d\n" % (pUnit.getExperience(), pUnit.getLevel()))
@@ -177,8 +176,6 @@ def writeLog():
 								pFile.write("UnitCombats:\n")
 								bFirst = False
 							pFile.write("\t" + CvUtil.convertToStr(GC.getUnitCombatInfo(j).getDescription()) + "\n")
-
-					pUnit, i = pPlayer.nextUnit(i, False)
 			else:
 				pFile.write("No Units")
 			# Space at end of player's info
