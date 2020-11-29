@@ -3,7 +3,7 @@
 #ifndef CvArea_h__
 #define CvArea_h__
 
-#include "CvEnums.h"
+//#include "CvEnums.h"
 
 class CvCity;
 class CvPlot;

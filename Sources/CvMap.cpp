@@ -10,15 +10,21 @@
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
+#include "CvFractal.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvMap.h"
 #include "CvMapGenerator.h"
-#include "CvFractal.h"
 #include "CvPlayerAI.h"
-
+#include "CvPlot.h"
+#include "CvPlotGroup.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
+#include "CvUnit.h"
+#include "CvViewport.h"
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
-
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/

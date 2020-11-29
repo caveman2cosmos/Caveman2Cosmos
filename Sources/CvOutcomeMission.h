@@ -10,7 +10,12 @@
 #ifndef CV_OUTCOME_MISSION_H
 #define CV_OUTCOME_MISSION_H
 
-#include "CvOutcomeList.h"
+class CvOutcomeList;
+class CvProperties;
+class CvUnit;
+class CvXMLLoadUtility;
+class BoolExpr;
+class IntExpr;
 
 class CvOutcomeMission
 {

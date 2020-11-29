@@ -1,5 +1,4 @@
 #include "CvGameCoreDLL.h"
-
 #include "CvBuildingFilters.h"
 #include "CvBuildingGrouping.h"
 #include "CvBuildingSort.h"

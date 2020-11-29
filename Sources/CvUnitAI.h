@@ -7,10 +7,6 @@
 
 #include "CvUnit.h"
 
-class CvReachablePlotSet;
-class CvCity;
-class ConstructionNeeds;
-
 typedef enum
 {
 	CONTRACTUAL_STATE_NONE,
@@ -20,11 +16,15 @@ typedef enum
 	CONTRACTUAL_STATE_NO_WORK_FOUND
 } ContractualState;
 
+class CvCity;
+class CvPlot;
+class CvReachablePlotSet;
+class CvSelectionGroup;
+class ConstructionNeeds;
+
 class CvUnitAI : public CvUnit
 {
-
 public:
-
 	CvUnitAI(bool bIsDummy = false);
 	virtual ~CvUnitAI();
 
