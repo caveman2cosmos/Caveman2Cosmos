@@ -371,6 +371,7 @@ public:
 	int getNumUnits() const;
 	CyUnit* getUnit(int iID) const;
 
+	python::list groups() const;
 	int getNumSelectionGroups() const;
 	CySelectionGroup* getSelectionGroup(int iID) const;
 

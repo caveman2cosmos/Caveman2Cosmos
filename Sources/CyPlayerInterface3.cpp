@@ -203,6 +203,7 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getNumUnits", &CyPlayer::getNumUnits, "int ()")
 		.def("getUnit", &CyPlayer::getUnit, python::return_value_policy<python::manage_new_object>(), "CyUnit* (int iID)")
 
+		.def("groups", &CyPlayer::groups)
 		.def("getNumSelectionGroups", &CyPlayer::getNumSelectionGroups, "int ()")
 		.def("getSelectionGroup", &CyPlayer::getSelectionGroup, python::return_value_policy<python::manage_new_object>(), "CvSelectionGroup* (int iID)")
 

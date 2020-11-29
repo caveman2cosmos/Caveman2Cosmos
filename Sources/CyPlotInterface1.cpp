@@ -26,7 +26,6 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("isAdjacentToArea", &CyPlot::isAdjacentToArea, "bool (CyArea)")
 		.def("isCoastal", &CyPlot::isCoastal, "bool ()")
 
-
 		.def("isLake", &CyPlot::isLake, "bool ()")
 		.def("isFreshWater", &CyPlot::isFreshWater, "bool ()")
 
@@ -43,7 +42,6 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("getUnitPower", &CyPlot::getUnitPower, "int (int /*PlayerTypes*/ eOwner)")
 
 		.def("defenseModifier", &CyPlot::defenseModifier, "int (int /*TeamTypes*/, bool bIgnoreBuilding, bool bHelp)")
-
 
 		.def("isAdjacentPlayer", &CyPlot::isAdjacentPlayer, "bool (int /*PlayerTypes*/ ePlayer, bool bLandOnly)")
 		.def("calculateCulturalOwner", &CyPlot::calculateCulturalOwner, "int ()")
@@ -87,8 +85,6 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 
 		.def("changeImprovementUpgradeProgress", &CyPlot::changeImprovementUpgradeProgress, "void (int iChange)")
 
-
-
 		.def("isStartingPlot", &CyPlot::isStartingPlot, "bool ()")
 		.def("setStartingPlot", &CyPlot::setStartingPlot, "void (bool bNewValue)")
 		.def("isNOfRiver", &CyPlot::isNOfRiver, "bool ()")
@@ -99,7 +95,6 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("getRiverNSDirection", &CyPlot::getRiverNSDirection, "CardinalDirectionTypes ()")
 
 		.def("isPotentialCityWork", &CyPlot::isPotentialCityWork, "bool ()")
-
 
 		.def("getOwner", &CyPlot::getOwner, "int ()")
 		.def("setOwner", &CyPlot::setOwner, "void (int /*PlayerTypes*/ eNewValue)")
@@ -137,12 +132,9 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("setCulture", &CyPlot::setCulture, "void (int /*PlayerTypes*/ eIndex, int iNewValue, bool bUpdate)")
 		.def("changeCulture", &CyPlot::changeCulture, "void (int /*PlayerTypes*/ eIndex, int iChange, bool bUpdate)")
 
-
 		.def("getFoundValue", &CyPlot::getFoundValue, "int (int /*PlayerTypes*/ eIndex)")
 
 		.def("isPlayerCityRadius", &CyPlot::isPlayerCityRadius, "bool (int /*PlayerTypes*/ eIndex)")
-
-
 
 		.def("getRevealedOwner", &CyPlot::getRevealedOwner, "int (int (TeamTypes) eTeam, bool bDebug)")
 
@@ -151,29 +143,20 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("isRevealed", &CyPlot::isRevealed, "bool (int /*TeamTypes*/ eTeam, bool bDebug)")
 		.def("setRevealed", &CyPlot::setRevealed, "void (int /*TeamTypes*/ eTeam, bool bNewValue, bool bTerrainOnly, int /*TeamTypes*/ eFromTeam)")
 
-
 		.def("getInvisibleVisibilityCount", &CyPlot::getInvisibleVisibilityCount, "int (int (TeamTypes eTeam), int (InvisibleTypes) eInvisible)")
 		.def("isInvisibleVisible", &CyPlot::isInvisibleVisible, "int (int (TeamTypes eTeam), int (InvisibleTypes) eInvisible)")
 		.def("changeInvisibleVisibilityCount", &CyPlot::changeInvisibleVisibilityCount, "int (int (TeamTypes eTeam), int (InvisibleTypes) eInvisible, int iChange, int iIntensity)")
 
+		.def("units", &CyPlot::units)
 		.def("getNumUnits", &CyPlot::getNumUnits, "int ()")
 		.def("getUnit", &CyPlot::getUnit, python::return_value_policy<python::manage_new_object>(), "CyUnit* (int iIndex)")
 
 		.def("getScriptData", &CyPlot::getScriptData, "str () - Get stored custom data")
 		.def("setScriptData", &CyPlot::setScriptData, "void (str) - Set stored custom data")
-/************************************************************************************************/
-/* Afforess	                  Start		 02/25/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 		.def("getRevoltProtection", &CyPlot::getRevoltProtection, "int ()")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		.def("isInViewport", &CyPlot::isInViewport, "bool ()")
 		.def("cloneToViewport", &CyPlot::cloneToViewport, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
-
-		// Super Forts begin *canal* *choke*
-		// Super Forts end
 	;
 }

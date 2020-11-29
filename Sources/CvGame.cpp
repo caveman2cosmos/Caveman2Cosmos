@@ -4210,52 +4210,38 @@ void CvGame::setForcedAIAutoPlay(PlayerTypes iPlayer, int iNewValue, bool bForce
 {
 	FAssert(iNewValue >= 0);
 
-	if(bForced == true)
-	{
-		const int iOldValue = getForcedAIAutoPlay(iPlayer);
-
-		if (iOldValue != iNewValue)
-		{
-			m_iForcedAIAutoPlay[iPlayer] = std::max(0, iNewValue);
-			setAIAutoPlay(iPlayer, iNewValue, true);
-		} else
-		{
-			setAIAutoPlay(iPlayer, iNewValue, true);
-		}
-	} else
+	if (!bForced)
 	{
 		m_iForcedAIAutoPlay[iPlayer] = 0;
 
-		const int iOldValue = m_iAIAutoPlay[iPlayer];
-
-		if(iOldValue != iNewValue)
+		if (m_iAIAutoPlay[iPlayer] != iNewValue)
 		{
 			setAIAutoPlay(iPlayer, iNewValue);
 		}
 	}
+	else if (getForcedAIAutoPlay(iPlayer) != iNewValue)
+	{
+		m_iForcedAIAutoPlay[iPlayer] = std::max(0, iNewValue);
+		setAIAutoPlay(iPlayer, iNewValue, true);
+	}
+	else setAIAutoPlay(iPlayer, iNewValue, true);
 }
 
 void CvGame::changeForcedAIAutoPlay(PlayerTypes iPlayer, int iChange)
 {
-	if(isForcedAIAutoPlay(iPlayer))
+	if (isForcedAIAutoPlay(iPlayer))
 	{
 		setForcedAIAutoPlay(iPlayer, (getAIAutoPlay(iPlayer) + iChange), true);
-	} else
-	{
-		setForcedAIAutoPlay(iPlayer, (getAIAutoPlay(iPlayer) + iChange));
 	}
+	else setForcedAIAutoPlay(iPlayer, (getAIAutoPlay(iPlayer) + iChange));
 }
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 
-// < M.A.D. Nukes Start >
+
 CvPlot* CvGame::getLastNukeStrikePlot() const
 {
 	return GC.getMap().plotSorenINLINE(m_iLastNukeStrikeX, m_iLastNukeStrikeY);
 }
-
 
 void CvGame::setLastNukeStrikePlot(CvPlot* pPlot)
 {
@@ -4273,7 +4259,7 @@ void CvGame::setLastNukeStrikePlot(CvPlot* pPlot)
 		}
 	}
 }
-// < M.A.D. Nukes End   >
+
 
 unsigned int CvGame::getInitialTime() const
 {
@@ -5729,93 +5715,100 @@ CvCity* CvGame::getHolyCity(ReligionTypes eIndex) const
 
 void CvGame::setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAnnounce)
 {
-	CvWString szBuffer;
-	CvCity* pHolyCity;
-	int iI;
-
 	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex)
 
 	CvCity* pOldValue = getHolyCity(eIndex);
 
-	if (pOldValue != pNewValue)
+	if (pOldValue == pNewValue)
 	{
-		if (pNewValue != NULL)
+		return;
+	}
+	if (pNewValue != NULL)
+	{
+		m_paHolyCity[eIndex] = pNewValue->getIDInfo();
+	}
+	else m_paHolyCity[eIndex].reset();
+
+
+	if (pOldValue != NULL)
+	{
+		pOldValue->changeReligionInfluence(eIndex, -GC.getHOLY_CITY_INFLUENCE());
+		pOldValue->updateReligionCommerce();
+		pOldValue->setInfoDirty(true);
+	}
+
+	if (getHolyCity(eIndex) != NULL)
+	{
+		CvCity* pHolyCity = getHolyCity(eIndex);
+
+		pHolyCity->setHasReligion(eIndex, true, bAnnounce, true);
+		pHolyCity->changeReligionInfluence(eIndex, GC.getHOLY_CITY_INFLUENCE());
+		pHolyCity->updateReligionCommerce();
+		pHolyCity->setInfoDirty(true);
+
+		if (bAnnounce && isFinalInitialized() && !gDLL->GetWorldBuilderMode())
 		{
-			m_paHolyCity[eIndex] = pNewValue->getIDInfo();
-		}
-		else
-		{
-			m_paHolyCity[eIndex].reset();
-		}
-
-		if (pOldValue != NULL)
-		{
-			pOldValue->changeReligionInfluence(eIndex, -(GC.getHOLY_CITY_INFLUENCE()));
-
-			pOldValue->updateReligionCommerce();
-
-			pOldValue->setInfoDirty(true);
-		}
-
-		if (getHolyCity(eIndex) != NULL)
-		{
-			pHolyCity = getHolyCity(eIndex);
-
-			pHolyCity->setHasReligion(eIndex, true, bAnnounce, true);
-			pHolyCity->changeReligionInfluence(eIndex, GC.getHOLY_CITY_INFLUENCE());
-
-			pHolyCity->updateReligionCommerce();
-
-			pHolyCity->setInfoDirty(true);
-
-			if (bAnnounce)
+			addReplayMessage(
+				REPLAY_MESSAGE_MAJOR_EVENT, pHolyCity->getOwner(),
+				gDLL->getText(
+					"TXT_KEY_MISC_REL_FOUNDED",
+					GC.getReligionInfo(eIndex).getTextKeyWide(), pHolyCity->getNameKey()
+				),
+				pHolyCity->getX(), pHolyCity->getY(), GC.getCOLOR_HIGHLIGHT_TEXT()
+			);
+			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
 				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_REL_FOUNDED", GC.getReligionInfo(eIndex).getTextKeyWide(), pHolyCity->getNameKey());
-					addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, pHolyCity->getOwner(), szBuffer, pHolyCity->getX(), pHolyCity->getY(), GC.getCOLOR_HIGHLIGHT_TEXT());
-
-					for (iI = 0; iI < MAX_PLAYERS; iI++)
+					if (pHolyCity->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 					{
-						if (GET_PLAYER((PlayerTypes)iI).isAlive())
-						{
-							MEMORY_TRACK_EXEMPT();
-
-							if (pHolyCity->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
-							{
-								szBuffer = gDLL->getText("TXT_KEY_MISC_REL_FOUNDED", GC.getReligionInfo(eIndex).getTextKeyWide(), pHolyCity->getNameKey());
-								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME_LONG(), szBuffer, GC.getReligionInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getReligionInfo(eIndex).getButton(), GC.getCOLOR_HIGHLIGHT_TEXT(), pHolyCity->getX(), pHolyCity->getY());
-							}
-							else
-							{
-								szBuffer = gDLL->getText("TXT_KEY_MISC_REL_FOUNDED_UNKNOWN", GC.getReligionInfo(eIndex).getTextKeyWide());
-								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME_LONG(), szBuffer, GC.getReligionInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getReligionInfo(eIndex).getButton(), GC.getCOLOR_HIGHLIGHT_TEXT());
-							}
-						}
+						MEMORY_TRACK_EXEMPT();
+						AddDLLMessage(
+							(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME_LONG(),
+							gDLL->getText(
+								"TXT_KEY_MISC_REL_FOUNDED",
+								GC.getReligionInfo(eIndex).getTextKeyWide(), pHolyCity->getNameKey()
+							),
+							GC.getReligionInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT,
+							GC.getReligionInfo(eIndex).getButton(), GC.getCOLOR_HIGHLIGHT_TEXT(),
+							pHolyCity->getX(), pHolyCity->getY()
+						);
+					}
+					else
+					{
+						MEMORY_TRACK_EXEMPT();
+						AddDLLMessage(
+							(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME_LONG(),
+							gDLL->getText(
+								"TXT_KEY_MISC_REL_FOUNDED_UNKNOWN",
+								GC.getReligionInfo(eIndex).getTextKeyWide()
+							),
+							GC.getReligionInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT,
+							GC.getReligionInfo(eIndex).getButton(), GC.getCOLOR_HIGHLIGHT_TEXT()
+						);
 					}
 				}
 			}
 		}
+	}
+	AI_makeAssignWorkDirty();
 
-		AI_makeAssignWorkDirty();
-
-		// Attitude cache
-		if (isFinalInitialized())
+	// Attitude cache
+	if (isFinalInitialized())
+	{
+		for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 		{
-			for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
+			if (GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iJ).getStateReligion() == eIndex)
 			{
-				if (GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iJ).getStateReligion() == eIndex)
+				if (pNewValue != NULL)
 				{
-					if (pNewValue != NULL)
-					{
-						GET_PLAYER(pNewValue->getOwner()).AI_invalidateAttitudeCache((PlayerTypes)iJ);
-						GET_PLAYER((PlayerTypes)iJ).AI_invalidateAttitudeCache(pNewValue->getOwner());
-					}
-					if (pOldValue != NULL)
-					{
-						GET_PLAYER(pOldValue->getOwner()).AI_invalidateAttitudeCache((PlayerTypes)iJ);
-						GET_PLAYER((PlayerTypes)iJ).AI_invalidateAttitudeCache(pOldValue->getOwner());
-					}
+					GET_PLAYER(pNewValue->getOwner()).AI_invalidateAttitudeCache((PlayerTypes)iJ);
+					GET_PLAYER((PlayerTypes)iJ).AI_invalidateAttitudeCache(pNewValue->getOwner());
+				}
+				if (pOldValue != NULL)
+				{
+					GET_PLAYER(pOldValue->getOwner()).AI_invalidateAttitudeCache((PlayerTypes)iJ);
+					GET_PLAYER((PlayerTypes)iJ).AI_invalidateAttitudeCache(pOldValue->getOwner());
 				}
 			}
 		}
@@ -6234,7 +6227,7 @@ void CvGame::doDeals()
 void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 {
 	const CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)iSpawnInfo);
-	//GC.getGame().logMsg("Spawn thread start for %s", spawnInfo.getType());
+	//logging::logMsg("C2C.log", "Spawn thread start for %s\n", spawnInfo.getType());
 	plots->clear();
 
 	if (spawnInfo.getRateOverride() == 0)
@@ -6452,14 +6445,11 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 		foreach_(const CvUnit* pLoopUnit, pPlot->units() | filtered(CvUnit::fn::getOwner() == ePlayer))
 		{
-			if ( areaPopulationMap[pPlot->getArea()].find(pLoopUnit->getUnitType()) != areaPopulationMap[pPlot->getArea()].end() )
+			if (areaPopulationMap[pPlot->getArea()].find(pLoopUnit->getUnitType()) != areaPopulationMap[pPlot->getArea()].end())
 			{
 				areaPopulationMap[pPlot->getArea()][pLoopUnit->getUnitType()]++;
 			}
-			else
-			{
-				areaPopulationMap[pPlot->getArea()][pLoopUnit->getUnitType()] = 1;
-			}
+			else areaPopulationMap[pPlot->getArea()][pLoopUnit->getUnitType()] = 1;
 		}
 	}
 
@@ -6492,7 +6482,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 		enumSpawnPlots(j, &(validPlots[j]));
 
 		int iPlotNum = validPlots[j].size();
-		logMsg("Spawn thread finished and joined for %s, found %d valid plots.", spawnInfo.getType(), iPlotNum);
+		logging::logMsg("C2C.log", "Spawn thread finished and joined for %s, found %d valid plots.", spawnInfo.getType(), iPlotNum);
 
 		if (iPlotNum == 0)
 		{
@@ -6539,7 +6529,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			iMaxAreaUnitDensity /= 2;
 		}
 
-		logMsg("Spawn chance per plot for %s is 1 to %d .", spawnInfo.getType(), (int)adjustedSpawnRate);
+		logging::logMsg("C2C.log", "Spawn chance per plot for %s is 1 to %d .", spawnInfo.getType(), (int)adjustedSpawnRate);
 
 
 		int spawnCount = 0;
@@ -6753,8 +6743,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 				}
 			}
 		}
-
-		logMsg("%d units spawned for %s", spawnCount, spawnInfo.getType());
+		logging::logMsg("C2C.log", "%d units spawned for %s\n", spawnCount, spawnInfo.getType());
 	}
 }
 
@@ -9381,21 +9370,6 @@ bool CvGame::hasSkippedSaveChecksum() const
 	return gDLL->hasSkippedSaveChecksum();
 }
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                                                                 jdog5000      */
-/*                                                                                lemmy101      */
-/*                                                                                              */
-/************************************************************************************************/
-//
-// for logging
-//
-void CvGame::logMsg(char* format, ... )
-{
-	static char buf[2048];
-	_vsnprintf( buf, 2048-4, format, (char*)(&format+1) );
-	gDLL->logMsg("ANewDawn.log", buf);
-}
-
 void CvGame::logDebugMsg(char* format, ...)
 {
 #ifdef _DEBUG
@@ -9411,16 +9385,7 @@ void CvGame::logDebugMsg(char* format, ...)
 #endif
 }
 
-void CvGame::logMsgTo(const TCHAR* logFile, char* format, ...)
-{
-	static char buf[2048];
-	_vsnprintf(buf, 2048 - 4, format, (char*)(&format + 1));
-	gDLL->logMsg(logFile, buf);
-}
 
-//
-//
-//
 void CvGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive)
 {
 	// Reset names for recycled player slot
@@ -9508,21 +9473,12 @@ void CvGame::changeHumanPlayer( PlayerTypes eOldHuman, PlayerTypes eNewHuman )
 
 	GET_PLAYER(eOldHuman).setIsHuman(false);
 }
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 bool CvGame::isCompetingCorporation(CorporationTypes eCorporation1, CorporationTypes eCorporation2) const
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 02/09/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if (GC.getCorporationInfo(eCorporation1).isCompetingCorporation(eCorporation2) || GC.getCorporationInfo(eCorporation2).isCompetingCorporation(eCorporation1))
 		return true;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
 	{
 		if (GC.getCorporationInfo(eCorporation1).getPrereqBonus(i) != NO_BONUS)
@@ -10706,7 +10662,7 @@ void CvGame::doIncreasingDifficulty()
 void CvGame::doFlexibleDifficulty()
 {
 	MEMORY_TRACE_FUNCTION();
-	logMsg("doFlexibleDifficulty");
+	logging::logMsg("C2C.log", "doFlexibleDifficulty");
 
 	const bool bFlexDiffForAI = isModderGameOption(MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY);
 
@@ -10727,7 +10683,7 @@ void CvGame::doFlexibleDifficulty()
 				iTurns /= 100;
 			}
 
-			logMsg("[Flexible Difficulty] (%d / %d) turns until next flexible difficulty check for Player: %S", iTimer, iTurns, kPlayer.getName());
+			logging::logMsg("C2C.log", "[Flexible Difficulty] (%d / %d) turns until next flexible difficulty check for Player: %S\n", iTimer, iTurns, kPlayer.getName());
 
 			//Increase timer
 			iTimer++;
@@ -10735,14 +10691,14 @@ void CvGame::doFlexibleDifficulty()
 
 			if (iTimer < iTurns) continue;
 
-			logMsg("[Flexible Difficulty] Player: %S, Checking Flexible Difficulty", kPlayer.getName());
+			logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S, Checking Flexible Difficulty\n", kPlayer.getName());
 
 			if (!kPlayer.isModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY)
 			&& (!bFlexDiffForAI || kPlayer.isHuman()))
 			{
 				continue;
 			}
-			logMsg("[Flexible Difficulty] Player: %S has Flexible Difficulty Enabled", kPlayer.getName());
+			logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S has Flexible Difficulty Enabled\n", kPlayer.getName());
 			int iMinHandicap = kPlayer.getModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_MIN_DIFFICULTY);
 			int iMaxHandicap = kPlayer.getModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_DIFFICULTY);
 
@@ -10793,14 +10749,14 @@ void CvGame::doFlexibleDifficulty()
 					const int iScore = getPlayerScore((PlayerTypes)iJ);
 					// iVariance is sum of squared difference from mean
 					iVariance += (iMeanScore - iScore) * (iMeanScore - iScore);
-					logMsg("[Flexible Difficulty] Adding score for player %S, score: %d", pPlayer.getName(), iScore);
+					logging::logMsg("C2C.log", "[Flexible Difficulty] Adding score for player %S, score: %d\n", pPlayer.getName(), iScore);
 				}
 			}
 			const int stddev = iVariance >= 0 ? intSqrt(10000 * iVariance / iAliveCount) : 0;
 
 			const int iCurrentScore = getPlayerScore(ePlayer);
-			logMsg(
-				"[Flexible Difficulty] Player: %S, Score: %d, Difficulty: %S, Avg Score: %d, Std Dev: %d/100",
+			logging::logMsg("C2C.log",
+				"[Flexible Difficulty] Player: %S, Score: %d, Difficulty: %S, Avg Score: %d, Std Dev: %d/100\n",
 				kPlayer.getName(), iCurrentScore,
 				GC.getHandicapInfo((HandicapTypes)kPlayer.getHandicapType()).getDescription(),
 				iMeanScore, stddev
@@ -10822,11 +10778,11 @@ void CvGame::doFlexibleDifficulty()
 			//Increased Difficulty (player's score is > 1 std dev away)
 			if (100*iCurrentScore > 100*iMeanScore + stddev)
 			{
-				logMsg("[Flexible Difficulty] Player: %S score is > 1 std dev above average.", kPlayer.getName());
+				logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S score is > 1 std dev above average.\n", kPlayer.getName());
 				if (iNewHandicap < (GC.getNumHandicapInfos() - 1) && iNewHandicap < iMaxHandicap)
 				{
-					logMsg(
-						"[Flexible Difficulty] Player: %S difficulty is increasing from %S to %S",
+					logging::logMsg("C2C.log",
+						"[Flexible Difficulty] Player: %S difficulty is increasing from %S to %S\n",
 						kPlayer.getName(),
 						GC.getHandicapInfo(kPlayer.getHandicapType()).getDescription(),
 						GC.getHandicapInfo((HandicapTypes)(kPlayer.getHandicapType() + 1)).getDescription()
@@ -10836,11 +10792,11 @@ void CvGame::doFlexibleDifficulty()
 			}
 			else if (100*iCurrentScore < 100*iMeanScore - stddev)
 			{
-				logMsg("[Flexible Difficulty] Player: %S score is > 1 std dev below average.", kPlayer.getName());
+				logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S score is > 1 std dev below average.\n", kPlayer.getName());
 				if (iNewHandicap > 0 && iNewHandicap > iMinHandicap)
 				{
-					logMsg(
-						"[Flexible Difficulty] Player: %S difficulty is decreasing from %S to %S",
+					logging::logMsg("C2C.log",
+						"[Flexible Difficulty] Player: %S difficulty is decreasing from %S to %S\n",
 						kPlayer.getName(),
 						GC.getHandicapInfo(kPlayer.getHandicapType()).getDescription(),
 						GC.getHandicapInfo((HandicapTypes)(kPlayer.getHandicapType() - 1)).getDescription()

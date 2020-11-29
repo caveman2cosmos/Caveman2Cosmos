@@ -1717,6 +1717,36 @@ void CyPlayer::setModderOption(int /*ModderOptionTypes*/ eIndex, int iNewValue)
 	m_pPlayer->setModderOption((ModderOptionTypes)eIndex, iNewValue);
 }
 
+python::list CyPlayer::cities() const
+{
+	python::list list = python::list();
+	foreach_(CvCity* city, m_pPlayer->cities())
+	{
+		list.append(new CyCity(city));
+	}
+	return list;
+}
+
+python::list CyPlayer::units() const
+{
+	python::list list = python::list();
+	foreach_(CvUnit* unit, m_pPlayer->units())
+	{
+		list.append(new CyUnit(unit));
+	}
+	return list;
+}
+
+python::list CyPlayer::groups() const
+{
+	python::list list = python::list();
+	foreach_(CvSelectionGroup* group, m_pPlayer->groups())
+	{
+		list.append(new CySelectionGroup(group));
+	}
+	return list;
+}
+
 void CyPlayer::doRevolution(boost::python::list& /*CivicTypes**/ paeNewCivics, bool bForce)
 {
 	int* pCivics = NULL;

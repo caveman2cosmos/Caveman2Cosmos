@@ -16,20 +16,12 @@ bool g_bIsBug = false;
 
 void setIsBug()
 {
-	logMsg("isBug: true");
+	logging::logMsg("bull.log", "isBug: true");
 	g_bIsBug = true;
 
 	// set the unit and building filters to default state once Bug is available
 	UnitFilterList::setFilterActiveAll(UNIT_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("RoMSettings__HideUntrainableUnits", false));
 	BuildingFilterList::setFilterActiveAll(BUILDING_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("RoMSettings__HideUnconstructableBuildings", false));
-}
-
-
-void logMsg(const char* format, ...)
-{
-	static char buf[2048];
-	_vsnprintf(buf, 2048 - 4, format, (char*)(&format + 1));
-	gDLL->logMsg("bull.log", buf);
 }
 
 
@@ -89,7 +81,7 @@ bool getBugOptionBOOL(const char* id, bool bDefault, const char* xmlKey)
 		tmp.append(id);
 		xmlKey = tmp.c_str();
 	}
-	//logMsg("debug - getBugOptionBOOL %s", xmlKey);
+	//logging::logMsg("bull.log", "debug - getBugOptionBOOL %s", xmlKey);
 	return getDefineBOOL(xmlKey, bDefault);
 }
 
@@ -108,6 +100,6 @@ int getBugOptionINT(const char* id, int iDefault, const char* xmlKey)
 		tmp.append(id);
 		xmlKey = tmp.c_str();
 	}
-	//logMsg("debug - getBugOptionINT %s", xmlKey);
+	//logging::logMsg("bull.log", "debug - getBugOptionINT %s", xmlKey);
 	return getDefineINT(xmlKey, iDefault);
 }

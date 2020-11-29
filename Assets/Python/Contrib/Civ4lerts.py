@@ -64,8 +64,8 @@ UNHAPPY_ICON = "Art/Interface/mainscreen/cityscreen/angry_citizen.dds"
 ### Globals
 
 GC = CyGlobalContext()
-TRNSLTR = CyTranslator()
 GAME = GC.getGame()
+TRNSLTR = CyTranslator()
 
 EVENT_MESSAGE_TIME_LONG = GC.getDefineINT("EVENT_MESSAGE_TIME_LONG")
 Civ4lertsOpt = BugCore.game.Civ4lerts
@@ -182,7 +182,7 @@ class AbstractCityAlertManager(AbstractStatefulAlert):
 	def checkAllActivePlayerCities(self):
 		"Loops over active player's cities, telling each alert to perform its check."
 		ePlayer = GAME.getActivePlayer()
-		player = GC.getPlayer(ePlayer)
+		player = GC.getActivePlayer()
 		for city in player.cities():
 			for alert in self.alerts:
 				alert.checkCity(city.getID(), city, ePlayer, player)
@@ -538,7 +538,7 @@ class CityOccupation(AbstractCityTestAlert):
 
 	def _getAlertMessageIcon(self, city, passes):
 		if passes:
-			print "%s passed occupation test, ignoring", city.getName()
+			print "%s passed occupation test, ignoring" % city.getName()
 			return (None, None)
 		return (TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_PACIFIED", (city.getName(), )), HAPPY_ICON)
 
@@ -547,7 +547,7 @@ class CityOccupation(AbstractCityTestAlert):
 
 	def _getPendingAlertMessageIcon(self, city, passes):
 		if passes:
-			print "[WARN] %s passed pending occupation test, ignoring", city.getName()
+			print "[WARN] %s passed pending occupation test, ignoring" % city.getName()
 			return (None, None)
 		return (TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_PENDING_PACIFIED", (city.getName(), )), HAPPY_ICON)
 
@@ -763,8 +763,8 @@ class RefusesToTalk(AbstractStatefulAlert):
 		self.checkIfIsAnyOrHasMetAllTeams(eTeam, eRivalTeam)
 
 	def onCityRazed(self, argsList):
-		city, ePlayer = argsList
-		self.checkIfIsAnyOrHasMetAllTeams(city.getTeam(), GC.getPlayer(ePlayer).getTeam())
+		city, iPlayer = argsList
+		self.checkIfIsAnyOrHasMetAllTeams(city.getTeam(), GC.getPlayer(iPlayer).getTeam())
 
 	def onDealCanceled(self, argsList):
 		eOfferPlayer, eTargetPlayer, pTrade = argsList
@@ -779,10 +779,10 @@ class RefusesToTalk(AbstractStatefulAlert):
 		"""
 		Calls check() only if the active team is any or has met all of the given teams.
 		"""
-		eActiveTeam = GAME.getActiveTeam()
-		activeTeam = GC.getTeam(eActiveTeam)
+		iActiveTeam = GC.getGame().getActiveTeam()
+		activeTeam = GC.getTeam(iActiveTeam)
 		for eTeam in eTeams:
-			if eActiveTeam != eTeam and eTeam >= 0 and not activeTeam.isHasMet(eTeam):
+			if iActiveTeam != eTeam and eTeam >= 0 and not activeTeam.isHasMet(eTeam):
 				return
 		self.check()
 
@@ -858,11 +858,10 @@ class WorstEnemy(AbstractStatefulAlert):
 		"""
 		Calls check() only if the active team is any or has met all of the given teams.
 		"""
-		eActiveTeam = GAME.getActiveTeam()
-		activeTeam = GC.getTeam(eActiveTeam)
+		iActiveTeam = GC.getGame().getActiveTeam()
+		activeTeam = GC.getTeam(iActiveTeam)
 		for eTeam in eTeams:
-			#RevolutionDCM fix
-			if eTeam != -1 and eActiveTeam != eTeam and not activeTeam.isHasMet(eTeam):
+			if eTeam != -1 and iActiveTeam != eTeam and not activeTeam.isHasMet(eTeam):
 				return
 		self.check()
 
@@ -870,8 +869,8 @@ class WorstEnemy(AbstractStatefulAlert):
 		if (not Civ4lertsOpt.isShowWorstEnemyAlert()):
 			return
 		eActivePlayer = GAME.getActivePlayer()
-		eActiveTeam = GAME.getActiveTeam()
-		activeTeam = GC.getTeam(eActiveTeam)
+		iActiveTeam = GC.getGame().getActiveTeam()
+		activeTeam = GC.getTeam(iActiveTeam)
 		enemies = self.enemies[eActivePlayer]
 		newEnemies = AttitudeUtil.getWorstEnemyTeams()
 		delayedMessages = {}
@@ -883,12 +882,12 @@ class WorstEnemy(AbstractStatefulAlert):
 					eOldEnemy = -1
 					enemies[eTeam] = -1
 				#RevolutionDCM fix
-				if eNewEnemy != -1 and eActiveTeam != eNewEnemy and not activeTeam.isHasMet(eNewEnemy):
+				if eNewEnemy != -1 and iActiveTeam != eNewEnemy and not activeTeam.isHasMet(eNewEnemy):
 					eNewEnemy = -1
 				if eOldEnemy != eNewEnemy:
 					enemies[eTeam] = eNewEnemy
 					if eNewEnemy == -1:
-						if eOldEnemy == eActiveTeam:
+						if eOldEnemy == iActiveTeam:
 							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_YOU_NO_WORST_ENEMY", GC.getTeam(eTeam).getName())
 						else:
 							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_NO_WORST_ENEMY", 
@@ -900,10 +899,10 @@ class WorstEnemy(AbstractStatefulAlert):
 						else:
 							delayedMessages[eNewEnemy] += u", " + GC.getTeam(eTeam).getName()
 					else:
-						if eOldEnemy == eActiveTeam:
+						if eOldEnemy == iActiveTeam:
 							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_SWITCH_WORST_ENEMY_FROM_YOU", 
 									(GC.getTeam(eTeam).getName(), GC.getTeam(eNewEnemy).getName()))
-						elif eNewEnemy == eActiveTeam:
+						elif eNewEnemy == iActiveTeam:
 							message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_SWITCH_WORST_ENEMY_TO_YOU", 
 									(GC.getTeam(eTeam).getName(), GC.getTeam(eOldEnemy).getName()))
 						else:
@@ -912,7 +911,7 @@ class WorstEnemy(AbstractStatefulAlert):
 					if message:
 						addMessage(eActivePlayer, message)
 		for eEnemy, haters in delayedMessages.iteritems():
-			if eActiveTeam == eEnemy:
+			if iActiveTeam == eEnemy:
 				message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_YOU_WORST_ENEMY", haters)
 			else:
 				message = BugUtil.getText("TXT_KEY_CIV4LERTS_ON_WORST_ENEMY", (haters, GC.getTeam(eEnemy).getName()))

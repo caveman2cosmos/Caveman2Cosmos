@@ -65,7 +65,7 @@ PyObject* CvDLLPythonIFaceBase::makePythonObject(T* pObj)
 	boost::python::object bpo(pObj);
 	PyObject* pyobj = bpo.ptr();
 	Py_INCREF(pyobj);
-	assert(pyobj->ob_refcnt==2);
+	FAssert(pyobj->ob_refcnt==2);
 	return pyobj;	// decrefs pyobj when bpo goes out of scope
 }
 

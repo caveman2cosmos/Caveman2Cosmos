@@ -4097,13 +4097,13 @@ int CvPlayerAI::AI_safeCostAsPercentIncome() const
 		const int iRank = GC.getGame().getPlayerRank(getID());
 		if (iRank < 3)
 		{
-			iSafePercent += ((4 - iRank) * 5);
+			iSafePercent += 5 * (4 - iRank);
 		}
 
 		const int iAtWarCount = GET_TEAM(getTeam()).getAtWarCount(true);
 		if (iAtWarCount > 0)
 		{
-			iSafePercent -= (10 + 2 * std::min(iAtWarCount, 5));
+			iSafePercent -= 10 + 2 * std::min(iAtWarCount, 5);
 		}
 		if (isCurrentResearchRepeat())
 		{
@@ -4128,12 +4128,6 @@ int CvPlayerAI::AI_safeCostAsPercentIncome() const
 		{
 			iSafePercent -= 8;
 		}
-
-		// Afforess - AI has been made aware of financials in war planning, this is not needed here
-		// if (GET_TEAM(getTeam()).getAnyWarPlanCount(true))
-		// {
-		//	iSafePercent -= 12;
-		// }
 
 		if (isCurrentResearchRepeat())
 		{
@@ -21238,7 +21232,7 @@ void CvPlayerAI::AI_doDiplo()
 																else
 																{
 																	GC.getGame().implementDeal(getID(), ((PlayerTypes)iI), &ourList, &theirList);
-																	GC.getGame().logMsg("Player %d has traded contact of %d to %d for %d gold", getID(), GET_TEAM(eBestTeam).getLeaderID(), iI, iOurValue);
+																	logging::logMsg("C2C.log", "Player %d has traded contact of %d to %d for %d gold\n", getID(), GET_TEAM(eBestTeam).getLeaderID(), iI, iOurValue);
 																	CvWString szBuffer;
 																	switch (AI_getAttitude(GET_TEAM(eBestTeam).getLeaderID()))
 																	{
@@ -21357,7 +21351,7 @@ void CvPlayerAI::AI_doDiplo()
 																	else
 																	{
 																		GC.getGame().implementDeal(getID(), ((PlayerTypes)iI), &ourList, &theirList);
-																		//GC.getGame().logMsg("Player %d has traded a worker to %d for %d gold", getID(), iI, iTheirValue);
+																		//logging::logMsg("C2C.log", "Player %d has traded a worker to %d for %d gold\n", getID(), iI, iTheirValue);
 																	}
 																}
 															}
@@ -21499,7 +21493,7 @@ void CvPlayerAI::AI_doDiplo()
 																else
 																{
 																	GC.getGame().implementDeal(getID(), ((PlayerTypes)iI), &ourList, &theirList);
-																	//GC.getGame().logMsg("Player %d has traded military units to %d.", getID(), iI);
+																	//logging::logMsg("C2C.log", "Player %d has traded military units to %d.\n", getID(), iI);
 																}
 															}
 														}
@@ -21712,7 +21706,7 @@ void CvPlayerAI::AI_doDiplo()
 											}
 										}
 
-										GC.getGame().logMsg("%S considering contacting %S to buy a war ally, iMinAtWarCounter: %d, iDeclareWarTradeRand: %d", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), iMinAtWarCounter, iDeclareWarTradeRand);
+										logging::logMsg("C2C.log", "%S considering contacting %S to buy a war ally, iMinAtWarCounter: %d, iDeclareWarTradeRand: %d\n", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), iMinAtWarCounter, iDeclareWarTradeRand);
 
 										if (iMinAtWarCounter < 10)
 										{
@@ -21727,14 +21721,14 @@ void CvPlayerAI::AI_doDiplo()
 											iDeclareWarTradeRand ++;
 										}
 
-										GC.getGame().logMsg("%S considering contacting %S to buy a war ally, iMinAtWarCounter: %d, adjusted iDeclareWarTradeRand: %d", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), iMinAtWarCounter, iDeclareWarTradeRand);
+										logging::logMsg("C2C.log", "%S considering contacting %S to buy a war ally, iMinAtWarCounter: %d, adjusted iDeclareWarTradeRand: %d\n", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), iMinAtWarCounter, iDeclareWarTradeRand);
 
 										if (GC.getGame().getSorenRandNum(iDeclareWarTradeRand, "AI Diplo Declare War Trade") == 0)
 										{
 											iBestValue = 0;
 											eBestTeam = NO_TEAM;
 
-											GC.getGame().logMsg("%S considering contacting %S to buy a war ally - passed rand check", this->getName(), GET_PLAYER((PlayerTypes)iI).getName());
+											logging::logMsg("C2C.log", "%S considering contacting %S to buy a war ally - passed rand check\n", this->getName(), GET_PLAYER((PlayerTypes)iI).getName());
 
 											for (iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
 											{
@@ -21765,9 +21759,9 @@ void CvPlayerAI::AI_doDiplo()
 											}
 
 											if (eBestTeam != NO_TEAM)
-												GC.getGame().logMsg("%S considering contacting %S to buy a war ally, bestValue: %d, best team: %S", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), iBestValue, GET_PLAYER(GET_TEAM(eBestTeam).getLeaderID()).getCivilizationAdjectiveKey());
+												logging::logMsg("C2C.log", "%S considering contacting %S to buy a war ally, bestValue: %d, best team: %S\n", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), iBestValue, GET_PLAYER(GET_TEAM(eBestTeam).getLeaderID()).getCivilizationAdjectiveKey());
 											else
-												GC.getGame().logMsg("%S considering contacting %S to buy a war ally, no best team found!", this->getName(), GET_PLAYER((PlayerTypes)iI).getName());
+												logging::logMsg("C2C.log", "%S considering contacting %S to buy a war ally, no best team found!\n", this->getName(), GET_PLAYER((PlayerTypes)iI).getName());
 
 											if (eBestTeam != NO_TEAM)
 											{
@@ -21796,12 +21790,12 @@ void CvPlayerAI::AI_doDiplo()
 												if (eBestGiveTech != NO_TECH)
 												{
 													iTheirValue = GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).AI_techTradeVal(eBestGiveTech, getTeam());
-													GC.getGame().logMsg("%S considering contacting %S to buy a war ally, best tech offer %S at a value of %d", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), GC.getTechInfo((TechTypes)eBestGiveTech).getDescription(), iTheirValue);
+													logging::logMsg("C2C.log", "%S considering contacting %S to buy a war ally, best tech offer %S at a value of %d\n", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), GC.getTechInfo((TechTypes)eBestGiveTech).getDescription(), iTheirValue);
 												}
 												else
 												{
 													iTheirValue = 0;
-													GC.getGame().logMsg("%S considering contacting %S to buy a war ally, no best tech offer", this->getName(), GET_PLAYER((PlayerTypes)iI).getName());
+													logging::logMsg("C2C.log", "%S considering contacting %S to buy a war ally, no best tech offer\n", this->getName(), GET_PLAYER((PlayerTypes)iI).getName());
 												}
 
 												int iBestValue2 = 0;
@@ -21834,7 +21828,7 @@ void CvPlayerAI::AI_doDiplo()
 													{
 														int iTechValue = GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).AI_techTradeVal(eBestGiveTech2, getTeam());
 														iTheirValue += iTechValue;
-														GC.getGame().logMsg("%S considering contacting %S to buy a war ally, 2nd best tech offer %S at a value of %d (total: %d)", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), GC.getTechInfo((TechTypes)eBestGiveTech2).getDescription(), iTechValue, iTheirValue);
+														logging::logMsg("C2C.log", "%S considering contacting %S to buy a war ally, 2nd best tech offer %S at a value of %d (total: %d)\n", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), GC.getTechInfo((TechTypes)eBestGiveTech2).getDescription(), iTechValue, iTheirValue);
 													}
 												}
 
@@ -21845,7 +21839,7 @@ void CvPlayerAI::AI_doDiplo()
 												{
 													iGold = std::min(((iTheirValue - iOurValue) * 100) / iGoldValuePercent, GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID()));
 
-													GC.getGame().logMsg("%S considering contacting %S to buy a war ally, asking for %d gold", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), iGold);
+													logging::logMsg("C2C.log", "%S considering contacting %S to buy a war ally, asking for %d gold\n", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), iGold);
 
 													if (iGold > 0)
 													{
@@ -21862,7 +21856,7 @@ void CvPlayerAI::AI_doDiplo()
 												{
 													iGold = std::min(((iOurValue - iTheirValue) * 100) / iGoldValuePercent, AI_maxGoldTrade((PlayerTypes)iI));
 
-													GC.getGame().logMsg("%S considering contacting %S to buy a war ally, offering %d gold", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), iGold);
+													logging::logMsg("C2C.log", "%S considering contacting %S to buy a war ally, offering %d gold\n", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), iGold);
 
 													if (iGold > 0)
 													{
@@ -21876,11 +21870,11 @@ void CvPlayerAI::AI_doDiplo()
 													}
 												}
 
-												GC.getGame().logMsg("%S considering contacting %S to buy a war ally, iTheirValue: %d, iOurValue: %d", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), iTheirValue, iOurValue);
+												logging::logMsg("C2C.log", "%S considering contacting %S to buy a war ally, iTheirValue: %d, iOurValue: %d\n", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), iTheirValue, iOurValue);
 
 												if (iTheirValue > (iOurValue * 3 / 4))
 												{
-													GC.getGame().logMsg("%S considering contacting %S to buy a war ally, trade offer proceeding", this->getName(), GET_PLAYER((PlayerTypes)iI).getName());
+													logging::logMsg("C2C.log", "%S considering contacting %S to buy a war ally, trade offer proceeding\n", this->getName(), GET_PLAYER((PlayerTypes)iI).getName());
 
 													ourList.clear();
 													theirList.clear();
@@ -28588,55 +28582,53 @@ UnitTypes CvPlayerAI::bestBuildableUnitForAIType(DomainTypes eDomain, UnitAIType
 {
 	PROFILE_FUNC();
 
-	UnitTypes eBestUnit = NO_UNIT;
-
 	//	What is the best unit we can produce of this unitAI type
 	CvCity* pCapitalCity = getCapitalCity();
-	CvCity*	pCoastalCity = NULL;
-	int iDummyValue;
 
-	//	Handle capital-less civs (aka barbs) by just using an arbitrary city
-	if ( pCapitalCity == NULL )
+	// Handle capital-less civs (aka barbs) by just using an arbitrary city
+	int iDummy;
+	if (pCapitalCity == NULL)
 	{
-		int iDummy;
-
 		pCapitalCity = firstCity(&iDummy);
 	}
-
-	if (pCapitalCity != NULL)
+	if (pCapitalCity == NULL)
 	{
-		switch(eDomain)
-		{
+		return NO_UNIT;
+	}
+	switch(eDomain)
+	{
 		case NO_DOMAIN:
-			eBestUnit = pCapitalCity->AI_bestUnitAI(eUnitAIType, iDummyValue, false, true, criteria);
-			if ( eBestUnit != NO_UNIT || pCapitalCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()) )
+		{
+			const UnitTypes eBestUnit = pCapitalCity->AI_bestUnitAI(eUnitAIType, iDummy, false, true, criteria);
+			if (eBestUnit != NO_UNIT || pCapitalCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
 			{
-				break;
+				return eBestUnit;
 			}
-			//	Drop through and check coastal
+			// Drop through and check coastal
+		}
 		case DOMAIN_SEA:
-			if ( pCapitalCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()) )
+		{
+			CvCity* pCoastalCity =
+			(
+				pCapitalCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize())
+				?
+				pCapitalCity
+				:
+				findBestCoastalCity()
+			);
+			if (pCoastalCity != NULL)
 			{
-				pCoastalCity = pCapitalCity;
+				return pCoastalCity->AI_bestUnitAI(eUnitAIType, iDummy, false, true, criteria);
 			}
-			else
-			{
-				pCoastalCity = findBestCoastalCity();
-			}
-
-			if ( pCoastalCity != NULL )
-			{
-				eBestUnit = pCoastalCity->AI_bestUnitAI(eUnitAIType, iDummyValue, false, true, criteria);
-			}
-			break;
-		case DOMAIN_LAND:
-		case DOMAIN_AIR:
-			eBestUnit = pCapitalCity->AI_bestUnitAI(eUnitAIType, iDummyValue, false, true, criteria);
 			break;
 		}
+		case DOMAIN_LAND:
+		case DOMAIN_AIR:
+		{
+			return pCapitalCity->AI_bestUnitAI(eUnitAIType, iDummy, false, true, criteria);
+		}
 	}
-
-	return eBestUnit;
+	return NO_UNIT;
 }
 
 int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
@@ -28755,7 +28747,7 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 		iValue = (2 * iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()) / 100;
 	}
 
-	GC.getGame().logMsg("AI Unit Value For %s is %d", GC.getUnitInfo(eUnit).getDescription(), iValue);
+	logging::logMsg("C2C.log", "AI Unit Value For %s is %d\n", GC.getUnitInfo(eUnit).getDescription(), iValue);
 	return iValue;
 }
 
