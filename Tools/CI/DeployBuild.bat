@@ -58,12 +58,12 @@ echo Checking out SVN working copy for deployment...
 call %SVN% --quiet checkout %svn_url% "%build_dir%"
 if %ERRORLEVEL% neq 0 (
 	echo SVN checkout failed...
-	call %SVN% cleanup
-	call %SVN% checkout %svn_url% "%build_dir%"
+	call %SVN% --non-interactive cleanup
+	call %SVN% --quiet checkout %svn_url% "%build_dir%"
 	if %ERRORLEVEL% neq 0 (
 		echo Second SVN checkout failed...
-		call %SVN% cleanup
-		call %SVN% checkout %svn_url% "%build_dir%"
+		call %SVN% cleanup --non-interactive
+		call %SVN% --quiet checkout %svn_url% "%build_dir%"
 		if %ERRORLEVEL% neq 0 (
 			echo Last SVN checkout failed, aborting...
 			exit /B 3
