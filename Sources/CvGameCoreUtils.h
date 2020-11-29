@@ -15,7 +15,6 @@ class CvPathGeneratorBase;
 class CvPlot;
 class CvSelectionGroup;
 class CvUnit;
-class CvString;
 class CvRandom;
 class FAStarNode;
 class FAStar;

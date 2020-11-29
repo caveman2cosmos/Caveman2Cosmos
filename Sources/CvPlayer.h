@@ -10,7 +10,6 @@
 #include "CvSelectionGroupAI.h"
 #include "CvPlotGroup.h"
 #include "LinkedList.h"
-#include "CvTalkingHeadMessage.h"
 #include "CvContractBroker.h"
 #include "CvGameObject.h"
 #include "CvBuildLists.h"
@@ -20,11 +19,12 @@ class CvArea;
 class CvBuildLists;
 class CvCity;
 class CvCityAI;
+class CvDiploParameters;
+class CvEventTriggerInfo;
 class CvPlot;
 class CvPlotGroup;
-class CvDiploParameters;
 class CvPopupInfo;
-class CvEventTriggerInfo;
+class CvTalkingHeadMessage;
 class CvUnitSelectionCriteria;
 class CvUpgradeCache;
 

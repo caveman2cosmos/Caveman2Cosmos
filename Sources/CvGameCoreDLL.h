@@ -314,7 +314,7 @@ namespace python = boost::python;
 #include "CvInfos.h"
 #include "CvInfoWater.h"
 #include "CvViewport.h"
-#include "CvTalkingHeadMessage.h"
+//#include "CvTalkingHeadMessage.h"
 #include "FProfiler.h"
 #include "CvPython.h"
 

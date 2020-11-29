@@ -17,6 +17,7 @@
 #include "CvPlot.h"
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
+#include "CvTalkingHeadMessage.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CyCity.h"

@@ -6,8 +6,8 @@
 #define CIV4_UNIT_H
 
 #include "CvDLLEntity.h"
-#include "CvEnums.h"
-#include "CvStructs.h"  // don't disable! used for modules
+//#include "CvEnums.h"
+//#include "CvStructs.h"  // don't disable! used for modules
 #include "CvGameObject.h"
 #include <map>
 
