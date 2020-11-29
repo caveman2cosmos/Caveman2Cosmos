@@ -325,8 +325,6 @@ class CvCorporationScreen:
 
 			bFirstColumn = (i % 2 == 0)
 
-			pLoopCity = cityList[i]
-
 			# Constructing the City name...
 			szCityName = ""
 			if cityX.isCapital():
@@ -340,7 +338,7 @@ class CvCorporationScreen:
 						szCityName += u"%c" % gc.getCorporationInfo(iI).getHeadquarterChar()
 					else: szCityName += u"%c" % gc.getCorporationInfo(lCorporations[iI]).getChar()
 
-			szCityName += pLoopCity.getName()[0:17] + "  "
+			szCityName += cityX.getName()[0:17] + "  "
 
 			if (iLinkCorporation == -1):
 				bFirst = True
