@@ -22,6 +22,7 @@
 #include "CvDLLSymbolIFaceBase.h"
 #include "CvGameTextMgr.h"
 #include "CvPlayerAI.h"
+#include "CvPopupInfo.h"
 #include "CvTeamAI.h"
 #include "CvXMLLoadUtility.h"
 

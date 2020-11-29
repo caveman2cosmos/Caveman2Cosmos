@@ -13,6 +13,7 @@
 #include "CvPlot.h"
 #include "CvReachablePlotSet.h"
 #include "CvPlayerAI.h"
+#include "CvPopupInfo.h"
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"

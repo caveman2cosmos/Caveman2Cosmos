@@ -3,10 +3,13 @@
 #include "CvCity.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
+#include "CvPopupInfo.h"
 #include "CvTeamAI.h"
-
+#include "CvUnit.h"
 #include "CvDLLFAStarIFaceBase.h"
 
 void CvGame::updateColoredPlots()

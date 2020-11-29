@@ -2,12 +2,13 @@
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
+#include "CvDLLWidgetData.h"
 #include "CvEventReporter.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
-#include "CvDLLWidgetData.h"
 #include "CvPlayerAI.h"
+#include "CvPopupInfo.h"
 #include "CvTeamAI.h"
 
 CvDLLWidgetData* CvDLLWidgetData::m_pInst = NULL;

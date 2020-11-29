@@ -3,6 +3,7 @@
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
+#include "CvPopupInfo.h"
 #include "CyArea.h"
 #include "CyCity.h"
 #include "CyPlayer.h"

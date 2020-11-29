@@ -5,14 +5,18 @@
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
+#include "CvDLLButtonPopup.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
-#include "CvDLLButtonPopup.h"
-#include "CvPopupReturn.h"
 #include "CvInitCore.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvPopupInfo.h"
+#include "CvPopupReturn.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
 
 // Public Functions...
 

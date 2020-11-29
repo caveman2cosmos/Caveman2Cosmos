@@ -14,6 +14,7 @@
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
+#include "CvPopupInfo.h"
 #include "CvReplayInfo.h"
 #include "CvReplayMessage.h"
 #include "CvSelectionGroup.h"

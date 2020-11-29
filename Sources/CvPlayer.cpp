@@ -18,6 +18,7 @@
 #include "CvPlot.h"
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
+#include "CvPopupInfo.h"
 #include "CvTalkingHeadMessage.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"

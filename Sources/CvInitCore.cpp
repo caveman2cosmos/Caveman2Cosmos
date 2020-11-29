@@ -4,6 +4,7 @@
 #include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CvPlayerAI.h"
+#include "CvPopupInfo.h"
 #include "CvXMLLoadUtility.h"
 
 // BUG - EXE/DLL Paths - start
