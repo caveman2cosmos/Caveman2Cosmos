@@ -97,6 +97,9 @@
 			<Help>TXT_KEY_GAMEOPTION_ADVANCED_ECONOMY_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<EnforcesGameOptionOnTypes>
+ 				<GameOptionType>GAMEOPTION_ADVANCED_DIPLOMACY</GameOptionType>
+ 			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_REALISTIC_CORPORATIONS</Type>
@@ -147,10 +150,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOffTypes>
-				<EnforcesGameOptionOffType>
-					<GameOptionType>GAMEOPTION_MIN_CITY_BORDER</GameOptionType>
-					<bEnforcesGameOptionOff>1</bEnforcesGameOptionOff>
-				</EnforcesGameOptionOffType>
+				<GameOptionType>GAMEOPTION_MIN_CITY_BORDER</GameOptionType>
 			</EnforcesGameOptionOffTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -223,10 +223,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOffTypes>
-				<EnforcesGameOptionOffType>
-					<GameOptionType>GAMEOPTION_BARBARIAN_WORLD</GameOptionType>
-					<bEnforcesGameOptionOff>1</bEnforcesGameOptionOff>
-				</EnforcesGameOptionOffType>
+				<GameOptionType>GAMEOPTION_BARBARIAN_WORLD</GameOptionType>
 			</EnforcesGameOptionOffTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -299,10 +296,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOffTypes>
-				<EnforcesGameOptionOffType>
-					<GameOptionType>GAMEOPTION_ANIMALS_STAY_OUT</GameOptionType>
-					<bEnforcesGameOptionOff>1</bEnforcesGameOptionOff>
-				</EnforcesGameOptionOffType>
+				<GameOptionType>GAMEOPTION_ANIMALS_STAY_OUT</GameOptionType>
 			</EnforcesGameOptionOffTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -379,13 +373,6 @@
 			<Type>GAMEOPTION_NO_VASSAL_STATES</Type>
 			<Description>TXT_KEY_GAMEOPTION_NO_VASSAL_STATES</Description>
 			<Help>TXT_KEY_GAMEOPTION_NO_VASSAL_STATES_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_ESPIONAGE</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_ESPIONAGE</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_ESPIONAGE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
@@ -523,13 +510,6 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_SIZE_MATTERS_UNCUT</Type>
-			<Description>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT</Description>
-			<Help>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
 			<Type>GAMEOPTION_FIGHT_OR_FLIGHT</Type>
 			<Description>TXT_KEY_GAMEOPTION_FIGHT_OR_FLIGHT</Description>
 			<Help>TXT_KEY_GAMEOPTION_FIGHT_OR_FLIGHT_HELP</Help>
@@ -543,10 +523,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOnTypes>
-				<EnforcesGameOptionOnType>
- 					<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
-					<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn>
- 				</EnforcesGameOptionOnType>
+ 				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
  			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -598,10 +575,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
 			<EnforcesGameOptionOnTypes>
-				<EnforcesGameOptionOnType>
-					<GameOptionType>GAMEOPTION_UPRANGE</GameOptionType>
-					<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn>
-				</EnforcesGameOptionOnType>
+				<GameOptionType>GAMEOPTION_UPRANGE</GameOptionType>
 			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>

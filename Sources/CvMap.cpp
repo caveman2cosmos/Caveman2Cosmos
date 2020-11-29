@@ -6,12 +6,18 @@
 //	Copyright (c) 2004 Firaxis Games, Inc. All rights reserved.
 //-----------------------------------------------------------------------------
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
+#include "CvBuildingInfo.h"
+#include "CvCity.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
 #include "CvMapGenerator.h"
 #include "CvFractal.h"
 #include "CvPlayerAI.h"
+
+#include "CvDLLEntityIFaceBase.h"
+#include "CvDLLFAStarIFaceBase.h"
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
@@ -720,8 +726,6 @@ CvCity* CvMap::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, boo
 {
 	PROFILE_FUNC();
 
-	// XXX look for barbarian cities???
-
 	int iBestValue = MAX_INT;
 	CvCity* pBestCity = NULL;
 
@@ -729,37 +733,37 @@ CvCity* CvMap::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, boo
 	{
 		if (eOwner == NO_PLAYER || iI == eOwner)
 		{
-			const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
-			if (kLoopPlayer.isAlive() && (eTeam == NO_TEAM || kLoopPlayer.getTeam() == eTeam))
+			const CvPlayer& player = GET_PLAYER((PlayerTypes)iI);
+
+			if (!player.isAliveAndTeam(eTeam))
 			{
-				foreach_(CvCity* pLoopCity, kLoopPlayer.cities())
+				continue;
+			}
+			// eTeam may be NO_TEAM, this is ok.
+
+			foreach_(CvCity* pLoopCity, player.cities())
+			{
+				if (
+					(!bSameArea || pLoopCity->area() == plot(iX, iY)->area() || bCoastalOnly && pLoopCity->waterArea() == plot(iX, iY)->area())
+				&&
+					(!bCoastalOnly || pLoopCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
+				&&
+					(eTeamAtWarWith == NO_TEAM || atWar(player.getTeam(), eTeamAtWarWith))
+				&&
+					(eDirection == NO_DIRECTION || estimateDirection(dxWrap(pLoopCity->getX() - iX), dyWrap(pLoopCity->getY() - iY)) == eDirection)
+				&&
+					(pSkipCity == NULL || pLoopCity != pSkipCity))
 				{
-					if (!bSameArea || pLoopCity->area() == plot(iX, iY)->area() || (bCoastalOnly && pLoopCity->waterArea() == plot(iX, iY)->area()))
+					const int iValue = plotDistance(iX, iY, pLoopCity->getX(), pLoopCity->getY());
+					if (iValue < iBestValue)
 					{
-						if (!bCoastalOnly || pLoopCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
-						{
-							if (eTeamAtWarWith == NO_TEAM || atWar(kLoopPlayer.getTeam(), eTeamAtWarWith))
-							{
-								if (eDirection == NO_DIRECTION || estimateDirection(dxWrap(pLoopCity->getX() - iX), dyWrap(pLoopCity->getY() - iY)) == eDirection)
-								{
-									if (pSkipCity == NULL || pLoopCity != pSkipCity)
-									{
-										const int iValue = plotDistance(iX, iY, pLoopCity->getX(), pLoopCity->getY());
-										if (iValue < iBestValue)
-										{
-											iBestValue = iValue;
-											pBestCity = pLoopCity;
-										}
-									}
-								}
-							}
-						}
+						iBestValue = iValue;
+						pBestCity = pLoopCity;
 					}
 				}
 			}
 		}
 	}
-
 	return pBestCity;
 }
 
@@ -1210,9 +1214,6 @@ void CvMap::read(FDataStreamBase* pStream)
 	// Init data before load
 	reset(&defaultMapData);
 
-	uint uiFlag=0;
-	WRAPPER_READ(wrapper, "CvMap", &uiFlag);	// flags for expansion
-
 	WRAPPER_READ(wrapper, "CvMap", &m_iGridWidth);
 	WRAPPER_READ(wrapper, "CvMap", &m_iGridHeight);
 
@@ -1241,8 +1242,6 @@ void CvMap::read(FDataStreamBase* pStream)
 		}
 	}
 
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", &g_plotTypeZobristHashes, SAVE_VALUE_TYPE_INT_ARRAY);
-
 	// call the read of the free list CvArea class allocations
 	ReadStreamableFFreeListTrashArray(m_areas, pStream);
 
@@ -1263,9 +1262,6 @@ void CvMap::write(FDataStreamBase* pStream)
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	uint uiFlag=0;
-	WRAPPER_WRITE(wrapper, "CvMap" ,uiFlag);		// flag for expansion
 
 	WRAPPER_WRITE(wrapper, "CvMap" ,m_iGridWidth);
 	WRAPPER_WRITE(wrapper, "CvMap" ,m_iGridHeight);

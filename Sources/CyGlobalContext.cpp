@@ -3,8 +3,8 @@
 // Author - Mustafa Thamer
 //
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGameAI.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
@@ -55,12 +55,12 @@ CyMap* CyGlobalContext::getCyMap() const
 /*********************************/
 bool CyGlobalContext::enableMultiMaps()
 {
-#ifdef PARALLEL_MAPS
-	GC.enableMultiMaps();
-	return true;
-#else
+	if (GC.getDefineINT("ENABLE_MULTI_MAPS"))
+	{
+		GC.enableMultiMaps();
+		return true;
+	}
 	return false;
-#endif
 }
 
 bool CyGlobalContext::multiMapsEnabled() const

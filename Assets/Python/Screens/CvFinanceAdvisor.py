@@ -148,7 +148,7 @@ class CvFinanceAdvisor:
 				# Trade
 				for j in range(CyCity.getTradeRoutes()):
 					CyCityX = CyCity.getTradeCity(j)
-					if not CyCityX or CyCityX.isNone(): continue
+					if not CyCityX: continue
 
 					trade = CyCity.calculateTradeYield(YieldTypes.YIELD_COMMERCE, CyCity.calculateTradeProfitTimes100(CyCityX))
 					if CyCityX.getTeam() == iTeam:
@@ -250,7 +250,7 @@ class CvFinanceAdvisor:
 		totalMaintenance = CyPlayer.getTotalMaintenance()
 		totalCivicUpkeep = CyPlayer.getCivicUpkeep([], False)
 
-		iInflation = CyPlayer.calculateInflatedCosts() - CyPlayer.calculatePreInflatedCosts()
+		iInflation = CyPlayer.getFinalExpense() - CyPlayer.calculatePreInflatedCosts()
 		self.goldFromCivs = goldFromCivs = CyPlayer.getGoldPerTurn()
 
 		y = -2

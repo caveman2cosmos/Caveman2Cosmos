@@ -607,10 +607,6 @@
 			<Path>Art/Interface/Main Menu/CIV4MainMenuJoinGame.kfm</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>MAINMENU_NEWGAME</Type>
-			<Path>Art/Interface/Main Menu/CIV4MainMenuNewGame.kfm</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>MAINMENU_PLAY</Type>
 			<Path>Art/Interface/Main Menu/CIV4MainMenuPLAY.kfm</Path>
 		</InterfaceArtInfo>

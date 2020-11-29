@@ -1,4 +1,6 @@
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
 #include "CyArea.h"
 #include "CyCity.h"
 #include "CyPlot.h"
@@ -458,12 +460,14 @@ void CyPlot::setRouteType(int /*RouteTypes*/ eNewValue)
 
 CyCity* CyPlot::getPlotCity() const
 {
-	return m_pPlot ? new CyCity(m_pPlot->getPlotCity()) : NULL;
+	CvCity* city = m_pPlot ? m_pPlot->getPlotCity() : NULL;
+	return city ? new CyCity(city) : NULL;
 }
 
 CyCity* CyPlot::getWorkingCity() const
 {
-	return m_pPlot ? new CyCity(m_pPlot->getWorkingCity()) : NULL;
+	CvCity* city = m_pPlot ? m_pPlot->getWorkingCity() : NULL;
+	return city ? new CyCity(city) : NULL;
 }
 
 int CyPlot::getRiverID() const

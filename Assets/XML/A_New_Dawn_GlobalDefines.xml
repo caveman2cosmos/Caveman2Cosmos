@@ -61,11 +61,6 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Afforess: Disbanding units earn gold -->
-		<DefineName>DISBANDING_EARNS_GOLD</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
 		<!-- Afforess: The divisor (or denominator) for the disbanded units gold. 1 will yield the full production cost. Has no effect if the above setting is disabled. -->
 		<DefineName>UNIT_GOLD_DISBAND_DIVISOR</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
@@ -202,8 +197,9 @@
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Base number of turns between decay, higher means lower decay rate -->
 		<DefineName>HURRY_INFLATION_DECAY_RATE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FREE_TRADE_AGREEMENT_ESPIONAGE_MISSION_COST_MODIFIER</DefineName>
@@ -326,6 +322,6 @@ The Great Wall is always dynamic if viewports are enabled regardless of this set
 	</Define>
 	<Define>
 		<DefineName>C2C_VERSION</DefineName>
-		<DefineTextVal>v40-dev</DefineTextVal>
+		<DefineTextVal>v41-dev</DefineTextVal>
 	</Define>
 </Civ4Defines>

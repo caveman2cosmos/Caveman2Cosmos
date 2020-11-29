@@ -59,12 +59,14 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_COWARDLY</Tag>
 		<English>Cowardly Promotion Line</English>
 		<French>Spécialisation Couardise</French>
+		<German>Feige</German>
 		<Italian>Linea di promozione "Codardo"</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_COWARDLY_PROMOTION</Tag>
 		<English>Cowardly Promotion Line</English>
 		<French>Spécialisation Couard</French>
+		<German>Feige</German>
 		<Italian>Linea di promozione "Codardo"</Italian>
 	</TEXT>
 	<TEXT>
@@ -109,6 +111,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_DEVOTION_PROMOTION</Tag>
 		<English>Devotion Promotion Line</English>
 		<French>Spécialisation Dévot</French>
+		<German>Hingabe</German>
 		<Italian>Linea di promozione "Devoto"</Italian>
 	</TEXT>
 	<TEXT>
@@ -412,6 +415,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_WARMONGER</Tag>
 		<English>Warmonger Promotion Line</English>
 		<French>Spécialisation Chef de guerre</French>
+		<German>Kriegstreiber</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ZEALOUS</Tag>
@@ -510,21 +514,25 @@
 		<Tag>TXT_KEY_PROMOTION_COWARDLY</Tag>
 		<English>Cowardly</English>
 		<French>Couard</French>
+		<German>Feige</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COWARDLY1</Tag>
 		<English>Cowardly I</English>
 		<French>Couard I</French>
+		<German>Feige I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COWARDLY2</Tag>
 		<English>Cowardly II</English>
 		<French>Couard II</French>
+		<German>Feige II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COWARDLY3</Tag>
 		<English>Cowardly III</English>
 		<French>Couard III</French>
+		<German>Feige III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CROOKED</Tag>
@@ -609,21 +617,25 @@
 		<Tag>TXT_KEY_PROMOTION_DEVOTION</Tag>
 		<English>Devotion</English>
 		<French>Dévot</French>
+		<German>Hingabe</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEVOTION1</Tag>
 		<English>Devotion I</English>
 		<French>Dévot I</French>
+		<German>Hingabe I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEVOTION2</Tag>
 		<English>Devotion II</English>
 		<French>Dévot II</French>
+		<German>Hingabe II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEVOTION3</Tag>
 		<English>Devotion III</English>
 		<French>Dévot III</French>
+		<German>Hingabe III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HUMANITARIAN</Tag>

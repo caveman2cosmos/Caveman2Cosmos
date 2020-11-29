@@ -838,7 +838,7 @@
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/Woodentower/wooden_tower.blend.nif</NIF>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Builds/button_woodentower.dds</Button>
+			<Button>Art/tower/art/woodentower.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_STONE_WATCHTOWER</Type>
@@ -847,7 +847,7 @@
 			<fInterfaceScale>0.7</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/stone_tower/watchtower_eu.blend.nif</NIF>
 			<KFM/>
-			<Button>Art/Structures/Improvements/stone_tower/stone_tower_btn.dds</Button>
+			<Button>Art/tower/art/stone_tower.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_STEEL_WATCHTOWER</Type>
@@ -856,7 +856,7 @@
 			<fInterfaceScale>0.7</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/stone_tower/watchtower_eu.blend.nif</NIF>
 			<KFM/>
-			<Button>Art/Structures/Improvements/stone_tower/stone_tower_btn.dds</Button>
+			<Button>Art/tower/art/steel_tower.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_RADAR_TOWER</Type>

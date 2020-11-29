@@ -539,7 +539,7 @@ def playerCities(playerOrID, testFunc=None):
 	player = getPlayer(playerOrID)
 	city, iter = player.firstCity(False)
 	while city:
-		if not city.isNone() and (testFunc is None or testFunc(city)):
+		if testFunc is None or testFunc(city):
 			yield city
 		city, iter = player.nextCity(iter, False)
 

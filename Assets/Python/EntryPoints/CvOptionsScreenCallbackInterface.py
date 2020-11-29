@@ -410,7 +410,7 @@ def handleAutomatedBuildCheckboxClicked(argsList):
 					import AutomatedSettings
 					CyMessageControl().sendModNetMessage(AutomatedSettings.getCanAutoBuildEventID(), iPlayer, iCityID, k, int(bValue))
 					return 1
-\	return 0
+	return 0
 
 def handleNationalAutomatedBuildCheckboxClicked(argsList):
 	bValue, szName = argsList

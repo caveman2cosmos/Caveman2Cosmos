@@ -3,7 +3,9 @@
 //
 
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CyCity.h"
 #include "CyDeal.h"
@@ -736,6 +738,8 @@ bool CyGame::isOption(int /*GameOptionTypes*/ eIndex) const
 void CyGame::setOption(int /*GameOptionTypes*/ eIndex, bool bEnabled)
 {
 	m_pGame.setOption((GameOptionTypes)eIndex, bEnabled);
+	if (bEnabled)
+		m_pGame.enforceOptionCompatibility((GameOptionTypes)eIndex);
 }
 
 bool CyGame::isMPOption(int /*MultiplayerOptionTypes*/ eIndex) const
@@ -880,7 +884,8 @@ bool CyGame::isInAdvancedStart() const
 
 CyCity* CyGame::getHolyCity(int /*ReligionTypes*/ eIndex) const
 {
-	return new CyCity(m_pGame.getHolyCity((ReligionTypes) eIndex));
+	CvCity* city = m_pGame.getHolyCity((ReligionTypes)eIndex);
+	return city ? new CyCity(city) : NULL;
 }
 
 void CyGame::setHolyCity(int /*ReligionTypes*/ eIndex, CyCity* pNewValue, bool bAnnounce)
@@ -895,7 +900,8 @@ void CyGame::clearHolyCity(int /*ReligionTypes*/ eIndex)
 
 CyCity* CyGame::getHeadquarters(int /*CorporationTypes*/ eIndex) const
 {
-	return new CyCity(m_pGame.getHeadquarters((CorporationTypes) eIndex));
+	CvCity* city = m_pGame.getHeadquarters((CorporationTypes)eIndex);
+	return city ? new CyCity(city) : NULL;
 }
 
 void CyGame::setHeadquarters(int /*CorporationTypes*/ eIndex, CyCity* pNewValue, bool bAnnounce)
@@ -1231,11 +1237,6 @@ void CyGame::setYResolution(int iNewValue)
 void CyGame::changeYResolution(int iNewValue)
 {
 	m_pGame.changeYResolution(iNewValue);
-}
-
-void CyGame::setFutureEras()
-{
-	m_pGame.setFutureEras();
 }
 
 bool CyGame::canEverResearch(int iTech) const

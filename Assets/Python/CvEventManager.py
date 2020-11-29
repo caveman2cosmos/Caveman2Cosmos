@@ -943,7 +943,7 @@ class CvEventManager:
 						break
 			else:
 				CyCity = CyPlayerL.getCapitalCity()
-				if not CyCity.isNone():
+				if CyCity:
 					iX = CyCity.getX()
 					iY = CyCity.getY()
 			if iX == -1:
@@ -2273,14 +2273,13 @@ class CvEventManager:
 
 
 	def onUnitSpreadReligionAttempt(self, argsList):
-		CyUnit, iReligion, bSuccess = argsList
-		if not bSuccess:
-			iPlayer = CyUnit.getOwner()
+		#unit, iReligion, bSuccess = argsList
+		if not argsList[2]:
+			unit = argsList[0]
 			aWonderTuple = self.aWonderTuple
-			if "FA_MEN_SI" in aWonderTuple[0]:
-				if iPlayer == aWonderTuple[4][aWonderTuple[0].index("FA_MEN_SI")]:
-					CyCity = GC.getMap().plot(CyUnit.getX(), CyUnit.getY()).getPlotCity()
-					CyCity.setHasReligion(GC.getUnitInfo(CyUnit.getUnitType()).getPrereqReligion(), True, True, True)
+			if "FA_MEN_SI" in aWonderTuple[0] and unit.getOwner() == aWonderTuple[4][aWonderTuple[0].index("FA_MEN_SI")]:
+				CyCity = GC.getMap().plot(unit.getX(), unit.getY()).getPlotCity()
+				CyCity.setHasReligion(GC.getUnitInfo(unit.getUnitType()).getPrereqReligion(), True, True, True)
 
 
 	'''
@@ -2351,9 +2350,9 @@ class CvEventManager:
 		if iTech == self.TECH_GATHERING:
 			X = -1
 			Y = -1
-			CyCity = CyPlayer.getCapitalCity() # This returns a city object even if the capital does not exist.
-			# if CyPlayer.getCapitalCity(): # Always True
-			if not CyCity.isNone():
+			CyCity = CyPlayer.getCapitalCity()
+
+			if CyCity:
 				X = CyCity.getX(); Y = CyCity.getY()
 			else:
 				CyUnit, i = CyPlayer.firstUnit(False)
@@ -2459,8 +2458,11 @@ class CvEventManager:
 			for iPlayerX in xrange(self.MAX_PC_PLAYERS):
 				if iPlayerX == iPlayer: continue
 				CyPlayerX = GC.getPlayer(iPlayerX)
-				if CyPlayerX.isAlive() and iReligion == GC.getLeaderHeadInfo(CyPlayerX.getLeaderType()).getFavoriteReligion():
-					CyPlayerX.getCapitalCity().setHasReligion(iReligion, True, True, True)
+				if not CyPlayerX.isAlive() or iReligion != GC.getLeaderHeadInfo(CyPlayerX.getLeaderType()).getFavoriteReligion():
+					continue
+				capital = CyPlayerX.getCapitalCity()
+				if capital:
+					capital.setHasReligion(iReligion, True, True, True)
 					if CyPlayerX.isHuman():
 						strReligionName = GC.getReligionInfo(iReligion).getText()
 						popup = PyPopup.PyPopup(-1)

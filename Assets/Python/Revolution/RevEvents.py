@@ -153,13 +153,10 @@ def onEndPlayerTurn(argsList):
 
 	iMax = GC.getMAX_PC_PLAYERS()
 	iBarb = GC.getBARBARIAN_PLAYER()
-	if iPlayer >= iMax:
-		if iPlayer == iBarb:
-			iNextPlayer = 0
-		else:
-			iNextPlayer = iPlayer
-	elif iPlayer + 1 == iMax:
-		iNextPlayer = iBarb
+	if iPlayer == iBarb:
+		iNextPlayer = 0
+	elif iPlayer + 1 >= iMax:
+		return
 	else:
 		iNextPlayer = iPlayer + 1
 
@@ -169,15 +166,11 @@ def onEndPlayerTurn(argsList):
 			recordCivics(CyPlayer)
 			if bSmallRevolts:
 				doSmallRevolts(iNextPlayer, CyPlayer)
-			break
+			return
 		iNextPlayer += 1
 		if iNextPlayer == iMax:
-			# iPlayer 40-44 does not exist in C2C currently
-			# Therefore we check the last NPC, rather than the first, next.
-			# If there is only one player vs NPC's, then there should still be 1 rev check per game turn.
-			iNextPlayer = iBarb
-		elif iNextPlayer > iMax:
-			iGameTurn += 1
+			if iPlayer == iBarb:
+				return
 			iNextPlayer = 0
 
 
@@ -705,11 +698,9 @@ def playerCityLost(CyPlayer, CyCity, bConquest = True):
 	if CyPlayer.isNPC() or CyPlayer.getNumCities() < 1:
 		return
 
-	iPlayer = CyPlayer.getID()
-
-	revIdxChange = (GAME.getGameTurn() - CyCity.getGameTurnAcquired())*100.0/GC.getGameSpeedInfo(GAME.getGameSpeedType()).getAnarchyPercent()
+	revIdxChange = (GAME.getGameTurn() - CyCity.getGameTurnAcquired()) * 100.0 / GC.getGameSpeedInfo(GAME.getGameSpeedType()).getAnarchyPercent()
 	revIdxChange += CyCity.getHighestPopulation()
-	revIdxChange *= CyCity.plot().calculateCulturePercent(iPlayer)/100.0
+	revIdxChange *= CyCity.plot().calculateCulturePercent(CyPlayer.getID()) / 100.0
 
 	if revIdxChange > 500:
 		revIdxChange = 500
@@ -725,16 +716,13 @@ def playerCityLost(CyPlayer, CyCity, bConquest = True):
 
 	revIdxChange = int(cityLostModifier*revIdxChange + .5)
 
-	print "	Revolt - Loss of %s by %s (%d bConq): %d rev idx change" %(CyCity.getName(), CyPlayer.getCivilizationDescription(0), bConquest, revIdxChange)
+	print "[REV] Loss of %s by %s (%d bConq): %d rev idx change" %(CyCity.getName(), CyPlayer.getCivilizationDescription(0), bConquest, revIdxChange)
 
-	CyCityX, i = CyPlayer.firstCity(False)
-	while CyCityX:
-		if not CyCityX.isNone() and CyCityX.getOwner() == iPlayer:
-			CyCityX.changeRevolutionIndex(revIdxChange)
-			revIdxHist = RevData.getCityVal(CyCityX,'RevIdxHistory')
-			revIdxHist['Events'][0] += revIdxChange
-			RevData.updateCityVal(CyCityX, 'RevIdxHistory', revIdxHist)
-		CyCityX, i = CyPlayer.nextCity(i, False)
+	for cityX in CyPlayer.cities():
+		cityX.changeRevolutionIndex(revIdxChange)
+		revIdxHist = RevData.getCityVal(cityX,'RevIdxHistory')
+		revIdxHist['Events'][0] += revIdxChange
+		RevData.updateCityVal(cityX, 'RevIdxHistory', revIdxHist)
 
 
 def onBuildingBuilt(argsList):
@@ -772,18 +760,19 @@ def onBuildingBuilt(argsList):
 ########################## Religious events ###############################
 
 def onReligionFounded(argsList):
-	iReligion, iFounder = argsList
-	pPlayer = GC.getPlayer(iFounder)
+	iReligion = argsList[0]
 
-	#print "Player %d has founded religion %d"%(iFounder,iReligion)
-
-	if( pPlayer.getStateReligion() >= 0 and iReligion >= 0 ) :
-		if( not (pPlayer.getStateReligion() == iReligion) and not pPlayer.isAnarchy() ) :
-			pCity = GC.getGame().getHolyCity(iReligion)
-			if( pCity.getOwner() == iFounder ) :
-				curRevIdx = pCity.getRevolutionIndex()
-				pCity.setRevolutionIndex( max([int(.35*RevDefs.revInstigatorThreshold),curRevIdx+100]) )
-				if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - %s founded non-state religion, index of %s now %d ... state %d, new %d"%(pCity.getName(),pCity.getName(),pCity.getRevolutionIndex(),pPlayer.getStateReligion(),iReligion))
+	if iReligion > -1:
+		player = GC.getPlayer(argsList[1])
+		if not player.isAnarchy():
+			iStateReligion = player.getStateReligion()
+			if iStateReligion > -1 and iStateReligion != iReligion:
+				pCity = GC.getGame().getHolyCity(iReligion)
+				if pCity.getOwner() == argsList[1]:
+					curRevIdx = pCity.getRevolutionIndex()
+					pCity.setRevolutionIndex(max([int(.35*RevDefs.revInstigatorThreshold),curRevIdx+100]))
+					if LOG_DEBUG:
+						CvUtil.pyPrint("  Revolt - %s founded non-state religion, index of %s now %d ... state %d, new %d"%(pCity.getName(),pCity.getName(),pCity.getRevolutionIndex(),player.getStateReligion(),iReligion))
 
 
 
@@ -881,7 +870,7 @@ def checkForAssimilation():
 
 		CyTeamX = GC.getTeam(CyPlayerX.getTeam())
 		CyCity0 = CyPlayerX.getCapitalCity()
-		if CyCity0.isNone(): continue # getCapitalCity() returns a city-object even for civs without a capital.
+		if CyCity0 is None: continue
 		iTurnAcquiredCity0 = CyCity0.getGameTurnAcquired()
 		CyPlot0 = None
 		szCiv = CyPlayerX.getCivilizationDescription(0)
@@ -909,13 +898,11 @@ def checkForAssimilation():
 
 				if iPlayerML != None and bWarSeparatist:
 					iCivType = CyPlayerX.getCivilizationType()
-					CyCityML, i = CyPlayerML.firstCity(False)
-					while CyCityML:
+					for CyCityML in CyPlayerML.cities():
 						if RevData.getCityVal(CyCityML, 'RevolutionCiv') == iCivType:
 							revTurn = RevData.getCityVal(pCity, 'RevolutionTurn')
 							if revTurn != None and iTurn - revTurn < 25:
 								iOdds -= 2
-						CyCityML, i = CyPlayerML.nextCity(i, False)
 
 				if iOdds > 10 + GAME.getSorenRandNum(100, 'Revolution: Assimilate'):
 					CyPlayerDominant = GC.getPlayer(joinPlayerID)
@@ -1065,66 +1052,72 @@ def checkForAssimilation():
 
 				CyPlayerDominant.assimilatePlayer(iPlayerX)
 
-def assimilateHandler( iPlayerID, netUserData, popupReturn ) :
+def assimilateHandler(iPlayerID, netUserData, popupReturn):
 
 	global noAssimilateList
 
-	if( popupReturn.getButtonClicked() == 0 ) :
-		if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Assimilation accepted!")
-		if( netUserData[2] ) :
-			pMotherland = GC.getPlayer( RevData.revObjectGetVal( GC.getPlayer(netUserData[0]), 'MotherlandID' ) )
-			pMotherland.AI_changeAttitudeExtra( netUserData[1], pMotherland.AI_getAttitudeExtra(netUserData[0]) )
-			if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Rebel motherland %s extra attidude to %s now %d"%(pMotherland.getCivilizationDescription(0), GC.getPlayer(netUserData[1]).getCivilizationDescription(0), pMotherland.AI_getAttitudeExtra(netUserData[0])))
-			[iOdds,attackerTeam,victimTeam] = RevUtils.computeWarOdds( pMotherland, GC.getPlayer(netUserData[1]), GC.getPlayer(netUserData[0]).getCapitalCity().area(), False, True, True )
-			if( attackerTeam.canDeclareWar(victimTeam.getID()) and iOdds > GAME.getSorenRandNum(100, 'Revolution: War') ) :
-				if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Rebel motherland takes exception, team %d declare war on team %d"%(attackerTeam.getID(),victimTeam.getID()))
+	if popupReturn.getButtonClicked() == 0:
+		if LOG_DEBUG:
+			print "[REV] Assimilation accepted!"
+		if netUserData[2]:
+			pMotherland = GC.getPlayer(RevData.revObjectGetVal(GC.getPlayer(netUserData[0]), 'MotherlandID' ))
+			pMotherland.AI_changeAttitudeExtra( etUserData[1], pMotherland.AI_getAttitudeExtra(netUserData[0]))
+			if LOG_DEBUG:
+				print "[REV] Rebel motherland %s extra attidude to %s now %d"%(pMotherland.getCivilizationDescription(0), GC.getPlayer(netUserData[1]).getCivilizationDescription(0), pMotherland.AI_getAttitudeExtra(netUserData[0]))
+
+			[iOdds, attackerTeam, victimTeam] = RevUtils.computeWarOdds(pMotherland, GC.getPlayer(netUserData[1]), GC.getPlayer(netUserData[0]).getCapitalCity().area(), False, True, True)
+
+			if attackerTeam.canDeclareWar(victimTeam.getID()) and iOdds > GAME.getSorenRandNum(100, 'Revolution: War'):
+				if LOG_DEBUG:
+					print "[REV] Rebel motherland takes exception, team %d declare war on team %d"%(attackerTeam.getID(), victimTeam.getID())
 				attackerTeam.declareWar( victimTeam.getID(), True, WarPlanTypes.NO_WARPLAN )
 
 		GC.getPlayer(netUserData[1]).assimilatePlayer(netUserData[0])
-	elif( popupReturn.getButtonClicked() == 1 ) :
-		if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Assimilation postponed")
-		pass
-	else :
-		if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Assimilation rejected!")
-		noAssimilateList.append( netUserData[0] )
+	elif popupReturn.getButtonClicked() == 1:
+		if LOG_DEBUG:
+			print "[REV] Assimilation postponed"
+	else:
+		if LOG_DEBUG:
+			print "[REV] Assimilation rejected!"
+		noAssimilateList.append(netUserData[0])
 
 # Small revolts are short duration disorder striking a city, shutting down production and culture, etc.
 def doSmallRevolts(iPlayer, CyPlayer):
 
-	CyCity, i = CyPlayer.firstCity(False)
-	while CyCity:
+	if iPlayer > 39:
+		raise "NPC does not revolt!"
 
-		revIdx = CyCity.getRevolutionIndex()
+	for city in CyPlayer.cities():
 
-		if revIdx > int(1.25*RevDefs.revReadyFrac*RevDefs.revInstigatorThreshold):
+		revIdx = city.getRevolutionIndex()
 
-			if CyCity.getOccupationTimer() > 0 or CyCity.getRevolutionCounter() > 0 or RevData.getCityVal(CyCity, 'SmallRevoltCounter') > 0:
-				CyCity, i = CyPlayer.nextCity(i, False)
-				continue # Already in a revolt
+		if revIdx <= 5 * RevDefs.revReadyDividend * RevDefs.revInstigatorThreshold / (4 * RevDefs.revReadyDivisor):
+			continue
 
-			localRevIdx = CyCity.getLocalRevIndex()
-			if localRevIdx > 0:
-				localFactor = 1 + localRevIdx/3
-				if localFactor > 10:
-					localFactor = 10
-			else:
-				localFactor = localRevIdx - 1
-				if localFactor < -15:
-					localFactor = -15
+		if city.getOccupationTimer() > 0 or city.getRevolutionCounter() > 0 or RevData.getCityVal(city, 'SmallRevoltCounter') > 0:
+			continue # Already in a revolt
 
-			iOdds = int(100*revIdx/(8.0*RevDefs.alwaysViolentThreshold)) + localFactor
-			if iOdds > 15:
-				iOdds = 15
+		localRevIdx = city.getLocalRevIndex()
+		if localRevIdx > 0:
+			localFactor = 1 + localRevIdx / 3
+			if localFactor > 10:
+				localFactor = 10
+		else:
+			localFactor = localRevIdx - 1
+			if localFactor < -15:
+				localFactor = -15
 
-			if GAME.getSorenRandNum(100, "Rev: Small Revolt") < iOdds:
-				szName = CyCity.getName()
-				print "[REV] Small revolt in %s with odds %d (%d idx, %d loc)" %(szName, iOdds, revIdx, localRevIdx)
-				CyCity.setOccupationTimer(2)
+		iOdds = localFactor + 100 * revIdx / (8 * RevDefs.alwaysViolentThreshold)
+		if iOdds > 15:
+			iOdds = 15
 
-				RevData.setCityVal(CyCity, 'SmallRevoltCounter', 6)
+		if GAME.getSorenRandNum(100, "Rev: Small Revolt") < iOdds:
+			szName = city.getName()
+			print "[REV] Small revolt in %s with odds %d (%d idx, %d loc)" %(szName, iOdds, revIdx, localRevIdx)
+			city.setOccupationTimer(2)
 
-				szTxt = TRNSLTR.getText("TXT_KEY_REV_MESS_SMALL_REVOLT",()) % szName
-				icon = CyArtFileMgr().getInterfaceArtInfo("INTERFACE_RESISTANCE").getPath()
-				CvUtil.sendMessage(szTxt, iPlayer, 16, icon, ColorTypes(7), CyCity.getX(), CyCity.getY(), True, True, InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "AS2D_CITY_REVOLT", False)
+			RevData.setCityVal(city, 'SmallRevoltCounter', 6)
 
-		CyCity, i = CyPlayer.nextCity(i, False)
+			szTxt = TRNSLTR.getText("TXT_KEY_REV_MESS_SMALL_REVOLT",()) % szName
+			icon = CyArtFileMgr().getInterfaceArtInfo("INTERFACE_RESISTANCE").getPath()
+			CvUtil.sendMessage(szTxt, iPlayer, 16, icon, ColorTypes(7), city.getX(), city.getY(), True, True, InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "AS2D_CITY_REVOLT", False)

@@ -8952,14 +8952,12 @@
 			<CultureType>BONUS_RED_OCHER</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
-<!-- Wrong flag
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_SABBATEAN</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_SABBATEAN</Description>
 			<CultureType>BONUS_SABBATEAN</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
--->
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_SAFAVIDS</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_SAFAVIDS</Description>

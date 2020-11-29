@@ -1,14 +1,21 @@
 // plot.cpp
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
+#include "CvBuildingInfo.h"
+#include "CvCity.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
-#include "CvDLLSymbolIFaceBase.h"
-#include "CvDLLPlotBuilderIFaceBase.h"
 #include "CvRandom.h"
 #include "CvPlotPaging.h"
+
+#include "CvDLLEntityIFaceBase.h"
+#include "CvDLLFAStarIFaceBase.h"
+#include "CvDLLFlagEntityIFaceBase.h"
+#include "CvDLLSymbolIFaceBase.h"
+#include "CvDLLPlotBuilderIFaceBase.h"
 
 #define STANDARD_MINIMAP_ALPHA		(0.6f)
 
@@ -59,11 +66,7 @@ CvPlot::CvPlot()
 	m_aiFoundValue = NULL;
 	m_aiPlayerCityRadiusCount = NULL;
 	m_aiPlotGroup = NULL;
-#ifdef PARALLEL_MAPS
 	m_aiVisibilityCount = new short[MAX_TEAMS];
-#else
-	m_aiVisibilityCount = NULL;
-#endif
 	m_aiLastSeenTurn = NULL;
 	m_aiDangerCount = NULL;
 	m_aiStolenVisibilityCount = NULL;
@@ -292,13 +295,11 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_Properties.clear();
 
 	m_bPlotGroupsDirty = false;
-#ifdef PARALLEL_MAPS
 	m_aiVisibilityCount = new short[MAX_TEAMS];
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		m_aiVisibilityCount[iI] = 0;
 	}
-#endif
 }
 
 
@@ -958,42 +959,33 @@ void CvPlot::updateCulture(bool bBumpUnits, bool bUpdatePlotGroups)
 
 void CvPlot::updateFog()
 {
-	//MEMORY_TRACE_FUNCTION();
 	PROFILE_FUNC();
 
-	if ( !shouldHaveGraphics() )
+	if (!shouldHaveGraphics())
 	{
 		return;
 	}
-
 	FAssert(GC.getGame().getActiveTeam() != NO_TEAM);
 
-	if (isRevealed(GC.getGame().getActiveTeam(), false))
+	if (!isRevealed(GC.getGame().getActiveTeam(), false))
 	{
-		if (gDLL->getInterfaceIFace()->isBareMapMode())
-		{
-			gDLL->getEngineIFace()->LightenVisibility(getFOWIndex());
-		}
-		else
-		{
-			const int cityScreenFogEnabled = GC.getDefineINT("CITY_SCREEN_FOG_ENABLED");
-			if (cityScreenFogEnabled && gDLL->getInterfaceIFace()->isCityScreenUp() && (gDLL->getInterfaceIFace()->getHeadSelectedCity() != getWorkingCity()))
-			{
-				gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
-			}
-			else if (isActiveVisible(false))
-			{
-				gDLL->getEngineIFace()->LightenVisibility(getFOWIndex());
-			}
-			else
-			{
-				gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
-			}
-		}
+		gDLL->getEngineIFace()->BlackenVisibility(getFOWIndex());
+	}
+	else if (gDLL->getInterfaceIFace()->isBareMapMode())
+	{
+		gDLL->getEngineIFace()->LightenVisibility(getFOWIndex());
+	}
+	else if (GC.getDefineINT("CITY_SCREEN_FOG_ENABLED") && gDLL->getInterfaceIFace()->isCityScreenUp() && (gDLL->getInterfaceIFace()->getHeadSelectedCity() != getWorkingCity()))
+	{
+		gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
+	}
+	else if (isActiveVisible(false))
+	{
+		gDLL->getEngineIFace()->LightenVisibility(getFOWIndex());
 	}
 	else
 	{
-		gDLL->getEngineIFace()->BlackenVisibility(getFOWIndex());
+		gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
 	}
 }
 
@@ -1721,8 +1713,7 @@ bool CvPlot::isWithinTeamCityRadius(TeamTypes eTeam, PlayerTypes eIgnorePlayer) 
 
 	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive()
-		&& GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eTeam)
 		&& (eIgnorePlayer == NO_PLAYER || (PlayerTypes)iI != eIgnorePlayer)
 		&& isPlayerCityRadius((PlayerTypes)iI))
 		{
@@ -4318,13 +4309,9 @@ int CvPlot::getNumCultureRangeCities(PlayerTypes ePlayer) const
 bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb ) const
 {
 	PROFILE_FUNC();
-
-	int iI;
-	CvCity* pLoopCity = NULL;
-
 	FAssert(eAttackerTeam != NO_TEAM);
 
-	if( (area()->getNumCities() - GET_TEAM(eAttackerTeam).countNumCitiesByArea(area())) == 0 )
+	if (area()->getNumCities() - GET_TEAM(eAttackerTeam).countNumCitiesByArea(area()) == 0)
 	{
 		return false;
 	}
@@ -4341,53 +4328,47 @@ bool CvPlot::isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb ) c
 	bool bFound = false;
 
 	// First check capitals
-	for (iI = 0; !bFound && iI < MAX_PC_PLAYERS; iI++)
+	for (int iI = 0; !bFound && iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_TEAM(eAttackerTeam).AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN )
+		if (GET_PLAYER((PlayerTypes)iI).isAlive()
+		&& GET_TEAM(eAttackerTeam).AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN
+		&& (!bIgnoreBarb || !GET_PLAYER((PlayerTypes)iI).isNPC() && !GET_PLAYER((PlayerTypes)iI).isMinorCiv()))
 		{
-			if( !bIgnoreBarb || !(GET_PLAYER((PlayerTypes)iI).isNPC() || GET_PLAYER((PlayerTypes)iI).isMinorCiv()) )
+			const CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iI).getCapitalCity();
+
+			if (pLoopCity != NULL && pLoopCity->area() == area())
 			{
-				pLoopCity = GET_PLAYER((PlayerTypes)iI).getCapitalCity();
+				bFound = gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX(), getY(), pLoopCity->getX(), pLoopCity->getY(), false, 0, true);
 
-				if( pLoopCity != NULL )
+				if (bFound)
 				{
-					if( (pLoopCity->area() == area()) )
-					{
-						bFound = gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX(), getY(), pLoopCity->getX(), pLoopCity->getY(), false, 0, true);
-
-						if( bFound )
-						{
-							break;
-						}
-					}
+					break;
 				}
 			}
 		}
 	}
 
 	// Check all other cities
-	for (iI = 0; !bFound && iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; !bFound && iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_TEAM(eAttackerTeam).AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN )
+		if (GET_PLAYER((PlayerTypes)iI).isAlive()
+		&& GET_TEAM(eAttackerTeam).AI_getWarPlan(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_WARPLAN
+		&& (!bIgnoreBarb || !GET_PLAYER((PlayerTypes)iI).isNPC() && !GET_PLAYER((PlayerTypes)iI).isMinorCiv()))
 		{
-			if( !bIgnoreBarb || !(GET_PLAYER((PlayerTypes)iI).isNPC() || GET_PLAYER((PlayerTypes)iI).isMinorCiv()) )
+			foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 			{
-				foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
+				if (pLoopCity->area() == area() && !pLoopCity->isCapital())
 				{
-					if( (pLoopCity->area() == area()) && !(pLoopCity->isCapital()) )
-					{
-						bFound = gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX(), getY(), pLoopCity->getX(), pLoopCity->getY(), false, 0, true);
+					bFound = gDLL->getFAStarIFace()->GeneratePath(pTeamStepFinder, getX(), getY(), pLoopCity->getX(), pLoopCity->getY(), false, 0, true);
 
-						if( bFound )
-						{
-							break;
-						}
+					if (bFound)
+					{
+						break;
 					}
 				}
 			}
 		}
 	}
-
 	gDLL->getFAStarIFace()->destroy(pTeamStepFinder);
 
 	return bFound;
@@ -4736,10 +4717,7 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 			}
 		}
 
-		if (!bValid
-			// Super Forts begin *culture*
-			|| !GET_PLAYER(eBestPlayer).isAlive())
-			// Super Forts end
+		if (!bValid || !GET_PLAYER(eBestPlayer).isAlive())
 		{
 			eBestPlayer = NO_PLAYER;
 		}
@@ -4930,15 +4908,11 @@ bool CvPlot::isVisibleToCivTeam() const
 {
 	for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
 	{
-		if (GET_TEAM((TeamTypes)iI).isAlive())
+		if (GET_TEAM((TeamTypes)iI).isAlive() && isVisible((TeamTypes)iI, false))
 		{
-			if (isVisible(((TeamTypes)iI), false))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -4947,18 +4921,13 @@ bool CvPlot::isVisibleToWatchingHuman() const
 {
 	for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive()
+		&&  GET_PLAYER((PlayerTypes)iI).isHuman()
+		&& isVisible(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isHuman())
-			{
-				if (isVisible(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
-				{
-					return true;
-				}
-			}
+			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -6418,12 +6387,6 @@ void CvPlot::setFlagDirty(bool bNewValue)
 void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotGroup)
 {
 	PROFILE_FUNC();
-	CvCity* pOldCity;
-	CvCity* pNewCity;
-	CvWString szBuffer;
-	UnitTypes eBestUnit;
-	int iFreeUnits;
-	int iI;
 
 	if (getOwner() != eNewValue)
 	{
@@ -6431,28 +6394,47 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 
 		GC.getGame().addReplayMessage(REPLAY_MESSAGE_PLOT_OWNER_CHANGE, eNewValue, (char*)NULL, getX(), getY());
 
-		pOldCity = getPlotCity();
+		CvCity* pOldCity = getPlotCity();
 
 		if (pOldCity != NULL)
 		{
+			if (isInViewport())
 			{
+				const CvWString szBuffer =
+				(
+					gDLL->getText(
+						"TXT_KEY_MISC_CITY_REVOLTED_JOINED",
+						pOldCity->getNameKey(),
+						GET_PLAYER(eNewValue).getCivilizationDescriptionKey()
+					)
+				);
 				MEMORY_TRACK_EXEMPT();
-
-				if ( isInViewport() )
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_REVOLTED_JOINED", pOldCity->getNameKey(), GET_PLAYER(eNewValue).getCivilizationDescriptionKey());
-					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_MAJOR_EVENT,  ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
-					AddDLLMessage(eNewValue, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_MAJOR_EVENT,  ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
-				}
+				AddDLLMessage(
+					getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
+					"AS2D_CULTUREFLIP", MESSAGE_TYPE_MAJOR_EVENT,
+					ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(),
+					GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true
+				);
+				AddDLLMessage(
+					eNewValue, false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
+					"AS2D_CULTUREFLIP", MESSAGE_TYPE_MAJOR_EVENT,
+					ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(),
+					GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true
+				);
 			}
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_REVOLTS_JOINS", pOldCity->getNameKey(), GET_PLAYER(eNewValue).getCivilizationDescriptionKey());
-			GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getOwner(), szBuffer, getX(), getY(), GC.getCOLOR_ALT_HIGHLIGHT_TEXT());
-
+			GC.getGame().addReplayMessage(
+				REPLAY_MESSAGE_MAJOR_EVENT, getOwner(),
+				gDLL->getText(
+					"TXT_KEY_MISC_CITY_REVOLTS_JOINS",
+					pOldCity->getNameKey(),
+					GET_PLAYER(eNewValue).getCivilizationDescriptionKey()
+				),
+				getX(), getY(), GC.getCOLOR_ALT_HIGHLIGHT_TEXT()
+			);
 			FAssertMsg(pOldCity->getOwner() != eNewValue, "pOldCity->getOwner() is not expected to be equal with eNewValue");
 			GET_PLAYER(eNewValue).acquireCity(pOldCity, false, false, bUpdatePlotGroup); // will delete the pointer
 			pOldCity = NULL;
-			pNewCity = getPlotCity();
+			CvCity* pNewCity = getPlotCity();
 			FAssertMsg(pNewCity != NULL, "NewCity is not assigned a valid value");
 
 			if (pNewCity != NULL)
@@ -6463,7 +6445,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 
 				int iDummyValue;
 
-				eBestUnit = pNewCity->AI_bestUnitAI(UNITAI_CITY_DEFENSE, iDummyValue);
+				UnitTypes eBestUnit = pNewCity->AI_bestUnitAI(UNITAI_CITY_DEFENSE, iDummyValue);
 
 				if (eBestUnit == NO_UNIT)
 				{
@@ -6472,9 +6454,9 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 
 				if (eBestUnit != NO_UNIT)
 				{
-					iFreeUnits = (GC.getDefineINT("BASE_REVOLT_FREE_UNITS") + ((pNewCity->getHighestPopulation() * GC.getDefineINT("REVOLT_FREE_UNITS_PERCENT")) / 100));
+					const int iFreeUnits = GC.getDefineINT("BASE_REVOLT_FREE_UNITS") + pNewCity->getHighestPopulation() * GC.getDefineINT("REVOLT_FREE_UNITS_PERCENT") / 100;
 
-					for (iI = 0; iI < iFreeUnits; ++iI)
+					for (int iI = 0; iI < iFreeUnits; ++iI)
 					{
 						GET_PLAYER(eNewValue).initUnit(eBestUnit, getX(), getY(), UNITAI_CITY_DEFENSE, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 					}
@@ -6583,7 +6565,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 				}
 			}
 
-			for (iI = 0; iI < MAX_TEAMS; ++iI)
+			for (int iI = 0; iI < MAX_TEAMS; ++iI)
 			{
 				if (GET_TEAM((TeamTypes)iI).isAlive())
 				{
@@ -6611,14 +6593,11 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 					GET_PLAYER(getOwner()).doGoody(this, NULL);
 				}
 
-				for (iI = 0; iI < MAX_PC_TEAMS; ++iI)
+				for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
 				{
-					if (GET_TEAM((TeamTypes)iI).isAlive())
+					if (GET_TEAM((TeamTypes)iI).isAlive() && isVisible((TeamTypes)iI, false))
 					{
-						if (isVisible((TeamTypes)iI, false))
-						{
-							GET_TEAM((TeamTypes)iI).meet(getTeam(), true);
-						}
+						GET_TEAM((TeamTypes)iI).meet(getTeam(), true);
 					}
 				}
 			}
@@ -6633,20 +6612,11 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 			}
 		}
 
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
 		// Plot danger cache
 		foreach_(CvPlot* pLoopPlot, rect(getX(), getY(), DANGER_RANGE, DANGER_RANGE))
 		{
 			pLoopPlot->invalidateIsTeamBorderCache();
 		}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 		updateSymbols();
 	}
@@ -8405,15 +8375,11 @@ int CvPlot::calculateTeamCulturePercent(TeamTypes eIndex) const
 
 	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eIndex))
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == eIndex)
-			{
-				iTeamCulturePercent += calculateCulturePercent((PlayerTypes)iI);
-			}
+			iTeamCulturePercent += calculateCulturePercent((PlayerTypes)iI);
 		}
 	}
-
 	return iTeamCulturePercent;
 }
 
@@ -8502,26 +8468,9 @@ int CvPlot::getFoundValue(PlayerTypes eIndex)
 	//	only a short (extra policing is present on the set)
 	if (m_aiFoundValue[eIndex] == INVALID_FOUND_VALUE)
 	{
-		long lResult = -1;
-		if(GC.getUSE_GET_CITY_FOUND_VALUE_CALLBACK())
-		{
-			lResult = Cy::call<long>(PYGameModule, "getCityFoundValue", Cy::Args()
-				<< eIndex
-				<< getX()
-				<< getY()
-			);
-		}
+		setFoundValue(eIndex,GET_PLAYER(eIndex).AI_foundValue(getX(), getY(), -1, true));
 
-		if (lResult == -1)
-		{
-			setFoundValue(eIndex,GET_PLAYER(eIndex).AI_foundValue(getX(), getY(), -1, true));
-		}
-		else
-		{
-			setFoundValue(eIndex, lResult);
-		}
-
-		if ( area()->hasBestFoundValue(eIndex) && (int) m_aiFoundValue[eIndex] > area()->getBestFoundValue(eIndex))
+		if (area()->hasBestFoundValue(eIndex) && (int) m_aiFoundValue[eIndex] > area()->getBestFoundValue(eIndex))
 		{
 			area()->setBestFoundValue(eIndex, m_aiFoundValue[eIndex]);
 		}
@@ -8973,12 +8922,6 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 int CvPlot::getVisibilityCount(TeamTypes eTeam) const
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
-#ifndef PARALLEL_MAPS
-	if (NULL == m_aiVisibilityCount)
-	{
-		return 0;
-	}
-#endif
 	return m_aiVisibilityCount[eTeam];
 }
 
@@ -9036,14 +8979,10 @@ void CvPlot::setLastVisibleTurn(TeamTypes eTeam, short turn)
 
 void CvPlot::clearVisibilityCounts()
 {
-#ifdef PARALLEL_MAPS
 	for (int iI = 0; iI < MAX_TEAMS; ++iI)
 	{
 		m_aiVisibilityCount[iI] = 0;
 	}
-#else
-	SAFE_DELETE(m_aiVisibilityCount);
-#endif
 	SAFE_DELETE(m_aiStolenVisibilityCount);
 	if (NULL != m_apaiInvisibleVisibilityCount)
 	{
@@ -9096,16 +9035,6 @@ void CvPlot::changeVisibilityCount(TeamTypes eTeam, int iChange, InvisibleTypes 
 
 	if (iChange != 0)
 	{
-#ifndef PARALLEL_MAPS
-		if (NULL == m_aiVisibilityCount)
-		{
-			m_aiVisibilityCount = new short[MAX_TEAMS];
-			for (int iI = 0; iI < MAX_TEAMS; ++iI)
-			{
-				m_aiVisibilityCount[iI] = 0;
-			}
-		}
-#endif
 		const bool bOldVisible = isVisible(eTeam, false);
 		if (eSeeInvisible == NO_INVISIBLE || !GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 		{
@@ -9159,12 +9088,9 @@ void CvPlot::changeVisibilityCount(TeamTypes eTeam, int iChange, InvisibleTypes 
 
 			for (iI = 0; iI < MAX_TEAMS; ++iI)
 			{
-				if (GET_TEAM((TeamTypes)iI).isAlive())
+				if (GET_TEAM((TeamTypes)iI).isAlive() && GET_TEAM((TeamTypes)iI).isStolenVisibility(eTeam))
 				{
-					if (GET_TEAM((TeamTypes)iI).isStolenVisibility(eTeam))
-					{
-						changeStolenVisibilityCount(((TeamTypes)iI), ((isVisible(eTeam, false)) ? 1 : -1));
-					}
+					changeStolenVisibilityCount((TeamTypes)iI, isVisible(eTeam, false) ? 1 : -1);
 				}
 			}
 
@@ -9542,10 +9468,8 @@ bool CvPlot::isRevealed(TeamTypes eTeam, bool bDebug) const
 }
 
 
-void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, TeamTypes eFromTeam, bool bUpdatePlotGroup)
+void CvPlot::setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool bTerrainOnly, const TeamTypes eFromTeam, const bool bUpdatePlotGroup)
 {
-	int iI;
-
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 /*********************************/
@@ -9556,8 +9480,6 @@ void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, Tea
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
-
-	CvCity* pCity = getPlotCity();
 
 	if (isRevealed(eTeam, false) != bNewValue)
 	{
@@ -9574,31 +9496,27 @@ void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, Tea
 
 		if (area())
 		{
-			area()->changeNumRevealedTiles(eTeam, ((isRevealed(eTeam, false)) ? 1 : -1));
+			area()->changeNumRevealedTiles(eTeam, bNewValue ? 1 : -1);
 		}
 
 		if (bUpdatePlotGroup)
 		{
-			for (iI = 0; iI < MAX_PLAYERS; ++iI)
+			for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive())
+				if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eTeam))
 				{
-					if (GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
-					{
-						updatePlotGroup((PlayerTypes)iI);
-					}
+					updatePlotGroup((PlayerTypes)iI);
 				}
 			}
 		}
 
 		if (eTeam == GC.getGame().getActiveTeam())
 		{
-			if ( GC.viewportsEnabled() && shouldHaveGraphics() )
+			if (GC.viewportsEnabled() && shouldHaveGraphics())
 			{
 				foreach_(CvPlot* pAdjacentPlot, adjacent())
 				{
-					//	Unrevealed plots adjacent to newly revealed ones, which are ocean plots
-					//	also need redrawing to prevent artifacting
+					// Unrevealed water plots adjacent to newly revealed plots need redrawing to prevent artifacting
 					if (pAdjacentPlot->isWater() && !pAdjacentPlot->isRevealed(eTeam, false) && pAdjacentPlot->isInViewport())
 					{
 						gDLL->getEngineIFace()->RebuildPlot(pAdjacentPlot->getViewportX(), pAdjacentPlot->getViewportY(),true,true);
@@ -9606,131 +9524,84 @@ void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, Tea
 					}
 				}
 
-				if ( isWater() )
+				if (isWater())
 				{
 					GC.getGame().noteGraphicRebuildNeeded();
 				}
 
 				//Update terrain graphics
 				gDLL->getEngineIFace()->RebuildPlot(getViewportX(), getViewportY(),true,true);
-				//updateFeatureSymbol();
-				//updateRiverSymbol(false, true);
 			}
 
 			hideGraphics(ECvPlotGraphics::ALL);
 			if (bNewValue)
 			{
-				//updateFeatureSymbol(true);
 				updateGraphics();
-				//gDLL->getEngineIFace()->SetDirty(MinimapTexture_DIRTY_BIT, true); //minimap does a partial update
-				//gDLL->getEngineIFace()->SetDirty(GlobeTexture_DIRTY_BIT, true);
 			}
-
-			//updateSymbols();
 			updateFog();
 			updateVisibility();
 
 			gDLL->getInterfaceIFace()->setDirty(MinimapSection_DIRTY_BIT, true);
 			gDLL->getInterfaceIFace()->setDirty(GlobeLayer_DIRTY_BIT, true);
-
-			// showRequiredGraphics();
-			// hideNonRequiredGraphics();
 		}
 
-		if (isRevealed(eTeam, false))
+		if (bNewValue)
 		{
-			// ONEVENT - PlotRevealed
 			CvEventReporter::getInstance().plotRevealed(this, eTeam);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/32/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 			if (getLandmarkType() != NO_LANDMARK)
 			{
-				for (int iJ = 0; iJ < MAX_PLAYERS; ++iJ)
+				for (int iJ = 0; iJ < MAX_PC_PLAYERS; ++iJ)
 				{
-					if (GET_PLAYER((PlayerTypes)iJ).isAlive() && !GET_PLAYER((PlayerTypes)iJ).isNPC())
+					if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam(eTeam))
 					{
-						if (GET_PLAYER((PlayerTypes)iJ).getTeam() == eTeam)
-						{
-							addSign((PlayerTypes)iJ, getLandmarkMessage());
-							CvString szIcon;
+						addSign((PlayerTypes)iJ, getLandmarkMessage());
 
+						if (eFromTeam == NO_TEAM) // Not from map trade
+						{
 							bool bFirstToDiscover = true;
-							for (int iI = 0; iI < MAX_TEAMS; ++iI)
+							for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
 							{
-								if(!GET_TEAM((TeamTypes)iI).isNPC() && GET_TEAM((TeamTypes)iI).isAlive())
+								if (iI != eTeam && GET_TEAM((TeamTypes)iI).isAlive() && isRevealed((TeamTypes)iI, false))
 								{
-									if (isRevealed((TeamTypes)iI, false))
-									{
-										bFirstToDiscover = false;
-										break;
-									}
+									bFirstToDiscover = false;
+									break;
 								}
 							}
-
 							if (bFirstToDiscover)
 							{
 								MEMORY_TRACK_EXEMPT();
+								CvString szIcon;
 
 								if (getLandmarkType() == LANDMARK_FOREST || getLandmarkType() == LANDMARK_JUNGLE)
+								{
 									szIcon = GC.getFeatureInfo(getFeatureType()).getButton();
+								}
 								else if (getLandmarkType() == LANDMARK_MOUNTAIN_RANGE || getLandmarkType() == LANDMARK_PEAK)
+								{
 									szIcon = GC.getTerrainInfo(GC.getTERRAIN_PEAK()).getButton();
-								else
-									szIcon = GC.getTerrainInfo(getTerrainType()).getButton();
-								AddDLLMessage((PlayerTypes)iJ, false, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_MISC_DISCOVERED_LANDMARK"), "AS2D_TECH_GENERIC", MESSAGE_TYPE_MINOR_EVENT, szIcon, GC.getCOLOR_WHITE(), getX(), getY(), true, true);
+								}
+								else szIcon = GC.getTerrainInfo(getTerrainType()).getButton();
+
+								AddDLLMessage(
+									(PlayerTypes)iJ, false, GC.getEVENT_MESSAGE_TIME(),
+									gDLL->getText("TXT_KEY_MISC_DISCOVERED_LANDMARK"),
+									"AS2D_TECH_GENERIC", MESSAGE_TYPE_MINOR_EVENT, szIcon,
+									GC.getCOLOR_WHITE(), getX(), getY(), true, true
+								);
 							}
 						}
 					}
 				}
 			}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		}
 	}
 
 	if (!bTerrainOnly)
 	{
-		if (isRevealed(eTeam, false))
-		{
-			if (eFromTeam == NO_TEAM)
-			{
-				setRevealedOwner(eTeam, getOwner());
-				setRevealedImprovementType(eTeam, getImprovementType());
-				setRevealedRouteType(eTeam, getRouteType());
+		CvCity* pCity = getPlotCity();
 
-				if (pCity != NULL)
-				{
-					pCity->setRevealed(eTeam, true);
-				}
-			}
-			else
-			{
-				if (getRevealedOwner(eFromTeam, false) == getOwner())
-				{
-					setRevealedOwner(eTeam, getRevealedOwner(eFromTeam, false));
-				}
-
-				if (getRevealedImprovementType(eFromTeam, false) == getImprovementType())
-				{
-					setRevealedImprovementType(eTeam, getRevealedImprovementType(eFromTeam, false));
-				}
-
-				if (getRevealedRouteType(eFromTeam, false) == getRouteType())
-				{
-					setRevealedRouteType(eTeam, getRevealedRouteType(eFromTeam, false));
-				}
-
-				if (pCity != NULL && pCity->isRevealed(eFromTeam, false))
-				{
-					pCity->setRevealed(eTeam, true);
-				}
-			}
-		}
-		else
+		if (!bNewValue) // Un-reveal plot
 		{
 			setRevealedOwner(eTeam, NO_PLAYER);
 			setRevealedImprovementType(eTeam, NO_IMPROVEMENT);
@@ -9739,6 +9610,39 @@ void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, Tea
 			if (pCity != NULL)
 			{
 				pCity->setRevealed(eTeam, false);
+			}
+		}
+		else if (eFromTeam == NO_TEAM)
+		{
+			setRevealedOwner(eTeam, getOwner());
+			setRevealedImprovementType(eTeam, getImprovementType());
+			setRevealedRouteType(eTeam, getRouteType());
+
+			if (pCity != NULL)
+			{
+				pCity->setRevealed(eTeam, true);
+			}
+		}
+		else // Map trade
+		{
+			if (getRevealedOwner(eFromTeam, false) == getOwner())
+			{
+				setRevealedOwner(eTeam, getRevealedOwner(eFromTeam, false));
+			}
+
+			if (getRevealedImprovementType(eFromTeam, false) == getImprovementType())
+			{
+				setRevealedImprovementType(eTeam, getRevealedImprovementType(eFromTeam, false));
+			}
+
+			if (getRevealedRouteType(eFromTeam, false) == getRouteType())
+			{
+				setRevealedRouteType(eTeam, getRevealedRouteType(eFromTeam, false));
+			}
+
+			if (pCity != NULL && pCity->isRevealed(eFromTeam, false))
+			{
+				pCity->setRevealed(eTeam, true);
 			}
 		}
 	}
@@ -11218,13 +11122,6 @@ void CvPlot::read(FDataStreamBase* pStream)
 	// Init saved data
 	reset();
 
-	uint uiFlag=0;
-	WRAPPER_READ(wrapper, "CvPlot", &uiFlag);	// flags for expansion
-
-	// @SAVEBREAK DELETE Toffer
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_iBattleCountdown, SAVE_VALUE_ANY);
-	// SAVEBREAK@
-
 	WRAPPER_READ(wrapper, "CvPlot", &m_iX);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iY);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iArea);
@@ -11243,11 +11140,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvPlot", &m_iFeatureVariety);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iOwnershipDuration);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iImprovementDuration);
-	// @SAVEBREAK REPLACE
-	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &m_iUpgradeProgress, "m_iUpdateProgressHundredths");
-	// REPLACE WITH
-	//WRAPPER_READ(wrapper, "CvPlot", &m_iUpgradeProgress);
-	// SAVEBREAK@
+	WRAPPER_READ(wrapper, "CvPlot", &m_iUpgradeProgress);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iForceUnownedTimer);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iCityRadiusCount);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iRiverID);
@@ -11266,10 +11159,6 @@ void CvPlot::read(FDataStreamBase* pStream)
 	m_bStartingPlot = bVal;
 	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &bVal, "m_bHills");
 	m_bHills = bVal;
-
-	// @SAVEBREAK DELETE Toffer
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_bDepletedMine, SAVE_VALUE_ANY);
-	// SAVEBREAK@
 
 	WRAPPER_READ_STRING(wrapper, "CvPlot", m_szLandmarkMessage);
 	WRAPPER_READ_STRING(wrapper, "CvPlot", m_szLandmarkName);
@@ -11343,37 +11232,10 @@ void CvPlot::read(FDataStreamBase* pStream)
 	std::vector<std::pair<PlayerTypes,int> >(m_aiCulture).swap(m_aiCulture);
 
 	SAFE_DELETE_ARRAY(m_aiFoundValue);
-	char cFoundValuesPresent = (char)-1;
+	char cFoundValuesPresent;
 	WRAPPER_READ(wrapper, "CvPlot", &cFoundValuesPresent);
-	if ( cFoundValuesPresent != (char)-1 )
-	{
-		unsigned int* m_aiFoundValue = new unsigned int[cFoundValuesPresent];
-		WRAPPER_READ_ARRAY(wrapper, "CvPlot", cFoundValuesPresent, m_aiFoundValue);
-	}
-	else
-	{
-		//	Handle old format
-		cCount = 0;
-		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &cCount, "cConditional");
-		if (cCount > 0)
-		{
-			uint16_t* tempFoundValue = new uint16_t[cCount];
-			WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvPlot", cCount, (short*)tempFoundValue, "m_aiFoundValue");
-
-			//	Note - the m_aiFoundValue values were scaled by a factor of 10 to
-			//	address observed overflow issues, so the loaded values could be out
-			//	by factor.  However, they are regenerated each turn and essentially only
-			//	compared to each other, so this should not cause significant issues
-			m_aiFoundValue = new unsigned int[cCount];
-
-			for(int iI = 0; iI < (int)cCount; iI++ )
-			{
-				m_aiFoundValue[iI] = 10*tempFoundValue[iI];
-			}
-
-			SAFE_DELETE_ARRAY(tempFoundValue);
-		}
-	}
+	unsigned int* m_aiFoundValue = new unsigned int[cFoundValuesPresent];
+	WRAPPER_READ_ARRAY(wrapper, "CvPlot", cFoundValuesPresent, m_aiFoundValue);
 
 	SAFE_DELETE_ARRAY(m_aiPlayerCityRadiusCount);
 	cCount = 0;
@@ -11485,13 +11347,14 @@ void CvPlot::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_STRING(wrapper, "CvPlot", &m_szScriptData);
 
+	// @SAVEBREAK EVALUATE
 	SAFE_DELETE_ARRAY(m_paiBuildProgress);
 
 	//	Old format just saved these as a short array
 	//	Unfortunately there was a screwed up intermediary format that saved as a class
 	//	array if the array was non-NULL on save but DIDN'T save the count!  Dealing
 	//	with all of these variants makes this next section a little complex
-	iCount = -1;
+	iCount;
 	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iCount, "iConditional");
 
 	if ( wrapper.isUsingTaggedFormat() )
@@ -11522,7 +11385,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 		}
 	}
 
-	if ( iCount > 0 || (iCount == -1 && wrapper.isUsingTaggedFormat()) )
+	if (iCount > 0)
 	{
 		//	Correct format is a class array.  Depending on how old the save was
 		//	it may or may not actually be present
@@ -11561,6 +11424,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 			SAFE_DELETE_ARRAY(m_paiBuildProgress);
 		}
 	}
+	// SAVEBREAK@
 
 	if (NULL != m_apaiCultureRangeCities)
 	{
@@ -11646,12 +11510,13 @@ void CvPlot::read(FDataStreamBase* pStream)
 	int iSize = 0;
 	WRAPPER_READ(wrapper, "CvPlot", &iSize);
 	m_aPlotTeamVisibilityIntensity.resize(iSize);
-	int iType1 = 0;
-	int iType2 = 0;
-	int iType3 = 0;
-	int iType4 = 0;
 	if (iSize > 0)
 	{
+		int iType1 = 0;
+		int iType2 = 0;
+		int iType3 = 0;
+		int iType4 = 0;
+
 		for (iI = 0; iI < iSize; iI++)
 		{
 			WRAPPER_READ(wrapper, "CvPlot", &iType1);
@@ -11739,9 +11604,6 @@ void CvPlot::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	uint uiFlag=0;
-	WRAPPER_WRITE(wrapper, "CvPlot", uiFlag); // flag for expansion
-
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iX);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iY);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iArea);
@@ -11749,11 +11611,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iFeatureVariety);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iOwnershipDuration);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iImprovementDuration);
-	// @SAVEBREAK REPLACE
-	WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", m_iUpgradeProgress, "m_iUpdateProgressHundredths");
-	// REPLACE WITH
-	//WRAPPER_WRITE(wrapper, "CvPlot", m_iUpgradeProgress);
-	// SAVEBREAK@
+	WRAPPER_WRITE(wrapper, "CvPlot", m_iUpgradeProgress);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iForceUnownedTimer);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iCityRadiusCount);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iRiverID);
@@ -12657,32 +12515,6 @@ bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
 	PROFILE_FUNC();
 
 	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
-
-	if (kUnit.isPrereqBonuses())
-	{
-		if (kUnit.getDomainType() == DOMAIN_SEA)
-		{
-			bool bValid = false;
-			for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
-			{
-				CvPlot* pLoopPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-
-				if (pLoopPlot != NULL && pLoopPlot->isWater() && pLoopPlot->area()->getNumTotalBonuses() > 0)
-				{
-					bValid = true;
-					break;
-				}
-			}
-			if (!bValid)
-			{
-				return false;
-			}
-		}
-		else if (area()->getNumTotalBonuses() > 0)
-		{
-			return false;
-		}
-	}
 
 	if (isCity())
 	{

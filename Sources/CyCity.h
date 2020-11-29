@@ -26,7 +26,6 @@ public:
 	DllExport explicit CyCity(CvCity* pCity);		// Call from C++
 
 	CvCity* getCity() const { return m_pCity; }	// Call from C++
-	bool isNone() const { return m_pCity == NULL; }
 
 	void kill();
 
@@ -139,14 +138,14 @@ public:
 	int foodDifference(bool bBottom) const;
 	int growthThreshold() const;
 	int productionLeft() const;
-	int hurryGold(int /*HurryTypes*/ iHurry) const;
+	int64_t getHurryGold(int /*HurryTypes*/ iHurry) const;
 	int hurryPopulation(int /*HurryTypes*/ iHurry) const;
 	int hurryProduction(int /*HurryTypes*/ iHurry) const;
 	int flatHurryAngerLength() const;
 
 	int getNumBuilding(int /*BuildingTypes*/ iIndex) const;
-	bool isHasBuilding(int /*BuildingTypes*/ iIndex) const;		// This is a function to help modders out, since it was replaced with getNumBuildings() in the C++
 	int getNumActiveBuilding(int /*BuildingTypes*/ iIndex) const;
+	bool isFreeBuilding(int /*BuildingTypes*/ iIndex) const;
 	int getID() const;
 	int getX() const;
 	int getY() const;

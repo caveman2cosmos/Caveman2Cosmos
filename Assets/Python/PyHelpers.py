@@ -127,9 +127,6 @@ class PyPlayer:
 	def getNumTradeableBonuses(self, iBonus):
 		return self.player.getNumTradeableBonuses(iBonus)
 
-	def calculateInflatedCosts(self):
-		return self.player.calculateInflatedCosts()
-
 	def calculateGoldRate(self):
 		return self.player.calculateGoldRate()
 
@@ -275,7 +272,7 @@ class PyPlayer:
 		(loopCity, iter) = self.player.firstCity(False)
 		while(loopCity):
 			cityOwner = loopCity.getOwner()
-			if ( not loopCity.isNone() and loopCity.getOwner() == self.getID() ): #only valid cities
+			if loopCity.getOwner() == self.getID(): #only valid cities
 				city = PyCity( self.getID(), loopCity.getID() )
 				lCity.append(city)
 			(loopCity, iter) = self.player.nextCity(iter, False)
@@ -349,7 +346,7 @@ class PyCity:
 
 	def isNone(self):
 		"bool - Is the city instance valid?"
-		return self.city.isNone()
+		return self.city is None
 
 	def GetCy(self):
 		' Cy instance of city '
@@ -676,10 +673,6 @@ class PyGame:
 	"requires Nothing"
 	def __init__(self):
 		self.game = CyGame()
-
-	def isNone(self):
-		"bool - Is the game instance valid?"
-		return self.game.isNone()
 
 #################### G E N E R A L	 G A M E	 F U N C T I O N S ####################
 

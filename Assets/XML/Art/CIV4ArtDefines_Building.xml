@@ -11062,7 +11062,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Great_Wonders/winery_vintage_red.dds</Button>
+			<Button>Art/Interface/Buttons/group_wonders/winery_vintage_red.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CHAMPAGNE</Type>
@@ -11072,7 +11072,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Great_Wonders/winery_champagne.dds</Button>
+			<Button>Art/Interface/Buttons/group_wonders/winery_champagne.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_VINTAGE_WHITE_WINE</Type>
@@ -11082,7 +11082,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Great_Wonders/winery_vintage_white.dds</Button>
+			<Button>Art/Interface/Buttons/group_wonders/winery_vintage_white.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CRAFT_HUT</Type>
@@ -18724,18 +18724,6 @@
 			<KFM/>
 			<Button>art/Embassy/art/bulgarianembassy.dds</Button>
 		</BuildingArtInfo>
-<!-- No units
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CASTILIAN_EMBASSY</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>art/Embassy/art/castilianembassy.dds</Button>
-		</BuildingArtInfo>
--->
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_COLOMBIAN_EMBASSY</Type>
 			<LSystem/>
@@ -18796,18 +18784,6 @@
 			<KFM/>
 			<Button>art/Embassy/art/konjoembassy.dds</Button>
 		</BuildingArtInfo>
-<!-- No units
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LEON_EMBASSY</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>art/Embassy/art/leonembassy.dds</Button>
-		</BuildingArtInfo>
--->
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LIANGZHU_EMBASSY</Type>
 			<LSystem/>
@@ -26456,7 +26432,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>art/Wonders/Art/valleykings.dds</Button>
+			<Button>Art/Interface/Buttons/Great_Wonders/valleykings.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BIG_BEN</Type>
@@ -28198,6 +28174,16 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_thylacine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TRADITION_ARCHERY_EFFECT</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/trad_archer_w.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TRADITION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -28205,7 +28191,17 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/tradition.dds</Button>
+			<Button>Art/Interface/Buttons/national_wonders/tradition_sstar_button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TRADITION_ASTHETIC_APPRECIATION</Type>
+			<LSystem/>
+			<bAnimated>0</bAnimated>
+			<fScale>0</fScale>
+			<fInterfaceScale>0</fInterfaceScale>
+			<NIF/>
+			<KFM/>
+			<Button>Art/Interface/Buttons/buildings/tradition_w.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TRADITION_SSTAR</Type>
@@ -28725,7 +28721,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>art/Goods/harappan_fake_gems.dds</Button>
+			<Button>art/interface/buttons/great_wonders/harappan_fake_gems.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TERRA_SIGILLATA_WORKSHOP</Type>
@@ -30337,7 +30333,6 @@
 			<KFM/>
 			<Button>Art/Embassy/red_ocherembassy.dds</Button>
 		</BuildingArtInfo>
-<!-- Wrong flag
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SABBATEAN_EMBASSY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
@@ -30348,7 +30343,6 @@
 			<KFM/>
 			<Button>Art/Embassy/sabbateanembassy.dds</Button>
 		</BuildingArtInfo>
--->
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SAFAVIDS_EMBASSY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>

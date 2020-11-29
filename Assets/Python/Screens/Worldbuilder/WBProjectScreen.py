@@ -230,7 +230,7 @@ class WBProjectScreen:
 		pTeamX.changeProjectCount(item, iCount)
 		if WorldBuilder.bPython and iCount > 0:
 			pCapital = GC.getPlayer(pTeamX.getLeaderID()).getCapitalCity()
-			if not pCapital.isNone():
+			if pCapital:
 				for i in xrange(iCount):
 					self.eventManager.onProjectBuilt([pCapital, item])
 

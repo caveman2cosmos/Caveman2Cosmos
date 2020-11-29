@@ -563,7 +563,7 @@ def canTriggerHurricaneCity(argsList):
 	iCity = argsList[2]
 	CyCity = GC.getPlayer(iPlayer).getCity(iCity)
 
-	if CyCity.isNone():
+	if CyCity is None:
 		return False
 
 	if not CyCity.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
@@ -584,7 +584,7 @@ def canApplyHurricane1(argsList):
 	CyCity = CyPlayer.getCity(kTriggeredData.iCityId)
 
 	for i in xrange(GC.getNumBuildingInfos()):
-		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1: continue
+		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1 or CyCity.isFreeBuilding(i): continue
 		CvBuilding = GC.getBuildingInfo(i)
 		if CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild() or CvBuilding.getProductionCost() < 1 or isLimitedWonder(i):
 			continue
@@ -608,7 +608,7 @@ def applyHurricane1(argsList):
 
 	aList = []
 	for i in xrange(GC.getNumBuildingInfos()):
-		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1: continue
+		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1 or CyCity.isFreeBuilding(i): continue
 		CvBuilding = GC.getBuildingInfo(i)
 		if CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild() or CvBuilding.getProductionCost() < 1 or isLimitedWonder(i):
 			continue
@@ -632,7 +632,7 @@ def canTriggerCycloneCity(argsList):
 	iCity = argsList[2]
 	CyCity = GC.getPlayer(iPlayer).getCity(iCity)
 
-	if CyCity.isNone():
+	if CyCity is None:
 		return False
 
 	if not CyCity.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
@@ -654,7 +654,7 @@ def canTriggerTsunamiCity(argsList):
   player = GC.getPlayer(ePlayer)
   city = player.getCity(iCity)
 
-  if city.isNone():
+  if city is None:
     return False
 
   if not city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
@@ -729,7 +729,7 @@ def canTriggerMonsoonCity(argsList):
   player = GC.getPlayer(ePlayer)
   city = player.getCity(iCity)
 
-  if city.isNone():
+  if city is None:
     return False
 
   if city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
@@ -2440,51 +2440,31 @@ def applyClassicLiteratureDone2(argsList):
     GC.getTeam(player.getTeam()).setHasTech(iTech, True, kTriggeredData.ePlayer, True, True)
 
 def getHelpClassicLiteratureDone3(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
 
-  iSpecialist = GC.getInfoTypeForString("SPECIALIST_SCIENTIST")
-  iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
+	szCityName = ""
+	for city in GC.getPlayer(argsList[1].ePlayer).cities():
+		if city.getNumBuilding(iGreatLibrary):
+			szCityName = city.getNameKey()
+			break
 
-  szCityName = u""
-  for loopCity in player.cities():
-    if (loopCity.isHasBuilding(iGreatLibrary)):
-      szCityName = loopCity.getNameKey()
-      break
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FREE_SPECIALIST", (1, GC.getSpecialistInfo(iSpecialist).getTextKey(), szCityName))
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_FREE_SPECIALIST", (1, GC.getSpecialistInfo(GC.getInfoTypeForString("SPECIALIST_SCIENTIST")).getTextKey(), szCityName))
 
 def canApplyClassicLiteratureDone3(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
 
-  iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
-
-  (loopCity, iter) = player.firstCity(False)
-  while(loopCity):
-    if (loopCity.isHasBuilding(iGreatLibrary)):
-      return True
-
-    (loopCity, iter) = player.nextCity(iter, False)
-
-  return False
+	for city in GC.getPlayer(argsList[1].ePlayer).cities():
+		if city.getNumBuilding(iGreatLibrary):
+			return True
+	return False
 
 def applyClassicLiteratureDone3(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
 
-  iSpecialist = GC.getInfoTypeForString("SPECIALIST_SCIENTIST")
-  iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
-
-  for loopCity in player.cities():
-    if loopCity.isHasBuilding(iGreatLibrary):
-      loopCity.changeFreeSpecialistCount(iSpecialist, 1)
-      return
+	for city in GC.getPlayer(argsList[1].ePlayer).cities():
+		if city.getNumBuilding(iGreatLibrary):
+			city.changeFreeSpecialistCount(GC.getInfoTypeForString("SPECIALIST_SCIENTIST"), 1)
+			return
 
 ######## MASTER BLACKSMITH ###########
 
@@ -2639,17 +2619,12 @@ def applyBestDefenseDone2(argsList):
 
 
 def canApplyBestDefenseDone3(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	iGreatWall = GC.getInfoTypeForString("BUILDING_GREAT_WALL")
 
-  iGreatWall = GC.getInfoTypeForString("BUILDING_GREAT_WALL")
-
-  for loopCity in player.cities():
-    if loopCity.isHasBuilding(iGreatWall):
-      return True
-
-  return False
+	for city in GC.getPlayer(argsList[1].ePlayer).cities():
+		if city.getNumBuilding(iGreatWall):
+			return True
+	return False
 
 ######## NATIONAL SPORTS LEAGUE ###########
 
@@ -2685,126 +2660,93 @@ def canTriggerSportsLeagueDone(argsList):
   return True
 
 def canApplySportsLeagueDone3(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	iZeus = GC.getInfoTypeForString("BUILDING_CIRCUS_MAXIMUS")
 
-  iZeus = GC.getInfoTypeForString("BUILDING_CIRCUS_MAXIMUS")
-
-  for loopCity in player.cities():
-    if loopCity.isHasBuilding(iZeus):
-      return True
-
-  return False
+	for city in GC.getPlayer(argsList[1].ePlayer).cities():
+		if city.getNumBuilding(iZeus):
+			return True
+	return False
 
 ######## CRUSADE ###########
 
 def canTriggerCrusade(argsList):
-  kTriggeredData = argsList[0]
-  trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-  otherPlayer = GC.getPlayer(kTriggeredData.eOtherPlayer)
-  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
+	kTriggeredData = argsList[0]
 
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and GC.getPlayer(kTriggeredData.ePlayer).isHuman():
-    return False
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+		return False
 
-  if holyCity.getOwner() != kTriggeredData.eOtherPlayer:
-    return False
+	holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
+	if not holyCity or holyCity.getOwner() != kTriggeredData.eOtherPlayer:
+		return False
 
-  kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
-  kActualTriggeredDataObject.iOtherPlayerCityId = holyCity.getID()
-
-  return True
+	kActualTriggeredDataObject = GC.getPlayer(kTriggeredData.ePlayer).getEventTriggered(kTriggeredData.iId)
+	kActualTriggeredDataObject.iOtherPlayerCityId = holyCity.getID()
+	return True
 
 def getHelpCrusade1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-
-  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_CRUSADE_HELP_1", (holyCity.getNameKey(), ))
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_CRUSADE_HELP_1", (GAME.getHolyCity(argsList[1].eReligion).getNameKey(), ))
 
 def expireCrusade1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-  otherPlayer = GC.getPlayer(kTriggeredData.eOtherPlayer)
-  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
+	kTriggeredData = argsList[1]
 
-  if holyCity.getOwner() == kTriggeredData.ePlayer:
-    return False
+	holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
+	if holyCity is None or holyCity.getOwner() != kTriggeredData.eOtherPlayer:
+		return True
 
-  if player.getStateReligion() != kTriggeredData.eReligion:
-    return True
+	if holyCity.getOwner() == kTriggeredData.ePlayer:
+		return False
 
-  if holyCity.getOwner() != kTriggeredData.eOtherPlayer:
-    return True
+	player = GC.getPlayer(kTriggeredData.ePlayer)
+	if player.getStateReligion() != kTriggeredData.eReligion:
+		return True
 
-  if not GC.getTeam(player.getTeam()).isAtWar(otherPlayer.getTeam()):
-    return True
+	if not GC.getTeam(player.getTeam()).isAtWar(GC.getPlayer(kTriggeredData.eOtherPlayer).getTeam()):
+		return True
 
-  return False
+	return False
 
 def canTriggerCrusadeDone(argsList):
-  kTriggeredData = argsList[0]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-  trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
+	kTriggeredData = argsList[0]
+	player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  kOrigTriggeredData = player.getEventOccured(trigger.getPrereqEvent(0))
-  holyCity = GAME.getHolyCity(kOrigTriggeredData.eReligion)
+	kOrigTriggeredData = player.getEventOccured(GC.getEventTriggerInfo(kTriggeredData.eTrigger).getPrereqEvent(0))
+	holyCity = GAME.getHolyCity(kOrigTriggeredData.eReligion)
 
-  if holyCity.getOwner() != kTriggeredData.ePlayer:
-    return False
+	if holyCity.getOwner() != kTriggeredData.ePlayer:
+		return False
 
-  kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
-  kActualTriggeredDataObject.iCityId = holyCity.getID()
-  kActualTriggeredDataObject.eOtherPlayer = kOrigTriggeredData.eOtherPlayer
-  kActualTriggeredDataObject.eReligion = kOrigTriggeredData.eReligion
+	kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
+	kActualTriggeredDataObject.iCityId = holyCity.getID()
+	kActualTriggeredDataObject.eOtherPlayer = kOrigTriggeredData.eOtherPlayer
+	kActualTriggeredDataObject.eReligion = kOrigTriggeredData.eReligion
 
-  for iBuilding in xrange(GC.getNumBuildingInfos()):
-    if GC.getBuildingInfo(iBuilding).getHolyCity() == kOrigTriggeredData.eReligion:
-      kActualTriggeredDataObject.eBuilding = BuildingTypes(iBuilding)
-      break
-
-  return True
+	for iBuilding in xrange(GC.getNumBuildingInfos()):
+		if GC.getBuildingInfo(iBuilding).getHolyCity() == kOrigTriggeredData.eReligion:
+			kActualTriggeredDataObject.eBuilding = BuildingTypes(iBuilding)
+			break
+	return True
 
 def getHelpCrusadeDone1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
+	holyCity = GAME.getHolyCity(argsList[1].eReligion)
+	szUnit = GC.getUnitInfo(holyCity.getConscriptUnit()).getTextKey()
+	iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() / 2 + 1
 
-  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
-  szUnit = GC.getUnitInfo(holyCity.getConscriptUnit()).getTextKey()
-  iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() / 2 + 1
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_CRUSADE_DONE_HELP_1", (iNumUnits, szUnit, holyCity.getNameKey()))
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_CRUSADE_DONE_HELP_1", (iNumUnits, szUnit, holyCity.getNameKey()))
 
 def canApplyCrusadeDone1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
-  if -1 == holyCity.getConscriptUnit():
-    return False
-
-  return True
+	if -1 == GAME.getHolyCity(argsList[1].eReligion).getConscriptUnit():
+		return False
+	return True
 
 def applyCrusadeDone1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	kTriggeredData = argsList[1]
+	holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
+	iUnitType = holyCity.getConscriptUnit()
 
-  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
-  iUnitType = holyCity.getConscriptUnit()
-  iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() / 2 + 1
-
-  if iUnitType != -1:
-    for i in xrange(iNumUnits):
-      player.initUnit(iUnitType, holyCity.getX(), holyCity.getY(), UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.DIRECTION_SOUTH)
+	if iUnitType != -1:
+		player = GC.getPlayer(kTriggeredData.ePlayer)
+		for i in xrange(GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() / 2 + 1):
+			player.initUnit(iUnitType, holyCity.getX(), holyCity.getY(), UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.DIRECTION_SOUTH)
 
 def getHelpCrusadeDone2(argsList):
   iEvent = argsList[0]
@@ -2817,15 +2759,14 @@ def getHelpCrusadeDone2(argsList):
   return szHelp
 
 def canApplyCrusadeDone2(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
+	kTriggeredData = argsList[1]
+	if kTriggeredData.eBuilding < 0:
+		return False
+	city = GAME.getHolyCity(kTriggeredData.eReligion)
 
-  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
-
-  if -1 == kTriggeredData.eBuilding or holyCity.isHasBuilding(kTriggeredData.eBuilding):
-    return False
-
-  return True
+	if city is None or city.getNumBuilding(kTriggeredData.eBuilding):
+		return False
+	return True
 
 def applyCrusadeDone2(argsList):
   iEvent = argsList[0]
@@ -2963,7 +2904,7 @@ def getHelpPartisans1(argsList):
   capital = player.getCapitalCity()
   plot = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
 
-  if None != capital and not capital.isNone():
+  if None != capital:
     iNumUnits = getNumPartisanUnits(plot, kTriggeredData.ePlayer)
     szUnit = GC.getUnitInfo(capital.getConscriptUnit()).getTextKey()
 
@@ -2996,7 +2937,7 @@ def applyPartisans1(argsList):
   capital = player.getCapitalCity()
   plot = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
 
-  if None != capital and not capital.isNone():
+  if None != capital:
     iNumUnits = getNumPartisanUnits(plot, kTriggeredData.ePlayer)
 
     listPlots = []
@@ -3019,7 +2960,7 @@ def getHelpPartisans2(argsList):
   capital = player.getCapitalCity()
   plot = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
 
-  if None != capital and not capital.isNone():
+  if None != capital:
     iNumUnits = max(1, getNumPartisanUnits(plot, kTriggeredData.ePlayer) / 2)
     szUnit = GC.getUnitInfo(capital.getConscriptUnit()).getTextKey()
 
@@ -3042,7 +2983,7 @@ def applyPartisans2(argsList):
   capital = player.getCapitalCity()
   plot = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
 
-  if None != capital and not capital.isNone():
+  if None != capital:
     iNumUnits = max(1, getNumPartisanUnits(plot, kTriggeredData.ePlayer) / 2)
     for i in xrange(iNumUnits):
       player.initUnit(capital.getConscriptUnit(), capital.getX(), capital.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
@@ -3430,7 +3371,7 @@ def canTriggerNobleKnightsDone(argsList):
   iBuilding = GC.getInfoTypeForString("BUILDING_ORACLE")
 
   for loopCity in player.cities():
-    if loopCity.isHasBuilding(iBuilding):
+    if loopCity.getNumBuilding(iBuilding):
       kActualTriggeredDataObject.iPlotX = loopCity.getX()
       kActualTriggeredDataObject.iPlotY = loopCity.getY()
       kActualTriggeredDataObject.iCityId = loopCity.getID()
@@ -3546,7 +3487,7 @@ def canTriggerCorporateExpansion(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   city = GAME.getHeadquarters(kTriggeredData.eCorporation)
-  if None == city or city.isNone():
+  if None == city:
     return False
 
   # Hack to remember the number of cities you already have with the Corporation
@@ -3574,7 +3515,7 @@ def expireCorporateExpansion1(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   city = player.getCity(kTriggeredData.iCityId)
-  if None == city or city.isNone():
+  if None == city:
     return True
 
   return False
@@ -3624,7 +3565,7 @@ def applyCorporateExpansionDone1(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   city = player.getCity(kTriggeredData.iCityId)
-  if None != city and not city.isNone():
+  if None != city:
     city.setBuildingCommerceChange(kTriggeredData.eBuilding, CommerceTypes.COMMERCE_GOLD, 50)
 
 ######## HOSTILE TAKEOVER ###########
@@ -3637,7 +3578,7 @@ def canTriggerHostileTakeover(argsList):
     return False
 
   city = GAME.getHeadquarters(kTriggeredData.eCorporation)
-  if None == city or city.isNone():
+  if None == city:
     return False
 
   # Hack to remember the number of cities you already have with the Corporation
@@ -3668,7 +3609,7 @@ def expireHostileTakeover1(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   city = player.getCity(kTriggeredData.iCityId)
-  if None == city or city.isNone():
+  if None == city:
     return True
 
   return False
@@ -3744,7 +3685,7 @@ def applyHostileTakeoverDone1(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   city = player.getCity(kTriggeredData.iCityId)
-  if None != city and not city.isNone():
+  if None != city:
     city.setBuildingCommerceChange(kTriggeredData.eBuilding, CommerceTypes.COMMERCE_GOLD, 100)
 
 
@@ -3785,7 +3726,7 @@ def canTriggerImmigrantCity(argsList):
   player = GC.getPlayer(ePlayer)
   city = player.getCity(iCity)
 
-  if city.isNone():
+  if city is None:
     return False
 
   if ((city.happyLevel() - city.unhappyLevel(0) < 1) or (city.goodHealth() - city.badHealth(True) < 1)):
@@ -3797,28 +3738,17 @@ def canTriggerImmigrantCity(argsList):
 ####### Controversial Philosopher ######
 
 def canTriggerControversialPhilosopherCity(argsList):
-  ePlayer = argsList[1]
-  iCity = argsList[2]
 
-  player = GC.getPlayer(ePlayer)
-  city = player.getCity(iCity)
+	city = GC.getPlayer(argsList[1]).getCity(argsList[2])
 
-  if city.isNone():
-    return False
-  if (not city.isCapital()):
-    return False
-  if (city.getCommerceRateTimes100(CommerceTypes.COMMERCE_RESEARCH) < 3500):
-    return False
+	return city and city.isCapital() and city.getCommerceRateTimes100(CommerceTypes.COMMERCE_RESEARCH) >= 3500
 
-  return True
 
 ####### Spy Discovered #######
 
 
 def canDoSpyDiscovered3(argsList):
-	if GC.getPlayer(argsList[1].ePlayer).getCapitalCity().isNone():
-		return False
-	return True
+	return GC.getPlayer(argsList[1].ePlayer).getCapitalCity() != None
 
 def doSpyDiscovered3(argsList):
 	kTriggeredData = argsList[1]
@@ -3840,13 +3770,8 @@ def getHelpSpyDiscovered3(argsList):
 ####### Nuclear Protest #######
 
 def canTriggerNuclearProtest(argsList):
-  kTriggeredData = argsList[0]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-
-  if player.getUnitCount(GC.getInfoTypeForString("UNIT_ICBM")) + player.getUnitCount(GC.getInfoTypeForString("UNIT_TACTICAL_NUKE")) < 10:
-    return False
-
-  return True
+	player = GC.getPlayer(argsList[0].ePlayer)
+	return 10 <= player.getUnitCount(GC.getInfoTypeForString("UNIT_ICBM")) + player.getUnitCount(GC.getInfoTypeForString("UNIT_TACTICAL_NUKE"))
 
 def doNuclearProtest1(argsList):
 	kTriggeredData = argsList[1]
@@ -3866,14 +3791,9 @@ def getHelpNuclearProtest1(argsList):
 ######## Preaching Researcher #######
 
 def canTriggerPreachingResearcherCity(argsList):
-  iCity = argsList[2]
-
-  player = GC.getPlayer(argsList[1])
-  city = player.getCity(iCity)
-
-  if city.isHasBuilding(GC.getInfoTypeForString("BUILDING_UNIVERSITY")):
-    return True
-  return False
+	if GC.getPlayer(argsList[1]).getCity(argsList[2]).getNumBuilding(GC.getInfoTypeForString("BUILDING_UNIVERSITY")):
+		return True
+	return False
 
 ######## Dissident Priest (Egyptian event) #######
 
@@ -5870,7 +5790,7 @@ def canTriggerSailingFounded(argsList):
   player = GC.getPlayer(ePlayer)
   city = player.getCity(iCity)
 
-  if city.isNone():
+  if city is None:
     return False
 
   if not city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
@@ -5893,7 +5813,7 @@ def canTriggerChariotryFounded(argsList):
 
   iHorse = GC.getInfoTypeForString("BONUS_HORSE")
 
-  if city.isNone():
+  if city is None:
     return False
 
   if (city.plot().getLatitude() <= 0):
@@ -6239,9 +6159,7 @@ def applyEarthquake1(argsList):
 
 
 def canDoAssassinDiscovered3(argsList):
-	if GC.getPlayer(argsList[1].ePlayer).getCapitalCity().isNone():
-		return False
-	return True
+	return GC.getPlayer(argsList[1].ePlayer).getCapitalCity() != None
 
 def doAssassinDiscovered3(argsList):
 	CyPlayer = GC.getPlayer(argsList[1].ePlayer)
@@ -6381,7 +6299,7 @@ def canTriggerMeasles(argsList):
   player = GC.getPlayer(ePlayer)
   city = player.getCity(iCity)
 
-  if city.isNone():
+  if city is None:
     return False
 
   # city health is positive, no epidemic
@@ -7579,10 +7497,10 @@ def doMinorFire(argsList):
 
 	iBurnBuilding = -1
 	iHighFlamm = 0
-	for j in xrange(GC.getNumBuildingInfos()):
-		if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
+	for i in xrange(GC.getNumBuildingInfos()):
+		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1 or isLimitedWonder(i) or CyCity.isFreeBuilding(i):
 			continue
-		CvBuilding = GC.getBuildingInfo(j)
+		CvBuilding = GC.getBuildingInfo(i)
 		if CvBuilding.getProductionCost() < 1 or CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
 			continue
 
@@ -7595,7 +7513,7 @@ def doMinorFire(argsList):
 			iFlammScore = iFlamm + randNum
 			if iFlammScore > iHighFlamm:
 				iHighFlamm = iFlammScore
-				iBurnBuilding = j
+				iBurnBuilding = i
 
 	if iBurnBuilding != -1:
 		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBurnBuilding).getTextKey(), ))
@@ -7622,7 +7540,7 @@ def doMajorFire(argsList):
 		if currFlamm <= iFlammEnd:
 			break
 		for j in xrange(GC.getNumBuildingInfos()):
-			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
+			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j) or CyCity.isFreeBuilding(i):
 				continue
 			CvBuilding = GC.getBuildingInfo(j)
 			if CvBuilding.getProductionCost() < 1 or CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
@@ -7674,7 +7592,7 @@ def doCatastrophicFire(argsList):
 		iHighFlamm = 0
 
 		for j in xrange(GC.getNumBuildingInfos()):
-			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
+			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j) or CyCity.isFreeBuilding(i):
 				continue
 			CvBuilding = GC.getBuildingInfo(j)
 			if CvBuilding.getProductionCost() < 1 or CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
@@ -8037,7 +7955,7 @@ def ApplyNativegood2(argsList):
 	CyPlayer.setNativeRelationship(iRelationship)
 
 	CyCity = CyPlayer.getCapitalCity()
-	if CyCity.isNone:
+	if CyCity is None:
 		return
 	aList = (UnitAITypes.UNITAI_ATTACK, UnitAITypes.UNITAI_CITY_DEFENSE)
 	iHighest = 0
@@ -8170,7 +8088,7 @@ def doEventLawyer(argsList):
 
 		# Removes buildings
 		for iBuildingLoop in xrange(GC.getNumBuildingInfos( )):
-			if pCity.isHasBuilding( iBuildingLoop):
+			if pCity.getNumBuilding(iBuildingLoop):
 				pBuilding = GC.getBuildingInfo( iBuildingLoop )
 				iRequiredCorporation = pBuilding.getFoundsCorporation( )
 				for iCorpLoop in xrange(GC.getNumCorporationInfos()):
@@ -8323,7 +8241,7 @@ def doRemoveWVCannibalism(argsList):
 		iPlayer = CyUnit.getOwner()
 		CyPlayer = GC.getPlayer(iPlayer)
 		CyCity = CyPlayer.getCapitalCity()
-		if CyCity.isNone():
+		if CyCity is None:
 			print "[INFO] doRemoveWVCannibalism(args) happened for a player with no cities"
 		else:
 			iType0 = GC.getInfoTypeForString("BUILDING_CANNIBALISM")

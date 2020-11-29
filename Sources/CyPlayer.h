@@ -21,10 +21,6 @@ public:
 	const CvPlayer* getPlayer() const { return m_pPlayer; } // Call from C++
 	bool isNone() const { return m_pPlayer == NULL; }
 
-#ifdef PARALLEL_MAPS
-	void updateMembers();
-	void initMembers(int iIndex);
-#endif
 	void changeLeader( int /*LeaderHeadTypes*/ eNewLeader );
 	void changeCiv( int /*CivilizationTypes*/ eNewCiv );
 	void setIsHuman( bool bNewValue );
@@ -69,7 +65,7 @@ public:
 	std::wstring getNameKey();
 	std::wstring getCivilizationDescription(int iForm);
 
-	void setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::wstring szNewAdj);
+	void setCivName(const std::wstring szNewDesc, const std::wstring szNewShort, const std::wstring szNewAdj);
 
 	std::wstring getCivilizationDescriptionKey();
 	std::wstring getCivilizationShortDescription(int iForm);
@@ -92,9 +88,6 @@ public:
 
 	int countNumCoastalCities();
 	int countNumCoastalCitiesByArea(CyArea* pArea);
-
-	int getCurrentInflationCostModifier();
-	int getEquilibriumInflationCostModifier();
 
 	int countOwnedBonuses(int /*BonusTypes*/ eBonus);
 	int countUnimprovedBonuses(CyArea* pArea, CyPlot* pFromPlot);
@@ -163,7 +156,7 @@ public:
 	int calculateUnitSupply();
 	int64_t calculatePreInflatedCosts();
 	int calculateInflationRate();
-	int64_t calculateInflatedCosts();
+	int64_t getFinalExpense();
 
 	int calculateGoldRate();
 	int calculateTotalCommerce();
@@ -359,7 +352,7 @@ public:
 	int getStateReligionBuildingProductionModifier();
 	void changeStateReligionBuildingProductionModifier(int iChange);
 	int getStateReligionFreeExperience();
-	CyCity* getCapitalCity();
+	CyCity* getCapitalCity() const;
 	int getCitiesLost();
 
 	int getWinsVsBarbs();

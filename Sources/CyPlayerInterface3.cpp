@@ -4,6 +4,9 @@
 #include "CySelectionGroup.h"
 #include "CyUnit.h"
 
+//
+// published python interface for CyPlayer
+//
 
 void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 {

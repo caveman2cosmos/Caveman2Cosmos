@@ -12,13 +12,13 @@
 //-----------------------------------------------------------------------------
 //
 
-
 #include "CvPathGenerator.h"
 #include "CvMapInterfaceBase.h"
 
-
+class CvArea;
+class CvCity;
 class CvPlotGroup;
-
+class CvViewport;
 
 inline int coordRange(int iCoord, int iRange, bool bWrap)
 {

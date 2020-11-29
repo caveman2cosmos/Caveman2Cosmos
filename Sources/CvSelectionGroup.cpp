@@ -1,10 +1,14 @@
 // selectionGroup.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
+#include "CvCity.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
 #include "CvReachablePlotSet.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
+#include "CvDLLFAStarIFaceBase.h"
 
 const CvSelectionGroup* CvSelectionGroup::m_pCachedMovementGroup = nullptr;
 bst::scoped_ptr<CvSelectionGroup::CachedPathGenerator> CvSelectionGroup::m_cachedPathGenerator;
@@ -6301,9 +6305,6 @@ void CvSelectionGroup::read(FDataStreamBase* pStream)
 	// Init saved data
 	reset();
 
-	uint uiFlag=0;
-	pStream->Read(&uiFlag);	// flags for expansion
-
 	pStream->Read(&m_iID);
 	pStream->Read(&m_iMissionTimer);
 
@@ -6370,9 +6371,6 @@ void CvSelectionGroup::read(FDataStreamBase* pStream)
 
 void CvSelectionGroup::write(FDataStreamBase* pStream)
 {
-	uint uiFlag=0;
-	pStream->Write(uiFlag);		// flag for expansion
-
 	pStream->Write(m_iID);
 	pStream->Write(m_iMissionTimer);
 

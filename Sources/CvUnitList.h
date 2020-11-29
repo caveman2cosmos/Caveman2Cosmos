@@ -11,9 +11,13 @@
 
 #ifndef CV_UNIT_LIST_H
 #define CV_UNIT_LIST_H
+
 #include "CvUnitFilters.h"
 #include "CvUnitGrouping.h"
 #include "CvUnitSort.h"
+
+class CvCity;
+class CvPlayer;
 
 class CvUnitList
 {

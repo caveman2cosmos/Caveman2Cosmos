@@ -1,4 +1,6 @@
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
 
 #include <boost155/functional.hpp>
 #include <boost155/bind.hpp>
@@ -430,13 +432,14 @@ void CvDllPythonEvents::reportGameStart()
 	}
 }
 
-void CvDllPythonEvents::reportGameEnd()
+void CvDllPythonEvents::reportGameEnd(int iGameTurn)
 {
 	if (preEvent())
 	{
 		EventArgs eventData;
 		eventData
-			.arg("event", "GameEnd");
+			.arg("event", "GameEnd")
+			.arg("iGameTurn", iGameTurn);
 		postEvent(eventData, "GameEnd");
 	}
 }
