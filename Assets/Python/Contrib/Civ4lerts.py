@@ -539,7 +539,7 @@ class CityOccupation(AbstractCityTestAlert):
 
 	def _getAlertMessageIcon(self, city, passes):
 		if passes:
-			print "%s passed occupation test, ignoring", city.getName()
+			print "%s passed occupation test, ignoring" % city.getName()
 			return (None, None)
 		return (TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_PACIFIED", (city.getName(), )), HAPPY_ICON)
 
@@ -548,7 +548,7 @@ class CityOccupation(AbstractCityTestAlert):
 
 	def _getPendingAlertMessageIcon(self, city, passes):
 		if passes:
-			print "[WARN] %s passed pending occupation test, ignoring", city.getName()
+			print "[WARN] %s passed pending occupation test, ignoring" % city.getName()
 			return (None, None)
 		return (TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_PENDING_PACIFIED", (city.getName(), )), HAPPY_ICON)
 

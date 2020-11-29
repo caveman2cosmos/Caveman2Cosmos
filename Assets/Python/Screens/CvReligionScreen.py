@@ -299,12 +299,11 @@ class CvReligionScreen:
 			iMissionaries_Active = [0] * self.NUM_RELIGIONS
 			iMissionaries_Construct = [0] * self.NUM_RELIGIONS
 
-			for pLoopCity in cityList:
-				lReligions = pLoopCity.getReligions()
+			for cityX in cityList:
 
 				for iRel in self.RELIGIONS:
 					# count the number of cities
-					if iRel in lReligions:
+					if cityX.isHasReligion(iRel):
 						iCities[iRel] += 1
 
 			# number of cities...
@@ -454,36 +453,32 @@ class CvReligionScreen:
 			screen.setTableColumnHeader(self.TABLE_ID, self.COL_EFFECTS, "", 400)
 
 			# Loop through the cities
-			for cityX in self.activePlayer.cities():
+			for i, cityX in enumerate(self.activePlayer.cities()):
 
 				screen.appendTableRow(self.TABLE_ID)
-				screen.setTableText(self.TABLE_ID, self.COL_ZOOM_CITY, iCity, "" , self.zoomArt, WidgetTypes.WIDGET_ZOOM_CITY, cityX.getOwner(), cityX.getID(), 1<<0)
-				screen.setTableText(self.TABLE_ID, self.COL_CITY_NAME, iCity, cityX.getName(), "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
+				screen.setTableText(self.TABLE_ID, self.COL_ZOOM_CITY, i, "" , self.zoomArt, WidgetTypes.WIDGET_ZOOM_CITY, cityX.getOwner(), cityX.getID(), 1<<0)
+				screen.setTableText(self.TABLE_ID, self.COL_CITY_NAME, i, cityX.getName(), "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
 				lReligions = []
-				lHolyCity = []
-				for i in range(self.NUM_RELIGIONS):
-					if cityX.isHasReligion(i):
-						lReligions.append(i)
-					# Theoretically possible to not have the religion but still be its holy city.
-					if cityX.isHolyCityByType(i):
-						lHolyCity.append(i)
+				for iRel in range(self.NUM_RELIGIONS):
+					if cityX.isHasReligion(iRel):
+						lReligions.append(iRel)
 
 				for iRel in range(self.NUM_RELIGIONS):
 					if GAME.getReligionGameTurnFounded(iRel) >= 0:
 						szReligionIcon = ""
-						if iRel in lHolyCity:
+						if cityX.isHolyCityByType(iRel):
 							szReligionIcon = u"<font=2>%c</font>" %(GC.getReligionInfo(iRel).getHolyCityChar())
 						elif iRel in lReligions:
 							szReligionIcon = u"<font=2>%c</font>" %(GC.getReligionInfo(iRel).getChar())
 
-						screen.setTableText(self.TABLE_ID, self.COL_FIRST_RELIGION + iRel, iCity, szReligionIcon, "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<2)
+						screen.setTableText(self.TABLE_ID, self.COL_FIRST_RELIGION + iRel, i, szReligionIcon, "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<2)
 
 				if (iLinkReligion == -1):
 					bFirst = True
 					sHelp = ""
-					for iI in range(len(lReligions)):
-						szTempBuffer = CyGameTextMgr().getReligionHelpCity(lReligions[iI], cityX, False, False, False, True)
+					for iRel in lReligions:
+						szTempBuffer = CyGameTextMgr().getReligionHelpCity(iRel, cityX, False, False, False, True)
 						if (szTempBuffer):
 							if (not bFirst):
 								sHelp += u", "
@@ -492,7 +487,7 @@ class CvReligionScreen:
 				else:
 					sHelp = CyGameTextMgr().getReligionHelpCity(iLinkReligion, cityX, False, False, True, False)
 
-				screen.setTableText(self.TABLE_ID, self.COL_EFFECTS, iCity, sHelp, "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
+				screen.setTableText(self.TABLE_ID, self.COL_EFFECTS, i, sHelp, "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
 # start of BUG indent of original code
 		else:
