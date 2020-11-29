@@ -123,7 +123,4 @@ private:
 	std::vector<ArtInfoItem*> m_artInfoItems;
 };
 
-// Singleton Accessor
-#define ARTFILEMGR CvArtFileMgr::GetInstance()
-
 #endif

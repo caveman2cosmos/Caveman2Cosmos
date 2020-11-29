@@ -5,7 +5,7 @@
 #ifndef CIV4_CITY_H
 #define CIV4_CITY_H
 
-#include "CvDLLEntity.h"
+//#include "CvDLLEntity.h"
 #include "LinkedList.h"
 #include "CvBuildingList.h"
 #include "CvUnitList.h"
@@ -13,6 +13,7 @@
 
 class CvArea;
 class CvArtInfoBuilding;
+class CvDLLEntity;
 class CvPlot;
 class CvPlotGroup;
 

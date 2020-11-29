@@ -3,6 +3,7 @@
 //
 
 #include "CvGameCoreDLL.h"
+#include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"

@@ -4,11 +4,18 @@
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvInfoWater.h"
 #include "CvInitCore.h"
+#include "CvMap.h"
 #include "CvMapExternal.h"
+#include "CvMessageControl.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvPython.h"
 #include "CvRandom.h"
 #include "CvTeamAI.h"
+#include "CvViewport.h"
 #include "CvXMLLoadUtility.h"
 #include "FVariableSystem.h"
 #include <time.h> 
@@ -74,8 +81,7 @@ ProxyTracker::~ProxyTracker()
 // CONSTRUCTOR
 //
 cvInternalGlobals::cvInternalGlobals() 
-	: m_paszEntityEventTypes(NULL)
-	, m_paszAnimationOperatorTypes(NULL)
+	: m_paszAnimationOperatorTypes(NULL)
 	, m_paszFunctionTypes(NULL)
 	, m_paszFlavorTypes(NULL)
 	, m_paszArtStyleTypes(NULL)
@@ -176,7 +182,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iNumPlayableCivilizationInfos(0)
 	, m_iNumAIPlayableCivilizationInfos(0)
 	, m_iTotalNumModules(0) // Modular loading control
-	, m_iNumEntityEventTypes(0)
 	, iStuckUnitID(0)
 	, iStuckUnitCount(0)
 	, m_iniInitCore(NULL)
@@ -2292,22 +2297,6 @@ CvEspionageMissionInfo& cvInternalGlobals::getEspionageMissionInfo(EspionageMiss
 	return *(m_paEspionageMissionInfo[eEspionageMissionNum]);
 }
 
-int& cvInternalGlobals::getNumEntityEventTypes()
-{
-	return m_iNumEntityEventTypes;
-}
-
-CvString*& cvInternalGlobals::getEntityEventTypes()
-{
-	return m_paszEntityEventTypes;
-}
-
-CvString& cvInternalGlobals::getEntityEventTypes(EntityEventTypes e)
-{
-	FASSERT_BOUNDS(0, GC.getNumEntityEventTypes(), e)
-	return m_paszEntityEventTypes[e];
-}
-
 int& cvInternalGlobals::getNumAnimationOperatorTypes()
 {
 	return m_iNumAnimationOperatorTypes;
@@ -2837,7 +2826,6 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paCivicOptionInfo);
 	deleteInfoArray(m_paCursorInfo);
 
-	SAFE_DELETE_ARRAY(GC.getEntityEventTypes());
 	SAFE_DELETE_ARRAY(GC.getAnimationOperatorTypes());
 	SAFE_DELETE_ARRAY(GC.getFunctionTypes());
 	SAFE_DELETE_ARRAY(GC.getFlavorTypes());

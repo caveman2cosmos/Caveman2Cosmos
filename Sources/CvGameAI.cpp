@@ -4,6 +4,7 @@
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
+#include "CvUnitAI.h"
 
 // Public Functions...
 

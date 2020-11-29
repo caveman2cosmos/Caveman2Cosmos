@@ -16,6 +16,8 @@
 
 class CvArea;
 class CvCity;
+class CvMapExternal;
+class CvSelectionGroup;
 
 //
 // holds initialization info
@@ -35,11 +37,9 @@ struct CvMapInitData
 	{ }
 };
 
-
 //
 // CvMapInterfaceBase
 //
-class CvMapExternal;
 class CvMapInterfaceBase
 {
 public:

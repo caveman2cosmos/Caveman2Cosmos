@@ -1,13 +1,14 @@
 #pragma once
 
-// selectionGroupAI.h
-
 #ifndef CIV4_SELECTION_GROUP_AI_H
 #define CIV4_SELECTION_GROUP_AI_H
 
 #include "CvSelectionGroup.h"
 
 class CvCity;
+class CvPlot;
+class CvSelectionGroup;
+class CvUnit;
 
 class CvSelectionGroupAI : public CvSelectionGroup
 {

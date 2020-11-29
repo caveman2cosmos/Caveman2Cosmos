@@ -170,9 +170,9 @@ public:
 	void uninit();
 	void clearTypesMap();
 
+	CvDLLUtilityIFaceBase* getDLLIFace() const			{ return gDLL; }
 	CvDiplomacyScreen* getDiplomacyScreen() const 		{ return m_diplomacyScreen; }
 	CMPDiplomacyScreen* getMPDiplomacyScreen() const 	{ return m_mpDiplomacyScreen; }
-
 	FMPIManager*& getFMPMgrPtr()	 					{ return m_pFMPMgr; }
 	CvPortal& getPortal() const 						{ return *m_portal; }
 	CvSetupData& getSetupData() const 					{ return *m_setupData; }
@@ -701,10 +701,6 @@ public:
 	int getTypesEnum(const char* szType) const;				// use this when searching for a type
 	void setTypesEnum(const char* szType, int iEnum);
 
-	int& getNumEntityEventTypes();
-	CvString*& getEntityEventTypes();
-	CvString& getEntityEventTypes(EntityEventTypes e);
-
 	int& getNumAnimationOperatorTypes();
 	CvString*& getAnimationOperatorTypes();
 	CvString& getAnimationOperatorTypes(AnimationOperatorTypes e);
@@ -1154,9 +1150,6 @@ protected:
 	TypesMap m_typesMap;
 
 	// XXX These are duplicates and are kept for enumeration convenience - most could be removed, Moose
-	CvString *m_paszEntityEventTypes;
-	int m_iNumEntityEventTypes;
-
 	CvString *m_paszAnimationOperatorTypes;
 	int m_iNumAnimationOperatorTypes;
 
