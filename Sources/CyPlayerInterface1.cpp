@@ -15,13 +15,13 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 	// set the docstring of the current module scope 
 	python::scope().attr("__doc__") = "Civilization IV Player Class";
 	x
-		.def( "changeLeader", &CyPlayer::changeLeader, "void ( int /*LeaderHeadTypes*/ eNewLeader ) - change leader of player")
-		.def( "changeCiv", &CyPlayer::changeCiv, "void ( int /*CivilizationTypes*/ eNewCiv ) - change civilization of player" )
-		.def( "setIsHuman", &CyPlayer::setIsHuman, "void ( bool bNewValue ) - set whether player is human" )
-		.def( "setIsRebel", &CyPlayer::setIsRebel, "void ( bool bNewValue ) - set whether the player is considered a rebel" )
-		.def( "isRebel", &CyPlayer::isRebel, "bool ( ) - true if player is a rebel" )
+		.def("changeLeader", &CyPlayer::changeLeader, "void (int /*LeaderHeadTypes*/ eNewLeader) - change leader of player")
+		.def("changeCiv", &CyPlayer::changeCiv, "void (int /*CivilizationTypes*/ eNewCiv) - change civilization of player")
+		.def("setIsHuman", &CyPlayer::setIsHuman, "void (bool bNewValue) - set whether player is human")
+		.def("setIsRebel", &CyPlayer::setIsRebel, "void (bool bNewValue) - set whether the player is considered a rebel")
+		.def("isRebel", &CyPlayer::isRebel, "bool () - true if player is a rebel")
 
-		.def("isDoNotBotherStatus", &CyPlayer::isDoNotBotherStatus, "bool (int /*PlayerTypes*/ playerID ) - set if player instructed not to contact playerID" )
+		.def("isDoNotBotherStatus", &CyPlayer::isDoNotBotherStatus, "bool (int /*PlayerTypes*/ playerID) - set if player instructed not to contact playerID" )
 
 		.def("startingPlotRange", &CyPlayer::startingPlotRange, "int ()")
 		.def("startingPlotWithinRange", &CyPlayer::startingPlotWithinRange, "bool (CyPlot *pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass)")
