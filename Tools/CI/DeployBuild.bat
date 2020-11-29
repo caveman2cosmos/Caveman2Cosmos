@@ -55,17 +55,17 @@ call "%root_dir%\Tools\CI\DoSourceIndexing.bat"
 
 :: CHECK OUT SVN -----------------------------------------------
 echo Checking out SVN working copy for deployment...
-call %SVN% --quiet checkout %svn_url% "%build_dir%"
+call %SVN% checkout %svn_url% "%build_dir%"
 if %ERRORLEVEL% neq 0 (
-	echo Quiet SVN checkout failed...
-	call %SVN% cleanup --non-interactive
+	echo SVN checkout failed...
+	call %SVN% cleanup
 	call %SVN% checkout %svn_url% "%build_dir%"
 	if %ERRORLEVEL% neq 0 (
-		echo Normal SVN checkout failed, try one more time...
-		call %SVN% cleanup --non-interactive
-		call %SVN% checkout %svn_url% "%build_dir%"
+		echo Second SVN checkout failed...
+		call %SVN% --verbose cleanup
+		call %SVN% --verbose checkout %svn_url% "%build_dir%"
 		if %ERRORLEVEL% neq 0 (
-			echo SVN checkout failed, aborting...
+			echo Last SVN checkout failed, aborting...
 			exit /B 3
 		)
 	)
