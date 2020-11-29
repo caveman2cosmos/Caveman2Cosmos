@@ -279,13 +279,9 @@ namespace python = boost::python;
 #include "copy_iterator.h"
 #include "index_iterator_base.h"
 #include "logging.h"
-
 #include "algorithm2.h"
-
 #include "scoring.h"
-
 #include "CvAllocator.h"
-
 #include "FAssert.h"
 #include "Stopwatch.h"
 #include "CvGameCoreDLLDefNew.h"
