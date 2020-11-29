@@ -575,6 +575,19 @@ void CyPlot::changeInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*Invis
 	if (m_pPlot) m_pPlot->changeInvisibleVisibilityCount((TeamTypes) eTeam, (InvisibleTypes) eInvisible, iChange, iIntensity);
 }
 
+python::list CyPlot::units() const
+{
+	python::list list = python::list();
+	if (m_pPlot)
+	{
+		foreach_(CvUnit* unit, m_pPlot->units())
+		{
+			list.append(new CyUnit(unit));
+		}
+	}
+	return list;
+}
+
 int CyPlot::getNumUnits() const
 {
 	return m_pPlot ? m_pPlot->getNumUnits() : -1;

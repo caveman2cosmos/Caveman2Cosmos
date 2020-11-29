@@ -1741,17 +1741,17 @@ class CvInfoScreen:
 
 				iTotalCityValue = (
 					(
-						pCity.getCulture(i) / 5 +
-						pCity.getYieldRate(YieldTypes.YIELD_FOOD) +
-						pCity.getYieldRate(YieldTypes.YIELD_PRODUCTION) +
-						pCity.getYieldRate(YieldTypes.YIELD_COMMERCE)
-					) * pCity.getPopulation()
+						cityX.getCulture(i) / 5 +
+						cityX.getYieldRate(YieldTypes.YIELD_FOOD) +
+						cityX.getYieldRate(YieldTypes.YIELD_PRODUCTION) +
+						cityX.getYieldRate(YieldTypes.YIELD_COMMERCE)
+					) * cityX.getPopulation()
 				)
 				for iRankLoop in range(5):
 
 					if iTotalCityValue > self.iCityValues[iRankLoop]:
 
-						self.addCityToList(iRankLoop, pCity, iTotalCityValue)
+						self.addCityToList(iRankLoop, cityX, iTotalCityValue)
 						break
 
 	# Recursive
@@ -2628,12 +2628,10 @@ class CvInfoScreen:
 		for iUnitLoop in range(iNumUnits):
 			aiUnitsCurrent.append(0)
 
-		CyUnit, i = CyPlayer.firstUnit(False)
-		while CyUnit:
-			iType = CyUnit.getUnitType()
+		player = GC.getPlayer(self.iActivePlayer)
+		for unitX in player.units():
+			iType = unitX.getUnitType()
 			aiUnitsCurrent[iType] += 1
-
-			CyUnit, i = CyPlayer.nextUnit(i, False)
 
 		aiImprovementsCurrent = []
 		for iImprovementLoop in range(iNumImprovements):
@@ -2657,14 +2655,13 @@ class CvInfoScreen:
 				 PanelStyles.PANEL_STYLE_DAWNTOP )
 
 		# Leaderhead graphic
-		player = GC.getPlayer(GAME.getActivePlayer())
 		szLeaderWidget = self.getNextWidgetName()
 		screen.addLeaderheadGFC(szLeaderWidget, player.getLeaderType(), AttitudeTypes.ATTITUDE_PLEASED,
 			self.X_LEADER_ICON, self.Y_LEADER_ICON, self.W_LEADER_ICON, self.H_LEADER_ICON, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		# Leader Name
 		self.szLeaderNameWidget = self.getNextWidgetName()
-		szText = u"<font=4b>" + GC.getPlayer(self.iActivePlayer).getName() + u"</font>"
+		szText = u"<font=4b>" + player.getName() + u"</font>"
 		screen.setText(self.szLeaderNameWidget, "", szText, 1<<0,
 				   self.X_LEADER_NAME, self.Y_LEADER_NAME, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 

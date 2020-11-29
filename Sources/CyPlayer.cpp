@@ -2253,6 +2253,16 @@ CyCity* CyPlayer::getCity(int iID)
 	return m_pPlayer && iID > -1 ? new CyCity(m_pPlayer->getCity(iID)) : NULL;
 }
 
+python::list CyPlayer::units() const
+{
+	python::list list = python::list();
+	foreach_(CvUnit* unit, m_pPlayer->units())
+	{
+		list.append(new CyUnit(unit));
+	}
+	return list;
+}
+
 // returns tuple of (CyUnit, iterOut)
 python::tuple CyPlayer::firstUnit(bool bRev)
 {
@@ -2283,6 +2293,16 @@ int CyPlayer::getNumUnits()
 CyUnit* CyPlayer::getUnit(int iID)
 {
 	return m_pPlayer ? new CyUnit(m_pPlayer->getUnit(iID)) : NULL;
+}
+
+python::list CyPlayer::groups() const
+{
+	python::list list = python::list();
+	foreach_(CvSelectionGroup* group, m_pPlayer->groups())
+	{
+		list.append(new CySelectionGroup(group));
+	}
+	return list;
 }
 
 // returns tuple of (CySelectionGroup, iterOut)
