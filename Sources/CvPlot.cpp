@@ -2,6 +2,7 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
+#include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
@@ -10,7 +11,6 @@
 #include "CvTeamAI.h"
 #include "CvRandom.h"
 #include "CvPlotPaging.h"
-
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLFlagEntityIFaceBase.h"

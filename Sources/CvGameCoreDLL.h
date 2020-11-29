@@ -54,6 +54,7 @@
 #include <algorithm>
 #include <set>
 #include <fstream>
+#include <queue>
 
 //
 // Google sparsehash
@@ -321,8 +322,7 @@ namespace python = boost::python;
 #include "SCvDebug.h"
 #include "SCvInternalGlobals.h"
 
-#include "CyGlobalContext.h"
-#include "CyArtFileMgr.h"
+//#include "CyGlobalContext.h"
 #include "CyDeal.h"
 #include "CyMap.h"
 #include "CyArea.h"

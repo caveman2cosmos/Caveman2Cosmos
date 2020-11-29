@@ -15,10 +15,8 @@
 #include "CvMapGenerator.h"
 #include "CvFractal.h"
 #include "CvPlayerAI.h"
-
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
-
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/

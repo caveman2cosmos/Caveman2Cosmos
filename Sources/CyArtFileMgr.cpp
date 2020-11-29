@@ -2,6 +2,7 @@
 // Python wrapper class for CvArtFileMgr 
 // 
 #include "CvGameCoreDLL.h"
+#include "CvArtFileMgr.h"
 #include "CyArtFileMgr.h"
 
 CyArtFileMgr::CyArtFileMgr() : m_pArtFileMgr(NULL)
@@ -58,11 +59,6 @@ CvArtInfoCivilization* CyArtFileMgr::getCivilizationArtInfo( const char * szArtD
 	return m_pArtFileMgr ? m_pArtFileMgr->getCivilizationArtInfo( szArtDefineTag ) : NULL;
 }
 
-CvArtInfoLeaderhead* CyArtFileMgr::getLeaderheadArtInfo( const char * szArtDefineTag ) const
-{
-	return m_pArtFileMgr ? m_pArtFileMgr->getLeaderheadArtInfo( szArtDefineTag ) : NULL;
-}
-
 CvArtInfoBonus* CyArtFileMgr::getBonusArtInfo( const char * szArtDefineTag ) const
 {
 	return m_pArtFileMgr ? m_pArtFileMgr->getBonusArtInfo( szArtDefineTag ) : NULL;
@@ -71,14 +67,4 @@ CvArtInfoBonus* CyArtFileMgr::getBonusArtInfo( const char * szArtDefineTag ) con
 CvArtInfoImprovement* CyArtFileMgr::getImprovementArtInfo( const char * szArtDefineTag ) const
 {
 	return m_pArtFileMgr ? m_pArtFileMgr->getImprovementArtInfo( szArtDefineTag ) : NULL;
-}
-
-CvArtInfoTerrain* CyArtFileMgr::getTerrainArtInfo( const char * szArtDefineTag ) const
-{
-	return m_pArtFileMgr ? m_pArtFileMgr->getTerrainArtInfo( szArtDefineTag ) : NULL;
-}
-
-CvArtInfoFeature* CyArtFileMgr::getFeatureArtInfo( const char * szArtDefineTag ) const
-{
-	return m_pArtFileMgr ? m_pArtFileMgr->getFeatureArtInfo( szArtDefineTag ) : NULL;
 }

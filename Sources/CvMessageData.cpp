@@ -1,8 +1,11 @@
 #include "CvGameCoreDLL.h"
+#include "CvBuildLists.h"
 #include "CvCity.h"
+#include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvMessageData.h"
 #include "CvPlayerAI.h"
+#include "CvPython.h"
 #include "CvTeamAI.h"
 
 CvMessageData* CvMessageData::createMessage(GameMessageTypes eType)

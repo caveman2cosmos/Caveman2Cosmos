@@ -3,8 +3,6 @@
 #ifndef CV_BUILDING_INFO_H
 #define CV_BUILDING_INFO_H
 
-#include "CvInfos.h"
-
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
 //  class : CvBuildingInfo
@@ -12,6 +10,7 @@
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 class BoolExpr;
 class CvArtInfoBuilding;
 class CvArtInfoMovie;

@@ -39,11 +39,8 @@ public:
 	CvArtInfoGenericCity* getGenericCityArtInfo( const char * szArtDefineTag ) const;
 	CvArtInfoBuilding* getBuildingArtInfo( const char * szArtDefineTag ) const;
 	CvArtInfoCivilization* getCivilizationArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoLeaderhead* getLeaderheadArtInfo( const char * szArtDefineTag ) const;
 	CvArtInfoBonus* getBonusArtInfo( const char * szArtDefineTag ) const;
 	CvArtInfoImprovement* getImprovementArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoTerrain* getTerrainArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoFeature* getFeatureArtInfo( const char * szArtDefineTag ) const;
 	
 protected:
 	CvArtFileMgr* m_pArtFileMgr;

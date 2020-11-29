@@ -152,7 +152,4 @@ private:
 	CvStatistics m_kStatistics;
 };
 
-// helper
-#define EVENT_REPORTER CvEventReporter::getInstance()	
-
 #endif	// CvEventReporter_h

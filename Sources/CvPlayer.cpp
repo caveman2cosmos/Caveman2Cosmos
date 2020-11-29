@@ -2,14 +2,18 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
+#include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
 #include "CvDiploParameters.h"
+#include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
 #include "CyCity.h"
 #include "CvDLLFAStarIFaceBase.h"
 

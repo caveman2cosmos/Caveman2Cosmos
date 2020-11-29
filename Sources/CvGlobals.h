@@ -701,10 +701,6 @@ public:
 	int getTypesEnum(const char* szType) const;				// use this when searching for a type
 	void setTypesEnum(const char* szType, int iEnum);
 
-	int& getNumEntityEventTypes();
-	CvString*& getEntityEventTypes();
-	CvString& getEntityEventTypes(EntityEventTypes e);
-
 	int& getNumAnimationOperatorTypes();
 	CvString*& getAnimationOperatorTypes();
 	CvString& getAnimationOperatorTypes(AnimationOperatorTypes e);
@@ -1194,9 +1190,6 @@ protected:
 	TypesMap m_typesMap;
 
 	// XXX These are duplicates and are kept for enumeration convenience - most could be removed, Moose
-	CvString *m_paszEntityEventTypes;
-	int m_iNumEntityEventTypes;
-
 	CvString *m_paszAnimationOperatorTypes;
 	int m_iNumAnimationOperatorTypes;
 

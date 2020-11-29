@@ -12,6 +12,7 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
+#include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
 #include "CounterSet.h"
