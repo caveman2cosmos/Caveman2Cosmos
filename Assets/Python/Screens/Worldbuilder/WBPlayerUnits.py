@@ -119,7 +119,7 @@ class WBPlayerUnits:
 			if unitX:
 				pUnit = unitX
 				iUnitID = unitX.getID()
-				iUnitOzwner = unitX.getOwner()
+				iUnitOwner = unitX.getOwner()
 
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 			if iOwnerType == 1 and iPlayerX != iPlayer:
