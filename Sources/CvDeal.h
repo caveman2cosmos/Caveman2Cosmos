@@ -10,9 +10,7 @@
 
 class CvDeal
 {
-
 public:
-
 	CvDeal();
 	virtual ~CvDeal();
 

@@ -9,7 +9,6 @@
 //#include "CvEnums.h"
 //#include "CvStructs.h"
 #include "CvGameObject.h"
-#include <map>
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 

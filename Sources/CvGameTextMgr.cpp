@@ -17,6 +17,7 @@
 #include "CvCity.h"
 #include "CvCityAI.h"
 #include "CounterSet.h"
+#include "CvDeal.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvDLLSymbolIFaceBase.h"

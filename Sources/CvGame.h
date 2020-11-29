@@ -5,14 +5,15 @@
 #ifndef CIV4_GAME_H
 #define CIV4_GAME_H
 
-#include "CvDeal.h"
+//#include "CvDeal.h"
 #include "CvRandom.h"
 #include "CvGameObject.h"
 #include "CvPropertySolver.h"
 #include "CvDate.h"
 
-class CvPlot;
+class CvDeal;
 class CvCity;
+class CvPlot;
 class CvReplayMessage;
 class CvReplayInfo;
 class CvUnit;
