@@ -20,11 +20,13 @@
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
 #include "CvPopupInfo.h"
+#include "CvPython.h"
 #include "CvSelectionGroupAI.h"
 #include "CvTalkingHeadMessage.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CvUnitAI.h"
+#include "CvViewport.h"
 #include "CyCity.h"
 #include "CvDLLFAStarIFaceBase.h"
 

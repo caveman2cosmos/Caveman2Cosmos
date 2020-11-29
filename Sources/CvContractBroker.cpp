@@ -3,6 +3,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
+#include "CvMap.h"
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
 #include "CvPlot.h"

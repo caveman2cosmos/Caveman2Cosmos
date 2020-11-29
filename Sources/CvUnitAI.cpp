@@ -13,6 +13,7 @@
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
+#include "CvPython.h"
 #include "CvReachablePlotSet.h"
 #include "CvSelectionGroup.h"
 #include "CvSelectionGroupAI.h"

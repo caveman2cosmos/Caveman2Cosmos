@@ -10,6 +10,7 @@
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
 #include "CvPopupInfo.h"
+#include "CvPython.h"
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"

@@ -170,9 +170,9 @@ public:
 	void uninit();
 	void clearTypesMap();
 
+	CvDLLUtilityIFaceBase* getDLLIFace() const			{ return gDLL; }
 	CvDiplomacyScreen* getDiplomacyScreen() const 		{ return m_diplomacyScreen; }
 	CMPDiplomacyScreen* getMPDiplomacyScreen() const 	{ return m_mpDiplomacyScreen; }
-
 	FMPIManager*& getFMPMgrPtr()	 					{ return m_pFMPMgr; }
 	CvPortal& getPortal() const 						{ return *m_portal; }
 	CvSetupData& getSetupData() const 					{ return *m_setupData; }

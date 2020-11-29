@@ -3,6 +3,7 @@
 #include "CvDllPythonEvents.h"
 #include "CvGlobals.h"
 #include "CvPlot.h"
+#include "CvPython.h"
 #include "CvSelectionGroup.h"
 #include "CvUnit.h"
 

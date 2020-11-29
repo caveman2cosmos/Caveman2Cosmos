@@ -14,10 +14,12 @@
 #include "CvPlot.h"
 #include "CvPlayerAI.h"
 #include "CvPopupInfo.h"
+#include "CvPython.h"
 #include "CvReachablePlotSet.h"
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvViewport.h"
 
 //Disable this passed in initialization list warning, as it is only stored in the constructor of CvBuildingList and not used
 #pragma warning( disable : 4355 )

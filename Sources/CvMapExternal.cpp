@@ -7,6 +7,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
+#include "CvMap.h"
 #include "CvMapExternal.h"
 #include "CvPlot.h"
 #include "CvSelectionGroup.h"

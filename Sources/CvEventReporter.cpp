@@ -3,6 +3,7 @@
 #include "CvEventReporter.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvMap.h"
 #include "CvMessageControl.h"
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"

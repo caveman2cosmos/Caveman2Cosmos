@@ -8,9 +8,12 @@
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
+#include "CvMap.h"
 #include "CvMessageControl.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
 #include "CvPopupInfo.h"
+#include "CvPython.h"
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 

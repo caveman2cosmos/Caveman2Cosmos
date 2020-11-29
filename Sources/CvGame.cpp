@@ -17,6 +17,7 @@
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
 #include "CvPopupInfo.h"
+#include "CvPython.h"
 #include "CvReplayInfo.h"
 #include "CvReplayMessage.h"
 #include "CvSelectionGroup.h"

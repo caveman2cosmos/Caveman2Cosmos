@@ -5,6 +5,7 @@
 #include "CvInitCore.h"
 #include "CvPlayerAI.h"
 #include "CvPopupInfo.h"
+#include "CvPython.h"
 #include "CvSelectionGroup.h"
 #include "CvXMLLoadUtility.h"
 

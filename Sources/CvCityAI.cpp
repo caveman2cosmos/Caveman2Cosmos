@@ -11,6 +11,7 @@
 #include "CvMap.h"
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
+#include "CvPython.h"
 #include "CvReachablePlotSet.h"
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"

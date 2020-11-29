@@ -7,7 +7,9 @@
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
 #include "CvTeamAI.h"
 
 // Public Functions...

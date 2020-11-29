@@ -19,6 +19,7 @@
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CvUnitAI.h"
+#include "CvViewport.h"
 #include "CvDLLFAStarIFaceBase.h"
 
 const CvSelectionGroup* CvSelectionGroup::m_pCachedMovementGroup = nullptr;

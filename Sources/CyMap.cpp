@@ -6,6 +6,7 @@
 #include "CvArea.h"
 #include "CvInitCore.h"
 #include "CvGlobals.h"
+#include "CvMap.h"
 #include "CvMapGenerator.h"
 #include "CvPathGenerator.h"
 #include "CvSelectionGroup.h"

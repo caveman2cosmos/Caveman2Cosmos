@@ -19,8 +19,10 @@
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
 #include "CvPlotGroup.h"
+#include "CvPython.h"
 #include "CvSelectionGroup.h"
 #include "CvUnit.h"
+#include "CvViewport.h"
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
 /*********************************/
