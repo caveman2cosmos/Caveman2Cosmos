@@ -7,6 +7,8 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvBuildingList.h"
+#include "CvBuildingSort.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"

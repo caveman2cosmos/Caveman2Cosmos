@@ -8,15 +8,17 @@
 #include "CvMap.h"
 #include "CvGlobals.h"
 
-class CvPlot;
+class CvInfoBase;
+class CvInternalGlobals;
 class CvCity;
+//class CvMap;
+class CvPathGeneratorBase;
+class CvPlot;
+class CvSelectionGroup;
 class CvUnit;
-class CvString;
 class CvRandom;
 class FAStarNode;
 class FAStar;
-class CvInfoBase;
-class CvInternalGlobals;
 
 #ifndef SQR
 #define SQR(x) ( (x)*(x))

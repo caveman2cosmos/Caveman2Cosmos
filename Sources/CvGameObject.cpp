@@ -12,6 +12,7 @@
 #include "CvCity.h"
 #include "CvGame.h"
 #include "CvGlobals.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
 #include "CvTeamAI.h"

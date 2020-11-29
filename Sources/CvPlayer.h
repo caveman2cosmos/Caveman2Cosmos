@@ -6,22 +6,26 @@
 #define CIV4_PLAYER_H
 
 #include "CvCityAI.h"
-#include "CvUnitAI.h"
-#include "CvSelectionGroupAI.h"
 #include "CvPlotGroup.h"
 #include "LinkedList.h"
-#include "CvTalkingHeadMessage.h"
 #include "CvContractBroker.h"
 #include "CvGameObject.h"
 #include "CvBuildLists.h"
+#include "CvUnitList.h"
 
 class CvArea;
+class CvBuildLists;
 class CvCity;
+class CvCityAI;
+//class CvContractBroker;
+class CvDiploParameters;
+class CvEventTriggerInfo;
 class CvPlot;
 class CvPlotGroup;
-class CvDiploParameters;
 class CvPopupInfo;
-class CvEventTriggerInfo;
+class CvSelectionGroupAI;
+class CvTalkingHeadMessage;
+class CvUnitAI;
 class CvUnitSelectionCriteria;
 class CvUpgradeCache;
 

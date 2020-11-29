@@ -54,6 +54,7 @@
 #include <algorithm>
 #include <set>
 #include <fstream>
+#include <queue>
 
 //
 // Google sparsehash
@@ -278,15 +279,10 @@ namespace python = boost::python;
 #include "copy_iterator.h"
 #include "index_iterator_base.h"
 #include "logging.h"
-
 #include "algorithm2.h"
-
 #include "scoring.h"
-
 #include "CvAllocator.h"
-
 #include "FAssert.h"
-#include "CheckSum.h"
 #include "Stopwatch.h"
 #include "CvGameCoreDLLDefNew.h"
 #include "CvGameCoreDLLUnDefNew.h"
@@ -307,22 +303,14 @@ namespace python = boost::python;
 #include "BetterBTSAI.h"
 #include "CvGameCoreUtils.h"
 #include "CvBugOptions.h"
-#include "CvPopupInfo.h"
-#include "CvEventReporter.h"
-#include "CvMessageControl.h"
-#include "CvDeal.h"
 #include "CvInfos.h"
 #include "CvInfoWater.h"
 #include "CvViewport.h"
-#include "CvTalkingHeadMessage.h"
 #include "FProfiler.h"
-#include "CvPython.h"
 
 #include "SCvDebug.h"
 #include "SCvInternalGlobals.h"
 
-#include "CyGlobalContext.h"
-#include "CyArtFileMgr.h"
 #include "CyDeal.h"
 #include "CyMap.h"
 #include "CyArea.h"

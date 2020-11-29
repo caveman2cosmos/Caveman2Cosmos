@@ -12,6 +12,8 @@
 #define CV_PROPERTY_INTERACTION_H
 
 class CvGameObject;
+class CvXMLLoadUtility;
+class BoolExpr;
 
 // Base class of which the actual property interaction classes are derived
 class CvPropertyInteraction
