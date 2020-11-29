@@ -6,6 +6,7 @@
 #include "CvCity.h"
 #include "CvDeal.h"
 #include "CvDiploParameters.h"
+#include "CvEventReporter.h"
 #include "CvGameAI.h"
 #include "CvGameObject.h"
 #include "CvGlobals.h"

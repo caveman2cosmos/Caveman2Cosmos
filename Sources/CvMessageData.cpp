@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvBuildLists.h"
 #include "CvCity.h"
+#include "CvEventReporter.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvMessageData.h"

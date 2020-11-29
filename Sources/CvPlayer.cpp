@@ -7,12 +7,14 @@
 #include "CvCity.h"
 #include "CvCityAI.h"
 #include "CvDiploParameters.h"
+#include "CvEventReporter.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CvInfos.h"
 #include "CvMap.h"
+#include "CvPlot.h"
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
@@ -21691,7 +21693,6 @@ void CvPlayer::createGreatPeople(UnitTypes eGreatPersonUnit, bool bIncrementThre
 	{
 		CvEventReporter::getInstance().greatPersonBorn(pGreatPeopleUnit, getID(), pCity);
 	}
-
 }
 
 

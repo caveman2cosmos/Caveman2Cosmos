@@ -308,7 +308,7 @@ namespace python = boost::python;
 #include "CvGameCoreUtils.h"
 #include "CvBugOptions.h"
 #include "CvPopupInfo.h"
-#include "CvEventReporter.h"
+//#include "CvEventReporter.h"
 #include "CvMessageControl.h"
 #include "CvDeal.h"
 #include "CvInfos.h"

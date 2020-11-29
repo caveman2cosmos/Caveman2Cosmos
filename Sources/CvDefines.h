@@ -200,6 +200,5 @@
 
 #define GC				cvInternalGlobals::getInstance()
 #define ARTFILEMGR		CvArtFileMgr::GetInstance()
-#define EVENT_REPORTER	CvEventReporter::getInstance()	
 
 #endif	// CVDEFINES_H

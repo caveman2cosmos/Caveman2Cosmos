@@ -13,10 +13,11 @@
 
 struct CvStatBase;
 struct TradeData;
-class CvUnit;
 class CvCity;
 class CvPlot;
 class CvSelectionGroup;
+class CvUnit;
+
 class CvEventReporter
 {
 	friend class CyStatistics;
