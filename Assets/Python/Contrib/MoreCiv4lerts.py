@@ -5,7 +5,6 @@
 from CvPythonExtensions import *
 import CvUtil
 import BugCore
-import PlayerUtil
 import TradeUtil
 
 GC = CyGlobalContext()
@@ -89,8 +88,8 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 		if self.options.isShowCityFoundedAlert():
 			if iOwner != iPlayer:
 				bRevealed = CyCity.isRevealed(GC.getActivePlayer().getTeam(), False)
-				if bRevealed or PlayerUtil.canSeeCityList(iOwner):
-					CyPlayer = GC.getPlayer(iOwner)
+				CyPlayer = GC.getPlayer(iOwner)
+				if bRevealed or canSeeCityList(CyPlayer):
 					iColor = GC.getInfoTypeForString("COLOR_MAGENTA")
 					if bRevealed:
 						msg = TRNSLTR.getText("TXT_KEY_MORECIV4LERTS_CITY_FOUNDED", (CyPlayer.getName(), CyCity.getName()))
@@ -194,10 +193,10 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 		tradeData = TradeData()
 		# Bonus
 		if self.options.isShowBonusTradeAlert():
-			desiredBonuses = TradeUtil.getDesiredBonuses(CyPlayer)
+			desiredBonuses = TradeUtil.getDesiredBonuses(CyPlayer, CyTeam)
 			tradesByPlayer = {}
 			for CyPlayerX in TradeUtil.getBonusTradePartners(CyPlayer):
-				will, wont = TradeUtil.getTradeableBonuses(CyPlayerX, CyPlayer)
+				will, wont = TradeUtil.getTradeableBonuses(CyPlayerX, iPlayer)
 				tradesByPlayer[CyPlayerX.getID()] = will
 
 			for iLoopPlayer, currentTrades in tradesByPlayer.iteritems():
@@ -341,3 +340,24 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 		names = [getNameFunc(getItemFunc(eItem)) for eItem in items]
 		names.sort()
 		return u", ".join(names)
+
+def canSeeCityList(askedPlayer):
+	"""
+	Returns True if the active player can see the list of <player>'s cities.
+
+	In the unmodified game, this is possible if the players have met and <player>
+	is not a vassal of a rival. They must be able to contact (trade with)
+	<player>, and OCC must be disabled. You can always see a teammate's cities.
+	"""
+	if gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+		return False
+	iAskedTeam = askedPlayer.getTeam()
+	iAskingTeam = gc.getGame().getActiveTeam()
+	if iAskingTeam == iAskedTeam:
+		return True
+
+	askedTeam = gc.getTeam(iAskedTeam)
+	if askedTeam.isAVassal() and not askedTeam.isVassal(iAskingTeam):
+		return False
+
+	return TradeUtil.canTrade(gc.getActivePlayer(), askedPlayer)
