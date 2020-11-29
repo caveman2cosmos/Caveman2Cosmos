@@ -4,12 +4,19 @@
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
+#include "CvDeal.h"
 #include "CvDiploParameters.h"
 #include "CvGameAI.h"
+#include "CvGameObject.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvInfos.h"
+#include "CvMap.h"
+#include "CvPlot.h"
 #include "CvPlayerAI.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
 
 // Public Functions...
 #pragma warning( disable : 4355 )

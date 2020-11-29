@@ -3,7 +3,11 @@
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
+#include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvSelectionGroup.h"
+#include "CvUnit.h"
 
 CvContractBroker::CvContractBroker() : m_eOwner(NO_PLAYER)
 {

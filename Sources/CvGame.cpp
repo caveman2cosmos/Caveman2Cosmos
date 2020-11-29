@@ -7,11 +7,16 @@
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvInfos.h"
+#include "CvMap.h"
 #include "CvMapGenerator.h"
-#include "CvReplayMessage.h"
-#include "CvReplayInfo.h"
+#include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
+#include "CvReplayInfo.h"
+#include "CvReplayMessage.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
 #include "CvDLLEntityIFaceBase.h"
 
 //	Koshling - save game compatibility between (most) builds

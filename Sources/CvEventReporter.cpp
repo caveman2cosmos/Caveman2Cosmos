@@ -2,6 +2,7 @@
 #include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
 #include "CvUnit.h"

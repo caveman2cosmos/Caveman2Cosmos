@@ -9,6 +9,7 @@
 #include "CvGlobals.h"
 #include "CvInfos.h"
 #include "CvMap.h"
+#include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"

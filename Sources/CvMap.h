@@ -12,7 +12,6 @@
 //-----------------------------------------------------------------------------
 //
 
-#include "CvPathGenerator.h"
 #include "CvMapInterfaceBase.h"
 
 class CvArea;

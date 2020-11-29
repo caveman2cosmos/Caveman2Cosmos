@@ -6,10 +6,10 @@
 #include "CvMapExternal.h"
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CheckSum.h"
-
 #include "CvDLLFAStarIFaceBase.h"
 
 #define PATH_MOVEMENT_WEIGHT									(1000)
