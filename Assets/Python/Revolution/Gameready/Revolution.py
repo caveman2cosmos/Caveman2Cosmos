@@ -345,6 +345,7 @@ class Revolution:
 					# End additions by Caesium et al
 				elif( popupReturn.getButtonClicked() == 1 ):
 					self.showPickCityPopup( iPlayerID )
+
 	def showPickCityPopup(self, iPlayer):
 		if self.isLocalHumanPlayer(iPlayer):
 			lCity = []

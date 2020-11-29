@@ -418,24 +418,6 @@ bool CyCity::isHeadquartersByType(int /*CorporationTypes*/ iIndex) const
 	return m_pCity->isHeadquarters((CorporationTypes) iIndex);
 }
 
-python::list CyCity::getHeadquarters() const
-{
-	python::list list = python::list();
-	for (int i = 0, numInfos = GC.getNumCorporationInfos(); i < numInfos; i++)
-		if (isHeadquartersByType(i))
-			list.append(i);
-	return list;
-}
-
-python::list CyCity::getCorporations() const
-{
-	python::list list = python::list();
-	for (int i = 0, numInfos = GC.getNumCorporationInfos(); i < numInfos; i++)
-		if (isHasCorporation(i))
-			list.append(i);
-	return list;
-}
-
 int CyCity::getNoMilitaryPercentAnger() const
 {
 	return m_pCity->getNoMilitaryPercentAnger();

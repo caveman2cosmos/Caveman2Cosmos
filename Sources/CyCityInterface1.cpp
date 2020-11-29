@@ -10,7 +10,6 @@
 void CyCityPythonInterface1(python::class_<CyCity>& x)
 {
 	OutputDebugString("Python Extension Module - CyCityPythonInterface1\n");
-
 	x
 		.def("kill", &CyCity::kill, "void () - kill the city")
 
@@ -58,7 +57,6 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("getProductionModifier", &CyCity::getProductionModifier, "int () - multiplier (if any) for item being produced")
 		.def("getCurrentProductionDifference", &CyCity::getCurrentProductionDifference, "int (bool bIgnoreFood, bool bOverflow)")
 
-
 		.def("canHurry", &CyCity::canHurry, "bool (HurryTypes eHurry, bool bTestVisible = 0) - can player eHurry in this city?")
 		.def("getConscriptUnit", &CyCity::getConscriptUnit, "UnitID () - UnitID for the best unit the city can conscript")
 		.def("flatConscriptAngerLength", &CyCity::flatConscriptAngerLength, "int ()")
@@ -85,8 +83,6 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("isHolyCityByType", &CyCity::isHolyCityByType, "bool (ReligionID) - is the city ReligionID's holy city?")
 		.def("isHolyCity", &CyCity::isHolyCity, "bool () - is the city ReligionID's holy city?")
 		.def("isHeadquartersByType", &CyCity::isHeadquartersByType, "bool (CorporationID) - is the city CorporationID's headquarters?")
-		.def("getHeadquarters", &CyCity::getHeadquarters)
-		.def("getCorporations", &CyCity::getCorporations)
 		.def("getNoMilitaryPercentAnger", &CyCity::getNoMilitaryPercentAnger, "int ()")
 		.def("getWarWearinessPercentAnger", &CyCity::getWarWearinessPercentAnger, "int ()")
 		.def("unhappyLevel", &CyCity::unhappyLevel, "int (int iExtra)")
