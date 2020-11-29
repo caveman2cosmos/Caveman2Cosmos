@@ -7,7 +7,9 @@
 #include "CvMessageData.h"
 #include "CvPlayerAI.h"
 #include "CvPython.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
 
 CvMessageData* CvMessageData::createMessage(GameMessageTypes eType)
 {

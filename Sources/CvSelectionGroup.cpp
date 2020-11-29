@@ -15,6 +15,7 @@
 #include "CvPlayerAI.h"
 #include "CvPopupInfo.h"
 #include "CvSelectionGroup.h"
+#include "CvSelectionGroupAI.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CvDLLFAStarIFaceBase.h"

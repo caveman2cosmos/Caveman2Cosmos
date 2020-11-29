@@ -7,8 +7,10 @@
 
 #include "CvUnit.h"
 
-class CvReachablePlotSet;
 class CvCity;
+class CvPlot;
+class CvReachablePlotSet;
+class CvSelectionGroup;
 class ConstructionNeeds;
 
 typedef enum
@@ -22,9 +24,7 @@ typedef enum
 
 class CvUnitAI : public CvUnit
 {
-
 public:
-
 	CvUnitAI(bool bIsDummy = false);
 	virtual ~CvUnitAI();
 

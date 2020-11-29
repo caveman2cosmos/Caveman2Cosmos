@@ -19,6 +19,7 @@
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
 #include "CvPopupInfo.h"
+#include "CvSelectionGroupAI.h"
 #include "CvTalkingHeadMessage.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"

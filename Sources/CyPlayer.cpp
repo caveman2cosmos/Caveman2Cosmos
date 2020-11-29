@@ -4,6 +4,8 @@
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
 #include "CvPopupInfo.h"
+#include "CvSelectionGroup.h"
+#include "CvUnit.h"
 #include "CyArea.h"
 #include "CyCity.h"
 #include "CyPlayer.h"

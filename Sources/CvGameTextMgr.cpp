@@ -23,7 +23,9 @@
 #include "CvGameTextMgr.h"
 #include "CvPlayerAI.h"
 #include "CvPopupInfo.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
 #include "CvXMLLoadUtility.h"
 
 int shortenID(int iId)

@@ -15,6 +15,7 @@
 #include "CvPlot.h"
 #include "CvReachablePlotSet.h"
 #include "CvSelectionGroup.h"
+#include "CvSelectionGroupAI.h"
 #include "CvTeamAI.h"
 #include "CvUnitAI.h"
 #include "CvDLLFAStarIFaceBase.h"

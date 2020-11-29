@@ -9,6 +9,7 @@
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
 #include "CvPopupInfo.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 
 CvDLLWidgetData* CvDLLWidgetData::m_pInst = NULL;

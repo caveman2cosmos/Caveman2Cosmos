@@ -7,7 +7,6 @@
 
 #include "CvCityAI.h"
 #include "CvUnitAI.h"
-#include "CvSelectionGroupAI.h"
 #include "CvPlotGroup.h"
 #include "LinkedList.h"
 #include "CvContractBroker.h"
@@ -25,6 +24,7 @@ class CvEventTriggerInfo;
 class CvPlot;
 class CvPlotGroup;
 class CvPopupInfo;
+class CvSelectionGroupAI;
 class CvTalkingHeadMessage;
 class CvUnitSelectionCriteria;
 class CvUpgradeCache;
