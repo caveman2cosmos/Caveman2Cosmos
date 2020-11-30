@@ -36,7 +36,7 @@ build_script:
 - cmd: >-
     call Powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%APPVEYOR_BUILD_FOLDER%\Tools\CI\fix_sources_timestamps.ps1"
 
-    call "%APPVEYOR_BUILD_FOLDER%\Tools\_AppveyorBuild.bat"
+    call "%APPVEYOR_BUILD_FOLDER%\Tools\_AppveyorTestBuild.bat"
 
 test_script:
 - cmd: >-
