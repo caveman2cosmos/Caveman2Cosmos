@@ -228,6 +228,7 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("getTeam", &CyCity::getTeam, "int /*TeamTypes*/ ()")
 		.def("getPreviousOwner", &CyCity::getPreviousOwner, "int /*PlayerTypes*/ ()")
 		.def("getOriginalOwner", &CyCity::getOriginalOwner, "int /*PlayerTypes*/ ()")
+		.def("setOriginalOwner", &CyCity::setOriginalOwner, "void (int /*PlayerTypes*/)")
 		.def("getCultureLevel", &CyCity::getCultureLevel, "int /*CultureLevelTypes*/ ()")
 		.def("getCultureThreshold", &CyCity::getCultureThreshold)
 

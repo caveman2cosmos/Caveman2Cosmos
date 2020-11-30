@@ -225,6 +225,8 @@ class BarbarianCiv:
 		GAME.addReplayMessage(ReplayMessageTypes.REPLAY_MESSAGE_MAJOR_EVENT, iPlayer, mess, iX, iY, GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"))
 
 		# Using following method to acquire city produces 'revolted and joined' replay messages
+		if CyCity.getOriginalOwner() == iPlayerBarb:
+			CyCity.setOriginalOwner(iPlayer)
 		CyPlot.setOwner(iPlayer)
 
 		# Note: city acquisition may invalidate previous city pointer, so have to create new list of cities
@@ -634,7 +636,7 @@ class BarbarianCiv:
 			iMaxDistance = (5 + 3*bNewWorld) * GC.getWorldInfo(MAP.getWorldSize()).getDefaultPlayers()
 			CyPlayerBarb = GC.getPlayer(iPlayerBarb)
 			aList = ()
-			for cityX in player.cities():
+			for cityX in CyPlayerBarb.cities():
 				plotX = cityX.plot()
 				if plotX.getArea() == iAreaID or plotX.isAdjacentRevealed(iTeam):
 					x = cityX.getX()
@@ -643,6 +645,8 @@ class BarbarianCiv:
 
 					if iDist <= iMaxDistance and GAME.getSorenRandNum(2, "fifty fifty"):
 						iCities += 1
+						if cityX.getOriginalOwner() == iPlayerBarb:
+							cityX.setOriginalOwner(iPlayer)
 						aList += ((plotX, x, y),) # No point in including the cityX pointer...
 
 			for plotX, x, y in aList:

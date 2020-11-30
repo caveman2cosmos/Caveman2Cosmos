@@ -6,11 +6,6 @@ set "tools_dir=%cd%"
 call InstallDeps.bat
 POPD
 
-if "%APPVEYOR_REPO_BRANCH%" equ "%release_branch%" (
-    echo Skipping test build due to being on release branch
-    exit /b 0
-)
-
 REM Switch to the source directory
 PUSHD "%tools_dir%\..\Sources"
 
