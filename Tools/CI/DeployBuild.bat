@@ -67,8 +67,14 @@ if %ERRORLEVEL% neq 0 (
 		echo Retry checkout...
 		call %SVN% checkout %svn_url% "%build_dir%"
 		if %ERRORLEVEL% neq 0 (
-			echo Last SVN checkout failed, aborting...
-			exit /B 3
+			echo Third SVN checkout failed... Cleanup
+			call %SVN% --non-interactive cleanup "%build_dir%"
+			echo Retry checkout...
+			call %SVN% checkout %svn_url% "%build_dir%"
+			if %ERRORLEVEL% neq 0 (
+				echo Last SVN checkout failed, aborting...
+				exit /B 3
+			)
 		)
 	)
 )
