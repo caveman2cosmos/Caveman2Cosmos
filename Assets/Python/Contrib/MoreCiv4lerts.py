@@ -4,10 +4,10 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import BugCore
 import TradeUtil
 
 GC = CyGlobalContext()
+GAME = GC.getGame()
 TRNSLTR = CyTranslator()
 
 EVENT_MESSAGE_TIME_LONG = GC.getDefineINT("EVENT_MESSAGE_TIME_LONG")
@@ -45,6 +45,7 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 		eventManager.addEventHandler("OnLoad", self.reset)
 
 		self.eventMgr = eventManager
+		import BugCore
 		self.options = BugCore.game.MoreCiv4lerts
 		self.reset()
 
@@ -68,20 +69,20 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 	def onBeginActivePlayerTurn(self, argsList):
 		"Called when the active player can start making their moves."
 		iGameTurn = argsList[0]
-		iPlayer = GC.getGame().getActivePlayer()
+		iPlayer = GAME.getActivePlayer()
 		self.CheckForAlerts(iPlayer, True)
 
 	def OnCityAcquired(self, argsList):
 		owner, playerType, city, bConquest, bTrade = argsList
 		iPlayer = city.getOwner()
 		if not self.getCheckForDomVictory(): return
-		if iPlayer == GC.getGame().getActivePlayer():
+		if iPlayer == GAME.getActivePlayer():
 			self.CheckForAlerts(iPlayer, False)
 
 	def OnCityBuilt(self, argsList):
 		CyCity = argsList[0]
 		iOwner = CyCity.getOwner()
-		iPlayer = GC.getGame().getActivePlayer()
+		iPlayer = GAME.getActivePlayer()
 		if self.getCheckForDomVictory():
 			if iOwner == iPlayer:
 				self.CheckForAlerts(iOwner, False)
@@ -102,17 +103,16 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 	def OnCityRazed(self, argsList):
 		city, iPlayer = argsList
 		if not self.getCheckForDomVictory(): return
-		if iPlayer == GC.getGame().getActivePlayer():
+		if iPlayer == GAME.getActivePlayer():
 			self.CheckForAlerts(iPlayer, False)
 
 	def OnCityLost(self, argsList):
 		city = argsList[0]
-		if not self.getCheckForDomVictory() or city.getOwner() != GC.getGame().getActivePlayer():
+		if not self.getCheckForDomVictory() or city.getOwner() != GAME.getActivePlayer():
 			return
 		self.CheckForAlerts(city.getOwner(), False)
 
 	def CheckForAlerts(self, iPlayer, bBeginTurn):
-		GAME = GC.getGame()
 		CyPlayer = GC.getPlayer(iPlayer)
 		CyTeam = GC.getTeam(CyPlayer.getTeam())
 		iGrowthCount = 0
@@ -349,15 +349,15 @@ def canSeeCityList(askedPlayer):
 	is not a vassal of a rival. They must be able to contact (trade with)
 	<player>, and OCC must be disabled. You can always see a teammate's cities.
 	"""
-	if gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
 		return False
 	iAskedTeam = askedPlayer.getTeam()
-	iAskingTeam = gc.getGame().getActiveTeam()
+	iAskingTeam = GAME.getActiveTeam()
 	if iAskingTeam == iAskedTeam:
 		return True
 
-	askedTeam = gc.getTeam(iAskedTeam)
+	askedTeam = GC.getTeam(iAskedTeam)
 	if askedTeam.isAVassal() and not askedTeam.isVassal(iAskingTeam):
 		return False
 
-	return TradeUtil.canTrade(gc.getActivePlayer(), askedPlayer)
+	return TradeUtil.canTrade(GC.getActivePlayer(), askedPlayer)
