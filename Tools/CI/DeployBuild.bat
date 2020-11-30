@@ -64,7 +64,7 @@ if %ERRORLEVEL% NEQ 0 (
 	if %ERRORLEVEL% NEQ 0 (
 		echo Second SVN checkout failed... Cleanup
 		call %SVN% --non-interactive cleanup "%build_dir%"
-		echo Try updating instead (max 20 attempts)...
+		echo Try updating instead, max 20 attempts...
 		set /a count = 0
 		set /a max = 19
 		:loop
