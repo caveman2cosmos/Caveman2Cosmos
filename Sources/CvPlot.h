@@ -637,7 +637,6 @@ public:
 	void setImprovementUpgradeProgress(int iNewValue);
 	void changeImprovementUpgradeProgress(int iChange);
 
-	int getForceUnownedTimer() const;
 	bool isForceUnowned() const;
 	void setForceUnownedTimer(int iNewValue);
 	void changeForceUnownedTimer(int iChange);
