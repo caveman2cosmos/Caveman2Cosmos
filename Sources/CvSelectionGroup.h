@@ -11,6 +11,9 @@
 class CvArea;
 class CvCity;
 class CvPlot;
+class CvPath;
+//class CvPathGenerator;
+class CvUnit;
 class CvUnitSelectionCriteria;
 #ifdef USE_OLD_PATH_GENERATOR
 class FAStarNode;

@@ -2,7 +2,11 @@
 #include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvMessageControl.h"
 #include "CvPlayerAI.h"
+#include "CvPopupInfo.h"
+#include "CvSelectionGroup.h"
+#include "CvUnit.h"
 #include "CyArea.h"
 #include "CyCity.h"
 #include "CyPlayer.h"
@@ -2250,7 +2254,17 @@ int CyPlayer::getNumCities()
 
 CyCity* CyPlayer::getCity(int iID)
 {
-	return m_pPlayer ? new CyCity(m_pPlayer->getCity(iID)) : NULL;
+	return m_pPlayer && iID > -1 ? new CyCity(m_pPlayer->getCity(iID)) : NULL;
+}
+
+python::list CyPlayer::units() const
+{
+	python::list list = python::list();
+	foreach_(CvUnit* unit, m_pPlayer->units())
+	{
+		list.append(new CyUnit(unit));
+	}
+	return list;
 }
 
 // returns tuple of (CyUnit, iterOut)
@@ -2283,6 +2297,16 @@ int CyPlayer::getNumUnits()
 CyUnit* CyPlayer::getUnit(int iID)
 {
 	return m_pPlayer ? new CyUnit(m_pPlayer->getUnit(iID)) : NULL;
+}
+
+python::list CyPlayer::groups() const
+{
+	python::list list = python::list();
+	foreach_(CvSelectionGroup* group, m_pPlayer->groups())
+	{
+		list.append(new CySelectionGroup(group));
+	}
+	return list;
 }
 
 // returns tuple of (CySelectionGroup, iterOut)

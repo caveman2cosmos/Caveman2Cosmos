@@ -170,9 +170,9 @@ public:
 	void uninit();
 	void clearTypesMap();
 
+	CvDLLUtilityIFaceBase* getDLLIFace() const			{ return gDLL; }
 	CvDiplomacyScreen* getDiplomacyScreen() const 		{ return m_diplomacyScreen; }
 	CMPDiplomacyScreen* getMPDiplomacyScreen() const 	{ return m_mpDiplomacyScreen; }
-
 	FMPIManager*& getFMPMgrPtr()	 					{ return m_pFMPMgr; }
 	CvPortal& getPortal() const 						{ return *m_portal; }
 	CvSetupData& getSetupData() const 					{ return *m_setupData; }
@@ -701,10 +701,6 @@ public:
 	int getTypesEnum(const char* szType) const;				// use this when searching for a type
 	void setTypesEnum(const char* szType, int iEnum);
 
-	int& getNumEntityEventTypes();
-	CvString*& getEntityEventTypes();
-	CvString& getEntityEventTypes(EntityEventTypes e);
-
 	int& getNumAnimationOperatorTypes();
 	CvString*& getAnimationOperatorTypes();
 	CvString& getAnimationOperatorTypes(AnimationOperatorTypes e);
@@ -841,46 +837,6 @@ public:
 
 	bool IsGraphicsInitialized() const;
 	void SetGraphicsInitialized(bool bVal);
-
-	// for caching
-	bool readBuildingInfoArray(FDataStreamBase* pStream);
-	void writeBuildingInfoArray(FDataStreamBase* pStream);
-
-	bool readTechInfoArray(FDataStreamBase* pStream);
-	void writeTechInfoArray(FDataStreamBase* pStream);
-
-	bool readUnitInfoArray(FDataStreamBase* pStream);
-	void writeUnitInfoArray(FDataStreamBase* pStream);
-
-	bool readLeaderHeadInfoArray(FDataStreamBase* pStream);
-	void writeLeaderHeadInfoArray(FDataStreamBase* pStream);
-
-	bool readCivilizationInfoArray(FDataStreamBase* pStream);
-	void writeCivilizationInfoArray(FDataStreamBase* pStream);
-
-	bool readPromotionInfoArray(FDataStreamBase* pStream);
-	void writePromotionInfoArray(FDataStreamBase* pStream);
-
-	bool readDiplomacyInfoArray(FDataStreamBase* pStream);
-	void writeDiplomacyInfoArray(FDataStreamBase* pStream);
-
-	bool readCivicInfoArray(FDataStreamBase* pStream);
-	void writeCivicInfoArray(FDataStreamBase* pStream);
-
-	bool readHandicapInfoArray(FDataStreamBase* pStream);
-	void writeHandicapInfoArray(FDataStreamBase* pStream);
-
-	bool readBonusInfoArray(FDataStreamBase* pStream);
-	void writeBonusInfoArray(FDataStreamBase* pStream);
-
-	bool readImprovementInfoArray(FDataStreamBase* pStream);
-	void writeImprovementInfoArray(FDataStreamBase* pStream);
-
-	bool readEventInfoArray(FDataStreamBase* pStream);
-	void writeEventInfoArray(FDataStreamBase* pStream);
-
-	bool readEventTriggerInfoArray(FDataStreamBase* pStream);
-	void writeEventTriggerInfoArray(FDataStreamBase* pStream);
 
 	//
 	// additional accessors for initting globals
@@ -1194,9 +1150,6 @@ protected:
 	TypesMap m_typesMap;
 
 	// XXX These are duplicates and are kept for enumeration convenience - most could be removed, Moose
-	CvString *m_paszEntityEventTypes;
-	int m_iNumEntityEventTypes;
-
 	CvString *m_paszAnimationOperatorTypes;
 	int m_iNumAnimationOperatorTypes;
 
@@ -1313,9 +1266,6 @@ public:
 //	by the core engine to establish memory allocators)
 class CvGlobals
 {
-	friend class CvXMLLoadUtility;
-	friend class ProxyTracker;
-
 public:
 	DllExport inline static CvGlobals& getInstance();
 
@@ -1944,7 +1894,6 @@ public:
 		PROXY_TRACK("getVictoryInfo");
 		return gGlobals->getVictoryInfo(eVictoryNum);
 	}
-
 	//
 	// Global Types
 	// All type strings are upper case and are kept in this hash map for fast lookup
@@ -2185,136 +2134,6 @@ public:
 		PROXY_TRACK("SetGraphicsInitialized");
 		gGlobals->SetGraphicsInitialized(bVal);
 	}
-	DllExport bool readBuildingInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readBuildingInfoArray");
-		return gGlobals->readBuildingInfoArray(pStream);
-	}
-	DllExport void writeBuildingInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeBuildingInfoArray");
-		gGlobals->writeBuildingInfoArray(pStream);
-	}
-	DllExport bool readTechInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readTechInfoArray");
-		return gGlobals->readTechInfoArray(pStream);
-	}
-	DllExport void writeTechInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeTechInfoArray");
-		gGlobals->writeTechInfoArray(pStream);
-	}
-	DllExport bool readUnitInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readUnitInfoArray");
-		return gGlobals->readUnitInfoArray(pStream);
-	}
-	DllExport void writeUnitInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeUnitInfoArray");
-		gGlobals->writeUnitInfoArray(pStream);
-	}
-	DllExport bool readLeaderHeadInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readLeaderHeadInfoArray");
-		return gGlobals->readLeaderHeadInfoArray(pStream);
-	}
-	DllExport void writeLeaderHeadInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeLeaderHeadInfoArray");
-		gGlobals->writeLeaderHeadInfoArray(pStream);
-	}
-	DllExport bool readCivilizationInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readCivilizationInfoArray");
-		return gGlobals->readCivilizationInfoArray(pStream);
-	}
-	DllExport void writeCivilizationInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeCivilizationInfoArray");
-		gGlobals->writeCivilizationInfoArray(pStream);
-	}
-	DllExport bool readPromotionInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readPromotionInfoArray");
-		return gGlobals->readPromotionInfoArray(pStream);
-	}
-	DllExport void writePromotionInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writePromotionInfoArray");
-		gGlobals->writePromotionInfoArray(pStream);
-	}
-	DllExport bool readDiplomacyInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readDiplomacyInfoArray");
-		return gGlobals->readDiplomacyInfoArray(pStream);
-	}
-	DllExport void writeDiplomacyInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeDiplomacyInfoArray");
-		gGlobals->writeDiplomacyInfoArray(pStream);
-	}
-	DllExport bool readCivicInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readCivicInfoArray");
-		return gGlobals->readCivicInfoArray(pStream);
-	}
-	DllExport void writeCivicInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeCivicInfoArray");
-		gGlobals->writeCivicInfoArray(pStream);
-	}
-	DllExport bool readHandicapInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readHandicapInfoArray");
-		return gGlobals->readHandicapInfoArray(pStream);
-	}
-	DllExport void writeHandicapInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeHandicapInfoArray");
-		gGlobals->writeHandicapInfoArray(pStream);
-	}
-	DllExport bool readBonusInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readBonusInfoArray");
-		return gGlobals->readBonusInfoArray(pStream);
-	}
-	DllExport void writeBonusInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeBonusInfoArray");
-		gGlobals->writeBonusInfoArray(pStream);
-	}
-	DllExport bool readImprovementInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readImprovementInfoArray");
-		return gGlobals->readImprovementInfoArray(pStream);
-	}
-	DllExport void writeImprovementInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeImprovementInfoArray");
-		gGlobals->writeImprovementInfoArray(pStream);
-	}
-	DllExport bool readEventInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readEventInfoArray");
-		return gGlobals->readEventInfoArray(pStream);
-	}
-	DllExport void writeEventInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeEventInfoArray");
-		gGlobals->writeEventInfoArray(pStream);
-	}
-	DllExport bool readEventTriggerInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readEventTriggerInfoArray");
-		return gGlobals->readEventTriggerInfoArray(pStream);
-	}
-	DllExport void writeEventTriggerInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeEventTriggerInfoArray");
-		gGlobals->writeEventTriggerInfoArray(pStream);
-	}
 	//
 	// additional accessors for initting globals
 	//
@@ -2464,6 +2283,34 @@ public:
 		PROXY_TRACK("getNumGraphicLevels");
 		return NUM_GRAPHICLEVELS;
 	}
+	// code to cache infos was deleted. https://github.com/caveman2cosmos/Caveman2Cosmos/issues/751
+	DllExport bool readBuildingInfoArray(FDataStreamBase* pStream)		{ return false; }
+	DllExport bool readTechInfoArray(FDataStreamBase* pStream)			{ return false; }
+	DllExport bool readUnitInfoArray(FDataStreamBase* pStream)			{ return false; }
+	DllExport bool readLeaderHeadInfoArray(FDataStreamBase* pStream)	{ return false; }
+	DllExport bool readCivilizationInfoArray(FDataStreamBase* pStream)	{ return false; }
+	DllExport bool readPromotionInfoArray(FDataStreamBase* pStream)		{ return false; }
+	DllExport bool readDiplomacyInfoArray(FDataStreamBase* pStream)		{ return false; }
+	DllExport bool readCivicInfoArray(FDataStreamBase* pStream)			{ return false; }
+	DllExport bool readHandicapInfoArray(FDataStreamBase* pStream)		{ return false; }
+	DllExport bool readBonusInfoArray(FDataStreamBase* pStream)			{ return false; }
+	DllExport bool readImprovementInfoArray(FDataStreamBase* pStream)	{ return false; }
+	DllExport bool readEventInfoArray(FDataStreamBase* pStream)			{ return false; }
+	DllExport bool readEventTriggerInfoArray(FDataStreamBase* pStream)	{ return false; }
+
+	DllExport void writeBuildingInfoArray(FDataStreamBase* pStream)		{}
+	DllExport void writeTechInfoArray(FDataStreamBase* pStream)			{}
+	DllExport void writeUnitInfoArray(FDataStreamBase* pStream)			{}
+	DllExport void writeLeaderHeadInfoArray(FDataStreamBase* pStream)	{}
+	DllExport void writeCivilizationInfoArray(FDataStreamBase* pStream)	{}
+	DllExport void writePromotionInfoArray(FDataStreamBase* pStream)	{}
+	DllExport void writeDiplomacyInfoArray(FDataStreamBase* pStream)	{}
+	DllExport void writeCivicInfoArray(FDataStreamBase* pStream)		{}
+	DllExport void writeHandicapInfoArray(FDataStreamBase* pStream)		{}
+	DllExport void writeBonusInfoArray(FDataStreamBase* pStream)		{}
+	DllExport void writeImprovementInfoArray(FDataStreamBase* pStream)	{}
+	DllExport void writeEventInfoArray(FDataStreamBase* pStream)		{}
+	DllExport void writeEventTriggerInfoArray(FDataStreamBase* pStream)	{}
 };
 
 extern CvGlobals gGlobalsProxy;	// for debugging

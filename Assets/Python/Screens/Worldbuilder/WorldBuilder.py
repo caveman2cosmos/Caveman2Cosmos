@@ -359,8 +359,7 @@ class WorldBuilder:
 		elif self.iPlayerAddMode == "Ownership":
 			self.m_pCurrentPlot.setOwner(-1)
 		elif self.iPlayerAddMode == "Units":
-			for i in xrange (self.m_pCurrentPlot.getNumUnits()):
-				pUnit = self.m_pCurrentPlot.getUnit(i)
+			for pUnit in self.m_pCurrentPlot.units():
 				if pUnit.getUnitType() == self.iSelection:
 					pUnit.kill(False, PlayerTypes.NO_PLAYER)
 					return 1

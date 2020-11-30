@@ -139,8 +139,7 @@ class WoodlandCycle:
 					CyEngine().triggerEffect(GC.getInfoTypeForString('EFFECT_FOREST_FIRE'), point)
 					CyAudioGame().Play3DSound("AS3D_FOREST_FIRE", point.x, point.y, point.z)
 
-				for i in range(plot.getNumUnits()):
-					CyUnit = plot.getUnit(i)
+				for CyUnit in plot.units():
 					if CyUnit.canFight():
 						iHP = CyUnit.currHitPoints()
 						iDamage = 5 + GAME.getSorenRandNum(29, "Ouch")

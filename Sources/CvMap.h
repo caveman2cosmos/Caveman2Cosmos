@@ -12,12 +12,13 @@
 //-----------------------------------------------------------------------------
 //
 
-#include "CvPathGenerator.h"
 #include "CvMapInterfaceBase.h"
+#include "CvPlot.h"
 
 class CvArea;
 class CvCity;
 class CvPlotGroup;
+class CvSelectionGroup;
 class CvViewport;
 
 inline int coordRange(int iCoord, int iRange, bool bWrap)
@@ -41,7 +42,6 @@ inline int coordRange(int iCoord, int iRange, bool bWrap)
 //
 // CvMap
 //
-class CvSelectionGroup;
 class CvMap : public CvMapInterfaceBase
 {
 	friend class CyMap;

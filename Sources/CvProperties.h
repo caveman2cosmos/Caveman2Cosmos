@@ -11,14 +11,16 @@
 #ifndef CV_PROPERTIES_H
 #define CV_PROPERTIES_H
 
-class CvXMLLoadUtility;
-class CvGame;
-class CvTeam;
-class CvPlayer;
+#include "CheckSum.h"
+
 class CvCity;
-class CvUnit;
-class CvPlot;
+class CvGame;
 class CvGameObject;
+class CvPlayer;
+class CvPlot;
+class CvTeam;
+class CvUnit;
+class CvXMLLoadUtility;
 
 struct PropertyBuilding
 {

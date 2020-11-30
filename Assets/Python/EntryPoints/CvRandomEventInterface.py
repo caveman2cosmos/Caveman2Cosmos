@@ -249,13 +249,11 @@ def canTriggerMarathon(argsList):
   team = GC.getTeam(player.getTeam())
 
   if (team.AI_getAtWarCounter(otherPlayer.getTeam()) == 1):
-    (loopUnit, iter) = otherPlayer.firstUnit(False)
-    while( loopUnit):
+    for loopUnit in otherPlayer.units():
       plot = loopUnit.plot()
       if (not plot.isNone()):
         if (plot.getOwner() == kTriggeredData.ePlayer):
           return True
-      (loopUnit, iter) = otherPlayer.nextUnit(iter, False)
 
   return False
 
@@ -3447,11 +3445,9 @@ def canTriggerOverwhelmDone(argsList):
   iFighter = GC.getInfoTypeForString("SPECIALUNIT_FIGHTER")
   iNumFighters = 9
   iNumPlayerFighters = 0
-  (loopUnit, iter) = player.firstUnit(False)
-  while (loopUnit):
+  for loopUnit in player.units():
     if loopUnit.getSpecialUnitType() == iFighter:
       iNumPlayerFighters += 1
-    (loopUnit, iter) = player.nextUnit(iter, False)
 
   if iNumPlayerFighters < iNumFighters:
     return False
@@ -3778,21 +3774,18 @@ def canTriggerNuclearProtest(argsList):
 	return 10 <= player.getUnitCount(GC.getInfoTypeForString("UNIT_ICBM")) + player.getUnitCount(GC.getInfoTypeForString("UNIT_TACTICAL_NUKE"))
 
 def doNuclearProtest1(argsList):
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	kTriggeredData = argsList[1]
 
-  iICBM = GC.getInfoTypeForString("UNIT_ICBM")
-  iTacNuke = GC.getInfoTypeForString("UNIT_TACTICAL_NUKE")
+	iICBM = GC.getInfoTypeForString("UNIT_ICBM")
+	iTacNuke = GC.getInfoTypeForString("UNIT_TACTICAL_NUKE")
 
-  (loopUnit, iter) = player.firstUnit(False)
-  while (loopUnit):
-    if loopUnit.getUnitType() == iICBM or loopUnit.getUnitType() == iTacNuke:
-      loopUnit.kill(False, -1)
-    (loopUnit, iter) = player.nextUnit(iter, False)
+	for loopUnit in GC.getPlayer(kTriggeredData.ePlayer).units():
+		if loopUnit.getUnitType() == iICBM or loopUnit.getUnitType() == iTacNuke:
+			loopUnit.kill(False, -1)
 
 def getHelpNuclearProtest1(argsList):
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_NUCLEAR_PROTEST_1_HELP", ())
-  return szHelp
+	szHelp = TRNSLTR.getText("TXT_KEY_EVENT_NUCLEAR_PROTEST_1_HELP", ())
+	return szHelp
 
 
 ######## Preaching Researcher #######
@@ -4777,11 +4770,9 @@ def canTriggerPiratesoftheNeutralZones(argsList):
 	iPlayer = argsList[0].ePlayer
 	CyPlayer = GC.getPlayer(iPlayer)
 	iNavy = 0
-	CyUnit, i = CyPlayer.firstUnit(False)
-	while CyUnit:
+	for CyUnit in CyPlayer.units():
 		if CyUnit.getDomainType() == DomainTypes.DOMAIN_SEA:
 			iNavy += CyUnit.baseCombatStr()
-		CyUnit, i = CyPlayer.nextUnit(i, False)
 
 	iPirate = GC.getUnitInfo(GC.getInfoTypeForString("UNIT_STEALTH_DESTROYER")).getCombat()
 
@@ -4960,14 +4951,12 @@ def applyMalaccanPirates1(argsList):
   for i in xrange(iNumUnit1):
     barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
 
-  (loopUnit, iter) = barbPlayer.firstUnit(False)
-  while (loopUnit):
+  for loopUnit in barbPlayer.units():
     if loopUnit.getUnitType() == iUnitType1:
       loopUnit.setHasPromotion(iNav1, True)
       loopUnit.setHasPromotion(iCbt4, True)
       loopUnit.setHasPromotion(iCoAs1, True)
       loopUnit.setName("Malaccan Gunboat")
-    (loopUnit, iter) = barbPlayer.nextUnit(iter, False)
 
 
 ######## HENRY_MORGAN ###########
@@ -5118,11 +5107,9 @@ def applyHenryMorgan1(argsList):
   for i in xrange(iNumUnit3):
     barbPlayer.initUnit(iUnitType3, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
 
-  (loopUnit, iter) = barbPlayer.firstUnit(False)
-  while (loopUnit):
+  for loopUnit in barbPlayer.units():
     if loopUnit.getUnitType() == iUnitType1:
       loopUnit.setHasPromotion(iCbt4, True)
-    (loopUnit, iter) = barbPlayer.nextUnit(iter, False)
 
 ######## STEDE_BONNET ###########
 
@@ -5281,14 +5268,12 @@ def applyStedeBonnet1(argsList):
   for i in xrange(iNumUnit2):
     barbPlayer.initUnit(iUnitType2, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
 
-  (loopUnit, iter) = barbPlayer.firstUnit(False)
-  while (loopUnit):
+  for loopUnit in barbPlayer.units():
     if loopUnit.getUnitType() == iUnitType1:
       loopUnit.setName("Barque")
     if loopUnit.getUnitType() == iUnitType2:
       loopUnit.setName("Fast Galleon")
       loopUnit.setHasPromotion(iNav1, True)
-    (loopUnit, iter) = barbPlayer.nextUnit(iter, False)
 
 ######## THE_CORSAIRS ###########
 
@@ -5425,12 +5410,10 @@ def applyTheCorsairs1(argsList):
   for i in xrange(iNumUnit1):
     barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_ATTACK_SEA, DirectionTypes.DIRECTION_SOUTH)
 
-  (loopUnit, iter) = barbPlayer.firstUnit(False)
-  while (loopUnit):
+  for loopUnit in barbPlayer.units():
     if loopUnit.getUnitType() == iUnitType1:
       sUnitName = TRNSLTR.getText("TXT_KEY_EVENT_THE_CORSAIRS_UNIT_NAME", ())
       loopUnit.setName(sUnitName)
-    (loopUnit, iter) = barbPlayer.nextUnit(iter, False)
 
 
 ######## ILLYRIAN_PIRATES ###########
@@ -5581,12 +5564,10 @@ def applyIllyrianPirates1(argsList):
   for i in xrange(iNumUnit1):
     barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
 
-  (loopUnit, iter) = barbPlayer.firstUnit(False)
-  while (loopUnit):
+  for loopUnit in barbPlayer.units():
     if loopUnit.getUnitType() == iUnitType1:
       sUnitName = TRNSLTR.getText("TXT_KEY_EVENT_ILLYRIAN_PIRATES_UNIT_NAME", ())
       loopUnit.setName(sUnitName)
-    (loopUnit, iter) = barbPlayer.nextUnit(iter, False)
 
 
 ######## MAHDI_ARMY ###########
@@ -7905,9 +7886,8 @@ def doTornado(argsList):
 	if CyPlot.getFeatureType() == -1:
 		CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_TORNADO'), 0)
 
-	iUnits = CyPlot.getNumUnits()
-	for iUnit in xrange(iUnits):
-		CyPlot.getUnit(iUnit).setImmobileTimer(1)
+	for pUnit in CyPlot.units():
+		pUnit.setImmobileTimer(1)
 
 ######## Native Good 1 -- lost resources ###########
 def canApplyNativegood1(argsList):
@@ -9104,10 +9084,7 @@ def applyCivilWar(argsList):
 	pNewPlayer.acquireCity(pCity, False, False)
 
 	# Hand over units
-	pPlot = CyMap().plot(iX, iY)
-	iMaxNumUnits = pPlot.getNumUnits()
-	for iUnits in xrange(iMaxNumUnits, -1, -1):
-		pUnit = pPlot.getUnit(iUnits)
+	for pUnit in CyMap().plot(iX, iY).units():
 		if pUnit.getOwner() == pPlayer.getID():
 			pUnit.doCommand(CommandTypes.COMMAND_GIFT, -1, -1)
 

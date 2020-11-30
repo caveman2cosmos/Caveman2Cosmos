@@ -3,8 +3,6 @@
 #ifndef CV_BUILDING_INFO_H
 #define CV_BUILDING_INFO_H
 
-#include "CvInfos.h"
-
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
 //  class : CvBuildingInfo
@@ -12,6 +10,7 @@
 //  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 class BoolExpr;
 class CvArtInfoBuilding;
 class CvArtInfoMovie;
@@ -261,10 +260,6 @@ public:
 	const CvArtInfoMovie* getMovieInfo() const;
 	const TCHAR* getButton() const;
 	const TCHAR* getMovie() const;
-
-	// serialization
-	void read(FDataStreamBase*) {}
-	void write(FDataStreamBase*) {}
 
 	bool read(CvXMLLoadUtility* pXML);
 

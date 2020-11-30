@@ -3,14 +3,10 @@
 #ifndef CvPathGenerator_h__
 #define CvPathGenerator_h__
 
-#include <queue>
-
 //#define	DYNAMIC_PATH_STRUCTURE_VALIDATION
 
 class CvMap;
 class CvPlot;
-
-//	Forward declarations of helper classes
 class CvPathNode;
 class CvPathGenerator;
 class CvSelectionGroup;

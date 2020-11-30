@@ -694,12 +694,10 @@ class CvEventManager:
 					aList.append(iPromo)
 			if not aList: continue
 
-			CyUnit, i = CyPlayer.firstUnit(False)
-			while CyUnit:
+			for CyUnit in CyPlayer.units():
 				if CyUnit.isFound():
 					for iPromo in aList:
 						CyUnit.setHasPromotion(iPromo, True)
-				CyUnit, i = CyPlayer.nextUnit(i, False)
 
 	def onMapRegen(self, argsList):
 		if not CyInterface().isInAdvancedStart():
@@ -808,8 +806,7 @@ class CvEventManager:
 		bMajor = not iGameTurn % (128 * self.iVictoryDelayPrcntGS / 100)
 
 		if bMinor or bMajor:
-			CyUnit, i = CyPlayer.firstUnit(False)
-			while CyUnit:
+			for CyUnit in CyPlayer.units():
 				if not CyUnit.isDead() and CyUnit.isAnimal():
 					if not GAME.getSorenRandNum(15 - bMajor*10, "Aging"): # 1 in 15/5
 						if not CyUnit.isHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT1")):
@@ -828,7 +825,6 @@ class CvEventManager:
 							CyUnit.setBaseCombatStr(CyUnit.baseCombatStr() + 1)
 						else:
 							CyUnit.setExperience(CyUnit.getExperience() + 3, -1)
-				CyUnit, i = CyPlayer.nextUnit(i, False)
 
 
 	def onEndPlayerTurn(self, argsList):
@@ -1571,13 +1567,11 @@ class CvEventManager:
 		elif iBuilding == mapBuildingType["NANITE_DEFUSER"]:
 
 			for iPlayerX in xrange(self.MAX_PLAYERS):
-				CyUnit, i = CyPlayer.firstUnit(False)
-				while CyUnit:
+				for CyUnit in GC.getPlayer(iPlayerX).units():
 					if CyUnit.isNone() or CyUnit.isDead():
 						print "CvEventManager\onBuildingBuilt", ("CyUnit.isDead()", CyUnit.isDead()), ("CyUnit.isNone()", CyUnit.isNone())
 					elif CyUnit.nukeRange() > -1:
 						CyUnit.kill(0, -1)
-					CyUnit, i = CyPlayer.nextUnit(i, False)
 				# Global message
 				iPlayerAct = GAME.getActivePlayer()
 				if iPlayerAct > -1:
@@ -2377,7 +2371,7 @@ class CvEventManager:
 
 				CyUnit = CyPlayer.initUnit(iWorker, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
-			else: print "Found no valid plot to place the gatherer. \nNew civ from revolution or barb. city perhaps?"
+			else: print "Found no valid plot to place the gatherer.\n\tNew civ from revolution or barbCiv perhaps?"
 
 		# Obsolete python building-effects
 		aWonderTuple = self.aWonderTuple

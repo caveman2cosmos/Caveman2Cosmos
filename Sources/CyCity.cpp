@@ -1108,6 +1108,11 @@ int /*PlayerTypes*/ CyCity::getOriginalOwner() const
 	return m_pCity->getOriginalOwner();
 }
 
+void CyCity::setOriginalOwner(int iPlayer)
+{
+	return m_pCity->setOriginalOwner((PlayerTypes)iPlayer);
+}
+
 int /*CultureLevelTypes*/ CyCity::getCultureLevel() const
 {
 	return m_pCity->getCultureLevel();

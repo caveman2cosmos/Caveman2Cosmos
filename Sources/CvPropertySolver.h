@@ -11,7 +11,6 @@
 #ifndef CV_PROPERTY_SOLVER_H
 #define CV_PROPERTY_SOLVER_H
 
-#include <map>
 #include "CvPropertySource.h"
 #include "CvPropertyInteraction.h"
 #include "CvPropertyPropagator.h"

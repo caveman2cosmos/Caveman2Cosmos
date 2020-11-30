@@ -5,16 +5,18 @@
 #ifndef CIV4_GAME_H
 #define CIV4_GAME_H
 
-#include "CvDeal.h"
+//#include "CvDeal.h"
 #include "CvRandom.h"
 #include "CvGameObject.h"
 #include "CvPropertySolver.h"
 #include "CvDate.h"
 
-class CvPlot;
+class CvDeal;
 class CvCity;
+class CvPlot;
 class CvReplayMessage;
 class CvReplayInfo;
+class CvUnit;
 
 //	Max number of barbarian units in existence for a spawn of a new one to be allowed
 //	This allows a 'space' for 'real' barbarians to be built before we use up the entire

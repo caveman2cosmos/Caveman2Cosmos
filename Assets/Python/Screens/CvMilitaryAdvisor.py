@@ -229,12 +229,10 @@ class CvMilitaryAdvisor:
 				CyPlayerX = GC.getPlayer(iPlayerX)
 				if not CyPlayerX.isAlive(): continue
 
-				CyUnit, i = CyPlayerX.firstUnit(False)
-				while CyUnit:
+				for CyUnit in CyPlayerX.units():
 					if not CyUnit.isDead() and CyUnit.getVisualOwner() in self.selectedCivs:
 						if not CyUnit.isInvisible(iTeam, False) and CyUnit.plot().isVisible(iTeam, False):
 							self.stats.processUnit(CyPlayer, CyTeam, CyUnit)
-					CyUnit, i = CyPlayerX.nextUnit(i, False)
 
 		iColCyan	= GC.getInfoTypeForString("COLOR_CYAN")
 		iColRed		= GC.getInfoTypeForString("COLOR_RED")
