@@ -19,7 +19,6 @@ public:
 	explicit CySelectionGroup(CvSelectionGroup* pSelectionGroup);		// Call from C++
 
 	//CvSelectionGroup* getSelectionGroup() const { return m_pSelectionGroup; }	// Call from C++
-	bool isNone() const { return m_pSelectionGroup == NULL; }
 
 	void pushMission(MissionTypes eMission, int iData1, int iData2, int iFlags, bool bAppend, bool bManual, MissionAITypes eMissionAI, const CyPlot& kMissionAIPlot, const CyUnit& kMissionAIUnit);
 	bool canStartMission(int iMission, int iData1, int iData2, const CyPlot& kPlot, bool bTestVisible) const;

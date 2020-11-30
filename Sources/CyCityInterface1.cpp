@@ -10,7 +10,6 @@
 void CyCityPythonInterface1(python::class_<CyCity>& x)
 {
 	OutputDebugString("Python Extension Module - CyCityPythonInterface1\n");
-
 	x
 		.def("kill", &CyCity::kill, "void () - kill the city")
 
@@ -57,7 +56,6 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("changeProduction", &CyCity::changeProduction, "void (int iChange)")
 		.def("getProductionModifier", &CyCity::getProductionModifier, "int () - multiplier (if any) for item being produced")
 		.def("getCurrentProductionDifference", &CyCity::getCurrentProductionDifference, "int (bool bIgnoreFood, bool bOverflow)")
-
 
 		.def("canHurry", &CyCity::canHurry, "bool (HurryTypes eHurry, bool bTestVisible = 0) - can player eHurry in this city?")
 		.def("getConscriptUnit", &CyCity::getConscriptUnit, "UnitID () - UnitID for the best unit the city can conscript")
