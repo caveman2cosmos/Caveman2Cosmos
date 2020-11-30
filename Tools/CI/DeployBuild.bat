@@ -56,31 +56,28 @@ call "%root_dir%\Tools\CI\DoSourceIndexing.bat"
 :: CHECK OUT SVN -----------------------------------------------
 echo Checking out SVN working copy for deployment...
 call %SVN% --quiet checkout %svn_url% "%build_dir%"
-if %ERRORLEVEL% neq 0 (
+if %ERRORLEVEL% NEQ 0 (
 	echo SVN checkout failed... Cleanup
 	call %SVN% --non-interactive cleanup "%build_dir%"
 	echo Retry checkout...
 	call %SVN% --quiet checkout %svn_url% "%build_dir%"
-	if %ERRORLEVEL% neq 0 (
+	if %ERRORLEVEL% NEQ 0 (
 		echo Second SVN checkout failed... Cleanup
 		call %SVN% --non-interactive cleanup "%build_dir%"
-		echo Retry checkout...
-		call %SVN% --quiet checkout %svn_url% "%build_dir%"
-		if %ERRORLEVEL% neq 0 (
-			echo Third SVN checkout failed... Cleanup
-			call %SVN% --non-interactive cleanup "%build_dir%"
-			echo Retry checkout...
-			call %SVN% --quiet checkout %svn_url% "%build_dir%"
-			if %ERRORLEVEL% neq 0 (
-				echo Fourth SVN checkout failed... Cleanup
-				call %SVN% --non-interactive cleanup "%build_dir%"
-				echo Try updating instead...
-				call %SVN% update "%build_dir%"
-				if %ERRORLEVEL% neq 0 (
-					echo SVN checkout failed, aborting...
-					exit /B 3
-				)
+		echo Try updating instead (max 20 attempts)...
+		set /a count = 0
+		set /a max = 19
+		:loop
+		call %SVN% --quiet update "%build_dir%"
+		if %ERRORLEVEL% NEQ 0 (
+			set /a count += 1
+			if %count% GTR %max% (
+				echo SVN checkout failed, aborting...
+				exit /B 3
 			)
+			echo Update attempt %count% failed... cleanup
+			call %SVN% --non-interactive cleanup "%build_dir%"
+			goto loop
 		)
 	)
 )
