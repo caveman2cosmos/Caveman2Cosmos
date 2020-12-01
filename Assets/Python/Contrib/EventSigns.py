@@ -297,7 +297,7 @@ class MapSigns:
 				engine.addLandmark(pPlot.cloneToViewport(), szCaption.encode('latin_1'))
 		else:
 			pPlayer = GC.getPlayer(ePlayer)
-			if not pPlayer or pPlayer.isNone():
+			if not pPlayer:
 				BugUtil.warn("MapSigns.displaySign() was passed an invalid player id: %s" % (str(ePlayer)))
 				return False
 			eTeam = pPlayer.getTeam()

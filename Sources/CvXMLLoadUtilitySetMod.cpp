@@ -14,7 +14,6 @@
 #include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CvXMLLoadUtilitySetMod.h"
-#include "CheckSum.h"
 
 // In the following method we set the order of loading properly
 void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
@@ -453,96 +452,10 @@ bool CvXMLLoadUtilitySetMod::isValidModule(
 
 void CvXMLLoadUtilitySetMod::loadModControlArray(std::vector<CvString>& aszFiles, const char* szFileRoot)
 {
-	CvString szModDirectory;
-
-
-	/************************************************************************************************/
-	/* Afforess	                  Start		 06/15/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-		/*
-		CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-		szModDirectory = p_szDirName->GetProgramDir();		// Dir where the Civ4BeyondSword.exe is started from
-		SAFE_DELETE(p_szDirName);
-		szModDirectory += gDLL->getModName();		// "Mods\Modname\"
-		szModDirectory += "Assets\\";		//Assets in the Moddirectory
-		 */
-
-	szModDirectory = GC.getInitCore().getDLLPath() + "\\";
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-
-
+	const CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\";
 
 	for (int iI = 0; iI < GC.getModLoadControlVectorSize(); iI++)
 	{
 		MLFEnumerateFiles(aszFiles, (szModDirectory + GC.getModLoadControlVector(iI).c_str()).c_str(), GC.getModLoadControlVector(iI).c_str(), CvString::format("%s.xml", szFileRoot).c_str());
 	}
 }
-
-
-void CvXMLLoadUtilitySetMod::checkCacheStateDir(
-	const CvString& refcstrRootDirectory,
-	CvChecksum& ulCheckSum,
-	bool							bSearchSubdirectories)
-{
-	CvString		strFilePath;		// Filepath
-	CvString		strPattern;			// Pattern
-	CvString		strExtension;		// Extension
-	HANDLE          hFile;				// Handle to file
-	WIN32_FIND_DATA FileInformation;	// File information
-
-	strPattern = refcstrRootDirectory + "\\*.*";
-
-	hFile = ::FindFirstFile(strPattern.c_str(), &FileInformation);
-	if (hFile != INVALID_HANDLE_VALUE)
-	{
-		do
-		{
-			if (FileInformation.cFileName[0] != '.')
-			{
-				//strFilePath.erase();
-				strFilePath = refcstrRootDirectory + "\\" + FileInformation.cFileName;
-
-				if (FileInformation.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
-				{
-					if (bSearchSubdirectories)
-					{
-						// Search subdirectory
-						checkCacheStateDir(strFilePath, ulCheckSum);
-					}
-				}
-				else
-				{
-					// Check extension
-					strExtension = FileInformation.cFileName;
-					//force lowercase for comparison
-					int length = strExtension.size();
-					for (int i = 0; i < length; ++i)
-					{
-						strExtension[i] = tolower(strExtension[i]);
-					}
-					//	Include any files ending '.xml' - this is to accoutn for things like GlobalDefines.xml
-					//	which do not inlude the Civ4 substring.  This one in particular has to be included
-					//	as it influences the allocated sizes of various arrays into which parsed data from other
-					//	assets is placed
-					//  AIAndy: This change also included the audio XML which is written regularly. That one needs to be excluded if the cache is supposed to have any value.
-					if (strExtension.rfind("civ4") != std::string::npos ||
-						(strExtension.length() > 4 && strExtension.rfind(".xml") == strExtension.length() - 4 && strExtension.rfind("audio") == std::string::npos))
-					{
-						ulCheckSum.add((int)FileInformation.ftLastWriteTime.dwHighDateTime);
-						ulCheckSum.add((int)FileInformation.ftLastWriteTime.dwLowDateTime);
-					}
-				}
-			}
-		} while (::FindNextFile(hFile, &FileInformation) == TRUE);
-
-		// Close handle
-		::FindClose(hFile);
-	}
-	return;
-}
-
-
