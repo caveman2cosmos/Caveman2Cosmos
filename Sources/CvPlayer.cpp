@@ -238,8 +238,6 @@ m_cachedBonusCount(NULL)
 
 	m_bDisableHuman = false;
 
-	m_bPopBad = false;
-
 	m_iStabilityIndex = 500;
 	m_iStabilityIndexAverage = 500;
 
@@ -995,8 +993,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_bChoosingFreeTech = false;
 
 	m_bDisableHuman = false;
-
-	m_bPopBad = false;
 
 	m_iStabilityIndex = 500;
 	m_iStabilityIndexAverage = 500;
@@ -9546,52 +9542,19 @@ int CvPlayer::getTotalPopulation() const
 	return m_iTotalPopulation;
 }
 
+void CvPlayer::changeTotalPopulation(int iChange)
+{
+	m_iTotalPopulation += iChange;
+	FAssertMsg(m_iTotalPopulation >= 0, "This shouldn't go negative!");
+
+	changeAssets(iChange*10);
+	changePower(iChange); // Should sync up with the total power value for this player from all CvArea.
+	changePopScore(iChange);
+}
 
 int CvPlayer::getAveragePopulation() const
 {
-	return
-	(
-		getNumCities() == 0
-		?
-		0 : getTotalPopulation() / getNumCities()
-	);
-}
-
-
-void CvPlayer::changeTotalPopulation(int iChange)
-{
-	if (!m_bPopBad)
-	{
-		changeAssets(-(getPopulationAsset(getTotalPopulation())*100));
-		changePower(-(getPopulationPower(getTotalPopulation())*100));
-	}
-	changePopScore(-(getPopulationScore(getTotalPopulation())));
-
-	uint64_t iPopTest = (int64_t)m_iTotalPopulation;
-
-	iPopTest += iChange;
-	if (iPopTest > MAX_INT)
-	{
-		FErrorMsg("Population overflow will occur, capped at MAX_INT!");
-		iPopTest = MAX_INT;
-	}
-	m_iTotalPopulation = (int)iPopTest;
-	FAssertMsg(getTotalPopulation() >= 0, "Total population overflowed to negative!");
-
-	iPopTest *= 100;
-	if (iPopTest >= MAX_INT)
-	{
-		FErrorMsg("Population overflow may occur during x100 calculations");
-		m_bPopBad = true;
-	}
-
-	if (!m_bPopBad)
-	{
-		changeAssets(getPopulationAsset(getTotalPopulation())*100);
-		changePower(getPopulationPower(getTotalPopulation())*100);
-	}
-
-	changePopScore(getPopulationScore(getTotalPopulation()));
+	return 0 == getNumCities() ? 0 : getTotalPopulation() / getNumCities();
 }
 
 
@@ -9606,32 +9569,26 @@ int CvPlayer::getTotalLand() const
 	return m_iTotalLand;
 }
 
-
 void CvPlayer::changeTotalLand(int iChange)
 {
 	m_iTotalLand = (m_iTotalLand + iChange);
 	FAssert(getTotalLand() >= 0);
 }
 
-
 int CvPlayer::getTotalLandScored() const
 {
 	return m_iTotalLandScored;
 }
 
-
 void CvPlayer::changeTotalLandScored(int iChange)
 {
 	if (iChange != 0)
 	{
-		changeAssets(-(getLandPlotsAsset(getTotalLandScored())*100));
-		changeLandScore(-(getLandPlotsScore(getTotalLandScored())));
+		changeAssets(iChange*10);
+		changeLandScore(iChange);
 
-		m_iTotalLandScored = (m_iTotalLandScored + iChange);
+		m_iTotalLandScored += iChange;
 		FAssert(getTotalLandScored() >= 0);
-
-		changeAssets(getLandPlotsAsset(getTotalLandScored())*100);
-		changeLandScore(getLandPlotsScore(getTotalLandScored()));
 	}
 }
 
@@ -20636,7 +20593,9 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupMaking);
 
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iArrestingUnit);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_bPopBad);
+		// @SAVEBREAK DELETE
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_bPopBad, SAVE_VALUE_ANY);
+		// SAVEBREAK@
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUpgradeRoundCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iSelectionRegroup);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreedomFighterCount);
@@ -21467,7 +21426,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupCount);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupMaking);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iArrestingUnit);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_bPopBad);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUpgradeRoundCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iSelectionRegroup);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreedomFighterCount);
@@ -29625,15 +29583,13 @@ void CvPlayer::clearModifierTotals()
 		m_aiGoldenAgeCommerce[iI] = 0;
 	}
 
-	//	Reset power to just that due to pop.  Other contributions will be re-added during the
-	//	recalc
-	m_iPower = getPopulationPower(getTotalPopulation()) * 100;
+	// Reset power to just that due to pop. Other contributions will be re-added during the recalc
+	m_iPower = getTotalPopulation();
 	m_iUnitPower = 0;
 	m_iTechPower = 0;
 
-	//	Similarly assets for pop, land, and units
-	m_iAssets = getPopulationAsset(getTotalPopulation()) * 100;
-	m_iAssets += getLandPlotsAsset(getTotalLandScored()) * 100;
+	// Similarly assets for pop, land, and units
+	m_iAssets = 10 * (getTotalPopulation() + getTotalLandScored());
 
 	foreach_(const CvUnit* pLoopUnit, units())
 	{

@@ -1772,7 +1772,7 @@ protected:
 	float m_fRevIdxBadReligionMod;
 	float m_fRevIdxGoodReligionMod;
 	bool m_bInquisitionConditions;
-	bool m_bPopBad;
+
 	int m_iUnitUpgradePriceModifier;
 	int m_iNationalGreatPeopleRate;
 

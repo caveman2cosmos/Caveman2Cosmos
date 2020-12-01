@@ -23574,7 +23574,7 @@ bool CvUnitAI::AI_improveCity(CvCity* pCity)
 					iPlotMoveCost += GC.getHILLS_EXTRA_MOVEMENT();
 				}
 
-				if (plot()->isPeak2(true))
+				if (plot()->isAsPeak())
 				{
 					if (!GET_TEAM(getTeam()).isMoveFastPeaks())
 					{
@@ -23691,16 +23691,13 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, CvCity* pIgnoreCity)
 			{
 				iPlotMoveCost += GC.getHILLS_EXTRA_MOVEMENT();
 			}
-			if (plot()->isPeak2(true))
+			if (plot()->isAsPeak())
 			{
 				if (!GET_TEAM(getTeam()).isMoveFastPeaks())
 				{
 					iPlotMoveCost += GC.getPEAK_EXTRA_MOVEMENT();
 				}
-				else
-				{
-					iPlotMoveCost += 1;
-				}
+				else iPlotMoveCost += 1;
 			}
 			if (iPlotMoveCost > 1)
 			{
@@ -24879,12 +24876,9 @@ BuildTypes CvUnitAI::AI_betterPlotBuild(CvPlot* pPlot, BuildTypes eBuild)
 			bBuildRoute = true;
 		}
 	}
-	else if (pPlot->isPeak2(true))
+	else if (pPlot->isAsPeak() && GC.getPEAK_EXTRA_MOVEMENT() > 0 && iWorkersNeeded > 1)
 	{
-		if ((GC.getPEAK_EXTRA_MOVEMENT() > 0) && (iWorkersNeeded > 1))
-		{
-			bBuildRoute = true;
-		}
+		bBuildRoute = true;
 	}
 
 	if (pPlot->getRouteType() != NO_ROUTE)

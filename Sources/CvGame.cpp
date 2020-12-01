@@ -4101,8 +4101,8 @@ void CvGame::initScoreCalculation()
 			iMaxFood += pPlot->calculateBestNatureYield(YIELD_FOOD, NO_TEAM);
 		}
 	}
-	m_iMaxPopulation = getPopulationScore(iMaxFood / std::max(1, GC.getFOOD_CONSUMPTION_PER_POPULATION()));
-	m_iMaxLand = getLandPlotsScore(GC.getMap().getLandPlots());
+	m_iMaxPopulation = iMaxFood / std::max(1, GC.getFOOD_CONSUMPTION_PER_POPULATION());
+	m_iMaxLand = GC.getMap().getLandPlots();
 	m_iMaxTech = 0;
 	for (int i = 0; i < GC.getNumTechInfos(); i++)
 	{
@@ -4117,8 +4117,8 @@ void CvGame::initScoreCalculation()
 	if (NO_ERA != getStartEra())
 	{
 		const int iNumSettlers = GC.getEraInfo(getStartEra()).getStartingUnitMultiplier();
-		m_iInitPopulation = getPopulationScore(iNumSettlers * (GC.getEraInfo(getStartEra()).getFreePopulation() + 1));
-		m_iInitLand = getLandPlotsScore(iNumSettlers *  NUM_CITY_PLOTS);
+		m_iInitPopulation = iNumSettlers * (GC.getEraInfo(getStartEra()).getFreePopulation() + 1);
+		m_iInitLand = iNumSettlers *  NUM_CITY_PLOTS;
 	}
 	else
 	{
@@ -6351,7 +6351,7 @@ void enumSpawnPlots(int iSpawnInfo, std::vector<CvPlot*>* plots)
 
 			if (!bNoTerrainFeatureBonus)
 			{
-				if (!pPlot->isPeak2(true))
+				if (!pPlot->isAsPeak())
 				{
 					bValid = false;
 					BonusTypes bonusType = pPlot->getBonusType();
@@ -6913,7 +6913,7 @@ void CvGame::doGlobalWarming()
 				if (pPlot->getTerrainType() == eBarrenTerrain)
 				{
 					if (GC.getDefineINT("GW_MOD_ENABLED") && pPlot->isCoastalLand() 
-					&& !pPlot->isHills() && !pPlot->isPeak2(true))
+					&& !pPlot->isHills() && !pPlot->isAsPeak())
 					{
 						pPlot->setTerrainType(eShallowsTerrain);
 						bChanged = true;
