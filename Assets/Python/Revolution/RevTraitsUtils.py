@@ -12,7 +12,7 @@ GC = CyGlobalContext()
 def getTraitsRevIdxLocal(iPlayer):
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if pPlayer.isNone() or not pPlayer.getNumCities():
+	if pPlayer is None or not pPlayer.getNumCities():
 		return [0, [], []]
 
 	localRevIdx = 0
@@ -40,7 +40,7 @@ def getTraitsCivStabilityIndex(iPlayer):
 	posList = list()
 	negList = list()
 
-	if pPlayer.isNone():
+	if pPlayer is None:
 		return [civStabilityIdx, posList, negList]
 
 	for iTrait in range(GC.getNumTraitInfos()):
@@ -62,7 +62,7 @@ def getTraitsHolyCityEffects(iPlayer):
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if pPlayer.isNone() or not pPlayer.getNumCities():
+	if pPlayer is None or not pPlayer.getNumCities():
 		return [0, 0]
 
 	goodEffect = 0
@@ -81,7 +81,7 @@ def getTraitsNationalityMod(iPlayer):
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if pPlayer.isNone() or not pPlayer.getNumCities():
+	if pPlayer is None or not pPlayer.getNumCities():
 		return 0
 
 	natMod = 0
@@ -97,7 +97,7 @@ def getTraitsReligionMods(iPlayer):
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if pPlayer.isNone() or not pPlayer.getNumCities():
+	if pPlayer is None or not pPlayer.getNumCities():
 		return [0,0]
 
 	goodMod = 0
@@ -116,7 +116,7 @@ def getTraitsDistanceMod( iPlayer ) :
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if pPlayer.isNone() or not pPlayer.getNumCities():
+	if pPlayer is None or not pPlayer.getNumCities():
 		return 0
 
 	distModifier = 0

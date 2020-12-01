@@ -36,7 +36,7 @@ def getCivicsRevIdxLocal( iPlayer ) :
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() ) :
+	if pPlayer is None:
 		return [0,list(),list()]
 
 	if( pPlayer.getNumCities() == 0 ) :
@@ -90,7 +90,7 @@ def getCivicsCivStabilityIndex( iPlayer ) :
 	posList = list()
 	negList = list()
 
-	if( pPlayer.isNone() ) :
+	if pPlayer is None:
 		return [civStabilityIdx,posList,negList]
 
 	if( len(civicsList) < GC.getNumCivicOptionInfos() ) :
@@ -136,7 +136,7 @@ def getCivicsHolyCityEffects( iPlayer ) :
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() ) :
+	if pPlayer is None:
 		return [0,0]
 
 	if( pPlayer.getNumCities() == 0 ) :
@@ -158,7 +158,7 @@ def getCivicsReligionMods( iPlayer ) :
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() ) :
+	if pPlayer is None:
 		return [0,0]
 
 	if( pPlayer.getNumCities() == 0 ) :
@@ -181,7 +181,7 @@ def getCivicsDistanceMod( iPlayer ) :
 	pPlayer = GC.getPlayer(iPlayer)
 	distModifier = 0
 
-	if( pPlayer.isNone() ) :
+	if pPlayer is None:
 		return 0
 
 	if( pPlayer.getNumCities() == 0 ) :
@@ -199,7 +199,7 @@ def getCivicsNationalityMod( iPlayer ) :
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() ) :
+	if pPlayer is None:
 		return 0
 
 	if( pPlayer.getNumCities() == 0 ) :
@@ -219,7 +219,7 @@ def getCivicsViolentRevMod( iPlayer ) :
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() ) :
+	if pPlayer is None:
 		return 0
 
 	if( pPlayer.getNumCities() == 0 ) :
@@ -238,7 +238,7 @@ def getCivicsViolentRevMod( iPlayer ) :
 def canDoCommunism( iPlayer ) :
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() or not pPlayer.isAlive() ) :
+	if pPlayer is None or not pPlayer.isAlive():
 		return [False,None]
 
 	for i in range(0,GC.getNumCivicInfos()) :
@@ -252,7 +252,7 @@ def canDoCommunism( iPlayer ) :
 def isCommunism( iPlayer ) :
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() or not pPlayer.isAlive() ) :
+	if pPlayer is None or not pPlayer.isAlive():
 		return False
 
 	for i in range(0,GC.getNumCivicInfos()) :
@@ -265,7 +265,7 @@ def isCommunism( iPlayer ) :
 def canDoFreeSpeech( iPlayer ) :
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() or not pPlayer.isAlive() ) :
+	if pPlayer is None or not pPlayer.isAlive():
 		return [False,None]
 
 	for i in range(0,GC.getNumCivicInfos()) :
@@ -279,7 +279,7 @@ def canDoFreeSpeech( iPlayer ) :
 def isFreeSpeech( iPlayer ) :
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() or not pPlayer.isAlive() ) :
+	if pPlayer is None or not pPlayer.isAlive():
 		return False
 
 	for i in range(0,GC.getNumCivicInfos()) :
@@ -292,7 +292,7 @@ def isFreeSpeech( iPlayer ) :
 def isCanDoElections( iPlayer ) :
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() or not pPlayer.isAlive() or pPlayer.isNPC() ) :
+	if pPlayer is None or not pPlayer.isAlive() or pPlayer.isNPC():
 		return False
 
 	for i in range(0,GC.getNumCivicOptionInfos()) :
@@ -310,7 +310,7 @@ def getReligiousFreedom( iPlayer ) :
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() or not pPlayer.isAlive() ) :
+	if pPlayer is None or not pPlayer.isAlive():
 		return [0,None]
 
 	for i in range(0,GC.getNumCivicOptionInfos()) :
@@ -328,7 +328,7 @@ def getBestReligiousFreedom( iPlayer, relOptionType ) :
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() or not pPlayer.isAlive() or relOptionType == None ) :
+	if pPlayer is None or not pPlayer.isAlive() or relOptionType == None:
 		return [0,None]
 
 	bestFreedom = -11
@@ -349,7 +349,7 @@ def getDemocracyLevel( iPlayer ) :
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() or not pPlayer.isAlive() ) :
+	if pPlayer is None or not pPlayer.isAlive():
 		return [0,None]
 
 	for i in range(0,GC.getNumCivicOptionInfos()) :
@@ -367,7 +367,7 @@ def getBestDemocracyLevel( iPlayer, optionType ) :
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() or not pPlayer.isAlive() or optionType == None ) :
+	if pPlayer is None or not pPlayer.isAlive() or optionType is None:
 		return [0,None]
 
 	bestLevel = -11
@@ -388,7 +388,7 @@ def getLaborFreedom( iPlayer ) :
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() or not pPlayer.isAlive() ) :
+	if pPlayer is None or not pPlayer.isAlive():
 		return [0,None]
 
 	for i in range(0,GC.getNumCivicOptionInfos()) :
@@ -406,7 +406,7 @@ def getBestLaborFreedom( iPlayer, optionType ) :
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() or not pPlayer.isAlive() or optionType == None ) :
+	if pPlayer is None or not pPlayer.isAlive() or optionType is None:
 		return [0,None]
 
 	bestLevel = -11
@@ -427,7 +427,7 @@ def getEnvironmentalProtection( iPlayer ) :
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() or not pPlayer.isAlive() ) :
+	if pPlayer is None or not pPlayer.isAlive():
 		return [0,None]
 
 	for i in range(0,GC.getNumCivicOptionInfos()) :
@@ -445,7 +445,7 @@ def getBestEnvironmentalProtection( iPlayer, optionType ) :
 
 	pPlayer = GC.getPlayer(iPlayer)
 
-	if( pPlayer.isNone() or not pPlayer.isAlive() or optionType == None ) :
+	if pPlayer is None or not pPlayer.isAlive() or optionType is None:
 		return [0,None]
 
 	bestLevel = -11

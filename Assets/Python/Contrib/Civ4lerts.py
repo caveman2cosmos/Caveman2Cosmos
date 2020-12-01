@@ -185,7 +185,7 @@ class AbstractCityAlertManager(AbstractStatefulAlert):
 		player = GC.getActivePlayer()
 		for city in player.cities():
 			for alert in self.alerts:
-				alert.checkCity(getCityId(city), city, ePlayer, player)
+				alert.checkCity(city.getID(), city, ePlayer, player)
 
 	def _init(self):
 		"Initializes each alert."
