@@ -5236,7 +5236,7 @@
 		<BuildInfo>
 			<Type>BUILD_BREAK_ICE_KILL</Type>
 			<Description>TXT_KEY_BUILD_BREAK_ICE_KILL</Description>
-			<PrereqTech>NONE</PrereqTech>
+			<PrereqTech>TECH_COMBUSTION</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
@@ -5244,7 +5244,7 @@
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ICE</FeatureType>
-					<PrereqTech>TECH_COMBUSTION</PrereqTech>
+					<PrereqTech>NONE</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -5258,7 +5258,7 @@
 		<BuildInfo>
 			<Type>BUILD_BREAK_ICE</Type>
 			<Description>TXT_KEY_BUILD_BREAK_ICE</Description>
-			<PrereqTech>NONE</PrereqTech>
+			<PrereqTech>TECH_COMBUSTION</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
@@ -5266,7 +5266,7 @@
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ICE</FeatureType>
-					<PrereqTech>TECH_COMBUSTION</PrereqTech>
+					<PrereqTech>NONE</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -9292,16 +9292,27 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/picker_genericplant.dds</Button>
 		</BuildInfo>
-		<!-- Beacon -->
+		<!-- Beacons -->
 		<BuildInfo>
 			<Type>BUILD_BEACON_CORAL</Type>
 			<Description>TXT_KEY_BUILD_BEACON_CORAL</Description>
 			<PrereqTech>TECH_SAILING</PrereqTech>
-			<iTime>800</iTime>
+			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
+			<iTime>600</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BEACON_CORAL</ImprovementType>
+			<FeatureChange>FEATURE_CORAL_REEF_BEACON</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
 			<HotKey>KB_F</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
@@ -9310,11 +9321,83 @@
 			<Type>BUILD_BEACON_REEF</Type>
 			<Description>TXT_KEY_BUILD_BEACON_REEF</Description>
 			<PrereqTech>TECH_SAILING</PrereqTech>
-			<iTime>800</iTime>
+			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
+			<iTime>600</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BEACON_REEF</ImprovementType>
+			<FeatureChange>FEATURE_REEF_BEACON</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_REEF</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
+			<HotKey>KB_F</HotKey>
+			<iHotKeyPriority>1</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
+		</BuildInfo>
+		<!-- Lighthouses -->
+		<BuildInfo>
+			<Type>BUILD_LIGHTHOUSE_CORAL</Type>
+			<Description>TXT_KEY_BUILD_LIGHTHOUSE_CORAL</Description>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
+			<iTime>200</iTime>
+			<iCost>0</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_CORAL</ImprovementType>
+			<FeatureChange>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureChange>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_CORAL_REEF_BEACON</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
+			<HotKey>KB_F</HotKey>
+			<iHotKeyPriority>1</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
+		</BuildInfo>
+		<BuildInfo>
+			<Type>BUILD_LIGHTHOUSE_REEF</Type>
+			<Description>TXT_KEY_BUILD_LIGHTHOUSE_REEF</Description>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
+			<iTime>200</iTime>
+			<iCost>0</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_REEF</ImprovementType>
+			<FeatureChange>FEATURE_REEF_LIGHTHOUSE</FeatureChange>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_REEF</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
 			<HotKey>KB_F</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
@@ -9346,33 +9429,6 @@
 			<HotKey>KB_F</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/terrainfeatures/kelpforest.dds</Button>
-		</BuildInfo>
-		<!-- Lighthouse -->
-		<BuildInfo>
-			<Type>BUILD_LIGHTHOUSE_CORAL</Type>
-			<Description>TXT_KEY_BUILD_LIGHTHOUSE_CORAL</Description>
-			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<iTime>1000</iTime>
-			<iCost>0</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_CORAL</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_F</HotKey>
-			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
-		</BuildInfo>
-		<BuildInfo>
-			<Type>BUILD_LIGHTHOUSE_REEF</Type>
-			<Description>TXT_KEY_BUILD_LIGHTHOUSE_REEF</Description>
-			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<iTime>1000</iTime>
-			<iCost>0</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_REEF</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_F</HotKey>
-			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
 		</BuildInfo>
 		<!-- Fossil Digsite -->
 		<BuildInfo>
@@ -10612,6 +10668,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/moaiimprovement.dds</Button>
 		</BuildInfo>
+		<!-- Grow Forest (special case of feature change handled in CvEventManager.py instead of FeatureChange tag due to multiple possible features) -->
 		<BuildInfo>
 			<Type>BUILD_GROW_FOREST</Type>
 			<Description>TXT_KEY_BUILD_GROW_FOREST</Description>

@@ -25,17 +25,22 @@
 			<Description>TXT_KEY_BUILD_BEACON_GREAT_BARRIER_REEF</Description>
 			<Help/>
 			<PrereqTech>TECH_SAILING</PrereqTech>
-			<iTime>800</iTime>
+			<iTime>600</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</ImprovementType>
-			<RouteType>NONE</RouteType>
+			<FeatureChange>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<FeatureStructs/>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
 			<HotKey>KB_F</HotKey>
-			<bAltDown>0</bAltDown>
-			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
 		</BuildInfo>
@@ -44,17 +49,29 @@
 			<Description>TXT_KEY_BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</Description>
 			<Help/>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<iTime>800</iTime>
+			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</ImprovementType>
-			<RouteType>NONE</RouteType>
+			<FeatureChange>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<FeatureStructs/>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
 			<HotKey>KB_F</HotKey>
-			<bAltDown>0</bAltDown>
-			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
 		</BuildInfo>

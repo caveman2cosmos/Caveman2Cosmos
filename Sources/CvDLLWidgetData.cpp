@@ -3167,9 +3167,11 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 				}
 
-				if (eImprovement != NO_IMPROVEMENT)
+				if (eImprovement != NO_IMPROVEMENT && pMissionPlot->getImprovementType() != NO_IMPROVEMENT)
 				{
-					if (pMissionPlot->getImprovementType() != NO_IMPROVEMENT)
+					// FeatureChange and TerrainChange don't remove existing improvements
+					if (GC.getBuildInfo(eBuild).getFeatureChange() == NO_FEATURE &&
+						GC.getBuildInfo(eBuild).getTerrainChange() == NO_TERRAIN)
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_WILL_DESTROY_IMP", GC.getImprovementInfo(pMissionPlot->getImprovementType()).getTextKeyWide()));
@@ -3182,158 +3184,155 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CONSUME_UNIT"));
 				}
 
-				if (pMissionPlot->getFeatureType() != NO_FEATURE)
+				if (pMissionPlot->getFeatureType() != NO_FEATURE &&
+					GC.getBuildInfo(eBuild).isFeatureRemove(pMissionPlot->getFeatureType()))
 				{
-					if (GC.getBuildInfo(eBuild).isFeatureRemove(pMissionPlot->getFeatureType()))
+					// BUG - Feature Health
+					if (pMissionPlot->isCityRadius() && getBugOptionBOOL("MiscHover__RemoveFeatureHealthEffects", true, "BUG_REMOVE_FEATURE_HEALTH_EFFECTS"))
 					{
-// BUG - Feature Health - start
-						if (pMissionPlot->isCityRadius() && getBugOptionBOOL("MiscHover__RemoveFeatureHealthEffects", true, "BUG_REMOVE_FEATURE_HEALTH_EFFECTS"))
+						int iHealthPercent = GC.getFeatureInfo(pMissionPlot->getFeatureType()).getHealthPercent();
+
+						if (iHealthPercent != 0)
 						{
-							int iHealthPercent = GC.getFeatureInfo(pMissionPlot->getFeatureType()).getHealthPercent();
+							bool bCountOtherTiles = getBugOptionBOOL("MiscHover__RemoveFeatureHealthEffectsCountOtherTiles", true, "BUG_REMOVE_FEATURE_HEALTH_EFFECTS_COUNT_OTHER_TILES");
+							int iGoodPercentChange = 0;
+							int iBadPercentChange = 0;
 
-							if (iHealthPercent != 0)
+							if (iHealthPercent > 0)
 							{
-								bool bCountOtherTiles = getBugOptionBOOL("MiscHover__RemoveFeatureHealthEffectsCountOtherTiles", true, "BUG_REMOVE_FEATURE_HEALTH_EFFECTS_COUNT_OTHER_TILES");
-								int iGoodPercentChange = 0;
-								int iBadPercentChange = 0;
+								iGoodPercentChange = - iHealthPercent;
+							}
+							else
+							{
+								iBadPercentChange = iHealthPercent;
+							}
+							for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+							{
+								CvPlot* pLoopPlot = plotCity(pMissionPlot->getX(), pMissionPlot->getY(), iI);
 
-								if (iHealthPercent > 0)
+								if (pLoopPlot != NULL)
 								{
-									iGoodPercentChange = - iHealthPercent;
-								}
-								else
-								{
-									iBadPercentChange = iHealthPercent;
-								}
-								for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
-								{
-									CvPlot* pLoopPlot = plotCity(pMissionPlot->getX(), pMissionPlot->getY(), iI);
+									CvCity* pLoopCity = pLoopPlot->getPlotCity();
 
-									if (pLoopPlot != NULL)
+									if (pLoopCity != NULL && pLoopCity->getTeam() == pHeadSelectedUnit->getTeam())
 									{
-										CvCity* pLoopCity = pLoopPlot->getPlotCity();
+										int iGood = 0, iBad = 0;
+										int iFeatureHealthAdjust = 0;
 
-										if (pLoopCity != NULL && pLoopCity->getTeam() == pHeadSelectedUnit->getTeam())
+										if (bCountOtherTiles)
 										{
-											int iGood = 0, iBad = 0;
-											int iFeatureHealthAdjust = 0;
+											int iCityGoodPercentChange = 0;
+											int iCityBadPercentChange = 0;
 
-											if (bCountOtherTiles)
+											pLoopCity->calculateFeatureHealthPercentChange(iCityGoodPercentChange, iCityBadPercentChange, pMissionPlot);
+											pLoopCity->getAdditionalHealth(iCityGoodPercentChange, iCityBadPercentChange, iGood, iBad);
+											iGood = -iGood;
+											iBad = -iBad;
+											iFeatureHealthAdjust = iGood - iBad;
+											iCityGoodPercentChange += iGoodPercentChange;
+											iCityBadPercentChange += iBadPercentChange;
+											pLoopCity->getAdditionalHealth(iCityGoodPercentChange, iCityBadPercentChange, iGood, iBad);
+										}
+										else
+										{
+											pLoopCity->getAdditionalHealth(iGoodPercentChange, iBadPercentChange, iGood, iBad);
+										}
+										if (iGood != 0 || iBad != 0)
+										{
+											bool bStarted = false;
+											CvWStringBuffer szFeatureEffects;
+											bStarted = GAMETEXT.setResumableGoodBadChangeHelp(szFeatureEffects, L"", L"", L"", iGood, gDLL->getSymbolID(HEALTHY_CHAR), iBad, gDLL->getSymbolID(UNHEALTHY_CHAR), false, false, bStarted);
+
+											//Fuyu Negative Health Adjust
+											//if both clearing the feature at hand and the building being contructed in the city cause health reduction, consider both effects
+											int iBadHealthAdjust = 0;
+											if (iBad > iGood && pLoopCity->getProductionBuilding() != NO_BUILDING)
 											{
-												int iCityGoodPercentChange = 0;
-												int iCityBadPercentChange = 0;
-
-												pLoopCity->calculateFeatureHealthPercentChange(iCityGoodPercentChange, iCityBadPercentChange, pMissionPlot);
-												pLoopCity->getAdditionalHealth(iCityGoodPercentChange, iCityBadPercentChange, iGood, iBad);
-												iGood = -iGood;
-												iBad = -iBad;
-												iFeatureHealthAdjust = iGood - iBad;
-												iCityGoodPercentChange += iGoodPercentChange;
-												iCityBadPercentChange += iBadPercentChange;
-												pLoopCity->getAdditionalHealth(iCityGoodPercentChange, iCityBadPercentChange, iGood, iBad);
+												iBadHealthAdjust = -std::min(0, pLoopCity->getAdditionalHealthByBuilding(pLoopCity->getProductionBuilding()));
 											}
-											else
-											{
-												pLoopCity->getAdditionalHealth(iGoodPercentChange, iBadPercentChange, iGood, iBad);
-											}
-											if (iGood != 0 || iBad != 0)
-											{
-												bool bStarted = false;
-												CvWStringBuffer szFeatureEffects;
-												bStarted = GAMETEXT.setResumableGoodBadChangeHelp(szFeatureEffects, L"", L"", L"", iGood, gDLL->getSymbolID(HEALTHY_CHAR), iBad, gDLL->getSymbolID(UNHEALTHY_CHAR), false, false, bStarted);
 
-												//Fuyu Negative Health Adjust
-												//if both clearing the feature at hand and the building being contructed in the city cause health reduction, consider both effects
-												int iBadHealthAdjust = 0;
-												if (iBad > iGood && pLoopCity->getProductionBuilding() != NO_BUILDING)
+											int iSpoiledFood = pLoopCity->getAdditionalSpoiledFood(iGood, iBad, -iBadHealthAdjust);
+											int iStarvation = 0;
+											if (iSpoiledFood != 0)
+											{
+												iStarvation = pLoopCity->getAdditionalStarvation(iSpoiledFood, /* iFoodAdjust: spoiled food from building */ ((iBadHealthAdjust != 0)? -pLoopCity->getAdditionalSpoiledFood(0, iBadHealthAdjust) : 0));
+											}
+
+											bStarted = GAMETEXT.setResumableValueChangeHelp(szFeatureEffects, L"", L"", L"", iSpoiledFood, gDLL->getSymbolID(EATEN_FOOD_CHAR), false, false, bStarted);
+											bStarted = GAMETEXT.setResumableValueChangeHelp(szFeatureEffects, L"", L"", L"", iStarvation, gDLL->getSymbolID(BAD_FOOD_CHAR), false, false, bStarted);
+
+											//Fuyu Health Level dropping below Happy Level?
+											if (bStarted && bCountOtherTiles && iBad > iGood && iSpoiledFood == 0 && !pLoopCity->isNoUnhappiness())
+											{
+												//Disregard all temporary unhappiness, and unhealth from espionage
+												int iTemporaryUnhappiness = 0;
+												int iAngerPercent = 0;
+												iAngerPercent += pLoopCity->getHurryPercentAnger();
+												iAngerPercent += pLoopCity->getConscriptPercentAnger();
+												iAngerPercent += pLoopCity->getDefyResolutionPercentAnger();
+												iAngerPercent += pLoopCity->getWarWearinessPercentAnger();
+												iTemporaryUnhappiness += ((iAngerPercent * (pLoopCity->getPopulation())) / GC.getPERCENT_ANGER_DIVISOR());
+												iTemporaryUnhappiness += pLoopCity->getEspionageHappinessCounter();
+
+												int iHappinessLevel = pLoopCity->happyLevel() - pLoopCity->unhappyLevel() + iTemporaryUnhappiness;
+												int iHealthLevel = pLoopCity->goodHealth() - pLoopCity->badHealth() + pLoopCity->getEspionageHealthCounter();
+												//Adjustments
+												iHealthLevel += iFeatureHealthAdjust;
+												//Adjustment for building 
+												int iBuildingAdjust = 0;
+												if (pLoopCity->getProductionBuilding() != NO_BUILDING)
 												{
-													iBadHealthAdjust = -std::min(0, pLoopCity->getAdditionalHealthByBuilding(pLoopCity->getProductionBuilding()));
+													iBuildingAdjust = std::max(0, pLoopCity->getAdditionalHappinessByBuilding(pLoopCity->getProductionBuilding()) - pLoopCity->getAdditionalHealthByBuilding(pLoopCity->getProductionBuilding()));
 												}
 
-												int iSpoiledFood = pLoopCity->getAdditionalSpoiledFood(iGood, iBad, -iBadHealthAdjust);
-												int iStarvation = 0;
-												if (iSpoiledFood != 0)
+												if (iHealthLevel < iHappinessLevel + iBuildingAdjust)
 												{
-													iStarvation = pLoopCity->getAdditionalStarvation(iSpoiledFood, /* iFoodAdjust: spoiled food from building */ ((iBadHealthAdjust != 0)? -pLoopCity->getAdditionalSpoiledFood(0, iBadHealthAdjust) : 0));
+													//Health level is already below happy
+													CvWString szHealthLimitTempBuffer;
+													szHealthLimitTempBuffer.Format(L", (%c&lt;%c)", gDLL->getSymbolID(HEALTHY_CHAR), gDLL->getSymbolID(HAPPY_CHAR));
+													szFeatureEffects.append(szHealthLimitTempBuffer);
 												}
-
-												bStarted = GAMETEXT.setResumableValueChangeHelp(szFeatureEffects, L"", L"", L"", iSpoiledFood, gDLL->getSymbolID(EATEN_FOOD_CHAR), false, false, bStarted);
-												bStarted = GAMETEXT.setResumableValueChangeHelp(szFeatureEffects, L"", L"", L"", iStarvation, gDLL->getSymbolID(BAD_FOOD_CHAR), false, false, bStarted);
-
-												//Fuyu Health Level dropping below Happy Level?
-												if (bStarted && bCountOtherTiles && iBad > iGood && iSpoiledFood == 0 && !pLoopCity->isNoUnhappiness())
+												else if (iHealthLevel - iBad + iGood < iHappinessLevel + iBuildingAdjust)
 												{
-													//Disregard all temporary unhappiness, and unhealth from espionage
-													int iTemporaryUnhappiness = 0;
-													int iAngerPercent = 0;
-													iAngerPercent += pLoopCity->getHurryPercentAnger();
-													iAngerPercent += pLoopCity->getConscriptPercentAnger();
-													iAngerPercent += pLoopCity->getDefyResolutionPercentAnger();
-													iAngerPercent += pLoopCity->getWarWearinessPercentAnger();
-													iTemporaryUnhappiness += ((iAngerPercent * (pLoopCity->getPopulation())) / GC.getPERCENT_ANGER_DIVISOR());
-													iTemporaryUnhappiness += pLoopCity->getEspionageHappinessCounter();
-
-													int iHappinessLevel = pLoopCity->happyLevel() - pLoopCity->unhappyLevel() + iTemporaryUnhappiness;
-													int iHealthLevel = pLoopCity->goodHealth() - pLoopCity->badHealth() + pLoopCity->getEspionageHealthCounter();
-													//Adjustments
-													iHealthLevel += iFeatureHealthAdjust;
-													//Adjustment for building 
-													int iBuildingAdjust = 0;
-													if (pLoopCity->getProductionBuilding() != NO_BUILDING)
-													{
-														iBuildingAdjust = std::max(0, pLoopCity->getAdditionalHappinessByBuilding(pLoopCity->getProductionBuilding()) - pLoopCity->getAdditionalHealthByBuilding(pLoopCity->getProductionBuilding()));
-													}
-
-													if (iHealthLevel < iHappinessLevel + iBuildingAdjust)
-													{
-														//Health level is already below happy
-														CvWString szHealthLimitTempBuffer;
-														szHealthLimitTempBuffer.Format(L", (%c&lt;%c)", gDLL->getSymbolID(HEALTHY_CHAR), gDLL->getSymbolID(HAPPY_CHAR));
-														szFeatureEffects.append(szHealthLimitTempBuffer);
-													}
-													else if (iHealthLevel - iBad + iGood < iHappinessLevel + iBuildingAdjust)
-													{
-														CvWString szHealthLimitTempBuffer;
-														szHealthLimitTempBuffer.Format(L", %c&lt;%c", gDLL->getSymbolID(HEALTHY_CHAR), gDLL->getSymbolID(HAPPY_CHAR));
-														szFeatureEffects.append(szHealthLimitTempBuffer);
-													}
+													CvWString szHealthLimitTempBuffer;
+													szHealthLimitTempBuffer.Format(L", %c&lt;%c", gDLL->getSymbolID(HEALTHY_CHAR), gDLL->getSymbolID(HAPPY_CHAR));
+													szFeatureEffects.append(szHealthLimitTempBuffer);
 												}
-												//Fuyu END
-
-												szBuffer.append(NEWLINE);
-												szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CHANGE_IN_CITY", szFeatureEffects.getCString(), pLoopCity->getNameKey()));
 											}
+											//Fuyu END
+
+											szBuffer.append(NEWLINE);
+											szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CHANGE_IN_CITY", szFeatureEffects.getCString(), pLoopCity->getNameKey()));
 										}
 									}
 								}
 							}
 						}
-// BUG - Feature Health - end
-						CvCity* pCity;
-						int iProduction = pMissionPlot->getFeatureProduction(eBuild, pHeadSelectedUnit->getTeam(), &pCity);
+					}
+					// BUG - Feature Health - end
+					
+					CvCity* pCity;
+					int iProduction = pMissionPlot->getFeatureProduction(eBuild, pHeadSelectedUnit->getTeam(), &pCity);
 
-						if (iProduction > 0)
-						{
-							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CHANGE_PRODUCTION", iProduction, pCity->getNameKey()));
-						}
-/************************************************************************************************/
-/* Afforess	                  Start		 08/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-						else
-						{
-							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NO_PRODUCTION"));
-						}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+					szBuffer.append(NEWLINE);
+					if (iProduction > 0)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CHANGE_PRODUCTION", iProduction, pCity->getNameKey()));
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_REMOVE_FEATURE", GC.getFeatureInfo(pMissionPlot->getFeatureType()).getTextKeyWide()));
 					}
-
+					else if (GC.getBuildInfo(eBuild).getFeatureChange() == NO_FEATURE)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NO_PRODUCTION"));
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_REMOVE_FEATURE", GC.getFeatureInfo(pMissionPlot->getFeatureType()).getTextKeyWide()));
+					}
+					else // Slightly nicer ingame UI for replacing features with no chopping return
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CHANGE_FEATURE",
+							GC.getFeatureInfo(pMissionPlot->getFeatureType()).getTextKeyWide(),
+							GC.getFeatureInfo((FeatureTypes)GC.getBuildInfo(eBuild).getFeatureChange()).getTextKeyWide()));
+					}
 				}
 
 				if (eImprovement != NO_IMPROVEMENT)
@@ -3405,23 +3404,26 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						// szBuffer.append(gDLL->getText("TXT_KEY_ACTION_DEFENSE_MODIFIER", GC.getImprovementInfo(eImprovement).getDefenseModifier())); - Original Code
 						// Super Forts end
 					}
-/************************************************************************************************/
-/* Afforess	                  Start		 05/23/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
+					/************************************************************************************************/
+					/* Afforess	                  Start		 05/23/10                                               */
+					/*                                                                                              */
+					/*                                                                                              */
+					/************************************************************************************************/
+					/*
 					if (GC.getImprovementInfo(eImprovement).getImprovementUpgrade() != NO_IMPROVEMENT)
-*/
+					*/
 					if (GET_TEAM(pHeadSelectedUnit->getTeam()).getImprovementUpgrade(eImprovement) != NO_IMPROVEMENT)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+					/************************************************************************************************/
+					/* Afforess	                     END                                                            */
+					/************************************************************************************************/
 					{
 						int iTurns = pMissionPlot->getUpgradeTimeLeft(eImprovement, pHeadSelectedUnit->getOwner());
 
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_BECOMES_IMP", CvWString(GC.getImprovementInfo((ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getType()).GetCString(), GC.getImprovementInfo((ImprovementTypes) GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getTextKeyWide(), iTurns));
+						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_BECOMES_IMP",
+							CvWString(GC.getImprovementInfo((ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getType()).GetCString(),
+							GC.getImprovementInfo((ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getTextKeyWide(),
+							iTurns));
 					}
 				}
 

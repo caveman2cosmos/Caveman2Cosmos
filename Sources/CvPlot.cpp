@@ -2941,7 +2941,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 				return false;
 			}
 
-/* TB Commented out to allow for units to build over current improvements with their upgrads (if the build to do so is defined.)
+			/* TB Commented out to allow for units to build over current improvements with their upgrades (if the build to do so is defined.)
 			ImprovementTypes eFinalImprovementType = finalImprovementUpgrade(getImprovementType());
 
 			if (eFinalImprovementType != NO_IMPROVEMENT
@@ -2949,7 +2949,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 			{
 				return false;
 			}
-*/
+			*/
 		}
 
 		if (!bTestVisible)
@@ -9894,8 +9894,12 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 				}
 			}
 
-			if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
+			if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT &&
+			GC.getBuildInfo(eBuild).getFeatureChange() == NO_FEATURE &&
+			GC.getBuildInfo(eBuild).getTerrainChange() == NO_TERRAIN )
 			{
+				// Anything with FeatureChange/TerrainChange should not be placed as an improvement;
+				// it's only there as a placeholder for the build action itself and the corresponding tag.
 				setImprovementType((ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement());
 			}
 
@@ -9904,26 +9908,26 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 				setRouteType((RouteTypes)GC.getBuildInfo(eBuild).getRoute(), true);
 			}
 
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/13/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+			/************************************************************************************************/
+			/* JOOYO_ADDON, Added by Jooyo, 06/13/09                                                        */
+			/*                                                                                              */
+			/*                                                                                              */
+			/************************************************************************************************/
 			if (GC.getBuildInfo(eBuild).getTerrainChange() != NO_TERRAIN)
 			{
 				setTerrainType ((TerrainTypes) GC.getBuildInfo(eBuild).getTerrainChange());
-				//setImprovementType((ImprovementTypes) -1);
 			}
 
 			if (GC.getBuildInfo(eBuild).getFeatureChange() != NO_FEATURE)
 			{
 				setFeatureType ((FeatureTypes) GC.getBuildInfo(eBuild).getFeatureChange());
-				//setImprovementType((ImprovementTypes) -1);
 			}
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
-			//TB Note: Apparently isFeatureRemove is based entirely on the BUILD definition - changing it to the improvement definition would enable us to restructure where this takes place so that a 'natural' upgrade can have the same effect.
+			/************************************************************************************************/
+			/* JOOYO_ADDON                          END                                                     */
+			/************************************************************************************************/
+			//TB Note: Apparently isFeatureRemove is based entirely on the BUILD definition -
+			// changing it to the improvement definition would enable us to restructure
+			// where this takes place so that a 'natural' upgrade can have the same effect.
 			if (getFeatureType() != NO_FEATURE)
 			{
 				if (GC.getBuildInfo(eBuild).isFeatureRemove(getFeatureType()))
@@ -9950,17 +9954,17 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 
 					setFeatureType(NO_FEATURE);
 
-/************************************************************************************************/
-/* phunny_pharmer                Start		 04/28/10                                           */
-/*   the cache of culture distances should be recomputed now that this feature has been removed */
-/************************************************************************************************/
+					/************************************************************************************************/
+					/* phunny_pharmer                Start		 04/28/10                                           */
+					/*   the cache of culture distances should be recomputed now that this feature has been removed */
+					/************************************************************************************************/
 					if ( pCity != NULL )
 					{
 						pCity->clearCultureDistanceCache();
 					}
-/************************************************************************************************/
-/* phunny_pharmer                    END                                                        */
-/************************************************************************************************/
+					/************************************************************************************************/
+					/* phunny_pharmer                    END                                                        */
+					/************************************************************************************************/
 				}
 			}
 			bFinished = true;
