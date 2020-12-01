@@ -1157,7 +1157,7 @@ public:
 	EventTriggeredData* addEventTriggered();
 	void deleteEventTriggered(int iID);
 	EventTriggeredData* initTriggeredData(EventTriggerTypes eEventTrigger, bool bFire = false, int iCityId = -1, int iPlotX = INVALID_PLOT_COORD, int iPlotY = INVALID_PLOT_COORD, PlayerTypes eOtherPlayer = NO_PLAYER, int iOtherPlayerCityId = -1, ReligionTypes eReligion = NO_RELIGION, CorporationTypes eCorporation = NO_CORPORATION, int iUnitId = -1, BuildingTypes eBuilding = NO_BUILDING);
-	int getEventTriggerWeight(EventTriggerTypes eTrigger) const; // Exposed to python
+	int getEventTriggerWeight(EventTriggerTypes eTrigger) const;
 	bool isEventTriggerPossible(EventTriggerTypes eTrigger, bool bIgnoreActive = false) const;
 
 	DllExport void addMessage(const CvTalkingHeadMessage& message);
@@ -1196,7 +1196,7 @@ public:
 	DllExport const CvString getSmtpHost() const;
 	void setSmtpHost(const char* szHost);
 
-	const EventTriggeredData* getEventOccured(EventTypes eEvent, bool bIncludeExpiredEvents = false) const; // Exposed to python
+	const EventTriggeredData* getEventOccured(EventTypes eEvent, bool bIncludeExpiredEvents = false) const;
 	bool isTriggerFired(EventTriggerTypes eEventTrigger) const;
 	void setEventOccured(EventTypes eEvent, const EventTriggeredData& kEventTriggered, bool bOthers = true);
 	void resetEventOccured(EventTypes eEvent, bool bAnnounce = true);
@@ -1250,7 +1250,7 @@ public:
 	PlayerTypes pickConqueredCityOwner(const CvCity& kCity) const;
 	bool canHaveTradeRoutesWith(PlayerTypes ePlayer) const;
 
-	void forcePeace(PlayerTypes ePlayer); // exposed to Python
+	void forcePeace(PlayerTypes ePlayer);
 
 	bool canSpiesEnterBorders(PlayerTypes ePlayer) const;
 	int getNewCityProductionValue() const;

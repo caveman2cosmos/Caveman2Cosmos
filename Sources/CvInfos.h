@@ -52,10 +52,10 @@ public:
 
 	virtual void reset();
 
-	bool isGraphicalOnly() const; // Exposed to Python
+	bool isGraphicalOnly() const;
 
-	DllExport const TCHAR* getType() const; // Exposed to Python
-	virtual const TCHAR* getButton() const; // Exposed to Python
+	DllExport const TCHAR* getType() const;
+	virtual const TCHAR* getButton() const;
 
 	const wchar_t* getCivilopediaKey() const;
 	const wchar_t* getHelpKey() const;
@@ -63,14 +63,14 @@ public:
 	//const wchar_t* getGenericCategoryKey() const;
 
 	// for python wide string handling
-	std::wstring pyGetTextKey() const		{ return getTextKeyWide(); } // Exposed to Python
-	std::wstring pyGetDescription() const	{ return getDescription(0); } // Exposed to Python
-	std::wstring pyGetDescriptionForm(uint uiForm) const { return getDescription(uiForm); } // Exposed to Python
-	std::wstring pyGetText() const			{ return getText(); } // Exposed to Python
-	std::wstring pyGetCivilopedia() const	{ return getCivilopedia(); } // Exposed to Python
-	std::wstring pyGetHelp() const			{ return getHelp(); } // Exposed to Python
-	std::wstring pyGetStrategy() const		{ return getStrategy(); } // Exposed to Python
-//	std::wstring pyGetGenericCategory()		{ return getGenericCategory(); } // Exposed to Python
+	std::wstring pyGetTextKey() const		{ return getTextKeyWide(); }
+	std::wstring pyGetDescription() const	{ return getDescription(0); }
+	std::wstring pyGetDescriptionForm(uint uiForm) const { return getDescription(uiForm); }
+	std::wstring pyGetText() const			{ return getText(); }
+	std::wstring pyGetCivilopedia() const	{ return getCivilopedia(); }
+	std::wstring pyGetHelp() const			{ return getHelp(); }
+	std::wstring pyGetStrategy() const		{ return getStrategy(); }
+//	std::wstring pyGetGenericCategory()		{ return getGenericCategory(); }
 
 	DllExport const wchar_t* getTextKeyWide() const;
 	DllExport const wchar_t* getDescription(uint uiForm = 0) const;
@@ -135,7 +135,7 @@ public:
 
 protected:
 
-	float m_fScale; // Exposed to Python
+	float m_fScale;
 	float m_fInterfaceScale;	//!< the scale of the unit appearing in the interface screens
 };
 
@@ -169,7 +169,7 @@ public:
 	bool isAltDownAlt() const;
 	bool isShiftDownAlt() const;
 	bool isCtrlDownAlt() const;
-	const TCHAR* getHotKey() const; // Exposed to Python
+	const TCHAR* getHotKey() const;
 	const WCHAR* getHotKeyDescriptionKey() const;
 	const WCHAR* getHotKeyAltDescriptionKey() const;
 	const WCHAR* getHotKeyString() const;
@@ -253,30 +253,30 @@ public:
 	CvSpecialistInfo();
 	virtual ~CvSpecialistInfo();
 
-	int getGreatPeopleUnitType() const; // Exposed to Python
-	int getGreatPeopleRateChange() const; // Exposed to Python
-	int getMissionType() const; // Exposed to Python
+	int getGreatPeopleUnitType() const;
+	int getGreatPeopleRateChange() const;
+	int getMissionType() const;
 	void setMissionType(int iNewType);
 	// Afforess 03/26/10
 	int getHealthPercent() const;
 	int getHappinessPercent() const;
 
-	bool isSlave() const; // Exposed to Python
+	bool isSlave() const;
 
-	int getExperience() const; // Exposed to Python
+	int getExperience() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	bool isVisible() const; // Exposed to Python
+	bool isVisible() const;
 
 	// Arrays
 
-	int getYieldChange(int i) const; // Exposed to Python
-	const int* getYieldChangeArray() const; // Exposed to Python - For Moose - CvWidgetData
-	int getCommerceChange(int i) const; // Exposed to Python
-	int getFlavorValue(int i) const; // Exposed to Python
+	int getYieldChange(int i) const;
+	const int* getYieldChangeArray() const;
+	int getCommerceChange(int i) const;
+	int getFlavorValue(int i) const;
 
-	const TCHAR* getTexture() const; // Exposed to Python
+	const TCHAR* getTexture() const;
 
 	//Team Project (1)
 	//TB Specialist Tags
@@ -314,12 +314,12 @@ protected:
 	// Afforess 03/26/10
 	int m_iHealthPercent;
 	int m_iHappinessPercent;
-	
+
 	int m_iExperience;
 	//TB Specialist Tags
 	int m_iInsidiousness;
 	int m_iInvestigation;
-	
+
 	// Afforess 03/26/10
 	bool m_bSlave;
 
@@ -362,52 +362,52 @@ public:
 	//	Validate tech info da after load (debug only)
 	static void validate();
 
-	int getAdvisorType() const; // Exposed to Python
-	int getAIWeight() const; // Exposed to Python
-	int getAITradeModifier() const; // Exposed to Python
-	int getResearchCost() const; // Exposed to Python
-	int getAdvancedStartCost() const; // Exposed to Python
-	int getAdvancedStartCostIncrease() const; // Exposed to Python
-	int getEra() const; // Exposed to Python
-	int getTradeRoutes() const; // Exposed to Python
-	int getFeatureProductionModifier() const; // Exposed to Python
-	int getWorkerSpeedModifier() const; // Exposed to Python
+	int getAdvisorType() const;
+	int getAIWeight() const;
+	int getAITradeModifier() const;
+	int getResearchCost() const;
+	int getAdvancedStartCost() const;
+	int getAdvancedStartCostIncrease() const;
+	int getEra() const;
+	int getTradeRoutes() const;
+	int getFeatureProductionModifier() const;
+	int getWorkerSpeedModifier() const;
 	//DPII < Maintenance Modifier >
 	int getMaintenanceModifier() const;
 	int getDistanceMaintenanceModifier() const;
 	int getNumCitiesMaintenanceModifier() const;
 	int getCoastalDistanceMaintenanceModifier() const;
 	//DPII < Maintenance Modifier >
-	int getFirstFreeUnit() const; // Exposed to Python
-	int getFirstFreeProphet() const; // Exposed to Python
-	int getHealth() const; // Exposed to Python
-	int getHappiness() const; // Exposed to Python
-	int getFirstFreeTechs() const; // Exposed to Python
-	int getAssetValue() const; // Exposed to Python
-	int getPowerValue() const; // Exposed to Python
+	int getFirstFreeUnit() const;
+	int getFirstFreeProphet() const;
+	int getHealth() const;
+	int getHappiness() const;
+	int getFirstFreeTechs() const;
+	int getAssetValue() const;
+	int getPowerValue() const;
 
-	int getGridX() const; // Exposed to Python
-	int getGridY() const; // Exposed to Python
+	int getGridX() const;
+	int getGridY() const;
 
-	bool isRepeat() const; // Exposed to Python
-	bool isTrade() const; // Exposed to Python
-	bool isDisable() const; // Exposed to Python
-	bool isGoodyTech() const; // Exposed to Python
-	bool isExtraWaterSeeFrom() const; // Exposed to Python
-	bool isMapCentering() const; // Exposed to Python
-	bool isMapVisible() const; // Exposed to Python
-	bool isMapTrading() const; // Exposed to Python
-	bool isTechTrading() const; // Exposed to Python
-	bool isGoldTrading() const; // Exposed to Python
-	bool isOpenBordersTrading() const; // Exposed to Python
-	bool isDefensivePactTrading() const; // Exposed to Python
-	bool isPermanentAllianceTrading() const; // Exposed to Python
-	bool isVassalStateTrading() const; // Exposed to Python
-	bool isBridgeBuilding() const; // Exposed to Python
-	bool isIrrigation() const; // Exposed to Python
-	bool isIgnoreIrrigation() const; // Exposed to Python
-	bool isWaterWork() const; // Exposed to Python
-	bool isRiverTrade() const; // Exposed to Python
+	bool isRepeat() const;
+	bool isTrade() const;
+	bool isDisable() const;
+	bool isGoodyTech() const;
+	bool isExtraWaterSeeFrom() const;
+	bool isMapCentering() const;
+	bool isMapVisible() const;
+	bool isMapTrading() const;
+	bool isTechTrading() const;
+	bool isGoldTrading() const;
+	bool isOpenBordersTrading() const;
+	bool isDefensivePactTrading() const;
+	bool isPermanentAllianceTrading() const;
+	bool isVassalStateTrading() const;
+	bool isBridgeBuilding() const;
+	bool isIrrigation() const;
+	bool isIgnoreIrrigation() const;
+	bool isWaterWork() const;
+	bool isRiverTrade() const;
 
 	bool isCanPassPeaks() const;
 	bool isMoveFastPeaks() const;
@@ -448,20 +448,20 @@ protected:
 public:
 	// Dale - AB: Bombing END
 
-	std::wstring getQuote() const; // Exposed to Python
+	std::wstring getQuote() const;
 	const TCHAR* getQuoteKey() const;
-	const TCHAR* getSound() const; // Exposed to Python
-	const TCHAR* getSoundMP() const; // Exposed to Python
+	const TCHAR* getSound() const;
+	const TCHAR* getSoundMP() const;
 
 	// Arrays
 
-	int getDomainExtraMoves(int i) const; // Exposed to Python
-	int getFlavorValue(int i) const; // Exposed to Python
-	int getPrereqOrTechs(int i) const; // Exposed to Python
-	int getPrereqAndTechs(int i) const; // Exposed to Python
+	int getDomainExtraMoves(int i) const;
+	int getFlavorValue(int i) const;
+	int getPrereqOrTechs(int i) const;
+	int getPrereqAndTechs(int i) const;
 
-	bool isCommerceFlexible(int i) const; // Exposed to Python
-	bool isTerrainTrade(int i) const; // Exposed to Python
+	bool isCommerceFlexible(int i) const;
+	bool isTerrainTrade(int i) const;
 	//ls612: Tech Commerce Modifiers
 	int getCommerceModifier(int i) const;
 	int* getCommerceModifierArray() const;
@@ -581,51 +581,51 @@ public:
 	virtual ~CvPromotionInfo();
 
 	int getLayerAnimationPath() const;
-	int getPrereqPromotion() const; // Exposed to Python
-	int getPrereqOrPromotion1() const; // Exposed to Python
-	int getPrereqOrPromotion2() const; // Exposed to Python
+	int getPrereqPromotion() const;
+	int getPrereqOrPromotion1() const;
+	int getPrereqOrPromotion2() const;
 
-	int getTechPrereq() const; // Exposed to Python
+	int getTechPrereq() const;
 	int getMinEraType() const;
 	int getMaxEraType() const;
-	int getStateReligionPrereq() const; // Exposed to Python
-	int getVisibilityChange() const; // Exposed to Python
-	int getMovesChange() const; // Exposed to Python
-	int getMoveDiscountChange() const; // Exposed to Python
-	int getAirRangeChange() const; // Exposed to Python
-	int getInterceptChange() const; // Exposed to Python
-	int getEvasionChange() const; // Exposed to Python
-	int getWithdrawalChange() const; // Exposed to Python
-	int getCargoChange() const; // Exposed to Python
+	int getStateReligionPrereq() const;
+	int getVisibilityChange() const;
+	int getMovesChange() const;
+	int getMoveDiscountChange() const;
+	int getAirRangeChange() const;
+	int getInterceptChange() const;
+	int getEvasionChange() const;
+	int getWithdrawalChange() const;
+	int getCargoChange() const;
 	int getSMCargoChange() const;
 	int getSMCargoVolumeChange() const;
 	int getSMCargoVolumeModifierChange() const;
-	int getCollateralDamageChange() const; // Exposed to Python
-	int getBombardRateChange() const; // Exposed to Python
-	int getFirstStrikesChange() const; // Exposed to Python
-	int getChanceFirstStrikesChange() const; // Exposed to Python
-	int getEnemyHealChange() const; // Exposed to Python
-	int getNeutralHealChange() const; // Exposed to Python
-	int getFriendlyHealChange() const; // Exposed to Python
-	int getSameTileHealChange() const; // Exposed to Python
-	int getAdjacentTileHealChange() const; // Exposed to Python
-	int getCombatPercent() const; // Exposed to Python
-	int getCityAttackPercent() const; // Exposed to Python
-	int getCityDefensePercent() const; // Exposed to Python
-	int getHillsAttackPercent() const; // Exposed to Python
-	int getHillsDefensePercent() const; // Exposed to Python
+	int getCollateralDamageChange() const;
+	int getBombardRateChange() const;
+	int getFirstStrikesChange() const;
+	int getChanceFirstStrikesChange() const;
+	int getEnemyHealChange() const;
+	int getNeutralHealChange() const;
+	int getFriendlyHealChange() const;
+	int getSameTileHealChange() const;
+	int getAdjacentTileHealChange() const;
+	int getCombatPercent() const;
+	int getCityAttackPercent() const;
+	int getCityDefensePercent() const;
+	int getHillsAttackPercent() const;
+	int getHillsDefensePercent() const;
 	int getHillsWorkPercent() const;
 	//ls612: Work rate modifiers
 	int getWorkRatePercent() const;
-	int getCommandType() const; // Exposed to Python
+	int getCommandType() const;
 	void setCommandType(int iNewType);
 
-	int getRevoltProtection() const; // Exposed to Python
-	int getCollateralDamageProtection() const; // Exposed to Python
-	int getPillageChange() const; // Exposed to Python
-	int getUpgradeDiscount() const; // Exposed to Python
-	int getExperiencePercent() const; // Exposed to Python
-	int getKamikazePercent() const; // Exposed to Python
+	int getRevoltProtection() const;
+	int getCollateralDamageProtection() const;
+	int getPillageChange() const;
+	int getUpgradeDiscount() const;
+	int getExperiencePercent() const;
+	int getKamikazePercent() const;
 /*****************************************************************************************************/
 /**  Author: TheLadiesOgre																		  **/
 /**  Date: 16.09.2009																			   **/
@@ -633,46 +633,46 @@ public:
 /**  Reason Added: New Tag Definition															   **/
 /**  Notes:																						 **/
 /*****************************************************************************************************/
-	int getAirCombatLimitChange() const; // Exposed to Python
-	int getCelebrityHappy() const; // Exposed to Python
-	int getCollateralDamageLimitChange() const; // Exposed to Python
-	int getCollateralDamageMaxUnitsChange() const; // Exposed to Python
-	int getCombatLimitChange() const; // Exposed to Python
-	int getExtraDropRange() const; // Exposed to Python
+	int getAirCombatLimitChange() const;
+	int getCelebrityHappy() const;
+	int getCollateralDamageLimitChange() const;
+	int getCollateralDamageMaxUnitsChange() const;
+	int getCombatLimitChange() const;
+	int getExtraDropRange() const;
 	//Team Project (2)
 	int getSurvivorChance() const;
 	int getVictoryAdjacentHeal() const;
 	//
-	int getVictoryHeal() const; // Exposed to Python
+	int getVictoryHeal() const;
 	//Team Project (2)
 	int getVictoryStackHeal() const;
 	//
-	bool isDefensiveVictoryMove() const; // Exposed to Python
-	bool isFreeDrop() const; // Exposed to Python
-	bool isOffensiveVictoryMove() const; // Exposed to Python
+	bool isDefensiveVictoryMove() const;
+	bool isFreeDrop() const;
+	bool isOffensiveVictoryMove() const;
 	//Team Project (2)
 	bool isOneUp() const;
 	//
-	bool isPillageCulture() const; // Exposed to Python
-	bool isPillageEspionage() const; // Exposed to Python
-	bool isPillageMarauder() const; // Exposed to Python
-	bool isPillageOnMove() const; // Exposed to Python
-	bool isPillageOnVictory() const; // Exposed to Python
-	bool isPillageResearch() const; // Exposed to Python
+	bool isPillageCulture() const;
+	bool isPillageEspionage() const;
+	bool isPillageMarauder() const;
+	bool isPillageOnMove() const;
+	bool isPillageOnVictory() const;
+	bool isPillageResearch() const;
 /*****************************************************************************************************/
 /**  TheLadiesOgre; 16.09.2009; TLOTags															 **/
 /*****************************************************************************************************/
 
-	bool isLeader() const; // Exposed to Python
-	bool isBlitz() const; // Exposed to Python
-	bool isAmphib() const; // Exposed to Python
-	bool isRiver() const; // Exposed to Python
-	bool isEnemyRoute() const; // Exposed to Python
-	bool isAlwaysHeal() const; // Exposed to Python
-	bool isHillsDoubleMove() const; // Exposed to Python
-	bool isImmuneToFirstStrikes() const; // Exposed to Python
+	bool isLeader() const;
+	bool isBlitz() const;
+	bool isAmphib() const;
+	bool isRiver() const;
+	bool isEnemyRoute() const;
+	bool isAlwaysHeal() const;
+	bool isHillsDoubleMove() const;
+	bool isImmuneToFirstStrikes() const;
 
-	const TCHAR* getSound() const; // Exposed to Python
+	const TCHAR* getSound() const;
 
 	bool changesMoveThroughPlots() const;
 	//	This really belongs on CvInfoBase but you can't change the size of that
@@ -681,25 +681,25 @@ public:
 
 	// Arrays
 
-	int getTerrainAttackPercent(int i) const; // Exposed to Python
+	int getTerrainAttackPercent(int i) const;
 	bool isAnyTerrainAttackPercent() const;
-	int getTerrainDefensePercent(int i) const; // Exposed to Python
+	int getTerrainDefensePercent(int i) const;
 	bool isAnyTerrainDefensePercent() const;
-	int getFeatureAttackPercent(int i) const; // Exposed to Python
+	int getFeatureAttackPercent(int i) const;
 	bool isAnyFeatureAttackPercent() const;
-	int getFeatureDefensePercent(int i) const; // Exposed to Python
+	int getFeatureDefensePercent(int i) const;
 	bool isAnyFeatureDefensePercent() const;
-	int getUnitCombatModifierPercent(int i) const; // Exposed to Python
+	int getUnitCombatModifierPercent(int i) const;
 	bool isAnyUnitCombatModifierPercent() const;
-	int getDomainModifierPercent(int i) const; // Exposed to Python
+	int getDomainModifierPercent(int i) const;
 	bool isAnyDomainModifierPercent() const;
 	//ls612: Terrain Work Modifiers
 	int getTerrainWorkPercent(int i) const;
 	int getFeatureWorkPercent(int i) const;
 
-	bool getTerrainDoubleMove(int i) const; // Exposed to Python
-	bool getFeatureDoubleMove(int i) const; // Exposed to Python
-	bool getUnitCombat(int i) const; // Exposed to Python
+	bool getTerrainDoubleMove(int i) const;
+	bool getFeatureDoubleMove(int i) const;
+	bool getUnitCombat(int i) const;
 
 /************************************************************************************************/
 /* Afforess					  Start		 12/9/09												*/
@@ -1495,12 +1495,12 @@ public:
 	explicit CvMissionInfo(const char* szType);
 	virtual ~CvMissionInfo();
 
-	DllExport int getTime() const; // Exposed to Python
+	DllExport int getTime() const;
 
-	bool isSound() const; // Exposed to Python
-	DllExport bool isTarget() const; // Exposed to Python
-	bool isBuild() const; // Exposed to Python
-	bool getVisible() const; // Exposed to Python
+	bool isSound() const;
+	DllExport bool isTarget() const;
+	bool isBuild() const;
+	bool getVisible() const;
 	DllExport EntityEventTypes getEntityEvent() const;
 
 	const TCHAR* getWaypoint() const;		// effect type, Exposed to Python
@@ -1634,19 +1634,19 @@ public:
 	CvActionInfo();
 	virtual ~CvActionInfo();
 
-	int getMissionData() const; // Exposed to Python
-	int getCommandData() const; // Exposed to Python
+	int getMissionData() const;
+	int getCommandData() const;
 
 	int getAutomateType() const;
-	int getInterfaceModeType() const; // Exposed to Python
-	int getMissionType() const; // Exposed to Python
-	int getCommandType() const; // Exposed to Python
-	int getControlType() const; // Exposed to Python
+	int getInterfaceModeType() const;
+	int getMissionType() const;
+	int getCommandType() const;
+	int getControlType() const;
 	int getOriginalIndex() const;
 	void setOriginalIndex(int i) { m_iOriginalIndex = i; }
 
-	bool isConfirmCommand() const; // Exposed to Python
-	DllExport bool isVisible() const; // Exposed to Python
+	bool isConfirmCommand() const;
+	DllExport bool isVisible() const;
 	DllExport ActionSubTypes getSubType() const;
 	void setSubType(ActionSubTypes eSubType) { m_eSubType = eSubType; }
 
@@ -1675,9 +1675,9 @@ public:
 	DllExport bool isShiftDownAlt() const;
 	DllExport bool isCtrlDownAlt() const;
 
-	const TCHAR* getHotKey() const; // Exposed to Python
+	const TCHAR* getHotKey() const;
 
-	std::wstring getHotKeyDescription() const; // Exposed to Python
+	std::wstring getHotKeyDescription() const;
 
 //----------------------PROTECTED MEMBER VARIABLES----------------------------
 
@@ -1706,146 +1706,146 @@ public:
 	CvUnitInfo();
 	virtual ~CvUnitInfo();
 
-	int getMaxGlobalInstances() const; // Exposed to Python
-	int getMaxPlayerInstances() const; // Exposed to Python
-	bool isUnlimitedException() const; // Exposed to Python
+	int getMaxGlobalInstances() const;
+	int getMaxPlayerInstances() const;
+	bool isUnlimitedException() const;
 	bool isCivilizationUnit(const PlayerTypes ePlayer=NO_PLAYER) const;
 
-	int getInstanceCostModifier() const; // Exposed to Python
-	int getAIWeight() const; // Exposed to Python
-	int getProductionCost() const; // Exposed to Python
-	int getHurryCostModifier() const; // Exposed to Python
-	int getAdvancedStartCost() const; // Exposed to Python
-	int getAdvancedStartCostIncrease() const; // Exposed to Python
-	int getMinAreaSize() const; // Exposed to Python
-	int getMoves() const; // Exposed to Python
-	int getAirRange() const; // Exposed to Python
-	int getAirUnitCap() const; // Exposed to Python
-	int getDropRange() const; // Exposed to Python
-	int getNukeRange() const; // Exposed to Python
-	int getWorkRate() const; // Exposed to Python
-	int getBaseDiscover() const; // Exposed to Python
-	int getDiscoverMultiplier() const; // Exposed to Python
-	int getBaseHurry() const; // Exposed to Python
-	int getHurryMultiplier() const; // Exposed to Python
-	int getBaseTrade() const; // Exposed to Python
-	int getTradeMultiplier() const; // Exposed to Python
-	int getGreatWorkCulture() const; // Exposed to Python
-	int getEspionagePoints() const; // Exposed to Python
-	int getCombat() const; // Exposed to Python
+	int getInstanceCostModifier() const;
+	int getAIWeight() const;
+	int getProductionCost() const;
+	int getHurryCostModifier() const;
+	int getAdvancedStartCost() const;
+	int getAdvancedStartCostIncrease() const;
+	int getMinAreaSize() const;
+	int getMoves() const;
+	int getAirRange() const;
+	int getAirUnitCap() const;
+	int getDropRange() const;
+	int getNukeRange() const;
+	int getWorkRate() const;
+	int getBaseDiscover() const;
+	int getDiscoverMultiplier() const;
+	int getBaseHurry() const;
+	int getHurryMultiplier() const;
+	int getBaseTrade() const;
+	int getTradeMultiplier() const;
+	int getGreatWorkCulture() const;
+	int getEspionagePoints() const;
+	int getCombat() const;
 
-	void setCombat(int iNum); // Exposed to Python
-	int getCombatLimit() const; // Exposed to Python
+	void setCombat(int iNum);
+	int getCombatLimit() const;
 	//TB Tweaked for Size Matters
-	int getAirCombat() const; // Exposed to Python
+	int getAirCombat() const;
 
-	int getAirCombatLimit() const; // Exposed to Python
-	int getXPValueAttack() const; // Exposed to Python
-	int getXPValueDefense() const; // Exposed to Python
-	int getFirstStrikes() const; // Exposed to Python
-	int getChanceFirstStrikes() const; // Exposed to Python
-	int getInterceptionProbability() const; // Exposed to Python
+	int getAirCombatLimit() const;
+	int getXPValueAttack() const;
+	int getXPValueDefense() const;
+	int getFirstStrikes() const;
+	int getChanceFirstStrikes() const;
+	int getInterceptionProbability() const;
 	//ls612: Advanced Nuke Interception
 	//int getNukeInterceptionProbability() const;
 	//int getNukeInterceptionRange() const;
-	int getEvasionProbability() const; // Exposed to Python
-	int getWithdrawalProbability() const; // Exposed to Python
-	int getCollateralDamage() const; // Exposed to Python
-	int getCollateralDamageLimit() const; // Exposed to Python
-	int getCollateralDamageMaxUnits() const; // Exposed to Python
-	int getCityAttackModifier() const; // Exposed to Python
-	int getCityDefenseModifier() const; // Exposed to Python
-	int getAnimalCombatModifier() const; // Exposed to Python
-	int getHillsAttackModifier() const; // Exposed to Python
-	int getHillsDefenseModifier() const; // Exposed to Python
-	int getBombRate() const; // Exposed to Python
-	int getBombardRate() const; // Exposed to Python
-	int getSpecialCargo() const; // Exposed to Python
+	int getEvasionProbability() const;
+	int getWithdrawalProbability() const;
+	int getCollateralDamage() const;
+	int getCollateralDamageLimit() const;
+	int getCollateralDamageMaxUnits() const;
+	int getCityAttackModifier() const;
+	int getCityDefenseModifier() const;
+	int getAnimalCombatModifier() const;
+	int getHillsAttackModifier() const;
+	int getHillsDefenseModifier() const;
+	int getBombRate() const;
+	int getBombardRate() const;
+	int getSpecialCargo() const;
 	int getSMSpecialCargo() const;
 	int getSMNotSpecialCargo() const;
-	int getDomainCargo() const; // Exposed to Python
-	int getCargoSpace() const; // Exposed to Python
+	int getDomainCargo() const;
+	int getCargoSpace() const;
 	int getSMCargoSpace() const;
 	int getSMCargoVolume() const;
-	int getConscriptionValue() const; // Exposed to Python
-	int getCultureGarrisonValue() const; // Exposed to Python
-	int getBaseUpkeep() const; // Exposed to Python
-	int getAssetValue() const; // Exposed to Python
-	int getPowerValue() const; // Exposed to Python
-	int getSpecialUnitType() const; // Exposed to Python
-	int getUnitCaptureType() const; // Exposed to Python
-	int getUnitCombatType() const; // Exposed to Python
-	int getDomainType() const; // Exposed to Python
-	int getDefaultUnitAIType() const; // Exposed to Python
-	int getInvisibleType() const; // Exposed to Python
-	int getSeeInvisibleType(int i) const; // Exposed to Python
-	int getNumSeeInvisibleTypes() const; // Exposed to Python
-	int getAdvisorType() const; // Exposed to Python
-	int getMaxStartEra() const; // Exposed to Python
-	int getForceObsoleteTech() const; // Exposed to Python
-	bool isStateReligion() const; // Exposed to Python
-	int getPrereqGameOption() const; // Exposed to Python
-	int getNotGameOption() const; // Exposed to Python
-	int getHolyCity() const; // Exposed to Python
-	int getReligionType() const; // Exposed to Python
-	int getStateReligion() const; // Exposed to Python
-	int getPrereqReligion() const; // Exposed to Python
-	int getPrereqCorporation() const; // Exposed to Python
-	int getPrereqOrBuildingsNum() const; // Exposed to Python
-	BuildingTypes getPrereqOrBuilding(int i) const; // Exposed to Python
-	int getPrereqAndTech() const; // Exposed to Python
-	int getPrereqAndBonus() const; // Exposed to Python
+	int getConscriptionValue() const;
+	int getCultureGarrisonValue() const;
+	int getBaseUpkeep() const;
+	int getAssetValue() const;
+	int getPowerValue() const;
+	int getSpecialUnitType() const;
+	int getUnitCaptureType() const;
+	int getUnitCombatType() const;
+	int getDomainType() const;
+	int getDefaultUnitAIType() const;
+	int getInvisibleType() const;
+	int getSeeInvisibleType(int i) const;
+	int getNumSeeInvisibleTypes() const;
+	int getAdvisorType() const;
+	int getMaxStartEra() const;
+	int getForceObsoleteTech() const;
+	bool isStateReligion() const;
+	int getPrereqGameOption() const;
+	int getNotGameOption() const;
+	int getHolyCity() const;
+	int getReligionType() const;
+	int getStateReligion() const;
+	int getPrereqReligion() const;
+	int getPrereqCorporation() const;
+	int getPrereqOrBuildingsNum() const;
+	BuildingTypes getPrereqOrBuilding(int i) const;
+	int getPrereqAndTech() const;
+	int getPrereqAndBonus() const;
 	// the initial number of individuals in the unit group
-	int getGroupSize() const; // Exposed to Python
+	int getGroupSize() const;
 	// the number of UnitMeshGroups for this unit
-	int getGroupDefinitions() const; // Exposed to Python
-	int getMeleeWaveSize() const; // Exposed to Python
-	int getRangedWaveSize() const; // Exposed to Python
-	int getNumUnitNames() const; // Exposed to Python
-	int getCommandType() const; // Exposed to Python
+	int getGroupDefinitions() const;
+	int getMeleeWaveSize() const;
+	int getRangedWaveSize() const;
+	int getNumUnitNames() const;
+	int getCommandType() const;
 	void setCommandType(int iNewType);
 	//	This really belongs on CvInfoBase but you can't change the size of that
 	//	object without crashing the core engine :-(
 	inline int	getZobristValue() const { return m_zobristValue; }
 
-	bool isFoodProduction() const; // Exposed to Python
-	bool isNoBadGoodies() const; // Exposed to Python
-	bool isOnlyDefensive() const; // Exposed to Python
-	bool isNoCapture() const; // Exposed to Python
-	bool isQuickCombat() const; // Exposed to Python
-	bool isRivalTerritory() const; // Exposed to Python
-	bool isMilitaryHappiness() const; // Exposed to Python
-	bool isMilitarySupport() const; // Exposed to Python
-	bool isMilitaryProduction() const; // Exposed to Python
-	bool isPillage() const; // Exposed to Python
-	bool isSpy() const; // Exposed to Python
-	bool isSabotage() const; // Exposed to Python
-	bool isDestroy() const; // Exposed to Python
-	bool isStealPlans() const; // Exposed to Python
-	bool isInvestigate() const; // Exposed to Python
-	bool isCounterSpy() const; // Exposed to Python
-	bool isFound() const; // Exposed to Python
-	bool isGoldenAge() const; // Exposed to Python
-	bool isInvisible() const; // Exposed to Python
-	void setInvisible(bool bEnable) ; // Exposed to Python
-	bool isFirstStrikeImmune() const; // Exposed to Python
-	bool isNoDefensiveBonus() const; // Exposed to Python
-	bool isIgnoreBuildingDefense() const; // Exposed to Python
-	bool isCanMoveImpassable() const; // Exposed to Python
-	bool isCanMoveAllTerrain() const; // Exposed to Python
-	bool isFlatMovementCost() const; // Exposed to Python
-	bool isIgnoreTerrainCost() const; // Exposed to Python
-	bool isNukeImmune() const; // Exposed to Python
-	bool isMechUnit() const; // Exposed to Python
-	bool isRenderBelowWater() const; // Exposed to Python
-	bool isRenderAlways() const; // Exposed to Python
-	bool isSuicide() const; // Exposed to Python
-	bool isLineOfSight() const; // Exposed to Python
-	bool isHiddenNationality() const; // Exposed to Python
-	bool isAlwaysHostile() const; // Exposed to Python
-	bool isFreeDrop() const; // Exposed to Python
-	bool isNoRevealMap() const; // Exposed to Python
-	bool isInquisitor() const; // Exposed to Python
+	bool isFoodProduction() const;
+	bool isNoBadGoodies() const;
+	bool isOnlyDefensive() const;
+	bool isNoCapture() const;
+	bool isQuickCombat() const;
+	bool isRivalTerritory() const;
+	bool isMilitaryHappiness() const;
+	bool isMilitarySupport() const;
+	bool isMilitaryProduction() const;
+	bool isPillage() const;
+	bool isSpy() const;
+	bool isSabotage() const;
+	bool isDestroy() const;
+	bool isStealPlans() const;
+	bool isInvestigate() const;
+	bool isCounterSpy() const;
+	bool isFound() const;
+	bool isGoldenAge() const;
+	bool isInvisible() const;
+	void setInvisible(bool bEnable) ;
+	bool isFirstStrikeImmune() const;
+	bool isNoDefensiveBonus() const;
+	bool isIgnoreBuildingDefense() const;
+	bool isCanMoveImpassable() const;
+	bool isCanMoveAllTerrain() const;
+	bool isFlatMovementCost() const;
+	bool isIgnoreTerrainCost() const;
+	bool isNukeImmune() const;
+	bool isMechUnit() const;
+	bool isRenderBelowWater() const;
+	bool isRenderAlways() const;
+	bool isSuicide() const;
+	bool isLineOfSight() const;
+	bool isHiddenNationality() const;
+	bool isAlwaysHostile() const;
+	bool isFreeDrop() const;
+	bool isNoRevealMap() const;
+	bool isInquisitor() const;
 	//ls612: Can't enter non-Owned cities
 	bool isNoNonOwnedEntry() const;
 
@@ -1862,13 +1862,13 @@ public:
 	int getBaseFoodChange() const;
 	int getControlPoints() const;
 	int getCommandRange() const;
-	const TCHAR* getClassicalArtDefineTag(int i, UnitArtStyleTypes eStyle) const; // Exposed to Python
+	const TCHAR* getClassicalArtDefineTag(int i, UnitArtStyleTypes eStyle) const;
 	void setClassicalArtDefineTag(int i, const TCHAR* szVal);
-	const TCHAR* getRennArtDefineTag(int i, UnitArtStyleTypes eStyle) const; // Exposed to Python
+	const TCHAR* getRennArtDefineTag(int i, UnitArtStyleTypes eStyle) const;
 	void setRennArtDefineTag(int i, const TCHAR* szVal);
-	const TCHAR* getIndustrialArtDefineTag(int i, UnitArtStyleTypes eStyle) const; // Exposed to Python
+	const TCHAR* getIndustrialArtDefineTag(int i, UnitArtStyleTypes eStyle) const;
 	void setIndustrialArtDefineTag(int i, const TCHAR* szVal);
-	const TCHAR* getFutureArtDefineTag(int i, UnitArtStyleTypes eStyle) const; // Exposed to Python
+	const TCHAR* getFutureArtDefineTag(int i, UnitArtStyleTypes eStyle) const;
 	void setFutureArtDefineTag(int i, const TCHAR* szVal);
 
 	CvWString getCivilizationName(int i) const;
@@ -2247,33 +2247,33 @@ public:
 	bool isCannotDefect() const;
 	bool isCanQuellRebellion() const;
 
-	float getUnitMaxSpeed() const; // Exposed to Python
-	float getUnitPadTime() const; // Exposed to Python
+	float getUnitMaxSpeed() const;
+	float getUnitPadTime() const;
 
-	bool canAcquireExperience() const; // Exposed to Python
+	bool canAcquireExperience() const;
 
 	// Arrays
-	int getPrereqAndTechs(int i) const; // Exposed to Python
-	int getPrereqOrBonuses(int i) const; // Exposed to Python
-	int getFlavorValue(int i) const; // Exposed to Python
-	int getTerrainAttackModifier(int i) const; // Exposed to Python
-	int getTerrainDefenseModifier(int i) const; // Exposed to Python
-	int getFeatureAttackModifier(int i) const; // Exposed to Python
-	int getFeatureDefenseModifier(int i) const; // Exposed to Python
-	int getUnitAttackModifier(int i) const; // Exposed to Python
-	int getUnitDefenseModifier(int i) const; // Exposed to Python
-	int getUnitCombatModifier(int i) const; // Exposed to Python
-	int getUnitCombatCollateralImmune(int i) const; // Exposed to Python
-	int getDomainModifier(int i) const; // Exposed to Python
-	int getBonusProductionModifier(int i) const; // Exposed to Python
-	int getUnitGroupRequired(int i) const; // Exposed to Python
-	int getReligionSpreads(int i) const; // Exposed to Python
-	int getCorporationSpreads(int i) const; // Exposed to Python
-	int getTerrainPassableTech(int i) const; // Exposed to Python
-	int getFeaturePassableTech(int i) const; // Exposed to Python
-	int getFlankingStrikeUnit(int i) const; // Exposed to Python
+	int getPrereqAndTechs(int i) const;
+	int getPrereqOrBonuses(int i) const;
+	int getFlavorValue(int i) const;
+	int getTerrainAttackModifier(int i) const;
+	int getTerrainDefenseModifier(int i) const;
+	int getFeatureAttackModifier(int i) const;
+	int getFeatureDefenseModifier(int i) const;
+	int getUnitAttackModifier(int i) const;
+	int getUnitDefenseModifier(int i) const;
+	int getUnitCombatModifier(int i) const;
+	int getUnitCombatCollateralImmune(int i) const;
+	int getDomainModifier(int i) const;
+	int getBonusProductionModifier(int i) const;
+	int getUnitGroupRequired(int i) const;
+	int getReligionSpreads(int i) const;
+	int getCorporationSpreads(int i) const;
+	int getTerrainPassableTech(int i) const;
+	int getFeaturePassableTech(int i) const;
+	int getFlankingStrikeUnit(int i) const;
 
-	bool isPrereqOrCivics(int i) const; // Exposed to Python
+	bool isPrereqOrCivics(int i) const;
 
 	int CvUnitInfo::getPrereqAndBuilding(int i) const;
 	int CvUnitInfo::getNumPrereqAndBuildings() const;
@@ -2298,24 +2298,24 @@ public:
 	std::vector<int> getUnitUpgradeChain() const;
 	void CvUnitInfo::addUnitToUpgradeChain(int i);
 
-	bool getTargetUnitCombat(int i) const; // Exposed to Python
-	bool getDefenderUnitCombat(int i) const; // Exposed to Python
-	bool getUnitAIType(int i) const; // Exposed to Python
-	bool getNotUnitAIType(int i) const; // Exposed to Python
-	bool getBuilds(int i) const; // Exposed to Python
-	bool getGreatPeoples(int i) const; // Exposed to Python
+	bool getTargetUnitCombat(int i) const;
+	bool getDefenderUnitCombat(int i) const;
+	bool getUnitAIType(int i) const;
+	bool getNotUnitAIType(int i) const;
+	bool getBuilds(int i) const;
+	bool getGreatPeoples(int i) const;
 
-	int getBuildings(int i) const; // Exposed to Python
-	bool getHasBuilding(int i) const; // Exposed to Python
+	int getBuildings(int i) const;
+	bool getHasBuilding(int i) const;
 	int getNumBuildings() const;
 
-	//bool getTerrainImpassable(int i) const; // Exposed to Python
-	//bool getFeatureImpassable(int i) const; // Exposed to Python
-	bool getTerrainNative(int i) const; // Exposed to Python
-	bool getFeatureNative(int i) const; // Exposed to Python
-	bool getFreePromotions(int i) const; // Exposed to Python
-	int getLeaderPromotion() const; // Exposed to Python
-	int getLeaderExperience() const; // Exposed to Python
+	//bool getTerrainImpassable(int i) const;
+	//bool getFeatureImpassable(int i) const;
+	bool getTerrainNative(int i) const;
+	bool getFeatureNative(int i) const;
+	bool getFreePromotions(int i) const;
+	int getLeaderPromotion() const;
+	int getLeaderExperience() const;
 
 	const CvOutcomeList* getKillOutcomeList() const;
 	int getNumActionOutcomes() const;
@@ -2325,11 +2325,11 @@ public:
 	const CvOutcomeMission* getOutcomeMission(int index) const;
 	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
 
-	const TCHAR* getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const; // Exposed to Python
+	const TCHAR* getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const;
 	void setEarlyArtDefineTag(int i, const TCHAR* szVal);
-	const TCHAR* getLateArtDefineTag(int i, UnitArtStyleTypes eStyle) const; // Exposed to Python
+	const TCHAR* getLateArtDefineTag(int i, UnitArtStyleTypes eStyle) const;
 	void setLateArtDefineTag(int i, const TCHAR* szVal);
-	const TCHAR* getMiddleArtDefineTag(int i, UnitArtStyleTypes eStyle) const; // Exposed to Python
+	const TCHAR* getMiddleArtDefineTag(int i, UnitArtStyleTypes eStyle) const;
 	void setMiddleArtDefineTag(int i, const TCHAR* szVal);
 	const TCHAR* getUnitNames(int i) const;
 	const TCHAR* getFormationType() const;
@@ -2829,7 +2829,7 @@ public:
 	{
 	}
 
-	CvUnitEntry(const NiPoint2 &position, float radius, float facingDirection, float facingVariance) 
+	CvUnitEntry(const NiPoint2 &position, float radius, float facingDirection, float facingVariance)
 		: m_position(position)
 		, m_fRadius(radius)
 		, m_fFacingDirection(facingDirection)
@@ -2901,7 +2901,7 @@ public:
 
 	// Arrays
 
-	bool isCarrierUnitAIType(int i) const; // Exposed to Python
+	bool isCarrierUnitAIType(int i) const;
 
 	int getCombatPercent() const;
 	int getWithdrawalChange() const;
@@ -2945,7 +2945,7 @@ public:
 	CvCivicOptionInfo();
 	virtual ~CvCivicOptionInfo();
 
-//	bool getTraitNoUpkeep(int i) const; // Exposed to Python
+//	bool getTraitNoUpkeep(int i) const;
 	bool isPolicy() const;
 
 	bool read(CvXMLLoadUtility* pXML);
@@ -2975,48 +2975,48 @@ public:
 	CvCivicInfo();
 	virtual ~CvCivicInfo();
 
-	std::wstring pyGetWeLoveTheKing() const { return getWeLoveTheKing(); } // Exposed to Python
+	std::wstring pyGetWeLoveTheKing() const { return getWeLoveTheKing(); }
 	const wchar_t* getWeLoveTheKing() const;
 	const wchar_t* getWeLoveTheKingKey() const;
 
-	int getCivicOptionType() const; // Exposed to Python
-	int getAnarchyLength() const; // Exposed to Python
-	int getUpkeep() const; // Exposed to Python
-	int getAIWeight() const; // Exposed to Python
-	int getGreatPeopleRateModifier() const; // Exposed to Python
-	int getGreatGeneralRateModifier() const; // Exposed to Python
-	int getDomesticGreatGeneralRateModifier() const; // Exposed to Python
-	int getStateReligionGreatPeopleRateModifier() const; // Exposed to Python
-	int getDistanceMaintenanceModifier() const; // Exposed to Python
-	int getNumCitiesMaintenanceModifier() const; // Exposed to Python
+	int getCivicOptionType() const;
+	int getAnarchyLength() const;
+	int getUpkeep() const;
+	int getAIWeight() const;
+	int getGreatPeopleRateModifier() const;
+	int getGreatGeneralRateModifier() const;
+	int getDomesticGreatGeneralRateModifier() const;
+	int getStateReligionGreatPeopleRateModifier() const;
+	int getDistanceMaintenanceModifier() const;
+	int getNumCitiesMaintenanceModifier() const;
 	int getHomeAreaMaintenanceModifier() const;
 	int getOtherAreaMaintenanceModifier() const;
-	int getCorporationMaintenanceModifier() const; // Exposed to Python
-	int getExtraHealth() const; // Exposed to Python
-	int getFreeExperience() const; // Exposed to Python
-	int getWorkerSpeedModifier() const; // Exposed to Python
-	int getImprovementUpgradeRateModifier() const; // Exposed to Python
-	int getMilitaryProductionModifier() const; // Exposed to Python
-	int getFreeUnitUpkeepCivilian() const; // Exposed to Python
-	int getFreeUnitUpkeepMilitary() const; // Exposed to Python
-	int getFreeUnitUpkeepCivilianPopPercent() const; // Exposed to Python
-	int getFreeUnitUpkeepMilitaryPopPercent() const; // Exposed to Python
+	int getCorporationMaintenanceModifier() const;
+	int getExtraHealth() const;
+	int getFreeExperience() const;
+	int getWorkerSpeedModifier() const;
+	int getImprovementUpgradeRateModifier() const;
+	int getMilitaryProductionModifier() const;
+	int getFreeUnitUpkeepCivilian() const;
+	int getFreeUnitUpkeepMilitary() const;
+	int getFreeUnitUpkeepCivilianPopPercent() const;
+	int getFreeUnitUpkeepMilitaryPopPercent() const;
 	int getCivilianUnitUpkeepMod() const;
 	int getMilitaryUnitUpkeepMod() const;
-	int getHappyPerMilitaryUnit() const; // Exposed to Python
-	int getLargestCityHappiness() const; // Exposed to Python
-	int getWarWearinessModifier() const; // Exposed to Python
-	int getFreeSpecialist() const; // Exposed to Python
-	int getTradeRoutes() const; // Exposed to Python
-	int getTechPrereq() const; // Exposed to Python
-	int getCivicPercentAnger() const; // Exposed to Python
-	int getMaxConscript() const; // Exposed to Python
-	int getStateReligionHappiness() const; // Exposed to Python
-	int getNonStateReligionHappiness() const; // Exposed to Python
-	int getStateReligionUnitProductionModifier() const; // Exposed to Python
-	int getStateReligionBuildingProductionModifier() const; // Exposed to Python
-	int getStateReligionFreeExperience() const; // Exposed to Python
-	int getExpInBorderModifier() const; // Exposed to Python
+	int getHappyPerMilitaryUnit() const;
+	int getLargestCityHappiness() const;
+	int getWarWearinessModifier() const;
+	int getFreeSpecialist() const;
+	int getTradeRoutes() const;
+	int getTechPrereq() const;
+	int getCivicPercentAnger() const;
+	int getMaxConscript() const;
+	int getStateReligionHappiness() const;
+	int getNonStateReligionHappiness() const;
+	int getStateReligionUnitProductionModifier() const;
+	int getStateReligionBuildingProductionModifier() const;
+	int getStateReligionFreeExperience() const;
+	int getExpInBorderModifier() const;
 	int getRevIdxLocal() const;
 	int getRevIdxNational() const;
 	int getRevIdxDistanceModifier() const;
@@ -3060,14 +3060,14 @@ public:
 	bool isCommunism() const;
 	bool isFreeSpeech() const;
 	bool isCanDoElection() const;
-	bool isMilitaryFoodProduction() const; // Exposed to Python
-	bool isNoUnhealthyPopulation() const; // Exposed to Python
-	bool isBuildingOnlyHealthy() const; // Exposed to Python
-	bool isNoForeignTrade() const; // Exposed to Python
-	bool isNoCorporations() const; // Exposed to Python
-	bool isNoForeignCorporations() const; // Exposed to Python
-	bool isStateReligion() const; // Exposed to Python
-	bool isNoNonStateReligionSpread() const; // Exposed to Python
+	bool isMilitaryFoodProduction() const;
+	bool isNoUnhealthyPopulation() const;
+	bool isBuildingOnlyHealthy() const;
+	bool isNoForeignTrade() const;
+	bool isNoCorporations() const;
+	bool isNoForeignCorporations() const;
+	bool isStateReligion() const;
+	bool isNoNonStateReligionSpread() const;
 	bool IsFixedBorders() const;
 	bool isNoCapitalUnhappiness() const;
 	bool isNoLandmarkAnger() const;
@@ -3079,17 +3079,17 @@ public:
 
 	// Arrays
 
-	int getYieldModifier(int i) const; // Exposed to Python
+	int getYieldModifier(int i) const;
 	int* getYieldModifierArray() const;
-	int getCapitalYieldModifier(int i) const; // Exposed to Python
+	int getCapitalYieldModifier(int i) const;
 	int* getCapitalYieldModifierArray() const;
-	int getTradeYieldModifier(int i) const; // Exposed to Python
+	int getTradeYieldModifier(int i) const;
 	int* getTradeYieldModifierArray() const;
-	int getCommerceModifier(int i) const; // Exposed to Python
+	int getCommerceModifier(int i) const;
 	int* getCommerceModifierArray() const;
-	int getCapitalCommerceModifier(int i) const; // Exposed to Python
+	int getCapitalCommerceModifier(int i) const;
 	int* getCapitalCommerceModifierArray() const;
-	int getSpecialistExtraCommerce(int i) const; // Exposed to Python
+	int getSpecialistExtraCommerce(int i) const;
 	int* getSpecialistExtraCommerceArray() const;
 	int getCivicAttitudeChange(int i) const;
 	int* getCivicAttitudeChanges() const;
@@ -3099,11 +3099,11 @@ public:
 	int getBonusCommerceModifier(int i, int j) const;
 	int* getBonusCommerceModifierArray(int i) const;
 
-	int getBuildingHappinessChanges(int i) const; // Exposed to Python
-	int getBuildingHealthChanges(int i) const; // Exposed to Python
+	int getBuildingHappinessChanges(int i) const;
+	int getBuildingHealthChanges(int i) const;
 	int getFeatureHappinessChanges(int i) const;
 	int getBonusMintedPercent(int i) const;
-	int getFreeSpecialistCount(int i) const; // Exposed to Python
+	int getFreeSpecialistCount(int i) const;
 	int getFlavorValue(int i) const;
 	int getUnitCombatProductionModifier(int i) const;
 	int getBuildingProductionModifier(int i) const;
@@ -3111,11 +3111,11 @@ public:
 	int getImprovementHappinessChanges(int i) const;
 	int getImprovementHealthPercentChanges(int i) const;
 
-	bool isHurry(int i) const; // Exposed to Python
-	bool isSpecialBuildingNotRequired(int i) const; // Exposed to Python
-	bool isSpecialistValid(int i) const; // Exposed to Python
+	bool isHurry(int i) const;
+	bool isSpecialBuildingNotRequired(int i) const;
+	bool isSpecialistValid(int i) const;
 
-	int getImprovementYieldChanges(int i, int j) const; // Exposed to Python
+	int getImprovementYieldChanges(int i, int j) const;
 	int getTerrainYieldChanges(int i, int j) const;
 	int getBuildingCommerceModifier(int i, int j) const;
 	int getBuildingCommerceChange(int i, int j) const;
@@ -3319,17 +3319,17 @@ public:
 
 	void uninit();
 
-	const CvDiplomacyResponse& getResponse(int iNum) const; // Exposed to Python
-	int getNumResponses() const; // Exposed to Python
+	const CvDiplomacyResponse& getResponse(int iNum) const;
+	int getNumResponses() const;
 
-	bool getCivilizationTypes(int i, int j) const; // Exposed to Python
-	bool getLeaderHeadTypes(int i, int j) const; // Exposed to Python
-	bool getAttitudeTypes(int i, int j) const; // Exposed to Python
-	bool getDiplomacyPowerTypes(int i, int j) const; // Exposed to Python
+	bool getCivilizationTypes(int i, int j) const;
+	bool getLeaderHeadTypes(int i, int j) const;
+	bool getAttitudeTypes(int i, int j) const;
+	bool getDiplomacyPowerTypes(int i, int j) const;
 
-	int getNumDiplomacyText(int i) const; // Exposed to Python
+	int getNumDiplomacyText(int i) const;
 
-	const TCHAR* getDiplomacyText(int i, int j) const; // Exposed to Python
+	const TCHAR* getDiplomacyText(int i, int j) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvXMLLoadUtility* pXML);
@@ -3356,12 +3356,12 @@ public:
 	CvSpecialBuildingInfo();
 	virtual ~CvSpecialBuildingInfo();
 
-	int getObsoleteTech() const; // Exposed to Python
-	int getTechPrereq() const; // Exposed to Python
-	int getTechPrereqAnyone() const; // Exposed to Python
+	int getObsoleteTech() const;
+	int getTechPrereq() const;
+	int getTechPrereqAnyone() const;
 	int getMaxPlayerInstances() const;
 
-	bool isValid() const; // Exposed to Python
+	bool isValid() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -3396,13 +3396,13 @@ public:
 	CvRiverModelInfo();
 	virtual ~CvRiverModelInfo();
 
-	DllExport const TCHAR* getModelFile() const; // Exposed to Python
-	DllExport const TCHAR* getBorderFile() const; // Exposed to Python
+	DllExport const TCHAR* getModelFile() const;
+	DllExport const TCHAR* getBorderFile() const;
 
 	DllExport int getTextureIndex() const;
 	DllExport const TCHAR* getDeltaString() const;		//Exposed to Python
-	DllExport const TCHAR* getConnectString() const; // Exposed to Python
-	DllExport const TCHAR* getRotateString() const; // Exposed to Python
+	DllExport const TCHAR* getConnectString() const;
+	DllExport const TCHAR* getRotateString() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvRiverModelInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -3438,15 +3438,15 @@ public:
 
 	DllExport RouteTypes getRouteType() const;			// The route type
 
-	DllExport const TCHAR* getModelFile() const; // Exposed to Python
-	DllExport const TCHAR* getLateModelFile() const; // Exposed to Python
-	const TCHAR* getModelFileKey() const; // Exposed to Python
+	DllExport const TCHAR* getModelFile() const;
+	DllExport const TCHAR* getLateModelFile() const;
+	const TCHAR* getModelFileKey() const;
 
 	DllExport bool isAnimated() const;
 
-	DllExport const TCHAR* getConnectString() const; // Exposed to Python
-	DllExport const TCHAR* getModelConnectString() const; // Exposed to Python
-	DllExport const TCHAR* getRotateString() const; // Exposed to Python
+	DllExport const TCHAR* getConnectString() const;
+	DllExport const TCHAR* getModelConnectString() const;
+	DllExport const TCHAR* getRotateString() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvRouteModelInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -3485,53 +3485,53 @@ public:
 	virtual ~CvCivilizationInfo();
 	virtual void reset();
 
-	DllExport int getDefaultPlayerColor() const; // Exposed to Python
-	int getArtStyleType() const; // Exposed to Python
-	int getUnitArtStyleType() const; // Exposed to Python
-	int getNumCityNames() const; // Exposed to Python
+	DllExport int getDefaultPlayerColor() const;
+	int getArtStyleType() const;
+	int getUnitArtStyleType() const;
+	int getNumCityNames() const;
 	// the number of leaders the Civ has, this is needed so that random leaders can be generated easily
-	int getNumLeaders() const; // Exposed to Python
-	int getSelectionSoundScriptId() const; // Exposed to Python
-	int getActionSoundScriptId() const; // Exposed to Python
+	int getNumLeaders() const;
+	int getSelectionSoundScriptId() const;
+	int getActionSoundScriptId() const;
 
-	DllExport bool isAIPlayable() const; // Exposed to Python
-	DllExport bool isPlayable() const; // Exposed to Python
+	DllExport bool isAIPlayable() const;
+	DllExport bool isPlayable() const;
 
-	std::wstring pyGetShortDescription(uint uiForm) { return getShortDescription(uiForm); } // Exposed to Python
+	std::wstring pyGetShortDescription(uint uiForm) { return getShortDescription(uiForm); }
 	DllExport const wchar_t* getShortDescription(uint uiForm = 0);
-	const wchar_t* getShortDescriptionKey() const; // Exposed to Python
-	const std::wstring pyGetShortDescriptionKey() const { return getShortDescriptionKey(); } // Exposed to Python
+	const wchar_t* getShortDescriptionKey() const;
+	const std::wstring pyGetShortDescriptionKey() const { return getShortDescriptionKey(); }
 
-	std::wstring pyGetAdjective(uint uiForm) { return getAdjective(uiForm); } // Exposed to Python
+	std::wstring pyGetAdjective(uint uiForm) { return getAdjective(uiForm); }
 	DllExport const wchar_t* getAdjective(uint uiForm = 0);
-	const wchar_t* getAdjectiveKey() const; // Exposed to Python
-	const std::wstring pyGetAdjectiveKey() const { return getAdjectiveKey(); } // Exposed to Python
+	const wchar_t* getAdjectiveKey() const;
+	const std::wstring pyGetAdjectiveKey() const { return getAdjectiveKey(); }
 
 	DllExport const TCHAR* getFlagTexture() const;
 	const TCHAR* getArtDefineTag() const;
 
 	// Arrays
 
-	int getCivilizationFreeUnits(int i) const; // Exposed to Python
-	int getCivilizationInitialCivics(int i) const; // Exposed to Python
+	int getCivilizationFreeUnits(int i) const;
+	int getCivilizationInitialCivics(int i) const;
 	// Afforess 04/05/10
 	void setCivilizationInitialCivics(int iCivicOption, int iCivic);
 
-	DllExport bool isLeaders(int i) const; // Exposed to Python
+	DllExport bool isLeaders(int i) const;
 
-	bool isCivilizationFreeTechs(int i) const; // Exposed to Python
-	bool isCivilizationDisableTechs(int i) const; // Exposed to Python
+	bool isCivilizationFreeTechs(int i) const;
+	bool isCivilizationDisableTechs(int i) const;
 
 	int getNumCivilizationBuildings() const;
 	int getCivilizationBuilding(int i) const;
-	bool isCivilizationBuilding(int i) const; // Exposed to Python
+	bool isCivilizationBuilding(int i) const;
 
-	std::string getCityNames(int i) const; // Exposed to Python
+	std::string getCityNames(int i) const;
 
 	const CvArtInfoCivilization* getArtInfo() const;
 	const TCHAR* getButton() const;
 
-	int getDerivativeCiv() const; // Exposed to Python
+	int getDerivativeCiv() const;
 
 	//TB Tags
 	//int
@@ -3604,22 +3604,22 @@ public:
 	CvVictoryInfo();
 	virtual ~CvVictoryInfo();
 
-	int getPopulationPercentLead() const; // Exposed to Python
-	int getLandPercent() const; // Exposed to Python
-	int getMinLandPercent() const; // Exposed to Python
-	int getReligionPercent() const; // Exposed to Python
-	int getCityCulture() const; // Exposed to Python
-	int getNumCultureCities() const; // Exposed to Python
-	int getTotalCultureRatio() const; // Exposed to Python
+	int getPopulationPercentLead() const;
+	int getLandPercent() const;
+	int getMinLandPercent() const;
+	int getReligionPercent() const;
+	int getCityCulture() const;
+	int getNumCultureCities() const;
+	int getTotalCultureRatio() const;
 	//Sevo VCM
 	bool isTotalVictory() const;
-	int getVictoryDelayTurns() const; // Exposed to Python
+	int getVictoryDelayTurns() const;
 
-	bool isTargetScore() const; // Exposed to Python
-	bool isEndScore() const; // Exposed to Python
-	bool isConquest() const; // Exposed to Python
-	bool isDiploVote() const; // Exposed to Python
-	DllExport bool isPermanent() const; // Exposed to Python
+	bool isTargetScore() const;
+	bool isEndScore() const;
+	bool isConquest() const;
+	bool isDiploVote() const;
+	DllExport bool isPermanent() const;
 
 	const char* getMovie() const;
 
@@ -3667,10 +3667,10 @@ class CvHurryInfo :
 		CvHurryInfo();
 		virtual ~CvHurryInfo();
 
-		int getGoldPerProduction() const; // Exposed to Python
-		int getProductionPerPopulation() const; // Exposed to Python
+		int getGoldPerProduction() const;
+		int getProductionPerPopulation() const;
 
-		bool isAnger() const; // Exposed to Python
+		bool isAnger() const;
 
 		bool read(CvXMLLoadUtility* pXML);
 		void copyNonDefaults(CvHurryInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -3701,76 +3701,76 @@ public:
 	CvHandicapInfo();
 	virtual ~CvHandicapInfo();
 
-	int getFreeWinsVsBarbs() const; // Exposed to Python
-	int getAnimalAttackProb() const; // Exposed to Python
-	int getStartingLocationPercent() const; // Exposed to Python
-	int getAdvancedStartPointsMod() const; // Exposed to Python
-	int getStartingGold() const; // Exposed to Python
-	int getUnitUpkeepPercent() const; // Exposed to Python
+	int getFreeWinsVsBarbs() const;
+	int getAnimalAttackProb() const;
+	int getStartingLocationPercent() const;
+	int getAdvancedStartPointsMod() const;
+	int getStartingGold() const;
+	int getUnitUpkeepPercent() const;
 	int getTrainPercent() const;
 	int getConstructPercent() const;
-	int getResearchPercent() const; // Exposed to Python
-	int getDistanceMaintenancePercent() const; // Exposed to Python
-	int getNumCitiesMaintenancePercent() const; // Exposed to Python
-	int getColonyMaintenancePercent() const; // Exposed to Python
-	int getMaxColonyMaintenance() const; // Exposed to Python
-	int getCorporationMaintenancePercent() const; // Exposed to Python
-	int getCivicUpkeepPercent() const; // Exposed to Python
-	int getInflationPercent() const; // Exposed to Python
+	int getResearchPercent() const;
+	int getDistanceMaintenancePercent() const;
+	int getNumCitiesMaintenancePercent() const;
+	int getColonyMaintenancePercent() const;
+	int getMaxColonyMaintenance() const;
+	int getCorporationMaintenancePercent() const;
+	int getCivicUpkeepPercent() const;
+	int getInflationPercent() const;
 	/*** REVOLUTION 09/25/09 by DPII ***/
 	int getRevolutionIndexPercent() const;
 	/***********************************/
-	int getHealthBonus() const; // Exposed to Python
-	int getHappyBonus() const; // Exposed to Python
-	int getAttitudeChange() const; // Exposed to Python
-	int getNoTechTradeModifier() const; // Exposed to Python
-	int getTechTradeKnownModifier() const; // Exposed to Python
-	int getUnownedTilesPerGameAnimal() const; // Exposed to Python
-	int getUnownedTilesPerBarbarianUnit() const; // Exposed to Python
-	int getUnownedWaterTilesPerBarbarianUnit() const; // Exposed to Python
-	int getUnownedTilesPerBarbarianCity() const; // Exposed to Python
-	int getBarbarianCityCreationTurnsElapsed() const; // Exposed to Python
-	int getBarbarianCityCreationProb() const; // Exposed to Python
-	int getAnimalCombatModifier() const; // Exposed to Python
-	int getBarbarianCombatModifier() const; // Exposed to Python
-	int getAIAnimalCombatModifier() const; // Exposed to Python
-	int getAIBarbarianCombatModifier() const; // Exposed to Python
+	int getHealthBonus() const;
+	int getHappyBonus() const;
+	int getAttitudeChange() const;
+	int getNoTechTradeModifier() const;
+	int getTechTradeKnownModifier() const;
+	int getUnownedTilesPerGameAnimal() const;
+	int getUnownedTilesPerBarbarianUnit() const;
+	int getUnownedWaterTilesPerBarbarianUnit() const;
+	int getUnownedTilesPerBarbarianCity() const;
+	int getBarbarianCityCreationTurnsElapsed() const;
+	int getBarbarianCityCreationProb() const;
+	int getAnimalCombatModifier() const;
+	int getBarbarianCombatModifier() const;
+	int getAIAnimalCombatModifier() const;
+	int getAIBarbarianCombatModifier() const;
 
-	int getStartingDefenseUnits() const; // Exposed to Python
-	int getStartingWorkerUnits() const; // Exposed to Python
-	int getStartingExploreUnits() const; // Exposed to Python
-	int getAIStartingUnitMultiplier() const; // Exposed to Python
-	int getAIStartingDefenseUnits() const; // Exposed to Python
-	int getAIStartingWorkerUnits() const; // Exposed to Python
-	int getAIStartingExploreUnits() const; // Exposed to Python
-	int getBarbarianInitialDefenders() const; // Exposed to Python
-	int getAIDeclareWarProb() const; // Exposed to Python
-	int getAIWorkRateModifier() const; // Exposed to Python
-	int getAIGrowthPercent() const; // Exposed to Python
-	int getAITrainPercent() const; // Exposed to Python
-	int getAIWorldTrainPercent() const; // Exposed to Python
-	int getAIConstructPercent() const; // Exposed to Python
-	int getAIWorldConstructPercent() const; // Exposed to Python
-	int getAICreatePercent() const; // Exposed to Python
+	int getStartingDefenseUnits() const;
+	int getStartingWorkerUnits() const;
+	int getStartingExploreUnits() const;
+	int getAIStartingUnitMultiplier() const;
+	int getAIStartingDefenseUnits() const;
+	int getAIStartingWorkerUnits() const;
+	int getAIStartingExploreUnits() const;
+	int getBarbarianInitialDefenders() const;
+	int getAIDeclareWarProb() const;
+	int getAIWorkRateModifier() const;
+	int getAIGrowthPercent() const;
+	int getAITrainPercent() const;
+	int getAIWorldTrainPercent() const;
+	int getAIConstructPercent() const;
+	int getAIWorldConstructPercent() const;
+	int getAICreatePercent() const;
 	int getAIResearchPercent() const;
-	int getAIWorldCreatePercent() const; // Exposed to Python
-	int getAICivicUpkeepPercent() const; // Exposed to Python
-	int getAIUnitUpkeepPercent() const; // Exposed to Python
-	int getAIUnitSupplyPercent() const; // Exposed to Python
-	int getAIUnitUpgradePercent() const; // Exposed to Python
-	int getAIInflationPercent() const; // Exposed to Python
-	int getAIWarWearinessPercent() const; // Exposed to Python
-	int getAIPerEraModifier() const; // Exposed to Python
-	int getAIAdvancedStartPercent() const; // Exposed to Python
-	int getNumGoodies() const; // Exposed to Python
+	int getAIWorldCreatePercent() const;
+	int getAICivicUpkeepPercent() const;
+	int getAIUnitUpkeepPercent() const;
+	int getAIUnitSupplyPercent() const;
+	int getAIUnitUpgradePercent() const;
+	int getAIInflationPercent() const;
+	int getAIWarWearinessPercent() const;
+	int getAIPerEraModifier() const;
+	int getAIAdvancedStartPercent() const;
+	int getNumGoodies() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	// Arrays
 
-	int getGoodies(int i) const; // Exposed to Python
-	int isFreeTechs(int i) const; // Exposed to Python
-	int isAIFreeTechs(int i) const; // Exposed to Python
+	int getGoodies(int i) const;
+	int isFreeTechs(int i) const;
+	int isAIFreeTechs(int i) const;
 
 	int getPercent(int iID) const;
 
@@ -3873,30 +3873,30 @@ public:
 	CvGameSpeedInfo();
 	virtual ~CvGameSpeedInfo();
 
-	int getGrowthPercent() const; // Exposed to Python
-	int getTrainPercent() const; // Exposed to Python
-	int getConstructPercent() const; // Exposed to Python
-	int getCreatePercent() const; // Exposed to Python
-	int getResearchPercent() const; // Exposed to Python
-	int getBuildPercent() const; // Exposed to Python
-	int getImprovementPercent() const; // Exposed to Python
-	int getGreatPeoplePercent() const; // Exposed to Python
-	int getAnarchyPercent() const; // Exposed to Python
-	int getBarbPercent() const; // Exposed to Python
-	int getFeatureProductionPercent() const; // Exposed to Python
-	int getUnitDiscoverPercent() const; // Exposed to Python
-	int getUnitHurryPercent() const; // Exposed to Python
-	int getUnitTradePercent() const; // Exposed to Python
-	int getUnitGreatWorkPercent() const; // Exposed to Python
-	int getGoldenAgePercent() const; // Exposed to Python
-	int getHurryPercent() const; // Exposed to Python
-	int getHurryConscriptAngerPercent() const; // Exposed to Python
+	int getGrowthPercent() const;
+	int getTrainPercent() const;
+	int getConstructPercent() const;
+	int getCreatePercent() const;
+	int getResearchPercent() const;
+	int getBuildPercent() const;
+	int getImprovementPercent() const;
+	int getGreatPeoplePercent() const;
+	int getAnarchyPercent() const;
+	int getBarbPercent() const;
+	int getFeatureProductionPercent() const;
+	int getUnitDiscoverPercent() const;
+	int getUnitHurryPercent() const;
+	int getUnitTradePercent() const;
+	int getUnitGreatWorkPercent() const;
+	int getGoldenAgePercent() const;
+	int getHurryPercent() const;
+	int getHurryConscriptAngerPercent() const;
 	int getOccupationTimePopulationPercent() const;
-	int getVictoryDelayPercent() const; // Exposed to Python
-	int getNumTurnIncrements() const; // Exposed to Python
+	int getVictoryDelayPercent() const;
+	int getNumTurnIncrements() const;
 	int getUnitMovementPercent() const;
 
-	const GameTurnInfo& getGameTurnInfo(int iIndex) const; // Exposed to Python
+	const GameTurnInfo& getGameTurnInfo(int iIndex) const;
 	const CvDateIncrement& getDateIncrement(int iIndex) const;
 	std::vector<CvDateIncrement>& getIncrements();
 	bool getEndDatesCalculated() const;
@@ -3968,10 +3968,10 @@ public:
 	CvTurnTimerInfo();
 	virtual ~CvTurnTimerInfo();
 
-	int getBaseTime() const; // Exposed to Python
-	int getCityBonus() const; // Exposed to Python
-	int getUnitBonus() const; // Exposed to Python
-	int getFirstTurnMultiplier() const; // Exposed to Python
+	int getBaseTime() const;
+	int getCityBonus() const;
+	int getUnitBonus() const;
+	int getFirstTurnMultiplier() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -4003,18 +4003,18 @@ public:
 	CvBuildInfo();
 	virtual ~CvBuildInfo();
 
-	int getTime() const; // Exposed to Python
-	int getCost() const; // Exposed to Python
-	int getTechPrereq() const; // Exposed to Python
-	int getImprovement() const; // Exposed to Python
-	int getRoute() const; // Exposed to Python
+	int getTime() const;
+	int getCost() const;
+	int getTechPrereq() const;
+	int getImprovement() const;
+	int getRoute() const;
+	int getTerrainChange() const;
+	int getFeatureChange() const;
 	/************************************************************************************************/
 	/* Afforess					  Start		 05/25/10											   */
 	/*																							  */
 	/*																							  */
 	/************************************************************************************************/
-	int getTerrainChange() const; // Exposed to Python
-	int getFeatureChange() const; // Exposed to Python
 	int getObsoleteTech() const;
 	bool isMine() const;
 	bool isNoTechCanRemoveWithNoProductionGain(int i) const;
@@ -4024,19 +4024,19 @@ public:
 	/************************************************************************************************/
 	/* Afforess						 END															*/
 	/************************************************************************************************/
-	DllExport int getEntityEvent() const; // Exposed to Python
-	DllExport int getMissionType() const; // Exposed to Python
+	DllExport int getEntityEvent() const;
+	DllExport int getMissionType() const;
 	void setMissionType(int iNewType);
 
-	bool isKill() const; // Exposed to Python
+	bool isKill() const;
 
 	// Arrays
 
-	int getFeatureTech(int i) const; // Exposed to Python
-	int getFeatureTime(int i) const; // Exposed to Python
-	int getFeatureProduction(int i) const; // Exposed to Python
+	int getFeatureTech(int i) const;
+	int getFeatureTime(int i) const;
+	int getFeatureProduction(int i) const;
 
-	bool isFeatureRemove(int i) const; // Exposed to Python
+	bool isFeatureRemove(int i) const;
 
 	// Vectors
 	int getPrereqBonusType(int i) const;
@@ -4119,25 +4119,25 @@ public:
 	CvGoodyInfo();
 	virtual ~CvGoodyInfo();
 
-	int getGold() const; // Exposed to Python
-	int getGoldRand1() const; // Exposed to Python
-	int getGoldRand2() const; // Exposed to Python
-	int getMapOffset() const; // Exposed to Python
-	int getMapRange() const; // Exposed to Python
-	int getMapProb() const; // Exposed to Python
-	int getExperience() const; // Exposed to Python
-	int getHealing() const; // Exposed to Python
-	int getDamagePrereq() const; // Exposed to Python
-	int getBarbarianUnitProb() const; // Exposed to Python
-	int getMinBarbarians() const; // Exposed to Python
-	int getGoodyUnit() const; // Exposed to Python
-	int getBarbarianUnit() const; // Exposed to Python
+	int getGold() const;
+	int getGoldRand1() const;
+	int getGoldRand2() const;
+	int getMapOffset() const;
+	int getMapRange() const;
+	int getMapProb() const;
+	int getExperience() const;
+	int getHealing() const;
+	int getDamagePrereq() const;
+	int getBarbarianUnitProb() const;
+	int getMinBarbarians() const;
+	int getGoodyUnit() const;
+	int getBarbarianUnit() const;
 	int getEraType() const;
 	int getNotEraType() const;
 	int getResearch() const;
 
-	bool isTech() const; // Exposed to Python
-	bool isBad() const; // Exposed to Python
+	bool isTech() const;
+	bool isBad() const;
 	bool isNaval() const;
 
 	//Vectors
@@ -4145,7 +4145,7 @@ public:
 	int getNumMapCategoryTypes() const;
 	bool isMapCategoryType(int i) const;
 
-	const TCHAR* getSound() const; // Exposed to Python
+	const TCHAR* getSound() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvGoodyInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -4198,22 +4198,22 @@ public:
 	CvRouteInfo();
 	virtual ~CvRouteInfo();
 
-	int getAdvancedStartCost() const; // Exposed to Python
-	int getAdvancedStartCostIncrease() const; // Exposed to Python
+	int getAdvancedStartCost() const;
+	int getAdvancedStartCostIncrease() const;
 
-	int getValue() const; // Exposed to Python
-	int getMovementCost() const; // Exposed to Python
-	int getFlatMovementCost() const; // Exposed to Python
-	int getPrereqBonus() const; // Exposed to Python
+	int getValue() const;
+	int getMovementCost() const;
+	int getFlatMovementCost() const;
+	int getPrereqBonus() const;
 
 	// JOOYO_ADDON, Added by Jooyo, 07/07/09
 	bool isSeaTunnel() const;
 
 	// Arrays
-	int getYieldChange(int i) const; // Exposed to Python
+	int getYieldChange(int i) const;
 	int* getYieldChangeArray() const;
-	int getTechMovementChange(int i) const; // Exposed to Python
-	int getPrereqOrBonus(int i) const; // Exposed to Python
+	int getTechMovementChange(int i) const;
+	int getPrereqOrBonus(int i) const;
 	bool isAnyPrereqOrBonus() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
@@ -4236,7 +4236,7 @@ protected:
 	int m_iMovementCost;
 	int m_iFlatMovementCost;
 	int m_iPrereqBonus;
-	
+
 	int m_zobristValue;
 
 	// JOOYO_ADDON, Added by Jooyo, 07/07/09
@@ -4270,15 +4270,15 @@ public:
 	CvImprovementBonusInfo();
 	virtual ~CvImprovementBonusInfo();
 
-	int getDiscoverRand() const; // Exposed to Python
+	int getDiscoverRand() const;
 	// Afforess 01/20/10
 	int getDepletionRand() const;
 
-	bool isBonusMakesValid() const; // Exposed to Python
+	bool isBonusMakesValid() const;
 	bool isObsoleteBonusMakesValid() const;
-	bool isBonusTrade() const; // Exposed to Python
+	bool isBonusTrade() const;
 
-	int getYieldChange(int i) const; // Exposed to Python
+	int getYieldChange(int i) const;
 
 	void getCheckSum(unsigned int& iSum) const;
 
@@ -4315,19 +4315,19 @@ public:
 	CvImprovementInfo();
 	virtual ~CvImprovementInfo();
 
-	int getAdvancedStartCost() const; // Exposed to Python
-	int getAdvancedStartCostIncrease() const; // Exposed to Python
+	int getAdvancedStartCost() const;
+	int getAdvancedStartCostIncrease() const;
 
-	int getTilesPerGoody() const; // Exposed to Python
-	int getGoodyUniqueRange() const; // Exposed to Python
-	int getFeatureGrowthProbability() const; // Exposed to Python
-	int getUpgradeTime() const; // Exposed to Python
-	int getAirBombDefense() const; // Exposed to Python
-	int getDefenseModifier() const; // Exposed to Python
-	int getHappiness() const; // Exposed to Python
-	int getPillageGold() const; // Exposed to Python
-	int getImprovementPillage() const; // Exposed to Python
-	int getImprovementUpgrade() const; // Exposed to Python
+	int getTilesPerGoody() const;
+	int getGoodyUniqueRange() const;
+	int getFeatureGrowthProbability() const;
+	int getUpgradeTime() const;
+	int getAirBombDefense() const;
+	int getDefenseModifier() const;
+	int getHappiness() const;
+	int getPillageGold() const;
+	int getImprovementPillage() const;
+	int getImprovementUpgrade() const;
 	// Super Forts begin *XML*
 	int getCulture() const;
 	int getCultureRange() const;
@@ -4341,22 +4341,22 @@ public:
 	bool isUniversalTradeBonusProvider() const;
 	// Super forts C2C adaptation end
 
-	bool isZOCSource() const; // Exposed to Python
-	bool isActsAsCity() const; // Exposed to Python
-	bool isHillsMakesValid() const; // Exposed to Python
-	bool isFreshWaterMakesValid() const; // Exposed to Python
-	bool isRiverSideMakesValid() const; // Exposed to Python
-	bool isNoFreshWater() const; // Exposed to Python
-	bool isRequiresFlatlands() const; // Exposed to Python
-	DllExport bool isRequiresRiverSide() const; // Exposed to Python
-	bool isRequiresIrrigation() const; // Exposed to Python
-	bool isCarriesIrrigation() const; // Exposed to Python
-	bool isRequiresFeature() const; // Exposed to Python
-	bool isPeakImprovement() const; // Exposed to Python
-	bool isWaterImprovement() const; // Exposed to Python
-	DllExport bool isGoody() const; // Exposed to Python
-	bool isPermanent() const; // Exposed to Python
-	bool isOutsideBorders() const; // Exposed to Python
+	bool isZOCSource() const;
+	bool isActsAsCity() const;
+	bool isHillsMakesValid() const;
+	bool isFreshWaterMakesValid() const;
+	bool isRiverSideMakesValid() const;
+	bool isNoFreshWater() const;
+	bool isRequiresFlatlands() const;
+	DllExport bool isRequiresRiverSide() const;
+	bool isRequiresIrrigation() const;
+	bool isCarriesIrrigation() const;
+	bool isRequiresFeature() const;
+	bool isPeakImprovement() const;
+	bool isWaterImprovement() const;
+	DllExport bool isGoody() const;
+	bool isPermanent() const;
+	bool isOutsideBorders() const;
 
 	const TCHAR* getArtDefineTag() const;
 
@@ -4364,30 +4364,30 @@ public:
 
 	// Arrays
 
-	int getPrereqNatureYield(int i) const; // Exposed to Python
+	int getPrereqNatureYield(int i) const;
 	int* getPrereqNatureYieldArray() const;
-	int getYieldChange(int i) const; // Exposed to Python
+	int getYieldChange(int i) const;
 	int* getYieldChangeArray() const;
-	int getRiverSideYieldChange(int i) const; // Exposed to Python
+	int getRiverSideYieldChange(int i) const;
 	int* getRiverSideYieldChangeArray() const;
-	int getHillsYieldChange(int i) const; // Exposed to Python
+	int getHillsYieldChange(int i) const;
 	int* getHillsYieldChangeArray() const;
-	int getIrrigatedYieldChange(int i) const; // Exposed to Python
+	int getIrrigatedYieldChange(int i) const;
 	int* getIrrigatedYieldChangeArray() const;		// For Moose - CvWidgetData XXX
 
-	bool getTerrainMakesValid(int i) const; // Exposed to Python
-	bool getFeatureMakesValid(int i) const; // Exposed to Python
+	bool getTerrainMakesValid(int i) const;
+	bool getFeatureMakesValid(int i) const;
 
-	int getTechYieldChanges(int i, int j) const; // Exposed to Python
+	int getTechYieldChanges(int i, int j) const;
 	int* getTechYieldChangesArray(int i) const;
-	int getRouteYieldChanges(int i, int j) const; // Exposed to Python
+	int getRouteYieldChanges(int i, int j) const;
 	int* getRouteYieldChangesArray(int i) const;		// For Moose - CvWidgetData XXX
 
-	int getImprovementBonusYield(int i, int j) const; // Exposed to Python
-	bool isImprovementBonusMakesValid(int i) const; // Exposed to Python
-	bool isImprovementObsoleteBonusMakesValid(int i) const; // Exposed to Python
-	bool isImprovementBonusTrade(int i) const; // Exposed to Python
-	int getImprovementBonusDiscoverRand(int i) const; // Exposed to Python
+	int getImprovementBonusYield(int i, int j) const;
+	bool isImprovementBonusMakesValid(int i) const;
+	bool isImprovementObsoleteBonusMakesValid(int i) const;
+	bool isImprovementBonusTrade(int i) const;
+	int getImprovementBonusDiscoverRand(int i) const;
 
 	// Other
 	int getMapCategoryType(int i) const;
@@ -4398,10 +4398,10 @@ public:
 	DllExport const CvArtInfoImprovement* getArtInfo() const;
 
 	// Afforess 12/9/09
-	int getHealthPercent() const; // Exposed to Python
-	bool isPeakMakesValid() const; // Exposed to Python
+	int getHealthPercent() const;
+	bool isPeakMakesValid() const;
 	int getImprovementBonusDepletionRand(int i) const;
-	int getPrereqTech() const; // Exposed to Python
+	int getPrereqTech() const;
 	//int getTraitYieldChanges(int i, int j) const;
 	//int* getTraitYieldChangesArray(int i) const;
 
@@ -4546,7 +4546,7 @@ public:
 	CvBonusClassInfo();
 	virtual ~CvBonusClassInfo();
 
-	int getUniqueRange() const; // Exposed to Python
+	int getUniqueRange() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvBonusClassInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -4574,50 +4574,50 @@ public:
 	CvBonusInfo();
 	virtual ~CvBonusInfo();
 
-	int getBonusClassType() const; // Exposed to Python
-	int getChar() const; // Exposed to Python
-	void setChar(int i); // Exposed to Python
-	int getTechReveal() const; // Exposed to Python
-	int getTechCityTrade() const; // Exposed to Python
-	int getTechObsolete() const; // Exposed to Python
-	int getAITradeModifier() const; // Exposed to Python
-	int getAIObjective() const; // Exposed to Python
-	int getHealth() const; // Exposed to Python
-	int getHappiness() const; // Exposed to Python
-	int getMinAreaSize() const; // Exposed to Python
-	int getMinLatitude() const; // Exposed to Python
-	int getMaxLatitude() const; // Exposed to Python
-	int getPlacementOrder() const; // Exposed to Python
-	int getConstAppearance() const; // Exposed to Python
-	int getRandAppearance1() const; // Exposed to Python
-	int getRandAppearance2() const; // Exposed to Python
-	int getRandAppearance3() const; // Exposed to Python
-	int getRandAppearance4() const; // Exposed to Python
-	int getPercentPerPlayer() const; // Exposed to Python
-	int getTilesPer() const; // Exposed to Python
-	int getMinLandPercent() const; // Exposed to Python
-	int getUniqueRange() const; // Exposed to Python
-	int getGroupRange() const; // Exposed to Python
-	int getGroupRand() const; // Exposed to Python
+	int getBonusClassType() const;
+	int getChar() const;
+	void setChar(int i);
+	int getTechReveal() const;
+	int getTechCityTrade() const;
+	int getTechObsolete() const;
+	int getAITradeModifier() const;
+	int getAIObjective() const;
+	int getHealth() const;
+	int getHappiness() const;
+	int getMinAreaSize() const;
+	int getMinLatitude() const;
+	int getMaxLatitude() const;
+	int getPlacementOrder() const;
+	int getConstAppearance() const;
+	int getRandAppearance1() const;
+	int getRandAppearance2() const;
+	int getRandAppearance3() const;
+	int getRandAppearance4() const;
+	int getPercentPerPlayer() const;
+	int getTilesPer() const;
+	int getMinLandPercent() const;
+	int getUniqueRange() const;
+	int getGroupRange() const;
+	int getGroupRand() const;
 
-	bool isOneArea() const; // Exposed to Python
-	bool isHills() const; // Exposed to Python
-	bool isPeaks() const; // Exposed to Python
-	bool isFlatlands() const; // Exposed to Python
-	bool isBonusCoastalOnly() const; // Exposed to Python
-	bool isNoRiverSide() const; // Exposed to Python
-	bool isNormalize() const; // Exposed to Python
+	bool isOneArea() const;
+	bool isHills() const;
+	bool isPeaks() const;
+	bool isFlatlands() const;
+	bool isBonusCoastalOnly() const;
+	bool isNoRiverSide() const;
+	bool isNormalize() const;
 
 	const TCHAR* getArtDefineTag() const;
 
 	// Arrays
-	int getYieldChange(int i) const; // Exposed to Python
-	int* getYieldChangeArray() const; // Exposed to Python
+	int getYieldChange(int i) const;
+	int* getYieldChangeArray() const;
 	int getImprovementChange(int i) const;
 
-	bool isTerrain(int i) const; // Exposed to Python
-	bool isFeature(int i) const; // Exposed to Python
-	bool isFeatureTerrain(int i) const; // Exposed to Python
+	bool isTerrain(int i) const;
+	bool isFeature(int i) const;
+	bool isFeatureTerrain(int i) const;
 
 	//Vectors
 	int getMapCategoryType(int i) const;
@@ -4629,8 +4629,8 @@ public:
 	PromotionLineAfflictionModifier getAfflictionCommunicabilityType(int iPromotionLine, bool bWorkedTile = false, bool bVicinity = false, bool bAccessVolume = false);
 
 	// Other
-	const TCHAR* getButton() const; // Exposed to Python
-	DllExport const CvArtInfoBonus* getArtInfo() const; // Exposed to Python
+	const TCHAR* getButton() const;
+	DllExport const CvArtInfoBonus* getArtInfo() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -4712,31 +4712,31 @@ public:
 	CvFeatureInfo();
 	virtual ~CvFeatureInfo();
 
-	int getMovementCost() const; // Exposed to Python
-	int getSeeThroughChange() const; // Exposed to Python
-	int getHealthPercent() const; // Exposed to Python
-	int getAppearanceProbability() const; // Exposed to Python
-	int getDisappearanceProbability() const; // Exposed to Python
-	int getGrowthProbability() const; // Exposed to Python
-	int getDefenseModifier() const; // Exposed to Python
-	int getAdvancedStartRemoveCost() const; // Exposed to Python
-	int getTurnDamage() const; // Exposed to Python
+	int getMovementCost() const;
+	int getSeeThroughChange() const;
+	int getHealthPercent() const;
+	int getAppearanceProbability() const;
+	int getDisappearanceProbability() const;
+	int getGrowthProbability() const;
+	int getDefenseModifier() const;
+	int getAdvancedStartRemoveCost() const;
+	int getTurnDamage() const;
 	int getWarmingDefense() const; //GWMod new xml field M.A.
 	int getPopDestroys() const;
 
-	bool isNoCoast() const; // Exposed to Python
-	bool isNoRiver() const; // Exposed to Python
-	bool isNoAdjacent() const; // Exposed to Python
-	bool isRequiresFlatlands() const; // Exposed to Python
-	bool isRequiresRiver() const; // Exposed to Python
-	bool isAddsFreshWater() const; // Exposed to Python
-	bool isImpassable() const; // Exposed to Python
-	bool isNoCity() const; // Exposed to Python
-	bool isNoImprovement() const; // Exposed to Python
-	bool isVisibleAlways() const; // Exposed to Python
-	bool isNukeImmune() const; // Exposed to Python
+	bool isNoCoast() const;
+	bool isNoRiver() const;
+	bool isNoAdjacent() const;
+	bool isRequiresFlatlands() const;
+	bool isRequiresRiver() const;
+	bool isAddsFreshWater() const;
+	bool isImpassable() const;
+	bool isNoCity() const;
+	bool isNoImprovement() const;
+	bool isVisibleAlways() const;
+	bool isNukeImmune() const;
 // BUG - City Plot Status - start
-	bool isOnlyBad() const; // Exposed to Python
+	bool isOnlyBad() const;
 	bool isCountsAsPeak() const;
 // BUG - City Plot Status - end
 	const TCHAR* getOnUnitChangeTo() const;
@@ -4750,12 +4750,12 @@ public:
 
 	// Arrays
 
-	int getYieldChange(int i) const; // Exposed to Python
-	int getRiverYieldChange(int i) const; // Exposed to Python
-	int getHillsYieldChange(int i) const; // Exposed to Python
+	int getYieldChange(int i) const;
+	int getRiverYieldChange(int i) const;
+	int getHillsYieldChange(int i) const;
 	int get3DAudioScriptFootstepIndex(int i) const;
 
-	bool isTerrain(int i) const; // Exposed to Python
+	bool isTerrain(int i) const;
 	int getNumVarieties() const;
 
 	bool canBeSecondary() const;
@@ -4864,13 +4864,13 @@ public:
 	CvCommerceInfo();
 	virtual ~CvCommerceInfo();
 
-	int getChar() const; // Exposed to Python
+	int getChar() const;
 	void setChar(int i);
-	int getInitialPercent() const; // Exposed to Python
-	int getInitialHappiness() const; // Exposed to Python
-	int getAIWeightPercent() const; // Exposed to Python
+	int getInitialPercent() const;
+	int getInitialHappiness() const;
+	int getAIWeightPercent() const;
 
-	bool isFlexiblePercent() const; // Exposed to Python
+	bool isFlexiblePercent() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -4907,19 +4907,19 @@ public:
 	CvYieldInfo();
 	virtual ~CvYieldInfo();
 
-	int getChar() const; // Exposed to Python
+	int getChar() const;
 	void setChar(int i);
-	int getHillsChange() const; // Exposed to Python
-	int getPeakChange() const; // Exposed to Python
-	int getCityChange() const; // Exposed to Python
-	int getPopulationChangeOffset() const; // Exposed to Python
-	int getPopulationChangeDivisor() const; // Exposed to Python
-	int getMinCity() const; // Exposed to Python
-	int getTradeModifier() const; // Exposed to Python
-	int getGoldenAgeYield() const; // Exposed to Python
-	int getGoldenAgeYieldThreshold() const; // Exposed to Python
-	int getAIWeightPercent() const; // Exposed to Python
-	int getColorType() const; // Exposed to Python
+	int getHillsChange() const;
+	int getPeakChange() const;
+	int getCityChange() const;
+	int getPopulationChangeOffset() const;
+	int getPopulationChangeDivisor() const;
+	int getMinCity() const;
+	int getTradeModifier() const;
+	int getGoldenAgeYield() const;
+	int getGoldenAgeYieldThreshold() const;
+	int getAIWeightPercent() const;
+	int getColorType() const;
 
 	// Arrays
 
@@ -4969,16 +4969,16 @@ public:
 	CvTerrainInfo();
 	virtual ~CvTerrainInfo();
 
-	int getMovementCost() const; // Exposed to Python
-	int getBuildModifier() const; // Exposed to Python
-	int getDefenseModifier() const; // Exposed to Python
+	int getMovementCost() const;
+	int getBuildModifier() const;
+	int getDefenseModifier() const;
 
-	bool isWaterTerrain() const; // Exposed to Python
-	bool isImpassable() const; // Exposed to Python
-	bool isFound() const; // Exposed to Python
-	bool isFoundCoast() const; // Exposed to Python
-	bool isFoundFreshWater() const; // Exposed to Python
-	bool isFreshWaterTerrain() const; // Exposed to Python
+	bool isWaterTerrain() const;
+	bool isImpassable() const;
+	bool isFound() const;
+	bool isFoundCoast() const;
+	bool isFoundFreshWater() const;
+	bool isFreshWaterTerrain() const;
 
 	DllExport const TCHAR* getArtDefineTag() const;
 
@@ -4986,9 +4986,9 @@ public:
 
 	// Arrays
 
-	int getYield(int i) const; // Exposed to Python
-	int getRiverYieldChange(int i) const; // Exposed to Python
-	int getHillsYieldChange(int i) const; // Exposed to Python
+	int getYield(int i) const;
+	int getRiverYieldChange(int i) const;
+	int getHillsYieldChange(int i) const;
 	int get3DAudioScriptFootstepIndex(int i) const;
 
 	// Other
@@ -5111,7 +5111,7 @@ public:
 	CvAdvisorInfo();
 	virtual ~CvAdvisorInfo();
 
-	const TCHAR* getTexture() const; // Exposed to Python
+	const TCHAR* getTexture() const;
 	int getNumCodes() const;
 	int getEnableCode(uint uiCode) const;
 	int getDisableCode(uint uiCode) const;
@@ -5143,17 +5143,17 @@ public:
 	virtual ~CvLeaderHeadInfo();
 
 	bool isNPC() const;
-	int getWonderConstructRand() const; // Exposed to Python
-	int getBaseAttitude() const; // Exposed to Python
-	int getBasePeaceWeight() const; // Exposed to Python
-	int getPeaceWeightRand() const; // Exposed to Python
-	int getWarmongerRespect() const; // Exposed to Python
-	int getEspionageWeight() const; // Exposed to Python
-	int getRefuseToTalkWarThreshold() const; // Exposed to Python
-	int getNoTechTradeThreshold() const; // Exposed to Python
-	int getTechTradeKnownPercent() const; // Exposed to Python
-	int getMaxGoldTradePercent() const; // Exposed to Python
-	int getMaxGoldPerTurnTradePercent() const; // Exposed to Python
+	int getWonderConstructRand() const;
+	int getBaseAttitude() const;
+	int getBasePeaceWeight() const;
+	int getPeaceWeightRand() const;
+	int getWarmongerRespect() const;
+	int getEspionageWeight() const;
+	int getRefuseToTalkWarThreshold() const;
+	int getNoTechTradeThreshold() const;
+	int getTechTradeKnownPercent() const;
+	int getMaxGoldTradePercent() const;
+	int getMaxGoldPerTurnTradePercent() const;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					  03/21/10								jdog5000	  */
 /*																							  */
@@ -5167,82 +5167,82 @@ public:
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					   END												  */
 /************************************************************************************************/
-	int getMaxWarRand() const; // Exposed to Python
-	int getMaxWarNearbyPowerRatio() const; // Exposed to Python
-	int getMaxWarDistantPowerRatio() const; // Exposed to Python
-	int getMaxWarMinAdjacentLandPercent() const; // Exposed to Python
-	int getLimitedWarRand() const; // Exposed to Python
-	int getLimitedWarPowerRatio() const; // Exposed to Python
-	int getDogpileWarRand() const; // Exposed to Python
-	int getMakePeaceRand() const; // Exposed to Python
-	int getDeclareWarTradeRand() const; // Exposed to Python
-	int getDemandRebukedSneakProb() const; // Exposed to Python
-	int getDemandRebukedWarProb() const; // Exposed to Python
-	int getRazeCityProb() const; // Exposed to Python
-	int getBuildUnitProb() const; // Exposed to Python
-	int getBaseAttackOddsChange() const; // Exposed to Python
-	int getAttackOddsChangeRand() const; // Exposed to Python
-	int getWorseRankDifferenceAttitudeChange() const; // Exposed to Python
-	int getBetterRankDifferenceAttitudeChange() const; // Exposed to Python
-	int getCloseBordersAttitudeChange() const; // Exposed to Python
-	int getLostWarAttitudeChange() const; // Exposed to Python
-	int getAtWarAttitudeDivisor() const; // Exposed to Python
-	int getAtWarAttitudeChangeLimit() const; // Exposed to Python
-	int getAtPeaceAttitudeDivisor() const; // Exposed to Python
-	int getAtPeaceAttitudeChangeLimit() const; // Exposed to Python
-	int getSameReligionAttitudeChange() const; // Exposed to Python
-	int getSameReligionAttitudeDivisor() const; // Exposed to Python
-	int getSameReligionAttitudeChangeLimit() const; // Exposed to Python
-	int getDifferentReligionAttitudeChange() const; // Exposed to Python
-	int getDifferentReligionAttitudeDivisor() const; // Exposed to Python
-	int getDifferentReligionAttitudeChangeLimit() const; // Exposed to Python
-	int getBonusTradeAttitudeDivisor() const; // Exposed to Python
-	int getBonusTradeAttitudeChangeLimit() const; // Exposed to Python
-	int getOpenBordersAttitudeDivisor() const; // Exposed to Python
-	int getOpenBordersAttitudeChangeLimit() const; // Exposed to Python
-	int getDefensivePactAttitudeDivisor() const; // Exposed to Python
-	int getDefensivePactAttitudeChangeLimit() const; // Exposed to Python
-	int getShareWarAttitudeChange() const; // Exposed to Python
-	int getShareWarAttitudeDivisor() const; // Exposed to Python
-	int getShareWarAttitudeChangeLimit() const; // Exposed to Python
-	int getFavoriteCivicAttitudeChange() const; // Exposed to Python
-	int getFavoriteCivicAttitudeDivisor() const; // Exposed to Python
-	int getFavoriteCivicAttitudeChangeLimit() const; // Exposed to Python
-	int getDemandTributeAttitudeThreshold() const; // Exposed to Python
-	int getNoGiveHelpAttitudeThreshold() const; // Exposed to Python
-	int getTechRefuseAttitudeThreshold() const; // Exposed to Python
-	int getStrategicBonusRefuseAttitudeThreshold() const; // Exposed to Python
-	int getHappinessBonusRefuseAttitudeThreshold() const; // Exposed to Python
-	int getHealthBonusRefuseAttitudeThreshold() const; // Exposed to Python
-	int getMapRefuseAttitudeThreshold() const; // Exposed to Python
-	int getDeclareWarRefuseAttitudeThreshold() const; // Exposed to Python
-	int getDeclareWarThemRefuseAttitudeThreshold() const; // Exposed to Python
-	int getStopTradingRefuseAttitudeThreshold() const; // Exposed to Python
-	int getStopTradingThemRefuseAttitudeThreshold() const; // Exposed to Python
-	int getAdoptCivicRefuseAttitudeThreshold() const; // Exposed to Python
-	int getConvertReligionRefuseAttitudeThreshold() const; // Exposed to Python
-	int getOpenBordersRefuseAttitudeThreshold() const; // Exposed to Python
-	int getDefensivePactRefuseAttitudeThreshold() const; // Exposed to Python
-	int getPermanentAllianceRefuseAttitudeThreshold() const; // Exposed to Python
-	int getVassalRefuseAttitudeThreshold() const; // Exposed to Python
-	int getVassalPowerModifier() const; // Exposed to Python
-	int getFavoriteCivic() const; // Exposed to Python
-	int getFavoriteReligion() const; // Exposed to Python
-	int getFreedomAppreciation() const; // Exposed to Python
+	int getMaxWarRand() const;
+	int getMaxWarNearbyPowerRatio() const;
+	int getMaxWarDistantPowerRatio() const;
+	int getMaxWarMinAdjacentLandPercent() const;
+	int getLimitedWarRand() const;
+	int getLimitedWarPowerRatio() const;
+	int getDogpileWarRand() const;
+	int getMakePeaceRand() const;
+	int getDeclareWarTradeRand() const;
+	int getDemandRebukedSneakProb() const;
+	int getDemandRebukedWarProb() const;
+	int getRazeCityProb() const;
+	int getBuildUnitProb() const;
+	int getBaseAttackOddsChange() const;
+	int getAttackOddsChangeRand() const;
+	int getWorseRankDifferenceAttitudeChange() const;
+	int getBetterRankDifferenceAttitudeChange() const;
+	int getCloseBordersAttitudeChange() const;
+	int getLostWarAttitudeChange() const;
+	int getAtWarAttitudeDivisor() const;
+	int getAtWarAttitudeChangeLimit() const;
+	int getAtPeaceAttitudeDivisor() const;
+	int getAtPeaceAttitudeChangeLimit() const;
+	int getSameReligionAttitudeChange() const;
+	int getSameReligionAttitudeDivisor() const;
+	int getSameReligionAttitudeChangeLimit() const;
+	int getDifferentReligionAttitudeChange() const;
+	int getDifferentReligionAttitudeDivisor() const;
+	int getDifferentReligionAttitudeChangeLimit() const;
+	int getBonusTradeAttitudeDivisor() const;
+	int getBonusTradeAttitudeChangeLimit() const;
+	int getOpenBordersAttitudeDivisor() const;
+	int getOpenBordersAttitudeChangeLimit() const;
+	int getDefensivePactAttitudeDivisor() const;
+	int getDefensivePactAttitudeChangeLimit() const;
+	int getShareWarAttitudeChange() const;
+	int getShareWarAttitudeDivisor() const;
+	int getShareWarAttitudeChangeLimit() const;
+	int getFavoriteCivicAttitudeChange() const;
+	int getFavoriteCivicAttitudeDivisor() const;
+	int getFavoriteCivicAttitudeChangeLimit() const;
+	int getDemandTributeAttitudeThreshold() const;
+	int getNoGiveHelpAttitudeThreshold() const;
+	int getTechRefuseAttitudeThreshold() const;
+	int getStrategicBonusRefuseAttitudeThreshold() const;
+	int getHappinessBonusRefuseAttitudeThreshold() const;
+	int getHealthBonusRefuseAttitudeThreshold() const;
+	int getMapRefuseAttitudeThreshold() const;
+	int getDeclareWarRefuseAttitudeThreshold() const;
+	int getDeclareWarThemRefuseAttitudeThreshold() const;
+	int getStopTradingRefuseAttitudeThreshold() const;
+	int getStopTradingThemRefuseAttitudeThreshold() const;
+	int getAdoptCivicRefuseAttitudeThreshold() const;
+	int getConvertReligionRefuseAttitudeThreshold() const;
+	int getOpenBordersRefuseAttitudeThreshold() const;
+	int getDefensivePactRefuseAttitudeThreshold() const;
+	int getPermanentAllianceRefuseAttitudeThreshold() const;
+	int getVassalRefuseAttitudeThreshold() const;
+	int getVassalPowerModifier() const;
+	int getFavoriteCivic() const;
+	int getFavoriteReligion() const;
+	int getFreedomAppreciation() const;
 
-	const TCHAR* getArtDefineTag() const; // Exposed to Python
+	const TCHAR* getArtDefineTag() const;
 
 	// Arrays
-	bool hasTrait(int i) const; // Exposed to Python
+	bool hasTrait(int i) const;
 
-	int getFlavorValue(int i) const; // Exposed to Python
-	int getContactRand(int i) const; // Exposed to Python
-	int getContactDelay(int i) const; // Exposed to Python
-	int getMemoryDecayRand(int i) const; // Exposed to Python
-	int getMemoryAttitudePercent(int i) const; // Exposed to Python
-	int getNoWarAttitudeProb(int i) const; // Exposed to Python
-	int getUnitAIWeightModifier(int i) const; // Exposed to Python
-	int getImprovementWeightModifier(int i) const; // Exposed to Python
+	int getFlavorValue(int i) const;
+	int getContactRand(int i) const;
+	int getContactDelay(int i) const;
+	int getMemoryDecayRand(int i) const;
+	int getMemoryAttitudePercent(int i) const;
+	int getNoWarAttitudeProb(int i) const;
+	int getUnitAIWeightModifier(int i) const;
+	int getImprovementWeightModifier(int i) const;
 	int getDiploPeaceIntroMusicScriptIds(int i) const;
 	int getDiploPeaceMusicScriptIds(int i) const;
 	int getDiploWarIntroMusicScriptIds(int i) const;
@@ -5399,25 +5399,25 @@ public:
 	CvWorldInfo();
 	virtual ~CvWorldInfo();
 
-	DllExport int getDefaultPlayers() const; // Exposed to Python
-	int getUnitNameModifier() const; // Exposed to Python
-	int getTargetNumCities() const; // Exposed to Python
-	int getNumFreeBuildingBonuses() const; // Exposed to Python
-	int getBuildingPrereqModifier() const; // Exposed to Python
-	int getMaxConscriptModifier() const; // Exposed to Python
-	int getWarWearinessModifier() const; // Exposed to Python
-	int getGridWidth() const; // Exposed to Python
-	int getGridHeight() const; // Exposed to Python
-	int getTerrainGrainChange() const; // Exposed to Python
-	int getFeatureGrainChange() const; // Exposed to Python
-	int getResearchPercent() const; // Exposed to Python
-	int getTradeProfitPercent() const; // Exposed to Python
-	int getDistanceMaintenancePercent() const; // Exposed to Python
-	int getNumCitiesMaintenancePercent() const; // Exposed to Python
-	int getColonyMaintenancePercent() const; // Exposed to Python
-	int getCorporationMaintenancePercent() const; // Exposed to Python
-	int getNumCitiesAnarchyPercent() const; // Exposed to Python
-	int getAdvancedStartPointsMod() const; // Exposed to Python
+	DllExport int getDefaultPlayers() const;
+	int getUnitNameModifier() const;
+	int getTargetNumCities() const;
+	int getNumFreeBuildingBonuses() const;
+	int getBuildingPrereqModifier() const;
+	int getMaxConscriptModifier() const;
+	int getWarWearinessModifier() const;
+	int getGridWidth() const;
+	int getGridHeight() const;
+	int getTerrainGrainChange() const;
+	int getFeatureGrainChange() const;
+	int getResearchPercent() const;
+	int getTradeProfitPercent() const;
+	int getDistanceMaintenancePercent() const;
+	int getNumCitiesMaintenancePercent() const;
+	int getColonyMaintenancePercent() const;
+	int getCorporationMaintenancePercent() const;
+	int getNumCitiesAnarchyPercent() const;
+	int getAdvancedStartPointsMod() const;
 	int getCommandersLevelThresholdsPercent() const;
 	int getOceanMinAreaSize() const;
 
@@ -5529,18 +5529,18 @@ public:
 	CvClimateInfo();
 	virtual ~CvClimateInfo();
 
-	int getDesertPercentChange() const; // Exposed to Python
-	int getJungleLatitude() const; // Exposed to Python
-	int getHillRange() const; // Exposed to Python
-	int getPeakPercent() const; // Exposed to Python
+	int getDesertPercentChange() const;
+	int getJungleLatitude() const;
+	int getHillRange() const;
+	int getPeakPercent() const;
 
-	float getSnowLatitudeChange() const; // Exposed to Python
-	float getTundraLatitudeChange() const; // Exposed to Python
-	float getGrassLatitudeChange() const; // Exposed to Python
-	float getDesertBottomLatitudeChange() const; // Exposed to Python
-	float getDesertTopLatitudeChange() const; // Exposed to Python
-	float getIceLatitude() const; // Exposed to Python
-	float getRandIceLatitude() const; // Exposed to Python
+	float getSnowLatitudeChange() const;
+	float getTundraLatitudeChange() const;
+	float getGrassLatitudeChange() const;
+	float getDesertBottomLatitudeChange() const;
+	float getDesertTopLatitudeChange() const;
+	float getIceLatitude() const;
+	float getRandIceLatitude() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvClimateInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -5572,7 +5572,7 @@ public:
 	CvSeaLevelInfo();
 	virtual ~CvSeaLevelInfo();
 
-	int getSeaLevelChange() const; // Exposed to Python
+	int getSeaLevelChange() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSeaLevelInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -5599,11 +5599,11 @@ public:
 	CvProcessInfo();
 	virtual ~CvProcessInfo();
 
-	int getTechPrereq() const; // Exposed to Python
+	int getTechPrereq() const;
 
 	// Arrays
 
-	int getProductionToCommerceModifier(int i) const; // Exposed to Python
+	int getProductionToCommerceModifier(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvProcessInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -5632,28 +5632,28 @@ public:
 	CvVoteInfo();
 	virtual ~CvVoteInfo();
 
-	int getPopulationThreshold() const; // Exposed to Python
-	int getStateReligionVotePercent() const; // Exposed to Python
-	int getTradeRoutes() const; // Exposed to Python
-	int getMinVoters() const; // Exposed to Python
+	int getPopulationThreshold() const;
+	int getStateReligionVotePercent() const;
+	int getTradeRoutes() const;
+	int getMinVoters() const;
 
-	bool isSecretaryGeneral() const; // Exposed to Python
-	bool isVictory() const; // Exposed to Python
-	bool isFreeTrade() const; // Exposed to Python
-	bool isNoNukes() const; // Exposed to Python
-	bool isCityVoting() const; // Exposed to Python
-	bool isCivVoting() const; // Exposed to Python
-	bool isDefensivePact() const; // Exposed to Python
-	bool isOpenBorders() const; // Exposed to Python
-	bool isForcePeace() const; // Exposed to Python
-	bool isForceNoTrade() const; // Exposed to Python
-	bool isForceWar() const; // Exposed to Python
-	bool isAssignCity() const; // Exposed to Python
+	bool isSecretaryGeneral() const;
+	bool isVictory() const;
+	bool isFreeTrade() const;
+	bool isNoNukes() const;
+	bool isCityVoting() const;
+	bool isCivVoting() const;
+	bool isDefensivePact() const;
+	bool isOpenBorders() const;
+	bool isForcePeace() const;
+	bool isForceNoTrade() const;
+	bool isForceWar() const;
+	bool isAssignCity() const;
 
 	// Arrays
 
-	bool isForceCivic(int i) const; // Exposed to Python
-	bool isVoteSourceType(int i) const; // Exposed to Python
+	bool isForceCivic(int i) const;
+	bool isVoteSourceType(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvVoteInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -5702,39 +5702,39 @@ public:
 	CvProjectInfo();
 	virtual ~CvProjectInfo();
 
-	int getVictoryPrereq() const; // Exposed to Python
-	int getTechPrereq() const; // Exposed to Python
-	int getAnyoneProjectPrereq() const; // Exposed to Python
+	int getVictoryPrereq() const;
+	int getTechPrereq() const;
+	int getAnyoneProjectPrereq() const;
 	void setAnyoneProjectPrereq(int i);
-	int getMaxGlobalInstances() const; // Exposed to Python
-	int getMaxTeamInstances() const; // Exposed to Python
-	int getProductionCost() const; // Exposed to Python
-	int getNukeInterception() const; // Exposed to Python
-	int getTechShare() const; // Exposed to Python
+	int getMaxGlobalInstances() const;
+	int getMaxTeamInstances() const;
+	int getProductionCost() const;
+	int getNukeInterception() const;
+	int getTechShare() const;
 	//DPII < Maintenance Modifier >
 	int getGlobalMaintenanceModifier() const;
 	int getDistanceMaintenanceModifier() const;
 	int getNumCitiesMaintenanceModifier() const;
 	int getConnectedCityMaintenanceModifier() const;
 	//DPII < Maintenance Modifier >
-	int getEveryoneSpecialUnit() const; // Exposed to Python
-	int getEveryoneSpecialBuilding() const; // Exposed to Python
-	int getVictoryDelayPercent() const; // Exposed to Python
-	int getSuccessRate() const; // Exposed to Python
+	int getEveryoneSpecialUnit() const;
+	int getEveryoneSpecialBuilding() const;
+	int getVictoryDelayPercent() const;
+	int getSuccessRate() const;
 
-	bool isSpaceship() const; // Exposed to Python
-	bool isAllowsNukes() const; // Exposed to Python
-	const char* getMovieArtDef() const; // Exposed to Python
+	bool isSpaceship() const;
+	bool isAllowsNukes() const;
+	const char* getMovieArtDef() const;
 
-	const TCHAR* getCreateSound() const; // Exposed to Python
+	const TCHAR* getCreateSound() const;
 	void setCreateSound(const TCHAR* szVal);
 
 	// Arrays
 
-	int getBonusProductionModifier(int i) const; // Exposed to Python
-	int getVictoryThreshold(int i) const; // Exposed to Python
-	int getVictoryMinThreshold(int i) const; // Exposed to Python
-	int getProjectsNeeded(int i) const; // Exposed to Python
+	int getBonusProductionModifier(int i) const;
+	int getVictoryThreshold(int i) const;
+	int getVictoryMinThreshold(int i) const;
+	int getProjectsNeeded(int i) const;
 
 	// Vectors
 	int getMapCategoryType(int i) const;
@@ -5822,41 +5822,41 @@ public:
 	CvReligionInfo();
 	virtual ~CvReligionInfo();
 
-	int getChar() const; // Exposed to Python
+	int getChar() const;
 	// TGA_INDEXATION 01/21/08 MRGENIE
 	int getTGAIndex() const;
 	//void setTGAIndex(int i);
 
 	void setChar(int i);
-	int getHolyCityChar() const; // Exposed to Python
+	int getHolyCityChar() const;
 	void setHolyCityChar(int i);
-	int getTechPrereq() const; // Exposed to Python
-	int getFreeUnit() const; // Exposed to Python
-	int getNumFreeUnits() const; // Exposed to Python
-	int getSpreadFactor() const; // Exposed to Python
-	int getMissionType() const; // Exposed to Python
+	int getTechPrereq() const;
+	int getFreeUnit() const;
+	int getNumFreeUnits() const;
+	int getSpreadFactor() const;
+	int getMissionType() const;
 	void setMissionType(int iNewType);
 
-	const TCHAR* getTechButton() const; // Exposed to Python
-	const TCHAR* getGenericTechButton() const; // Exposed to Python
-	const TCHAR* getMovieFile() const; // Exposed to Python
-	const TCHAR* getMovieSound() const; // Exposed to Python
-	const TCHAR* getSound() const; // Exposed to Python
+	const TCHAR* getTechButton() const;
+	const TCHAR* getGenericTechButton() const;
+	const TCHAR* getMovieFile() const;
+	const TCHAR* getMovieSound() const;
+	const TCHAR* getSound() const;
 	const TCHAR* getButtonDisabled() const;		//	Exposed to Python
 
 	void setAdjectiveKey(const TCHAR* szVal);
-	const wchar_t* getAdjectiveKey() const; // Exposed to Python
-	std::wstring pyGetAdjectiveKey() const { return getAdjectiveKey(); } // Exposed to Python
+	const wchar_t* getAdjectiveKey() const;
+	std::wstring pyGetAdjectiveKey() const { return getAdjectiveKey(); }
 
 	// Arrays
 
-	int getGlobalReligionCommerce(int i) const; // Exposed to Python
+	int getGlobalReligionCommerce(int i) const;
 	int* getGlobalReligionCommerceArray() const;
-	int getHolyCityCommerce(int i) const; // Exposed to Python
+	int getHolyCityCommerce(int i) const;
 	int* getHolyCityCommerceArray() const;
-	int getStateReligionCommerce(int i) const; // Exposed to Python
+	int getStateReligionCommerce(int i) const;
 	int* getStateReligionCommerceArray() const;
-	int getFlavorValue(int i) const; // Exposed to Python
+	int getFlavorValue(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass3();
@@ -5912,36 +5912,36 @@ public:
 	CvCorporationInfo();
 	virtual ~CvCorporationInfo();
 
-	int getChar() const; // Exposed to Python
+	int getChar() const;
 	// TGA_INDEXATION 01/21/08 MRGENIE
 	int getTGAIndex() const;
 	//void setTGAIndex(int i);
 
 	void setChar(int i);
-	int getHeadquarterChar() const; // Exposed to Python
+	int getHeadquarterChar() const;
 	void setHeadquarterChar(int i);
-	int getTechPrereq() const; // Exposed to Python
-	int getFreeUnit() const; // Exposed to Python
-	int getSpreadFactor() const; // Exposed to Python
-	int getSpreadCost() const; // Exposed to Python
-	int getMaintenance() const; // Exposed to Python
-	int getMissionType() const; // Exposed to Python
+	int getTechPrereq() const;
+	int getFreeUnit() const;
+	int getSpreadFactor() const;
+	int getSpreadCost() const;
+	int getMaintenance() const;
+	int getMissionType() const;
 	void setMissionType(int iNewType);
 
-	int getBonusProduced() const; // Exposed to Python
+	int getBonusProduced() const;
 
-	const TCHAR* getMovieFile() const; // Exposed to Python
-	const TCHAR* getMovieSound() const; // Exposed to Python
-	const TCHAR* getSound() const; // Exposed to Python
+	const TCHAR* getMovieFile() const;
+	const TCHAR* getMovieSound() const;
+	const TCHAR* getSound() const;
 
 	// Arrays
 
-	int getPrereqBonus(int i) const; // Exposed to Python
-	int getHeadquarterCommerce(int i) const; // Exposed to Python
+	int getPrereqBonus(int i) const;
+	int getHeadquarterCommerce(int i) const;
 	int* getHeadquarterCommerceArray() const;
-	int getCommerceProduced(int i) const; // Exposed to Python
+	int getCommerceProduced(int i) const;
 	int* getCommerceProducedArray() const;
-	int getYieldProduced(int i) const; // Exposed to Python
+	int getYieldProduced(int i) const;
 	int* getYieldProducedArray() const;
 
 	bool read(CvXMLLoadUtility* pXML);
@@ -6040,48 +6040,48 @@ public:
 	CvTraitInfo();
 	virtual ~CvTraitInfo();
 
-	int getHealth() const; // Exposed to Python
-	int getHappiness() const; // Exposed to Python
-	int getMaxAnarchy() const; // Exposed to Python
-	int getUpkeepModifier() const; // Exposed to Python
-	int getLevelExperienceModifier() const; // Exposed to Python
-	int getGreatPeopleRateModifier() const; // Exposed to Python
-	int getGreatGeneralRateModifier() const; // Exposed to Python
-	int getDomesticGreatGeneralRateModifier() const; // Exposed to Python
-	int getMaxGlobalBuildingProductionModifier() const; // Exposed to Python
-	int getMaxTeamBuildingProductionModifier() const; // Exposed to Python
-	int getMaxPlayerBuildingProductionModifier() const; // Exposed to Python
+	int getHealth() const;
+	int getHappiness() const;
+	int getMaxAnarchy() const;
+	int getUpkeepModifier() const;
+	int getLevelExperienceModifier() const;
+	int getGreatPeopleRateModifier() const;
+	int getGreatGeneralRateModifier() const;
+	int getDomesticGreatGeneralRateModifier() const;
+	int getMaxGlobalBuildingProductionModifier() const;
+	int getMaxTeamBuildingProductionModifier() const;
+	int getMaxPlayerBuildingProductionModifier() const;
 
 /********************************************************************************/
 /**		REVDCM									2/16/10				phungus420	*/
 /**																				*/
 /**		RevTraitEffects															*/
 /********************************************************************************/
-	int getRevIdxLocal() const; // Exposed to Python
-	int getRevIdxNational() const; // Exposed to Python
-	int getRevIdxDistanceModifier() const; // Exposed to Python
-	int getRevIdxHolyCityGood() const; // Exposed to Python
-	int getRevIdxHolyCityBad() const; // Exposed to Python
-	float getRevIdxNationalityMod() const; // Exposed to Python
-	float getRevIdxBadReligionMod() const; // Exposed to Python
-	float getRevIdxGoodReligionMod() const; // Exposed to Python
-	bool isNonStateReligionCommerce() const; // Exposed to Python
-	bool isUpgradeAnywhere() const; // Exposed to Python
+	int getRevIdxLocal() const;
+	int getRevIdxNational() const;
+	int getRevIdxDistanceModifier() const;
+	int getRevIdxHolyCityGood() const;
+	int getRevIdxHolyCityBad() const;
+	float getRevIdxNationalityMod() const;
+	float getRevIdxBadReligionMod() const;
+	float getRevIdxGoodReligionMod() const;
+	bool isNonStateReligionCommerce() const;
+	bool isUpgradeAnywhere() const;
 /********************************************************************************/
 /**		REVDCM									END								*/
 /********************************************************************************/
 
-	const TCHAR* getShortDescription() const; // Exposed to Python
+	const TCHAR* getShortDescription() const;
 	void setShortDescription(const TCHAR* szVal);
 
 	// Arrays
 
-	int getExtraYieldThreshold(int i) const; // Exposed to Python
-	int getTradeYieldModifier(int i) const; // Exposed to Python
-	int getCommerceChange(int i) const; // Exposed to Python
-	int getCommerceModifier(int i) const; // Exposed to Python
+	int getExtraYieldThreshold(int i) const;
+	int getTradeYieldModifier(int i) const;
+	int getCommerceChange(int i) const;
+	int getCommerceModifier(int i) const;
 /*
-	int isFreePromotion(int i) const; // Exposed to Python
+	int isFreePromotion(int i) const;
 	int isFreePromotionUnitCombat(int i) const;
 */
 
@@ -6187,28 +6187,28 @@ public:
 	bool isOnGameOption(int i) const;
 
 	//Arrays
-	int getSpecialistYieldChange(int i, int j) const; // Exposed to Python
+	int getSpecialistYieldChange(int i, int j) const;
 	int* getSpecialistYieldChangeArray(int i) const;
 	bool m_bAnySpecialistYieldChanges;
 
-	int getYieldModifier(int i) const; // Exposed to Python
+	int getYieldModifier(int i) const;
 	int* getYieldModifierArray() const;
 
-	int getCapitalYieldModifier(int i) const; // Exposed to Python
+	int getCapitalYieldModifier(int i) const;
 	int* getCapitalYieldModifierArray() const;
 
-	int getCapitalCommerceModifier(int i) const; // Exposed to Python
+	int getCapitalCommerceModifier(int i) const;
 	int* getCapitalCommerceModifierArray() const;
 
-	int getSpecialistExtraCommerce(int i) const; // Exposed to Python
+	int getSpecialistExtraCommerce(int i) const;
 	int* getSpecialistExtraCommerceArray() const;
 
-	int getSpecialistExtraYield(int i) const; // Exposed to Python
+	int getSpecialistExtraYield(int i) const;
 	int* getSpecialistExtraYieldArray() const;
 
-	int getYieldChange(int i) const; // Exposed to Python
+	int getYieldChange(int i) const;
 
-	int getSpecialistCommerceChange(int i, int j) const; // Exposed to Python
+	int getSpecialistCommerceChange(int i, int j) const;
 	int* getSpecialistCommerceChangeArray(int i) const;
 	bool m_bAnySpecialistCommerceChanges;
 
@@ -6218,7 +6218,7 @@ public:
 	int getSeaPlotYieldChanges(int i) const;
 	int* getSeaPlotYieldChangesArray() const;
 
-	int getImprovementYieldChange(int i, int j) const; // Exposed to Python
+	int getImprovementYieldChange(int i, int j) const;
 	int* getImprovementYieldChangeArray(int i) const;
 	bool m_bAnyImprovementYieldChanges;
 	//Team Project (7)
@@ -6501,7 +6501,7 @@ public:
 	CvCursorInfo();
 	virtual ~CvCursorInfo();
 
-	DllExport const TCHAR* getPath(); // Exposed to Python
+	DllExport const TCHAR* getPath();
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvCursorInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
@@ -6863,11 +6863,11 @@ public:
 	CvAssetInfoBase()  {}
 	virtual ~CvAssetInfoBase() {}
 
-	const TCHAR* getTag() const; // Exposed to Python
-	void setTag(const TCHAR* szDesc); // Exposed to Python
+	const TCHAR* getTag() const;
+	void setTag(const TCHAR* szDesc);
 
-	DllExport const TCHAR* getPath() const; // Exposed to Python
-	void setPath(const TCHAR* szDesc); // Exposed to Python
+	DllExport const TCHAR* getPath() const;
+	void setPath(const TCHAR* szDesc);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvAssetInfoBase* pClassInfo, CvXMLLoadUtility* pXML);
@@ -6886,11 +6886,11 @@ public:
 	CvArtInfoAsset() {}
 	virtual ~CvArtInfoAsset() {}
 
-	DllExport const TCHAR* getNIF() const; // Exposed to Python
-	DllExport const TCHAR* getKFM() const; // Exposed to Python
+	DllExport const TCHAR* getNIF() const;
+	DllExport const TCHAR* getKFM() const;
 
-	void setNIF(const TCHAR* szDesc); // Exposed to Python
-	void setKFM(const TCHAR* szDesc); // Exposed to Python
+	void setNIF(const TCHAR* szDesc);
+	void setKFM(const TCHAR* szDesc);
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -7038,7 +7038,7 @@ public:
 	CvArtInfoBuilding();
 	virtual ~CvArtInfoBuilding();
 
-	bool isAnimated() const; // Exposed to Python
+	bool isAnimated() const;
 	DllExport const TCHAR* getLSystemName() const;
 
 	bool read(CvXMLLoadUtility* pXML);
@@ -7059,7 +7059,7 @@ public:
 	CvArtInfoCivilization();
 	virtual ~CvArtInfoCivilization();
 
-	bool isWhiteFlag() const; // Exposed to Python
+	bool isWhiteFlag() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvArtInfoCivilization* pClassInfo, CvXMLLoadUtility* pXML);
@@ -7120,7 +7120,7 @@ public:
 	DllExport const TCHAR* getShaderNIF() const;
 	void setShaderNIF(const TCHAR* szDesc);
 
-	bool isExtraAnimations() const; // Exposed to Python
+	bool isExtraAnimations() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvArtInfoImprovement* pClassInfo, CvXMLLoadUtility* pXML);
@@ -7158,11 +7158,11 @@ public:
 protected:
 
 	//!< Detail texture associated with the Terrain base texture
-	CvString m_szDetailTexture; 
+	CvString m_szDetailTexture;
 	CvString m_szGridTexture;
 
 	//!< Layering order of texture
-	int m_iLayerOrder; 
+	int m_iLayerOrder;
 	bool m_bAlphaShader;
 
 	//!< Array of Textureslots per blend tile
@@ -7177,8 +7177,8 @@ public:
 	CvArtInfoFeature();
 	virtual ~CvArtInfoFeature();
 
-	DllExport bool isAnimated() const; // Exposed to Python
-	DllExport bool isRiverArt() const; // Exposed to Python
+	DllExport bool isAnimated() const;
+	DllExport bool isRiverArt() const;
 	DllExport TileArtTypes getTileArtType() const;
 	DllExport LightTypes getLightType() const;
 
@@ -7371,17 +7371,17 @@ public:
 	CvEmphasizeInfo();
 	virtual ~CvEmphasizeInfo();
 
-	bool isAvoidGrowth() const; // Exposed to Python
-	bool isGreatPeople() const; // Exposed to Python
+	bool isAvoidGrowth() const;
+	bool isGreatPeople() const;
 
 	// Afforess 02/10/10
-	bool isAvoidAngryCitizens() const; // Exposed to Python
-	bool isAvoidUnhealthyCitizens() const; // Exposed to Python
+	bool isAvoidAngryCitizens() const;
+	bool isAvoidUnhealthyCitizens() const;
 	// ! Afforess
 
 	// Arrays
-	int getYieldChange(int i) const; // Exposed to Python
-	int getCommerceChange(int i) const; // Exposed to Python
+	int getYieldChange(int i) const;
+	int getCommerceChange(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvEmphasizeInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -7449,17 +7449,17 @@ public:
 	CvCultureLevelInfo();
 	virtual ~CvCultureLevelInfo();
 
-	int getCityDefenseModifier() const; // Exposed to Python
+	int getCityDefenseModifier() const;
 
 	// JOOYO_ADDON, Added by Jooyo, 06/17/09
-	int getCityRadius() const; // Exposed to Python
+	int getCityRadius() const;
 	int getMaxWorldWonders() const;
 	int getMaxTeamWonders() const;
 	int getMaxNationalWonders() const;
 	int getMaxNationalWondersOCC() const;
 	int getPrereqGameOption() const;
 
-	int getSpeedThreshold(int i) const; // Exposed to Python
+	int getSpeedThreshold(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -7497,38 +7497,38 @@ public:
 	CvEraInfo();
 	virtual ~CvEraInfo();
 
-	int getStartingUnitMultiplier() const; // Exposed to Python
-	int getStartingDefenseUnits() const; // Exposed to Python
-	int getStartingWorkerUnits() const; // Exposed to Python
-	int getStartingExploreUnits() const; // Exposed to Python
-	int getAdvancedStartPoints() const; // Exposed to Python
-	int getStartingGold() const; // Exposed to Python
-	int getFreePopulation() const; // Exposed to Python
-	int getStartPercent() const; // Exposed to Python
-	int getGrowthPercent() const; // Exposed to Python
-	int getTrainPercent() const; // Exposed to Python
-	int getConstructPercent() const; // Exposed to Python
-	int getCreatePercent() const; // Exposed to Python
-	int getResearchPercent() const; // Exposed to Python
-	int getBuildPercent() const; // Exposed to Python
-	int getImprovementPercent() const; // Exposed to Python
-	int getGreatPeoplePercent() const; // Exposed to Python
-	int getAnarchyPercent() const; // Exposed to Python
-	int getEventChancePerTurn() const; // Exposed to Python
-	int getSoundtrackSpace() const; // Exposed to Python
-	int getNumSoundtracks() const; // Exposed to Python
-	int getBeelineStingsTechCostModifier() const; // Exposed to Python
+	int getStartingUnitMultiplier() const;
+	int getStartingDefenseUnits() const;
+	int getStartingWorkerUnits() const;
+	int getStartingExploreUnits() const;
+	int getAdvancedStartPoints() const;
+	int getStartingGold() const;
+	int getFreePopulation() const;
+	int getStartPercent() const;
+	int getGrowthPercent() const;
+	int getTrainPercent() const;
+	int getConstructPercent() const;
+	int getCreatePercent() const;
+	int getResearchPercent() const;
+	int getBuildPercent() const;
+	int getImprovementPercent() const;
+	int getGreatPeoplePercent() const;
+	int getAnarchyPercent() const;
+	int getEventChancePerTurn() const;
+	int getSoundtrackSpace() const;
+	int getNumSoundtracks() const;
+	int getBeelineStingsTechCostModifier() const;
 
 	int getInitialCityMaintenancePercent() const; // Afforess 09/12/10
 
-	const TCHAR* getAudioUnitVictoryScript() const; // Exposed to Python
-	const TCHAR* getAudioUnitDefeatScript() const; // Exposed to Python
+	const TCHAR* getAudioUnitVictoryScript() const;
+	const TCHAR* getAudioUnitDefeatScript() const;
 
-	bool isNoGoodies() const; // Exposed to Python
-	bool isNoAnimals() const; // Exposed to Python
-	bool isNoBarbUnits() const; // Exposed to Python
-	bool isNoBarbCities() const; // Exposed to Python
-	bool isFirstSoundtrackFirst() const; // Exposed to Python
+	bool isNoGoodies() const;
+	bool isNoAnimals() const;
+	bool isNoBarbUnits() const;
+	bool isNoBarbCities() const;
+	bool isFirstSoundtrackFirst() const;
 
 	// Arrays
 
@@ -7808,17 +7808,17 @@ public:
 	void init(int iNum);
 	void uninit();
 
-	const Response& getResponse(int iNum) const { return m_pResponses[iNum]; } // Exposed to Python
-	int getNumResponses() const; // Exposed to Python
+	const Response& getResponse(int iNum) const { return m_pResponses[iNum]; }
+	int getNumResponses() const;
 
-	bool getCivilizationTypes(int i, int j) const; // Exposed to Python
-	bool getLeaderHeadTypes(int i, int j) const; // Exposed to Python
-	bool getAttitudeTypes(int i, int j) const; // Exposed to Python
-	bool getDiplomacyPowerTypes(int i, int j) const; // Exposed to Python
+	bool getCivilizationTypes(int i, int j) const;
+	bool getLeaderHeadTypes(int i, int j) const;
+	bool getAttitudeTypes(int i, int j) const;
+	bool getDiplomacyPowerTypes(int i, int j) const;
 
-	int getNumDiplomacyText(int i) const; // Exposed to Python
+	int getNumDiplomacyText(int i) const;
 
-	const TCHAR* getDiplomacyText(int i, int j) const; // Exposed to Python
+	const TCHAR* getDiplomacyText(int i, int j) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -8165,61 +8165,61 @@ public:
 	CvEventTriggerInfo();
 	virtual ~CvEventTriggerInfo();
 
-	int getPercentGamesActive() const; // Exposed to Python
-	int getProbability() const; // Exposed to Python
-	int getNumUnits() const; // Exposed to Python
-	int getNumBuildings() const; // Exposed to Python
-	int getNumUnitsGlobal() const; // Exposed to Python
-	int getNumBuildingsGlobal() const; // Exposed to Python
-	int getNumPlotsRequired() const; // Exposed to Python
-	int getPlotType() const; // Exposed to Python
-	int getNumReligions() const; // Exposed to Python
-	int getNumCorporations() const; // Exposed to Python
-	int getOtherPlayerShareBorders() const; // Exposed to Python
-	int getOtherPlayerHasTech() const; // Exposed to Python
-	int getCityFoodWeight() const; // Exposed to Python
-	int getCivic() const; // Exposed to Python
-	int getMinPopulation() const; // Exposed to Python
-	int getMaxPopulation() const; // Exposed to Python
-	int getMinMapLandmass() const; // Exposed to Python
-	int getMinOurLandmass() const; // Exposed to Python
-	int getMaxOurLandmass() const; // Exposed to Python
-	int getMinDifficulty() const; // Exposed to Python
-	int getAngry() const; // Exposed to Python
-	int getUnhealthy() const; // Exposed to Python
-	int getUnitDamagedWeight() const; // Exposed to Python
-	int getUnitDistanceWeight() const; // Exposed to Python
-	int getUnitExperienceWeight() const; // Exposed to Python
-	int getMinTreasury() const; // Exposed to Python
+	int getPercentGamesActive() const;
+	int getProbability() const;
+	int getNumUnits() const;
+	int getNumBuildings() const;
+	int getNumUnitsGlobal() const;
+	int getNumBuildingsGlobal() const;
+	int getNumPlotsRequired() const;
+	int getPlotType() const;
+	int getNumReligions() const;
+	int getNumCorporations() const;
+	int getOtherPlayerShareBorders() const;
+	int getOtherPlayerHasTech() const;
+	int getCityFoodWeight() const;
+	int getCivic() const;
+	int getMinPopulation() const;
+	int getMaxPopulation() const;
+	int getMinMapLandmass() const;
+	int getMinOurLandmass() const;
+	int getMaxOurLandmass() const;
+	int getMinDifficulty() const;
+	int getAngry() const;
+	int getUnhealthy() const;
+	int getUnitDamagedWeight() const;
+	int getUnitDistanceWeight() const;
+	int getUnitExperienceWeight() const;
+	int getMinTreasury() const;
 
-	int getBuildingRequired(int i) const; // Exposed to Python
-	int getNumBuildingsRequired() const; // Exposed to Python
-	int getUnitRequired(int i) const; // Exposed to Python
-	int getNumUnitsRequired() const; // Exposed to Python
-	int getPrereqOrTechs(int i) const; // Exposed to Python
-	int getNumPrereqOrTechs() const; // Exposed to Python
-	int getPrereqAndTechs(int i) const; // Exposed to Python
-	int getNumPrereqAndTechs() const; // Exposed to Python
-	int getObsoleteTech(int i) const; // Exposed to Python
-	int getNumObsoleteTechs() const; // Exposed to Python
-	int getEvent(int i) const; // Exposed to Python
-	int getNumEvents() const; // Exposed to Python
-	int getPrereqEvent(int i) const; // Exposed to Python
-	int getNumPrereqEvents() const; // Exposed to Python
-	int getFeatureRequired(int i) const; // Exposed to Python
-	int getNumFeaturesRequired() const; // Exposed to Python
-	int getTerrainRequired(int i) const; // Exposed to Python
-	int getNumTerrainsRequired() const; // Exposed to Python
-	int getImprovementRequired(int i) const; // Exposed to Python
-	int getNumImprovementsRequired() const; // Exposed to Python
-	int getBonusRequired(int i) const; // Exposed to Python
-	int getNumBonusesRequired() const; // Exposed to Python
-	int getRouteRequired(int i) const; // Exposed to Python
-	int getNumRoutesRequired() const; // Exposed to Python
-	int getReligionRequired(int i) const; // Exposed to Python
-	int getNumReligionsRequired() const; // Exposed to Python
-	int getCorporationRequired(int i) const; // Exposed to Python
-	int getNumCorporationsRequired() const; // Exposed to Python
+	int getBuildingRequired(int i) const;
+	int getNumBuildingsRequired() const;
+	int getUnitRequired(int i) const;
+	int getNumUnitsRequired() const;
+	int getPrereqOrTechs(int i) const;
+	int getNumPrereqOrTechs() const;
+	int getPrereqAndTechs(int i) const;
+	int getNumPrereqAndTechs() const;
+	int getObsoleteTech(int i) const;
+	int getNumObsoleteTechs() const;
+	int getEvent(int i) const;
+	int getNumEvents() const;
+	int getPrereqEvent(int i) const;
+	int getNumPrereqEvents() const;
+	int getFeatureRequired(int i) const;
+	int getNumFeaturesRequired() const;
+	int getTerrainRequired(int i) const;
+	int getNumTerrainsRequired() const;
+	int getImprovementRequired(int i) const;
+	int getNumImprovementsRequired() const;
+	int getBonusRequired(int i) const;
+	int getNumBonusesRequired() const;
+	int getRouteRequired(int i) const;
+	int getNumRoutesRequired() const;
+	int getReligionRequired(int i) const;
+	int getNumReligionsRequired() const;
+	int getCorporationRequired(int i) const;
+	int getNumCorporationsRequired() const;
 
 	//Property prereqs
 	const CvProperties* getPrereqMinProperties() const;
@@ -8234,31 +8234,31 @@ public:
 	int getNumWorldNews() const;
 
 // Start EmperorFool: Events with Images
-	const TCHAR* getEventArt() const; // Exposed to Python
+	const TCHAR* getEventArt() const;
 // End EmperorFool: Events with Images
 
-	bool isSinglePlayer() const; // Exposed to Python
-	bool isTeam() const; // Exposed to Python
-	bool isRecurring() const; // Exposed to Python
-	bool isGlobal() const; // Exposed to Python
-	bool isPickPlayer() const; // Exposed to Python
-	bool isOtherPlayerWar() const; // Exposed to Python
-	bool isOtherPlayerHasReligion() const; // Exposed to Python
-	bool isOtherPlayerHasOtherReligion() const; // Exposed to Python
-	bool isOtherPlayerAI() const; // Exposed to Python
-	bool isPickCity() const; // Exposed to Python
-	bool isPickOtherPlayerCity() const; // Exposed to Python
-	bool isShowPlot() const; // Exposed to Python
-	bool isUnitsOnPlot() const; // Exposed to Python
-	bool isOwnPlot() const; // Exposed to Python
-	bool isPickReligion() const; // Exposed to Python
-	bool isStateReligion() const; // Exposed to Python
-	bool isHolyCity() const; // Exposed to Python
-	bool isPickCorporation() const; // Exposed to Python
-	bool isHeadquarters() const; // Exposed to Python
-	bool isProbabilityUnitMultiply() const; // Exposed to Python
-	bool isProbabilityBuildingMultiply() const; // Exposed to Python
-	bool isPrereqEventCity() const; // Exposed to Python
+	bool isSinglePlayer() const;
+	bool isTeam() const;
+	bool isRecurring() const;
+	bool isGlobal() const;
+	bool isPickPlayer() const;
+	bool isOtherPlayerWar() const;
+	bool isOtherPlayerHasReligion() const;
+	bool isOtherPlayerHasOtherReligion() const;
+	bool isOtherPlayerAI() const;
+	bool isPickCity() const;
+	bool isPickOtherPlayerCity() const;
+	bool isShowPlot() const;
+	bool isUnitsOnPlot() const;
+	bool isOwnPlot() const;
+	bool isPickReligion() const;
+	bool isStateReligion() const;
+	bool isHolyCity() const;
+	bool isPickCorporation() const;
+	bool isHeadquarters() const;
+	bool isProbabilityUnitMultiply() const;
+	bool isProbabilityBuildingMultiply() const;
+	bool isPrereqEventCity() const;
 
 	const char* getPythonCallback() const;
 	const char* getPythonCanDo() const;
@@ -8382,72 +8382,72 @@ public:
 	CvEventInfo();
 	virtual ~CvEventInfo();
 
-	bool isQuest() const; // Exposed to Python
-	bool isGlobal() const; // Exposed to Python
-	bool isTeam() const; // Exposed to Python
-	bool isCityEffect() const; // Exposed to Python
-	bool isOtherPlayerCityEffect() const; // Exposed to Python
-	bool isGoldToPlayer() const; // Exposed to Python
-	bool isGoldenAge() const; // Exposed to Python
-	bool isDeclareWar() const; // Exposed to Python
-	bool isDisbandUnit() const; // Exposed to Python
+	bool isQuest() const;
+	bool isGlobal() const;
+	bool isTeam() const;
+	bool isCityEffect() const;
+	bool isOtherPlayerCityEffect() const;
+	bool isGoldToPlayer() const;
+	bool isGoldenAge() const;
+	bool isDeclareWar() const;
+	bool isDisbandUnit() const;
 
-	int getGold() const; // Exposed to Python
-	int getRandomGold() const; // Exposed to Python
-	int getEspionagePoints() const; // Exposed to Python
-	int getCulture() const; // Exposed to Python
-	int getTech() const; // Exposed to Python
-	int getTechPercent() const; // Exposed to Python
-	int getTechCostPercent() const; // Exposed to Python
-	int getTechMinTurnsLeft() const; // Exposed to Python
-	int getPrereqTech() const; // Exposed to Python
-	int getFreeUnit() const; // Exposed to Python
-	int getNumUnits() const; // Exposed to Python
-	int getBuilding() const; // Exposed to Python
-	int getBuildingChange() const; // Exposed to Python
-	int getHappy() const; // Exposed to Python
-	int getHealth() const; // Exposed to Python
-	int getHurryAnger() const; // Exposed to Python
-	int getHappyTurns() const; // Exposed to Python
-	int getFood() const; // Exposed to Python
-	int getFoodPercent() const; // Exposed to Python
-	int getFeature() const; // Exposed to Python
-	int getFeatureChange() const; // Exposed to Python
-	int getImprovement() const; // Exposed to Python
-	int getImprovementChange() const; // Exposed to Python
+	int getGold() const;
+	int getRandomGold() const;
+	int getEspionagePoints() const;
+	int getCulture() const;
+	int getTech() const;
+	int getTechPercent() const;
+	int getTechCostPercent() const;
+	int getTechMinTurnsLeft() const;
+	int getPrereqTech() const;
+	int getFreeUnit() const;
+	int getNumUnits() const;
+	int getBuilding() const;
+	int getBuildingChange() const;
+	int getHappy() const;
+	int getHealth() const;
+	int getHurryAnger() const;
+	int getHappyTurns() const;
+	int getFood() const;
+	int getFoodPercent() const;
+	int getFeature() const;
+	int getFeatureChange() const;
+	int getImprovement() const;
+	int getImprovementChange() const;
 	int getCommerceModifier(int i) const;
 	int getYieldModifier(int i) const;
-	int getBonus() const; // Exposed to Python
-	int getBonusChange() const; // Exposed to Python
-	int getRoute() const; // Exposed to Python
-	int getRouteChange() const; // Exposed to Python
-	int getBonusRevealed() const; // Exposed to Python
-	int getBonusGift() const; // Exposed to Python
-	int getUnitExperience() const; // Exposed to Python
-	int getUnitImmobileTurns() const; // Exposed to Python
-	int getConvertOwnCities() const; // Exposed to Python
-	int getConvertOtherCities() const; // Exposed to Python
-	int getMaxNumReligions() const; // Exposed to Python
-	int getOurAttitudeModifier() const; // Exposed to Python
-	int getAttitudeModifier() const; // Exposed to Python
-	int getTheirEnemyAttitudeModifier() const; // Exposed to Python
-	int getPopulationChange() const; // Exposed to Python
-	int getRevoltTurns() const; // Exposed to Python
-	int getMinPillage() const; // Exposed to Python
-	int getMaxPillage() const; // Exposed to Python
-	int getFreeUnitSupport() const; // Exposed to Python
-	int getInflationModifier() const; // Exposed to Python
-	int getSpaceProductionModifier() const; // Exposed to Python
-	int getAIValue() const; // Exposed to Python
+	int getBonus() const;
+	int getBonusChange() const;
+	int getRoute() const;
+	int getRouteChange() const;
+	int getBonusRevealed() const;
+	int getBonusGift() const;
+	int getUnitExperience() const;
+	int getUnitImmobileTurns() const;
+	int getConvertOwnCities() const;
+	int getConvertOtherCities() const;
+	int getMaxNumReligions() const;
+	int getOurAttitudeModifier() const;
+	int getAttitudeModifier() const;
+	int getTheirEnemyAttitudeModifier() const;
+	int getPopulationChange() const;
+	int getRevoltTurns() const;
+	int getMinPillage() const;
+	int getMaxPillage() const;
+	int getFreeUnitSupport() const;
+	int getInflationModifier() const;
+	int getSpaceProductionModifier() const;
+	int getAIValue() const;
 
-	int getAdditionalEventChance(int i) const; // Exposed to Python
-	int getAdditionalEventTime(int i) const; // Exposed to Python
-	int getClearEventChance(int i) const; // Exposed to Python
-	int getTechFlavorValue(int i) const; // Exposed to Python
-	int getPlotExtraYield(int i) const; // Exposed to Python
-	int getFreeSpecialistCount(int i) const; // Exposed to Python
-	int getUnitCombatPromotion(int i) const; // Exposed to Python
-	int getUnitPromotion(int i) const; // Exposed to Python
+	int getAdditionalEventChance(int i) const;
+	int getAdditionalEventTime(int i) const;
+	int getClearEventChance(int i) const;
+	int getTechFlavorValue(int i) const;
+	int getPlotExtraYield(int i) const;
+	int getFreeSpecialistCount(int i) const;
+	int getUnitCombatPromotion(int i) const;
+	int getUnitPromotion(int i) const;
 	const CvWString& getWorldNews(int i) const;
 	int getNumWorldNews() const;
 
@@ -8773,18 +8773,18 @@ public:
 	CvVoteSourceInfo();
 	virtual ~CvVoteSourceInfo();
 
-	int getVoteInterval() const; // Exposed to Python
-	int getFreeSpecialist() const; // Exposed to Python
-	int getCivic() const; // Exposed to Python
+	int getVoteInterval() const;
+	int getFreeSpecialist() const;
+	int getCivic() const;
 	const CvWString getPopupText() const;
 	const CvWString getSecretaryGeneralText() const;
 	const CvString& getCopyPopupText() const;
 	const CvString& getCopySecretaryGeneralText() const;
 
-	std::wstring pyGetSecretaryGeneralText() { return getSecretaryGeneralText(); } // Exposed to Python
+	std::wstring pyGetSecretaryGeneralText() { return getSecretaryGeneralText(); }
 
-	int getReligionYield(int i) const; // Exposed to Python
-	int getReligionCommerce(int i) const; // Exposed to Python
+	int getReligionYield(int i) const;
+	int getReligionCommerce(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass3();
@@ -9372,7 +9372,7 @@ public:
 	inline int	getZobristValue() const { return m_zobristValue; }
 
 	// Arrays
-	int getDomainModifierPercent(int i) const; // Exposed to Python
+	int getDomainModifierPercent(int i) const;
 	bool isAnyDomainModifierPercent() const;
 
 	// bool vector with delayed resolution
