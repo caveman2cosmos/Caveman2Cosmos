@@ -4567,14 +4567,11 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 			{
 				int iCultureRange;
 
-				// Super Forts begin *culture* - modified if statement
-				//	Koshling - modified back since C2C uses a unified city/fort culture state
-				//	inheritted from AND
-				//if (isWithinCultureRange((PlayerTypes)iI) || isWithinFortCultureRange((PlayerTypes)iI))
-				if (isWithinCultureRange((PlayerTypes)iI, &iCultureRange)) // Original Code
+				// Super Forts begin *culture*
+				if (isWithinCultureRange((PlayerTypes)iI, &iCultureRange))
 				// Super Forts end
 				{
-					//	Koshling - modified so that equal culture victory goes to the player with the closest cultuer source as
+					//	Koshling - modified so that equal culture victory goes to the player with the closest culture source as
 					//	first tie-breaker
 					if (iCulture > iBestCulture ||
 						(iCulture == iBestCulture &&
@@ -7352,7 +7349,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 				// Super Forts *culture*
 				if (GC.getImprovementInfo(eOldImprovement).getCulture() > 0)
 				{
-					changeCultureRangeFortsWithinRange(getOwner(), -1, GC.getImprovementInfo(eOldImprovement).getCultureRange(), true);
+					changeCultureRangeFortsWithinRange(getOwner(), -1, GC.getImprovementInfo(eOldImprovement).getCultureRange(), false);
 				}
 			}
 		}
