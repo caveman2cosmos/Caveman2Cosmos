@@ -271,7 +271,7 @@
 			<Description>TXT_KEY_BUILD_SEED_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_AGRICULTURE</ObsoleteTech>
-			<iTime>150</iTime>
+			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
@@ -586,7 +586,7 @@
 			<Description>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_MINING</ObsoleteTech>
-			<iTime>150</iTime>
+			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
@@ -719,7 +719,7 @@
 			<Description>TXT_KEY_BUILD_TAR_GATHERER</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_REFINING</ObsoleteTech>
-			<iTime>150</iTime>
+			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TAR_GATHERER</ImprovementType>
@@ -734,7 +734,7 @@
 			<Type>BUILD_TRAIL</Type>
 			<Description>TXT_KEY_BUILD_TRAIL</Description>
 			<PrereqTech>TECH_TRAILS</PrereqTech>
-			<iTime>175</iTime>
+			<iTime>150</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_TRAIL</RouteType>
@@ -2792,7 +2792,7 @@
 			<Type>BUILD_SALT_GATHERER</Type>
 			<Description>TXT_KEY_BUILD_SALT_GATHERER</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<iTime>150</iTime>
+			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
@@ -3291,7 +3291,7 @@
 			<Type>BUILD_OFFSHORE_PLATFORM</Type>
 			<Description>TXT_KEY_BUILD_OFFSHORE_PLATFORM</Description>
 			<PrereqTech>TECH_PLASTICS</PrereqTech>
-			<iTime>500</iTime>
+			<iTime>400</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
@@ -5237,7 +5237,7 @@
 			<Type>BUILD_BREAK_ICE_KILL</Type>
 			<Description>TXT_KEY_BUILD_BREAK_ICE_KILL</Description>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>300</iTime>
+			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5245,7 +5245,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_ICE</FeatureType>
 					<PrereqTech>TECH_COMBUSTION</PrereqTech>
-					<iTime>400</iTime>
+					<iTime>300</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
@@ -5282,7 +5282,7 @@
 			<Description>TXT_KEY_BUILD_JUNGLE_CAMP_KILL</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iTime>600</iTime>
+			<iTime>400</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_JUNGLE_CAMP</ImprovementType>
@@ -5307,7 +5307,7 @@
 			<Description>TXT_KEY_BUILD_DESERT_CAMP_KILL</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iTime>600</iTime>
+			<iTime>400</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_DESERT_CAMP</ImprovementType>
@@ -5332,7 +5332,7 @@
 			<Description>TXT_KEY_BUILD_WETLANDS_CAMP_KILL</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iTime>600</iTime>
+			<iTime>400</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WETLANDS_CAMP</ImprovementType>
@@ -9324,7 +9324,7 @@
 			<Type>BUILD_HARVEST_KELP</Type>
 			<Description>TXT_KEY_BUILD_HARVEST_KELP</Description>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>100</iTime>
+			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HARVEST_KELP</ImprovementType>
@@ -9464,7 +9464,7 @@
 			<Type>BUILD_MUSHROOM_GATHERER</Type>
 			<Description>TXT_KEY_BUILD_MUSHROOM_GATHERER</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<iTime>150</iTime>
+			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
@@ -10632,7 +10632,7 @@
 			<Description>TXT_KEY_BUILD_ABATIS_THORN_HEDGE</Description>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
-			<iTime>150</iTime>
+			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
@@ -10680,7 +10680,7 @@
 			<Description>TXT_KEY_BUILD_WOODEN_PALISADE_KILL</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech>
-			<iTime>500</iTime>
+			<iTime>400</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
@@ -10695,7 +10695,7 @@
 			<Type>BUILD_FORTIFIED_CAVE</Type>
 			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE</Description>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			<iTime>150</iTime>
+			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE</ImprovementType>
@@ -10756,7 +10756,7 @@
 			<Type>BUILD_WOODEN_WATCHTOWER_KILL</Type>
 			<Description>TXT_KEY_BUILD_WOODEN_WATCHTOWER_KILL</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			<iTime>300</iTime>
+			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
@@ -10877,7 +10877,7 @@
 			<Type>BUILD_SEASONAL_CAMP</Type>
 			<Description>TXT_KEY_BUILD_SEASONAL_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<iTime>50</iTime>
+			<iTime>100</iTime>
 			<iCost>10</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SEASONAL_CAMP</ImprovementType>
