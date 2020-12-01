@@ -124,7 +124,7 @@ public:
 	int getMasterPower() const;
 	void setMasterPower(int iPower);
 
-	int getEnemyWarWearinessModifier() const;																																			// Exposed to Python
+	int getEnemyWarWearinessModifier() const;
 	void changeEnemyWarWearinessModifier(int iChange);
 
 	bool isMapCentering() const;
