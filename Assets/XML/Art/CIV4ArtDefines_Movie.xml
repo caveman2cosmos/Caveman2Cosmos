@@ -1159,7 +1159,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ENVIRONMENTAL_ACHIEVEMENT</Type>
-			<Path>Art/Movies/Wonders/Environmental_Achievement.bik</Path>
+			<Path>Art/Movies/special/Environmental_Achievement.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SING_FLYER</Type>
@@ -1239,7 +1239,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MEDICAL_A</Type>
-			<Path>Art/Movies/Wonders/Medical_A.bik</Path>
+			<Path>Art/Movies/special/Medical_A.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MESA_VERDE</Type>
@@ -1283,7 +1283,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SAFETY_A</Type>
-			<Path>Art/Movies/Wonders/Safety_A.bik</Path>
+			<Path>Art/Movies/special/Safety_A.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SRC</Type>
@@ -1311,7 +1311,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TOURISM_A</Type>
-			<Path>Art/Movies/Wonders/Tourism_A.bik</Path>
+			<Path>Art/Movies/special/Tourism_A.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TUMEN</Type>
@@ -1443,15 +1443,15 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TRADITION_ASTHETIC_APPRECIATION</Type>
-			<Path>Art/Movies/Wonders/Tradition_Asthetic_Ethic.bik</Path>
+			<Path>Art/Movies/special/TRADITION_ASTHETIC_APPRECIATION.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TRADITION_WORK_ETHIC</Type>
-			<Path>Art/Movies/Wonders/Tradition_Work_Ethic.bik</Path>
+			<Path>Art/Movies/special/TRADITION_WORK_ETHIC.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TRADITION_ARCHERY</Type>
-			<Path>Art/Movies/Wonders/Tradition_Archery.bik</Path>
+			<Path>Art/Movies/special/TRADITION_ARCHERY.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_NOBLEGARDEN</Type>
@@ -3080,6 +3080,210 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CISLUNAR_SOLAR_SATELLITES</Type>
 			<Path>Art/Movies/national_wonders/CISLUNAR_SOLAR_SATELLITES.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BUILDING_ACADEMY</Type>
+			<Path>Art/Movies/special/BUILDING_ACADEMY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AGRICULTURAL_ACHIEVEMENT</Type>
+			<Path>Art/Movies/special/AGRICULTURAL_ACHIEVEMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ATLAST_SPACE_TELESCOPE</Type>
+			<Path>Art/Movies/special/ATLAST_SPACE_TELESCOPE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_COMMERCIAL_ACHIEVEMENT</Type>
+			<Path>Art/Movies/special/COMMERCIAL_ACHIEVEMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_INDUSTRIAL_ACHIEVEMENT</Type>
+			<Path>Art/Movies/special/INDUSTRIAL_ACHIEVEMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MILITARY_ACHIEVEMENT</Type>
+			<Path>Art/Movies/special/MILITARY_ACHIEVEMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_POLITICAL_ACHIEVEMENT</Type>
+			<Path>Art/Movies/special/POLITICAL_ACHIEVEMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SCIENTIFIC_ACHIEVEMENT</Type>
+			<Path>Art/Movies/special/SCIENTIFIC_ACHIEVEMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SEAFARING_ACHIEVEMENT</Type>
+			<Path>Art/Movies/special/SEAFARING_ACHIEVEMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CULTURAL_ACHIEVEMENT</Type>
+			<Path>Art/Movies/special/CULTURAL_ACHIEVEMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ANIMATION_STUDIO</Type>
+			<Path>Art/Movies/special/ANIMATION_STUDIO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ASTEROID_DEFLECTION_SYSTEM</Type>
+			<Path>Art/Movies/special/ASTEROID_DEFLECTION_SYSTEM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BRACEWELL_PROBES</Type>
+			<Path>Art/Movies/special/BRACEWELL_PROBES.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CASSINI_HUYGENS</Type>
+			<Path>Art/Movies/special/CASSINI_HUYGENS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DAWN</Type>
+			<Path>Art/Movies/special/DAWN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_EUROPA_PROBE</Type>
+			<Path>Art/Movies/special/EUROPA_PROBE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GALILEO</Type>
+			<Path>Art/Movies/special/GALILEO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_IKAROS</Type>
+			<Path>Art/Movies/special/IKAROS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_INTERSTELLAR_PROBE</Type>
+			<Path>Art/Movies/special/INTERSTELLAR_PROBE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_JAMESWEBB_TELESCOPE</Type>
+			<Path>Art/Movies/special/JAMESWEBB_TELESCOPE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_KEPLER</Type>
+			<Path>Art/Movies/special/KEPLER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_DEEP_SPACE_GATEWAY</Type>
+			<Path>Art/Movies/special/DEEP_SPACE_GATEWAY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_LUNAR_OUTPOST</Type>
+			<Path>Art/Movies/special/LUNAR_OUTPOST.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_LUNAR_XPRIZE</Type>
+			<Path>Art/Movies/special/LUNAR_XPRIZE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MARINER_PROGRAM</Type>
+			<Path>Art/Movies/special/MARINER_PROGRAM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MARS_SCIENCE_LAB</Type>
+			<Path>Art/Movies/special/MARS_SCIENCE_LAB.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MIR</Type>
+			<Path>Art/Movies/special/MIR.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MISSION_TO_CALLISTO</Type>
+			<Path>Art/Movies/special/MISSION_TO_CALLISTO.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MISSION_MARS</Type>
+			<Path>Art/Movies/special/MISSION_MARS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GALACTIC_CORE</Type>
+			<Path>Art/Movies/special/GALACTIC_CORE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MOON_ROCK_LAB</Type>
+			<Path>Art/Movies/special/MOON_ROCK_LAB.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NEPTUNE_ATMOSPHERE_PROBE</Type>
+			<Path>Art/Movies/special/NEPTUNE_ATMOSPHERE_PROBE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NEW_HORIZONS</Type>
+			<Path>Art/Movies/special/NEW_HORIZONS.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PROJECT_GEMINI</Type>
+			<Path>Art/Movies/special/PROJECT_GEMINI.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PROJECT_MERCURY</Type>
+			<Path>Art/Movies/special/PROJECT_MERCURY.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SCOTLAND_YARD</Type>
+			<Path>Art/Movies/special/SCOTLAND_YARD.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SEDNA_PROBE</Type>
+			<Path>Art/Movies/special/SEDNA_PROBE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SENTINEL</Type>
+			<Path>Art/Movies/special/SENTINEL.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SKYLAB</Type>
+			<Path>Art/Movies/special/SKYLAB.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SOLAR_WEATHER_MONITOR</Type>
+			<Path>Art/Movies/special/SOLAR_WEATHER_MONITOR.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SPY_NETWORK</Type>
+			<Path>Art/Movies/special/SPY_NETWORK.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NATIONAL_STANDARD_OF_MEASUREMENT</Type>
+			<Path>Art/Movies/special/NATIONAL_STANDARD_OF_MEASUREMENT.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TITAN_PROBE</Type>
+			<Path>Art/Movies/special/TITAN_PROBE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TRADITION_HUNTER</Type>
+			<Path>Art/Movies/special/TRADITION_HUNTER.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TRADITION_TOTEM</Type>
+			<Path>Art/Movies/special/TRADITION_TOTEM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TRADITION_NAVAL_TOTEM</Type>
+			<Path>Art/Movies/special/TRADITION_NAVAL_TOTEM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TRADITION_SEA_HUNTING</Type>
+			<Path>Art/Movies/special/TRADITION_SEA_HUNTING.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_URANUS_ATMOSPHERE_PROBE</Type>
+			<Path>Art/Movies/special/URANUS_ATMOSPHERE_PROBE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_VOYAGER_PROGRAM</Type>
+			<Path>Art/Movies/special/VOYAGER_PROGRAM.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_YUTU</Type>
+			<Path>Art/Movies/special/YUTU.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_WMAP</Type>
+			<Path>Art/Movies/special/WMAP.dds</Path>
 		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>

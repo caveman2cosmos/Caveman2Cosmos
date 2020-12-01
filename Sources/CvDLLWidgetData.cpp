@@ -1,9 +1,20 @@
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
+#include "CvBuildingInfo.h"
+#include "CvCity.h"
+#include "CvDeal.h"
+#include "CvDLLWidgetData.h"
+#include "CvEventReporter.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
-#include "CvDLLWidgetData.h"
+#include "CvGlobals.h"
+#include "CvMap.h"
+#include "CvMessageControl.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvPopupInfo.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 
 CvDLLWidgetData* CvDLLWidgetData::m_pInst = NULL;
@@ -1262,9 +1273,7 @@ void CvDLLWidgetData::doRenameCity()
 
 void CvDLLWidgetData::doRenameUnit()
 {
-	CvUnit* pHeadSelectedUnit;
-
-	pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 	if (pHeadSelectedUnit != NULL)
 	{
@@ -2119,7 +2128,7 @@ void CvDLLWidgetData::parseHurryHelp(CvWidgetDataStruct &widgetDataStruct, CvWSt
 	{
 		szBuffer.assign(gDLL->getText("TXT_KEY_MISC_HURRY_PROD", pHeadSelectedCity->getProductionNameKey()));
 
-		const int iHurryGold = pHeadSelectedCity->hurryGold((HurryTypes)(widgetDataStruct.m_iData1));
+		const int64_t iHurryGold = pHeadSelectedCity->getHurryGold((HurryTypes) widgetDataStruct.m_iData1);
 
 		if (iHurryGold > 0)
 		{
@@ -4313,26 +4322,22 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 		int iGetBetterUnitsCount = 0;
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive())
+			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eTeam))
 			{
-				if (GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
+				if (GET_PLAYER((PlayerTypes)iI).AI_isDoStrategy(AI_STRATEGY_DAGGER)
+				||  GET_PLAYER((PlayerTypes)iI).AI_isDoVictoryStrategy(AI_VICTORY_CONQUEST3)
+				||  GET_PLAYER((PlayerTypes)iI).AI_isDoVictoryStrategy(AI_VICTORY_DOMINATION4))
 				{
-					if ( GET_PLAYER((PlayerTypes)iI).AI_isDoStrategy(AI_STRATEGY_DAGGER)
-						|| GET_PLAYER((PlayerTypes)iI).AI_isDoVictoryStrategy(AI_VICTORY_CONQUEST3)
-						|| GET_PLAYER((PlayerTypes)iI).AI_isDoVictoryStrategy(AI_VICTORY_DOMINATION4) )
-					{
-						iDaggerCount++;
-						bAggressive = true;
-					}
-					if (GET_PLAYER((PlayerTypes)iI).AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS))
-					{
-						iGetBetterUnitsCount++;
-					}
-					
-					if (GET_PLAYER((PlayerTypes)iI).AI_isFinancialTrouble())
-					{
-						iFinancialTroubleCount++;
-					}
+					iDaggerCount++;
+					bAggressive = true;
+				}
+				if (GET_PLAYER((PlayerTypes)iI).AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS))
+				{
+					iGetBetterUnitsCount++;
+				}
+				if (GET_PLAYER((PlayerTypes)iI).AI_isFinancialTrouble())
+				{
+					iFinancialTroubleCount++;
 				}
 			}
 		}
@@ -4510,16 +4515,12 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 						aStartWarInfo[iTeamIndex].bPossibleLimitedWar = false;
 						if (iNoWarAttitudeProb < 100 && (bFinancesProLimitedWar || !bFinancesOpposeWar))
 						{
-							int iNoWarChance = std::max(0, iNoWarAttitudeProb + 10 - (bAggressive ? 10 : 0) - (bFinancesProLimitedWar ? 10 : 0));
-							if (iNoWarChance < 100)
+							const int iNoWarChance = std::max(0, iNoWarAttitudeProb + 10 - (bAggressive ? 10 : 0) - (bFinancesProLimitedWar ? 10 : 0));
+							if (iNoWarChance < 100
+							&& iLoopTeamPower < iTeamPower * kTeam.AI_limitedWarPowerRatio() / 100
+							&& (bIsLandTarget || bIsAnyCapitalAreaAlone && kLoopTeam.AI_isAnyCapitalAreaAlone()))
 							{
-								bool bIsLimitedPowerRatio = (iLoopTeamPower < ((iTeamPower * kTeam.AI_limitedWarPowerRatio()) / 100));
-								bool bIsAnyLoopTeamCapitalAreaAlone = kLoopTeam.AI_isAnyCapitalAreaAlone();
-								
-								if (bIsLimitedPowerRatio && (bIsLandTarget || (bIsAnyCapitalAreaAlone && bIsAnyLoopTeamCapitalAreaAlone)))
-								{
-									aStartWarInfo[iTeamIndex].bPossibleLimitedWar = true;
-								}
+								aStartWarInfo[iTeamIndex].bPossibleLimitedWar = true;
 							}
 						}
 
@@ -4528,23 +4529,18 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 						aStartWarInfo[iTeamIndex].bEnoughDogpilePower = false;
 						if (iNoWarAttitudeProb < 100 && (bFinancesProDogpileWar || !bFinancesOpposeWar) && kTeam.canDeclareWar(eLoopTeam))
 						{
-							int iNoWarChance = std::max(0, iNoWarAttitudeProb + 20 - (bAggressive ? 10 : 0) - (bFinancesProDogpileWar ? 10 : 0));
+							const int iNoWarChance = std::max(0, iNoWarAttitudeProb + 20 - (bAggressive ? 10 : 0) - (bFinancesProDogpileWar ? 10 : 0));
 							if (iNoWarChance < 100)
 							{
 								int iDogpilePower = iTeamPower;
 								for (int iTeamIndex2 = 0; iTeamIndex2 < MAX_PC_TEAMS; iTeamIndex2++)
 								{
-									TeamTypes eDogpileLoopTeam = (TeamTypes) iTeamIndex2;
-									CvTeamAI& kDogpileLoopTeam = GET_TEAM(eDogpileLoopTeam);
-									if (kDogpileLoopTeam.isAlive())
+									const TeamTypes eDogpileLoopTeam = (TeamTypes) iTeamIndex2;
+
+									if (GET_TEAM(eDogpileLoopTeam).isAlive() && eDogpileLoopTeam != eLoopTeam
+									&& atWar(eDogpileLoopTeam, eLoopTeam))
 									{
-										if (eDogpileLoopTeam != eLoopTeam)
-										{
-											if (atWar(eDogpileLoopTeam, eLoopTeam))
-											{
-												iDogpilePower += kDogpileLoopTeam.getPower(false);
-											}
-										}
+										iDogpilePower += GET_TEAM(eDogpileLoopTeam).getPower(false);
 									}
 								}
 
@@ -4560,7 +4556,10 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 						
 						// if this team can have any war, calculate the start war value
 						aStartWarInfo[iTeamIndex].iStartWarValue = 0;
-						if (aStartWarInfo[iTeamIndex].iPossibleMaxWarPass < MAX_INT || aStartWarInfo[iTeamIndex].bPossibleLimitedWar || aStartWarInfo[iTeamIndex].bPossibleDogpileWar)
+
+						if (aStartWarInfo[iTeamIndex].iPossibleMaxWarPass < MAX_INT
+						||  aStartWarInfo[iTeamIndex].bPossibleLimitedWar
+						||  aStartWarInfo[iTeamIndex].bPossibleDogpileWar)
 						{
 							aStartWarInfo[iTeamIndex].iStartWarValue = kTeam.AI_startWarVal(eLoopTeam);
 						}
@@ -4569,7 +4568,7 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 			}
 		}
 
-		if( bFinancesOpposeWar )
+		if (bFinancesOpposeWar)
 		{
 			szBuffer.append(CvWString::format(SETCOLR L"## Finances oppose war%s%s%s\n" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),
 				bFinancesProTotalWar ? L", pro Total" : L"",

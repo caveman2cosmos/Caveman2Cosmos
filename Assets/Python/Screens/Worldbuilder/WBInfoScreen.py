@@ -295,15 +295,13 @@ class WBInfoScreen:
 			for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 				pPlayerX = GC.getPlayer(iPlayerX)
 				if pPlayerX.isAlive():
-					(loopUnit, i) = pPlayerX.firstUnit(False)
-					while(loopUnit):
+					for loopUnit in pPlayerX.units():
 						iItemX = loopUnit.getUnitType()
 						if iPlayerX == iSelectedPlayer:
 							lItems[iItemX][1] += 1
 						lItems[iItemX][2] += 1
 						if not [loopUnit.getX(), loopUnit.getY()] in lItems[iItemX][5]:
 							lItems[iItemX][5].append([iPlayerX, loopUnit.getID()])
-						(loopUnit, i) = pPlayerX.nextUnit(i, False)
 		elif iMode == 1:
 			iData1 = 7873
 			for i in xrange(GC.getNumPromotionInfos()):
@@ -312,8 +310,7 @@ class WBInfoScreen:
 			for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 				pPlayerX = GC.getPlayer(iPlayerX)
 				if pPlayerX.isAlive():
-					(loopUnit, i) = pPlayerX.firstUnit(False)
-					while(loopUnit):
+					for loopUnit in pPlayerX.units():
 						for iItemX in xrange(GC.getNumPromotionInfos()):
 							if loopUnit.isHasPromotion(iItemX):
 								if iPlayerX == iSelectedPlayer:
@@ -321,7 +318,6 @@ class WBInfoScreen:
 								lItems[iItemX][2] += 1
 								if not [loopUnit.getX(), loopUnit.getY()] in lItems[iItemX][5]:
 									lItems[iItemX][5].append([iPlayerX, loopUnit.getID()])
-						(loopUnit, i) = pPlayerX.nextUnit(i, False)
 		elif iMode == 2:
 			iData1 = 7870
 			for i in xrange(GC.getNumBuildingInfos()):
@@ -332,7 +328,7 @@ class WBInfoScreen:
 				if pPlayerX.isAlive():
 					for loopCity in pPlayerX.cities():
 						for iItemX in xrange(GC.getNumBuildingInfos()):
-							if loopCity.isHasBuilding(iItemX):
+							if loopCity.getNumBuilding(iItemX) > 0:
 								if iPlayerX == iSelectedPlayer:
 									lItems[iItemX][1] += 1
 								lItems[iItemX][2] += 1

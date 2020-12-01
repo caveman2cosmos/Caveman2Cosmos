@@ -6,10 +6,11 @@
 //  PURPOSE: Store build lists for a player
 //
 //------------------------------------------------------------------------------------------------
+#include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
 #include "CvBuildLists.h"
-#include "CvGameCoreDLL.h"
 #include "CvInitCore.h"
+#include "CvGlobals.h"
 #include <iostream>
 
 CvBuildLists::~CvBuildLists()
@@ -118,25 +119,25 @@ int CvBuildLists::getIndexByID(int iID) const
 
 int CvBuildLists::getID(int index) const
 {
-	FAssert(index < (int)m_Lists.size());
+	FASSERT_BOUNDS(0, getNumLists(), index)
 	return m_Lists[index]->iID;
 }
 
 const CvString CvBuildLists::getListName(int index) const
 {
-	FAssert(index < (int)m_Lists.size());
+	FASSERT_BOUNDS(0, getNumLists(), index)
 	return m_Lists[index]->szName;
 }
 
 int CvBuildLists::getListLength(int index) const
 {
-	FAssert(index < (int)m_Lists.size());
+	FASSERT_BOUNDS(0, getNumLists(), index)
 	return m_Lists[index]->orderQueue.getLength();
 }
 
 const OrderData* CvBuildLists::getOrder(int index, int iQIndex) const
 {
-	FAssert(index < (int)m_Lists.size());
+	FASSERT_BOUNDS(0, getNumLists(), index)
 	const CLLNode<OrderData>* pOrderNode = m_Lists[index]->orderQueue.nodeNum(iQIndex);
 	if (pOrderNode)
 	{

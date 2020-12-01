@@ -15049,6 +15049,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -17451,6 +17455,14 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -22707,6 +22719,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -24705,6 +24721,10 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -31339,7 +31359,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</UnitInfo>
-<!-- Wrong flag
 		<UnitInfo>
 			<Type>UNIT_MAGOS</Type>
 			<iInstanceCostModifier>25</iInstanceCostModifier>
@@ -31465,7 +31484,6 @@
 				</FreePromotion>
 			</FreePromotions>
 		</UnitInfo>
--->
 		<UnitInfo>
 			<Type>UNIT_TOFANGCHI</Type>
 			<iInstanceCostModifier>25</iInstanceCostModifier>
@@ -41812,6 +41830,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -42747,6 +42769,10 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

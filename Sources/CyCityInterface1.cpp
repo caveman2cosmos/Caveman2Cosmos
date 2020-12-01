@@ -10,7 +10,6 @@
 void CyCityPythonInterface1(python::class_<CyCity>& x)
 {
 	OutputDebugString("Python Extension Module - CyCityPythonInterface1\n");
-
 	x
 		.def("kill", &CyCity::kill, "void () - kill the city")
 
@@ -58,7 +57,6 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("getProductionModifier", &CyCity::getProductionModifier, "int () - multiplier (if any) for item being produced")
 		.def("getCurrentProductionDifference", &CyCity::getCurrentProductionDifference, "int (bool bIgnoreFood, bool bOverflow)")
 
-
 		.def("canHurry", &CyCity::canHurry, "bool (HurryTypes eHurry, bool bTestVisible = 0) - can player eHurry in this city?")
 		.def("getConscriptUnit", &CyCity::getConscriptUnit, "UnitID () - UnitID for the best unit the city can conscript")
 		.def("flatConscriptAngerLength", &CyCity::flatConscriptAngerLength, "int ()")
@@ -98,14 +96,14 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("foodDifference", &CyCity::foodDifference, "int (bool bBottom) - result of getYieldRate(Food) - foodConsumption()")
 		.def("growthThreshold", &CyCity::growthThreshold, "int () - value needed for growth")
 		.def("productionLeft", &CyCity::productionLeft, "int () - result of (getProductionNeeded() - getProduction()")
-		.def("hurryGold", &CyCity::hurryGold, "int (HurryID) - total value of gold when hurrying")
+		.def("getHurryGold", &CyCity::getHurryGold, "int (HurryID) - total value of gold when hurrying")
 		.def("hurryPopulation", &CyCity::hurryPopulation, "int (HurryID) - value of each pop when hurrying")
 		.def("hurryProduction", &CyCity::hurryProduction, "int (HurryID)")
 		.def("flatHurryAngerLength", &CyCity::flatHurryAngerLength, "int ()")
 
 		.def("getNumBuilding", &CyCity::getNumBuilding, "int - (BuildingID) - How many BuildingID does this city have (real or free)?")
-		.def("isHasBuilding", &CyCity::isHasBuilding, "bool (int iBuildingID) - This function actually no longer exists in C++, this is a helper function which hooks up to getNumBuilding() to help mod backwards compatibility")
 		.def("getNumActiveBuilding", &CyCity::getNumActiveBuilding, "bool (BuildingID) - is BuildingID active in the city (present & not obsolete)?")
+		.def("isFreeBuilding", &CyCity::isFreeBuilding, "bool (BuildingID)")
 		.def("getID", &CyCity::getID, "int () - index ID # for the city - use with pPlayer.getCity(ID) to obtain city instance")
 		.def("getX", &CyCity::getX, "int () - X coordinate for the cities plot")
 		.def("getY", &CyCity::getY, "int () - Y coordinate for the cities plot")
@@ -230,6 +228,7 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("getTeam", &CyCity::getTeam, "int /*TeamTypes*/ ()")
 		.def("getPreviousOwner", &CyCity::getPreviousOwner, "int /*PlayerTypes*/ ()")
 		.def("getOriginalOwner", &CyCity::getOriginalOwner, "int /*PlayerTypes*/ ()")
+		.def("setOriginalOwner", &CyCity::setOriginalOwner, "void (int /*PlayerTypes*/)")
 		.def("getCultureLevel", &CyCity::getCultureLevel, "int /*CultureLevelTypes*/ ()")
 		.def("getCultureThreshold", &CyCity::getCultureThreshold)
 

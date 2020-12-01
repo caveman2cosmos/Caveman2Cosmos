@@ -1,14 +1,25 @@
 // buttonPopup.cpp
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
+#include "CvArtFileMgr.h"
+#include "CvBuildingInfo.h"
+#include "CvCity.h"
+#include "CvDLLButtonPopup.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
-#include "CvDLLButtonPopup.h"
-#include "CvPopupReturn.h"
+#include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvMap.h"
+#include "CvMessageControl.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvPopupInfo.h"
+#include "CvPopupReturn.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
 
 // Public Functions...
 
@@ -78,21 +89,11 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 			switch (info.getData1())
 			{
 			case 0:
-// BUG - Exit Save - start
-				if (GC.getGame().getVictory() == NO_VICTORY)
-				{
-					Cy::call(PYBugModule, "gameExitSave");
-				}
-// BUG - Exit Save - end
+				Cy::call(PYCivModule, "gameExitSave");
 				gDLL->SetDone(true);
 				break;
 			case 1:
-// BUG - Exit Save - start
-				if (GC.getGame().getVictory() == NO_VICTORY)
-				{
-					Cy::call(PYBugModule, "gameExitSave");
-				}
-// BUG - Exit Save - end
+				Cy::call(PYCivModule, "gameExitSave");
 				gDLL->getInterfaceIFace()->exitingToMainMenu();
 				break;
 			case 2:
@@ -2807,7 +2808,7 @@ bool CvDLLButtonPopup::launchFreeColonyPopup(CvPopup* pPopup, CvPopupInfo &info)
 
 	if (GET_PLAYER(ePlayer).canSplitEmpire())
 	{
-		foreach_(CvArea* pLoopArea, GC.getMap().areas())
+		foreach_(const CvArea* pLoopArea, GC.getMap().areas())
 		{
 			if (GET_PLAYER(ePlayer).canSplitArea(pLoopArea->getID()))
 			{

@@ -7307,7 +7307,6 @@
 		<BuildingInfo>
 			<Type>BUILDING_SPY_TRAINING_FACILITY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
 			<Description>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY_STRATEGY</Strategy>

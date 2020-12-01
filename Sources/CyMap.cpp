@@ -3,14 +3,16 @@
 // 
 
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
 #include "CvInitCore.h"
+#include "CvGlobals.h"
+#include "CvMap.h"
 #include "CvMapGenerator.h"
+#include "CvPathGenerator.h"
 #include "CvSelectionGroup.h"
 #include "CyArea.h"
-#include "CyCity.h"
 #include "CyMap.h"
 #include "CyPlot.h"
-#include "CySelectionGroup.h"
 
 CyMap::CyMap() : m_pMap(NULL)
 {
@@ -136,16 +138,6 @@ void CyMap::updateVisibility()
 CyPlot* CyMap::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTimeout)
 {
 	return m_pMap ? new CyPlot(m_pMap->syncRandPlot(iFlags, iArea, iMinUnitDistance, iTimeout)) : NULL;
-}
-
-CyCity* CyMap::findCity(int iX, int iY, int /*PlayerTypes*/ eOwner, int /*TeamTypes*/ eTeam, bool bSameArea, bool bCoastalOnly, int /*TeamTypes*/ eTeamAtWarWith, int /*DirectionTypes*/ eDirection, CyCity* pSkipCity)
-{
-	return m_pMap ? new CyCity(m_pMap->findCity(iX, iY, (PlayerTypes)eOwner, (TeamTypes)eTeam, bSameArea, bCoastalOnly, ((TeamTypes)eTeamAtWarWith), (DirectionTypes)eDirection, pSkipCity->getCity())) : NULL;
-}
-
-CySelectionGroup* CyMap::findSelectionGroup(int iX, int iY, int /*PlayerTypes*/ eOwner, bool bReadyToSelect, bool bWorkers)
-{
-	return m_pMap ? new CySelectionGroup(m_pMap->findSelectionGroup(iX, iY, (PlayerTypes)eOwner, bReadyToSelect, bWorkers)) : NULL;
 }
 
 CyArea* CyMap::findBiggestArea(bool bWater)

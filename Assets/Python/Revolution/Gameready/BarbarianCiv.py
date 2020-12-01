@@ -72,8 +72,7 @@ class BarbarianCiv:
 		iMinPop = self.RevOpt.getMinPopulation() + iEra
 
 		bNoGo = True
-		CyCity, i = CyPlayerBarb.firstCity(False)
-		while CyCity:
+		for CyCity in CyPlayerBarb.cities():
 			iPop = CyCity.getPopulation()
 			if iPop >= iMinPop:
 
@@ -109,7 +108,6 @@ class BarbarianCiv:
 				if GAME.getSorenRandNum(int(iRange+fOdds), 'Barbarian city evolve') < fOdds:
 					bNoGo = False
 					break
-			CyCity, i = CyPlayerBarb.nextCity(i, False)
 
 		if bNoGo: return
 		'''
@@ -227,6 +225,8 @@ class BarbarianCiv:
 		GAME.addReplayMessage(ReplayMessageTypes.REPLAY_MESSAGE_MAJOR_EVENT, iPlayer, mess, iX, iY, GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"))
 
 		# Using following method to acquire city produces 'revolted and joined' replay messages
+		if CyCity.getOriginalOwner() == iPlayerBarb:
+			CyCity.setOriginalOwner(iPlayer)
 		CyPlot.setOwner(iPlayer)
 
 		# Note: city acquisition may invalidate previous city pointer, so have to create new list of cities
@@ -537,8 +537,7 @@ class BarbarianCiv:
 				CyPlotX.changeCulture(iPlayerBarb, -iCult, False)
 				CyPlotX.setCulture(iPlayer, iCult, True)
 			# Units
-			for i in xrange(CyPlotX.getNumUnits()):
-				CyUnit = CyPlotX.getUnit(i)
+			for CyUnit in CyPlotX.units():
 				if CyUnit.getOwner() == iPlayerBarb:
 					if iRadius and GAME.getSorenRandNum(iRadius + 1, 'Convert Barbarian'): continue
 					iUnit = CyUnit.getUnitType()
@@ -637,24 +636,24 @@ class BarbarianCiv:
 			iMaxDistance = (5 + 3*bNewWorld) * GC.getWorldInfo(MAP.getWorldSize()).getDefaultPlayers()
 			CyPlayerBarb = GC.getPlayer(iPlayerBarb)
 			aList = ()
-			CyCityX, i = CyPlayerBarb.firstCity(False)
-			while CyCityX:
-				CyPlotX = CyCityX.plot()
-				if CyPlotX.getArea() == iAreaID or CyPlotX.isAdjacentRevealed(iTeam):
-					x = CyCityX.getX()
-					y = CyCityX.getY()
+			for cityX in CyPlayerBarb.cities():
+				plotX = cityX.plot()
+				if plotX.getArea() == iAreaID or plotX.isAdjacentRevealed(iTeam):
+					x = cityX.getX()
+					y = cityX.getY()
 					iDist = plotDistance(iX, iY, x, y)
 
 					if iDist <= iMaxDistance and GAME.getSorenRandNum(2, "fifty fifty"):
 						iCities += 1
-						aList += ((CyPlotX, x, y),) # No point in including the CyCityX pointer...
-				CyCityX, i = CyPlayerBarb.nextCity(i, False)
+						if cityX.getOriginalOwner() == iPlayerBarb:
+							cityX.setOriginalOwner(iPlayer)
+						aList += ((plotX, x, y),) # No point in including the cityX pointer...
 
-			for CyPlotX, x, y in aList:
-				CyPlotX.setOwner(iPlayer) # ...because this invalidates the CyCityX pointer.
-				CyCityX = CyPlotX.getPlotCity()
-				self.setupFormerBarbCity(CyCityX, iPlayer, iDefender, int(iNumBarbDefenders*fMilitaryMod + 1))
-				CyCityX.changePopulation(1)
+			for plotX, x, y in aList:
+				plotX.setOwner(iPlayer) # ...because this invalidates the cityX pointer.
+				cityX = plotX.getPlotCity()
+				self.setupFormerBarbCity(cityX, iPlayer, iDefender, int(iNumBarbDefenders*fMilitaryMod + 1))
+				cityX.changePopulation(1)
 				if iWorker > -1:
 					CyPlayer.initUnit(iWorker, x, y, UnitAITypes.UNITAI_WORKER, DirectionTypes.DIRECTION_SOUTH)
 				if iExplorer > -1:

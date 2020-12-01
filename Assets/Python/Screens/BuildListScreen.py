@@ -67,19 +67,19 @@ class BuildListScreen:
 
 
     # set the standard "exit" text
-    screen.setText("BuildListCancelButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, self.W_SCREEN - 80, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, 1, 0)
+    screen.setText("BuildListCancelButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + u"</font>", 1<<0, self.W_SCREEN - 80, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, 1, 0)
 
     # set the text button to add a list
-    screen.setText("BuildListAddButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_ADD", ()).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, iAddButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
+    screen.setText("BuildListAddButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_ADD", ()).upper() + u"</font>", 1<<0, iAddButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
 
     # set the text button to rename a list
-    screen.setText("BuildListRenameButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_RENAME", ()).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, iRenameButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
+    screen.setText("BuildListRenameButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_RENAME", ()).upper() + u"</font>", 1<<0, iRenameButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
 
     # set the text button to delete a list
-    screen.setText("BuildListDeleteButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_DELETE", ()).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, iDeleteButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
+    screen.setText("BuildListDeleteButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_DELETE", ()).upper() + u"</font>", 1<<0, iDeleteButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
 
     # set the text button to add a list
-    screen.setText("BuildListSaveButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_SAVE", ()).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, iSaveButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
+    screen.setText("BuildListSaveButton", "Background", u"<font=4>" + localText.getText("TXT_KEY_LISTSCREEN_BUTTON_SAVE", ()).upper() + u"</font>", 1<<0, iSaveButtonPosition, self.H_SCREEN - 40, -0.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
 
     # draw the lists
     self.drawLists()
@@ -342,7 +342,7 @@ class BuildListScreen:
         szLeftBuffer = gc.getProjectInfo(iData).getDescription()
 
       screen.appendTableRow( "BuildQueueTable" )
-      screen.setTableText( "BuildQueueTable", 0, iRow, szLeftBuffer, "", WidgetTypes.WIDGET_BUILD_LIST_QUEUE, pPlayer.getBLID(iCurrentList), i, CvUtil.FONT_LEFT_JUSTIFY )
+      screen.setTableText( "BuildQueueTable", 0, iRow, szLeftBuffer, "", WidgetTypes.WIDGET_BUILD_LIST_QUEUE, pPlayer.getBLID(iCurrentList), i, 1<<0 )
       iRow += 1
 
     screen.show( "BuildQueueTable" )
@@ -372,8 +372,8 @@ class BuildListScreen:
       szLeftBuffer = pPlayer.getBLListName(i)
 
       #screen.appendTableRow( "BuildListTable" )
-      #screen.setTableText( "BuildListTable", 0, iRow, szLeftBuffer, "", WidgetTypes.WIDGET_BUILD_LIST, pPlayer.getBLID(i), -1, CvUtil.FONT_LEFT_JUSTIFY )
-      screen.appendListBoxStringNoUpdate("BuildListTable", szLeftBuffer, WidgetTypes.WIDGET_BUILD_LIST, pPlayer.getBLID(i), -1, CvUtil.FONT_LEFT_JUSTIFY )
+      #screen.setTableText( "BuildListTable", 0, iRow, szLeftBuffer, "", WidgetTypes.WIDGET_BUILD_LIST, pPlayer.getBLID(i), -1, 1<<0 )
+      screen.appendListBoxStringNoUpdate("BuildListTable", szLeftBuffer, WidgetTypes.WIDGET_BUILD_LIST, pPlayer.getBLID(i), -1, 1<<0 )
       #if (iCurrentList == pPlayer.getBLID(i)):
       #  screen.selectRow( "BuildListTable", iRow, True)
       iRow += 1
@@ -396,8 +396,8 @@ class BuildListScreen:
     # Logos
 #   screen.setImageButton( "Logos", ArtFileMgr.getInterfaceArtInfo("INTRO_LOGOS").getPath(), screen.centerX(0)+233, screen.centerY(0)+331, 549, 294, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
-#   screen.addMultilineText("LegalText1", "<font=1>" + localText.getText("TXT_LEGAL_LINE_1", ()) + "</font>", screen.centerX(0)+110, screen.centerY(0)+590, 804, 200, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-#   screen.setLabel( "LegalText2", "Background", "<font=2>" + localText.getText("TXT_LEGAL_LINE_2", ()) + "</font>", CvUtil.FONT_CENTER_JUSTIFY, screen.centerX(0)+512, screen.centerY(0)+740, -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+#   screen.addMultilineText("LegalText1", "<font=1>" + localText.getText("TXT_LEGAL_LINE_1", ()) + "</font>", screen.centerX(0)+110, screen.centerY(0)+590, 804, 200, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
+#   screen.setLabel( "LegalText2", "Background", "<font=2>" + localText.getText("TXT_LEGAL_LINE_2", ()) + "</font>", 1<<2, screen.centerX(0)+512, screen.centerY(0)+740, -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 #   screen.setShowFor( 4000 )
     return
 

@@ -131,8 +131,7 @@ class WBEventScreen:
 		screen.setTableColumnHeader("WBEventUnit", 1, "", 24)
 		screen.setTableColumnHeader("WBEventUnit", 2, "", iWidth - 48)
 
-		for i in xrange(pPlot.getNumUnits()):
-			pUnitX = pPlot.getUnit(i)
+		for pUnitX in pPlot.units():
 			if pUnitX.isNone(): continue
 			iRow = screen.appendTableRow("WBEventUnit")
 			sText = pUnitX.getName()

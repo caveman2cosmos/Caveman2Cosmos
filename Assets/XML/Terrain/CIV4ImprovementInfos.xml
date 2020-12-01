@@ -10539,7 +10539,7 @@
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>400</iAdvancedStartCost>
 			<iUpgradeTime>15</iUpgradeTime>
-			<iAirBombDefense>15</iAirBombDefense>
+			<iAirBombDefense>10</iAirBombDefense>
 			<iDefenseModifier>15</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
@@ -10631,7 +10631,7 @@
 			<iAdvancedStartCost>400</iAdvancedStartCost>
 			<iUpgradeTime>25</iUpgradeTime>
 			<iAirBombDefense>15</iAirBombDefense>
-			<iDefenseModifier>10</iDefenseModifier>
+			<iDefenseModifier>20</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
 				<TerrainMakesValid>

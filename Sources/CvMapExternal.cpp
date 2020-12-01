@@ -5,8 +5,14 @@
 //
 
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
+#include "CvMap.h"
 #include "CvMapExternal.h"
-
+#include "CvPlot.h"
+#include "CvSelectionGroup.h"
+#include "CvTaggedSaveFormatWrapper.h"
+#include "CvViewport.h"
 
 CvMapExternal::CvMapExternal() : m_proxiedMap(NULL),
 								 m_bMapCoordinates(false)

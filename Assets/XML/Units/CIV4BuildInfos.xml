@@ -734,7 +734,7 @@
 			<Type>BUILD_TRAIL</Type>
 			<Description>TXT_KEY_BUILD_TRAIL</Description>
 			<PrereqTech>TECH_TRAILS</PrereqTech>
-			<iTime>175</iTime>
+			<iTime>150</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_TRAIL</RouteType>
@@ -1124,7 +1124,7 @@
 			<Type>BUILD_FISHING_BOATS</Type>
 			<Description>TXT_KEY_BUILD_FISHING_BOATS</Description>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<iTime>0</iTime>
+			<iTime>100</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_FISHING_BOATS</ImprovementType>
@@ -1138,7 +1138,7 @@
 			<Type>BUILD_WHALING_BOATS</Type>
 			<Description>TXT_KEY_BUILD_WHALING_BOATS</Description>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
-			<iTime>0</iTime>
+			<iTime>100</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WHALING_BOATS</ImprovementType>
@@ -1153,7 +1153,7 @@
 			<Type>BUILD_WHALING_SHIPS</Type>
 			<Description>TXT_KEY_BUILD_WHALING_SHIPS</Description>
 			<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
-			<iTime>0</iTime>
+			<iTime>100</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WHALING_SHIPS</ImprovementType>
@@ -3291,7 +3291,7 @@
 			<Type>BUILD_OFFSHORE_PLATFORM</Type>
 			<Description>TXT_KEY_BUILD_OFFSHORE_PLATFORM</Description>
 			<PrereqTech>TECH_PLASTICS</PrereqTech>
-			<iTime>0</iTime>
+			<iTime>400</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
@@ -4949,7 +4949,7 @@
 			<Type>BUILD_ARCHEOLOGICAL_SITE</Type>
 			<Description>TXT_KEY_BUILD_ARCHEOLOGICAL_SITE</Description>
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
-			<iTime>100</iTime>
+			<iTime>500</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_ARCHEOLOGICAL_SITE</ImprovementType>
@@ -5125,7 +5125,7 @@
 			<Type>BUILD_SUBMERGED_TOWN</Type>
 			<Description>TXT_KEY_BUILD_SUBMERGED_TOWN</Description>
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
-			<iTime>0</iTime>
+			<iTime>1000</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN</ImprovementType>
@@ -5159,7 +5159,7 @@
 			<Type>BUILD_EXTRACTION_FACILITY</Type>
 			<Description>TXT_KEY_BUILD_EXTRACTION_FACILITY</Description>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
-			<iTime>0</iTime>
+			<iTime>500</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_EXTRACTION_FACILITY</ImprovementType>
@@ -5232,7 +5232,7 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Sea_Air_defense.dds</Button>
 		</BuildInfo>
-		<!-- Break Ice -->
+		<!-- Break Ice (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_BREAK_ICE_KILL</Type>
 			<Description>TXT_KEY_BUILD_BREAK_ICE_KILL</Description>
@@ -5282,7 +5282,7 @@
 			<Description>TXT_KEY_BUILD_JUNGLE_CAMP_KILL</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iTime>600</iTime>
+			<iTime>400</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_JUNGLE_CAMP</ImprovementType>
@@ -5307,7 +5307,7 @@
 			<Description>TXT_KEY_BUILD_DESERT_CAMP_KILL</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iTime>600</iTime>
+			<iTime>400</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_DESERT_CAMP</ImprovementType>
@@ -5332,7 +5332,7 @@
 			<Description>TXT_KEY_BUILD_WETLANDS_CAMP_KILL</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iTime>600</iTime>
+			<iTime>400</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WETLANDS_CAMP</ImprovementType>
@@ -9319,12 +9319,12 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
 		</BuildInfo>
-		<!-- Harvest Kelp -->
+		<!-- Harvest Kelp (No Kill) -->
 		<BuildInfo>
 			<Type>BUILD_HARVEST_KELP</Type>
 			<Description>TXT_KEY_BUILD_HARVEST_KELP</Description>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>100</iTime>
+			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HARVEST_KELP</ImprovementType>
@@ -9333,12 +9333,12 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/terrainfeatures/kelpforest.dds</Button>
 		</BuildInfo>
-		<!-- Harvest Kelp (consumes unit) -->
+		<!-- Harvest Kelp (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_HARVEST_KELP_KILL</Type>
 			<Description>TXT_KEY_BUILD_HARVEST_KELP_KILL</Description>
 			<PrereqTech>NONE</PrereqTech>
-			<iTime>100</iTime>
+			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_HARVEST_KELP</ImprovementType>
@@ -9352,7 +9352,7 @@
 			<Type>BUILD_LIGHTHOUSE_CORAL</Type>
 			<Description>TXT_KEY_BUILD_LIGHTHOUSE_CORAL</Description>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<iTime>800</iTime>
+			<iTime>1000</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_CORAL</ImprovementType>
@@ -9365,7 +9365,7 @@
 			<Type>BUILD_LIGHTHOUSE_REEF</Type>
 			<Description>TXT_KEY_BUILD_LIGHTHOUSE_REEF</Description>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<iTime>800</iTime>
+			<iTime>1000</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_REEF</ImprovementType>
@@ -10626,6 +10626,7 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,3</Button>
 		</BuildInfo>
+		<!-- Abatis (No Kill) -->
 		<BuildInfo>
 			<Type>BUILD_ABATIS_THORN_HEDGE</Type>
 			<Description>TXT_KEY_BUILD_ABATIS_THORN_HEDGE</Description>
@@ -10641,6 +10642,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/Abatis/abatis.dds</Button>
 		</BuildInfo>
+		<!-- Abatis (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_ABATIS_THORN_HEDGE_KILL</Type>
 			<Description>TXT_KEY_BUILD_ABATIS_THORN_HEDGE_KILL</Description>
@@ -10656,12 +10658,13 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/Abatis/abatis.dds</Button>
 		</BuildInfo>
+		<!-- Palisade (No Kill) -->
 		<BuildInfo>
 			<Type>BUILD_WOODEN_PALISADE</Type>
 			<Description>TXT_KEY_BUILD_WOODEN_PALISADE</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech>
-			<iTime>500</iTime>
+			<iTime>400</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
@@ -10671,12 +10674,13 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/Palisade/palisadewall.dds</Button>
 		</BuildInfo>
+		<!-- Palisade (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_WOODEN_PALISADE_KILL</Type>
 			<Description>TXT_KEY_BUILD_WOODEN_PALISADE_KILL</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech>
-			<iTime>500</iTime>
+			<iTime>400</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
@@ -10686,11 +10690,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/Palisade/palisadewall.dds</Button>
 		</BuildInfo>
+		<!-- Fortified Cave (No Kill) -->
 		<BuildInfo>
 			<Type>BUILD_FORTIFIED_CAVE</Type>
 			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE</Description>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			<iTime>150</iTime>
+			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE</ImprovementType>
@@ -10700,11 +10705,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/interface/buttons/builds/fortified_cave.dds</Button>
 		</BuildInfo>
+		<!-- Fortified Cave (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_FORTIFIED_CAVE_KILL</Type>
 			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE_KILL</Description>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			<iTime>150</iTime>
+			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE</ImprovementType>
@@ -10714,6 +10720,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/interface/buttons/builds/fortified_cave.dds</Button>
 		</BuildInfo>
+		<!-- Fortified Cave w/Cache (No Kill) -->
 		<BuildInfo>
 			<Type>BUILD_FORTIFIED_CAVE_WITH_CACHE</Type>
 			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE_WITH_CACHE</Description>
@@ -10728,10 +10735,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/interface/buttons/builds/fortified_cave_cache.dds</Button>
 		</BuildInfo>
+		<!-- Wooden Watchtower (No Kill) -->
 		<BuildInfo>
 			<Type>BUILD_WOODEN_WATCHTOWER</Type>
 			<Description>TXT_KEY_BUILD_WOODEN_WATCHTOWER</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
+			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
@@ -10740,8 +10749,9 @@
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/wooden_tower/wooden_tower_btn.dds</Button>
+			<Button>Art/tower/art/wooden_tower.dds</Button>
 		</BuildInfo>
+		<!-- Wooden Watchtower (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_WOODEN_WATCHTOWER_KILL</Type>
 			<Description>TXT_KEY_BUILD_WOODEN_WATCHTOWER_KILL</Description>
@@ -10754,13 +10764,15 @@
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/wooden_tower/wooden_tower_btn.dds</Button>
+			<Button>Art/tower/art/wooden_tower.dds</Button>
 		</BuildInfo>
+		<!-- Stone Watchtower -->
 		<BuildInfo>
 			<Type>BUILD_STONE_WATCHTOWER</Type>
 			<Description>TXT_KEY_BUILD_STONE_WATCHTOWER</Description>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
-			<iTime>800</iTime>
+			<ObsoleteTech>TECH_STEEL</ObsoleteTech>
+			<iTime>400</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
@@ -10768,13 +10780,15 @@
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/stone_tower/stone_tower_btn.dds</Button>
+			<Button>Art/tower/art/stone_tower.dds</Button>
 		</BuildInfo>
+		<!-- Steel Watchtower -->
 		<BuildInfo>
 			<Type>BUILD_STEEL_WATCHTOWER</Type>
 			<Description>TXT_KEY_BUILD_STEEL_WATCHTOWER</Description>
 			<PrereqTech>TECH_STEEL</PrereqTech>
-			<iTime>800</iTime>
+			<ObsoleteTech>TECH_RADAR</ObsoleteTech>
+			<iTime>600</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
@@ -10782,12 +10796,14 @@
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/stone_tower/stone_tower_btn.dds</Button>
+			<Button>Art/tower/art/steel_tower.dds</Button>
 		</BuildInfo>
+		<!-- Radar Watchtower -->
 		<BuildInfo>
 			<Type>BUILD_RADAR_TOWER</Type>
 			<Description>TXT_KEY_BUILD_RADAR_TOWER</Description>
 			<PrereqTech>TECH_RADAR</PrereqTech>
+			<!-- <ObsoleteTech>TECH_PLANETARY_DEFENSES</ObsoleteTech> Listening node is Earth based or no? -->
 			<iTime>800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
@@ -10798,11 +10814,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/radar/radar_button.dds</Button>
 		</BuildInfo>
+		<!-- Listening Watchtower -->
 		<BuildInfo>
 			<Type>BUILD_LISTENING_NODE</Type>
 			<Description>TXT_KEY_BUILD_LISTENING_NODE</Description>
 			<PrereqTech>TECH_PLANETARY_DEFENSES</PrereqTech>
-			<iTime>800</iTime>
+			<iTime>1000</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LISTENING_NODE</ImprovementType>
@@ -10810,7 +10827,7 @@
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/stone_tower/stone_tower_btn.dds</Button>
+			<Button>Art/Structures/Improvements/radar/radar_button.dds</Button>
 		</BuildInfo>
 		<!-- Pepper's routes are used as yield boosters in improvements. They are here so Pepper's module can be turned off. -->
 		<BuildInfo>
@@ -10839,6 +10856,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/gravity_train.dds</Button>
 		</BuildInfo>
+		<!-- Seasonal Camp (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_SEASONAL_CAMP_KILL</Type>
 			<Description>TXT_KEY_BUILD_SEASONAL_CAMP_KILL</Description>
@@ -10854,6 +10872,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
 		</BuildInfo>
+		<!-- Seasonal Camp (No Kill) -->
 		<BuildInfo>
 			<Type>BUILD_SEASONAL_CAMP</Type>
 			<Description>TXT_KEY_BUILD_SEASONAL_CAMP</Description>
@@ -10868,11 +10887,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
 		</BuildInfo>
+		<!-- Fishing Camp (Kill) -->
 		<BuildInfo>
 			<Type>BUILD_FISHING_CAMP</Type>
 			<Description>TXT_KEY_BUILD_FISHING_CAMP</Description>
 			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
-			<iTime>100</iTime>
+			<iTime>200</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_FISHING_CAMP</ImprovementType>

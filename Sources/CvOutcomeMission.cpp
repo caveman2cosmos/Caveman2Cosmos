@@ -7,8 +7,15 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvGameObject.h"
+#include "CvGlobals.h"
+#include "CvOutcomeList.h"
+#include "CvOutcomeMission.h"
+#include "CvProperties.h"
 #include "CvPlayerAI.h"
+#include "CvUnit.h"
 #include "CvXMLLoadUtility.h"
+#include "CheckSum.h"
 
 CvOutcomeMission::CvOutcomeMission() :
 m_eMission(NO_MISSION),

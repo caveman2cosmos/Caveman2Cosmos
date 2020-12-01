@@ -3450,7 +3450,7 @@
 			<fInterfaceScale>1.2</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/Geoglyph/Geoglyph2.nif</NIF>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Builds/buildgeoglyph.dds</Button>
+			<Button>Art/Goods/goodgeoglyphplans.dds</Button>
 			<FontButtonIndex>90</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -3468,7 +3468,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM />
-			<Button>art/Goods/goodglass.dds</Button>
+			<Button>art/Goods/goodglasscrystal.dds</Button>
 			<FontButtonIndex>192</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -3477,7 +3477,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM />
-			<Button>art/Goods/goodcutgems.dds</Button>
+			<Button>art/Goods/goodcutgemsfake.dds</Button>
 			<FontButtonIndex>22</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -3486,7 +3486,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM />
-			<Button>art/Goods/goodporcelain.dds</Button>
+			<Button>art/Goods/goodporcelainmingvase.dds</Button>
 			<FontButtonIndex>157</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -3495,7 +3495,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
 			<KFM />
-			<Button>art/Goods/goodpottery.dds</Button>
+			<Button>art/Goods/goodpotteryterrasigillata.dds</Button>
 			<FontButtonIndex>78</FontButtonIndex>
 		</BonusArtInfo>
 	</BonusArtInfos>

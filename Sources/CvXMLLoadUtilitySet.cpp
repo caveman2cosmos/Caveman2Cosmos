@@ -2,10 +2,13 @@
 // XML Set functions
 //
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvArtFileMgr.h"
+#include "CvBuildingInfo.h"
 #include "CvGameTextMgr.h"
+#include "CvGlobals.h"
 #include "CvXMLLoadUtilitySetMod.h"
+#include "FVariableSystem.h"
 #include <iostream>
 
 // Macro for Setting Global Art Defines
@@ -103,7 +106,7 @@ bool CvXMLLoadUtility::ReadGlobalDefines(const TCHAR* szXMLFileName, CvCacheObje
 				}
 				else
 				{
-					logMsg("Wrote GlobalDefines to cache");
+					logging::logMsg("xml.log", "Wrote GlobalDefines to cache\n");
 				}
 			}
 		}
@@ -114,10 +117,10 @@ bool CvXMLLoadUtility::ReadGlobalDefines(const TCHAR* szXMLFileName, CvCacheObje
 	}
 	else
 	{
-		logMsg("Read GobalDefines from cache");
+		logging::logMsg("xml.log", "Read GobalDefines from cache\n");
 	}
 
-	OutputDebugString("Reading Global Defines: End");
+	OutputDebugString("Reading Global Defines: End\n");
 
 	return true;
 }
@@ -132,7 +135,7 @@ bool CvXMLLoadUtility::ReadGlobalDefines(const TCHAR* szXMLFileName, CvCacheObje
 //------------------------------------------------------------------------------------------------------
 bool CvXMLLoadUtility::SetGlobalDefines()
 {
-	OutputDebugString("Setting Global Defines: Start");
+	OutputDebugString("Setting Global Defines: Start\n");
 
 	bool bLoaded = false;
 
@@ -146,17 +149,8 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 	if ( !bLoaded )
 	{
 		CvCacheObject* cache = gDLL->createGlobalDefinesCacheObject("GlobalDefines.dat");	// cache file name
-	/************************************************************************************************/
-	/* XML_CHECK_DOUBLE_TYPE                   03/14/08                                MRGENIE      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	#ifdef _DEBUG
-		logXmlCheckDoubleTypes("\nEntering: GlobalDefines\n");
-	#endif
-	/************************************************************************************************/
-	/* XML_CHECK_DOUBLE_TYPE                   END                                                  */
-	/************************************************************************************************/
+
+		DEBUG_LOG("XmlCheckDoubleTypes.log", "\nEntering: GlobalDefines\n");
 
 		if (!ReadGlobalDefines("xml\\GlobalDefines.xml", cache))
 		{
@@ -229,7 +223,7 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 			{
 				if (!ReadGlobalDefines(*it, cache))
 				{
-					OutputDebugString("Setting Global Defines: End");
+					OutputDebugString("Setting Global Defines: End\n");
 					return false;
 				}
 			}
@@ -241,7 +235,7 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 			{
 				if (!ReadGlobalDefines(*it, cache))
 				{
-					OutputDebugString("Setting Global Defines: End");
+					OutputDebugString("Setting Global Defines: End\n");
 					return false;
 				}
 			}
@@ -263,7 +257,7 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 				if (!ReadGlobalDefines(*it, cache))
 				{
 					SAFE_DELETE(pModEnumVector);
-					OutputDebugString("Setting Global Defines: End");
+					OutputDebugString("Setting Global Defines: End\n");
 					return false;
 				}
 			}
@@ -277,7 +271,7 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 			{
 				if (!ReadGlobalDefines(*it, cache))
 				{
-					OutputDebugString("Setting Global Defines: End");
+					OutputDebugString("Setting Global Defines: End\n");
 					return false;
 				}
 			}
@@ -294,7 +288,7 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 
 	GC.cacheGlobals();
 
-	OutputDebugString("Setting Global Defines: End");
+	OutputDebugString("Setting Global Defines: End\n");
 
 	return true;
 }
@@ -377,10 +371,6 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		SetGlobalDefine("NUKE_FEATURE", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("NUKE_FEATURE", idx);
-
-		SetGlobalDefine("GLOBAL_WARMING_TERRAIN", szVal);
-		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("GLOBAL_WARMING_TERRAIN", idx);
 
 		SetGlobalDefine("CAPITAL_BUILDING", szVal);
 		idx = GetInfoClass(szVal);
@@ -547,17 +537,9 @@ bool CvXMLLoadUtility::SetGlobalTypes()
 	UpdateProgressCB("GlobalTypes");
 
 	bool bLoaded = false;	// used to make sure that the xml file was loaded correctly
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   03/14/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-#ifdef _DEBUG
-	logXmlCheckDoubleTypes("\nEntering: GlobalTypes\n");
-#endif
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   END                                                  */
-/************************************************************************************************/
+
+	DEBUG_LOG("XmlCheckDoubleTypes.log", "\nEntering: GlobalTypes\n");
+
 	if (!CreateFXml())
 	{
 		return false;
@@ -766,19 +748,8 @@ bool CvXMLLoadUtility::LoadGlobalText()
 		}
 	}
 	CvGameText::setLanguage(szLanguage);
-	logMsg("\nXML language set to %s\n", szLanguage.c_str());
-
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   03/14/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-#ifdef _DEBUG	
-	logXmlCheckDoubleTypes("\nEntering: GameText\n");
-#endif
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   END                                                  */
-/************************************************************************************************/
+	logging::logMsg("xml.log", "\nXML language set to %s\n", szLanguage.c_str());
+	DEBUG_LOG("XmlCheckDoubleTypes.log", "\nEntering: GameText\n");
 
 	if (!CreateFXml())
 	{
@@ -1281,7 +1252,7 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 void CvXMLLoadUtility::SetGlobalStringArray(CvString **ppszString, wchar_t* szTagName, int* iNumVals, bool bUseEnum)
 {
 	PROFILE_FUNC();
-	logMsgW(L"SetGlobalStringArray %s\n", szTagName);
+	logging::logMsgW("xml.log", L"SetGlobalStringArray %s\n", szTagName);
 
 	int i=0;					//loop counter
 	CvString *pszString;	// hold the local pointer to the newly allocated string memory
@@ -1313,9 +1284,7 @@ void CvXMLLoadUtility::SetGlobalStringArray(CvString **ppszString, wchar_t* szTa
 /*                                                                                              */
 /* adding to hash map - used for the dependencies                                               */
 /************************************************************************************************/
-#ifdef _DEBUG
-			logMsg(" Adding info type %s with ID %i", pszString[i].c_str(), i);
-#endif
+			DEBUG_LOG("xml.log", " Adding info type %s with ID %i", pszString[i].c_str(), i);
 			GC.setInfoTypeFromString(pszString[i], i);
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
@@ -1355,7 +1324,7 @@ void CvXMLLoadUtility::SetGlobalStringArray(CvString **ppszString, wchar_t* szTa
 void CvXMLLoadUtility::SetGlobalActionInfo()
 {
 	PROFILE_FUNC();
-	logMsg("SetGlobalActionInfo\n");
+	logging::logMsg("xml.log", "SetGlobalActionInfo\n");
 	int i=0;					//loop counter
 
 	if(!(NUM_INTERFACEMODE_TYPES > 0))
@@ -1697,7 +1666,7 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 void CvXMLLoadUtility::SetGlobalUnitScales(float* pfLargeScale, float* pfSmallScale, const wchar_t* szTagName)
 {
 	PROFILE_FUNC();
-	logMsgW(L"SetGlobalUnitScales %s\n", szTagName);
+	logging::logMsgW("xml.log", L"SetGlobalUnitScales %s\n", szTagName);
 	// if we successfully locate the szTagName node
 	if (TryMoveToXmlFirstMatchingElement(szTagName))
 	{
@@ -1735,7 +1704,7 @@ void CvXMLLoadUtility::SetGlobalUnitScales(float* pfLargeScale, float* pfSmallSc
 void CvXMLLoadUtility::SetGameText(const wchar_t* szTextGroup, const wchar_t* szTagName, std::vector<CvGameText>& texts)
 {
 	PROFILE_FUNC();
-	logMsgW(L"SetGameText: %s\n", szTagName);
+	logging::logMsgW("xml.log", L"SetGameText: %s\n", szTagName);
 	int startNumOfTexts = texts.size();
 
 	if (TryMoveToXmlFirstMatchingElement(szTextGroup)) // Get the Text Group 1st
@@ -1759,7 +1728,7 @@ void CvXMLLoadUtility::SetGameText(const wchar_t* szTextGroup, const wchar_t* sz
 			while(TryMoveToXmlNextSibling());
 		}
 	}
-	logMsg("Read %i text(s)\n", texts.size() - startNumOfTexts);
+	logging::logMsg("xml.log", "Read %i text(s)\n", texts.size() - startNumOfTexts);
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -1777,10 +1746,10 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 {
 	char szLog[256];
 	char* tmp = xercesc::XMLString::transcode(szTagName);
-	sprintf(szLog, "SetGlobalClassInfo (%s)", tmp);
+	sprintf(szLog, "SetGlobalClassInfo (%s)\n", tmp);
 	xercesc::XMLString::release(&tmp);
 	PROFILE(szLog);
-	logMsg(szLog);
+	logging::logMsg("xml.log", szLog);
 
 	// if we successfully locate the tag name in the xml file
 	if (TryMoveToXmlFirstMatchingElement(szTagName))
@@ -1902,402 +1871,6 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 				}
 			}
 		} while (TryMoveToXmlNextSibling());
-
-//				T* pClassInfo = new T();
-//
-//				FAssert(NULL != pClassInfo);
-//				if (NULL == pClassInfo)
-//				{
-//					break;
-//				}
-//
-//				bool bSuccess = pClassInfo->read(this);
-///************************************************************************************************/
-///* MODULAR_LOADING_CONTROL                 02/20/08                                MRGENIE      */
-///*                                                                                              */
-///* If a Type is dependent on it's existence(i.e. a modder adds something to an existing         */
-///* Type but doesn't want to actual initialize it in case the Type didn't exist previously)      */
-///* this check here makes sure that the file will be skipped then and not used to create the     */
-///* object                                                                                       */
-///************************************************************************************************/
-///*
-//				FAssert(bSuccess);
-//				if (!bSuccess)
-//				{
-//					delete pClassInfo;
-//					break;
-//				}
-//*/
-//				if ( !GC.isAnyDependency() )
-//				{
-//					//CvString szAssertBuffer;
-//					//szAssertBuffer.Format("OWN TYPE - dependency not found: %s, in file: \"%s\"", pClassInfo->getType(), GC.getModDir().c_str());
-//					//FAssertMsg(bSuccess, szAssertBuffer.c_str());
-//					if (!bSuccess)
-//					{
-//				    //#ifdef _DEBUG
-//						logXmlDependencyTypes("\n\nOWN TYPE - dependency not found: %s, in file: \"%s\"", pClassInfo->getType(), GC.getModDir().c_str());
-//						logXmlDependencyTypes("My new check!");
-//					//#endif
-//						delete pClassInfo;
-//						break;
-//					}
-//				}
-//				else
-//				{
-//					int iTypeIndex = -1;
-//					if (NULL != pClassInfo->getType())
-//					{
-//						iTypeIndex = GC.getInfoTypeForString(pClassInfo->getType(), true);
-//					}
-//
-//					// TYPE dependency? (Condition 1)
-//					if ( GC.getTypeDependency() && (-1 == iTypeIndex))
-//					{
-//						//#ifdef _DEBUG
-//							logXmlDependencyTypes("\n\nOWN TYPE - dependency not found: %s, in file: \"%s\"", pClassInfo->getType(), GC.getModDir().c_str());
-//							logXmlDependencyTypes("Possible reasons: missing module, wrong MLF order, bLoad set to 0?");
-//						//#endif
-//						delete pClassInfo;
-//						GC.resetDependencies();		// make sure we always reset once anydependency was true!
-//						continue;
-//					}
-//
-//					// OR Dependencies (Condition 2)
-//					GC.setTypeDependency(false);
-//					if ( GC.getOrNumDependencyTypes() > 0 )
-//					{
-//						// if we have Or dependencies, set to dependend by default(this will prevent loading)
-//						// the moment ANY condition is met, we can safely load the ClassInfo and set the
-//						// dependency to false
-//						GC.setTypeDependency(true);
-//						//#ifdef _DEBUG
-//							logXmlDependencyTypes("\n\nOR - dependencies will be checked here for, TYPE: %s, in file: \"%s\"", pClassInfo->getType(), GC.getModDir().c_str());
-//						//#endif
-//					}
-//					for ( int iI = 0; iI < GC.getOrNumDependencyTypes(); iI++ )
-//					{
-//						iTypeIndex = GC.getInfoTypeForString( GC.getOrDependencyTypes(iI), true );
-//						if ( iTypeIndex == -1 )
-//						{
-//							//#ifdef _DEBUG
-//								logXmlDependencyTypes("OR - Dependency not found, TYPE: %s", GC.getOrDependencyTypes(iI).c_str());
-//							//#endif
-//						}
-//						else
-//						{
-//							// we found a OR dependent Type, so we can load safely!
-//							// dependency will be set disabled(false)
-//#ifdef _DEBUG
-//	logXmlDependencyTypes("OR - Dependency found, TYPE: %s", GC.getOrDependencyTypes(iI).c_str());
-//#endif
-//							GC.setTypeDependency(false);
-//						}
-//					}
-//
-//					// AND Dependencies (Condition 3)
-//					if (!(GC.getAndNumDependencyTypes() > 0 ))
-//					{
-//#ifdef _DEBUG
-//	logXmlDependencyTypes("\n\n");
-//#endif
-//					}
-//#ifdef _DEBUG
-//	logXmlDependencyTypes("AND - dependencies will be checked here for, TYPE: %s, in file: \"%s\"", pClassInfo->getType(), GC.getModDir().c_str());
-//#endif
-//
-//					if (GC.getAndNumDependencyTypes() > 0)
-//					{
-//						bool bAllAndDepsFound = true;
-//						for ( int iI = 0; iI < GC.getAndNumDependencyTypes(); iI++ )
-//						{
-//							iTypeIndex = GC.getInfoTypeForString( GC.getAndDependencyTypes(iI), true );
-//							if ( iTypeIndex == -1 )
-//							{
-//								// if any AND condition is not met, we disable the loading of the Class Info!
-//								//#ifdef _DEBUG
-//									logXmlDependencyTypes("AND - Dependency not found, TYPE: %s", GC.getAndDependencyTypes(iI).c_str());
-//								//#endif
-//								GC.setTypeDependency(true);
-//								bAllAndDepsFound = false;
-//							}
-//							else
-//							{
-//	#ifdef _DEBUG
-//		logXmlDependencyTypes("AND - Dependency found, TYPE: %s", GC.getAndDependencyTypes(iI).c_str());
-//	#endif
-//							}
-//						}
-//
-//						if (bAllAndDepsFound)
-//						{
-//							//#ifdef _DEBUG
-//								logXmlDependencyTypes("AND - dependencies were ALL met for TYPE: %s, in file: \"%s\"", pClassInfo->getType(), GC.getModDir().c_str());
-//							//#endif
-//						}
-//					}
-//
-//					//This covers both the bTypeDependency and the And/Or-DependencyTypes tags!
-//					if ( GC.getTypeDependency() )
-//					{
-//						// We found that any of the 3! conditions NOT to load this class info has been met!
-//						//#ifdef _DEBUG
-//							logXmlDependencyTypes("TYPE: %s, NOT LOADED", pClassInfo->getType());
-//						//#endif
-//						delete pClassInfo;
-//						GC.resetDependencies();		// make sure we always reset once anydependency was true!
-//						continue;
-//					}
-//					else
-//					{
-//						//#ifdef _DEBUG
-//							logXmlDependencyTypes("OK!");
-//						//#endif
-//						bool bSuccess = pClassInfo->read(this);
-//						GC.resetDependencies();		// make sure we always reset once anydependency was true!
-//						FAssert(bSuccess);
-//						if (!bSuccess)
-//						{
-//							delete pClassInfo;
-//							break;
-//						}
-//					}
-//				}
-//
-//				//Afforess Force Delete
-//				if (NULL != pClassInfo->getType())
-//				{
-//					if (GC.getNumGameSpeedInfos() > 0)
-//					{
-//						if(	GC.getForceDelete() ||
-//							(GC.getDefineINT(pClassInfo->getType())))
-//						{
-//							delete pClassInfo;
-//							GC.resetOverwrites();	
-//							continue;
-//						}
-//					}
-//					if (GC.getModDir() != "NONE")
-//					{
-//						logXML("%s Loaded From %s", pClassInfo->getType(), GC.getModDir().c_str());
-//					}
-//					else 
-//					{
-//						logXML("%s Loaded From Base XML Files", pClassInfo->getType());
-//					}
-//				}
-//
-//					OutputDebugString("After Dependencies");
-//
-///************************************************************************************************/
-///* MODULAR_LOADING_CONTROL                 END                                                  */
-///************************************************************************************************/
-//
-//			int iIndex = -1;
-//			if (NULL != pClassInfo->getType())
-//			{
-//				iIndex = GC.getInfoTypeForString(pClassInfo->getType(), true);
-//			}
-//			//else
-//			//{
-//			//	FErrorMsg(xercesc::XMLString::transcode(szTagName));
-//			//	// FATAL : memory escape
-//			//}
-//			
-//
-//			if (-1 == iIndex)
-//			{
-//				int iID = (int)aInfos.size();
-//				if (pClassInfo->getType() != NULL)
-//					GC.setInfoTypeFromString(pClassInfo->getType(), iID);	// add type to global info type hash map
-//				// AIAndy: If the class is a replacement, add it to the replacements but also add a dummy to the normal array to reserve an ID
-//				if (GC.getReplacementCondition() == NULL)
-//				{
-//					aInfos.push_back(pClassInfo);
-//				}
-//				else
-//				{
-//					aInfos.push_back(new T());
-//					pReplacements->addReplacement(iID, GC.getReplacementID(), GC.getReplacementCondition(), pClassInfo);
-//					GC.resetReplacement();
-//				}
-//			}
-//			else	//Here we become modular!  (Warning, this also means having a double entry gets a LITTLE MORE CONFUSING as now you get data from both of them
-//			{
-///*************************************************************************************************/
-///**	TrueModular								05/26/09	Written: Mr. Genie	Imported: Xienwolf	**/
-///**																								**/
-///**	Special Method to disable overwriting of defaults like 0, NO_TECH, NULL, false, etc			**/
-///**	over non default values. Added myself, has to be handled strange for pass 2 unfortunately	**/
-///**																								**/
-///**																								**/
-///**	If a Variable has been initialized by any previous Module, we don't want to reset it by a	**/
-///**			default value just because the 2nd Module doesn't know about it's existance			**/
-///**			(assuming in the previous XML there was a reason for a non-default value)			**/
-///** Arrays forming a list like Uniqueunitnames will be extended and appended so we don't loose  **/
-///** functionality of the Modules using the same Type(iIndex) of the same classinfo				**/
-///**																								**/
-///**	Properly links Modular modifications to previous elements, and allows partial overwriting	**/
-///*************************************************************************************************/
-//				if (GC.getReplacementCondition() == NULL)
-//				{
-//					//Copy information out of the previous entry where this new entry is boring...
-//					if(!GC.getForceOverwrite())
-//						pClassInfo->copyNonDefaults(aInfos[iIndex], this);
-//					else
-//					{
-//						logXML("Warning! bForceOverwrite used on %s", pClassInfo->getType());
-//					}
-//					//New information (just loaded) is running this function to pull information out of the old stuff
-//	/*************************************************************************************************/
-//	/**	TrueModular								END													**/
-//	/*************************************************************************************************/
-//					//Delete the old entry data, but keep the spot reserved
-//					SAFE_DELETE(aInfos[iIndex]);
-//					//Now put this new data (which holds some of the old data) into that spot instead
-//					aInfos[iIndex] = pClassInfo;
-//					//So looks like all of this is done during the first readpass, since we haven't tried to call readpass2 CopyNonDefaults yet.  That means we need to ensure that anything bound for readpass3 is appended, and then it should sort itself out quite nicely for us.  Also means that unless I append information, anything from the original XML load doesn't exist anymore, as we deleted the memory container it was in
-//				}
-//				else
-//				{
-//					pReplacements->addReplacement(iIndex, GC.getReplacementID(), GC.getReplacementCondition(), pClassInfo);
-//					GC.resetReplacement();
-//				}
-//			}
-//
-//
-//		} while (TryMoveToXmlNextSibling());
-//This ends readpass1, above loop keeps going till you reach the end of the XML file (or more correctly, go up one parent element from those which contain Types).
-// AIAndy: This two pass is no more maintained, the replacement is used always
-		/*if (bTwoPass)
-		{
-			// if we successfully locate the szTagName node
-			if (TryMoveToXmlFirstMatchingElement(szTagName))
-			{
-				MoveToXmlParent();
-				TryMoveToXmlFirstChild();
-
-				// loop through each tag
-				for (std::vector<T*>::iterator it = aInfos.begin(); it != aInfos.end(); ++it)
-				{
-					SkipToNextVal();	// skip to the next non-comment node
-
-					(*it)->readPass2(this);
-
-					if (!TryMoveToXmlNextSibling())
-					{
-						break;
-					}
-				}
-			}
-
-			if (TryMoveToXmlFirstMatchingElement(szTagName))
-			{
-				// loop through each tag
-				do
-				{
-					if (!SkipToNextVal())	// skip to the next non-comment node
-						break;              // AIAndy: need to break the loop if the last sibling is a comment
-
-					T* pClassInfo = new T();
-
-					FAssert(NULL != pClassInfo);
-
-					bool bSuccess = pClassInfo->readPass2(this);
-		
-					if ( !GC.isAnyDependency() )
-					{
-						FAssert(bSuccess);
-					}
-					else
-					{
-						int iTypeIndex = -1;
-						if (NULL != pClassInfo->getType())
-						{
-							iTypeIndex = GC.getInfoTypeForString(pClassInfo->getType(), true);
-						}
-
-						// TYPE dependency? (Condition 1)
-						if ( GC.getTypeDependency() && -1 == iTypeIndex)
-						{
-							delete pClassInfo;
-							GC.resetDependencies();		// make sure we always reset once anydependency was true!
-							continue;
-						}
-
-						// OR Dependencies (Condition 2)
-						GC.setTypeDependency(false);
-						if ( GC.getOrNumDependencyTypes() > 0 )
-						{
-							// if we have Or dependencies, set to dependend by default(this will prevent loading)
-							// the moment ANY condition is met, we can safely load the ClassInfo and set the
-							// dependency to false
-							GC.setTypeDependency(true);
-						}
-						for ( int iI = 0; iI < GC.getOrNumDependencyTypes(); iI++ )
-						{
-							iTypeIndex = GC.getInfoTypeForString( GC.getOrDependencyTypes(iI), true );
-							if ( !(iTypeIndex == -1) )
-							{
-								// we found a OR dependent Type, so we can load safely!
-								// dependency will be set disabled(false)
-								GC.setTypeDependency(false);
-							}
-						}
-
-						for ( int iI = 0; iI < GC.getAndNumDependencyTypes(); iI++ )
-						{
-							iTypeIndex = GC.getInfoTypeForString( GC.getAndDependencyTypes(iI), true );
-							if ( iTypeIndex == -1 )
-							{
-								// if any AND condition is not met, we disable the loading of the Class Info!
-								GC.setTypeDependency(true);
-							}
-						}
-
-						//This covers both the bTypeDependency and the And/Or-DependencyTypes tags!
-						if ( GC.getTypeDependency() )
-						{
-							// We found that any of the 3! conditions NOT to load this class info has been met!
-							delete pClassInfo;
-							GC.resetDependencies();		// make sure we always reset once anydependency was true!
-							continue;
-						}
-						else
-						{
-							bool bSuccess = pClassInfo->read(this);
-							GC.resetDependencies();		// make sure we always reset once anydependency was true!
-							FAssert(bSuccess);
-							if (!bSuccess)
-							{
-								delete pClassInfo;
-								break;
-							}
-						}
-					}
-					//Afforess Force Delete
-					//bForceDelete is not saved in the Infos, so it's safe to read it directly...
-					GC.resetOverwrites();
-					GetChildXmlValByName(&GC.getForceDelete(), L"bForceDelete");
-					if(GC.getForceDelete())
-					{
-						delete pClassInfo;
-						GC.resetOverwrites();	
-						continue;
-					}
-
-					int iIndex = -1;
-					if (NULL != pClassInfo->getType())
-					{
-						iIndex = GC.getInfoTypeForString(pClassInfo->getType(), true);
-					}
-
-					aInfos[iIndex]->copyNonDefaultsReadPass2(pClassInfo, this);
-					SAFE_DELETE(pClassInfo);
-
-				} while (TryMoveToXmlNextSibling());
-			}
-		}*/
 	}
 }
 
@@ -2312,10 +1885,10 @@ void CvXMLLoadUtility::SetGlobalClassInfoTwoPassReplacement(std::vector<T*>& aIn
 {
 	char szLog[256];
 	char* tmp = xercesc::XMLString::transcode(szTagName);
-	sprintf(szLog, "SetGlobalClassInfo (%s)", tmp);
+	sprintf(szLog, "SetGlobalClassInfo (%s)\n", tmp);
 	xercesc::XMLString::release(&tmp);
 	PROFILE(szLog);
-	logMsg(szLog);
+	logging::logMsg("xml.log", szLog);
 
 	if (TryMoveToXmlFirstMatchingElement(szTagName))
 	{
@@ -2374,145 +1947,20 @@ void CvXMLLoadUtility::SetGlobalClassInfoTwoPassReplacement(std::vector<T*>& aIn
 				}
 			}
 		} while (TryMoveToXmlNextSibling());
-//			T* pClassInfo = new T();
-//
-//			FAssert(NULL != pClassInfo);
-//
-//			bool bSuccess = pClassInfo->readPass2(this);
-//
-//			if ( !GC.isAnyDependency() )
-//			{
-//				FAssert(bSuccess);
-//			}
-//			else
-//			{
-//				int iTypeIndex = -1;
-//				if (NULL != pClassInfo->getType())
-//				{
-//					iTypeIndex = GC.getInfoTypeForString(pClassInfo->getType(), true);
-//				}
-//
-//				// TYPE dependency? (Condition 1)
-//				if ( GC.getTypeDependency() && -1 == iTypeIndex)
-//				{
-//					delete pClassInfo;
-//					GC.resetDependencies();		// make sure we always reset once anydependency was true!
-//					continue;
-//				}
-//
-//				// OR Dependencies (Condition 2)
-//				GC.setTypeDependency(false);
-//				if ( GC.getOrNumDependencyTypes() > 0 )
-//				{
-//					// if we have Or dependencies, set to dependend by default(this will prevent loading)
-//					// the moment ANY condition is met, we can safely load the ClassInfo and set the
-//					// dependency to false
-//					GC.setTypeDependency(true);
-//				}
-//				for ( int iI = 0; iI < GC.getOrNumDependencyTypes(); iI++ )
-//				{
-//					iTypeIndex = GC.getInfoTypeForString( GC.getOrDependencyTypes(iI), true );
-//					if ( !(iTypeIndex == -1) )
-//					{
-//						// we found a OR dependent Type, so we can load safely!
-//						// dependency will be set disabled(false)
-//						GC.setTypeDependency(false);
-//					}
-//				}
-//
-//				for ( int iI = 0; iI < GC.getAndNumDependencyTypes(); iI++ )
-//				{
-//					iTypeIndex = GC.getInfoTypeForString( GC.getAndDependencyTypes(iI), true );
-//					if ( iTypeIndex == -1 )
-//					{
-//						// if any AND condition is not met, we disable the loading of the Class Info!
-//						GC.setTypeDependency(true);
-//					}
-//				}
-//
-//				//This covers both the bTypeDependency and the And/Or-DependencyTypes tags!
-//				if ( GC.getTypeDependency() )
-//				{
-//					// We found that any of the 3! conditions NOT to load this class info has been met!
-//					delete pClassInfo;
-//					GC.resetDependencies();		// make sure we always reset once anydependency was true!
-//					continue;
-//				}
-//				else
-//				{
-//					bool bSuccess = pClassInfo->read(this);
-//					GC.resetDependencies();		// make sure we always reset once anydependency was true!
-//					FAssert(bSuccess);
-//					if (!bSuccess)
-//					{
-//						delete pClassInfo;
-//						break;
-//					}
-//				}
-//			}
-//			
-///************************************************************************************************/
-///* Afforess	                  Start		 03/17/10                                               */
-///*                                                                                              */
-///* Need to catch ReadPass2's.                                                                   */
-///************************************************************************************************/
-//					//Afforess Force Delete
-//					//bForceDelete is not saved in the Infos, so it's safe to read it directly...
-//					GC.resetOverwrites();
-//					GetOptionalChildXmlValByName(&GC.getForceDelete(), L"bForceDelete");
-//					if (NULL != pClassInfo->getType())
-//					{
-//						if (GC.getNumGameSpeedInfos() > 0)
-//						{
-//							if(GC.getForceDelete() ||
-//							(GC.getDefineINT(pClassInfo->getType())))
-//							{
-//								delete pClassInfo;
-//								GC.resetOverwrites();	
-//								continue;
-//							}
-//						}
-//					}
-///************************************************************************************************/
-///* Afforess	                     END                                                            */
-///************************************************************************************************/
-//
-//			int iIndex = -1;
-//			if (NULL != pClassInfo->getType())
-//			{
-//				iIndex = GC.getInfoTypeForString(pClassInfo->getType(), true);
-//			}
-//			else
-//			{
-//				SAFE_DELETE(pClassInfo);
-//				continue;
-//			}
-//
-//			if (GC.getReplacementCondition())
-//			{
-//				pReplacements->addReplacement(iIndex, GC.getReplacementID(), GC.getReplacementCondition(), pClassInfo, true);
-//				GC.resetReplacement();
-//			}
-//			else
-//			{
-//				aInfos[iIndex]->copyNonDefaultsReadPass2(pClassInfo, this);
-//				SAFE_DELETE(pClassInfo);
-//			}
-//
-//		} while (TryMoveToXmlNextSibling());
 	}
 }
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
+
 void CvXMLLoadUtility::SetDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfos, const wchar_t* szTagName)
 {
 	char szLog[256];
 	char* tmp = xercesc::XMLString::transcode(szTagName);
-	sprintf(szLog, "SetDiplomacyInfo (%s)", tmp);
+	sprintf(szLog, "SetDiplomacyInfo (%s)\n", tmp);
 	xercesc::XMLString::release(&tmp);
 	PROFILE(szLog);
-	logMsg(szLog);
+	logging::logMsg("xml.log", szLog);
 
 	// if we successfully locate the tag name in the xml file
 	if (TryMoveToXmlFirstMatchingElement(szTagName))
@@ -2589,19 +2037,10 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
 
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   10/10/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-#ifdef _DEBUG
-	logXmlCheckDoubleTypes("\nEntering: %s\n", szFileRoot);
-#endif
+	DEBUG_LOG("XmlCheckDoubleTypes.log", "\nEntering: %s\n", szFileRoot);
+
 	CvXMLLoadUtilitySetMod* pModEnumVector = new CvXMLLoadUtilitySetMod;
 	CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   END                                                  */
-/************************************************************************************************/
 
 	if (!bLoaded)
 	{
@@ -2934,7 +2373,7 @@ void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInf
 
 		if (gDLL->cacheRead(pCache, CvString::format("xml\\\\%s\\\\%s.xml", szFileDirectory, szFileRoot)))
 		{
-			logMsg("Read %s from cache", szFileDirectory);
+			logging::logMsg("xml.log", "Read %s from cache", szFileDirectory);
 			bLoaded = true;
 			bWriteCache = false;
 		}
@@ -3061,7 +2500,7 @@ void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInf
 				}
 				if (bOk)
 				{
-					logMsg("Wrote %s to cache", szFileDirectory);
+					logging::logMsg("xml.log", "Wrote %s to cache", szFileDirectory);
 				}
 			}
 #endif
@@ -4174,36 +3613,6 @@ void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t
 	}
 }
 
-void CvXMLLoadUtility::SetOptionalIntVectorWithDelayedResolution(std::vector<int>& aInfos, const wchar_t* szRootTagName)
-{
-	if (TryMoveToXmlFirstChild(szRootTagName))
-	{
-		aInfos.clear();
-		int iNumSibs = GetXmlChildrenNumber();
-		aInfos.resize(iNumSibs);
-		CvString szTextVal;
-
-		if (0 < iNumSibs)
-		{
-			if (GetChildXmlVal(szTextVal))
-			{
-				for (int j = 0; j < iNumSibs; j++)
-				{
-					GC.addDelayedResolution((int*)&(aInfos[j]), szTextVal);
-					if (!GetNextXmlVal(szTextVal))
-					{
-						break;
-					}
-				}
-
-				MoveToXmlParent();
-			}
-		}
-
-		MoveToXmlParent();
-	}
-}
-
 DllExport bool CvXMLLoadUtility::LoadPlayerOptions()
 {
 /************************************************************************************************/
@@ -4264,18 +3673,8 @@ template <class T>
 bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const char* szFileRoot, const wchar_t* szXmlPath)
 {
 	GC.addToInfosVectors(&aInfos);
-	logMLF("Entering MLF");		//logging
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   03/14/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-#ifdef _DEBUG	
-	logXmlCheckDoubleTypes("\nEntering: MLF_CIV4ModularLoadingControls\n");
-#endif
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   END                                                  */
-/************************************************************************************************/
+	DEBUG_LOG("MLF.log", "Entering MLF");
+	DEBUG_LOG("XmlCheckDoubleTypes.log", "\nEntering: MLF_CIV4ModularLoadingControls\n");
 
 	bool bContinue = true;
 	int m_iDirDepth = 0;
@@ -4290,7 +3689,7 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 
 	if (!bLoaded)
 	{
-		logMLF("MLF not found, you will now load the modules without Modular Loading Control");  //logging
+		DEBUG_LOG("MLF.log", "MLF not found, you will now load the modules without Modular Loading Control");
 		SAFE_DELETE(pProgramDir);
 		return false;
 	}	
@@ -4305,21 +3704,21 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 
 			if (szConfigString == "NONE")
 			{
-				logMLF("The default configuration in \"%s\\MLF_%s.xml\" was set to \"NONE\", you will continue loading the regular Firaxian method", szModDirectory.c_str(), szFileRoot);
+				DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" was set to \"NONE\", you will continue loading the regular Firaxian method", szModDirectory.c_str(), szFileRoot);
 				SAFE_DELETE(pProgramDir);
 				return false;   // abort without enumerating anything
 			}
 		}
 		else 
 		{
-			logMLF("The default configuration in \"%s\\MLF_%s.xml\" couldn't be found, you will continue loading using the regular Firaxian method", szModDirectory.c_str(), szFileRoot);
+			DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" couldn't be found, you will continue loading using the regular Firaxian method", szModDirectory.c_str(), szFileRoot);
 			SAFE_DELETE(pProgramDir);
 			return false;
 		}
 
 		if (!SetModLoadControlInfo(aInfos, szXmlPath, szConfigString, szDirDepth, m_iDirDepth))
 		{
-			logMLF("The default configuration in \"%s\\MLF_%s.xml\" set by you could not be found, please check your XML settings!", szModDirectory.c_str(), szFileRoot);
+			DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" set by you could not be found, please check your XML settings!", szModDirectory.c_str(), szFileRoot);
 			SAFE_DELETE(pProgramDir);
 			return false;
 		}
@@ -4357,7 +3756,7 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 
 							if (!bLoaded)
 							{
-								logMLF( "Found module: \"%s\\\"", szModDirectory.c_str() );
+								DEBUG_LOG("MLF.log", "Found module: \"%s\\\"", szModDirectory.c_str());
 							}
 							else
 							{
@@ -4370,7 +3769,7 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 
 									if (szConfigString == "NONE") 
 									{
-										logMLF("The default configuration in \"%s\\MLF_%s.xml\" was set to \"NONE\", settings in this file will be disregarded", szModDirectory.c_str(), szFileRoot);
+										DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" was set to \"NONE\", settings in this file will be disregarded", szModDirectory.c_str(), szFileRoot);
 									}
 									else
 									{
@@ -4421,7 +3820,7 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 					iIndex = GC.getInfoTypeForString(pClassInfo->getType(), true);
 					if ( iIndex != -1 )
 					{
-						logMLF("Type \"%s\" is specified more than once", pClassInfo->getType());
+						DEBUG_LOG("MLF.log", "Type \"%s\" is specified more than once", pClassInfo->getType());
 						//Catch dupes here, we don't want the overwrite or copy method for the MLF
 						FErrorMsg(CvString::format("The <type>%s</type> of the \"MLF_CIV4ModularLoadingControls.xml\" in directory: \"%s\" is already in use, please use an alternative <type> -name", pClassInfo->getType(), szDirDepth.c_str()));
 

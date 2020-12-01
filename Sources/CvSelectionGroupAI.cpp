@@ -1,8 +1,15 @@
 // selectionGroupAI.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvSelectionGroupAI.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
+#include "CvUnitAI.h"
 
 // Public Functions...
 

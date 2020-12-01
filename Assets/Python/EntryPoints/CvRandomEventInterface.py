@@ -249,13 +249,11 @@ def canTriggerMarathon(argsList):
   team = GC.getTeam(player.getTeam())
 
   if (team.AI_getAtWarCounter(otherPlayer.getTeam()) == 1):
-    (loopUnit, iter) = otherPlayer.firstUnit(False)
-    while( loopUnit):
+    for loopUnit in otherPlayer.units():
       plot = loopUnit.plot()
       if (not plot.isNone()):
         if (plot.getOwner() == kTriggeredData.ePlayer):
           return True
-      (loopUnit, iter) = otherPlayer.nextUnit(iter, False)
 
   return False
 
@@ -586,7 +584,7 @@ def canApplyHurricane1(argsList):
 	CyCity = CyPlayer.getCity(kTriggeredData.iCityId)
 
 	for i in xrange(GC.getNumBuildingInfos()):
-		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1: continue
+		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1 or CyCity.isFreeBuilding(i): continue
 		CvBuilding = GC.getBuildingInfo(i)
 		if CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild() or CvBuilding.getProductionCost() < 1 or isLimitedWonder(i):
 			continue
@@ -610,7 +608,7 @@ def applyHurricane1(argsList):
 
 	aList = []
 	for i in xrange(GC.getNumBuildingInfos()):
-		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1: continue
+		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1 or CyCity.isFreeBuilding(i): continue
 		CvBuilding = GC.getBuildingInfo(i)
 		if CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild() or CvBuilding.getProductionCost() < 1 or isLimitedWonder(i):
 			continue
@@ -2445,51 +2443,31 @@ def applyClassicLiteratureDone2(argsList):
     GC.getTeam(player.getTeam()).setHasTech(iTech, True, kTriggeredData.ePlayer, True, True)
 
 def getHelpClassicLiteratureDone3(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
 
-  iSpecialist = GC.getInfoTypeForString("SPECIALIST_SCIENTIST")
-  iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
+	szCityName = ""
+	for city in GC.getPlayer(argsList[1].ePlayer).cities():
+		if city.getNumBuilding(iGreatLibrary):
+			szCityName = city.getNameKey()
+			break
 
-  szCityName = u""
-  for loopCity in player.cities():
-    if (loopCity.isHasBuilding(iGreatLibrary)):
-      szCityName = loopCity.getNameKey()
-      break
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FREE_SPECIALIST", (1, GC.getSpecialistInfo(iSpecialist).getTextKey(), szCityName))
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_FREE_SPECIALIST", (1, GC.getSpecialistInfo(GC.getInfoTypeForString("SPECIALIST_SCIENTIST")).getTextKey(), szCityName))
 
 def canApplyClassicLiteratureDone3(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
 
-  iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
-
-  (loopCity, iter) = player.firstCity(False)
-  while(loopCity):
-    if (loopCity.isHasBuilding(iGreatLibrary)):
-      return True
-
-    (loopCity, iter) = player.nextCity(iter, False)
-
-  return False
+	for city in GC.getPlayer(argsList[1].ePlayer).cities():
+		if city.getNumBuilding(iGreatLibrary):
+			return True
+	return False
 
 def applyClassicLiteratureDone3(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
 
-  iSpecialist = GC.getInfoTypeForString("SPECIALIST_SCIENTIST")
-  iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
-
-  for loopCity in player.cities():
-    if loopCity.isHasBuilding(iGreatLibrary):
-      loopCity.changeFreeSpecialistCount(iSpecialist, 1)
-      return
+	for city in GC.getPlayer(argsList[1].ePlayer).cities():
+		if city.getNumBuilding(iGreatLibrary):
+			city.changeFreeSpecialistCount(GC.getInfoTypeForString("SPECIALIST_SCIENTIST"), 1)
+			return
 
 ######## MASTER BLACKSMITH ###########
 
@@ -2644,17 +2622,12 @@ def applyBestDefenseDone2(argsList):
 
 
 def canApplyBestDefenseDone3(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	iGreatWall = GC.getInfoTypeForString("BUILDING_GREAT_WALL")
 
-  iGreatWall = GC.getInfoTypeForString("BUILDING_GREAT_WALL")
-
-  for loopCity in player.cities():
-    if loopCity.isHasBuilding(iGreatWall):
-      return True
-
-  return False
+	for city in GC.getPlayer(argsList[1].ePlayer).cities():
+		if city.getNumBuilding(iGreatWall):
+			return True
+	return False
 
 ######## NATIONAL SPORTS LEAGUE ###########
 
@@ -2690,17 +2663,12 @@ def canTriggerSportsLeagueDone(argsList):
   return True
 
 def canApplySportsLeagueDone3(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	iZeus = GC.getInfoTypeForString("BUILDING_CIRCUS_MAXIMUS")
 
-  iZeus = GC.getInfoTypeForString("BUILDING_CIRCUS_MAXIMUS")
-
-  for loopCity in player.cities():
-    if loopCity.isHasBuilding(iZeus):
-      return True
-
-  return False
+	for city in GC.getPlayer(argsList[1].ePlayer).cities():
+		if city.getNumBuilding(iZeus):
+			return True
+	return False
 
 ######## CRUSADE ###########
 
@@ -2794,15 +2762,14 @@ def getHelpCrusadeDone2(argsList):
   return szHelp
 
 def canApplyCrusadeDone2(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
+	kTriggeredData = argsList[1]
+	if kTriggeredData.eBuilding < 0:
+		return False
+	city = GAME.getHolyCity(kTriggeredData.eReligion)
 
-  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
-
-  if -1 == kTriggeredData.eBuilding or holyCity.isHasBuilding(kTriggeredData.eBuilding):
-    return False
-
-  return True
+	if city is None or city.getNumBuilding(kTriggeredData.eBuilding):
+		return False
+	return True
 
 def applyCrusadeDone2(argsList):
   iEvent = argsList[0]
@@ -3407,7 +3374,7 @@ def canTriggerNobleKnightsDone(argsList):
   iBuilding = GC.getInfoTypeForString("BUILDING_ORACLE")
 
   for loopCity in player.cities():
-    if loopCity.isHasBuilding(iBuilding):
+    if loopCity.getNumBuilding(iBuilding):
       kActualTriggeredDataObject.iPlotX = loopCity.getX()
       kActualTriggeredDataObject.iPlotY = loopCity.getY()
       kActualTriggeredDataObject.iCityId = loopCity.getID()
@@ -3481,11 +3448,9 @@ def canTriggerOverwhelmDone(argsList):
   iFighter = GC.getInfoTypeForString("SPECIALUNIT_FIGHTER")
   iNumFighters = 9
   iNumPlayerFighters = 0
-  (loopUnit, iter) = player.firstUnit(False)
-  while (loopUnit):
+  for loopUnit in player.units():
     if loopUnit.getSpecialUnitType() == iFighter:
       iNumPlayerFighters += 1
-    (loopUnit, iter) = player.nextUnit(iter, False)
 
   if iNumPlayerFighters < iNumFighters:
     return False
@@ -3812,34 +3777,26 @@ def canTriggerNuclearProtest(argsList):
 	return 10 <= player.getUnitCount(GC.getInfoTypeForString("UNIT_ICBM")) + player.getUnitCount(GC.getInfoTypeForString("UNIT_TACTICAL_NUKE"))
 
 def doNuclearProtest1(argsList):
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
+	kTriggeredData = argsList[1]
 
-  iICBM = GC.getInfoTypeForString("UNIT_ICBM")
-  iTacNuke = GC.getInfoTypeForString("UNIT_TACTICAL_NUKE")
+	iICBM = GC.getInfoTypeForString("UNIT_ICBM")
+	iTacNuke = GC.getInfoTypeForString("UNIT_TACTICAL_NUKE")
 
-  (loopUnit, iter) = player.firstUnit(False)
-  while (loopUnit):
-    if loopUnit.getUnitType() == iICBM or loopUnit.getUnitType() == iTacNuke:
-      loopUnit.kill(False, -1)
-    (loopUnit, iter) = player.nextUnit(iter, False)
+	for loopUnit in GC.getPlayer(kTriggeredData.ePlayer).units():
+		if loopUnit.getUnitType() == iICBM or loopUnit.getUnitType() == iTacNuke:
+			loopUnit.kill(False, -1)
 
 def getHelpNuclearProtest1(argsList):
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_NUCLEAR_PROTEST_1_HELP", ())
-  return szHelp
+	szHelp = TRNSLTR.getText("TXT_KEY_EVENT_NUCLEAR_PROTEST_1_HELP", ())
+	return szHelp
 
 
 ######## Preaching Researcher #######
 
 def canTriggerPreachingResearcherCity(argsList):
-  iCity = argsList[2]
-
-  player = GC.getPlayer(argsList[1])
-  city = player.getCity(iCity)
-
-  if city.isHasBuilding(GC.getInfoTypeForString("BUILDING_UNIVERSITY")):
-    return True
-  return False
+	if GC.getPlayer(argsList[1]).getCity(argsList[2]).getNumBuilding(GC.getInfoTypeForString("BUILDING_UNIVERSITY")):
+		return True
+	return False
 
 ######## Dissident Priest (Egyptian event) #######
 
@@ -4816,11 +4773,9 @@ def canTriggerPiratesoftheNeutralZones(argsList):
 	iPlayer = argsList[0].ePlayer
 	CyPlayer = GC.getPlayer(iPlayer)
 	iNavy = 0
-	CyUnit, i = CyPlayer.firstUnit(False)
-	while CyUnit:
+	for CyUnit in CyPlayer.units():
 		if CyUnit.getDomainType() == DomainTypes.DOMAIN_SEA:
 			iNavy += CyUnit.baseCombatStr()
-		CyUnit, i = CyPlayer.nextUnit(i, False)
 
 	iPirate = GC.getUnitInfo(GC.getInfoTypeForString("UNIT_STEALTH_DESTROYER")).getCombat()
 
@@ -4999,14 +4954,12 @@ def applyMalaccanPirates1(argsList):
   for i in xrange(iNumUnit1):
     barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
 
-  (loopUnit, iter) = barbPlayer.firstUnit(False)
-  while (loopUnit):
+  for loopUnit in barbPlayer.units():
     if loopUnit.getUnitType() == iUnitType1:
       loopUnit.setHasPromotion(iNav1, True)
       loopUnit.setHasPromotion(iCbt4, True)
       loopUnit.setHasPromotion(iCoAs1, True)
       loopUnit.setName("Malaccan Gunboat")
-    (loopUnit, iter) = barbPlayer.nextUnit(iter, False)
 
 
 ######## HENRY_MORGAN ###########
@@ -5157,11 +5110,9 @@ def applyHenryMorgan1(argsList):
   for i in xrange(iNumUnit3):
     barbPlayer.initUnit(iUnitType3, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
 
-  (loopUnit, iter) = barbPlayer.firstUnit(False)
-  while (loopUnit):
+  for loopUnit in barbPlayer.units():
     if loopUnit.getUnitType() == iUnitType1:
       loopUnit.setHasPromotion(iCbt4, True)
-    (loopUnit, iter) = barbPlayer.nextUnit(iter, False)
 
 ######## STEDE_BONNET ###########
 
@@ -5320,14 +5271,12 @@ def applyStedeBonnet1(argsList):
   for i in xrange(iNumUnit2):
     barbPlayer.initUnit(iUnitType2, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
 
-  (loopUnit, iter) = barbPlayer.firstUnit(False)
-  while (loopUnit):
+  for loopUnit in barbPlayer.units():
     if loopUnit.getUnitType() == iUnitType1:
       loopUnit.setName("Barque")
     if loopUnit.getUnitType() == iUnitType2:
       loopUnit.setName("Fast Galleon")
       loopUnit.setHasPromotion(iNav1, True)
-    (loopUnit, iter) = barbPlayer.nextUnit(iter, False)
 
 ######## THE_CORSAIRS ###########
 
@@ -5464,12 +5413,10 @@ def applyTheCorsairs1(argsList):
   for i in xrange(iNumUnit1):
     barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_ATTACK_SEA, DirectionTypes.DIRECTION_SOUTH)
 
-  (loopUnit, iter) = barbPlayer.firstUnit(False)
-  while (loopUnit):
+  for loopUnit in barbPlayer.units():
     if loopUnit.getUnitType() == iUnitType1:
       sUnitName = TRNSLTR.getText("TXT_KEY_EVENT_THE_CORSAIRS_UNIT_NAME", ())
       loopUnit.setName(sUnitName)
-    (loopUnit, iter) = barbPlayer.nextUnit(iter, False)
 
 
 ######## ILLYRIAN_PIRATES ###########
@@ -5620,12 +5567,10 @@ def applyIllyrianPirates1(argsList):
   for i in xrange(iNumUnit1):
     barbPlayer.initUnit(iUnitType1, plot.getX(), plot.getY(), UnitAITypes.UNITAI_PIRATE_SEA, DirectionTypes.DIRECTION_SOUTH)
 
-  (loopUnit, iter) = barbPlayer.firstUnit(False)
-  while (loopUnit):
+  for loopUnit in barbPlayer.units():
     if loopUnit.getUnitType() == iUnitType1:
       sUnitName = TRNSLTR.getText("TXT_KEY_EVENT_ILLYRIAN_PIRATES_UNIT_NAME", ())
       loopUnit.setName(sUnitName)
-    (loopUnit, iter) = barbPlayer.nextUnit(iter, False)
 
 
 ######## MAHDI_ARMY ###########
@@ -7555,10 +7500,10 @@ def doMinorFire(argsList):
 
 	iBurnBuilding = -1
 	iHighFlamm = 0
-	for j in xrange(GC.getNumBuildingInfos()):
-		if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
+	for i in xrange(GC.getNumBuildingInfos()):
+		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1 or isLimitedWonder(i) or CyCity.isFreeBuilding(i):
 			continue
-		CvBuilding = GC.getBuildingInfo(j)
+		CvBuilding = GC.getBuildingInfo(i)
 		if CvBuilding.getProductionCost() < 1 or CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
 			continue
 
@@ -7571,7 +7516,7 @@ def doMinorFire(argsList):
 			iFlammScore = iFlamm + randNum
 			if iFlammScore > iHighFlamm:
 				iHighFlamm = iFlammScore
-				iBurnBuilding = j
+				iBurnBuilding = i
 
 	if iBurnBuilding != -1:
 		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBurnBuilding).getTextKey(), ))
@@ -7598,7 +7543,7 @@ def doMajorFire(argsList):
 		if currFlamm <= iFlammEnd:
 			break
 		for j in xrange(GC.getNumBuildingInfos()):
-			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
+			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j) or CyCity.isFreeBuilding(i):
 				continue
 			CvBuilding = GC.getBuildingInfo(j)
 			if CvBuilding.getProductionCost() < 1 or CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
@@ -7650,7 +7595,7 @@ def doCatastrophicFire(argsList):
 		iHighFlamm = 0
 
 		for j in xrange(GC.getNumBuildingInfos()):
-			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
+			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j) or CyCity.isFreeBuilding(i):
 				continue
 			CvBuilding = GC.getBuildingInfo(j)
 			if CvBuilding.getProductionCost() < 1 or CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
@@ -7944,9 +7889,8 @@ def doTornado(argsList):
 	if CyPlot.getFeatureType() == -1:
 		CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_TORNADO'), 0)
 
-	iUnits = CyPlot.getNumUnits()
-	for iUnit in xrange(iUnits):
-		CyPlot.getUnit(iUnit).setImmobileTimer(1)
+	for pUnit in CyPlot.units():
+		pUnit.setImmobileTimer(1)
 
 ######## Native Good 1 -- lost resources ###########
 def canApplyNativegood1(argsList):
@@ -8147,7 +8091,7 @@ def doEventLawyer(argsList):
 
 		# Removes buildings
 		for iBuildingLoop in xrange(GC.getNumBuildingInfos( )):
-			if pCity.isHasBuilding( iBuildingLoop):
+			if pCity.getNumBuilding(iBuildingLoop):
 				pBuilding = GC.getBuildingInfo( iBuildingLoop )
 				iRequiredCorporation = pBuilding.getFoundsCorporation( )
 				for iCorpLoop in xrange(GC.getNumCorporationInfos()):
@@ -9143,10 +9087,7 @@ def applyCivilWar(argsList):
 	pNewPlayer.acquireCity(pCity, False, False)
 
 	# Hand over units
-	pPlot = CyMap().plot(iX, iY)
-	iMaxNumUnits = pPlot.getNumUnits()
-	for iUnits in xrange(iMaxNumUnits, -1, -1):
-		pUnit = pPlot.getUnit(iUnits)
+	for pUnit in CyMap().plot(iX, iY).units():
 		if pUnit.getOwner() == pPlayer.getID():
 			pUnit.doCommand(CommandTypes.COMMAND_GIFT, -1, -1)
 

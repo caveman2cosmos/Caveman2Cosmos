@@ -12,7 +12,6 @@ from operator import itemgetter
 
 import BugUtil
 import CvUtil
-import PlayerUtil
 import CvRandomEventInterface
 import SdToolKit
 
@@ -63,22 +62,8 @@ def enabledOptionChanged (pIniObject, bNewValue):
 		gSavedSigns.processSigns(g_bShowSigns)
 	return True
 
-# def addSign (pPlot, ePlayer, szCaption):
-	# """ Wrapper for CyEngine.addSign() which stores sign data.
-	# If -1 is passed for ePlayer, the sign is assumed to be a landmark that everyone can see.
-	# """
-	# if not pPlot or pPlot.isNone():
-		# BugUtil.warn("EventSigns.addSign() was passed an invalid plot: %s" % (str(pPlot)))
-		# return False
-	# if gSavedSigns == None:
-		# BugUtil.warn("EventSigns.addSign() gSavedSigns is not initialized!")
-		# return False
-	# gSavedSigns.storeSign(pPlot, ePlayer, szCaption)
-	# gSavedSigns.displaySign(pPlot, ePlayer)
-	# SdToolKit.sdSetGlobal(SD_MOD_ID, SD_VAR_ID, gSavedSigns)
-	# return True
 
-def addSign (pPlot, ePlayer, szCaption):
+def addSign(pPlot, ePlayer, szCaption):
 	""" Wrapper for CyEngine.addSign() which stores sign data.
 	If -1 is passed for ePlayer, the sign is assumed to be a landmark that everyone can see.
 
@@ -102,7 +87,9 @@ def addSign (pPlot, ePlayer, szCaption):
 	gSavedSigns.displaySign(pPlot, ePlayer)
 	SdToolKit.sdSetGlobal(SD_MOD_ID, SD_VAR_ID, gSavedSigns)
 	return True
-def updateCurrentSigns ():
+
+
+def updateCurrentSigns():
 	""" Updates gCurrentSigns global with all current signs on map. Remember to clear when done."""
 	global gCurrentSigns
 	gCurrentSigns = MapSigns()
@@ -178,15 +165,16 @@ def placeLandmark(pPlot, sEventType, iFood, iProd, iComm, bIsSign, iSignOwner):
 
 	sCaption = TRNSLTR.getText("TXT_KEY_SIGN_FORMAT_OVERVIEW", (sCaptionFood, sCaptionProd, sCaptionComm, sCaptionDesc))
 
-	if (bIsSign):
-		if (iSignOwner == -1):
-			# add signs for all valid human players who are still alive.
-			for pPlayer in PlayerUtil.players(human=True, alive=True):
-				addSign(pPlot, pPlayer.getID(), sCaption)
-		else:
-			addSign(pPlot, iSignOwner, sCaption)
-	else:
+	if not bIsSign:
 		engine.addLandmark(pPlot, sCaption)
+	elif (iSignOwner == -1):
+		# add signs for all valid human players who are still alive.
+		for iPlayer in xrange(gc.getMAX_PC_PLAYERS()):
+			player = gc.getPlayer(iPlayer)
+			if player.isAlive() and player.isHuman():
+				addSign(pPlot, iPlayer, sCaption)
+	else:
+		addSign(pPlot, iSignOwner, sCaption)
 
 	return True
 
@@ -309,7 +297,7 @@ class MapSigns:
 				engine.addLandmark(pPlot.cloneToViewport(), szCaption.encode('latin_1'))
 		else:
 			pPlayer = GC.getPlayer(ePlayer)
-			if not pPlayer or pPlayer.isNone():
+			if not pPlayer:
 				BugUtil.warn("MapSigns.displaySign() was passed an invalid player id: %s" % (str(ePlayer)))
 				return False
 			eTeam = pPlayer.getTeam()

@@ -1,7 +1,11 @@
 #include "CvGameCoreDLL.h"
-
-#include <boost155/functional.hpp>
-#include <boost155/bind.hpp>
+#include "CvCity.h"
+#include "CvDllPythonEvents.h"
+#include "CvGlobals.h"
+#include "CvPlot.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
+#include "CvUnit.h"
 
 
 namespace logging {
@@ -430,13 +434,14 @@ void CvDllPythonEvents::reportGameStart()
 	}
 }
 
-void CvDllPythonEvents::reportGameEnd()
+void CvDllPythonEvents::reportGameEnd(int iGameTurn)
 {
 	if (preEvent())
 	{
 		EventArgs eventData;
 		eventData
-			.arg("event", "GameEnd");
+			.arg("event", "GameEnd")
+			.arg("iGameTurn", iGameTurn);
 		postEvent(eventData, "GameEnd");
 	}
 }
