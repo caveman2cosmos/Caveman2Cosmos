@@ -4558,10 +4558,7 @@ void CvPlayer::updateTimers()
 	{
 		algo::for_each(groups(), CvSelectionGroup::fn::doDelayedDeath()); // could destroy the selection group...
 	}
-
-	int iNumSelectionGroups = getNumSelectionGroups();
-	int iNumUnits = getNumUnits();
-	FAssertMsg(iNumSelectionGroups <= iNumUnits, "The number of Units is expected not to exceed the number of Selection Groups");
+	FAssertMsg(getNumSelectionGroups() <= getNumUnits(), "The number of Units is expected not to exceed the number of Selection Groups");
 }
 
 
