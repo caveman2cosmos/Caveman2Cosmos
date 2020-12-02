@@ -2095,6 +2095,11 @@
 			<iCultureDistance>4</iCultureDistance>
 			<iHealthPercent>-50</iHealthPercent>
 			<iMovement>4</iMovement>
+			<RiverYieldChange>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</RiverYieldChange>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Ice.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>

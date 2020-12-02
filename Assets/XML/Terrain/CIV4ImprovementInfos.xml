@@ -1,4 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<!-- Notes:
+	- Terraforming and Feature changing "improvements", indicated by a corresponding FeatureChange
+	or TerrainChange tag in the Civ4BuildInfos, don't get placed as improvements ingame. The entry here
+	only controls allowing/disallowing by current plot, e.g. FeatureMakesValids or TerrainMakesValids.
+-->
 <Civ4ImprovementInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<ImprovementInfos>
 		<!-- Prehistoric -->
@@ -6244,9 +6249,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_LUSH</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -6269,9 +6271,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_MUDDY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -6290,9 +6289,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_GRASS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -6315,10 +6311,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_PLAINS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_PLAINS</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -6341,10 +6333,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_TAIGA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -6363,10 +6351,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_TUNDRA</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -6385,10 +6369,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_PERMAFROST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -6407,10 +6387,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_ROCKY</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -6433,10 +6409,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_SCRUB</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -6459,10 +6431,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_DESERT</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -6481,10 +6449,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_DUNES</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -7331,8 +7295,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-		<!-- Note: Beacons and lighthouses have iYieldChange entries which refer to the resultant tile feature yield;
-			       the FeatureChange tag from the corresponding BuildInfo marks these as 'placeholder' improvements -->
 		<!-- Beacons -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_BEACON_CORAL</Type>
@@ -7340,11 +7302,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
 			<PrereqTech>TECH_SAILING</PrereqTech>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -7362,11 +7319,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
 			<PrereqTech>TECH_SAILING</PrereqTech>
-			<YieldChanges>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -7385,11 +7337,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>4</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -7411,11 +7358,6 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<YieldChanges>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>2</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -9720,12 +9662,18 @@
 				</FeatureMakesValid>
 			</FeatureMakesValids>
 		</ImprovementInfo>
+		<!-- Grow Forest (special case of feature change handled in CvEventManager.py; placeholder YieldChanges) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_GROW_FOREST</Type>
 			<Description>TXT_KEY_IMPROVEMENT_GROW_FOREST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_GROW_FOREST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANTATION</ArtDefineTag>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+				<iYield>0</iYield>
+			</YieldChanges>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<bActsAsCity>0</bActsAsCity>
 			<FeatureMakesValids>

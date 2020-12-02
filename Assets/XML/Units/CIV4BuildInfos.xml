@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <!-- Notes:
-** 'CANNOT' be built on this feature 
+	- 'CANNOT' be built on this feature 
 	<FeatureStruct>
 		<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 		<PrereqTech>TECH_DUMMY</PrereqTech>
 	</FeatureStruct>
-**
+	- FeatureChange and TerrainChange make it so that the "improvement" is not placed; instead,
+	the build action will replace any existing feature/terrain with the corresponding entered value.
+	bRemove should be used in necessary FeatureStructs to make UI work properly for replacing features.
 -->
 <Civ4BuildInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<BuildInfos>

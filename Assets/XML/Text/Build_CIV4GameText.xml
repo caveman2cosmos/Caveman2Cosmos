@@ -956,7 +956,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_DESERT</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_DESERT]Terraform Toward Desert[\LINK]</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_DESERT]Terraform Into Desert[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_TERRAFORM_DESERT]Terraformer en Désert[\LINK]</French>
 		<German>Terraforme zu Desert</German>
 		<Italian>Terraforma in Deserto</Italian>
@@ -964,7 +964,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_DUNES</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_DUNES]Terraform Toward Dunes[\LINK]</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_DUNES]Terraform Into Dunes[\LINK]</English>
 		<French>Terraformer en Dunes</French>
 		<German>Terraforme zu Dunes</German>
 		<Italian>Terraforma in Dune</Italian>
@@ -972,7 +972,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_GRASS</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_GRASS]Terraform Toward Grass[\LINK]</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_GRASS]Terraform Into Grass[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_TERRAFORM_GRASS]Terraformer en Prairies[\LINK]</French>
 		<German>Terraforme zu Grasland</German>
 		<Italian>Terraforma in Praterie</Italian>
@@ -980,7 +980,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_LUSH</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_LUSH]Terraform Toward Lush[\LINK]</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_LUSH]Terraform Into Lush[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_TERRAFORM_LUSH]Terraformer en Sol luxuriant[\LINK]</French>
 		<German>Terraforme zu Lush</German>
 		<Italian>Terraforma in Suolo lussureggiante</Italian>
@@ -988,7 +988,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_MUDDY</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_MUDDY]Terraform Toward Muddy[\LINK]</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_MUDDY]Terraform Into Muddy[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_TERRAFORM_MUDDY]Terraformer en Sol boueux[\LINK]</French>
 		<German>Terraforme zu Muddy</German>
 		<Italian>Terraforma in Suolo fangoso</Italian>
@@ -996,7 +996,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_PERMAFROST</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_PERMAFROST]Terraform Toward Permafrost[\LINK]</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_PERMAFROST]Terraform Into Permafrost[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_TERRAFORM_PERMAFROST]Terraformer en Persigel[\LINK]</French>
 		<German>Terraforme zu Permafrost</German>
 		<Italian>Terraforma in Permafrost</Italian>
@@ -1004,7 +1004,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_PLAINS</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_PLAINS]Terraform Toward Plains[\LINK]</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_PLAINS]Terraform Into Plains[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_TERRAFORM_PLAINS]Terraformer en Plaines[\LINK]</French>
 		<German>Terraforme zu Ebene</German>
 		<Italian>Terraforma in Pianure</Italian>
@@ -1012,7 +1012,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_ROCKY</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_ROCKY]Terraform Toward Rocky[\LINK]</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_ROCKY]Terraform Into Rocky[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_TERRAFORM_ROCKY]Terraformer en Sol rocheux[\LINK]</French>
 		<German>Terraforme zu Rocky</German>
 		<Italian>Terraforma in Suolo roccioso</Italian>
@@ -1020,7 +1020,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_SCRUB</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_SCRUB]Terraform Toward Scrub[\LINK]</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_SCRUB]Terraform Into Scrub[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_TERRAFORM_SCRUB]Terraformer en Brousse[\LINK]</French>
 		<German>Terraforme zu Scrub</German>
 		<Italian>Terraforma in Macchia</Italian>
@@ -1028,11 +1028,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_TAIGA</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_TUNDRA]Terraform Toward Taiga[\LINK]</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_TUNDRA]Terraform Into Taiga[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_TUNDRA</Tag>
-		<English>[LINK=IMPROVEMENT_TERRAFORM_TUNDRA]Terraform Toward Tundra[\LINK]</English>
+		<English>[LINK=IMPROVEMENT_TERRAFORM_TUNDRA]Terraform Into Tundra[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_TERRAFORM_TUNDRA]Terraformer en Toundra[\LINK]</French>
 		<German>Terraforme zu Tundra</German>
 		<Italian>Terraforma in Tundra</Italian>
@@ -1221,7 +1221,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_YOUNG_FOREST</Tag>
-		<English>[LINK=IMPROVEMENT_YOUNG_FOREST]Plant Forest[\LINK]</English>
+		<English>[LINK=IMPROVEMENT_YOUNG_FOREST]Plant Forest (Young)[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_YOUNG_FOREST]Planter une Forêt[\LINK]</French>
 		<German>Pflanze Wald</German>
 		<Italian>Pianta una foresta</Italian>
