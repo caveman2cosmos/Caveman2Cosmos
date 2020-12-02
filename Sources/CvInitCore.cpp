@@ -534,14 +534,28 @@ void CvInitCore::resetGame()
 
 	m_bWBMapNoPlayers = false;
 
+	int iReturn = 0;
+
 	// Standard game parameters
-	m_eWorldSize = NO_WORLDSIZE;											// STANDARD_ option?
-	m_eClimate = (ClimateTypes)GC.getDefineINT("STANDARD_CLIMATE");			// NO_ option?
-	m_eSeaLevel = (SeaLevelTypes)GC.getDefineINT("STANDARD_SEALEVEL");		// NO_ option?
-	m_eEra = (EraTypes)GC.getDefineINT("STANDARD_ERA");						// NO_ option?
-	m_eGameSpeed = (GameSpeedTypes)GC.getDefineINT("STANDARD_GAMESPEED");	// NO_ option?
-	m_eTurnTimer = (TurnTimerTypes)GC.getDefineINT("STANDARD_TURNTIMER");	// NO_ option?
-	m_eCalendar = (CalendarTypes)GC.getDefineINT("STANDARD_CALENDAR");		// NO_ option?
+	m_eWorldSize = NO_WORLDSIZE; // STANDARD_ option?
+
+	GC.getDefinesVarSystem()->GetValue("STANDARD_CLIMATE", iReturn);
+	m_eClimate = (ClimateTypes)iReturn; // NO_ option?
+
+	GC.getDefinesVarSystem()->GetValue("STANDARD_SEALEVEL", iReturn);
+	m_eSeaLevel = (SeaLevelTypes)iReturn; // NO_ option?
+
+	GC.getDefinesVarSystem()->GetValue("STANDARD_ERA", iReturn);
+	m_eEra = (EraTypes)iReturn; // NO_ option?
+
+	GC.getDefinesVarSystem()->GetValue("STANDARD_GAMESPEED", iReturn);
+	m_eGameSpeed = (GameSpeedTypes)iReturn; // NO_ option?
+
+	GC.getDefinesVarSystem()->GetValue("STANDARD_TURNTIMER", iReturn);
+	m_eTurnTimer = (TurnTimerTypes)iReturn; // NO_ option?
+
+	GC.getDefinesVarSystem()->GetValue("STANDARD_CALENDAR", iReturn);
+	m_eCalendar = (CalendarTypes)iReturn; // NO_ option?
 
 	m_uiSavegameAssetCheckSum = -1;
 
