@@ -8976,12 +8976,9 @@ void CvGame::read(FDataStreamBase* pStream)
 		addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getActivePlayer(), gDLL->getText("TXT_KEY_MISC_RELOAD", m_iNumSessions));
 	}
 
-	if (isOption(GAMEOPTION_NEW_RANDOM_SEED) && !GC.getDISABLE_RAND_SEED_ON_LOAD())
+	if (isOption(GAMEOPTION_NEW_RANDOM_SEED) && !isNetworkMultiPlayer())
 	{
-		if (!isNetworkMultiPlayer())
-		{
-			m_sorenRand.reseed(timeGetTime());
-		}
+		m_sorenRand.reseed(timeGetTime());
 	}
 
 	WRAPPER_READ(wrapper,"CvGame",&m_iShrineBuildingCount);
