@@ -677,7 +677,7 @@ public:
 	bool isFlatlands() const;
 	DllExport bool isHills() const;
 	DllExport bool isPeak() const;
-	bool isPeak2(bool bCountsAs = false) const;
+	bool isAsPeak() const;
 	void setPlotType(PlotTypes eNewValue, bool bRecalculate = true, bool bRebuildGraphics = true);
 
 	DllExport TerrainTypes getTerrainTypeExternal() const;

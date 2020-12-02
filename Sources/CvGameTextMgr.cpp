@@ -9383,7 +9383,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				iMovementCost += GC.getHILLS_EXTRA_MOVEMENT();
 			}
 
-			if (pPlot->isPeak2(true))
+			if (pPlot->isAsPeak())
 			{
 				if (!GET_TEAM(eActiveTeam).isMoveFastPeaks())
 				{
@@ -24346,7 +24346,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 
 		if (kBuilding.isBuildOnlyOnPeaks())
 		{
-			if (pCity == NULL || !pCity->plot()->isPeak2(true))
+			if (pCity == NULL || !pCity->plot()->isAsPeak())
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_MOUNTAIN"));
