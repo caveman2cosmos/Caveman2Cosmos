@@ -11293,83 +11293,41 @@ void CvUnitAI::AI_InfiltratorMove()
 		return;
 	}
 
-	CvArea* pArea = area();
-	const int iExisting = GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(pArea, UNITAI_INFILTRATOR);
-	int iTargetGroupSize;
-
-	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) && !isNPC() && iExisting <= 10)
-	{
-		iTargetGroupSize = std::max(1, AI_getBirthmark() / 10);
-		while (iTargetGroupSize > 9)
-		{
-			iTargetGroupSize = std::max(1, (iTargetGroupSize / 10));
-		}//get a number from 1-9.
-	}
-	else
-	{
-		iTargetGroupSize = 1;
-	}
-
 	if (AI_anyAttack(0, 75))
 	{
 		return;
 	}
 
-	bool bIsAtHome = false;
-	if (plot() != NULL && plot()->isCity(false))
+	if (!isWanted() && GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) && !isNPC()
+	&& plot() != NULL && plot()->isCity(false) && plot()->getOwner() != getOwner()
+	&& !GET_PLAYER(getOwner()).AI_isFinancialTrouble())
 	{
-		if (plot()->getOwner() == getOwner())
+		int iTargetGroupSize = std::max(1, AI_getBirthmark() / 10);
+		while (iTargetGroupSize > 9)
 		{
-			iTargetGroupSize = 1;
-		}
-		else
+			iTargetGroupSize = std::max(1, iTargetGroupSize / 10);
+		}//get a number from 1-9.
+
+		if (getGroup()->getNumUnits() < iTargetGroupSize)
 		{
-			bIsAtHome = true;
-		}
-	}
-
-	int iExistingGroupSize = getGroup()->getNumUnits();
-
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
-	bool bFinancialTrouble = kPlayer.AI_isFinancialTrouble();
-	bool bReadytoInfiltrate = (iExistingGroupSize >= iTargetGroupSize);
-	if (!bFinancialTrouble && !bReadytoInfiltrate && bIsAtHome)
-	{
-		GET_PLAYER(getOwner()).getContractBroker().advertiseWork(HIGH_PRIORITY_ESCORT_PRIORITY,
-																	   NO_UNITCAPABILITIES,
-																	   getX(),
-																	   getY(),
-																	   this,
-																	   UNITAI_INFILTRATOR);
-
-		if( gUnitLogLevel > 2 )
-		{
-			logBBAI("	%S's Infiltrator (%d) at (%d,%d) [stack size %d] requests another Infiltrator at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getID(), getX(), getY(), getGroup()->getNumUnits(), HIGH_PRIORITY_ESCORT_PRIORITY);
-		}
-	}
-	//if (/*!bReadytoInfiltrate && */bIsAtHome)
-	//{
-	//	getGroup()->pushMission(MISSION_SKIP);
-	//	return;
-	//}
-
-	// Units within group should respond appropriately to becoming wanted by separating themselves from the group
-	// (Use safe iterator as we are modifying the group)
-	for(safe_unit_iterator itr = getGroup()->beginUnitsSafe();
-		itr != getGroup()->endUnitsSafe() && getGroup()->getNumUnits() > 1;
-		++itr)
-	{
-		CvUnit* pLoopUnit = *itr;
-		if (pLoopUnit->isWanted())
-		{
-			pLoopUnit->joinGroup(NULL);
+			GET_PLAYER(getOwner()).getContractBroker().advertiseWork
+			(
+				HIGH_PRIORITY_ESCORT_PRIORITY,
+				NO_UNITCAPABILITIES,
+				getX(), getY(),
+				this, UNITAI_INFILTRATOR
+			);
+			if (gUnitLogLevel > 2)
+			{
+				logBBAI("	%S's Infiltrator (%d) at (%d,%d) [stack size %d] requests another Infiltrator at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getID(), getX(), getY(), getGroup()->getNumUnits(), HIGH_PRIORITY_ESCORT_PRIORITY);
+			}
 		}
 	}
 
 	// Then one by one they would end up hitting this point, theoretically, and possibly even the head unit immediately
 	if (isWanted() && getGroup()->getNumUnits() == 1)
 	{
-		if (bFinancialTrouble && canTrade(plot()))
+		if (GET_PLAYER(getOwner()).AI_isFinancialTrouble() && canTrade(plot()))
 		{
 			getGroup()->pushMission(MISSION_TRADE);
 		}
@@ -32704,17 +32662,15 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 		eUnitAI = pUnit->AI_getUnitAIType();
 	}
 
-	if (getGroup() == NULL)
-	{
-		if (bStack)
-		{
-			return false;
-		}
-	}
-	else
+	if (getGroup() != NULL)
 	{
 		eMissionAI = getGroup()->AI_getMissionAIType();
 	}
+	else if (bStack)
+	{
+		return false;
+	}
+
 	if (!bStack && pUnit == NULL)
 	{
 		return false;
