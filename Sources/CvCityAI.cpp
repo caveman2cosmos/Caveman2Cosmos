@@ -4,10 +4,18 @@
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvCityAI.h"
+#include "CvContractBroker.h"
+#include "CvGameAI.h"
 #include "CvGlobals.h"
-#include "CvReachablePlotSet.h"
+#include "CvInfos.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvPython.h"
+#include "CvReachablePlotSet.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
 #include "CvDLLFAStarIFaceBase.h"
 
 //	KOSHLING MOD - calculate all possible building focuses at once
@@ -7228,7 +7236,7 @@ int CvCityAI::evaluateDanger()
 	if (eDummyUnit == NO_UNIT)
 	{
 		// Should never happen but empirically it does (very rarely) - needs future investigation
-		FErrorMsg("Cannot find defender to use for strength test");
+		FErrorMsg(CvString::format("Cannot find any buildable units to use for strength test asking city is %S, owned by player %d", m_szName.c_str(), getOwner()).c_str());
 		return 100;
 	}
 
@@ -13696,7 +13704,7 @@ bool CvCityAI::AI_buildCaravan()
 			if (GC.getGame().getSorenRandNum(iOdds, "Caravan Production") == 0)
 			{
 				pushOrder(ORDER_TRAIN, eBestUnit, -1, false, false, false);
-				//GC.getGame().logMsg("City %S built a caravan", getName().GetCString());
+				//logging::logMsg("C2C.log", "City %S built a caravan", getName().GetCString());
 				return true;
 			}
 		}

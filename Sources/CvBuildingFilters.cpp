@@ -7,8 +7,13 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "CvGlobals.h"
+#include "CvBuildingFilters.h"
 #include "CvBuildingInfo.h"
+#include "CvBugOptions.h"
+#include "CvCity.h"
+#include "CvGameAI.h"
+#include "CvGlobals.h"
+#include "CvInfos.h"
 #include "CvPlayerAI.h"
 
 void BuildingFilterBase::Activate()

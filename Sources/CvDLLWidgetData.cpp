@@ -2,11 +2,19 @@
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
+#include "CvDeal.h"
+#include "CvDLLWidgetData.h"
+#include "CvEventReporter.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
-#include "CvDLLWidgetData.h"
+#include "CvMap.h"
+#include "CvMessageControl.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvPopupInfo.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 
 CvDLLWidgetData* CvDLLWidgetData::m_pInst = NULL;
@@ -1265,9 +1273,7 @@ void CvDLLWidgetData::doRenameCity()
 
 void CvDLLWidgetData::doRenameUnit()
 {
-	CvUnit* pHeadSelectedUnit;
-
-	pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 	if (pHeadSelectedUnit != NULL)
 	{
@@ -3140,10 +3146,10 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 					for (int iI = 0; iI < GC.getBuildInfo(eBuild).getNumTerrainStructs(); iI++)
 					{
-						TerrainTypes eTerrain = GC.getBuildInfo(eBuild).getTerrainStruct(iI).eTerrain;
-						if (eTerrain == pMissionPlot->getTerrainType() || 
-							(eTerrain == GC.getTERRAIN_PEAK() && pMissionPlot->isPeak2(true)) ||
-							(eTerrain == GC.getTERRAIN_HILL() && pMissionPlot->isHills()))
+						const TerrainTypes eTerrain = GC.getBuildInfo(eBuild).getTerrainStruct(iI).eTerrain;
+						if (eTerrain == pMissionPlot->getTerrainType()
+						||  eTerrain == GC.getTERRAIN_PEAK() && pMissionPlot->isAsPeak()
+						||  eTerrain == GC.getTERRAIN_HILL() && pMissionPlot->isHills())
 						{
 							if (GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech != NO_TECH)
 							{

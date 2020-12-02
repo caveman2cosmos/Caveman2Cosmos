@@ -1544,14 +1544,6 @@
 			<iPopDestroys>5</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
 					<TerrainType>TERRAIN_LUSH</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>

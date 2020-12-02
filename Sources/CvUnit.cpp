@@ -4,12 +4,23 @@
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
+#include "CvEventReporter.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
-#include "CvPlayerAI.h"
+#include "CvPopupInfo.h"
+#include "CvMap.h"
+#include "CvInfos.h"
+#include "CvPlot.h"
+#include "CvPopupInfo.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
+#include "CvUnitAI.h"
+#include "CvViewport.h"
 #include "CyPlot.h"
 #include "CyUnit.h"
+#include "CvDLLEntity.h"
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
 
@@ -4914,7 +4925,7 @@ bool CvUnit::isActionRecommended(int iAction) const
 								return true;
 							}
 							// Food is only interesting on flatland/water
-							if (improvement.getYieldChange(YIELD_FOOD) > 0 && !pPlot->isHills() && !pPlot->isPeak2(true))
+							if (improvement.getYieldChange(YIELD_FOOD) > 0 && !pPlot->isHills() && !pPlot->isAsPeak())
 							{
 								return true;
 							}
@@ -5789,7 +5800,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 			//}
 		}
 
-		if (pPlot->isPeak2(true) && m_pUnitInfo->isTerrainImpassableType(iPeak)
+		if (pPlot->isAsPeak() && m_pUnitInfo->isTerrainImpassableType(iPeak)
 		|| pPlot->isHills() && m_pUnitInfo->isTerrainImpassableType(iHill))
 		{
 			TechTypes eTech = (TechTypes)m_pUnitInfo->getTerrainPassableTech(pPlot->getTerrainType());
@@ -6158,7 +6169,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 	if (pPlot->isImpassable(getTeam()))
 	{
 		//Check our current tile
-		if (plot()->isPeak2(true))
+		if (plot()->isAsPeak())
 		{
 			//	Can this unit move through peaks regardless?
 			if ( isCanMovePeaks() )
@@ -6171,7 +6182,7 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 				bValid = plot()->getHasMountainLeader(getTeam());
 			}
 		}
-		if (pPlot->isPeak2(true))
+		if (pPlot->isAsPeak())
 		{
 			//Check the impassible tile
 			if (!bValid)
@@ -16775,7 +16786,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		}
 
 		pNewPlot->area()->changeUnitsPerPlayer(getOwner(), 1);
-		pNewPlot->area()->changePower(getOwner(), getPowerValueTotal()/100);
+		pNewPlot->area()->changePower(getOwner(), getPowerValueTotal());
 
 		if (AI_getUnitAIType() != NO_UNITAI)
 		{
@@ -16806,7 +16817,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		changeDebugCount(-1);
 
 		pOldPlot->area()->changeUnitsPerPlayer(getOwner(), -1);
-		pOldPlot->area()->changePower(getOwner(), -getPowerValueTotal()/100);
+		pOldPlot->area()->changePower(getOwner(), -getPowerValueTotal());
 
 		if (AI_getUnitAIType() != NO_UNITAI)
 		{
@@ -21634,7 +21645,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 
 				if (ePrereqTerrain == GC.getTERRAIN_PEAK())
 				{
-					if (plot()->isPeak2(true))
+					if (plot()->isAsPeak())
 					{
 						bValid = true;
 						break;
@@ -30369,7 +30380,7 @@ bool CvUnit::canClaimTerritory(const CvPlot* pPlot) const
 
 bool CvUnit::claimTerritory()
 {
-	//logMsg("%S claims territory from %S at (%d, %d)", GET_PLAYER(getOwner()).getCivilizationShortDescription(), GET_PLAYER(plot()->getOwner()).getCivilizationShortDescription(), getX(), getY());
+	//logging::logMsg("C2C.log", "%S claims territory from %S at (%d, %d)", GET_PLAYER(getOwner()).getCivilizationShortDescription(), GET_PLAYER(plot()->getOwner()).getCivilizationShortDescription(), getX(), getY());
 
 	CvPlot* pPlot = plot();
 	bool bWasOwned = false;
@@ -34858,7 +34869,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 				bNeedForBypass = true;
 				if (ePrereqTerrain == GC.getTERRAIN_PEAK())
 				{
-					if (plot()->isPeak2(true))
+					if (plot()->isAsPeak())
 					{
 						bBypass = true;
 					}
@@ -36213,7 +36224,7 @@ int CvUnit::withdrawVSOpponentProbTotal(const CvUnit* pOpponent, const CvPlot* p
 	TerrainTypes eTerrain = pPlot->getTerrainType();
 	FeatureTypes eFeature = pPlot->getFeatureType();
 	bool bHill = pPlot->isHills();
-	bool bPeak = pPlot->isPeak2(true);
+	bool bPeak = pPlot->isAsPeak();
 
 	int iBase = withdrawalProbability();
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOpponent->m_unitCombatKeyedInfo.begin(), end = pOpponent->m_unitCombatKeyedInfo.end(); it != end; ++it)
@@ -38900,7 +38911,7 @@ int CvUnit::workRate(bool bMax) const
 			iRate *= 100 + hillsWorkModifier();
 			iRate /= 100;
 		}
-		else if (plot()->isPeak2(true))
+		else if (plot()->isAsPeak())
 		{
 			iRate *= 100 + peaksWorkModifier();
 			iRate /= 100;
@@ -39938,7 +39949,7 @@ int CvUnit::visibilityIntensityTotal(InvisibleTypes eInvisibleType) const
 			iAmount += extraVisibleTerrain(eInvisibleType, eTerrain);
 		}
 		eTerrain = NO_TERRAIN;
-		if (plot()->isPeak2(true))
+		if (plot()->isAsPeak())
 		{
 			eTerrain = GC.getTERRAIN_PEAK();
 		}
@@ -40047,7 +40058,7 @@ int CvUnit::invisibilityIntensityTotal(InvisibleTypes eInvisibleType, bool bAbil
 			iAmount += extraInvisibleTerrain(eInvisibleType, eTerrain);
 		}
 		eTerrain = NO_TERRAIN;
-		if (plot()->isPeak2(true))
+		if (plot()->isAsPeak())
 		{
 			eTerrain = GC.getTERRAIN_PEAK();
 		}
@@ -40143,7 +40154,7 @@ int CvUnit::visibilityIntensityRangeTotal(InvisibleTypes eInvisibleType) const
 			iAmount += extraVisibleTerrainRange(eInvisibleType, eTerrain);
 		}
 		eTerrain = NO_TERRAIN;
-		if (plot()->isPeak2(true))
+		if (plot()->isAsPeak())
 		{
 			eTerrain = GC.getTERRAIN_PEAK();
 		}
@@ -41892,21 +41903,25 @@ void CvUnit::makeWanted(const CvCity* pCity)
 	//Is now Wanted
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
-		const PromotionTypes ePromotion = ((PromotionTypes)iI);
-		if (GC.getPromotionInfo(ePromotion).isSetOnInvestigated())
-		{
-			if (canAcquirePromotion(ePromotion, PromotionRequirements::ForFree))
-			{
-				setHasPromotion(ePromotion, true, true, false, false);
-				m_pPlayerInvestigated = pCity->getOwner();
-				//do message
-				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_INVESTIGATED_WANTED_RESULT", pCity->getNameKey());
-				AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_HIGHLIGHT_TEXT(), pCity->getX(), pCity->getY(), true, true);
+		const PromotionTypes ePromotion = (PromotionTypes)iI;
 
-				const CvWString szBuffer2 = gDLL->getText("TXT_KEY_MISC_INVESTIGATED_BECOME_WANTED", getNameKey(), pCity->getNameKey());
-				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer2, "AS2D_EXPOSED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pCity->getX(), pCity->getY(), true, true);
-				return;
+		if (GC.getPromotionInfo(ePromotion).isSetOnInvestigated()
+		&& canAcquirePromotion(ePromotion, PromotionRequirements::ForFree))
+		{
+			setHasPromotion(ePromotion, true, true, false, false);
+			m_pPlayerInvestigated = pCity->getOwner();
+			// This is something it has to manage on its own
+			if (getGroup()->getNumUnits() > 1)
+			{
+				joinGroup(NULL);
 			}
+			//do message
+			const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_INVESTIGATED_WANTED_RESULT", pCity->getNameKey());
+			AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_HIGHLIGHT_TEXT(), pCity->getX(), pCity->getY(), true, true);
+
+			const CvWString szBuffer2 = gDLL->getText("TXT_KEY_MISC_INVESTIGATED_BECOME_WANTED", getNameKey(), pCity->getNameKey());
+			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer2, "AS2D_EXPOSED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pCity->getX(), pCity->getY(), true, true);
+			return;
 		}
 	}
 }

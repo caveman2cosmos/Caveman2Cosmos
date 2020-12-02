@@ -182,7 +182,6 @@ class Dispatcher:
 		self._setDefault("AI_doWar", False)
 		self._setDefault("AI_doDiplo", False)
 		self._setDefault("doHolyCity", False)
-		self._setDefault("doGold", False)
 		self._setDefault("doResearch", False)
 		self._setDefault("doGoody", False)
 		self._setDefault("doGrowth", False)

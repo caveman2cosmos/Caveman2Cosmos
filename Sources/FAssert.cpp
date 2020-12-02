@@ -2,6 +2,7 @@
 
 #if (defined(FASSERT_ENABLE) || !defined(_DEBUG)) && defined(WIN32)
 
+#include "CvPython.h"
 #include "FDialogTemplate.h"
 #include "StackWalker.h"
 #include <sstream>

@@ -329,7 +329,7 @@ struct IDInfo
 	}
 };
 
-struct GameTurnInfo				// Exposed to Python
+struct GameTurnInfo
 {
 	int iMonthIncrement;
 	int iNumGameTurnsPerIncrement;
@@ -347,7 +347,7 @@ struct GameTurnInfo				// Exposed to Python
 #define	INTERNAL_AUXILIARY_ORDER_IDATA(iData)	(short)(((iData) & 0xffff0000) >> 16)
 #define	PACK_INTERNAL_ORDER_IDATA(iBase, iAux)	(((unsigned int)(iBase) & 0xFFFF) | (((unsigned int)(iAux)) << 16))
 
-struct OrderData // Exposed to Python
+struct OrderData
 {
 	OrderTypes eOrderType;
 	union {
@@ -510,7 +510,7 @@ STATIC_ASSERT(sizeof(OrderData) == sizeof(_oldOrderData), OrderData_struct_size_
 //	Contract auxiliary flags
 #define	AUX_CONTRACT_FLAG_IS_UNIT_CONTRACT	0x01
 
-struct MissionData				// Exposed to Python
+struct MissionData
 {
 	MissionTypes eMissionType;
 	int iData1;
@@ -527,7 +527,7 @@ struct MissionData				// Exposed to Python
 	{}
 };
 
-struct TradeData // Exposed to Python
+struct TradeData
 {
 	TradeableItems m_eItemType; //What type of item is this
 	int m_iData; //Any additional data?

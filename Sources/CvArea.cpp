@@ -5,7 +5,9 @@
 #include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
 #include "CvTeamAI.h"
 
 // Public Functions...
@@ -634,6 +636,7 @@ void CvArea::changePopulationPerPlayer(PlayerTypes eIndex, int iChange)
 	FAssert(getTotalPopulation() >= 0);
 	m_aiPopulationPerPlayer[eIndex] += iChange;
 	FAssert(getPopulationPerPlayer(eIndex) >= 0);
+	changePower(eIndex, iChange);
 }
 
 
