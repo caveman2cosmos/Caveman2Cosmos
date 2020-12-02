@@ -1503,6 +1503,11 @@
 			<iCultureDistance>3</iCultureDistance>
 			<iHealthPercent>-30</iHealthPercent>
 			<iMovement>1</iMovement>
+			<RiverYieldChange>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</RiverYieldChange>
 			<Button>Art/Interface/Buttons/baseterrain/DuneSalt.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
