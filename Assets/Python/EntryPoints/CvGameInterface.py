@@ -93,9 +93,6 @@ def canConstruct(argsList):
 def cannotConstruct(argsList):
 	return GameUtils.cannotConstruct(argsList)
 
-def cannotCreate(argsList):
-	return GameUtils.cannotCreate(argsList)
-
 def cannotMaintain(argsList):
 	return GameUtils.cannotMaintain(argsList)
 

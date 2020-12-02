@@ -10531,7 +10531,7 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 		return false;
 	}
 
-	if (GC.getUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK()
+	if (GC.getUSE_CANNOT_SPREAD_RELIGION_CALLBACK()
 
 	&& Cy::call<bool>(PYGameModule, "cannotSpreadReligion", Cy::Args()
 		<< getOwner() 
