@@ -2561,28 +2561,28 @@ void cvInternalGlobals::cacheGlobals()
 bool cvInternalGlobals::getDefineBOOL(const char * szName, bool bDefault) const
 {
 	const bool success = GC.getDefinesVarSystem()->GetValue(szName, bDefault);
-	//FAssertMsg(success, szName);
+	FAssertMsg(success, szName);
 	return bDefault;
 }
 
 int cvInternalGlobals::getDefineINT(const char * szName, int iDefault) const
 {
 	const bool success = GC.getDefinesVarSystem()->GetValue(szName, iDefault);
-	//FAssertMsg(success, szName);
+	FAssertMsg(success, szName);
 	return iDefault;
 }
 
 float cvInternalGlobals::getDefineFLOAT(const char * szName, float fDefault) const
 {
 	const bool success = GC.getDefinesVarSystem()->GetValue(szName, fDefault);
-	//FAssertMsg(success, szName);
+	FAssertMsg(success, szName);
 	return fDefault;
 }
 
 const char * cvInternalGlobals::getDefineSTRING(const char * szName, const char * szDefault) const
 {
 	const bool success = GC.getDefinesVarSystem()->GetValue(szName, szDefault);
-	//FAssertMsg(success, szName);
+	FAssertMsg(success, szName);
 	return szDefault;
 }
 

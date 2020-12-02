@@ -27,7 +27,7 @@ bool CvInitCore::bPathsSet;
 
 CvInitCore::CvInitCore()
 {
-	OutputDebugString("Calling constructor for InitCore: Start");
+	OutputDebugString("Calling constructor for InitCore: Start\n");
 
 	// Moved to Init as the number is no more predetermined
 	//m_abOptions = new bool[NUM_GAMEOPTION_TYPES];
@@ -81,7 +81,7 @@ CvInitCore::CvInitCore()
 
 	reset(NO_GAMEMODE);
 
-	OutputDebugString("Calling constructor for InitCore: End");
+	OutputDebugString("Calling constructor for InitCore: End\n");
 }
 
 
@@ -119,7 +119,7 @@ CvInitCore::~CvInitCore()
 
 void CvInitCore::init(GameMode eMode)
 {
-	OutputDebugString("Initialize InitCore: Start");
+	OutputDebugString("Initialize InitCore: Start\n");
 
 	if (m_abOptions == NULL)
 		m_abOptions = new bool[NUM_GAMEOPTION_TYPES];
@@ -127,7 +127,7 @@ void CvInitCore::init(GameMode eMode)
 	// Init saved data
 	reset(eMode);
 
-	OutputDebugString("Initialize InitCore: Start");
+	OutputDebugString("Initialize InitCore: Start\n");
 }
 
 void CvInitCore::uninit()
@@ -141,7 +141,7 @@ void CvInitCore::uninit()
 // Initializes data members that are serialized.
 void CvInitCore::reset(GameMode eMode)
 {
-	OutputDebugString("Reseting InitCore: Start");
+	OutputDebugString("Reseting InitCore: Start\n");
 
 	//--------------------------------
 	// Uninit class
@@ -157,7 +157,7 @@ void CvInitCore::reset(GameMode eMode)
 		setDefaults();
 	}
 	CvXMLLoadUtility::RemoveTGAFiller();
-	OutputDebugString("Reseting InitCore: End");
+	OutputDebugString("Reseting InitCore: End\n");
 }
 
 void CvInitCore::setDefaults()
@@ -523,7 +523,7 @@ void CvInitCore::reopenInactiveSlots()
 
 void CvInitCore::resetGame()
 {
-	OutputDebugString("Reseting Game: Start");
+	OutputDebugString("Reseting Game: Start\n");
 
 	// Descriptive strings about game and map
 	m_eType = GAME_NONE;
@@ -540,22 +540,22 @@ void CvInitCore::resetGame()
 	m_eWorldSize = NO_WORLDSIZE; // STANDARD_ option?
 
 	GC.getDefinesVarSystem()->GetValue("STANDARD_CLIMATE", iReturn);
-	m_eClimate = (ClimateTypes)iReturn; // NO_ option?
+	m_eClimate = static_cast<ClimateTypes>(iReturn); // NO_ option?
 
 	GC.getDefinesVarSystem()->GetValue("STANDARD_SEALEVEL", iReturn);
-	m_eSeaLevel = (SeaLevelTypes)iReturn; // NO_ option?
+	m_eSeaLevel = static_cast<SeaLevelTypes>(iReturn); // NO_ option?
 
 	GC.getDefinesVarSystem()->GetValue("STANDARD_ERA", iReturn);
-	m_eEra = (EraTypes)iReturn; // NO_ option?
+	m_eEra = static_cast<EraTypes>(iReturn); // NO_ option?
 
 	GC.getDefinesVarSystem()->GetValue("STANDARD_GAMESPEED", iReturn);
-	m_eGameSpeed = (GameSpeedTypes)iReturn; // NO_ option?
+	m_eGameSpeed = static_cast<GameSpeedTypes>(iReturn); // NO_ option?
 
 	GC.getDefinesVarSystem()->GetValue("STANDARD_TURNTIMER", iReturn);
-	m_eTurnTimer = (TurnTimerTypes)iReturn; // NO_ option?
+	m_eTurnTimer = static_cast<TurnTimerTypes>(iReturn); // NO_ option?
 
 	GC.getDefinesVarSystem()->GetValue("STANDARD_CALENDAR", iReturn);
-	m_eCalendar = (CalendarTypes)iReturn; // NO_ option?
+	m_eCalendar = static_cast<CalendarTypes>(iReturn); // NO_ option?
 
 	m_uiSavegameAssetCheckSum = -1;
 
@@ -602,12 +602,12 @@ void CvInitCore::resetGame()
 	// Temp vars
 	m_szTemp.clear();
 
-	OutputDebugString("Reseting Game: End");
+	OutputDebugString("Reseting Game: End\n");
 }
 
 void CvInitCore::resetGame(CvInitCore * pSource, bool bClear, bool bSaveGameType)
 {
-	OutputDebugString("Reseting Game with Source: Start");
+	OutputDebugString("Reseting Game with Source: Start\n");
 
 	FAssertMsg(pSource, "Passed null pointer to CvInitCore::resetGame");
 	FAssertMsg(!bClear || !bSaveGameType, "Should not be clearing data while trying to preserve gametype info in CvInitCore::resetGame");
@@ -674,7 +674,7 @@ void CvInitCore::resetGame(CvInitCore * pSource, bool bClear, bool bSaveGameType
 		setMapRandSeed(pSource->getMapRandSeed());
 	}
 
-	OutputDebugString("Reseting Game with Source: End");
+	OutputDebugString("Reseting Game with Source: End\n");
 }
 
 void CvInitCore::resetPlayers()
@@ -718,10 +718,13 @@ void CvInitCore::resetPlayer(PlayerTypes eID)
 		m_aeCiv[eID] = NO_CIVILIZATION;
 		m_aeLeader[eID] = NO_LEADER;
 		m_aeTeam[eID] = (TeamTypes)eID;
-		m_aeHandicap[eID] = (HandicapTypes)GC.getDefineINT("STANDARD_HANDICAP");
+
+		int iReturn = 0;
+		GC.getDefinesVarSystem()->GetValue("STANDARD_HANDICAP", iReturn);
+		m_aeHandicap[eID] = static_cast<HandicapTypes>(iReturn);
+
 		m_aeColor[eID] = NO_PLAYERCOLOR;
 		m_aeArtStyle[eID] = NO_ARTSTYLE;
-
 
 		// Slot data
 		m_aeSlotStatus[eID] = SS_CLOSED;
