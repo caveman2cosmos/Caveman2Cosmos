@@ -156,25 +156,26 @@ def placeLandmark(pPlot, sEventType, iFood, iProd, iComm, bIsSign, iSignOwner):
 	# Note the extra spaces added for separation after each yield adjustment; you can remove them
 	# if you want a more condensed sign; the reason they are here instead of in the XML formats
 	# is because I couldn't come up with a simple way to make them appear only if the yield changes.
-	if (iFood != 0):
-		sCaptionFood = TRNSLTR.getText("TXT_KEY_SIGN_FORMAT_FOOD", (iFood, )) + u" "
-	if (iProd != 0):
-		sCaptionProd = TRNSLTR.getText("TXT_KEY_SIGN_FORMAT_PROD", (iProd, )) + u" "
-	if (iComm != 0):
-		sCaptionComm = TRNSLTR.getText("TXT_KEY_SIGN_FORMAT_COMM", (iComm, )) + u" "
+	if iFood != 0:
+		sCaptionFood = TRNSLTR.getText("TXT_KEY_SIGN_FORMAT_FOOD", (iFood,)) + " "
+	if iProd != 0:
+		sCaptionProd = TRNSLTR.getText("TXT_KEY_SIGN_FORMAT_PROD", (iProd,)) + " "
+	if iComm != 0:
+		sCaptionComm = TRNSLTR.getText("TXT_KEY_SIGN_FORMAT_COMM", (iComm,)) + " "
 
 	sCaption = TRNSLTR.getText("TXT_KEY_SIGN_FORMAT_OVERVIEW", (sCaptionFood, sCaptionProd, sCaptionComm, sCaptionDesc))
 
 	if not bIsSign:
 		engine.addLandmark(pPlot, sCaption)
-	elif (iSignOwner == -1):
+
+	elif iSignOwner == -1:
 		# add signs for all valid human players who are still alive.
-		for iPlayer in xrange(gc.getMAX_PC_PLAYERS()):
-			player = gc.getPlayer(iPlayer)
+		for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
+			player = GC.getPlayer(iPlayer)
 			if player.isAlive() and player.isHuman():
 				addSign(pPlot, iPlayer, sCaption)
-	else:
-		addSign(pPlot, iSignOwner, sCaption)
+
+	else: addSign(pPlot, iSignOwner, sCaption)
 
 	return True
 
@@ -188,7 +189,7 @@ def applyLandmarkFromEvent(argsList):
 	iProd = event.getPlotExtraYield(YieldTypes.YIELD_PRODUCTION)
 	iComm = event.getPlotExtraYield(YieldTypes.YIELD_COMMERCE)
 
-	if ( (iFood != 0) or (iProd != 0) or (iComm != 0) ):
+	if iFood != 0 or iProd != 0 or iComm != 0:
 		pPlot = MAP.plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
 		placeLandmark(pPlot, event.getType(), iFood, iProd, iComm, True, -1)
 
