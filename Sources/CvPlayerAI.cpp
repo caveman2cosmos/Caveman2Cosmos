@@ -2843,7 +2843,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 					iTempValue += 10;
 				}
 			}
-			if (pLoopPlot->isPeak2(true))
+			if (pLoopPlot->isAsPeak())
 			{// Defense bonus...
 				iTempValue += 10;
 			}
@@ -4973,28 +4973,18 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	{
 		iValue += (600 * iCoastalCities);
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 03/7/10												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	const CvTechInfo& kTech = GC.getTechInfo(eTech);
 	iTempValue = 0;
 	if (kTech.isCanPassPeaks())
 	{
-		CvPlot* pPlot;
 		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			pPlot = GC.getMap().plotByIndex(iI);
-			if (pPlot->isPeak2(true))
+			CvPlot* pPlot = GC.getMap().plotByIndex(iI);
+			if (pPlot->isAsPeak() && pPlot->getOwner() != NO_PLAYER
+			&& GET_PLAYER(pPlot->getOwner()).getID() == getID())
 			{
-				if (pPlot->getOwner() != NO_PLAYER)
-				{
-					if (GET_PLAYER(pPlot->getOwner()).getID() == getID())
-					{
-						iTempValue += 35;
-					}
-				}
+				iTempValue += 35;
 			}
 		}
 		iValue += iTempValue;
@@ -5081,9 +5071,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 			iValue += 50 * getNumCities() * kTech.getFreeSpecialistCount(iI);
 		}
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 	iValue += (GC.getTechInfo(eTech).getFeatureProductionModifier() * 2);
 	iValue += (GC.getTechInfo(eTech).getWorkerSpeedModifier() * 4);
 	iValue += (GC.getTechInfo(eTech).getTradeRoutes() * (std::max((getNumCities() + 2), iConnectedForeignCities) + 1) * ((bFinancialTrouble) ? 200 : 100));

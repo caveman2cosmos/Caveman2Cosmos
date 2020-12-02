@@ -577,25 +577,6 @@ bool CvXMLLoadUtilityModTools::isModularArt(const char* szLocationName)
 	return true;
 }
 
-// Fully based on CString
-CvString CvXMLLoadUtilityModTools::GetProgramDir()
-{
-	CvString szExeLocation = _pgmptr;
-	if ( szExeLocation == NULL)
-	{
-		FErrorMsg("Not running Stdlib Compatible Operating System?");
-	}
-	
-	string::size_type posDot = szExeLocation.find_last_of('\\');
-
-	if(posDot != string::npos) 
-	{
-		szExeLocation.erase(posDot + 1);
-	}
-
-	return szExeLocation;
-}
-
 CvString CvXMLLoadUtilityModTools::deleteFileName(const char* szDirName, const char szLocateChar)
 {	
 	CvString szDirNameStrip = szDirName;
