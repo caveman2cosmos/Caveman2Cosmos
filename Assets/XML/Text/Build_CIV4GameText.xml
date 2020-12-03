@@ -400,6 +400,10 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_GROUNDWATER_WELL]Studnię Głębinową[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_FOREST_PRESERVE</Tag>
+		<English>Build [LINK=IMPROVEMENT_FOREST_PRESERVE]Forest Preserve[\LINK]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_GROW_FOREST</Tag>
 		<English>[LINK=IMPROVEMENT_GROW_FOREST]Grow Forest[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_GROW_FOREST]Développer la Forêt[\LINK]</French>

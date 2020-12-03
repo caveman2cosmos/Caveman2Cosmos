@@ -7008,6 +7008,7 @@ void CvPlot::setFeatureType(FeatureTypes eNewValue, int iVariety, bool bImprovem
 			}
 		}
 
+		// Remove improvement that requries old feature unless prevented by bImprovementSet arg
 		if (getFeatureType() == NO_FEATURE)
 		{
 			if (getImprovementType() != NO_IMPROVEMENT && !bImprovementSet
@@ -9673,6 +9674,7 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 	int iProduction;
 
 	bool bFinished = false;
+	bool bCultureDistUpdate = false;
 
 	if (iChange != 0)
 	{
@@ -9813,12 +9815,11 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 				}
 			}
 
-			if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT &&
-			GC.getBuildInfo(eBuild).getFeatureChange() == NO_FEATURE &&
-			GC.getBuildInfo(eBuild).getTerrainChange() == NO_TERRAIN )
+			// Place improvement, so long as it isn't a placeholder improvement for FeatureChange or TerrainChange
+			if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT
+			&&  GC.getBuildInfo(eBuild).getFeatureChange() == NO_FEATURE
+			&&  GC.getBuildInfo(eBuild).getTerrainChange() == NO_TERRAIN)
 			{
-				// Anything with FeatureChange/TerrainChange should not be placed as an improvement;
-				// it's only there as a placeholder for the build action itself and the corresponding tag.
 				setImprovementType((ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement());
 			}
 
@@ -9827,23 +9828,6 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 				setRouteType((RouteTypes)GC.getBuildInfo(eBuild).getRoute(), true);
 			}
 
-			/************************************************************************************************/
-			/* JOOYO_ADDON, Added by Jooyo, 06/13/09                                                        */
-			/*                                                                                              */
-			/*                                                                                              */
-			/************************************************************************************************/
-			if (GC.getBuildInfo(eBuild).getTerrainChange() != NO_TERRAIN)
-			{
-				setTerrainType ((TerrainTypes) GC.getBuildInfo(eBuild).getTerrainChange());
-			}
-
-			if (GC.getBuildInfo(eBuild).getFeatureChange() != NO_FEATURE)
-			{
-				setFeatureType ((FeatureTypes) GC.getBuildInfo(eBuild).getFeatureChange());
-			}
-			/************************************************************************************************/
-			/* JOOYO_ADDON                          END                                                     */
-			/************************************************************************************************/
 			//TB Note: Apparently isFeatureRemove is based entirely on the BUILD definition -
 			// changing it to the improvement definition would enable us to restructure
 			// where this takes place so that a 'natural' upgrade can have the same effect.
@@ -9872,20 +9856,28 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 					CvEventReporter::getInstance().plotFeatureRemoved(this, getFeatureType(), pCity);
 
 					setFeatureType(NO_FEATURE);
-
-					/************************************************************************************************/
-					/* phunny_pharmer                Start		 04/28/10                                           */
-					/*   the cache of culture distances should be recomputed now that this feature has been removed */
-					/************************************************************************************************/
-					if ( pCity != NULL )
-					{
-						pCity->clearCultureDistanceCache();
-					}
-					/************************************************************************************************/
-					/* phunny_pharmer                    END                                                        */
-					/************************************************************************************************/
+					bCultureDistUpdate = true;
 				}
 			}
+
+			// Set feature/terrain after removal of existing feature if necessary
+			if (GC.getBuildInfo(eBuild).getTerrainChange() != NO_TERRAIN)
+			{
+				setTerrainType ((TerrainTypes) GC.getBuildInfo(eBuild).getTerrainChange());
+				bCultureDistUpdate = true;
+			}
+			if (GC.getBuildInfo(eBuild).getFeatureChange() != NO_FEATURE)
+			{
+				setFeatureType ((FeatureTypes) GC.getBuildInfo(eBuild).getFeatureChange());
+				bCultureDistUpdate = true;
+			}
+
+			// recompute the city culture distance cache if feature/terrain has changed
+			if (bCultureDistUpdate)
+			{
+				pCity->clearCultureDistanceCache();
+			}
+			
 			bFinished = true;
 		}
 	}

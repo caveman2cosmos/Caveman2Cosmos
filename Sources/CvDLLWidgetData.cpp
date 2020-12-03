@@ -2993,8 +2993,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 
 					// Yield deltas from removing/changing features
-					if (NO_FEATURE != ePlotFeature && 
-						GC.getBuildInfo(eBuild).isFeatureRemove(ePlotFeature))
+					if (NO_FEATURE != ePlotFeature
+					&&  GC.getBuildInfo(eBuild).isFeatureRemove(ePlotFeature))
 					{
 						iYield -= GC.getFeatureInfo(ePlotFeature).getYieldChange(iI) +
 							(ePlotRiverSide ? GC.getFeatureInfo(ePlotFeature).getRiverYieldChange(iI) : 0);
@@ -3006,7 +3006,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 
 					// Yield delta from terrain change
-					if (NO_TERRAIN != ePlotTerrain && GC.getBuildInfo(eBuild).getTerrainChange() != NO_TERRAIN)
+					if (NO_TERRAIN != ePlotTerrain
+					&&  GC.getBuildInfo(eBuild).getTerrainChange() != NO_TERRAIN)
 					{
 						iYield += GC.getTerrainInfo((TerrainTypes)GC.getBuildInfo(eBuild).getTerrainChange()).getYield(iI) +
 							(ePlotRiverSide ? GC.getTerrainInfo((TerrainTypes)GC.getBuildInfo(eBuild).getTerrainChange()).getRiverYieldChange(iI) : 0);
@@ -3187,7 +3188,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 				}
 
-				if (eImprovement != NO_IMPROVEMENT && pMissionPlot->getImprovementType() != NO_IMPROVEMENT)
+				if (eImprovement != NO_IMPROVEMENT
+				&&  pMissionPlot->getImprovementType() != NO_IMPROVEMENT)
 				{
 					// FeatureChange and TerrainChange don't remove existing improvements
 					if (GC.getBuildInfo(eBuild).getFeatureChange() == NO_FEATURE &&
@@ -3204,8 +3206,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CONSUME_UNIT"));
 				}
 
-				if (ePlotFeature != NO_FEATURE &&
-					GC.getBuildInfo(eBuild).isFeatureRemove(ePlotFeature))
+				if (ePlotFeature != NO_FEATURE
+				&&  GC.getBuildInfo(eBuild).isFeatureRemove(ePlotFeature))
 				{
 					// BUG - Feature Health
 					if (pMissionPlot->isCityRadius() && getBugOptionBOOL("MiscHover__RemoveFeatureHealthEffects", true, "BUG_REMOVE_FEATURE_HEALTH_EFFECTS"))
