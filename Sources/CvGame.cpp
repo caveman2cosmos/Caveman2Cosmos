@@ -11387,9 +11387,14 @@ int CvGame::countForest(const CvPlot* pPlot, int iForest)
 //Maximum length of message is 21 chars
 void CvGame::addLandmarkSigns()
 {
+	CvWString szSign;
+	CvWString szName;
+	CvWString szTextKey;
 	foreach_(CvPlot* pLoopPlot, GC.getMap().plots() | filtered(CvPlot::fn::getLandmarkType() != NO_LANDMARK))
 	{
-		CvWString szTextKey = "TXT_KEY_LANDMARK";
+		szTextKey = "TXT_KEY_LANDMARK";
+		szSign.clear();
+		szName.clear();
 		switch (pLoopPlot->getLandmarkType())
 		{
 			case LANDMARK_BAY:
@@ -11428,10 +11433,10 @@ void CvGame::addLandmarkSigns()
 			default:
 				FErrorMsg("Unknown Landmark Type");
 		}
-		CvWString szSign = szTextKey;
-		const CvWString szDummy = " ";
+		szSign = szTextKey;
+		CvWString szDummy = " ";
 		szTextKey = gDLL->getText(szTextKey, szDummy.GetCString());
-		const CvWString szName = getRandomName(21- szTextKey.length());
+		szName = getRandomName(21- szTextKey.length());
 		szSign = gDLL->getText(szSign, szName.GetCString());
 
 		pLoopPlot->setLandmarkMessage(szSign);
