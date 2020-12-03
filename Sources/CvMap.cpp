@@ -129,6 +129,8 @@ void CvMap::uninit()
 	{
 		delete plot;
 	}
+	m_pMapPlots.clear();
+
 	foreach_(CvViewport* viewport, m_viewports)
 	{
 		delete viewport;
