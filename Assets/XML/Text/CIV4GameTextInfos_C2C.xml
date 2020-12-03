@@ -110,6 +110,10 @@
 		<English>[COLOR_YELLOW]Will replace the %s1_Name with %s2_Name[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_YIELD_CHANGE_DESCRIP</Tag>
+		<English>Yield changes:</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STATE_RELIGION_PREREQ</Tag>
 		<English>[ICON_BULLET]This building requires %F1_RelIcon to be your State [ICON_RELIGION].</English>
 		<French>[ICON_BULLET]Ce bâtiment nécessite %F1_RelIcon comme [ICON_RELIGION] d'Etat.</French>

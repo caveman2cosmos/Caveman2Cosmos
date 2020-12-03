@@ -2976,20 +2976,24 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				FeatureTypes ePlotFeature = pMissionPlot->getFeatureType();
 				TerrainTypes ePlotTerrain = pMissionPlot->getTerrainType();
 				bool ePlotRiverSide = pMissionPlot->isRiverSide();
+				bool bIsFeatureChange = (GC.getBuildInfo(eBuild).getFeatureChange() != NO_FEATURE);
+				bool bIsTerrainChange = (GC.getBuildInfo(eBuild).getTerrainChange() != NO_TERRAIN);
 
-				// Calculate, show yield changes as a result of improvement changes (including non-improvements using FeatureChange/TerrainChange tag)
+				// Calculate, show yield/happy changes as a result of improvement changes (including non-improvements using FeatureChange/TerrainChange tag)
+				int aYields[NUM_YIELD_TYPES] = {0};
+				bool bIsYield = false;
 				for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 				{
 					int iYield = 0;
-
-					// Yield deltas from actual improvements
 					if (eImprovement != NO_IMPROVEMENT)
 					{
 						iYield += pMissionPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iI), pHeadSelectedUnit->getOwner());
-						if (pMissionPlot->getImprovementType() != NO_IMPROVEMENT)
-						{
-							iYield -= pMissionPlot->calculateImprovementYieldChange(pMissionPlot->getImprovementType(), ((YieldTypes)iI), pHeadSelectedUnit->getOwner());
-						}
+					}
+
+					// Assuming FeatureChange and TerrainChange won't remove improvement (though they may remove prereqs...)
+					if (pMissionPlot->getImprovementType() != NO_IMPROVEMENT && !bIsFeatureChange && !bIsTerrainChange)
+					{
+						iYield -= pMissionPlot->calculateImprovementYieldChange(pMissionPlot->getImprovementType(), ((YieldTypes)iI), pHeadSelectedUnit->getOwner());
 					}
 
 					// Yield deltas from removing/changing features
@@ -2999,15 +3003,14 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						iYield -= GC.getFeatureInfo(ePlotFeature).getYieldChange(iI) +
 							(ePlotRiverSide ? GC.getFeatureInfo(ePlotFeature).getRiverYieldChange(iI) : 0);
 					}
-					if (NO_FEATURE != GC.getBuildInfo(eBuild).getFeatureChange())
+					if (bIsFeatureChange)
 					{
 						iYield += GC.getFeatureInfo((FeatureTypes)GC.getBuildInfo(eBuild).getFeatureChange()).getYieldChange(iI) +
 							(ePlotRiverSide ? GC.getFeatureInfo((FeatureTypes)GC.getBuildInfo(eBuild).getFeatureChange()).getRiverYieldChange(iI) : 0);
 					}
 
 					// Yield delta from terrain change
-					if (NO_TERRAIN != ePlotTerrain
-					&&  GC.getBuildInfo(eBuild).getTerrainChange() != NO_TERRAIN)
+					if ( (NO_TERRAIN != ePlotTerrain) && bIsTerrainChange)
 					{
 						iYield += GC.getTerrainInfo((TerrainTypes)GC.getBuildInfo(eBuild).getTerrainChange()).getYield(iI) +
 							(ePlotRiverSide ? GC.getTerrainInfo((TerrainTypes)GC.getBuildInfo(eBuild).getTerrainChange()).getRiverYieldChange(iI) : 0);
@@ -3017,14 +3020,30 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 					if (iYield != 0)
 					{
-						szBuffer.append(CvWString::format(L", %s%d%c", ((iYield > 0) ? L"+" : L""), iYield, GC.getYieldInfo((YieldTypes)iI).getChar()));
+						bIsYield = true;
+					}
+					aYields[iI] = iYield;
+				}
+
+				// Show yields on newline to reduce wrapping, look nicer 
+				if (bIsYield)
+				{
+					bool bFirstYield = true;
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_YIELD_CHANGE_DESCRIP") + " ");
+					for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+					{
+						if (aYields[iI] != 0)
+						{
+							bFirstYield ? bFirstYield = false : szBuffer.append(", ");
+							szBuffer.append(CvWString::format(L"%s%d%c", ((aYields[iI] > 0) ? L"+" : L""), aYields[iI], GC.getYieldInfo((YieldTypes)iI).getChar()));
+						}
 					}
 				}
 
-				if (NO_IMPROVEMENT != eImprovement)
-				{
+				if (eImprovement != NO_IMPROVEMENT)
+				{	
 					int iHappy = GC.getImprovementInfo(eImprovement).getHappiness();
-
 					if (iHappy != 0)
 					{
 						szBuffer.append(CvWString::format(L", +%d%c", abs(iHappy), (iHappy > 0 ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))));
@@ -3146,7 +3165,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							{
 								CvWString szFirstBuffer = NEWLINE + gDLL->getText("TXT_KEY_BUILDING_REQUIRES_LIST");
 								CvWString szTempBuffer;
-								szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), CvWString(GC.getBonusInfo(*it).getType()).GetCString(), GC.getBonusInfo(*it).getDescription());
+								szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),
+									CvWString(GC.getBonusInfo(*it).getType()).GetCString(), GC.getBonusInfo(*it).getDescription());
 								setListHelp(szBuffer, szFirstBuffer.GetCString(), szTempBuffer, gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 								bFirst = false;
 							}
@@ -3155,13 +3175,16 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 					if (ePlotFeature != NO_FEATURE)
 					{
-						if (((TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)) && !(GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature))))
+						if ( (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)
+						&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)) )
 						{
-							if (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH ||
-								!GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech()))
+							if (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
+							|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech()))
 							{
 								szBuffer.append(NEWLINE);
-								szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING", CvWString(GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)).getType()).GetCString(), GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)).getTextKeyWide()));
+								szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
+								CvWString(GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)).getType()).GetCString(),
+								GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)).getTextKeyWide()));
 							}
 						}
 					}
@@ -3174,13 +3197,16 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						{
 							if (GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech != NO_TECH)
 							{
-								if (((TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech) && !(GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech)))
+								if ( (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech
+								&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech) )
 								{
 									if (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH ||
 										!GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech()))
 									{
 										szBuffer.append(NEWLINE);
-										szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING", CvWString(GC.getTechInfo(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech).getType()).GetCString(), GC.getTechInfo(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech).getTextKeyWide()));
+										szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
+											CvWString(GC.getTechInfo(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech).getType()).GetCString(),
+											GC.getTechInfo(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech).getTextKeyWide()));
 									}
 								}
 							}
@@ -3191,9 +3217,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				if (eImprovement != NO_IMPROVEMENT
 				&&  pMissionPlot->getImprovementType() != NO_IMPROVEMENT)
 				{
-					// FeatureChange and TerrainChange don't remove existing improvements
-					if (GC.getBuildInfo(eBuild).getFeatureChange() == NO_FEATURE &&
-						GC.getBuildInfo(eBuild).getTerrainChange() == NO_TERRAIN)
+					// Assuming FeatureChange and TerrainChange won't remove improvement (though they may remove prereqs...)
+					if (!bIsFeatureChange && !bIsTerrainChange)
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_WILL_DESTROY_IMP", GC.getImprovementInfo(pMissionPlot->getImprovementType()).getTextKeyWide()));
@@ -3343,7 +3368,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_REMOVE_FEATURE", GC.getFeatureInfo(ePlotFeature).getTextKeyWide()));
 					}
-					else if (GC.getBuildInfo(eBuild).getFeatureChange() == NO_FEATURE)
+					else if (!bIsFeatureChange)
 					{
 						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NO_PRODUCTION"));
 						szBuffer.append(NEWLINE);
