@@ -555,15 +555,13 @@ class WBCityEditScreen:
 				elif iIndex == 3:
 					self.WB.iPlayerAddMode = "MoveCityPlus"
 					self.WB.lMoveUnit = []
-					for i in xrange(pPlot.getNumUnits()):
-						pUnitX = pPlot.getUnit(i)
+					for pUnitX in pPlot.units():
 						if pUnitX.getOwner() == iPlayer:
 							self.WB.lMoveUnit.append([iPlayer, pUnitX.getID()])
 				elif iIndex == 4:
 					self.WB.iPlayerAddMode = "DuplicateCityPlus"
 					self.WB.lMoveUnit = []
-					for i in xrange(pPlot.getNumUnits()):
-						pUnitX = pPlot.getUnit(i)
+					for pUnitX in pPlot.units():
 						if pUnitX.getOwner() == iPlayer:
 							self.WB.lMoveUnit.append([iPlayer, pUnitX.getID()])
 			screen.hideScreen()

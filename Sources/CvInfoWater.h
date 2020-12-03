@@ -16,13 +16,10 @@
 #ifndef CV_WATERINFO_H
 #define CV_WATERINFO_H
 
-#include "CvInfos.h"
-#include "CvEnums.h"
-
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
+class CvInfoBase;
 class CvXMLLoadUtility;
-
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
@@ -31,7 +28,7 @@ class CvXMLLoadUtility;
 //  DESC:   
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvWaterPlaneInfo :public CvInfoBase
+class CvWaterPlaneInfo : public CvInfoBase
 {
 public:
 
@@ -84,7 +81,7 @@ protected:
 //  DESC:   
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvTerrainPlaneInfo :public CvInfoBase
+class CvTerrainPlaneInfo : public CvInfoBase
 {
 public:
 
@@ -140,7 +137,7 @@ protected:
 //  DESC:   
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCameraOverlayInfo :public CvInfoBase
+class CvCameraOverlayInfo : public CvInfoBase
 {
 public:
 

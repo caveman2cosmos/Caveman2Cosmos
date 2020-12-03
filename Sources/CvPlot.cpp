@@ -2,15 +2,24 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
+#include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
+#include "CvEventReporter.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
-#include "CvTeamAI.h"
-#include "CvRandom.h"
+#include "CvPlot.h"
 #include "CvPlotPaging.h"
-
+#include "CvPython.h"
+#include "CvRandom.h"
+#include "CvSelectionGroup.h"
+#include "CvTeamAI.h"
+#include "CvUnit.h"
+#include "CvViewport.h"
+#include "CvDLLEngineIFaceBase.h"
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLFlagEntityIFaceBase.h"
@@ -653,7 +662,7 @@ void CvPlot::doTurn()
 {
 	PROFILE_FUNC();
 
-	if (getForceUnownedTimer() > 0)
+	if (isForceUnowned())
 	{
 		changeForceUnownedTimer(-1);
 	}
@@ -790,7 +799,7 @@ void CvPlot::doImprovement()
 					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT,
 						GC.getBonusInfo(eBonus).getButton(), GC.getCOLOR_RED(), getX(), getY(), true, true);
 				}
-				GC.getGame().logMsg("Resource Depleted! Resource was %d, The odds were 1 in %d", eBonus, iOdds);
+				logging::logMsg("C2C.log", "Resource Depleted! Resource was %d, The odds were 1 in %d\n", eBonus, iOdds);
 
 				setBonusType(NO_BONUS);
 
@@ -4558,14 +4567,11 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 			{
 				int iCultureRange;
 
-				// Super Forts begin *culture* - modified if statement
-				//	Koshling - modified back since C2C uses a unified city/fort culture state
-				//	inheritted from AND
-				//if (isWithinCultureRange((PlayerTypes)iI) || isWithinFortCultureRange((PlayerTypes)iI))
-				if (isWithinCultureRange((PlayerTypes)iI, &iCultureRange)) // Original Code
+				// Super Forts begin *culture*
+				if (isWithinCultureRange((PlayerTypes)iI, &iCultureRange))
 				// Super Forts end
 				{
-					//	Koshling - modified so that equal culture victory goes to the player with the closest cultuer source as
+					//	Koshling - modified so that equal culture victory goes to the player with the closest culture source as
 					//	first tie-breaker
 					if (iCulture > iBestCulture ||
 						(iCulture == iBestCulture &&
@@ -5963,28 +5969,23 @@ void CvPlot::changeImprovementUpgradeProgress(int iChange)
 }
 
 
-int CvPlot::getForceUnownedTimer() const
-{
-	return m_iForceUnownedTimer;
-}
-
-
 bool CvPlot::isForceUnowned() const
 {
-	return (getForceUnownedTimer() > 0);
+	return m_iForceUnownedTimer > 0;
 }
 
 
 void CvPlot::setForceUnownedTimer(int iNewValue)
 {
 	m_iForceUnownedTimer = iNewValue;
-	FAssert(getForceUnownedTimer() >= 0);
+	FAssert(m_iForceUnownedTimer >= 0);
 }
 
 
 void CvPlot::changeForceUnownedTimer(int iChange)
 {
-	setForceUnownedTimer(getForceUnownedTimer() + iChange);
+	m_iForceUnownedTimer += iChange;
+	FAssert(m_iForceUnownedTimer >= 0);
 }
 
 
@@ -6267,26 +6268,17 @@ bool CvPlot::isPotentialCityWork() const
 bool CvPlot::isPotentialCityWorkForArea(CvArea* pArea) const
 {
 	PROFILE_FUNC();
+	const bool bWaterValid = GC.getWATER_POTENTIAL_CITY_WORK_FOR_AREA() > 0;
 
-	CvPlot* pLoopPlot;
-	int iI;
-
-	for (iI = 0; iI < NUM_CITY_PLOTS; ++iI)
+	for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
 	{
-		pLoopPlot = plotCity(getX(), getY(), iI);
+		CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
-		if (pLoopPlot != NULL)
+		if (pLoopPlot != NULL && (bWaterValid || !pLoopPlot->isWater()) && pLoopPlot->area() == pArea)
 		{
-			if (!(pLoopPlot->isWater()) || GC.getWATER_POTENTIAL_CITY_WORK_FOR_AREA())
-			{
-				if (pLoopPlot->area() == pArea)
-				{
-					return true;
-				}
-			}
+			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -7357,7 +7349,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 				// Super Forts *culture*
 				if (GC.getImprovementInfo(eOldImprovement).getCulture() > 0)
 				{
-					changeCultureRangeFortsWithinRange(getOwner(), -1, GC.getImprovementInfo(eOldImprovement).getCultureRange(), true);
+					changeCultureRangeFortsWithinRange(getOwner(), -1, GC.getImprovementInfo(eOldImprovement).getCultureRange(), false);
 				}
 			}
 		}

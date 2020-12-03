@@ -8,6 +8,7 @@
 // Passed to Python
 //
 
+class CvArtFileMgr;
 class CvInternalGlobals;
 class CyGame;
 class CyMap;
@@ -98,7 +99,6 @@ public:
 	CvTechInfo* getTechInfo(int i) const;
 	CvSpecialBuildingInfo* getSpecialBuildingInfo(int i) const;
 	CvPromotionInfo* getPromotionInfo(int i) const;
-	CvAnimationPathInfo * getAnimationPathInfo(int i) const;
 	CvEmphasizeInfo * getEmphasizeInfo(int i) const;
 	CvUpkeepInfo * getUpkeepInfo(int i) const;
 	CvCultureLevelInfo * getCultureLevelInfo(int i) const;
@@ -162,25 +162,19 @@ public:
 	CvArtInfoUnit* getUnitArtInfo(int i) const;
 	CvArtInfoBuilding* getBuildingArtInfo(int i) const;
 	CvArtInfoCivilization* getCivilizationArtInfo(int i) const;
-	CvArtInfoLeaderhead* getLeaderheadArtInfo(int i) const;
 	CvArtInfoBonus* getBonusArtInfo(int i) const;
 	CvArtInfoImprovement* getImprovementArtInfo(int i) const;
-	CvArtInfoTerrain* getTerrainArtInfo(int i) const;
-	CvArtInfoFeature* getFeatureArtInfo(int i) const;
-
 
 	// Structs
-
-	const char* getEntityEventTypes(int i) const { return GC.getEntityEventTypes((EntityEventTypes) i); }
+/*
 	const char* getAnimationOperatorTypes(int i) const { return GC.getAnimationOperatorTypes((AnimationOperatorTypes) i); }
 	const char* getFunctionTypes(int i) const { return GC.getFunctionTypes((FunctionTypes) i); }
-	const char* getFlavorTypes(int i) const { return GC.getFlavorTypes((FlavorTypes) i); }
-	const char* getArtStyleTypes(int i) const { return GC.getArtStyleTypes((ArtStyleTypes) i); }
 	const char* getCitySizeTypes(int i) const { return GC.getCitySizeTypes(i); }
 	const char* getContactTypes(int i) const { return GC.getContactTypes((ContactTypes) i); }
+*/
+	const char* getArtStyleTypes(int i) const { return GC.getArtStyleTypes((ArtStyleTypes) i); }
+	const char* getFlavorTypes(int i) const { return GC.getFlavorTypes((FlavorTypes) i); }
 	const char* getDiplomacyPowerTypes(int i) const { return GC.getDiplomacyPowerTypes((DiplomacyPowerTypes) i); }
-	const char *getFootstepAudioTypes(int i) { return GC.getFootstepAudioTypes(i); }
-	const char *getFootstepAudioTags(int i) { return GC.getFootstepAudioTags(i); }
 
 	int getNumEffectInfos() const { return GC.getNumEffectInfos(); }
 	int getNumTerrainInfos() const { return GC.getNumTerrainInfos(); }
@@ -255,24 +249,6 @@ public:
 	int getNumInvisibleInfos() const { return GC.getNumInvisibleInfos(); }
 	int getNumVoteSourceInfos() const { return GC.getNumVoteSourceInfos(); }
 
-	// ArtInfos
-	int getNumInterfaceArtInfos() const { return ARTFILEMGR.getNumInterfaceArtInfos(); }
-	int getNumMovieArtInfos() const { return ARTFILEMGR.getNumMovieArtInfos(); }
-	int getNumMiscArtInfos() const { return ARTFILEMGR.getNumMiscArtInfos(); }
-	int getNumUnitArtInfos() const { return ARTFILEMGR.getNumUnitArtInfos(); }
-	int getNumBuildingArtInfos() const { return ARTFILEMGR.getNumBuildingArtInfos(); }
-	int getNumCivilizationArtInfos() const { return ARTFILEMGR.getNumCivilizationArtInfos(); }
-	int getNumLeaderheadArtInfos() const { return ARTFILEMGR.getNumLeaderheadArtInfos(); }
-	int getNumImprovementArtInfos() const { return ARTFILEMGR.getNumImprovementArtInfos(); }
-	int getNumBonusArtInfos() const { return ARTFILEMGR.getNumBonusArtInfos(); }
-	int getNumTerrainArtInfos() const { return ARTFILEMGR.getNumTerrainArtInfos(); }
-	int getNumFeatureArtInfos() const { return ARTFILEMGR.getNumFeatureArtInfos(); }
-	int getNumAnimationPathInfos() const { return GC.getNumAnimationPathInfos(); }
-	int getNumAnimationCategoryInfos() const { return GC.getNumAnimationCategoryInfos(); }
-	int getNumUnitArtStyleTypeInfos() const { return GC.getNumUnitArtStyleTypeInfos(); }
-
-
-	int getNumEntityEventTypes() const { return GC.getNumEntityEventTypes(); }
 	int getNumAnimationOperatorTypes() const { return GC.getNumAnimationOperatorTypes(); }
 	int getNumArtStyleTypes() const { return GC.getNumArtStyleTypes(); }
 	int getNumFlavorTypes() const { return GC.getNumFlavorTypes(); }
@@ -396,8 +372,6 @@ public:
 
 	int getPEAK_EXTRA_DEFENSE() const { return GC.getPEAK_EXTRA_DEFENSE(); }
 	int getPEAK_EXTRA_MOVEMENT() const { return GC.getPEAK_EXTRA_MOVEMENT(); }
-	bool isXMLLogging() const { return GC.isXMLLogging(); }
-	void setXMLLogging(bool bNewVal) { GC.setXMLLogging(bNewVal); }
 	
 	void setNoUpdateDefineINT( const char * szName, int iValue ) { return GC.setDefineINT( szName, iValue, false ); }
 	void setNoUpdateDefineFLOAT( const char * szName, float fValue ) { return GC.setDefineFLOAT( szName, fValue, false ); }

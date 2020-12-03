@@ -1,9 +1,11 @@
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
+#include "CvDllPythonEvents.h"
 #include "CvGlobals.h"
-
-#include <boost155/functional.hpp>
-#include <boost155/bind.hpp>
+#include "CvPlot.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
+#include "CvUnit.h"
 
 
 namespace logging {

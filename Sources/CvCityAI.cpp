@@ -4,10 +4,18 @@
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvCityAI.h"
+#include "CvContractBroker.h"
+#include "CvGameAI.h"
 #include "CvGlobals.h"
-#include "CvReachablePlotSet.h"
+#include "CvInfos.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvPython.h"
+#include "CvReachablePlotSet.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
 #include "CvDLLFAStarIFaceBase.h"
 
 //	KOSHLING MOD - calculate all possible building focuses at once
@@ -13696,7 +13704,7 @@ bool CvCityAI::AI_buildCaravan()
 			if (GC.getGame().getSorenRandNum(iOdds, "Caravan Production") == 0)
 			{
 				pushOrder(ORDER_TRAIN, eBestUnit, -1, false, false, false);
-				//GC.getGame().logMsg("City %S built a caravan", getName().GetCString());
+				//logging::logMsg("C2C.log", "City %S built a caravan", getName().GetCString());
 				return true;
 			}
 		}

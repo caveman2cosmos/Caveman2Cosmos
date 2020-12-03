@@ -3,6 +3,8 @@
 #include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvMap.h"
+#include "CvPlot.h"
 #include "CvReachablePlotSet.h"
 #include "CvSelectionGroup.h"
 

@@ -11,6 +11,7 @@
 class CvArea;
 class CvCity;
 class CvEventTriggerInfo;
+class CvSelectionGroup;
 class CvUnitSelectionCriteria;
 
 struct MissionTargetInfo

@@ -1,12 +1,19 @@
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvBugOptions.h"
 #include "CvCity.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvMap.h"
+#include "CvMessageControl.h"
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
+#include "CvPopupInfo.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
-
+#include "CvUnit.h"
 #include "CvDLLFAStarIFaceBase.h"
 
 void CvGame::updateColoredPlots()
