@@ -5859,7 +5859,6 @@ public:
 	int getFlavorValue(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass3();
 
 	void copyNonDefaults(CvReligionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 

@@ -808,7 +808,7 @@ bool CvXMLLoadUtility::LoadGlobalText()
 
 bool CvXMLLoadUtility::LoadBasicInfos()
 {
-	OutputDebugString("Loading Basic Infos: Start");
+	OutputDebugString("Loading Basic Infos: Start\n");
 
 	if (!CreateFXml())
 	{
@@ -842,7 +842,7 @@ bool CvXMLLoadUtility::LoadBasicInfos()
 
 	DestroyFXml();
 
-	OutputDebugString("Loading Basic Infos: End");
+	OutputDebugString("Loading Basic Infos: End\n");
 
 	return true;
 }
@@ -860,7 +860,7 @@ inline bool cmpInfoByAlphabet(CvInfoBase* lhs, CvInfoBase* rhs) { return CvWStri
 //
 bool CvXMLLoadUtility::LoadPreMenuGlobals()
 {
-	OutputDebugString("Loading PreMenu Infos: Start");
+	OutputDebugString("Loading PreMenu Infos: Start\n");
 
 	//ReplacementStep: search down here for 'InfoReplacements()'
 	if (!CreateFXml())
@@ -1046,12 +1046,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.m_CorporationInfoReplacements.readPass3();
 	}
 
-	for (int i=0; i < GC.getNumReligionInfos(); ++i)
-	{
-		GC.getReligionInfo((ReligionTypes)i).readPass3();
-		GC.m_ReligionInfoReplacements.readPass3();
-	}
-
 	for (int i=0; i < GC.getNumEventInfos(); ++i)
 	{
 		GC.getEventInfo((EventTypes)i).readPass3();
@@ -1143,7 +1137,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 
 	DestroyFXml();
 
-	OutputDebugString("Loading PreMenu Infos: End");
+	OutputDebugString("Loading PreMenu Infos: End\n");
 
 	return true;
 }
