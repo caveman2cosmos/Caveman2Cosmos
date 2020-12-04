@@ -36453,13 +36453,14 @@ CvVoteSourceInfo::CvVoteSourceInfo() :
 	m_aiReligionYields(NULL),
 	m_aiReligionCommerces(NULL)
 {
-
 }
 
 CvVoteSourceInfo::~CvVoteSourceInfo()
 {
 	SAFE_DELETE_ARRAY(m_aiReligionYields);
 	SAFE_DELETE_ARRAY(m_aiReligionCommerces);
+
+	GC.removeDelayedResolution((int*)&m_iCivic);
 }
 
 int CvVoteSourceInfo::getVoteInterval() const
@@ -36499,16 +36500,6 @@ const CvWString CvVoteSourceInfo::getSecretaryGeneralText() const
 	return gDLL->getText(m_szSecretaryGeneralText);
 }
 
-const CvString& CvVoteSourceInfo::getCopyPopupText() const
-{
-	return m_szPopupText;
-}
-
-const CvString& CvVoteSourceInfo::getCopySecretaryGeneralText() const
-{
-	return m_szSecretaryGeneralText;
-}
-
 bool CvVoteSourceInfo::read(CvXMLLoadUtility* pXML)
 {
 	MEMORY_TRACE_FUNCTION();
@@ -36527,7 +36518,7 @@ bool CvVoteSourceInfo::read(CvXMLLoadUtility* pXML)
 	m_iFreeSpecialist = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Civic");
-	m_aszExtraXMLforPass3.push_back(szTextVal);
+	GC.addDelayedResolution((int*)&m_iCivic, szTextVal);
 
 	if (pXML->TryMoveToXmlFirstChild(L"ReligionYields"))
 	{
@@ -36565,12 +36556,10 @@ void CvVoteSourceInfo::copyNonDefaults(CvVoteSourceInfo* pClassInfo, CvXMLLoadUt
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
 	if (getVoteInterval() == iDefault) m_iVoteInterval = pClassInfo->getVoteInterval();
-	if (getPopupText() == wDefault) m_szPopupText = pClassInfo->getCopyPopupText();
-	if (getSecretaryGeneralText() == wDefault) m_szSecretaryGeneralText = pClassInfo->getCopySecretaryGeneralText();
-
+	if (getPopupText() == wDefault) m_szPopupText = pClassInfo->m_szPopupText;
+	if (getSecretaryGeneralText() == wDefault) m_szSecretaryGeneralText = pClassInfo->m_szSecretaryGeneralText;
 	if (getFreeSpecialist() == iTextDefault) m_iFreeSpecialist = pClassInfo->getFreeSpecialist();
-
-	if ( getCivic() == iTextDefault ) m_iCivic = pClassInfo->getCivic();
+	GC.copyNonDefaultDelayedResolution((int*)&m_iCivic, (int*)&pClassInfo->m_iCivic);
 
 	for ( int i = 0; i < NUM_YIELD_TYPES; i++)
 	{
@@ -36600,35 +36589,6 @@ void CvVoteSourceInfo::getCheckSum(unsigned int &iSum) const
 
 	CheckSumC(iSum, m_szPopupText);
 	CheckSumC(iSum, m_szSecretaryGeneralText);
-}
-
-bool CvVoteSourceInfo::readPass3()
-{
-	if (m_aszExtraXMLforPass3.size() < 1)
-	{
-		FAssert(false);
-		return false;
-	}
-
-/************************************************************************************************/
-/* XMLCOPY								 10/12/07								MRGENIE	  */
-/*																							  */
-/* Assuming the modder purposly added an entry to this tag, we want to take the last enty set   */
-/* by the modder and not the first as set by firaxis											*/
-/************************************************************************************************/
-	const int iTextDefault = -1;
-	const int iSize = m_aszExtraXMLforPass3.size();
-	for ( int i = 0; i < iSize; i++ )
-	{
-		if ( GC.getInfoTypeForString(m_aszExtraXMLforPass3[iSize - ( i + 1)]) != iTextDefault)
-		{
-			m_iCivic = GC.getInfoTypeForString(m_aszExtraXMLforPass3[iSize - ( i + 1)]);
-			break;
-		}
-	}
-	m_aszExtraXMLforPass3.clear();
-
-	return true;
 }
 
 CvMainMenuInfo::CvMainMenuInfo()
