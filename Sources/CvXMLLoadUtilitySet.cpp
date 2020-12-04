@@ -1069,12 +1069,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.getUnitInfo((UnitTypes)i).readPass3();
 		GC.m_UnitInfoReplacements.readPass3();
 	}
-
-	for (int i=0; i < GC.getNumSpecialistInfos(); ++i)
-	{
-		GC.getSpecialistInfo((SpecialistTypes)i).readPass3();
-		GC.m_SpecialistInfoReplacements.readPass3();
-	}
 	OutputDebugString("Pass3 processing complete\n");
 
 	// add types to global var system

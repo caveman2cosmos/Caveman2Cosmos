@@ -298,8 +298,6 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpecialistInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	bool readPass3();
-
 	void getCheckSum(unsigned int& iSum) const;
 
 private:
