@@ -683,7 +683,7 @@
 			<Description>TXT_KEY_BUILD_MOUNTAIN_MINE_SLAVE</Description>
 			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>16</iCost>
+			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 			<RouteType>NONE</RouteType>
@@ -2436,7 +2436,7 @@
 			<Description>TXT_KEY_BUILD_VILLAGE_SLAVE</Description>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>50</iCost>
+			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_VILLAGE</ImprovementType>
 			<RouteType>NONE</RouteType>
@@ -2699,7 +2699,7 @@
 			<Description>TXT_KEY_BUILD_TOWN_SLAVE</Description>
 			<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>100</iCost>
+			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_TOWN</ImprovementType>
 			<RouteType>NONE</RouteType>
@@ -2962,7 +2962,7 @@
 			<Description>TXT_KEY_BUILD_SUBURBS_SLAVE</Description>
 			<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
 			<iTime>1200</iTime>
-			<iCost>200</iCost>
+			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 			<RouteType>NONE</RouteType>
@@ -3672,7 +3672,7 @@
 			<Description>TXT_KEY_BUILD_MODERN_WINDMILL_SLAVE</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>25</iCost>
+			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
 			<RouteType>NONE</RouteType>
@@ -3791,7 +3791,7 @@
 			<Description>TXT_KEY_BUILD_SOLAR_PANELS_SLAVE</Description>
 			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>25</iCost>
+			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SOLAR_PANELS</ImprovementType>
 			<RouteType>NONE</RouteType>

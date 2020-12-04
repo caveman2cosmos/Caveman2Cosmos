@@ -1144,6 +1144,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_RADIO_TOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -1464,6 +1468,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SOLAR_PANELS</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_RADIO_TOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1806,6 +1814,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_RADIO_TOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -2142,6 +2154,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_RADIO_TOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -2468,6 +2484,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SOLAR_PANELS</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_RADIO_TOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2803,6 +2823,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SOLAR_PANELS</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_RADIO_TOWER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3162,6 +3186,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_RADIO_TOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -3191,6 +3219,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_RECLAIM_LAND</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3559,6 +3591,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_RADIO_TOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -3588,6 +3624,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_RECLAIM_LAND</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3967,6 +4007,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_RADIO_TOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -3996,6 +4040,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_RECLAIM_LAND</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4376,6 +4424,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_RADIO_TOWER</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -4405,6 +4457,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_RECLAIM_LAND</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

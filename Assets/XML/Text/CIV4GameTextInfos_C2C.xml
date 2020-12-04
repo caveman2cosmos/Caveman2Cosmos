@@ -106,7 +106,7 @@
 		<Spanish>[COLOR_WARNING_TEXT]Requiere [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_FEATURE_BLOCKED</Tag>
+		<Tag>TXT_KEY_BUILD_PLOT_BLOCKED</Tag>
 		<English>[COLOR_WARNING_TEXT]Cannot be constructed on a %s1_Name![COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>

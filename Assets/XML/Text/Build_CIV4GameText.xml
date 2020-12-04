@@ -788,6 +788,10 @@
 		<Polish>Usuń Roślinność</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_RECLAIM_LAND</Tag>
+		<English>Reclaim Land</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_REQUIRES_BONUS</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]To place with %s1_Build requires %s2_Bonus[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]A placer avec %s1_Build requiert %s2_Bonus[COLOR_REVERT]</French>
@@ -889,6 +893,10 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SOLAR_PANELS]Panele Słoneczne[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_RADIO_TOWER</Tag>
+		<English>Build [LINK=IMPROVEMENT_RADIO_TOWER]Radio Tower[\LINK]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_STEEL_WATCHTOWER</Tag>
 		<English>Build [LINK=IMPROVEMENT_STEEL_WATCHTOWER]Steel Watchtower[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_STEEL_WATCHTOWER]Tour d'observation en acier[\LINK]</French>
@@ -930,6 +938,10 @@
 		<Italian>Costruisci un [LINK=IMPROVEMENT_SUBMERGED_TOWN]Insediamento sottomarino[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_SUBMERGED_TOWN]Asentamiento submarino[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SUBMERGED_TOWN]zatopione miasto[\LINK]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SUBMERGED_TOWN_DEEP</Tag>
+		<English>Build [LINK=IMPROVEMENT_SUBMERGED_TOWN_DEEP]Submerged Town (Deep)[\LINK]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SUBURBS</Tag>

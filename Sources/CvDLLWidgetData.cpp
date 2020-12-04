@@ -3187,11 +3187,11 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							{
 								szBuffer.append(NEWLINE);
 								
-								// If the feature is blocked from ever being constructable or not, different messages
-								// HILARIOUS WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ FEATURE BLOCKING IN CIV4BuildInfos PLEASE FIX THIS
-								if (GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)).getTextKeyWide() == L"|Dummy Tech")
+								// If the feature blocks the improvement from ever being constructable or not, different messages
+								// WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ FEATURE BLOCKING IN CIV4BuildInfos, REALLY SHOULD BE BETTER SOMEHOW
+								if (GC.getTechInfo((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)).isDisable())
 								{
-									szBuffer.append(gDLL->getText("TXT_KEY_IMPROVEMENT_FEATURE_BLOCKED",
+									szBuffer.append(gDLL->getText("TXT_KEY_BUILD_PLOT_BLOCKED",
 										GC.getFeatureInfo(ePlotFeature).getTextKeyWide()));
 								}
 								else
@@ -3203,6 +3203,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							}
 						}
 					}
+					// Check terrain prereqs against current terrain
 					for (int iI = 0; iI < GC.getBuildInfo(eBuild).getNumTerrainStructs(); iI++)
 					{
 						const TerrainTypes eTerrain = GC.getBuildInfo(eBuild).getTerrainStruct(iI).eTerrain;
@@ -3210,19 +3211,27 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						||  eTerrain == GC.getTERRAIN_PEAK() && pMissionPlot->isAsPeak()
 						||  eTerrain == GC.getTERRAIN_HILL() && pMissionPlot->isHills())
 						{
-							if (GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech != NO_TECH)
+							// If there is a tech required to build on the terrain that differs from the base tech prereq,
+							// we don't have that tech, and the build doesn't obsolete OR we don't have the obsolete tech:
+							if (GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech != NO_TECH
+							&& (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech
+							&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech)
+							&& (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
+								|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech())))
 							{
-								if ( (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech
-								&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech) )
+								szBuffer.append(NEWLINE);
+								// If the terrain blocks the improvement from ever being constructable or not, different messages
+								// WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ TERRAIN BLOCKING IN CIV4BuildInfos, REALLY SHOULD BE BETTER SOMEHOW
+								if (GC.getTechInfo(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech).isDisable())
 								{
-									if (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH ||
-										!GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech()))
-									{
-										szBuffer.append(NEWLINE);
-										szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
-											CvWString(GC.getTechInfo(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech).getType()).GetCString(),
-											GC.getTechInfo(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech).getTextKeyWide()));
-									}
+									szBuffer.append(gDLL->getText("TXT_KEY_BUILD_PLOT_BLOCKED",
+										GC.getTerrainInfo(ePlotTerrain).getTextKeyWide()));
+								}
+								else
+								{
+									szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
+										CvWString(GC.getTechInfo(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech).getType()).GetCString(),
+										GC.getTechInfo(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech).getTextKeyWide()));
 								}
 							}
 						}

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!-- Notes:
-	- CANNOT be built on this feature (or equivalent for terrain)
+	- CANNOT be built on this feature (or equivalent for terrain; try to avoid using this, though):
 	<FeatureStruct>
 		<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 		<PrereqTech>TECH_DUMMY</PrereqTech>
@@ -8,12 +8,12 @@
 	- FeatureChange and TerrainChange make it so that the "improvement" is not placed; instead,
 	the build action will replace any existing feature/terrain with the corresponding entered value.
 	bRemove should be used in necessary FeatureStructs to make UI work properly for replacing features.
-	- "Kill " builds generally don't obsolete (though the regular ones do), so captured units of lower tech can still do things of their tech level
-	- Builds generally obsolete once the build +2 tier is available for long build chains, and when direct upgrade available for short chains. +3 for routes.
+	- "Kill" builds generally don't obsolete (though the regular ones do), so captured units of lower tech can still do things of their tech level
+	- Builds generally obsolete once the upgrade tier is available, or 3rd upgrade available for routes.
 -->
 <Civ4BuildInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<BuildInfos>
-		<!-- ROUTES -->
+		<!-- ROUTES [Name << Obsoletes at] -->
 		<!-- Trail Path << Paved Road-->
 		<BuildInfo>
 			<Type>BUILD_TRAIL</Type>
@@ -36,7 +36,7 @@
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<ObsoleteTech>TECH_HIGHWAY_SYSTEMS</ObsoleteTech>
 			<iTime>150</iTime>
-			<iCost>0</iCost>
+			<iCost>1</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_PATH</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
@@ -81,7 +81,7 @@
 			<Description>TXT_KEY_BUILD_HIGHWAY</Description>
 			<PrereqTech>TECH_HIGHWAY_SYSTEMS</PrereqTech>
 			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
-			<iTime>200</iTime>
+			<iTime>300</iTime>
 			<iCost>5</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_HIGHWAY</RouteType>
@@ -96,7 +96,7 @@
 			<Description>TXT_KEY_BUILD_RAILROAD</Description>
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<ObsoleteTech>TECH_SUPERSONIC_RAILS</ObsoleteTech>
-			<iTime>300</iTime>
+			<iTime>400</iTime>
 			<iCost>10</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_RAILROAD</RouteType>
@@ -111,7 +111,7 @@
 			<Description>TXT_KEY_BUILD_ELECTRIC_RAILROAD</Description>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
 			<ObsoleteTech>TECH_SUPERSONIC_RAILS</ObsoleteTech>
-			<iTime>400</iTime>
+			<iTime>500</iTime>
 			<iCost>12</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
@@ -144,7 +144,7 @@
 			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<!-- <ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech> -->
 			<iTime>800</iTime>
-			<iCost>200</iCost>
+			<iCost>80</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
@@ -159,7 +159,7 @@
 			<PrereqTech>TECH_FRICTIONLESS_FLIGHT</PrereqTech>
 			<!-- <ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech> -->
 			<iTime>1000</iTime>
-			<iCost>400</iCost>
+			<iCost>100</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_GRAVITY_TRAIN</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
@@ -173,8 +173,8 @@
 			<Type>BUILD_JUMPLANE</Type>
 			<Description>TXT_KEY_BUILD_JUMPLANE</Description>
 			<PrereqTech>TECH_TELEPORTATION</PrereqTech>
-			<iTime>1000</iTime>
-			<iCost>100</iCost>
+			<iTime>1200</iTime>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_JUMPLANE</RouteType>
 			<EntityEvent>ENTITY_EVENT_RAILROAD</EntityEvent>
@@ -192,7 +192,7 @@
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<!-- <ObsoleteTech>TECH_CARPENTRY</ObsoleteTech> -->
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -208,7 +208,7 @@
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -224,7 +224,7 @@
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<!-- <ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech> -->
 			<iTime>400</iTime>
-			<iCost>0</iCost>
+			<iCost>20</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -240,7 +240,7 @@
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>0</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WOODEN_PALISADE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -256,7 +256,7 @@
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_POTTERY</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -272,7 +272,7 @@
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<!-- <ObsoleteTech>TECH_POTTERY</ObsoleteTech> -->
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>20</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -288,7 +288,7 @@
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech>
 			<iTime>300</iTime>
-			<iCost>0</iCost>
+			<iCost>30</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -304,7 +304,7 @@
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<ObsoleteTech>TECH_ELECTRICITY</ObsoleteTech>
 			<iTime>1000</iTime>
-			<iCost>0</iCost>
+			<iCost>100</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FORT</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -320,7 +320,7 @@
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<ObsoleteTech>TECH_METAMATERIALS</ObsoleteTech>
 			<iTime>1200</iTime>
-			<iCost>0</iCost>
+			<iCost>500</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -336,7 +336,7 @@
 			<Description>TXT_KEY_BUILD_COMMAND_CENTER</Description>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
 			<iTime>2000</iTime>
-			<iCost>0</iCost>
+			<iCost>1000</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_COMMAND_CENTER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -353,7 +353,7 @@
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<!-- <ObsoleteTech>TECH_MASONRY</ObsoleteTech> -->
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>1</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -369,7 +369,7 @@
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>1</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -385,7 +385,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<ObsoleteTech>TECH_STEEL</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -401,7 +401,7 @@
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<ObsoleteTech>TECH_RADAR</ObsoleteTech>
 			<iTime>600</iTime>
-			<iCost>0</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -416,7 +416,7 @@
 			<Description>TXT_KEY_BUILD_RADAR_TOWER</Description>
 			<PrereqTech>TECH_RADAR</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>0</iCost>
+			<iCost>100</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -431,7 +431,7 @@
 			<Description>TXT_KEY_BUILD_LISTENING_NODE</Description>
 			<PrereqTech>TECH_PLANETARY_DEFENSES</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>0</iCost>
+			<iCost>300</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LISTENING_NODE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -486,14 +486,14 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -567,14 +567,14 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -690,126 +690,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -829,14 +829,14 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -952,126 +952,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -1091,14 +1091,14 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -1213,126 +1213,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -1351,17 +1351,17 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>0</bRemove>
+					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>0</bRemove>
+					<bRemove>1</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_T</HotKey>
@@ -1390,7 +1390,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>2</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LUMBERJACK</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1405,7 +1405,7 @@
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<ObsoleteTech>TECH_ECOLOGY</ObsoleteTech>
 			<iTime>600</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1420,7 +1420,7 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<iTime>2000</iTime>
-			<iCost>0</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TREEFARM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -1435,7 +1435,7 @@
 			<Description>TXT_KEY_BUILD_HYBRID_FOREST</Description>
 			<PrereqTech>TECH_PLANETARY_ECONOMICS</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>0</iCost>
+			<iCost>100</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HYBRID_FOREST</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -1451,7 +1451,7 @@
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<ObsoleteTech>TECH_REFRIGERATION</ObsoleteTech>
 			<iTime>600</iTime>
-			<iCost>0</iCost>
+			<iCost>25</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WORKSHOP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -1543,14 +1543,14 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -1805,14 +1805,14 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -1826,7 +1826,7 @@
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
 			<iTime>1000</iTime>
-			<iCost>50</iCost>
+			<iCost>75</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -2065,14 +2065,14 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -2085,7 +2085,7 @@
 			<Description>TXT_KEY_BUILD_INDUSTRIAL_COMPLEX</Description>
 			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<iTime>1800</iTime>
-			<iCost>100</iCost>
+			<iCost>150</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -2323,17 +2323,17 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>0</bRemove>
+					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>0</bRemove>
+					<bRemove>1</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<Button>,Art/Interface/Buttons/Buildings/Factory.dds,Art/Interface/Buttons/Buildings_Atlas.dds,7,2</Button>
@@ -2345,7 +2345,7 @@
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -2360,7 +2360,7 @@
 			<Description>TXT_KEY_BUILD_SALT_GATHERER</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -2376,7 +2376,7 @@
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_EARLY_QUARRY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -2406,8 +2406,9 @@
 			<Type>BUILD_QUARRY</Type>
 			<Description>TXT_KEY_BUILD_QUARRY</Description>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
 			<iTime>600</iTime>
-			<iCost>0</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -2527,9 +2528,9 @@
 			<Type>BUILD_MINE</Type>
 			<Description>TXT_KEY_BUILD_MINE</Description>
 			<PrereqTech>TECH_MINING</PrereqTech>
-			<ObsoleteTech>TECH_MODERN_SEISMOLOGY</ObsoleteTech>
+			<ObsoleteTech>TECH_EXPLOSIVES</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -2559,9 +2560,9 @@
 			<Type>BUILD_SHAFT_MINE</Type>
 			<Description>TXT_KEY_BUILD_SHAFT_MINE</Description>
 			<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
+			<ObsoleteTech>TECH_MODERN_SEISMOLOGY</ObsoleteTech>
 			<iTime>800</iTime>
-			<iCost>25</iCost>
+			<iCost>30</iCost>
 			<bKill>0</bKill>
 			<bHideObsoleteExempt>1</bHideObsoleteExempt>
 			<ImprovementType>IMPROVEMENT_SHAFT_MINE</ImprovementType>
@@ -2593,8 +2594,9 @@
 			<Type>BUILD_MODERN_MINE</Type>
 			<Description>TXT_KEY_BUILD_MODERN_MINE</Description>
 			<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
+			<ObsoleteTech>TECH_NANOMINING</ObsoleteTech>
 			<iTime>1200</iTime>
-			<iCost>40</iCost>
+			<iCost>60</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MODERN_MINE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -2842,8 +2844,8 @@
 			<Type>BUILD_CORE_MINE</Type>
 			<Description>TXT_KEY_BUILD_CORE_MINE</Description>
 			<PrereqTech>TECH_NANOMINING</PrereqTech>
-			<iTime>400</iTime>
-			<iCost>0</iCost>
+			<iTime>1600</iTime>
+			<iCost>500</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_CORE_MINE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -3091,7 +3093,7 @@
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<ObsoleteTech>TECH_MOUNTAINEERING</ObsoleteTech>
 			<iTime>300</iTime>
-			<iCost>0</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -3107,7 +3109,7 @@
 			<Description>TXT_KEY_BUILD_MOUNTAIN_MINE</Description>
 			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>32</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -3124,7 +3126,7 @@
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
 			<iTime>500</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -3224,126 +3226,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -3363,14 +3365,14 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -3385,7 +3387,7 @@
 			<Description>TXT_KEY_BUILD_VERTICAL_FARM</Description>
 			<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>0</iCost>
+			<iCost>80</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_VERTICAL_FARM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3485,126 +3487,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -3623,17 +3625,17 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>0</bRemove>
+					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>0</bRemove>
+					<bRemove>1</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_C</HotKey>
@@ -3648,7 +3650,7 @@
 			<PrereqTech>TECH_WINDMILLS</PrereqTech>
 			<ObsoleteTech>TECH_ECOLOGY</ObsoleteTech>
 			<iTime>500</iTime>
-			<iCost>50</iCost>
+			<iCost>30</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WINDMILL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3722,6 +3724,20 @@
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
 					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>1200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_CRATER</FeatureType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>1200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_W</HotKey>
@@ -3812,17 +3828,17 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>0</bRemove>
+					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>0</bRemove>
+					<bRemove>1</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_W</HotKey>
@@ -3846,13 +3862,13 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildWaterMill.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,3,8</Button>
 		</BuildInfo>
-		<!-- Hydro Plant -->
+		<!-- Hydro Dam -->
 		<BuildInfo>
 			<Type>BUILD_HYDRO_DAM</Type>
 			<Description>TXT_KEY_BUILD_IMPROVEMENT_HYDRO_DAM</Description>
 			<PrereqTech>TECH_HYDROELECTRICITY</PrereqTech>
 			<iTime>1200</iTime>
-			<iCost>200</iCost>
+			<iCost>100</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HYDRO_DAM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3870,7 +3886,7 @@
 			<PrereqTech>TECH_NOMADISM</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>100</iTime>
-			<iCost>10</iCost>
+			<iCost>5</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SEASONAL_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3885,7 +3901,7 @@
 			<Description>TXT_KEY_BUILD_SEASONAL_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iTime>100</iTime>
-			<iCost>10</iCost>
+			<iCost>5</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SEASONAL_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -3901,7 +3917,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4133,14 +4149,14 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -4156,7 +4172,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_AGRICULTURE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4388,14 +4404,14 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -4411,7 +4427,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4426,7 +4442,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_ORCHARDS</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4442,7 +4458,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4457,7 +4473,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_FERMENTATION</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4472,7 +4488,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4487,7 +4503,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_CALENDAR</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4502,7 +4518,7 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4515,8 +4531,9 @@
 			<Type>BUILD_MUSHROOM_GATHERER</Type>
 			<Description>TXT_KEY_BUILD_MUSHROOM_GATHERER</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4531,7 +4548,7 @@
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_JUNGLE_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4543,7 +4560,7 @@
 			<Description>TXT_KEY_BUILD_JUNGLE_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iTime>400</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_JUNGLE_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4556,7 +4573,7 @@
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_DESERT_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4568,7 +4585,7 @@
 			<Description>TXT_KEY_BUILD_DESERT_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iTime>400</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_DESERT_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4581,7 +4598,7 @@
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>400</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WETLANDS_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4593,7 +4610,7 @@
 			<Description>TXT_KEY_BUILD_WETLANDS_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iTime>400</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WETLANDS_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4605,7 +4622,7 @@
 			<Description>TXT_KEY_BUILD_SCAVENGING_CAMP</Description>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SCAVENGING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4620,7 +4637,7 @@
 			<Description>TXT_KEY_BUILD_NOMADIC_HERD</Description>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<iTime>300</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_NOMADIC_HERD</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4659,7 +4676,7 @@
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
 			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4691,7 +4708,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_MINING</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4725,7 +4742,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_MONARCHY</ObsoleteTech>
 			<iTime>300</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4739,7 +4756,7 @@
 			<Description>TXT_KEY_BUILD_HUNTING_PRESERVE</Description>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<iTime>400</iTime>
-			<iCost>0</iCost>
+			<iCost>15</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HUNTING_PRESERVE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4753,7 +4770,7 @@
 			<Description>TXT_KEY_BUILD_WILDLIFE_SANCTUARY</Description>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<iTime>500</iTime>
-			<iCost>0</iCost>
+			<iCost>30</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WILDLIFE_SANCTUARY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4768,7 +4785,7 @@
 			<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_TAR_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4784,7 +4801,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_REFINING</ObsoleteTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TAR_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4799,7 +4816,7 @@
 			<Description>TXT_KEY_BUILD_HYDROCARBON_WELL</Description>
 			<PrereqTech>TECH_REFINING</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>0</iCost>
+			<iCost>75</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HYDROCARBON_WELL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5040,7 +5057,7 @@
 			<Description>TXT_KEY_BUILD_ORCHARD</Description>
 			<PrereqTech>TECH_ORCHARDS</PrereqTech>
 			<iTime>500</iTime>
-			<iCost>0</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_ORCHARD</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5054,7 +5071,7 @@
 			<Description>TXT_KEY_BUILD_WINERY</Description>
 			<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			<iTime>500</iTime>
-			<iCost>0</iCost>
+			<iCost>30</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5154,126 +5171,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -5302,7 +5319,7 @@
 			<Description>TXT_KEY_BUILD_PLANTATION</Description>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<iTime>500</iTime>
-			<iCost>0</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5424,7 +5441,7 @@
 			<Description>TXT_KEY_BUILD_SILK_FARM</Description>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<iTime>500</iTime>
-			<iCost>0</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SILK_FARM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5539,7 +5556,7 @@
 			<Description>TXT_KEY_BUILD_PASTURE</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iTime>400</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5647,7 +5664,7 @@
 			<Description>TXT_KEY_BUILD_FOSSIL_DIG_SITE</Description>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>0</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FOSSIL_DIG_SITE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5661,7 +5678,7 @@
 			<Description>TXT_KEY_BUILD_NATURE_PRESERVE</Description>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>0</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_NATURE_PRESERVE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5675,7 +5692,7 @@
 			<Description>TXT_KEY_BUILD_FOREST_PRESERVE</Description>
 			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>0</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_FOREST_PRESERVE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -5689,7 +5706,7 @@
 			<Description>TXT_KEY_BUILD_GEOTHERMAL_FACTORY</Description>
 			<PrereqTech>TECH_VOLCANOLOGY</PrereqTech>
 			<iTime>2000</iTime>
-			<iCost>50</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_GEOTHERMAL_FACTORY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
@@ -5704,6 +5721,7 @@
 			<Type>BUILD_BURN_VEGETATION</Type>
 			<Description>TXT_KEY_BUILD_BURN_VEGETATION</Description>
 			<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+			<ObsoleteTech>TECH_INDUSTRIAL_ECOLOGY</ObsoleteTech>
 			<iTime>0</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
@@ -5790,8 +5808,9 @@
 			<Type>BUILD_REMOVE_VEGETATION</Type>
 			<Description>TXT_KEY_BUILD_REMOVE_VEGETATION</Description>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			<ObsoleteTech>TECH_INDUSTRIAL_ECOLOGY</ObsoleteTech>
 			<iTime>0</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_CHOP</EntityEvent>
 			<FeatureStructs>
@@ -5875,22 +5894,23 @@
 		<BuildInfo>
 			<Type>BUILD_DRAIN_SWAMP</Type>
 			<Description>TXT_KEY_BUILD_DRAIN_SWAMP</Description>
-			<PrereqTech>NONE</PrereqTech>
+			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
+			<ObsoleteTech>TECH_INDUSTRIAL_ECOLOGY</ObsoleteTech>
 			<iTime>0</iTime>
-			<iCost>0</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
+					<PrereqTech>NONE</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
+					<PrereqTech>NONE</PrereqTech>
 					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -5906,141 +5926,142 @@
 			<Type>BUILD_REMOVE_ROCK_FORMATION</Type>
 			<Description>TXT_KEY_BUILD_REMOVE_ROCK_FORMATION</Description>
 			<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+			<ObsoleteTech>TECH_INDUSTRIAL_ECOLOGY</ObsoleteTech>
 			<iTime>100</iTime>
-			<iCost>20</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_C</HotKey>
 			<bAltDown>1</bAltDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/TechTree/Explosives.dds,Art/interface/buttons/mainmenu_techscreen_worldbuilder_popups_atlas.dds,4,2</Button>
+			<Button>Art/Interface/Buttons/TechTree/Explosives.dds</Button>
 		</BuildInfo>
 		<!-- Plant Forest -->
 		<BuildInfo>
@@ -6048,7 +6069,7 @@
 			<Description>TXT_KEY_BUILD_YOUNG_FOREST</Description>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>20</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_YOUNG_FOREST</ImprovementType>
 			<FeatureChange>FEATURE_FOREST_YOUNG</FeatureChange>
@@ -6136,126 +6157,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -6284,7 +6305,7 @@
 			<Description>TXT_KEY_BUILD_GROW_FOREST</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>20</iCost>
+			<iCost>25</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_GROW_FOREST</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -6299,7 +6320,7 @@
 			<Description>TXT_KEY_BUILD_PLANT_JUNGLE</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>40</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PLANT_JUNGLE</ImprovementType>
 			<FeatureChange>FEATURE_JUNGLE</FeatureChange>
@@ -6392,126 +6413,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -6541,7 +6562,7 @@
 			<Description>TXT_KEY_BUILD_PLANT_BAMBOO</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>2000</iTime>
-			<iCost>20</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PLANT_BAMBOO</ImprovementType>
 			<FeatureChange>FEATURE_BAMBOO</FeatureChange>
@@ -6634,126 +6655,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -6783,7 +6804,7 @@
 			<Description>TXT_KEY_BUILD_PLANT_SAVANNA</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>2000</iTime>
-			<iCost>20</iCost>
+			<iCost>50</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PLANT_SAVANNA</ImprovementType>
 			<FeatureChange>FEATURE_SAVANNA</FeatureChange>
@@ -6877,126 +6898,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -7020,13 +7041,266 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/TerrainFeatures/button_savanna.dds</Button>
 		</BuildInfo>
+		<!-- Reclaim Land -->
+		<BuildInfo>
+			<Type>BUILD_RECLAIM_LAND</Type>
+			<Description>TXT_KEY_BUILD_RECLAIM_LAND</Description>
+			<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+			<iTime>0</iTime>
+			<iCost>10</iCost>
+			<bKill>0</bKill>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>40</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>500</iTime>
+					<iProduction>60</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>30</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>5</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>20</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>5</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_MANGROVE</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>20</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>20</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_SAVANNA</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>10</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>10</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_SWAMP</FeatureType>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>50</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_OASIS</FeatureType>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_CRATER</FeatureType>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
+			<HotKey>KB_C</HotKey>
+			<bAltDown>1</bAltDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>,Art/Interface/Buttons/Builds/BuildChopDown.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,8</Button>
+		</BuildInfo>
 		<!-- Terraform Lush -->
 		<BuildInfo>
 			<Type>BUILD_TERRAFORM_LUSH</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORM_LUSH</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>2500</iTime>
-			<iCost>50</iCost>
+			<iCost>1000</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_LUSH</ImprovementType>
 			<TerrainChange>TERRAIN_LUSH</TerrainChange>
@@ -7127,126 +7401,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -7275,7 +7549,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_MUDDY</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>2500</iTime>
-			<iCost>50</iCost>
+			<iCost>1000</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_MUDDY</ImprovementType>
 			<TerrainChange>TERRAIN_MUDDY</TerrainChange>
@@ -7376,126 +7650,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -7524,7 +7798,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_GRASS</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>2500</iTime>
-			<iCost>50</iCost>
+			<iCost>1000</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_GRASS</ImprovementType>
 			<TerrainChange>TERRAIN_GRASSLAND</TerrainChange>
@@ -7625,126 +7899,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -7773,7 +8047,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_PLAINS</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>2500</iTime>
-			<iCost>50</iCost>
+			<iCost>1000</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_PLAINS</ImprovementType>
 			<TerrainChange>TERRAIN_PLAINS</TerrainChange>
@@ -7874,126 +8148,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -8022,7 +8296,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_TAIGA</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>100</iCost>
+			<iCost>1000</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_TAIGA</ImprovementType>
 			<TerrainChange>TERRAIN_TAIGA</TerrainChange>
@@ -8123,126 +8397,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -8271,7 +8545,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_TUNDRA</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>100</iCost>
+			<iCost>1000</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_TUNDRA</ImprovementType>
 			<TerrainChange>TERRAIN_TUNDRA</TerrainChange>
@@ -8372,126 +8646,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -8520,7 +8794,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_PERMAFROST</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>100</iCost>
+			<iCost>1000</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_PERMAFROST</ImprovementType>
 			<TerrainChange>TERRAIN_PERMAFROST</TerrainChange>
@@ -8621,126 +8895,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -8769,7 +9043,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_ROCKY</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>100</iCost>
+			<iCost>1000</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_ROCKY</ImprovementType>
 			<TerrainChange>TERRAIN_ROCKY</TerrainChange>
@@ -8870,126 +9144,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -9018,7 +9292,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_SCRUB</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>100</iCost>
+			<iCost>1000</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_SCRUB</ImprovementType>
 			<TerrainChange>TERRAIN_SCRUB</TerrainChange>
@@ -9119,126 +9393,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -9267,7 +9541,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_DESERT</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>100</iCost>
+			<iCost>1000</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_DESERT</ImprovementType>
 			<TerrainChange>TERRAIN_DESERT</TerrainChange>
@@ -9368,126 +9642,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -9516,7 +9790,7 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_DUNES</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			<iTime>3000</iTime>
-			<iCost>100</iCost>
+			<iCost>1000</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_DUNES</ImprovementType>
 			<TerrainChange>TERRAIN_DUNES</TerrainChange>
@@ -9617,126 +9891,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -9763,15 +10037,15 @@
 		<BuildInfo>
 			<Type>BUILD_SCRUB_FALLOUT</Type>
 			<Description>TXT_KEY_BUILD_SCRUB_FALLOUT</Description>
-			<PrereqTech>FEATURE_FALLOUT</PrereqTech>
+			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>0</iTime>
-			<iCost>0</iCost>
+			<iCost>100</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FALLOUT</FeatureType>
-					<PrereqTech>TECH_ECOLOGY</PrereqTech>
+					<PrereqTech>NONE</PrereqTech>
 					<iTime>600</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -9787,7 +10061,7 @@
 			<Description>TXT_KEY_BUILD_CLEAR_FALLOUT_FAST</Description>
 			<PrereqTech>TECH_ECOLOGICAL_ENGINEERING</PrereqTech>
 			<iTime>0</iTime>
-			<iCost>0</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs>
@@ -9809,7 +10083,7 @@
 			<Description>TXT_KEY_BUILD_SANITIZE</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs>
@@ -9838,7 +10112,7 @@
 			<Description>TXT_KEY_BUILD_SANITIZE_WATER</Description>
 			<PrereqTech>TECH_AQUACULTURE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SANITIZE_WATER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -9870,7 +10144,7 @@
 			<Description>TXT_KEY_BUILD_MOAI</Description>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_MOAI</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -9947,17 +10221,17 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>0</bRemove>
+					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>0</bRemove>
+					<bRemove>1</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_S</HotKey>
@@ -9970,7 +10244,7 @@
 			<Description>TXT_KEY_BUILD_THATCH_CUTTER</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_THATCH_CUTTER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -9984,7 +10258,7 @@
 			<Description>TXT_KEY_BUILD_PEAT_CUTTER</Description>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PEAT_CUTTER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -9992,23 +10266,147 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
 		</BuildInfo>
+		<!-- Geoglyph -->
+		<BuildInfo>
+			<Type>BUILD_GEOGLYPH</Type>
+			<Description>TXT_KEY_BUILD_GEOGLYPH</Description>
+			<PrereqTech>TECH_STARGAZING</PrereqTech>
+			<iTime>400</iTime>
+			<iCost>10</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_GEOGLYPH</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<PrereqBonusTypes>
+				<PrereqBonusType>BONUS_GEOGLYPH_PLANS</PrereqBonusType>
+			</PrereqBonusTypes>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>30</iProduction>
+					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>40</iProduction>
+					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>500</iTime>
+					<iProduction>60</iProduction>
+					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>10</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_SAVANNA</FeatureType>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>10</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>20</iProduction>
+					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>5</iProduction>
+					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>5</iProduction>
+					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_CITY_RUINS</FeatureType>
+					<PrereqTech/>
+					<iTime>200</iTime>
+					<iProduction>40</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ARCOLOGY_RUINS</FeatureType>
+					<PrereqTech/>
+					<iTime>200</iTime>
+					<iProduction>40</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_CRATER</FeatureType>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_OASIS</FeatureType>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
+			<HotKey>KB_C</HotKey>
+			<bShiftDown>1</bShiftDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/Builds/buildgeoglyph.dds</Button>
+		</BuildInfo>
 		<!-- Groundwater Well -->
 		<BuildInfo>
 			<Type>BUILD_GROUNDWATER_WELL</Type>
 			<Description>TXT_KEY_BUILD_GROUNDWATER_WELL</Description>
 			<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>0</iCost>
+			<iCost>20</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_GROUNDWATER_WELL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>0</bRemove>
+					<bRemove>1</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_W</HotKey>
@@ -10122,126 +10520,126 @@
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 					<iTime>800</iTime>
-					<iProduction>0</iProduction>
+					<iProduction>50</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
@@ -10260,22 +10658,22 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>0</bRemove>
+					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
+					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>0</bRemove>
+					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>500</iTime>
+					<iTime>1200</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
@@ -10284,129 +10682,19 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/electricity/Art/solarvoltplant.dds</Button>
 		</BuildInfo>
-		<!-- Geoglyph -->
+		<!-- Radio Tower -->
 		<BuildInfo>
-			<Type>BUILD_GEOGLYPH</Type>
-			<Description>TXT_KEY_BUILD_GEOGLYPH</Description>
-			<PrereqTech>TECH_STARGAZING</PrereqTech>
-			<iTime>400</iTime>
-			<iCost>0</iCost>
+			<Type>BUILD_RADIO_TOWER</Type>
+			<Description>TXT_KEY_BUILD_RADIO_TOWER</Description>
+			<PrereqTech>TECH_RADIO</PrereqTech>
+			<iTime>600</iTime>
+			<iCost>75</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_GEOGLYPH</ImprovementType>
+			<ImprovementType>IMPROVEMENT_RADIO_TOWER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<PrereqBonusTypes>
-				<PrereqBonusType>BONUS_GEOGLYPH_PLANS</PrereqBonusType>
-			</PrereqBonusTypes>
-			<FeatureStructs>
-				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>30</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>40</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-					<iTime>500</iTime>
-					<iProduction>60</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
-					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>10</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_SAVANNA</FeatureType>
-					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>10</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_BAMBOO</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>20</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_CACTUS</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-					<iTime>300</iTime>
-					<iProduction>5</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-					<iTime>400</iTime>
-					<iProduction>5</iProduction>
-					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_CITY_RUINS</FeatureType>
-					<PrereqTech/>
-					<iTime>200</iTime>
-					<iProduction>40</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_ARCOLOGY_RUINS</FeatureType>
-					<PrereqTech/>
-					<iTime>200</iTime>
-					<iProduction>40</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>0</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>0</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_OASIS</FeatureType>
-					<PrereqTech>TECH_DUMMY</PrereqTech>
-					<iTime>200</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>0</bRemove>
-				</FeatureStruct>
-				<FeatureStruct>
-					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>500</iTime>
-					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-			</FeatureStructs>
-			<HotKey>KB_C</HotKey>
-			<bShiftDown>1</bShiftDown>
+			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/buildgeoglyph.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/BuildRadioTower.dds</Button>
 		</BuildInfo>
 
 		<!-- NAVAL IMPROVEMENTS -->
@@ -10511,6 +10799,15 @@
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_FISHING_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ICE</FeatureType>
+					<PrereqTech>TECH_COMBUSTION</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
 			<HotKey>KB_C</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -10522,10 +10819,20 @@
 			<Description>TXT_KEY_BUILD_FISHING_BOATS</Description>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<iTime>100</iTime>
-			<iCost>0</iCost>
+			<iCost>10</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_FISHING_BOATS</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<!-- TECH_MACHINE_LEARNING unlocks constructor ships, which can clear ice without consumption of the ship itself. -->
+				<FeatureStruct>
+					<FeatureType>FEATURE_ICE</FeatureType>
+					<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
 			<HotKey>KB_F</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildFishingBoats.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,7</Button>
@@ -10537,7 +10844,7 @@
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
 			<ObsoleteTech>TECH_COMMERCIAL_WHALING</ObsoleteTech>
 			<iTime>100</iTime>
-			<iCost>0</iCost>
+			<iCost>15</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WHALING_BOATS</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10552,10 +10859,20 @@
 			<Description>TXT_KEY_BUILD_WHALING_SHIPS</Description>
 			<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
 			<iTime>100</iTime>
-			<iCost>0</iCost>
+			<iCost>30</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_WHALING_SHIPS</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<!-- TECH_MACHINE_LEARNING unlocks constructor ships, which can clear ice without consumption of the ship itself. -->
+				<FeatureStruct>
+					<FeatureType>FEATURE_ICE</FeatureType>
+					<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
 			<HotKey>KB_W</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
@@ -10567,7 +10884,7 @@
 			<Description>TXT_KEY_BUILD_HARVEST_KELP_KILL</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_HARVEST_KELP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10581,10 +10898,20 @@
 			<Description>TXT_KEY_BUILD_HARVEST_KELP</Description>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>5</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_HARVEST_KELP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<!-- TECH_MACHINE_LEARNING unlocks constructor ships, which can clear ice without consumption of the ship itself. -->
+				<FeatureStruct>
+					<FeatureType>FEATURE_ICE</FeatureType>
+					<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
 			<HotKey>KB_F</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/terrainfeatures/kelpforest.dds</Button>
@@ -10596,7 +10923,7 @@
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<iTime>600</iTime>
-			<iCost>0</iCost>
+			<iCost>15</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BEACON_CORAL</ImprovementType>
 			<FeatureChange>FEATURE_CORAL_REEF_BEACON</FeatureChange>
@@ -10621,7 +10948,7 @@
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
 			<iTime>600</iTime>
-			<iCost>0</iCost>
+			<iCost>15</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_BEACON_REEF</ImprovementType>
 			<FeatureChange>FEATURE_REEF_BEACON</FeatureChange>
@@ -10645,7 +10972,7 @@
 			<Description>TXT_KEY_BUILD_LIGHTHOUSE_CORAL</Description>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>30</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_CORAL</ImprovementType>
 			<FeatureChange>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureChange>
@@ -10665,6 +10992,14 @@
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
+				<!-- TECH_MACHINE_LEARNING unlocks constructor ships, which can clear ice without consumption of the ship itself. -->
+				<FeatureStruct>
+					<FeatureType>FEATURE_ICE</FeatureType>
+					<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_F</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
@@ -10676,7 +11011,7 @@
 			<Description>TXT_KEY_BUILD_LIGHTHOUSE_REEF</Description>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>30</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_LIGHTHOUSE_REEF</ImprovementType>
 			<FeatureChange>FEATURE_REEF_LIGHTHOUSE</FeatureChange>
@@ -10696,10 +11031,32 @@
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
+				<!-- TECH_MACHINE_LEARNING unlocks constructor ships, which can clear ice without consumption of the ship itself. -->
+				<FeatureStruct>
+					<FeatureType>FEATURE_ICE</FeatureType>
+					<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_F</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/builds/tower.dds</Button>
+		</BuildInfo>
+		<!-- Marine Preserve -->
+		<BuildInfo>
+			<Type>BUILD_MARINE_PRESERVE</Type>
+			<Description>TXT_KEY_BUILD_MARINE_PRESERVE</Description>
+			<PrereqTech>TECH_TOURISM</PrereqTech>
+			<iTime>800</iTime>
+			<iCost>75</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_MARINE_PRESERVE</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_F</HotKey>
+			<iHotKeyPriority>1</iHotKeyPriority>
+			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,4,14</Button>
 		</BuildInfo>
 		<!-- Tidal Harness -->
 		<BuildInfo>
@@ -10789,12 +11146,20 @@
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
+				<!-- TECH_MACHINE_LEARNING unlocks constructor ships, which can clear ice without consumption of the ship itself. -->
+				<FeatureStruct>
+					<FeatureType>FEATURE_ICE</FeatureType>
+					<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Tidal_Harness.dds</Button>
 		</BuildInfo>
-		<!-- Sea Mill -->
+		<!-- Sea Windmill -->
 		<BuildInfo>
 			<Type>BUILD_SEA_MILL</Type>
 			<Description>TXT_KEY_BUILD_SEA_MILL</Description>
@@ -10868,6 +11233,14 @@
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
+				<!-- TECH_MACHINE_LEARNING unlocks constructor ships, which can clear ice without consumption of the ship itself. -->
+				<FeatureStruct>
+					<FeatureType>FEATURE_ICE</FeatureType>
+					<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_W</HotKey>
 			<bShiftDown>1</bShiftDown>
@@ -10880,10 +11253,19 @@
 			<Description>TXT_KEY_BUILD_OFFSHORE_PLATFORM</Description>
 			<PrereqTech>TECH_PLASTICS</PrereqTech>
 			<iTime>300</iTime>
-			<iCost>0</iCost>
+			<iCost>20</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ICE</FeatureType>
+					<PrereqTech>TECH_COMBUSTION</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
 			<HotKey>KB_O</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildOffshorePlatform.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,4,9</Button>
@@ -10894,10 +11276,19 @@
 			<Description>TXT_KEY_BUILD_EXTRACTION_FACILITY</Description>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
 			<iTime>300</iTime>
-			<iCost>0</iCost>
+			<iCost>50</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_EXTRACTION_FACILITY</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ICE</FeatureType>
+					<PrereqTech>TECH_COMBUSTION</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
 			<HotKey>KB_M</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/extraction_facility.dds</Button>
@@ -10908,7 +11299,7 @@
 			<Description>TXT_KEY_BUILD_SUBMERGED_TOWN</Description>
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<iTime>300</iTime>
-			<iCost>0</iCost>
+			<iCost>100</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10919,10 +11310,10 @@
 		<!-- Submerged Town (Deep) -->
 		<BuildInfo>
 			<Type>BUILD_SUBMERGED_TOWN_DEEP</Type>
-			<Description>TXT_KEY_IMPROVEMENT_SUBMERGED_TOWN_DEEP</Description>
+			<Description>TXT_KEY_BUILD_SUBMERGED_TOWN_DEEP</Description>
 			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
 			<iTime>300</iTime>
-			<iCost>0</iCost>
+			<iCost>200</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN_DEEP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10936,7 +11327,7 @@
 			<Description>TXT_KEY_BUILD_BREAK_ICE_KILL</Description>
 			<PrereqTech>TECH_COMBUSTION</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>25</iCost>
 			<bKill>1</bKill>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
@@ -10958,7 +11349,7 @@
 			<Description>TXT_KEY_BUILD_BREAK_ICE</Description>
 			<PrereqTech>TECH_COMBUSTION</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>0</iCost>
+			<iCost>25</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
@@ -10980,7 +11371,7 @@
 			<Description>TXT_KEY_BUILD_AQUATIC_FORCEFIELD</Description>
 			<PrereqTech>TECH_SHIELDING</PrereqTech>
 			<iTime>2000</iTime>
-			<iCost>50</iCost>
+			<iCost>750</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_AQUATIC_FORCEFIELD</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10995,7 +11386,7 @@
 			<Help>TXT_KEY_BUILD_AQUATIC_ANTI_AIR_DEFENSE_HELP</Help>
 			<PrereqTech>TECH_ORBITAL_FLIGHT</PrereqTech>
 			<iTime>2000</iTime>
-			<iCost>50</iCost>
+			<iCost>500</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
