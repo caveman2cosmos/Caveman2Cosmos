@@ -2990,8 +2990,10 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						iYield += pMissionPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iI), pHeadSelectedUnit->getOwner());
 					}
 
-					// Assuming FeatureChange and TerrainChange won't remove improvement (though they may remove prereqs...)
-					if (pMissionPlot->getImprovementType() != NO_IMPROVEMENT && !bIsFeatureChange && !bIsTerrainChange)
+					// Assuming neither using FeatureChange/TerrainChange nor placing routes will remove improvements (though former may remove prereqs for imps...)
+					if (pMissionPlot->getImprovementType() != NO_IMPROVEMENT
+					&&  eRoute == NO_ROUTE
+					&&  !bIsFeatureChange && !bIsTerrainChange)
 					{
 						iYield -= pMissionPlot->calculateImprovementYieldChange(pMissionPlot->getImprovementType(), ((YieldTypes)iI), pHeadSelectedUnit->getOwner());
 					}
@@ -3175,16 +3177,29 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 					if (ePlotFeature != NO_FEATURE)
 					{
+						// If the plot feature requires a different tech than the base tile itself AND we don't have that tech
 						if ( (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)
 						&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)) )
 						{
+							// If the base never obsoletes OR we don't have the tech which obsoletes it
 							if (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
 							|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech()))
 							{
 								szBuffer.append(NEWLINE);
-								szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
-								CvWString(GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)).getType()).GetCString(),
-								GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)).getTextKeyWide()));
+								
+								// If the feature is blocked from ever being constructable or not, different messages
+								// HILARIOUS WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ FEATURE BLOCKING IN CIV4BuildInfos PLEASE FIX THIS
+								if (GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)).getTextKeyWide() == L"|Dummy Tech")
+								{
+									szBuffer.append(gDLL->getText("TXT_KEY_IMPROVEMENT_FEATURE_BLOCKED",
+										GC.getFeatureInfo(ePlotFeature).getTextKeyWide()));
+								}
+								else
+								{	
+									szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
+										CvWString(GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)).getType()).GetCString(),
+										GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)).getTextKeyWide()));
+								}
 							}
 						}
 					}

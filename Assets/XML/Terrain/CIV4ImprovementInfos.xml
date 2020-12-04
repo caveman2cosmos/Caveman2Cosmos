@@ -1365,7 +1365,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</ImprovementInfo>
-		<!-- Factory -->
+		<!-- Factory (Cold Climate) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FACTORY_COLD_CLIMATE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_FACTORY_COLD</Description>
@@ -9662,7 +9662,7 @@
 				</FeatureMakesValid>
 			</FeatureMakesValids>
 		</ImprovementInfo>
-		<!-- Grow Forest (special case of feature change handled in CvEventManager.py; placeholder YieldChanges) -->
+		<!-- Grow Forest (special case of FeatureChange handled in CvEventManager.py; has 'fake' YieldChanges) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_GROW_FOREST</Type>
 			<Description>TXT_KEY_IMPROVEMENT_GROW_FOREST</Description>

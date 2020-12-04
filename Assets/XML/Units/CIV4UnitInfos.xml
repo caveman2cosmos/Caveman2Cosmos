@@ -28658,6 +28658,10 @@ Base XP gained when defending
 					<BuildType>BUILD_SUBMERGED_TOWN</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
+				<Build>
+					<BuildType>BUILD_SUBMERGED_TOWN_DEEP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 			</Builds>
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<BonusType>BONUS_NANOTUBES</BonusType>
