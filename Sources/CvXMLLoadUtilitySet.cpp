@@ -1051,12 +1051,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.m_ProjectInfoReplacements.readPass3();
 	}
 
-	for (int i=0; i < GC.getNumTechInfos(); ++i)
-	{
-		GC.getTechInfo((TechTypes)i).readPass3();
-		GC.m_TechInfoReplacements.readPass3();
-	}
-
 	for (int i=0; i < GC.getNumUnitInfos(); ++i)
 	{
 		GC.getUnitInfo((UnitTypes)i).readPass3();
@@ -1068,7 +1062,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	for (int i = 0; i < GC.getNumCursorInfos(); ++i)
 	{
 		int iVal;
-		CvString szType = GC.getCursorInfo((CursorTypes)i).getType();
+		const CvString szType = GC.getCursorInfo((CursorTypes)i).getType();
 		if (GC.getDefinesVarSystem()->GetValue(szType, iVal))
 		{
 			char szMessage[1024];

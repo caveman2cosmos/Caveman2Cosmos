@@ -433,8 +433,6 @@ public:
 	int getPrereqOrBuildingType(int iIndex) const;
 	int getPrereqOrBuildingMinimumRequired(int iIndex) const;
 
-	bool readPass3();
-
 	bool isGlobal() const;
 
 	// Dale - AB: Bombing START

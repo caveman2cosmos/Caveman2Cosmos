@@ -1100,7 +1100,6 @@ void CvSpecialistInfo::copyNonDefaults(CvSpecialistInfo* pClassInfo, CvXMLLoadUt
 	int iAudioDefault = -1;  //all audio is default -1
 	float fDefault = 0.0f;
 	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
 
 	CvHotkeyInfo::copyNonDefaults(pClassInfo, pXML);
 
@@ -1353,6 +1352,8 @@ CvTechInfo::~CvTechInfo()
 	{
 		GC.removeDelayedResolution((int*)&(m_aPrereqOrBuilding[i]));
 	}
+	GC.removeDelayedResolution((int*)&m_iFirstFreeUnit);
+	GC.removeDelayedResolution((int*)&m_iFirstFreeProphet);
 }
 
 //	Validate tech info data after load (debug only)
@@ -1790,10 +1791,10 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	m_iEra = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FirstFreeUnit");
-	m_aszExtraXMLforPass3.push_back(szTextVal);
+	GC.addDelayedResolution((int*)&m_iFirstFreeUnit, szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FirstFreeProphet");
-	m_aszExtraXMLforPass3.push_back(szTextVal);
+	GC.addDelayedResolution((int*)&m_iFirstFreeProphet, szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(&m_iFeatureProductionModifier, L"iFeatureProductionModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iWorkerSpeedModifier, L"iWorkerSpeedModifier");
@@ -2025,12 +2026,11 @@ void CvTechInfo::copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const bool bDefault = false;
+	const int iDefault = 0;
+	const int iTextDefault = -1;
+	const float fDefault = 0.0f;
+	const CvString cDefault = CvString::format("").GetCString();
 
 	if (m_iAdvisorType == NO_ADVISOR) m_iAdvisorType = pClassInfo->getAdvisorType();
 	if (getAIWeight() == iDefault) m_iAIWeight = pClassInfo->getAIWeight();
@@ -2038,11 +2038,9 @@ void CvTechInfo::copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if (m_iResearchCost == iDefault) m_iResearchCost = pClassInfo->m_iResearchCost;
 	if (getAdvancedStartCost() == 100) m_iAdvancedStartCost = pClassInfo->getAdvancedStartCost();
 	if (getAdvancedStartCostIncrease() == iDefault) m_iAdvancedStartCostIncrease = pClassInfo->getAdvancedStartCostIncrease();
-
 	if (m_iEra == NO_ERA) m_iEra = pClassInfo->getEra();
-	if (m_iFirstFreeUnit == NO_UNIT) m_iFirstFreeUnit = pClassInfo->getFirstFreeUnit();
-	if (m_iFirstFreeProphet == NO_UNIT) m_iFirstFreeProphet = pClassInfo->getFirstFreeProphet();
-
+	GC.copyNonDefaultDelayedResolution((int*)&m_iFirstFreeUnit, (int*)&pClassInfo->m_iFirstFreeUnit);
+	GC.copyNonDefaultDelayedResolution((int*)&m_iFirstFreeProphet, (int*)&pClassInfo->m_iFirstFreeProphet);
 	if (getFeatureProductionModifier() == iDefault) m_iFeatureProductionModifier = pClassInfo->getFeatureProductionModifier();
 	if (getWorkerSpeedModifier() == iDefault) m_iWorkerSpeedModifier = pClassInfo->getWorkerSpeedModifier();
 	if (getTradeRoutes() == iDefault) m_iTradeRoutes = pClassInfo->getTradeRoutes();
@@ -2270,19 +2268,6 @@ void CvTechInfo::copyNonDefaultsReadPass2(CvTechInfo* pClassInfo, CvXMLLoadUtili
 			m_piPrereqAndTechs[i] = pClassInfo->getPrereqAndTechs(i);
 		}
 	}
-}
-
-bool CvTechInfo::readPass3()
-{
-	if (m_aszExtraXMLforPass3.size() < 1)
-	{
-		FAssert(false);
-		return false;
-	}
-	m_iFirstFreeUnit = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
-	m_iFirstFreeProphet = GC.getInfoTypeForString(m_aszExtraXMLforPass3[1]);
-	m_aszExtraXMLforPass3.clear();
-	return true;
 }
 
 void CvTechInfo::getCheckSum(unsigned int& iSum) const
