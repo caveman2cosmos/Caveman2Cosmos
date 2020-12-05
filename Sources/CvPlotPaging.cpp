@@ -225,8 +225,7 @@ void CvPlotPaging::UpdatePaging()
 {
 	// Check if the paging setting changed
 	bool bPagingEnabled = getBugOptionBOOL("MainInterface__EnableGraphicalPaging", true);
-	GC.setGraphicalDetailPagingEnabled(bPagingEnabled);
-	
+
 	if(bPagingEnabled || (!bPagingEnabled && g_bWasGraphicsPagingEnabled))
 	{
 		const CvPlot* lookatPlot = gDLL->getInterfaceIFace()->getLookAtPlot();

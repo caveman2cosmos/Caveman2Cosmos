@@ -476,11 +476,6 @@ void CvPlot::disableGraphicsPaging()
 	pageGraphicsOut();
 }
 
-//bool	CvPlot::shouldHaveFullGraphics() const
-//{
-//	return (!GC.getGraphicalDetailPagingEnabled() || m_iGraphicsPageIndex != -1) && shouldHaveGraphics();
-//}
-
 bool CvPlot::shouldHaveGraphics() const
 {
 	return GC.IsGraphicsInitialized() && isInViewport(); // && isRevealed(GC.getGame().getActiveTeam(), false);

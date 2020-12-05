@@ -150,20 +150,6 @@ public:
 	int getForcedAIAutoPlay(int iPlayer) const;
 	void setForcedAIAutoPlay(int iPlayer, int iNewValue, bool bForced = false);
 
-	// < Water Animals Start >
-	int getWaterAnimalSpawnChance() const;
-	void setWaterAnimalSpawnChance(int iNewValue);
-	void changeWaterAnimalSpawnChance(int iChange);
-
-	int getXResolution() const;
-	void setXResolution(int iNewValue);
-	void changeXResolution(int iChange);
-
-	int getYResolution() const;
-	void setYResolution(int iNewValue);
-	void changeYResolution(int iChange);
-	// < Water Animals End   >
-
 	bool isScoreDirty() const;
 	void setScoreDirty(bool bNewValue);
 

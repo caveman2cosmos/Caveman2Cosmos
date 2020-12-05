@@ -3392,19 +3392,6 @@ bool CvCity::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible)
 		return false;
 	}
 
-	if (
-		GC.getUSE_CANNOT_CREATE_PROJECT_CALLBACK()
-	&&
-		Cy::call<bool>(
-			PYGameModule, "cannotCreate", Cy::Args()
-			// CyCity doesn't have a const only interface
-			<< const_cast<CvCity*>(this)
-			<< eProject
-			<< bContinue
-			<< bTestVisible
-		)
-	) return false;
-
 	return true;
 }
 
