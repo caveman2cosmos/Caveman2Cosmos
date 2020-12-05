@@ -1194,51 +1194,6 @@ void CyGame::setModderGameOption(int /*ModderGameOptionTypes*/ eIndex, int iNewV
 	m_pGame.setModderGameOption((ModderGameOptionTypes)eIndex, iNewValue);
 }
 
-int CyGame::getWaterAnimalSpawnChance() const
-{
-	return m_pGame.getWaterAnimalSpawnChance();
-}
-
-void CyGame::setWaterAnimalSpawnChance(int iNewValue)
-{
-	m_pGame.setWaterAnimalSpawnChance(iNewValue);
-}
-
-void CyGame::changeWaterAnimalSpawnChance(int iNewValue)
-{
-	m_pGame.changeWaterAnimalSpawnChance(iNewValue);
-}
-
-int CyGame::getXResolution() const
-{
-	return m_pGame.getXResolution();
-}
-
-void CyGame::setXResolution(int iNewValue)
-{
-	m_pGame.setXResolution(iNewValue);
-}
-
-void CyGame::changeXResolution(int iNewValue)
-{
-	m_pGame.changeXResolution(iNewValue);
-}
-
-int CyGame::getYResolution() const
-{
-	return m_pGame.getYResolution();
-}
-
-void CyGame::setYResolution(int iNewValue)
-{
-	m_pGame.setYResolution(iNewValue);
-}
-
-void CyGame::changeYResolution(int iNewValue)
-{
-	m_pGame.changeYResolution(iNewValue);
-}
-
 bool CyGame::canEverResearch(int iTech) const
 {
 	return m_pGame.canEverResearch((TechTypes)iTech);

@@ -636,6 +636,7 @@ void CvArea::changePopulationPerPlayer(PlayerTypes eIndex, int iChange)
 	FAssert(getTotalPopulation() >= 0);
 	m_aiPopulationPerPlayer[eIndex] += iChange;
 	FAssert(getPopulationPerPlayer(eIndex) >= 0);
+	changePower(eIndex, iChange);
 }
 
 

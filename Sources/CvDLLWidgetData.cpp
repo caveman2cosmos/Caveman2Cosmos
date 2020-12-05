@@ -3146,10 +3146,10 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 					for (int iI = 0; iI < GC.getBuildInfo(eBuild).getNumTerrainStructs(); iI++)
 					{
-						TerrainTypes eTerrain = GC.getBuildInfo(eBuild).getTerrainStruct(iI).eTerrain;
-						if (eTerrain == pMissionPlot->getTerrainType() || 
-							(eTerrain == GC.getTERRAIN_PEAK() && pMissionPlot->isPeak2(true)) ||
-							(eTerrain == GC.getTERRAIN_HILL() && pMissionPlot->isHills()))
+						const TerrainTypes eTerrain = GC.getBuildInfo(eBuild).getTerrainStruct(iI).eTerrain;
+						if (eTerrain == pMissionPlot->getTerrainType()
+						||  eTerrain == GC.getTERRAIN_PEAK() && pMissionPlot->isAsPeak()
+						||  eTerrain == GC.getTERRAIN_HILL() && pMissionPlot->isHills())
 						{
 							if (GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech != NO_TECH)
 							{

@@ -362,7 +362,7 @@ bool CyPlot::isHills() const
 
 bool CyPlot::isPeak() const
 {
-	return m_pPlot ? m_pPlot->isPeak2(true) : false;
+	return m_pPlot ? m_pPlot->isAsPeak() : false;
 }
 
 void CyPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGraphics)

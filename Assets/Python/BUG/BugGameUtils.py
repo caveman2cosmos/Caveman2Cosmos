@@ -175,7 +175,6 @@ class Dispatcher:
 		self._setDefault("cannotTrain", False)
 		self._setDefault("canConstruct", False)
 		self._setDefault("cannotConstruct", False)
-		self._setDefault("cannotCreate", False)
 		self._setDefault("AI_chooseTech", TechTypes.NO_TECH)
 		self._setDefault("AI_chooseProduction", False)
 		self._setDefault("AI_unitUpdate", False)

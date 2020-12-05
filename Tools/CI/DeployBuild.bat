@@ -78,6 +78,7 @@ if %ERRORLEVEL% neq 0 (
 	goto checkoutLoop
 )
 :OK
+echo Successfull checkout...
 
 :: PACK FPKS ---------------------------------------------------
 :: We copy built FPKs and the fpklive token back from SVN 

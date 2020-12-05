@@ -767,34 +767,14 @@ public:
 	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(DECLARE_IS_METHOD)
 
 	// ***** EXPOSED TO PYTHON *****
-/************************************************************************************************/
-/* MOD_COMPONENT_CONTROL                   08/02/07                            MRGENIE          */
-/*                                                                                              */
-/* Return true/false from                                                                       */
-/************************************************************************************************/
-	bool getDefineBOOL( const char * szName ) const;
-/************************************************************************************************/
-/* MOD_COMPONENT_CONTROL                   END                                                  */
-/************************************************************************************************/
+	bool getDefineBOOL(const char * szName) const;
+	int getDefineINT(const char * szName) const;
+	float getDefineFLOAT(const char * szName) const;
+	const char * getDefineSTRING(const char * szName) const;
 
-	void setGraphicalDetailPagingEnabled(bool bEnabled);
-	bool getGraphicalDetailPagingEnabled() const;
-	int getGraphicalDetailPageInRange() const;
-
-	int getDefineINT( const char * szName ) const;
-	float getDefineFLOAT( const char * szName ) const;
-	const char * getDefineSTRING( const char * szName ) const;
-/************************************************************************************************/
-/* Afforess	                  Start		 08/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	void setDefineINT( const char * szName, int iValue, bool bUpdate = true);
 	void setDefineFLOAT( const char * szName, float fValue, bool bUpdate = true );
 	void setDefineSTRING( const char * szName, const char * szValue, bool bUpdate = true );
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	float getPLOT_SIZE() const;
 
@@ -1201,16 +1181,11 @@ protected:
 	int m_iViewportSizeX;
 	int m_iViewportSizeY;
 	int m_iViewportCenterOnSelectionCenterBorder;
-	bool m_bGraphicalDetailPagingEnabled;
 
 	const char* m_szAlternateProfilSampleName;
 	FProfiler* m_Profiler;		// profiler
 	CvString m_szDllProfileText;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
-/*                                                                                              */
-/* Efficiency, Options                                                                          */
-/************************************************************************************************/
+
 public:
 	int getDefineINT( const char * szName, const int iDefault ) const;
 
@@ -1229,9 +1204,6 @@ public:
 
 protected:
 	bool m_bTECH_DIFFUSION_ENABLE;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	bool m_bSignsCleared;
 	bool m_bIsInPedia;

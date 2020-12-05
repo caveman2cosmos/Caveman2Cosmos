@@ -1602,7 +1602,7 @@ void CvMap::calculateAreas()
 //		{
 //			if (pArea == NULL || pLoopPlot->area() == pArea)
 //			{
-//				if (!pLoopPlot->isPeak2(true) || !bExcludePeaks)
+//				if (!pLoopPlot->isAsPeak() || !bExcludePeaks)
 //				{
 //					if ((iRange == -1 || pRangeFromPlot == NULL) || (plotDistance(pLoopPlot->getX(), pLoopPlot->getY(), pRangeFromPlot->getX(), pRangeFromPlot->getY()) <= iRange))
 //					{
