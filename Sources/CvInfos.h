@@ -298,8 +298,6 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpecialistInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	bool readPass3();
-
 	void getCheckSum(unsigned int& iSum) const;
 
 private:
@@ -5859,7 +5857,6 @@ public:
 	int getFlavorValue(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass3();
 
 	void copyNonDefaults(CvReligionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
@@ -8778,8 +8775,6 @@ public:
 	int getCivic() const;
 	const CvWString getPopupText() const;
 	const CvWString getSecretaryGeneralText() const;
-	const CvString& getCopyPopupText() const;
-	const CvString& getCopySecretaryGeneralText() const;
 
 	std::wstring pyGetSecretaryGeneralText() { return getSecretaryGeneralText(); }
 
@@ -8787,8 +8782,6 @@ public:
 	int getReligionCommerce(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass3();
-
 	void copyNonDefaults(CvVoteSourceInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum) const;
