@@ -939,10 +939,10 @@
 		<Spanish>Construir un [LINK=IMPROVEMENT_SUBMERGED_TOWN]Asentamiento submarino[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SUBMERGED_TOWN]zatopione miasto[\LINK]</Polish>
 	</TEXT>
-	<TEXT>
+	<!-- <TEXT>
 		<Tag>TXT_KEY_BUILD_SUBMERGED_TOWN_DEEP</Tag>
 		<English>Build [LINK=IMPROVEMENT_SUBMERGED_TOWN_DEEP]Submerged Town (Deep)[\LINK]</English>
-	</TEXT>
+	</TEXT> -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SUBURBS</Tag>
 		<English>Build [LINK=IMPROVEMENT_SUBURBS]Suburbs[\LINK]</English>

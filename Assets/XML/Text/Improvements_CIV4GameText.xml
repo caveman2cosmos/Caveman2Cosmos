@@ -1869,7 +1869,7 @@
 		</Spanish>
 		<Polish>Zatopione miasto</Polish>
 	</TEXT>
-	<TEXT>
+	<!-- <TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SUBMERGED_TOWN_DEEP</Tag>
 		<English>Submerged Town (Deep)</English>
 		<French>
@@ -1885,7 +1885,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Zatopione miasto (Deep)</Polish>
-	</TEXT>
+	</TEXT> -->
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SUBMERGED_TOWN_PEDIA</Tag>
 		<English>Underwater habitats are underwater structures in which people can live for extended periods and carry out most of the basic human functions of a 24-hour day, such as working, resting, eating, attending to personal hygiene, and sleeping. In this context 'habitat' is generally used in a narrow sense to mean the interior and immediate exterior of the structure and its fixtures, but not its surrounding marine environment. Most early underwater habitats lacked regenerative systems for air, water, food, electricity, and other resources. However, recently some new underwater habitats allow for these resources to be delivered using pipes, or generated within the habitat, rather than manually delivered.</English>

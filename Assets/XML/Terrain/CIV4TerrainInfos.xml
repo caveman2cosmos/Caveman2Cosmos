@@ -607,7 +607,7 @@
 			</RiverYieldChange>
 			<Yields>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</Yields>
 			<Button>Art/Interface/Buttons/baseterrain/DuneRugged.dds</Button>
 			<FootstepSounds>
