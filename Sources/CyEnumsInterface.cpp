@@ -2456,4 +2456,7 @@ void CyEnumsPythonInterface()
 		.value("UNIT_SORT_POWER", UNIT_SORT_POWER)
 		;
 
+	python::enum_<InfoClassTypes>("InfoClassTypes")
+		.value("BONUS_INFO", BONUS_INFO)
+	;
 }

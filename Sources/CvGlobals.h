@@ -297,6 +297,8 @@ public:
 	void infosReset();
 	void cacheInfoTypes();
 	int getOrCreateInfoTypeForString(const char* szType);
+	void reloadInfo(InfoClassTypes infoClass);
+	void readInfo(InfoClassTypes infoClass, CvXMLLoadUtility* pXml);
 
 	void addDelayedResolution(int* pType, CvString szString);
 	CvString* getDelayedResolution(int* pType);

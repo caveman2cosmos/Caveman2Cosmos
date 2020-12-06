@@ -112,6 +112,8 @@ public:
 	CvUnitArtStyleTypeInfo* getUnitArtStyleTypeInfo(int i) const;
 	CvPropertyInfo* getPropertyInfo(int i) const;
 
+	void reloadInfo(InfoClassTypes infoClass) { GC.reloadInfo(infoClass); }
+
 	int getInfoTypeForString(const char* szInfoType) const;
 /************************************************************************************************/
 /* Afforess	                  Start		 03/18/10                                               */

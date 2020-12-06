@@ -482,6 +482,8 @@ class CvEventManager:
 
 			elif iModifiers == 3:
 
+				GC.reloadInfo(InfoClassTypes.BONUS_INFO)
+
 				if DebugUtils.bDebugMode:
 					if key == InputTypes.KB_U:
 						DebugUtils.putOneOfEveryUnit()

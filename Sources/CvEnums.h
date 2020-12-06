@@ -3420,4 +3420,11 @@ enum PropertyPropagatorTypes
 	NUM_PROPERTYPROPAGATORS
 };
 
+enum InfoClassTypes
+{
+	BONUS_INFO,
+
+	NUM_INFO_CLASS_TYPES
+};
+
 #endif	// CVENUMS_h

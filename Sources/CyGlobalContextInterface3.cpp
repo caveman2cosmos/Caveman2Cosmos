@@ -9,7 +9,6 @@
 void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x)
 {
 	OutputDebugString("Python Extension Module - CyGlobalContextPythonInterface3\n");
-
 	x
 		.def("multiMapsEnabled", &CyGlobalContext::multiMapsEnabled, "bool ()")
 		.def("enableMultiMaps", &CyGlobalContext::enableMultiMaps)
@@ -21,6 +20,8 @@ void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x)
 		.def("updateMaps", &CyGlobalContext::updateMaps, "void ()")
 		.def("initializeMap", &CyGlobalContext::initializeMap, "void (int)")
 		.def("mapInitialized", &CyGlobalContext::mapInitialized, "bool (int)")
+
+		.def("reloadInfo", &CyGlobalContext::reloadInfo)
 
 		.def("getAttitudeInfo", &CyGlobalContext::getAttitudeInfo, python::return_value_policy<python::reference_existing_object>(), "AttitudeInfo (int id)")
 		.def("getMemoryInfo", &CyGlobalContext::getMemoryInfo, python::return_value_policy<python::reference_existing_object>(), "MemoryInfo (int id)")
