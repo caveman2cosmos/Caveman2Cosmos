@@ -2988,9 +2988,10 @@ void cvInternalGlobals::infoTypeFromStringReset()
 	m_infosMap.clear();
 }
 
-void cvInternalGlobals::addToInfosVectors(void *infoVector)
+void cvInternalGlobals::addToInfosVectors(void *infoVector, InfoClassTypes infoClass)
 {
-	m_aInfoVectors.push_back(static_cast<std::vector<CvInfoBase*>*>(infoVector));
+	//m_aInfoVectors.push_back(static_cast<std::vector<CvInfoBase*>*>(infoVector));
+	m_aInfoVectors[infoClass] = static_cast<std::vector<CvInfoBase*>*>(infoVector);
 }
 
 void cvInternalGlobals::infosReset()
@@ -3272,17 +3273,23 @@ unsigned int cvInternalGlobals::getAssetCheckSum()
 
 void cvInternalGlobals::reloadInfo(InfoClassTypes infoClass)
 {
+	FASSERT_BOUNDS(0, NUM_INFO_CLASS_TYPES, infoClass)
+
 	std::vector<CvInfoBase*>& infoVector = *m_aInfoVectors[infoClass];
+	foreach_(const CvInfoBase* info, infoVector)
+	{
+		m_infosMap.erase(info->getType());
+	}
 	deleteInfoArray(infoVector);
 	CvXMLLoadUtility* pXml = new CvXMLLoadUtility();
 	pXml->CreateFXml();
-	readInfo(infoClass, pXml);
+	readInfo(pXml, infoClass);
 	pXml->DestroyFXml();
 	delete pXml;
 	resolveDelayedResolution();
 }
 
-void cvInternalGlobals::readInfo(InfoClassTypes infoClass, CvXMLLoadUtility* pXml)
+void cvInternalGlobals::readInfo(CvXMLLoadUtility* pXml, InfoClassTypes infoClass)
 {
 	FASSERT_BOUNDS(0, NUM_INFO_CLASS_TYPES, infoClass)
 
@@ -3290,9 +3297,6 @@ void cvInternalGlobals::readInfo(InfoClassTypes infoClass, CvXMLLoadUtility* pXm
 	{
 		case BONUS_INFO:
 			pXml->LoadGlobalClassInfo(m_paBonusInfo, "CIV4BonusInfos", "Terrain", L"/Civ4BonusInfos/BonusInfos/BonusInfo", false, &m_BonusInfoReplacements);
-			//m_aInfoVectors.push_back(static_cast<std::vector<CvInfoBase*>*>(m_paBonusInfo));
 			return;
 	}
 }
-
-

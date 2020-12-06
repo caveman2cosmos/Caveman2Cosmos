@@ -293,12 +293,12 @@ public:
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
-	void addToInfosVectors(void *infoVector);
+	void addToInfosVectors(void *infoVector, InfoClassTypes infoClass = BONUS_INFO);
 	void infosReset();
 	void cacheInfoTypes();
 	int getOrCreateInfoTypeForString(const char* szType);
+	void readInfo(CvXMLLoadUtility* pXml, InfoClassTypes infoClass);
 	void reloadInfo(InfoClassTypes infoClass);
-	void readInfo(InfoClassTypes infoClass, CvXMLLoadUtility* pXml);
 
 	void addDelayedResolution(int* pType, CvString szString);
 	CvString* getDelayedResolution(int* pType);
