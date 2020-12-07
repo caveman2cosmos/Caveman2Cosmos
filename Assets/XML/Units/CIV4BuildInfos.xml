@@ -83,43 +83,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildMaglev.dds</Button>
 		</BuildInfo>
-		<!-- Electric Railroad << Gravtrain -->
-		<BuildInfo>
-			<Type>BUILD_ELECTRIC_RAILROAD</Type>
-			<Description>TXT_KEY_BUILD_ELECTRIC_RAILROAD</Description>
-			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
-			<ObsoleteTech>TECH_FRICTIONLESS_FLIGHT</ObsoleteTech>
-			<iTime>500</iTime>
-			<iCost>12</iCost>
-			<bKill>0</bKill>
-			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
-			<EntityEvent>ENTITY_EVENT_RAILROAD</EntityEvent>
-			<HotKey>KB_R</HotKey>
-			<bShiftDown>1</bShiftDown>
-			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/BuildElectricRailroad.dds</Button>
-		</BuildInfo>
-		<!-- Railroad << Vactrain -->
-		<BuildInfo>
-			<Type>BUILD_RAILROAD</Type>
-			<Description>TXT_KEY_BUILD_RAILROAD</Description>
-			<PrereqTech>TECH_RAILROAD</PrereqTech>
-			<ObsoleteTech>TECH_SUPERSONIC_RAILS</ObsoleteTech>
-			<iTime>400</iTime>
-			<iCost>10</iCost>
-			<bKill>0</bKill>
-			<RouteType>ROUTE_RAILROAD</RouteType>
-			<EntityEvent>ENTITY_EVENT_RAILROAD</EntityEvent>
-			<HotKey>KB_R</HotKey>
-			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/BuildRailroad.dds</Button>
-		</BuildInfo>
-		<!-- Highway << Maglev -->
+		<!-- Highway << Vactrain -->
 		<BuildInfo>
 			<Type>BUILD_HIGHWAY</Type>
 			<Description>TXT_KEY_BUILD_HIGHWAY</Description>
 			<PrereqTech>TECH_HIGHWAY_SYSTEMS</PrereqTech>
-			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
+			<ObsoleteTech>TECH_SUPERSONIC_RAILS</ObsoleteTech>
 			<iTime>300</iTime>
 			<iCost>5</iCost>
 			<bKill>0</bKill>
@@ -128,6 +97,37 @@
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildHighway.dds</Button>
+		</BuildInfo>
+		<!-- Electric Railroad << Gravtrain -->
+		<BuildInfo>
+			<Type>BUILD_ELECTRIC_RAILROAD</Type>
+			<Description>TXT_KEY_BUILD_ELECTRIC_RAILROAD</Description>
+			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
+			<ObsoleteTech>TECH_FRICTIONLESS_FLIGHT</ObsoleteTech>
+			<iTime>500</iTime>
+			<iCost>15</iCost>
+			<bKill>0</bKill>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+			<EntityEvent>ENTITY_EVENT_RAILROAD</EntityEvent>
+			<HotKey>KB_R</HotKey>
+			<bShiftDown>1</bShiftDown>
+			<iHotKeyPriority>1</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/Builds/BuildElectricRailroad.dds</Button>
+		</BuildInfo>
+		<!-- Railroad << Maglev -->
+		<BuildInfo>
+			<Type>BUILD_RAILROAD</Type>
+			<Description>TXT_KEY_BUILD_RAILROAD</Description>
+			<PrereqTech>TECH_RAILROAD</PrereqTech>
+			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
+			<iTime>400</iTime>
+			<iCost>10</iCost>
+			<bKill>0</bKill>
+			<RouteType>ROUTE_RAILROAD</RouteType>
+			<EntityEvent>ENTITY_EVENT_RAILROAD</EntityEvent>
+			<HotKey>KB_R</HotKey>
+			<iHotKeyPriority>1</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/Builds/BuildRailroad.dds</Button>
 		</BuildInfo>
 		<!-- Paved Road << Electric Railroad -->
 		<BuildInfo>
@@ -145,12 +145,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildPavedRoad.dds</Button>
 		</BuildInfo>
-		<!-- Road << Railroad -->
+		<!-- Road << [Highway : Doesn't obsolete such that there's always a roadtype that can be built without prereqs] -->
 		<BuildInfo>
 			<Type>BUILD_ROAD</Type>
 			<Description>TXT_KEY_BUILD_ROAD</Description>
 			<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
-			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_HIGHWAY_SYSTEMS</ObsoleteTech> -->
 			<iTime>200</iTime>
 			<iCost>2</iCost>
 			<bKill>0</bKill>
@@ -160,17 +160,34 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildRoad.dds</Button>
 		</BuildInfo>
-		<!-- Mud Path << Highway-->
+		<!-- Mud Path << Railroad -->
 		<BuildInfo>
 			<Type>BUILD_PATH</Type>
 			<Description>TXT_KEY_BUILD_PATH</Description>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
-			<ObsoleteTech>TECH_HIGHWAY_SYSTEMS</ObsoleteTech>
+			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
 			<iTime>150</iTime>
 			<iCost>1</iCost>
 			<bKill>0</bKill>
 			<RouteType>ROUTE_PATH</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
+			<!-- <FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
+			<TerrainStructs>
+				<TerrainStruct>
+					<TerrainType>TERRAIN_DUNES</TerrainType>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
+					<iTime>0</iTime>
+					<iCost>2</iCost>
+				</TerrainStruct>
+			</TerrainStructs> -->
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/dirt.dds</Button>

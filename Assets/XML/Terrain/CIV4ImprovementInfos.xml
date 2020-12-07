@@ -2496,6 +2496,7 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
+			<!-- Road : 0/0/1 -->
 			<RouteYieldChanges>
 				<RouteYieldChange>
 					<RouteType>ROUTE_ROAD</RouteType>
@@ -2514,14 +2515,6 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
@@ -2531,6 +2524,14 @@
 				</RouteYieldChange>
 				<RouteYieldChange>
 					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -2924,41 +2925,10 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
+			<!-- Highway : 0/0/1 -->
 			<RouteYieldChanges>
 				<RouteYieldChange>
-					<RouteType>ROUTE_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3061,14 +3031,6 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
@@ -3078,6 +3040,14 @@
 				</RouteYieldChange>
 				<RouteYieldChange>
 					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -3811,69 +3781,30 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
+			<!-- Maglev : 1/0/0 -->
 			<RouteYieldChanges>
-				<RouteYieldChange>
-					<RouteType>ROUTE_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
 				<RouteYieldChange>
 					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
 						<iYield>1</iYield>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
 					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
 						<iYield>1</iYield>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
 					<RouteType>ROUTE_GRAVITY_TRAIN</RouteType>
 					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
 						<iYield>1</iYield>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
@@ -4111,14 +4042,6 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
@@ -4135,9 +4058,17 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
+					<RouteYields>
+						<iYield>1</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
 					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
-						<iYield>0</iYield>
+						<iYield>1</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
@@ -4145,7 +4076,7 @@
 				<RouteYieldChange>
 					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
-						<iYield>0</iYield>
+						<iYield>1</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
@@ -4153,7 +4084,7 @@
 				<RouteYieldChange>
 					<RouteType>ROUTE_GRAVITY_TRAIN</RouteType>
 					<RouteYields>
-						<iYield>0</iYield>
+						<iYield>1</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
@@ -4161,7 +4092,7 @@
 				<RouteYieldChange>
 					<RouteType>ROUTE_JUMPLANE</RouteType>
 					<RouteYields>
-						<iYield>0</iYield>
+						<iYield>1</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
@@ -5084,27 +5015,6 @@
 			</TechYieldChanges>
 			<RouteYieldChanges>
 				<RouteYieldChange>
-					<RouteType>ROUTE_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
@@ -5702,48 +5612,6 @@
 			</BonusTypeStructs>
 			<RouteYieldChanges>
 				<RouteYieldChange>
-					<RouteType>ROUTE_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_MAGLEV</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_VACTRAIN</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
@@ -6040,27 +5908,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 			<RouteYieldChanges>
-				<RouteYieldChange>
-					<RouteType>ROUTE_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
 				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
@@ -6393,21 +6240,7 @@
 			</TechYieldChanges>
 			<RouteYieldChanges>
 				<RouteYieldChange>
-					<RouteType>ROUTE_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_PAVED_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -6422,6 +6255,13 @@
 				</RouteYieldChange>
 				<RouteYieldChange>
 					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -6740,13 +6580,6 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
@@ -6755,6 +6588,13 @@
 				</RouteYieldChange>
 				<RouteYieldChange>
 					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -7041,27 +6881,6 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 			<RouteYieldChanges>
-				<RouteYieldChange>
-					<RouteType>ROUTE_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
 				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
@@ -7456,28 +7275,6 @@
 			</TechYieldChanges>
 			<RouteYieldChanges>
 				<RouteYieldChange>
-					<RouteType>ROUTE_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
@@ -7490,6 +7287,14 @@
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
@@ -7645,28 +7450,6 @@
 			</BonusTypeStructs>
 			<RouteYieldChanges>
 				<RouteYieldChange>
-					<RouteType>ROUTE_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
@@ -7679,6 +7462,14 @@
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
@@ -7872,14 +7663,6 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
@@ -7892,6 +7675,14 @@
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
@@ -8222,23 +8013,23 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>2</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>2</iYield>
+						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
 					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8369,7 +8160,7 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
+					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8377,15 +8168,15 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD</RouteType>
+					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>2</iYield>
+						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -8517,14 +8308,6 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
@@ -8541,11 +8324,19 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>2</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
 					<RouteType>ROUTE_MAGLEV</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>2</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
@@ -8553,7 +8344,7 @@
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>2</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
@@ -8561,7 +8352,7 @@
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>2</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
@@ -8569,7 +8360,7 @@
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>2</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 			</RouteYieldChanges>
@@ -8822,28 +8613,6 @@
 			</TechYieldChanges>
 			<RouteYieldChanges>
 				<RouteYieldChange>
-					<RouteType>ROUTE_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
@@ -8856,6 +8625,14 @@
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
@@ -8977,28 +8754,6 @@
 			</TechYieldChanges>
 			<RouteYieldChanges>
 				<RouteYieldChange>
-					<RouteType>ROUTE_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
@@ -9011,6 +8766,14 @@
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
@@ -9156,28 +8919,6 @@
 			</TechYieldChanges>
 			<RouteYieldChanges>
 				<RouteYieldChange>
-					<RouteType>ROUTE_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
@@ -9190,6 +8931,14 @@
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
@@ -9349,13 +9098,6 @@
 					</RouteYields>
 				</RouteYieldChange>
 				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
@@ -9364,6 +9106,13 @@
 				</RouteYieldChange>
 				<RouteYieldChange>
 					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
+					<RouteType>ROUTE_HIGHWAY</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -9812,39 +9561,7 @@
 			</TechYieldChanges>
 			<RouteYieldChanges>
 				<RouteYieldChange>
-					<RouteType>ROUTE_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
 					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -9989,30 +9706,6 @@
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
 					<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -10032,16 +9725,16 @@
 					<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
-						<iYield>-2</iYield>
-						<iYield>2</iYield>
+						<iYield>-1</iYield>
+						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_TOURISM</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
-						<iYield>-2</iYield>
-						<iYield>2</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -10405,80 +10098,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<RouteYieldChanges>
-				<RouteYieldChange>
-					<RouteType>ROUTE_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_MAGLEV</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_VACTRAIN</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVITY_TRAIN</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_JUMPLANE</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-			</RouteYieldChanges>
 			<TraitYieldChanges>
 				<TraitYieldChange>
 					<TraitType>TRAIT_NOMAD</TraitType>
@@ -10623,80 +10242,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<RouteYieldChanges>
-				<RouteYieldChange>
-					<RouteType>ROUTE_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_MAGLEV</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_VACTRAIN</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVITY_TRAIN</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_JUMPLANE</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-			</RouteYieldChanges>
 			<TraitYieldChanges>
 				<TraitYieldChange>
 					<TraitType>TRAIT_NOMAD</TraitType>
@@ -10799,80 +10344,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<RouteYieldChanges>
-				<RouteYieldChange>
-					<RouteType>ROUTE_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_PAVED_ROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_MAGLEV</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_VACTRAIN</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVITY_TRAIN</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_JUMPLANE</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-			</RouteYieldChanges>
 			<TraitYieldChanges>
 				<TraitYieldChange>
 					<TraitType>TRAIT_NOMAD</TraitType>
@@ -11978,7 +11449,7 @@
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
-			<!--bOutsideBorders>1</bOutsideBorders-->
+			<!-- <bOutsideBorders>1</bOutsideBorders> -->
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_PLAINS</TerrainType>
@@ -12404,7 +11875,7 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-		<!-- Fishing Camp (Kill) -> (Various) -->
+		<!-- Fishing Camp -> (Various, Wireless Electricity obsolete) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FISHING_CAMP</Type>
 			<Description>TXT_KEY_IMPROVEMENT_FISHING_CAMP</Description>
@@ -12425,6 +11896,9 @@
 				<ImprovementUpgrade>IMPROVEMENT_HARVEST_KELP</ImprovementUpgrade>
 				<ImprovementUpgrade>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementUpgrade>
 				<ImprovementUpgrade>IMPROVEMENT_EXTRACTION_FACILITY</ImprovementUpgrade>
+				<ImprovementUpgrade>IMPROVEMENT_MARINE_PRESERVE</ImprovementUpgrade>
+				<ImprovementUpgrade>IMPROVEMENT_SEA_MILL</ImprovementUpgrade>
+				<ImprovementUpgrade>IMPROVEMENT_TIDAL_HARNESS</ImprovementUpgrade>
 			</AlternativeImprovementUpgradeTypes>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
@@ -12437,18 +11911,6 @@
 				</TerrainMakesValid>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -12488,6 +11950,27 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_LAKE</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<!-- Trench & ocean too far away from shore... also disabled because it also makes this build able to obsolete -->
+				<!-- <TerrainMakesValid>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_TRENCH</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
@@ -12498,15 +11981,7 @@
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LAKE</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
+				</TerrainMakesValid> -->
 			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
@@ -12806,7 +12281,48 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
+					<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<!-- Following valid with Wireless Electricity -->
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_LAKE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -12908,6 +12424,22 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
+			<RouteYieldChanges>
+				<RouteYieldChange>
+					<RouteType>ROUTE_TUNNEL</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
+					<RouteType>ROUTE_JUMPLANE</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>2</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+			</RouteYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12990,6 +12522,22 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
+			<RouteYieldChanges>
+				<RouteYieldChange>
+					<RouteType>ROUTE_TUNNEL</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
+					<RouteType>ROUTE_JUMPLANE</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+			</RouteYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13118,8 +12666,25 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
+			<RouteYieldChanges>
+				<RouteYieldChange>
+					<RouteType>ROUTE_TUNNEL</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+				<RouteYieldChange>
+					<RouteType>ROUTE_JUMPLANE</RouteType>
+					<RouteYields>
+						<iYield>0</iYield>
+						<iYield>2</iYield>
+					</RouteYields>
+				</RouteYieldChange>
+			</RouteYieldChanges>
 		</ImprovementInfo>
-		<!-- Submerged Town (Deep) -->
+		<!-- Submerged Town (Deep); Disabled -->
 		<!-- <ImprovementInfo>
 			<Type>IMPROVEMENT_SUBMERGED_TOWN_DEEP</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SUBMERGED_TOWN_DEEP</Description>
@@ -13185,7 +12750,7 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo> -->
-		<!-- Sea Air Defence -->
+		<!-- Sea Air Defense -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</Description>
@@ -13527,7 +13092,7 @@
 			</TerrainMakesValids>
 			<WorldSoundscapeAudioScript>ASSS_FOREST_SELECT_AMB</WorldSoundscapeAudioScript>
 		</ImprovementInfo>
-		<!-- Indigenous People (Barb Diplomacy placeholder? Inquire with DH) -->
+		<!-- Indigenous People (Barb Diplomacy placeholder? Inquire with DH, not currently used afaik) -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_INDIGENOUS_COMMUNITY</Type>
 			<Description>TXT_KEY_IMPROVEMENT_INDIGENOUS_COMMUNITY</Description>
