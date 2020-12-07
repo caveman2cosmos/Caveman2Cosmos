@@ -23447,26 +23447,17 @@ int CvCity::getTotalBuildingSourcedProperty(PropertyTypes eProperty) const
 
 		int	iValue = 0;
 
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		for (int iI = 0, num = GC.getNumBuildingInfos(); iI < num; iI++)
 		{
-			if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+			if (getNumActiveBuilding((BuildingTypes)iI) > 0 && !isReligiouslyDisabledBuilding((BuildingTypes)iI))
 			{
-				//Team Project (5)
-				if (!isReligiouslyDisabledBuilding((BuildingTypes)iI))
+				foreach_(const CvPropertySource* pSource, GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators()->getSources())
 				{
-					const CvPropertyManipulators* pBuildingPropertyManipulators = GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators();
-
-					const int num = pBuildingPropertyManipulators->getNumSources();
-					for (int iJ = 0; iJ < num; iJ++)
+					//	For now we're only interested in constant sources
+					//	TODO - expand this as buildings add other types
+					if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getProperty() == eProperty)
 					{
-						const CvPropertySource* pSource = pBuildingPropertyManipulators->getSource(iJ);
-
-						//	For now we're only interested in constant sources
-						//	TODO - expand this as buildings add other types
-						if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getProperty() == eProperty)
-						{
-							iValue += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
-						}
+						iValue += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
 					}
 				}
 			}
@@ -23480,12 +23471,8 @@ int CvCity::getTotalBuildingSourcedProperty(PropertyTypes eProperty) const
 
 void unitSources(const CvPropertyManipulators* pMani, PropertyTypes eProperty, const CvCity* pCity, int* iValue)
 {
-	const int iNum = pMani->getNumSources();
-
-	for (int i = 0; i < iNum; i++)
+	foreach_(const CvPropertySource* pSource, pMani->getSources())
 	{
-		const CvPropertySource* pSource = pMani->getSource(i);
-
 		//	Sources that deliver to the city or the plot are both considered since the city plot diffuses
 		//	to the city for most properties anyway
 		if (pSource->getProperty() == eProperty &&
@@ -23523,12 +23510,8 @@ int CvCity::getTotalUnitSourcedProperty(PropertyTypes eProperty) const
 
 void unitHasSources(const CvPropertyManipulators* pMani, bool* bHasSources)
 {
-	const int iNum = pMani->getNumSources();
-
-	for (int i = 0; i < iNum; i++)
+	foreach_(const CvPropertySource* pSource, pMani->getSources())
 	{
-		const CvPropertySource* pSource = pMani->getSource(i);
-
 		//	Sources that deliver to the city or the plot are both considered since the city plot diffuses
 		//	to the city for most properties anyway
 		if ((pSource->getObjectType() == GAMEOBJECT_CITY || pSource->getObjectType() == GAMEOBJECT_PLOT) &&
@@ -23560,10 +23543,8 @@ void CvCity::noteUnitMoved(const CvUnit* pUnit) const
 
 void sumCitySources(const CvPropertyManipulators* pMani, const CvCity* pCity, int* iSum, PropertyTypes eProperty)
 {
-	const int iNum = pMani->getNumSources();
-	for (int i = 0; i < iNum; i++)
+	foreach_(const CvPropertySource* pSource, pMani->getSources())
 	{
-		const CvPropertySource* pSource = pMani->getSource(i);
 		if (pSource->getProperty() == eProperty)
 		{
 			if (pSource->isActive(const_cast<CvGameObjectCity*>(pCity->getGameObject())))
@@ -23577,11 +23558,8 @@ void sumCitySources(const CvPropertyManipulators* pMani, const CvCity* pCity, in
 int CvCity::getGlobalSourcedProperty(PropertyTypes eProperty) const
 {
 	int iSum = 0;
-	const CvPropertyManipulators* pMani = GC.getPropertyInfo(eProperty).getPropertyManipulators();
-	const int iNum = pMani->getNumSources();
-	for (int i = 0; i < iNum; i++)
+	foreach_(const CvPropertySource* pSource, GC.getPropertyInfo(eProperty).getPropertyManipulators()->getSources())
 	{
-		const CvPropertySource* pSource = pMani->getSource(i);
 		if (pSource->isActive(const_cast<CvGameObjectCity*>(getGameObject())))
 		{
 			iSum += pSource->getSourcePredict(getGameObject(), getPropertiesConst()->getValueByProperty(eProperty));
