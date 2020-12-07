@@ -339,7 +339,9 @@ public:
 	std::vector<CvString> m_aszUnitProdModforPass3;
 	std::vector<int> m_aiUnitProdModforPass3;
 
-	bool isReplaceBuilding(int i) const;
+	int getReplacementBuilding(int i) const;
+	short getNumReplacementBuilding() const;
+	bool isReplacementBuilding(int i) const;
 
 	int getImprovementYieldChanges(int i, int j) const;
 
@@ -618,7 +620,6 @@ private:
 	int* m_piBuildingHappinessChanges;
 	int* m_piPrereqNumOfBuilding;
 	bool* m_pbPrereqNotBuilding;
-	bool* m_pbReplaceBuilding;
 	bool* m_pbPrereqOrBuilding;
 
 	CvPropertyManipulators m_PropertyManipulators;
@@ -809,7 +810,6 @@ protected:
 	bool m_bAnyUnitCombatFreeExperience;
 	bool m_bAnyDomainFreeExperience;
 	int* m_piDomainProductionModifier;
-	std::vector<int> m_aiPrereqInCityBuildings;
 	int* m_piFlavorValue;
 	int* m_piImprovementFreeSpecialist;
 	int* m_piVictoryThreshold;
@@ -889,8 +889,10 @@ protected:
 
 	int** m_ppaiLocalSpecialistYieldChange;
 	int** m_ppaiLocalSpecialistCommerceChange;
-	//Alberts2 PrereqBonuses
+
+	std::vector<int> m_aiPrereqInCityBuildings;
 	std::vector<int> m_aePrereqOrBonuses;
+	std::vector<int> m_vReplacementBuilding;
 public:
 	bool m_bAnyLocalSpecialistYieldChanges;
 	bool m_bAnyLocalSpecialistCommerceChanges;

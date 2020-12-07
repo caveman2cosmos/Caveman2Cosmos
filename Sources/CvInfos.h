@@ -298,8 +298,6 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpecialistInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	bool readPass3();
-
 	void getCheckSum(unsigned int& iSum) const;
 
 private:
@@ -434,8 +432,6 @@ public:
 	const PrereqBuilding& getPrereqOrBuilding(int iIndex) const;
 	int getPrereqOrBuildingType(int iIndex) const;
 	int getPrereqOrBuildingMinimumRequired(int iIndex) const;
-
-	bool readPass3();
 
 	bool isGlobal() const;
 
@@ -2288,7 +2284,7 @@ public:
 	bool isDefendAgainstUnit(int i) const;		//Exposed to Python
 
 	int getSupersedingUnit(int i) const;
-	int getNumSupersedingUnits() const;
+	short getNumSupersedingUnits() const;
 	bool isSupersedingUnit(int i) const;		//Exposed to Python
 
 	int getUnitUpgrade(int i) const;			//Exposed to Python
@@ -5859,7 +5855,6 @@ public:
 	int getFlavorValue(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass3();
 
 	void copyNonDefaults(CvReligionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
@@ -8778,8 +8773,6 @@ public:
 	int getCivic() const;
 	const CvWString getPopupText() const;
 	const CvWString getSecretaryGeneralText() const;
-	const CvString& getCopyPopupText() const;
-	const CvString& getCopySecretaryGeneralText() const;
 
 	std::wstring pyGetSecretaryGeneralText() { return getSecretaryGeneralText(); }
 
@@ -8787,8 +8780,6 @@ public:
 	int getReligionCommerce(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass3();
-
 	void copyNonDefaults(CvVoteSourceInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum) const;

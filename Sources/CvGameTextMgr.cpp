@@ -16929,7 +16929,6 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	//	Building Happiness
 	int CounterHappy = -1; //Dummy Value
 	int CounterHealthy = -1; //Dummy Value
-	int XResolution = GC.getGame().getXResolution();
 
 	iLast = 0;
 	iCount = 0;
@@ -16999,6 +16998,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		}
 	}
 
+	// int XResolution = 1024; // Toffer - Well, this is dumb... Commenting it out
 	iLast = 0;
 	int CounterMod = 0;
 	CvWString szUnit;
@@ -17021,11 +17021,12 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 				}
 				iLast = kCivic.getUnitProductionModifier(iI);
 
-				if (XResolution <= 1024 && CounterMod >= 3)
+				if (/*XResolution <= 1024 &&*/ CounterMod >= 3)
 				{
 					CounterMod = 0;
 					iLast = 0;
 				}
+				/*
 				else if (XResolution > 1024 && XResolution < 1600 && CounterMod >= 4)
 				{
 					CounterMod = 0;
@@ -17036,6 +17037,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 					CounterMod = 0;
 					iLast = 0;
 				}
+				*/
 			}
 		}
 	}
@@ -17054,11 +17056,12 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 			{
 				CounterMod++;
 			}
-			if (XResolution <= 1024 && CounterMod >= 3)
+			if (/*XResolution <= 1024 &&*/ CounterMod >= 3)
 			{
 				CounterMod = 0;
 				iLast = 0;
 			}
+			/*
 			else if (XResolution > 1024 && XResolution < 1600 && CounterMod >= 4)
 			{
 				CounterMod = 0;
@@ -17069,6 +17072,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 				CounterMod = 0;
 				iLast = 0;
 			}
+			*/
 		}
 	}
 	CivicTypes eTargetCivic;
@@ -17099,8 +17103,8 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		}
 		bFirst = true;
 
-		int iPlayerCount = 0;
-		int iEnemyCount = 0;
+		//int iPlayerCount = 0;
+		//int iEnemyCount = 0;
 		CvWString szPlayers;
 		CvWString szEnemies;
 		szEnemies.Format(L"");
@@ -17113,13 +17117,15 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 					szPlayers.append(CvWString::format(L", "));
 				szPlayers.append(CvWString::format(L"<link=%s>%s</link> (+%d)", CvWString(GC.getCivilizationInfo(GET_PLAYER((PlayerTypes)iJ).getCivilizationType()).getType()).GetCString(), GC.getCivilizationInfo(GET_PLAYER((PlayerTypes)iJ).getCivilizationType()).getShortDescription(), aiPlayerDiplomacyChanges[iJ]));
 				bFirst = false;
+				/* Toffer - Commenting this silliness out
 				//Resolution Scaling
 				iPlayerCount++;
-				if (iEnemyCount > XResolution / 10)
+				if (iPlayerCount > XResolution / 10) // Toffer - lol, if iPlayerCount > 102...
 				{
 					szPlayers.append(NEWLINE);
-					iEnemyCount = 0;
+					iPlayerCount = 0;
 				}
+				*/
 			}
 			else if (aiPlayerDiplomacyChanges[iJ] < 0)
 			{
@@ -17127,13 +17133,15 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 					szEnemies.append(CvWString::format(L", "));
 				szEnemies.append(CvWString::format(L"<link=%s>%s</link> (%d)", CvWString(GC.getCivilizationInfo(GET_PLAYER((PlayerTypes)iJ).getCivilizationType()).getType()).GetCString(), GC.getCivilizationInfo(GET_PLAYER((PlayerTypes)iJ).getCivilizationType()).getShortDescription(), aiPlayerDiplomacyChanges[iJ]));
 				bEnemiesFirst = false;
+				/* Toffer - Commenting this silliness out
 				//Resolution Scaling
 				iEnemyCount++;
-				if (iEnemyCount > XResolution / 10)
+				if (iEnemyCount > XResolution / 10) // Toffer - lol, if iEnemyCount > 102...
 				{
 					szEnemies.append(NEWLINE);
 					iEnemyCount = 0;
 				}
+				*/
 			}
 		}
 		if (!bFirst)
@@ -23624,18 +23632,16 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	{
 		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
-		if (GC.getGame().canEverConstruct(eLoopBuilding))
+		if (GC.getGame().canEverConstruct(eLoopBuilding)
+		// Toffer - ToDo - Make a "cross reference" cache opposite to the "isReplacementBuilding",
+		//	so that buildings knows what building it replace, not only what building replaces it.
+		&& GC.getBuildingInfo(eLoopBuilding).isReplacementBuilding(eBuilding)
+		&& (pCity == NULL || pCity->getNumBuilding(eLoopBuilding) == 0))
 		{
-			if (GC.getBuildingInfo(eLoopBuilding).isReplaceBuilding(eBuilding))
-			{
-				if ((pCity == NULL) || (pCity->getNumBuilding(eLoopBuilding) == 0))
-				{
-					szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_REPLACED_BY_BUILDING").c_str());
-					szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
-					setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
-					bFirst = false;
-				}
-			}
+			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_REPLACED_BY_BUILDING").c_str());
+			szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
+			setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
+			bFirst = false;
 		}
 	}
 

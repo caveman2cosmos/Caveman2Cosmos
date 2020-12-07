@@ -137,7 +137,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iViewportFocusBorder(0)
 	, m_iViewportCenterOnSelectionCenterBorder(5)
 	, m_szAlternateProfilSampleName("")
-	, m_bGraphicalDetailPagingEnabled(false)
 	, m_paHints()
 	/************************************************************************************************/
 	/* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
@@ -161,20 +160,14 @@ cvInternalGlobals::cvInternalGlobals()
 	/* XML_MODULAR_ART_LOADING                 END                                                  */
 	/************************************************************************************************/
 	, m_bXMLLogging(true)
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
-	/*                                                                                              */
-	/* Efficiency, Options                                                                          */
-	/************************************************************************************************/
+
 	// BBAI Options
 	, m_bBBAI_AIR_COMBAT(false)
 	, m_bBBAI_HUMAN_VASSAL_WAR_BUILD(false)
 
 	// Tech Diffusion
 	, m_bTECH_DIFFUSION_ENABLE(false)
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                       END                                                  */
-	/************************************************************************************************/
+
 	, m_bIsInPedia(false)
 	, m_iLastTypeID(-1)
 	, m_iActiveLandscapeID(0)
@@ -3260,20 +3253,6 @@ bool cvInternalGlobals::isXMLLogging() const
 	return m_bXMLLogging;
 }
 
-void cvInternalGlobals::setGraphicalDetailPagingEnabled(bool bEnabled)
-{
-	m_bGraphicalDetailPagingEnabled = bEnabled;
-}
-
-bool cvInternalGlobals::getGraphicalDetailPagingEnabled() const
-{
-	return m_bGraphicalDetailPagingEnabled;
-}
-
-int cvInternalGlobals::getGraphicalDetailPageInRange() const
-{
-	return std::max(getGame().getXResolution(), getGame().getYResolution())/150;
-}
 
 // calculate asset checksum
 unsigned int cvInternalGlobals::getAssetCheckSum()

@@ -25,12 +25,9 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 			     <PropertySource>
 			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -152,12 +149,9 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 			     <PropertySource>
 			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -279,12 +273,9 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 			     <PropertySource>
 			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -406,12 +397,9 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 			     <PropertySource>
 			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
