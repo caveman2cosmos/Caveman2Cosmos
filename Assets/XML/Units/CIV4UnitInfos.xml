@@ -28318,10 +28318,6 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_JUMPLANE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_AQUATIC_FORCEFIELD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -28452,10 +28448,10 @@ Base XP gained when defending
 					<BuildType>BUILD_WHALING_SHIPS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
-				<Build>
+				<!-- <Build>
 					<BuildType>BUILD_JUMPLANE</BuildType>
 					<bBuild>1</bBuild>
-				</Build>
+				</Build> -->
 				<Build>
 					<BuildType>BUILD_AQUATIC_FORCEFIELD</BuildType>
 					<bBuild>1</bBuild>
