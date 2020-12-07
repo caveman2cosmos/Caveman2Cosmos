@@ -747,6 +747,41 @@ public:
 		}
 	}
 
+	template <class T>
+	void setStructVector(std::vector<T>& container, const wchar_t* szRootTagName)
+	{
+		container.clear();
+		if (TryMoveToXmlFirstChild(szRootTagName))
+		{
+			const int iNumSibs = GetXmlChildrenNumber();
+			CvString szTextVal;
+
+			if (0 < iNumSibs)
+			{
+				if (TryMoveToXmlFirstChild())
+				{
+					for (int j = 0; j < iNumSibs; ++j)
+					{
+						if (GetChildXmlVal(szTextVal))
+						{
+							T pStruct;
+							pStruct.read(this);
+							container.push_back(pStruct);
+
+							MoveToXmlParent();
+						}
+						if (!TryMoveToXmlNextSibling())
+						{
+							break;
+						}
+					}
+					MoveToXmlParent();
+				}
+			}
+			MoveToXmlParent();
+		}
+	}
+
 	// create a hot key from a description
 	CvWString CreateHotKeyFromDescription(const TCHAR* pszHotKey, bool bShift = false, bool bAlt = false, bool bCtrl = false);
 

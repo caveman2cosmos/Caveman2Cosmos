@@ -14631,7 +14631,6 @@ bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 		m_aTerrainStructs.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"TerrainStruct"))
 			{
 				do
@@ -14656,7 +14655,6 @@ bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 		m_aPlaceBonusTypes.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"PlaceBonusType"))
 			{
 				do
@@ -15108,19 +15106,10 @@ m_iAdvancedStartCostIncrease(0),
 m_iValue(0),
 m_iMovementCost(0),
 m_iFlatMovementCost(0),
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 m_bSeaTunnel(false),
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
 m_iPrereqBonus(NO_BONUS),
 m_bAnyPrereqOrBonus(false),
 m_piYieldChange(NULL),
-m_piTechMovementChange(NULL),
 m_piPrereqOrBonuses(NULL),
 m_PropertyManipulators()
 {
@@ -15137,7 +15126,6 @@ m_PropertyManipulators()
 CvRouteInfo::~CvRouteInfo()
 {
 	SAFE_DELETE_ARRAY(m_piYieldChange);
-	SAFE_DELETE_ARRAY(m_piTechMovementChange);
 	SAFE_DELETE_ARRAY(m_piPrereqOrBonuses);
 }
 
@@ -15165,18 +15153,11 @@ int CvRouteInfo::getFlatMovementCost() const
 {
 	return m_iFlatMovementCost;
 }
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 bool CvRouteInfo::isSeaTunnel() const
 {
 	return m_bSeaTunnel;
 }
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
 
 int CvRouteInfo::getPrereqBonus() const
 {
@@ -15187,7 +15168,6 @@ bool CvRouteInfo::isAnyPrereqOrBonus() const
 {
 	return m_bAnyPrereqOrBonus;
 }
-// Arrays
 
 int CvRouteInfo::getYieldChange(int i) const
 {
@@ -15203,7 +15183,29 @@ int* CvRouteInfo::getYieldChangeArray() const
 int CvRouteInfo::getTechMovementChange(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumTechInfos(), i)
-	return m_piTechMovementChange ? m_piTechMovementChange[i] : 0;
+
+	foreach_(const TechMovementChange& pStruct, m_piTechMovementChange)
+	{
+		if (static_cast<TechTypes>(i) == pStruct.ePrereqTech)
+		{
+			return pStruct.iMovementChange;
+		}
+	}
+	return 0;
+}
+
+int CvRouteInfo::getTechFlatMovementChange(int i) const
+{
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), i)
+
+	foreach_(const TechMovementChange& pStruct, m_piTechMovementChange)
+	{
+		if (static_cast<TechTypes>(i) == pStruct.ePrereqTech)
+		{
+			return pStruct.iFlatMovementChange;
+		}
+	}
+	return 0;
 }
 
 int CvRouteInfo::getPrereqOrBonus(int i) const
@@ -15260,7 +15262,7 @@ bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 		SAFE_DELETE_ARRAY(m_piYieldChange);
 	}
 
-	pXML->SetVariableListTagPair(&m_piTechMovementChange, L"TechMovementChanges", GC.getNumTechInfos());
+	pXML->setStructVector(m_piTechMovementChange, L"TechMovementChanges");
 
 	if (pXML->TryMoveToXmlFirstChild(L"PrereqOrBonuses"))
 	{
@@ -15303,7 +15305,6 @@ bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	m_PropertyManipulators.read(pXML);
-
 
 	return true;
 }
@@ -15348,17 +15349,7 @@ void CvRouteInfo::copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXM
 		}
 	}
 
-	for ( int i = 0;  i < GC.getNumTechInfos(); i++)
-	{
-		if (getTechMovementChange(i) == iDefault && pClassInfo->getTechMovementChange(i) != iDefault)
-		{
-			if ( NULL == m_piTechMovementChange )
-			{
-				CvXMLLoadUtility::InitList(&m_piTechMovementChange,GC.getNumTechInfos(),iDefault);
-			}
-			m_piTechMovementChange[i] = pClassInfo->getTechMovementChange(i);
-		}
-	}
+	TechMovementChange::copyNonDefaults(m_piTechMovementChange, pClassInfo->m_piTechMovementChange);
 
 	for ( int i = 0;  i < GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); i++)
 	{
@@ -15387,11 +15378,8 @@ void CvRouteInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_bSeaTunnel);
 	CheckSum(iSum, m_iPrereqBonus);
 	CheckSum(iSum, m_bAnyPrereqOrBonus);
-
-	// Arrays
-
 	CheckSum(iSum, m_piYieldChange, NUM_YIELD_TYPES);
-	CheckSum(iSum, m_piTechMovementChange, GC.getNumTechInfos());
+	CallGetCheckSum(iSum, m_piTechMovementChange);
 	CheckSum(iSum, m_piPrereqOrBonuses, GC.getNUM_ROUTE_PREREQ_OR_BONUSES());
 
 	m_PropertyManipulators.getCheckSum(iSum);

@@ -70,6 +70,15 @@ inline void CheckSumC(unsigned int& iSum, const Cont& kCont)
 	}
 }
 
+template<typename Cont>
+inline void CallGetCheckSum(uint32_t& iSum, const Cont& kCont)
+{
+	for (Cont::const_iterator it = kCont.begin(); it != kCont.end(); ++it)
+	{
+		(*it).getCheckSum(iSum);
+	}
+}
+
 #define CheckSumI(A, B, C) CheckSum(A, C, B)
 
 #endif

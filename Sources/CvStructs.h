@@ -7,6 +7,7 @@
 
 #include "CvString.h"
 
+class CvXMLLoadUtility;
 class BoolExpr;
 
 // XXX these should not be in the DLL per se (if the user changes them, we are screwed...)
@@ -1103,5 +1104,17 @@ struct DllExport CvWBData
 	CvString m_strButton;
 };
 
+struct TechMovementChange
+{
+public:
+	void read(CvXMLLoadUtility* pXML);
+	void getCheckSum(uint32_t& iSum) const;
+	static void copyNonDefaults(std::vector<TechMovementChange>& target, const std::vector<TechMovementChange>& source);
+
+//protected:
+	TechTypes ePrereqTech;
+	int iMovementChange;
+	int iFlatMovementChange;
+};
 
 #endif	// CVSTRUCTS_H

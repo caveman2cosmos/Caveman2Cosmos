@@ -4209,6 +4209,7 @@ public:
 	int getYieldChange(int i) const;
 	int* getYieldChangeArray() const;
 	int getTechMovementChange(int i) const;
+	int getTechFlatMovementChange(int i) const;
 	int getPrereqOrBonus(int i) const;
 	bool isAnyPrereqOrBonus() const;
 
@@ -4242,7 +4243,7 @@ protected:
 
 	// Arrays
 	int* m_piYieldChange;
-	int* m_piTechMovementChange;
+	std::vector<TechMovementChange> m_piTechMovementChange;
 	int* m_piPrereqOrBonuses;
 };
 

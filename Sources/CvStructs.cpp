@@ -13,6 +13,8 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
+#include "CvXMLLoadUtility.h"
+#include "CheckSum.h"
 
 int EventTriggeredData::getID() const 
 { 
@@ -798,6 +800,47 @@ PBGameSetupData::PBGameSetupData()
 	for (int i = 0; i < NUM_MPOPTION_TYPES; i++)
 	{
 		abMPOptions.push_back(false);
+	}
+}
+
+void TechMovementChange::read(CvXMLLoadUtility* pXML)
+{
+	CvString szTextVal;
+	pXML->GetXmlVal(szTextVal);
+	ePrereqTech = static_cast<TechTypes>(GC.getInfoTypeForString(szTextVal));
+	pXML->GetNextXmlVal(&iMovementChange);
+	pXML->GetNextXmlVal(&iFlatMovementChange);
+}
+
+void TechMovementChange::getCheckSum(uint32_t& iSum) const
+{
+	CheckSum(iSum, ePrereqTech);
+	CheckSum(iSum, iMovementChange);
+	CheckSum(iSum, iFlatMovementChange);
+}
+
+void TechMovementChange::copyNonDefaults(std::vector<TechMovementChange>& target, const std::vector<TechMovementChange>& source)
+{
+	foreach_(const TechMovementChange& sourceStruct, source)
+	{
+		bool bNotFound = true;
+		const TechTypes sourceTech = sourceStruct.ePrereqTech;
+		foreach_(const TechMovementChange& targetStruct, target)
+		{
+			if (sourceTech == targetStruct.ePrereqTech)
+			{
+				bNotFound = false;
+				break;
+			}
+		}
+		if (bNotFound)
+		{
+			TechMovementChange newStruct;
+			newStruct.ePrereqTech = sourceTech;
+			newStruct.iMovementChange = sourceStruct.iMovementChange;
+			newStruct.iFlatMovementChange = sourceStruct.iFlatMovementChange;
+			target.push_back(newStruct);
+		}
 	}
 }
 
