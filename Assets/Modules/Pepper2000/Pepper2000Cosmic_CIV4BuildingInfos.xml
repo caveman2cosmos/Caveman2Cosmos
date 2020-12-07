@@ -19,12 +19,9 @@
 				<iYield>1000</iYield>
 				<iYield>0</iYield>
 			</YieldChanges>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_HYPESPACE_PORTAL</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPESPACE_PORTAL</BuildingType>
+			</ReplacementBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
@@ -2406,12 +2403,9 @@
 			<CommerceChanges>
 				<iCommerce>-50</iCommerce>
 			</CommerceChanges>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_STAR_CANNON</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_STAR_CANNON</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
 			</PrereqInCityBuildings>

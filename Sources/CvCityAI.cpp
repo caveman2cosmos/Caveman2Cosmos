@@ -4412,12 +4412,12 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 	{
 		for (std::vector<BuildingTypes>::const_iterator itr = possibleBuildings.begin(); itr != possibleBuildings.end(); ++itr)
 		{
-			BuildingTypes building = *itr;
-			FAssertMsg(building != NO_BUILDING, "AI_scoreBuildingsFromListThreshold isn't given a valid possibleBuildings list");
+			const BuildingTypes eBuilding = *itr;
+			FAssertMsg(eBuilding != NO_BUILDING, "AI_scoreBuildingsFromListThreshold isn't given a valid possibleBuildings list");
 
-			if (GC.getBuildingInfo(building).isCapital())
+			if (GC.getBuildingInfo(eBuilding).isCapital())
 			{
-				scoredBuildings.push_back(ScoredBuilding(building, -getProductionTurnsLeft(building, 0)));
+				scoredBuildings.push_back(ScoredBuilding(eBuilding, -getProductionTurnsLeft(eBuilding, 0)));
 			}
 		}
 
@@ -4434,16 +4434,16 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 	for (std::vector<BuildingTypes>::const_iterator itr = possibleBuildings.begin(); itr != possibleBuildings.end(); ++itr)
 	{
-		BuildingTypes building = *itr;
-		FAssertMsg(building != NO_BUILDING, "AI_scoreBuildingsFromListThreshold isn't given a valid possibleBuildings list");
+		const BuildingTypes eBuilding = *itr;
+		FAssertMsg(eBuilding != NO_BUILDING, "AI_scoreBuildingsFromListThreshold isn't given a valid possibleBuildings list");
 
-		const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(building);
+		const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
 
 		if (
 			// We are not exceeding max buildings
-			getNumBuilding(building) < GC.getCITY_MAX_NUM_BUILDINGS()
+			getNumBuilding(eBuilding) < GC.getCITY_MAX_NUM_BUILDINGS()
 		&&	(
-				!isLimitedWonder(building) // Building is not a wonder
+				!isLimitedWonder(eBuilding) // Building is not a wonder
 			|| ( // Or production isn't automated or we aren't considering a wonder (we don't want automated production producing wonders)
 					!isProductionAutomated()
 				&&	(
@@ -4456,7 +4456,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 		// adviser is not one we are ignoring
 		&& (eIgnoreAdvisor == NO_ADVISOR || buildingInfo.getAdvisorType() != eIgnoreAdvisor)
 		// We can actually build the building
-		&& canConstruct(building)
+		&& canConstruct(eBuilding)
 		// Automated production doesn't look at buildings with prerequisites?
 		&& (!isProductionAutomated() || buildingInfo.getPrereqNumOfBuilding(NO_BUILDING) <= 0)
 		)
@@ -4470,7 +4470,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			// invalidate the building if it doesn't influence the property we are interested in
 			|| AI_buildingInfluencesProperty(this, buildingInfo, eProperty))
 			{
-				iValue = AI_buildingValueThreshold(building, iFocusFlags, iMinThreshold, bMaximizeFlaggedValue);
+				iValue = AI_buildingValueThreshold(eBuilding, iFocusFlags, iMinThreshold, bMaximizeFlaggedValue);
 
 				// If the building also gives a free building then factor that in as well
 				const BuildingTypes eFreeBuilding = static_cast<BuildingTypes>(buildingInfo.getFreeBuilding());
@@ -4478,7 +4478,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				{
 					// Add value of the free building taking into account our focus, and scale it by the number of cities that don't
 					// yet have the building.
-					iValue += (AI_buildingValue(eFreeBuilding, iFocusFlags) * (player.getNumCities() - player.getBuildingCountPlusMaking(building)));
+					iValue += (AI_buildingValue(eFreeBuilding, iFocusFlags) * (player.getNumCities() - player.getBuildingCountPlusMaking(eBuilding)));
 				}
 
 				if (gCityLogLevel > 3)
@@ -4492,21 +4492,22 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 					PROFILE("CvCityAI::AI_bestBuildingThreshold.Replacement");
 
 					// Look for building it replaces
-					// TODO OPT: change replace building to vector instead of mask
 					for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 					{
-						const BuildingTypes eJLoopBuilding = static_cast<BuildingTypes>(iJ);
-						if (GC.getBuildingInfo(eJLoopBuilding).isReplaceBuilding(building)
+						const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iJ);
+						// Toffer - ToDo - Make a "cross reference" cache opposite to the "isReplacementBuilding",
+						//	so that buildings knows what building it replace, not only what building replaces it.
+						if (GC.getBuildingInfo(eBuildingX).isReplacementBuilding(eBuilding)
 						// Only care if we actually have the building
-						&& getNumBuilding(eJLoopBuilding) > 0)
+						&& getNumBuilding(eBuildingX) > 0)
 						{
 							PROFILE("AI_bestBuildingThreshold.Replace");
 
-							iValue -= AI_buildingValueThreshold(eJLoopBuilding, iFocusFlags, iMinThreshold, bMaximizeFlaggedValue, true);
+							iValue -= AI_buildingValueThreshold(eBuildingX, iFocusFlags, iMinThreshold, bMaximizeFlaggedValue, true);
 
 							if (gCityLogLevel > 3)
 							{
-								logBBAI("    replaces %S - reduce value to %d", GC.getBuildingInfo(eJLoopBuilding).getDescription(), iValue);
+								logBBAI("    replaces %S - reduce value to %d", GC.getBuildingInfo(eBuildingX).getDescription(), iValue);
 							}
 						}
 					}
@@ -4521,8 +4522,8 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				// TODO OPT: convert the masks to vectors so this look is faster
 				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 				{
-					if ((GC.getBuildingInfo((BuildingTypes)iJ).isPrereqInCityBuilding(building) || GC.getBuildingInfo((BuildingTypes)iJ).isPrereqOrBuilding(building))
-					&& getNumBuilding((BuildingTypes)iJ) == 0 && canConstructInternal((BuildingTypes)iJ, false, false, false, true, building))
+					if ((GC.getBuildingInfo((BuildingTypes)iJ).isPrereqInCityBuilding(eBuilding) || GC.getBuildingInfo((BuildingTypes)iJ).isPrereqOrBuilding(eBuilding))
+					&& getNumBuilding((BuildingTypes)iJ) == 0 && canConstructInternal((BuildingTypes)iJ, false, false, false, true, eBuilding))
 					{
 						PROFILE("AI_bestBuildingThreshold.Enablement");
 
@@ -4565,7 +4566,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			{
 				FAssert((MAX_INT / 100) >= iValue);
 				// If its a wonder and this city is rated high for production relative to our other cities, then we will bump up the score
-				if (isWorldWonder(building) && iProductionRank <= std::min(3, (player.getNumCities() + 2) / 3))
+				if (isWorldWonder(eBuilding) && iProductionRank <= std::min(3, (player.getNumCities() + 2) / 3))
 				{
 					int wonderScore = bAsync ?
 						GC.getASyncRand().get(player.getWonderConstructRand(), "Wonder Construction Rand ASYNC")
@@ -4590,15 +4591,15 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				iValue /= 100;
 
 				// Add on how much this building is already constructed (could be partially constructed already)
-				iValue += getBuildingProduction(building);
+				iValue += getBuildingProduction(eBuilding);
 
 				// Factor in how many turns are left to complete this building
-				const int iTurnsLeft = getProductionTurnsLeft(building, 0);
+				const int iTurnsLeft = getProductionTurnsLeft(eBuilding, 0);
 
 				// Apply final checks based on how many turns to build
 				if (iMaxTurns <= 0
 				|| iTurnsLeft <= GC.getGame().AI_turnsPercent(iMaxTurns, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent())
-				|| AI_canRushBuildingConstruction(building))
+				|| AI_canRushBuildingConstruction(eBuilding))
 				{
 					FAssert(MAX_INT / 100 >= iValue);
 					// Adjust the score based on the turns to complete the building, more turns means lower score
@@ -4606,7 +4607,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 					iValue = std::max(1, iValue * 100 / (iTurnsLeft + 3));
 
 					// Add to our list of potential buildings to return later
-					scoredBuildings.push_back(ScoredBuilding(building, iValue));
+					scoredBuildings.push_back(ScoredBuilding(eBuilding, iValue));
 				}
 			}
 		}
@@ -4871,13 +4872,13 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 			return 0;
 		}
 
-		if ( !bIgnoreCanBuildReplacement )
+		if (!bIgnoreCanBuildReplacement)
 		{
 			PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Replacements");
 
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			for (int iI = 0; iI < kBuilding.getNumReplacementBuilding(); ++iI)
 			{
-				if (kBuilding.isReplaceBuilding((BuildingTypes)iI) && canConstruct((BuildingTypes)iI))
+				if (canConstruct((BuildingTypes)kBuilding.getReplacementBuilding(iI)))
 				{
 					return 0;
 				}
@@ -14796,7 +14797,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				const BuildingTypes eType = static_cast<BuildingTypes>(iJ);
 
 				if (buildingsToCalculate.find(eType) == buildingsToCalculate.end()
-				&& GC.getBuildingInfo(eType).isReplaceBuilding(iBuilding)
+				// Toffer - ToDo - Make a "cross reference" cache opposite to the "isReplacementBuilding",
+				//	so that buildings knows what building it replace, not only what building replaces it.
+				&& GC.getBuildingInfo(eType).isReplacementBuilding(iBuilding)
 				&& getNumBuilding(eType) > 0)
 				{
 					buildingsToCalculate.insert(eType);
@@ -14862,9 +14865,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 		bool bSkipBuilding = false;
 
-		for (int iI = 0; iI < iNumBuildings; iI++)
+		for (int iI = 0; iI < kBuilding.getNumReplacementBuilding(); ++iI)
 		{
-			if (kBuilding.isReplaceBuilding((BuildingTypes)iI) && canConstruct((BuildingTypes)iI))
+			if (canConstruct((BuildingTypes)kBuilding.getReplacementBuilding(iI)))
 			{
 				bSkipBuilding = true;
 				break;
