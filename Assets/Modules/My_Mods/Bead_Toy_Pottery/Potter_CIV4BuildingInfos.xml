@@ -208,12 +208,9 @@
 			</PrereqOrBuildings-->
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PORCELAIN_FACTORY</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings-->
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PORCELAIN_FACTORY</BuildingType>
+			</ReplacementBuildings-->
 			<!-- Construction cost -->
 			<iCost>261</iCost>
 			<!-- Main effects -->
@@ -289,16 +286,10 @@
 			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings-->
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
+			</ReplacementBuildings-->
 			<!-- Construction cost -->
 			<iCost>125</iCost>
 			<!-- Main effects -->
@@ -406,12 +397,9 @@
 			</PrereqAmountBuildings>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings-->
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
+			</ReplacementBuildings-->
 			<!-- Construction cost -->
 			<iCost>332</iCost>
 			<!-- Main effects -->
@@ -571,12 +559,9 @@
 			</PrereqOrBuildings-->
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_TERRACOTTA_FACTORY</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings-->
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TERRACOTTA_FACTORY</BuildingType>
+			</ReplacementBuildings-->
 			<!-- Construction cost -->
 			<iCost>168</iCost>
 			<!-- Main effects -->

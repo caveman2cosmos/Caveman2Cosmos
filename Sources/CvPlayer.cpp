@@ -28618,21 +28618,17 @@ int CvPlayer::getBuildingCount(BuildingTypes eBuilding, bool bUpgrades) const
 
 int CvPlayer::getBuildingCountWithUpgrades(BuildingTypes eBuilding) const
 {
-	int iCount = getBuildingCount(eBuilding);
-	if (eBuilding != NO_BUILDING)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
+
+	if (eBuilding == NO_BUILDING)
 	{
-		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-		if (kBuilding.isReplaceBuilding(NO_BUILDING))
-		{
-			const int numNumBuildingInfos = GC.getNumBuildingInfos();
-			for (int iI = 0; iI < numNumBuildingInfos; iI++)
-			{
-				if (kBuilding.isReplaceBuilding(iI))
-				{
-					iCount += getBuildingCount((BuildingTypes)iI);
-				}
-			}
-		}
+		return 0;
+	}
+	int iCount = getBuildingCount(eBuilding);
+	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
+	for (int iI = 0; iI < building.getNumReplacementBuilding(); ++iI)
+	{
+		iCount += getBuildingCount((BuildingTypes)building.getReplacementBuilding(iI));
 	}
 	return iCount;
 }

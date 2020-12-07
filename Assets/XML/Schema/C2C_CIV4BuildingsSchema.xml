@@ -990,6 +990,7 @@
 		<element type="BuildingHappinessChanges" minOccurs="0"/>
 		<element type="PrereqAmountBuildings" minOccurs="0"/>
 		<element type="PrereqInCityBuildings" minOccurs="0"/>
+		<element type="ReplacementBuildings" minOccurs="0"/>
 		<element type="SpecialistYieldChanges" minOccurs="0"/>
 		<element type="BonusYieldModifiers" minOccurs="0"/>
 		<element type="ImprovementFreeSpecialists" minOccurs="0"/>
@@ -1226,13 +1227,8 @@
 	<ElementType name="PrereqNotBuildings" content="eltOnly">
 		<element type="PrereqNotBuilding" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bReplace" content="textOnly" dt:type="boolean"/>
-	<ElementType name="ReplaceBuilding" content="eltOnly">
-		<element type="BuildingType"/>
-		<element type="bReplace"/>
-	</ElementType>
-	<ElementType name="ReplaceBuildings" content="eltOnly">
-		<element type="ReplaceBuilding" minOccurs="0"/>
+	<ElementType name="ReplacementBuildings" content="eltOnly">
+		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="UnitType" content="textOnly"/>
 	<ElementType name="UnitProductionModifier" content="eltOnly">

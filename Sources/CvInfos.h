@@ -2284,7 +2284,7 @@ public:
 	bool isDefendAgainstUnit(int i) const;		//Exposed to Python
 
 	int getSupersedingUnit(int i) const;
-	int getNumSupersedingUnits() const;
+	short getNumSupersedingUnits() const;
 	bool isSupersedingUnit(int i) const;		//Exposed to Python
 
 	int getUnitUpgrade(int i) const;			//Exposed to Python

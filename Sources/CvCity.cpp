@@ -3017,30 +3017,29 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 				return false;
 			}
 
-			if (isNPC() && isLimitedWonder(eBuilding))
+			if (isLimitedWonder(eBuilding))
 			{
-				return false;
-			}
-
-			if (!kBuilding.isNoLimit())
-			{
-				if (isWorldWonder(eBuilding))
+				if (isNPC())
 				{
-					if (isWorldWondersMaxed())
-					{
-						return false;
-					}
+					return false;
 				}
-				else if (isTeamWonder(eBuilding))
+				if (!kBuilding.isNoLimit())
 				{
-					if (isTeamWondersMaxed())
+					if (isWorldWonder(eBuilding))
 					{
-						return false;
+						if (isWorldWondersMaxed())
+						{
+							return false;
+						}
 					}
-				}
-				else if (isNationalWonder(eBuilding))
-				{
-					if (isNationalWondersMaxed())
+					else if (isTeamWonder(eBuilding))
+					{
+						if (isTeamWondersMaxed())
+						{
+							return false;
+						}
+					}
+					else if (isNationalWonder(eBuilding) && isNationalWondersMaxed())
 					{
 						return false;
 					}
@@ -3184,27 +3183,23 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	const int numBuildingInfos = GC.getNumBuildingInfos();
 	if (!bExposed)
 	{
-		if (kBuilding.getPrereqVicinityBonus() != NO_BONUS)
+		if (kBuilding.getPrereqVicinityBonus() != NO_BONUS
+		&& !hasVicinityBonus((BonusTypes)kBuilding.getPrereqVicinityBonus()))
 		{
-			if (!hasVicinityBonus((BonusTypes)kBuilding.getPrereqVicinityBonus()))
+			if (probabilityEverConstructable != NULL)
 			{
-				if (probabilityEverConstructable != NULL)
-				{
-					*probabilityEverConstructable = 5;
-				}
-				return false;
+				*probabilityEverConstructable = 5;
 			}
+			return false;
 		}
-		if (kBuilding.getPrereqRawVicinityBonus() != NO_BONUS)
+		if (kBuilding.getPrereqRawVicinityBonus() != NO_BONUS
+		&& !hasRawVicinityBonus((BonusTypes)kBuilding.getPrereqRawVicinityBonus()))
 		{
-			if (!hasRawVicinityBonus((BonusTypes)kBuilding.getPrereqRawVicinityBonus()))
+			if (probabilityEverConstructable != NULL)
 			{
-				if (probabilityEverConstructable != NULL)
-				{
-					*probabilityEverConstructable = 5;
-				}
-				return false;
+				*probabilityEverConstructable = 5;
 			}
+			return false;
 		}
 		//Hide Buildings that shouldn't appear in the early game and require other buildings
 		const bool bTest = (
@@ -3281,20 +3276,16 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 		}
 	}
 
-	if (!bAffliction && kBuilding.isReplaceBuilding(NO_BUILDING))
+	if (!bAffliction)
 	{
 		//Can not construct replaced buildings.
-		for (int iI = 0; iI < numBuildingInfos; iI++)
+		for (int iI = 0; iI < kBuilding.getNumReplacementBuilding(); ++iI)
 		{
-			if (
-				kBuilding.isReplaceBuilding(iI)
-			&&
-				(
-					getNumActiveBuilding((BuildingTypes)iI) > 0
-				||	GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_REPLACED_BUILDINGS)
-				&&	canConstruct((BuildingTypes)iI, true, false, false, true)
-				)
-			) return false;
+			if (getNumActiveBuilding((BuildingTypes)kBuilding.getReplacementBuilding(iI)) > 0
+			|| GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_REPLACED_BUILDINGS))
+			{
+				return false;
+			}
 		}
 	}
 
@@ -7163,22 +7154,24 @@ void CvCity::calculateBuildingReplacements() const
 
 	memset(m_paiBuildingReplaced, 0, sizeof(int) * GC.getNumBuildingInfos());
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	// Toffer - ToDo - Make a "cross reference" cache opposite to the "isReplacementBuilding",
+	//	so that buildings knows what building it replace, not only what building replaces it.
+	for (int iReplaced = 0; iReplaced < GC.getNumBuildingInfos(); iReplaced++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+		const CvBuildingInfo& building = GC.getBuildingInfo((BuildingTypes)iReplaced);
+
+		for (int iI = 0; iI < building.getNumReplacementBuilding(); ++iI)
 		{
-			for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+			const int iReplacement = building.getReplacementBuilding(iI);
+			if (getNumActiveBuilding((BuildingTypes)iReplacement) > 0)
 			{
-				if (GC.getBuildingInfo((BuildingTypes)iJ).isReplaceBuilding((BuildingTypes)iI))
+				// Cope with old format saves where the calculation will not previously
+				// have been done and so the effects need to be processed
+				if (!m_bHasCalculatedBuildingReplacement && getNumBuilding((BuildingTypes)iReplacement) > 0)
 				{
-					//	Cope with old format saves where the calculation will not previously
-					//	have been done and so the effects need to be processed
-					if (!m_bHasCalculatedBuildingReplacement && getNumBuilding((BuildingTypes)iJ) > 0)
-					{
-						(const_cast<CvCity*>(this))->processBuilding((BuildingTypes)iJ, -1);
-					}
-					m_paiBuildingReplaced[iJ]++;
+					(const_cast<CvCity*>(this))->processBuilding((BuildingTypes)iReplaced, -1);
 				}
+				m_paiBuildingReplaced[iReplaced]++;
 			}
 		}
 	}
@@ -7191,7 +7184,9 @@ void CvCity::changeBuildingReplacementCount(BuildingTypes eBuilding, bool bAdd)
 
 	for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 	{
-		if (GC.getBuildingInfo((BuildingTypes)iJ).isReplaceBuilding(eBuilding))
+		// Toffer - ToDo - Make a "cross reference" cache opposite to the "isReplacementBuilding",
+		//	so that buildings knows what building it replace, not only what building replaces it.
+		if (GC.getBuildingInfo((BuildingTypes)iJ).isReplacementBuilding(eBuilding))
 		{
 			// During modifier recalculation don't count buildings we haven't yet processed as present
 			const bool bHad = (m_recalcBuilding >= iJ && getNumBuilding((BuildingTypes)iJ) > 0);
@@ -7876,23 +7871,26 @@ int CvCity::getAdditionalGreatPeopleRateByBuilding(BuildingTypes eBuilding)
 
 	const int iRate = getBaseGreatPeopleRate();
 	const int iModifier = getTotalGreatPeopleRateModifier();
-	int iExtra = ((iRate + getAdditionalBaseGreatPeopleRateByBuilding(eBuilding)) * (iModifier + getAdditionalGreatPeopleRateModifierByBuilding(eBuilding)) / 100) - (iRate * iModifier / 100);
-
+	int iExtra =
+	(
+		(iRate + getAdditionalBaseGreatPeopleRateByBuilding(eBuilding))
+		*
+		(iModifier + getAdditionalGreatPeopleRateModifierByBuilding(eBuilding))
+		/
+		100
+		- 
+		iRate * iModifier / 100
+	);
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+		if (getNumActiveBuilding((BuildingTypes)iI) > 0 && !isReligiouslyDisabledBuilding((BuildingTypes)iI)
+		// Toffer - ToDo - Make a "cross reference" cache opposite to the "isReplacementBuilding",
+		//	so that buildings knows what building it replace, not only what building replaces it.
+		&& GC.getBuildingInfo((BuildingTypes)iI).isReplacementBuilding(eBuilding))
 		{
-			//Team Project (5)
-			if (!isReligiouslyDisabledBuilding((BuildingTypes)iI))
-			{
-				if (GC.getBuildingInfo((BuildingTypes)iI).isReplaceBuilding(eBuilding))
-				{
-					iExtra -= getAdditionalGreatPeopleRateByBuilding((BuildingTypes)iI);
-				}
-			}
+			iExtra -= getAdditionalGreatPeopleRateByBuilding((BuildingTypes)iI);
 		}
 	}
-
 	return iExtra;
 }
 
@@ -9748,12 +9746,12 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 	}
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+		if (getNumActiveBuilding((BuildingTypes)iI) > 0
+		// Toffer - ToDo - Make a "cross reference" cache opposite to the "isReplacementBuilding",
+		//	so that buildings knows what building it replace, not only what building replaces it.
+		&& GC.getBuildingInfo((BuildingTypes)iI).isReplacementBuilding(eBuilding))
 		{
-			if (GC.getBuildingInfo((BuildingTypes)iI).isReplaceBuilding(eBuilding))
-			{
-				addGoodOrBad(-getBuildingHappiness((BuildingTypes)iI), iGood, iBad);
-			}
+			addGoodOrBad(-getBuildingHappiness((BuildingTypes)iI), iGood, iBad);
 		}
 	}
 
@@ -9925,16 +9923,12 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 	}
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+		if (getNumActiveBuilding((BuildingTypes)iI) > 0 && !isReligiouslyDisabledBuilding((BuildingTypes)iI)
+		// Toffer - ToDo - Make a "cross reference" cache opposite to the "isReplacementBuilding",
+		//	so that buildings knows what building it replace, not only what building replaces it.
+		&& GC.getBuildingInfo((BuildingTypes)iI).isReplacementBuilding(eBuilding))
 		{
-			//Team Project (5)
-			if (!isReligiouslyDisabledBuilding((BuildingTypes)iI))
-			{
-				if (GC.getBuildingInfo((BuildingTypes)iI).isReplaceBuilding(eBuilding))
-				{
-					addGoodOrBad(-getBuildingHealth((BuildingTypes)iI), iGood, iBad);
-				}
-			}
+			addGoodOrBad(-getBuildingHealth((BuildingTypes)iI), iGood, iBad);
 		}
 	}
 
@@ -11621,13 +11615,22 @@ int CvCity::getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuild
 {
 	const int iRate = getModifiedBaseYieldRate(eIndex);
 	const int iModifier = getBaseYieldRateModifier(eIndex);
-	int iExtra = (iRate + getAdditionalBaseYieldRateByBuilding(eIndex, eBuilding)) * (iModifier + getAdditionalYieldRateModifierByBuilding(eIndex, eBuilding, bFilter)) / 100 - iRate * iModifier / 100;
-
+	int iExtra = 
+	(
+		(iRate + getAdditionalBaseYieldRateByBuilding(eIndex, eBuilding))
+		*
+		(iModifier + getAdditionalYieldRateModifierByBuilding(eIndex, eBuilding, bFilter))
+		/
+		100
+		-
+		iRate * iModifier / 100
+	);
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0
-		&& !isReligiouslyDisabledBuilding((BuildingTypes)iI)
-		&& GC.getBuildingInfo((BuildingTypes)iI).isReplaceBuilding(eBuilding))
+		if (getNumActiveBuilding((BuildingTypes)iI) > 0 && !isReligiouslyDisabledBuilding((BuildingTypes)iI)
+		// Toffer - ToDo - Make a "cross reference" cache opposite to the "isReplacementBuilding",
+		//	so that buildings knows what building it replace, not only what building replaces it.
+		&& GC.getBuildingInfo((BuildingTypes)iI).isReplacementBuilding(eBuilding))
 		{
 			iExtra -= getAdditionalYieldByBuilding(eIndex, (BuildingTypes)iI);
 		}
@@ -12833,53 +12836,44 @@ int CvCity::getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes 
  */
 int CvCity::getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding)
 {
-	int iExtraRateTimes100 = getAdditionalBaseCommerceRateByBuildingTimes100(eIndex, eBuilding);
-	int iExtraModifier = getAdditionalCommerceRateModifierByBuilding(eIndex, eBuilding);
+	const int iExtraRateTimes100 = getAdditionalBaseCommerceRateByBuildingTimes100(eIndex, eBuilding);
+	const int iExtraModifier = getAdditionalCommerceRateModifierByBuilding(eIndex, eBuilding);
+
 	if (iExtraRateTimes100 == 0 && iExtraModifier == 0)
 	{
 		return 0;
 	}
+	const int iRateTimes100 = getBaseCommerceRateTimes100(eIndex);
+	const int iModifier = getTotalCommerceRateModifier(eIndex);
 
-	int iRateTimes100 = getBaseCommerceRateTimes100(eIndex);
-	int iModifier = getTotalCommerceRateModifier(eIndex);
-
-	int iCommerceWithoutBuilding;
-	if (iRateTimes100 > 0)
-	{
-		iCommerceWithoutBuilding = (iRateTimes100 * iModifier) / 100;
-	}
-	else
-	{
-		iCommerceWithoutBuilding = (iRateTimes100 * 100) / iModifier;
-	}
-
-	int iCommerceWithBuilding;
-	if (iRateTimes100 + iExtraRateTimes100 > 0)
-	{
-		iCommerceWithBuilding = ((iRateTimes100 + iExtraRateTimes100) * (iModifier + iExtraModifier)) / 100;
-	}
-	else
-	{
-		iCommerceWithBuilding = ((iRateTimes100 + iExtraRateTimes100) * 100) / (iModifier + iExtraModifier);
-	}
-
+	const int iCommerceWithoutBuilding =
+	(
+		iRateTimes100 > 0
+		?
+		iRateTimes100 * iModifier / 100
+		:
+		iRateTimes100 * 100 / iModifier
+	);
+	const int iCommerceWithBuilding
+	(
+		iRateTimes100 + iExtraRateTimes100 > 0
+		?
+		(iRateTimes100 + iExtraRateTimes100) * (iModifier + iExtraModifier) / 100
+		:
+		(iRateTimes100 + iExtraRateTimes100) * 100 / (iModifier + iExtraModifier)
+	);
 	int iExtraTimes100 = iCommerceWithBuilding - iCommerceWithoutBuilding;
 
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+		if (getNumActiveBuilding((BuildingTypes)iI) > 0 && !isReligiouslyDisabledBuilding((BuildingTypes)iI)
+		// Toffer - ToDo - Make a "cross reference" cache opposite to the "isReplacementBuilding",
+		//	so that buildings knows what building it replace, not only what building replaces it.
+		&& GC.getBuildingInfo((BuildingTypes)iI).isReplacementBuilding(eBuilding))
 		{
-			//Team Project (5)
-			if (!isReligiouslyDisabledBuilding((BuildingTypes)iI))
-			{
-				if (GC.getBuildingInfo((BuildingTypes)iI).isReplaceBuilding(eBuilding))
-				{
-					iExtraTimes100 -= getAdditionalCommerceTimes100ByBuilding(eIndex, (BuildingTypes)iI);
-				}
-			}
+			iExtraTimes100 -= getAdditionalCommerceTimes100ByBuilding(eIndex, (BuildingTypes)iI);
 		}
 	}
-
 	return iExtraTimes100;
 }
 
@@ -21106,7 +21100,9 @@ int CvCity::getAdditionalDefenseByBuilding(BuildingTypes eBuilding) const
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
 			const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-			if (GC.getBuildingInfo(eLoopBuilding).isReplaceBuilding(eBuilding) && getNumBuilding(eLoopBuilding) > 0)
+			// Toffer - ToDo - Make a "cross reference" cache opposite to the "isReplacementBuilding",
+			//	so that buildings knows what building it replace, not only what building replaces it.
+			if (GC.getBuildingInfo(eLoopBuilding).isReplacementBuilding(eBuilding) && getNumBuilding(eLoopBuilding) > 0)
 			{
 				iExtraBuildingRate -= GC.getBuildingInfo(eLoopBuilding).getDefenseModifier();
 				for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)

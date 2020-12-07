@@ -1431,12 +1431,9 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SAFETY_ORBITAL_PRISON</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SAFETY_ORBITAL_PRISON</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1070</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
