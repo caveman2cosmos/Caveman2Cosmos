@@ -124,6 +124,7 @@
 	</ElementType>
 	<ElementType name="PrereqTech" content="textOnly"/>
 	<ElementType name="iMovementChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iFlatMovementChange" content="textOnly" dt:type="int"/>
 	<ElementType name="TechMovementChange" content="eltOnly">
 		<element type="PrereqTech"/>
 		<element type="iMovementChange"/>
