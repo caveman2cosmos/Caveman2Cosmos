@@ -127,6 +127,7 @@
 	<ElementType name="TechMovementChange" content="eltOnly">
 		<element type="PrereqTech"/>
 		<element type="iMovementChange"/>
+		<element type="iFlatMovementChange"/>
 	</ElementType>
 	<ElementType name="TechMovementChanges" content="eltOnly">
 		<element type="TechMovementChange" minOccurs="0" maxOccurs="*"/>

@@ -72,10 +72,12 @@
 				<TechMovementChange>
 					<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 					<iMovementChange>-6</iMovementChange>
+					<iFlatMovementChange>0</iFlatMovementChange>
 				</TechMovementChange>
 				<TechMovementChange>
 					<PrereqTech>TECH_SKYROADS</PrereqTech>
 					<iMovementChange>-4</iMovementChange>
+					<iFlatMovementChange>0</iFlatMovementChange>
 				</TechMovementChange>
 			</TechMovementChanges>
 			<Button>Art/Interface/Buttons/Builds/BuildHighway.dds</Button>
