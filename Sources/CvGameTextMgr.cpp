@@ -23632,18 +23632,16 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	{
 		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
-		if (GC.getGame().canEverConstruct(eLoopBuilding))
+		if (GC.getGame().canEverConstruct(eLoopBuilding)
+		// Toffer - ToDo - Make a "cross reference" cache opposite to the "isReplacementBuilding",
+		//	so that buildings knows what building it replace, not only what building replaces it.
+		&& GC.getBuildingInfo(eLoopBuilding).isReplacementBuilding(eBuilding)
+		&& (pCity == NULL || pCity->getNumBuilding(eLoopBuilding) == 0))
 		{
-			if (GC.getBuildingInfo(eLoopBuilding).isReplaceBuilding(eBuilding))
-			{
-				if ((pCity == NULL) || (pCity->getNumBuilding(eLoopBuilding) == 0))
-				{
-					szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_REPLACED_BY_BUILDING").c_str());
-					szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
-					setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
-					bFirst = false;
-				}
-			}
+			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_REPLACED_BY_BUILDING").c_str());
+			szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
+			setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
+			bFirst = false;
 		}
 	}
 

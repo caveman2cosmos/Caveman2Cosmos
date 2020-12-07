@@ -246,12 +246,15 @@ class PediaBuilding:
 		aList2 = []
 		aList3 = []
 		if bNotCulture:
-			for i in range(GC.getNumBuildingInfos()):
+			# Toffer - ToDo - Make a "cross reference" cache opposite to the "isReplacementBuilding",
+			#	so that buildings knows what building it replace, not only what building replaces it.
+			for i in xrange(GC.getNumBuildingInfos()):
 				CvBuildingInfo = GC.getBuildingInfo(i)
-				if CvBuildingInfo.isReplaceBuilding(iTheBuilding):
+				if CvBuildingInfo.isReplacementBuilding(iTheBuilding):
 					aList1.append((CvBuildingInfo, i))
-				elif CvTheBuildingInfo.isReplaceBuilding(i):
-					aList2.append((CvBuildingInfo, i))
+			for i in xrange(CvTheBuildingInfo.getNumReplacementBuilding()):
+				iReplacement = CvTheBuildingInfo.getReplacementBuilding(i)
+				aList2.append((GC.getBuildingInfo(iReplacement), iReplacement))
 			if aList1 or aList2:
 				if aList1 and aList2:
 					W_REP_1 = W_REP_2 = W_COL_3

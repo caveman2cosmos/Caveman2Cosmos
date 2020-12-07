@@ -1066,12 +1066,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_FUSION_ENGINE</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FUSION_ENGINE</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FUSION_ENGINE</Type>
@@ -3805,12 +3802,9 @@
 				<iYield>0</iYield>
 				<iYield>150</iYield>
 			</YieldChanges>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
+			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_INTERSTELLAR_ASTEROID_MINE</BuildingType>
@@ -4233,12 +4227,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
 			</PrereqInCityBuildings>
@@ -4265,12 +4256,9 @@
 				<iYield>3</iYield>
 				<iYield>30</iYield>
 			</YieldChanges>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
 			</PrereqInCityBuildings>
@@ -6127,12 +6115,9 @@
 				<iCommerce>25</iCommerce>
 				<iCommerce>25</iCommerce>
 			</CommerceChanges>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_COSMIC_NODE</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_COSMIC_NODE</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
 			</PrereqInCityBuildings>

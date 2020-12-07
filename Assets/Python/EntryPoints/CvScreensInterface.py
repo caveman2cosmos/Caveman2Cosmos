@@ -140,9 +140,7 @@ def showTopCivs():
 
 def showInfoScreen(argsList):
 	if CyGame().getActivePlayer() != -1:
-		iTabID = argsList[0]
-		iEndGame = argsList[1]
-		screenMap[INFO_SCREEN].showScreen(-1, iTabID, iEndGame)
+		screenMap[INFO_SCREEN].interfaceScreen(argsList[0], argsList[1])
 
 def showDebugInfoScreen():
 	screenMap[DEBUG_INFO_SCREEN].interfaceScreen()

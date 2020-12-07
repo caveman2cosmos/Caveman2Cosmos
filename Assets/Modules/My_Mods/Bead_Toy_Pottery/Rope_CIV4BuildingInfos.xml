@@ -112,12 +112,9 @@
 			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_ROPE_FACTORY</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings-->
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ROPE_FACTORY</BuildingType>
+			</ReplacementBuildings-->
 			<!-- Construction cost -->
 			<iCost>30</iCost>
 			<!-- Main effects -->
