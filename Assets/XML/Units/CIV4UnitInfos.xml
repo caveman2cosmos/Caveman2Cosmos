@@ -514,19 +514,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PASTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -534,15 +522,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -554,23 +534,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_DESERT_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -27887,7 +27855,7 @@ Base XP gained when defending
 			</NotUnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -28016,7 +27984,7 @@ Base XP gained when defending
 			</NotUnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -28174,7 +28142,7 @@ Base XP gained when defending
 			</NotUnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -56735,19 +56703,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PASTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -56755,15 +56711,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -56775,23 +56723,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_DESERT_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -57889,7 +57825,7 @@ Base XP gained when defending
 			<iWorkRate>200</iWorkRate>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -67583,7 +67519,7 @@ Base XP gained when defending
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
-<!--				<Action>
+				<!-- <Action>
 					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_MILITARY</MissionType>
 					<ActionOutcomes>
 						<Outcome>
@@ -67601,8 +67537,7 @@ Base XP gained when defending
 							<PythonCallback>doAddSettledSlaveMilitary</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
-				</Action>
--->
+				</Action> -->
 				<Action>
 					<MissionType>MISSION_SELL_CAPTIVE</MissionType>
 					<ActionOutcomes>
@@ -68302,30 +68237,6 @@ Base XP gained when defending
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<Actions>
 				<Action>
-					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_GATHERER</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>15</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_TO_GATHERER</OutcomeType>
-							<iChance>100</iChance>
-							<UnitType>UNIT_GATHERER</UnitType>
-							<bUnitToCity>
-								<Constant>0</Constant>
-							</bUnitToCity>
-							<PlotCondition>
-								<Not>
-									<Is>TAG_ANARCHY</Is>
-								</Not>
-							</PlotCondition>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
 					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_WORKER</MissionType>
 					<iCost>
 						<Adapt>
@@ -68350,30 +68261,6 @@ Base XP gained when defending
 					</ActionOutcomes>
 				</Action>
 				<Action>
-					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_WARRIOR</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>15</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_TO_NEANDERTHAL_WARRIOR</OutcomeType>
-							<iChance>100</iChance>
-							<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
-							<bUnitToCity>
-								<Constant>0</Constant>
-							</bUnitToCity>
-							<PlotCondition>
-								<Not>
-									<Is>TAG_ANARCHY</Is>
-								</Not>
-							</PlotCondition>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
 					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER</MissionType>
 					<iCost>
 						<Adapt>
@@ -68386,6 +68273,54 @@ Base XP gained when defending
 							<OutcomeType>OUTCOME_UPGRADE_TO_NEANDERTHAL_GATHERER</OutcomeType>
 							<iChance>100</iChance>
 							<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<!-- <Action>
+					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_GATHERER</MissionType>
+					<iCost>
+						<Adapt>
+							<ID>ADAPT_DEFAULT</ID>
+							<Constant>15</Constant>
+						</Adapt>
+					</iCost>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_GATHERER</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_GATHERER</UnitType>
+							<bUnitToCity>
+								<Constant>0</Constant>
+							</bUnitToCity>
+							<PlotCondition>
+								<Not>
+									<Is>TAG_ANARCHY</Is>
+								</Not>
+							</PlotCondition>
+						</Outcome>
+					</ActionOutcomes>
+				</Action> -->
+				<Action>
+					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_WARRIOR</MissionType>
+					<iCost>
+						<Adapt>
+							<ID>ADAPT_DEFAULT</ID>
+							<Constant>15</Constant>
+						</Adapt>
+					</iCost>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_UPGRADE_TO_NEANDERTHAL_WARRIOR</OutcomeType>
+							<iChance>100</iChance>
+							<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
 							<bUnitToCity>
 								<Constant>0</Constant>
 							</bUnitToCity>

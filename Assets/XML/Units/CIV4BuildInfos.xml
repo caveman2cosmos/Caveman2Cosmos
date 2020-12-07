@@ -11,8 +11,8 @@
 	- FeatureChange and TerrainChange make it so that the "improvement" is not placed; instead,
 	  the build action will replace any existing feature/terrain with the corresponding entered value.
 	  bRemove should be used in necessary FeatureStructs to make UI work properly for replacing features.
-	- Non-Kill builds generally obsolete on researching the upgrade, or the 3rd upgrade available for routes.
-	  Kill -> Non-Kill builds don't obsolete, rather worker types slowly stop having those build actions.
+	- Non-kill builds generally obsolete on researching the next era after their upgrade, or the 3rd upgrade for routes.
+	- Kill builds usually don't obsolete, as only gatherers will have them and helps adjust workforce toward workers.
 	- Builds are organized first by type rarity*importance (Routes, bonus exploitation, feature exploitation,
 	  common chains, unique buildings, defensive & terraforming), then within in that by reverse unlock order.
 	  This makes the most recent, most important builds show first in the worker build options main gameplay UI,
@@ -495,7 +495,7 @@
 			<Type>BUILD_SCAVENGING_CAMP</Type>
 			<Description>TXT_KEY_BUILD_SCAVENGING_CAMP</Description>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
 			<iCost>10</iCost>
 			<bKill>1</bKill>
@@ -777,7 +777,7 @@
 			<Type>BUILD_FRUIT_GATHERING_CAMP</Type>
 			<Description>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>
@@ -822,7 +822,7 @@
 			<Type>BUILD_GRAPE_GATHERING_CAMP</Type>
 			<Description>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>
@@ -975,7 +975,7 @@
 			<Type>BUILD_PLANT_GATHERING_CAMP</Type>
 			<Description>TXT_KEY_BUILD_PLANT_GATHERING_CAMP</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>
@@ -1000,12 +1000,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/gatherer_mushroom.dds</Button>
 		</BuildInfo>
-		<!-- Mushroom Gatherer (Kill) -> (No Kill) -->
+		<!-- Mushroom Gatherer (Kill) -> Vertical Farm -->
 		<BuildInfo>
 			<Type>BUILD_MUSHROOM_GATHERER_KILL</Type>
 			<Description>TXT_KEY_BUILD_MUSHROOM_GATHERER_KILL</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>
@@ -1419,12 +1419,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/tar_gatherer.dds</Button>
 		</BuildInfo>
-		<!-- Tar Gatherer* (Kill) -> (No Kill) -->
+		<!-- Tar Gatherer* (Kill) -> Hydrocarbon Well -->
 		<BuildInfo>
 			<Type>BUILD_TAR_GATHERER_KILL</Type>
 			<Description>TXT_KEY_BUILD_TAR_GATHERER_KILL</Description>
 			<PrereqTech>TECH_ADHESIVES</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>
@@ -1480,12 +1480,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
 		</BuildInfo>
-		<!-- Salt Gatherer* (Kill) -> (No Kill) -->
+		<!-- Salt Gatherer* (Kill) -> Quarry -->
 		<BuildInfo>
 			<Type>BUILD_SALT_GATHERER_KILL</Type>
 			<Description>TXT_KEY_BUILD_SALT_GATHERER_KILL</Description>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>
@@ -2277,12 +2277,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_GrainGather.dds</Button>
 		</BuildInfo>
-		<!-- Seed Camp (Kill) -> (No Kill) -->
+		<!-- Seed Camp (Kill) -> (Various) -->
 		<BuildInfo>
 			<Type>BUILD_SEED_CAMP_KILL</Type>
 			<Description>TXT_KEY_BUILD_SEED_CAMP_KILL</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>
@@ -2532,7 +2532,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_GrainGather.dds</Button>
 		</BuildInfo>
-		<!-- Seasonal Camp (No Kill) -> (Various, Renaissance Lifestyle) -->
+		<!-- Seasonal Camp (No Kill) -> (Various, Medieval Lifestyle) -->
 		<BuildInfo>
 			<Type>BUILD_SEASONAL_CAMP</Type>
 			<Description>TXT_KEY_BUILD_SEASONAL_CAMP</Description>
@@ -2548,12 +2548,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
 		</BuildInfo>
-		<!-- Seasonal Camp (Kill) -> (No Kill) -->
+		<!-- Seasonal Camp (Kill) -> (Various) -->
 		<BuildInfo>
 			<Type>BUILD_SEASONAL_CAMP_KILL</Type>
 			<Description>TXT_KEY_BUILD_SEASONAL_CAMP_KILL</Description>
 			<PrereqTech>TECH_NOMADISM</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>100</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>
@@ -3316,7 +3316,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
 		</BuildInfo>
-		<!-- Stone Tools Workshop (No Kill) -> Mine OR Early Quarry Lifestyle -->
+		<!-- Stone Tools Workshop (No Kill) -> Mine OR Early Quarry, Classical Lifestyle -->
 		<BuildInfo>
 			<Type>BUILD_STONE_TOOLS_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP</Description>
@@ -3348,12 +3348,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
 		</BuildInfo>
-		<!-- Stone Tools Workshop (Kill) -> (No Kill) -->
+		<!-- Stone Tools Workshop (Kill) -> Mine OR Early Quarry -->
 		<BuildInfo>
 			<Type>BUILD_STONE_TOOLS_WORKSHOP_KILL</Type>
 			<Description>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP_KILL</Description>
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
 			<iCost>10</iCost>
 			<bKill>1</bKill>
@@ -3447,7 +3447,7 @@
 			<Type>BUILD_WOOD_GATHERER</Type>
 			<Description>TXT_KEY_BUILD_WOOD_GATHERER</Description>
 			<PrereqTech>TECH_WOODWORKING</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
@@ -6086,12 +6086,12 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<Button>Art/Interface/Buttons/builds/junglecamp.dds</Button>
 		</BuildInfo>
-		<!-- Jungle Camp (Kill) -> (No Kill)-->
+		<!-- Jungle Camp (Kill) -> | End-->
 		<BuildInfo>
 			<Type>BUILD_JUNGLE_CAMP_KILL</Type>
 			<Description>TXT_KEY_BUILD_JUNGLE_CAMP_KILL</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>400</iTime>
 			<iCost>10</iCost>
 			<bKill>1</bKill>
@@ -6112,12 +6112,12 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<Button>Art/Interface/Buttons/Builds/desert_camp.dds</Button>
 		</BuildInfo>
-		<!-- Desert Camp (Kill) -> (No Kill) -->
+		<!-- Desert Camp (Kill) -> | End -->
 		<BuildInfo>
 			<Type>BUILD_DESERT_CAMP_KILL</Type>
 			<Description>TXT_KEY_BUILD_DESERT_CAMP_KILL</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>400</iTime>
 			<iCost>10</iCost>
 			<bKill>1</bKill>
@@ -6138,12 +6138,12 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<Button>Art/Interface/Buttons/Builds/wetlands_camp.dds</Button>
 		</BuildInfo>
-		<!-- Wetlands Camp (Kill) -> (No Kill) -->
+		<!-- Wetlands Camp (Kill) -> | End -->
 		<BuildInfo>
 			<Type>BUILD_WETLANDS_CAMP_KILL</Type>
 			<Description>TXT_KEY_BUILD_WETLANDS_CAMP_KILL</Description>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>400</iTime>
 			<iCost>10</iCost>
 			<bKill>1</bKill>
@@ -6833,12 +6833,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/tower/art/wooden_tower.dds</Button>
 		</BuildInfo>
-		<!-- Wooden Watchtower (Kill) -> (No Kill) -->
+		<!-- Wooden Watchtower (Kill) -> Stone Watchtower -->
 		<BuildInfo>
 			<Type>BUILD_WOODEN_WATCHTOWER_KILL</Type>
 			<Description>TXT_KEY_BUILD_WOODEN_WATCHTOWER_KILL</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
 			<iCost>1</iCost>
 			<bKill>1</bKill>
@@ -6931,12 +6931,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/interface/buttons/builds/fortified_cave.dds</Button>
 		</BuildInfo>
-		<!-- Fortified Cave (Kill) -> (No Kill) -->
+		<!-- Fortified Cave (Kill) -> Fortified Cave w/Cache -->
 		<BuildInfo>
 			<Type>BUILD_FORTIFIED_CAVE_KILL</Type>
 			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE_KILL</Description>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
 			<iCost>20</iCost>
 			<bKill>1</bKill>
@@ -6963,12 +6963,12 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/Palisade/palisadewall.dds</Button>
 		</BuildInfo>
-		<!-- Palisade (Kill) -> (No Kill) -->
+		<!-- Palisade (Kill) -> Fort -->
 		<BuildInfo>
 			<Type>BUILD_WOODEN_PALISADE_KILL</Type>
 			<Description>TXT_KEY_BUILD_WOODEN_PALISADE_KILL</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>400</iTime>
 			<iCost>20</iCost>
 			<bKill>1</bKill>
@@ -6995,7 +6995,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/Abatis/abatis.dds</Button>
 		</BuildInfo>
-		<!-- Abatis (Kill) -> (No Kill) -->
+		<!-- Abatis (Kill) -> Palisade -->
 		<BuildInfo>
 			<Type>BUILD_ABATIS_THORN_HEDGE_KILL</Type>
 			<Description>TXT_KEY_BUILD_ABATIS_THORN_HEDGE_KILL</Description>
@@ -10932,9 +10932,34 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildFishingBoats.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,7</Button>
 		</BuildInfo>
-		<!-- Fishing Camp (Kill) -> (Various) -->
+		<!-- Fishing Camp (No Kill) -> (Various, Wireless Electricity Obsolete) -->
 		<BuildInfo>
 			<Type>BUILD_FISHING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_FISHING_CAMP</Description>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
+			<ObsoleteTech>TECH_WIRELESS_ELECTRICITY</ObsoleteTech>
+			<iTime>200</iTime>
+			<iCost>5</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_FISHING_CAMP</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_ICE</FeatureType>
+					<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
+			<HotKey>KB_C</HotKey>
+			<bShiftDown>1</bShiftDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>,Art/Interface/Buttons/Builds/BuildFishingBoats.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,7</Button>
+		</BuildInfo>
+		<!-- Fishing Camp (Kill) -> (Various) -->
+		<BuildInfo>
+			<Type>BUILD_FISHING_CAMP_KILL</Type>
 			<Description>TXT_KEY_BUILD_FISHING_CAMP</Description>
 			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<iTime>200</iTime>
