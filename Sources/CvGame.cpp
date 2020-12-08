@@ -5902,16 +5902,7 @@ void CvGame::setName(const TCHAR* szName)
 
 bool CvGame::isDestroyedCityName(CvWString& szName) const
 {
-	std::vector<CvWString>::const_iterator it;
-
-	for (it = m_aszDestroyedCities.begin(); it != m_aszDestroyedCities.end(); ++it)
-	{
-		if (*it == szName)
-		{
-			return true;
-		}
-	}
-	return false;
+	return std::contains(m_aszDestroyedCities, szName);
 }
 
 void CvGame::addDestroyedCityName(const CvWString& szName)
@@ -5922,16 +5913,7 @@ void CvGame::addDestroyedCityName(const CvWString& szName)
 
 bool CvGame::isGreatPersonBorn(CvWString& szName) const
 {
-	std::vector<CvWString>::const_iterator it;
-
-	for (it = m_aszGreatPeopleBorn.begin(); it != m_aszGreatPeopleBorn.end(); ++it)
-	{
-		if (*it == szName)
-		{
-			return true;
-		}
-	}
-	return false;
+	return std::contains(m_aszGreatPeopleBorn, szName);
 }
 
 void CvGame::addGreatPersonBornName(const CvWString& szName)
@@ -9358,11 +9340,11 @@ bool CvGame::isCompetingCorporation(CorporationTypes eCorporation1, CorporationT
 
 int CvGame::getPlotExtraYield(int iX, int iY, YieldTypes eYield) const
 {
-	for (std::vector<PlotExtraYield>::const_iterator it = m_aPlotExtraYields.begin(); it != m_aPlotExtraYields.end(); ++it)
+	foreach_(const PlotExtraYield& extraYield, m_aPlotExtraYields)
 	{
-		if ((*it).m_iX == iX && (*it).m_iY == iY)
+		if (extraYield.m_iX == iX && extraYield.m_iY == iY)
 		{
-			return (*it).m_aeExtraYield[eYield];
+			return extraYield.m_aeExtraYield[eYield];
 		}
 	}
 
@@ -9373,11 +9355,11 @@ void CvGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYiel
 {
 	bool bFound = false;
 
-	for (std::vector<PlotExtraYield>::iterator it = m_aPlotExtraYields.begin(); it != m_aPlotExtraYields.end(); ++it)
+	foreach_(const PlotExtraYield& extraYield, m_aPlotExtraYields)
 	{
-		if ((*it).m_iX == iX && (*it).m_iY == iY)
+		if (extraYield.m_iX == iX && extraYield.m_iY == iY)
 		{
-			(*it).m_aeExtraYield[eYield] += iExtraYield;
+			extraYield.m_aeExtraYield[eYield] += iExtraYield;
 			bFound = true;
 			break;
 		}
