@@ -4482,15 +4482,11 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				{
 					PROFILE("CvCityAI::AI_bestBuildingThreshold.Replacement");
 
-					// Look for building it replaces
-					for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+					for (int iI = 0; iI < buildingInfo.getNumReplacedBuilding(); iI++)
 					{
-						const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iJ);
-						// Toffer - ToDo - Make a "cross reference" cache opposite to the "isReplacementBuilding",
-						//	so that buildings knows what building it replace, not only what building replaces it.
-						if (GC.getBuildingInfo(eBuildingX).isReplacementBuilding(eBuilding)
-						// Only care if we actually have the building
-						&& getNumBuilding(eBuildingX) > 0)
+						const BuildingTypes eBuildingX = static_cast<BuildingTypes>(buildingInfo.getReplacedBuilding(iI));
+
+						if (getNumBuilding(eBuildingX) > 0)
 						{
 							PROFILE("AI_bestBuildingThreshold.Replace");
 
@@ -4511,19 +4507,19 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				PROFILE("CvCityAI::AI_bestBuildingThreshold.EnablesOthers");
 
 				// TODO OPT: convert the masks to vectors so this look is faster
-				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 				{
-					if ((GC.getBuildingInfo((BuildingTypes)iJ).isPrereqInCityBuilding(eBuilding) || GC.getBuildingInfo((BuildingTypes)iJ).isPrereqOrBuilding(eBuilding))
-					&& getNumBuilding((BuildingTypes)iJ) == 0 && canConstructInternal((BuildingTypes)iJ, false, false, false, true, eBuilding))
+					if ((GC.getBuildingInfo((BuildingTypes)iI).isPrereqInCityBuilding(eBuilding) || GC.getBuildingInfo((BuildingTypes)iI).isPrereqOrBuilding(eBuilding))
+					&& getNumBuilding((BuildingTypes)iI) == 0 && canConstructInternal((BuildingTypes)iI, false, false, false, true, eBuilding))
 					{
 						PROFILE("AI_bestBuildingThreshold.Enablement");
 
 						// We only value the unlocked building at 1/2 rate
-						iValue += AI_buildingValueThreshold((BuildingTypes)iJ, iFocusFlags, 0, false, true) / 2;
+						iValue += AI_buildingValueThreshold((BuildingTypes)iI, iFocusFlags, 0, false, true) / 2;
 
 						if (gCityLogLevel > 3)
 						{
-							logBBAI("    enables %S - increase value to %d", GC.getBuildingInfo((BuildingTypes)iJ).getDescription(), iValue);
+							logBBAI("    enables %S - increase value to %d", GC.getBuildingInfo((BuildingTypes)iI).getDescription(), iValue);
 						}
 					}
 				}
@@ -14782,22 +14778,19 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				continue;
 			}
 			buildingsToCalculate.insert(eBuilding);
+			const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
 
-			for (int iJ = 0; iJ < iNumBuildings; iJ++)
+			for (int iI = 0; iI < building.getNumReplacedBuilding(); iI++)
 			{
-				const BuildingTypes eType = static_cast<BuildingTypes>(iJ);
+				const BuildingTypes eBuildingX = static_cast<BuildingTypes>(building.getReplacedBuilding(iI));
 
-				if (buildingsToCalculate.find(eType) == buildingsToCalculate.end()
-				// Toffer - ToDo - Make a "cross reference" cache opposite to the "isReplacementBuilding",
-				//	so that buildings knows what building it replace, not only what building replaces it.
-				&& GC.getBuildingInfo(eType).isReplacementBuilding(iBuilding)
-				&& getNumBuilding(eType) > 0)
+				if (buildingsToCalculate.find(eBuildingX) == buildingsToCalculate.end() && getNumBuilding(eBuildingX) > 0)
 				{
-					buildingsToCalculate.insert(eType);
+					buildingsToCalculate.insert(eBuildingX);
 				}
 			}
 
-			if (GC.getBuildingInfo(eBuilding).EnablesOtherBuildings())
+			if (building.EnablesOtherBuildings())
 			{
 				for (int iJ = 0; iJ < iNumBuildings; iJ++)
 				{
