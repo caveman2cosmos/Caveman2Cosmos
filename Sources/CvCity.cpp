@@ -3282,7 +3282,11 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 		for (int iI = 0; iI < kBuilding.getNumReplacementBuilding(); ++iI)
 		{
 			if (getNumActiveBuilding((BuildingTypes)kBuilding.getReplacementBuilding(iI)) > 0
-			|| GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_REPLACED_BUILDINGS))
+			// Toffer - This is not the right place to do HIDE_REPLACED_BUILDINGS...
+			// This option can now stop AI from building a replaced building,
+			// when the option is only supposed to be an interface option for the human player.
+			|| GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_REPLACED_BUILDINGS)
+			&& canConstruct((BuildingTypes)iI, true, false, false, true))
 			{
 				return false;
 			}
