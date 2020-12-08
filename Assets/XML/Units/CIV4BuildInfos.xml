@@ -171,7 +171,8 @@
 			<bKill>0</bKill>
 			<RouteType>ROUTE_PATH</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
-			<!-- <FeatureStructs>
+			<FeatureStructs>
+				<!-- Tier 1 harder -->
 				<FeatureStruct>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
 					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
@@ -179,15 +180,117 @@
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_SWAMP</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_CRATER</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+				<!-- Tier 2 harder -->
+				<FeatureStruct>
+					<FeatureType>FEATURE_MANGROVE</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+				<!-- Tier 3 harder -->
+				<FeatureStruct>
+					<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
 			</FeatureStructs>
 			<TerrainStructs>
+				<!-- Tier 1 harder -->
+				<TerrainStruct>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
+					<iTime>0</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
+					<iTime>0</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
+					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
+					<iTime>0</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
+					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
+					<iTime>0</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
+					<iTime>0</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
+					<TerrainType>TERRAIN_HILL</TerrainType>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
+					<iTime>0</iTime>
+				</TerrainStruct>
+				<!-- Tier 2 harder -->
+				<TerrainStruct>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
+					<iTime>0</iTime>
+				</TerrainStruct>
 				<TerrainStruct>
 					<TerrainType>TERRAIN_DUNES</TerrainType>
 					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
 					<iTime>0</iTime>
-					<iCost>2</iCost>
 				</TerrainStruct>
-			</TerrainStructs> -->
+				<TerrainStruct>
+					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
+					<iTime>0</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
+					<TerrainType>TERRAIN_ICE</TerrainType>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
+					<iTime>0</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
+					<TerrainType>TERRAIN_PEAK</TerrainType>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
+					<iTime>0</iTime>
+				</TerrainStruct>
+			</TerrainStructs>
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/dirt.dds</Button>
