@@ -4258,7 +4258,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 			for (int iJ = 0; iJ < GC.getNumPromotionInfos(); iJ++)
 			{
 				// Unit
-				if (unit.getFreePromotions(iJ))
+				if (unit.isFreePromotion((PromotionTypes)iJ))
 				{
 					iPromotionValue += 15;
 					continue;

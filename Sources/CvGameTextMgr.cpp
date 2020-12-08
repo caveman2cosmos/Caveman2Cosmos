@@ -20355,14 +20355,11 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 
 		//Free Promos
 		bFirst = true;
-		for (int iI = 0; iI < GC.getNumPromotionInfos(); ++iI)
+		foreach_(const PromotionTypes& freePromotion, kUnit.getFreePromotions())
 		{
-			if (kUnit.getFreePromotions(iI))
-			{
-				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BULLET_STARTS_WITH").c_str());
-				setListHelp(szBuffer, szTempBuffer, CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getPromotionInfo((PromotionTypes)iI).getType()).GetCString(), GC.getPromotionInfo((PromotionTypes) iI).getDescription()), L", ", bFirst);
-				bFirst = false;
-			}
+			szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BULLET_STARTS_WITH").c_str());
+			setListHelp(szBuffer, szTempBuffer, CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getPromotionInfo(freePromotion).getType()).GetCString(), GC.getPromotionInfo(freePromotion).getDescription()), L", ", bFirst);
+			bFirst = false;
 		}
 
 		//Healing

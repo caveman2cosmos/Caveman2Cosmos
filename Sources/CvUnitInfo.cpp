@@ -197,7 +197,6 @@ m_piBonusProductionModifier(NULL),
 m_piUnitGroupRequired(NULL),
 m_pbTerrainNative(NULL),
 m_pbFeatureNative(NULL),
-m_pbFreePromotions(NULL),
 m_paszEarlyArtDefineTags(NULL),
 m_paszLateArtDefineTags(NULL),
 m_paszMiddleArtDefineTags(NULL),
@@ -364,7 +363,6 @@ CvUnitInfo::~CvUnitInfo()
 	SAFE_DELETE_ARRAY(m_piUnitGroupRequired);
 	SAFE_DELETE_ARRAY(m_pbTerrainNative);
 	SAFE_DELETE_ARRAY(m_pbFeatureNative);
-	SAFE_DELETE_ARRAY(m_pbFreePromotions);
 	SAFE_DELETE_ARRAY(m_paszEarlyArtDefineTags);
 	SAFE_DELETE_ARRAY(m_paszLateArtDefineTags);
 	SAFE_DELETE_ARRAY(m_paszMiddleArtDefineTags);
@@ -1557,10 +1555,10 @@ bool CvUnitInfo::getFeatureNative(int i) const
 	return m_pbFeatureNative ? m_pbFeatureNative[i] : false;
 }
 
-bool CvUnitInfo::getFreePromotions(int i) const
+bool CvUnitInfo::isFreePromotion(PromotionTypes e) const
 {
-	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), i)
-	return m_pbFreePromotions ? m_pbFreePromotions[i] : false;
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), e)
+	return std::contains(m_pFreePromotions, e);
 }
 
 int CvUnitInfo::getLeaderPromotion() const
@@ -3944,7 +3942,7 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum) const
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_pbFeatureNative);
 	//CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbTerrainImpassable);
 	//CheckSumI(iSum, GC.getNumFeatureInfos(), m_pbFeatureImpassable);
-	CheckSumI(iSum, GC.getNumPromotionInfos(), m_pbFreePromotions);
+	CheckSumC(iSum, m_pFreePromotions);
 
 	CheckSum(iSum, m_iLeaderPromotion);
 	CheckSum(iSum, m_iLeaderExperience);
@@ -4646,7 +4644,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	pXML->SetVariableListTagPair(&m_pbFreePromotions, L"FreePromotions", GC.getNumPromotionInfos());
+	pXML->SetOptionalVector(&m_pFreePromotions, L"FreePromotions");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"LeaderPromotion");
 	m_iLeaderPromotion = pXML->GetInfoClass(szTextVal);
@@ -5624,17 +5622,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumPromotionInfos(); i++)
-	{
-		if ( getFreePromotions(i) == bDefault && pClassInfo->getFreePromotions(i) != bDefault)
-		{
-			if ( NULL == m_pbFreePromotions )
-			{
-				CvXMLLoadUtility::InitList(&m_pbFreePromotions,GC.getNumPromotionInfos(),bDefault);
-			}
-			m_pbFreePromotions[i] = pClassInfo->getFreePromotions(i);
-		}
-	}
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_pFreePromotions, pClassInfo->m_pFreePromotions);
 
 	for ( int i = 0; i < GC.getNumCivicInfos(); i++)
 	{

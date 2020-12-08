@@ -1715,13 +1715,8 @@
 	<ElementType name="Sound" content="textOnly"/>
 	<ElementType name="LayerAnimationPath" content="textOnly"/>
 	<ElementType name="PromotionType" content="textOnly"/>
-	<ElementType name="bFreePromotion" content="textOnly" dt:type="boolean"/>
-	<ElementType name="FreePromotion" content="eltOnly">
-		<element type="PromotionType"/>
-		<element type="bFreePromotion"/>
-	</ElementType>
 	<ElementType name="FreePromotions" content="eltOnly">
-		<element type="FreePromotion" minOccurs="0" maxOccurs="*"/>
+		<element type="PromotionType"/>
 	</ElementType>
 	<ElementType name="CivilizationType" content="textOnly"/>
 	<ElementType name="CivilizationUniqueName" content="textOnly"/>

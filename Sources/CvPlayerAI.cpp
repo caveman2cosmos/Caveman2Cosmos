@@ -12661,12 +12661,12 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 
 	if (iCombatValue > 0 && pArea != NULL && (eUnitAI == UNITAI_ATTACK || eUnitAI == UNITAI_ATTACK_CITY))
 	{
-		AreaAITypes eAreaAI = pArea->getAreaAIType(getTeam());
+		const AreaAITypes eAreaAI = pArea->getAreaAIType(getTeam());
 		if (eAreaAI == AREAAI_ASSAULT || eAreaAI == AREAAI_ASSAULT_MASSING)
 		{
-			for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+			for (int iI = 0, num = GC.getNumPromotionInfos(); iI < num; iI++)
 			{
-				if (kUnitInfo.getFreePromotions(iI) && GC.getPromotionInfo((PromotionTypes)iI).isAmphib())
+				if (kUnitInfo.isFreePromotion((PromotionTypes)iI) && GC.getPromotionInfo((PromotionTypes)iI).isAmphib())
 				{
 					iValue *= 133;
 					iValue /= 100;
@@ -25750,7 +25750,7 @@ UnitTypes CvPlayerAI::AI_bestAdvancedStartUnitAI(const CvPlot* pPlot, UnitAIType
 
 				for (int iJ = 0; iJ < GC.getNumPromotionInfos(); iJ++)
 				{
-					if (kUnit.getFreePromotions(iJ))
+					if (kUnit.isFreePromotion((PromotionTypes)iJ))
 					{
 						iPromotionValue += 15;
 					}

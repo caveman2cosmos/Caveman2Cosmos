@@ -2309,7 +2309,8 @@ public:
 	//bool getFeatureImpassable(int i) const;
 	bool getTerrainNative(int i) const;
 	bool getFeatureNative(int i) const;
-	bool getFreePromotions(int i) const;
+	bool isFreePromotion(PromotionTypes i) const;
+	const std::vector<PromotionTypes>& getFreePromotions() const { return m_pFreePromotions; }
 	int getLeaderPromotion() const;
 	int getLeaderExperience() const;
 
@@ -2534,7 +2535,7 @@ protected:
 	bool* m_pbFeatureNative;
 	//bool* m_pbTerrainImpassable;
 	//bool* m_pbFeatureImpassable;
-	bool* m_pbFreePromotions;
+	std::vector<PromotionTypes> m_pFreePromotions;
 
 	CvString* m_paszEarlyArtDefineTags;
 	CvString* m_paszLateArtDefineTags;

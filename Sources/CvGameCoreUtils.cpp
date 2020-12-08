@@ -248,7 +248,7 @@ bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader)
 	}
 	// RevolutionDCM - end
 
-	if (kUnit.getFreePromotions(ePromotion))
+	if (kUnit.isFreePromotion(ePromotion))
 	{
 		return true;
 	}

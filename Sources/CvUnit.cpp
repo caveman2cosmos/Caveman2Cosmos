@@ -1010,7 +1010,7 @@ void CvUnit::convert(CvUnit* pUnit, const bool bKillOriginal)
 			}
 			else //see note below on this situation with true for bDying
 			{
-				setHasPromotion(((PromotionTypes)iI), (pUnit->isHasPromotion((PromotionTypes)iI) || m_pUnitInfo->getFreePromotions(iI)), pUnit->isPromotionFree((PromotionTypes)iI), true);
+				setHasPromotion(((PromotionTypes)iI), (pUnit->isHasPromotion((PromotionTypes)iI) || m_pUnitInfo->isFreePromotion((PromotionTypes)iI)), pUnit->isPromotionFree((PromotionTypes)iI), true);
 			}
 		}
 		checkPromotionObsoletion();
@@ -1036,7 +1036,7 @@ void CvUnit::convert(CvUnit* pUnit, const bool bKillOriginal)
 		{
 			// TB - bDying is set to true to temporarily avoid obsoletion checks until AFTER all promos are assigned
 			// as sometimes promos would be lost because prereqs simply weren't assigned yet due to the order in which they were established.
-			setHasPromotion(((PromotionTypes)iI), (pUnit->isHasPromotion((PromotionTypes)iI) || m_pUnitInfo->getFreePromotions(iI)), pUnit->isPromotionFree((PromotionTypes)iI), true);
+			setHasPromotion(((PromotionTypes)iI), (pUnit->isHasPromotion((PromotionTypes)iI) || m_pUnitInfo->isFreePromotion((PromotionTypes)iI)), pUnit->isPromotionFree((PromotionTypes)iI), true);
 		}
 		checkPromotionObsoletion();
 		checkFreetoCombatClass();
@@ -34454,7 +34454,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				const CvPromotionInfo& kPrereq = GC.getPromotionInfo(ePromotionPrerequisite);
 				bbypass = false;
-				if (m_pUnitInfo->getFreePromotions((int)ePromotion))
+				if (m_pUnitInfo->isFreePromotion(ePromotion))
 				{
 					bbypass = true;
 				}
@@ -34514,7 +34514,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 			{
 				const CvPromotionInfo& kPrereq1 = GC.getPromotionInfo(ePromotionPrerequisite1);
 				bbypass = false;
-				if (m_pUnitInfo->getFreePromotions((int)ePromotion))
+				if (m_pUnitInfo->isFreePromotion(ePromotion))
 				{
 					bbypass = true;
 				}
@@ -34707,7 +34707,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 	//if (!bIsFreePromotion)
 	//{
 	bool bIsUnitSpecific = false;
-	if (m_pUnitInfo->getFreePromotions((int)ePromotion))
+	if (m_pUnitInfo->isFreePromotion(ePromotion))
 	{
 		bIsUnitSpecific = true;
 	}
@@ -37097,11 +37097,11 @@ void CvUnit::doSetUnitCombats()
 void CvUnit::setFreePromotion(PromotionTypes ePromotion, bool bAdding, TraitTypes eTrait)
 {
 	const int numTraitInfos = GC.getNumTraitInfos();
-	CvPlayer& pPlayer = GET_PLAYER(getOwner());
+	const CvPlayer& pPlayer = GET_PLAYER(getOwner());
 
 	if (bAdding && !isHasPromotion(ePromotion))
 	{
-		if (m_pUnitInfo->getFreePromotions((int)ePromotion))
+		if (m_pUnitInfo->isFreePromotion(ePromotion))
 		{
 			setHasPromotion(ePromotion, true, true);
 			return;
