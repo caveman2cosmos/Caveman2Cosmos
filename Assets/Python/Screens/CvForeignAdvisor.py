@@ -183,7 +183,7 @@ class CvForeignAdvisor:
 
 		if bDebug:
 			DDB = "FA_DebugDD"
-			screen.addDropDownBoxGFC(DDB, 22, 12, 300, eWidGen, 1, 1, FontTypes.GAME_FONT)
+			screen.addDropDownBoxGFC(DDB, 22, 0, 300, eWidGen, 1, 1, FontTypes.GAME_FONT)
 			for iPlayerX in range(GC.getMAX_PC_PLAYERS()):
 				CyPlayerX = GC.getPlayer(iPlayerX)
 				if CyPlayerX.isAlive():
