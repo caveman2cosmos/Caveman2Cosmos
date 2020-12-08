@@ -501,10 +501,10 @@ void CyInfoPythonInterface1()
 		.def("isPrereqOrImprovement", &CvBuildingInfo::isPrereqOrImprovement, "bool (int i)")
 		.def("isPrereqOrFeature", &CvBuildingInfo::isPrereqOrFeature, "bool (int i)")
 
-
 		.def("getReplacementBuilding", &CvBuildingInfo::getReplacementBuilding, "int (int i)")
 		.def("getNumReplacementBuilding", &CvBuildingInfo::getNumReplacementBuilding, "short ()")
-		.def("isReplacementBuilding", &CvBuildingInfo::isReplacementBuilding, "bool (int i)")
+		.def("getReplacedBuilding", &CvBuildingInfo::getReplacedBuilding, "int (int i)")
+		.def("getNumReplacedBuilding", &CvBuildingInfo::getNumReplacedBuilding, "short ()")
 
 		.def("isPrereqOrBuilding", &CvBuildingInfo::isPrereqOrBuilding, "bool (int i)")
 

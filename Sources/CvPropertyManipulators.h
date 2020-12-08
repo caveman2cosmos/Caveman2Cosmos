@@ -21,15 +21,18 @@ public:
 	~CvPropertyManipulators();
 
 	int getNumSources() const;
-	CvPropertySource* getSource(int index) const;
+	//CvPropertySource* getSource(int index) const;
+	const std::vector<CvPropertySource*>& getSources() const { return m_apSources; }
 	int addSource(PropertySourceTypes eType);
 
 	int getNumInteractions() const;
-	CvPropertyInteraction* getInteraction(int index) const;
+	//CvPropertyInteraction* getInteraction(int index) const;
+	const std::vector<CvPropertyInteraction*>& getInteractions() const { return m_apInteractions; }
 	int addInteraction(PropertyInteractionTypes eType);
 
 	int getNumPropagators() const;
-	CvPropertyPropagator* getPropagator(int index) const;
+	//CvPropertyPropagator* getPropagator(int index) const;
+	const std::vector<CvPropertyPropagator*>& getPropagators() const { return m_apPropagators; }
 	int addPropagator(PropertyPropagatorTypes eType);
 
 	void buildDisplayString(CvWStringBuffer& szBuffer) const;

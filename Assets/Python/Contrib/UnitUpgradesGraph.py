@@ -587,7 +587,7 @@ class BuildingsGraph(UnitUpgradesGraph):
 
 			#Create a list of buildings that replace the list buildingReplacesA
 			for numB in buildingReplacesA:
-				info = GC.getBuildingInfo(buildingA)
+				info = GC.getBuildingInfo(numB)
 				if not info:
 					continue
 				for i in xrange(info.getNumReplacementBuilding()):
