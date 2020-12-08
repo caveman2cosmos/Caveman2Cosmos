@@ -7869,6 +7869,7 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 	bool bTerrainTechQualified = false;
 	if (pPlot != NULL)
 	{
+		// Check if player has tech to build on this terrain
 		for (int iI = 0; iI < kBuild.getNumTerrainStructs(); iI++)
 		{
 			if(kBuild.getTerrainStruct(iI).eTerrain == pPlot->getTerrainType()
@@ -7876,15 +7877,16 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 			{
 				bTerrainTechQualified = true;
 				if (!GET_TEAM(getTeam()).isHasTech(kBuild.getTerrainStruct(iI).ePrereqTech)
-				&& (!bTestEra && !bTestVisible || getCurrentEra()+1 < GC.getTechInfo(kBuild.getTerrainStruct(iI).ePrereqTech).getEra()))
+				&& (!bTestEra && !bTestVisible || getCurrentEra() < GC.getTechInfo(kBuild.getTerrainStruct(iI).ePrereqTech).getEra()))
 				{
 					return false;
 				}
 			}
 		}
 	}
+
 	if (!bTerrainTechQualified && kBuild.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getTechPrereq())
-	&& (!bTestEra && !bTestVisible || getCurrentEra()+1 < GC.getTechInfo((TechTypes)kBuild.getTechPrereq()).getEra()))
+	&& (!bTestEra && !bTestVisible || getCurrentEra() < GC.getTechInfo((TechTypes)kBuild.getTechPrereq()).getEra()))
 	{
 		return false;
 	}
@@ -7968,18 +7970,22 @@ int CvPlayer::getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const
 
 bool CvPlayer::isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvPlot* pPlot, const CvUnit* pBuilder) const
 {
-	bool bResult = false;
-
-	//	Only check whether the build is obsolete if we need it!  The route is anyway valid if it already exists
-	if ((pPlot != NULL) ?
-			((pPlot->getRouteType() == eRoute) || canBuild(pPlot, eRouteBuild)) :
-			(GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eRouteBuild).getTechPrereq()) &&
-			 (GC.getBuildInfo(eRouteBuild).getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBuildInfo(eRouteBuild).getObsoleteTech())))))
+	// If we're checking an actual plot, examine the buildinfo to see if the player can build it there
+	if (pPlot != NULL && (pPlot->getRouteType() == eRoute || canBuild(pPlot, eRouteBuild))
 	{
-		bResult = (pBuilder == NULL || pBuilder->canBuild(pPlot,eRouteBuild));
+		// return true if we either have no builder, or the specific builder we're passed can build there
+		return pBuilder == NULL || pBuilder->canBuild(pPlot, eRouteBuild);
 	}
-
-	return bResult;
+	// If it's not an actual plot and we're just checking if the route is possible in general, look at:
+	// Do we have tech prereq AND (tech doesn't obsolete OR we don't have the tech that obsoletes the route)
+	else if (GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eRouteBuild).getTechPrereq())
+		&&  (GC.getBuildInfo(eRouteBuild).getObsoleteTech() == NO_TECH
+			|| !GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBuildInfo(eRouteBuild).getObsoleteTech()))))
+	{
+		// return true if we either have no builder, or the specific builder we're passed can build there
+		return pBuilder == NULL || pBuilder->canBuild(pPlot, eRouteBuild);
+	}
+	else return false;
 }
 
 
@@ -8017,14 +8023,16 @@ RouteTypes CvPlayer::getBestRouteInternal(const CvPlot* pPlot, bool bConnect, co
 		{
 			if (isRouteValid(eRoute, (BuildTypes)iI, pPlot, pBuilder))
 			{
-				int iValue = GC.getRouteInfo(eRoute).getValue();
-				//Assuming roads never hinder movement
-				const int iExtraMoves = std::max(0, baseMoves / std::min(baseMoves, GC.getRouteInfo(eRoute).getMovementCost()) - 1); //subtract 1 because we care about extra moves, all movement is 1 move by default
-				if (!bConnect) {
-					iValue -= GC.getBuildInfo((BuildTypes)iI).getTime() / 100; //number of turns
-					iValue -= GC.getBuildInfo((BuildTypes)iI).getCost() / (AI_isFinancialTrouble() ? 1 : 2);
-				}
-				iValue += iExtraMoves;
+				int iValue = 100 * GC.getRouteInfo(eRoute).getValue();
+
+				// Extra movement is dependant on unit speed; iMovement != iFlatMovement, so this isn't a very useful measure...
+				// iValue += std::max(0, baseMoves / std::min(baseMoves, GC.getRouteInfo(eRoute).getMovementCost()) - 1);
+				
+				// Too dependant on ratios of xml values; TODO check relative gains for tile improvement + yield, choose cheapest if isFinancialTrouble
+				// if (!bConnect) {
+				// 	iValue -= GC.getBuildInfo((BuildTypes)iI).getTime() / 100;
+				// 	iValue -= GC.getBuildInfo((BuildTypes)iI).getCost() / (AI_isFinancialTrouble() ? 1 : 2);
+				// }
 
 				if (iValue > iBestValue)
 				{

@@ -126,7 +126,7 @@
 			<RouteType>ROUTE_RAILROAD</RouteType>
 			<EntityEvent>ENTITY_EVENT_RAILROAD</EntityEvent>
 			<HotKey>KB_R</HotKey>
-			<iHotKeyPriority>1</iHotKeyPriority>
+			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildRailroad.dds</Button>
 		</BuildInfo>
 		<!-- Paved Road << Electric Railroad -->
@@ -11411,7 +11411,6 @@
 					<TerrainType>TERRAIN_COAST</TerrainType>
 					<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 					<iTime>0</iTime>
-					<iCost>700</iCost>
 				</TerrainStruct>
 				<TerrainStruct>
 					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>

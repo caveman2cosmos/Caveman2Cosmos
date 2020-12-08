@@ -2978,37 +2978,39 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 
 	if (eRoute != NO_ROUTE)
 	{
+		// Disallow routes of worse value, but allow same value (e.g. Highway vs eRail) so long as it doesn't match existing route
 		if (getRouteType() != NO_ROUTE)
 		{
-			if (
-				GC.getRouteInfo(getRouteType()).getValue() > GC.getRouteInfo(eRoute).getValue()
-			// Only nontunnel water improvement is jumplanes; requires better logic for naval route interactions before re-enabling
-			// ||	GC.getRouteInfo(getRouteType()).isSeaTunnel() && !GC.getRouteInfo(eRoute).isSeaTunnel()
-			) return false;
+			if (GC.getRouteInfo(getRouteType()).getValue() > GC.getRouteInfo(eRoute).getValue()
+			||  eRoute == getRouteType())
+			{
+				return false;
+			}
 		}
 
+		// Check to disallow based on mising route resource prereqs
 		if (!bTestVisible)
 		{
-			if (
-				GC.getRouteInfo(eRoute).getPrereqBonus() != NO_BONUS
-			&&
-				!isAdjacentPlotGroupConnectedBonus(ePlayer, (BonusTypes)GC.getRouteInfo(eRoute).getPrereqBonus())
-			) return false;
+			if (GC.getRouteInfo(eRoute).getPrereqBonus() != NO_BONUS
+			&& !isAdjacentPlotGroupConnectedBonus(ePlayer, (BonusTypes)GC.getRouteInfo(eRoute).getPrereqBonus()))
+			{
+				return false;
+			}
 
-			bool bFoundValid = true;
+			bool bFoundOrPrereq = true;
 			for (int i = 0; i < GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); ++i)
 			{
 				if (NO_BONUS != GC.getRouteInfo(eRoute).getPrereqOrBonus(i))
 				{
 					if (isAdjacentPlotGroupConnectedBonus(ePlayer, (BonusTypes)GC.getRouteInfo(eRoute).getPrereqOrBonus(i)))
 					{
-						bFoundValid = true;
+						bFoundOrPrereq = true;
 						break;
 					}
-					else bFoundValid = false;
+					else bFoundOrPrereq = false;
 				}
 			}
-			if (!bFoundValid)
+			if (!bFoundOrPrereq)
 			{
 				return false;
 			}

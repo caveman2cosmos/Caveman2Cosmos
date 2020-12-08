@@ -64,7 +64,7 @@
 			<iAdvancedStartCost>18</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>40</iMovement>
-			<iFlatMovement>18</iFlatMovement>
+			<iFlatMovement>16</iFlatMovement>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqOrBonuses>
 				<PrereqOrBonus>
@@ -87,7 +87,7 @@
 			<iValue>6</iValue>
 			<iAdvancedStartCost>18</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-			<iMovement>30</iMovement>
+			<iMovement>36</iMovement>
 			<iFlatMovement>12</iFlatMovement>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqOrBonuses>
@@ -102,7 +102,7 @@
 		<RouteInfo>
 			<Type>ROUTE_HIGHWAY</Type>
 			<Description>TXT_KEY_ROUTE_HIGHWAY</Description>
-			<iValue>7</iValue>
+			<iValue>6</iValue>
 			<iAdvancedStartCost>12</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>22</iMovement>
@@ -116,11 +116,11 @@
 		<RouteInfo>
 			<Type>ROUTE_MAGLEV</Type>
 			<Description>TXT_KEY_ROUTE_MAGLEV</Description>
-			<iValue>8</iValue>
+			<iValue>7</iValue>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>22</iMovement>
-			<iFlatMovement>10</iFlatMovement>
+			<iFlatMovement>11</iFlatMovement>
 			<BonusType>BONUS_COPPER_WARES</BonusType>
 			<PrereqOrBonuses>
 				<PrereqOrBonus>
@@ -139,10 +139,10 @@
 		<RouteInfo>
 			<Type>ROUTE_VACTRAIN</Type>
 			<Description>TXT_KEY_ROUTE_VACTRAIN</Description>
-			<iValue>9</iValue>
+			<iValue>8</iValue>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-			<iMovement>22</iMovement>
+			<iMovement>24</iMovement>
 			<iFlatMovement>8</iFlatMovement>
 			<BonusType>BONUS_TITANIUM_WARES</BonusType>
 			<Yields>
@@ -153,7 +153,7 @@
 			<TechMovementChanges>
 				<TechMovementChange>
 					<PrereqTech>TECH_SKYROADS</PrereqTech>
-					<iMovementChange>-6</iMovementChange>
+					<iMovementChange>-8</iMovementChange>
 				</TechMovementChange>
 			</TechMovementChanges>
 			<Button>art/interface/buttons/improvements/hyperloop.dds</Button>
@@ -161,10 +161,10 @@
 		<RouteInfo>
 			<Type>ROUTE_GRAVITY_TRAIN</Type>
 			<Description>TXT_KEY_ROUTE_GRAVITY_TRAIN</Description>
-			<iValue>10</iValue>
+			<iValue>9</iValue>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-			<iMovement>16</iMovement>
+			<iMovement>15</iMovement>
 			<iFlatMovement>5</iFlatMovement>
 			<BonusType>BONUS_LIQUID_METAL</BonusType>
 			<Yields>
@@ -178,7 +178,7 @@
 		<RouteInfo>
 			<Type>ROUTE_JUMPLANE</Type>
 			<Description>TXT_KEY_ROUTE_JUMPLANE</Description>
-			<iValue>11</iValue>
+			<iValue>10</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>15</iMovement>
@@ -199,8 +199,8 @@
 			<iValue>1</iValue>
 			<iAdvancedStartCost>20</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-			<iMovement>40</iMovement>
-			<iFlatMovement>20</iFlatMovement>
+			<iMovement>55</iMovement>
+			<iFlatMovement>22</iFlatMovement>
 			<bSeaTunnel>1</bSeaTunnel>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqOrBonuses/>
