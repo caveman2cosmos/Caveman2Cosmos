@@ -212,8 +212,11 @@ class CvForeignAdvisor:
 		self.tuCity = tuCity = []
 		for CyCity in CyPlayer.cities():
 			liCity = []
-			for iCity in range(CyCity.getTradeRoutes()):
-				liCity.append(CyCity.getTradeCity(iCity))
+			for iCity in xrange(CyCity.getTradeRoutes()):
+				cityTrade = CyCity.getTradeCity(iCity)
+				if cityTrade:
+					liCity.append(cityTrade)
+				else: print "[WARNING] Mismatch! 'CyCity.getTradeCity(iCity) = None' in 'for iCity in range(CyCity.getTradeRoutes()):'"
 			if liCity:
 				tuCity.append([CyCity, liCity])
 
