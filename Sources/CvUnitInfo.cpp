@@ -412,14 +412,7 @@ CvUnitInfo::~CvUnitInfo()
 
 const wchar_t* CvUnitInfo::getExtraHoverText() const
 {
-	if (!m_szExtraHoverTextKey.empty())
-	{
-		return gDLL->getText(m_szExtraHoverTextKey);
-	}
-	else
-	{
-		return L"";
-	}
+	return m_szExtraHoverTextKey.empty() ? L"" : gDLL->getText(m_szExtraHoverTextKey);
 }
 
 

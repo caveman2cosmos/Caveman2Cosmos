@@ -32105,12 +32105,8 @@ void unitSourcesValueToCity(const CvGameObject* pObject, const CvPropertyManipul
 
 	if ( pCity != NULL )
 	{
-		int iNum = pMani->getNumSources();
-
-		for (int i=0; i<iNum; i++)
+		foreach_(const CvPropertySource* pSource, pMani->getSources())
 		{
-			const CvPropertySource* pSource = pMani->getSource(i);
-
 			if (eProperty == NO_PROPERTY || pSource->getProperty() == eProperty)
 			{
 				//	Sources that deliver to the city or the plot are both considered since the city plot diffuses
@@ -32459,10 +32455,8 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 
 		int score = 0;
 		//TBNote: in figuring out how much the unit provides, it's not as important as determining that it simply does provide.  Therefore, promotions and unitcombat values on the unit aren't checked (unless this already by nature does but I think it's only asking for base unit info)
-		for (int sourceIdx = 0; sourceIdx < propertyManipulators->getNumSources(); sourceIdx++)
+		foreach_(const CvPropertySource* pSource, propertyManipulators->getSources())
 		{
-			const CvPropertySource* pSource = propertyManipulators->getSource(sourceIdx);
-
 			if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getObjectType() == GAMEOBJECT_CITY && pSource->getProperty() == eProperty)
 			{
 				score += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
@@ -33336,9 +33330,8 @@ bool CvUnitAI::AI_isNegativePropertyUnit() const
 	const CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(getUnitType()).getPropertyManipulators();
 	if (propertyManipulators != NULL)
 	{
-		for (int iI = 0; iI < propertyManipulators->getNumSources(); iI++)
+		foreach_(const CvPropertySource* pSource, propertyManipulators->getSources())
 		{
-			const CvPropertySource* pSource = propertyManipulators->getSource(iI);
 			//	We have a source for a property - value is crudely just the AIweight of that property times the source size (which is expected to only depend on the player)
 			if (pSource->getType() == PROPERTYSOURCE_CONSTANT)
 			{
