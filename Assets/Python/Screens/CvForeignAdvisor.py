@@ -183,7 +183,7 @@ class CvForeignAdvisor:
 
 		if bDebug:
 			DDB = "FA_DebugDD"
-			screen.addDropDownBoxGFC(DDB, 22, 12, 300, eWidGen, 1, 1, FontTypes.GAME_FONT)
+			screen.addDropDownBoxGFC(DDB, 22, 0, 300, eWidGen, 1, 1, FontTypes.GAME_FONT)
 			for iPlayerX in range(GC.getMAX_PC_PLAYERS()):
 				CyPlayerX = GC.getPlayer(iPlayerX)
 				if CyPlayerX.isAlive():
@@ -212,8 +212,11 @@ class CvForeignAdvisor:
 		self.tuCity = tuCity = []
 		for CyCity in CyPlayer.cities():
 			liCity = []
-			for iCity in range(CyCity.getTradeRoutes()):
-				liCity.append(CyCity.getTradeCity(iCity))
+			for iCity in xrange(CyCity.getTradeRoutes()):
+				cityTrade = CyCity.getTradeCity(iCity)
+				if cityTrade:
+					liCity.append(cityTrade)
+				else: print "[WARNING] Mismatch! 'CyCity.getTradeCity(iCity) = None' in 'for iCity in range(CyCity.getTradeRoutes()):'"
 			if liCity:
 				tuCity.append([CyCity, liCity])
 

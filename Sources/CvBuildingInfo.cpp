@@ -5928,7 +5928,6 @@ void CvBuildingInfo::setReplacedBuilding(int i)
 {
 	if (find(m_vReplacedBuilding.begin(), m_vReplacedBuilding.end(), i) == m_vReplacedBuilding.end())
 	{
-		FErrorMsg(CvString::format("building %d (%s) replaces %d (%s)", GC.getInfoTypeForString(getType()), getType(), i, GC.getBuildingInfo((BuildingTypes)i).getType()).c_str());
 		m_vReplacedBuilding.push_back(i);
 	}
 }
