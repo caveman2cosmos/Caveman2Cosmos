@@ -63,6 +63,99 @@
 			<bKill>0</bKill>
 			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
+			<!-- Review needed -->
+			<FeatureStructs>
+				<!-- Tier 1 harder -->
+                <FeatureStruct>
+                    <FeatureType>FEATURE_CRATER</FeatureType>
+                    <PrereqTech>TECH_SKYROADS</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <FeatureStruct>
+                    <FeatureType>FEATURE_TAR_PIT</FeatureType>
+                    <PrereqTech>TECH_SKYROADS</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+				<!-- Tier 2 harder -->
+                <FeatureStruct>
+                    <FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
+                    <PrereqTech>TECH_SKYROADS</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <!-- Tier 3 harder -->
+                <FeatureStruct>
+                    <FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
+                    <PrereqTech>TECH_SKYROADS</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+            </FeatureStructs>
+            <TerrainStructs>
+                <!-- Tier 1 harder -->
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_BADLAND</TerrainType>
+                    <PrereqTech>TECH_SKYROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_DESERT</TerrainType>
+                    <PrereqTech>TECH_SKYROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+                    <PrereqTech>TECH_SKYROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                    <PrereqTech>TECH_SKYROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_MARSH</TerrainType>
+                    <PrereqTech>TECH_SKYROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_HILL</TerrainType>
+                    <PrereqTech>TECH_SKYROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <!-- Tier 2 harder -->
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_JAGGED</TerrainType>
+                    <PrereqTech>TECH_SKYROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_DUNES</TerrainType>
+                    <PrereqTech>TECH_SKYROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_PERMAFROST</TerrainType>
+                    <PrereqTech>TECH_SKYROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_ICE</TerrainType>
+                    <PrereqTech>TECH_SKYROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_PEAK</TerrainType>
+                    <PrereqTech>TECH_SKYROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+            </TerrainStructs>
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/hyperloop.dds</Button>
@@ -79,6 +172,99 @@
 			<bKill>0</bKill>
 			<RouteType>ROUTE_MAGLEV</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
+			<!-- ?prereq tech -->
+            <!-- <FeatureStructs>
+
+                <FeatureStruct>
+                    <FeatureType>FEATURE_CRATER</FeatureType>
+                    <PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <FeatureStruct>
+                    <FeatureType>FEATURE_TAR_PIT</FeatureType>
+                    <PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+
+                <FeatureStruct>
+                    <FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
+                    <PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+
+                <FeatureStruct>
+                    <FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
+                    <PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+            </FeatureStructs>
+            <TerrainStructs>
+
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_BADLAND</TerrainType>
+                    <PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_DESERT</TerrainType>
+                    <PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+                    <PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                    <PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_MARSH</TerrainType>
+                    <PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_HILL</TerrainType>
+                    <PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_JAGGED</TerrainType>
+                    <PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_DUNES</TerrainType>
+                    <PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_PERMAFROST</TerrainType>
+                    <PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_ICE</TerrainType>
+                    <PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_PEAK</TerrainType>
+                    <PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+            </TerrainStructs> -->
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildMaglev.dds</Button>
@@ -94,6 +280,99 @@
 			<bKill>0</bKill>
 			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
+			<!-- Find 0.5 prereq -->
+            <!-- <FeatureStructs>
+
+                <FeatureStruct>
+                    <FeatureType>FEATURE_CRATER</FeatureType>
+                    <PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <FeatureStruct>
+                    <FeatureType>FEATURE_TAR_PIT</FeatureType>
+                    <PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+
+                <FeatureStruct>
+                    <FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
+                    <PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+
+                <FeatureStruct>
+                    <FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
+                    <PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+            </FeatureStructs>
+            <TerrainStructs>
+
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_BADLAND</TerrainType>
+                    <PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_DESERT</TerrainType>
+                    <PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+                    <PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                    <PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_MARSH</TerrainType>
+                    <PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_HILL</TerrainType>
+                    <PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_JAGGED</TerrainType>
+                    <PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_DUNES</TerrainType>
+                    <PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_PERMAFROST</TerrainType>
+                    <PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_ICE</TerrainType>
+                    <PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_PEAK</TerrainType>
+                    <PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+            </TerrainStructs> -->
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildHighway.dds</Button>
@@ -125,6 +404,99 @@
 			<bKill>0</bKill>
 			<RouteType>ROUTE_RAILROAD</RouteType>
 			<EntityEvent>ENTITY_EVENT_RAILROAD</EntityEvent>
+			<!-- Explosives? -->
+			<!-- <FeatureStructs>
+
+                <FeatureStruct>
+                    <FeatureType>FEATURE_CRATER</FeatureType>
+                    <PrereqTech>TECH_ELECTRONICS</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <FeatureStruct>
+                    <FeatureType>FEATURE_TAR_PIT</FeatureType>
+                    <PrereqTech>TECH_ELECTRONICS</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+
+                <FeatureStruct>
+                    <FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
+                    <PrereqTech>TECH_ELECTRONICS</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+
+                <FeatureStruct>
+                    <FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
+                    <PrereqTech>TECH_ELECTRONICS</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+            </FeatureStructs>
+            <TerrainStructs>
+
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_BADLAND</TerrainType>
+                    <PrereqTech>TECH_ELECTRONICS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_DESERT</TerrainType>
+                    <PrereqTech>TECH_ELECTRONICS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+                    <PrereqTech>TECH_ELECTRONICS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                    <PrereqTech>TECH_ELECTRONICS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_MARSH</TerrainType>
+                    <PrereqTech>TECH_ELECTRONICS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_HILL</TerrainType>
+                    <PrereqTech>TECH_ELECTRONICS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_JAGGED</TerrainType>
+                    <PrereqTech>TECH_ELECTRONICS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_DUNES</TerrainType>
+                    <PrereqTech>TECH_ELECTRONICS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_PERMAFROST</TerrainType>
+                    <PrereqTech>TECH_ELECTRONICS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_ICE</TerrainType>
+                    <PrereqTech>TECH_ELECTRONICS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_PEAK</TerrainType>
+                    <PrereqTech>TECH_ELECTRONICS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+            </TerrainStructs> -->
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildRailroad.dds</Button>
@@ -140,6 +512,119 @@
 			<bKill>0</bKill>
 			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
+			<FeatureStructs>
+                <!-- Tier 1 harder -->
+                <FeatureStruct>
+                    <FeatureType>FEATURE_SWAMP</FeatureType>
+                    <PrereqTech>TECH_IRON_WORKING</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <FeatureStruct>
+                    <FeatureType>FEATURE_CRATER</FeatureType>
+                    <PrereqTech>TECH_RAILROAD</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <FeatureStruct>
+                    <FeatureType>FEATURE_TAR_PIT</FeatureType>
+                    <PrereqTech>TECH_RAILROAD</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <!-- Tier 2 harder -->
+                <FeatureStruct>
+                    <FeatureType>FEATURE_MANGROVE</FeatureType>
+                    <PrereqTech>TECH_RAILROAD</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <FeatureStruct>
+                    <FeatureType>FEATURE_PEAT_BOG</FeatureType>
+                    <PrereqTech>TECH_IRON_WORKING</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <FeatureStruct>
+                    <FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
+                    <PrereqTech>TECH_RAILROAD</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <!-- Tier 3 harder -->
+                <FeatureStruct>
+                    <FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
+                    <PrereqTech>TECH_RAILROAD</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+            </FeatureStructs>
+            <TerrainStructs>
+                <!-- Tier 1 harder -->
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_BADLAND</TerrainType>
+                    <PrereqTech>TECH_RAILROAD</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_DESERT</TerrainType>
+                    <PrereqTech>TECH_RAILROAD</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+                    <PrereqTech>TECH_RAILROAD</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                    <PrereqTech>TECH_RAILROAD</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_MARSH</TerrainType>
+                    <PrereqTech>TECH_RAILROAD</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_HILL</TerrainType>
+                    <PrereqTech>TECH_RAILROAD</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <!-- Tier 2 harder -->
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_JAGGED</TerrainType>
+                    <PrereqTech>TECH_RAILROAD</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_DUNES</TerrainType>
+                    <PrereqTech>TECH_RAILROAD</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_PERMAFROST</TerrainType>
+                    <PrereqTech>TECH_RAILROAD</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_ICE</TerrainType>
+                    <PrereqTech>TECH_RAILROAD</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_PEAK</TerrainType>
+                    <PrereqTech>TECH_RAILROAD</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+            </TerrainStructs>
 			<HotKey>KB_R</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -156,6 +641,126 @@
 			<bKill>0</bKill>
 			<RouteType>ROUTE_ROAD</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
+            <FeatureStructs>
+                <!-- Tier 1 harder -->
+                <FeatureStruct>
+                    <FeatureType>FEATURE_JUNGLE</FeatureType>
+                    <PrereqTech>TECH_IRON_WORKING</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <FeatureStruct>
+                    <FeatureType>FEATURE_SWAMP</FeatureType>
+                    <PrereqTech>TECH_IRON_WORKING</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <FeatureStruct>
+                    <FeatureType>FEATURE_CRATER</FeatureType>
+                    <PrereqTech>TECH_PAVED_ROADS</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <FeatureStruct>
+                    <FeatureType>FEATURE_TAR_PIT</FeatureType>
+                    <PrereqTech>TECH_PAVED_ROADS</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <!-- Tier 2 harder -->
+                <FeatureStruct>
+                    <FeatureType>FEATURE_MANGROVE</FeatureType>
+                    <PrereqTech>TECH_IRON_WORKING</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <FeatureStruct>
+                    <FeatureType>FEATURE_PEAT_BOG</FeatureType>
+                    <PrereqTech>TECH_IRON_WORKING</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <FeatureStruct>
+                    <FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
+                    <PrereqTech>TECH_PAVED_ROADS</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+                <!-- Tier 3 harder -->
+                <FeatureStruct>
+                    <FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
+                    <PrereqTech>TECH_PAVED_ROADS</PrereqTech>
+                    <iTime>0</iTime>
+                    <iProduction>0</iProduction>
+                    <bRemove>0</bRemove>
+                </FeatureStruct>
+            </FeatureStructs>
+            <TerrainStructs>
+                <!-- Tier 1 harder -->
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_BADLAND</TerrainType>
+                    <PrereqTech>TECH_PAVED_ROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_DESERT</TerrainType>
+                    <PrereqTech>TECH_PAVED_ROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+                    <PrereqTech>TECH_PAVED_ROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                    <PrereqTech>TECH_PAVED_ROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_MARSH</TerrainType>
+                    <PrereqTech>TECH_PAVED_ROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_HILL</TerrainType>
+                    <PrereqTech>TECH_PAVED_ROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <!-- Tier 2 harder -->
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_JAGGED</TerrainType>
+                    <PrereqTech>TECH_PAVED_ROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_DUNES</TerrainType>
+                    <PrereqTech>TECH_PAVED_ROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_PERMAFROST</TerrainType>
+                    <PrereqTech>TECH_PAVED_ROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_ICE</TerrainType>
+                    <PrereqTech>TECH_PAVED_ROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+                <TerrainStruct>
+                    <TerrainType>TERRAIN_PEAK</TerrainType>
+                    <PrereqTech>TECH_PAVED_ROADS</PrereqTech>
+                    <iTime>0</iTime>
+                </TerrainStruct>
+            </TerrainStructs>
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/BuildRoad.dds</Button>
@@ -175,28 +780,28 @@
 				<!-- Tier 1 harder -->
 				<FeatureStruct>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<PrereqTech>TECH_SLASH_AND_BURN</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
@@ -204,21 +809,21 @@
 				<!-- Tier 2 harder -->
 				<FeatureStruct>
 					<FeatureType>FEATURE_MANGROVE</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
@@ -226,7 +831,7 @@
 				<!-- Tier 3 harder -->
 				<FeatureStruct>
 					<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
-					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
 					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>

@@ -7908,7 +7908,7 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 				}
 			}
 		}
-		
+
 		// terrain is similar to feature; can't build if don't have tech, etc, only diff is looping thru terrain structs because that's how we roll
 		for (int iI = 0; iI < kBuild.getNumTerrainStructs(); iI++)
 		{
