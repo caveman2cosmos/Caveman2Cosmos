@@ -1262,7 +1262,7 @@
 			<HotKey>KB_S</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Button_Select.dds,Art/Interface/Buttons/Actions_Builds_Leaderheads_Specialists_Atlas.dds,4,2</Button>
+			<Button>Art/Interface/Buttons/Builds/Build_acheological_site.dds</Button>
 		</BuildInfo>
 
 		<!-- Hydrocarbon Well* | End -->
@@ -2681,7 +2681,7 @@
 			<HotKey>KB_M</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildMine.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,7</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildMountMine.dds</Button>
 			<bMine>1</bMine>
 		</BuildInfo>
 		<!-- Early Mountain Mine -> Mountain Mine -->
@@ -2947,7 +2947,7 @@
 			</FeatureStructs>
 			<HotKey>KB_M</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildMine.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,7</Button>
+			<Button>Art/Interface/Buttons/Builds/coremine.dds</Button>
 		</BuildInfo>
 		<!-- Modern Mine -> Core Mine Era -->
 		<BuildInfo>
@@ -3196,7 +3196,7 @@
 			<HotKey>KB_M</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/Explosives.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/BuildModernMine.dds</Button>
 			<bMine>1</bMine>
 		</BuildInfo>
 		<!-- Shaft Mine -> Modern Mine Era -->
@@ -3230,7 +3230,7 @@
 			<HotKey>KB_M</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildMine.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,7</Button>
+			<Button>Art/Interface/Buttons/Builds/Explosives.dds</Button>
 			<bMine>1</bMine>
 		</BuildInfo>
 		<!-- Mine -> Shaft Mine Era -->
@@ -3497,7 +3497,7 @@
 			<HotKey>KB_I</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/buildtreefarm.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/hybrid_forest.dds</Button>
 		</BuildInfo>
 		<!-- Treefarm -> Hybrid Forest Era -->
 		<BuildInfo>
@@ -3513,7 +3513,7 @@
 			<HotKey>KB_I</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/buildtreefarm.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/tree_farm.dds</Button>
 		</BuildInfo>
 		<!-- Lumbermill -> Treefarm Era -->
 		<BuildInfo>
@@ -3821,7 +3821,7 @@
 			</FeatureStructs>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildCottage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,7</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildTown.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,3,10</Button>
 		</BuildInfo>
 		<!-- Town -> Suburb Era -->
 		<BuildInfo>
@@ -4083,7 +4083,7 @@
 			</FeatureStructs>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildCottage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,7</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildTown.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,3,10</Button>
 		</BuildInfo>
 		<!-- Village -> Town Era -->
 		<BuildInfo>
@@ -4338,7 +4338,7 @@
 			</FeatureStructs>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildCottage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,7</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildVillage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,5,9</Button>
 		</BuildInfo>
 		<!-- Hamlet -> Village Era -->
 		<BuildInfo>
@@ -4412,7 +4412,7 @@
 			</FeatureStructs>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildCottage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,7</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildHamlet.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,10</Button>
 		</BuildInfo>
 		<!-- Cottage -> Hamlet Era -->
 		<BuildInfo>
@@ -5918,7 +5918,7 @@
 			<HotKey>KB_W</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildWell.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,4,8</Button>
+			<Button>Art/Interface/Buttons/Builds/Groundwater_well.dds</Button>
 		</BuildInfo>
 		<!-- Peat Cutter | Independent - Information Lifestyle -->
 		<BuildInfo>
@@ -11063,7 +11063,7 @@
 		<!-- Fishing Camp (Kill) -> (Various) -->
 		<BuildInfo>
 			<Type>BUILD_FISHING_CAMP_KILL</Type>
-			<Description>TXT_KEY_BUILD_FISHING_CAMP</Description>
+			<Description>TXT_KEY_BUILD_FISHING_CAMP_KILL</Description>
 			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>5</iCost>

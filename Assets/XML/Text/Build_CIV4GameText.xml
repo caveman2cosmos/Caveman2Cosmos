@@ -1255,6 +1255,10 @@
 		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager[\LINK] aufschlagen</German>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_FISHING_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_FISHING_CAMP]Fishing Camp[\LINK] (Consumed)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_FISHING_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_FISHING_CAMP]Fishing Camp[\LINK]</English>
 	</TEXT>
