@@ -2,6 +2,7 @@
 // globals.cpp
 //
 #include "CvGameCoreDLL.h"
+#include "CvArtFileMgr.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
@@ -294,7 +295,7 @@ LONG WINAPI CustomFilter(EXCEPTION_POINTERS *ExceptionInfo)
 //
 void cvInternalGlobals::init()
 {
-	OutputDebugString("Initializing Internal Globals: Start");
+	OutputDebugString("Initializing Internal Globals: Start\n");
 /************************************************************************************************/
 /* MINIDUMP_MOD                           04/10/11                                terkhen       */
 /************************************************************************************************/
@@ -488,7 +489,7 @@ void cvInternalGlobals::init()
 	m_bSignsCleared = false;
 	m_bResourceLayerOn = false;
 
-	OutputDebugString("Initializing Internal Globals: End");
+	OutputDebugString("Initializing Internal Globals: End\n");
 }
 
 //
@@ -2990,7 +2991,6 @@ void cvInternalGlobals::infoTypeFromStringReset()
 
 void cvInternalGlobals::addToInfosVectors(void *infoVector, InfoClassTypes infoClass)
 {
-	//m_aInfoVectors.push_back(static_cast<std::vector<CvInfoBase*>*>(infoVector));
 	m_aInfoVectors[infoClass] = static_cast<std::vector<CvInfoBase*>*>(infoVector);
 }
 
@@ -3295,8 +3295,467 @@ void cvInternalGlobals::readInfo(CvXMLLoadUtility* pXml, InfoClassTypes infoClas
 
 	switch (infoClass)
 	{
+		case CONCEPT_INFO:
+			pXml->LoadGlobalClassInfo(m_paConceptInfo, "CIV4BasicInfos", "BasicInfos", L"/Civ4BasicInfos/ConceptInfos/ConceptInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paConceptInfo);
+			return;
+		case NEW_CONCEPT_INFO:
+			pXml->LoadGlobalClassInfo(m_paNewConceptInfo, "CIV4NewConceptInfos", "BasicInfos", L"/Civ4NewConceptInfos/NewConceptInfos/NewConceptInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paNewConceptInfo);
+			return;
+		case CITY_TAB_INFO:
+			pXml->LoadGlobalClassInfo(m_paCityTabInfo, "CIV4CityTabInfos", "BasicInfos", L"/Civ4CityTabInfos/CityTabInfos/CityTabInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paCityTabInfo);
+			return;
+		case CALENDAR_INFO:
+			pXml->LoadGlobalClassInfo(m_paCalendarInfo, "CIV4CalendarInfos", "BasicInfos", L"/Civ4CalendarInfos/CalendarInfos/CalendarInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paCalendarInfo);
+			return;
+		case SEASON_INFO:
+			pXml->LoadGlobalClassInfo(m_paSeasonInfo, "CIV4SeasonInfos", "BasicInfos", L"/Civ4SeasonInfos/SeasonInfos/SeasonInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paSeasonInfo);
+			return;
+		case MONTH_INFO:
+			pXml->LoadGlobalClassInfo(m_paMonthInfo, "CIV4MonthInfos", "BasicInfos", L"/Civ4MonthInfos/MonthInfos/MonthInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paMonthInfo);
+			return;
+		case DENIAL_INFO:
+			pXml->LoadGlobalClassInfo(m_paDenialInfo, "CIV4DenialInfos", "BasicInfos", L"/Civ4DenialInfos/DenialInfos/DenialInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paDenialInfo);
+			return;
+		case DOMAIN_INFO:
+			pXml->LoadGlobalClassInfo(m_paDomainInfo, "CIV4DomainInfos", "BasicInfos", L"/Civ4DomainInfos/DomainInfos/DomainInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paDomainInfo);
+			return;
+		case ATTITUDE_INFO:
+			pXml->LoadGlobalClassInfo(m_paAttitudeInfos, "CIV4AttitudeInfos", "BasicInfos", L"/Civ4AttitudeInfos/AttitudeInfos/AttitudeInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paAttitudeInfos);
+			return;
+		case MEMORY_INFO:
+			pXml->LoadGlobalClassInfo(m_paMemoryInfos, "CIV4MemoryInfos", "BasicInfos", L"/Civ4MemoryInfos/MemoryInfos/MemoryInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paMemoryInfos);
+			return;
+		case WORLD_INFO:
+			pXml->LoadGlobalClassInfo(m_paWorldInfo, "CIV4WorldInfo", "GameInfo", L"/Civ4WorldInfo/WorldInfos/WorldInfo", false, &GC.m_WorldInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paWorldInfo);
+			return;
+		case CLIMATE_INFO:
+			pXml->LoadGlobalClassInfo(m_paClimateInfo, "CIV4ClimateInfo", "GameInfo", L"/Civ4ClimateInfo/ClimateInfos/ClimateInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paClimateInfo);
+			return;
+		case SEA_LEVEL_INFO:
+			pXml->LoadGlobalClassInfo(m_paSeaLevelInfo, "CIV4SeaLevelInfo", "GameInfo", L"/Civ4SeaLevelInfo/SeaLevelInfos/SeaLevelInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paSeaLevelInfo);
+			return;
+		case COLOR_INFO:
+			pXml->LoadGlobalClassInfo(m_paColorInfo, "CIV4ColorVals", "Interface", L"/Civ4ColorVals/ColorVals/ColorVal", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paColorInfo);
+			return;
+		case PLAYER_COLOR_INFO:
+			pXml->LoadGlobalClassInfo(m_paPlayerColorInfo, "CIV4PlayerColorInfos", "Interface", L"/Civ4PlayerColorInfos/PlayerColorInfos/PlayerColorInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paPlayerColorInfo);
+			return;
+		case ADVISOR_INFO:
+			pXml->LoadGlobalClassInfo(m_paAdvisorInfo, "CIV4AdvisorInfos", "Interface", L"/Civ4AdvisorInfos/AdvisorInfos/AdvisorInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paAdvisorInfo);
+			return;
+		case ROUTE_MODEL_INFO:
+			pXml->LoadGlobalClassInfo(m_paRouteModelInfo, "CIV4RouteModelInfos", "Art", L"/Civ4RouteModelInfos/RouteModelInfos/RouteModelInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paRouteModelInfo);
+			return;
+		case RIVER_INFO:
+			return;
+		case RIVER_MODEL_INFO:
+			pXml->LoadGlobalClassInfo(m_paRiverModelInfo, "CIV4RiverModelInfos", "Art", L"/Civ4RiverModelInfos/RiverModelInfos/RiverModelInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paRiverModelInfo);
+			return;
+		case WATER_PLANE_INFO:
+			pXml->LoadGlobalClassInfo(m_paWaterPlaneInfo, "CIV4WaterPlaneInfos", "Misc", L"/Civ4WaterPlaneInfos/WaterPlaneInfos/WaterPlaneInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paWaterPlaneInfo);
+			return;
+		case TERRAIN_PLANE_INFO:
+			pXml->LoadGlobalClassInfo(m_paTerrainPlaneInfo, "CIV4TerrainPlaneInfos", "Misc", L"/Civ4TerrainPlaneInfos/TerrainPlaneInfos/TerrainPlaneInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paTerrainPlaneInfo);
+			return;
+		case CAMERA_OVERLAY_INFO:
+			pXml->LoadGlobalClassInfo(m_paCameraOverlayInfo, "CIV4CameraOverlayInfos", "Misc", L"/Civ4CameraOverlayInfos/CameraOverlayInfos/CameraOverlayInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paCameraOverlayInfo);
+			return;
+		case ANIMATION_PATH_INFO:
+			pXml->LoadGlobalClassInfo(m_paAnimationPathInfo, "CIV4AnimationPathInfos", "Units", L"/Civ4AnimationPathInfos/AnimationPaths/AnimationPath", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paAnimationPathInfo);
+			return;
+		case ANIMATION_CATEGORY_INFO:
+			pXml->LoadGlobalClassInfo(m_paAnimationCategoryInfo, "CIV4AnimationInfos", "Units", L"/Civ4AnimationInfos/AnimationCategories/AnimationCategory", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paAnimationCategoryInfo);
+			return;
+		case ENTITY_EVENT_INFO:
+			pXml->LoadGlobalClassInfo(m_paEntityEventInfo, "CIV4EntityEventInfos", "Units", L"/Civ4EntityEventInfos/EntityEventInfos/EntityEventInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paEntityEventInfo);
+			return;
+		case EFFECT_INFO:
+			pXml->LoadGlobalClassInfo(m_paEffectInfo, "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paEffectInfo);
+			return;
+		case ATTACHABLE_INFO:
+			pXml->LoadGlobalClassInfo(m_paAttachableInfo, "CIV4AttachableInfos", "Misc", L"/Civ4AttachableInfos/AttachableInfos/AttachableInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paAttachableInfo);
+			return;
+		case CAMERA_INFO:
+			return;
+		case UNIT_FORMATION_INFO:
+			pXml->LoadGlobalClassInfo(m_paUnitFormationInfo, "CIV4FormationInfos", "Units", L"/UnitFormations/UnitFormation", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paUnitFormationInfo);
+			return;
+		case LANDSCAPE_INFO:
+			pXml->LoadGlobalClassInfo(m_paLandscapeInfo, "CIV4TerrainSettings", "Terrain", L"/Civ4TerrainSettings/LandscapeInfos/LandscapeInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paLandscapeInfo);
+			return;
+		case TERRAIN_INFO:
+			pXml->LoadGlobalClassInfo(m_paTerrainInfo, "CIV4TerrainInfos", "Terrain", L"/Civ4TerrainInfos/TerrainInfos/TerrainInfo", false, &GC.m_TerrainInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paTerrainInfo);
+			return;
+		case BONUS_CLASS_INFO:
+			pXml->LoadGlobalClassInfo(m_paBonusClassInfo, "CIV4BonusClassInfos", "Terrain", L"/Civ4BonusClassInfos/BonusClassInfos/BonusClassInfo", false, &GC.m_BonusClassInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paBonusClassInfo);
+			return;
 		case BONUS_INFO:
 			pXml->LoadGlobalClassInfo(m_paBonusInfo, "CIV4BonusInfos", "Terrain", L"/Civ4BonusInfos/BonusInfos/BonusInfo", false, &m_BonusInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paBonusInfo);
+			return;
+		case FEATURE_INFO:
+			pXml->LoadGlobalClassInfo(m_paFeatureInfo, "CIV4FeatureInfos", "Terrain", L"/Civ4FeatureInfos/FeatureInfos/FeatureInfo", false, &GC.m_FeatureInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paFeatureInfo);
+			return;
+		case CIVILIZATION_INFO:
+			pXml->LoadGlobalClassInfo(m_paCivilizationInfo, "CIV4CivilizationInfos", "Civilizations", L"/Civ4CivilizationInfos/CivilizationInfos/CivilizationInfo", true, &GC.m_CivilizationInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paCivilizationInfo);
+			return;
+		case LEADERHEAD_INFO:
+			pXml->LoadGlobalClassInfo(m_paLeaderHeadInfo, "CIV4LeaderHeadInfos", "Civilizations", L"/Civ4LeaderHeadInfos/LeaderHeadInfos/LeaderHeadInfo", false, &GC.m_LeaderHeadInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paLeaderHeadInfo);
+			return;
+		case TRAIT_INFO:
+			pXml->LoadGlobalClassInfo(m_paTraitInfo, "CIV4TraitInfos", "Civilizations", L"/Civ4TraitInfos/TraitInfos/TraitInfo", true, &GC.m_TraitInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paTraitInfo);
+			return;
+		case CURSOR_INFO:
+			pXml->LoadGlobalClassInfo(m_paCursorInfo, "CIV4CursorInfo", "GameInfo", L"/Civ4CursorInfo/CursorInfos/CursorInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paCursorInfo);
+			return;
+		case THRONE_ROOM_INFO:
+			pXml->LoadGlobalClassInfo(m_paThroneRoomInfo, "CIV4ThroneRoomInfos", "Interface", L"/Civ4ThroneRoomInfos/ThroneRoomInfos/ThroneRoomInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paThroneRoomInfo);
+			return;
+		case THRONE_ROOM_STYLE_INFO:
+			pXml->LoadGlobalClassInfo(m_paThroneRoomStyleInfo, "CIV4ThroneRoomStyleInfos", "Interface", L"/Civ4ThroneRoomStyleInfos/ThroneRoomStyleInfos/ThroneRoomStyleInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paThroneRoomStyleInfo);
+			return;
+		case THRONE_ROOM_CAMERA_INFO:
+			pXml->LoadGlobalClassInfo(m_paThroneRoomCamera, "CIV4ThroneRoomCameraInfos", "Interface", L"/Civ4ThroneRoomCameraInfos/ThroneRoomCameraInfos/ThroneRoomCamera", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paThroneRoomCamera);
+			return;
+		case SLIDE_SHOW_INFO:
+			pXml->LoadGlobalClassInfo(m_paSlideShowInfo, "CIV4SlideShowInfos", "Interface", L"/Civ4SlideShowInfos/SlideShowInfos/SlideShowInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paSlideShowInfo);
+			return;
+		case SLIDE_SHOW_RANDOM_INFO:
+			pXml->LoadGlobalClassInfo(m_paSlideShowRandomInfo, "CIV4SlideShowRandomInfos", "Interface", L"/Civ4SlideShowRandomInfos/SlideShowRandomInfos/SlideShowRandomInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paSlideShowRandomInfo);
+			return;
+		case WORLD_PICKER_INFO:
+			pXml->LoadGlobalClassInfo(m_paWorldPickerInfo, "CIV4WorldPickerInfos", "Interface", L"/Civ4WorldPickerInfos/WorldPickerInfos/WorldPickerInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paWorldPickerInfo);
+			return;
+		case SPACE_SHIP_INFO:
+			pXml->LoadGlobalClassInfo(m_paSpaceShipInfo, "CIV4SpaceShipInfos", "Interface", L"/Civ4SpaceShipInfos/SpaceShipInfos/SpaceShipInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paSpaceShipInfo);
+			return;
+		case UNIT_INFO:
+			pXml->LoadGlobalClassInfo(m_paUnitInfo, "CIV4UnitInfos", "Units", L"/Civ4UnitInfos/UnitInfos/UnitInfo", true, &GC.m_UnitInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paUnitInfo);
+			return;
+		case SPAWN_INFO:
+			pXml->LoadGlobalClassInfo(m_paSpawnInfo, "CIV4SpawnInfos", "Units", L"/Civ4SpawnInfos/SpawnInfos/SpawnInfo", false, &GC.m_SpawnInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paSpawnInfo);
+			return;
+		case SPECIAL_UNIT_INFO:
+			pXml->LoadGlobalClassInfo(m_paSpecialUnitInfo, "CIV4SpecialUnitInfos", "Units", L"/Civ4SpecialUnitInfos/SpecialUnitInfos/SpecialUnitInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paSpecialUnitInfo);
+			return;
+		case YIELD_INFO:
+			pXml->LoadGlobalClassInfo(m_paYieldInfo, "CIV4YieldInfos", "Terrain", L"/Civ4YieldInfos/YieldInfos/YieldInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paYieldInfo);
+			return;
+		case COMMERCE_INFO:
+			pXml->LoadGlobalClassInfo(m_paCommerceInfo, "CIV4CommerceInfo", "GameInfo", L"/Civ4CommerceInfo/CommerceInfos/CommerceInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paCommerceInfo);
+			return;
+		case ROUTE_INFO:
+			pXml->LoadGlobalClassInfo(m_paRouteInfo, "CIV4RouteInfos", "Misc", L"/Civ4RouteInfos/RouteInfos/RouteInfo", false, &GC.m_RouteInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paRouteInfo);
+			return;
+		case IMPROVEMENT_INFO:
+			pXml->LoadGlobalClassInfo(m_paImprovementInfo, "CIV4ImprovementInfos", "Terrain", L"/Civ4ImprovementInfos/ImprovementInfos/ImprovementInfo", true, &GC.m_ImprovementInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paImprovementInfo);
+			return;
+		case GOODY_INFO:
+			pXml->LoadGlobalClassInfo(m_paGoodyInfo, "CIV4GoodyInfo", "GameInfo", L"/Civ4GoodyInfo/GoodyInfos/GoodyInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paGoodyInfo);
+			return;
+		case BUILD_INFO:
+			pXml->LoadGlobalClassInfo(m_paBuildInfo, "CIV4BuildInfos", "Units", L"/Civ4BuildInfos/BuildInfos/BuildInfo", false, &GC.m_BuildInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paBuildInfo);
+			return;
+		case HANDICAP_INFO:
+			pXml->LoadGlobalClassInfo(m_paHandicapInfo, "CIV4HandicapInfo", "GameInfo", L"/Civ4HandicapInfo/HandicapInfos/HandicapInfo", false, &GC.m_HandicapInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paHandicapInfo);
+			return;
+		case GAME_SPEED_INFO:
+			pXml->LoadGlobalClassInfo(m_paGameSpeedInfo, "CIV4GameSpeedInfo", "GameInfo", L"/Civ4GameSpeedInfo/GameSpeedInfos/GameSpeedInfo", false, &GC.m_GameSpeedInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paGameSpeedInfo);
+			return;
+		case TURN_TIMER_INFO:
+			pXml->LoadGlobalClassInfo(m_paTurnTimerInfo, "CIV4TurnTimerInfo", "GameInfo", L"/Civ4TurnTimerInfo/TurnTimerInfos/TurnTimerInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paTurnTimerInfo);
+			return;
+		case PROCESS_INFO:
+			pXml->LoadGlobalClassInfo(m_paProcessInfo, "CIV4ProcessInfo", "GameInfo", L"/Civ4ProcessInfo/ProcessInfos/ProcessInfo", false, &GC.m_ProcessInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paProcessInfo);
+			return;
+		case VOTE_INFO:
+			pXml->LoadGlobalClassInfo(m_paVoteInfo, "CIV4VoteInfo", "GameInfo", L"/Civ4VoteInfo/VoteInfos/VoteInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paVoteInfo);
+			return;
+		case PROJECT_INFO:
+			pXml->LoadGlobalClassInfo(m_paProjectInfo, "CIV4ProjectInfo", "GameInfo", L"/Civ4ProjectInfo/ProjectInfos/ProjectInfo", false, &GC.m_ProjectInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paProjectInfo);
+			return;
+		case BUILDING_INFO:
+			pXml->LoadGlobalClassInfo(m_paBuildingInfo, "CIV4BuildingInfos", "Buildings", L"/Civ4BuildingInfos/BuildingInfos/BuildingInfo", true, &GC.m_BuildingInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paBuildingInfo);
+			return;
+		case SPECIAL_BUILDING_INFO:
+			pXml->LoadGlobalClassInfo(m_paSpecialBuildingInfo, "CIV4SpecialBuildingInfos", "Buildings", L"/Civ4SpecialBuildingInfos/SpecialBuildingInfos/SpecialBuildingInfo", false, &GC.m_SpecialBuildingInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paSpecialBuildingInfo);
+			return;
+		case ACTION_INFO:
+			return;
+		case MISSION_INFO:
+			pXml->LoadGlobalClassInfo(m_paMissionInfo, "CIV4MissionInfos", "Units", L"/Civ4MissionInfos/MissionInfos/MissionInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paMissionInfo);
+			return;
+		case CONTROL_INFOS:
+			pXml->LoadGlobalClassInfo(m_paControlInfo, "CIV4ControlInfos", "Units", L"/Civ4ControlInfos/ControlInfos/ControlInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paControlInfo);
+			return;
+		case COMMAND_INFO:
+			pXml->LoadGlobalClassInfo(m_paCommandInfo, "CIV4CommandInfos", "Units", L"/Civ4CommandInfos/CommandInfos/CommandInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paCommandInfo);
+			return;
+		case AUTOMATE_INFO:
+			pXml->LoadGlobalClassInfo(m_paAutomateInfo, "CIV4AutomateInfos", "Units", L"/Civ4AutomateInfos/AutomateInfos/AutomateInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paAutomateInfo);
+			return;
+		case PROMOTION_INFO:
+			pXml->LoadGlobalClassInfo(m_paPromotionInfo, "CIV4PromotionInfos", "Units", L"/Civ4PromotionInfos/PromotionInfos/PromotionInfo", true, &GC.m_PromotionInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paPromotionInfo);
+			return;
+		case TECH_INFO:
+			pXml->LoadGlobalClassInfo(m_paTechInfo, "CIV4TechInfos", "Technologies", L"/Civ4TechInfos/TechInfos/TechInfo", true, &GC.m_TechInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paTechInfo);
+			return;
+		case RELIGION_INFO:
+			pXml->LoadGlobalClassInfo(m_paReligionInfo, "CIV4ReligionInfo", "GameInfo", L"/Civ4ReligionInfo/ReligionInfos/ReligionInfo", false, &GC.m_ReligionInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paReligionInfo);
+			return;
+		case CORPORATION_INFO:
+			pXml->LoadGlobalClassInfo(m_paCorporationInfo, "CIV4CorporationInfo", "GameInfo", L"/Civ4CorporationInfo/CorporationInfos/CorporationInfo", false, &GC.m_CorporationInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paCorporationInfo);
+			return;
+		case SPECIALIST_INFO:
+			pXml->LoadGlobalClassInfo(m_paSpecialistInfo, "CIV4SpecialistInfos", "GameInfo", L"/Civ4SpecialistInfos/SpecialistInfos/SpecialistInfo", false, &GC.m_SpecialistInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paSpecialistInfo);
+			return;
+		case CIVIC_OPTION_INFO:
+			pXml->LoadGlobalClassInfo(m_paCivicOptionInfo, "CIV4CivicOptionInfos", "GameInfo", L"/Civ4CivicOptionInfos/CivicOptionInfos/CivicOptionInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paCivicOptionInfo);
+			return;
+		case CIVIC_INFO:
+			pXml->LoadGlobalClassInfo(m_paCivicInfo, "CIV4CivicInfos", "GameInfo", L"/Civ4CivicInfos/CivicInfos/CivicInfo", false, &GC.m_CivicInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paCivicInfo);
+			return;
+		case DIPLOMACY_INFO:
+			return;
+		case ERA_INFO:
+			pXml->LoadGlobalClassInfo(m_aEraInfo, "CIV4EraInfos", "GameInfo", L"/Civ4EraInfos/EraInfos/EraInfo", false, &GC.m_EraInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_aEraInfo);
+			return;
+		case HURRY_INFO:
+			pXml->LoadGlobalClassInfo(m_paHurryInfo, "CIV4HurryInfo", "GameInfo", L"/Civ4HurryInfo/HurryInfos/HurryInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paHurryInfo);
+			return;
+		case EMPHASIZE_INFO:
+			pXml->LoadGlobalClassInfo(m_paEmphasizeInfo, "CIV4EmphasizeInfo", "GameInfo", L"/Civ4EmphasizeInfo/EmphasizeInfos/EmphasizeInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paEmphasizeInfo);
+			return;
+		case UPKEEP_INFO:
+			pXml->LoadGlobalClassInfo(m_paUpkeepInfo, "CIV4UpkeepInfo", "GameInfo", L"/Civ4UpkeepInfo/UpkeepInfos/UpkeepInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paUpkeepInfo);
+			return;
+		case CULTURE_LEVEL_INFO:
+			pXml->LoadGlobalClassInfo(m_paCultureLevelInfo, "CIV4CultureLevelInfo", "GameInfo", L"/Civ4CultureLevelInfo/CultureLevelInfos/CultureLevelInfo", false, &GC.m_CultureLevelInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paCultureLevelInfo);
+			return;
+		case VICTORY_INFO:
+			pXml->LoadGlobalClassInfo(m_paVictoryInfo, "CIV4VictoryInfo", "GameInfo", L"/Civ4VictoryInfo/VictoryInfos/VictoryInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paVictoryInfo);
+			return;
+		case QUEST_INFO:
+			pXml->LoadGlobalClassInfo(m_paQuestInfo, "CIV4QuestInfos", "Misc", L"/Civ4QuestInfos/QuestInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paQuestInfo);
+			return;
+		case GAME_OPTION_INFO:
+			pXml->LoadGlobalClassInfo(m_paGameOptionInfos, "CIV4GameOptionInfos", "GameInfo", L"/Civ4GameOptionInfos/GameOptionInfos/GameOptionInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paGameOptionInfos);
+			return;
+		case MP_OPTION_INFO:
+			pXml->LoadGlobalClassInfo(m_paMPOptionInfos, "CIV4MPOptionInfos", "GameInfo", L"/Civ4MPOptionInfos/MPOptionInfos/MPOptionInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paMPOptionInfos);
+			return;
+		case FORCE_CONTROL_INFO:
+			pXml->LoadGlobalClassInfo(m_paForceControlInfos, "CIV4ForceControlInfos", "GameInfo", L"/Civ4ForceControlInfos/ForceControlInfos/ForceControlInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paForceControlInfos);
+			return;
+		case PLAYER_OPTION_INFO:
+			pXml->LoadGlobalClassInfo(m_paPlayerOptionInfos, "CIV4PlayerOptionInfos", "GameInfo", L"/Civ4PlayerOptionInfos/PlayerOptionInfos/PlayerOptionInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paPlayerOptionInfos);
+			return;
+		case GRAPHIC_OPTION_INFO:
+			pXml->LoadGlobalClassInfo(m_paGraphicOptionInfos, "CIV4GraphicOptionInfos", "GameInfo", L"/Civ4GraphicOptionInfos/GraphicOptionInfos/GraphicOptionInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paGraphicOptionInfos);
+			return;
+		case TUTORIAL_INFO:
+			pXml->LoadGlobalClassInfo(m_paTutorialInfo, "CIV4TutorialInfos", "Misc", L"/Civ4TutorialInfos/TutorialInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paTutorialInfo);
+			return;
+		case EVENT_TRIGGER_INFO:
+			pXml->LoadGlobalClassInfo(m_paEventTriggerInfo, "CIV4EventTriggerInfos", "Events", L"/Civ4EventTriggerInfos/EventTriggerInfos/EventTriggerInfo", false, &GC.m_EventTriggerInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paEventTriggerInfo);
+			return;
+		case EVENT_INFO:
+			pXml->LoadGlobalClassInfo(m_paEventInfo, "CIV4EventInfos", "Events", L"/Civ4EventInfos/EventInfos/EventInfo", false, &GC.m_EventInfoReplacements);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paEventInfo);
+			return;
+		case ESPIONAGE_MISSION_INFO:
+			pXml->LoadGlobalClassInfo(m_paEspionageMissionInfo, "CIV4EspionageMissionInfo", "GameInfo", L"/Civ4EspionageMissionInfo/EspionageMissionInfos/EspionageMissionInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paEspionageMissionInfo);
+			return;
+		case UNIT_ART_STYLE_TYPE_INFO:
+			pXml->LoadGlobalClassInfo(m_paUnitArtStyleTypeInfo, "CIV4UnitArtStyleTypeInfos", "Civilizations", L"/Civ4UnitArtStyleTypeInfos/UnitArtStyleTypeInfos/UnitArtStyleTypeInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paUnitArtStyleTypeInfo);
+			return;
+		case VOTE_SOURCE_INFO:
+			pXml->LoadGlobalClassInfo(m_paVoteSourceInfo, "CIV4VoteSourceInfos", "GameInfo", L"/Civ4VoteSourceInfos/VoteSourceInfos/VoteSourceInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paVoteSourceInfo);
+			return;
+		case MAIN_MENU_INFO:
+			pXml->LoadGlobalClassInfo(m_paMainMenus, "CIV4MainMenus", "Art", L"/Civ4MainMenus/MainMenus/MainMenu", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paMainMenus);
+			return;
+		case PROPERTY_INFO:
+			pXml->LoadGlobalClassInfo(m_paPropertyInfo, "CIV4PropertyInfos", "GameInfo", L"/Civ4PropertyInfos/PropertyInfos/PropertyInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paPropertyInfo);
+			return;
+		case OUTCOME_INFO:
+			pXml->LoadGlobalClassInfo(m_paOutcomeInfo, "CIV4OutcomeInfos", "GameInfo", L"/Civ4OutcomeInfos/OutcomeInfos/OutcomeInfo", true);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paOutcomeInfo);
+			return;
+		case UNIT_COMBAT_INFO:
+			pXml->LoadGlobalClassInfo(m_paUnitCombatInfo, "CIV4UnitCombatInfos", "Units", L"/Civ4UnitCombatInfos/UnitCombatInfos/UnitCombatInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paUnitCombatInfo);
+			return;
+		case PROMOTION_LINE_INFO:
+			pXml->LoadGlobalClassInfo(m_paPromotionLineInfo, "CIV4PromotionLineInfos", "Units", L"/Civ4PromotionLineInfos/PromotionLineInfos/PromotionLineInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paPromotionLineInfo);
+			return;
+		case MAP_CATEGORY_INFO:
+			pXml->LoadGlobalClassInfo(m_paMapCategoryInfo, "CIV4MapCategoryInfos", "Terrain", L"/Civ4MapCategoryInfos/MapCategoryInfos/MapCategoryInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paMapCategoryInfo);
+			return;
+		case IDEA_CLASS_INFO:
+			pXml->LoadGlobalClassInfo(m_paIdeaClassInfo, "CIV4IdeaClassInfos", "GameInfo", L"/Civ4IdeaClassInfos/IdeaClassInfos/IdeaClassInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paIdeaClassInfo);
+			return;
+		case IDEA_INFO:
+			pXml->LoadGlobalClassInfo(m_paIdeaInfo, "CIV4IdeaInfos", "GameInfo", L"/Civ4IdeaInfos/IdeaInfos/IdeaInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paIdeaInfo);
+			return;
+		case INVISIBLE_INFO:
+			pXml->LoadGlobalClassInfo(m_paInvisibleInfo, "CIV4InvisibleInfos", "Units", L"/Civ4InvisibleInfos/InvisibleInfos/InvisibleInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paInvisibleInfo);
+			return;
+		case MOD_LOAD_CONTROL_INFO:
+			return;
+		case MAP_INFO:
+			pXml->LoadGlobalClassInfo(m_paMapInfo, "CIV4MapInfo", "GameInfo", L"/Civ4MapInfos/MapInfos/MapInfo", true);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paMapInfo);
+			return;
+		case MAP_SWITCH_INFO:
+			pXml->LoadGlobalClassInfo(m_paMapSwitchInfo, "CIV4MapSwitchInfo", "GameInfo", L"/Civ4MapSwitchInfos/MapSwitchInfos/MapSwitchInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paMapSwitchInfo);
+			return;
+		case HINT_INFO:
+			pXml->LoadGlobalClassInfo(m_paHints, "CIV4Hints", "GameInfo", L"/Civ4Hints/HintInfos/HintInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paHints);
+			return;
+		case INTERFACE_MODE_INFO:
+			pXml->LoadGlobalClassInfo(m_paInterfaceModeInfo, "CIV4InterfaceModeInfos", "Interface", L"/Civ4InterfaceModeInfos/InterfaceModeInfos/InterfaceModeInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&m_paInterfaceModeInfo);
+			return;
+		case INTERFACE_ART_INFO:
+			pXml->LoadGlobalClassInfo(ARTFILEMGR.getInterfaceArtInfo(), "CIV4ArtDefines_Interface", "Art", L"/Civ4ArtDefines/InterfaceArtInfos/InterfaceArtInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&ARTFILEMGR.getInterfaceArtInfo());
+			return;
+		case MOVIE_ART_INFO:
+			pXml->LoadGlobalClassInfo(ARTFILEMGR.getMovieArtInfo(), "CIV4ArtDefines_Movie", "Art", L"/Civ4ArtDefines/MovieArtInfos/MovieArtInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&ARTFILEMGR.getMovieArtInfo());
+			return;
+		case MISC_ART_INFO:
+			pXml->LoadGlobalClassInfo(ARTFILEMGR.getMiscArtInfo(), "CIV4ArtDefines_Misc", "Art", L"/Civ4ArtDefines/MiscArtInfos/MiscArtInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&ARTFILEMGR.getMiscArtInfo());
+			return;
+		case UNIT_ART_INFO:
+			pXml->LoadGlobalClassInfo(ARTFILEMGR.getUnitArtInfo(), "CIV4ArtDefines_Unit", "Art", L"/Civ4ArtDefines/UnitArtInfos/UnitArtInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&ARTFILEMGR.getUnitArtInfo());
+			return;
+		case BUILDING_ART_INFO:
+			pXml->LoadGlobalClassInfo(ARTFILEMGR.getBuildingArtInfo(), "CIV4ArtDefines_Building", "Art", L"/Civ4ArtDefines/BuildingArtInfos/BuildingArtInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&ARTFILEMGR.getBuildingArtInfo());
+			return;
+		case CIVILIZATION_ART_INFO:
+			pXml->LoadGlobalClassInfo(ARTFILEMGR.getCivilizationArtInfo(), "CIV4ArtDefines_Civilization", "Art", L"/Civ4ArtDefines/CivilizationArtInfos/CivilizationArtInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&ARTFILEMGR.getCivilizationArtInfo());
+			return;
+		case LEADER_HEAD_ART_INFO:
+			pXml->LoadGlobalClassInfo(ARTFILEMGR.getLeaderheadArtInfo(), "CIV4ArtDefines_Leaderhead", "Art", L"/Civ4ArtDefines/LeaderheadArtInfos/LeaderheadArtInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&ARTFILEMGR.getLeaderheadArtInfo());
+			return;
+		case BONUS_ART_INFO:
+			pXml->LoadGlobalClassInfo(ARTFILEMGR.getBonusArtInfo(), "CIV4ArtDefines_Bonus", "Art", L"/Civ4ArtDefines/BonusArtInfos/BonusArtInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&ARTFILEMGR.getBonusArtInfo());
+			return;
+		case IMPROVEMENT_ART_INFO:
+			pXml->LoadGlobalClassInfo(ARTFILEMGR.getImprovementArtInfo(), "CIV4ArtDefines_Improvement", "Art", L"/Civ4ArtDefines/ImprovementArtInfos/ImprovementArtInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&ARTFILEMGR.getImprovementArtInfo());
+			return;
+		case TERRAIN_ART_INFO:
+			pXml->LoadGlobalClassInfo(ARTFILEMGR.getTerrainArtInfo(), "CIV4ArtDefines_Terrain", "Art", L"/Civ4ArtDefines/TerrainArtInfos/TerrainArtInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&ARTFILEMGR.getTerrainArtInfo());
+			return;
+		case FEATURE_ART_INFO:
+			pXml->LoadGlobalClassInfo(ARTFILEMGR.getFeatureArtInfo(), "CIV4ArtDefines_Feature", "Art", L"/Civ4ArtDefines/FeatureArtInfos/FeatureArtInfo", false);
+			m_aInfoVectors[infoClass] = reinterpret_cast<std::vector<CvInfoBase*>*>(&ARTFILEMGR.getFeatureArtInfo());
 			return;
 	}
 }
