@@ -9,7 +9,6 @@ import string
 import math
 
 import BugCore
-import BugUtil
 AdvisorOpt = BugCore.game.Advisors
 ScoreOpt = BugCore.game.Scores
 
@@ -43,19 +42,8 @@ class CvInfoScreen:
 		self.iGraph_Smoothing_7in1 = -1
 		self.iGraph_Smoothing_3in1 = -1
 
-		self.TOTAL_SCORE		= 0
-		self.ECONOMY_SCORE		= 1
-		self.INDUSTRY_SCORE		= 2
-		self.AGRICULTURE_SCORE	= 3
-		self.POWER_SCORE		= 4
-		self.CULTURE_SCORE		= 5
-		self.ESPIONAGE_SCORE	= 6
-		self.REVOLUTION_STABILITY_AVERAGE	= 7
-		self.NUM_SCORES						= 8
-		self.RANGE_SCORES = xrange(self.NUM_SCORES)
-
 		self.scoreCache	= []
-		for t in self.RANGE_SCORES:
+		for t in xrange(8):
 			self.scoreCache.append(None)
 
 		self.xSelPt = 0
@@ -106,7 +94,7 @@ class CvInfoScreen:
 		self.iGraphEnd = GAME.getGameTurn() - 1
 		self.iGraphZoom = self.iGraphEnd - GAME.getStartTurn()
 
-		for t in self.RANGE_SCORES:
+		for t in xrange(8):
 			self.scoreCache[t] = None
 
 
@@ -199,8 +187,13 @@ class CvInfoScreen:
 		self.SHOW_NONE = "<font=2>" + TRNSLTR.getText("TXT_KEY_SHOW_NONE", ())
 		self.LOG_SCALE = "<font=2>" + TRNSLTR.getText("TXT_KEY_LOGSCALE", ())
 
-		sTemp1 = [""] * self.NUM_SCORES
-		sTemp2 = [""] * self.NUM_SCORES
+		self.szName = TRNSLTR.getText("TXT_KEY_NAME", ())
+		self.szWonderDate = TRNSLTR.getText("TXT_KEY_WONDER_DATE", ())
+		self.szWonderOwner = TRNSLTR.getText("TXT_KEY_WONDER_OWNER", ())
+		self.szWonderCity = TRNSLTR.getText("TXT_KEY_WONDER_CITY", ())
+
+		sTemp1 = [""] * 8
+		sTemp2 = [""] * 8
 
 		sTemp1[0] = TRNSLTR.getText("TXT_KEY_GAME_SCORE", ())
 		sTemp1[1] = TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_TEXT", ())
@@ -213,7 +206,7 @@ class CvInfoScreen:
 
 		iYellow = GC.getInfoTypeForString("COLOR_YELLOW")
 
-		for i in xrange(self.NUM_SCORES):
+		for i in xrange(8):
 			sTemp2[i] = TRNSLTR.changeTextColor(sTemp1[i], iYellow)
 
 		self.sGraphText = []
@@ -221,16 +214,15 @@ class CvInfoScreen:
 		self.sGraphText.append(sTemp2)
 
 		# determine the big graph text spacing
-		self.X_GRAPH_TEXT = [0] * self.NUM_SCORES
+		self.X_GRAPH_TEXT = [0] * 8
 
-		iW_GRAPH = 934
 		iTEXT_W = 0
-		for i in xrange(self.NUM_SCORES):
+		for i in xrange(8):
 			iTEXT_W += CyInterface().determineWidth(sTemp1[i])
 
-		iText_Space = max(0, iW_GRAPH - iTEXT_W) / (self.NUM_SCORES - 1)
+		iText_Space = max(0, 934 - iTEXT_W) / 7
 
-		for i in xrange(self.NUM_SCORES):
+		for i in xrange(8):
 			if i == 0:
 				self.X_GRAPH_TEXT[i] = 45
 				continue
@@ -310,20 +302,23 @@ class CvInfoScreen:
 		screen.setText("VS_Tab_Act3", "", szTxtCol, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
 		screen.hide("VS_Tab_Act3")
 
+		self.bDebug = GAME.isDebugMode()
 		# Debug DropDown
-		if GAME.isDebugMode():
+		if self.bDebug:
 			DD = "Info_DebugDD"
 			screen.addDropDownBoxGFC(DD, 22, 0, 300, eWidGen, 1, 2, FontTypes.GAME_FONT)
 			for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 				if GC.getPlayer(iPlayerX).isAlive():
 					screen.addPullDownString(DD, GC.getPlayer(iPlayerX).getName(), iPlayerX, iPlayerX, iPlayer == iPlayerX)
+			if not self.iTab:
+				screen.hide("Info_DebugDD")
 
 		# "Save" current widgets so they won't be deleted later when changing tabs
 		self.iNumPermanentWidgets = self.nWidgetCount
 
 		# Reset variables
-		self.iGraphEnd	= GAME.getGameTurn() - 1
-		self.iGraphZoom	= self.iGraphEnd - GAME.getStartTurn()
+		self.iGraphEnd = GAME.getGameTurn() - 1
+		self.iGraphZoom = self.iGraphEnd - GAME.getStartTurn()
 
 		self.redrawContents()
 
@@ -362,23 +357,16 @@ class CvInfoScreen:
 	def drawGraphTab(self):
 
 		if self.iGraphTabID == -1:
-			self.iGraphTabID = self.TOTAL_SCORE
+			self.iGraphTabID = 0
 			self.iGraph_Smoothing_1in1 = 0
 			self.iGraph_Smoothing_7in1 = 0
 			self.bPlayerInclude = [True] * GC.getMAX_PC_PLAYERS()
 
-		self.drawPermanentGraphWidgets()
-		self.drawGraphs()
-
-	def drawPermanentGraphWidgets(self):
-
-		screen = CyGInterfaceScreen("InfoScreen", self.screenId)
-
-		self.sGraphTextHeadingWidget = [0] * self.NUM_SCORES
-		self.sGraphTextBannerWidget = [0] * self.NUM_SCORES
-		self.sGraphPanelWidget = [0] * self.NUM_SCORES
-		self.sGraphBGWidget = [0] * self.NUM_SCORES
-		for i in xrange(self.NUM_SCORES):
+		self.sGraphTextHeadingWidget = [0] * 8
+		self.sGraphTextBannerWidget = [0] * 8
+		self.sGraphPanelWidget = [0] * 8
+		self.sGraphBGWidget = [0] * 8
+		for i in xrange(8):
 			self.sGraphTextHeadingWidget[i] = self.getNextWidgetName()
 			self.sGraphTextBannerWidget[i] = self.getNextWidgetName()
 			self.sGraphPanelWidget[i] = self.getNextWidgetName()
@@ -395,80 +383,50 @@ class CvInfoScreen:
 		self.sShowAllWidget = self.getNextWidgetName()
 		self.sShowNoneWidget = self.getNextWidgetName()
 
-		if not AdvisorOpt.isGraphs():
-			self.drawLegend()
-
-		if AdvisorOpt.isGraphs():
-			iX_LEFT_BUTTON = 45
-		else:
-			iX_LEFT_BUTTON = 205
+		eWidGen = WidgetTypes.WIDGET_GENERAL
+		eFontGame = FontTypes.GAME_FONT
+		screen = CyGInterfaceScreen("InfoScreen", self.screenId)
 
 		self.graphLeftButtonID = self.getNextWidgetName()
-		screen.setButtonGFC( self.graphLeftButtonID, u"", "", iX_LEFT_BUTTON, 670, 20, 20, WidgetTypes.WIDGET_GENERAL, -1, -1, ButtonStyles.BUTTON_STYLE_ARROW_LEFT )
 		self.graphRightButtonID = self.getNextWidgetName()
-		screen.setButtonGFC( self.graphRightButtonID, u"", "", 959, 670, 20, 20, WidgetTypes.WIDGET_GENERAL, -1, -1, ButtonStyles.BUTTON_STYLE_ARROW_RIGHT )
+
+		screen.setButtonGFC(self.graphLeftButtonID, "", "", 45, 670, 20, 20, eWidGen, 1, 2, ButtonStyles.BUTTON_STYLE_ARROW_LEFT)
+		screen.setButtonGFC(self.graphRightButtonID, "", "", 959, 670, 20, 20, eWidGen, 1, 2, ButtonStyles.BUTTON_STYLE_ARROW_RIGHT)
+
 		screen.enable(self.graphLeftButtonID, False)
 		screen.enable(self.graphRightButtonID, False)
 
-		# Dropdown Box
-		self.szGraphDropdownWidget = self.getNextWidgetName()
-		screen.addDropDownBoxGFC(self.szGraphDropdownWidget, 45, 80, 150, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-		screen.addPullDownString(self.szGraphDropdownWidget, self.TEXT_SCORE, 0, 0, False)
-		screen.addPullDownString(self.szGraphDropdownWidget, self.TEXT_ECONOMY, 1, 1, False)
-		screen.addPullDownString(self.szGraphDropdownWidget, self.TEXT_INDUSTRY, 2, 2, False)
-		screen.addPullDownString(self.szGraphDropdownWidget, self.TEXT_AGRICULTURE, 3, 3, False)
-		screen.addPullDownString(self.szGraphDropdownWidget, self.TEXT_POWER, 4, 4, False)
-		screen.addPullDownString(self.szGraphDropdownWidget, self.TEXT_CULTURE, 5, 5, False)
-		screen.addPullDownString(self.szGraphDropdownWidget, self.TEXT_ESPIONAGE, 6, 6, False)
-
-		if AdvisorOpt.isGraphs():
-			screen.hide(self.szGraphDropdownWidget)
-
-			iX_ZOOM_DROPDOWN = 870
-			iY_ZOOM_DROPDOWN = 10
-			if GAME.isDebugMode():
-				iY_SMOOTH_DROPDOWN = iY_ZOOM_DROPDOWN + 50
-			else:
-				iY_SMOOTH_DROPDOWN = iY_ZOOM_DROPDOWN
-		else:
-			iX_ZOOM_DROPDOWN = 45
-			iY_ZOOM_DROPDOWN = 115
-
 		# graph smoothing dropdown
-		if AdvisorOpt.isGraphs():
-			self.szGraphSmoothingDropdownWidget_1in1 = self.getNextWidgetName()
-			self.szGraphSmoothingDropdownWidget_7in1 = self.getNextWidgetName()
+		self.szGraphSmoothingDropdownWidget_1in1 = self.getNextWidgetName()
+		self.szGraphSmoothingDropdownWidget_7in1 = self.getNextWidgetName()
 
-	#		screen.addDropDownBoxGFC(self.szGraphSmoothingDropdownWidget, iX_ZOOM_DROPDOWN - 150 - 60, iY_ZOOM_DROPDOWN, 200, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-			screen.addDropDownBoxGFC(self.szGraphSmoothingDropdownWidget_1in1, 10, iY_SMOOTH_DROPDOWN, 200, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-			screen.addDropDownBoxGFC(self.szGraphSmoothingDropdownWidget_7in1, 10, iY_SMOOTH_DROPDOWN, 200, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-			for i in xrange(11):
-				screen.addPullDownString(self.szGraphSmoothingDropdownWidget_1in1, TRNSLTR.getText("TXT_KEY_GRAPH_SMOOTHING", (i,)), i, i, False )
-				screen.addPullDownString(self.szGraphSmoothingDropdownWidget_7in1, TRNSLTR.getText("TXT_KEY_GRAPH_SMOOTHING", (i,)), i, i, False )
+		screen.addDropDownBoxGFC(self.szGraphSmoothingDropdownWidget_1in1, 8, 0, 200, eWidGen, 1, 2, eFontGame)
+		screen.addDropDownBoxGFC(self.szGraphSmoothingDropdownWidget_7in1, 8, 0, 200, eWidGen, 1, 2, eFontGame)
+		for i in xrange(6):
+			iV = 2*i
+			screen.addPullDownString(self.szGraphSmoothingDropdownWidget_1in1, TRNSLTR.getText("TXT_KEY_GRAPH_SMOOTHING", (iV,)), i, iV, self.iGraph_Smoothing_1in1 == iV)
+			screen.addPullDownString(self.szGraphSmoothingDropdownWidget_7in1, TRNSLTR.getText("TXT_KEY_GRAPH_SMOOTHING", (iV,)), i, iV, self.iGraph_Smoothing_7in1 == iV)
 
-			screen.hide(self.szGraphSmoothingDropdownWidget_1in1)
-			screen.hide(self.szGraphSmoothingDropdownWidget_7in1)
+		screen.hide(self.szGraphSmoothingDropdownWidget_1in1)
+		screen.hide(self.szGraphSmoothingDropdownWidget_7in1)
 
-			# 3 in 1 graph selectionS
-			self.szGraphDropdownWidget_3in1 = [""] * 3
-			self.iGraph_3in1 = [0, 1, 2]
-			iW_GRAPH = 463
-			iH_GRAPH = 290
-			for i in xrange(3):
-				self.szGraphDropdownWidget_3in1[i] = self.getNextWidgetName()
-				x = 55 + self.X_3_IN_1_CHART_ADJ[i] * (iW_GRAPH + 11)
-				y = 85 + self.Y_3_IN_1_CHART_ADJ[i] * (iH_GRAPH + 10)
-				screen.addDropDownBoxGFC(self.szGraphDropdownWidget_3in1[i], x, y, 200, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-				for j in xrange(self.NUM_SCORES):
-					screen.addPullDownString(self.szGraphDropdownWidget_3in1[i], self.sGraphText[0][j], j, j, self.iGraph_3in1[i] == j )
-				screen.hide(self.szGraphDropdownWidget_3in1[i])
-
-		if not AdvisorOpt.isGraphs():
-			self.iGraph_Smoothing = 0
+		# 3 in 1 graph selectionS
+		self.szGraphDropdownWidget_3in1 = ["", "", ""]
+		self.iGraph_3in1 = [0, 1, 2]
+		iW_GRAPH = 463
+		iH_GRAPH = 290
+		for i in xrange(3):
+			self.szGraphDropdownWidget_3in1[i] = self.getNextWidgetName()
+			x = 55 + self.X_3_IN_1_CHART_ADJ[i] * (iW_GRAPH + 11)
+			y = 85 + self.Y_3_IN_1_CHART_ADJ[i] * (iH_GRAPH + 10)
+			screen.addDropDownBoxGFC(self.szGraphDropdownWidget_3in1[i], x, y, 200, eWidGen, 1, 2, eFontGame)
+			for j in xrange(8):
+				screen.addPullDownString(self.szGraphDropdownWidget_3in1[i], self.sGraphText[0][j], j, j, self.iGraph_3in1[i] == j )
+			screen.hide(self.szGraphDropdownWidget_3in1[i])
 
 		self.dropDownTurns = []
 		self.szTurnsDropdownWidget = self.getNextWidgetName()
-		screen.addDropDownBoxGFC(self.szTurnsDropdownWidget, iX_ZOOM_DROPDOWN, iY_ZOOM_DROPDOWN, 150, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+		screen.addDropDownBoxGFC(self.szTurnsDropdownWidget, 216, 0, 156, eWidGen, 1, 2, eFontGame)
 		start = GAME.getStartTurn()
 		now   = GAME.getGameTurn()
 		nTurns = now - start - 1
@@ -476,20 +434,21 @@ class CvInfoScreen:
 		self.dropDownTurns.append(nTurns)
 		iCounter = 1
 		last = 50
-		while (last < nTurns):
+		while last < nTurns:
 			screen.addPullDownString(self.szTurnsDropdownWidget, TRNSLTR.getText("TXT_KEY_INFO_NUM_TURNS", (last,)), iCounter, iCounter, False)
 			self.dropDownTurns.append(last)
 			iCounter += 1
 			last += 50
 
-		if AdvisorOpt.isGraphs():
-			screen.setText(self.sGraph1in1, "", "1/1", 1<<2, 22,  90, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-			screen.setText(self.sGraph3in1, "", "3/1", 1<<2, 22, 110, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-			screen.setText(self.sGraph7in1, "", "7/1", 1<<2, 22, 130, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		screen.setText(self.sGraph1in1, "", "1/1", 1<<2, 22,  90, 0, eFontGame, eWidGen, 1, 2)
+		screen.setText(self.sGraph3in1, "", "3/1", 1<<2, 22, 110, 0, eFontGame, eWidGen, 1, 2)
+		screen.setText(self.sGraph7in1, "", "7/1", 1<<2, 22, 130, 0, eFontGame, eWidGen, 1, 2)
 
-		screen.setLabel(self.getNextWidgetName(), "", self.BUG_GRAPH_HELP, 1<<2, 512, 690, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		screen.setLabel(self.getNextWidgetName(), "", self.BUG_GRAPH_HELP, 1<<2, 512, 690, 0, eFontGame, eWidGen, 1, 2)
 
 		self.iNumPreDemoChartWidgets = self.nWidgetCount
+
+		self.drawGraphs()
 
 
 	def updateGraphButtons(self):
@@ -518,41 +477,40 @@ class CvInfoScreen:
 		if iScore == 0: # for some reason only the score is 0 when you're dead..?
 			return 0
 
-		if scoreType == self.TOTAL_SCORE:
+		if scoreType == 0:
 			return iScore
 
-		if scoreType == self.ECONOMY_SCORE:
+		if scoreType == 1:
 			return GC.getPlayer(iPlayer).getEconomyHistory(iTurn)
 
-		if scoreType == self.INDUSTRY_SCORE:
+		if scoreType == 2:
 			return GC.getPlayer(iPlayer).getIndustryHistory(iTurn)
 
-		if scoreType == self.AGRICULTURE_SCORE:
+		if scoreType == 3:
 			return GC.getPlayer(iPlayer).getAgricultureHistory(iTurn)
 
-		if scoreType == self.POWER_SCORE:
+		if scoreType == 4:
 			return GC.getPlayer(iPlayer).getPowerHistory(iTurn)
 
-		if scoreType == self.CULTURE_SCORE:
+		if scoreType == 5:
 			return GC.getPlayer(iPlayer).getCultureHistory(iTurn)
 
-		if scoreType == self.ESPIONAGE_SCORE:
+		if scoreType == 6:
 			return GC.getPlayer(iPlayer).getEspionageHistory(iTurn)
 
-		if scoreType == self.REVOLUTION_STABILITY_AVERAGE:
+		if scoreType == 7:
 			return 1000 - GC.getPlayer(iPlayer).getRevolutionStabilityHistory(iTurn)
 
 
 	def drawXLabel(self, screen, turn, x, just = 1<<2):
-		if AdvisorOpt.isGraphs():
 
-			if self.Graph_Status_Current == self.Graph_Status_1in1:
-				screen.show(self.graphLeftButtonID)
-				screen.show(self.graphRightButtonID)
-			else:
-				screen.hide(self.graphLeftButtonID)
-				screen.hide(self.graphRightButtonID)
-				return
+		if self.Graph_Status_Current == self.Graph_Status_1in1:
+			screen.show(self.graphLeftButtonID)
+			screen.show(self.graphRightButtonID)
+		else:
+			screen.hide(self.graphLeftButtonID)
+			screen.hide(self.graphRightButtonID)
+			return
 
 		year = GAME.getTurnYear(turn)
 		if year < 0:
@@ -566,57 +524,52 @@ class CvInfoScreen:
 		self.deleteAllLines()
 		self.deleteAllWidgets(self.iNumPreDemoChartWidgets)
 
-#BUG: Change Graphs - start
-		if not AdvisorOpt.isGraphs():
-			self.drawGraph(self.iGraphTabID)
+		screen = CyGInterfaceScreen("InfoScreen", self.screenId)
+
+		# show the right smoothing dropdown
+		if self.Graph_Status_Current == self.Graph_Status_1in1:
+			screen.show(self.szGraphSmoothingDropdownWidget_1in1)
+			screen.hide(self.szGraphSmoothingDropdownWidget_7in1)
 		else:
-			screen = CyGInterfaceScreen("InfoScreen", self.screenId)
+			screen.hide(self.szGraphSmoothingDropdownWidget_1in1)
+			screen.show(self.szGraphSmoothingDropdownWidget_7in1)
 
-			# show the right smoothing dropdown
-			if self.Graph_Status_Current == self.Graph_Status_1in1:
-				screen.show(self.szGraphSmoothingDropdownWidget_1in1)
-				screen.hide(self.szGraphSmoothingDropdownWidget_7in1)
-			else:
-				screen.hide(self.szGraphSmoothingDropdownWidget_1in1)
-				screen.show(self.szGraphSmoothingDropdownWidget_7in1)
+		for i in xrange(8):
+			screen.hide(self.sGraphTextHeadingWidget[i])
+			screen.hide(self.sGraphPanelWidget[i])
 
-			#RevolutionDCM
-			for i in xrange(self.NUM_SCORES):
-				screen.hide(self.sGraphTextHeadingWidget[i])
-				screen.hide(self.sGraphPanelWidget[i])
+		for i in xrange(3):
+			screen.hide(self.szGraphDropdownWidget_3in1[i])
+
+		if self.Graph_Status_Current == self.Graph_Status_1in1:
+			self.drawGraph(self.iGraphTabID)
+			self.drawLegend()
+
+			iY = 50
+
+			for i in xrange(8):
+				iX = self.X_GRAPH_TEXT[i]
+				screen.hide(self.sGraphTextBannerWidget[i])
+				if i == self.iGraphTabID:
+					screen.setText(self.sGraphTextBannerWidget[i], "", self.sGraphText[1][i], 1<<0, iX, iY, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+				else:
+					screen.setText(self.sGraphTextBannerWidget[i], "", self.sGraphText[0][i], 1<<0, iX, iY, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+
+		elif self.Graph_Status_Current == self.Graph_Status_7in1:
+
+			for i in xrange(8):
+				screen.hide(self.sGraphTextBannerWidget[i])
+				self.drawGraph(i)
+
+			self.drawLegend()
+		else:
+			for i in xrange(8):
+				screen.hide(self.sGraphTextBannerWidget[i])
 
 			for i in xrange(3):
-				screen.hide(self.szGraphDropdownWidget_3in1[i])
+				self.drawGraph(i)
 
-			if self.Graph_Status_Current == self.Graph_Status_1in1:
-				self.drawGraph(self.iGraphTabID)
-				self.drawLegend()
-
-				iY = 50
-
-				for i in xrange(self.NUM_SCORES):
-					iX = self.X_GRAPH_TEXT[i]
-					screen.hide(self.sGraphTextBannerWidget[i])
-					if i == self.iGraphTabID:
-						screen.setText(self.sGraphTextBannerWidget[i], "", self.sGraphText[1][i], 1<<0, iX, iY, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-					else:
-						screen.setText(self.sGraphTextBannerWidget[i], "", self.sGraphText[0][i], 1<<0, iX, iY, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-
-			elif self.Graph_Status_Current == self.Graph_Status_7in1:
-
-				for i in xrange(self.NUM_SCORES):
-					screen.hide(self.sGraphTextBannerWidget[i])
-					self.drawGraph(i)
-
-				self.drawLegend()
-			else:
-				for i in xrange(self.NUM_SCORES):
-					screen.hide(self.sGraphTextBannerWidget[i])
-
-				for i in xrange(3):
-					self.drawGraph(i)
-
-				self.drawLegend()
+			self.drawLegend()
 
 
 	def drawGraph(self, vGraphID_Locn):
@@ -627,22 +580,16 @@ class CvInfoScreen:
 			iGraphID = self.iGraph_3in1[vGraphID_Locn]
 		else: iGraphID = vGraphID_Locn
 
-		if not AdvisorOpt.isGraphs():
-			iX_GRAPH = 205
+		# compute graph x, y, w, h
+		if self.Graph_Status_Current == self.Graph_Status_1in1:
+			# graph is 'full' screen - or as big as I can get it without it looking stupid
+			iX_GRAPH = 45
 			iY_GRAPH = 80
-			iW_GRAPH = 774
+			iW_GRAPH = 934
 			iH_GRAPH = 590
-		else:
-			# compute graph x, y, w, h
-			if self.Graph_Status_Current == self.Graph_Status_1in1:
-				# graph is 'full' screen - or as big as I can get it without it looking stupid
-				iX_GRAPH = 45
-				iY_GRAPH = 80
-				iW_GRAPH = 934
-				iH_GRAPH = 590
 
-			elif self.Graph_Status_Current == self.Graph_Status_7in1:
-				# graphs are in following layout
+		elif self.Graph_Status_Current == self.Graph_Status_7in1:
+			# graphs are in following layout
 # the 7-in-1 graphs are layout out as follows:
 #    0 1 2     305 11 305 11 305 for a total of 937 pixals wide
 #    L 3 4     190 10 190 10 190 for a total of 590 pixals high
@@ -651,13 +598,13 @@ class CvInfoScreen:
 # where L is the legend and a number represents a graph
 #		self.X_7_IN_1_CHART_ADJ = [0, 1, 2, 1, 2, 1, 2]
 #		self.Y_7_IN_1_CHART_ADJ = [0, 0, 0, 1, 1, 2, 2]
-				iW_GRAPH = 305
-				iH_GRAPH = 190
-				iX_GRAPH = 45 + self.X_7_IN_1_CHART_ADJ[vGraphID_Locn] * (iW_GRAPH + 11)
-				iY_GRAPH = 80 + self.Y_7_IN_1_CHART_ADJ[vGraphID_Locn] * (iH_GRAPH + 10) #+ 25
+			iW_GRAPH = 305
+			iH_GRAPH = 190
+			iX_GRAPH = 45 + self.X_7_IN_1_CHART_ADJ[vGraphID_Locn] * (iW_GRAPH + 11)
+			iY_GRAPH = 80 + self.Y_7_IN_1_CHART_ADJ[vGraphID_Locn] * (iH_GRAPH + 10) #+ 25
 
-			else: #self.Graph_Status_Current == self.Graph_Status_3in1:
-				# graphs are in following layout
+		else:
+			# graphs are in following layout
 # the 3-in-1 graphs are layout out as follows:
 #    0 1     463 11 463 for a total of 937 pixals wide
 #    L 2     290 10 290 for a total of 590 pixals high
@@ -665,10 +612,10 @@ class CvInfoScreen:
 # where L is the legend and a number represents a graph
 #		self.X_3_IN_1_CHART_ADJ = [0, 1, 1]
 #		self.Y_3_IN_1_CHART_ADJ = [0, 0, 1]
-				iW_GRAPH = 463
-				iH_GRAPH = 290
-				iX_GRAPH = 45 + self.X_3_IN_1_CHART_ADJ[vGraphID_Locn] * (iW_GRAPH + 11)
-				iY_GRAPH = 80 + self.Y_3_IN_1_CHART_ADJ[vGraphID_Locn] * (iH_GRAPH + 10)
+			iW_GRAPH = 463
+			iH_GRAPH = 290
+			iX_GRAPH = 45 + self.X_3_IN_1_CHART_ADJ[vGraphID_Locn] * (iW_GRAPH + 11)
+			iY_GRAPH = 80 + self.Y_3_IN_1_CHART_ADJ[vGraphID_Locn] * (iH_GRAPH + 10)
 
 
 		eWidGen = WidgetTypes.WIDGET_GENERAL
@@ -724,13 +671,8 @@ class CvInfoScreen:
 			screen.addLineGFC(zsGRAPH_CANVAS_ID, "GraphHLine", -1, -1, -1, -1, GC.getInfoTypeForString("COLOR_GREY"))
 			screen.addLineGFC(zsGRAPH_CANVAS_ID, "GraphVLine", -1, -1, -1, -1, GC.getInfoTypeForString("COLOR_GREY"))
 
-		if AdvisorOpt.isGraphs():
-			iX_LEFT_LABEL = 75
-		else:
-			iX_LEFT_LABEL = 235
-
 		# Draw x-labels
-		self.drawXLabel(screen, firstTurn, iX_LEFT_LABEL, 1<<0)
+		self.drawXLabel(screen, firstTurn, 75, 1<<0)
 		self.drawXLabel(screen, lastTurn,  949, 1<<1)
 
 		# Don't draw anything the first turn
@@ -770,10 +712,9 @@ class CvInfoScreen:
 
 		# Draw the lines
 		for p in self.aiPlayersMet:
-			if AdvisorOpt.isGraphs():
-				i = GC.getPlayer(p).getID()
-				if not self.bPlayerInclude[i]:
-					continue
+
+			if not self.bPlayerInclude[p]:
+				continue
 
 			color = GC.getPlayerColorInfo(GC.getPlayer(p).getPlayerColor()).getColorTypePrimary()
 			oldX = -1
@@ -806,58 +747,44 @@ class CvInfoScreen:
 
 				turn -= 1
 
-		# draw the chart text
-		if AdvisorOpt.isGraphs():
-			if self.Graph_Status_Current == self.Graph_Status_1in1:
-				iY_GRAPH_TITLE = iY_GRAPH + 10
-			else:
-				iY_GRAPH_TITLE = iY_GRAPH + 5
-
-			if self.Graph_Status_Current == self.Graph_Status_3in1:
-				screen.show(self.szGraphDropdownWidget_3in1[vGraphID_Locn])
-				screen.moveToFront(self.szGraphDropdownWidget_3in1[vGraphID_Locn])
-			else:
-				screen.addPanel(self.sGraphPanelWidget[vGraphID_Locn], "", "", True, True, iX_GRAPH + 5, iY_GRAPH_TITLE, 150, 25, PanelStyles.PANEL_STYLE_IN)
-				screen.setText(self.sGraphTextHeadingWidget[iGraphID], "", self.sGraphText[0][iGraphID], 1<<0, iX_GRAPH + 10, iY_GRAPH_TITLE, 0, FontTypes.TITLE_FONT, eWidGen, 1, 2)
+		# draw the chart headers
+		if self.Graph_Status_Current == self.Graph_Status_3in1:
+			screen.show(self.szGraphDropdownWidget_3in1[vGraphID_Locn])
+			screen.moveToFront(self.szGraphDropdownWidget_3in1[vGraphID_Locn])
+		elif self.Graph_Status_Current == self.Graph_Status_7in1:
+			screen.addPanel(self.sGraphPanelWidget[vGraphID_Locn], "", "", True, True, iX_GRAPH + 5, iY_GRAPH + 5, 150, 25, PanelStyles.PANEL_STYLE_IN)
+			screen.setText(self.sGraphTextHeadingWidget[iGraphID], "", self.sGraphText[0][iGraphID], 1<<0, iX_GRAPH + 10, iY_GRAPH + 5, 0, FontTypes.TITLE_FONT, eWidGen, 1, 2)
 
 
 	def drawLegend(self):
 		screen = CyGInterfaceScreen("InfoScreen", self.screenId)
 
 		iW_LEGEND = 150
-		if AdvisorOpt.isGraphs():
-			for p in self.aiPlayersMet:
-				szPlayerName = self.getPlayerName(p)
-				if not GC.getPlayer(p).isAlive(): szPlayerName += " [" + self.BUG_LEGEND_DEAD + "]"
 
-				if iW_LEGEND < 50 + CyInterface().determineWidth(szPlayerName) + 10:
-					iW_LEGEND = 50 + CyInterface().determineWidth(szPlayerName) + 10
+		for p in self.aiPlayersMet:
+			szPlayerName = self.getPlayerName(p)
+			if not GC.getPlayer(p).isAlive(): szPlayerName += " [" + self.BUG_LEGEND_DEAD + "]"
 
-			for p in self.aiPlayersMetNAEspionage:
-				szPlayerName = self.getPlayerName(p)
-				if not GC.getPlayer(p).isAlive(): szPlayerName += " [" + self.BUG_LEGEND_DEAD + "]"
+			if iW_LEGEND < 50 + CyInterface().determineWidth(szPlayerName) + 10:
+				iW_LEGEND = 50 + CyInterface().determineWidth(szPlayerName) + 10
 
-				if iW_LEGEND < 50 + CyInterface().determineWidth(szPlayerName) + 10:
-					iW_LEGEND = 50 + CyInterface().determineWidth(szPlayerName) + 10
+		for p in self.aiPlayersMetNAEspionage:
+			szPlayerName = self.getPlayerName(p)
+			if not GC.getPlayer(p).isAlive(): szPlayerName += " [" + self.BUG_LEGEND_DEAD + "]"
 
-		if not AdvisorOpt.isGraphs():
-			X_LEGEND = 45
+			if iW_LEGEND < 50 + CyInterface().determineWidth(szPlayerName) + 10:
+				iW_LEGEND = 50 + CyInterface().determineWidth(szPlayerName) + 10
 
-			H_LEGEND = 13 + self.iNumPlayersMet * 16
-			if AdvisorOpt.isGraphsLogScale():
-				H_LEGEND += 16
-			Y_LEGEND = 670 - H_LEGEND
+		X_LEGEND = 50
+
+		H_LEGEND = 13 + (self.iNumPlayersMet + self.iNumPlayersMetNAEspionage + 4) * 16
+		if AdvisorOpt.isGraphsLogScale():
+			H_LEGEND += 16
+
+		if self.Graph_Status_Current == self.Graph_Status_1in1:
+			Y_LEGEND = 120
 		else:
-			X_LEGEND = 50
-
-			H_LEGEND = 13 + (self.iNumPlayersMet + self.iNumPlayersMetNAEspionage + 4) * 16
-			if AdvisorOpt.isGraphsLogScale():
-				H_LEGEND += 16
-
-			if self.Graph_Status_Current == self.Graph_Status_1in1:
-				Y_LEGEND = 120
-			else:
-				Y_LEGEND = 670 - H_LEGEND
+			Y_LEGEND = 670 - H_LEGEND
 
 		screen.addPanel(self.getNextWidgetName(), "", "", True, True, X_LEGEND, Y_LEGEND, iW_LEGEND, H_LEGEND, PanelStyles.PANEL_STYLE_IN)
 
@@ -869,13 +796,10 @@ class CvInfoScreen:
 
 		for p in self.aiPlayersMet:
 
-			if AdvisorOpt.isGraphs():
-				name = self.getPlayerName(p)
-			else:
-				name = GC.getPlayer(p).getName()
+			name = self.getPlayerName(p)
 
 			i = GC.getPlayer(p).getID()
-			if self.bPlayerInclude[i] or not AdvisorOpt.isGraphs():
+			if self.bPlayerInclude[i]:
 
 				textColorR = GC.getPlayer(p).getPlayerTextColorR()
 				textColorG = GC.getPlayer(p).getPlayerTextColorG()
@@ -890,72 +814,67 @@ class CvInfoScreen:
 				textColorB = 175
 				textColorA = GC.getPlayer(p).getPlayerTextColorA()
 
-			str = u"<color=%d,%d,%d,%d>%s</color>" %(textColorR,textColorG,textColorB,textColorA,name)
+			str = "<color=%d,%d,%d,%d>%s</color>" %(textColorR, textColorG, textColorB, textColorA, name)
 
-			if AdvisorOpt.isGraphs():
-				screen.setText(self.sPlayerTextWidget[i], "", "<font=2>" + str, 1<<0, X_LEGEND + 50, yText, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
-			else:
-				screen.setLabel(self.sPlayerTextWidget[i], "", "<font=2>" + str, 1<<0, X_LEGEND + 50, yText, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
+			screen.setText(self.sPlayerTextWidget[i], "", "<font=2>" + str, 1<<0, X_LEGEND + 50, yText, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
 
 			yLine += 16
 			yText += 16
 
 		# ADD players where you don't have enough espionage points
-		if AdvisorOpt.isGraphs():
-			# add blank line
+		# add blank line
+		yLine += 16
+		yText += 16
+		for p in self.aiPlayersMetNAEspionage:
+			i = GC.getPlayer(p).getID()
+
+			name = self.getPlayerName(p)
+
+			if not GC.getPlayer(p).isAlive(): # player is dead!
+				textColorR = 175
+				textColorG = 175
+				textColorB = 175
+				textColorA = GC.getPlayer(p).getPlayerTextColorA()
+				name += " [" + self.BUG_LEGEND_DEAD + "]"
+			else:
+				textColorR = GC.getPlayer(p).getPlayerTextColorR()
+				textColorG = GC.getPlayer(p).getPlayerTextColorG()
+				textColorB = GC.getPlayer(p).getPlayerTextColorB()
+				textColorA = GC.getPlayer(p).getPlayerTextColorA()
+
+			str = "<color=%d,%d,%d,%d>%s</color>" %(textColorR, textColorG, textColorB, textColorA, name)
+
+			screen.setLabel(self.sPlayerTextWidget[i], "", "<font=2>" + str, 1<<0, X_LEGEND + 52, yText, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
+
 			yLine += 16
 			yText += 16
-			for p in self.aiPlayersMetNAEspionage:
-				i = GC.getPlayer(p).getID()
 
-				name = self.getPlayerName(p)
-
-				if not GC.getPlayer(p).isAlive(): # player is dead!
-					textColorR = 175
-					textColorG = 175
-					textColorB = 175
-					textColorA = GC.getPlayer(p).getPlayerTextColorA()
-					name += " [" + self.BUG_LEGEND_DEAD + "]"
-				else:
-					textColorR = GC.getPlayer(p).getPlayerTextColorR()
-					textColorG = GC.getPlayer(p).getPlayerTextColorG()
-					textColorB = GC.getPlayer(p).getPlayerTextColorB()
-					textColorA = GC.getPlayer(p).getPlayerTextColorA()
-
-				str = "<color=%d,%d,%d,%d>%s</color>" %(textColorR, textColorG, textColorB, textColorA, name)
-
-				screen.setLabel(self.sPlayerTextWidget[i], "", "<font=2>" + str, 1<<0, X_LEGEND + 52, yText, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
-
-				yLine += 16
-				yText += 16
-
-			yText += 16
-			xShow = X_LEGEND + iW_LEGEND / 2
-			screen.setText(self.sShowAllWidget, "", self.SHOW_ALL, 1<<2, xShow, yText, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-			yText += 16
-			screen.setText(self.sShowNoneWidget, "", self.SHOW_NONE, 1<<2, xShow, yText, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		yText += 16
+		xShow = X_LEGEND + iW_LEGEND / 2
+		screen.setText(self.sShowAllWidget, "", self.SHOW_ALL, 1<<2, xShow, yText, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		yText += 16
+		screen.setText(self.sShowNoneWidget, "", self.SHOW_NONE, 1<<2, xShow, yText, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		if AdvisorOpt.isGraphsLogScale():
-			if AdvisorOpt.isGraphs():
-				yText += 16
+			yText += 16
 			screen.setLabel(self.getNextWidgetName(), "", self.LOG_SCALE, 1<<2, X_LEGEND + iW_LEGEND / 2, yText, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
 
 
 	def getPlayerName(self, ePlayer):
-		if (ScoreOpt.isUsePlayerName()):
+		if ScoreOpt.isUsePlayerName():
 			szPlayerName = GC.getPlayer(ePlayer).getName()
 		else:
 			szPlayerName = GC.getLeaderHeadInfo(GC.getPlayer(ePlayer).getLeaderType()).getDescription()
 
-		if (ScoreOpt.isShowBothNames()):
+		if ScoreOpt.isShowBothNames():
 			szPlayerName = szPlayerName + "/" + GC.getPlayer(ePlayer).getCivilizationShortDescription(0)
-		elif (ScoreOpt.isShowLeaderName()):
+		elif ScoreOpt.isShowLeaderName():
 			szPlayerName = szPlayerName
 		else:
 			szPlayerName = GC.getPlayer(ePlayer).getCivilizationShortDescription(0)
 
 		return szPlayerName
-#BUG: Change Graphs - end
+
 
 #############################################################################################################
 ################################################# DEMOGRAPHICS ##############################################
@@ -2012,16 +1931,11 @@ class CvInfoScreen:
 
 		zoomArt = self.zoomArt
 
-		sName = BugUtil.getPlainText("TXT_KEY_NAME")
-		sDate = BugUtil.getPlainText("TXT_KEY_WONDER_DATE")
-		sOwner = BugUtil.getPlainText("TXT_KEY_WONDER_OWNER")
-		sCity = BugUtil.getPlainText("TXT_KEY_WONDER_CITY")
-
 		screen.setTableColumnHeader(self.szWondersTable, 0, "", 30)
-		screen.setTableColumnHeader(self.szWondersTable, 1, sName, 115)
-		screen.setTableColumnHeader(self.szWondersTable, 2, sDate, 70)
-		screen.setTableColumnHeader(self.szWondersTable, 3, sOwner, 100)
-		screen.setTableColumnHeader(self.szWondersTable, 4, sCity, 100)
+		screen.setTableColumnHeader(self.szWondersTable, 1, self.szName, 115)
+		screen.setTableColumnHeader(self.szWondersTable, 2, self.szWonderDate, 70)
+		screen.setTableColumnHeader(self.szWondersTable, 3, self.szWonderOwner, 100)
+		screen.setTableColumnHeader(self.szWondersTable, 4, self.szWonderCity, 100)
 
 		iWBB = len(self.aaWondersBeingBuilt_BUG)
 
@@ -2372,9 +2286,9 @@ class CvInfoScreen:
 		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 			playerX = GC.getPlayer(iPlayerX)
 			iTeamX = playerX.getTeam()
-			if playerX.isEverAlive() and (team.isHasMet(iTeamX) or GAME.isDebugMode() or iEndGame):
+			if playerX.isEverAlive() and (team.isHasMet(iTeamX) or self.bDebug or iEndGame):
 
-				if (iEndGame or iTeamX == iTeam or player.canDoEspionageMission(self.iDemographicsMission, iPlayerX, None, -1)):
+				if iEndGame or iTeamX == iTeam or player.canDoEspionageMission(self.iDemographicsMission, iPlayerX, None, -1):
 					self.aiPlayersMet.append(iPlayerX)
 					self.iNumPlayersMet += 1
 				else:
@@ -2391,11 +2305,8 @@ class CvInfoScreen:
 	def getLog10(self, x):
 		return math.log10(max(1, x))
 
-	def lineName(self,i):
-		return "DemoLine" + str(i)
-
 	def getNextLineName(self):
-		name = self.lineName(self.nLineCount)
+		name = "DemoLine" + str(self.nLineCount)
 		self.nLineCount += 1
 		return name
 
@@ -2408,8 +2319,8 @@ class CvInfoScreen:
 	def deleteAllLines(self):
 		screen = CyGInterfaceScreen("InfoScreen", self.screenId)
 		i = 0
-		while (i < self.nLineCount):
-			screen.deleteWidget(self.lineName(i))
+		while i < self.nLineCount:
+			screen.deleteWidget("DemoLine" + str(i))
 			i += 1
 		self.nLineCount = 0
 
@@ -2459,7 +2370,7 @@ class CvInfoScreen:
 
 				# Force recache of all scores
 				self.scoreCache = []
-				for t in self.RANGE_SCORES:
+				for t in xrange(8):
 					self.scoreCache.append(None)
 				self.redrawContents()
 
@@ -2493,35 +2404,7 @@ class CvInfoScreen:
 			elif not self.iTab:
 
 				# Graph dropdown to select what values are being graphed
-				if (szWidgetName == self.szGraphDropdownWidget):
-
-					if (iSelected == 0):
-						self.iGraphTabID = self.TOTAL_SCORE
-
-					elif (iSelected == 1):
-						self.iGraphTabID = self.ECONOMY_SCORE
-
-					elif (iSelected == 2):
-						self.iGraphTabID = self.INDUSTRY_SCORE
-
-					elif (iSelected == 3):
-						self.iGraphTabID = self.AGRICULTURE_SCORE
-
-					elif (iSelected == 4):
-						self.iGraphTabID = self.POWER_SCORE
-
-					elif (iSelected == 5):
-						self.iGraphTabID = self.CULTURE_SCORE
-
-					elif (iSelected == 6):
-						self.iGraphTabID = self.ESPIONAGE_SCORE
-					#RevolutionDCM
-					elif (iSelected == 7):
-						self.iGraphTabID = self.TOTAL_SCORE
-
-					self.drawGraphs()
-
-				elif szWidgetName == self.szTurnsDropdownWidget:
+				if szWidgetName == self.szTurnsDropdownWidget:
 
 					self.iGraphZoom = self.dropDownTurns[iSelected]
 					self.checkGraphBounds()
@@ -2550,6 +2433,11 @@ class CvInfoScreen:
 			if NAME == "VS_Tab":
 				screen.hide("VS_Tab_Act" + str(self.iTab))
 				screen.show("VS_Tab" + str(self.iTab))
+				if self.bDebug:
+					if not self.iTab:
+						screen.show("Info_DebugDD")
+					elif not ID:
+						screen.hide("Info_DebugDD")
 				self.iTab = ID
 				self.reset()
 				self.redrawContents()
@@ -2559,56 +2447,54 @@ class CvInfoScreen:
 				self.handleInput_Wonders(inputClass)
 
 
-			if AdvisorOpt.isGraphs():
-
-				for i in xrange(self.NUM_SCORES):
-					if (szWidgetName == self.sGraphTextHeadingWidget[i]
-					or (szWidgetName == self.sGraphBGWidget[i] and iCode == NotifyCode.NOTIFY_CLICKED)):
-						if self.Graph_Status_Current == self.Graph_Status_1in1:
-							self.Graph_Status_Current = self.Graph_Status_Prior
-							self.Graph_Status_Prior = self.Graph_Status_1in1
-						else:
-							self.Graph_Status_Prior = self.Graph_Status_Current
-							self.Graph_Status_Current = self.Graph_Status_1in1
-						self.iGraphTabID = i
-						self.drawGraphs()
-						break
-
-					elif szWidgetName == self.sGraphTextBannerWidget[i]:
-						if self.iGraphTabID == i:
-							self.Graph_Status_Current = self.Graph_Status_7in1
-						self.iGraphTabID = i
-						self.drawGraphs()
-						break
-
-				if szWidgetName == self.sGraph1in1:
-					self.Graph_Status_Current = self.Graph_Status_1in1
-					self.Graph_Status_Prior = self.Graph_Status_Current
+			for i in xrange(8):
+				if (szWidgetName == self.sGraphTextHeadingWidget[i]
+				or (szWidgetName == self.sGraphBGWidget[i] and iCode == NotifyCode.NOTIFY_CLICKED)):
+					if self.Graph_Status_Current == self.Graph_Status_1in1:
+						self.Graph_Status_Current = self.Graph_Status_Prior
+						self.Graph_Status_Prior = self.Graph_Status_1in1
+					else:
+						self.Graph_Status_Prior = self.Graph_Status_Current
+						self.Graph_Status_Current = self.Graph_Status_1in1
+					self.iGraphTabID = i
 					self.drawGraphs()
-				elif szWidgetName == self.sGraph3in1:
-					self.Graph_Status_Current = self.Graph_Status_3in1
-					self.Graph_Status_Prior = self.Graph_Status_Current
-					self.drawGraphs()
-				elif szWidgetName == self.sGraph7in1:
-					self.Graph_Status_Current = self.Graph_Status_7in1
-					self.Graph_Status_Prior = self.Graph_Status_Current
-					self.drawGraphs()
+					break
 
+				elif szWidgetName == self.sGraphTextBannerWidget[i]:
+					if self.iGraphTabID == i:
+						self.Graph_Status_Current = self.Graph_Status_7in1
+					self.iGraphTabID = i
+					self.drawGraphs()
+					break
+
+			if szWidgetName == self.sGraph1in1:
+				self.Graph_Status_Current = self.Graph_Status_1in1
+				self.Graph_Status_Prior = self.Graph_Status_Current
+				self.drawGraphs()
+			elif szWidgetName == self.sGraph3in1:
+				self.Graph_Status_Current = self.Graph_Status_3in1
+				self.Graph_Status_Prior = self.Graph_Status_Current
+				self.drawGraphs()
+			elif szWidgetName == self.sGraph7in1:
+				self.Graph_Status_Current = self.Graph_Status_7in1
+				self.Graph_Status_Prior = self.Graph_Status_Current
+				self.drawGraphs()
+
+			for i in xrange(GC.getMAX_PC_PLAYERS()):
+				if szWidgetName == self.sPlayerTextWidget[i]:
+					self.bPlayerInclude[i] = not self.bPlayerInclude[i]
+					self.drawGraphs()
+					break
+
+			if szWidgetName == self.sShowAllWidget:
 				for i in xrange(GC.getMAX_PC_PLAYERS()):
-					if szWidgetName == self.sPlayerTextWidget[i]:
-						self.bPlayerInclude[i] = not self.bPlayerInclude[i]
-						self.drawGraphs()
-						break
+					self.bPlayerInclude[i] = True
+				self.drawGraphs()
 
-				if szWidgetName == self.sShowAllWidget:
-					for i in xrange(GC.getMAX_PC_PLAYERS()):
-						self.bPlayerInclude[i] = True
-					self.drawGraphs()
-
-				if szWidgetName == self.sShowNoneWidget:
-					for i in xrange(GC.getMAX_PC_PLAYERS()):
-						self.bPlayerInclude[i] = False
-					self.drawGraphs()
+			if szWidgetName == self.sShowNoneWidget:
+				for i in xrange(GC.getMAX_PC_PLAYERS()):
+					self.bPlayerInclude[i] = False
+				self.drawGraphs()
 
 		return 0
 
