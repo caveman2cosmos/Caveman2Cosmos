@@ -7850,6 +7850,8 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 }
 
 
+// If this func returns false, the build will not show up in the worker UI
+// bTestEra and bTestVisible are to show builds regardless of availability; BUG option.
 bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, bool bTestVisible, bool bIncludePythonOverrides) const
 {
 	PROFILE_FUNC();
@@ -7861,23 +7863,64 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 
 	const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
 
+	// false if build obsolete by tech
 	if (kBuild.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getObsoleteTech()))
 	{
 		return false;
 	}
 
-	bool bTerrainTechQualified = false;
+	// check money, terrain and feature prereqs
+	// logic was expanded out, because condensing this makes it *way* too damn confusing when trying to edit with all the double negatives.....
 	if (pPlot != NULL)
 	{
-		// Check if player has tech to build on this terrain
+		// check gold
+		if (!bTestVisible && std::max<int64_t>(0, getGold()) < getBuildCost(pPlot, eBuild))
+		{
+			return false;
+		}
+
+		// if we don't have base tech requirement...
+		if (kBuild.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getTechPrereq()))
+		{
+			// if bTests are true, don't return false unless the build is also past our era
+			if (!bTestEra && !bTestVisible || getCurrentEra() < GC.getTechInfo((TechTypes)kBuild.getTechPrereq()).getEra())
+			{
+				return false;
+			}
+		}
+
+		FeatureTypes plotFeature = pPlot->getFeatureType();
+		// false if must but can't remove feature without prod gain, OR feature/terrain tech req is 2 eras past us. Allow 1 era past for UI feedback!
+		if (plotFeature != NO_FEATURE)
+		{
+			// if feature requires tech we don't have...
+			if (!GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getFeatureTech(plotFeature)))
+			{
+				// if feature is not removed, or is removed but can do so without prod gain...
+				if (!kBuild.isFeatureRemove(plotFeature)
+				||   kBuild.isFeatureRemove(plotFeature) && !kBuild.isNoTechCanRemoveWithNoProductionGain(plotFeature))
+				{
+					// if bTests are true, delay returning false by era+1
+					if (!bTestEra && !bTestVisible || getCurrentEra()+1 < GC.getTechInfo((TechTypes)kBuild.getFeatureTech(plotFeature)).getEra())
+					{
+						return false;
+					}
+				}
+			}
+		}
+		
+		// terrain is similar to feature; can't build if don't have tech, etc, only diff is looping thru terrain structs because that's how we roll
 		for (int iI = 0; iI < kBuild.getNumTerrainStructs(); iI++)
 		{
-			if(kBuild.getTerrainStruct(iI).eTerrain == pPlot->getTerrainType()
-			&& kBuild.getTerrainStruct(iI).ePrereqTech != NO_TECH)
+			const TerrainTypes eTerrain = kBuild.getTerrainStruct(iI).eTerrain;
+
+			if( (eTerrain == pPlot->getTerrainType()
+			||  eTerrain == GC.getTERRAIN_PEAK() && pPlot->isAsPeak()
+			||  eTerrain == GC.getTERRAIN_HILL() && pPlot->isHills())
+			&& kBuild.getTerrainStruct(iI).ePrereqTech != NO_TECH
+			&& !GET_TEAM(getTeam()).isHasTech(kBuild.getTerrainStruct(iI).ePrereqTech))
 			{
-				bTerrainTechQualified = true;
-				if (!GET_TEAM(getTeam()).isHasTech(kBuild.getTerrainStruct(iI).ePrereqTech)
-				&& (!bTestEra && !bTestVisible || getCurrentEra() < GC.getTechInfo(kBuild.getTerrainStruct(iI).ePrereqTech).getEra()))
+				if (!bTestEra && !bTestVisible || getCurrentEra()+1 < GC.getTechInfo(kBuild.getTerrainStruct(iI).ePrereqTech).getEra())
 				{
 					return false;
 				}
@@ -7885,17 +7928,12 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 		}
 	}
 
-	if (!bTerrainTechQualified && kBuild.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getTechPrereq())
-	&& (!bTestEra && !bTestVisible || getCurrentEra() < GC.getTechInfo((TechTypes)kBuild.getTechPrereq()).getEra()))
-	{
-		return false;
-	}
-
 	if (kBuild.isDisabled())
 	{
 		return false;
 	}
 
+	// Unique improvement checks
 	if (kBuild.getImprovement() != NO_IMPROVEMENT)
 	{
 		ImprovementTypes eImprovement = (ImprovementTypes)kBuild.getImprovement();
@@ -7911,28 +7949,6 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 		}
 	}
 
-	if (!bTestVisible)
-	{
-		if (pPlot != NULL)
-		{
-			if (pPlot->getFeatureType() != NO_FEATURE)
-			{
-				if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getFeatureTech(pPlot->getFeatureType()))))
-				{
-					if (!kBuild.isNoTechCanRemoveWithNoProductionGain(pPlot->getFeatureType()))
-					{
-						return false;
-					}
-
-				}
-			}
-
-			if (std::max<int64_t>(0, getGold()) < getBuildCost(pPlot, eBuild))
-			{
-				return false;
-			}
-		}
-	}
 	return true;
 }
 
@@ -7968,24 +7984,26 @@ int CvPlayer::getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const
 	return iCost;
 }
 
+// Checks route validity from either plot/builder specific standpoint or player in-general standpoint based on args
 bool CvPlayer::isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvPlot* pPlot, const CvUnit* pBuilder) const
 {
-	// If we're checking an actual plot, examine the buildinfo to see if the player can build it there
-	if (pPlot != NULL && (pPlot->getRouteType() == eRoute || canBuild(pPlot, eRouteBuild))
-	{
-		// return true if we either have no builder, or the specific builder we're passed can build there
-		return pBuilder == NULL || pBuilder->canBuild(pPlot, eRouteBuild);
-	}
-	// If it's not an actual plot and we're just checking if the route is possible in general, look at:
-	// Do we have tech prereq AND (tech doesn't obsolete OR we don't have the tech that obsoletes the route)
-	else if (GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eRouteBuild).getTechPrereq())
-		&&  (GC.getBuildInfo(eRouteBuild).getObsoleteTech() == NO_TECH
-			|| !GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBuildInfo(eRouteBuild).getObsoleteTech()))))
-	{
-		// return true if we either have no builder, or the specific builder we're passed can build there
-		return pBuilder == NULL || pBuilder->canBuild(pPlot, eRouteBuild);
-	}
-	else return false;
+	// Player in general; have tech reqs and not obsolete?
+	if (pPlot == NULL)
+    {
+        if (!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eRouteBuild).getTechPrereq())
+        || GC.getBuildInfo(eRouteBuild).getObsoleteTech() != NO_TECH
+        && GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eRouteBuild).getObsoleteTech()))
+        {
+            return false;
+        }
+    }
+	// plot specific query
+    else if (pPlot->getRouteType() != eRoute && !canBuild(pPlot, eRouteBuild))
+    {
+        return false;
+    }
+	// unit specific query
+    return pBuilder == NULL || pBuilder->canBuild(pPlot,eRouteBuild);
 }
 
 
@@ -8013,7 +8031,7 @@ RouteTypes CvPlayer::getBestRouteInternal(const CvPlot* pPlot, bool bConnect, co
 	RouteTypes eBestRoute = NO_ROUTE;
 
 	const int numBuildInfos = GC.getNumBuildInfos();
-	const int baseMoves = GC.getMOVE_DENOMINATOR();
+	// const int baseMoves = GC.getMOVE_DENOMINATOR();
 
 	for (int iI = 0; iI < numBuildInfos; iI++)
 	{
@@ -8028,7 +8046,7 @@ RouteTypes CvPlayer::getBestRouteInternal(const CvPlot* pPlot, bool bConnect, co
 				// Extra movement is dependant on unit speed; iMovement != iFlatMovement, so this isn't a very useful measure...
 				// iValue += std::max(0, baseMoves / std::min(baseMoves, GC.getRouteInfo(eRoute).getMovementCost()) - 1);
 				
-				// Too dependant on ratios of xml values; TODO check relative gains for tile improvement + yield, choose cheapest if isFinancialTrouble
+				// Too dependant on ratios of xml tags; TODO check relative gains for tile improvement + yield, choose cheapest if isFinancialTrouble
 				// if (!bConnect) {
 				// 	iValue -= GC.getBuildInfo((BuildTypes)iI).getTime() / 100;
 				// 	iValue -= GC.getBuildInfo((BuildTypes)iI).getCost() / (AI_isFinancialTrouble() ? 1 : 2);

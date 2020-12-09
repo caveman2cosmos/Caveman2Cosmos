@@ -3175,8 +3175,13 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						}
 					}
 
+					// Save tech prereq to avoid double-posting if terrain happens to share same tech prereq
+					TechTypes featureTechRequired = NO_TECH;
+
 					if (ePlotFeature != NO_FEATURE)
 					{
+						featureTechRequired = (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature);
+
 						// If the plot feature requires a different tech than the base tile itself AND we don't have that tech
 						if ( (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)
 						&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)) )
@@ -3189,7 +3194,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 								
 								// If the feature blocks the improvement from ever being constructable or not, different messages
 								// WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ FEATURE BLOCKING IN CIV4BuildInfos, REALLY SHOULD BE BETTER SOMEHOW
-								if (GC.getTechInfo((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)).isDisable())
+								if (GC.getTechInfo(featureTechRequired).isDisable())
 								{
 									szBuffer.append(gDLL->getText("TXT_KEY_BUILD_PLOT_BLOCKED",
 										GC.getFeatureInfo(ePlotFeature).getTextKeyWide()));
@@ -3197,8 +3202,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 								else
 								{	
 									szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
-										CvWString(GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)).getType()).GetCString(),
-										GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)).getTextKeyWide()));
+										CvWString(GC.getTechInfo(featureTechRequired).getType()).GetCString(),
+										GC.getTechInfo(featureTechRequired).getTextKeyWide()));
 								}
 							}
 						}
@@ -3211,18 +3216,21 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						||  eTerrain == GC.getTERRAIN_PEAK() && pMissionPlot->isAsPeak()
 						||  eTerrain == GC.getTERRAIN_HILL() && pMissionPlot->isHills())
 						{
-							// If there is a tech required to build on the terrain that differs from the base tech prereq,
+							const TechTypes terrainTechRequired = GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech;
+
+							// If there is a tech required to build on the terrain that differs from the base tech prereq and feature prereq,
 							// we don't have that tech, and the build doesn't obsolete OR we don't have the obsolete tech:
-							if (GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech != NO_TECH
-							&& (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech
-							&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech)
-							&& (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
+							if (terrainTechRequired != NO_TECH
+							&&  terrainTechRequired != featureTechRequired
+							&&  terrainTechRequired != (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq()
+							&&  !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(terrainTechRequired)
+							&&  (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
 								|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech())))
 							{
 								szBuffer.append(NEWLINE);
 								// If the terrain blocks the improvement from ever being constructable or not, different messages
 								// WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ TERRAIN BLOCKING IN CIV4BuildInfos, REALLY SHOULD BE BETTER SOMEHOW
-								if (GC.getTechInfo(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech).isDisable())
+								if (GC.getTechInfo(terrainTechRequired).isDisable())
 								{
 									szBuffer.append(gDLL->getText("TXT_KEY_BUILD_PLOT_BLOCKED",
 										GC.getTerrainInfo(ePlotTerrain).getTextKeyWide()));
@@ -3230,9 +3238,11 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 								else
 								{
 									szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
-										CvWString(GC.getTechInfo(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech).getType()).GetCString(),
-										GC.getTechInfo(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech).getTextKeyWide()));
+										CvWString(GC.getTechInfo(terrainTechRequired).getType()).GetCString(),
+										GC.getTechInfo(terrainTechRequired).getTextKeyWide()));
 								}
+								// Avoid duplicating if terrain pops up twice due to the isAsPeak or isHills checks
+								break;
 							}
 						}
 					}
