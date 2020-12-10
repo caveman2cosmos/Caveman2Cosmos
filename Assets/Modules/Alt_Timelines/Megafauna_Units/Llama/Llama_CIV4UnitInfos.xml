@@ -145,14 +145,8 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MOUNTAINEER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MOUNTAINEER</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -299,14 +293,8 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MOUNTAINEER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MOUNTAINEER</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 	</UnitInfos>

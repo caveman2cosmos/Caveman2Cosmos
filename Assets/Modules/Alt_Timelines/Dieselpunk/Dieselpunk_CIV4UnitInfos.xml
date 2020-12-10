@@ -744,10 +744,7 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>

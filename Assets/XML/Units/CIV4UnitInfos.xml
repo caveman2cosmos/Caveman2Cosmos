@@ -37,14 +37,8 @@ Base XP gained when defending
 			<bFound>1</bFound>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_GUARDIAN_TRIBAL</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
+				<PromotionType>PROMOTION_GUARDIAN_TRIBAL</PromotionType>
 			</FreePromotions>
 			<UnitUpgrades>
 				<UnitType>UNIT_TRIBE</UnitType>
@@ -1579,14 +1573,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_FIELD_WORKER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_FOREST_WORKER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_FIELD_WORKER1</PromotionType>
+				<PromotionType>PROMOTION_FOREST_WORKER1</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -1919,14 +1907,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HILL_WORKER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MOUNTAINEER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_HILL_WORKER1</PromotionType>
+				<PromotionType>PROMOTION_MOUNTAINEER</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -2583,14 +2565,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HILL_WORKER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MOUNTAINEER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_HILL_WORKER1</PromotionType>
+				<PromotionType>PROMOTION_MOUNTAINEER</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -2918,14 +2894,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_DESERT_WORKER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_DESERT_WORKER2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_DESERT_WORKER1</PromotionType>
+				<PromotionType>PROMOTION_DESERT_WORKER2</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -4968,14 +4938,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_GUERILLA1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WOODSMAN1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_GUERILLA1</PromotionType>
+				<PromotionType>PROMOTION_WOODSMAN1</PromotionType>
 			</FreePromotions>
 			<PrereqGameOption>GAMEOPTION_ADVANCED_DIPLOMACY</PrereqGameOption>
 		</UnitInfo>
@@ -5058,10 +5022,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MOUNTAINEER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_MOUNTAINEER</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -5143,10 +5104,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MOUNTAINEER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_MOUNTAINEER</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -5240,18 +5198,9 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_GUERILLA1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WOODSMAN1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_GUERILLA1</PromotionType>
+				<PromotionType>PROMOTION_WOODSMAN1</PromotionType>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<PrereqGameOption>GAMEOPTION_ADVANCED_DIPLOMACY</PrereqGameOption>
 		</UnitInfo>
@@ -5336,18 +5285,9 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_GUERILLA1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WOODSMAN1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_GUERILLA1</PromotionType>
+				<PromotionType>PROMOTION_WOODSMAN1</PromotionType>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -5399,10 +5339,7 @@ Base XP gained when defending
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
 			</FreePromotions>
 			<iCost>21</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -5614,10 +5551,7 @@ Base XP gained when defending
 			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
 			</FreePromotions>
 			<ForceObsoleteTech>TECH_BRONZE_WORKING</ForceObsoleteTech>
 			<SupersedingUnits>
@@ -5711,14 +5645,8 @@ Base XP gained when defending
 			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
+				<PromotionType>PROMOTION_HUNTING_SIGHT2</PromotionType>
 			</FreePromotions>
 			<ForceObsoleteTech>TECH_FEUDALISM</ForceObsoleteTech>
 		</UnitInfo>
@@ -5808,14 +5736,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
+				<PromotionType>PROMOTION_HUNTING_SIGHT2</PromotionType>
 			</FreePromotions>
 			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
 		</UnitInfo>
@@ -5905,14 +5827,8 @@ Base XP gained when defending
 			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
+				<PromotionType>PROMOTION_HUNTING_SIGHT2</PromotionType>
 			</FreePromotions>
 			<ForceObsoleteTech>TECH_RIFLING</ForceObsoleteTech>
 		</UnitInfo>
@@ -5998,14 +5914,8 @@ Base XP gained when defending
 			</UnitCombatTargets>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
+				<PromotionType>PROMOTION_HUNTING_SIGHT2</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -6069,10 +5979,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -6135,14 +6042,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SECURITY1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_SECURITY1</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -6209,22 +6110,10 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_IMPROVISE1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SECURITY1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_ESCAPE1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_IMPROVISE1</PromotionType>
+				<PromotionType>PROMOTION_SECURITY1</PromotionType>
+				<PromotionType>PROMOTION_ESCAPE1</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -6296,38 +6185,14 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_IMPROVISE1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SECURITY1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_ESCAPE1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_DECEPTION1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_IMPROVISE2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SECURITY2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_IMPROVISE3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_IMPROVISE1</PromotionType>
+				<PromotionType>PROMOTION_SECURITY1</PromotionType>
+				<PromotionType>PROMOTION_ESCAPE1</PromotionType>
+				<PromotionType>PROMOTION_DECEPTION1</PromotionType>
+				<PromotionType>PROMOTION_IMPROVISE2</PromotionType>
+				<PromotionType>PROMOTION_SECURITY2</PromotionType>
+				<PromotionType>PROMOTION_IMPROVISE3</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -6400,30 +6265,12 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_IMPROVISE1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SECURITY1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SECURITY2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_ESCAPE1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_ALCHEMIST1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_IMPROVISE1</PromotionType>
+				<PromotionType>PROMOTION_SECURITY1</PromotionType>
+				<PromotionType>PROMOTION_SECURITY2</PromotionType>
+				<PromotionType>PROMOTION_ESCAPE1</PromotionType>
+				<PromotionType>PROMOTION_ALCHEMIST1</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -6481,10 +6328,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<Button>Art/Interface/Buttons/Units/sleeper.dds</Button>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -9867,14 +9711,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_CRUSADER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LEADER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_CRUSADER</PromotionType>
+				<PromotionType>PROMOTION_LEADER</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -12376,10 +12214,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_AMBUSH</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_AMBUSH</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -12624,10 +12459,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -13059,10 +12891,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_TRENCH1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_TRENCH1</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -13774,10 +13603,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -13972,10 +13798,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -14080,10 +13903,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -14187,34 +14007,13 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
+				<PromotionType>PROMOTION_WARMTH1</PromotionType>
+				<PromotionType>PROMOTION_WARMTH2</PromotionType>
+				<PromotionType>PROMOTION_WARMTH3</PromotionType>
+				<PromotionType>PROMOTION_COLD1</PromotionType>
+				<PromotionType>PROMOTION_COLD2</PromotionType>
+				<PromotionType>PROMOTION_COLD3</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -15047,10 +14846,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -15186,10 +14982,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -15342,10 +15135,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -15492,10 +15282,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -15650,18 +15437,9 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_FLANKING1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_FLANKING2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_FLANKING1</PromotionType>
+				<PromotionType>PROMOTION_FLANKING2</PromotionType>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -15812,10 +15590,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -15937,10 +15712,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -16070,10 +15842,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -16256,10 +16025,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -16442,10 +16208,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -16601,10 +16364,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -16786,10 +16546,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -16977,10 +16734,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -17175,14 +16929,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_TRENCH1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_TRENCH1</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -17313,10 +17061,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -17426,10 +17171,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_ELEPHANT_RIDER</UnitType>
@@ -17542,10 +17284,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -17681,10 +17420,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -17819,10 +17555,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -17952,10 +17685,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -18071,22 +17801,10 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_WARMTH1</PromotionType>
+				<PromotionType>PROMOTION_WARMTH2</PromotionType>
+				<PromotionType>PROMOTION_WARMTH3</PromotionType>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -18204,18 +17922,9 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_WARMTH1</PromotionType>
+				<PromotionType>PROMOTION_WARMTH2</PromotionType>
+				<PromotionType>PROMOTION_WARMTH3</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -18329,22 +18038,10 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_WARMTH1</PromotionType>
+				<PromotionType>PROMOTION_WARMTH2</PromotionType>
+				<PromotionType>PROMOTION_WARMTH3</PromotionType>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -18474,22 +18171,10 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_WARMTH1</PromotionType>
+				<PromotionType>PROMOTION_WARMTH2</PromotionType>
+				<PromotionType>PROMOTION_WARMTH3</PromotionType>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -18575,10 +18260,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -18679,10 +18361,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -18785,10 +18464,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -18890,10 +18566,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -19016,10 +18689,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -19146,10 +18816,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -19248,10 +18915,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -19384,10 +19048,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -19498,10 +19159,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -19623,10 +19281,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -19740,10 +19395,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -19857,10 +19509,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -19958,10 +19607,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -20367,14 +20013,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARCH</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_MARCH</PromotionType>
+				<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -20620,14 +20260,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARCH</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_MARCH</PromotionType>
+				<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -20840,14 +20474,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARCH</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_MARCH</PromotionType>
+				<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -21264,10 +20892,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -24200,18 +23825,9 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_RUGGED1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_RUGGED2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_RUGGED3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_RUGGED1</PromotionType>
+				<PromotionType>PROMOTION_RUGGED2</PromotionType>
+				<PromotionType>PROMOTION_RUGGED3</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -25411,14 +25027,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_URBAN_TACTICS1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_URBAN_TACTICS2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_URBAN_TACTICS1</PromotionType>
+				<PromotionType>PROMOTION_URBAN_TACTICS2</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -25985,10 +25595,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -26124,18 +25731,9 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_URBAN_TACTICS1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_URBAN_TACTICS2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARCH</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_URBAN_TACTICS1</PromotionType>
+				<PromotionType>PROMOTION_URBAN_TACTICS2</PromotionType>
+				<PromotionType>PROMOTION_MARCH</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -26252,10 +25850,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -26369,10 +25964,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -26492,10 +26084,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -26612,10 +26201,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -26732,10 +26318,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -26853,10 +26436,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -26973,10 +26553,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -27093,10 +26670,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -27188,14 +26762,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
+				<PromotionType>PROMOTION_SENTRY2</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -27666,18 +27234,9 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENSORS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_NANOIDS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENSORS</PromotionType>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
+				<PromotionType>PROMOTION_NANOIDS</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -27758,18 +27317,9 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENSORS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_NANOIDS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENSORS</PromotionType>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
+				<PromotionType>PROMOTION_NANOIDS</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -36275,10 +35825,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<PrereqOrCivics>
 				<PrereqCivic>
@@ -36849,10 +36396,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<PrereqOrCivics>
 				<PrereqCivic>
@@ -37622,10 +37166,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -37741,10 +37282,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -37863,10 +37401,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -38794,10 +38329,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<bDCMFighterEngage>1</bDCMFighterEngage>
 		</UnitInfo>
@@ -39027,10 +38559,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<bDCMFighterEngage>1</bDCMFighterEngage>
 		</UnitInfo>
@@ -41755,10 +41284,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -41850,14 +41376,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
+				<PromotionType>PROMOTION_SENTRY2</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -41942,18 +41462,9 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
+				<PromotionType>PROMOTION_SENTRY2</PromotionType>
+				<PromotionType>PROMOTION_SENTRY3</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -43674,10 +43185,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_IMPERIAL_GUARD</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_IMPERIAL_GUARD</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -43784,10 +43292,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_IMPERIAL_GUARD</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_IMPERIAL_GUARD</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -43888,10 +43393,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_IMPERIAL_GUARD</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_IMPERIAL_GUARD</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -43994,10 +43496,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_IMPERIAL_GUARD</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_IMPERIAL_GUARD</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -44153,10 +43652,7 @@ Base XP gained when defending
 			<iCultureGarrison>1</iCultureGarrison>
 			<iInvestigation>2</iInvestigation>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
@@ -44280,10 +43776,7 @@ Base XP gained when defending
 			<iCultureGarrison>2</iCultureGarrison>
 			<iInvestigation>5</iInvestigation>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<iAsset>3</iAsset>
 			<iPower>4</iPower>
@@ -44421,10 +43914,7 @@ Base XP gained when defending
 			<iCaptureProbabilityModifier>3</iCaptureProbabilityModifier>
 			<iInvestigation>15</iInvestigation>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<iAsset>4</iAsset>
 			<iPower>6</iPower>
@@ -44563,10 +44053,7 @@ Base XP gained when defending
 			<iCaptureProbabilityModifier>6</iCaptureProbabilityModifier>
 			<iInvestigation>20</iInvestigation>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<iAsset>5</iAsset>
 			<iPower>8</iPower>
@@ -44705,10 +44192,7 @@ Base XP gained when defending
 			<iCaptureProbabilityModifier>9</iCaptureProbabilityModifier>
 			<iInvestigation>25</iInvestigation>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<iAsset>6</iAsset>
 			<iPower>11</iPower>
@@ -45002,10 +44486,7 @@ Base XP gained when defending
 			<iCaptureProbabilityModifier>15</iCaptureProbabilityModifier>
 			<iInvestigation>40</iInvestigation>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<iAsset>8</iAsset>
 			<iPower>20</iPower>
@@ -45147,10 +44628,7 @@ Base XP gained when defending
 			<iCaptureProbabilityModifier>18</iCaptureProbabilityModifier>
 			<iInvestigation>60</iInvestigation>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<iAsset>9</iAsset>
 			<iPower>25</iPower>
@@ -45320,10 +44798,7 @@ Base XP gained when defending
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<iAsset>10</iAsset>
 			<iPower>30</iPower>
@@ -45634,10 +45109,7 @@ Base XP gained when defending
 			<iDynamicDefense>22</iDynamicDefense>
 			<iCultureGarrison>11</iCultureGarrison>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
 			<SMNotSpecialCargo>SPECIALUNIT_VTOL</SMNotSpecialCargo>
@@ -45969,10 +45441,7 @@ Base XP gained when defending
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<iAsset>21</iAsset>
 			<iPower>80</iPower>
@@ -46149,10 +45618,7 @@ Base XP gained when defending
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<UnitCombatCollateralImmunes>
 				<UnitCombatCollateralImmune>
@@ -46317,14 +45783,8 @@ Base XP gained when defending
 			<iEspionagePoints>25</iEspionagePoints>
 			<iInsidiousness>2</iInsidiousness>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
 			</FreePromotions>
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
@@ -46486,22 +45946,10 @@ Base XP gained when defending
 			<iEspionagePoints>50</iEspionagePoints>
 			<iInsidiousness>5</iInsidiousness>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
 			</FreePromotions>
 			<iAsset>2</iAsset>
 			<iPower>4</iPower>
@@ -46671,22 +46119,10 @@ Base XP gained when defending
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>10</iInsidiousness>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
 			</FreePromotions>
 			<iAsset>3</iAsset>
 			<iPower>5</iPower>
@@ -46868,22 +46304,10 @@ Base XP gained when defending
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>15</iInsidiousness>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
 			</FreePromotions>
 			<iAsset>4</iAsset>
 			<iPower>6</iPower>
@@ -47087,22 +46511,10 @@ Base XP gained when defending
 			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
 			</FreePromotions>
 			<iAsset>6</iAsset>
 			<iPower>11</iPower>
@@ -47312,22 +46724,10 @@ Base XP gained when defending
 			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
 			</FreePromotions>
 			<iAsset>7</iAsset>
 			<iPower>15</iPower>
@@ -47539,18 +46939,9 @@ Base XP gained when defending
 			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
 			</FreePromotions>
 			<iAsset>8</iAsset>
 			<iPower>20</iPower>
@@ -47753,22 +47144,10 @@ Base XP gained when defending
 			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
+				<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
 			</FreePromotions>
 			<iAsset>9</iAsset>
 			<iPower>25</iPower>
@@ -47971,22 +47350,10 @@ Base XP gained when defending
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>2</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
+				<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
 			</FreePromotions>
 			<iAsset>10</iAsset>
 			<iPower>29</iPower>
@@ -48174,22 +47541,10 @@ Base XP gained when defending
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>2</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
+				<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
 			</FreePromotions>
 			<iAsset>11</iAsset>
 			<iPower>37</iPower>
@@ -48380,22 +47735,10 @@ Base XP gained when defending
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
+				<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
 			</FreePromotions>
 			<iAsset>12</iAsset>
 			<iPower>45</iPower>
@@ -48583,18 +47926,9 @@ Base XP gained when defending
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
 			</FreePromotions>
 			<iAsset>13</iAsset>
 			<iPower>52</iPower>
@@ -48809,14 +48143,8 @@ Base XP gained when defending
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
 			</FreePromotions>
 			<iAsset>15</iAsset>
 			<iPower>60</iPower>
@@ -49004,14 +48332,8 @@ Base XP gained when defending
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>200</iInsidiousness>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
 			</FreePromotions>
 			<iAsset>17</iAsset>
 			<iPower>70</iPower>
@@ -49141,18 +48463,9 @@ Base XP gained when defending
 			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
 			</FreePromotions>
 			<iAsset>2</iAsset>
 			<iPower>7</iPower>
@@ -49316,22 +48629,10 @@ Base XP gained when defending
 			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_FREEDOM_FIGHTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_FREEDOM_FIGHTER</PromotionType>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
 			</FreePromotions>
 			<iAsset>7</iAsset>
 			<iPower>20</iPower>
@@ -49488,18 +48789,9 @@ Base XP gained when defending
 			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>2</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
 			</FreePromotions>
 			<iAsset>2</iAsset>
 			<iPower>8</iPower>
@@ -49686,18 +48978,9 @@ Base XP gained when defending
 			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>2</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
 			</FreePromotions>
 			<iAsset>6</iAsset>
 			<iPower>17</iPower>
@@ -49897,22 +49180,10 @@ Base XP gained when defending
 			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>2</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
+				<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
 			</FreePromotions>
 			<iAsset>8</iAsset>
 			<iPower>22</iPower>
@@ -50081,14 +49352,8 @@ Base XP gained when defending
 			<iUnnerve>6</iUnnerve>
 			<iLunge>6</iLunge>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<iAsset>3</iAsset>
 			<iPower>3</iPower>
@@ -50236,14 +49501,8 @@ Base XP gained when defending
 			<iLunge>8</iLunge>
 			<iDCMBombAccuracy>5</iDCMBombAccuracy>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<iAsset>4</iAsset>
 			<iPower>6</iPower>
@@ -50422,22 +49681,10 @@ Base XP gained when defending
 			<iTradeMultiplier>1</iTradeMultiplier>
 			<iInsidiousness>20</iInsidiousness>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<iAsset>5</iAsset>
 			<iPower>8</iPower>
@@ -50625,14 +49872,8 @@ Base XP gained when defending
 			<iRBombardDamage>10</iRBombardDamage>
 			<iRBombardDamageLimit>10</iRBombardDamageLimit>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<iAsset>7</iAsset>
 			<iPower>15</iPower>
@@ -50802,14 +50043,8 @@ Base XP gained when defending
 			<iRBombardDamage>15</iRBombardDamage>
 			<iRBombardDamageLimit>15</iRBombardDamageLimit>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<iAsset>8</iAsset>
 			<iPower>20</iPower>
@@ -50984,26 +50219,11 @@ Base XP gained when defending
 			<SMSpecialCargo>SPECIALUNIT_CAPTIVE</SMSpecialCargo>
 			<iCargo>1</iCargo>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LOOTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_AMBUSH</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_LOOTER</PromotionType>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
+				<PromotionType>PROMOTION_AMBUSH</PromotionType>
 			</FreePromotions>
 			<iAsset>10</iAsset>
 			<iPower>40</iPower>
@@ -51175,14 +50395,8 @@ Base XP gained when defending
 			<iRBombardDamage>20</iRBombardDamage>
 			<iRBombardDamageLimit>20</iRBombardDamageLimit>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SNIPER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SNIPER</PromotionType>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<iAsset>12</iAsset>
 			<iPower>50</iPower>
@@ -51381,18 +50595,9 @@ Base XP gained when defending
 			<iBreakdownChance>25</iBreakdownChance>
 			<iBreakdownDamage>5</iBreakdownDamage>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SNIPER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_AMBUSH</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SNIPER</PromotionType>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
+				<PromotionType>PROMOTION_AMBUSH</PromotionType>
 			</FreePromotions>
 			<iAsset>15</iAsset>
 			<iPower>55</iPower>
@@ -51544,14 +50749,8 @@ Base XP gained when defending
 			<iRBombardDamage>25</iRBombardDamage>
 			<iRBombardDamageLimit>25</iRBombardDamageLimit>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SNIPER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SNIPER</PromotionType>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<iAsset>20</iAsset>
 			<iPower>75</iPower>
@@ -53008,10 +52207,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LEADER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_LEADER</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -53134,10 +52330,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LEADER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_LEADER</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -53274,10 +52467,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LEADER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_LEADER</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -53410,10 +52600,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LEADER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_LEADER</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -53530,10 +52717,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LEADER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_LEADER</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -56311,10 +55495,7 @@ Base XP gained when defending
 				</VisibilityIntensityType>
 			</VisibilityIntensityTypes>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<PrereqTech>TECH_DECEPTION</PrereqTech>
 			<PrereqAndBuildings>
@@ -56442,10 +55623,7 @@ Base XP gained when defending
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
 			<PrereqAndBuildings>
@@ -58124,10 +57302,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -59032,10 +58207,7 @@ Base XP gained when defending
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
 			</FreePromotions>
 			<bAssassin>1</bAssassin>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
@@ -59216,10 +58388,7 @@ Base XP gained when defending
 			</NotUnitAIs>
 			<bAssassin>1</bAssassin>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
 			</FreePromotions>
 			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
 			<PrereqAndBuildings>
@@ -63997,14 +63166,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARCH</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_MARCH</PromotionType>
+				<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -64080,18 +63243,9 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_GUERILLA1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WOODSMAN1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_GUERILLA1</PromotionType>
+				<PromotionType>PROMOTION_WOODSMAN1</PromotionType>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -64505,22 +63659,10 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_WARMTH1</PromotionType>
+				<PromotionType>PROMOTION_WARMTH2</PromotionType>
+				<PromotionType>PROMOTION_WARMTH3</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -64644,22 +63786,10 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_WARMTH1</PromotionType>
+				<PromotionType>PROMOTION_WARMTH2</PromotionType>
+				<PromotionType>PROMOTION_WARMTH3</PromotionType>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -64786,26 +63916,11 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_WARMTH3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_TRENCH1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_WARMTH1</PromotionType>
+				<PromotionType>PROMOTION_WARMTH2</PromotionType>
+				<PromotionType>PROMOTION_WARMTH3</PromotionType>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_TRENCH1</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -66282,14 +65397,8 @@ Base XP gained when defending
 			<bAssassin>1</bAssassin>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
+				<PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
 			</FreePromotions>
 			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
 			<UnitUpgrades>
@@ -66414,10 +65523,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
 			</FreePromotions>
 			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
 		</UnitInfo>
@@ -66511,14 +65617,8 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
+				<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
 			</FreePromotions>
 			<ForceObsoleteTech>TECH_BRONZE_WORKING</ForceObsoleteTech>
 		</UnitInfo>
@@ -66615,18 +65715,9 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
+				<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
+				<PromotionType>PROMOTION_HUNTING_SIGHT2</PromotionType>
 			</FreePromotions>
 			<ForceObsoleteTech>TECH_FEUDALISM</ForceObsoleteTech>
 		</UnitInfo>
@@ -66722,22 +65813,10 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MASTER_HUNTER2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
+				<PromotionType>PROMOTION_MASTER_HUNTER2</PromotionType>
+				<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
+				<PromotionType>PROMOTION_HUNTING_SIGHT2</PromotionType>
 			</FreePromotions>
 			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
 		</UnitInfo>
@@ -66833,22 +65912,10 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MASTER_HUNTER2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
+				<PromotionType>PROMOTION_MASTER_HUNTER2</PromotionType>
+				<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
+				<PromotionType>PROMOTION_HUNTING_SIGHT2</PromotionType>
 			</FreePromotions>
 			<ForceObsoleteTech>TECH_RIFLING</ForceObsoleteTech>
 		</UnitInfo>
@@ -66940,26 +66007,11 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MASTER_HUNTER2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MASTER_HUNTER3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_HUNTING_SIGHT2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
+				<PromotionType>PROMOTION_MASTER_HUNTER2</PromotionType>
+				<PromotionType>PROMOTION_MASTER_HUNTER3</PromotionType>
+				<PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
+				<PromotionType>PROMOTION_HUNTING_SIGHT2</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -68657,26 +67709,11 @@ Base XP gained when defending
 			<iAsset>7</iAsset>
 			<iPower>11</iPower>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_FANATIC</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COMMANDO</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARAUDER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_INDUSTRYESPIONAGE</PromotionType>
+				<PromotionType>PROMOTION_FANATIC</PromotionType>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
+				<PromotionType>PROMOTION_COMMANDO</PromotionType>
+				<PromotionType>PROMOTION_MARAUDER</PromotionType>
 			</FreePromotions>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -68843,18 +67880,9 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARTIAL_ARTS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARTIAL_ARTS2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARTIAL_ARTS3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_MARTIAL_ARTS</PromotionType>
+				<PromotionType>PROMOTION_MARTIAL_ARTS2</PromotionType>
+				<PromotionType>PROMOTION_MARTIAL_ARTS3</PromotionType>
 			</FreePromotions>
 			<PropertyManipulators>
 				<PropertySource>

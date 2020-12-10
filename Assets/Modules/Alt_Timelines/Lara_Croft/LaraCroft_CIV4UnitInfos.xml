@@ -93,14 +93,8 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_MARCH</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
+				<PromotionType>PROMOTION_MARCH</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 	</UnitInfos>

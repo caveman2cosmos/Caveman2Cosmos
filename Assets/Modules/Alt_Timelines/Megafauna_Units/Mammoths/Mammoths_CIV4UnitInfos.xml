@@ -103,18 +103,9 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COLD1</PromotionType>
+				<PromotionType>PROMOTION_COLD2</PromotionType>
+				<PromotionType>PROMOTION_COLD3</PromotionType>
 			</FreePromotions>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_MAMMOTH_RIDER</UnitType>
@@ -347,18 +338,9 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COLD1</PromotionType>
+				<PromotionType>PROMOTION_COLD2</PromotionType>
+				<PromotionType>PROMOTION_COLD3</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -460,18 +442,9 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COLD1</PromotionType>
+				<PromotionType>PROMOTION_COLD2</PromotionType>
+				<PromotionType>PROMOTION_COLD3</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -587,18 +560,9 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COLD1</PromotionType>
+				<PromotionType>PROMOTION_COLD2</PromotionType>
+				<PromotionType>PROMOTION_COLD3</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -724,18 +688,9 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_COLD3</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_COLD1</PromotionType>
+				<PromotionType>PROMOTION_COLD2</PromotionType>
+				<PromotionType>PROMOTION_COLD3</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -1065,14 +1020,8 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_POLAR_WORKER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_POLAR_WORKER2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_POLAR_WORKER1</PromotionType>
+				<PromotionType>PROMOTION_POLAR_WORKER2</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
