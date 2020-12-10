@@ -11193,10 +11193,8 @@ int CvPlayerAI::AI_unitPropertyValue(UnitTypes eUnit, PropertyTypes eProperty) c
 
 	if (propertyManipulators != NULL)
 	{
-		for (int iI = 0; iI < propertyManipulators->getNumSources(); iI++)
+		foreach_(const CvPropertySource* pSource, propertyManipulators->getSources())
 		{
-			const CvPropertySource* pSource = propertyManipulators->getSource(iI);
-
 			if ( pSource->getType() == PROPERTYSOURCE_CONSTANT &&
 				 (eProperty == NO_PROPERTY || pSource->getProperty() == eProperty))
 			{
@@ -29922,24 +29920,19 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 
 	if (promotionPropertyManipulators != NULL)
 	{
-		for (iI = 0; iI < promotionPropertyManipulators->getNumSources(); iI++)
+		foreach_(const CvPropertySource* pSource, promotionPropertyManipulators->getSources())
 		{
 			iTemp2 = 0;
-			const CvPropertySource* pSource = promotionPropertyManipulators->getSource(iI);
-			const PropertyTypes pProperty = pSource->getProperty();
 
 			if ( pSource->getType() == PROPERTYSOURCE_CONSTANT)
 			{
+				const PropertyTypes pProperty = pSource->getProperty();
 				iTemp2 = ((CvPropertySourceConstant*)pSource)->getAmountPerTurn(getGameObject());
 				if (pUnit != NULL)
 				{
-					const UnitTypes eUnit = pUnit->getUnitType();
-					const CvPropertyManipulators* unitPropertyManipulators = GC.getUnitInfo(eUnit).getPropertyManipulators();
-					for (int iJ = 0; iJ < unitPropertyManipulators->getNumSources(); iJ++)
+					foreach_(const CvPropertySource* uSource, GC.getUnitInfo(pUnit->getUnitType()).getPropertyManipulators()->getSources())
 					{
-						const CvPropertySource* uSource = unitPropertyManipulators->getSource(iJ);
-						const PropertyTypes uProperty = uSource->getProperty();
-						if (uSource->getType() == PROPERTYSOURCE_CONSTANT && pProperty == uProperty && iTemp2 != 0)
+						if (uSource->getType() == PROPERTYSOURCE_CONSTANT && pProperty == uSource->getProperty() && iTemp2 != 0)
 						{
 							iTemp2 += ((CvPropertySourceConstant*)uSource)->getAmountPerTurn(getGameObject());
 						}

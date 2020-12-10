@@ -297,7 +297,7 @@ class CvVictoryScreen:
 
 		# civ picker dropdown
 		if GAME.isDebugMode():
-			screen.addDropDownBoxGFC("VictoryScreenDropdownWidget", 22, 12, 300, eWidGen, 0, 0, FontTypes.GAME_FONT)
+			screen.addDropDownBoxGFC("VictoryScreenDropdownWidget", 22, 0, 300, eWidGen, 0, 0, FontTypes.GAME_FONT)
 			for j in xrange(GC.getMAX_PLAYERS()):
 				if GC.getPlayer(j).isAlive():
 					screen.addPullDownString("VictoryScreenDropdownWidget", GC.getPlayer(j).getName(), j, j, False)
