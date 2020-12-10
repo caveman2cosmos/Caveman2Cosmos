@@ -470,6 +470,7 @@ CvBuildingInfo::~CvBuildingInfo()
 	{
 		GC.removeDelayedResolution((int*)&(m_vReplacementBuilding[i]));
 	}
+	m_vReplacedBuilding.clear(); // Toffer - Not sure there's any point to this, but it doesn't hurt.
 }
 
 int CvBuildingInfo::getVictoryThreshold(int i) const
@@ -2517,6 +2518,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	//Alberts2 PrereqBonuses
 	CheckSumC(iSum, m_aePrereqOrBonuses);
 	CheckSumC(iSum, m_vReplacementBuilding);
+	CheckSumC(iSum, m_vReplacedBuilding);
 
 	CheckSum(iSum, m_iMaxGlobalInstances);
 	CheckSum(iSum, m_iMaxTeamInstances);
@@ -4284,6 +4286,17 @@ bool CvBuildingInfo::readPass3()
 
 	m_aszExtraXMLforPass3.clear();
 
+	const int iCount = getNumReplacementBuilding();
+	if (iCount > 0)
+	{
+		const int iId = GC.getInfoTypeForString(getType());
+		// Toffer - As good a place as any to make this derived cache
+		for (int i = 0; i < iCount; i++)
+		{
+			GC.getBuildingInfo((BuildingTypes)getReplacementBuilding(i)).setReplacedBuilding(iId);
+		}
+	}
+
 	return true;
 }
 
@@ -5865,14 +5878,7 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 
 bool CvBuildingInfo::isNewCityFree(CvGameObject* pObject)
 {
-	if (m_pExprNewCityFree)
-	{
-		return m_pExprNewCityFree->evaluate(pObject);
-	}
-	else
-	{
-		return false;
-	}
+	return m_pExprNewCityFree && m_pExprNewCityFree->evaluate(pObject);
 }
 
 BoolExpr* CvBuildingInfo::getConstructCondition() const
@@ -5917,7 +5923,19 @@ short CvBuildingInfo::getNumReplacementBuilding() const
 {
 	return m_vReplacementBuilding.size();
 }
-bool CvBuildingInfo::isReplacementBuilding(int i) const
+
+void CvBuildingInfo::setReplacedBuilding(int i)
 {
-	return find(m_vReplacementBuilding.begin(), m_vReplacementBuilding.end(), i) != m_vReplacementBuilding.end();
+	if (find(m_vReplacedBuilding.begin(), m_vReplacedBuilding.end(), i) == m_vReplacedBuilding.end())
+	{
+		m_vReplacedBuilding.push_back(i);
+	}
+}
+int CvBuildingInfo::getReplacedBuilding(int i) const
+{
+	return m_vReplacedBuilding[i];
+}
+short CvBuildingInfo::getNumReplacedBuilding() const
+{
+	return m_vReplacedBuilding.size();
 }

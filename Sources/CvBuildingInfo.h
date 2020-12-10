@@ -341,7 +341,10 @@ public:
 
 	int getReplacementBuilding(int i) const;
 	short getNumReplacementBuilding() const;
-	bool isReplacementBuilding(int i) const;
+
+	void setReplacedBuilding(int i);
+	int getReplacedBuilding(int i) const;
+	short getNumReplacedBuilding() const;
 
 	int getImprovementYieldChanges(int i, int j) const;
 
@@ -893,6 +896,7 @@ protected:
 	std::vector<int> m_aiPrereqInCityBuildings;
 	std::vector<int> m_aePrereqOrBonuses;
 	std::vector<int> m_vReplacementBuilding;
+	std::vector<int> m_vReplacedBuilding;
 public:
 	bool m_bAnyLocalSpecialistYieldChanges;
 	bool m_bAnyLocalSpecialistCommerceChanges;
