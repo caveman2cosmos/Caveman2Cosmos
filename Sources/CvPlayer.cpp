@@ -15278,7 +15278,7 @@ int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 			{
 				iValue = 0;
 
-				foreach_(const TechTypes& tech, path)
+				foreach_(const TechTypes& tech, *path)
 				{
 					iValue += GC.getTechInfo(tech).getResearchCost();
 				}

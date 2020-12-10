@@ -37,8 +37,9 @@ int BuildingGroupingWonderType::getGroupBuilding(const CvPlayer *pPlayer, CvCity
 
 int BuildingGroupingFilters::getGroupBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
-	foreach_(const BuildingGroupingBase& filter, m_apFilters)
-		if (filter->isFiltered(pPlayer, pCity, eBuilding))
+	const int iSize = m_apFilters.size();
+	for (int i = 0; i < iSize; i++)
+		if (m_apFilters[i]->isFiltered(pPlayer, pCity, eBuilding))
 			return i;
 	return iSize;
 }
@@ -50,8 +51,8 @@ void BuildingGroupingFilters::addGroupingFilter(BuildingFilterBase *pFilter)
 
 BuildingGroupingFilters::~BuildingGroupingFilters()
 {
-	foreach_(const BuildingGroupingBase& filter, m_apFilters)
-		delete filter;
+	for (unsigned int i = 0; i < m_apFilters.size(); i++)
+		delete m_apFilters[i];
 }
 
 BuildingGroupingList::BuildingGroupingList(CvPlayer *pPlayer, CvCity *pCity) : m_pPlayer(pPlayer), m_pCity(pCity)

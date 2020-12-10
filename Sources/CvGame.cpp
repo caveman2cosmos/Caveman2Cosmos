@@ -9355,7 +9355,7 @@ void CvGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYiel
 {
 	bool bFound = false;
 
-	foreach_(const PlotExtraYield& extraYield, m_aPlotExtraYields)
+	foreach_(PlotExtraYield& extraYield, m_aPlotExtraYields)
 	{
 		if (extraYield.m_iX == iX && extraYield.m_iY == iY)
 		{
@@ -10161,7 +10161,7 @@ bool CvGame::isEventActive(EventTriggerTypes eTrigger) const
 		}
 	}
 
-	return true;
+	return !std::contains(m_aeInactiveTriggers, eTrigger);
 }
 
 void CvGame::initEvents()
