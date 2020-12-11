@@ -103,10 +103,7 @@
 			<iCaptureProbabilityModifier>-15</iCaptureProbabilityModifier>
 			<iPursuit>60</iPursuit>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BERZERKER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BERZERKER1</PromotionType>
 			</FreePromotions>
 			<iAsset>7</iAsset>
 			<iPower>15</iPower>

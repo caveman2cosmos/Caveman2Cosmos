@@ -198,10 +198,7 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -377,10 +374,7 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BLITZ</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_BLITZ</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
@@ -487,10 +481,7 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 			<bDCMFighterEngage>1</bDCMFighterEngage>
 		</UnitInfo>

@@ -60,10 +60,7 @@
             </UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_SETTLER</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_SENTRY</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_SENTRY</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 	</UnitInfos>

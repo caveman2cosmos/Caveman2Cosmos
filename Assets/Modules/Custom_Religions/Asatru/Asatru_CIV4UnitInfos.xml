@@ -136,18 +136,9 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BERZERKER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BERZERKER2</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
+				<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
+				<PromotionType>PROMOTION_BERZERKER1</PromotionType>
+				<PromotionType>PROMOTION_BERZERKER2</PromotionType>
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
