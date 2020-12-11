@@ -9,7 +9,11 @@
 			<Description>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND_STRATEGY</Strategy>
+<<<<<<< HEAD
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+=======
+			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
+>>>>>>> master
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
 			</ReplacementBuildings>

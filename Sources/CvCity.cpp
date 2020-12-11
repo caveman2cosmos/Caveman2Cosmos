@@ -3017,30 +3017,29 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 				return false;
 			}
 
-			if (isNPC() && isLimitedWonder(eBuilding))
+			if (isLimitedWonder(eBuilding))
 			{
-				return false;
-			}
-
-			if (!kBuilding.isNoLimit())
-			{
-				if (isWorldWonder(eBuilding))
+				if (isNPC())
 				{
-					if (isWorldWondersMaxed())
-					{
-						return false;
-					}
+					return false;
 				}
-				else if (isTeamWonder(eBuilding))
+				if (!kBuilding.isNoLimit())
 				{
-					if (isTeamWondersMaxed())
+					if (isWorldWonder(eBuilding))
 					{
-						return false;
+						if (isWorldWondersMaxed())
+						{
+							return false;
+						}
 					}
-				}
-				else if (isNationalWonder(eBuilding))
-				{
-					if (isNationalWondersMaxed())
+					else if (isTeamWonder(eBuilding))
+					{
+						if (isTeamWondersMaxed())
+						{
+							return false;
+						}
+					}
+					else if (isNationalWonder(eBuilding) && isNationalWondersMaxed())
 					{
 						return false;
 					}
@@ -3184,27 +3183,23 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	const int numBuildingInfos = GC.getNumBuildingInfos();
 	if (!bExposed)
 	{
-		if (kBuilding.getPrereqVicinityBonus() != NO_BONUS)
+		if (kBuilding.getPrereqVicinityBonus() != NO_BONUS
+		&& !hasVicinityBonus((BonusTypes)kBuilding.getPrereqVicinityBonus()))
 		{
-			if (!hasVicinityBonus((BonusTypes)kBuilding.getPrereqVicinityBonus()))
+			if (probabilityEverConstructable != NULL)
 			{
-				if (probabilityEverConstructable != NULL)
-				{
-					*probabilityEverConstructable = 5;
-				}
-				return false;
+				*probabilityEverConstructable = 5;
 			}
+			return false;
 		}
-		if (kBuilding.getPrereqRawVicinityBonus() != NO_BONUS)
+		if (kBuilding.getPrereqRawVicinityBonus() != NO_BONUS
+		&& !hasRawVicinityBonus((BonusTypes)kBuilding.getPrereqRawVicinityBonus()))
 		{
-			if (!hasRawVicinityBonus((BonusTypes)kBuilding.getPrereqRawVicinityBonus()))
+			if (probabilityEverConstructable != NULL)
 			{
-				if (probabilityEverConstructable != NULL)
-				{
-					*probabilityEverConstructable = 5;
-				}
-				return false;
+				*probabilityEverConstructable = 5;
 			}
+			return false;
 		}
 		//Hide Buildings that shouldn't appear in the early game and require other buildings
 		const bool bTest = (
@@ -3281,26 +3276,25 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 		}
 	}
 
-	if (!bAffliction && kBuilding.isReplaceBuilding(NO_BUILDING))
+	if (!bAffliction)
 	{
 		//Can not construct replaced buildings.
-		for (int iI = 0; iI < numBuildingInfos; iI++)
+		for (int iI = 0; iI < kBuilding.getNumReplacementBuilding(); ++iI)
 		{
-			if (
-				kBuilding.isReplaceBuilding(iI)
-			&&
-				(
-					getNumActiveBuilding((BuildingTypes)iI) > 0
-				||	GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_REPLACED_BUILDINGS)
-				&&	canConstruct((BuildingTypes)iI, true, false, false, true)
-				)
-			) return false;
+			const BuildingTypes eReplacement = (BuildingTypes)kBuilding.getReplacementBuilding(iI);
+			if (getNumActiveBuilding(eReplacement) > 0
+			// Toffer - This is not the right place to do HIDE_REPLACED_BUILDINGS...
+			// This option can now stop AI from building a replaced building,
+			// when the option is only supposed to be an interface option for the human player.
+			|| GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_REPLACED_BUILDINGS)
+			&& canConstruct(eReplacement, true, false, false, true))
+			{
+				return false;
+			}
 		}
 	}
 
-	//	Koshling - always hide things not buildable due to vicinity bonuses
-	//	it's not really useful to see them
-	//if (!bTestVisible)
+	// Koshling - Always hide unbuildable due to vicinity bonuses, it's not really useful to see them
 	if (!bExposed)
 	{
 		bool bHasAnyVicinityBonus = false;
@@ -7163,22 +7157,24 @@ void CvCity::calculateBuildingReplacements() const
 
 	memset(m_paiBuildingReplaced, 0, sizeof(int) * GC.getNumBuildingInfos());
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+
+	for (int iReplacement = 0; iReplacement < GC.getNumBuildingInfos(); iReplacement++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+		if (getNumActiveBuilding((BuildingTypes)iReplacement) > 0)
 		{
-			for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+			const CvBuildingInfo& replacement = GC.getBuildingInfo((BuildingTypes)iReplacement);
+
+			for (int iI = 0; iI < replacement.getNumReplacedBuilding(); iI++)
 			{
-				if (GC.getBuildingInfo((BuildingTypes)iJ).isReplaceBuilding((BuildingTypes)iI))
+				const int iReplaced = replacement.getReplacedBuilding(iI);
+
+				// Cope with old format saves where the calculation will not previously
+				// have been done and so the effects need to be processed
+				if (!m_bHasCalculatedBuildingReplacement && getNumBuilding((BuildingTypes)iReplacement) > 0)
 				{
-					//	Cope with old format saves where the calculation will not previously
-					//	have been done and so the effects need to be processed
-					if (!m_bHasCalculatedBuildingReplacement && getNumBuilding((BuildingTypes)iJ) > 0)
-					{
-						(const_cast<CvCity*>(this))->processBuilding((BuildingTypes)iJ, -1);
-					}
-					m_paiBuildingReplaced[iJ]++;
+					(const_cast<CvCity*>(this))->processBuilding((BuildingTypes)iReplaced, -1);
 				}
+				m_paiBuildingReplaced[iReplaced]++;
 			}
 		}
 	}
@@ -7189,34 +7185,33 @@ void CvCity::changeBuildingReplacementCount(BuildingTypes eBuilding, bool bAdd)
 {
 	FAssert(m_paiBuildingReplaced != NULL);
 
-	for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
+
+	for (int iI = 0; iI < building.getNumReplacedBuilding(); iI++)
 	{
-		if (GC.getBuildingInfo((BuildingTypes)iJ).isReplaceBuilding(eBuilding))
+		const int iBuilding = building.getReplacedBuilding(iI);
+		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iBuilding);
+
+		// During modifier recalculation don't count buildings we haven't yet processed as present
+		const bool bHad = (m_recalcBuilding >= iBuilding && getNumBuilding(eBuildingX) > 0);
+
+		if (bAdd)
 		{
-			// During modifier recalculation don't count buildings we haven't yet processed as present
-			const bool bHad = (m_recalcBuilding >= iJ && getNumBuilding((BuildingTypes)iJ) > 0);
+			m_paiBuildingReplaced[iBuilding]++;
+		}
+		// During recalculation after loading an old format save game
+		// this can go negative due to chains that lead from lower numbered
+		// buildings to higher, so just cap at 0 on the bottom
+		else if (m_paiBuildingReplaced[iBuilding] > 0)
+		{
+			m_paiBuildingReplaced[iBuilding]--;
+		}
 
-			if (bAdd)
-			{
-				m_paiBuildingReplaced[iJ]++;
-			}
-			else
-			{
-				//	During recalculation after loading an old format save game
-				//	this can go negative due to chains that lead from lower numbered
-				//	buildings to higher, so just cap at 0 on the bottom
-				if (m_paiBuildingReplaced[iJ] > 0)
-				{
-					m_paiBuildingReplaced[iJ]--;
-				}
-			}
+		const bool bHas = (m_recalcBuilding >= iBuilding && getNumBuilding(eBuildingX) > 0);
 
-			const bool bHas = (m_recalcBuilding >= iJ && getNumBuilding((BuildingTypes)iJ) > 0);
-
-			if (bHad != bHas)
-			{
-				processBuilding((BuildingTypes)iJ, bHas ? 1 : -1, false, true);
-			}
+		if (bHad != bHas)
+		{
+			processBuilding(eBuildingX, bHas ? 1 : -1, false, true);
 		}
 	}
 }
@@ -7876,23 +7871,27 @@ int CvCity::getAdditionalGreatPeopleRateByBuilding(BuildingTypes eBuilding)
 
 	const int iRate = getBaseGreatPeopleRate();
 	const int iModifier = getTotalGreatPeopleRateModifier();
-	int iExtra = ((iRate + getAdditionalBaseGreatPeopleRateByBuilding(eBuilding)) * (iModifier + getAdditionalGreatPeopleRateModifierByBuilding(eBuilding)) / 100) - (iRate * iModifier / 100);
+	int iExtra =
+	(
+		(iRate + getAdditionalBaseGreatPeopleRateByBuilding(eBuilding))
+		*
+		(iModifier + getAdditionalGreatPeopleRateModifierByBuilding(eBuilding))
+		/
+		100
+		- 
+		iRate * iModifier / 100
+	);
+	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < building.getNumReplacedBuilding(); iI++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(building.getReplacedBuilding(iI));
+
+		if (getNumActiveBuilding(eBuildingX) > 0 && !isReligiouslyDisabledBuilding(eBuildingX))
 		{
-			//Team Project (5)
-			if (!isReligiouslyDisabledBuilding((BuildingTypes)iI))
-			{
-				if (GC.getBuildingInfo((BuildingTypes)iI).isReplaceBuilding(eBuilding))
-				{
-					iExtra -= getAdditionalGreatPeopleRateByBuilding((BuildingTypes)iI);
-				}
-			}
+			iExtra -= getAdditionalGreatPeopleRateByBuilding(eBuildingX);
 		}
 	}
-
 	return iExtra;
 }
 
@@ -9746,14 +9745,14 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 			}
 		}
 	}
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+
+	for (int iI = 0; iI < kBuilding.getNumReplacedBuilding(); iI++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(kBuilding.getReplacedBuilding(iI));
+
+		if (getNumActiveBuilding(eBuildingX) > 0)
 		{
-			if (GC.getBuildingInfo((BuildingTypes)iI).isReplaceBuilding(eBuilding))
-			{
-				addGoodOrBad(-getBuildingHappiness((BuildingTypes)iI), iGood, iBad);
-			}
+			addGoodOrBad(-getBuildingHappiness(eBuildingX), iGood, iBad);
 		}
 	}
 
@@ -9873,13 +9872,10 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 				addGoodOrBad(GC.getDIRTY_POWER_HEALTH_CHANGE(), iGood, iBad);
 			}
 		}
-		else
+		// replacing dirty power with clean power
+		else if (isDirtyPower() && !kBuilding.isDirtyPower())
 		{
-			// replacing dirty power with clean power
-			if (isDirtyPower() && !kBuilding.isDirtyPower())
-			{
-				subtractGoodOrBad(GC.getDIRTY_POWER_HEALTH_CHANGE(), iGood, iBad);
-			}
+			subtractGoodOrBad(GC.getDIRTY_POWER_HEALTH_CHANGE(), iGood, iBad);
 		}
 	}
 
@@ -9923,18 +9919,14 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 			}
 		}
 	}
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+
+	for (int iI = 0; iI < kBuilding.getNumReplacedBuilding(); iI++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(kBuilding.getReplacedBuilding(iI));
+
+		if (getNumActiveBuilding(eBuildingX) > 0 && !isReligiouslyDisabledBuilding(eBuildingX))
 		{
-			//Team Project (5)
-			if (!isReligiouslyDisabledBuilding((BuildingTypes)iI))
-			{
-				if (GC.getBuildingInfo((BuildingTypes)iI).isReplaceBuilding(eBuilding))
-				{
-					addGoodOrBad(-getBuildingHealth((BuildingTypes)iI), iGood, iBad);
-				}
-			}
+			addGoodOrBad(-getBuildingHealth(eBuildingX), iGood, iBad);
 		}
 	}
 
@@ -11621,15 +11613,25 @@ int CvCity::getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuild
 {
 	const int iRate = getModifiedBaseYieldRate(eIndex);
 	const int iModifier = getBaseYieldRateModifier(eIndex);
-	int iExtra = (iRate + getAdditionalBaseYieldRateByBuilding(eIndex, eBuilding)) * (iModifier + getAdditionalYieldRateModifierByBuilding(eIndex, eBuilding, bFilter)) / 100 - iRate * iModifier / 100;
+	int iExtra = 
+	(
+		(iRate + getAdditionalBaseYieldRateByBuilding(eIndex, eBuilding))
+		*
+		(iModifier + getAdditionalYieldRateModifierByBuilding(eIndex, eBuilding, bFilter))
+		/
+		100
+		-
+		iRate * iModifier / 100
+	);
+	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < building.getNumReplacedBuilding(); iI++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0
-		&& !isReligiouslyDisabledBuilding((BuildingTypes)iI)
-		&& GC.getBuildingInfo((BuildingTypes)iI).isReplaceBuilding(eBuilding))
+		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(building.getReplacedBuilding(iI));
+
+		if (getNumActiveBuilding(eBuildingX) > 0 && !isReligiouslyDisabledBuilding(eBuildingX))
 		{
-			iExtra -= getAdditionalYieldByBuilding(eIndex, (BuildingTypes)iI);
+			iExtra -= getAdditionalYieldByBuilding(eIndex, eBuildingX);
 		}
 	}
 	return iExtra;
@@ -12833,53 +12835,45 @@ int CvCity::getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes 
  */
 int CvCity::getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding)
 {
-	int iExtraRateTimes100 = getAdditionalBaseCommerceRateByBuildingTimes100(eIndex, eBuilding);
-	int iExtraModifier = getAdditionalCommerceRateModifierByBuilding(eIndex, eBuilding);
+	const int iExtraRateTimes100 = getAdditionalBaseCommerceRateByBuildingTimes100(eIndex, eBuilding);
+	const int iExtraModifier = getAdditionalCommerceRateModifierByBuilding(eIndex, eBuilding);
+
 	if (iExtraRateTimes100 == 0 && iExtraModifier == 0)
 	{
 		return 0;
 	}
+	const int iRateTimes100 = getBaseCommerceRateTimes100(eIndex);
+	const int iModifier = getTotalCommerceRateModifier(eIndex);
 
-	int iRateTimes100 = getBaseCommerceRateTimes100(eIndex);
-	int iModifier = getTotalCommerceRateModifier(eIndex);
-
-	int iCommerceWithoutBuilding;
-	if (iRateTimes100 > 0)
-	{
-		iCommerceWithoutBuilding = (iRateTimes100 * iModifier) / 100;
-	}
-	else
-	{
-		iCommerceWithoutBuilding = (iRateTimes100 * 100) / iModifier;
-	}
-
-	int iCommerceWithBuilding;
-	if (iRateTimes100 + iExtraRateTimes100 > 0)
-	{
-		iCommerceWithBuilding = ((iRateTimes100 + iExtraRateTimes100) * (iModifier + iExtraModifier)) / 100;
-	}
-	else
-	{
-		iCommerceWithBuilding = ((iRateTimes100 + iExtraRateTimes100) * 100) / (iModifier + iExtraModifier);
-	}
-
+	const int iCommerceWithoutBuilding =
+	(
+		iRateTimes100 > 0
+		?
+		iRateTimes100 * iModifier / 100
+		:
+		iRateTimes100 * 100 / iModifier
+	);
+	const int iCommerceWithBuilding
+	(
+		iRateTimes100 + iExtraRateTimes100 > 0
+		?
+		(iRateTimes100 + iExtraRateTimes100) * (iModifier + iExtraModifier) / 100
+		:
+		(iRateTimes100 + iExtraRateTimes100) * 100 / (iModifier + iExtraModifier)
+	);
 	int iExtraTimes100 = iCommerceWithBuilding - iCommerceWithoutBuilding;
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
+
+	for (int iI = 0; iI < building.getNumReplacedBuilding(); iI++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(building.getReplacedBuilding(iI));
+
+		if (getNumActiveBuilding(eBuildingX) > 0 && !isReligiouslyDisabledBuilding(eBuildingX))
 		{
-			//Team Project (5)
-			if (!isReligiouslyDisabledBuilding((BuildingTypes)iI))
-			{
-				if (GC.getBuildingInfo((BuildingTypes)iI).isReplaceBuilding(eBuilding))
-				{
-					iExtraTimes100 -= getAdditionalCommerceTimes100ByBuilding(eIndex, (BuildingTypes)iI);
-				}
-			}
+			iExtraTimes100 -= getAdditionalCommerceTimes100ByBuilding(eIndex, eBuildingX);
 		}
 	}
-
 	return iExtraTimes100;
 }
 
@@ -21102,21 +21096,22 @@ int CvCity::getAdditionalDefenseByBuilding(BuildingTypes eBuilding) const
 			iExtraRate += kBuilding.getAllCityDefenseModifier();
 		}
 
-		//if this new building replaces an old one, subtract the old defense rate from the new one.
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		// If this new building replaces an old one, subtract the old defense rate from the new one.
+		for (int iI = 0; iI < kBuilding.getNumReplacedBuilding(); iI++)
 		{
-			const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-			if (GC.getBuildingInfo(eLoopBuilding).isReplaceBuilding(eBuilding) && getNumBuilding(eLoopBuilding) > 0)
+			const BuildingTypes eBuildingX = static_cast<BuildingTypes>(kBuilding.getReplacedBuilding(iI));
+
+			if (getNumBuilding(eBuildingX) > 0)
 			{
-				iExtraBuildingRate -= GC.getBuildingInfo(eLoopBuilding).getDefenseModifier();
+				iExtraBuildingRate -= GC.getBuildingInfo(eBuildingX).getDefenseModifier();
 				for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 				{
 					if (hasBonus((BonusTypes)iJ))
 					{
-						iExtraRate -= GC.getBuildingInfo(eLoopBuilding).getBonusDefenseChanges(iJ);
+						iExtraRate -= GC.getBuildingInfo(eBuildingX).getBonusDefenseChanges(iJ);
 					}
 				}
-				iExtraRate -= GC.getBuildingInfo(eLoopBuilding).getAllCityDefenseModifier();
+				iExtraRate -= GC.getBuildingInfo(eBuildingX).getAllCityDefenseModifier();
 			}
 		}
 	}
@@ -23451,26 +23446,17 @@ int CvCity::getTotalBuildingSourcedProperty(PropertyTypes eProperty) const
 
 		int	iValue = 0;
 
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		for (int iI = 0, num = GC.getNumBuildingInfos(); iI < num; iI++)
 		{
-			if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+			if (getNumActiveBuilding((BuildingTypes)iI) > 0 && !isReligiouslyDisabledBuilding((BuildingTypes)iI))
 			{
-				//Team Project (5)
-				if (!isReligiouslyDisabledBuilding((BuildingTypes)iI))
+				foreach_(const CvPropertySource* pSource, GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators()->getSources())
 				{
-					const CvPropertyManipulators* pBuildingPropertyManipulators = GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators();
-
-					const int num = pBuildingPropertyManipulators->getNumSources();
-					for (int iJ = 0; iJ < num; iJ++)
+					//	For now we're only interested in constant sources
+					//	TODO - expand this as buildings add other types
+					if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getProperty() == eProperty)
 					{
-						const CvPropertySource* pSource = pBuildingPropertyManipulators->getSource(iJ);
-
-						//	For now we're only interested in constant sources
-						//	TODO - expand this as buildings add other types
-						if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getProperty() == eProperty)
-						{
-							iValue += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
-						}
+						iValue += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
 					}
 				}
 			}
@@ -23484,12 +23470,8 @@ int CvCity::getTotalBuildingSourcedProperty(PropertyTypes eProperty) const
 
 void unitSources(const CvPropertyManipulators* pMani, PropertyTypes eProperty, const CvCity* pCity, int* iValue)
 {
-	const int iNum = pMani->getNumSources();
-
-	for (int i = 0; i < iNum; i++)
+	foreach_(const CvPropertySource* pSource, pMani->getSources())
 	{
-		const CvPropertySource* pSource = pMani->getSource(i);
-
 		//	Sources that deliver to the city or the plot are both considered since the city plot diffuses
 		//	to the city for most properties anyway
 		if (pSource->getProperty() == eProperty &&
@@ -23527,12 +23509,8 @@ int CvCity::getTotalUnitSourcedProperty(PropertyTypes eProperty) const
 
 void unitHasSources(const CvPropertyManipulators* pMani, bool* bHasSources)
 {
-	const int iNum = pMani->getNumSources();
-
-	for (int i = 0; i < iNum; i++)
+	foreach_(const CvPropertySource* pSource, pMani->getSources())
 	{
-		const CvPropertySource* pSource = pMani->getSource(i);
-
 		//	Sources that deliver to the city or the plot are both considered since the city plot diffuses
 		//	to the city for most properties anyway
 		if ((pSource->getObjectType() == GAMEOBJECT_CITY || pSource->getObjectType() == GAMEOBJECT_PLOT) &&
@@ -23564,10 +23542,8 @@ void CvCity::noteUnitMoved(const CvUnit* pUnit) const
 
 void sumCitySources(const CvPropertyManipulators* pMani, const CvCity* pCity, int* iSum, PropertyTypes eProperty)
 {
-	const int iNum = pMani->getNumSources();
-	for (int i = 0; i < iNum; i++)
+	foreach_(const CvPropertySource* pSource, pMani->getSources())
 	{
-		const CvPropertySource* pSource = pMani->getSource(i);
 		if (pSource->getProperty() == eProperty)
 		{
 			if (pSource->isActive(const_cast<CvGameObjectCity*>(pCity->getGameObject())))
@@ -23581,11 +23557,8 @@ void sumCitySources(const CvPropertyManipulators* pMani, const CvCity* pCity, in
 int CvCity::getGlobalSourcedProperty(PropertyTypes eProperty) const
 {
 	int iSum = 0;
-	const CvPropertyManipulators* pMani = GC.getPropertyInfo(eProperty).getPropertyManipulators();
-	const int iNum = pMani->getNumSources();
-	for (int i = 0; i < iNum; i++)
+	foreach_(const CvPropertySource* pSource, GC.getPropertyInfo(eProperty).getPropertyManipulators()->getSources())
 	{
-		const CvPropertySource* pSource = pMani->getSource(i);
 		if (pSource->isActive(const_cast<CvGameObjectCity*>(getGameObject())))
 		{
 			iSum += pSource->getSourcePredict(getGameObject(), getPropertiesConst()->getValueByProperty(eProperty));

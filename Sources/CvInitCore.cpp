@@ -27,7 +27,7 @@ bool CvInitCore::bPathsSet;
 
 CvInitCore::CvInitCore()
 {
-	OutputDebugString("Calling constructor for InitCore: Start");
+	OutputDebugString("Calling constructor for InitCore: Start\n");
 
 	// Moved to Init as the number is no more predetermined
 	//m_abOptions = new bool[NUM_GAMEOPTION_TYPES];
@@ -81,7 +81,7 @@ CvInitCore::CvInitCore()
 
 	reset(NO_GAMEMODE);
 
-	OutputDebugString("Calling constructor for InitCore: End");
+	OutputDebugString("Calling constructor for InitCore: End\n");
 }
 
 
@@ -119,7 +119,7 @@ CvInitCore::~CvInitCore()
 
 void CvInitCore::init(GameMode eMode)
 {
-	OutputDebugString("Initialize InitCore: Start");
+	OutputDebugString("Initialize InitCore: Start\n");
 
 	if (m_abOptions == NULL)
 		m_abOptions = new bool[NUM_GAMEOPTION_TYPES];
@@ -127,7 +127,7 @@ void CvInitCore::init(GameMode eMode)
 	// Init saved data
 	reset(eMode);
 
-	OutputDebugString("Initialize InitCore: Start");
+	OutputDebugString("Initialize InitCore: Start\n");
 }
 
 void CvInitCore::uninit()
@@ -141,7 +141,7 @@ void CvInitCore::uninit()
 // Initializes data members that are serialized.
 void CvInitCore::reset(GameMode eMode)
 {
-	OutputDebugString("Reseting InitCore: Start");
+	OutputDebugString("Reseting InitCore: Start\n");
 
 	//--------------------------------
 	// Uninit class
@@ -157,7 +157,7 @@ void CvInitCore::reset(GameMode eMode)
 		setDefaults();
 	}
 	CvXMLLoadUtility::RemoveTGAFiller();
-	OutputDebugString("Reseting InitCore: End");
+	OutputDebugString("Reseting InitCore: End\n");
 }
 
 void CvInitCore::setDefaults()

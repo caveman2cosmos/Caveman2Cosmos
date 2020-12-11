@@ -23,12 +23,9 @@
 			<PrereqTech>TECH_BOARD_GAMES</PrereqTech>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_TOY_MAKER</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings-->
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TOY_MAKER</BuildingType>
+			</ReplacementBuildings-->
 			<!-- Construction cost -->
 			<iCost>146</iCost>
 			<!-- Main effects -->
@@ -146,12 +143,9 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<!-- Obsolescence -->
-			<!--ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_TOY_FACTORY</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings-->
+			<!--ReplacementBuildings>
+				<BuildingType>BUILDING_TOY_FACTORY</BuildingType>
+			</ReplacementBuildings-->
 			<!-- Construction cost -->
 			<iCost>332</iCost>
 			<!-- Main effects -->

@@ -412,14 +412,7 @@ CvUnitInfo::~CvUnitInfo()
 
 const wchar_t* CvUnitInfo::getExtraHoverText() const
 {
-	if (!m_szExtraHoverTextKey.empty())
-	{
-		return gDLL->getText(m_szExtraHoverTextKey);
-	}
-	else
-	{
-		return L"";
-	}
+	return m_szExtraHoverTextKey.empty() ? L"" : gDLL->getText(m_szExtraHoverTextKey);
 }
 
 
@@ -1322,17 +1315,13 @@ int CvUnitInfo::getSupersedingUnit(int i) const
 {
 	return m_aiSupersedingUnits[i];
 }
-int CvUnitInfo::getNumSupersedingUnits() const
+short CvUnitInfo::getNumSupersedingUnits() const
 {
 	return (int)m_aiSupersedingUnits.size();
 }
 bool CvUnitInfo::isSupersedingUnit(int i) const
 {
-	if (find(m_aiSupersedingUnits.begin(), m_aiSupersedingUnits.end(), i) == m_aiSupersedingUnits.end())
-	{
-		return false;
-	}
-	return true;
+	return find(m_aiSupersedingUnits.begin(), m_aiSupersedingUnits.end(), i) != m_aiSupersedingUnits.end();
 }
 
 

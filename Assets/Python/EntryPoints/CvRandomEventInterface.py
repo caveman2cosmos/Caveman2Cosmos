@@ -468,17 +468,23 @@ def canApplyLooters3(argsList):
 	CyPlayer = GC.getPlayer(kTriggeredData.eOtherPlayer)
 	CyTeam = GC.getTeam(CyPlayer.getTeam())
 	CyCity = CyPlayer.getCity(kTriggeredData.iOtherPlayerCityId)
+	iEra = CyPlayer.getCurrentEra()
+	iTreshold = (100 + 20 * iEra * iEra) * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getConstructPercent() / 100
 
 	for i in xrange(GC.getNumBuildingInfos()):
-		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1: continue
-		CvBuilding = GC.getBuildingInfo(i)
-		iCost = CvBuilding.getProductionCost()
-		if iCost <= 100 and iCost > 0 and not isLimitedWonder(i) and not CvBuilding.isAutoBuild():
+		if isLimitedWonder(i) or CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1:
+			continue
+		info = GC.getBuildingInfo(i)
+		if info.isAutoBuild():
+			continue
+		iCost = info.getProductionCost()
+		if iCost <= iTreshold and iCost > 0:
 
-			for k in xrange(GC.getNumBuildingInfos()):
-				if CyCity.getNumRealBuilding(k) and CvBuilding.isReplaceBuilding(k):
+			for i in xrange(info.getNumReplacementBuilding()):
+				if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
 					break
 			else: return True
+
 	return False
 
 
@@ -489,16 +495,20 @@ def applyLooters3(argsList):
 	CyPlayer = GC.getPlayer(kTriggeredData.eOtherPlayer)
 	CyTeam = GC.getTeam(CyPlayer.getTeam())
 	CyCity = CyPlayer.getCity(kTriggeredData.iOtherPlayerCityId)
+	iEra = CyPlayer.getCurrentEra()
+	iTreshold = (100 + 20 * iEra * iEra) * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getConstructPercent() / 100
 
 	aList = []
 	for i in xrange(GC.getNumBuildingInfos()):
-		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1: continue
-		CvBuilding = GC.getBuildingInfo(i)
-		iCost = CvBuilding.getProductionCost()
-		if iCost <= 100 and iCost > 0 and not isLimitedWonder(i) and not CvBuilding.isAutoBuild():
+		if isLimitedWonder(i) or CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1: continue
+		info = GC.getBuildingInfo(i)
+		if info.isAutoBuild():
+			continue
+		iCost = info.getProductionCost()
+		if iCost <= iTreshold and iCost > 0:
 
-			for k in xrange(GC.getNumBuildingInfos()):
-				if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
+			for i in xrange(info.getNumReplacementBuilding()):
+				if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
 					break
 			else: aList.append(i)
 
@@ -584,13 +594,13 @@ def canApplyHurricane1(argsList):
 	CyCity = CyPlayer.getCity(kTriggeredData.iCityId)
 
 	for i in xrange(GC.getNumBuildingInfos()):
-		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1 or CyCity.isFreeBuilding(i): continue
-		CvBuilding = GC.getBuildingInfo(i)
-		if CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild() or CvBuilding.getProductionCost() < 1 or isLimitedWonder(i):
+		if isLimitedWonder(i) or CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1 or CyCity.isFreeBuilding(i):
 			continue
-
-		for k in xrange(GC.getNumBuildingInfos()):
-			if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
+		info = GC.getBuildingInfo(i)
+		if info.isNukeImmune() or info.isAutoBuild() or info.getProductionCost() < 1:
+			continue
+		for i in xrange(info.getNumReplacementBuilding()):
+			if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
 				break
 		else: return True
 	return False
@@ -608,13 +618,14 @@ def applyHurricane1(argsList):
 
 	aList = []
 	for i in xrange(GC.getNumBuildingInfos()):
-		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1 or CyCity.isFreeBuilding(i): continue
-		CvBuilding = GC.getBuildingInfo(i)
-		if CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild() or CvBuilding.getProductionCost() < 1 or isLimitedWonder(i):
+		if isLimitedWonder(i) or CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1 or CyCity.isFreeBuilding(i):
+			continue
+		info = GC.getBuildingInfo(i)
+		if info.isNukeImmune() or info.isAutoBuild() or info.getProductionCost() < 1:
 			continue
 
-		for k in xrange(GC.getNumBuildingInfos()):
-			if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
+		for i in xrange(info.getNumReplacementBuilding()):
+			if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
 				break
 		else: aList.append(i)
 
@@ -690,12 +701,13 @@ def applyTsunami2(argsList):
 
 	listBuildings = []
 	for j in xrange(GC.getNumBuildingInfos()):
-		if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1: continue
-		CvBuilding = GC.getBuildingInfo(j)
-		if CvBuilding.getProductionCost() > 0  and not isLimitedWonder(j) and not CvBuilding.isAutoBuild():
+		if isLimitedWonder(j) or CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1:
+			continue
+		info = GC.getBuildingInfo(j)
+		if info.getProductionCost() > 0 and not info.isAutoBuild():
 
-			for k in xrange(GC.getNumBuildingInfos()):
-				if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
+			for i in xrange(info.getNumReplacementBuilding()):
+				if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
 					break
 			else: listBuildings.append(j)
 
@@ -7501,18 +7513,18 @@ def doMinorFire(argsList):
 	iBurnBuilding = -1
 	iHighFlamm = 0
 	for i in xrange(GC.getNumBuildingInfos()):
-		if CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1 or isLimitedWonder(i) or CyCity.isFreeBuilding(i):
+		if isLimitedWonder(i) or CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1 or CyCity.isFreeBuilding(i):
 			continue
-		CvBuilding = GC.getBuildingInfo(i)
-		if CvBuilding.getProductionCost() < 1 or CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
+		info = GC.getBuildingInfo(i)
+		if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
 			continue
 
-		for k in xrange(GC.getNumBuildingInfos()):
-			if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
+		for i in xrange(info.getNumReplacementBuilding()):
+			if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
 				break
 		else:
 			randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
-			iFlamm = CvBuilding.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
+			iFlamm = info.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
 			iFlammScore = iFlamm + randNum
 			if iFlammScore > iHighFlamm:
 				iHighFlamm = iFlammScore
@@ -7543,18 +7555,18 @@ def doMajorFire(argsList):
 		if currFlamm <= iFlammEnd:
 			break
 		for j in xrange(GC.getNumBuildingInfos()):
-			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j) or CyCity.isFreeBuilding(i):
+			if isLimitedWonder(j) or CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or CyCity.isFreeBuilding(i):
 				continue
-			CvBuilding = GC.getBuildingInfo(j)
-			if CvBuilding.getProductionCost() < 1 or CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
+			info = GC.getBuildingInfo(j)
+			if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
 				continue
 
-			for k in xrange(GC.getNumBuildingInfos()):
-				if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
+			for i in xrange(info.getNumReplacementBuilding()):
+				if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
 					break
 			else:
 				randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
-				iFlamm = CvBuilding.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
+				iFlamm = info.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
 				iFlammScore = iFlamm + randNum
 				if iFlammScore > iHighFlamm:
 					iHighFlamm = iFlammScore
@@ -7595,19 +7607,16 @@ def doCatastrophicFire(argsList):
 		iHighFlamm = 0
 
 		for j in xrange(GC.getNumBuildingInfos()):
-			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j) or CyCity.isFreeBuilding(i):
+			if isLimitedWonder(j) or CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or CyCity.isFreeBuilding(i):
 				continue
-			CvBuilding = GC.getBuildingInfo(j)
-			if CvBuilding.getProductionCost() < 1 or CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
+			info = GC.getBuildingInfo(j)
+			if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
 				continue
-
-			for k in xrange(GC.getNumBuildingInfos()):
-				if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
+			for i in xrange(info.getNumReplacementBuilding()):
+				if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
 					break
 			else:
-				randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
-				iFlamm = CvBuilding.getProperties().getValueByProperty(iProp)
-				iFlammScore = iFlamm + randNum
+				iFlammScore = info.getProperties().getValueByProperty(iProp) + GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
 				if iFlammScore > iHighFlamm:
 					iHighFlamm = iFlammScore
 					iBurnBuilding = j

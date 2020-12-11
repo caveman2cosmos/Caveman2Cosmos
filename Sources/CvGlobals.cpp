@@ -40,9 +40,9 @@ static char gVersionString[1024] = { 0 };
 template <class T>
 void deleteInfoArray(std::vector<T*>& array)
 {
-	for (std::vector<T*>::iterator it = array.begin(); it != array.end(); ++it)
+	foreach_(T* info, array)
 	{
-		SAFE_DELETE(*it);
+		SAFE_DELETE(info);
 	}
 
 	array.clear();
@@ -295,18 +295,11 @@ LONG WINAPI CustomFilter(EXCEPTION_POINTERS *ExceptionInfo)
 void cvInternalGlobals::init()
 {
 	OutputDebugString("Initializing Internal Globals: Start");
-/************************************************************************************************/
-/* MINIDUMP_MOD                           04/10/11                                terkhen       */
-/************************************************************************************************/
 
 #ifdef MINIDUMP
 	/* Enable our custom exception that will write the minidump for us. */
 	SetUnhandledExceptionFilter(CustomFilter);
 #endif
-
-/************************************************************************************************/
-/* MINIDUMP_MOD                                END                                              */
-/************************************************************************************************/
 
 	//
 	// These vars are used to initialize the globals.
@@ -357,15 +350,7 @@ void cvInternalGlobals::init()
 		0,
 		0, 1, 1, 1, 0,-1,-1,-1,
 		0, 1, 2, 2, 2, 1, 0,-1,-2,-2,-2,-1,
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		0, 1, 2, 3, 3, 3, 2, 1, 0, -1, -2, -3, -3, -3, -2, -1,
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 	};
 
 	int aiCityPlotY[NUM_CITY_PLOTS] =
@@ -373,15 +358,7 @@ void cvInternalGlobals::init()
 		0,
 		1, 1, 0,-1,-1,-1, 0, 1,
 		2, 2, 1, 0,-1,-2,-2,-2,-1, 0, 1, 2,
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		3, 3, 2, 1, 0, -1, -2, -3, -3, -3, -2, -1, 0, 1, 2, 3,
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 	};
 
 	int aiCityPlotPriority[NUM_CITY_PLOTS] =
@@ -389,24 +366,11 @@ void cvInternalGlobals::init()
 		0,
 		1, 2, 1, 2, 1, 2, 1, 2,
 		3, 4, 4, 3, 4, 4, 3, 4, 4, 3, 4, 4,
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		5, 6, 7, 6, 5, 6, 7, 6, 5, 6, 7, 6, 5, 6, 7, 6,
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 	};
 
 	int aaiXYCityPlot[CITY_PLOTS_DIAMETER][CITY_PLOTS_DIAMETER] =
 	{
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		{-1, -1, 32, 33, 34, -1, -1},
 		{-1, 31, 17, 18, 19, 35, -1},
 		{30, 16, 6,   7,  8, 20, 36},
@@ -414,9 +378,6 @@ void cvInternalGlobals::init()
 		{28, 14, 4,   3,  2, 10, 22},
 		{-1, 27, 13, 12, 11, 23, -1},
 		{-1, -1, 26, 25, 24, -1, -1},
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 	};
 
 	DirectionTypes aeTurnRightDirection[NUM_DIRECTION_TYPES] =
@@ -2682,19 +2643,19 @@ int cvInternalGlobals::getTypesEnum(const char* szType) const
 {
 	FAssertMsg(szType, "null type string");
 	TypesMap::const_iterator it = m_typesMap.find(szType);
-	if (it!=m_typesMap.end())
+	if (it != m_typesMap.end())
 	{
 		return it->second;
 	}
 
-	FAssertMsg(strcmp(szType, "NONE")==0 || strcmp(szType, "")==0, CvString::format("type %s not found", szType).c_str());
+	FAssertMsg(strcmp(szType, "NONE") == 0 || strcmp(szType, "") == 0, CvString::format("type %s not found", szType).c_str());
 	return -1;
 }
 
 void cvInternalGlobals::setTypesEnum(const char* szType, int iEnum)
 {
 	FAssertMsg(szType, "null type string");
-	FAssertMsg(m_typesMap.find(szType)==m_typesMap.end(), "types entry already exists");
+	FAssertMsg(m_typesMap.find(szType) == m_typesMap.end(), "types entry already exists");
 	m_typesMap[szType] = iEnum;
 }
 
@@ -2996,11 +2957,10 @@ void cvInternalGlobals::addToInfosVectors(void *infoVector)
 
 void cvInternalGlobals::infosReset()
 {
-	for(int i=0;i<(int)m_aInfoVectors.size();i++)
+	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
 	{
-		std::vector<CvInfoBase *> *infoBaseVector = m_aInfoVectors[i];
-		for(int j=0;j<(int)infoBaseVector->size();j++)
-			infoBaseVector->at(j)->reset();
+		foreach_(CvInfoBase* info, *infoVector)
+			info->reset();
 	}
 }
 
@@ -3216,11 +3176,11 @@ void cvInternalGlobals::setIsBug()
 		m_iViewportCenterOnSelectionCenterBorder = getBugOptionINT("MainInterface__ViewportAutoCenterBorder", 5);
 
 		// This happens after the maps load on first load, so resize existing viewports
-		for(int iI = 0; iI < GC.getNumMapInfos(); iI++)
+		foreach_(const CvMap* map, m_maps)
 		{
-			for(int iJ = 0; iJ < GC.getMapByIndex((MapTypes)iI).getNumViewports(); iJ++)
+			for (int iJ = 0; iJ < map->getNumViewports(); iJ++)
 			{
-				GC.getMapByIndex((MapTypes)iI).getViewport(iJ)->resizeForMap();
+				map->getViewport(iJ)->resizeForMap();
 			}
 		}
 	}
@@ -3255,16 +3215,16 @@ bool cvInternalGlobals::isXMLLogging() const
 
 
 // calculate asset checksum
-unsigned int cvInternalGlobals::getAssetCheckSum()
+uint32_t cvInternalGlobals::getAssetCheckSum() const
 {
 	CvString szLog;
-	unsigned int iSum = 0;
-	for (std::vector<std::vector<CvInfoBase*> *>::iterator itOuter = m_aInfoVectors.begin(); itOuter != m_aInfoVectors.end(); ++itOuter)
+	uint32_t iSum = 0;
+	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
 	{
-		for (std::vector<CvInfoBase*>::iterator itInner = (*itOuter)->begin(); itInner != (*itOuter)->end(); ++itInner)
+		foreach_(const CvInfoBase* info, *infoVector)
 		{
-			(*itInner)->getCheckSum(iSum);
-			szLog.Format("%s : %u", (*itInner)->getType(), iSum );
+			info->getCheckSum(iSum);
+			szLog.Format("%s : %u", info->getType(), iSum);
 			gDLL->logMsg("Checksum.log", szLog.c_str());
 		}
 	}

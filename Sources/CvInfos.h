@@ -298,8 +298,6 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpecialistInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	bool readPass3();
-
 	void getCheckSum(unsigned int& iSum) const;
 
 private:
@@ -434,8 +432,6 @@ public:
 	const PrereqBuilding& getPrereqOrBuilding(int iIndex) const;
 	int getPrereqOrBuildingType(int iIndex) const;
 	int getPrereqOrBuildingMinimumRequired(int iIndex) const;
-
-	bool readPass3();
 
 	bool isGlobal() const;
 
@@ -2288,7 +2284,7 @@ public:
 	bool isDefendAgainstUnit(int i) const;		//Exposed to Python
 
 	int getSupersedingUnit(int i) const;
-	int getNumSupersedingUnits() const;
+	short getNumSupersedingUnits() const;
 	bool isSupersedingUnit(int i) const;		//Exposed to Python
 
 	int getUnitUpgrade(int i) const;			//Exposed to Python
@@ -4008,22 +4004,22 @@ public:
 	int getTechPrereq() const;
 	int getImprovement() const;
 	int getRoute() const;
-/************************************************************************************************/
-/* Afforess					  Start		 05/25/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	int getTerrainChange() const;
 	int getFeatureChange() const;
+	/************************************************************************************************/
+	/* Afforess					  Start		 05/25/10											   */
+	/*																							  */
+	/*																							  */
+	/************************************************************************************************/
 	int getObsoleteTech() const;
 	bool isMine() const;
 	bool isNoTechCanRemoveWithNoProductionGain(int i) const;
 	bool isDisabled() const;
 	bool isHideObsoleteExempt() const;
 	void setDisabled(bool bNewVal);
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess						 END															*/
+	/************************************************************************************************/
 	DllExport int getEntityEvent() const;
 	DllExport int getMissionType() const;
 	void setMissionType(int iNewType);
@@ -4068,11 +4064,11 @@ protected:
 	int m_iTechPrereq;
 	int m_iImprovement;
 	int m_iRoute;
-/************************************************************************************************/
-/* Afforess					  Start		 05/25/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess					  Start		 05/25/10											   */
+	/*																							  */
+	/*																							  */
+	/************************************************************************************************/
 	int m_iTerrainChange;
 	int m_iFeatureChange;
 	int m_iObsoleteTech;
@@ -4080,9 +4076,9 @@ protected:
 	bool m_bDisabled;
 	bool m_bHideObsoleteExempt;
 	bool* m_pabNoTechCanRemoveWithNoProductionGain;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess						 END															*/
+	/************************************************************************************************/
 	int m_iEntityEvent;
 	int m_iMissionType;
 
@@ -5859,7 +5855,6 @@ public:
 	int getFlavorValue(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass3();
 
 	void copyNonDefaults(CvReligionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
@@ -8778,8 +8773,6 @@ public:
 	int getCivic() const;
 	const CvWString getPopupText() const;
 	const CvWString getSecretaryGeneralText() const;
-	const CvString& getCopyPopupText() const;
-	const CvString& getCopySecretaryGeneralText() const;
 
 	std::wstring pyGetSecretaryGeneralText() { return getSecretaryGeneralText(); }
 
@@ -8787,8 +8780,6 @@ public:
 	int getReligionCommerce(int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass3();
-
 	void copyNonDefaults(CvVoteSourceInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	void getCheckSum(unsigned int& iSum) const;

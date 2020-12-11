@@ -12018,7 +12018,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_WORKER_SPEED_NEGATIVE", GC.getTraitInfo(eTrait).getWorkerSpeedModifier()));
 		}
 
-//IMPROVEMENT UPGRADE && WORKER SPEED MODS
+		//IMPROVEMENT UPGRADE && WORKER SPEED MODS
 		//	Improvement upgrade rate modifier
 		if (GC.getTraitInfo(eTrait).getImprovementUpgradeRateModifier() != 0)
 		{
@@ -23196,21 +23196,15 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 							{
 								szTempBuffer2.Format(L"+%.0f", fValue/100);
 							}
-							else
-							{
-								szTempBuffer2.Format(L"%.0f", fValue/100);
+							else szTempBuffer2.Format(L"%.0f", fValue/100);
 							}
+						else if (fValue > 0)
+						{
+							szTempBuffer2.Format(L"+%.2f", fValue/100);
 						}
 						else
 						{
-							if (fValue > 0)
-							{
-								szTempBuffer2.Format(L"+%.2f", fValue/100);
-							}
-							else
-							{
-								szTempBuffer2.Format(L"%.2f", fValue/100);
-							}
+							szTempBuffer2.Format(L"%.2f", fValue/100);
 						}
 
 						szTempBuffer.Format(L"\n%c%s%c%s", gDLL->getSymbolID(BULLET_CHAR), szTempBuffer2.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar(), gDLL->getText("TXT_KEY_WITH").GetCString());
@@ -23628,22 +23622,16 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	}
 
 	bFirst = true;
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+	for (int iI = 0; iI < kBuilding.getNumReplacedBuilding(); ++iI)
 	{
-		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(kBuilding.getReplacedBuilding(iI));
 
-		if (GC.getGame().canEverConstruct(eLoopBuilding))
+		if (GC.getGame().canEverConstruct(eBuildingX) && (pCity == NULL || pCity->getNumBuilding(eBuildingX) == 0))
 		{
-			if (GC.getBuildingInfo(eLoopBuilding).isReplaceBuilding(eBuilding))
-			{
-				if ((pCity == NULL) || (pCity->getNumBuilding(eLoopBuilding) == 0))
-				{
-					szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_REPLACED_BY_BUILDING").c_str());
-					szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
-					setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
-					bFirst = false;
-				}
-			}
+			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_REPLACED_BY_BUILDING").c_str());
+			szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eBuildingX).getType()).GetCString(), GC.getBuildingInfo(eBuildingX).getDescription());
+			setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
+			bFirst = false;
 		}
 	}
 
@@ -31446,7 +31434,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		}
 		info.getPropertyManipulators()->buildDisplayString(szBuffer);
 	}
-
 }
 
 void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTypes eImprovement, FeatureTypes eFeature, bool bCivilopediaText)

@@ -2329,7 +2329,7 @@ void CvUnitAI::AI_workerMove()
 		}
 	}
 
-/*
+	/*
 	if (pCity != NULL)
 	{
 		for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
@@ -2351,7 +2351,7 @@ void CvUnitAI::AI_workerMove()
 			}
 		}
 	}
-*/
+	*/
 
 	if (pCity != NULL && pCity->AI_getWorkersNeeded() > 0
 	&& (plot()->isCity() || pCity->AI_getWorkersNeeded() < (1 + pCity->AI_getWorkersHave() * 2) / 3)
@@ -2382,12 +2382,12 @@ void CvUnitAI::AI_workerMove()
 	}
 	// Super Forts end
 
-/*
+	/*
 	if (bCanRoute && isBarbarian() && AI_connectCity())
 	{
 		return;
 	}
-*/
+	*/
 
 	bool bNextCity = false;
 
@@ -11616,16 +11616,7 @@ void CvUnitAI::AI_networkAutomated()
 
 	if (!(getGroup()->canDefend()))
 	{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  08/20/09								jdog5000	  */
-/*																							  */
-/* Unit AI, Efficiency																		  */
-/************************************************************************************************/
-		//if (GET_PLAYER(getOwner()).AI_getPlotDanger(plot()) > 0)
 		if (GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot()))
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 		{
 			if (AI_retreatToCity()) // XXX maybe not do this??? could be working productively somewhere else...
 			{
@@ -11633,7 +11624,7 @@ void CvUnitAI::AI_networkAutomated()
 			}
 		}
 	}
-// TBHERE
+	// TBHERE
 	//if (AI_improveBonus(20))
 	//{
 	//	return;
@@ -25087,8 +25078,6 @@ bool CvUnitAI::AI_routeTerritory(bool bImprovementOnly)
 	int iBestValue;
 	int iI, iJ;
 
-	// XXX how do we make sure that we can build roads???
-
 	FAssert(canBuildRoute());
 
 	iBestValue = 0;
@@ -25098,14 +25087,12 @@ bool CvUnitAI::AI_routeTerritory(bool bImprovementOnly)
 	{
 		pLoopPlot = GC.getMap().plotByIndex(iI);
 
-		if (pLoopPlot->getOwner() == getOwner()) // XXX team???
+		if (pLoopPlot->getOwner() == getOwner())
 		{
 			if (pLoopPlot->area() == area() && AI_plotValid(pLoopPlot))
 			{
-				// Afforess 5/29/11
-				// Do not blindly rely on XML value, check movement info and route cost
+				// Best route depends on Tech, Plot(Terrain/Feature, and Improvement in case of eRail v Highway)
 				eBestRoute = GET_PLAYER(getOwner()).getBestRoute(pLoopPlot, false, this);
-				// ! Afforess
 
 				if (eBestRoute != NO_ROUTE)
 				{
@@ -32118,12 +32105,8 @@ void unitSourcesValueToCity(const CvGameObject* pObject, const CvPropertyManipul
 
 	if ( pCity != NULL )
 	{
-		int iNum = pMani->getNumSources();
-
-		for (int i=0; i<iNum; i++)
+		foreach_(const CvPropertySource* pSource, pMani->getSources())
 		{
-			const CvPropertySource* pSource = pMani->getSource(i);
-
 			if (eProperty == NO_PROPERTY || pSource->getProperty() == eProperty)
 			{
 				//	Sources that deliver to the city or the plot are both considered since the city plot diffuses
@@ -32472,10 +32455,8 @@ bool CvUnitAI::AI_fulfillPropertyControlNeed()
 
 		int score = 0;
 		//TBNote: in figuring out how much the unit provides, it's not as important as determining that it simply does provide.  Therefore, promotions and unitcombat values on the unit aren't checked (unless this already by nature does but I think it's only asking for base unit info)
-		for (int sourceIdx = 0; sourceIdx < propertyManipulators->getNumSources(); sourceIdx++)
+		foreach_(const CvPropertySource* pSource, propertyManipulators->getSources())
 		{
-			const CvPropertySource* pSource = propertyManipulators->getSource(sourceIdx);
-
 			if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getObjectType() == GAMEOBJECT_CITY && pSource->getProperty() == eProperty)
 			{
 				score += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
@@ -33349,9 +33330,8 @@ bool CvUnitAI::AI_isNegativePropertyUnit() const
 	const CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(getUnitType()).getPropertyManipulators();
 	if (propertyManipulators != NULL)
 	{
-		for (int iI = 0; iI < propertyManipulators->getNumSources(); iI++)
+		foreach_(const CvPropertySource* pSource, propertyManipulators->getSources())
 		{
-			const CvPropertySource* pSource = propertyManipulators->getSource(iI);
 			//	We have a source for a property - value is crudely just the AIweight of that property times the source size (which is expected to only depend on the player)
 			if (pSource->getType() == PROPERTYSOURCE_CONSTANT)
 			{

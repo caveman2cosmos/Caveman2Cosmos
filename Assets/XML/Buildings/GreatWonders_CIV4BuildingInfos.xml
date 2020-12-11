@@ -2016,12 +2016,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CASINO</BuildingType>
 			</PrereqInCityBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
+			</ReplacementBuildings>
 			<iCost>8070</iCost>
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
@@ -6415,12 +6412,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CASINO</BuildingType>
 			</PrereqInCityBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
+			</ReplacementBuildings>
 			<iCost>8070</iCost>
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
@@ -9017,12 +9011,9 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 			</PrereqInCityBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+			</ReplacementBuildings>
 			<iCost>32730</iCost>
 			<iHealth>5</iHealth>
 			<iHappiness>2</iHappiness>
@@ -12908,12 +12899,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WINERY</BuildingType>
 			</PrereqInCityBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1280</iCost>
 			<FreeBonus>BONUS_WINE_CHAMPAGNE</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
@@ -12950,12 +12938,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WINERY</BuildingType>
 			</PrereqInCityBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1280</iCost>
 			<FreeBonus>BONUS_WINE_VINTAGE_RED</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
@@ -12991,12 +12976,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WINERY</BuildingType>
 			</PrereqInCityBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1280</iCost>
 			<FreeBonus>BONUS_WINE_VINTAGE_WHITE</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
@@ -18879,12 +18861,9 @@
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
 			<bPrereqPower>1</bPrereqPower>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19166,12 +19145,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>

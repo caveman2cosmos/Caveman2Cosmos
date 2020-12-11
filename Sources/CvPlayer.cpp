@@ -7850,6 +7850,8 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 }
 
 
+// If this func returns false, the build will not show up in the worker UI
+// bTestEra and bTestVisible are to show builds regardless of availability within a range; BUG option.
 bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, bool bTestVisible, bool bIncludePythonOverrides) const
 {
 	PROFILE_FUNC();
@@ -7861,32 +7863,35 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 
 	const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
 
+	// false if build obsolete by tech
 	if (kBuild.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getObsoleteTech()))
 	{
 		return false;
 	}
 
-	bool bTerrainTechQualified = false;
+	// check money, terrain and feature prereqs
 	if (pPlot != NULL)
 	{
-		for (int iI = 0; iI < kBuild.getNumTerrainStructs(); iI++)
+		// check gold
+		if (!bTestVisible && std::max<int64_t>(0, getGold()) < getBuildCost(pPlot, eBuild))
 		{
-			if(kBuild.getTerrainStruct(iI).eTerrain == pPlot->getTerrainType()
-			&& kBuild.getTerrainStruct(iI).ePrereqTech != NO_TECH)
+			return false;
+		}
+
+		// check tech prereq, allow if bTests within same era
+		if (kBuild.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getTechPrereq()))
+		{
+			if (!bTestEra && !bTestVisible || getCurrentEra() < GC.getTechInfo((TechTypes)kBuild.getTechPrereq()).getEra())
 			{
-				bTerrainTechQualified = true;
-				if (!GET_TEAM(getTeam()).isHasTech(kBuild.getTerrainStruct(iI).ePrereqTech)
-				&& (!bTestEra && !bTestVisible || getCurrentEra()+1 < GC.getTechInfo(kBuild.getTerrainStruct(iI).ePrereqTech).getEra()))
-				{
-					return false;
-				}
+				return false;
 			}
 		}
-	}
-	if (!bTerrainTechQualified && kBuild.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getTechPrereq())
-	&& (!bTestEra && !bTestVisible || getCurrentEra()+1 < GC.getTechInfo((TechTypes)kBuild.getTechPrereq()).getEra()))
-	{
-		return false;
+
+		// check plot terrain/features against player current tech, allow if bTests within +1 era
+		if (!canBuildPlotTechPrereq(pPlot, eBuild, bTestEra, bTestVisible))
+		{
+			return false;
+		}
 	}
 
 	if (kBuild.isDisabled())
@@ -7894,6 +7899,7 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 		return false;
 	}
 
+	// Unique improvement checks
 	if (kBuild.getImprovement() != NO_IMPROVEMENT)
 	{
 		ImprovementTypes eImprovement = (ImprovementTypes)kBuild.getImprovement();
@@ -7909,23 +7915,48 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 		}
 	}
 
-	if (!bTestVisible)
-	{
-		if (pPlot != NULL)
-		{
-			if (pPlot->getFeatureType() != NO_FEATURE)
-			{
-				if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getFeatureTech(pPlot->getFeatureType()))))
-				{
-					if (!kBuild.isNoTechCanRemoveWithNoProductionGain(pPlot->getFeatureType()))
-					{
-						return false;
-					}
+	return true;
+}
 
+// Evaluate if eBuild can be built on pPlot based on the features/terrain present.
+bool CvPlayer::canBuildPlotTechPrereq(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, bool bTestVisible) const
+{
+	if (eBuild == NO_BUILD) return false;
+
+	const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
+
+	FeatureTypes plotFeature = pPlot->getFeatureType();
+	// false if must but can't remove feature without prod gain, OR feature/terrain tech req is several eras past us. Allow 1 era past for UI feedback!
+	if (plotFeature != NO_FEATURE)
+	{
+		// if feature requires tech we don't have...
+		if (!GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getFeatureTech(plotFeature)))
+		{
+			// if feature is not removed, or is removed but can do so without prod gain...
+			if (!kBuild.isFeatureRemove(plotFeature)
+			||   kBuild.isFeatureRemove(plotFeature) && !kBuild.isNoTechCanRemoveWithNoProductionGain(plotFeature))
+			{
+				// if bTests are true, delay returning false by a few eras
+				if (!bTestEra && !bTestVisible || getCurrentEra()+3 < GC.getTechInfo((TechTypes)kBuild.getFeatureTech(plotFeature)).getEra())
+				{
+					return false;
 				}
 			}
+		}
+	}
 
-			if (std::max<int64_t>(0, getGold()) < getBuildCost(pPlot, eBuild))
+	// terrain is similar to feature; can't build if don't have tech, etc, only diff is looping thru terrain structs because that's how we roll
+	for (int iI = 0; iI < kBuild.getNumTerrainStructs(); iI++)
+	{
+		const TerrainTypes eTerrain = kBuild.getTerrainStruct(iI).eTerrain;
+
+		if( (eTerrain == pPlot->getTerrainType()
+		||  eTerrain == GC.getTERRAIN_PEAK() && pPlot->isAsPeak()
+		||  eTerrain == GC.getTERRAIN_HILL() && pPlot->isHills())
+		&& kBuild.getTerrainStruct(iI).ePrereqTech != NO_TECH
+		&& !GET_TEAM(getTeam()).isHasTech(kBuild.getTerrainStruct(iI).ePrereqTech))
+		{
+			if (!bTestEra && !bTestVisible || getCurrentEra()+3 < GC.getTechInfo(kBuild.getTerrainStruct(iI).ePrereqTech).getEra())
 			{
 				return false;
 			}
@@ -7966,23 +7997,29 @@ int CvPlayer::getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const
 	return iCost;
 }
 
+// Checks route validity from either plot/builder specific standpoint or player in-general standpoint based on args
 bool CvPlayer::isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvPlot* pPlot, const CvUnit* pBuilder) const
 {
-	bool bResult = false;
-
-	//	Only check whether the build is obsolete if we need it!  The route is anyway valid if it already exists
-	if ((pPlot != NULL) ?
-			((pPlot->getRouteType() == eRoute) || canBuild(pPlot, eRouteBuild)) :
-			(GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eRouteBuild).getTechPrereq()) &&
-			 (GC.getBuildInfo(eRouteBuild).getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBuildInfo(eRouteBuild).getObsoleteTech())))))
-	{
-		bResult = (pBuilder == NULL || pBuilder->canBuild(pPlot,eRouteBuild));
-	}
-
-	return bResult;
+	// Player in general; have tech reqs and not obsolete?
+	if (pPlot == NULL)
+    {
+        if (!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eRouteBuild).getTechPrereq())
+        || GC.getBuildInfo(eRouteBuild).getObsoleteTech() != NO_TECH
+        && GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eRouteBuild).getObsoleteTech()))
+        {
+            return false;
+        }
+    }
+	// plot specific query; maybe check !canBuildPlotTechPrereq(pPlot, eRouteBuild) here as well?
+    else if (pPlot->getRouteType() != eRoute && !canBuild(pPlot, eRouteBuild))
+    {
+        return false;
+    }
+	// unit specific query; Cv::Unit canBuild is big func...
+    return pBuilder == NULL || pBuilder->canBuild(pPlot,eRouteBuild);
 }
 
-
+// bConnect = true when looking in general regardless of plot; finding best available route in theory, on city center, etc
 RouteTypes CvPlayer::getBestRoute(const CvPlot* pPlot, bool bConnect, const CvUnit* pBuilder) const
 {
 	PROFILE_FUNC();
@@ -7990,16 +8027,53 @@ RouteTypes CvPlayer::getBestRoute(const CvPlot* pPlot, bool bConnect, const CvUn
 	// Save best route type per player each turn, then only check others if can't do best.
 	if (m_eBestRoute == NO_ROUTE)
 	{
-		// Set cache to the best route by tech level ignoring unit capability
+		// Set cache to the best route by tech level ignoring unit capability/map behavior
 		m_eBestRoute = getBestRouteInternal(pPlot, bConnect, NULL, &m_eBestRouteBuild);
 	}
 
 	if (m_eBestRoute != NO_ROUTE && isRouteValid(m_eBestRoute, m_eBestRouteBuild, pPlot, pBuilder))
 	{
 		return m_eBestRoute;
+		/* Blaze - Possible temporary hack to work around routes with same value. System MUST be overhauled if more are included...
+		// Maybe store a bool per plot if tile has best route available, updating whenever improvement change/relevant tech acquired/worker on plot/etc?
+		if (pPlot == NULL ||
+			pPlot != NULL && GC.getRouteInfo(pPlot->getRouteType()).getValue() != GC.getRouteInfo(m_eBestRoute).getValue())
+		{
+			return m_eBestRoute;
+		}  */
 	}
 	return getBestRouteInternal(pPlot, bConnect, pBuilder);
 }
+
+// This maybe should be in CvPlot from how often it calls pPlot...? Or investigate, use getRouteYieldChangesArray if applicable
+// Find the yield difference from current plot yield for given yieldType, if eRoute is placed on pPlot
+int CvPlayer::calculatePlotRouteYieldDifference(const CvPlot* pPlot, const RouteTypes eRoute, YieldTypes eYield) const
+{
+	// We're always gaining the yield type from the proposed route to place; might need to subtract existing route/improvement yields though.
+	int iYield = GC.getRouteInfo(eRoute).getYieldChange(eYield);
+
+	bool bIsImprovement = false;
+	bool bIsRoute = false;
+	if (pPlot->getImprovementType() != NO_IMPROVEMENT) 	bIsImprovement = true;
+	if (pPlot->getRouteType() 		!= NO_ROUTE)		bIsRoute = true;
+
+	if (bIsRoute && bIsImprovement)
+	{
+		iYield += GC.getImprovementInfo(pPlot->getImprovementType()).getRouteYieldChanges(eRoute, eYield)
+			   -  GC.getImprovementInfo(pPlot->getImprovementType()).getRouteYieldChanges(pPlot->getRouteType(), eYield)
+			   -  GC.getRouteInfo(pPlot->getRouteType()).getYieldChange(eYield);
+	}
+	else if (bIsRoute)
+	{
+		iYield -=  GC.getRouteInfo(pPlot->getRouteType()).getYieldChange(eYield);
+	}
+	else if (bIsImprovement)
+	{
+		iYield += GC.getImprovementInfo(pPlot->getImprovementType()).getRouteYieldChanges(eRoute, eYield);
+	}
+	return iYield;
+}
+
 
 RouteTypes CvPlayer::getBestRouteInternal(const CvPlot* pPlot, bool bConnect, const CvUnit* pBuilder, BuildTypes* eBestRouteBuild) const
 {
@@ -8007,38 +8081,61 @@ RouteTypes CvPlayer::getBestRouteInternal(const CvPlot* pPlot, bool bConnect, co
 	RouteTypes eBestRoute = NO_ROUTE;
 
 	const int numBuildInfos = GC.getNumBuildInfos();
-	const int baseMoves = GC.getMOVE_DENOMINATOR();
 
+	// Find best valid route; xml value most important, tiebreakers in form of yield change and cost.
 	for (int iI = 0; iI < numBuildInfos; iI++)
 	{
 		const RouteTypes eRoute = (RouteTypes)GC.getBuildInfo((BuildTypes)iI).getRoute();
 
-		if (eRoute != NO_ROUTE)
+		if (eRoute != NO_ROUTE && isRouteValid(eRoute, (BuildTypes)iI, pPlot, pBuilder))
 		{
-			if (isRouteValid(eRoute, (BuildTypes)iI, pPlot, pBuilder))
-			{
-				int iValue = GC.getRouteInfo(eRoute).getValue();
-				//Assuming roads never hinder movement
-				const int iExtraMoves = std::max(0, baseMoves / std::min(baseMoves, GC.getRouteInfo(eRoute).getMovementCost()) - 1); //subtract 1 because we care about extra moves, all movement is 1 move by default
-				if (!bConnect) {
-					iValue -= GC.getBuildInfo((BuildTypes)iI).getTime() / 100; //number of turns
-					iValue -= GC.getBuildInfo((BuildTypes)iI).getCost() / (AI_isFinancialTrouble() ? 1 : 2);
-				}
-				iValue += iExtraMoves;
+			int iValue = 0;
 
-				if (iValue > iBestValue)
+			// When bConnect, use only value tiebroken by cheapness
+			if (bConnect)
+			{
+				iValue  = 1000 * GC.getRouteInfo(eRoute).getValue();
+				iValue -= GC.getBuildInfo((BuildTypes)iI).getCost();
+			}
+			// if AI is in trouble, only consider cost and nothing else
+			else if (AI_isFinancialTrouble())
+			{
+				iValue = 1000 - GC.getBuildInfo((BuildTypes)iI).getCost();
+			}
+			else
+			{
+				iValue = 1000 * GC.getRouteInfo(eRoute).getValue();
+				if (pPlot->getRouteType() != NO_ROUTE)
 				{
-					iBestValue = iValue;
-					eBestRoute = eRoute;
-					if ( NULL != eBestRouteBuild )
-					{
-						*eBestRouteBuild = (BuildTypes)iI;
-					}
+					// Parallel upgrade check
+					iValue -= 1000 * GC.getRouteInfo(pPlot->getRouteType()).getValue();
+				}
+
+				// Add (or subtract!) value based on yield diffs
+				int iYieldSum = 0;
+				for (int i = 0; i < NUM_YIELD_TYPES; i++)
+				{
+					iYieldSum += calculatePlotRouteYieldDifference(pPlot, eRoute, ((YieldTypes)i));
+				}
+				iValue += 100 * iYieldSum;
+
+				iValue -= GC.getBuildInfo((BuildTypes)iI).getCost();
+
+				// Extra movement is dependant on unit speed; iMovement != iFlatMovement, so this isn't a very useful measure...
+				// iValue += std::max(0, baseMoves / std::min(baseMoves, GC.getRouteInfo(eRoute).getMovementCost()) - 1);
+			}
+			
+			if (iValue > iBestValue)
+			{
+				iBestValue = iValue;
+				eBestRoute = eRoute;
+				if ( NULL != eBestRouteBuild )
+				{
+					*eBestRouteBuild = (BuildTypes)iI;
 				}
 			}
 		}
 	}
-
 	return eBestRoute;
 }
 
@@ -15247,8 +15344,9 @@ void CvPlayer::constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pat
 int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 {
 	MEMORY_TRACK()
-
 	PROFILE_FUNC();
+
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
 
 	if (GET_TEAM(getTeam()).isHasTech(eTech))
 	{
@@ -15257,8 +15355,6 @@ int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 		return 0;
 	}
 
-	FAssert(eTech >= 0);
-	FAssert(eTech < GC.getNumTechInfos());
 	if ( (bCost ? m_aiCostPathLengthCache[eTech] : m_aiPathLengthCache[eTech]) == -1 )
 	{
 		std::vector<techPath*> possiblePaths;
@@ -15273,20 +15369,20 @@ int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 		int	iBestValue = MAX_INT;
 		//techPath* bestPath = NULL;
 
-		for(std::vector<techPath*>::const_iterator itr = possiblePaths.begin(); itr != possiblePaths.end(); ++itr)
+		foreach_(const techPath* path, possiblePaths)
 		{
 			if ( bCost )
 			{
 				iValue = 0;
 
-				for(std::vector<TechTypes>::const_iterator itrTechs = (*itr)->begin(); itrTechs != (*itr)->end(); ++itrTechs)
+				foreach_(const TechTypes& tech, *path)
 				{
-					iValue += GC.getTechInfo(*itrTechs).getResearchCost();
+					iValue += GC.getTechInfo(tech).getResearchCost();
 				}
 			}
 			else
 			{
-				iValue = (*itr)->size();
+				iValue = path->size();
 			}
 
 			if ( iValue < iBestValue )
@@ -15294,7 +15390,7 @@ int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 				iBestValue = iValue;
 			}
 
-			delete *itr;
+			delete path;
 		}
 #if 0
 		int i;
@@ -28618,21 +28714,17 @@ int CvPlayer::getBuildingCount(BuildingTypes eBuilding, bool bUpgrades) const
 
 int CvPlayer::getBuildingCountWithUpgrades(BuildingTypes eBuilding) const
 {
-	int iCount = getBuildingCount(eBuilding);
-	if (eBuilding != NO_BUILDING)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
+
+	if (eBuilding == NO_BUILDING)
 	{
-		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-		if (kBuilding.isReplaceBuilding(NO_BUILDING))
-		{
-			const int numNumBuildingInfos = GC.getNumBuildingInfos();
-			for (int iI = 0; iI < numNumBuildingInfos; iI++)
-			{
-				if (kBuilding.isReplaceBuilding(iI))
-				{
-					iCount += getBuildingCount((BuildingTypes)iI);
-				}
-			}
-		}
+		return 0;
+	}
+	int iCount = getBuildingCount(eBuilding);
+	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
+	for (int iI = 0; iI < building.getNumReplacementBuilding(); ++iI)
+	{
+		iCount += getBuildingCount((BuildingTypes)building.getReplacementBuilding(iI));
 	}
 	return iCount;
 }
