@@ -75,12 +75,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_COD_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_COD_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -183,12 +180,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_CRAB_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CRAB_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -291,12 +285,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_DART_FROG_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_DART_FROG_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -399,12 +390,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_RAY_EAGLE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RAY_EAGLE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -507,12 +495,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_MACKEREL_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MACKEREL_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -615,12 +600,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_RAY_MANTA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RAY_MANTA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -723,12 +705,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_MARLIN_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MARLIN_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -831,12 +810,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_RAYS_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RAYS_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -939,12 +915,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_TARANTULA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TARANTULA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1047,12 +1020,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_TUNA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TUNA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1155,12 +1125,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_ASIANBEAR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ASIANBEAR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1263,12 +1230,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BEAR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BEAR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1371,12 +1335,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BLACK_BEAR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BLACK_BEAR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1479,12 +1440,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BROWN_BEAR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BROWN_BEAR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1587,12 +1545,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_CAVE_BEAR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CAVE_BEAR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1757,12 +1712,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GRIZZLY_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GRIZZLY_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1865,12 +1817,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PANDA_BEAR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PANDA_BEAR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1973,12 +1922,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_POLAR_BEAR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POLAR_BEAR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2081,12 +2027,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_REDPANDA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_REDPANDA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2189,12 +2132,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SLOTH_BEAR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SLOTH_BEAR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2297,12 +2237,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SPECTACLED_BEAR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SPECTACLED_BEAR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2405,12 +2342,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SUN_BEAR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SUN_BEAR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2513,12 +2447,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_AFRICANGREY_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AFRICANGREY_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2621,12 +2552,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_AFRICAN_PENGUIN_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AFRICAN_PENGUIN_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2729,12 +2657,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BARNOWL_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BARNOWL_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2837,12 +2762,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BARREDOWL_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BARREDOWL_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2945,12 +2867,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BOOBY_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BOOBY_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3053,12 +2972,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_CASSOWARY_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CASSOWARY_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3161,12 +3077,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_EAGLE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EAGLE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3269,12 +3182,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_EMU_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMU_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3377,12 +3287,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GALAPAGOS_PENGUIN_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GALAPAGOS_PENGUIN_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3485,12 +3392,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_HAAST_EAGLE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HAAST_EAGLE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3655,12 +3559,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_HARPYEAGLE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HARPYEAGLE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3763,12 +3664,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_HAWK_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HAWK_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3871,12 +3769,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_MACAW_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MACAW_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3979,12 +3874,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_MOA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MOA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4149,12 +4041,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_OSTRICH_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OSTRICH_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4257,12 +4146,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PARROT_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PARROT_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4365,12 +4251,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_RAVEN_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RAVEN_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4473,12 +4356,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_RAZORBILL_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RAZORBILL_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4581,12 +4461,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_RHEA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RHEA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4689,12 +4566,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SEAEAGLE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SEAEAGLE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4797,12 +4671,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SECRETARYBIRD_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SECRETARYBIRD_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4905,12 +4776,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_ARCTICFOX_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARCTICFOX_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5013,12 +4881,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GREY_WOLF_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREY_WOLF_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5121,12 +4986,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5291,12 +5153,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_DHOLE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_DHOLE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5399,12 +5258,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_DINGO_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_DINGO_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5507,12 +5363,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_EWOLF_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EWOLF_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5615,12 +5468,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_FENNECFOX_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FENNECFOX_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5723,12 +5573,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_MANEDWOLF_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANEDWOLF_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5831,12 +5678,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_REDFOX_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_REDFOX_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5939,12 +5783,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_THYLACINE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_THYLACINE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6109,12 +5950,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_AFRICANELEPHANT_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AFRICANELEPHANT_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6217,12 +6055,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_ASIANELEPHANT_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ASIANELEPHANT_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6325,12 +6160,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GIRAFFE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GIRAFFE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6433,12 +6265,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_HIPPOPOTAMUS_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIPPOPOTAMUS_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6541,12 +6370,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_HIPPOS_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HIPPOS_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6649,12 +6475,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PYGMYHIPPO_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PYGMYHIPPO_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6757,12 +6580,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_CUSCUS_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CUSCUS_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6865,12 +6685,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_NUMBAT_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NUMBAT_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6973,12 +6790,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_OPOSSUM_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OPOSSUM_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7081,12 +6895,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_POSSUM_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_POSSUM_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7189,12 +7000,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_WOMBAT_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_WOMBAT_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7297,12 +7105,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_AARDVARK_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AARDVARK_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7405,12 +7210,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_ARMADILLO_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ARMADILLO_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7513,12 +7315,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BABIRUSA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BABIRUSA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7621,12 +7420,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GLYPTO_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GLYPTO_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7791,12 +7587,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7961,12 +7754,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_MONOTREMES_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MONOTREMES_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8069,12 +7859,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PLATYPUS_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PLATYPUS_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8177,12 +7964,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_TREESLOTH_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TREESLOTH_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8315,12 +8099,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_ELASMOTHERIUM_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ELASMOTHERIUM_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8485,12 +8266,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BLACK_RHINO_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BLACK_RHINO_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8593,12 +8371,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_INDIAN_RHINO_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_INDIAN_RHINO_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8701,12 +8476,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_JAVA_RHINO_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_JAVA_RHINO_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8809,12 +8581,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_WHITE_RHINO_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_WHITE_RHINO_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8917,12 +8686,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SABRETOOTH_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SABRETOOTH_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9087,12 +8853,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GATOR_ASIAN_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GATOR_ASIAN_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9195,12 +8958,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_CAIMAN_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CAIMAN_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9303,12 +9063,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_CROCODILE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CROCODILE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9411,12 +9168,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GATOR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GATOR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9519,12 +9273,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GHARIAL_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GHARIAL_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9627,12 +9378,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_NILECROC_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NILECROC_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9735,12 +9483,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_RIVER_CROC_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RIVER_CROC_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9843,12 +9588,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SALTWATER_CROC_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SALTWATER_CROC_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9951,12 +9693,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_LIZARD_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_LIZARD_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -10059,12 +9798,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_TAPIR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TAPIR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -10167,12 +9903,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_MALAYAN_TAPIR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MALAYAN_TAPIR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -10275,12 +10008,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_MOUNTAIN_TAPIR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MOUNTAIN_TAPIR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -10383,12 +10113,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BAIRDS_TAPIR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BAIRDS_TAPIR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -10491,12 +10218,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BRAZILIAN_TAPIR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BRAZILIAN_TAPIR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11690,12 +11414,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 			</PrereqInCityBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_ZOO</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ZOO</BuildingType>
+			</ReplacementBuildings>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -11888,12 +11609,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
 			<ObsoleteTech>TECH_SEMI_AUTOMATIC_WEAPONS</ObsoleteTech>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
+			</ReplacementBuildings>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -13273,12 +12991,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_CAVE_LION_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CAVE_LION_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13443,12 +13158,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_MOOSE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MOOSE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13551,12 +13263,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_CARIBOU_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CARIBOU_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13659,12 +13368,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_TERN_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TERN_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13767,12 +13473,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SIBERIAN_TIGER_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SIBERIAN_TIGER_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13869,12 +13572,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_IBEX_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_IBEX_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13957,12 +13657,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SKUNK_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SKUNK_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14045,12 +13742,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PIGEON_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PIGEON_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14133,12 +13827,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PANTHER_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PANTHER_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14221,12 +13912,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_LYNX_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_LYNX_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14309,12 +13997,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_HUMPBACK_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HUMPBACK_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14397,12 +14082,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_WOLVERINE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_WOLVERINE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14485,12 +14167,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_VULTURE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_VULTURE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14573,12 +14252,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_TURKEY_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TURKEY_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14661,12 +14337,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SNOW_LEOPARD_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SNOW_LEOPARD_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14749,12 +14422,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SAIGA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SAIGA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14837,12 +14507,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_MUSKOX_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MUSKOX_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14925,12 +14592,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_RACCOON_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RACCOON_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15013,12 +14677,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_DUCK_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_DUCK_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15101,12 +14762,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PHEASANT_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PHEASANT_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15189,12 +14847,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_HORNED_OWL_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HORNED_OWL_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15277,12 +14932,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_EMPEROR_PENGUIN_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EMPEROR_PENGUIN_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15365,12 +15017,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_ROCKHOPPER_PENGUIN_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ROCKHOPPER_PENGUIN_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15453,12 +15102,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SEALION_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SEALION_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15541,12 +15187,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_WALRUS_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_WALRUS_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15629,12 +15272,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GREATWHITE_SHARK_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GREATWHITE_SHARK_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15717,12 +15357,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_HAMMERHEAD_SHARK_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HAMMERHEAD_SHARK_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15805,12 +15442,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_REEF_SHARK_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_REEF_SHARK_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15899,12 +15533,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SHARK_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SHARK_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15987,12 +15618,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_WHALESHARK_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_WHALESHARK_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16075,12 +15703,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SEATURTLE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SEATURTLE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16163,12 +15788,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_DOLPHIN_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_DOLPHIN_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16251,12 +15873,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_KRAKEN_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KRAKEN_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16339,12 +15958,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_DUGONG_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_DUGONG_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16427,12 +16043,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_ORCA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ORCA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16515,12 +16128,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_MINKIE_WHALE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MINKIE_WHALE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16603,12 +16213,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SEA_OTTER_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SEA_OTTER_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16691,12 +16298,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_LOON_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_LOON_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16779,12 +16383,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_TOUCAN_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_TOUCAN_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16867,12 +16468,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_FLAMINGO_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_FLAMINGO_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16955,12 +16553,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_EAGLE_BALD_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EAGLE_BALD_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -17043,12 +16638,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_CAPUCHIN_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CAPUCHIN_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -17131,12 +16723,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_CAPYBARA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CAPYBARA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -17219,12 +16808,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_CHEETAH_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHEETAH_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -17307,12 +16893,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_CHIMPANZEE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CHIMPANZEE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -17395,12 +16978,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_DESERT_TORTOISE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_DESERT_TORTOISE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -17483,12 +17063,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_ZEBRA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ZEBRA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -17571,12 +17148,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -17789,12 +17363,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_ANTEATER_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ANTEATER_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -17877,12 +17448,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BADGER_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BADGER_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -17965,12 +17533,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BALLPYTHON_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BALLPYTHON_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18053,12 +17618,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BARBARYAPE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BARBARYAPE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18141,12 +17703,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BEAVER_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BEAVER_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18229,12 +17788,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BENGALTIGER_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BENGALTIGER_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18317,12 +17873,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BISON_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BISON_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18405,12 +17958,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BOAR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BOAR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18493,12 +18043,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BONGO_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BONGO_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18581,12 +18128,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_CROW_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_CROW_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18669,12 +18213,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GAZELLE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GAZELLE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18757,12 +18298,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GELADA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GELADA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18845,12 +18383,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GEMSBOK_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GEMSBOK_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -18933,12 +18468,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GERENUK_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GERENUK_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19021,12 +18553,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GORILLA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GORILLA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19109,12 +18638,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_KANGAROO_GREY_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KANGAROO_GREY_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19197,12 +18723,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GULL_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GULL_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19285,12 +18808,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_HYENA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYENA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19373,12 +18893,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_IMPALA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_IMPALA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19461,12 +18978,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_JAGUAR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_JAGUAR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19572,12 +19086,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_KOALA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KOALA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19660,12 +19171,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_KOOKABURRA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KOOKABURRA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19748,12 +19256,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_LION_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_LION_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19836,12 +19341,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_IGUANA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_IGUANA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19924,12 +19426,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_KOMODO_DRAGON_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KOMODO_DRAGON_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20012,12 +19511,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_NILE_MONITOR_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NILE_MONITOR_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20100,12 +19596,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_LLAMA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_LLAMA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20194,12 +19687,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_NEW_W_MONKEY_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_NEW_W_MONKEY_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20288,12 +19778,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_OLD_W_MONKEY_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OLD_W_MONKEY_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20376,12 +19863,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_MANDRILL_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_MANDRILL_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20464,12 +19948,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_OKAPI_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OKAPI_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20552,12 +20033,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_ORANGUTAN_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_ORANGUTAN_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20640,12 +20118,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_OXPECKER_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_OXPECKER_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20728,12 +20203,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PEACOCK_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PEACOCK_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20816,12 +20288,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PROCOPTODON_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PROCOPTODON_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20964,12 +20433,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_QUOLL_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_QUOLL_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21052,12 +20518,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_RATEL_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_RATEL_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21140,12 +20603,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_KANGAROO_RED_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KANGAROO_RED_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21228,12 +20688,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_COBRA_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_COBRA_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21316,12 +20773,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_PUFFADDER_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_PUFFADDER_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21410,12 +20864,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SNAKES_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SNAKES_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21498,12 +20949,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_VIPER_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_VIPER_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21563,12 +21011,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_WARTHOG_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_WARTHOG_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21651,12 +21096,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_WALLAROO_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_WALLAROO_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21739,12 +21181,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BUFFALO_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BUFFALO_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21827,12 +21266,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_WILDEBEEST_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_WILDEBEEST_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21915,12 +21351,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORIES</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORIES</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
