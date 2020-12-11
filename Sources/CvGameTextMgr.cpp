@@ -12018,7 +12018,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_WORKER_SPEED_NEGATIVE", GC.getTraitInfo(eTrait).getWorkerSpeedModifier()));
 		}
 
-//IMPROVEMENT UPGRADE && WORKER SPEED MODS
+		//IMPROVEMENT UPGRADE && WORKER SPEED MODS
 		//	Improvement upgrade rate modifier
 		if (GC.getTraitInfo(eTrait).getImprovementUpgradeRateModifier() != 0)
 		{
@@ -31434,7 +31434,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		}
 		info.getPropertyManipulators()->buildDisplayString(szBuffer);
 	}
-
 }
 
 void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTypes eImprovement, FeatureTypes eFeature, bool bCivilopediaText)

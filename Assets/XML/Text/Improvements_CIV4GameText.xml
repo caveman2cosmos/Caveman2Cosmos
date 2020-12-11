@@ -1776,6 +1776,17 @@
 		<Polish>Kolektor słoneczny - urządzenie do konwersji energii promieniowania słonecznego na ciepło. Energia słoneczna docierająca do kolektora zamieniana jest na energię cieplną nośnika ciepła, którym może być ciecz (glikol,woda) lub gaz (np. powietrze).</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_RADIO_TOWER</Tag>
+		<English>Radio Tower</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_RADIO_TOWER_PEDIA</Tag>
+		<English>From Wikipedia: The first experiments in radio communication were conducted by Guglielmo Marconi beginning in 1894. In 1895–1896 he invented the vertical monopole or Marconi antenna, which was initially a wire suspended from a tall wooden pole. He found that the higher the antenna was suspended, the further he could transmit, the first recognition of the need for height in antennas. Radio began to be used commercially for radiotelegraphic communication around 1900. During the first 20 years of radio, long distance radio stations used long wavelengths in the very low frequency band, so even the tallest antennas were electrically short and had very low radiation resistance of 5-25 Ohms, causing excessive power losses in the ground system. Radiotelegraphy stations used huge capacitively-toploaded flattop antennas consisting of horizontal wires strung between multiple 100–300 meters (330–980 ft) steel towers to increase efficiency.
+		AM radio broadcasting began around 1920. The allocation of the medium wave frequencies for broadcasting raised the possibility of using single vertical masts without top loading. The antenna used for broadcasting through the 1920s was the T-antenna, which consisted of two masts with a wire topload strung between them, requiring twice the construction costs and land area of a single mast.
+		The rise of FM radio and television broadcasting in the 1940s and 50s created a need for even taller masts. The earlier AM broadcasting used LF and MF bands, where radio waves propagate as ground waves which follow the contour of the Earth. The ground-hugging waves allowed the signals to travel beyond the horizon, out to hundreds of kilometers. However the newer FM and TV transmitters used the VHF band, in which radio waves travel by line-of-sight, so they are limited by the visual horizon. The only way to cover larger areas is to raise the antenna high enough so it has a line-of-sight path to them.
+		Until August 8, 1991, the Warsaw radio mast was the world's tallest supported structure on land; its collapse left the KVLY/KTHI-TV mast as the tallest.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_STEEL_WATCHTOWER</Tag>
 		<English>Steel Watchtower</English>
 		<French>Tour d'observation en acier</French>
@@ -1858,7 +1869,7 @@
 		</Spanish>
 		<Polish>Zatopione miasto</Polish>
 	</TEXT>
-	<TEXT>
+	<!-- <TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SUBMERGED_TOWN_DEEP</Tag>
 		<English>Submerged Town (Deep)</English>
 		<French>
@@ -1874,7 +1885,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Zatopione miasto (Deep)</Polish>
-	</TEXT>
+	</TEXT> -->
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SUBMERGED_TOWN_PEDIA</Tag>
 		<English>Underwater habitats are underwater structures in which people can live for extended periods and carry out most of the basic human functions of a 24-hour day, such as working, resting, eating, attending to personal hygiene, and sleeping. In this context 'habitat' is generally used in a narrow sense to mean the interior and immediate exterior of the structure and its fixtures, but not its surrounding marine environment. Most early underwater habitats lacked regenerative systems for air, water, food, electricity, and other resources. However, recently some new underwater habitats allow for these resources to be delivered using pipes, or generated within the habitat, rather than manually delivered.</English>

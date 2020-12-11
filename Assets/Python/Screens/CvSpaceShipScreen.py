@@ -192,7 +192,7 @@ class CvSpaceShipScreen:
 			if(victoryCountdown > 0):
 				victoryDate = CyGameTextMgr().getTimeStr(GC.getGame().getGameTurn() + victoryCountdown, false)
 				screen.setLabel("ArrivalLabel1", "SpaceShipMainPanel", "<color=255,255,0><font=3b>" + localText.getText("TXT_KEY_SPACE_SHIP_SCREEN_ARRIVAL", ()) + ": " + victoryDate + "</font></color>", 1<<0, self.X_ARRIVAL_LABEL1, self.Y_ARRIVAL_LABEL1, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-				screen.setLabel("ArrivalLabel2", "SpaceShipMainPanel", "<color=255,255,0><font=3b>" + localText.getText("TXT_KEY_REPLAY_SCREEN_TURNS", ()) + ": " + str(victoryCountdown) + "</font></color>", 1<<0, self.X_ARRIVAL_LABEL2, self.Y_ARRIVAL_LABEL2, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+				screen.setLabel("ArrivalLabel2", "SpaceShipMainPanel", "<color=255,255,0><font=3b>" + localText.getText("TXT_KEY_TURNS", ()) + ": " + str(victoryCountdown) + "</font></color>", 1<<0, self.X_ARRIVAL_LABEL2, self.Y_ARRIVAL_LABEL2, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			elif(GC.getTeam(GC.getGame().getActiveTeam()).canLaunch(self.spaceVictory)):
 				delay = GC.getTeam(GC.getGame().getActiveTeam()).getVictoryDelay(self.spaceVictory)
 				screen.setLabel("LaunchLabel", "SpaceShipMainPanel", "<color=255,255,0><font=3b>" + localText.getText("TXT_KEY_SPACE_SHIP_SCREEN_TRAVEL_TIME_LABEL", (delay,)) + "</font></color>", 1<<0, self.X_LAUNCH_LABEL, self.Y_LAUNCH_LABEL, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)

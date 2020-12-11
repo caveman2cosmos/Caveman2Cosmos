@@ -42,7 +42,7 @@ def TimeKeeper():
 	# Cache misc content
 	szColorSel = TRNSLTR.getText("[COLOR_SELECTED_TEXT]", ())
 	szStartYear = "<font=3>" + TRNSLTR.getText("TXT_KEY_WB_START_YEAR", ())
-	szTurns = "<font=3>" + TRNSLTR.getText("TXT_KEY_WB_TURNS", ())
+	szTurns = "<font=3>" + TRNSLTR.getText("TXT_KEY_TURNS", ())
 	szTurnsCol = szColorSel + szTurns
 	szColorSel += "<font=3>"
 	szIncrement = "<font=3>" + TRNSLTR.getText("TXT_KEY_INCREMENT", ())

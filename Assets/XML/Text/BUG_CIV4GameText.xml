@@ -57,14 +57,6 @@
 		<Spanish>[NEWLINE][ICON_BULLET]Tus redes comerciales no están conectadas</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_CHART_HELP</Tag>
-		<English>Zoom in and out by clicking on the body of the chart</English>
-		<French>Pour faire un Zoom avant ou arrière, cliquer sur le Graphique</French>
-		<German>Mit einem Mausklick auf ein Diagramm kann zwischen der verkleinerten Ansicht und der Großansicht umgeschalten werden</German>
-		<Italian>Alterna i livelli di zoom cliccando sul grafico</Italian>
-		<Spanish>Amplía o reduce el gráfico haciendo clic sobre él.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_CREATED_BY_HEADER</Tag>
 		<English>Created by The BUG Mod.</English>
 		<French>Créé par le Mod BUG.</French>

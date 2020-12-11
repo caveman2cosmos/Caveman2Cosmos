@@ -3824,6 +3824,9 @@ RouteTypes CvSelectionGroup::getBestBuildRoute(const CvPlot* pPlot, BuildTypes* 
 	int iBestValue = 0;
 	RouteTypes eBestRoute = NO_ROUTE;
 
+	// This really should not be arbitrarily duplicated code!
+	// Somehow merge with CvPlayer::getBestRoute! Use getBestRouteInternal, save value, for value comp between units.
+	// This is actually what stumped Blaze from getting non-unique value routes working; don't want to copy-paste code...
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
 		for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
@@ -3844,7 +3847,6 @@ RouteTypes CvSelectionGroup::getBestBuildRoute(const CvPlot* pPlot, BuildTypes* 
 			}
 		}
 	}
-
 	return eBestRoute;
 }
 

@@ -783,13 +783,13 @@ bool CvXMLLoadUtility::LoadGlobalText()
 /************************************************************************************************/
 	std::vector<CvGameText> texts;
 
-	for(std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
+	foreach_(const CvString& szFile, aszFiles)
 	{
-		bool bLoaded = LoadCivXml(NULL, *it); // Load the XML
+		bool bLoaded = LoadCivXml(NULL, szFile); // Load the XML
 		if (!bLoaded)
 		{
 			char	szMessage[1024];
-			sprintf( szMessage, "LoadXML call failed for %s. \n Current XML file is: %s", (*it).c_str(), GC.getCurrentXMLFile().GetCString());
+			sprintf( szMessage, "LoadXML call failed for %s. \n Current XML file is: %s", szFile.c_str(), GC.getCurrentXMLFile().GetCString());
 			gDLL->MessageBox(szMessage, "XML Load Error");
 		}
 		if (bLoaded)
@@ -2025,14 +2025,14 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 		if(aszFiles.size() == 0)
 			aszFiles.push_back(CvString::format("xml\\%s/%s.xml", szFileDirectory, szFileRoot));
 
-		for (std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
+		foreach_(const CvString& szFile, aszFiles)
 		{
-			bLoaded = LoadCivXml(NULL, *it);
+			bLoaded = LoadCivXml(NULL, szFile);
 
 			if (!bLoaded)
 			{
 				char szMessage[1024];
-				sprintf(szMessage, "LoadXML call failed for %s.", (*it).GetCString());
+				sprintf(szMessage, "LoadXML call failed for %s.", szFile.GetCString());
 				gDLL->MessageBox(szMessage, "XML Load Error");
 				break;
 			}
@@ -2045,44 +2045,19 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 
 		if (bLoaded)
 		{
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 10/26/07                            MRGENIE          */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*			GC.setModDir("NONE");																*/
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 END                                                  */
-/************************************************************************************************/
-/*			SetGlobalClassInfo(aInfos, szXmlPath, bTwoPass, pReplacements);						*/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 05/17/08                                MRGENIE      */
-/*                                                                                              */
-/* This method is a replacement for the bTwoPass, if stuff that is depending on each other in   */
-/* a loop, the bTwoPass would fail since it doesn't look first in the other Modules!            */
-/************************************************************************************************/
-			// AIAndy: This early call to the second pass for the base XML does not allow for the base XML directory to be based directly on the module stuff
-			//if ( bTwoPassReplacement )
-			//{
-			//	SetGlobalClassInfoTwoPassReplacement(aInfos, szXmlPath);
-			//}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
-
 			if (gDLL->isModularXMLLoading())
 			{
 				std::vector<CvString> aszFiles;
 				gDLL->enumerateFiles(aszFiles, CvString::format("modules\\*_%s.xml", szFileRoot));  // search for the modular files
 
-				for (std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
+				foreach_(const CvString& szFile, aszFiles)
 				{
-					bLoaded = LoadCivXml(NULL, *it);
+					bLoaded = LoadCivXml(NULL, szFile);
 
 					if (!bLoaded)
 					{
 						char szMessage[1024];
-						sprintf(szMessage, "LoadXML call failed for %s.", (*it).GetCString());
+						sprintf(szMessage, "LoadXML call failed for %s.", szFile.GetCString());
 						gDLL->MessageBox(szMessage, "XML Load Error");
 					}
 					else
@@ -2092,7 +2067,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-						CvString szDirName = (*it).GetCString();	
+						CvString szDirName = szFile.GetCString();	
 						szDirName = p_szDirName->deleteFileName(szDirName, '\\');
 						GC.setModDir(szDirName);
 /************************************************************************************************/
@@ -2111,14 +2086,14 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 					if(aszFiles.size() == 0)
 						aszFiles.push_back(CvString::format("xml\\%s/%s.xml", szFileDirectory, szFileRoot));
 
-					for (std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
+					foreach_(const CvString& szFile, aszFiles)
 					{
-						bLoaded = LoadCivXml(NULL, *it);
+						bLoaded = LoadCivXml(NULL, szFile);
 
 						if (!bLoaded)
 						{
 							char szMessage[1024];
-							sprintf(szMessage, "LoadXML call failed for %s.", (*it).GetCString());
+							sprintf(szMessage, "LoadXML call failed for %s.", szFile.GetCString());
 							gDLL->MessageBox(szMessage, "XML Load Error");
 							break;
 						}
@@ -2138,20 +2113,20 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 /************************************************************************************************/
 				if ( bTwoPassReplacement )	// reloop through the modules!
 				{
-					for (std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
+					foreach_(const CvString& szFile, aszFiles)
 					{
-						bLoaded = LoadCivXml(NULL, *it);
+						bLoaded = LoadCivXml(NULL, szFile);
 
 						if (!bLoaded)
 						{
 							char szMessage[1024];
-							sprintf(szMessage, "LoadXML call failed for %s.", (*it).GetCString());
+							sprintf(szMessage, "LoadXML call failed for %s.", szFile.GetCString());
 							gDLL->MessageBox(szMessage, "XML Load Error");
 						}
 						else
 						{
 
-							CvString szDirName = (*it).GetCString();	
+							CvString szDirName = szFile.GetCString();	
 							szDirName = p_szDirName->deleteFileName(szDirName, '\\');
 							GC.setModDir(szDirName);
 							SetGlobalClassInfoTwoPassReplacement(aInfos, szXmlPath, pReplacements);
@@ -2172,18 +2147,16 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 			else
 			{
 				std::vector<CvString> aszFiles;
-				//aszFiles.reserve(10000);
 				pModEnumVector->loadModControlArray(aszFiles, szFileRoot);
 
-				for (std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
+				foreach_(const CvString& szFile, aszFiles)
 				{
-
-					bLoaded = LoadCivXml(NULL, *it);
+					bLoaded = LoadCivXml(NULL, szFile);
 
 					if (!bLoaded)
 					{
 						char szMessage[1024];
-						sprintf(szMessage, "LoadXML call failed for %s.", (*it).GetCString());
+						sprintf(szMessage, "LoadXML call failed for %s.", szFile.GetCString());
 						gDLL->MessageBox(szMessage, "XML Load Error");
 					}
 					else
@@ -2193,7 +2166,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-						CvString szDirName = (*it).GetCString();
+						CvString szDirName = szFile.GetCString();
 						szDirName = p_szDirName->deleteFileName(szDirName, '\\');
 						GC.setModDir(szDirName);
 /************************************************************************************************/
@@ -2212,14 +2185,14 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 					if(aszFiles.size() == 0)
 						aszFiles.push_back(CvString::format("xml\\%s/%s.xml", szFileDirectory, szFileRoot));
 
-					for (std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
+					foreach_(const CvString& szFile, aszFiles)
 					{
-						bLoaded = LoadCivXml(NULL, *it);
+						bLoaded = LoadCivXml(NULL, szFile);
 
 						if (!bLoaded)
 						{
 							char szMessage[1024];
-							sprintf(szMessage, "LoadXML call failed for %s.", (*it).GetCString());
+							sprintf(szMessage, "LoadXML call failed for %s.", szFile.GetCString());
 							gDLL->MessageBox(szMessage, "XML Load Error");
 							break;
 						}
@@ -2239,20 +2212,20 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 /************************************************************************************************/
 				if ( bTwoPassReplacement )	// reloop through the modules!
 				{
-					for (std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
+					foreach_(const CvString& szFile, aszFiles)
 					{
-						bLoaded = LoadCivXml(NULL, *it);
+						bLoaded = LoadCivXml(NULL, szFile);
 
 						if (!bLoaded)
 						{
 							char szMessage[1024];
-							sprintf(szMessage, "LoadXML call failed for %s.", (*it).GetCString());
+							sprintf(szMessage, "LoadXML call failed for %s.", szFile.GetCString());
 							gDLL->MessageBox(szMessage, "XML Load Error");
 						}
 						else
 						{
 
-							CvString szDirName = (*it).GetCString();	
+							CvString szDirName = szFile.GetCString();	
 							szDirName = p_szDirName->deleteFileName(szDirName, '\\');
 							GC.setModDir(szDirName);
 							SetGlobalClassInfoTwoPassReplacement(aInfos, szXmlPath, pReplacements);
@@ -2393,14 +2366,14 @@ void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInf
 				std::vector<CvString> aszFiles;
 				gDLL->enumerateFiles(aszFiles, CvString::format("modules\\*_%s.xml", szFileRoot));  // search for the modular files
 
-				for (std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
+				foreach_(const CvString& szFile, aszFiles)
 				{
-					bLoaded = LoadCivXml(NULL, *it);
+					bLoaded = LoadCivXml(NULL, szFile);
 
 					if (!bLoaded)
 					{
 						char szMessage[1024];
-						sprintf(szMessage, "LoadXML call failed for %s.", (*it).GetCString());
+						sprintf(szMessage, "LoadXML call failed for %s.", szFile.GetCString());
 						gDLL->MessageBox(szMessage, "XML Load Error");
 					}
 					else
@@ -2410,7 +2383,7 @@ void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInf
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-						CvString szDirName = (*it).GetCString();
+						CvString szDirName = szFile.GetCString();
 						szDirName = p_szDirName->deleteFileName(szDirName, '\\');
 						GC.setModDir(szDirName);
 /************************************************************************************************/
@@ -2432,14 +2405,14 @@ void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInf
 				//aszFiles.reserve(10000);
 				pModEnumVector->loadModControlArray(aszFiles, szFileRoot);
 
-				for (std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
+				foreach_(const CvString& szFile, aszFiles)
 				{
-					bLoaded = LoadCivXml(NULL, *it);
+					bLoaded = LoadCivXml(NULL, szFile);
 
 					if (!bLoaded)
 					{
 						char szMessage[1024];
-						sprintf(szMessage, "LoadXML call failed for %s.", (*it).GetCString());
+						sprintf(szMessage, "LoadXML call failed for %s.", szFile.GetCString());
 						gDLL->MessageBox(szMessage, "XML Load Error");
 					}
 					else
@@ -2449,7 +2422,7 @@ void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInf
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-						CvString szDirName = (*it).GetCString();	
+						CvString szDirName = szFile.GetCString();	
 						szDirName = p_szDirName->deleteFileName(szDirName, '\\');
 						GC.setModDir(szDirName);
 /************************************************************************************************/
