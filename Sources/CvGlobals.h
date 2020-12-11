@@ -841,7 +841,7 @@ public:
 	void setPlotGroupFinder(FAStar* pVal);
 	void setIsBug();
 
-	unsigned int getAssetCheckSum();
+	uint32_t getAssetCheckSum() const;
 
 	void deleteInfoArrays();
 

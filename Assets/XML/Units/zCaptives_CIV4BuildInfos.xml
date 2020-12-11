@@ -285,7 +285,7 @@
 			<FeatureStructs/>
 			<HotKey>KB_L</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/Button_WoodGather.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/Lumber_camp.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_STONE_TOOLS_WORKSHOP_SLAVE</Type>
@@ -353,7 +353,7 @@
 			<HotKey>KB_S</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/techtree/scavenging.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/scavenging_camp.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_NOMADIC_HERD_SLAVE</Type>
@@ -391,7 +391,7 @@
 			<HotKey>KB_S</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/techtree/scavenging.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/nomadic_herd.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_TRAIL_SLAVE</Type>
@@ -658,7 +658,7 @@
 			<HotKey>KB_M</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildMine.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,7</Button>
+			<Button>Art/Interface/Buttons/Builds/Explosives.dds</Button>
 			<bMine>1</bMine>
 		</BuildInfo>
 		<BuildInfo>
@@ -683,7 +683,7 @@
 			<Description>TXT_KEY_BUILD_MOUNTAIN_MINE_SLAVE</Description>
 			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>16</iCost>
+			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 			<RouteType>NONE</RouteType>
@@ -692,7 +692,7 @@
 			<HotKey>KB_M</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildMine.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,7</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildMountMine.dds</Button>
 			<bMine>1</bMine>
 		</BuildInfo>
 		<BuildInfo>
@@ -941,7 +941,7 @@
 			<HotKey>KB_M</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/Explosives.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/BuildModernMine.dds</Button>
 			<bMine>1</bMine>
 		</BuildInfo>
 		<BuildInfo>
@@ -2429,14 +2429,14 @@
 			</FeatureStructs>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildCottage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,7</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildHamlet.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,10</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_VILLAGE_SLAVE</Type>
 			<Description>TXT_KEY_BUILD_VILLAGE_SLAVE</Description>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>50</iCost>
+			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_VILLAGE</ImprovementType>
 			<RouteType>NONE</RouteType>
@@ -2692,14 +2692,14 @@
 			</FeatureStructs>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildCottage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,7</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildVillage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,5,9</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_TOWN_SLAVE</Type>
 			<Description>TXT_KEY_BUILD_TOWN_SLAVE</Description>
 			<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>100</iCost>
+			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_TOWN</ImprovementType>
 			<RouteType>NONE</RouteType>
@@ -2955,14 +2955,14 @@
 			</FeatureStructs>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildCottage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,7</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildTown.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,3,10</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_SUBURBS_SLAVE</Type>
 			<Description>TXT_KEY_BUILD_SUBURBS_SLAVE</Description>
 			<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
 			<iTime>1200</iTime>
-			<iCost>200</iCost>
+			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 			<RouteType>NONE</RouteType>
@@ -3609,7 +3609,7 @@
 			<HotKey>KB_W</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildWell.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,4,8</Button>
+			<Button>Art/Interface/Buttons/Builds/Groundwater_well.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_TREEFARM_SLAVE</Type>
@@ -3625,7 +3625,7 @@
 			<HotKey>KB_I</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/buildtreefarm.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/tree_farm.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_HYBRID_FOREST_SLAVE</Type>
@@ -3641,7 +3641,7 @@
 			<HotKey>KB_I</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/buildtreefarm.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/hybrid_forest.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_ARCHEOLOGICAL_SITE_SLAVE</Type>
@@ -3665,14 +3665,14 @@
 			<HotKey>KB_S</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Button_Select.dds,Art/Interface/Buttons/Actions_Builds_Leaderheads_Specialists_Atlas.dds,4,2</Button>
+			<Button>Art/Interface/Buttons/Builds/Build_acheological_site.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_MODERN_WINDMILL_SLAVE</Type>
 			<Description>TXT_KEY_BUILD_MODERN_WINDMILL_SLAVE</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>25</iCost>
+			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_MODERN_WINDMILL</ImprovementType>
 			<RouteType>NONE</RouteType>
@@ -3791,7 +3791,7 @@
 			<Description>TXT_KEY_BUILD_SOLAR_PANELS_SLAVE</Description>
 			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
 			<iTime>800</iTime>
-			<iCost>25</iCost>
+			<iCost>0</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SOLAR_PANELS</ImprovementType>
 			<RouteType>NONE</RouteType>
@@ -4718,7 +4718,7 @@
 			<FeatureStructs/>
 			<HotKey>KB_F</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,4,14</Button>
+			<Button>,Art/Interface/Buttons/Builds/fossil_dig_site.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_NATURE_PRESERVE_SLAVE</Type>
@@ -4763,7 +4763,7 @@
 			<FeatureStructs/>
 			<HotKey>KB_L</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/Button_WoodGather.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/thatch_cutter.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_PEAT_CUTTER_SLAVE</Type>

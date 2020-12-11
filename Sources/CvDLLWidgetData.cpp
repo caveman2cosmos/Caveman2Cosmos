@@ -2971,39 +2971,81 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				FAssert(eBuild != NO_BUILD);
 				ImprovementTypes eImprovement = ((ImprovementTypes)(GC.getBuildInfo(eBuild).getImprovement()));
 				RouteTypes eRoute = ((RouteTypes)(GC.getBuildInfo(eBuild).getRoute()));
-				BonusTypes eBonus = pMissionPlot->getBonusType(pHeadSelectedUnit->getTeam());
 
+				BonusTypes ePlotBonus = pMissionPlot->getBonusType(pHeadSelectedUnit->getTeam());
+				FeatureTypes ePlotFeature = pMissionPlot->getFeatureType();
+				TerrainTypes ePlotTerrain = pMissionPlot->getTerrainType();
+				bool ePlotRiverSide = pMissionPlot->isRiverSide();
+				bool bIsFeatureChange = (GC.getBuildInfo(eBuild).getFeatureChange() != NO_FEATURE);
+				bool bIsTerrainChange = (GC.getBuildInfo(eBuild).getTerrainChange() != NO_TERRAIN);
+
+				// Calculate, show yield/happy changes as a result of improvement changes (including non-improvements using FeatureChange/TerrainChange tag)
+				int aYields[NUM_YIELD_TYPES] = {0};
+				bool bIsYield = false;
 				for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 				{
 					int iYield = 0;
-
 					if (eImprovement != NO_IMPROVEMENT)
 					{
 						iYield += pMissionPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iI), pHeadSelectedUnit->getOwner());
-						if (pMissionPlot->getImprovementType() != NO_IMPROVEMENT)
-						{
-							iYield -= pMissionPlot->calculateImprovementYieldChange(pMissionPlot->getImprovementType(), ((YieldTypes)iI), pHeadSelectedUnit->getOwner());
-						}
 					}
 
-					if (NO_FEATURE != pMissionPlot->getFeatureType())
+					// Assuming neither using FeatureChange/TerrainChange nor placing routes will remove improvements (though former may remove prereqs for imps...)
+					if (pMissionPlot->getImprovementType() != NO_IMPROVEMENT
+					&&  eRoute == NO_ROUTE
+					&&  !bIsFeatureChange && !bIsTerrainChange)
 					{
-						if (GC.getBuildInfo(eBuild).isFeatureRemove(pMissionPlot->getFeatureType()))
-						{
-							iYield -= GC.getFeatureInfo(pMissionPlot->getFeatureType()).getYieldChange(iI);
-						}
+						iYield -= pMissionPlot->calculateImprovementYieldChange(pMissionPlot->getImprovementType(), ((YieldTypes)iI), pHeadSelectedUnit->getOwner());
+					}
+
+					// Yield deltas from removing/changing features
+					if (NO_FEATURE != ePlotFeature
+					&&  GC.getBuildInfo(eBuild).isFeatureRemove(ePlotFeature))
+					{
+						iYield -= GC.getFeatureInfo(ePlotFeature).getYieldChange(iI) +
+							(ePlotRiverSide ? GC.getFeatureInfo(ePlotFeature).getRiverYieldChange(iI) : 0);
+					}
+					if (bIsFeatureChange)
+					{
+						iYield += GC.getFeatureInfo((FeatureTypes)GC.getBuildInfo(eBuild).getFeatureChange()).getYieldChange(iI) +
+							(ePlotRiverSide ? GC.getFeatureInfo((FeatureTypes)GC.getBuildInfo(eBuild).getFeatureChange()).getRiverYieldChange(iI) : 0);
+					}
+
+					// Yield delta from terrain change
+					if ( (NO_TERRAIN != ePlotTerrain) && bIsTerrainChange)
+					{
+						iYield += GC.getTerrainInfo((TerrainTypes)GC.getBuildInfo(eBuild).getTerrainChange()).getYield(iI) +
+							(ePlotRiverSide ? GC.getTerrainInfo((TerrainTypes)GC.getBuildInfo(eBuild).getTerrainChange()).getRiverYieldChange(iI) : 0);
+						iYield -= GC.getTerrainInfo(ePlotTerrain).getYield(iI) +
+							(ePlotRiverSide ? GC.getTerrainInfo(ePlotTerrain).getRiverYieldChange(iI) : 0);
 					}
 
 					if (iYield != 0)
 					{
-						szBuffer.append(CvWString::format(L", %s%d%c", ((iYield > 0) ? L"+" : L""), iYield, GC.getYieldInfo((YieldTypes)iI).getChar()));
+						bIsYield = true;
+					}
+					aYields[iI] = iYield;
+				}
+
+				// Show yields on newline to reduce wrapping, look nicer 
+				if (bIsYield)
+				{
+					bool bFirstYield = true;
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_YIELD_CHANGE_DESCRIP") + " ");
+					for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
+					{
+						if (aYields[iI] != 0)
+						{
+							bFirstYield ? bFirstYield = false : szBuffer.append(", ");
+							szBuffer.append(CvWString::format(L"%s%d%c", ((aYields[iI] > 0) ? L"+" : L""), aYields[iI], GC.getYieldInfo((YieldTypes)iI).getChar()));
+						}
 					}
 				}
 
-				if (NO_IMPROVEMENT != eImprovement)
-				{
+				if (eImprovement != NO_IMPROVEMENT)
+				{	
 					int iHappy = GC.getImprovementInfo(eImprovement).getHappiness();
-
 					if (iHappy != 0)
 					{
 						szBuffer.append(CvWString::format(L", +%d%c", abs(iHappy), (iHappy > 0 ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))));
@@ -3046,7 +3088,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							}
 						}
 
-						if ((eBonus == NO_BONUS) || !(GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eBonus)))
+						if ((ePlotBonus == NO_BONUS) || !(GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(ePlotBonus)))
 						{
 							if (!(GET_TEAM(pHeadSelectedUnit->getTeam()).isIrrigation()) && !(GET_TEAM(pHeadSelectedUnit->getTeam()).isIgnoreIrrigation()))
 							{
@@ -3097,7 +3139,9 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							if (!(pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwner(), ((BonusTypes)(GC.getRouteInfo(eRoute).getPrereqBonus())))))
 							{
 								szBuffer.append(NEWLINE);
-								szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING", CvWString(GC.getBonusInfo((BonusTypes) GC.getRouteInfo(eRoute).getPrereqBonus()).getType()).GetCString(), GC.getBonusInfo((BonusTypes) GC.getRouteInfo(eRoute).getPrereqBonus()).getTextKeyWide()));
+								szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
+									CvWString(GC.getBonusInfo((BonusTypes) GC.getRouteInfo(eRoute).getPrereqBonus()).getType()).GetCString(),
+									GC.getBonusInfo((BonusTypes) GC.getRouteInfo(eRoute).getPrereqBonus()).getTextKeyWide()));
 							}
 						}
 
@@ -3110,7 +3154,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 								aeOrBonuses.push_back((BonusTypes)GC.getRouteInfo(eRoute).getPrereqOrBonus(i));
 								bFoundValid = false;
 
-								if (pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwner(), ((BonusTypes)(GC.getRouteInfo(eRoute).getPrereqOrBonus(i)))))
+								if (pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwner(),
+									((BonusTypes)(GC.getRouteInfo(eRoute).getPrereqOrBonus(i)))))
 								{
 									bFoundValid = true;
 									break;
@@ -3125,25 +3170,49 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							{
 								CvWString szFirstBuffer = NEWLINE + gDLL->getText("TXT_KEY_BUILDING_REQUIRES_LIST");
 								CvWString szTempBuffer;
-								szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), CvWString(GC.getBonusInfo(*it).getType()).GetCString(), GC.getBonusInfo(*it).getDescription());
+								szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),
+									CvWString(GC.getBonusInfo(*it).getType()).GetCString(), GC.getBonusInfo(*it).getDescription());
 								setListHelp(szBuffer, szFirstBuffer.GetCString(), szTempBuffer, gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 								bFirst = false;
 							}
 						}
 					}
 
-					if (pMissionPlot->getFeatureType() != NO_FEATURE)
+					// Save tech prereq to avoid double-posting if terrain happens to share same tech prereq
+					TechTypes featureTechRequired = NO_TECH;
+
+					// Check feature prereqs against current plot
+					if (ePlotFeature != NO_FEATURE)
 					{
-						if (((TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(pMissionPlot->getFeatureType())) && !(GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(pMissionPlot->getFeatureType()))))
+						featureTechRequired = (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature);
+
+						// If the plot feature requires a different tech than the base tile itself AND we don't have that tech
+						if ( (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)
+						&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)) )
 						{
-							if (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH ||
-								!GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech()))
+							// If the base never obsoletes OR we don't have the tech which obsoletes it
+							if (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
+							|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech()))
 							{
 								szBuffer.append(NEWLINE);
-								szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING", CvWString(GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getFeatureTech(pMissionPlot->getFeatureType())).getType()).GetCString(), GC.getTechInfo((TechTypes) GC.getBuildInfo(eBuild).getFeatureTech(pMissionPlot->getFeatureType())).getTextKeyWide()));
+								
+								// If the feature blocks the improvement from ever being constructable or not, different messages
+								// WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ FEATURE BLOCKING IN CIV4BuildInfos, REALLY SHOULD BE BETTER SOMEHOW
+								if (GC.getTechInfo(featureTechRequired).isDisable())
+								{
+									szBuffer.append(gDLL->getText("TXT_KEY_BUILD_PLOT_BLOCKED",
+										GC.getFeatureInfo(ePlotFeature).getTextKeyWide()));
+								}
+								else
+								{	
+									szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
+										CvWString(GC.getTechInfo(featureTechRequired).getType()).GetCString(),
+										GC.getTechInfo(featureTechRequired).getTextKeyWide()));
+								}
 							}
 						}
 					}
+					// Check terrain prereqs against current plot
 					for (int iI = 0; iI < GC.getBuildInfo(eBuild).getNumTerrainStructs(); iI++)
 					{
 						const TerrainTypes eTerrain = GC.getBuildInfo(eBuild).getTerrainStruct(iI).eTerrain;
@@ -3151,25 +3220,43 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						||  eTerrain == GC.getTERRAIN_PEAK() && pMissionPlot->isAsPeak()
 						||  eTerrain == GC.getTERRAIN_HILL() && pMissionPlot->isHills())
 						{
-							if (GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech != NO_TECH)
+							const TechTypes terrainTechRequired = GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech;
+
+							// If there is a tech required to build on the terrain that differs from the base tech prereq and feature prereq,
+							// we don't have that tech, and the build doesn't obsolete OR we don't have the obsolete tech:
+							if (terrainTechRequired != NO_TECH
+							&&  terrainTechRequired != featureTechRequired
+							&&  terrainTechRequired != (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq()
+							&&  !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(terrainTechRequired)
+							&&  (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
+								|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech())))
 							{
-								if (((TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech) && !(GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech)))
+								szBuffer.append(NEWLINE);
+								// If the terrain blocks the improvement from ever being constructable or not, different messages
+								// WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ TERRAIN BLOCKING IN CIV4BuildInfos, REALLY SHOULD BE BETTER SOMEHOW
+								if (GC.getTechInfo(terrainTechRequired).isDisable())
 								{
-									if (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH ||
-										!GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech()))
-									{
-										szBuffer.append(NEWLINE);
-										szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING", CvWString(GC.getTechInfo(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech).getType()).GetCString(), GC.getTechInfo(GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech).getTextKeyWide()));
-									}
+									szBuffer.append(gDLL->getText("TXT_KEY_BUILD_PLOT_BLOCKED",
+										GC.getTerrainInfo(ePlotTerrain).getTextKeyWide()));
 								}
+								else
+								{
+									szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
+										CvWString(GC.getTechInfo(terrainTechRequired).getType()).GetCString(),
+										GC.getTechInfo(terrainTechRequired).getTextKeyWide()));
+								}
+								// Avoid duplicating if terrain pops up twice due to the isAsPeak or isHills checks
+								break;
 							}
 						}
 					}
 				}
 
-				if (eImprovement != NO_IMPROVEMENT)
+				if (eImprovement != NO_IMPROVEMENT
+				&&  pMissionPlot->getImprovementType() != NO_IMPROVEMENT)
 				{
-					if (pMissionPlot->getImprovementType() != NO_IMPROVEMENT)
+					// Assuming FeatureChange and TerrainChange won't remove improvement (though they may remove prereqs...)
+					if (!bIsFeatureChange && !bIsTerrainChange)
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_WILL_DESTROY_IMP", GC.getImprovementInfo(pMissionPlot->getImprovementType()).getTextKeyWide()));
@@ -3182,179 +3269,176 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CONSUME_UNIT"));
 				}
 
-				if (pMissionPlot->getFeatureType() != NO_FEATURE)
+				if (ePlotFeature != NO_FEATURE
+				&&  GC.getBuildInfo(eBuild).isFeatureRemove(ePlotFeature))
 				{
-					if (GC.getBuildInfo(eBuild).isFeatureRemove(pMissionPlot->getFeatureType()))
+					// BUG - Feature Health
+					if (pMissionPlot->isCityRadius() && getBugOptionBOOL("MiscHover__RemoveFeatureHealthEffects", true, "BUG_REMOVE_FEATURE_HEALTH_EFFECTS"))
 					{
-// BUG - Feature Health - start
-						if (pMissionPlot->isCityRadius() && getBugOptionBOOL("MiscHover__RemoveFeatureHealthEffects", true, "BUG_REMOVE_FEATURE_HEALTH_EFFECTS"))
+						int iHealthPercent = GC.getFeatureInfo(ePlotFeature).getHealthPercent();
+
+						if (iHealthPercent != 0)
 						{
-							int iHealthPercent = GC.getFeatureInfo(pMissionPlot->getFeatureType()).getHealthPercent();
+							bool bCountOtherTiles = getBugOptionBOOL("MiscHover__RemoveFeatureHealthEffectsCountOtherTiles", true, "BUG_REMOVE_FEATURE_HEALTH_EFFECTS_COUNT_OTHER_TILES");
+							int iGoodPercentChange = 0;
+							int iBadPercentChange = 0;
 
-							if (iHealthPercent != 0)
+							if (iHealthPercent > 0)
 							{
-								bool bCountOtherTiles = getBugOptionBOOL("MiscHover__RemoveFeatureHealthEffectsCountOtherTiles", true, "BUG_REMOVE_FEATURE_HEALTH_EFFECTS_COUNT_OTHER_TILES");
-								int iGoodPercentChange = 0;
-								int iBadPercentChange = 0;
+								iGoodPercentChange = - iHealthPercent;
+							}
+							else
+							{
+								iBadPercentChange = iHealthPercent;
+							}
+							for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+							{
+								CvPlot* pLoopPlot = plotCity(pMissionPlot->getX(), pMissionPlot->getY(), iI);
 
-								if (iHealthPercent > 0)
+								if (pLoopPlot != NULL)
 								{
-									iGoodPercentChange = - iHealthPercent;
-								}
-								else
-								{
-									iBadPercentChange = iHealthPercent;
-								}
-								for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
-								{
-									CvPlot* pLoopPlot = plotCity(pMissionPlot->getX(), pMissionPlot->getY(), iI);
+									CvCity* pLoopCity = pLoopPlot->getPlotCity();
 
-									if (pLoopPlot != NULL)
+									if (pLoopCity != NULL && pLoopCity->getTeam() == pHeadSelectedUnit->getTeam())
 									{
-										CvCity* pLoopCity = pLoopPlot->getPlotCity();
+										int iGood = 0, iBad = 0;
+										int iFeatureHealthAdjust = 0;
 
-										if (pLoopCity != NULL && pLoopCity->getTeam() == pHeadSelectedUnit->getTeam())
+										if (bCountOtherTiles)
 										{
-											int iGood = 0, iBad = 0;
-											int iFeatureHealthAdjust = 0;
+											int iCityGoodPercentChange = 0;
+											int iCityBadPercentChange = 0;
 
-											if (bCountOtherTiles)
+											pLoopCity->calculateFeatureHealthPercentChange(iCityGoodPercentChange, iCityBadPercentChange, pMissionPlot);
+											pLoopCity->getAdditionalHealth(iCityGoodPercentChange, iCityBadPercentChange, iGood, iBad);
+											iGood = -iGood;
+											iBad = -iBad;
+											iFeatureHealthAdjust = iGood - iBad;
+											iCityGoodPercentChange += iGoodPercentChange;
+											iCityBadPercentChange += iBadPercentChange;
+											pLoopCity->getAdditionalHealth(iCityGoodPercentChange, iCityBadPercentChange, iGood, iBad);
+										}
+										else
+										{
+											pLoopCity->getAdditionalHealth(iGoodPercentChange, iBadPercentChange, iGood, iBad);
+										}
+										if (iGood != 0 || iBad != 0)
+										{
+											bool bStarted = false;
+											CvWStringBuffer szFeatureEffects;
+											bStarted = GAMETEXT.setResumableGoodBadChangeHelp(szFeatureEffects, L"", L"", L"", iGood, gDLL->getSymbolID(HEALTHY_CHAR), iBad, gDLL->getSymbolID(UNHEALTHY_CHAR), false, false, bStarted);
+
+											//Fuyu Negative Health Adjust
+											//if both clearing the feature at hand and the building being contructed in the city cause health reduction, consider both effects
+											int iBadHealthAdjust = 0;
+											if (iBad > iGood && pLoopCity->getProductionBuilding() != NO_BUILDING)
 											{
-												int iCityGoodPercentChange = 0;
-												int iCityBadPercentChange = 0;
-
-												pLoopCity->calculateFeatureHealthPercentChange(iCityGoodPercentChange, iCityBadPercentChange, pMissionPlot);
-												pLoopCity->getAdditionalHealth(iCityGoodPercentChange, iCityBadPercentChange, iGood, iBad);
-												iGood = -iGood;
-												iBad = -iBad;
-												iFeatureHealthAdjust = iGood - iBad;
-												iCityGoodPercentChange += iGoodPercentChange;
-												iCityBadPercentChange += iBadPercentChange;
-												pLoopCity->getAdditionalHealth(iCityGoodPercentChange, iCityBadPercentChange, iGood, iBad);
+												iBadHealthAdjust = -std::min(0, pLoopCity->getAdditionalHealthByBuilding(pLoopCity->getProductionBuilding()));
 											}
-											else
-											{
-												pLoopCity->getAdditionalHealth(iGoodPercentChange, iBadPercentChange, iGood, iBad);
-											}
-											if (iGood != 0 || iBad != 0)
-											{
-												bool bStarted = false;
-												CvWStringBuffer szFeatureEffects;
-												bStarted = GAMETEXT.setResumableGoodBadChangeHelp(szFeatureEffects, L"", L"", L"", iGood, gDLL->getSymbolID(HEALTHY_CHAR), iBad, gDLL->getSymbolID(UNHEALTHY_CHAR), false, false, bStarted);
 
-												//Fuyu Negative Health Adjust
-												//if both clearing the feature at hand and the building being contructed in the city cause health reduction, consider both effects
-												int iBadHealthAdjust = 0;
-												if (iBad > iGood && pLoopCity->getProductionBuilding() != NO_BUILDING)
+											int iSpoiledFood = pLoopCity->getAdditionalSpoiledFood(iGood, iBad, -iBadHealthAdjust);
+											int iStarvation = 0;
+											if (iSpoiledFood != 0)
+											{
+												iStarvation = pLoopCity->getAdditionalStarvation(iSpoiledFood, /* iFoodAdjust: spoiled food from building */ ((iBadHealthAdjust != 0)? -pLoopCity->getAdditionalSpoiledFood(0, iBadHealthAdjust) : 0));
+											}
+
+											bStarted = GAMETEXT.setResumableValueChangeHelp(szFeatureEffects, L"", L"", L"", iSpoiledFood, gDLL->getSymbolID(EATEN_FOOD_CHAR), false, false, bStarted);
+											bStarted = GAMETEXT.setResumableValueChangeHelp(szFeatureEffects, L"", L"", L"", iStarvation, gDLL->getSymbolID(BAD_FOOD_CHAR), false, false, bStarted);
+
+											//Fuyu Health Level dropping below Happy Level?
+											if (bStarted && bCountOtherTiles && iBad > iGood && iSpoiledFood == 0 && !pLoopCity->isNoUnhappiness())
+											{
+												//Disregard all temporary unhappiness, and unhealth from espionage
+												int iTemporaryUnhappiness = 0;
+												int iAngerPercent = 0;
+												iAngerPercent += pLoopCity->getHurryPercentAnger();
+												iAngerPercent += pLoopCity->getConscriptPercentAnger();
+												iAngerPercent += pLoopCity->getDefyResolutionPercentAnger();
+												iAngerPercent += pLoopCity->getWarWearinessPercentAnger();
+												iTemporaryUnhappiness += ((iAngerPercent * (pLoopCity->getPopulation())) / GC.getPERCENT_ANGER_DIVISOR());
+												iTemporaryUnhappiness += pLoopCity->getEspionageHappinessCounter();
+
+												int iHappinessLevel = pLoopCity->happyLevel() - pLoopCity->unhappyLevel() + iTemporaryUnhappiness;
+												int iHealthLevel = pLoopCity->goodHealth() - pLoopCity->badHealth() + pLoopCity->getEspionageHealthCounter();
+												//Adjustments
+												iHealthLevel += iFeatureHealthAdjust;
+												//Adjustment for building 
+												int iBuildingAdjust = 0;
+												if (pLoopCity->getProductionBuilding() != NO_BUILDING)
 												{
-													iBadHealthAdjust = -std::min(0, pLoopCity->getAdditionalHealthByBuilding(pLoopCity->getProductionBuilding()));
+													iBuildingAdjust = std::max(0, pLoopCity->getAdditionalHappinessByBuilding(pLoopCity->getProductionBuilding()) - pLoopCity->getAdditionalHealthByBuilding(pLoopCity->getProductionBuilding()));
 												}
 
-												int iSpoiledFood = pLoopCity->getAdditionalSpoiledFood(iGood, iBad, -iBadHealthAdjust);
-												int iStarvation = 0;
-												if (iSpoiledFood != 0)
+												if (iHealthLevel < iHappinessLevel + iBuildingAdjust)
 												{
-													iStarvation = pLoopCity->getAdditionalStarvation(iSpoiledFood, /* iFoodAdjust: spoiled food from building */ ((iBadHealthAdjust != 0)? -pLoopCity->getAdditionalSpoiledFood(0, iBadHealthAdjust) : 0));
+													//Health level is already below happy
+													CvWString szHealthLimitTempBuffer;
+													szHealthLimitTempBuffer.Format(L", (%c&lt;%c)", gDLL->getSymbolID(HEALTHY_CHAR), gDLL->getSymbolID(HAPPY_CHAR));
+													szFeatureEffects.append(szHealthLimitTempBuffer);
 												}
-
-												bStarted = GAMETEXT.setResumableValueChangeHelp(szFeatureEffects, L"", L"", L"", iSpoiledFood, gDLL->getSymbolID(EATEN_FOOD_CHAR), false, false, bStarted);
-												bStarted = GAMETEXT.setResumableValueChangeHelp(szFeatureEffects, L"", L"", L"", iStarvation, gDLL->getSymbolID(BAD_FOOD_CHAR), false, false, bStarted);
-
-												//Fuyu Health Level dropping below Happy Level?
-												if (bStarted && bCountOtherTiles && iBad > iGood && iSpoiledFood == 0 && !pLoopCity->isNoUnhappiness())
+												else if (iHealthLevel - iBad + iGood < iHappinessLevel + iBuildingAdjust)
 												{
-													//Disregard all temporary unhappiness, and unhealth from espionage
-													int iTemporaryUnhappiness = 0;
-													int iAngerPercent = 0;
-													iAngerPercent += pLoopCity->getHurryPercentAnger();
-													iAngerPercent += pLoopCity->getConscriptPercentAnger();
-													iAngerPercent += pLoopCity->getDefyResolutionPercentAnger();
-													iAngerPercent += pLoopCity->getWarWearinessPercentAnger();
-													iTemporaryUnhappiness += ((iAngerPercent * (pLoopCity->getPopulation())) / GC.getPERCENT_ANGER_DIVISOR());
-													iTemporaryUnhappiness += pLoopCity->getEspionageHappinessCounter();
-
-													int iHappinessLevel = pLoopCity->happyLevel() - pLoopCity->unhappyLevel() + iTemporaryUnhappiness;
-													int iHealthLevel = pLoopCity->goodHealth() - pLoopCity->badHealth() + pLoopCity->getEspionageHealthCounter();
-													//Adjustments
-													iHealthLevel += iFeatureHealthAdjust;
-													//Adjustment for building 
-													int iBuildingAdjust = 0;
-													if (pLoopCity->getProductionBuilding() != NO_BUILDING)
-													{
-														iBuildingAdjust = std::max(0, pLoopCity->getAdditionalHappinessByBuilding(pLoopCity->getProductionBuilding()) - pLoopCity->getAdditionalHealthByBuilding(pLoopCity->getProductionBuilding()));
-													}
-
-													if (iHealthLevel < iHappinessLevel + iBuildingAdjust)
-													{
-														//Health level is already below happy
-														CvWString szHealthLimitTempBuffer;
-														szHealthLimitTempBuffer.Format(L", (%c&lt;%c)", gDLL->getSymbolID(HEALTHY_CHAR), gDLL->getSymbolID(HAPPY_CHAR));
-														szFeatureEffects.append(szHealthLimitTempBuffer);
-													}
-													else if (iHealthLevel - iBad + iGood < iHappinessLevel + iBuildingAdjust)
-													{
-														CvWString szHealthLimitTempBuffer;
-														szHealthLimitTempBuffer.Format(L", %c&lt;%c", gDLL->getSymbolID(HEALTHY_CHAR), gDLL->getSymbolID(HAPPY_CHAR));
-														szFeatureEffects.append(szHealthLimitTempBuffer);
-													}
+													CvWString szHealthLimitTempBuffer;
+													szHealthLimitTempBuffer.Format(L", %c&lt;%c", gDLL->getSymbolID(HEALTHY_CHAR), gDLL->getSymbolID(HAPPY_CHAR));
+													szFeatureEffects.append(szHealthLimitTempBuffer);
 												}
-												//Fuyu END
-
-												szBuffer.append(NEWLINE);
-												szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CHANGE_IN_CITY", szFeatureEffects.getCString(), pLoopCity->getNameKey()));
 											}
+											//Fuyu END
+
+											szBuffer.append(NEWLINE);
+											szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CHANGE_IN_CITY", szFeatureEffects.getCString(), pLoopCity->getNameKey()));
 										}
 									}
 								}
 							}
 						}
-// BUG - Feature Health - end
-						CvCity* pCity;
-						int iProduction = pMissionPlot->getFeatureProduction(eBuild, pHeadSelectedUnit->getTeam(), &pCity);
-
-						if (iProduction > 0)
-						{
-							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CHANGE_PRODUCTION", iProduction, pCity->getNameKey()));
-						}
-/************************************************************************************************/
-/* Afforess	                  Start		 08/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-						else
-						{
-							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NO_PRODUCTION"));
-						}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_REMOVE_FEATURE", GC.getFeatureInfo(pMissionPlot->getFeatureType()).getTextKeyWide()));
 					}
+					
+					CvCity* pCity;
+					int iProduction = pMissionPlot->getFeatureProduction(eBuild, pHeadSelectedUnit->getTeam(), &pCity);
 
+					szBuffer.append(NEWLINE);
+					if (iProduction > 0)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CHANGE_PRODUCTION", iProduction, pCity->getNameKey()));
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_REMOVE_FEATURE", GC.getFeatureInfo(ePlotFeature).getTextKeyWide()));
+					}
+					else if (!bIsFeatureChange)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NO_PRODUCTION"));
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_REMOVE_FEATURE", GC.getFeatureInfo(ePlotFeature).getTextKeyWide()));
+					}
+					else // Slightly nicer alert for replacing features with no chopping return
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CHANGE_FEATURE",
+							GC.getFeatureInfo(ePlotFeature).getTextKeyWide(),
+							GC.getFeatureInfo((FeatureTypes)GC.getBuildInfo(eBuild).getFeatureChange()).getTextKeyWide()));
+					}
 				}
 
+				// Improvement specific details (bonus, irrigation, possible route benefits, defense)
 				if (eImprovement != NO_IMPROVEMENT)
 				{
-					if (eBonus != NO_BONUS)
+					if (ePlotBonus != NO_BONUS)
 					{
-						if (!GET_TEAM(pHeadSelectedUnit->getTeam()).isBonusObsolete(eBonus))
+						if (!GET_TEAM(pHeadSelectedUnit->getTeam()).isBonusObsolete(ePlotBonus))
 						{
-							if (GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eBonus))
+							if (GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(ePlotBonus))
 							{
 								szBuffer.append(NEWLINE);
-								szBuffer.append(gDLL->getText("TXT_KEY_ACTION_PROVIDES_BONUS", GC.getBonusInfo(eBonus).getTextKeyWide()));
+								szBuffer.append(gDLL->getText("TXT_KEY_ACTION_PROVIDES_BONUS", GC.getBonusInfo(ePlotBonus).getTextKeyWide()));
 
-								if (GC.getBonusInfo(eBonus).getHealth() != 0)
+								if (GC.getBonusInfo(ePlotBonus).getHealth() != 0)
 								{
-									szBuffer.append(CvWString::format(L" (+%d%c)", abs(GC.getBonusInfo(eBonus).getHealth()), ((GC.getBonusInfo(eBonus).getHealth() > 0) ? gDLL->getSymbolID(HEALTHY_CHAR) : gDLL->getSymbolID(UNHEALTHY_CHAR))));
+									szBuffer.append(CvWString::format(L" (+%d%c)", abs(GC.getBonusInfo(ePlotBonus).getHealth()), ((GC.getBonusInfo(ePlotBonus).getHealth() > 0) ? gDLL->getSymbolID(HEALTHY_CHAR) : gDLL->getSymbolID(UNHEALTHY_CHAR))));
 								}
 
-								if (GC.getBonusInfo(eBonus).getHappiness() != 0)
+								if (GC.getBonusInfo(ePlotBonus).getHappiness() != 0)
 								{
-									szBuffer.append(CvWString::format(L" (+%d%c)", abs(GC.getBonusInfo(eBonus).getHappiness()), ((GC.getBonusInfo(eBonus).getHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))));
+									szBuffer.append(CvWString::format(L" (+%d%c)", abs(GC.getBonusInfo(ePlotBonus).getHappiness()), ((GC.getBonusInfo(ePlotBonus).getHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))));
 								}
 							}
 						}
@@ -3392,7 +3476,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						{
 							if (pMissionPlot->getRouteType() != ((RouteTypes)iI))
 							{
-								GAMETEXT.setYieldChangeHelp(szBuffer, GC.getRouteInfo((RouteTypes)iI).getDescription(), L": ", L"", GC.getImprovementInfo(eImprovement).getRouteYieldChangesArray((RouteTypes)iI));
+								GAMETEXT.setYieldChangeHelp(szBuffer, GC.getRouteInfo((RouteTypes)iI).getDescription(),
+									L": ", L"", GC.getImprovementInfo(eImprovement).getRouteYieldChangesArray((RouteTypes)iI));
 							}
 						}
 					}
@@ -3405,26 +3490,30 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						// szBuffer.append(gDLL->getText("TXT_KEY_ACTION_DEFENSE_MODIFIER", GC.getImprovementInfo(eImprovement).getDefenseModifier())); - Original Code
 						// Super Forts end
 					}
-/************************************************************************************************/
-/* Afforess	                  Start		 05/23/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
+					/************************************************************************************************/
+					/* Afforess	                  Start		 05/23/10                                               */
+					/*                                                                                              */
+					/*                                                                                              */
+					/************************************************************************************************/
+					/*
 					if (GC.getImprovementInfo(eImprovement).getImprovementUpgrade() != NO_IMPROVEMENT)
-*/
+					*/
 					if (GET_TEAM(pHeadSelectedUnit->getTeam()).getImprovementUpgrade(eImprovement) != NO_IMPROVEMENT)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+					/************************************************************************************************/
+					/* Afforess	                     END                                                            */
+					/************************************************************************************************/
 					{
 						int iTurns = pMissionPlot->getUpgradeTimeLeft(eImprovement, pHeadSelectedUnit->getOwner());
 
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_BECOMES_IMP", CvWString(GC.getImprovementInfo((ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getType()).GetCString(), GC.getImprovementInfo((ImprovementTypes) GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getTextKeyWide(), iTurns));
+						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_BECOMES_IMP",
+							CvWString(GC.getImprovementInfo((ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getType()).GetCString(),
+							GC.getImprovementInfo((ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getTextKeyWide(),
+							iTurns));
 					}
 				}
 
+				// Route specific details; TODO phase into net yield changes!
 				if (eRoute != NO_ROUTE)
 				{
 					ImprovementTypes eFinalImprovement = eImprovement;
@@ -3450,6 +3539,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						GAMETEXT.setYieldChangeHelp(szBuffer, GC.getImprovementInfo(eFinalImprovement).getDescription(), L": ", L"", aiYields);
 					}
 
+					// TODO Fix, make separate func
 					int iMovementCost = GC.getRouteInfo(eRoute).getMovementCost() + GET_TEAM(pHeadSelectedUnit->getTeam()).getRouteChange(eRoute);
 					int iFlatMovementCost = GC.getRouteInfo(eRoute).getFlatMovementCost();
 

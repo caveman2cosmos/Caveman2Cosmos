@@ -5023,7 +5023,7 @@ class Revolution:
 						iNumTurns = int(24/gameSpeedMod + .5)
 						bodStr = localText.getText("TXT_KEY_REV_HUMAN_CEDE",())
 
-					bodStr += '\n\n' + localText.getText("TXT_KEY_REV_HUMAN_CONTROL_RETURNED",()) + ' %d '%(iNumTurns) + localText.getText("TXT_KEY_REV_TURNS",()) + '.'
+					bodStr += '\n\n' + localText.getText("TXT_KEY_REV_HUMAN_CONTROL_RETURNED",()) + ' %d '%(iNumTurns) + localText.getText("TXT_KEY_TURNS",()).lower() + '.'
 					popup.setBodyString(bodStr)
 #-------------------------------------------------------------------------------------------------
 # Lemmy101 RevolutionMP edit
