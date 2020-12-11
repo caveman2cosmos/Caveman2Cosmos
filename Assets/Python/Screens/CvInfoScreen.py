@@ -26,9 +26,6 @@ class CvInfoScreen:
 		self.nWidgetCount	= 0
 		self.nLineCount		= 0
 
-		# This is used to allow the wonders screen to refresh without redrawing everything
-		self.iNumWondersPermanentWidgets = 0
-
 		self.iTab = 0
 
 		self.iGraph1 = 0
@@ -71,6 +68,8 @@ class CvInfoScreen:
 		self.bDebug = GAME.isDebugMode()
 		self.iTurn = GAME.getGameTurn()
 		self.iStartTurn = GAME.getStartTurn()
+
+		self.aWidgetBucket = []
 
 		import BugCore
 		AdvisorOpt = BugCore.game.Advisors
@@ -292,7 +291,6 @@ class CvInfoScreen:
 
 		screen = CyGInterfaceScreen("InfoScreen", self.screenId)
 		self.deleteAllWidgets(self.iNumPermanentWidgets)
-		self.iNumWondersPermanentWidgets = 0
 
 		# Draw Tab buttons and tabs
 		if not self.iTab:
@@ -471,12 +469,14 @@ class CvInfoScreen:
 			screen.addDropDownBoxGFC(DD, x, 40, 200, eWidGen, 1, 2, eFont)
 			for j, txt in enumerate(self.sGraphText[0]):
 				screen.addPullDownString(DD, txt, j, j, self.iGraph1 == j)
+			self.aWidgetBucket.append(DD)
 
 			DD = "GraphDD1"
 			x += 216
 			screen.addDropDownBoxGFC(DD, x, 40, 200, eWidGen, 1, 2, eFont)
 			for j, txt in enumerate(self.sGraphText[0]):
 				screen.addPullDownString(DD, txt, j, j, self.iGraph2 == j)
+			self.aWidgetBucket.append(DD)
 		else:
 			screen.hide("GraphDD0")
 			screen.hide("GraphDD1")
@@ -618,7 +618,7 @@ class CvInfoScreen:
 							screen.addLineGFC(zsGRAPH_CANVAS_ID, self.getNextLineName(), oldX, oldY, x, y, color)
 						oldX = x
 						oldY = y
-					elif (oldX == -1):
+					elif oldX == -1:
 						oldX = x
 						oldY = y
 
@@ -994,6 +994,9 @@ class CvInfoScreen:
 		screen.setImageButton("WorldWondersWidget", sWW,  xDD +  0, 90, 24, 24, WidgetTypes.WIDGET_INFO_WORLD_WONDERS, -1, -1)
 		screen.setImageButton("NationalWondersWidget", sNW,  xDD + 30, 90, 24, 24, WidgetTypes.WIDGET_INFO_NATIONAL_WONDERS, -1, -1)
 		screen.setImageButton("ProjectsWidget", sPj,  xDD + 60, 90, 24, 24, WidgetTypes.WIDGET_INFO_PROJECTS, -1, -1)
+		self.aWidgetBucket.append("WorldWondersWidget")
+		self.aWidgetBucket.append("NationalWondersWidget")
+		self.aWidgetBucket.append("ProjectsWidget")
 
 		screen.setLabel(self.getNextWidgetName(), "", "<font=4>" + sDesc, 1<<0, xDD + 100, 93, -6.3, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 2)
 
@@ -1824,7 +1827,7 @@ class CvInfoScreen:
 		self.deleteAllLines()
 		screen = CyGInterfaceScreen("InfoScreen", self.screenId)
 		i = self.nWidgetCount - 1
-		while (i >= iNumPermanentWidgets):
+		while i >= iNumPermanentWidgets:
 			self.nWidgetCount = i
 			screen.deleteWidget(self.getNextWidgetName())
 			i -= 1
@@ -1832,9 +1835,10 @@ class CvInfoScreen:
 		self.nWidgetCount = iNumPermanentWidgets
 		self.yMessage = 5
 
-		screen.deleteWidget("WorldWondersWidget")
-		screen.deleteWidget("NationalWondersWidget")
-		screen.deleteWidget("ProjectsWidget")
+		# Specific widgets
+		for widget in self.aWidgetBucket:
+			screen.deleteWidget(widget)
+		self.aWidgetBucket = []
 
 	# handle the input for this screen...
 	def handleInput(self, inputClass):
@@ -1996,3 +2000,5 @@ class CvInfoScreen:
 		self.aiTurnYearBuilt = []
 		self.aiWonderBuiltBy = []
 		self.aszWonderCity = []
+		del self.aWidgetBucket, self.bDebug, self.iTurn, self.iStartTurn, \
+			self.xRes, self.yRes
