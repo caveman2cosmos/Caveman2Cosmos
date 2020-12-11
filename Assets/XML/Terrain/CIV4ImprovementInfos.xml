@@ -2496,7 +2496,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<!-- Road : 0/0/1 -->
 			<RouteYieldChanges>
 				<RouteYieldChange>
 					<RouteType>ROUTE_ROAD</RouteType>
@@ -2925,7 +2924,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<!-- Highway : 0/0/1 -->
 			<RouteYieldChanges>
 				<RouteYieldChange>
 					<RouteType>ROUTE_HIGHWAY</RouteType>
@@ -3781,7 +3779,6 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<!-- Maglev : 1/0/0 -->
 			<RouteYieldChanges>
 				<RouteYieldChange>
 					<RouteType>ROUTE_MAGLEV</RouteType>

@@ -3139,7 +3139,9 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							if (!(pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwner(), ((BonusTypes)(GC.getRouteInfo(eRoute).getPrereqBonus())))))
 							{
 								szBuffer.append(NEWLINE);
-								szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING", CvWString(GC.getBonusInfo((BonusTypes) GC.getRouteInfo(eRoute).getPrereqBonus()).getType()).GetCString(), GC.getBonusInfo((BonusTypes) GC.getRouteInfo(eRoute).getPrereqBonus()).getTextKeyWide()));
+								szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
+									CvWString(GC.getBonusInfo((BonusTypes) GC.getRouteInfo(eRoute).getPrereqBonus()).getType()).GetCString(),
+									GC.getBonusInfo((BonusTypes) GC.getRouteInfo(eRoute).getPrereqBonus()).getTextKeyWide()));
 							}
 						}
 
@@ -3152,7 +3154,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 								aeOrBonuses.push_back((BonusTypes)GC.getRouteInfo(eRoute).getPrereqOrBonus(i));
 								bFoundValid = false;
 
-								if (pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwner(), ((BonusTypes)(GC.getRouteInfo(eRoute).getPrereqOrBonus(i)))))
+								if (pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwner(),
+									((BonusTypes)(GC.getRouteInfo(eRoute).getPrereqOrBonus(i)))))
 								{
 									bFoundValid = true;
 									break;
@@ -3178,6 +3181,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					// Save tech prereq to avoid double-posting if terrain happens to share same tech prereq
 					TechTypes featureTechRequired = NO_TECH;
 
+					// Check feature prereqs against current plot
 					if (ePlotFeature != NO_FEATURE)
 					{
 						featureTechRequired = (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature);
@@ -3208,7 +3212,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							}
 						}
 					}
-					// Check terrain prereqs against current terrain
+					// Check terrain prereqs against current plot
 					for (int iI = 0; iI < GC.getBuildInfo(eBuild).getNumTerrainStructs(); iI++)
 					{
 						const TerrainTypes eTerrain = GC.getBuildInfo(eBuild).getTerrainStruct(iI).eTerrain;
@@ -3390,7 +3394,6 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							}
 						}
 					}
-					// BUG - Feature Health - end
 					
 					CvCity* pCity;
 					int iProduction = pMissionPlot->getFeatureProduction(eBuild, pHeadSelectedUnit->getTeam(), &pCity);
@@ -3416,6 +3419,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 				}
 
+				// Improvement specific details (bonus, irrigation, possible route benefits, defense)
 				if (eImprovement != NO_IMPROVEMENT)
 				{
 					if (ePlotBonus != NO_BONUS)
@@ -3472,7 +3476,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						{
 							if (pMissionPlot->getRouteType() != ((RouteTypes)iI))
 							{
-								GAMETEXT.setYieldChangeHelp(szBuffer, GC.getRouteInfo((RouteTypes)iI).getDescription(), L": ", L"", GC.getImprovementInfo(eImprovement).getRouteYieldChangesArray((RouteTypes)iI));
+								GAMETEXT.setYieldChangeHelp(szBuffer, GC.getRouteInfo((RouteTypes)iI).getDescription(),
+									L": ", L"", GC.getImprovementInfo(eImprovement).getRouteYieldChangesArray((RouteTypes)iI));
 							}
 						}
 					}
@@ -3508,6 +3513,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 				}
 
+				// Route specific details; TODO phase into net yield changes!
 				if (eRoute != NO_ROUTE)
 				{
 					ImprovementTypes eFinalImprovement = eImprovement;
@@ -3533,6 +3539,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						GAMETEXT.setYieldChangeHelp(szBuffer, GC.getImprovementInfo(eFinalImprovement).getDescription(), L": ", L"", aiYields);
 					}
 
+					// TODO Fix, make separate func
 					int iMovementCost = GC.getRouteInfo(eRoute).getMovementCost() + GET_TEAM(pHeadSelectedUnit->getTeam()).getRouteChange(eRoute);
 					int iFlatMovementCost = GC.getRouteInfo(eRoute).getFlatMovementCost();
 

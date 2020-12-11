@@ -2978,11 +2978,12 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 
 	if (eRoute != NO_ROUTE)
 	{
-		// Disallow routes of worse value, but allow same value (e.g. Highway vs eRail) so long as it doesn't match existing route
 		if (getRouteType() != NO_ROUTE)
 		{
+			if (GC.getRouteInfo(getRouteType()).getValue() >= GC.getRouteInfo(eRoute).getValue())
+			/* Version to allow same route value in future maybe:
 			if (GC.getRouteInfo(getRouteType()).getValue() > GC.getRouteInfo(eRoute).getValue()
-			||  eRoute == getRouteType())
+			||  eRoute == getRouteType()) */
 			{
 				return false;
 			}

@@ -13106,7 +13106,6 @@ int CvUnit::nukeRange() const
 }
 
 
-// XXX should this test for coal?
 bool CvUnit::canBuildRoute() const
 {
 	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)

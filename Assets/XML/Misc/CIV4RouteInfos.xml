@@ -81,10 +81,12 @@
 			<TechMovementChanges/>
 			<Button>Art/Interface/Buttons/Builds/BuildRailroad.dds</Button>
 		</RouteInfo>
+		<!-- Special value case; eRail better than Highway in general UNLESS multi-route same value code gets completed... -->
 		<RouteInfo>
 			<Type>ROUTE_ELECTRIC_RAILROAD</Type>
 			<Description>TXT_KEY_ROUTE_ELECTRIC_RAILROAD</Description>
-			<iValue>6</iValue>
+			<!-- <iValue>6</iValue> -->
+			<iValue>7</iValue>
 			<iAdvancedStartCost>18</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>36</iMovement>
@@ -116,7 +118,7 @@
 		<RouteInfo>
 			<Type>ROUTE_MAGLEV</Type>
 			<Description>TXT_KEY_ROUTE_MAGLEV</Description>
-			<iValue>7</iValue>
+			<iValue>8</iValue>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>22</iMovement>
@@ -139,7 +141,7 @@
 		<RouteInfo>
 			<Type>ROUTE_VACTRAIN</Type>
 			<Description>TXT_KEY_ROUTE_VACTRAIN</Description>
-			<iValue>8</iValue>
+			<iValue>9</iValue>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>24</iMovement>
@@ -161,7 +163,7 @@
 		<RouteInfo>
 			<Type>ROUTE_GRAVITY_TRAIN</Type>
 			<Description>TXT_KEY_ROUTE_GRAVITY_TRAIN</Description>
-			<iValue>9</iValue>
+			<iValue>10</iValue>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>15</iMovement>
@@ -178,7 +180,7 @@
 		<RouteInfo>
 			<Type>ROUTE_JUMPLANE</Type>
 			<Description>TXT_KEY_ROUTE_JUMPLANE</Description>
-			<iValue>10</iValue>
+			<iValue>11</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>15</iMovement>
