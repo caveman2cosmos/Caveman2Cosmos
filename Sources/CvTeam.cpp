@@ -4739,12 +4739,7 @@ void CvTeam::processProjectChange(ProjectTypes eIndex, int iChange, int iOldProj
 		{
 			GC.getGame().makeSpecialBuildingValid((SpecialBuildingTypes)(kProject.getEveryoneSpecialBuilding()));
 		}
-/* TB Nukefix
-		if (kProject.isAllowsNukes())
-		{
-			GC.getGame().makeNukesValid(true);
-		}
-*/
+
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			CvPlayer& player = GET_PLAYER((PlayerTypes)iI);

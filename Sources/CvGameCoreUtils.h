@@ -216,11 +216,6 @@ DllExport CvUnit* getUnit(IDInfo unit);
 bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit);
 bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader);
 
-int getPopulationAsset(int iPopulation);
-int getLandPlotsAsset(int iLandPlots);
-int getPopulationPower(int iPopulation);
-int getPopulationScore(int iPopulation);
-int getLandPlotsScore(int iLandPlots);
 int getTechScore(TechTypes eTech);
 int getWonderScore(BuildingTypes eWonder);
 
