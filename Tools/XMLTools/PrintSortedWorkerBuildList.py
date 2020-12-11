@@ -100,10 +100,6 @@ Output for v41, 12/2020, after some manual sorting:
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_BURN_VEGETATION</BuildType>
-                    <bBuild>1</bBuild>
-                </Build>
-                <Build>
                     <BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -164,10 +160,6 @@ Output for v41, 12/2020, after some manual sorting:
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_TRAIL</BuildType>
-                    <bBuild>1</bBuild>
-                </Build>
-                <Build>
                     <BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -193,7 +185,15 @@ Output for v41, 12/2020, after some manual sorting:
                 </Build>
                 <!-- SPECIAL -->
                 <Build>
+                    <BuildType>BUILD_BURN_VEGETATION</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
                     <BuildType>BUILD_MOAI_STATUES</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_TRAIL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
 
@@ -267,10 +267,6 @@ Output for v41, 12/2020, after some manual sorting:
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_PATH</BuildType>
-                    <bBuild>1</bBuild>
-                </Build>
-                <Build>
                     <BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -322,6 +318,11 @@ Output for v41, 12/2020, after some manual sorting:
                     <BuildType>BUILD_WINERY</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
+                <!-- SPECIAL -->
+                <Build>
+                    <BuildType>BUILD_PATH</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
 
                 <!-- C2C_ERA_CLASSICAL -->
                 <Build>
@@ -341,10 +342,6 @@ Output for v41, 12/2020, after some manual sorting:
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_PAVED_ROAD</BuildType>
-                    <bBuild>1</bBuild>
-                </Build>
-                <Build>
                     <BuildType>BUILD_PEAT_CUTTER</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -358,6 +355,11 @@ Output for v41, 12/2020, after some manual sorting:
                 </Build>
                 <Build>
                     <BuildType>BUILD_WORKSHOP</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <!-- SPECIAL -->
+                <Build>
+                    <BuildType>BUILD_PAVED_ROAD</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <!-- SPECIAL: DOES NOT OBSOLETE -->
@@ -436,10 +438,6 @@ Output for v41, 12/2020, after some manual sorting:
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_RAILROAD</BuildType>
-                    <bBuild>1</bBuild>
-                </Build>
-                <Build>
                     <BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -447,12 +445,13 @@ Output for v41, 12/2020, after some manual sorting:
                     <BuildType>BUILD_SUBURBS</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
-
-                <!-- C2C_ERA_ATOMIC -->
+                <!-- SPECIAL -->
                 <Build>
-                    <BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
+                    <BuildType>BUILD_RAILROAD</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
+
+                <!-- C2C_ERA_ATOMIC -->
                 <Build>
                     <BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
                     <bBuild>1</bBuild>
@@ -463,10 +462,6 @@ Output for v41, 12/2020, after some manual sorting:
                 </Build>
                 <Build>
                     <BuildType>BUILD_GROW_FOREST</BuildType>
-                    <bBuild>1</bBuild>
-                </Build>
-                <Build>
-                    <BuildType>BUILD_HIGHWAY</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -517,6 +512,15 @@ Output for v41, 12/2020, after some manual sorting:
                     <BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
+                <!-- SPECIAL -->
+                <Build>
+                    <BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_HIGHWAY</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
 
                 <!-- C2C_ERA_INFORMATION -->
                 <Build>
@@ -528,15 +532,16 @@ Output for v41, 12/2020, after some manual sorting:
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_MAGLEV</BuildType>
-                    <bBuild>1</bBuild>
-                </Build>
-                <Build>
                     <BuildType>BUILD_RECLAIM_LAND</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
                     <BuildType>BUILD_SANITIZE</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <!-- SPECIAL -->
+                <Build>
+                    <BuildType>BUILD_MAGLEV</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
 
@@ -546,21 +551,18 @@ Output for v41, 12/2020, after some manual sorting:
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_VACTRAIN</BuildType>
+                    <BuildType>BUILD_VERTICAL_FARM</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
+                <!-- SPECIAL -->
                 <Build>
-                    <BuildType>BUILD_VERTICAL_FARM</BuildType>
+                    <BuildType>BUILD_VACTRAIN</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
 
                 <!-- C2C_ERA_TRANSHUMAN -->
                 <Build>
                     <BuildType>BUILD_CORE_MINE</BuildType>
-                    <bBuild>1</bBuild>
-                </Build>
-                <Build>
-                    <BuildType>BUILD_GRAVITY_TRAIN</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -609,6 +611,11 @@ Output for v41, 12/2020, after some manual sorting:
                 </Build>
                 <Build>
                     <BuildType>BUILD_TERRAFORM_TUNDRA</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <!-- SPECIAL -->
+                <Build>
+                    <BuildType>BUILD_GRAVITY_TRAIN</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
 

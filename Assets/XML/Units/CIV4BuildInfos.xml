@@ -7180,6 +7180,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
+			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/radar/radar_button.dds</Button>
 		</BuildInfo>
@@ -7195,6 +7196,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
+			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/radar/radar_button.dds</Button>
 		</BuildInfo>
@@ -7211,6 +7213,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
+			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/tower/art/steel_tower.dds</Button>
 		</BuildInfo>
@@ -7227,6 +7230,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
+			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/tower/art/stone_tower.dds</Button>
 		</BuildInfo>
@@ -7243,6 +7247,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
+			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/tower/art/wooden_tower.dds</Button>
 		</BuildInfo>
@@ -7259,6 +7264,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
+			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/tower/art/wooden_tower.dds</Button>
 		</BuildInfo>
@@ -7274,7 +7280,6 @@
 			<ImprovementType>IMPROVEMENT_COMMAND_CENTER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
-			<bShiftDown>1</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Buildings/Bunker.dds</Button>
@@ -7291,7 +7296,6 @@
 			<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
-			<bShiftDown>1</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Buildings/Bunker.dds</Button>
