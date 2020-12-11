@@ -477,12 +477,57 @@ Base XP gained when defending
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
 			<Builds>
+				<!-- C2C_ERA_PREHISTORIC -->
 				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP_KILL</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
+					<BuildType>BUILD_BURN_VEGETATION</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_NOMADIC_HERD_KILL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_SCAVENGING_CAMP_KILL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_SEASONAL_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -494,47 +539,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOOD_GATHERER</BuildType>
+					<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SCAVENGING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NOMADIC_HERD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAPE_GATHERING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
+					<BuildType>BUILD_TRAIL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -542,7 +551,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
+					<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -550,15 +559,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
+					<BuildType>BUILD_WOOD_GATHERER_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -4610,6 +4611,9 @@ Base XP gained when defending
 			<bFood>1</bFood>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bWorkerTrade>1</bWorkerTrade>
+			<UnitUpgrades>
+				<UnitType>UNIT_WORKER_CLONES</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -56662,28 +56666,9 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<Builds>
+				<!-- C2C_ERA_PREHISTORIC -->
 				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOOD_GATHERER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
+					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -56691,11 +56676,11 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SCAVENGING_CAMP</BuildType>
+					<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_NOMADIC_HERD_KILL</BuildType>
+					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -56707,7 +56692,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
+					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -56715,15 +56700,31 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
+					<BuildType>BUILD_NOMADIC_HERD_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
+					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_SCAVENGING_CAMP_KILL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_SEASONAL_CAMP_KILL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -56731,19 +56732,23 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
+					<BuildType>BUILD_TRAIL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
+					<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
 					<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_WOOD_GATHERER_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>

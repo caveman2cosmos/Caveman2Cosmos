@@ -1568,7 +1568,7 @@
 			</BonusHappinessChanges>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SCAVENGING_CAMP</BuildType>
+					<BuildType>BUILD_SCAVENGING_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -4440,7 +4440,7 @@
 			</BonusHappinessChanges>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SCAVENGING_CAMP</BuildType>
+					<BuildType>BUILD_SCAVENGING_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>

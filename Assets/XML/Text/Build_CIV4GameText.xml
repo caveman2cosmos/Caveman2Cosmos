@@ -824,8 +824,8 @@
 		<Polish>Czyściciel Wody</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SCAVENGING_CAMP</Tag>
-		<English>Build [LINK=IMPROVEMENT_SCAVENGING_CAMP]Scavenging Camp[\LINK]</English>
+		<Tag>TXT_KEY_BUILD_SCAVENGING_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_SCAVENGING_CAMP]Scavenging Camp[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_SCAVENGING_CAMP]Camp de Récupérateur[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_SCAVENGING_CAMP]Lager der Aasverwerter[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_SCAVENGING_CAMP]Campo degli spazzini[\LINK]</Italian>
