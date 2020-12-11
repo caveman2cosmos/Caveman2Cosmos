@@ -780,7 +780,7 @@ class CvVictoryScreen:
 										szDate = CyGameTextMgr().getTimeStr(GAME.getGameTurn() + victoryDelay, False)
 										szText = TRNSLTR.getText("TXT_KEY_SPACE_SHIP_SCREEN_ARRIVAL", ()) + ": " + szDate
 										screen.setTableText(szTable, 1, iCategoryRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<2)
-										szText = TRNSLTR.getText("TXT_KEY_REPLAY_SCREEN_TURNS", ()) + ":"
+										szText = TRNSLTR.getText("TXT_KEY_TURNS", ()) + ":"
 										screen.setTableText(szTable, 2, iCategoryRow, ufont2 + szText, "", eWidGen, 0, 0, 1<<0)
 										screen.setTableText(szTable, 3, iCategoryRow, ufont2 + str(victoryDelay), "", eWidGen, 0, 0, 1<<0)
 

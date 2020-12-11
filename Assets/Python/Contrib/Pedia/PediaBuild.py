@@ -258,7 +258,7 @@ class PediaBuild:
 						index += 2
 					else:
 						index += 3
-					szText = uFont2b + COLOR + szText[:index] + "<color=255,255,255,255> " + TRNSLTR.getText("TXT_KEY_WB_TURNS", ())
+					szText = uFont2b + COLOR + szText[:index] + "<color=255,255,255,255> " + TRNSLTR.getText("TXT_KEY_TURNS", ())
 					screen.setLabelAt(aName(), Panel, szText, 1<<2, iOne12, 6, 0, iFontGame, iWidGen, 1, 1)
 				# Col 4 - Removed?
 				Panel = "Remove" + str(iRow)
