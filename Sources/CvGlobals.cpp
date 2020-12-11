@@ -40,9 +40,9 @@ static char gVersionString[1024] = { 0 };
 template <class T>
 void deleteInfoArray(std::vector<T*>& array)
 {
-	foreach_(T* info, array)
+	for (std::vector<T*>::iterator it = array.begin(); it != array.end(); ++it)
 	{
-		SAFE_DELETE(info);
+		SAFE_DELETE(*it);
 	}
 
 	array.clear();
