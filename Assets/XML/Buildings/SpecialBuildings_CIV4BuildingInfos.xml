@@ -14589,16 +14589,10 @@
 			<Strategy>TXT_KEY_TECH_ORAL_TRADITION_STRATEGY</Strategy>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
+			</ReplacementBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
