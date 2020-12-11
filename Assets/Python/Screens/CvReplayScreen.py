@@ -292,7 +292,7 @@ class CvReplayScreen:
 		for iPlayer in range(self.replayInfo.getNumPlayers()):
 			screen.addGraphLayer(self.szGraph, iPlayer, self.replayInfo.getColor(iPlayer));
 
-		screen.setGraphLabelX(self.szGraph, localText.getText("TXT_KEY_REPLAY_SCREEN_TURNS", ()));
+		screen.setGraphLabelX(self.szGraph, localText.getText("TXT_KEY_TURNS", ()));
 		screen.setGraphLabelY(self.szGraph, localText.getText("TXT_KEY_REPLAY_SCREEN_SCORE", ()));
 		screen.setGraphYDataRange(self.szGraph, 0.0, 1.0);
 		

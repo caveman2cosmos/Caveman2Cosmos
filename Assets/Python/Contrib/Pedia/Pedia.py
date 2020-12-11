@@ -1761,15 +1761,16 @@ class Pedia:
 
 	def onClose(self):
 		print "Exit Pedia"
-		del self.aWidgetBucket, self.bMovie, self.InputData
-		del self.fKeyTimer, self.bKeyPress, self.szTextTT, self.iOffsetTT, self.bLockedTT
-		del self.CyPlayer, self.bIndex, self.pediaFuture, self.SECTION, self.nWidgetCount, self.iGroupCategory
-		del self.Y_BOT_TEXT, self.H_EDGE_PANEL, self.H_MID_SECTION, self.W_CATEGORIES, self.W_ITEMS
-		del self.X_PEDIA_PAGE, self.Y_PEDIA_PAGE, self.R_PEDIA_PAGE, self.B_PEDIA_PAGE, self.W_PEDIA_PAGE, self.H_PEDIA_PAGE
-		del self.mapScreenFunctions, self.mapListGenerators, self.iNumEras, self.categoryGraphics, self.ICON_SIZE
-		del self.pediaIndex, self.inPage, self.aList
-		del self.PEDIA_BUILDINGS_0, self.PEDIA_UNITS_0, self.PEDIA_MAIN, self.PEDIA_CONCEPTS, self.PEDIA_TECHS, self.PEDIA_UNITS_1, self.PEDIA_UNITS_2, self.PEDIA_PROMOTIONS
-		del self.PEDIA_BUILDINGS_1, self.PEDIA_BUILDINGS_2, self.PEDIA_BONUSES, self.PEDIA_LANDSCAPE, self.PEDIA_LEADERSHIP, self.PEDIA_SPECIAL, self.PEDIA_UPG_TREES
+		del self.aWidgetBucket, self.bMovie, self.InputData, \
+			self.fKeyTimer, self.bKeyPress, self.szTextTT, self.iOffsetTT, self.bLockedTT, \
+			self.CyPlayer, self.bIndex, self.pediaFuture, self.SECTION, self.nWidgetCount, self.iGroupCategory, \
+			self.Y_BOT_TEXT, self.H_EDGE_PANEL, self.H_MID_SECTION, self.W_CATEGORIES, self.W_ITEMS, \
+			self.X_PEDIA_PAGE, self.Y_PEDIA_PAGE, self.R_PEDIA_PAGE, self.B_PEDIA_PAGE, self.W_PEDIA_PAGE, self.H_PEDIA_PAGE, \
+			self.mapScreenFunctions, self.mapListGenerators, self.iNumEras, self.categoryGraphics, self.ICON_SIZE, \
+			self.pediaIndex, self.inPage, self.aList, \
+			self.PEDIA_BUILDINGS_0, self.PEDIA_UNITS_0, self.PEDIA_MAIN, self.PEDIA_CONCEPTS, self.PEDIA_TECHS, self.PEDIA_UNITS_1, self.PEDIA_UNITS_2, self.PEDIA_PROMOTIONS, \
+			self.PEDIA_BUILDINGS_1, self.PEDIA_BUILDINGS_2, self.PEDIA_BONUSES, self.PEDIA_LANDSCAPE, self.PEDIA_LEADERSHIP, self.PEDIA_SPECIAL, self.PEDIA_UPG_TREES
+
 		if not self.pediaHistory:
 			self.pediaHistory = [(-1, "", 0)]
 		else:
