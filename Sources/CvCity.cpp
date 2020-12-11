@@ -3281,21 +3281,20 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 		//Can not construct replaced buildings.
 		for (int iI = 0; iI < kBuilding.getNumReplacementBuilding(); ++iI)
 		{
-			if (getNumActiveBuilding((BuildingTypes)kBuilding.getReplacementBuilding(iI)) > 0
+			const BuildingTypes eReplacement = (BuildingTypes)kBuilding.getReplacementBuilding(iI);
+			if (getNumActiveBuilding(eReplacement) > 0
 			// Toffer - This is not the right place to do HIDE_REPLACED_BUILDINGS...
 			// This option can now stop AI from building a replaced building,
 			// when the option is only supposed to be an interface option for the human player.
 			|| GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_REPLACED_BUILDINGS)
-			&& canConstruct((BuildingTypes)iI, true, false, false, true))
+			&& canConstruct(eReplacement, true, false, false, true))
 			{
 				return false;
 			}
 		}
 	}
 
-	//	Koshling - always hide things not buildable due to vicinity bonuses
-	//	it's not really useful to see them
-	//if (!bTestVisible)
+	// Koshling - Always hide unbuildable due to vicinity bonuses, it's not really useful to see them
 	if (!bExposed)
 	{
 		bool bHasAnyVicinityBonus = false;
