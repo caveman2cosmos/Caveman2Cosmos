@@ -26,7 +26,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOUBLE_SPEED_WITH</Tag>
-		<English>Double Production Speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
+		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
 		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
 		<German>Doppelte Produktionsgeschwindigkeit mit Bonusgut [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
 		<Italian>Raddoppia la velocità di produzione con [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Italian>
@@ -104,6 +104,18 @@
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Richiede [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PLOT_BLOCKED</Tag>
+		<English>[COLOR_WARNING_TEXT]Cannot be constructed on a %s1_Name![COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CHANGE_FEATURE</Tag>
+		<English>[COLOR_YELLOW]Will replace the %s1_Name with %s2_Name[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_YIELD_CHANGE_DESCRIP</Tag>
+		<English>Yield changes:</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STATE_RELIGION_PREREQ</Tag>
@@ -383,7 +395,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_DOUBLE_SPEED_WITH</Tag>
-		<English>Double Production Speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
+		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
 		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
 		<German>Doppelte Produktionsgeschwindigkeit mit Bonusgut [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
 		<Italian>Raddoppia la velocità di produzione con [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Italian>
@@ -399,7 +411,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_REQUIRES_ANYONE</Tag>
-		<English>[COLOR_WARNING_TEXT]Requires Someone to Create [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</English>
+		<English>[COLOR_WARNING_TEXT]Requires someone to create [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Quelqu'un est requis pour créer [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Jemand muss Folgendes erstellen: [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Richiede qualcuno per creare [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</Italian>
@@ -558,7 +570,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FIRST_RECEIVES</Tag>
-		<English>[ICON_BULLET]First to Discover Receives a [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</English>
+		<English>[ICON_BULLET]First to Discover receives a [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Faire cette découverte avant les autres octroie 1 [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Der erste Entdecker erhält eine Einheit: [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Il primo che scopre questa tecnologia riceve [NUM1:un:una:dei:delle] [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Italian>
@@ -648,7 +660,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOUBLE_SPEED</Tag>
-		<English>Double Production Speed with [LINK=%s1_BonusType]%s2_Bonus</English>
+		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus</English>
 		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
 		<German>Doppelte Produktionsgeschwindigkeit mit Bonusgut [LINK=%s1_BonusType]%2_Bonus[\LINK]</German>
 		<Italian>Il bonus [LINK=%s1_BonusType]%s2_Bonus[\LINK] raddoppia la velocità di produzione</Italian>

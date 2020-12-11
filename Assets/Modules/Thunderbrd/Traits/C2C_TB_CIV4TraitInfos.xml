@@ -28944,14 +28944,14 @@
 						<iYield>1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<ImprovementYieldChange>
+				<!-- <ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN_DEEP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</ImprovementYieldChange>
+				</ImprovementYieldChange> -->
 				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
@@ -29836,14 +29836,14 @@
 						<iYield>1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<ImprovementYieldChange>
+				<!-- <ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN_DEEP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</ImprovementYieldChange>
+				</ImprovementYieldChange> -->
 				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
@@ -30230,14 +30230,14 @@
 						<iYield>-1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<ImprovementYieldChange>
+				<!-- <ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN_DEEP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
 					</YieldChanges>
-				</ImprovementYieldChange>
+				</ImprovementYieldChange> -->
 				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
@@ -31097,14 +31097,14 @@
 						<iYield>-1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<ImprovementYieldChange>
+				<!-- <ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN_DEEP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
 					</YieldChanges>
-				</ImprovementYieldChange>
+				</ImprovementYieldChange> -->
 				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
