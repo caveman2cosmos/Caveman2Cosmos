@@ -408,7 +408,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ATOMPUNK_PEDIA</Tag>
 		<English>[COLOR_BONUS_TEXT]Atompunk[COLOR_REVERT] is a subgenre of speculative fiction that relates to the 1945-1965 or pre-digital period, including mid-20th century Modernism, the Atomic Age and Space Age. Its aesthetic describes a retro-futuristic vision of the world, with its tendency toward Populuxe and Raygun Gothic, exaggerated concern towards Communism bordering on paranoia, Neo-Soviet styling, underground cinema, Googie architecture, the Sputnik programme, superhero fiction, the rise of the US military/industrial powers and the fall-out of Chernobyl.</English>
-		<Italian>L'[COLOR_BONUS_TEXT]Atompunk[COLOR_REVERT] è un sottogenere della narrativa speculativa che si riferisce al periodo 1945-1965 o pre-digitale, compreso il Modernismo di metà XX secolo, l'Era atomica e l'Era spaziale. La sua estetica descrive una visione retro-futuristica del mondo, con la sua tendenza verso il Populuxe e il Raygun Gothic, la sua esagerata preoccupazione per il comunismo al limite della paranoia, lo stile neo-sovietico, il cinema underground, l'architettura Googie, il programma Sputnik, la narrativa sui supereroi, l'ascesa del complesso militare-industriale USA e l'incidente di Chernobyl.</Italian>
+		<Italian>L'[COLOR_BONUS_TEXT]Atompunk[COLOR_REVERT] è un sottogenere della narrativa fantascientifica che si riferisce al periodo 1945-1965 o pre-digitale, compreso il Modernismo di metà XX secolo, l'Era atomica e l'Era spaziale. La sua estetica descrive una visione retro-futuristica del mondo, con la sua tendenza verso il Populuxe e il Raygun Gothic, la sua esagerata preoccupazione per il comunismo al limite della paranoia, lo stile neo-sovietico, il cinema underground, l'architettura Googie, il programma Sputnik, la narrativa sui supereroi, l'ascesa del complesso militare-industriale USA e l'incidente di Chernobyl.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AUSTRALIAN</Tag>
@@ -736,6 +736,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BIOPUNK</Tag>
 		<English>Biopunk</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_BIOPUNK_PEDIA</Tag>
+		<English>[COLOR_BONUS_TEXT]Biopunk[COLOR_REVERT] is a subgenre of speculative fiction, emerged during the 1990s and focusing on the near-future unintended consequences of the biotechnology revolution, following the discovery of recombinant DNA. Biopunk fiction typically describes the struggles of individuals or groups, often the product of ruthless human experimentation, against a backdrop of totalitarian governments or megacorporations which misuse biotechnologies as means of social control or profiteering.</English>
+		<Italian>Il [COLOR_BONUS_TEXT]Biopunk[COLOR_REVERT] è un sottogenere della narrativa fantascientifica, emerso negli anni novanta del XX secolo e che si concentra sulle conseguenze indesiderate della imminente rivoluzione biotecnologica, dovuta alla scoperta del DNA ricombinante. La narrativa biopunk solitamente descrive le lotte di singoli individui o piccoli gruppi, spesso prodotti di sperimentazioni senza scrupoli sugli esseri umani, che combattono contro governi totalitari o megacorporazioni che usano impropriamente le biotecnologie come mezzi di controllo sociale o per ottenere profitti.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BISON</Tag>
