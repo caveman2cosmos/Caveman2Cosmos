@@ -1526,22 +1526,6 @@
 		<Spanish>Escala logarítmica</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGGRAPHSTAB_HOVER</Tag>
-		<English>When checked, displays graphs in BUG format.</English>
-		<French>Lorsque activé, affiche les graphiques et statistiques au format BUG.</French>
-		<German>Zeigt die Diagramme auf der entsprechenden Seite des Info-Bildschirms in einer übersichtlicheren Anordnung an.</German>
-		<Italian>Quando è selezionato, mostra la Scheda dei Grafici nel formato modificato del BUG Mod.</Italian>
-		<Spanish>Cuando se activa, muestra los gráficos y estadísticas en el formato BUG.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGGRAPHSTAB_TEXT</Tag>
-		<English>Graphs tab</English>
-		<French>Statistiques BUG</French>
-		<German>BUG Diagramme</German>
-		<Italian>Scheda Grafici</Italian>
-		<Spanish>Pestaña Gráficos</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGINFOWONDERSPLAYERCOLOR_HOVER</Tag>
 		<English>When checked, displays wonders on the BUG version of the Wonders tab using the owning player's color.</English>
 		<French>Lorsque activé, affiche les Merveilles en utilisant la couleur de joueur l'ayant construite (mode Onglet des Merveille de BUG).</French>
@@ -1556,22 +1540,6 @@
 		<German>Spielerfarben</German>
 		<Italian>Usa Colore del Giocatore</Italian>
 		<Spanish>Usar color del jugador</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGINFOWONDERS_HOVER</Tag>
-		<English>When checked, displays the BUG version of the Wonders tab.</English>
-		<French>Lorsque activé, Affiche la version de BUG de l'Onglet des Merveilles.</French>
-		<German>Zeigt die entsprechende Seite des Info-Bildschirms in einer übersichtlicheren Anordnung an</German>
-		<Italian>Quando è selezionato, mostra la Scheda delle Meraviglie nel formato modificato del BUG Mod.</Italian>
-		<Spanish>Cuando se activa, muestra la versión BUG de la pestaña de Maravillas.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGINFOWONDERS_TEXT</Tag>
-		<English>Wonders tab</English>
-		<French>Onglet Merveilles</French>
-		<German>BUG Wunder</German>
-		<Italian>Scheda Meraviglie</Italian>
-		<Spanish>Pestaña Maravillas</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGMA_HOVER</Tag>

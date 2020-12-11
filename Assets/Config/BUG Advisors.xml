@@ -32,10 +32,8 @@
 			<option id="BugMembersTab" key="Members" type="boolean" default="True" get="isMembers"/>
 
 			<!-- BUG Info Screen (F9) by Ruff_Hi -->
-			<option id="BugGraphsTab" key="Graphs" type="boolean" default="True" get="isGraphs"/>
 			<option id="BugGraphsLogScale" key="Log Scale" type="boolean" default="False" get="isGraphsLogScale"/>
 			<option id="BugStatsTab" key="Improvements" type="boolean" default="True" get="isShowImprovements"/>
-			<option id="BugInfoWonders" key="Wonders" type="boolean" default="True" get="isShowInfoWonders"/>
 			<option id="BugInfoWondersPlayerColor" key="Wonders Player Color" type="boolean" default="True" get="isWonderListUsePlayerColor"/>
 		</section>
 	</options>
