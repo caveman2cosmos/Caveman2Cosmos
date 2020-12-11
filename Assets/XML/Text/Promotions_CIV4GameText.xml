@@ -15407,7 +15407,7 @@
 		<Tag>TXT_KEY_PROMOTION_STAMPEDE_TEXT</Tag>
 		<English>[ICON_BULLET]Causes unit to fight until it or all defenders are dead.</English>
 		<French>[ICON_BULLET]L'unité combat jusqu'à ce qu'elle-même ou tous les défenseurs sont morts.</French>
-		<Italian>[ICON_BULLET]Costringe l'unità a combattere finchè muore, oppure sconfigge i difensori.</Italian>
+		<Italian>[ICON_BULLET]Costringe l'unità a combattere finché muore oppure sconfigge i difensori.</Italian>
 		<Polish>[ICON_BULLET]Powoduje, że jednostka walczy dopóki ona lub wszycy obrońcy nie zginą.</Polish>
 	</TEXT>
 	<TEXT>

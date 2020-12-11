@@ -4821,7 +4821,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHASER_PEDIA</Tag>
 		<English>The first hunting strategy created by humans was persistence hunting; catching prey by running it to the point of exhaustion. The animal would have to stop to lose heat through resting and panting, while the human could maintain body temperature by sweating and running at a slower but steady pace. When the animal stopped, the human could catch it and kill it. Cooperative hunters could also chase animals as a team, pitting their combined endurance against the animal alone.</English>
-		<Italian>La prima strategia di caccia create dagli uomini fu la caccia di resistenza: inseguire la preda finchè essa non era esausta. L'animale doveva fermarsi per perdere il calore, riposandosi ed ansimando, mentre l'uomo poteva mantenere il proprio calore corporeo con il sudore e correndo ad un ritmo più lento ma costante. Quando l'animale si fermava, l'uomo potva catturarlo ed ucciderlo. Inoltre i cacciatori potevano cooperare nell'inseguimento di un animale.</Italian>
+		<Italian>La prima strategia di caccia create dagli uomini fu la caccia di resistenza: inseguire la preda finché essa non era esausta. L'animale doveva fermarsi per perdere il calore, riposandosi e ansimando, mentre l'uomo poteva mantenere il proprio calore corporeo con il sudore e correndo a un ritmo più lento ma costante. Quando l'animale si fermava, l'uomo poteva catturarlo e ucciderlo. Inoltre i cacciatori potevano cooperare nell'inseguimento di un animale.</Italian>
 		<Polish>Polowanie - w gwarze myśliwskiej ogół czynności wykonywanych przez myśliwych z zachowaniem obowiązujących przepisów, tj. tropienie, ściganie, strzelanie i pozyskiwanie zwierzyny.</Polish>
 	</TEXT>
 	<TEXT>
@@ -18685,7 +18685,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_ONSLAUGHT</Tag>
 		<English>[ICON_BULLET]This unit attacks repeatedly until harmed.</English>
 		<French>[ICON_BULLET]Cette unité attaque sans s'arrêter jusqu'à ce qu'elle soit blessée.</French>
-		<Italian>[ICON_BULLET]Quest'unità continua ad attaccare finchè non è danneggiata.</Italian>
+		<Italian>[ICON_BULLET]Quest'unità continua ad attaccare finché non è danneggiata.</Italian>
 		<Polish>[ICON_BULLET]Jednostka będzie atakować póki nie otrzyma obrażeń.</Polish>
 	</TEXT>
 	<TEXT>
@@ -18699,7 +18699,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_ONSLAUGHT_SHORT</Tag>
 		<English>[ICON_BULLET]Attacks until damaged</English>
 		<French>[ICON_BULLET]Attaque jusqu'à être endommagé</French>
-		<Italian>[ICON_BULLET]Attacca finchè sano</Italian>
+		<Italian>[ICON_BULLET]Attacca finché non sia danneggiato</Italian>
 		<Polish>[ICON_BULLET]Atakuj póki nie otrzyma obrażeń</Polish>
 	</TEXT>
 	<TEXT>

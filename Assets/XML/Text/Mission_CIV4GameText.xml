@@ -294,14 +294,14 @@
 		<English>This unit will gather intelligence and not awaken until it reaches the maximum espionage bonus</English>
 		<French>Cette Unité va récolter des Informations et devenir à nouveau active lorsqu'elle aura atteint son bonus maximum d'espionnage.</French>
 		<German>Diese Einheit wird Informationen sammeln und nicht aufwachen bis sie ihr Maximum an Spionagepunkten erreicht hat</German>
-		<Italian>Quest'unità raccoglierà informazioni, e non si sveglierà finchè non avrà raggiunto il massimo bonus di spionaggio.</Italian>
+		<Italian>Quest'unità raccoglierà informazioni e non si riattiverà finché non avrà raggiunto il massimo bonus di spionaggio.</Italian>
 		<Spanish>Esta unidad recopilará información y no se activará hasta que alcance la máxima bonificación por espionaje.</Spanish>
 		<Polish>Jednostka będzie zbierać dane i nie obudzi się dopóki nie zbierze kompletnych danych(maksymalnego bonusu do szpiegostwa).</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ESTABLISH</Tag>
 		<English>Establish Base of Operations</English>
-		<French>Etablir une Base d'Opérations</French>
+		<French>Établir une Base d'Opérations</French>
 		<Polish>Utwórz Bazę Operacji</Polish>
 	</TEXT>
 	<TEXT>
@@ -676,7 +676,7 @@
 		<Tag>TXT_KEY_MISSION_WAIT_FOR_TECH_HELP</Tag>
 		<English>Allows selection of a desired discovery tech. The unit will sleep until that tech becomes available to research, and then will be consumed in researching it.</English>
 		<French>Permet à la sélection d'unité d'aider à la découvert d'une technologie. L'unité sera en veille jusqu'à ce que la technologie soit disponible pour la recherche, puis sera enlevée.</French>
-		<Italian>Permette la selezione di una tecnologia che si vuole ricercare. L'unità dormirà finchè quella tecnologia potrà essere ricercata, poi l'unità si consumerà ricercando la tecnologia.</Italian>
+		<Italian>Permette la selezione di una tecnologia che si vuole ricercare. L'unità non si riattiverà finché quella tecnologia potrà essere ricercata, poi l'unità si consumerà ricercando la tecnologia.</Italian>
 		<Spanish>Permite seleccionar la tecnología que se desea descubrir. La unidad dormirá hasta que dicha tecnología esté disponible, entonces la investigará y se consumirá.</Spanish>
 		<Polish>Pozwala zaznaczonej jednostce na późniejsze odkrycie technologii. Jednostka będzie uśpiona dopóki technologia nie będzie możliwa do wynalezienia. Gdy już będzie możliwe odkrycie danej technologii jednostka automatycznie zostanie wykorzystana do odkrycia jej.</Polish>
 	</TEXT>

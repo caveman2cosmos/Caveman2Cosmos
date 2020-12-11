@@ -2262,7 +2262,7 @@
 		<English>Send our congratulations for his work to improve science education.</English>
 		<French>Envoyez nos félicitations pour que son travail améliore l'enseignement de la science.</French>
 		<German>Senden Sie unsere Glückwünsche für seine Leistung, die wissenschaftliche Ausbildung zu verbessern.</German>
-		<Italian>Manda le nostre congratulazioni affinchè il suo lavoro migliori la formazione scientifica.</Italian>
+		<Italian>Manda le nostre congratulazioni affinché il suo lavoro migliori la formazione scientifica.</Italian>
 		<Spanish>Envíad nuestras felicitaciones por su trabajo para mejorar la formación científica.</Spanish>
 		<Polish>Wyślij gratulacje i podziękowania za jego wkład i pracę w polepszaniu edukacji obywateli.</Polish>
 	</TEXT>
@@ -7301,7 +7301,7 @@
 		<English>Factory workers in %s2_city have organized and walked off the job, protesting poor working conditions and demanding a pay increase. Workers in other industries have joined them in solidarity. The entire city will be paralyzed for as long as the general strike continues.</English>
 		<French>Les ouvriers de %s2_city ont organisé des grèves et ont marché dans les rues, protestant contre leurs mauvaises conditions de travail et exigeant une augmentation de salaire. Les ouvriers dans d'autres industries les ont rejoints par solidarité. La ville entière sera paralysée tant que la grève continue.</French>
 		<German>Fabrikarbeiter in %s2_city haben sich organisiert und die Arbeit eingestellt, sie protestieren gegen schlechte Arbeitsbedingungen und verlangen eine Lohnerhöhung. Arbeiter aus anderen Industriezweigen haben sich ihnen solidarisch angeschlossen. Die gesamte Stadt ist so lange gelähmt, wie der Generalstreik anhält.</German>
-		<Italian>Gli operai delle fabbriche di %s2_city si sono organizzati e se ne sono andati dal lavoro, protestando contro le cattive condizioni di lavoro ed chiedendo un aumento del salario. Gli operai di altre industrie si sono uniti a loro per solidarietà. L'intera città sarà paralizzata per finchè lo sciopero generale continuerà.</Italian>
+		<Italian>Gli operai delle fabbriche di %s2_city si sono organizzati e se ne sono andati dal lavoro, protestando contro le cattive condizioni di lavoro ed chiedendo un aumento del salario. Gli operai di altre industrie si sono uniti a loro per solidarietà. L'intera città sarà paralizzata per finché lo sciopero generale continuerà.</Italian>
 		<Spanish>Los trabajadores de las fábricas en %s2_city se han largado del trabajo y se han organizado, protestando contra las pobres condiciones de trabajo y exigiendo un aumento de su salario. Los trabajadores de otras industrias se han unido a ellos en solidaridad. La ciudad entera estará paralizada mientras continúe la huelga general.</Spanish>
 		<Polish>Robotnicy z miejscowej fabryki w mieście %s2_city zorganizowali się i opuścili miejsca pracy, protestując przeciw złym warunkom pracy i domagając się podwyżek płac. Pracownicy innych zakładów solidarnie przyłączyli się do strajku. Wygląda na to, że miasto będzie sparaliżowane do czasu odwołania strajku generalnego.</Polish>
 	</TEXT>
@@ -8068,7 +8068,7 @@
 		<English>They will be remembered so long as our new monuments stand.</English>
 		<French>On se souviendra d'eux tant que ces monuments tiendront debout.</French>
 		<German>Man wird sich so lange an sie erinnern, wie unser neues Monument steht.</German>
-		<Italian>Verranno ricordati, finchè questo monumento resisterà alla prova del tempo.</Italian>
+		<Italian>Verranno ricordati fin quando questo monumento resisterà alla prova del tempo.</Italian>
 		<Spanish>Serán recordados mientras los nuevos monumentos aguanten.</Spanish>
 		<Polish>Będą zapamiętani tak długo jak nasze nowe pomniki będą stać.</Polish>
 	</TEXT>
@@ -8077,7 +8077,7 @@
 		<English>The new additions to our monuments will continue to awe the locals.</English>
 		<French>Ces ajouts à nos Monuments vont continuer de remplir d'effroi les habitants.</French>
 		<German>Die neue Ergänzung unserer Monumente wird die Einheimischen weiter beeindrucken.</German>
-		<Italian>Le nuove aggiunte ai monumenti continueranno ad impressionare gli abitanti.</Italian>
+		<Italian>Le nuove aggiunte ai monumenti continueranno a impressionare gli abitanti.</Italian>
 		<Spanish>Los nuevos monumentos seguirán impresionando a los locales.</Spanish>
 		<Polish>Nowe dodatki do naszych pomników zadziwia lokalnych mieszkańców.</Polish>
 	</TEXT>
@@ -8281,7 +8281,7 @@
 		<English>Labor negotiations in %s2_city drag on. Union leaders vow to continue strike "for as long as it takes."</English>
 		<French>Les Négociations syndicales traînent à %s2_city. Les responsables des syndicats sont prêts à continuer la grève "aussi longtemps qu'elle sera nécessaire."</French>
 		<German>Die Streikverhandlungen in %s2_city gehen weiter. Gewerkschaftsführer versprechen, so lange weiter zu streiken "wie es dauert".</German>
-		<Italian>Le trattative proseguono nella città di %s2_city. I capi del sindacato promettono di continuare lo sciopero "finchè sarà necessario".</Italian>
+		<Italian>Le trattative proseguono nella città di %s2_city. I capi del sindacato promettono di continuare lo sciopero "finché sarà necessario".</Italian>
 		<Spanish>Las negociaciones sindicales se prolongan en %s2_city. Los líderes de los sindicatos prometen seguir con la huelga "todo el tiempo que haga falta."</Spanish>
 		<Polish>W mieście %s2_city trwają negocjacje z pracownikami. Władze związkowe zarzekają się, że będą kontynuować strajk "do skutku".</Polish>
 	</TEXT>
@@ -8494,14 +8494,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WOUNDED_BARBARIAN_3</Tag>
 		<English>Let's help him until he is completely recovered in exchange of some information and gold. If the other tribes ask about him, refuse to talk.</English>
-		<Italian>Aiutiamolo finchè non è guarito completamente, in cambio di informazioni e oro. Se l'altra tribù chiede qualcosa, rifiutati di parlare.</Italian>
+		<Italian>Aiutiamolo finché non è guarito completamente, in cambio di informazioni e oro. Se l'altra tribù chiede qualcosa, rifiutati di parlare.</Italian>
 		<Spanish>Ayudémoslo hasta que se recupere por completo, a cambio de algo de información y oro. Si las otras tribus preguntan por él, negaos a hablar del tema.</Spanish>
 		<Polish>Pomóżcie mu w zamian za informacji i złoto. Jeśli inne plemię o niego zapyta odmówcie odpowiedzi.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WOUNDED_BARBARIAN_4</Tag>
 		<English>Let's help him until he is completely recovered in exchange of some information and military help. If the other tribes ask about him, refuse to talk.</English>
-		<Italian>Aiutiamolo finchè non è guarito completamente, in cambio di informazioni e aiuto militare. Se l'altra tribù chiede qualcosa, rifiutati di parlare.</Italian>
+		<Italian>Aiutiamolo finché non è guarito completamente, in cambio di informazioni e aiuto militare. Se l'altra tribù chiede qualcosa, rifiutati di parlare.</Italian>
 		<Spanish>Ayudémoslo hasta que se recupere por completo, a cambio de información y ayuda militar. Si las otras tribus preguntan por él, negaos a hablar del tema.</Spanish>
 		<Polish>Pomóżcie mu w zamian za informacji i pomoc militarną. Jeśli inne plemię o niego zapyta odmówcie odpowiedzi.</Polish>
 	</TEXT>

@@ -8092,8 +8092,8 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_MINIMUM_DEFENSE_LEVEL_HOVER</Tag>
 		<English>Enemy units may not attack city until Defense is reduced below %d1%%</English>
-		<French>Les Unités ennemies ne peuvent attaque la ville tant que la défense n'est pas en dessous de %d1%%</French>
-		<Italian>Le unità nemiche non possono attaccare la città finchè le difese non sono ridotte sotto il %d1%%</Italian>
+		<French>Les unités ennemies ne peuvent attaque la ville tant que la défense n'est pas en dessous de %d1%%</French>
+		<Italian>Le unità nemiche non possono attaccare la città finché le difese non sono ridotte sotto il %d1%%</Italian>
 		<Polish>Wrogie jednostki nie będą mogły zaatakować miasta jeśli obrona miasta nie spadnie poniżej: %d1%%</Polish>
 	</TEXT>
 	<TEXT>
