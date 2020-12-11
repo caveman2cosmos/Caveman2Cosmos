@@ -56679,7 +56679,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WOOD_GATHERER</BuildType>
+					<BuildType>BUILD_WOOD_GATHERER_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -56695,19 +56695,19 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_NOMADIC_HERD</BuildType>
+					<BuildType>BUILD_NOMADIC_HERD_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
+					<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAPE_GATHERING_CAMP</BuildType>
+					<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

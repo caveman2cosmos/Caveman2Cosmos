@@ -867,8 +867,8 @@
 		</BuildInfo>
 		<!-- Nomadic Herd (Kill) -> Pasture -->
 		<BuildInfo>
-			<Type>BUILD_NOMADIC_HERD</Type>
-			<Description>TXT_KEY_BUILD_NOMADIC_HERD</Description>
+			<Type>BUILD_NOMADIC_HERD_KILL</Type>
+			<Description>TXT_KEY_BUILD_NOMADIC_HERD_KILL</Description>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<iTime>300</iTime>
 			<iCost>10</iCost>
@@ -1187,8 +1187,8 @@
 		</BuildInfo>
 		<!-- Fruit Gathering Camp (Kill) -> Fruit Picker -->
 		<BuildInfo>
-			<Type>BUILD_FRUIT_GATHERING_CAMP</Type>
-			<Description>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP</Description>
+			<Type>BUILD_FRUIT_GATHERING_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP_KILL</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
@@ -1232,8 +1232,8 @@
 		</BuildInfo>
 		<!-- Grape Gathering Camp (Kill) -> Grape Picker -->
 		<BuildInfo>
-			<Type>BUILD_GRAPE_GATHERING_CAMP</Type>
-			<Description>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP</Description>
+			<Type>BUILD_GRAPE_GATHERING_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP_KILL</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
@@ -1385,8 +1385,8 @@
 		</BuildInfo>
 		<!-- Plant Gathering Camp (Kill) -> Plant Picking Camp -->
 		<BuildInfo>
-			<Type>BUILD_PLANT_GATHERING_CAMP</Type>
-			<Description>TXT_KEY_BUILD_PLANT_GATHERING_CAMP</Description>
+			<Type>BUILD_PLANT_GATHERING_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_PLANT_GATHERING_CAMP_KILL</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
@@ -3857,8 +3857,8 @@
 		</BuildInfo>
 		<!-- Wood Gatherer (Kill) -> Lumberjack -->
 		<BuildInfo>
-			<Type>BUILD_WOOD_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_WOOD_GATHERER</Description>
+			<Type>BUILD_WOOD_GATHERER_KILL</Type>
+			<Description>TXT_KEY_BUILD_WOOD_GATHERER_KILL</Description>
 			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
