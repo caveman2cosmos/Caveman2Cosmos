@@ -69,7 +69,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_AGGRESSIVE</Tag>
 		<English>Aggressive Promotion Line</English>
-		<French>Spécialisation Aggressivité</French>
+		<French>Spécialisation Agressivité</French>
 		<German>Aggressiv</German>
 		<Italian>Aggressivo</Italian>
 		<Polish>Linia Promocji: Agresywny</Polish>
@@ -84,7 +84,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_AIR_DEFENSE</Tag>
 		<English>Air Defense Promotion Line</English>
-		<French>Spécialisation Defense Aerienne</French>
+		<French>Spécialisation Defense Aérienne</French>
 		<Italian>Difesa aerea</Italian>
 		<Polish>Linia Promocji: Obrona Przeciwlotnicza</Polish>
 	</TEXT>
@@ -140,7 +140,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ARMED_GUARD</Tag>
-		<English>Armed Guard Promotionline</English>
+		<English>Armed Guard Promotion Line</English>
 		<French>Spécialisation Garde Armé</French>
 		<German>Bewaffneter Wächter</German>
 	</TEXT>
@@ -153,7 +153,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ARROW_BARRAGE</Tag>
-		<English>Arrow Barrage Promotionline</English>
+		<English>Arrow Barrage Promotion Line</English>
 		<French>Spécialisation Barrage de flêches</French>
 		<Polish>Linia Promocji: Grad Strzał</Polish>
 	</TEXT>
@@ -174,12 +174,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BACKSTAB</Tag>
-		<English>Backstab Promotionline</English>
+		<English>Backstab Promotion Line</English>
 		<French>Spécialisation Poignard dans le dos</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BACK_DOWN</Tag>
-		<English>Back Down Promotionline</English>
+		<English>Back Down Promotion Line</English>
 		<French>Spécialisation Repli</French>
 		<German>Rückzug</German>
 		<Italian>Ritirata</Italian>
@@ -232,7 +232,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BOLT_PUNCH</Tag>
-		<English>Bolt Punch Promotionline</English>
+		<English>Bolt Punch Promotion Line</English>
 		<French>Spécialisation Grenaille</French>
 		<Polish>Linia Promocji: Bełty Przebijające</Polish>
 	</TEXT>
@@ -245,7 +245,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BOTTLENECK</Tag>
-		<English>Bottleneck Promotionline</English>
+		<English>Bottleneck Promotion Line</English>
 		<French>Spécialisation Goulot</French>
 		<German>Flaschenhals</German>
 		<Polish>Linia Promocji: Wąskie gardło</Polish>
@@ -258,7 +258,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_ANTI_AIR</Tag>
-		<English>Build Up (Anti-Air) Promotionline</English>
+		<English>Build Up (Anti-Air) Promotion Line</English>
 		<French>Spécialisation Défense Anti-Aérienne</French>
 		<Polish>Linia Promocji: Koncentracja (Przeciwlotnicze)</Polish>
 	</TEXT>
@@ -269,7 +269,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_BLEND_INTO_CROWD</Tag>
-		<English>Build Up (Blend Into Crowd) Promotionline</English>
+		<English>Build Up (Blend Into Crowd) Promotion Line</English>
 		<French>Spécialisation (Caché dans la foule)</French>
 	</TEXT>
 	<TEXT>
@@ -279,7 +279,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CHASE_PLANS</Tag>
-		<English>Build Up (Chase Plans) Promotionline</English>
+		<English>Build Up (Chase Plans) Promotion Line</English>
 		<French>Spécialisation Stratégie de chasse</French>
 		<Polish>Linia Promocji: Koncentracja (Plany pościgu)</Polish>
 	</TEXT>
@@ -290,7 +290,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CHECKPOINTS</Tag>
-		<English>Build Up (Checkpoints) Promotionline</English>
+		<English>Build Up (Checkpoints) Promotion Line</English>
 		<French>Spécialisation (Checkpoints)</French>
 		<German>(Training) Personenkontrolle</German>
 	</TEXT>
@@ -302,7 +302,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CLEVERNESS</Tag>
-		<English>Build Up (Cleverness) Promotionline</English>
+		<English>Build Up (Cleverness) Promotion Line</English>
 		<French>Spécialisation Ruse</French>
 	</TEXT>
 	<TEXT>
@@ -312,7 +312,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CONCEALMENT</Tag>
-		<English>Build Up (Concealment) Promotionline</English>
+		<English>Build Up (Concealment) Promotion Line</English>
 		<French>Spécialisation (Dissimulation )</French>
 	</TEXT>
 	<TEXT>
@@ -322,7 +322,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CONTROL_CENTER</Tag>
-		<English>Build Up (Control Center) Promotionline</English>
+		<English>Build Up (Control Center) Promotion Line</English>
 		<French>Spécialisation Centre de contrôle</French>
 		<Polish>Linia Promocji: Koncentracja (Centrum kontroli)</Polish>
 	</TEXT>
@@ -333,7 +333,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CRIME_FIGHTING</Tag>
-		<English>Build Up (Crime Fighting) Promotionline</English>
+		<English>Build Up (Crime Fighting) Promotion Line</English>
 		<French>Spécialisation Anti-Criminalité</French>
 		<German>(Training) Verbrechensbekämpfung</German>
 		<Polish>Linia Promocji: Koncentracja (Walka z przestępczością)</Polish>
@@ -347,7 +347,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_DISEASE_CONTROL</Tag>
-		<English>Build Up (Disease Control) Promotionline</English>
+		<English>Build Up (Disease Control) Promotion Line</English>
 		<French>Spécialisation Contrôle sanitaire</French>
 		<Polish>Linia Promocji: Koncentracja (Kontrola chorób)</Polish>
 	</TEXT>
@@ -359,7 +359,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_DIVER_DEPLOYMENT</Tag>
-		<English>Build Up (Diver Deployment) Promotionline</English>
+		<English>Build Up (Diver Deployment) Promotion Line</English>
 		<French>Spécialisation Déploiement de plongeurs</French>
 		<Polish>Linia Promocji: Koncentracja (Rozlokowani nurkowie)</Polish>
 	</TEXT>
@@ -370,7 +370,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_ESCAPE_PLANS</Tag>
-		<English>Build Up (Escape Plans) Promotionline</English>
+		<English>Build Up (Escape Plans) Promotion Line</English>
 		<French>Spécialisation Echappatoire</French>
 		<Polish>Linia Promocji: Koncentracja (Plany ucieczki)</Polish>
 	</TEXT>
@@ -381,7 +381,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FIELD_HOSPITAL</Tag>
-		<English>Build Up (Field Hospital) Promotionline</English>
+		<English>Build Up (Field Hospital) Promotion Line</English>
 		<French>Spécialisation Hôpital de campagne</French>
 		<Polish>Linia Promocji: Koncentracja (Szpital polowy)</Polish>
 	</TEXT>
@@ -392,7 +392,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FIELD_MECHANIC</Tag>
-		<English>Build Up (Field Mechanic) Promotionline</English>
+		<English>Build Up (Field Mechanic) Promotion Line</English>
 		<French>Spécialisation Réparations mécaniques</French>
 		<Polish>Linia Promocji: Koncentracja (Polowy mechanik)</Polish>
 	</TEXT>
@@ -403,7 +403,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FIELD_VET</Tag>
-		<English>Build Up (Field Veterinarian) Promotionline</English>
+		<English>Build Up (Field Veterinarian) Promotion Line</English>
 		<French>Spécialisation Vétérinaire de terrain</French>
 		<Polish>Linia Promocji: Koncentracja (Polowy weterynarz)</Polish>
 	</TEXT>
@@ -414,7 +414,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FORTIFY</Tag>
-		<English>Build Up (Fortifications) Promotionline</English>
+		<English>Build Up (Fortifications) Promotion Line</English>
 		<French>Spécialisation Fortifications</French>
 		<German>(Training) Befestigung</German>
 		<Polish>Linia Promocji: Koncentracja (Fortyfikacje)</Polish>
@@ -427,7 +427,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_HEALTH_CARE</Tag>
-		<English>Build Up (Health Care) Promotionline</English>
+		<English>Build Up (Health Care) Promotion Line</English>
 		<French>Spécialisation en soins</French>
 		<Polish>Linia Promocji: Koncentracja (Służba zdrowia)</Polish>
 	</TEXT>
@@ -438,7 +438,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_INSPECTIONS</Tag>
-		<English>Build Up (Inspections) Promotionline</English>
+		<English>Build Up (Inspections) Promotion Line</English>
 		<French>Spécialisation Inspection</French>
 		<German>(Training) Überprüfung</German>
 	</TEXT>
@@ -450,7 +450,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT</Tag>
-		<English>Build Up (Lie in Wait) Promotionline</English>
+		<English>Build Up (Lie in Wait) Promotion Line</English>
 		<French>Spécialisation Retranchement (Intrigue)</French>
 		<German>(Training) Auflauern</German>
 	</TEXT>
@@ -462,7 +462,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_MAINTENANCE_HANGAR</Tag>
-		<English>Build Up (Maintenance Hangar) Promotionline</English>
+		<English>Build Up (Maintenance Hangar) Promotion Line</English>
 		<French>Spécialisation en Maintenance aérienne</French>
 		<Polish>Linia Promocji: Koncentracja (Hangar obsługi)</Polish>
 	</TEXT>
@@ -473,7 +473,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_OBSERVATION</Tag>
-		<English>Build Up (Observation) Promotionline</English>
+		<English>Build Up (Observation) Promotion Line</English>
 		<French>Spécialisation (Observation)</French>
 	</TEXT>
 	<TEXT>
@@ -483,7 +483,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_PATRIOTISM</Tag>
-		<English>Build Up (Patriotism) Promotionline</English>
+		<English>Build Up (Patriotism) Promotion Line</English>
 		<French>Spécialisation Retranchement (Patriotisme)</French>
 	</TEXT>
 	<TEXT>
@@ -493,7 +493,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_RANGE_TARGET</Tag>
-		<English>Build Up (Range Targeting) Promotionline</English>
+		<English>Build Up (Range Targeting) Promotion Line</English>
 		<French>Spécialisation Attaque à distance</French>
 		<Polish>Linia Promocji: Koncentracja (Strzelnica)</Polish>
 	</TEXT>
@@ -504,7 +504,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_RESTFUL_RECOVERY</Tag>
-		<English>Build Up (Restful Recovery) Promotionline</English>
+		<English>Build Up (Restful Recovery) Promotion Line</English>
 		<French>Spécialisation Récupération</French>
 		<German>(Training) Wiederherstellung</German>
 		<Polish>Linia Promocji: Koncentracja (Spokojny odpoczynek)</Polish>
@@ -517,7 +517,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_REVOLUTIONARY_SENTIMENT</Tag>
-		<English>Build Up (Revolutionary Sentiment) Promotionline</English>
+		<English>Build Up (Revolutionary Sentiment) Promotion Line</English>
 		<French>Spécialisation Retranchement (Sentiment Révolutionnaire)</French>
 	</TEXT>
 	<TEXT>
@@ -527,7 +527,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SCHEMES</Tag>
-		<English>Build Up (Schemes) Promotionline</English>
+		<English>Build Up (Schemes) Promotion Line</English>
 		<French>Spécialisation Retranchement (Coup monté)</French>
 	</TEXT>
 	<TEXT>
@@ -547,7 +547,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SET_FOR_CHARGE</Tag>
-		<English>Build Up (Set For Charge) Promotionline</English>
+		<English>Build Up (Set For Charge) Promotion Line</English>
 		<French>Spécialisation contrer un Assaut monté</French>
 		<Polish>Linia Promocji: Koncentracja (Ładunki wybuchowe)</Polish>
 	</TEXT>
@@ -558,7 +558,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_TEACH</Tag>
-		<English>Build Up (Teaching) Promotionline</English>
+		<English>Build Up (Teaching) Promotion Line</English>
 		<French>Spécialisation Instruction</French>
 		<Polish>Linia Promocji: Koncentracja (Nauczanie)</Polish>
 	</TEXT>
@@ -569,7 +569,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_TERRITORIAL_VIGILANCE</Tag>
-		<English>Build Up (Territorial Vigilance) Promotionline</English>
+		<English>Build Up (Territorial Vigilance) Promotion Line</English>
 		<French>Spécialisation (Contrôle du Territoire)</French>
 	</TEXT>
 	<TEXT>
@@ -579,7 +579,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_TRAP_HUNTING</Tag>
-		<English>Build Up (Trap Hunting) Promotionline</English>
+		<English>Build Up (Trap Hunting) Promotion Line</English>
 		<French>Spécialisation pose de pièges</French>
 		<Polish>Linia Promocji: Koncentracja (Pułapki)</Polish>
 	</TEXT>
@@ -590,7 +590,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BULLY</Tag>
-		<English>Bully Promotionline</English>
+		<English>Bully Promotion Line</English>
 		<French>Spécialisation Brute</French>
 		<German>Einschüchtern</German>
 		<Polish>Linia Promocji: Tyran</Polish>
@@ -605,12 +605,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUSHWHACK</Tag>
-		<English>Bushwhack Promotionline</English>
+		<English>Bushwhack Promotion Line</English>
 		<French>Spécialisation Débroussaillage</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CAUTIOUS</Tag>
-		<English>Cautious Promotionline</English>
+		<English>Cautious Promotion Line</English>
 		<French>Spécialisation Prudence</French>
 		<German>Obacht</German>
 		<Italian>Cauto</Italian>
@@ -633,7 +633,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CHASE</Tag>
-		<English>Chase Promotionline</English>
+		<English>Chase Promotion Line</English>
 		<French>Spécialisation Poursuite</French>
 		<German>Verfolgungsjagd</German>
 		<Italian>Inseguitore</Italian>
@@ -723,7 +723,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CONNIVING</Tag>
-		<English>Conniving Promotionline</English>
+		<English>Conniving Promotion Line</English>
 		<French>Spécialisation Connivence</French>
 	</TEXT>
 	<TEXT>
@@ -747,7 +747,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CRACKDOWN</Tag>
-		<English>Crackdown Promotionline</English>
+		<English>Crackdown Promotion Line</English>
 		<French>Spécialisation Répression</French>
 		<German>Razzia</German>
 	</TEXT>
@@ -772,7 +772,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DARING_ESCAPE</Tag>
-		<English>Daring Escape Promotionline</English>
+		<English>Daring Escape Promotion Line</English>
 		<French>Spécialisation Evasion</French>
 		<Polish>Linia Promocji: Brawurowa Ucieczka</Polish>
 	</TEXT>
@@ -792,7 +792,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DECOYS</Tag>
-		<English>Decoys Promotionline</English>
+		<English>Decoys Promotion Line</English>
 		<French>Spécialisation Leurre</French>
 		<German>Lockvogel</German>
 	</TEXT>
@@ -820,14 +820,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DISEASE_CONTROL</Tag>
-		<English>Disease Control Promotionline</English>
+		<English>Disease Control Promotion Line</English>
 		<French>Spécialisation Controle de maladies</French>
 		<Italian>Controllo malattie</Italian>
 		<Polish>Linia Promocji: Kontrola Chorób</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DIVINE_MIGHT</Tag>
-		<English>Divine Might Promotionline</English>
+		<English>Divine Might Promotion Line</English>
 		<French>Spécialisation Puissance Divine</French>
 		<German>Göttliche Macht</German>
 		<Polish>Linia Promocji: Boska Moca</Polish>
@@ -849,7 +849,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EDUCATE</Tag>
-		<English>Educate Promotionline</English>
+		<English>Educate Promotion Line</English>
 		<French>Spécialisation Education</French>
 		<German>Unterrichten</German>
 		<Polish>Linia Promocji: Wykształcony</Polish>
@@ -863,14 +863,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ELITE_MIGHT</Tag>
-		<English>Elite Might Promotionline</English>
+		<English>Elite Might Promotion Line</English>
 		<French>Spécialisation Unité d'Elite</French>
 		<German>Elitäre Stärke</German>
 		<Polish>Linia Promocji: Elitarna Moc</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ENCLOSE</Tag>
-		<English>Enclose Promotionline</English>
+		<English>Enclose Promotion Line</English>
 		<French>Spécialisation Enclave</French>
 		<German>Einschließen</German>
 	</TEXT>
@@ -890,13 +890,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ENTRAPMENT</Tag>
-		<English>Ensnare Promotionline</English>
+		<English>Ensnare Promotion Line</English>
 		<French>Spécialisation Piège</French>
 		<Polish>Linia Promocji: Usidlić</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EPIC_MIGHT</Tag>
-		<English>Epic Might Promotionline</English>
+		<English>Epic Might Promotion Line</English>
 		<French>Spécialisation Force Epique</French>
 		<German>Monumentale Stärke</German>
 		<Polish>Linia Promocji: Epicka Moc</Polish>
@@ -935,7 +935,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EXCEPTIONAL_MIGHT</Tag>
-		<English>Exceptional Might Promotionline</English>
+		<English>Exceptional Might Promotion Line</English>
 		<French>Spécialisation Force Exceptionelle</French>
 		<German>Außergewöhnliche Stärke</German>
 		<Polish>Linia Promocji: Wyjątkowa Moc</Polish>
@@ -989,7 +989,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FIGHT_THE_POWER</Tag>
-		<English>Fight the Power Promotionline</English>
+		<English>Fight the Power Promotion Line</English>
 		<French>Spécialisation Contre le Pouvoir</French>
 	</TEXT>
 	<TEXT>
@@ -1008,14 +1008,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FIRST_AID_ANIMALS</Tag>
-		<English>First Aid (Animals) Promotionline</English>
+		<English>First Aid (Animals) Promotion Line</English>
 		<French>Spécialisation Premiers secours (Animaux)</French>
 		<German>Erste Hilfe (Tiere)</German>
 		<Polish>Linia Promocji: Pierwsza Pomoc (zwierzęta)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FIRST_AID_PEOPLE</Tag>
-		<English>First Aid (People) Promotionline</English>
+		<English>First Aid (People) Promotion Line</English>
 		<French>Spécialisation Premiers secours (Humains)</French>
 		<German>Erste Hilfe (Menschen)</German>
 		<Polish>Linia Promocji: Pierwsza Pomoc (ludzie)</Polish>
@@ -1037,7 +1037,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FOMENT</Tag>
-		<English>Foment Promotionline</English>
+		<English>Foment Promotion Line</English>
 		<French>Spécialisation Incitation</French>
 	</TEXT>
 	<TEXT>
@@ -1198,7 +1198,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_HUNTING_STRIKE</Tag>
-		<English>Hunting Strike Promotionline</English>
+		<English>Hunting Strike Promotion Line</English>
 		<French>Spécialisation Raid de Chasse</French>
 	</TEXT>
 	<TEXT>
@@ -1265,7 +1265,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_INSPIRE</Tag>
-		<English>Inspire Promotionline</English>
+		<English>Inspire Promotion Line</English>
 		<French>Spécialisation Inspiration</French>
 	</TEXT>
 	<TEXT>
@@ -1303,7 +1303,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_LEAD_STORM</Tag>
-		<English>Lead Storm Promotionline</English>
+		<English>Lead Storm Promotion Line</English>
 		<French>Spécialisation Tempête de plomb</French>
 		<Polish>Linia Promocji: Deszcz Ołowiu</Polish>
 	</TEXT>
@@ -1330,7 +1330,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_LONG_ARM</Tag>
-		<English>Long Arm Promotionline</English>
+		<English>Long Arm Promotion Line</English>
 		<French>Spécialisation Bras Long</French>
 		<German>Langer Arm</German>
 	</TEXT>
@@ -1399,7 +1399,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MIGHT</Tag>
-		<English>Might Promotionline</English>
+		<English>Might Promotion Line</English>
 		<French>Spécialisation Puissance</French>
 		<German>Stärke</German>
 	</TEXT>
@@ -1454,7 +1454,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_NON_LETHAL_FORCE</Tag>
-		<English>Non-Lethal Force Promotionline</English>
+		<English>Non-Lethal Force Promotion Line</English>
 		<French>Spécialisation Armes non-léthales</French>
 		<German>Am Leben lassen</German>
 		<Polish>Linia Promocji: Nie-Śmiercionośny</Polish>
@@ -1558,12 +1558,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_POUNCE</Tag>
-		<English>Pounce Promotionline</English>
+		<English>Pounce Promotion Line</English>
 		<French>Spécialisation Déferlement</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_POWER_BEAM</Tag>
-		<English>Power Beam Promotionline</English>
+		<English>Power Beam Promotion Line</English>
 		<French>Spécialisation Rayon puissant</French>
 		<Polish>Linia Promocji: Moc Wiązki</Polish>
 	</TEXT>
@@ -1576,7 +1576,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_PREDATORIAL_BLOODLUST</Tag>
-		<English>Predatorial Bloodlust Promotionline</English>
+		<English>Predatorial Bloodlust Promotion Line</English>
 		<French>Spécialisation Soif de sang</French>
 		<Polish>Linia Promocji: Żądza Krwi Drapieżnika</Polish>
 	</TEXT>
@@ -1604,7 +1604,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_PYROTECHNICS</Tag>
-		<English>Pyrotechnics Promotionline</English>
+		<English>Pyrotechnics Promotion Line</English>
 		<French>Spécialisation Pyrotechnique</French>
 		<Polish>Linia Promocji: Pirotechnika</Polish>
 	</TEXT>
@@ -1618,19 +1618,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_RAIN_OF_BOLTS</Tag>
-		<English>Rain of Bolts Promotionline</English>
+		<English>Rain of Bolts Promotion Line</English>
 		<French>Spécialisation Pluie de carreaux</French>
 		<Polish>Linia Promocji: Deszcz Strzał</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_RAM_SMASH</Tag>
-		<English>Ram Smash Promotionline</English>
+		<English>Ram Smash Promotion Line</English>
 		<French>Spécialisation Ecrasement</French>
 		<Polish>Linia Promocji: Uderzenie Tarana</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_RAM_THRUST</Tag>
-		<English>Ram Thrust Promotionline</English>
+		<English>Ram Thrust Promotion Line</English>
 		<French>Spécialisation Renversement</French>
 		<Polish>Linia Promocji: Pchnięcie Tarana</Polish>
 	</TEXT>
@@ -1650,7 +1650,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_RECOVER_TECH</Tag>
-		<English>Recover (Tech) Promotionline</English>
+		<English>Recover (Tech) Promotion Line</English>
 		<French>Spécialisation Récupération (Tech)</French>
 		<German>Instandsetzung (Technologie)</German>
 		<Polish>Linia Promocji: Odzyskaj (tech)</Polish>
@@ -1670,21 +1670,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_REPAIR_AIRCRAFT</Tag>
-		<English>Repair (Aircraft) Promotionline</English>
+		<English>Repair (Aircraft) Promotion Line</English>
 		<French>Spécialisation Réparation (Avions)</French>
 		<German>Reparatur (Flugzeuge)</German>
 		<Polish>Linia Promocji: Naprawa (samoloty)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_REPAIR_MECHANICAL</Tag>
-		<English>Repair (Mechanical) Promotionline</English>
+		<English>Repair (Mechanical) Promotion Line</English>
 		<French>Spécialisation Réparation (Véhicules)</French>
 		<German>Reparatur (Maschinen)</German>
 		<Polish>Linia Promocji: Naprawa (mechaniczne)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_REPAIR_NAVAL</Tag>
-		<English>Repair (Naval) Promotionline</English>
+		<English>Repair (Naval) Promotion Line</English>
 		<French>Spécialisation Réparation (Navires)</French>
 		<German>Reparatur (Schiffe)</German>
 		<Polish>Linia Promocji: Naprawa (okręty)</Polish>
@@ -1706,7 +1706,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ROLLING_THUNDER</Tag>
-		<English>Rolling Thunder Promotionline</English>
+		<English>Rolling Thunder Promotion Line</English>
 		<French>Spécialisation Motard</French>
 		<Polish>Linia Promocji: Uderzenie Pioruna</Polish>
 	</TEXT>
@@ -1720,7 +1720,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SAVAGE_BEAST</Tag>
-		<English>Savage Beast Promotionline</English>
+		<English>Savage Beast Promotion Line</English>
 		<French>Spécialisation Bête sauvage</French>
 		<Polish>Linia Promocji: Dzika Bestia</Polish>
 	</TEXT>
@@ -1733,7 +1733,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SCORCHED_EARTH</Tag>
-		<English>Scorched Earth Promotionline</English>
+		<English>Scorched Earth Promotion Line</English>
 		<French>Spécialisation Terre brûlée</French>
 		<Polish>Linia Promocji: Spalona Ziemia</Polish>
 	</TEXT>
@@ -1788,14 +1788,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SELF_HEAL</Tag>
-		<English>Self Heal Promotionline</English>
+		<English>Self Heal Promotion Line</English>
 		<French>Spécialisation Guérison Auto.</French>
 		<German>Selbstheilung</German>
 		<Polish>Linia Promocji: Samoleczenie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SELF_REPAIR</Tag>
-		<English>Self Repair Promotionline</English>
+		<English>Self Repair Promotion Line</English>
 		<French>Spécialisation Réparation Auto.</French>
 		<Polish>Linia Promocji: Samonaprawa</Polish>
 	</TEXT>
@@ -1839,7 +1839,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SHRAPNEL_SHOWER</Tag>
-		<English>Shrapnel Shower Promotionline</English>
+		<English>Shrapnel Shower Promotion Line</English>
 		<French>Spécialisation Pluie d'éclats</French>
 		<Polish>Linia Promocji: Deszcze Odłamków</Polish>
 	</TEXT>
@@ -1868,13 +1868,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SLAVE_MASTER</Tag>
-		<English>Slave Master Promotionline</English>
+		<English>Slave Master Promotion Line</English>
 		<French>Spécialisation Maître Esclave</French>
 		<Polish>Linia Promocji: Pan Niewolników</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SLEUTH</Tag>
-		<English>Sleuth Promotionline</English>
+		<English>Sleuth Promotion Line</English>
 		<French>Spécialisation Détective</French>
 		<German>Schnüffler</German>
 	</TEXT>
@@ -1887,13 +1887,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SNIPER_BEAM</Tag>
-		<English>Sniper Beam Promotionline</English>
+		<English>Sniper Beam Promotion Line</English>
 		<French>Spécialisation Rayon Sniper</French>
 		<Polish>Linia Promocji: Promień Snajperski</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SOPHISTICATION</Tag>
-		<English>Sophistication Promotionline</English>
+		<English>Sophistication Promotion Line</English>
 		<French>Spécialisation Sophistication</French>
 		<German>Kultiviertheit</German>
 		<Polish>Linia Promocji: Dzika Bestia</Polish>
@@ -1921,7 +1921,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_STALL</Tag>
-		<English>Stall Promotionline</English>
+		<English>Stall Promotion Line</English>
 		<French>Spécialisation Manoeuvre</French>
 		<German>Blockieren</German>
 		<Italian>Stallo</Italian>
@@ -1929,7 +1929,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_STANDARD_MIGHT</Tag>
-		<English>Standard Might Promotionline</English>
+		<English>Standard Might Promotion Line</English>
 		<French>Spécialisation Force Standard</French>
 		<German>Standardstärke</German>
 		<Polish>Linia Promocji: Standardowa Moc</Polish>
@@ -1942,7 +1942,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_STAY_THE_HAND</Tag>
-		<English>Status (Stay the Hand) Promotionline</English>
+		<English>Status (Stay the Hand) Promotion Line</English>
 		<French>Spécialisation Statut (N'attaque pas)</French>
 		<German>Aggressivitätsstatus</German>
 	</TEXT>
@@ -1955,14 +1955,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_STING</Tag>
-		<English>Sting Promotionline</English>
+		<English>Sting Promotion Line</English>
 		<French>Spécialisation Dard</French>
 		<German>Stachel</German>
 		<Polish>Linia Promocji: Żądło</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_STINGING_INSULTS</Tag>
-		<English>Stinging Insults Promotionline</English>
+		<English>Stinging Insults Promotion Line</English>
 		<French>Spécialisation Provocations verbales</French>
 		<German>Provokation</German>
 		<Italian>Insulti pungenti</Italian>
@@ -1970,7 +1970,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_STREET_FIGHTER</Tag>
-		<English>Street Fighter Promotionline</English>
+		<English>Street Fighter Promotion Line</English>
 		<French>Spécialisation Combat urbain</French>
 		<German>Straßenkämpfer</German>
 		<Italian>Combattente di strada</Italian>
@@ -1978,20 +1978,20 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SUPERIOR_MIGHT</Tag>
-		<English>Superior Might Promotionline</English>
+		<English>Superior Might Promotion Line</English>
 		<French>Spécialisation Puissance Supérieure</French>
 		<German>Überlegene Stärke</German>
 		<Polish>Linia Promocji: Super Moc</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SURPRISE</Tag>
-		<English>Status (Surprise) Promotionline</English>
+		<English>Status (Surprise) Promotion Line</English>
 		<French>Spécialisation Statut (Surprise)</French>
 		<German>Überraschungsstatus</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SWARM</Tag>
-		<English>Swarm Promotionline</English>
+		<English>Swarm Promotion Line</English>
 		<French>Spécialisation Essaim</French>
 		<Polish>Linia Promocji: Rój</Polish>
 	</TEXT>
@@ -2004,7 +2004,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_TAKE_PRISONERS</Tag>
-		<English>Take Prisoners Promotionline</English>
+		<English>Take Prisoners Promotion Line</English>
 		<French>Spécialisation Capture</French>
 		<Polish>Linia Promocji: Łapacz Więźniów</Polish>
 	</TEXT>
@@ -2031,7 +2031,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_TO_THE_DEATH</Tag>
-		<English>To The Death Promotionline</English>
+		<English>To The Death Promotion Line</English>
 		<French>Spécialisation A Mort</French>
 		<German>Bis zum Tode</German>
 		<Polish>Linia Promocji: Aż Do Śmierci</Polish>
@@ -2091,7 +2091,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</Tag>
-		<English>Unquestioning Obedience Promotionline</English>
+		<English>Unquestioning Obedience Promotion Line</English>
 		<French>Spécialisation Obeissance</French>
 		<Polish>Linia Promocji: Bezwarunkowe Posłuszeństwo</Polish>
 	</TEXT>
@@ -2131,7 +2131,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_WAYLAY</Tag>
-		<English>Waylay Promotionline</English>
+		<English>Waylay Promotion Line</English>
 		<French>Spécialisation Détournement</French>
 		<German>Wegelagerer</German>
 	</TEXT>
@@ -2152,7 +2152,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_WIDE_BEAM</Tag>
-		<English>Wide Beam Promotionline</English>
+		<English>Wide Beam Promotion Line</English>
 		<French>Spécialisation Rayon Large</French>
 		<Polish>Linia Promocji: Szeroki Promień</Polish>
 	</TEXT>
