@@ -7392,22 +7392,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/Palisade/palisadewall.dds</Button>
 		</BuildInfo>
-		<!-- Abatis (No Kill) -> Palisade -->
-		<BuildInfo>
-			<Type>BUILD_ABATIS_THORN_HEDGE</Type>
-			<Description>TXT_KEY_BUILD_ABATIS_THORN_HEDGE</Description>
-			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
-			<iTime>200</iTime>
-			<iCost>5</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_F</HotKey>
-			<bCtrlDown>1</bCtrlDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/Abatis/abatis.dds</Button>
-		</BuildInfo>
 		<!-- Abatis (Kill) -> Palisade -->
 		<BuildInfo>
 			<Type>BUILD_ABATIS_THORN_HEDGE_KILL</Type>

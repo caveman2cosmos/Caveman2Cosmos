@@ -1,14 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_ABATIS_THORN_HEDGE</Tag>
-		<English>Build [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abatis[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abattis[\LINK]</French>
-		<Italian>Costruisci un'[LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]abbattuta[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abatis con cerco espinoso[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Zasieki[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_ABATIS_THORN_HEDGE_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abatis[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abattis[\LINK]</French>
