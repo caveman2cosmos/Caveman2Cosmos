@@ -2346,7 +2346,6 @@
 		<German>+%d1_Change[ICON_UNHAPPY]: "Weg mit dem fremden Einfluss!"</German>
 		<Italian>+%d1_Change[ICON_UNHAPPY]: "Abbasso l'influenza straniera!"</Italian>
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Abajo la influencia extranjera!"</Spanish>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_FREE_EXPERIENCE</Tag>
@@ -2363,7 +2362,6 @@
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir hassen die Natur!"</German>
 		<Italian>+%d1_Change[ICON_UNHAPPY]: "Odiamo la natura!"</Italian>
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Odiamos la naturaleza!"</Spanish>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_LANDMARK_DESTRUCTION_ANGER</Tag>
@@ -2372,7 +2370,6 @@
 		<German>+%d1_Change[ICON_UNHAPPY]: "Ihr zerstört die Umwelt!"</German>
 		<Italian>+%d1_Change[ICON_UNHAPPY]: "Stai distruggendo l'ambiente!"</Italian>
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Estás destrozando el medio ambiente!"</Spanish>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_PROPERTY_SPAWN_BARB</Tag>
@@ -2394,7 +2391,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_RELIGIOUSLY_DISABLED_COMPLETELY_BUILDINGS</Tag>
 		<English>As it is now illegal to do so, the Citizens of the City of %s1 have ceased worshiping %s2, thus the %s3 is completely inoperational at this time.</English>
-		<French>Commme c'est devenu illégal, Les citoyens de la ville de %s1 ont cessé d'adorer %s2, et le bâtiment: %s3 n'est plus du tout opérationnel.</French>
+		<French>Comme c'est devenu illégal, Les citoyens de la ville de %s1 ont cessé d'adorer %s2, et le bâtiment: %s3 n'est plus du tout opérationnel.</French>
 		<Italian>Dato che ora è illegale, gli abitanti di %s1 hanno smesso di venerare %s2, perciò [NUM3:il:la:gli:le] %s3 [NUM3:è inoperativo:è inoperativa:sono inoperativi:sono inoperative].</Italian>
 		<Polish>Jest to nielegalne więc, niektórzy z miastaL %s1 porzucili prace w: %s2, więc: %s3 jest kompletnie niefunkcjonalne.</Polish>
 	</TEXT>

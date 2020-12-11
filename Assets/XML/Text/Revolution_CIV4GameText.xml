@@ -279,7 +279,6 @@
 		<German>Die</German>
 		<Italian>Il</Italian>
 		<Spanish>Los</Spanish>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_BRIBE</Tag>
@@ -1286,7 +1285,6 @@
 		<German>+%d1_Change[ICON_UNHAPPY]: " Unsere Stimmung ist rebellisch! "</German>
 		<Italian>+%d1_Change[ICON_UNHAPPY]: " Abbiamo una sensibilità ribelle! "</Italian>
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Ansiamos una rebelión!"</Spanish>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_IND_PEACE_ACTION</Tag>
@@ -2384,7 +2382,6 @@
 		<German>+%d1_Change[ICON_UNHAPPY]: " Sie haben unsere Forderung abgelehnt! "</German>
 		<Italian>+%d1_Change[ICON_UNHAPPY]: " Avete rifiutato la nostra richiesta! "</Italian>
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Rechazaste atender nuestras demandas!"</Spanish>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_SCREEN_CHANGE</Tag>
@@ -2435,19 +2432,17 @@
 		<Tag>TXT_KEY_REV_SUCCESS_HAPPINESS</Tag>
 		<English>+%d1_Change[ICON_HAPPY]: "Our rebellion has been successful"</English>
 		<French>+%d1_Change[ICON_HAPPY]: "Notre rébellion a été couronnée de succès"</French>
-		<German>+%d1_Change[ICON_HAPPY]: " Unser Aufstand war erfolgreich"</German>
-		<Italian>+%d1_Change[ICON_HAPPY]: " La nostra ribellione ha avuto successo"</Italian>
+		<German>+%d1_Change[ICON_HAPPY]: "Unser Aufstand war erfolgreich"</German>
+		<Italian>+%d1_Change[ICON_HAPPY]: "La nostra ribellione ha avuto successo"</Italian>
 		<Spanish>+%d1_Change[ICON_HAPPY]: "¡Nuestra rebelión ha sido un éxito!"</Spanish>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_THE</Tag>
 		<English>the</English>
 		<French>les</French>
 		<German>die</German>
-		<Italian>il</Italian>
+		<Italian>i</Italian>
 		<Spanish>los</Spanish>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_TITLE_GOOD_NEWS</Tag>
