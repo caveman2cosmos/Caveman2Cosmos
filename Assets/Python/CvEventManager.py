@@ -482,6 +482,13 @@ class CvEventManager:
 
 			elif iModifiers == 3:
 
+				import EnumerateInfoTypes
+				EnumerateInfoTypes.init()
+
+				if key == 16: # D
+					DebugUtils.toggleDebugMode()
+					return 1
+
 				if DebugUtils.bDebugMode:
 					if key == InputTypes.KB_U:
 						DebugUtils.putOneOfEveryUnit()
