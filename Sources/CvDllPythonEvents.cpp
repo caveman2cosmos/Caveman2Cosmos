@@ -296,7 +296,7 @@ bool postEvent(EventArgs eventData, const char* eventName)
 
 	for(ptr = eventName; *ptr != '\0'; ptr++)
 	{
-		xSum.add((byte)*ptr);
+		xSum.add((uint8_t)*ptr);
 	}
 
 	std::map<int,ProfileSample*>::const_iterator itr = g_pythonProfiles->find(xSum.get());
