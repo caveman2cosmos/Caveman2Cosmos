@@ -12,6 +12,7 @@
 #include "CvGameObject.h"
 #include "CvBuildLists.h"
 #include "CvUnitList.h"
+#include "CvUnitAI.h"
 
 class CvArea;
 class CvBuildLists;

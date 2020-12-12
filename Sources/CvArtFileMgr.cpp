@@ -13,6 +13,7 @@
 //---------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
 #include "CvArtFileMgr.h"
+#include "CvXMLLoadUtility.h"
 
 // Macro for Building Art Info Maps
 #if 0	// DEBUGGING
