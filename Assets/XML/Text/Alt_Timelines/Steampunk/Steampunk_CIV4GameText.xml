@@ -65,28 +65,28 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUNICIP_COMP_STRATEGY</Tag>
-		<English>Build a Muncipal Computing Engine to increase your city's science.</English>
+		<English>Build a Municipal Computing Engine to increase your city's science.</English>
 		<French>Construisez un [COLOR_BUILDING_TEXT]Centre de Calcul Municipal[COLOR_REVERT] pour améliorer la science de votre ville.</French>
 		<Italian>Costruisci un Centro informatico municipale per incrementare la ricerca della tua città.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEMO_ACADEMY</Tag>
 		<English>Nemo's Naval Academy</English>
-		<French>L'Académie navale de Némo</French>
+		<French>Académie navale de Némo</French>
 		<Italian>Accademia navale di Nemo</Italian>
 		<Polish>Morska Akademia Nemo</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEMO_ACADEMY_PEDIA</Tag>
 		<English>Captain Nemo, also known as Prince Dakkar, is a fictional character featured in Jules Verne's novels Twenty Thousand Leagues Under the Sea (1870) and The Mysterious Island (1874).</English>
-		<Italian>Il Capitano Nemo, noto anche come Principe Dakkar, è un personaggio di fantasia presente nei romanzi di Jules Verne: Ventimila leghe sotto i mari (1870) e L'isola misteriosa (1874).</Italian>
+		<Italian>Il Capitano Nemo, noto anche come Principe Dakkar, è un personaggio di fantasia presente nei romanzi di Jules Verne Ventimila leghe sotto i mari (1870) e L'isola misteriosa (1874).</Italian>
 		<Polish>Kapitan Nemo (nemo łac. nikt) - postać literacka z powieści Juliusza Verne'a Dwadzieścia tysięcy mil podmorskiej żeglugi oraz Tajemnicza wyspa. Projektant, budowniczy i dowódca okrętu podwodnego Nautilus. Był wysoki, miał niebieskie oczy i bladą cerę. W powieści 20 000 mil podmorskiej żeglugi trudno określić jego wiek, ale to dojrzały mężczyzna. Był człowiekiem spokojnym i łagodnym, jednak kiedy popadł w gniew, potrafił być porywczy. Pewny siebie i dumny, zachowywał dystans dla swoich gości. Jego załogę stanowili ludzie z różnych krajów, dobrzy, odważni i szlachetni, a także lojalni wobec siebie i swego kapitana.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEMO_ACADEMY_STRATEGY</Tag>
 		<English>Build Nemo's Naval Academy to increase your city's naval power.</English>
 		<French>Construisez [COLOR_BUILDING_TEXT]l'Académie navale de Némo[COLOR_REVERT] pour améliorer votre puissance navale.</French>
-		<Italian>Costruisci un'Accademia navale di Nemo per incrementare la forza navale della tua città.</Italian>
+		<Italian>Costruisci l'Accademia navale di Nemo per incrementare la forza navale della tua città.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANOPTICON_PRISON</Tag>
@@ -102,7 +102,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANOPTICON_PRISON_PEDIA</Tag>
 		<English>The panopticon was proposed in the late 18th century as a more efficient way of keeping an eye on prisoners and malcontents. A central inspection house which prisoners could not see inside held guards to keep an eye on the prison cells which lined the perimeter and were all visible at all times from the inspection house.</English>
-		<Italian>Il panopticon fu proposto nel tardo 18° secolo come una via più efficiente per tenere d'occhio i prigionieri e il malcontento. Una torre di osservazione centrale, all'interno della quale i prigionieri non riescono a vedere, ospita le guardie che tengono d'occhio le celle, che cositutiscono il perimetro e sono tutte visibili in ogni momento dalla torre d'osservazione.</Italian>
+		<Italian>Il panopticon fu proposto nel tardo 18º secolo come una via più efficiente per tenere d'occhio i prigionieri e il malcontento. Una torre di osservazione centrale, all'interno della quale i prigionieri non riescono a vedere, ospita le guardie che tengono d'occhio le celle, che costituiscono il perimetro e sono tutte visibili in ogni momento dalla torre d'osservazione.</Italian>
 		<Polish>Panoptikon (Panopticon; gr. pan = wszystko; optikos = widzieć) - nazwa więzienia, wymyślonego i zaprojektowanego przez angielskiego filozofa utylitarystę, Jeremy'ego Benthama. Niezwykłość Panoptikonu miała polegać na tym, że jego konstrukcja umożliwiałaby więziennym strażnikom obserwowanie więźniów tak, by nie wiedzieli, czy i kiedy są obserwowani.</Polish>
 	</TEXT>
 	<TEXT>
@@ -144,9 +144,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY_STRATEGY</Tag>
-		<English>Build Culture (Steampunk) to gain access to unique buildings and units.</English>
-		<French>Construire la Culture (Steampunk) permet d'accéder à des bâtiments et unités uniques.</French>
-		<Italian>Costruisci Cultura (Steampunk) per ottenere l'accesso a unità ed edifici unici.</Italian>
+		<English>Build [COLOR_BUILDING_TEXT]Culture (Steampunk)[COLOR_REVERT] to gain access to unique buildings and units.</English>
+		<French>Construisez la [COLOR_BUILDING_TEXT]Culture (Steampunk)[COLOR_REVERT] pour avoir accès à des bâtiments et unités uniques.</French>
+		<Italian>Costruisci [COLOR_BUILDING_TEXT]Cultura (Steampunk)[COLOR_REVERT] per poter costruire edifici e unità uniche.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TR_WORKSHOP</Tag>
@@ -237,7 +237,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAUTILUS</Tag>
 		<English>Nautilus</English>
-		<Italian>Nautilo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAUTILUS_PEDIA</Tag>
@@ -269,9 +268,7 @@
 		<Tag>TXT_KEY_UNIT_STEAM_TANK</Tag>
 		<English>Steam Tank</English>
 		<French>Tank à Vapeur</French>
-		<German>Steamtank</German>
 		<Italian>Carro armato a vapore</Italian>
-		<Spanish>Steamtank</Spanish>
 		<Polish>Czołg Parowy</Polish>
 	</TEXT>
 	<TEXT>
@@ -289,15 +286,12 @@
 		<Tag>TXT_KEY_UNIT_WAR_WHEEL</Tag>
 		<English>War Wheel</English>
 		<French>Roue de Guerre</French>
-		<German>Steamtank</German>
 		<Italian>Ruota da guerra</Italian>
-		<Spanish>Steamtank</Spanish>
 		<Polish>Monocykl</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAR_WHEEL_PEDIA</Tag>
 		<English>A monowheel is a one-wheeled single-track vehicle similar to a unicycle. However, instead of sitting above the wheel, the rider sits either within it or next to it. The wheel is a ring, usually driven by smaller wheels pressing against its inner rim. Most are single-passenger vehicles, though multi-passenger models have been built. Hand-cranked and pedal-powered monowheels were built in the late 19th century; most built in the 20th century have been motorized. Some modern builders refer to these vehicles as monocycles, though that term is also sometimes used to describe motorized unicycles.</English>
-		<Italian>La Ruota di guerra si comporta essenzialmente come una Motocicletta.</Italian>
 		<Polish>Jednokołowiec, monocykl - jednośladowy pojazd samochodowy, posiadający jedno koło jezdne. Najczęściej spotykaną wersją monocykla jest pojazd, w którym kierowca siedzi w fotelu wbudowanym w obręcz dużego koła jezdnego. Pomysł na tego typu rozwiązanie techniczne powstał w XIX wieku i jest do tej pory stosowany przez większość konstruktorów i firm produkujących jednokołowce z silnikiem spalinowym.</Polish>
 	</TEXT>
 	<TEXT>

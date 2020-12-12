@@ -2317,17 +2317,14 @@
 		<Tag>TXT_KEY_TECH_ASTROBIOLOGY_QUOTE</Tag>
 		<English>
 "Do you ever wonder if - well, if there are people living on the third planet?"
-
 "The third planet is incapable of supporting life," stated the husband patiently.
 "Our scientists have said there's far too much oxygen in their atmosphere."
-
 	- "The Martian Chronicles" by Ray Bradbury
 		</English>
 		<French>
 "Ne Vous demandez-vous jamais si - eh bien, s'il y a des gens qui vivent sur la troisième planète?"
 "- La troisième planète est incapable de soutenir la vie", a déclaré patiemment le mari.
 "- Nos scientifiques ont dit qu'il y avait beaucoup trop d'oxygène dans leur atmosphère."
-
 	- "The Martian Chronicles" de Ray Bradbury
 		</French>
 	</TEXT>
@@ -5197,22 +5194,16 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLOUD_PATTERNS_PEDIA</Tag>
 		<English>Being able to predict the weather by observing cloud formations is a skill that is somewhat lost on us modern humans. Most of us can easily look at a cloud and see the unicorn or ice cream cones, but very few of us can look at clouds and see the approaching cold front. Clouds can be broken into four categories. These categories are high clouds, middle clouds, low clouds and clouds with vertical growth. Clouds are also identified by shape. Cumulus refers to a "heap" of clouds. Stratus refers to clouds that are long and streaky.
-
 High clouds form at 16,000 ft (4,876.8 m) to 43,000 ft (13,106.4 m). Basically, these are the clouds that you only encounter on the top of really high mountains or at the cruising altitude of a jet airplane. Due to the extreme conditions at which they form, they tend to be composed primarily of ice crystals, and does not block sunlight.
-
 Types of High clouds:
 	[ICON_BULLET]Cirrus
 	[ICON_BULLET]Cirrostratus
 	[ICON_BULLET]Cirrocumulus
-
 Middle clouds form at 6,500 ft (1,981.2 m) to 23,000 ft (7,010.4 m). They are comprised of water, and, if cold enough, ice. Middle clouds often block sunlight, but not always.
-
 Types of Middle clouds:
 	[ICON_BULLET]Altostratus
 	[ICON_BULLET]Altocumulus
-
 Low clouds form below 6,500 ft (1,981.2 m). These clouds are the ones that like to hang-around just above tall buildings. These clouds tend to contain water, but can also be comprised of snow if the weather gets cold enough. Low clouds block sunlight and can bring precipitation and wind.
-
 Types of Low clouds:
 	[ICON_BULLET]Stratus
 	[ICON_BULLET]Stratocumulus
@@ -5282,7 +5273,6 @@ Types of Low clouds:
 	[ICON_BULLET]Safety of vessels
 	[ICON_BULLET]Maintenance of seamarks
 	[ICON_BULLET]Border control
-
 During wartime, some coast guard organizations might have responsibilities in harbor defense, port security, naval counter- intelligence and coastal patrols.
 		</English>
 		<French>Parmi les responsabilités qui peuvent être confiées à un service de garde côtière figurent:
@@ -5291,7 +5281,6 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	[ICON_BULLET]Sécurité des navires
 	[ICON_BULLET]Entretien des Balises
 	[ICON_BULLET]Contrôle des frontières
-
 En temps de guerre, certaines organisations de la garde côtière peuvent avoir des responsabilités dans la défense portuaire, la sécurité portuaire, le contre-espionnage naval et les patrouilles côtières.
 		</French>
 		<Spanish>Entre las responsabilidades que se les suele encomendar a un batallón de guardacostas se encuentran: la búsqueda y rescate, la aplicación de las leyes marítimas, garantizar la seguridad de los buques, el mantenimiento de las balizas y el control de las fronteras. En tiempos de guerra, algunos departamentos de guardacostas podrían asumir responsabilidades en cuestiones de defensa y seguridad portuaria, contraespionaje naval y patrullas costeras.</Spanish>
@@ -6209,13 +6198,9 @@ En temps de guerre, certaines organisations de la garde côtière peuvent avoir 
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CONTROLLED_FIRE_PEDIA</Tag>
 		<English>The control of fire by early humans was a turning point in the cultural aspect of human evolution. Fire provided a source of warmth, protection, light, improved hunting, and a method of preparing food. These cultural advances allowed human geographic dispersal, and changes to diet and behavior. Additionally, fire allowed human activity to continue into the dark and colder hours of the evening.
-
 Use and control of fire was a gradual process, proceeding through more than one stage. One was a change in habitat, from dense forest, where wildfires were not uncommon, to savanna where wildfires were higher intensity. Such a change may have occurred about three million years ago, when the savanna expanded in East Africa due to cooler and drier climate. The next stage involved interaction with burned landscapes and foraging in the wake of wildfires, as observed in various wild animals. Experimentation with residual hot spots in the wake of wildfires, for example, foods found in the wake of wildfires tend to be either burned or undercooked. This might have provided incentives to place undercooked foods on a hotspot or to pull food out of the fire if it was in danger of getting burned. This would require familiarity with fire and its behavior. An early step in the control of fire would have been transporting it from burned to unburned areas and lighting them on fire. Maintaining a fire over an extended period of time, as for a season may have led to the development of base campsites. Building a hearth or other fire enclosure such as a circle of stones would have been a later development. Each of these stages could occur at different intensities, ranging from occasional or "opportunistic" to "habitual" to "obligate" (unable to survive without it).
-
 There are some evidence that the species Homo Erectus, some of which were likely our ancestors, controlled fire as long as a million years ago, and it is widely accepted that they, at the site of Bnot Ya'akov Bridge, controlled fire between 790,000 and 690,000 years ago. Evidence of widespread control of fire by anatomically modern humans dates to approximately 125 000 years ago, though the knowledge of controlled fire was probably inherited from the parent species. The discovery of fire came to provide a wide variety of uses for early hominids.
-
 	-</English>
-
 		<Polish>Ogień to jeden z fundamentalnych wynalazków okresu prehistorycznego ludzkości. Początkowa umiejętność podtrzymywania ognia pochodzącego z zapłonów naturalnych została przez naszych przodków następnie udoskonalona o umiejętność rozniecania ognia: kontrolowanego wywoływania zapłonu. Wywoływano to przez tarcie (np z wykorzystaniem tzw. łuku ogniowego), lub krzesanie iskier powstających przy uderzaniu o siebie dwóch krzemieni, ew. pirytu i krzemienia (później - stali i krzemienia). Umiejętność rozniecania ognia była doskonalona przez wszystkie epoki i także współcześnie obok sposobów znanych od stuleci (zapałki) lub dziesięcioleci (zapalniczki benzynowe czy gazowe) pojawiają się kolejne rozwiązania (np piezoelektryczny iskrownik do zapalania płomienia kuchenki gazowej).</Polish>
 	</TEXT>
 	<TEXT>
@@ -7241,11 +7226,8 @@ There are some evidence that the species Homo Erectus, some of which were likely
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DECRYPTION_MACHINES_PEDIA</Tag>
 		<English>The Enigma machines were a series of electro-mechanical rotor cipher machines developed and used in the early- to mid-20th century to protect commercial, diplomatic and military communication. Enigma was invented by the German engineer Arthur Scherbius at the end of World War I. Early models were used commercially from the early 1920s, and adopted by military and government services of several countries, most notably Nazi Germany before and during World War II. Several different Enigma models were produced, but the German military models, having a plugboard, were the most complex. Japanese and Italian models were also in use.
-
 		Around December 1932, Marian Rejewski of the Polish Cipher Bureau used the theory of permutations and flaws in the German military message procedures to break the message keys of the plugboard Enigma machine. Rejewski achieved this result without knowledge of the wiring of the machine, so the result did not allow the Poles to decrypt actual messages. The French had a spy - Hans Thilo Schmidt - with access to German cipher materials that included the daily keys used in September and October 1932. Those keys included the plugboard settings. The French gave the material to the Poles, and Rejewski used some of that material and the message traffic in September and October to solve for the unknown rotor wiring. Consequently, the Poles were able to build their own Enigma machines, which were called Enigma doubles. Rejewski was aided by cryptanalysts Jerzy zycki and Henryk Zygalski, both of whom had been recruited with Rejewski from Poznan University. The Polish Cipher Bureau developed techniques to defeat the plugboard and find all components of the daily key, which enabled the Cipher Bureau to read the German's Enigma messages. Over time, the German cryptographic procedures improved, and the Cipher Bureau developed techniques and designed mechanical devices to continue breaking the Enigma traffic. As part of that effort, the Poles exploited quirks of the rotors, compiled catalogs, built a cyclometer to help make a catalog with 100,000 entries, made Zygalski sheets and built the electro-mechanical cryptologic bomb to search for rotor settings. In 1938, the Germans added complexity to the Enigma machines that finally became too expensive for the Poles to counter. The Poles had six bomby, but when the Germans added two more rotors, ten times as many bomby were needed, but the Poles did not have the resources.
-
 		On 26 and 27 July 1939, in Pyry near Warsaw, the Poles initiated French and British military intelligence representatives into their Enigma-decryption techniques and equipment, including Zygalski sheets and the cryptologic bomb, and promised each delegation a Polish-reconstructed Enigma. The demonstration represented a vital basis for the later British continuation and effort. During the war, British cryptologists decrypted a vast number of messages enciphered on Enigma. The intelligence gleaned from this source, codenamed "Ultra" by the British, was a substantial aid to the Allied war effort.
-
 		Though Enigma had some cryptographic weaknesses, in practice it was German procedural flaws, operator mistakes, failure to systematically introduce changes in encipherment procedures, and Allied capture of key tables and hardware that, during the war, enabled Allied cryptologists to succeed and "turned the tide" in the Allies' favor.</English>
 	</TEXT>
 	<TEXT>
@@ -8119,7 +8101,6 @@ There are some evidence that the species Homo Erectus, some of which were likely
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ECOSYNTHESIS_QUOTE</Tag>
 		<English>Each in his own Tongue (Poem excerpt)
-
 A fire-mist and a planet,
 	A crystal and a cell,
 A jellyfish and a saurian,
@@ -8128,7 +8109,6 @@ Then a sense of law and beauty,
 	And a face turned from the clod, --
 Some call it Evolution,
 	And others call it God.
-
 	- William Herbert Carruth (1859 - 1924)
 	</English>
 		<French>Chacun dans sa propre langue (extrait de poème)
@@ -8722,13 +8702,9 @@ Some call it Evolution,
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EXECUTIONS_PEDIA</Tag>
 		<English>The executioner was usually presented with a warrant authorizing or ordering him to execute the sentence. The warrant protects the executioner from the charge of murder. Common terms for executioners derived from forms of capital punishment-though they often also performed other physical punishments-include hangman (hanging) and headsman (beheading). In the military, the role of executioner was performed by a soldier, such as the provost. A common stereotype of an executioner is a hooded medieval or absolutist executioner.
-
 		While this task can be an occasional one, it can be carried out in the line of more general duty by an officer of the court, the police, prison staff, or even the military. A special case is the tradition of the Roman fustuarium, continued in forms of running the gauntlet, where the culprit receives his punishment from the hands of the comrades gravely harmed by his crime, e.g. for failing in vital sentinel duty or stealing from a ship's limited food supply.
-
 		Many executioners were professional specialists who traveled a circuit or region performing their duty, because executions would rarely be very numerous. Within this region, a resident executioner would also administer non-lethal physical punishments, or apply torture.
-
 		The term is extended to administrators of a severe physical punishment that is not prescribed to kill, but which may result in death.
-
 		In Caveman2Cosmos, executions are included as a Medieval technology due to the massive proliferation of the use of and methods of execution. It became fashionable as a social control factor, both to entertain the jaded populace and to inflict the fear of disobedience among the many fractured, quarreling, and often young, kingdoms and fiefdoms, where loyalty to any crown was a scarce commodity.</English>
 	</TEXT>
 	<TEXT>
@@ -11190,11 +11166,8 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GYROCOMPASS_PEDIA</Tag>
 		<English>A gyrocompass is a type of non-magnetic compass which is based on a fast-spinning disc and the rotation of the Earth (or another planetary body if used elsewhere in the universe) to find geographical direction automatically. Although one important component of a gyrocompass is a gyroscope, these are not the same devices; a gyrocompass is built to use the effect of gyroscopic precession, which is a distinctive aspect of the general gyroscopic effect. Gyrocompasses are widely used for navigation on ships, because they have two significant advantages over magnetic compasses:
-
 			*they find true north as determined by the axis of the Earth's rotation, which is different from, and navigationally more useful than, magnetic north, and
-
 			*they are unaffected by ferromagnetic materials, such as in a ship's steel hull, which distort the magnetic field.
-
 		Aircraft commonly use gyroscopic instruments (but not a gyrocompass) for navigation and altitude monitoring</English>
 	</TEXT>
 	<TEXT>
@@ -12130,17 +12103,11 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INDUSTRIAL_LIFESTYLE_PEDIA</Tag>
 		<English>The Industrial Revolution was the transition to new manufacturing processes in the period from about 1760 to sometime between 1820 and 1840. This transition included going from hand production methods to machines, new chemical manufacturing and iron production processes, the increasing use of steam power, the development of machine tools and the rise of the factory system.
-
 		Textiles were the dominant industry of the Industrial Revolution in terms of employment, value of output and capital invested; the textile industry was also the first to use modern production methods.
-
 		The Industrial Revolution began in Great Britain, and many of the technological innovations were British. By the mid-18th century Britain controlled a global trading empire with colonies in North America and Africa, and with some political influence on the Indian subcontinent, through the activities of the East India Company. The development of trade and the rise of business were major causes of the Industrial Revolution.
-
 		The Industrial Revolution marks a major turning point in history; almost every aspect of daily life was influenced in some way. In particular, average income and population began to exhibit unprecedented sustained growth. Some economists say that the major impact of the Industrial Revolution was that the standard of living for the general population began to increase consistently for the first time in history, although others have said that it did not begin to meaningfully improve until the late 19th and 20th centuries.
-
 		GDP per capita was broadly stable before the Industrial Revolution and the emergence of the modern capitalist economy, while the Industrial Revolution began an era of per-capita economic growth in capitalist economies. Economic historians are in agreement that the onset of the Industrial Revolution is the most important event in the history of humanity since the domestication of animals and plants.
-
 		The precise start and end of the Industrial Revolution is still debated among historians, as is the pace of economic and social changes. Eric Hobsbawm held that the Industrial Revolution began in Britain in the 1780s and was not fully felt until the 1830s or 1840s, while T. S. Ashton held that it occurred roughly between 1760 and 1830. Rapid industrialization first began in Britain, starting with mechanized spinning in the 1780s, with high rates of growth in steam power and iron production occurring after 1800. Mechanized textile production spread from Great Britain to continental Europe and the United States in the early 19th century, with important centres of textiles, iron and coal emerging in Belgium and the United States and later textiles in France.
-
 		An economic recession occurred from the late 1830s to the early 1840s when the adoption of the original innovations of the Industrial Revolution, such as mechanized spinning and weaving, slowed and their markets matured. Innovations developed late in the period, such as the increasing adoption of locomotives, steamboats and steamships, hot blast iron smelting and new technologies, such as the electrical telegraph, widely introduced in the 1840s and 1850s, were not powerful enough to drive high rates of growth. Rapid economic growth began to occur after 1870, springing from a new group of innovations in what has been called the Second Industrial Revolution. These new innovations included new steel making processes, the large-scale manufacture of machine tools and the use of increasingly advanced machinery in steam-powered factories.</English>
 	</TEXT>
 	<TEXT>
@@ -18665,9 +18632,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PLAGUE_MEDICINE_PEDIA</Tag>
 		<English>A plague doctor was a medical physician who treated victims of the plague. They were specifically hired by towns that had many plague victims in times of epidemics. Since the city was paying their salary, they treated everyone: both the wealthy and the poor. However, some plague doctors were known for charging patients and their families extra for special treatments and/or false cures. They were not normally professionally trained experienced physicians or surgeons, and often were second-rate doctors unable to otherwise run a successful medical business or young physicians trying to establish themselves. These doctors rarely cured their patients; rather, they got a count of the number of people contaminated for demographic purposes.
-
 		Plague doctors by their covenant treated plague patients and were known as municipal or "community plague doctors", whereas "general practitioners" were separate doctors and both might be in the same European city or town at the same time. In France and the Netherlands, plague doctors often lacked medical training and were referred to as "empirics". In one case, a plague doctor had been a fruit salesman before his employment as a physician.
-
 		In the seventeenth, eighteenth, and nineteenth centuries, some doctors wore a beak-like mask which was filled with aromatic items. The masks were designed to protect them from putrid air, which (according to the miasmatic theory of disease) was seen as the cause of infection. The design of these costumes has been attributed to Charles de Lorme, the chief physician to Louis XIII.</English>
 	</TEXT>
 	<TEXT>
@@ -20216,9 +20181,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_RAT_CATCHING_PEDIA</Tag>
 		<English>A rat-catcher is person who practices rat-catching, the occupation of catching rats as a form of pest control. In developed countries the role may be merged with, or the title inflated to, pest control operative or pest technician.
-
 		Keeping the rat population under control was practiced in Europe to prevent the spread of diseases to man, most notoriously the Black Plague, and to prevent damage to food supplies.
-
 		Anecdotal reports suggest that some rat-catchers in Europe would raise rats instead of catching them in order to increase their eventual payment from the town or city they were employed by. This, and the practice of rat-fights, could have led to rat-breeding and the adoption of the rat as a pet-the fancy rat.</English>
 	</TEXT>
 	<TEXT>
@@ -20473,17 +20436,11 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_RENAISSANCE_LIFESTYLE_PEDIA</Tag>
 		<English>The Renaissance was a period in European history, from the 14th to the 17th century, regarded as the cultural bridge between the Middle Ages and modern history. It started as a cultural movement in Italy in the Medieval period and later spread to the rest of Europe, marking the beginning of the Modern age.
-
 		The intellectual basis of the Renaissance was its own invented version of humanism, derived from the concept of Roman Humanitas and the rediscovery of classical Greek philosophy, such as that of Protagoras, who said that "Man is the measure of all things." This new thinking became manifest in art, architecture, politics, science and literature. Early examples were the development of perspective in oil painting and the recycled knowledge of how to make concrete. Although the invention of metal movable type sped the dissemination of ideas from the later 15th century, the changes of the Renaissance were not uniformly experienced across Europe.
-
 		As a cultural movement, the Renaissance encompassed innovative flowering of Latin and vernacular literatures, beginning with the 14th-century resurgence of learning based on classical sources, which contemporaries credited to Petrarch; the development of linear perspective and other techniques of rendering a more natural reality in painting; and gradual but widespread educational reform. In politics, the Renaissance contributed to the development of the customs and conventions of diplomacy, and in science to an increased reliance on observation and inductive reasoning. Although the Renaissance saw revolutions in many intellectual pursuits, as well as social and political upheaval, it is perhaps best known for its artistic developments and the contributions of such polymaths as Leonardo da Vinci and Michelangelo, who inspired the term "Renaissance man".
-
 		The Renaissance began in Florence, in the 14th century. Various theories have been proposed to account for its origins and characteristics, focusing on a variety of factors including the social and civic peculiarities of Florence at the time: its political structure; the patronage of its dominant family, the Medici; and the migration of Greek scholars and texts to Italy following the Fall of Constantinople to the Ottoman Turks. Other major centres were northern Italian city-states such as Venice, Genoa, Milan, Bologna, and finally Rome during the Renaissance Papacy.
-
 		The Renaissance has a long and complex historiography, and, in line with general scepticism of discrete periodizations, there has been much debate among historians reacting to the 19th-century glorification of the "Renaissance" and individual culture heroes as "Renaissance men", questioning the usefulness of Renaissance as a term and as a historical delineation.
-
 		Some observers have called into question whether the Renaissance was a cultural "advance" from the Middle Ages, instead seeing it as a period of pessimism and nostalgia for classical antiquity, while social and economic historians, especially of the longue due, have instead focused on the continuity between the two eras, which are linked, as Panofsky observed, "by a thousand ties".
-
 		The word Renaissance, literally meaning "Rebirth" in French, first appeared in English in the 1830s. The word also occurs in Jules Michelet's 1855 work, Histoire de France. The word Renaissance has also been extended to other historical and cultural movements, such as the Carolingian Renaissance and the Renaissance of the 12th century.</English>
 	</TEXT>
 	<TEXT>
@@ -21352,7 +21309,6 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SEDENTARY_LIFESTYLE_PEDIA</Tag>
 		<English>[BOLD]Sedentary Lifestyle[\BOLD] is a medical neologism used to denote a type of lifestyle most commonly found in modern (particularly Western) cultures.
-
 [PARAGRAPH:1]Sedentary Lifestyle marks the change point from where humans completely changed their lifestyle.</English>
 		<Polish>Przejście z koczowniczego na [BOLD]Osiadły tryb życia[\BOLD] nie odbyło się natychmiastowo. Można również przyjąć, że rezygnacja z mobilności nie była tożsama z przejściem do produkcji rolnej. Pierwsze osady zakładane były w miejscach obfitych w pożywienie, cechujących się przyjaznymi warunkami pogodowymi i klimatycznymi oraz dostępem do wody pitnej. Rozpoczęcie uprawy roślin oznaczało przywiązanie wspólnoty do określonego miejsca. Nakłady pracy niezbędne do opieki nad polem było swego rodzaju inwestycją, której rezultaty miały decydujące znaczenia dla przetrwania danej społeczności. Stąd też były one zdeterminowane do osiągnięcia zamierzonego celu (zbiorów), jak i obrony osady i zajmowanej ziemi.[NEWLINE][PARAGRAPH:1]Wraz z rozpoczęciem osiadłego trybu życia pojawiła się możliwość nawiązania trwałych relacji handlowych z sąsiadami, które z czasem mogły przekształcić się w bardziej bliską współpracę - np. w zakresie obrony przed atakami wspólnot koczowniczych, bądź też co bardziej agresywnych sąsiadów.</Polish>
 	</TEXT>
@@ -21493,9 +21449,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SERICULTURE_PEDIA</Tag>
 		<English>[BOLD]Sericulture[\BOLD], or silk farming, is the rearing of silkworms for the production of raw silk. Although there are several commercial species of silkworms, Bombyx mori is the most widely used and intensively studied. According to Confucian texts, the discovery of silk production by B. mori dates to about 2700 BC, although archaeological records point to silk cultivation as early as the Yangshao period (5000 - 10,000 BCE). About the first half of the 1st century AD it had reached ancient Khotan, and by AD 140 the practice had been established in India. Later it was introduced to Europe, the Mediterranean and other Asiatic countries. Sericulture has become one of the most important cottage industries in a number of countries like China, Japan, India, Korea, Brazil, Russia, Italy and France. Today, China and India are the two main producers, together manufacturing more than 60% of the world production each year.
-
 The stages of production are as follows:
-
 	1. The silk moth lays eggs.
 	2. When the eggs hatch, the caterpillars are fed mulberry leaves.
 	3. When the silkworms are about 25 days old, they are 10,000 times heavier than when they hatched. They are now ready to spin a silk cocoon.
@@ -23580,15 +23534,12 @@ The stages of production are as follows:
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TACHYON_COMMUNICATIONS_QUOTE</Tag>
 		<English>Relativity.
-
 There was a young lady named Bright
 Whose speed was far faster than light;
 She set out one day
 In a relative way
 And returned on the previous night.
-
 Limerick from 1923 by A. H. Reginald Buller</English>
-
 		<French>Relativité.
 [NEWLINE]
 [NEWLINE]Il y avait une jeune femme nommée Bright
@@ -24248,9 +24199,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TORTURE_PEDIA</Tag>
 		<English>Torture (from the Latin tortus, "twisted") is the act of deliberately inflicting physical or psychological pain in order to fulfill some desire of the torturer or compel some action from the victim. Torture, by definition, is a knowing and intentional act; deeds which unknowingly or negligently inflict pain without a specific intent to do so are not typically considered torture.
-
 		Torture has been carried out or sanctioned by individuals, groups, and states throughout history from ancient times to modern day, and forms of torture can vary greatly in duration from only a few minutes to several days or longer. Reasons for torture can include punishment, revenge, political re-education, deterrence, coercion of the victim or a third party, interrogation to extract information or a confession irrespective of whether it is false, or simply the sadistic gratification of those carrying out or observing the torture. Alternatively, some forms of torture are designed to inflict psychological pain or leave as little physical injury or evidence as possible while achieving the same psychological devastation. The torturer may or may not kill or injure the victim, but torture may result in a deliberate death and serves as a form of capital punishment. Depending on the aim, even a form of torture that is intentionally fatal may be prolonged to allow the victim to suffer as long as possible (such as half-hanging). In other cases, the torturer may be indifferent to the condition of the victim.
-
 		While it has a long history, the technology is defined in Caveman2Comos in the Medieval because it is during this era that Europeans took a particular interest in the vast diversification of torture implements and methods for the purposes of populace control and information extraction. We apologize if we offend with the content here, but the dark ages were called dark for a variety of reasons, this being one major contributor. Its inclusion helps to capture the essence of the era.</English>
 	</TEXT>
 	<TEXT>
@@ -24309,7 +24258,6 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TOURNAMENTS_PEDIA</Tag>
 		<English>A tournament is a competition involving a relatively large number of competitors, all participating in a sport or game. More specifically, the term may be used in either of two overlapping senses:
-
 	1. One or more competitions held at a single venue and concentrated into a relatively short time interval.
 	2. A competition involving multiple matches, each involving a subset of the competitors, with the overall tournament winner determined based on the combined results of these individual matches. These are common in those sports and games where each match must involve a small number of competitors: often precisely two, as in most team sports, racket sports and combat sports, many card games and board games, and many forms of competitive debating. Such tournaments allow large numbers to compete against each other in spite of the restriction on numbers in a single match.
 		</English>
@@ -25263,7 +25211,6 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 		<Tag>TXT_KEY_TECH_WARFARE_QUOTE</Tag>
 		<English>Conan, what is best in life?
 To crush your enemies, see them driven before you, and to hear the lamentation of their women.
-
 	Dialogue from the 1982 film "Conan the Barbarian".
 		</English>
 		<French>Mongol: "Conan! Qu'y a-t-il de mieux dans la Vie?"[NEWLINE]Conan: "Ecrasez vos ennemis, les voir couchés devant vous, et entendre les lamentations de leurs femmes."[NEWLINE]- Conan le Barbare</French>
@@ -25313,7 +25260,6 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WARRANTS_AND_DECREES_PEDIA</Tag>
 		<English>A decree is a rule of law usually issued by a head of state (such as the president of a republic or a monarch), according to certain procedures (usually established in a constitution). It has the force of law. The particular term used for this concept may vary from country to country. The executive orders made by the President of the United States, for example, are decrees (although a decree is not exactly an order). In non-legal English usage, however, the term refers to any authoritarian decision. Documents or archives in the format of royal decrees or farming were issued by rulers.
-
 		Law itself underwent a very long period of research and development in the Middle Ages and many standards we rely on today were established at this time.</English>
 	</TEXT>
 	<TEXT>
@@ -25381,15 +25327,10 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WATERWHEELS_PEDIA</Tag>
 		<English>A water wheel is a machine for converting the energy of flowing or falling water into useful forms of power, often in a watermill. A water wheel consists of a wheel (usually constructed from wood or metal), with a number of blades or buckets arranged on the outside rim forming the driving surface. Most commonly, the wheel is mounted vertically on a horizontal axle, but can also be mounted horizontally on a vertical shaft, for example the tub or Norse. Vertical wheels can transmit power either through the axle or via a ring gear and typically drive belts or gears; horizontal wheels usually directly drive their load.
-
 		Water wheels were still in commercial use well into the 20th century, but they are no longer in common use. Uses included milling flour in gristmills, grinding wood into pulp for papermaking, hammering wrought iron, machining, ore crushing and pounding fiber for use in the manufacture of cloth.
-
 		Some water wheels are fed by water from a mill pond, which is formed when a flowing stream is dammed. A channel for the water flowing to or from a water wheel is called a mill race. The race bringing water from the mill pond to the water wheel is a headrace; the one carrying water after it has left the wheel is commonly referred to as a tailrace.
-
 		In the mid to late 18th century John Smeaton's scientific investigation of the water wheel led to significant increases in efficiency supplying much-needed power for the Industrial Revolution.
-
 		Water wheels began being displaced by the smaller, less expensive and more efficient turbine, developed by Bent Fourneyron, beginning with his first model in 1827. Turbines are capable of handling high heads, or elevations, that exceed the capability of practical-sized waterwheels.
-
 		The main difficulty of water wheels is their dependence on flowing water, which limits where they can be located. Modern hydroelectric dams can be viewed as the descendants of the water wheel, as they too take advantage of the movement of water downhill.</English>
 	</TEXT>
 	<TEXT>

@@ -12,9 +12,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTOTHER_FUTBOL_WAR_2</Tag>
 		<English>The %s1_civ_adjective government has apologized and is giving compensation to us for the lives lost during the recent violence.</English>
-		<French>Le gouvernement %s1_civ_adjective nous a présenté des excuses et a promi d'indemniser les victimes des récentes émeutes et leurs familles.</French>
+		<French>Le gouvernement %s1_civ_adjective s'est excusé et nous accorde une compensation pour les vies perdues lors des récentes violences.</French>
 		<German>Die %s1_civ_adjective Regierung hat sich entschuldigt und uns einen Ausgleich für die Leben, die während der neuen Gewalttätigkeiten verlorengegangen sind.</German>
-		<Italian>Il governo %s1_civ_adjective si è scusato e ci invia un indennizzo per le vite perse durante la recente partita di calcio tra le nostre due nazionali.</Italian>
+		<Italian>Il governo %s1_civ_adjective si è scusato e ci ha inviato un indennizzo per le vittime delle recenti violenze.</Italian>
 		<Spanish>El gobierno %s1_civ_adjective se ha disculpado y nos concede una indemnización para las víctimas del reciente brote de violencia.</Spanish>
 		<Polish>Rząd %s1_civ_adjective przeprasza i ofiaruje rekompensatę za poniesione ofiary w tych brutalnych zamieszkach po zakończonym meczu.</Polish>
 	</TEXT>
@@ -23,7 +23,7 @@
 		<English>Tensions have increased between us and the %s1_civ_adjective government due to their intransigence in the "Football Affair".</English>
 		<French>Les tensions ont augmenté entre notre administration et le gouvernement %s1_civ_adjective dû à leur intransigeance dans l'"affaire du football".</French>
 		<German>Spannungen haben sich zwischen uns und der %s1_civ_adjective Regierung wegen ihrer Unnachgiebigkeit in der "Fußball-Angelegenheit" erhöht.</German>
-		<Italian>La tensione è aumentata tra noi e il governo %s1_civ_adjective per la loro intransigenza in questo "Affare di calcio".</Italian>
+		<Italian>La tensione è aumentata tra noi e il governo %s1_civ_adjective per la loro intransigenza in questo "affare di calcio".</Italian>
 		<Spanish>Las tensiones con el gobierno %s1_civ_adjective han aumentado debido a su intransigencia con el "problema del fútbol".</Spanish>
 		<Polish>Wzrosło napięcie pomiędzy nami a rządem %s1_civ_adjective przez ich upór w "Aferze Piłkarskiej".</Polish>
 	</TEXT>

@@ -32,13 +32,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_PEDIA</Tag>
 		<English>Dieselpunk is based on the aesthetics of the interbellum period between the end of the World War I and the beginning of World War II. This sub-genre is sometimes named Decopunk, referring to the Art Deco art style (including its Streamline Moderne variant). The genre combines the artistic and genre influences of the period (including pulp magazines, serial films, film noir, art deco, and wartime pin-ups) with postmodern technology and sensibilities.</English>
-		<Italian>Dieselpunk è basata sull'estetica nel periodo tra la fine della prima guerra mondiale e l'inizio della seconda. Questo sottegenere viene spesso chiamato Decopunk, in riferimento alla corrente artistica Art Decò (inclusa la sua variante moderna). Il genere combina le influenze artistiche di questo periodo (incluse riviste di tendenza, serie tv, film noir, art decò, e pin-up) con la tecnologia e la sensibilità post-moderna.</Italian>
+		<Italian>Dieselpunk è basata sull'estetica nel periodo tra la fine della prima guerra mondiale e l'inizio della seconda. Questo sottogenere viene spesso chiamato Decopunk, in riferimento alla corrente artistica Art Deco (inclusa la sua variante moderna). Il genere combina le influenze artistiche di questo periodo (incluse riviste di tendenza, serie tv, film noir, art deco e pin-up) con la tecnologia e la sensibilità post-moderna.</Italian>
 		<Polish>Dieselpunk - termin, którym określa się odłam cyberpunku z akcją osadzoną najczęściej w latach 20. 30. i 40. XX wieku. Panuje w nim nastrój epoki wynalazków, obalenia starego ładu po Wielkiej Wojnie uważanej za ostatnią wojnę przed wielką przyszłością ludzkości. Panuje futurystyczny entuzjazm. Kina, teatry, tramwaje, telegramy, telefony, radia, samoloty, wyzwolone z wiktoriańskiego gorsetu kobiety niczym Tamara Łempicka.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_STRATEGY</Tag>
-		<English>Build Culture (Dieselpunk) to gain access to unique buildings and units.</English>
-		<Italian>Costruisci Cultura (Dieselpunk) per ottenere l'accesso a edifici e unità uniche.</Italian>
+		<English>Build [COLOR_BUILDING_TEXT]Culture (Dieselpunk)[COLOR_REVERT] to gain access to unique buildings and units.</English>
+		<French>Construisez la [COLOR_BUILDING_TEXT]Culture (Dieselpunk)[COLOR_REVERT] pour avoir accès à des bâtiments et unités uniques.</French>
+		<Italian>Costruisci [COLOR_BUILDING_TEXT]Cultura (Dieselpunk)[COLOR_REVERT] per poter costruire edifici e unità uniche.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL</Tag>
@@ -54,7 +55,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL_PEDIA</Tag>
 		<English>The Art Deco spire of the Empire State Building was originally if impractically designed to serve as a dirigible terminal for Zeppelins and other airships to dock. The Hindenburg disaster in 1937, along with political and economic issues, hastened the demise of the Zeppelin.</English>
-		<Italian>L'antenna art decò dell'Empire State Building era stata originalemnte progettata per servire come terminal per gli Zeppelin e altri dirigibili. Il disastro dell'Hindenburg del 1937, assieme a problemi politici ed economici, causò il declino degli Zeppelin.</Italian>
+		<Italian>L'antenna art decò dell'Empire State Building era stata originalmente progettata per servire come terminal per gli Zeppelin e altri dirigibili. Il disastro dell'Hindenburg del 1937, assieme a problemi politici ed economici, causò il declino degli Zeppelin.</Italian>
 		<Polish>Zeppelin - Sterowiec szkieletowy - rodzaj aerostatu z silnikiem, którego szkielet kadłuba jest wykonany z drewna (dawniej) lub duraluminium (później), po czym pokryty specjalną powłoką, powlekaną od zewnątrz substancjami zapewniającymi dużą gładkość powierzchni oraz odporność na promieniowanie słoneczne i wilgoć.</Polish>
 	</TEXT>
 	<TEXT>
@@ -77,7 +78,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FARNSWORTH_LAB_PEDIA</Tag>
 		<English>Farnsworth called his device an image dissector because it converted individual elements of the image into electricity one at a time. He replaced the spinning disks with cesium, an element that emits electrons when exposed to light.</English>
-		<Italian>Farnsworth chiamò il suo strumento dissettore di immagini, dato che convertiva gli elemnti dell'immagine in impulsi elettrici. Sostituì i dischi girevoli con cesio, un elemento che emette elettroni quando esposto alla luce.</Italian>
+		<Italian>Farnsworth chiamò il suo strumento dissettore di immagini, dato che convertiva gli elementi dell'immagine in impulsi elettrici. Sostituì i dischi girevoli con cesio, un elemento che emette elettroni quando esposto alla luce.</Italian>
 		<Polish>Philo Taylor Farnsworth (19 sierpnia 1906 - 11 marca 1971), amerykański wynalazca i pionier telewizji. Twórca wielu wynalazków, które miały kluczowe znaczenie dla wczesnego rozwoju elektronicznej telewizji. Najbardziej znany za wynalezienia pierwszego w pełni funkcjonalnego urządzenia dla elektronicznego obrazu (CRT), dysektora. Opracował również pierwszy w pełni funkcjonalny i kompletny elektroniczny system telewizyjny i jako pierwszy zaprezentował taki system społeczeństwu. Farnsworth opracował system telewizyjny wraz z odbiornikiem i kamerą, który był produkowany w firmie Farnsworth Television and Radio Corporation, od 1938 do 1951.</Polish>
 	</TEXT>
 	<TEXT>
@@ -166,7 +167,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZUSE_COMPUTER_PEDIA</Tag>
 		<English>The Z4 was the world's first commercial digital computer, designed by German engineer Konrad Zuse and built by his company Zuse Apparatebau between 1942 and 1945.</English>
-		<Italian>Lo Z4 è stato il primo calcolatore commerciale digitale, progettato dall'ingegnerre tedesco Konrad Zuse e costruito dalla compagnia Zuse Apparatebau tra il 1942 e il 1945.</Italian>
+		<Italian>Lo Z4 è stato il primo calcolatore commerciale digitale, progettato dall'ingegnere tedesco Konrad Zuse e costruito dalla compagnia Zuse Apparatebau tra il 1942 e il 1945.</Italian>
 		<Polish>Pierwsze maszyny Zusego Z1, Z2 i Z3 nosiły początkowo nazwy V1, V2 i V3 (Versuchsmodell - model eksperymentalny); zmienił ten kryptonim, by nie popaść w kolizję z nazwami niemieckich broni V. Wszystkie oryginalne egzemplarze tych maszyn uległy zniszczeniu w trakcie wojny. Maszyna Z4 (konstruowana w latach 1942-1945), częściowo zachowana po wojnie, została skompletowana i uruchomiona w 1950 roku w słynnej politechnice Eidgenössische Technische Hochschule ETHZ w Zurychu w Szwajcarii, gdzie była używana do obliczeń naukowych. Kolejna maszyna, Z5, posłużyła do obliczeń w dziedzinie optyki dla przedsiębiorstwa Leitz.</Polish>
 	</TEXT>
 	<TEXT>
@@ -238,7 +239,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOUBLE_BIPLANE_PEDIA</Tag>
-		<English>The Double Biplane is an experimental airplane. It fuses two fusalages into one plane and can engage both land and air targets effectively.</English>
+		<English>The Double Biplane is an experimental airplane. It fuses two fuselages into one plane and can engage both land and air targets effectively.</English>
 		<Italian>Il biplano doppio è un aeroplano sperimentale. Fonde due fusoliere in un unico aeroplano e può ingaggiare con ottimi effetti bersagli a terra e in aria.</Italian>
 		<Polish>Ciężki, wielosilnikowy samolot bombowy, skonstruowany przez Igora Sikorskiego. Pierwsza tego typu konstrukcja w dziejach lotnictwa budowana seryjnie.</Polish>
 	</TEXT>
@@ -256,7 +257,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DRACHE_HELICOPTER_PEDIA</Tag>
-		<English>The Drache Helicopter is a massive helicopter, which is equiped with heavy anti-ground weapons. It is weak against naval units.</English>
+		<English>The Drache Helicopter is a massive helicopter, which is equipped with heavy anti-ground weapons. It is weak against naval units.</English>
 		<Italian>L'elicottero Drache è un potente elicottero, equipaggiato con armi pesanti aria-terra. È però debole contro le unità navali.</Italian>
 		<Polish>Smigłowiec wielozadaniowy Fa 223 był kontynuacją założeń wykorzystanych przy budowie poprzedniej konstrukcji profesora Focke - Focke-Wulfa Fw 61. Elementem nośnym tych maszyn były dwa wirniki umieszczone na końcach kratownicowych ramion umieszczonych na bokach kadłuba. Były one napędzane przez silnik umieszczony w kadłubie. Układ dwuwirnikowy umożliwiał rezygnację ze śmigła ogonowego.</Polish>
 	</TEXT>
@@ -274,8 +275,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GOLIATH_AIRSHIP_PEDIA</Tag>
-		<English>Nearly twice as large as the majestic Hindenburg class airships, the stupendous Goliath Class airship, wonder of the skies, provides unparalleled luxury for its obscenely wealthy passengers (If you're not obscenely wealthy then how can you afford a ticket). But in times of war this exceedingly versatile craft can be configured to provide air superiority where you need it, when you need it while still providing its crew of over 300 able airmen with the luxury of heated and well lit living quarters thanks to the wonders of electricity.</English>
-		<Italian>Grande più del doppio rispetto all'Hindenburg, il dirigibile Goliath, meraviglia dei cieli, fornisce un lusso sfrenato per i suoi passeggeri oscenamente ricchi (Se non sei oscenamente ricco, non potresti permetteri un biglietto). In tempi di guerra questo versatile velivolo può fornire superiorità aerea dove è necessario e quando è necessario, fornendo all'equipaggio di 300 persone alloggi caldi e puliti grazie al potere dell'elettricità.</Italian>
+		<English>Nearly twice as large as the majestic Hindenburg class airships, the stupendous Goliath Class airship, wonder of the skies, provides unparalleled luxury for its obscenely wealthy passengers (on the other hand, if not obscenely wealthy, then how would they afford a ticket?). But in times of war this exceedingly versatile craft can be configured to provide air superiority where you need it, when you need it while still providing its crew of over 300 able airmen with the luxury of heated and well lit living quarters thanks to the wonders of electricity.</English>
+		<Italian>Grande più del doppio rispetto all'Hindenburg, il dirigibile Goliath, meraviglia dei cieli, fornisce un lusso sfrenato per i suoi passeggeri oscenamente ricchi (d'altronde, se non fossero oscenamente ricchi, come potrebbero permettersi il biglietto?). In tempi di guerra questo versatile velivolo può fornire superiorità aerea dove è necessario e quando è necessario, fornendo all'equipaggio di 300 persone alloggi caldi e puliti grazie al potere dell'elettricità.</Italian>
 		<Polish>Gigantyczny sterowiec, prawie dwa razy większy od Zeppelina Graf Von Hinderburga.</Polish>
 	</TEXT>
 	<TEXT>
@@ -310,7 +311,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TZAR_TANK_PEDIA</Tag>
-		<English>The Tzar Tank is a powerful tank. It uses state of the art engines to move it's bulk around the battlefield and it's 105 mm autocannons can vaporize all oppostion.</English>
+		<English>The Tzar Tank is a powerful tank. It uses state of the art engines to move it's bulk around the battlefield and it's 105 mm auto-cannons can vaporize all opposition.</English>
 		<Italian>Il carro armato Tzar è un potente carro armato. Usa potenti motori per spostarsi sul campo di battaglia, e i suoi cannoni da 105mm possono vaporizzare tutti gli oppositori.</Italian>
 		<Polish>Car tank lub Car wśród czołgów, zwany też Nietoperz lub czołg Lebiedenki - prototypowy rosyjski pojazd opancerzony skonstruowany w latach 1914-1915. Projekt został zarzucony po testach, które wykazały, że zastosowane silniki są zbyt słabe, a sam pojazd podatny na ogień artylerii.</Polish>
 	</TEXT>

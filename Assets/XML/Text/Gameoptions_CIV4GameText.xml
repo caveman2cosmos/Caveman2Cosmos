@@ -73,9 +73,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_NUKES_HELP</Tag>
 		<English>Enables more advanced variations of Nuclear Weapons for your arsenal.</English>
-		<French>Active un certain nombre d'armes nucléaires, pour votre arsenal.</French>
+		<French>Permet des variantes plus avancées d'armes nucléaires pour votre arsenal.</French>
 		<German>Stellt verbesserte Varianten von Nuklearwaffen für Euer Arsenal zur Verfügung.</German>
-		<Italian>Attiva un numero maggiore di armi nucleari.</Italian>
+		<Italian>Consente varianti più avanzate di armi nucleari per il tuo arsenale.</Italian>
 		<Spanish>Activa nuevas variantes más avanzadas de armas nucleares para tu arsenal.</Spanish>
 		<Polish>Udostępnia więcej typów broni nuklearnej do Twojego Arsenału.</Polish>
 	</TEXT>
@@ -89,10 +89,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_START_HELP</Tag>
-		<English>Allows players to 'purchase' their choice of starting cities, units, technologies, etc. when game begins.</English>
+		<English>Allows players to "purchase" their choice of starting cities, units, technologies, etc. when game begins.</English>
 		<French>Permet aux joueurs "d'acheter" des villes, des unités, des technologies etc. en début de partie.</French>
 		<German>Ermöglicht den Spielern, bereits zu Spielbeginn Städte, Einheiten, Technologien etc. zu kaufen, die dann sofort zur Verfügung stehen.</German>
-		<Italian>Permette ai giocatori di "acquistare" città, unità, tecnologie di partenza all'avvio del gioco.</Italian>
+		<Italian>Permette ai giocatori di "acquistare" città, unità, tecnologie, eccetera all'avvio del gioco.</Italian>
 		<Spanish>Permite a los jugadores "comprar" su selección inicial de ciudades, unidades, tecnologías, etc. cuando empieza la partida.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -114,7 +114,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_AMNESTY</Tag>
 		<English>Amnesty for units using Right of Passage</English>
-		<French>Amnéstie pour les unités avec droits de passage</French>
+		<French>Amnistie pour les unités avec droits de passage</French>
 		<German>Amnestie für Einheiten mit Durchreiseerlaubnis</German>
 	</TEXT>
 	<TEXT>
@@ -624,12 +624,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MORE_RESOURCES_HELP</Tag>
 		<English>Maps that use default resource spawn settings will spawn more resources
-
 Has no effect on these mapscripts:
 [SPACE][SPACE] * PerfectWorld, PerfectMongoose and World
-
 Only affects SmartMap when "Bonus Placement = Standard"</English>
-
 		<French>Une carte avec les paramètres par défaut comprendra des ressources supplémentaires</French>
 		<German>Auf Karten mit Standardeinstellungen für Ressourcen werden mehr Ressourcen verteilt.</German>
 		<Polish>Mapy używające standardowych ustawień wygenerują więcej zasobów.</Polish>
@@ -644,13 +641,10 @@ Only affects SmartMap when "Bonus Placement = Standard"</English>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MORE_RIVERS_HELP</Tag>
 		<English>Maps that use default river settings will spawn more rivers.
-
 Has no effect on these mapscripts:
 [SPACE][SPACE] * PerfectWorld, PerfectMongoose and World
-
 Only affects SmartMap if terrain options is:
 [SPACE][SPACE] * Standard, Great Plains or Oasis</English>
-
 		<French>Une carte avec les paramètres par défaut, fera apparaître des fleuves et rivières supplémentaires</French>
 		<German>Auf Karten mit Standardeinstellungen für Flüsse werden mehr Flüsse verteilt.</German>
 		<Polish>Mapy używające standardowych ustawień wygenerują więcej rzek.</Polish>

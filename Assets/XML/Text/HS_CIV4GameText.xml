@@ -89,7 +89,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_REMOVE_WV_HUMAN_SACRIFICE_HELP</Tag>
-		<English>Human Sacrifice will no longer be possible and your sacrificial alters will be sold.</English>
+		<English>Human Sacrifice will no longer be possible and your sacrificial altars will be sold.</English>
 		<French>Les sacrifices humains ne seront plus possibles, et l'autel sera fermé.</French>
 		<Italian>I sacrifici umani non saranno più possibili e i tuoi altari verranno venduti.</Italian>
 		<Polish>Ofiary z ludzi zostają zakazane, a Ołtarze Ofiar z ludzi zostają sprzedane.</Polish>
@@ -105,9 +105,7 @@
 		<Tag>TXT_KEY_MISSION_SACRIFICE_CAPTIVE_HELP</Tag>
 		<English>Increases the culture and happiness of the city. Unit is consumed. It may cause a golden age.</English>
 		<French>Augmente le bonheur de la ville. L'unité est détruite. Peut déclencher l'Age d'or.</French>
-		<German>Increases the happiness of the city. Unit is consumed.</German>
 		<Italian>Incrementa la cultura e la felicità di una città. L'unità viene consumata. Potrebbe generare una piccola età dell'oro.</Italian>
-		<Spanish>Increases the happiness of the city. Unit is consumed.</Spanish>
 		<Polish>Zwiększa Kultura i Szczęście w mieście. Istnieje szansa na Złotą Erę. Jednostka zostaje usunięta.</Polish>
 	</TEXT>
 	<TEXT>
@@ -140,11 +138,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_SACRIFICE_CAPTIVE</Tag>
-		<English>The best results come with the best alters (Altar for Human Sacrifice or the better Sacrificial Alter). Better results occur with the Druid and MesoAmerican religions and their monastery and cathedrals. Some wonders also improve the outcome.</English>
+		<English>The best results come with the best altars (Altar for Human Sacrifice or the better Sacrificial Alter). Better results occur with the Druid and MesoAmerican religions and their monastery and cathedrals. Some wonders also improve the outcome.</English>
 		<French>Les meilleurs résultats sont obtenus avec les plus importants autels. (Autel pour les Sacrifices humains ou mieux, Autel Sacrificiel)</French>
-		<German>The best results come with the best alters. (Altar for Human Sacrifice or the better Sacrificial Alter)</German>
 		<Italian>I migliori risultati si ottengono con gli altari migliori (Altare per i sacrifici umani, oppure l'Altare sacrificale). Si ottengono migliori risultati se in città sono presenti le Tradizioni druidiche o il Nagualismo, con i relativi edifici religiosi; perfino alcune meraviglie migliorano i risultati.</Italian>
-		<Spanish>The best results come with the best alters. (Altar for Human Sacrifice or the better Sacrificial Alter)</Spanish>
 		<Polish>Najlepsze rezultaty osiąga się z najlepszych Ołarzy (Ołtarzy Ofiar z ludzi lub z Ofiarnych Ołtarzy). Jeszcze lepsze rezultaty osiągają wierzący w Druidyzm lub mezo-amerykańki Nagualizm (jeśli posiadają Katedry i Klasztory tych religii). Niektóre Cudy Swiata mają także wpływ na zyski z Ofiar.</Polish>
 	</TEXT>
 	<TEXT>
@@ -156,11 +152,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_SACRIFICE_CAPTIVE_RELIGION</Tag>
-		<English>The best results come with the best alters (Altar for Human Sacrifice or the better Sacrificial Alter). Some wonders also improve the outcome.</English>
+		<English>The best results come with the best altars (Altar for Human Sacrifice or the better Sacrificial Alter). Some wonders also improve the outcome.</English>
 		<French>Les meilleurs résultats sont obtenus avec les plus importants autels. (Autel pour les Sacrifices humains ou mieux, Autel Sacrificiel)</French>
-		<German>The best results come with the best alters. (Altar for Human Sacrifice or the better Sacrificial Alter)</German>
 		<Italian>I migliori risultati si ottengono con gli altari migliori (Altare per i sacrifici umani, oppure l'Altare sacrificale). Si ottengono migliori risultati se in città sono presenti le Tradizioni druidiche o il Nagualismo, con i relativi edifici religiosi; perfino alcune meraviglie migliorano i risultati.</Italian>
-		<Spanish>The best results come with the best alters. (Altar for Human Sacrifice or the better Sacrificial Alter)</Spanish>
 		<Polish>Najlepsze rezultaty osiąga się z najlepszych Ołarzy (Ołtarzy Ofiar z ludzi lub z Ofiarnych Ołtarzy). Niektóre Cudy Swiata mają także wpływ na zyski z Ofiar.</Polish>
 	</TEXT>
 </Civ4GameText>
