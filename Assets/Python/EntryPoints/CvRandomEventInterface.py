@@ -7516,8 +7516,8 @@ def doMinorFire(argsList):
 		if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
 			continue
 
-		for i in xrange(info.getNumReplacementBuilding()):
-			if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
+		for j in xrange(info.getNumReplacementBuilding()):
+			if CyCity.getNumRealBuilding(info.getReplacementBuilding(j)):
 				break
 		else:
 			randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
