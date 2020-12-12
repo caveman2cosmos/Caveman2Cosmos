@@ -36309,25 +36309,25 @@ bool CvUnitArtStyleTypeInfo::read(CvXMLLoadUtility* pXML)
 							for (j = 0; j < iMesh; j++)
 							{
 								if (pXML->GetOptionalChildXmlValByName(szTextVal, L"EarlyArtDefineTag"))
-									szTextVal = GC.hasInfoTypeForString(szTextVal) ? szTextVal : "";
+									szTextVal = GC.getInfoTypeForString(szTextVal) > -1 ? szTextVal : "";
 								setEarlyArtDefineTag(j, iIndex, szTextVal);
 								if (pXML->GetOptionalChildXmlValByName(szTextVal, L"ClassicalArtDefineTag"))
-									szTextVal = GC.hasInfoTypeForString(szTextVal) ? szTextVal : "";
+									szTextVal = GC.getInfoTypeForString(szTextVal) > -1 ? szTextVal : "";
 								setClassicalArtDefineTag(j, iIndex, szTextVal);
 								if (pXML->GetOptionalChildXmlValByName(szTextVal, L"MiddleArtDefineTag"))
-									szTextVal = GC.hasInfoTypeForString(szTextVal) ? szTextVal : "";
+									szTextVal = GC.getInfoTypeForString(szTextVal) > -1 ? szTextVal : "";
 								setMiddleArtDefineTag(j, iIndex, szTextVal);
 								if (pXML->GetOptionalChildXmlValByName(szTextVal, L"RennArtDefineTag"))
-									szTextVal = GC.hasInfoTypeForString(szTextVal) ? szTextVal : "";
+									szTextVal = GC.getInfoTypeForString(szTextVal) > -1 ? szTextVal : "";
 								setRennArtDefineTag(j, iIndex, szTextVal);
 								if (pXML->GetOptionalChildXmlValByName(szTextVal, L"IndustrialArtDefineTag"))
-									szTextVal = GC.hasInfoTypeForString(szTextVal) ? szTextVal : "";
+									szTextVal = GC.getInfoTypeForString(szTextVal) > -1 ? szTextVal : "";
 								setIndustrialArtDefineTag(j, iIndex, szTextVal);
 								if (pXML->GetOptionalChildXmlValByName(szTextVal, L"LateArtDefineTag"))
-									szTextVal = GC.hasInfoTypeForString(szTextVal) ? szTextVal : "";
+									szTextVal = GC.getInfoTypeForString(szTextVal) > -1 ? szTextVal : "";
 								setLateArtDefineTag(j, iIndex, szTextVal);
 								if (pXML->GetOptionalChildXmlValByName(szTextVal, L"FutureArtDefineTag"))
-									szTextVal = GC.hasInfoTypeForString(szTextVal) ? szTextVal : "";
+									szTextVal = GC.getInfoTypeForString(szTextVal) > -1 ? szTextVal : "";
 								setFutureArtDefineTag(j, iIndex, szTextVal);
 
 								if (!pXML->TryMoveToXmlNextSibling())
