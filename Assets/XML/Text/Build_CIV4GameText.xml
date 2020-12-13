@@ -45,12 +45,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ARCHEOLOGICAL_SITE</Tag>
-		<English>Create [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Archeological Site[\LINK]</English>
-		<French>Créer un [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Site archéologique[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Examne Ruinen[\LINK]</German>
-		<Italian>[LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Esamina le rovine[\LINK]</Italian>
-		<Spanish>[LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Explorar ruinas[\LINK]</Spanish>
-		<Polish>Zbadaj [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Starożytną Świątynię[\LINK]</Polish>
+		<English>Create [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Archaeological Site[\LINK]</English>
+		<French>Créer un [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]site archéologique[\LINK]</French>
+		<German>Erstellen Sie eine [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]archäologische Stätte[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]sito archeologico[\LINK]</Italian>
+		<Spanish>Crear un [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]sitio arqueológico[\LINK]</Spanish>
+		<Polish>Stworzyć [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]stanowisko archeologiczne[\LINK]</Polish> 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BEACON_CORAL</Tag>
@@ -490,7 +490,7 @@
 		<English>Build [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Manufacturing Complex[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Complexe de Fabrication[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Fabrikation Zentrum[\LINK]</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Complesso Produzione[\LINK]</Italian>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Complesso di produzione[\LINK]</Italian>
 		<Spanish>Construye un [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Polígono Fabrication[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Kompleks Produkcyjny[\LINK]</Polish>
 	</TEXT>
@@ -499,7 +499,7 @@
 		<English>Build [LINK=ROUTE_JUMPLANE]Jumplane[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_JUMPLANE]Tremplin[\LINK]</French>
 		<German>Jumplane bauen</German>
-		<Italian>Costrusci una Jumplane</Italian>
+		<Italian>Costruisci una Jumplane</Italian>
 		<Spanish>Construir una Vía de impulso</Spanish>
 		<Polish>Zbuduj Punkt Skoku</Polish>
 	</TEXT>
@@ -768,7 +768,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_ROCK_FORMATION</Tag>
 		<English>Remove Rock Formation</English>
-		<French>Eliminer la Formation de rochers</French>
+		<French>Supprimer la formation rocheuse</French>
 		<German>[LINK=FEATURE_DARK_ROCK_FORM1]Steinbildung[\LINK] zu entfernen</German>
 		<Italian>Rimuovere [LINK=FEATURE_DARK_ROCK_FORM1]Formazione rocciosa[\LINK]</Italian>
 		<Spanish>Quitar la [LINK=FEATURE_DARK_ROCK_FORM1]Formación rocosa[\LINK]</Spanish>
@@ -898,7 +898,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'Outils en pierre.[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Steinwerkstatt bauen[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Raccoglitore di pietre[\LINK]</Italian>
-		<Spanish>Contruir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK]</Spanish>
+		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Warsztat Kamiennych Narzędzi[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
@@ -907,7 +907,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'Outils en pierre [\LINK] (Détruit)</French>
 		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Steinwerkstatt bauen[\LINK] (Consumed)</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Raccoglitore di pietre[\LINK] (Consumed)</Italian>
-		<Spanish>Contruir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK] (Consumed)</Spanish>
+		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK] (Consumed)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Warsztat Kamiennych Narzędzi[\LINK] (Consumed)</Polish>
 	</TEXT>
 	<TEXT>
