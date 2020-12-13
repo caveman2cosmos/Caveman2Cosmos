@@ -482,6 +482,12 @@ class CvEventManager:
 
 			elif iModifiers == 3:
 
+				import SchemaUtil
+				SchemaUtil.init()
+
+				#import EnumerateInfoTypes
+				#EnumerateInfoTypes.init()
+
 				if DebugUtils.bDebugMode:
 					if key == InputTypes.KB_U:
 						DebugUtils.putOneOfEveryUnit()
