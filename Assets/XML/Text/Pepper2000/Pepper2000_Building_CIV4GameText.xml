@@ -3,7 +3,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_10000_YEAR_CLOCK</Tag>
 		<English>10,000 Year Clock</English>
-		<French>Horloge de 10,000 Années</French>
+		<French>Horloge de 10000 ans</French>
+		<German>10.000 Jahre Uhr</German>
+		<Italian>Orologio dei 10000 anni</Italian>
+		<Spanish>Reloj de 10000 años</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_10000_YEAR_CLOCK_PEDIA</Tag>
@@ -16,7 +19,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_11_DIMENSIONAL_CITY</Tag>
 		<English>Hyperspace 11-Dimensional City</English>
-		<French>Ville de l'Hyperespace 11-Dimensional</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_11_DIMENSIONAL_CITY_PEDIA</Tag>
@@ -29,7 +31,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_11_DIMENSIONAL_FACTORY</Tag>
 		<English>Hyperspace 11-Dimensional Factory</English>
-		<French>Usine de l'Hyperespace 11-Dimensional</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_11_DIMENSIONAL_FACTORY_PEDIA</Tag>
@@ -66,7 +67,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AB_FOUNDRY</Tag>
 		<English>Interstellar AB Foundry</English>
-		<French>Fonderie Interstellaire de AB</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AB_FOUNDRY_PEDIA</Tag>
@@ -192,7 +192,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADVANCED_FLOODWALL_PEDIA</Tag>
-		<English>Climate Change has led to increased frequency and intensity of storms, as well as sea level rise. This floodwall is designed to protect vulnerable coastal cities from the angry seas. But if climate change is not brought under control, the city may simply need to be abanonded.</English>
+		<English>Climate Change has led to increased frequency and intensity of storms, as well as sea level rise. This floodwall is designed to protect vulnerable coastal cities from the angry seas. But if climate change is not brought under control, the city may simply need to be abandoned.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADVANCED_FLOODWALL_STRATEGY</Tag>
@@ -225,7 +225,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AERIAL_CITY</Tag>
 		<English>Aerial City</English>
-		<French>Ville Aérienne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AERIAL_CITY_PEDIA</Tag>
@@ -255,16 +254,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AEROGEL_PEDIA</Tag>
 		<English>Produces Aerogels</English>
-		<French>Produit des Aérogels</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AEROGEL_SHIELDING</Tag>
 		<English>Cislunar Aerogel Shielding</English>
-		<French>Boucliers Cislunaires d'Aérogel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AEROGEL_SHIELDING_PEDIA</Tag>
-		<English>Aerogels are imported for radiation sheidling.</English>
+		<English>Aerogels are imported for radiation shielding.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AEROGEL_SHIELDING_STRATEGY</Tag>
@@ -281,7 +278,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AEROPOLIS_2001_PEDIA</Tag>
 		<English>The Aeropolis 2001 was a proposed 500-story high-rise building over Tokyo Bay in Japan, envisioned by Obayashi Corporation. With a height of 2,001 metres (6,565 ft), the mammoth structure would have been approximately five times as high as the former World Trade Center in New York City.</English>
-		<French>L'Aeropolis 2001 était un projet de gratte-ciel de 500 étages sur la baie de Tokyo au Japon, envisagé par Obayashi Corporation. Avec une hauteur de 2 001 mètres (6 565 pieds), la structure gigantesque aurait été environ cinq fois plus haute que l'ancien World Trade Center de New York.</French>
+		<French>L'Aeropolis 2001 était un projet de gratte-ciel de 500 étages sur la baie de Tokyo au Japon, envisagé par Obayashi Corporation. Avec une hauteur de 2001 mètres, la structure gigantesque aurait été environ cinq fois plus haute que l'ancien World Trade Center de New York.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AEROPOLIS_2001_STRATEGY</Tag>
@@ -367,7 +364,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AI_GAME_DESIGNER_PEDIA</Tag>
-		<English>Abstract. Game generation systems perform automated, intelligent design of games (i.e. videogames, boardgames), reasoning about both the abstract rule system of the game and the visual realization of these rules. Although, as an instance of the problem of creative design, game generation shares some common research themes with other creative AI systems such as story and art generators, game generation extends such work by having to reason about dynamic, playable artifacts. Like AI work on creativity in other domains, work on game generation sheds light on the human game design process, offering opportunities to make explicit the tacit knowledge involved in game design and test game design theories. Finally, game generation enables new game genres which are radically customized to specific players or situations; notable examples are cell phone games customized for particular users and newsgames providing commentary on current events. We describe an approach to formalizing game mechanics and generating games using those mechanics, using WordNet and ConceptNet to assist in performing common-sense reasoning about game verbs and nouns. Finally, we demonstrate and describe in detail a prototype that designs micro-games in the style of Nintendo's WarioWare series.[PARAGRAPH:2]Toward Automated Game Design, MJ Nelson and Michael Mateas</English>
+		<English>Abstract. Game generation systems perform automated, intelligent design of games (i.e. videogames, boardgames), reasoning about both the abstract rule system of the game and the visual realization of these rules. Although, as an instance of the problem of creative design, game generation shares some common research themes with other creative AI systems such as story and art generators, game generation extends such work by having to reason about dynamic, playable artifacts. Like AI work on creativity in other domains, work on game generation sheds light on the human game design process, offering opportunities to make explicit the tacit knowledge involved in game design and test game design theories. Finally, game generation enables new game genres which are radically customized to specific players or situations; notable examples are cell phone games customized for particular users and newsgames providing commentary on current events. We describe an approach to formalizing game mechanics and generating games using those mechanics, using WordNet and ConceptNet to assist in performing common-sense reasoning about game verbs and nouns. Finally, we demonstrate and describe in detail a prototype that designs micro-games in the style of Nintendo's WarioWare series.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AI_GAME_DESIGNER_STRATEGY</Tag>
@@ -376,7 +373,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AI_INVESTMENT</Tag>
 		<English>AI Investment</English>
-		<French>Services d'Investissement AI</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AI_INVESTMENT_PEDIA</Tag>
@@ -405,7 +401,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AI_LAWYER_PEDIA</Tag>
-		<English>The introduction of artificial intelligence into legal analaysis and judicial proceedings was highly controversial. But the new systems are cheaper, more effective, and more fair.[PARAGRAPH:2]http://www.legalfutures.co.uk/latest-news/report-ai-will-transform-legal-world</English>
+		<English>The introduction of artificial intelligence into legal analysis and judicial proceedings was highly controversial. But the new systems are cheaper, more effective, and more fair.[PARAGRAPH:2]http://www.legalfutures.co.uk/latest-news/report-ai-will-transform-legal-world</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AI_LAWYER_STRATEGY</Tag>
@@ -485,7 +481,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ALDERSON_DISK_TERACITY</Tag>
-		<English>Transtellar Teracity</English>
+		<English>Transtellar Terracity</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ALDERSON_DISK_TERACITY_PEDIA</Tag>
@@ -683,12 +679,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAMATERIAL_FACTORY</Tag>
 		<English>Animamaterial Factory</English>
-		<French>Usine d'Anima-matériaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAMATERIAL_FACTORY_PEDIA</Tag>
 		<English>Factory based on animamaterials.</English>
-		<French>Usine basée sur les anima-matériaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAMATERIAL_FACTORY_STRATEGY</Tag>
@@ -740,7 +734,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTIMATTER_IMPORTER_PEDIA</Tag>
 		<English>Import antimatter from Mercury.</English>
-		<French>Import d'anti-matière de Mercure.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTIMATTER_IMPORTER_STRATEGY</Tag>
@@ -749,12 +742,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTIMATTER_INITIATED_FUSION</Tag>
 		<English>Antimatter Initiated Fusion Plant</English>
-		<French>Centrale à Fusion à Initiation d'Antimatière</French>
+		<French>Usine de fusion initiée par l'antimatière</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTIMATTER_INITIATED_FUSION_PEDIA</Tag>
 		<English>This plant uses antimatter to catalyze fusion reactions, allowing more compact devices. The principle is similar to ACNP propulsion.</English>
-		<French>Cette centrale utilise l'antimatière pour catalyser les réactions de fusion, permettant des appareils plus compacts. Le principe est similaire à la propulsion ACNP.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTIMATTER_INITIATED_FUSION_STRATEGY</Tag>
@@ -763,7 +755,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTIMATTER_RESEARCH_CENTER</Tag>
 		<English>Deep Space Antimatter Research Center</English>
-		<French>Centre de Recherche sur l'Antimatière de l'Espace lointain</French>
+		<French>Centre de recherche sur l'antimatière dans l'espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTIMATTER_RESEARCH_CENTER_PEDIA</Tag>
@@ -788,7 +780,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AQUAPONICS_TANKS</Tag>
 		<English>Aquaponics Tanks</English>
-		<French>Char Aquaponique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AQUAPONICS_TANKS_PEDIA</Tag>
@@ -1043,7 +1034,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_DEFLECTION_SYSTEM</Tag>
 		<English>Asteroid Deflection System</English>
-		<French>Système de Déflection d'Astéroïde</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_DEFLECTION_SYSTEM_PEDIA</Tag>
@@ -1056,7 +1046,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_EPITAXY_FACTORY</Tag>
 		<English>Asteroid Epitaxy Factory</English>
-		<French>Usine d'Epitaxy d'Astéroïde</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_EPITAXY_FACTORY_PEDIA</Tag>
@@ -1069,7 +1058,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_INTERIOR_CITY</Tag>
 		<English>Asteroid Interior City</English>
-		<French>Ville d'Astéroïde Interior</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_INTERIOR_CITY_PEDIA</Tag>
@@ -1082,7 +1070,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_MINE</Tag>
 		<English>Asteroid Mine</English>
-		<French>Mine d'Astéroïde</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_MINE_PEDIA</Tag>
@@ -1095,17 +1082,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX</Tag>
 		<English>Asteroid Mining Complex</English>
-		<French>Complexe Minier d'Astéroïde</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</Tag>
 		<English>Effect - Asteroid Mining Complex</English>
-		<French>Effet - Complexe minier d'Astéroïde</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT_PEDIA</Tag>
 		<English>Bonus from Asteroid Mining Complex</English>
-		<French>Bonus provenant de Complexe Minier d'Astéroïde</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT_STRATEGY</Tag>
@@ -1122,7 +1106,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_PIRATE_BASE</Tag>
 		<English>Asteroid Pirate Base</English>
-		<French>Pirate Base d'Astéroïde</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_PIRATE_BASE_PEDIA</Tag>
@@ -1135,7 +1118,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_RARE</Tag>
 		<English>Asteroid Mine (Rare Minerals)</English>
-		<French>Mine d'Astéroïde (Minéraux rares)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_RARE_PEDIA</Tag>
@@ -1244,12 +1226,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATOMICALLY_PRECISE_ALLOYS</Tag>
 		<English>Atomically Precise Alloy Foundry</English>
-		<French>Fonderie d'alliage de précision Atomique</French>
+		<French>Fonderie d'alliages atomiquement précis</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATOMICALLY_PRECISE_ALLOYS_PEDIA</Tag>
-		<English>This factory can manufacture at sub-nanometer precision. This allows for extremely precise and strong metallic alloys.</English>
-		<French>Cette usine peut fabriquer avec une précision sub-nanométrique. Cela permet des alliages métalliques extrêmement précis et solides.</French>
+		<English>This factory can manufacture at sub-nanometre precision. This allows for extremely precise and strong metallic alloys.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATOMICALLY_PRECISE_ALLOYS_STRATEGY</Tag>
@@ -1258,12 +1239,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATOMIC_ASSEMBLER</Tag>
 		<English>Atomic Assembler</English>
-		<French>Assembleur Atomique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATOMIC_ASSEMBLER_PEDIA</Tag>
-		<English>More advanced than the Molecular Assember, this device assembers at the atomic level.</English>
-		<French>Plus avancé que l'Assembleur moléculaire, ce dispositif assemble au niveau atomique</French>
+		<English>More advanced than the Molecular Assembler, this device assembles at the atomic level.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATOMIC_ASSEMBLER_STRATEGY</Tag>
@@ -1344,7 +1323,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOMATED_SWITCHBOARD</Tag>
 		<English>Automated Switchboard</English>
-		<French>Tableau électrique Automatisé</French>
+		<French>Tableau électrique automatique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOMATED_SWITCHBOARD_PEDIA</Tag>
@@ -1441,7 +1420,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEHAVIOR_PREDICTION</Tag>
 		<English>Behavior Prediction</English>
-		<French>Prédiction des comportements</French>
+		<French>Prédiction du comportement</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEHAVIOR_PREDICTION_PEDIA</Tag>
@@ -2554,11 +2533,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_BLACK_HOLE</Tag>
 		<English>Cislunar Black Hole</English>
-		<French>Black Hole Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_BLACK_HOLE_PEDIA</Tag>
-		<English>A miniature black hole is created in the cislunar colony. The move was controversial due to safety concerns, but such concerns were set aside after an aggressive marketing campaign from General Kugelblitz. Matter is fed into the black hole to keep it stablized, and the Hawking radiation is harvested for energy. The exhaust from the black hole also accelerates the colony, facilitating commerce.</English>
+		<English>A miniature black hole is created in the cislunar colony. The move was controversial due to safety concerns, but such concerns were set aside after an aggressive marketing campaign from General Kugelblitz. Matter is fed into the black hole to keep it stabilized, and the Hawking radiation is harvested for energy. The exhaust from the black hole also accelerates the colony, facilitating commerce.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_BLACK_HOLE_STRATEGY</Tag>
@@ -2606,7 +2584,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ECONOMY_PEDIA</Tag>
-		<English>In the late 21st century, a thriving cislunar space economy was in operation. Lunar and cislunar bases, a full-fledged asteroid mining industry, affordable launch infrastructure on Earth, and massive orbital solar arrays all came together to make a sustainable industry. Energy and raw materials became so inexpensive that poverty had become a thing of the past. Your civilization is reaching Kardashev Type I. The growing lunar and orbital infrastucture also served as a base for much grander construction projects in space.</English>
+		<English>In the late 21st century, a thriving cislunar space economy was in operation. Lunar and cislunar bases, a full-fledged asteroid mining industry, affordable launch infrastructure on Earth, and massive orbital solar arrays all came together to make a sustainable industry. Energy and raw materials became so inexpensive that poverty had become a thing of the past. Your civilization is reaching Kardashev Type I. The growing lunar and orbital infrastructure also served as a base for much grander construction projects in space.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ECONOMY_STRATEGY</Tag>
@@ -2615,11 +2593,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_EFFECT</Tag>
 		<English>Effect - Cislunar Economy</English>
-		<French>Effet - Economie Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_EFFECT_PEDIA</Tag>
-		<English>To be written</English>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_EFFECT_STRATEGY</Tag>
@@ -3137,7 +3114,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLONY_ECOSYSTEM</Tag>
 		<English>Deep Space Ecosystem</English>
-		<French>Ecosystem de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLONY_ECOSYSTEM_PEDIA</Tag>
@@ -3153,7 +3129,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLONY_EUGENICS_PEDIA</Tag>
-		<English>To be written</English>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLONY_EUGENICS_STRATEGY</Tag>
@@ -4412,12 +4388,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_LOGISTICS_CENTER</Tag>
 		<English>Digital Logistics Center</English>
-		<French>Digital Logistics Center</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_LOGISTICS_CENTER_PEDIA</Tag>
-		<English>This highly automoated warehouse further improves shipping logistics.</English>
-		<French>This highly automoated warehouse further improves shipping logistics.</French>
+		<English>This highly automated warehouse further improves shipping logistics.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_LOGISTICS_CENTER_STRATEGY</Tag>
@@ -4426,12 +4400,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_RESURRECTION</Tag>
 		<English>Digital Resurrection</English>
-		<French>Digital Resurrection</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_RESURRECTION_PEDIA</Tag>
 		<English>Digital resurrection is the practice of reconstructing the deceased's appearance and personality from photographs, social media activity, purchasing habits, and other data. It is used in historical reenactments, holographic concerts, and most controversially, coping with the death of loved ones.</English>
-		<French>Digital resurrection is the practice of reconstructing the deceased's appearance and personality from photographs, social media activity, purchasing habits, and other data. It is used in historical reenactments, holographic concerts, and most controversially, coping with the death of loved ones.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_RESURRECTION_STRATEGY</Tag>
@@ -4440,12 +4412,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_VOTING</Tag>
 		<English>Digital Voting</English>
-		<French>Digital Voting</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_VOTING_PEDIA</Tag>
 		<English>Experiments in electronic voting had been going on for years, but it was not until the widespread deployment of blockchain technology that online voting could be conducted in a secure manner.</English>
-		<French>Experiments in electronic voting had been going on for years, but it was not until the widespread deployment of blockchain technology that online voting could be conducted in a secure manner.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_VOTING_STRATEGY</Tag>
@@ -4454,12 +4424,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DILATON_GENERATOR</Tag>
 		<English>Cislunar Dilaton Generator</English>
-		<French>Dilaton Generator Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DILATON_GENERATOR_PEDIA</Tag>
 		<English>In particle physics, the dilaton is a hypothetical particle that appears in theories with extra dimensions when the volume of the compactified dimensions is allowed to vary. It appears, for instance as a radion in Kaluza-Klein theory's compactifications of extra dimensions. It is a particle of a scalar field Phi, a scalar field that always comes with gravity. For comparison, in Brans-Dicke formulation of general relativity, Newton's constant, or equivalently (via natural units), the Planck mass is a constant. If instead of this constant, scalar field, a dynamical one is used, the resulting particle corresponding to the graviton is the dilaton.</English>
-		<French>In particle physics, the dilaton is a hypothetical particle that appears in theories with extra dimensions when the volume of the compactified dimensions is allowed to vary. It appears, for instance as a radion in Kaluza-Klein theory's compactifications of extra dimensions. It is a particle of a scalar field Phi, a scalar field that always comes with gravity. For comparison, in Brans-Dicke formulation of general relativity, Newton's constant, or equivalently (via natural units), the Planck mass is a constant. If instead of this constant, scalar field, a dynamical one is used, the resulting particle corresponding to the graviton is the dilaton.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DILATON_GENERATOR_STRATEGY</Tag>
@@ -4468,12 +4436,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIMENSION_X</Tag>
 		<English>Distant Portal to Dimension X</English>
-		<French>Distant Portal to Dimension X</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIMENSION_X_PEDIA</Tag>
 		<English>No one knows what is on the other side.</English>
-		<French>No one knows what is on the other side.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIMENSION_X_STRATEGY</Tag>
@@ -4482,12 +4448,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISTANT_FUTURE_CITY</Tag>
 		<English>Distant Future City</English>
-		<French>Ville Distant Future</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISTANT_FUTURE_CITY_PEDIA</Tag>
-		<English>Using a massive timehole, this city exists in the distant future and is connected to the present.</English>
-		<French>Using a massive timehole, this city exists in the distant future and is connected to the present.</French>
+		<English>Using a massive time-hole, this city exists in the distant future and is connected to the present.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISTANT_FUTURE_CITY_STRATEGY</Tag>
@@ -4496,12 +4460,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISTANT_PAST_CITY</Tag>
 		<English>Distant Past City</English>
-		<French>Ville Distant Past</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISTANT_PAST_CITY_PEDIA</Tag>
-		<English>Using a massive timehole, this city exists in the distant past and is connected to the present.</English>
-		<French>Using a massive timehole, this city exists in the distant past and is connected to the present.</French>
+		<English>Using a massive time-hole, this city exists in the distant past and is connected to the present.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISTANT_PAST_CITY_STRATEGY</Tag>
@@ -4510,12 +4472,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISTRIBUTED_SOCIAL_NETWORK</Tag>
 		<English>Distributed Social Network</English>
-		<French>Distributed Social Network</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISTRIBUTED_SOCIAL_NETWORK_PEDIA</Tag>
 		<English>A distributed social network or federated social network is an Internet social networking service that is decentralized and distributed across distinct providers. It consists of multiple social websites, where users of each site communicate with users of any of the involved sites. From a societal perspective, one may compare this concept to that of social media being a public utility.</English>
-		<French>A distributed social network or federated social network is an Internet social networking service that is decentralized and distributed across distinct providers. It consists of multiple social websites, where users of each site communicate with users of any of the involved sites. From a societal perspective, one may compare this concept to that of social media being a public utility.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISTRIBUTED_SOCIAL_NETWORK_STRATEGY</Tag>
@@ -4524,12 +4484,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOCKING_BAY</Tag>
 		<English>Cislunar Docking Bay</English>
-		<French>Docking Bay Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOCKING_BAY_PEDIA</Tag>
 		<English>A docking bay for supply ships.</English>
-		<French>A docking bay for supply ships.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOCKING_BAY_STRATEGY</Tag>
@@ -4538,12 +4496,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOLPHIN_COMMUNICATION_CENTER</Tag>
 		<English>Dolphin Communication Center</English>
-		<French>Dolphin Communication Center</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOLPHIN_COMMUNICATION_CENTER_PEDIA</Tag>
 		<English>A facility designed to facilitate dolphin-human communication.[PARAGRAPH:2]http://www.livescience.com/37232-could-humans-and-dolphins-ever-talk-to-each-other.html</English>
-		<French>A facility designed to facilitate dolphin-human communication.[PARAGRAPH:2]http://www.livescience.com/37232-could-humans-and-dolphins-ever-talk-to-each-other.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOLPHIN_COMMUNICATION_CENTER_STRATEGY</Tag>
@@ -5132,7 +5088,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EUROPA_CITY_PEDIA</Tag>
 		<English>A large city in Europa's subsurface ocean.</English>
-		<French>A large city in Europa's subsurface ocean.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EUROPA_CITY_STRATEGY</Tag>
@@ -5141,12 +5096,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EUROPA_COLONY</Tag>
 		<English>Europa Colony</English>
-		<French>Colonie de Europa</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EUROPA_COLONY_PEDIA</Tag>
 		<English>A human settlement in the subsurface ocean of Europa.</English>
-		<French>A human settlement in the subsurface ocean of Europa.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EUROPA_COLONY_STRATEGY</Tag>
@@ -5155,12 +5108,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EUROPA_ECOSYSTEM</Tag>
 		<English>Europa Ecosystem</English>
-		<French>Europa Ecosystem</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EUROPA_ECOSYSTEM_PEDIA</Tag>
 		<English>Life has been seeded in Europa's subsurface ocean.</English>
-		<French>Life has been seeded in Europa's subsurface ocean.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EUROPA_ECOSYSTEM_STRATEGY</Tag>
@@ -5169,12 +5120,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EUROPA_PROBE</Tag>
 		<English>Europa Probe</English>
-		<French>Europa Probe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EUROPA_PROBE_PEDIA</Tag>
 		<English>The Europa Multiple-Flyby Mission (formerly known as the Europa Clipper) is an interplanetary mission in development by NASA comprising an orbiter and a lander. Set for a launch in the 2020s, the spacecraft are being developed to study the Galilean moon Europa through a lander and a series of flybys while in orbit around Jupiter.[PARAGRAPH:2]The mission is a follow-up to studies made by the Galileo spacecraft during its eight years in Jupiter orbit, which indicated the existence of a subsurface ocean underneath Europa. Plans to send a spacecraft to Europa were initially conceived with projects such as Europa Orbiter and Jupiter Icy Moons Orbiter, in which a spacecraft would be injected into orbit around Europa. However, due to the strong impact of radiation from Jupiter's magnetosphere in Europan orbit, it was decided that it would be safer to inject a spacecraft into an orbit around Jupiter and make several close flybys of the moon instead. The mission was originally branded the Europa Clipper mission, and began as a joint investigation between the Jet Propulsion Laboratory and the Applied Physics Laboratory.[PARAGRAPH:2]The Europa Mission orbiter will be built and manufactured with a scientific payload of nine instruments, contributed by the JPL, APL, Southwest Research Institute, University of Texas, Arizona State University and University of Colorado Boulder. The scientific payload for the lander is yet to be determined.</English>
-		<French>The Europa Multiple-Flyby Mission (formerly known as the Europa Clipper) is an interplanetary mission in development by NASA comprising an orbiter and a lander. Set for a launch in the 2020s, the spacecraft are being developed to study the Galilean moon Europa through a lander and a series of flybys while in orbit around Jupiter.[PARAGRAPH:2]The mission is a follow-up to studies made by the Galileo spacecraft during its eight years in Jupiter orbit, which indicated the existence of a subsurface ocean underneath Europa. Plans to send a spacecraft to Europa were initially conceived with projects such as Europa Orbiter and Jupiter Icy Moons Orbiter, in which a spacecraft would be injected into orbit around Europa. However, due to the strong impact of radiation from Jupiter's magnetosphere in Europan orbit, it was decided that it would be safer to inject a spacecraft into an orbit around Jupiter and make several close flybys of the moon instead. The mission was originally branded the Europa Clipper mission, and began as a joint investigation between the Jet Propulsion Laboratory and the Applied Physics Laboratory.[PARAGRAPH:2]The Europa Mission orbiter will be built and manufactured with a scientific payload of nine instruments, contributed by the JPL, APL, Southwest Research Institute, University of Texas, Arizona State University and University of Colorado Boulder. The scientific payload for the lander is yet to be determined.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EUROPA_PROBE_STRATEGY</Tag>
@@ -5183,12 +5132,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EURO_ELT</Tag>
 		<English>European Extremely Large Telescope</English>
-		<French>European Extremely Large Telescope</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EURO_ELT_PEDIA</Tag>
 		<English>The European Extremely Large Telescope (E-ELT) is an astronomical observatory and the worlds largest optical/near-infrared extremely large telescope now under construction. Part of the European Southern Observatory (ESO) it is located on top of Cerro Armazones in the Atacama Desert of northern Chile. The design comprises a reflecting telescope with a 39.3-metre-diameter segmented primary mirror, a 4.2-metre-diameter secondary mirror, and will be supported by adaptive optics, 6 laser guide star units and multiple large science instruments. The observatory aims to gather 13 times more light than the largest optical telescopes existing today, able to correct for atmospheric distortions and provide images 16 times sharper than those from the Hubble Space Telescope.[PARAGRAPH:2]The E-ELT is intented to vastly advance astrophysical knowledge by enabling detailed studies of planets around other stars, the first galaxies in the Universe, super-massive black holes, the nature of the Universe's dark sector and to detect water and organic molecules in protoplanetary disks around other stars. The facility is expected to take 11 years to construct.[PARAGRAPH:2]On 11 June 2012, the ESO Council approved the E-ELT programme's plans to begin civil works at the telescope site, with construction of the telescope itself pending final agreement with governments of some member states. Construction work on the E-ELT site started in June 2014. In December 2014 ESO had secured over 90% funding and authorized to start construction of the telescope, which will cost around one billion euros for the first construction phase. First light is planned for 2024.</English>
-		<French>The European Extremely Large Telescope (E-ELT) is an astronomical observatory and the worlds largest optical/near-infrared extremely large telescope now under construction. Part of the European Southern Observatory (ESO) it is located on top of Cerro Armazones in the Atacama Desert of northern Chile. The design comprises a reflecting telescope with a 39.3-metre-diameter segmented primary mirror, a 4.2-metre-diameter secondary mirror, and will be supported by adaptive optics, 6 laser guide star units and multiple large science instruments. The observatory aims to gather 13 times more light than the largest optical telescopes existing today, able to correct for atmospheric distortions and provide images 16 times sharper than those from the Hubble Space Telescope.[PARAGRAPH:2]The E-ELT is intented to vastly advance astrophysical knowledge by enabling detailed studies of planets around other stars, the first galaxies in the Universe, super-massive black holes, the nature of the Universe's dark sector and to detect water and organic molecules in protoplanetary disks around other stars. The facility is expected to take 11 years to construct.[PARAGRAPH:2]On 11 June 2012, the ESO Council approved the E-ELT programme's plans to begin civil works at the telescope site, with construction of the telescope itself pending final agreement with governments of some member states. Construction work on the E-ELT site started in June 2014. In December 2014 ESO had secured over 90% funding and authorized to start construction of the telescope, which will cost around one billion euros for the first construction phase. First light is planned for 2024.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EURO_ELT_STRATEGY</Tag>
@@ -5197,12 +5144,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EVENT_HORIZON_CITY</Tag>
 		<English>Interstellar Event Horizon City</English>
-		<French>Ville Interstellar Event Horizon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EVENT_HORIZON_CITY_PEDIA</Tag>
-		<English>This city is so close to the event horizon of a black hole that biological life cannot surive the intense tidal forces, to say nothing of radiation. But exotic non-biological life can.</English>
-		<French>This city is so close to the event horizon of a black hole that biological life cannot surive the intense tidal forces, to say nothing of radiation. But exotic non-biological life can.</French>
+		<English>This city is so close to the event horizon of a black hole that biological life cannot survive the intense tidal forces, to say nothing of radiation. But exotic non-biological life can.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EVENT_HORIZON_CITY_STRATEGY</Tag>
@@ -5211,12 +5156,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EVENT_HORIZON_PROBE</Tag>
 		<English>Interstellar Event Horizon Probe</English>
-		<French>Interstellar Event Horizon Probe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EVENT_HORIZON_PROBE_PEDIA</Tag>
 		<English>This probe moves beyond the event horizon of a black hole and returns data.</English>
-		<French>This probe moves beyond the event horizon of a black hole and returns data.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EVENT_HORIZON_PROBE_STRATEGY</Tag>
@@ -5225,12 +5168,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXABIT_BROADBAND</Tag>
 		<English>Exabit Broadband</English>
-		<French>Exabit Broadband</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXABIT_BROADBAND_PEDIA</Tag>
 		<English>The widespread adoption of optronic communication made extremely fast broadband available to the general public. This allowed seamless virtual reality and simulated reality experiences, and it further accelerated commerce by allowing massive flows of data for virtually free.</English>
-		<French>The widespread adoption of optronic communication made extremely fast broadband available to the general public. This allowed seamless virtual reality and simulated reality experiences, and it further accelerated commerce by allowing massive flows of data for virtually free.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXABIT_BROADBAND_STRATEGY</Tag>
@@ -5323,12 +5264,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXTREME_FORCE_CONCENTRATOR</Tag>
 		<English>Extreme Force Concentrator</English>
-		<French>Extreme Force Concentrator</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXTREME_FORCE_CONCENTRATOR_PEDIA</Tag>
-		<English>This devices uses space decompactification to appy previous unheard of forces.</English>
-		<French>This devices uses space decompactification to appy previous unheard of forces.</French>
+		<English>This devices uses space decompactification to apply previously unheard quantities of forces.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXTREME_FORCE_CONCENTRATOR_STRATEGY</Tag>
@@ -5337,12 +5276,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EYE_IN_SKY</Tag>
 		<English>Eye in the Sky</English>
-		<French>Eye in the Sky</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EYE_IN_SKY_PEDIA</Tag>
 		<English>Shortly after Photonic Satellites were invented, governments race to deploy the technology. Using ultra-high definition imaging, undetectable laser communications, and state-of-the-art automated processing, the Eye in the Sky is capable of producing a thorough real-time map of the entire world and all activity on it to a sub-meter resolution. By now, privacy advocates had given up.</English>
-		<French>Shortly after Photonic Satellites were invented, governments race to deploy the technology. Using ultra-high definition imaging, undetectable laser communications, and state-of-the-art automated processing, the Eye in the Sky is capable of producing a thorough real-time map of the entire world and all activity on it to a sub-meter resolution. By now, privacy advocates had given up.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EYE_IN_SKY_STRATEGY</Tag>
@@ -5351,12 +5288,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_E_CLOTHING_DISTRIBUTOR</Tag>
 		<English>E-Clothing Outfitter</English>
-		<French>Fournisseur d'E-Tissu</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_E_CLOTHING_DISTRIBUTOR_PEDIA</Tag>
 		<English>These textiles are embedded with electronics.</English>
-		<French>Ces textiles sont imprégnés d'électronique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_E_CLOTHING_DISTRIBUTOR_STRATEGY</Tag>
@@ -5365,12 +5300,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FAIRYLAND</Tag>
 		<English>Fairyland</English>
-		<French>Fairyland</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FAIRYLAND_PEDIA</Tag>
 		<English>Fairyland, in folklore, is the fabulous land or abode of fairies or fays.</English>
-		<French>Fairyland, in folklore, is the fabulous land or abode of fairies or fays.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FAIRYLAND_STRATEGY</Tag>
@@ -5379,12 +5312,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FALSE_VACUUM_TRAP</Tag>
 		<English>Interstellar False Vacuum Trap</English>
-		<French>Piège du faux vide Interstellaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FALSE_VACUUM_TRAP_PEDIA</Tag>
 		<English>Induces a localized vacuum collapse. Good for defense. Could be dangerous.</English>
-		<French>Induces a localized vacuum collapse. Good for defense. Could be dangerous.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FALSE_VACUUM_TRAP_STRATEGY</Tag>
@@ -5393,12 +5324,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FANTASY_CITY</Tag>
 		<English>Intergalactic Fantasy City</English>
-		<French>Ville Intergalactic Fantasy</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FANTASY_CITY_PEDIA</Tag>
 		<English>This fantasy city, build of exotic matter, holds untold wonders.</English>
-		<French>This fantasy city, build of exotic matter, holds untold wonders.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FANTASY_CITY_STRATEGY</Tag>
@@ -5766,12 +5695,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FULLERENE</Tag>
 		<English>Fullerene Plant</English>
-		<French>Usine de Fullerène</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FULLERENE_PEDIA</Tag>
-		<English>Produces Fullerines</English>
-		<French>Produit du Fullerène</French>
+		<English>Produces Fullerene.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FULLERENE_STRATEGY</Tag>
@@ -5964,12 +5891,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_EFFECT</Tag>
 		<English>Effect - Galactic Economy</English>
-		<French>Effet - Galactic Economy</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_EFFECT_PEDIA</Tag>
-		<English>To be written</English>
-		<French>To be written</French>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_EFFECT_STRATEGY</Tag>
@@ -5978,12 +5903,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_GROUP_COLONY</Tag>
 		<English>Intergalactic Galactic Group Colony</English>
-		<French>Colonie de Galactic Group</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_GROUP_COLONY_PEDIA</Tag>
 		<English>Colonize an entire galaxy group.</English>
-		<French>Colonize an entire galaxy group.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_GROUP_COLONY_STRATEGY</Tag>
@@ -5992,12 +5915,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_NEWS</Tag>
 		<English>Galactic News Network</English>
-		<French>Galactic News Network</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_NEWS_PEDIA</Tag>
 		<English>GNN was exciting at first, but now all they seem to cover is the missing commercial starship and the 3016 Presidential election.</English>
-		<French>GNN was exciting at first, but now all they seem to cover is the missing commercial starship and the 3016 Presidential election.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_NEWS_STRATEGY</Tag>
@@ -6443,7 +6364,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITON_COMMUNICATION_CENTER_PEDIA</Tag>
 		<English>This site uses gravitons for communication.</English>
-		<French>This site uses gravitons for communication.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITON_COMMUNICATION_CENTER_STRATEGY</Tag>
@@ -6452,12 +6372,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITON_DETECTOR</Tag>
 		<English>Interstellar Graviton Detector</English>
-		<French>Interstellar Graviton Detector</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITON_DETECTOR_PEDIA</Tag>
-		<English>Detecting gravitons, the hypothetical partical that mediates gravity, would be extraordinarily difficult.[PARAGRAPH:2]https://asunow.asu.edu/content/researchers-propose-new-way-detect-elusive-graviton</English>
-		<French>Detecting gravitons, the hypothetical partical that mediates gravity, would be extraordinarily difficult.[PARAGRAPH:2]https://asunow.asu.edu/content/researchers-propose-new-way-detect-elusive-graviton</French>
+		<English>Detecting gravitons, the hypothetical particle that mediates gravity, would be extraordinarily difficult.[PARAGRAPH:2]https://asunow.asu.edu/content/researchers-propose-new-way-detect-elusive-graviton</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITON_DETECTOR_STRATEGY</Tag>
@@ -6466,12 +6384,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITY_CROWD_CONTROL</Tag>
 		<English>Gravity Crowd Control</English>
-		<French>Gravity Crowd Control</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITY_CROWD_CONTROL_PEDIA</Tag>
-		<English>Gravity fields are employed to immobolize crowds.</English>
-		<French>Gravity fields are employed to immobolize crowds.</French>
+		<English>Gravity fields are employed to immobilize crowds.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITY_CROWD_CONTROL_STRATEGY</Tag>
@@ -6494,12 +6410,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITY_WAVE_DETECTOR</Tag>
 		<English>Gravity Wave Detector</English>
-		<French>Gravity Wave Detector</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITY_WAVE_DETECTOR_PEDIA</Tag>
-		<English>The Laser Interferometer Gravitational-Wave Observatory (LIGO) is a large-scale physics experiment aiming to directly detect gravitational waves. Cofounded in 1992 by Kip Thorne and Ronald Drever of Caltech and Rainer Weiss of MIT, LIGO is a joint project between scientists at MIT, Caltech, and many other colleges and universities. Scientists involved in the project and the analysis of the data for gravitational-wave astronomy are organised by the LIGO Scientific Collaboration which includes more than 900 scientists worldwide.</English>
-		<French>The Laser Interferometer Gravitational-Wave Observatory (LIGO) is a large-scale physics experiment aiming to directly detect gravitational waves. Cofounded in 1992 by Kip Thorne and Ronald Drever of Caltech and Rainer Weiss of MIT, LIGO is a joint project between scientists at MIT, Caltech, and many other colleges and universities. Scientists involved in the project and the analysis of the data for gravitational-wave astronomy are organised by the LIGO Scientific Collaboration which includes more than 900 scientists worldwide.</French>
+		<English>The Laser Interferometer Gravitational-Wave Observatory (LIGO) is a large-scale physics experiment aiming to directly detect gravitational waves. Co-founded in 1992 by Kip Thorne and Ronald Drever of Caltech and Rainer Weiss of MIT, LIGO is a joint project between scientists at MIT, Caltech, and many other colleges and universities. Scientists involved in the project and the analysis of the data for gravitational-wave astronomy are organised by the LIGO Scientific Collaboration which includes more than 900 scientists worldwide.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITY_WAVE_DETECTOR_STRATEGY</Tag>
@@ -6508,12 +6422,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAZER</Tag>
 		<English>Intergalactic Grazer</English>
-		<French>Intergalactic Grazer</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAZER_PEDIA</Tag>
 		<English>The vast amounts of energy consumed by archailect activity sometimes require more energy or materials than can be easily obtained in-system.[PARAGRAPH:2]Grazers are purpose-built spherically symmetric wormholes carried into systems, such as globular clusters, that are rich in material and energy but (usually) poor in planetary materials.[PARAGRAPH:2]Source: Orion's Arm: http://www.orionsarm.com/eg-article/480d45f717577</English>
-		<French>The vast amounts of energy consumed by archailect activity sometimes require more energy or materials than can be easily obtained in-system.[PARAGRAPH:2]Grazers are purpose-built spherically symmetric wormholes carried into systems, such as globular clusters, that are rich in material and energy but (usually) poor in planetary materials.[PARAGRAPH:2]Source: Orion's Arm: http://www.orionsarm.com/eg-article/480d45f717577</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAZER_STRATEGY</Tag>
@@ -6833,7 +6745,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOLLOW_PLANET_PEDIA</Tag>
 		<English>A hollow, artificial planet. The interior contains a massive fusion reactor that doubles as an artificial sun, making both sides inhabitable.</English>
-		<French>A hollow, artificial planet. The interior contains a massive fusion reactor that doubles as an artificial sun, making both sides inhabitable.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOLLOW_PLANET_STRATEGY</Tag>
@@ -6842,12 +6753,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOLODECK</Tag>
 		<English>Holodeck</English>
-		<French>Holodeck</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOLODECK_PEDIA</Tag>
 		<English>See http://memory-alpha.wikia.com/wiki/Holodeck</English>
-		<French>See http://memory-alpha.wikia.com/wiki/Holodeck</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOLODECK_STRATEGY</Tag>
@@ -6856,12 +6765,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOLOGRAPHIC_UNIVERSE</Tag>
 		<English>Interstellar Holographic Multiverse</English>
-		<French>Interstellar Holographic Multiverse</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOLOGRAPHIC_UNIVERSE_PEDIA</Tag>
 		<English>The holographic principle is a principle of string theories and a supposed property of quantum gravity that states that the description of a volume of space can be thought of as encoded on a lower-dimensional boundary to the region-preferably a light-like boundary like a gravitational horizon. First proposed by Gerard 't Hooft, it was given a precise string-theory interpretation by Leonard Susskind who combined his ideas with previous ones of 't Hooft and Charles Thorn. As pointed out by Raphael Bousso, Thorn observed in 1978 that string theory admits a lower-dimensional description in which gravity emerges from it in what would now be called a holographic way.</English>
-		<French>The holographic principle is a principle of string theories and a supposed property of quantum gravity that states that the description of a volume of space can be thought of as encoded on a lower-dimensional boundary to the region-preferably a light-like boundary like a gravitational horizon. First proposed by Gerard 't Hooft, it was given a precise string-theory interpretation by Leonard Susskind who combined his ideas with previous ones of 't Hooft and Charles Thorn. As pointed out by Raphael Bousso, Thorn observed in 1978 that string theory admits a lower-dimensional description in which gravity emerges from it in what would now be called a holographic way.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOLOGRAPHIC_UNIVERSE_STRATEGY</Tag>
@@ -6870,12 +6777,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORIZON_PORT</Tag>
 		<English>Distant Horizon Port</English>
-		<French>Distant Horizon Port</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORIZON_PORT_PEDIA</Tag>
-		<English>The Horizon Port is a spaceport that can launch and receivee ships that travel beyond the cosmic horizon. Because they travel so much faster than light (globally, by warping space), the high energy inherent in the warp fields can be a hazard, requiring particular care on port design.</English>
-		<French>The Horizon Port is a spaceport that can launch and receivee ships that travel beyond the cosmic horizon. Because they travel so much faster than light (globally, by warping space), the high energy inherent in the warp fields can be a hazard, requiring particular care on port design.</French>
+		<English>The Horizon Port is a spaceport that can launch and receive ships that travel beyond the cosmic horizon. Because they travel so much faster than light (globally, by warping space), the high energy inherent in the warp fields can be a hazard, requiring particular care on port design.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORIZON_PORT_STRATEGY</Tag>
@@ -6884,12 +6789,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOTEL_INFINITE</Tag>
 		<English>Distant Hotel Infinite</English>
-		<French>Distant Hotel Infinite</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOTEL_INFINITE_PEDIA</Tag>
 		<English>Hotel Infinite is not just a mathematical curiosity anymore. It is real and good for business.</English>
-		<French>Hotel Infinite is not just a mathematical curiosity anymore. It is real and good for business.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOTEL_INFINITE_STRATEGY</Tag>
@@ -6898,12 +6801,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOUSING_MANAGEMENT</Tag>
 		<English>Deep Space Housing (Management)</English>
-		<French>Housing (Management) de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOUSING_MANAGEMENT_PEDIA</Tag>
 		<English>Management and ruling classes live here.</English>
-		<French>Management and ruling classes live here.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOUSING_MANAGEMENT_STRATEGY</Tag>
@@ -6912,12 +6813,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOUSING_WORKING_CLASS</Tag>
 		<English>Deep Space Housing (Workers)</English>
-		<French>Housing (Workers) de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOUSING_WORKING_CLASS_PEDIA</Tag>
 		<English>Everyone else lives here.</English>
-		<French>Everyone else lives here.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOUSING_WORKING_CLASS_STRATEGY</Tag>
@@ -6926,12 +6825,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUDSON_YARDS</Tag>
 		<English>Hudson Yards</English>
-		<French>Hudson Yards</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUDSON_YARDS_PEDIA</Tag>
 		<English>Hudson Yards is a redevelopment project that is jointly planned, funded and constructed by the City of New York, the State of New York, and the Metropolitan Transportation Authority to encourage development along the Hudson River in Manhattan, New York City. The project includes a rezoning of the Far West Side, an extension of the New York City Subway's 7 &lt;7&gt; trains to the area's eponymous subway station at 11th Avenue, and a renovation of the Jacob K. Javits Convention Center.</English>
-		<French>Hudson Yards est un projet de réaménagement qui est conjointement planifié, financé et construit par la ville de New York, l'État de New York et la Metropolitan Transportation Authority pour encourager le développement le long de la rivière Hudson à Manhattan, à New York. Le projet comprend un rezonage du Far West Side, une extension des trains du métro de New York jusqu'à la station de métro éponyme de la région à la 11e Avenue et une rénovation du Jacob K. Javits Convention Center.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUDSON_YARDS_STRATEGY</Tag>
@@ -6967,12 +6864,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUNGER_GAMES</Tag>
 		<English>Hunger Games</English>
-		<French>Hunger Games</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUNGER_GAMES_PEDIA</Tag>
-		<English>The Hunger Games universe is a dystopia set in 'Panem', a country consisting of the wealthy Capitol and twelve districts in varying states of poverty. Every year, children are chosen to participate in a compulsory annual televised death match called The Hunger Games., of course</English>
-		<French>The Hunger Games universe is a dystopia set in 'Panem', a country consisting of the wealthy Capitol and twelve districts in varying states of poverty. Every year, children are chosen to participate in a compulsory annual televised death match called The Hunger Games., of course</French>
+		<English>The Hunger Games universe is a dystopia set in Panem, a country consisting of the wealthy Capitol and twelve districts in varying states of poverty. Every year, children are chosen to participate in a compulsory annual televised death match called "The Hunger Games", of course</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUNGER_GAMES_STRATEGY</Tag>
@@ -6981,7 +6876,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYADES_STAR_CLUSTER</Tag>
 		<English>Hyades Star Cluster Colony</English>
-		<French>Colonie de Hyades Cluster d'Etoiles</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYADES_STAR_CLUSTER_PEDIA</Tag>
@@ -7648,13 +7542,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_ADMINISTRATION</Tag>
-		<English>Intergalactic Adminitration</English>
-		<French>Intergalactic Adminitration</French>
+		<English>Intergalactic Administration</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_ADMINISTRATION_PEDIA</Tag>
 		<English>This central building provides administration over the galaxy from the home galaxy.</English>
-		<French>This central building provides administration over the galaxy from the home galaxy.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_ADMINISTRATION_STRATEGY</Tag>
@@ -7663,12 +7555,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_BRANEWORKS</Tag>
 		<English>Distant Intergalactic Braneworks</English>
-		<French>Distant Intergalactic Braneworks</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_BRANEWORKS_PEDIA</Tag>
 		<English>A brane construction device in intergalactic space.</English>
-		<French>A brane construction device in intergalactic space.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_BRANEWORKS_STRATEGY</Tag>
@@ -7677,12 +7567,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_CAPITOL</Tag>
 		<English>Intergalactic Capitol</English>
-		<French>Intergalactic Capitol</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_CAPITOL_PEDIA</Tag>
-		<English>Eart is established as the capitol of an intergalactic empire.</English>
-		<French>Eart is established as the capitol of an intergalactic empire.</French>
+		<English>Earth is established as the capitol of an intergalactic empire.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_CAPITOL_STRATEGY</Tag>
@@ -7761,12 +7649,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_DYSON_SPHERES</Tag>
 		<English>Intergalactic Dyson Spheres</English>
-		<French>Intergalactic Dyson Spheres</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_DYSON_SPHERES_PEDIA</Tag>
-		<English>Automated Von Neumann probes are used to constuct a Dyson Sphere around every suitable star in the galaxy.</English>
-		<French>Automated Von Neumann probes are used to constuct a Dyson Sphere around every suitable star in the galaxy.</French>
+		<English>Automated Von Neumann probes are used to construct a Dyson Sphere around every suitable star in the galaxy.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_DYSON_SPHERES_STRATEGY</Tag>
@@ -7775,12 +7661,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_EMPIRE</Tag>
 		<English>Intergalactic Empire</English>
-		<French>Intergalactic Empire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_EMPIRE_PEDIA</Tag>
 		<English>A galactic empire.</English>
-		<French>A galactic empire.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_EMPIRE_STRATEGY</Tag>
@@ -8167,12 +8051,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_AERIAL_CITY</Tag>
 		<English>Interstellar Aerial City</English>
-		<French>Ville Interstellar Aerial</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_AERIAL_CITY_PEDIA</Tag>
 		<English>A lovely city floating above the planet.</English>
-		<French>A lovely city floating above the planet.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_AERIAL_CITY_STRATEGY</Tag>
@@ -8181,12 +8063,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_ASTEROID_MINE</Tag>
 		<English>Interstellar Asteroid Mining System</English>
-		<French>Interstellar d'Astéroïde Mining System</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_ASTEROID_MINE_PEDIA</Tag>
 		<English>A network of automated probes is deployed to harvest asteroids for raw material.</English>
-		<French>A network of automated probes is deployed to harvest asteroids for raw material.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_ASTEROID_MINE_STRATEGY</Tag>
@@ -8195,12 +8075,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_BROADCAST_NODE</Tag>
 		<English>Interstellar Broadcast Node</English>
-		<French>Interstellar Broadcast Node</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_BROADCAST_NODE_PEDIA</Tag>
 		<English>A beacon for broadcast into interstellar space.</English>
-		<French>A beacon for broadcast into interstellar space.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_BROADCAST_NODE_STRATEGY</Tag>
@@ -8209,12 +8087,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_COLONY</Tag>
 		<English>Interstellar Mothership</English>
-		<French>Interstellar Mothership</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_COLONY_PEDIA</Tag>
 		<English>For thousands of years, humans had dreamed of taking to the stars. As human capabilities in space advanced, many interstellar concepts were proposed, including laser-powered solar sails, multi-kilomater magnetic sails, nuclear fission engines, nuclear fusion engines, antimatter propulsion, and the Alcubierre Drive, among others. Motivations to travel were just as diverse: meet alien life, explore the universe, relieve overcrowding, and escape the increasingly authoritarian Solar Empire.</English>
-		<French>For thousands of years, humans had dreamed of taking to the stars. As human capabilities in space advanced, many interstellar concepts were proposed, including laser-powered solar sails, multi-kilomater magnetic sails, nuclear fission engines, nuclear fusion engines, antimatter propulsion, and the Alcubierre Drive, among others. Motivations to travel were just as diverse: meet alien life, explore the universe, relieve overcrowding, and escape the increasingly authoritarian Solar Empire.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_COLONY_STRATEGY</Tag>
@@ -8223,12 +8099,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_DATA_COLLECTION</Tag>
 		<English>Interstellar Data Collection</English>
-		<French>Interstellar Data Collection</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_DATA_COLLECTION_PEDIA</Tag>
 		<English>These sensors provide detailed data about the interstellar medium and nearby objects.</English>
-		<French>These sensors provide detailed data about the interstellar medium and nearby objects.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_DATA_COLLECTION_STRATEGY</Tag>
@@ -8237,12 +8111,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_DEFENSIVE_PERIMETER</Tag>
 		<English>Interstellar Defensive Perimeter</English>
-		<French>Interstellar Defensive Perimeter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_DEFENSIVE_PERIMETER_PEDIA</Tag>
 		<English>Your first major interstellar defense system.</English>
-		<French>Your first major interstellar defense system.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_DEFENSIVE_PERIMETER_STRATEGY</Tag>
@@ -8251,12 +8123,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_FARM</Tag>
 		<English>Interstellar Farm</English>
-		<French>Interstellar Farm</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_FARM_PEDIA</Tag>
 		<English>An early extrasolar farm.</English>
-		<French>An early extrasolar farm.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_FARM_STRATEGY</Tag>
@@ -8265,12 +8135,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_HYDROGEN_MAP</Tag>
 		<English>Transtellar Hydrogen Map</English>
-		<French>Transtellar Hydrogène Map</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_HYDROGEN_MAP_PEDIA</Tag>
 		<English>The purpose of this base is to map the local interstellar hydrogen, which is important information for interstellar travelers.</English>
-		<French>The purpose of this base is to map the local interstellar hydrogen, which is important information for interstellar travelers.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_HYDROGEN_MAP_STRATEGY</Tag>
@@ -8279,12 +8147,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_HYPERPORT</Tag>
 		<English>Interstellar Hyperport</English>
-		<French>Interstellar Hyperport</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_HYPERPORT_PEDIA</Tag>
 		<English>This facility allows transport from the star system to hyperspace.</English>
-		<French>This facility allows transport from the star system to hyperspace.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_HYPERPORT_STRATEGY</Tag>
@@ -8293,12 +8159,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_IMMIGRATION</Tag>
 		<English>Interstellar Immigration Office</English>
-		<French>Interstellar Immigration Office</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_IMMIGRATION_PEDIA</Tag>
 		<English>Your civilization is now so prosperous that beings are coming from all over the galaxy. You don't know what half of them are.</English>
-		<French>Your civilization is now so prosperous that beings are coming from all over the galaxy. You don't know what half of them are.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_IMMIGRATION_STRATEGY</Tag>
@@ -8307,12 +8171,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_MEDIA_CENTER</Tag>
 		<English>Interstellar Media Center</English>
-		<French>Interstellar Media Center</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_MEDIA_CENTER_PEDIA</Tag>
-		<English>This media center brings intertainment to the interstellar colony.</English>
-		<French>This media center brings intertainment to the interstellar colony.</French>
+		<English>This media center brings entertainment to the interstellar colony.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_MEDIA_CENTER_STRATEGY</Tag>
@@ -8321,12 +8183,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_METROPOLIS</Tag>
 		<English>Interstellar Metropolis</English>
-		<French>Interstellar Metropolis</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_METROPOLIS_PEDIA</Tag>
 		<English>A city around another star.</English>
-		<French>A city around another star.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_METROPOLIS_STRATEGY</Tag>
@@ -8335,12 +8195,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_NETWORK_NODE</Tag>
 		<English>Interstellar Network Node</English>
-		<French>Interstellar Network Node</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_NETWORK_NODE_PEDIA</Tag>
 		<English>A node in the wormhole-based galactic Internet.</English>
-		<French>A node in the wormhole-based galactic Internet.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_NETWORK_NODE_STRATEGY</Tag>
@@ -8349,12 +8207,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_OLYMPICS</Tag>
 		<English>Interstellar Olympics</English>
-		<French>Interstellar Olympics</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_OLYMPICS_PEDIA</Tag>
 		<English>Athletes from all over the galaxy compete.</English>
-		<French>Athletes from all over the galaxy compete.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_OLYMPICS_STRATEGY</Tag>
@@ -8363,12 +8219,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_PROBE</Tag>
 		<English>Interstellar Probe</English>
-		<French>Interstellar Probe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_PROBE_PEDIA</Tag>
-		<English>hroughout their entire history, humans have dreamed about taking to the stars. At long last, that reality appears to be within grasp. This umnanned spacecraft will fly by Proxima Centauri and send back high resolution images, analysis of the stellar and interstellar medium, and images of any small planets that are discovered.</English>
-		<French>hroughout their entire history, humans have dreamed about taking to the stars. At long last, that reality appears to be within grasp. This umnanned spacecraft will fly by Proxima Centauri and send back high resolution images, analysis of the stellar and interstellar medium, and images of any small planets that are discovered.</French>
+		<English>Throughout their entire history, humans have dreamed about taking to the stars. At long last, that reality appears to be within grasp. This unmanned spacecraft will fly by Proxima Centauri and send back high resolution images, analysis of the stellar and interstellar medium, and images of any small planets that are discovered.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_PROBE_STRATEGY</Tag>
@@ -8615,12 +8469,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JOVIAN_ANTIMATTER_HARVESTER</Tag>
 		<English>Jovian Antimatter Harvester</English>
-		<French>Jovian Antimatière Harvester</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JOVIAN_ANTIMATTER_HARVESTER_PEDIA</Tag>
-		<English>The gas giants, especially Saturn, might be a good sources of antimater. See https://www.centauri-dreams.org/?p=22934</English>
-		<French>The gas giants, especially Saturn, might be a good sources of antimater. See https://www.centauri-dreams.org/?p=22934</French>
+		<English>The gas giants, especially Saturn, might be a good sources of antimatter. See https://www.centauri-dreams.org/?p=22934</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JOVIAN_ANTIMATTER_HARVESTER_STRATEGY</Tag>
@@ -8755,12 +8607,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KING_ABDULLAH_ECONOMIC_CITY</Tag>
 		<English>King Abdullah Economic City</English>
-		<French>La Cité Economique du Roi Abdullah</French>
+		<French>La Cité économique du Roi Abdullah</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KING_ABDULLAH_ECONOMIC_CITY_PEDIA</Tag>
-		<English>King Abdullah Economic City is a megaproject announced in 2005 by Abdullah bin Abdulaziz Al Saud, the then king of Saudi Arabia.</English>
-		<French>La Cité Economique du Roi Abdullah est un mégaprojet annoncé en 2005 par Abdullah bin Abdulaziz Al Saud, alors roi d'Arabie Saoudite.</French>
+		<English>King Abdullah Economic City is a mega-project announced in 2005 by Abdullah bin Abdulaziz Al Saud, the then king of Saudi Arabia.</English>
+		<French>La Cité économique du Roi Abdullah est un méga-projet annoncé en 2005 par Abdullah bin Abdulaziz Al Saud, alors roi d'Arabie Saoudite.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KING_ABDULLAH_ECONOMIC_CITY_STRATEGY</Tag>
@@ -13293,12 +13145,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROGRAMMED_WORK_ETHIC</Tag>
 		<English>Interstellar Programmed Work Ethic</English>
-		<French>Interstellar Programmed Work Ethic</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROGRAMMED_WORK_ETHIC_PEDIA</Tag>
-		<English>To be written</English>
-		<French>To be written</French>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROGRAMMED_WORK_ETHIC_STRATEGY</Tag>
@@ -14980,12 +14830,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_EFFECT</Tag>
 		<English>Effect - Solar Economy</English>
-		<French>Effet - Solar Economy</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_EFFECT_PEDIA</Tag>
-		<English>To be written</English>
-		<French>To be written</French>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_EFFECT_STRATEGY</Tag>
@@ -14994,12 +14842,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_IMPORTER_EXPORTER</Tag>
 		<English>Deep Space Solar Importer/Exporter</English>
-		<French>Importateur/Exportateur Solaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_IMPORTER_EXPORTER_PEDIA</Tag>
 		<English>This port handles imports into the Solar System and exports from the Solar System.</English>
-		<French>This port handles imports into the Solar System and exports from the Solar System.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_IMPORTER_EXPORTER_STRATEGY</Tag>
@@ -15008,12 +14854,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_MATRIOSHKA_BRAIN</Tag>
 		<English>Solar Matrioshka Brain</English>
-		<French>Solar Matrioshka Brain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_MATRIOSHKA_BRAIN_PEDIA</Tag>
 		<English>A Matrioshka Brain around the Sun.</English>
-		<French>A Matrioshka Brain around the Sun.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_MATRIOSHKA_BRAIN_STRATEGY</Tag>
@@ -15022,12 +14866,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_NOVA_SURVIVAL_PLAN</Tag>
 		<English>Solar Nova Survival Plan</English>
-		<French>Solar Nova Survival Plan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_NOVA_SURVIVAL_PLAN_PEDIA</Tag>
 		<English>Someday, the Sun will explode in a nova, incinerating Earth. These protocols are to protect Earth's cultural heritage in the distant future.</English>
-		<French>Someday, the Sun will explode in a nova, incinerating Earth. These protocols are to protect Earth's cultural heritage in the distant future.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_NOVA_SURVIVAL_PLAN_STRATEGY</Tag>
@@ -17325,12 +17167,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSAL_EFFECT</Tag>
 		<English>Effect - Universal Economy</English>
-		<French>Effet - Universal Economy</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSAL_EFFECT_PEDIA</Tag>
-		<English>To be written</English>
-		<French>To be written</French>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSAL_EFFECT_STRATEGY</Tag>
@@ -17339,12 +17179,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSAL_LIBRARY</Tag>
 		<English>Universal Library</English>
-		<French>Universal Library</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSAL_LIBRARY_PEDIA</Tag>
 		<English>All recorded knowledge is freely available at the Universal Library. Patent and copyright laws have been reformed to provide payment to inventors and designers based on the use of their material.</English>
-		<French>All recorded knowledge is freely available at the Universal Library. Patent and copyright laws have been reformed to provide payment to inventors and designers based on the use of their material.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSAL_LIBRARY_STRATEGY</Tag>
@@ -17353,12 +17191,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSAL_RESTAURANT</Tag>
 		<English>Universal Restaurant</English>
-		<French>Universal Restaurant</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSAL_RESTAURANT_PEDIA</Tag>
 		<English>With bioprinters and sophisticated robotics, this restaurant can serve almost anything.</English>
-		<French>With bioprinters and sophisticated robotics, this restaurant can serve almost anything.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSAL_RESTAURANT_STRATEGY</Tag>
@@ -17367,22 +17203,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSE</Tag>
 		<English>Omniverse</English>
-		<French>Omniverse</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSE_PEDIA</Tag>
 		<English>Create the universe. Don't mess it up this time.</English>
-		<French>Create the universe. Don't mess it up this time.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSE_PORTAL</Tag>
 		<English>Universe Portal</English>
-		<French>Universe Portal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSE_PORTAL_PEDIA</Tag>
 		<English>A portal on Earth to a parallel universe.</English>
-		<French>A portal on Earth to a parallel universe.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSE_PORTAL_STRATEGY</Tag>
@@ -17395,12 +17227,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNMANNED_MARKET</Tag>
 		<English>Unmanned Market</English>
-		<French>Unmanned Market</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNMANNED_MARKET_PEDIA</Tag>
 		<English>This market uses facial recognition and other machine learning technologies to track customers in the store and automatically charge for purchases. This makes the shopping experience much more efficient.</English>
-		<French>This market uses facial recognition and other machine learning technologies to track customers in the store and automatically charge for purchases. This makes the shopping experience much more efficient.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNMANNED_MARKET_STRATEGY</Tag>
