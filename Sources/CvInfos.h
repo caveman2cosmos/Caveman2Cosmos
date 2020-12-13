@@ -23,7 +23,7 @@
 #include "CvOutcomeMission.h"
 #include "CvDate.h"
 #include "BoolExpr.h"
-#include "IntExpr.h"
+//#include "IntExpr.h"
 #include "IDValueMap.h"
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
@@ -33,6 +33,7 @@
 extern bool shouldHaveType;
 
 class CvXMLLoadUtility;
+class IntExpr;
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //

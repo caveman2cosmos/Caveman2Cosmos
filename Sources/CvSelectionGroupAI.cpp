@@ -9,7 +9,6 @@
 #include "CvSelectionGroupAI.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
-#include "CvUnitAI.h"
 
 // Public Functions...
 

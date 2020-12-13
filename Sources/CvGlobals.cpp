@@ -40,9 +40,9 @@ static char gVersionString[1024] = { 0 };
 template <class T>
 void deleteInfoArray(std::vector<T*>& array)
 {
-	foreach_(T* info, array)
+	for (std::vector<T*>::iterator it = array.begin(); it != array.end(); ++it)
 	{
-		SAFE_DELETE(info);
+		SAFE_DELETE(*it);
 	}
 
 	array.clear();
@@ -2824,41 +2824,11 @@ int cvInternalGlobals::getInfoTypeForString(const char* szType, bool hideAssert)
 	{
 		CvString szError;
 		szError.Format("info type '%s' not found, Current XML file is: %s", szType, GC.getCurrentXMLFile().GetCString());
-		FAssertMsg(stricmp(szType, "NONE")==0 || strcmp(szType, "")==0, szError.c_str());
+		FAssertMsg(stricmp(szType, "NONE") == 0 || strcmp(szType, "") == 0, szError.c_str());
 
-		LogMissingType(szType);
+		gDLL->logMsg("Xml_MissingTypes.log", szError);
 	}
 	return -1;
-}
-
-bool cvInternalGlobals::hasInfoTypeForString(const char* szType, bool hideAssert) const
-{
-	FAssertMsg(szType, "null info type string");
-
-	InfosMap::const_iterator it = m_infosMap.find(szType);
-
-	if (it != m_infosMap.end())
-	{
-		return true;
-	}
-	if (stricmp(szType, "NONE") != 0 && strcmp(szType, "") != 0 && !getDefineINT(szType))
-	{
-		if (!hideAssert)
-		{
-			CvString szError;
-			szError.Format("info type '%s' not found, Current XML file is: %s", szType, GC.getCurrentXMLFile().GetCString());
-			FAssertMsg2(stricmp(szType, "NONE")==0 || strcmp(szType, "")==0, szError.c_str());
-		}
-		LogMissingType(szType);
-	}
-	return false;
-}
-
-void cvInternalGlobals::LogMissingType( const char* szType ) const
-{
-	CvString szError;
-	szError.Format("info type '%s' not found, Current XML file is: %s", szType, GC.getCurrentXMLFile().GetCString());
-	gDLL->logMsg("Xml_MissingTypes.log", szError);
 }
 
 /************************************************************************************************/
@@ -2881,9 +2851,8 @@ void cvInternalGlobals::setInfoTypeFromString(const char* szType, int idx)
 void cvInternalGlobals::setInfoTypeFromString(const char* szType, int idx)
 {
 	FAssertMsg(szType, "null info type string");
-#ifdef _DEBUG
 	OutputDebugString(CvString::format("%s -> %d\n", szType, idx).c_str());
-#endif
+
 	char* strCpy = new char[strlen(szType)+1];
 
 	m_infosMap[strcpy(strCpy, szType)] = idx;

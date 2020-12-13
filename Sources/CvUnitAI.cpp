@@ -18587,101 +18587,92 @@ bool CvUnitAI::AI_exploreRange(int iRange)
 			iValue += 10000;
 		}
 
-		PROFILE("AI_exploreRange 2");
-
-		foreach_(const CvPlot* pAdjacentPlot, pLoopPlot->adjacent()
-		| filtered(!CvPlot::fn::isRevealed(getTeam(), false)))
 		{
-			iValue += 1000;
-		}
+			PROFILE("AI_exploreRange 2");
 
-		//	plots we can't move into are not worth considering
-		if (iValue > 0 && canMoveInto(pLoopPlot))
-		{
-			if (!pLoopPlot->isVisible(getTeam(),false) || !(pLoopPlot->isVisibleEnemyUnit(this)))
+			foreach_(const CvPlot* pAdjacentPlot, pLoopPlot->adjacent()
+			| filtered(!CvPlot::fn::isRevealed(getTeam(), false)))
 			{
-				PROFILE("AI_exploreRange 3");
+				iValue += 1000;
+			}
 
-				if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_EXPLORE, getGroup(), 3) == 0)
+			//	plots we can't move into are not worth considering
+			if (iValue > 0 && canMoveInto(pLoopPlot))
+			{
+				if (!pLoopPlot->isVisible(getTeam(),false) || !(pLoopPlot->isVisibleEnemyUnit(this)))
 				{
-					PROFILE("AI_exploreRange 4");
+					PROFILE("AI_exploreRange 3");
 
-					if (pLoopPlot->isAdjacentToLand())
+					if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_EXPLORE, getGroup(), 3) == 0)
 					{
-						iValue += 10000;
-					}
+						PROFILE("AI_exploreRange 4");
 
-					if (pLoopPlot->isOwned())
-					{
-						iValue += 5000;
-					}
-
-					if (!isHuman())
-					{
-						int iDirectionModifier = 100;
-
-						if (AI_getUnitAIType() == UNITAI_EXPLORE_SEA && iImpassableCount == 0)
+						if (pLoopPlot->isAdjacentToLand())
 						{
-							iDirectionModifier += (50 * (abs(iDX) + abs(iDY))) / iSearchRange;
-							if (GC.getGame().circumnavigationAvailable())
-							{
-								if (GC.getMap().isWrapX())
-								{
-									if ((iDX * ((AI_getBirthmark() % 2 == 0) ? 1 : -1)) > 0)
-									{
-										iDirectionModifier *= 150 + ((iDX * 100) / iSearchRange);
-									}
-									else
-									{
-										iDirectionModifier /= 2;
-									}
-								}
-								if (GC.getMap().isWrapY())
-								{
-									if ((iDY * (((AI_getBirthmark() >> 1) % 2 == 0) ? 1 : -1)) > 0)
-									{
-										iDirectionModifier *= 150 + ((iDY * 100) / iSearchRange);
-									}
-									else
-									{
-										iDirectionModifier /= 2;
-									}
-								}
-							}
-							iValue *= iDirectionModifier;
-							iValue /= 100;
+							iValue += 10000;
 						}
+
+						if (pLoopPlot->isOwned())
+						{
+							iValue += 5000;
+						}
+
+						if (!isHuman())
+						{
+							int iDirectionModifier = 100;
+
+							if (AI_getUnitAIType() == UNITAI_EXPLORE_SEA && iImpassableCount == 0)
+							{
+								iDirectionModifier += (50 * (abs(iDX) + abs(iDY))) / iSearchRange;
+								if (GC.getGame().circumnavigationAvailable())
+								{
+									if (GC.getMap().isWrapX())
+									{
+										if ((iDX * ((AI_getBirthmark() % 2 == 0) ? 1 : -1)) > 0)
+										{
+											iDirectionModifier *= 150 + ((iDX * 100) / iSearchRange);
+										}
+										else
+										{
+											iDirectionModifier /= 2;
+										}
+									}
+									if (GC.getMap().isWrapY())
+									{
+										if ((iDY * (((AI_getBirthmark() >> 1) % 2 == 0) ? 1 : -1)) > 0)
+										{
+											iDirectionModifier *= 150 + ((iDY * 100) / iSearchRange);
+										}
+										else
+										{
+											iDirectionModifier /= 2;
+										}
+									}
+								}
+								iValue *= iDirectionModifier;
+								iValue /= 100;
+							}
+						}
+
+						iValue += GC.getGame().getMapRandNum(10000, "AI Explore");
+
+						//ls612: Make exploring AI aware of terrain damage
+						const bool bHasTerrainDamage = (pLoopPlot->getTotalTurnDamage(getGroup()) > 0 || pLoopPlot->getFeatureTurnDamage() > 0 );
+
+						if (bHasTerrainDamage)
+						{
+							iValue /= 5;
+						}
+
+						iValue /= (1 + stepDistance(getX(), getY(), pLoopPlot->getX(), pLoopPlot->getY()));
+
+						plotValue thisPlotValue;
+
+						thisPlotValue.plot = pLoopPlot;
+						thisPlotValue.value = iValue;
+
+						plotValues.push_back(thisPlotValue);
 					}
-
-/*************************************************************************************************/
-/**	Xienwolf Tweak							12/13/08											**/
-/**																								**/
-/**					Reduction in massive Random Spam in Logger files by using Map				**/
-/*************************************************************************************************/
-/**								---- Start Original Code ----									**
-							iValue += GC.getGame().getSorenRandNum(10000, "AI Explore");
-/**								----  End Original Code  ----									**/
-					iValue += GC.getGame().getMapRandNum(10000, "AI Explore");
-/*************************************************************************************************/
-/**	Tweak									END													**/
-/*************************************************************************************************/
-
-					//ls612: Make exploring AI aware of terrain damage
-					bool	bHasTerrainDamage = (pLoopPlot->getTotalTurnDamage(getGroup()) > 0 || pLoopPlot->getFeatureTurnDamage() > 0 );
-
-					if (bHasTerrainDamage)
-					{
-						iValue /= 5;
-					}
-
-					iValue /= (1 + stepDistance(getX(), getY(), pLoopPlot->getX(), pLoopPlot->getY()));
-
-					plotValue thisPlotValue;
-
-					thisPlotValue.plot = pLoopPlot;
-					thisPlotValue.value = iValue;
-
-					plotValues.push_back(thisPlotValue);
 				}
 			}
 		}

@@ -23,10 +23,6 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		GAME = GC.getGame()
 		bCanAdjustSettings = not GAME.isGameMultiPlayer() or GAME.getActivePlayer() == 0
 
-		self.addLabel(screen, left, "RiseOfMankindOptions", "Rise of Mankind options:")
-		self.addCheckboxTextDropdown(screen, left, left, "RoMSettings__RoMResourceBar", "RoMSettings__RoMResourceBar_Types")
-		self.addSpacer(screen, left, "")
-
 		#Flexible Difficulty
 		self.addLabel(screen, left, "RoMSettings__FlexibleDifficulty")
 
