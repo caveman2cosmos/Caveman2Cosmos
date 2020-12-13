@@ -29513,53 +29513,6 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	}
 
 	iTemp = 0;
-	bTemp = kPromotion.isPillageCulture();
-	if (bTemp)
-	{
-		if (pUnit != NULL)
-		{
-			if (pUnit->isPillageOnMove() || pUnit->isPillageOnVictory())
-			{
-				if (eUnitAI == UNITAI_PILLAGE)
-				{
-					iTemp += 10;
-				}
-				else if ((eUnitAI == UNITAI_ATTACK) ||
-						(eUnitAI == UNITAI_PARADROP) ||
-						(eUnitAI == UNITAI_INFILTRATOR))
-				{
-					iTemp += 8;
-				}
-				else
-				{
-					iTemp += 4;
-				}
-			}
-			else
-			{
-				if (eUnitAI == UNITAI_PILLAGE)
-				{
-					iTemp += 8;
-				}
-				else if ((eUnitAI == UNITAI_ATTACK) ||
-						(eUnitAI == UNITAI_PARADROP) ||
-						(eUnitAI == UNITAI_INFILTRATOR))
-				{
-					iTemp += 6;
-				}
-				else
-				{
-					iTemp += 4;
-				}
-			}
-		}
-		else
-		{
-			iTemp += 2;
-		}
-	}
-	iValue += iTemp;
-
 	bTemp = kPromotion.isPillageEspionage();
 	if (bTemp)
 	{
@@ -29659,32 +29612,22 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	{
 		if (pUnit != NULL)
 		{
-			if ((pUnit->isPillageCulture()) ||
-				(pUnit->isPillageEspionage()) ||
-				(pUnit->isPillageMarauder()) ||
-				(pUnit->isPillageResearch()))
+			if (pUnit->isPillageEspionage()
+			||  pUnit->isPillageMarauder()
+			||  pUnit->isPillageResearch())
 			{
-				if ((eUnitAI == UNITAI_PILLAGE) ||
-					(eUnitAI == UNITAI_ATTACK) ||
-					(eUnitAI == UNITAI_PARADROP) ||
-					(eUnitAI == UNITAI_INFILTRATOR))
+				if (eUnitAI == UNITAI_PILLAGE
+				||  eUnitAI == UNITAI_ATTACK
+				||  eUnitAI == UNITAI_PARADROP
+				||  eUnitAI == UNITAI_INFILTRATOR)
 				{
 					iTemp += 10;
 				}
-				else
-				{
-					iTemp += 8;
-				}
+				else iTemp += 8;
 			}
-			else
-			{
-				iTemp ++;
-			}
+			else iTemp++;
 		}
-		else
-		{
-			iTemp++;
-		}
+		else iTemp++;
 	}
 	iValue += iTemp;
 
@@ -29693,32 +29636,22 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	{
 		if (pUnit != NULL)
 		{
-			if ((pUnit->isPillageCulture()) ||
-				(pUnit->isPillageEspionage()) ||
-				(pUnit->isPillageMarauder()) ||
-				(pUnit->isPillageResearch()))
+			if (pUnit->isPillageEspionage()
+			||  pUnit->isPillageMarauder()
+			||  pUnit->isPillageResearch())
 			{
-				if ((eUnitAI == UNITAI_PILLAGE) ||
-					(eUnitAI == UNITAI_ATTACK) ||
-					(eUnitAI == UNITAI_PARADROP) ||
-					(eUnitAI == UNITAI_INFILTRATOR))
+				if (eUnitAI == UNITAI_PILLAGE
+				||  eUnitAI == UNITAI_ATTACK
+				||  eUnitAI == UNITAI_PARADROP
+				||  eUnitAI == UNITAI_INFILTRATOR)
 				{
 					iTemp += 20;
 				}
-				else
-				{
-					iTemp += 12;
-				}
+				else iTemp += 12;
 			}
-			else
-			{
-				iTemp += 4;
-			}
+			else iTemp += 4;
 		}
-		else
-		{
-			iTemp += 4;
-		}
+		else iTemp += 4;
 	}
 	iValue += iTemp;
 
@@ -34713,39 +34646,6 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 	iValue += iTemp;
 
 	iTemp = 0;
-	bTemp = kUnitCombat.isPillageCulture();
-	if (bTemp)
-	{
-		if (pUnit != NULL)
-		{
-			if (pUnit->isPillageOnMove() || pUnit->isPillageOnVictory())
-			{
-				if (eUnitAI == UNITAI_PILLAGE)
-				{
-					iTemp += 10;
-				}
-				else if ((eUnitAI == UNITAI_ATTACK) ||
-						(eUnitAI == UNITAI_PARADROP) ||
-						(eUnitAI == UNITAI_INFILTRATOR))
-				{
-					iTemp += 8;
-				}
-				else
-				{
-					iTemp += 4;
-				}
-			}
-			else
-			{
-				iTemp += 2;
-			}
-		}
-		else
-		{
-			iTemp += 2;
-		}
-	}
-
 	bTemp = kUnitCombat.isPillageEspionage();
 	if (bTemp)
 	{
@@ -34790,26 +34690,15 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 				{
 					iTemp += 10;
 				}
-				else if ((eUnitAI == UNITAI_ATTACK) ||
-						(eUnitAI == UNITAI_PARADROP) ||
-						(eUnitAI == UNITAI_INFILTRATOR))
+				else if (eUnitAI == UNITAI_ATTACK || eUnitAI == UNITAI_PARADROP || eUnitAI == UNITAI_INFILTRATOR)
 				{
 					iTemp += 8;
 				}
-				else
-				{
-					iTemp += 4;
-				}
+				else iTemp += 4;
 			}
-			else
-			{
-				iTemp += 2;
-			}
+			else iTemp += 2;
 		}
-		else
-		{
-			iTemp += 2;
-		}
+		else iTemp += 2;
 	}
 
 	bTemp = kUnitCombat.isPillageOnMove();
@@ -34817,32 +34706,20 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 	{
 		if (pUnit != NULL)
 		{
-			if ((pUnit->isPillageCulture()) ||
-				(pUnit->isPillageEspionage()) ||
-				(pUnit->isPillageMarauder()) ||
-				(pUnit->isPillageResearch()))
+			if (pUnit->isPillageEspionage() || pUnit->isPillageMarauder() || pUnit->isPillageResearch())
 			{
-				if ((eUnitAI == UNITAI_PILLAGE) ||
-					(eUnitAI == UNITAI_ATTACK) ||
-					(eUnitAI == UNITAI_PARADROP) ||
-					(eUnitAI == UNITAI_INFILTRATOR))
+				if (eUnitAI == UNITAI_PILLAGE
+				||  eUnitAI == UNITAI_ATTACK
+				||  eUnitAI == UNITAI_PARADROP
+				||  eUnitAI == UNITAI_INFILTRATOR)
 				{
 					iTemp += 10;
 				}
-				else
-				{
-					iTemp += 8;
-				}
+				else iTemp += 8;
 			}
-			else
-			{
-				iTemp ++;
-			}
+			else iTemp++;
 		}
-		else
-		{
-			iTemp++;
-		}
+		else iTemp++;
 	}
 
 	bTemp = kUnitCombat.isPillageOnVictory();
@@ -34850,32 +34727,20 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 	{
 		if (pUnit != NULL)
 		{
-			if ((pUnit->isPillageCulture()) ||
-				(pUnit->isPillageEspionage()) ||
-				(pUnit->isPillageMarauder()) ||
-				(pUnit->isPillageResearch()))
+			if (pUnit->isPillageEspionage() || pUnit->isPillageMarauder() || pUnit->isPillageResearch())
 			{
-				if ((eUnitAI == UNITAI_PILLAGE) ||
-					(eUnitAI == UNITAI_ATTACK) ||
-					(eUnitAI == UNITAI_PARADROP) ||
-					(eUnitAI == UNITAI_INFILTRATOR))
+				if (eUnitAI == UNITAI_PILLAGE
+				||  eUnitAI == UNITAI_ATTACK
+				||  eUnitAI == UNITAI_PARADROP
+				||  eUnitAI == UNITAI_INFILTRATOR)
 				{
 					iTemp += 20;
 				}
-				else
-				{
-					iTemp += 12;
-				}
+				else iTemp += 12;
 			}
-			else
-			{
-				iTemp += 4;
-			}
+			else iTemp += 4;
 		}
-		else
-		{
-			iTemp += 4;
-		}
+		else iTemp += 4;
 	}
 
 	bTemp = kUnitCombat.isPillageResearch();

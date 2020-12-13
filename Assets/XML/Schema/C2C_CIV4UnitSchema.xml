@@ -1259,7 +1259,6 @@
 	<ElementType name="bOffensiveVictoryMove" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bOneUp" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPillageResearch" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bPillageCulture" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPillageEspionage" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPillageMarauder" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPillageOnMove" content="textOnly" dt:type="boolean"/>
@@ -2561,7 +2560,6 @@
 		<element type="bOffensiveVictoryMove" minOccurs="0"/>
 		<element type="bOneUp" minOccurs="0"/>
 		<element type="bPillageResearch" minOccurs="0"/>
-		<element type="bPillageCulture" minOccurs="0"/>
 		<element type="bPillageEspionage" minOccurs="0"/>
 		<element type="bPillageMarauder" minOccurs="0"/>
 		<element type="bPillageOnMove" minOccurs="0"/>
@@ -3080,7 +3078,6 @@
 		<element type="bFreeDrop" minOccurs="0"/>
 		<element type="bOffensiveVictoryMove" minOccurs="0"/>
 		<element type="bOneUp" minOccurs="0"/>
-		<element type="bPillageCulture" minOccurs="0"/>
 		<element type="bPillageEspionage" minOccurs="0"/>
 		<element type="bPillageMarauder" minOccurs="0"/>
 		<element type="bPillageOnMove" minOccurs="0"/>
