@@ -9797,17 +9797,12 @@ bool CvUnit::canPlunder(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	if (!(m_pUnitInfo->isPillage()))
+	if (!m_pUnitInfo->isPillage())
 	{
 		return false;
 	}
 
-	if (!pPlot->isWater())
-	{
-		return false;
-	}
-
-	if (pPlot->isFreshWater())
+	if (!pPlot->isWater() || pPlot->isFreshWater())
 	{
 		return false;
 	}
@@ -9832,9 +9827,7 @@ bool CvUnit::plunder()
 	{
 		return false;
 	}
-
 	setBlockading(true);
-
 	finishMoves();
 
 	return true;
@@ -9845,18 +9838,8 @@ void CvUnit::updatePlunder(int iChange, bool bUpdatePlotGroups)
 {
 	PROFILE_FUNC();
 
-	int iBlockadeRange = GC.getDefineINT("SHIP_BLOCKADE_RANGE");
-
-	bool bOldTradeNet;
+	const int iBlockadeRange = GC.getDefineINT("SHIP_BLOCKADE_RANGE");
 	bool bChanged = false;
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      06/01/09                                jdog5000      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
-	//gDLL->getFAStarIFace()->ForceReset(&GC.getStepFinder());
-	bool bValid = false;
 
 	if (bUpdatePlotGroups)
 	{
@@ -9865,50 +9848,41 @@ void CvUnit::updatePlunder(int iChange, bool bUpdatePlotGroups)
 
 	foreach_(CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iBlockadeRange, iBlockadeRange))
 	{
-		if (pLoopPlot->isWater() && pLoopPlot->area() == area())
+		if (!pLoopPlot->isWater() || pLoopPlot->area() != area())
 		{
+			continue;
+		}
+		const int iPathDist = GC.getMap().calculatePathDistance(plot(),pLoopPlot);
 
-			const int iPathDist = GC.getMap().calculatePathDistance(plot(),pLoopPlot);
-
-			// BBAI NOTES:  There are rare issues where the path finder will return incorrect results
-			// for unknown reasons.  Seems to find a suboptimal path sometimes in partially repeatable
-			// circumstances.  The fix below is a hack to address the permanent one or two tile blockades which
-			// would appear randomly, it should cause extra blockade clearing only very rarely.
-			/*
-			if( iPathDist > iBlockadeRange )
+		/* BBAI NOTES:
+		// There are rare issues where the path finder will return incorrect results for unknown reasons.
+		// Seems to find a suboptimal path sometimes in partially repeatable circumstances.
+		// The fix below is a hack to address the permanent one or two tile blockades which
+		// would appear randomly, it should cause extra blockade clearing only very rarely.
+		if (iPathDist > iBlockadeRange)
+		{
+			continue; // No blockading on other side of an isthmus
+		}
+		*/
+		if (iPathDist < 0 || iPathDist > iBlockadeRange + 2)
+		{
+			continue;
+		}
+		for (int iTeam = 0; iTeam < MAX_TEAMS; ++iTeam)
+		{
+			if (isEnemy((TeamTypes)iTeam)
+			&& (iPathDist <= iBlockadeRange || iChange == -1 && pLoopPlot->getBlockadedCount((TeamTypes)iTeam) > 0))
 			{
-				// No blockading on other side of an isthmus
-				continue;
-			}
-			*/
+				const bool bOldTradeNet = pLoopPlot->isTradeNetwork((TeamTypes)iTeam);
 
-			if( (iPathDist >= 0) && (iPathDist <= iBlockadeRange + 2) )
-			{
-				for (int iTeam = 0; iTeam < MAX_TEAMS; ++iTeam)
+				pLoopPlot->changeBlockadedCount((TeamTypes)iTeam, iChange);
+
+				if (bOldTradeNet != pLoopPlot->isTradeNetwork((TeamTypes)iTeam))
 				{
-					if (isEnemy((TeamTypes)iTeam))
+					bChanged = true;
+					if (bUpdatePlotGroups)
 					{
-						bValid = (iPathDist <= iBlockadeRange);
-						if( !bValid && (iChange == -1 && pLoopPlot->getBlockadedCount((TeamTypes)iTeam) > 0) )
-						{
-							bValid = true;
-						}
-
-						if( bValid )
-						{
-							bOldTradeNet = pLoopPlot->isTradeNetwork((TeamTypes)iTeam);
-
-							pLoopPlot->changeBlockadedCount((TeamTypes)iTeam, iChange);
-
-							if (bOldTradeNet != pLoopPlot->isTradeNetwork((TeamTypes)iTeam))
-							{
-								bChanged = true;
-								if (bUpdatePlotGroups)
-								{
-									pLoopPlot->updatePlotGroup();
-								}
-							}
-						}
+						pLoopPlot->updatePlotGroup();
 					}
 				}
 			}
@@ -9922,68 +9896,45 @@ void CvUnit::updatePlunder(int iChange, bool bUpdatePlotGroups)
 		if (bUpdatePlotGroups)
 		{
 			CvPlot::setDeferredPlotGroupRecalculationMode(false);
-			//GC.getGame().updatePlotGroups();
 		}
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 }
 
 
-// XXX compare with destroy prob...
 int CvUnit::sabotageProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle) const
 {
-	int iDefenseCount;
-	int iCounterSpyCount;
-
-	int iProb = 0; // XXX
-
-	if (pPlot->isOwned())
+	if (!pPlot->isOwned())
 	{
-		iDefenseCount = pPlot->plotCount(PUF_canDefend, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
-		iCounterSpyCount = pPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
-
-		foreach_(const CvPlot* pLoopPlot, pPlot->adjacent())
-		{
-			iCounterSpyCount += pLoopPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
-		}
+		return 40 + 50 * (eProbStyle != PROBABILITY_LOW);
 	}
-	else
+	const int iProb = 40 / (pPlot->plotCount(PUF_canDefend, -1, -1, NULL, NO_PLAYER, pPlot->getTeam()) + 1);
+
+	if (eProbStyle == PROBABILITY_LOW)
 	{
-		iDefenseCount = 0;
-		iCounterSpyCount = 0;
+		return iProb;
 	}
-
 	if (eProbStyle == PROBABILITY_HIGH)
 	{
-		iCounterSpyCount = 0;
+		return iProb + 50;
 	}
+	int iCounterSpyCount = pPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 
-	iProb += (40 / (iDefenseCount + 1)); // XXX
-
-	if (eProbStyle != PROBABILITY_LOW)
+	foreach_(const CvPlot* pLoopPlot, pPlot->adjacent())
 	{
-		iProb += (50 / (iCounterSpyCount + 1)); // XXX
+		iCounterSpyCount += pLoopPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 	}
-
-	return iProb;
+	return iProb + 50 / (iCounterSpyCount + 1);
 }
 
 
 bool CvUnit::canSabotage(const CvPlot* pPlot, bool bTestVisible) const
 {
-	if (!(m_pUnitInfo->isSabotage()))
+	if (!m_pUnitInfo->isSabotage())
 	{
 		return false;
 	}
 
-	if (pPlot->getTeam() == getTeam())
-	{
-		return false;
-	}
-
-	if (pPlot->isCity())
+	if (pPlot->getTeam() == getTeam() || pPlot->isCity())
 	{
 		return false;
 	}
@@ -10004,8 +9955,6 @@ bool CvUnit::canSabotage(const CvPlot* pPlot, bool bTestVisible) const
 
 bool CvUnit::sabotage()
 {
-	CvWString szBuffer;
-
 	if (!canSabotage(plot()))
 	{
 		return false;
@@ -10013,13 +9962,11 @@ bool CvUnit::sabotage()
 
 	CvPlot* pPlot = plot();
 
-	bool bCaught = (GC.getGame().getSorenRandNum(100, "Spy: Sabotage") > sabotageProb(pPlot));
-
 	GET_PLAYER(getOwner()).changeGold(-GC.getBASE_SPY_SABOTAGE_COST());
 
-	if (!bCaught)
+	if (GC.getGame().getSorenRandNum(100, "Spy: Sabotage") <= sabotageProb(pPlot))
 	{
-		pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
+		pPlot->setImprovementType((ImprovementTypes)GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 
 		finishMoves();
 
@@ -10028,14 +9975,19 @@ bool CvUnit::sabotage()
 		if (pNearestCity != NULL)
 		{
 			MEMORY_TRACK_EXEMPT();
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_SPY_SABOTAGED", getNameKey(), pNearestCity->getNameKey());
-			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_SABOTAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY());
-
+			AddDLLMessage(
+				getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+				gDLL->getText("TXT_KEY_MISC_SPY_SABOTAGED", getNameKey(), pNearestCity->getNameKey()),
+				"AS2D_SABOTAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+			);
 			if (pPlot->isOwned())
 			{
-				szBuffer = gDLL->getText("TXT_KEY_MISC_SABOTAGE_NEAR", pNearestCity->getNameKey());
-				AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_SABOTAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true);
+				AddDLLMessage(
+					pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_SABOTAGE_NEAR", pNearestCity->getNameKey()),
+					"AS2D_SABOTAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(),
+					pPlot->getX(), pPlot->getY(), true, true
+				);
 			}
 		}
 
@@ -10044,23 +9996,8 @@ bool CvUnit::sabotage()
 			NotifyEntity(MISSION_SABOTAGE);
 		}
 	}
-	else
+	else // Caught red handed
 	{
-		if (pPlot->isOwned())
-		{
-			MEMORY_TRACK_EXEMPT();
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_SPY_CAUGHT_AND_KILLED", GET_PLAYER(getOwner()).getCivilizationAdjective(), getNameKey());
-			AddDLLMessage(pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSE", MESSAGE_TYPE_INFO);
-		}
-
-		{
-			MEMORY_TRACK_EXEMPT();
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_SPY_CAUGHT", getNameKey());
-			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
-		}
-
 		if (plot()->isActiveVisible(false))
 		{
 			NotifyEntity(MISSION_SURRENDER);
@@ -10072,6 +10009,23 @@ bool CvUnit::sabotage()
 			{
 				GET_PLAYER(pPlot->getOwner()).AI_changeMemoryCount(getOwner(), MEMORY_SPY_CAUGHT, 1);
 			}
+			MEMORY_TRACK_EXEMPT();
+			AddDLLMessage(
+				pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+				gDLL->getText(
+					"TXT_KEY_MISC_SPY_CAUGHT_AND_KILLED",
+					GET_PLAYER(getOwner()).getCivilizationAdjective(), getNameKey()
+				),
+				"AS2D_EXPOSE", MESSAGE_TYPE_INFO
+			);
+		}
+		{
+			MEMORY_TRACK_EXEMPT();
+			AddDLLMessage(
+				getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+				gDLL->getText("TXT_KEY_MISC_YOUR_SPY_CAUGHT", getNameKey()),
+				"AS2D_EXPOSED", MESSAGE_TYPE_INFO
+			);
 		}
 
 		kill(true, pPlot->getOwner(), true);
@@ -10089,7 +10043,6 @@ int CvUnit::destroyCost(const CvPlot* pPlot) const
 	{
 		return 0;
 	}
-
 	bool bLimited = false;
 
 	if (pCity->isProductionUnit())
@@ -10104,8 +10057,20 @@ int CvUnit::destroyCost(const CvPlot* pPlot) const
 	{
 		bLimited = isLimitedProject(pCity->getProductionProject());
 	}
-
-	return (GC.getDefineINT("BASE_SPY_DESTROY_COST") + (pCity->getProduction() * ((bLimited) ? GC.getDefineINT("SPY_DESTROY_COST_MULTIPLIER_LIMITED") : GC.getDefineINT("SPY_DESTROY_COST_MULTIPLIER"))));
+	return
+	(
+		GC.getDefineINT("BASE_SPY_DESTROY_COST")
+		+
+		pCity->getProduction()
+		*
+		(
+			bLimited
+			?
+			GC.getDefineINT("SPY_DESTROY_COST_MULTIPLIER_LIMITED")
+			:
+			GC.getDefineINT("SPY_DESTROY_COST_MULTIPLIER")
+		)
+	);
 }
 
 
@@ -10117,33 +10082,23 @@ int CvUnit::destroyProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle) const
 	{
 		return 0;
 	}
-
-	int iProb = 0; // XXX
-
-	const int iDefenseCount = pPlot->plotCount(PUF_canDefend, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
-
-	int iCounterSpyCount = pPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
-
-	foreach_(const CvPlot* pLoopPlot, pPlot->adjacent())
-	{
-		iCounterSpyCount += pLoopPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
-	}
-
-	if (eProbStyle == PROBABILITY_HIGH)
-	{
-		iCounterSpyCount = 0;
-	}
-
-	iProb += (25 / (iDefenseCount + 1)); // XXX
+	int iProb = 25 / (pPlot->plotCount(PUF_canDefend, -1, -1, NULL, NO_PLAYER, pPlot->getTeam()) + 1);
 
 	if (eProbStyle != PROBABILITY_LOW)
 	{
-		iProb += (50 / (iCounterSpyCount + 1)); // XXX
+		if (eProbStyle != PROBABILITY_HIGH)
+		{
+			int iCounterSpyCount = pPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
+
+			foreach_(const CvPlot* pLoopPlot, pPlot->adjacent())
+			{
+				iCounterSpyCount += pLoopPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
+			}
+			iProb += 50 / (iCounterSpyCount + 1);
+		}
+		else iProb += 50;
 	}
-
-	iProb += std::min(25, pCity->getProductionTurnsLeft()); // XXX
-
-	return iProb;
+	return iProb + std::min(25, pCity->getProductionTurnsLeft());
 }
 
 
@@ -10161,12 +10116,7 @@ bool CvUnit::canDestroy(const CvPlot* pPlot, bool bTestVisible) const
 
 	const CvCity* pCity = pPlot->getPlotCity();
 
-	if (pCity == NULL)
-	{
-		return false;
-	}
-
-	if (pCity->getProduction() == 0)
+	if (pCity == NULL || pCity->getProduction() == 0)
 	{
 		return false;
 	}
