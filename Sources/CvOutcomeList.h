@@ -11,9 +11,10 @@
 #ifndef CV_OUTCOME_LIST_H
 #define CV_OUTCOME_LIST_H
 
-#include "CvOutcome.h"
-
+class CvPlot;
+class CvOutcome;
 class CvUnit;
+class CvXMLLoadUtility;
 
 class CvOutcomeList
 {

@@ -54,17 +54,18 @@ class WoodlandCycle:
 			iFeature = plot.getFeatureType()
 			if iFeature == -1:
 				if not GAME.getSorenRandNum(10, "New"):
-					if plot.canHaveFeature(self.FEATURE_BAMBOO) and not GAME.getSorenRandNum(9, "Bamboo"):
+					if plot.canHaveFeature(self.FEATURE_BAMBOO) and not GAME.getSorenRandNum(10, "Bamboo"):
 						plot.setFeatureType(self.FEATURE_BAMBOO, 0)
 					elif plot.canHaveFeature(self.FEATURE_FOREST_YOUNG):
 						plot.setFeatureType(self.FEATURE_FOREST_YOUNG, 0)
 
 			elif iFeature == self.FEATURE_FOREST_BURNT:
 				plot.setFeatureType(-1, 0)
-				if plot.canHaveFeature(self.FEATURE_BAMBOO) and not GAME.getSorenRandNum(9, "Bamboo"):
-					plot.setFeatureType(self.FEATURE_BAMBOO, 0)
-				elif plot.canHaveFeature(self.FEATURE_FOREST_YOUNG) and not GAME.getSorenRandNum(3, "Bamboo"):
-					plot.setFeatureType(self.FEATURE_FOREST_YOUNG, 0)
+				if GAME.getSorenRandNum(3, "new forest"):
+					if plot.canHaveFeature(self.FEATURE_BAMBOO) and not GAME.getSorenRandNum(10, "Bamboo"):
+						plot.setFeatureType(self.FEATURE_BAMBOO, 0)
+					elif plot.canHaveFeature(self.FEATURE_FOREST_YOUNG):
+						plot.setFeatureType(self.FEATURE_FOREST_YOUNG, 0)
 
 				if iImp != plot.getImprovementType() and plot.canHaveImprovement(iImp, -1, True):
 					plot.setImprovementType(iImp)
@@ -138,8 +139,7 @@ class WoodlandCycle:
 					CyEngine().triggerEffect(GC.getInfoTypeForString('EFFECT_FOREST_FIRE'), point)
 					CyAudioGame().Play3DSound("AS3D_FOREST_FIRE", point.x, point.y, point.z)
 
-				for i in range(plot.getNumUnits()):
-					CyUnit = plot.getUnit(i)
+				for CyUnit in plot.units():
 					if CyUnit.canFight():
 						iHP = CyUnit.currHitPoints()
 						iDamage = 5 + GAME.getSorenRandNum(29, "Ouch")

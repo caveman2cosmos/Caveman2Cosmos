@@ -35,6 +35,7 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 #include "CvGameCoreDLL.h"
+#include "CvAllocator.h"
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>

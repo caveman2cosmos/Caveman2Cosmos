@@ -88,7 +88,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FOREST_PRESERVE_SLAVE</Tag>
-		<English>Preserve [LINK=IMPROVEMENT_FOREST_PRESERVE]Forest[\LINK] (Forced)</English>
+		<English>Build [LINK=IMPROVEMENT_FOREST_PRESERVE]Forest Preserve[\LINK] (Forced)</English>
 		<French>Préserver [LINK=IMPROVEMENT_FOREST_PRESERVE]forêt[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - Wald [LINK=IMPROVEMENT_FOREST_PRESERVE]aufforsten[\LINK]</German>
 		<Italian>Preserva la [LINK=IMPROVEMENT_FOREST_PRESERVE]Foresta[\LINK] (Schiavo)</Italian>

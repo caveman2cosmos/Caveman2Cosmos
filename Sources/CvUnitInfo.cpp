@@ -9,6 +9,7 @@
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvArtFileMgr.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
@@ -411,14 +412,7 @@ CvUnitInfo::~CvUnitInfo()
 
 const wchar_t* CvUnitInfo::getExtraHoverText() const
 {
-	if (!m_szExtraHoverTextKey.empty())
-	{
-		return gDLL->getText(m_szExtraHoverTextKey);
-	}
-	else
-	{
-		return L"";
-	}
+	return m_szExtraHoverTextKey.empty() ? L"" : gDLL->getText(m_szExtraHoverTextKey);
 }
 
 
@@ -1321,17 +1315,13 @@ int CvUnitInfo::getSupersedingUnit(int i) const
 {
 	return m_aiSupersedingUnits[i];
 }
-int CvUnitInfo::getNumSupersedingUnits() const
+short CvUnitInfo::getNumSupersedingUnits() const
 {
 	return (int)m_aiSupersedingUnits.size();
 }
 bool CvUnitInfo::isSupersedingUnit(int i) const
 {
-	if (find(m_aiSupersedingUnits.begin(), m_aiSupersedingUnits.end(), i) == m_aiSupersedingUnits.end())
-	{
-		return false;
-	}
-	return true;
+	return find(m_aiSupersedingUnits.begin(), m_aiSupersedingUnits.end(), i) != m_aiSupersedingUnits.end();
 }
 
 
@@ -1513,8 +1503,7 @@ int CvUnitInfo::getFeaturePassableTech(int i) const
 
 bool CvUnitInfo::getGreatPeoples(int i) const
 {
-	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
 	return m_pbGreatPeoples ? m_pbGreatPeoples[i] : false;
 }
 
@@ -1666,7 +1655,6 @@ const TCHAR* CvUnitInfo::getLateArtDefineTag(int i, UnitArtStyleTypes eStyle) co
 				return pcTag;
 			}
 		}
-
 	}
 
 	return (m_paszLateArtDefineTags) ? m_paszLateArtDefineTags[i] : NULL;
@@ -1740,7 +1728,6 @@ const TCHAR* CvUnitInfo::getClassicalArtDefineTag(int i, UnitArtStyleTypes eStyl
 				return pcTag;
 			}
 		}
-
 	}
 
 	return (m_paszClassicalArtDefineTags) ? m_paszClassicalArtDefineTags[i] : NULL;
@@ -1767,7 +1754,6 @@ const TCHAR* CvUnitInfo::getRennArtDefineTag(int i, UnitArtStyleTypes eStyle) co
 				return pcTag;
 			}
 		}
-
 	}
 
 	return (m_paszRennArtDefineTags) ? m_paszRennArtDefineTags[i] : NULL;
@@ -1794,7 +1780,6 @@ const TCHAR* CvUnitInfo::getIndustrialArtDefineTag(int i, UnitArtStyleTypes eSty
 				return pcTag;
 			}
 		}
-
 	}
 
 	return (m_paszIndustrialArtDefineTags) ? m_paszIndustrialArtDefineTags[i] : NULL;
@@ -1821,7 +1806,6 @@ const TCHAR* CvUnitInfo::getFutureArtDefineTag(int i, UnitArtStyleTypes eStyle) 
 				return pcTag;
 			}
 		}
-
 	}
 
 	return (m_paszFutureArtDefineTags) ? m_paszFutureArtDefineTags[i] : NULL;
@@ -4614,25 +4598,25 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 			{
 				pXML->GetChildXmlValByName( &m_piUnitGroupRequired[k], L"iRequired");
 				if (pXML->GetOptionalChildXmlValByName(szTextVal, L"EarlyArtDefineTag"))
-					GC.hasInfoTypeForString(szTextVal);
+					GC.getInfoTypeForString(szTextVal);
 				setEarlyArtDefineTag(k, szTextVal);
 				if (pXML->GetOptionalChildXmlValByName(szTextVal, L"ClassicalArtDefineTag"))
-					GC.hasInfoTypeForString(szTextVal);
+					GC.getInfoTypeForString(szTextVal);
 				setClassicalArtDefineTag(k, szTextVal);
 				if (pXML->GetOptionalChildXmlValByName(szTextVal, L"MiddleArtDefineTag"))
-					GC.hasInfoTypeForString(szTextVal);
+					GC.getInfoTypeForString(szTextVal);
 				setMiddleArtDefineTag(k, szTextVal);
 				if (pXML->GetOptionalChildXmlValByName(szTextVal, L"RennArtDefineTag"))
-					GC.hasInfoTypeForString(szTextVal);
+					GC.getInfoTypeForString(szTextVal);
 				setRennArtDefineTag(k, szTextVal);
 				if (pXML->GetOptionalChildXmlValByName(szTextVal, L"IndustrialArtDefineTag"))
-					GC.hasInfoTypeForString(szTextVal);
+					GC.getInfoTypeForString(szTextVal);
 				setIndustrialArtDefineTag(k, szTextVal);
 				if (pXML->GetOptionalChildXmlValByName(szTextVal, L"LateArtDefineTag"))
-					GC.hasInfoTypeForString(szTextVal);
+					GC.getInfoTypeForString(szTextVal);
 				setLateArtDefineTag(k, szTextVal);
 				if (pXML->GetOptionalChildXmlValByName(szTextVal, L"FutureArtDefineTag"))
-					GC.hasInfoTypeForString(szTextVal);
+					GC.getInfoTypeForString(szTextVal);
 				setFutureArtDefineTag(k, szTextVal);
 				pXML->TryMoveToXmlNextSibling();
 			}

@@ -226,7 +226,7 @@ class WBDiplomacyScreen:
 		screen.setTableColumnHeader("WBEspionage", 1, CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_LEADER", ()), iWidth2)
 		screen.setTableColumnHeader("WBEspionage", 2, CyTranslator().getText("TXT_KEY_ESPIONAGE_CULTURE", ()), iWidth1)
 		screen.setTableColumnHeader("WBEspionage", 3, CyTranslator().getText("TXT_KEY_ESPIONAGE_SCREEN_SPENDING_WEIGHT", ()), iWidth1)
-		screen.setTableColumnHeader("WBEspionage", 4, CyTranslator().getText("TXT_KEY_REPLAY_SCREEN_TURNS", ()), iWidth1)
+		screen.setTableColumnHeader("WBEspionage", 4, CyTranslator().getText("TXT_KEY_TURNS", ()), iWidth1)
 		screen.setTableColumnHeader("WBEspionage", 5, CyTranslator().getText("TXT_KEY_WB_MODIFIER", ()), iWidth1)
 		screen.setTableColumnHeader("WBEspionage", 6, CyTranslator().getText("TXT_KEY_WB_MEMORY", ()), iWidth1)
 

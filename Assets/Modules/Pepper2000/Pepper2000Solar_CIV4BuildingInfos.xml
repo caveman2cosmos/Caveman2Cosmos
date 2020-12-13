@@ -202,12 +202,9 @@
 				<iYield>0</iYield>
 				<iYield>40</iYield>
 			</YieldChanges>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 			</PrereqInCityBuildings>
@@ -241,16 +238,10 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_OUTER</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
+				<BuildingType>BUILDING_SOLAR_ARRAY_OUTER</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 			</PrereqInCityBuildings>

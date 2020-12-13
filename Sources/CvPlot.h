@@ -280,13 +280,6 @@ public:
 	void changeDefenseDamage(int iChange);
 
 	// Super Forts *culture*
-/*	Koshling - due to the implementatino of fort culture inheritted from AND we need to
-// handle fort culture a bit differently in C2C and some of these methods are not needed
-	int getCultureRangeForts(PlayerTypes ePlayer) const;
-	void setCultureRangeForts(PlayerTypes ePlayer, int iNewValue);
-	void changeCultureRangeForts(PlayerTypes ePlayer, int iChange);
-	bool isWithinFortCultureRange(PlayerTypes ePlayer) const;
-*/
 	void changeCultureRangeFortsWithinRange(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate);
 	void doImprovementCulture();
 
@@ -637,7 +630,6 @@ public:
 	void setImprovementUpgradeProgress(int iNewValue);
 	void changeImprovementUpgradeProgress(int iChange);
 
-	int getForceUnownedTimer() const;
 	bool isForceUnowned() const;
 	void setForceUnownedTimer(int iNewValue);
 	void changeForceUnownedTimer(int iChange);
@@ -685,7 +677,7 @@ public:
 	bool isFlatlands() const;
 	DllExport bool isHills() const;
 	DllExport bool isPeak() const;
-	bool isPeak2(bool bCountsAs = false) const;
+	bool isAsPeak() const;
 	void setPlotType(PlotTypes eNewValue, bool bRecalculate = true, bool bRebuildGraphics = true);
 
 	DllExport TerrainTypes getTerrainTypeExternal() const;

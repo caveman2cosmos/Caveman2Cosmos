@@ -6,22 +6,27 @@
 #define CIV4_PLAYER_H
 
 #include "CvCityAI.h"
-#include "CvUnitAI.h"
-#include "CvSelectionGroupAI.h"
 #include "CvPlotGroup.h"
 #include "LinkedList.h"
-#include "CvTalkingHeadMessage.h"
 #include "CvContractBroker.h"
 #include "CvGameObject.h"
 #include "CvBuildLists.h"
+#include "CvUnitList.h"
+#include "CvUnitAI.h"
 
 class CvArea;
+class CvBuildLists;
 class CvCity;
+class CvCityAI;
+//class CvContractBroker;
+class CvDiploParameters;
+class CvEventTriggerInfo;
 class CvPlot;
 class CvPlotGroup;
-class CvDiploParameters;
 class CvPopupInfo;
-class CvEventTriggerInfo;
+class CvSelectionGroupAI;
+class CvTalkingHeadMessage;
+class CvUnitAI;
 class CvUnitSelectionCriteria;
 class CvUpgradeCache;
 
@@ -89,7 +94,6 @@ public:
 
 	void resetPlotAndCityData();
 
-	void logMsg(char* format, ...);
 	void changePersonalityType();
 	void resetCivTypeEffects();
 	void changeLeader(LeaderHeadTypes eNewLeader);
@@ -1154,7 +1158,7 @@ public:
 	EventTriggeredData* addEventTriggered();
 	void deleteEventTriggered(int iID);
 	EventTriggeredData* initTriggeredData(EventTriggerTypes eEventTrigger, bool bFire = false, int iCityId = -1, int iPlotX = INVALID_PLOT_COORD, int iPlotY = INVALID_PLOT_COORD, PlayerTypes eOtherPlayer = NO_PLAYER, int iOtherPlayerCityId = -1, ReligionTypes eReligion = NO_RELIGION, CorporationTypes eCorporation = NO_CORPORATION, int iUnitId = -1, BuildingTypes eBuilding = NO_BUILDING);
-	int getEventTriggerWeight(EventTriggerTypes eTrigger) const; // Exposed to python
+	int getEventTriggerWeight(EventTriggerTypes eTrigger) const;
 	bool isEventTriggerPossible(EventTriggerTypes eTrigger, bool bIgnoreActive = false) const;
 
 	DllExport void addMessage(const CvTalkingHeadMessage& message);
@@ -1193,7 +1197,7 @@ public:
 	DllExport const CvString getSmtpHost() const;
 	void setSmtpHost(const char* szHost);
 
-	const EventTriggeredData* getEventOccured(EventTypes eEvent, bool bIncludeExpiredEvents = false) const; // Exposed to python
+	const EventTriggeredData* getEventOccured(EventTypes eEvent, bool bIncludeExpiredEvents = false) const;
 	bool isTriggerFired(EventTriggerTypes eEventTrigger) const;
 	void setEventOccured(EventTypes eEvent, const EventTriggeredData& kEventTriggered, bool bOthers = true);
 	void resetEventOccured(EventTypes eEvent, bool bAnnounce = true);
@@ -1247,7 +1251,7 @@ public:
 	PlayerTypes pickConqueredCityOwner(const CvCity& kCity) const;
 	bool canHaveTradeRoutesWith(PlayerTypes ePlayer) const;
 
-	void forcePeace(PlayerTypes ePlayer); // exposed to Python
+	void forcePeace(PlayerTypes ePlayer);
 
 	bool canSpiesEnterBorders(PlayerTypes ePlayer) const;
 	int getNewCityProductionValue() const;
@@ -1769,7 +1773,7 @@ protected:
 	float m_fRevIdxBadReligionMod;
 	float m_fRevIdxGoodReligionMod;
 	bool m_bInquisitionConditions;
-	bool m_bPopBad;
+
 	int m_iUnitUpgradePriceModifier;
 	int m_iNationalGreatPeopleRate;
 
@@ -2022,7 +2026,9 @@ protected:
 	bool isValidEventTech(TechTypes eTech, EventTypes eEvent, PlayerTypes eOtherPlayer) const;
 	void recalculatePopulationgrowthratepercentage();
 
+	int CvPlayer::calculatePlotRouteYieldDifference(const CvPlot* pPlot, const RouteTypes eRoute, YieldTypes eYield) const;
 	RouteTypes getBestRouteInternal(const CvPlot* pPlot, bool bConnect, const CvUnit* pBuilder, BuildTypes* eBestRouteBuild = NULL) const;
+	bool CvPlayer::canBuildPlotTechPrereq(const CvPlot* pPlot, BuildTypes eRouteBuild, bool bTestEra = false, bool bTestVisible = false) const;
 	bool isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvPlot* pPlot, const CvUnit* pBuilder) const;
 
 	void verifyGoldCommercePercent();

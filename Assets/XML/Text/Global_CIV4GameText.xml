@@ -16972,6 +16972,15 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Treasury Upkeep:[SPACE]</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TURNS</Tag>
+		<English>Turns</English>
+		<French>Tours</French>
+		<German>Runden</German>
+		<Italian>Turni</Italian>
+		<Spanish>Turnos</Spanish>
+		<Polish>Tur</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TURNTIMER_FAST</Tag>
 		<English>Fast</English>
 		<French>

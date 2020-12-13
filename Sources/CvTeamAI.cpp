@@ -4,8 +4,13 @@
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
+#include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvPython.h"
 #include "CvTeamAI.h"
 
 // statics

@@ -163,6 +163,7 @@ public:
 	bool isInvisibleVisible(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible) const;
 	void changeInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible, int iChange, int iIntensity);
 
+	python::list units() const;
 	int getNumUnits() const;
 	CyUnit* getUnit(int iIndex) const;
 

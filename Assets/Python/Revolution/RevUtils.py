@@ -4,31 +4,20 @@
 # Version 1.5
 
 from CvPythonExtensions import *
-import CvUtil
-import PyHelpers
-# --------- Revolution mod -------------
-import RevDefs
+
 import RevData
-# Other Util files
 from RevCivicsUtils import *
-#phungus Rev Trait Effects
 from RevTraitsUtils import *
 from RevBuildingsUtils import *
-#Rev Trait End
+
 import BugCore
 
 # globals
 GC = CyGlobalContext()
 GAME = GC.getGame()
-localText = CyTranslator()
 RevOpt = BugCore.game.Revolution
 
-PyPlayer = PyHelpers.PyPlayer
-
-revCultureModifier = 1.0
-endWarsOnDeath = True
 gameSpeedMod = None
-RevOpt = None
 
 revInstigatorThreshold = 1000
 deniedTurns = 5
@@ -59,12 +48,8 @@ def getGameSpeedMod():
 
 
 def doRefortify(iPlayer):
-	pPlayer = GC.getPlayer(iPlayer)
-
-	for groupID in xrange(pPlayer.getNumSelectionGroups()):
-		pGroup = pPlayer.getSelectionGroup(groupID)
+	for pGroup in GC.getPlayer(iPlayer).groups():
 		if pGroup.getNumUnits() > 0:
-
 			headUnit = pGroup.getHeadUnit()
 			if headUnit.getFortifyTurns() > 0:
 				pGroup.setActivityType(ActivityTypes.ACTIVITY_SLEEP)
@@ -181,66 +166,49 @@ def getSpawnablePlots( iPlotX, iPlotY, pSpawnPlayer, bLand = True, bIncludePlot 
 	gameMap = GC.getMap()
 	basePlot = gameMap.plot(iPlotX,iPlotY)
 
-	iFort = CvUtil.findInfoTypeNum(GC.getImprovementInfo,GC.getNumImprovementInfos(),RevDefs.sXMLFort)
+	iFort = GC.getInfoTypeForString('IMPROVEMENT_FORT')
 
-	try :
-		iBaseArea = basePlot.area().getID()
-	except AttributeError :
-		if( bSameArea ) : print "WARNING: Passed an arealess plot!"
+	try: iBaseArea = basePlot.area().getID()
+	except AttributeError:
+		if bSameArea: print "WARNING: Passed an arealess plot!"
 		iBaseArea = -1
 		bSameArea = False
+
 	iBasePlotOwner = basePlot.getOwner()
 	iNumPlotsChecked = 0
 
-	for [radius,pPlot] in plotGenerator( basePlot, iRange ) :
+	for [radius, pPlot] in plotGenerator(basePlot, iRange):
 
-			if( not bIncludePlot and pPlot.getX() == iPlotX and pPlot.getY() == iPlotY ) :
-				continue
-
-			if( pPlot.isImpassable() ):
+			if pPlot.isImpassable() or not bIncludePlot and pPlot.getX() == iPlotX and pPlot.getY() == iPlotY:
 				continue
 
 			iNumPlotsChecked += 1
 
-			if( bLand and pPlot.isWater() ) :
-				continue
+			if (bLand == pPlot.isWater()
+			or not bIncludeCities and pPlot.isCity()
+			or bSameArea and iBaseArea != pPlot.area().getID()
+			or bCheckForEnemy and len(getEnemyUnits(pPlot.getX(), pPlot.getY(), pSpawnPlayer.getID())) > 0
+			or not bIncludeForts and iFort != -1 and pPlot.getImprovementType() == iFort
+			): continue
 
-			if( not bLand and not pPlot.isWater() ) :
-				continue
-
-			if( not bIncludeCities and pPlot.isCity() ) :
-				continue
-
-			if( bSameArea and not iBaseArea == pPlot.area().getID() ) :
-				continue
-
-			if( bCheckForEnemy ) :
-				if( len( getEnemyUnits(pPlot.getX(),pPlot.getY(),pSpawnPlayer.getID()) ) > 0 ) :
-					continue
-
-			if( not bIncludeForts and pPlot.getImprovementType() == iFort ) :
-				continue
-
-			# When iSpawnPlotOwner >= 0, plot owner must be either iSpawnPlotOwner, iBasePlotOwner, or no one
-			if( iSpawnPlotOwner < 0 or pPlot.getOwner() == iSpawnPlotOwner or pPlot.getOwner() == iBasePlotOwner or pPlot.getOwner() == PlayerTypes.NO_PLAYER ) :
-				spawnablePlots.append( [pPlot.getX(),pPlot.getY()] )
-			elif( bAtWarPlots and GC.getTeam(pSpawnPlayer.getTeam()).isAtWar( GC.getPlayer(pPlot.getOwner()).getTeam() ) ) :
-				spawnablePlots.append( [pPlot.getX(),pPlot.getY()] )
-			elif( bOpenBordersPlots and GC.getTeam(pSpawnPlayer.getTeam()).isOpenBorders( GC.getPlayer(pPlot.getOwner()).getTeam() ) ) :
-				spawnablePlots.append( [pPlot.getX(),pPlot.getY()] )
+			# When iSpawnPlotOwner > -1, plot owner must be either iSpawnPlotOwner, iBasePlotOwner, or no one
+			if (iSpawnPlotOwner < 0 or pPlot.getOwner() in (iSpawnPlotOwner, iBasePlotOwner, -1)
+			or
+				bAtWarPlots and GC.getTeam(pSpawnPlayer.getTeam()).isAtWar(GC.getPlayer(pPlot.getOwner()).getTeam())
+			or
+				bOpenBordersPlots and GC.getTeam(pSpawnPlayer.getTeam()).isOpenBorders(GC.getPlayer(pPlot.getOwner()).getTeam())
+			):
+				spawnablePlots.append([pPlot.getX(), pPlot.getY()])
 
 	return spawnablePlots
 
 def getEnemyUnits( iPlotX, iPlotY, iEnemyOfPlayer, domain = -1, bOnlyMilitary = False ) :
 
 	pEnemyOfTeam = GC.getTeam( GC.getPlayer(iEnemyOfPlayer).getTeam() )
-	gameMap = GC.getMap()
-	pPlot = gameMap.plot(iPlotX,iPlotY)
 
 	enemyUnits = []
 
-	for i in xrange(pPlot.getNumUnits()) :
-		pUnit = pPlot.getUnit(i)
+	for pUnit in GC.getMap().plot(iPlotX,iPlotY).units():
 		pUnitTeam = GC.getTeam( pUnit.getTeam() )
 		if( pEnemyOfTeam.isAtWar(pUnit.getTeam()) ) :
 			if( domain < 0 or pUnit.getDomainType() == domain ) :
@@ -251,13 +219,9 @@ def getEnemyUnits( iPlotX, iPlotY, iEnemyOfPlayer, domain = -1, bOnlyMilitary = 
 
 def getPlayerUnits( iPlotX, iPlotY, iPlayer, domain = -1 ) :
 
-	gameMap = GC.getMap()
-	pPlot = gameMap.plot(iPlotX,iPlotY)
-
 	playerUnits = []
 
-	for i in xrange(pPlot.getNumUnits()) :
-		pUnit = pPlot.getUnit(i)
+	for pUnit in GC.getMap().plot(iPlotX,iPlotY).units():
 		if( pUnit.getOwner() == iPlayer ) :
 			if( domain < 0 or pUnit.getDomainType() == domain ) :
 				playerUnits.append( pUnit )
@@ -600,7 +564,7 @@ def isCanBribeCity(CyCity):
 	if iRevIdx > 1700:
 		return [False, 'Violent']
 
-	elif iRevIdx < 450 and CyCity.getLocalRevIndex() < 8:
+	if iRevIdx < 450 and CyCity.getLocalRevIndex() < 8:
 		return [False, 'No Need']
 
 	return [True, None]

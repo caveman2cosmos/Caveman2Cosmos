@@ -8,6 +8,7 @@
 #include "CvTeam.h"
 
 class CvArea;
+class CvCity;
 
 class CvTeamAI : public CvTeam
 {

@@ -190,13 +190,6 @@ class CvGameUtils:
 		bIgnoreCost = argsList[4]
 		return False
 
-	def cannotCreate(self, argsList):
-		pCity = argsList[0]
-		eProject = argsList[1]
-		bContinue = argsList[2]
-		bTestVisible = argsList[3]
-		return False
-
 	def cannotMaintain(self, argsList):
 		CyCity, iProcess, bContinue, = argsList
 		if not CyCity:
@@ -333,10 +326,6 @@ class CvGameUtils:
 		return int(score)
 
 	def doHolyCity(self):
-		return False
-
-	def doGold(self, argsList):
-		#ePlayer = argsList[0]
 		return False
 
 	def doResearch(self, argsList):

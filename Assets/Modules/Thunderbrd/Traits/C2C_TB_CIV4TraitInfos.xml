@@ -3597,7 +3597,7 @@
 					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
-				<!--<ImprovementUpgradeModifierType>
+				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -3608,7 +3608,7 @@
 				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>-->
+				</ImprovementUpgradeModifierType>
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -3667,7 +3667,7 @@
 					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!--<BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
@@ -3682,7 +3682,7 @@
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_LISTENING_NODE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>-->
+				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -3844,7 +3844,7 @@
 					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
-				<!--<ImprovementUpgradeModifierType>
+				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -3855,7 +3855,7 @@
 				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>-->
+				</ImprovementUpgradeModifierType>
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -3914,7 +3914,7 @@
 					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!--<BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
@@ -3929,7 +3929,7 @@
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_LISTENING_NODE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>-->
+				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -4073,7 +4073,7 @@
 					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
-				<!--<ImprovementUpgradeModifierType>
+				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -4084,7 +4084,7 @@
 				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>-->
+				</ImprovementUpgradeModifierType>
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -4143,7 +4143,7 @@
 					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!--<BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
@@ -4158,7 +4158,7 @@
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_LISTENING_NODE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>-->
+				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
 			<SpecialistCommerceChanges>
 				<SpecialistCommerceChange>
@@ -4304,7 +4304,7 @@
 					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
-				<!--<ImprovementUpgradeModifierType>
+				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -4315,7 +4315,7 @@
 				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>-->
+				</ImprovementUpgradeModifierType>
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -4374,7 +4374,7 @@
 					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!--<BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
@@ -4389,7 +4389,7 @@
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_LISTENING_NODE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>-->
+				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -4513,7 +4513,7 @@
 					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
-				<!--<ImprovementUpgradeModifierType>
+				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -4524,7 +4524,7 @@
 				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>-->
+				</ImprovementUpgradeModifierType>
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -4583,7 +4583,7 @@
 					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!--<BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
@@ -4598,7 +4598,7 @@
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_LISTENING_NODE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>-->
+				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -4720,7 +4720,7 @@
 					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
-				<!--<ImprovementUpgradeModifierType>
+				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -4731,7 +4731,7 @@
 				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>-->
+				</ImprovementUpgradeModifierType>
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -4790,7 +4790,7 @@
 					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!--<BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
@@ -4805,7 +4805,7 @@
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_LISTENING_NODE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>-->
+				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -4928,7 +4928,7 @@
 					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
-				<!--<ImprovementUpgradeModifierType>
+				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -4939,7 +4939,7 @@
 				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>-->
+				</ImprovementUpgradeModifierType>
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -4998,7 +4998,7 @@
 					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!--<BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
@@ -5013,7 +5013,7 @@
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_LISTENING_NODE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>-->
+				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -5139,7 +5139,7 @@
 					<ImprovementType>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
-				<!--<ImprovementUpgradeModifierType>
+				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_STONE_WATCHTOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -5150,7 +5150,7 @@
 				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_RADAR_TOWER</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>-->
+				</ImprovementUpgradeModifierType>
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -5209,7 +5209,7 @@
 					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
-				<!--<BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
@@ -5224,7 +5224,7 @@
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_LISTENING_NODE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>-->
+				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -28944,14 +28944,14 @@
 						<iYield>1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<ImprovementYieldChange>
+				<!-- <ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN_DEEP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</ImprovementYieldChange>
+				</ImprovementYieldChange> -->
 				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
@@ -29836,14 +29836,14 @@
 						<iYield>1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<ImprovementYieldChange>
+				<!-- <ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN_DEEP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</YieldChanges>
-				</ImprovementYieldChange>
+				</ImprovementYieldChange> -->
 				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
@@ -30230,14 +30230,14 @@
 						<iYield>-1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<ImprovementYieldChange>
+				<!-- <ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN_DEEP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
 					</YieldChanges>
-				</ImprovementYieldChange>
+				</ImprovementYieldChange> -->
 				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
@@ -31097,14 +31097,14 @@
 						<iYield>-1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
-				<ImprovementYieldChange>
+				<!-- <ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN_DEEP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
 					</YieldChanges>
-				</ImprovementYieldChange>
+				</ImprovementYieldChange> -->
 				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>

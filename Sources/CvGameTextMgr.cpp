@@ -12,16 +12,24 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
+#include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
+#include "CvCityAI.h"
 #include "CounterSet.h"
+#include "CvDeal.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
-#include "CvDLLSymbolIFaceBase.h"
 #include "CvGameTextMgr.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
+#include "CvPopupInfo.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
 #include "CvXMLLoadUtility.h"
+#include "CvDLLSymbolIFaceBase.h"
 
 int shortenID(int iId)
 {
@@ -9375,7 +9383,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				iMovementCost += GC.getHILLS_EXTRA_MOVEMENT();
 			}
 
-			if (pPlot->isPeak2(true))
+			if (pPlot->isAsPeak())
 			{
 				if (!GET_TEAM(eActiveTeam).isMoveFastPeaks())
 				{
@@ -12010,7 +12018,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_WORKER_SPEED_NEGATIVE", GC.getTraitInfo(eTrait).getWorkerSpeedModifier()));
 		}
 
-//IMPROVEMENT UPGRADE && WORKER SPEED MODS
+		//IMPROVEMENT UPGRADE && WORKER SPEED MODS
 		//	Improvement upgrade rate modifier
 		if (GC.getTraitInfo(eTrait).getImprovementUpgradeRateModifier() != 0)
 		{
@@ -16921,7 +16929,6 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	//	Building Happiness
 	int CounterHappy = -1; //Dummy Value
 	int CounterHealthy = -1; //Dummy Value
-	int XResolution = GC.getGame().getXResolution();
 
 	iLast = 0;
 	iCount = 0;
@@ -16991,6 +16998,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		}
 	}
 
+	// int XResolution = 1024; // Toffer - Well, this is dumb... Commenting it out
 	iLast = 0;
 	int CounterMod = 0;
 	CvWString szUnit;
@@ -17013,11 +17021,12 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 				}
 				iLast = kCivic.getUnitProductionModifier(iI);
 
-				if (XResolution <= 1024 && CounterMod >= 3)
+				if (/*XResolution <= 1024 &&*/ CounterMod >= 3)
 				{
 					CounterMod = 0;
 					iLast = 0;
 				}
+				/*
 				else if (XResolution > 1024 && XResolution < 1600 && CounterMod >= 4)
 				{
 					CounterMod = 0;
@@ -17028,6 +17037,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 					CounterMod = 0;
 					iLast = 0;
 				}
+				*/
 			}
 		}
 	}
@@ -17046,11 +17056,12 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 			{
 				CounterMod++;
 			}
-			if (XResolution <= 1024 && CounterMod >= 3)
+			if (/*XResolution <= 1024 &&*/ CounterMod >= 3)
 			{
 				CounterMod = 0;
 				iLast = 0;
 			}
+			/*
 			else if (XResolution > 1024 && XResolution < 1600 && CounterMod >= 4)
 			{
 				CounterMod = 0;
@@ -17061,6 +17072,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 				CounterMod = 0;
 				iLast = 0;
 			}
+			*/
 		}
 	}
 	CivicTypes eTargetCivic;
@@ -17091,8 +17103,8 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		}
 		bFirst = true;
 
-		int iPlayerCount = 0;
-		int iEnemyCount = 0;
+		//int iPlayerCount = 0;
+		//int iEnemyCount = 0;
 		CvWString szPlayers;
 		CvWString szEnemies;
 		szEnemies.Format(L"");
@@ -17105,13 +17117,15 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 					szPlayers.append(CvWString::format(L", "));
 				szPlayers.append(CvWString::format(L"<link=%s>%s</link> (+%d)", CvWString(GC.getCivilizationInfo(GET_PLAYER((PlayerTypes)iJ).getCivilizationType()).getType()).GetCString(), GC.getCivilizationInfo(GET_PLAYER((PlayerTypes)iJ).getCivilizationType()).getShortDescription(), aiPlayerDiplomacyChanges[iJ]));
 				bFirst = false;
+				/* Toffer - Commenting this silliness out
 				//Resolution Scaling
 				iPlayerCount++;
-				if (iEnemyCount > XResolution / 10)
+				if (iPlayerCount > XResolution / 10) // Toffer - lol, if iPlayerCount > 102...
 				{
 					szPlayers.append(NEWLINE);
-					iEnemyCount = 0;
+					iPlayerCount = 0;
 				}
+				*/
 			}
 			else if (aiPlayerDiplomacyChanges[iJ] < 0)
 			{
@@ -17119,13 +17133,15 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 					szEnemies.append(CvWString::format(L", "));
 				szEnemies.append(CvWString::format(L"<link=%s>%s</link> (%d)", CvWString(GC.getCivilizationInfo(GET_PLAYER((PlayerTypes)iJ).getCivilizationType()).getType()).GetCString(), GC.getCivilizationInfo(GET_PLAYER((PlayerTypes)iJ).getCivilizationType()).getShortDescription(), aiPlayerDiplomacyChanges[iJ]));
 				bEnemiesFirst = false;
+				/* Toffer - Commenting this silliness out
 				//Resolution Scaling
 				iEnemyCount++;
-				if (iEnemyCount > XResolution / 10)
+				if (iEnemyCount > XResolution / 10) // Toffer - lol, if iEnemyCount > 102...
 				{
 					szEnemies.append(NEWLINE);
 					iEnemyCount = 0;
 				}
+				*/
 			}
 		}
 		if (!bFirst)
@@ -23180,21 +23196,15 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 							{
 								szTempBuffer2.Format(L"+%.0f", fValue/100);
 							}
-							else
-							{
-								szTempBuffer2.Format(L"%.0f", fValue/100);
+							else szTempBuffer2.Format(L"%.0f", fValue/100);
 							}
+						else if (fValue > 0)
+						{
+							szTempBuffer2.Format(L"+%.2f", fValue/100);
 						}
 						else
 						{
-							if (fValue > 0)
-							{
-								szTempBuffer2.Format(L"+%.2f", fValue/100);
-							}
-							else
-							{
-								szTempBuffer2.Format(L"%.2f", fValue/100);
-							}
+							szTempBuffer2.Format(L"%.2f", fValue/100);
 						}
 
 						szTempBuffer.Format(L"\n%c%s%c%s", gDLL->getSymbolID(BULLET_CHAR), szTempBuffer2.GetCString(), GC.getCommerceInfo((CommerceTypes) iJ).getChar(), gDLL->getText("TXT_KEY_WITH").GetCString());
@@ -23612,22 +23622,16 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	}
 
 	bFirst = true;
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+	for (int iI = 0; iI < kBuilding.getNumReplacedBuilding(); ++iI)
 	{
-		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(kBuilding.getReplacedBuilding(iI));
 
-		if (GC.getGame().canEverConstruct(eLoopBuilding))
+		if (GC.getGame().canEverConstruct(eBuildingX) && (pCity == NULL || pCity->getNumBuilding(eBuildingX) == 0))
 		{
-			if (GC.getBuildingInfo(eLoopBuilding).isReplaceBuilding(eBuilding))
-			{
-				if ((pCity == NULL) || (pCity->getNumBuilding(eLoopBuilding) == 0))
-				{
-					szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_REPLACED_BY_BUILDING").c_str());
-					szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
-					setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
-					bFirst = false;
-				}
-			}
+			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_REPLACED_BY_BUILDING").c_str());
+			szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eBuildingX).getType()).GetCString(), GC.getBuildingInfo(eBuildingX).getDescription());
+			setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
+			bFirst = false;
 		}
 	}
 
@@ -24338,7 +24342,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 
 		if (kBuilding.isBuildOnlyOnPeaks())
 		{
-			if (pCity == NULL || !pCity->plot()->isPeak2(true))
+			if (pCity == NULL || !pCity->plot()->isAsPeak())
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_MOUNTAIN"));
@@ -31430,7 +31434,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		}
 		info.getPropertyManipulators()->buildDisplayString(szBuffer);
 	}
-
 }
 
 void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTypes eImprovement, FeatureTypes eFeature, bool bCivilopediaText)

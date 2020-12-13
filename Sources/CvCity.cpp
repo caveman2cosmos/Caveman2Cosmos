@@ -1,13 +1,25 @@
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
+#include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
+#include "CvContractBroker.h"
+#include "CvDLLEntity.h"
+#include "CvEventReporter.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
-#include "CvReachablePlotSet.h"
+#include "CvInfos.h"
+#include "CvMap.h"
+#include "CvPlot.h"
 #include "CvPlayerAI.h"
+#include "CvPopupInfo.h"
+#include "CvPython.h"
+#include "CvReachablePlotSet.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
+#include "CvViewport.h"
 
 //Disable this passed in initialization list warning, as it is only stored in the constructor of CvBuildingList and not used
 #pragma warning( disable : 4355 )
@@ -3005,30 +3017,29 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 				return false;
 			}
 
-			if (isNPC() && isLimitedWonder(eBuilding))
+			if (isLimitedWonder(eBuilding))
 			{
-				return false;
-			}
-
-			if (!kBuilding.isNoLimit())
-			{
-				if (isWorldWonder(eBuilding))
+				if (isNPC())
 				{
-					if (isWorldWondersMaxed())
-					{
-						return false;
-					}
+					return false;
 				}
-				else if (isTeamWonder(eBuilding))
+				if (!kBuilding.isNoLimit())
 				{
-					if (isTeamWondersMaxed())
+					if (isWorldWonder(eBuilding))
 					{
-						return false;
+						if (isWorldWondersMaxed())
+						{
+							return false;
+						}
 					}
-				}
-				else if (isNationalWonder(eBuilding))
-				{
-					if (isNationalWondersMaxed())
+					else if (isTeamWonder(eBuilding))
+					{
+						if (isTeamWondersMaxed())
+						{
+							return false;
+						}
+					}
+					else if (isNationalWonder(eBuilding) && isNationalWondersMaxed())
 					{
 						return false;
 					}
@@ -3102,7 +3113,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			return false;
 		}
 
-		if (kBuilding.isBuildOnlyOnPeaks() && !plot()->isPeak2(true))
+		if (kBuilding.isBuildOnlyOnPeaks() && !plot()->isAsPeak())
 		{
 			return false;
 		}
@@ -3172,27 +3183,23 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	const int numBuildingInfos = GC.getNumBuildingInfos();
 	if (!bExposed)
 	{
-		if (kBuilding.getPrereqVicinityBonus() != NO_BONUS)
+		if (kBuilding.getPrereqVicinityBonus() != NO_BONUS
+		&& !hasVicinityBonus((BonusTypes)kBuilding.getPrereqVicinityBonus()))
 		{
-			if (!hasVicinityBonus((BonusTypes)kBuilding.getPrereqVicinityBonus()))
+			if (probabilityEverConstructable != NULL)
 			{
-				if (probabilityEverConstructable != NULL)
-				{
-					*probabilityEverConstructable = 5;
-				}
-				return false;
+				*probabilityEverConstructable = 5;
 			}
+			return false;
 		}
-		if (kBuilding.getPrereqRawVicinityBonus() != NO_BONUS)
+		if (kBuilding.getPrereqRawVicinityBonus() != NO_BONUS
+		&& !hasRawVicinityBonus((BonusTypes)kBuilding.getPrereqRawVicinityBonus()))
 		{
-			if (!hasRawVicinityBonus((BonusTypes)kBuilding.getPrereqRawVicinityBonus()))
+			if (probabilityEverConstructable != NULL)
 			{
-				if (probabilityEverConstructable != NULL)
-				{
-					*probabilityEverConstructable = 5;
-				}
-				return false;
+				*probabilityEverConstructable = 5;
 			}
+			return false;
 		}
 		//Hide Buildings that shouldn't appear in the early game and require other buildings
 		const bool bTest = (
@@ -3269,26 +3276,25 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 		}
 	}
 
-	if (!bAffliction && kBuilding.isReplaceBuilding(NO_BUILDING))
+	if (!bAffliction)
 	{
 		//Can not construct replaced buildings.
-		for (int iI = 0; iI < numBuildingInfos; iI++)
+		for (int iI = 0; iI < kBuilding.getNumReplacementBuilding(); ++iI)
 		{
-			if (
-				kBuilding.isReplaceBuilding(iI)
-			&&
-				(
-					getNumActiveBuilding((BuildingTypes)iI) > 0
-				||	GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_REPLACED_BUILDINGS)
-				&&	canConstruct((BuildingTypes)iI, true, false, false, true)
-				)
-			) return false;
+			const BuildingTypes eReplacement = (BuildingTypes)kBuilding.getReplacementBuilding(iI);
+			if (getNumActiveBuilding(eReplacement) > 0
+			// Toffer - This is not the right place to do HIDE_REPLACED_BUILDINGS...
+			// This option can now stop AI from building a replaced building,
+			// when the option is only supposed to be an interface option for the human player.
+			|| GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_REPLACED_BUILDINGS)
+			&& canConstruct(eReplacement, true, false, false, true))
+			{
+				return false;
+			}
 		}
 	}
 
-	//	Koshling - always hide things not buildable due to vicinity bonuses
-	//	it's not really useful to see them
-	//if (!bTestVisible)
+	// Koshling - Always hide unbuildable due to vicinity bonuses, it's not really useful to see them
 	if (!bExposed)
 	{
 		bool bHasAnyVicinityBonus = false;
@@ -3379,19 +3385,6 @@ bool CvCity::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible)
 	{
 		return false;
 	}
-
-	if (
-		GC.getUSE_CANNOT_CREATE_PROJECT_CALLBACK()
-	&&
-		Cy::call<bool>(
-			PYGameModule, "cannotCreate", Cy::Args()
-			// CyCity doesn't have a const only interface
-			<< const_cast<CvCity*>(this)
-			<< eProject
-			<< bContinue
-			<< bTestVisible
-		)
-	) return false;
 
 	return true;
 }
@@ -5714,7 +5707,7 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 
 			GET_PLAYER(getOwner()).changeAssets(kBuilding.getAssetValue() * iChange);
 
-			area()->changePower(getOwner(), (kBuilding.getPowerValue() / 100 * iChange));
+			area()->changePower(getOwner(), kBuilding.getPowerValue() * iChange);
 			GET_PLAYER(getOwner()).changePower(kBuilding.getPowerValue() * iChange);
 
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -5970,11 +5963,7 @@ bool CvCity::isDisorder() const
 
 bool CvCity::isHolyCity(ReligionTypes eIndex) const
 {
-	if (eIndex == NO_RELIGION)
-	{
-		return false;
-	}
-	return (GC.getGame().getHolyCity(eIndex) == this);
+	return eIndex != NO_RELIGION && GC.getGame().getHolyCity(eIndex) == this;
 }
 
 bool CvCity::isHolyCity() const
@@ -5986,7 +5975,6 @@ bool CvCity::isHolyCity() const
 			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -7009,7 +6997,7 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 	{
 		eTerrain = GC.getTERRAIN_HILL();
 	}
-	else if (pPlot->isPeak2(true))
+	else if (pPlot->isAsPeak())
 	{
 		eTerrain = GC.getTERRAIN_PEAK();
 	}
@@ -7169,22 +7157,24 @@ void CvCity::calculateBuildingReplacements() const
 
 	memset(m_paiBuildingReplaced, 0, sizeof(int) * GC.getNumBuildingInfos());
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+
+	for (int iReplacement = 0; iReplacement < GC.getNumBuildingInfos(); iReplacement++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+		if (getNumActiveBuilding((BuildingTypes)iReplacement) > 0)
 		{
-			for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+			const CvBuildingInfo& replacement = GC.getBuildingInfo((BuildingTypes)iReplacement);
+
+			for (int iI = 0; iI < replacement.getNumReplacedBuilding(); iI++)
 			{
-				if (GC.getBuildingInfo((BuildingTypes)iJ).isReplaceBuilding((BuildingTypes)iI))
+				const int iReplaced = replacement.getReplacedBuilding(iI);
+
+				// Cope with old format saves where the calculation will not previously
+				// have been done and so the effects need to be processed
+				if (!m_bHasCalculatedBuildingReplacement && getNumBuilding((BuildingTypes)iReplacement) > 0)
 				{
-					//	Cope with old format saves where the calculation will not previously
-					//	have been done and so the effects need to be processed
-					if (!m_bHasCalculatedBuildingReplacement && getNumBuilding((BuildingTypes)iJ) > 0)
-					{
-						(const_cast<CvCity*>(this))->processBuilding((BuildingTypes)iJ, -1);
-					}
-					m_paiBuildingReplaced[iJ]++;
+					(const_cast<CvCity*>(this))->processBuilding((BuildingTypes)iReplaced, -1);
 				}
+				m_paiBuildingReplaced[iReplaced]++;
 			}
 		}
 	}
@@ -7195,34 +7185,33 @@ void CvCity::changeBuildingReplacementCount(BuildingTypes eBuilding, bool bAdd)
 {
 	FAssert(m_paiBuildingReplaced != NULL);
 
-	for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
+
+	for (int iI = 0; iI < building.getNumReplacedBuilding(); iI++)
 	{
-		if (GC.getBuildingInfo((BuildingTypes)iJ).isReplaceBuilding(eBuilding))
+		const int iBuilding = building.getReplacedBuilding(iI);
+		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iBuilding);
+
+		// During modifier recalculation don't count buildings we haven't yet processed as present
+		const bool bHad = (m_recalcBuilding >= iBuilding && getNumBuilding(eBuildingX) > 0);
+
+		if (bAdd)
 		{
-			// During modifier recalculation don't count buildings we haven't yet processed as present
-			const bool bHad = (m_recalcBuilding >= iJ && getNumBuilding((BuildingTypes)iJ) > 0);
+			m_paiBuildingReplaced[iBuilding]++;
+		}
+		// During recalculation after loading an old format save game
+		// this can go negative due to chains that lead from lower numbered
+		// buildings to higher, so just cap at 0 on the bottom
+		else if (m_paiBuildingReplaced[iBuilding] > 0)
+		{
+			m_paiBuildingReplaced[iBuilding]--;
+		}
 
-			if (bAdd)
-			{
-				m_paiBuildingReplaced[iJ]++;
-			}
-			else
-			{
-				//	During recalculation after loading an old format save game
-				//	this can go negative due to chains that lead from lower numbered
-				//	buildings to higher, so just cap at 0 on the bottom
-				if (m_paiBuildingReplaced[iJ] > 0)
-				{
-					m_paiBuildingReplaced[iJ]--;
-				}
-			}
+		const bool bHas = (m_recalcBuilding >= iBuilding && getNumBuilding(eBuildingX) > 0);
 
-			const bool bHas = (m_recalcBuilding >= iJ && getNumBuilding((BuildingTypes)iJ) > 0);
-
-			if (bHad != bHas)
-			{
-				processBuilding((BuildingTypes)iJ, bHas ? 1 : -1, false, true);
-			}
+		if (bHad != bHas)
+		{
+			processBuilding(eBuildingX, bHas ? 1 : -1, false, true);
 		}
 	}
 }
@@ -7246,12 +7235,7 @@ int CvCity::getNumBuilding(BuildingTypes eIndex) const
 int CvCity::getNumActiveBuilding(BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-
-	if (GET_TEAM(getTeam()).isObsoleteBuilding(eIndex))
-	{
-		return 0;
-	}
-	return (getNumBuilding(eIndex));
+	return GET_TEAM(getTeam()).isObsoleteBuilding(eIndex) ? 0 : getNumBuilding(eIndex);
 }
 
 
@@ -7542,7 +7526,7 @@ int CvCity::getPopulation() const
 
 void CvCity::setPopulation(int iNewValue)
 {
-	int iOldPopulation = getPopulation();
+	const int iOldPopulation = getPopulation();
 
 	if (iOldPopulation != iNewValue)
 	{
@@ -7562,28 +7546,12 @@ void CvCity::setPopulation(int iNewValue)
 		GET_TEAM(getTeam()).changeTotalPopulation(getPopulation() - iOldPopulation);
 		GC.getGame().changeTotalPopulation(getPopulation() - iOldPopulation);
 
-		if (iOldPopulation > 0)
-		{
-			area()->changePower(getOwner(), -(getPopulationPower(iOldPopulation)));
-		}
-		if (getPopulation() > 0)
-		{
-			area()->changePower(getOwner(), getPopulationPower(getPopulation()));
-		}
-		/************************************************************************************************/
-		/* Afforess	                  Start		 08/29/10                                               */
-		/*                                                                                              */
-		/*                                                                                              */
-		/************************************************************************************************/
 		checkBuildings(false, false, false, false, true);
-		/************************************************************************************************/
-		/* Afforess	                     END                                                            */
-		/************************************************************************************************/
 
 		if (plot()->getFeatureType() != NO_FEATURE)
 		{
-			int iPopDestroys = GC.getFeatureInfo(plot()->getFeatureType()).getPopDestroys();
-			if (iPopDestroys != -1 && getPopulation() >= iPopDestroys)
+			const int iPopDestroys = GC.getFeatureInfo(plot()->getFeatureType()).getPopDestroys();
+			if (iPopDestroys > -1 && getPopulation() >= iPopDestroys)
 			{
 				plot()->setFeatureType(NO_FEATURE);
 			}
@@ -7594,15 +7562,18 @@ void CvCity::setPopulation(int iNewValue)
 		updateFeatureHealth();
 		setMaintenanceDirty(true);
 
-		if (((iOldPopulation == 1) && (getPopulation() > 1)) ||
-			((getPopulation() == 1) && (iOldPopulation > 1))
-			|| ((getPopulation() > iOldPopulation) && (GET_PLAYER(getOwner()).getNumCities() <= 2)))
-		{
-			if (!isHuman())
-			{
-				AI_setChooseProductionDirty(true);
-			}
-		}
+		if (
+			!isHuman()
+		&&
+			(
+				iOldPopulation == 1 && getPopulation() > 1
+				||
+				getPopulation() == 1 && iOldPopulation > 1
+				||
+				getPopulation() > iOldPopulation && GET_PLAYER(getOwner()).getNumCities() <= 2
+			)
+		) AI_setChooseProductionDirty(true);
+
 
 		GET_PLAYER(getOwner()).AI_makeAssignWorkDirty();
 
@@ -7611,13 +7582,11 @@ void CvCity::setPopulation(int iNewValue)
 
 		plot()->plotAction(PUF_makeInfoBarDirty);
 
-		if ((getOwner() == GC.getGame().getActivePlayer()) && isCitySelected())
+		if (getOwner() == GC.getGame().getActivePlayer() && isCitySelected())
 		{
 			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
 			gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
 		}
-
-		//updateGenericBuildings();
 	}
 }
 
@@ -7902,23 +7871,27 @@ int CvCity::getAdditionalGreatPeopleRateByBuilding(BuildingTypes eBuilding)
 
 	const int iRate = getBaseGreatPeopleRate();
 	const int iModifier = getTotalGreatPeopleRateModifier();
-	int iExtra = ((iRate + getAdditionalBaseGreatPeopleRateByBuilding(eBuilding)) * (iModifier + getAdditionalGreatPeopleRateModifierByBuilding(eBuilding)) / 100) - (iRate * iModifier / 100);
+	int iExtra =
+	(
+		(iRate + getAdditionalBaseGreatPeopleRateByBuilding(eBuilding))
+		*
+		(iModifier + getAdditionalGreatPeopleRateModifierByBuilding(eBuilding))
+		/
+		100
+		- 
+		iRate * iModifier / 100
+	);
+	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < building.getNumReplacedBuilding(); iI++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(building.getReplacedBuilding(iI));
+
+		if (getNumActiveBuilding(eBuildingX) > 0 && !isReligiouslyDisabledBuilding(eBuildingX))
 		{
-			//Team Project (5)
-			if (!isReligiouslyDisabledBuilding((BuildingTypes)iI))
-			{
-				if (GC.getBuildingInfo((BuildingTypes)iI).isReplaceBuilding(eBuilding))
-				{
-					iExtra -= getAdditionalGreatPeopleRateByBuilding((BuildingTypes)iI);
-				}
-			}
+			iExtra -= getAdditionalGreatPeopleRateByBuilding(eBuildingX);
 		}
 	}
-
 	return iExtra;
 }
 
@@ -8215,17 +8188,22 @@ int CvCity::getHomeAreaMaintenanceSavedTimes100ByCivic(CivicTypes eCivic) const
 {
 	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), eCivic)
 
-	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-	const int iModifier = kCivic.getHomeAreaMaintenanceModifier();
+	const int iMod = GC.getCivicInfo(eCivic).getHomeAreaMaintenanceModifier();
 
-	if (iModifier != 0 && area()->isHomeArea(getOwner()) && !isDisorder() && !isWeLoveTheKingDay())
+	if (iMod != 0 && area()->isHomeArea(getOwner()) && !isDisorder() && !isWeLoveTheKingDay())
 	{
-		const int iOldBaseMaintenance = calculateBaseMaintenanceTimes100();
-		const int iOldModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + 100) / 100);
-		const int iNewModifiedBaseMaintenance = std::max(0, iOldBaseMaintenance * (getEffectiveMaintenanceModifier() + iModifier + 100) / 100);
-		return iOldModifiedBaseMaintenance - iNewModifiedBaseMaintenance;
+		const int iBaseMaintenance = calculateBaseMaintenanceTimes100();
+		const int iEffectiveMaintenanceMod = 100 + getEffectiveMaintenanceModifier();
+		return // The difference
+		(
+			(
+				std::max(0, iBaseMaintenance * iEffectiveMaintenanceMod)
+				-
+				std::max(0, iBaseMaintenance *(iEffectiveMaintenanceMod + iMod))
+			)
+			/ 100
+		);
 	}
-
 	return 0;
 }
 
@@ -8271,11 +8249,10 @@ int CvCity::getEffectiveMaintenanceModifier() const
 {
 	int iModifier = getMaintenanceModifier() + GET_PLAYER(getOwner()).getMaintenanceModifier() + area()->getTotalAreaMaintenanceModifier(getOwner());
 
-	if (isConnectedToCapital() && !(isCapital()))
+	if (isConnectedToCapital() && !isCapital())
 	{
 		iModifier += GET_PLAYER(getOwner()).getConnectedCityMaintenanceModifier();
 	}
-
 	return iModifier;
 }
 
@@ -8336,7 +8313,7 @@ int CvCity::calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier, int
 		{
 			const int iDistance = plotDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY());
 
-			int iValue = GC.getMAX_DISTANCE_CITY_MAINTENANCE() * (iDistance + iDistance / 3);
+			int iValue = GC.getBASE_DISTANCE_MAINTENANCE_PER_100_PLOTS() * (iDistance + iDistance / 3);
 
 			iValue *= getPopulation() + 5;
 			iValue /= 10;
@@ -9768,14 +9745,14 @@ int CvCity::getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood
 			}
 		}
 	}
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+
+	for (int iI = 0; iI < kBuilding.getNumReplacedBuilding(); iI++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(kBuilding.getReplacedBuilding(iI));
+
+		if (getNumActiveBuilding(eBuildingX) > 0)
 		{
-			if (GC.getBuildingInfo((BuildingTypes)iI).isReplaceBuilding(eBuilding))
-			{
-				addGoodOrBad(-getBuildingHappiness((BuildingTypes)iI), iGood, iBad);
-			}
+			addGoodOrBad(-getBuildingHappiness(eBuildingX), iGood, iBad);
 		}
 	}
 
@@ -9895,13 +9872,10 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 				addGoodOrBad(GC.getDIRTY_POWER_HEALTH_CHANGE(), iGood, iBad);
 			}
 		}
-		else
+		// replacing dirty power with clean power
+		else if (isDirtyPower() && !kBuilding.isDirtyPower())
 		{
-			// replacing dirty power with clean power
-			if (isDirtyPower() && !kBuilding.isDirtyPower())
-			{
-				subtractGoodOrBad(GC.getDIRTY_POWER_HEALTH_CHANGE(), iGood, iBad);
-			}
+			subtractGoodOrBad(GC.getDIRTY_POWER_HEALTH_CHANGE(), iGood, iBad);
 		}
 	}
 
@@ -9945,18 +9919,14 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 			}
 		}
 	}
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+
+	for (int iI = 0; iI < kBuilding.getNumReplacedBuilding(); iI++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(kBuilding.getReplacedBuilding(iI));
+
+		if (getNumActiveBuilding(eBuildingX) > 0 && !isReligiouslyDisabledBuilding(eBuildingX))
 		{
-			//Team Project (5)
-			if (!isReligiouslyDisabledBuilding((BuildingTypes)iI))
-			{
-				if (GC.getBuildingInfo((BuildingTypes)iI).isReplaceBuilding(eBuilding))
-				{
-					addGoodOrBad(-getBuildingHealth((BuildingTypes)iI), iGood, iBad);
-				}
-			}
+			addGoodOrBad(-getBuildingHealth(eBuildingX), iGood, iBad);
 		}
 	}
 
@@ -11643,15 +11613,25 @@ int CvCity::getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuild
 {
 	const int iRate = getModifiedBaseYieldRate(eIndex);
 	const int iModifier = getBaseYieldRateModifier(eIndex);
-	int iExtra = (iRate + getAdditionalBaseYieldRateByBuilding(eIndex, eBuilding)) * (iModifier + getAdditionalYieldRateModifierByBuilding(eIndex, eBuilding, bFilter)) / 100 - iRate * iModifier / 100;
+	int iExtra = 
+	(
+		(iRate + getAdditionalBaseYieldRateByBuilding(eIndex, eBuilding))
+		*
+		(iModifier + getAdditionalYieldRateModifierByBuilding(eIndex, eBuilding, bFilter))
+		/
+		100
+		-
+		iRate * iModifier / 100
+	);
+	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < building.getNumReplacedBuilding(); iI++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0
-		&& !isReligiouslyDisabledBuilding((BuildingTypes)iI)
-		&& GC.getBuildingInfo((BuildingTypes)iI).isReplaceBuilding(eBuilding))
+		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(building.getReplacedBuilding(iI));
+
+		if (getNumActiveBuilding(eBuildingX) > 0 && !isReligiouslyDisabledBuilding(eBuildingX))
 		{
-			iExtra -= getAdditionalYieldByBuilding(eIndex, (BuildingTypes)iI);
+			iExtra -= getAdditionalYieldByBuilding(eIndex, eBuildingX);
 		}
 	}
 	return iExtra;
@@ -12855,53 +12835,45 @@ int CvCity::getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes 
  */
 int CvCity::getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding)
 {
-	int iExtraRateTimes100 = getAdditionalBaseCommerceRateByBuildingTimes100(eIndex, eBuilding);
-	int iExtraModifier = getAdditionalCommerceRateModifierByBuilding(eIndex, eBuilding);
+	const int iExtraRateTimes100 = getAdditionalBaseCommerceRateByBuildingTimes100(eIndex, eBuilding);
+	const int iExtraModifier = getAdditionalCommerceRateModifierByBuilding(eIndex, eBuilding);
+
 	if (iExtraRateTimes100 == 0 && iExtraModifier == 0)
 	{
 		return 0;
 	}
+	const int iRateTimes100 = getBaseCommerceRateTimes100(eIndex);
+	const int iModifier = getTotalCommerceRateModifier(eIndex);
 
-	int iRateTimes100 = getBaseCommerceRateTimes100(eIndex);
-	int iModifier = getTotalCommerceRateModifier(eIndex);
-
-	int iCommerceWithoutBuilding;
-	if (iRateTimes100 > 0)
-	{
-		iCommerceWithoutBuilding = (iRateTimes100 * iModifier) / 100;
-	}
-	else
-	{
-		iCommerceWithoutBuilding = (iRateTimes100 * 100) / iModifier;
-	}
-
-	int iCommerceWithBuilding;
-	if (iRateTimes100 + iExtraRateTimes100 > 0)
-	{
-		iCommerceWithBuilding = ((iRateTimes100 + iExtraRateTimes100) * (iModifier + iExtraModifier)) / 100;
-	}
-	else
-	{
-		iCommerceWithBuilding = ((iRateTimes100 + iExtraRateTimes100) * 100) / (iModifier + iExtraModifier);
-	}
-
+	const int iCommerceWithoutBuilding =
+	(
+		iRateTimes100 > 0
+		?
+		iRateTimes100 * iModifier / 100
+		:
+		iRateTimes100 * 100 / iModifier
+	);
+	const int iCommerceWithBuilding
+	(
+		iRateTimes100 + iExtraRateTimes100 > 0
+		?
+		(iRateTimes100 + iExtraRateTimes100) * (iModifier + iExtraModifier) / 100
+		:
+		(iRateTimes100 + iExtraRateTimes100) * 100 / (iModifier + iExtraModifier)
+	);
 	int iExtraTimes100 = iCommerceWithBuilding - iCommerceWithoutBuilding;
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
+
+	for (int iI = 0; iI < building.getNumReplacedBuilding(); iI++)
 	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(building.getReplacedBuilding(iI));
+
+		if (getNumActiveBuilding(eBuildingX) > 0 && !isReligiouslyDisabledBuilding(eBuildingX))
 		{
-			//Team Project (5)
-			if (!isReligiouslyDisabledBuilding((BuildingTypes)iI))
-			{
-				if (GC.getBuildingInfo((BuildingTypes)iI).isReplaceBuilding(eBuilding))
-				{
-					iExtraTimes100 -= getAdditionalCommerceTimes100ByBuilding(eIndex, (BuildingTypes)iI);
-				}
-			}
+			iExtraTimes100 -= getAdditionalCommerceTimes100ByBuilding(eIndex, eBuildingX);
 		}
 	}
-
 	return iExtraTimes100;
 }
 
@@ -20904,46 +20876,43 @@ void CvCity::doPromotion()
 bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 {
 	//This had to be hardcoded, since there is a terrain peak, but it is really a plot type, not a terrain.
-	bool bValidTerrain = false;
-	//int RequiresAndTerrain = 0;
-	bool bRequiresTerrain = false;
-	//bool bValidAndTerrain = false;
-	int iTerrainPeak = (int)GC.getTERRAIN_PEAK();
-	int iTerrainHill = (int)GC.getTERRAIN_HILL();
-	bool bPeak = false, bPeak2 = false;
-	bool bHill = false, bHill2 = false;
-	bool bRequiresOrImprovement = false;
-	bool bHasValidImprovement = false;
-	bool bRequiresOrFeature = false;
-	bool bHasValidFeature = false;
+	const int iTerrainPeak = (int)GC.getTERRAIN_PEAK();
+	const int iTerrainHill = (int)GC.getTERRAIN_HILL();
 
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
+	bool bRequiresTerrain = false;
+	bool bValidTerrain = false;
 	for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
 	{
-		if (kBuilding.isPrereqOrTerrain(iI))
+		if (kBuilding.isPrereqOrTerrain(iI) && !bValidTerrain)
 		{
 			bRequiresTerrain = true;
-			if (iI == iTerrainPeak)
-				bPeak = true;
-			else if (iI == iTerrainHill)
-				bHill = true;
+			const bool bPeak = iI == iTerrainPeak;
+			const bool bHill = iI == iTerrainHill;
+
 			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
 			{
-				CvPlot* pLoopPlot = getCityIndexPlot(iJ);
-				if (pLoopPlot != NULL)
+				const CvPlot* plotX = getCityIndexPlot(iJ);
+				if (plotX != NULL)
 				{
-					if (pLoopPlot->getTerrainType() == ((TerrainTypes)iI))
+					if (bPeak)
 					{
-						bValidTerrain = true;
-						break;
+						if (plotX->isAsPeak())
+						{
+							bValidTerrain = true;
+							break;
+						}
 					}
-					if (pLoopPlot->isPeak2(true) && bPeak)
+					else if (bHill)
 					{
-						bValidTerrain = true;
-						break;
+						if (plotX->isHills())
+						{
+							bValidTerrain = true;
+							break;
+						}
 					}
-					if (pLoopPlot->isHills() && bHill)
+					else if (plotX->getTerrainType() == iI)
 					{
 						bValidTerrain = true;
 						break;
@@ -20954,30 +20923,33 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 
 		if (kBuilding.isPrereqAndTerrain(iI))
 		{
-			bool bHasAndTerrain = false;
-
-			if (iI == iTerrainPeak)
-				bPeak2 = true;
-			else if (iI == iTerrainHill)
-				bHill2 = true;
+			const bool bPeak = iI == iTerrainPeak;
+			const bool bHill = iI == iTerrainHill;
 
 			//Checks the city plots for a valid terrain
+			bool bHasAndTerrain = false;
 			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
 			{
-				CvPlot* pLoopPlot = getCityIndexPlot(iJ);
-				if (pLoopPlot != NULL)
+				const CvPlot* plotX = getCityIndexPlot(iJ);
+				if (plotX != NULL)
 				{
-					if (pLoopPlot->getTerrainType() == ((TerrainTypes)iI))
+					if (bPeak)
 					{
-						bHasAndTerrain = true;
-						break;
+						if (plotX->isAsPeak())
+						{
+							bHasAndTerrain = true;
+							break;
+						}
 					}
-					if (pLoopPlot->isPeak2(true) && bPeak2)
+					else if (bHill)
 					{
-						bHasAndTerrain = true;
-						break;
+						if (plotX->isHills())
+						{
+							bHasAndTerrain = true;
+							break;
+						}
 					}
-					if (pLoopPlot->isHills() && bHill2)
+					else if (plotX->getTerrainType() == iI)
 					{
 						bHasAndTerrain = true;
 						break;
@@ -20990,12 +20962,13 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 			}
 		}
 	}
-
 	if (!bValidTerrain && bRequiresTerrain)
 	{
 		return false;
 	}
 
+	bool bHasValidImprovement = false;
+	bool bRequiresOrImprovement = false;
 	for (int iI = 0; iI < GC.getNumImprovementInfos() && !bHasValidImprovement; iI++)
 	{
 		if (kBuilding.isPrereqOrImprovement(iI))
@@ -21003,27 +20976,22 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 			bRequiresOrImprovement = true;
 			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
 			{
-				CvPlot* pLoopPlot = getCityIndexPlot(iJ);
-				if (pLoopPlot != NULL)
+				const CvPlot* plotX = getCityIndexPlot(iJ);
+				if (plotX != NULL && plotX->getImprovementType() == iI)
 				{
-					if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
-					{
-						if (pLoopPlot->getImprovementType() == (ImprovementTypes)iI)
-						{
-							bHasValidImprovement = true;
-							break;
-						}
-					}
+					bHasValidImprovement = true;
+					break;
 				}
 			}
 		}
 	}
-
 	if (!bHasValidImprovement && bRequiresOrImprovement)
 	{
 		return false;
 	}
 
+	bool bRequiresOrFeature = false;
+	bool bHasValidFeature = false;
 	for (int iI = 0; iI < GC.getNumFeatureInfos() && !bHasValidFeature; iI++)
 	{
 		if (kBuilding.isPrereqOrFeature(iI))
@@ -21031,19 +20999,15 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 			bRequiresOrFeature = true;
 			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
 			{
-				CvPlot* pLoopPlot = getCityIndexPlot(iJ);
-				if (pLoopPlot != NULL)
+				const CvPlot* plotX = getCityIndexPlot(iJ);
+				if (plotX != NULL && plotX->getFeatureType() == iI)
 				{
-					if (pLoopPlot->getFeatureType() == iI)
-					{
-						bHasValidFeature = true;
-						break;
-					}
+					bHasValidFeature = true;
+					break;
 				}
 			}
 		}
 	}
-
 	if (!bHasValidFeature && bRequiresOrFeature)
 	{
 		return false;
@@ -21054,13 +21018,12 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 
 void CvCity::changeFreshWater(int iChange)
 {
-	bool bDidHaveFreshWater = hasFreshWater();
-
 	if (iChange != 0)
 	{
+		const bool bDidHaveFreshWater = m_iFreshWater > 0;
 		m_iFreshWater += iChange;
-		bool bDoesHaveFreshWater = hasFreshWater();
-		if (bDidHaveFreshWater != bDoesHaveFreshWater)
+
+		if (bDidHaveFreshWater != hasFreshWater())
 		{
 			for (int iJ = 0; iJ < getNumCityPlots(); iJ++)
 			{
@@ -21077,7 +21040,7 @@ void CvCity::changeFreshWater(int iChange)
 
 bool CvCity::hasFreshWater() const
 {
-	return (m_iFreshWater > 0);
+	return m_iFreshWater > 0;
 }
 
 
@@ -21087,9 +21050,12 @@ bool CvCity::canUpgradeUnit(UnitTypes eUnit) const
 
 	for (int iI = 0; iI < GC.getUnitInfo(eUnit).getNumUnitUpgrades(); iI++)
 	{
-		UnitTypes eUpgradeUnit = (UnitTypes)GC.getUnitInfo(eUnit).getUnitUpgrade(iI);
-		if ((GC.getGame().isUnitMaxedOut(eUpgradeUnit)) || (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isUnitMaxedOut(eUpgradeUnit)) || GET_PLAYER(getOwner()).isUnitMaxedOut(eUpgradeUnit))
-		{//if the upgrade unit is maxed out, I assume you can construct them, and already have construct the max
+		const UnitTypes eUpgradeUnit = (UnitTypes)GC.getUnitInfo(eUnit).getUnitUpgrade(iI);
+
+		if (GC.getGame().isUnitMaxedOut(eUpgradeUnit)
+		|| GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isUnitMaxedOut(eUpgradeUnit)
+		|| GET_PLAYER(getOwner()).isUnitMaxedOut(eUpgradeUnit))
+		{//if the upgrade unit is maxed out, I assume you can construct them, and already have constructed the max
 			return true;
 		}
 	}
@@ -21130,29 +21096,30 @@ int CvCity::getAdditionalDefenseByBuilding(BuildingTypes eBuilding) const
 			iExtraRate += kBuilding.getAllCityDefenseModifier();
 		}
 
-		//if this new building replaces an old one, subtract the old defense rate from the new one.
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		// If this new building replaces an old one, subtract the old defense rate from the new one.
+		for (int iI = 0; iI < kBuilding.getNumReplacedBuilding(); iI++)
 		{
-			const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-			if (GC.getBuildingInfo(eLoopBuilding).isReplaceBuilding(eBuilding) && getNumBuilding(eLoopBuilding) > 0)
+			const BuildingTypes eBuildingX = static_cast<BuildingTypes>(kBuilding.getReplacedBuilding(iI));
+
+			if (getNumBuilding(eBuildingX) > 0)
 			{
-				iExtraBuildingRate -= GC.getBuildingInfo(eLoopBuilding).getDefenseModifier();
+				iExtraBuildingRate -= GC.getBuildingInfo(eBuildingX).getDefenseModifier();
 				for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 				{
 					if (hasBonus((BonusTypes)iJ))
 					{
-						iExtraRate -= GC.getBuildingInfo(eLoopBuilding).getBonusDefenseChanges(iJ);
+						iExtraRate -= GC.getBuildingInfo(eBuildingX).getBonusDefenseChanges(iJ);
 					}
 				}
-				iExtraRate -= GC.getBuildingInfo(eLoopBuilding).getAllCityDefenseModifier();
+				iExtraRate -= GC.getBuildingInfo(eBuildingX).getAllCityDefenseModifier();
 			}
 		}
 	}
 
-	int iOldEffectiveBuildingRate = std::max(getBuildingDefense(), getNaturalDefense());
-	int iNewEffectiveBuildingRate = std::max(getBuildingDefense() + iExtraBuildingRate, getNaturalDefense());
+	const int iOldEffectiveBuildingRate = std::max(getBuildingDefense(), getNaturalDefense());
+	const int iNewEffectiveBuildingRate = std::max(getBuildingDefense() + iExtraBuildingRate, getNaturalDefense());
 
-	return iExtraRate + (iNewEffectiveBuildingRate - iOldEffectiveBuildingRate);
+	return iExtraRate + iNewEffectiveBuildingRate - iOldEffectiveBuildingRate;
 }
 
 
@@ -21783,39 +21750,29 @@ bool CvCity::hasVicinityBonus(BonusTypes eBonus) const
 			for (int iI = 0; iI < getNumCityPlots(); iI++)
 			{
 				CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
-				if (pLoopPlot != NULL)
+				if (pLoopPlot != NULL
+				&& pLoopPlot->getBonusType() == eBonus
+				&& pLoopPlot->getOwner() == getOwner()
+				&& pLoopPlot->isHasValidBonus()
+				&& pLoopPlot->isConnectedTo(this))
 				{
-					if (pLoopPlot->getBonusType() == eBonus)
-					{
-						if (pLoopPlot->getOwner() == getOwner())
-						{
-							if (pLoopPlot->isHasValidBonus() && pLoopPlot->isConnectedTo(this))
-							{
-								bResult = true;
-								break;
-							}
-						}
-					}
+					bResult = true;
+					break;
 				}
 			}
 		}
 
-		if (!bResult)
+		if (!bResult && bonusAvailableFromBuildings(eBonus))
 		{
-			if (bonusAvailableFromBuildings(eBonus))
+			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-				{
-					const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
+				const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 
-					if (kBuilding.getFreeBonus() == eBonus || kBuilding.hasExtraFreeBonus(eBonus))
-					{
-						if (getNumActiveBuilding((BuildingTypes)iI) > 0)
-						{
-							bResult = true;
-							break;
-						}
-					}
+				if ((kBuilding.getFreeBonus() == eBonus || kBuilding.hasExtraFreeBonus(eBonus))
+				&& getNumActiveBuilding((BuildingTypes)iI) > 0)
+				{
+					bResult = true;
+					break;
 				}
 			}
 		}
@@ -21874,39 +21831,27 @@ bool CvCity::hasRawVicinityBonus(BonusTypes eBonus) const
 		for (int iI = 0; iI < getNumCityPlots(); iI++)
 		{
 			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
-			if (pLoopPlot != NULL)
+			if (pLoopPlot != NULL
+			&& pLoopPlot->getBonusType() == eBonus
+			&& pLoopPlot->getOwner() == getOwner())
 			{
-				if (pLoopPlot->getBonusType() == eBonus)
-				{
-					if (pLoopPlot->getOwner() == getOwner())
-					{
-						if (pLoopPlot->getBonusType() == eBonus)
-						{
-							bResult = true;
-							break;
-						}
-					}
-				}
+				bResult = true;
+				break;
 			}
 		}
 	}
 
-	if (!bResult)
+	if (!bResult && bonusAvailableFromBuildings(eBonus))
 	{
-		if (bonusAvailableFromBuildings(eBonus))
+		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-			{
-				const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
+			const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 
-				if (kBuilding.getFreeBonus() == eBonus || kBuilding.hasExtraFreeBonus(eBonus))
-				{
-					if (getNumActiveBuilding((BuildingTypes)iI) > 0)
-					{
-						bResult = true;
-						break;
-					}
-				}
+			if ((kBuilding.getFreeBonus() == eBonus || kBuilding.hasExtraFreeBonus(eBonus))
+			&& getNumActiveBuilding((BuildingTypes)iI) > 0)
+			{
+				bResult = true;
+				break;
 			}
 		}
 	}
@@ -21922,30 +21867,12 @@ bool CvCity::hasRawVicinityBonus(BonusTypes eBonus) const
 
 bool CvCity::isDevelopingCity() const
 {
-	int iNumCities = GET_PLAYER(getOwner()).getNumCities();
-	int iPopulation = 0;
-	bool bDevelopingCity = false;
-	if (findPopulationRank() >= ((iNumCities * 2) / 3))
-	{
-		iPopulation = getPopulation();
-		int iEmpirePop = GET_PLAYER(getOwner()).getTotalPopulation();
-		int iAvgPop = iEmpirePop / iNumCities;
-		if (iPopulation < ((iAvgPop * 2) / 3))
-		{
-			bDevelopingCity = true;
-		}
-	}
-	if (iNumCities < 3)
-	{
-		if (iPopulation <= 2)
-		{
-			if (!isCapital())
-			{
-				bDevelopingCity = true;
-			}
-		}
-	}
-	return bDevelopingCity;
+	return
+	(
+		getPopulation() < 3 && !isCapital()
+		|| // Pop is less than half your average city pop value.
+		getPopulation() < GET_PLAYER(getOwner()).getTotalPopulation() / (2*GET_PLAYER(getOwner()).getNumCities())
+	);
 }
 
 void CvCity::doVicinityBonus()
@@ -23263,7 +23190,7 @@ void CvCity::clearModifierTotals()
 
 void CvCity::recalculateModifiers()
 {
-	area()->changePower(getOwner(), getPopulationPower(getPopulation()));
+	area()->changePower(getOwner(), getPopulation());
 
 	m_bPlotWorkingMasked = false;
 
@@ -23519,26 +23446,17 @@ int CvCity::getTotalBuildingSourcedProperty(PropertyTypes eProperty) const
 
 		int	iValue = 0;
 
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		for (int iI = 0, num = GC.getNumBuildingInfos(); iI < num; iI++)
 		{
-			if (getNumActiveBuilding((BuildingTypes)iI) > 0)
+			if (getNumActiveBuilding((BuildingTypes)iI) > 0 && !isReligiouslyDisabledBuilding((BuildingTypes)iI))
 			{
-				//Team Project (5)
-				if (!isReligiouslyDisabledBuilding((BuildingTypes)iI))
+				foreach_(const CvPropertySource* pSource, GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators()->getSources())
 				{
-					const CvPropertyManipulators* pBuildingPropertyManipulators = GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators();
-
-					const int num = pBuildingPropertyManipulators->getNumSources();
-					for (int iJ = 0; iJ < num; iJ++)
+					//	For now we're only interested in constant sources
+					//	TODO - expand this as buildings add other types
+					if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getProperty() == eProperty)
 					{
-						const CvPropertySource* pSource = pBuildingPropertyManipulators->getSource(iJ);
-
-						//	For now we're only interested in constant sources
-						//	TODO - expand this as buildings add other types
-						if (pSource->getType() == PROPERTYSOURCE_CONSTANT && pSource->getProperty() == eProperty)
-						{
-							iValue += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
-						}
+						iValue += static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
 					}
 				}
 			}
@@ -23552,12 +23470,8 @@ int CvCity::getTotalBuildingSourcedProperty(PropertyTypes eProperty) const
 
 void unitSources(const CvPropertyManipulators* pMani, PropertyTypes eProperty, const CvCity* pCity, int* iValue)
 {
-	const int iNum = pMani->getNumSources();
-
-	for (int i = 0; i < iNum; i++)
+	foreach_(const CvPropertySource* pSource, pMani->getSources())
 	{
-		const CvPropertySource* pSource = pMani->getSource(i);
-
 		//	Sources that deliver to the city or the plot are both considered since the city plot diffuses
 		//	to the city for most properties anyway
 		if (pSource->getProperty() == eProperty &&
@@ -23595,12 +23509,8 @@ int CvCity::getTotalUnitSourcedProperty(PropertyTypes eProperty) const
 
 void unitHasSources(const CvPropertyManipulators* pMani, bool* bHasSources)
 {
-	const int iNum = pMani->getNumSources();
-
-	for (int i = 0; i < iNum; i++)
+	foreach_(const CvPropertySource* pSource, pMani->getSources())
 	{
-		const CvPropertySource* pSource = pMani->getSource(i);
-
 		//	Sources that deliver to the city or the plot are both considered since the city plot diffuses
 		//	to the city for most properties anyway
 		if ((pSource->getObjectType() == GAMEOBJECT_CITY || pSource->getObjectType() == GAMEOBJECT_PLOT) &&
@@ -23632,10 +23542,8 @@ void CvCity::noteUnitMoved(const CvUnit* pUnit) const
 
 void sumCitySources(const CvPropertyManipulators* pMani, const CvCity* pCity, int* iSum, PropertyTypes eProperty)
 {
-	const int iNum = pMani->getNumSources();
-	for (int i = 0; i < iNum; i++)
+	foreach_(const CvPropertySource* pSource, pMani->getSources())
 	{
-		const CvPropertySource* pSource = pMani->getSource(i);
 		if (pSource->getProperty() == eProperty)
 		{
 			if (pSource->isActive(const_cast<CvGameObjectCity*>(pCity->getGameObject())))
@@ -23649,11 +23557,8 @@ void sumCitySources(const CvPropertyManipulators* pMani, const CvCity* pCity, in
 int CvCity::getGlobalSourcedProperty(PropertyTypes eProperty) const
 {
 	int iSum = 0;
-	const CvPropertyManipulators* pMani = GC.getPropertyInfo(eProperty).getPropertyManipulators();
-	const int iNum = pMani->getNumSources();
-	for (int i = 0; i < iNum; i++)
+	foreach_(const CvPropertySource* pSource, GC.getPropertyInfo(eProperty).getPropertyManipulators()->getSources())
 	{
-		const CvPropertySource* pSource = pMani->getSource(i);
 		if (pSource->isActive(const_cast<CvGameObjectCity*>(getGameObject())))
 		{
 			iSum += pSource->getSourcePredict(getGameObject(), getPropertiesConst()->getValueByProperty(eProperty));

@@ -15,28 +15,15 @@
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
+
 #include "FVariableSystem.h"
 
 class CvInternalGlobals;
-
-#include <xercesc/dom/DOM.hpp>
-#include <xercesc/util/XMLString.hpp>
-#include <xercesc/util/PlatformUtils.hpp>
-#include <xercesc/parsers/XercesDOMParser.hpp>
-#include <xercesc/sax/SAXException.hpp>
-#include <xercesc/sax/HandlerBase.hpp>
-#include <xercesc/sax/SAXException.hpp>
-#include <xercesc/sax/HandlerBase.hpp>
-#include <xercesc/framework/MemBufInputSource.hpp>
-#include <xercesc/framework/XMLGrammarPoolImpl.hpp>
-#include <xercesc/framework/Wrapper4InputSource.hpp>
-#include <xercesc/validators/common/Grammar.hpp>
-
-class FXmlSchemaCache;
-class FXml;
 class CvGameText;
 class CvCacheObject;
 class CvImprovementBonusInfo;
+class FXmlSchemaCache;
+class FXml;
 
 class ParserErrorHandler : public xercesc::ErrorHandler
 {
@@ -222,7 +209,7 @@ public:
 						"a name of %s global definition, found '%s'\n", 
 						filePath, typeid(T).name(), typeid(T).name(), nodeTextC);
 					xercesc::XMLString::release(&filePath);
-					logMsg(szLog);
+					logging::logMsg("xml.log", szLog);
 					gDLL->MessageBox(szLog, "Error");
 					xercesc::XMLString::release(&nodeTextC);
 					return false;
@@ -343,7 +330,7 @@ public:
 		char szLog[2000];
 		sprintf(szLog, "XML model (DOM) error: %s : No text in the element '%s'", filePath, nodeTextC);
 		xercesc::XMLString::release(&filePath);
-		logMsg(szLog);
+		logging::logMsg("xml.log", szLog);
 		gDLL->MessageBox(szLog, "Error");
 		return NULL;
 	}
@@ -764,26 +751,7 @@ public:
 	inline bool CheckDependency();
 
 	static void RemoveTGAFiller();
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 10/19/07                                MRGENIE      */
-/*                                                                                              */
-/* Needs to be public for CvXMLLoadUtilityModTools                                              */
-/************************************************************************************************/
-#ifdef _DEBUG	
-	void XmlArtTagVerification(char* format, ... );
-#endif
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 10/30/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void logMLF(char* format, ... );
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 END                                                  */
-/************************************************************************************************/
+
 	static void showXMLError(const char* const format, ...);
 
 	//---------------------------------------PRIVATE MEMBER VARIABLES---------------------------------
@@ -879,40 +847,6 @@ private:
 	CvWString CreateKeyStringFromKBCode(const TCHAR* pszHotKey);
 
 	void orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, int iLength);
-
-	void logMsg(char* format, ... );
-	void logMsgW(wchar_t* format, ... );
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   10/10/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-#ifdef _DEBUG
-	void logXmlCheckDoubleTypes(char* format, ... );
-#endif
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 02/20/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-//#ifdef _DEBUG	
-	void logXmlDependencyTypes(char* format, ... );
-//#endif
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void logXML(char* format, ... );
-	/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 };
 
 //
