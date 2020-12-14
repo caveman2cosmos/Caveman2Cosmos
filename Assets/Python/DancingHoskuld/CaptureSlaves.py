@@ -161,7 +161,7 @@ def onCityRazed(argsList):
 		for i in xrange(iCount):
 			newunit = CyPlayer.initUnit(iUnitCaptiveSlave, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 		if bHuman:
-			sMessage = BugUtil.getText("TXT_MESSAGE_FREED_SLAVES_AS_FREED_SLAVES",(sCityName, iCount))
+			sMessage = BugUtil.getText("TXT_KEY_MSG_FREED_SLAVES_AS", (sCityName, GC.getUnitInfo(iUnitCaptiveSlave).getDescription(), iCount))
 			CyInterface().addMessage(iPlayer, False, 15, sMessage, '', 0, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), X, Y, True, True)
 
 	if iCountNewPop > 0:
@@ -170,7 +170,7 @@ def onCityRazed(argsList):
 			for i in range (iCountImmigrants):
 				newunit = CyPlayer.initUnit(iUnitImmigrant, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 			if bHuman:
-				sMessage = BugUtil.getText("TXT_MESSAGE_FREED_SLAVES_AS_IMMIGRANTS",(iCountImmigrants*3, sCityName, iCountImmigrants))
+				sMessage = BugUtil.getText("TXT_KEY_MSG_FREED_SLAVES_AS_IMMIGRANTS", (iCountImmigrants*3, sCityName, iCountImmigrants))
 				CyInterface().addMessage(iPlayer, False, 15, sMessage, '', 0, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), X, Y, True, True)
 
 	## Now remove those slaves
@@ -191,7 +191,7 @@ def onCityRazed(argsList):
 			CyPlayer.initUnit(iUnitMerCaravan, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 			CyCity.changeFreeSpecialistCount(iSlaveProd,-1)
 		if bHuman:
-			sMessage = BugUtil.getText("TXT_MESSAGE_FREED_SLAVES_AS_CARAVANS",(sCityName, iCountProd, "Early Merchants"))
+			sMessage = BugUtil.getText("TXT_KEY_MSG_FREED_SLAVES_AS",(sCityName, GC.getUnitInfo(iUnitMerCaravan).getDescription(), iCountProd))
 			CyInterface().addMessage(iPlayer,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
 
 	if iCountHealth > 0:
@@ -199,7 +199,7 @@ def onCityRazed(argsList):
 			CyPlayer.initUnit(iUnitHealth, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 			CyCity.changeFreeSpecialistCount(iSlaveHealth,-1)
 		if bHuman:
-			sMessage = BugUtil.getText("TXT_MESSAGE_FREED_SLAVES_AS_HEALERS",(sCityName, iCountHealth, "Healers"))
+			sMessage = BugUtil.getText("TXT_KEY_MSG_FREED_SLAVES_AS",(sCityName, GC.getUnitInfo(iUnitHealth).getDescription(), iCountHealth))
 			CyInterface().addMessage(iPlayer,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
 
 	if iCountEntertain > 0:
@@ -207,7 +207,7 @@ def onCityRazed(argsList):
 			CyPlayer.initUnit(iUnitEntertain, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 			CyCity.changeFreeSpecialistCount(iSlaveEntertain,-1)
 		if bHuman:
-			sMessage = BugUtil.getText("TXT_MESSAGE_FREED_SLAVES_AS_STORY_TELLERS",(sCityName, iCountEntertain, "Story Tellers"))
+			sMessage = BugUtil.getText("TXT_KEY_MSG_FREED_SLAVES_AS",(sCityName, GC.getUnitInfo(iUnitEntertain).getDescription(), iCountEntertain))
 			CyInterface().addMessage(iPlayer,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
 
 	## Convert population to captives
@@ -227,108 +227,3 @@ def onCityRazed(argsList):
 	if bHuman and iCount:
 		sMessage = BugUtil.getText("TXT_KEY_MSG_CIVILIAN_CAPTIVE", iCount)
 		CyInterface().addMessage(iPlayer, False, 15, sMessage, '', 0, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), X, Y, True, True)
-
-'''
-def onCityAcquiredAndKept(self, argsList):
-	iOwner, CyCity = argsList
-	# If there are slaves in the city but the new owner does not run slavery remove the slave buildings and free the slaves
-	CyPlayer = GC.getPlayer(iOwner)
-	if CyPlayer.countNumBuildings(GC.getInfoTypeForString("BUILDING_WV_SLAVERY")): return # Running slavery
-
-	sCityName = CyCity.getName()
-	X = CyCity.getX()
-	Y = CyCity.getY()
-
-	iSlaveSettled = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE")
-	iSlaveFood = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_FOOD")
-	iSlaveProd = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_PRODUCTION")
-	iSlaveCom = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_COMMERCE")
-	iSlaveHealth = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_HEALTH")
-	iSlaveEntertain = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_ENTERTAINMENT")
-	iSlaveTutor = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_TUTOR")
-	iSlaveMilitary = GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_MILITARY")
-
-	iUnitCaptiveSlave = GC.getInfoTypeForString("UNIT_FREED_SLAVE")
-	iUnitImmigrant = GC.getInfoTypeForString("UNIT_CAPTIVE_IMMIGRANT")
-	iUnitEntertain = GC.getInfoTypeForString("UNIT_STORY_TELLER")
-	iUnitMerCaravan = GC.getInfoTypeForString("UNIT_EARLY_MERCHANT_C2C")
-	iUnitHealth = GC.getInfoTypeForString("UNIT_HEALER")
-
-	iCountSettled = CyCity.getFreeSpecialistCount(iSlaveSettled)
-	iCountFood = CyCity.getFreeSpecialistCount(iSlaveFood)
-	iCountProd = CyCity.getFreeSpecialistCount(iSlaveProd)
-	iCountCom = CyCity.getFreeSpecialistCount(iSlaveCom)
-	iCountHealth = CyCity.getFreeSpecialistCount(iSlaveHealth)
-	iCountEntertain = CyCity.getFreeSpecialistCount(iSlaveEntertain)
-	iCountTutor = CyCity.getFreeSpecialistCount(iSlaveTutor)
-	iCountMilitary = CyCity.getFreeSpecialistCount(iSlaveMilitary)
-
-	## Process those that can become population or immagrants
-	##	where 3 slaves = 1 pop or immigrant
-	##	and can only increase the city pop to 7
-	iCount = iCountSettled + iCountFood + iCountCom + iCountTutor + iCountMilitary
-	iCountNewPop = int(iCount/3)
-	iCount -= 3*iCountNewPop
-
-	if iCount > 0:
-		for i in range (iCount):
-			pPlayer.initUnit(iUnitCaptiveSlave, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
-		sMessage = BugUtil.getText("TXT_MESSAGE_FREED_SLAVES_AS_FREED_SLAVES",(sCityName, iCount))
-		CyInterface().addMessage(iOwner,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
-
-	if iCountNewPop > 0:
-		iCountImmigrants = iCountNewPop
-		iCityPop = city.getPopulation()
-		if iCityPop < 7:
-			## fill up the local pop and left overs become immigrants
-			iMaxToAddPop = 7 - iCityPop
-			if iMaxToAddPop > iCountImmigrants:
-				CyCity.changePopulation(iCountImmigrants)
-				sMessage = BugUtil.getText("TXT_MESSAGE_FREED_SLAVES_JOINED_CITY_POPULATION",(iCountImmigrants*3, sCityName, iCountImmigrants))
-				CyInterface().addMessage(iOwner,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
-				iCountImmigrants = 0
-			else:
-				CyCity.changePopulation(iMaxToAddPop)
-				sMessage = BugUtil.getText("TXT_MESSAGE_FREED_SLAVES_JOINED_CITY_POPULATION",(iMaxToAddPop*3, sCityName, iMaxToAddPop))
-				CyInterface().addMessage(iOwner,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
-				iCountImmigrants = iCountImmigrants - iMaxToAddPop
-		if iCountImmigrants > 0:
-			for i in range (iCountImmigrants):
-				pPlayer.initUnit(iUnitImmigrant, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
-			sMessage = BugUtil.getText("TXT_MESSAGE_FREED_SLAVES_AS_IMMIGRANTS",(iCountImmigrants*3, sCityName, iCountImmigrants))
-			CyInterface().addMessage(iOwner,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
-
-	## Now remove those slaves
-	if iCountSettled > 0:
-		CyCity.changeFreeSpecialistCount(iSlaveSettled,-iCountSettled)
-	if iCountFood > 0:
-		CyCity.changeFreeSpecialistCount(iSlaveFood,-iCountFood)
-	if iCountCom > 0:
-		CyCity.changeFreeSpecialistCount(iSlaveCom,-iCountCom)
-	if iCountTutor > 0:
-		CyCity.changeFreeSpecialistCount(iSlaveTutor,-iCountTutor)
-	if iCountMilitary > 0:
-		CyCity.changeFreeSpecialistCount(iSlaveMilitary,-iCountMilitary)
-
-	## Now convert the other slaves
-	if iCountProd > 0:
-		for i in range (iCountProd):
-			pPlayer.initUnit(iUnitMerCaravan, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
-			CyCity.changeFreeSpecialistCount(iSlaveProd,-1)
-		sMessage = BugUtil.getText("TXT_MESSAGE_FREED_SLAVES_AS_CARAVANS",(sCityName, iCountProd, "Early Merchants"))
-		CyInterface().addMessage(iOwner,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
-
-	if iCountHealth > 0:
-		for i in range (iCountProd):
-			pPlayer.initUnit(iUnitHealth, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
-			CyCity.changeFreeSpecialistCount(iSlaveHealth,-1)
-		sMessage = BugUtil.getText("TXT_MESSAGE_FREED_SLAVES_AS_HEALERS",(sCityName, iCountHealth, "Healers"))
-		CyInterface().addMessage(iOwner,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
-
-	if iCountEntertain > 0:
-		for i in range (iCountEntertain):
-			pPlayer.initUnit(iUnitEntertain, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
-			CyCity.changeFreeSpecialistCount(iSlaveEntertain,-1)
-		sMessage = BugUtil.getText("TXT_MESSAGE_FREED_SLAVES_AS_STORY_TELLERS",(sCityName, iCountEntertain, "Story Tellers"))
-		CyInterface().addMessage(iOwner,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
-'''
