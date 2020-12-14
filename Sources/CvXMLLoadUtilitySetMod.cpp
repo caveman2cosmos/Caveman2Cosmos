@@ -13,6 +13,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvXMLLoadUtility.h"
 #include "CvXMLLoadUtilitySetMod.h"
 
 // In the following method we set the order of loading properly

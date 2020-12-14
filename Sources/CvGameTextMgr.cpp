@@ -2840,12 +2840,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				szString.append(gDLL->getText("TXT_KEY_PROMOTION_RESEARCH_PILLAGE_TEXT"));
 			}
 
-			if (pUnit->isPillageCulture())
-			{
-				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_PROMOTION_CULTURE_PILLAGE_TEXT"));
-			}
-
 			if (pUnit->isPillageEspionage())
 			{
 				szString.append(NEWLINE);
@@ -13002,7 +12996,6 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	bool	bIsFreeDrop = false;
 	bool	bIsOffensiveVictoryMove = false;
 	bool	bIsOneUp = false;
-	bool	bIsPillageCulture = false;
 	bool	bIsPillageEspionage = false;
 	bool	bIsPillageMarauder = false;
 	bool	bIsPillageOnMove = false;
@@ -13149,10 +13142,6 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isOneUp() )
 		{
 			bIsOneUp = true;
-		}
-		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isPillageCulture() )
-		{
-			bIsPillageCulture = true;
 		}
 		if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isPillageEspionage() )
 		{
@@ -13399,11 +13388,6 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	{
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ONEUP_TEXT"));
-	}
-	if (bIsPillageCulture)
-	{
-		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CULTURE_PILLAGE_TEXT"));
 	}
 	if (bIsPillageEspionage)
 	{
@@ -30451,18 +30435,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_UNIT_ONEUP_TEXT"));
-	}
-
-	if (info.isPillageCulture())
-	{
-		if (bFirstDisplay)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(info.getDescription());
-			bFirstDisplay = false;
-		}
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CULTURE_PILLAGE_TEXT"));
 	}
 
 	if (info.isPillageEspionage())

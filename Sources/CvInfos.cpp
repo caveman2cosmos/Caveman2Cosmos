@@ -2421,7 +2421,6 @@ m_bDefensiveVictoryMove(false),
 m_bFreeDrop(false),
 m_bOffensiveVictoryMove(false),
 m_bOneUp(false),
-m_bPillageCulture(false),
 m_bPillageEspionage(false),
 m_bPillageMarauder(false),
 m_bPillageOnMove(false),
@@ -2889,13 +2888,6 @@ int CvPromotionInfo::getKamikazePercent() const
 	return m_iKamikazePercent;
 }
 
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 16.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
 int CvPromotionInfo::getAirCombatLimitChange() const
 {
 	return m_iAirCombatLimitChange;
@@ -2926,7 +2918,6 @@ int CvPromotionInfo::getExtraDropRange() const
 	return m_iExtraDropRange;
 }
 
-//Team Project (2)
 int CvPromotionInfo::getSurvivorChance() const
 {
 	return m_iSurvivorChance;
@@ -2942,7 +2933,6 @@ int CvPromotionInfo::getVictoryHeal() const
 	return m_iVictoryHeal;
 }
 
-//Team Project (2)
 int CvPromotionInfo::getVictoryStackHeal() const
 {
 	return m_iVictoryStackHeal;
@@ -2963,15 +2953,9 @@ bool CvPromotionInfo::isOffensiveVictoryMove() const
 	return m_bOffensiveVictoryMove;
 }
 
-//Team Project (2)
 bool CvPromotionInfo::isOneUp() const
 {
 	return m_bOneUp;
-}
-
-bool CvPromotionInfo::isPillageCulture() const
-{
-	return m_bPillageCulture;
 }
 
 bool CvPromotionInfo::isPillageEspionage() const
@@ -2998,10 +2982,6 @@ bool CvPromotionInfo::isPillageResearch() const
 {
 	return m_bPillageResearch;
 }
-
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 
 bool CvPromotionInfo::isLeader() const
 {
@@ -5440,7 +5420,6 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bFreeDrop, L"bFreeDrop");
 	pXML->GetOptionalChildXmlValByName(&m_bOffensiveVictoryMove, L"bOffensiveVictoryMove");
 	pXML->GetOptionalChildXmlValByName(&m_bOneUp, L"bOneUp");
-	pXML->GetOptionalChildXmlValByName(&m_bPillageCulture, L"bPillageCulture");
 	pXML->GetOptionalChildXmlValByName(&m_bPillageEspionage, L"bPillageEspionage");
 	pXML->GetOptionalChildXmlValByName(&m_bPillageMarauder, L"bPillageMarauder");
 	pXML->GetOptionalChildXmlValByName(&m_bPillageOnMove, L"bPillageOnMove");
@@ -6321,19 +6300,10 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 		m_bAnyDomainModifierPercent = true;
 	}
 
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 16.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes: Adapted to C2C by Thunderbrd															**/
-/*****************************************************************************************************/
 	if (isDefensiveVictoryMove() == bDefault) m_bDefensiveVictoryMove = pClassInfo->isDefensiveVictoryMove();
 	if (isFreeDrop() == bDefault) m_bFreeDrop = pClassInfo->isFreeDrop();
 	if (isOffensiveVictoryMove() == bDefault) m_bOffensiveVictoryMove = pClassInfo->isOffensiveVictoryMove();
-//Team Project (2)
 	if (isOneUp() == bDefault) m_bOneUp = pClassInfo->isOneUp();
-	if (isPillageCulture() == bDefault) m_bPillageCulture = pClassInfo->isPillageCulture();
 	if (isPillageEspionage() == bDefault) m_bPillageEspionage = pClassInfo->isPillageEspionage();
 	if (isPillageMarauder() == bDefault) m_bPillageMarauder = pClassInfo->isPillageMarauder();
 	if (isPillageOnMove() == bDefault) m_bPillageOnMove = pClassInfo->isPillageOnMove();
@@ -6345,15 +6315,11 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 	if (getCollateralDamageMaxUnitsChange() == iDefault) m_iCollateralDamageMaxUnitsChange = pClassInfo->getCollateralDamageMaxUnitsChange();
 	if (getCombatLimitChange() == iDefault) m_iCombatLimitChange = pClassInfo->getCombatLimitChange();
 	if (getExtraDropRange() == iDefault) m_iExtraDropRange = pClassInfo->getExtraDropRange();
-//Team Project (2)
 	if (getSurvivorChance() == iDefault) m_iSurvivorChance = pClassInfo->getSurvivorChance();
 	if (getVictoryAdjacentHeal() == iDefault) m_iVictoryAdjacentHeal = pClassInfo->getVictoryAdjacentHeal();
 	if (getVictoryHeal() == iDefault) m_iVictoryHeal = pClassInfo->getVictoryHeal();
-//Team Project (2)
 	if (getVictoryStackHeal() == iDefault) m_iVictoryStackHeal = pClassInfo->getVictoryStackHeal();
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
+
 	//TB Combat Mods Begin  TB SubCombat Mods Begin
 	// Text Strings
 	if ( getRenamesUnitTo() == NULL || getRenamesUnitTo() == wDefault )
@@ -7138,19 +7104,10 @@ void CvPromotionInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_bZoneOfControl);
 	m_PropertyManipulators.getCheckSum(iSum);
 
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 16.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes: Adapted to C2C by Thunderbrd															**/
-/*****************************************************************************************************/
 	CheckSum(iSum, m_bDefensiveVictoryMove);
 	CheckSum(iSum, m_bFreeDrop);
 	CheckSum(iSum, m_bOffensiveVictoryMove);
-//Team Project (2)
 	CheckSum(iSum, m_bOneUp);
-	CheckSum(iSum, m_bPillageCulture);
 	CheckSum(iSum, m_bPillageEspionage);
 	CheckSum(iSum, m_bPillageMarauder);
 	CheckSum(iSum, m_bPillageOnMove);
@@ -7162,15 +7119,10 @@ void CvPromotionInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iCollateralDamageMaxUnitsChange);
 	CheckSum(iSum, m_iCombatLimitChange);
 	CheckSum(iSum, m_iExtraDropRange);
-//Team Project (2)
 	CheckSum(iSum, m_iSurvivorChance);
 	CheckSum(iSum, m_iVictoryAdjacentHeal);
 	CheckSum(iSum, m_iVictoryHeal);
-//Team Project (2)
 	CheckSum(iSum, m_iVictoryStackHeal);
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 
 	//TB Combat Mods Begin  TB SubCombat Mod begin
 	// Textual References
@@ -36309,25 +36261,25 @@ bool CvUnitArtStyleTypeInfo::read(CvXMLLoadUtility* pXML)
 							for (j = 0; j < iMesh; j++)
 							{
 								if (pXML->GetOptionalChildXmlValByName(szTextVal, L"EarlyArtDefineTag"))
-									szTextVal = GC.hasInfoTypeForString(szTextVal) ? szTextVal : "";
+									szTextVal = GC.getInfoTypeForString(szTextVal) > -1 ? szTextVal : "";
 								setEarlyArtDefineTag(j, iIndex, szTextVal);
 								if (pXML->GetOptionalChildXmlValByName(szTextVal, L"ClassicalArtDefineTag"))
-									szTextVal = GC.hasInfoTypeForString(szTextVal) ? szTextVal : "";
+									szTextVal = GC.getInfoTypeForString(szTextVal) > -1 ? szTextVal : "";
 								setClassicalArtDefineTag(j, iIndex, szTextVal);
 								if (pXML->GetOptionalChildXmlValByName(szTextVal, L"MiddleArtDefineTag"))
-									szTextVal = GC.hasInfoTypeForString(szTextVal) ? szTextVal : "";
+									szTextVal = GC.getInfoTypeForString(szTextVal) > -1 ? szTextVal : "";
 								setMiddleArtDefineTag(j, iIndex, szTextVal);
 								if (pXML->GetOptionalChildXmlValByName(szTextVal, L"RennArtDefineTag"))
-									szTextVal = GC.hasInfoTypeForString(szTextVal) ? szTextVal : "";
+									szTextVal = GC.getInfoTypeForString(szTextVal) > -1 ? szTextVal : "";
 								setRennArtDefineTag(j, iIndex, szTextVal);
 								if (pXML->GetOptionalChildXmlValByName(szTextVal, L"IndustrialArtDefineTag"))
-									szTextVal = GC.hasInfoTypeForString(szTextVal) ? szTextVal : "";
+									szTextVal = GC.getInfoTypeForString(szTextVal) > -1 ? szTextVal : "";
 								setIndustrialArtDefineTag(j, iIndex, szTextVal);
 								if (pXML->GetOptionalChildXmlValByName(szTextVal, L"LateArtDefineTag"))
-									szTextVal = GC.hasInfoTypeForString(szTextVal) ? szTextVal : "";
+									szTextVal = GC.getInfoTypeForString(szTextVal) > -1 ? szTextVal : "";
 								setLateArtDefineTag(j, iIndex, szTextVal);
 								if (pXML->GetOptionalChildXmlValByName(szTextVal, L"FutureArtDefineTag"))
-									szTextVal = GC.hasInfoTypeForString(szTextVal) ? szTextVal : "";
+									szTextVal = GC.getInfoTypeForString(szTextVal) > -1 ? szTextVal : "";
 								setFutureArtDefineTag(j, iIndex, szTextVal);
 
 								if (!pXML->TryMoveToXmlNextSibling())
@@ -38306,7 +38258,6 @@ CvUnitCombatInfo::CvUnitCombatInfo()
 	, m_bFreeDrop(false)
 	, m_bOffensiveVictoryMove(false)
 	, m_bOneUp(false)
-	, m_bPillageCulture(false)
 	, m_bPillageEspionage(false)
 	, m_bPillageMarauder(false)
 	, m_bPillageOnMove(false)
@@ -39246,11 +39197,6 @@ bool CvUnitCombatInfo::isOffensiveVictoryMove() const
 bool CvUnitCombatInfo::isOneUp() const
 {
 	return m_bOneUp;
-}
-
-bool CvUnitCombatInfo::isPillageCulture() const
-{
-	return m_bPillageCulture;
 }
 
 bool CvUnitCombatInfo::isPillageEspionage() const
@@ -40349,7 +40295,6 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bFreeDrop, L"bFreeDrop");
 	pXML->GetOptionalChildXmlValByName(&m_bOffensiveVictoryMove, L"bOffensiveVictoryMove");
 	pXML->GetOptionalChildXmlValByName(&m_bOneUp, L"bOneUp");
-	pXML->GetOptionalChildXmlValByName(&m_bPillageCulture, L"bPillageCulture");
 	pXML->GetOptionalChildXmlValByName(&m_bPillageEspionage, L"bPillageEspionage");
 	pXML->GetOptionalChildXmlValByName(&m_bPillageMarauder, L"bPillageMarauder");
 	pXML->GetOptionalChildXmlValByName(&m_bPillageOnMove, L"bPillageOnMove");
@@ -41557,7 +41502,6 @@ void CvUnitCombatInfo::copyNonDefaults(CvUnitCombatInfo* pClassInfo, CvXMLLoadUt
 	if (isFreeDrop() == bDefault) m_bFreeDrop = pClassInfo->isFreeDrop();
 	if (isOffensiveVictoryMove() == bDefault) m_bOffensiveVictoryMove = pClassInfo->isOffensiveVictoryMove();
 	if (isOneUp() == bDefault) m_bOneUp = pClassInfo->isOneUp();
-	if (isPillageCulture() == bDefault) m_bPillageCulture = pClassInfo->isPillageCulture();
 	if (isPillageEspionage() == bDefault) m_bPillageEspionage = pClassInfo->isPillageEspionage();
 	if (isPillageMarauder() == bDefault) m_bPillageMarauder = pClassInfo->isPillageMarauder();
 	if (isPillageOnMove() == bDefault) m_bPillageOnMove = pClassInfo->isPillageOnMove();
@@ -42171,7 +42115,6 @@ void CvUnitCombatInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_bFreeDrop);
 	CheckSum(iSum, m_bOffensiveVictoryMove);
 	CheckSum(iSum, m_bOneUp);
-	CheckSum(iSum, m_bPillageCulture);
 	CheckSum(iSum, m_bPillageEspionage);
 	CheckSum(iSum, m_bPillageMarauder);
 	CheckSum(iSum, m_bPillageOnMove);

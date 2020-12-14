@@ -2477,15 +2477,6 @@
 		<Polish>Rewolucja wisi na włosku!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REV_TURNS</Tag>
-		<English>turns</English>
-		<French>tours</French>
-		<German>Runden</German>
-		<Italian>turni</Italian>
-		<Spanish>turnos</Spanish>
-		<Polish>tur</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REV_VASSAL_CAP</Tag>
 		<English>capitulated</English>
 		<French>capitulé</French>

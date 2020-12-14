@@ -7,6 +7,7 @@
 #include "CvBuildingInfo.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
+#include "CvXMLLoadUtility.h"
 #include "CvXMLLoadUtilitySetMod.h"
 #include "FVariableSystem.h"
 #include <iostream>

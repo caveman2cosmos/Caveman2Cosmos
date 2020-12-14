@@ -10,6 +10,7 @@
 #include "CvGameObject.h"
 #include "CvPropertySolver.h"
 #include "CvDate.h"
+#include "CvAllocator.h"
 
 class CvDeal;
 class CvCity;
