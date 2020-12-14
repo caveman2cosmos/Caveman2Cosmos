@@ -4823,50 +4823,43 @@ CvUnit* CvPlot::plotCheck(ConstPlotUnitFunc funcA, int iData1A, int iData2A, con
 {
 	foreach_(CvUnit* pLoopUnit, units())
 	{
-		if ((eOwner == NO_PLAYER) || (pLoopUnit->getOwner() == eOwner))
+		if ((eOwner == NO_PLAYER || pLoopUnit->getOwner() == eOwner)
+		&& (eTeam == NO_TEAM || pLoopUnit->getTeam() == eTeam)
+		&& funcA(pLoopUnit, iData1A, iData2A, pUnit)
+		&& (funcB == NULL || funcB(pLoopUnit, iData1B, iData2B, NULL)))
 		{
-			if ((eTeam == NO_TEAM) || (pLoopUnit->getTeam() == eTeam))
-			{
-				if (funcA(pLoopUnit, iData1A, iData2A, pUnit))
-				{
-					if ((funcB == NULL) || funcB(pLoopUnit, iData1B, iData2B, NULL))
-					{
-						return pLoopUnit;
-					}
-				}
-			}
+			return pLoopUnit;
 		}
 	}
-
 	return NULL;
 }
 
 
 bool CvPlot::isOwned() const
 {
-	return (getOwner() != NO_PLAYER);
+	return getOwner() != NO_PLAYER;
 }
 
 
 bool CvPlot::isBarbarian() const
 {
-	return (getOwner() == BARBARIAN_PLAYER);
+	return getOwner() == BARBARIAN_PLAYER;
 }
 
 bool CvPlot::isNPC() const
 {
-	return (getOwner() >= MAX_PC_PLAYERS);
+	return getOwner() >= MAX_PC_PLAYERS;
 }
 
 bool CvPlot::isHominid() const
 {
-	return (getOwner() == BARBARIAN_PLAYER || getOwner() == NEANDERTHAL_PLAYER);
+	return getOwner() == BARBARIAN_PLAYER || getOwner() == NEANDERTHAL_PLAYER;
 }
 
 
 bool CvPlot::isRevealedBarbarian() const
 {
-	return (getRevealedOwner(GC.getGame().getActiveTeam(), true) == BARBARIAN_PLAYER);
+	return getRevealedOwner(GC.getGame().getActiveTeam(), true) == BARBARIAN_PLAYER;
 }
 
 
