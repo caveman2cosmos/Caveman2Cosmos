@@ -11606,7 +11606,6 @@ void CvUnitAI::AI_EscortMove()
 	}
 
 	getGroup()->pushMission(MISSION_SKIP);
-	return;
 }
 
 
@@ -11614,136 +11613,67 @@ void CvUnitAI::AI_networkAutomated()
 {
 	FAssertMsg(canBuildRoute(), "canBuildRoute is expected to be true");
 
-	if (!(getGroup()->canDefend()))
-	{
-		if (GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot()))
-		{
-			if (AI_retreatToCity()) // XXX maybe not do this??? could be working productively somewhere else...
-			{
-				return;
-			}
-		}
-	}
-	// TBHERE
-	//if (AI_improveBonus(20))
-	//{
-	//	return;
-	//}
-
-	//if (AI_improveBonus(10))
-	//{
-	//	return;
-	//}
-
-	if (AI_connectBonus())
+	if (!getGroup()->canDefend() && GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot())
+	// XXX maybe not do this??? could be working productively somewhere else...
+	&& AI_retreatToCity())
 	{
 		return;
 	}
 
-	if (AI_connectCity())
+	if (AI_connectBonus() || AI_connectCity())
 	{
 		return;
 	}
 
-	if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_INFRASTRUCTURE_IGNORES_IMPROVEMENTS))
-	{
-		if (AI_improveBonus())
-		{
-			return;
-		}
-	}
-
-	if (AI_routeTerritory(true))
+	if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_INFRASTRUCTURE_IGNORES_IMPROVEMENTS)
+	&& AI_improveBonus())
 	{
 		return;
 	}
 
-	if (AI_connectBonus(false))
+	if (AI_routeTerritory(true) || AI_connectBonus(false))
 	{
 		return;
 	}
 
-	if (AI_routeCity())
+	if (AI_routeCity() || AI_routeTerritory())
 	{
 		return;
 	}
 
-	if (AI_routeTerritory())
+	if (AI_retreatToCity() || AI_safety())
 	{
 		return;
 	}
-
-	if (AI_retreatToCity())
-	{
-		return;
-	}
-
-	if (AI_safety())
-	{
-		return;
-	}
-
 	getGroup()->pushMission(MISSION_SKIP);
-	return;
 }
 
 
 void CvUnitAI::AI_cityAutomated()
 {
-	CvCity* pCity;
-
-	if (!(getGroup()->canDefend()))
+	if (!getGroup()->canDefend() && GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot())
+	// XXX maybe not do this??? could be working productively somewhere else...
+	&& AI_retreatToCity())
 	{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  08/20/09								jdog5000	  */
-/*																							  */
-/* Unit AI, Efficiency																		  */
-/************************************************************************************************/
-		//if (GET_PLAYER(getOwner()).AI_getPlotDanger(plot()) > 0)
-		if (GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot()))
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
-		{
-			if (AI_retreatToCity()) // XXX maybe not do this??? could be working productively somewhere else...
-			{
-				return;
-			}
-		}
+		return;
 	}
-
-	pCity = NULL;
-
-	if (plot()->getOwner() == getOwner())
-	{
-		pCity = plot()->getWorkingCity();
-	}
+	CvCity* pCity = plot()->getOwner() == getOwner() ? plot()->getWorkingCity() : NULL;
 
 	if (pCity == NULL)
 	{
 		pCity = GC.getMap().findCity(getX(), getY(), getOwner()); // XXX do team???
 	}
 
-	if (pCity != NULL)
-	{
-		if (AI_improveCity(pCity))
-		{
-			return;
-		}
-	}
-
-	if (AI_retreatToCity())
+	if (pCity != NULL && AI_improveCity(pCity))
 	{
 		return;
 	}
 
-	if (AI_safety())
+	if (AI_retreatToCity() || AI_safety())
 	{
 		return;
 	}
-
 	getGroup()->pushMission(MISSION_SKIP);
-	return;
 }
 
 
@@ -11759,87 +11689,40 @@ bool CvUnitAI::AI_shadow(UnitAITypes eUnitAI, int iMax, int iMaxRatio, bool bWit
 {
 	PROFILE_FUNC();
 
-	int iPathTurns;
-	int iValue;
-
-	int iBestValue = 0;
-	CvUnit* pBestUnit = NULL;
-
 	const DomainTypes domain = getDomainType();
+	const int iBaseMoves = getGroup()->baseMoves();
 
+	CvUnit* pBestUnit = NULL;
+	int iBestValue = 0;
 	foreach_(CvUnit* pLoopUnit, GET_PLAYER(getOwner()).units())
 	{
-		if (pLoopUnit != this)
+		if (pLoopUnit != this && pLoopUnit->isGroupHead()
+		&& pLoopUnit->getDomainType() == domain && !pLoopUnit->isCargo()
+		&& pLoopUnit->AI_getUnitAIType() == eUnitAI
+		&& AI_plotValid(pLoopUnit->plot())
+		&& pLoopUnit->getGroup()->baseMoves() <= iBaseMoves
+		&& (!bWithCargoOnly || pLoopUnit->getGroup()->hasCargo())
+		&& (!bOutsideCityOnly || !pLoopUnit->plot()->isCity()))
 		{
-			if (pLoopUnit->getDomainType() == domain && pLoopUnit->isGroupHead())
+			const int iShadowerCount = GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(pLoopUnit, MISSIONAI_SHADOW, getGroup());
+			if ((-1 == iMax || iShadowerCount < iMax)
+			&& (-1 == iMaxRatio || iShadowerCount == 0 || 100 * iShadowerCount / std::max(1, pLoopUnit->getGroup()->countNumUnitAIType(eUnitAI)) <= iMaxRatio)
+			&& !pLoopUnit->plot()->isVisibleEnemyUnit(this))
 			{
-				if (!(pLoopUnit->isCargo()))
+				int iPathTurns;
+				if (generatePath(pLoopUnit->plot(), 0, true, &iPathTurns) && iPathTurns <= iMaxPath)
 				{
-					if (pLoopUnit->AI_getUnitAIType() == eUnitAI)
+					const int iValue = (1 + pLoopUnit->getGroup()->getCargo()) * 1000 / (1 + iPathTurns);
+
+					if (iValue > iBestValue)
 					{
-						if (AI_plotValid(pLoopUnit->plot()))
-						{
-							if (pLoopUnit->getGroup()->baseMoves() <= getGroup()->baseMoves())
-							{
-								if (!bWithCargoOnly || pLoopUnit->getGroup()->hasCargo())
-								{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  12/08/08								jdog5000	  */
-/*																							  */
-/* Naval AI																					 */
-/************************************************************************************************/
-									if( bOutsideCityOnly && pLoopUnit->plot()->isCity() )
-									{
-										continue;
-									}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
-
-									int iShadowerCount = GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(pLoopUnit, MISSIONAI_SHADOW, getGroup());
-									if (((-1 == iMax) || (iShadowerCount < iMax)) &&
-										 ((-1 == iMaxRatio) || (iShadowerCount == 0) || (((100 * iShadowerCount) / std::max(1, pLoopUnit->getGroup()->countNumUnitAIType(eUnitAI))) <= iMaxRatio)))
-									{
-										if (!(pLoopUnit->plot()->isVisibleEnemyUnit(this)))
-										{
-											if (generatePath(pLoopUnit->plot(), 0, true, &iPathTurns))
-											{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  12/08/08								jdog5000	  */
-/*																							  */
-/* Naval AI																					 */
-/************************************************************************************************/
-/* original bts code
-												//if (iPathTurns <= iMaxPath) XXX
-*/
-												if (iPathTurns <= iMaxPath)
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
-												{
-													iValue = 1 + pLoopUnit->getGroup()->getCargo();
-													//just a count
-													iValue *= 1000;
-													iValue /= 1 + iPathTurns;
-
-													if (iValue > iBestValue)
-													{
-														iBestValue = iValue;
-														pBestUnit = pLoopUnit;
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
+						iBestValue = iValue;
+						pBestUnit = pLoopUnit;
 					}
 				}
 			}
 		}
 	}
-
 	if (pBestUnit != NULL)
 	{
 		if (atPlot(pBestUnit->plot()))
@@ -11847,14 +11730,11 @@ bool CvUnitAI::AI_shadow(UnitAITypes eUnitAI, int iMax, int iMaxRatio, bool bWit
 			getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_SHADOW, NULL, pBestUnit);
 			return true;
 		}
-		else
-		{
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO_UNIT, pBestUnit->getOwner(), pBestUnit->getID(), 0, false, false, MISSIONAI_SHADOW, NULL, pBestUnit);
-		}
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO_UNIT, pBestUnit->getOwner(), pBestUnit->getID(), 0, false, false, MISSIONAI_SHADOW, NULL, pBestUnit);
 	}
-
 	return false;
 }
+
 
 namespace {
 	int unitImpassableCount(const CvUnit* unit)

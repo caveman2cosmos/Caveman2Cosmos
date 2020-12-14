@@ -30176,35 +30176,40 @@ bool CvUnit::canTradeUnit(PlayerTypes eReceivingPlayer) const
 
 void CvUnit::tradeUnit(PlayerTypes eReceivingPlayer)
 {
-	if (eReceivingPlayer != NO_PLAYER)
+	if (eReceivingPlayer == NO_PLAYER)
 	{
-		CvCity* pBestCity = GET_PLAYER(eReceivingPlayer).getCapitalCity();
+		return;
+	}
+	CvPlayerAI& receiver = GET_PLAYER(eReceivingPlayer);
+	CvCity* pBestCity = NULL;
 
-		if (getDomainType() == DOMAIN_SEA)
+	if (getDomainType() == DOMAIN_SEA)
+	{
+		pBestCity = receiver.findBestCoastalCity();
+	}
+	else pBestCity = receiver.getCapitalCity();
+
+	CvUnit* pTradeUnit = receiver.initUnit(
+		getUnitType(), pBestCity->getX(), pBestCity->getY(), AI_getUnitAIType(), NO_DIRECTION,
+		GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark")
+	);
+	if (pTradeUnit != NULL)
+	{
+		pTradeUnit->convert(this);
+		if (receiver.isHuman())
 		{
-			pBestCity = GET_PLAYER(eReceivingPlayer).findBestCoastalCity();
+			MEMORY_TRACK_EXEMPT();
+			AddDLLMessage(
+				eReceivingPlayer, false, GC.getEVENT_MESSAGE_TIME(),
+				gDLL->getText(
+					"TXT_KEY_MISC_TRADED_UNIT_TO_YOU",
+					GET_PLAYER(getOwner()).getNameKey(), pTradeUnit->getNameKey()
+				),
+				"AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, pTradeUnit->getButton(),
+				GC.getCOLOR_WHITE(), pTradeUnit->getX(), pTradeUnit->getY(), true, true
+			);
 		}
-		CvUnit* pTradeUnit = GET_PLAYER(eReceivingPlayer).initUnit(
-			getUnitType(), pBestCity->getX(), pBestCity->getY(), AI_getUnitAIType(), NO_DIRECTION,
-			GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark")
-		);
-		if (pTradeUnit != NULL)
-		{
-			pTradeUnit->convert(this);
-			{
-				MEMORY_TRACK_EXEMPT();
-				AddDLLMessage(
-					pTradeUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-					gDLL->getText(
-						"TXT_KEY_MISC_TRADED_UNIT_TO_YOU",
-						GET_PLAYER(getOwner()).getNameKey(), pTradeUnit->getNameKey()
-					),
-					"AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, pTradeUnit->getButton(),
-					GC.getCOLOR_WHITE(), pTradeUnit->getX(), pTradeUnit->getY(), true, true
-				);
-			}
-		}
-	 }
+	}
 }
 
 bool CvUnit::spyNukeAffected(const CvPlot* pPlot, TeamTypes eTeam, int iRange) const
