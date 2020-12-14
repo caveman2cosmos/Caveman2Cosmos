@@ -627,7 +627,7 @@
 			<Type>BUILD_SANITIZE</Type>
 			<Description>TXT_KEY_BUILD_SANITIZE</Description>
 			<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
-			<iTime>200</iTime>
+			<iTime>600</iTime>
 			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -635,14 +635,14 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_INFECTIOUS_SMOG</FeatureType>
 					<PrereqTech>NONE</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_PLAGUED_SMOG</FeatureType>
 					<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
-					<iTime>800</iTime>
+					<iTime>400</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
@@ -656,24 +656,24 @@
 			<Type>BUILD_SANITIZE_WATER</Type>
 			<Description>TXT_KEY_BUILD_SANITIZE_WATER</Description>
 			<PrereqTech>TECH_AQUACULTURE</PrereqTech>
-			<iTime>200</iTime>
-			<iCost>200</iCost>
+			<iTime>600</iTime>
+			<iCost>300</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SANITIZE_WATER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
-					<FeatureType>FEATURE_PLAGUED_SMOG</FeatureType>
-					<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>20</iProduction>
+					<FeatureType>FEATURE_INFECTIOUS_SMOG</FeatureType>
+					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_INFECTIOUS_SMOG</FeatureType>
-					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
-					<iTime>600</iTime>
-					<iProduction>20</iProduction>
+					<FeatureType>FEATURE_PLAGUED_SMOG</FeatureType>
+					<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
@@ -686,15 +686,15 @@
 			<Type>BUILD_CLEAR_FALLOUT_FAST</Type>
 			<Description>TXT_KEY_BUILD_CLEAR_FALLOUT_FAST</Description>
 			<PrereqTech>TECH_ECOLOGICAL_ENGINEERING</PrereqTech>
-			<iTime>0</iTime>
-			<iCost>200</iCost>
+			<iTime>200</iTime>
+			<iCost>100</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FALLOUT</FeatureType>
 					<PrereqTech>NONE</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
@@ -708,7 +708,8 @@
 			<Type>BUILD_SCRUB_FALLOUT</Type>
 			<Description>TXT_KEY_BUILD_SCRUB_FALLOUT</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<iTime>0</iTime>
+			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<iTime>1000</iTime>
 			<iCost>100</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -716,7 +717,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_FALLOUT</FeatureType>
 					<PrereqTech>NONE</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
@@ -11236,7 +11237,7 @@
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ICE</FeatureType>
-					<PrereqTech>NONE</PrereqTech>
+					<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>

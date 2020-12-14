@@ -30,15 +30,18 @@ max_era = "C2C_ERA_FUTURE"
 ######## USE THIS TO CONTROL WHAT IS PRINTED ######
 
 # Either provide an XML filepath (None to not use):
-unitInfoPath = "/Units/U_Workers_CIV4UnitInfos.xml"
+# unitInfoPath = "/Units/U_Workers_CIV4UnitInfos.xml"
+unitInfoPath = None
 
 # Or fill out the following, to be used if None entered above
 # 0 is naval only, 1 is land only, 2 is both
-landType = 1
+landType = 2
 # The tech that the unit is unlocked from; builds that obsolete before this ERA won't be shown (None or first era for no prereq tech)
+# worker_unlocked_tech = "TECH_SCREW_PROPELLER"
 worker_unlocked_tech = None
 # The tech that the units can be upgraded at; builds that unlock at ERAS higher than this won't be shown (None or C2C_ERA_FUTURE for no obsolete)
-worker_obsolete_tech = "TECH_SEDENTARY_LIFESTYLE"
+# worker_obsolete_tech = "worker_obsolete_tech"
+worker_obsolete_tech = None
 
 #####################################################
 
@@ -124,7 +127,7 @@ if unitInfoPath != None:
         unit_list.append([unit_type, landType, worker_unlocked_tech, worker_obsolete_tech])
 else:
     unit_list.append(['CUSTOM', landType, worker_unlocked_tech, worker_obsolete_tech])
-    
+
 
 for unit in unit_list:
     print(f"\n\t    {unit[0]}\n\t    <Builds>")
