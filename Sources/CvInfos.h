@@ -623,42 +623,28 @@ public:
 	int getUpgradeDiscount() const;
 	int getExperiencePercent() const;
 	int getKamikazePercent() const;
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 16.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
+
 	int getAirCombatLimitChange() const;
 	int getCelebrityHappy() const;
 	int getCollateralDamageLimitChange() const;
 	int getCollateralDamageMaxUnitsChange() const;
 	int getCombatLimitChange() const;
 	int getExtraDropRange() const;
-	//Team Project (2)
+
 	int getSurvivorChance() const;
 	int getVictoryAdjacentHeal() const;
-	//
 	int getVictoryHeal() const;
-	//Team Project (2)
 	int getVictoryStackHeal() const;
-	//
 	bool isDefensiveVictoryMove() const;
 	bool isFreeDrop() const;
 	bool isOffensiveVictoryMove() const;
-	//Team Project (2)
 	bool isOneUp() const;
-	//
-	bool isPillageCulture() const;
+
 	bool isPillageEspionage() const;
 	bool isPillageMarauder() const;
 	bool isPillageOnMove() const;
 	bool isPillageOnVictory() const;
 	bool isPillageResearch() const;
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 
 	bool isLeader() const;
 	bool isBlitz() const;
@@ -1187,39 +1173,28 @@ protected:
 	int m_iUpgradeDiscount;
 	int m_iExperiencePercent;
 	int m_iKamikazePercent;
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 16.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
+
 	int m_iAirCombatLimitChange;
 	int m_iCelebrityHappy;
 	int m_iCollateralDamageLimitChange;
 	int m_iCollateralDamageMaxUnitsChange;
 	int m_iCombatLimitChange;
 	int m_iExtraDropRange;
-	//Team Project (2)
+
 	int m_iSurvivorChance;
 	int m_iVictoryAdjacentHeal;
 	int m_iVictoryHeal;
-	//Team Project (2)
 	int m_iVictoryStackHeal;
 	bool m_bDefensiveVictoryMove;
 	bool m_bFreeDrop;
 	bool m_bOffensiveVictoryMove;
-	//Team Project (2)
 	bool m_bOneUp;
-	bool m_bPillageCulture;
+
 	bool m_bPillageEspionage;
 	bool m_bPillageMarauder;
 	bool m_bPillageOnMove;
 	bool m_bPillageOnVictory;
 	bool m_bPillageResearch;
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 
 	bool m_bLeader;
 	bool m_bBlitz;
@@ -1233,7 +1208,6 @@ protected:
 	CvString m_szSound;
 
 	// Arrays
-
 	int* m_piTerrainAttackPercent;
 	int* m_piTerrainDefensePercent;
 	int* m_piFeatureAttackPercent;
@@ -9319,7 +9293,6 @@ public:
 	bool isFreeDrop() const;
 	bool isOffensiveVictoryMove() const;
 	bool isOneUp() const;
-	bool isPillageCulture() const;
 	bool isPillageEspionage() const;
 	bool isPillageMarauder() const;
 	bool isPillageOnMove() const;
@@ -9682,7 +9655,6 @@ protected:
 	bool m_bFreeDrop;
 	bool m_bOffensiveVictoryMove;
 	bool m_bOneUp;
-	bool m_bPillageCulture;
 	bool m_bPillageEspionage;
 	bool m_bPillageMarauder;
 	bool m_bPillageOnMove;
