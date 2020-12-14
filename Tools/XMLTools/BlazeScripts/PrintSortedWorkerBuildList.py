@@ -153,8 +153,3 @@ for unit in unit_list:
                 wrapEntry(tag[2])
 
     print("\t    </Builds>")
-
-"""
-Example output for v41, 12/2020:
-
-"""
