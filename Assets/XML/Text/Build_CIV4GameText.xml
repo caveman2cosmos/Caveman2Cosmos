@@ -411,7 +411,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HARVEST_KELP</Tag>
-		<English>[LINK=IMPROVEMENT_HARVEST_KELP]Harvest the Kelp[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_HARVEST_KELP]Kelp Harvester[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_HARVEST_KELP]Récolter les Algues[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_HARVEST_KELP]Ernte Seetang[\LINK]</German>
 		<Italian>[LINK=IMPROVEMENT_HARVEST_KELP]Raccogli il Kelp[\LINK]</Italian>
@@ -420,7 +420,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HARVEST_KELP_KILL</Tag>
-		<English>[LINK=IMPROVEMENT_HARVEST_KELP]Harvest the Kelp[\LINK] (Consumed)</English>
+		<English>[LINK=IMPROVEMENT_HARVEST_KELP]Harvest Kelp[\LINK] (Consumed)</English>
 		<French>[LINK=IMPROVEMENT_HARVEST_KELP]Récolter les Algues[\LINK] (Détruit)</French>
 		<German>[LINK=IMPROVEMENT_HARVEST_KELP]Ernte Seetang[\LINK] (Consumed)</German>
 		<Italian>[LINK=IMPROVEMENT_HARVEST_KELP]Raccogli il Kelp[\LINK] (Consumed)</Italian>
