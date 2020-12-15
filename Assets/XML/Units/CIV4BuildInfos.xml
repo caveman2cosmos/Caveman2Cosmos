@@ -626,23 +626,23 @@
 		<BuildInfo>
 			<Type>BUILD_SANITIZE</Type>
 			<Description>TXT_KEY_BUILD_SANITIZE</Description>
-			<PrereqTech>NONE</PrereqTech>
-			<iTime>200</iTime>
+			<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
+			<iTime>600</iTime>
 			<iCost>200</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
-					<FeatureType>FEATURE_PLAGUED_SMOG</FeatureType>
-					<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
-					<iTime>800</iTime>
+					<FeatureType>FEATURE_INFECTIOUS_SMOG</FeatureType>
+					<PrereqTech>NONE</PrereqTech>
+					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_INFECTIOUS_SMOG</FeatureType>
-					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
-					<iTime>600</iTime>
+					<FeatureType>FEATURE_PLAGUED_SMOG</FeatureType>
+					<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
+					<iTime>400</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
@@ -656,24 +656,24 @@
 			<Type>BUILD_SANITIZE_WATER</Type>
 			<Description>TXT_KEY_BUILD_SANITIZE_WATER</Description>
 			<PrereqTech>TECH_AQUACULTURE</PrereqTech>
-			<iTime>200</iTime>
-			<iCost>200</iCost>
+			<iTime>600</iTime>
+			<iCost>300</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SANITIZE_WATER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
-					<FeatureType>FEATURE_PLAGUED_SMOG</FeatureType>
-					<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
-					<iTime>800</iTime>
-					<iProduction>20</iProduction>
+					<FeatureType>FEATURE_INFECTIOUS_SMOG</FeatureType>
+					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
-					<FeatureType>FEATURE_INFECTIOUS_SMOG</FeatureType>
-					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
-					<iTime>600</iTime>
-					<iProduction>20</iProduction>
+					<FeatureType>FEATURE_PLAGUED_SMOG</FeatureType>
+					<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
@@ -686,15 +686,15 @@
 			<Type>BUILD_CLEAR_FALLOUT_FAST</Type>
 			<Description>TXT_KEY_BUILD_CLEAR_FALLOUT_FAST</Description>
 			<PrereqTech>TECH_ECOLOGICAL_ENGINEERING</PrereqTech>
-			<iTime>0</iTime>
-			<iCost>200</iCost>
+			<iTime>200</iTime>
+			<iCost>100</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FALLOUT</FeatureType>
 					<PrereqTech>NONE</PrereqTech>
-					<iTime>200</iTime>
+					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
@@ -708,7 +708,8 @@
 			<Type>BUILD_SCRUB_FALLOUT</Type>
 			<Description>TXT_KEY_BUILD_SCRUB_FALLOUT</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
-			<iTime>0</iTime>
+			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
+			<iTime>1000</iTime>
 			<iCost>100</iCost>
 			<bKill>0</bKill>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
@@ -716,7 +717,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_FALLOUT</FeatureType>
 					<PrereqTech>NONE</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>0</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
@@ -867,8 +868,8 @@
 		</BuildInfo>
 		<!-- Nomadic Herd (Kill) -> Pasture -->
 		<BuildInfo>
-			<Type>BUILD_NOMADIC_HERD</Type>
-			<Description>TXT_KEY_BUILD_NOMADIC_HERD</Description>
+			<Type>BUILD_NOMADIC_HERD_KILL</Type>
+			<Description>TXT_KEY_BUILD_NOMADIC_HERD_KILL</Description>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<iTime>300</iTime>
 			<iCost>10</iCost>
@@ -905,8 +906,8 @@
 		</BuildInfo>
 		<!-- Scavenging Camp (Kill) -> Nomadic Herd (Kill) OR Hunting Camp -->
 		<BuildInfo>
-			<Type>BUILD_SCAVENGING_CAMP</Type>
-			<Description>TXT_KEY_BUILD_SCAVENGING_CAMP</Description>
+			<Type>BUILD_SCAVENGING_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_SCAVENGING_CAMP_KILL</Description>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
@@ -1187,8 +1188,8 @@
 		</BuildInfo>
 		<!-- Fruit Gathering Camp (Kill) -> Fruit Picker -->
 		<BuildInfo>
-			<Type>BUILD_FRUIT_GATHERING_CAMP</Type>
-			<Description>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP</Description>
+			<Type>BUILD_FRUIT_GATHERING_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP_KILL</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
@@ -1232,8 +1233,8 @@
 		</BuildInfo>
 		<!-- Grape Gathering Camp (Kill) -> Grape Picker -->
 		<BuildInfo>
-			<Type>BUILD_GRAPE_GATHERING_CAMP</Type>
-			<Description>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP</Description>
+			<Type>BUILD_GRAPE_GATHERING_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP_KILL</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
@@ -1385,8 +1386,8 @@
 		</BuildInfo>
 		<!-- Plant Gathering Camp (Kill) -> Plant Picking Camp -->
 		<BuildInfo>
-			<Type>BUILD_PLANT_GATHERING_CAMP</Type>
-			<Description>TXT_KEY_BUILD_PLANT_GATHERING_CAMP</Description>
+			<Type>BUILD_PLANT_GATHERING_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_PLANT_GATHERING_CAMP_KILL</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
@@ -3857,8 +3858,8 @@
 		</BuildInfo>
 		<!-- Wood Gatherer (Kill) -> Lumberjack -->
 		<BuildInfo>
-			<Type>BUILD_WOOD_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_WOOD_GATHERER</Description>
+			<Type>BUILD_WOOD_GATHERER_KILL</Type>
+			<Description>TXT_KEY_BUILD_WOOD_GATHERER_KILL</Description>
 			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
 			<iTime>200</iTime>
@@ -7180,6 +7181,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
+			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/radar/radar_button.dds</Button>
 		</BuildInfo>
@@ -7195,6 +7197,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
+			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/radar/radar_button.dds</Button>
 		</BuildInfo>
@@ -7211,6 +7214,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
+			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/tower/art/steel_tower.dds</Button>
 		</BuildInfo>
@@ -7227,6 +7231,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
+			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/tower/art/stone_tower.dds</Button>
 		</BuildInfo>
@@ -7243,6 +7248,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
+			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/tower/art/wooden_tower.dds</Button>
 		</BuildInfo>
@@ -7259,6 +7265,7 @@
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
 			<bCtrlDown>1</bCtrlDown>
+			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/tower/art/wooden_tower.dds</Button>
 		</BuildInfo>
@@ -7274,7 +7281,6 @@
 			<ImprovementType>IMPROVEMENT_COMMAND_CENTER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
-			<bShiftDown>1</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Buildings/Bunker.dds</Button>
@@ -7291,7 +7297,6 @@
 			<ImprovementType>IMPROVEMENT_COMMAND_BUNKER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<HotKey>KB_F</HotKey>
-			<bShiftDown>1</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Buildings/Bunker.dds</Button>
@@ -7391,22 +7396,6 @@
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/Palisade/palisadewall.dds</Button>
-		</BuildInfo>
-		<!-- Abatis (No Kill) -> Palisade -->
-		<BuildInfo>
-			<Type>BUILD_ABATIS_THORN_HEDGE</Type>
-			<Description>TXT_KEY_BUILD_ABATIS_THORN_HEDGE</Description>
-			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
-			<iTime>200</iTime>
-			<iCost>5</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_F</HotKey>
-			<bCtrlDown>1</bCtrlDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/Abatis/abatis.dds</Button>
 		</BuildInfo>
 		<!-- Abatis (Kill) -> Palisade -->
 		<BuildInfo>
@@ -11248,7 +11237,7 @@
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ICE</FeatureType>
-					<PrereqTech>NONE</PrereqTech>
+					<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -11349,7 +11338,7 @@
 		<BuildInfo>
 			<Type>BUILD_FISHING_CAMP</Type>
 			<Description>TXT_KEY_BUILD_FISHING_CAMP</Description>
-			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
+			<PrereqTech>TECH_RUDDER</PrereqTech>
 			<ObsoleteTech>TECH_WIRELESS_ELECTRICITY</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>5</iCost>
@@ -11398,7 +11387,7 @@
 		<BuildInfo>
 			<Type>BUILD_HARVEST_KELP</Type>
 			<Description>TXT_KEY_BUILD_HARVEST_KELP</Description>
-			<PrereqTech>NONE</PrereqTech>
+			<PrereqTech>TECH_SAILING</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>5</iCost>
 			<bKill>0</bKill>
@@ -11422,7 +11411,7 @@
 		<BuildInfo>
 			<Type>BUILD_HARVEST_KELP_KILL</Type>
 			<Description>TXT_KEY_BUILD_HARVEST_KELP_KILL</Description>
-			<PrereqTech>NONE</PrereqTech>
+			<PrereqTech>TECH_FISHING</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>

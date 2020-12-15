@@ -10703,7 +10703,7 @@ void CvCity::changeBuildingDefense(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iBuildingDefense = (m_iBuildingDefense + iChange);
+		m_iBuildingDefense += iChange;
 
 		setInfoDirty(true);
 
@@ -10991,7 +10991,7 @@ int CvCity::getNaturalDefense() const
 
 int CvCity::getTotalDefense(bool bIgnoreBuilding) const
 {
-	return (std::max(((bIgnoreBuilding) ? 0 : getBuildingDefense()), getNaturalDefense()) + GET_PLAYER(getOwner()).getCityDefenseModifier() + calculateBonusDefense());
+	return std::max(bIgnoreBuilding ? 0 : getBuildingDefense(), getNaturalDefense()) + GET_PLAYER(getOwner()).getCityDefenseModifier() + calculateBonusDefense();
 }
 
 

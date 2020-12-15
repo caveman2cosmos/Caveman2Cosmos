@@ -58,3 +58,5 @@ Sources/C2C.args.json
 Sources/profile.json
 
 *.bak
+
+FPKTemp/

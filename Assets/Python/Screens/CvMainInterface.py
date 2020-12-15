@@ -170,6 +170,7 @@ class CvMainInterface:
 			self.iconCitizen			= u'%c' % GAME.getSymbolID(FontSymbols.CITIZEN_CHAR)
 			self.iconGreatGeneral		= u'%c' % GAME.getSymbolID(FontSymbols.GREAT_GENERAL_CHAR)
 			self.iconGreatPeople		= u'%c' % GAME.getSymbolID(FontSymbols.GREAT_PEOPLE_CHAR)
+			self.iconDefense			= u'%c' % GAME.getSymbolID(FontSymbols.DEFENSE_CHAR)
 			# Yield icons
 			aList1 = []
 			for i in xrange(YieldTypes.NUM_YIELD_TYPES):
@@ -2411,7 +2412,7 @@ class CvMainInterface:
 				screen.hide("MaintenanceText")
 				screen.hide("MaintenanceAmountText")
 				screen.hide("NationalityText")
-				screen.hide("DefenseText")
+				screen.hide("CS|Defense0")
 				screen.hide("EmploymentText")
 				screen.hide("CityNameText")
 				screen.hide("HealthText")
@@ -2831,14 +2832,12 @@ class CvMainInterface:
 			screen.show("WonderLimit0")
 			screen.show("WonderLimit1")
 
-			iDefenseModifier	= CyCity.getDefenseModifier(False)
-			iDefenseDamage		= CyCity.getDefenseDamage()
-			if iDefenseModifier or iDefenseDamage:
-				szTxt = TRNSLTR.getText("TXT_KEY_MAIN_CITY_DEFENSE", (GAME.getSymbolID(FontSymbols.DEFENSE_CHAR), iDefenseModifier))
-				if iDefenseDamage:
-					iMaxDefenseDamage = self.iMaxDefenseDamage
-					szTxt += u" (%d%%)" %( 100*(iMaxDefenseDamage - iDefenseDamage)/iMaxDefenseDamage )
-				screen.setLabel("DefenseText", "", szTxt, 1<<1, xRes - 270, 36, 0, eFontSmall, WidgetTypes.WIDGET_HELP_DEFENSE, -1, -1)
+			szTxt = self.iconDefense + " %d%%" % CyCity.getDefenseModifier(False)
+			iDefenseDamage = CyCity.getDefenseDamage()
+			if iDefenseDamage:
+				iMaxDefenseDamage = self.iMaxDefenseDamage
+				szTxt += " (%d%%)" % (100*(iMaxDefenseDamage - iDefenseDamage)/iMaxDefenseDamage)
+			screen.setText("CS|Defense0", "", szTxt, 1<<1, xRes - 270, 34, 0, eFontSmall, eWidGen, 1, 2)
 
 			iEmployed = CyCity.getNumPopulationEmployed()
 			if iEmployed:
@@ -5352,6 +5351,9 @@ class CvMainInterface:
 
 				elif TYPE == "ProdYield":
 					self.updateTooltip(screen, CyGameTextMgr().getProductionHelpCity(self.InCity.CyCity))
+
+				elif TYPE == "Defense":
+					self.updateTooltip(screen, CyGameTextMgr().getDefenseHelp(self.InCity.CyCity))
 
 			elif NAME == "GreatPersonBar":
 				self.helpGreatPersonBar(screen)

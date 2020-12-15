@@ -38008,12 +38008,9 @@ void CvGameTextMgr::buildCanRebaseAnywhereString(CvWStringBuffer &szBuffer, Tech
 	=======================
 	* Walls: +30%
 */
-void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
+void CvGameTextMgr::getDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
 	FAssertMsg(NO_PLAYER != city.getOwner(), "City must have an owner");
-
-	int iBaseRate = 0;
-	int iI, iJ;
 
 	CvWString szTempBuffer;
 
@@ -38022,44 +38019,35 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	int iBombardDefense = 0;
 	int iWonderDefense = 0;
 	int iResourceDefense = 0;
-	bool bWonder = false;
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		const int iCount = city.getNumActiveBuilding((BuildingTypes)iI);
-		if (isWorldWonder((BuildingTypes)iI))
-			bWonder = true;
-		else if (isTeamWonder((BuildingTypes)iI))
-			bWonder = true;
-		else if (isNationalWonder((BuildingTypes)iI))
-			bWonder = true;
+		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+		const int iCount = city.getNumBuilding(eBuilding);
 
-		const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
-		if (iCount > 0 && !bWonder)
+		if (iCount > 0)
 		{
-			iBuildingDefense += iCount * (kBuilding.getDefenseModifier());
-			iBombardDefense += iCount * kBuilding.getBombardDefenseModifier();
-			for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+			const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
+
+			if (isWorldWonder(eBuilding)
+			||  isTeamWonder(eBuilding)
+			||  isNationalWonder(eBuilding))
+			{
+				iWonderDefense += iCount * building.getDefenseModifier();
+			}
+			else iBuildingDefense += iCount * building.getDefenseModifier();
+
+			iBombardDefense += iCount * building.getBombardDefenseModifier();
+
+			for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 			{
 				if (city.hasBonus((BonusTypes)iJ))
 				{
-					iResourceDefense += kBuilding.getBonusDefenseChanges(iJ);
+					iResourceDefense += building.getBonusDefenseChanges(iJ);
 				}
 			}
 		}
-		else if (iCount > 0)
-		{
-			iWonderDefense += iCount * (kBuilding.getDefenseModifier());
-			iBombardDefense += iCount * kBuilding.getBombardDefenseModifier();
-			for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
-			{
-				if (city.hasBonus((BonusTypes)iJ))
-				{
-					iResourceDefense += kBuilding.getBonusDefenseChanges(iJ);
-				}
-			}
-		}
-		bWonder = false;
 	}
+	int iBaseRate = 0;
 	bool bFirst = false;
 	if (iBuildingDefense != 0)
 	{
@@ -38069,10 +38057,9 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	}
 
 	int iCivicDefense = 0;
-	for (iJ = 0; iJ < GC.getNumCivicOptionInfos(); iJ++)
+	for (int iJ = 0; iJ < GC.getNumCivicOptionInfos(); iJ++)
 	{
-		CivicTypes eCivic;
-		eCivic = GET_PLAYER(city.getOwner()).getCivics((CivicOptionTypes)iJ);
+		const CivicTypes eCivic = GET_PLAYER(city.getOwner()).getCivics((CivicOptionTypes)iJ);
 		if (GC.getCivicInfo(eCivic).getExtraCityDefense() != 0)
 		{
 			iCivicDefense += GC.getCivicInfo(eCivic).getExtraCityDefense();
@@ -38080,9 +38067,9 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	}
 
 	int iTraitDefense = 0;
-	for (iJ = 0; iJ < GC.getNumTraitInfos(); iJ++)
+	for (int iJ = 0; iJ < GC.getNumTraitInfos(); iJ++)
 	{
-		TraitTypes eTrait = ((TraitTypes)iJ);
+		TraitTypes eTrait = (TraitTypes)iJ;
 		if (GET_PLAYER(city.getOwner()).hasTrait(eTrait))
 		{
 			iBombardDefense += GC.getTraitInfo(eTrait).getBombardDefense();
@@ -38096,103 +38083,89 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	iWonderDefense += GET_PLAYER(city.getOwner()).getCityDefenseModifier() - iCivicDefense - iTraitDefense;
 	if (iWonderDefense != 0)
 	{
-		if (bFirst)
-			szBuffer.append(NEWLINE);
-		else
-			bFirst = true;
+		if (bFirst) szBuffer.append(NEWLINE);
+		else bFirst = true;
+
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_WONDER_DEFENSE_HOVER", iWonderDefense));
 		iBaseRate += iWonderDefense;
 	}
 	if (iResourceDefense != 0)
 	{
-		if (bFirst)
-			szBuffer.append(NEWLINE);
-		else
-			bFirst = true;
+		if (bFirst) szBuffer.append(NEWLINE);
+		else bFirst = true;
+
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_RESOURCE_DEFENSE_HOVER", iResourceDefense));
 		iBaseRate += iResourceDefense;
 	}
 
 	if (iCivicDefense != 0)
 	{
-		if (bFirst)
-			szBuffer.append(NEWLINE);
-		else
-			bFirst = true;
+		if (bFirst) szBuffer.append(NEWLINE);
+		else bFirst = true;
+
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_CIVIC_DEFENSE_HOVER", iCivicDefense));
 		iBaseRate += iCivicDefense;
 	}
 
 	if (iTraitDefense != 0)
 	{
-		if (bFirst)
-			szBuffer.append(NEWLINE);
-		else
-			bFirst = true;
+		if (bFirst) szBuffer.append(NEWLINE);
+		else bFirst = true;
+
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_TRAIT_DEFENSE_HOVER", iTraitDefense));
 		iBaseRate += iTraitDefense;
 	}
 
-	int iCultureDefense = 0;
-	iCultureDefense += city.getNaturalDefense();
-	iCultureDefense -= iBuildingDefense;
+	const int iCultureDefense = city.getNaturalDefense() - iBuildingDefense;
 	if (iCultureDefense > 0)
 	{
-		if (bFirst)
-			szBuffer.append(NEWLINE);
-		else
-			bFirst = true;
+		if (bFirst) szBuffer.append(NEWLINE);
+		else bFirst = true;
+
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_CULTURE_DEFENSE_HOVER", iCultureDefense));
 		iBaseRate += iCultureDefense;
 	}
 
-	int iClaimedDefense = city.getTotalDefense(false);
-	//TB DEBUG NOTE!!!! The following will often trigger due to the fact that right now buildings that have been replaced are still being
-	//instructed to add their defense value.  I'm currently looking into this.  Search for TB DEFENSEBUG to see the place where there's an issue.
-	//The problem with this is that the actual .getTotalDefense is tallying those into the picture but the display is not.  If this is an
-	//intended performance then we should compile this 'not obsolete but is replaced' defense into a new display line and add it to the total here.
-	FAssertMsg(iBaseRate == iClaimedDefense, "City Defense Does Not add up Correctly");
+	FAssertMsg(iBaseRate == city.getTotalDefense(false), CvString::format("Actual: %d; displayed: %d; Building Def: %d", city.getTotalDefense(false), iBaseRate, city.getBuildingDefense()));
 
-	if (iBaseRate > 0)
-	// ==========================
-		szBuffer.append(DOUBLE_SEPARATOR);
 	if (iBaseRate != 0)
 	{
+		if (iBaseRate > 0)
+		{
+			szBuffer.append(DOUBLE_SEPARATOR);
+		}
 		// If iBaseRate isn't zero we definitely already added stuff above
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_TOTAL_DEFENSE_HOVER", iBaseRate));
 	}
-	int iTerrainDefense = std::max(0, city.plot()->defenseModifier(GET_PLAYER(city.getOwner()).getTeam(), false, true));
+
+	const int iTerrainDefense = std::max(0, city.plot()->defenseModifier(GET_PLAYER(city.getOwner()).getTeam(), false, true));
 	if (iTerrainDefense != 0)
 	{
-		if (bFirst)
-			szBuffer.append(NEWLINE);
-		else
-			bFirst = true;
+		if (bFirst) szBuffer.append(NEWLINE);
+		else bFirst = true;
+
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_TERRAIN_DEFENSE_HOVER", iTerrainDefense));
 		iBaseRate += iTerrainDefense;
 	}
 	if (iBaseRate > 0)
 	{
-		// ==========================
 		szBuffer.append(DOUBLE_SEPARATOR);
 	}
-	int iDefenseDamagePercent = city.getDefenseDamage();
-	if (iDefenseDamagePercent != 0)
+
+	if (city.getDefenseDamage() != 0)
 	{
-		if (bFirst)
-			szBuffer.append(NEWLINE);
-		else
-			bFirst = true;
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_DEFENSE_DAMAGE_PERCENT_HOVER", iDefenseDamagePercent));
+		if (bFirst) szBuffer.append(NEWLINE);
+		else bFirst = true;
+
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_DEFENSE_DAMAGE_PERCENT_HOVER", city.getDefenseDamage()));
 	}
-	int iDefenseDamage = ((iBaseRate - iTerrainDefense) * city.getDefenseDamage()) / 100;
+	const int iDefenseDamage = (iBaseRate - iTerrainDefense) * city.getDefenseDamage() / 100;
 	if (iDefenseDamage != 0)
 	{
-		if (bFirst)
-			szBuffer.append(NEWLINE);
-		else
-			bFirst = true;
+		if (bFirst) szBuffer.append(NEWLINE);
+		else bFirst = true;
+
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_DEFENSE_DAMAGE_HOVER", iDefenseDamage));
 	}
 	if (iBaseRate != 0)
@@ -38203,21 +38176,21 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	}
 
 	if (city.getExtraMinDefense() != 0)
-	{// ==========================
+	{
 		szBuffer.append(DOUBLE_SEPARATOR);
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_MIN_DEFENSE_HOVER", city.getExtraMinDefense()));
 	}
 
 	if (city.getMinimumDefenseLevel() > 0)
-	{// ==========================
+	{
 		szBuffer.append(DOUBLE_SEPARATOR);
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_MINIMUM_DEFENSE_LEVEL_HOVER", city.getMinimumDefenseLevel()));
 	}
 
 	if (city.getExtraBuildingDefenseRecoverySpeedModifier() != 0)
-	{// ==========================
+	{
 		szBuffer.append(DOUBLE_SEPARATOR);
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_BUILDING_RECOVERY_HOVER", city.getExtraBuildingDefenseRecoverySpeedModifier(), city.getModifiedBuildingDefenseRecoverySpeedCap()));
@@ -38230,14 +38203,14 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	}
 
 	if (iBombardDefense != 0)
-	{// ==========================
+	{
 		szBuffer.append(DOUBLE_SEPARATOR);
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_BUILDING_BOMBARD_DEFENSE_HOVER", iBombardDefense));
 	}
 
 	bFirst = true;
-	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if (city.getUnitCombatDefenseAgainstModifierTotal((UnitCombatTypes)iI) != 0)
 		{
@@ -38251,7 +38224,7 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if (city.getUnitCombatExtraStrength((UnitCombatTypes)iI) != 0)
 		{
@@ -38266,64 +38239,58 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	}
 
 	if (city.getExtraLocalDynamicDefense() != 0)
-	{// ==========================
+	{
 		szBuffer.append(DOUBLE_SEPARATOR);
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_BUILDING_DYNAMIC_DEFENSE_HOVER", city.getExtraLocalDynamicDefense()));
 	}
 
 	if (city.getExtraRiverDefensePenalty() != 0)
-	{// ==========================
+	{
 		szBuffer.append(DOUBLE_SEPARATOR);
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_BUILDING_RIVER_DEFENSE_HOVER", city.getExtraRiverDefensePenalty()));
 	}
 
 	if (city.getEspionageDefenseModifier() != 0)
-	{// ==========================
+	{
 		szBuffer.append(DOUBLE_SEPARATOR);
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_BUILDING_ESPIONAGE_DEFENSE_HOVER", city.getEspionageDefenseModifier()));
 	}
 
 	if (city.getExtraInsidiousness() != 0)
-	{// ==========================
+	{
 		szBuffer.append(DOUBLE_SEPARATOR);
 		szBuffer.append(NEWLINE);
-		float fValue = (float)city.getExtraInsidiousness();
-		{
-			szTempBuffer.Format(L"%.1f", fValue/10);
-		}
+		szTempBuffer.Format(L"%.1f", city.getExtraInsidiousness() / 10.0f);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_BUILDING_INSIDIOUSNESS_HOVER", szTempBuffer.GetCString()));
 	}
 
 	if (city.getInvestigationTotal() != 0)
-	{// ==========================
+	{
 		szBuffer.append(DOUBLE_SEPARATOR);
 		szBuffer.append(NEWLINE);
-		float fValue = (float)city.getInvestigationTotal();
-		{
-			szTempBuffer.Format(L"%.1f", fValue/10);
-		}
+		szTempBuffer.Format(L"%.1f", city.getInvestigationTotal() / 10.0f);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_BUILDING_INVESTIGATION_HOVER", szTempBuffer.GetCString()));
 	}
 
 	int iNumCrim = city.plot()->getNumCriminals();
 	if (iNumCrim > 0)
-	{// ==========================
+	{
 		szBuffer.append(DOUBLE_SEPARATOR);
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_CRIMINAL_COUNT_DEFENSE_HOVER", iNumCrim));
 	}
 
 	if (city.getExtraLocalRepel() != 0)
-	{// ==========================
+	{
 		szBuffer.append(DOUBLE_SEPARATOR);
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_LOCAL_REPEL_HOVER", city.getExtraLocalRepel()));
 	}
 
-	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if (city.getUnitCombatRepelAgainstModifierTotal((UnitCombatTypes)iI) != 0)
 		{
@@ -38332,7 +38299,7 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if (city.getUnitCombatRepelModifierTotal((UnitCombatTypes)iI) != 0)
 		{
@@ -38342,97 +38309,82 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	}
 
 	if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL) && city.isZoneOfControl())
-	{// ==========================
+	{
 		szBuffer.append(DOUBLE_SEPARATOR);
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_ZOC_HOVER"));
 	}
 
-	int iAdjDmg = city.getAdjacentDamagePercent();
 	if (city.getAdjacentDamagePercent())
-	{// ==========================
+	{
 		szBuffer.append(DOUBLE_SEPARATOR);
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_ADJ_DMG_HOVER", iAdjDmg));
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_ADJ_DMG_HOVER", city.getAdjacentDamagePercent()));
 	}
 
 	bFirst = true;
 	for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 	{
-		BuildingTypes eBuilding = (BuildingTypes)iJ;
-		if (city.getNumActiveBuilding(eBuilding) > 0 && GC.getBuildingInfo(eBuilding).isDamageAttackerCapable())
+		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iJ);
+		if (city.getNumActiveBuilding(eBuilding) > 0)
 		{
-			if (GC.getBuildingInfo(eBuilding).isDamageAllAttackers())
+			continue;
+		}
+		const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
+		if (!building.isDamageAttackerCapable() 
+		|| building.getDamageAttackerChance() <= 0
+		|| building.getDamageToAttacker() <= 0)
+		{
+			continue;
+		}
+		if (building.isDamageAllAttackers())
+		{
+			if (bFirst)
 			{
-				if (GC.getBuildingInfo(eBuilding).getDamageAttackerChance() > 0 && GC.getBuildingInfo(eBuilding).getDamageToAttacker() > 0)
+				szBuffer.append(DOUBLE_SEPARATOR);
+				bFirst = false;
+			}
+			szBuffer.append(NEWLINE);
+
+			if (building.isDamageToAttackerIgnoresArmor())
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DAMAGE_ALL_ATTACKER_ARMOR_EXEMPT", building.getDamageAttackerChance(), building.getDamageToAttacker()));
+			}
+			else szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DAMAGE_ALL_ATTACKER", building.getDamageAttackerChance(), building.getDamageToAttacker()));
+		}
+		else
+		{
+			for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+			{
+				const UnitCombatTypes eUnitCombat = static_cast<UnitCombatTypes>(iI);
+				if (city.canDamageAttackingUnitCombat(eUnitCombat)
+				&& building.isMayDamageAttackingUnitCombatType(eUnitCombat))
 				{
 					if (bFirst)
 					{
-						// ==========================
 						szBuffer.append(DOUBLE_SEPARATOR);
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DAMAGE_ATTACKER_START", GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide()));
 						bFirst = false;
 					}
-					if (GC.getBuildingInfo(eBuilding).isDamageToAttackerIgnoresArmor())
-					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DAMAGE_ALL_ATTACKER_ARMOR_EXEMPT", GC.getBuildingInfo(eBuilding).getDamageAttackerChance(), GC.getBuildingInfo(eBuilding).getDamageToAttacker()));
-					}
-					else
-					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DAMAGE_ALL_ATTACKER", GC.getBuildingInfo(eBuilding).getDamageAttackerChance(), GC.getBuildingInfo(eBuilding).getDamageToAttacker()));
-					}
+					else szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DAMAGE_ATTACKER_MIDDLE", GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide()));
 				}
 			}
-			else
+			if (!bFirst)
 			{
-				for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+				if (building.isDamageToAttackerIgnoresArmor())
 				{
-					UnitCombatTypes eUnitCombat = ((UnitCombatTypes)iI);
-					if (city.canDamageAttackingUnitCombat(eUnitCombat))
-					{
-						if (GC.getBuildingInfo(eBuilding).isMayDamageAttackingUnitCombatType(eUnitCombat))
-						{
-							if (GC.getBuildingInfo(eBuilding).getDamageAttackerChance() > 0 && GC.getBuildingInfo(eBuilding).getDamageToAttacker() > 0)
-							{
-								if (bFirst)
-								{
-									// ==========================
-									szBuffer.append(DOUBLE_SEPARATOR);
-									szBuffer.append(NEWLINE);
-									szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DAMAGE_ATTACKER_START", GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide()));
-								}
-								else if (!bFirst)
-								{
-									szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DAMAGE_ATTACKER_MIDDLE", GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide()));
-								}
-								bFirst = false;
-							}
-						}
-					}
+					szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DAMAGE_ATTACKER_END_ARMOR_EXEMPT", building.getDamageAttackerChance(), building.getDamageToAttacker()));
 				}
-				if (!bFirst)
-				{
-					if (GC.getBuildingInfo(eBuilding).isDamageToAttackerIgnoresArmor())
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DAMAGE_ATTACKER_END_ARMOR_EXEMPT", GC.getBuildingInfo(eBuilding).getDamageAttackerChance(), GC.getBuildingInfo(eBuilding).getDamageToAttacker()));
-					}
-					else
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DAMAGE_ATTACKER_END", GC.getBuildingInfo(eBuilding).getDamageAttackerChance(), GC.getBuildingInfo(eBuilding).getDamageToAttacker()));
-					}
-				}
+				else szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DAMAGE_ATTACKER_END", building.getDamageAttackerChance(), building.getDamageToAttacker()));
 			}
 		}
 	}
 
-	if (city.getOwner() == GC.getGame().getActivePlayer())
+	if (city.getOwner() == GC.getGame().getActivePlayer()
+	&& getBugOptionBOOL("MiscHover__BuildingAdditionalDefense", true, "BUG_BUILDING_ADDITIONAL_DEFENSE_HOVER"))
 	{
-		// BUG - Building Additional Defense - start
-		if (city.getOwner() == GC.getGame().getActivePlayer() && getBugOptionBOOL("MiscHover__BuildingAdditionalDefense", true, "BUG_BUILDING_ADDITIONAL_DEFENSE_HOVER"))
-		{
-			setBuildingAdditionalDefenseHelp(szBuffer, city, DOUBLE_SEPARATOR);
-		}
+		setBuildingAdditionalDefenseHelp(szBuffer, city, DOUBLE_SEPARATOR);
 	}
 }
 
