@@ -25,6 +25,19 @@
 		<Polish>Poziom trudności - %s1</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MSG_FREED_SLAVES_AS</Tag>
+		<English>Slaves freed in %s1 - %s2: %d3 unit(s)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MSG_FREED_SLAVES_AS_IMMIGRANTS</Tag>
+		<English>Some (%d1) of your slaves in %s2 have become %d3 immigrants.</English>
+		<French>Certains (%d1) de vos esclaves de %S2 sont devenus %d3 émigrants.</French>
+		<German>Some (%d1) of your slaves in %s2 have become population(%d3).</German>
+		<Italian>Alcuni (%d1) dei tuoi schiavi di %s2 sono diventati %d3 immigrati.</Italian>
+		<Spanish>Some (%d1) of your slaves in %s2 have become population(%d3).</Spanish>
+		<Polish>Niektórzy (%d1) sprośród Twoich niewolników w %s2 zostali imigrantami.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MSG_HIGH_TO_LOW_GOAL_0</Tag>
 		<English>High To Low: Get the high score (stage 1/3)</English>
 		<French>Premier au Dernier: Atteindre le meilleur score (Etape 1/3)</French>
@@ -187,28 +200,9 @@
 		<Italian>Hai distrutto la meraviglia %s1!</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MSG_ZIZKOV</Tag>
-		<English>[COLOR_UNIT_TEXT]Zizkov Television Tower has jammed our radio signals![COLOR_REVERT]</English>
-		<French>La [COLOR_UNIT_TEXT]Tour de Télévision de Zizkov a brouillé nos signaux radio![COLOR_REVERT]</French>
-		<Polish>[COLOR_UNIT_TEXT]Wieza Telewizyjna Zizkov zaklócila nasze sygnaly radiowe![COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MSG_ZIZKOV_YOU</Tag>
-		<English>[COLOR_UNIT_TEXT]Zizkov Television Tower[COLOR_SELECTED_TEXT] has jammed the radio signals of [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
-		<French>La [COLOR_UNIT_TEXT]Tour de Télévision de Zizkov[COLOR_SELECTED_TEXT] a brouillé les signaux radio de [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
-		<Polish>[COLOR_UNIT_TEXT]Wieza Telewizyjna Zizkov[COLOR_SELECTED_TEXT] zaklócila sygnaly radiowe [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MSG_FREED_SLAVES_AS</Tag>
-		<English>Slaves freed in %s1 - %s2: %d3 unit(s)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MSG_FREED_SLAVES_AS_IMMIGRANTS</Tag>
-		<English>Some (%d1) of your slaves in %s2 have become %d3 immigrants.</English>
-		<French>Certains (%d1) de vos esclaves de %S2 sont devenus %d3 émigrants.</French>
-		<German>Some (%d1) of your slaves in %s2 have become population(%d3).</German>
-		<Italian>Alcuni (%d1) dei tuoi schiavi di %s2 sono diventati %d3 immigrati.</Italian>
-		<Spanish>Some (%d1) of your slaves in %s2 have become population(%d3).</Spanish>
-		<Polish>Niektórzy (%d1) sprośród Twoich niewolników w %s2 zostali imigrantami.</Polish>
+		<Tag>TXT_KEY_MSG_ZIZKOV_JAM</Tag>
+		<English>[COLOR_UNIT_TEXT]Zizkov Television Tower[COLOR_SELECTED_TEXT] has jammed the radio signals all over the world![COLOR_REVERT]</English>
+		<French>La[COLOR_UNIT_TEXT]Tour de Télévision de Zizkov[COLOR_SELECTED_TEXT] a brouillé tous les signaux radio![COLOR_REVERT]</French>
+		<Polish>[COLOR_UNIT_TEXT]Wieza Telewizyjna Zizkov[COLOR_SELECTED_TEXT] zaklócila sygnaly radiowe na calym swiecie![COLOR_REVERT]</Polish>
 	</TEXT>
 </Civ4GameText>
