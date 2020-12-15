@@ -38008,7 +38008,7 @@ void CvGameTextMgr::buildCanRebaseAnywhereString(CvWStringBuffer &szBuffer, Tech
 	=======================
 	* Walls: +30%
 */
-void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
+void CvGameTextMgr::getDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
 	FAssertMsg(NO_PLAYER != city.getOwner(), "City must have an owner");
 

@@ -60,6 +60,7 @@ public:
 	std::wstring getActiveDealsString(int iThisPlayer, int iOtherPlayer);
 	std::wstring getDealString(CyDeal* pDeal, int iPlayerPerspective);
 	std::wstring getFinanceUnitUpkeepString(int iPlayer);
+	std::wstring getDefenseHelp(CyCity* pCity);
 
 
 protected:
