@@ -2837,7 +2837,7 @@ class CvMainInterface:
 			if iDefenseDamage:
 				iMaxDefenseDamage = self.iMaxDefenseDamage
 				szTxt += " (%d%%)" % (100*(iMaxDefenseDamage - iDefenseDamage)/iMaxDefenseDamage)
-			screen.setText("CS|Defense0", "", szTxt, 1<<1, xRes - 270, 34, 0, eFontSmall, eWidGen, 1, 2)
+			screen.setText("CS|Defense0", "", "<font=3b>" + szTxt, 1<<1, xRes - 270, 34, 0, eFontSmall, eWidGen, 1, 2)
 
 			iEmployed = CyCity.getNumPopulationEmployed()
 			if iEmployed:
