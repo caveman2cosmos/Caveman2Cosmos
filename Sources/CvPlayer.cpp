@@ -253,7 +253,7 @@ m_cachedBonusCount(NULL)
 	setDoNotBotherStatus(NO_PLAYER);
 
 	// Free Tech Popup Fix
-	m_bChoosingFreeTech = false;
+	m_iChoosingFreeTech = 0;
 	m_bChoosingReligion = false;
 
 	m_zobristValue = GC.getGame().getSorenRand().getInt();
@@ -989,7 +989,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	setTurnHadUIInteraction(false);
 
 	// Free Tech Popup Fix
-	m_bChoosingFreeTech = false;
+	m_iChoosingFreeTech = 0;
 
 	m_bDisableHuman = false;
 
@@ -4608,12 +4608,20 @@ bool CvPlayer::hasBusyUnit() const
 
 bool CvPlayer::isChoosingFreeTech() const
 {
-	return m_bChoosingFreeTech;
+	return (m_iChoosingFreeTech > 0);
 }
 
-void CvPlayer::setChoosingFreeTech(bool bValue)
+void CvPlayer::startChoosingFreeTech()
 {
-	m_bChoosingFreeTech = bValue;
+	m_iChoosingFreeTech++;
+}
+
+void CvPlayer::endChoosingFreeTech()
+{
+	if (m_iChoosingFreeTech > 0)
+	{
+		m_iChoosingFreeTech--;
+	}
 }
 
 
@@ -4621,7 +4629,7 @@ void CvPlayer::chooseTech(int iDiscover, CvWString szText, bool bFront)
 {
 	if (iDiscover > 0)
 	{
-		setChoosingFreeTech(true);
+		startChoosingFreeTech();
 	}
 
 	CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CHOOSETECH);
@@ -20268,7 +20276,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 					if ( pInfo->getButtonPopupType() == BUTTONPOPUP_CHOOSETECH && pInfo->getData1() > 0 )
 					{
-						setChoosingFreeTech(true);
+						startChoosingFreeTech();
 					}
 				}
 			}
