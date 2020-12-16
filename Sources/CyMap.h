@@ -15,10 +15,10 @@ class CyMap
 {
 public:
 	CyMap();
-	explicit CyMap(CvMap* pMap);		// Call from C++
-	//const CvMapInterfaceBase* getMap() const { return m_pMap; }	// Call from C++
+	explicit CyMap(CvMap* pMap); // Call from C++
+	//const CvMapInterfaceBase* getMap() const { return m_pMap; } // Call from C++
 	bool isNone() const { return m_pMap == NULL; }
-	
+
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
@@ -38,17 +38,9 @@ public:
 	void bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity);
 /*******************************/
 /***** Parallel Maps - End *****/
-/*******************************/	
-	
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/29/08                                jdog5000      */
-/*                                                                                              */
-/* Used by barbarian civ                                                                        */
-/************************************************************************************************/
+/*******************************/
+
 	void verifyUnitValidPlot();
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 	void erasePlots();
 	void setRevealedPlots(int /*TeamTypes*/ eTeam, bool bNewValue, bool bTerrainOnly);
@@ -114,22 +106,9 @@ public:
 	int getLastPathStepNum() const;
 	CyPlot* getLastPathPlotByIndex(int index) const;
 
-	// Super Forts begin *canal* *choke*
+	// Super Forts *canal* *choke*
 	void calculateCanalAndChokePoints();
-	// Super Forts end
 
-	// PYTHON HELPER FUNCTIONS
-	//int getNumPlayerOwnedPlots(int /*PlayerTypes*/ iPlayer);
-/************************************************************************************************/
-/* Afforess	                  Start		 07/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	python::tuple firstArea(bool bRev);	// returns tuple of (CyArea, iterOut)
-	python::tuple nextArea(int iterIn, bool bRev);		// returns tuple of (CyArea, iterOut)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 protected:
 	CvMap* m_pMap;
 };

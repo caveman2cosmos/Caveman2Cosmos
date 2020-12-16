@@ -40,15 +40,8 @@ void CyMapPythonInterface()
 		.def("resetRevealedPlots", &CyMap::resetRevealedPlots, "void (int /*TeamTypes*/ eTeam) - removes reveal status on all plots to eteam but then resets reveal for that plot if is currently visible")
 		.def("setAllPlotTypes", &CyMap::setAllPlotTypes, "void (int /*PlotTypes*/ ePlotType) - sets all plots to ePlotType")
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/29/08                                jdog5000      */
-/*                                                                                              */
-/* Used by barbarian civ                                                                        */
-/************************************************************************************************/
 		.def("verifyUnitValidPlot", &CyMap::verifyUnitValidPlot, "void ()")
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 		.def("updateVisibility", &CyMap::updateVisibility, "() - updates the plots visibility")
 		.def("syncRandPlot", &CyMap::syncRandPlot, python::return_value_policy<python::manage_new_object>(), "CyPlot* (iFlags,iArea,iMinUnitDistance,iTimeout) - random plot based on conditions")
 
@@ -109,19 +102,8 @@ void CyMapPythonInterface()
 		.def("generatePathForHypotheticalUnit", &CyMap::generatePathForHypotheticalUnit, "bool (CyPlot*, CyPlot*, int, int, int, int)")
 		.def("getLastPathStepNum", &CyMap::getLastPathStepNum, "int ()")
 		.def("getLastPathPlotByIndex", &CyMap::getLastPathPlotByIndex, python::return_value_policy<python::manage_new_object>(), "CyPlot (index) - get a plot on the path by its Index")
-		
-/************************************************************************************************/
-/* Afforess	                  Start		 07/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-		.def("firstArea", &CyMap::firstArea, "tuple(CyArea, int iterOut) (bool bReverse) - gets the first area")
-		.def("nextArea", &CyMap::nextArea, "tuple(CyArea, int iterOut) (int iterIn, bool bReverse) - gets the next area")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-		// Super Forts begin *canal* *choke*
+
+		// Super Forts *canal* *choke*
 		.def("calculateCanalAndChokePoints", &CyMap::calculateCanalAndChokePoints, "void ()")
-		// Super Forts end
 		;
 }

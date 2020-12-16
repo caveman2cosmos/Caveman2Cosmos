@@ -1393,7 +1393,7 @@ void CvDLLWidgetData::doResearch(CvWidgetDataStruct &widgetDataStruct)
 			);
 			return;
 		}
-		kPlayer.setChoosingFreeTech(false);
+		kPlayer.endChoosingFreeTech();
 	}
 	if (widgetDataStruct.m_iData1 > 0
 	&& !GET_PLAYER(GC.getGame().getActivePlayer()).hasValidBuildings((TechTypes)widgetDataStruct.m_iData1))

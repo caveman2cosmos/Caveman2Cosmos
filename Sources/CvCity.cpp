@@ -1841,16 +1841,14 @@ void CvCity::doTask(TaskTypes eTask, int iData1, int iData2, bool bOption, bool 
 		break;
 
 	case TASK_GIFT:
-		if (getLiberationPlayer(false) == iData1)
-		{
-			liberate(false);
-		}
-		else
+	{
+		if (getLiberationPlayer(false) != iData1)
 		{
 			GET_PLAYER((PlayerTypes)iData1).acquireCity(this, false, true, true);
 		}
+		else liberate(false);
 		break;
-
+	}
 	case TASK_KEEP:
 		CvEventReporter::getInstance().cityAcquiredAndKept((PlayerTypes)iData1, this);
 		break;
@@ -19634,7 +19632,9 @@ void CvCity::liberate(bool bConquest)
 	}
 	GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, eOwner, szBuffer, getX(), getY(), GC.getCOLOR_HIGHLIGHT_TEXT());
 
-	GET_PLAYER(ePlayer).acquireCity(this, false, true, true);
+	const int iCulture = getCultureTimes100(eOwner);
+	const CvPlot* cityPlot = plot();
+	GET_PLAYER(ePlayer).acquireCity(this, false, true, true); // Invalidates this city object. this::kill() is called.
 	GET_PLAYER(ePlayer).AI_changeMemoryCount(eOwner, MEMORY_LIBERATED_CITIES, 1);
 
 	if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isVassal(GET_PLAYER(eOwner).getTeam()))
@@ -19645,13 +19645,11 @@ void CvCity::liberate(bool bConquest)
 		GET_TEAM(GET_PLAYER(ePlayer).getTeam()).setMasterPower(GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getMasterPower() + iNewMasterLand - iOldMasterLand);
 		GET_TEAM(GET_PLAYER(ePlayer).getTeam()).setVassalPower(GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getVassalPower() + iNewVassalLand - iOldVassalLand);
 	}
-	FAssertMsg(NULL != plot(), "Not expected!")
-
-	CvCity* pCity = plot()->getPlotCity();
+	CvCity* pCity = cityPlot->getPlotCity();
 
 	FAssertMsg(NULL != pCity, "Not expected!")
 
-	pCity->setCultureTimes100(ePlayer, pCity->getCultureTimes100(ePlayer) + getCultureTimes100(eOwner) / 2, true, true);
+	pCity->setCultureTimes100(ePlayer, pCity->getCultureTimes100(ePlayer) + iCulture / 2, true, true);
 
 	if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isAVassal())
 	{
