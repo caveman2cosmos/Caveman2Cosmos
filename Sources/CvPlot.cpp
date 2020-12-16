@@ -710,31 +710,43 @@ void CvPlot::doTurn()
 }
 
 
+// Returns odds to be inverted and checked against for a given bonus and improvement
+int CvPlot::calculateResourceDiscoveryOdds(int iBonus, CvImprovementInfo pInfo) const
+{
+	int iOdds = pInfo.getImprovementBonusDiscoverRand(iBonus);
+	
+	iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+	iOdds /= 100;
+
+	// Bonus density normalization (use land tiles, account for bonus type?)
+	iOdds *= 7 * (GC.getMap().getNumBonuses((BonusTypes) iBonus) + 2);
+	iOdds /= 2 * (GC.getMap().getWorldSize() + 9);
+	
+	return iOdds;
+}
+
+
 void CvPlot::doImprovement()
 {
 	PROFILE_FUNC();
 
 	const ImprovementTypes eType = getImprovementType();
 	const CvImprovementInfo& pInfo = GC.getImprovementInfo(eType);
+	const CvTeam& team = GET_TEAM(getTeam());
 
 	// Discover bonus
 	if (getBonusType() == NO_BONUS)
 	{
-		const CvTeam& team = GET_TEAM(getTeam());
 		const int iNumBonuses = GC.getNumBonusInfos();
 		int iBonus = GC.getGame().getSorenRandNum(iNumBonuses, "Random start index");
 		int iCount = 0;
 		while (iCount++ < iNumBonuses)
 		{
-			int iOdds = pInfo.getImprovementBonusDiscoverRand(iBonus);
-			if (iOdds > 0 && team.isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iBonus).getTechReveal()) && canHaveBonus((BonusTypes) iBonus))
+			if (pInfo.getImprovementBonusDiscoverRand(iBonus) > 0
+			&&  team.isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iBonus).getTechReveal())
+			&&  canHaveBonus((BonusTypes) iBonus))
 			{
-				iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
-				iOdds /= 100;
-				// Bonus density normalization
-				iOdds *= 7 * (GC.getMap().getNumBonuses((BonusTypes) iBonus) + 2);
-				iOdds /= 2 * (GC.getMap().getWorldSize() + 9);
-
+				int iOdds = calculateResourceDiscoveryOdds(iBonus, pInfo);
 				if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
 				{
 					setBonusType((BonusTypes) iBonus);
@@ -764,7 +776,7 @@ void CvPlot::doImprovement()
 		const BonusTypes eBonus = getNonObsoleteBonusType(getTeam());
 
 		// We know it's owned by a player because this function is only called if it is.
-		if (eBonus == NO_BONUS || !pInfo.isImprovementBonusTrade(eBonus) || !GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo(eBonus).getTechCityTrade())))
+		if (eBonus == NO_BONUS || !pInfo.isImprovementBonusTrade(eBonus) || !team.isHasTech((TechTypes)(GC.getBonusInfo(eBonus).getTechCityTrade())))
 		{
 			return;
 		}
