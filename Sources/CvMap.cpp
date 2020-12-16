@@ -1591,39 +1591,6 @@ void CvMap::calculateAreas()
 }
 
 
-//int CvMap::percentUnoccupiedLand(bool bExcludeWater, bool bIncludeBarbarian, bool bExcludePeaks, CvArea* pArea, int iRange, CvPlot* pRangeFromPlot)
-//{
-//	int iNumTiles = 0;
-//	int iNumTilesValid = 0;
-//	for (int iI = 0; iI < numPlots(); iI++)
-//	{
-//		const CvPlot* pLoopPlot = plotByIndex(iI);
-//		if (!pLoopPlot->isWater() || !bExcludeWater)
-//		{
-//			if (pArea == NULL || pLoopPlot->area() == pArea)
-//			{
-//				if (!pLoopPlot->isAsPeak() || !bExcludePeaks)
-//				{
-//					if ((iRange == -1 || pRangeFromPlot == NULL) || (plotDistance(pLoopPlot->getX(), pLoopPlot->getY(), pRangeFromPlot->getX(), pRangeFromPlot->getY()) <= iRange))
-//					{
-//						iNumTiles++;
-//						if (pLoopPlot->getOwner() == NO_PLAYER || (bIncludeBarbarian && pLoopPlot->isHominid()))
-//						{
-//							iNumTilesValid++;
-//						}
-//					}
-//				}
-//			}
-//		}
-//	}
-//	if (iNumTiles > 0)
-//	{
-//		logging::logMsg("C2C.log", "%d Tiles were in %d Range, out of %d total in range tiles\n", iNumTilesValid, iRange, iNumTiles);
-//		return (iNumTilesValid * 100) / iNumTiles;
-//	}
-//	return 0;
-//}		
-
 void CvMap::toggleCitiesDisplay()
 {
 	m_bCitiesDisplayed = !m_bCitiesDisplayed;

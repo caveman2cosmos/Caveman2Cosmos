@@ -116,19 +116,13 @@ void CyMap::setAllPlotTypes(int /*PlotTypes*/ ePlotType)
 		m_pMap->setAllPlotTypes((PlotTypes) ePlotType);
 }
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/29/08                                jdog5000      */
-/*                                                                                              */
-/* Used by Barbarian civ                                                                        */
-/************************************************************************************************/
+
 void CyMap::verifyUnitValidPlot()
 {
-	if( m_pMap )
+	if (m_pMap)
 		m_pMap->verifyUnitValidPlot();
 }
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 void CyMap::updateVisibility()
 {
 	if (m_pMap)
@@ -418,40 +412,12 @@ CyPlot* CyMap::getLastPathPlotByIndex(int index) const
 	return new CyPlot(it.plot());
 }
 
-/************************************************************************************************/
-/* Afforess	                  Start		 07/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-python::tuple CyMap::firstArea(bool bRev)
-{
-	int iterIn = 0;
-	CvArea* pvObj = m_pMap ? m_pMap->firstArea(&iterIn, bRev) : NULL;
-	CyArea* pyObj = pvObj ? new CyArea(pvObj) : NULL;
-	python::tuple tup=python::make_tuple(pyObj, iterIn);
-	delete pyObj;
-	return tup;
-}
 
-// returns tuple of (CyArea, iterOut)
-python::tuple CyMap::nextArea(int iterIn, bool bRev)
-{
-	CvArea* pvObj = m_pMap ? m_pMap->nextArea(&iterIn, bRev) : NULL;
-	CyArea* pyObj = pvObj ? new CyArea(pvObj) : NULL;
-	python::tuple tup=python::make_tuple(pyObj, iterIn);
-	delete pyObj;
-	return tup;
-}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
-// Super Forts begin *canal* *choke*
+// Super Forts *canal* *choke*
 void CyMap::calculateCanalAndChokePoints()
 {
-	if(m_pMap)
+	if (m_pMap)
 	{
 		m_pMap->calculateCanalAndChokePoints();
 	}
 }
-// Super Forts end
