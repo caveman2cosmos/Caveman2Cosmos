@@ -615,6 +615,7 @@
 			<KFM>Art/Structures/Improvements/RockGatherer/Camp.kfm</KFM>
 			<Button>Art/Interface/Buttons/Builds/tar_gatherer.dds</Button>
 		</ImprovementArtInfo>
+		<!-- Unused! -->
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_BEACON</Type>
 			<bExtraAnimations>0</bExtraAnimations>
@@ -633,6 +634,7 @@
 			<KFM>Art/Structures/Improvements/Nets/Nets.kfm</KFM>
 			<Button>Art/Interface/Buttons/terrainfeatures/kelpforest.dds</Button>
 		</ImprovementArtInfo>
+		<!-- Unused! -->
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_LIGHTHOUSE</Type>
 			<bExtraAnimations>0</bExtraAnimations>

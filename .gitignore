@@ -45,6 +45,8 @@ Tools/Autocorrect/__pycache__/
 
 Tools/python/
 
+Tools/XMLTools/BlazeScripts/Reports
+
 .vscode/.ropeproject/
 
 lights-found.txt
