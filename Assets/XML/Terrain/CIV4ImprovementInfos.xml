@@ -888,32 +888,172 @@
 			</TraitYieldChanges>
 		</ImprovementInfo>
 
-		<!-- Winery -> Vertical Farm -->
+		<!-- Orchard -> Vertical Farm -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_WINERY</Type>
-			<Description>TXT_KEY_IMPROVEMENT_WINERY</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_WINERY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_WINERY</ArtDefineTag>
+			<Type>IMPROVEMENT_ORCHARD</Type>
+			<Description>TXT_KEY_IMPROVEMENT_ORCHARD</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_ORCHARD_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_ORCHARD</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_FERMENTATION</PrereqTech>
+			<PrereqTech>TECH_ORCHARDS</PrereqTech>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iUpgradeTime>15</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>40</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GRAPES</BonusType>
+					<BonusType>BONUS_APPLE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>3</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_BANANA</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>3</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>0</iYieldChange>
+						<iYieldChange>2</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SPICES</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+						<iYieldChange>0</iYieldChange>
 						<iYieldChange>3</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_ALMONDS</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>3</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_FIG</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>2</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>2</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MANGO</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>3</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PAPAYA</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>3</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COCONUT</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>2</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_DATES</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>2</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>2</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PISTACHIO</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>3</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_POMEGRANATE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>3</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PRICKLY_PEAR</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>2</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>4</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_OLIVES</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>2</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>2</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_GUAVAS</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>3</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -954,14 +1094,12 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-		<!-- Fruit Picker -> Winery -->
+		<!-- Fruit Picker -> Orchard -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FRUIT_PICKING_CAMP</Type>
 			<Description>TXT_KEY_IMPROVEMENT_FRUIT_PICKING_CAMP</Description>
@@ -1295,172 +1433,32 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-		<!-- Orchard -> Vertical Farm -->
+		<!-- Winery -> Vertical Farm -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_ORCHARD</Type>
-			<Description>TXT_KEY_IMPROVEMENT_ORCHARD</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_ORCHARD_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_ORCHARD</ArtDefineTag>
+			<Type>IMPROVEMENT_WINERY</Type>
+			<Description>TXT_KEY_IMPROVEMENT_WINERY</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_WINERY_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_WINERY</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_ORCHARDS</PrereqTech>
+			<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iUpgradeTime>15</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>40</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
-					<BonusType>BONUS_APPLE</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_BANANA</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_LEMONS</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_SPICES</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>3</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_ALMONDS</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_FIG</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_MANGO</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_PAPAYA</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_COCONUT</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
-						<iYieldChange>1</iYieldChange>
-						<iYieldChange>1</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_DATES</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_PISTACHIO</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_POMEGRANATE</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_PRICKLY_PEAR</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_OLIVES</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_GUAVAS</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -1501,12 +1499,14 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 					<TechYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
 		</ImprovementInfo>
-		<!-- Grape Picker -> Orchard -->
+		<!-- Grape Picker -> Winery -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_GRAPE_PICKING_CAMP</Type>
 			<Description>TXT_KEY_IMPROVEMENT_GRAPE_PICKING_CAMP</Description>

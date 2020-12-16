@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
 <!-- Notes:
-	- CANNOT be built on this feature (or equivalent for terrain; try to avoid using this, though, instead try to give tech that can allow):
+	- IMPORTANT: Builds are organized first by type rarity*importance (Routes, bonus exploitation, feature exploitation,
+	  common chains, unique buildings, defensive & terraforming), then within in that by reverse unlock order.
+	  This makes the most recent, most important builds show first in the worker build options main gameplay UI,
+	  and keeps fairly consistent location for where builds of a type go on the bar.
+	  - CANNOT be built on this feature (or equivalent for terrain; try to avoid using this, though, instead try to give tech that can allow):
 		<FeatureStructs>
 			<FeatureStruct>
 				<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 				<PrereqTech>TECH_DUMMY</PrereqTech>
 			</FeatureStruct>
 		</FeatureStructs>
-
 	- FeatureChange and TerrainChange make it so that the "improvement" is not placed; instead,
 	  the build action will replace any existing feature/terrain with the corresponding entered value.
 	  bRemove should be used in necessary FeatureStructs to make UI work properly for replacing features.
 	- Non-kill builds generally obsolete on researching the next era after their upgrade, or the 3rd upgrade for routes.
 	- Kill builds usually don't obsolete, as only gatherers will have them and helps adjust workforce toward workers.
-	- Builds are organized first by type rarity*importance (Routes, bonus exploitation, feature exploitation,
-	  common chains, unique buildings, defensive & terraforming), then within in that by reverse unlock order.
-	  This makes the most recent, most important builds show first in the worker build options main gameplay UI,
-	  and keeps fairly consistent location for where builds of a type go on the bar.
+		Related TODO- switch from separate "kill" buildinfos, to a bBuildsConsume or similar tag on workers/captives/etc that need it.
 -->
 <Civ4BuildInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<BuildInfos>
@@ -921,6 +921,52 @@
 			<Button>Art/Interface/Buttons/Builds/scavenging_camp.dds</Button>
 		</BuildInfo>
 
+		<!-- Orchard -> Vertical Farm -->
+		<BuildInfo>
+			<Type>BUILD_ORCHARD</Type>
+			<Description>TXT_KEY_BUILD_ORCHARD</Description>
+			<PrereqTech>TECH_ORCHARDS</PrereqTech>
+			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
+			<iTime>500</iTime>
+			<iCost>20</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_ORCHARD</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_U</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/Builds/orchard.dds</Button>
+		</BuildInfo>
+		<!-- Fruit Picker -> Orchard -->
+		<BuildInfo>
+			<Type>BUILD_FRUIT_PICKING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_FRUIT_PICKING_CAMP</Description>
+			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+			<ObsoleteTech>TECH_ORCHARDS</ObsoleteTech>
+			<iTime>200</iTime>
+			<iCost>5</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs/>
+			<HotKey>KB_S</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/Builds/picker_genericfruit.dds</Button>
+		</BuildInfo>
+		<!-- Fruit Gathering Camp (Kill) -> Fruit Picker -->
+		<BuildInfo>
+			<Type>BUILD_FRUIT_GATHERING_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP_KILL</Description>
+			<PrereqTech>TECH_GATHERING</PrereqTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
+			<iTime>200</iTime>
+			<iCost>5</iCost>
+			<bKill>1</bKill>
+			<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_S</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/Builds/gatherer_genericfruit.dds</Button>
+		</BuildInfo>
 		<!-- Winery -> Vertical Farm -->
 		<BuildInfo>
 			<Type>BUILD_WINERY</Type>
@@ -1170,53 +1216,7 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildWinery.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,8</Button>
 		</BuildInfo>
-		<!-- Fruit Picker -> Winery -->
-		<BuildInfo>
-			<Type>BUILD_FRUIT_PICKING_CAMP</Type>
-			<Description>TXT_KEY_BUILD_FRUIT_PICKING_CAMP</Description>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<ObsoleteTech>TECH_ORCHARDS</ObsoleteTech>
-			<iTime>200</iTime>
-			<iCost>5</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<FeatureStructs/>
-			<HotKey>KB_S</HotKey>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/picker_genericfruit.dds</Button>
-		</BuildInfo>
-		<!-- Fruit Gathering Camp (Kill) -> Fruit Picker -->
-		<BuildInfo>
-			<Type>BUILD_FRUIT_GATHERING_CAMP_KILL</Type>
-			<Description>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP_KILL</Description>
-			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
-			<iTime>200</iTime>
-			<iCost>5</iCost>
-			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_S</HotKey>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/gatherer_genericfruit.dds</Button>
-		</BuildInfo>
-		<!-- Orchard -> Vertical Farm -->
-		<BuildInfo>
-			<Type>BUILD_ORCHARD</Type>
-			<Description>TXT_KEY_BUILD_ORCHARD</Description>
-			<PrereqTech>TECH_ORCHARDS</PrereqTech>
-			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
-			<iTime>500</iTime>
-			<iCost>20</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_ORCHARD</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_U</HotKey>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/orchard.dds</Button>
-		</BuildInfo>
-		<!-- Grape Picker -> Orchard -->
+		<!-- Grape Picker -> Winery -->
 		<BuildInfo>
 			<Type>BUILD_GRAPE_PICKING_CAMP</Type>
 			<Description>TXT_KEY_BUILD_GRAPE_PICKING_CAMP</Description>
