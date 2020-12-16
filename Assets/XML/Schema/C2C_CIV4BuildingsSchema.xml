@@ -1316,13 +1316,4 @@
 	<ElementType name="PrereqOrBuildings" content="eltOnly">
 		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bPrereqGameSpeed" content="textOnly" dt:type="boolean"/>
-	<ElementType name="GameSpeedType" content="textOnly"/>
-	<ElementType name="PrereqOrGameSpeed" content="eltOnly">
-		<element type="GameSpeedType"/>
-		<element type="bPrereqGameSpeed"/>
-	</ElementType>
-	<ElementType name="PrereqOrGameSpeeds" content="eltOnly">
-		<element type="PrereqOrGameSpeed" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 </Schema>

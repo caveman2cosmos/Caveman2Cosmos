@@ -308,8 +308,6 @@ public:
 	int getPrereqOrVicinityBonuses(int i) const;
 	const std::vector<BonusTypes> getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
 
-	bool isPrereqOrGameSpeed(int i) const;
-
 	bool isPrereqOrCivics(int iCivic) const;
 	bool isPrereqAndCivics(int iCivic) const;
 
@@ -600,7 +598,6 @@ protected:
 
 	int* m_piCommerceAttacks;
 
-	bool* m_pbPrereqOrGameSpeed;
 	bool* m_pbPrereqOrTerrain;
 	bool* m_pbPrereqAndTerrain;
 	bool* m_pbPrereqOrImprovement;
