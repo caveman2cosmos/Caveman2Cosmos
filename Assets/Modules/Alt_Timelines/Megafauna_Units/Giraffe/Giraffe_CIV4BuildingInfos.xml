@@ -49,14 +49,8 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GIRAFFE_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_GIRAFFE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -147,14 +141,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GIRAFFE_TRAINER_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_GIRAFFE_TRAINER_EFFECT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -172,28 +160,19 @@
 		<BuildingInfo>
 			<Type>BUILDING_STABLE</Type>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLO_FIELD</Type>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARAVAN_POST</Type>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 	</BuildingInfos>

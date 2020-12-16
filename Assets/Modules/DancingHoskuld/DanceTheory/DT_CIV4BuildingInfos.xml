@@ -32,18 +32,9 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DANCE_HUT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DANCE_HALL</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -89,18 +80,9 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DANCE_HUT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DANCE_HALL</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>

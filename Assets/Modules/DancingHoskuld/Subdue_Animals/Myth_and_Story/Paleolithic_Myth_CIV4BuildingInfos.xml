@@ -45,18 +45,9 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
@@ -120,18 +111,9 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
@@ -195,18 +177,9 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>

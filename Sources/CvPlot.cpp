@@ -7648,61 +7648,60 @@ void CvPlot::updateWorkingCity()
 {
 	PROFILE_FUNC();
 
-	CvCity* pOldWorkingCity;
-	CvCity* pLoopCity;
-	CvCity* pBestCity;
-	CvPlot* pLoopPlot;
-	int iBestPlot;
-	int iI;
-
-	pBestCity = getPlotCity();
+	CvCity* pBestCity = getPlotCity();
 
 	if (pBestCity == NULL)
 	{
 		pBestCity = getWorkingCityOverride();
-		FAssertMsg((pBestCity == NULL) || (pBestCity->getOwner() == getOwner()), "pBest city is expected to either be NULL or the current plot instance's");
+		FAssertMsg(pBestCity == NULL || pBestCity->getOwner() == getOwner(), "pBest city is expected to either be NULL or the current plot instance's");
 	}
 
-	if ((pBestCity == NULL) && isOwned())
+	if (pBestCity == NULL && isOwned())
 	{
-		iBestPlot = 0;
+		const int* cityPlotPriority = GC.getCityPlotPriority();
+		int iBestPlot;
 
-		for (iI = 0; iI < NUM_CITY_PLOTS; ++iI)
+		for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
 		{
-			pLoopPlot = plotCity(getX(), getY(), iI);
+			CvPlot* plotX = plotCity(getX(), getY(), iI);
 
-			if (pLoopPlot != NULL)
+			if (plotX != NULL)
 			{
-				pLoopCity = pLoopPlot->getPlotCity();
+				CvCity* cityX = plotX->getPlotCity();
 
-				if (pLoopCity != NULL)
+				if (cityX != NULL && cityX->getOwner() == getOwner()
+					&&
+					(
+						pBestCity == NULL
+						||
+						cityPlotPriority[iI] < cityPlotPriority[iBestPlot]
+						||
+						cityPlotPriority[iI] == cityPlotPriority[iBestPlot]
+						&&
+						(
+							// XXX use getGameTurnAcquired() instead???
+							cityX->getGameTurnFounded() < pBestCity->getGameTurnFounded()
+							||
+							cityX->getGameTurnFounded() == pBestCity->getGameTurnFounded()
+							&&
+							cityX->getID() < pBestCity->getID()
+						)
+					)
+				)
 				{
-					if (pLoopCity->getOwner() == getOwner())
-					{
-						// XXX use getGameTurnAcquired() instead???
-						if ((pBestCity == NULL) ||
-							  (GC.getCityPlotPriority()[iI] < GC.getCityPlotPriority()[iBestPlot]) ||
-							  ((GC.getCityPlotPriority()[iI] == GC.getCityPlotPriority()[iBestPlot]) &&
-							   ((pLoopCity->getGameTurnFounded() < pBestCity->getGameTurnFounded()) ||
-								((pLoopCity->getGameTurnFounded() == pBestCity->getGameTurnFounded()) &&
-								 (pLoopCity->getID() < pBestCity->getID())))))
-						{
-							iBestPlot = iI;
-							pBestCity = pLoopCity;
-						}
-					}
+					iBestPlot = iI;
+					pBestCity = cityX;
 				}
 			}
 		}
 	}
-
-	pOldWorkingCity = getWorkingCity();
+	CvCity* pOldWorkingCity = getWorkingCity();
 
 	if (pOldWorkingCity != pBestCity)
 	{
 		if (pOldWorkingCity != NULL)
 		{
-			pOldWorkingCity->setWorkingPlot(this, false);
+			pOldWorkingCity->setWorkingPlot(pOldWorkingCity->getCityPlotIndex(this), false);
 		}
 
 		if (pBestCity != NULL)
@@ -7711,10 +7710,8 @@ void CvPlot::updateWorkingCity()
 			FAssertMsg(!isBeingWorked(), "isBeingWorked did not return false as expected");
 			m_workingCity = pBestCity->getIDInfo();
 		}
-		else
-		{
-			m_workingCity.reset();
-		}
+		else m_workingCity.reset();
+
 
 		if (pOldWorkingCity != NULL)
 		{
@@ -7726,19 +7723,14 @@ void CvPlot::updateWorkingCity()
 		}
 
 		updateYield();
-
 		updateFog();
 		updateShowCitySymbols();
 
-		if (getOwner() == GC.getGame().getActivePlayer())
+		if (getOwner() == GC.getGame().getActivePlayer()
+		&& gDLL->getGraphicOption(GRAPHICOPTION_CITY_RADIUS)
+		&& gDLL->getInterfaceIFace()->canSelectionListFound())
 		{
-			if (gDLL->getGraphicOption(GRAPHICOPTION_CITY_RADIUS))
-			{
-				if (gDLL->getInterfaceIFace()->canSelectionListFound())
-				{
-					gDLL->getInterfaceIFace()->setDirty(ColoredPlots_DIRTY_BIT, true);
-				}
-			}
+			gDLL->getInterfaceIFace()->setDirty(ColoredPlots_DIRTY_BIT, true);
 		}
 	}
 }

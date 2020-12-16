@@ -429,7 +429,7 @@ void CvCityAI::AI_assignWorkingPlots()
 		CvPlot* pHomePlot = getCityIndexPlot(CITY_HOME_PLOT);
 		if (pHomePlot != NULL)
 		{
-			setWorkingPlot(CITY_HOME_PLOT, ((getPopulation() > 0) && canWork(pHomePlot)));
+			setWorkingPlot(CITY_HOME_PLOT, getPopulation() > 0 && canWork(pHomePlot));
 		}
 
 		// keep removing the worst citizen until we are not over the limit

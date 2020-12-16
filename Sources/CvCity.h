@@ -1215,8 +1215,7 @@ public:
 
 	bool isWorkingPlot(int iIndex) const;
 	bool isWorkingPlot(const CvPlot* pPlot) const;
-	void setWorkingPlot(int iIndex, bool bNewValue);
-	void setWorkingPlot(CvPlot* pPlot, bool bNewValue);
+	void setWorkingPlot(int iCityPlotIndex, bool bNewValue);
 	void alterWorkingPlot(int iIndex);
 	void processWorkingPlot(int iPlot, int iChange, bool yieldsOnly = false);
 

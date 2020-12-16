@@ -197,14 +197,8 @@
 				<BuildingType>BUILDING_POTTER</BuildingType>
 			</PrereqInCityBuildings>
 			<!--PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_POTTER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_POTTER</BuildingType>
 			</PrereqOrBuildings-->
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
@@ -271,18 +265,9 @@
 				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BARTER_POST</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_BARTER_POST</BuildingType>
+				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
@@ -548,14 +533,8 @@
 				<BuildingType>BUILDING_POTTER</BuildingType>
 			</PrereqInCityBuildings>
 			<!--PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_POTTER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_POTTER</BuildingType>
 			</PrereqOrBuildings-->
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>

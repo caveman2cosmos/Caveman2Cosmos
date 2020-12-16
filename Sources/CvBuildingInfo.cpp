@@ -236,7 +236,6 @@ m_ppaiBonusYieldModifier(NULL)
 //New Booleans
 ,m_bAnySpecialistYieldChanges(false)
 ,m_bAnySpecialistCommerceChanges(false)
-//Team Project (1)
 ,m_bAnyLocalSpecialistYieldChanges(false)
 ,m_bAnyLocalSpecialistCommerceChanges(false)
 ,m_bAnyBonusYieldModifiers(false)
@@ -259,8 +258,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_pbPrereqAndTerrain(NULL)
 ,m_pbPrereqOrImprovement(NULL)
 ,m_pbPrereqOrFeature(NULL)
-,m_pbPrereqOrBuilding(NULL)
-,m_pbPrereqOrGameSpeed(NULL)
 //New Integer Arrays
 ,m_piBuildingProductionModifier(NULL)
 ,m_piGlobalBuildingProductionModifier(NULL)
@@ -417,8 +414,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_pbPrereqAndTerrain);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrImprovement);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrFeature);
-	SAFE_DELETE_ARRAY(m_pbPrereqOrBuilding);
-	SAFE_DELETE_ARRAY(m_pbPrereqOrGameSpeed);
 	SAFE_DELETE_ARRAY(m_piUnitProductionModifier);
 	SAFE_DELETE_ARRAY(m_piPrereqOrVicinityBonuses);
 	SAFE_DELETE_ARRAY(m_piBonusDefenseChanges);
@@ -466,11 +461,15 @@ CvBuildingInfo::~CvBuildingInfo()
 		GC.removeDelayedResolution((int*)&(m_aiPrereqInCityBuildings[i]));
 	}
 
+	for (int i=0; i<(int)m_vPrereqOrBuilding.size(); i++)
+	{
+		GC.removeDelayedResolution((int*)&(m_vPrereqOrBuilding[i]));
+	}
+
 	for (int i=0; i<(int)m_vReplacementBuilding.size(); i++)
 	{
 		GC.removeDelayedResolution((int*)&(m_vReplacementBuilding[i]));
 	}
-	m_vReplacedBuilding.clear(); // Toffer - Not sure there's any point to this, but it doesn't hurt.
 }
 
 int CvBuildingInfo::getVictoryThreshold(int i) const
@@ -883,23 +882,19 @@ bool CvBuildingInfo::isCommerceChangeOriginalOwner(int i) const
 }
 
 
-int CvBuildingInfo::getPrereqInCityBuilding(int i) const
+int CvBuildingInfo::getPrereqInCityBuilding(const int i) const
 {
 	return m_aiPrereqInCityBuildings[i];
 }
 
-int CvBuildingInfo::getNumPrereqInCityBuildings() const
+short CvBuildingInfo::getNumPrereqInCityBuildings() const
 {
-	return (int)m_aiPrereqInCityBuildings.size();
+	return m_aiPrereqInCityBuildings.size();
 }
 
-bool CvBuildingInfo::isPrereqInCityBuilding(int i) const
+bool CvBuildingInfo::isPrereqInCityBuilding(const int i) const
 {
-	if (find(m_aiPrereqInCityBuildings.begin(), m_aiPrereqInCityBuildings.end(), i) == m_aiPrereqInCityBuildings.end())
-	{
-		return false;
-	}
-	return true;
+	return find(m_aiPrereqInCityBuildings.begin(), m_aiPrereqInCityBuildings.end(), i) != m_aiPrereqInCityBuildings.end();
 }
 
 
@@ -1040,25 +1035,6 @@ int CvBuildingInfo::getNoEntryDefenseLevel() const
 	return m_iNoEntryDefenseLevel;
 }
 
-bool CvBuildingInfo::isPrereqOrBuilding(int i) const
-{
-	FASSERT_BOUNDS(NO_BUILDING, GC.getNumBuildingInfos(), i)
-
-	if (i == NO_BUILDING)
-	{
-		return (m_pbPrereqOrBuilding != NULL);
-	}
-	else
-	{
-		return m_pbPrereqOrBuilding ? m_pbPrereqOrBuilding[i] : false;
-	}
-}
-
-bool CvBuildingInfo::isPrereqOrGameSpeed(int i) const
-{
-	FASSERT_BOUNDS(0, GC.getNumGameSpeedInfos(), i)
-	return m_pbPrereqOrGameSpeed ? m_pbPrereqOrGameSpeed[i] : false;
-}
 
 bool CvBuildingInfo::isPrereqOrCivics(int i) const
 {
@@ -1653,26 +1629,7 @@ const EnabledCivilizations& CvBuildingInfo::getEnabledCivilizationType(int iInde
 {
 	return m_aEnabledCivilizationTypes[iIndex];
 }
-// bool vectors without delayed resolution
-//int CvBuildingInfo::getFreePromoType(int i) const
-//{
-//	return m_aiFreePromoTypes[i];
-//}
-//
-//int CvBuildingInfo::getNumFreePromoTypes() const
-//{
-//	return (int)m_aiFreePromoTypes.size();
-//}
-//
-//bool CvBuildingInfo::isFreePromoType(int i) const
-//{
-//	FAssert (i > -1 && i < GC.getNumPromotionInfos()); // do not include this line if for delayed resolution
-//	if (find(m_aiFreePromoTypes.begin(), m_aiFreePromoTypes.end(), i) == m_aiFreePromoTypes.end())
-//	{
-//		return false;
-//	}
-//	return true;
-//}
+
 
 int CvBuildingInfo::getUnitCombatRetrainType(int i) const
 {
@@ -2072,9 +2029,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iPowerBonus);
 	CheckSum(iSum, m_iFreeBonus);
 	CheckSum(iSum, m_iNumFreeBonuses);
-
-	CheckSumC(iSum, m_aExtraFreeBonuses);
-
 	CheckSum(iSum, m_iFreeBuilding);
 	CheckSum(iSum, m_iFreeAreaBuilding);
 	CheckSum(iSum, m_iFreePromotion);
@@ -2126,18 +2080,8 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iPowerValue);
 	CheckSum(iSum, m_iSpecialBuildingType);
 	CheckSum(iSum, m_iAdvisorType);
-
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanConstruct															*/
-/********************************************************************************/
 	CheckSum(iSum, m_iPrereqGameOption);
 	CheckSum(iSum, m_iNotGameOption);
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
-
 	CheckSum(iSum, m_iHolyCity);
 	CheckSum(iSum, m_iReligionType);
 	CheckSum(iSum, m_iStateReligion);
@@ -2151,7 +2095,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iGreatPeopleRateChange);
 	CheckSum(iSum, m_iConquestProbability);
 	CheckSum(iSum, m_iMaintenanceModifier);
-	//DPII < Maintenance Modifier >
 	CheckSum(iSum, m_iGlobalMaintenanceModifier);
 	CheckSum(iSum, m_iAreaMaintenanceModifier);
 	CheckSum(iSum, m_iOtherAreaMaintenanceModifier);
@@ -2159,7 +2102,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iNumCitiesMaintenanceModifier);
 	CheckSum(iSum, m_iCoastalDistanceMaintenanceModifier);
 	CheckSum(iSum, m_iConnectedCityMaintenanceModifier);
-	//DPII < Maintenance Modifier >
 	CheckSum(iSum, m_iWarWearinessModifier);
 	CheckSum(iSum, m_iGlobalWarWearinessModifier);
 	CheckSum(iSum, m_iEnemyWarWearinessModifier);
@@ -2174,25 +2116,13 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iBombardDefenseModifier);
 	CheckSum(iSum, m_iAllCityDefenseModifier);
 	CheckSum(iSum, m_iEspionageDefenseModifier);
-
-/********************************************************************************/
-/**		REVDCM									4/09/10				phungus420	*/
-/**																				*/
-/**		Building Effects														*/
-/********************************************************************************/
 	CheckSum(iSum, m_iUnitUpgradePriceModifier);
 	CheckSum(iSum, m_iRevIdxLocal);
 	CheckSum(iSum, m_iRevIdxNational);
 	CheckSum(iSum, m_iRevIdxDistanceModifier);
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
-
 	CheckSum(iSum, m_iMissionType);
 	CheckSum(iSum, m_iVoteSourceType);
-
 	//CheckSum(iSum, m_fVisibilityPriority);
-
 	CheckSum(iSum, m_bTeamShare);
 	CheckSum(iSum, m_bAutoBuild);
 	CheckSum(iSum, m_bWater);
@@ -2335,8 +2265,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_bRequiresActiveCivics);
 	CheckSum(iSum, m_bZoneOfControl);
 
-	CheckSumI(iSum, GC.getNumBuildingInfos(), m_pbPrereqOrBuilding);
-	CheckSumI(iSum, GC.getNumGameSpeedInfos(), m_pbPrereqOrGameSpeed);
 	CheckSumI(iSum, GC.getNumCivicInfos(), m_pbPrereqOrCivics);
 	CheckSumI(iSum, GC.getNumCivicInfos(), m_pbPrereqAndCivics);
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_pbPrereqNotBuilding);
@@ -2352,7 +2280,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 
 	CheckSumI(iSum, GC.getNumUnitInfos(), m_piUnitProductionModifier);
 	CheckSumI(iSum, GC.getNUM_BUILDING_PREREQ_OR_BONUSES(), m_piPrereqOrVicinityBonuses);
-	CheckSumC(iSum, m_aePrereqOrRawVicinityBonuses);
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusDefenseChanges);
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_piUnitCombatExtraStrength);
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_piCommerceAttacks);
@@ -2419,7 +2346,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iMediumRangeSupportPercentModifier);
 	CheckSum(iSum, m_iLongRangeSupportPercentModifier);
 	CheckSum(iSum, m_iFlankSupportPercentModifier);
-//Team Project (3)
 	CheckSum(iSum, m_iNationalCaptureProbabilityModifier);
 	CheckSum(iSum, m_iNationalCaptureResistanceModifier);
 	CheckSum(iSum, m_iLocalCaptureProbabilityModifier);
@@ -2442,10 +2368,8 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_bDamageAllAttackers);
 	CheckSum(iSum, m_bDamageAttackerCapable);
 	CheckSum(iSum, m_bQuarantine);
-	//ls612 Begin
 	CheckSum(iSum, m_iMaxPopAllowed);
 	CheckSum(iSum, m_iMaxCultureLevelAllowed);
-	//ls612 End
 
 	//Structs
 	int iNumElements = m_aFreePromoTypes.size();
@@ -2455,9 +2379,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 		if (m_aFreePromoTypes[i].m_pExprFreePromotionCondition)
 			m_aFreePromoTypes[i].m_pExprFreePromotionCondition->getCheckSum(iSum);
 	}
-
-	CheckSumC(iSum, m_aiPrereqInCityBuildings);
-	CheckSumC(iSum, m_aiFreeTraitTypes);
 
 	iNumElements = m_aHealUnitCombatTypes.size();
 	for (int i = 0; i < iNumElements; ++i)
@@ -2486,12 +2407,11 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	{
 		CheckSum(iSum, m_aEnabledCivilizationTypes[i].eCivilization);
 	}
-	//boolean vectors without delayed resolution
-	//CheckSumC(iSum, m_aiFreePromoTypes);
+
+	// Vectors
 	CheckSumC(iSum, m_aiUnitCombatRetrainTypes);
 	CheckSumC(iSum, m_aiMayDamageAttackingUnitCombatTypes);
 	CheckSumC(iSum, m_aiMapCategoryTypes);
-	// int vector utilizing pairing without delayed resolution
 	CheckSumC(iSum, m_aUnitCombatRepelModifiers);
 	CheckSumC(iSum, m_aUnitCombatRepelAgainstModifiers);
 	CheckSumC(iSum, m_aUnitCombatDefenseAgainstModifiers);
@@ -2499,10 +2419,18 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSumC(iSum, m_aUnitCombatOngoingTrainingDurations);
 	CheckSumC(iSum, m_aAfflictionOutbreakLevelChanges);
 	CheckSumC(iSum, m_aTechOutbreakLevelChanges);
-//Team Project (1)
 	CheckSumC(iSum, m_aTechHappinessTypes);
 	CheckSumC(iSum, m_aTechHealthTypes);
-	//Arrays
+	CheckSumC(iSum, m_aiFreeTraitTypes);
+	CheckSumC(iSum, m_aExtraFreeBonuses);
+	CheckSumC(iSum, m_aePrereqOrRawVicinityBonuses);
+	CheckSumC(iSum, m_aePrereqOrBonuses);
+	CheckSumC(iSum, m_aiPrereqInCityBuildings);
+	CheckSumC(iSum, m_vPrereqOrBuilding);
+	CheckSumC(iSum, m_vReplacementBuilding);
+	CheckSumC(iSum, m_vReplacedBuilding);
+
+	// Arrays
 	CheckSumI(iSum, GC.getNumHurryInfos(), m_pabHurry);
 
 	//if (m_pExprFreePromotionCondition)
@@ -2515,10 +2443,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 		CheckSum(iSum, (*it).eCommerce);
 		CheckSum(iSum, (*it).iChange);
 	}
-	//Alberts2 PrereqBonuses
-	CheckSumC(iSum, m_aePrereqOrBonuses);
-	CheckSumC(iSum, m_vReplacementBuilding);
-	CheckSumC(iSum, m_vReplacedBuilding);
 
 	CheckSum(iSum, m_iMaxGlobalInstances);
 	CheckSum(iSum, m_iMaxTeamInstances);
@@ -3307,8 +3231,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_piBonusDefenseChanges, L"BonusDefenseChanges", GC.getNumBonusInfos());
 	pXML->SetVariableListTagPair(&m_piUnitCombatExtraStrength, L"UnitCombatExtraStrengths", GC.getNumUnitCombatInfos());
 
-	pXML->SetVariableListTagPair(&m_pbPrereqOrGameSpeed, L"PrereqOrGameSpeeds", GC.getNumGameSpeedInfos());
-
 	if (pXML->TryMoveToXmlFirstChild(L"CommerceAttacks"))
 	{
 		pXML->SetCommerce(&m_piCommerceAttacks);
@@ -3980,6 +3902,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetOptionalVectorWithDelayedResolution(m_aiFreeTraitTypes, L"FreeTraitTypes");
 	pXML->SetOptionalVectorWithDelayedResolution(m_aiPrereqInCityBuildings, L"PrereqInCityBuildings");
+	pXML->SetOptionalVectorWithDelayedResolution(m_vPrereqOrBuilding, L"PrereqOrBuildings");
 	pXML->SetOptionalVectorWithDelayedResolution(m_vReplacementBuilding, L"ReplacementBuildings");
 
 	if(pXML->TryMoveToXmlFirstChild(L"HealUnitCombatTypes"))
@@ -4074,35 +3997,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		}
 		pXML->MoveToXmlParent();
 	}
-
-	//boolean vectors without delayed resolution
-	//if (pXML->TryMoveToXmlFirstChild(L"FreePromoTypes"))
-	//{
-	//	if (pXML->SkipToNextVal())
-	//	{
-	//		int iNumSibs = pXML->GetXmlChildrenNumber();
-	//		m_aiFreePromoTypes.clear();
-
-	//		if (0 < iNumSibs)
-	//		{
-	//			if (pXML->GetChildXmlVal(szTextVal))
-	//			{
-	//				for (int j = 0; j < iNumSibs; j++)
-	//				{
-	//					m_aiFreePromoTypes.push_back(pXML->GetInfoClass(szTextVal));
-	//					if (!pXML->GetNextXmlVal(szTextVal))
-	//					{
-	//						break;
-	//					}
-	//				}
-
-	//				pXML->MoveToXmlParent();
-	//			}
-	//		}
-	//	}
-
-	//	pXML->MoveToXmlParent();
-	//}
 
 	pXML->SetOptionalIntVector(&m_aiUnitCombatRetrainTypes, L"UnitCombatRetrainTypes");
 	pXML->SetOptionalIntVector(&m_aiMayDamageAttackingUnitCombatTypes, L"MayDamageAttackingUnitCombatTypes");
@@ -4206,7 +4100,6 @@ bool CvBuildingInfo::readPass2(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ExtendsBuilding");
 	m_iExtendsBuilding = pXML->GetInfoClass(szTextVal);
 
-	pXML->SetVariableListTagPair(&m_pbPrereqOrBuilding, L"PrereqOrBuildings",  GC.getNumBuildingInfos());
 	pXML->SetVariableListTagPair(&m_pbPrereqNotBuilding, L"PrereqNotBuildings",  GC.getNumBuildingInfos());
 	pXML->SetVariableListTagPair(&m_piBuildingProductionModifier, L"BuildingProductionModifiers",  GC.getNumBuildingInfos());
 	pXML->SetVariableListTagPair(&m_piGlobalBuildingProductionModifier, L"GlobalBuildingProductionModifiers",  GC.getNumBuildingInfos());
@@ -4988,17 +4881,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 			m_pbPrereqOrFeature[j] = pClassInfo->isPrereqOrFeature(j);
 		}
 	}
-	for ( int j = 0; j < GC.getNumGameSpeedInfos(); j++)
-	{
-		if ( isPrereqOrGameSpeed(j) == bDefault && pClassInfo->isPrereqOrGameSpeed(j) != bDefault)
-		{
-			if ( NULL == m_pbPrereqOrGameSpeed )
-			{
-				CvXMLLoadUtility::InitList(&m_pbPrereqOrGameSpeed,GC.getNumGameSpeedInfos(),bDefault);
-			}
-			m_pbPrereqOrGameSpeed[j] = pClassInfo->isPrereqOrGameSpeed(j);
-		}
-	}
 	for ( int j = 0; j < GC.getNumBonusInfos(); j++)
 	{
 		if ( getBonusDefenseChanges(j) == iDefault && pClassInfo->getBonusDefenseChanges(j) != iDefault)
@@ -5479,18 +5361,27 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 
 	if (getNumPrereqInCityBuildings() == 0)
 	{
-		const int iNum = pClassInfo->getNumPrereqInCityBuildings();
+		const short iNum = pClassInfo->getNumPrereqInCityBuildings();
 		m_aiPrereqInCityBuildings.resize(iNum);
-		for (int i = 0; i < iNum; i++)
+		for (short i = 0; i < iNum; i++)
 		{
 			GC.copyNonDefaultDelayedResolution((int*)&(m_aiPrereqInCityBuildings[i]), (int*)&(pClassInfo->m_aiPrereqInCityBuildings[i]));
 		}
 	}
+	if (getNumPrereqOrBuilding() == 0)
+	{
+		const short iNum = pClassInfo->getNumPrereqOrBuilding();
+		m_vPrereqOrBuilding.resize(iNum);
+		for (short i = 0; i < iNum; i++)
+		{
+			GC.copyNonDefaultDelayedResolution((int*)&(m_vPrereqOrBuilding[i]), (int*)&(pClassInfo->m_vPrereqOrBuilding[i]));
+		}
+	}
 	if (getNumReplacementBuilding() == 0)
 	{
-		int iNum = pClassInfo->getNumReplacementBuilding();
+		const short iNum = pClassInfo->getNumReplacementBuilding();
 		m_vReplacementBuilding.resize(iNum);
-		for (int i = 0; i < iNum; i++)
+		for (short i = 0; i < iNum; i++)
 		{
 			GC.copyNonDefaultDelayedResolution((int*)&(m_vReplacementBuilding[i]), (int*)&(pClassInfo->m_vReplacementBuilding[i]));
 		}
@@ -5520,16 +5411,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 			GC.copyNonDefaultDelayedResolution((int*)&(m_aEnabledCivilizationTypes[i].eCivilization), (int*)&(pClassInfo->m_aEnabledCivilizationTypes[i].eCivilization));
 		}
 	}
-
-	// boolean vectors without delayed resolution
-	//if (getNumFreePromoTypes() == 0)
-	//{
-	//	m_aiFreePromoTypes.clear();
-	//	for ( int i = 0; i < pClassInfo->getNumFreePromoTypes(); i++)
-	//	{
-	//		m_aiFreePromoTypes.push_back(pClassInfo->getFreePromoType(i));
-	//	}
-	//}
 
 	if (getNumMapCategoryTypes() == 0)
 	{
@@ -5799,25 +5680,6 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 		SAFE_DELETE_ARRAY(m_pbPrereqNotBuilding);
 	}
 
-	if (pClassInfo->m_pbPrereqOrBuilding != NULL)
-	{
-		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
-		{
-			if (bOver || isPrereqOrBuilding(j) == bDefault && pClassInfo->isPrereqOrBuilding(j) != bDefault)
-			{
-				if (m_pbPrereqOrBuilding == NULL)
-				{
-					CvXMLLoadUtility::InitList(&m_pbPrereqOrBuilding, GC.getNumBuildingInfos(), bDefault);
-				}
-				m_pbPrereqOrBuilding[j] = pClassInfo->isPrereqOrBuilding(j);
-			}
-		}
-	}
-	else if (bOver && m_pbPrereqOrBuilding != NULL)
-	{
-		SAFE_DELETE_ARRAY(m_pbPrereqOrBuilding);
-	}
-
 	if (pClassInfo->m_piBuildingProductionModifier != NULL)
 	{
 		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
@@ -5915,7 +5777,22 @@ BonusTypes CvBuildingInfo::getPrereqOrBonuses(int i) const
 	return static_cast<BonusTypes>(m_aePrereqOrBonuses[i]);
 }
 
-int CvBuildingInfo::getReplacementBuilding(int i) const
+
+bool CvBuildingInfo::isPrereqOrBuilding(const int i) const
+{
+	return find(m_vPrereqOrBuilding.begin(), m_vPrereqOrBuilding.end(), i) != m_vPrereqOrBuilding.end();
+}
+
+int CvBuildingInfo::getPrereqOrBuilding(const int i) const
+{
+	return m_vPrereqOrBuilding[i];
+}
+short CvBuildingInfo::getNumPrereqOrBuilding() const
+{
+	return m_vPrereqOrBuilding.size();
+}
+
+int CvBuildingInfo::getReplacementBuilding(const int i) const
 {
 	return m_vReplacementBuilding[i];
 }
@@ -5924,14 +5801,14 @@ short CvBuildingInfo::getNumReplacementBuilding() const
 	return m_vReplacementBuilding.size();
 }
 
-void CvBuildingInfo::setReplacedBuilding(int i)
+void CvBuildingInfo::setReplacedBuilding(const int i)
 {
 	if (find(m_vReplacedBuilding.begin(), m_vReplacedBuilding.end(), i) == m_vReplacedBuilding.end())
 	{
 		m_vReplacedBuilding.push_back(i);
 	}
 }
-int CvBuildingInfo::getReplacedBuilding(int i) const
+int CvBuildingInfo::getReplacedBuilding(const int i) const
 {
 	return m_vReplacedBuilding[i];
 }

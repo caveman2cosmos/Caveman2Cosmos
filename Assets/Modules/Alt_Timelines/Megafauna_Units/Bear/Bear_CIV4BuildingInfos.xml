@@ -47,58 +47,19 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_ASIANBEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BLACK_BEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BROWN_BEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CAVE_BEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GRIZZLY_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PANDA_BEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_POLAR_BEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_REDPANDA_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SLOTH_BEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SPECTACLED_BEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SUN_BEAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
+				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ASIANBEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BLACK_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BROWN_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_CAVE_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_GRIZZLY_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_PANDA_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_POLAR_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_REDPANDA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SLOTH_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SPECTACLED_BEAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SUN_BEAR_MYTH_EFFECT</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -188,14 +149,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BEAR_TRAINER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BEAR_TRAINER_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_BEAR_TRAINER</BuildingType>
+				<BuildingType>BUILDING_BEAR_TRAINER_EFFECT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -217,10 +172,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_STABLE</Type>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BEAR_TRAINER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_BEAR_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 	</BuildingInfos>
