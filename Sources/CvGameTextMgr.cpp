@@ -24630,9 +24630,9 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		bool bValid = false;
 		if (pCity != NULL)
 		{
-			for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+			for (int iI = 0; iI < kBuilding.getNumPrereqOrBuilding(); ++iI)
 			{
-				if (kBuilding.isPrereqOrBuilding(iI) && pCity->getNumBuilding((BuildingTypes)iI) > 0)
+				if (pCity->getNumBuilding((BuildingTypes)kBuilding.getPrereqOrBuilding(iI)) > 0)
 				{
 					bValid = true;
 					break;
@@ -24641,14 +24641,11 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		}
 		if (!bValid)
 		{
-			for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+			for (int iI = 0; iI < kBuilding.getNumPrereqOrBuilding(); ++iI)
 			{
-				if (kBuilding.isPrereqOrBuilding(iI))
-				{
-					szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
-					setListHelp(szBuffer, szTempBuffer, GC.getBuildingInfo((BuildingTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
-					bFirst = false;
-				}
+				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
+				setListHelp(szBuffer, szTempBuffer, GC.getBuildingInfo((BuildingTypes)kBuilding.getPrereqOrBuilding(iI)).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+				bFirst = false;
 			}
 		}
 

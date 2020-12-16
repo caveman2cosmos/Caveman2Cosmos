@@ -453,14 +453,8 @@
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VIDEOPHONE_NETWORK</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_VIDEOPHONE_NETWORK</BuildingType>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA4_SDMW</BuildingType>
@@ -697,14 +691,8 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CLEAN_NUCLEAR_REACTOR</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_CLEAN_NUCLEAR_REACTOR</BuildingType>
+				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>

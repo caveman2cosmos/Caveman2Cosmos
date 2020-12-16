@@ -397,12 +397,13 @@ class PediaBuilding:
 				aList1.append(j)
 				if iPrereqNumOfBuilding > 1:
 					aList3.append((j, iPrereqNumOfBuilding))
-			elif CvTheBuildingInfo.isPrereqOrBuilding(j):
-				aList2.append(j)
-				if iPrereqNumOfBuilding > 0:
-					aList3.append((j, iPrereqNumOfBuilding))
 			elif iPrereqNumOfBuilding > 0:
 				aList3.append((j, iPrereqNumOfBuilding))
+
+		# Or building requirements
+		for j in xrange(CvTheBuildingInfo.getNumPrereqOrBuilding()):
+			aList2.append(CvTheBuildingInfo.getPrereqOrBuilding(j))
+
 		if aList1 or aList2 or aList3:
 			if bPlus:
 				screen.attachLabel(panelName, "", szAnd)

@@ -990,6 +990,7 @@
 		<element type="BuildingHappinessChanges" minOccurs="0"/>
 		<element type="PrereqAmountBuildings" minOccurs="0"/>
 		<element type="PrereqInCityBuildings" minOccurs="0"/>
+		<element type="PrereqOrBuildings" minOccurs="0"/>
 		<element type="ReplacementBuildings" minOccurs="0"/>
 		<element type="SpecialistYieldChanges" minOccurs="0"/>
 		<element type="BonusYieldModifiers" minOccurs="0"/>
@@ -1312,13 +1313,8 @@
 	<ElementType name="GlobalBuildingExtraCommerces" content="eltOnly">
 		<element type="BuildingExtraCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bPrereqBuilding" content="textOnly" dt:type="boolean"/>
-	<ElementType name="PrereqOrBuilding" content="eltOnly">
-		<element type="BuildingType"/>
-		<element type="bPrereqBuilding"/>
-	</ElementType>
 	<ElementType name="PrereqOrBuildings" content="eltOnly">
-		<element type="PrereqOrBuilding" minOccurs="0" maxOccurs="*"/>
+		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="bPrereqGameSpeed" content="textOnly" dt:type="boolean"/>
 	<ElementType name="GameSpeedType" content="textOnly"/>

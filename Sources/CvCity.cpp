@@ -3201,20 +3201,14 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 		bool bValid = false;
 		bool bRequires = false;
-		if (kBuilding.isPrereqOrBuilding(NO_BUILDING))
+		for (int iI = 0; iI < kBuilding.getNumPrereqOrBuilding(); ++iI)
 		{
-			for (int iI = 0; iI < numBuildingInfos; iI++)
+			bRequires = true;
+			const BuildingTypes ePrereqBuilding = static_cast<BuildingTypes>(kBuilding.getPrereqOrBuilding(iI));
+			if (withExtraBuilding == ePrereqBuilding || getNumActiveBuilding(ePrereqBuilding) > 0)
 			{
-				if (kBuilding.isPrereqOrBuilding(iI))
-				{
-					bRequires = true;
-					const BuildingTypes ePrereqBuilding = static_cast<BuildingTypes>(iI);
-					if (withExtraBuilding == ePrereqBuilding || getNumActiveBuilding(ePrereqBuilding) > 0)
-					{
-						bValid = true;
-						break;
-					}
-				}
+				bValid = true;
+				break;
 			}
 		}
 		if (bRequires && !bValid)
