@@ -2340,12 +2340,10 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 		pUnitNode = oldUnits.next(pUnitNode);
 
-		if (pLoopUnit && pLoopUnit->getTeam() != getTeam())
+		if (pLoopUnit && pLoopUnit->getTeam() != getTeam()
+		&& pLoopUnit->getDomainType() == DOMAIN_IMMOBILE)
 		{
-			if (pLoopUnit->getDomainType() == DOMAIN_IMMOBILE)
-			{
-				pLoopUnit->kill(false, getID());
-			}
+			pLoopUnit->kill(false, getID());
 		}
 	}
 	const PlayerTypes eOldOwner = pOldCity->getOwner();
@@ -2362,44 +2360,45 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		{
 			for (int iDY = -(iOccupationRange); iDY <= iOccupationRange; iDY++)
 			{
-				if (pOldCity->cultureDistance(iDX, iDY) <= iOccupationRange)
+				const int iCultureDist = pOldCity->cultureDistance(iDX, iDY);
+				if (iCultureDist > iOccupationRange)
 				{
-					CvPlot* pLoopPlot = plotXY(iX, iY, iDX, iDY);
+					continue;
+				}
+				CvPlot* pLoopPlot = plotXY(iX, iY, iDX, iDY);
 
-					if (pLoopPlot != NULL && !pLoopPlot->isCity() && pLoopPlot->getOwner() == eOldOwner
-					&&  pLoopPlot->isPotentialCityWorkForArea(pOldCity->area()))
+				if (pLoopPlot != NULL && !pLoopPlot->isCity() && pLoopPlot->getOwner() == eOldOwner
+				&&  pLoopPlot->isPotentialCityWorkForArea(pOldCity->area()))
+				{
+					bool bCultureLevelFound = false;
+					bool bDoClaim = false;
+
+					for (int iJ = 0; iJ < GC.getNumCultureLevelInfos(); ++iJ)
 					{
-						bool bCultureLevelFound = false;
-						bool bDoClaim = false;
+						const int iNumCitiesForRange = pLoopPlot->getCultureRangeCities(eOldOwner, iJ);
 
-						for (int iJ = 0; iJ < GC.getNumCultureLevelInfos(); ++iJ)
+						if (iNumCitiesForRange > 0)
 						{
-							const int iNumCitiesForRange = pLoopPlot->getCultureRangeCities(eOldOwner, iJ);
-
-							if (iNumCitiesForRange > 0)
+							// Occupy the tile if it is within the city's culture range, but not within any other city's range at the same or closer distance
+							if (iNumCitiesForRange == 1 && iCultureDist == iJ && pOldCity->getCultureLevel() >= iJ)
 							{
-								// Occupy the tile if it is within the city's culture range, but not within any other city's range at the same or closer distance
-								if (iNumCitiesForRange == 1 && pOldCity->getCultureLevel() >= iJ && pOldCity->cultureDistance(iDX, iDY) == iJ)
-								{
-									bDoClaim = true;
-								}
-								bCultureLevelFound = true;
-								break;
+								bDoClaim = true;
 							}
+							bCultureLevelFound = true;
+							break;
 						}
+					}
 
-						// Occupy the tile if it is NOT within the city's culture range, but is within occupation range
-						if (!bDoClaim && !bCultureLevelFound
-						&& pOldCity->cultureDistance(iDX, iDY) <= pOldCity->getOccupationCultureLevel())
-						{
-							bDoClaim = true;
-						}
+					// Occupy the tile if it is NOT within the city's culture range, but is within occupation range
+					if (!bDoClaim && !bCultureLevelFound && iCultureDist <= pOldCity->getOccupationCultureLevel())
+					{
+						bDoClaim = true;
+					}
 
-						if (bDoClaim)
-						{
-							pLoopPlot->setClaimingOwner(getID());
-							pLoopPlot->setForceUnownedTimer(1);
-						}
+					if (bDoClaim)
+					{
+						pLoopPlot->setClaimingOwner(getID());
+						pLoopPlot->setForceUnownedTimer(1);
 					}
 				}
 			}

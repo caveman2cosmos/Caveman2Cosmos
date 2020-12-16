@@ -7561,86 +7561,80 @@ CvCity* CvPlot::getPlotCity() const
 
 void CvPlot::setPlotCity(CvCity* pNewValue)
 {
-	CvPlotGroup* pPlotGroup;
-	CvPlot* pLoopPlot;
-	int iI;
-
-	if (getPlotCity() != pNewValue)
+	if (getPlotCity() == pNewValue)
 	{
-		if (isCity())
-		{
-			for (iI = 0; iI < NUM_CITY_PLOTS; ++iI)
-			{
-				pLoopPlot = plotCity(getX(), getY(), iI);
-
-				if (pLoopPlot != NULL)
-				{
-					pLoopPlot->changeCityRadiusCount(-1);
-					pLoopPlot->changePlayerCityRadiusCount(getPlotCity()->getOwner(), -1);
-				}
-			}
-		}
-
-		GET_PLAYER(getOwner()).startDeferredPlotGroupBonusCalculation();
-
-		updatePlotGroupBonus(false);
-		if (isCity())
-		{
-			pPlotGroup = getPlotGroup(getOwner());
-
-			if (pPlotGroup != NULL)
-			{
-				FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::setPlotCity");
-				for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
-				{
-					getPlotCity()->changeNumBonuses(((BonusTypes)iI), -(pPlotGroup->getNumBonuses((BonusTypes)iI)));
-				}
-			}
-		}
-		if (pNewValue != NULL)
-		{
-			m_plotCity = pNewValue->getIDInfo();
-		}
-		else
-		{
-			m_plotCity.reset();
-		}
-		if (isCity())
-		{
-			pPlotGroup = getPlotGroup(getOwner());
-
-			if (pPlotGroup != NULL)
-			{
-				FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::setPlotCity");
-				for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
-				{
-					getPlotCity()->changeNumBonuses(((BonusTypes)iI), pPlotGroup->getNumBonuses((BonusTypes)iI));
-				}
-			}
-		}
-		updatePlotGroupBonus(true);
-
-		GET_PLAYER(getOwner()).endDeferredPlotGroupBonusCalculation();
-
-		if (isCity())
-		{
-			for (iI = 0; iI < NUM_CITY_PLOTS; ++iI)
-			{
-				pLoopPlot = plotCity(getX(), getY(), iI);
-
-				if (pLoopPlot != NULL)
-				{
-					pLoopPlot->changeCityRadiusCount(1);
-					pLoopPlot->changePlayerCityRadiusCount(getPlotCity()->getOwner(), 1);
-				}
-			}
-		}
-
-		updateIrrigated();
-		updateYield();
-
-		updateMinimapColor();
+		return;
 	}
+	if (isCity())
+	{
+		for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
+		{
+			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
+
+			if (pLoopPlot != NULL)
+			{
+				pLoopPlot->changeCityRadiusCount(-1);
+				pLoopPlot->changePlayerCityRadiusCount(getPlotCity()->getOwner(), -1);
+			}
+		}
+	}
+
+	GET_PLAYER(getOwner()).startDeferredPlotGroupBonusCalculation();
+
+	updatePlotGroupBonus(false);
+	if (isCity())
+	{
+		CvPlotGroup* pPlotGroup = getPlotGroup(getOwner());
+
+		if (pPlotGroup != NULL)
+		{
+			FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::setPlotCity");
+			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+			{
+				getPlotCity()->changeNumBonuses(((BonusTypes)iI), -(pPlotGroup->getNumBonuses((BonusTypes)iI)));
+			}
+		}
+	}
+	if (pNewValue != NULL)
+	{
+		m_plotCity = pNewValue->getIDInfo();
+	}
+	else m_plotCity.reset();
+
+
+	if (isCity())
+	{
+		CvPlotGroup* pPlotGroup = getPlotGroup(getOwner());
+
+		if (pPlotGroup != NULL)
+		{
+			FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvPlot::setPlotCity");
+			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+			{
+				getPlotCity()->changeNumBonuses(((BonusTypes)iI), pPlotGroup->getNumBonuses((BonusTypes)iI));
+			}
+		}
+	}
+	updatePlotGroupBonus(true);
+
+	GET_PLAYER(getOwner()).endDeferredPlotGroupBonusCalculation();
+
+	if (isCity())
+	{
+		for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
+		{
+			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
+
+			if (pLoopPlot != NULL)
+			{
+				pLoopPlot->changeCityRadiusCount(1);
+				pLoopPlot->changePlayerCityRadiusCount(getPlotCity()->getOwner(), 1);
+			}
+		}
+	}
+	updateIrrigated();
+	updateYield();
+	updateMinimapColor();
 }
 
 

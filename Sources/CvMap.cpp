@@ -1626,49 +1626,26 @@ void CvMap::calculateAreas()
 
 void CvMap::toggleCitiesDisplay()
 {
+	m_bCitiesDisplayed = !m_bCitiesDisplayed;
+
 	gDLL->getInterfaceIFace()->clearSelectedCities();
-	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
+	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 	{
-		CvPlayer& kPlayer = GET_PLAYER((PlayerTypes) iPlayer);
+		const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes) iI);
 		if (kPlayer.isAlive())
 		{
-			int iI = 0;
 			foreach_(CvCity* pCity, kPlayer.cities())
 			{
-				iI++;
-				//if (iI > 1)
-				//	break;
-
-				if (m_bCitiesDisplayed)
-				{
-					//pCity->removeEntity();
-					//pCity->destroyEntity();
-					//pCity->plot()->setPlotCity(NULL);
-					//CvWString szBuffer = "Destroying: ";
-					//szBuffer.append(pCity->getName());
-					//AddDLLMessage(GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
-					//pCity->killTestCheap();
-					pCity->setVisible(false);
-				}
-				else
-				{
-					//pCity->createCityEntity(pCity);
-					//pCity->setupGraphical();
-					//pCity->plot()->setPlotCity(pCity);
-					pCity->setVisible(true);
-				}
+				pCity->setVisible(m_bCitiesDisplayed);
 			}
 		}
 	}
-	//gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-	m_bCitiesDisplayed = !m_bCitiesDisplayed;
-	CvWString szBuffer = "City entities hidden";
-	if (m_bCitiesDisplayed)
-		szBuffer = "City entities visible";
-
 	MEMORY_TRACK_EXEMPT();
-
-	AddDLLMessage(GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
+	AddDLLMessage(
+		GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(),
+		m_bCitiesDisplayed ? "City entities visible" : "City entities hidden",
+		"AS2D_EXPOSED", MESSAGE_TYPE_INFO
+	);
 }
 
 void CvMap::toggleUnitsDisplay()
