@@ -1214,17 +1214,6 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 		setNumRealBuilding((BuildingTypes)iI, 0);
 	}
 
-	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
-	{
-		setFreeSpecialistCount((SpecialistTypes)iI, 0);
-	}
-
-	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
-	{
-		setTradeYield((YieldTypes)iI, 0);
-		setCorporationYield((YieldTypes)iI, 0);
-	}
-
 	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
 		setHasReligion((ReligionTypes)iI, false, false, true);
@@ -1246,9 +1235,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	}
 
 	setPopulation(0);
-
 	AI_assignWorkingPlots();
-
 	clearOrderQueue();
 
 	// remember the visibility before we take away the city from the plot below
@@ -1261,43 +1248,17 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	// Need to clear trade routes of dead city, else they'll be claimed for the owner forever
 	clearTradeRoutes();
 
-	pPlot->setPlotCity(NULL);
-
-	// Replace floodplains after city is removed
-	if (pPlot->getBonusType() == NO_BONUS)
-	{
-		for (int iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
-		{
-			if (pPlot->canHaveFeature((FeatureTypes)iJ) && GC.getFeatureInfo((FeatureTypes)iJ).getAppearanceProbability() == 10000)
-			{
-				pPlot->setFeatureType((FeatureTypes)iJ);
-				break;
-			}
-		}
-	}
+	const bool bCapital = isCapital();
 	const PlayerTypes eOwner = getOwner();
+	CvPlayer& kOwner = GET_PLAYER(eOwner);
 
 	area()->changeCitiesPerPlayer(eOwner, -1);
-
 	GET_TEAM(getTeam()).changeNumCities(-1);
-
 	GC.getGame().changeNumCities(-1);
 
-	FAssertMsg(getWorkingPopulation() == 0, "getWorkingPopulation is expected to be 0");
-	FAssertMsg(!isWorkingPlot(CITY_HOME_PLOT), "isWorkingPlot(CITY_HOME_PLOT) is expected to be false");
-	FAssertMsg(getSpecialistPopulation() == 0, "getSpecialistPopulation is expected to be 0");
-	FAssertMsg(getNumGreatPeople() == 0, "getNumGreatPeople is expected to be 0");
-	FAssertMsg(getBaseYieldRate(YIELD_FOOD) == 0, "getBaseYieldRate(YIELD_FOOD) is expected to be 0");
-	FAssertMsg(getBaseYieldRate(YIELD_PRODUCTION) == 0, "getBaseYieldRate(YIELD_PRODUCTION) is expected to be 0");
-	FAssertMsg(getBaseYieldRate(YIELD_COMMERCE) == 0, "getBaseYieldRate(YIELD_COMMERCE) is expected to be 0");
-	FAssertMsg(!isProduction(), "isProduction is expected to be false");
-
-
-	const bool bCapital = isCapital();
+	pPlot->setPlotCity(NULL);
 
 	pPlot->setImprovementType(GC.getIMPROVEMENT_CITY_RUINS());
-
-	CvPlayer& kOwner = GET_PLAYER(eOwner);
 
 	kOwner.setCommerceDirty(NO_COMMERCE);
 	kOwner.updateCommerce(NO_COMMERCE);
@@ -5832,7 +5793,6 @@ void CvCity::processSpecialist(SpecialistTypes eSpecialist, int iChange)
 
 	updateExtraSpecialistYield();
 	updateExtraSpecialistCommerce();
-	//Team Project (1)
 	updateTechHappinessandHealth();
 
 	if (GC.getSpecialistInfo(eSpecialist).getHealthPercent() > 0)
@@ -7530,26 +7490,26 @@ void CvCity::setPopulation(int iNewValue)
 	{
 		m_iPopulation = iNewValue;
 
-		FAssert(getPopulation() >= 0);
+		FAssert(iNewValue >= 0);
 
 		GET_PLAYER(getOwner()).invalidatePopulationRankCache();
 
-		if (getPopulation() > getHighestPopulation())
+		if (iNewValue > getHighestPopulation())
 		{
-			setHighestPopulation(getPopulation());
+			setHighestPopulation(iNewValue);
 		}
 
-		area()->changePopulationPerPlayer(getOwner(), (getPopulation() - iOldPopulation));
-		GET_PLAYER(getOwner()).changeTotalPopulation(getPopulation() - iOldPopulation);
-		GET_TEAM(getTeam()).changeTotalPopulation(getPopulation() - iOldPopulation);
-		GC.getGame().changeTotalPopulation(getPopulation() - iOldPopulation);
+		area()->changePopulationPerPlayer(getOwner(), (iNewValue - iOldPopulation));
+		GET_PLAYER(getOwner()).changeTotalPopulation(iNewValue - iOldPopulation);
+		GET_TEAM(getTeam()).changeTotalPopulation(iNewValue - iOldPopulation);
+		GC.getGame().changeTotalPopulation(iNewValue - iOldPopulation);
 
 		checkBuildings(false, false, false, false, true);
 
 		if (plot()->getFeatureType() != NO_FEATURE)
 		{
 			const int iPopDestroys = GC.getFeatureInfo(plot()->getFeatureType()).getPopDestroys();
-			if (iPopDestroys > -1 && getPopulation() >= iPopDestroys)
+			if (iPopDestroys > -1 && iNewValue >= iPopDestroys)
 			{
 				plot()->setFeatureType(NO_FEATURE);
 			}
@@ -7564,11 +7524,11 @@ void CvCity::setPopulation(int iNewValue)
 			!isHuman()
 		&&
 			(
-				iOldPopulation == 1 && getPopulation() > 1
+				iOldPopulation == 1 && iNewValue > 1
 				||
-				getPopulation() == 1 && iOldPopulation > 1
+				iNewValue == 1 && iOldPopulation > 1
 				||
-				getPopulation() > iOldPopulation && GET_PLAYER(getOwner()).getNumCities() <= 2
+				iNewValue > iOldPopulation && GET_PLAYER(getOwner()).getNumCities() <= 2
 			)
 		) AI_setChooseProductionDirty(true);
 
@@ -7737,8 +7697,8 @@ int CvCity::getWorkingPopulation() const
 
 void CvCity::changeWorkingPopulation(int iChange)
 {
-	m_iWorkingPopulation = (m_iWorkingPopulation + iChange);
-	FAssert(getWorkingPopulation() >= 0);
+	m_iWorkingPopulation += iChange;
+	FAssert(m_iWorkingPopulation >= 0);
 }
 
 
@@ -7752,8 +7712,8 @@ void CvCity::changeSpecialistPopulation(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iSpecialistPopulation = (m_iSpecialistPopulation + iChange);
-		FAssert(getSpecialistPopulation() >= 0);
+		m_iSpecialistPopulation += iChange;
+		FAssert(m_iSpecialistPopulation >= 0);
 
 		GET_PLAYER(getOwner()).invalidateYieldRankCache();
 
@@ -7772,8 +7732,8 @@ void CvCity::changeNumGreatPeople(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iNumGreatPeople = (m_iNumGreatPeople + iChange);
-		FAssert(getNumGreatPeople() >= 0);
+		m_iNumGreatPeople += iChange;
+		FAssert(m_iNumGreatPeople >= 0);
 
 		setCommerceDirty(NO_COMMERCE);
 	}
@@ -7818,7 +7778,7 @@ int CvCity::getTotalGreatPeopleRateModifier() const
 
 void CvCity::changeBaseGreatPeopleRate(int iChange)
 {
-	m_iBaseGreatPeopleRate = (m_iBaseGreatPeopleRate + iChange);
+	m_iBaseGreatPeopleRate += iChange;
 }
 
 
@@ -12360,12 +12320,14 @@ int CvCity::getExtraSpecialistYield(YieldTypes eIndex, SpecialistTypes eSpeciali
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eIndex)
 	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist)
-	//TB Traits begin
-//Team Project (1)
-	return (specialistCount(eSpecialist) * (getLocalSpecialistExtraYield(eSpecialist, eIndex) + GET_PLAYER(getOwner()).getExtraSpecialistYield(eSpecialist, eIndex) + GET_PLAYER(getOwner()).getSpecialistExtraYield(eIndex)));
-	// Original:
-	//	return ((getSpecialistCount(eSpecialist) + getFreeSpecialistCount(eSpecialist)) * (GET_PLAYER(getOwner()).getExtraSpecialistYield(eSpecialist, eIndex) + GET_PLAYER(getOwner()).getSpecialistExtraYield(eIndex)));
-		//TB Traits end
+	return
+	(
+		specialistCount(eSpecialist) * (
+			getLocalSpecialistExtraYield(eSpecialist, eIndex)
+			+ GET_PLAYER(getOwner()).getExtraSpecialistYield(eSpecialist, eIndex)
+			+ GET_PLAYER(getOwner()).getSpecialistExtraYield(eIndex)
+		)
+	);
 }
 
 
@@ -12500,9 +12462,8 @@ int CvCity::getBaseCommerceRateTimes100(CommerceTypes eIndex) const
 	//STEP 1 : Slider
 	int iBaseCommerceRate = getCommerceFromPercent(eIndex, getYieldRate(YIELD_COMMERCE) * 100);
 
-	//STEP 2 : Commerce Changes from specialists	
+	//STEP 2 : Commerce Changes from specialists
 	int iSpecialistCommerce = getSpecialistCommerce(eIndex) + getExtraSpecialistCommerceTotal(eIndex);
-	/*iSpecialistCommerce += ((getSpecialistPopulation() + getNumGreatPeople()) * GET_PLAYER(getOwner()).getSpecialistExtraCommerce(eIndex));*/
 	iBaseCommerceRate += 100 * iSpecialistCommerce;
 
 	//STEP 3 : Religion Commerce
@@ -14620,8 +14581,7 @@ void CvCity::setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue)
 	if (iOldValue != iNewValue)
 	{
 		m_paiFreeSpecialistCount[eIndex] = iNewValue;
-		//Allows total of free specialist count to dip below zero from all modifier sources so negative modifiers are ok, but sets an effective minimum of 0
-		//FAssert(getFreeSpecialistCount(eIndex) >= 0);
+		FAssert(m_paiFreeSpecialistCount[eIndex] >= 0);
 
 		changeNumGreatPeople(iNewValue - iOldValue);
 		processSpecialist(eIndex, (iNewValue - iOldValue));
@@ -14838,11 +14798,6 @@ void CvCity::setWorkingPlot(int iIndex, bool bNewValue)
 	}
 }
 
-void CvCity::setWorkingPlot(CvPlot* pPlot, bool bNewValue)
-{
-	setWorkingPlot(getCityPlotIndex(pPlot), bNewValue);
-}
-
 
 void CvCity::alterWorkingPlot(int iIndex)
 {
@@ -14866,10 +14821,7 @@ void CvCity::alterWorkingPlot(int iIndex)
 					{
 						changeSpecialistCount((SpecialistTypes)GC.getDEFAULT_SPECIALIST(), 1);
 					}
-					else
-					{
-						AI_addBestCitizen(false, true);
-					}
+					else AI_addBestCitizen(false, true);
 				}
 				else if (extraPopulation() > 0 || AI_removeWorstCitizen())
 				{
