@@ -24688,7 +24688,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			}
 
 			if (kBuilding.getPrereqAndBonus() != NO_BONUS
-			&& pCity == NULL || !pCity->hasBonus((BonusTypes)kBuilding.getPrereqAndBonus()))
+			&& (pCity == NULL || !pCity->hasBonus((BonusTypes)kBuilding.getPrereqAndBonus())))
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_REQUIRES_STRING", GC.getBonusInfo((BonusTypes)kBuilding.getPrereqAndBonus()).getTextKeyWide()));
