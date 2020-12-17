@@ -1820,8 +1820,8 @@ void CvCityAI::AI_chooseProduction()
 	m_iTempBuildPriority--;
 
 	// Afforess - don't wait until we are in trouble, preventative medicine is best
-	int iFundedPercent = player.AI_costAsPercentIncome();
-	int iSafePercent = player.AI_safeCostAsPercentIncome();
+	int iFundedPercent = player.AI_profitMargin();
+	int iSafePercent = player.AI_safeProfitMargin();
 	// if ( bFinancialTrouble )
 	if (iFundedPercent < iSafePercent - 10)
 	{
