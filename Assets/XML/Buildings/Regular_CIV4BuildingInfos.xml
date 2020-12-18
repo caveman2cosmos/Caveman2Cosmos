@@ -3388,6 +3388,7 @@
 			<PrereqTech>TECH_ANCIENT_MEDICINE</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -7633,6 +7634,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -8042,6 +8044,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -10457,6 +10460,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -11043,6 +11047,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -13686,6 +13691,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -14629,6 +14635,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -15044,6 +15051,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -20038,6 +20046,7 @@
 			<Bonus>BONUS_LEATHER</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -22837,6 +22846,7 @@
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -24096,6 +24106,7 @@
 			</TechTypes>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -32016,6 +32027,7 @@
 			</PrereqRawVicinityBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -32102,6 +32114,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -32263,6 +32276,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -33684,6 +33698,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -38202,6 +38217,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -38290,6 +38306,7 @@
 			</TechTypes>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -45338,6 +45355,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -49506,6 +49524,7 @@
 			<PrereqTech>TECH_PERSONAL_ADORNMENTS</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -55668,6 +55687,7 @@
 			</TechTypes>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -55901,6 +55921,7 @@
 			<PrereqTech>TECH_DIVINATION</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -61427,6 +61448,7 @@
 			</TechTypes>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -62399,6 +62421,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -63736,6 +63759,7 @@
 			<Bonus>BONUS_POISON</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -64698,6 +64722,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -69403,6 +69428,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -69886,6 +69912,7 @@
 			<Bonus>BONUS_LEATHER</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -70054,6 +70081,7 @@
 			<PrereqTech>TECH_ANIMISM</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -70158,6 +70186,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -71691,6 +71720,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -73841,6 +73871,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -74067,6 +74098,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -75226,6 +75258,7 @@
 			<bRiver>1</bRiver>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -76141,6 +76174,7 @@
 			<PrereqTech>TECH_STARGAZING</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -77176,6 +77210,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -77279,6 +77314,7 @@
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -77489,6 +77525,7 @@
 			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -78344,6 +78381,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -78676,6 +78714,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -79452,6 +79491,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -82745,6 +82785,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -87385,6 +87426,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
@@ -87412,6 +87454,7 @@
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_BARTER_POST</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
