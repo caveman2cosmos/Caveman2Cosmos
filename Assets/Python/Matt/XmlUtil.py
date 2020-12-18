@@ -6,6 +6,11 @@ import os.path
 
 DEBUG_LOG = True
 
+g_InfoClassData = [
+	("BUILDING_INFOS",	"CIV4BuildingInfos",	"C2C_CIV4BuildingsSchema"),
+	("TECH_INFOS",		"CIV4TechInfos",		"C2C_CIV4GameInfoSchema"),
+	("UNIT_INFOS",		"CIV4UnitInfos",		"C2C_CIV4UnitSchema")
+]
 
 def verifyModDir(szModPath):
 	git_directory = os.path.join(szModPath, "git_directory.txt")

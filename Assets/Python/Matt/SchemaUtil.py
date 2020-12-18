@@ -1,16 +1,5 @@
 from CvPythonExtensions import *
 from XmlUtil import *
-import os.path
-
-
-def init():
-	logFile = open(os.path.join(g_ModDir, "IntTags.h"), "w")
-	folder = os.path.join(g_ModDir, "Assets", "XML", "Schema")
-	for path in getGlob(folder):
-		for tag in getIntTags(path):
-			logFile.write("%s\n" %tag[0])
-	logFile.write("\n")
-	logFile.close()
 
 
 def getIntTags(path):
@@ -28,6 +17,7 @@ def getIntTags(path):
 			if dataType == "dt:type=\"int\"":
 				tracker.skipNextChar()
 				tracker.skipNextChar()
-				intTags.append((tracker.getNextSplice("\""), 0, 0))
+				intTags.append([tracker.getNextSplice("\""), 0, 0])
+				#yield [tracker.getNextSplice("\""), 0, 0]
 	file.close()
 	return intTags
