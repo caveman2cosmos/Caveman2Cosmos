@@ -5414,15 +5414,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 			GC.copyNonDefaultDelayedResolution((int*)&(m_aiPrereqInCityBuildings[i]), (int*)&(pClassInfo->m_aiPrereqInCityBuildings[i]));
 		}
 	}
-	if (getNumPrereqOrBuilding() == 0)
-	{
-		const short iNum = pClassInfo->getNumPrereqOrBuilding();
-		m_vPrereqOrBuilding.resize(iNum);
-		for (short i = 0; i < iNum; i++)
-		{
-			GC.copyNonDefaultDelayedResolution((int*)&(m_vPrereqOrBuilding[i]), (int*)&(pClassInfo->m_vPrereqOrBuilding[i]));
-		}
-	}
+	GC.copyNonDefaultDelayedResolutionVector(m_vPrereqOrBuilding, pClassInfo->m_vPrereqOrBuilding);
+
 	if (getNumReplacementBuilding() == 0)
 	{
 		const short iNum = pClassInfo->getNumReplacementBuilding();
