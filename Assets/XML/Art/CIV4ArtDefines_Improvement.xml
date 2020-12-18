@@ -85,8 +85,8 @@
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_RADIO_TOWER</Type>
 			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
 			<NIF>Art/terrain/Improvements/RadioTower/RadioTower.nif</NIF>
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Builds/BuildRadioTower.dds</Button>
