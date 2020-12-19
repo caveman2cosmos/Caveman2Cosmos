@@ -1820,8 +1820,8 @@ void CvCityAI::AI_chooseProduction()
 	m_iTempBuildPriority--;
 
 	// Afforess - don't wait until we are in trouble, preventative medicine is best
-	int iFundedPercent = player.AI_costAsPercentIncome();
-	int iSafePercent = player.AI_safeCostAsPercentIncome();
+	int iFundedPercent = player.AI_profitMargin();
+	int iSafePercent = player.AI_safeProfitMargin();
 	// if ( bFinancialTrouble )
 	if (iFundedPercent < iSafePercent - 10)
 	{
@@ -4506,10 +4506,37 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 			{
 				PROFILE("CvCityAI::AI_bestBuildingThreshold.EnablesOthers");
 
+				CvGameObjectCity* pObject = const_cast<CvGameObjectCity*>(getGameObject());		
+				// add the extra building and its bonuses to the override to see if they influence the construct condition of this building
+				std::vector<GOMOverride> queries;
+				GOMOverride query = { pObject, GOM_BUILDING, eBuilding, true };
+				queries.push_back(query);
+				query.GOM = GOM_BONUS;
+				query.id = buildingInfo.getFreeBonus();
+				if (query.id != NO_BONUS)
+				{
+					queries.push_back(query);
+				}
+				for (int iJ = 0; iJ < buildingInfo.getNumExtraFreeBonuses(); iJ++)
+				{
+					query.id = buildingInfo.getExtraFreeBonus(iJ);
+					queries.push_back(query);
+				}
+
 				// TODO OPT: convert the masks to vectors so this look is faster
 				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 				{
-					if ((GC.getBuildingInfo((BuildingTypes)iI).isPrereqInCityBuilding(eBuilding) || GC.getBuildingInfo((BuildingTypes)iI).isPrereqOrBuilding(eBuilding))
+					// check if this building enables the construct condition of another building
+					bool bEnablesCondition = false;
+					BoolExpr* condition = GC.getBuildingInfo((BuildingTypes)iI).getConstructCondition();
+					if (condition != NULL)
+					{
+						if (condition->evaluateChange(pObject, &(*queries.begin()), &(*queries.end())) == BOOLEXPR_CHANGE_BECOMES_TRUE)
+						{
+							bEnablesCondition = true;
+						}
+					}
+					if ((bEnablesCondition || GC.getBuildingInfo((BuildingTypes)iI).isPrereqInCityBuilding(eBuilding) || GC.getBuildingInfo((BuildingTypes)iI).isPrereqOrBuilding(eBuilding))
 					&& getNumBuilding((BuildingTypes)iI) == 0 && canConstructInternal((BuildingTypes)iI, false, false, false, true, eBuilding))
 					{
 						PROFILE("AI_bestBuildingThreshold.Enablement");
@@ -5287,6 +5314,23 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					iValue += iTempValue;
 					if ((!isDevelopingCity() || isCapital()) && kBuilding.EnablesUnits())
 					{
+						CvGameObjectCity* pObject = const_cast<CvGameObjectCity*>(getGameObject());
+						// add the extra building and its bonuses to the override to see if they influence the train condition of a unit
+						std::vector<GOMOverride> queries;
+						GOMOverride query = { pObject, GOM_BUILDING, eBuilding, true };
+						queries.push_back(query);
+						query.GOM = GOM_BONUS;
+						query.id = kBuilding.getFreeBonus();
+						if (query.id != NO_BONUS)
+						{
+							queries.push_back(query);
+						}
+						for (int iJ = 0; iJ < kBuilding.getNumExtraFreeBonuses(); iJ++)
+						{
+							query.id = kBuilding.getExtraFreeBonus(iJ);
+							queries.push_back(query);
+						}
+
 						for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 						{
 							const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
@@ -14792,20 +14836,48 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 			if (building.EnablesOtherBuildings())
 			{
+				CvGameObjectCity* pObject = const_cast<CvGameObjectCity*>(getGameObject());
+				
+				// add the extra building and its bonuses to the override to see if they influence the construct condition of this building
+				std::vector<GOMOverride> queries;
+				GOMOverride query = { pObject, GOM_BUILDING, eBuilding, true };
+				queries.push_back(query);
+				query.GOM = GOM_BONUS;
+				query.id = GC.getBuildingInfo(eBuilding).getFreeBonus();
+				if (query.id != NO_BONUS)
+				{
+					queries.push_back(query);
+				}
+				for (int iJ = 0; iJ < GC.getBuildingInfo(eBuilding).getNumExtraFreeBonuses(); iJ++)
+				{
+					query.id = GC.getBuildingInfo(eBuilding).getExtraFreeBonus(iJ);
+					queries.push_back(query);
+				}
+
 				for (int iJ = 0; iJ < iNumBuildings; iJ++)
 				{
 					const BuildingTypes eType = static_cast<BuildingTypes>(iJ);
-
-					if (buildingsToCalculate.find(eType) == buildingsToCalculate.end()
-					&&	(
-							GC.getBuildingInfo(eType).isPrereqInCityBuilding(iBuilding)
-							||
-							GC.getBuildingInfo(eType).isPrereqOrBuilding(iBuilding)
-						)
-					&& getNumBuilding(eType) == 0
-					&& canConstructInternal(eType, false, false, false, true, eBuilding))
+					if (buildingsToCalculate.find(eType) == buildingsToCalculate.end())
 					{
-						buildingsToCalculate.insert((BuildingTypes)iJ);
+						// check if this building enables the construct condition of another building
+						bool bEnablesCondition = false;
+						BoolExpr* condition = GC.getBuildingInfo(eType).getConstructCondition();
+						if (condition != NULL)
+						{
+							if (condition->evaluateChange(pObject, &(*queries.begin()), &(*queries.end())) == BOOLEXPR_CHANGE_BECOMES_TRUE)
+							{
+								bEnablesCondition = true;
+							}
+						}
+						if (bEnablesCondition || (GC.getBuildingInfo(eType).isPrereqInCityBuilding(iBuilding)
+							|| GC.getBuildingInfo(eType).isPrereqOrBuilding(iBuilding)))
+						{
+							if (getNumBuilding(eType) == 0 &&
+								canConstructInternal(eType, false, false, false, true, eBuilding))
+							{
+								buildingsToCalculate.insert(eType);
+							}
+						}
 					}
 				}
 			}
@@ -15303,6 +15375,23 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				{
 					PROFILE("CalculateAllBuildingValues.NotDeveloping");
 
+					CvGameObjectCity* pObject = const_cast<CvGameObjectCity*>(getGameObject());
+					// add the extra building and its bonuses to the override to see if they influence the train condition of a unit
+					std::vector<GOMOverride> queries;
+					GOMOverride query = { pObject, GOM_BUILDING, eBuilding, true };
+					queries.push_back(query);
+					query.GOM = GOM_BONUS;
+					query.id = kBuilding.getFreeBonus();
+					if (query.id != NO_BONUS)
+					{
+						queries.push_back(query);
+					}
+					for (int iJ = 0; iJ < kBuilding.getNumExtraFreeBonuses(); iJ++)
+					{
+						query.id = kBuilding.getExtraFreeBonus(iJ);
+						queries.push_back(query);
+					}
+
 					for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 					{
 						const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
@@ -15327,6 +15416,16 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 						if (bUnitIsOtherwiseEnabled)
 						{
+							// check if this building enables the train condition of this unit
+							BoolExpr* condition = kUnit.getTrainCondition();
+							if (condition != NULL)
+							{
+								if (condition->evaluateChange(pObject, &(*queries.begin()), &(*queries.end())) == BOOLEXPR_CHANGE_BECOMES_TRUE)
+								{
+									bUnitIsEnabler = true;
+								}
+							}
+
 							bool bUnitIsBonusEnabled = true;
 							if (kUnit.getPrereqAndBonus() != NO_BONUS && !hasBonus((BonusTypes)kUnit.getPrereqAndBonus()))
 							{

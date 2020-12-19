@@ -1896,12 +1896,30 @@ int CvBuildingInfo::getMaxCultureLevelAllowed() const
 
 bool CvBuildingInfo::EnablesOtherBuildings() const
 {
-	if ( !m_bEnablesOtherBuildingsCalculated )
+	if (!m_bEnablesOtherBuildingsCalculated)
 	{
 		const int iId = GC.getInfoTypeForString(getType());
 
 		m_bEnablesOtherBuildingsCalculated = true;
 		m_bEnablesOtherBuildingsValue = false;
+
+		// add the building and its bonuses to the query to see if they influence the construct condition of a building
+		std::vector<GOMQuery> queries;
+		GOMQuery query;
+		query.GOM = GOM_BUILDING;
+		query.id = iId;
+		queries.push_back(query);
+		query.GOM = GOM_BONUS;
+		query.id = getFreeBonus();
+		if (query.id != NO_BONUS)
+		{
+			queries.push_back(query);
+		}
+		for (int iJ = 0; iJ < getNumExtraFreeBonuses(); iJ++)
+		{
+			query.id = getExtraFreeBonus(iJ);
+			queries.push_back(query);
+		}
 
 		for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 		{
@@ -1970,9 +1988,37 @@ bool CvBuildingInfo::EnablesUnits() const
 		m_bEnablesUnitsCalculated = true;
 		m_bEnablesUnits = false;
 
+		// add the building and its bonuses to the query to see if they influence the construct condition of a building
+		std::vector<GOMQuery> queries;
+		GOMQuery query;
+		query.GOM = GOM_BUILDING;
+		query.id = eBuilding;
+		queries.push_back(query);
+		query.GOM = GOM_BONUS;
+		query.id = getFreeBonus();
+		if (query.id != NO_BONUS)
+		{
+			queries.push_back(query);
+		}
+		for (int iJ = 0; iJ < getNumExtraFreeBonuses(); iJ++)
+		{
+			query.id = getExtraFreeBonus(iJ);
+			queries.push_back(query);
+		}
+
 		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
 			const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
+
+			BoolExpr* condition = kUnit.getTrainCondition();
+			if (condition != NULL)
+			{
+				if (condition->getInvolvesGOM(&(*queries.begin()), &(*queries.end())))
+				{
+					m_bEnablesUnits = true;
+					return m_bEnablesUnits;
+				}
+			}
 
 			if (kUnit.isPrereqAndBuilding(eBuilding))
 			{
@@ -5368,15 +5414,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 			GC.copyNonDefaultDelayedResolution((int*)&(m_aiPrereqInCityBuildings[i]), (int*)&(pClassInfo->m_aiPrereqInCityBuildings[i]));
 		}
 	}
-	if (getNumPrereqOrBuilding() == 0)
-	{
-		const short iNum = pClassInfo->getNumPrereqOrBuilding();
-		m_vPrereqOrBuilding.resize(iNum);
-		for (short i = 0; i < iNum; i++)
-		{
-			GC.copyNonDefaultDelayedResolution((int*)&(m_vPrereqOrBuilding[i]), (int*)&(pClassInfo->m_vPrereqOrBuilding[i]));
-		}
-	}
+	GC.copyNonDefaultDelayedResolutionVector(m_vPrereqOrBuilding, pClassInfo->m_vPrereqOrBuilding);
+
 	if (getNumReplacementBuilding() == 0)
 	{
 		const short iNum = pClassInfo->getNumReplacementBuilding();

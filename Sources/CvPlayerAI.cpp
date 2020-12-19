@@ -4097,9 +4097,9 @@ bool CvPlayerAI::AI_avoidScience() const
 	return false;
 }
 
-int CvPlayerAI::AI_safeCostAsPercentIncome() const
+int CvPlayerAI::AI_safeProfitMargin() const
 {
-	int iSafePercent = GC.getDefineINT("SAFE_GOLD_PERCENT");
+	int iSafePercent = GC.getDefineINT("SAFE_PROFIT_MARGIN_BASE_PERCENT");
 
 	if (GC.getGame().isOption(GAMEOPTION_REVOLUTION))
 	{
@@ -4150,12 +4150,12 @@ int CvPlayerAI::AI_safeCostAsPercentIncome() const
 	return iSafePercent;
 }
 
-int CvPlayerAI::AI_costAsPercentIncome(int iExtraCost) const
+int CvPlayerAI::AI_profitMargin(int iExtraCost) const
 {
 	PROFILE_FUNC();
 
 	const int iTotalCommerce = calculateTotalYield(YIELD_COMMERCE);
-	const int iBaseNetCommerce = 1 + getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
+	const int iBaseNetCommerce = getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
 
 	// Afforess - iExtraCost lets us "extrapolate" our cost percents if we have extra future expenses
 	// iExtraCost should be between 0 (default) and some positive extra gold per turn cost to us
@@ -4168,64 +4168,64 @@ int CvPlayerAI::AI_costAsPercentIncome(int iExtraCost) const
 	}
 	const int iNetCommerce = iBaseNetCommerce + (100 - getCommercePercent(COMMERCE_GOLD)) * iTotalCommerce / 100;
 
-	//	Koshling - we're never in financial trouble if we can run at current deficits for more than
-	//	50 turns and stay in healthy territory (100 + 100*era as per REV calculation), so claim full
-	//	funding or even excess funding in such a case!
-	int iEraGoldThreshold = 100 + 100 * GC.getGame().getCurrentEra();
-
-	if (getGold() > iEraGoldThreshold
 	// Don't exempt it if we're forcing science below 50 to achieve this
-	&& (AI_avoidScience() || getCommercePercent(COMMERCE_RESEARCH) > 50)
-	&& (iNetCommerce - iNetExpenses >= 0 || getGold() + 50 * (iNetCommerce - iNetExpenses) > iEraGoldThreshold))
+	if (AI_avoidScience() || getCommercePercent(COMMERCE_RESEARCH) > 50)
 	{
-		int64_t iValue = 100 + getGold() / iEraGoldThreshold;
-
-		if (iNetCommerce < iNetExpenses)
+		// Toffer - Gamespeed (GS) influence the value of gold, so scale gold treshold to GS, era is exponential factor.
+		//	Prehistoric: 25 gold (ultrafast); 100 gold (normal); 1000 gold (eternity)
+		//	Ancient: 50 gold (ultrafast); 200 gold (normal); 2000 gold (eternity)
+		//	Classical: 125 gold (ultrafast); 500 gold (normal); 5000 gold (eternity)
+		const int iModGS = GC.getHandicapInfo(GC.getGame().getHandicapType()).getConstructPercent();
+		const int iEra = GC.getGame().getCurrentEra();
+		const int iEraGoldThreshold = (1 + iEra * iEra) * iModGS / 2;
+		if (iNetCommerce - iNetExpenses >= 0
+		// Losing gold per turn, can we keep this up for X number of turns without going below era treshold
+		// X is: 2 (ultrafast); 10 (normal); 100 (eternity). Need more time to react on  slower GS.
+		// Koshling - we're never in financial trouble if we can run at current deficits for more than
+		//	X (GS scaled) turns and stay in healthy territory, so claim full or even excess funding in such a case!
+		|| getGold() + (iNetCommerce - iNetExpenses) * iModGS / 10 > iEraGoldThreshold)
 		{
-			//	Each 10 turns we can fund entirely out of treasury, even with the deficit, add 1%
-			const int64_t iFundableTurns = (getGold() - iEraGoldThreshold) / (iNetExpenses - iNetCommerce);
+			int64_t iValue = 100 + getGold() / iEraGoldThreshold;
 
-			//	Turns under 100 fundable slightly reduce over funding reported
-			if (iFundableTurns < 100)
+			if (iNetCommerce < iNetExpenses)
 			{
-				iValue -= (100 - iFundableTurns);
-				if (iValue < 100)
+				//	Each 10 turns we can fund entirely out of treasury, even with the deficit, add 1%
+				const int64_t iFundableTurns = (getGold() - iEraGoldThreshold) / (iNetExpenses - iNetCommerce);
+
+				//	Turns under 100 fundable slightly reduce over funding reported
+				if (iFundableTurns < 100)
 				{
-					// We know we are still at least fully funded - its only over-funding we're reducing
-					iValue = 100;
+					iValue -= (100 - iFundableTurns);
+					if (iValue < 100)
+					{
+						// We know we are still at least fully funded - its only over-funding we're reducing
+						iValue = 100;
+					}
 				}
 			}
+			if (iValue > MAX_INT)
+			{
+				FAssert(false);
+				return MAX_INT;
+			}
+			return static_cast<int>(iValue);
 		}
-		if (iValue > MAX_INT)
-		{
-			FAssert(false);
-			return MAX_INT;
-		}
-		return static_cast<int>(iValue);
 	}
 	return static_cast<int>(100 * (iNetCommerce - iNetExpenses) / std::max(1, iNetCommerce));
 }
 
-//	Calculate a (percentage) modifier the AI can apply to gold to determine
-//	how to value it
+// Calculate a (percentage) modifier the AI can apply to gold to determine how to value it
 int CvPlayerAI::AI_goldValueAssessmentModifier() const
 {
-	int iFundedPercent = AI_costAsPercentIncome();
-	int iSafePercent = AI_safeCostAsPercentIncome();
-
-	//	Normalize funded percent by safe percent
-	int	iModifier = (100*iSafePercent)/std::max(1,iFundedPercent);
-
-	//	If we're only just funding at the safety level that's not good - rate that as 150% valuation for gold
-	return (iModifier*3)/2;
+	// If we're only just funding at the safety level that's not good - rate that as 150% valuation for gold
+	return 150 * AI_safeProfitMargin() / std::max(1, AI_profitMargin());
 }
 
-// XXX
+
 bool CvPlayerAI::AI_isFinancialTrouble() const
 {
 	PROFILE_FUNC();
-
-	return !isNPC() && AI_costAsPercentIncome() < AI_safeCostAsPercentIncome();
+	return !isNPC() && AI_profitMargin() < AI_safeProfitMargin();
 }
 
 int CvPlayerAI::AI_goldTarget() const
@@ -18007,8 +18007,8 @@ void CvPlayerAI::AI_doMilitary()
 		{
 			for (int iPass = 0; iPass < 4; iPass++)
 			{
-				int iFundedPercent = AI_costAsPercentIncome();
-				int iSafePercent = AI_safeCostAsPercentIncome();
+				int iFundedPercent = AI_profitMargin();
+				int iSafePercent = AI_safeProfitMargin();
 				int iSafeBuffer = (1 + iPass) * 5; // this prevents the AI from disbanding their elite units unless the financial trouble is very severe
 				while (iFundedPercent < iSafePercent-iSafeBuffer && getUnitUpkeepMilitaryNet() > 0)
 				{
@@ -18025,7 +18025,7 @@ void CvPlayerAI::AI_doMilitary()
 						break;
 					}
 					//Recalculate funding
-					iFundedPercent = AI_costAsPercentIncome();
+					iFundedPercent = AI_profitMargin();
 				}
 			}
 		}
