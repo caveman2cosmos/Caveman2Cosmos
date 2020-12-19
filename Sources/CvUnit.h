@@ -1200,13 +1200,6 @@ public:
 	int getAlwaysInvisibleCount() const;
 	void changeAlwaysInvisibleCount(int iChange);
 
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 16.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: New Tag Definition                                                               **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
 	int getDefensiveVictoryMoveCount() const;
 	bool isDefensiveVictoryMove() const;
 	void changeDefensiveVictoryMoveCount(int iChange);
@@ -1219,14 +1212,9 @@ public:
 	bool isOffensiveVictoryMove() const;
 	void changeOffensiveVictoryMoveCount(int iChange);
 
-//Team Project (2)
 	int getOneUpCount() const;
 	bool isOneUp() const;
 	void changeOneUpCount(int iChange);
-
-	int getPillageCultureCount() const;
-	bool isPillageCulture() const;
-	void changePillageCultureCount(int iChange);
 
 	int getPillageEspionageCount() const;
 	bool isPillageEspionage() const;
@@ -1266,7 +1254,6 @@ public:
 	int getExtraDropRange() const;
 	void changeExtraDropRange(int iChange);
 
-//Team Project (2)
 	int getSurvivorChance() const;
 	void changeSurvivorChance(int iChange);
 
@@ -1276,12 +1263,8 @@ public:
 	int getVictoryHeal() const;
 	void changeVictoryHeal(int iChange);
 
-//Team Project (2)
 	int getVictoryStackHeal() const;
 	void changeVictoryStackHeal(int iChange);
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
 
 	int getExtraVisibilityRange() const;
 	void changeExtraVisibilityRange(int iChange);

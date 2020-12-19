@@ -9,18 +9,6 @@
 
 	<options id="RoMSettings" file="RoMSettings.ini">
 		<section id="ROMResources">
-			<option id="RoMResourceBar" key="RoMResourceBar" type="boolean" default="False" get="isShowResourceBar" dirtyBit="GameData"/>
-
-			<list id="RoMResourceBar_Types" key="Resource Display Types" type="int" default="0" listType="string"
-				values="All|Rush|Strategic|Manufactured|Food|Luxury" get="getRoMResourceBarTypes" dirtyBit="GameData">
-
-				<choice id="All" get="isResourceBarTypesAll"/>
-				<choice id="Rush" get="isResourceBarTypesRush"/>
-				<choice id="Strategic" get="isResourceBarTypesStrategic"/>
-				<choice id="Manufactured" get="isResourceBarTypesManufactured"/>
-				<choice id="Food" get="isResourceBarTypesFood"/>
-				<choice id="Luxury" get="isResourceBarTypesLuxury"/>
-			</list>
 
 			<option id="RoMReset" key="RoMReset" type="boolean" default="False" get="isRoMReset" set="setRoMReset">
 				<change module="ANewDawnSettings" function="changedRoMReset"/>

@@ -13,6 +13,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvXMLLoadUtility.h"
 
 using namespace std;
 

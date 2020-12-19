@@ -752,31 +752,6 @@ class CvEventManager:
 				KEY = aWonderTuple[0][i]
 				if KEY == "WORLD_BANK":
 					CyPlayer.changeGold(CyPlayer.getGold()//200)
-				elif KEY == "ZIZKOV":
-					MAP = GC.getMap()
-					iPlayerAct = GAME.getActivePlayer()
-					TECH_SATELLITES = self.TECH_SATELLITES
-					iChance = 50 + (MAP.getWorldSize() + 3)**2 + 64 * self.iVictoryDelayPrcntGS / 100
-					iTeam = CyPlayer.getTeam()
-					for iPlayerX in xrange(self.MAX_PC_PLAYERS):
-						CyPlayerX = GC.getPlayer(iPlayerX)
-						if not CyPlayerX.isAlive():
-							continue
-						iTeamX = CyPlayerX.getTeam()
-						if iTeamX == iTeam:
-							continue
-						CyTeamX = GC.getTeam(iTeamX)
-						if CyTeamX.isVassal(iTeam):
-							continue
-						if TECH_SATELLITES > -1 and CyTeamX.isHasTech(TECH_SATELLITES):
-							continue
-
-						if not GAME.getSorenRandNum(iChance, "Zizkov"):
-							GC.getMap().resetRevealedPlots(iTeamX)
-							if iPlayer == iPlayerAct:
-								CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MSG_ZIZKOV_YOU", (CyPlayerX.getCivilizationDescription(0),)), iPlayer)
-							elif iPlayerX == iPlayerAct:
-								CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MSG_ZIZKOV",()), iPlayerX)
 
 				elif KEY == "CYRUS_CYLINDER":
 					if not iGameTurn % (4*self.iVictoryDelayPrcntGS/100 + 1):
@@ -1403,7 +1378,7 @@ class CvEventManager:
 						continue
 					# Covers whole map for others
 					GC.getMap().resetRevealedPlots(iTeamX)
-				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_GLOBAL_JAM",()))
+				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_MSG_ZIZKOV_JAM",()))
 			elif KEY == "TSUKIJI":
 				CyTeam = GC.getTeam(CyPlayer.getTeam())
 				BOAT = GC.getInfoTypeForString("IMPROVEMENT_FISHING_BOATS")

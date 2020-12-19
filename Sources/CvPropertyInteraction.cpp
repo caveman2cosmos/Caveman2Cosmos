@@ -10,6 +10,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
+#include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 
 CvPropertyInteraction::CvPropertyInteraction() : 

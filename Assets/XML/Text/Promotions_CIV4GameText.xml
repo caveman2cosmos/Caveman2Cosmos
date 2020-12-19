@@ -6357,13 +6357,6 @@
 		<German>Ozeanien</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CULTURE_PILLAGE_TEXT</Tag>
-		<English>[ICON_BULLET]Pillages [ICON_CULTURE] in addition to [ICON_GOLD]</English>
-		<French>[ICON_BULLET]Récupère de la [ICON_CULTURE] en plus de l'[ICON_GOLD] lors des pillages</French>
-		<Spanish>[ICON_BULLET]Saquea [ICON_CULTURE] además de [ICON_GOLD]</Spanish>
-		<Polish>[ICON_BULLET]Plądrowanie [ICON_CULTURE] oprócz [ICON_GOLD]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_SOUTH_AMERICAN</Tag>
 		<English>South American</English>
 		<French>Sud-américain</French>

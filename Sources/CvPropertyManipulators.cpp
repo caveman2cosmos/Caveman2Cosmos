@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 
 CvPropertyManipulators::~CvPropertyManipulators()

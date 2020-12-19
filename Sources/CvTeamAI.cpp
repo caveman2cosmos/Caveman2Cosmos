@@ -4008,8 +4008,8 @@ void CvTeamAI::AI_doWar()
 				iAbandonTimeModifier /= 150;
 
 				//Afforess - abandon plans more quickly in financial distress
-				int iFundedPercent = GET_PLAYER(getLeaderID()).AI_costAsPercentIncome(iExtraWarExpenses);
-				int iSafePercent = GET_PLAYER(getLeaderID()).AI_safeCostAsPercentIncome();
+				int iFundedPercent = GET_PLAYER(getLeaderID()).AI_profitMargin(iExtraWarExpenses);
+				int iSafePercent = GET_PLAYER(getLeaderID()).AI_safeProfitMargin();
 
 				if (iSafePercent > iFundedPercent)
 				{
@@ -4364,8 +4364,8 @@ void CvTeamAI::AI_doWar()
 		//Base financial stats off team lead player, likely other team members (vassals) are not doing "better" than the leader.
 		CvPlayerAI &kTeamLeader = GET_PLAYER(getLeaderID());
 
-		int iFundedPercent = kTeamLeader.AI_costAsPercentIncome(iExtraWarExpenses);
-		int iSafePercent = kTeamLeader.AI_safeCostAsPercentIncome();
+		int iFundedPercent = kTeamLeader.AI_profitMargin(iExtraWarExpenses);
+		int iSafePercent = kTeamLeader.AI_safeProfitMargin();
 		if (gTeamLogLevel >= 1)
 		{
 			logBBAI("  Team %d (%S) estimating warplan financial costs, iExtraWarExpenses: %d, iFundedPercent: %d, iSafePercent: %d", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0), iExtraWarExpenses, iFundedPercent, iSafePercent);
@@ -4384,14 +4384,14 @@ void CvTeamAI::AI_doWar()
 		{
 			// Afforess - It is possible a more limited war could be cheaper
 			// Account for that here
-			int iLimitedWarFundedPercent = kTeamLeader.AI_costAsPercentIncome(iExtraWarExpenses / 2);
+			int iLimitedWarFundedPercent = kTeamLeader.AI_profitMargin(iExtraWarExpenses / 2);
 			if (gTeamLogLevel >= 1)
 			{
 				logBBAI("  Team %d (%S) estimating LIMITED warplan financial costs, iExtraWarExpenses: %d, iLimitedWarFundedPercent: %d, iSafePercent: %d", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0), iExtraWarExpenses / 2, iLimitedWarFundedPercent, iSafePercent);
 			}
 			bFinancesProLimitedWar = iLimitedWarFundedPercent > iSafePercent;
 
-			int iDogPileFundedPercent = kTeamLeader.AI_costAsPercentIncome(iExtraWarExpenses / 3);
+			int iDogPileFundedPercent = kTeamLeader.AI_profitMargin(iExtraWarExpenses / 3);
 			if (gTeamLogLevel >= 1)
 			{
 				logBBAI("  Team %d (%S) estimating DOGPILE warplan financial costs, iExtraWarExpenses: %d, iDogPileFundedPercent: %d, iSafePercent: %d", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0), iExtraWarExpenses / 3, iDogPileFundedPercent, iSafePercent);

@@ -27,14 +27,13 @@ inline int coordRange(int iCoord, int iRange, bool bWrap)
 	{
 		if (iCoord < 0 )
 		{
-			return (iRange + (iCoord % iRange));
+			return iRange + (iCoord % iRange);
 		}
-		else if (iCoord >= iRange)
+		if (iCoord >= iRange)
 		{
-			return (iCoord % iRange);
+			return iCoord % iRange;
 		}
 	}
-
 	return iCoord;
 }
 
@@ -62,8 +61,6 @@ protected:
 	void setup();
 
 public:
-	//int percentUnoccupiedLand(bool bExcludeWater = true, bool bIncludeBarbarian = false, bool bExcludePeaks = true, CvArea* pArea = NULL, int iRange = -1, CvPlot* pRangeFromPlot = NULL);
-
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
@@ -223,24 +220,15 @@ public:
 	CvArea* nextArea(int *pIterIdx, bool bRev=false) const;
 
 	void recalculateAreas();
-
 	void resetPathDistance();
-	// Super Forts begin *canal* *choke*
+
+	// Super Forts *canal* *choke*
 	int calculatePathDistance(const CvPlot* pSource, const CvPlot* pDest, const CvPlot* pInvalidPlot = NULL) const;
 	void calculateCanalAndChokePoints();
-	// Super Forts end
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
 	// Plot danger cache
 	void invalidateIsActivePlayerNoDangerCache();
 	void invalidateIsTeamBorderCache(TeamTypes eTeam);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	// Serialization:
 	 virtual void read(FDataStreamBase* pStream);

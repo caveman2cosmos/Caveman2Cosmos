@@ -19,26 +19,11 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GAZELLE_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GEMSBOK_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_IMPALA_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SAIGA_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_WILDEBEEST_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_GAZELLE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_GEMSBOK_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_IMPALA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SAIGA_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_WILDEBEEST_MYTH_EFFECT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
@@ -274,14 +259,8 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_AFRICANELEPHANT_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_ASIANELEPHANT_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_AFRICANELEPHANT_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ASIANELEPHANT_MYTH_EFFECT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
@@ -611,26 +590,11 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_JAGUAR_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CHEETAH_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_LYNX_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PANTHER_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SNOW_LEOPARD_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_JAGUAR_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_CHEETAH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_LYNX_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_PANTHER_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SNOW_LEOPARD_MYTH_EFFECT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
@@ -776,18 +740,9 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SEA_OTTER_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SKUNK_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_WOLVERINE_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_SEA_OTTER_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SKUNK_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_WOLVERINE_MYTH_EFFECT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>

@@ -446,7 +446,7 @@ enum WidgetTypes
 	WIDGET_HELP_RELIGION_CITY,
 	WIDGET_HELP_CORPORATION_CITY,
 	WIDGET_HELP_NATIONALITY,
-	WIDGET_HELP_DEFENSE,
+	WIDGET_UNUSED_40, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
 	WIDGET_HELP_HEALTH,
 	WIDGET_HELP_HAPPINESS,
 	WIDGET_HELP_POPULATION,
@@ -497,7 +497,7 @@ enum WidgetTypes
 	WIDGET_HELP_FOUND_RELIGION,
 	WIDGET_HELP_FOUND_CORPORATION,
 	WIDGET_HELP_FINANCE_NUM_UNITS,
-	WIDGET_UNUSED_50, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
+	WIDGET_HELP_IMPROVEMENT_ACTUAL,
 	WIDGET_HELP_FINANCE_AWAY_SUPPLY,
 	WIDGET_HELP_FINANCE_CITY_MAINT,
 	WIDGET_HELP_FINANCE_CIVIC_UPKEEP,
@@ -530,58 +530,40 @@ enum WidgetTypes
 	WIDGET_PEDIA_JUMP_TO_FEATURE,
 	WIDGET_TURN_EVENT,
 	WIDGET_FOREIGN_ADVISOR,
-	WIDGET_REVOLUTION,
+	WIDGET_HELP_BUILDUP,
 	WIDGET_PEDIA_DESCRIPTION,
 	WIDGET_PEDIA_DESCRIPTION_NO_HELP,
 	WIDGET_DEAL_KILL,
 	WIDGET_MINIMAP_HIGHLIGHT,
-	WIDGET_PRODUCTION_MOD_HELP,
+	WIDGET_PEDIA_JUMP_TO_ROUTE,
 	WIDGET_LEADERHEAD,
 	WIDGET_LEADER_LINE,
 	WIDGET_COMMERCE_MOD_HELP,
-	WIDGET_CLOSE_SCREEN,
+	WIDGET_CLOSE_SCREEN, // Toffer - This widget enum seems to be hardcoded in exe, do not mess with this enum value.
 	WIDGET_PEDIA_JUMP_TO_RELIGION,
 	WIDGET_PEDIA_JUMP_TO_CORPORATION,
 	WIDGET_GLOBELAYER,
 	WIDGET_GLOBELAYER_OPTION,
 	WIDGET_GLOBELAYER_TOGGLE,
 
-// BUG - Min/Max Commerce Rate - start
 	WIDGET_SET_PERCENT,
-// BUG - Min/Max Commerce Rate - end
 
-// BUG - Finance Advisor - start
 	WIDGET_HELP_FINANCE_DOMESTIC_TRADE,
 	WIDGET_HELP_FINANCE_FOREIGN_TRADE,
 	WIDGET_HELP_FINANCE_SPECIALISTS,
-// BUG - Finance Advisor - end
 
-// BUG - Trade Denial - start
 	WIDGET_PEDIA_JUMP_TO_BONUS_TRADE,
 	WIDGET_PEDIA_JUMP_TO_TECH_TRADE,
-// BUG - Trade Denial - end
 
-// BUG - Foreign Advisor INFO Trade - start
 	WIDGET_TRADE_ROUTES,
-// BUG - Foreign Advisor INFO Trade - end
 
-// BUG - Food Rate Hover - start
 	WIDGET_FOOD_MOD_HELP,
-// BUG - Food Rate Hover - end
 
-// BUG - Leaderhead Relations - start
 	WIDGET_LEADERHEAD_RELATIONS,
-// BUG - Leaderhead Relations - end
-/************************************************************************************************/
-/* Afforess	                  Start		 01/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	WIDGET_HELP_EMPLOYMENT,
 	WIDGET_HELP_IMPROVEMENT_CAN_UPGRADE,
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	WIDGET_BUILDING_FILTER,
 	WIDGET_BUILDING_GROUPING,
 	WIDGET_BUILDING_SORT,
@@ -601,9 +583,6 @@ enum WidgetTypes
 	WIDGET_PEDIA_JUMP_TO_TRAIT,
 	//ls612: Viewport Goto Helper Widget
 	WIDGET_CITY_GOTO,
-	WIDGET_PEDIA_JUMP_TO_ROUTE,
-	WIDGET_HELP_IMPROVEMENT_ACTUAL,
-	WIDGET_HELP_BUILDUP,
 
 	NUM_WIDGET_TYPES
 };

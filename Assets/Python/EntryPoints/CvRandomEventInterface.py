@@ -480,8 +480,8 @@ def canApplyLooters3(argsList):
 		iCost = info.getProductionCost()
 		if iCost <= iTreshold and iCost > 0:
 
-			for i in xrange(info.getNumReplacementBuilding()):
-				if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
+			for j in xrange(info.getNumReplacementBuilding()):
+				if CyCity.getNumRealBuilding(info.getReplacementBuilding(j)):
 					break
 			else: return True
 
@@ -507,8 +507,8 @@ def applyLooters3(argsList):
 		iCost = info.getProductionCost()
 		if iCost <= iTreshold and iCost > 0:
 
-			for i in xrange(info.getNumReplacementBuilding()):
-				if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
+			for j in xrange(info.getNumReplacementBuilding()):
+				if CyCity.getNumRealBuilding(info.getReplacementBuilding(j)):
 					break
 			else: aList.append(i)
 
@@ -599,8 +599,8 @@ def canApplyHurricane1(argsList):
 		info = GC.getBuildingInfo(i)
 		if info.isNukeImmune() or info.isAutoBuild() or info.getProductionCost() < 1:
 			continue
-		for i in xrange(info.getNumReplacementBuilding()):
-			if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
+		for j in xrange(info.getNumReplacementBuilding()):
+			if CyCity.getNumRealBuilding(info.getReplacementBuilding(j)):
 				break
 		else: return True
 	return False
@@ -624,8 +624,8 @@ def applyHurricane1(argsList):
 		if info.isNukeImmune() or info.isAutoBuild() or info.getProductionCost() < 1:
 			continue
 
-		for i in xrange(info.getNumReplacementBuilding()):
-			if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
+		for j in xrange(info.getNumReplacementBuilding()):
+			if CyCity.getNumRealBuilding(info.getReplacementBuilding(j)):
 				break
 		else: aList.append(i)
 
@@ -700,16 +700,16 @@ def applyTsunami2(argsList):
 	CyCity = CyPlayer.getCity(kTriggeredData.iCityId)
 
 	listBuildings = []
-	for j in xrange(GC.getNumBuildingInfos()):
-		if isLimitedWonder(j) or CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1:
+	for i in xrange(GC.getNumBuildingInfos()):
+		if isLimitedWonder(i) or CyTeam.isObsoleteBuilding(i) or CyCity.getNumRealBuilding(i) < 1:
 			continue
-		info = GC.getBuildingInfo(j)
+		info = GC.getBuildingInfo(i)
 		if info.getProductionCost() > 0 and not info.isAutoBuild():
 
-			for i in xrange(info.getNumReplacementBuilding()):
-				if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
+			for j in xrange(info.getNumReplacementBuilding()):
+				if CyCity.getNumRealBuilding(info.getReplacementBuilding(j)):
 					break
-			else: listBuildings.append(j)
+			else: listBuildings.append(i)
 
 	for i in xrange(5):
 		if len(listBuildings) > 0:
@@ -7516,8 +7516,8 @@ def doMinorFire(argsList):
 		if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
 			continue
 
-		for i in xrange(info.getNumReplacementBuilding()):
-			if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
+		for j in xrange(info.getNumReplacementBuilding()):
+			if CyCity.getNumRealBuilding(info.getReplacementBuilding(j)):
 				break
 		else:
 			randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
@@ -7552,14 +7552,14 @@ def doMajorFire(argsList):
 		if currFlamm <= iFlammEnd:
 			break
 		for j in xrange(GC.getNumBuildingInfos()):
-			if isLimitedWonder(j) or CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or CyCity.isFreeBuilding(i):
+			if isLimitedWonder(j) or CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or CyCity.isFreeBuilding(j):
 				continue
 			info = GC.getBuildingInfo(j)
 			if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
 				continue
 
-			for i in xrange(info.getNumReplacementBuilding()):
-				if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
+			for k in xrange(info.getNumReplacementBuilding()):
+				if CyCity.getNumRealBuilding(info.getReplacementBuilding(k)):
 					break
 			else:
 				randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
@@ -7569,8 +7569,12 @@ def doMajorFire(argsList):
 					iHighFlamm = iFlammScore
 					iBurnBuilding = j
 		if iBurnBuilding != -1:
-			szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBurnBuilding).getTextKey(), ))
-			CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBurnBuilding).getButton(), GC.getInfoTypeForString("COLOR_RED"), CyCity.getX(), CyCity.getY(), True, True)
+			CyInterface().addMessage(
+				kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(),
+				TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBurnBuilding).getTextKey(),)),
+				"AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBurnBuilding).getButton(),
+				GC.getInfoTypeForString("COLOR_RED"), CyCity.getX(), CyCity.getY(), True, True
+			)
 			CyCity.setNumRealBuilding(iBurnBuilding, 0)
 
 def doCatastrophicFire(argsList):
@@ -7604,13 +7608,13 @@ def doCatastrophicFire(argsList):
 		iHighFlamm = 0
 
 		for j in xrange(GC.getNumBuildingInfos()):
-			if isLimitedWonder(j) or CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or CyCity.isFreeBuilding(i):
+			if isLimitedWonder(j) or CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or CyCity.isFreeBuilding(j):
 				continue
 			info = GC.getBuildingInfo(j)
 			if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
 				continue
-			for i in xrange(info.getNumReplacementBuilding()):
-				if CyCity.getNumRealBuilding(info.getReplacementBuilding(i)):
+			for k in xrange(info.getNumReplacementBuilding()):
+				if CyCity.getNumRealBuilding(info.getReplacementBuilding(k)):
 					break
 			else:
 				iFlammScore = info.getProperties().getValueByProperty(iProp) + GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
@@ -8163,7 +8167,7 @@ def doRemoveWVSlavery(argsList):
 
 		iCost = player.getBuildingProductionNeeded(iSlaveMarket)
 		iSum = 0
-		for city in player.cites():
+		for city in player.cities():
 			if bMessage:
 				sCityName = city.getName()
 			iCityX = city.getX()
@@ -8201,28 +8205,28 @@ def doRemoveWVSlavery(argsList):
 						for j in xrange(iCount):
 							player.initUnit(iUnitEntertain, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 						if bMessage:
-							msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_STORY_TELLERS", (sCityName, iCount, "Story Tellers"))
+							msg = TRNSLTR.getText("TXT_KEY_MSG_FREED_SLAVES_AS", (sCityName, GC.getUnitInfo(iUnitEntertain).getDescription(), iCount))
 							CvUtil.sendMessage(msg, iPlayer, 12, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
 
 					elif i == iSlaveProd:
 						for j in xrange(iCount):
 							player.initUnit(iUnitMerCaravan, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 						if bMessage:
-							msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_CARAVANS", (sCityName, iCount, "Early Merchants"))
+							msg = TRNSLTR.getText("TXT_KEY_MSG_FREED_SLAVES_AS", (sCityName, GC.getUnitInfo(iUnitMerCaravan).getDescription(), iCount))
 							CvUtil.sendMessage(msg, iPlayer, 12, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
 
 					elif i == iSlaveFood:
 						for j in xrange(iCount):
 							player.initUnit(iUnitMerCaravan, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 						if bMessage:
-							msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_CARAVANS", (sCityName, iCount, "Early Food Merchants"))
+							msg = TRNSLTR.getText("TXT_KEY_MSG_FREED_SLAVES_AS", (sCityName, GC.getUnitInfo(iUnitMerCaravan).getDescription(), iCount))
 							CvUtil.sendMessage(msg, iPlayer, 12, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
 
 					elif i == iSlaveHealth:
 						for j in xrange(iCount):
 							player.initUnit(iUnitHealth, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 						if bMessage:
-							msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_HEALERS", (sCityName, iCount, "Healers"))
+							msg = TRNSLTR.getText("TXT_KEY_MSG_FREED_SLAVES_AS", (sCityName, GC.getUnitInfo(iUnitHealth).getDescription(), iCount))
 							CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
 
 					else: iFreeSlaves += iCount
@@ -8231,7 +8235,7 @@ def doRemoveWVSlavery(argsList):
 				for j in xrange(iFreeSlaves):
 					player.initUnit(iUnitFreedSlave, iCityX, iCityY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 				if bMessage:
-					msg = TRNSLTR.getText("TXT_MESSAGE_FREED_SLAVES_AS_FREED_SLAVES", (sCityName, iFreeSlaves))
+					msg = TRNSLTR.getText("TXT_KEY_MSG_FREED_SLAVES_AS", (sCityName, GC.getUnitInfo(iUnitFreedSlave).getDescription(), iFreeSlaves))
 					CvUtil.sendMessage(msg, iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iCityX, iCityY, True, True)
 
 		if iSum > 0:

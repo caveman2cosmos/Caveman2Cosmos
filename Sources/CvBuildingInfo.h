@@ -240,9 +240,13 @@ public:
 	bool isCommerceFlexible(int i) const;
 	bool isCommerceChangeOriginalOwner(int i) const;
 
-	int getPrereqInCityBuilding(int i) const;
-	int getNumPrereqInCityBuildings() const;
-	bool isPrereqInCityBuilding(int i) const;
+	int getPrereqOrBuilding(const int i) const;
+	short getNumPrereqOrBuilding() const;
+	bool isPrereqOrBuilding(const int i) const;
+
+	int getPrereqInCityBuilding(const int i) const;
+	short getNumPrereqInCityBuildings() const;
+	bool isPrereqInCityBuilding(const int i) const;
 
 	int getSpecialistYieldChange(int i, int j) const;
 	int* getSpecialistYieldChangeArray(int i) const;
@@ -304,10 +308,6 @@ public:
 	int getPrereqOrVicinityBonuses(int i) const;
 	const std::vector<BonusTypes> getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
 
-	bool isPrereqOrBuilding(int i) const;
-
-	bool isPrereqOrGameSpeed(int i) const;
-
 	bool isPrereqOrCivics(int iCivic) const;
 	bool isPrereqAndCivics(int iCivic) const;
 
@@ -339,11 +339,11 @@ public:
 	std::vector<CvString> m_aszUnitProdModforPass3;
 	std::vector<int> m_aiUnitProdModforPass3;
 
-	int getReplacementBuilding(int i) const;
+	int getReplacementBuilding(const int i) const;
 	short getNumReplacementBuilding() const;
 
-	void setReplacedBuilding(int i);
-	int getReplacedBuilding(int i) const;
+	void setReplacedBuilding(const int i);
+	int getReplacedBuilding(const int i) const;
 	short getNumReplacedBuilding() const;
 
 	int getImprovementYieldChanges(int i, int j) const;
@@ -598,7 +598,6 @@ protected:
 
 	int* m_piCommerceAttacks;
 
-	bool* m_pbPrereqOrGameSpeed;
 	bool* m_pbPrereqOrTerrain;
 	bool* m_pbPrereqAndTerrain;
 	bool* m_pbPrereqOrImprovement;
@@ -623,7 +622,6 @@ private:
 	int* m_piBuildingHappinessChanges;
 	int* m_piPrereqNumOfBuilding;
 	bool* m_pbPrereqNotBuilding;
-	bool* m_pbPrereqOrBuilding;
 
 	CvPropertyManipulators m_PropertyManipulators;
 
@@ -895,6 +893,7 @@ protected:
 
 	std::vector<int> m_aiPrereqInCityBuildings;
 	std::vector<int> m_aePrereqOrBonuses;
+	std::vector<int> m_vPrereqOrBuilding;
 	std::vector<int> m_vReplacementBuilding;
 	std::vector<int> m_vReplacedBuilding;
 public:

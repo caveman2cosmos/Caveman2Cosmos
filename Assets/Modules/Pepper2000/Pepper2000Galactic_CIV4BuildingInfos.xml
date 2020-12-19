@@ -1862,18 +1862,9 @@
 			</YieldChanges>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CULTURE_AGGRESSIVE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CULTURE_INDUSTRIOUS</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CULTURE_OBEDIENT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_CULTURE_AGGRESSIVE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_INDUSTRIOUS</BuildingType>
+				<BuildingType>BUILDING_CULTURE_OBEDIENT</BuildingType>
 			</PrereqOrBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
@@ -1896,14 +1887,8 @@
 				<iYield>100</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CULTURE_COMMERCIAL</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CULTURE_INDUSTRIOUS</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_CULTURE_COMMERCIAL</BuildingType>
+				<BuildingType>BUILDING_CULTURE_INDUSTRIOUS</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2250,14 +2235,8 @@
 			</YieldChanges>
 			<iHappiness>2</iHappiness>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
@@ -2290,14 +2269,8 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_INTERSTELLAR_METROPOLIS</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_INTERSTELLAR_METROPOLIS</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
@@ -2472,10 +2445,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2507,10 +2477,7 @@
 				<iYield>30</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2542,10 +2509,7 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2576,10 +2540,7 @@
 				<iYield>15</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2611,10 +2572,7 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2646,10 +2604,7 @@
 				<iYield>40</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2681,10 +2636,7 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2712,10 +2664,7 @@
 				<iYield>250</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2843,14 +2792,8 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_INTERSTELLAR_METROPOLIS</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_INTERSTELLAR_METROPOLIS</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 			<FreeBonus>BONUS_ADVANCED_REPLICATORS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -2878,10 +2821,7 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
 			</PrereqOrBuildings>
 			<FreeBonus>BONUS_WARP_DRIVES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -3306,14 +3246,8 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_INTERSTELLAR_FARM</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_INTERSTELLAR_FARM</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3773,14 +3707,8 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DYSON_SWARM</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_DYSON_SWARM</BuildingType>
+				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3806,14 +3734,8 @@
 				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_INTERSTELLAR_ASTEROID_MINE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_INTERSTELLAR_ASTEROID_MINE</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
@@ -4000,14 +3922,8 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_INTERSTELLAR_ASTEROID_MINE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_INTERSTELLAR_ASTEROID_MINE</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4120,14 +4036,8 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_COMET_DUST_COLLECTOR</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_COMET_DUST_COLLECTOR</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4367,14 +4277,8 @@
 				<BuildingType>BUILDING_ARTIFICIAL_MOON</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_COMET_DUST_COLLECTOR</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_COMET_DUST_COLLECTOR</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4487,14 +4391,8 @@
 				<iCommerce>125</iCommerce>
 			</CommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_INTERSTELLAR_DATA_COLLECTION</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_INTERSTELLAR_DATA_COLLECTION</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4714,14 +4612,8 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -5310,14 +5202,8 @@
 				<iCommerce>30</iCommerce>
 			</CommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -5603,14 +5489,8 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_INTERSTELLAR_METROPOLIS</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_INTERSTELLAR_METROPOLIS</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5688,14 +5568,8 @@
 			</CommerceChanges>
 			<iHappiness>3</iHappiness>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6004,14 +5878,8 @@
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_INTERSTELLAR_METROPOLIS</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_INTERSTELLAR_METROPOLIS</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6404,14 +6272,8 @@
 			</TechCommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CAPITAL_CITY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_CAPITAL_CITY</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
@@ -6547,14 +6409,8 @@
 				<iCommerce>-30</iCommerce>
 			</CommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DESIGNER_CASTE_LAW_ENFORCEMENT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_DESIGNER_CASTE_LAW_ENFORCEMENT</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -7160,14 +7016,8 @@
 			<iFoodKept>-10</iFoodKept>
 			<iMilitaryProductionModifier>100</iMilitaryProductionModifier>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+				<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>

@@ -305,3 +305,10 @@ std::wstring CyGameTextMgr::getFinanceUnitUpkeepString(int iPlayer)
 	GAMETEXT.buildFinanceUnitUpkeepString(szBuffer, (PlayerTypes) iPlayer);
 	return szBuffer.getCString();
 }
+
+std::wstring CyGameTextMgr::getDefenseHelp(CyCity *pCity)
+{
+	CvWStringBuffer szBuffer;
+	GAMETEXT.getDefenseHelp(szBuffer, *pCity->getCity());
+	return szBuffer.getCString();
+}
