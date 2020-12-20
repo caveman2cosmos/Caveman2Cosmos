@@ -683,6 +683,7 @@
 	<ElementType name="Goodies" content="eltOnly">
 		<element type="GoodyType" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="TechType" content="textOnly"/>
 	<ElementType name="HandicapInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
