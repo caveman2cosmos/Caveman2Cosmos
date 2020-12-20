@@ -1069,7 +1069,6 @@ void CvGame::initDiplomacy()
 void CvGame::initFreeState()
 {
 	const EraTypes iStartEra = getStartEra();
-	const CvHandicapInfo& handicap = GC.getHandicapInfo(getHandicapType());
 
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
@@ -1080,14 +1079,9 @@ void CvGame::initFreeState()
 			if (GET_TEAM((TeamTypes)iJ).isAlive())
 			{
 				bool bValid = false;
-				if (!bValid)
+				if (tech.getEra() < iStartEra && !tech.isDisable())
 				{
-					if (handicap.isFreeTechs(iI)
-					|| !GET_TEAM((TeamTypes)iJ).isHuman() && handicap.isAIFreeTechs(iI)
-					|| tech.getEra() < iStartEra && !tech.isDisable())
-					{
-						bValid = true;
-					}
+					bValid = true;
 				}
 
 				if (!bValid)
