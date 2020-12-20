@@ -13098,9 +13098,7 @@ m_iAIWarWearinessPercent(0),
 m_iAIPerEraModifier(0),
 m_iAIAdvancedStartPercent(0),
 m_iNumGoodies(0),
-m_piGoodies(NULL),
-m_pbFreeTechs(NULL),
-m_pbAIFreeTechs(NULL)
+m_piGoodies(NULL)
 
 ,m_iRevolutionIndexPercent(0)
 ,m_Percent()
@@ -13118,8 +13116,6 @@ m_pbAIFreeTechs(NULL)
 CvHandicapInfo::~CvHandicapInfo()
 {
 	SAFE_DELETE_ARRAY(m_piGoodies);
-	SAFE_DELETE_ARRAY(m_pbFreeTechs);
-	SAFE_DELETE_ARRAY(m_pbAIFreeTechs);
 }
 
 int CvHandicapInfo::getFreeWinsVsBarbs() const
@@ -13418,18 +13414,6 @@ int CvHandicapInfo::getGoodies(int i) const
 	return m_piGoodies[i];
 }
 
-int CvHandicapInfo::isFreeTechs(int i) const
-{
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), i)
-	return m_pbFreeTechs ? m_pbFreeTechs[i] : false;
-}
-
-int CvHandicapInfo::isAIFreeTechs(int i) const
-{
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), i)
-	return m_pbAIFreeTechs ? m_pbAIFreeTechs[i] : false;
-}
-
 int CvHandicapInfo::getPercent(int iID) const
 {
 	return m_Percent.getValue(iID);
@@ -13511,8 +13495,6 @@ void CvHandicapInfo::getCheckSum(unsigned int& iSum) const
 	// Arrays
 
 	CheckSumI(iSum, getNumGoodies(), m_piGoodies);
-	CheckSumI(iSum, GC.getNumTechInfos(), m_pbFreeTechs);
-	CheckSumI(iSum, GC.getNumTechInfos(), m_pbAIFreeTechs);
 
 	CheckSum(iSum, m_iRevolutionIndexPercent);
 }
@@ -13525,8 +13507,6 @@ bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 	{
 		return false;
 	}
-
-	int j;
 
 	pXML->GetOptionalChildXmlValByName(&m_iFreeWinsVsBarbs, L"iFreeWinsVsBarbs");
 	pXML->GetOptionalChildXmlValByName(&m_iAnimalAttackProb, L"iAnimalAttackProb");
@@ -13595,7 +13575,7 @@ bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 		{
 			m_piGoodies = new int[m_iNumGoodies];
 
-			for (j=0;j<m_iNumGoodies;j++)
+			for (int j = 0; j < m_iNumGoodies; j++)
 			{
 				m_piGoodies[j] = pXML->GetInfoClass(pszGoodyNames[j]);
 			}
@@ -13610,9 +13590,6 @@ bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 		SAFE_DELETE_ARRAY(pszGoodyNames);
 	}
 
-	pXML->SetVariableListTagPair(&m_pbFreeTechs, L"FreeTechs", GC.getNumTechInfos());
-	pXML->SetVariableListTagPair(&m_pbAIFreeTechs, L"AIFreeTechs", GC.getNumTechInfos());
-
 	pXML->GetOptionalChildXmlValByName(&m_iRevolutionIndexPercent, L"iRevolutionIndexPercent");
 
 	if (pXML->TryMoveToXmlFirstChild(L"Percents"))
@@ -13626,11 +13603,7 @@ bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 
 	return true;
 }
-/************************************************************************************************/
-/* XMLCOPY								 11/19/07								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 void CvHandicapInfo::copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
 	bool bDefault = false;
@@ -13782,27 +13755,6 @@ void CvHandicapInfo::copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtilit
 		}
 		SAFE_DELETE_ARRAY(m_piGoodiesTemp);
 		SAFE_DELETE(pCurrentUnit);
-	}
-
-	for ( int i = 0; i < GC.getNumTechInfos(); i++)
-	{
-		if ( isFreeTechs(i) == (int)bDefault && pClassInfo->isFreeTechs(i) != (int)bDefault)
-		{
-			if ( NULL == m_pbFreeTechs )
-			{
-				CvXMLLoadUtility::InitList(&m_pbFreeTechs,GC.getNumTechInfos(),bDefault);
-			}
-			m_pbFreeTechs[i] = pClassInfo->isFreeTechs(i);
-		}
-
-		if ( isAIFreeTechs(i) == (int)bDefault && pClassInfo->isAIFreeTechs(i) != (int)bDefault)
-		{
-			if ( NULL == m_pbAIFreeTechs )
-			{
-				CvXMLLoadUtility::InitList(&m_pbAIFreeTechs,GC.getNumTechInfos(),bDefault);
-			}
-			m_pbAIFreeTechs[i] = pClassInfo->isAIFreeTechs(i);
-		}
 	}
 
 	if (getRevolutionIndexPercent() == iDefault) m_iRevolutionIndexPercent = pClassInfo->getRevolutionIndexPercent();
