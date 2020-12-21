@@ -18371,6 +18371,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_NUM_HEAL_SUPPORT</Tag>
 		<English>[ICON_BULLET]Heals %d1_Volume Unit(s)/turn. (%d3_Rem Remaining)</English>
 		<French>[ICON_BULLET]Soigne %d1_Volume Unité(s)/tour. (%d3_Rem Restant)</French>
+		<German>[ICON_BULLET]heilt %d1_Volume [NUM1:Einheit:Einheiten] pro Runde. (%d3_Rem verbleibend)</German>
 		<Polish>[ICON_BULLET]Może pomagać w leczeniu %d1_Volume jednostek na turę. (%d2_Used użytych / %d3_Rem pozostało)</Polish>
 	</TEXT>
 	<TEXT>
@@ -26123,6 +26124,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_THIEF</Tag>
 		<English>Thief</English>
 		<French>Voleur</French>
+		<German>
+			<Text>Dieb:Diebs:Dieb:Dieb:Diebe:Diebe:Dieben:Diebe</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Ladro</Italian>
 		<Spanish>
 			<Text>Ladrón</Text>
@@ -28669,15 +28675,22 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Weise Frau:Weisen Frau:Weisen Frau:Weise Frau:Weise Frauen:Weisen Frauen:Weisen Frauen:Weisen Frauen</Text>
+			<Gender>Female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WISE_WOMAN_PEDIA</Tag>
 		<English>As gatherers explored their surroundings and what the results of consuming various native substances they began to learn what would make a person sick, what would provide sustenance, and what would assist in alleviating various symptoms of disease, injury and discomfort. The wise women who had spent their younger years gathering, keeping and sharing verbal records of what was beneficial for various purposes would often be turned to by the tribe as a source of healing and guidance. This role grew in significance as the human mind evolved into more and more advanced forms deepening the capacity for knowledge retention and application.</English>
+		<German>In der Umgebung der frühen Siedlungen wuchsen jede Menge unbekannte Pflanzen. Zunächst wurden sie nur auf Genießbarkeit geprüft und für die Ernährung des Stammes genutzt. Durch dieses Ausprobieren wurde aber auch anderes Wissen gewonnen. Die Menschen erkannten, dass manche Pflanzen nicht nur für Unwohlsein sorgten, sondern den Anwender vergiften oder sogar töten konnten. So manch ein Kraut stellte sich im Gegenzug auch als nützlich heraus, um Krankheiten, Vergiftungen, Verletzungen oder Gebrechen zu lindern oder zu kurieren. Gerade ältere weise Frauen verfügten durch mündliche Überlieferung und aus eigenen Erfahrungen über ein profundes Wissen in Kräuter- und Heilkunde, sodass sie für ihren Stamm von unschätzbarem Wert waren.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WISE_WOMAN_STRATEGY</Tag>
 		<English>Use the [COLOR_UNIT_TEXT]Wise Woman[COLOR_REVERT] to heal units, develop early healing experience awards, and aid in keeping disease under control in your earliest cities. They are extremely useful, but expensive to produce and maintain. Additionally, Wise Women require Wild Herbs in the city in which they are built. The Wise Woman can be upgraded to an [COLOR_UNIT_TEXT]Healer[COLOR_REVERT], after discovering Naturopathy.</English>
 		<French>Utilisez les [COLOR_UNIT_TEXT]Soigneuses[COLOR_REVERT] pour soigner vos unités, développer de l'expérience en soin, et garder sous contrôle la prolifération de maladies dans vos villes primitives. Elles sont extrêmement utiles, mais cher à produire et entretenir. De plus, il est nécessaire d'avoir une parcelle d'herbes sauvages pour pouvoir recruter une soigneuse. Après la découverte de la Naturopathie, elles peuvent être améliorées en [COLOR_UNIT_TEXT]Guérisseurs[COLOR_REVERT].</French>
+		<German>[COLOR_UNIT_TEXT]Weise Frauen[COLOR_REVERT] können Einheiten heilen und Krankheiten in Städten eindämmen. Außerdem versorgen sie die Stadt, in der sie gebaut wurden, automatisch mit Wildkräutern. Sie sind für frühe Kulturen sehr nützlich, aber leider auch teuer in Produktion und Unterhalt.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WITHDRAW_VS_TYPE</Tag>
