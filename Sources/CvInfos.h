@@ -3740,8 +3740,6 @@ public:
 	// Arrays
 
 	int getGoodies(int i) const;
-	int isFreeTechs(int i) const;
-	int isAIFreeTechs(int i) const;
 
 	int getPercent(int iID) const;
 
@@ -3823,9 +3821,6 @@ protected:
 	// Arrays
 
 	int* m_piGoodies;
-
-	bool* m_pbFreeTechs;
-	bool* m_pbAIFreeTechs;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

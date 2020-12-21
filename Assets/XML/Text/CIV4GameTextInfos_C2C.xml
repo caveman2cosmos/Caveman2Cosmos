@@ -202,7 +202,7 @@
 		<Tag>TXT_KEY_GOODY_CRIMINAL</Tag>
 		<English>[SPACE]Your explorers have found a wanted criminal hiding out among these people!</English>
 		<French>[SPACE]Vos explorateurs ont trouvé un criminel recherché, se cachant parmi la population!</French>
-		<German>[SPACE]Unter den Dorfbewohnern hat sich ein gesuchter Verbrecher versteckt!</German>
+		<German>Unter den Dorfbewohnern hat sich ein gesuchter Verbrecher versteckt!</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_HEALER</Tag>
@@ -228,7 +228,7 @@
 		<Tag>TXT_KEY_GOODY_RESEARCH</Tag>
 		<English>[SPACE]The villagers share information that leads your researchers to a major breakthrough!</English>
 		<French>[SPACE]Les villageois vous communiquent des informations qui conduisent vos chercheurs vers une découverte majeure!</French>
-		<German>[SPACE]Die Informationen der Dorfbewohner haben zu einem großen Durchbruch bei Euren Forschungen geführt!</German>
+		<German>Die Informationen der Dorfbewohner haben zu einem großen Durchbruch bei Euren Forschungen geführt!</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_SPEARMAN</Tag>
@@ -249,6 +249,7 @@
 		<Tag>TXT_KEY_GOODY_WISE_WOMAN</Tag>
 		<English>[SPACE]One of the tribe's women has taken a liking to your explorers!</English>
 		<French>[SPACE]Une femme de la tribu est tombée amoureuse d'un de vos éclaireurs!</French>
+		<German>Ein paar Frauen des Stammes haben an Euren Entdeckern Gefallen gefunden!</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CIVILOPEDIA</Tag>
