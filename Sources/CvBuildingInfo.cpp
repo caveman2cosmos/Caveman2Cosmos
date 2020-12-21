@@ -5389,57 +5389,14 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	{
 		m_bDamageAttackerCapable = true;
 	}
-	//Structs
-	if (getNumFreePromoTypes() == 0)
-	{
-		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aFreePromoTypes, pClassInfo->m_aFreePromoTypes);
-	}
-
-	if (getNumFreeTraitTypes() == 0)
-	{
-		const int iNum = pClassInfo->getNumFreeTraitTypes();
-		m_aiFreeTraitTypes.resize(iNum);
-		for (int i = 0; i < iNum; i++)
-		{
-			GC.copyNonDefaultDelayedResolution((int*)&(m_aiFreeTraitTypes[i]), (int*)&(pClassInfo->m_aiFreeTraitTypes[i]));
-		}
-	}
-
-	if (getNumPrereqInCityBuildings() == 0)
-	{
-		const short iNum = pClassInfo->getNumPrereqInCityBuildings();
-		m_aiPrereqInCityBuildings.resize(iNum);
-		for (short i = 0; i < iNum; i++)
-		{
-			GC.copyNonDefaultDelayedResolution((int*)&(m_aiPrereqInCityBuildings[i]), (int*)&(pClassInfo->m_aiPrereqInCityBuildings[i]));
-		}
-	}
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aFreePromoTypes, pClassInfo->m_aFreePromoTypes);
+	GC.copyNonDefaultDelayedResolutionVector(m_aiFreeTraitTypes, pClassInfo->m_aiFreeTraitTypes);
+	GC.copyNonDefaultDelayedResolutionVector(m_aiPrereqInCityBuildings, pClassInfo->m_aiPrereqInCityBuildings);
 	GC.copyNonDefaultDelayedResolutionVector(m_vPrereqOrBuilding, pClassInfo->m_vPrereqOrBuilding);
-
-	if (getNumReplacementBuilding() == 0)
-	{
-		const short iNum = pClassInfo->getNumReplacementBuilding();
-		m_vReplacementBuilding.resize(iNum);
-		for (short i = 0; i < iNum; i++)
-		{
-			GC.copyNonDefaultDelayedResolution((int*)&(m_vReplacementBuilding[i]), (int*)&(pClassInfo->m_vReplacementBuilding[i]));
-		}
-	}
-
-	if (getNumHealUnitCombatTypes() == 0)
-	{
-		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aHealUnitCombatTypes, pClassInfo->m_aHealUnitCombatTypes);
-	}
-
-	if (getNumBonusAidModifiers() == 0)
-	{
-		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aBonusAidModifiers, pClassInfo->m_aBonusAidModifiers);
-	}
-
-	if (getNumAidRateChanges() == 0)
-	{
-		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aAidRateChanges, pClassInfo->m_aAidRateChanges);
-	}
+	GC.copyNonDefaultDelayedResolutionVector(m_vReplacementBuilding, pClassInfo->m_vReplacementBuilding);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aHealUnitCombatTypes, pClassInfo->m_aHealUnitCombatTypes);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aBonusAidModifiers, pClassInfo->m_aBonusAidModifiers);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aAidRateChanges, pClassInfo->m_aAidRateChanges);
 
 	if (getNumEnabledCivilizationTypes() == 0)
 	{
@@ -5451,23 +5408,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 		}
 	}
 
-	if (getNumMapCategoryTypes() == 0)
-	{
-		m_aiMapCategoryTypes.clear();
-		for ( int i = 0; i < pClassInfo->getNumMapCategoryTypes(); i++)
-		{
-			m_aiMapCategoryTypes.push_back(pClassInfo->getMapCategoryType(i));
-		}
-	}
-
-	if (getNumUnitCombatRetrainTypes() == 0)
-	{
-		m_aiUnitCombatRetrainTypes.clear();
-		for ( int i = 0; i < pClassInfo->getNumUnitCombatRetrainTypes(); i++)
-		{
-			m_aiUnitCombatRetrainTypes.push_back(pClassInfo->getUnitCombatRetrainType(i));
-		}
-	}
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiMapCategoryTypes, pClassInfo->m_aiMapCategoryTypes);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiUnitCombatRetrainTypes, pClassInfo->m_aiUnitCombatRetrainTypes);
 
 	if (getNumMayDamageAttackingUnitCombatTypes() == 0)
 	{
@@ -5617,9 +5559,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 		}
 	}
 }
-/************************************************************************************************/
-/* XMLCOPY                                 END                                                  */
-/************************************************************************************************/
 
 void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
 {
@@ -5648,7 +5587,7 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 			}
 		}
 	}
-	else if (bOver && m_piPrereqNumOfBuilding != NULL)
+	else if (bOver)
 	{
 		SAFE_DELETE_ARRAY(m_piPrereqNumOfBuilding);
 	}
@@ -5667,7 +5606,7 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 			}
 		}
 	}
-	else if (bOver && m_piBuildingHappinessChanges != NULL)
+	else if (bOver)
 	{
 		SAFE_DELETE_ARRAY(m_piBuildingHappinessChanges);
 	}
@@ -5714,7 +5653,7 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 			}
 		}
 	}
-	else if (bOver && m_pbPrereqNotBuilding != NULL)
+	else if (bOver)
 	{
 		SAFE_DELETE_ARRAY(m_pbPrereqNotBuilding);
 	}
@@ -5733,7 +5672,7 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 			}
 		}
 	}
-	else if (bOver && m_piBuildingProductionModifier != NULL)
+	else if (bOver)
 	{
 		SAFE_DELETE_ARRAY(m_piBuildingProductionModifier);
 	}
@@ -5752,7 +5691,7 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 			}
 		}
 	}
-	else if (bOver && m_piGlobalBuildingProductionModifier != NULL)
+	else if (bOver)
 	{
 		SAFE_DELETE_ARRAY(m_piGlobalBuildingProductionModifier);
 	}
@@ -5771,7 +5710,7 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 			}
 		}
 	}
-	else if (bOver && m_piGlobalBuildingCostModifier != NULL)
+	else if (bOver)
 	{
 		SAFE_DELETE_ARRAY(m_piGlobalBuildingCostModifier);
 	}
