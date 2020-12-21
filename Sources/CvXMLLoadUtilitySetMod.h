@@ -14,8 +14,6 @@
 #ifndef XML_LOAD_UTILITY_SET_MOD_H
 #define XML_LOAD_UTILITY_SET_MOD_H
 
-#include "CvXMLLoadUtility.h"
-
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
 //  class : CvXMLLoadUtilitySetMod
@@ -41,12 +39,7 @@ public:
 								const CvString&					refcstrExtension,					
 								bool							bSearchSubdirectories = false);
 
-	
 	void loadModControlArray(std::vector<CvString>&	aszFiles, const char* szFileRoot);
-
-	void checkCacheStateDir(	const CvString&			refcstrRootDirectory,
-								CvChecksum&				ulCheckSum,
-								bool					bSearchSubdirectories = true);
 };
 
 #endif	// XML_LOAD_UTILITY_SET_MOD_H

@@ -828,6 +828,7 @@
 			<Strategy>TXT_KEY_BUILDING_MOVIE_AUYANTEPUI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMATION_STUDIO</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ANIMATION_STUDIO</MovieDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

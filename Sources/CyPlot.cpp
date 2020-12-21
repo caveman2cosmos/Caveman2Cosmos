@@ -1,5 +1,8 @@
-#include "CvCity.h"
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
+#include "CvMap.h"
+#include "CvPlot.h"
 #include "CyArea.h"
 #include "CyCity.h"
 #include "CyPlot.h"
@@ -359,7 +362,7 @@ bool CyPlot::isHills() const
 
 bool CyPlot::isPeak() const
 {
-	return m_pPlot ? m_pPlot->isPeak2(true) : false;
+	return m_pPlot ? m_pPlot->isAsPeak() : false;
 }
 
 void CyPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGraphics)
@@ -572,6 +575,19 @@ bool CyPlot::isInvisibleVisible(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ 
 void CyPlot::changeInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible, int iChange, int iIntensity)
 {
 	if (m_pPlot) m_pPlot->changeInvisibleVisibilityCount((TeamTypes) eTeam, (InvisibleTypes) eInvisible, iChange, iIntensity);
+}
+
+python::list CyPlot::units() const
+{
+	python::list list = python::list();
+	if (m_pPlot)
+	{
+		foreach_(CvUnit* unit, m_pPlot->units())
+		{
+			list.append(new CyUnit(unit));
+		}
+	}
+	return list;
 }
 
 int CyPlot::getNumUnits() const

@@ -6,11 +6,15 @@
 #include "LinkedList.h"
 #include "CvPathGenerator.h"
 #include "CvUnit.h"
-#include "CvCity.h"
 #include "idinfo_iterator_base.h"
 
-class CvPlot;
 class CvArea;
+class CvCity;
+class CvPlot;
+class CvPath;
+//class CvPathGenerator;
+class CvUnit;
+class CvUnitSelectionCriteria;
 #ifdef USE_OLD_PATH_GENERATOR
 class FAStarNode;
 #endif
@@ -56,7 +60,7 @@ public:
 	virtual ~CvSelectionGroup();
 
 	DllExport void init(int iID, PlayerTypes eOwner);
-	DllExport void uninit();			
+	DllExport void uninit();
 	DllExport void reset(int iID = 0, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall = false);
 
 	void kill();
@@ -72,58 +76,58 @@ public:
 
 	void playActionSound();
 
-	bool pushMissionInternal(MissionTypes eMission, int iData1 = -1, int iData2 = -1, int iFlags = 0, bool bAppend = false, bool bManual = false, MissionAITypes eMissionAI = NO_MISSIONAI, const CvPlot* pMissionAIPlot = NULL, const CvUnit* pMissionAIUnit = NULL);		// Exposed to Python
-	void pushMission(MissionTypes eMission, int iData1 = -1, int iData2 = -1, int iFlags = 0, bool bAppend = false, bool bManual = false, MissionAITypes eMissionAI = NO_MISSIONAI, const CvPlot* pMissionAIPlot = NULL, const CvUnit* pMissionAIUnit = NULL);		// Exposed to Python
-	void popMission();																																										// Exposed to Python
+	bool pushMissionInternal(MissionTypes eMission, int iData1 = -1, int iData2 = -1, int iFlags = 0, bool bAppend = false, bool bManual = false, MissionAITypes eMissionAI = NO_MISSIONAI, const CvPlot* pMissionAIPlot = NULL, const CvUnit* pMissionAIUnit = NULL);
+	void pushMission(MissionTypes eMission, int iData1 = -1, int iData2 = -1, int iFlags = 0, bool bAppend = false, bool bManual = false, MissionAITypes eMissionAI = NO_MISSIONAI, const CvPlot* pMissionAIPlot = NULL, const CvUnit* pMissionAIUnit = NULL);
+	void popMission();
 	void autoMission();
 	void updateMission();
 
 	DllExport CvPlot* _lastMissionPlot();
-	CvPlot* lastMissionPlot() const; // Exposed to Python
+	CvPlot* lastMissionPlot() const;
 
-	bool canStartMission(int iMission, int iData1, int iData2, CvPlot* pPlot = NULL, bool bTestVisible = false, bool bUseCache = false) const;		// Exposed to Python
+	bool canStartMission(int iMission, int iData1, int iData2, CvPlot* pPlot = NULL, bool bTestVisible = false, bool bUseCache = false) const;
 	bool startMission();
 	bool continueMission(int iSteps = 0);
 	bool checkMoveSafety(int iX, int iY, int iFlags);
 
-	DllExport bool canDoInterfaceMode(InterfaceModeTypes eInterfaceMode);													// Exposed to Python
-	DllExport bool canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, CvPlot* pPlot);				// Exposed to Python
+	DllExport bool canDoInterfaceMode(InterfaceModeTypes eInterfaceMode);
+	DllExport bool canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, CvPlot* pPlot);
 
 	void doCommand(CommandTypes eCommand, int iData1, int iData2);
-	bool canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible = false, bool bUseCache = false, bool bAll = false) const;		// Exposed to Python
+	bool canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible = false, bool bUseCache = false, bool bAll = false) const;
 	bool canEverDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible, bool bUseCache) const;
 	void setupActionCache();
 
-	bool isHuman() const; // Exposed to Python
+	bool isHuman() const;
 
 	DllExport bool _isBusy();
 	bool isBusy() const;
 
 	bool isCargoBusy() const;
-	int baseMoves() const;																																										// Exposed to Python 
-	bool isWaiting() const;																																							// Exposed to Python
-	bool isFull() const;																																											// Exposed to Python
-	bool hasCargo() const;																																										// Exposed to Python
+	int baseMoves() const;
+	bool isWaiting() const;
+	bool isFull() const;
+	bool hasCargo() const;
 	int getCargo(bool bVolume = false) const;
 
 	DllExport bool _canAllMove();
-	bool canAllMove() const; // Exposed to Python
-	bool canAnyMove(bool bValidate = false) /* not const - Can set ACTIVITY_SLEEP if bValidate is true */; // Exposed to Python
-	bool hasMoved() const;																																										// Exposed to Python
-	bool canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage = false) const; // Exposed to Python
-	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false) const;									// Exposed to Python
+	bool canAllMove() const;
+	bool canAnyMove(bool bValidate = false) /* not const - Can set ACTIVITY_SLEEP if bValidate is true */;
+	bool hasMoved() const;
+	bool canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage = false) const;
+	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false) const;
 
 	DllExport bool _canMoveInto(CvPlot* pPlot, bool bAttack = false);
-	bool canMoveInto(const CvPlot* pPlot, bool bAttack = false) const; // Exposed to Python
-	
+	bool canMoveInto(const CvPlot* pPlot, bool bAttack = false) const;
+
 	DllExport bool _canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar = false);
-	bool canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar = false) const; // Exposed to Python
+	bool canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar = false) const;
 
 	bool canMoveIntoWithWar(const CvPlot* pPlot, bool bAttack = false, bool bDeclareWar = false) const;
 
-	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;																																	// Exposed to Python
-	bool canFight() const;																																										// Exposed to Python 
-	bool canDefend() const;																																										// Exposed to Python
+	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;
+	bool canFight() const;
+	bool canDefend() const;
 	bool canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly = false) const;
 	bool hasBombardCapability() const;
 	bool hasCollateralDamage() const;
@@ -144,10 +148,10 @@ public:
 	bool canMoveAllTerrain() const;
 
 	void unloadAll();
-	bool alwaysInvisible() const;																																							// Exposed to Python
-	bool isInvisible(TeamTypes eTeam) const;																								// Exposed to Python
-	int countNumUnitAIType(UnitAITypes eUnitAI) const;																												// Exposed to Python
-	bool hasWorker() const;																																										// Exposed to Python
+	bool alwaysInvisible() const;
+	bool isInvisible(TeamTypes eTeam) const;
+	int countNumUnitAIType(UnitAITypes eUnitAI) const;
+	bool hasWorker() const;
 	bool IsSelected() const;
 	DllExport void NotifyEntity(MissionTypes eMission);
 	void airCircle(bool bStart);
@@ -155,15 +159,15 @@ public:
 
 	int getX() const;
 	int getY() const;
-	bool at(int iX, int iY) const;																																								// Exposed to Python
-	bool atPlot(const CvPlot* pPlot) const;																																				// Exposed to Python
-	CvPlot* plot() const;																																								// Exposed to Python
-	DllExport CvPlot* plotExternal() const;																																								// Exposed to Python
+	bool at(int iX, int iY) const;
+	bool atPlot(const CvPlot* pPlot) const;
+	CvPlot* plot() const;
+	DllExport CvPlot* plotExternal() const;
 	int getArea() const;
-	CvArea* area() const;																																													// Exposed to Python
+	CvArea* area() const;
 	DomainTypes getDomainType() const;
 
-	RouteTypes getBestBuildRoute(const CvPlot* pPlot, BuildTypes* peBestBuild = NULL) const;	// Exposed to Python
+	RouteTypes getBestBuildRoute(const CvPlot* pPlot, BuildTypes* peBestBuild = NULL) const;
 
 	bool canIgnoreZoneofControl() const;
 
@@ -184,15 +188,15 @@ public:
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-	bool isAmphibPlot(const CvPlot* pPlot) const;																																		// Exposed to Python
+	bool isAmphibPlot(const CvPlot* pPlot) const;
 	bool groupAmphibMove(CvPlot* pPlot, int iFlags);
 
-	DllExport bool readyToSelect(bool bAny = false) /* not const - calls readyToMove */;																										// Exposed to Python
-	bool readyToMove(bool bAny = false, bool bValidate = false) /* not const - calls canAnyMove */;																																// Exposed to Python
-	bool readyToAuto() const;																																									// Exposed to Python 
+	DllExport bool readyToSelect(bool bAny = false) /* not const - calls readyToMove */;
+	bool readyToMove(bool bAny = false, bool bValidate = false) /* not const - calls canAnyMove */;
+	bool readyToAuto() const;
 
-	int getID() const;																																												// Exposed to Python
-	void setID(int iID);																			
+	int getID() const;
+	void setID(int iID);
 
 	int getMissionTimer() const;
 	void setMissionTimer(int iNewValue);
@@ -206,26 +210,26 @@ public:
 
 	bool isChoosingNewLeader() const { return m_bIsChoosingNewLeader; }
 
-	inline PlayerTypes getOwner() const { return m_eOwner; } // Exposed to Python
+	inline PlayerTypes getOwner() const { return m_eOwner; }
 
-	TeamTypes getTeam() const;																																					// Exposed to Python
+	TeamTypes getTeam() const;
 
-	ActivityTypes getActivityType() const;																															// Exposed to Python
-	void setActivityType(ActivityTypes eNewValue, MissionTypes eSleepType = NO_MISSION);																											// Exposed to Python
+	ActivityTypes getActivityType() const;
+	void setActivityType(ActivityTypes eNewValue, MissionTypes eSleepType = NO_MISSION);
 
-	AutomateTypes getAutomateType() const;																																		// Exposed to Python
-	bool isAutomated() const;																																									// Exposed to Python
-	void setAutomateType(AutomateTypes eNewValue);																											// Exposed to Python
+	AutomateTypes getAutomateType() const;
+	bool isAutomated() const;
+	void setAutomateType(AutomateTypes eNewValue);
 
 #ifdef USE_OLD_PATH_GENERATOR
 	FAStarNode* getPathLastNode() const;
 #endif
-	CvPlot* getPathFirstPlot() const;																																		// Exposed to Python
-	CvPlot* getPathEndTurnPlot() const;																														// Exposed to Python
+	CvPlot* getPathFirstPlot() const;
+	CvPlot* getPathEndTurnPlot() const;
 	const CvPath& getPath() const;
 	static CvPathGenerator* getPathGenerator();
 	//TB OOS Fix
-	bool generatePath(const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags = 0, bool bReuse = false, int* piPathTurns = NULL, int iMaxPathLen = MAX_INT, int iOptimizationLimit = -1, bool bAsync = false) const;	// Exposed to Python
+	bool generatePath(const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags = 0, bool bReuse = false, int* piPathTurns = NULL, int iMaxPathLen = MAX_INT, int iOptimizationLimit = -1, bool bAsync = false) const;
 	void resetPath();
 
 	bool canPathDirectlyToInternal(const CvPlot* pFromPlot, const CvPlot* pToPlot, int movesRemaining) const;
@@ -234,7 +238,7 @@ public:
 	int movesRemainingAfterMovingTo(int iStartMoves, const CvPlot* pFromPlot, const CvPlot* pToPlot) const;
 	int movesLeft() const;
 
-	// Exposed to Python
+
 
 	DllExport void clearUnits();
 	DllExport bool addUnit(CvUnit* pUnit, bool bMinimalChange);
@@ -270,9 +274,9 @@ public:
 	safe_unit_range units_safe() const { return safe_unit_range(beginUnitsSafe(), endUnitsSafe()); }
 
 	void clearMissionQueue();
-	void setMissionPaneDirty();																																	// Exposed to Python
-	int getLengthMissionQueue() const;																											// Exposed to Python
-	MissionData* getMissionFromQueue(int iIndex) const;																							// Exposed to Python
+	void setMissionPaneDirty();
+	int getLengthMissionQueue() const;
+	MissionData* getMissionFromQueue(int iIndex) const;
 	bool insertAtEndMissionQueue(MissionData mission, bool bStart = true);
 	CLLNode<MissionData>* deleteMissionQueueNode(CLLNode<MissionData>* pNode);
 	DllExport CLLNode<MissionData>* nextMissionQueueNode(CLLNode<MissionData>* pNode) const;
@@ -280,9 +284,9 @@ public:
 	DllExport CLLNode<MissionData>* headMissionQueueNodeExternal() const;
 	CLLNode<MissionData>* headMissionQueueNode() const;
 	CLLNode<MissionData>* tailMissionQueueNode() const;
-	int getMissionType(int iNode) const;																														// Exposed to Python
-	int getMissionData1(int iNode) const;																														// Exposed to Python
-	int getMissionData2(int iNode) const;																														// Exposed to Python
+	int getMissionType(int iNode) const;
+	int getMissionData1(int iNode) const;
+	int getMissionData2(int iNode) const;
 
 // BUG - All Units Actions - start
 	bool allMatch(UnitTypes eUnit) const;
@@ -402,7 +406,7 @@ protected:
 
 	bool activateHeadMission();
 	void deactivateHeadMission();
-	
+
 	bool sentryAlert() const;
 
 

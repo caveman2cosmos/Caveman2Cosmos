@@ -8,7 +8,11 @@
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
+#include "CvPython.h"
 #include "CvXMLLoadUtility.h"
+#include "CvDLLPythonIFaceBase.h"
+#include "CheckSum.h"
 #include "IntExpr.h"
 
 IntExpr::~IntExpr()

@@ -13,6 +13,7 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvGlobals.h"
 #include "CvXMLLoadUtility.h"
 
 static const int kBufSize = 2048;
@@ -32,123 +33,7 @@ void CvXMLLoadUtility::showXMLError(const char* const format, ...)
 	gDLL->MessageBox(buf, "XML Error");
 }
 
-//
-// for logging
-//
-void CvXMLLoadUtility::logMsg(char* format, ...)
-{
-	//#ifdef _DEBUG
-	static char buf[kBufSize];
-	_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
-	OutputDebugString(buf);
-	gDLL->logMsg("xml.log", buf);
-	//#endif
-}
 
-void CvXMLLoadUtility::logMsgW(wchar_t* format, ...)
-{
-	//#ifdef _DEBUG
-	static wchar_t buf[kBufSize];
-	_vsnwprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
-	OutputDebugStringW(buf);
-	static char buf2[kBufSize];
-	wcstombs(buf2, buf, kBufSize - 4);
-	gDLL->logMsg("xml.log", buf2);
-	//#endif
-}
-
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   10/10/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-#ifdef _DEBUG
-void CvXMLLoadUtility::logXmlCheckDoubleTypes(char* format, ...)
-{
-	{
-		static char buf[kBufSize];
-		_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
-		gDLL->logMsg("XmlCheckDoubleTypes.log", buf);
-	}
-}
-#endif
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 10/19/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-#ifdef _DEBUG
-void CvXMLLoadUtility::XmlArtTagVerification(char* format, ...)
-{
-	{
-		static char buf[kBufSize];
-		_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
-		gDLL->logMsg("XmlArtTagVerification.log", buf);
-	}
-}
-#endif
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 10/30/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-void CvXMLLoadUtility::logMLF(char* format, ...)
-{
-#ifdef _DEBUG
-	{
-		static char buf[kBufSize];
-		_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
-		gDLL->logMsg("MLF.log", buf);
-	}
-#endif
-}
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 02/20/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-//
-void CvXMLLoadUtility::logXmlDependencyTypes(char* format, ...)
-{
-#ifdef _DEBUG	
-	{
-		static char buf[kBufSize];
-		_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
-		gDLL->logMsg("XmlDependencyTypes.log", buf);
-	}
-#endif
-}
-//
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-void CvXMLLoadUtility::logXML(char* format, ...)
-{
-#ifdef _DEBUG	
-	{
-		static char buf[kBufSize];
-		_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
-		gDLL->logMsg("XML Loadup.log", buf);
-	}
-#endif
-}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 bool CvXMLLoadUtility::CreateFXml()
 {
 	PROFILE("CreateFXML");
@@ -273,7 +158,7 @@ CvXMLLoadUtility::CvXMLLoadUtility()
 	{
 		OutputDebugString("XMLPlatformUtils::Initialize Faild");
 		char* message = xercesc::XMLString::transcode(toCatch.getMessage());
-		logMsg(message);
+		logging::logMsg("xml.log", message);
 		gDLL->MessageBox(message, "Error");
 		xercesc::XMLString::release(&message);
 	}
@@ -281,7 +166,6 @@ CvXMLLoadUtility::CvXMLLoadUtility()
 
 //	m_pSchemaCache = GETXML->CreateFXmlSchemaCache();
 //	m_pSchemaCache = NULL;
-
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -337,29 +221,11 @@ void CvXMLLoadUtility::ResetGlobalEffectInfo()
 }
 
 //------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   GetInfoClass(TCHAR* pszVal)
-//
-//  PURPOSE :   Searches the InfoClass for the pszVal and returns the location if a match
-//				is found.
-//				returns -1 if no match is found
-//
+//	Searches the InfoClass for the pszVal and returns the location if a match is found.
+//	returns -1 if no match is found
 //------------------------------------------------------------------------------------------------------
 int CvXMLLoadUtility::GetInfoClass(const TCHAR* pszVal)
 {
-	/************************************************************************************************/
-	/* Afforess	                  Start		 03/18/10                                               */
-	/*                                                                                              */
-	/* Hide Assert for Deleted Objects                                                       */
-	/************************************************************************************************/
-		//AIAndy: I don't think we should do a hack like that, references in the XML should always be valid
-		//if ((GC.getNumGameSpeedInfos() > 0) && (GC.getDefineINT(pszVal)))
-		//	hideAssert = true;
-		//if (pszVal == "") return -1;
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-
 	const int idx = GC.getInfoTypeForString(pszVal, false);
 
 	// if we found a match in the list we will return the value of the loop counter
@@ -368,14 +234,12 @@ int CvXMLLoadUtility::GetInfoClass(const TCHAR* pszVal)
 	{
 		return idx;
 	}
-
 	if (_tcscmp(pszVal, "NONE") != 0 && _tcscmp(pszVal, "") != 0)
 	{
 		char errorMsg[1024];
 		sprintf(errorMsg, "Tag: %s in Info class was incorrect\n Current XML file is: %s", pszVal, GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(errorMsg, "XML Error");
 	}
-
 	return idx;
 }
 
@@ -430,7 +294,7 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 				if (f == NULL)
 				{
 					sprintf(szLog, "IO error: %s : File can't be found\n", szPath.c_str());
-					logMsg(szLog);
+					logging::logMsg("xml.log", szLog);
 					gDLL->MessageBox(szLog, "Error");
 					return false;
 				}
@@ -440,21 +304,9 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 	fclose(f);
 
 	sprintf(szLog, "LoadCivXml: Read %s", szDir.c_str());
-	logMsg(szLog);
-	OutputDebugString(szLog);
+	logging::logMsg("xml.log", szLog);
 
-	/************************************************************************************************/
-	/* XML_CHECK_DOUBLE_TYPE                   10/10/07                                MRGENIE      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-#ifdef _DEBUG
-	logXmlCheckDoubleTypes("Loading XML file %s\n", szPath.c_str());
-#endif
-	/************************************************************************************************/
-	/* XML_CHECK_DOUBLE_TYPE                   END                                                  */
-	/************************************************************************************************/
-
+	DEBUG_LOG("XmlCheckDoubleTypes.log", "Loading XML file %s\n", szPath.c_str());
 
 	try
 	{
@@ -466,7 +318,7 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 		char* message = xercesc::XMLString::transcode(toCatch.getMessage());
 		sprintf(szLog, "XML error: %s(%llu) : (%s)\n",
 			toCatch.getSrcFile(), toCatch.getSrcLine(), message);
-		logMsg(szLog);
+		logging::logMsg("xml.log", szLog);
 		gDLL->MessageBox(szLog, "Error");
 		xercesc::XMLString::release(&message);
 		return false;
@@ -475,7 +327,7 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 	{
 		char* message = xercesc::XMLString::transcode(toCatch.msg);
 		sprintf(szLog, "XML model (DOM) error: %s : %s\n", szPath.c_str(), message);
-		logMsg(szLog);
+		logging::logMsg("xml.log", szLog);
 		gDLL->MessageBox(szLog, "Error");
 		xercesc::XMLString::release(&message);
 		return false;
@@ -484,7 +336,7 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 	{
 		char* message = xercesc::XMLString::transcode(toCatch.getMessage());
 		sprintf(szLog, "XML parsing SAX error:\n%s :\n%s at line %llu", szPath.c_str(), message, toCatch.getLineNumber());
-		logMsg(szLog);
+		logging::logMsg("xml.log", szLog);
 		gDLL->MessageBox(szLog, "Error");
 		xercesc::XMLString::release(&message);
 		return false;
@@ -493,7 +345,7 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 	{
 		char* message = xercesc::XMLString::transcode(toCatch.getMessage());
 		sprintf(szLog, "XML parsing SAX error: %s : %s\n", szPath.c_str(), message);
-		logMsg(szLog);
+		logging::logMsg("xml.log", szLog);
 		gDLL->MessageBox(szLog, "Error");
 		xercesc::XMLString::release(&message);
 		return false;
@@ -501,12 +353,12 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 	catch (...)
 	{
 		sprintf(szLog, "Something happened\n");
-		logMsg(szLog);
+		logging::logMsg("xml.log", szLog);
 		gDLL->MessageBox(szLog, "Error");
 		return false;
 	}
 
-	logMsg("Load XML file %s SUCCEEDED\n", szPath.c_str());
+	logging::logMsg("xml.log", "Load XML file %s SUCCEEDED\n", szPath.c_str());
 	GC.setCurrentXMLFile(szFilename);
 	return true;	// success
 }
@@ -832,7 +684,7 @@ bool CvXMLLoadUtility::TryMoveToXmlFirstMatchingElement(const XMLCh* xpath)
 		xercesc::XMLString::release(&fileName);
 	}
 
-	logMsg(szLog);
+	logging::logMsg("xml.log", szLog);
 	gDLL->MessageBox(szLog, "Error");
 	return false;
 }

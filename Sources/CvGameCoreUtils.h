@@ -5,20 +5,20 @@
 #ifndef CIV4_GAMECORE_UTILS_H
 #define CIV4_GAMECORE_UTILS_H
 
-
-#include "CvGlobals.h"
 #include "CvMap.h"
+#include "CvGlobals.h"
 
-
-class CvPlot;
+class CvInfoBase;
+class CvInternalGlobals;
 class CvCity;
+//class CvMap;
+class CvPathGeneratorBase;
+class CvPlot;
+class CvSelectionGroup;
 class CvUnit;
-class CvString;
 class CvRandom;
 class FAStarNode;
 class FAStar;
-class CvInfoBase;
-
 
 #ifndef SQR
 #define SQR(x) ( (x)*(x))
@@ -95,12 +95,12 @@ inline int yDistance(int iFromY, int iToY)
 	return coordDistance(iFromY, iToY, GC.getMap().getGridHeight(), GC.getMap().isWrapY());
 }
 
-inline int dxWrap(int iDX)																													// Exposed to Python
+inline int dxWrap(int iDX)
 {
 	return wrapCoordDifference(iDX, GC.getMap().getGridWidth(), GC.getMap().isWrapX());
 }
 
-inline int dyWrap(int iDY)																													// Exposed to Python
+inline int dyWrap(int iDY)
 {
 	return wrapCoordDifference(iDY, GC.getMap().getGridHeight(), GC.getMap().isWrapY());
 }
@@ -120,7 +120,7 @@ inline int dyWrap(int iDY)																													// Exposed to Python
 // 4 | 4 | 3 | 3 | 3 | 4 | 4
 //
 // Returns the distance between plots according to the pattern above...
-inline int plotDistance(int iX1, int iY1, int iX2, int iY2)													// Exposed to Python
+inline int plotDistance(int iX1, int iY1, int iX2, int iY2)
 {
 	const int iDX = xDistance(iX1, iX2);
 	const int iDY = yDistance(iY1, iY2);
@@ -143,12 +143,12 @@ inline int plotDistance(int iX1, int iY1, int iX2, int iY2)													// Expos
 // 3 | 3 | 3 | 3 | 3 | 3 | 3
 //
 // Returns the distance between plots according to the pattern above...
-inline int stepDistance(int iX1, int iY1, int iX2, int iY2)													// Exposed to Python
+inline int stepDistance(int iX1, int iY1, int iX2, int iY2)
 {
 	return std::max(xDistance(iX1, iX2), yDistance(iY1, iY2));
 }
 
-inline CvPlot* plotDirection(int iX, int iY, DirectionTypes eDirection)							// Exposed to Python
+inline CvPlot* plotDirection(int iX, int iY, DirectionTypes eDirection)
 {
 	if (eDirection == NO_DIRECTION)
 	{
@@ -162,17 +162,17 @@ inline CvPlot* plotDirection(const CvPlot* pPlot, DirectionTypes eDirection)
 	return plotDirection(pPlot->getX(), pPlot->getY(), eDirection);
 }
 
-inline CvPlot* plotCardinalDirection(int iX, int iY, CardinalDirectionTypes eCardinalDirection)	// Exposed to Python
+inline CvPlot* plotCardinalDirection(int iX, int iY, CardinalDirectionTypes eCardinalDirection)
 {
 	return GC.getMap().plot(iX + GC.getPlotCardinalDirectionX()[eCardinalDirection], iY + GC.getPlotCardinalDirectionY()[eCardinalDirection]);
 }
 
-inline CvPlot* plotXY(int iX, int iY, int iDX, int iDY)																// Exposed to Python
+inline CvPlot* plotXY(int iX, int iY, int iDX, int iDY)
 {
 	return GC.getMap().plot(iX + iDX, iY + iDY);
 }
 
-inline DirectionTypes directionXY(int iDX, int iDY)																		// Exposed to Python
+inline DirectionTypes directionXY(int iDX, int iDY)
 {
 	if (abs(iDX) > DIRECTION_RADIUS || abs(iDY) > DIRECTION_RADIUS)
 	{
@@ -181,12 +181,12 @@ inline DirectionTypes directionXY(int iDX, int iDY)																		// Exposed 
 	return GC.getXYDirection((iDX + DIRECTION_RADIUS), (iDY + DIRECTION_RADIUS));
 }
 
-inline DirectionTypes reverseDirection(DirectionTypes iDirection)																		// Exposed to Python
+inline DirectionTypes reverseDirection(DirectionTypes iDirection)
 {
 	return (DirectionTypes)((iDirection + 4)%NUM_DIRECTION_TYPES);
 }
 
-inline DirectionTypes directionXY(const CvPlot* pFromPlot, const CvPlot* pToPlot)			// Exposed to Python
+inline DirectionTypes directionXY(const CvPlot* pFromPlot, const CvPlot* pToPlot)
 {
 	return directionXY(dxWrap(pToPlot->getX() - pFromPlot->getX()), dyWrap(pToPlot->getY() - pFromPlot->getY()));
 }
@@ -196,66 +196,61 @@ inline DirectionTypes getAdjacentDirection(DirectionTypes eDirection, bool bCloc
 	return (DirectionTypes)(((int)eDirection + (bClockwise ? 1 : -1) + NUM_DIRECTION_TYPES) % NUM_DIRECTION_TYPES);
 }
 
-CvPlot* plotCity(int iX, int iY, int iIndex);																			// Exposed to Python
-int plotCityXY(int iDX, int iDY);																									// Exposed to Python
-int plotCityXY(const CvCity* pCity, const CvPlot* pPlot);													// Exposed to Python
+CvPlot* plotCity(int iX, int iY, int iIndex);
+int plotCityXY(int iDX, int iDY);
+int plotCityXY(const CvCity* pCity, const CvPlot* pPlot);
 
-CardinalDirectionTypes getOppositeCardinalDirection(CardinalDirectionTypes eDir);	// Exposed to Python 
-DirectionTypes cardinalDirectionToDirection(CardinalDirectionTypes eCard);				// Exposed to Python
-DllExport bool isCardinalDirection(DirectionTypes eDirection);															// Exposed to Python
-DirectionTypes estimateDirection(int iDX, int iDY);																// Exposed to Python
+CardinalDirectionTypes getOppositeCardinalDirection(CardinalDirectionTypes eDir);
+DirectionTypes cardinalDirectionToDirection(CardinalDirectionTypes eCard);
+DllExport bool isCardinalDirection(DirectionTypes eDirection);
+DirectionTypes estimateDirection(int iDX, int iDY);
 DllExport DirectionTypes estimateDirection(const CvPlot* pFromPlot, const CvPlot* pToPlot);
 DllExport float directionAngle(DirectionTypes eDirection);
 
-bool atWar(TeamTypes eTeamA, TeamTypes eTeamB);												// Exposed to Python
-bool isPotentialEnemy(TeamTypes eOurTeam, TeamTypes eTheirTeam);			// Exposed to Python
+bool atWar(TeamTypes eTeamA, TeamTypes eTeamB);
+bool isPotentialEnemy(TeamTypes eOurTeam, TeamTypes eTheirTeam);
 
-DllExport CvCity* getCity(IDInfo city);	// Exposed to Python
-DllExport CvUnit* getUnit(IDInfo unit);	// Exposed to Python
+DllExport CvCity* getCity(IDInfo city);
+DllExport CvUnit* getUnit(IDInfo unit);
 
 bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit);
-bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader);	// Exposed to Python
+bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader);
 
-int getPopulationAsset(int iPopulation);								// Exposed to Python
-int getLandPlotsAsset(int iLandPlots);									// Exposed to Python
-int getPopulationPower(int iPopulation);								// Exposed to Python
-int getPopulationScore(int iPopulation);								// Exposed to Python
-int getLandPlotsScore(int iLandPlots);									// Exposed to Python
-int getTechScore(TechTypes eTech);											// Exposed to Python
-int getWonderScore(BuildingTypes eWonder);		// Exposed to Python
+int getTechScore(TechTypes eTech);
+int getWonderScore(BuildingTypes eWonder);
 
-ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCount = 0);		// Exposed to Python
+ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCount = 0);
 
-int getWorldSizeMaxConscript(CivicTypes eCivic);								// Exposed to Python
+int getWorldSizeMaxConscript(CivicTypes eCivic);
 
-bool isReligionTech(TechTypes eTech);														// Exposed to Python
+bool isReligionTech(TechTypes eTech);
 
-bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit);							// Exposed to Python
-bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding);	// Exposed to Python
-bool isTechRequiredForProject(TechTypes eTech, ProjectTypes eProject);		// Exposed to Python
+bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit);
+bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding);
+bool isTechRequiredForProject(TechTypes eTech, ProjectTypes eProject);
 
-bool isWorldUnit(UnitTypes eUnit);											// Exposed to Python
-bool isNationalUnit(UnitTypes eUnit);									// Exposed to Python
-bool isLimitedUnit(UnitTypes eUnit);										// Exposed to Python
+bool isWorldUnit(UnitTypes eUnit);
+bool isNationalUnit(UnitTypes eUnit);
+bool isLimitedUnit(UnitTypes eUnit);
 
-bool isWorldWonder(BuildingTypes eBuilding);						// Exposed to Python
-bool isTeamWonder(BuildingTypes eBuilding);						// Exposed to Python
-bool isNationalWonder(BuildingTypes eBuilding);				// Exposed to Python
+bool isWorldWonder(BuildingTypes eBuilding);
+bool isTeamWonder(BuildingTypes eBuilding);
+bool isNationalWonder(BuildingTypes eBuilding);
 bool isNationalWonderGroup(BuildingTypes eBuilding);
 bool isNationalWonderGroupSpecialBuilding(SpecialBuildingTypes eSpecialBuilding);
-bool isLimitedWonder(BuildingTypes eBuilding);					// Exposed to Python
+bool isLimitedWonder(BuildingTypes eBuilding);
 int limitedWonderLimit(BuildingTypes eBuilding);
 
-bool isWorldProject(ProjectTypes eProject);														// Exposed to Python
-bool isTeamProject(ProjectTypes eProject);														// Exposed to Python
-bool isLimitedProject(ProjectTypes eProject);													// Exposed to Python
+bool isWorldProject(ProjectTypes eProject);
+bool isTeamProject(ProjectTypes eProject);
+bool isLimitedProject(ProjectTypes eProject);
 
 int64_t getBinomialCoefficient(int iN, int iK);
-int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender);							// Exposed to Python
+int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender);
 
 float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, int n_A, int n_D);
 
-int getEspionageModifier(TeamTypes eOurTeam, TeamTypes eTargetTeam);							// Exposed to Python
+int getEspionageModifier(TeamTypes eOurTeam, TeamTypes eTargetTeam);
 
 DllExport void setTradeItem(TradeData* pItem, TradeableItems eItemType = TRADE_ITEM_NONE, int iData = 0);
 
@@ -409,6 +404,6 @@ protected:
 	WORD c1;
 	WORD c2;
 	DWORD sum;
-}; 
+};
 
 #endif

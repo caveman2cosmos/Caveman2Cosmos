@@ -1476,8 +1476,7 @@ class CvPlotDesc:
 			f.write("\tPlotType=%d\n" % int(plot.getPlotType()))
 
 		# units
-		for i in xrange(plot.getNumUnits()):
-			unit = plot.getUnit(i)
+		for unit in plot.units():
 			if unit.getUnitType() > -1:
 				CvUnitDesc().write(f, unit, plot)
 		# city

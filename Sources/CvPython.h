@@ -6,10 +6,12 @@
 #include <boost155/type_traits.hpp>
 #include <boost155/utility/enable_if.hpp>
 
-#include "FAssert.h"
-#include "CvGlobals.h"
-#include "CvString.h"
+//#include "FAssert.h"
+//#include "CvString.h"
 #include "CyArgsList.h"
+#include "CvGlobals.h"
+
+class cvInternalGlobals;
 
 #define FPythonAssert(expr, moduleName, functionName) FAssertMsg(expr, CvString::format("%s.%s", moduleName, functionName).c_str()) 
 
@@ -119,7 +121,7 @@ namespace Cy
 		typedef Ty_ value_type;
 		explicit PyWrap(const value_type& obj) : obj(obj)
 		{
-			pyobj = gDLL->getPythonIFace()->makePythonObject(&(this->obj));
+			pyobj = GC.getDLLIFace()->getPythonIFace()->makePythonObject(&(this->obj));
 		}
 
 		value_type obj;
@@ -225,7 +227,7 @@ namespace Cy
 	// NO RETURN VALUE, NO ARGUMENTS ============================================================================
 	inline void call(const char* const moduleName, const char* const functionName, bool* bSucceeded = NULL)
 	{
-		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName);
+		bool bOK = GC.getDLLIFace()->getPythonIFace()->callFunction(moduleName, functionName);
 		FPythonAssert(bOK, moduleName, functionName);
 		if (bSucceeded != NULL)
 		{
@@ -236,14 +238,14 @@ namespace Cy
 	// Return call success, no assert
 	inline bool call_optional(const char* const moduleName, const char* const functionName)
 	{
-		return gDLL->getPythonIFace()->callFunction(moduleName, functionName);
+		return GC.getDLLIFace()->getPythonIFace()->callFunction(moduleName, functionName);
 	}
 
 	// Check for success and default impl flag
 	inline bool call_override(const char* const moduleName, const char* const functionName)
 	{
-		return gDLL->getPythonIFace()->callFunction(moduleName, functionName)
-			&& !gDLL->getPythonIFace()->pythonUsingDefaultImpl();
+		return GC.getDLLIFace()->getPythonIFace()->callFunction(moduleName, functionName)
+			&& !GC.getDLLIFace()->getPythonIFace()->pythonUsingDefaultImpl();
 	}
 
 	// RETURN VALUE, NO ARGUMENTS ============================================================================
@@ -251,7 +253,7 @@ namespace Cy
 	inline ReturnValueTy_ call(const char* const moduleName, const char* const functionName, bool* bSucceeded = NULL)
 	{
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy = PythonReturnVarMapping<ReturnValueTy_>::default_value;
-		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy);
+		bool bOK = GC.getDLLIFace()->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy);
 		FPythonAssert(bOK, moduleName, functionName);
 		if (bSucceeded != NULL)
 		{ 
@@ -265,7 +267,7 @@ namespace Cy
 	inline bool call_optional(const char* const moduleName, const char* const functionName, ReturnValueTy_& rval)
 	{
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy;
-		if (gDLL->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy))
+		if (GC.getDLLIFace()->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy))
 		{
 			rval = PythonReturnVarMapping<ReturnValueTy_>::convert(rvalPy);
 			return true;
@@ -286,8 +288,8 @@ namespace Cy
 	>::type call_override(const char* const moduleName, const char* const functionName, ReturnValueTy_& rval)
 	{
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy;
-		if (gDLL->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy)
-			&& !gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+		if (GC.getDLLIFace()->getPythonIFace()->callFunction(moduleName, functionName, NULL, &rvalPy)
+			&& !GC.getDLLIFace()->getPythonIFace()->pythonUsingDefaultImpl())
 		{
 			rval = PythonReturnVarMapping<ReturnValueTy_>::convert(rvalPy);
 			return true;
@@ -298,7 +300,7 @@ namespace Cy
 	// NO RETURN VALUE, ARGUMENTS ============================================================================
 	inline void call(const char* const moduleName, const char* const functionName, const Cy::Args& args, bool* bSucceeded = NULL)
 	{
-		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs());
+		bool bOK = GC.getDLLIFace()->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs());
 		FPythonAssert(bOK, moduleName, functionName);
 		if (bSucceeded != NULL)
 		{
@@ -308,14 +310,14 @@ namespace Cy
 
 	inline bool call_optional(const char* const moduleName, const char* const functionName, const Cy::Args& args)
 	{
-		return gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs());
+		return GC.getDLLIFace()->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs());
 	}
 
 	// Check for success and default impl flag
 	inline bool call_override(const char* const moduleName, const char* const functionName, const Cy::Args& args)
 	{
-		return gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs()) 
-			&& !gDLL->getPythonIFace()->pythonUsingDefaultImpl();
+		return GC.getDLLIFace()->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs()) 
+			&& !GC.getDLLIFace()->getPythonIFace()->pythonUsingDefaultImpl();
 	}
 
 	// RETURN VALUE, ARGUMENTS ============================================================================
@@ -323,7 +325,7 @@ namespace Cy
 	inline ReturnValueTy_ call(const char* const moduleName, const char* const functionName, const Cy::Args& args, bool* bSucceeded = NULL)
 	{
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy = PythonReturnVarMapping<ReturnValueTy_>::default_value;
-		bool bOK = gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs(), &rvalPy);
+		bool bOK = GC.getDLLIFace()->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs(), &rvalPy);
 		FPythonAssert(bOK, moduleName, functionName);
 		if (bSucceeded != NULL)
 		{ 
@@ -336,7 +338,7 @@ namespace Cy
 	inline bool call_optional(const char* const moduleName, const char* const functionName, const Cy::Args& args, ReturnValueTy_& rval)
 	{
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy;
-		if (gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs(), &rvalPy))
+		if (GC.getDLLIFace()->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs(), &rvalPy))
 		{
 			rval = PythonReturnVarMapping<ReturnValueTy_>::convert(rvalPy);
 			return true;
@@ -349,8 +351,8 @@ namespace Cy
 	inline bool call_override(const char* const moduleName, const char* const functionName, const Cy::Args& args, ReturnValueTy_& rval)
 	{
 		PythonReturnVarMapping<ReturnValueTy_>::py_type rvalPy;
-		if (gDLL->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs(), &rvalPy)
-			&& !gDLL->getPythonIFace()->pythonUsingDefaultImpl())
+		if (GC.getDLLIFace()->getPythonIFace()->callFunction(moduleName, functionName, args.makeFunctionArgs(), &rvalPy)
+			&& !GC.getDLLIFace()->getPythonIFace()->pythonUsingDefaultImpl())
 		{
 			rval = PythonReturnVarMapping<ReturnValueTy_>::convert(rvalPy);
 			return true;

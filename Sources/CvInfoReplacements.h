@@ -15,8 +15,6 @@ class BoolExpr;
 class cvInternalGlobals;
 class CvInfoBase;
 
-#include <set>
-
 template <class T>
 class CvInfoReplacement
 {

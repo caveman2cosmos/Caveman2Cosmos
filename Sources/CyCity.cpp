@@ -1,4 +1,6 @@
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
+#include "CvCity.h"
 #include "CyArea.h"
 #include "CyCity.h"
 #include "CyPlot.h"
@@ -486,9 +488,9 @@ int CyCity::productionLeft() const
 	return m_pCity->productionLeft();
 }
 
-int CyCity::hurryGold(int /*HurryTypes*/ iHurry) const
+int64_t CyCity::getHurryGold(int /*HurryTypes*/ iHurry) const
 {
-	return m_pCity->hurryGold((HurryTypes)iHurry);
+	return m_pCity->getHurryGold((HurryTypes)iHurry);
 }
 
 int CyCity::hurryPopulation(int /*HurryTypes*/ iHurry) const
@@ -1104,6 +1106,11 @@ int /*PlayerTypes*/ CyCity::getPreviousOwner() const
 int /*PlayerTypes*/ CyCity::getOriginalOwner() const
 {
 	return m_pCity->getOriginalOwner();
+}
+
+void CyCity::setOriginalOwner(int iPlayer)
+{
+	return m_pCity->setOriginalOwner((PlayerTypes)iPlayer);
 }
 
 int /*CultureLevelTypes*/ CyCity::getCultureLevel() const

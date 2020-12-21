@@ -8,7 +8,11 @@
 #include "CvPlayer.h"
 #include "AI_defines.h"
 
+class CvArea;
+class CvCity;
 class CvEventTriggerInfo;
+class CvSelectionGroup;
+class CvUnitSelectionCriteria;
 
 struct MissionTargetInfo
 {
@@ -148,8 +152,8 @@ public:
 
 	bool AI_avoidScience() const;
 	bool AI_isFinancialTrouble() const;
-	int AI_costAsPercentIncome(int iExtraCost = 0) const;
-	int AI_safeCostAsPercentIncome() const;
+	int AI_profitMargin(int iExtraCost = 0) const;
+	int AI_safeProfitMargin() const;
 	int AI_goldTarget() const;
 	int AI_goldValueAssessmentModifier() const;
 

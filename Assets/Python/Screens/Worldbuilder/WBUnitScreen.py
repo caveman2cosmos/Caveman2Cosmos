@@ -518,8 +518,7 @@ class WBUnitScreen:
 			if iOwnerType == 1 and iPlayerX != pUnit.getOwner(): continue
 			if iOwnerType == 2 and pPlayerX.getTeam() != pUnit.getTeam(): continue
 			if pPlayerX.isAlive():
-				(loopUnit, iter) = pPlayerX.firstUnit(False)
-				while(loopUnit):
+				for loopUnit in pPlayerX.units():
 					bCopy = True
 					if iPlotType == 0:
 						if loopUnit.getX() != pUnit.getX() or loopUnit.getY() != pUnit.getY():
@@ -541,7 +540,6 @@ class WBUnitScreen:
 							bCopy = False
 					if bCopy:
 						lUnits.append([loopUnit.getOwner(), loopUnit.getID()])
-					(loopUnit, iter) = pPlayerX.nextUnit(iter, False)
 		lUnits.sort()
 		self.placeCurrentUnit()
 		
@@ -600,8 +598,7 @@ class WBUnitScreen:
 			screen.setLabel("CargoSpaceHeader", "Background", "<font=3b>" + sText + "</font>", 1<<0, iX + 50, screen.getYResolution() - 41, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 			if pUnit.cargoSpace() > 0:
-				for i in xrange(pPlot.getNumUnits()):
-					pUnitX = pPlot.getUnit(i)
+				for pUnitX in pPlot.units():
 					if pUnitX.isNone(): continue
 					if pUnitX.getID() == pUnit.getID(): continue
 					if pUnit.domainCargo() > -1:
@@ -621,8 +618,7 @@ class WBUnitScreen:
 						sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 					screen.setTableText("WBCargoUnits", 0, iRow, "<font=3>" + sColor + sText + "</font></color>", pUnitX.getButton(), WidgetTypes.WIDGET_PYTHON, 8300 + iPlayerX, pUnitX.getID(), 1<<0)
 		else:
-			for i in xrange(pPlot.getNumUnits()):
-				pUnitX = pPlot.getUnit(i)
+			for pUnitX in pPlot.units():
 				if pUnitX.isNone(): continue
 				if pUnitX.getID() == pUnit.getID(): continue
 				if pUnitX.cargoSpace() < 1: continue
@@ -832,8 +828,7 @@ class WBUnitScreen:
 			if iCommandUnitType == 0:
 				lUnits.append(pUnit)
 			else:
-				for i in xrange(pPlot.getNumUnits()):
-					pUnitX = pPlot.getUnit(i)
+				for pUnitX in pPlot.units():
 					if pUnitX.isNone(): continue
 					if pUnitX.getOwner() != pUnit.getOwner(): continue
 					if iCommandUnitType == 1:
@@ -960,8 +955,7 @@ class WBUnitScreen:
 			pNewUnit.convert(pUnit)
 			pNewUnit.setScriptData("PlatyUnit" + pUnit.getScriptData())
 			pUnit.kill(False, -1)
-			for i in xrange(pPlot.getNumUnits()):
-				pUnitX = pPlot.getUnit(i)
+			for pUnitX in pPlot.units():
 				if pUnitX.getScriptData().find("PlatyUnit") == 0:
 					pUnitX.setScriptData(pUnitX.getScriptData()[9:])
 					break

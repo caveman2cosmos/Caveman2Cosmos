@@ -161,7 +161,7 @@ class PediaFeature:
 			szTxt += "\n" + szTemp
 		iTemp = CvTheFeature.getTurnDamage()
 		if iTemp:
-			szTxt += "\nHazzard: %d%% damage per turn" % iTemp
+			szTxt += "\nHazard: %d%% damage per turn" % iTemp
 		iTemp = CvTheFeature.getWarmingDefense()
 		if iTemp:
 			szTxt += "\nGlobal Warming Defense Factor: %d" % iTemp

@@ -8,6 +8,8 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvXMLLoadUtility.h"
+#include "CheckSum.h"
 
 CvPropertyManipulators::~CvPropertyManipulators()
 {
@@ -29,13 +31,13 @@ int CvPropertyManipulators::getNumSources() const
 {
 	return (int) m_apSources.size();
 }
-
+/*
 CvPropertySource* CvPropertyManipulators::getSource(int index) const
 {
 	FASSERT_BOUNDS(0, getNumSources(), index)
 	return m_apSources[index];
 }
-
+*/
 int CvPropertyManipulators::addSource(PropertySourceTypes eType)
 {
 	switch (eType)
@@ -64,13 +66,13 @@ int CvPropertyManipulators::getNumInteractions() const
 {
 	return (int) m_apInteractions.size();
 }
-
+/*
 CvPropertyInteraction* CvPropertyManipulators::getInteraction(int index) const
 {
 	FASSERT_BOUNDS(0, getNumInteractions(), index)
 	return m_apInteractions[index];
 }
-
+*/
 int CvPropertyManipulators::addInteraction(PropertyInteractionTypes eType)
 {
 	switch (eType)
@@ -97,13 +99,13 @@ int CvPropertyManipulators::getNumPropagators() const
 {
 	return (int) m_apPropagators.size();
 }
-
+/*
 CvPropertyPropagator* CvPropertyManipulators::getPropagator(int index) const
 {
 	FASSERT_BOUNDS(0, getNumPropagators(), index)
 	return m_apPropagators[index];
 }
-
+*/
 int CvPropertyManipulators::addPropagator(PropertyPropagatorTypes eType)
 {
 	switch (eType)
@@ -204,10 +206,8 @@ void CvPropertyManipulators::copyNonDefaults(CvPropertyManipulators *pProp, CvXM
 {
 	//if (m_apSources.empty())
 	{
-		const int iNum = pProp->getNumSources();
-		for (int i=0; i<iNum; i++)
+		foreach_(CvPropertySource* pSource, pProp->getSources())
 		{
-			CvPropertySource* pSource = pProp->getSource(i);
 			const int iPos = addSource(pSource->getType());
 			if (iPos != -1)
 				m_apSources[iPos]->copyNonDefaults(pSource, pXML);
@@ -215,10 +215,8 @@ void CvPropertyManipulators::copyNonDefaults(CvPropertyManipulators *pProp, CvXM
 	}
 	//if (m_apInteractions.empty())
 	{
-		const int iNum = pProp->getNumInteractions();
-		for (int i=0; i<iNum; i++)
+		foreach_(CvPropertyInteraction* pInteraction, pProp->getInteractions())
 		{
-			CvPropertyInteraction* pInteraction = pProp->getInteraction(i);
 			const int iPos = addInteraction(pInteraction->getType());
 			if (iPos != -1)
 				m_apInteractions[iPos]->copyNonDefaults(pInteraction, pXML);
@@ -226,10 +224,8 @@ void CvPropertyManipulators::copyNonDefaults(CvPropertyManipulators *pProp, CvXM
 	}
 	//if (m_apPropagators.empty())
 	{
-		const int iNum = pProp->getNumPropagators();
-		for (int i=0; i<iNum; i++)
+		foreach_(CvPropertyPropagator* pPropagator, pProp->getPropagators())
 		{
-			CvPropertyPropagator* pPropagator = pProp->getPropagator(i);
 			const int iPos = addPropagator(pPropagator->getType());
 			if (iPos != -1)
 				m_apPropagators[iPos]->copyNonDefaults(pPropagator, pXML);

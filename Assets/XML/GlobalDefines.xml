@@ -118,10 +118,6 @@
 		<DefineTextVal>FEATURE_FALLOUT</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>GLOBAL_WARMING_TERRAIN</DefineName>
-		<DefineTextVal>TERRAIN_GRASSLAND</DefineTextVal>
-	</Define>
-	<Define>
 		<DefineName>CAPITAL_BUILDING</DefineName><!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
 		<DefineTextVal>BUILDING_PALACE</DefineTextVal>
 	</Define>
@@ -338,11 +334,6 @@
 		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Not in use, commented out in the dll -->
-		<DefineName>MIN_ANIMAL_STARTING_DISTANCE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>MIN_BARBARIAN_STARTING_DISTANCE</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
@@ -491,8 +482,7 @@
 		<iDefineIntVal>-4</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Change name of this one to BASE_DISTANCE_MAINTENANCE_PER_100_PLOTS -->
-		<DefineName>MAX_DISTANCE_CITY_MAINTENANCE</DefineName>
+		<DefineName>BASE_DISTANCE_MAINTENANCE_PER_100_PLOTS</DefineName>
 		<iDefineIntVal>64</iDefineIntVal>
 	</Define>
 	<Define>
@@ -1771,7 +1761,6 @@
 		<DefineName>FORCE_UNOWNED_CITY_TIMER</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
-	<!-- Super Forts begin -->
 	<Define>
 		<DefineName>AI_WORKER_MAX_DISTANCE_FROM_CITY_OUT_BORDERS</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
@@ -1780,11 +1769,8 @@
 		<DefineName>SUPER_FORTS_DURATION_BEFORE_REVOLT</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
-	<!-- Super Forts end -->
-	<!-- More Rivers begin -->
-	<!--
- Valid results on this divisor will never exceed 12
-	the higher the divisor the more rivers
+	<!-- More Rivers
+	Valid results on this divisor will never exceed 12, higher divisor = more rivers.
 	-->
 	<Define>
 		<DefineName>PLOTS_PER_RIVER_EDGE_DIVISOR</DefineName>
@@ -1795,14 +1781,11 @@
 		<DefineName>RIVER_RAND_ON_MORE_RIVERS</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
-	<!-- More Rivers end -->
-	<!-- More Resources begin -->
+	<!-- ! More Rivers -->
 	<Define>
 		<DefineName>BONUS_COUNT_PERCENTAGE_MODIFIER_ON_MORE_RESOURCES</DefineName>
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
-	<!-- More Resources end -->
-	<!-- Size Matters Most begin -->
 	<Define>
 		<DefineName>SIZE_MATTERS_MOST_MULTIPLIER</DefineName>
 		<iDefineIntVal>150</iDefineIntVal>
@@ -1811,24 +1794,21 @@
 		<DefineName>SIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER</DefineName>
 		<iDefineIntVal>300</iDefineIntVal>
 	</Define>
-	<!-- Size Matters Most end -->
-	<!-- AI Gold Slider Safety Percent begin -->
-	<!-- This is the BASE amount of slider allocation required towards gold that the AI feels comfortable with -->
-	<!-- It noteworthily affects how much tolerance the AI has where it feels ready to grow -->
-	<!-- Reduce to make the AI more sensitive to gold concerns and increase for more reckless behavior -->
-	<!-- This may be rather interesting to convert to an AI personality matter or at least give a personality based modifier eventually -->
-	<!-- Original Value was set to 50 - I've adjusted to 40.-->
+	<!-- AI Gold Slider Safety Percent
+	This is the BASE income to expense ratio that the AI feels comfortable with.
+	e.g. a value of 10 would mean that the AI feels confortable if their net income is only 10% of gross income.
+	It noteworthily affects how much tolerance the AI has where it feels ready to grow.
+	Increase to make the AI more sensitive to gold concerns and reduce for more reckless behavior.
+	This may be rather interesting to convert to an AI personality matter or at least give a personality based modifier eventually
+	Original Value: 50 -->
 	<Define>
-		<DefineName>SAFE_GOLD_PERCENT</DefineName>
-		<iDefineIntVal>40</iDefineIntVal>
+		<DefineName>SAFE_PROFIT_MARGIN_BASE_PERCENT</DefineName>
+		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
-	<!-- AI Gold Slider Safety Percent -->
-	<!-- More XP to Level begin -->
 	<Define>
 		<DefineName>MORE_XP_TO_LEVEL_MODIFIER</DefineName>
 		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
-	<!-- More XP to Level end -->
 	<!-- A way to directly enhance the value of bombarding units in city attack stacks (+%) -->
 	<!-- The structure should still keep them in a ratio according to the rest of the stack... this can simply help them to NOT be ignored EVER -->
 	<Define>

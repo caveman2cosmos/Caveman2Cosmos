@@ -3,9 +3,13 @@
 // Author - Mustafa Thamer
 //
 
-#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
+#include "CvArtFileMgr.h"
+#include "CvBuildingInfo.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 #include "CyGame.h"
@@ -122,14 +126,13 @@ void CyGlobalContext::setIsInPedia(bool isInPedia)
 CyPlayer* CyGlobalContext::getCyPlayer(int idx) const
 {
 	static CyPlayer cyPlayers[MAX_PLAYERS];
-	static bool bInit=false;
+	static bool bInit = false;
 
 	if (!bInit)
 	{
-		int i;
-		for(i=0;i<MAX_PLAYERS;i++)
-			cyPlayers[i]=CyPlayer(&GET_PLAYER((PlayerTypes)i));
-		bInit=true;
+		for (int i = 0; i < MAX_PLAYERS; i++)
+			cyPlayers[i] = CyPlayer(&GET_PLAYER((PlayerTypes)i));
+		bInit = true;
 	}
 
 	if (idx >= 0 && idx < MAX_PLAYERS)
@@ -413,11 +416,6 @@ CvProcessInfo* CyGlobalContext::getProcessInfo(int i) const
 	return (i>=0 && i<GC.getNumProcessInfos()) ? &GC.getProcessInfo((ProcessTypes) i) : NULL;
 }
 
-CvAnimationPathInfo* CyGlobalContext::getAnimationPathInfo(int i) const
-{
-	return (i>=0 && i<GC.getNumAnimationPathInfos()) ? &GC.getAnimationPathInfo((AnimationPathTypes)i) : NULL;
-}
-
 
 CvEmphasizeInfo* CyGlobalContext::getEmphasizeInfo(int i) const
 {
@@ -692,12 +690,6 @@ CvArtInfoCivilization* CyGlobalContext::getCivilizationArtInfo(int i) const
 }
 
 
-CvArtInfoLeaderhead* CyGlobalContext::getLeaderheadArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumLeaderheadArtInfos()) ? &ARTFILEMGR.getLeaderheadArtInfo(i) : NULL;
-}
-
-
 CvArtInfoBonus* CyGlobalContext::getBonusArtInfo(int i) const
 {
 	return (i>=0 && i<ARTFILEMGR.getNumBonusArtInfos()) ? &ARTFILEMGR.getBonusArtInfo(i) : NULL;
@@ -707,18 +699,6 @@ CvArtInfoBonus* CyGlobalContext::getBonusArtInfo(int i) const
 CvArtInfoImprovement* CyGlobalContext::getImprovementArtInfo(int i) const
 {
 	return (i>=0 && i<ARTFILEMGR.getNumImprovementArtInfos()) ? &ARTFILEMGR.getImprovementArtInfo(i) : NULL;
-}
-
-
-CvArtInfoTerrain* CyGlobalContext::getTerrainArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumTerrainArtInfos()) ? &ARTFILEMGR.getTerrainArtInfo(i) : NULL;
-}
-
-
-CvArtInfoFeature* CyGlobalContext::getFeatureArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumFeatureArtInfos()) ? &ARTFILEMGR.getFeatureArtInfo(i) : NULL;
 }
 
 

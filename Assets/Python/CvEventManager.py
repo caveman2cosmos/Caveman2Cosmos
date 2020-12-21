@@ -694,12 +694,10 @@ class CvEventManager:
 					aList.append(iPromo)
 			if not aList: continue
 
-			CyUnit, i = CyPlayer.firstUnit(False)
-			while CyUnit:
+			for CyUnit in CyPlayer.units():
 				if CyUnit.isFound():
 					for iPromo in aList:
 						CyUnit.setHasPromotion(iPromo, True)
-				CyUnit, i = CyPlayer.nextUnit(i, False)
 
 	def onMapRegen(self, argsList):
 		if not CyInterface().isInAdvancedStart():
@@ -754,31 +752,6 @@ class CvEventManager:
 				KEY = aWonderTuple[0][i]
 				if KEY == "WORLD_BANK":
 					CyPlayer.changeGold(CyPlayer.getGold()//200)
-				elif KEY == "ZIZKOV":
-					MAP = GC.getMap()
-					iPlayerAct = GAME.getActivePlayer()
-					TECH_SATELLITES = self.TECH_SATELLITES
-					iChance = 50 + (MAP.getWorldSize() + 3)**2 + 64 * self.iVictoryDelayPrcntGS / 100
-					iTeam = CyPlayer.getTeam()
-					for iPlayerX in xrange(self.MAX_PC_PLAYERS):
-						CyPlayerX = GC.getPlayer(iPlayerX)
-						if not CyPlayerX.isAlive():
-							continue
-						iTeamX = CyPlayerX.getTeam()
-						if iTeamX == iTeam:
-							continue
-						CyTeamX = GC.getTeam(iTeamX)
-						if CyTeamX.isVassal(iTeam):
-							continue
-						if TECH_SATELLITES > -1 and CyTeamX.isHasTech(TECH_SATELLITES):
-							continue
-
-						if not GAME.getSorenRandNum(iChance, "Zizkov"):
-							GC.getMap().resetRevealedPlots(iTeamX)
-							if iPlayer == iPlayerAct:
-								CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MSG_ZIZKOV_YOU", (CyPlayerX.getCivilizationDescription(0),)), iPlayer)
-							elif iPlayerX == iPlayerAct:
-								CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MSG_ZIZKOV",()), iPlayerX)
 
 				elif KEY == "CYRUS_CYLINDER":
 					if not iGameTurn % (4*self.iVictoryDelayPrcntGS/100 + 1):
@@ -808,8 +781,7 @@ class CvEventManager:
 		bMajor = not iGameTurn % (128 * self.iVictoryDelayPrcntGS / 100)
 
 		if bMinor or bMajor:
-			CyUnit, i = CyPlayer.firstUnit(False)
-			while CyUnit:
+			for CyUnit in CyPlayer.units():
 				if not CyUnit.isDead() and CyUnit.isAnimal():
 					if not GAME.getSorenRandNum(15 - bMajor*10, "Aging"): # 1 in 15/5
 						if not CyUnit.isHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT1")):
@@ -828,7 +800,6 @@ class CvEventManager:
 							CyUnit.setBaseCombatStr(CyUnit.baseCombatStr() + 1)
 						else:
 							CyUnit.setExperience(CyUnit.getExperience() + 3, -1)
-				CyUnit, i = CyPlayer.nextUnit(i, False)
 
 
 	def onEndPlayerTurn(self, argsList):
@@ -1244,21 +1215,6 @@ class CvEventManager:
 						else:
 							CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
 
-		elif iImprovement == mapImpType['IMPROVEMENT_YOUNG_FOREST']:
-			CyPlot = GC.getMap().plot(iX, iY)
-			CyPlot.setImprovementType(-1)
-			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST_YOUNG'), 0)
-
-		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_BAMBOO']:
-			CyPlot = GC.getMap().plot(iX, iY)
-			CyPlot.setImprovementType(-1)
-			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
-
-		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_SAVANNA']:
-			CyPlot = GC.getMap().plot(iX, iY)
-			CyPlot.setImprovementType(-1)
-			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_SAVANNA'), 0)
-
 		elif iImprovement == mapImpType['IMPROVEMENT_FARM']:
 			iPlayer = GC.getMap().plot(iX, iY).getOwner()
 			if iPlayer != -1:
@@ -1422,7 +1378,7 @@ class CvEventManager:
 						continue
 					# Covers whole map for others
 					GC.getMap().resetRevealedPlots(iTeamX)
-				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_GLOBAL_JAM",()))
+				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_MSG_ZIZKOV_JAM",()))
 			elif KEY == "TSUKIJI":
 				CyTeam = GC.getTeam(CyPlayer.getTeam())
 				BOAT = GC.getInfoTypeForString("IMPROVEMENT_FISHING_BOATS")
@@ -1571,13 +1527,11 @@ class CvEventManager:
 		elif iBuilding == mapBuildingType["NANITE_DEFUSER"]:
 
 			for iPlayerX in xrange(self.MAX_PLAYERS):
-				CyUnit, i = CyPlayer.firstUnit(False)
-				while CyUnit:
+				for CyUnit in GC.getPlayer(iPlayerX).units():
 					if CyUnit.isNone() or CyUnit.isDead():
 						print "CvEventManager\onBuildingBuilt", ("CyUnit.isDead()", CyUnit.isDead()), ("CyUnit.isNone()", CyUnit.isNone())
 					elif CyUnit.nukeRange() > -1:
 						CyUnit.kill(0, -1)
-					CyUnit, i = CyPlayer.nextUnit(i, False)
 				# Global message
 				iPlayerAct = GAME.getActivePlayer()
 				if iPlayerAct > -1:
@@ -2279,14 +2233,13 @@ class CvEventManager:
 
 
 	def onUnitSpreadReligionAttempt(self, argsList):
-		CyUnit, iReligion, bSuccess = argsList
-		if not bSuccess:
-			iPlayer = CyUnit.getOwner()
+		#unit, iReligion, bSuccess = argsList
+		if not argsList[2]:
+			unit = argsList[0]
 			aWonderTuple = self.aWonderTuple
-			if "FA_MEN_SI" in aWonderTuple[0]:
-				if iPlayer == aWonderTuple[4][aWonderTuple[0].index("FA_MEN_SI")]:
-					CyCity = GC.getMap().plot(CyUnit.getX(), CyUnit.getY()).getPlotCity()
-					CyCity.setHasReligion(GC.getUnitInfo(CyUnit.getUnitType()).getPrereqReligion(), True, True, True)
+			if "FA_MEN_SI" in aWonderTuple[0] and unit.getOwner() == aWonderTuple[4][aWonderTuple[0].index("FA_MEN_SI")]:
+				CyCity = GC.getMap().plot(unit.getX(), unit.getY()).getPlotCity()
+				CyCity.setHasReligion(GC.getUnitInfo(unit.getUnitType()).getPrereqReligion(), True, True, True)
 
 
 	'''
@@ -2378,7 +2331,7 @@ class CvEventManager:
 
 				CyUnit = CyPlayer.initUnit(iWorker, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
-			else: print "Found no valid plot to place the gatherer. \nNew civ from revolution or barb. city perhaps?"
+			else: print "Found no valid plot to place the gatherer.\n\tNew civ from revolution or barbCiv perhaps?"
 
 		# Obsolete python building-effects
 		aWonderTuple = self.aWonderTuple

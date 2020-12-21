@@ -202,12 +202,9 @@
 				<iYield>0</iYield>
 				<iYield>40</iYield>
 			</YieldChanges>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 			</PrereqInCityBuildings>
@@ -241,16 +238,10 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_OUTER</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
+				<BuildingType>BUILDING_SOLAR_ARRAY_OUTER</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 			</PrereqInCityBuildings>
@@ -278,18 +269,9 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_OUTER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_TRANSNEPTUNIAN</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
+				<BuildingType>BUILDING_SOLAR_ARRAY_OUTER</BuildingType>
+				<BuildingType>BUILDING_SOLAR_ARRAY_TRANSNEPTUNIAN</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1902,6 +1884,7 @@
 			<Strategy>TXT_KEY_BUILDING_BRACEWELL_PROBES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BRACEWELL_PROBES</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BRACEWELL_PROBES</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
 			<iHurryCostModifier>10000</iHurryCostModifier>

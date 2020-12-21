@@ -105,22 +105,10 @@
 			</PrereqInCityBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BURIAL_TRADITION_CAVE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BURIAL_TRADITION_EARTH</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BURIAL_TRADITION_FIRE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BURIAL_TRADITION_SKY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_BURIAL_TRADITION_CAVE</BuildingType>
+				<BuildingType>BUILDING_BURIAL_TRADITION_EARTH</BuildingType>
+				<BuildingType>BUILDING_BURIAL_TRADITION_FIRE</BuildingType>
+				<BuildingType>BUILDING_BURIAL_TRADITION_SKY</BuildingType>
 			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>

@@ -7,7 +7,6 @@
 
 #include "LinkedList.h"
 //#include <bitset>
-#include <vector>
 #include "CvGameObject.h"
 #include "CvUnit.h"
 #include "idinfo_iterator_base.h"
@@ -154,7 +153,7 @@ public:
 	void setupGraphical();
 	void updateGraphicEra();
 
-	void erase(); // Exposed to Python
+	void erase();
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
@@ -168,13 +167,13 @@ public:
 
 	DllExport float getPointX() const;
 	DllExport float getPointY() const;
-	DllExport NiPoint3 getPoint() const; // Exposed to Python
+	DllExport NiPoint3 getPoint() const;
 
 	float getSymbolSize() const;
 	DllExport float getSymbolOffsetX(int iID) const;
 	DllExport float getSymbolOffsetY(int iID) const;
 
-	TeamTypes getTeam() const; // Exposed to Python
+	TeamTypes getTeam() const;
 
 	void doTurn();
 
@@ -198,46 +197,46 @@ public:
 
 	void verifyUnitValidPlot();
 
-	void nukeExplosion(int iRange, CvUnit* pNukeUnit = NULL); // Exposed to Python
+	void nukeExplosion(int iRange, CvUnit* pNukeUnit = NULL);
 
-	bool isConnectedTo( const CvCity* pCity) const; // Exposed to Python
-	bool isConnectedToCapital(PlayerTypes ePlayer = NO_PLAYER) const; // Exposed to Python
-	int getPlotGroupConnectedBonus(PlayerTypes ePlayer, BonusTypes eBonus) const; // Exposed to Python
-	bool isPlotGroupConnectedBonus(PlayerTypes ePlayer, BonusTypes eBonus) const; // Exposed to Python
-	bool isAdjacentPlotGroupConnectedBonus(PlayerTypes ePlayer, BonusTypes eBonus) const; // Exposed to Python
+	bool isConnectedTo( const CvCity* pCity) const;
+	bool isConnectedToCapital(PlayerTypes ePlayer = NO_PLAYER) const;
+	int getPlotGroupConnectedBonus(PlayerTypes ePlayer, BonusTypes eBonus) const;
+	bool isPlotGroupConnectedBonus(PlayerTypes ePlayer, BonusTypes eBonus) const;
+	bool isAdjacentPlotGroupConnectedBonus(PlayerTypes ePlayer, BonusTypes eBonus) const;
 	void updatePlotGroupBonus(bool bAdd);
 
 	bool isAdjacentToArea(int iAreaID) const;
-	bool isAdjacentToArea(const CvArea* pArea) const; // Exposed to Python
-	bool shareAdjacentArea( const CvPlot* pPlot) const; // Exposed to Python
-	bool isAdjacentToLand() const; // Exposed to Python
-	bool isCoastalLand(int iMinWaterSize = -1) const; // Exposed to Python
-	bool isCoastal(int iMinWaterSize = -1) const; // Exposed to Python
+	bool isAdjacentToArea(const CvArea* pArea) const;
+	bool shareAdjacentArea( const CvPlot* pPlot) const;
+	bool isAdjacentToLand() const;
+	bool isCoastalLand(int iMinWaterSize = -1) const;
+	bool isCoastal(int iMinWaterSize = -1) const;
 
 	bool isVisibleWorked() const;
-	bool isWithinTeamCityRadius(TeamTypes eTeam, PlayerTypes eIgnorePlayer = NO_PLAYER) const; // Exposed to Python
+	bool isWithinTeamCityRadius(TeamTypes eTeam, PlayerTypes eIgnorePlayer = NO_PLAYER) const;
 
-	DllExport bool isLake() const; // Exposed to Python
+	DllExport bool isLake() const;
 
-	bool isFreshWater() const; // Exposed to Python
+	bool isFreshWater() const;
 	bool isWaterAndIsFresh() const;
 
-	bool isPotentialIrrigation() const; // Exposed to Python
-	bool canHavePotentialIrrigation() const; // Exposed to Python
-	DllExport bool isIrrigationAvailable(bool bIgnoreSelf = false) const; // Exposed to Python
+	bool isPotentialIrrigation() const;
+	bool canHavePotentialIrrigation() const;
+	DllExport bool isIrrigationAvailable(bool bIgnoreSelf = false) const;
 
 	bool isRiverMask() const;
 	DllExport bool isRiverCrossingFlowClockwise(DirectionTypes eDirection) const;
-	bool isRiverSide() const; // Exposed to Python
-	bool isRiver() const; // Exposed to Python
-	bool isRiverConnection(DirectionTypes eDirection) const; // Exposed to Python
+	bool isRiverSide() const;
+	bool isRiver() const;
+	bool isRiverConnection(DirectionTypes eDirection) const;
 
 	CvPlot* getNearestLandPlotInternal(int iDistance) const;
-	int getNearestLandArea() const; // Exposed to Python
-	CvPlot* getNearestLandPlot() const; // Exposed to Python
+	int getNearestLandArea() const;
+	CvPlot* getNearestLandPlot() const;
 
-	int seeFromLevel(TeamTypes eTeam) const; // Exposed to Python
-	int seeThroughLevel() const; // Exposed to Python
+	int seeFromLevel(TeamTypes eTeam) const;
+	int seeThroughLevel() const;
 	void changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, CvUnit* pUnit, bool bUpdatePlotGroups);
 	bool canSeePlot(const CvPlot* plot, TeamTypes eTeam, int iRange, DirectionTypes eFacingDirection) const;
 	bool canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int originalDX, int originalDY, bool firstPlot, bool outerRing) const;
@@ -248,30 +247,30 @@ public:
 	bool canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude = false) const;
 
 	bool canBuildImprovement(ImprovementTypes eImprovement, TeamTypes eTeam) const;
-	bool canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam = NO_TEAM, bool bPotential = false, bool bUpgradeCheck = false) const; // Exposed to Python
+	bool canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam = NO_TEAM, bool bPotential = false, bool bUpgradeCheck = false) const;
 
-	bool canBuild(BuildTypes eBuild, PlayerTypes ePlayer = NO_PLAYER, bool bTestVisible = false, bool bIncludePythonOverrides = true) const; // Exposed to Python
+	bool canBuild(BuildTypes eBuild, PlayerTypes ePlayer = NO_PLAYER, bool bTestVisible = false, bool bIncludePythonOverrides = true) const;
 	static bool hasCachedCanBuildEntry(int iX, int iY, BuildTypes eBuild, PlayerTypes ePlayer, struct canBuildCacheEntry*& entry);
 	long canBuildFromPython(BuildTypes eBuild, PlayerTypes ePlayer) const;
 	long canBuildFromPythonInternal(BuildTypes eBuild, PlayerTypes ePlayer) const;
-	int getBuildTime(BuildTypes eBuild) const; // Exposed to Python
+	int getBuildTime(BuildTypes eBuild) const;
 	int getBuildTurnsLeft(BuildTypes eBuild, PlayerTypes ePlayer) const;
-	int getBuildTurnsLeft(BuildTypes eBuild, int iNowExtra, int iThenExtra, bool bIncludeUnits = true) const; // Exposed to Python
+	int getBuildTurnsLeft(BuildTypes eBuild, int iNowExtra, int iThenExtra, bool bIncludeUnits = true) const;
 
-	int getFeatureProduction(BuildTypes eBuild, TeamTypes eTeam, CvCity** ppCity) const; // Exposed to Python
+	int getFeatureProduction(BuildTypes eBuild, TeamTypes eTeam, CvCity** ppCity) const;
 
 	// Don't call this at all
 	DllExport CvUnit* getBestDefenderExternal(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false) const;
 	CvUnit* getBestDefender(EDefenderScore::flags flags, PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL) const;
 	CvUnit* getFirstDefender(EDefenderScore::flags flags, PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker) const;
 
-	CvUnit* getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false, bool bAssassinate = false, bool bClearCache = false) const; // Exposed to Python
+	CvUnit* getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false, bool bAssassinate = false, bool bClearCache = false) const;
 	// Deprecated, use the function above
 	CvUnit* getFirstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false) const;
 
 	int AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, DomainTypes eDomainType = NO_DOMAIN, StrengthFlags::flags flags = StrengthFlags::DefensiveBonuses, int iRange = 0) const;
-	CvUnit* getSelectedUnit() const; // Exposed to Python
-	int getUnitPower(PlayerTypes eOwner = NO_PLAYER) const; // Exposed to Python
+	CvUnit* getSelectedUnit() const;
+	int getUnitPower(PlayerTypes eOwner = NO_PLAYER) const;
 
 	// Super Forts *bombard*
 	bool isBombardable(const CvUnit* pUnit) const;
@@ -281,13 +280,6 @@ public:
 	void changeDefenseDamage(int iChange);
 
 	// Super Forts *culture*
-/*	Koshling - due to the implementatino of fort culture inheritted from AND we need to
-// handle fort culture a bit differently in C2C and some of these methods are not needed
-	int getCultureRangeForts(PlayerTypes ePlayer) const;
-	void setCultureRangeForts(PlayerTypes ePlayer, int iNewValue);
-	void changeCultureRangeForts(PlayerTypes ePlayer, int iChange);
-	bool isWithinFortCultureRange(PlayerTypes ePlayer) const;
-*/
 	void changeCultureRangeFortsWithinRange(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate);
 	void doImprovementCulture();
 
@@ -303,21 +295,21 @@ public:
 	void calculateChokeValue();
 	// ! Super Forts
 
-	int defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHelp = false) const; // Exposed to Python
-	int movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const; // Exposed to Python
+	int defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHelp = false) const;
+	int movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const;
 	static void flushMovementCostCache();
 
-	int getExtraMovePathCost() const; // Exposed to Python
-	void changeExtraMovePathCost(int iChange); // Exposed to Python
+	int getExtraMovePathCost() const;
+	void changeExtraMovePathCost(int iChange);
 	//	Koshling - count of mountain leaders present per team maintained for efficiency of movement calculations
 	// TB: This was not working properly so has been changed to a plotcount method.
 	int getHasMountainLeader(TeamTypes eTeam) const;
 
-	bool isAdjacentOwned() const; // Exposed to Python
-	bool isAdjacentPlayer(PlayerTypes ePlayer, bool bLandOnly = false) const; // Exposed to Python
-	bool isAdjacentTeam(TeamTypes eTeam, bool bLandOnly = false) const; // Exposed to Python
-	bool isWithinCultureRange(PlayerTypes ePlayer, int* iFoundRange = NULL) const; // Exposed to Python
-	int getNumCultureRangeCities(PlayerTypes ePlayer) const; // Exposed to Python
+	bool isAdjacentOwned() const;
+	bool isAdjacentPlayer(PlayerTypes ePlayer, bool bLandOnly = false) const;
+	bool isAdjacentTeam(TeamTypes eTeam, bool bLandOnly = false) const;
+	bool isWithinCultureRange(PlayerTypes ePlayer, int* iFoundRange = NULL) const;
+	int getNumCultureRangeCities(PlayerTypes ePlayer) const;
 
 	bool isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb = true ) const;
 	bool isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlayer = NO_PLAYER ) const;
@@ -407,39 +399,39 @@ public:
 	int plotStrength(UnitValueFlags eFlags, ConstPlotUnitFunc funcA, int iData1A = -1, int iData2A = -1, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, ConstPlotUnitFunc funcB = NULL, int iData1B = -1, int iData2B = -1, int iRange = 0) const;
 	int plotStrengthTimes100(UnitValueFlags eFlags, ConstPlotUnitFunc funcA, int iData1A = -1, int iData2A = -1, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, ConstPlotUnitFunc funcB = NULL, int iData1B = -1, int iData2B = -1, int iRange = 0) const;
 
-	bool isOwned() const; // Exposed to Python
-	bool isBarbarian() const; // Exposed to Python
-	bool isNPC() const; // Exposed to Python
-	bool isHominid() const; // Exposed to Python
-	bool isRevealedBarbarian() const; // Exposed to Python
+	bool isOwned() const;
+	bool isBarbarian() const;
+	bool isNPC() const;
+	bool isHominid() const;
+	bool isRevealedBarbarian() const;
 
-	DllExport bool isActiveVisible(bool bDebug) const; // Exposed to Python
+	DllExport bool isActiveVisible(bool bDebug) const;
 
-	bool isVisible(TeamTypes eTeam, bool bDebug) const; // Exposed to Python
-	bool isVisibleToCivTeam() const; // Exposed to Python
-	bool isVisibleToWatchingHuman() const; // Exposed to Python
-	bool isAdjacentVisible(TeamTypes eTeam, bool bDebug) const; // Exposed to Python
-	bool isAdjacentNonvisible(TeamTypes eTeam) const; // Exposed to Python
+	bool isVisible(TeamTypes eTeam, bool bDebug) const;
+	bool isVisibleToCivTeam() const;
+	bool isVisibleToWatchingHuman() const;
+	bool isAdjacentVisible(TeamTypes eTeam, bool bDebug) const;
+	bool isAdjacentNonvisible(TeamTypes eTeam) const;
 
-	DllExport bool isGoody(TeamTypes eTeam = NO_TEAM) const; // Exposed to Python
+	DllExport bool isGoody(TeamTypes eTeam = NO_TEAM) const;
 
-	bool isRevealedGoody(TeamTypes eTeam = NO_TEAM) const; // Exposed to Python
-	void removeGoody(); // Exposed to Python
+	bool isRevealedGoody(TeamTypes eTeam = NO_TEAM) const;
+	void removeGoody();
 
-	DllExport bool isCity(bool bCheckImprovement = false, TeamTypes eForTeam = NO_TEAM) const; // Exposed to Python
+	DllExport bool isCity(bool bCheckImprovement = false, TeamTypes eForTeam = NO_TEAM) const;
 
-	bool isFriendlyCity(const CvUnit& kUnit, bool bCheckImprovement) const; // Exposed to Python
-	bool isEnemyCity(const CvUnit& kUnit, bool bOnlyRealCities = false) const; // Exposed to Python
+	bool isFriendlyCity(const CvUnit& kUnit, bool bCheckImprovement) const;
+	bool isEnemyCity(const CvUnit& kUnit, bool bOnlyRealCities = false) const;
 
-	bool isOccupation() const; // Exposed to Python
-	bool isBeingWorked() const; // Exposed to Python
+	bool isOccupation() const;
+	bool isBeingWorked() const;
 
-	bool isUnit() const; // Exposed to Python
-	bool isInvestigate(TeamTypes eTeam) const; // Exposed to Python
-	bool isVisibleEnemyDefender(const CvUnit* pUnit) const; // Exposed to Python
+	bool isUnit() const;
+	bool isInvestigate(TeamTypes eTeam) const;
+	bool isVisibleEnemyDefender(const CvUnit* pUnit) const;
 	CvUnit *getVisibleEnemyDefender(PlayerTypes ePlayer) const;
 	int getNumDefenders(PlayerTypes ePlayer) const;
-	int getNumAttackers(PlayerTypes ePlayer) const; // Exposed to Python
+	int getNumAttackers(PlayerTypes ePlayer) const;
 	int getNumVisibleEnemyDefenders(const CvUnit* pUnit) const;
 	int getNumCriminals() const;
 	int getNumPlayerUnitAI(UnitAITypes eUnitAI, PlayerTypes ePlayer) const;
@@ -449,33 +441,33 @@ public:
 	bool isVisiblePotentialEnemyDefender(const CvUnit* pUnit) const;
 	bool isVisiblePotentialEnemyDefenderless(const CvUnit* pUnit) const;
 
-	DllExport bool isFighting() const; // Exposed to Python
-	DllExport bool isVisibleEnemyUnit(PlayerTypes ePlayer) const; // Exposed to Python
+	DllExport bool isFighting() const;
+	DllExport bool isVisibleEnemyUnit(PlayerTypes ePlayer) const;
 	DllExport int getNumVisibleUnits(PlayerTypes ePlayer) const;
 
 	bool isVisibleEnemyUnit(const CvUnit* pUnit) const;
-	bool isVisibleOtherUnit(PlayerTypes ePlayer) const; // Exposed to Python
+	bool isVisibleOtherUnit(PlayerTypes ePlayer) const;
 
-	bool canHaveFeature(FeatureTypes eFeature, bool bOverExistingFeature = false) const; // Exposed to Python
+	bool canHaveFeature(FeatureTypes eFeature, bool bOverExistingFeature = false) const;
 
-	DllExport bool isRoute() const; // Exposed to Python
+	DllExport bool isRoute() const;
 
-	bool isValidRoute(const CvUnit* pUnit) const; // Exposed to Python
-	bool isTradeNetworkImpassable(TeamTypes eTeam) const; // Exposed to Python
-	bool isNetworkTerrain(TeamTypes eTeam) const; // Exposed to Python
-	bool isBonusNetwork(TeamTypes eTeam) const; // Exposed to Python
-	bool isTradeNetwork(TeamTypes eTeam) const; // Exposed to Python
-	bool isTradeNetworkConnected(const CvPlot * pPlot, TeamTypes eTeam) const; // Exposed to Python
+	bool isValidRoute(const CvUnit* pUnit) const;
+	bool isTradeNetworkImpassable(TeamTypes eTeam) const;
+	bool isNetworkTerrain(TeamTypes eTeam) const;
+	bool isBonusNetwork(TeamTypes eTeam) const;
+	bool isTradeNetwork(TeamTypes eTeam) const;
+	bool isTradeNetworkConnected(const CvPlot * pPlot, TeamTypes eTeam) const;
 	bool isRiverNetwork(TeamTypes eTeam) const;
 
-	bool isValidDomainForLocation(const CvUnit& unit) const; // Exposed to Python
-	bool isValidDomainForAction(const CvUnit& unit) const; // Exposed to Python
+	bool isValidDomainForLocation(const CvUnit& unit) const;
+	bool isValidDomainForAction(const CvUnit& unit) const;
 
-	bool isImpassable(TeamTypes eTeam = NO_TEAM) const; // Exposed to Python
+	bool isImpassable(TeamTypes eTeam = NO_TEAM) const;
 
 	DllExport int getViewportX() const;
 	inline int getX() const { return m_iX; }
-	DllExport int getViewportY() const; // Exposed to Python
+	DllExport int getViewportY() const;
 	inline int getY() const { return m_iY; }
 	bool isInViewport(int comfortBorderSize = 0) const;
 
@@ -604,172 +596,171 @@ public:
 
 	bool shouldHaveGraphics() const;
 
-	bool at(int iX, int iY) const; // Exposed to Python
+	bool at(int iX, int iY) const;
 	// BUG - Lat/Long Coordinates
 	int calculateMinutes(int iPlotIndex, int iPlotCount, bool bWrap, int iDegreeMin, int iDegreeMax) const;
-	int getLongitudeMinutes() const; // Exposed to Python
-	int getLatitudeMinutes() const; // Exposed to Python
+	int getLongitudeMinutes() const;
+	int getLatitudeMinutes() const;
 	// ! BUG
-	int getLatitude() const; // Exposed to Python
+	int getLatitude() const;
 	int getLatitudeRaw() const;
-	int getLongitude() const; // Exposed to Python
+	int getLongitude() const;
 	int getLongitudeRaw() const;
 	int getFOWIndex() const;
 
-	CvArea* area() const; // Exposed to Python
+	CvArea* area() const;
 	CvArea* waterArea(bool bNoImpassable = false) const;
 	CvArea* secondWaterArea() const;
-	int getArea() const; // Exposed to Python
+	int getArea() const;
 	void setArea(int iNewValue);
 
-	DllExport int getFeatureVariety() const; // Exposed to Python
+	DllExport int getFeatureVariety() const;
 
-	int getOwnershipDuration() const; // Exposed to Python
-	bool isOwnershipScore() const; // Exposed to Python
-	void setOwnershipDuration(int iNewValue); // Exposed to Python
-	void changeOwnershipDuration(int iChange); // Exposed to Python
+	int getOwnershipDuration() const;
+	bool isOwnershipScore() const;
+	void setOwnershipDuration(int iNewValue);
+	void changeOwnershipDuration(int iChange);
 
-	int getImprovementDuration() const; // Exposed to Python
-	void setImprovementDuration(int iNewValue); // Exposed to Python
-	void changeImprovementDuration(int iChange); // Exposed to Python
+	int getImprovementDuration() const;
+	void setImprovementDuration(int iNewValue);
+	void changeImprovementDuration(int iChange);
 
-	int getImprovementUpgradeProgress() const; // Exposed to Python
-	int getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlayer) const; // Exposed to Python
-	void setImprovementUpgradeProgress(int iNewValue); // Exposed to Python
-	void changeImprovementUpgradeProgress(int iChange); // Exposed to Python
+	int getImprovementUpgradeProgress() const;
+	int getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlayer) const;
+	void setImprovementUpgradeProgress(int iNewValue);
+	void changeImprovementUpgradeProgress(int iChange);
 
-	int getForceUnownedTimer() const; // Exposed to Python
-	bool isForceUnowned() const; // Exposed to Python
-	void setForceUnownedTimer(int iNewValue); // Exposed to Python
-	void changeForceUnownedTimer(int iChange); // Exposed to Python
+	bool isForceUnowned() const;
+	void setForceUnownedTimer(int iNewValue);
+	void changeForceUnownedTimer(int iChange);
 
-	int getCityRadiusCount() const; // Exposed to Python
-	int isCityRadius() const; // Exposed to Python
+	int getCityRadiusCount() const;
+	int isCityRadius() const;
 	void changeCityRadiusCount(int iChange);
 
-	bool isStartingPlot() const; // Exposed to Python
-	void setStartingPlot(bool bNewValue); // Exposed to Python
+	bool isStartingPlot() const;
+	void setStartingPlot(bool bNewValue);
 
-	DllExport bool isNOfRiver() const; // Exposed to Python
-	void setNOfRiver(bool bNewValue, CardinalDirectionTypes eRiverDir); // Exposed to Python
+	DllExport bool isNOfRiver() const;
+	void setNOfRiver(bool bNewValue, CardinalDirectionTypes eRiverDir);
 
-	DllExport bool isWOfRiver() const; // Exposed to Python
-	void setWOfRiver(bool bNewValue, CardinalDirectionTypes eRiverDir); // Exposed to Python
+	DllExport bool isWOfRiver() const;
+	void setWOfRiver(bool bNewValue, CardinalDirectionTypes eRiverDir);
 
-	DllExport CardinalDirectionTypes getRiverNSDirection() const; // Exposed to Python
-	DllExport CardinalDirectionTypes getRiverWEDirection() const; // Exposed to Python
+	DllExport CardinalDirectionTypes getRiverNSDirection() const;
+	DllExport CardinalDirectionTypes getRiverWEDirection() const;
 
-	CvPlot* getInlandCorner() const; // Exposed to Python
+	CvPlot* getInlandCorner() const;
 	bool hasCoastAtSECorner() const;
 
-	bool isIrrigated() const; // Exposed to Python
+	bool isIrrigated() const;
 	void setIrrigated(bool bNewValue);
 	void updateIrrigated();
 
-	bool isPotentialCityWork() const; // Exposed to Python
-	bool isPotentialCityWorkForArea(CvArea* pArea) const; // Exposed to Python
+	bool isPotentialCityWork() const;
+	bool isPotentialCityWorkForArea(CvArea* pArea) const;
 	void updatePotentialCityWork();
 
 	bool isShowCitySymbols() const;
 	void updateShowCitySymbols();
 
-	bool isFlagDirty() const; // Exposed to Python
-	void setFlagDirty(bool bNewValue); // Exposed to Python
+	bool isFlagDirty() const;
+	void setFlagDirty(bool bNewValue);
 
-	DllExport inline PlayerTypes getOwner() const { return (PlayerTypes)m_eOwner; } // Exposed to Python
+	DllExport inline PlayerTypes getOwner() const { return (PlayerTypes)m_eOwner; }
 	void setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotGroup);
 	static void	setDeferredPlotGroupRecalculationMode(bool bDefer);
 
-	PlotTypes getPlotType() const; // Exposed to Python
-	bool isWater() const; // Exposed to Python
-	DllExport bool isWaterExternal() const; // Exposed to Python
-	bool isFlatlands() const; // Exposed to Python
-	DllExport bool isHills() const; // Exposed to Python
-	DllExport bool isPeak() const; // Exposed to Python
-	bool isPeak2(bool bCountsAs = false) const; // Exposed to Python
-	void setPlotType(PlotTypes eNewValue, bool bRecalculate = true, bool bRebuildGraphics = true); // Exposed to Python
+	PlotTypes getPlotType() const;
+	bool isWater() const;
+	DllExport bool isWaterExternal() const;
+	bool isFlatlands() const;
+	DllExport bool isHills() const;
+	DllExport bool isPeak() const;
+	bool isAsPeak() const;
+	void setPlotType(PlotTypes eNewValue, bool bRecalculate = true, bool bRebuildGraphics = true);
 
-	DllExport TerrainTypes getTerrainTypeExternal() const; // Exposed to Python
-	TerrainTypes getTerrainType() const; // Exposed to Python
-	void setTerrainType(TerrainTypes eNewValue, bool bRecalculate = true, bool bRebuildGraphics = true); // Exposed to Python
+	DllExport TerrainTypes getTerrainTypeExternal() const;
+	TerrainTypes getTerrainType() const;
+	void setTerrainType(TerrainTypes eNewValue, bool bRecalculate = true, bool bRebuildGraphics = true);
 
-	DllExport FeatureTypes getFeatureTypeExternal() const; // Exposed to Python
-	FeatureTypes getFeatureType() const; // Exposed to Python
-	void setFeatureType(FeatureTypes eNewValue, int iVariety = -1, bool bImprovementSet = false); // Exposed to Python
-	void setFeatureDummyVisibility(const char *dummyTag, bool show); // Exposed to Python
+	DllExport FeatureTypes getFeatureTypeExternal() const;
+	FeatureTypes getFeatureType() const;
+	void setFeatureType(FeatureTypes eNewValue, int iVariety = -1, bool bImprovementSet = false);
+	void setFeatureDummyVisibility(const char *dummyTag, bool show);
 	void addFeatureDummyModel(const char *dummyTag, const char *modelTag);
 	void setFeatureDummyTexture(const char *dummyTag, const char *textureTag);
 	CvString pickFeatureDummyTag(int mouseX, int mouseY);
 	void resetFeatureModel();
 
-	DllExport BonusTypes getBonusType(TeamTypes eTeam = NO_TEAM) const; // Exposed to Python
-	BonusTypes getNonObsoleteBonusType(TeamTypes eTeam = NO_TEAM) const; // Exposed to Python
-	void setBonusType(BonusTypes eNewValue); // Exposed to Python
+	DllExport BonusTypes getBonusType(TeamTypes eTeam = NO_TEAM) const;
+	BonusTypes getNonObsoleteBonusType(TeamTypes eTeam = NO_TEAM) const;
+	void setBonusType(BonusTypes eNewValue);
 
 	void setImprovementCurrentValue();
 	int getImprovementCurrentValue() const;
 
-	DllExport ImprovementTypes getImprovementType() const; // Exposed to Python
-	void setImprovementType(ImprovementTypes eNewValue); // Exposed to Python
+	DllExport ImprovementTypes getImprovementType() const;
+	void setImprovementType(ImprovementTypes eNewValue);
 
-	RouteTypes getRouteType() const; // Exposed to Python
-	void setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroup); // Exposed to Python
+	RouteTypes getRouteType() const;
+	void setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroup);
 	void updateCityRoute(bool bUpdatePlotGroup);
 
-	DllExport CvCity* getPlotCity() const; // Exposed to Python
+	DllExport CvCity* getPlotCity() const;
 	void setPlotCity(CvCity* pNewValue);
 
-	CvCity* getWorkingCity() const; // Exposed to Python
+	CvCity* getWorkingCity() const;
 	void updateWorkingCity();
 
-	CvCity* getWorkingCityOverride() const; // Exposed to Python
+	CvCity* getWorkingCityOverride() const;
 	void setWorkingCityOverride( const CvCity* pNewValue);
 
-	int getRiverID() const; // Exposed to Python
-	void setRiverID(int iNewValue); // Exposed to Python
+	int getRiverID() const;
+	void setRiverID(int iNewValue);
 
-	int getMinOriginalStartDist() const; // Exposed to Python
+	int getMinOriginalStartDist() const;
 	void setMinOriginalStartDist(int iNewValue);
 
-	int getReconCount() const; // Exposed to Python
+	int getReconCount() const;
 	void changeReconCount(int iChange);
 
-	int getRiverCrossingCount() const; // Exposed to Python
+	int getRiverCrossingCount() const;
 	void changeRiverCrossingCount(int iChange);
 
 	short* getYield() const;
-	DllExport int getYield(YieldTypes eIndex) const; // Exposed to Python
-	int calculateNatureYield(YieldTypes eIndex, TeamTypes eTeam, bool bIgnoreFeature = false) const; // Exposed to Python
-	int calculateBestNatureYield(YieldTypes eIndex, TeamTypes eTeam) const; // Exposed to Python
-	int calculateTotalBestNatureYield(TeamTypes eTeam) const; // Exposed to Python
-	int calculateImprovementYieldChange(ImprovementTypes eImprovement, YieldTypes eYield, PlayerTypes ePlayer, bool bOptimal = false, bool bBestRoute = false) const; // Exposed to Python
-	int calculateYield(YieldTypes eIndex, bool bDisplay = false) const; // Exposed to Python
-	bool hasYield() const; // Exposed to Python
+	DllExport int getYield(YieldTypes eIndex) const;
+	int calculateNatureYield(YieldTypes eIndex, TeamTypes eTeam, bool bIgnoreFeature = false) const;
+	int calculateBestNatureYield(YieldTypes eIndex, TeamTypes eTeam) const;
+	int calculateTotalBestNatureYield(TeamTypes eTeam) const;
+	int calculateImprovementYieldChange(ImprovementTypes eImprovement, YieldTypes eYield, PlayerTypes ePlayer, bool bOptimal = false, bool bBestRoute = false) const;
+	int calculateYield(YieldTypes eIndex, bool bDisplay = false) const;
+	bool hasYield() const;
 	void updateYield();
 	int calculateMaxYield(YieldTypes eYield) const;
 	int getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUpgrade) const;
 
-	int getCulture(PlayerTypes eIndex) const; // Exposed to Python
-	int countTotalCulture() const; // Exposed to Python
+	int getCulture(PlayerTypes eIndex) const;
+	int countTotalCulture() const;
 	int countFriendlyCulture(TeamTypes eTeam) const;
-	TeamTypes findHighestCultureTeam() const; // Exposed to Python
+	TeamTypes findHighestCultureTeam() const;
 	PlayerTypes findHighestCulturePlayer() const;
-	int calculateCulturePercent(PlayerTypes eIndex) const; // Exposed to Python
-	int calculateTeamCulturePercent(TeamTypes eIndex) const; // Exposed to Python
-	void setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bUpdatePlotGroups); // Exposed to Python
-	void changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate); // Exposed to Python
+	int calculateCulturePercent(PlayerTypes eIndex) const;
+	int calculateTeamCulturePercent(TeamTypes eIndex) const;
+	void setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bUpdatePlotGroups);
+	void changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate);
 	int countNumAirUnits(TeamTypes eTeam) const;
 	int countNumAirUnitCargoVolume(TeamTypes eTeam) const;
 	int airUnitSpaceAvailable(TeamTypes eTeam) const;
 	int countAirInterceptorsActive(TeamTypes eTeam) const;
 
-	int getFoundValue(PlayerTypes eIndex); // Exposed to Python
-	bool isBestAdjacentFound(PlayerTypes eIndex); // Exposed to Python
+	int getFoundValue(PlayerTypes eIndex);
+	bool isBestAdjacentFound(PlayerTypes eIndex);
 	void clearFoundValue(PlayerTypes eIndex);
 	void setFoundValue(PlayerTypes eIndex, int iNewValue);
 
-	int getPlayerCityRadiusCount(PlayerTypes eIndex) const; // Exposed to Python
-	bool isPlayerCityRadius(PlayerTypes eIndex) const; // Exposed to Python
+	int getPlayerCityRadiusCount(PlayerTypes eIndex) const;
+	bool isPlayerCityRadius(PlayerTypes eIndex) const;
 	void changePlayerCityRadiusCount(PlayerTypes eIndex, int iChange);
 
 	int getPlotGroupId(PlayerTypes ePlayer) const;
@@ -780,50 +771,50 @@ public:
 	void updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate = true, bool bRecalculateBonuses = true);
 
 	void clearVisibilityCounts();
-	int getVisibilityCount(TeamTypes eTeam) const; // Exposed to Python
-	void changeVisibilityCount(TeamTypes eTeam, int iChange, InvisibleTypes eSeeInvisible, bool bUpdatePlotGroups, int iIntensity = 0, int iUnitID = 0); // Exposed to Python
+	int getVisibilityCount(TeamTypes eTeam) const;
+	void changeVisibilityCount(TeamTypes eTeam, int iChange, InvisibleTypes eSeeInvisible, bool bUpdatePlotGroups, int iIntensity = 0, int iUnitID = 0);
 
 	int getDangerCount(int /*PlayerTypes*/ ePlayer) const;
 	void setDangerCount(int /*PlayerTypes*/ ePlayer, int iNewCount);
 
-	int getStolenVisibilityCount(TeamTypes eTeam) const; // Exposed to Python
+	int getStolenVisibilityCount(TeamTypes eTeam) const;
 	void changeStolenVisibilityCount(TeamTypes eTeam, int iChange);
 
 	int getLastVisibleTurn(TeamTypes eTeam) const;
 	void setLastVisibleTurn(TeamTypes eTeam, short turn);
 
-	int getBlockadedCount(TeamTypes eTeam) const; // Exposed to Python
+	int getBlockadedCount(TeamTypes eTeam) const;
 	void changeBlockadedCount(TeamTypes eTeam, int iChange);
 	void resetBlockadedCounts();
 
-	DllExport PlayerTypes getRevealedOwner(TeamTypes eTeam, bool bDebug) const; // Exposed to Python
-	TeamTypes getRevealedTeam(TeamTypes eTeam, bool bDebug) const; // Exposed to Python
+	DllExport PlayerTypes getRevealedOwner(TeamTypes eTeam, bool bDebug) const;
+	TeamTypes getRevealedTeam(TeamTypes eTeam, bool bDebug) const;
 	void setRevealedOwner(TeamTypes eTeam, PlayerTypes eNewValue);
 	void updateRevealedOwner(TeamTypes eTeam);
 
-	DllExport bool isRiverCrossing(DirectionTypes eIndex) const; // Exposed to Python
+	DllExport bool isRiverCrossing(DirectionTypes eIndex) const;
 	void updateRiverCrossing(DirectionTypes eIndex);
 	void updateRiverCrossing();
 
-	DllExport bool isRevealed(TeamTypes eTeam, bool bDebug) const; // Exposed to Python
-	void setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, TeamTypes eFromTeam, bool bUpdatePlotGroup); // Exposed to Python
-	bool isAdjacentRevealed(TeamTypes eTeam, bool bDebug = false) const; // Exposed to Python
-	bool isAdjacentNonrevealed(TeamTypes eTeam) const; // Exposed to Python
+	DllExport bool isRevealed(TeamTypes eTeam, bool bDebug) const;
+	void setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool bTerrainOnly, const TeamTypes eFromTeam, const bool bUpdatePlotGroup);
+	bool isAdjacentRevealed(TeamTypes eTeam, bool bDebug = false) const;
+	bool isAdjacentNonrevealed(TeamTypes eTeam) const;
 
-	ImprovementTypes getRevealedImprovementType(TeamTypes eTeam, bool bDebug) const; // Exposed to Python
+	ImprovementTypes getRevealedImprovementType(TeamTypes eTeam, bool bDebug) const;
 	void setRevealedImprovementType(TeamTypes eTeam, ImprovementTypes eNewValue);
 
-	RouteTypes getRevealedRouteType(TeamTypes eTeam, bool bDebug) const; // Exposed to Python
+	RouteTypes getRevealedRouteType(TeamTypes eTeam, bool bDebug) const;
 	void setRevealedRouteType(TeamTypes eTeam, RouteTypes eNewValue);
 
-	int getBuildProgress(BuildTypes eBuild) const; // Exposed to Python
-	bool changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam = NO_TEAM); // Exposed to Python
+	int getBuildProgress(BuildTypes eBuild) const;
+	bool changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam = NO_TEAM);
 	bool hasAnyBuildProgress() const;
 
 	void updateFeatureSymbolVisibility();
 	void updateFeatureSymbol(bool bForce = false);
 
-	DllExport bool isLayoutDirty() const; // The plot layout contains bonuses and improvements --- it is, like the city layout, passively computed by LSystems
+	DllExport bool isLayoutDirty() const; // The plot layout contains bonuses and improvements --- it's, like the city layout, passively computed by LSystems
 	DllExport void setLayoutDirty(bool bDirty);
 	DllExport bool isLayoutStateDifferent() const;
 	DllExport void setLayoutStateToCurrent();
@@ -851,13 +842,13 @@ public:
 	DllExport CvUnit* getDebugCenterUnit() const;
 	void setCenterUnit(CvUnit* pNewValue);
 
-	int getCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex) const; // Exposed to Python
-	bool isCultureRangeCity(PlayerTypes eOwnerIndex, int iRangeIndex) const; // Exposed to Python
+	int getCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex) const;
+	bool isCultureRangeCity(PlayerTypes eOwnerIndex, int iRangeIndex) const;
 	//void changeCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex, int iChange, bool bUpdatePlotGroups);
 
-	int getInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible) const; // Exposed to Python
-	bool isInvisibleVisible(TeamTypes eTeam, InvisibleTypes eInvisible) const; // Exposed to Python
-	void changeInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible, int iChange, int iIntensity, int iUnitID = 0); // Exposed to Python
+	int getInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible) const;
+	bool isInvisibleVisible(TeamTypes eTeam, InvisibleTypes eInvisible) const;
+	void changeInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible, int iChange, int iIntensity, int iUnitID = 0);
 
 	int getNumPlotTeamVisibilityIntensity() const;
 	PlotTeamVisibilityIntensity& getPlotTeamVisibilityIntensity(int iIndex);
@@ -870,8 +861,8 @@ public:
 	bool HaveCachedPathValidityResult(void* entity, bool bIsAlternateResult, bool& cachedResult) const;
 	void CachePathValidityResult(void* entity, bool bIsAlternateResult, bool cachedResult);
 
-	int getNumUnits() const; // Exposed to Python
-	CvUnit* getUnitByIndex(int iIndex) const; // Exposed to Python
+	int getNumUnits() const;
+	CvUnit* getUnitByIndex(int iIndex) const;
 	void addUnit(CvUnit* pUnit, bool bUpdate = true);
 	void removeUnit(CvUnit* pUnit, bool bUpdate = true);
 	DllExport CLLNode<IDInfo>* nextUnitNode(CLLNode<IDInfo>* pNode) const;
@@ -918,8 +909,8 @@ public:
 	void deleteAllSymbols();
 
 	// Script data needs to be a narrow string for pickling in Python
-	CvString getScriptData() const; // Exposed to Python
-	void setScriptData(const char* szNewValue); // Exposed to Python
+	CvString getScriptData() const;
+	void setScriptData(const char* szNewValue);
 
 	bool canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer) const;
 	bool canApplyEvent(EventTypes eEvent) const;

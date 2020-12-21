@@ -1,10 +1,25 @@
 // selectionGroup.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
+#include "CvArtFileMgr.h"
+#include "CvCity.h"
+#include "CvEventReporter.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvMap.h"
+#include "CvPathGenerator.h"
+#include "CvPlot.h"
 #include "CvReachablePlotSet.h"
 #include "CvPlayerAI.h"
+#include "CvPopupInfo.h"
+#include "CvSelectionGroup.h"
+#include "CvSelectionGroupAI.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
+#include "CvViewport.h"
+#include "CvDLLFAStarIFaceBase.h"
 
 const CvSelectionGroup* CvSelectionGroup::m_pCachedMovementGroup = nullptr;
 bst::scoped_ptr<CvSelectionGroup::CachedPathGenerator> CvSelectionGroup::m_cachedPathGenerator;
@@ -3808,6 +3823,9 @@ RouteTypes CvSelectionGroup::getBestBuildRoute(const CvPlot* pPlot, BuildTypes* 
 	int iBestValue = 0;
 	RouteTypes eBestRoute = NO_ROUTE;
 
+	// This really should not be arbitrarily duplicated code!
+	// Somehow merge with CvPlayer::getBestRoute! Use getBestRouteInternal, save value, for value comp between units.
+	// This is actually what stumped Blaze from getting non-unique value routes working; don't want to copy-paste code...
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
 		for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
@@ -3828,7 +3846,6 @@ RouteTypes CvSelectionGroup::getBestBuildRoute(const CvPlot* pPlot, BuildTypes* 
 			}
 		}
 	}
-
 	return eBestRoute;
 }
 

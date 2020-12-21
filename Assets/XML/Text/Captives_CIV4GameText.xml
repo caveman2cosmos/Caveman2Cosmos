@@ -499,27 +499,4 @@
 		<French>Améliorer en Ouvriers.</French>
 		<Italian>Migliorabile in Lavoratore.</Italian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_MESSAGE_FREED_SLAVES_AS_FREED_SLAVES</Tag>
-		<English>Your settled slaves in %s1 have become %d2 freed slaves. (Captive - Freed Slave).</English>
-		<French>Vos Esclaves sédentaires de %s1 ont été libérés. (Prisonnier - Esclave libéré).</French>
-		<Italian>I tuoi schiavi stanziali di %s1 sono diventati %d2 schiavi liberati. (Prigioniero - Schiavo liberato)</Italian>
-		<Polish>Twoi osadzeni niewolnicy w %s1 stali się %d2 wyzwoleńcami. (Wyzwoleni Niewolnicy).</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_MESSAGE_FREED_SLAVES_AS_IMMIGRANTS</Tag>
-		<English>Some (%d1) of your slaves in %s2 have become %d3 immigrants.</English>
-		<French>Certains (%d1) de vos esclaves de %S2 sont devenus %d3 émigrants.</French>
-		<German>Some (%d1) of your slaves in %s2 have become population(%d3).</German>
-		<Italian>Alcuni (%d1) dei tuoi schiavi di %s2 sono diventati %d3 immigrati.</Italian>
-		<Spanish>Some (%d1) of your slaves in %s2 have become population(%d3).</Spanish>
-		<Polish>Niektórzy (%d1) sprośród Twoich niewolników w %s2 zostali imigrantami.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_MESSAGE_FREED_SLAVES_JOINED_CITY_POPULATION</Tag>
-		<English>Some (%d1) of your slaves in %s2 have become population (%d3).</English>
-		<French>Certains (%d1) de vos esclaves de %S2 ont été intégrés à la population (%d3)</French>
-		<Italian>Alcuni schiavi di %s2 sono diventati cittadini (%d3).</Italian>
-		<Polish>Niektórzy (%d1) sprośród Twoich niewolników w %s2 dołączyli do populacji miasta (%d3).</Polish>
-	</TEXT>
 </Civ4GameText>

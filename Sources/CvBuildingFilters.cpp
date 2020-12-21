@@ -7,7 +7,13 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvBuildingFilters.h"
 #include "CvBuildingInfo.h"
+#include "CvBugOptions.h"
+#include "CvCity.h"
+#include "CvGameAI.h"
+#include "CvGlobals.h"
+#include "CvInfos.h"
 #include "CvPlayerAI.h"
 
 void BuildingFilterBase::Activate()
@@ -241,26 +247,23 @@ bool BuildingFilterIsProperty::isFilteredBuilding(const CvPlayer *pPlayer, CvCit
 		return true;
 
 	const CvPropertyManipulators* pMani = kInfo.getPropertyManipulators();
-	int iNum = pMani->getNumSources();
-	for (int i=0; i<iNum; i++)
+	foreach_(const CvPropertySource* pSource, pMani->getSources())
 	{
-		if (pMani->getSource(i)->getProperty() == m_eProperty)
+		if (pSource->getProperty() == m_eProperty)
 			return true;
 	}
 
-	iNum = pMani->getNumInteractions();
-	for (int i=0; i<iNum; i++)
+	foreach_(const CvPropertyInteraction* pInteraction, pMani->getInteractions())
 	{
-		if (pMani->getInteraction(i)->getSourceProperty() == m_eProperty)
+		if (pInteraction->getSourceProperty() == m_eProperty)
 			return true;
-		if (pMani->getInteraction(i)->getTargetProperty() == m_eProperty)
+		if (pInteraction->getTargetProperty() == m_eProperty)
 			return true;
 	}
 
-	iNum = pMani->getNumPropagators();
-	for (int i=0; i<iNum; i++)
+	foreach_(const CvPropertyPropagator* pPropagator, pMani->getPropagators())
 	{
-		if (pMani->getPropagator(i)->getProperty() == m_eProperty)
+		if (pPropagator->getProperty() == m_eProperty)
 			return true;
 	}
 

@@ -49,10 +49,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_HORSE_TRAINER</Type>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_TENGRII_HORSE_BREEDER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_TENGRII_HORSE_BREEDER</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>

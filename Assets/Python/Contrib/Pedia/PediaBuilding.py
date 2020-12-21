@@ -246,12 +246,12 @@ class PediaBuilding:
 		aList2 = []
 		aList3 = []
 		if bNotCulture:
-			for i in range(GC.getNumBuildingInfos()):
-				CvBuildingInfo = GC.getBuildingInfo(i)
-				if CvBuildingInfo.isReplaceBuilding(iTheBuilding):
-					aList1.append((CvBuildingInfo, i))
-				elif CvTheBuildingInfo.isReplaceBuilding(i):
-					aList2.append((CvBuildingInfo, i))
+			for i in xrange(CvTheBuildingInfo.getNumReplacedBuilding()):
+				iReplaced = CvTheBuildingInfo.getReplacedBuilding(i)
+				aList1.append((GC.getBuildingInfo(iReplaced), iReplaced))
+			for i in xrange(CvTheBuildingInfo.getNumReplacementBuilding()):
+				iReplacement = CvTheBuildingInfo.getReplacementBuilding(i)
+				aList2.append((GC.getBuildingInfo(iReplacement), iReplacement))
 			if aList1 or aList2:
 				if aList1 and aList2:
 					W_REP_1 = W_REP_2 = W_COL_3
@@ -397,12 +397,13 @@ class PediaBuilding:
 				aList1.append(j)
 				if iPrereqNumOfBuilding > 1:
 					aList3.append((j, iPrereqNumOfBuilding))
-			elif CvTheBuildingInfo.isPrereqOrBuilding(j):
-				aList2.append(j)
-				if iPrereqNumOfBuilding > 0:
-					aList3.append((j, iPrereqNumOfBuilding))
 			elif iPrereqNumOfBuilding > 0:
 				aList3.append((j, iPrereqNumOfBuilding))
+
+		# Or building requirements
+		for j in xrange(CvTheBuildingInfo.getNumPrereqOrBuilding()):
+			aList2.append(CvTheBuildingInfo.getPrereqOrBuilding(j))
+
 		if aList1 or aList2 or aList3:
 			if bPlus:
 				screen.attachLabel(panelName, "", szAnd)

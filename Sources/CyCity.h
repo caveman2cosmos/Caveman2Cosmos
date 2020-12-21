@@ -138,7 +138,7 @@ public:
 	int foodDifference(bool bBottom) const;
 	int growthThreshold() const;
 	int productionLeft() const;
-	int hurryGold(int /*HurryTypes*/ iHurry) const;
+	int64_t getHurryGold(int /*HurryTypes*/ iHurry) const;
 	int hurryPopulation(int /*HurryTypes*/ iHurry) const;
 	int hurryProduction(int /*HurryTypes*/ iHurry) const;
 	int flatHurryAngerLength() const;
@@ -274,6 +274,7 @@ public:
 	int /*TeamTypes*/getTeam() const;
 	int /*PlayerTypes*/getPreviousOwner() const;
 	int /*PlayerTypes*/getOriginalOwner() const;
+	void setOriginalOwner(int /*PlayerTypes*/ iPlayer);
 	int /*CultureLevelTypes*/ getCultureLevel() const;
 	int getCultureThreshold() const;
 	int getSeaPlotYield(int /*YieldTypes*/ eIndex) const;
