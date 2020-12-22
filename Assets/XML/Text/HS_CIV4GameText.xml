@@ -60,8 +60,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_HELP</Tag>
-		<English>[ICON_BULLET]Allows you to sacrifice human and Neanderthal captives for culture or happiness.</English>
-		<French>[ICON_BULLET]Vous permet de sacrifier les hommes et néanderthaliens pour de la culture ou du bonheur.</French>
+		<English>Allows you to sacrifice human and Neanderthal captives for culture or happiness.</English>
+		<French>Vous permet de sacrifier les hommes et néanderthaliens pour de la culture ou du bonheur.</French>
 		<Italian>Ti permette di sacrificare i prigionieri umani e Neanderthal per ottenere cultura o felicità.</Italian>
 		<Polish>Pozwala na składanie ofiar z pojmanych jeńców.</Polish>
 	</TEXT>
@@ -76,9 +76,7 @@
 		<Tag>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Worldview - Human Sacrifice[COLOR_REVERT] indicates that sacrificing humans to the god(s) is OK in your nation at this time. It can only be removed by a Great Person or Lawyer.</English>
 		<French>La [COLOR_UNIT_TEXT]Vision du monde - Sacrifices humaines[COLOR_REVERT] indique que la pratique des sacrifices humains pour les Dieux fait partie de votre culture. Elle peut uniquement être enlevée par un personnage illustre ou un avocat.</French>
-		<German>The [COLOR_UNIT_TEXT]Worldview - Human Sacrifice[COLOR_REVERT] indicates sacrificing humans to the god(s) is OK in your nation at this time. It can only be removed by a Great Person or Lawyer.</German>
 		<Italian>La [COLOR_UNIT_TEXT]Concezione del mondo - Sacrifici umani[COLOR_REVERT] indica che nella tua città è legale sacrificare agli dei altri individui. Può essere rimossa solo da un Grande personaggio o da un uomo di legge.</Italian>
-		<Spanish>The [COLOR_UNIT_TEXT]Worldview - Human Sacrifice[COLOR_REVERT] indicates sacrificing humans to the god(s) is OK in your nation at this time. It can only be removed by a Great Person or Lawyer.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_REMOVE_WV_HUMAN_SACRIFICE</Tag>
