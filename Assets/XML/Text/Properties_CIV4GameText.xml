@@ -248,8 +248,10 @@
 		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY</Tag>
 		<English>Flammability</English>
 		<French>Risque d'incendie</French>
+		<German>Brandgefahr</German>
 		<Italian>Rischio d'incendio</Italian>
 		<Spanish>Inflamabilidad</Spanish>
+		<Polish>Palność</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY_CHANGE</Tag>

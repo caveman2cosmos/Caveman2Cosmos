@@ -759,15 +759,6 @@
 		<Polish>Mieszkańcy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REV_CITY</Tag>
-		<English>City</English>
-		<French>Ville</French>
-		<German>Stadt</German>
-		<Italian>Città</Italian>
-		<Spanish>Ciudad</Spanish>
-		<Polish>Miasto</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REV_CITY_OF</Tag>
 		<English>The city of</English>
 		<French>La ville de</French>

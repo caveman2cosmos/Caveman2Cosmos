@@ -72,7 +72,7 @@ class CvVictoryScreen:
 		screen.addDDSGFC("VS_Background", CyArtFileMgr().getInterfaceArtInfo("MAINMENU_SLIDESHOW_LOAD").getPath(), 0, 0, xRes, yRes, eWidGen, 1, 2)
 		screen.addPanel("VS_TopPanel", "", "", True, False, 0, 0, xRes, H_EDGE_PANEL, PanelStyles.PANEL_STYLE_TOPBAR)
 		screen.addPanel("VS_BotPanel", "", "", True, False, 0, yRes - H_EDGE_PANEL, xRes, H_EDGE_PANEL, PanelStyles.PANEL_STYLE_BOTTOMBAR)
-		screen.setLabel("VS_Header", "", szfontEdge + TRNSLTR.getText("TXT_KEY_GAMEOBJECT_GAME",()), 1<<2, xRes / 2, 2, 0, eFontTitle, eWidGen, 1, 2)
+		screen.setLabel("VS_Header", "", szfontEdge + TRNSLTR.getText("TXT_WORD_GAME",()), 1<<2, xRes / 2, 2, 0, eFontTitle, eWidGen, 1, 2)
 		screen.setText("VS_Btn_Exit", "", szfontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT",()), 1<<1, xRes - 16, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
 		self.COLOR_GREEN = GC.getInfoTypeForString("COLOR_GREEN")
@@ -572,7 +572,7 @@ class CvVictoryScreen:
 		iRow = screen.appendTableRow(szTable)
 		del xRes, dx, a18thX, iTemp1, iTemp2, iTemp3
 
-		szText = CyTeam.getName() + " - " + TRNSLTR.getText("TXT_KEY_GAMEOBJECT_TEAM", ()) + " %i" % iTeamAct
+		szText = CyTeam.getName() + " - " + TRNSLTR.getText("TXT_WORD_TEAM", ()) + " %i" % iTeamAct
 		screen.setTableText(szTable, 1, iRow, ufont3b + szText, "", eWidGen, 1, 2, 1<<2)
 		szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_RIVAL_CIV", ())
 		screen.setTableText(szTable, 2, iRow, ufont3b + szText, "", eWidGen, 1, 2, 1<<2)

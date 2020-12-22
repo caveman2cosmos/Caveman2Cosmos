@@ -107,7 +107,7 @@ class CvInfoScreen:
 		self.szName = TRNSLTR.getText("TXT_KEY_NAME", ())
 		self.szWonderDate = TRNSLTR.getText("TXT_KEY_WONDER_DATE", ())
 		self.szWonderOwner = TRNSLTR.getText("TXT_KEY_WONDER_OWNER", ())
-		self.szWonderCity = TRNSLTR.getText("TXT_KEY_WONDER_CITY", ())
+		self.szWonderCity = TRNSLTR.getText("TXT_WORD_CITY", ())
 
 		sTemp1 = [
 			TRNSLTR.getText("TXT_KEY_GAME_SCORE", ()),

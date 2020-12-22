@@ -752,7 +752,7 @@ class CvGameUtils:
 				pUnit = GC.getPlayer(iPlayer).getUnit(iData2)
 				sText = CyGameTextMgr().getSpecificUnitHelp(pUnit, True, False)
 				if GAME.GetWorldBuilderMode():
-					sText += "\n" + CyTranslator().getText("TXT_KEY_WB_UNIT", ()) + " ID: " + str(iData2)
+					sText += "\n" + CyTranslator().getText("TXT_WORD_UNIT", ()) + " ID: " + str(iData2)
 					sText += "\n" + CyTranslator().getText("TXT_KEY_WB_GROUP", ()) + " ID: " + str(pUnit.getGroupID())
 					sText += "\n" + "X: " + str(pUnit.getX()) + ", Y: " + str(pUnit.getY())
 					sText += "\n" + CyTranslator().getText("TXT_KEY_WB_AREA_ID", ()) + ": "  + str(pUnit.plot().getArea())

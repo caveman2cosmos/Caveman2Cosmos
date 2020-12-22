@@ -783,14 +783,6 @@
 		<Spanish>Combate de asedio mejorado</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_FOOD</Tag>
-		<English>Food</English>
-		<French>Nourriture</French>
-		<German>Nahrung</German>
-		<Italian>Cibo</Italian>
-		<Spanish>Alimentos</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_FOOD_CARAVAN_PEDIA</Tag>
 		<English>Food merchants transport food from one city to another.</English>
 		<French>Les Marchands de nourriture transportent de la nourriture d'une ville à une autre</French>
@@ -1377,14 +1369,6 @@
 		<English>Pollution</English>
 		<Italian>Inquinamento</Italian>
 		<Spanish>Polución</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_PRODUCTION</Tag>
-		<English>Production</English>
-		<French>Production</French>
-		<German>Produktion</German>
-		<Italian>Produzione</Italian>
-		<Spanish>Producción</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_PRODUCTION_MODIFIER</Tag>

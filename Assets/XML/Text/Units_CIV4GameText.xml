@@ -23738,13 +23738,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Oblężenie</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SORT_CARGO</Tag>
-		<English>Cargo</English>
-		<German>Fracht</German>
-		<Spanish>Carga</Spanish>
-		<Polish>Ładowność</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SORT_COLLATERAL</Tag>
 		<English>Collateral</English>
 		<French>Dégats Collatéraux</French>
@@ -23754,15 +23747,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Dodatkowe</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SORT_COST</Tag>
-		<English>Cost</English>
-		<French>Coût</French>
-		<German>Kosten</German>
-		<Italian>Costo</Italian>
-		<Spanish>Coste</Spanish>
-		<Polish>Koszt</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SORT_MOVE</Tag>
 		<English>Move</English>
 		<French>Déplacement</French>
@@ -23770,14 +23754,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Italian>Movimento</Italian>
 		<Spanish>Movimiento</Spanish>
 		<Polish>Ruchy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SORT_NAME</Tag>
-		<English>Name</English>
-		<French>Nom</French>
-		<Italian>Nome</Italian>
-		<Spanish>Nombre</Spanish>
-		<Polish>Nazwa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SORT_POWER</Tag>

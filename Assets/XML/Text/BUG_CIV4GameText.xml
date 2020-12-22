@@ -73,14 +73,6 @@
 		<Spanish>MUERTO</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_DEFAULT</Tag>
-		<English>Default</English>
-		<French>Standard</French>
-		<German>Standard</German>
-		<Italian>Predefinito</Italian>
-		<Spanish>Predeterminado</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_DOMESTIC_TRADE_HEADING</Tag>
 		<English>Domestic Trade</English>
 		<French>Commerce Domestique</French>

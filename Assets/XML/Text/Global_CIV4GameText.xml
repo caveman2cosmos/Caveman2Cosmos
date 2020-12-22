@@ -1287,6 +1287,11 @@
 		<Polish>[ICON_BULLET]Włącza pełną funkcjonalność wszystkich budynków religijnych bez względu na Religię Państwową.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ALL_RESOURCES</Tag>
+		<English>All Resources</English>
+		<French>Toutes Ressources</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_AND_UNITS_PER_TILE</Tag>
 		<English>%d1 Units Per Tile</English>
 		<French>%d1 Unités par Case</French>
@@ -1968,6 +1973,13 @@
 		<Italian>[ICON_BULLET]È possibile aggiornare le unità al di fuori dei confini nazionali.</Italian>
 		<Spanish>[ICON_BULLET]Se pueden mejorar unidades fuera de las fronteras nacionales</Spanish>
 		<Polish>[ICON_BULLET]Możesz ulepszyć jednostki poza granicami kulturowymi.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CARGO</Tag>
+		<English>Cargo</English>
+		<German>Fracht</German>
+		<Spanish>Carga</Spanish>
+		<Polish>Ładowność</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CDA_ADD_COLUMN</Tag>
@@ -3003,6 +3015,15 @@
 		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania miast na kontynencie</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_COST</Tag>
+		<English>Cost</English>
+		<French>Coût</French>
+		<German>Kosten</German>
+		<Italian>Costo</Italian>
+		<Spanish>Coste</Spanish>
+		<Polish>Koszt</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CULTURE</Tag>
 		<English>Culture</English>
 		<German>Kultur</German>
@@ -3104,6 +3125,14 @@
 		<Italian>[NEWLINE][ICON_BULLET]Diminuisce il sentimento rivoluzionario nazionale</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET]Reduce la rebeldía nacional</Spanish>
 		<Polish>[NEWLINE][ICON_BULLET]Obniża narodową buntowniczość</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DEFAULT</Tag>
+		<English>Default</English>
+		<French>Standard</French>
+		<German>Standard</German>
+		<Italian>Predefinito</Italian>
+		<Spanish>Predeterminado</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DEFENSIVE_PACT_WITH</Tag>
@@ -3931,6 +3960,15 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[ICON_BULLET]Twoja Cywilizacja ma stałe granice</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_FOOD</Tag>
+		<English>Food</English>
+		<French>Nourriture</French>
+		<German>Nahrung</German>
+		<Italian>Cibo</Italian>
+		<Spanish>Alimento</Spanish>
+		<Polish>Żywność</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FOREIGN_ADVISOR_INFO</Tag>
 		<English>Info</English>
 		<French>Infos</French>
@@ -3983,83 +4021,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>%d1%: da Accordi di libero mercato</Italian>
 		<Spanish>%d1%: por Acuerdo de Libre Comercio</Spanish>
 		<Polish>%d1%: z Wolnych Umów Handlowych</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOBJECT_CITY</Tag>
-		<English>City</English>
-		<French>Ville</French>
-		<German>Stadt</German>
-		<Italian>Città</Italian>
-		<Spanish>
-			<Text>Ciudad</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Miasto</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOBJECT_GAME</Tag>
-		<English>Game</English>
-		<French>Jeu</French>
-		<German>Spiel</German>
-		<Italian>Gioco</Italian>
-		<Spanish>
-			<Text>Partida</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Gra</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOBJECT_PLAYER</Tag>
-		<English>Player</English>
-		<French>Joueur</French>
-		<German>Spieler</German>
-		<Italian>Giocatore</Italian>
-		<Spanish>
-			<Text>Jugador</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Gracz</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOBJECT_PLOT</Tag>
-		<English>Plot</English>
-		<French>Case</French>
-		<German>Feld</German>
-		<Italian>Casella</Italian>
-		<Spanish>
-			<Text>Casilla</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Pole</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOBJECT_TEAM</Tag>
-		<English>Team</English>
-		<French>Equipe</French>
-		<Italian>Squadra</Italian>
-		<Spanish>
-			<Text>Equipo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Drużyna</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOBJECT_UNIT</Tag>
-		<English>Unit</English>
-		<French>Unité</French>
-		<German>Einheit</German>
-		<Italian>Unità</Italian>
-		<Spanish>
-			<Text>Unidad</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Jednostka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_BLITZ</Tag>
@@ -4228,35 +4189,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<German>Diese absolut höchste Spielgeschwindigkeit ist nur für Testzwecke gedacht.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_ALL</Tag>
-		<English>All Resources</English>
-		<French>Toutes Ressources</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_GROWTH</Tag>
-		<English>Growth</English>
-		<French>Croissance</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_LUXURY</Tag>
-		<English>Luxury</English>
-		<French>Luxe</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_MISC</Tag>
-		<English>Misc</English>
-		<French>Autres</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_PRODUCTION</Tag>
-		<English>Production</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_STRATEGIC</Tag>
-		<English>Strategic</English>
-		<French>Stratégique</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOLDEN_AGE_YIELD</Tag>
 		<English>During Golden Ages All Cities</English>
 		<French>Pendant les Ages d'Or, dans toutes les Villes</French>
@@ -4324,6 +4256,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>Fattore di smoothing %d1_Num</Italian>
 		<Spanish>Factor de suavizado %d1_Num</Spanish>
 		<Polish>Współczynnik Wygładzania %d1_Num</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROWTH</Tag>
+		<English>Growth</English>
+		<French>Croissance</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_CHIEFTAIN</Tag>
@@ -5826,6 +5763,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Najsłabszy gracz został wyrzucony z gry! Pozostań w pierwszej 5 by utrzymać się w grze!</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LUXURY</Tag>
+		<English>Luxury</English>
+		<French>Luxe</French>
+		<Spanish>Lujuria</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MAD_SCREEN_HOVER</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]MAD Nukes Screen (ALT-N)[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Ecran MAD-Nucléaire (ALT-N)[COLOR_REVERT]</French>
@@ -6240,6 +6183,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>[ICON_BULLET]%D1%% à la Valeur minimum de Défense de la ville.</French>
 		<Italian>[ICON_BULLET]%D1%% al valore minimo difensivo della città.</Italian>
 		<Polish>[ICON_BULLET]%D1%% do minimalnej wartości obrony miasta.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC</Tag>
+		<English>Misc</English>
+		<French>Autres</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_AFFLICT_DELIVERED_DISEASE_BATTLE_ADDITIONAL</Tag>
@@ -12512,6 +12460,14 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Bogactwo</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PRODUCTION</Tag>
+		<English>Production</English>
+		<German>Produktion</German>
+		<Italian>Produzione</Italian>
+		<Spanish>Producción</Spanish>
+		<Polish>Produkcja</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PRODUCTION_DECAY</Tag>
 		<English>[COLOR_NEGATIVE_TEXT]Will lose %d1[ICON_PRODUCTION] this turn[COLOR_REVERT]</English>
 		<French>[COLOR_NEGATIVE_TEXT]Va perdre %d1[ICON_PRODUCTION] ce tour[COLOR_REVERT]</French>
@@ -13539,15 +13495,6 @@ Calendrier: 2150 AD - 2300 AD</French>
  Right mouse Click:
 	100
 	Tooltip	[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl/Shift/Alt[COLOR_REVERT][\BOLD]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SHORTCUTS_GAME</Tag>
-		<English>Game</English>
-		<French>Jeu</French>
-		<German>Allgemein</German>
-		<Italian>Gioco</Italian>
-		<Spanish>Partida</Spanish>
-		<Polish>Gra</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_GAME_PEDIA</Tag>
@@ -15287,6 +15234,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>[NEWLINE][ICON_BULLET][ICON_RELIGION] di Stato con la Città Santa diminuisce il sentimento rivoluzionario</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET]Una [ICON_RELIGION] oficial con la Ciudad Santa reduce la rebeldía</Spanish>
 		<Polish>[NEWLINE][ICON_BULLET]Religia Państwowa [ICON_RELIGION] ze Świętym Miastem obniża buntowniczość</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STRATEGIC</Tag>
+		<English>Strategic</English>
+		<French>Stratégique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STRATOVERLAY_ADDSIGN</Tag>
@@ -19479,15 +19431,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>5 primeras ciudades</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_WONDER_CITY</Tag>
-		<English>City</English>
-		<French>Ville</French>
-		<German>Stadt</German>
-		<Italian>Città</Italian>
-		<Spanish>Ciudad</Spanish>
-		<Polish>Miasto</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_WONDER_DATE</Tag>
 		<English>Date</English>
 		<German>Errichtet</German>
@@ -19835,5 +19778,82 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Utiliser SHIFT pour voir les Classes de combat</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;UMSCHALT&gt;[COLOR_REVERT] für Anzeige der Kategorien</German>
 		<Polish>Naciśnij SHIFT aby zobaczyć Klasy Bojowe</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_WORD_CITY</Tag>
+		<English>City</English>
+		<French>Ville</French>
+		<German>Stadt</German>
+		<Italian>Città</Italian>
+		<Spanish>
+			<Text>Ciudad</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Miasto</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_WORD_GAME</Tag>
+		<English>Game</English>
+		<French>Jeu</French>
+		<German>Spiel</German>
+		<Italian>Gioco</Italian>
+		<Spanish>
+			<Text>Partida</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Gra</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_WORD_PLAYER</Tag>
+		<English>Player</English>
+		<French>Joueur</French>
+		<German>Spieler</German>
+		<Italian>Giocatore</Italian>
+		<Spanish>
+			<Text>Jugador</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Gracz</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_WORD_PLOT</Tag>
+		<English>Plot</English>
+		<French>Case</French>
+		<German>Feld</German>
+		<Italian>Casella</Italian>
+		<Spanish>
+			<Text>Casilla</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Pole</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_WORD_TEAM</Tag>
+		<English>Team</English>
+		<French>Equipe</French>
+		<Italian>Squadra</Italian>
+		<Spanish>
+			<Text>Equipo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Drużyna</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_WORD_UNIT</Tag>
+		<English>Unit</English>
+		<French>Unité</French>
+		<German>Einheit</German>
+		<Italian>Unità</Italian>
+		<Spanish>
+			<Text>Unidad</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Jednostka</Polish>
 	</TEXT>
 </Civ4GameText>

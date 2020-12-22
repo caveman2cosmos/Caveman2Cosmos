@@ -154,7 +154,7 @@
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_FOOD</Type>
-			<Description>TXT_KEY_CONCEPT_FOOD</Description>
+			<Description>TXT_KEY_FOOD</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_FOOD_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
@@ -244,7 +244,7 @@
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_PRODUCTION</Type>
-			<Description>TXT_KEY_CONCEPT_PRODUCTION</Description>
+			<Description>TXT_KEY_PRODUCTION</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_PRODUCTION_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>

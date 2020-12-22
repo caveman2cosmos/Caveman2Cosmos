@@ -2944,7 +2944,7 @@ CvWString CvPlayer::getNewCityName() const
 
 	if (szName.empty())
 	{
-		szName = "TXT_KEY_CITY";
+		szName = "TXT_WORD_CITY";
 	}
 
 	return szName;
