@@ -309,7 +309,7 @@ class RevolutionWatchAdvisor:
 				("REV_GARRISON_TEXT",		85,		"text",	self.getRevGarrisonText,None,					0,									None,									None,						"localText.getText(\"TXT_KEY_REV_WATCH_GARRISON\", ()).upper()"),
 				("REV_DISORDER",			85,		"int",	self.getRevDisorderVal,	None,					0,									None,									None,						"localText.getText(\"TXT_KEY_REV_WATCH_DISORDER\", ()).upper()"),
 				("REV_DISORDER_TEXT",		85,		"text",	self.getRevDisorderText,None,					0,									None,									None,						"localText.getText(\"TXT_KEY_REV_WATCH_DISORDER\", ()).upper()"),
-				("ADVISE_CULTURE",			150,	"text",	None,					None,					0,									self.advise,							"Culture",					"localText.getText(\"TXT_KEY_CULTURE\", ()).upper()"),
+				("ADVISE_CULTURE",			150,	"text",	None,					None,					0,									self.advise,							"Culture",					"localText.getText(\"TXT_WORD_CULTURE\", ()).upper()"),
 #				("ADVISE_MILITARY",			150,	"text",	None,					None,					0,									self.advise,							"Military",					"localText.getText(\"TXT_KEY_ADVISOR_MILITARY\", ()).upper()"),
 #				("ADVISE_NUTTY",			150,	"text",	None,					None,					0,									self.advise,							"Nutty",					"u\"NUTTY\""),
 				("ADVISE_RELIGION",			150,	"text",	None,					None,					0,									self.advise,							"Religion",					"localText.getText(\"TXT_KEY_CONCEPT_RELIGION\", ()).upper()"),

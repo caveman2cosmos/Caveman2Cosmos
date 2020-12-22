@@ -373,7 +373,7 @@ class CvVictoryScreen:
 
 					# Culture
 					iRow = screen.appendTableRow(szTable)
-					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_CULTURE", ()), "", eWidGen, 1, 2, 1<<0)
+					screen.setTableText(szTable, 0, iRow, ufont2 + TRNSLTR.getText("TXT_WORD_CULTURE", ()), "", eWidGen, 1, 2, 1<<0)
 					screen.setTableText(szTable, 1, iRow, ufont2 + u"%i%%" %(fCulturePercent), "", eWidGen, 1, 2, 1<<0)
 					screen.setTableText(szTable, 2, iRow, ufont2 + u"%i" %(fCulturePercent), "", eWidGen, 1, 2, 1<<0)
 					if szUnknown:

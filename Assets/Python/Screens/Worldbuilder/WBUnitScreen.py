@@ -96,7 +96,7 @@ class WBUnitScreen:
 		screen.addPullDownString("ChangeType", CyTranslator().getText("TXT_KEY_WB_MADE_INTERCEPT", ()), 8, 8, 8 == iChangeType)
 		screen.addPullDownString("ChangeType", CyTranslator().getText("TXT_KEY_WB_DIRECTION", ()), 9, 9, 9 == iChangeType)
 		screen.addPullDownString("ChangeType", CyTranslator().getText("TXT_KEY_WB_UNIT_AI", ()), 10, 10, 10 == iChangeType)
-		screen.addPullDownString("ChangeType", CyTranslator().getText("TXT_KEY_CARGO", ()), 11, 11, 11 == iChangeType)
+		screen.addPullDownString("ChangeType", CyTranslator().getText("TXT_WORD_CARGO", ()), 11, 11, 11 == iChangeType)
 		screen.addPullDownString("ChangeType", CyTranslator().getText("TXT_KEY_WB_SCRIPT_DATA", ()), 12, 12, 12 == iChangeType)
 
 		iX += iWidth
@@ -581,7 +581,7 @@ class WBUnitScreen:
 		iWidth = screen.getXResolution()/5 - 20
 		screen.addDropDownBoxGFC("CargoType", iX, iY - 30, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		screen.addPullDownString("CargoType", CyTranslator().getText("TXT_KEY_UNIT_TRANSPORT", ()), 0, 0, not bCargo)
-		screen.addPullDownString("CargoType", CyTranslator().getText("TXT_KEY_CARGO", ()), 1, 1, bCargo)
+		screen.addPullDownString("CargoType", CyTranslator().getText("TXT_WORD_CARGO", ()), 1, 1, bCargo)
 
 		iHeight = (screen.getYResolution() - iY - 42) /24 * 24 + 2
 
@@ -594,7 +594,7 @@ class WBUnitScreen:
 		if bCargo:
 			screen.setButtonGFC("UnitCargoPlus", "", "", iX, screen.getYResolution() - 42, 24, 24, WidgetTypes.WIDGET_PYTHON, 1030, -1, ButtonStyles.BUTTON_STYLE_CITY_PLUS)
 			screen.setButtonGFC("UnitCargoMinus", "", "", iX + 25, screen.getYResolution() - 42, 24, 24, WidgetTypes.WIDGET_PYTHON, 1031, -1, ButtonStyles.BUTTON_STYLE_CITY_MINUS)
-			sText = CyTranslator().getText("TXT_KEY_CARGO", ()) + " (" + str(pUnit.getCargo()) + "/" + str(pUnit.cargoSpace()) + ")"
+			sText = CyTranslator().getText("TXT_WORD_CARGO", ()) + " (" + str(pUnit.getCargo()) + "/" + str(pUnit.cargoSpace()) + ")"
 			screen.setLabel("CargoSpaceHeader", "Background", "<font=3b>" + sText + "</font>", 1<<0, iX + 50, screen.getYResolution() - 41, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 			if pUnit.cargoSpace() > 0:

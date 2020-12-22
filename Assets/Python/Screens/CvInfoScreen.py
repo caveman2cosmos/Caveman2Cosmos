@@ -104,7 +104,7 @@ class CvInfoScreen:
 		self.SHOW_NONE = uFont2b + TRNSLTR.getText("TXT_KEY_SHOW_NONE", ())
 		self.LOG_SCALE = uFont2b + TRNSLTR.getText("TXT_KEY_LOGSCALE", ())
 
-		self.szName = TRNSLTR.getText("TXT_KEY_NAME", ())
+		self.szName = TRNSLTR.getText("TXT_WORD_NAME", ())
 		self.szWonderDate = TRNSLTR.getText("TXT_KEY_WONDER_DATE", ())
 		self.szWonderOwner = TRNSLTR.getText("TXT_KEY_WONDER_OWNER", ())
 		self.szWonderCity = TRNSLTR.getText("TXT_WORD_CITY", ())
@@ -115,8 +115,8 @@ class CvInfoScreen:
 			TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY_TEXT", ()),
 			TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE_TEXT", ()),
 			TRNSLTR.getText("TXT_KEY_POWER", ()),
-			TRNSLTR.getText("TXT_KEY_CULTURE", ()),
-			TRNSLTR.getText("TXT_KEY_ESPIONAGE", ()),
+			TRNSLTR.getText("TXT_WORD_CULTURE", ()),
+			TRNSLTR.getText("TXT_WORD_ESPIONAGE", ()),
 		]
 		if GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):
 			sTemp1.append(TRNSLTR.getText("TXT_KEY_REVOLUTION_GRAPH_TITLE_SMALL", ()))
