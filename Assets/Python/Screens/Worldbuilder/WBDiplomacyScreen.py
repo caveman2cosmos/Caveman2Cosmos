@@ -52,7 +52,7 @@ class WBDiplomacyScreen:
 
 		screen.addDropDownBoxGFC("CurrentPage", 20, screen.getYResolution() - 42, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_GLOBELAYER_RESOURCES_GENERAL", ()), 0, 0, not bDiplomacyPage)
-		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_ESPIONAGE", ()), 1, 1, bDiplomacyPage)
+		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_WORD_ESPIONAGE", ()), 1, 1, bDiplomacyPage)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_CONCEPT_TRADE", ()), 2, 2, False)
 		
 		sText = "<font=3b>" + CyTranslator().getText("TXT_KEY_WB_HIDE_DEAD", ()) + "</font>"
@@ -218,7 +218,7 @@ class WBDiplomacyScreen:
 		for i in xrange(MemoryTypes.NUM_MEMORY_TYPES):
 			screen.addPullDownString("CurrentMemory", GC.getMemoryInfo(i).getDescription(), i, i, i == iSelectedMemory)
 
-		szEspionage = CyTranslator().getText("TXT_KEY_ESPIONAGE", ())
+		szEspionage = CyTranslator().getText("TXT_WORD_ESPIONAGE", ())
 		iWidth = screen.getXResolution() - 40
 		iHeight = screen.getYResolution() - self.iTable_Y - 40
 		screen.addTableControlGFC( "WBEspionage", 9, 20, self.iTable_Y, iWidth, iHeight, True, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)

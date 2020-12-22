@@ -3261,9 +3261,9 @@ class CvMainInterface:
 		x -= wSortButton + 4
 		screen.addDropDownBoxGFC(ID, x, 140, wSortButton, WidgetTypes.WIDGET_UNIT_SORT, -1, -1, FontTypes.SMALL_FONT)
 		TYPE = UnitSortTypes.UNIT_SORT_NAME
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_NAME",				()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_WORD_NAME",				()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_COST
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_COST",				()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_WORD_COST",				()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_STRENGTH
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_STRENGTH",	()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_MOVE
@@ -3275,7 +3275,7 @@ class CvMainInterface:
 		TYPE = UnitSortTypes.UNIT_SORT_BOMBARD
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_BOMBARD",	()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_CARGO
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_CARGO",				()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_WORD_CARGO",				()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_WITHDRAWAL
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_SORT_WITHDRAWAL",()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitSortTypes.UNIT_SORT_POWER
@@ -3305,19 +3305,19 @@ class CvMainInterface:
 		x = x0 - wSortButton
 		screen.addDropDownBoxGFC(ID, x, 140, wSortButton, WidgetTypes.WIDGET_BUILDING_SORT, -1, -1, FontTypes.SMALL_FONT)
 		TYPE = BuildingSortTypes.BUILDING_SORT_NAME
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_NAME",					()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_WORD_NAME",					()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_COST
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_COST",					()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_WORD_COST",					()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_SCIENCE
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_BUILDING_SORT_SCIENCE",	()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_ESPIONAGE
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_ESPIONAGE",				()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_WORD_ESPIONAGE",				()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_CULTURE
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_CULTURE",					()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_WORD_CULTURE",				()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_GOLD
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_BUILDING_SORT_GOLD",		()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_FOOD
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_FOOD",					()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_WORD_FOOD",					()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_PRODUCTION
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_PRODUCTION",				()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = BuildingSortTypes.BUILDING_SORT_HAPPINESS

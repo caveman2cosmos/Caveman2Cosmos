@@ -307,11 +307,13 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_iOutbreakBase(0)
 ,m_iOvercomeBase(0)
 ,m_iTradeCommunicability(0)
+#ifdef STRENGTH_IN_NUMBERS
 ,m_iFrontSupportPercentModifier(0)
 ,m_iShortRangeSupportPercentModifier(0)
 ,m_iMediumRangeSupportPercentModifier(0)
 ,m_iLongRangeSupportPercentModifier(0)
 ,m_iFlankSupportPercentModifier(0)
+#endif
 //TB Combat Mods (Buildings) end
 ,m_bAutoBuild(false)
 ,m_bEnablesOtherBuildingsCalculated(false)
@@ -1413,32 +1415,6 @@ int CvBuildingInfo::getTradeCommunicability() const
 	return m_iTradeCommunicability;
 }
 
-int CvBuildingInfo::getFrontSupportPercentModifier() const
-{
-	return m_iFrontSupportPercentModifier;
-}
-
-int CvBuildingInfo::getShortRangeSupportPercentModifier() const
-{
-	return m_iShortRangeSupportPercentModifier;
-}
-
-int CvBuildingInfo::getMediumRangeSupportPercentModifier() const
-{
-	return m_iMediumRangeSupportPercentModifier;
-}
-
-int CvBuildingInfo::getLongRangeSupportPercentModifier() const
-{
-	return m_iLongRangeSupportPercentModifier;
-}
-
-int CvBuildingInfo::getFlankSupportPercentModifier() const
-{
-	return m_iFlankSupportPercentModifier;
-}
-
-//Team Project (3)
 int CvBuildingInfo::getNationalCaptureProbabilityModifier() const
 {
 	return m_iNationalCaptureProbabilityModifier;
@@ -2387,11 +2363,13 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iOutbreakBase);
 	CheckSum(iSum, m_iOvercomeBase);
 	CheckSum(iSum, m_iTradeCommunicability);
+#ifdef STRENGTH_IN_NUMBERS
 	CheckSum(iSum, m_iFrontSupportPercentModifier);
 	CheckSum(iSum, m_iShortRangeSupportPercentModifier);
 	CheckSum(iSum, m_iMediumRangeSupportPercentModifier);
 	CheckSum(iSum, m_iLongRangeSupportPercentModifier);
 	CheckSum(iSum, m_iFlankSupportPercentModifier);
+#endif
 	CheckSum(iSum, m_iNationalCaptureProbabilityModifier);
 	CheckSum(iSum, m_iNationalCaptureResistanceModifier);
 	CheckSum(iSum, m_iLocalCaptureProbabilityModifier);
@@ -3885,12 +3863,13 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iOutbreakBase, L"iOutbreakBase");
 	pXML->GetOptionalChildXmlValByName(&m_iOvercomeBase, L"iOvercomeBase");
 	pXML->GetOptionalChildXmlValByName(&m_iTradeCommunicability, L"iTradeCommunicability");
+#ifdef STRENGTH_IN_NUMBERS
 	pXML->GetOptionalChildXmlValByName(&m_iFrontSupportPercentModifier, L"iFrontSupportPercentModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iShortRangeSupportPercentModifier, L"iShortRangeSupportPercentModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iMediumRangeSupportPercentModifier, L"iMediumRangeSupportPercentModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iLongRangeSupportPercentModifier, L"iLongRangeSupportPercentModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iFlankSupportPercentModifier, L"iFlankSupportPercentModifier");
-//Team Project (3)
+#endif
 	pXML->GetOptionalChildXmlValByName(&m_iNationalCaptureProbabilityModifier, L"iNationalCaptureProbabilityModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iNationalCaptureResistanceModifier, L"iNationalCaptureResistanceModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iLocalCaptureProbabilityModifier, L"iLocalCaptureProbabilityModifier");
@@ -5357,12 +5336,13 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (getOutbreakBase() == iDefault) m_iOutbreakBase = pClassInfo->getOutbreakBase();
 	if (getOvercomeBase() == iDefault) m_iOvercomeBase = pClassInfo->getOvercomeBase();
 	if (getTradeCommunicability() == iDefault) m_iTradeCommunicability = pClassInfo->getTradeCommunicability();
+#ifdef STRENGTH_IN_NUMBERS
 	if (getFrontSupportPercentModifier() == iDefault) m_iFrontSupportPercentModifier = pClassInfo->getFrontSupportPercentModifier();
 	if (getShortRangeSupportPercentModifier() == iDefault) m_iShortRangeSupportPercentModifier = pClassInfo->getShortRangeSupportPercentModifier();
 	if (getMediumRangeSupportPercentModifier() == iDefault) m_iMediumRangeSupportPercentModifier = pClassInfo->getMediumRangeSupportPercentModifier();
 	if (getLongRangeSupportPercentModifier() == iDefault) m_iLongRangeSupportPercentModifier = pClassInfo->getLongRangeSupportPercentModifier();
 	if (getFlankSupportPercentModifier() == iDefault) m_iFlankSupportPercentModifier = pClassInfo->getFlankSupportPercentModifier();
-//Team Project (3)
+#endif
 	if (getNationalCaptureProbabilityModifier() == iDefault) m_iNationalCaptureProbabilityModifier = pClassInfo->getNationalCaptureProbabilityModifier();
 	if (getNationalCaptureResistanceModifier() == iDefault) m_iNationalCaptureResistanceModifier = pClassInfo->getNationalCaptureResistanceModifier();
 	if (getLocalCaptureProbabilityModifier() == iDefault) m_iLocalCaptureProbabilityModifier = pClassInfo->getLocalCaptureProbabilityModifier();

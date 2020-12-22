@@ -1975,13 +1975,6 @@
 		<Polish>[ICON_BULLET]Możesz ulepszyć jednostki poza granicami kulturowymi.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CARGO</Tag>
-		<English>Cargo</English>
-		<German>Fracht</German>
-		<Spanish>Carga</Spanish>
-		<Polish>Ładowność</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CDA_ADD_COLUMN</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Add Column[COLOR_REVERT][NEWLINE]Insert the selected column(s) from the right list into the left list</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Ajouter Colonne[COLOR_REVERT][NEWLINE]Insèrer dans la liste de gauche la ou les colonnes sélectionnées dans la liste de droite</French>
@@ -3012,23 +3005,6 @@
 		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania miast na kontynencie</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_COST</Tag>
-		<English>Cost</English>
-		<French>Coût</French>
-		<German>Kosten</German>
-		<Italian>Costo</Italian>
-		<Spanish>Coste</Spanish>
-		<Polish>Koszt</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CULTURE</Tag>
-		<English>Culture</English>
-		<German>Kultur</German>
-		<Italian>Cultura</Italian>
-		<Spanish>Cultura</Spanish>
-		<Polish>Kultura</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_ELEGANT</Tag>
 		<English>Elegant</English>
 		<French>Elégante</French>
@@ -3122,14 +3098,6 @@
 		<Italian>[NEWLINE][ICON_BULLET]Diminuisce il sentimento rivoluzionario nazionale</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET]Reduce la rebeldía nacional</Spanish>
 		<Polish>[NEWLINE][ICON_BULLET]Obniża narodową buntowniczość</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DEFAULT</Tag>
-		<English>Default</English>
-		<French>Standard</French>
-		<German>Standard</German>
-		<Italian>Predefinito</Italian>
-		<Spanish>Predeterminado</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DEFENSIVE_PACT_WITH</Tag>
@@ -3704,15 +3672,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ESPIONAGE</Tag>
-		<English>Espionage</English>
-		<French>Espionnage</French>
-		<German>Spionage</German>
-		<Italian>Spionaggio</Italian>
-		<Spanish>Espionaje</Spanish>
-		<Polish>Szpiegostwo</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EXCILE_TEXT</Tag>
 		<English>[ICON_BULLET]Exiled from its own cultural border.</English>
 		<French>[ICON_BULLET]Exilé de ses frontières culturelles.</French>
@@ -3957,15 +3916,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>[ICON_BULLET] Forza la tua civiltà ad avere confini fissi.</Italian>
 		<Spanish>[ICON_BULLET]Hace que tu civilización tenga fronteras fijables</Spanish>
 		<Polish>[ICON_BULLET]Twoja Cywilizacja ma stałe granice</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FOOD</Tag>
-		<English>Food</English>
-		<French>Nourriture</French>
-		<German>Nahrung</German>
-		<Italian>Cibo</Italian>
-		<Spanish>Alimento</Spanish>
-		<Polish>Żywność</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FOREIGN_ADVISOR_INFO</Tag>
@@ -10736,14 +10686,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>Per ridurre al minimo i problemi di sincronizzazione, le azioni BULL, RevDCM, rivoluzioni e impostare le opzioni di default e collina, nei giochi multiplayer</Italian>
 		<Spanish>Para minimizar los problemas de sincronización, se establecerán y bloquearán los valores predefinidos de todas las opciones de BULL, RevDCM, y Revolution en las partidas multijugador</Spanish>
 		<Polish>By zminimalizować problemy z synchronizacją, wszystkie akcje BULL, RevDCM oraz rewolucje zostają ustawione domyślnie i zablokowane</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NAME</Tag>
-		<English>Name</English>
-		<French>Nom</French>
-		<Italian>Nome</Italian>
-		<Spanish>Nombre</Spanish>
-		<Polish>Nazwa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NAME_CITY</Tag>
@@ -19777,82 +19719,5 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Utiliser SHIFT pour voir les Classes de combat</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;UMSCHALT&gt;[COLOR_REVERT] für Anzeige der Kategorien</German>
 		<Polish>Naciśnij SHIFT aby zobaczyć Klasy Bojowe</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_WORD_CITY</Tag>
-		<English>City</English>
-		<French>Ville</French>
-		<German>Stadt</German>
-		<Italian>Città</Italian>
-		<Spanish>
-			<Text>Ciudad</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Miasto</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_WORD_GAME</Tag>
-		<English>Game</English>
-		<French>Jeu</French>
-		<German>Spiel</German>
-		<Italian>Gioco</Italian>
-		<Spanish>
-			<Text>Partida</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Gra</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_WORD_PLAYER</Tag>
-		<English>Player</English>
-		<French>Joueur</French>
-		<German>Spieler</German>
-		<Italian>Giocatore</Italian>
-		<Spanish>
-			<Text>Jugador</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Gracz</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_WORD_PLOT</Tag>
-		<English>Plot</English>
-		<French>Case</French>
-		<German>Feld</German>
-		<Italian>Casella</Italian>
-		<Spanish>
-			<Text>Casilla</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Pole</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_WORD_TEAM</Tag>
-		<English>Team</English>
-		<French>Equipe</French>
-		<Italian>Squadra</Italian>
-		<Spanish>
-			<Text>Equipo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Drużyna</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_WORD_UNIT</Tag>
-		<English>Unit</English>
-		<French>Unité</French>
-		<German>Einheit</German>
-		<Italian>Unità</Italian>
-		<Spanish>
-			<Text>Unidad</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Jednostka</Polish>
 	</TEXT>
 </Civ4GameText>

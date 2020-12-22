@@ -2502,11 +2502,13 @@ m_iFortitudeChange(0),
 m_iDamageperTurn(0),
 m_iStrAdjperTurn(0),
 m_iWeakenperTurn(0),
+#ifdef STRENGTH_IN_NUMBERS
 m_iFrontSupportPercentChange(0),
 m_iShortRangeSupportPercentChange(0),
 m_iMediumRangeSupportPercentChange(0),
 m_iLongRangeSupportPercentChange(0),
 m_iFlankSupportPercentChange(0),
+#endif
 m_iDodgeModifierChange(0),
 m_iPrecisionModifierChange(0),
 m_iPowerShotsChange(0),
@@ -3477,8 +3479,8 @@ int CvPromotionInfo::getWeakenperTurn() const
 {
 	return m_iWeakenperTurn;
 }
-//
-//Strength in Numbers
+
+#ifdef STRENGTH_IN_NUMBERS
 int CvPromotionInfo::getFrontSupportPercentChange() const
 {
 	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
@@ -3523,7 +3525,7 @@ int CvPromotionInfo::getFlankSupportPercentChange() const
 	}
 	return m_iFlankSupportPercentChange;
 }
-//
+#endif
 
 int CvPromotionInfo::getDodgeModifierChange() const
 {
@@ -5529,11 +5531,13 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iDamageperTurn, L"iDamageperTurn");
 	pXML->GetOptionalChildXmlValByName(&m_iStrAdjperTurn, L"iStrAdjperTurn");
 	pXML->GetOptionalChildXmlValByName(&m_iWeakenperTurn, L"iWeakenperTurn");
+#ifdef STRENGTH_IN_NUMBERS
 	pXML->GetOptionalChildXmlValByName(&m_iFrontSupportPercentChange, L"iFrontSupportPercentChange");
 	pXML->GetOptionalChildXmlValByName(&m_iShortRangeSupportPercentChange, L"iShortRangeSupportPercentChange");
 	pXML->GetOptionalChildXmlValByName(&m_iMediumRangeSupportPercentChange, L"iMediumRangeSupportPercentChange");
 	pXML->GetOptionalChildXmlValByName(&m_iLongRangeSupportPercentChange, L"iLongRangeSupportPercentChange");
 	pXML->GetOptionalChildXmlValByName(&m_iFlankSupportPercentChange, L"iFlankSupportPercentChange");
+#endif
 	pXML->GetOptionalChildXmlValByName(&m_iDodgeModifierChange, L"iDodgeModifierChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPrecisionModifierChange, L"iPrecisionModifierChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPowerShotsChange, L"iPowerShotsChange");
@@ -6366,11 +6370,13 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 	if (getDamageperTurn() == iDefault) m_iDamageperTurn = pClassInfo->getDamageperTurn();
 	if (getStrAdjperTurn() == iDefault) m_iStrAdjperTurn = pClassInfo->getStrAdjperTurn();
 	if (getWeakenperTurn() == iDefault) m_iWeakenperTurn = pClassInfo->getWeakenperTurn();
+#ifdef STRENGTH_IN_NUMBERS
 	if (m_iFrontSupportPercentChange == iDefault) m_iFrontSupportPercentChange = pClassInfo->m_iFrontSupportPercentChange;
 	if (m_iShortRangeSupportPercentChange == iDefault) m_iShortRangeSupportPercentChange = pClassInfo->m_iShortRangeSupportPercentChange;
 	if (m_iMediumRangeSupportPercentChange == iDefault) m_iMediumRangeSupportPercentChange = pClassInfo->m_iMediumRangeSupportPercentChange;
 	if (m_iLongRangeSupportPercentChange == iDefault) m_iLongRangeSupportPercentChange = pClassInfo->m_iLongRangeSupportPercentChange;
 	if (m_iFlankSupportPercentChange == iDefault) m_iFlankSupportPercentChange = pClassInfo->m_iFlankSupportPercentChange;
+#endif
 	if (getDodgeModifierChange() == iDefault) m_iDodgeModifierChange = pClassInfo->getDodgeModifierChange();
 	if (getPrecisionModifierChange() == iDefault) m_iPrecisionModifierChange = pClassInfo->getPrecisionModifierChange();
 	if (getPowerShotsChange() == iDefault) m_iPowerShotsChange = pClassInfo->getPowerShotsChange();
@@ -7165,11 +7171,13 @@ void CvPromotionInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iDamageperTurn);
 	CheckSum(iSum, m_iStrAdjperTurn);
 	CheckSum(iSum, m_iWeakenperTurn);
+#ifdef STRENGTH_IN_NUMBERS
 	CheckSum(iSum, m_iFrontSupportPercentChange);
 	CheckSum(iSum, m_iShortRangeSupportPercentChange);
 	CheckSum(iSum, m_iMediumRangeSupportPercentChange);
 	CheckSum(iSum, m_iLongRangeSupportPercentChange);
 	CheckSum(iSum, m_iFlankSupportPercentChange);
+#endif
 	CheckSum(iSum, m_iDodgeModifierChange);
 	CheckSum(iSum, m_iPrecisionModifierChange);
 	CheckSum(iSum, m_iPowerShotsChange);
@@ -38144,11 +38152,13 @@ CvUnitCombatInfo::CvUnitCombatInfo()
 	, m_iDynamicDefenseChange(0)
 	, m_iStrengthChange(0)
 	, m_iFortitudeChange(0)
+#ifdef STRENGTH_IN_NUMBERS
 	, m_iFrontSupportPercentChange(0)
 	, m_iShortRangeSupportPercentChange(0)
 	, m_iMediumRangeSupportPercentChange(0)
 	, m_iLongRangeSupportPercentChange(0)
 	, m_iFlankSupportPercentChange(0)
+#endif
 	, m_iDodgeModifierChange(0)
 	, m_iPrecisionModifierChange(0)
 	, m_iPowerShotsChange(0)
@@ -38782,6 +38792,7 @@ int CvUnitCombatInfo::getFortitudeChange() const
 	return m_iFortitudeChange;
 }
 
+#ifdef STRENGTH_IN_NUMBERS
 int CvUnitCombatInfo::getFrontSupportPercentChange() const
 {
 	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
@@ -38826,6 +38837,7 @@ int CvUnitCombatInfo::getFlankSupportPercentChange() const
 	}
 	return m_iFlankSupportPercentChange;
 }
+#endif
 
 int CvUnitCombatInfo::getDodgeModifierChange() const
 {
@@ -40180,11 +40192,13 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iDynamicDefenseChange, L"iDynamicDefenseChange");
 	pXML->GetOptionalChildXmlValByName(&m_iStrengthChange, L"iStrengthChange");
 	pXML->GetOptionalChildXmlValByName(&m_iFortitudeChange, L"iFortitudeChange");
+#ifdef STRENGTH_IN_NUMBERS
 	pXML->GetOptionalChildXmlValByName(&m_iFrontSupportPercentChange, L"iFrontSupportPercentChange");
 	pXML->GetOptionalChildXmlValByName(&m_iShortRangeSupportPercentChange, L"iShortRangeSupportPercentChange");
 	pXML->GetOptionalChildXmlValByName(&m_iMediumRangeSupportPercentChange, L"iMediumRangeSupportPercentChange");
 	pXML->GetOptionalChildXmlValByName(&m_iLongRangeSupportPercentChange, L"iLongRangeSupportPercentChange");
 	pXML->GetOptionalChildXmlValByName(&m_iFlankSupportPercentChange, L"iFlankSupportPercentChange");
+#endif
 	pXML->GetOptionalChildXmlValByName(&m_iDodgeModifierChange, L"iDodgeModifierChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPrecisionModifierChange, L"iPrecisionModifierChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPowerShotsChange, L"iPowerShotsChange");
@@ -41388,11 +41402,13 @@ void CvUnitCombatInfo::copyNonDefaults(CvUnitCombatInfo* pClassInfo, CvXMLLoadUt
 	if (m_iDynamicDefenseChange == iDefault) m_iDynamicDefenseChange = pClassInfo->m_iDynamicDefenseChange;
 	if (getStrengthChange() == iDefault) m_iStrengthChange = pClassInfo->getStrengthChange();
 	if (getFortitudeChange() == iDefault) m_iFortitudeChange = pClassInfo->getFortitudeChange();
+#ifdef STRENGTH_IN_NUMBERS
 	if (m_iFrontSupportPercentChange == iDefault) m_iFrontSupportPercentChange = pClassInfo->m_iFrontSupportPercentChange;
 	if (m_iShortRangeSupportPercentChange == iDefault) m_iShortRangeSupportPercentChange = pClassInfo->m_iShortRangeSupportPercentChange;
 	if (m_iMediumRangeSupportPercentChange == iDefault) m_iMediumRangeSupportPercentChange = pClassInfo->m_iMediumRangeSupportPercentChange;
 	if (m_iLongRangeSupportPercentChange == iDefault) m_iLongRangeSupportPercentChange = pClassInfo->m_iLongRangeSupportPercentChange;
 	if (m_iFlankSupportPercentChange == iDefault) m_iFlankSupportPercentChange = pClassInfo->m_iFlankSupportPercentChange;
+#endif
 	if (getDodgeModifierChange() == iDefault) m_iDodgeModifierChange = pClassInfo->getDodgeModifierChange();
 	if (getPrecisionModifierChange() == iDefault) m_iPrecisionModifierChange = pClassInfo->getPrecisionModifierChange();
 	if (getPowerShotsChange() == iDefault) m_iPowerShotsChange = pClassInfo->getPowerShotsChange();
@@ -42001,11 +42017,13 @@ void CvUnitCombatInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iDynamicDefenseChange);
 	CheckSum(iSum, m_iStrengthChange);
 	CheckSum(iSum, m_iFortitudeChange);
+#ifdef STRENGTH_IN_NUMBERS
 	CheckSum(iSum, m_iFrontSupportPercentChange);
 	CheckSum(iSum, m_iShortRangeSupportPercentChange);
 	CheckSum(iSum, m_iMediumRangeSupportPercentChange);
 	CheckSum(iSum, m_iLongRangeSupportPercentChange);
 	CheckSum(iSum, m_iFlankSupportPercentChange);
+#endif
 	CheckSum(iSum, m_iDodgeModifierChange);
 	CheckSum(iSum, m_iPrecisionModifierChange);
 	CheckSum(iSum, m_iPowerShotsChange);
