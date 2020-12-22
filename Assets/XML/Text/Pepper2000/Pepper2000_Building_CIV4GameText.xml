@@ -791,11 +791,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCHAILECT</Tag>
-		<English>HM Archailect</English>
+		<English>Human Mod (Archailect)</English>
+		<French>Modif. Humain (Archailecte)</French>
+		<Italian>Umano augmentato (IArchetipica)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCHAILECT_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCHAILECT_STRATEGY</Tag>
@@ -989,7 +992,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASCENDED_PLANET_PEDIA</Tag>
-		<English>This planet has become transcendent</English>
+		<English>This planet has become transcendent.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASCENDED_PLANET_STRATEGY</Tag>
@@ -1165,11 +1168,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATEMPORAL_BEINGS</Tag>
-		<English>HM Atemporal</English>
+		<English>Human Mod (Atemporal)</English>
+		<French>Modif. Humain (Atemporel)</French>
+		<Italian>Umano augmentato (Atemporale)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATEMPORAL_BEINGS_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATEMPORAL_BEINGS_STRATEGY</Tag>
@@ -3014,11 +3020,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT</Tag>
-		<English>HM Cognitive Enhancement</English>
+		<English>Human Mod (Cognitive Enhancement)</English>
+		<French>Modif. Humain (Amélioration cognitive)</French>
+		<Italian>Umano augmentato (Potenziamento cognitivo)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT_STRATEGY</Tag>
@@ -3050,11 +3059,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLD_TOLERANCE</Tag>
-		<English>HM Cold Tolerance</English>
+		<English>Human Mod (Cold Tolerance)</English>
+		<French>Modif. Humain (Tolérance au froid)</French>
+		<Italian>Umano augmentato (Tolleranza al freddo)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLD_TOLERANCE_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLD_TOLERANCE_STRATEGY</Tag>
@@ -3062,11 +3074,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS</Tag>
-		<English>HM Collective Consciousness</English>
+		<English>Human Mod (Collective Consciousness)</English>
+		<French>Modif. Humain (Conscience collective)</French>
+		<Italian>Umano augmentato (Coscienza collettiva)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS_STRATEGY</Tag>
@@ -3905,12 +3920,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_DEFENSES</Tag>
 		<English>Deep Space Shielding</English>
-		<French>Shielding de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_DEFENSES_PEDIA</Tag>
 		<English>Advanced shielding for your space colony</English>
-		<French>Advanced shielding for your space colony</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_DEFENSES_STRATEGY</Tag>
@@ -3919,12 +3932,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_DOCKING_BAY</Tag>
 		<English>Deep Space Docking Bay</English>
-		<French>Docking Bay de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_DOCKING_BAY_PEDIA</Tag>
 		<English>Docking bay to allow spacecraft to visit and leave.</English>
-		<French>Docking bay to allow spacecraft to visit and leave.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_DOCKING_BAY_STRATEGY</Tag>
@@ -3933,12 +3944,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_FACTORY</Tag>
 		<English>Deep Space Factory</English>
-		<French>Usine de Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_FACTORY_PEDIA</Tag>
 		<English>This factory supports your deep space colony.</English>
-		<French>This factory supports your deep space colony.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_FACTORY_STRATEGY</Tag>
@@ -3947,12 +3956,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_FARM</Tag>
 		<English>Deep Space Farm</English>
-		<French>Farm de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_FARM_PEDIA</Tag>
 		<English>A farm in a deep space colony.</English>
-		<French>A farm in a deep space colony.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_FARM_STRATEGY</Tag>
@@ -3961,12 +3968,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_GATEWAY</Tag>
 		<English>Lunar Orbital Platform-Gateway</English>
-		<French>Orbital Platform-Gateway Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_GATEWAY_PEDIA</Tag>
 		<English>The Lunar Orbital Platform-Gateway (LOP-G) is a planned lunar-orbit space station, that will have a power and propulsion system, a small habitat for the crew, a docking capability, an airlock, and logistics modules.</English>
-		<French>The Lunaire Orbital Platform-Gateway (LOP-G) is a planned lunar-orbit space station, that will have a power and propulsion system, a small habitat for the crew, a docking capability, an airlock, and logistics modules.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_GATEWAY_STRATEGY</Tag>
@@ -3975,12 +3980,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_HOTEL</Tag>
 		<English>Deep Space Hotel</English>
-		<French>Hotel de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_HOTEL_PEDIA</Tag>
 		<English>Hotel in deep space.</English>
-		<French>Hotel in deep space.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_HOTEL_STRATEGY</Tag>
@@ -3989,12 +3992,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_HYDROPONICS</Tag>
 		<English>Deep Space Hydroponics</English>
-		<French>Hydroponics de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_HYDROPONICS_PEDIA</Tag>
 		<English>The obligatory hydroponics facility for the new deep space colony.</English>
-		<French>The obligatory hydroponics facility for the new deep space colony.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_HYDROPONICS_STRATEGY</Tag>
@@ -4003,12 +4004,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_MAGLEV</Tag>
 		<English>Deep Space Maglev</English>
-		<French>Maglev de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_MAGLEV_PEDIA</Tag>
 		<English>This maglev circles around the spacecraft, making transportation easy.</English>
-		<French>This maglev circles around the spacecraft, making transportation easy.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_MAGLEV_STRATEGY</Tag>
@@ -4017,12 +4016,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_MEGAFACTORY</Tag>
 		<English>Deep Space Megafactory</English>
-		<French>Megafactory de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_MEGAFACTORY_PEDIA</Tag>
 		<English>This massive factory is good for manufacturing who knows what.</English>
-		<French>This massive factory is good for manufacturing who knows what.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_MEGAFACTORY_STRATEGY</Tag>
@@ -4031,12 +4028,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_PLASTEEL_FACTORY</Tag>
 		<English>Deep Space Plasteel Factory</English>
-		<French>Usine de Plastacier de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_PLASTEEL_FACTORY_PEDIA</Tag>
 		<English>Makes plasteel.</English>
-		<French>Makes plasteel.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_PLASTEEL_FACTORY_STRATEGY</Tag>
@@ -4045,12 +4040,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_PRISON</Tag>
 		<English>Deep Space Prison</English>
-		<French>Prison de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_PRISON_PEDIA</Tag>
 		<English>Unfortunately, your civilization still needs these.</English>
-		<French>Unfortunately, your civilization still needs these.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_PRISON_STRATEGY</Tag>
@@ -4059,12 +4052,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_RECONAISSANCE</Tag>
 		<English>Deep Space Reconnaissance</English>
-		<French>Reconnaissance de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_RECONAISSANCE_PEDIA</Tag>
 		<English>Swarm of nanobots to conduct reconnaissance.</English>
-		<French>Swarm of nanobots to conduct reconnaissance.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_RECONAISSANCE_STRATEGY</Tag>
@@ -4073,12 +4064,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_SECURITY</Tag>
 		<English>Deep Space Security System</English>
-		<French>Security System de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_SECURITY_PEDIA</Tag>
 		<English>An advanced security system for deep space colonies.</English>
-		<French>An advanced security system for deep space colonies.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_SECURITY_STRATEGY</Tag>
@@ -4087,12 +4076,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_SOCIAL_ENGINEERING</Tag>
 		<English>Deep Space Social Engineering</English>
-		<French>Social Engineering de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_SOCIAL_ENGINEERING_PEDIA</Tag>
 		<English>A large, self-contained city millions of miles from Earth needs to be tightly controlled.</English>
-		<French>A large, self-contained city millions of miles from Earth needs to be tightly controlled.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_SOCIAL_ENGINEERING_STRATEGY</Tag>
@@ -4101,12 +4088,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_TELESCOPE</Tag>
 		<English>Deep Space Telescope</English>
-		<French>Telescope de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_TELESCOPE_PEDIA</Tag>
 		<English>Yet another telescope. This one is larger than ever before.</English>
-		<French>Yet another telescope. This one is larger than ever before.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_SPACE_TELESCOPE_STRATEGY</Tag>
@@ -4115,12 +4100,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_THOUGHT</Tag>
 		<English>Deep Thought</English>
-		<French>Deep Thought</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_THOUGHT_PEDIA</Tag>
 		<English>Deep Thought is a computer that was created by the pan-dimensional, hyper-intelligent species of beings (whose three-dimensional protrusions into our universe are ordinary white mice) to come up with the Answer to The Ultimate Question of Life, the Universe, and Everything. Deep Thought is the size of a small city. When, after seven and a half million years of calculation, the answer finally turns out to be 42, Deep Thought admonishes Loonquawl and Phouchg (the receivers of the Ultimate Answer) that '[he] checked it very thoroughly, and that quite definitely is the answer. I think the problem, to be quite honest with you is that you've never actually known what the question was.'</English>
-		<French>Deep Thought is a computer that was created by the pan-dimensional, hyper-intelligent species of beings (whose three-dimensional protrusions into our universe are ordinary white mice) to come up with the Answer to The Ultimate Question of Life, the Universe, and Everything. Deep Thought is the size of a small city. When, after seven and a half million years of calculation, the answer finally turns out to be 42, Deep Thought admonishes Loonquawl and Phouchg (the receivers of the Ultimate Answer) that '[he] checked it very thoroughly, and that quite definitely is the answer. I think the problem, to be quite honest with you is that you've never actually known what the question was.'</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEEP_THOUGHT_STRATEGY</Tag>
@@ -4129,12 +4112,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEGENERATE_ERA_SURVIVAL_PLAN</Tag>
 		<English>Interstellar Degenerate Era Survival Plan</English>
-		<French>Degenerate Era Survival Plan (Interstellar)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEGENERATE_ERA_SURVIVAL_PLAN_PEDIA</Tag>
 		<English>By 10^14 (100 trillion) years from now, star formation will end, leaving all stellar objects in the form of degenerate remnants. If protons do not decay, this era will last longer.</English>
-		<French>By 10^14 (100 trillion) years from now, star formation will end, leaving all stellar objects in the form of degenerate remnants. If protons do not decay, this era will last longer.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEGENERATE_ERA_SURVIVAL_PLAN_STRATEGY</Tag>
@@ -4142,13 +4123,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR</Tag>
-		<English>Dehli-Mumbai Industrial Corridor</English>
-		<French>Corridor Industriel de Dehli-Mumbai</French>
+		<English>Delhi-Mumbai Industrial Corridor</English>
+		<French>Couloir industriel Delhi-Mumbai</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR_PEDIA</Tag>
 		<English>The Delhi-Mumbai Industrial Corridor Project is a planned State-Sponsored Industrial Development Project of the Government of India. It is one of the world's biggest infrastructure projects with an estimated investment of US$90 billion, and is planned as a hi-tech industrial zone spread across seven states along the 1,500 km long Western Dedicated Freight Corridor which serves as its backbone.</English>
-		<French>Le projet de corridor industriel de Delhi-Mumbai est un projet de développement industriel parrainé par l'État du gouvernement indien. Il s'agit de l'un des plus grands projets d'infrastructure au monde, avec un investissement estimé à 90 milliards de dollars américains, et il est prévu qu'il s'agisse d'une zone industrielle de haute technologie répartie dans sept États le long du couloir de transport de marchandises occidental de 1 500 km de long qui lui servira de colonne vertébrale.</French>
+		<French>Le projet de Couloir industriel Delhi-Mumbai est un projet de développement industriel parrainé par l'État du gouvernement indien. Il s'agit de l'un des plus grands projets d'infrastructure au monde, avec un investissement estimé à 90 milliards de dollars américains, et il est prévu qu'il s'agisse d'une zone industrielle de haute technologie répartie dans sept États le long du couloir de transport de marchandises occidental de 1 500 km de long qui lui servira de colonne vertébrale.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR_STRATEGY</Tag>
@@ -4157,7 +4138,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEMAT_GUN</Tag>
 		<English>De-mat Police Force</English>
-		<French>De-mat Police Force</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEMAT_GUN_PEDIA</Tag>
@@ -4181,12 +4161,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNER_BABIES</Tag>
-		<English>HM Designer Babies</English>
-		<French>HM Designer Babies</French>
+		<English>Human Mod (Designer Babies)</English>
+		<French>Modif. Humain (Enfants sur mesure)</French>
+		<Italian>Umano augmentato (Bambini su misura)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNER_BABIES_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNER_BABIES_STRATEGY</Tag>
@@ -4195,12 +4177,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNER_CASTE_LAW_ENFORCEMENT</Tag>
 		<English>Interstellar Designer Caste - Law Enforcement</English>
-		<French>Interstellar Designer Caste - Law Enforcement</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNER_CASTE_LAW_ENFORCEMENT_PEDIA</Tag>
 		<English>Humans bred specifically to enforce laws.</English>
-		<French>Humans bred specifically to enforce laws.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNER_CASTE_LAW_ENFORCEMENT_STRATEGY</Tag>
@@ -4209,12 +4189,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNER_CASTE_MAINTENANCE</Tag>
 		<English>Interstellar Designer Caste - Maintenance</English>
-		<French>Interstellar Designer Caste - Maintenance</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNER_CASTE_MAINTENANCE_PEDIA</Tag>
 		<English>Humans designed specifically for grunt work.</English>
-		<French>Humans designed specifically for grunt work.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNER_CASTE_MAINTENANCE_STRATEGY</Tag>
@@ -4223,12 +4201,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNER_CASTE_MISSION_CONTROL</Tag>
 		<English>Interstellar Designer Caste - Mission Control</English>
-		<French>Interstellar Designer Caste - Mission Control</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNER_CASTE_MISSION_CONTROL_PEDIA</Tag>
 		<English>Humans bred specifically for worldship command.</English>
-		<French>Humans bred specifically for worldship command.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNER_CASTE_MISSION_CONTROL_STRATEGY</Tag>
@@ -4237,12 +4213,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIAMOND_NANOTHREAD_FOUNDRY</Tag>
 		<English>Diamond Nanothread Foundry</English>
-		<French>Fonderie de Diamant Nanothread</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIAMOND_NANOTHREAD_FOUNDRY_PEDIA</Tag>
 		<English>A diamond nanothread is a tetrahedrally-bonded carbon crystalline nanomaterial (a close-packed sp3 bonded carbon structure). Its structure is similar to that of diamond. DNTs are only a few atoms across, more than 20,000 times thinner than a human hair.</English>
-		<French>A diamond nanothread is a tetrahedrally-bonded carbon crystalline nanomaterial (a close-packed sp3 bonded carbon structure). Its structure is similar to that of diamond. DNTs are only a few atoms across, more than 20,000 times thinner than a human hair.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIAMOND_NANOTHREAD_FOUNDRY_STRATEGY</Tag>
@@ -4251,17 +4225,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_EMBASSY</Tag>
 		<English>Digital Embassy</English>
-		<French>Digital Embassy</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_EMBASSY_HELP</Tag>
-		<English>[ICON_BULLET][ICON_BULLET]Make contact with every other civ.</English>
-		<French>[ICON_BULLET][ICON_BULLET]Make contact with every other civ.</French>
+		<English>Make contact with every other civ.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_EMBASSY_PEDIA</Tag>
 		<English>This advanced Digital Embassy gathers intelligence and reaches out to all nations in the world.</English>
-		<French>This advanced Digital Embassy gathers intelligence and reaches out to all nations in the world.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_EMBASSY_STRATEGY</Tag>
@@ -4269,12 +4240,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_IDENTITY</Tag>
-		<English>HM Digital Identity</English>
-		<French>HM Digital Identity</French>
+		<English>Human Mod (Digital Identity)</English>
+		<French>Modif. Humain (Identité numérique)</French>
+		<Italian>Umano augmentato (Identità digitale)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_IDENTITY_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_IDENTITY_STRATEGY</Tag>
@@ -4282,12 +4255,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE</Tag>
-		<English>HM Digital Lifestyle</English>
-		<French>HM Digital Lifestyle</French>
+		<English>Human Mod (Digital Lifestyle)</English>
+		<French>Modif. Humain (Forme de vie numérique)</French>
+		<Italian>Umano augmentato (Stile di vita digitale)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE_STRATEGY</Tag>
@@ -4421,7 +4396,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUBAI_CITY_TOWER_PEDIA</Tag>
 		<English>The Dubai City Tower, also known as the Dubai Vertical City, is a proposed skyscraper design announced on 25 August 2008. The building is supposed to be 2,400 metres (7,900 ft) tall.</English>
-		<French>La Tour de la Ville de Dubai, également connue sous le nom de Dubai Vertical Ville, est un projet de construction de gratte-ciel annoncé le 25 août 2008. Le bâtiment devrait mesurer 2 400 mètres (7 900 pieds) de hauteur.</French>
+		<French>La Tour de la ville de Dubaï, également connue sous le nom de Ville verticale de Dubaï, est un projet de gratte-ciel annoncée le 25 août 2008. Le bâtiment est censé mesurer 2400 mètres de hauteur.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUBAI_CITY_TOWER_STRATEGY</Tag>
@@ -4454,7 +4429,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_HARROP_SATELLITE</Tag>
 		<English>Cislunar Dyson-Harrop Satellite</English>
-		<French>Dyson-Harrop Satellite (Cislunaire)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_HARROP_SATELLITE_PEDIA</Tag>
@@ -4467,7 +4441,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_SHUTTER</Tag>
 		<English>Interstellar Dyson Shutter</English>
-		<French>Interstellar Dyson Shutter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_SHUTTER_PEDIA</Tag>
@@ -4496,12 +4469,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER</Tag>
 		<English>Interstellar Dyson Sphere Industrial Quarter</English>
-		<French>Interstellar Dyson Sphere Industrial Quarter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER_PEDIA</Tag>
 		<English>A manufacturing sector of the Dyson Sphere.</English>
-		<French>A manufacturing sector of the Dyson Sphere.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER_STRATEGY</Tag>
@@ -4510,17 +4481,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_SPHERE_PEDIA</Tag>
 		<English>A Dyson sphere is a hypothetical megastructure that completely encompasses a star and captures most or all of its power output. The concept was first described by Olaf Stapledon in his science fiction novel, Star Maker (1937), and later popularized by Freeman Dyson in his 1960 paper, 'Search for Artificial Stellar Sources of Infrared Radiation'. Dyson speculated that such structures would be the logical consequence of the escalating energy needs of a technological civilization and would be a necessity for its long-term survival. He proposed that searching for such structures could lead to the detection of advanced, intelligent extraterrestrial life. Different types of Dyson spheres and their energy-harvesting ability would correspond to levels of technological advancement on the Kardashev scale.[PARAGRAPH:2]Since then, other variant designs involving building an artificial structure or series of structures to encompass a star have been proposed in exploratory engineering or described in science fiction under the name 'Dyson sphere'. These later proposals have not been limited to solar-power stations, with many involving habitation or industrial elements. Most fictional depictions describe a solid shell of matter enclosing a star, which is considered the least plausible variant of the idea. In May 2013, at the Starship Century Symposium in San Diego, Dyson repeated his comments that he wished the concept had not been named after him.</English>
-		<French>A Dyson sphere is a hypothetical megastructure that completely encompasses a star and captures most or all of its power output. The concept was first described by Olaf Stapledon in his science fiction novel, Star Maker (1937), and later popularized by Freeman Dyson in his 1960 paper, 'Search for Artificial Stellar Sources of Infrared Radiation'. Dyson speculated that such structures would be the logical consequence of the escalating energy needs of a technological civilization and would be a necessity for its long-term survival. He proposed that searching for such structures could lead to the detection of advanced, intelligent extraterrestrial life. Different types of Dyson spheres and their energy-harvesting ability would correspond to levels of technological advancement on the Kardashev scale.[PARAGRAPH:2]Since then, other variant designs involving building an artificial structure or series of structures to encompass a star have been proposed in exploratory engineering or described in science fiction under the name 'Dyson sphere'. These later proposals have not been limited to solar-power stations, with many involving habitation or industrial elements. Most fictional depictions describe a solid shell of matter enclosing a star, which is considered the least plausible variant of the idea. In May 2013, at the Starship Century Symposium in San Diego, Dyson repeated his comments that he wished the concept had not been named after him.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_SPHERE_PORTAL</Tag>
 		<English>Interstellar Dyson Sphere Portal</English>
-		<French>Interstellar Dyson Sphere Portal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_SPHERE_PORTAL_PEDIA</Tag>
 		<English>These portals allow easy traversal through Dyson Spheres.</English>
-		<French>These portals allow easy traversal through Dyson Spheres.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_SPHERE_PORTAL_STRATEGY</Tag>
@@ -4533,12 +4501,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_SWARM</Tag>
 		<English>Interstellar Dyson Swarm</English>
-		<French>Interstellar Dyson Swarm</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_SWARM_PEDIA</Tag>
 		<English>A Dyson Swarm consists of a large number of independent constructs (usually solar power satellites and space habitats) orbiting in a dense formation around the star. This construction approach has advantages: components could be sized appropriately, and it can be constructed incrementally. Various forms of wireless energy transfer could be used to transfer energy between components and the planets.</English>
-		<French>A Dyson Swarm consists of a large number of independent constructs (usually solar power satellites and space habitats) orbiting in a dense formation around the star. This construction approach has advantages: components could be sized appropriately, and it can be constructed incrementally. Various forms of wireless energy transfer could be used to transfer energy between components and the planets.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_SWARM_STRATEGY</Tag>
@@ -4547,12 +4513,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTHSCRAPER</Tag>
 		<English>Earthscraper</English>
-		<French>Earthscraper</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTHSCRAPER_PEDIA</Tag>
 		<English>This ambitious 'Earthscraper' concept from BNKR Aquitectura seeks to address several problems faced by Mexico City - a growing population, the lack of new plots for construction, the need to conserve historic buildings and height restrictions on new structures. 'The historic center of Mexico City is in desperate need for a pragmatic make-over,' says BNKR. The solution - build an inverted pyramid underneath the main plaza at the heart of the city.[PARAGRAPH:2]http://www.gizmag.com/earthscraper-bnkr/19457/</English>
-		<French>This ambitious 'Earthscraper' concept from BNKR Aquitectura seeks to address several problems faced by Mexico Ville - a growing population, the lack of new plots for construction, the need to conserve historic buildings and height restrictions on new structures. 'The historic center of Mexico Ville is in desperate need for a pragmatic make-over,' says BNKR. The solution - build an inverted pyramid underneath the main plaza at the heart of the city.[PARAGRAPH:2]http://www.gizmag.com/earthscraper-bnkr/19457/</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTHSCRAPER_STRATEGY</Tag>
@@ -4561,12 +4525,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTH_20</Tag>
 		<English>Earth 2.0</English>
-		<French>Earth 2.0</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTH_20_PEDIA</Tag>
 		<English>A full-scale replica of Earth.</English>
-		<French>A full-scale replica of Earth.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTH_20_STRATEGY</Tag>
@@ -4575,12 +4537,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTH_BACKUP</Tag>
 		<English>Earth History Backup</English>
-		<French>Earth History Backup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTH_BACKUP_PEDIA</Tag>
 		<English>A full and detailed record of Earth's history, stored remote for educational purposes, and just in case...</English>
-		<French>A full and detailed record of Earth's history, stored remote for educational purposes, and just in case...</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTH_BACKUP_STRATEGY</Tag>
@@ -4589,12 +4549,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ECOSYSTEM_SERVICES_MARKET</Tag>
 		<English>Ecosystem Services Market</English>
-		<French>Ecosystem Services Market</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ECOSYSTEM_SERVICES_MARKET_PEDIA</Tag>
 		<English>A peer-reviewed study published in 1997 estimated the value of the world's ecosystem services and natural capital to be between US$16-54 trillion per year, with an average of US$33 trillion per year. However, Salles (2011) indicates 'The total value of biodiversity is infinite, so having debate about what is the total value of nature is actually pointless because we can't live without it'.</English>
-		<French>A peer-reviewed study published in 1997 estimated the value of the world's ecosystem services and natural capital to be between US$16-54 trillion per year, with an average of US$33 trillion per year. However, Salles (2011) indicates 'The total value of biodiversity is infinite, so having debate about what is the total value of nature is actually pointless because we can't live without it'.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ECOSYSTEM_SERVICES_MARKET_STRATEGY</Tag>
@@ -4603,40 +4561,34 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ECUMENOPOLIS</Tag>
 		<English>Interstellar Ecumenopolis</English>
-		<French>Interstellar Ecumenopolis</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ECUMENOPOLIS_EARTH</Tag>
-		<English>Ecumenopolis Earth</English>
-		<French>Ecumenopolis Earth</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ECUMENOPOLIS_EARTH_PEDIA</Tag>
-		<English>All your cities on Earth now function as a single megacity.</English>
-		<French>All your cities on Earth now function as a single megacity.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ECUMENOPOLIS_EARTH_STRATEGY</Tag>
-		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ECUMENOPOLIS_PEDIA</Tag>
 		<English>Ecumenopolis is the hypothetical concept of a planet wide city. The word was invented in 1967 by the Greek city planner Constantinos Doxiadis to represent the idea that in the future urban areas and megalopoleis would eventually fuse and there would be a single continuous worldwide city as a progression from the current urbanization and population growth trends. This concept was already current in science fiction in 1942, with Trantor in the Foundation series.</English>
-		<French>Ecumenopolis is the hypothetical concept of a planet wide city. The word was invented in 1967 by the Greek city planner Constantinos Doxiadis to represent the idea that in the future urban areas and megalopoleis would eventually fuse and there would be a single continuous worldwide city as a progression from the current urbanization and population growth trends. This concept was already current in science fiction in 1942, with Trantor in the Foundation series.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ECUMENOPOLIS_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ECUMENOPOLIS_EARTH</Tag>
+		<English>Ecumenopolis Earth</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ECUMENOPOLIS_EARTH_PEDIA</Tag>
+		<English>All your cities on Earth now function as a single megacity.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ECUMENOPOLIS_EARTH_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EDEN</Tag>
 		<English>Eden</English>
-		<French>Eden</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EDEN_PEDIA</Tag>
 		<English>See https://storiesbywilliams.com/2012/10/10/arcology-in-popular-culture/</English>
-		<French>See https://storiesbywilliams.com/2012/10/10/arcology-in-popular-culture/</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EDEN_STRATEGY</Tag>
@@ -4645,12 +4597,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_GPS</Tag>
 		<English>Effect - GPS</English>
-		<French>Effet - GPS</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_GPS_PEDIA</Tag>
 		<English>The Global Positioning System (GPS), originally Navstar GPS, is a space-based radionavigation system owned by the United States government and operated by the United States Air Force. It is a global navigation satellite system that provides geolocation and time information to a GPS receiver anywhere on or near the Earth where there is an unobstructed line of sight to four or more GPS satellites.</English>
-		<French>The Global Positioning System (GPS), originally Navstar GPS, is a space-based radionavigation system owned by the United States government and operated by the United States Air Force. It is a global navigation satellite system that provides geolocation and time information to a GPS receiver anywhere on or near the Earth where there is an unobstructed line of sight to four or more GPS satellites.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_GPS_STRATEGY</Tag>
@@ -4659,12 +4609,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EKPYROTIC_UNIVERSE</Tag>
 		<English>Hyperspace Ekpyrotic Universe</English>
-		<French>Hyperspace Ekpyrotic Universe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EKPYROTIC_UNIVERSE_PEDIA</Tag>
 		<English>A simulated ekpyrotic universe.</English>
-		<French>A simulated ekpyrotic universe.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EKPYROTIC_UNIVERSE_STRATEGY</Tag>
@@ -4673,12 +4621,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</Tag>
 		<English>Electronics Manufacturing District</English>
-		<French>Quartier de fabrication de composants Electroniques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT_PEDIA</Tag>
 		<English>A high-tech electronics manufacturing district. Rapid prototyping technology allows small production runs, greatly increasingly the flexibility of the manufacturing plants.</English>
-		<French>Un quartier de fabrication d'électronique de haute technologie. La technologie de prototypage rapide permet de petites séries de production, ce qui augmente considérablement la flexibilité des usines de fabrication.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT_STRATEGY</Tag>
@@ -4687,12 +4633,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELECTRONIC_PAPER_MAKER</Tag>
 		<English>Electronic Paper Maker</English>
-		<French>Fabricant de Papier électronique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELECTRONIC_PAPER_MAKER_PEDIA</Tag>
 		<English>Electronic paper and e-paper are display devices that mimic the appearance of ordinary ink on paper. Unlike conventional backlit flat panel displays that emit light, electronic paper displays reflect light like paper. This may make them more comfortable to read, and provide a wider viewing angle than most light-emitting displays. The contrast ratio in electronic displays available as of 2008 approaches newspaper, and newly developed displays are slightly better. An ideal e-paper display can be read in direct sunlight without the image appearing to fade.</English>
-		<French>Electronic paper and e-paper are display devices that mimic the appearance of ordinary ink on paper. Unlike conventional backlit flat panel displays that emit light, electronic paper displays reflect light like paper. This may make them more comfortable to read, and provide a wider viewing angle than most light-emitting displays. The contrast ratio in electronic displays available as of 2008 approaches newspaper, and newly developed displays are slightly better. An ideal e-paper display can be read in direct sunlight without the image appearing to fade.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELECTRONIC_PAPER_MAKER_STRATEGY</Tag>
@@ -4701,12 +4645,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELECTROWEAK_FORGE</Tag>
 		<English>Electroweak Forge</English>
-		<French>Forge électrofaible</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELECTROWEAK_FORGE_PEDIA</Tag>
 		<English>This forge works with electroweak materials.</English>
-		<French>Cette forge fonctionne avec des matériaux électrofaibles.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELECTROWEAK_FORGE_STRATEGY</Tag>
@@ -4715,12 +4657,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELECTROWEAK_STAR_BASE</Tag>
 		<English>Intergalactic Electroweak Star Base</English>
-		<French>Intergalactic Electroweak Star Base</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELECTROWEAK_STAR_BASE_PEDIA</Tag>
 		<English>Colonize an electroweak star.</English>
-		<French>Colonize an electroweak star.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELECTROWEAK_STAR_BASE_STRATEGY</Tag>
@@ -4729,12 +4669,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEVATED_BICYCLE_TRACK</Tag>
 		<English>Elevated Bicycle Track</English>
-		<French>Elevated Bicycle Track</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEVATED_BICYCLE_TRACK_PEDIA</Tag>
 		<English>This elevated bicycle track is not only for human-powered cyclists but also for electric scooters and other forms of personal mobility. It is a fun and efficient way to get around the city.</English>
-		<French>This elevated bicycle track is not only for human-powered cyclists but also for electric scooters and other forms of personal mobility. It is a fun and efficient way to get around the city.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEVATED_BICYCLE_TRACK_STRATEGY</Tag>
@@ -4743,12 +4681,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELLIPTICAL_GALAXY</Tag>
 		<English>Intergalactic Artificial Elliptical Galaxy</English>
-		<French>Intergalactic Artificial Elliptical Galaxy</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELLIPTICAL_GALAXY_PEDIA</Tag>
 		<English>An elliptical galaxy is a type of galaxy having an approximately ellipsoidal shape and a smooth, nearly featureless brightness profile. Unlike flat spiral galaxies with organization and structure, they are more three-dimensional, without much structure, and their stars are in somewhat random orbits around the center. They are one of the three main classes of galaxy originally described by Edwin Hubble in his 1936 work The Realm of the Nebulae, along with spiral and lenticular galaxies. Elliptical galaxies range in shape from nearly spherical to highly flat and in size from tens of millions to over one hundred trillion stars. Originally Edwin Hubble hypothesized that elliptical galaxies evolved into spiral galaxies, which was later discovered to be false. Stars found inside of elliptical galaxies are much older than stars found in spiral galaxies.</English>
-		<French>An elliptical galaxy is a type of galaxy having an approximately ellipsoidal shape and a smooth, nearly featureless brightness profile. Unlike flat spiral galaxies with organization and structure, they are more three-dimensional, without much structure, and their stars are in somewhat random orbits around the center. They are one of the three main classes of galaxy originally described by Edwin Hubble in his 1936 work The Realm of the Nebulae, along with spiral and lenticular galaxies. Elliptical galaxies range in shape from nearly spherical to highly flat and in size from tens of millions to over one hundred trillion stars. Originally Edwin Hubble hypothesized that elliptical galaxies evolved into spiral galaxies, which was later discovered to be false. Stars found inside of elliptical galaxies are much older than stars found in spiral galaxies.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELLIPTICAL_GALAXY_STRATEGY</Tag>
@@ -4757,12 +4693,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELLIS_MOON</Tag>
 		<English>Planetary Immigration Office</English>
-		<French>Planetary Immigration Office</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELLIS_MOON_PEDIA</Tag>
 		<English>With the advent of advanced, large passenger spacecraft, people are now moving throughout the solar system in large numbers. This office will allow you process would-be immigrants.[PARAGRAPH:2]If yours is the only spacefaring civilization in the game, where are the immigrants coming from? Better not worry about that too much.</English>
-		<French>With the advent of advanced, large passenger spacecraft, people are now moving throughout the solar system in large numbers. This office will allow you process would-be immigrants.[PARAGRAPH:2]If yours is the only spacefaring civilization in the game, where are the immigrants coming from? Better not worry about that too much.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELLIS_MOON_STRATEGY</Tag>
@@ -4771,12 +4705,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELYSIUM</Tag>
 		<English>Elysium</English>
-		<French>Elysium</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELYSIUM_PEDIA</Tag>
 		<English>The film takes place on both a ravaged Earth, and a luxurious space habitat (Stanford torus design) called Elysium.</English>
-		<French>The film takes place on both a ravaged Earth, and a luxurious space habitat (Stanford torus design) called Elysium.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELYSIUM_STRATEGY</Tag>
@@ -4785,12 +4717,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMP_GRID</Tag>
 		<English>EMP Grid</English>
-		<French>EMP Grid</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMP_GRID_PEDIA</Tag>
 		<English>The city is now powered by electromagnetic pulses.</English>
-		<French>The city is now powered by electromagnetic pulses.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMP_GRID_STRATEGY</Tag>
@@ -4799,12 +4729,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCELADUS_BASE</Tag>
 		<English>Enceladus Resupply Base</English>
-		<French>Enceladus Resupply Base</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCELADUS_BASE_PEDIA</Tag>
 		<English>A base on Enceladus, a moon of Saturn. Aids in developing the Saturnian system and in supply missions to the Kuiper Belt.</English>
-		<French>A base on Enceladus, a moon of Saturn. Aids in developing the Saturnian system and in supply missions to the Kuiper Belt.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCELADUS_BASE_STRATEGY</Tag>
@@ -4813,12 +4741,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCYCLOPEDIA_GALACTICA</Tag>
 		<English>Encyclopedia Galactica</English>
-		<French>Encyclopedia Galactica</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCYCLOPEDIA_GALACTICA_PEDIA</Tag>
 		<English>The Encyclopedia Galactica is a fictional or hypothetical encyclopedia of a galaxy-spanning civilization, containing all the knowledge accumulated by a society with quadrillions of people and thousands of years of history. The name evokes the exhaustive aspects of the real-life Encyclopedia Britannica.</English>
-		<French>The Encyclopedia Galactica is a fictional or hypothetical encyclopedia of a galaxy-spanning civilization, containing all the knowledge accumulated by a society with quadrillions of people and thousands of years of history. The name evokes the exhaustive aspects of the real-life Encyclopedia Britannica.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCYCLOPEDIA_GALACTICA_STRATEGY</Tag>
@@ -4827,12 +4753,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENERGIZED_CRYSTAL</Tag>
 		<English>Energized Crystals</English>
-		<French>Energized Crystals</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENERGIZED_CRYSTAL_PEDIA</Tag>
 		<English>These charged crystals doubles as jewelry, portable batteries, and a communication device. They are highly customizable and quickly become an important part of one's identity.</English>
-		<French>These charged crystals doubles as jewelry, portable batteries, and a communication device. They are highly customizable and quickly become an important part of one's identity.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENERGIZED_CRYSTAL_STRATEGY</Tag>
@@ -4841,12 +4765,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENERGY_BEAM_NETWORK</Tag>
 		<English>Energy Beam Network</English>
-		<French>Energy Beam Network</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENERGY_BEAM_NETWORK_PEDIA</Tag>
 		<English>Cislunar space is now filled with energy transfer satellites, for rapid power transfer and sail beaming.</English>
-		<French>space is now filled with energy transfer satellites, for rapid power transfer and sail beaming. Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENERGY_BEAM_NETWORK_STRATEGY</Tag>
@@ -4855,12 +4777,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENERGY_CANNON</Tag>
 		<English>Hyperspace Energy Cannon</English>
-		<French>Hyperspace Energy Cannon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENERGY_CANNON_PEDIA</Tag>
 		<English>This cannon uses some indescribable form of energy to blast away enemies.</English>
-		<French>This cannon uses some indescribable form of energy to blast away enemies.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENERGY_CANNON_STRATEGY</Tag>
@@ -4869,12 +4789,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENERGY_ISLAND</Tag>
 		<English>Energy Island</English>
-		<French>Energy Island</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENERGY_ISLAND_PEDIA</Tag>
 		<English>See http://www.e-architect.co.uk/energy-island</English>
-		<French>See http://www.e-architect.co.uk/energy-island</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENERGY_ISLAND_STRATEGY</Tag>
@@ -4887,8 +4805,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENHANCED_GEOTHERMAL_SYSTEM_PEDIA</Tag>
-		<English>An enhanced geothermal system (EGS) generates geothermal electricity without the need for natural convective hydrothermal resources. Until recently, geothermal power systems have exploited only resources where naturally occurring heat, water, and rock permeability are sufficient to allow energy extraction. However, by far most of geothermal energy within reach of conventional techniques is in dry and impermeable rock. EGS technologies enhance and/or create geothermal resources in this hot dry rock (HDR) through 'hydraulic stimulation'.</English>
-		<French>Un système géothermique amélioré (EGS) génère de l'électricité géothermique sans avoir besoin de ressources hydrothermales convectives naturelles. Jusqu'à récemment, les systèmes d'énergie géothermique exploitaient uniquement les ressources où la perméabilité naturelle à la chaleur, à l'eau et aux roches était suffisante pour permettre l'extraction d'énergie. Cependant, la plus grande partie de l'énergie géothermique à la portée des techniques conventionnelles se trouve dans la roche sèche et imperméable. Les technologies EGS améliorent et / ou créent des ressources géothermiques dans cette roche sèche chaude (HDR) grâce à la «stimulation hydraulique».</French>
+		<English>An enhanced geothermal system (EGS) generates geothermal electricity without the need for natural convective hydrothermal resources. Until recently, geothermal power systems have exploited only resources where naturally occurring heat, water, and rock permeability are sufficient to allow energy extraction. However, by far most of geothermal energy within reach of conventional techniques is in dry and impermeable rock. EGS technologies enhance and/or create geothermal resources in this hot dry rock (HDR) through "hydraulic stimulation".</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENHANCED_GEOTHERMAL_SYSTEM_STRATEGY</Tag>
@@ -4896,12 +4813,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENLIGHTENMENT</Tag>
-		<English>HM Enlightened</English>
-		<French>HM Enlightened</French>
+		<English>Human Mod (Enlightened)</English>
+		<French>Modif. Humain (Illumination)</French>
+		<Italian>Umano augmentato (Illuminazione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENLIGHTENMENT_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENLIGHTENMENT_STRATEGY</Tag>
@@ -4910,7 +4829,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENVIRONMENTAL_ART_STUDIO</Tag>
 		<English>Environmental Art Studio</English>
-		<French>Environmental Art Studio</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENVIRONMENTAL_ART_STUDIO_PEDIA</Tag>
@@ -4923,7 +4841,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ERIDANUS_CLUSTER</Tag>
 		<English>Eridanus Cluster Colony</English>
-		<French>Colonie de Eridanus Cluster</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ERIDANUS_CLUSTER_PEDIA</Tag>
@@ -4936,12 +4853,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ERIS_COLONY</Tag>
 		<English>Eris Colony</English>
-		<French>Colonie de Eris</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ERIS_COLONY_PEDIA</Tag>
 		<English>Eris (minor-planet designation 136199 Eris) is the most massive and second-largest dwarf planet known in the Solar System. It is also the ninth-most-massive known body directly orbiting the Sun, and the largest known body in the Solar System not visited by a spacecraft. It is measured to be 2,326 +- 12 kilometers (1,445.3 +- 7.5 mi) in diameter. Eris is 27% more massive than dwarf planet Pluto, though Pluto is slightly larger by volume. Eris' mass is about 0.27% of the Earth's mass.</English>
-		<French>Eris (minor-planet designation 136199 Eris) is the most massive and second-largest dwarf planet known in the Solar System. It is also the ninth-most-massive known body directly orbiting the Sun, and the largest known body in the Solar System not visited by a spacecraft. It is measured to be 2,326 +- 12 kilometers (1,445.3 +- 7.5 mi) in diameter. Eris is 27% more massive than dwarf planet Pluto, though Pluto is slightly larger by volume. Eris' mass is about 0.27% of the Earth's mass.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ERIS_COLONY_STRATEGY</Tag>
@@ -4950,7 +4865,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCHER_CITY</Tag>
 		<English>Hypercity</English>
-		<French>Hypercity</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCHER_CITY_PEDIA</Tag>
@@ -4963,12 +4877,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ETERNAL_INTELLIGENCE</Tag>
 		<English>Interstellar Eternal Intelligence</English>
-		<French>Interstellar Eternal Intelligence</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ETERNAL_INTELLIGENCE_PEDIA</Tag>
 		<English>Dyson's eternal intelligence concept (the Dyson Scenario) states that intelligent beings would be able to think an infinite number of thoughts in an open universe.</English>
-		<French>Dyson's eternal intelligence concept (the Dyson Scenario) states that intelligent beings would be able to think an infinite number of thoughts in an open universe.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ETERNAL_INTELLIGENCE_STRATEGY</Tag>
@@ -4977,12 +4889,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ET_DISCOVERY</Tag>
 		<English>ET Discovery</English>
-		<French>ET Discovery</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ET_DISCOVERY_PEDIA</Tag>
 		<English>Are we alone in the universe? For more than a century, mankind searched for an answer. Projects such as SETI and the Kepler Space Telescope revealed hints of extraterrestial life, such as the Wow! Signal in 1977 and KIC 8462852 in 2015, but the evidence remained conclusive. With massive cloud-based astronomical databased being combed by citizen scientists and AI systems, and with advances in optical instrumentation in the mid-21st century, conclusive evidence of extraterrestrial intelligence was finally found.</English>
-		<French>Are we alone in the universe? For more than a century, mankind searched for an answer. Projects such as SETI and the Kepler Space Telescope revealed hints of extraterrestial life, such as the Wow! Signal in 1977 and KIC 8462852 in 2015, but the evidence remained conclusive. With massive cloud-based astronomical databased being combed by citizen scientists and AI systems, and with advances in optical instrumentation in the mid-21st century, conclusive evidence of extraterrestrial intelligence was finally found.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ET_DISCOVERY_STRATEGY</Tag>
@@ -4991,7 +4901,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EUROPA_CITY</Tag>
 		<English>Europa City</English>
-		<French>Ville Europa</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EUROPA_CITY_PEDIA</Tag>
@@ -5088,12 +4997,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXAVERSE</Tag>
 		<English>Exaverse Portal</English>
-		<French>Exaverse Portal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXAVERSE_PEDIA</Tag>
 		<English>A portal beyond the Petaverse.</English>
-		<French>A portal beyond the Petaverse.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXAVERSE_STRATEGY</Tag>
@@ -5102,12 +5009,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXODUS</Tag>
 		<English>Exodus</English>
-		<French>Exodus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXODUS_PEDIA</Tag>
 		<English>Your Launch Arcologies blast off into space!</English>
-		<French>Your Launch Arcologies blast off into space!</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXODUS_STRATEGY</Tag>
@@ -5116,12 +5021,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXOTIC_MATTER_LAB</Tag>
 		<English>Exotic Matter Lab</English>
-		<French>Exotic Matter Lab</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXOTIC_MATTER_LAB_PEDIA</Tag>
 		<English>This laboratory is dedicated to studying exotic elements or non-atomic matter.</English>
-		<French>This laboratory is dedicated to studying exotic elements or non-atomic matter.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXOTIC_MATTER_LAB_STRATEGY</Tag>
@@ -5130,12 +5033,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXOTIC_PARTICLE_FOUNDRY</Tag>
 		<English>Intergalactic Exotic Particle Foundry</English>
-		<French>Intergalactic Exotic Particle Foundry</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXOTIC_PARTICLE_FOUNDRY_PEDIA</Tag>
 		<English>This high-powered network of foundries produces exotic particles.</English>
-		<French>This high-powered network of foundries produces exotic particles.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXOTIC_PARTICLE_FOUNDRY_STRATEGY</Tag>
@@ -5144,12 +5045,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXOTIC_PARTICLE_LAB</Tag>
 		<English>Exotic Particle Lab</English>
-		<French>Exotic Particle Lab</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXOTIC_PARTICLE_LAB_PEDIA</Tag>
 		<English>This lab generates and experiments with exotic particles.</English>
-		<French>This lab generates and experiments with exotic particles.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXOTIC_PARTICLE_LAB_STRATEGY</Tag>
@@ -5158,12 +5057,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXPERIMENTAL_QUANTUM_COMPUTER</Tag>
 		<English>Experimental Quantum Computer</English>
-		<French>Experimental Quantum Computer</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXPERIMENTAL_QUANTUM_COMPUTER_PEDIA</Tag>
 		<English>As of 2017, the development of actual quantum computers is still in its infancy, but experiments have been carried out in which quantum computational operations were executed on a very small number of quantum bits. Both practical and theoretical research continues, and many national governments and military agencies are funding quantum computing research in an effort to develop quantum computers for civilian, business, trade, environmental and national security purposes, such as cryptanalysis.</English>
-		<French>As of 2017, the development of actual quantum computers is still in its infancy, but experiments have been carried out in which quantum computational operations were executed on a very small number of quantum bits. Both practical and theoretical research continues, and many national governments and military agencies are funding quantum computing research in an effort to develop quantum computers for civilian, business, trade, environmental and national security purposes, such as cryptanalysis.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXPERIMENTAL_QUANTUM_COMPUTER_STRATEGY</Tag>
@@ -5244,12 +5141,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FARM_PLANET</Tag>
 		<English>Interstellar Farm Planet</English>
-		<French>Interstellar Farm Planet</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FARM_PLANET_PEDIA</Tag>
 		<English>This entire planet is dedicated to farming. The entire surface is covered with vertical farms and bioreactors over a mile high, and they are powered by a focused starlight power plant.</English>
-		<French>This entire planet is dedicated to farming. The entire surface is covered with vertical farms and bioreactors over a mile high, and they are powered by a focused starlight power plant.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FARM_PLANET_STRATEGY</Tag>
@@ -5258,12 +5153,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEMTOBOTIC_ASSEMBLER</Tag>
 		<English>Femtobotic Assembler</English>
-		<French>Assembleur Femtobotique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEMTOBOTIC_ASSEMBLER_PEDIA</Tag>
 		<English>This factory is a big step up from the nanobotic assemblers of old. It uses femtobots, which are built from subatomic particles.</English>
-		<French>Cette usine est un grand pas en avant par rapport aux assembleurs nanobotiques d'autrefois. Il utilise des femtobots, qui sont construits à partir de particules subatomiques.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEMTOBOTIC_ASSEMBLER_STRATEGY</Tag>
@@ -5272,12 +5165,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEMTOBOTIC_FIREFIGHTERS</Tag>
 		<English>Femtobotic Firefighters</English>
-		<French>Femtobotic Firefighters</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEMTOBOTIC_FIREFIGHTERS_PEDIA</Tag>
 		<English>An array of femtobots are deployed to monitor and stop fires.</English>
-		<French>An array of femtobots are deployed to monitor and stop fires.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEMTOBOTIC_FIREFIGHTERS_STRATEGY</Tag>
@@ -5286,12 +5177,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEMTOBOTS</Tag>
 		<English>Femtobot Factory</English>
-		<French>Usine de Femtobots</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEMTOBOTS_PEDIA</Tag>
 		<English>Produce femtobots, made from subatomic matter.</English>
-		<French>Produit des femtobots, fabriqués à partir de matière subatomique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEMTOBOTS_STRATEGY</Tag>
@@ -5313,7 +5202,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEYMARCH</Tag>
 		<English>Feymarch</English>
-		<French>Feymarch</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEYMARCH_PEDIA</Tag>
@@ -5326,12 +5214,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIELD_GENERATOR</Tag>
 		<English>Field Generator</English>
-		<French>Field Generator</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIELD_GENERATOR_PEDIA</Tag>
 		<English>This strange device generates exotic, sentient fields.</English>
-		<French>This strange device generates exotic, sentient fields.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIELD_GENERATOR_STRATEGY</Tag>
@@ -5340,7 +5226,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FINANCIAL_RISK_MONITOR</Tag>
 		<English>Financial Risk Monitor</English>
-		<French>Financial Risk Monitor</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FINANCIAL_RISK_MONITOR_PEDIA</Tag>
@@ -5353,12 +5238,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIREPROOF_BUILDING_MATERIALS</Tag>
 		<English>Fireproof Building Materials</English>
-		<French>Fireproof Building Materials</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIREPROOF_BUILDING_MATERIALS_PEDIA</Tag>
 		<English>Advanced materials make buildings more fireproof.</English>
-		<French>Advanced materials make buildings more fireproof.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIREPROOF_BUILDING_MATERIALS_STRATEGY</Tag>
@@ -5367,12 +5250,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIRE_REVERSAL</Tag>
 		<English>Fire Reversal</English>
-		<French>Fire Reversal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIRE_REVERSAL_PEDIA</Tag>
 		<English>With Entropy Reversal, firefighters can reverse the chemical reactions of flame and restore damage.</English>
-		<French>With Entropy Reversal, firefighters can reverse the chemical reactions of flame and restore damage.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIRE_REVERSAL_STRATEGY</Tag>
@@ -5381,12 +5262,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLATLAND</Tag>
 		<English>Flatland</English>
-		<French>Flatland</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLATLAND_PEDIA</Tag>
 		<English>A two-dimensional world.</English>
-		<French>A two-dimensional world.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLATLAND_STRATEGY</Tag>
@@ -5395,12 +5274,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOATING_SOLAR_ARRAY</Tag>
 		<English>Floating Solar Array</English>
-		<French>Panneaux Solaires flottants</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOATING_SOLAR_ARRAY_PEDIA</Tag>
 		<English>That's why Jean-Francois Guillemoles wants to look above the clouds. A solar researcher from France, he's proposing floating solar balloons that potentially could generate three times as much power-per-foot as their terrestrial brethren. His design would also be able to store energy as well as generate power.[PARAGRAPH:2]http://www.fastcoexist.com/3053998/these-sky-high-balloons-could-generate-more-power-than-solar-panels</English>
-		<French>That's why Jean-Francois Guillemoles wants to look above the clouds. A solar researcher from France, he's proposing floating solar balloons that potentially could generate three times as much power-per-foot as their terrestrial brethren. His design would also be able to store energy as well as generate power.[PARAGRAPH:2]http://www.fastcoexist.com/3053998/these-sky-high-balloons-could-generate-more-power-than-solar-panels</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOATING_SOLAR_ARRAY_STRATEGY</Tag>
@@ -5409,12 +5286,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLUORESCENT_BACTERIA</Tag>
 		<English>Life - Fluorescent Bacteria</English>
-		<French>Life - Fluorescent Bacteria</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLUORESCENT_BACTERIA_PEDIA</Tag>
 		<English>A form of artificial life.</English>
-		<French>A form of artificial life.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLUORESCENT_BACTERIA_STRATEGY</Tag>
@@ -5423,12 +5298,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLYING_CAR_PORT</Tag>
 		<English>Rooftop Flying Car Port</English>
-		<French>Rooftop Flying Car Port</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLYING_CAR_PORT_PEDIA</Tag>
 		<English>This flying car port takes your city a step closer to a true three-dimensional organism. Able to take off and land on rooftops, the roofspace, already connected via maglev skybridges, now functions as a second streetspace. This further frees up the ground level for pedestrians and parks.</English>
-		<French>This flying car port takes your city a step closer to a true three-dimensional organism. Able to take off and land on rooftops, the roofspace, already connected via maglev skybridges, now functions as a second streetspace. This further frees up the ground level for pedestrians and parks.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLYING_CAR_PORT_STRATEGY</Tag>
@@ -5437,12 +5310,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOCUS_SUN</Tag>
 		<English>Deep Space Focused Sunlight Plant</English>
-		<French>Usine de Focalisation solaire de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOCUS_SUN_PEDIA</Tag>
 		<English>Orbital space colonies need power, and sometimes the onboard fusion engine and natural solar power don't cut it. Using a massive array of mirrors in close orbit around the sun, this power station collects focused sunlight for massive power.[PARAGRAPH:2]Could be dangerous.</English>
-		<French>Orbital space colonies need power, and sometimes the onboard fusion engine and natural solar power don't cut it. Using a massive array of mirrors in close orbit around the sun, this power station collects focused sunlight for massive power.[PARAGRAPH:2]Could be dangerous.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOCUS_SUN_STRATEGY</Tag>
@@ -5451,12 +5322,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOOD_MANUFACTURING_DISTRICT</Tag>
 		<English>Food Manufacturing District</English>
-		<French>Quartier de production alimentaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOOD_MANUFACTURING_DISTRICT_PEDIA</Tag>
 		<English>Have you ever heard of Molecular Gastronomy?[PARAGRAPH:2]http://miracleofeedingcities.com/futuristic-food-too-crazy-or-just-crazy-enough/</English>
-		<French>Have you ever heard of Molecular Gastronomy?[PARAGRAPH:2]http://miracleofeedingcities.com/futuristic-food-too-crazy-or-just-crazy-enough/</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOOD_MANUFACTURING_DISTRICT_STRATEGY</Tag>
@@ -5465,12 +5334,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOOD_REPLICATOR</Tag>
 		<English>Cislunar Food Replicator</English>
-		<French>Food Replicator Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOOD_REPLICATOR_PEDIA</Tag>
 		<English>Assemblies food out of basic matter.</English>
-		<French>Assemblies food out of basic matter.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOOD_REPLICATOR_STRATEGY</Tag>
@@ -5479,12 +5346,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FORMAL_CONSTRUCTION_CENTER</Tag>
 		<English>Hyperspace Formal Construction Center</English>
-		<French>Hyperspace Formal Construction Center</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FORMAL_CONSTRUCTION_CENTER_PEDIA</Tag>
 		<English>Construct structures using pure forms.</English>
-		<French>Construct structures using pure forms.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FORMAL_CONSTRUCTION_CENTER_STRATEGY</Tag>
@@ -5493,12 +5358,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FORMAL_REASONING_CENTER</Tag>
 		<English>Formal Reasoning Center</English>
-		<French>Formal Reasoning Center</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FORMAL_REASONING_CENTER_PEDIA</Tag>
 		<English>Reason with access to the realm of forms.</English>
-		<French>Reason with access to the realm of forms.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FORMAL_REASONING_CENTER_STRATEGY</Tag>
@@ -5507,12 +5370,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FORNAX_CLUSTER</Tag>
 		<English>Fornax Cluster Colony</English>
-		<French>Colonie de Fornax Cluster</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FORNAX_CLUSTER_PEDIA</Tag>
 		<English>The Fornax Cluster is a cluster of galaxies lying at a distance of 62 million light-years (19 megaparsecs). It is the second richest galaxy cluster within 100 million light-years, after the considerably larger Virgo Cluster. It lies primarily in the constellation Fornax, and may be associated with the nearby Eridanus Group. The Fornax Cluster is a valuable source of information about the evolution of such clusters, showing the effects of a merger of a subgroup with the main group, which in turn lends clues about the associated galactic superstructure. At the centre of the cluster lies NGC 1399. Other cluster members include NGC 1316 (the group's brightest galaxy), NGC 1365, NGC 1427A, and NGC 1404.</English>
-		<French>The Fornax Cluster is a cluster of galaxies lying at a distance of 62 million light-years (19 megaparsecs). It is the second richest galaxy cluster within 100 million light-years, after the considerably larger Virgo Cluster. It lies primarily in the constellation Fornax, and may be associated with the nearby Eridanus Group. The Fornax Cluster is a valuable source of information about the evolution of such clusters, showing the effects of a merger of a subgroup with the main group, which in turn lends clues about the associated galactic superstructure. At the centre of the cluster lies NGC 1399. Other cluster members include NGC 1316 (the group's brightest galaxy), NGC 1365, NGC 1427A, and NGC 1404.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FORNAX_CLUSTER_STRATEGY</Tag>
@@ -5521,12 +5382,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOUR_COLOR_THEOREM</Tag>
 		<English>Four Color Theorem</English>
-		<French>Four Color Theorem</French>
+		<French>Théorème des quatre couleurs</French>
+		<Italian>Teorema dei quattro colori</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOUR_COLOR_THEOREM_PEDIA</Tag>
 		<English>In mathematics, the four color theorem, or the four color map theorem, states that, given any separation of a plane into contiguous regions, producing a figure called a map, no more than four colors are required to color the regions of the map so that no two adjacent regions have the same color. Adjacent means that two regions share a common boundary curve segment, not merely a corner where three or more regions meet.</English>
-		<French>In mathematics, the four color theorem, or the four color map theorem, states that, given any separation of a plane into contiguous regions, producing a figure called a map, no more than four colors are required to color the regions of the map so that no two adjacent regions have the same color. Adjacent means that two regions share a common boundary curve segment, not merely a corner where three or more regions meet.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOUR_COLOR_THEOREM_STRATEGY</Tag>
@@ -5535,12 +5396,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FRACTAL_CITY</Tag>
 		<English>Distant Fractal City</English>
-		<French>Ville Distant Fractal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FRACTAL_CITY_PEDIA</Tag>
-		<English>This highly fractalized city into hyperspace can house an unlimited number of people.</English>
-		<French>This highly fractalized city into hyperspace can house an unlimited number of people.</French>
+		<English>This highly fractalised city into hyperspace can house an unlimited number of people.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FRACTAL_CITY_STRATEGY</Tag>
@@ -5550,11 +5409,12 @@
 		<Tag>TXT_KEY_BUILDING_FRAUNHOFER_SOCIETY</Tag>
 		<English>Fraunhofer Society</English>
 		<French>Société Fraunhofer</French>
+		<German>Fraunhofer-Gesellschaft</German>
+		<Italian>Società Fraunhofer</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FRAUNHOFER_SOCIETY_PEDIA</Tag>
 		<English>The Fraunhofer Society is a German research organization with 67 institutes spread throughout Germany, each focusing on different fields of applied science (as opposed to the Max Planck Society, which works primarily on basic science).</English>
-		<French>La Société Fraunhofer est une organisation de recherche allemande avec 67 instituts répartis dans toute l'Allemagne, chacun se concentrant sur différents domaines de la science appliquée (par opposition à la Max Planck Society, qui travaille principalement sur la science fondamentale).</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FRAUNHOFER_SOCIETY_STRATEGY</Tag>
@@ -5563,12 +5423,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FREELANCE_MARKETPLACE</Tag>
 		<English>Freelance Marketplace</English>
-		<French>Freelance Marketplace</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FREELANCE_MARKETPLACE_PEDIA</Tag>
 		<English>Freelance marketplaces (crowdsourcing or outsourcing marketplaces) are websites that match buyers and sellers of services provided via the internet. Service providers, or sellers, create a profile where they include a description of the services which they offer, examples of their work and in some cases information about their rates. Buyers register and complete a basic profile, they then post projects outlining their requirements. Buyers will then bid for these projects on a fixed price or hourly basis.</English>
-		<French>Freelance marketplaces (crowdsourcing or outsourcing marketplaces) are websites that match buyers and sellers of services provided via the internet. Service providers, or sellers, create a profile where they include a description of the services which they offer, examples of their work and in some cases information about their rates. Buyers register and complete a basic profile, they then post projects outlining their requirements. Buyers will then bid for these projects on a fixed price or hourly basis.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FREELANCE_MARKETPLACE_STRATEGY</Tag>
@@ -5577,12 +5435,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FRIEDLANDER_SKYSHADE</Tag>
 		<English>Friedlander SkyShade</English>
-		<French>Friedlander SkyShade</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FRIEDLANDER_SKYSHADE_PEDIA</Tag>
 		<English>http://www.nextbigfuture.com/2016/01/existential-risk-insurance-friedlander.html</English>
-		<French>http://www.nextbigfuture.com/2016/01/existential-risk-insurance-friedlander.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FRIEDLANDER_SKYSHADE_STRATEGY</Tag>
@@ -5627,7 +5483,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUSION_CANDLE</Tag>
 		<English>Jovian Fusion Candle</English>
-		<French>Fusion Candle</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUSION_CANDLE_PEDIA</Tag>
@@ -5640,7 +5495,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUSION_CORE</Tag>
 		<English>Deep Space Fusion Core</English>
-		<French>Fusion Core de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUSION_CORE_PEDIA</Tag>
@@ -5701,7 +5555,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_AC</Tag>
 		<English>Interstellar Galactic AC</English>
-		<French>Galactic AC</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_AC_PEDIA</Tag>
@@ -5754,7 +5607,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_CORE_COLONY</Tag>
 		<English>Milky Way Core Colony</English>
-		<French>Colonie de Voie lactée Core</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_CORE_COLONY_PEDIA</Tag>
@@ -5835,12 +5687,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_PORT</Tag>
 		<English>Interstellar Galactic Port</English>
-		<French>Interstellar Galactic Port</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_PORT_PEDIA</Tag>
 		<English>An advanced starport that uses the most advanced propulsion technology.</English>
-		<French>An advanced starport that uses the most advanced propulsion technology.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_PORT_STRATEGY</Tag>
@@ -5849,12 +5699,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_SHKADOV_THRUSTER</Tag>
 		<English>Intergalactic Shkadov Thruster</English>
-		<French>Intergalactic Shkadov Thruster</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_SHKADOV_THRUSTER_PEDIA</Tag>
 		<English>By placing Shkadov Thrusters around the central black hole and many of the stars, it is possible to move the entire galaxy.</English>
-		<French>By placing Shkadov Thrusters around the central black hole and many of the stars, it is possible to move the entire galaxy.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_SHKADOV_THRUSTER_STRATEGY</Tag>
@@ -5863,12 +5711,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_SUPERCLUSTER_COLONY</Tag>
 		<English>Intergalactic Supercluster Colony</English>
-		<French>Colonie de Supercluster</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_SUPERCLUSTER_COLONY_PEDIA</Tag>
 		<English>Colonize an entire galactic supercluster.</English>
-		<French>Colonize an entire galactic supercluster.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_SUPERCLUSTER_COLONY_STRATEGY</Tag>
@@ -5877,12 +5723,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_SUPERCOMPUTER</Tag>
 		<English>Interstellar Supercomputer</English>
-		<French>Interstellar Supercomputer</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_SUPERCOMPUTER_PEDIA</Tag>
 		<English>See The Last Question, Isaac Asimov. http://multivax.com/last_question.html</English>
-		<French>See The Last Question, Isaac Asimov. http://multivax.com/last_question.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_SUPERCOMPUTER_STRATEGY</Tag>
@@ -5891,12 +5735,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_VOID_COLONY</Tag>
 		<English>Intergalactic Void Colony</English>
-		<French>Colonie de Intergalactic Void</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_VOID_COLONY_PEDIA</Tag>
 		<English>A colony in an intergalactic void.</English>
-		<French>A colony in an intergalactic void.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_VOID_COLONY_STRATEGY</Tag>
@@ -5905,12 +5747,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALAXY_SCAN</Tag>
 		<English>Intergalactic Galaxy Scan</English>
-		<French>Intergalactic Galaxy Scan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALAXY_SCAN_PEDIA</Tag>
-		<English>Observation of the full galaxy</English>
-		<French>Observation of the full galaxy</French>
+		<English>Observation of the full galaxy.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALAXY_SCAN_STRATEGY</Tag>
@@ -5919,12 +5759,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALILEO</Tag>
 		<English>Galileo</English>
-		<French>Galileo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALILEO_PEDIA</Tag>
 		<English>Galileo was an unmanned spacecraft that studied the planet Jupiter and its moons, as well as several other Solar System bodies. Named after the astronomer Galileo Galilei, it consisted of an orbiter and entry probe. It was launched on October 18, 1989, carried by Space Shuttle Atlantis, on the STS-34 mission. Galileo arrived at Jupiter on December 7, 1995, after gravitational assist flybys of Venus and Earth, and became the first spacecraft to orbit Jupiter. It launched the first probe into Jupiter, directly measuring its atmosphere. Despite suffering major antenna problems, Galileo achieved the first asteroid flyby, of 951 Gaspra, and discovered the first asteroid moon, Dactyl, around 243 Ida. In 1994, Galileo observed Comet Shoemaker-Levy 9's collision with Jupiter. The spacecraft was an international effort by the United States of America and the Federal Republic of Germany.[PARAGRAPH:2]Jupiter's atmospheric composition and ammonia clouds were recorded, the clouds possibly created by outflows from the lower depths of the atmosphere. Io's volcanism and plasma interactions with Jupiter's atmosphere were also recorded. The data Galileo collected supported the theory of a liquid ocean under the icy surface of Europa, and there were indications of similar liquid-saltwater layers under the surfaces of Ganymede and Callisto. Ganymede was shown to possess a magnetic field and the spacecraft found new evidence for exospheres around Europa, Ganymede, and Callisto. Galileo also discovered that Jupiter's faint ring system consists of dust from impacts on the four small inner moons. The extent and structure of Jupiter's magnetosphere was also mapped.[PARAGRAPH:2]On September 21, 2003, after 14 years in space and 8 years in the Jovian system, Galileo's mission was terminated by sending it into Jupiter's atmosphere at a speed of over 48 kilometers (30 mi) per second, eliminating the possibility of contaminating local moons with terrestrial bacteria.</English>
-		<French>Galileo was an unmanned spacecraft that studied the planet Jupiter and its moons, as well as several other Solar System bodies. Named after the astronomer Galileo Galilei, it consisted of an orbiter and entry probe. It was launched on October 18, 1989, carried by Space Shuttle Atlantis, on the STS-34 mission. Galileo arrived at Jupiter on December 7, 1995, after gravitational assist flybys of Venus and Earth, and became the first spacecraft to orbit Jupiter. It launched the first probe into Jupiter, directly measuring its atmosphere. Despite suffering major antenna problems, Galileo achieved the first asteroid flyby, of 951 Gaspra, and discovered the first asteroid moon, Dactyl, around 243 Ida. In 1994, Galileo observed Comet Shoemaker-Levy 9's collision with Jupiter. The spacecraft was an international effort by the United States of America and the Federal Republic of Germany.[PARAGRAPH:2]Jupiter's atmospheric composition and ammonia clouds were recorded, the clouds possibly created by outflows from the lower depths of the atmosphere. Io's volcanism and plasma interactions with Jupiter's atmosphere were also recorded. The data Galileo collected supported the theory of a liquid ocean under the icy surface of Europa, and there were indications of similar liquid-saltwater layers under the surfaces of Ganymede and Callisto. Ganymede was shown to possess a magnetic field and the spacecraft found new evidence for exospheres around Europa, Ganymede, and Callisto. Galileo also discovered that Jupiter's faint ring system consists of dust from impacts on the four small inner moons. The extent and structure of Jupiter's magnetosphere was also mapped.[PARAGRAPH:2]On September 21, 2003, after 14 years in space and 8 years in the Jovian system, Galileo's mission was terminated by sending it into Jupiter's atmosphere at a speed of over 48 kilometers (30 mi) per second, eliminating the possibility of contaminating local moons with terrestrial bacteria.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALILEO_STRATEGY</Tag>
@@ -5933,12 +5771,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAME_OF_LIFE</Tag>
 		<English>Hyperspace Game of Life</English>
-		<French>Hyperspace Game of Life</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAME_OF_LIFE_PEDIA</Tag>
 		<English>The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.</English>
-		<French>The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAME_OF_LIFE_STRATEGY</Tag>
@@ -5947,12 +5783,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAME_THEORY_RESEARCH_CENTER</Tag>
 		<English>Game Theory Research Center</English>
-		<French>Game Theory Research Center</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAME_THEORY_RESEARCH_CENTER_PEDIA</Tag>
 		<English>Game theory is the study of mathematical models of strategic interaction between rational decision-makers. It has applications in all fields of social science, as well as in logic and computer science. Originally, it addressed zero-sum games, in which one person's gains result in losses for the other participants. Today, game theory applies to a wide range of behavioral relations, and is now an umbrella term for the science of logical decision making in humans, animals, and computers.</English>
-		<French>Game theory is the study of mathematical models of strategic interaction between rational decision-makers. It has applications in all fields of social science, as well as in logic and computer science. Originally, it addressed zero-sum games, in which one person's gains result in losses for the other participants. Today, game theory applies to a wide range of behavioral relations, and is now an umbrella term for the science of logical decision making in humans, animals, and computers.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAME_THEORY_RESEARCH_CENTER_STRATEGY</Tag>
@@ -5961,12 +5795,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAMMA_RAY_BURST_CANNON</Tag>
 		<English>Intergalactic Gamma Ray Burst Cannon</English>
-		<French>Intergalactic Gamma Ray Burst Cannon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAMMA_RAY_BURST_CANNON_PEDIA</Tag>
 		<English>Directed gamma ray burst for defense.</English>
-		<French>Directed gamma ray burst for defense.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAMMA_RAY_BURST_CANNON_STRATEGY</Tag>
@@ -5975,12 +5807,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAMMA_RAY_BURST_POWER</Tag>
 		<English>Intergalactic Gamma Ray Burst Plant</English>
-		<French>Centrale Intergalactique de Gamma Ray Burst</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAMMA_RAY_BURST_POWER_PEDIA</Tag>
 		<English>Directed gamma ray burst for power.</English>
-		<French>Directed gamma ray burst for power.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAMMA_RAY_BURST_POWER_STRATEGY</Tag>
@@ -5989,12 +5819,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAS_GIANT_SURFACE_SHELL</Tag>
 		<English>Interstellar Gas Giant Surface Shell</English>
-		<French>Interstellar Gas Giant Surface Shell</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAS_GIANT_SURFACE_SHELL_PEDIA</Tag>
 		<English>See http://terraforming.wikia.com/wiki/Jupiter</English>
-		<French>See http://terraforming.wikia.com/wiki/Jupiter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAS_GIANT_SURFACE_SHELL_STRATEGY</Tag>
@@ -6003,12 +5831,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENERATION_IV_REACTOR</Tag>
 		<English>Generation IV Reactor</English>
-		<French>Réacteur de IVème Génération</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENERATION_IV_REACTOR_PEDIA</Tag>
 		<English>Generation IV reactors (Gen IV) are a set of nuclear reactor designs currently being researched for commercial applications, with depending on the particular design, Technology readiness levels varying between the level requiring a demonstration, to economical competitive implementation.</English>
-		<French>Generation IV reactors (Gen IV) are a set of nuclear reactor designs currently being researched for commercial applications, with depending on the particular design, Technology readiness levels varying between the level requiring a demonstration, to economical competitive implementation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENERATION_IV_REACTOR_STRATEGY</Tag>
@@ -6017,12 +5843,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENESIS_COLONY</Tag>
 		<English>Hyperspace Genesis Colony</English>
-		<French>Colonie de Hyperspace Genesis</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENESIS_COLONY_PEDIA</Tag>
 		<English>An ecosystem in the early universe. Its presence both expands knowledge of the early universe and shapes the development of the universe to present day.</English>
-		<French>An ecosystem in the early universe. Its presence both expands knowledge of the early universe and shapes the development of the universe to present day.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENESIS_COLONY_STRATEGY</Tag>
@@ -6031,12 +5855,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENETIC_PROFILING</Tag>
 		<English>Genetic Profiling</English>
-		<French>Genetic Profiling</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENETIC_PROFILING_PEDIA</Tag>
 		<English>The government now uses genetic testing at an early age to determine likely aptitude, tendency toward antisocial behavior, and potential consumer interests. See https://ghr.nlm.nih.gov/primer/testing/discrimination</English>
-		<French>The government now uses genetic testing at an early age to determine likely aptitude, tendency toward antisocial behavior, and potential consumer interests. See https://ghr.nlm.nih.gov/primer/testing/discrimination</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENETIC_PROFILING_STRATEGY</Tag>
@@ -6044,12 +5866,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENE_EDITING</Tag>
-		<English>HM Gene Editing</English>
-		<French>HM Gene Editing</French>
+		<English>Human Mod (Gene Editing)</English>
+		<French>Modif. Humain (Edition des Gènes)</French>
+		<Italian>Umano augmentato (Modifica genetica)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENE_EDITING_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENE_EDITING_STRATEGY</Tag>
@@ -6058,12 +5882,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENE_ENHANCEMENT_LAB</Tag>
 		<English>Interstellar Gene Enhancement Lab</English>
-		<French>Interstellar Gene Enhancement Lab</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENE_ENHANCEMENT_LAB_PEDIA</Tag>
 		<English>The Gene Enhancement Lab conducts research into growing food ever more efficiently from entirely artificial power sources.</English>
-		<French>The Gene Enhancement Lab conducts research into growing food ever more efficiently from entirely artificial power sources.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENE_ENHANCEMENT_LAB_STRATEGY</Tag>
@@ -6072,12 +5894,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GEODESIC_DOME</Tag>
 		<English>Geodesic Dome</English>
-		<French>Dome Géodésique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GEODESIC_DOME_PEDIA</Tag>
 		<English>On October 1, 1982, one of the most famous geodesic domes, Spaceship Earth at the EPCOT Center in Walt Disney World (Bay Lake, Florida), opened. The building and the ride inside of it are named with one of Buckminster Fuller's famous terms, Spaceship Earth, a world view expressing concern over the use of limited resources available on Earth and encouraging everyone on it to act as a harmonious crew working toward the greater good. The building is Epcot's icon, and is also included in the park's logo.</English>
-		<French>Le 1er octobre 1982, l'un des dômes géodésiques les plus célèbres, le vaisseau spatial Terre du Centre EPCOT à Walt Disney World (Bay Lake, Floride), a ouvert ses portes. Le bâtiment et la promenade à l'intérieur de celui-ci sont nommés avec l'un des termes célèbres de Buckminster Fuller, Spaceship Earth, une vision du monde exprimant sa préoccupation concernant l'utilisation des ressources limitées disponibles sur Terre et encourageant tout le monde à agir en tant qu'équipage harmonieux travaillant vers le plus grand bien. Le bâtiment est l'icône d'Epcot et figure également dans le logo du parc.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GEODESIC_DOME_STRATEGY</Tag>
@@ -6086,12 +5906,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GERONTOCRACY</Tag>
 		<English>Interstellar Government - Gerontocracy</English>
-		<French>Interstellar Government - Gerontocracy</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GERONTOCRACY_PEDIA</Tag>
-		<English>Gerontocratic government for the interstellar colony</English>
-		<French>Gerontocratic government for the interstellar colony</French>
+		<English>Gerontocratic government for the interstellar colony.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GERONTOCRACY_STRATEGY</Tag>
@@ -6100,12 +5918,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIGAVERSE</Tag>
 		<English>Gigaverse Portal</English>
-		<French>Gigaverse Portal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIGAVERSE_PEDIA</Tag>
 		<English>A portal beyond the Megaverse.</English>
-		<French>A portal beyond the Megaverse.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIGAVERSE_STRATEGY</Tag>
@@ -6113,12 +5929,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GILLS</Tag>
-		<English>HM Gills</English>
-		<French>HM Gills</French>
+		<English>Human Mod (Gills)</English>
+		<French>Modif. Humain (Branchies)</French>
+		<Italian>Umano augmentato (Branchie)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GILLS_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GILLS_STRATEGY</Tag>
@@ -6127,12 +5945,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLIESE_163C</Tag>
 		<English>Gliese 163c Colony</English>
-		<French>Colonie de Gliese 163c</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLIESE_163C_PEDIA</Tag>
 		<English>Gliese 163 c or Gl 163 c is said to be a potentially habitable exoplanet, on the basis of its distance from its star being compatible with temperatures that would allow liquid water to exist on the surface, orbiting the red dwarf Gliese 163. The parent star is 15.0 parsecs (approximately 49 light-years, or 465 trillion kilometers) from the Sun, in the constellation Dorado. Gliese 163 c is one of three planets discovered in the system. With a mass at least 7.2 times that of the Earth, it is classified as a super-Earth (a planet of roughly 1 to 10 Earth masses).</English>
-		<French>Gliese 163 c or Gl 163 c is said to be a potentially habitable exoplanet, on the basis of its distance from its star being compatible with temperatures that would allow liquid water to exist on the surface, orbiting the red dwarf Gliese 163. The parent star is 15.0 parsecs (approximately 49 light-years, or 465 trillion kilometers) from the Sun, in the constellation Dorado. Gliese 163 c is one of three planets discovered in the system. With a mass at least 7.2 times that of the Earth, it is classified as a super-Earth (a planet of roughly 1 to 10 Earth masses).</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLIESE_163C_STRATEGY</Tag>
@@ -6141,12 +5957,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLIESE_581D</Tag>
 		<English>Gliese 581d Colony</English>
-		<French>Colonie de Gliese 581d</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLIESE_581D_PEDIA</Tag>
 		<English>Gliese 581 d (often shortened to Gl 581 d or GJ 581 d) is a possible extrasolar planet orbiting the star Gliese 581 approximately 20.4 light-years away in the constellation of Libra. It is the third planet claimed in the system and (assuming a six-planet model) the fifth in order from the star.</English>
-		<French>Gliese 581 d (often shortened to Gl 581 d or GJ 581 d) is a possible extrasolar planet orbiting the star Gliese 581 approximately 20.4 light-years away in the constellation of Libra. It is the third planet claimed in the system and (assuming a six-planet model) the fifth in order from the star.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLIESE_581D_STRATEGY</Tag>
@@ -6155,12 +5969,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLIESE_667CC</Tag>
 		<English>Gliese 667Cc Colony</English>
-		<French>Colonie de Gliese 667Cc</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLIESE_667CC_PEDIA</Tag>
 		<English>Gliese 667 Cc (also known as GJ 667Cc, HR 6426Cc, or HD 156384Cc) is an exoplanet orbiting within the habitable zone of the red dwarf star Gliese 667 C, which is a member of the Gliese 667 triple star system, approximately 23.62 light-years (6.8 parsecs, or about 217,000,000,000,000 km) away in the constellation of Scorpius. The exoplanet was found by using the radial velocity method, from radial-velocity measurements via observation of Doppler shifts in the spectrum of the planet's parent star.</English>
-		<French>Gliese 667 Cc (also known as GJ 667Cc, HR 6426Cc, or HD 156384Cc) is an exoplanet orbiting within the habitable zone of the red dwarf star Gliese 667 C, which is a member of the Gliese 667 triple star system, approximately 23.62 light-years (6.8 parsecs, or about 217,000,000,000,000 km) away in the constellation of Scorpius. The exoplanet was found by using the radial velocity method, from radial-velocity measurements via observation of Doppler shifts in the spectrum of the planet's parent star.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLIESE_667CC_STRATEGY</Tag>
@@ -6169,12 +5981,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLITCH_IN_THE_MATRIX</Tag>
 		<English>Glitch in the Matrix</English>
-		<French>Glitch in the Matrix</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLITCH_IN_THE_MATRIX_PEDIA</Tag>
 		<English>People sometimes report strange events--premonitions, dreams that foretell the future, and phenomena that cannot be explained by ordinary experience. We don't know what these experiences mean or if such 'glitches' really occur at all, but they may be a sign of a reality beyond that which we know.</English>
-		<French>People sometimes report strange events--premonitions, dreams that foretell the future, and phenomena that cannot be explained by ordinary experience. We don't know what these experiences mean or if such 'glitches' really occur at all, but they may be a sign of a reality beyond that which we know.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLITCH_IN_THE_MATRIX_STRATEGY</Tag>
@@ -6183,12 +5993,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GN_DRIVE</Tag>
 		<English>GN Drive</English>
-		<French>Moteur Gundam Nucleus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GN_DRIVE_PEDIA</Tag>
 		<English>A Gundam Nucleus (GN) Drive (aka solar reactor, solar furnace) is a powerful energy system within Mobile Suit Gundam 00 designed to give a mobile suit a significant advantage in combat. Invented by Celestial Being, the technology was later reverse-engineered by the Innovators and Linear Train Industries to create the GN Drive Tau.[PARAGRAPH:2]http://gundam.wikia.com/wiki/GN_Drive</English>
-		<French>Un Moteur Gundam Nucleus (GN) (aka réacteur solaire, four solaire) est un puissant système d'énergie dans Mobile Suit Gundam 00 conçu pour donner à une combinaison mobile un avantage significatif au combat. Inventée par Celestial Being, la technologie a ensuite été reconstituée par les Innovators and Linear Train Industries pour créer le GN Drive Tau.[PARAGRAPH:2]http://gundam.wikia.com/wiki/GN_Drive</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GN_DRIVE_STRATEGY</Tag>
@@ -6196,13 +6004,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GODEL_INCOMPLETENESS_THEOREM</Tag>
-		<English>Godel's Incompleteness Theorem</English>
-		<French>Godel's Incompleteness Theorem</French>
+		<English>Gödel's Incompleteness Theorems</English>
+		<French>Théorèmes d'incomplétude de Gödel</French>
+		<Italian>Teoremi di incompletezza di Gödel</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GODEL_INCOMPLETENESS_THEOREM_PEDIA</Tag>
-		<English>Godel's incompleteness theorems are two theorems of mathematical logic that demonstrate the inherent limitations of every formal axiomatic system containing basic arithmetic. These results, published by Kurt Godel in 1931, are important both in mathematical logic and in the philosophy of mathematics. The theorems are widely, but not universally, interpreted as showing that Hilbert's program to find a complete and consistent set of axioms for all mathematics is impossible.</English>
-		<French>Godel's incompleteness theorems are two theorems of mathematical logic that demonstrate the inherent limitations of every formal axiomatic system containing basic arithmetic. These results, published by Kurt Godel in 1931, are important both in mathematical logic and in the philosophy of mathematics. The theorems are widely, but not universally, interpreted as showing that Hilbert's program to find a complete and consistent set of axioms for all mathematics is impossible.</French>
+		<English>Gödel's incompleteness theorems are two theorems of mathematical logic that demonstrate the inherent limitations of every formal axiomatic system containing basic arithmetic. These results, published by Kurt Gödel in 1931, are important both in mathematical logic and in the philosophy of mathematics. The theorems are widely, but not universally, interpreted as showing that Hilbert's program to find a complete and consistent set of axioms for all mathematics is impossible.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GODEL_INCOMPLETENESS_THEOREM_STRATEGY</Tag>
@@ -6211,12 +6019,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GODWHEEL</Tag>
 		<English>Godwheel</English>
-		<French>Godwheel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GODWHEEL_PEDIA</Tag>
 		<English>The Godwheel is one of the concepts of the Malibu Comics Ultraverse. While it lent its name to a 1994/1995 four-issue series, the Godwheel is actually the place of origin of quite a few Ultraverse concepts, characters and significant items that predate that series. It has even been retconned as a place where both Rune of the Ultraverse and Adam Warlock of the main Marvel Universe lived in the distant past.</English>
-		<French>The Godwheel is one of the concepts of the Malibu Comics Ultraverse. While it lent its name to a 1994/1995 four-issue series, the Godwheel is actually the place of origin of quite a few Ultraverse concepts, characters and significant items that predate that series. It has even been retconned as a place where both Rune of the Ultraverse and Adam Warlock of the main Marvel Universe lived in the distant past.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GODWHEEL_STRATEGY</Tag>
@@ -6225,12 +6031,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GPS</Tag>
 		<English>Global Positioning System</English>
-		<French>Global Positioning System</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GPS_PEDIA</Tag>
 		<English>The Global Positioning System (GPS), originally Navstar GPS, is a space-based radionavigation system owned by the United States government and operated by the United States Air Force. It is a global navigation satellite system that provides geolocation and time information to a GPS receiver anywhere on or near the Earth where there is an unobstructed line of sight to four or more GPS satellites.</English>
-		<French>The Global Positioning System (GPS), originally Navstar GPS, is a space-based radionavigation system owned by the United States government and operated by the United States Air Force. It is a global navigation satellite system that provides geolocation and time information to a GPS receiver anywhere on or near the Earth where there is an unobstructed line of sight to four or more GPS satellites.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GPS_STRATEGY</Tag>
@@ -6239,12 +6043,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAND_UNIFICATION_ACCELERATOR</Tag>
 		<English>Grand Unified Accelerator</English>
-		<French>Grand Accélérateur Unifié</French>
+		<French>Grand accélérateur unifié</French>
+		<Italian>Grande acceleratore unificato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAND_UNIFICATION_ACCELERATOR_PEDIA</Tag>
 		<English>The ultimate particle accelerator.</English>
-		<French>The ultimate particle accelerator.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAND_UNIFICATION_ACCELERATOR_STRATEGY</Tag>
@@ -6253,12 +6057,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITATIONAL_CRANE</Tag>
 		<English>Intergalactic Gravitational Crane</English>
-		<French>Intergalactic Gravitational Crane</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITATIONAL_CRANE_PEDIA</Tag>
 		<English>Dark matter can be finely manipulated for precise gravity control. Useful in constructing megastructures.</English>
-		<French>Dark matter can be finely manipulated for precise gravity control. Useful in constructing megastructures.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITATIONAL_CRANE_STRATEGY</Tag>
@@ -6267,7 +6069,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITON_COMMUNICATION_CENTER</Tag>
 		<English>Intergalactic Graviton Communication Center</English>
-		<French>Intergalactic Graviton Communication Center</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITON_COMMUNICATION_CENTER_PEDIA</Tag>
@@ -6304,12 +6105,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITY_TRAIN</Tag>
 		<English>Gravity Train</English>
-		<French>Gravity Train</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITY_TRAIN_PEDIA</Tag>
 		<English>A gravity train is a theoretical means of transportation intended to go between two points on the surface of a sphere, following a straight tunnel that goes directly from one point to the other through the interior of the sphere.</English>
-		<French>A gravity train is a theoretical means of transportation intended to go between two points on the surface of a sphere, following a straight tunnel that goes directly from one point to the other through the interior of the sphere.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITY_TRAIN_STRATEGY</Tag>
@@ -6342,12 +6141,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREEN_DESERT</Tag>
 		<English>Green Desert</English>
-		<French>Green Desert</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREEN_DESERT_PEDIA</Tag>
 		<English>Desert greening is the process of man-made reclamation of deserts for ecological reasons (biodiversity), farming and forestry, but also for reclamation of natural water systems and other Life support systems. It is done by various methods. So far only arid and semi-arid desert are meant when using the expression. Icy deserts are considered unsuitable. Desert greening is an important topic as it can help solve global water, energy, and food crises. It pertains to roughly 32 million square kilometres of land.</English>
-		<French>Desert greening is the process of man-made reclamation of deserts for ecological reasons (biodiversity), farming and forestry, but also for reclamation of natural water systems and other Life support systems. It is done by various methods. So far only arid and semi-arid desert are meant when using the expression. Icy deserts are considered unsuitable. Desert greening is an important topic as it can help solve global water, energy, and food crises. It pertains to roughly 32 million square kilometres of land.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREEN_DESERT_STRATEGY</Tag>
@@ -6356,12 +6153,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREEN_FLOAT</Tag>
 		<English>Green Float</English>
-		<French>Green Float</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREEN_FLOAT_PEDIA</Tag>
 		<English>See http://www.shimz.co.jp/english/theme/dream/greenfloat.html</English>
-		<French>See http://www.shimz.co.jp/english/theme/dream/greenfloat.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREEN_FLOAT_STRATEGY</Tag>
@@ -6370,12 +6165,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREEN_WALL_OF_CHINA</Tag>
 		<English>Great Green Wall</English>
-		<French>Great Green Wall</French>
+		<French>Grande muraille verte</French>
+		<Italian>Grande muraglia verde</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREEN_WALL_OF_CHINA_PEDIA</Tag>
-		<English>The Great Green Wall or Great Green Wall of the Sahara and the Sahel Initiative (French: Grande Muraille Verte pour le Sahara et le Sahel) is a planned project to plant a wall of trees across Africa at the southern edge of the Sahara desert as a means to prevent desertification. It was developed by the African Union to address the detrimental social, economic and environmental impacts of land degradation and desertification in the Sahel and the Sahara.</English>
-		<French>La Grande Muraille Verte ou Grande Muraille Verte du Sahara et de l'Initiative Sahel (Français: Grande Muraille Verte pour le Sahara et le Sahel) est un projet prévu de planter un mur d'arbres à travers l'Afrique à l'extrémité sud du désert du Sahara moyens de prévenir la désertification. Il a été développé par l'Union africaine pour lutter contre les impacts sociaux, économiques et environnementaux préjudiciables de la dégradation des terres et de la désertification au Sahel et au Sahara.</French>
+		<English>The Great Green Wall is a planned project to plant a wall of trees across edges of deserts as a means to prevent desertification. It was parallelly developed by the African Union and China to address the detrimental social, economic and environmental impacts of land degradation and desertification in the Sahel and the Sahara and in Gobi region, respectively.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREEN_WALL_OF_CHINA_STRATEGY</Tag>
@@ -6384,12 +6179,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUIDED_PLANETARY_EVOLUTION</Tag>
 		<English>Intergalactic Guided Planetary Evolution</English>
-		<French>Intergalactic Guided Planetary Evolution</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUIDED_PLANETARY_EVOLUTION_PEDIA</Tag>
 		<English>A biotic planet's evolution is guided for scientific purposes.</English>
-		<French>A biotic planet's evolution is guided for scientific purposes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUIDED_PLANETARY_EVOLUTION_STRATEGY</Tag>
@@ -6398,12 +6191,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HACKED_SOURCE_CODE</Tag>
 		<English>Distant Hacked Source Code</English>
-		<French>Distant Hacked Source Code</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HACKED_SOURCE_CODE_PEDIA</Tag>
 		<English>If the universe we know is a simulation, maybe it is possible to get overwrite the source code and make strange things happen.[PARAGRAPH:2]Or maybe not.</English>
-		<French>If the universe we know is a simulation, maybe it is possible to get overwrite the source code and make strange things happen.[PARAGRAPH:2]Or maybe not.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HACKED_SOURCE_CODE_STRATEGY</Tag>
@@ -6412,12 +6203,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HALO</Tag>
 		<English>Halo</English>
-		<French>Halo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HALO_PEDIA</Tag>
 		<English>Halo rings are fictional megastructures and superweapons in the Halo video game series, giving its name.</English>
-		<French>Halo rings are fictional megastructures and superweapons in the Halo video game series, giving its name.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HALO_STRATEGY</Tag>
@@ -6426,12 +6215,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAUMEA_COLONY</Tag>
 		<English>Haumea Colony</English>
-		<French>Colonie de Haumea</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAUMEA_COLONY_PEDIA</Tag>
 		<English>Haumea, minor-planet designation 136108 Haumea, is a dwarf planet located beyond Neptune's orbit. It was discovered in 2004 by a team headed by Mike Brown of Caltech at the Palomar Observatory in the United States and independently in 2005, by a team headed by Jose Luis Ortiz Moreno at the Sierra Nevada Observatory in Spain, though the latter claim has been contested. On September 17, 2008, it was recognized as a dwarf planet by the International Astronomical Union (IAU) and named after Haumea, the Hawaiian goddess of childbirth.</English>
-		<French>Haumea, minor-planet designation 136108 Haumea, is a dwarf planet located beyond Neptune's orbit. It was discovered in 2004 by a team headed by Mike Brown of Caltech at the Palomar Observatoire in the United States and independently in 2005, by a team headed by Jose Luis Ortiz Moreno at the Sierra Nevada Observatoire in Spain, though the latter claim has been contested. On September 17, 2008, it was recognized as a dwarf planet by the International Astronomical Union (IAU) and named after Haumea, the Hawaiian goddess of childbirth.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAUMEA_COLONY_STRATEGY</Tag>
@@ -6440,12 +6227,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HD_85512B</Tag>
 		<English>HD 85512b Colony</English>
-		<French>Colonie de HD 85512b</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HD_85512B_PEDIA</Tag>
 		<English>See http://www.solarsystemquick.com/universe/hd85512b.htm</English>
-		<French>See http://www.solarsystemquick.com/universe/hd85512b.htm</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HD_85512B_STRATEGY</Tag>
@@ -6454,12 +6239,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEATING_AND_COOLING_DISTRICT</Tag>
 		<English>Heating and Cooling District</English>
-		<French>Quartier de chauffage et de refroidissement</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEATING_AND_COOLING_DISTRICT_PEDIA</Tag>
 		<English>This combined district heating and cooling system uses cogeneration (that is, electricity and heat both produced from the same combustion source) to heat and cool a region of the city. The system is enhanced by geothermal storage systems to cool the city in the summer and produce heat in the winter.[PARAGRAPH:2]https://www.sciencedirect.com/science/article/pii/S030626191100242X</English>
-		<French>Ce système combiné de chauffage et de refroidissement urbain utilise la cogénération (c'est-à-dire l'électricité et la chaleur produites à partir de la même source de combustion) pour chauffer et refroidir une région de la ville. Le système est amélioré par des systèmes de stockage géothermique pour refroidir la ville en été et produire de la chaleur en hiver.[PARAGRAPH:2]https://www.sciencedirect.com/science/article/pii/S030626191100242X</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEATING_AND_COOLING_DISTRICT_STRATEGY</Tag>
@@ -6467,12 +6250,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEAT_TOLERANCE</Tag>
-		<English>HM Heat Tolerance</English>
-		<French>HM Heat Tolerance</French>
+		<English>Human Mod (Heat Tolerance)</English>
+		<French>Modif. Humain (Tolérance à la chaleur)</French>
+		<Italian>Umano augmentato (Tolleranza al calore)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEAT_TOLERANCE_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEAT_TOLERANCE_STRATEGY</Tag>
@@ -6481,12 +6266,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEAVEN</Tag>
 		<English>Heaven</English>
-		<French>Heaven</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEAVEN_PEDIA</Tag>
 		<English>You won't get here unless you choose better civics and stop nuking the Romans gratuitously.</English>
-		<French>You won't get here unless you choose better civics and stop nuking the Romans gratuitously.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEAVEN_STRATEGY</Tag>
@@ -6495,12 +6278,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEDGE_FUND</Tag>
 		<English>Hedge Fund</English>
-		<French>Hedge Fund</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEDGE_FUND_PEDIA</Tag>
 		<English>A hedge fund is an investment fund that pools capital from accredited individuals or institutional investors and invests in a variety of assets, often with complex portfolio-construction and risk-management techniques. It is administered by a professional investment management firm, and often structured as a limited partnership, limited liability company, or similar vehicle. Hedge funds are generally distinct from mutual funds as their use of leverage is not capped by regulators and distinct from private equity funds as the majority of hedge funds invest in relatively liquid assets.</English>
-		<French>A hedge fund is an investment fund that pools capital from accredited individuals or institutional investors and invests in a variety of assets, often with complex portfolio-construction and risk-management techniques. It is administered by a professional investment management firm, and often structured as a limited partnership, limited liability company, or similar vehicle. Hedge funds are generally distinct from mutual funds as their use of leverage is not capped by regulators and distinct from private equity funds as the majority of hedge funds invest in relatively liquid assets.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEDGE_FUND_STRATEGY</Tag>
@@ -6509,12 +6290,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HELIOFORMED_GAS_GIANT</Tag>
 		<English>Transtellar Helioformed Gas Giant</English>
-		<French>Transtellar Helioformed Gas Giant</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HELIOFORMED_GAS_GIANT_PEDIA</Tag>
 		<English>Tiny black holes are doped with magnetic monopoles, igniting fusion in gas giant planets.</English>
-		<French>Tiny black holes are doped with magnetic monopoles, igniting fusion in gas giant planets.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HELIOFORMED_GAS_GIANT_STRATEGY</Tag>
@@ -6523,12 +6302,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HELIUM_3_IMPORTER</Tag>
 		<English>Helium-3 Importer</English>
-		<French>Importateur d'Hélium 3</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HELIUM_3_IMPORTER_PEDIA</Tag>
 		<English>Import Helium-3 in order to build advanced fusion plant.</English>
-		<French>Import Helium-3 in order to build advanced fusion plant.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HELIUM_3_IMPORTER_STRATEGY</Tag>
@@ -6537,12 +6314,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL</Tag>
 		<English>Hercules-Corona Borealis Great Wall Colony</English>
-		<French>Colonie de Hercules-Corona Borealis Great Wall</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL_PEDIA</Tag>
 		<English>Hercules-Corona Borealis Great Wall or the Great GRB Wall is a massive galactic superstructure in a region of the sky seen in the data set mapping of gamma-ray bursts (GRBs) that has been found to have an unusually higher concentration of similarly distanced GRBs than the expected average distribution.</English>
-		<French>Hercules-Corona Borealis Great Wall or the Great GRB Wall is a massive galactic superstructure in a region of the sky seen in the data set mapping of gamma-ray bursts (GRBs) that has been found to have an unusually higher concentration of similarly distanced GRBs than the expected average distribution.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL_STRATEGY</Tag>
@@ -6551,12 +6326,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERO_ACADEMY</Tag>
 		<English>Intergalactic Hero Academy</English>
-		<French>Intergalactic Hero Academy</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERO_ACADEMY_PEDIA</Tag>
 		<English>See http://starwars.wikia.com/wiki/Jedi_training</English>
-		<French>See http://starwars.wikia.com/wiki/Jedi_training</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERO_ACADEMY_STRATEGY</Tag>
@@ -6565,12 +6338,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIDE_AND_SEEK</Tag>
 		<English>Hide and Seek</English>
-		<French>Cache-cache</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIDE_AND_SEEK_PEDIA</Tag>
 		<English>With the invention of Cloaking, Hide and Seek takes on a new dimension.</English>
-		<French>Avec l'invention du camouflage, Le Cache-cache prend une nouvelle dimension.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIDE_AND_SEEK_STRATEGY</Tag>
@@ -6578,12 +6349,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_BEING</Tag>
-		<English>HM High-Dimensional</English>
-		<French>HM High-Dimensional</French>
+		<English>Human Mod (High-Dimensional)</English>
+		<French>Modif. Humain (Haute dimension)</French>
+		<Italian>Umano augmentato (Dimensione superiore)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_BEING_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_BEING_STRATEGY</Tag>
@@ -6592,12 +6365,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HILLS_CLOUD_COLONY</Tag>
 		<English>Oort Cloud Hills Colony</English>
-		<French>Colonie de Hills Cloud</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HILLS_CLOUD_COLONY_PEDIA</Tag>
 		<English>In astronomy, the Hills cloud (also called the inner Oort cloud and inner cloud) is a vast theoretical circumstellar disc, interior to the Oort cloud, whose outer border would be located at around 20,000 to 30,000 astronomical units (AU) from the Sun, and whose inner border, less well defined, is hypothetically located at 100-3000 AU, well beyond planet and Kuiper-belt object orbits, but distances might be much greater. If it exists, the Hills cloud contains roughly 5 times as many comets as the Oort cloud.</English>
-		<French>In astronomy, the Hills cloud (also called the inner Oort cloud and inner cloud) is a vast theoretical circumstellar disc, interior to the Oort cloud, whose outer border would be located at around 20,000 to 30,000 astronomical units (AU) from the Sun, and whose inner border, less well defined, is hypothetically located at 100-3000 AU, well beyond planet and Kuiper-belt object orbits, but distances might be much greater. If it exists, the Hills cloud contains roughly 5 times as many comets as the Oort cloud.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HILLS_CLOUD_COLONY_STRATEGY</Tag>
@@ -6606,12 +6377,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HISTORICAL_RECREATION</Tag>
 		<English>Historical Recreation</English>
-		<French>Historical Recreation</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HISTORICAL_RECREATION_PEDIA</Tag>
 		<English>These grounds recreate, rather than merely reenact, important historical events in the present.</English>
-		<French>These grounds recreate, rather than merely reenact, important historical events in the present.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HISTORICAL_RECREATION_STRATEGY</Tag>
@@ -6620,12 +6389,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HISTORY_REPAIR</Tag>
 		<English>History Repair Center</English>
-		<French>History Repair Center</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HISTORY_REPAIR_PEDIA</Tag>
 		<English>This elite squad of time travelers has the mission of reducing the suffering that occurs throughout history.</English>
-		<French>This elite squad of time travelers has the mission of reducing the suffering that occurs throughout history.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HISTORY_REPAIR_STRATEGY</Tag>
@@ -6634,12 +6401,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOLACRACY</Tag>
 		<English>Interstellar Government - Holacracy</English>
-		<French>Interstellar Government - Holacracy</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOLACRACY_PEDIA</Tag>
-		<English>Holacratic government for the interstellar colony</English>
-		<French>Holacratic government for the interstellar colony</French>
+		<English>Holacratic government for the interstellar colony.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOLACRACY_STRATEGY</Tag>
@@ -6648,7 +6413,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOLLOW_PLANET</Tag>
 		<English>Interstellar Hollow Planet</English>
-		<French>Interstellar Hollow Planet</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOLLOW_PLANET_PEDIA</Tag>
@@ -6745,12 +6509,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMANOID_DESIGNER</Tag>
 		<English>Humanoid Designer</English>
-		<French>Humanoid Designer</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMANOID_DESIGNER_PEDIA</Tag>
 		<English>A humanoid (from English human and -oid 'resembling') is something that has an appearance resembling a human being. The earliest recorded use of the term, in 1870, referred to indigenous peoples in areas colonized by Europeans. By the 20th century, the term came to describe fossils which were morphologically similar, but not identical, to those of the human skeleton. Although this usage was common in the sciences for much of the 20th century, it is now considered rare. More generally, the term can refer to anything with uniquely human characteristics and/or adaptations, such as possessing opposable anterior forelimb-appendages (thumbs), visible spectrum-binocular vision (having two eyes), or biomechanic digitigrade-bipedalism (the ability to walk on heels in an upright position).</English>
-		<French>Un humanoïde (de l'anglais human and -oid 'resembling') est quelque chose qui ressemble à un être humain. La première utilisation enregistrée du terme, en 1870, faisait référence aux peuples autochtones dans les régions colonisées par les Européens. Au 20ème siècle, le terme est venu pour décrire des fossiles qui étaient morphologiquement similaires, mais pas identiques, à ceux du squelette humain. Bien que cet usage ait été courant dans les sciences pendant une grande partie du 20e siècle, il est maintenant considéré comme rare. Plus généralement, le terme peut faire référence à tout ce qui a des caractéristiques et / ou des adaptations uniquement humaines, comme la possession d'appendices antérieurs antérieurs opposables (pouces), la vision binoculaire à spectre visible (ayant deux yeux) ou la bipédalisme biomécanique digitigrade (la capacité de marcher sur des talons en position verticale).</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMANOID_DESIGNER_STRATEGY</Tag>
@@ -6758,12 +6520,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMAN_ALIEN_HYBRID</Tag>
-		<English>HM Alien Hybrid</English>
-		<French>HM Alien Hybrid</French>
+		<English>Human Mod (Alien Hybrid)</English>
+		<French>Modif. Humain (Alien hybride)</French>
+		<Italian>Umano augmentato (Ibrido alieno)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMAN_ALIEN_HYBRID_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMAN_ALIEN_HYBRID_STRATEGY</Tag>
@@ -6788,7 +6552,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYADES_STAR_CLUSTER_PEDIA</Tag>
 		<English>The Hyades, also known as Melotte 25 or Collinder 50) is the nearest open cluster to the Solar System and one of the best-studied star clusters. The Hipparcos satellite, the Hubble Space Telescope, and infrared color-magnitude diagram fitting have been used to establish a distance of ~153 ly (47 pc) to the cluster center.</English>
-		<French>The Hyades, also known as Melotte 25 or Collinder 50) is the nearest open cluster to the Solar System and one of the best-studied star clusters. The Hipparcos satellite, the Hubble Space Telescope, and infrared color-magnitude diagram fitting have been used to establish a distance of ~153 ly (47 pc) to the cluster center.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYADES_STAR_CLUSTER_STRATEGY</Tag>
@@ -6797,12 +6560,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYBRID_AIRSHIP_PORT</Tag>
 		<English>Hybrid Airship Port</English>
-		<French>Hybrid Airship Port</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYBRID_AIRSHIP_PORT_PEDIA</Tag>
 		<English>A hybrid airship is an aircraft that combines characteristics of lighter-than-air (LTA), airship technology with heavier-than-air (HTA) technology, either fixed-wing or rotary-wing. A rotastat is a rotorcraft/airship hybrid typically intended for heavy lift applications, while a dynastat is a dynamic lift airship typically intended for long-range cruising. No production designs have been built, but several manned and unmanned prototypes have flown.</English>
-		<French>A hybrid airship is an aircraft that combines characteristics of lighter-than-air (LTA), airship technology with heavier-than-air (HTA) technology, either fixed-wing or rotary-wing. A rotastat is a rotorcraft/airship hybrid typically intended for heavy lift applications, while a dynastat is a dynamic lift airship typically intended for long-range cruising. No production designs have been built, but several manned and unmanned prototypes have flown.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYBRID_AIRSHIP_PORT_STRATEGY</Tag>
@@ -6816,7 +6577,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDRAULIC_FRACTURING_PEDIA</Tag>
 		<English>Hydraulic fracturing (also fracking, fraccing, frac'ing, hydrofracturing or hydrofracking) is a well stimulation technique in which rock is fractured by a pressurized liquid. The process involves the high-pressure injection of 'fracking fluid' (primarily water, containing sand or other proppants suspended with the aid of thickening agents) into a wellbore to create cracks in the deep-rock formations through which natural gas, petroleum, and brine will flow more freely. When the hydraulic pressure is removed from the well, small grains of hydraulic fracturing proppants (either sand or aluminium oxide) hold the fractures open.</English>
-		<French>La fracturation hydraulique (également fracturation, fracturation, fracturation, hydrofracturation ou hydrofracking) est une technique de stimulation de puits dans laquelle la roche est fracturée par un liquide sous pression. Le processus implique l'injection à haute pression de '' fluide fracturation '' (principalement de l'eau, contenant du sable ou d'autres agents de soutènement en suspension à l'aide d'agents épaississants) dans un puits de forage pour créer des fissures dans les formations rocheuses profondes à travers lesquelles le gaz naturel, le pétrole et la saumure coulera plus librement. Lorsque la pression hydraulique est supprimée du puits, de petits grains d'agents de fracturation hydraulique (sable ou oxyde d'aluminium) maintiennent les fractures ouvertes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDRAULIC_FRACTURING_STRATEGY</Tag>
@@ -6825,12 +6585,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDRA_SUPERCLUSTER</Tag>
 		<English>Hydra Supercluster Colony</English>
-		<French>Colonie de Hydra Supercluster</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDRA_SUPERCLUSTER_PEDIA</Tag>
 		<English>The Hydra-Centaurus Supercluster (SCl 128), or the Hydra and Centaurus Superclusters, is a supercluster in two parts and the closest neighbour of Virgo Supercluster.</English>
-		<French>The Hydra-Centaurus Supercluster (SCl 128), or the Hydra and Centaurus Superclusters, is a supercluster in two parts and the closest neighbour of Virgo Supercluster.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDRA_SUPERCLUSTER_STRATEGY</Tag>
@@ -6839,12 +6597,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDROGEN_PEROXIDE_LIFE</Tag>
 		<English>Life - Hydrogen Peroxide</English>
-		<French>Life - Hydrogen Peroxide</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDROGEN_PEROXIDE_LIFE_PEDIA</Tag>
 		<English>A proposal has been made that life on Mars may exist and be using a mixture of water and hydrogen peroxide as its solvent. A 61.2% (by weight) mix of water and hydrogen peroxide has a freezing point of -56.5 C, and also tends to super-cool rather than crystallize. It is also hygroscopic, an advantage in a water-scarce environment.</English>
-		<French>A proposal has been made that life on Mars may exist and be using a mixture of water and hydrogen peroxide as its solvent. A 61.2% (by weight) mix of water and hydrogen peroxide has a freezing point of -56.5 C, and also tends to super-cool rather than crystallize. It is also hygroscopic, an advantage in a water-scarce environment.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDROGEN_PEROXIDE_LIFE_STRATEGY</Tag>
@@ -6853,12 +6609,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDROGEN_SULFIDE_LIFE</Tag>
 		<English>Life - Hydrogen-Sulfide</English>
-		<French>Life - Hydrogen-Sulfide</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDROGEN_SULFIDE_LIFE_PEDIA</Tag>
 		<English>Sulfur is also able to form long-chain molecules, but suffers from the same high-reactivity problems as phosphorus and silanes. The biological use of sulfur as an alternative to carbon is purely hypothetical, especially because sulfur usually forms only linear chains rather than branched ones.</English>
-		<French>Sulfur is also able to form long-chain molecules, but suffers from the same high-reactivity problems as phosphorus and silanes. The biological use of sulfur as an alternative to carbon is purely hypothetical, especially because sulfur usually forms only linear chains rather than branched ones.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDROGEN_SULFIDE_LIFE_STRATEGY</Tag>
@@ -6867,12 +6621,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDROPONIC_CANNABIS</Tag>
 		<English>Cannabis Grow Operation</English>
-		<French>Cannabis Grow Operation</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDROPONIC_CANNABIS_PEDIA</Tag>
 		<English>This illicit lab grows cannabis hydroponically, so that the operation can be easily concealed. Despite its dubious legal status, the product has some medicinal value.</English>
-		<French>This illicit lab grows cannabis hydroponically, so that the operation can be easily concealed. Despite its dubious legal status, the product has some medicinal value.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDROPONIC_CANNABIS_STRATEGY</Tag>
@@ -6881,12 +6633,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDROPONIC_VEGETABLE_GARDEN</Tag>
 		<English>Hydroponic Vegetable Garden</English>
-		<French>Hydroponic Vegetable Garden</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDROPONIC_VEGETABLE_GARDEN_PEDIA</Tag>
 		<English>Hydroponics is a subset of hydroculture, the method of growing plants without soil, using mineral nutrient solutions in a water solvent. Terrestrial plants may be grown with only their roots exposed to the mineral solution, or the roots may be supported by an inert medium, such as perlite or gravel. The nutrients in hydroponics can be from fish waste, duck manure, or normal nutrients.</English>
-		<French>Hydroponics is a subset of hydroculture, the method of growing plants without soil, using mineral nutrient solutions in a water solvent. Terrestrial plants may be grown with only their roots exposed to the mineral solution, or the roots may be supported by an inert medium, such as perlite or gravel. The nutrients in hydroponics can be from fish waste, duck manure, or normal nutrients.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDROPONIC_VEGETABLE_GARDEN_STRATEGY</Tag>
@@ -6895,12 +6645,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERCITY</Tag>
 		<English>Hyperspace Pan-Dimensional City</English>
-		<French>Ville de l'Hyperespace Pan-Dimensional</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERCITY_PEDIA</Tag>
 		<English>High-dimensional city.</English>
-		<French>High-dimensional city.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERCITY_STRATEGY</Tag>
@@ -6909,12 +6657,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERCOMPUTRONIUM_STRUCTURES</Tag>
 		<English>Hypercomputronium Structures</English>
-		<French>Hypercomputronium Structures</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERCOMPUTRONIUM_STRUCTURES_PEDIA</Tag>
 		<English>Build cities from structures with infinite embedded computational power.</English>
-		<French>Build cities from structures with infinite embedded computational power.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERCOMPUTRONIUM_STRUCTURES_STRATEGY</Tag>
@@ -6923,12 +6669,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERFACTORY</Tag>
 		<English>Hyperfactory</English>
-		<French>Hyperfactory</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERFACTORY_PEDIA</Tag>
 		<English>A multidimensional factory.</English>
-		<French>A multidimensional factory.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERFACTORY_STRATEGY</Tag>
@@ -6937,12 +6681,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERFOG</Tag>
 		<English>Hyperfog</English>
-		<French>Hyperbrouillard</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERFOG_PEDIA</Tag>
 		<English>Transapientech utility fog. Hyperfog is used by high singularity beings. It is independently intelligent, and can replicate itself using atmospheric or other available materials very swiftly. This replication will increase the volume of the hyperfog and also the available processing power. The foglet entities in the Nimbus culture usually utilize hyperfog bodies.[PARAGRAPH:2]See http://www.orionsarm.com/eg-article/4675f3dade6a8</English>
-		<French>Brouillard utilitaire de l'ère Transapien. L'hyperbrouillard est utilisé par les êtres à singularité élevée. Il est indépendamment intelligent et peut se reproduire très rapidement en utilisant l'atmosphère ou d'autres matériaux disponibles. Cette réplication augmentera le volume de l'hyperfog ainsi que la puissance de traitement disponible. Les entités de brouillard dans la culture Nimbus utilisent généralement des corps hyperfog.[PARAGRAPH:2]Voir http://www.orionsarm.com/eg-article/4675f3dade6a8</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERFOG_STRATEGY</Tag>
@@ -6951,12 +6693,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERLOOP</Tag>
 		<English>Hyperloop</English>
-		<French>Hyperloop</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERLOOP_PEDIA</Tag>
 		<English>The brainchild of Elon Musk, the Hyperloops is a worldwide network of supersonic evacuated tube transport rails.[PARAGRAPH:2]http://hyperlooptech.com/</English>
-		<French>The brainchild of Elon Musk, the Hyperloops is a worldwide network of supersonic evacuated tube transport rails.[PARAGRAPH:2]http://hyperlooptech.com/</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERLOOP_STRATEGY</Tag>
@@ -6965,12 +6705,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERMAGLEV</Tag>
 		<English>Interstellar Hypermaglev</English>
-		<French>Interstellar Hypermaglev</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERMAGLEV_PEDIA</Tag>
 		<English>A Hypermaglev, or Hypermagnetic Levitation Train, is a transportation mode that uses monopole-doped tracks for very rapid acceleration over astronomical distances.</English>
-		<French>A Hypermaglev, or Hypermagnetic Levitation Train, is a transportation mode that uses monopole-doped tracks for very rapid acceleration over astronomical distances.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERMAGLEV_STRATEGY</Tag>
@@ -6979,12 +6717,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERPLANET</Tag>
 		<English>Hyperplanet</English>
-		<French>Hyperplanet</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERPLANET_PEDIA</Tag>
 		<English>This is a massive planet in more than three dimensions.</English>
-		<French>This is a massive planet in more than three dimensions.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERPLANET_STRATEGY</Tag>
@@ -6993,12 +6729,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSONIC_TERMINAL</Tag>
 		<English>Hypersonic Terminal</English>
-		<French>Terminal Hypersonique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSONIC_TERMINAL_PEDIA</Tag>
 		<English>Hypersonic flight is flight through the atmosphere below about 90km at speeds above Mach 5, a speed where dissociation of air begins to become significant and high heat loads exist.</English>
-		<French>Un vol hypersonique est un vol à travers l'atmosphère en dessous d'environ 90 km à des vitesses supérieures à Mach 5, une vitesse où la dissociation de l'air commence à devenir importante et des charges thermiques élevées existent.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSONIC_TERMINAL_STRATEGY</Tag>
@@ -7007,12 +6741,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_COMMERCIAL_CENTER</Tag>
 		<English>Hyperspace Commercial Center</English>
-		<French>Hyperspace Commercial Center</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_COMMERCIAL_CENTER_PEDIA</Tag>
 		<English>Import material into the hyperspace colony.</English>
-		<French>Import material into the hyperspace colony.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_COMMERCIAL_CENTER_STRATEGY</Tag>
@@ -7021,12 +6753,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_CONSTRUCTION_CENTER</Tag>
 		<English>Hyperspace Construction Center</English>
-		<French>Hyperspace Construction Center</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_CONSTRUCTION_CENTER_PEDIA</Tag>
 		<English>This construction center facilitates projections into ordinary spacetime.</English>
-		<French>This construction center facilitates projections into ordinary spacetime.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_CONSTRUCTION_CENTER_STRATEGY</Tag>
@@ -7035,12 +6765,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_CONSTRUCTION_FIRM</Tag>
 		<English>Hyperspace Construction Firm</English>
-		<French>Hyperspace Construction Firm</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_CONSTRUCTION_FIRM_PEDIA</Tag>
 		<English>This firm leverages a construction center in hyperspace to project structures on Earth.</English>
-		<French>This firm leverages a construction center in hyperspace to project structures on Earth.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_CONSTRUCTION_FIRM_STRATEGY</Tag>
@@ -7049,12 +6777,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_EXPORTER</Tag>
 		<English>Hyperspace Exporter</English>
-		<French>Exportateur de Hyperspace</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_EXPORTER_PEDIA</Tag>
 		<English>Export material from the hyperspace colony.</English>
-		<French>Export material from the hyperspace colony.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_EXPORTER_STRATEGY</Tag>
@@ -7063,12 +6789,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_GOVERNING_COUNCIL</Tag>
 		<English>Hyperspace Governing Council</English>
-		<French>Hyperspace Governing Council</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_GOVERNING_COUNCIL_PEDIA</Tag>
 		<English>This council sets policy for the hyperspace colony.</English>
-		<French>This council sets policy for the hyperspace colony.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_GOVERNING_COUNCIL_STRATEGY</Tag>
@@ -7077,12 +6801,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_IMPORTER</Tag>
 		<English>Hyperspace Importer</English>
-		<French>Importateur de Hyperspace</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_IMPORTER_PEDIA</Tag>
 		<English>Import material into the hyperspace colony.</English>
-		<French>Import material into the hyperspace colony.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_IMPORTER_STRATEGY</Tag>
@@ -7091,7 +6813,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_MEDIA_CENTER</Tag>
 		<English>Hyperspace Media Center</English>
-		<French>Hyperspace Media Center</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_MEDIA_CENTER_PEDIA</Tag>
@@ -7104,12 +6825,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_POWER_PLANT</Tag>
 		<English>Hyperspace Power Plant</English>
-		<French>Usine de Hyperspace Power</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_POWER_PLANT_PEDIA</Tag>
 		<English>The Hyperspace Power Plant draws power from not-fully-understood natural phenomena in hyperspace to power the new colony.</English>
-		<French>The Hyperspace Power Usine de draws power from not-fully-understood natural phenomena in hyperspace to power the new colony.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_POWER_PLANT_STRATEGY</Tag>
@@ -7118,12 +6837,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_RESEARCH_PROBE</Tag>
 		<English>Hyperspace Research Probe</English>
-		<French>Hyperspace Research Probe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_RESEARCH_PROBE_PEDIA</Tag>
 		<English>What is Hyperspace? At this early stage your civilization knows little, so you build probes to find out.</English>
-		<French>What is Hyperspace? At this early stage your civilization knows little, so you build probes to find out.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_RESEARCH_PROBE_STRATEGY</Tag>
@@ -7132,12 +6849,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_TOURISM_AGENCY</Tag>
 		<English>Hyperspace Tourism Agency</English>
-		<French>Hyperspace Tourism Agency</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_TOURISM_AGENCY_PEDIA</Tag>
 		<English>Tours of and through hyperspace.</English>
-		<French>Tours of and through hyperspace.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_TOURISM_AGENCY_STRATEGY</Tag>
@@ -7146,12 +6861,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_WAREHOUSE</Tag>
 		<English>Hyperspace Warehouse</English>
-		<French>Hyperspace Warehouse</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_WAREHOUSE_PEDIA</Tag>
 		<English>This warehouse facilitates interdimensional trade.</English>
-		<French>This warehouse facilitates interdimensional trade.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERSPACE_WAREHOUSE_STRATEGY</Tag>
@@ -7160,12 +6873,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERURANION</Tag>
 		<English>Hyperuranion</English>
-		<French>Hyperuranion</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERURANION_PEDIA</Tag>
 		<English>Hyperuranion ('beyond the sky') is Plato's vision of the Realm of Forms.</English>
-		<French>Hyperuranion ('beyond the sky') is Plato's vision of the Realm of Forms.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPERURANION_STRATEGY</Tag>
@@ -7174,12 +6885,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPESPACE_PORTAL</Tag>
 		<English>Hyperspace Portal</English>
-		<French>Hyperspace Portal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPESPACE_PORTAL_PEDIA</Tag>
 		<English>A portal into hyperspace. Provides needed resources.</English>
-		<French>A portal into hyperspace. Provides needed resources.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPESPACE_PORTAL_STRATEGY</Tag>
@@ -7188,12 +6897,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IKAROS</Tag>
 		<English>IKAROS</English>
-		<French>IKAROS</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IKAROS_PEDIA</Tag>
 		<English>IKAROS (Interplanetary Kite-craft Accelerated by Radiation Of the Sun) is a Japan Aerospace Exploration Agency (JAXA) experimental spacecraft. The spacecraft was launched on 21 May 2010, aboard an H-IIA rocket, together with the Akatsuki (Venus Climate Orbiter) probe and four other small spacecraft. IKAROS is the first spacecraft to successfully demonstrate solar sail technology in interplanetary space.[PARAGRAPH:2]On 8 December 2010, IKAROS passed by Venus at about 80,800 km (50,200 mi) distance, completing the planned mission successfully, and entered its extended operation phase.</English>
-		<French>IKAROS (Interplanetary Kite-craft Accelerated by Radiation Of the Sun) is a Japan Aerospace Exploration Agency (JAXA) experimental spacecraft. The spacecraft was launched on 21 May 2010, aboard an H-IIA rocket, together with the Akatsuki (Venus Climate Orbiter) probe and four other small spacecraft. IKAROS is the first spacecraft to successfully demonstrate solar sail technology in interplanetary space.[PARAGRAPH:2]On 8 December 2010, IKAROS passed by Venus at about 80,800 km (50,200 mi) distance, completing the planned mission successfully, and entered its extended operation phase.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IKAROS_STRATEGY</Tag>
@@ -7202,12 +6909,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMMATERIAL_CITY</Tag>
 		<English>Claytronic City</English>
-		<French>Ville Claytronique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMMATERIAL_CITY_PEDIA</Tag>
 		<English>Claytronics is an abstract future concept that combines nanoscale robotics and computer science to create individual nanometer-scale computers called claytronic atoms, or catoms, which can interact with each other to form tangible 3D objects that a user can interact with. This idea is more broadly referred to as programmable matter. Claytronics has the potential to greatly affect many areas of daily life, such as telecommunication, human-computer interfaces, and entertainment.</English>
-		<French>Claytronics is an abstract future concept that combines nanoscale robotics and computer science to create individual nanometer-scale computers called claytronic atoms, or catoms, which can interact with each other to form tangible 3D objects that a user can interact with. This idea is more broadly referred to as programmable matter. Claytronics has the potential to greatly affect many areas of daily life, such as telecommunication, human-computer interfaces, and entertainment.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMMATERIAL_CITY_STRATEGY</Tag>
@@ -7215,12 +6920,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMMORTAL_BEING</Tag>
-		<English>HM Immortal</English>
-		<French>HM Immortal</French>
+		<English>Human Mod (Immortal)</English>
+		<French>Modif. Humain (Immortel)</French>
+		<Italian>Umano augmentato (Immortale)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMMORTAL_BEING_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMMORTAL_BEING_STRATEGY</Tag>
@@ -7228,12 +6935,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN</Tag>
-		<English>HM Indefinite Lifespan</English>
-		<French>HM Indefinite Lifespan</French>
+		<English>Human Mod (Indefinite Lifespan)</English>
+		<French>Modif. Humain (Durée de vie indéfinie)</French>
+		<Italian>Umano augmentato (Durata di vita indefinita)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN_STRATEGY</Tag>
@@ -7242,12 +6951,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDUCED_RAIN</Tag>
 		<English>Induced Rain</English>
-		<French>Induced Rain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDUCED_RAIN_PEDIA</Tag>
 		<English>This device causes rainfall. Useful but not popular.</English>
-		<French>This device causes rainfall. Useful but not popular.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDUCED_RAIN_STRATEGY</Tag>
@@ -7256,12 +6963,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDUSTRIALIZED_ASTEROID</Tag>
 		<English>Deep Space Industrialized Asteroid</English>
-		<French>Industrialized Astéroïde de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDUSTRIALIZED_ASTEROID_PEDIA</Tag>
 		<English>A large asteroid has been captured, tethered to the space colony, and is now a staging ground for mining, industry, and travel.</English>
-		<French>A large asteroid has been captured, tethered to the space colony, and is now a staging ground for mining, industry, and travel.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDUSTRIALIZED_ASTEROID_STRATEGY</Tag>
@@ -7270,12 +6975,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDUSTRIAL_PLANET</Tag>
 		<English>Interstellar Industrial Planet</English>
-		<French>Interstellar Industrial Planet</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDUSTRIAL_PLANET_PEDIA</Tag>
 		<English>This entire planet is covered with heavy industry, and it is polluted beyond imagination. The industry is entirely automated, as no human could survive for long in the toxic atmosphere.</English>
-		<French>This entire planet is covered with heavy industry, and it is polluted beyond imagination. The industry is entirely automated, as no human could survive for long in the toxic atmosphere.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDUSTRIAL_PLANET_STRATEGY</Tag>
@@ -7284,12 +6987,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDUSTRIAL_THINGAMAJIG</Tag>
 		<English>Industrial Thingamajig</English>
-		<French>Industrial Thingamajig</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDUSTRIAL_THINGAMAJIG_PEDIA</Tag>
 		<English>Self-assembly is a phenomenon where the components of a system assemble themselves spontaneously via an interaction to form a larger functional unit. This spontaneous organization can be due to direct specific interaction and/or indirectly through their environment. Due to the increasing technological advancements, the study of materials in the nanometre scale is becoming more important. The ability to assemble nanoparticles into well-defined configuration in space is crucial to the development of electronic devices that are small but can contain plenty of information. The spatial arrangements of these self-assembled nanoparticles can be potentially used to build increasingly complex structures leading to a wide variety of materials that can be used for different purposes.</English>
-		<French>Self-assembly is a phenomenon where the components of a system assemble themselves spontaneously via an interaction to form a larger functional unit. This spontaneous organization can be due to direct specific interaction and/or indirectly through their environment. Due to the increasing technological advancements, the study of materials in the nanometre scale is becoming more important. The ability to assemble nanoparticles into well-defined configuration in space is crucial to the development of electronic devices that are small but can contain plenty of information. The spatial arrangements of these self-assembled nanoparticles can be potentially used to build increasingly complex structures leading to a wide variety of materials that can be used for different purposes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDUSTRIAL_THINGAMAJIG_STRATEGY</Tag>
@@ -7298,12 +6999,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFINITE_SPEED_TACHYON_GENERATOR</Tag>
 		<English>Distant Infinite Speed Tachyon Generator</English>
-		<French>Distant Infinite Speed Tachyon Generator</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFINITE_SPEED_TACHYON_GENERATOR_PEDIA</Tag>
 		<English>This device generated infinite speed tachyons, allowing instantaneous communication with all points in space and time.</English>
-		<French>This device generated infinite speed tachyons, allowing instantaneous communication with all points in space and time.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFINITE_SPEED_TACHYON_GENERATOR_STRATEGY</Tag>
