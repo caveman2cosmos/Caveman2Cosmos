@@ -1167,14 +1167,8 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_LUNAR_ALGAE_LAB</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_LUNAR_OBSERVATORY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_LUNAR_ALGAE_LAB</BuildingType>
+				<BuildingType>BUILDING_LUNAR_OBSERVATORY</BuildingType>
 			</PrereqOrBuildings>
 			<Flavors>
 				<Flavor>

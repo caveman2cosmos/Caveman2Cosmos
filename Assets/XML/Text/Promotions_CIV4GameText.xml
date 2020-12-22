@@ -349,12 +349,14 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_DISEASE_CONTROL</Tag>
 		<English>Build Up (Disease Control) Promotion Line</English>
 		<French>Spécialisation Contrôle sanitaire</French>
+		<German>(Training) Krankheitsbekämpfung</German>
 		<Polish>Linia Promocji: Koncentracja (Kontrola chorób)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_DISEASE_CONTROL_HELP</Tag>
 		<English>Each Round spent building up Disease Control improves the unit's ability to [COLOR_HIGHLIGHT_TEXT]Reduce Disease[COLOR_REVERT] in the city and tile that the unit is on, up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
 		<French>A chaque tour la Spécialisation Contrôle Sanitaire réduit [COLOR_HIGHLIGHT_TEXT]les maladies[COLOR_REVERT] dans la ville et la case où se trouve l'unité, avec un bonus maximum au bout de 5 tours.</French>
+		<German>Durch Training in Krankheitsbekämpfung kann die Einheit die [COLOR_HIGHLIGHT_TEXT]Krankheitsrate[COLOR_REVERT] der Stadt oder des Feldes, auf dem sie sich befindet, reduzieren.</German>
 		<Polish>Each Round spent building up Disease Control improves the unit's ability to [COLOR_HIGHLIGHT_TEXT]Reduce Disease[COLOR_REVERT] in the city and tile that the unit is on, up to a limit of 5 rounds for maximum bonus of -15 Disease, provided each promotion level is qualified for by the unit.</Polish>
 	</TEXT>
 	<TEXT>
@@ -383,12 +385,14 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FIELD_HOSPITAL</Tag>
 		<English>Build Up (Field Hospital) Promotion Line</English>
 		<French>Spécialisation Hôpital de campagne</French>
+		<German>(Training) Feldlazarett</German>
 		<Polish>Linia Promocji: Koncentracja (Szpital polowy)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FIELD_HOSPITAL_HELP</Tag>
 		<English>Each Round spent building up Field Hospital improves the unit's [COLOR_HIGHLIGHT_TEXT]People Healing Ability[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
 		<French>A chaque tour la Spécialisation hôpital de campagne augmente [COLOR_HIGHLIGHT_TEXT]la capacité de soins pour les humains[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
+		<German>Die Feldlazarett-Ausbildung steigert die Fähigkeit der Einheit, [COLOR_HIGHLIGHT_TEXT]Personen zu heilen[COLOR_REVERT].</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FIELD_MECHANIC</Tag>
@@ -405,12 +409,14 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FIELD_VET</Tag>
 		<English>Build Up (Field Veterinarian) Promotion Line</English>
 		<French>Spécialisation Vétérinaire de terrain</French>
+		<German>(Training) Feldveterinär</German>
 		<Polish>Linia Promocji: Koncentracja (Polowy weterynarz)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FIELD_VET_HELP</Tag>
 		<English>Each Round spent building up Field Veterinarian improves the unit's [COLOR_HIGHLIGHT_TEXT]Animal Healing Ability[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
 		<French>A chaque tour la Spécialisation Vétérinaire de campagne augmente [COLOR_HIGHLIGHT_TEXT]la capacité de soins des Animaux[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
+		<German>Die Ausbildung als Feldveterinär steigert die Fähigkeit der Einheit, [COLOR_HIGHLIGHT_TEXT]Tiere zu heilen[COLOR_REVERT].</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FORTIFY</Tag>
@@ -446,7 +452,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_INSPECTIONS_HELP</Tag>
 		<English>Each round spent building up Inspections, the unit gains +.2% [COLOR_HIGHLIGHT_TEXT]Investigation[COLOR_REVERT] (to aid in catching local criminals) up to a maximum bonus of +1.0, provided each promotion level is qualified for by the unit.</English>
 		<French>Pour chaque tour passé en Spécialisation Ruse, l'unité gagne +0.2% [COLOR_HIGHLIGHT_TEXT]d'Investigation[COLOR_REVERT] (pour l'aider à capturer des criminels locaux), jusqu'à un maximum de +1, et ceci procuré pour chaque niveau de promotion que peut avoir l'unité.</French>
-		<German>Das Training in Überprüfung steigert den [COLOR_HIGHLIGHT_TEXT]Ermittlungserfolg[COLOR_REVERT] bei der Jagd auf kriminelle Subjekte um 0,2% pro Runde (maximal 1%).</German>
+		<German>Das Training in Überprüfung steigert den [COLOR_HIGHLIGHT_TEXT]Ermittlungserfolg[COLOR_REVERT] bei der Jagd auf kriminelle Subjekte um 0,2 % pro Runde (maximal 1 %).</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT</Tag>
@@ -822,6 +828,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_DISEASE_CONTROL</Tag>
 		<English>Disease Control Promotion Line</English>
 		<French>Spécialisation Controle de maladies</French>
+		<German>Krankheitsbekämpfung</German>
 		<Italian>Controllo malattie</Italian>
 		<Polish>Linia Promocji: Kontrola Chorób</Polish>
 	</TEXT>
@@ -4129,30 +4136,35 @@
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL1</Tag>
 		<English>Build Up (Disease Control) I</English>
 		<French>Retranchement (Contrôle sanitaire) I</French>
+		<German>(Training) Krankheitsbekämpfung I</German>
 		<Polish>Koncentracja (Walka z chorobami) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL2</Tag>
 		<English>Build Up (Disease Control) II</English>
 		<French>Retranchement (Contrôle sanitaire) II</French>
+		<German>(Training) Krankheitsbekämpfung II</German>
 		<Polish>Koncentracja (Walka z chorobami) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL3</Tag>
 		<English>Build Up (Disease Control) III</English>
 		<French>Retranchement (Contrôle sanitaire) III</French>
+		<German>(Training) Krankheitsbekämpfung III</German>
 		<Polish>Koncentracja (Walka z chorobami) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL4</Tag>
 		<English>Build Up (Disease Control) IV</English>
 		<French>Retranchement (Contrôle sanitaire) IV</French>
+		<German>(Training) Krankheitsbekämpfung IV</German>
 		<Polish>Koncentracja (Walka z chorobami) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_DISEASE_CONTROL5</Tag>
 		<English>Build Up (Disease Control) V</English>
 		<French>Retranchement (Contrôle sanitaire) V</French>
+		<German>(Training) Krankheitsbekämpfung V</German>
 		<Polish>Koncentracja (Walka z chorobami) V</Polish>
 	</TEXT>
 	<TEXT>
@@ -4219,30 +4231,35 @@
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_HOSPITAL1</Tag>
 		<English>Build Up (Field Hospital) I</English>
 		<French>Retranchement (Hopital de campagne) I</French>
+		<German>(Training) Feldlazarett I</German>
 		<Polish>Koncentracja (Szpital Polowy) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_HOSPITAL2</Tag>
 		<English>Build Up (Field Hospital) II</English>
 		<French>Retranchement (Hopital de campagne) II</French>
+		<German>(Training) Feldlazarett II</German>
 		<Polish>Koncentracja (Szpital Polowy) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_HOSPITAL3</Tag>
 		<English>Build Up (Field Hospital) III</English>
 		<French>Retranchement (Hopital de campagne) III</French>
+		<German>(Training) Feldlazarett III</German>
 		<Polish>Koncentracja (Szpital Polowy) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_HOSPITAL4</Tag>
 		<English>Build Up (Field Hospital) IV</English>
 		<French>Retranchement (Hopital de campagne) IV</French>
+		<German>(Training) Feldlazarett IV</German>
 		<Polish>Koncentracja (Szpital Polowy) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_HOSPITAL5</Tag>
 		<English>Build Up (Field Hospital) V</English>
 		<French>Retranchement (Hopital de campagne) V</French>
+		<German>(Training) Feldlazarett V</German>
 		<Polish>Koncentracja (Szpital Polowy) V</Polish>
 	</TEXT>
 	<TEXT>
@@ -4279,30 +4296,35 @@
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_VET1</Tag>
 		<English>Build Up (Field Veterinarian) I</English>
 		<French>Retranchement (Vétérinaire de campagne) I</French>
+		<German>(Training) Feldveterinär I</German>
 		<Polish>Koncentracja (Weterynarz Polowy) I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_VET2</Tag>
 		<English>Build Up (Field Veterinarian) II</English>
 		<French>Retranchement (Vétérinaire de campagne) II</French>
+		<German>(Training) Feldveterinär II</German>
 		<Polish>Koncentracja (Weterynarz Polowy) II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_VET3</Tag>
 		<English>Build Up (Field Veterinarian) III</English>
 		<French>Retranchement (Vétérinaire de campagne) III</French>
+		<German>(Training) Feldveterinär III</German>
 		<Polish>Koncentracja (Weterynarz Polowy) III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_VET4</Tag>
 		<English>Build Up (Field Veterinarian) IV</English>
 		<French>Retranchement (Vétérinaire de campagne) IV</French>
+		<German>(Training) Feldveterinär IV</German>
 		<Polish>Koncentracja (Weterynarz Polowy) IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FIELD_VET5</Tag>
 		<English>Build Up (Field Veterinarian) V</English>
 		<French>Retranchement (Vétérinaire de campagne) V</French>
+		<German>(Training) Feldveterinär V</German>
 		<Polish>Koncentracja (Weterynarz Polowy) V</Polish>
 	</TEXT>
 	<TEXT>
@@ -6357,13 +6379,6 @@
 		<German>Ozeanien</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CULTURE_PILLAGE_TEXT</Tag>
-		<English>[ICON_BULLET]Pillages [ICON_CULTURE] in addition to [ICON_GOLD]</English>
-		<French>[ICON_BULLET]Récupère de la [ICON_CULTURE] en plus de l'[ICON_GOLD] lors des pillages</French>
-		<Spanish>[ICON_BULLET]Saquea [ICON_CULTURE] además de [ICON_GOLD]</Spanish>
-		<Polish>[ICON_BULLET]Plądrowanie [ICON_CULTURE] oprócz [ICON_GOLD]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_SOUTH_AMERICAN</Tag>
 		<English>South American</English>
 		<French>Sud-américain</French>
@@ -6734,6 +6749,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Krankheitsbekämpfung I</German>
 		<Italian>
 			<Text>Controllo malattie I</Text>
 			<Gender>Male</Gender>
@@ -6754,6 +6770,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Krankheitsbekämpfung X</German>
 		<Italian>
 			<Text>Controllo malattie X</Text>
 			<Gender>Male</Gender>
@@ -6774,6 +6791,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Krankheitsbekämpfung II</German>
 		<Italian>
 			<Text>Controllo malattie II</Text>
 			<Gender>Male</Gender>
@@ -6794,6 +6812,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Krankheitsbekämpfung III</German>
 		<Italian>
 			<Text>Controllo malattie III</Text>
 			<Gender>Male</Gender>
@@ -6814,6 +6833,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Krankheitsbekämpfung IV</German>
 		<Italian>
 			<Text>Controllo malattie IV</Text>
 			<Gender>Male</Gender>
@@ -6834,6 +6854,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Krankheitsbekämpfung V</German>
 		<Italian>
 			<Text>Controllo malattie V</Text>
 			<Gender>Male</Gender>
@@ -6854,6 +6875,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Krankheitsbekämpfung VI</German>
 		<Italian>
 			<Text>Controllo malattie VI</Text>
 			<Gender>Male</Gender>
@@ -6874,6 +6896,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Krankheitsbekämpfung VII</German>
 		<Italian>
 			<Text>Controllo malattie VII</Text>
 			<Gender>Male</Gender>
@@ -6894,6 +6917,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Krankheitsbekämpfung VIII</German>
 		<Italian>
 			<Text>Controllo malattie VIII</Text>
 			<Gender>Male</Gender>
@@ -6914,6 +6938,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Krankheitsbekämpfung IX</German>
 		<Italian>
 			<Text>Controllo malattie IX</Text>
 			<Gender>Male</Gender>
@@ -17104,7 +17129,7 @@
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_LEECH</Tag>
 		<English>Way of the Leech</English>
 		<French>Voie de la Goule</French>
-		<German>Weg des Blutsaugers</German>
+		<German>Weg des Blutegels</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_SHADOWS</Tag>

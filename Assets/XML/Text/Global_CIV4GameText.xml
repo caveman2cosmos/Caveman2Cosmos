@@ -7296,7 +7296,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_ENEMY_UNIT_WITHDRAW</Tag>
 		<English>A %s1_EnUName has withdrawn from combat with your %s2_UnitName!</English>
 		<French>[NUM1:Le:La:Les:Les] %s1_EnUName [NUM1:ennemi a:ennemie a:ennemis ont:ennemies ont] fui le combat face à [NUM2:votre:votre:vos:vos] %s2_UnitName!</French>
-		<German>[COLOR_POSITIVE_TEXT][NUM1:Euer:Eure:Euer:Eure:Eure:Eure] %s2:1_UnitName [NUM1:hat:haben] [NUM2:einen:eine:ein:einige:einige:einige] [NUM1:feindlichen:feindliche:feindliches:feindliche:feindliche:feindliche] %s1:4_EnUName zum Rückzug gezwungen![COLOR_REVERT]</German>
+		<German>[COLOR_POSITIVE_TEXT][NUM2:Euer:Eure:Euer:Eure:Eure:Eure] %s2:1_UnitName [NUM2:hat:haben] [NUM1:einen:eine:ein:einige:einige:einige] [NUM1:feindlichen:feindliche:feindliches:feindliche:feindliche:feindliche] %s1:4_EnUName zum Rückzug gezwungen![COLOR_REVERT]</German>
 		<Italian>L'unità nemica %s1_EnUName si è ritirata dal combattimento contro l'unità nemica %s2_UnitName!</Italian>
 		<Spanish>[NUM1:Un:Una:Unos:Unas] %s1_EnUName se [NUM1:ha:ha:han:han] retirado del combate contra [NUM2:vuestro:vuestra:vuestros:vuestras] %s2_UnitName.</Spanish>
 		<Polish>%s1_EnUName uciekł z pola walki walcząc z Twoim %s2_UnitName!</Polish>
@@ -8819,6 +8819,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_STEALTH_ATTACK</Tag>
 		<English>A %s1_PlyrName %s2_UnitName has taken your %s3_UnitName by surprise!</English>
 		<French>[NUM2:un:une:des:des] %s2_UnitName de %s1_PlyrName [NUM2:a:a:ont:ont] pris [NUM3:votre:votre:vos:vos] %s3_UnitName par surprise !</French>
+		<German>[NUM2:Ein:Eine:Ein:Mehrere:Mehrere:Mehrere] %s2_UnitName (%s1_PlyrName) [NUM2:hat:haben] [NUM3:Euren:Eure:Euer:Eure:Eure:Eure] %s3_UnitName überrascht!</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_STEALTH_ATTACK_OWNER</Tag>
@@ -9579,11 +9580,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MOD_DCN_ALLIANCE</Tag>
-		<English>Alliance</English>
-		<German>Allianz</German>
-		<Italian>alleanza</Italian>
-		<Spanish>Alianza</Spanish>
-		<Polish>Sojusz</Polish>
+		<English> Alliance</English>
+		<German>ne Allianz</German>
+		<Italian> alleanza</Italian>
+		<Spanish> Alianza</Spanish>
+		<Polish> Sojusz</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MOD_DCN_ARABIAN_MATCH</Tag>
@@ -9806,6 +9807,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MOD_DCN_NEWCIV_NAME_DESC</Tag>
 		<English>Your civilization is now known as the %s1</English>
 		<French>Votre civilization a un nouveau nom: %s1</French>
+		<German>Eure Zivilisation nennt sich jetzt: %s1</German>
 		<Italian>La tua civiltà è ora conosciuta come %s1</Italian>
 		<Spanish>Ahora tu civilización es conocida como %s1.</Spanish>
 		<Polish>Twoja cywilizacja jest znana teraz jako %s1</Polish>
@@ -10111,7 +10113,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MOD_DCN_TRIBE</Tag>
 		<English>%s Tribe</English>
 		<French>Tribu %s</French>
-		<German>%s Stamm</German>
+		<German>%ser Stamm</German>
 		<Italian>Tribù %s</Italian>
 		<Spanish>Tribu %s:2</Spanish>
 		<Polish>Plemię %s</Polish>

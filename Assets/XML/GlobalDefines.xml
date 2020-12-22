@@ -1795,14 +1795,15 @@
 		<iDefineIntVal>300</iDefineIntVal>
 	</Define>
 	<!-- AI Gold Slider Safety Percent
-	This is the BASE amount of slider allocation required towards gold that the AI feels comfortable with.
+	This is the BASE income to expense ratio that the AI feels comfortable with.
+	e.g. a value of 10 would mean that the AI feels confortable if their net income is only 10% of gross income.
 	It noteworthily affects how much tolerance the AI has where it feels ready to grow.
-	Reduce to make the AI more sensitive to gold concerns and increase for more reckless behavior.
+	Increase to make the AI more sensitive to gold concerns and reduce for more reckless behavior.
 	This may be rather interesting to convert to an AI personality matter or at least give a personality based modifier eventually
 	Original Value: 50 -->
 	<Define>
-		<DefineName>SAFE_GOLD_PERCENT</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
+		<DefineName>SAFE_PROFIT_MARGIN_BASE_PERCENT</DefineName>
+		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MORE_XP_TO_LEVEL_MODIFIER</DefineName>

@@ -269,18 +269,9 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_OUTER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_TRANSNEPTUNIAN</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
+				<BuildingType>BUILDING_SOLAR_ARRAY_OUTER</BuildingType>
+				<BuildingType>BUILDING_SOLAR_ARRAY_TRANSNEPTUNIAN</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>

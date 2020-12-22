@@ -1591,84 +1591,28 @@ void CvMap::calculateAreas()
 }
 
 
-//int CvMap::percentUnoccupiedLand(bool bExcludeWater, bool bIncludeBarbarian, bool bExcludePeaks, CvArea* pArea, int iRange, CvPlot* pRangeFromPlot)
-//{
-//	int iNumTiles = 0;
-//	int iNumTilesValid = 0;
-//	for (int iI = 0; iI < numPlots(); iI++)
-//	{
-//		const CvPlot* pLoopPlot = plotByIndex(iI);
-//		if (!pLoopPlot->isWater() || !bExcludeWater)
-//		{
-//			if (pArea == NULL || pLoopPlot->area() == pArea)
-//			{
-//				if (!pLoopPlot->isAsPeak() || !bExcludePeaks)
-//				{
-//					if ((iRange == -1 || pRangeFromPlot == NULL) || (plotDistance(pLoopPlot->getX(), pLoopPlot->getY(), pRangeFromPlot->getX(), pRangeFromPlot->getY()) <= iRange))
-//					{
-//						iNumTiles++;
-//						if (pLoopPlot->getOwner() == NO_PLAYER || (bIncludeBarbarian && pLoopPlot->isHominid()))
-//						{
-//							iNumTilesValid++;
-//						}
-//					}
-//				}
-//			}
-//		}
-//	}
-//	if (iNumTiles > 0)
-//	{
-//		logging::logMsg("C2C.log", "%d Tiles were in %d Range, out of %d total in range tiles\n", iNumTilesValid, iRange, iNumTiles);
-//		return (iNumTilesValid * 100) / iNumTiles;
-//	}
-//	return 0;
-//}		
-
 void CvMap::toggleCitiesDisplay()
 {
+	m_bCitiesDisplayed = !m_bCitiesDisplayed;
+
 	gDLL->getInterfaceIFace()->clearSelectedCities();
-	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
+	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 	{
-		CvPlayer& kPlayer = GET_PLAYER((PlayerTypes) iPlayer);
+		const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes) iI);
 		if (kPlayer.isAlive())
 		{
-			int iI = 0;
 			foreach_(CvCity* pCity, kPlayer.cities())
 			{
-				iI++;
-				//if (iI > 1)
-				//	break;
-
-				if (m_bCitiesDisplayed)
-				{
-					//pCity->removeEntity();
-					//pCity->destroyEntity();
-					//pCity->plot()->setPlotCity(NULL);
-					//CvWString szBuffer = "Destroying: ";
-					//szBuffer.append(pCity->getName());
-					//AddDLLMessage(GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
-					//pCity->killTestCheap();
-					pCity->setVisible(false);
-				}
-				else
-				{
-					//pCity->createCityEntity(pCity);
-					//pCity->setupGraphical();
-					//pCity->plot()->setPlotCity(pCity);
-					pCity->setVisible(true);
-				}
+				pCity->setVisible(m_bCitiesDisplayed);
 			}
 		}
 	}
-	//gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-	m_bCitiesDisplayed = !m_bCitiesDisplayed;
-	CvWString szBuffer = "City entities hidden";
-	if (m_bCitiesDisplayed)
-		szBuffer = "City entities visible";
-
 	MEMORY_TRACK_EXEMPT();
-
-	AddDLLMessage(GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
+	AddDLLMessage(
+		GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(),
+		m_bCitiesDisplayed ? "City entities visible" : "City entities hidden",
+		"AS2D_EXPOSED", MESSAGE_TYPE_INFO
+	);
 }
 
 void CvMap::toggleUnitsDisplay()

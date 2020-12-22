@@ -167,8 +167,8 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Gezaehmter Loewe:Gezaehmter Loewe:Gezaehmter Loewe:Gezaehmter Loewe:Gezaehmte Loewen:Gezaehmte Loewen:Gezaehmte Loewen:Gezaehmte Loewen</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Text>Gezähmter Löwe:Gezähmten Löwen:Gezähmten Löwen:Gezähmten Löwen:Gezähmte Löwen:Gezähmten Löwen:Gezähmten Löwen:Gezähmten Löwen</Text>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -222,8 +222,8 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Gezaehmter Panther:Gezaehmter Panther:Gezaehmter Panther:Gezaehmter Panther:Gezaehmte Panther:Gezaehmte Panther:Gezaehmte Panther:Gezaehmte Panther</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Text>Gezähmter Panther:Gezähmten Panthers:Gezähmten Panther:Gezähmten Panther:Gezähmte Panther:Gezähmten Panther:Gezähmten Panthern:Gezähmten Panther</Text>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -247,8 +247,8 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Gezaehmter Wolf:Gezaehmter Wolf:Gezaehmter Wolf:Gezaehmter Wolf:Gezaehmte Woelfe:Gezaehmte Woelfe:Gezaehmte Woelfe:Gezaehmte Woelfe</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Text>Gezähmter Wolf:Gezähmten Wolfes:Gezähmten Wolf:Gezähmten Wolf:Gezähmte Wölfe:Gezähmten Wölfe:Gezähmten Wölfen:Gezähmten Wölfe</Text>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>

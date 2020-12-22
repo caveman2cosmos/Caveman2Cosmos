@@ -316,13 +316,6 @@
 		<Polish>Czym większa infrastuktura niewolnicza tym większe pieniądze.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MSG_FREED_SLAVES_AS_GATHERERS</Tag>
-		<English>%d1 Slaves have been freed in %s1.</English>
-		<French>%d1 esclaves ont été libérés à %s1.</French>
-		<Italian>%d1 schaivi sono stati liberati a %s1.</Italian>
-		<Polish>%d1 niewolników zostało sprzedanych w %s1.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MSG_NO_SLAVERY</Tag>
 		<English>Your nation has banned slavery.</English>
 		<French>Votre nation a banni l'esclavage.</French>

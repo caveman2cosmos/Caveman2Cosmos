@@ -225,7 +225,8 @@ public:
 	DllExport bool hasBusyUnit() const;
 
 	bool isChoosingFreeTech() const;
-	void setChoosingFreeTech(bool bValue);
+	void startChoosingFreeTech();
+	void endChoosingFreeTech();
 	void chooseTech(int iDiscover = 0, CvWString szText = CvWString(), bool bFront = false);
 
 	int calculateScore(bool bFinal = false, bool bVictory = false) const;
@@ -1893,7 +1894,7 @@ protected:
 
 	int m_bDoNotBotherStatus;
 
-	bool m_bChoosingFreeTech;
+	int m_iChoosingFreeTech;
 
 	PlayerTypes m_eID;
 	LeaderHeadTypes m_ePersonalityType;

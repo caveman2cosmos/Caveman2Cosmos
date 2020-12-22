@@ -1,14 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_ABATIS_THORN_HEDGE</Tag>
-		<English>Build [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abatis[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abattis[\LINK]</French>
-		<Italian>Costruisci un'[LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]abbattuta[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abatis con cerco espinoso[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Zasieki[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_ABATIS_THORN_HEDGE_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abatis[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abattis[\LINK]</French>
@@ -336,8 +328,8 @@
 		<Polish>[LINK=IMPROVEMENT_FOSSIL_DIG_SITE]Kop Skamieniałości[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP</Tag>
-		<English>Build [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Fruit Gathering Camp[\LINK]</English>
+		<Tag>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Fruit Gathering Camp[\LINK] (Consumed)</English>
 		<French>Installer un [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Camp de Récolte de Fruits[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Früchte sammeln[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]campo di raccolta di frutti[\LINK]</Italian>
@@ -371,8 +363,8 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Zakład Geotermalny[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP</Tag>
-		<English>Build [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Grape Gathering Camp[\LINK]</English>
+		<Tag>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Grape Gathering Camp[\LINK] (Consumed)</English>
 		<French>Installer un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Camp de récolte de Raisins[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Trauben sammeln[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]campo di raccolta di uva[\LINK]</Italian>
@@ -419,7 +411,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HARVEST_KELP</Tag>
-		<English>[LINK=IMPROVEMENT_HARVEST_KELP]Harvest the Kelp[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_HARVEST_KELP]Kelp Harvester[\LINK]</English>
 		<French>[LINK=IMPROVEMENT_HARVEST_KELP]Récolter les Algues[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_HARVEST_KELP]Ernte Seetang[\LINK]</German>
 		<Italian>[LINK=IMPROVEMENT_HARVEST_KELP]Raccogli il Kelp[\LINK]</Italian>
@@ -428,7 +420,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HARVEST_KELP_KILL</Tag>
-		<English>[LINK=IMPROVEMENT_HARVEST_KELP]Harvest the Kelp[\LINK] (Consumed)</English>
+		<English>[LINK=IMPROVEMENT_HARVEST_KELP]Harvest Kelp[\LINK] (Consumed)</English>
 		<French>[LINK=IMPROVEMENT_HARVEST_KELP]Récolter les Algues[\LINK] (Détruit)</French>
 		<German>[LINK=IMPROVEMENT_HARVEST_KELP]Ernte Seetang[\LINK] (Consumed)</German>
 		<Italian>[LINK=IMPROVEMENT_HARVEST_KELP]Raccogli il Kelp[\LINK] (Consumed)</Italian>
@@ -659,8 +651,8 @@
 		<Polish>Zbudu [LINK=IMPROVEMENT_NATURE_PRESERVE]Rezerwat[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_NOMADIC_HERD</Tag>
-		<English>Build [LINK=IMPROVEMENT_NOMADIC_HERD]Nomadic Herd[\LINK]</English>
+		<Tag>TXT_KEY_BUILD_NOMADIC_HERD_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_NOMADIC_HERD]Nomadic Herd[\LINK] (Consumed)</English>
 		<French>Construire une [LINK=IMPROVEMENT_NOMADIC_HERD]Harde Nomade[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_NOMADIC_HERD]Nomadenherde[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_NOMADIC_HERD]Pascolo nomade[\LINK]</Italian>
@@ -720,8 +712,8 @@
 		<Polish>Zbuduj Gaj Bambusowy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_PLANT_GATHERING_CAMP</Tag>
-		<English>Build [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Plant Gathering Camp[\LINK]</English>
+		<Tag>TXT_KEY_BUILD_PLANT_GATHERING_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Plant Gathering Camp[\LINK] (Consumed)</English>
 		<French>Installer un [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Camp de récolte[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Nützliche Pflanzen sammeln[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]campo di raccolta di piante[\LINK]</Italian>
@@ -832,8 +824,8 @@
 		<Polish>Czyściciel Wody</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SCAVENGING_CAMP</Tag>
-		<English>Build [LINK=IMPROVEMENT_SCAVENGING_CAMP]Scavenging Camp[\LINK]</English>
+		<Tag>TXT_KEY_BUILD_SCAVENGING_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_SCAVENGING_CAMP]Scavenging Camp[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_SCAVENGING_CAMP]Camp de Récupérateur[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_SCAVENGING_CAMP]Lager der Aasverwerter[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_SCAVENGING_CAMP]Campo degli spazzini[\LINK]</Italian>
@@ -1210,8 +1202,8 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Drewnianą Wieżę Obserwacyjną[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_WOOD_GATHERER</Tag>
-		<English>[LINK=IMPROVEMENT_WOOD_GATHERER]Gather Wood[\LINK]</English>
+		<Tag>TXT_KEY_BUILD_WOOD_GATHERER_KILL</Tag>
+		<English>[LINK=IMPROVEMENT_WOOD_GATHERER]Gather Wood[\LINK] (Consumed)</English>
 		<French>[LINK=IMPROVEMENT_WOOD_GATHERER]Récolter du bois[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_WOOD_GATHERER]Holz sammeln[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_WOOD_GATHERER]Raccoglitore di legno[\LINK]</Italian>

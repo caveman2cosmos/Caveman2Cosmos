@@ -49,30 +49,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_HOUSE_ERA1_MDHW</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_HOUSE_ERA2_MDHW</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-					<PrereqOrBuilding>
+				<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA1_MDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSE_ERA2_MDHW</BuildingType>
 					<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
 		       </PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
