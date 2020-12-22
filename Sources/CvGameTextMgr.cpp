@@ -36879,22 +36879,22 @@ void CvGameTextMgr::getGlobeLayerName(GlobeLayerTypes eType, int iOption, CvWStr
 		switch(iOption)
 		{
 		case SHOW_RESOURCES_ALL:
-			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_ALL");
+			strName = gDLL->getText("TXT_KEY_ALL_RESOURCES");
 			break;
 		case SHOW_RESOURCES_STRATEGIC:
-			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_STRATEGIC");
+			strName = gDLL->getText("TXT_KEY_STRATEGIC");
 			break;
 		case SHOW_RESOURCES_LUXURY:
-			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_LUXURY");
+			strName = gDLL->getText("TXT_KEY_LUXURY");
 			break;
 		case SHOW_RESOURCES_PRODUCTION:
-			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_PRODUCTION");
+			strName = gDLL->getText("TXT_KEY_PRODUCTION");
 			break;
 		case SHOW_RESOURCES_GROWTH:
-			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_GROWTH");
+			strName = gDLL->getText("TXT_KEY_GROWTH");
 			break;
 		case SHOW_RESOURCES_MISC:
-			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_MISC");
+			strName = gDLL->getText("TXT_KEY_MISC");
 			break;
 		}
 		break;
@@ -37514,7 +37514,7 @@ void CvGameTextMgr::getCityDataForAS(std::vector<CvWBData>& mapCityList, std::ve
 	int iCost = kActivePlayer.getAdvancedStartCityCost(true);
 	if (iCost > 0)
 	{
-		szHelp = gDLL->getText("TXT_KEY_CITY");
+		szHelp = gDLL->getText("TXT_WORD_CITY");
 		szHelp += gDLL->getText("TXT_KEY_AS_UNREMOVABLE");
 		mapCityList.push_back(CvWBData(0, szHelp, ARTFILEMGR.getInterfaceArtInfo("INTERFACE_BUTTONS_CITYSELECTION")->getPath()));
 	}
@@ -38388,22 +38388,22 @@ void CvGameTextMgr::getGameObjectName(CvWString &szString, GameObjectTypes eObje
 	switch (eObject)
 	{
 		case GAMEOBJECT_GAME:
-			szString.append(gDLL->getText("TXT_KEY_GAMEOBJECT_GAME"));
+			szString.append(gDLL->getText("TXT_WORD_GAME"));
 			break;
 		case GAMEOBJECT_TEAM:
-			szString.append(gDLL->getText("TXT_KEY_GAMEOBJECT_TEAM"));
+			szString.append(gDLL->getText("TXT_WORD_TEAM"));
 			break;
 		case GAMEOBJECT_PLAYER:
-			szString.append(gDLL->getText("TXT_KEY_GAMEOBJECT_PLAYER"));
+			szString.append(gDLL->getText("TXT_WORD_PLAYER"));
 			break;
 		case GAMEOBJECT_CITY:
-			szString.append(gDLL->getText("TXT_KEY_GAMEOBJECT_CITY"));
+			szString.append(gDLL->getText("TXT_WORD_CITY"));
 			break;
 		case GAMEOBJECT_UNIT:
-			szString.append(gDLL->getText("TXT_KEY_GAMEOBJECT_UNIT"));
+			szString.append(gDLL->getText("TXT_WORD_UNIT"));
 			break;
 		case GAMEOBJECT_PLOT:
-			szString.append(gDLL->getText("TXT_KEY_GAMEOBJECT_PLOT"));
+			szString.append(gDLL->getText("TXT_WORD_PLOT"));
 			break;
 	}
 }

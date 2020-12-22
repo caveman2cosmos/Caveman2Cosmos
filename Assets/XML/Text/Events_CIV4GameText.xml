@@ -5,16 +5,16 @@
 		<English>The %s1_civ_adjective empire's response to the football violence has been inadequate and we have declared war on them!</English>
 		<French>La réponse de l'empire des %s1:3_civ_adjective à la violence après le match de football a été insatisfaisante et nous leur avons déclaré la guerre!</French>
 		<German>Die Antwort des %s1_civ_adjective Reiches zur Fußballgewalttätigkeit ist unzulänglich gewesen und wir haben ihnen den Krieg erklärt!</German>
-		<Italian>La risposta dell'impero %s1_civ_adjective alle violenze durante la partita di calcio è stata inadeguata, e quindi dichiariamo guerra!</Italian>
+		<Italian>La risposta dell'impero %s1_civ_adjective alle violenze durante la partita di calcio è stata inadeguata e quindi dichiariamo guerra!</Italian>
 		<Spanish>¡La respuesta del imperio %s1_civ_adjective a la violencia por el fútbol no ha sido la adecuada, por tanto les hemos declarado la guerra!</Spanish>
 		<Polish>Odpowiedź imperium %s1_civ_adjective na zamieszki po meczu, była nieadekwatna do sytuacji i wypowiedzieliśmy im wojnę!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTOTHER_FUTBOL_WAR_2</Tag>
 		<English>The %s1_civ_adjective government has apologized and is giving compensation to us for the lives lost during the recent violence.</English>
-		<French>Le gouvernement %s1_civ_adjective nous a présenté des excuses et a promi d'indemniser les victimes des récentes émeutes et leurs familles.</French>
+		<French>Le gouvernement %s1_civ_adjective s'est excusé et nous accorde une compensation pour les vies perdues lors des récentes violences.</French>
 		<German>Die %s1_civ_adjective Regierung hat sich entschuldigt und uns einen Ausgleich für die Leben, die während der neuen Gewalttätigkeiten verlorengegangen sind.</German>
-		<Italian>Il governo %s1_civ_adjective si è scusato e ci invia un indennizzo per le vite perse durante la recente partita di calcio tra le nostre due nazionali.</Italian>
+		<Italian>Il governo %s1_civ_adjective si è scusato e ci ha inviato un indennizzo per le vittime delle recenti violenze.</Italian>
 		<Spanish>El gobierno %s1_civ_adjective se ha disculpado y nos concede una indemnización para las víctimas del reciente brote de violencia.</Spanish>
 		<Polish>Rząd %s1_civ_adjective przeprasza i ofiaruje rekompensatę za poniesione ofiary w tych brutalnych zamieszkach po zakończonym meczu.</Polish>
 	</TEXT>
@@ -23,7 +23,7 @@
 		<English>Tensions have increased between us and the %s1_civ_adjective government due to their intransigence in the "Football Affair".</English>
 		<French>Les tensions ont augmenté entre notre administration et le gouvernement %s1_civ_adjective dû à leur intransigeance dans l'"affaire du football".</French>
 		<German>Spannungen haben sich zwischen uns und der %s1_civ_adjective Regierung wegen ihrer Unnachgiebigkeit in der "Fußball-Angelegenheit" erhöht.</German>
-		<Italian>La tensione è aumentata tra noi e il governo %s1_civ_adjective per la loro intransigenza in questo "Affare di calcio".</Italian>
+		<Italian>La tensione è aumentata tra noi e il governo %s1_civ_adjective per la loro intransigenza in questo "affare di calcio".</Italian>
 		<Spanish>Las tensiones con el gobierno %s1_civ_adjective han aumentado debido a su intransigencia con el "problema del fútbol".</Spanish>
 		<Polish>Wzrosło napięcie pomiędzy nami a rządem %s1_civ_adjective przez ich upór w "Aferze Piłkarskiej".</Polish>
 	</TEXT>
@@ -1842,15 +1842,15 @@
 		<Tag>TXT_KEY_EVENT_BARBARIAN_ATTITUDE_2</Tag>
 		<English>You say they are demanding that we change our attitude? Go on with it. We won't change anything just because they don't like it.</English>
 		<French>Vous dites qu'ils veulent un changement d'attitude? Rien du tout. On ne change pas juste parce que cela ne leur plait pas.</French>
-		<Italian>Dici che ci chiedono un cambiamento di atteggiamnto? Continua così. Non cambieremo solo perchè loro ci chiedono di farlo.</Italian>
+		<Italian>Quindi ci chiedono un cambiamento di atteggiamento? Continueremo così, invece. Non cambieremo solo perché loro ci chiedono di farlo.</Italian>
 		<Spanish>¿Dices que nos están exigiendo que cambiemos de actitud? Entonces sigamos con esto. No vamos a cambiar simplemente porque a ellos no les guste.</Spanish>
 		<Polish>Obiecali poprawę? Dobrze ale niech wiedzą że nam się to nie podoba.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BARBARIAN_ATTITUDE_3</Tag>
 		<English>Have they gone mad? Who the hell do they think they are to tell us what we must do? Let's send some Barbarian units to pillage their land. That will teach them a good lesson!</English>
-		<French>Ils ne sont pas bien? Ils imaginent pouvoir dicter notre contuite? Envoyez-leur quelques barbares pour piller leurs terres. Nous allons leur donner une bonne leçon!</French>
-		<Italian>Sono diventati matti? Chi diavolo pensano di essere per dirci cosa dobbiamo fare? Mandiamo alcuni barbari a saccheggiare le loro terre. Questo insegnerà loro una buona lezione!</Italian>
+		<French>Ils ne sont pas bien? Ils imaginent pouvoir dicter notre conduite? Envoyez-leur quelques barbares pour piller leurs terres. Nous allons leur donner une bonne leçon!</French>
+		<Italian>Sono diventati matti? Chi diavolo pensano di essere per dirci cosa dobbiamo fare? Mandiamo alcuni barbari a saccheggiare le loro terre, così impareranno la lezione!</Italian>
 		<Spanish>¿Se han vuelto locos? ¿Quién diablos se creen que son para decirnos lo que tenemos que hacer? Mandémosles algunas unidades bárbaras para saquear sus tierras. ¡Eso les dará un buen escarmiento!</Spanish>
 		<Polish>Oszaleliście? Myślą że kim są? Wyślij kilka barbarzyńskich jednostek do plądrowania ich ziem. To ich nauczy!</Polish>
 	</TEXT>
@@ -2091,7 +2091,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BARBARIAN_VENGEANCE_1</Tag>
-		<English>[COLOR_NEGATIVE_TEXT]An unexpected tragedy has occured in our city of %s2_city. All of our food stores have been burned or stolen. Some other improvements might also have been destroyed.[COLOR_REVERT]</English>
+		<English>[COLOR_NEGATIVE_TEXT]An unexpected tragedy has occurred in our city of %s2_city. All of our food stores have been burned or stolen. Some other improvements might also have been destroyed.[COLOR_REVERT]</English>
 		<French>[COLOR_NEGATIVE_TEXT]Une tragédie inattendue s'est produite dans notre ville de %s2_city. Toutes les réserves de nourriture ont été soit volées soit brûlées. d'autres aménagements ont pu également été détruits.[COLOR_REVERT]</French>
 		<Italian>[COLOR_NEGATIVE_TEXT]Una tragedia inaspettata ha colpito la nostra città di %s2_city. Tutte le nostre riserve di cibo sono state rubate o bruciate. Anche alcuni miglioramenti potrebbero essere stati distrutti.[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_NEGATIVE_TEXT]Una tragedia inesperada ha tomado lugar en nuestra ciudad de %s2_city. Se ha perdido todo el alimento almacenado. También podrían haberse destrozado algunas otras mejoras.[COLOR_REVERT]</Spanish>
@@ -2102,7 +2102,7 @@
 		<English>[ICON_BULLET]A dangerous number of barbarian [COLOR_UNIT_TEXT]Warrior[COLOR_REVERT] units have spawned near our border.</English>
 		<French>[ICON_BULLET]Un nombre dangereux de barbarian [COLOR_UNIT_TEXT]Warrior[COLOR_REVERT] sont apparus près de notre frontière.</French>
 		<Italian>[ICON_BULLET]Un pericoloso numero di [COLOR_UNIT_TEXT]Guerrieri[COLOR_REVERT] barbari sono comparsi vicino al nostro confine.</Italian>
-		<Spanish>[ICON_BULLET]Un importante número de [COLOR_UNIT_TEXT]Guerreros[COLOR_REVERT] bárbaros aparecerá cerca de nuestra frontera</Spanish>
+		<Spanish>[ICON_BULLET]Un importante número de [COLOR_UNIT_TEXT]Guerreros[COLOR_REVERT] bárbaros aparecerá cerca de nuestra frontera.</Spanish>
 		<Polish>[ICON_BULLET]Niebezpieczna ilość barbarzyńskich [COLOR_UNIT_TEXT]Wojowników[COLOR_REVERT] pojawi się niedaleko naszych granic.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2262,7 +2262,7 @@
 		<English>Send our congratulations for his work to improve science education.</English>
 		<French>Envoyez nos félicitations pour que son travail améliore l'enseignement de la science.</French>
 		<German>Senden Sie unsere Glückwünsche für seine Leistung, die wissenschaftliche Ausbildung zu verbessern.</German>
-		<Italian>Manda le nostre congratulazioni affinchè il suo lavoro migliori la formazione scientifica.</Italian>
+		<Italian>Manda le nostre congratulazioni affinché il suo lavoro migliori la formazione scientifica.</Italian>
 		<Spanish>Envíad nuestras felicitaciones por su trabajo para mejorar la formación científica.</Spanish>
 		<Polish>Wyślij gratulacje i podziękowania za jego wkład i pracę w polepszaniu edukacji obywateli.</Polish>
 	</TEXT>
@@ -3931,7 +3931,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FUTBOL_WAR</Tag>
 		<English>Our national football team recently lost a championship game to the %s1_civ_adjective team. Several were killed in post-game rioting, including some players from the other team. Their government is holding us responsible for the violence and threatens military action if their "national honor" is not satisfied. Emotions are running HIGH on both sides.</English>
-		<French>Notre équipe nationale du football a récemment perdu un match de championnat contre l'équipe des %s1:3_civ_adjective. Plusieurs Joeurs ont été tués dans une émeute qui a suivi le match, y compris quelques joueurs de l'autre équipe. Leur gouvernement nous juge responsables de la violence et menace de représailles militaires si leur "honneur national" n'est pas satisfait. Ces incidents sont pris très à coeur des deux côtés.</French>
+		<French>Notre équipe nationale du football a récemment perdu un match de championnat contre l'équipe des %s1:3_civ_adjective. Plusieurs joeurs ont été tués dans une émeute qui a suivi le match, y compris quelques joueurs de l'autre équipe. Leur gouvernement nous juge responsables de la violence et menace de représailles militaires si leur "honneur national" n'est pas satisfait. Ces incidents sont pris très à cœur des deux côtés.</French>
 		<German>Unsere nationale Fußballmannschaft verlor vor kurzem ein Meisterschaftspiel gegen die %s1_civ_adjective Mannschaft. In Krawallen nach dem Spiel gab es mehrere Tote, inklusive Spielern der gegnerischen Mannschaft. Ihre Regierung hält uns verantwortlich für die Gewalttätigkeit und bedroht uns mit Militäraktionen, wenn ihre "nationale Ehre" nicht wiederhergestellt wird. Die Emotionen sind erhitzt auf beiden Seiten.</German>
 		<Italian>La nostra nazionale di calcio ha perso la finale mondiale contro la nazionale %s1:2_civ_adjective. Vi sono stati dei morti durante i disordini del dopo partita, tra cui alcuni giocatori dell'altra squadra. Il loro governo ci ritiene responsabili della violenza e minaccia una azione militare se il loro "onore nazionale" non sarà soddisfatto. La rabbia stà montando da entrambe le parti.</Italian>
 		<Spanish>Nuestra selección nacional de fútbol perdió recientemente un partido del campeonato frente a la selección %s1:2_civ_adjective. Hubo varios muertos durante los disturbios de después del partido, incluyendo algunos jugadores del otro equipo. Su gobierno nos está haciendo responsables de la violencia y amenaza con una acción militar si su "honor nacional" no queda satisfecho. La tensión está creciendo en ambos bandos.</Spanish>
@@ -3983,7 +3983,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GAME_MIGRATION_1</Tag>
 		<English>Excellent, our hunters will be overjoyed!</English>
-		<French>Excellent, nos chasseurs vont s'en donner à coeur joie!</French>
+		<French>Excellent, nos chasseurs vont s'en donner à cœur joie!</French>
 		<German>Ausgezeichnet, unsere Jäger werden überglücklich sein!</German>
 		<Italian>Eccellente, i nostri cacciatori ne saranno contenti!</Italian>
 		<Spanish>¡Excelente, nuestros cazadores estarán muy contentos!</Spanish>
@@ -4305,7 +4305,7 @@
 		<English>Forget these tests. Anything worth knowing has already been discovered, so why risk needless death?</English>
 		<French>Au diable les tests! Tout ce qui en vaut la peine à déja été découvert, alors pourquoi risquer des morts inutiles?</French>
 		<German>Riskante Feldversuche kommen nicht in Frage. Wir setzen die Gesundheit von Menschen nicht aufs Spiel.</German>
-		<Italian>Dimentica i test. Tutto ciò che è necessario nel campo medico è già stato scoperto, perchè rischiare decessi inutili?</Italian>
+		<Italian>Dimentica i test. Tutto ciò che è necessario nel campo medico è già stato scoperto, perché rischiare decessi inutili?</Italian>
 		<Spanish>Olvida esas pruebas. Ya se ha descubierto todo lo que necesitamos saber, ¿para qué arriesgarse con pruebas innecesarias?</Spanish>
 		<Polish>Zapomnijcie o tych testach. Cokolwiek wartego odkrycia już dawno zostało odkryte. Po co ryzykować życiem naszych ludzi?</Polish>
 	</TEXT>
@@ -5074,7 +5074,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MICROLITH_BUILDING_LOST_1</Tag>
 		<English>Oh God. Why are people leaving these lands?</English>
-		<Italian>Oh Dio. Perchè la gente se ne va da queste terre?</Italian>
+		<Italian>Oh Dio. Perché la gente se ne va da queste terre?</Italian>
 		<Spanish>Oh Dios... ¿Por qué la gente está dejando estas tierras?</Spanish>
 		<Polish>O nie. Dlaczego ludzie opuszczają te ziemie?</Polish>
 	</TEXT>
@@ -7215,7 +7215,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HAWK_UPGRADE</Tag>
-		<English>One of our Hawkers has developed great skills in trainning Hawks. He says he is willing to help us.</English>
+		<English>One of our Hawkers has developed great skills in training Hawks. He says he is willing to help us.</English>
 		<French>Une de nos fauconniers a développé des compétences en entraînant ses animaux. Il souhaite nous aider.</French>
 		<Italian>Uno dei nostri falconieri ha sviluppato grandi capacità nell'addestramento dei falchi. Dice di volerci aiutare.</Italian>
 		<Spanish>Uno de nuestros halconeros ha desarrollado una gran habilidad en el entrenamiento de Halcones. Dice estar dispuesto a ayudarnos.</Spanish>
@@ -7301,7 +7301,7 @@
 		<English>Factory workers in %s2_city have organized and walked off the job, protesting poor working conditions and demanding a pay increase. Workers in other industries have joined them in solidarity. The entire city will be paralyzed for as long as the general strike continues.</English>
 		<French>Les ouvriers de %s2_city ont organisé des grèves et ont marché dans les rues, protestant contre leurs mauvaises conditions de travail et exigeant une augmentation de salaire. Les ouvriers dans d'autres industries les ont rejoints par solidarité. La ville entière sera paralysée tant que la grève continue.</French>
 		<German>Fabrikarbeiter in %s2_city haben sich organisiert und die Arbeit eingestellt, sie protestieren gegen schlechte Arbeitsbedingungen und verlangen eine Lohnerhöhung. Arbeiter aus anderen Industriezweigen haben sich ihnen solidarisch angeschlossen. Die gesamte Stadt ist so lange gelähmt, wie der Generalstreik anhält.</German>
-		<Italian>Gli operai delle fabbriche di %s2_city si sono organizzati e se ne sono andati dal lavoro, protestando contro le cattive condizioni di lavoro ed chiedendo un aumento del salario. Gli operai di altre industrie si sono uniti a loro per solidarietà. L'intera città sarà paralizzata per finchè lo sciopero generale continuerà.</Italian>
+		<Italian>Gli operai delle fabbriche di %s2_city si sono organizzati e se ne sono andati dal lavoro, protestando contro le cattive condizioni di lavoro ed chiedendo un aumento del salario. Gli operai di altre industrie si sono uniti a loro per solidarietà. L'intera città sarà paralizzata per finché lo sciopero generale continuerà.</Italian>
 		<Spanish>Los trabajadores de las fábricas en %s2_city se han largado del trabajo y se han organizado, protestando contra las pobres condiciones de trabajo y exigiendo un aumento de su salario. Los trabajadores de otras industrias se han unido a ellos en solidaridad. La ciudad entera estará paralizada mientras continúe la huelga general.</Spanish>
 		<Polish>Robotnicy z miejscowej fabryki w mieście %s2_city zorganizowali się i opuścili miejsca pracy, protestując przeciw złym warunkom pracy i domagając się podwyżek płac. Pracownicy innych zakładów solidarnie przyłączyli się do strajku. Wygląda na to, że miasto będzie sparaliżowane do czasu odwołania strajku generalnego.</Polish>
 	</TEXT>
@@ -8068,7 +8068,7 @@
 		<English>They will be remembered so long as our new monuments stand.</English>
 		<French>On se souviendra d'eux tant que ces monuments tiendront debout.</French>
 		<German>Man wird sich so lange an sie erinnern, wie unser neues Monument steht.</German>
-		<Italian>Verranno ricordati, finchè questo monumento resisterà alla prova del tempo.</Italian>
+		<Italian>Verranno ricordati fin quando questo monumento resisterà alla prova del tempo.</Italian>
 		<Spanish>Serán recordados mientras los nuevos monumentos aguanten.</Spanish>
 		<Polish>Będą zapamiętani tak długo jak nasze nowe pomniki będą stać.</Polish>
 	</TEXT>
@@ -8077,7 +8077,7 @@
 		<English>The new additions to our monuments will continue to awe the locals.</English>
 		<French>Ces ajouts à nos Monuments vont continuer de remplir d'effroi les habitants.</French>
 		<German>Die neue Ergänzung unserer Monumente wird die Einheimischen weiter beeindrucken.</German>
-		<Italian>Le nuove aggiunte ai monumenti continueranno ad impressionare gli abitanti.</Italian>
+		<Italian>Le nuove aggiunte ai monumenti continueranno a impressionare gli abitanti.</Italian>
 		<Spanish>Los nuevos monumentos seguirán impresionando a los locales.</Spanish>
 		<Polish>Nowe dodatki do naszych pomników zadziwia lokalnych mieszkańców.</Polish>
 	</TEXT>
@@ -8281,7 +8281,7 @@
 		<English>Labor negotiations in %s2_city drag on. Union leaders vow to continue strike "for as long as it takes."</English>
 		<French>Les Négociations syndicales traînent à %s2_city. Les responsables des syndicats sont prêts à continuer la grève "aussi longtemps qu'elle sera nécessaire."</French>
 		<German>Die Streikverhandlungen in %s2_city gehen weiter. Gewerkschaftsführer versprechen, so lange weiter zu streiken "wie es dauert".</German>
-		<Italian>Le trattative proseguono nella città di %s2_city. I capi del sindacato promettono di continuare lo sciopero "finchè sarà necessario".</Italian>
+		<Italian>Le trattative proseguono nella città di %s2_city. I capi del sindacato promettono di continuare lo sciopero "finché sarà necessario".</Italian>
 		<Spanish>Las negociaciones sindicales se prolongan en %s2_city. Los líderes de los sindicatos prometen seguir con la huelga "todo el tiempo que haga falta."</Spanish>
 		<Polish>W mieście %s2_city trwają negocjacje z pracownikami. Władze związkowe zarzekają się, że będą kontynuować strajk "do skutku".</Polish>
 	</TEXT>
@@ -8494,14 +8494,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WOUNDED_BARBARIAN_3</Tag>
 		<English>Let's help him until he is completely recovered in exchange of some information and gold. If the other tribes ask about him, refuse to talk.</English>
-		<Italian>Aiutiamolo finchè non è guarito completamente, in cambio di informazioni e oro. Se l'altra tribù chiede qualcosa, rifiutati di parlare.</Italian>
+		<Italian>Aiutiamolo finché non è guarito completamente, in cambio di informazioni e oro. Se l'altra tribù chiede qualcosa, rifiutati di parlare.</Italian>
 		<Spanish>Ayudémoslo hasta que se recupere por completo, a cambio de algo de información y oro. Si las otras tribus preguntan por él, negaos a hablar del tema.</Spanish>
 		<Polish>Pomóżcie mu w zamian za informacji i złoto. Jeśli inne plemię o niego zapyta odmówcie odpowiedzi.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WOUNDED_BARBARIAN_4</Tag>
 		<English>Let's help him until he is completely recovered in exchange of some information and military help. If the other tribes ask about him, refuse to talk.</English>
-		<Italian>Aiutiamolo finchè non è guarito completamente, in cambio di informazioni e aiuto militare. Se l'altra tribù chiede qualcosa, rifiutati di parlare.</Italian>
+		<Italian>Aiutiamolo finché non è guarito completamente, in cambio di informazioni e aiuto militare. Se l'altra tribù chiede qualcosa, rifiutati di parlare.</Italian>
 		<Spanish>Ayudémoslo hasta que se recupere por completo, a cambio de información y ayuda militar. Si las otras tribus preguntan por él, negaos a hablar del tema.</Spanish>
 		<Polish>Pomóżcie mu w zamian za informacji i pomoc militarną. Jeśli inne plemię o niego zapyta odmówcie odpowiedzi.</Polish>
 	</TEXT>

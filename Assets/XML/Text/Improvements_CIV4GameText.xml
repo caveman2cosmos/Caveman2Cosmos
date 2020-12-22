@@ -155,16 +155,6 @@
 		<Polish>[ICON_BULLET]Kiedy zostanie dodane do pola, to ulepszenie automatycznie usunie się z pola (użyteczne to umieszczania surowców i cech terenu z ulepszeniami).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_CITY</Tag>
-		<English>City</English>
-		<French>Ville</French>
-		<German>
-			<Text>Großstadt</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_CITY_PEDIA</Tag>
 		<English>Cities are the primary means of tracking populations.</English>
 		<French>Les villes sont les moyens primaire de localiser les populations</French>

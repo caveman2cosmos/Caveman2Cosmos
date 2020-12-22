@@ -23,15 +23,13 @@ class CvInfoScreen:
 
 		self.iGraphEnd		= None
 		self.iGraphZoom		= None
-		self.nWidgetCount	= 0
 		self.nLineCount		= 0
 
 		self.iTab = 0
 
 		self.iGraph1 = 0
 		self.iGraph2 = 1
-		self.iGraph_Smoothing = 2
-
+		self.iGraph_Smoothing = 10
 		self.bDoubleGraph = False
 
 		# Placement of top 5 Cities
@@ -46,6 +44,7 @@ class CvInfoScreen:
 		screen = CyGInterfaceScreen("InfoScreen", self.screenId)
 		if screen.isActive():
 			return
+		self.nWidgetCount	= 0
 
 		if iTabID > -1:
 			self.iTab = iTabID
@@ -81,51 +80,16 @@ class CvInfoScreen:
 		# uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1b, uFont1 = self.aFontList
 		uFont2b = aFontList[5]
 
-		self.Y_TOP_PAGE = 36
-		self.H_PAGE = H_PAGE = yRes - self.Y_TOP_PAGE - H_BOT_PANEL + 8
+		self.H_PAGE = H_PAGE = yRes - 36 - H_BOT_PANEL + 8
 		self.Y_BOT_TEXT = Y_BOT_TEXT = yRes - H_BOT_PANEL + 8
 
 		# Initialize text
-		self.TEXT_DEMOGRAPHICS_SMALL = TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_TITLE", ())
 		self.TEXT_ENTIRE_HISTORY = TRNSLTR.getText("TXT_KEY_INFO_ENTIRE_HISTORY", ())
 		self.TEXT_TURNS = TRNSLTR.getText("TXT_KEY_TURNS", ())
-
-		self.TEXT_SCORE = TRNSLTR.getText("TXT_KEY_GAME_SCORE", ())
-		self.TEXT_POWER = TRNSLTR.getText("TXT_KEY_POWER", ())
-		self.TEXT_CULTURE = TRNSLTR.getObjectText("TXT_KEY_COMMERCE_CULTURE", 0)
-		self.TEXT_ESPIONAGE = TRNSLTR.getObjectText("TXT_KEY_ESPIONAGE_CULTURE", 0)
-
-		self.TEXT_VALUE = TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_VALUE_TEXT", ())
-		self.TEXT_RANK = TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_RANK_TEXT", ())
-		self.TEXT_AVERAGE = TRNSLTR.getText("TXT_KEY_DEMOGRAPHICS_SCREEN_RIVAL_AVERAGE", ())
-		self.TEXT_BEST = TRNSLTR.getText("TXT_KEY_INFO_RIVAL_BEST", ())
-		self.TEXT_WORST = TRNSLTR.getText("TXT_KEY_INFO_RIVAL_WORST", ())
-
-		self.TEXT_ECONOMY = TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_TEXT", ())
-		self.TEXT_INDUSTRY = TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY_TEXT", ())
-		self.TEXT_AGRICULTURE = TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE_TEXT", ())
-		self.TEXT_MILITARY = TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_MILITARY_TEXT", ())
-		self.TEXT_LAND_AREA = TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_LAND_AREA_TEXT", ())
-		self.TEXT_POPULATION = TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_POPULATION_TEXT", ())
-		self.TEXT_HAPPINESS = TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_HAPPINESS_TEXT", ())
-		self.TEXT_HEALTH = TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_HEALTH_TEXT", ())
-		self.TEXT_IMP_EXP = TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_EXPORTS_TEXT", ()) + " - " + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_IMPORTS_TEXT", ())
-
-		charBullet = u"  %c" % GAME.getSymbolID(FontSymbols.BULLET_CHAR)
-		self.TEXT_ECONOMY_MEASURE = charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE", ())
-		self.TEXT_INDUSTRY_MEASURE = charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY_MEASURE", ())
-		self.TEXT_AGRICULTURE_MEASURE = charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE_MEASURE", ())
-		self.TEXT_MILITARY_MEASURE = ""
-		self.TEXT_LAND_AREA_MEASURE = charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_LAND_AREA_MEASURE", ())
-		self.TEXT_POPULATION_MEASURE = ""
-		self.TEXT_HAPPINESS_MEASURE = "%"
-		self.TEXT_HEALTH_MEASURE = charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_POPULATION_MEASURE", ())
-		self.TEXT_IMP_EXP_MEASURE = charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE", ())
 
 		self.TEXT_TIME_PLAYED = TRNSLTR.getText("TXT_KEY_INFO_SCREEN_TIME_PLAYED", ())
 		self.TEXT_CITIES_BUILT = TRNSLTR.getText("TXT_KEY_INFO_SCREEN_CITIES_BUILT", ())
 		self.TEXT_CITIES_RAZED = TRNSLTR.getText("TXT_KEY_INFO_SCREEN_CITIES_RAZED", ())
-		self.TEXT_NUM_GOLDEN_AGES = TRNSLTR.getText("TXT_KEY_INFO_SCREEN_NUM_GOLDEN_AGES", ())
 		self.TEXT_NUM_RELIGIONS_FOUNDED = TRNSLTR.getText("TXT_KEY_INFO_SCREEN_RELIGIONS_FOUNDED", ())
 
 		self.TEXT_CURRENT = TRNSLTR.getText("TXT_KEY_CURRENT", ())
@@ -140,10 +104,10 @@ class CvInfoScreen:
 		self.SHOW_NONE = uFont2b + TRNSLTR.getText("TXT_KEY_SHOW_NONE", ())
 		self.LOG_SCALE = uFont2b + TRNSLTR.getText("TXT_KEY_LOGSCALE", ())
 
-		self.szName = TRNSLTR.getText("TXT_KEY_NAME", ())
+		self.szName = TRNSLTR.getText("TXT_WORD_NAME", ())
 		self.szWonderDate = TRNSLTR.getText("TXT_KEY_WONDER_DATE", ())
 		self.szWonderOwner = TRNSLTR.getText("TXT_KEY_WONDER_OWNER", ())
-		self.szWonderCity = TRNSLTR.getText("TXT_KEY_WONDER_CITY", ())
+		self.szWonderCity = TRNSLTR.getText("TXT_WORD_CITY", ())
 
 		sTemp1 = [
 			TRNSLTR.getText("TXT_KEY_GAME_SCORE", ()),
@@ -151,8 +115,8 @@ class CvInfoScreen:
 			TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY_TEXT", ()),
 			TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE_TEXT", ()),
 			TRNSLTR.getText("TXT_KEY_POWER", ()),
-			TRNSLTR.getObjectText("TXT_KEY_COMMERCE_CULTURE", 0),
-			TRNSLTR.getObjectText("TXT_KEY_ESPIONAGE_CULTURE", 0)
+			TRNSLTR.getText("TXT_WORD_CULTURE", ()),
+			TRNSLTR.getText("TXT_WORD_ESPIONAGE", ()),
 		]
 		if GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):
 			sTemp1.append(TRNSLTR.getText("TXT_KEY_REVOLUTION_GRAPH_TITLE_SMALL", ()))
@@ -476,15 +440,14 @@ class CvInfoScreen:
 			screen.hide("GraphDD0")
 			screen.hide("GraphDD1")
 
-			y = self.Y_TOP_PAGE
 			uFont3b = self.aFontList[3]
 
 			for i, x in enumerate(self.X_GRAPH_TEXT):
 				screen.hide(self.sGraphTextBannerWidget[i])
 				if i == self.iGraph1:
-					screen.setText(self.sGraphTextBannerWidget[i], "", uFont3b + self.sGraphText[1][i], 1<<1, x, y + 5, 0, eFont, eWidGen, 1, 2)
+					screen.setText(self.sGraphTextBannerWidget[i], "", uFont3b + self.sGraphText[1][i], 1<<1, x, 41, 0, eFont, eWidGen, 1, 2)
 				else:
-					screen.setText(self.sGraphTextBannerWidget[i], "", uFont3b + self.sGraphText[0][i], 1<<1, x, y, 0, eFont, eWidGen, 1, 2)
+					screen.setText(self.sGraphTextBannerWidget[i], "", uFont3b + self.sGraphText[0][i], 1<<1, x, 36, 0, eFont, eWidGen, 1, 2)
 
 		# Draw graph(s)
 		for i in xrange(1 + self.bDoubleGraph):
@@ -680,6 +643,9 @@ class CvInfoScreen:
 #############################################################################################################
 
 	def drawDemographicsTab(self):
+		if self.demographicsTable:
+			CyGInterfaceScreen("InfoScreen", self.screenId).show(self.demographicsTable)
+			return
 		iPlayer = self.iPlayer
 
 		iEconomy = 0
@@ -818,33 +784,34 @@ class CvInfoScreen:
 		screen = CyGInterfaceScreen("InfoScreen", self.screenId)
 
 		# Create Table
-		table = self.getNextWidgetName()
+		self.demographicsTable = table = "DemographicsTable"
 		screen.addTableControlGFC(table, 6, 45, 80, 934, 600, True, True, 32,32, TableStyles.TABLE_STYLE_STANDARD)
-		screen.setTableColumnHeader(table, 0, self.TEXT_DEMOGRAPHICS_SMALL, 224) # Total graph width is 430
-		screen.setTableColumnHeader(table, 1, self.TEXT_VALUE, 155)
-		screen.setTableColumnHeader(table, 2, self.TEXT_BEST, 155)
-		screen.setTableColumnHeader(table, 3, self.TEXT_AVERAGE, 155)
-		screen.setTableColumnHeader(table, 4, self.TEXT_WORST, 155)
-		screen.setTableColumnHeader(table, 5, self.TEXT_RANK, 90)
+		screen.setTableColumnHeader(table, 0, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_TITLE", ()), 224) # Total graph width is 430
+		screen.setTableColumnHeader(table, 1, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_VALUE_TEXT", ()), 155)
+		screen.setTableColumnHeader(table, 2, TRNSLTR.getText("TXT_KEY_INFO_RIVAL_BEST", ()), 155)
+		screen.setTableColumnHeader(table, 3, TRNSLTR.getText("TXT_KEY_DEMOGRAPHICS_SCREEN_RIVAL_AVERAGE", ()), 155)
+		screen.setTableColumnHeader(table, 4, TRNSLTR.getText("TXT_KEY_INFO_RIVAL_WORST", ()), 155)
+		screen.setTableColumnHeader(table, 5, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_RANK_TEXT", ()), 90)
 
 		for i in xrange(23): # 18 normal items + 5 lines for spacing
 			screen.appendTableRow(table)
 
-		screen.setTableText(table, 0, 0, self.TEXT_ECONOMY, "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 1, self.TEXT_ECONOMY_MEASURE, "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 3, self.TEXT_INDUSTRY, "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 4, self.TEXT_INDUSTRY_MEASURE, "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 6, self.TEXT_AGRICULTURE, "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 7, self.TEXT_AGRICULTURE_MEASURE, "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 9, self.TEXT_MILITARY, "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 11, self.TEXT_LAND_AREA, "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 12, self.TEXT_LAND_AREA_MEASURE, "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 14, self.TEXT_POPULATION, "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 16, self.TEXT_HAPPINESS, "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 18, self.TEXT_HEALTH, "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 19, self.TEXT_HEALTH_MEASURE, "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 21, self.TEXT_IMP_EXP, "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 0, 22, self.TEXT_IMP_EXP_MEASURE, "", eWidGen, 1, 2, 1<<0)
+		charBullet = u"  %c" % GAME.getSymbolID(FontSymbols.BULLET_CHAR)
+		screen.setTableText(table, 0, 0, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 1, charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 3, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 4, charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY_MEASURE", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 6, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 7, charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE_MEASURE", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 9, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_MILITARY_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 11, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_LAND_AREA_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 12, charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_LAND_AREA_MEASURE", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 14, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_POPULATION_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 16, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_HAPPINESS_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 18, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_HEALTH_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 19, charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_POPULATION_MEASURE", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 21, TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_EXPORTS_TEXT", ()) + " - " + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_IMPORTS_TEXT", ()), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 0, 22, charBullet + TRNSLTR.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE", ()), "", eWidGen, 1, 2, 1<<0)
 
 		screen.setTableText(table, 1, 0, str(iEconomy), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 1, 3, str(iIndustry), "", eWidGen, 1, 2, 1<<0)
@@ -852,7 +819,7 @@ class CvInfoScreen:
 		screen.setTableText(table, 1, 9, str(iMilitary), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 1, 11, str(iLandArea), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 1, 14, str(iPopulation), "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 1, 16, str(iHappiness) + self.TEXT_HAPPINESS_MEASURE, "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 1, 16, str(iHappiness) + "%", "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 1, 18, str(iHealth), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 1, 21, str(iNetTrade), "", eWidGen, 1, 2, 1<<0)
 
@@ -862,7 +829,7 @@ class CvInfoScreen:
 		screen.setTableText(table, 2, 9, str(iMilitaryBest), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 2, 11, str(iLandAreaBest), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 2, 14, str(iPopulationBest), "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 2, 16, str(iHappinessBest) + self.TEXT_HAPPINESS_MEASURE, "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 2, 16, str(iHappinessBest) + "%", "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 2, 18, str(iHealthBest), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 2, 21, str(iNetTradeBest), "", eWidGen, 1, 2, 1<<0)
 
@@ -872,7 +839,7 @@ class CvInfoScreen:
 		screen.setTableText(table, 3, 9, str(iMilitaryAverage), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 3, 11, str(iLandAreaAverage), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 3, 14, str(iPopulationAverage), "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 3, 16, str(iHappinessAverage) + self.TEXT_HAPPINESS_MEASURE, "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 3, 16, str(iHappinessAverage) + "%", "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 3, 18, str(iHealthAverage), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 3, 21, str(iNetTradeAverage), "", eWidGen, 1, 2, 1<<0)
 
@@ -882,7 +849,7 @@ class CvInfoScreen:
 		screen.setTableText(table, 4, 9, str(iMilitaryWorst), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 4, 11, str(iLandAreaWorst), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 4, 14, str(iPopulationWorst), "", eWidGen, 1, 2, 1<<0)
-		screen.setTableText(table, 4, 16, str(iHappinessWorst) + self.TEXT_HAPPINESS_MEASURE, "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(table, 4, 16, str(iHappinessWorst) + "%", "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 4, 18, str(iHealthWorst), "", eWidGen, 1, 2, 1<<0)
 		screen.setTableText(table, 4, 21, str(iNetTradeWorst), "", eWidGen, 1, 2, 1<<0)
 
@@ -1564,6 +1531,7 @@ class CvInfoScreen:
 
 	def determineKnownPlayers(self, iEndGame=0):
 
+		self.demographicsTable = ""
 		self.player = player = GC.getPlayer(self.iPlayer)
 		self.iTeam = iTeam = player.getTeam()
 		self.team = team = GC.getTeam(iTeam)
@@ -1672,7 +1640,9 @@ class CvInfoScreen:
 			if NAME == "VS_Tab":
 				screen.hide("VS_Tab_Act" + str(self.iTab))
 				screen.show("VS_Tab" + str(self.iTab))
-				if self.iTab == 1:
+				if not self.iTab:
+					screen.hide(self.demographicsTable)
+				elif self.iTab == 1:
 					screen.hide("Graph_BG")
 
 				self.iTab = ID
@@ -1737,13 +1707,7 @@ class CvInfoScreen:
 	def update(self, fDelta): return
 
 	def onClose(self):
-		screen = CyGInterfaceScreen("InfoScreen", self.screenId)
-		screen.setDying(True)
-		# Reset Wonders so nothing lingers next time the screen is opened
-		self.szWonderDisplayMode = "WorldWonders"
-		self.aiWonderListBoxIDs = []
-		self.aiTurnYearBuilt = []
-		self.aiWonderBuiltBy = []
-		self.aszWonderCity = []
-		del self.aWidgetBucket, self.bDebug, self.iTurn, self.iStartTurn, \
-			self.xRes, self.yRes
+		CyGInterfaceScreen("InfoScreen", self.screenId).setDying(True)
+		del self.nWidgetCount, self.aWidgetBucket, self.bDebug, self.iTurn, self.iStartTurn, \
+			self.xRes, self.yRes, self.aFontList, self.H_PAGE, \
+			self.demographicsTable, self.iNumGraphs

@@ -164,7 +164,6 @@
 		<French>[ICON_BULLET]Bonus de retranchement : %d1%%</French>
 		<German>[ICON_BULLET]Verschanzungsbonus: %d1%%</German>
 		<Italian>[ICON_BULLET]Bonus per la fortificazione: %d1%%</Italian>
-		<Spanish>[ICON_BULLET]Bonif. a fortif.: %d1%%</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_IMMOBILE</Tag>

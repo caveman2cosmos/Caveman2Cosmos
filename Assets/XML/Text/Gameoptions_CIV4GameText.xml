@@ -55,7 +55,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ESPIONAGE_HELP</Tag>
 		<English>Allows for powerful espionage attacks, including nuclear sabotage, aiding rebel factions, and causing empire-wide anarchy. Also, espionage effects, like poisoning water, will correctly scale for gamespeeds.</English>
-		<French>Permet des actes offensifs importants pour les espions, comme le sabotage nucléaire, le soutien aux factions rebelles, pouvant mener à un désordre au niveau de l'Empire. Les effets de l'espionnages sont également revus pour s'adapter à la vitesse du Jeu.</French>
+		<French>Permet des actes offensifs importants pour les espions, comme le sabotage nucléaire, le soutien aux factions rebelles, pouvant mener à un désordre au niveau de l'Empire. Les effets de l'espionnage sont également revus pour s'adapter à la vitesse du Jeu.</French>
 		<German>Erlaubt mächtige Spionageattacken wie die nukleare Sabotage, die Unterstützung von Rebellengruppierungen und die Auslösung von Unruhen. Außerdem werden Spionageeffekte wie das Vergiften des Trinkwassers korrekt an die Spielgeschwindigkeit angepasst.</German>
 		<Italian>Permette potenti attacchi con lo spionaggio, inclusi sabotaggio nucleare, aiuti a fazioni ribelli e anarchia diffusa in tutto l'impero. Inoltre, gli effetti dello spionaggio sono proporzionali alla velocità di gioco.</Italian>
 		<Spanish>Permite poderosos actos ofensivos para los espías, como sabotaje nuclear, ayuda a organizaciones rebeldes, incluso provocar la anarquía de todo el imperio. Además, los efectos de otras misiones de espionaje, como envenenar el agua, estarán correctamente escalados según la velocidad de la partida.</Spanish>
@@ -73,9 +73,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_NUKES_HELP</Tag>
 		<English>Enables more advanced variations of Nuclear Weapons for your arsenal.</English>
-		<French>Active un certain nombre d'armes nucléaires, pour votre arsenal.</French>
+		<French>Permet des variantes plus avancées d'armes nucléaires pour votre arsenal.</French>
 		<German>Stellt verbesserte Varianten von Nuklearwaffen für Euer Arsenal zur Verfügung.</German>
-		<Italian>Attiva un numero maggiore di armi nucleari.</Italian>
+		<Italian>Consente varianti più avanzate di armi nucleari per il tuo arsenale.</Italian>
 		<Spanish>Activa nuevas variantes más avanzadas de armas nucleares para tu arsenal.</Spanish>
 		<Polish>Udostępnia więcej typów broni nuklearnej do Twojego Arsenału.</Polish>
 	</TEXT>
@@ -89,10 +89,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_START_HELP</Tag>
-		<English>Allows players to 'purchase' their choice of starting cities, units, technologies, etc. when game begins.</English>
+		<English>Allows players to "purchase" their choice of starting cities, units, technologies, etc. when game begins.</English>
 		<French>Permet aux joueurs "d'acheter" des villes, des unités, des technologies etc. en début de partie.</French>
 		<German>Ermöglicht den Spielern, bereits zu Spielbeginn Städte, Einheiten, Technologien etc. zu kaufen, die dann sofort zur Verfügung stehen.</German>
-		<Italian>Permette ai giocatori di "acquistare" città, unità, tecnologie di partenza all'avvio del gioco.</Italian>
+		<Italian>Permette ai giocatori di "acquistare" città, unità, tecnologie, eccetera all'avvio del gioco.</Italian>
 		<Spanish>Permite a los jugadores "comprar" su selección inicial de ciudades, unidades, tecnologías, etc. cuando empieza la partida.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -114,7 +114,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_AMNESTY</Tag>
 		<English>Amnesty for units using Right of Passage</English>
-		<French>Amnéstie pour les unités avec droits de passage</French>
+		<French>Amnistie pour les unités avec droits de passage</French>
 		<German>Amnestie für Einheiten mit Durchreiseerlaubnis</German>
 	</TEXT>
 	<TEXT>
@@ -179,10 +179,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD_HELP</Tag>
 		<English>The barbarians start with a free city for every civilization in the game, and the max barb/neander city limit (relative to the number of regular civ cities) is much higher.</English>
-		<French>Les Barbares commencent avec une ville pour chaque civilization du jeu, et la limite de ville max barb / neander (par rapport au nombre de villes civiles régulières) est beaucoup plus élevée.</French>
-		<German>Die Barbaren starten mit einer zusätzlichen Stadt pro Zivilisation im Spiel, and the max barb/neander city limit (relative to the number of rgular civ cities) is much higher.</German>
-		<Italian>I barbari iniziano la partita con una città per ogni civiltà in gioco, and the max barb/neander city limit (relative to the number of regular civ cities) is much higher.</Italian>
-		<Spanish>Los bárbaros empiezan con una ciudad por cada civilización existente en la partida, and the max barb/neander city limit (relative to the number of rgular civ cities) is much higher.</Spanish>
+		<French>Les barbares commencent avec une ville libre pour chaque civilisation du jeu, et la limite maximale de ville barb / neander (par rapport au nombre de villes régulières) est beaucoup plus élevée.</French>
+		<German>Die Barbaren beginnen mit einer freien Stadt für jede Zivilisation im Spiel, und die maximale Grenze für Barb / Neander-Städte (im Verhältnis zur Anzahl der regulären Städte) ist viel höher.</German>
+		<Italian>I barbari iniziano con una città libera per ogni civiltà nel gioco e il limite massimo di città barb / neander (relativo al numero di città regolari) è molto più alto.</Italian>
+		<Spanish>Los bárbaros comienzan con una ciudad libre para cada civilización del juego, y el límite máximo de ciudades con púas / neander (en relación con el número de ciudades normales) es mucho mayor.</Spanish>
 		<Polish>Barbarzyńcy rozpoczynają od wolnego miasta dla każdej cywilizacji w grze, and the max barb/neander city limit (relative to the number of regular civ cities) is much higher.</Polish>
 	</TEXT>
 	<TEXT>
@@ -225,7 +225,7 @@
 		<English>Every 50 turns (on Normal Speed) the player with the lowest score is removed from the game until only 5 players remain. Not meant for use with BarbarianCiv or Revolutions!</English>
 		<French>Tous les 50 tours (vitesse Normale) Le Joueur avec le plus petit score est retiré du jeu, jusqu'à ce qu'il ne reste que 5 Joueurs. Ne pas utiliser avec les Mods 'BarbarianCiv' ou 'Revolutions'!</French>
 		<German>Alle 50 Runden (bei normaler Spielgeschwindigkeit) wird der Spieler mit dem niedrigsten Punktestand entfernt bis nur noch 5 Spieler übrigbleiben. Sollte nicht in Kombination mit den Optionen "Barbarische Zivilisationen" oder "Revolutionen" verwendet werden!</German>
-		<Italian>Ogni 50 turni (a velocità normale) il giocatore con il punteggio più basso viene rimosso dal gioco finchè rimangono solo 5 giocatori. Non usare con Civiltà Barbare e Rivoluzioni!</Italian>
+		<Italian>Ogni 50 turni (a velocità normale) il giocatore con il punteggio più basso viene rimosso dal gioco finché rimangono solo 5 giocatori. Non usare con Civiltà Barbare e Rivoluzioni!</Italian>
 		<Spanish>Cada 50 turnos (a velocidad Normal) el jugador con la puntuación más baja será eliminado de la partida hasta que solo queden 5 jugadores. ¡No está pensado para su uso con las opciones BarbarianCiv y Revolution activadas!</Spanish>
 		<Polish>Na każde 50 tur (na normalnej prędkości) usuwany jest najsłabszy gracz do momentu pozostania 5 graczy w grze. Nie polecany do użycia razem z Cywilizacją barbarzyńców oraz Rewolucjami!</Polish>
 	</TEXT>
@@ -243,7 +243,7 @@
 		<English>Become the player with the highest score, then you switch to controlling the civilization with the lowest score. Raise that civilization to have the highest score and you will be switched again to civilization with the lowest score. That third civilization will be the one you have to win the game with. Single player only.</English>
 		<French>Par deux fois, le fait d'être le Joueur avec le plus grand score vous fait changer de civilisation pour contrôler celle possédant le score le plus bas. La troisième civilisation sera celle avec laquelle il vous faudra gagner le jeu. Uniquement en mode Solo.</French>
 		<German>Ziel ist es, die Zivilisation mit dem höchsten Punktestand zu kontrollieren. Hat ein Spieler dies erreicht, wird ihm automatisch die Kontrolle über die Zivilisation mit den wenigsten Punkten übertragen, die er wieder an die Spitze der Punkteliste bringen muss. Ist dies vollbracht, wird ihm erneut die Zivilisation mit den niedrigsten Punkten übergeben. Diese dritte Zivilisation ist dann die, mit der das Spiel gewonnen werden muss. Nur im Einzelspielermodus möglich.</German>
-		<Italian>Diventa il giocatore con il punteggio più alto, poi ottieni il controllo della civiltà con il punteggio più basso. Eleva quella civiltà al punteggio più alto e prenderai il controllo della civiltà con il punteggio più basso. La terza civiltà è quella con cui devi vincere la partita.Solo per giocatore singolo.</Italian>
+		<Italian>Diventa il giocatore con il punteggio più alto, poi ottieni il controllo della civiltà con il punteggio più basso. Eleva quella civiltà al punteggio più alto e prenderai il controllo della civiltà con il punteggio più basso. La terza civiltà è quella con cui devi vincere la partita. Solo per giocatore singolo.</Italian>
 		<Spanish>Conviértete en el jugador con mayor puntuación, en ese momento pasarás a controlar la civilización con la puntuación más baja. Expande esa civilización hasta tener la puntuación más alta y pasarás a controlar nuevamente la civilización con la peor puntuación. Con esta tercera civilización tendrás que ganar la partida.</Spanish>
 		<Polish>Kiedy gracz ma najwyższy wynik, wtedy będziesz mógł się przełączyć na grę cywilizacją o niższym wyniku. Ulepsz tą cywilizację do najlepszego wyniku i będziesz mógł znów przełączyć się na słabszą. Tą trzecią cywilizacją będziesz musiał wygrać grę. Tylko dla trybu Jednego Gracza.</Polish>
 	</TEXT>
@@ -261,7 +261,7 @@
 		<English>Every 100 turns (on Normal Speed) the games difficulty is increased by 1 until it reaches Nightmare.</English>
 		<French>Chaque 100 tours (vitesse normale) la difficulté du jeu est augmentées d'un niveau jusqu'à atteindre 'Nightmare'.</French>
 		<German>Alle 100 Runden (bei normaler Spielgeschwindigkeit) wird der Schwierigkeitsgrad um eine Stufe erhöht, bis "Gottheit" erreicht ist. Es gibt eine BUG-Option, die hierfür eine feinere Einstellung ermöglicht Nightmare.</German>
-		<Italian>Ogni 100 turni (a velocità normale) la difficoltà del gioco è aumentata di 1 finchè raggiunge Nightmare.</Italian>
+		<Italian>Ogni 100 turni (a velocità normale) la difficoltà del gioco aumenta di 1 finché non raggiunge il livello "Incubo".</Italian>
 		<Spanish>Cada 100 turnos (a velocidad Normal) la dificultad de la partida subirá un nivel hasta alcanzar "Nightmare".</Spanish>
 		<Polish>Na każde 100 tur ( normalna prędkość gry ) gra podnosi poziom o jeden poziom do momentu osiągnięcia poziomu Nightmare.</Polish>
 	</TEXT>
@@ -356,7 +356,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EQUIPMENT</Tag>
 		<English>C2C Combat Mod - Arms and Equipment</English>
-		<French>Mode de Combat C2C - Armes and Equipement</French>
+		<French>Mode de Combat C2C - Armes and Équipement</French>
 		<German>C2C-Kampfmod - Waffen und Ausrüstung</German>
 		<Polish>C2C Modyfikacja Bojowa - Wyposażenie i uzbrojenie.</Polish>
 	</TEXT>
@@ -397,7 +397,7 @@
 		<English>Fixed border mechanics</English>
 		<French>Mécanisme de frontières fixes, provenant des doctrines ou d'autres origines</French>
 		<German>Es können festen Landesgrenzen festgelegt werden, durch Gesellschaftsformen oder auf anderem Weg.</German>
-		<Italian>Niente confini fissi, nè dalle forme di governo nè da altra fonte</Italian>
+		<Italian>Niente confini fissi - né dalle forme di governo, né da altra fonte</Italian>
 		<Spanish>No se usará la mecánica de fronteras fijables, ni por principios ni por cualquier otro origen.</Spanish>
 		<Polish>Wyłącza mechanizm stałych granic.</Polish>
 	</TEXT>
@@ -520,7 +520,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LEADERHEAD_LEVELUPS_HELP</Tag>
 		<English>Leaders Gain additional Trait selections throughout the game due to expanding National Culture values. (Beta development so may present some imbalances.)</English>
-		<French>Les Leaders gagnent des Traits supplméntaires durant le Jeu, en fonction de l'expansion Culturelle. (En développement Beta, peut donc présenter des déséquilibres du gameplay.)</French>
+		<French>Les Leaders gagnent des Traits supplémentaires durant le Jeu, en fonction de l'expansion Culturelle. (En développement Beta, peut donc présenter des déséquilibres du gameplay.)</French>
 		<German>Staatsoberhäupter können während des Spiels zusätzliche Charakterzüge erhalten, wenn ihre Kultur sich entsprechend etabliert hat. (Noch im Betastadium, kann also noch Balanceprobleme aufweisen.)</German>
 		<Italian>I leader possono selezionare i propri tratti grazie ai progressi nel gioco dovuti all'espansione della cultura nazionale. (Caratteristica ancora in fase di Beta)</Italian>
 		<Polish>Przywódcy otrzymują dodatkowe cechy do wyboru wraz z rozwojem kultury. (W fazie beta możliwy brak balansu.)</Polish>
@@ -624,12 +624,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MORE_RESOURCES_HELP</Tag>
 		<English>Maps that use default resource spawn settings will spawn more resources
-
 Has no effect on these mapscripts:
 [SPACE][SPACE] * PerfectWorld, PerfectMongoose and World
-
 Only affects SmartMap when "Bonus Placement = Standard"</English>
-
 		<French>Une carte avec les paramètres par défaut comprendra des ressources supplémentaires</French>
 		<German>Auf Karten mit Standardeinstellungen für Ressourcen werden mehr Ressourcen verteilt.</German>
 		<Polish>Mapy używające standardowych ustawień wygenerują więcej zasobów.</Polish>
@@ -644,13 +641,10 @@ Only affects SmartMap when "Bonus Placement = Standard"</English>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MORE_RIVERS_HELP</Tag>
 		<English>Maps that use default river settings will spawn more rivers.
-
 Has no effect on these mapscripts:
 [SPACE][SPACE] * PerfectWorld, PerfectMongoose and World
-
 Only affects SmartMap if terrain options is:
 [SPACE][SPACE] * Standard, Great Plains or Oasis</English>
-
 		<French>Une carte avec les paramètres par défaut, fera apparaître des fleuves et rivières supplémentaires</French>
 		<German>Auf Karten mit Standardeinstellungen für Flüsse werden mehr Flüsse verteilt.</German>
 		<Polish>Mapy używające standardowych ustawień wygenerują więcej rzek.</Polish>
@@ -1060,9 +1054,9 @@ Only affects SmartMap if terrain options is:
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_CORPORATIONS_HELP</Tag>
 		<English>Corporations will expand and grow dynamically, without player involvement, behaving more like real world Corporations, and not tied to central governments. Corporations can be taxed for a profit, or be subsidized by your nation to help it expand faster. It reduces the tedious micromanagement of corporations, and gives corporate policies real value and meaning.</English>
-		<French>Les Corporations s'étendent et se développement sans l'intervention du joueur, se comportement de manière plus réaliste par rapport au mont réel, sans influence des gouvernements. Les Corporations peuvent être taxées, ou subventionnées par notre nation pour accroitre son expansion.</French>
+		<French>Les Corporations s'étendent et se développement sans l'intervention du joueur, se comportement de manière plus réaliste par rapport au mont réel, sans influence des gouvernements. Les Corporations peuvent être taxées, ou subventionnées par notre nation pour accroître son expansion.</French>
 		<German>Kapitalgesellschaften wachsen und expandieren dynamisch ohne Einwirken der Spieler. Sie sind nicht mehr an Regierungen gebunden und verhalten sich damit mehr wie reale Kapitalgesellschaften. Vom Staat kann maximal eine Unternehmenssteuer erhoben werden, um Profit zu machen, oder es können Subventionen vergeben werden, die dafür sorgen, dass sich Kapitalgesellschaften schneller im eigenen Gebiet ausbreiten. Dadurch wird das ermüdende Mikromanagement abgeschafft und Unternehmenspolitik erhält echte Bedeutung.</German>
-		<Italian>Le corporazioni si espanderanno dinamnicamente, senza intervento del giocatore, comportandosi più come Corporazioni reali, slegate dai governi centrali. Le corporazioni possono essere tassate (per un profitto) o ricevere sussidi (per un'espansione più veloce). Riduce la tediosa microgestione delle corporazioni, è da un vero valore alle forme di governo legate alle Corporazioni.</Italian>
+		<Italian>Le corporazioni si espanderanno dinamicamente, senza intervento del giocatore, comportandosi più come Corporazioni reali, slegate dai governi centrali. Le corporazioni possono essere tassate (per un profitto) o ricevere sussidi (per un'espansione più veloce). Riduce la tediosa microgestione delle corporazioni e da un vero valore alle forme di governo legate alle Corporazioni.</Italian>
 		<Spanish>Las corporaciones crecerán y se expandirán dinámicamente, sin intervención del jugador, comportándose de forma más parecida a las corporaciones del mundo real, sin estar ligadas a los gobiernos centrales. Se las puede gravar con impuestos para obtener beneficios, o bien se las puede subvencionar para ayudar a acelerar su expansión por tu nación. Reduce la tediosa microgestión de las corporaciones, y da sentido e importancia a las políticas corporativistas.</Spanish>
 		<Polish>Korporacje będą się rozprzestrzeniały i rosły dynamicznie bez interwencji gracza, tak jak w korporacje w prawdziwym świecie i nie związane z rządem. Korporacje mogą płacić podatki dla zysku lub otrzymywać dotacje dla szybszej ekspansji. Zmniejsza mikro zarządzanie korporacjami i daje korporacją realną wartość oraz znaczenie.</Polish>
 	</TEXT>
@@ -1223,12 +1217,12 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_START_AS_MINORS_HELP</Tag>
-		<English>Not recommended.[NEWLINE]All players start as minor civs, meaning they are at war with everyone. Your civ will settle into a full civ and you'll be able to conduct diplomacy after you discover Writing.[NEWLINE]!! The AI performs badly in such a scenario!!</English>
-		<French>Not recommended.[NEWLINE]Tous les joueurs commencent en tant que civilisations mineures, et sont automatique en guerre contre tous les autres. Votre civilisation sortira de la barbarie et pourra conduire des actions diplomatiques après la découverte de l'écriture.[NEWLINE]!! The AI performs badly in such a scenario!!</French>
-		<German>Not recommended.[NEWLINE]Alle Spieler befinden sich zu Beginn des Spiels mit allen anderen Zivilisationen im permanenten Kriegszustand. Erst mit der Entdeckung der Schrift wird Diplomatie ermöglicht und die jeweilige Nation steigt zu einer vollwertigen Zivilisation auf.[NEWLINE]!! The AI performs badly in such a scenario!!</German>
-		<Italian>Not recommended.[NEWLINE]Tutti i giocatori cominciano come civs secondari, significando che sono in guerra con tutti. La tua gente diventerà una vera civiltà e sarai in grado di condurre la diplomazia dopo che scoprirai la scrittura.[NEWLINE]!! The AI performs badly in such a scenario!!</Italian>
-		<Spanish>Not recommended.[NEWLINE]Todos los jugadores empiezan como civilizaciones menores, lo que significa que están en guerra con todos los demás. Tu civilización podrá convertirse en una civilización completa y usar la diplomacia después del descubrimiento de la escritura.[NEWLINE]!! The AI performs badly in such a scenario!!</Spanish>
-		<Polish>Not recommended.[NEWLINE]Wszyscy gracze rozpoczynają jako podrzędne cywilizacje i są w stanie wojny z pozostałymi. Twoja cywilizacja stanie się główną cywilizacją mogącą zawierać stosunki dyplomatyczne dopiero po odkryciu Pisma.[NEWLINE]!! The AI performs badly in such a scenario!!</Polish>
+		<English>Not recommended.[NEWLINE]All players start as minor civs, meaning they are at war with everyone. Your civ will settle into a full civ and you'll be able to conduct diplomacy after you discover Writing.[NEWLINE]The AI performs badly in such a scenario!!</English>
+		<French>Not recommended.[NEWLINE]Tous les joueurs commencent en tant que civilisations mineures, et sont automatique en guerre contre tous les autres. Votre civilisation sortira de la barbarie et pourra conduire des actions diplomatiques après la découverte de l'écriture.[NEWLINE]The AI performs badly in such a scenario!!</French>
+		<German>Not recommended.[NEWLINE]Alle Spieler befinden sich zu Beginn des Spiels mit allen anderen Zivilisationen im permanenten Kriegszustand. Erst mit der Entdeckung der Schrift wird Diplomatie ermöglicht und die jeweilige Nation steigt zu einer vollwertigen Zivilisation auf.[NEWLINE]The AI performs badly in such a scenario!!</German>
+		<Italian>Not recommended.[NEWLINE]Tutti i giocatori cominciano come civs secondari, significando che sono in guerra con tutti. La tua gente diventerà una vera civiltà e sarai in grado di condurre la diplomazia dopo che scoprirai la scrittura.[NEWLINE]The AI performs badly in such a scenario!!</Italian>
+		<Spanish>Not recommended.[NEWLINE]Todos los jugadores empiezan como civilizaciones menores, lo que significa que están en guerra con todos los demás. Tu civilización podrá convertirse en una civilización completa y usar la diplomacia después del descubrimiento de la escritura.[NEWLINE]The AI performs badly in such a scenario!!</Spanish>
+		<Polish>Not recommended.[NEWLINE]Wszyscy gracze rozpoczynają jako podrzędne cywilizacje i są w stanie wojny z pozostałymi. Twoja cywilizacja stanie się główną cywilizacją mogącą zawierać stosunki dyplomatyczne dopiero po odkryciu Pisma.[NEWLINE]The AI performs badly in such a scenario!!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_START_NO_POSITIVE_TRAITS</Tag>
@@ -1243,7 +1237,7 @@ Only affects SmartMap if terrain options is:
 		<English>Leaders begin the game with no Positive Traits. (This also disables the first Negative Trait and the first selections are awarded sooner on the Developing Leaders Option.)</English>
 		<French>Les Leaders commencent sans aucun trait positif. (Désactive le premier trait négatif: le premier choix apparaît plus tôt dans les Options de développement des Leaders.)</French>
 		<German>Alle Staatsoberhäupter starten im Spiel ohne positive Charakterzüge. (Der erste negative Charakterzug wird ebenfalls deaktiviert, dafür werden bei aktivierter Führungskräfteentwicklung die ersten Auswahlmöglichkeiten früher angeboten.)</German>
-		<Italian>I leader cominciano la partita senza tratti positivi; quest'opzione disabilita anche il rpimo tratto negativo, e le scelte dovute alla personalità in sviluppo sono disponibili molto prima.</Italian>
+		<Italian>I leader cominciano la partita senza tratti positivi; quest'opzione disabilita anche il primo tratto negativo, e le scelte dovute alla personalità in sviluppo sono disponibili molto prima.</Italian>
 		<Polish>Przywódcy rozpoczynają bez Pozytywnych Cech. (Wyłącza także pierwszą negatywną cechę i pierwszy wybór pojawia się szybciej na Opcji Ulepszania Przywódców)</Polish>
 	</TEXT>
 	<TEXT>
@@ -1306,7 +1300,7 @@ Only affects SmartMap if terrain options is:
 		<English>The United Nations and Apostolic Palace can still be built, even when diplomatic victory is not enabled. Players will be able to hold UN elections, but can not win by becoming the Secretary General.</English>
 		<French>Les Nations Unies et le Palais Apostolique peuvent être construit même si la victoire diplomatique n'est pas activée. Les Joueurs peuvent conduire des Elections, mais ne gagneront pas en étant élu Secrétaire général.</French>
 		<German>Die Vereinten Nationen und der Apostolische Palast können auch dann gebaut werden, wenn der diplomatische Sieg nicht ausgewählt wurde. Spieler werden auch weiterhin in der Lage sein, UN-Wahlen abzuhalten, aber sie können nicht dadurch gewinnen, dass sie zum Generalsekretär gewählt werden.</German>
-		<Italian>Le Nazioni Unite e il Palazzo Apostolico possono essere costruiti, anche quando la vittoria diplomatica è disattivata. Ci sarranno votazioni dell'ONU, ma i giocatori non possono vincer divenatndo Segretari Generali.</Italian>
+		<Italian>Le Nazioni Unite e il Palazzo Apostolico possono essere costruiti, anche quando la vittoria diplomatica è disattivata. Ci sapranno votazioni dell'ONU, ma i giocatori non possono vincer diventando Segretari Generali.</Italian>
 		<Spanish>Las Naciones Unidas y el Palacio Apostólico podrán ser construidos aunque la victoria diplomática esté desactivada. Los jugadores podrán celebrar votaciones, pero no podrán ganar convirtiéndose en Secretario General.</Spanish>
 		<Polish>Projekty Narodów Zjednoczonych i Pałacu Apostolskiego mogą zostać zbudowane nawet wtedy, gdy zwycięstwo dyplomatyczne jest wyłączone. Gracze będą mogli przeprowadzić wybory ONZ, ale nie mogą wygrać, stając się Sekretarzem Generalnym.</Polish>
 	</TEXT>
@@ -1443,7 +1437,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ZONE_OF_CONTROL_HELP</Tag>
-		<English>Zone of Control (ZoC) hinders enemy units from walking around manned forts or cities with moats, the effect has a one tile range. A unit that is inside an enemy ZoC cannot move to another plot within the ZoC, but must exit the ZoC before being able to reach other ZoC plots.	Not recomended at the moment as there is a known bug it creates for pathing and some players may find it terribly frustrating with the current forts. The author of this option also believes that it does not represent a fair combat scenario in many cases where you'd prefer to take the hit they threaten and would like to eventually make a form of ZoC that instead generates a free Ranged Assault on the offending unit rather than keeping it from moving at all (as that's the concept behind the effect anyhow.)</English>
+		<English>Zone of Control (ZoC) hinders enemy units from walking around manned forts or cities with moats, the effect has a one tile range. A unit that is inside an enemy ZoC cannot move to another plot within the ZoC, but must exit the ZoC before being able to reach other ZoC plots.	Not recommended at the moment as there is a known bug it creates for pathing and some players may find it terribly frustrating with the current forts. The author of this option also believes that it does not represent a fair combat scenario in many cases where you'd prefer to take the hit they threaten and would like to eventually make a form of ZoC that instead generates a free Ranged Assault on the offending unit rather than keeping it from moving at all (as that's the concept behind the effect anyhow.)</English>
 		<French>La zone de contrôle (ZoC) empêche les unités ennemies de marcher autour des forts habités ou des villes avec des douves, l'effet a une portée d'une case. Une unité qui se trouve à l'intérieur d'un ZoC ennemi ne peut pas se déplacer vers une autre parcelle dans le ZoC, mais doit quitter le ZoC avant de pouvoir atteindre d'autres parcelles ZoC. Non recommandé pour le moment car il existe un bug connu qu'il crée pour calcul des chemins et certains joueurs peuvent le trouver terriblement frustrant avec les forts actuels. L'auteur de cette option estime également que cela ne représente pas un scénario de combat équitable dans de nombreux cas où vous préféreriez prendre le coup qu'ils menacent et souhaitez éventuellement créer une forme de ZoC qui génère à la place un assaut à distance gratuit contre le délinquant. l'unité plutôt que de l'empêcher de bouger (comme c'est le concept derrière l'effet de toute façon.)</French>
 	</TEXT>
 </Civ4GameText>

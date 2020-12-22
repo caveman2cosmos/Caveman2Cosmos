@@ -46,7 +46,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHAMANHUT_STRATEGY</Tag>
-		<English>Build a [COLOR_BUILDING_TEXT]Shaman Hut[COLOR_REVERT] to allow [COLOR_UNIT_TEXT]Shaman[COLOR_REVERT] trainning. They also increase the gold rate of your cities.</English>
+		<English>Build a [COLOR_BUILDING_TEXT]Shaman Hut[COLOR_REVERT] to allow [COLOR_UNIT_TEXT]Shaman[COLOR_REVERT] training. They also increase the gold rate of your cities.</English>
 		<French>Construire une [COLOR_BUILDING_TEXT]Hutte de Shaman[COLOR_REVERT] permet l'entraînement d'un [COLOR_UNIT_TEXT]Shaman[COLOR_REVERT]. Augmente également l'or de la ville.</French>
 		<German>In [COLOR_BUILDING_TEXT]Schamanenhütten[COLOR_REVERT] können [COLOR_UNIT_TEXT]Schamanen[COLOR_REVERT] ausgebildet werden. Außerdem steigern sie den Wohlstand einer Stadt.</German>
 		<Italian>Costruisci una [COLOR_BUILDING_TEXT]Capanna dello sciamano[COLOR_REVERT] per addestrare lo [COLOR_UNIT_TEXT]Sciamano[COLOR_REVERT]. Incrementano anche la produzione di oro della tua città.</Italian>
@@ -127,7 +127,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHINTO_SHRINE_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Ise-jingu[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shinto Shrine[COLOR_REVERT]) produces one gold each turn for every city in the world that practises [COLOR_HIGHLIGHT_TEXT]Shinto[COLOR_REVERT]. It also spreads [COLOR_HIGHLIGHT_TEXT]Shinto[COLOR_REVERT] thoughout the world and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</English>
+		<English>The [COLOR_BUILDING_TEXT]Ise-jingu[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shinto Shrine[COLOR_REVERT]) produces one gold each turn for every city in the world that practises [COLOR_HIGHLIGHT_TEXT]Shinto[COLOR_REVERT]. It also spreads [COLOR_HIGHLIGHT_TEXT]Shinto[COLOR_REVERT] throughout the world and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</English>
 		<German>Der [COLOR_BUILDING_TEXT]Ise-jingu[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Shintoistischer Schrein[COLOR_REVERT]) produziert in allen Städten, die den [COLOR_HIGHLIGHT_TEXT]Shintoismus[COLOR_REVERT] praktizieren, 1 Gold/Runde. Außerdem verbreitet er den[COLOR_HIGHLIGHT_TEXT]Shintoismus[COLOR_REVERT] in aller Welt und erhöht die Chancen einer Stadt, einen [COLOR_UNIT_TEXT]Großen Propheten[COLOR_REVERT] hervorzubringen.</German>
 		<Italian>Il [COLOR_BUILDING_TEXT]Jingu di Ise[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Santuario shintoista[COLOR_REVERT]) produce oro per ogni città del mondo in cui è diffuso lo [COLOR_HIGHLIGHT_TEXT]Shintoismo[COLOR_REVERT]. Diffonde anche lo [COLOR_HIGHLIGHT_TEXT]Shintoismo[COLOR_REVERT] in tutto il mondo e incrementa le chance della città di generare un [COLOR_UNIT_TEXT]Grande profeta[COLOR_REVERT].</Italian>
 	</TEXT>

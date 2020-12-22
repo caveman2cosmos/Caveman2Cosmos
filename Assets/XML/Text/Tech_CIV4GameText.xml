@@ -194,7 +194,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ACOUSTICS_QUOTE</Tag>
 		<English>"The great problem of the concert hall is that the shoebox is the ideal shape for acoustics but that no architect worth their names wants to build a shoebox." - Rem Koolhaas</English>
-		<French>"Le grand problème avec les salles de concert, c'est qu'au niveau accoustique, la forme idéale est la boîte à chaussures. Mais aucun architecte ne veut associer son nom à une boîte à chaussures." - Rem Koolhaas</French>
+		<French>"Le grand problème avec les salles de concert, c'est qu'au niveau acoustique, la forme idéale est la boîte à chaussures. Mais aucun architecte ne veut associer son nom à une boîte à chaussures." - Rem Koolhaas</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ACOUSTICS_STRATEGY</Tag>
@@ -385,7 +385,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</Tag>
 		<English>Advanced Environmental Systems</English>
-		<French>Systèmes Environmentaaux Avancés</French>
+		<French>Systèmes environnementaux avancés</French>
 		<Italian>Sistemi ambientali avanzati</Italian>
 		<Spanish>
 			<Text>Sistemas ambientales avanzados</Text>
@@ -427,7 +427,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_METALLURGY_QUOTE</Tag>
-		<English>"In other part stood one who, at the forge Labouring, two massy clods of iron and brass Had melted." - John Milton, Paradise Lost</English>
+		<English>"In other part stood one who at the Forge / Labouring, two massie clods of Iron and Brass Had melted." - John Milton, Paradise Lost</English>
 		<French>"Dans une autre partie se trouvait une masse fondue, là où il y avait auparavant des masses de fer et d'airain." - John Milton, Paradis perdu</French>
 	</TEXT>
 	<TEXT>
@@ -525,7 +525,7 @@
 		<English>In recent years great strides have been made in improving arcology shielding. The newer shields are far stronger than the originals; unfortunately they are also extremely expensive. They have a significant environmental impact, as well: the shields emit an extremely annoying high-pitched whining sound. Studies have shown that prolonged exposure to this sound causes heightened anxiety in humans, and, if continued indefinitely, leads to increased hostility, anger, and eventually to insanity.[PARAGRAPH:2]Significant efforts are being made to remove or at least reduce this sound. In the meantime, most cities leave these shields turned off until the city is under imminent threat; when the shields are turned on the cities attempt to mask the whining sound by playing loud, incessant "muzak" through huge speakers atop every building in the dome.</English>
 		<French>Au cours des dernières années, les boucliers d'arcologie ont été très nettement améliorés. Ces nouveaux boucliers sont plus résistants, mais aussi beaucoup plus chers. Autre inconvénient: leur impact sur l'environnement. Les boucliers émettent en permanence des sifflements stridents. Des études ont démontré qu'une exposition prolongée à ces sifflements accroît le stress et peut conduire à un sentiment de colère, d'agressivité, pouvant mener à la folie.[PARAGRAPH:2]Des efforts ont été faits pour supprimer, ou du moins réduire, ces sifflements. Toutefois, la plupart des villes ont opté pour une solution plus radicale: les boucliers sont désactivés tant qu'aucune menace n'est détectée et lorsqu'ils sont remis en service, les villes tentent de masquer les sifflements en diffusant une musique de fond dans les haut-parleurs des dômes.</French>
 		<German>In den letzten Jahren erzielte man große Fortschritte bei der Verbesserung von Arkologieschilden. Die neueren Modelle sind weitaus robuster als ihre Vorläufer, aber leider auch extrem teuer. Außerdem haben sie gravierende Auswirkungen auf die Umwelt, denn die Schilde sondern einen extrem hohen Heulton ab. Wissenschaftliche Untersuchungen haben gezeigt, dass Menschen, die diesem Ton längere Zeit ausgesetzt sind, unter stärkeren Angstzuständen leiden und, wenn er ununterbrochen zu hören ist, aggressiv, gewalttätig und schließlich sogar wahnsinnig werden.[PARAGRAPH:2]Um hier Abhilfe zu schaffen, wird gegenwärtig intensiv nach einer Methode geforscht, mit der diese Geräuschkulisse beseitigt oder zumindest gedämpft werden kann. Bis dahin lassen die meisten Städte ihre Schilde ausgeschaltet, sofern sie keiner konkreten, unmittelbaren Bedrohung ausgesetzt sind. Und wenn sie doch eingeschaltet werden müssen, versucht man, den Heulton durch unaufhörliches Abspielen sehr lauter Fahrstuhlmusik zu überdecken, die mittels riesiger Lautsprecher auf jedem Gebäude innerhalb der Kuppel ausgegeben wird.</German>
-		<Italian>Negli anni recenti sono stati fatti grossi passi avanti nel migliorare gli scudi dell'arcologia. I più recenti scudi sono molto più forti di quelli originali ma, sfortunatamente, sono anche estremamente costosi. Hanno anche un importante impatto ambientale: emettono un suono acuto e lamentoso estremamente irritante. Gli studi hanno dimostrato che una prolungata esposizione a questo suono causa negli umani un'elevata ansietà e, se continuato, porta a un'accresciuta ostilità, rabbia e infine alla pazzia.[PARAGRAPH:2]Si stanno facendo grandi sforzi per eliminare o almeno ridurre questo suono. Nel frattempo, la maggior parte delle città ha disattivato gli scudi fino a quando non saranno in immediato pericolo. Quando vengono attivati gli scudi, le città cercano di mascherarne il suono riproducendo incessantemente musica di sottofondo ad alto volume, attraverso enormi altoparlanti posti in cima a ogni edificio nella cupol</Italian>
+		<Italian>Negli anni recenti sono stati fatti grossi passi avanti nel migliorare gli scudi dell'arcologia. I più recenti scudi sono molto più forti di quelli originali ma, sfortunatamente, sono anche estremamente costosi. Hanno anche un importante impatto ambientale: emettono un suono acuto e lamentoso estremamente irritante. Gli studi hanno dimostrato che una prolungata esposizione a questo suono causa negli umani un'elevata ansietà e, se continuato, porta a un'accresciuta ostilità, rabbia e infine alla pazzia.[PARAGRAPH:2]Si stanno facendo grandi sforzi per eliminare o almeno ridurre questo suono. Nel frattempo, la maggior parte delle città ha disattivato gli scudi fino a quando non saranno in immediato pericolo. Quando vengono attivati gli scudi, le città cercano di mascherarne il suono riproducendo incessantemente musica di sottofondo ad alto volume, attraverso enormi altoparlanti posti in cima a ogni edificio nella cupola.</Italian>
 		<Spanish>En los últimos años se han producido grandes avances en los escudos arcológicos. Los últimos son mucho más resistentes que los primeros, pero, desgraciadamente, también son muy caros. Además, tienen un impacto ambiental muy significativo: los escudos emiten un chirrido agudo de lo más insoportable. Los estudios demuestran que una exposición prolongada a este sonido aumenta la ansiedad en los humanos y, si es de forma indefinida, puede llevar a un aumento de la hostilidad, la ira y finalmente a la locura.[PARAGRAPH:2]Se están llevando a cabo importantes esfuerzos para eliminar o, al menos, reducir este sonido. Mientras tanto, la mayoría de las ciudades mantienen los escudos apagados hasta que la ciudad se encuentra en un peligro inminente. Cuando se encienden los escudos, las ciudades tratan de tapar el chirrido haciendo sonar el hilo musical al máximo volumen mediante los enormes altavoces que hay en lo alto de cada edificio de la bóved</Spanish>
 		<Polish>W ostatnich latach poczyniono ogromne postępy w poprawie ochrony arkologicznej. Nowe Pola Siłowe są dużo silniejsze niż poprzednie, niestety są jednak ekstremalnie kosztowne i mają znaczny wpływ na środowisko - emitują bardzo uciążliwy dźwięk o wysokich częstotliwościach. Przeprowadza się obecnie kosztowne próby ograniczenia tego dźwięku. Dopóki nie zakończą się one sukcesem, tarcze będą włączane jedynie wtedy, kiedy miasto znajdzie się w niebezpieczeństwie.</Polish>
 	</TEXT>
@@ -2317,17 +2317,14 @@
 		<Tag>TXT_KEY_TECH_ASTROBIOLOGY_QUOTE</Tag>
 		<English>
 "Do you ever wonder if - well, if there are people living on the third planet?"
-
 "The third planet is incapable of supporting life," stated the husband patiently.
 "Our scientists have said there's far too much oxygen in their atmosphere."
-
 	- "The Martian Chronicles" by Ray Bradbury
 		</English>
 		<French>
 "Ne Vous demandez-vous jamais si - eh bien, s'il y a des gens qui vivent sur la troisième planète?"
 "- La troisième planète est incapable de soutenir la vie", a déclaré patiemment le mari.
 "- Nos scientifiques ont dit qu'il y avait beaucoup trop d'oxygène dans leur atmosphère."
-
 	- "The Martian Chronicles" de Ray Bradbury
 		</French>
 	</TEXT>
@@ -3260,7 +3257,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BASKETRY_QUOTE</Tag>
 		<English>The way to become rich is to put all your eggs in one basket and then watch that basket.[PARAGRAPH:2]- Andrew Carnegie,[PARAGRAPH:1][SPACE][SPACE]"Autobiography of Andrew Carnegie"</English>
-		<French>"Pour devenir riche, il faut mettre tous ses oeufs dans un panier et ensuite contempler ce panier." - Andrew Carnegie</French>
+		<French>"Pour devenir riche, il faut mettre tous ses œufs dans un panier et ensuite contempler ce panier." - Andrew Carnegie</French>
 		<Polish>"Mam nadzieję, że nie dojdziemy do miejsca gdzie będziemy musieli zakazać kotu polowania na myszy, by nauczyć go dmuchania szkła i wyplatanie koszy." - Joseph Barbera</Polish>
 	</TEXT>
 	<TEXT>
@@ -5197,22 +5194,16 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLOUD_PATTERNS_PEDIA</Tag>
 		<English>Being able to predict the weather by observing cloud formations is a skill that is somewhat lost on us modern humans. Most of us can easily look at a cloud and see the unicorn or ice cream cones, but very few of us can look at clouds and see the approaching cold front. Clouds can be broken into four categories. These categories are high clouds, middle clouds, low clouds and clouds with vertical growth. Clouds are also identified by shape. Cumulus refers to a "heap" of clouds. Stratus refers to clouds that are long and streaky.
-
 High clouds form at 16,000 ft (4,876.8 m) to 43,000 ft (13,106.4 m). Basically, these are the clouds that you only encounter on the top of really high mountains or at the cruising altitude of a jet airplane. Due to the extreme conditions at which they form, they tend to be composed primarily of ice crystals, and does not block sunlight.
-
 Types of High clouds:
 	[ICON_BULLET]Cirrus
 	[ICON_BULLET]Cirrostratus
 	[ICON_BULLET]Cirrocumulus
-
 Middle clouds form at 6,500 ft (1,981.2 m) to 23,000 ft (7,010.4 m). They are comprised of water, and, if cold enough, ice. Middle clouds often block sunlight, but not always.
-
 Types of Middle clouds:
 	[ICON_BULLET]Altostratus
 	[ICON_BULLET]Altocumulus
-
 Low clouds form below 6,500 ft (1,981.2 m). These clouds are the ones that like to hang-around just above tall buildings. These clouds tend to contain water, but can also be comprised of snow if the weather gets cold enough. Low clouds block sunlight and can bring precipitation and wind.
-
 Types of Low clouds:
 	[ICON_BULLET]Stratus
 	[ICON_BULLET]Stratocumulus
@@ -5282,7 +5273,6 @@ Types of Low clouds:
 	[ICON_BULLET]Safety of vessels
 	[ICON_BULLET]Maintenance of seamarks
 	[ICON_BULLET]Border control
-
 During wartime, some coast guard organizations might have responsibilities in harbor defense, port security, naval counter- intelligence and coastal patrols.
 		</English>
 		<French>Parmi les responsabilités qui peuvent être confiées à un service de garde côtière figurent:
@@ -5291,7 +5281,6 @@ During wartime, some coast guard organizations might have responsibilities in ha
 	[ICON_BULLET]Sécurité des navires
 	[ICON_BULLET]Entretien des Balises
 	[ICON_BULLET]Contrôle des frontières
-
 En temps de guerre, certaines organisations de la garde côtière peuvent avoir des responsabilités dans la défense portuaire, la sécurité portuaire, le contre-espionnage naval et les patrouilles côtières.
 		</French>
 		<Spanish>Entre las responsabilidades que se les suele encomendar a un batallón de guardacostas se encuentran: la búsqueda y rescate, la aplicación de las leyes marítimas, garantizar la seguridad de los buques, el mantenimiento de las balizas y el control de las fronteras. En tiempos de guerra, algunos departamentos de guardacostas podrían asumir responsabilidades en cuestiones de defensa y seguridad portuaria, contraespionaje naval y patrullas costeras.</Spanish>
@@ -6209,13 +6198,9 @@ En temps de guerre, certaines organisations de la garde côtière peuvent avoir 
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CONTROLLED_FIRE_PEDIA</Tag>
 		<English>The control of fire by early humans was a turning point in the cultural aspect of human evolution. Fire provided a source of warmth, protection, light, improved hunting, and a method of preparing food. These cultural advances allowed human geographic dispersal, and changes to diet and behavior. Additionally, fire allowed human activity to continue into the dark and colder hours of the evening.
-
 Use and control of fire was a gradual process, proceeding through more than one stage. One was a change in habitat, from dense forest, where wildfires were not uncommon, to savanna where wildfires were higher intensity. Such a change may have occurred about three million years ago, when the savanna expanded in East Africa due to cooler and drier climate. The next stage involved interaction with burned landscapes and foraging in the wake of wildfires, as observed in various wild animals. Experimentation with residual hot spots in the wake of wildfires, for example, foods found in the wake of wildfires tend to be either burned or undercooked. This might have provided incentives to place undercooked foods on a hotspot or to pull food out of the fire if it was in danger of getting burned. This would require familiarity with fire and its behavior. An early step in the control of fire would have been transporting it from burned to unburned areas and lighting them on fire. Maintaining a fire over an extended period of time, as for a season may have led to the development of base campsites. Building a hearth or other fire enclosure such as a circle of stones would have been a later development. Each of these stages could occur at different intensities, ranging from occasional or "opportunistic" to "habitual" to "obligate" (unable to survive without it).
-
 There are some evidence that the species Homo Erectus, some of which were likely our ancestors, controlled fire as long as a million years ago, and it is widely accepted that they, at the site of Bnot Ya'akov Bridge, controlled fire between 790,000 and 690,000 years ago. Evidence of widespread control of fire by anatomically modern humans dates to approximately 125 000 years ago, though the knowledge of controlled fire was probably inherited from the parent species. The discovery of fire came to provide a wide variety of uses for early hominids.
-
 	-</English>
-
 		<Polish>Ogień to jeden z fundamentalnych wynalazków okresu prehistorycznego ludzkości. Początkowa umiejętność podtrzymywania ognia pochodzącego z zapłonów naturalnych została przez naszych przodków następnie udoskonalona o umiejętność rozniecania ognia: kontrolowanego wywoływania zapłonu. Wywoływano to przez tarcie (np z wykorzystaniem tzw. łuku ogniowego), lub krzesanie iskier powstających przy uderzaniu o siebie dwóch krzemieni, ew. pirytu i krzemienia (później - stali i krzemienia). Umiejętność rozniecania ognia była doskonalona przez wszystkie epoki i także współcześnie obok sposobów znanych od stuleci (zapałki) lub dziesięcioleci (zapalniczki benzynowe czy gazowe) pojawiają się kolejne rozwiązania (np piezoelektryczny iskrownik do zapalania płomienia kuchenki gazowej).</Polish>
 	</TEXT>
 	<TEXT>
@@ -6876,7 +6861,7 @@ There are some evidence that the species Homo Erectus, some of which were likely
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CULTURAL_IDENTITY_QUOTE</Tag>
 		<English>A nation's culture resides in the hearts and in the soul of its people.[PARAGRAPH:2]- Mahatma Gandhi,[PARAGRAPH:1][SPACE][SPACE]"The Selected Works of Mahatma Gandhi: The Voice of Truth"</English>
-		<French>"La culture d'une nation réside dans le coeur et l'âme de son peuple." - Mahatma Gandhi</French>
+		<French>"La culture d'une nation réside dans le cœur et l'âme de son peuple." - Mahatma Gandhi</French>
 		<Polish>"Podstawą jedności Europy jest idea wspólnoty chrześcijańskiej, kultura i cywilizacja europejska." - Konrad Adenauer</Polish>
 	</TEXT>
 	<TEXT>
@@ -7241,11 +7226,8 @@ There are some evidence that the species Homo Erectus, some of which were likely
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DECRYPTION_MACHINES_PEDIA</Tag>
 		<English>The Enigma machines were a series of electro-mechanical rotor cipher machines developed and used in the early- to mid-20th century to protect commercial, diplomatic and military communication. Enigma was invented by the German engineer Arthur Scherbius at the end of World War I. Early models were used commercially from the early 1920s, and adopted by military and government services of several countries, most notably Nazi Germany before and during World War II. Several different Enigma models were produced, but the German military models, having a plugboard, were the most complex. Japanese and Italian models were also in use.
-
 		Around December 1932, Marian Rejewski of the Polish Cipher Bureau used the theory of permutations and flaws in the German military message procedures to break the message keys of the plugboard Enigma machine. Rejewski achieved this result without knowledge of the wiring of the machine, so the result did not allow the Poles to decrypt actual messages. The French had a spy - Hans Thilo Schmidt - with access to German cipher materials that included the daily keys used in September and October 1932. Those keys included the plugboard settings. The French gave the material to the Poles, and Rejewski used some of that material and the message traffic in September and October to solve for the unknown rotor wiring. Consequently, the Poles were able to build their own Enigma machines, which were called Enigma doubles. Rejewski was aided by cryptanalysts Jerzy zycki and Henryk Zygalski, both of whom had been recruited with Rejewski from Poznan University. The Polish Cipher Bureau developed techniques to defeat the plugboard and find all components of the daily key, which enabled the Cipher Bureau to read the German's Enigma messages. Over time, the German cryptographic procedures improved, and the Cipher Bureau developed techniques and designed mechanical devices to continue breaking the Enigma traffic. As part of that effort, the Poles exploited quirks of the rotors, compiled catalogs, built a cyclometer to help make a catalog with 100,000 entries, made Zygalski sheets and built the electro-mechanical cryptologic bomb to search for rotor settings. In 1938, the Germans added complexity to the Enigma machines that finally became too expensive for the Poles to counter. The Poles had six bomby, but when the Germans added two more rotors, ten times as many bomby were needed, but the Poles did not have the resources.
-
 		On 26 and 27 July 1939, in Pyry near Warsaw, the Poles initiated French and British military intelligence representatives into their Enigma-decryption techniques and equipment, including Zygalski sheets and the cryptologic bomb, and promised each delegation a Polish-reconstructed Enigma. The demonstration represented a vital basis for the later British continuation and effort. During the war, British cryptologists decrypted a vast number of messages enciphered on Enigma. The intelligence gleaned from this source, codenamed "Ultra" by the British, was a substantial aid to the Allied war effort.
-
 		Though Enigma had some cryptographic weaknesses, in practice it was German procedural flaws, operator mistakes, failure to systematically introduce changes in encipherment procedures, and Allied capture of key tables and hardware that, during the war, enabled Allied cryptologists to succeed and "turned the tide" in the Allies' favor.</English>
 	</TEXT>
 	<TEXT>
@@ -8119,7 +8101,6 @@ There are some evidence that the species Homo Erectus, some of which were likely
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ECOSYNTHESIS_QUOTE</Tag>
 		<English>Each in his own Tongue (Poem excerpt)
-
 A fire-mist and a planet,
 	A crystal and a cell,
 A jellyfish and a saurian,
@@ -8128,7 +8109,6 @@ Then a sense of law and beauty,
 	And a face turned from the clod, --
 Some call it Evolution,
 	And others call it God.
-
 	- William Herbert Carruth (1859 - 1924)
 	</English>
 		<French>Chacun dans sa propre langue (extrait de poème)
@@ -8722,13 +8702,9 @@ Some call it Evolution,
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EXECUTIONS_PEDIA</Tag>
 		<English>The executioner was usually presented with a warrant authorizing or ordering him to execute the sentence. The warrant protects the executioner from the charge of murder. Common terms for executioners derived from forms of capital punishment-though they often also performed other physical punishments-include hangman (hanging) and headsman (beheading). In the military, the role of executioner was performed by a soldier, such as the provost. A common stereotype of an executioner is a hooded medieval or absolutist executioner.
-
 		While this task can be an occasional one, it can be carried out in the line of more general duty by an officer of the court, the police, prison staff, or even the military. A special case is the tradition of the Roman fustuarium, continued in forms of running the gauntlet, where the culprit receives his punishment from the hands of the comrades gravely harmed by his crime, e.g. for failing in vital sentinel duty or stealing from a ship's limited food supply.
-
 		Many executioners were professional specialists who traveled a circuit or region performing their duty, because executions would rarely be very numerous. Within this region, a resident executioner would also administer non-lethal physical punishments, or apply torture.
-
 		The term is extended to administrators of a severe physical punishment that is not prescribed to kill, but which may result in death.
-
 		In Caveman2Cosmos, executions are included as a Medieval technology due to the massive proliferation of the use of and methods of execution. It became fashionable as a social control factor, both to entertain the jaded populace and to inflict the fear of disobedience among the many fractured, quarreling, and often young, kingdoms and fiefdoms, where loyalty to any crown was a scarce commodity.</English>
 	</TEXT>
 	<TEXT>
@@ -10362,7 +10338,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GARDENING_QUOTE</Tag>
 		<English>"One is nearer God's heart in a garden[NEWLINE]Than anywhere else on earth." - Dorothy Frances Gurney</English>
-		<French>"On est plus près du coeur de Dieu dans un jardin[NEWLINE]que partout ailleurs sur la terre." - Dorothy Frances Gurney</French>
+		<French>"On est plus près du cœur de Dieu dans un jardin[NEWLINE]que partout ailleurs sur la terre." - Dorothy Frances Gurney</French>
 		<German>"In einem Garten ist man Gottes Herzen näher[NEWLINE]als irgendwo anders auf der Erde." - Dorothy Frances Gurney</German>
 		<Italian>"Una persona è più vicina al cuore di Dio in un giardino[NEWLINE]che in ogni altro posto sulla Terra." - Dorothy Frances Gurney</Italian>
 		<Polish>"W ogrodzie jest się bliżej bożego serca[NEWLINE]niż w jakimkolwiek innym miejscu na ziemi."- Dorothy Frances Gurney</Polish>
@@ -11190,11 +11166,8 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GYROCOMPASS_PEDIA</Tag>
 		<English>A gyrocompass is a type of non-magnetic compass which is based on a fast-spinning disc and the rotation of the Earth (or another planetary body if used elsewhere in the universe) to find geographical direction automatically. Although one important component of a gyrocompass is a gyroscope, these are not the same devices; a gyrocompass is built to use the effect of gyroscopic precession, which is a distinctive aspect of the general gyroscopic effect. Gyrocompasses are widely used for navigation on ships, because they have two significant advantages over magnetic compasses:
-
 			*they find true north as determined by the axis of the Earth's rotation, which is different from, and navigationally more useful than, magnetic north, and
-
 			*they are unaffected by ferromagnetic materials, such as in a ship's steel hull, which distort the magnetic field.
-
 		Aircraft commonly use gyroscopic instruments (but not a gyrocompass) for navigation and altitude monitoring</English>
 	</TEXT>
 	<TEXT>
@@ -12130,17 +12103,11 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INDUSTRIAL_LIFESTYLE_PEDIA</Tag>
 		<English>The Industrial Revolution was the transition to new manufacturing processes in the period from about 1760 to sometime between 1820 and 1840. This transition included going from hand production methods to machines, new chemical manufacturing and iron production processes, the increasing use of steam power, the development of machine tools and the rise of the factory system.
-
 		Textiles were the dominant industry of the Industrial Revolution in terms of employment, value of output and capital invested; the textile industry was also the first to use modern production methods.
-
 		The Industrial Revolution began in Great Britain, and many of the technological innovations were British. By the mid-18th century Britain controlled a global trading empire with colonies in North America and Africa, and with some political influence on the Indian subcontinent, through the activities of the East India Company. The development of trade and the rise of business were major causes of the Industrial Revolution.
-
 		The Industrial Revolution marks a major turning point in history; almost every aspect of daily life was influenced in some way. In particular, average income and population began to exhibit unprecedented sustained growth. Some economists say that the major impact of the Industrial Revolution was that the standard of living for the general population began to increase consistently for the first time in history, although others have said that it did not begin to meaningfully improve until the late 19th and 20th centuries.
-
 		GDP per capita was broadly stable before the Industrial Revolution and the emergence of the modern capitalist economy, while the Industrial Revolution began an era of per-capita economic growth in capitalist economies. Economic historians are in agreement that the onset of the Industrial Revolution is the most important event in the history of humanity since the domestication of animals and plants.
-
 		The precise start and end of the Industrial Revolution is still debated among historians, as is the pace of economic and social changes. Eric Hobsbawm held that the Industrial Revolution began in Britain in the 1780s and was not fully felt until the 1830s or 1840s, while T. S. Ashton held that it occurred roughly between 1760 and 1830. Rapid industrialization first began in Britain, starting with mechanized spinning in the 1780s, with high rates of growth in steam power and iron production occurring after 1800. Mechanized textile production spread from Great Britain to continental Europe and the United States in the early 19th century, with important centres of textiles, iron and coal emerging in Belgium and the United States and later textiles in France.
-
 		An economic recession occurred from the late 1830s to the early 1840s when the adoption of the original innovations of the Industrial Revolution, such as mechanized spinning and weaving, slowed and their markets matured. Innovations developed late in the period, such as the increasing adoption of locomotives, steamboats and steamships, hot blast iron smelting and new technologies, such as the electrical telegraph, widely introduced in the 1840s and 1850s, were not powerful enough to drive high rates of growth. Rapid economic growth began to occur after 1870, springing from a new group of innovations in what has been called the Second Industrial Revolution. These new innovations included new steel making processes, the large-scale manufacture of machine tools and the use of increasingly advanced machinery in steam-powered factories.</English>
 	</TEXT>
 	<TEXT>
@@ -13267,7 +13234,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_LINGUISTICS_QUOTE</Tag>
 		<English>"If you talk to a man in a language he understands, that goes to his head. If you talk to him in his language, that goes to his heart." - Nelson Mandela</English>
-		<French>"Si vous parlez à un homme dans une langue qu'il comprend, cela va à sa tête. Si vous lui parlez dans sa langue, c'est le coeur que vous atteignez." - Nelson Mandela</French>
+		<French>"Si vous parlez à un homme dans une langue qu'il comprend, cela va à sa tête. Si vous lui parlez dans sa langue, c'est le cœur que vous atteignez." - Nelson Mandela</French>
 		<Polish>"Jeśli przemawiasz do kogoś w języku, który rozumie; to trafia to do jego umysłu. Jeśli przemawiasz do niego w JEGO języku, to trafia to do jego serca." - Nelson Mandela</Polish>
 	</TEXT>
 	<TEXT>
@@ -15573,7 +15540,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MODERN_ART_QUOTE</Tag>
 		<English>"Fine art is that in which the hand, the head, and the heart of man go together." - John Ruskin</English>
-		<French>"L'Art est là où la main, la tête et le coeur de l'homme vont ensemble." - John Ruskin</French>
+		<French>"L'Art est là où la main, la tête et le cœur de l'homme vont ensemble." - John Ruskin</French>
 		<Polish>"Piękno rzeczy śmiertelnych mija, lecz nie piękno sztuki." - Leonardo da Vinci</Polish>
 	</TEXT>
 	<TEXT>
@@ -16794,7 +16761,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NAVAL_FLIGHT_QUOTE</Tag>
 		<English>"Fight on and fly on to the last drop of blood and the last drop of fuel, to the last beat of the heart." - Baron Manfred von Richthofen</English>
-		<French>"Combattre et voler jusqu'à la dernière goutte de sang et la dernière goutte de carburant, jusqu'au dernier battement de son coeur." - Baron Manfred von Richthofen</French>
+		<French>"Combattre et voler jusqu'à la dernière goutte de sang et la dernière goutte de carburant, jusqu'au dernier battement de son cœur." - Baron Manfred von Richthofen</French>
 		<Polish>"Po co zmuszać czyjeś ciało do wyskoczenia z samolotu ze spadochronem? Dlaczego człowiek w ogóle chce latać? Ludzie często zadają te pytania. Niektórzy mówią bogactwo, siła, jest wystarczającym powodem. Ja myślę, że ryzyko, które podejmuję jest uzasadnione moją zwykłą miłością do życia." - Charles Lindbergh</Polish>
 	</TEXT>
 	<TEXT>
@@ -18618,7 +18585,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PIERCING_QUOTE</Tag>
 		<English>Let your sharp arrows pierce the hearts of the king's enemies; let the nations fall beneath your feet.[PARAGRAPH:2]- David (disputed),[PARAGRAPH:1][SPACE][SPACE]"The Tanakh, Psalms 45:5"</English>
-		<French>"Tes flèches sont pointues, elles percent le coeur de tes ennemis. Oui, tout le monde tombe sous tes coups!" - Psaume 45, Bible</French>
+		<French>"Tes flèches sont pointues, elles percent le cœur de tes ennemis. Oui, tout le monde tombe sous tes coups!" - Psaume 45, Bible</French>
 		<German>"Scharf sind deine Pfeile, daß die Völker vor dir niederfallen; sie dringen ins Herz der Feinde des Königs." - Psalm 45, Bibel</German>
 		<Polish>"Niech ostre strzały przeszyją serca wrogów króla. A narody niech padną do Twych stóp!" - Biblia</Polish>
 	</TEXT>
@@ -18665,9 +18632,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PLAGUE_MEDICINE_PEDIA</Tag>
 		<English>A plague doctor was a medical physician who treated victims of the plague. They were specifically hired by towns that had many plague victims in times of epidemics. Since the city was paying their salary, they treated everyone: both the wealthy and the poor. However, some plague doctors were known for charging patients and their families extra for special treatments and/or false cures. They were not normally professionally trained experienced physicians or surgeons, and often were second-rate doctors unable to otherwise run a successful medical business or young physicians trying to establish themselves. These doctors rarely cured their patients; rather, they got a count of the number of people contaminated for demographic purposes.
-
 		Plague doctors by their covenant treated plague patients and were known as municipal or "community plague doctors", whereas "general practitioners" were separate doctors and both might be in the same European city or town at the same time. In France and the Netherlands, plague doctors often lacked medical training and were referred to as "empirics". In one case, a plague doctor had been a fruit salesman before his employment as a physician.
-
 		In the seventeenth, eighteenth, and nineteenth centuries, some doctors wore a beak-like mask which was filled with aromatic items. The masks were designed to protect them from putrid air, which (according to the miasmatic theory of disease) was seen as the cause of infection. The design of these costumes has been attributed to Charles de Lorme, the chief physician to Louis XIII.</English>
 	</TEXT>
 	<TEXT>
@@ -19048,7 +19013,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PLASTICS_PEDIA</Tag>
 		<English>The creation of plastics in the 1860s revolutionized product manufacturing throughout the world. In the middle of the 19th century, scientists were looking for an inexpensive synthetic substance that could be used to replace natural materials which were expensive and difficult to procure. For example, ivory was used in many goods - utensils, fans, piano keys, and so forth. Ivory was attractive and comfortable to the touch, but it was becoming very expensive as the animal populations were depleted.[PARAGRAPH:2]A plastic-like substance called "parkesine" was created in England in 1862, but the material proved unsatisfactory; it became very brittle in a short period of time. In 1863 an American inventor named John Hyatt discovered a way to improve the flexibility and longevity of parkesine; he called his new product "celluloid." Celluloid first gained widespread use as a material for making shirt cuffs and collars; but it soon spread into other areas, including as a material for making movie and photographic film.[PARAGRAPH:2]Over time, more advanced plastics were created; these would see use as everything from fabric to eyeglass lenses to artificial hearts. In fact the modern world is largely built on plastic. This too has a price; plastic's very durability makes it increasingly difficult to dispose of without damaging the world's fragile ecostructure.</English>
-		<French>L'invention du plastique dans les années 1860 a révolutionné la fabrication industrielle dans le monde entier. Vers le milieu du XIXe siècle, les scientifiques cherchaient une matière synthétique bon marché qui remplacerait les matières premières naturelles, chères et difficiles à produire. L'ivoire, par exemple, était utilisé dans la fabrication d'un grand nombre d'objets, comme les ustensiles de cuisine, les éventails, les touches de piano, etc. Esthétique et agréable au toucher, l'ivoire devenait cependant extrêmement cher car les populations animales tendaient à se réduire.[PARAGRAPH:2]Une matière proche du plastique, la parkesine, a été créée en 1862 en Angleterre. Mais cette matière devenait rapidement cassante et était donc difficilement exploitable. En 1863, un inventeur américain, John Hyatt, a découvert comment rendre la parkesine plus flexible et résistante. Il appela cette nouvelle matière le "celluloïd". Le celluloïd a d'abord été utilisé pour la fabrication de manchettes et de faux-cols, mais il a rapidement gagné d'autres domaines, servant notamment à fabriquer les pellicules photographiques pour la photographie ou le cinéma.[PARAGRAPH:2]Avec le temps, des matières plastiques plus élaborées ont été créées, utilisées dans la fabrication d'objets aussi variés que les lentilles de contact ou les coeurs artificiels. Le monde actuel utilise massivement le plastique, ce qui pose d'ailleurs problème. En effet, la longévité des matières plastiques les rend difficiles à éliminer sans nuire à l'écosystème fragile du monde.</French>
+		<French>L'invention du plastique dans les années 1860 a révolutionné la fabrication industrielle dans le monde entier. Vers le milieu du XIXe siècle, les scientifiques cherchaient une matière synthétique bon marché qui remplacerait les matières premières naturelles, chères et difficiles à produire. L'ivoire, par exemple, était utilisé dans la fabrication d'un grand nombre d'objets, comme les ustensiles de cuisine, les éventails, les touches de piano, etc. Esthétique et agréable au toucher, l'ivoire devenait cependant extrêmement cher car les populations animales tendaient à se réduire.[PARAGRAPH:2]Une matière proche du plastique, la parkesine, a été créée en 1862 en Angleterre. Mais cette matière devenait rapidement cassante et était donc difficilement exploitable. En 1863, un inventeur américain, John Hyatt, a découvert comment rendre la parkesine plus flexible et résistante. Il appela cette nouvelle matière le "celluloïd". Le celluloïd a d'abord été utilisé pour la fabrication de manchettes et de faux-cols, mais il a rapidement gagné d'autres domaines, servant notamment à fabriquer les pellicules photographiques pour la photographie ou le cinéma.[PARAGRAPH:2]Avec le temps, des matières plastiques plus élaborées ont été créées, utilisées dans la fabrication d'objets aussi variés que les lentilles de contact ou les cœurs artificiels. Le monde actuel utilise massivement le plastique, ce qui pose d'ailleurs problème. En effet, la longévité des matières plastiques les rend difficiles à éliminer sans nuire à l'écosystème fragile du monde.</French>
 		<German>Die Entwicklung von Kunststoffen ab 1860 revolutionierte die Produktionsindustrien in aller Welt. Zu dieser Zeit suchten Wissenschaftler preiswerte synthetische Substanzen, um teure und schwierig zu verarbeitende natürliche Materialien zu ersetzen. Beispielsweise wurden bis dahin viele Dinge aus dem kostbaren Elfenbein gefertigt, z.B. Ventilatoren oder Klaviertasten. Elfenbein aus den Stoßzähnen von Elefanten ist ein attraktives Material, aber es wurde immer teurer, je mehr die Tierpopulationen dezimiert wurden. Ein kunststoffähnliches Material namens "Parkesine" wurde 1862 in England entwickelt. Es stellte sich aber als mangelhaft heraus, da es innerhalb kurzer Zeit sehr spröde wurde. Im Jahr 1863 entdeckte der amerikanische Erfinder John Hyatt eine Methode, um die Flexibilität und Langlebigkeit von Parkesine zu verbessern, und nannte sein neues Produkt "Zelluloid". Zelluloid wurde anfangs verstärkt für die Fertigung von Hemdsmanschetten und Krägen eingesetzt. Bald wurde es auch in anderen Bereichen genutzt, wie zur Herstellung von lichtempfindlichem Material für Fotografie und Film. Mit der Zeit wurden immer fortschrittlichere Kunststoffe entwickelt - bis hin zu hochwertigen Stoffen für Augenlinsen und künstlichen Herzen. In der Tat ist die moderne Welt im Wesentlichen eine Welt der Kunststoffe. Allerdings liegt darin auch ein Problem, denn die Widerstandsfähigkeit des Kunststoffs macht die Entsorgung darauf basierter Waren zunehmend schwierig und gefährdet die zerbrechlichen ökologischen Systeme der Erde.</German>
 		<Italian>L'invenzione della plastica intorno al 1860 rivoluzionò l'industria manifatturiera di tutto il mondo. A metà del XIX secolo, gli scienziati stavano cercando di realizzare delle fibre sintetiche in grado di sostituire quelle naturali, che stavano diventando sempre più costose e difficili da reperire. Un esempio in questo senso era l'avorio, che veniva impiegato nella lavorazione di utensili, ventagli, tasti per pianoforte e via dicendo: questo materiale era molto ricercato, ma i prezzi salirono alle stelle perché la popolazione di elefanti era ridotta al minimo.[PARAGRAPH:2]Nel 1862, in Inghilterra, venne creata una sostanza simile alla plastica, la "parkesine", ma i risultati non furono soddisfacenti. Nel 1863, un inventore Americano di nome John Hyatt scoprì un modo per migliorare la flessibilità e la durevolezza della parkesine: la nuova sostanza venne chiamata "celluloide". Inizialmente, la celluloide veniva utilizzata principalmente per creare polsini da camicia e colletti, ma in breve tempo divenne il materiale ideale per la realizzazione di pellicole per macchine fotografiche e cineprese.[PARAGRAPH:2]Col passare del tempo, sono stati realizzati modelli di plastica più evoluti, utilizzati per creare le lenti per gli occhiali da sole oppure per realizzare un cuore artificiale. Buona parte del mondo moderno è costruito in plastica. Ma c'è un prezzo da pagare: la notevole resistenza della plastica non ne consente un facile smaltimento e ogni giorno l'inquinamento di questo materiale aumenta, mettendo a rischio il già fragile ecosistema mondiale.</Italian>
 		<Spanish>La invención del plástico en la década de 1860 revolucionó los procesos de manufactura en todo el mundo. A mediados del siglo XIX, los científicos estaban buscando sustancias sintéticas baratas que pudieran emplearse en sustitución de los materiales naturales, caros y difíciles de producir. El marfil, por ejemplo, tenía muchos usos: utensilios, abanicos, teclas de piano, etc. Este material era muy bello y agradable al tacto, pero a medida que las poblaciones de animales mermaban, su precio iba en aumento.[PARAGRAPH:2]En 1862, se inventó en Inglaterra una sustancia parecida al plástico, llamada "parkesine", pero no resultó satisfactoria, puesto que se volvía quebradiza al cabo de poco tiempo. En 1863, un inventor americano llamado John Hyatt descubrió la forma de mejorar la flexibilidad y longevidad del parkesine: bautizó su nuevo producto como "celuloide". Inicialmente, el celuloide se empleó para hacer mangas y cuellos de camisa, pero no tardó en encontrar nuevos usos, como por ejemplo, en la fabricación de la película fotográfica y cinematográfica.[PARAGRAPH:2]Con el paso del tiempo, fueron creándose plásticos más avanzados para la fabricación de todo tipo de objetos, desde lentes de contacto a corazones artificiales. De hecho, el mundo actual está hecho en gran medida de plástico. Pero esto tiene un precio: precisamente por su perdurabilidad, cada vez es más difícil disponer del plástico sin dañar la frágil estructura ecológica del mundo.</Spanish>
@@ -19380,7 +19345,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_POSTHUMANISM_QUOTE</Tag>
 		<English>"If only there were evil people somewhere insidiously committing evil deeds, and it were necessary only to separate them from the rest of us and destroy them. But the line dividing good and evil cuts through the heart of every human being. And who is willing to destroy a piece of his own heart?"[NEWLINE][SPACE] -Alexander Solzhenitsyn</English>
-		<French>"Si seulement il y avait des méchants quelque part qui commettaient insidieusement de mauvaises actions, et il fallait seulement les séparer du reste d'entre nous et les détruire. Mais la ligne qui divise le bien et le mal traverse le cœur de chaque être humain. Et qui veut détruire un morceau de son propre coeur?"[NEWLINE][SPACE] -Alexander Solzhenitsyn</French>
+		<French>"Si seulement il y avait des méchants quelque part qui commettaient insidieusement de mauvaises actions, et il fallait seulement les séparer du reste d'entre nous et les détruire. Mais la ligne qui divise le bien et le mal traverse le cœur de chaque être humain. Et qui veut détruire un morceau de son propre cœur?"[NEWLINE][SPACE] -Alexander Solzhenitsyn</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_POSTHUMANISM_STRATEGY</Tag>
@@ -19472,7 +19437,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_POULTRY_DOMESTICATION_QUOTE</Tag>
-		<English>That sounds stupid, sounds unrealistic. You think it’s childish. But the national bird is the eagle. The international bird is the chicken. The chicken will carry you down the darkest alleys of the world safely. The eagle, will take you down that road by yourself to get you killed![PARAGRAPH:2]- Unnamed farmer,[PARAGRAPH:1][SPACE][SPACE]"Follow the Chicken"</English>
+		<English>That sounds stupid, sounds unrealistic. You think it's childish. But the national bird is the eagle. The international bird is the chicken. The chicken will carry you down the darkest alleys of the world safely. The eagle, will take you down that road by yourself to get you killed![PARAGRAPH:2]- Unnamed farmer,[PARAGRAPH:1][SPACE][SPACE]"Follow the Chicken"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_POULTRY_DOMESTICATION_STRATEGY</Tag>
@@ -20216,9 +20181,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_RAT_CATCHING_PEDIA</Tag>
 		<English>A rat-catcher is person who practices rat-catching, the occupation of catching rats as a form of pest control. In developed countries the role may be merged with, or the title inflated to, pest control operative or pest technician.
-
 		Keeping the rat population under control was practiced in Europe to prevent the spread of diseases to man, most notoriously the Black Plague, and to prevent damage to food supplies.
-
 		Anecdotal reports suggest that some rat-catchers in Europe would raise rats instead of catching them in order to increase their eventual payment from the town or city they were employed by. This, and the practice of rat-fights, could have led to rat-breeding and the adoption of the rat as a pet-the fancy rat.</English>
 	</TEXT>
 	<TEXT>
@@ -20473,17 +20436,11 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_RENAISSANCE_LIFESTYLE_PEDIA</Tag>
 		<English>The Renaissance was a period in European history, from the 14th to the 17th century, regarded as the cultural bridge between the Middle Ages and modern history. It started as a cultural movement in Italy in the Medieval period and later spread to the rest of Europe, marking the beginning of the Modern age.
-
 		The intellectual basis of the Renaissance was its own invented version of humanism, derived from the concept of Roman Humanitas and the rediscovery of classical Greek philosophy, such as that of Protagoras, who said that "Man is the measure of all things." This new thinking became manifest in art, architecture, politics, science and literature. Early examples were the development of perspective in oil painting and the recycled knowledge of how to make concrete. Although the invention of metal movable type sped the dissemination of ideas from the later 15th century, the changes of the Renaissance were not uniformly experienced across Europe.
-
 		As a cultural movement, the Renaissance encompassed innovative flowering of Latin and vernacular literatures, beginning with the 14th-century resurgence of learning based on classical sources, which contemporaries credited to Petrarch; the development of linear perspective and other techniques of rendering a more natural reality in painting; and gradual but widespread educational reform. In politics, the Renaissance contributed to the development of the customs and conventions of diplomacy, and in science to an increased reliance on observation and inductive reasoning. Although the Renaissance saw revolutions in many intellectual pursuits, as well as social and political upheaval, it is perhaps best known for its artistic developments and the contributions of such polymaths as Leonardo da Vinci and Michelangelo, who inspired the term "Renaissance man".
-
 		The Renaissance began in Florence, in the 14th century. Various theories have been proposed to account for its origins and characteristics, focusing on a variety of factors including the social and civic peculiarities of Florence at the time: its political structure; the patronage of its dominant family, the Medici; and the migration of Greek scholars and texts to Italy following the Fall of Constantinople to the Ottoman Turks. Other major centres were northern Italian city-states such as Venice, Genoa, Milan, Bologna, and finally Rome during the Renaissance Papacy.
-
 		The Renaissance has a long and complex historiography, and, in line with general scepticism of discrete periodizations, there has been much debate among historians reacting to the 19th-century glorification of the "Renaissance" and individual culture heroes as "Renaissance men", questioning the usefulness of Renaissance as a term and as a historical delineation.
-
 		Some observers have called into question whether the Renaissance was a cultural "advance" from the Middle Ages, instead seeing it as a period of pessimism and nostalgia for classical antiquity, while social and economic historians, especially of the longue due, have instead focused on the continuity between the two eras, which are linked, as Panofsky observed, "by a thousand ties".
-
 		The word Renaissance, literally meaning "Rebirth" in French, first appeared in English in the 1830s. The word also occurs in Jules Michelet's 1855 work, Histoire de France. The word Renaissance has also been extended to other historical and cultural movements, such as the Carolingian Renaissance and the Renaissance of the 12th century.</English>
 	</TEXT>
 	<TEXT>
@@ -21352,7 +21309,6 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SEDENTARY_LIFESTYLE_PEDIA</Tag>
 		<English>[BOLD]Sedentary Lifestyle[\BOLD] is a medical neologism used to denote a type of lifestyle most commonly found in modern (particularly Western) cultures.
-
 [PARAGRAPH:1]Sedentary Lifestyle marks the change point from where humans completely changed their lifestyle.</English>
 		<Polish>Przejście z koczowniczego na [BOLD]Osiadły tryb życia[\BOLD] nie odbyło się natychmiastowo. Można również przyjąć, że rezygnacja z mobilności nie była tożsama z przejściem do produkcji rolnej. Pierwsze osady zakładane były w miejscach obfitych w pożywienie, cechujących się przyjaznymi warunkami pogodowymi i klimatycznymi oraz dostępem do wody pitnej. Rozpoczęcie uprawy roślin oznaczało przywiązanie wspólnoty do określonego miejsca. Nakłady pracy niezbędne do opieki nad polem było swego rodzaju inwestycją, której rezultaty miały decydujące znaczenia dla przetrwania danej społeczności. Stąd też były one zdeterminowane do osiągnięcia zamierzonego celu (zbiorów), jak i obrony osady i zajmowanej ziemi.[NEWLINE][PARAGRAPH:1]Wraz z rozpoczęciem osiadłego trybu życia pojawiła się możliwość nawiązania trwałych relacji handlowych z sąsiadami, które z czasem mogły przekształcić się w bardziej bliską współpracę - np. w zakresie obrony przed atakami wspólnot koczowniczych, bądź też co bardziej agresywnych sąsiadów.</Polish>
 	</TEXT>
@@ -21493,9 +21449,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SERICULTURE_PEDIA</Tag>
 		<English>[BOLD]Sericulture[\BOLD], or silk farming, is the rearing of silkworms for the production of raw silk. Although there are several commercial species of silkworms, Bombyx mori is the most widely used and intensively studied. According to Confucian texts, the discovery of silk production by B. mori dates to about 2700 BC, although archaeological records point to silk cultivation as early as the Yangshao period (5000 - 10,000 BCE). About the first half of the 1st century AD it had reached ancient Khotan, and by AD 140 the practice had been established in India. Later it was introduced to Europe, the Mediterranean and other Asiatic countries. Sericulture has become one of the most important cottage industries in a number of countries like China, Japan, India, Korea, Brazil, Russia, Italy and France. Today, China and India are the two main producers, together manufacturing more than 60% of the world production each year.
-
 The stages of production are as follows:
-
 	1. The silk moth lays eggs.
 	2. When the eggs hatch, the caterpillars are fed mulberry leaves.
 	3. When the silkworms are about 25 days old, they are 10,000 times heavier than when they hatched. They are now ready to spin a silk cocoon.
@@ -22329,7 +22283,7 @@ The stages of production are as follows:
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SPACEPUNK_QUOTE</Tag>
 		<English>"It'll be fabulous, believe me, Jerry. It's Grapes of Wrath in outer space! Oh, it's got heart, it's got laser battles, it's got a timely message of interstellar poverty-!"[NEWLINE][SPACE] -Lorne, Angel</English>
-		<French>"Ce sera fabuleux, croyez-moi, Jerry. C'est 'les raisins de la colère' dans l'espace! Oh, il y a du coeur, il y a des combats au laser, il y a un message opportun de pauvreté interstellaire-!"[NEWLINE][SPACE] -Lorne, Angel</French>
+		<French>"Ce sera fabuleux, croyez-moi, Jerry. C'est 'les raisins de la colère' dans l'espace! Oh, il y a du cœur, il y a des combats au laser, il y a un message opportun de pauvreté interstellaire-!"[NEWLINE][SPACE] -Lorne, Angel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SPACEPUNK_STRATEGY</Tag>
@@ -22620,7 +22574,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SPECULATIVE_PHYSIOLOGY_PEDIA</Tag>
-		<English>Speculative Physiology is the combination of Speculative biomechanics, Speculative bioenergetics, Perception, Reproduction, and Behaviour of designed animals. When designing an organism living on another planet, on Earth in a distant future or in an alternative timeline, it's important that each of its characteristics is well-adapted to the environment it lives in, without resorting to simply remake a living analogue, or throw in unlikely features for the sake of esthetics. Still, the ways real life forms survive, move, process energy and reproduce do offer excellent starting points: let's see, function by function, how an imaginary organism might work. On the largest scale, the shape and the basic structure of organisms are dictated by two things: their function and mechanics.[PARAGRAPH:2]The size of a living being, the way organs and cavities are arranged inside the body, the way the parts of the skeleton interact are also the basis for any further speculation about its physiology. Symmetry is extremely important for the organization of the body: it provides a regular disposition of the bodyparts and often redundancy of limbs and organs. Most of pluricellular organisms on Earth show some form of symmetry, in four distinct degrees; Asymmetry, Spherical symmetry, Radial symmetry,and Bilateral symmetry.[PARAGRAPH:2]In a primitive cell colony, different parts will tend to specialize to different functions, allowing them to maximize their efficiency. Metamerism is the repetition of body segments with similar or identical structure, called somites or metameres in animals, and phytomers or metamers in plants. The most important stress that influences biomechanical structures is the pull of gravity. For example, the maximum height of an organism is given by the work of its structure to oppose its weight.[PARAGRAPH:2]To maintain its structure and functions, living beings need a constant flow of energy from the environment (and to a sink, in the form of heat). Energy can exist as electromagnetic energy, thermal energy, chemical energy, mechanical energy etc., and each one of these forms can be exploited by organisms. Since life is most likely to be based on chemical reactions, the extracted energy will have to be stored as bond energy between the atoms of some simple molecule; every lifeform on Earth uses a sugar, glucose (C6H12O6) which releases this energy when combined with an oxidising agent.[PARAGRAPH:2]Every organism needs to adapt itself to the changing conditions in its environment, and therefore to receive information from it, through senses. Sense organs encompass a wide range of signals: touch is a simple perception of close mechanical stimuli, while hearing is a specialized form of touch that perceives the vibrations on long distance; olfaction and taste perceive the chemical makeup of near compounds; sight is the perception of electromagnetic waves (light), while electroception and magnetoception perceive directly electric and magnetic fields, respectively.[PARAGRAPH:2]Most organisms have one or two highly developed senses more prominent than others. Many small organisms that need to know only their immediate surroundings deal well with "contact senses" such as touch and taste, while larger animals that live in open environment will benefit more from "long-range senses" such as sight and hearing; many mammals have a well-developed olfaction, while birds (and humans) prefer sight; bats and cetaceans have come up with echolocation, a derived form of hearing; and so on.[PARAGRAPH:2]The complex of biochemical, physiological, energetic and mechanical systems that make up an organism are extremely vulnerable to threats from the environment, and the greatest danger comes from other organisms. Since the beginning of evolution, each lifeform has been a vital resource for other ones, and it has the need to defend itself, and to fight back.[PARAGRAPH:2]Together with energy gathering and management, reproduction is one of the basic functions of life - in fact, something usually used to define life itself. Evolution is based on the reproductive success of a species, individual or gene: at any level, self-replication is what living systems "want" more than anything else.Also see: Development of intelligence, Intelligence on Earth, Intelligent aliensIntelligence is hard to define exactly: it can be interpreted as a mental feature, or a set of features, that involve reasoning, planning, goal-oriented behaviour, learning from experience, abstract thought and projection, problem-solving and intentional self-adaptation to the circumstances.[PARAGRAPH:2]A great number of speculative-biology projects, especially those about extraterrestrial life, try to include high, human-like intelligence for at least one species, for it's necessary to derive from biological interactions the extremely complex structures and behaviours that form a civilization such as ours.[PARAGRAPH:2]To read more please visit: http://speculativeevolution.wikia.com/</English>
+		<English>Speculative Physiology is the combination of Speculative biomechanics, Speculative bioenergetics, Perception, Reproduction, and Behaviour of designed animals. When designing an organism living on another planet, on Earth in a distant future or in an alternative timeline, it's important that each of its characteristics is well-adapted to the environment it lives in, without resorting to simply remake a living analogue, or throw in unlikely features for the sake of aesthetics. Still, the ways real life forms survive, move, process energy and reproduce do offer excellent starting points: let's see, function by function, how an imaginary organism might work. On the largest scale, the shape and the basic structure of organisms are dictated by two things: their function and mechanics.[PARAGRAPH:2]The size of a living being, the way organs and cavities are arranged inside the body, the way the parts of the skeleton interact are also the basis for any further speculation about its physiology. Symmetry is extremely important for the organization of the body: it provides a regular disposition of the body parts and often redundancy of limbs and organs. Most of pluri-cellular organisms on Earth show some form of symmetry, in four distinct degrees; Asymmetry, Spherical symmetry, Radial symmetry,and Bilateral symmetry.[PARAGRAPH:2]In a primitive cell colony, different parts will tend to specialize to different functions, allowing them to maximize their efficiency. Metamerism is the repetition of body segments with similar or identical structure, called somites or metameres in animals, and phytomers or metamers in plants. The most important stress that influences biomechanical structures is the pull of gravity. For example, the maximum height of an organism is given by the work of its structure to oppose its weight.[PARAGRAPH:2]To maintain its structure and functions, living beings need a constant flow of energy from the environment (and to a sink, in the form of heat). Energy can exist as electromagnetic energy, thermal energy, chemical energy, mechanical energy etc., and each one of these forms can be exploited by organisms. Since life is most likely to be based on chemical reactions, the extracted energy will have to be stored as bond energy between the atoms of some simple molecule; every life form on Earth uses a sugar, glucose (C6H12O6) which releases this energy when combined with an oxidising agent.[PARAGRAPH:2]Every organism needs to adapt itself to the changing conditions in its environment, and therefore to receive information from it, through senses. Sense organs encompass a wide range of signals: touch is a simple perception of close mechanical stimuli, while hearing is a specialized form of touch that perceives the vibrations on long distance; olfaction and taste perceive the chemical makeup of near compounds; sight is the perception of electromagnetic waves (light), while electroception and magnetoception perceive directly electric and magnetic fields, respectively.[PARAGRAPH:2]Most organisms have one or two highly developed senses more prominent than others. Many small organisms that need to know only their immediate surroundings deal well with "contact senses" such as touch and taste, while larger animals that live in open environment will benefit more from "long-range senses" such as sight and hearing; many mammals have a well-developed olfaction, while birds (and humans) prefer sight; bats and cetaceans have come up with echolocation, a derived form of hearing; and so on.[PARAGRAPH:2]The complex of biochemical, physiological, energetic and mechanical systems that make up an organism are extremely vulnerable to threats from the environment, and the greatest danger comes from other organisms. Since the beginning of evolution, each life form has been a vital resource for other ones, and it has the need to defend itself, and to fight back.[PARAGRAPH:2]Together with energy gathering and management, reproduction is one of the basic functions of life - in fact, something usually used to define life itself. Evolution is based on the reproductive success of a species, individual or gene: at any level, self-replication is what living systems "want" more than anything else.Also see: Development of intelligence, Intelligence on Earth, Intelligent aliensIntelligence is hard to define exactly: it can be interpreted as a mental feature, or a set of features, that involve reasoning, planning, goal-oriented behaviour, learning from experience, abstract thought and projection, problem-solving and intentional self-adaptation to the circumstances.[PARAGRAPH:2]A great number of speculative-biology projects, especially those about extraterrestrial life, try to include high, human-like intelligence for at least one species, for it's necessary to derive from biological interactions the extremely complex structures and behaviours that form a civilization such as ours.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SPECULATIVE_PHYSIOLOGY_QUOTE</Tag>
@@ -23580,15 +23534,12 @@ The stages of production are as follows:
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TACHYON_COMMUNICATIONS_QUOTE</Tag>
 		<English>Relativity.
-
 There was a young lady named Bright
 Whose speed was far faster than light;
 She set out one day
 In a relative way
 And returned on the previous night.
-
 Limerick from 1923 by A. H. Reginald Buller</English>
-
 		<French>Relativité.
 [NEWLINE]
 [NEWLINE]Il y avait une jeune femme nommée Bright
@@ -24201,7 +24152,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 		<Tag>TXT_KEY_TECH_TIME_TRAVEL_QUOTE</Tag>
 		<English>"One of the major problems encountered in time travel is not that of becoming your own father or mother. There is no problem in becoming your own father or mother that a broad-minded and well-adjusted family can't cope with. There is no problem with changing the course of history - the course of history does not change because it all fits together like a jigsaw. All the important changes have happened before the things they were supposed to change and it all sorts itself out in the end. The major problem is simply one of grammar..." - Douglas Adams</English>
 		<French>"L'un des problèmes majeurs rencontrés dans le voyage dans le temps n'est pas la possibilité de devenir son propre père ou sa mère. Il n'ya aucun problème à devenir votre propre père ou de la mère, une famille large d'esprit ne peut s'y opposer. Il n'y a pas de problème avec le changement du cours de l'histoire - le cours de l'histoire ne change pas parce que tout cela s'assemble comme un puzzle. Le problème majeur est tout simplement la grammaire..." - Douglas Adams</French>
-		<Italian>"Uno dei maggiori problemi con il viaggio nel tempo non è quello di diventare il proprio padre o la propria madre. Non ci sono problemi nel diventare il proprio padre o la propria madre, che una famiglia benestante del ceto medio non possa affrontare. Non ci sono problemi nel cambiare la storia - la storia non cambia perchè tutto si tiene insieme. Tutte le cose importanti sono successe prima che noi potessimo cambiarle. Il problema maggiore è semplicemente grammaticale." - Douglas Adams</Italian>
+		<Italian>"Uno dei maggiori problemi con il viaggio nel tempo non è quello di diventare il proprio padre o la propria madre. Non ci sono problemi nel diventare il proprio padre o la propria madre che una famiglia di larghe vedute e ben stabile non possa affrontare. Non ci sono problemi nel cambiare la storia - la storia non cambia perché tutto si tiene insieme. Tutte le cose importanti sono successe prima che noi potessimo cambiarle. Il problema maggiore è semplicemente grammaticale." - Douglas Adams</Italian>
 		<Polish>"Podróże w czasie? Uważam, że ludzie regularnie wracają z przyszłości i bez przerwy wpływają na nasze życie. Dowody są widoczne wokół nas. Mówię o tym, że za każdym razem, kiedy wysuwamy roszczenie odszkodowawcze, odkrywamy, iż jakimś tajemniczym sposobem dokładnie to, za co chcemy uzyskać odszkodowanie, jest słowo w słowo wykluczone z zakresu, jaki obejmuje polisa." - Douglas Adams</Polish>
 	</TEXT>
 	<TEXT>
@@ -24248,9 +24199,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TORTURE_PEDIA</Tag>
 		<English>Torture (from the Latin tortus, "twisted") is the act of deliberately inflicting physical or psychological pain in order to fulfill some desire of the torturer or compel some action from the victim. Torture, by definition, is a knowing and intentional act; deeds which unknowingly or negligently inflict pain without a specific intent to do so are not typically considered torture.
-
 		Torture has been carried out or sanctioned by individuals, groups, and states throughout history from ancient times to modern day, and forms of torture can vary greatly in duration from only a few minutes to several days or longer. Reasons for torture can include punishment, revenge, political re-education, deterrence, coercion of the victim or a third party, interrogation to extract information or a confession irrespective of whether it is false, or simply the sadistic gratification of those carrying out or observing the torture. Alternatively, some forms of torture are designed to inflict psychological pain or leave as little physical injury or evidence as possible while achieving the same psychological devastation. The torturer may or may not kill or injure the victim, but torture may result in a deliberate death and serves as a form of capital punishment. Depending on the aim, even a form of torture that is intentionally fatal may be prolonged to allow the victim to suffer as long as possible (such as half-hanging). In other cases, the torturer may be indifferent to the condition of the victim.
-
 		While it has a long history, the technology is defined in Caveman2Comos in the Medieval because it is during this era that Europeans took a particular interest in the vast diversification of torture implements and methods for the purposes of populace control and information extraction. We apologize if we offend with the content here, but the dark ages were called dark for a variety of reasons, this being one major contributor. Its inclusion helps to capture the essence of the era.</English>
 	</TEXT>
 	<TEXT>
@@ -24309,7 +24258,6 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TOURNAMENTS_PEDIA</Tag>
 		<English>A tournament is a competition involving a relatively large number of competitors, all participating in a sport or game. More specifically, the term may be used in either of two overlapping senses:
-
 	1. One or more competitions held at a single venue and concentrated into a relatively short time interval.
 	2. A competition involving multiple matches, each involving a subset of the competitors, with the overall tournament winner determined based on the combined results of these individual matches. These are common in those sports and games where each match must involve a small number of competitors: often precisely two, as in most team sports, racket sports and combat sports, many card games and board games, and many forms of competitive debating. Such tournaments allow large numbers to compete against each other in spite of the restriction on numbers in a single match.
 		</English>
@@ -25263,7 +25211,6 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 		<Tag>TXT_KEY_TECH_WARFARE_QUOTE</Tag>
 		<English>Conan, what is best in life?
 To crush your enemies, see them driven before you, and to hear the lamentation of their women.
-
 	Dialogue from the 1982 film "Conan the Barbarian".
 		</English>
 		<French>Mongol: "Conan! Qu'y a-t-il de mieux dans la Vie?"[NEWLINE]Conan: "Ecrasez vos ennemis, les voir couchés devant vous, et entendre les lamentations de leurs femmes."[NEWLINE]- Conan le Barbare</French>
@@ -25313,7 +25260,6 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WARRANTS_AND_DECREES_PEDIA</Tag>
 		<English>A decree is a rule of law usually issued by a head of state (such as the president of a republic or a monarch), according to certain procedures (usually established in a constitution). It has the force of law. The particular term used for this concept may vary from country to country. The executive orders made by the President of the United States, for example, are decrees (although a decree is not exactly an order). In non-legal English usage, however, the term refers to any authoritarian decision. Documents or archives in the format of royal decrees or farming were issued by rulers.
-
 		Law itself underwent a very long period of research and development in the Middle Ages and many standards we rely on today were established at this time.</English>
 	</TEXT>
 	<TEXT>
@@ -25381,15 +25327,10 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 	<TEXT>
 		<Tag>TXT_KEY_TECH_WATERWHEELS_PEDIA</Tag>
 		<English>A water wheel is a machine for converting the energy of flowing or falling water into useful forms of power, often in a watermill. A water wheel consists of a wheel (usually constructed from wood or metal), with a number of blades or buckets arranged on the outside rim forming the driving surface. Most commonly, the wheel is mounted vertically on a horizontal axle, but can also be mounted horizontally on a vertical shaft, for example the tub or Norse. Vertical wheels can transmit power either through the axle or via a ring gear and typically drive belts or gears; horizontal wheels usually directly drive their load.
-
 		Water wheels were still in commercial use well into the 20th century, but they are no longer in common use. Uses included milling flour in gristmills, grinding wood into pulp for papermaking, hammering wrought iron, machining, ore crushing and pounding fiber for use in the manufacture of cloth.
-
 		Some water wheels are fed by water from a mill pond, which is formed when a flowing stream is dammed. A channel for the water flowing to or from a water wheel is called a mill race. The race bringing water from the mill pond to the water wheel is a headrace; the one carrying water after it has left the wheel is commonly referred to as a tailrace.
-
 		In the mid to late 18th century John Smeaton's scientific investigation of the water wheel led to significant increases in efficiency supplying much-needed power for the Industrial Revolution.
-
 		Water wheels began being displaced by the smaller, less expensive and more efficient turbine, developed by Bent Fourneyron, beginning with his first model in 1827. Turbines are capable of handling high heads, or elevations, that exceed the capability of practical-sized waterwheels.
-
 		The main difficulty of water wheels is their dependence on flowing water, which limits where they can be located. Modern hydroelectric dams can be viewed as the descendants of the water wheel, as they too take advantage of the movement of water downhill.</English>
 	</TEXT>
 	<TEXT>

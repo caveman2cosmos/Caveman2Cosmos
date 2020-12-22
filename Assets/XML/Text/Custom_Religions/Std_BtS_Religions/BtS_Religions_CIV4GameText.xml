@@ -12,7 +12,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AKSHARDHAM_PEDIA</Tag>
 		<English>Akshardham is a Hindu temple complex in Delhi, India. The complex displays centuries of traditional Indian and Hindu culture, spirituality, and architecture. The building was inspired and moderated by Pramukh Swami Maharaj, the spiritual head of the Bochasanwasi Shri Akshar Purushottam Swaminarayan Sanstha, whose 3,000 volunteers helped 7,000 artisans construct Akshardham.The temple, which attracts approximately 70 percent of all tourists who visit Delhi, was officially opened on 6 November 2005. It sits on the banks of the Yamuna adjacent to the proposed 2010 Commonwealth Games village. The monument at the center of the complex of built off of the Vastu Shastra and Pancharatra Shastra. The complex features a large central monument crafted entirely of stone, exhibitions on incidents from the life of Bhagwan Swaminarayan and the history of India, an IMAX feature, a musical fountain, and large landscaped gardens.</English>
-		<French>Akshardham is a Hindu temple complex in Delhi, India. The complex displays centuries of traditional Indian and Hindu culture, spirituality, and architecture. The building was inspired and moderated by Pramukh Swami Maharaj, the spiritual head of the Bochasanwasi Shri Akshar Purushottam Swaminarayan Sanstha, whose 3,000 volunteers helped 7,000 artisans construct Akshardham.The temple, which attracts approximately 70 percent of all tourists who visit Delhi, was officially opened on 6 November 2005. It sits on the banks of the Yamuna adjacent to the proposed 2010 Commonwealth Games village. The monument at the center of the complex of built off of the Vastu Shastra and Pancharatra Shastra. The complex features a large central monument crafted entirely of stone, exhibitions on incidents from the life of Bhagwan Swaminarayan and the history of India, an IMAX feature, a musical fountain, and large landscaped gardens.</French>
 		<Italian>Akshardham è un complesso di templi indù a Delhi, in India. Il complesso presenta secoli di tradizione indiana e cultura, spiritualità e architettura indù. L'edificio è stato ispirato e moderato da Pramukh Swami Maharaj, il capo spirituale della Bochasanwasi Shri Akshar Purushottam Swaminarayan Sanstha, i cui 3.000 volontari hanno aiutato 7.000 artigiani a costruire l'Akshardham.Il tempio, che attira circa il 70 per cento di tutti i turisti che visitano Delhi, è stato ufficialmente inaugurato il 6 novembre 2005. Si trova sulle rive della Yamuna adiacente al villaggio dei Giochi del Commonwealth del 2010. Il monumento al centro del complesso è costruito fuori del Vastu Shastra e Pancharatra Shastra. Il complesso dispone di un grande monumento centrale realizzato interamente in pietra, scenedi episodi della vita di Bhagwan Swaminarayan e la storia dell'India, una caratteristica IMAX, una fontana musicale e grandi giardini monumentali.</Italian>
 		<Polish>Akshardham to Hinduski kompleks świątynny w Delhi, w Indiach.</Polish>
 	</TEXT>
@@ -35,7 +34,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLUE_MOSQUE_PEDIA</Tag>
 		<English>The Sultan Ahmed Mosque is the national mosque of Turkey. The mosque is one of several mosques known as the Blue Mosque for the blue tiles adorning the walls of its interior.It was built between 1609 and 1616, during the rule of Ahmed I. Like many other mosques, it also comprises a tomb of the founder, a madrasah and a hospice. The Sultan Ahmed Mosque has become one of the most popular tourist attractions in Istanbul.</English>
-		<French>The Sultan Ahmed Mosque is the national mosque of Turkey. The mosque is one of several mosques known as the Blue Mosque for the blue tiles adorning the walls of its interior.It was built between 1609 and 1616, during the rule of Ahmed I. Like many other mosques, it also comprises a tomb of the founder, a madrasah and a hospice. The Sultan Ahmed Mosque has become one of the most popular tourist attractions in Istanbul.</French>
 		<Italian>La Moschea del Sultano Ahmed è la moschea nazionale della Turchia; fa parte di un complesso di moschee ed è mehlio nota come la Moschea Blu per le piastrelle blu che ornano le pareti del suo interno.E' stata costruita tra il 1609 e il 1616, durante il regno di Ahmed I. Come molte altre moschee che comprende anche una tomba del fondatore, una madrassa e un ospizio. La Moschea del Sultano Ahmed è diventata una delle più popolari attrazioni turistiche di Istanbul.</Italian>
 		<Polish>Błękitny Meczet (właściwie Meczet Sułtana Ahmeda, tur. Sultanahmet Camii lub Sultan Ahmed Camii) - zbudowany z polecenia sułtana Ahmeda I meczet w Stambule, który jest jednym z ostatnich, a zarazem najwspanialszych przykładów tzw. "klasycznego okresu" sztuki islamskiej w Turcji.</Polish>
 	</TEXT>
@@ -244,7 +242,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VATICAN_LIBRARY</Tag>
 		<English>Holy See Library</English>
-		<French>La Bibliothèque de la Mert Morte</French>
+		<French>Bibliothèque apostolique vaticane</French>
 		<Italian>
 			<Text>Biblioteca Vaticana</Text>
 			<Gender>Female</Gender>
@@ -255,13 +253,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VATICAN_LIBRARY_PEDIA</Tag>
 		<English>The Vatican Library is the library of the Holy See, currently located in Vatican City. It is one of the oldest libraries in the world and contains one of the most significant collections of historical texts. Formally established in 1475, though in fact much older, it has 75,000 codices from throughout history.From July 2007 the library has been temporarily closed to the public for rebuilding, which is expected to be completed by September 2010.</English>
-		<Italian>La Biblioteca Apostolica Vaticana è la biblioteca della Santa Sede, attualmente situata nella Città del Vaticano. Si tratta di una delle più antiche biblioteche del mondo e contiene una delle collezioni più significative di testi storici. Formalmente istituita nel 1475, in realtà è molto più antica; ha 75.000 codici rialenti a svariati periodi storici diversi. Dal luglio 2007 la biblioteca è stata temporaneamente chiusa al pubblico per la ricostruzione, che dovrebbe essere completato entro settembre 2010.</Italian>
+		<Italian>La Biblioteca apostolica vaticana è la biblioteca della Santa Sede, attualmente situata nella Città del Vaticano. Si tratta di una delle più antiche biblioteche del mondo e contiene una delle collezioni più significative di testi storici. Formalmente istituita nel 1475, in realtà è molto più antica; ha 75.000 codici risalenti a svariati periodi storici diversi. Dal luglio 2007 la biblioteca è stata temporaneamente chiusa al pubblico per la ricostruzione, che dovrebbe essere completato entro settembre 2010.</Italian>
 		<Polish>Biblioteka Watykańska (Bibliotheca Apostolica Vaticana) - biblioteka znajdująca się na terenie państwa Watykan. Jedna z najstarszych i najbardziej znanych bibliotek. Założona w roku 1448 przez papieża Mikołaja V jako publiczna biblioteka miasta Rzym i początkowo zbiory zawierały 350 greckich, łacińskich i hebrajskich woluminów. Zbiory rosły w szybkim tempie - rok 1455 - 1200 woluminów, rok 1481 - 3500 woluminów, rok 1990 - 1,3 mln woluminów. Dzisiaj biblioteka przechowuje 75 000 manuskryptów i ponad 1,1 miliona drukowanych książek, w tym 8500 inkunabułów. Ponadto w Tajnych Archiwach Watykanu przechowywane jest 150 000 pozycji.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VATICAN_LIBRARY_STRATEGY</Tag>
-		<English>Build the Holy see library to increase your cities science, espionage and great people rate.</English>
-		<German>Build the Holy see library to increase your cities science, espionage and great people rate</German>
+		<English>Build the Vatican Library to increase your cities science, espionage and great people rate.</English>
 		<Italian>Costruisci la Biblioteca Vaticana per incrementare la scienza, lo spionaggio e il tasso di nascita dei grandi personaggi nella tua città.</Italian>
 	</TEXT>
 	<TEXT>
