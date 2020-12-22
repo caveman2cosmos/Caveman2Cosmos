@@ -781,12 +781,12 @@ CvSelectionGroup* CvMap::findSelectionGroup(int iX, int iY, PlayerTypes eOwner, 
 
 CvSelectionGroup* CvMap::findSelectionGroupInternal(int iX, int iY, PlayerTypes eOwner, bool bReadyToSelect, bool bWorkers, bool bAllowViewportSwitch) const
 {
-	// XXX look for barbarian cities???
-
 	int iBestValue = MAX_INT;
 	int iBestValueInViewport = MAX_INT;
 	CvSelectionGroup* pBestSelectionGroup = NULL;
 	CvSelectionGroup* pBestSelectionGroupInViewport = NULL;
+
+	const CvPlot* lookAtPlot = gDll->getInterfaceIFace()->getLookAtPlot();
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
@@ -796,7 +796,7 @@ CvSelectionGroup* CvMap::findSelectionGroupInternal(int iX, int iY, PlayerTypes 
 			{
 				if ((!bReadyToSelect || pLoopGroup->readyToSelect()) && (!bWorkers || pLoopGroup->hasWorker()))
 				{
-					const int iValue = plotDistance(iX, iY, pLoopGroup->getX(), pLoopGroup->getY());
+					const int iValue = plotDistance(lookAtPlot->getX(), lookAtPlot->getY(), pLoopGroup->getX(), pLoopGroup->getY());
 
 					if (getCurrentViewport()->isInViewport(pLoopGroup->getX(), pLoopGroup->getY()))
 					{
