@@ -3186,175 +3186,175 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ALIEN_HYBRID</Tag>
 		<English>Human Mod (Alien Hybrid)</English>
-		<French>Modif. Humain (Alien hybride)</French>
+		<French>Modification humaine (Alien hybride)</French>
 		<Italian>Umano augmentato (Ibrido alieno)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ARCHAILECT</Tag>
 		<English>Human Mod (Archailect)</English>
-		<French>Modif. Humain (Archailecte)</French>
+		<French>Modification humaine (Archailecte)</French>
 		<Italian>Umano augmentato (IArchetipica)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ATEMPORAL</Tag>
 		<English>Human Mod (Atemporal)</English>
-		<French>Modif. Humain (Atemporel)</French>
+		<French>Modification humaine (Atemporel)</French>
 		<Italian>Umano augmentato (Atemporale)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Tag>
 		<English>Human Mod (Cognitive Enhancement)</English>
-		<French>Modif. Humain (Amélioration cognitive)</French>
+		<French>Modification humaine (Amélioration cognitive)</French>
 		<Italian>Umano augmentato (Potenziamento cognitivo)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COLD_TOLERANCE</Tag>
 		<English>Human Mod (Cold Tolerance)</English>
-		<French>Modif. Humain (Tolérance au froid)</French>
+		<French>Modification humaine (Tolérance au froid)</French>
 		<Italian>Umano augmentato (Tolleranza al freddo)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</Tag>
 		<English>Human Mod (Collective Consciousness)</English>
-		<French>Modif. Humain (Conscience collective)</French>
+		<French>Modification humaine (Conscience collective)</French>
 		<Italian>Umano augmentato (Coscienza collettiva)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DESIGNER_BABIES</Tag>
 		<English>Human Mod (Designer Babies)</English>
-		<French>Modif. Humain (Enfants sur mesure)</French>
+		<French>Modification humaine (Enfants sur mesure)</French>
 		<Italian>Umano augmentato (Bambini su misura)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Tag>
 		<English>Human Mod (Digital Identity)</English>
-		<French>Modif. Humain (Identité numérique)</French>
+		<French>Modification humaine (Identité numérique)</French>
 		<Italian>Umano augmentato (Identità digitale)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Tag>
 		<English>Human Mod (Digital Lifestyle)</English>
-		<French>Modif. Humain (Forme de vie numérique)</French>
+		<French>Modification humaine (Forme de vie numérique)</French>
 		<Italian>Umano augmentato (Stile di vita digitale)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ENLIGHTENED</Tag>
 		<English>Human Mod (Enlightened)</English>
-		<French>Modif. Humain (Illumination)</French>
+		<French>Modification humaine (Éclaircissement)</French>
 		<Italian>Umano augmentato (Illuminazione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_GENE_EDITING</Tag>
 		<English>Human Mod (Gene Editing)</English>
-		<French>Modif. Humain (Edition des Gènes)</French>
+		<French>Modification humaine (Modification des gènes)</French>
 		<Italian>Umano augmentato (Modifica genetica)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_GILLS</Tag>
 		<English>Human Mod (Gills)</English>
-		<French>Modif. Humain (Branchies)</French>
+		<French>Modification humaine (Branchies)</French>
 		<Italian>Umano augmentato (Branchie)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_HEAT_TOLERANCE</Tag>
 		<English>Human Mod (Heat Tolerance)</English>
-		<French>Modif. Humain (Tolérance à la chaleur)</French>
+		<French>Modification humaine (Tolérance à la chaleur)</French>
 		<Italian>Umano augmentato (Tolleranza al calore)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Tag>
 		<English>Human Mod (High-Dimensional)</English>
-		<French>Modif. Humain (Haute dimension)</French>
+		<French>Modification humaine (Haute dimension)</French>
 		<Italian>Umano augmentato (Dimensione superiore)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_IMMORTAL</Tag>
 		<English>Human Mod (Immortal)</English>
-		<French>Modif. Humain (Immortel)</French>
+		<French>Modification humaine (Immortel)</French>
 		<Italian>Umano augmentato (Immortale)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</Tag>
 		<English>Human Mod (Indefinite Lifespan)</English>
-		<French>Modif. Humain (Durée de vie indéfinie)</French>
+		<French>Modification humaine (Durée de vie indéfinie)</French>
 		<Italian>Umano augmentato (Durata di vita indefinita)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_INFORMATION_BASED</Tag>
 		<English>Human Mod (Information-Based)</English>
-		<French>Modif. Humain (Basée sur l'information)</French>
+		<French>Modification humaine (Basé sur l'information)</French>
 		<Italian>Umano augmentato (Basato su informazione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_LUNARIS</Tag>
 		<English>Human Mod (Lunaris)</English>
-		<French>Modif. Humain (Lunaris)</French>
+		<French>Modification humaine (Lunaire)</French>
 		<Italian>Umano augmentato (Selenita)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_MARTIAN</Tag>
 		<English>Human Mod (Martian)</English>
-		<French>Modif. Humain (Martien)</French>
+		<French>Modification humaine (Martien)</French>
 		<Italian>Umano augmentato (Marziano)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_METAPHYSICAL</Tag>
 		<English>Human Mod (Metaphysical)</English>
-		<French>Modif. Humain (Métaphysique)</French>
+		<French>Modification humaine (Métaphysique)</French>
 		<Italian>Umano augmentato (Metafisico)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NANOMORPHISM</Tag>
 		<English>Human Mod (Nanomorphism)</English>
-		<French>Modif. Humain (Nanomorphisme)</French>
+		<French>Modification humaine (Nanomorphisme)</French>
 		<Italian>Umano augmentato (Nanomorfismo)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NONSPATIAL</Tag>
-		<English>Human Mod (Nonspatial)</English>
-		<French>Modif. Humain (Nonspatial)</French>
-		<Italian>Umano augmentato (Nonspaziale)</Italian>
+		<English>Human Mod (Non-spatial)</English>
+		<French>Modification humaine (Non-spatiale)</French>
+		<Italian>Umano augmentato (Non-spaziale)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NOVEL_SENSES</Tag>
 		<English>Human Mod (Novel Senses)</English>
-		<French>Modif. Humain (Nouveaux Sens)</French>
+		<French>Modification humaine (Nouveaux sens)</French>
 		<Italian>Umano augmentato (Nuovi sensi)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PURE_ENERGY</Tag>
 		<English>Human Mod (Pure Energy)</English>
-		<French>Modif. Humain (Energie pure)</French>
+		<French>Modification humaine (Énergie pure)</French>
 		<Italian>Umano augmentato (Pura energia)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_RADIATION_TOLERANCE</Tag>
 		<English>Human Mod (Radiation Tolerance)</English>
-		<French>Modif. Humain (Tolérance aux Radiations)</French>
+		<French>Modification humaine (Tolérance aux radiations)</French>
 		<Italian>Umano augmentato (Tolleranza alle radiazioni)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ROBOTIC_BODY</Tag>
 		<English>Human Mod (Robotic Body)</English>
-		<French>Modif. Humain (Corps Robotique)</French>
+		<French>Modification humaine (Corps robotique)</French>
 		<Italian>Umano augmentato (Corpo robotico)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_TRANSAPIENT</Tag>
 		<English>Human Mod (Transapient)</English>
-		<French>Modif. Humain (Transapient)</French>
+		<French>Modification humaine (Transapient)</French>
 		<Italian>Umano augmentato (Transapiente)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_WINGS</Tag>
 		<English>Human Mod (Wings)</English>
-		<French>Modif. Humain (Ailes)</French>
+		<French>Modification humaine (Ailes)</French>
 		<Italian>Umano augmentato (Ali)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</Tag>
 		<English>Human Mod (Zero G Adaptation)</English>
-		<French>Modif. Humain (Adaptation Zero G)</French>
+		<French>Modification humaine (Adaptation zéro G)</French>
 		<Italian>Umano augmentato (Adattamento a zero G)</Italian>
 	</TEXT>
 	<TEXT>

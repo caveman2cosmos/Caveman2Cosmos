@@ -364,7 +364,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AI_GAME_DESIGNER_PEDIA</Tag>
-		<English>Abstract. Game generation systems perform automated, intelligent design of games (i.e. videogames, boardgames), reasoning about both the abstract rule system of the game and the visual realization of these rules. Although, as an instance of the problem of creative design, game generation shares some common research themes with other creative AI systems such as story and art generators, game generation extends such work by having to reason about dynamic, playable artifacts. Like AI work on creativity in other domains, work on game generation sheds light on the human game design process, offering opportunities to make explicit the tacit knowledge involved in game design and test game design theories. Finally, game generation enables new game genres which are radically customized to specific players or situations; notable examples are cell phone games customized for particular users and newsgames providing commentary on current events. We describe an approach to formalizing game mechanics and generating games using those mechanics, using WordNet and ConceptNet to assist in performing common-sense reasoning about game verbs and nouns. Finally, we demonstrate and describe in detail a prototype that designs micro-games in the style of Nintendo's WarioWare series.</English>
+		<English>Game generation systems perform automated, intelligent design of games (i.e. videogames, boardgames), reasoning about both the abstract rule system of the game and the visual realization of these rules. Although, as an instance of the problem of creative design, game generation shares some common research themes with other creative AI systems such as story and art generators, game generation extends such work by having to reason about dynamic, playable artifacts. Like AI work on creativity in other domains, work on game generation sheds light on the human game design process, offering opportunities to make explicit the tacit knowledge involved in game design and test game design theories. Finally, game generation enables new game genres which are radically customized to specific players or situations; notable examples are cell phone games customized for particular users and newsgames providing commentary on current events. We describe an approach to formalizing game mechanics and generating games using those mechanics, using WordNet and ConceptNet to assist in performing common-sense reasoning about game verbs and nouns. Finally, we demonstrate and describe in detail a prototype that designs micro-games in the style of Nintendo's WarioWare series.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AI_GAME_DESIGNER_STRATEGY</Tag>
@@ -792,7 +792,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCHAILECT</Tag>
 		<English>Human Mod (Archailect)</English>
-		<French>Modif. Humain (Archailecte)</French>
+		<French>Modification humaine (Archailecte)</French>
 		<Italian>Umano augmentato (IArchetipica)</Italian>
 	</TEXT>
 	<TEXT>
@@ -1169,7 +1169,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATEMPORAL_BEINGS</Tag>
 		<English>Human Mod (Atemporal)</English>
-		<French>Modif. Humain (Atemporel)</French>
+		<French>Modification humaine (Atemporel)</French>
 		<Italian>Umano augmentato (Atemporale)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3021,7 +3021,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT</Tag>
 		<English>Human Mod (Cognitive Enhancement)</English>
-		<French>Modif. Humain (Amélioration cognitive)</French>
+		<French>Modification humaine (Amélioration cognitive)</French>
 		<Italian>Umano augmentato (Potenziamento cognitivo)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3060,7 +3060,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLD_TOLERANCE</Tag>
 		<English>Human Mod (Cold Tolerance)</English>
-		<French>Modif. Humain (Tolérance au froid)</French>
+		<French>Modification humaine (Tolérance au froid)</French>
 		<Italian>Umano augmentato (Tolleranza al freddo)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3075,7 +3075,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS</Tag>
 		<English>Human Mod (Collective Consciousness)</English>
-		<French>Modif. Humain (Conscience collective)</French>
+		<French>Modification humaine (Conscience collective)</French>
 		<Italian>Umano augmentato (Coscienza collettiva)</Italian>
 	</TEXT>
 	<TEXT>
@@ -4162,7 +4162,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESIGNER_BABIES</Tag>
 		<English>Human Mod (Designer Babies)</English>
-		<French>Modif. Humain (Enfants sur mesure)</French>
+		<French>Modification humaine (Enfants sur mesure)</French>
 		<Italian>Umano augmentato (Bambini su misura)</Italian>
 	</TEXT>
 	<TEXT>
@@ -4241,7 +4241,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_IDENTITY</Tag>
 		<English>Human Mod (Digital Identity)</English>
-		<French>Modif. Humain (Identité numérique)</French>
+		<French>Modification humaine (Identité numérique)</French>
 		<Italian>Umano augmentato (Identità digitale)</Italian>
 	</TEXT>
 	<TEXT>
@@ -4256,7 +4256,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE</Tag>
 		<English>Human Mod (Digital Lifestyle)</English>
-		<French>Modif. Humain (Forme de vie numérique)</French>
+		<French>Modification humaine (Forme de vie numérique)</French>
 		<Italian>Umano augmentato (Stile di vita digitale)</Italian>
 	</TEXT>
 	<TEXT>
@@ -4814,7 +4814,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENLIGHTENMENT</Tag>
 		<English>Human Mod (Enlightened)</English>
-		<French>Modif. Humain (Illumination)</French>
+		<French>Modification humaine (Éclaircissement)</French>
 		<Italian>Umano augmentato (Illuminazione)</Italian>
 	</TEXT>
 	<TEXT>
@@ -5867,7 +5867,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENE_EDITING</Tag>
 		<English>Human Mod (Gene Editing)</English>
-		<French>Modif. Humain (Edition des Gènes)</French>
+		<French>Modification humaine (Edition des Gènes)</French>
 		<Italian>Umano augmentato (Modifica genetica)</Italian>
 	</TEXT>
 	<TEXT>
@@ -5930,7 +5930,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GILLS</Tag>
 		<English>Human Mod (Gills)</English>
-		<French>Modif. Humain (Branchies)</French>
+		<French>Modification humaine (Branchies)</French>
 		<Italian>Umano augmentato (Branchie)</Italian>
 	</TEXT>
 	<TEXT>
@@ -6251,7 +6251,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEAT_TOLERANCE</Tag>
 		<English>Human Mod (Heat Tolerance)</English>
-		<French>Modif. Humain (Tolérance à la chaleur)</French>
+		<French>Modification humaine (Tolérance à la chaleur)</French>
 		<Italian>Umano augmentato (Tolleranza al calore)</Italian>
 	</TEXT>
 	<TEXT>
@@ -6350,7 +6350,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_BEING</Tag>
 		<English>Human Mod (High-Dimensional)</English>
-		<French>Modif. Humain (Haute dimension)</French>
+		<French>Modification humaine (Haute dimension)</French>
 		<Italian>Umano augmentato (Dimensione superiore)</Italian>
 	</TEXT>
 	<TEXT>
@@ -6521,7 +6521,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMAN_ALIEN_HYBRID</Tag>
 		<English>Human Mod (Alien Hybrid)</English>
-		<French>Modif. Humain (Alien hybride)</French>
+		<French>Modification humaine (Alien hybride)</French>
 		<Italian>Umano augmentato (Ibrido alieno)</Italian>
 	</TEXT>
 	<TEXT>
@@ -6921,7 +6921,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMMORTAL_BEING</Tag>
 		<English>Human Mod (Immortal)</English>
-		<French>Modif. Humain (Immortel)</French>
+		<French>Modification humaine (Immortel)</French>
 		<Italian>Umano augmentato (Immortale)</Italian>
 	</TEXT>
 	<TEXT>
@@ -6936,7 +6936,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN</Tag>
 		<English>Human Mod (Indefinite Lifespan)</English>
-		<French>Modif. Humain (Durée de vie indéfinie)</French>
+		<French>Modification humaine (Durée de vie indéfinie)</French>
 		<Italian>Umano augmentato (Durata di vita indefinita)</Italian>
 	</TEXT>
 	<TEXT>
@@ -7011,12 +7011,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFLATABLE_HABITAT</Tag>
 		<English>Cislunar Inflatable Habitat</English>
-		<French>Inflatable Habitat Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFLATABLE_HABITAT_PEDIA</Tag>
 		<English>See Bigelow Aerospace's Inflatable Habitat[PARAGRAPH:2]http://www.space.com/28855-inflatable-space-station-habitat-bigelow.html</English>
-		<French>See Bigelow Aerospace's Inflatable Habitat[PARAGRAPH:2]http://www.space.com/28855-inflatable-space-station-habitat-bigelow.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFLATABLE_HABITAT_STRATEGY</Tag>
@@ -7025,12 +7023,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFLATON_FIELD</Tag>
 		<English>Hyperspace Inflaton Field</English>
-		<French>Hyperspace Inflaton Field</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFLATON_FIELD_PEDIA</Tag>
 		<English>Create a localized field of inflation. Be careful with it.</English>
-		<French>Create a localized field of inflation. Be careful with it.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFLATON_FIELD_STRATEGY</Tag>
@@ -7038,12 +7034,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFORMATION_BEING</Tag>
-		<English>HM Information-Based</English>
-		<French>HM Information-Based</French>
+		<English>Human Mod (Information-Based)</English>
+		<French>Modification humaine (Basé sur l'information)</French>
+		<Italian>Umano augmentato (Basato su informazione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFORMATION_BEING_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFORMATION_BEING_STRATEGY</Tag>
@@ -7052,12 +7050,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFRASOUND_DEFENSES</Tag>
 		<English>Infrasound Defenses</English>
-		<French>Infrasound Defenses</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFRASOUND_DEFENSES_PEDIA</Tag>
 		<English>Powerful infrasound speakers deter would-be troublemakers from sensitive sites.</English>
-		<French>Powerful infrasound speakers deter would-be troublemakers from sensitive sites.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFRASOUND_DEFENSES_STRATEGY</Tag>
@@ -7066,12 +7062,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INSTANT_EDUCATION_CENTER</Tag>
 		<English>Instant Education Center</English>
-		<French>Instant Education Center</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INSTANT_EDUCATION_CENTER_PEDIA</Tag>
 		<English>A facility that uploads knowledge directly to human brains.</English>
-		<French>A facility that uploads knowledge directly to human brains.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INSTANT_EDUCATION_CENTER_STRATEGY</Tag>
@@ -7080,12 +7074,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INSTANT_TELEPORTATION_PORTAL</Tag>
 		<English>Intergalactic Instant Teleportation Portal</English>
-		<French>Instant Teleportation Portal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INSTANT_TELEPORTATION_PORTAL_PEDIA</Tag>
 		<English>By leaving space and time, this booth allows instant teleportation to another portal.</English>
-		<French>By leaving space and time, this booth allows instant teleportation to another portal.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INSTANT_TELEPORTATION_PORTAL_STRATEGY</Tag>
@@ -7094,12 +7086,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTELLIGENT_PERSONAL_ASSISTANT</Tag>
 		<English>Intelligent Personal Assistant</English>
-		<French>Intelligent Personal Assistant</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTELLIGENT_PERSONAL_ASSISTANT_PEDIA</Tag>
 		<English>An intelligent personal assistant (or simply IPA) is a software agent that can perform tasks or services for an individual. These tasks or services are based on user input, location awareness, and the ability to access information from a variety of online sources (such as weather or traffic conditions, news, stock prices, user schedules, retail prices, etc.). Examples of such an agent are Apple's Siri, Google's Google Now (and later Google Assistant). Amazon Alexa, Amazon's Evi (branded as Evi), Microsoft's Cortana, Braina (application developed by Brainasoft for Microsoft Windows), Samsung's S Voice, LG G3's Voice Mate, BlackBerry's Assistant, SILVIA, HTC's Hidi, IBM's Watson (computer), Facebook's M (app) and One Voice Technologies (IVAN).</English>
-		<French>Un assistant personnel intelligent (ou simplement IPA) est un agent logiciel qui peut effectuer des tâches ou des services pour un individu. Ces tâches ou services sont basés sur la saisie des utilisateurs, la connaissance de l'emplacement et la possibilité d'accéder aux informations à partir de diverses sources en ligne (telles que les conditions météorologiques ou de circulation, les actualités, les cours des actions, les horaires des utilisateurs, les prix de détail, etc.). Des exemples d'un tel agent sont Siri d'Apple, Google Now de Google (et plus tard Google Assistant). Amazon Alexa, Evi d'Amazon (marque Evi), Cortana de Microsoft, Braina (application développée par Brainasoft pour Microsoft Windows), S Voice de Samsung, Voice Mate de LG G3, Assistant de BlackBerry, SILVIA, Hidi de HTC, Watson d'IBM (ordinateur), Facebook de M (application) et One Voice Technologies (IVAN).</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTELLIGENT_PERSONAL_ASSISTANT_STRATEGY</Tag>
@@ -7108,12 +7098,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERCONTINENTAL_RAIL</Tag>
 		<English>Global Rail Network</English>
-		<French>Global Rail Network</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERCONTINENTAL_RAIL_PEDIA</Tag>
 		<English>This rail network spans the entire planet.</English>
-		<French>This rail network spans the entire planet.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERCONTINENTAL_RAIL_STRATEGY</Tag>
@@ -7122,12 +7110,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERDICTION_FIELD_GENERATOR</Tag>
 		<English>Distant Interdiction Field Generator</English>
-		<French>Distant Interdiction Field Generator</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERDICTION_FIELD_GENERATOR_PEDIA</Tag>
 		<English>This field cancels hyperspace travel.</English>
-		<French>This field cancels hyperspace travel.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERDICTION_FIELD_GENERATOR_STRATEGY</Tag>
@@ -7136,12 +7122,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_ACCELERATOR</Tag>
 		<English>Intergalactic Accelerator</English>
-		<French>Intergalactic Accelerator</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_ACCELERATOR_PEDIA</Tag>
 		<English>The Intergalactic Accelerator is so big that it encircles multiple star systems. It can be used to manufacture all sorts of neat things.</English>
-		<French>The Intergalactic Accelerator is so big that it encircles multiple star systems. It can be used to manufacture all sorts of neat things.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_ACCELERATOR_STRATEGY</Tag>
@@ -8381,12 +8365,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LANDSCAPE_MULTIVERSE</Tag>
 		<English>Hyperspace Landscape Multiverse</English>
-		<French>Hyperspace Landscape Multiverse</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LANDSCAPE_MULTIVERSE_PEDIA</Tag>
 		<English>The string theory landscape refers to the huge number of possible false vacua in string theory. The large number of theoretically allowed configurations has prompted suggestions that certain physical mysteries, particularly relating to the fine-tuning of constants like the cosmological constant or the Higgs boson mass, may be explained not by a physical mechanism but by assuming that many different vacua are physically realized. The anthropic landscape thus refers to the collection of those portions of the landscape that are suitable for supporting intelligent life, an application of the anthropic principle that selects a subset of the otherwise possible configurations.</English>
-		<French>The string theory landscape refers to the huge number of possible false vacua in string theory. The large number of theoretically allowed configurations has prompted suggestions that certain physical mysteries, particularly relating to the fine-tuning of constants like the cosmological constant or the Higgs boson mass, may be explained not by a physical mechanism but by assuming that many different vacua are physically realized. The anthropic landscape thus refers to the collection of those portions of the landscape that are suitable for supporting intelligent life, an application of the anthropic principle that selects a subset of the otherwise possible configurations.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LANDSCAPE_MULTIVERSE_STRATEGY</Tag>
@@ -8395,12 +8377,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LARGE_MAGELLANIC_CLOUD</Tag>
 		<English>Large Magellanic Cloud Colony</English>
-		<French>Colonie de Large Magellanic Cloud</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LARGE_MAGELLANIC_CLOUD_PEDIA</Tag>
 		<English>The Large Magellanic Cloud (LMC) is a satellite galaxy of the Milky Way.</English>
-		<French>The Large Magellanic Cloud (LMC) is a satellite galaxy of the Voie lactée.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LARGE_MAGELLANIC_CLOUD_STRATEGY</Tag>
@@ -8449,12 +8429,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LAUNCH_SITE_EFFECT</Tag>
 		<English>Effect - Launch Site</English>
-		<French>Effet - Site de Lancement</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LAUNCH_SITE_EFFECT_PEDIA</Tag>
 		<English>Allows early space missions.</English>
-		<French>Allows early space missions.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LAUNCH_SITE_EFFECT_STRATEGY</Tag>
@@ -8463,7 +8441,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LAYERED_WORLD</Tag>
 		<English>Distant Layered Reality</English>
-		<French>Distant Layered Reality</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LAYERED_WORLD_PEDIA</Tag>
@@ -8476,7 +8453,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEAN_LINEAR_CITY</Tag>
 		<English>Lean Linear City</English>
-		<French>Ville Linéaire en Lean</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEAN_LINEAR_CITY_PEDIA</Tag>
@@ -8501,11 +8477,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIBRARY_OF_BABEL</Tag>
 		<English>Library of Babel</English>
-		<French>Library of Babel</French>
+		<French>Bibliothèque de Babel</French>
+		<Italian>Biblioteca di Babele</Italian>
+		<Spanish>Biblioteca de Babel</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIBRARY_OF_BABEL_PEDIA</Tag>
-		<English>'The Library of Babel' (Spanish: La biblioteca de Babel) is a short story by Argentine author and librarian Jorge Luis Borges (1899-1986), conceiving of a universe in the form of a vast library containing all possible 410-page books of a certain format and character set.</English>
+		<English>The Library of Babel (Spanish: La biblioteca de Babel) is a short story by Argentine author and librarian Jorge Luis Borges (1899-1986), conceiving of a universe in the form of a vast library containing all possible 410-page books of a certain format and character set.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIBRARY_OF_BABEL_STRATEGY</Tag>
@@ -8514,7 +8492,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIGHTSOUT_MANUFACTURING</Tag>
 		<English>Lights Out Manufacturing</English>
-		<French>Lights Out Manufacturing</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIGHTSOUT_MANUFACTURING_PEDIA</Tag>
@@ -8527,12 +8504,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LILLIPUTIAN_CITY</Tag>
 		<English>Interstellar Lilliputian City</English>
-		<French>Ville Interstellaire Lilliputienne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LILLIPUTIAN_CITY_PEDIA</Tag>
 		<English>These Lilliputians are small because they are made of femtomaterials.</English>
-		<French>These Lilliputians are small because they are made of femtomaterials.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LILLIPUTIAN_CITY_STRATEGY</Tag>
@@ -8541,12 +8516,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIQUID_NITROGEN_LIFE</Tag>
 		<English>Life - Liquid Nitrogen</English>
-		<French>Life - Liquid Nitrogen</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIQUID_NITROGEN_LIFE_PEDIA</Tag>
 		<English>In extremely cold environments, liquid nitrogen could theoretically be a solvent for life forms.</English>
-		<French>In extremely cold environments, liquid nitrogen could theoretically be a solvent for life forms.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIQUID_NITROGEN_LIFE_STRATEGY</Tag>
@@ -8555,12 +8528,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIVING_BUILDINGS</Tag>
 		<English>Living Buildings</English>
-		<French>Batiments Vivants</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIVING_BUILDINGS_PEDIA</Tag>
 		<English>The buildings are now composed of biological material which can be genetically engineered to desired specifications.</English>
-		<French>Les bâtiments sont désormais composés de matériel biologique qui peut être génétiquement modifié selon les spécifications souhaitées.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIVING_BUILDINGS_STRATEGY</Tag>
@@ -8616,12 +8587,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNARIS</Tag>
-		<English>HM Lunaris</English>
-		<French>HM Lunaireis</French>
+		<English>Human Mod (Lunaris)</English>
+		<French>Modification humaine (Lunaire)</French>
+		<Italian>Umano augmentato (Selenita)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNARIS_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNARIS_STRATEGY</Tag>
@@ -8630,7 +8603,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ALGAE_FARM</Tag>
 		<English>Lunar Algae Farm</English>
-		<French>Algues Farm Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ALGAE_FARM_PEDIA</Tag>
@@ -9527,7 +9499,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_FARM</Tag>
 		<English>Martian Farm</English>
-		<French>Martian Farm</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_FARM_PEDIA</Tag>
@@ -9540,7 +9511,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_HITECH</Tag>
 		<English>Martian Electronics Factory</English>
-		<French>Usine de Électroniques Martiennes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_HITECH_PEDIA</Tag>
@@ -9553,7 +9523,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_HYDROPONICS</Tag>
 		<English>Martian Hydroponics Complex</English>
-		<French>Complexe de Martian Hydroponics</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_HYDROPONICS_PEDIA</Tag>
@@ -9566,7 +9535,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_MAGLEV</Tag>
 		<English>Martian Maglev Terminal</English>
-		<French>Martian Maglev Terminal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_MAGLEV_PEDIA</Tag>
@@ -9579,7 +9547,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_MEGACITY</Tag>
 		<English>Martian Megacity</English>
-		<French>Martian Megacity</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_MEGACITY_PEDIA</Tag>
@@ -9592,7 +9559,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_METRO</Tag>
 		<English>Martian Metropolis</English>
-		<French>Martian Metropolis</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_METRO_PEDIA</Tag>
@@ -9605,7 +9571,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_MINE</Tag>
 		<English>Martian Mine</English>
-		<French>Martian Mine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_MINE_PEDIA</Tag>
@@ -9618,7 +9583,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_MONUMENT</Tag>
 		<English>Martian Monument</English>
-		<French>Martian Monument</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_MONUMENT_PEDIA</Tag>
@@ -9631,7 +9595,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_RADIATION</Tag>
 		<English>Martian Radiation Shield</English>
-		<French>Martian Radiation Shield</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_RADIATION_PEDIA</Tag>
@@ -9644,7 +9607,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_SCIENCE_LAB</Tag>
 		<English>Mars Science Laboratory</English>
-		<French>Mars Science Laboratory</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_SCIENCE_LAB_PEDIA</Tag>
@@ -9657,7 +9619,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_SEA</Tag>
 		<English>Martian Biotic Sea</English>
-		<French>Martian Biotic Sea</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_SEA_PEDIA</Tag>
@@ -9670,12 +9631,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_TERRA</Tag>
 		<English>Terraformed Mars</English>
-		<French>Mars terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_TERRA_EFFECT</Tag>
 		<English>Effect - Terraformed Mars</English>
-		<French>Effet - Mars terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_TERRA_EFFECT_PEDIA</Tag>
@@ -9707,8 +9666,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN</Tag>
-		<English>HM Martian</English>
-		<French>HM Martienne</French>
+		<English>Human Mod (Martian)</English>
+		<French>Modification humaine (Martien)</French>
+		<Italian>Umano augmentato (Marziano)</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MARTIAN_PEDIA</Tag>
+		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ALBEDO_REDUCTION</Tag>
@@ -9726,12 +9691,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ALGAE_FARM</Tag>
 		<English>Martian Algae Designer</English>
-		<French>Martian Algues Designer</French>
+		<French>Concepteur d'algues martiennes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ALGAE_FARM_PEDIA</Tag>
 		<English>Advanced algaculture plant on Mars.</English>
-		<French>Advanced algaculture plant on Mars.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ALGAE_FARM_STRATEGY</Tag>
@@ -9991,7 +9955,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_GEOLOGY_LAB</Tag>
 		<English>Martian Geology Lab</English>
-		<French>Martian Geology Lab</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_GEOLOGY_LAB_PEDIA</Tag>
@@ -10004,7 +9967,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_GOVERNMENT</Tag>
 		<English>Martian Governing Council</English>
-		<French>Martian Governing Council</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_GOVERNMENT_PEDIA</Tag>
@@ -10041,7 +10003,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_LFTR</Tag>
 		<English>Martian Liquid Fluoride Thorium Reactor</English>
-		<French>Réacteur de Martian Liquid Fluoride Thorium</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_LFTR_PEDIA</Tag>
@@ -10090,7 +10051,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_NOVUS_CHEMICAL_IMPORTER</Tag>
 		<English>Martian Novus Chemical Importer</English>
-		<French>Importateur de Martian Novus Chemical</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_NOVUS_CHEMICAL_IMPORTER_PEDIA</Tag>
@@ -10113,13 +10073,8 @@
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MARTIAN_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_RARE_MINERAL_EXPORTER</Tag>
 		<English>Martian Rare Mineral Exporter</English>
-		<French>Exportateur de Martian Rare Mineral</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_RARE_MINERAL_EXPORTER_PEDIA</Tag>
@@ -10144,7 +10099,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SKYHOOK</Tag>
 		<English>Martian Skyhook</English>
-		<French>Martian Skyhook</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SKYHOOK_PEDIA</Tag>
@@ -10222,7 +10176,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_VERTICAL_FARM</Tag>
 		<English>Martian Vertical Farm</English>
-		<French>Martian Vertical Farm</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_VERTICAL_FARM_PEDIA</Tag>
@@ -10235,12 +10188,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_WATER</Tag>
 		<English>Martian Water Extraction</English>
-		<French>Martian Water Extraction</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_WATER_PEDIA</Tag>
 		<English>Extracts water from below the surface.</English>
-		<French>Extracts water from below the surface.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_WATER_STRATEGY</Tag>
@@ -10499,12 +10450,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_CITY</Tag>
 		<English>Mercury City</English>
-		<French>Ville de Mercure</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_CITY_PEDIA</Tag>
 		<English>A city on Mercury.</English>
-		<French>A city on de Mercure.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_CITY_STRATEGY</Tag>
@@ -10513,7 +10462,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_COLONY</Tag>
 		<English>Mercury Colony</English>
-		<French>Colonie de Mercure</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_COLONY_PEDIA</Tag>
@@ -10526,7 +10474,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_COMET_BOMBARDMENT</Tag>
 		<English>Mercury Cometary Bombardment</English>
-		<French>Cometary Bombardment de Mercure</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_COMET_BOMBARDMENT_PEDIA</Tag>
@@ -10539,7 +10486,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_SUNSHADE</Tag>
 		<English>Mercury Sunshade</English>
-		<French>Sunshade de Mercure</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_SUNSHADE_PEDIA</Tag>
@@ -10631,12 +10577,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAPHYSICAL</Tag>
-		<English>HM Metaphysical</English>
-		<French>HM Metaphysical</French>
+		<English>Human Mod (Metaphysical)</English>
+		<French>Modification humaine (Métaphysique)</French>
+		<Italian>Umano augmentato (Metafisico)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAPHYSICAL_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAPHYSICAL_STRATEGY</Tag>
@@ -11094,7 +11042,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MULTIVERSE_CITY</Tag>
 		<English>Multiverse City</English>
-		<French>Ville Multivers</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MULTIVERSE_CITY_PEDIA</Tag>
@@ -11107,7 +11054,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MULTIVERSE_MINE</Tag>
 		<English>Distant Multiverse Mine</English>
-		<French>Distant Multiverse Mine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MULTIVERSE_MINE_PEDIA</Tag>
@@ -11120,7 +11066,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MULTIVERSE_STEERING</Tag>
 		<English>Multiverse Steering</English>
-		<French>Multiverse Steering</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MULTIVERSE_STEERING_PEDIA</Tag>
@@ -11137,7 +11082,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSEUM_OF_HUMANITY_PEDIA</Tag>
-		<English>As humans come into contact with more sentient, non-Earth based life forms, new anthrocentric forms of politics and social organization have emerged. One of them is this museum, dedicated to human history and human nature.</English>
+		<English>As humans come into contact with more sentient, non-Earth based life forms, new anthropocentric forms of politics and social organization have emerged. One of them is this museum, dedicated to human history and human nature.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSEUM_OF_HUMANITY_STRATEGY</Tag>
@@ -11146,12 +11091,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSIC_FACTORY</Tag>
 		<English>Music Factory</English>
-		<French>Usine d'instruments de Musique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSIC_FACTORY_PEDIA</Tag>
-		<English>This factory produces a variety of musical instruments</English>
-		<French>Cette usine produit des variétés d'instruments de musique</French>
+		<English>This factory produces a variety of musical instruments.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSIC_FACTORY_STRATEGY</Tag>
@@ -11159,11 +11102,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NANOMORPHICS_BEINGS</Tag>
-		<English>HM Nanomorphism</English>
+		<English>Human Mod (Nanomorphism)</English>
+		<French>Modification humaine (Nanomorphisme)</French>
+		<Italian>Umano augmentato (Nanomorfismo)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NANOMORPHICS_BEINGS_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NANOMORPHICS_BEINGS_STRATEGY</Tag>
@@ -11172,7 +11118,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NANOTECH_CLOTHING</Tag>
 		<English>Nanotech Clothing Outfitter</English>
-		<French>Fournisseur de Tissu en Nanotech</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NANOTECH_CLOTHING_PEDIA</Tag>
@@ -11185,12 +11130,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NANOTRUSSES</Tag>
 		<English>Nanotruss Foundry</English>
-		<French>Fonderie de Nanotruss</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NANOTRUSSES_PEDIA</Tag>
 		<English>Produces Nanotrusses.</English>
-		<French>Produit des Nanotrusses.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NANOTRUSSES_STRATEGY</Tag>
@@ -11199,12 +11142,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_CENSUS</Tag>
 		<English>National Census</English>
-		<French>Recensement National</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_CENSUS_PEDIA</Tag>
 		<English>A census is the procedure of systematically acquiring and recording information about the members of a given population. The term is used mostly in connection with national population and housing censuses; other common censuses include agriculture, business, and traffic censuses. The United Nations defines the essential features of population and housing censuses as 'individual enumeration, universality within a defined territory, simultaneity and defined periodicity', and recommends that population censuses be taken at least every 10 years. United Nations recommendations also cover census topics to be collected, official definitions, classifications and other useful information to co-ordinate international practice.</English>
-		<French>Un recensement est la procédure d'acquisition et d'enregistrement systématique d'informations sur les membres d'une population donnée. Le terme est utilisé principalement dans le cadre des recensements nationaux de la population et du logement; les autres recensements courants comprennent les recensements de l'agriculture, des entreprises et de la circulation. L'ONU définit les caractéristiques essentielles des recensements de la population et du logement comme étant '' le dénombrement individuel, l'universalité dans un territoire défini, la simultanéité et la périodicité définies '', et recommande que les recensements de population soient effectués au moins tous les 10 ans. Les recommandations des Nations Unies couvrent également les thèmes du recensement à collecter, les définitions officielles, les classifications et autres informations utiles pour coordonner les pratiques internationales.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATIONAL_CENSUS_STRATEGY</Tag>
@@ -11213,7 +11154,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATURE_GODDESS</Tag>
 		<English>Nature Goddess</English>
-		<French>Nature Goddess</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATURE_GODDESS_PEDIA</Tag>
@@ -11238,12 +11178,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEOM</Tag>
 		<English>NEOM</English>
-		<French>NEOM</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEOM_PEDIA</Tag>
 		<English>Neom (styled NEOM) is a planned 10,230-square-mile (26,500 sq km) transnational city and economic zone to be constructed in the border region of Saudi Arabia, Jordan, and Egypt (via a proposed bridge across the Gulf of Aqaba).</English>
-		<French>Neom (dénommée NEOM) est une ville et une zone économique transnationales prévues de 10 230 milles carrés (26 500 kilomètres carrés) qui seront construites dans la région frontalière de l'Arabie saoudite, de la Jordanie et de l'Égypte (via un projet de pont traversant le golfe d'Aqaba).</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEOM_STRATEGY</Tag>
@@ -11252,12 +11190,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEO_PYRAMID</Tag>
 		<English>Neo-Pyramid</English>
-		<French>Néo-Pyramide</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEO_PYRAMID_PEDIA</Tag>
 		<English>This bizarre pyramidal structure, inspired by the ancient Pyramids of Egypt, is capable of interstellar travel, time travel, and other amazing feats. Little is known about it, even to its designers. Its resemblance to ancient pyramids might not be entirely coincidental.</English>
-		<French>Cette structure pyramidale bizarre, inspirée des anciennes pyramides d'Égypte, est capable de voyages interstellaires, de voyages dans le temps et d'autres exploits incroyables. On en sait peu à ce sujet, même pour ses concepteurs. Sa ressemblance avec les anciennes pyramides n'est peut-être pas entièrement une coïncidence.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEO_PYRAMID_STRATEGY</Tag>
@@ -11278,7 +11214,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEPTUNE_CHANDELIER_CITY</Tag>
 		<English>Neptune Chandelier City</English>
-		<French>Ville Neptune Chandelier</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEPTUNE_CHANDELIER_CITY_PEDIA</Tag>
@@ -11303,7 +11238,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEPTUNE_VOLATILE_MINE</Tag>
 		<English>Neptune Volatile Mine</English>
-		<French>Neptune Volatile Mine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEPTUNE_VOLATILE_MINE_PEDIA</Tag>
@@ -11316,7 +11250,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEPTUNE_WIND_TURBINE</Tag>
 		<English>Neptune Wind Turbine</English>
-		<French>Neptune Wind Turbine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEPTUNE_WIND_TURBINE_PEDIA</Tag>
@@ -11329,17 +11262,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER</Tag>
 		<English>Advanced Neuroimplant Exporter</English>
-		<French>Exportateur de Neuro-implants avancés</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_EFFECT</Tag>
 		<English>Effect - Neuroimplant Exporter</English>
-		<French>Effet - Exportateur de Neuro-implants</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_EFFECT_PEDIA</Tag>
-		<English>Neuroimplants imported from Earth</English>
-		<French>Neuro-implants importés de la Terre</French>
+		<English>Neuroimplants imported from Earth.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_EFFECT_STRATEGY</Tag>
@@ -11356,12 +11286,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUTRINO_BEACON</Tag>
 		<English>Interstellar Neutrino Beacon</English>
-		<French>Interstellar Neutrino Beacon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUTRINO_BEACON_PEDIA</Tag>
 		<English>Neutrinos used for communication.</English>
-		<French>Neutrinos used for communication.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUTRINO_BEACON_STRATEGY</Tag>
@@ -11370,7 +11298,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUTRINO_OBSERVATORY</Tag>
 		<English>Neutrino Observatory</English>
-		<French>Neutrino Observatoire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUTRINO_OBSERVATORY_PEDIA</Tag>
@@ -11407,7 +11334,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUTRONIUM</Tag>
 		<English>Intergalactic Neutronium Foundry</English>
-		<French>Fonderie Intergalactique de Neutronium</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUTRONIUM_PEDIA</Tag>
@@ -11420,7 +11346,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUTRON_STAR_COLONY</Tag>
 		<English>Interstellar Neutron Star Colony</English>
-		<French>Colonie Interstellaire de Neutron Star</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUTRON_STAR_COLONY_PEDIA</Tag>
@@ -11445,7 +11370,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEW_BIG_BANG</Tag>
 		<English>Hyperspace New Big Bang</English>
-		<French>New Big Bang (Hyperspace)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEW_BIG_BANG_PEDIA</Tag>
@@ -11483,12 +11407,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOMAD_SKYSCRAPER</Tag>
 		<English>Nomad Skyscraper</English>
-		<French>Gratte-Ciel Nomade</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOMAD_SKYSCRAPER_PEDIA</Tag>
 		<English>The Containers Skyscraper is an idea to provide nomad housing to this specific type of urban dweller. It consists of an exoskeleton where regular shipping containers transformed into apartment units plug-in. The main structure provides basic infrastructure as well as recreational areas while the habitable units can be transported by ship, truck, and train to almost every large city worldwide providing a sense of 'home' to these modern urban nomads.[PARAGRAPH:2]http://www.evolo.us/architecture/nomad-skyscraper/</English>
-		<French>Le Gratte-ciel de Containers est une idée pour fournir un logement nomade à ce type spécifique de citadin. Il se compose d'un exosquelette où les conteneurs d'expédition réguliers se transforment en plug-ins d'appartements. La structure principale fournit des infrastructures de base ainsi que des zones de loisirs tandis que les unités habitables peuvent être transportées par bateau, camion et train vers presque toutes les grandes villes du monde, offrant un sentiment de «chez-soi» à ces nomades urbains modernes.[PARAGRAPH:2]http : //www.evolo.us/architecture/nomad-skyscraper/</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOMAD_SKYSCRAPER_STRATEGY</Tag>
@@ -11508,11 +11430,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NONSPATIAL_BEINGS</Tag>
-		<English>HM Nonspatial</English>
+		<English>Human Mod (Non-spatial)</English>
+		<French>Modification humaine (Non-spatiale)</French>
+		<Italian>Umano augmentato (Non-spaziale)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NONSPATIAL_BEINGS_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NONSPATIAL_BEINGS_STRATEGY</Tag>
@@ -11557,12 +11482,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOOTROPIC_DISPENSARY</Tag>
 		<English>Nootropic Dispensary</English>
-		<French>Dispensaire Nootropique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOOTROPIC_DISPENSARY_PEDIA</Tag>
 		<English>Nootropics-also called smart drugs or cognitive enhancers-are drugs, supplements, or other substances that improve cognitive function, particularly executive functions, memory, creativity, or motivation, in healthy individuals. The use of cognition-enhancing drugs by healthy individuals in the absence of a medical indication is one of the most debated topics among neuroscientists, psychiatrists, and physicians which spans a number of issues, including the ethics and fairness of their use, concerns over adverse effects, and the diversion of prescription drugs for nonmedical uses, among others. Nonetheless, the international sales of cognition-enhancing supplements exceeded US$1 billion in 2015 and the global demand for these compounds is still growing rapidly.</English>
-		<French>Les nootropiques - également appelés médicaments intelligents ou activateurs cognitifs - sont des médicaments, des suppléments ou d'autres substances qui améliorent la fonction cognitive, en particulier les fonctions exécutives, la mémoire, la créativité ou la motivation, chez les individus en bonne santé. L'utilisation de médicaments améliorant la cognition par des personnes en bonne santé en l'absence d'indication médicale est l'un des sujets les plus débattus parmi les neuroscientifiques, les psychiatres et les médecins qui couvre un certain nombre de questions, y compris l'éthique et l'équité de leur utilisation, les préoccupations concernant les effets indésirables et le détournement de médicaments sur ordonnance à des fins non médicales, entre autres. Néanmoins, les ventes internationales de suppléments améliorant la cognition ont dépassé le milliard de dollars américains en 2015 et la demande mondiale de ces composés continue de croître rapidement.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOOTROPIC_DISPENSARY_STRATEGY</Tag>
@@ -11571,7 +11494,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NORMA_AND_OUTER_ARM</Tag>
 		<English>Norma and Outer Arm Colony</English>
-		<French>Colonie de Norma and Outer Arm</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NORMA_AND_OUTER_ARM_PEDIA</Tag>
@@ -11583,11 +11505,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOVEL_SENSES</Tag>
-		<English>HM Novel Senses</English>
+		<English>Human Mod (Novel Senses)</English>
+		<French>Modification humaine (Nouveaux sens)</French>
+		<Italian>Umano augmentato (Nuovi sensi)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOVEL_SENSES_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOVEL_SENSES_STRATEGY</Tag>
@@ -11596,7 +11521,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUCLEAR_DAMPER</Tag>
 		<English>Cislunar Nuclear Damper</English>
-		<French>Nuclear Damper Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUCLEAR_DAMPER_PEDIA</Tag>
@@ -11609,12 +11533,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUCLEAR_MINE</Tag>
 		<English>Nuclear Mine</English>
-		<French>Mine Nucléaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUCLEAR_MINE_PEDIA</Tag>
-		<English>This mine uses nuclear exploses. What could go wrong?</English>
-		<French>Cette mine utilise le nucléaire comme explosifs. Qu'est-ce qui pourrait mal se passer?</French>
+		<English>This mine uses nuclear explosives. What could possibly go wrong?</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUCLEAR_MINE_STRATEGY</Tag>
@@ -11623,12 +11545,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUDING_SPACE_ARCOLOGY</Tag>
 		<English>Nudging Space Arcology</English>
-		<French>Arcologie frôlant l'Espace</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUDING_SPACE_ARCOLOGY_PEDIA</Tag>
 		<English>The overall form of Nudging Space is intended to create various micro-climatic environments within the building envelopes. To do this Soleri utilizes the concept of 'garment architecture' to moderate thermal and lighting conditions. The hot season garment is opaque, providing shade while the cold season garment is transparent and transmits the solar energy and traps the heated air. Furthermore, its curved space offers a focusing convergence that may encourage positive human interaction.</English>
-		<French>La forme globale de la Stratosphère est destinée à créer divers environnements micro-climatiques dans les enveloppes du bâtiment. Pour ce faire, Soleri utilise le concept d '«architecture du vêtement» pour modérer les conditions thermiques et d'éclairage. Le vêtement de saison chaude est opaque, fournissant de l'ombre tandis que le vêtement de saison froide est transparent et transmet l'énergie solaire et emprisonne l'air chauffé. De plus, son espace incurvé offre une convergence focalisée qui peut encourager une interaction humaine positive.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUDING_SPACE_ARCOLOGY_STRATEGY</Tag>
@@ -12848,12 +12768,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTOS_MANDATE</Tag>
 		<English>Mandate</English>
-		<French>Mandate</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTOS_MANDATE_PEDIA</Tag>
 		<English>See http://www.mandategame.com/history-mandate</English>
-		<French>See http://www.mandategame.com/history-mandate</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROTOS_MANDATE_STRATEGY</Tag>
@@ -12862,12 +12780,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROXIMA_CENTAURI</Tag>
 		<English>Proxima Centauri b Colony</English>
-		<French>Colonie de Proxima Centauri b</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROXIMA_CENTAURI_PEDIA</Tag>
 		<English>Proxima Centauri b (also called Proxima b) is an exoplanet orbiting within the habitable zone of the red dwarf star Proxima Centauri, the closest star to the Sun. It is located about 4.2 light-years (1.3 parsecs, 40 trillion km, or 25 trillion miles) from Earth in the constellation of Centaurus, making it the closest known exoplanet to the Solar System. It is unlikely to be habitable, as the planet is subject to stellar wind pressures of more than 2000 times those experienced by Earth from the solar wind. More information about the planet's physical characteristics is needed for a proper evaluation.</English>
-		<French>Proxima Centauri b (also called Proxima b) is an exoplanet orbiting within the habitable zone of the red dwarf star Proxima Centauri, the closest star to the Sun. It is located about 4.2 light-years (1.3 parsecs, 40 trillion km, or 25 trillion miles) from Earth in the constellation of Centaurus, making it the closest known exoplanet to the Solar System. It is unlikely to be habitable, as the planet is subject to stellar wind pressures of more than 2000 times those experienced by Earth from the solar wind. More information about the planet's physical characteristics is needed for a proper evaluation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROXIMA_CENTAURI_STRATEGY</Tag>
@@ -12918,12 +12834,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PULSAR_NAVIGATION</Tag>
 		<English>Interstellar Pulsar Navigation</English>
-		<French>Interstellar Pulsar Navigation</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PULSAR_NAVIGATION_PEDIA</Tag>
 		<English>Pulsars are used to identify coordinates and navigate through space.</English>
-		<French>Pulsars are used to identify coordinates and navigate through space.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PULSAR_NAVIGATION_STRATEGY</Tag>
@@ -12931,12 +12845,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PURE_INFORMATION_BEING</Tag>
-		<English>HM Pure Energy</English>
-		<French>HM Pure Energy</French>
+		<English>Human Mod (Pure Energy)</English>
+		<French>Modification humaine (Énergie pure)</French>
+		<Italian>Umano augmentato (Pura energia)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PURE_INFORMATION_BEING_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PURE_INFORMATION_BEING_STRATEGY</Tag>
@@ -12945,12 +12861,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QUANTIFIED_HEALTH_CENTER</Tag>
 		<English>Quantified Health Center</English>
-		<French>Quantified Health Center</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QUANTIFIED_HEALTH_CENTER_PEDIA</Tag>
 		<English>A major application of quantified self has been in health and wellness improvement. Many devices and services help with tracking physical activity, caloric intake, sleep quality, posture, and other factors involved in personal well-being. Corporate wellness programs, for example, will often encourage some form of tracking. Genetic testing and other services have also become popular.</English>
-		<French>A major application of quantified self has been in health and wellness improvement. Many devices and services help with tracking physical activity, caloric intake, sleep quality, posture, and other factors involved in personal well-being. Corporate wellness programs, for example, will often encourage some form of tracking. Genetic testing and other services have also become popular.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QUANTIFIED_HEALTH_CENTER_STRATEGY</Tag>
@@ -12959,12 +12873,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QUANTUM_ASSEMBLER</Tag>
 		<English>Quantum Assembler</English>
-		<French>Assembleur Quantique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QUANTUM_ASSEMBLER_PEDIA</Tag>
 		<English>Even more advanced, this device operates at the quantum level.</English>
-		<French>Encore plus avancé, cet appareil fonctionne au niveau quantique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QUANTUM_ASSEMBLER_STRATEGY</Tag>
@@ -13141,12 +13053,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACIAL_PROFILING</Tag>
 		<English>Racial Profiling</English>
-		<French>Racial Profiling</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACIAL_PROFILING_PEDIA</Tag>
 		<English>The government now uses genetic testing at an early age to determine likely aptitude, tendency toward antisocial behavior, and potential consumer interests. See https://ghr.nlm.nih.gov/primer/testing/discrimination</English>
-		<French>The government now uses genetic testing at an early age to determine likely aptitude, tendency toward antisocial behavior, and potential consumer interests. See https://ghr.nlm.nih.gov/primer/testing/discrimination</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACIAL_PROFILING_STRATEGY</Tag>
@@ -13154,12 +13064,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RADIATION_TOLERANCE</Tag>
-		<English>HM Radiation Tolerance</English>
-		<French>HM Radiation Tolerance</French>
+		<English>Human Mod (Radiation Tolerance)</English>
+		<French>Modification humaine (Tolérance aux radiations)</French>
+		<Italian>Umano augmentato (Tolleranza alle radiazioni)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RADIATION_TOLERANCE_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RADIATION_TOLERANCE_STRATEGY</Tag>
@@ -13168,12 +13080,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAK_MESBA</Tag>
 		<English>Rak Mesba</English>
-		<French>Rak Mesba</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAK_MESBA_PEDIA</Tag>
 		<English>See http://www.orionsarm.com/eg-article/4d029739425da</English>
-		<French>See http://www.orionsarm.com/eg-article/4d029739425da</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAK_MESBA_STRATEGY</Tag>
@@ -13182,12 +13092,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAPTOR_BREEDER</Tag>
 		<English>Velociraptor Breeder</English>
-		<French>Velociraptor Breeder</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAPTOR_BREEDER_PEDIA</Tag>
 		<English>Velociraptor is a genus of dromaeosaurid theropod dinosaur that lived approximately 75 to 71 million years ago during the later part of the Cretaceous Period.</English>
-		<French>Velociraptor is a genus of dromaeosaurid theropod dinosaur that lived approximately 75 to 71 million years ago during the later part of the Cretaceous Period.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAPTOR_BREEDER_STRATEGY</Tag>
@@ -13545,12 +13453,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RING_OF_SATURN_HOTEL</Tag>
 		<English>Saturn Ring Hotel</English>
-		<French>Ring of Saturn Hotel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RING_OF_SATURN_HOTEL_PEDIA</Tag>
 		<English>This hotel just over the rings of Saturn provides the most spectacular views available in the Solar System.</English>
-		<French>This hotel just over the rings of Saturn provides the most spectacular views available in the Solar System.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RING_OF_SATURN_HOTEL_STRATEGY</Tag>
@@ -13558,12 +13464,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROBOTIC_BODY</Tag>
-		<English>HM Robotic Body</English>
-		<French>HM Robotic Body</French>
+		<English>Human Mod (Robotic Body)</English>
+		<French>Modification humaine (Corps robotique)</French>
+		<Italian>Umano augmentato (Corpo robotico)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROBOTIC_BODY_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROBOTIC_BODY_STRATEGY</Tag>
@@ -13572,12 +13480,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROBOTIC_SURGEON</Tag>
 		<English>Robotic Surgeon</English>
-		<French>Robotic Surgeon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROBOTIC_SURGEON_PEDIA</Tag>
 		<English>Robotic surgery, or robot-assisted surgery, allows doctors to perform many types of complex procedures with more precision, flexibility and control than is possible with conventional techniques. Robotic surgery is usually associated with minimally invasive surgery - procedures performed through tiny incisions. It is also sometimes used in certain traditional open surgical procedures.[PARAGRAPH:2]See http://www.mayoclinic.org/tests-procedures/robotic-surgery/basics/definition/prc-20013988</English>
-		<French>Robotic surgery, or robot-assisted surgery, allows doctors to perform many types of complex procedures with more precision, flexibility and control than is possible with conventional techniques. Robotic surgery is usually associated with minimally invasive surgery - procedures performed through tiny incisions. It is also sometimes used in certain traditional open surgical procedures.[PARAGRAPH:2]See http://www.mayoclinic.org/tests-procedures/robotic-surgery/basics/definition/prc-20013988</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROBOTIC_SURGEON_STRATEGY</Tag>
@@ -13586,12 +13492,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_BEACON</Tag>
 		<English>Rogue Planet Beacon</English>
-		<French>Rogue Planet Beacon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_BEACON_PEDIA</Tag>
 		<English>This beacon, established on a rogue planet, is used to relay interstellar communications. It greatly reduces power consumption and helps keep a fledgling galactic civilization together.</English>
-		<French>This beacon, established on a rogue planet, is used to relay interstellar communications. It greatly reduces power consumption and helps keep a fledgling galactic civilization together.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_BEACON_STRATEGY</Tag>
@@ -13600,12 +13504,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_OUTPOST</Tag>
 		<English>Rogue Planet Outpost</English>
-		<French>Rogue Planet Outpost</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_OUTPOST_PEDIA</Tag>
 		<English>At long last, your people have left the Solar System. The first step toward galactic domination is a small research and manufacturing outpost, truly in the middle of nowhere.[PARAGRAPH:2]A rogue planet, also known as an interstellar planet, nomad planet, free-floating planet, orphan planet or starless planet, is a planetary-mass object that orbits the galaxy directly. They have either been ejected from the planetary system in which they formed or have never been gravitationally bound to any star or brown dwarf. There may be billions of rogue planets in the Milky Way.</English>
-		<French>At long last, your people have left the Solar System. The first step toward galactic domination is a small research and manufacturing outpost, truly in the middle of nowhere.[PARAGRAPH:2]A rogue planet, also known as an interstellar planet, nomad planet, free-floating planet, orphan planet or starless planet, is a planetary-mass object that orbits the galaxy directly. They have either been ejected from the planetary system in which they formed or have never been gravitationally bound to any star or brown dwarf. There may be billions of rogue planets in the Milky Way.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_OUTPOST_STRATEGY</Tag>
@@ -13614,12 +13516,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_REBEL</Tag>
 		<English>Rogue Planet Rebel Base</English>
-		<French>Rogue Planet Rebel Base</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_REBEL_PEDIA</Tag>
 		<English>Not everybody is on board with your plans for galactic domination. Whether you call them freedom fighters or terrorists, these rebels are determined to keep their independence. And keep their lucrative piracy business.</English>
-		<French>Not everybody is on board with your plans for galactic domination. Whether you call them freedom fighters or terrorists, these rebels are determined to keep their independence. And keep their lucrative piracy business.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_REBEL_STRATEGY</Tag>
@@ -13628,12 +13528,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_RESUPPLY</Tag>
 		<English>Rogue Planet Supply Depot</English>
-		<French>Rogue Planet Supply Depot</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_RESUPPLY_PEDIA</Tag>
 		<English>It's a long way between the stars. This resupply station is for travelers to refuel, resupply, and take a break from the drudgery of the starship.</English>
-		<French>It's a long way between the stars. This resupply station is for travelers to refuel, resupply, and take a break from the drudgery of the starship.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_RESUPPLY_STRATEGY</Tag>
@@ -16192,12 +16090,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOROIDAL_PLANET</Tag>
 		<English>Transtellar Toroidal Planet</English>
-		<French>Transtellar Toroidal Planet</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOROIDAL_PLANET_PEDIA</Tag>
 		<English>Have you ever wondered why every planet we know about is shaped like a sphere? Why not a cube, or an hourglass? While those-and let's be honest, most other shapes-would definitely break the laws of physics, there's one odd planet form that wouldn't: a donut.[PARAGRAPH:2]See https://curiosity.com/topics/yes-a-donut-shaped-planet-is-technically-possible-curiosity/</English>
-		<French>Have you ever wondered why every planet we know about is shaped like a sphere? Why not a cube, or an hourglass? While those-and let's be honest, most other shapes-would definitely break the laws of physics, there's one odd planet form that wouldn't: a donut.[PARAGRAPH:2]See https://curiosity.com/topics/yes-a-donut-shaped-planet-is-technically-possible-curiosity/</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOROIDAL_PLANET_STRATEGY</Tag>
@@ -16206,12 +16102,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRACTOR_BEAM</Tag>
 		<English>Interstellar Tractor Beam</English>
-		<French>Interstellar Tractor Beam</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRACTOR_BEAM_PEDIA</Tag>
 		<English>A tractor beam is a device with the ability to attract one object to another from a distance.</English>
-		<French>A tractor beam is a device with the ability to attract one object to another from a distance.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRACTOR_BEAM_STRATEGY</Tag>
@@ -16220,12 +16114,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRAFFIC_ENGINEERING_AGENCY</Tag>
 		<English>Traffic Engineering Agency</English>
-		<French>Traffic Engineering Agency</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRAFFIC_ENGINEERING_AGENCY_PEDIA</Tag>
 		<English>Traffic engineering is a branch of civil engineering that uses engineering techniques to achieve the safe and efficient movement of people and goods on roadways. It focuses mainly on research for safe and efficient traffic flow, such as road geometry, sidewalks and crosswalks, cycling infrastructure, traffic signs, road surface markings and traffic lights. Traffic engineering deals with the functional part of transportation system, except the infrastructures provided.</English>
-		<French>Traffic engineering is a branch of civil engineering that uses engineering techniques to achieve the safe and efficient movement of people and goods on roadways. It focuses mainly on research for safe and efficient traffic flow, such as road geometry, sidewalks and crosswalks, cycling infrastructure, traffic signs, road surface markings and traffic lights. Traffic engineering deals with the functional part of transportation system, except the infrastructures provided.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRAFFIC_ENGINEERING_AGENCY_STRATEGY</Tag>
@@ -16233,12 +16125,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRANSAPIENT</Tag>
-		<English>HM Transapient</English>
-		<French>HM Transapient</French>
+		<English>Human Mod (Transapient)</English>
+		<French>Modification humaine (Transapient)</French>
+		<Italian>Umano augmentato (Transapiente)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRANSAPIENT_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRANSAPIENT_STRATEGY</Tag>
@@ -17778,12 +17672,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHITE_HOLE</Tag>
 		<English>Interstellar White Hole</English>
-		<French>Interstellar White Hole</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHITE_HOLE_PEDIA</Tag>
 		<English>In general relativity, a white hole is a hypothetical region of spacetime which cannot be entered from the outside, although matter and light can escape from it. In this sense, it is the reverse of a black hole, which can only be entered from the outside and from which matter and light cannot escape. White holes appear in the theory of eternal black holes. In addition to a black hole region in the future, such a solution of the Einstein field equations has a white hole region in its past. However, this region does not exist for black holes that have formed through gravitational collapse, nor are there any known physical processes through which a white hole could be formed. No white hole has ever been observed. Also, the laws of thermodynamics say that the net entropy in the universe can either increase or remain constant. This rule is violated by white holes, as they tend to decrease entropy.</English>
-		<French>In general relativity, a white hole is a hypothetical region of spacetime which cannot be entered from the outside, although matter and light can escape from it. In this sense, it is the reverse of a black hole, which can only be entered from the outside and from which matter and light cannot escape. White holes appear in the theory of eternal black holes. In addition to a black hole region in the future, such a solution of the Einstein field equations has a white hole region in its past. However, this region does not exist for black holes that have formed through gravitational collapse, nor are there any known physical processes through which a white hole could be formed. No white hole has ever been observed. Also, the laws of thermodynamics say that the net entropy in the universe can either increase or remain constant. This rule is violated by white holes, as they tend to decrease entropy.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHITE_HOLE_STRATEGY</Tag>
@@ -17791,12 +17683,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WINGS</Tag>
-		<English>HM Wings</English>
-		<French>HM Wings</French>
+		<English>Human Mod (Wings)</English>
+		<French>Modification humaine (Ailes)</French>
+		<Italian>Umano augmentato (Ali)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WINGS_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WINGS_STRATEGY</Tag>
@@ -17817,7 +17711,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WIRELESS_GRID</Tag>
 		<English>Wireless Grid</English>
-		<French>Wireless Grid</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WIRELESS_GRID_PEDIA</Tag>
@@ -17854,7 +17747,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLF_1061C</Tag>
 		<English>Wolf 1061c Colony</English>
-		<French>Colonie de Wolf 1061c</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLF_1061C_PEDIA</Tag>
@@ -17999,7 +17891,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEPTOBOTIC_NEURAL_IMPLANTS</Tag>
 		<English>Zeptobotic Neural Implants</English>
-		<French>Implants neuronaux Zeptobotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEPTOBOTIC_NEURAL_IMPLANTS_PEDIA</Tag>
@@ -18011,11 +17902,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZERO_G</Tag>
-		<English>HM Zero G Adaptation</English>
+		<English>Human Mod (Zero G Adaptation)</English>
+		<French>Modification humaine (Adaptation zéro G)</French>
+		<Italian>Umano augmentato (Adattamento a zero G)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZERO_G_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambiamento permanente dell'essere umano di tipo psichico, fisiologico o naturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZERO_G_STRATEGY</Tag>
@@ -18036,12 +17930,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZERO_POINT_MAKER</Tag>
 		<English>Zero-Point Maker</English>
-		<French>Fabricant de Point-Zéro</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZERO_POINT_MAKER_PEDIA</Tag>
 		<English>Create goods from thin air, driven by zero-point energy.</English>
-		<French>Créer des marchandises à partir d'air, propulsées par l'énergie du point zéro.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZERO_POINT_MAKER_STRATEGY</Tag>
@@ -18062,7 +17954,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZERO_POINT_POWER_PLANT</Tag>
 		<English>Intergalactic Zero-Point Plant</English>
-		<French>Centrale Intergalactique de Zero-Point</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZERO_POINT_POWER_PLANT_PEDIA</Tag>
