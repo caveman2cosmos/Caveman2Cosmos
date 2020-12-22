@@ -28,7 +28,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BIOTIC_NEUTRON_STAR</Tag>
 		<English>Terraform [LINK=IMPROVEMENT_BIOTIC_NEUTRON_STAR]Neutron Star[\LINK]</English>
-		<French>Terraformer une [LINK=IMPROVEMENT_BIOTIC_NEUTRON_STAR]Etoile à Neutron[\LINK]</French>
+		<French>Terraformer une [LINK=IMPROVEMENT_BIOTIC_NEUTRON_STAR]Étoile à Neutron[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BLUE_SUPERGIANT_COLONY</Tag>
@@ -63,7 +63,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COSMIC_EXPANSION_NODE</Tag>
 		<English>Build [LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE]Cosmic Expansion Node[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE]Noeud d'Expansion cosmique[\LINK]</French>
+		<French>Construire un [LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE]Nœud d'expansion cosmique[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DISTANT_FUTURE_CITY</Tag>

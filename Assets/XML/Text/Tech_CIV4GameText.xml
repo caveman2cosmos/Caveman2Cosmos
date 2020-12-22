@@ -194,7 +194,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ACOUSTICS_QUOTE</Tag>
 		<English>"The great problem of the concert hall is that the shoebox is the ideal shape for acoustics but that no architect worth their names wants to build a shoebox." - Rem Koolhaas</English>
-		<French>"Le grand problème avec les salles de concert, c'est qu'au niveau accoustique, la forme idéale est la boîte à chaussures. Mais aucun architecte ne veut associer son nom à une boîte à chaussures." - Rem Koolhaas</French>
+		<French>"Le grand problème avec les salles de concert, c'est qu'au niveau acoustique, la forme idéale est la boîte à chaussures. Mais aucun architecte ne veut associer son nom à une boîte à chaussures." - Rem Koolhaas</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ACOUSTICS_STRATEGY</Tag>
@@ -385,7 +385,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</Tag>
 		<English>Advanced Environmental Systems</English>
-		<French>Systèmes Environmentaaux Avancés</French>
+		<French>Systèmes environnementaux avancés</French>
 		<Italian>Sistemi ambientali avanzati</Italian>
 		<Spanish>
 			<Text>Sistemas ambientales avanzados</Text>
@@ -427,7 +427,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ADVANCED_METALLURGY_QUOTE</Tag>
-		<English>"In other part stood one who, at the forge Labouring, two massy clods of iron and brass Had melted." - John Milton, Paradise Lost</English>
+		<English>"In other part stood one who at the Forge / Labouring, two massie clods of Iron and Brass Had melted." - John Milton, Paradise Lost</English>
 		<French>"Dans une autre partie se trouvait une masse fondue, là où il y avait auparavant des masses de fer et d'airain." - John Milton, Paradis perdu</French>
 	</TEXT>
 	<TEXT>
@@ -525,7 +525,7 @@
 		<English>In recent years great strides have been made in improving arcology shielding. The newer shields are far stronger than the originals; unfortunately they are also extremely expensive. They have a significant environmental impact, as well: the shields emit an extremely annoying high-pitched whining sound. Studies have shown that prolonged exposure to this sound causes heightened anxiety in humans, and, if continued indefinitely, leads to increased hostility, anger, and eventually to insanity.[PARAGRAPH:2]Significant efforts are being made to remove or at least reduce this sound. In the meantime, most cities leave these shields turned off until the city is under imminent threat; when the shields are turned on the cities attempt to mask the whining sound by playing loud, incessant "muzak" through huge speakers atop every building in the dome.</English>
 		<French>Au cours des dernières années, les boucliers d'arcologie ont été très nettement améliorés. Ces nouveaux boucliers sont plus résistants, mais aussi beaucoup plus chers. Autre inconvénient: leur impact sur l'environnement. Les boucliers émettent en permanence des sifflements stridents. Des études ont démontré qu'une exposition prolongée à ces sifflements accroît le stress et peut conduire à un sentiment de colère, d'agressivité, pouvant mener à la folie.[PARAGRAPH:2]Des efforts ont été faits pour supprimer, ou du moins réduire, ces sifflements. Toutefois, la plupart des villes ont opté pour une solution plus radicale: les boucliers sont désactivés tant qu'aucune menace n'est détectée et lorsqu'ils sont remis en service, les villes tentent de masquer les sifflements en diffusant une musique de fond dans les haut-parleurs des dômes.</French>
 		<German>In den letzten Jahren erzielte man große Fortschritte bei der Verbesserung von Arkologieschilden. Die neueren Modelle sind weitaus robuster als ihre Vorläufer, aber leider auch extrem teuer. Außerdem haben sie gravierende Auswirkungen auf die Umwelt, denn die Schilde sondern einen extrem hohen Heulton ab. Wissenschaftliche Untersuchungen haben gezeigt, dass Menschen, die diesem Ton längere Zeit ausgesetzt sind, unter stärkeren Angstzuständen leiden und, wenn er ununterbrochen zu hören ist, aggressiv, gewalttätig und schließlich sogar wahnsinnig werden.[PARAGRAPH:2]Um hier Abhilfe zu schaffen, wird gegenwärtig intensiv nach einer Methode geforscht, mit der diese Geräuschkulisse beseitigt oder zumindest gedämpft werden kann. Bis dahin lassen die meisten Städte ihre Schilde ausgeschaltet, sofern sie keiner konkreten, unmittelbaren Bedrohung ausgesetzt sind. Und wenn sie doch eingeschaltet werden müssen, versucht man, den Heulton durch unaufhörliches Abspielen sehr lauter Fahrstuhlmusik zu überdecken, die mittels riesiger Lautsprecher auf jedem Gebäude innerhalb der Kuppel ausgegeben wird.</German>
-		<Italian>Negli anni recenti sono stati fatti grossi passi avanti nel migliorare gli scudi dell'arcologia. I più recenti scudi sono molto più forti di quelli originali ma, sfortunatamente, sono anche estremamente costosi. Hanno anche un importante impatto ambientale: emettono un suono acuto e lamentoso estremamente irritante. Gli studi hanno dimostrato che una prolungata esposizione a questo suono causa negli umani un'elevata ansietà e, se continuato, porta a un'accresciuta ostilità, rabbia e infine alla pazzia.[PARAGRAPH:2]Si stanno facendo grandi sforzi per eliminare o almeno ridurre questo suono. Nel frattempo, la maggior parte delle città ha disattivato gli scudi fino a quando non saranno in immediato pericolo. Quando vengono attivati gli scudi, le città cercano di mascherarne il suono riproducendo incessantemente musica di sottofondo ad alto volume, attraverso enormi altoparlanti posti in cima a ogni edificio nella cupol</Italian>
+		<Italian>Negli anni recenti sono stati fatti grossi passi avanti nel migliorare gli scudi dell'arcologia. I più recenti scudi sono molto più forti di quelli originali ma, sfortunatamente, sono anche estremamente costosi. Hanno anche un importante impatto ambientale: emettono un suono acuto e lamentoso estremamente irritante. Gli studi hanno dimostrato che una prolungata esposizione a questo suono causa negli umani un'elevata ansietà e, se continuato, porta a un'accresciuta ostilità, rabbia e infine alla pazzia.[PARAGRAPH:2]Si stanno facendo grandi sforzi per eliminare o almeno ridurre questo suono. Nel frattempo, la maggior parte delle città ha disattivato gli scudi fino a quando non saranno in immediato pericolo. Quando vengono attivati gli scudi, le città cercano di mascherarne il suono riproducendo incessantemente musica di sottofondo ad alto volume, attraverso enormi altoparlanti posti in cima a ogni edificio nella cupola.</Italian>
 		<Spanish>En los últimos años se han producido grandes avances en los escudos arcológicos. Los últimos son mucho más resistentes que los primeros, pero, desgraciadamente, también son muy caros. Además, tienen un impacto ambiental muy significativo: los escudos emiten un chirrido agudo de lo más insoportable. Los estudios demuestran que una exposición prolongada a este sonido aumenta la ansiedad en los humanos y, si es de forma indefinida, puede llevar a un aumento de la hostilidad, la ira y finalmente a la locura.[PARAGRAPH:2]Se están llevando a cabo importantes esfuerzos para eliminar o, al menos, reducir este sonido. Mientras tanto, la mayoría de las ciudades mantienen los escudos apagados hasta que la ciudad se encuentra en un peligro inminente. Cuando se encienden los escudos, las ciudades tratan de tapar el chirrido haciendo sonar el hilo musical al máximo volumen mediante los enormes altavoces que hay en lo alto de cada edificio de la bóved</Spanish>
 		<Polish>W ostatnich latach poczyniono ogromne postępy w poprawie ochrony arkologicznej. Nowe Pola Siłowe są dużo silniejsze niż poprzednie, niestety są jednak ekstremalnie kosztowne i mają znaczny wpływ na środowisko - emitują bardzo uciążliwy dźwięk o wysokich częstotliwościach. Przeprowadza się obecnie kosztowne próby ograniczenia tego dźwięku. Dopóki nie zakończą się one sukcesem, tarcze będą włączane jedynie wtedy, kiedy miasto znajdzie się w niebezpieczeństwie.</Polish>
 	</TEXT>
@@ -3257,7 +3257,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BASKETRY_QUOTE</Tag>
 		<English>The way to become rich is to put all your eggs in one basket and then watch that basket.[PARAGRAPH:2]- Andrew Carnegie,[PARAGRAPH:1][SPACE][SPACE]"Autobiography of Andrew Carnegie"</English>
-		<French>"Pour devenir riche, il faut mettre tous ses oeufs dans un panier et ensuite contempler ce panier." - Andrew Carnegie</French>
+		<French>"Pour devenir riche, il faut mettre tous ses œufs dans un panier et ensuite contempler ce panier." - Andrew Carnegie</French>
 		<Polish>"Mam nadzieję, że nie dojdziemy do miejsca gdzie będziemy musieli zakazać kotu polowania na myszy, by nauczyć go dmuchania szkła i wyplatanie koszy." - Joseph Barbera</Polish>
 	</TEXT>
 	<TEXT>

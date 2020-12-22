@@ -148,7 +148,7 @@
 		<English>Build [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Colony Hydroponics[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Colonie Hydroponique[\LINK]</French>
 		<German>Bauen [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Kolonie Hydrokultur[\LINK]</German>
-		<Italian>Costruisci [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Idroponica Colonia[\LINK]</Italian>
+		<Italian>Costruisci [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Colonia idroponica[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Hidrocultivo colonial[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Hydroponikę Kolonii[\LINK]</Polish>
 	</TEXT>
@@ -285,7 +285,7 @@
 		<English>Build [LINK=IMPROVEMENT_FARM]Farm[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_FARM]Ferme[\LINK]</French>
 		<German>Anlegen eines [LINK=IMPROVEMENT_FARM]Getreidefeldes[\LINK]</German>
-		<Italian>Cosstruisci una [LINK=IMPROVEMENT_FARM]Fattoria[\LINK]</Italian>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_FARM]Fattoria[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_FARM]Granja[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_FARM]Farmę[\LINK]</Polish>
 	</TEXT>
@@ -1233,7 +1233,7 @@
 		<French>[LINK=IMPROVEMENT_YOUNG_FOREST]Planter une Forêt[\LINK]</French>
 		<German>Pflanze Wald</German>
 		<Italian>Pianta una foresta</Italian>
-		<Spanish>Plantar un Bosque</Spanish>
+		<Spanish>Plantar un bosque</Spanish>
 		<Polish>Posadź las</Polish>
 	</TEXT>
 	<TEXT>
