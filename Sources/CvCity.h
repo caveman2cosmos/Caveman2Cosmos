@@ -532,6 +532,7 @@ public:
 	void changePromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iChange);
 	void setPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iValue);
 
+#ifdef STRENGTH_IN_NUMBERS
 	int getTotalFrontSupportPercentModifier() const;
 	void changeTotalFrontSupportPercentModifier(int iChange);
 	int getTotalShortRangeSupportPercentModifier() const;
@@ -542,6 +543,7 @@ public:
 	void changeTotalLongRangeSupportPercentModifier(int iChange);
 	int getTotalFlankSupportPercentModifier() const;
 	void changeTotalFlankSupportPercentModifier(int iChange);
+#endif
 
 	int getUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex) const;
 	void changeUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex, int iChange);
@@ -1865,11 +1867,13 @@ protected:
 	int m_iReinforcementCounter;
 
 	//TB Combat Mod (Buildings)
+#ifdef STRENGTH_IN_NUMBERS
 	int m_iTotalFrontSupportPercentModifier;
 	int m_iTotalShortRangeSupportPercentModifier;
 	int m_iTotalMediumRangeSupportPercentModifier;
 	int m_iTotalLongRangeSupportPercentModifier;
 	int m_iTotalFlankSupportPercentModifier;
+#endif
 	int* m_paiNewAfflictionTypeCount;
 	int* m_paiAidRate;
 	int** m_ppaaiExtraBonusAidModifier;

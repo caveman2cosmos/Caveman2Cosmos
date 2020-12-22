@@ -21804,7 +21804,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 
 bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 {
-	if (!bKeepCheck &&!::isPromotionValid(ePromotion, getUnitType(), true))
+	if (!bKeepCheck && !::isPromotionValid(ePromotion, getUnitType(), true))
 	{
 		return false;
 	}
@@ -21884,11 +21884,13 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 			promotionInfo.getEncloseChange() != 0 ||
 			promotionInfo.getLungeChange() != 0 ||
 			promotionInfo.getDynamicDefenseChange() != 0 ||
+#ifdef STRENGTH_IN_NUMBERS
 			promotionInfo.getFrontSupportPercentChange() != 0 ||
 			promotionInfo.getShortRangeSupportPercentChange() != 0 ||
 			promotionInfo.getMediumRangeSupportPercentChange() != 0 ||
 			promotionInfo.getLongRangeSupportPercentChange() != 0 ||
 			promotionInfo.getFlankSupportPercentChange() != 0 ||
+#endif
 			promotionInfo.getDodgeModifierChange() != 0 ||
 			promotionInfo.getPrecisionModifierChange() != 0 ||
 			promotionInfo.getPowerShotsChange() != 0 ||
@@ -21926,6 +21928,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 		{
 			return false;
 		}
+#ifdef STRENGTH_IN_NUMBERS
 		if (
 			!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS)
 		&& (
@@ -21936,7 +21939,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 			||	promotionInfo.getFlankSupportPercentChange() != 0
 			)
 		) return false;
-
+#endif
 		return true;
 	}
 	// ! SUPER_SPIES
@@ -21979,6 +21982,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 	}
 */
 
+#ifdef STRENGTH_IN_NUMBERS
 	// Disable Strength In Numbers modifying promos if option is not on
 	if (
 		!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS)
@@ -21990,7 +21994,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 		||	promotionInfo.getFlankSupportPercentChange() != 0
 		)
 	) return false;
-
+#endif
 	// Taken out of CvGameCoreUtils so that it could be looking at the final compiled max movement rather than just the unit base movement.
 /*
 	if (maxMoves() < 2 && promotionInfo.isBlitz())
@@ -22057,11 +22061,13 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 			promotionInfo.getEncloseChange() != 0 ||
 			promotionInfo.getLungeChange() != 0 ||
 			promotionInfo.getDynamicDefenseChange() != 0 ||
+#ifdef STRENGTH_IN_NUMBERS
 			promotionInfo.getFrontSupportPercentChange() != 0 ||
 			promotionInfo.getShortRangeSupportPercentChange() != 0 ||
 			promotionInfo.getMediumRangeSupportPercentChange() != 0 ||
 			promotionInfo.getLongRangeSupportPercentChange() != 0 ||
 			promotionInfo.getFlankSupportPercentChange() != 0 ||
+#endif
 			promotionInfo.getDodgeModifierChange() != 0 ||
 			promotionInfo.getPrecisionModifierChange() != 0 ||
 			promotionInfo.getPowerShotsChange() != 0 ||

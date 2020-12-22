@@ -403,12 +403,13 @@ public:
 	int getOutbreakBase() const;
 	int getOvercomeBase() const;
 	int getTradeCommunicability() const;
-	int getFrontSupportPercentModifier() const;
-	int getShortRangeSupportPercentModifier() const;
-	int getMediumRangeSupportPercentModifier() const;
-	int getLongRangeSupportPercentModifier() const;
-	int getFlankSupportPercentModifier() const;
-	//Team Project (3)
+#ifdef STRENGTH_IN_NUMBERS
+	int getFrontSupportPercentModifier() const			{ return m_iFrontSupportPercentModifier; }
+	int getShortRangeSupportPercentModifier() const		{ return m_iShortRangeSupportPercentModifier; }
+	int getMediumRangeSupportPercentModifier() const	{ return m_iMediumRangeSupportPercentModifier; }
+	int getLongRangeSupportPercentModifier() const		{ return m_iLongRangeSupportPercentModifier; }
+	int getFlankSupportPercentModifier() const			{ return m_iFlankSupportPercentModifier; }
+#endif
 	int getNationalCaptureProbabilityModifier() const;
 	int getNationalCaptureResistanceModifier() const;
 	int getLocalCaptureProbabilityModifier() const;
@@ -844,11 +845,13 @@ protected:
 	int m_iOutbreakBase;
 	int m_iOvercomeBase;
 	int m_iTradeCommunicability;
+#ifdef STRENGTH_IN_NUMBERS
 	int m_iFrontSupportPercentModifier;
 	int m_iShortRangeSupportPercentModifier;
 	int m_iMediumRangeSupportPercentModifier;
 	int m_iLongRangeSupportPercentModifier;
 	int m_iFlankSupportPercentModifier;
+#endif
 	int m_iNationalCaptureProbabilityModifier;
 	int m_iNationalCaptureResistanceModifier;
 	int m_iLocalCaptureProbabilityModifier;

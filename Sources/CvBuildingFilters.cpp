@@ -211,7 +211,7 @@ bool BuildingFilterIsCityDefense::isFilteredBuilding(const CvPlayer *pPlayer, Cv
 		if (buildingInfo.getLocalDynamicDefense() > 0)
 			return true;
 	}
-
+#ifdef STRENGTH_IN_NUMBERS
 	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		if(buildingInfo.getFrontSupportPercentModifier() > 0
@@ -223,6 +223,7 @@ bool BuildingFilterIsCityDefense::isFilteredBuilding(const CvPlayer *pPlayer, Cv
 			return true;
 		}
 	}
+#endif
 	return buildingInfo.getDefenseModifier() > 0 
 		|| buildingInfo.getAllCityDefenseModifier() > 0
 		|| buildingInfo.getAdjacentDamagePercent() > 0 
