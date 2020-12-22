@@ -145,7 +145,7 @@ class CvDomesticAdvisor:
 			}
 			self.COLUMNS_LIST = COLUMNS_LIST = [
 # Name						Width	Type	CyCityFunction				selfFunction		Arg				Title
-("ADVISE_CULTURE",			150,	"text",	None,						self.advise,		"Culture",		TRNSLTR.getText("TXT_KEY_CONCEPT_CULTURE", ())),
+("ADVISE_CULTURE",			150,	"text",	None,						self.advise,		"Culture",		TRNSLTR.getText("TXT_KEY_CULTURE", ())),
 ("ADVISE_MILITARY",			150,	"text",	None,						self.advise,		"Military",		TRNSLTR.getText("TXT_KEY_ADVISOR_MILITARY", ())),
 ("ADVISE_RELIGION",			150,	"text",	None,						self.advise,		"Religion",		TRNSLTR.getText("TXT_KEY_CONCEPT_RELIGION", ())),
 ("ADVISE_RESEARCH",			150,	"text",	None,						self.advise,		"Research",		TRNSLTR.getText("TXT_KEY_COMMERCE_RESEARCH", ())),

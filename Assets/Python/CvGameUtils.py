@@ -542,7 +542,7 @@ class CvGameUtils:
 				elif iData2 == 21:
 					return CyTranslator().getText("TXT_KEY_CONCEPT_CORPORATIONS",())
 				elif iData2 == 22:
-					return CyTranslator().getText("TXT_KEY_ESPIONAGE_CULTURE",())
+					return CyTranslator().getText("TXT_KEY_ESPIONAGE",())
 				elif iData2 == 23:
 					return CyTranslator().getText("TXT_KEY_PITBOSS_GAME_OPTIONS",())
 				elif iData2 == 24:
