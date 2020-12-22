@@ -35,7 +35,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_HELP_POWER</Tag>
 		<English>Will disable the power grid in %s1 for %d2 [NUM2:turn:turns].</English>
-		<French>Désactive l'aprovisionnement en électricité dans %s1 pour %d2 [NUM2:turn:turns].</French>
+		<French>Désactive l'approvisionnement en électricité dans %s1 pour %d2 [NUM2:turn:turns].</French>
 		<German>Unterbricht die Energieversorgung von %s1 für %d2 [NUM2:Runde:Runden].</German>
 		<Italian>Disabilita la rete elettrica %s1 per %d2 [NUM2:turno:turni].</Italian>
 		<Spanish>Cortará el suministro de electricidad en %s1 durante %d2 [NUM2:turno:turnos].</Spanish>
@@ -58,7 +58,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_HELP_SABATOGE_RESEARCH</Tag>
-		<English>Will sabatoge all of %s1's research in %s2</English>
+		<English>Will sabotage all of %s1's research in %s2</English>
 		<French>Saboter les recherches de %s2 à %s1</French>
 		<German>Vernichtet alle Forschungsergebnisse der %s1 im Bereich %s2</German>
 		<Italian>Sabota tutta la ricerca di %s1 verso %s2</Italian>
@@ -69,7 +69,7 @@
 		<English>Will temporarily increase the war weariness in %s1 by %d2%.</English>
 		<French>Augmente temporairement le mécontentement lié à la guerre de %d2% dans la ville de %s1.</French>
 		<German>Steigert vorübergehend die Kriegsmüdigkeit in %s1 um %d2%.</German>
-		<Italian>Aumenta temporanemente la stanchezza per la guerra %s1 del %d2%.</Italian>
+		<Italian>Aumenta temporaneamente la stanchezza per la guerra %s1 del %d2%.</Italian>
 		<Spanish>Incrementará temporalmente el hastío bélico en %s1 en un %d2%.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -112,7 +112,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_PLAYER_SABATOGE_RESEARCH</Tag>
-		<English>Sabatoge Research</English>
+		<English>Sabotage Research</English>
 		<French>Saboter la Recherche</French>
 		<German>Forschungen sabotieren</German>
 		<Italian>Sabota ricerca</Italian>
@@ -144,7 +144,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_RELIGION_REMOVED</Tag>
-		<English>The people of %s1 have abandonded their faith in %s2!!!</English>
+		<English>The people of %s1 have abandoned their faith in %s2!!!</English>
 		<French>Le Peuple de %s1 a abandonné leur croyance en la religion %s2!!!</French>
 		<German>Die Einwohner von %s1 haben ihren Glauben an die Religion %s2 aufgegeben!!!</German>
 		<Italian>Le persone di %s1 hanno abbandonato la loro fede in %s2!!!</Italian>
@@ -194,7 +194,7 @@
 		<English>%s1 infiltrators have supported a rebellion within our lands!</English>
 		<French>Des espions %s1 infiltrés ont apporté leur soutien aux rebelles dans notre territoire!!</French>
 		<German>%s1 Eindringlinge haben eine Rebellion in unserem Land unterstützt!</German>
-		<Italian>%s1 inflitrati hanno istigato una ribellione sul nostro territorio!</Italian>
+		<Italian>%s1 infiltrati hanno istigato una ribellione sul nostro territorio!</Italian>
 		<Spanish>¡Infiltrados %s1:3 han apoyado una rebelión en nuestro territorio!</Spanish>
 	</TEXT>
 	<TEXT>
@@ -208,7 +208,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_TARGET_SOMETHING_BRIBED</Tag>
 		<English>A %s1_ThingName was bribed by enemy infiltrators!</English>
-		<French>Un %s1_ThingName a été corrumpu par des ennemis infiltrés!</French>
+		<French>Un %s1_ThingName a été corrompu par des infiltrés ennemis!</French>
 		<German>Ein %s1_ThingName wurde von feindlichen Eindringlingen bestochen!</German>
 		<Italian>Infiltrati nemici sono riusciti a corrompere [NUM1:un:una:dei:delle] %s1_ThingName!</Italian>
 		<Spanish>¡[NUM1:Un:Una:Unos:Unas] %s1_ThingName [NUM1:ha:ha:han:han] sido sobornad[NUM2:o:a:os:as] por infiltrados enemigos!</Spanish>

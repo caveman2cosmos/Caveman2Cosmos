@@ -2051,36 +2051,36 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MACKEREL_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-SPACE][SPACE] * Myth, Story and Stories - Mackerel
-SPACE][SPACE] * Sea and Fish Myth
-SPACE][SPACE] * Fish Pens, Coastal Fish Pens
-SPACE][SPACE] * Marine Institute</English>
+[SPACE][SPACE] * Myth, Story and Stories - Mackerel
+[SPACE][SPACE] * Sea and Fish Myth
+[SPACE][SPACE] * Fish Pens, Coastal Fish Pens
+[SPACE][SPACE] * Marine Institute</English>
 
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de Maquereaux, Mythe de le Mer et des Poissons, Filets de pêche, et Institut maritime</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MARLIN_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-SPACE][SPACE] * Myth, Story and Stories - Marlin
-SPACE][SPACE] * Sea and Fish Myth
-SPACE][SPACE] * Fish Pens, Coastal Fish Pens
-SPACE][SPACE] * Marine Institute</English>
+[SPACE][SPACE] * Myth, Story and Stories - Marlin
+[SPACE][SPACE] * Sea and Fish Myth
+[SPACE][SPACE] * Fish Pens, Coastal Fish Pens
+[SPACE][SPACE] * Marine Institute</English>
 
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythes et Histoire(s) du Marlin, Mythes de la Mer et des Poissons, Filets, Institut de Marine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAY_EAGLE_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-SPACE][SPACE] * Myth, Story and Stories - Eagle Ray
-SPACE][SPACE] * Sea and Fish Myth
-SPACE][SPACE] * Fish Pens, Coastal Fish Pens
-SPACE][SPACE] * Marine Institute</English>
+[SPACE][SPACE] * Myth, Story and Stories - Eagle Ray
+[SPACE][SPACE] * Sea and Fish Myth
+[SPACE][SPACE] * Fish Pens, Coastal Fish Pens
+[SPACE][SPACE] * Marine Institute</English>
 
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de l'aigle de mer, Mythes de le Mer et des Poissons, Filets de pêche, et Institut maritime</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUNA_PEDIA</Tag>
-		<English>See [LINK=UNIT_MACKERAL]Mackerel[/LINK] since tuna are mackerel.</English>
-		<French>Voir [LINK=UNIT_MACKERAL]Maquereau[/LINK] car les thons sont une espèce de Maquereaux.</French>
+		<English>See [LINK=UNIT_MACKEREL]Mackerel[/LINK] since tuna are mackerel.</English>
+		<French>Voir [LINK=UNIT_MACKEREL]Maquereau[/LINK] car les thons sont une espèce de Maquereaux.</French>
 	</TEXT>
 </Civ4GameText>

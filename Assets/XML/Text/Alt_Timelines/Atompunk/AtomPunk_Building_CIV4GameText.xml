@@ -3,16 +3,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY</Tag>
 		<English>Culture (Atompunk)</English>
+		<Italian>Cultura (Atompunk)</Italian>
 		<Polish>Kultura (Atompunk)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY_PEDIA</Tag>
-		<English>Atompunk relates to the pre-digital period of 1945-1965, including mid-century Modernism, the Atomic Age and Space Age, Communism and concern about it exaggerated as paranoia in the USA along with Neo-Soviet styling, underground cinema, Googie architecture, the Sputnik programme, superhero fiction, the rise of the US military/industrial powers and the fall-out of Chernobyl. Its aesthetic tends toward Populuxe and Raygun Gothic, which describe a retro-futuristic vision of the world.</English>
+		<English>[COLOR_BUILDING_TEXT]Atompunk[COLOR_REVERT] is a subgenre of speculative fiction that relates to the 1945-1965 or pre-digital period, including mid-20th century Modernism, the Atomic Age and Space Age. Its aesthetic describes a retro-futuristic vision of the world, with its tendency toward Populuxe and Raygun Gothic, exaggerated concern towards Communism bordering on paranoia, Neo-Soviet styling, underground cinema, Googie architecture, the Sputnik programme, superhero fiction, the rise of the US military/industrial powers and the fall-out of Chernobyl.</English>
+		<Italian>L'[COLOR_BUILDING_TEXT]Atompunk[COLOR_REVERT] è un sottogenere della narrativa fantascientifica che si riferisce al periodo 1945-1965 o pre-digitale, compreso il Modernismo di metà XX secolo, l'Era atomica e l'Era spaziale. La sua estetica descrive una visione retro-futuristica del mondo, con la sua tendenza verso il Populuxe e il Raygun Gothic, la sua esagerata preoccupazione per il comunismo al limite della paranoia, lo stile neo-sovietico, il cinema underground, l'architettura Googie, il programma Sputnik, la narrativa sui supereroi, l'ascesa del complesso militare-industriale USA e l'incidente di Chernobyl.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY_STRATEGY</Tag>
-		<English>Build Culture (Atompunk) to gain access to unique buildings and units.</English>
-		<French>Construisez la Culture (Atompunk) pour avoir accès à des bâtiments et unités uniques.</French>
+		<English>Build [COLOR_BUILDING_TEXT]Culture (Atompunk)[COLOR_REVERT] to gain access to unique buildings and units.</English>
+		<French>Construisez la [COLOR_BUILDING_TEXT]Culture (Atompunk)[COLOR_REVERT] pour avoir accès à des bâtiments et unités uniques.</French>
+		<Italian>Costruisci [COLOR_BUILDING_TEXT]Cultura (Atompunk)[COLOR_REVERT] per poter costruire edifici e unità uniche.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR</Tag>
@@ -22,7 +25,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR_PEDIA</Tag>
-		<English>After the discovery of clean and save nuclear energy, many reactors were built to produce incredebly amounts of energy.</English>
+		<English>After the discovery of clean and safe nuclear energy, many reactors were built to produce incredible amounts of energy.</English>
 		<Polish>Z uwagi na istotną rolę neutronów w pracy reaktora jądrowego, w teorii sterowania reaktorem wyróżnia się cykl życia neutronu jako jeden z elementów opisujących działanie reaktora. Cykl opisuje "historię życia" neutronów, od chwili ich powstania do wychwytu (pochłonięcia przez jądro) albo ucieczki z rdzenia. Cykl życia neutronu opisywany jest różnymi formułami.</Polish>
 	</TEXT>
 	<TEXT>
@@ -38,7 +41,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOOD_ATOM_PEDIA</Tag>
-		<English>With the discovery of clean and save nuclear power and the developement of large reactor complexes, Energy becomes available in such a big amount, that energy-intensive facilities are not an issue.</English>
+		<English>With the discovery of clean and safe nuclear power and the development of large reactor complexes, energy becomes available in such a big amount, that energy-intensive facilities are no longer an issue.</English>
 		<Polish>Energetyka jądrowa - zespół zagadnień związanych z uzyskiwaniem na skalę przemysłową energii z rozszczepienia ciężkich jąder pierwiastków (głównie uranu 235).</Polish>
 	</TEXT>
 	<TEXT>
@@ -53,7 +56,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIGH_ENERGY_LAB_PEDIA</Tag>
-		<English>High Energy Labs use the immense amounts of energy produced by nuclear reactors.</English>
+		<English>High Energy Labs use the immense amount of energy produced by nuclear reactors.</English>
 		<Polish>Instytut dysponuje siedmioma laboratoriami poświęconym różnym dziedzinom: fizyce teoretycznej, fizyce wysokich energii, fizyce ciężkich jonów, fizyce fazy skondensowanej, reakcjom jądrowym, neutronom i technikom informatycznym. Istnieją również wydziały zajmujące się badaniami nad promieniowaniem i radiobiologią oraz zespoły badawcze poświęcone konkretnym eksperymentom.</Polish>
 	</TEXT>
 	<TEXT>
@@ -69,7 +72,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR_PEDIA</Tag>
-		<English>After the discovery of clean and save nuclear energy, many reactors were built to produce incredebly amounts of energy. With advanced technology, the efficiency of reactors increased even more.</English>
+		<English>After the discovery of clean and safe nuclear energy, many reactors were built to produce incredible amounts of energy. With advanced technology, the efficiency of reactors increased even more.</English>
 		<Polish>W przyszłości planuje się wykorzystywać jako paliwo jądrowe tor. W wyniku rozszczepienia toru powstają jądra atomowe o mniejszej masie niż przy rozszczepieniu uranu lub plutonu i jest wśród nich więcej jąder trwałych. Rozszczepienie toru wytwarza zbyt mało neutronów by uzyskać stan krytyczny, w związku z tym do reaktora takiego trzeba by wstrzeliwać neutrony pochodzące z zewnątrz. W celu uzyskania dużej ilości neutronów naukowcy pracują nad zastosowaniem zjawiska spalacji. W zjawisku tym jądra ciężkich pierwiastków np. ołowiu są bombardowane wiązką protonów o dużej energii (rzędu 1 GeV), w wyniku czego ulegają wzbudzeniu. Jądra pozbywają się energii wzbudzenia wyrzucając z siebie nukleony w tym i neutrony. Zjawisko spalacji może być stosowane w celu uczynienia bezpiecznymi i przedłużenia pracy paliwa obecnych reaktorów jądrowych, a także pomóc w utylizacji radioaktywnych odpadów.</Polish>
 	</TEXT>
 	<TEXT>
@@ -101,7 +104,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX_PEDIA</Tag>
-		<English>With advanced technology and longtime expierience with nuclear reactors, it was possible to build a centralized, huge complex of tousends of reactors.</English>
+		<English>With advanced technology and longtime experience with nuclear reactors, it was possible to build a centralized, huge complex of thousands of reactors.</English>
 		<Polish>Potężna elektrownia jądrowa składająca się z tysięcy reaktorów.</Polish>
 	</TEXT>
 	<TEXT>

@@ -1,14 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HIT_ANIMATED_MOVIE</Tag>
-		<English>Hit Animated Movie</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HIT_ANIMATED_MOVIE_PEDIA</Tag>
-		<English>This is a tribute to the movie "Up!"</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISCOVERY_AUYANTEPUI</Tag>
 		<English>Discovery - Auyántepui</English>
 	</TEXT>

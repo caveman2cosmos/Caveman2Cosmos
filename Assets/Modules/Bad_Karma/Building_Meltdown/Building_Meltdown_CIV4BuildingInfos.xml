@@ -3,11 +3,11 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_NUCLEAR_PLANT</Type>
-			<iNukeExplosionRand>10</iNukeExplosionRand>	
+			<iNukeExplosionRand>10</iNukeExplosionRand>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FAST_BREEDER_REACTOR</Type>
-			<iNukeExplosionRand>5</iNukeExplosionRand>	
+			<iNukeExplosionRand>5</iNukeExplosionRand>
 		</BuildingInfo>
 		<!-- Pepper -->
 		<BuildingInfo>
@@ -15,7 +15,7 @@
 			<AndDependencyTypes>
              	<DependencyType>BUILDING_GENERATION_IV_REACTOR</DependencyType>
  			</AndDependencyTypes>
-			<iNukeExplosionRand>1</iNukeExplosionRand>	
+			<iNukeExplosionRand>1</iNukeExplosionRand>
 		</BuildingInfo>
 		<!-- Atompunk -->
 		<BuildingInfo>
@@ -23,14 +23,14 @@
 			<AndDependencyTypes>
              	<DependencyType>BUILDING_CLEAN_NUCLEAR_REACTOR</DependencyType>
  			</AndDependencyTypes>
-			<iNukeExplosionRand>3</iNukeExplosionRand>	
+			<iNukeExplosionRand>3</iNukeExplosionRand>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HI_TECH_NUCLEAR_REACTOR</Type>
 			<AndDependencyTypes>
              	<DependencyType>BUILDING_HI_TECH_NUCLEAR_REACTOR</DependencyType>
  			</AndDependencyTypes>
-			<iNukeExplosionRand>2</iNukeExplosionRand>	
+			<iNukeExplosionRand>2</iNukeExplosionRand>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>
