@@ -9930,7 +9930,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SOLAR_ARRAY</Tag>
 		<English>Martian Solar Array</English>
-		<French>Martian Panneaux Solaires</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SOLAR_ARRAY_PEDIA</Tag>
@@ -10007,7 +10006,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ZOO</Tag>
 		<English>Martian Zoo</English>
-		<French>Martian Zoo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ZOO_PEDIA</Tag>
@@ -10020,11 +10018,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASDAR_CITY</Tag>
 		<English>Masdar City</English>
-		<French>Ville Masdar</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASDAR_CITY_PEDIA</Tag>
-		<English>Masdar City is a planned city project in Abu Dhabi, in the United Arab Emirates. It will host the headquarters of the International Renewable Energy Agency (IRENA). The city is designed to be a hub for cleantech companies. Its first tenant is the Masdar Institute of Science and Technology, which has been operating in the city since it moved into its campus in September 2010.</English>
+		<English>Masdar City is a planned city project in Abu Dhabi, in the United Arab Emirates. It will host the headquarters of the International Renewable Energy Agency (IRENA). The city is designed to be a hub for clean-tech companies. Its first tenant is the Masdar Institute of Science and Technology, which has been operating in the city since it moved into its campus in September 2010.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASDAR_CITY_STRATEGY</Tag>
@@ -10034,11 +10031,11 @@
 		<Tag>TXT_KEY_BUILDING_MATERIALIZER</Tag>
 		<English>Materializer</English>
 		<French>Matérialisateur</French>
+		<Italian>Materializzatore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MATERIALIZER_PEDIA</Tag>
 		<English>The ultimate personal assembler, this device operates at the quantum gravity level and seems to create matter out of thin air.</English>
-		<French>Ultime assembleur personnel, cet appareil fonctionne au niveau de la gravité quantique et semble créer de la matière à partir de l'air.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MATERIALIZER_STRATEGY</Tag>
@@ -10047,12 +10044,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MATHEMATICAL_ORACLE</Tag>
 		<English>Mathematical Oracle</English>
-		<French>Oracle Mathématique</French>
+		<French>Oracle mathématique</French>
+		<Italian>Oracolo matematico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MATHEMATICAL_ORACLE_PEDIA</Tag>
 		<English>The Mathematical Oracle operates at the upper limit of computation and can also almost any question, phrased mathematically, that can theoretically be answered.</English>
-		<French>L'Oracle Mathématique opère à la limite supérieure du calcul et peut également répondre à presque toutes les questions, formulées mathématiquement, auxquelles on peut théoriquement répondre.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MATHEMATICAL_ORACLE_STRATEGY</Tag>
@@ -10062,11 +10059,11 @@
 		<Tag>TXT_KEY_BUILDING_MATHEMATICS_DEPARTMENT</Tag>
 		<English>Mathematics Department</English>
 		<French>Département de Mathématiques</French>
+		<Italian>Dipartimento di Matematica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MATHEMATICS_DEPARTMENT_PEDIA</Tag>
 		<English>University-level mathematics department.</English>
-		<French>University-level mathematics department.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MATHEMATICS_DEPARTMENT_STRATEGY</Tag>
@@ -10075,7 +10072,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MATRIOSHKA_BRAIN</Tag>
 		<English>Interstellar Matrioshka Brain</English>
-		<French>Interstellar Matrioshka Brain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MATRIOSHKA_BRAIN_PEDIA</Tag>
@@ -10088,12 +10084,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MATTER_GENERATOR</Tag>
 		<English>Interstellar Matter Generator</English>
-		<French>Interstellar Matter Generator</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MATTER_GENERATOR_PEDIA</Tag>
 		<English>Turns energy into matter in large quantities.</English>
-		<French>Turns energy into matter in large quantities.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MATTER_GENERATOR_STRATEGY</Tag>
@@ -10102,12 +10096,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MATTER_PRESERVER</Tag>
 		<English>Intergalactic Matter Preserver</English>
-		<French>Intergalactic Matter Preserver</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MATTER_PRESERVER_PEDIA</Tag>
 		<English>Preserve highly unstable matter in a suspended state.</English>
-		<French>Preserve highly unstable matter in a suspended state.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MATTER_PRESERVER_STRATEGY</Tag>
@@ -10116,12 +10108,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MCKENDREE_CYLINDER</Tag>
 		<English>Deep Space McKendree Cylinder</English>
-		<French>McKendree Cylinder de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MCKENDREE_CYLINDER_PEDIA</Tag>
 		<English>A McKendree cylinder is a type of hypothetical rotating space habitat originally proposed at NASA's Turning Goals into Reality conference in 2000 by NASA engineer Tom McKendree. As with other space habitat designs, the cylinder would spin to produce artificial gravity by way of centrifugal force. The design differs from the classical designs produced in the 1970s by Gerard K. O'Neill and NASA in that it would use carbon nanotubes instead of steel, allowing the habitat to be built much larger. In the original proposal, the habitat would consist of two cylinders approximately 460 km (290 mi) in radius and 4600 km (2900 mi) in length, containing 13 million square kilometers (5.1 million square miles) of living space, nearly as much land area as that of Russia.</English>
-		<French>Un cylindre McKendree est un type d'habitat spatial en rotation hypothétique initialement proposé lors de la conférence Turning Goals into Reality de la NASA en 2000 par l'ingénieur de la NASA Tom McKendree. Comme avec d'autres conceptions d'habitats spatiaux, le cylindre tournerait pour produire une gravité artificielle par le biais de la force centrifuge. La conception diffère des conceptions classiques produites dans les années 1970 par Gerard K. O'Neill et la NASA en ce qu'elle utiliserait des nanotubes de carbone à la place de l'acier, permettant à l'habitat d'être construit beaucoup plus grand. Dans la proposition originale, l'habitat se composerait de deux cylindres d'environ 460 km (290 mi) de rayon et 4600 km (2900 mi) de longueur, contenant 13 millions de kilomètres carrés (5,1 millions de milles carrés) d'espace vital, presque autant de terres région que celle de la Russie.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MCKENDREE_CYLINDER_STRATEGY</Tag>
@@ -10142,7 +10132,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEDICAL_MEGACOMPLEX</Tag>
 		<English>Medical Megacomplex</English>
-		<French>Medical Megacomplex</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEDICAL_MEGACOMPLEX_PEDIA</Tag>
@@ -10179,12 +10168,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGASTRONG_ALLOY_FOUNDRY</Tag>
 		<English>Megastrong Alloy Foundry</English>
-		<French>Fonderie d'Alliage Mégarésistants</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGASTRONG_ALLOY_FOUNDRY_PEDIA</Tag>
 		<English>Produces Megastrong Alloys.</English>
-		<French>Produit des Alliages Mégarésistants.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGASTRONG_ALLOY_FOUNDRY_STRATEGY</Tag>
@@ -10193,7 +10180,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGAVERSE</Tag>
 		<English>Megaverse Portal</English>
-		<French>Megaverse Portal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEGAVERSE_PEDIA</Tag>
@@ -10206,12 +10192,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEME_GENERATOR</Tag>
 		<English>Meme Generator</English>
-		<French>Générateur de Mème</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEME_GENERATOR_PEDIA</Tag>
 		<English>A meme is 'an idea, behavior, or style that spreads from person to person within a culture'. A meme acts as a unit for carrying cultural ideas, symbols, or practices that can be transmitted from one mind to another through writing, speech, gestures, rituals, or other imitable phenomena with a mimicked theme. Supporters of the concept regard memes as cultural analogues to genes in that they self-replicate, mutate, and respond to selective pressures.</English>
-		<French>Un mème est «une idée, un comportement ou un style qui se propage d'une personne à l'autre au sein d'une culture». Un mème agit comme une unité pour transporter des idées, des symboles ou des pratiques culturelles qui peuvent être transmises d'un esprit à un autre par l'écriture, le discours, les gestes, les rituels ou d'autres phénomènes imitables avec un thème imité. Les partisans du concept considèrent les mèmes comme des analogues culturels des gènes en ce qu'ils s'auto-répliquent, mutent et répondent à des pressions sélectives.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MEME_GENERATOR_STRATEGY</Tag>
@@ -10244,7 +10228,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_ANTIMATTER</Tag>
 		<English>Mercury Antimatter Factory</English>
-		<French>Usine d'Antimatière de Mercure</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_ANTIMATTER_PEDIA</Tag>
@@ -10317,12 +10300,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METALLIC_HYDROGEN</Tag>
 		<English>Metallic Hydrogen Plant</English>
-		<French>Usine d'Hydrogène métallique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METALLIC_HYDROGEN_PEDIA</Tag>
 		<English>This factory produces metallic hydrogen.</English>
-		<French>Cette usine produit de l'hydrogène métallique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METALLIC_HYDROGEN_STRATEGY</Tag>
@@ -10331,12 +10312,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAL_FOAM</Tag>
 		<English>Metal Foam Foundry</English>
-		<French>Fonderie de Mousse Métallique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAL_FOAM_PEDIA</Tag>
-		<English>Produces Metal Foam</English>
-		<French>Produit de la Mousse Métallique</French>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAL_FOAM_STRATEGY</Tag>
@@ -10345,12 +10324,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAL_MEGACOMPLEX</Tag>
 		<English>Metals Megacomplex</English>
-		<French>Mégacomplexe de Métaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAL_MEGACOMPLEX_PEDIA</Tag>
 		<English>Advanced vertically integrated firm that processes a range of metals.</English>
-		<French>Entreprise avancée verticalement intégrée, qui traite une gamme de métaux.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAL_MEGACOMPLEX_STRATEGY</Tag>
@@ -10359,7 +10336,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAL_OXIDE_LIFE</Tag>
 		<English>Life - Metal-Oxide</English>
-		<French>Life - Metal-Oxide</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAL_OXIDE_LIFE_PEDIA</Tag>
@@ -10372,7 +10348,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAMORPHIC_CISLUNAR_STATION</Tag>
 		<English>Cislunar Metamorphic Station</English>
-		<French>Metamorphic Station Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAMORPHIC_CISLUNAR_STATION_PEDIA</Tag>
@@ -10424,7 +10399,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAVERSE_VR_CENTER</Tag>
 		<English>Metaverse VR Center</English>
-		<French>Metaverse VR Center</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAVERSE_VR_CENTER_PEDIA</Tag>
@@ -10461,7 +10435,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METRIC_SYSTEM</Tag>
 		<English>Metric System</English>
-		<French>Metric System</French>
+		<French>Système métrique</French>
+		<Italian>Sistema metrico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METRIC_SYSTEM_PEDIA</Tag>
@@ -10474,7 +10449,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MICROVAC</Tag>
 		<English>Deep Space Microvac</English>
-		<French>Microvac</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MICROVAC_PEDIA</Tag>
@@ -10487,7 +10461,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MICROWORMHOLE_BUILDING</Tag>
 		<English>Micro-Wormhole</English>
-		<French>Micro-Wormhole</French>
+		<French>Micro trou de ver</French>
+		<Italian>Micro-cunicolo spazio-temporale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MICROWORMHOLE_BUILDING_PEDIA</Tag>
@@ -10500,12 +10475,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_INDUSTRIAL_COMPLEX</Tag>
 		<English>Military Industrial Complex</English>
-		<French>Complexe d'Industries militaires</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_INDUSTRIAL_COMPLEX_PEDIA</Tag>
-		<English>Advanced textile manufacturing plant.</English>
-		<French>Usine de fabrication de textiles avancés.</French>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_INDUSTRIAL_COMPLEX_STRATEGY</Tag>
@@ -10514,7 +10487,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILKY_WAY_CLUSTER_BRAIN</Tag>
 		<English>Milky Way Cluster Brain</English>
-		<French>Voie lactée Cluster Brain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILKY_WAY_CLUSTER_BRAIN_PEDIA</Tag>
@@ -10528,6 +10500,7 @@
 		<Tag>TXT_KEY_BUILDING_MILKY_WAY_COLONY</Tag>
 		<English>Milky Way Colony</English>
 		<French>Colonie de la Voie lactée</French>
+		<Italian>Colonia della Via Lattea</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILKY_WAY_COLONY_PEDIA</Tag>
@@ -10540,12 +10513,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILLENNIUM_PROBLEMS</Tag>
 		<English>Hilbert's Problems</English>
-		<French>Hilbert's Problems</French>
+		<French>Problèmes de Hilbert</French>
+		<Italian>Problemi di Hilbert</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILLENNIUM_PROBLEMS_PEDIA</Tag>
 		<English>Hilbert's problems are twenty-three problems in mathematics published by German mathematician David Hilbert in 1900. The problems were all unsolved at the time, and several of them were very influential for 20th-century mathematics. Hilbert presented ten of the problems (1, 2, 6, 7, 8, 13, 16, 19, 21 and 22) at the Paris conference of the International Congress of Mathematicians, speaking on August 8 in the Sorbonne. The complete list of 23 problems was published later, most notably in English translation in 1902 by Mary Frances Winston Newson in the Bulletin of the American Mathematical Society.</English>
-		<French>Les problèmes de Hilbert sont vingt-trois problèmes de mathématiques publiés par le mathématicien allemand David Hilbert en 1900. Tous les problèmes n'étaient pas résolus à l'époque, et plusieurs d'entre eux étaient très influents pour les mathématiques du XXe siècle. Hilbert a présenté dix des problèmes (1, 2, 6, 7, 8, 13, 16, 19, 21 et 22) à la conférence de Paris du Congrès international des mathématiciens, s'exprimant le 8 août à la Sorbonne. La liste complète de 23 problèmes a été publiée plus tard, notamment en traduction anglaise en 1902 par Mary Frances Winston Newson dans le Bulletin de l'Américain Mathematical Society.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILLENNIUM_PROBLEMS_STRATEGY</Tag>
@@ -10554,7 +10527,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILLIWAYS</Tag>
 		<English>Milliways</English>
-		<French>Milliways</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILLIWAYS_PEDIA</Tag>
@@ -10603,7 +10575,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MIR</Tag>
 		<English>Mir</English>
-		<French>Mir</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MIR_PEDIA</Tag>
@@ -10640,12 +10611,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MITHRIL_FOUNDRY</Tag>
 		<English>Mithril Foundry</English>
-		<French>Fonderie de Mithril</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MITHRIL_FOUNDRY_PEDIA</Tag>
 		<English>Produces Mithril.</English>
-		<French>Produit Mithril.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MITHRIL_FOUNDRY_STRATEGY</Tag>
@@ -10654,7 +10623,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MITHRIL_IMPORTER</Tag>
 		<English>Mithril Importer</English>
-		<French>Importateur de Mithril</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MITHRIL_IMPORTER_PEDIA</Tag>
@@ -10679,7 +10647,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOBILE_BODEGA</Tag>
 		<English>Mobile Bodega</English>
-		<French>Mobile Bodega</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOBILE_BODEGA_PEDIA</Tag>
@@ -10692,12 +10659,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOBILE_PLANT</Tag>
 		<English>Mobile Plants</English>
-		<French>Usine Mobile</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOBILE_PLANT_PEDIA</Tag>
 		<English>Plants that can move. So they're not really plants.</English>
-		<French>Des Usines qui peuvent se déplacer. Ce ne sont donc pas vraiment des usines implantées.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOBILE_PLANT_STRATEGY</Tag>
@@ -10718,12 +10683,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOLECULAR_ASSEMBLER</Tag>
 		<English>Molecular Assembler</English>
-		<French>Assembleur Moléculaire</French>
+		<French>Assembleur moléculaire</French>
+		<Italian>Assemblatore molecolare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOLECULAR_ASSEMBLER_PEDIA</Tag>
 		<English>A molecular assembler, as defined by K. Eric Drexler, is a 'proposed device able to guide chemical reactions by positioning reactive molecules with atomic precision'. A molecular assembler is a kind of molecular machine. Some biological molecules such as ribosomes fit this definition. This is because they receive instructions from messenger RNA and then assemble specific sequences of amino acids to construct protein molecules. However, the term 'molecular assembler' usually refers to theoretical human-made devices.</English>
-		<French>Un assembleur moléculaire, tel que défini par K. Eric Drexler, est un «dispositif proposé capable de guider les réactions chimiques en positionnant des molécules réactives avec une précision atomique». Un assembleur moléculaire est une sorte de machine moléculaire. Certaines molécules biologiques telles que les ribosomes correspondent à cette définition. En effet, ils reçoivent des instructions de l'ARN messager et assemblent ensuite des séquences spécifiques d'acides aminés pour construire des molécules de protéines. Cependant, le terme «assembleur moléculaire» fait généralement référence aux dispositifs théoriques fabriqués par l'homme.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOLECULAR_ASSEMBLER_STRATEGY</Tag>
@@ -10757,6 +10722,7 @@
 		<Tag>TXT_KEY_BUILDING_MONOLITH</Tag>
 		<English>Monolith</English>
 		<French>Monolithe</French>
+		<Italian>Monolite</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONOLITH_PEDIA</Tag>
@@ -10769,11 +10735,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_ROCK_LAB</Tag>
 		<English>Moon Rock Lab</English>
-		<French>Moon Rock Lab</French>
+		<French>Laboratoire des roches lunaires</French>
+		<Italian>Laboratorio di rocce lunari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_ROCK_LAB_PEDIA</Tag>
-		<English>The Google Lunar XPRIZE (GLXP), sometimes referred to as Moon 2.0, is an inducement prize space competition organized by XPRIZE, and sponsored by Google. The challenge calls for privately funded spaceflight teams to be the first to land a privately funded robotic spacecraft on the Moon, travel 500 meters, and transmit back high-definition video and images.</English>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_ROCK_LAB_STRATEGY</Tag>
@@ -10782,12 +10749,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_TERRA</Tag>
 		<English>Terraformed Luna</English>
-		<French>Lune terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_TERRA_EFFECT</Tag>
 		<English>Effect - Terraformed Luna</English>
-		<French>Effet - Lune terraformée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_TERRA_EFFECT_PEDIA</Tag>
@@ -10808,7 +10773,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MORLOCK</Tag>
 		<English>Time Ship</English>
-		<French>Vaisseau temporel</French>
+		<French>Navire de temps</French>
+		<Italian>Nave del tempo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MORLOCK_PEDIA</Tag>
@@ -10822,11 +10788,11 @@
 		<Tag>TXT_KEY_BUILDING_MORSE_CODE</Tag>
 		<English>Morse Code</English>
 		<French>Code Morse</French>
+		<Italian>Codice Morse</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MORSE_CODE_PEDIA</Tag>
-		<English>Morse code is a character encoding scheme used in telecommunication that encodes text characters as standardized sequences of two different signal durations called dots and dashes or dits and dahs. Morse code is named for Samuel F. B. Morse, an inventor of the telegraph.</English>
-		<French>Le code Morse est un schéma de codage de caractères utilisé dans les télécommunications qui code les caractères de texte sous forme de séquences normalisées de deux durées de signal différentes appelées points et tirets ou points et dahs. Le code Morse doit son nom à Samuel F. B. Morse, inventeur du télégraphe.</French>
+		<English>Morse code is a character encoding scheme used in telecommunication that encodes text characters as standardized sequences of two different signal durations called dots and dashes (or dits and dahs). Morse code is named for Samuel F. B. Morse, an inventor of the telegraph.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MORSE_CODE_STRATEGY</Tag>
@@ -10835,12 +10801,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MULTIVAC</Tag>
 		<English>Multivac</English>
-		<French>Multivac</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MULTIVAC_PEDIA</Tag>
 		<English>Multivac is the name of a fictional supercomputer appearing in several science fiction stories by American writer Isaac Asimov. According to his autobiography In Memory Yet Green, Asimov coined the name in imitation of UNIVAC, an early mainframe computer. Asimov had assumed the name 'Univac' denoted a computer with a single vacuum tube (it actually is an acronym for 'Universal Automatic Computer'), and on the basis that a computer with many such tubes would be more powerful, called his fictional computer 'Multivac'. His later short story 'The Last Question', however, expands the AC suffix to be 'automatic computer'.</English>
-		<French>Multivac est le nom d'un superordinateur fictif apparaissant dans plusieurs histoires de science-fiction de l'écrivain américain Isaac Asimov. Selon son autobiographie In Memory Yet Green, Asimov a inventé le nom à l'imitation d'UNIVAC, un des premiers ordinateurs centraux. Asimov avait supposé que le nom '' Univac '' désignait un ordinateur avec un seul tube à vide (c'est en fait un acronyme pour '' Universal Automatic Computer ''), et sur la base qu'un ordinateur avec beaucoup de tels tubes serait plus puissant, appelé son ordinateur fictif «Multivac». Cependant, sa nouvelle histoire plus récente, «The Last Question», élargit le suffixe AC en «ordinateur automatique».</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MULTIVAC_STRATEGY</Tag>
@@ -11375,7 +11339,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OBERON_HEATING</Tag>
 		<English>Uranian Lunar Heating</English>
-		<French>Uranian Lunaire Heating</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OBERON_HEATING_PEDIA</Tag>
@@ -11400,7 +11363,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OCEAN_ARCOLOGY</Tag>
 		<English>Ocean Arcology</English>
-		<French>Arcologie d'Océan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OCEAN_ARCOLOGY_PEDIA</Tag>
@@ -11413,7 +11375,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OCEAN_COLONY</Tag>
 		<English>Ocean City</English>
-		<French>Ville Océan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OCEAN_COLONY_PEDIA</Tag>
@@ -11426,7 +11387,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OCEAN_FLOOR_CITY</Tag>
 		<English>Ocean Floor City</English>
-		<French>Ville sur le Sol Marin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OCEAN_FLOOR_CITY_PEDIA</Tag>
@@ -11451,7 +11411,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OCEAN_SPIRAL</Tag>
 		<English>Ocean Spiral</English>
-		<French>Ocean Spiral</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OCEAN_SPIRAL_PEDIA</Tag>
@@ -11464,12 +11423,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OMEGA_ASSEMBLER</Tag>
 		<English>Omega Assembler</English>
-		<French>Assembleur Omega</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OMEGA_ASSEMBLER_PEDIA</Tag>
 		<English>A very high tech assembler.</English>
-		<French>Un assembleur de très haute technologie.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OMEGA_ASSEMBLER_STRATEGY</Tag>
@@ -11478,7 +11435,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OMELAS</Tag>
 		<English>Omelas</English>
-		<French>Omelas</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OMELAS_PEDIA</Tag>
@@ -11491,7 +11447,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ONE_BELT_ONE_ROAD</Tag>
 		<English>Belt and Road Initiative</English>
-		<French>Belt and Road Initiative</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ONE_BELT_ONE_ROAD_PEDIA</Tag>
@@ -11528,7 +11483,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OORT_CLOUD_DEUTERIUM_MINE</Tag>
 		<English>Oort Cloud Deuterium Mine</English>
-		<French>Oort Cloud Deuterium Mine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OORT_CLOUD_DEUTERIUM_MINE_PEDIA</Tag>
@@ -11541,7 +11495,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OORT_CLOUD_MINE</Tag>
 		<English>Oort Cloud Comet Disassembly</English>
-		<French>Comet Disassembly</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OORT_CLOUD_MINE_PEDIA</Tag>
@@ -11554,7 +11507,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OORT_CLOUD_SOLAR_ARRAY</Tag>
 		<English>Oort Cloud Solar Array</English>
-		<French>Oort Cloud Panneaux Solaires</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OORT_CLOUD_SOLAR_ARRAY_PEDIA</Tag>
@@ -11579,7 +11531,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OPEN_SOURCE_TECHNOLOGY</Tag>
 		<English>Open Source Technology</English>
-		<French>Technologie Open Source</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OPEN_SOURCE_TECHNOLOGY_PEDIA</Tag>
@@ -11592,7 +11543,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OPTRONIC_SUPERCOMPUTER</Tag>
 		<English>Optronic Supercomputer</English>
-		<French>Optronic Supercomputer</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OPTRONIC_SUPERCOMPUTER_PEDIA</Tag>
@@ -11605,7 +11555,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORACLE_HYPERINTELLIGENCE</Tag>
 		<English>Oracle</English>
-		<French>Oracle</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORACLE_HYPERINTELLIGENCE_PEDIA</Tag>
@@ -11618,7 +11567,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_ACCELERATOR</Tag>
 		<English>Cislunar Particle Accelerator</English>
-		<French>Particle Accelerator Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_ACCELERATOR_PEDIA</Tag>
@@ -11631,7 +11579,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_BASE</Tag>
 		<English>Deep Space Orbital Base</English>
-		<French>Orbital Base de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_BASE_PEDIA</Tag>
@@ -11644,7 +11591,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_COLONY</Tag>
 		<English>Deep Space O'Neill Cylinder</English>
-		<French>O'Neill Cylinder de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_COLONY_PEDIA</Tag>
@@ -11657,7 +11603,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_DEFENSES</Tag>
 		<English>Deep Space Death Ray</English>
-		<French>Death Ray de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_DEFENSES_PEDIA</Tag>
@@ -11670,7 +11615,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_HEAT_SINK</Tag>
 		<English>Orbital Heat Sink</English>
-		<French>Orbital Heat Sink</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_HEAT_SINK_PEDIA</Tag>
@@ -11683,7 +11627,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_RING</Tag>
 		<English>Orbital Ring</English>
-		<French>Orbital Ring</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_RING_PEDIA</Tag>
@@ -11696,7 +11639,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_SPACECRAFT_FACTORY</Tag>
 		<English>Deep Space Spacecraft Factory</English>
-		<French>Usine de Vaisseaux spatiaux de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_SPACECRAFT_FACTORY_PEDIA</Tag>
@@ -11709,7 +11651,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_VR</Tag>
 		<English>Deep Space Simulated World</English>
-		<French>Simulated World (Espace lointain)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_VR_PEDIA</Tag>
@@ -11722,7 +11663,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORGANIC_FARM</Tag>
 		<English>Organic Farm</English>
-		<French>Organic Farm</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORGANIC_FARM_PEDIA</Tag>
@@ -11735,7 +11675,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORGANIC_VOLATILE_EXTRACTION</Tag>
 		<English>Deep Space Organic Volatile Extraction</English>
-		<French>Organic Volatile Extraction de l'Espace lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORGANIC_VOLATILE_EXTRACTION_PEDIA</Tag>
@@ -11748,12 +11687,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORICHALCUM_FORGE</Tag>
 		<English>Orichalcum Forge</English>
-		<French>Forge d'Orichalque</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORICHALCUM_FORGE_PEDIA</Tag>
 		<English>Produces Orichalcum.</English>
-		<French>Produit de l'Orichalque.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORICHALCUM_FORGE_STRATEGY</Tag>
@@ -11762,7 +11699,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OSMIUM_CORE_PLANET</Tag>
 		<English>Interstellar Osmium Core Planet</English>
-		<French>Interstellar Osmium Core Planet</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OSMIUM_CORE_PLANET_PEDIA</Tag>
@@ -11775,7 +11711,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAIR_PRODUCTION_PLANT</Tag>
 		<English>Interstellar Pair Production Plant</English>
-		<French>Usine Interstellaire de Pair Production</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAIR_PRODUCTION_PLANT_PEDIA</Tag>
@@ -11788,7 +11723,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEO_PARK</Tag>
 		<English>Paleo Park</English>
-		<French>Paleo Park</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEO_PARK_PEDIA</Tag>
@@ -11801,7 +11735,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALM_ISLANDS</Tag>
 		<English>Palm Islands</English>
-		<French>Palm Islands</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALM_ISLANDS_PEDIA</Tag>
@@ -11814,7 +11747,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAN_DIMENSIONAL_LIFE</Tag>
 		<English>Life - Hyperspace</English>
-		<French>Life - Hyperspace</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAN_DIMENSIONAL_LIFE_PEDIA</Tag>
