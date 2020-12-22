@@ -7158,6 +7158,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_CAPITOL</Tag>
 		<English>Intergalactic Capitol</English>
+		<French>Capitole intergalactique</French>
+		<Italian>Capitale intergalattica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_CAPITOL_PEDIA</Tag>
@@ -7170,12 +7172,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_CITY</Tag>
 		<English>Intergalactic City</English>
-		<French>Ville Intergalactic</French>
+		<French>Ville intergalactique</French>
+		<Italian>Città intergalattica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_CITY_PEDIA</Tag>
 		<English>This is an early extragalactic city. It grows fast.</English>
-		<French>This is an early extragalactic city. It grows fast.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_CITY_STRATEGY</Tag>
@@ -7184,12 +7186,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_COLONY</Tag>
 		<English>Extragalactic Colony</English>
-		<French>Colonie de Extragalactic</French>
+		<French>Colonie extragalactique</French>
+		<Italian>Colonia extragalattica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_COLONY_PEDIA</Tag>
-		<English>Colonize another galaxy</English>
-		<French>Colonize another galaxy</French>
+		<English>Colonize another galaxy.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_COLONY_STRATEGY</Tag>
@@ -7198,12 +7200,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_COMMAND_CENTER</Tag>
 		<English>Intergalactic Command Center</English>
-		<French>Intergalactic Command Center</French>
+		<French>Centre de commandement intergalactique</French>
+		<Italian>Centro di comando intergalattico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_COMMAND_CENTER_PEDIA</Tag>
 		<English>Build a command center early on to govern the galaxy.</English>
-		<French>Build a command center early on to govern the galaxy.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_COMMAND_CENTER_STRATEGY</Tag>
@@ -7212,12 +7214,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_CORE_DYSON_SPHERE</Tag>
 		<English>Intergalactic Core Dyson Sphere</English>
-		<French>Intergalactic Core Dyson Sphere</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_CORE_DYSON_SPHERE_PEDIA</Tag>
 		<English>A Dyson Sphere to cover this galactic core.</English>
-		<French>A Dyson Sphere to cover this galactic core.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_CORE_DYSON_SPHERE_STRATEGY</Tag>
@@ -7226,12 +7226,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_CULTURE</Tag>
 		<English>Intergalactic Culture</English>
-		<French>Intergalactic Culture</French>
+		<French>Culture intergalactique</French>
+		<Italian>Cultura intergalattica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_CULTURE_PEDIA</Tag>
 		<English>The people living in this galaxy have developed their own unique culture.</English>
-		<French>The people living in this galaxy have developed their own unique culture.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_CULTURE_STRATEGY</Tag>
@@ -7264,12 +7264,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_FUSION_PLANTS</Tag>
 		<English>Intergalactic Fusion Plants</English>
-		<French>Centrale Intergalactique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_FUSION_PLANTS_PEDIA</Tag>
 		<English>Maybe fusion power is old news by now, but you still want to get some bigger generators up and running to accelerate colonization of a new galaxy.</English>
-		<French>Maybe fusion power is old news by now, but you still want to get some bigger generators up and running to accelerate colonization of a new galaxy.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_FUSION_PLANTS_STRATEGY</Tag>
@@ -7278,12 +7276,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_GOVERNMENT</Tag>
 		<English>Intergalactic Government</English>
-		<French>Intergalactic Government</French>
+		<French>Gouvernement intergalactique</French>
+		<Italian>Governo intergalattico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_GOVERNMENT_PEDIA</Tag>
 		<English>A central government over a full galaxy.</English>
-		<French>A central government over a full galaxy.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_GOVERNMENT_STRATEGY</Tag>
@@ -7292,12 +7290,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_HYPERPORT</Tag>
 		<English>Distant Hyperport</English>
-		<French>Distant Hyperport</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_HYPERPORT_PEDIA</Tag>
 		<English>This facility allows for hyperspace travel.</English>
-		<French>This facility allows for hyperspace travel.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_HYPERPORT_STRATEGY</Tag>
@@ -7306,12 +7302,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_LIBRARY</Tag>
 		<English>Intergalactic Library</English>
-		<French>Intergalactic Library</French>
+		<French>Bibliothèque intergalactique</French>
+		<Italian>Biblioteca intergalattica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_LIBRARY_PEDIA</Tag>
 		<English>The Intergalactic Library holds vast stores of knowledge about the galaxy.</English>
-		<French>The Intergalactic Library holds vast stores of knowledge about the galaxy.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_LIBRARY_STRATEGY</Tag>
@@ -7320,12 +7316,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_LOGISTICS_CENTER</Tag>
 		<English>Intergalactic Logistics Center</English>
-		<French>Intergalactic Logistics Center</French>
+		<French>Centre logistique intergalactique</French>
+		<Italian>Centro logistico intergalattico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_LOGISTICS_CENTER_PEDIA</Tag>
 		<English>This research and development facilities supports trade across vast space and time.</English>
-		<French>This research and development facilities supports trade across vast space and time.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_LOGISTICS_CENTER_STRATEGY</Tag>
@@ -7334,12 +7330,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_MINE</Tag>
 		<English>Intergalactic Mine</English>
-		<French>Intergalactic Mine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_MINE_PEDIA</Tag>
 		<English>This high tech mine digs up resources and also reveals data about galactic history.</English>
-		<French>This high tech mine digs up resources and also reveals data about galactic history.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_MINE_STRATEGY</Tag>
@@ -7348,12 +7342,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_PORT</Tag>
 		<English>Galactic Port</English>
-		<French>Galactic Port</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_PORT_PEDIA</Tag>
 		<English>The old starport from the early 23rd century became obsolete and was upgraded to this new galactic port, which facilities wormhole travel.</English>
-		<French>The old starport from the early 23rd century became obsolete and was upgraded to this new galactic port, which facilities wormhole travel.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_PORT_STRATEGY</Tag>
@@ -7362,12 +7354,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_REPUBLIC</Tag>
 		<English>Intergalactic Republic</English>
-		<French>Intergalactic Republic</French>
+		<French>République intergalactique</French>
+		<Italian>Repubblica intergalattica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_REPUBLIC_PEDIA</Tag>
 		<English>A galactic republic.</English>
-		<French>A galactic republic.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_REPUBLIC_STRATEGY</Tag>
@@ -7376,12 +7368,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_RESEARCH_BASE</Tag>
 		<English>Intergalactic Research Base</English>
-		<French>Intergalactic Research Base</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_RESEARCH_BASE_PEDIA</Tag>
 		<English>This research base explore intergalactic space and conducts various forms of exotic high energy research.</English>
-		<French>This research base explore intergalactic space and conducts various forms of exotic high energy research.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_RESEARCH_BASE_STRATEGY</Tag>
@@ -7390,12 +7380,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_STARPORT</Tag>
 		<English>Intergalactic Starport</English>
-		<French>Intergalactic Starport</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_STARPORT_PEDIA</Tag>
 		<English>This starport is the base for travel within the galaxy and to other galaxies.</English>
-		<French>This starport is the base for travel within the galaxy and to other galaxies.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_STARPORT_STRATEGY</Tag>
@@ -7404,12 +7392,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_SUPERCOMPUTER</Tag>
 		<English>Intergalactic Supercomputer</English>
-		<French>Intergalactic Supercomputer</French>
+		<French>Supercalculateur intergalactique</French>
+		<Italian>Supercomputer intergalattico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_SUPERCOMPUTER_PEDIA</Tag>
 		<English>A supercomputer in an intergalactic scale.</English>
-		<French>A supercomputer in an intergalactic scale.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_SUPERCOMPUTER_STRATEGY</Tag>
@@ -7418,12 +7406,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_TERRAFORMING_BASE</Tag>
 		<English>Intergalactic Terraforming Base</English>
-		<French>Intergalactic Terraforming Base</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_TERRAFORMING_BASE_PEDIA</Tag>
 		<English>This base serves as a launching pad for terraforming operations around the galaxy.</English>
-		<French>This base serves as a launching pad for terraforming operations around the galaxy.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_TERRAFORMING_BASE_STRATEGY</Tag>
@@ -7432,12 +7418,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_TOURIST_AGENCY</Tag>
 		<English>Intergalactic Tourist Agency</English>
-		<French>Intergalactic Tourist Agency</French>
+		<French>Agence de tourisme intergalactique</French>
+		<Italian>Agenzia di turismo intergalattica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_TOURIST_AGENCY_PEDIA</Tag>
 		<English>With the advent of Quantum Ramjet, tourism throughout the galaxy is feasible.</English>
-		<French>With the advent of Quantum Ramjet, tourism throughout the galaxy is feasible.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_TOURIST_AGENCY_STRATEGY</Tag>
@@ -7446,12 +7432,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_TRADING_CENTER</Tag>
 		<English>Intergalactic Trading Post</English>
-		<French>Intergalactic Trading Post</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_TRADING_CENTER_PEDIA</Tag>
 		<English>This research base explore intergalactic space and conducts various forms of exotic high energy research.</English>
-		<French>This research base explore intergalactic space and conducts various forms of exotic high energy research.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_TRADING_CENTER_STRATEGY</Tag>
@@ -7460,12 +7444,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_TRADING_POST</Tag>
 		<English>Intergalactic Commercial District</English>
-		<French>District Intergalactique de Commercial</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_TRADING_POST_PEDIA</Tag>
 		<English>A center for intergalactic trade.</English>
-		<French>A center for intergalactic trade.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_TRADING_POST_STRATEGY</Tag>
@@ -7474,17 +7456,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_WORMHOLE</Tag>
 		<English>Intergalactic Morris-Thorne Wormhole</English>
-		<French>Intergalactic Morris-Thorne Wormhole</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_WORMHOLE_HIVEMIND</Tag>
 		<English>Intergalactic Wormhole Communication Network</English>
-		<French>Intergalactic Wormhole Communication Network</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_WORMHOLE_HIVEMIND_PEDIA</Tag>
 		<English>This massive wormhole network shares culture rapidly.</English>
-		<French>This massive wormhole network shares culture rapidly.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_WORMHOLE_HIVEMIND_STRATEGY</Tag>
@@ -7493,12 +7472,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_WORMHOLE_NETWORK</Tag>
 		<English>Intergalactic Roman Ring</English>
-		<French>Intergalactic Roman Ring</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_WORMHOLE_NETWORK_PEDIA</Tag>
 		<English>Von Neumann replicators create a galaxy-wide wormhole network.</English>
-		<French>Von Neumann replicators create a galaxy-wide wormhole network.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_WORMHOLE_NETWORK_STRATEGY</Tag>
@@ -7507,7 +7484,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_WORMHOLE_PEDIA</Tag>
 		<English>This wormhole allows fast traversal between galaxies.</English>
-		<French>This wormhole allows fast traversal between galaxies.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERGALACTIC_WORMHOLE_STRATEGY</Tag>
@@ -7516,12 +7492,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERIOR_STAR</Tag>
 		<English>Interstellar Hollow Planet - Interior Star</English>
-		<French>Interstellar Hollow Planet - Interior Star</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERIOR_STAR_PEDIA</Tag>
 		<English>An interior heat source for the hollow planet. May allow the planet to function as an interstellar vessel.</English>
-		<French>An interior heat source for the hollow planet. May allow the planet to function as an interstellar vessel.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERIOR_STAR_STRATEGY</Tag>
@@ -7530,12 +7504,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERLACED_INTERSECTION</Tag>
 		<English>Interlaced Intersection</English>
-		<French>Interlaced Intersection</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERLACED_INTERSECTION_PEDIA</Tag>
 		<English>Now that all cars are controlled by a central server, cars going in multiple directions can safely pass through an intersection simultaneously. This greatly improves road throughput.</English>
-		<French>Now that all cars are controlled by a central server, cars going in multiple directions can safely pass through an intersection simultaneously. This greatly improves road throughput.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERLACED_INTERSECTION_STRATEGY</Tag>
@@ -7544,12 +7516,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERNET_ARCHIVE</Tag>
 		<English>Internet Archive</English>
-		<French>Internet Archive</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERNET_ARCHIVE_PEDIA</Tag>
 		<English>The Internet Archive is a San Francisco-based nonprofit digital library with the stated mission of 'universal access to all knowledge'. It provides free public access to collections of digitized materials, including web sites, software applications/games, music, movies/videos, moving images, and nearly three million public-domain books. As of May 2014, its collection topped 15 petabytes. In addition to its archiving function, the Archive is an activist organization, advocating for a free and open Internet.</English>
-		<French>The Internet Archive is a San Francisco-based nonprofit digital library with the stated mission of 'universal access to all knowledge'. It provides free public access to collections of digitized materials, including web sites, software applications/games, music, movies/videos, moving images, and nearly three million public-domain books. As of May 2014, its collection topped 15 petabytes. In addition to its archiving function, the Archive is an activist organization, advocating for a free and open Internet.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERNET_ARCHIVE_STRATEGY</Tag>
@@ -7558,12 +7528,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERNET_OF_THINGS</Tag>
 		<English>Internet of Things</English>
-		<French>Internet des Objets</French>
+		<French>Internet des objets</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERNET_OF_THINGS_PEDIA</Tag>
 		<English>The Internet of Things (IoT) is the network of physical objects-devices, vehicles, buildings and other items which are embedded with electronics, software, sensors, and network connectivity, which enables these objects to collect and exchange data. The Internet of Things allows objects to be sensed and controlled remotely across existing network infrastructure, creating opportunities for more direct integration of the physical world into computer-based systems, and resulting in improved efficiency, accuracy and economic benefit; when IoT is augmented with sensors and actuators, the technology becomes an instance of the more general class of cyber-physical systems, which also encompasses technologies such as smart grids, smart homes, intelligent transportation and smart cities. Each thing is uniquely identifiable through its embedded computing system but is able to interoperate within the existing Internet infrastructure. Experts estimate that the IoT will consist of almost 50 billion objects by 2020.</English>
-		<French>L'Internet des objets (IoT) est le réseau d'objets physiques: appareils, véhicules, bâtiments et autres éléments intégrés à l'électronique, aux logiciels, aux capteurs et à la connectivité réseau, ce qui permet à ces objets de collecter et d'échanger des données. L'Internet des objets permet de détecter et de contrôler les objets à distance sur l'infrastructure réseau existante, créant des opportunités pour une intégration plus directe du monde physique dans les systèmes informatiques et résultant en une efficacité, une précision et des avantages économiques améliorés; lorsque l'IoT est augmenté de capteurs et d'actionneurs, la technologie devient un exemple de la classe plus générale de systèmes cyber-physiques, qui englobe également des technologies telles que les réseaux intelligents, les maisons intelligentes, les transports intelligents et les villes intelligentes. Chaque chose est identifiable de manière unique grâce à son système informatique intégré, mais est capable d'interopérer au sein de l'infrastructure Internet existante. Les experts estiment que l'IoT comprendra près de 50 milliards d'objets d'ici 2020.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERNET_OF_THINGS_STRATEGY</Tag>
@@ -7572,12 +7541,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERPLANETARY_HIVEMIND</Tag>
 		<English>Transtellar Hivemind</English>
-		<French>Transtellar Hivemind</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERPLANETARY_HIVEMIND_PEDIA</Tag>
 		<English>A group mind, hive mind, group ego, mind coalescence, or gestalt intelligence in science fiction is a single, collective consciousness or intelligence occupying many bodies or entities. Its use in literature goes back at least as far as Olaf Stapledon's science fiction novel Last and First Men (1930). A group mind might be formed by telepathy, by adding brain-to-brain communication to ordinary individuals, or by some unspecified means. This term may be used interchangeably with 'hive mind'. A hive mind is a group mind with almost complete loss (or lack) of individual identity; most fictional group minds are hives. The concept of the group or hive mind is an intelligent version of real-life superorganisms such as an ant colony or beehive, and consequently, insectoid aliens such as Zerg and Ceph often have such a mind.</English>
-		<French>A group mind, hive mind, group ego, mind coalescence, or gestalt intelligence in science fiction is a single, collective consciousness or intelligence occupying many bodies or entities. Its use in literature goes back at least as far as Olaf Stapledon's science fiction novel Last and First Men (1930). A group mind might be formed by telepathy, by adding brain-to-brain communication to ordinary individuals, or by some unspecified means. This term may be used interchangeably with 'hive mind'. A hive mind is a group mind with almost complete loss (or lack) of individual identity; most fictional group minds are hives. The concept of the group or hive mind is an intelligent version of real-life superorganisms such as an ant colony or beehive, and consequently, insectoid aliens such as Zerg and Ceph often have such a mind.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERPLANETARY_HIVEMIND_STRATEGY</Tag>
@@ -7586,12 +7553,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERPLANETARY_RAIL</Tag>
 		<English>Interplanetary Rail</English>
-		<French>Interplanetary Rail</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERPLANETARY_RAIL_PEDIA</Tag>
 		<English>A physical rail, made of exotic nuclear matter, connects the planets.</English>
-		<French>A physical rail, made of exotic nuclear matter, connects the planets.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERPLANETARY_RAIL_STRATEGY</Tag>
@@ -7600,12 +7565,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK</Tag>
 		<English>Interplanetary Transport Network</English>
-		<French>Interplanetary Transport Network</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK_PEDIA</Tag>
 		<English>The Interplanetary Transport Network (ITN) is a collection of gravitationally determined pathways through the Solar System that require very little energy for an object to follow. The ITN makes particular use of Lagrange points as locations where trajectories through space are redirected using little or no energy. These points have the peculiar property of allowing objects to orbit around them, despite lacking an object to orbit. While they use little energy, the transport can take a very long time.</English>
-		<French>The Interplanetary Transport Network (ITN) is a collection of gravitationally determined pathways through the Solar System that require very little energy for an object to follow. The ITN makes particular use of Lagrange points as locations where trajectories through space are redirected using little or no energy. These points have the peculiar property of allowing objects to orbit around them, despite lacking an object to orbit. While they use little energy, the transport can take a very long time.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK_STRATEGY</Tag>
@@ -7614,12 +7577,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSPECIES_COMMUNITY</Tag>
 		<English>Interstellar Interspecies Community</English>
-		<French>Interstellar Interspecies Community</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSPECIES_COMMUNITY_PEDIA</Tag>
 		<English>A city in which members of many different species coexist.</English>
-		<French>A city in which members of many different species coexist.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSPECIES_COMMUNITY_STRATEGY</Tag>
@@ -7628,12 +7589,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_ADMINISTRATION</Tag>
 		<English>Interstellar Administration Center</English>
-		<French>Interstellar Administration Center</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_ADMINISTRATION_PEDIA</Tag>
 		<English>With the advent of Wormhole Communications, it is now possible for the central government to exercise tighter control over interstellar colonies. This administration center does so.</English>
-		<French>With the advent of Wormhole Communications, it is now possible for the central government to exercise tighter control over interstellar colonies. This administration center does so.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_ADMINISTRATION_STRATEGY</Tag>
@@ -7822,12 +7781,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_SAIL_NETWORK</Tag>
 		<English>Interstellar Stellar Sail Network</English>
-		<French>Interstellar Stellar Sail Network</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_SAIL_NETWORK_PEDIA</Tag>
 		<English>A network of solar sails that inexpensively traverse the stars of a star cluster.</English>
-		<French>A network of solar sails that inexpensively traverse the stars of a star cluster.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_SAIL_NETWORK_STRATEGY</Tag>
@@ -7836,12 +7793,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_SETTLEMENT</Tag>
 		<English>Interstellar Settlement</English>
-		<French>Interstellar Settlement</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_SETTLEMENT_PEDIA</Tag>
 		<English>An early settlement on an extrasolar planet.</English>
-		<French>An early settlement on an extrasolar planet.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_SETTLEMENT_STRATEGY</Tag>
@@ -7850,12 +7805,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_STADIUM</Tag>
 		<English>Interstellar Stadium</English>
-		<French>Interstellar Stadium</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_STADIUM_PEDIA</Tag>
 		<English>A stadium complex, with adjustable gravity, temperature, and atmospheric conditions. Suitable for interspecies competition.</English>
-		<French>A stadium complex, with adjustable gravity, temperature, and atmospheric conditions. Suitable for interspecies competition.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_STADIUM_STRATEGY</Tag>
@@ -7864,12 +7817,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_STARPORT</Tag>
 		<English>Interstellar Starport</English>
-		<French>Interstellar Starport</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_STARPORT_PEDIA</Tag>
 		<English>Manufacture and launch interstellar craft.</English>
-		<French>Manufacture and launch interstellar craft.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_STARPORT_STRATEGY</Tag>
@@ -7878,12 +7829,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_TOURIST_AGENCY</Tag>
 		<English>Interstellar Tourist Agency</English>
-		<French>Interstellar Tourist Agency</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_TOURIST_AGENCY_PEDIA</Tag>
 		<English>A tourist agency that facilitates travel all over the galaxy.</English>
-		<French>A tourist agency that facilitates travel all over the galaxy.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_TOURIST_AGENCY_STRATEGY</Tag>
@@ -7892,12 +7841,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERTEMPORAL_CONSTRUCTION_FIRM</Tag>
 		<English>Intertemporal Construction Firm</English>
-		<French>Intertemporal Construction Firm</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERTEMPORAL_CONSTRUCTION_FIRM_PEDIA</Tag>
 		<English>The use of time travel is construction greatly accelerates the process, so to speak.</English>
-		<French>The use of time travel is construction greatly accelerates the process, so to speak.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERTEMPORAL_CONSTRUCTION_FIRM_STRATEGY</Tag>
@@ -7906,12 +7853,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERTEMPORAL_STOCK_MARKET</Tag>
 		<English>Intertemporal Stock Market</English>
-		<French>Intertemporal Stock Market</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERTEMPORAL_STOCK_MARKET_PEDIA</Tag>
 		<English>How does a stock market work in a world in which time travel and faster-than-light travel are possible? I don't know, but these investors have figured it out.</English>
-		<French>How does a stock market work in a world in which time travel and faster-than-light travel are possible? I don't know, but these investors have figured it out.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERTEMPORAL_STOCK_MARKET_STRATEGY</Tag>
@@ -7920,12 +7865,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</Tag>
 		<English>Inertial Confinement Fusion Plant</English>
-		<French>Centrale à Fusion à Confinement inerte</French>
+		<French>Usine de fusion par confinement inertiel</French>
+		<Italian>Impianto di fusione a confinamento inerziale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT_PEDIA</Tag>
 		<English>Inertial confinement fusion (ICF) is a type of fusion energy research that attempts to initiate nuclear fusion reactions by heating and compressing a fuel target, typically in the form of a pellet that most often contains a mixture of deuterium and tritium.</English>
-		<French>Inertial confinement fusion (ICF) is a type of fusion energy research that attempts to initiate nuclear fusion reactions by heating and compressing a fuel target, typically in the form of a pellet that most often contains a mixture of deuterium and tritium.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT_STRATEGY</Tag>
@@ -7934,12 +7879,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTER_ASTEROID_CITY</Tag>
 		<English>Asteroid Cluster City</English>
-		<French>Ville Inter-Astéroïde</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTER_ASTEROID_CITY_PEDIA</Tag>
 		<English>A single city functions with commuting between multiple asteroids.</English>
-		<French>A single city functions with commuting between multiple asteroids.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTER_ASTEROID_CITY_STRATEGY</Tag>
@@ -7948,12 +7891,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INVERSE_CITY</Tag>
 		<English>Inverse City</English>
-		<French>Ville Inversée</French>
+		<French>Ville inverse</French>
+		<Italian>Città inversa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INVERSE_CITY_PEDIA</Tag>
 		<English>This bizarre city is the eerie inverse of the city you knew. Where this is or how you got here, you can't imagine.</English>
-		<French>This bizarre city is the eerie inverse of the city you knew. Where this is or how you got here, you can't imagine.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INVERSE_CITY_STRATEGY</Tag>
@@ -7962,12 +7905,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IO_BASE</Tag>
 		<English>Io Base</English>
-		<French>Io Base</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IO_BASE_PEDIA</Tag>
 		<English>A base on Io. Volcanism presents special challenges for colonization. See http://terraforming.wikia.com/wiki/Io</English>
-		<French>A base on Io. Volcanism presents special challenges for colonization. See http://terraforming.wikia.com/wiki/Io</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IO_BASE_STRATEGY</Tag>
@@ -7976,12 +7917,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IO_GEOTHERMAL</Tag>
 		<English>Io Geothermal Power Plant</English>
-		<French>Usine de Io Geothermal Power</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IO_GEOTHERMAL_PEDIA</Tag>
 		<English>Io's geothermal resources are immense but difficult to harvest.</English>
-		<French>Io's geothermal resources are immense but difficult to harvest.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IO_GEOTHERMAL_STRATEGY</Tag>
@@ -7990,12 +7929,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IQ_TESTING_CENTER</Tag>
 		<English>IQ Testing Center</English>
-		<French>IQ Testing Center</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IQ_TESTING_CENTER_PEDIA</Tag>
 		<English>An intelligence quotient (IQ) is a total score derived from several standardized tests designed to assess human intelligence. The abbreviation 'IQ' was coined by the psychologist William Stern for the German term Intelligenzquotient, his term for a scoring method for intelligence tests at University of Breslau he advocated in a 1912 book. Historically, IQ is a score obtained by dividing a person's mental age score, obtained by administering an intelligence test, by the person's chronological age, both expressed in terms of years and months. The resulting fraction is multiplied by 100 to obtain the IQ score. When current IQ tests were developed, the median raw score of the norming sample is defined as IQ 100 and scores each standard deviation (SD) up or down are defined as 15 IQ points greater or less, although this was not always so historically. By this definition, approximately two-thirds of the population scores are between IQ 85 and IQ 115. About 2.5 percent of the population scores above 130, and 2.5 percent below 70.</English>
-		<French>Un quotient intellectuel (QI) est un score total dérivé de plusieurs tests standardisés conçus pour évaluer l'intelligence humaine. L'abréviation '' IQ '' a été inventée par le psychologue William Stern pour le terme allemand Intelligenzquotient, son terme pour une méthode notation pour les tests d'intelligence à l'Université de Breslau, il a préconisé dans un livre de 1912. Historiquement, le QI est un score obtenu en divisant le score d'âge mental d'une personne, obtenu en administrant un test d'intelligence, par l'âge chronologique de la personne, tous deux exprimés en termes d'années et de mois. La fraction résultante est multipliée par 100 pour obtenir le score de QI. Lorsque les tests de QI actuels ont été développés, le score brut médian de l'échantillon de normalisation est défini comme IQ 100 et les scores de chaque écart-type (ET) vers le haut ou vers le bas sont définis comme supérieurs ou inférieurs à 15 points de QI, bien que cela n'ait pas toujours été le cas dans le passé. Selon cette définition, environ les deux tiers des scores de population se situent entre IQ 85 et IQ 115. Environ 2,5% des scores de population sont supérieurs à 130 et 2,5% inférieurs à 70.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IQ_TESTING_CENTER_STRATEGY</Tag>
@@ -8004,12 +7941,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IRREGULAR_ARCHITECTURE</Tag>
 		<English>Exotic Architecture</English>
-		<French>Exotic Architecture</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IRREGULAR_ARCHITECTURE_PEDIA</Tag>
 		<English>Advanced construction techniques and materials allow buildings to be constructed in almost any shape imaginable.</English>
-		<French>Advanced construction techniques and materials allow buildings to be constructed in almost any shape imaginable.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IRREGULAR_ARCHITECTURE_STRATEGY</Tag>
@@ -8018,12 +7953,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISS_TOURISM</Tag>
 		<English>Space Station Tours</English>
-		<French>Space Station Tours</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISS_TOURISM_PEDIA</Tag>
 		<English>Space tourism is space travel for recreational, leisure or business purposes. A number of startup companies have sprung up in recent years, such as Virgin Galactic and XCOR Aerospace, hoping to create a sub-orbital space tourism industry. Orbital space tourism opportunities have been limited and expensive, with only the Russian Space Agency providing transport to date.</English>
-		<French>Space tourism is space travel for recreational, leisure or business purposes. A number of startup companies have sprung up in recent years, such as Virgin Galactic and XCOR Aerospace, hoping to create a sub-orbital space tourism industry. Orbital space tourism opportunities have been limited and expensive, with only the Russian Space Agency providing transport to date.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISS_TOURISM_STRATEGY</Tag>
@@ -8032,12 +7965,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAMESWEBB_TELESCOPE</Tag>
 		<English>James Webb Space Telescope</English>
-		<French>James Webb Space Telescope</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAMESWEBB_TELESCOPE_PEDIA</Tag>
 		<English>The James Webb Space Telescope (JWST), previously known as Next Generation Space Telescope (NGST), is a space observatory under construction and scheduled to launch in October 2018. The JWST will offer unprecedented resolution and sensitivity from long-wavelength visible to the mid-infrared, and is a successor instrument to the Hubble Space Telescope and the Spitzer Space Telescope. The telescope features a segmented 6.5-meter (21 ft) diameter primary mirror and will be located near the Earth-Sun L2 point. A large sunshield will keep its mirror and four science instruments below 50 K (-220 C; -370 F).[PARAGRAPH:2]JWST's capabilities will enable a broad range of investigations across the fields of astronomy and cosmology. One particular goal involves observing some of the most distant objects in the Universe, beyond the reach of current ground and space based instruments. This includes the very first stars, the epoch of reionization, and the formation of the first galaxies. Another goal is understanding the formation of stars and planets. This will include imaging molecular clouds and star-forming clusters, studying the debris disks around stars, direct imaging of exoplanets, and spectroscopic examination of planetary transits.</English>
-		<French>The James Webb Space Telescope (JWST), previously known as Next Generation Space Telescope (NGST), is a space observatory under construction and scheduled to launch in October 2018. The JWST will offer unprecedented resolution and sensitivity from long-wavelength visible to the mid-infrared, and is a successor instrument to the Hubble Space Telescope and the Spitzer Space Telescope. The telescope features a segmented 6.5-meter (21 ft) diameter primary mirror and will be located near the Earth-Sun L2 point. A large sunshield will keep its mirror and four science instruments below 50 K (-220 C; -370 F).[PARAGRAPH:2]JWST's capabilities will enable a broad range of investigations across the fields of astronomy and cosmology. One particular goal involves observing some of the most distant objects in the Universe, beyond the reach of current ground and space based instruments. This includes the very first stars, the epoch of reionization, and the formation of the first galaxies. Another goal is understanding the formation of stars and planets. This will include imaging molecular clouds and star-forming clusters, studying the debris disks around stars, direct imaging of exoplanets, and spectroscopic examination of planetary transits.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAMESWEBB_TELESCOPE_STRATEGY</Tag>
@@ -8046,12 +7977,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEDDAH_TOWER</Tag>
 		<English>Jeddah Tower</English>
-		<French>Jeddah Tower</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEDDAH_TOWER_PEDIA</Tag>
 		<English>Jeddah Tower or Jiddah Tower, previously known as Kingdom Tower and Mile-High Tower, is a skyscraper under construction in Jeddah, Saudi Arabia, at a preliminary cost of SR4.6 billion (US$1.23 billion). It will be the centrepiece and first phase of a SR75 billion (US$20 billion) proposed development known as Jeddah Economic City that will be located along the Red Sea on the north side of Jeddah. If completed as planned, the Jeddah Tower will reach unprecedented heights, becoming the tallest building in the world, as well as the first structure to reach the one-kilometre-high mark. Jeddah Tower seeks to bring great changes in terms of development and tourism to the city of Jeddah, which is considered the most liberal city in Saudi Arabia.</English>
-		<French>La tour de Jeddah ou tour de Jiddah, anciennement connue sous le nom de Kingdom Tower et Mile-High Tower, est un gratte-ciel en construction à Jeddah, en Arabie Saoudite, au coût préliminaire de 4,6 milliards de SR (1,23 milliard de dollars). Ce sera la pièce maîtresse et la première phase d'un projet de développement de 75 milliards de SR (20 milliards de dollars) connu sous le nom de ville économique de Jeddah, qui sera situé le long de la mer Rouge, au nord de Jeddah. Si elle est achevée comme prévu, la tour de Jeddah atteindra des sommets sans précédent, devenant le plus haut bâtiment du monde, ainsi que la première structure à atteindre la marque d'un kilomètre de haut. La tour de Jeddah cherche à apporter de grands changements en termes de développement et de tourisme à la ville de Jeddah, qui est considérée comme la ville la plus libérale d'Arabie Saoudite.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEDDAH_TOWER_STRATEGY</Tag>
@@ -8072,12 +8001,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT</Tag>
 		<English>Jovian Magnetosphere Power Plant</English>
-		<French>Usine de Jovian Magnetosphere Power</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT_PEDIA</Tag>
 		<English>A megastructure that harvests power from the magnetic field of Jupiter.</English>
-		<French>A megastructure that harvests power from the magnetic field of Jupiter.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT_STRATEGY</Tag>
@@ -8086,12 +8013,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JOVIAN_TROJAN_MINING</Tag>
 		<English>Deep Space Jovian Trojan Mine</English>
-		<French>Jovian Troyen Mine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JOVIAN_TROJAN_MINING_PEDIA</Tag>
 		<English>A mining operation among the Trojan asteroids of Jupiter. Supplies your O'Neill colonies.</English>
-		<French>A mining operation among the Trojan asteroids of Jupiter. Supplies your O'Neill colonies.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JOVIAN_TROJAN_MINING_STRATEGY</Tag>
@@ -8100,12 +8025,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JUPITER_CLOUD_LIFE</Tag>
 		<English>Life - Jovian Clouds</English>
-		<French>Life - Jovian Clouds</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JUPITER_CLOUD_LIFE_PEDIA</Tag>
 		<English>Life has been seeded in Jupiter's clouds.</English>
-		<French>Life has been seeded in Jupiter's clouds.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JUPITER_CLOUD_LIFE_STRATEGY</Tag>
@@ -8114,12 +8037,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JUPITER_CORE</Tag>
 		<English>Jovian Core Probe</English>
-		<French>Jovian Core Probe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JUPITER_CORE_PEDIA</Tag>
 		<English>The latest advances in nanoshielding technology have allowed miniature spacecraft so strong that they can withstand the pressure at the core of Jupiter.</English>
-		<French>The latest advances in nanoshielding technology have allowed miniature spacecraft so strong that they can withstand the pressure at the core of Jupiter.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JUPITER_CORE_STRATEGY</Tag>
@@ -8128,12 +8049,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KBO_OUTPOST</Tag>
 		<English>Kuiper Belt Outpost</English>
-		<French>Kuiper Belt Outpost</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KBO_OUTPOST_PEDIA</Tag>
 		<English>As the inner solar system became more crowded, a small number of colonists established outposts in the frozen wastelands beyond Neptune. Some were rogues, some were entrepreneurs, and some were established by governments for research and to prepare for interstellar missions.</English>
-		<French>As the inner solar system became more crowded, a small number of colonists established outposts in the frozen wastelands beyond Neptune. Some were rogues, some were entrepreneurs, and some were established by governments for research and to prepare for interstellar missions.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KBO_OUTPOST_STRATEGY</Tag>
@@ -8142,17 +8061,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KEPLER</Tag>
 		<English>Kepler Space Telescope</English>
-		<French>Kepler Space Telescope</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KEPLER_186F</Tag>
 		<English>Kepler 186f Colony</English>
-		<French>Colonie de Kepler 186f</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KEPLER_186F_PEDIA</Tag>
 		<English>See http://www.nasa.gov/ames/kepler/kepler-186f-the-first-earth-size-planet-in-the-habitable-zone</English>
-		<French>See http://www.nasa.gov/ames/kepler/kepler-186f-the-first-earth-size-planet-in-the-habitable-zone</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KEPLER_186F_STRATEGY</Tag>
@@ -8161,12 +8077,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KEPLER_22B</Tag>
 		<English>Kepler 22b Colony</English>
-		<French>Colonie de Kepler 22b</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KEPLER_22B_PEDIA</Tag>
 		<English>Kepler-22b (also known by its Kepler Object of Interest designation KOI-087.01) is an extrasolar planet orbiting within the empirical habitable zone of the Sun-like star Kepler-22. It is located about 600 light-years (180 pc) from Earth in the constellation of Cygnus. It was discovered by NASA's Kepler Space Telescope in December 2011 and was the first known transiting planet to orbit within the habitable zone of a Sun-like star.</English>
-		<French>Kepler-22b (also known by its Kepler Object of Interest designation KOI-087.01) is an extrasolar planet orbiting within the empirical habitable zone of the Sun-like star Kepler-22. It is located about 600 light-years (180 pc) from Earth in the constellation of Cygnus. It was discovered by NASA's Kepler Space Telescope in December 2011 and was the first known transiting planet to orbit within the habitable zone of a Sun-like star.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KEPLER_22B_STRATEGY</Tag>
@@ -8175,7 +8089,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KEPLER_PEDIA</Tag>
 		<English>Kepler is a space observatory launched by NASA to discover Earth-like planets orbiting other stars. The spacecraft, named after the Renaissance astronomer Johannes Kepler, was launched on March 7, 2009.[PARAGRAPH:2]Designed to survey a portion of our region of the Milky Way to discover dozens of Earth-size exoplanets in or near the habitable zone and estimate how many of the billions of stars in the Milky Way have such planets, Kepler's sole instrument is a photometer that continually monitors the brightness of over 145,000 main sequence stars in a fixed field of view. This data is transmitted to Earth, then analyzed to detect periodic dimming caused by exoplanets that cross in front of their host star.</English>
-		<French>Kepler is a space observatory launched by NASA to discover Earth-like planets orbiting other stars. The spacecraft, named after the Renaissance astronomer Johannes Kepler, was launched on March 7, 2009.[PARAGRAPH:2]Designed to survey a portion of our region of the Milky Way to discover dozens of Earth-size exoplanets in or near the habitable zone and estimate how many of the billions of stars in the Milky Way have such planets, Kepler's sole instrument is a photometer that continually monitors the brightness of over 145,000 main sequence stars in a fixed field of view. This data is transmitted to Earth, then analyzed to detect periodic dimming caused by exoplanets that cross in front of their host star.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KEPLER_STRATEGY</Tag>
@@ -8184,12 +8097,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KHAZAR_ISLANDS</Tag>
 		<English>Khazar Islands</English>
-		<French>Khazar Islands</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KHAZAR_ISLANDS_PEDIA</Tag>
 		<English>The idea of a city in Neptune's realm inspires impressions of singular creativity. In a city like this, the benefits of civilization ally with nature; the harmonious combination of environmental security, aesthetics and cutting-edge technology make this an ideal place for both family life and successful business.[PARAGRAPH:2]khazarislands.com</English>
-		<French>The idea of a city in Neptune's realm inspires impressions of singular creativity. In a city like this, the benefits of civilization ally with nature; the harmonious combination of environmental security, aesthetics and cutting-edge technology make this an ideal place for both family life and successful business.[PARAGRAPH:2]khazarislands.com</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KHAZAR_ISLANDS_STRATEGY</Tag>
@@ -8198,7 +8109,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KING_ABDULLAH_ECONOMIC_CITY</Tag>
 		<English>King Abdullah Economic City</English>
-		<French>La Cité économique du Roi Abdullah</French>
+		<French>Cité économique du Roi Abdullah</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KING_ABDULLAH_ECONOMIC_CITY_PEDIA</Tag>
@@ -8212,12 +8123,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KLEIN_BOTTLE_UNIVERSE</Tag>
 		<English>Distant Klein Bottle Universe</English>
-		<French>Distant Klein Bottle Universe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KLEIN_BOTTLE_UNIVERSE_PEDIA</Tag>
 		<English>A non-orientable wormhole breaks any global definition of matter and antimatter, making antimatter production easy.</English>
-		<French>A non-orientable wormhole breaks any global definition of matter and anti-matière, making anti-matière production easy.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KLEIN_BOTTLE_UNIVERSE_STRATEGY</Tag>
@@ -8226,7 +8135,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KLIKISS_TORCH</Tag>
 		<English>Intergalactic Klikiss Torch</English>
-		<French>Intergalactic Klikiss Torch</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KLIKISS_TORCH_PEDIA</Tag>
@@ -8239,12 +8147,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_NAVIGATOR</Tag>
 		<English>Knowledge Navigator</English>
-		<French>Navigateur de Connaissance</French>
+		<French>Navigateur de connaissance</French>
+		<Italian>Navigatore di conoscenza</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_NAVIGATOR_PEDIA</Tag>
 		<English>The Knowledge Navigator is a concept described by former Apple Computer CEO John Sculley in his 1987 book, Odyssey. It describes a device that can access a large networked database of hypertext information, and use software agents to assist searching for information.</English>
-		<French>Le Navigateur de Connaissance est un concept décrit par l'ancien PDG d'Apple Computer John Sculley dans son livre de 1987, Odyssey. Il décrit un appareil qui peut accéder à une grande base de données en réseau d'informations hypertextes et utiliser des agents logiciels pour faciliter la recherche d'informations.</French>
+		<French>Le Navigateur de connaissance est un concept décrit par l'ancien PDG d'Apple Computer John Sculley dans son livre de 1987, Odyssey. Il décrit un appareil qui peut accéder à une grande base de données en réseau d'informations hypertexte et utiliser des agents logiciels pour faciliter la recherche d'informations.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KNOWLEDGE_NAVIGATOR_STRATEGY</Tag>
@@ -8253,12 +8162,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOLMOGOROV_COMPRESSION</Tag>
 		<English>Intergalactic Kolmogorov Compression</English>
-		<French>Intergalactic Kolmogorov Compression</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOLMOGOROV_COMPRESSION_PEDIA</Tag>
 		<English>Compress data to near the theoretical limit.</English>
-		<French>Compress data to near the theoretical limit.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOLMOGOROV_COMPRESSION_STRATEGY</Tag>
@@ -8267,12 +8174,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOLMOGOROV_TRANSPORTER</Tag>
 		<English>Intergalactic Kolmogorov Transporter</English>
-		<French>Intergalactic Kolmogorov Transporter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOLMOGOROV_TRANSPORTER_PEDIA</Tag>
 		<English>Transport people or entire societies as information.</English>
-		<French>Transport people or entire societies as information.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOLMOGOROV_TRANSPORTER_STRATEGY</Tag>
@@ -8281,12 +8186,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KUGELBLITZ_POWER_PLANT</Tag>
 		<English>Interstellar Kugelblitz Power Plant</English>
-		<French>Usine Interstellaire de Kugelblitz Power</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KUGELBLITZ_POWER_PLANT_PEDIA</Tag>
 		<English>Harvests energy from the Hawking radiation of a tiny black hole.</English>
-		<French>Harvests energy from the Hawking radiation of a tiny black hole.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KUGELBLITZ_POWER_PLANT_STRATEGY</Tag>
@@ -8295,12 +8198,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KUIPER_BELT_FUSION</Tag>
 		<English>Kuiper Belt Fusion Plant</English>
-		<French>Usine de Kuiper Belt Fusion</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KUIPER_BELT_FUSION_PEDIA</Tag>
 		<English>Deuterium is extracted locally for fusion power.</English>
-		<French>Deuterium is extracted locally for fusion power.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KUIPER_BELT_FUSION_STRATEGY</Tag>
@@ -8309,12 +8210,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KUIPER_BELT_GEOTHERMAL</Tag>
 		<English>Kuiper Belt Geothermal Plant</English>
-		<French>Usine de Kuiper Belt Geothermal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KUIPER_BELT_GEOTHERMAL_PEDIA</Tag>
 		<English>A geothermal power plant on a Kuiper Belt Object</English>
-		<French>A geothermal power plant on a Kuiper Belt Object</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KUIPER_BELT_GEOTHERMAL_STRATEGY</Tag>
@@ -8323,12 +8222,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KUIPER_BELT_INTERSTELLAR_SUPPLY</Tag>
 		<English>Kuiper Belt Interstellar Supply Base</English>
-		<French>Interstellar Supply Base</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KUIPER_BELT_INTERSTELLAR_SUPPLY_PEDIA</Tag>
 		<English>A fuelling and supply stop for interstellar voyages.</English>
-		<French>A fuelling and supply stop for interstellar voyages.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KUIPER_BELT_INTERSTELLAR_SUPPLY_STRATEGY</Tag>
@@ -8337,12 +8234,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KUIPER_BELT_TETHER</Tag>
 		<English>Kuiper Belt Tether</English>
-		<French>Kuiper Belt Tether</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KUIPER_BELT_TETHER_PEDIA</Tag>
 		<English>Two KBOs are connected with a tether for artificial gravity</English>
-		<French>Two KBOs are connected with a tether for artificial gravity</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KUIPER_BELT_TETHER_STRATEGY</Tag>
@@ -8351,12 +8246,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_L5_COLONY</Tag>
 		<English>L5 Colony</English>
-		<French>Colonie de L5</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_L5_COLONY_PEDIA</Tag>
 		<English>The L5 Society was founded in 1975 by Carolyn Meinel and Keith Henson to promote the space colony ideas of Gerard K. O'Neill.[PARAGRAPH:2]The name comes from the L4 and L5 Lagrangian points in the Earth-Moon system proposed as locations for the huge rotating space habitats that O'Neill envisioned. L4 and L5 are points of stable gravitational equilibrium located along the path of the moon's orbit, 60 degrees ahead or behind it.[PARAGRAPH:2]An object placed in orbit around L5 (or L4) will remain there indefinitely without having to expend fuel to keep its position, whereas an object placed at L1, L2 or L3 (all points of unstable equilibrium) may have to expend fuel if it drifts off the point.</English>
-		<French>The L5 Society was founded in 1975 by Carolyn Meinel and Keith Henson to promote the space colony ideas of Gerard K. O'Neill.[PARAGRAPH:2]The name comes from the L4 and L5 Lagrangian points in the Earth-Moon system proposed as locations for the huge rotating space habitats that O'Neill envisioned. L4 and L5 are points of stable gravitational equilibrium located along the path of the moon's orbit, 60 degrees ahead or behind it.[PARAGRAPH:2]An object placed in orbit around L5 (or L4) will remain there indefinitely without having to expend fuel to keep its position, whereas an object placed at L1, L2 or L3 (all points of unstable equilibrium) may have to expend fuel if it drifts off the point.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_L5_COLONY_STRATEGY</Tag>
@@ -8389,12 +8282,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LASER_DRILLING</Tag>
 		<English>Laser Drilling</English>
-		<French>Laser Drilling</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LASER_DRILLING_PEDIA</Tag>
 		<English>The use of high-powered lasers to break through rocks. Particularly useful for oil, gas, and geothermal drilling.[PARAGRAPH:2]http://spie.org/newsroom/technical-articles/5288-high-power-fiber-lasers-for-geothermal-oil-and-gas-industries</English>
-		<French>The use of high-powered lasers to break through rocks. Particularly useful for oil, gas, and geothermal drilling.[PARAGRAPH:2]http://spie.org/newsroom/technical-articles/5288-high-power-fiber-lasers-for-geothermal-oil-and-gas-industries</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LASER_DRILLING_STRATEGY</Tag>
@@ -8403,12 +8294,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LASER_HIGHWAY_RELAY</Tag>
 		<English>Transtellar Laser Highway Relay</English>
-		<French>Transtellar Laser Highway Relay</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LASER_HIGHWAY_RELAY_PEDIA</Tag>
 		<English>This is a node in an interstellar laser highway. The highway is composed of relay stations, separated several thousand astronomical units from each other, that send lasers to accelerate solar sail ships, greatly facilitating interstellar travel.</English>
-		<French>This is a node in an interstellar laser highway. The highway is composed of relay stations, separated several thousand astronomical units from each other, that send lasers to accelerate solar sail ships, greatly facilitating interstellar travel.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LASER_HIGHWAY_RELAY_STRATEGY</Tag>
@@ -8615,7 +8504,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ALGAE_LAB</Tag>
 		<English>Lunar Algae Lab</English>
-		<French>Algues Lab Lunaire</French>
+		<French>Laboratoire d'algues lunaires</French>
+		<Italian>Laboratorio di alghe lunari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ALGAE_LAB_PEDIA</Tag>
@@ -8628,7 +8518,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ALUMINIUM_EXTRACTION_FACILITY</Tag>
 		<English>Lunar Aluminium Processing Facility</English>
-		<French>Aluminium Processing Facility Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ALUMINIUM_EXTRACTION_FACILITY_PEDIA</Tag>
@@ -8641,12 +8530,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ARCOLOGY</Tag>
 		<English>Lunar Arcology</English>
-		<French>Arcologie Lunaire</French>
+		<French>Arcologie lunaire</French>
+		<Italian>Arcologia lunare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ARCOLOGY_PEDIA</Tag>
-		<English>An arcology on the moon</English>
-		<French>An arcology on the moon</French>
+		<English>An arcology on the Moon.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ARCOLOGY_STRATEGY</Tag>
@@ -8655,7 +8544,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ASSEMBLY_PLANT</Tag>
 		<English>Lunar Assembly Plant</English>
-		<French>Usine Lunaire d'assemblage</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ASSEMBLY_PLANT_PEDIA</Tag>
@@ -8668,7 +8556,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_BASE</Tag>
 		<English>Lunar Base</English>
-		<French>Base Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_BASE_PEDIA</Tag>
@@ -8681,7 +8568,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_BIOMASS_POWERPLANT</Tag>
 		<English>Lunar Biomass Powerplant</English>
-		<French>Centrale électrique Lunaire à Biomasse</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_BIOMASS_POWERPLANT_PEDIA</Tag>
@@ -8694,7 +8580,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_BUG_FARM</Tag>
 		<English>Lunar Bug Farm</English>
-		<French>Ferme à insectes Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_BUG_FARM_PEDIA</Tag>
@@ -8707,12 +8592,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_CENTRIFUGAL_HABITAT</Tag>
 		<English>Lunar Centrifugal Habitat</English>
-		<French>Centrifugal Habitat Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_CENTRIFUGAL_HABITAT_PEDIA</Tag>
 		<English>This rotating habitat adds artificial centrifugal gravity to the moon's natural gravity to create an environment that feels closer to natural gravity.</English>
-		<French>This rotating habitat adds artificial centrifugal gravity to the moon's natural gravity to create an environment that feels closer to natural gravity.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_CENTRIFUGAL_HABITAT_STRATEGY</Tag>
@@ -8721,7 +8604,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_CHEMICAL_STORAGE</Tag>
 		<English>Lunar Chemical Storage</English>
-		<French>Chemical Storage Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_CHEMICAL_STORAGE_PEDIA</Tag>
@@ -8734,12 +8616,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_COMETARY_BOMBARDMENT</Tag>
 		<English>Lunar Cometary Bombardment</English>
-		<French>Cometary Bombardment Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_COMETARY_BOMBARDMENT_PEDIA</Tag>
 		<English>See http://www.slate.com/articles/technology/future_tense/2014/07/terraforming_the_moon_it_would_be_a_lot_like_florida.html</English>
-		<French>See http://www.slate.com/articles/technology/future_tense/2014/07/terraforming_the_moon_it_would_be_a_lot_like_florida.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_COMETARY_BOMBARDMENT_STRATEGY</Tag>
@@ -8748,7 +8628,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_CONCRETE_MILL</Tag>
 		<English>Lunar Concrete Mill</English>
-		<French>Concrete Mill Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_CONCRETE_MILL_PEDIA</Tag>
@@ -8761,12 +8640,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_DEFENSES</Tag>
 		<English>Lunar Death Ray</English>
-		<French>Death Ray Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_DEFENSES_PEDIA</Tag>
 		<English>Costs one hundred billion dollars.</English>
-		<French>Costs one hundred billion dollars.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_DEFENSES_STRATEGY</Tag>
@@ -8775,7 +8652,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_DROID_FACTORY</Tag>
 		<English>Lunar Droid Factory</English>
-		<French>Usine Lunaire de Droïdes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_DROID_FACTORY_PEDIA</Tag>
@@ -8788,7 +8664,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_FERTILIZER_STORAGE</Tag>
 		<English>Lunar Fertilizer Storage</English>
-		<French>Entrepot Lunaire de fertilisants</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_FERTILIZER_STORAGE_PEDIA</Tag>
@@ -8801,7 +8676,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_FISH_FARM</Tag>
 		<English>Lunar Fish Farm</English>
-		<French>Ferme à poissons Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_FISH_FARM_PEDIA</Tag>
@@ -8814,7 +8688,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_GLASS_FACTORY</Tag>
 		<English>Lunar Glass Factory</English>
-		<French>Usine Lunaire de Verre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_GLASS_FACTORY_PEDIA</Tag>
@@ -8827,7 +8700,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_GREENHOUSE_COMPLEX</Tag>
 		<English>Lunar Greenhouse Complex</English>
-		<French>Greenhouse Complex Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_GREENHOUSE_COMPLEX_PEDIA</Tag>
@@ -8840,7 +8712,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_HE3_EXTRACTION_FACILITY</Tag>
 		<English>Lunar He3 Extraction Facility</English>
-		<French>He3 Extraction Facility Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_HE3_EXTRACTION_FACILITY_PEDIA</Tag>
@@ -8853,7 +8724,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_HOTEL</Tag>
 		<English>Lunar Hotel</English>
-		<French>Hotel Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_HOTEL_PEDIA</Tag>
@@ -8866,7 +8736,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_HYDROPONICS_FARM</Tag>
 		<English>Lunar Hydroponics Farm</English>
-		<French>Hydroponics Farm Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_HYDROPONICS_FARM_PEDIA</Tag>
@@ -8879,7 +8748,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_IRON_EXTRACTION_FACILITY</Tag>
 		<English>Lunar Iron Processing Facility</English>
-		<French>Iron Processing Facility Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_IRON_EXTRACTION_FACILITY_PEDIA</Tag>
@@ -8892,7 +8760,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_KREEP_MINE</Tag>
 		<English>Lunar KREEP Mine</English>
-		<French>KREEP Mine Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_KREEP_MINE_PEDIA</Tag>
@@ -8905,7 +8772,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_LAUNCH_SITE</Tag>
 		<English>Lunar Launch Site</English>
-		<French>Launch Site Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_LAUNCH_SITE_PEDIA</Tag>
@@ -8918,7 +8784,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_MAGNESIUM_EXTRACTION_FACILITY</Tag>
 		<English>Lunar Magnesium Extraction Facility</English>
-		<French>Magnesium Extraction Facility Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_MAGNESIUM_EXTRACTION_FACILITY_PEDIA</Tag>
@@ -8931,7 +8796,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_MANGANESE_EXTRACTION_FACILITY</Tag>
 		<English>Lunar Manganese Extraction Facility</English>
-		<French>Manganèse Extraction Facility Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_MANGANESE_EXTRACTION_FACILITY_PEDIA</Tag>
@@ -8944,7 +8808,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_MANUFACTURING_PLANT</Tag>
 		<English>Lunar Manufacturing Plant</English>
-		<French>Usine Lunaire de production de biens</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_MANUFACTURING_PLANT_PEDIA</Tag>
@@ -8957,7 +8820,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_OBSERVATORY</Tag>
 		<English>Lunar Observatory</English>
-		<French>Observatoire Lunaire</French>
+		<French>Observatoire lunaire</French>
+		<Italian>Osservatorio lunare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_OBSERVATORY_PEDIA</Tag>
@@ -8970,7 +8834,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ORGANIC_MATERIAL_STORAGE</Tag>
 		<English>Lunar Organic Material Storage</English>
-		<French>Entrepot de matières organiques Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ORGANIC_MATERIAL_STORAGE_PEDIA</Tag>
@@ -8983,7 +8846,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ORGANIC_POLYMERE_FACTORY</Tag>
 		<English>Lunar Organic Polymere Factory</English>
-		<French>Usine Lunaire de Polymères Organiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ORGANIC_POLYMERE_FACTORY_PEDIA</Tag>
@@ -8996,12 +8858,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_OUTPOST</Tag>
 		<English>Lunar Outpost</English>
-		<French>Outpost Lunaire</French>
+		<French>Avant-poste lunaire</French>
+		<Italian>Avamposto lunare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_OUTPOST_PEDIA</Tag>
 		<English>A lunar outpost was an element of the George W. Bush era Vision for Space Exploration, which has been replaced with President Barack Obama's space policy. The outpost would have been an inhabited facility on the surface of the Moon. At the time it was proposed, NASA was to construct the outpost over the five years between 2019 and 2024. The United States Congress directed that the U.S. portion, 'shall be designated the Neil A. Armstrong Lunar Outpost'.[PARAGRAPH:2]On December 4, 2006, NASA announced the conclusion of its Global Exploration Strategy and Lunar Architecture Study. The Lunar Architecture Study's purpose was to 'define a series of lunar missions constituting NASA's Lunar campaign to fulfill the Lunar Exploration elements' of the Vision for Space Exploration. What resulted was a basic plan for a lunar outpost near one of the poles of the Moon, which would permanently house astronauts in six-month shifts. These studies were made before the discovery of water ice (5.6 +- 2.9% by mass) in a polar crater, which may substantially affect plans.</English>
-		<French>A lunar outpost was an element of the George W. Bush era Vision for Space Exploration, which has been replaced with President Barack Obama's space policy. The outpost would have been an inhabited facility on the surface of the Moon. At the time it was proposed, NASA was to construct the outpost over the five years between 2019 and 2024. The United States Congress directed that the U.S. portion, 'shall be designated the Neil A. Armstrong Lunaire Outpost'.[PARAGRAPH:2]On December 4, 2006, NASA announced the conclusion of its Global Exploration Strategy and Lunaire Architecture Study. The Lunaire Architecture Study's purpose was to 'define a series of lunar missions constituting NASA's Lunaire campaign to fulfill the Lunaire Exploration elements' of the Vision for Space Exploration. What resulted was a basic plan for a lunar outpost near one of the poles of the Moon, which would permanently house astronauts in six-month shifts. These studies were made before the discovery of water ice (5.6 +- 2.9% by mass) in a polar crater, which may substantially affect plans.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_OUTPOST_STRATEGY</Tag>
@@ -9010,7 +8872,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_PARCOLOGY</Tag>
 		<English>Lunar Parcology</English>
-		<French>Parcology Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_PARCOLOGY_PEDIA</Tag>
@@ -9023,7 +8884,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_RESEARCH_BASE</Tag>
 		<English>Lunar Research Base</English>
-		<French>Research Base Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_RESEARCH_BASE_PEDIA</Tag>
@@ -9036,7 +8896,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ROCKET_FUEL_REFIENERY</Tag>
 		<English>Lunar Rocket Fuel Refinery</English>
-		<French>Raffinerie Lunaire de carburant pour fusée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ROCKET_FUEL_REFIENERY_PEDIA</Tag>
@@ -9049,7 +8908,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ROCK_QUARRY</Tag>
 		<English>Lunar Rock Quarry</English>
-		<French>Rock Quarry Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ROCK_QUARRY_PEDIA</Tag>
@@ -9062,12 +8920,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SEA</Tag>
 		<English>Lunar Sea</English>
-		<French>Sea Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SEA_PEDIA</Tag>
 		<English>See http://www.slate.com/articles/technology/future_tense/2014/07/terraforming_the_moon_it_would_be_a_lot_like_florida.html</English>
-		<French>See http://www.slate.com/articles/technology/future_tense/2014/07/terraforming_the_moon_it_would_be_a_lot_like_florida.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SEA_STRATEGY</Tag>
@@ -9076,7 +8932,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SHIPYARD</Tag>
 		<English>Lunar Shipyard</English>
-		<French>Shipyard Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SHIPYARD_PEDIA</Tag>
@@ -9089,7 +8944,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SILICON_EXTRACTION_FACILITY</Tag>
 		<English>Lunar Silicon Processing Facility</English>
-		<French>Silicon Processing Facility Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SILICON_EXTRACTION_FACILITY_PEDIA</Tag>
@@ -9102,12 +8956,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SOIL_GENERATOR</Tag>
 		<English>Lunar Soil Generator</English>
-		<French>Soil Generator Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SOIL_GENERATOR_PEDIA</Tag>
 		<English>See http://www.slate.com/articles/technology/future_tense/2014/07/terraforming_the_moon_it_would_be_a_lot_like_florida.html</English>
-		<French>See http://www.slate.com/articles/technology/future_tense/2014/07/terraforming_the_moon_it_would_be_a_lot_like_florida.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SOIL_GENERATOR_STRATEGY</Tag>
@@ -9116,7 +8968,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SOLAR_ARRAY</Tag>
 		<English>Lunar Solar Array</English>
-		<French>Panneaux Solaires Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SOLAR_ARRAY_PEDIA</Tag>
@@ -9129,7 +8980,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SOLAR_PANELS</Tag>
 		<English>Lunar Solar Panels</English>
-		<French>Panneaux solaires Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SOLAR_PANELS_PEDIA</Tag>
@@ -9142,7 +8992,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SPACE_PORT</Tag>
 		<English>Lunar Space Port</English>
-		<French>Space Port Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SPACE_PORT_PEDIA</Tag>
@@ -9155,7 +9004,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_TITANIUM_EXTRACTION_FACILITY</Tag>
 		<English>Lunar Titanium Processing Facility</English>
-		<French>Titanium Processing Facility Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_TITANIUM_EXTRACTION_FACILITY_PEDIA</Tag>
@@ -9168,7 +9016,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</Tag>
 		<English>Lunar Water Extraction Facility</English>
-		<French>Water Extraction Facility Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_WATER_EXTRACTION_FACILITY_PEDIA</Tag>
@@ -9181,12 +9028,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_XPRIZE</Tag>
 		<English>Lunar XPRIZE</English>
-		<French>XPRIZE Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_XPRIZE_PEDIA</Tag>
 		<English>The Google Lunar XPRIZE (GLXP), sometimes referred to as Moon 2.0, is an inducement prize space competition organized by XPRIZE, and sponsored by Google. The challenge calls for privately funded spaceflight teams to be the first to land a privately funded robotic spacecraft on the Moon, travel 500 meters, and transmit back high-definition video and images.</English>
-		<French>The Google Lunaire XPRIZE (GLXP), sometimes referred to as Moon 2.0, is an inducement prize space competition organized by XPRIZE, and sponsored by Google. The challenge calls for privately funded spaceflight teams to be the first to land a privately funded robotic spacecraft on the Moon, travel 500 meters, and transmit back high-definition video and images.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_XPRIZE_STRATEGY</Tag>
@@ -9195,17 +9040,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNA_RING</Tag>
 		<English>Luna Ring</English>
-		<French>Luna Ring</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNA_RING_EFFECT</Tag>
 		<English>Effect - Luna Ring</English>
-		<French>Effet - Luna Ring</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNA_RING_EFFECT_PEDIA</Tag>
 		<English>See http://www.shimz.co.jp/english/theme/dream/lunaring.html</English>
-		<French>See http://www.shimz.co.jp/english/theme/dream/lunaring.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNA_RING_EFFECT_STRATEGY</Tag>
@@ -9214,7 +9056,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNA_RING_PEDIA</Tag>
 		<English>See http://www.shimz.co.jp/english/theme/dream/lunaring.html</English>
-		<French>See http://www.shimz.co.jp/english/theme/dream/lunaring.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNA_RING_STRATEGY</Tag>
@@ -9223,12 +9064,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MACHINE_RULE</Tag>
 		<English>Interstellar Government - Machine Rule</English>
-		<French>Interstellar Government - Machine Rule</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MACHINE_RULE_PEDIA</Tag>
 		<English>Robotocratic government for the interstellar colony</English>
-		<French>Robotocratic government for the interstellar colony</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MACHINE_RULE_STRATEGY</Tag>
@@ -9237,12 +9076,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAFFEI_GROUP</Tag>
 		<English>Maffei Group Colony</English>
-		<French>Colonie de Maffei Group</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAFFEI_GROUP_PEDIA</Tag>
 		<English>The IC 342/Maffei Group (also known as the IC 342 Group or the Maffei 1 Group) is the nearest group of galaxies to the Local Group. The group can be described as a binary group; the member galaxies are mostly concentrated around either IC 342 or Maffei 1, both of which are the brightest galaxies within the group. The group is one of many located within the Virgo Supercluster (i.e. the Local Supercluster).</English>
-		<French>The IC 342/Maffei Group (also known as the IC 342 Group or the Maffei 1 Group) is the nearest group of galaxies to the Local Group. The group can be described as a binary group; the member galaxies are mostly concentrated around either IC 342 or Maffei 1, both of which are the brightest galaxies within the group. The group is one of many located within the Virgo Supercluster (i.e. the Local Supercluster).</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAFFEI_GROUP_STRATEGY</Tag>
@@ -9251,12 +9088,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGIC_WORLD</Tag>
 		<English>Distant Dream World</English>
-		<French>Distant Dream World</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGIC_WORLD_PEDIA</Tag>
 		<English>A Magical Land or Another Dimension comprising the collective dreams of humanity. Can be a collective dream, or the dream of a specific person. Generally surreal, nonsensical, and psychologically symbolic. Alternatively, just adorable randomness. Usually divided into two halves or factions-nightmares and good dreams.[PARAGRAPH:2]http://tvtropes.org/pmwiki/pmwiki.php/Main/DreamLand</English>
-		<French>A Magical Land or Another Dimension comprising the collective dreams of humanity. Can be a collective dream, or the dream of a specific person. Generally surreal, nonsensical, and psychologically symbolic. Alternatively, just adorable randomness. Usually divided into two halves or factions-nightmares and good dreams.[PARAGRAPH:2]http://tvtropes.org/pmwiki/pmwiki.php/Main/DreamLand</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGIC_WORLD_STRATEGY</Tag>
@@ -9265,12 +9100,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGITEK_ARENA</Tag>
 		<English>Magitek Combat Arena</English>
-		<French>Magitek Combat Arena</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGITEK_ARENA_PEDIA</Tag>
 		<English>Manipulation of matter at the quantum level gives rise to phenomena that appear as magic. Magitek armor links this technology to the human brain.</English>
-		<French>Manipulation of matter at the quantum level gives rise to phenomena that appear as magic. Magitek armor links this technology to the human brain.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGITEK_ARENA_STRATEGY</Tag>
@@ -9279,12 +9112,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGLEV_ELEVATORS</Tag>
 		<English>Maglev Elevators</English>
-		<French>Maglev Elevators</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGLEV_ELEVATORS_PEDIA</Tag>
 		<English>Your urban core is connected through a series of elevated multidirectional elevators, seamlessly integration intra- and inter-building transportation. This greatly increases efficiency, increases the density of urban living, and takes your cities a step closer to true arcology.[PARAGRAPH:2]https://www.thyssenkrupp.com/en/mediaplayer/MULTI-%E2%80%93-the-world%E2%80%99s-first-rope-free-elevator-system-271.html</English>
-		<French>Your urban core is connected through a series of elevated multidirectional elevators, seamlessly integration intra- and inter-building transportation. This greatly increases efficiency, increases the density of urban living, and takes your cities a step closer to true arcology.[PARAGRAPH:2]https://www.thyssenkrupp.com/en/mediaplayer/MULTI-%E2%80%93-the-world%E2%80%99s-first-rope-free-elevator-system-271.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGLEV_ELEVATORS_STRATEGY</Tag>
@@ -9293,12 +9124,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGLEV_LAUNCH</Tag>
 		<English>Maglev Launcher</English>
-		<French>Maglev Launcher</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGLEV_LAUNCH_PEDIA</Tag>
 		<English>In the first century of human space flight, high launch costs were an insurmountable barrier to full-fledged commercialization and industrialization of space. The advent of reusable rockets in the 2010s helped but were insufficient. Only when governments and private companies applied advanced civil engineering knowledge and abundant power sources to building large maglev launch structures were costs affordable for the general public.</English>
-		<French>In the first century of human space flight, high launch costs were an insurmountable barrier to full-fledged commercialization and industrialization of space. The advent of reusable rockets in the 2010s helped but were insufficient. Only when governments and private companies applied advanced civil engineering knowledge and abundant power sources to building large maglev launch structures were costs affordable for the general public.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGLEV_LAUNCH_STRATEGY</Tag>
@@ -9308,6 +9137,7 @@
 		<Tag>TXT_KEY_BUILDING_MAIL_ORDER_CATALOGUE</Tag>
 		<English>Mail Order Catalogue</English>
 		<French>Catalogue de vente par correspondance</French>
+		<Italian>Catalogo per corrispondenza</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAIL_ORDER_CATALOGUE_PEDIA</Tag>
@@ -9321,12 +9151,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAKEMAKE_COLONY</Tag>
 		<English>Makemake Colony</English>
-		<French>Colonie de Makemake</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAKEMAKE_COLONY_PEDIA</Tag>
 		<English>Makemake (minor-planet designation 136472 Makemake) is a dwarf planet and perhaps the largest Kuiper belt object (KBO) in the classical population, with a diameter approximately two thirds that of Pluto. Makemake has one known satellite, S/2015 (136472) 1. Makemake's extremely low average temperature, about 30 K (-243.2 C), means its surface is covered with methane, ethane, and possibly nitrogen ices.</English>
-		<French>Makemake (minor-planet designation 136472 Makemake) is a dwarf planet and perhaps the largest Kuiper belt object (KBO) in the classical population, with a diameter approximately two thirds that of Pluto. Makemake has one known satellite, S/2015 (136472) 1. Makemake's extremely low average temperature, about 30 K (-243.2 C), means its surface is covered with methane, ethane, and possibly nitrogen ices.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAKEMAKE_COLONY_STRATEGY</Tag>
@@ -9335,12 +9163,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAKERSPACE</Tag>
 		<English>Makerspace</English>
-		<French>Espace de Fabrication</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAKERSPACE_PEDIA</Tag>
 		<English>The maker culture is a contemporary culture or subculture representing a technology-based extension of DIY culture that intersects with hacker culture (which is less concerned with physical objects as it focuses on software) and revels in the creation of new devices as well as tinkering with existing ones. The maker culture in general supports open-source hardware. Typical interests enjoyed by the maker culture include engineering-oriented pursuits such as electronics, robotics, 3-D printing, and the use of Computer Numeric Control tools, as well as more traditional activities such as metalworking, woodworking, and, mainly, its predecessor, the traditional arts and crafts. The subculture stresses a cut-and-paste approach to standardized hobbyist technologies, and encourages cookbook re-use of designs published on websites and maker-oriented publications. There is a strong focus on using and learning practical skills and applying them to reference designs.</English>
-		<French>La culture du créateur est une culture ou une sous-culture contemporaine représentant une extension technologique de la culture du bricolage qui recoupe la culture des pirates (qui se préoccupe moins des objets physiques car elle se concentre sur les logiciels) et se délecte de la création de nouveaux appareils ainsi que du bricolage existantes. La culture du créateur en général prend en charge le matériel open source. Les intérêts typiques de la culture des fabricants incluent les activités d'ingénierie telles que l'électronique, la robotique, l'impression 3D et l'utilisation d'outils de contrôle numérique par ordinateur, ainsi que des activités plus traditionnelles telles que le travail des métaux, le travail du bois et, principalement, son prédécesseur. , les arts et métiers traditionnels. La sous-culture met l'accent sur une approche par copier-coller des technologies standardisées pour les amateurs et encourage la réutilisation des livres de cuisine des conceptions publiées sur des sites Web et des publications destinées aux fabricants. Il y a un fort accent sur l'utilisation et l'apprentissage des compétences pratiques et leur application aux modèles de référence.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAKERSPACE_STRATEGY</Tag>
@@ -9349,12 +9175,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANTLE_VACTRAIN_NETWORK</Tag>
 		<English>Gravity Train Network</English>
-		<French>Gravity Train Network</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANTLE_VACTRAIN_NETWORK_PEDIA</Tag>
 		<English>A gravity train is a theoretical means of transportation intended to go between two points on the surface of a sphere, following a straight tunnel that goes directly from one point to the other through the interior of the sphere.</English>
-		<French>A gravity train is a theoretical means of transportation intended to go between two points on the surface of a sphere, following a straight tunnel that goes directly from one point to the other through the interior of the sphere.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANTLE_VACTRAIN_NETWORK_STRATEGY</Tag>
@@ -9363,12 +9187,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANUFACTURING_DISTRICT</Tag>
 		<English>Manufacturing District</English>
-		<French>Quartier de fabrication de marchandises</French>
+		<French>District de fabrication</French>
+		<Italian>Distretto produttivo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANUFACTURING_DISTRICT_PEDIA</Tag>
 		<English>This massive manufacturing complex is decked out with 3D printers, CNC machines, and other high-tech gadgetry. It can produce all sorts of goods.</English>
-		<French>Ce complexe de fabrication massif est orné d'imprimantes 3D, de machines CNC et d'autres gadgets de haute technologie. Il peut produire toutes sortes de marchandises.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANUFACTURING_DISTRICT_STRATEGY</Tag>
@@ -9377,12 +9201,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARINER_PROGRAM</Tag>
 		<English>Mariner Program</English>
-		<French>Mariner Program</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARINER_PROGRAM_PEDIA</Tag>
 		<English>The Mariner program was a program conducted by the American space agency NASA in conjunction with Jet Propulsion Laboratory (JPL) that launched a series of robotic interplanetary probes designed to investigate Mars, Venus and Mercury from 1962 to 1973. The program included a number of firsts, including the first planetary flyby, the first pictures from another planet, the first planetary orbiter, and the first gravity assist maneuver.[PARAGRAPH:2]Of the ten vehicles in the Mariner series, seven were successful. The planned Mariner Jupiter-Saturn vehicles evolved into Voyager 1 and Voyager 2 of the Voyager program, while the Viking 1 and Viking 2 Mars orbiters were enlarged versions of the Mariner 9 spacecraft. Other Mariner-based spacecraft, launched since Voyager, included the Magellan probe to Venus, and the Galileo probe to Jupiter. A second-generation Mariner spacecraft, called the Mariner Mark II series, eventually evolved into the Cassini-Huygens probe, now in orbit around Saturn.[PARAGRAPH:2]The total cost of the Mariner program was approximately $554 million.</English>
-		<French>The Mariner program was a program conducted by the American space agency NASA in conjunction with Jet Propulsion Laboratory (JPL) that launched a series of robotic interplanetary probes designed to investigate Mars, Venus and Mercury from 1962 to 1973. The program included a number of firsts, including the first planetary flyby, the first pictures from another planet, the first planetary orbiter, and the first gravity assist maneuver.[PARAGRAPH:2]Of the ten vehicles in the Mariner series, seven were successful. The planned Mariner Jupiter-Saturn vehicles evolved into Voyager 1 and Voyager 2 of the Voyager program, while the Viking 1 and Viking 2 Mars orbiters were enlarged versions of the Mariner 9 spacecraft. Other Mariner-based spacecraft, launched since Voyager, included the Magellan probe to Venus, and the Galileo probe to Jupiter. A second-generation Mariner spacecraft, called the Mariner Mark II series, eventually evolved into the Cassini-Huygens probe, now in orbit around Saturn.[PARAGRAPH:2]The total cost of the Mariner program was approximately $554 million.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARINER_PROGRAM_STRATEGY</Tag>
@@ -9391,12 +9213,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_ARCOLOGY</Tag>
 		<English>Martian Arcology</English>
-		<French>Arcologie Martienne</French>
+		<French>Arcologie martienne</French>
+		<Italian>Arcologia marziana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_ARCOLOGY_PEDIA</Tag>
 		<English>Although the first arcologies were built on Earth, Mars was the next natural building site. The low gravity and thin atmosphere allow for monumental architecture that Earthlings cannot even dream of.</English>
-		<French>Although the first arcologies were built on Earth, Mars was the next natural building site. The low gravity and thin atmosphere allow for monumental architecture that Earthlings cannot even dream of.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_ARCOLOGY_STRATEGY</Tag>
@@ -9405,12 +9227,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_BIOFACTORY</Tag>
 		<English>Martian Biofactory</English>
-		<French>Martian Biofactory</French>
+		<French>Bio-usine martienne</French>
+		<Italian>Biofabbrica marziana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_BIOFACTORY_PEDIA</Tag>
-		<English>Using Prototyped Pathogens, your Martian colonists can now develop a thriving biotech industry, producing medicine and better food. With life still a struggle, and emerging plans to terraform the planet, the Martians have given up all pretense of avoiding biological contamination. This decision remains controverial.</English>
-		<French>Using Prototyped Pathogens, your Martian colonists can now develop a thriving biotech industry, producing medicine and better food. With life still a struggle, and emerging plans to terraform the planet, the Martians have given up all pretense of avoiding biological contamination. This decision remains controverial.</French>
+		<English>Using Prototyped Pathogens, your Martian colonists can now develop a thriving biotech industry, producing medicine and better food. With life still a struggle, and emerging plans to terraform the planet, the Martians have given up all pretense of avoiding biological contamination. This decision remains controversial.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_BIOFACTORY_STRATEGY</Tag>
@@ -9419,12 +9241,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_CITY</Tag>
 		<English>Martian City</English>
-		<French>Ville Martienne</French>
+		<French>Ville martienne</French>
+		<Italian>Città marziana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_CITY_PEDIA</Tag>
 		<English>After decades of subsistence living in Martian caves and crude 3D printed dugouts, your colony is finally building something that resembles a city. Now there is entertainment, adequate health care, and water that doesn't taste foul. But the more the city looks like Earth, the more you wish that is where you were.</English>
-		<French>After decades of subsistence living in Martian caves and crude 3D printed dugouts, your colony is finally building something that resembles a city. Now there is entertainment, adequate health care, and water that doesn't taste foul. But the more the city looks like Earth, the more you wish that is where you were.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_CITY_STRATEGY</Tag>
@@ -9433,12 +9255,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_COLONY</Tag>
 		<English>Martian Colony</English>
-		<French>Colonie Martienne</French>
+		<French>Colonie martienne</French>
+		<Italian>Colonia marziana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_COLONY_PEDIA</Tag>
 		<English>This is your basic Mars colony. It is equipped with the bare essentials: a hydroponic growing kit, a 3D printer, some medical supplies, and a (Martian) year's supply of Tang. The road to Mars was long, strewn with half-starts by governments and private ventures, and a few tragic losses. When the first humans finally arrived, the cheering quickly gave way to the sobering reality of the struggles to survive away from the resources and familiar environment of Earth. The first colonists suffered terrible health problems from low gravity, dust, radiation, and psychological torment. Their initial efforts, exploration and gathering of scientific data, hardly justified the terrible costs. In retrospect, it is amazing that humans pressed on and eventually built thriving cities on Mars and beyond.</English>
-		<French>This is your basic Mars colony. It is equipped with the bare essentials: a hydroponic growing kit, a 3D printer, some medical supplies, and a (Martian) year's supply of Tang. The road to Mars was long, strewn with half-starts by governments and private ventures, and a few tragic losses. When the first humans finally arrived, the cheering quickly gave way to the sobering reality of the struggles to survive away from the resources and familiar environment of Earth. The first colonists suffered terrible health problems from low gravity, dust, radiation, and psychological torment. Their initial efforts, exploration and gathering of scientific data, hardly justified the terrible costs. In retrospect, it is amazing that humans pressed on and eventually built thriving cities on Mars and beyond.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_COLONY_STRATEGY</Tag>
@@ -9447,12 +9269,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_CYCLER</Tag>
 		<English>Mars Cycler</English>
-		<French>Mars Cycler</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_CYCLER_EFFECT</Tag>
 		<English>Effect - Mars Cycler</English>
-		<French>Effet - Mars Cycler</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_CYCLER_EFFECT_PEDIA</Tag>
@@ -9473,7 +9293,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_ECO</Tag>
 		<English>Martian Ecosystem</English>
-		<French>Martian Ecosystem</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_ECO_PEDIA</Tag>
@@ -9486,7 +9305,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_FACTORY</Tag>
 		<English>Martian Factory</English>
-		<French>Usine de Martienne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_FACTORY_PEDIA</Tag>
@@ -9716,7 +9534,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_AREOTHERMAL</Tag>
 		<English>Martian Geothermal Plant</English>
-		<French>Centrale Géothermique Martienne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_AREOTHERMAL_PEDIA</Tag>
@@ -9729,7 +9546,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ASTEROID_MINE</Tag>
 		<English>Martian Asteroid Mine</English>
-		<French>Mine d'Astéroïde martien</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ASTEROID_MINE_PEDIA</Tag>
@@ -9778,7 +9594,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_CLAYTRONIC_CITY</Tag>
 		<English>Martian Claytronic City</English>
-		<French>Ville Martienne Claytronique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_CLAYTRONIC_CITY_PEDIA</Tag>
@@ -9815,7 +9630,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_CYBERNETIC_CHLOROPLAST_IMPORTER</Tag>
 		<English>Martian Cybernetic Chloroplast Importer</English>
-		<French>Importateur de Martian Cybernetic Chloroplast</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_CYBERNETIC_CHLOROPLAST_IMPORTER_PEDIA</Tag>
@@ -9828,7 +9642,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_DEFENSE</Tag>
 		<English>Martian Death Ray</English>
-		<French>Rayon de la mort martienne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_DEFENSE_PEDIA</Tag>
@@ -9841,7 +9654,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_EXPORTER</Tag>
 		<English>Martian Deuterium Exporter</English>
-		<French>Exportateur de Martian Deuterium</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_EXPORTER_PEDIA</Tag>
@@ -9854,7 +9666,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_MINE</Tag>
 		<English>Martian Deuterium Mine</English>
-		<French>Mine martienne de deutérium</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_DEUTERIUM_MINE_PEDIA</Tag>
@@ -9870,8 +9681,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_DNT_IMPORTER_PEDIA</Tag>
-		<English>Import a resource</English>
-		<French>Import a resource</French>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_DNT_IMPORTER_STRATEGY</Tag>
@@ -9880,7 +9690,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ECOPOIESIS_REACTOR</Tag>
 		<English>Martian Ecopoiesis Reactor</English>
-		<French>Réacteur d'écopoïèse martien</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ECOPOIESIS_REACTOR_PEDIA</Tag>
@@ -9893,7 +9702,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ENTERTAINMENT_COMPLEX</Tag>
 		<English>Martian Entertainment Complex</English>
-		<French>Complexe de Martian Entertainment</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_ENTERTAINMENT_COMPLEX_PEDIA</Tag>
@@ -9930,7 +9738,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_FUSION_PLANT</Tag>
 		<English>Martian Fusion Plant</English>
-		<French>Centrale à Fusion Martienne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_FUSION_PLANT_PEDIA</Tag>
@@ -11394,7 +11201,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NGC_6811</Tag>
 		<English>NGC 6811 Colony</English>
-		<French>Colonie de NGC 6811</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NGC_6811_PEDIA</Tag>
