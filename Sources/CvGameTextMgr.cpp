@@ -13494,11 +13494,13 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	int iWorseningProbability = 0;
 	int	iToleranceBuildup = 0;
 	int	iToleranceDecay = 0;
+#ifdef STRENGTH_IN_NUMBERS
 	int	iFrontSupportPercentChange = 0;
 	int	iShortRangeSupportPercentChange = 0;
 	int	iMediumRangeSupportPercentChange = 0;
 	int	iLongRangeSupportPercentChange = 0;
 	int	iFlankSupportPercentChange = 0;
+#endif
 	int	iDodgeModifierChange = 0;
 	int	iPrecisionModifierChange = 0;
 	int	iPowerShotsChange = 0;
@@ -13633,6 +13635,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		iDamageperTurn += promo.getDamageperTurn();
 		iStrAdjperTurn += promo.getStrAdjperTurn();
 		iWeakenperTurn += promo.getWeakenperTurn();
+#ifdef STRENGTH_IN_NUMBERS
 		if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 		{
 			iFrontSupportPercentChange += promo.getFrontSupportPercentChange();
@@ -13641,6 +13644,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			iLongRangeSupportPercentChange += promo.getLongRangeSupportPercentChange();
 			iFlankSupportPercentChange += promo.getFlankSupportPercentChange();
 		}
+#endif
 		iDodgeModifierChange += promo.getDodgeModifierChange();
 		iPrecisionModifierChange += promo.getPrecisionModifierChange();
 		iPowerShotsChange += promo.getPowerShotsChange();
@@ -14141,6 +14145,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TOLERANCE_DECAY_ADD_TEXT", iToleranceDecay));
 	}
+#ifdef STRENGTH_IN_NUMBERS
 	if (iFrontSupportPercentChange > 0)
 	{
 		szBuffer.append(pcNewline);
@@ -14166,6 +14171,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FLANK_SUPPORT_PERCENT_CHANGE_TEXT", iFlankSupportPercentChange));
 	}
+#endif
 	if (iDodgeModifierChange != 0)
 	{
 		szBuffer.append(pcNewline);
@@ -19419,6 +19425,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_PEAKS_WORK_TEXT", kUnit.getPeaksWorkModifier()));
 		}
 
+#ifdef STRENGTH_IN_NUMBERS
 		//Strength in Numbers offered support
 		if (game.isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 		{
@@ -19448,7 +19455,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_FLANK_SUPPORT_PERCENT_TEXT", kUnit.getFlankSupportPercent()));
 			}
 		}
-
+#endif
 		//Property Manipulators
 		kUnit.getPropertyManipulators()->buildDisplayString(szBuffer);
 
@@ -22882,6 +22889,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		}
 	}
 
+#ifdef STRENGTH_IN_NUMBERS
 	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		if (kBuilding.getFrontSupportPercentModifier() != 0)
@@ -22914,7 +22922,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 			szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_FLANK_SUPPORT_PERCENT_MODIFIER", kBuilding.getFlankSupportPercentModifier()));
 		}
 	}
-
+#endif
 	if (!bRelDisabled)
 	{
 		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
@@ -29848,6 +29856,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FORTITUDE_CHANGE_TEXT", info.getFortitudeChange()));
 	}
 
+#ifdef STRENGTH_IN_NUMBERS
 	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		if (info.getFrontSupportPercentChange() != 0)
@@ -29910,7 +29919,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FLANK_SUPPORT_PERCENT_CHANGE_TEXT", info.getFlankSupportPercentChange()));
 		}
 	}
-
+#endif
 	if (info.getDodgeModifierChange() != 0)
 	{
 		if (bFirstDisplay)
