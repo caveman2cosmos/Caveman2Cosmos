@@ -2899,31 +2899,6 @@
 		<German>Statusänderung</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_COMMERCE_CULTURE</Tag>
-		<English>Culture</English>
-		<French>
-			<Text>Culture[SPACE]</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Kultur:Kultur:Kultur:Kultur</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Cultura</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Cultura</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Kultura</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_COMMERCE_RESEARCH</Tag>
 		<English>Research</English>
 		<French>
@@ -3026,6 +3001,14 @@
 		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento per tutte le città su questo continente</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento en todas las ciudades de este continente</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania miast na kontynencie</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURE</Tag>
+		<English>Culture</English>
+		<German>Kultur</German>
+		<Italian>Cultura</Italian>
+		<Spanish>Cultura</Spanish>
+		<Polish>Kultura</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_ELEGANT</Tag>
@@ -3691,6 +3674,15 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<French>L'ère transhumaine représente une période qui suit l'ère nanotechnologique. À l'ère transhumaine, afin de lutter contre l'hostilité accrue entre la machine et la vie humaine, ainsi que de s'améliorer, et pour certains, d'atteindre une sorte d'immortalité, une partie de l'humanité fusionne avec une technologie. Le mouvement transhumain a réellement commencé à l'ère de l'information, mais n'est devenu possible qu'avec les technologies avancées de la fin de la période nanotechnologique. Alors que certains humains choisissent d'embrasser le transhumanisme, un contre-mouvement ou un nouveau mouvement humaniste apparaît également, qui est diversifié, y compris des religieux de toutes les allégeances, certains scientifiques avertissant des ramifications négatives possibles du transhumanisme, et d'autres simplement horrifiés ou opposés à l'idée . Certains des Transhumains tentent de forcer les humains à se convertir. La frontière entre la machine et l'homme commence à s'estomper, alors que la vie de la machine devient plus humaine avec des émotions, beaucoup développant des idées concurrentes, conduisant à de nouveaux conflits. Les transhumains, les factions Machine et les humains normaux continuent de lutter, certains les uns contre les autres et certains alliés. L'humanité commence également à coloniser le système solaire à cette période, beaucoup échappant à la guerre sur terre pour chercher une vie meilleure. La terraformation primitive permet à Mars de devenir habitable, et finalement une technologie s'améliore pour permettre la construction de colonies spatiales artificielles massives. La guerre spatiale apparaît, d'abord avec des chasseurs spatiaux, développés à partir de navettes, puis avec des navires plus grands ainsi que des robots spatiaux de taille massive, certains pilotés par des humains. Finalement, la guerre interplanétaire devient possible lorsque les navires ne mettent plus énormément de temps à traverser l'espace. Certaines de ces guerres sont des guerres de conquête traditionnelles sur les ressources, d'autres sur l'idéologie, car les factions humanistes / transhumanistes et diverses machines se battent dans l'espace.
 
 Calendrier: 2150 AD - 2300 AD</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE</Tag>
+		<English>Espionage</English>
+		<French>Espionnage</French>
+		<German>Spionage</German>
+		<Italian>Spionaggio</Italian>
+		<Spanish>Espionaje</Spanish>
+		<Polish>Szpiegostwo</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXCILE_TEXT</Tag>
@@ -5131,6 +5123,14 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>[ICON_BULLET]Raggio: %d1_BombRange</Italian>
 		<Spanish>[ICON_BULLET]Alcance: %d1_BombRange</Spanish>
 		<Polish>[ICON_BULLET]Zasięg: %d1_BombRange</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAND</Tag>
+		<English>Land</English>
+		<French>Terre</French>
+		<Italian>Territorio</Italian>
+		<Spanish>Territorio</Spanish>
+		<Polish>Teren</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_BAY_0</Tag>
@@ -12258,6 +12258,14 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>, lub [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_POPULATION</Tag>
+		<English>Population</English>
+		<German>Bevölkerung</German>
+		<Italian>Popolazione</Italian>
+		<Spanish>Población</Spanish>
+		<Polish>Populacja</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_POSITIVE_COLOR</Tag>
 		<English>[COLOR_POSITIVE_TEXT]</English>
 	</TEXT>
@@ -12455,21 +12463,9 @@ Calendrier: 2150 AD - 2300 AD</French>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Espionage</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Espionage</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Espionage</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Spionage</German>
+		<Italian>Spionaggio</Italian>
+		<Spanish>Espionaje</Spanish>
 		<Polish>Szpiegostwo</Polish>
 	</TEXT>
 	<TEXT>
@@ -12550,39 +12546,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>[COLOR_WARNING_TEXT]Perderà %d1[ICON_PRODUCTION] se non viene prodotto per %d2 [NUM2:Turno:turni][COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Perderá %d1[ICON_PRODUCTION] si no se sigue produciendo en %d2 [NUM2:turno:turnos][COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Straci %d1[ICON_PRODUCTION] jeśli nie wyprodukuje w ciągu %d2 [NUM2:tury:tur][COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RANKING_CULTURE</Tag>
-		<English>Culture</English>
-		<German>Kultur</German>
-		<Italian>Cultura</Italian>
-		<Spanish>Cultura</Spanish>
-		<Polish>Kultura</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RANKING_ESPIONAGE</Tag>
-		<English>Espionage</English>
-		<French>Espionnage</French>
-		<German>Spionage</German>
-		<Italian>Spionaggio</Italian>
-		<Spanish>Espionaje</Spanish>
-		<Polish>Szpiegostwo</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RANKING_LAND</Tag>
-		<English>Land</English>
-		<French>Terre</French>
-		<Italian>Territorio</Italian>
-		<Spanish>Territorio</Spanish>
-		<Polish>Teren</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RANKING_POPULATION</Tag>
-		<English>Population</English>
-		<German>Bevölkerung</German>
-		<Italian>Popolazione</Italian>
-		<Spanish>Población</Spanish>
-		<Polish>Populacja</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RANKING_POWER</Tag>
@@ -19284,20 +19247,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Inconnu</French>
 		<Spanish>Desconocido</Spanish>
 		<Polish>Nieznane</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_SCREEN_WORLD_LAND</Tag>
-		<English>Land</English>
-		<French>Terre</French>
-		<Spanish>Territorio</Spanish>
-		<Polish>Ląd</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_SCREEN_WORLD_POP</Tag>
-		<English>Population</English>
-		<German>Einwohner</German>
-		<Spanish>Población</Spanish>
-		<Polish>Populacja</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SPACE_RACE</Tag>

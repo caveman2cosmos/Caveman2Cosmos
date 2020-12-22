@@ -17,14 +17,6 @@
 		<Spanish>¡La población de %s1 ha sido engañada por espías %s2:3 para que boicotee %s3!</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ESPIONAGE_CULTURE</Tag>
-		<English>Espionage</English>
-		<French>Espionnage</French>
-		<German>Geheimdienst</German>
-		<Italian>Spionaggio</Italian>
-		<Spanish>Espionaje</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_EMBASSY_MOD</Tag>
 		<English>%d1%: For Having an Embassy in their Nation.</English>
 		<French>%d1%: pour avoir une Ambassade dans leur Nation.</French>
