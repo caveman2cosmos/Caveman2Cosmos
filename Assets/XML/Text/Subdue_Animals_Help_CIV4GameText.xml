@@ -9,7 +9,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BADGER_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth of the Weasle, Earth Myth, Nocternal Cage</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth of the Weasel, Earth Myth, Nocturnal Cage</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe de la belette, Mythe de la Terre, Cage nocturne</French>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito della donnola[NEWLINE][ICON_BULLET]Mito della Terra[NEWLINE][ICON_BULLET]Gabbia - Animali notturni</Italian>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Łasicy[NEWLINE][ICON_BULLET]Mit Ziemi[NEWLINE][ICON_BULLET]Klatkę z nocnymi zwierzętami</Polish>
@@ -231,7 +231,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_GIANT_SQUID_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Kraken, Sea and Fish Myth, Master Sea Hunter and Wonders of the Deep, Marine and Cephalopod Institute</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Kraken, Sea and Fish Myth, Master Sea Hunter and Wonders of the Deep, Marine and Cephalopod Institute</French>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito del kraken, Mito del Mare, Mito del pesce[NEWLINE][ICON_BULLET]Maspescatore, Meraviglie degli abissi[NEWLINE][ICON_BULLET]Istituto marino, Centro per gli studi sui cefalopodi</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito del kraken, Mito del Mare, Mito del pesce[NEWLINE][ICON_BULLET]Mastro pescatore, Meraviglie degli abissi[NEWLINE][ICON_BULLET]Istituto marino, Centro per gli studi sui cefalopodi</Italian>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Morza, Mit Ryb, Mit Krakena[NEWLINE][ICON_BULLET]Wybitnego Morskiego Łowcę, Cud Głębin[NEWLINE][ICON_BULLET]Instytut Morski i Głowonogów</Polish>
 	</TEXT>
 	<TEXT>
@@ -250,9 +250,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GREATWHITE_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Shark, Great White Shark, Sea and Fish Myth, Master Sea Hunter and Wonders of the Deep, Marine and Shark Institute</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Shark, Great White Shark,, Sea and Fish Myth[NEWLINE][ICON_BULLET]Master Sea Hunter and Wonders of the Deep[NEWLINE][ICON_BULLET]Marine and Shark Institute</French>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Shark, Great White Shark, Sea and Fish Myth[NEWLINE][ICON_BULLET]Master Sea Hunter and Wonders of the Deep[NEWLINE][ICON_BULLET]Marine and Shark Institute</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Shark, Great White Shark,, Sea and Fish Myth[NEWLINE][ICON_BULLET]Master Sea Hunter and Wonders of the Deep[NEWLINE][ICON_BULLET]Marine and Shark Institute</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito degli squali, Mito del grande squalo bianco, Mito del Mare, Mito del pesce[NEWLINE][ICON_BULLET]Mastro pescatore, Meraviglie degli abissi[NEWLINE][ICON_BULLET]Istituto matino, Centro per gli studi sugli squali</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito degli squali, Mito del grande squalo bianco, Mito del Mare, Mito del pesce[NEWLINE][ICON_BULLET]Mastro pescatore, Meraviglie degli abissi[NEWLINE][ICON_BULLET]Istituto marino, Centro per gli studi sugli squali</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Shark, Great White Shark,, Sea and Fish Myth[NEWLINE][ICON_BULLET]Master Sea Hunter and Wonders of the Deep[NEWLINE][ICON_BULLET]Marine and Shark Institute</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Rekina, Mit Morza, Mit Ryb, Mit Żarłacza Białego[NEWLINE][ICON_BULLET]Wybitnego Morskiego Łowcę, Cuda Głębin[NEWLINE][ICON_BULLET]Instytut Morski i Rekinów</Polish>
 	</TEXT>
@@ -391,8 +391,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MONKEY_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Old Man of the Forest Myth, Monker Breeder and Primate Cage</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Old Man of the Forest Myth, Monker Breeder and Primate Cage</French>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Old Man of the Forest Myth, Monkey Breeder and Primate Cage</English>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito dell'uomo delle foreste, Addestratore di scimmie, Gabbia - Primati</Italian>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Starego Człowieka z lasu, Hodowcę Małp, Klatkę z naczelnymi</Polish>
 	</TEXT>
@@ -482,7 +481,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TUNA_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Sea, Fish and Tuna Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Sea, Fish and Tuna Myth, Fish Pens, Coastal Fish Pens, Marine Institute</French>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito del Mare, Mito del pesce, Mito del tonno[NEWLINE][ICON_BULLET]Pinne di pesce[NEWLINE][ICON_BULLET]Istituto marino</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Sea and Fish Myth[NEWLINE][ICON_BULLET]Fish Pens, Coastal Fish Pens[NEWLINE][ICON_BULLET]Marine Institute</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Ryb, Mit Morza, Mit Tuńczyka[NEWLINE][ICON_BULLET]Hodowlę Ryb, Hodowlę Ryb Przybrzeżnych[NEWLINE][ICON_BULLET]Instytut Morski</Polish>
