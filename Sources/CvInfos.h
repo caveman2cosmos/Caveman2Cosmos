@@ -1214,13 +1214,6 @@ protected:
 	int* m_piFeatureDefensePercent;
 	int* m_piUnitCombatModifierPercent;
 	int* m_piDomainModifierPercent;
-	bool m_bAnyTerrainAttackPercent;
-	bool m_bAnyTerrainDefensePercent;
-	bool m_bAnyFeatureAttackPercent;
-	bool m_bAnyFeatureDefensePercent;
-	bool m_bAnyUnitCombatModifierPercent;
-	bool m_bAnyDomainModifierPercent;
-	//bool m_bAnyAIWeightbyUnitCombatType;
 	//ls612: Terrain Work Modifiers
 	int* m_piTerrainWorkPercent;
 	int* m_piFeatureWorkPercent;
@@ -4189,7 +4182,7 @@ public:
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 	//	This really belongs on CvInfoBase but you can't change the size of that
 	//	object without crashing the core engine :-(
-	inline int	getZobristValue() const { return m_zobristValue; }
+	inline int getZobristValue() const { return m_zobristValue; }
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -4209,10 +4202,7 @@ protected:
 
 	int m_zobristValue;
 
-	// JOOYO_ADDON, Added by Jooyo, 07/07/09
 	bool m_bSeaTunnel;
-
-	bool m_bAnyPrereqOrBonus;
 
 	// Arrays
 	int* m_piYieldChange;
@@ -6189,7 +6179,6 @@ public:
 
 	int getImprovementYieldChange(int i, int j) const;
 	int* getImprovementYieldChangeArray(int i) const;
-	bool m_bAnyImprovementYieldChanges;
 
 	int getGoldenAgeYieldChanges(int i) const;
 	int* getGoldenAgeYieldChangesArray() const;
@@ -9695,7 +9684,6 @@ protected:
 
 	//Arrays
 	int* m_piDomainModifierPercent;
-	bool m_bAnyDomainModifierPercent;
 
 	// bool vectors without delayed resolution
 	// bool vector with delayed resolution
