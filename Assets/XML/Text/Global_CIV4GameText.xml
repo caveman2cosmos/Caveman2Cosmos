@@ -4003,7 +4003,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_GAMESPEED_EPIC</Tag>
 		<English>Epic</English>
 		<French>
-			<Text>Epique</Text>
+			<Text>Épique</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -4029,7 +4029,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_ETERNITY</Tag>
 		<English>Eternity</English>
-		<French>Eternité</French>
+		<French>Éternité</French>
 		<German>Ewigkeit</German>
 		<Italian>Eternità</Italian>
 		<Spanish>Eternidad</Spanish>
@@ -4121,7 +4121,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English>This extremely slow game speed will allow games that can last weeks or even months!</English>
 		<French>Cette vitesse de Jeu extrêmement lente permet des parties qui peuvent durer des semaines, voire des mois!</French>
 		<German>Diese extrem langsame Spielgeschwindigkeit bewirkt Spiele die Wochen oder Monate dauern!</German>
-		<Italian>Questa velocità estremamente lenta permette partite che durano settimane, o perino mesi!</Italian>
+		<Italian>Questa velocità estremamente lenta permette partite che durano settimane, o persino mesi!</Italian>
 		<Spanish>¡Esta velocidad de juego tan lenta hará que las partidas duren semanas, o incluso meses!</Spanish>
 		<Polish>Ta ekstremalnie wolna szybkość gry sprawia, że pojedyńcza gra może trwać tygodniami a nawet miesiącami!</Polish>
 	</TEXT>
@@ -4155,11 +4155,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_HUNTER</Tag>
-		<English>The villagers have provided you with a Hunter!</English>
-		<French>Les villageois vous fournissent un guerrier!</French>
-		<German>Die Bewohner haben Euch einen Jäger zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un cacciatore!</Italian>
-		<Spanish>Los aldeanos os han dado un Cazador.</Spanish>
+		<English>The villagers have provided you with their most skilled huntsman!</English>
+		<French>Les villageois vous ont fourni leur chasseur le plus talentueux!</French>
+		<German>Die Dorfbewohner haben Ihnen ihren geschicktesten Jäger zur Verfügung gestellt!</German>
+		<Italian>Gli abitanti del villaggio ti hanno fornito il loro cacciatore più abile!</Italian>
+		<Spanish>¡Los aldeanos te han proporcionado su cazador más hábil!</Spanish>
 		<Polish>Mieszkańcy dołączają do Ciebie jako Łowcy!</Polish>
 	</TEXT>
 	<TEXT>
@@ -4167,7 +4167,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English>The villagers have provided you with a Stone Spearman!</English>
 		<French>Les villageois vous fournissent un guerrier!</French>
 		<German>Die Bewohner haben Euch einen Steinspeerkämpfer zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un guerriero con lancia in pietra!</Italian>
+		<Italian>Gli abitanti del villaggio ti hanno donato un Guerriero con lancia in pietra!</Italian>
 		<Spanish>Los aldeanos os han dado un Guerrero con lanza de piedra.</Spanish>
 		<Polish>Mieszkańcy dołączają do Ciebie jako Kamienni Włócznicy!</Polish>
 	</TEXT>
@@ -4500,7 +4500,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HAPPY_WORLD_PROJECT</Tag>
-		<English>+%d1_Change[ICON_HAPPY]: "Other Nation's Technological Breakthroughs have benefitted the World!"</English>
+		<English>+%d1_Change[ICON_HAPPY]: "Other Nation's Technological Breakthroughs have benefited the World!"</English>
 		<French>+%d1_Change[ICON_HAPPY]: "Les Avancées Technologiques d'autres Nations ont permis d'améliorer le Monde Entier!"</French>
 		<German>+%d1_Change[ICON_HAPPY]: "Die technologischen Errungenschaften anderer Nationen haben der Welt geholfen!"</German>
 		<Italian>+%d1_Change[ICON_HAPPY]: "Le innovazioni tecnologiche di altre Nazioni hanno portato benefici a tutto il mondo!"</Italian>
