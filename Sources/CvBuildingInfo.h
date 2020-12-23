@@ -537,9 +537,7 @@ public:
 
 	bool getNotShowInCity() const;
 
-	bool m_bNoLimit;
-	bool m_bNotShowInCity;
-	bool m_bAnySpecialistYieldChanges;
+	bool isAnySpecialistYieldChanges() const { return m_ppaiSpecialistYieldChange != NULL; }
 	bool m_bAnySpecialistCommerceChanges;
 	bool m_bAnyBonusYieldModifiers;
 	bool m_bAnyTechCommerceChanges;
@@ -554,6 +552,9 @@ public:
 
 protected:
 	void setNotShowInCity();
+
+	bool m_bNoLimit;
+	bool m_bNotShowInCity;
 
 	int m_iFreePromotion_2;
 	int m_iFreePromotion_3;
