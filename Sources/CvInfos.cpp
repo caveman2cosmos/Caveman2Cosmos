@@ -9244,7 +9244,6 @@ CvCivicInfo::CvCivicInfo()
 	, m_bFixedBorders(false)
 	, m_bNoCapitalUnhappiness(false)
 	, m_bNoLandmarkAnger(false)
-	, m_bAnySpecialistCommerceChanges(false)
 	, m_bEnablesMAD(false)
 	, m_piBonusMintedPercent(NULL)
 	, m_piImprovementHappinessChanges(NULL)
@@ -10079,12 +10078,6 @@ bool CvCivicInfo::isAnyImprovementYieldChange() const
 	return m_bAnyImprovementYieldChange;
 }
 
-bool CvCivicInfo::isAnySpecialistCommerceChanges() const
-{
-	return m_bAnySpecialistCommerceChanges;
-}
-
-
 CvString CvCivicInfo::getCivicAttitudeReason(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), i)
@@ -10651,7 +10644,6 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 							// call the function that sets the commerce change variable
 							pXML->SetCommerce(&m_ppiSpecialistCommercePercentChanges[iIndex]);
 							pXML->MoveToXmlParent();
-							m_bAnySpecialistCommerceChanges = true;
 						}
 					}
 
@@ -23208,7 +23200,6 @@ CvTraitInfo::CvTraitInfo()
 	, m_piSpecialistExtraYield(NULL)
 	, m_piYieldChange(NULL)
 	, m_ppaiSpecialistCommerceChange(NULL)
-	, m_bAnySpecialistCommerceChanges(false)
 	, m_piFlavorValue(NULL)
 	, m_paiLessYieldThreshold(NULL)
 	, m_piSeaPlotYieldChanges(NULL)
@@ -26515,7 +26506,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetCommerce(&m_ppaiSpecialistCommerceChange[k]);
 						pXML->MoveToXmlParent();
-						m_bAnySpecialistCommerceChanges = true;
 					}
 				}
 
@@ -27132,7 +27122,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetCommerce(&m_ppaiSpecialistCommerceChangeFiltered[k]);
 						pXML->MoveToXmlParent();
-						m_bAnySpecialistCommerceChanges = true;
 					}
 				}
 
@@ -27700,7 +27689,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXM
 
 					m_ppaiSpecialistCommerceChange[i][j] = iChange;
 					m_ppaiSpecialistCommerceChangeFiltered[i][j] = iChange;
-					m_bAnySpecialistCommerceChanges = true;
 				}
 			}
 		}

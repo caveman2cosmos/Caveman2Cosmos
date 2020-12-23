@@ -487,7 +487,6 @@ public:
 	int getLocalSpecialistCommerceChange(int i, int j) const;
 	int* getLocalSpecialistCommerceChangeArray(int i) const;
 
-	bool isAnySpecialistCommerceChanges() const;
 	bool isAnyLocalSpecialistCommerceChanges() const;
 	bool isHurry(int i) const;
 
@@ -538,7 +537,7 @@ public:
 	bool getNotShowInCity() const;
 
 	bool isAnySpecialistYieldChanges() const { return m_ppaiSpecialistYieldChange != NULL; }
-	bool m_bAnySpecialistCommerceChanges;
+	bool isAnySpecialistCommerceChanges() const { return m_ppaiSpecialistCommerceChange != NULL; }
 	bool m_bAnyBonusYieldModifiers;
 	bool m_bAnyTechCommerceChanges;
 	bool m_bAnyTechYieldChanges;

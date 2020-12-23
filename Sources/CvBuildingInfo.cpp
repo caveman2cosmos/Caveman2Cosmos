@@ -234,7 +234,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_iHealthPercentPerPopulation(0)
 ,m_iHappinessPercentPerPopulation(0)
 //New Booleans
-,m_bAnySpecialistCommerceChanges(false)
 ,m_bAnyLocalSpecialistYieldChanges(false)
 ,m_bAnyLocalSpecialistCommerceChanges(false)
 ,m_bAnyBonusYieldModifiers(false)
@@ -1804,7 +1803,7 @@ int CvBuildingInfo::getTechOutbreakLevelChange(int iTech) const
 
 	return 0;
 }
-//Team Project (1)
+
 int CvBuildingInfo::getNumTechHappinessTypes() const
 {
 	return m_aTechHappinessTypes.size();
@@ -1840,11 +1839,6 @@ int CvBuildingInfo::getTechHealthType(int iTech) const
 }
 
 //Arrays
-bool CvBuildingInfo::isAnySpecialistCommerceChanges() const
-{
-	return m_bAnySpecialistCommerceChanges;
-}
-
 bool CvBuildingInfo::isAnyLocalSpecialistCommerceChanges() const
 {
 	return m_bAnyLocalSpecialistCommerceChanges;
@@ -3046,7 +3040,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetCommerce(&m_ppaiSpecialistCommerceChange[k]);
 						pXML->MoveToXmlParent();
-						m_bAnySpecialistCommerceChanges = true;
 					}
 				}
 
@@ -4722,10 +4715,9 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 					}
 
 					m_ppaiSpecialistCommerceChange[i][j] = iChange;
-					m_bAnySpecialistCommerceChanges = true;
 				}
 			}
-//Team Project (1)
+
 			if ( getLocalSpecialistCommerceChange(i,j) == iDefault )
 			{
 				const int iChange = pClassInfo->getLocalSpecialistCommerceChange(i, j);

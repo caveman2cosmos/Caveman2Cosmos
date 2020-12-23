@@ -3106,7 +3106,7 @@ public:
 	bool isAnyFeatureHappinessChange() const;
 	bool isAnySpecialistValid() const;
 	bool isAnyImprovementYieldChange() const;
-	bool isAnySpecialistCommerceChanges() const;
+	//bool isAnySpecialistCommerceChanges() const { return m_ppaiSpecialistCommerceChange != NULL; }
 	//bool isAnySpecialistYieldChanges() const { return m_ppaiSpecialistYieldChange != NULL; }
 
 	CvString getCivicAttitudeReason(int i) const;
@@ -3227,7 +3227,6 @@ protected:
 	bool m_bStateReligion;
 	bool m_bNoNonStateReligionSpread;
 	bool m_bAnyImprovementYieldChange;
-	bool m_bAnySpecialistCommerceChanges;
 	bool m_bAllReligionsActive;
 	bool m_bBansNonStateReligions;
 	bool m_bFreedomFighter;
@@ -6180,7 +6179,7 @@ public:
 
 	int getSpecialistCommerceChange(int i, int j) const;
 	int* getSpecialistCommerceChangeArray(int i) const;
-	bool m_bAnySpecialistCommerceChanges;
+	bool isAnySpecialistCommerceChanges() const { return m_ppaiSpecialistCommerceChange != NULL; }
 
 	int getFlavorValue(int i) const;
 	int getLessYieldThreshold(int i) const;
@@ -6191,7 +6190,7 @@ public:
 	int getImprovementYieldChange(int i, int j) const;
 	int* getImprovementYieldChangeArray(int i) const;
 	bool m_bAnyImprovementYieldChanges;
-	//Team Project (7)
+
 	int getGoldenAgeYieldChanges(int i) const;
 	int* getGoldenAgeYieldChangesArray() const;
 
