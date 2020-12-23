@@ -234,7 +234,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_iHealthPercentPerPopulation(0)
 ,m_iHappinessPercentPerPopulation(0)
 //New Booleans
-,m_bAnySpecialistYieldChanges(false)
 ,m_bAnySpecialistCommerceChanges(false)
 ,m_bAnyLocalSpecialistYieldChanges(false)
 ,m_bAnyLocalSpecialistCommerceChanges(false)
@@ -3004,7 +3003,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetYields(&m_ppaiSpecialistYieldChange[k]);
 						pXML->MoveToXmlParent();
-						m_bAnySpecialistYieldChanges = true;
 					}
 				}
 
@@ -4683,10 +4681,9 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 					}
 
 					m_ppaiSpecialistYieldChange[i][j] = iChange;
-					m_bAnySpecialistYieldChanges = true;
 				}
 			}
-//Team Project (1)
+
 			if ( getLocalSpecialistYieldChange(i,j) == iDefault )
 			{
 				const int iChange = pClassInfo->getLocalSpecialistYieldChange(i, j);

@@ -9244,7 +9244,6 @@ CvCivicInfo::CvCivicInfo()
 	, m_bFixedBorders(false)
 	, m_bNoCapitalUnhappiness(false)
 	, m_bNoLandmarkAnger(false)
-	, m_bAnySpecialistYieldChanges(false)
 	, m_bAnySpecialistCommerceChanges(false)
 	, m_bEnablesMAD(false)
 	, m_piBonusMintedPercent(NULL)
@@ -10085,11 +10084,6 @@ bool CvCivicInfo::isAnySpecialistCommerceChanges() const
 	return m_bAnySpecialistCommerceChanges;
 }
 
-bool CvCivicInfo::isAnySpecialistYieldChanges() const
-{
-	return m_bAnySpecialistYieldChanges;
-}
-
 
 CvString CvCivicInfo::getCivicAttitudeReason(int i) const
 {
@@ -10617,7 +10611,6 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 							// call the function that sets the yield change variable
 							pXML->SetYields(&m_ppiSpecialistYieldPercentChanges[iIndex]);
 							pXML->MoveToXmlParent();
-							m_bAnySpecialistYieldChanges = true;
 						}
 					}
 
@@ -23208,7 +23201,6 @@ CvTraitInfo::CvTraitInfo()
 	, m_bFreedomFighter(false)
 	//arrays
 	, m_ppaiSpecialistYieldChange(NULL)
-	, m_bAnySpecialistYieldChanges(false)
 	, m_piYieldModifier(NULL)
 	, m_piCapitalYieldModifier(NULL)
 	, m_piCapitalCommerceModifier(NULL)
@@ -26410,7 +26402,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetYields(&m_ppaiSpecialistYieldChange[k]);
 						pXML->MoveToXmlParent();
-						m_bAnySpecialistYieldChanges = true;
 					}
 				}
 
@@ -27038,7 +27029,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetYields(&m_ppaiSpecialistYieldChangeFiltered[k]);
 						pXML->MoveToXmlParent();
-						m_bAnySpecialistYieldChanges = true;
 					}
 				}
 
@@ -27516,7 +27506,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXM
 
 					m_ppaiSpecialistYieldChange[i][j] = iChange;
 					m_ppaiSpecialistYieldChangeFiltered[i][j] = iChange;
-					m_bAnySpecialistYieldChanges = true;
 				}
 			}
 		}

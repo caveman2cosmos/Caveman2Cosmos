@@ -3107,7 +3107,7 @@ public:
 	bool isAnySpecialistValid() const;
 	bool isAnyImprovementYieldChange() const;
 	bool isAnySpecialistCommerceChanges() const;
-	bool isAnySpecialistYieldChanges() const;
+	//bool isAnySpecialistYieldChanges() const { return m_ppaiSpecialistYieldChange != NULL; }
 
 	CvString getCivicAttitudeReason(int i) const;
 	int getCivicAttitudeVectorSize() const;
@@ -3228,7 +3228,6 @@ protected:
 	bool m_bNoNonStateReligionSpread;
 	bool m_bAnyImprovementYieldChange;
 	bool m_bAnySpecialistCommerceChanges;
-	bool m_bAnySpecialistYieldChanges;
 	bool m_bAllReligionsActive;
 	bool m_bBansNonStateReligions;
 	bool m_bFreedomFighter;
@@ -6160,7 +6159,7 @@ public:
 	//Arrays
 	int getSpecialistYieldChange(int i, int j) const;
 	int* getSpecialistYieldChangeArray(int i) const;
-	bool m_bAnySpecialistYieldChanges;
+	bool isAnySpecialistYieldChanges() const { return m_ppaiSpecialistYieldChange != NULL; }
 
 	int getYieldModifier(int i) const;
 	int* getYieldModifierArray() const;

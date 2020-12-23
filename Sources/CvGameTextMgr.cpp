@@ -10927,7 +10927,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		setYieldChangeHelp(szHelpString, L"", L"", gDLL->getText("TXT_KEY_CIVIC_PER_SPECIALIST").GetCString(), GC.getTraitInfo(eTrait).getSpecialistExtraYieldArray(), false, true);
 
 		//Individual Base specialist yield changes
-		if (GC.getTraitInfo(eTrait).m_bAnySpecialistYieldChanges)
+		if (GC.getTraitInfo(eTrait).isAnySpecialistYieldChanges())
 		{
 			for (iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
 			{
@@ -16772,7 +16772,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 			}
 		}
 	}
-	//if (kCivic.m_bAnySpecialistYieldChanges)
+	//if (kCivic.isAnySpecialistYieldChanges())
 	{
 		for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 		{
@@ -22977,7 +22977,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_ADJUST_COMM_RATE", GC.getCommerceInfo((CommerceTypes) iI).getChar()));
 			}
 		}
-		if (kBuilding.m_bAnySpecialistYieldChanges)
+		if (kBuilding.isAnySpecialistYieldChanges())
 		{
 			bFirst = true;
 			for (int iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
