@@ -72,18 +72,6 @@
 #include "NiPoint.h"
 
 //
-// Basic types
-//
-typedef unsigned int        uint;
-
-typedef long long           int64_t;
-
-typedef unsigned char       uint8_t;
-typedef unsigned short      uint16_t;
-typedef unsigned int        uint32_t;
-typedef unsigned long long  uint64_t;
-
-//
 // Type traits
 //
 #define MAX_CHAR                            (0x7f)
@@ -119,7 +107,7 @@ typedef unsigned long long  uint64_t;
 // cppcheck-suppress invalidPointerCast
 __forceinline DWORD FtoDW( float f ) { return *(DWORD*)&f; }
 // cppcheck-suppress invalidPointerCast
-__forceinline float DWtoF( uint n ) { return *(float*)&n; }
+__forceinline float DWtoF(unsigned int n) { return *(float*)&n; }
 __forceinline float MaxFloat() { return DWtoF(0x7f7fffff); }
 
 // General flags that declare cache access
@@ -175,11 +163,6 @@ void dumpProfileStack();
 void EnableDetailedTrace(bool enable);
 void IFPSetCount(ProfileSample* sample, int count);
 #endif
-
-int intSqrt(const unsigned int iValue, const bool bTreatNegAsPos=false);
-int64_t intSqrt64(const uint64_t iValue);
-int intPow(const int x, const int p);
-int64_t intPow64(const int64_t x, const int p);
 
 #define	MEMORY_TRACK()
 #define MEMORY_TRACK_EXEMPT()
@@ -333,6 +316,26 @@ namespace python = boost::python;
 #include "CyUnit.h"
 #include "CySelectionGroup.h"
 #include "CyPlot.h"
+
+//
+// Basic types
+//
+using bst::int8_t;
+using bst::int16_t;
+using bst::int32_t;
+using bst::int64_t;
+
+using bst::uint8_t;
+using bst::uint16_t;
+using bst::uint32_t;
+using bst::uint64_t;
+
+typedef unsigned int        uint;
+
+int intSqrt(const unsigned int iValue, const bool bTreatNegAsPos=false);
+int64_t intSqrt64(const uint64_t iValue);
+int intPow(const int x, const int p);
+int64_t intPow64(const int64_t x, const int p);
 
 #ifdef FINAL_RELEASE
 // Undefine OutputDebugString in final release builds
