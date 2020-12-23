@@ -23,7 +23,7 @@
 		<English>*BUG Hint*: Be the first to circle the globe, and your Naval Units all receive +1 movement.</English>
 		<French>*Conseils du BUG*: Soyez le premier à naviguer autour du globe, et tous vos Unités Navales recevront +1 en mouvement.</French>
 		<German>[BUG] Tipp... Die Marineeinheiten der Zivilisation, die als erste die Welt umrundet, erhalten einen Bewegungsbonus von +1.</German>
-		<Italian>*Suggerimento del BUG Team*: Circunnaviga il globo per primo, e tutte le tue Unità Navali presenti e future riceveranno un bonus di +1 al loro movimento.</Italian>
+		<Italian>*Suggerimento del BUG Team*: Circumnaviga il globo per primo e tutte le tue unità navali presenti e future riceveranno un bonus di +1 al loro movimento.</Italian>
 		<Spanish>*Consejo de BUG*: Sé el primero en circunnavegar el globo y tus unidades navales obtendrán +1 movimiento.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Bądź pierwszym, który okrąży świat, a wszystkie twoje jednostki morskie otrzymają +1 do ruchu.</Polish>
 	</TEXT>
@@ -35,10 +35,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_13</Tag>
 		<English>*BUG Hint*: Form trade relations with nations that get along with each other to avoid diplomatic repercussions.</English>
-		<French>*Conseils du BUG*: Formez des relations commerciales avec des nations qui s'apprécient entre elles, pour éviter des pénalités diplomatiques.</French>
-		<German>[BUG] Tipp... Zwischen ähnlichen Zivilisationen sollten Handelsverbindungen geknüpft werden, um einen Diplomatiemalus zu vermeiden.</German>
-		<Italian>*Suggerimento del BUG Team*: Stabilisci relazioni mercantili con nazioni che vanno d'accordo per evitare penalità nei rapporti.</Italian>
-		<Spanish>*Consejo de BUG*: Establece relaciones comerciales con naciones que se lleven bien entre ellas, para evitar repercusiones diplomáticas.</Spanish>
+		<French>*Conseils du BUG*: Formez des relations commerciales avec des pays qui s'entendent bien pour éviter les répercussions diplomatiques.</French>
+		<German>[BUG] Tipp... Aufbau von Handelsbeziehungen zu Nationen, die gut miteinander auskommen, um diplomatische Auswirkungen zu vermeiden.</German>
+		<Italian>*Suggerimento del BUG Team*: Stabilisci relazioni commerciali con nazioni che vanno d'accordo tra loro per evitare ripercussioni diplomatiche.</Italian>
+		<Spanish>*Consejo de BUG*: Establece relaciones comerciales con naciones que se lleven bien entre sí para evitar repercusiones diplomáticas.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Twórz relacje handlowe z nacjami, które żyją dobrze z innymi, aby uniknąć pogorszenia się stosunków.</Polish>
 	</TEXT>
 	<TEXT>
@@ -46,8 +46,8 @@
 		<English>*BUG Hint*: If you neglect your military, and your power becomes weak, a neighbor WILL attack you.</English>
 		<French>*Conseils du BUG*: Si vous négligez votre armée et que votre pouvoir décline, un de vos voisins vous attaquera sûrement!</French>
 		<German>[BUG] Tipp... Das Militär sollte nicht vernachlässigt werden. Eine schwache Zivilisation wird gern von benachbarten Zivilisationen angegriffen.</German>
-		<Italian>*Suggerimento del BUG Team*: Se trascuri il tuo esercito, e la tua potenza si indebolisce, un paese confinante ti attaccherà sicuramente.</Italian>
-		<Spanish>*Consejo de BUG*: Si dejas desatendidas tus Fuerzas Armadas, y tu poder se debilita, ¡algún vecino te atacará con toda seguridad!.</Spanish>
+		<Italian>*Suggerimento del BUG Team*: Se trascuri il tuo esercito e la tua potenza si indebolisce, un paese confinante ti attaccherà DI SICURO.</Italian>
+		<Spanish>*Consejo de BUG*: Si dejas desatendidas tus Fuerzas Armadas, y tu poder se debilita, ¡algún vecino te atacará con toda seguridad!</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Jeśli zaniedbasz swoje wojsko i Twoja potęga osłabnie, wtedy sąsiad ZAATAKUJE!.</Polish>
 	</TEXT>
 	<TEXT>
@@ -62,10 +62,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_16</Tag>
 		<English>*BUG Hint*: When selling Technologies, shop around for the highest bidder, and then work your way down.</English>
-		<French>*Conseils du BUG*: Quand vous vendez des Technologies, essayez d'abord de les vendre à celui qui vous l'achetera le plus cher.</French>
+		<French>*Conseils du BUG*:Lorsque vous vendez des technologies, recherchez le plus offrant, puis descendez.</French>
 		<German>[BUG] Tipp... Beim Technologiehandel sollten die Angebote verschiedener Oberhäupter verglichen werden, um dann dem höchsten Bieter den Zuschlag zu geben.</German>
-		<Italian>*Suggerimento del BUG Team*: Quando ti appresti a vendere Tecnologie, prima non dimenticare di controllare chi te le pagherà di più.</Italian>
-		<Spanish>*Consejo de BUG*: Cuando vendas tecnologías, escucha ofertas primero para ver quién ofrece más.</Spanish>
+		<Italian>*Suggerimento del BUG Team*: Quando vendi tecnologie, cerca il miglior offerente e poi scendi di prezzo.</Italian>
+		<Spanish>*Consejo de BUG*: Cuando venda tecnologías, compare precios para encontrar el mejor postor y luego baje.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Kiedy sprzedajesz technologie, spróbuj znaleźć tego, który da najwięcej, i dopiero wtedy dokonać transakcji.</Polish>
 	</TEXT>
 	<TEXT>
@@ -81,7 +81,6 @@
 		<Tag>TXT_KEY_BUG_HINT_18</Tag>
 		<English>*BUG Hint*: Speak softly and carry a big stick, and you will go far.</English>
 		<French>*Conseils du BUG*: Parlez doucement et portez un gros bâton, et vous irez loin.</French>
-		<German>[BUG] Tipp... Anregungen und Hinweise zur "BUG Mod" können bei civfanatics.com im dortigen Forum hinterlassen werden.</German>
 		<Italian>*Suggerimento del BUG Team*: Poche parole e un grosso bastone ti porteranno lontano.</Italian>
 		<Spanish>*Consejo de BUG*: Habla en voz baja y lleva una gran porra, y llegarás lejos.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Mów łagodnie, ale staraj się mieć pod ręką gruby kij, wtedy zajdziesz daleko.</Polish>
@@ -89,9 +88,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_19</Tag>
 		<English>*BUG Hint*: Sometimes it's better to stop a Scout or Explorer on a forest, hill, or jungle tile and lose the extra movement in favor of safety.</English>
-		<French>*Conseils du BUG*: Parfois il vaut mieux arrêter un Eclaireur ou un Explorateur sur une fôret, une montagne ou une jungle et perdre un peu de mouvement pour gagner en sécurité.</French>
+		<French>*Conseils du BUG*: Parfois, il est préférable d'arrêter un Scout ou un Explorateur sur une tuile de forêt, colline ou jungle et perdre le mouvement supplémentaire au profit de la sécurité.</French>
 		<German>[BUG] Tipp... Es kann sinnvoll sein, einen Späher oder Kundschafter eine Runde auf einem Wald-, Hügel- oder Dschungel-Geländefeld beenden zu lassen, um die überschüssigen Bewegungspunkte gegen größere Sicherheit einzutauschen.</German>
-		<Italian>*Suggerimento del BUG Team*: A volte è meglio fermare un Esploratore su una casella di collina, foresta o giungla e perdere il movimento extra in favore della prudenza.</Italian>
+		<Italian>*Suggerimento del BUG Team*: A volte è meglio fermare uno Scout o un Esploratore in una foresta, su di una collina o in una giungla, perdendo un movimento in più per guadagnarci in sicurezza.</Italian>
 		<Spanish>*Consejo de BUG*: A veces es mejor dejar a un Explorador en un bosque, colina o jungla y perder un poco de movimiento en favor de su seguridad.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Czasami lepiej jest zatrzymać Zwiadowcę albo Odkrywcę na polu lasu, wzgórza, lub dżungli i stracić ruch, ale w zamian być bezpiecznym.</Polish>
 	</TEXT>
@@ -108,8 +107,7 @@
 		<Tag>TXT_KEY_BUG_HINT_20</Tag>
 		<English>*BUG Hint*: Never go up against a Sicilian when death is on the line.</English>
 		<French>*Conseils du BUG*: Ne jamais s'opposer à un sicilien lorsque la mort vous attend au bout du tunnel.</French>
-		<German>[BUG] Tipp... Das Team der BUG Mod dankt Ihnen für Ihr Vertrauen und hofft, dass die Mod Ihnen genauso viel Spaß macht, wie wir bei ihrer Entwicklung hatten!</German>
-		<Italian>*Suggerimento del BUG Team*: "Mai mettersi contro un Siciliano quando si tratta di uccidere"</Italian>
+		<Italian>*Suggerimento del BUG Team*: Mai mettersi contro un Siciliano quando si tratta di uccidere.</Italian>
 		<Spanish>*Consejo de BUG*: Nunca te opongas a un siciliano cuando se trate de matar.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Nigdy nie stawiaj się Sycylijczykom, gdy śmierć stoi na drodze do nich.</Polish>
 	</TEXT>
@@ -118,7 +116,7 @@
 		<English>*BUG Hint*: Be nice to your mother.</English>
 		<French>*Conseil du BUG*: Soit gentil avec ta mère.</French>
 		<German>[BUG] Tipp... Sei nett zu deiner Mutter.</German>
-		<Italian>*Suggerimento del BUG Team*: "Sii gentile con tua madre"</Italian>
+		<Italian>*Suggerimento del BUG Team*: Sii gentile con tua madre.</Italian>
 		<Spanish>*Consejo de BUG*: Pórtate bien con tu madre.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Bądź miły dla swojej matki.</Polish>
 	</TEXT>
@@ -127,7 +125,7 @@
 		<English>*BUG Hint*: The cake is a lie.</English>
 		<French>*Conseils du BUG*: Le Gâteau est un mensonge.</French>
 		<German>[BUG] Tipp... Der Kuchen ist eine Lüge.</German>
-		<Italian>*Suggerimento del BUG Team*: "The cake is a lie"</Italian>
+		<Italian>*Suggerimento del BUG Team*: La torta è una menzogna.</Italian>
 		<Spanish>*Consejo de BUG*: El pastel es un engaño.</Spanish>
 		<Polish>*BUG Hint*: Ciasto jest kłamstwem.</Polish>
 	</TEXT>
@@ -151,10 +149,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_5</Tag>
-		<English>*BUG Hint*: Always consider having siege equipment before attacking a city. A Swordsman can do more damage entering through a hole in the wall, then trying to climb over it with arrows raining down from above.</English>
-		<French>*Conseils du BUG*: N'attaquez pas une ville sans machines de siège. Un Spadassin peut faire plus de dégats en rentrant par une brèche dans la muraille, qu'en essayant de l'escalader sous une pluie de flèches.</French>
+		<English>*BUG Hint*: Always consider having siege equipment before attacking a city. A Swordsman can do more damage entering through a hole in the wall than trying to climb over it with arrows raining down from above.</English>
+		<French>*Conseils du BUG*: Pensez toujours à avoir un équipement de siège avant d'attaquer une ville. Un épéiste peut faire plus de dégâts en entrant par un trou dans le mur que d'essayer de le franchir avec des flèches qui pleuvent d'en haut.</French>
 		<German>[BUG] Tipp... Für die Einnahme einer größeren Stadt sollten genügend Belagerungswaffen zur Verfügung stehen, um die Verteidigungsanlagen niederzureißen und die Verteidiger zu schwächen.</German>
-		<Italian>*Suggerimento del BUG Team*: Procurati sempre l'equipaggiamento d'assedio prima di assediare una città. Uno Spadaccino può fare più danni entrando da un buco nelle mura, che cercando di scavalcarle sotto una pioggia di frecce.</Italian>
+		<Italian>*Suggerimento del BUG Team*: Procurati sempre delle armi da assedio prima di attaccare una città. Uno Spadaccino può infliggere più danni entrando da un buco nel muro, che tentando di scavalcarlo mentre le frecce che piovono dall'alto.</Italian>
 		<Spanish>*Consejo de BUG*: Siempre considera tener armamento de asedio antes de asaltar una ciudad. Un Espadachín hará mas daño entrando por un agujero en la muralla, que intentando trepar sobre ella mientras le llueven flechas por todos lados.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Zawsze utrzymuj w pogotowiu sprzęt oblężniczy przed zaatakowaniem miasta. Rycerze mogą spowodować więcej zniszczeń wchodząc przez dziurę w murze, niż wspinając się na mury i będąc zasypywani gradem strzał.</Polish>
 	</TEXT>
@@ -181,16 +179,16 @@
 		<English>*BUG Hint*: Play to your Civilization's traits, and specialize your Empire. No use being Charismatic and Aggressive and never starting a war.</English>
 		<French>*Conseils du BUG*: Utilisez les Traits de votre Civilisation et spécialisez votre Empire. Quels intérêts à être Charismatique et Aggressif si vous ne partez pas en guerre?</French>
 		<German>[BUG] Tipp... Der eigene Spielstil sollte sich an den Eigenschaften des gewählten Staatsoberhaupts orientieren und die eigene Zivilisation entsprechend spezialisiert werden. Die Eigenschaften "Charismatisch" und "Aggressiv" nützen wenig, wenn keine Kriege beabsichtigt sind.</German>
-		<Italian>*Suggerimento del BUG Team*: Sfrutta le caratteristiche della tua Civiltà, e specializza il tuo Impero. È inutile essere Carismatico ed Aggressivo e non iniziare neppure una guerra.</Italian>
+		<Italian>*Suggerimento del BUG Team*: Sfrutta le caratteristiche della tua Civiltà e specializza il tuo Impero. È inutile essere Carismatico e Aggressivo se poi non cominci nemmeno una guerra.</Italian>
 		<Spanish>*Consejo de BUG*: Juega bien los rasgos de tu civilización, y especializa tu imperio. No tiene ninguna utilidad ser un líder Carismático y Agresivo y no comenzar ninguna guerra.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Wykorzystuj dobrze cechy twojej cywilizacji i specjalizuj swoje imperium. Bezużyteczne jest bycie Charyzmatycznym lub Agresywnym bez wszczynania wojen.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_9</Tag>
-		<English>*BUG Hint*: Selling resources that you no longer use, such as copper or iron, can pay off nicely over the long run.</English>
+		<English>*BUG Hint*: Selling resources that you no longer use, such as copper or iron, can pay off nicely over the long run. Just remember to sell them to somebody weaker than you!</English>
 		<French>*Conseils du BUG*: Vendre des ressources que vous n'utilisez plus, comme le Cuivre ou le Fer, peut être très profitable. Veillez juste à les vendre à un ami plus faible que vous!</French>
 		<German>[BUG] Tipp... Der Verkauf von zwischenzeitlich unbrauchbaren Ressourcen, wie Kupfer oder Eisen, kann langfristig vorteilhaft sein, wenn der Käufer ein momentan noch schwacher Verbündeter ist.</German>
-		<Italian>*Suggerimento del BUG Team*: Vendere le risorse che non usi più, come Rame e Ferro, può rendere parecchio a lungo termine. Però assicurati di venderle ad una nazione amica più debole!</Italian>
+		<Italian>*Suggerimento del BUG Team*: Vendere le risorse che non usi più, come Rame o Ferro, può rendere parecchio a lungo termine. Però assicurati di venderle ad una nazione amica più debole!</Italian>
 		<Spanish>*Consejo de BUG*: Comerciar con recursos que ya no utilizas, como el Cobre o el Hierro, puede proveerte de ingresos para financiar tu carrera hacia la victoria.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Sprzedaż surowców, których już nie będziesz wykorzystywać - takich jak miedź czy żelazo, może się nieźle opłacić na dłuższą metę.</Polish>
 	</TEXT>
@@ -261,7 +259,7 @@
 		<Tag>TXT_KEY_C2C_HINT_1</Tag>
 		<English>C2C: When founding your first city seek out a prime location rather than founding it where you start. It may take you a few turns but it will be worth it in the long run. Especially since you cannot found another city until Tribalism tech.</English>
 		<French>C2C: En début de partie, prenez le temps pour choisir l'emplacement de votre première ville: car vous ne pourrez pas en fonder d'autres avant la découverte de Tribalisme.</French>
-		<Italian>C2C: Quando fondi la tua prima città, cerca una posizione ideale piuttosto che fondarla dove cominci. Potrebbero esserti necessari alcuni turni, ma sul lungo termine questa strategia darà i suoi frutti. Anche perchè non potrai fondare un'altra città fino alla scoperta del Tribalismo.</Italian>
+		<Italian>C2C: Quando fondi la tua prima città, cerca una posizione ideale piuttosto che fondarla dove cominci. Potrebbero esserti necessari alcuni turni, ma sul lungo termine questa strategia darà i suoi frutti. Anche perché non potrai fondare un'altra città fino alla scoperta del Tribalismo.</Italian>
 		<Spanish>C2C: Cuando fundes tu primera ciudad, busca una posición adecuada, en vez de fundarla en tu posición inicial. Podrá ocuparte unos cuantos turnos, pero merecerá la pena a largo plazo, ya que no puedes fundar otra ciudad hasta investigar el Tribalismo.</Spanish>
 		<Polish>C2C: Zanim założysz pierwsze miasto - rozejrzyj się. Może Ci to zająć kilka tur, ale w dalszej perspektywie przyniesie wymierne korzyści. Szczególnie, że nie będziesz mógł założyć kolejnego miasta przed wynalezieniem Plemienności.</Polish>
 	</TEXT>
@@ -277,7 +275,7 @@
 		<Tag>TXT_KEY_C2C_HINT_11</Tag>
 		<English>C2C: NIMBY or Not In My Back Yard buildings are buildings that may give you a high financial gain, but at the price of happiness and/or health. Such buildings include the Federal Prison, Toxic Waste Dump and Poacher's Camp. Build them at your own risk.</English>
 		<French>C2C: les bâtiments NIMBY or 'Not In My Back Yard' sont des bâtiments qui peuvent vous donner un gain financier élevé, mais au prix du bonheur et / ou de santé. Ces bâtiments sont par exemple une prison fédérale, de gestion de déchets toxiques, des Camps de braconniers. A construire à vos propres risques.</French>
-		<Italian>C2C: NIMBY (Not In My Back Yard) sono edifici che possono darti un grande introito finanziario, ma la prezzo di felicità e/o salute. Edifici del genere sono la Prigione di Massima Sicurezza, la Discarica per Rifiuti Tossici e il Campo dei bracconieri. Costruscili a tuo rischio e pericolo.</Italian>
+		<Italian>C2C: NIMBY (Not In My Back Yard) sono edifici che possono darti un grande introito finanziario, ma la prezzo di felicità e/o salute. Edifici del genere sono la Prigione di Massima Sicurezza, la Discarica per Rifiuti Tossici e il Campo dei bracconieri. Costruiscili a tuo rischio e pericolo.</Italian>
 		<Spanish>C2C: Los edificios NIMBY, o 'No detrás de mi patio' ('Not In My Back Yard') son edificios que pueden aportar grandes ganancias, pero a costa de la salud y/o la felicidad. Este grupo incluye la Prisión nacional, el Vertedero de residuos tóxicos y el Campamento de cazadores furtivos. Constrúyelos bajo tu propia responsabilidad.</Spanish>
 		<Polish>C2C: NIMBY (Not In My Back Yard) czyli Nie Na Moim Podwórku są to budynki, które dają bonusy ekonomiczne, ale za cenę szczęścia lub zdrowia np. Więzienie Stanowe, Wysypisko Odpadów Toksycznych i Obóz Kłusowników. Budujesz je na własną odpowiedzialność.</Polish>
 	</TEXT>
@@ -349,7 +347,7 @@
 		<Tag>TXT_KEY_C2C_HINT_2</Tag>
 		<English>C2C: If you have two different kinds of resources in your city vicinity, you may be able to build a Bonus Resource building.</English>
 		<French>C2C: Si vous avez 2 types de ressources différents dans le territoire de votre ville, vous pourrez peut-être construire un bâtiment de ressource Bonus.</French>
-		<Italian>C2C: Se hai due diversi tipi di risorse vicino alla tua città, potresti essere in gado di costruire un edificio bonus.</Italian>
+		<Italian>C2C: Se hai due diversi tipi di risorse vicino alla tua città, potresti essere in grado di costruire un edificio bonus.</Italian>
 		<Spanish>C2C: Si posees 2 recursos distintos en el radio de tu ciudad, tendrás a tu disposición un edificio de bonificación.</Spanish>
 		<Polish>C2C: Jeśli masz w zasięgu miasta 2 różne typy surowców, będziesz mógł zbudować Budynek dający bonus do zasobów.</Polish>
 	</TEXT>
@@ -420,7 +418,7 @@
 		<English>C2C: The Kong Miao from Confucianism provides a free Morale promotion to that city's units.</English>
 		<French>C2C: Le Kong Miao du Confucianisme donne la promotion 'Moral' aux unités de la ville.</French>
 		<German>C2C:The Kong Miao from Confucianism provides a free Morale promotion to that city's units.</German>
-		<Italian>C2C: Il Kong Miao fornsice la promozione gratuita Morale a tutte le unità prodotte in città.</Italian>
+		<Italian>C2C: Il Kong Miao fornisce la promozione gratuita Morale a tutte le unità prodotte in città.</Italian>
 		<Spanish>C2C: El Kong Miao, del Confucianismo, proporciona el ascenso Moral gratis a las unidades entrenadas en su ciudad.</Spanish>
 		<Polish>C2C: Kong Miao zapewnia darmową promocję Morale dla każdej jednostki wyszkolonej w mieście gdzie jest zbudowany.</Polish>
 	</TEXT>
@@ -437,7 +435,7 @@
 		<English>C2C: The best location to found your first city is at the mouth of a river and on a coast. Try to avoid jungles and flood plains since they are very unhealthy. Seek out forests instead.</English>
 		<French>C2C: Pour fonder votre première ville, nous vous conseillons de choisir l'embouchure d'une rivière, avec un accès à la mer. Essayez d'éviter les jungles et les plaines inondables, car elles sont très malsaines. Cherchez les forêts à la place.</French>
 		<German>C2C: Die erste Stadt sollte am besten an einer Flussmündung oder an der Küste gegründet werden. Dschungel und Marschland sollten unbedingt gemieden werden, da sie der Gesundheit der Bevölkerung nicht gerade zuträglich sind. Wald ist da eine wesentlich gesündere Alternative.</German>
-		<Italian>C2C: Il posto migliore per fondare la tua prima città è alla foce di un fiume o sulla costa. Evita le foreste e i terreni alluvionali perchè causano malattie; al contrario, prediligi le foreste.</Italian>
+		<Italian>C2C: Il posto migliore per fondare la tua prima città è alla foce di un fiume o sulla costa. Evita le foreste e i terreni alluvionali perché causano malattie; al contrario, prediligi le foreste.</Italian>
 		<Spanish>C2C: El mejor enclave para fundar tu primera ciudad es la desembocadura de un río o al lado de la costa. Intenta evitar las Selvas y los Terrenos de aluvión, son muy insalubres; busca Bosques en su lugar.</Spanish>
 		<Polish>C2C: Najlepszą lokacją dla Twojego pierwszego miasta jest wybrzeże lub nad rzeką. Staraj się unikać dżungli oraz terenów zalewowych są bardzo niezdrowe. Szukaj też lasów.</Polish>
 	</TEXT>
@@ -460,8 +458,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_32</Tag>
 		<English>C2C: When picking early targets for conquest, consider their native culture. Once one native culture is built in a Civ it pops up in all of your cities.</English>
-		<French>C2C: En choississant vos cibles de conquête, considérez leur culture, afin de l'assimiler.</French>
-		<Italian>C2C: Quando scegli i primi bersagli per la conquista, considera la loro cultura nativa. Una volta che una cultura nativa è costruita in una delle tue città, viene costruita in tutte le tue altre città.</Italian>
+		<French>C2C: Lorsque vous choisissez les premières cibles de conquête, tenez compte de leur culture d'origine. Une fois qu'une culture autochtone est construite dans une Civ, elle apparaît dans toutes vos villes.</French>
+		<Italian>C2C: Quando scegli i primi bersagli per la conquista, prendi in considerazione la loro cultura nativa. Una volta che una cultura viene costruita da una civiltà poi appare in tutte le città.</Italian>
 		<Spanish>C2C: Al buscar tus primeros objetivos para conquistar, considera su cultura materna. Una vez construida una cultura materna en la civilización, se propagará por todas tus ciudades.</Spanish>
 		<Polish>C2C: Kiedy zastanawiasz się nad kierunkiem podboju we wczesnej fazie gry, weź pod uwagę rdzenną kulturę. Raz zbudowana pojawia się we wszystkich miastach.</Polish>
 	</TEXT>
@@ -469,7 +467,7 @@
 		<Tag>TXT_KEY_C2C_HINT_33</Tag>
 		<English>C2C: When sending in spies, actually take the time to look at that Civs city list in the Espionage Screen. They may have a city that is insanely cheaper to spy on than any of the others.</English>
 		<French>C2C: Avant d'envoyer vos espions, prenez le temps d'examiner quelle ville est la plus vulnérable.</French>
-		<Italian>C2C: Quando madi in missione le spie, prenditi del tempo per guardare la lista delle città di quella civiltà nella Schermata dello spionaggio. Potrebbero avere una città molto più economica da spiare rispetto ad altre.</Italian>
+		<Italian>C2C: Quando mandi in missione le spie, prenditi del tempo per guardare la lista delle città di quella civiltà nella Schermata dello spionaggio. Potrebbero avere una città molto più economica da spiare rispetto ad altre.</Italian>
 		<Spanish>C2C: Cuando envíes espías, tómate tu tiempo para examinar la lista de ciudades de la civilización a espiar en el Consejero de Espionaje. Podrían tener una ciudad en la que espiar sea ilógicamente más barato.</Spanish>
 		<Polish>C2C: Gdy wysyłasz jednostki szpiegów, zajrzyj w ekran szpiegostwa by określić sytuację. Może istnieje miasto przeciwnika, w którym koszt operacji szpiegowskich jest szalenie niski.</Polish>
 	</TEXT>
@@ -493,7 +491,7 @@
 		<Tag>TXT_KEY_C2C_HINT_36</Tag>
 		<English>C2C: Upgrade your soldiers at the last second, like right before the attack.</English>
 		<French>C2C: Améliorez vos soldats à la dernière minute, juste avant l'attaque.</French>
-		<Italian>C2C: Migliroa i tuoi soldati all'ultimo secondo, ad esempio appena prima di un attacco.</Italian>
+		<Italian>C2C: Migliora i tuoi soldati all'ultimo secondo, ad esempio appena prima di un attacco.</Italian>
 		<Spanish>C2C: Mejora a tus soldados en el último segundo, por ejemplo justo antes de un ataque.</Spanish>
 		<Polish>C2C: Ulepszaj żołnierzy w ostatniej chwili, zaraz przed atakiem.</Polish>
 	</TEXT>
@@ -550,7 +548,7 @@
 		<English>C2C: Check out C2C Let's Play videos on YouTube by people like quill18, darrinus and shenryyr2.</English>
 		<French>C2C: Faites un tour sur Youtube pour voir les vidéos Let's Play, réalisée par quill18, darrinus et shenryyr2.</French>
 		<German>C2C: Auf YouTube findet ihr einige Let's-Play-Videos zu C2C, z.B. von quill18, darrinus und shenryyr2.</German>
-		<Italian>C2C: Controlla i video Let's Play di C2C su YouTube fatti da quill18, darrinus e shenryyr2.</Italian>
+		<Italian>C2C: Guarda i Let's Play di C2C su YouTube fatti da quill18, darrinus e shenryyr2.</Italian>
 		<Spanish>C2C: Échale un vistazo a los vídeos de 'C2C Let's Play' en YouTube, hechos por gente como quill18, darrinus y shenryyr2 (en inglés).</Spanish>
 		<Polish>C2C: Sprawdź filmiki Let's Play C2C na YouTube osób takich jak quill18, darrinus et shenryyr2.</Polish>
 	</TEXT>
@@ -558,7 +556,7 @@
 		<Tag>TXT_KEY_C2C_HINT_43</Tag>
 		<English>C2C: Check out the various alt-timeline techs such as Clockpunk, Steampunk, Dieselpunk and Atompunk. Each have their own special buildings and units.</English>
 		<French>C2C: Vous pouvez trouver dans C2C des découvertes alternatives, comme le Clockpunk, Steampunk, Dieselpunk, Atmpunk. Chacune de ces découvertes dispose de bâtiments et unités spécifiques qui peuvent diversifier votre Gameplay.</French>
-		<Italian>C2C: Controlla le tecnologie delle alt-timeline come Clockpunk, Steampunk, Dieselpunk and Atompunk. Ognuna ha i propri edifici e unità speciali.</Italian>
+		<Italian>C2C: Dai un'occhiata alle tecnologie delle timeline alternative Clockpunk, Steampunk, Dieselpunk and Atompunk. Ognuna ha i propri edifici e unità speciali.</Italian>
 		<Spanish>C2C: Prueba las diversas tecnologías de historia alternativa, como Clockpunk, Steampunk, Dieselpunk y Atompunk. Cada una de ellas tiene sus propios edificios y unidades especiales.</Spanish>
 		<Polish>C2C: Sprawdź możliwości nowych technologii alternatywnych czasów takich jak: Clockpunk, Steampunk, Dieselpunk, Atompunk. Każda posiada swoje unikalne budynki i jednostki.</Polish>
 	</TEXT>
@@ -567,7 +565,7 @@
 		<English>C2C: The Main Menu theme song is "Civilization WITH LYRICS" by brentalfloss. Check out more of his hilarious music at brentalfloss.com.</English>
 		<French>C2C: La chanson du menu principal est "Civilization WITH LYRICS" de brentalfloss. Visitez les site brentalfloss.com pour d'autres musiques aussi hilarantes.</French>
 		<German>C2C: Beim neuen Titelsong handelt es sich um "Civilization WITH LYRICS" von Brentalfloss. Auf seiner Webseite brentalfloss.com findet ihr die gesamte WITH-LYRICS-Reihe mit noch vielen weiteren aus Computerspielen bekannten Musikstücken.</German>
-		<Italian>C2C: La canzone del Menù principale è "Civilization WITH LYRICS" di brentalfloss. Trova ltra musica divertente a brentalfloss.com.</Italian>
+		<Italian>C2C: La canzone del Menù principale è "Civilization WITH LYRICS" di brentalfloss. Ascolta le sue divertenti canzoni su brentalfloss.com.</Italian>
 		<Spanish>C2C: El tema musical del Menú principal es "Civilization WITH LYRICS" de brentalfloss. Puedes escuchar más temas de su hilarante música en brentalfloss.com.</Spanish>
 		<Polish>C2C: utwór w Menu Głównym to "Civilization WITH LYRICS" autor: brentalfloss. Jego twórczość możesz zobaczyć na: brentalfloss.com</Polish>
 	</TEXT>
@@ -599,13 +597,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_49</Tag>
 		<English>C2C: Storytellers can build special Dance buildings. They can give you the early game boost you need to get ahead.</English>
-		<French>C2C: Les conteurs d'hisoires peuvent construire des bâtiments de danse spéciaux. Ils peuvent vous donner le coup de pouce dont vous avez besoin pour avancer.</French>
+		<French>C2C: Les conteurs d'histoires peuvent construire des bâtiments de danse spéciaux. Ils peuvent vous donner le coup de pouce dont vous avez besoin pour avancer.</French>
 		<Polish>C2C: Opowiadacze mogą "budować" specjalne budynki-tańce. Dzięki nim możesz zwiększyć rozwój swoich miast na wczesnym etapie rozgrywki.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_5</Tag>
 		<English>C2C: Power Plants have been redone for C2C. They not give you production based on their amount of power. You can also make more than one per city. However they require you have Power Lines in your city before building them. 100 MW = +1 Production</English>
-		<French>C2C: Les Centrales Electriques ont été revues pour C2C. Elles vous donneront de la production en fonction de leur quantité d'énergie. Vous pouvez ainsi en construire plus d'une par ville. Toutefois, il est nécessaire d'avoir des lignes électriques dans votre ville avant de les construire. 100 MW = +1 production</French>
+		<French>C2C: Les Centrales Électriques ont été revues pour C2C. Elles vous donneront de la production en fonction de leur quantité d'énergie. Vous pouvez ainsi en construire plus d'une par ville. Toutefois, il est nécessaire d'avoir des lignes électriques dans votre ville avant de les construire. 100 MW = +1 production</French>
 		<Italian>C2C: Le centrali elettriche sono state rifatte per C2C. Non danno produzione in base alla quantità di energia. Puoi anche farne più di una per città; in ogni caso, richiedono Linee Elettriche prima di essere costruite. 100 MW = +1 Produzione</Italian>
 		<Spanish>C2C: Las centrales eléctricas han sido rediseñadas en C2C. Estas proporcionarán producción en función de la energía que produzcan; además, puedes construir más de una por ciudad. Sin embargo, todas requieren la presencia de Tendido eléctrico en tu ciudad para poder construirse. 100 MW = +1 producción.</Spanish>
 		<Polish>C2C: Elektrownie zostały całkowicie przerobione w C2C. Możesz zbudować więcej niż jedną na miasto. Tak czy inaczej potrzebujesz wybudować linie wysokiego napięcia żeby zbudować elektrownie. 100 MW = +1 do Produkcji</Polish>
@@ -628,14 +626,14 @@
 		<Tag>TXT_KEY_C2C_HINT_7</Tag>
 		<English>C2C: "Garbage" is a new civic in C2C. At first you cannot do much about garbage, but as you discover new techs you can remove it from your empire by throwing it into the sea, burring it in a landfill, shipping to another empire or even sending it off into space! However if you think you can handle some more trash you can even import it from other empires and gain a profit from it.</English>
 		<French>C2C: "Gestion des déchêts " est une nouvelle doctrine de C2C. Au début, vous ne pouvez pas faire grand-chose au sujet des déchets, mais comme vous découvrirez de nouvelles technologies, vous pourrez supprimer ces ordures de votre empire, soit en le jetant dans la mer, en les enfouissant dans une décharge, en les expédiant vers un autre empire, voire en les envoyant dans l'espace! Toutefois, si souhaitez en faire une priorité et gérer les déchets un peu plus, vous aurez même la possibilité d'importer ceux d'autres empires et en tirer profit.</French>
-		<Italian>C2C: "Rifiuti" è una nuova forma di governo in C2C. All'inizio non puoi fare molto riguardo ai rifiuti, ma scoprendo nuove tecnologie puoi rimuoverli dal tuo impero, gettandoli in mare, seppellendoli nelle discariche, vendnenoli ad altri imperi o perfino lanciandoli nello spazio! In ogni caso, puoi anche importarli da altriimperi per ottenere dei profitti.</Italian>
+		<Italian>C2C: "Rifiuti" è una nuova forma di governo in C2C. All'inizio non puoi fare molto riguardo ai rifiuti, ma scoprendo nuove tecnologie puoi rimuoverli dal tuo impero, gettandoli in mare, seppellendoli nelle discariche, vendendoli ad altri imperi o perfino lanciandoli nello spazio! In ogni caso, puoi anche importarli da altri imperi per ottenere dei profitti.</Italian>
 		<Spanish>C2C: "Residuos" es una nueva categoría de principios de C2C. Al principio no puedes hacer gran cosa respecto a los residuos, pero una vez vayas descubriendo nuevas tecnologías, podrás eliminarlos de tu imperio, ya sea tirándolos al agua, enterrándolos en un vertedero, vendiéndoselos a otro imperio, ¡o incluso enviándolos al espacio! Sin embargo, si crees que puedes manipular algo más de basura, puedes importarla de otros imperios y sacar un beneficio de ello.</Spanish>
 		<Polish>C2C: "Gospodarka Odpadami" to nowa doktryna w C2C. Na początku nie możesz robić wiele ze śmieciami, ale po wynalezieniu odpowiednich technologi możesz je wyrzucić do morza, spalić, eksportować do innego kraju lub wysłać w kosmos! Tak czy inaczej jeśli możesz importować śmieci i jesteś w stanie to utrzymać to możesz na tym zarobić!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_8</Tag>
 		<English>C2C: There are lots of buildings to create now, however not all cities can build every type of building. Many are limited by resources in the city vicinity, what civic you have active and even what buildings you already have built.</English>
-		<French>C2C: Il ya beaucoup de bâtiments à construire à présent, mais ils ne sont pas tous diponibles dans toutes les villes. Beaucoup sont limités par les ressources entourant chaque ville, les doctrines adoptées et même les bâtiments que vous avez déjà construits.</French>
+		<French>C2C: Il ya beaucoup de bâtiments à construire à présent, mais ils ne sont pas tous disponibles dans toutes les villes. Beaucoup sont limités par les ressources entourant chaque ville, les doctrines adoptées et même les bâtiments que vous avez déjà construits.</French>
 		<Italian>C2C: Ci sono moltissimi edifici da costruire, anche se non tutte le città possono costruire ogni tipo di edificio. Molti sono limitati dalle risorse nelle vicinanze della città, dall'attuale forma di governo e dagli edifici che sono già stati costruiti.</Italian>
 		<Spanish>C2C: Ahora hay muchísimos edificios a construir, aunque no todas las ciudades pueden construir cada tipo de edificio. Muchos están limitados por algún recurso en el radio de la ciudad, por el principio que tengas activo, e incluso por los edificios ya construidos.</Spanish>
 		<Polish>C2C: Teraz jest mnóstwo budynków do wybudowania, ale nie w każdym mieście możesz wybudować wszystkie budynki. Dostęp do wielu jest ograniczony przez surowce dostępne w zasięgu miasta, doktryny czy budynki wcześniej zbudowane.</Polish>
@@ -755,7 +753,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_15</Tag>
 		<English>*Revolutions Mod Hint*: At some point, underlying rebellion can explode into violence no matter what you do. Be ready with law enforcement troops if needed!</English>
-		<French>*Conseil Mod Revolution*: D'une certaine façon, la rébellion peut parfois exploser de manière violente indépendemment de vos actions. Soyez prêts à renforcer vos armées si nécessaire!</French>
+		<French>*Conseil Mod Revolution*: D'une certaine façon, la rébellion peut parfois exploser de manière violente indépendamment de vos actions. Soyez prêts à renforcer vos armées si nécessaire!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Ad un certo punto, la rivolta può scoppiare in violenze, indipendentemente da quello che cerchi di fare! Sii pronto ad usare l'esercito per riportare l'ordine, se occorre!</Italian>
 		<Spanish>*Consejo de Revolution*: En algún momento, la revolución pueden estallar desencadenando la violencia, no importa lo que hagas. ¡Ten preparadas a las tropas para restablecer el orden si fuera necesario!</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: W pewnym momencie, ukryty bunt może prowadzić do przemocy, obojętnie co robisz. Bądź wiec gotów, by wymusić posłuszeństwo wojskiem jeśli zajdzie taka potrzeba!</Polish>
@@ -819,8 +817,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_22</Tag>
 		<English>*Revolutions Mod Hint*: Bribery is an important strategic element in advanced Revolutions play.</English>
-		<French>*Conseil Mod Revolution*: La Corruption est un élément stratéqieu important dans le Jeu avec Revolutions.</French>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: La corruzione è un elemento fondamentele di strategia nel gioco avanzato con 'Revolutions'.</Italian>
+		<French>*Conseil Mod Revolution*: La Corruption est un élément stratégique important dans le Jeu avec Revolutions.</French>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: La corruzione è un elemento fondamentale di strategia nel gioco avanzato con 'Revolutions'.</Italian>
 		<Spanish>*Consejo de Revolution*: Los sobornos son un importante elemento estratégico en el juego avanzado en Revolution.</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Przekupstwo jest ważnym strategicznym elementem w późniejszym etapie gry.</Polish>
 	</TEXT>
@@ -829,7 +827,7 @@
 		<English>*Revolutions Mod Hint*: If you pay out cash to one city in order to keep it quiet, other cities may increase their disloyalty too... unless you pay up to them as well!</English>
 		<French>*Conseil Mod Revolution*: Si vous payez une Ville pour la réduire au silence, les autres Villes pourraient se montrer de moins en moins loyales également... jusqu'à que vous ayez à payer pour toutes!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Se cominci a pagare una città per mantenere la calma, altre città potranno aumentare il loro dissenso... fino quando non pagherai anche loro!</Italian>
-		<Spanish>*Consejo de Revolution*: Si repartes dinero en una ciudad para mantener el orden, otras ciudades también podrian incrementar su deslealtad... ¡a no ser que les pagues tambien a ellos!</Spanish>
+		<Spanish>*Consejo de Revolution*: Si repartes dinero en una ciudad para mantener el orden, otras ciudades también podrian incrementar su deslealtad... ¡a no ser que les pagues también a ellos!</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Jeżeli zaczniesz inwestować w jedno z miast by utrzymać spokój, inne miasta mogą zwiększyć swoją nielojalność wobec Ciebie - chyba, że je również dobrze opłacisz!</Polish>
 	</TEXT>
 	<TEXT>
@@ -868,7 +866,7 @@
 		<Tag>TXT_KEY_REVDCM_HINT_28</Tag>
 		<English>*Revolutions Mod Hint*: The speed of city growth is one important aspect of advanced Revolutions game play. Keep city growth capped if need be, but not too long either!</English>
 		<French>*Conseil Mod Revolution*: La croissance de la ville est un aspect important des jeu avec Revolution. Contrôlez et ralentissez la croissance si nécessaire, mais pas trop longtemps non plus!</French>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: La velocità di crescita delle città è un aspetto importante del gioco avanzato in 'Revolutions'. Se necessario mantienila limitata, ma non per troppo tempo!</Italian>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: La velocità di crescita delle città è un aspetto importante del gioco avanzato in 'Revolutions'. Se necessario, tienila sotto controllo, ma non per troppo tempo!</Italian>
 		<Spanish>*Consejo de Revolution*: La velocidad de crecimiento de las ciudades es un aspecto importante del juego avanzado en Revolution. Mantén restringido el crecimiento de las ciudades si es necesario, ¡pero tampoco te pases!</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Szybkość wzrostu miasta jest jednym z ważnych aspektów późniejszej rozgrywki. Wstrzymaj wzrost miasta jeżeli zajdzie taka potrzeba, ale nie za długo!</Polish>
 	</TEXT>
@@ -996,7 +994,7 @@
 		<Tag>TXT_KEY_REVDCM_HINT_42</Tag>
 		<English>*Revolutions Mod Hint*: Distant settlements need special attention. Give them extras like cultural assets, defence assets and military support to ensure that you are looking after them!</English>
 		<French>*Conseil Mod Revolution*: Les Villes distantes ont besoin d'une attention particulière. Donnez-leur des bâtiments supplémentaires (culturels, défensifs...) et également le soutien militaire nécessaire pour leur assurer que vous les considérez et ne les oubliez pas!</French>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: Insediamenti lontani devno essere seguiti con attenzione. Sviluppa per loro infrastrutture culturali e militari aggiuntive, per convincerli che ti prendi cura di loro!</Italian>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: Insediamenti lontani devono essere seguiti con attenzione. Sviluppa per loro infrastrutture culturali e militari aggiuntive, per convincerli che ti prendi cura di loro!</Italian>
 		<Spanish>*Consejo de Revolution*: Los asentamientos lejanos requieren especial cuidado. Proporciónales elementos como infraestructuras culturales o soporte militar... ¡para que sus habitantes noten que te preocupas por ellos!</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Dalekie osady potrzebują specjalnej uwagi. Zapewnij im więc kulturę, obronę i wsparcie wojskowe, by udowodnić, że dbasz o nie!</Polish>
 	</TEXT>
@@ -1069,7 +1067,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_50</Tag>
 		<English>*Revolutions Mod Hint*: A long term unstable settlement along way from home is not a bad thing. So long as there is strong military presence, medium term cycles of anarchy are manageable.</English>
-		<French>*Conseil Mod Revolution*: Une Ville Distante régulièrement instable n'est pas forcément une mauvaise chose. Tant qu'il y a une présence militaire importante, des cycles moyens d'anrachie sont 'gérables'.</French>
+		<French>*Conseil Mod Revolution*: Une Ville Distante régulièrement instable n'est pas forcément une mauvaise chose. Tant qu'il y a une présence militaire importante, des cycles moyens d'anarchie sont 'gérables'.</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: L'instabilità perdurante di un insediamento lontano non è una cosa negativa. Finché vi è una forte presenza militare, brevi periodi di anarchia sono gestibili.</Italian>
 		<Spanish>*Consejo de Revolution*: Un asentamiento lejano e inestable a largo plazo no es algo negativo. Mientras mantenga una presencia militar considerable, sus posibles periodos de anarquía intermitente serán manejables.</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Długi okres niestabilności osady, oddalonej od stolicy, nie jest złą rzeczą. O ile jest w niej obecna silna armia, średni okres cyku anarchii jest łagodniejszy.</Polish>
@@ -1134,7 +1132,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_58</Tag>
 		<English>*Barbarian Civ Hint*: The emergence of minor civs with capable armies may appear unfair, but remember that they need something to ensure a chance of long term survival.</English>
-		<French>*Conseil Civ. Barbare*: L'émergence de civilisations mineures avec une puissante armée peut vous apparaître injuste, mais noubliez-pas qu'il leur faut un minimum d'unités pour avoir une chance de survie à long terme.</French>
+		<French>*Conseil Civ. Barbare*: L'émergence de civilisations mineures avec une puissante armée peut vous apparaître injuste, mais n'oubliez-pas qu'il leur faut un minimum d'unités pour avoir une chance de survie à long terme.</French>
 		<Italian>*Suggerimento da 'Barbarian Civ'*: La nascita di Civiltà Minori con forze militari può sembrare ingiusta, ma ricorda che hanno bisogno di qualcosa che garantisca loro la possibilità di una lunga sopravvivenza.</Italian>
 		<Spanish>*Consejo de BarbarianCiv*: El hecho de que las civilizaciones menores aparezcan con ejércitos listos para el combate puede parecer injusto y desproporcionado, pero recuerda que necesitan algo para asegurar la supervivencia a largo plazo.</Spanish>
 		<Polish>*Podpowiedź do moda Cywilizacja Barbarzyńców*: Może Ci się wydać nieuczciwe, pojawienie się mniejszej cywilizacji z dobrą armią, ale pamiętaj, że będzie to warunek przetrwania tej cywilizacji.</Polish>
@@ -1262,7 +1260,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_72</Tag>
 		<English>*Revolutions Mod Hint*: If you really want democracy, have it! But reform doesn't end there!</English>
-		<French>*Conseil Mod Revolution*: Si vous voulez absolument la démocracie, mettez-la en place! Mais les réformes ne s'arrêtent pas là!</French>
+		<French>*Conseil Mod Revolution*: Si vous voulez absolument la démocratie, mettez-la en place! Mais les réformes ne s'arrêtent pas là!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Se desideri veramente la democrazia, mettila in pratica! Ma le riforme non si limitano a questo!</Italian>
 		<Spanish>*Consejo de Revolution*: Si de verdad quieres la Democracia, ¡adóptala! Pero las reformas no deberían acabar ahí.</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Jeżeli naprawdę chcesz demokracji, zrób to! Ale reforma nie kończy się na tym!</Polish>
@@ -1350,7 +1348,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_82</Tag>
 		<English>*DCM Hint*: If you want to take down a cities defences at maximum thrift, just straight bombard the city defences and leave the defenders until there is no where for them to hide.</English>
-		<French>*Conseils DCM*: Si vous voulez abattre les défenses d'une ville le plus efficacement, Bomberez uniquement les défences, et laissez les défenseurs jusqu'à qu'ils n'aient plus d'endroit où se cacher.</French>
+		<French>*Conseils DCM*: Si vous voulez abattre les défenses d'une ville le plus efficacement, Bomberez uniquement les défenses, et laissez les défenseurs jusqu'à qu'ils n'aient plus d'endroit où se cacher.</French>
 		<Italian>*Suggerimento da MOD 'RevDCM'*: Se vuoi abbattere le difese cittadine con il minimo costo, colpisci solo le difese e lascia stare i difensori, finché non rimane nulla in cui nascondersi.</Italian>
 		<Spanish>*Consejo de DCM*: Si quieres tomar una ciudad con el mínimo esfuerzo, bombardea únicamente las defensas enemigas y deja a los defensores para el momento en que no tengan dónde esconderse.</Spanish>
 		<Polish>*Podpowiedź do moda DCM*: Jeżeli chcesz zniszczyć obronę miasta do zera, użyj prostego bombardowania obrony miasta i zostaw obrońców, dopóki nie będą mieli się za czym schować.</Polish>
@@ -1496,7 +1494,7 @@
 		<Tag>TXT_KEY_REVDCM_HINT_99</Tag>
 		<English>*Super Spies*: Experiment with different combinations of spy promotions. Who knows, you might end up with your own James Bond!</English>
 		<French>*Super Espions*: Expérimentez différentes combinaisons de promotions des espions. Qui sait, vous pourrez finir avec votre propre James Bond!</French>
-		<Italian>*Suggerimento del MOD 'Super Spie'*: Prova con diverse combinazioni di promozioni spia. Chi lo sa, potersti trovare il tuo James Bond!</Italian>
+		<Italian>*Suggerimento del MOD 'Super Spie'*: Prova con diverse combinazioni di promozioni spia. Chi lo sa, potresti trovare il tuo James Bond!</Italian>
 		<Spanish>*Consejo de Super Spies*: Experimenta con diferentes combinaciones de ascensos para los espías. Quién sabe, ¡lo mismo acabas con tu propio James Bond!</Spanish>
 		<Polish>*Super Szpiedzy*: Eksperymentuj z różnymi kombinacjami promocji szpiegowskich. Kto wie,możesz skończyć ze swoim własnym Jamesem Bondem!</Polish>
 	</TEXT>
@@ -1584,7 +1582,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_19</Tag>
 		<English>Caveman2Cosmos: The Encyclopedia project gives access to all techs that 3 other Civilizations have discovered. If you're falling behind in tech race, try to complete this project.</English>
-		<French>Caveman2Cosmos: Le Projet 'Encyclopédie' donne accès à toutes les technologies découvertent par au moins 3 civilisatoin. Donnez la priorité à ce projet si vous êtes en retard en recherche.</French>
+		<French>Caveman2Cosmos: Le Projet 'Encyclopédie' donne accès à toutes les technologies découverte par au moins 3 civilisation. Donnez la priorité à ce projet si vous êtes en retard en recherche.</French>
 		<Italian>Caveman2Cosmos: L'Enciclopedia dà accesso a tutte e tecnologie che altre 3 civiltà hanno scoperto. Se stai perdendo la corsa alle tecnologie, cerca di completare questo progetto.</Italian>
 		<Spanish>Caveman2Cosmos: El proyecto de la Enciclopedia da acceso a todas las tecnologías descubiertas por otras 3 civilizaciones. Intenta completar este proyecto si te quedas atrás en la carrera tecnológica.</Spanish>
 		<Polish>Caveman2Cosmos: Projekt Encyklopedia daje dostęp do wszystkich technologii które posiadają 3 inne cywilizacje. Jeśli jesteś w tyle z rozwojem technologicznym, spróbuj zbudować ten projekt</Polish>
@@ -1609,7 +1607,7 @@
 		<Tag>TXT_KEY_ROM_HINT_21</Tag>
 		<English>Caveman2Cosmos: Colonist builds city of size 3 with several buildings and Pioneer builds city of size 4 with many buildings.</English>
 		<French>Caveman2Cosmos: Les Colonistes construisent des Villes de taille initiale 3 avec déjà quelques bâtiments, et les Pionniers des Villes de taille 4 avec beaucoup de bâtiments.</French>
-		<Italian>Caveman2Cosmos: Il colonista costruisce città di dimensione 3 con molti edifici; il Pioniere costruisce città di dimensione 4 con ancora più edifici.</Italian>
+		<Italian>Caveman2Cosmos: Il Colono costruisce città di dimensione 3 con molti edifici; il Pioniere costruisce città di dimensione 4 con ancora più edifici.</Italian>
 		<Spanish>Caveman2Cosmos: El Colonizador construye ciudades de tamaño 3 con diversos edificios, y el Pionero construye ciudades de tamaño 4 con aún más edificios.</Spanish>
 		<Polish>Caveman2Cosmos: Kolonista buduje miasto o rozmiarze 3 z kilkoma budynkami, a Pionier buduje miasto o rozmiarze 4 z większą ilością budynków.</Polish>
 	</TEXT>
@@ -1625,7 +1623,6 @@
 		<Tag>TXT_KEY_ROM_HINT_23</Tag>
 		<English>Caveman2Cosmos: Religious Shrines are no longer marked as great wonders. You can build them in their Holy City even if it has the max amount of Great Wonders already.</English>
 		<French>Caveman2Cosmos: Les Lieux Saints ne sont plus considérés comme des Merveilles et ne comptent donc pas dans la limite de Merveilles par villes.</French>
-		<German>Caveman2Cosmos: Religious Shrines are no longer marked as great wonders. You can build them in their Holy City even if it has the max amount of Great Wonders alread.</German>
 		<Italian>Caveman2Cosmos: Gli altari religiosi non sono più Grandi Meraviglie. Ora puoi costruirli nella relativa città santa anche se ha già costruito il massimo numero disponibile di Meraviglie.</Italian>
 		<Spanish>Caveman2Cosmos: Los Altares religiosos han dejado de ser considerados Grandes maravillas. Puedes construirlos en su Ciudad Santa aunque ya tengas el máximo número de Grandes maravillas construidas en ella.</Spanish>
 		<Polish>Caveman2Cosmos: Sanktuaria religijne nie są dłużej traktowane jako wielkie cuda. Możesz budować je w Świętym Mieście nawet jeśli posiada ono już maksymalną ilość Wielkich Cudów</Polish>
@@ -1692,7 +1689,7 @@
 		<Tag>TXT_KEY_ROM_HINT_31</Tag>
 		<English>Caveman2Cosmos: If you think there's still not enough content in this modpack, you could visit C2C Modmods subforum at Civfanatics.com site and install some extra modules from the several hundred modules that are available there.</English>
 		<French>Caveman2Cosmos: Si vous trouvez qu'il n'y a toujours pas assez de contenu dans ce 'modpack', visitez les sous-forum 'C2C Modmods' sur Civfanatics.com et installez les modules additionnels disponibles.</French>
-		<Italian>Caveman2Cosmos: Se pensi che non ci sia abbastanza contenuto in questa Mod, puoi visitare il suboforum di C2C su Civfanatics.com, instanllando nuovi moduli tra quelli che sono disponibili.</Italian>
+		<Italian>Caveman2Cosmos: Se pensi che non ci sia abbastanza contenuto in questa Mod, puoi visitare il sub-forum di C2C su Civfanatics.com, installando nuovi moduli tra quelli che sono disponibili.</Italian>
 		<Spanish>Caveman2Cosmos: Si crees que este mod no incluye suficiente contenido, puedes visitar la sección de modificaciones del mod ('C2C Modmods') en civfanatics.com, e instalar módulos adicionales de entre los que se encuentran disponibles.</Spanish>
 		<Polish>Caveman2Cosmos: Jeśli RoM ma ciągle za mało rzeczy dla Ciebie, odwiedź subforum poświęcone Rom na forum Civfanatics.com i do instaluj sobie modmody.</Polish>
 	</TEXT>
@@ -1700,7 +1697,7 @@
 		<Tag>TXT_KEY_ROM_HINT_32</Tag>
 		<English>Caveman2Cosmos: Pressing [ALT+X] turns on the strategy overlay feature that allows you to plan where to put your cities. Pressing same button combination turns it off. To view the strategy overlay just press [CTRL+X].</English>
 		<French>Caveman2Cosmos: Appuyez sur [ALT+X] pour faire apparaître l'interface en mode édition vous permettant de planifier l'emplacement de vos Villes. La même combinaison de touches permet de la masquer à nouveau, et [CTRL+X] permet de l'afficher.</French>
-		<German>Caveman2Cosmos: Mit der Tastenkombination [ALT + X] lässt sich ein Strategieoverlay für die Vorausplanung von Stadtgründungen aktivieren. Ein erneutes Betätigen derselben Kombination deaktiviert es wieder. Geplante Stadtraster werden in der ausgewählten Farbe gespeichert und lassen sich mit der Tastenkombination [STRG + X] jederzeit anzeigen.</German>
+		<German>Caveman2Cosmos: Mit der Tastenkombination [ALT + X] lässt sich ein Strategie-overlay für die Vorausplanung von Stadtgründungen aktivieren. Ein erneutes Betätigen derselben Kombination deaktiviert es wieder. Geplante Stadtraster werden in der ausgewählten Farbe gespeichert und lassen sich mit der Tastenkombination [STRG + X] jederzeit anzeigen.</German>
 		<Italian>Caveman2Cosmos: Premendo [ALT+X] attivi la visione strategica, che ti permette di pianificare dove mettere le tue città. Premilo nuovamente per disattivare questa modalità. Per vedere semplicemente la visione strategica tieni premuto [CTRL+X].</Italian>
 		<Spanish>Caveman2Cosmos: La combinación [ALT+X] activa la característica de la Capa estratégica, que te permite planificar dónde asentar tus futuras ciudades. Se desactiva al pulsar la misma combinación de nuevo.</Spanish>
 		<Polish>Caveman2Cosmos: Wciśnij [ALT+X] aby zaplanować rozmieszczenie miast. Jeśli chcesz zobaczyć lub ukryć planowanie kliknij [CTRL+X].</Polish>
@@ -1757,7 +1754,7 @@
 		<Tag>TXT_KEY_ROM_HINT_39</Tag>
 		<English>Caveman2Cosmos: The Route system has been completely redesigned and during the game you gain access to 8 different route types. Each route type has different movement speeds and some require resources and gold to build them. Advanced routes might be the key to victory during war times.</English>
 		<French>Caveman2Cosmos: Le système de Routes a été complètement revu, et comporte maintenant 8 type de routes. Chaque type de route engendre des vitesses de déplacement différentes et certaines routes nécessite des ressources particulières et de l'or pour être construite. Les routes avancées peuvent être la clé de la Victoire en temps de Guerre.</French>
-		<Italian>Caveman2Cosmos: Il sistema stradale è stato completamente ridisegnato e durante il gioco puoi costruire 8 diversi tipi di strade. Ogni strada influisce in diverso modo sul movimento; alcune richiedono oro e risorsse per essere costruite. Le strade più moderne sono la chiave per la vittoria durante la guerra.</Italian>
+		<Italian>Caveman2Cosmos: Il sistema stradale è stato completamente ridisegnato e durante il gioco puoi costruire 8 diversi tipi di strade. Ogni strada influisce in diverso modo sul movimento; alcune richiedono oro e risorse per essere costruite. Le strade più moderne sono la chiave per la vittoria durante la guerra.</Italian>
 		<Spanish>Caveman2Cosmos: El sistema de caminos ha sido rediseñado por completo, y tendrás acceso a 8 tipos diferentes de caminos durante el curso de la partida. Cada tipo tiene una velocidad de movimiento distinta, y algunos de ellos requieren algún recurso y/u oro para poder construirlos. Una red de caminos avanzados puede ser la clave para la victoria en tiempos de guerra.</Spanish>
 		<Polish>Caveman2Cosmos: System dróg został kopletnie przerobiony, dając dostęp do 8 rodzajów dróg. Każda droga umożliwia inną prędkość poruszania się, niektóre wymagają złota lub surowca. Zaawansowany system dróg może być kluczem do zwycięstwa w czasie wojny.</Polish>
 	</TEXT>
@@ -1773,7 +1770,7 @@
 		<Tag>TXT_KEY_ROM_HINT_40</Tag>
 		<English>Caveman2Cosmos: With the Barbarian World game option the barbarians start with a free city for every civilization in the game. Combined with Barbarian Civ game option you'll see those Barbarian civs to grow into new civilizations earlier than with just the Barbarian Civ game option alone - if you survive the barbarian hordes...</English>
 		<French>Caveman2Cosmos: Avec l'option 'Monde Barbare' les barbares démarrent avec une Ville pour chaque civilisation de la partie. Combinée avec l'option 'Civ Barbare', vous allez voir ces Villes barbares rapidement faire émerger de nouvelles Civilisations - si vous survivez aux hordes barbares...</French>
-		<Italian>Caveman2Cosmos: Con l'opzione Mondo barbarico, i barbari cominciano il gioco con una città per ogni civiltà in gioco. Combinato con l'opzione civiltà barbare vedrai spunatre molto prima nuove civiltà, ovviamente se riesci a sopravvivere all'orda barbarica...</Italian>
+		<Italian>Caveman2Cosmos: Con l'opzione Mondo barbarico, i barbari cominciano il gioco con una città per ogni civiltà in gioco. Combinato con l'opzione civiltà barbare vedrai spuntare molto prima nuove civiltà, ovviamente se riesci a sopravvivere all'orda barbarica...</Italian>
 		<Spanish>Caveman2Cosmos: Con la opción de partida 'Mundo bárbaro', los bárbaros comenzarán con una ciudad por cada civilización en la partida. Si la combinas con la opción 'Civilizaciones bárbaras' podrás observar cómo dichas ciudades bárbaras se convierten en civilizaciones más rapido... si sobrevives a las hordas de bárbaros, claro...</Spanish>
 		<Polish>Caveman2Cosmos: Z włączoną opcją Barbarzyński Świat, barbarzyńcy rozpoczynają z miastami. Kombinacja z Cywilizacjami Barbarzyńców może dać wcześnie nowe cywilizacje, ale tylko jeśli przetrwasz hordy barbarzyńców...</Polish>
 	</TEXT>
@@ -1804,7 +1801,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_8</Tag>
 		<English>Caveman2Cosmos: Mines work differently now. They automatically upgrade to Shaft Mine just like Cottage upgrades to Town. Mines also give +1 hammer when you build road there.</English>
-		<French>Caveman2Cosmos: Les aménagements de terrain comme les mines peuvent également évoluer: Elles sont améliorées automatiquement en puits de mine (même système que pour les cotages). De plus, construire une route près d'une mine permet +1 en production.</French>
+		<French>Caveman2Cosmos: Les aménagements de terrain comme les mines peuvent également évoluer: Elles sont améliorées automatiquement en puits de mine (même système que pour les cottages). De plus, construire une route près d'une mine permet +1 en production.</French>
 		<Italian>Caveman2Cosmos: Le miniere funzionano diversamente adesso; diventano automaticamente Miniere a cielo aperto, allo stesso modo in cui i villaggi diventano paesi. Inoltre, costruendo una strada le miniere ottengono +1 produzione.</Italian>
 		<Spanish>Caveman2Cosmos: Las minas funcionan de forma distinta: ahora mejoran automáticamente a Minas profundas tal y como las Villas mejoran a Pueblos. También proporcionan +1 a la producción al construir un camino hacia ellas.</Spanish>
 		<Polish>Caveman2Cosmos: Kopalnie działają teraz inaczej. Automatycznie unowocześniają się na Kopalnię Szybowe tak samo jak Osada zamieniająca się w Miasteczko. Kopalnie dodają dodatkowo +1 do produkcji kiedy zbudujesz na nich drogę.</Polish>

@@ -1287,6 +1287,11 @@
 		<Polish>[ICON_BULLET]Włącza pełną funkcjonalność wszystkich budynków religijnych bez względu na Religię Państwową.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ALL_RESOURCES</Tag>
+		<English>All Resources</English>
+		<French>Toutes Ressources</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_AND_UNITS_PER_TILE</Tag>
 		<English>%d1 Units Per Tile</English>
 		<French>%d1 Unités par Case</French>
@@ -1444,7 +1449,7 @@
 		<English>%s has organized the %s and formed the %s!</English>
 		<French>%s a organisé le %s et a formé le %s!</French>
 		<German>%s hat das %s organisiert und das %s gebildet!</German>
-		<Italian>%s ha organizzato il popolo %s ed ha formato il %s!!</Italian>
+		<Italian>%s ha organizzato il popolo %s e ha formato il %s!</Italian>
 		<Spanish>¡%s ha organizado a los %s y formado el %s!</Spanish>
 		<Polish>%s zjednoczył %s i utworzył %s!</Polish>
 	</TEXT>
@@ -1476,7 +1481,7 @@
 		<English>%s has organized the Barbarians and formed the %s!</English>
 		<French>%s a organisé les barbares et a formé le %s!</French>
 		<German>%s hat die Barbaren organisiert und das %s errichtet!</German>
-		<Italian>%s ha organizzato alcune tribù barbare ed ha formato %s!</Italian>
+		<Italian>%s ha organizzato alcune tribù barbare e ha formato %s!</Italian>
 		<Spanish>%s ha organizado a los bárbaros y ha formado el %s!</Spanish>
 		<Polish>%s zjednoczył Barbarzyńców i utworzył %s!</Polish>
 	</TEXT>
@@ -2346,7 +2351,6 @@
 		<German>+%d1_Change[ICON_UNHAPPY]: "Weg mit dem fremden Einfluss!"</German>
 		<Italian>+%d1_Change[ICON_UNHAPPY]: "Abbasso l'influenza straniera!"</Italian>
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Abajo la influencia extranjera!"</Spanish>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_FREE_EXPERIENCE</Tag>
@@ -2363,7 +2367,6 @@
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir hassen die Natur!"</German>
 		<Italian>+%d1_Change[ICON_UNHAPPY]: "Odiamo la natura!"</Italian>
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Odiamos la naturaleza!"</Spanish>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_LANDMARK_DESTRUCTION_ANGER</Tag>
@@ -2372,7 +2375,6 @@
 		<German>+%d1_Change[ICON_UNHAPPY]: "Ihr zerstört die Umwelt!"</German>
 		<Italian>+%d1_Change[ICON_UNHAPPY]: "Stai distruggendo l'ambiente!"</Italian>
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Estás destrozando el medio ambiente!"</Spanish>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_PROPERTY_SPAWN_BARB</Tag>
@@ -2394,7 +2396,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_RELIGIOUSLY_DISABLED_COMPLETELY_BUILDINGS</Tag>
 		<English>As it is now illegal to do so, the Citizens of the City of %s1 have ceased worshiping %s2, thus the %s3 is completely inoperational at this time.</English>
-		<French>Commme c'est devenu illégal, Les citoyens de la ville de %s1 ont cessé d'adorer %s2, et le bâtiment: %s3 n'est plus du tout opérationnel.</French>
+		<French>Comme c'est devenu illégal, Les citoyens de la ville de %s1 ont cessé d'adorer %s2, et le bâtiment: %s3 n'est plus du tout opérationnel.</French>
 		<Italian>Dato che ora è illegale, gli abitanti di %s1 hanno smesso di venerare %s2, perciò [NUM3:il:la:gli:le] %s3 [NUM3:è inoperativo:è inoperativa:sono inoperativi:sono inoperative].</Italian>
 		<Polish>Jest to nielegalne więc, niektórzy z miastaL %s1 porzucili prace w: %s2, więc: %s3 jest kompletnie niefunkcjonalne.</Polish>
 	</TEXT>
@@ -2899,31 +2901,6 @@
 		<German>Statusänderung</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_COMMERCE_CULTURE</Tag>
-		<English>Culture</English>
-		<French>
-			<Text>Culture[SPACE]</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Kultur:Kultur:Kultur:Kultur</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Cultura</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Cultura</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Kultura</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_COMMERCE_RESEARCH</Tag>
 		<English>Research</English>
 		<French>
@@ -3137,7 +3114,7 @@
 		<French>[ICON_BULLET][COLOR_BLUE]Vous disposez d'un pacte défensif[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_BLUE]Verteidigungsbündnis mit Euch[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_BLUE]Si dispone di un patto di difesa[COLOR_REVERT]</Italian>
-		<Spanish>[ICON_BULLET][COLOR_BLUE]Tenéis un Acuerdo de protección[COLOR_REVERT]</Spanish>
+		<Spanish>[ICON_BULLET][COLOR_BLUE]Tenéis un acuerdo de protección[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_BLUE]Posiadasz Pakt Obronny[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
@@ -3151,32 +3128,34 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DIFFICULTY_DECREASED</Tag>
-		<English>The Difficulty has been Decreased!!!</English>
-		<French>La Difficulté a été réduite!!!</French>
-		<German>Der Schwierigkeitsgrad wurde reduziert!!!</German>
-		<Italian>La difficoltà è diminuita!!!</Italian>
+		<English>Difficulty has been decreased!</English>
+		<French>La difficulté a été réduite!</French>
+		<German>Der Schwierigkeitsgrad wurde reduziert!</German>
+		<Italian>La difficoltà è diminuita!</Italian>
 		<Spanish>¡La dificultad ha disminuido!</Spanish>
-		<Polish>Poziom trudności został obniżony!!!</Polish>
+		<Polish>Poziom trudności został obniżony!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DIFFICULTY_DECREASED_FOR_PLAYER</Tag>
 		<English>The difficulty level has decreased for %s1</English>
-		<French>Le Niveau de difficulté a diminué en %s1</French>
+		<French>Le niveau de difficulté a diminué en %s1</French>
+		<Italian>Il livello di difficoltà è diminuito per %1</Italian>
 		<Polish>Poziom trudności został obniżony do %s1</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DIFFICULTY_INCREASED</Tag>
-		<English>The Difficulty has been Increased!!!</English>
-		<French>La Difficulté a augmenté!!!</French>
-		<German>Der Schwierigkeitsgrad wurde erhöht!!!</German>
-		<Italian>La difficoltà è aumentata!!!</Italian>
+		<English>Difficulty has been increased!</English>
+		<French>La difficulté a augmenté!</French>
+		<German>Der Schwierigkeitsgrad wurde erhöht!</German>
+		<Italian>La difficoltà è aumentata!</Italian>
 		<Spanish>¡La dificultad ha aumentado!</Spanish>
-		<Polish>Poziom trudności został podniesiony!!!</Polish>
+		<Polish>Poziom trudności został podniesiony!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DIFFICULTY_INCREASED_FOR_PLAYER</Tag>
 		<English>The difficulty level has increased for %s1</English>
-		<French>Le Niveau de difficulté a augmenté en %s1</French>
+		<French>Le niveau de difficulté a augmenté en %s1</French>
+		<Italian>Il livello di difficoltà è aumentato per %1</Italian>
 		<Polish>Poziom trudności został podniesiony do %s1</Polish>
 	</TEXT>
 	<TEXT>
@@ -3193,7 +3172,7 @@
 		<English>[COLOR_BUILDING_TEXT]The Great Mosque of Djenné [COLOR_SELECTED_TEXT]Increases Desert Trade[COLOR_REVERT]!</English>
 		<French>[COLOR_SELECTED_TEXT]La Grande Mosquée de Djenné augmente le commerce dans le Désert![COLOR_REVERT]</French>
 		<German>[COLOR_SELECTED_TEXT]Die Große Moschee von Djenné erhöht den Wüstenhandel![COLOR_REVERT]</German>
-		<Italian>[COLOR_SELECTED_TEXT]La grande moschea di Djenné incrementa il commercio nel deserto![COLOR_REVERT]</Italian>
+		<Italian>[COLOR_SELECTED_TEXT]La Grande moschea di Djenné incrementa il commercio nel deserto![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_SELECTED_TEXT]¡La Gran Mezquita de Djenné aumenta el comercio en el Desierto![COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_BUILDING_TEXT]Wielki Meczet w Dżenne [COLOR_SELECTED_TEXT]zwiększa handel na polach pustyni[COLOR_REVERT]!</Polish>
 	</TEXT>
@@ -3993,83 +3972,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>%d1%: z Wolnych Umów Handlowych</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOBJECT_CITY</Tag>
-		<English>City</English>
-		<French>Ville</French>
-		<German>Stadt</German>
-		<Italian>Città</Italian>
-		<Spanish>
-			<Text>Ciudad</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Miasto</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOBJECT_GAME</Tag>
-		<English>Game</English>
-		<French>Jeu</French>
-		<German>Spiel</German>
-		<Italian>Gioco</Italian>
-		<Spanish>
-			<Text>Partida</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Gra</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOBJECT_PLAYER</Tag>
-		<English>Player</English>
-		<French>Joueur</French>
-		<German>Spieler</German>
-		<Italian>Giocatore</Italian>
-		<Spanish>
-			<Text>Jugador</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Gracz</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOBJECT_PLOT</Tag>
-		<English>Plot</English>
-		<French>Case</French>
-		<German>Feld</German>
-		<Italian>Casella</Italian>
-		<Spanish>
-			<Text>Casilla</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Pole</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOBJECT_TEAM</Tag>
-		<English>Team</English>
-		<French>Equipe</French>
-		<Italian>Squadra</Italian>
-		<Spanish>
-			<Text>Equipo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Drużyna</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOBJECT_UNIT</Tag>
-		<English>Unit</English>
-		<French>Unité</French>
-		<German>Einheit</German>
-		<Italian>Unità</Italian>
-		<Spanish>
-			<Text>Unidad</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Jednostka</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_BLITZ</Tag>
 		<English>Blitz</English>
 		<French>Eclair</French>
@@ -4236,35 +4138,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<German>Diese absolut höchste Spielgeschwindigkeit ist nur für Testzwecke gedacht.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_ALL</Tag>
-		<English>All Resources</English>
-		<French>Toutes Ressources</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_GROWTH</Tag>
-		<English>Growth</English>
-		<French>Croissance</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_LUXURY</Tag>
-		<English>Luxury</English>
-		<French>Luxe</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_MISC</Tag>
-		<English>Misc</English>
-		<French>Autres</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_PRODUCTION</Tag>
-		<English>Production</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_STRATEGIC</Tag>
-		<English>Strategic</English>
-		<French>Stratégique</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOLDEN_AGE_YIELD</Tag>
 		<English>During Golden Ages All Cities</English>
 		<French>Pendant les Ages d'Or, dans toutes les Villes</French>
@@ -4332,6 +4205,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>Fattore di smoothing %d1_Num</Italian>
 		<Spanish>Factor de suavizado %d1_Num</Spanish>
 		<Polish>Współczynnik Wygładzania %d1_Num</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROWTH</Tag>
+		<English>Growth</English>
+		<French>Croissance</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_CHIEFTAIN</Tag>
@@ -5133,6 +5011,14 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[ICON_BULLET]Zasięg: %d1_BombRange</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LAND</Tag>
+		<English>Land</English>
+		<French>Terre</French>
+		<Italian>Territorio</Italian>
+		<Spanish>Territorio</Spanish>
+		<Polish>Teren</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_BAY_0</Tag>
 		<English>Bay of %s1</English>
 		<French>Baie de %s1</French>
@@ -5803,27 +5689,33 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English>Another players score has exceeded the mercy rule limit! You will lose the game in %d1 turns if you don't improve your score!</English>
 		<French>Le score d'un autre Joueur a dépassé la règle de grâce! Vous allez perdre le Jeu dans %d1 tours si vous n'augmentez pas votre score!</French>
 		<German>Der Spielstand eines anderen Spielers überschreitet den Wert der Gnadenherrschaft! Ihr werdet das Spiel in %d1 Runden verlieren, wenn Ihr Eure Wertung nicht verbessert!</German>
-		<Italian>Il punteggio di un altro giocatore eccede il limite del Governo di Pietà! Perderai in %d1 turni se non migliori il tuo punteggio!</Italian>
+		<Italian>Il punteggio di un altro giocatore eccede il limite della regola della pietà! Perderai in %d1 turni se non migliori il tuo punteggio!</Italian>
 		<Spanish>¡La puntuación de otro jugador ha superado el límite de la Regla de gracia! ¡Perderás en %d1 turnos si no mejoras tu puntuación!</Spanish>
 		<Polish>Wynik innego gracza przekracza limit zasady litości! Przegrasz grę za %d1 tur jeśli nie ulepszysz swojego wyniku!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOSER_MERCY_RULE_TURNS</Tag>
-		<English>Mercy Rule in effect! You will lose in %d1 [NUM1:turn:turns]!!!</English>
-		<French>Règle de Grâce! Vous allez perdre dans %d1 [NUM1:tour:tours]!!!</French>
-		<German>Gnadenherrschaft hat begonnen! Ihr werdet in %d1 [NUM1:Runde:Runden] verlieren!!!</German>
-		<Italian>Governo di pietà avvio! Perderai in %d1 [NUM1:turno:turni]!!!</Italian>
+		<English>Mercy Rule in effect! You will lose in %d1 [NUM1:turn:turns]!</English>
+		<French>Règle de Grâce! Vous allez perdre dans %d1 [NUM1:tour:tours]!</French>
+		<German>Gnadenherrschaft hat begonnen! Ihr werdet in %d1 [NUM1:Runde:Runden] verlieren!</German>
+		<Italian>Regola della pietà attiva! Perderai in %d1 [NUM1:turno:turni]!</Italian>
 		<Spanish>¡Regla de gracia activa! ¡Perderás en %d1 [NUM1:turno:turnos]!</Spanish>
-		<Polish>Zasada litości aktywna! Przegrasz za %d1 [NUM5:ture:tury:tur]!!!</Polish>
+		<Polish>Zasada litości aktywna! Przegrasz za %d1 [NUM5:ture:tury:tur]!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOW_PLAYER_DROPPED</Tag>
-		<English>The Weakest Player has been Dropped from the Game! Stay in the top five to stay Alive!</English>
-		<French>Le Joueur en dernière position a été éliminé du Jeu! Restez dans le Top 5 pour Survivre!</French>
+		<English>The Weakest Player has been Dropped from the Game! Stay in the top five to stay alive!</English>
+		<French>Le Joueur en dernière position a été éliminé du Jeu! Restez dans le Top 5 pour survivre!</French>
 		<German>Der schwächste Mitspieler wurde aus dem Spiel entfernt! Bleibe unter den Letzten Fünf um zu überleben!</German>
-		<Italian>Il giocatore più debole è stato eliminato! Resta nei top five per rimanere vivo!</Italian>
+		<Italian>Il giocatore più debole è stato eliminato! Resta nei primi cinque per rimanere in gara!</Italian>
 		<Spanish>¡El jugador más débil ha sido eliminado de la partida! ¡Mantente entre los cinco primeros para sobrevivir!</Spanish>
 		<Polish>Najsłabszy gracz został wyrzucony z gry! Pozostań w pierwszej 5 by utrzymać się w grze!</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LUXURY</Tag>
+		<English>Luxury</English>
+		<French>Luxe</French>
+		<Spanish>Lujuria</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAD_SCREEN_HOVER</Tag>
@@ -6240,6 +6132,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>[ICON_BULLET]%D1%% à la Valeur minimum de Défense de la ville.</French>
 		<Italian>[ICON_BULLET]%D1%% al valore minimo difensivo della città.</Italian>
 		<Polish>[ICON_BULLET]%D1%% do minimalnej wartości obrony miasta.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC</Tag>
+		<English>Misc</English>
+		<French>Autres</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_AFFLICT_DELIVERED_DISEASE_BATTLE_ADDITIONAL</Tag>
@@ -6685,7 +6582,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_BUILDING_RECOVERY_HOVER</Tag>
 		<English>City Defense recovers at %D1%% its usual rate when reduced under %d2%%</English>
 		<French>La défense de la ville se répare à %D1%% de son taux usuel lorsqu'elle se situe en dessous de %d2%%</French>
-		<Italian>Le difese cittadine si rigenerano al %D1%% della velodità usuale quando sono sotto il %d2%%.</Italian>
+		<Italian>Le difese cittadine si rigenerano al %D1%% della velocità usuale quando sono sotto il %d2%%.</Italian>
 		<Polish>Obrona miasta odzyskuje na %D1%% swoją standardową szybkość kiedy zredukowana jest poniżej %d2%%</Polish>
 	</TEXT>
 	<TEXT>
@@ -6706,39 +6603,39 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_CAPTURED_BY</Tag>
-		<English>%s1_CityName has been captured by the %s2_CivName!!!</English>
-		<French>La ville de %s1_CityName est tombée aux mains de : %s2_CivName!</French>
-		<German>Das %s2:2_CivName hat die Stadt %s1_CityName eingenommen!!!</German>
-		<Italian>%s1_CityName è stata conquistata dall'%s2_CivName!!!</Italian>
-		<Spanish>%s1_CityName ha sido capturada por %s2_CivName.</Spanish>
-		<Polish>%s1_CityName zostało zdobyte przez %s2_CivName!!!</Polish>
+		<English>%s1_CityName has been captured by the %s2_CivName!</English>
+		<French>La ville de %s1_CityName est tombée aux mains de %s2_CivName!</French>
+		<German>Das %s2:2_CivName hat die Stadt %s1_CityName eingenommen!</German>
+		<Italian>%s1_CityName è stata conquistata dall'%s2_CivName!</Italian>
+		<Spanish>¡%s1_CityName ha sido capturada por %s2_CivName!</Spanish>
+		<Polish>%s1_CityName zostało zdobyte przez %s2_CivName!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_HAS_BEEN_ENSLAVED_BY</Tag>
-		<English>The citizens of %s1_cityname have been enslaved by %s2_civilization!!!</English>
-		<French>Les habitants de %s1_cityname ont été réduits à l'esclavage par %s2_civilization!!!</French>
-		<German>Die Einwohner von %s1_cityname wurden von %s2_civilization versklavt!!!</German>
-		<Italian>I cittadini di %s1_cityname sono stati schiavizzati da %s2_civilization!!!</Italian>
+		<English>The citizens of %s1_cityname have been enslaved by %s2_civilization!</English>
+		<French>Les habitants de %s1_cityname ont été réduits à l'esclavage par %s2_civilization!</French>
+		<German>Die Einwohner von %s1_cityname wurden von %s2_civilization versklavt!</German>
+		<Italian>I cittadini di %s1_cityname sono stati schiavizzati da %s2_civilization!</Italian>
 		<Spanish>¡Los ciudadanos de %s1_cityname han sido esclavizados por %s2_civilization!</Spanish>
-		<Polish>Mieszkańcy miasta %s1_cityname zostali zniewoleni przez %s2_civilization!!!</Polish>
+		<Polish>Mieszkańcy miasta %s1_cityname zostali zniewoleni przez %s2_civilization!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_HAS_BEEN_RAZED_BY</Tag>
-		<English>%s1_CityName has been razed by the %s2_CivName!!!</English>
-		<French>La ville de %s1_CityName a été rasée par : %s2_CivName !</French>
-		<German>Das %s2:2_CivName hat die Stadt %s1_CityName vernichtet!!!</German>
+		<English>%s1_CityName has been razed by the %s2_CivName!</English>
+		<French>La ville de %s1_CityName a été rasée par %s2_CivName !</French>
+		<German>Das %s2:2_CivName hat die Stadt %s1_CityName vernichtet!</German>
 		<Italian>%s1_CityName è stata razziata dall'%s2_CivName!</Italian>
-		<Spanish>%s1_CityName ha sido arrasada por %s2_CivName.</Spanish>
-		<Polish>%s1_CityName zostało zrównane z ziemią przez %s2_CivName!!!</Polish>
+		<Spanish>¡%s1_CityName ha sido arrasada por %s2_CivName!</Spanish>
+		<Polish>%s1_CityName zostało zrównane z ziemią przez %s2_CivName!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_HAS_BEEN_SACKED_BY</Tag>
-		<English>The city of %s1_cityname has been sacked by %s2_civilization!!!</English>
-		<French>La Ville de %s1_cityname a été saccagée par %s2_civilization!!!</French>
-		<German>Die Stadt %s1_cityname wurde von %s2_civilization geplündert!!!</German>
-		<Italian>La città di %s1_cityname è stata saccheggiata da %s2_civilization!!!</Italian>
+		<English>The city of %s1_cityname has been sacked by %s2_civilization!</English>
+		<French>La ville de %s1_cityname a été saccagée par %s2_civilization!</French>
+		<German>Die Stadt %s1_cityname wurde von %s2_civilization geplündert!</German>
+		<Italian>La città di %s1_cityname è stata saccheggiata da %s2_civilization!</Italian>
 		<Spanish>¡La ciudad de %s1_cityname ha sido saqueada por %s2_civilization!</Spanish>
-		<Polish>Miasto %s1_cityname zostało zniewolone przez %s2_civilization!!!</Polish>
+		<Polish>Miasto %s1_cityname zostało zniewolone przez %s2_civilization!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_HAS_CONSCRIPTED</Tag>
@@ -6751,32 +6648,32 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_MILITIA_EMERGED</Tag>
 		<English>City militia has emerged! Resistance:</English>
-		<French>Des Habitants ont pris les armes et se sont constitués en Milice ! Résistance :</French>
+		<French>Des habitants ont pris les armes et se sont constitués en Milice ! Résistance :</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_PRODUCTION_DESTROYED</Tag>
-		<English>The production of %s1_ProdName in %s2_CityName has been destroyed!!!</English>
+		<English>The production of %s1_ProdName in %s2_CityName has been destroyed!</English>
 		<French>La production de %s1_ProdName dans la ville de %s2_CityName a été sabotée!</French>
-		<German>In %s2_CityName wurde die Produktion (%s1_ProdName) zerstört!!!</German>
-		<Italian>La produzione di %s1_ProdName a %s2_CityName è stata distrutta!!!</Italian>
-		<Spanish>Han destruido en %s2_CityName la producción de: %s1_ProdName.</Spanish>
-		<Polish>Produkcja %s1_ProdName w %s2_CityName została zniszczona!!!</Polish>
+		<German>In %s2_CityName wurde die Produktion (%s1_ProdName) zerstört!</German>
+		<Italian>La produzione di %s1_ProdName a %s2_CityName è stata distrutta!</Italian>
+		<Spanish>¡Han destruido en %s2_CityName la producción de %s1_ProdName!</Spanish>
+		<Polish>Produkcja %s1_ProdName w %s2_CityName została zniszczona!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_RECOVERY_HOVER</Tag>
 		<English>City Defense recovers at %D1%% its usual rate.</English>
 		<French>La défense de la ville se répare à %D1%% de son taux usuel.</French>
-		<Italian>Le difese cittadine si rigenerano al %D1%% della velodità usuale.</Italian>
+		<Italian>Le difese cittadine si rigenerano al %D1%% della velocità usuale.</Italian>
 		<Polish>Obrona miasta odzyskuje na %D1%% swoją standardową szybkości.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_WAS_CAPTURED_BY</Tag>
-		<English>%s1_CityName was captured by the %s2_CivName!!!</English>
-		<French>La ville de %s1_CityName a été capturée par : %s2_CivName!</French>
-		<German>Das %s2:2_CivName hat die Stadt %s1_CityName eingenommen!!!</German>
-		<Italian>%s1_CityName è stata conquistata dall'%s2_CivName!!!</Italian>
-		<Spanish>%s1_CityName fue capturada por %s2_CivName.</Spanish>
-		<Polish>%s1_CityName zostało zdobyte przez %s2_CivName!!!</Polish>
+		<English>%s1_CityName was captured by the %s2_CivName!</English>
+		<French>La ville de %s1_CityName a été capturée par %s2_CivName!</French>
+		<German>Das %s2:2_CivName hat die Stadt %s1_CityName eingenommen!</German>
+		<Italian>%s1_CityName è stata conquistata dall'%s2_CivName!</Italian>
+		<Spanish>¡%s1_CityName fue capturada por %s2_CivName!</Spanish>
+		<Polish>%s1_CityName zostało zdobyte przez %s2_CivName!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CIVIC_DEFENSE_HOVER</Tag>
@@ -6789,9 +6686,9 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CIV_DESTROYED</Tag>
-		<English>The %s1_CivAdj Civilization has been destroyed!!!</English>
+		<English>The %s1_CivAdj Civilization has been destroyed!</English>
 		<French>Les %s1:3_CivAdj ont été écrasés!</French>
-		<German>Die %[s1_CivAdj]e Zivilisation wurde zerstört!!!</German>
+		<German>Die %[s1_CivAdj]e Zivilisation wurde zerstört!</German>
 		<Italian>La civiltà %s1:4_CivAdj è stata distrutta!</Italian>
 		<Spanish>¡La civilización %s1:2_CivAdj ha sido destruida!</Spanish>
 		<Polish>Cywilizacja %s1_CivAdj została zniszczona.</Polish>
@@ -7224,8 +7121,8 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_ENEMY_AIRBOMB_POP</Tag>
 		<English>The enemy's bombs fell astray and killed some civilians!</English>
 		<French>Les Bombes ennemies ont dévié de leur trajectoire et ont tué des civils!</French>
-		<German>Die feindlichen Bomben verfehlten ihr Ziel und töteten einige Zivilisten!!</German>
-		<Italian>Il bombardamento nemico ha mancato il bersaglio e ha ucciso alcuni civili!!</Italian>
+		<German>Die feindlichen Bomben verfehlten ihr Ziel und töteten einige Zivilisten!</German>
+		<Italian>Il bombardamento nemico ha mancato il bersaglio e ha ucciso alcuni civili!</Italian>
 		<Spanish>¡Las bombas enemigas se han desviado de trayectoria y han matado a algunos ciudadanos!</Spanish>
 		<Polish>Wrogie bomby zabiły kilku cywilów!</Polish>
 	</TEXT>
@@ -7297,7 +7194,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_ENEMY_UNIT_WITHDRAW</Tag>
 		<English>A %s1_EnUName has withdrawn from combat with your %s2_UnitName!</English>
 		<French>[NUM1:Le:La:Les:Les] %s1_EnUName [NUM1:ennemi a:ennemie a:ennemis ont:ennemies ont] fui le combat face à [NUM2:votre:votre:vos:vos] %s2_UnitName!</French>
-		<German>[COLOR_POSITIVE_TEXT][NUM1:Euer:Eure:Euer:Eure:Eure:Eure] %s2:1_UnitName [NUM1:hat:haben] [NUM2:einen:eine:ein:einige:einige:einige] [NUM1:feindlichen:feindliche:feindliches:feindliche:feindliche:feindliche] %s1:4_EnUName zum Rückzug gezwungen![COLOR_REVERT]</German>
+		<German>[COLOR_POSITIVE_TEXT][NUM2:Euer:Eure:Euer:Eure:Eure:Eure] %s2:1_UnitName [NUM2:hat:haben] [NUM1:einen:eine:ein:einige:einige:einige] [NUM1:feindlichen:feindliche:feindliches:feindliche:feindliche:feindliche] %s1:4_EnUName zum Rückzug gezwungen![COLOR_REVERT]</German>
 		<Italian>L'unità nemica %s1_EnUName si è ritirata dal combattimento contro l'unità nemica %s2_UnitName!</Italian>
 		<Spanish>[NUM1:Un:Una:Unos:Unas] %s1_EnUName se [NUM1:ha:ha:han:han] retirado del combate contra [NUM2:vuestro:vuestra:vuestros:vuestras] %s2_UnitName.</Spanish>
 		<Polish>%s1_EnUName uciekł z pola walki walcząc z Twoim %s2_UnitName!</Polish>
@@ -7443,12 +7340,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_FREE_UNIT_SUPPORT</Tag>
-		<English>Your %s1_UnitName has increased your unit's support limit!!</English>
-		<French>Votre %s1_UnitName a augmenté sa limite d'entretien gratuit!!</French>
-		<German>Eure Einheit %s1_UnitName hat die allgemeine Militärunterstützung erhöht!!</German>
-		<Italian>La tua unità %s1_UnitName ha aumentato il proprio limite di supporto!!</Italian>
+		<English>Your %s1_UnitName has increased your unit's support limit!</English>
+		<French>Votre %s1_UnitName a augmenté sa limite d'entretien gratuit!</French>
+		<German>Eure Einheit %s1_UnitName hat die allgemeine Militärunterstützung erhöht!</German>
+		<Italian>La tua unità %s1_UnitName ha aumentato il proprio limite di supporto!</Italian>
 		<Spanish>¡[NUM1:Tu:Tu:Tus:Tus] %s1_UnitName [NUM1:ha:ha:han:han] aumentado tu límite de unidades soportadas!</Spanish>
-		<Polish>Twój oddział %s1_UnitName zwiększył limit jednostek!!</Polish>
+		<Polish>Twój oddział %s1_UnitName zwiększył limit jednostek!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_FROM</Tag>
@@ -7479,15 +7376,15 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_GOLD_LOOTED_FROM_DEAD</Tag>
-		<English>General, the corpses of our dead %s1 have been looted by the vile %s2!!</English>
-		<French>Général, les cadavres de nos morts (%s1) ont été pillés par les vils %s2 !!</French>
+		<English>General, the corpses of our dead %s1 have been looted by the vile %s2!</English>
+		<French>Général, les cadavres de nos morts (%s1) ont été pillés par les vils %s2 !</French>
 		<Spanish>¡General, [NUM1:el cuerpo:el cuerpo:los cuerpos:los cuerpos] de [NUM1:nuestro:nuestra:nuestros:nuestras] %s1 [NUM1:fallecido ha:fallecida ha:fallecidos han:fallecidas han] sido [NUM1:saqueado:saqueada:saqueados:saqueadas] por los viles %s2:3!</Spanish>
-		<Polish>Generale, trupy naszych poległych %s1 zostały ograbione przez %s2!!</Polish>
+		<Polish>Generale, trupy naszych poległych %s1 zostały ograbione przez %s2!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_GOLD_LOOTED_FROM_DEAD_HIDDEN</Tag>
-		<English>General, the corpses of our dead %s1 have been looted!!</English>
-		<French>Général, les cadavres de nos morts (%s1) ont été pillés !!</French>
+		<English>General, the corpses of our dead %s1 have been looted!</English>
+		<French>Général, les cadavres de nos morts (%s1) ont été pillés !</French>
 		<Spanish>¡General, [NUM1:el cuerpo:el cuerpo:los cuerpos:los cuerpos] de [NUM1:nuestro:nuestra:nuestros:nuestras] %s1 [NUM1:fallecido ha:fallecida ha:fallecidos han:fallecidas han] sido [NUM1:saqueado:saqueada:saqueados:saqueadas]!</Spanish>
 		<Polish>Generale, trupy naszych poległych %s1 zostały ograbione.</Polish>
 	</TEXT>
@@ -7970,21 +7867,21 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_IDENTITY_REVEALED</Tag>
-		<English>Because we captured the %s1_civ_adjective city of %s2_city, our identity has been revealed!!</English>
-		<French>Lors de la capture de la ville %s1_civ_adjective de %s2_city, notre identité a été révélée!!</French>
-		<German>Bei der Einnahme der %s1_civ_adjective Stadt %s2_city wurde Euer Stamm als Urheber entlarvt!!</German>
-		<Italian>Poichè abbiamo catturato la città %s1_civ_adjective di %s2_city, la nostra identità è stata scoperta!!</Italian>
+		<English>Because we captured the %s1_civ_adjective city of %s2_city, our identity has been revealed!</English>
+		<French>Lors de la capture de la ville %s1_civ_adjective de %s2_city, notre identité a été révélée!</French>
+		<German>Bei der Einnahme der %s1_civ_adjective Stadt %s2_city wurde Euer Stamm als Urheber entlarvt!</German>
+		<Italian>Poiché abbiamo catturato la città %s1_civ_adjective di %s2_city, la nostra identità è stata scoperta!</Italian>
 		<Spanish>¡Nuestra identidad ha sido revelada por culpa de la captura de la ciudad %s1:2_civ_adjective de %s2_city!</Spanish>
-		<Polish>Ponieważ przejęliśmy miasto %s1_civ_adjective: %s2_city, nasz rozpoznawalność wzrasta!!</Polish>
+		<Polish>Ponieważ przejęliśmy miasto %s1_civ_adjective: %s2_city, nasz rozpoznawalność wzrasta!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_IDENTITY_REVEALED_OTHER</Tag>
-		<English>Because the %s1_civ_adjective tribe captured the %s2_civ_adjective city of %s3_city, their identity has been revealed!!</English>
-		<French>La capture par la trivu %s1_civ_adjective de la ville %s2_civ_adjective de %s3_city, a révélé l'identité des commanditaires!!</French>
-		<German>Bei der Einnahme der %s2_civ_adjective Stadt %s3_city wurde der %s1_civ_adjective Stamm als Urheber entlarvt!!</German>
-		<Italian>Poich+ la tribù %s1_civ_adjective ha catturato la città %s2_civ_adjective di %s3_city, la loro identità è stata scoperta!!</Italian>
-		<Spanish>La identidad de los %s1:3_civ_adjective ha sido revelada debido a su captura de la ciudad %s2:2_civ_adjective de %s3_city.</Spanish>
-		<Polish>Ponieważ %s1_civ_adjective przejęło miasto %s2_civ_adjective: %s3_city, ich rozpoznawalność wzrasta!!</Polish>
+		<English>Because the %s1_civ_adjective tribe captured the %s2_civ_adjective city of %s3_city, their identity has been revealed!</English>
+		<French>La capture par la tribu %s1_civ_adjective de la ville %s2_civ_adjective de %s3_city, a révélé l'identité des commanditaires!</French>
+		<German>Bei der Einnahme der %s2_civ_adjective Stadt %s3_city wurde der %s1_civ_adjective Stamm als Urheber entlarvt!</German>
+		<Italian>Poiché la tribù %s1_civ_adjective ha catturato la città %s2_civ_adjective di %s3_city, la loro identità è stata scoperta!</Italian>
+		<Spanish>¡La identidad de los %s1:3_civ_adjective ha sido revelada debido a su captura de la ciudad %s2:2_civ_adjective de %s3_city!</Spanish>
+		<Polish>Ponieważ %s1_civ_adjective przejęło miasto %s2_civ_adjective: %s3_city, ich rozpoznawalność wzrasta!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_IMPROVEMENTS</Tag>
@@ -8033,7 +7930,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_IMP_DESTROYED_BY_MARAUDERS</Tag>
-		<English>There are reports from our citizens of marauding %s1 in our countryside, taking all that they desire and damnned be those that interfere!</English>
+		<English>There are reports from our citizens of marauding %s1 in our countryside, taking all that they desire and damned be those that interfere!</English>
 		<French>Il y a des rapports de nos concitoyens concernant des maraudeurs %s1 dans nos campagnes, prenant tout ce qu'ils désirent et sacrifiant ceux qui s'interposent !</French>
 		<Spanish>¡Nuestros ciudadanos informan de [NUM1:un:una:unos:unas] %s1 merodeando por nuestro territorio, robando todo lo que [NUM1:desea:desea:desean:desean], o condenando a aquellos que interfieran!</Spanish>
 		<Polish>Mamy raporty od naszych mieszkańców o grasujących jednostkach %s1 na naszym krajobrazie, biorąc wszystko co zobaczy!</Polish>
@@ -8093,8 +7990,8 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_MINIMUM_DEFENSE_LEVEL_HOVER</Tag>
 		<English>Enemy units may not attack city until Defense is reduced below %d1%%</English>
-		<French>Les Unités ennemies ne peuvent attaque la ville tant que la défense n'est pas en dessous de %d1%%</French>
-		<Italian>Le unità nemiche non possono attaccare la città finchè le difese non sono ridotte sotto il %d1%%</Italian>
+		<French>Les unités ennemies ne peuvent attaque la ville tant que la défense n'est pas en dessous de %d1%%</French>
+		<Italian>Le unità nemiche non possono attaccare la città finché le difese non sono ridotte sotto il %d1%%</Italian>
 		<Polish>Wrogie jednostki nie będą mogły zaatakować miasta jeśli obrona miasta nie spadnie poniżej: %d1%%</Polish>
 	</TEXT>
 	<TEXT>
@@ -8162,34 +8059,34 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_NUKE_INTERCEPTED</Tag>
-		<English>%s1_PlyrName launches a %s2_UnitName, but it is shot down by %s3_Plyr2Name!!!</English>
+		<English>%s1_PlyrName launches a %s2_UnitName, but it is shot down by %s3_Plyr2Name!</English>
 		<French>%s1_PlyrName lance [NUM2:un:une:des:des] %s2_UnitName, mais %s3_Plyr2Name l'abat!</French>
-		<German>%s1_PlyrName feuerte [NUM2:einen:eine:ein:einige:einige:einige] %s2:4_UnitName ab, aber [NUM2:dieser wurde:diese wurde:dieses wurde:diese wurden:diese wurden:diese wurden] durch %s3_Plyr2Name abgeschossen!!!</German>
-		<Italian>%s1_PlyrName lancia un'unità %s2_UnitName, ma viene abbattuta da %s3_Plyr2Name!!!</Italian>
-		<Spanish>%s1_PlyrName ha lanzado [NUM2:un:una:unos:unas] %s2_UnitName, pero %s3_Plyr2Name [NUM2:lo ha:la ha:los ha:las ha] derribado.</Spanish>
-		<Polish>%s1_PlyrName wystrzelił a %s2_UnitName, ale został zestrzelony przez %s3_Plyr2Name!!!</Polish>
+		<German>%s1_PlyrName feuerte [NUM2:einen:eine:ein:einige:einige:einige] %s2:4_UnitName ab, aber [NUM2:dieser wurde:diese wurde:dieses wurde:diese wurden:diese wurden:diese wurden] durch %s3_Plyr2Name abgeschossen!</German>
+		<Italian>%s1_PlyrName lancia un'unità %s2_UnitName, ma viene abbattuta da %s3_Plyr2Name!</Italian>
+		<Spanish>¡%s1_PlyrName ha lanzado [NUM2:un:una:unos:unas] %s2_UnitName, pero %s3_Plyr2Name [NUM2:lo ha:la ha:los ha:las ha] derribado!</Spanish>
+		<Polish>%s1_PlyrName wystrzelił a %s2_UnitName, ale został zestrzelony przez %s3_Plyr2Name!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_NUKE_LAUNCHED</Tag>
-		<English>%s1_PlyrName launches a %s2_UnitName, and it explodes!!!</English>
+		<English>%s1_PlyrName launches a %s2_UnitName, and it explodes!</English>
 		<French>%s1_PlyrName lance [NUM2:un:une:des:des] %s2_UnitName, qui explose!</French>
-		<German>%s1_PlyrName feuerte erfolgreich [NUM2:einen:eine:ein:einige:einige:einige] %s2:4_UnitName ab!!!</German>
-		<Italian>%s1_PlyrName lancia un'unità %s2_UnitName, che esplode!!!</Italian>
-		<Spanish>%s1_PlyrName ha lanzado [NUM1:un:una:unos:unas] %s2_UnitName, que [NUM2:ha llegado:ha llegado:han llegado:han llegado] a explotar.</Spanish>
+		<German>%s1_PlyrName feuerte erfolgreich [NUM2:einen:eine:ein:einige:einige:einige] %s2:4_UnitName ab!</German>
+		<Italian>%s1_PlyrName lancia un'unità %s2_UnitName, che esplode!</Italian>
+		<Spanish>¡%s1_PlyrName ha lanzado [NUM1:un:una:unos:unas] %s2_UnitName, que [NUM2:ha llegado:ha llegado:han llegado:han llegado] a explotar!</Spanish>
 		<Polish>%s1_PlyrName wystrzelił a %s2_UnitName i eksplodował!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_NUKE_TRAP</Tag>
-		<English>A %s1_UnitName placed by %s2_PlyrName has detonated in an Earth Rumbling Nuclear Fireball!!!</English>
-		<French>Un %s1_UnitName placé par %s2_PlyrName a explosé, générant une déflagration nucléaire immense !!!</French>
+		<English>A %s1_UnitName placed by %s2_PlyrName has detonated in an Earth Rumbling Nuclear Fireball!</English>
+		<French>Un %s1_UnitName placé par %s2_PlyrName a explosé, générant une déflagration nucléaire immense !</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_NUKE_UNKNOWN</Tag>
-		<English>A nuclear explosion from an unknown source has occured in %s1's territory!</English>
+		<English>A nuclear explosion from an unknown source has occurred in %s1's territory!</English>
 		<French>Une explosion nucléaire d'origine inconnue s'est produite dans le territoire %s1!</French>
 		<German>Eine nukleare Explosion unbekannten Ursprungs fand im Territorium von %s1 statt!</German>
 		<Italian>Un esplosione nucleare di origine sconosciuta è avvenuta nel territorio di %s1!</Italian>
-		<Spanish>¡Se ha producido una explosión nuclear de origen desconocido en el terrirorio %s1!</Spanish>
+		<Spanish>¡Se ha producido una explosión nuclear de origen desconocido en el territorio %s1!</Spanish>
 		<Polish>Wybuch nuklearny z nieznanego źródła nastąpił na terytorium %s1!</Polish>
 	</TEXT>
 	<TEXT>
@@ -8458,26 +8355,26 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLANS_STOLEN</Tag>
-		<English>Your military plans have been stolen from %s1_CityName!!!</English>
-		<French>Vos plans militaires ont été dérobés à %s1_CityName!</French>
-		<German>Militärische Pläne wurden aus %s1_CityName gestohlen!!!</German>
-		<Italian>I tuoi documenti militari sono stati rubati dalla città di %s1_CityName!!!</Italian>
-		<Spanish>Han robado vuestros planos militares de %s1_CityName.</Spanish>
-		<Polish>Twoja dokumentacja wojskowa została skradziona z %s1_CityName!!!</Polish>
+		<English>Your military plans have been stolen from %s1_CityName!</English>
+		<French>Vos plans militaires ont été dérobés à %s1_CityName !</French>
+		<German>Militärische Pläne wurden aus %s1_CityName gestohlen!</German>
+		<Italian>I tuoi documenti militari sono stati rubati dalla città di %s1_CityName!</Italian>
+		<Spanish>¡Han robado vuestros planos militares de %s1_CityName!</Spanish>
+		<Polish>Twoja dokumentacja wojskowa została skradziona z %s1_CityName!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLUNDERED_CULTURE_FROM_IMP</Tag>
-		<English>Our %s1 is winning the hearts and minds of the oppressed citizenry of our %s2 enemy</English>
-		<French>Notre %s1 gagne le coeur et l'esprit des citoyens opprimés de nos ennemis %s2</French>
-		<Spanish>[NUM1:Nuestro:Nuestra:Nuestros:Nuestras] %s1 se [NUM1:está:está:están:están] ganando el corazón y las mentes de los oprimidos ciudadanos de los %s2:3</Spanish>
-		<Polish>Nasza jednostka: %s1 wygrała serca i umysły ciemiężonych mieszkańców naszego wroga %s2</Polish>
+		<English>Our %s1 is winning the hearts and minds of the oppressed citizenry of our %s2 enemy.</English>
+		<French>Notre %s1 gagné le cœur et l'esprit des citoyens opprimés de nos ennemis %s2.</French>
+		<Spanish>[NUM1:Nuestro:Nuestra:Nuestros:Nuestras] %s1 se [NUM1:está:está:están:están] ganando el corazón y las mentes de los oprimidos ciudadanos de los %s2:3.</Spanish>
+		<Polish>Nasza jednostka: %s1 wygrała serca i umysły ciemiężonych mieszkańców naszego wroga %s2.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLUNDERED_CULTURE_FROM_IMP_HIDDEN</Tag>
 		<English>Our %s1 is winning the hearts and minds of the oppressed citizenry of our enemies.</English>
-		<French>Notre %s1 gagne le coeur et l'esprit des citoyens opprimés de nos ennemis.</French>
-		<Spanish>[NUM1:Nuestro:Nuestra:Nuestros:Nuestras] %s1 se [NUM1:está:está:están:están] ganando el corazón y las mentes de los oprimidos ciudadanos</Spanish>
-		<Polish>Nasza jednostka: %s1 wygrała serca i umysły ciemiężonych mieszkańców naszego wroga %s2</Polish>
+		<French>Notre %s1 gagné le cœur et l'esprit des citoyens opprimés de nos ennemis.</French>
+		<Spanish>[NUM1:Nuestro:Nuestra:Nuestros:Nuestras] %s1 se [NUM1:está:está:están:están] ganando el corazón y las mentes de los oprimidos ciudadanos.</Spanish>
+		<Polish>Nasza jednostka: %s1 wygrała serca i umysły ciemiężonych mieszkańców naszego wroga %s2.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_IMP</Tag>
@@ -8485,7 +8382,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>Vous avez pillé %d1_Num[ICON_ESPIONAGE] dans: %s2_ImpName!</French>
 		<German>Ihr habt durch die Plünderung der Modernisierung %s2_ImpName %d1_Num[ICON_ESPIONAGE] erbeutet!</German>
 		<Italian>Hai saccheggiato %d1_Num[ICON_ESPIONAGE] da %s2_ImpName!</Italian>
-		<Spanish>Habéis saqueado %d1_Num [ICON_ESPIONAGE] [NUM2:del:de la:de los:de las] %s2_ImpName.</Spanish>
+		<Spanish>¡Habéis saqueado %d1_Num [ICON_ESPIONAGE] [NUM2:del:de la:de los:de las] %s2_ImpName!</Spanish>
 		<Polish>Splądrowałeś %d1_Num[ICON_ESPIONAGE] z: %s2_ImpName!</Polish>
 	</TEXT>
 	<TEXT>
@@ -8494,7 +8391,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>Vous avez pillé %d1_Num[ICON_ESPIONAGE]!</French>
 		<German>Ihr habt durch die Plünderung der Modernisierung %d1_Num[ICON_ESPIONAGE] erbeutet!</German>
 		<Italian>Hai saccheggiato %d1_Num[ICON_ESPIONAGE]!</Italian>
-		<Spanish>Habéis saqueado %d1_Num [ICON_ESPIONAGE].</Spanish>
+		<Spanish>¡Habéis saqueado %d1_Num [ICON_ESPIONAGE]!</Spanish>
 		<Polish>Splądrowałeś %d1_Num[ICON_ESPIONAGE]!</Polish>
 	</TEXT>
 	<TEXT>
@@ -8563,12 +8460,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLUNDER_CITY_PLUNDERED</Tag>
-		<English>Our city of %s1_city has been plundered by a marauding Barbarian Tribe!!</English>
-		<French>Notre ville de %s1_city a été pillée par une tribu barbare environnante!!</French>
-		<German>Eure Stadt %s1_city wurde von einem marodierenden Barbarenstamm geplündert!!</German>
-		<Italian>La nostra città di %s1_city è stata saccheggiata da una tribù barbarica!!</Italian>
+		<English>Our city of %s1_city has been plundered by a marauding Barbarian Tribe!</English>
+		<French>Notre ville de %s1_city a été pillée par une tribu barbare environnante!</French>
+		<German>Eure Stadt %s1_city wurde von einem marodierenden Barbarenstamm geplündert!</German>
+		<Italian>La nostra città di %s1_city è stata saccheggiata da una tribù barbarica!</Italian>
 		<Spanish>¡Nuestra ciudad de %s1_city ha sido saqueada por una Tribu bárbara cercana!</Spanish>
-		<Polish>Nasze miasto %s1_city zostało splądrowane przez Barbarzyńskie Plemię!!</Polish>
+		<Polish>Nasze miasto %s1_city zostało splądrowane przez Barbarzyńskie Plemię!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_POSITIVE_ATTITUDE_TRAIT</Tag>
@@ -8669,12 +8566,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_RELIGION_FAILED_TO_SPREAD</Tag>
-		<English>Your %s1_UnitName has failed to spread %F2_RelIcon in %s3_CityName!!!</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName n'[NUM1:a:a:ont:ont] pas pu propager [NUM1:sa:sa:leur:leur] religion (%F2_RelIcon) à %s3_CityName!</French>
+		<English>Your %s1_UnitName has failed to spread %F2_RelIcon in %s3_CityName!</English>
+		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName n'[NUM1:a:a:ont:ont] pas pu propager [NUM1:sa:sa:leur:leur] religion (%F2_RelIcon) à %s3_CityName !</French>
 		<German>[NUM1:Eurem:Eurer:Eurer:Euren:Euren:Euren] %s1:3_UnitName [NUM1:misslang:misslangen] die Verbreitung [NUM2:des:der:des:der:der:der] %F2:2_RelIcon in %s3_CityName!</German>
-		<Italian>La tua unità %s1_UnitName ha fallito nel diffondere %F2_RelIcon a %s3_CityName!!!</Italian>
-		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName no [NUM1:ha:ha:han:han] logrado propagar [NUM2:el:la:los:las] %F2_RelIcon en %s3_CityName.</Spanish>
-		<Polish>Twój %s1_UnitName zawiódł i nie rozpowszechnił %F2_RelIcon w %s3_CityName!!!</Polish>
+		<Italian>La tua unità %s1_UnitName ha fallito nel diffondere %F2_RelIcon a %s3_CityName!</Italian>
+		<Spanish>¡[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName no [NUM1:ha:ha:han:han] logrado propagar [NUM2:el:la:los:las] %F2_RelIcon en %s3_CityName!</Spanish>
+		<Polish>Twój %s1_UnitName zawiódł i nie rozpowszechnił %F2_RelIcon w %s3_CityName!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_REMOVE_SPECIALIST</Tag>
@@ -8719,17 +8616,17 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SABOTAGE_NEAR</Tag>
-		<English>We have heard reports of sabotage near %s1_CityName!!!</English>
-		<French>Des rapports signalent un sabotage près de %s1_CityName!</French>
-		<German>Es gibt Berichte über Sabotage bei %s1_CityName!!!</German>
-		<Italian>Ci sono notizie di un sabotaggio a %s1_CityName!!!</Italian>
-		<Spanish>Nos han informado de un sabotaje cerca de %s1_CityName.</Spanish>
-		<Polish>Dostałeś raporty o sabotażu niedaleko %s1_CityName!!!</Polish>
+		<English>We have heard reports of sabotage near %s1_CityName!</English>
+		<French>Des rapports signalent un sabotage près de %s1_CityName !</French>
+		<German>Es gibt Berichte über Sabotage bei %s1_CityName!</German>
+		<Italian>Ci sono notizie di un sabotaggio a %s1_CityName!</Italian>
+		<Spanish>¡Nos han informado de un sabotaje cerca de %s1_CityName!</Spanish>
+		<Polish>Dostałeś raporty o sabotażu niedaleko %s1_CityName!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SACKED_CITY</Tag>
 		<English>You have sacked the city of %s1_cityname!</English>
-		<French>Vous avez saccagé la ville de %s1_cityname!</French>
+		<French>Vous avez saccagé la ville de %s1_cityname !</French>
 		<German>Ihr habt die Stadt %s1_cityname geplündert!</German>
 		<Italian>Hai saccheggiato la città di %s1_cityname!</Italian>
 		<Spanish>¡Has saqueado la ciudad de %s1_cityname!</Spanish>
@@ -8738,7 +8635,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SACKED_CITY_GOLD</Tag>
 		<English>%d2_gold[ICON_GOLD] has been seized from the city of %s1_cityname!</English>
-		<French>%d2_gold[ICON_GOLD] ont été saisis de la ville de %s1_cityname!</French>
+		<French>%d2_gold[ICON_GOLD] ont été saisis de la ville de %s1_cityname !</French>
 		<German>%d2_gold[ICON_GOLD] wurde in der Stadt %s1_cityname beschlagnahmt!</German>
 		<Italian>%d2_gold[ICON_GOLD] è stato rubato dalla città di %s1_cityname!</Italian>
 		<Spanish>¡Se ha obtenido %d2_gold[ICON_GOLD] de la ciudad de %s1_cityname!</Spanish>
@@ -8765,7 +8662,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SOMEONE_CIRC_GLOBE</Tag>
 		<English>%s1_PlyrName has proven that the world is round!</English>
-		<French>%s1_PlyrName a prouvé que la Terre est ronde!</French>
+		<French>%s1_PlyrName a prouvé que la Terre est ronde !</French>
 		<German>%s1_PlyrName hat bewiesen, dass die Erde rund ist!</German>
 		<Italian>%s1_PlyrName ha provato che il mondo è tondo!</Italian>
 		<Spanish>¡%s1_PlyrName ha demostrado que el mundo es redondo!</Spanish>
@@ -8774,56 +8671,57 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SOMEONE_CREATED_UNIT</Tag>
 		<English>%s1_PlyrName has created %s2_UnitName!</English>
-		<French>%s1_PlyrName a créé [NUM1:un:une:des:des] %s2_UnitName!</French>
+		<French>%s1_PlyrName a créé [NUM1:un:une:des:des] %s2_UnitName !</French>
 		<German>%s1_PlyrName hat [NUM2:einen:eine:ein:einige:einige:einige] [COLOR_UNIT_TEXT]%s2:4_UnitName[COLOR_REVERT] aufgestellt!</German>
 		<Italian>%s1_PlyrName ha creato l'unità %s2_UnitName!</Italian>
-		<Spanish>%s1_PlyrName ha entrenado [NUM1:un:una:unos:unas] %s2_UnitName.</Spanish>
+		<Spanish>¡%s1_PlyrName ha entrenado [NUM1:un:una:unos:unas] %s2_UnitName!</Spanish>
 		<Polish>%s1_PlyrName stworzył %s2_UnitName!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SPY_CAUGHT_AND_KILLED</Tag>
-		<English>The %s1_CivAdj %s2_UnitName responsible was caught and "liquidated"!!!</English>
-		<French>[NUM2:L':L':Les:Les] %s2_UnitName des %s1_CivAdj a été démasqué et exécuté!</French>
+		<English>The %s1_CivAdj %s2_UnitName responsible was caught and "liquidated"!</English>
+		<French>[NUM2:L':L':Les:Les] %s2_UnitName des %s1_CivAdj a été démasqué et exécuté !</French>
 		<German>Euer Sicherheitspersonal hat [NUM2:einen:eine:ein:einige:einige:einige] %[s1_CivAdj][NUM2:en:e:es:e:e:e] %s2:4_UnitName unschädlich gemacht!</German>
-		<Italian>L'unità %s2_UnitName %s1_CivAdj responsabile è stata catturata e "liquidata"!!!</Italian>
-		<Spanish>Han atrapado y liquidado [NUM2:al:a la:a los:a las] %s2_UnitName [NUM2:responsable:responsable:responsables:responsables] de la civilización %s1:2_CivAdj.</Spanish>
-		<Polish>%s1_CivAdj %s2_UnitName został schwytany i zlikwidowany!!!</Polish>
+		<Italian>L'unità %s2_UnitName %s1_CivAdj responsabile è stata catturata e "liquidata"!</Italian>
+		<Spanish>¡Han atrapado y liquidado [NUM2:al:a la:a los:a las] %s2_UnitName [NUM2:responsable:responsable:responsables:responsables] de la civilización %s1:2_CivAdj!</Spanish>
+		<Polish>%s1_CivAdj %s2_UnitName został schwytany i zlikwidowany!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SPY_DESTROYED_PRODUCTION</Tag>
-		<English>Your %s1_UnitName has destroyed the production of %s2_ProdName in %s3_CityName!!!</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] saboté la production de %s2_ProdName à %s3_CityName!</French>
+		<English>Your %s1_UnitName has destroyed the production of %s2_ProdName in %s3_CityName!</English>
+		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] saboté la production de %s2_ProdName à %s3_CityName !</French>
 		<German>[NUM1:Euer:Eure:Euer:Eure:Eure:Eure] %s1_UnitName [NUM1:hat:haben] die Produktion (%s2_ProdName) in %s3_CityName zerstört!</German>
-		<Italian>La tua unità %s1_UnitName ha distrutto la produzione di %s2_ProdName a %s3_CityName!!!</Italian>
-		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName [NUM1:ha:ha:han:han] destruido en %s3_CityName la producción de: %s2_ProdName.</Spanish>
-		<Polish>Twój %s1_UnitName sabotował produkcję w %s2_CityName!!!</Polish>
+		<Italian>La tua unità %s1_UnitName ha distrutto la produzione di %s2_ProdName a %s3_CityName!</Italian>
+		<Spanish>¡[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName [NUM1:ha:ha:han:han] destruido en %s3_CityName la producción de: %s2_ProdName!</Spanish>
+		<Polish>Twój %s1_UnitName sabotował produkcję w %s2_CityName!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SPY_SABOTAGED</Tag>
-		<English>Your %s1_UnitName has conducted sabotage near %s2_CityName!!!</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] effectué un sabotage près de %s2_CityName!</French>
+		<English>Your %s1_UnitName has conducted sabotage near %s2_CityName!</English>
+		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] effectué un sabotage près de %s2_CityName !</French>
 		<German>[NUM1:Euer:Eure:Euer:Eure:Eure:Eure] %s1_UnitName [NUM1:hat:haben] erfolgreich Sabotage in der Nähe von %s2_CityName betrieben!</German>
-		<Italian>La tua unità %s1_UnitName ha effettuato un sabotaggio a %s2_CityName!!!</Italian>
-		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName [NUM1:ha:ha:han:han] realizado un sabotaje cerca de %s2_CityName.</Spanish>
-		<Polish>Twój %s1_UnitName przeprowadził sabotaż niedaleko %s2_CityName!!!</Polish>
+		<Italian>La tua unità %s1_UnitName ha effettuato un sabotaggio a %s2_CityName!</Italian>
+		<Spanish>¡[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName [NUM1:ha:ha:han:han] realizado un sabotaje cerca de %s2_CityName!</Spanish>
+		<Polish>Twój %s1_UnitName przeprowadził sabotaż niedaleko %s2_CityName!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SPY_STOLE_PLANS</Tag>
-		<English>Your %s1_UnitName has stolen military plans from %s2_CityName!!!</English>
+		<English>Your %s1_UnitName has stolen military plans from %s2_CityName!</English>
 		<French>[NUM1:Votre:Votre:Vos:Vos] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] [NUM1:a:a:ont:ont] volé des plans militaires à %s2_CityName!</French>
 		<German>[NUM1:Euer:Eure:Euer:Eure:Eure:Eure] %s1_UnitName [NUM1:hat:haben] militärische Pläne aus %s2_CityName gestohlen!</German>
-		<Italian>La tua unità %s1_UnitName ha rubato i documenti militari da %s2_CityName!!!</Italian>
-		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName [NUM1:ha:ha:han:han] robado los planos militares de %s2_CityName.</Spanish>
-		<Polish>Twój %s1_UnitName ukradł wojskową dokumentację z %s2_CityName!!!</Polish>
+		<Italian>La tua unità %s1_UnitName ha rubato i documenti militari da %s2_CityName!</Italian>
+		<Spanish>¡[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName [NUM1:ha:ha:han:han] robado los planos militares de %s2_CityName!</Spanish>
+		<Polish>Twój %s1_UnitName ukradł wojskową dokumentację z %s2_CityName!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_STEALTH_ATTACK</Tag>
 		<English>A %s1_PlyrName %s2_UnitName has taken your %s3_UnitName by surprise!</English>
 		<French>[NUM2:un:une:des:des] %s2_UnitName de %s1_PlyrName [NUM2:a:a:ont:ont] pris [NUM3:votre:votre:vos:vos] %s3_UnitName par surprise !</French>
+		<German>[NUM2:Ein:Eine:Ein:Mehrere:Mehrere:Mehrere] %s2_UnitName (%s1_PlyrName) [NUM2:hat:haben] [NUM3:Euren:Eure:Euer:Eure:Eure:Eure] %s3_UnitName überrascht!</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_STEALTH_ATTACK_OWNER</Tag>
-		<English>Your stealthy %s1_UnitName has snuck up on an unsuspecting %s2_PlyrName %s3_UnitName!</English>
+		<English>Your stealthy %s1_UnitName snuck up on an unsuspecting %s2_PlyrName %s3_UnitName!</English>
 		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName, camouflé[NUM1:,:e,:s,:es,] s'est faufilé et [NUM1:a:a:ont:ont] attaqué furtivement [NUM3:un:une:des:des] %s3_UnitName (%s2_PlyrName) !</French>
 	</TEXT>
 	<TEXT>
@@ -9199,25 +9097,25 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOUR_SPY_CAUGHT</Tag>
-		<English>Your %s1_UnitName was caught and "detained for questioning"!!!</English>
-		<French>Votre %s1_UnitName a été capturé et "détenu pour être interrogé"!</French>
+		<English>Your %s1_UnitName was caught and "detained for questioning"!</English>
+		<French>Votre %s1_UnitName a été capturé et "détenu pour être interrogé" !</French>
 		<German>[COLOR_WARNING_TEXT][NUM1:Euer:Eure:Euer:Eure:Eure:Eure] %s1_UnitName [NUM1:wurde:wurden] ertappt und ist seitdem "verschwunden".[COLOR_REVERT]</German>
-		<Italian>La tua unità %s1_UnitName è stata catturata e "trattenuta per l'interrogatorio"!!!</Italian>
-		<Spanish>Han capturado a [NUM1:vuestro:vuestra:vuestros:vuestras] %s1_UnitName para "[NUM1:interrogarlo:interrogarla:interrogarlos:interrogarlas]".</Spanish>
+		<Italian>La tua unità %s1_UnitName è stata catturata e "trattenuta per l'interrogatorio"!</Italian>
+		<Spanish>¡Han capturado a [NUM1:vuestro:vuestra:vuestros:vuestras] %s1_UnitName para "[NUM1:interrogarlo:interrogarla:interrogarlos:interrogarlas]"!</Spanish>
 		<Polish>Twój %s1_UnitName został zatrzymany i jest "przesłuchiwany"</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOUR_UNIT_IS_HARDCORE</Tag>
 		<English>Against all odds, our wounded %s1 has managed to be overlooked among the battlefield dead and is itching for revenge!</English>
-		<French>En opposition de chance notre blesse %s1 a gere de survivre sur le champ de bataille et il veut vengeance!</French>
+		<French>En opposition de chance, notre blesse %s1 a réussi à être oublié parmi les morts sur le champ de bataille et a soif de vengeance !</French>
 		<German>Unsere verwundete Einheit %s1 wurde entgegen aller Wahrscheinlichkeiten zwischen den Toten auf dem Schlachtfeld übersehen und sinnt nach Rache!</German>
-		<Spanish>Contra todo pronóstico, [NUM1:nuestro:nuestra:nuestros:nuestras] %s1 [NUM1:herido ha:herida ha:heridos han:heridas han] sobrevivido a la batalla, ¡y [NUM1:está:está:están:están] clamando venganza!</Spanish>
+		<Spanish>¡Contra todo pronóstico, [NUM1:nuestro:nuestra:nuestros:nuestras] %s1 [NUM1:herido ha:herida ha:heridos han:heridas han] sobrevivido a la batalla, ¡y [NUM1:está:está:están:están] clamando venganza!</Spanish>
 		<Polish>Przeciwko wszystkim szansą, nasz ranna jednostka: %s1 przetrwała walkę i czeka na okazję do zemsty!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE</Tag>
 		<English>Your %s1_unit has been promoted to %s2_promotion in battle.</English>
-		<French>[COLOR_GREEN][NUM1:Votre:Votre:Vos:Vos] %s1_unit [NUM1:a:a:ont:ont] combattu avec mérite, et gagn[NUM1:e:e:ent:ent] la promotion [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]%s2_promotion[COLOR_REVERT][COLOR_GREEN] à l'issue du combat.[COLOR_REVERT]</French>
+		<French>[COLOR_GREEN][NUM1:Votre:Votre:Vos:Vos] %s1_unit [NUM1:a:a:ont:ont] combattu avec mérite, et gagn[NUM1:é:é:ent:ent] la promotion [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]%s2_promotion[COLOR_REVERT][COLOR_GREEN] à l'issue du combat.[COLOR_REVERT]</French>
 		<German>Eure Einheit %s1_unit wurde im Kampf befördert (%s2_promotion).</German>
 		<Italian>La tua %s1_unit ha ricevuto in battaglia la promozione %s2_promotion.</Italian>
 		<Spanish>[NUM1:Tu:Tu:Tus:Tus] %s1_unit [NUM1:ha:ha:han:han] ascendido a %s2_promotion tras la batalla.</Spanish>
@@ -9225,12 +9123,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOUSINK_AIRBOMB4SUCCESS</Tag>
-		<English>You have SUNK a %s1_UnitName.</English>
+		<English>You have sunk a %s1_UnitName.</English>
 		<French>Vous avez coulé [NUM1:un:une:des:des] %s1_UnitName.</French>
-		<German>Du hast ein %s1_UnitName VERSENKT.</German>
-		<Italian>Hai AFFONDATO [NUM1:un:una:dei:delle] %s1_UnitName!</Italian>
-		<Spanish>¡Has hundido [NUM1:un:una:unos:unas] %s1_UnitName!.</Spanish>
-		<Polish>ZATOPIŁEŚ jednostkę: %s1_UnitName.</Polish>
+		<German>Du hast ein %s1_UnitName versenkt.</German>
+		<Italian>Hai affondato [NUM1:un:una:dei:delle] %s1_UnitName!</Italian>
+		<Spanish>¡Has hundido [NUM1:un:una:unos:unas] %s1_UnitName!</Spanish>
+		<Polish>Zatopiłeś jednostkę: %s1_UnitName.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOU_AIRBOMB2FAIL</Tag>
@@ -9580,11 +9478,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MOD_DCN_ALLIANCE</Tag>
-		<English>Alliance</English>
-		<German>Allianz</German>
-		<Italian>alleanza</Italian>
-		<Spanish>Alianza</Spanish>
-		<Polish>Sojusz</Polish>
+		<English> Alliance</English>
+		<German>ne Allianz</German>
+		<Italian> alleanza</Italian>
+		<Spanish> Alianza</Spanish>
+		<Polish> Sojusz</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MOD_DCN_ARABIAN_MATCH</Tag>
@@ -9807,6 +9705,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MOD_DCN_NEWCIV_NAME_DESC</Tag>
 		<English>Your civilization is now known as the %s1</English>
 		<French>Votre civilization a un nouveau nom: %s1</French>
+		<German>Eure Zivilisation nennt sich jetzt: %s1</German>
 		<Italian>La tua civiltà è ora conosciuta come %s1</Italian>
 		<Spanish>Ahora tu civilización es conocida como %s1.</Spanish>
 		<Polish>Twoja cywilizacja jest znana teraz jako %s1</Polish>
@@ -10112,7 +10011,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MOD_DCN_TRIBE</Tag>
 		<English>%s Tribe</English>
 		<French>Tribu %s</French>
-		<German>%s Stamm</German>
+		<German>%ser Stamm</German>
 		<Italian>Tribù %s</Italian>
 		<Spanish>Tribu %s:2</Spanish>
 		<Polish>Plemię %s</Polish>
@@ -10787,14 +10686,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>Per ridurre al minimo i problemi di sincronizzazione, le azioni BULL, RevDCM, rivoluzioni e impostare le opzioni di default e collina, nei giochi multiplayer</Italian>
 		<Spanish>Para minimizar los problemas de sincronización, se establecerán y bloquearán los valores predefinidos de todas las opciones de BULL, RevDCM, y Revolution en las partidas multijugador</Spanish>
 		<Polish>By zminimalizować problemy z synchronizacją, wszystkie akcje BULL, RevDCM oraz rewolucje zostają ustawione domyślnie i zablokowane</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NAME</Tag>
-		<English>Name</English>
-		<French>Nom</French>
-		<Italian>Nome</Italian>
-		<Spanish>Nombre</Spanish>
-		<Polish>Nazwa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NAME_CITY</Tag>
@@ -12210,7 +12101,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English>[COLOR_HIGHLIGHT_TEXT]Your units can not enter this tile because it is inside of a nearby city's Zone of Control. Capture the city to restore normal movement.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Vos unités ne peuvent entrer dans cette case car celle-ci fait partie de la zone protégée par la ville. Capturez la ville pour pouvoir y pénétrer.[COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Eure Einheiten können dieses Feld nicht betreten, weil es sich in der Kontrollzone einer nahegelegenen Stadt befindet. Erobert die Stadt, um normale Bewegung zu ermöglichen.[COLOR_REVERT]</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Le tue unità non possono attraversare questa casella perchè è all'interno della zona di controllo di una città. Cattura la città per ripristinare il movimento normale.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Le tue unità non possono attraversare questa casella perché è all'interno della zona di controllo di una città. Cattura la città per ripristinare il movimento normale.[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Tus unidades no pueden entrar a esta casilla porque se encuentra dentro de una Zona de control de una ciudad cercana. Captura la ciudad para poder moverte normalmente.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Twoje jednostki nie mogą wejść na to pole ponieważ jest w zasięgu Strefy Kontroli miasta. Przejmij miasto by móc normalnie się poruszać.[COLOR_REVERT]</Polish>
 	</TEXT>
@@ -12219,7 +12110,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English>[COLOR_HIGHLIGHT_TEXT]Your units can not enter this tile because it is inside of a nearby improvement's Zone of Control. Destroy the improvement, or it's defenders to restore normal movement.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Vos unités ne peuvent entrer dans cette case car celle-ci fait partie de la zone protégée par un aménagement à proximité. Détruisez cet aménagement ou ces défenseurs afin de retrouver une liberté de mouvement dans ce périmètre.[COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Eure Einheiten können dieses Feld nicht betreten, weil es sich in der Kontrollzone einer nahegelegenen Modernisierung befindet. Zerstört die Modernisierung oder vernichtet ihre Verteidiger, um normale Bewegung zu ermöglichen.[COLOR_REVERT]</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Le tue unità non possono attraversare questa casella perchè è all'interno della zona di controlli di un miglioramento vicino. Distruggi il miglioramento o i suoi difensori per ripristinare il normale movimento.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Le tue unità non possono attraversare questa casella perché è all'interno della zona di controlli di un miglioramento vicino. Distruggi il miglioramento o i suoi difensori per ripristinare il normale movimento.[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Tus unidades no pueden entrar a esta casilla porque se encuentra dentro de una Zona de control de una mejora cercana. Destruye la mejora y/o sus defensores para poder moverte normalmente.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Twoje jednostki nie mogą wejść na to pole ponieważ jest w zasięgu ulepszenia Strefy Kontrolowanej. Zniszcz ulepszenie lub obrońców otrzymać normalny ruch.[COLOR_REVERT]</Polish>
 	</TEXT>
@@ -12228,7 +12119,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English>[COLOR_HIGHLIGHT_TEXT]Your units can not enter %s1_cityName because it has the protection of its %s2_buildingName. Either destroy the %s3_buildingName, or reduce the city defenses to [COLOR_REVERT][COLOR_WARNING_TEXT]%d4%[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] to attack the city.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Vos unités ne peuvent entrer dans %s1_cityName car celle-ci est protégée par [NUM2:le:la:les:les] %s2_buildingName. Détruisez [NUM3:le:la:les:les] %s3_buildingName, ou réduisez les défenses de la ville à moins de [COLOR_REVERT][COLOR_WARNING_TEXT]%d4%[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] pour la conquérir.[COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Eure Einheiten können %s1_cityName nicht betreten, da die Stadt von schweren Toren geschützt wird. Ihr müsst diese entweder zerstören oder die Stadtverteidigung auf [COLOR_REVERT][COLOR_WARNING_TEXT]%d4%[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] senken, bevor Ihr die Stadt einnehmen könnt.[COLOR_REVERT]</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Le tue unità non possono attaccare %s1_cityName perchè la città è protetta dall'edificio %s2_buildingName. Distruggi il %s3_buildingName, o riduci le difese cittadine a [COLOR_REVERT][COLOR_WARNING_TEXT]%d4%[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] per attaccare la città.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Le tue unità non possono attaccare %s1_cityName perché la città è protetta dall'edificio %s2_buildingName. Distruggi il %s3_buildingName, o riduci le difese cittadine a [COLOR_REVERT][COLOR_WARNING_TEXT]%d4%[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] per attaccare la città.[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Tus unidades no pueden entrar en %s1_cityName porque está protegida por [NUM2:su:su:sus:sus] %s2_buildingName. Destruye [NUM2:el:la:los:las] %s3_buildingName, o reduce las defensas de la ciudad al [COLOR_REVERT][COLOR_WARNING_TEXT]%d4%[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] para poder atacarla.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Twoje jednostki nie mogą wejść do %s1_cityName ponieważ jest chronione przez %s2_buildingName. Wcześniej zniszcz %s3_buildingName, lub zmniejsz obronę do [COLOR_REVERT][COLOR_WARNING_TEXT]%d4%[COLOR_REVERT][COLOR_HIGHLIGHT_TEXT] by zaatakować miasto.[COLOR_REVERT]</Polish>
 	</TEXT>
@@ -12237,7 +12128,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English>[COLOR_HIGHLIGHT_TEXT]Your units can not enter this tile because it is inside of a nearby unit's Zone of Control. Destroy the unit to restore normal movement.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Vos unités ne peuvent entrer dans cette case car celle-ci est protégée par une unité à proximité. Il vous faudra détruire l'unité avant de pouvoir y pénétrer.[COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Eure Einheiten können dieses Feld nicht betreten, weil es sich in der Kontrollzone einer Einheit befindet. Zerstört die Einheit, um normale Bewegung zu ermöglichen.[COLOR_REVERT]</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Le tue unità non possono attraversare questa casella perchè è all'interno della zona di controllo di una unità. Distruggi l'unità per ripristinare il normale movimento.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Le tue unità non possono attraversare questa casella perché è all'interno della zona di controllo di una unità. Distruggi l'unità per ripristinare il normale movimento.[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Tus unidades no pueden entrar a esta casilla porque se encuentra dentro de una Zona de control de una unidad cercana. Derrota a la unidad para poder moverte normalmente.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Twoje jednostki nie mogą wejść na to pole ponieważ jest w zasięgu Strefy Kontroli jednostki. Zniszcz jednostkę by móc normalnie się poruszać.[COLOR_REVERT]</Polish>
 	</TEXT>
@@ -12254,6 +12145,14 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English>, or [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</English>
 		<French>, ou [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</French>
 		<Polish>, lub [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPULATION</Tag>
+		<English>Population</English>
+		<German>Bevölkerung</German>
+		<Italian>Popolazione</Italian>
+		<Spanish>Población</Spanish>
+		<Polish>Populacja</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POSITIVE_COLOR</Tag>
@@ -12453,21 +12352,9 @@ Calendrier: 2150 AD - 2300 AD</French>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Espionage</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Espionage</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Espionage</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Spionage</German>
+		<Italian>Spionaggio</Italian>
+		<Spanish>Espionaje</Spanish>
 		<Polish>Szpiegostwo</Polish>
 	</TEXT>
 	<TEXT>
@@ -12514,6 +12401,14 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Bogactwo</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PRODUCTION</Tag>
+		<English>Production</English>
+		<German>Produktion</German>
+		<Italian>Produzione</Italian>
+		<Spanish>Producción</Spanish>
+		<Polish>Produkcja</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PRODUCTION_DECAY</Tag>
 		<English>[COLOR_NEGATIVE_TEXT]Will lose %d1[ICON_PRODUCTION] this turn[COLOR_REVERT]</English>
 		<French>[COLOR_NEGATIVE_TEXT]Va perdre %d1[ICON_PRODUCTION] ce tour[COLOR_REVERT]</French>
@@ -12548,39 +12443,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>[COLOR_WARNING_TEXT]Perderà %d1[ICON_PRODUCTION] se non viene prodotto per %d2 [NUM2:Turno:turni][COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Perderá %d1[ICON_PRODUCTION] si no se sigue produciendo en %d2 [NUM2:turno:turnos][COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Straci %d1[ICON_PRODUCTION] jeśli nie wyprodukuje w ciągu %d2 [NUM2:tury:tur][COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RANKING_CULTURE</Tag>
-		<English>Culture</English>
-		<German>Kultur</German>
-		<Italian>Cultura</Italian>
-		<Spanish>Cultura</Spanish>
-		<Polish>Kultura</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RANKING_ESPIONAGE</Tag>
-		<English>Espionage</English>
-		<French>Espionnage</French>
-		<German>Spionage</German>
-		<Italian>Spionaggio</Italian>
-		<Spanish>Espionaje</Spanish>
-		<Polish>Szpiegostwo</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RANKING_LAND</Tag>
-		<English>Land</English>
-		<French>Terre</French>
-		<Italian>Territorio</Italian>
-		<Spanish>Territorio</Spanish>
-		<Polish>Teren</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RANKING_POPULATION</Tag>
-		<English>Population</English>
-		<German>Bevölkerung</German>
-		<Italian>Popolazione</Italian>
-		<Spanish>Población</Spanish>
-		<Polish>Populacja</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RANKING_POWER</Tag>
@@ -13574,15 +13436,6 @@ Calendrier: 2150 AD - 2300 AD</French>
  Right mouse Click:
 	100
 	Tooltip	[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl/Shift/Alt[COLOR_REVERT][\BOLD]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SHORTCUTS_GAME</Tag>
-		<English>Game</English>
-		<French>Jeu</French>
-		<German>Allgemein</German>
-		<Italian>Gioco</Italian>
-		<Spanish>Partida</Spanish>
-		<Polish>Gra</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_GAME_PEDIA</Tag>
@@ -15324,6 +15177,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Polish>[NEWLINE][ICON_BULLET]Religia Państwowa [ICON_RELIGION] ze Świętym Miastem obniża buntowniczość</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_STRATEGIC</Tag>
+		<English>Strategic</English>
+		<French>Stratégique</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_STRATOVERLAY_ADDSIGN</Tag>
 		<English>Add Sign</English>
 		<French>Ajouter un panneau</French>
@@ -16062,14 +15920,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SPECIALIST_TECH_HAPPINESS_TYPE</Tag>
 		<English>[ICON_BULLET]%s1_Specialist gain %D2_Change%F3_HappOrUnhapp.</English>
-		<French>[ICON_BULLET]%s1_Specialist gagne %D2_Change%F3_HappOrUnhapp.</French>
+		<French>[ICON_BULLET]%s1_Specialist gagné %D2_Change%F3_HappOrUnhapp.</French>
 		<Italian>[ICON_BULLET]%s1_Specialist ottiene %D2_Change%F3_HappOrUnhapp.</Italian>
 		<Polish>[ICON_BULLET]%s1_Specialist daje: %D2_Change%F3_HappOrUnhapp.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SPECIALIST_TECH_HEALTH_TYPE</Tag>
 		<English>[ICON_BULLET]%s1_Specialist gain %D2_Change%F3_HealthOrUnhealth.</English>
-		<French>[ICON_BULLET]%s1_Specialist gagne %D2_Change%F3_HealthOrUnhealth.</French>
+		<French>[ICON_BULLET]%s1_Specialist gagné %D2_Change%F3_HealthOrUnhealth.</French>
 		<Italian>[ICON_BULLET]%s1_Specialist ottiene %D2_Change%F3_HealthOrUnhealth.</Italian>
 		<Polish>[ICON_BULLET]%s1_Specialist daje: %D2_Change%F3_HealthOrUnhealth.</Polish>
 	</TEXT>
@@ -16126,7 +15984,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TAOISM_PEDIA</Tag>
 		<English>When discussing "Taoism," one must be careful to distinguish between the philosophy of Tao and the religion of Tao. The philosophy of Tao came first. According to tradition, the philosopher Lao-Tsu lived in the 4th Century BC. He wrote the "Tao Te Ching," which can be roughly translated as "The Book of the Way and its Virtue."[PARAGRAPH:2]The Tao Te Ching is written in verse. It is extremely subtle and difficult to understand. Many scholars have spent years trying to interpret it. The book can be (very primitively and probably inaccurately) summarized as follows. The "Tao" is what exists before everything else. It is formless, and from it all things are formed. Man must aspire to simplicity; only by discarding the useless trappings of culture and civilization can man return to his original state of emptiness - Tao - when all is possible. According to Lao-Tsu, "the sage has no heart of his own" - no intentions, no preconceptions, and no agenda.[PARAGRAPH:2]The religion of Taoism is based upon worship of Lao-Tsu as a deity. According to Taoist religious tradition, in 142 AD Lao-Tsu appeared to Zhang Daoling, a hermit, and told him that the world was coming to an end, and those who followed Lao-Tsu would go on to another, better life. Further, Lao-Tsu's followers would have access to the celestial powers that control the fate of mankind. Zhang preached Lao-Tsu's words and gained many converts.[PARAGRAPH:2]Over time, Taoism split into a number of schools. Some believed that they could change the world through talismans, alchemy, and magical spells. Some sought to achieve immortality through a Buddhist-like enlightenment. A variety of gods from Chinese folklore and Buddhist tradition were incorporated into the religion.[PARAGRAPH:2]Taoism spread widely throughout China, and it was the official state religion for a thousand years, until the end of the Qing Dynasty in 1911. The Communists virtually eradicated the religion in China during the Cultural Revolution (1960-76), when many of the temples were destroyed and the monks and priests sent to "reeducation" camps. In the 1980s China restored some religious tolerance, and Taoist temples are slowly being rebuilt and repaired.[PARAGRAPH:2]It is believed that many Chinese still practice Taoism in some form, despite the government's restrictions. Taoism is also practiced by some 31 million people outside of China, the largest group being in Taiwan. Its influence can be felt world-wide in the practices of acupuncture, herbalism, feng shui, and martial arts.</English>
-		<French>Lorsque l'on parle de "Taoïsme", il convient de distinguer entre la philosophie de Tao, apparue la première, et la religion de Tao. La tradition indique que le philosophe Lao-tseu a vécu au IVe siècle av. JC Il a écrit le "Daodejing", qui peut être approximativement traduit par "Le Livre de la Voie et de la Vertu".[PARAGRAPH:2]Le Daodejing est écrit en vers, il est extrêmement subtil et difficile à comprendre. De nombreux spécialistes ont passé des années à essayer de l'interpréter. Le livre peut être résumé (de façon très primaire et probablement incorrecte) comme suit. Le "Tao" constitue ce qui existe avant toute chose. Il est informe et constitue la base de toute forme. L'homme doit chercher la simplicité ; ce n'est qu'en abandonnant les signes inutiles de la culture et de la civilisation que l'homme peut retourner à son état originel d'inanité - Tao - dans lequel tout est possible. Selon Lao-tseu, "le sage n'a pas de coeur à soi", c'est-à-dire ni intention, ni opinion préconçue, ni programme.[PARAGRAPH:2]La religion taoïste est fondée sur la vénération de Lao-tseu comme divinité. D'après la tradition religieuse taoïste, Lao-tseu est apparu à l'ermite Zhang Daoling en 142 av. JC, lui annonçant que le monde touchait à sa fin et que ceux qui suivraient les préceptes de Lao-tseu auraient une nouvelle vie, meilleure. En outre, ces adeptes auraient accès aux pouvoirs célestes qui contrôlent le destin de l'humanité. Zhang a prêché les paroles de Lao-tseu, ce qui lui a valu l'entourage de nombreux convertis.[PARAGRAPH:2]Au fil du temps, le taoïsme s'est scindé en plusieurs écoles. Certains croyaient qu'ils pourraient changer le monde en recourant à des talismans, à l'alchimie et aux formules magiques. D'autres pensaient parvenir à l'immortalité par le biais d'un éveil semblable à celui recherché dans le bouddhisme. Différents dieux issus du folklore chinois et de la tradition bouddhiste ont été intégrés à cette religion.[PARAGRAPH:2]Le taoïsme s'est largement répandu dans toute la Chine et il a été la religion officielle d'Etat pendant près de mille ans, jusqu'à la fin de la dynastie Qing en 1911. Durant la Révolution culturelle en Chine (1960-76), les communistes ont pratiquement éradiqué cette religion en détruisant de nombreux temples tandis que les moines et les prêtres étaient envoyés dans des camps de "rééducation". Dans les années 1980, la Chine a restauré une certaine tolérance religieuse et les temples taoïstes ont été lentement reconstruits et réparés.[PARAGRAPH:2]On pense que de nombreux Chinois continuent à pratiquer le taoïsme sous certaines formes, malgré les restrictions gouvernementales. Le taoïsme est également pratiqué par près de 31 millions de fidèles hors de Chine, la plus grande communauté se trouvant à Taïwan. Son influence joue dans le monde entier, par le biais de pratiques telles que l'acuponcture, la médecine douce, le feng shui et les arts martiaux.</French>
+		<French>Lorsque l'on parle de "Taoïsme", il convient de distinguer entre la philosophie de Tao, apparue la première, et la religion de Tao. La tradition indique que le philosophe Lao-tseu a vécu au IVe siècle av. JC Il a écrit le "Daodejing", qui peut être approximativement traduit par "Le Livre de la Voie et de la Vertu".[PARAGRAPH:2]Le Daodejing est écrit en vers, il est extrêmement subtil et difficile à comprendre. De nombreux spécialistes ont passé des années à essayer de l'interpréter. Le livre peut être résumé (de façon très primaire et probablement incorrecte) comme suit. Le "Tao" constitue ce qui existe avant toute chose. Il est informe et constitue la base de toute forme. L'homme doit chercher la simplicité ; ce n'est qu'en abandonnant les signes inutiles de la culture et de la civilisation que l'homme peut retourner à son état originel d'inanité - Tao - dans lequel tout est possible. Selon Lao-tseu, "le sage n'a pas de cœur à soi", c'est-à-dire ni intention, ni opinion préconçue, ni programme.[PARAGRAPH:2]La religion taoïste est fondée sur la vénération de Lao-tseu comme divinité. D'après la tradition religieuse taoïste, Lao-tseu est apparu à l'ermite Zhang Daoling en 142 av. JC, lui annonçant que le monde touchait à sa fin et que ceux qui suivraient les préceptes de Lao-tseu auraient une nouvelle vie, meilleure. En outre, ces adeptes auraient accès aux pouvoirs célestes qui contrôlent le destin de l'humanité. Zhang a prêché les paroles de Lao-tseu, ce qui lui a valu l'entourage de nombreux convertis.[PARAGRAPH:2]Au fil du temps, le taoïsme s'est scindé en plusieurs écoles. Certains croyaient qu'ils pourraient changer le monde en recourant à des talismans, à l'alchimie et aux formules magiques. D'autres pensaient parvenir à l'immortalité par le biais d'un éveil semblable à celui recherché dans le bouddhisme. Différents dieux issus du folklore chinois et de la tradition bouddhiste ont été intégrés à cette religion.[PARAGRAPH:2]Le taoïsme s'est largement répandu dans toute la Chine et il a été la religion officielle d'Etat pendant près de mille ans, jusqu'à la fin de la dynastie Qing en 1911. Durant la Révolution culturelle en Chine (1960-76), les communistes ont pratiquement éradiqué cette religion en détruisant de nombreux temples tandis que les moines et les prêtres étaient envoyés dans des camps de "rééducation". Dans les années 1980, la Chine a restauré une certaine tolérance religieuse et les temples taoïstes ont été lentement reconstruits et réparés.[PARAGRAPH:2]On pense que de nombreux Chinois continuent à pratiquer le taoïsme sous certaines formes, malgré les restrictions gouvernementales. Le taoïsme est également pratiqué par près de 31 millions de fidèles hors de Chine, la plus grande communauté se trouvant à Taïwan. Son influence joue dans le monde entier, par le biais de pratiques telles que l'acuponcture, la médecine douce, le feng shui et les arts martiaux.</French>
 		<German>Spricht man über den Taoismus, muss man zwischen der (früheren) Philosophie und der Religion Tao unterscheiden. Angeblich verfasste der Philosoph Lao-Tsu im 4. Jahrhundert vor Christus das "Tao Te Ching" ("Das Buch vom Weg und seinem Wert").[PARAGRAPH:2]Das in Versen verfasste Tao Te Ching ist äußerst schwer zu verstehen. Unzählige Wissenschaftler haben bereits versucht, den Text zu interpretieren. Das Tao Te Ching kann wie folgt zusammengefasst werden: Das "Tao" existiert vor allem anderen. Es ist formlos und kann die Gestalt aller Dinge annehmen. Das oberste Ziel der menschlichen Existenz ist die Einfachheit. Nur wenn man die kulturellen und zivilisatorischen Fallen hinter sich lässt, kann man in den ursprünglichen Zustand der Leere (Tao) zurückkehren. Laut Lao-Tsu "hat der Weise kein eigenes Herz", also keine Intentionen, Vorurteile oder Ziele.[PARAGRAPH:2]Die Religion des Taoismus basiert auf der Verehrung Lao-Tsus als Gott. Der taoistischen Tradition zufolge erschien Lao-Tsu 142 vor Christus Zhang Daoling, einem Eremiten, und sagte diesem das Ende der Welt voraus. Nur jene, so Lao-Tsu, die seiner Lehre folgten würden in ein neues... besseres... Leben übergehen und hätten Zugang zu den Himmelsmächten, die das Schicksal der Menschheit kontrollieren. Zhang predigte daraufhin Zis Worte und fand zahlreiche Anhänger.[PARAGRAPH:2]Im Laufe der Jahrhunderte gingen aus dem Taoismus mehrere Glaubensschulen hervor. Einige dieser Schulen wollen die Welt durch Talismane, die Alchemie und magische Zauber verändern. Andere streben nach Erleuchtung und Unsterblichkeit. Viele Götter der chinesischen Kultur und des Buddhismus finden sich auch im Taoismus wieder.[PARAGRAPH:2]Der in China weit verbreitete Taoismus war dort (bis zum Ende der Qin-Dynastie im Jahr 1911) über 1000 Jahre lang Staatsreligion. Während der Kulturrevolution (1960-76) wurde der Taoismus von den Kommunisten fast vollständig ausgelöscht, als unzählige Tempel zerstört und deren Mönche und Priester in "Umschulungslager" geschickt wurden. Seit den 80er Jahren werden die taoistischen Tempel im Zuge einer neuen religiösen Toleranz langsam wieder aufgebaut.[PARAGRAPH:2]Vermutlich praktizieren bis heute viele Chinesen eine wie auch immer geartete Form des Taoismus. Ein Großteil der 31 Millionen Anhänger des Taoismus außerhalb Chinas lebt heute in Taiwan. In der westlichen Welt ist der Einfluss des Taoismus in der Akupunktur, der Kräuterkunde, dem Feng Shui und den Martial Arts spürbar.</German>
 		<Italian>Parlando di "Taoismo", bisogna fare attenzione alle differenze tra la filosofia e la religione del Tao. La filosofia del Tao si sviluppò per prima: stando alla tradizione, il filosofo Lao-Tsu, vissuto nel IV secolo a. C., scrisse il "Tao Te Ching", che può essere letteralmente tradotto in "Il libro del cammino e della virtù".[PARAGRAPH:2]Il Tao Te Ching è scritto in versi ed è estremamente difficile da comprendere: molti studiosi hanno impiegato diversi anni per cercare di interpretarlo. Il libro può essere (sommariamente e probabilmente inaccuratamente) riassunto in questo modo: il "Tao" esiste sopra ogni altra cosa; non ha forma e da esso tutte le cose vengono forgiate. L'uomo deve aspirare alla semplicità: solo rifiutando le inutili trappole della cultura e della civiltà potrà tornare al suo stato originale di vuoto, il Tao, dove tutto è possibile. Secondo Lao-Tsu, "il saggio non ha un cuore suo", nessuna intenzione, nessun preconcetto, nessun ordine del giorno.[PARAGRAPH:2]La religione del Taoismo si fonda sulla devozione alla divinità di Lao-Tsu. Secondo la tradizione religiosa Taoista, nel 142 d. C. Lao-Tsu apparve a Zhang Daoling, un eremita, e gli disse che il mondo stava per terminare e che chiunque avesse seguito Lao-Tsu avrebbe raggiunto la vita in un mondo migliore. Inoltre, i seguaci di Lao-Tsu avrebbero avuto accesso ai poteri celesti che controllano il fato dell'umanità. Zhang predicò le parole di Zi e fece convertire molte persone.[PARAGRAPH:2]Nel corso della storia, il Taoismo si divise in diverse scuole di pensiero: alcune credevano di poter cambiare il mondo con talismani, alchimia e formule magiche, mentre altri cercavano di raggiungere l'immortalità in un modo simile al Buddismo. Uno svariato numero di divinità appartenenti al folclore cinese e alla tradizione Buddista vennero aggiunti alla religione.[PARAGRAPH:2]Il Taoismo si diffuse rapidamente in tutta la Cina e fu la religione ufficiale per un migliaio di anni, fino alla fine della dinastia Qing, nel 1911. Il comunismo ha letteralmente sradicato la religione dalla Cina durante la famose Rivoluzione Culturale (1960-1976), nel corso della quale vennero distrutti parecchi templi, mentre monaci e sacerdoti vennero chiusi in campi di "rieducazione". Negli anni '80, la Cina adottò nuovamente una tolleranza religiosa: i templi Taoisti cominciarono lentamente a essere ricostruiti e restaurati.[PARAGRAPH:2]Si pensa che molti Cinesi pratichino una qualche forma di Taoismo, malgrado le restrizioni governative. Il Taoismo è praticato da 31 milioni di persone fuori dalla Cina, la maggior concentrazione delle quali a Taiwan. L'influenza del Taoismo si può trovare nella pratica dell'agopuntura, nella conoscenza delle erbe, nel feng-shui e nelle arti marziali.</Italian>
 		<Spanish>Cuando se habla de "taoísmo", uno debe tener cuidado en hacer la distinción entre la filosofía del Tao y la religión del Tao. La filosofía del Tao es anterior. Según la tradición, el filósofo Lao Tse vivió en el siglo IV a. C. Fue el autor del "Tao Te Ching," que a grandes rasgos puede traducirse como "El libro del Camino y su Virtud".[PARAGRAPH:2]El Tao Te Ching está en verso, y es extremadamente sutil y difícil de comprender. Muchos eruditos han pasado años tratando de interpretarlo. De modo resumido (de forma tosca y seguro que poco precisa) el contenido del libro es el siguiente: El "Tao" es lo que existe antes que todo lo demás. Carece de forma, pero forma todo lo demás. El hombre debe aspirar a la simplicidad: solo despojándose de los inútiles ornamentos de la cultura y la civilización puede retornar a su estado original de vacío, el Tao, donde todo es posible. Según Lao Tse: "el sabio carece de corazón", no tiene intenciones, no tiene opiniones preconcebidas y no tiene propósitos.[PARAGRAPH:2]El taoísmo como religión se basa en la veneración de Lao Tse. Según la tradición religiosa taoísta, en el año 142 d. C., Lao Tse se apareció a Zhang Dhaoling, un ermitaño, y le anunció que el fin del mundo se acercaba y que aquéllos que lo siguieran serían llevados a una vida mejor. Además, los seguidores de Lao Tse tendrían acceso a los poderes celestiales que gobiernan el destino de la humanidad. Zhang predicó la palabra de Lao Tse y consiguió muchos seguidores.[PARAGRAPH:2]Con el tiempo, el taoísmo se escindió en varias escuelas. Algunas creían que podrían cambiar el mundo por medio de talismanes, procedimientos alquímicos y conjuros. Otras buscaban la inmortalidad a través de un proceso de iluminación de corte budista. Varios dioses del folclore chino y la tradición budista se incorporaron a esta religión.[PARAGRAPH:2]El taoísmo alcanzó gran difusión en China, y fue la religión oficial durante mil años, hasta el final de la dinastía Qin en 1911. Los comunistas la erradicaron prácticamente durante la Revolución Cultural (1960-76), cuando muchos de los templos fueron destruidos y los monjes y sacerdotes fueron enviados a campos de "reeducación". En los años 80, China reinstauró una cierta tolerancia religiosa, y desde entonces los templos taoístas están siendo lentamente reconstruidos y reparados.[PARAGRAPH:2]Se cree que, a despecho de las restricciones legales, muchos chinos todavía practican el taoísmo. Además, la religión es practicada por más de treinta millones de personas fuera de China. El grupo más importante se encuentra en Taiwán. Su influencia puede sentirse en todo el mundo en las prácticas de la acupuntura, el herbolario, el feng shui y las artes marciales.</Spanish>
@@ -19284,20 +19142,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Polish>Nieznane</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_SCREEN_WORLD_LAND</Tag>
-		<English>Land</English>
-		<French>Terre</French>
-		<Spanish>Territorio</Spanish>
-		<Polish>Ląd</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_SCREEN_WORLD_POP</Tag>
-		<English>Population</English>
-		<German>Einwohner</German>
-		<Spanish>Población</Spanish>
-		<Polish>Populacja</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SPACE_RACE</Tag>
 		<English>Space Race</English>
 		<French>
@@ -19503,12 +19347,12 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WINNER_MERCY_RULE_TURNS</Tag>
-		<English>You will win in %d1 [NUM1:turn:turns]!!!</English>
-		<French>Vous allez gagner dans %d1 [NUM1:tour:tours]!!!</French>
-		<German>Ihr werdet in %d1 [NUM1:Runde:Runden] gewinnen!!!</German>
-		<Italian>Vincerai in %d1 [NUM1:turno:turni]!!!</Italian>
+		<English>You will win in %d1 [NUM1:turn:turns]!</English>
+		<French>Vous allez gagner dans %d1 [NUM1:tour:tours]!</French>
+		<German>Ihr werdet in %d1 [NUM1:Runde:Runden] gewinnen!</German>
+		<Italian>Vincerai in %d1 [NUM1:turno:turni]!</Italian>
 		<Spanish>¡Ganarás en %d1 [NUM1:turno:turnos]!</Spanish>
-		<Polish>Wygrasz za %d1 [NUM5:ture:tury:tur]!!!!</Polish>
+		<Polish>Wygrasz za %d1 [NUM5:ture:tury:tur]!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WITH</Tag>
@@ -19526,15 +19370,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Beste 5 Städte</German>
 		<Italian>Le prime 5 città</Italian>
 		<Spanish>5 primeras ciudades</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_WONDER_CITY</Tag>
-		<English>City</English>
-		<French>Ville</French>
-		<German>Stadt</German>
-		<Italian>Città</Italian>
-		<Spanish>Ciudad</Spanish>
-		<Polish>Miasto</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WONDER_DATE</Tag>

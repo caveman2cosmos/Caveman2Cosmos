@@ -24,7 +24,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ANIMAL_STUDY</Tag>
 		<English>Study the animal.</English>
-		<French>Etudier l'animal.</French>
+		<French>Étudier l'animal.</French>
 		<Italian>Studia l'animale.</Italian>
 		<Polish>Zbadaj zwierzę.</Polish>
 	</TEXT>
@@ -43,7 +43,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_BUILD_DOMESTICATED_HERD_HELP</Tag>
-		<English>The domesticated subdued animal may become a resourse. With the right technology it may become a pasture as well.</English>
+		<English>The domesticated subdued animal may become a resource. With the right technology it may become a pasture as well.</English>
 		<French>L'animal dompté domestiqué peut devenir une ressource. Avec la bonne technologie, cela peut aussi devenir un pâturage.</French>
 		<Polish>Udomowione zwierzęta mogą zostać osadzone na mapie jako surowce. Z odpowiednią technologią mogą zostać w tym miejscu stworzone pastwiska.</Polish>
 	</TEXT>

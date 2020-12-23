@@ -35,7 +35,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENKI_PEDIA</Tag>
-		<English>Enki, lord of Waters, teaches his worshippers with his wisdom and gives them streght in his aquous kingdom.</English>
+		<English>Enki, lord of Waters, teaches his worshippers with his wisdom and gives them strength in his aqueous kingdom.</English>
 		<Italian>Enki, signore delle Acque, insegna la propria saggezza ai suoi fedeli e fornisce loro forza quando entrano nel suo regno acquatico.</Italian>
 		<Polish>Enki w mitologii sumeryjskiej (Ea w mitologii babilońskiej) - bóg słodkich wód, bóg mądrości, stwórca człowieka, czczony w Eridu. Razem z bogiem nieba Anu i bogiem Enlilem tworzył wielką triadę głównych bóstw. Jego żoną była Damgalnuna - bogini ziemi, natomiast córka Ninkasi była boginią piwa.</Polish>
 	</TEXT>
@@ -57,7 +57,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENLIL_PEDIA</Tag>
-		<English>Enlil, lord of Wind, teaches his worshippers with his wisdom and gives them streght and accuracy.</English>
+		<English>Enlil, lord of Wind, teaches his worshippers with his wisdom and gives them strength and accuracy.</English>
 		<Italian>Enlil, signore del Vento, insegna la sua saggezza ai fedeli e dona loro forza e precisione.</Italian>
 		<Polish>Enlil - w mitologii mezopotamskiej bóg stojący (jako następca boga An) faktycznie na czele panteonu sumeryjskiego; syn Ziemi (Ki) i Nieba (An), małżonek Ninlil, ojciec Nanny, Nergala, Ningirsu, Ninurty i Nisaby; głównym ośrodkiem jego kultu była świątynia E-kur w mieście Nippur; jeden z czwórki wielkich bogów-stworzycieli (obok boga An, boga Enki i bogini Ninhursag).</Polish>
 	</TEXT>
@@ -141,7 +141,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KI_STRATEGY</Tag>
 		<English>TBD</English>
-		<Polish>Le promozioni fornite da questo edificio danno bonus alle unitŕ da combattimento ravvicinato</Polish>
+		<Polish>Le promozioni fornite da questo edificio danno bonus alle unità da combattimento ravvicinato</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KI_WHEAT</Tag>
@@ -210,8 +210,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MESOPOTAMISM_PEDIA</Tag>
-		<English>RELIGION HELP: mesopotamism doesn't work as usual religions does,it has no monasteries or cathedrals. In other hand, mesopotamism have 5 differents kinds of temples, each of them belonging to a deity and giving together the same amount of bonuses than any other religion; please, note that you need to build temple of An (it was the mayor god in mesopotamic pantheon) in order to build any other temple. Also, you have to consider one more thing about mesopotamism, it can be a powerfull religion in ancient times, as it was in history, but it will become almost obsolote with gunpowder, as many of the bonuses are concerned to old units.Mesopotamic religion is a global name given to Sumerian, Assyrian and Babilonic mythology. It was a polytheistic religion, with antropomorphics gods representing forces or beeings of the world, like much later greeks will do. In their believes they stablish that gods made human kind to serve them as servants, but, when man became to many, gods have to release them.</English>
-		<Italian>ATTENZIONE: il mesopotamismo non funziona come le altre religioni, dato che non ha monasteri nè cattedrali; al contrario, il mesopotamismo ha 5 diversi templi, ognuno legato ad una diversa divinità, che nel complesso dato gli stessi bonus delle altre religioni. È importante notare che è necessario costruire prima di tutto il tempio di An (il dio più importante del pantheon mesopotamico) per costruire gli altri templi. Il mesopotamismo può essere molto utile nell'era antica e classica, ma diventerà praticamente obsoleto con la polvere da sparo, dato che la maggior parte dei bonus di questa religione riguardano le unità più antiche.Religione mesopotamica è un nome generico che indica le mitologie Sumere, Assire e Babilonesi. Era una religione politeistica con dei antropomorfi che rappresentavano forze ed esseri del mondo, una caratteristica simile alla mitologia greca. Nelle loro credenze, i mesopotamici credevano che gli dei avessero creato gli uomini per usarli come schiavi ma, quando gli uomini divennero troppi, gli dei furono costretti a lasciarli liberi.</Italian>
+		<English>RELIGION HELP: Mesopotamism doesn't work as usual religions does,it has no monasteries or cathedrals. In other hand, Mesopotamism have 5 different kinds of temples, each of them belonging to a deity and giving together the same amount of bonuses than any other religion; please, note that you need to build temple of An (it was the mayor god in Mesopotamic pantheon) in order to build any other temple. Also, you have to consider one more thing about Mesopotamism, it can be a powerful religion in ancient times, as it was in history, but it will become almost obsolete with gunpowder, as many of the bonuses are concerned to old units. Mesopotamic religion is a global name given to Sumerian, Assyrian and Babylonian mythology. It was a polytheistic religion, with anthropomorphic gods representing forces or beings of the world, like much later Greeks will do. In their believes they establish that gods made humankind to serve them as servants, but, when man became too many, gods have to release them.</English>
+		<Italian>ATTENZIONE: il mesopotamismo non funziona come le altre religioni, dato che non ha monasteri, né cattedrali; al contrario, il mesopotamismo ha 5 diversi templi, ognuno legato ad una diversa divinità, che nel complesso dato gli stessi bonus delle altre religioni. È importante notare che è necessario costruire prima di tutto il tempio di An (il dio più importante del pantheon mesopotamico) per costruire gli altri templi. Il mesopotamismo può essere molto utile nell'era antica e classica, ma diventerà praticamente obsoleto con la polvere da sparo, dato che la maggior parte dei bonus di questa religione riguardano le unità più antiche.Religione mesopotamica è un nome generico che indica le mitologie Sumere, Assire e Babilonesi. Era una religione politeistica con dei antropomorfi che rappresentavano forze ed esseri del mondo, una caratteristica simile alla mitologia greca. Nelle loro credenze, i mesopotamici credevano che gli dei avessero creato gli uomini per usarli come schiavi ma, quando gli uomini divennero troppi, gli dei furono costretti a lasciarli liberi.</Italian>
 		<Polish>Religia Mezopotamii była zbiorem wierzeń politeistycznych. Jej zasięg był szeroki - rozciągała się na prawie cały Bliski Wschód, zaś jej echo widoczne jest w wielu innych kulturach. Religia Mezopotamii składa się z wielu odgałęzień, powstawała bowiem z tradycji lokalnych wierzeń, które w procesie dziejowym oddziaływały na siebie w większym lub mniejszym stopniu, i często były uzależnione od aktualnej sytuacji politycznej w regionie. Historia religii Mezopotamii obejmuje okres od IV tysiąclecia p.n.e., gdy na tym terenie zaczęły powstawać wielkie ośrodki miejskie, do końca I tysiąclecia p.n.e., to jest do epoki hellenistycznej. Katalogowaniem i spisywaniem bóstw zajmowali się kapłani. Stare bóstwa znikały, a na ich miejsce pojawiały się nowe. Czasem o bóstwach zapominano, łączono kilka bóstw w jedno, bądź też na odwrót - z jednego powstawało kilka nowych. Liczba bogów w Babilonii i Asyrii przekraczała aż trzy tysiące.</Polish>
 	</TEXT>
 	<TEXT>

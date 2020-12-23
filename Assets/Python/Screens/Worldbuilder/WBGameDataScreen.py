@@ -42,7 +42,7 @@ class WBGameDataScreen:
 		self.szColorNay = "<color=255,64,64>"
 		self.szColorYay = "<color=64,255,64>"
 		self.szHidden = "</color>" + TRNSLTR.getText("TXT_KEY_WB_HIDDEN", ())
-		self.szDefault = TRNSLTR.getText("TXT_KEY_WB_DEFAULT", ())
+		self.szDefault = TRNSLTR.getText("TXT_WORD_DEFAULT", ())
 		self.szOk = TRNSLTR.getText("TXT_KEY_MAIN_MENU_OK", ())
 		self.szCancel = TRNSLTR.getText("TXT_KEY_POPUP_CANCEL", ())
 		self.bInEditBox = False

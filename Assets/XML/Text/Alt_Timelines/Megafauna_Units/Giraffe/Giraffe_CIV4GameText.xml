@@ -9,7 +9,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE_HELP</Tag>
 		<English>[ICON_BULLET]Build Giraffe buildings and units faster in this city.</English>
-		<French>Construit les bâtiments et unités Girafes plus vite dans cette Ville.</French>
+		<French>Construit les bâtiments et unités Girafes plus vite dans cette ville.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER</Tag>
@@ -30,7 +30,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT_HELP</Tag>
-		<English>[ICON_BULLET]This free building is used to enable the building of the special Giraffeunits in all your cities.</English>
+		<English>[ICON_BULLET]This free building is used to enable the building of the special Giraffe units in all your cities.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE</Tag>
@@ -45,7 +45,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE_STRATEGY</Tag>
 		<English>Allows Giraffe units to be built in all your cities.</English>
-		<French>Permet d'entraîner des unités avec Girafes dans toutes vos Villes.</French>
+		<French>Permet d'entraîner des unités avec Girafes dans toutes vos villes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Tag>
@@ -76,7 +76,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_ARCHER_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Giraffe Archer[COLOR_REVERT] is similar to [COLOR_UNIT_TEXT]Horse Archer[COLOR_REVERT] but better against archers, with a bonus to hills and city defense and savanna terrain combat.</English>
-		<Italian>Gli [COLOR_UNIT_TEXT]Arcieri su giraffa[COLOR_REVERT] sono</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_CARABINIER</Tag>
