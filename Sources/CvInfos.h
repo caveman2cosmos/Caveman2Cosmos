@@ -2256,19 +2256,19 @@ public:
 
 	int getTargetUnit(int i) const;
 	int getNumTargetUnits() const;
-	bool isTargetUnit(int i) const;		//Exposed to Python
+	bool isTargetUnit(int i) const;
 
 	int getDefendAgainstUnit(int i) const;
 	int getNumDefendAgainstUnits() const;
-	bool isDefendAgainstUnit(int i) const;		//Exposed to Python
+	bool isDefendAgainstUnit(int i) const;
 
 	int getSupersedingUnit(int i) const;
 	short getNumSupersedingUnits() const;
-	bool isSupersedingUnit(int i) const;		//Exposed to Python
+	bool isSupersedingUnit(int i) const;
 
-	int getUnitUpgrade(int i) const;			//Exposed to Python
-	int getNumUnitUpgrades() const;				//Exposed to Python
-	bool isUnitUpgrade(int i) const;			//Exposed to Python
+	int getUnitUpgrade(int i) const;
+	int getNumUnitUpgrades() const;
+	bool isUnitUpgrade(int i) const;
 
 	std::vector<int> getUnitUpgradeChain() const;
 	void CvUnitInfo::addUnitToUpgradeChain(int i);
@@ -3375,7 +3375,7 @@ public:
 	DllExport const TCHAR* getBorderFile() const;
 
 	DllExport int getTextureIndex() const;
-	DllExport const TCHAR* getDeltaString() const;		//Exposed to Python
+	DllExport const TCHAR* getDeltaString() const;
 	DllExport const TCHAR* getConnectString() const;
 	DllExport const TCHAR* getRotateString() const;
 

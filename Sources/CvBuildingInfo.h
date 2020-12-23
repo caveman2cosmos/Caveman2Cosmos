@@ -227,8 +227,8 @@ public:
 	int getBonusProductionModifier(int i) const;
 	int getUnitCombatFreeExperience(int i) const;
 	int getDomainFreeExperience(int i) const;
-	bool isAnyUnitCombatFreeExperience() const;
-	bool isAnyDomainFreeExperience() const;
+	bool isAnyUnitCombatFreeExperience() const { return m_piUnitCombatFreeExperience != NULL; }
+	bool isAnyDomainFreeExperience() const { return m_piDomainFreeExperience != NULL; }
 	int getDomainProductionModifier(int i) const;
 	int getPrereqAndTechs(int i) const;
 	int getBuildingHappinessChanges(int i) const;
@@ -311,10 +311,10 @@ public:
 	bool isPrereqOrCivics(int iCivic) const;
 	bool isPrereqAndCivics(int iCivic) const;
 
-	bool isPrereqOrTerrain(int i) const;		//Exposed to Python
-	bool isPrereqAndTerrain(int i) const;		//Exposed to Python
-	bool isPrereqOrImprovement(int i) const;	//Exposed to Python
-	bool isPrereqOrFeature(int i) const;		//Exposed to Python
+	bool isPrereqOrTerrain(int i) const;
+	bool isPrereqAndTerrain(int i) const;
+	bool isPrereqOrImprovement(int i) const;
+	bool isPrereqOrFeature(int i) const;
 	bool isPrereqNotBuilding(int i) const;
 	int  getBuildingProductionModifier(int i) const;
 	int  getGlobalBuildingProductionModifier(int i) const;
@@ -363,7 +363,7 @@ public:
 	int getTechHappinessChanges(int i) const;
 	int* m_piTechHappinessChanges;
 
-	int getTechHealthChanges(int i) const;		//Exposed to Python
+	int getTechHealthChanges(int i) const;
 	int* m_piTechHealthChanges;
 
 	int getTechCommerceChange(int i, int j) const;
@@ -483,11 +483,12 @@ public:
 
 	int getLocalSpecialistYieldChange(int i, int j) const;
 	int* getLocalSpecialistYieldChangeArray(int i) const;
+	bool isAnyLocalSpecialistYieldChanges() const { return m_ppaiLocalSpecialistYieldChange; }
 
 	int getLocalSpecialistCommerceChange(int i, int j) const;
 	int* getLocalSpecialistCommerceChangeArray(int i) const;
+	bool isAnyLocalSpecialistCommerceChanges() const { return m_ppaiLocalSpecialistCommerceChange; }
 
-	bool isAnyLocalSpecialistCommerceChanges() const;
 	bool isHurry(int i) const;
 
 	//ls612 Begin:
@@ -536,18 +537,18 @@ public:
 
 	bool getNotShowInCity() const;
 
-	bool isAnySpecialistYieldChanges() const { return m_ppaiSpecialistYieldChange != NULL; }
-	bool isAnySpecialistCommerceChanges() const { return m_ppaiSpecialistCommerceChange != NULL; }
-	bool m_bAnyBonusYieldModifiers;
-	bool m_bAnyTechCommerceChanges;
-	bool m_bAnyTechYieldChanges;
-	bool m_bAnyTechSpecialistChanges;
-	bool m_bAnyTechCommerceModifiers;
-	bool m_bAnyTechYieldModifiers;
-	bool m_bAnyBonusCommerceModifiers;
-	bool m_bAnyBonusYieldChanges;
-	bool m_bAnyVicinityBonusYieldChanges;
-	bool m_bAnyBonusCommercePercentChanges;
+	bool isAnySpecialistYieldChanges() const		{ return m_ppaiSpecialistYieldChange != NULL; }
+	bool isAnySpecialistCommerceChanges() const		{ return m_ppaiSpecialistCommerceChange != NULL; }
+	bool isAnyBonusYieldModifiers() const			{ return m_ppaiBonusYieldModifier != NULL; }
+	bool isAnyTechCommerceChanges() const			{ return m_ppaiTechCommerceChange != NULL; }
+	bool isAnyTechYieldChanges() const				{ return m_ppaiTechYieldChange != NULL; }
+	bool isAnyTechSpecialistChanges() const			{ return m_ppaiTechSpecialistChange != NULL; }
+	bool isAnyTechCommerceModifiers() const			{ return m_ppaiTechCommerceModifier != NULL; }
+	bool isAnyTechYieldModifiers() const			{ return m_ppaiTechYieldModifier != NULL; }
+	bool isAnyBonusCommerceModifiers() const		{ return m_ppaiBonusCommerceModifier != NULL; }
+	bool isAnyBonusYieldChanges() const				{ return m_ppaiBonusYieldChanges != NULL; }
+	bool isAnyVicinityBonusYieldChanges() const		{ return m_ppaiVicinityBonusYieldChanges != NULL; }
+	bool isAnyBonusCommercePercentChanges() const	{ return m_ppaiBonusCommercePercentChanges != NULL; }
 
 protected:
 	void setNotShowInCity();
@@ -809,8 +810,6 @@ protected:
 	int* m_piBonusProductionModifier;
 	int* m_piUnitCombatFreeExperience;
 	int* m_piDomainFreeExperience;
-	bool m_bAnyUnitCombatFreeExperience;
-	bool m_bAnyDomainFreeExperience;
 	int* m_piDomainProductionModifier;
 	int* m_piFlavorValue;
 	int* m_piImprovementFreeSpecialist;
@@ -899,9 +898,6 @@ protected:
 	std::vector<int> m_vPrereqOrBuilding;
 	std::vector<int> m_vReplacementBuilding;
 	std::vector<int> m_vReplacedBuilding;
-public:
-	bool m_bAnyLocalSpecialistYieldChanges;
-	bool m_bAnyLocalSpecialistCommerceChanges;
 
 protected:
 	bool* m_pabHurry;
