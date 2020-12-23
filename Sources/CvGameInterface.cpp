@@ -680,70 +680,56 @@ void CvGame::updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwi
 void CvGame::updateTestEndTurn()
 {
 	PROFILE_FUNC();
+	const CvPlayer& player = GET_PLAYER(getActivePlayer());
 
-	bool bAny;
-
-	bAny = ((gDLL->getInterfaceIFace()->getHeadSelectedUnit() != NULL) && !(GET_PLAYER(getActivePlayer()).isOption(PLAYEROPTION_NO_UNIT_CYCLING)));
-
-	if (GET_PLAYER(getActivePlayer()).isTurnActive())
+	if (!player.isTurnActive())
 	{
-		if (gDLL->getInterfaceIFace()->isEndTurnMessage())
+		return;
+	}
+
+	if (gDLL->getInterfaceIFace()->isEndTurnMessage())
+	{
+		if (player.hasReadyUnit(gDLL->getInterfaceIFace()->getHeadSelectedUnit() != NULL && !player.isOption(PLAYEROPTION_NO_UNIT_CYCLING)))
 		{
-			if (GET_PLAYER(getActivePlayer()).hasReadyUnit(bAny))
+			gDLL->getInterfaceIFace()->setEndTurnMessage(false);
+		}
+	}
+	else if (!player.hasBusyUnit()
+	&& !player.hasReadyUnit(gDLL->getInterfaceIFace()->getHeadSelectedUnit() != NULL && !player.isOption(PLAYEROPTION_NO_UNIT_CYCLING)))
+	{
+		if (!gDLL->getInterfaceIFace()->isForcePopup())
+		{
+			gDLL->getInterfaceIFace()->setForcePopup(true);
+		}
+		else if (!player.hasAutoUnit())
+		{
+			bool bDisplayEndTurn = player.isOption(PLAYEROPTION_WAIT_END_TURN) || !gDLL->getInterfaceIFace()->isHasMovedUnit();
+
+			if (player.isHuman() && !player.getTurnHadUIInteraction() && getBugOptionBOOL("MainInterface__AutoEndDecisionlessTurns", false))
 			{
-				gDLL->getInterfaceIFace()->setEndTurnMessage(false);
+				//OutputDebugString("Auto-ending turn (no UI interaction detected)\n");
+				bDisplayEndTurn = false;
+			}
+
+			if (bDisplayEndTurn || isHotSeat() || isPbem())
+			{
+				gDLL->getInterfaceIFace()->setEndTurnMessage(true);
+
+				//stopProfilingDLL(true);
+			}
+			else if (gDLL->getInterfaceIFace()->getEndTurnCounter() > 0)
+			{
+				gDLL->getInterfaceIFace()->changeEndTurnCounter(-1);
+			}
+			else
+			{
+				CvMessageControl::getInstance().sendTurnComplete();
+				gDLL->getInterfaceIFace()->setEndTurnCounter(3); // XXX
 			}
 		}
-		else
+		else if (!gDLL->shiftKey())
 		{
-			if (!(GET_PLAYER(getActivePlayer()).hasBusyUnit()) && !(GET_PLAYER(getActivePlayer()).hasReadyUnit(bAny)))
-			{
-				if (!(gDLL->getInterfaceIFace()->isForcePopup()))
-				{
-					gDLL->getInterfaceIFace()->setForcePopup(true);
-				}
-				else
-				{
-					if (GET_PLAYER(getActivePlayer()).hasAutoUnit())
-					{
-						if (!(gDLL->shiftKey()))
-						{
-							CvMessageControl::getInstance().sendAutoMoves();
-						}
-					}
-					else
-					{
-						bool	bDisplayEndTurn = GET_PLAYER(getActivePlayer()).isOption(PLAYEROPTION_WAIT_END_TURN) || !(gDLL->getInterfaceIFace()->isHasMovedUnit());
-
-						if (GET_PLAYER(getActivePlayer()).isHuman() &&
-							!GET_PLAYER(getActivePlayer()).getTurnHadUIInteraction() &&
-							getBugOptionBOOL("MainInterface__AutoEndDecisionlessTurns", false))
-						{
-							//OutputDebugString("Auto-ending turn (no UI interaction detected)\n");
-							bDisplayEndTurn = false;
-						}
-
-						if (bDisplayEndTurn || isHotSeat() || isPbem())
-						{
-							gDLL->getInterfaceIFace()->setEndTurnMessage(true);
-
-							//stopProfilingDLL(true);
-						}
-						else
-						{
-							if (gDLL->getInterfaceIFace()->getEndTurnCounter() > 0)
-							{
-								gDLL->getInterfaceIFace()->changeEndTurnCounter(-1);
-							}
-							else
-							{
-								CvMessageControl::getInstance().sendTurnComplete();
-								gDLL->getInterfaceIFace()->setEndTurnCounter(3); // XXX
-							}
-						}
-					}
-				}
-			}
+			CvMessageControl::getInstance().sendAutoMoves();
 		}
 	}
 }
@@ -756,40 +742,31 @@ CvUnit* CvGame::getPlotUnit(const CvPlot* pPlot, int iIndex) const
 	{
 		const PlayerTypes activePlayer = getActivePlayer();
 		const TeamTypes activeTeam = getActiveTeam();
-
 		int iCount = 0;
-
 		for (int iPass = 0; iPass < 2; iPass++)
 		{
 			foreach_(CvUnit* pLoopUnit1, pPlot->units())
 			{
-				if (!pLoopUnit1->isInvisible(activeTeam, true) && !pLoopUnit1->isCargo())
+				if (!pLoopUnit1->isInvisible(activeTeam, true) && !pLoopUnit1->isCargo()
+				&& (pLoopUnit1->getOwner() == activePlayer) == (iPass == 0))
 				{
-					if ((pLoopUnit1->getOwner() == activePlayer) == (iPass == 0))
+					if (iCount == iIndex)
 					{
-						if (iCount == iIndex)
-						{
-							return pLoopUnit1;
-						}
+						return pLoopUnit1;
+					}
+					iCount++;
 
-						iCount++;
-
-						//if ((pLoopUnit1->getTeam() == activeTeam) || isDebugMode())
+					if (pLoopUnit1->hasCargo())
+					{
+						foreach_(CvUnit* pLoopUnit2, pPlot->units())
 						{
-							if (pLoopUnit1->hasCargo())
+							if (!pLoopUnit2->isInvisible(activeTeam, true) && pLoopUnit2->getTransportUnit() == pLoopUnit1)
 							{
-								foreach_(CvUnit* pLoopUnit2, pPlot->units())
+								if (iCount == iIndex)
 								{
-									if (!pLoopUnit2->isInvisible(activeTeam, true) && pLoopUnit2->getTransportUnit() == pLoopUnit1)
-									{
-										if (iCount == iIndex)
-										{
-											return pLoopUnit2;
-										}
-
-										iCount++;
-									}
+									return pLoopUnit2;
 								}
+								iCount++;
 							}
 						}
 					}
@@ -797,7 +774,6 @@ CvUnit* CvGame::getPlotUnit(const CvPlot* pPlot, int iIndex) const
 			}
 		}
 	}
-
 	return NULL;
 }
 
@@ -815,23 +791,18 @@ void CvGame::getPlotUnits(const CvPlot* pPlot, std::vector<CvUnit*>& plotUnits) 
 		{
 			foreach_(CvUnit* pLoopUnit1, pPlot->units())
 			{
-				if (!pLoopUnit1->isInvisible(activeTeam, true) && !pLoopUnit1->isCargo())
+				if (!pLoopUnit1->isInvisible(activeTeam, true) && !pLoopUnit1->isCargo()
+				&& (pLoopUnit1->getOwner() == activePlayer) == (iPass == 0))
 				{
-					if ((pLoopUnit1->getOwner() == activePlayer) == (iPass == 0))
-					{
-						plotUnits.push_back(pLoopUnit1);
+					plotUnits.push_back(pLoopUnit1);
 
-						//if ((pLoopUnit1->getTeam() == activeTeam) || isDebugMode())
+					if (pLoopUnit1->hasCargo())
+					{
+						foreach_(CvUnit* pLoopUnit2, pPlot->units())
 						{
-							if (pLoopUnit1->hasCargo())
+							if (!pLoopUnit2->isInvisible(activeTeam, true) && pLoopUnit2->getTransportUnit() == pLoopUnit1)
 							{
-								foreach_(CvUnit* pLoopUnit2, pPlot->units())
-								{
-									if (!pLoopUnit2->isInvisible(activeTeam, true) && pLoopUnit2->getTransportUnit() == pLoopUnit1)
-									{
-										plotUnits.push_back(pLoopUnit2);
-									}
-								}
+								plotUnits.push_back(pLoopUnit2);
 							}
 						}
 					}
@@ -843,57 +814,41 @@ void CvGame::getPlotUnits(const CvPlot* pPlot, std::vector<CvUnit*>& plotUnits) 
 
 void CvGame::cycleCities(bool bForward, bool bAdd) const
 {
-	CvCity* pHeadSelectedCity;
-	CvCity* pSelectCity;
-	CvCity* pLoopCity;
+	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
+	CvCity* pSelectCity = NULL;
 	int iLoop;
-
-	pSelectCity = NULL;
-
-	pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
-
-	if ((pHeadSelectedCity != NULL) && ((pHeadSelectedCity->getTeam() == getActiveTeam()) || isDebugMode()))
+	if (pHeadSelectedCity != NULL && (pHeadSelectedCity->getTeam() == getActiveTeam() || isDebugMode()))
 	{
-		iLoop = pHeadSelectedCity->getIndex();
-		iLoop += (bForward ? 1 : -1);
+		iLoop = pHeadSelectedCity->getIndex() + (bForward ? 1 : -1);
 
-		pLoopCity = GET_PLAYER(pHeadSelectedCity->getOwner()).nextCity(&iLoop, !bForward);
+		CvCity* pLoopCity = GET_PLAYER(pHeadSelectedCity->getOwner()).nextCity(&iLoop, !bForward);
 
 		if (pLoopCity == NULL)
 		{
 			pLoopCity = GET_PLAYER(pHeadSelectedCity->getOwner()).firstCity(&iLoop, !bForward);
 		}
 
-		if ((pLoopCity != NULL) && (pLoopCity != pHeadSelectedCity))
+		if (pLoopCity != NULL && pLoopCity != pHeadSelectedCity)
 		{
 			pSelectCity = pLoopCity;
 		}
 	}
-	else
-	{
-		pSelectCity = GET_PLAYER(getActivePlayer()).firstCity(&iLoop, !bForward);
-	}
+	else pSelectCity = GET_PLAYER(getActivePlayer()).firstCity(&iLoop, !bForward);
 
 	if (pSelectCity != NULL)
 	{
-		if ( GC.getCurrentViewport()->isInViewport(pSelectCity->getX(), pSelectCity->getY(), GC.getViewportSelectionBorder()) )
+		if (GC.getCurrentViewport()->isInViewport(pSelectCity->getX(), pSelectCity->getY(), GC.getViewportSelectionBorder()))
 		{
 			if (bAdd)
 			{
 				gDLL->getInterfaceIFace()->clearSelectedCities();
 				gDLL->getInterfaceIFace()->addSelectedCity(pSelectCity);
 			}
-			else
-			{
-				gDLL->getInterfaceIFace()->selectCity(pSelectCity);
-			}
+			else gDLL->getInterfaceIFace()->selectCity(pSelectCity);
 
 			gDLL->getInterfaceIFace()->lookAtSelectionPlot();
 		}
-		else
-		{
-			GC.getCurrentViewport()->bringIntoView(pSelectCity->getX(), pSelectCity->getY(), NULL, true, true, gDLL->getInterfaceIFace()->isCityScreenUp(), true, bAdd);
-		}
+		else GC.getCurrentViewport()->bringIntoView(pSelectCity->getX(), pSelectCity->getY(), NULL, true, true, gDLL->getInterfaceIFace()->isCityScreenUp(), true, bAdd);
 	}
 }
 
@@ -907,11 +862,7 @@ void CvGame::cycleSelectionGroups(bool bClear, bool bForward, bool bWorkers) con
 void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWorkers, bool bSetCamera, bool bAllowViewportSwitch) const
 {
 	CvSelectionGroup* pNextSelectionGroup;
-	CvPlot* pPlot;
-	CvUnit* pCycleUnit;
-	bool bWrap;
-
-	pCycleUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	CvUnit* pCycleUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 	if (pCycleUnit != NULL)
 	{
@@ -919,55 +870,51 @@ void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWork
 		{
 			pCycleUnit = NULL;
 		}
-
+		bool bWrap;
 		pNextSelectionGroup = GET_PLAYER(getActivePlayer()).cycleSelectionGroups(pCycleUnit, bForward, bWorkers, &bWrap, bAllowViewportSwitch);
 
-		if (bWrap)
+		if (bWrap && GET_PLAYER(getActivePlayer()).hasAutoUnit())
 		{
-			if (GET_PLAYER(getActivePlayer()).hasAutoUnit())
-			{
-				CvMessageControl::getInstance().sendAutoMoves();
-			}
+			CvMessageControl::getInstance().sendAutoMoves();
 		}
 	}
 	else
 	{
-		pPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
+		CvPlot* pPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
 		pNextSelectionGroup = GC.getMap().findSelectionGroupInternal(((pPlot != NULL) ? pPlot->getX() : 0), ((pPlot != NULL) ? pPlot->getY() : 0), getActivePlayer(), true, bWorkers, bAllowViewportSwitch);
 	}
 
-	bool bViewportSwitched = false;
-
 	if (pNextSelectionGroup != NULL)
 	{
-		if ( !GC.getCurrentViewport()->isInViewport(pNextSelectionGroup->getX(), pNextSelectionGroup->getY(), GC.getViewportSelectionBorder()) )
+		if (!GC.getCurrentViewport()->isInViewport(pNextSelectionGroup->getX(), pNextSelectionGroup->getY(), GC.getViewportSelectionBorder()))
 		{
+			// Switch viewport
 			CvUnit*	pSelectionUnit = pNextSelectionGroup->getHeadUnit();
 
-			bool bLookatUnit = (bSetCamera && ((pCycleUnit != pSelectionUnit) || ((pCycleUnit != NULL) && pCycleUnit->getGroup()->readyToSelect())));
-
-			bViewportSwitched = true;
-
-			GC.getCurrentViewport()->bringIntoView(pNextSelectionGroup->getX(),
-												   pNextSelectionGroup->getY(),
-												   pSelectionUnit,
-												   bLookatUnit);
+			GC.getCurrentViewport()->bringIntoView(
+				pNextSelectionGroup->getX(),
+				pNextSelectionGroup->getY(),
+				pSelectionUnit,
+				bSetCamera && (pCycleUnit != pSelectionUnit || pCycleUnit != NULL && pCycleUnit->getGroup()->readyToSelect())
+			);
+			return;
 		}
-		//	If we switched viewport then the asynchronous viewport switching will also handle the unit selection
+		// If we switched viewport then the asynchronous viewport switching will also handle the unit selection
 		else
 		{
 			FAssert(pNextSelectionGroup->getOwner() == getActivePlayer());
 			gDLL->getInterfaceIFace()->selectUnit(pNextSelectionGroup->getHeadUnit(), bClear);
 		}
 	}
-
-	//	If we switched viewport then the asynchronous viewport switching will also handle the lookat
-	if (!bViewportSwitched &&
-		bSetCamera &&
-		((pCycleUnit != gDLL->getInterfaceIFace()->getHeadSelectedUnit()) || ((pCycleUnit != NULL) && pCycleUnit->getGroup()->readyToSelect())))
-	{
-		gDLL->getInterfaceIFace()->lookAtSelectionPlot();
-	}
+	// If we switched viewport then the asynchronous viewport switching will also handle the lookat
+	if (bSetCamera
+		&&
+		(
+			pCycleUnit != gDLL->getInterfaceIFace()->getHeadSelectedUnit()
+			||
+			pCycleUnit != NULL && pCycleUnit->getGroup()->readyToSelect()
+		)
+	) gDLL->getInterfaceIFace()->lookAtSelectionPlot();
 }
 
 
@@ -975,7 +922,6 @@ void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWork
 bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
 {
 	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pSelectedUnit;
 	CvUnit* pLoopUnit = NULL;
 
 	FAssertMsg(iCount >= -1, "iCount expected to be >= -1");
@@ -992,7 +938,6 @@ bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount
 			{
 				break;
 			}
-
 			pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		}
 	}
@@ -1004,16 +949,14 @@ bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount
 		{
 			pLoopUnit = ::getUnit(pUnitNode->m_data);
 
-			if ((iCount - 1) == 0)
+			if (iCount == 1)
 			{
 				break;
 			}
-
 			if (iCount > 0)
 			{
 				iCount--;
 			}
-
 			pUnitNode = pPlot->nextUnitNode(pUnitNode);
 		}
 
@@ -1030,7 +973,7 @@ bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount
 
 	if (pUnitNode != NULL)
 	{
-		pSelectedUnit = pLoopUnit;
+		CvUnit* pSelectedUnit = pLoopUnit;
 
 		while (true)
 		{
@@ -1053,27 +996,21 @@ bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount
 
 			pLoopUnit = ::getUnit(pUnitNode->m_data);
 
-			if (iCount == -1)
+			if (iCount == -1 && pLoopUnit == pSelectedUnit)
 			{
-				if (pLoopUnit == pSelectedUnit)
-				{
-					break;
-				}
+				break;
 			}
 
 			if (pLoopUnit->getOwner() == getActivePlayer())
 			{
-				if (bAuto)
-				{
-					if (pLoopUnit->getGroup()->readyToSelect())
-					{
-						gDLL->getInterfaceIFace()->selectUnit(pLoopUnit, true);
-						return true;
-					}
-				}
-				else
+				if (!bAuto)
 				{
 					gDLL->getInterfaceIFace()->insertIntoSelectionList(pLoopUnit, true, false);
+					return true;
+				}
+				if (pLoopUnit->getGroup()->readyToSelect())
+				{
+					gDLL->getInterfaceIFace()->selectUnit(pLoopUnit, true);
 					return true;
 				}
 			}
@@ -1117,10 +1054,7 @@ bool CvGame::selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift)
 			}
 		}
 	}
-	else
-	{
-		gDLL->getInterfaceIFace()->addSelectedCity(pSelectCity, bShift);
-	}
+	else gDLL->getInterfaceIFace()->addSelectedCity(pSelectCity, bShift);
 
 	return true;
 }
