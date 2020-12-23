@@ -759,13 +759,13 @@ public:
 	int getDamageperTurn() const;
 	int getStrAdjperTurn() const;
 	int getWeakenperTurn() const;
-	// Strength in Numbers
+#ifdef STRENGTH_IN_NUMBERS
 	int getFrontSupportPercentChange() const;
 	int getShortRangeSupportPercentChange() const;
 	int getMediumRangeSupportPercentChange() const;
 	int getLongRangeSupportPercentChange() const;
 	int getFlankSupportPercentChange() const;
-	//
+#endif
 	int getDodgeModifierChange() const;
 	int getPrecisionModifierChange() const;
 	int getPowerShotsChange() const;
@@ -1272,11 +1272,13 @@ protected:
 	int m_iDamageperTurn;
 	int m_iStrAdjperTurn;
 	int m_iWeakenperTurn;
+#ifdef STRENGTH_IN_NUMBERS
 	int m_iFrontSupportPercentChange;
 	int m_iShortRangeSupportPercentChange;
 	int m_iMediumRangeSupportPercentChange;
 	int m_iLongRangeSupportPercentChange;
 	int m_iFlankSupportPercentChange;
+#endif
 	int m_iDodgeModifierChange;
 	int m_iPrecisionModifierChange;
 	int m_iPowerShotsChange;
@@ -1877,11 +1879,13 @@ public:
 	int getLunge() const;
 	int getDynamicDefense() const;
 	int getFortitude() const;
+#ifdef STRENGTH_IN_NUMBERS
 	int getFrontSupportPercent() const;
 	int getShortRangeSupportPercent() const;
 	int getMediumRangeSupportPercent() const;
 	int getLongRangeSupportPercent() const;
 	int getFlankSupportPercent() const;
+#endif
 	int getDodgeModifier() const;
 	int getPrecisionModifier() const;
 	int getPowerShots() const;
@@ -2549,11 +2553,13 @@ protected:
 	int m_iLunge;
 	int m_iDynamicDefense;
 	int m_iFortitude;
+#ifdef STRENGTH_IN_NUMBERS
 	int m_iFrontSupportPercent;
 	int m_iShortRangeSupportPercent;
 	int m_iMediumRangeSupportPercent;
 	int m_iLongRangeSupportPercent;
 	int m_iFlankSupportPercent;
+#endif
 	int m_iDodgeModifier;
 	int m_iPrecisionModifier;
 	int m_iPowerShots;
@@ -9221,13 +9227,13 @@ public:
 	int getDynamicDefenseChange() const;
 	int getStrengthChange() const;
 	int getFortitudeChange() const;
-
+#ifdef STRENGTH_IN_NUMBERS
 	int getFrontSupportPercentChange() const;
 	int getShortRangeSupportPercentChange() const;
 	int getMediumRangeSupportPercentChange() const;
 	int getLongRangeSupportPercentChange() const;
 	int getFlankSupportPercentChange() const;
-
+#endif
 	int getDodgeModifierChange() const;
 	int getPrecisionModifierChange() const;
 	int getPowerShotsChange() const;
@@ -9580,11 +9586,13 @@ protected:
 	int m_iDynamicDefenseChange;
 	int m_iStrengthChange;
 	int m_iFortitudeChange;
+#ifdef STRENGTH_IN_NUMBERS
 	int m_iFrontSupportPercentChange;
 	int m_iShortRangeSupportPercentChange;
 	int m_iMediumRangeSupportPercentChange;
 	int m_iLongRangeSupportPercentChange;
 	int m_iFlankSupportPercentChange;
+#endif
 	int m_iDodgeModifierChange;
 	int m_iPrecisionModifierChange;
 	int m_iPowerShotsChange;

@@ -5004,6 +5004,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						{
 							iValue += kBuilding.getLocalDynamicDefense() / 2;
 						}
+#ifdef STRENGTH_IN_NUMBERS
 						if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 						{
 							iValue += kBuilding.getFrontSupportPercentModifier() / 4;
@@ -5012,7 +5013,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 							iValue += kBuilding.getLongRangeSupportPercentModifier() / 4;
 							iValue += kBuilding.getFlankSupportPercentModifier() / 4;
 						}
-
+#endif
 						iValue += kBuilding.getLocalCaptureProbabilityModifier() / 6;
 						iValue += kBuilding.getLocalCaptureResistanceModifier() / 3;
 						iValue -= kBuilding.getRiverDefensePenalty() / 2;
@@ -14394,6 +14395,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			bSAD = (kBuilding.getLocalDynamicDefense() > 0);
 		}
 
+#ifdef STRENGTH_IN_NUMBERS
 		if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 		{
 			bSIN =  ((kBuilding.getFrontSupportPercentModifier() > 0) ||
@@ -14402,7 +14404,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			(kBuilding.getLongRangeSupportPercentModifier() > 0) ||
 			(kBuilding.getFlankSupportPercentModifier() > 0)) ;
 		}
-
+#endif
 		if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
 		{
 			bZoC = kBuilding.isZoneOfControl();
@@ -14710,8 +14712,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	const bool bAreaAlone = kOwner.AI_isAreaAlone(pArea);
 	const bool bZOC = bAreaAlone ? false : GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL);
 	const bool bSAD = bAreaAlone ? false : GC.getGame().isOption(GAMEOPTION_SAD);
+#ifdef STRENGTH_IN_NUMBERS
 	const bool bSIN = bAreaAlone ? false : GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS);
-
+#endif
 	const UnitTypes eBestLandUnit = bAreaAlone ? NO_UNIT : GC.getGame().getBestLandUnit();
 
 	const int iGoldValueAssessmentModifier = kOwner.AI_goldValueAssessmentModifier();
@@ -15077,6 +15080,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					{
 						iValue += kBuilding.getLocalDynamicDefense() / 2;
 					}
+#ifdef STRENGTH_IN_NUMBERS
 					if (bSIN)
 					{
 						iValue += kBuilding.getFrontSupportPercentModifier() / 4;
@@ -15085,6 +15089,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 						iValue += kBuilding.getLongRangeSupportPercentModifier() / 4;
 						iValue += kBuilding.getFlankSupportPercentModifier() / 4;
 					}
+#endif
 					iValue += kBuilding.getLocalCaptureProbabilityModifier() / 6;
 					iValue += kBuilding.getLocalCaptureResistanceModifier() / 3;
 					iValue -= kBuilding.getRiverDefensePenalty() / 2;
