@@ -44,7 +44,7 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML );
 
-	virtual void getCheckSum(unsigned int& iSum) const;
+	virtual void getCheckSum(uint32_t& iSum) const;
 protected:
 	PropertyTypes m_eProperty;
 	GameObjectTypes m_eObjectType;
@@ -73,7 +73,7 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML );
 
-	virtual void getCheckSum(unsigned int& iSum) const;
+	virtual void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	IntExpr* m_pAmountPerTurn;
@@ -99,7 +99,7 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML );
 
-	virtual void getCheckSum(unsigned int& iSum) const;
+	virtual void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	int m_iAmountPerTurn;
@@ -128,7 +128,7 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML );
 
-	virtual void getCheckSum(unsigned int& iSum) const;
+	virtual void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	int m_iPercent;
@@ -155,7 +155,7 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp, CvXMLLoadUtility* pXML );
 
-	virtual void getCheckSum(unsigned int& iSum) const;
+	virtual void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	AttributeTypes m_eAttribute;

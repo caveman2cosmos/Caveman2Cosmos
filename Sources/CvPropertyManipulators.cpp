@@ -233,7 +233,7 @@ void CvPropertyManipulators::copyNonDefaults(CvPropertyManipulators *pProp, CvXM
 	}
 }
 
-void CvPropertyManipulators::getCheckSum(unsigned int &iSum) const
+void CvPropertyManipulators::getCheckSum(uint32_t& iSum) const
 {
 	for(int i=0;i<(int)m_apSources.size();i++)
 	{

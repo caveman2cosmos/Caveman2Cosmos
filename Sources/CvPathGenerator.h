@@ -247,7 +247,7 @@ private:
 	};
 
 	CvPathNode*	allocatePathNode();
-	bool groupMatches(const CvSelectionGroup* pGroup, int iFlags, unsigned int& iGroupMembershipChecksum);
+	bool groupMatches(const CvSelectionGroup* pGroup, int iFlags, uint32_t& iGroupMembershipChecksum);
 	void AdjustChildTreeCosts(CvPathNode* node, int iAmount, bool bHasQueued);
 	void OrphanChildTree(CvPathNode* node);
 	void DeleteChildTree(CvPathNode* node, bool bIsDeletionRoot);

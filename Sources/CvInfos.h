@@ -92,7 +92,7 @@ public:
 	virtual void copyNonDefaults(CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaultsReadPass2(CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false)
 	{ /* AIAndy: Default implementation for full copy of info without knowledge of one/twopass */ }
-	virtual void getCheckSum(unsigned int& iSum) const { };
+	virtual void getCheckSum(uint32_t& iSum) const { };
 	virtual const wchar_t* getExtraHoverText() const { return L""; };
 
 protected:
@@ -299,7 +299,7 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpecialistInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	CvPropertyManipulators m_PropertyManipulators;
@@ -469,7 +469,7 @@ public:
 	void copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void copyNonDefaultsReadPass2(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
@@ -703,7 +703,7 @@ public:
 	int getPowerMultiplier() const;
 	int getIgnoreTerrainDamage() const;
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -1476,7 +1476,7 @@ public:
 	void copyNonDefaults(CvMissionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	// Should not be needed to checksum this as this will likely not get changed without DLL changes
-	//void getCheckSum(unsigned int& iSum) const;
+	//void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
@@ -2165,7 +2165,7 @@ public:
 
 	virtual const wchar_t* getExtraHoverText() const;
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -2741,7 +2741,7 @@ public:
 
 	BoolExpr* getSpawnCondition() const;
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	UnitTypes				m_eUnitType;
@@ -2881,7 +2881,7 @@ public:
 
 	void copyNonDefaults(CvSpecialUnitInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
@@ -3113,7 +3113,7 @@ public:
 	bool readPass3();
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvCivicInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -3335,7 +3335,7 @@ public:
 
 	void copyNonDefaults(CvSpecialBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -3514,7 +3514,7 @@ public:
 	void copyNonDefaults(CvCivilizationInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void copyNonDefaultsReadPass2(CvCivilizationInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
@@ -3593,7 +3593,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvVictoryInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
@@ -3630,27 +3630,27 @@ class CvHurryInfo :
 	public CvInfoBase
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
-	public:
+public:
 
-		CvHurryInfo();
-		virtual ~CvHurryInfo();
+	CvHurryInfo();
+	virtual ~CvHurryInfo();
 
-		int getGoldPerProduction() const;
-		int getProductionPerPopulation() const;
+	int getGoldPerProduction() const;
+	int getProductionPerPopulation() const;
 
-		bool isAnger() const;
+	bool isAnger() const;
 
-		bool read(CvXMLLoadUtility* pXML);
-		void copyNonDefaults(CvHurryInfo* pClassInfo, CvXMLLoadUtility* pXML);
-		void getCheckSum(unsigned int& iSum) const;
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvHurryInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void getCheckSum(uint32_t& iSum) const;
 
 	//---------------------------------------PUBLIC MEMBER VARIABLES---------------------------------
-	protected:
+protected:
 
-		int m_iGoldPerProduction;
-		int m_iProductionPerPopulation;
+	int m_iGoldPerProduction;
+	int m_iProductionPerPopulation;
 
-		bool m_bAnger;
+	bool m_bAnger;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3742,7 +3742,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	CvPropertyManipulators m_PropertyManipulators;
@@ -3875,7 +3875,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvGameSpeedInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -3940,7 +3940,7 @@ public:
 
 	void copyNonDefaults(CvTurnTimerInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -4020,7 +4020,7 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvBuildInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
@@ -4112,7 +4112,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvGoodyInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
@@ -4186,7 +4186,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	CvPropertyManipulators m_PropertyManipulators;
@@ -4240,7 +4240,7 @@ public:
 
 	int getYieldChange(int i) const;
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -4402,7 +4402,7 @@ public:
 	void copyNonDefaults(CvImprovementInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void copyNonDefaultsReadPass2(CvImprovementInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -4510,7 +4510,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvBonusClassInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -4596,7 +4596,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvBonusInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const std::vector<std::pair<ImprovementTypes,BuildTypes> >*	getTradeProvidingImprovements();
 
@@ -4750,7 +4750,7 @@ public:
 
 	void copyNonDefaults(CvFeatureInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -4836,7 +4836,7 @@ public:
 
 	void copyNonDefaults(CvCommerceInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -4889,7 +4889,7 @@ public:
 
 	void copyNonDefaults(CvYieldInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -4966,7 +4966,7 @@ public:
 
 	void copyNonDefaults(CvTerrainInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -5234,7 +5234,7 @@ public:
 
 	void copyNonDefaults(CvLeaderHeadInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -5387,7 +5387,7 @@ public:
 
 	void copyNonDefaults(CvWorldInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -5567,7 +5567,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvProcessInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -5617,7 +5617,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvVoteInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 protected:
 
@@ -5703,7 +5703,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvProjectInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	int getWorldHappiness() const;
 	int getGlobalHappiness() const;
@@ -5802,7 +5802,7 @@ public:
 	const TCHAR* getMovieFile() const;
 	const TCHAR* getMovieSound() const;
 	const TCHAR* getSound() const;
-	const TCHAR* getButtonDisabled() const;		//	Exposed to Python
+	const TCHAR* getButtonDisabled() const;
 
 	void setAdjectiveKey(const TCHAR* szVal);
 	const wchar_t* getAdjectiveKey() const;
@@ -5822,7 +5822,7 @@ public:
 
 	void copyNonDefaults(CvReligionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -5931,7 +5931,7 @@ public:
 
 	void copyNonDefaults(CvCorporationInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -6240,7 +6240,7 @@ public:
 
 	void copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void copyNonDefaultsReadPass2(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	bool isFreePromotionUnitCombats(int i, int j) const;
 
@@ -7376,12 +7376,12 @@ public:
 	CvUpkeepInfo();
 	virtual ~CvUpkeepInfo();
 
-	int getPopulationPercent() const;		//	Exposed to Python
-	int getCityPercent() const;				//	Exposed to Python
+	int getPopulationPercent() const;
+	int getCityPercent() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvUpkeepInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7423,7 +7423,7 @@ public:
 
 	void copyNonDefaults(CvCultureLevelInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -7495,7 +7495,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvEraInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 protected:
 
@@ -7995,7 +7995,7 @@ public:
 
 	void copyNonDefaults(CvGameOptionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	bool m_bDefault;
@@ -8024,7 +8024,7 @@ public:
 
 	void copyNonDefaults(CvMPOptionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	bool m_bDefault;
@@ -8050,7 +8050,7 @@ public:
 
 	void copyNonDefaults(CvForceControlInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	bool m_bDefault;
@@ -8076,7 +8076,7 @@ public:
 
 	void copyNonDefaults(CvPlayerOptionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	bool m_bDefault;
@@ -8102,7 +8102,7 @@ public:
 
 	void copyNonDefaults(CvGraphicOptionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	bool m_bDefault;
@@ -8236,7 +8236,7 @@ public:
 
 	void copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	int m_iPercentGamesActive;
@@ -8464,7 +8464,7 @@ public:
 
 	void copyNonDefaults(CvEventInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 private:
 	int m_iPrereqGameOption;
@@ -8618,7 +8618,7 @@ public:
 
 	void copyNonDefaults(CvEspionageMissionInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
@@ -8745,7 +8745,7 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvVoteSourceInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	int m_iVoteInterval;
@@ -8867,7 +8867,7 @@ public:
 
 	void copyNonDefaults(CvPropertyInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -8940,7 +8940,7 @@ public:
 	void copyNonDefaults(CvOutcomeInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void copyNonDefaultsReadPass2(CvOutcomeInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 protected:
 
@@ -9059,7 +9059,7 @@ public:
 
 	void copyNonDefaults(CvPromotionLineInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 protected:
 
@@ -9123,7 +9123,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvUnitCombatInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//bool readPass2(CvXMLLoadUtility* pXML);
 	//void copyNonDefaultsReadPass2(CvUnitCombatInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -9759,7 +9759,7 @@ public:
 
 	void copyNonDefaults(CvMapCategoryInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//bools
 	bool isInitialized();
@@ -9790,7 +9790,7 @@ public:
 	void copyNonDefaults(CvIdeaClassInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void copyNonDefaultsReadPass2(CvIdeaClassInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//bools
 	bool isInitialized();
@@ -9821,7 +9821,7 @@ public:
 	void copyNonDefaults(CvIdeaInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void copyNonDefaultsReadPass2(CvIdeaInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//References
 	IdeaClassTypes getIdeaClass() const;
@@ -9855,7 +9855,7 @@ public:
 	bool readPass2(CvXMLLoadUtility* pXML);
 
 	void copyNonDefaults(CvInvisibleInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 	//References
 	//bools

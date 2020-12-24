@@ -63,7 +63,7 @@ public:
 		}
 	}
 
-	void getCheckSum(unsigned int& iSum) const
+	void getCheckSum(uint32_t& iSum) const
 	{
 		for (unsigned int i = 0; i < m_map.size(); i++)
 		{

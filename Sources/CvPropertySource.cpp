@@ -153,7 +153,7 @@ void CvPropertySource::buildDisplayString(CvWStringBuffer &szBuffer) const
 	}
 }
 
-void CvPropertySource::getCheckSum(unsigned int &iSum) const
+void CvPropertySource::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eProperty);
 }
@@ -234,7 +234,7 @@ void CvPropertySourceConstant::copyNonDefaults(CvPropertySource *pProp, CvXMLLoa
 	}
 }
 
-void CvPropertySourceConstant::getCheckSum(unsigned int &iSum) const
+void CvPropertySourceConstant::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertySource::getCheckSum(iSum);
 	m_pAmountPerTurn->getCheckSum(iSum);
@@ -313,7 +313,7 @@ void CvPropertySourceConstantLimited::copyNonDefaults(CvPropertySource *pProp, C
 		m_iLimit = pOther->getLimit();
 }
 
-void CvPropertySourceConstantLimited::getCheckSum(unsigned int &iSum) const
+void CvPropertySourceConstantLimited::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertySource::getCheckSum(iSum);
 	CheckSum(iSum, m_iAmountPerTurn);
@@ -424,7 +424,7 @@ void CvPropertySourceDecay::copyNonDefaults(CvPropertySource *pProp, CvXMLLoadUt
 		m_iNoDecayAmount = pOther->getNoDecayAmount();
 }
 
-void CvPropertySourceDecay::getCheckSum(unsigned int &iSum) const
+void CvPropertySourceDecay::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertySource::getCheckSum(iSum);
 	CheckSum(iSum, m_iPercent);
@@ -492,7 +492,7 @@ void CvPropertySourceAttributeConstant::copyNonDefaults(CvPropertySource *pProp,
 		m_iAmountPerTurn = pOther->getAmountPerTurn();
 }
 
-void CvPropertySourceAttributeConstant::getCheckSum(unsigned int &iSum) const
+void CvPropertySourceAttributeConstant::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertySource::getCheckSum(iSum);
 	CheckSum(iSum, (int)m_eAttribute);

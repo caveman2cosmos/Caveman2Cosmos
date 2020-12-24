@@ -3743,7 +3743,7 @@ bool CvUnitInfo::isAidChange(int iProperty) const
 }
 //TB Combat Mods End  TB SubCombat Mod end
 
-void CvUnitInfo::getCheckSum(unsigned int &iSum) const
+void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iMaxGlobalInstances);
 	CheckSum(iSum, m_iMaxPlayerInstances);

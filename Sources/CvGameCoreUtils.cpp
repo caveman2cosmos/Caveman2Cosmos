@@ -3834,7 +3834,7 @@ bool ContextFreeNewPathValidFunc(const CvSelectionGroup* pSelectionGroup, int iF
 	}
 	else
 	{
-		unsigned int iEntityId = 0;
+		uint32_t iEntityId = 0;
 
 		CheckSum(iEntityId, pSelectionGroup->getHeadUnit()->getID());
 		CheckSum(iEntityId, (int)eOwner);

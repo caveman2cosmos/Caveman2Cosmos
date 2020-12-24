@@ -1187,7 +1187,7 @@ void CvSpecialistInfo::copyNonDefaults(CvSpecialistInfo* pClassInfo, CvXMLLoadUt
 	}
 }
 
-void CvSpecialistInfo::getCheckSum(unsigned int& iSum) const
+void CvSpecialistInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iGreatPeopleUnitType);
 	CheckSum(iSum, m_iGreatPeopleRateChange);
@@ -2270,7 +2270,7 @@ void CvTechInfo::copyNonDefaultsReadPass2(CvTechInfo* pClassInfo, CvXMLLoadUtili
 	}
 }
 
-void CvTechInfo::getCheckSum(unsigned int& iSum) const
+void CvTechInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iAdvisorType);
 	CheckSum(iSum, m_iAIWeight);
@@ -6983,13 +6983,11 @@ void CvPromotionInfo::copyNonDefaultsReadPass2(CvPromotionInfo* pClassInfo, CvXM
 	}
 }
 
-void CvPromotionInfo::getCheckSum(unsigned int &iSum) const
-{//TBPROMO
-
+void CvPromotionInfo::getCheckSum(uint32_t& iSum) const
+{
 	CheckSum(iSum, m_iPrereqPromotion);
 	CheckSum(iSum, m_iPrereqOrPromotion1);
 	CheckSum(iSum, m_iPrereqOrPromotion2);
-
 	CheckSum(iSum, m_iTechPrereq);
 	CheckSum(iSum, m_iStateReligionPrereq);
 	CheckSum(iSum, m_iMinEraType);
@@ -8619,7 +8617,7 @@ int CvSpawnInfo::getRateOverride() const
 	return m_iRateOverride;
 }
 
-void CvSpawnInfo::getCheckSum(unsigned int &iSum) const
+void CvSpawnInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eUnitType);
 	CheckSum(iSum, m_ePrereqTechType);
@@ -8981,7 +8979,7 @@ void CvSpecialUnitInfo::copyNonDefaults(CvSpecialUnitInfo* pClassInfo, CvXMLLoad
 	}
 }
 
-void CvSpecialUnitInfo::getCheckSum(unsigned int &iSum) const
+void CvSpecialUnitInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_bValid);
 	CheckSum(iSum, m_bSMLoadSame);
@@ -10043,7 +10041,7 @@ CvString CvCivicInfo::getCivicAttitudeReasonNamesVectorElement(int i) const		{ r
 CvString CvCivicInfo::getCivicAttitudeReasonValuesVectorElement(int i) const	{ return m_aszCivicAttitudeReasonValueforPass3[i]; }
 
 
-void CvCivicInfo::getCheckSum(unsigned int& iSum) const
+void CvCivicInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iCivicOptionType);
 	CheckSum(iSum, m_iAnarchyLength);
@@ -11853,11 +11851,8 @@ void CvSpecialBuildingInfo::copyNonDefaults(CvSpecialBuildingInfo* pClassInfo, C
 {
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
-	bool bDefault = false;
-	int iDefault = 0;
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const bool bDefault = false;
+	const int iDefault = 0;
 
 	if (getObsoleteTech() == iDefault) m_iObsoleteTech = pClassInfo->getObsoleteTech();
 	if (getTechPrereq() == iDefault) m_iTechPrereq = pClassInfo->getTechPrereq();
@@ -11867,7 +11862,7 @@ void CvSpecialBuildingInfo::copyNonDefaults(CvSpecialBuildingInfo* pClassInfo, C
 	if (isValid() == bDefault) m_bValid = pClassInfo->isValid();
 }
 
-void CvSpecialBuildingInfo::getCheckSum(unsigned int& iSum) const
+void CvSpecialBuildingInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iObsoleteTech);
 	CheckSum(iSum, m_iTechPrereq);
@@ -12373,7 +12368,7 @@ bool CvCivilizationInfo::isStronglyRestricted() const
 	return m_bStronglyRestricted;
 }
 
-void CvCivilizationInfo::getCheckSum(unsigned int& iSum) const
+void CvCivilizationInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iDerivativeCiv);
 	CheckSum(iSum, m_bAIPlayable);
@@ -12866,7 +12861,7 @@ void CvVictoryInfo::copyNonDefaults(CvVictoryInfo* pClassInfo, CvXMLLoadUtility*
 	if (isTotalVictory() == bDefault) m_bTotalVictory = pClassInfo->isTotalVictory();
 }
 
-void CvVictoryInfo::getCheckSum(unsigned int& iSum) const
+void CvVictoryInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iPopulationPercentLead);
 	CheckSum(iSum, m_iLandPercent);
@@ -12963,7 +12958,7 @@ void CvHurryInfo::copyNonDefaults(CvHurryInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (isAnger() == bDefault) m_bAnger = pClassInfo->isAnger();
 }
 
-void CvHurryInfo::getCheckSum(unsigned int& iSum) const
+void CvHurryInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iGoldPerProduction);
 	CheckSum(iSum, m_iProductionPerPopulation);
@@ -13369,7 +13364,7 @@ int CvHandicapInfo::getRevolutionIndexPercent() const
 }
 
 
-void CvHandicapInfo::getCheckSum(unsigned int& iSum) const
+void CvHandicapInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iFreeWinsVsBarbs);
 	CheckSum(iSum, m_iAnimalAttackProb);
@@ -14050,7 +14045,7 @@ void CvGameSpeedInfo::copyNonDefaults(CvGameSpeedInfo* pClassInfo, CvXMLLoadUtil
 	m_Percent.copyNonDefaults(&(pClassInfo->m_Percent), pXML);
 }
 
-void CvGameSpeedInfo::getCheckSum(unsigned int &iSum) const
+void CvGameSpeedInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iGrowthPercent);
 	CheckSum(iSum, m_iTrainPercent);
@@ -14173,7 +14168,7 @@ void CvTurnTimerInfo::copyNonDefaults(CvTurnTimerInfo* pClassInfo, CvXMLLoadUtil
 	if (getFirstTurnMultiplier() == iDefault) m_iFirstTurnMultiplier = pClassInfo->getFirstTurnMultiplier();
 }
 
-void CvTurnTimerInfo::getCheckSum(unsigned int &iSum) const
+void CvTurnTimerInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iBaseTime);
 	CheckSum(iSum, m_iCityBonus);
@@ -14605,7 +14600,7 @@ void CvBuildInfo::copyNonDefaults(CvBuildInfo* pClassInfo, CvXMLLoadUtility* pXM
 	}
 }
 
-void CvBuildInfo::getCheckSum(unsigned int &iSum) const
+void CvBuildInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iTime);
 	CheckSum(iSum, m_iCost);
@@ -14912,7 +14907,7 @@ void CvGoodyInfo::copyNonDefaults(CvGoodyInfo* pClassInfo, CvXMLLoadUtility* pXM
 	}
 }
 
-void CvGoodyInfo::getCheckSum(unsigned int& iSum) const
+void CvGoodyInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iGold);
 	CheckSum(iSum, m_iGoldRand1);
@@ -15192,7 +15187,7 @@ void CvRouteInfo::copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXM
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators, pXML);
 }
 
-void CvRouteInfo::getCheckSum(unsigned int& iSum) const
+void CvRouteInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iAdvancedStartCost);
 	CheckSum(iSum, m_iAdvancedStartCostIncrease);
@@ -15276,7 +15271,7 @@ int CvImprovementBonusInfo::getDepletionRand() const
 	return m_iDepletionRand;
 }
 
-void CvImprovementBonusInfo::getCheckSum(unsigned int &iSum) const
+void CvImprovementBonusInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iDiscoverRand);
 
@@ -15910,7 +15905,7 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 //	return m_iHighestCost;
 //}
 
-void CvImprovementInfo::getCheckSum(unsigned int &iSum) const
+void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iAdvancedStartCost);
 	CheckSum(iSum, m_iAdvancedStartCostIncrease);
@@ -16637,7 +16632,7 @@ void CvBonusClassInfo::copyNonDefaults(CvBonusClassInfo* pClassInfo, CvXMLLoadUt
 	if (getUniqueRange() == iDefault) m_iUniqueRange = pClassInfo->getUniqueRange();
 }
 
-void CvBonusClassInfo::getCheckSum(unsigned int& iSum) const
+void CvBonusClassInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iUniqueRange);
 }
@@ -16969,7 +16964,7 @@ bool CvBonusInfo::isPeaks() const
 	return m_bPeaks;
 }
 
-void CvBonusInfo::getCheckSum(unsigned int &iSum) const
+void CvBonusInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iBonusClassType);
 	CheckSum(iSum, m_iTechReveal);
@@ -17863,7 +17858,7 @@ void CvFeatureInfo::copyNonDefaults(CvFeatureInfo* pClassInfo, CvXMLLoadUtility*
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators, pXML);
 }
 
-void CvFeatureInfo::getCheckSum(unsigned int &iSum) const
+void CvFeatureInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iSpreadProbability);
 	CheckSum(iSum, m_iCultureDistance);
@@ -17994,13 +17989,8 @@ bool CvCommerceInfo::read(CvXMLLoadUtility* pXML)
 
 void CvCommerceInfo::copyNonDefaults(CvCommerceInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	int iAudioDefault = -1;  //all audio is default -1
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const bool bDefault = false;
+	const int iDefault = 0;
 
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
@@ -18008,10 +17998,9 @@ void CvCommerceInfo::copyNonDefaults(CvCommerceInfo* pClassInfo, CvXMLLoadUtilit
 	if (getInitialHappiness() == iDefault) m_iInitialHappiness = pClassInfo->getInitialHappiness();
 	if (getAIWeightPercent() == iDefault) m_iAIWeightPercent = pClassInfo->getAIWeightPercent();
 	if (isFlexiblePercent() == bDefault) m_bFlexiblePercent = pClassInfo->isFlexiblePercent();
-
 }
 
-void CvCommerceInfo::getCheckSum(unsigned int& iSum) const
+void CvCommerceInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iInitialPercent);
 	CheckSum(iSum, m_iInitialHappiness);
@@ -18232,7 +18221,7 @@ void CvYieldInfo::copyNonDefaults(CvYieldInfo* pClassInfo, CvXMLLoadUtility* pXM
 	}
 }
 
-void CvYieldInfo::getCheckSum(unsigned int& iSum) const
+void CvYieldInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iHillsChange);
 	CheckSum(iSum, m_iPeakChange);
@@ -18626,7 +18615,7 @@ void CvTerrainInfo::copyNonDefaults(CvTerrainInfo* pClassInfo, CvXMLLoadUtility*
 }
 
 
-void CvTerrainInfo::getCheckSum(unsigned int &iSum) const
+void CvTerrainInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iMovementCost);
 	CheckSum(iSum, m_iBuildModifier);
@@ -19608,7 +19597,7 @@ void CvLeaderHeadInfo::setDiplomacyVictoryWeight(int i)
 }
 
 
-void CvLeaderHeadInfo::getCheckSum(unsigned int& iSum) const
+void CvLeaderHeadInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_bNPC);
 	CheckSum(iSum, m_iWonderConstructRand);
@@ -20557,7 +20546,7 @@ void CvWorldInfo::copyNonDefaults(CvWorldInfo* pClassInfo, CvXMLLoadUtility* pXM
 	m_Percent.copyNonDefaults(&(pClassInfo->m_Percent), pXML);
 }
 
-void CvWorldInfo::getCheckSum(unsigned int& iSum) const
+void CvWorldInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iDefaultPlayers);
 	CheckSum(iSum, m_iUnitNameModifier);
@@ -21021,7 +21010,7 @@ void CvProcessInfo::copyNonDefaults(CvProcessInfo* pClassInfo, CvXMLLoadUtility*
 	}
 }
 
-void CvProcessInfo::getCheckSum(unsigned int& iSum) const
+void CvProcessInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iTechPrereq);
 
@@ -21254,7 +21243,7 @@ void CvVoteInfo::copyNonDefaults(CvVoteInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	}
 }
 
-void CvVoteInfo::getCheckSum(unsigned int& iSum) const
+void CvVoteInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iPopulationThreshold);
 	CheckSum(iSum, m_iStateReligionVotePercent);
@@ -21800,7 +21789,7 @@ bool CvProjectInfo::readPass3()
 }
 
 
-void CvProjectInfo::getCheckSum(unsigned int &iSum) const
+void CvProjectInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iWorldHappiness);
 	CheckSum(iSum, m_iGlobalHappiness);
@@ -22271,7 +22260,7 @@ void CvReligionInfo::copyNonDefaults(CvReligionInfo* pClassInfo, CvXMLLoadUtilit
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators, pXML);
 }
 
-void CvReligionInfo::getCheckSum(unsigned int& iSum) const
+void CvReligionInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iTechPrereq);
 	CheckSum(iSum, m_iFreeUnit);
@@ -22893,7 +22882,7 @@ void CvCorporationInfo::copyNonDefaults(CvCorporationInfo* pClassInfo, CvXMLLoad
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators, pXML);
 }
 
-void CvCorporationInfo::getCheckSum(unsigned int& iSum) const
+void CvCorporationInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iTechPrereq);
 	CheckSum(iSum, m_iFreeUnit);
@@ -27736,18 +27725,18 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXM
 
 void CvTraitInfo::copyNonDefaultsReadPass2(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
 {
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
+	const int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
 
 	if (bOver || getPrereqTrait() == iTextDefault) m_iPrereqTrait = pClassInfo->getPrereqTrait();
 	if (bOver || getPrereqOrTrait1() == iTextDefault) m_iPrereqOrTrait1 = pClassInfo->getPrereqOrTrait1();
 	if (bOver || getPrereqOrTrait2() == iTextDefault) m_iPrereqOrTrait2 = pClassInfo->getPrereqOrTrait2();
 }
 
-void CvTraitInfo::getCheckSum(unsigned int& iSum) const
+void CvTraitInfo::getCheckSum(uint32_t& iSum) const
 {
-	for ( int j = 0; j < GC.getNumPromotionInfos(); j++ )
+	for (int j = 0; j < GC.getNumPromotionInfos(); j++)
 	{
-		for ( int i = 0; i < GC.getNumUnitCombatInfos(); i++ )
+		for (int i = 0; i < GC.getNumUnitCombatInfos(); i++)
 		{
 			CheckSum(iSum, isFreePromotionUnitCombats(j,i));
 		}
@@ -30605,13 +30594,7 @@ bool CvUpkeepInfo::read(CvXMLLoadUtility* pXml)
 
 void CvUpkeepInfo::copyNonDefaults(CvUpkeepInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	int iAudioDefault = -1;  //all audio is default -1
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const int iDefault = 0;
 
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
@@ -30619,7 +30602,7 @@ void CvUpkeepInfo::copyNonDefaults(CvUpkeepInfo* pClassInfo, CvXMLLoadUtility* p
 	if (getCityPercent() == iDefault) m_iCityPercent = pClassInfo->getCityPercent();
 }
 
-void CvUpkeepInfo::getCheckSum(unsigned int& iSum) const
+void CvUpkeepInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iPopulationPercent);
 	CheckSum(iSum, m_iCityPercent);
@@ -30632,20 +30615,12 @@ void CvUpkeepInfo::getCheckSum(unsigned int& iSum) const
 
 CvCultureLevelInfo::CvCultureLevelInfo() :
 m_iCityDefenseModifier(0),
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 m_iCityRadius(1),
 m_iMaxWorldWonders(1),
 m_iMaxTeamWonders(1),
 m_iMaxNationalWonders(1),
 m_iMaxNationalWondersOCC(1),
 m_iPrereqGameOption(NO_GAMEOPTION),
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
 m_paiSpeedThreshold(NULL)
 {
 }
@@ -30666,11 +30641,6 @@ int CvCultureLevelInfo::getSpeedThreshold(int i) const
 	return m_paiSpeedThreshold ? m_paiSpeedThreshold[i] : 0;
 }
 
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 int CvCultureLevelInfo::getCityRadius() const
 {
 	return m_iCityRadius;
@@ -30700,9 +30670,6 @@ int CvCultureLevelInfo::getPrereqGameOption() const
 {
 	return m_iPrereqGameOption;
 }
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
 
 bool CvCultureLevelInfo::read(CvXMLLoadUtility* pXml)
 {
@@ -30714,11 +30681,6 @@ bool CvCultureLevelInfo::read(CvXMLLoadUtility* pXml)
 	}
 
 	pXml->GetOptionalChildXmlValByName(&m_iCityDefenseModifier, L"iCityDefenseModifier");
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	pXml->GetOptionalChildXmlValByName(&m_iCityRadius, L"iCityRadius", 1);
 	pXml->GetOptionalChildXmlValByName(&m_iMaxWorldWonders, L"iMaxWorldWonders", 1);
 	pXml->GetOptionalChildXmlValByName(&m_iMaxTeamWonders, L"iMaxTeamWonders", 1);
@@ -30727,9 +30689,6 @@ bool CvCultureLevelInfo::read(CvXMLLoadUtility* pXml)
 	CvString szTextVal;
 	pXml->GetOptionalChildXmlValByName(szTextVal, L"PrereqGameOption");
 	m_iPrereqGameOption = pXml->GetInfoClass(szTextVal);
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
 	pXml->SetVariableListTagPair(&m_paiSpeedThreshold, L"SpeedThresholds", GC.getNumGameSpeedInfos());
 
 	return true;
@@ -30768,7 +30727,7 @@ void CvCultureLevelInfo::copyNonDefaults(CvCultureLevelInfo* pClassInfo, CvXMLLo
 	}
 }
 
-void CvCultureLevelInfo::getCheckSum(unsigned int &iSum) const
+void CvCultureLevelInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iCityDefenseModifier);
 	CheckSum(iSum, m_iCityRadius);
@@ -31131,7 +31090,7 @@ void CvEraInfo::copyNonDefaults(CvEraInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	}
 }
 
-void CvEraInfo::getCheckSum(unsigned int& iSum) const
+void CvEraInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iStartingUnitMultiplier);
 	CheckSum(iSum, m_iStartingDefenseUnits);
@@ -32544,7 +32503,7 @@ void CvGameOptionInfo::copyNonDefaults(CvGameOptionInfo* pClassInfo, CvXMLLoadUt
 	GC.copyNonDefaultDelayedResolutionVector(m_aEnforcesGameOptionOffTypes, pClassInfo->m_aEnforcesGameOptionOffTypes);
 }
 
-void CvGameOptionInfo::getCheckSum(unsigned int& iSum) const
+void CvGameOptionInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_bDefault);
 	CheckSum(iSum, m_bVisible);
@@ -32588,20 +32547,14 @@ bool CvMPOptionInfo::read(CvXMLLoadUtility* pXML)
 
 void CvMPOptionInfo::copyNonDefaults(CvMPOptionInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	int iAudioDefault = -1;  //all audio is default -1
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const bool bDefault = false;
 
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
 	if (getDefault() == bDefault) m_bDefault = pClassInfo->getDefault();
 }
 
-void CvMPOptionInfo::getCheckSum(unsigned int& iSum) const
+void CvMPOptionInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_bDefault);
 }
@@ -32640,20 +32593,14 @@ bool CvForceControlInfo::read(CvXMLLoadUtility* pXML)
 
 void CvForceControlInfo::copyNonDefaults(CvForceControlInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	int iAudioDefault = -1;  //all audio is default -1
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const bool bDefault = false;
 
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
 	if (getDefault() == bDefault) m_bDefault = pClassInfo->getDefault();
 }
 
-void CvForceControlInfo::getCheckSum(unsigned int& iSum) const
+void CvForceControlInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_bDefault);
 }
@@ -32692,20 +32639,14 @@ bool CvPlayerOptionInfo::read(CvXMLLoadUtility* pXML)
 
 void CvPlayerOptionInfo::copyNonDefaults(CvPlayerOptionInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	int iAudioDefault = -1;  //all audio is default -1
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const bool bDefault = false;
 
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
 	if (getDefault() == bDefault) m_bDefault = pClassInfo->getDefault();
 }
 
-void CvPlayerOptionInfo::getCheckSum(unsigned int& iSum) const
+void CvPlayerOptionInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_bDefault);
 }
@@ -32744,20 +32685,14 @@ bool CvGraphicOptionInfo::read(CvXMLLoadUtility* pXML)
 
 void CvGraphicOptionInfo::copyNonDefaults(CvGraphicOptionInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	int iAudioDefault = -1;  //all audio is default -1
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const bool bDefault = false;
 
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
 	if (getDefault() == bDefault) m_bDefault = pClassInfo->getDefault();
 }
 
-void CvGraphicOptionInfo::getCheckSum(unsigned int& iSum) const
+void CvGraphicOptionInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_bDefault);
 }
@@ -33327,7 +33262,7 @@ bool CvEventTriggerInfo::isOnGameOption(int i) const
 }
 
 //TBSpot
-void CvEventTriggerInfo::getCheckSum(unsigned int& iSum) const
+void CvEventTriggerInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iPercentGamesActive);
 	CheckSum(iSum, m_iProbability);
@@ -34479,7 +34414,7 @@ CvString CvEventInfo::getClearEventChanceNamesVectorElement(int i) const	{ retur
 int CvEventInfo::getClearEventChanceValuesVectorElement(int i) const		{ return m_aiClearEventChanceforPass3[i]; }
 
 
-void CvEventInfo::getCheckSum(unsigned int& iSum) const
+void CvEventInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_bQuest);
 	CheckSum(iSum, m_bGlobal);
@@ -35763,7 +35698,7 @@ void CvEspionageMissionInfo::copyNonDefaults(CvEspionageMissionInfo* pClassInfo,
 	if (getRemoveCorporationsCostFactor() == iDefault) m_iRemoveCorporationsCostFactor = pClassInfo->getRemoveCorporationsCostFactor();
 }
 
-void CvEspionageMissionInfo::getCheckSum(unsigned int &iSum) const
+void CvEspionageMissionInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iCost);
 	CheckSum(iSum, m_bIsPassive);
@@ -36366,7 +36301,7 @@ void CvVoteSourceInfo::copyNonDefaults(CvVoteSourceInfo* pClassInfo, CvXMLLoadUt
 	}
 }
 
-void CvVoteSourceInfo::getCheckSum(unsigned int &iSum) const
+void CvVoteSourceInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iVoteInterval);
 	CheckSum(iSum, m_iFreeSpecialist);
@@ -36812,7 +36747,7 @@ void CvPropertyInfo::copyNonDefaults(CvPropertyInfo* pClassInfo, CvXMLLoadUtilit
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators, pXML);
 }
 
-void CvPropertyInfo::getCheckSum(unsigned int& iSum) const
+void CvPropertyInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_bSourceDrain);
 	CheckSum(iSum, m_bOAType);
@@ -37151,7 +37086,7 @@ void CvOutcomeInfo::copyNonDefaultsReadPass2(CvOutcomeInfo* pClassInfo, CvXMLLoa
 	}
 }
 
-void CvOutcomeInfo::getCheckSum(unsigned int& iSum) const
+void CvOutcomeInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_ePrereqTech);
 	CheckSum(iSum, m_eObsoleteTech);
@@ -37508,7 +37443,7 @@ void CvPromotionLineInfo::copyNonDefaults(CvPromotionLineInfo* pClassInfo, CvXML
 	}
 }
 
-void CvPromotionLineInfo::getCheckSum(unsigned int& iSum) const
+void CvPromotionLineInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_ePrereqTech);
 	CheckSum(iSum, m_eObsoleteTech);
@@ -41816,11 +41751,11 @@ void CvUnitCombatInfo::copyNonDefaults(CvUnitCombatInfo* pClassInfo, CvXMLLoadUt
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators, pXML);
 }
 
-void CvUnitCombatInfo::getCheckSum(unsigned int& iSum) const
+void CvUnitCombatInfo::getCheckSum(uint32_t& iSum) const
 {
 	m_KillOutcomeList.getCheckSum(iSum);
 
-	for (int i=0; i<(int)m_aOutcomeMissions.size(); i++)
+	for (uint32_t i = 0; i < m_aOutcomeMissions.size(); i++)
 	{
 		m_aOutcomeMissions[i]->getCheckSum(iSum);
 	}
@@ -42379,7 +42314,7 @@ void CvMapCategoryInfo::copyNonDefaults(CvMapCategoryInfo* pClassInfo, CvXMLLoad
 
 }
 
-void CvMapCategoryInfo::getCheckSum(unsigned int& iSum) const
+void CvMapCategoryInfo::getCheckSum(uint32_t& iSum) const
 {
 }
 
@@ -42448,7 +42383,7 @@ void CvIdeaClassInfo::copyNonDefaultsReadPass2(CvIdeaClassInfo* pClassInfo, CvXM
 {
 }
 
-void CvIdeaClassInfo::getCheckSum(unsigned int& iSum) const
+void CvIdeaClassInfo::getCheckSum(uint32_t& iSum) const
 {
 }
 
@@ -42526,7 +42461,7 @@ void CvIdeaInfo::copyNonDefaultsReadPass2(CvIdeaInfo* pClassInfo, CvXMLLoadUtili
 {
 }
 
-void CvIdeaInfo::getCheckSum(unsigned int& iSum) const
+void CvIdeaInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eIdeaClass);
 }
@@ -42592,7 +42527,7 @@ void CvInvisibleInfo::copyNonDefaults(CvInvisibleInfo* pClassInfo, CvXMLLoadUtil
 
 }
 
-void CvInvisibleInfo::getCheckSum(unsigned int& iSum) const
+void CvInvisibleInfo::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iChar);
 	CheckSum(iSum, m_iFontButtonIndex);
