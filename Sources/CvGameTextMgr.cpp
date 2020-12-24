@@ -10927,7 +10927,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		setYieldChangeHelp(szHelpString, L"", L"", gDLL->getText("TXT_KEY_CIVIC_PER_SPECIALIST").GetCString(), GC.getTraitInfo(eTrait).getSpecialistExtraYieldArray(), false, true);
 
 		//Individual Base specialist yield changes
-		if (GC.getTraitInfo(eTrait).m_bAnySpecialistYieldChanges)
+		if (GC.getTraitInfo(eTrait).isAnySpecialistYieldChanges())
 		{
 			for (iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
 			{
@@ -10991,7 +10991,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		setCommerceChangeHelp(szHelpString, L"", L"", gDLL->getText("TXT_KEY_CIVIC_PER_SPECIALIST").GetCString(), GC.getTraitInfo(eTrait).getSpecialistExtraCommerceArray(), false, true);
 
 		//Individual Base specialist commerce changes
-		if (GC.getTraitInfo(eTrait).m_bAnySpecialistCommerceChanges)
+		if (GC.getTraitInfo(eTrait).isAnySpecialistCommerceChanges())
 		{
 			for (iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
 			{
@@ -16744,7 +16744,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		}
 	}
 	// +0.35 gold for scientists
-	//if (kCivic.m_bAnySpecialistCommerceChanges)
+	//if (kCivic.isAnySpecialistCommerceChanges())
 	{
 		for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 		{
@@ -16772,7 +16772,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 			}
 		}
 	}
-	//if (kCivic.m_bAnySpecialistYieldChanges)
+	//if (kCivic.isAnySpecialistYieldChanges())
 	{
 		for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 		{
@@ -17601,24 +17601,24 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 
 	for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 	{
-		const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
-
 		if (GC.getGame().canEverConstruct((BuildingTypes)iI))
 		{
+			const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
+
 		//	Building commerce changes
-			if (kBuilding.m_bAnyTechCommerceChanges)
+			if (kBuilding.isAnyTechCommerceChanges())
 				buildBuildingTechCommerceChangeString(szBuffer, eTech, iI, true, bPlayerContext);
 		//	Building yield changes
-			if (kBuilding.m_bAnyTechYieldChanges)
+			if (kBuilding.isAnyTechYieldChanges())
 				buildBuildingTechYieldChangeString(szBuffer, eTech, iI, true, bPlayerContext);
 		//	Building specialist count changes
-			if (kBuilding.m_bAnyTechSpecialistChanges)
+			if (kBuilding.isAnyTechSpecialistChanges())
 				buildBuildingTechSpecialistChangeString(szBuffer, eTech, iI, true, bPlayerContext);
 		//	Building commerce changes
-			if (kBuilding.m_bAnyTechCommerceModifiers)
+			if (kBuilding.isAnyTechCommerceModifiers())
 				buildBuildingTechCommerceModifierString(szBuffer, eTech, iI, true, bPlayerContext);
 		//	Building yield changes
-			if (kBuilding.m_bAnyTechYieldModifiers)
+			if (kBuilding.isAnyTechYieldModifiers())
 				buildBuildingTechYieldModifierString(szBuffer, eTech, iI, true, bPlayerContext);
 		//	Building happy changes
 			buildBuildingTechHappinessChangesString(szBuffer, eTech, iI, true, bPlayerContext);
@@ -22977,7 +22977,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_ADJUST_COMM_RATE", GC.getCommerceInfo((CommerceTypes) iI).getChar()));
 			}
 		}
-		if (kBuilding.m_bAnySpecialistYieldChanges)
+		if (kBuilding.isAnySpecialistYieldChanges())
 		{
 			bFirst = true;
 			for (int iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
@@ -22999,7 +22999,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 				}
 			}
 		}
-		if (kBuilding.m_bAnySpecialistCommerceChanges)
+		if (kBuilding.isAnySpecialistCommerceChanges())
 		{
 			bFirst = true;
 			for (int iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
@@ -23022,7 +23022,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 			}
 		}
 
-		if (kBuilding.m_bAnyLocalSpecialistYieldChanges)
+		if (kBuilding.isAnyLocalSpecialistYieldChanges())
 		{
 			bFirst = true;
 			for (int iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
@@ -23044,7 +23044,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 				}
 			}
 		}
-		if (kBuilding.m_bAnyLocalSpecialistCommerceChanges)
+		if (kBuilding.isAnyLocalSpecialistCommerceChanges())
 		{
 			bFirst = true;
 			for (int iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
@@ -23069,7 +23069,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 
 		//TB TESTING to see if we can't change the new line bool so that it doesn't display each one individually - this will impact the long Taxidermy building's list.
 
-		if (kBuilding.m_bAnyBonusYieldModifiers)
+		if (kBuilding.isAnyBonusYieldModifiers())
 		{
 			bFirst = true;
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
@@ -23092,7 +23092,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 			}
 		}
 
-		if (kBuilding.m_bAnyBonusCommerceModifiers)
+		if (kBuilding.isAnyBonusCommerceModifiers())
 		{
 			bFirst = true;
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
@@ -23116,7 +23116,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		}
 
 		iLast = 0;
-		if (kBuilding.m_bAnyVicinityBonusYieldChanges)
+		if (kBuilding.isAnyVicinityBonusYieldChanges())
 		{
 			bFirst = true;
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
@@ -23141,7 +23141,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		}
 
 		iLast = 0;
-		if (kBuilding.m_bAnyBonusYieldChanges)
+		if (kBuilding.isAnyBonusYieldChanges())
 		{
 			bFirst = true;
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
@@ -23166,7 +23166,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 
 		iLast = 0;
 
-		if (kBuilding.m_bAnyBonusCommercePercentChanges)
+		if (kBuilding.isAnyBonusCommercePercentChanges())
 		{
 			bool* pabProcessed = new bool[GC.getNumBonusInfos()];
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
@@ -23290,7 +23290,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		{
 			if (GC.getGame().canEverResearch((TechTypes)iTech))
 			{
-				if (kBuilding.m_bAnyTechCommerceChanges)
+				if (kBuilding.isAnyTechCommerceChanges())
 				{
 					if (bCivilopediaText)
 					{
@@ -23306,7 +23306,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 					}
 					setCommerceChangeHelp(szBuffer, L"", L"", szTempBuffer, kBuilding.getTechCommerceChangeArray(iTech), false, true);
 				}
-				if (kBuilding.m_bAnyTechYieldChanges)
+				if (kBuilding.isAnyTechYieldChanges())
 				{
 					if (bCivilopediaText)
 					{
@@ -23323,11 +23323,11 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 					setYieldChangeHelp(szBuffer, L"", L"", szTempBuffer, kBuilding.getTechYieldChangeArray(iTech), false, true);
 				}
 
-				if (kBuilding.m_bAnyTechSpecialistChanges)
+				if (kBuilding.isAnyTechSpecialistChanges())
 				{
 					for (int iSpecialist = 0; iSpecialist < GC.getNumSpecialistInfos(); iSpecialist++)
 					{
-						int iChange = kBuilding.getTechSpecialistChange(iTech, iSpecialist);
+						const int iChange = kBuilding.getTechSpecialistChange(iTech, iSpecialist);
 						if (0 != iChange)
 						{
 							szBuffer.append(NEWLINE);
@@ -23346,7 +23346,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 					}
 				}
 
-				if (kBuilding.m_bAnyTechCommerceModifiers)
+				if (kBuilding.isAnyTechCommerceModifiers())
 				{
 					if (bCivilopediaText)
 					{
@@ -23363,7 +23363,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 					setCommerceChangeHelp(szBuffer, L"", L"", szTempBuffer, kBuilding.getTechCommerceModifierArray(iTech), true, true);
 				}
 
-				if (kBuilding.m_bAnyTechYieldModifiers)
+				if (kBuilding.isAnyTechYieldModifiers())
 				{
 					if (bCivilopediaText)
 					{

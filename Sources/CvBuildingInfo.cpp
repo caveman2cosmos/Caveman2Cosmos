@@ -195,8 +195,6 @@ m_piBonusHappinessChanges(NULL),
 m_piBonusProductionModifier(NULL),
 m_piUnitCombatFreeExperience(NULL),
 m_piDomainFreeExperience(NULL),
-m_bAnyUnitCombatFreeExperience(false),
-m_bAnyDomainFreeExperience(false),
 m_piDomainProductionModifier(NULL),
 m_piBuildingHappinessChanges(NULL),
 m_piPrereqNumOfBuilding(NULL),
@@ -234,11 +232,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_iHealthPercentPerPopulation(0)
 ,m_iHappinessPercentPerPopulation(0)
 //New Booleans
-,m_bAnySpecialistYieldChanges(false)
-,m_bAnySpecialistCommerceChanges(false)
-,m_bAnyLocalSpecialistYieldChanges(false)
-,m_bAnyLocalSpecialistCommerceChanges(false)
-,m_bAnyBonusYieldModifiers(false)
 ,m_bApplyFreePromotionOnMove(false)
 ,m_bBuildOnlyOnPeaks(false)
 ,m_bPrereqPower(false)
@@ -271,34 +264,15 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_piCommerceAttacks(NULL)
 //New Multidimensional Integer Arrays
 ,m_ppaiTechCommerceChange(NULL)
-,m_bAnyTechCommerceChanges(false)
-
 ,m_ppaiTechYieldChange(NULL)
-,m_bAnyTechYieldChanges(false)
-
 ,m_ppaiTechSpecialistChange(NULL)
-,m_bAnyTechSpecialistChanges(false)
-
 ,m_ppaiTechCommerceModifier(NULL)
-,m_bAnyTechCommerceModifiers(false)
-
 ,m_ppaiTechYieldModifier(NULL)
-,m_bAnyTechYieldModifiers(false)
-
 ,m_ppaiBonusCommerceModifier(NULL)
-,m_bAnyBonusCommerceModifiers(false)
-
 ,m_ppaiBonusYieldChanges(NULL)
-,m_bAnyBonusYieldChanges(false)
-
 ,m_ppaiVicinityBonusYieldChanges(NULL)
-,m_bAnyVicinityBonusYieldChanges(false)
-
 ,m_ppaiBonusCommercePercentChanges(NULL)
-,m_bAnyBonusCommercePercentChanges(false)
-
 ,m_ppiImprovementYieldChanges(NULL)
-
 ,m_PropertyManipulators()
 ,m_pExprNewCityFree(NULL)
 ,m_pExprConstructCondition(NULL)
@@ -790,16 +764,6 @@ int CvBuildingInfo::getDomainFreeExperience(int i) const
 	{
 		return m_piDomainFreeExperience ? m_piDomainFreeExperience[i] : 0;
 	}
-}
-
-bool CvBuildingInfo::isAnyUnitCombatFreeExperience() const
-{
-	return m_bAnyUnitCombatFreeExperience;
-}
-
-bool CvBuildingInfo::isAnyDomainFreeExperience() const
-{
-	return m_bAnyDomainFreeExperience;
 }
 
 int CvBuildingInfo::getDomainProductionModifier(int i) const
@@ -1805,7 +1769,7 @@ int CvBuildingInfo::getTechOutbreakLevelChange(int iTech) const
 
 	return 0;
 }
-//Team Project (1)
+
 int CvBuildingInfo::getNumTechHappinessTypes() const
 {
 	return m_aTechHappinessTypes.size();
@@ -1838,17 +1802,6 @@ int CvBuildingInfo::getTechHealthType(int iTech) const
 		}
 	}
 	return 0;
-}
-
-//Arrays
-bool CvBuildingInfo::isAnySpecialistCommerceChanges() const
-{
-	return m_bAnySpecialistCommerceChanges;
-}
-
-bool CvBuildingInfo::isAnyLocalSpecialistCommerceChanges() const
-{
-	return m_bAnyLocalSpecialistCommerceChanges;
 }
 
 bool CvBuildingInfo::isHurry(int i) const
@@ -2199,8 +2152,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusProductionModifier);
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_piUnitCombatFreeExperience);
 	CheckSumI(iSum, NUM_DOMAIN_TYPES, m_piDomainFreeExperience);
-	CheckSum(iSum, m_bAnyUnitCombatFreeExperience);
-	CheckSum(iSum, m_bAnyDomainFreeExperience);
 	CheckSumI(iSum, NUM_DOMAIN_TYPES, m_piDomainProductionModifier);
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piBuildingHappinessChanges);
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piPrereqNumOfBuilding);
@@ -2963,19 +2914,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_piBonusHealthChanges, L"BonusHealthChanges", GC.getNumBonusInfos());
 	pXML->SetVariableListTagPair(&m_piBonusHappinessChanges, L"BonusHappinessChanges", GC.getNumBonusInfos());
 	pXML->SetVariableListTagPair(&m_piBonusProductionModifier, L"BonusProductionModifiers", GC.getNumBonusInfos());
-
 	pXML->SetVariableListTagPair(&m_piUnitCombatFreeExperience, L"UnitCombatFreeExperiences", GC.getNumUnitCombatInfos());
-	if (m_piUnitCombatFreeExperience)
-	{
-		m_bAnyUnitCombatFreeExperience = true;
-	}
-
 	pXML->SetVariableListTagPair(&m_piDomainFreeExperience, L"DomainFreeExperiences", NUM_DOMAIN_TYPES);
-	if (m_piDomainFreeExperience)
-	{
-		m_bAnyDomainFreeExperience = true;
-	}
-
 	pXML->SetVariableListTagPair(&m_piDomainProductionModifier, L"DomainProductionModifiers", NUM_DOMAIN_TYPES);
 
 	if (pXML->TryMoveToXmlFirstChild(L"SpecialistYieldChanges"))
@@ -3004,7 +2944,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetYields(&m_ppaiSpecialistYieldChange[k]);
 						pXML->MoveToXmlParent();
-						m_bAnySpecialistYieldChanges = true;
 					}
 				}
 
@@ -3048,7 +2987,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetCommerce(&m_ppaiSpecialistCommerceChange[k]);
 						pXML->MoveToXmlParent();
-						m_bAnySpecialistCommerceChanges = true;
 					}
 				}
 
@@ -3093,7 +3031,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetYields(&m_ppaiLocalSpecialistYieldChange[k]);
 						pXML->MoveToXmlParent();
-						m_bAnyLocalSpecialistYieldChanges = true;
 					}
 				}
 
@@ -3137,7 +3074,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetCommerce(&m_ppaiLocalSpecialistCommerceChange[k]);
 						pXML->MoveToXmlParent();
-						m_bAnyLocalSpecialistCommerceChanges = true;
 					}
 				}
 
@@ -3181,7 +3117,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetYields(&m_ppaiBonusYieldModifier[k]);
 						pXML->MoveToXmlParent();
-						m_bAnyBonusYieldModifiers = true;
 					}
 				}
 
@@ -3287,7 +3222,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the commerce change variable
 						pXML->SetCommerce(&m_ppaiBonusCommerceModifier[k]);
 						pXML->MoveToXmlParent();
-						m_bAnyBonusCommerceModifiers = true;
 					}
 				}
 
@@ -3331,7 +3265,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the commerce change variable
 						pXML->SetCommerce(&m_ppaiBonusCommercePercentChanges[k]);
 						pXML->MoveToXmlParent();
-						m_bAnyBonusCommercePercentChanges = true;
 					}
 				}
 
@@ -3375,7 +3308,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the commerce change variable
 						pXML->SetYields(&m_ppaiBonusYieldChanges[k]);
 						pXML->MoveToXmlParent();
-						m_bAnyBonusYieldChanges = true;
 					}
 				}
 
@@ -3419,7 +3351,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the commerce change variable
 						pXML->SetYields(&m_ppaiVicinityBonusYieldChanges[k]);
 						pXML->MoveToXmlParent();
-						m_bAnyVicinityBonusYieldChanges = true;
 					}
 				}
 
@@ -3592,7 +3523,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 							// call the function that sets the commerce change variable
 							pXML->SetCommerce(&m_ppaiTechCommerceChange[k]);
 							pXML->MoveToXmlParent();
-							m_bAnyTechCommerceChanges = true;
 						}
 					}
 
@@ -3638,7 +3568,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 							// call the function that sets the yield change variable
 							pXML->SetYields(&m_ppaiTechYieldChange[k]);
 							pXML->MoveToXmlParent();
-							m_bAnyTechYieldChanges = true;
 						}
 					}
 
@@ -3679,7 +3608,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 							}
 						}
 						pXML->SetVariableListTagPair(&m_ppaiTechSpecialistChange[k], L"SpecialistCounts", GC.getNumSpecialistInfos());
-						m_bAnyTechSpecialistChanges = true;
 					}
 
 					if (!pXML->TryMoveToXmlNextSibling())
@@ -3723,7 +3651,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 							// call the function that sets the commerce change variable
 							pXML->SetCommerce(&m_ppaiTechCommerceModifier[k]);
 							pXML->MoveToXmlParent();
-							m_bAnyTechCommerceModifiers = true;
 						}
 					}
 
@@ -3769,7 +3696,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 							// call the function that sets the yield change variable
 							pXML->SetYields(&m_ppaiTechYieldModifier[k]);
 							pXML->MoveToXmlParent();
-							m_bAnyTechYieldChanges = true;
 						}
 					}
 					if (!pXML->TryMoveToXmlNextSibling())
@@ -4631,12 +4557,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 				CvXMLLoadUtility::InitList(&m_piUnitCombatFreeExperience,GC.getNumUnitCombatInfos(),iDefault);
 			}
 			m_piUnitCombatFreeExperience[j] = pClassInfo->getUnitCombatFreeExperience(j);
-			m_bAnyUnitCombatFreeExperience = true;
 		}
-		//if ( getUnitCombatFreeExperience(j) != iDefault || pClassInfo->getUnitCombatFreeExperience(j) != iDefault)
-		//{
-		//	m_bAnyUnitCombatFreeExperience = true;
-		//}
 	}
 	for ( int j = 0; j < NUM_DOMAIN_TYPES; j++)
 	{
@@ -4647,12 +4568,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 				CvXMLLoadUtility::InitList(&m_piDomainFreeExperience,NUM_DOMAIN_TYPES,iDefault);
 			}
 			m_piDomainFreeExperience[j] = pClassInfo->getDomainFreeExperience(j);
-			m_bAnyDomainFreeExperience = true;
 		}
-		//if ( getDomainFreeExperience(j) != iDefault || pClassInfo->getDomainFreeExperience(j) != iDefault)
-		//{
-		//	m_bAnyDomainFreeExperience = true;
-		//}
 		if ( getDomainProductionModifier(j) == iDefault && pClassInfo->getDomainProductionModifier(j) != iDefault)
 		{
 			if ( NULL == m_piDomainProductionModifier )
@@ -4683,10 +4599,9 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 					}
 
 					m_ppaiSpecialistYieldChange[i][j] = iChange;
-					m_bAnySpecialistYieldChanges = true;
 				}
 			}
-//Team Project (1)
+
 			if ( getLocalSpecialistYieldChange(i,j) == iDefault )
 			{
 				const int iChange = pClassInfo->getLocalSpecialistYieldChange(i, j);
@@ -4703,7 +4618,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 					}
 
 					m_ppaiLocalSpecialistYieldChange[i][j] = iChange;
-					m_bAnyLocalSpecialistYieldChanges = true;
 				}
 			}
 		}
@@ -4725,10 +4639,9 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 					}
 
 					m_ppaiSpecialistCommerceChange[i][j] = iChange;
-					m_bAnySpecialistCommerceChanges = true;
 				}
 			}
-//Team Project (1)
+
 			if ( getLocalSpecialistCommerceChange(i,j) == iDefault )
 			{
 				const int iChange = pClassInfo->getLocalSpecialistCommerceChange(i, j);
@@ -4745,7 +4658,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 					}
 
 					m_ppaiLocalSpecialistCommerceChange[i][j] = iChange;
-					m_bAnyLocalSpecialistCommerceChanges = true;
 				}
 			}
 		}
@@ -4770,7 +4682,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 					}
 
 					m_ppaiBonusYieldModifier[i][j] = iChange;
-					m_bAnyBonusYieldModifiers = true;
 				}
 			}
 		}
@@ -4816,7 +4727,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (getFreePromotion_3() == iTextDefault) m_iFreePromotion_3 = pClassInfo->getFreePromotion_3();
 	if (getLineOfSight() == iDefault) m_iLineOfSight = pClassInfo->getLineOfSight();
 	if (getInflationModifier() == iDefault) m_iInflationModifier = pClassInfo->getInflationModifier();
-	if (!m_bAnyTechCommerceChanges) m_bAnyTechCommerceChanges = pClassInfo->m_bAnyTechCommerceChanges;
 	if (getInvasionChance() == iDefault) m_iInvasionChance = pClassInfo->getInvasionChance();
 	if (getAdjacentDamagePercent() == iDefault) m_iAdjacentDamagePercent = pClassInfo->getAdjacentDamagePercent();
 	if (getPrereqPopulation() == iDefault) m_iPrereqPopulation = pClassInfo->getPrereqPopulation();
@@ -4945,7 +4855,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 					}
 
 					m_ppaiBonusCommerceModifier[i][j] = iChange;
-					m_bAnyBonusCommerceModifiers = true;
 				}
 			}
 		}
@@ -4979,7 +4888,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 					}
 
 					m_ppaiBonusYieldChanges[i][j] = iChange;
-					m_bAnyBonusYieldChanges = true;
 				}
 			}
 		}
@@ -5013,7 +4921,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 					}
 
 					m_ppaiBonusCommercePercentChanges[i][j] = iChange;
-					m_bAnyBonusCommercePercentChanges = true;
 				}
 			}
 		}
@@ -5047,7 +4954,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 					}
 
 					m_ppaiVicinityBonusYieldChanges[i][j] = iChange;
-					m_bAnyVicinityBonusYieldChanges = true;
 				}
 			}
 		}
@@ -5152,7 +5058,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 					}
 
 					m_ppaiTechCommerceChange[i][j] = iChange;
-					m_bAnyTechCommerceChanges = true;
 				}
 			}
 		}
@@ -5186,7 +5091,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 					}
 
 					m_ppaiTechYieldChange[i][j] = iChange;
-					m_bAnyTechYieldChanges = true;
 				}
 			}
 		}
@@ -5220,7 +5124,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 					}
 
 					m_ppaiTechSpecialistChange[i][j] = iChange;
-					m_bAnyTechSpecialistChanges = true;
 				}
 			}
 		}
@@ -5254,7 +5157,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 					}
 
 					m_ppaiTechCommerceModifier[i][j] = iChange;
-					m_bAnyTechCommerceModifiers = true;
 				}
 			}
 		}
@@ -5288,7 +5190,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 					}
 
 					m_ppaiTechYieldModifier[i][j] = iChange;
-					m_bAnyTechYieldModifiers = true;
 				}
 			}
 		}

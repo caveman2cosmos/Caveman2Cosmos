@@ -1336,7 +1336,7 @@ public:
 	int getBuildingProductionModifier(const BuildingTypes eIndex) const;
 	void changeBuildingProductionModifier(const BuildingTypes eIndex, const int iChange);
 
-	int getUnitProductionModifier(const UnitTypes eIndex) const; //Exposed to Python
+	int getUnitProductionModifier(const UnitTypes eIndex) const;
 	void changeUnitProductionModifier(const UnitTypes eIndex, const int iChange);
 
 	bool hadVicinityBonus(BonusTypes eIndex) const;
@@ -1492,8 +1492,8 @@ public:
 	int getBonusCommercePercentChanges(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 	void changeBonusCommercePercentChanges(CommerceTypes eIndex, int iChange);
 
-	bool isAutomatedCanBuild(BuildTypes eBuild) const; //Exposed to Python
-	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue); //Exposed to Python
+	bool isAutomatedCanBuild(BuildTypes eBuild) const;
+	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue);
 
 	virtual bool AI_isEmphasizeAvoidAngryCitizens() const = 0;
 	virtual bool AI_isEmphasizeAvoidUnhealthyCitizens() const = 0;
