@@ -16229,50 +16229,6 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
 	m_iPrereqTech = pXML->GetInfoClass(szTextVal);
 
-	// initialize the boolean list to the correct size and all the booleans to false
-	//FAssertMsg((GC.getNumTraitInfos() > 0) && (NUM_YIELD_TYPES > 0),"either the number of trait infos is zero or less or the number of yield types is zero or less");
-	//if (pXML->TryMoveToXmlFirstChild(L"TraitYieldChanges"))
-	//{
-	//	if (pXML->SkipToNextVal())
-	//	{
-	//		iNumSibs = pXML->GetXmlChildrenNumber();
-	//		if (pXML->TryMoveToXmlFirstChild())
-	//		{
-	//			if (0 < iNumSibs)
-	//			{
-	//				pXML->Init2DIntList(&m_ppiTraitYieldChanges, GC.getNumTraitInfos(), NUM_YIELD_TYPES);
-	//				for (j=0;j<iNumSibs;j++)
-	//				{
-	//					pXML->GetChildXmlValByName(szTextVal, L"TraitType");
-	//					iIndex = pXML->GetInfoClass(szTextVal);
-
-	//					if (iIndex > -1)
-	//					{
-	//						// delete the array since it will be reallocated
-	//						SAFE_DELETE_ARRAY(m_ppiTraitYieldChanges[iIndex]);
-	//						// if we can set the current xml node to it's next sibling
-	//						if (pXML->TryMoveToXmlFirstChild(L"TraitYields"))
-	//						{
-	//							// call the function that sets the yield change variable
-	//							pXML->SetYields(&m_ppiTraitYieldChanges[iIndex]);
-	//							pXML->MoveToXmlParent();
-	//						}
-	//					}
-
-	//					if (!pXML->TryMoveToXmlNextSibling())
-	//					{
-	//						break;
-	//					}
-	//				}
-	//			}
-
-	//			pXML->MoveToXmlParent();
-	//		}
-	//	}
-
-	//	pXML->MoveToXmlParent();
-	//}
-
 	m_PropertyManipulators.read(pXML);
 
 	//TB Improvements
@@ -31627,8 +31583,6 @@ bool CvGameText::read(CvXMLLoadUtility* pXML)
 				return false;
 		}
 
-		//CvString szTextVal;
-
 		// we are now on the chosen language tag (or a fallback)
 		if (!pXML->GetOptionalChildXmlValByName(wszTextVal, L"Text", L""))
 		{
@@ -31660,52 +31614,6 @@ bool CvGameText::read(CvXMLLoadUtility* pXML)
 	{
 		setPlural(wszTextVal);
 	}
-
-	// old code
-	/*int j=0;
-	for (j = 0; j < iNumLanguages; j++)
-	{
-		pXML->SkipToNextVal();	// skip comments
-
-		if (!pXML->TryMoveToXmlNextSibling(); || j == iMaxNumLanguages)
-		{
-			NUM_LANGUAGES = j;
-			break;
-		}
-		if (j == GAMETEXT.getCurrentLanguage()) // Only add appropriate language Text
-		{
-			// TEXT
-			if (pXML->GetChildXmlValByName(wszTextVal, L"Text"))
-			{
-				setText(wszTextVal);
-			}
-			else
-			{
-				pXML->GetXmlVal(wszTextVal);
-				setText(wszTextVal);
-				if (NUM_LANGUAGES > 0)
-				{
-					break;
-				}
-			}
-
-			// GENDER
-			if (pXML->GetChildXmlValByName(wszTextVal, L"Gender"))
-			{
-				setGender(wszTextVal);
-			}
-
-			// PLURAL
-			if (pXML->GetChildXmlValByName(wszTextVal, L"Plural"))
-			{
-				setPlural(wszTextVal);
-			}
-			if (NUM_LANGUAGES > 0)
-			{
-				break;
-			}
-		}
-	}*/
 
 	pXML->MoveToXmlParent(); // Move back up to Parent
 

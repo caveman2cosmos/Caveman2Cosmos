@@ -100,39 +100,39 @@ public:
 	static int GetNumProgressSteps();
 	void RegisterProgressCB(ProgressCB cbFxn) { m_pCBFxn = cbFxn; }
 
-	// moves the current xml node from where it is now to the next non-comment node, returns false if it can't find one
-	// CHANGE 2013-10-15 (n47): now stored node is always an XML element, so it can't be a comment, thus we do not really need this method
-	// Change 2013-11-24 (alberts2): removed all references
-	bool SkipToNextVal() {return true;}
-
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name
 	// TODO 2013-11-21 (alberts2): check if this can be done with xerxes or remove all references.
 	void MapChildren();	// call this before GetChildXMLValByName to use fast searching
 
+	void GetOptionalChildXmlValByName(int8_t* piVal, const wchar_t* szName);
+	void GetOptionalChildXmlValByName(uint8_t* piVal, const wchar_t* szName);
+	void GetOptionalChildXmlValByName(int16_t* piVal, const wchar_t* szName);
+	void GetOptionalChildXmlValByName(uint16_t* piVal, const wchar_t* szName);
+
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name
-	bool GetOptionalChildXmlValByName(int*   piVal, const wchar_t* szName, int   iDefault = 0) { return GetOptionalChildXmlValByName<int>  (piVal, szName, iDefault); }
+	bool GetOptionalChildXmlValByName(int* piVal, const wchar_t* szName, int iDefault = 0) { return GetOptionalChildXmlValByName<int>(piVal, szName, iDefault); }
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name
 	bool GetOptionalChildXmlValByName(float* pfVal, const wchar_t* szName, float fDefault = 0.0f) { return GetOptionalChildXmlValByName<float>(pfVal, szName, fDefault); }
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name
-	bool GetOptionalChildXmlValByName(bool*  pbVal, const wchar_t* szName, bool  bDefault = false) { return GetOptionalChildXmlValByName<bool> (pbVal, szName, bDefault); }
+	bool GetOptionalChildXmlValByName(bool* pbVal, const wchar_t* szName, bool bDefault = false) { return GetOptionalChildXmlValByName<bool>(pbVal, szName, bDefault); }
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name
-	bool GetOptionalChildXmlValByName(std::string&  pszVal, const wchar_t* szName, char*  pszDefault = NULL);
+	bool GetOptionalChildXmlValByName(std::string& pszVal, const wchar_t* szName, char* pszDefault = NULL);
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name
 	bool GetOptionalChildXmlValByName(std::wstring& pszVal, const wchar_t* szName, wchar_t* pszDefault = NULL);
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name
 	// TO DO - unsafe
-	bool GetOptionalChildXmlValByName(char*  pszVal, const wchar_t* szName, char*  pszDefault = NULL);
+	bool GetOptionalChildXmlValByName(char* pszVal, const wchar_t* szName, char* pszDefault = NULL);
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name
 	// TO DO - unsafe
-	bool GetOptionalChildXmlValByName(wchar_t* pszVal, const wchar_t* szName, wchar_t* pszDefault = NULL);
+	bool GetOptionalChildXmlValByName(wchar_t* pszVal, const wchar_t* szName, wchar_t* pszDefault);
 	
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name

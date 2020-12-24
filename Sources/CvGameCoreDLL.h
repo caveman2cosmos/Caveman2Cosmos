@@ -75,6 +75,7 @@
 // Basic types
 //
 #include <boost/cstdint.hpp>
+#include <limits.h>
 
 using boost::int8_t;
 using boost::int16_t;
@@ -86,7 +87,7 @@ using boost::uint16_t;
 using boost::uint32_t;
 using boost::uint64_t;
 
-typedef unsigned int        uint;
+typedef unsigned int uint;
 
 //
 // Type traits

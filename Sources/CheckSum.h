@@ -15,6 +15,12 @@ inline void CheckSum(uint32_t& iSum, uint32_t iData)
 	iSum = (iSum >> 1) | (iSum << (sizeof(iSum)*8 - 1));  // rotate
 }
 
+
+inline void CheckSum(uint32_t& iSum, char cData)
+{
+	CheckSum(iSum, (uint32_t) cData);
+}
+
 inline void CheckSum(uint32_t& iSum, int iData)
 {
 	CheckSum(iSum, (uint32_t) iData);
@@ -31,27 +37,34 @@ inline void CheckSum(uint32_t& iSum, float fData)
 	CheckSum(iSum, *(uint32_t*)&fData);
 }
 
-inline void CheckSum(uint32_t& iSum, const int* aiData, int iNum)
+inline void CheckSum(uint32_t& iSum, int8_t data)
 {
-	if (aiData)
-	{
-		for (int i = 0; i < iNum; i++)
-			CheckSum(iSum, (uint32_t)aiData[i]);
-	}
+	CheckSum(iSum, static_cast<uint32_t>(data));
 }
 
-inline void CheckSum(uint32_t& iSum, const bool* abData, int iNum)
+inline void CheckSum(uint32_t& iSum, uint8_t data)
 {
-	if (abData)
-	{
-		for (int i = 0; i < iNum; i++)
-			CheckSum(iSum, (uint32_t)abData[i]);
-	}
+	CheckSum(iSum, static_cast<uint32_t>(data));
 }
 
-inline void CheckSum(uint32_t& iSum, char cData)
+inline void CheckSum(uint32_t& iSum, int16_t data)
 {
-	CheckSum(iSum, (uint32_t) cData);
+	CheckSum(iSum, static_cast<uint32_t>(data));
+}
+
+inline void CheckSum(uint32_t& iSum, uint16_t data)
+{
+	CheckSum(iSum, static_cast<uint32_t>(data));
+}
+
+template <typename T>
+inline void CheckSum(uint32_t& iSum, const T* aData, int iNum)
+{
+	if (aData)
+	{
+		for (int i = 0; i < iNum; i++)
+			CheckSum(iSum, (uint32_t)aData[i]);
+	}
 }
 
 template<typename T1, typename T2>

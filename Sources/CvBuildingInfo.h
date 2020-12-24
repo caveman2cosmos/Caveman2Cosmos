@@ -642,10 +642,10 @@ protected:
 	int m_iCivicOption;
 	uint8_t m_iAIWeight;
 	int m_iProductionCost;
-	uint8_t m_iHurryCostModifier;
-	int8_t m_iHurryAngerModifier;
-	uint16_t m_iAdvancedStartCost;
-	uint8_t m_iAdvancedStartCostIncrease;
+	int m_iHurryCostModifier;
+	int m_iHurryAngerModifier;
+	int m_iAdvancedStartCost;
+	int m_iAdvancedStartCostIncrease;
 	uint8_t m_iMinAreaSize;
 	uint8_t m_iNumCitiesPrereq;
 	uint8_t m_iNumTeamsPrereq;
@@ -656,7 +656,7 @@ protected:
 	uint8_t m_iGreatGeneralRateModifier;
 	uint8_t m_iDomesticGreatGeneralRateModifier;
 	uint8_t m_iGlobalGreatPeopleRateModifier;
-	uint8_t m_iAnarchyModifier;
+	int8_t m_iAnarchyModifier;
 	uint8_t m_iGoldenAgeModifier;
 	int8_t m_iGlobalHurryModifier;
 	uint8_t m_iFreeExperience;
@@ -675,7 +675,7 @@ protected:
 	uint8_t m_iGlobalHappiness;
 	uint8_t m_iStateReligionHappiness;
 	uint8_t m_iWorkerSpeedModifier;
-	uint8_t m_iMilitaryProductionModifier;
+	int8_t m_iMilitaryProductionModifier;
 	uint8_t m_iSpaceProductionModifier;
 	uint8_t m_iGlobalSpaceProductionModifier;
 	uint8_t m_iTradeRoutes;
@@ -701,7 +701,7 @@ protected:
 	int m_iGreatPeopleUnitType;
 	uint8_t m_iGreatPeopleRateChange;
 	uint8_t m_iConquestProbability;
-	uint8_t m_iMaintenanceModifier;
+	int8_t m_iMaintenanceModifier;
 	int8_t m_iGlobalMaintenanceModifier;
 	int m_iAreaMaintenanceModifier; // no xml
 	int m_iOtherAreaMaintenanceModifier; // no xml
@@ -709,24 +709,24 @@ protected:
 	int m_iNumCitiesMaintenanceModifier; // no xml
 	int m_iCoastalDistanceMaintenanceModifier; // no xml
 	int m_iConnectedCityMaintenanceModifier; // no xml
-	uint8_t m_iWarWearinessModifier;
-	uint8_t m_iGlobalWarWearinessModifier;
+	int8_t m_iWarWearinessModifier;
+	int8_t m_iGlobalWarWearinessModifier;
 	uint8_t m_iEnemyWarWearinessModifier;
 	uint8_t m_iHealRateChange;
 	uint8_t m_iHealth;
 	uint8_t m_iAreaHealth;
 	uint8_t m_iGlobalHealth;
-	uint8_t m_iGlobalPopulationChange;
+	int8_t m_iGlobalPopulationChange;
 	uint8_t m_iFreeTechs;
 	TechTypes m_eFreeSpecialTech;
-	uint8_t m_iDefenseModifier;
+	int16_t m_iDefenseModifier;
 	uint8_t m_iBombardDefenseModifier;
 	uint8_t m_iAllCityDefenseModifier;
 	uint8_t m_iEspionageDefenseModifier;
 
 	int8_t m_iUnitUpgradePriceModifier;
 	uint8_t m_iRevIdxLocal;
-	uint8_t m_iRevIdxNational;
+	int16_t m_iRevIdxNational;
 	uint8_t m_iRevIdxDistanceModifier;
 
 	int m_iMissionType;
@@ -787,16 +787,20 @@ protected:
 	int* m_piSpecialistExtraCommerce;
 	int* m_piStateReligionCommerce;
 	int* m_piCommerceHappiness;
-	uint8_t* m_piReligionChange;
-	uint8_t* m_piSpecialistCount;
-	uint8_t* m_piFreeSpecialistCount;
+	//uint8_t* m_piReligionChange;
+	//uint8_t* m_piSpecialistCount;
+	//uint8_t* m_piFreeSpecialistCount;
+	int* m_piReligionChange;
+	int* m_piSpecialistCount;
+	int* m_piFreeSpecialistCount;
 	int* m_piBonusHealthChanges;
 	int* m_piBonusHappinessChanges;
 	int* m_piBonusProductionModifier;
 	int* m_piUnitCombatFreeExperience;
 	int* m_piDomainFreeExperience;
 	int* m_piDomainProductionModifier;
-	uint8_t* m_piFlavorValue;
+	//uint8_t* m_piFlavorValue;
+	int* m_piFlavorValue;
 	int* m_piImprovementFreeSpecialist;
 	int* m_piVictoryThreshold;
 
@@ -884,7 +888,6 @@ protected:
 	std::vector<int> m_vReplacementBuilding;
 	std::vector<int> m_vReplacedBuilding;
 
-protected:
 	bool* m_pabHurry;
 
 	//ls612 Begin:

@@ -2250,7 +2250,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piGlobalBuildingCostModifier);
 	CheckSumI(iSum, GC.getNumTechInfos(), m_piTechHappinessChanges);
 	CheckSumI(iSum, GC.getNumTechInfos(), m_piTechHealthChanges);
-
 	CheckSumI(iSum, GC.getNumUnitInfos(), m_piUnitProductionModifier);
 	CheckSumI(iSum, GC.getNUM_BUILDING_PREREQ_OR_BONUSES(), m_piPrereqOrVicinityBonuses);
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusDefenseChanges);
@@ -2536,8 +2535,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Bonus");
 	m_iPrereqAndBonus = pXML->GetInfoClass(szTextVal);
 
-	//Alberts2 PrereqBonuses
-	pXML->SetOptionalIntVector(&m_aePrereqOrBonuses, L"PrereqBonuses");
+	pXML->SetOptionalVector(&m_aePrereqOrBonuses, L"PrereqBonuses");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"NoBonus");
 	m_iNoBonus = pXML->GetInfoClass(szTextVal);
@@ -2613,15 +2611,15 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iProductionCost, L"iCost", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iHurryCostModifier, L"iHurryCostModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iHurryAngerModifier, L"iHurryAngerModifier");
-	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCost, L"iAdvancedStartCost", 100);
+	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCost, L"iAdvancedStartCost");
 	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCostIncrease, L"iAdvancedStartCostIncrease");
 	pXML->GetOptionalChildXmlValByName(&m_iMinAreaSize, L"iMinAreaSize");
-	pXML->GetOptionalChildXmlValByName(&m_iConquestProbability, L"iConquestProb", 50);
+	pXML->GetOptionalChildXmlValByName(&m_iConquestProbability, L"iConquestProb");
 	pXML->GetOptionalChildXmlValByName(&m_iNumCitiesPrereq, L"iCitiesPrereq");
 	pXML->GetOptionalChildXmlValByName(&m_iNumTeamsPrereq, L"iTeamsPrereq");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitLevelPrereq, L"iLevelPrereq");
 	pXML->GetOptionalChildXmlValByName(&m_iMinLatitude, L"iMinLatitude");
-	pXML->GetOptionalChildXmlValByName(&m_iMaxLatitude, L"iMaxLatitude", 90);
+	pXML->GetOptionalChildXmlValByName(&m_iMaxLatitude, L"iMaxLatitude");
 	pXML->GetOptionalChildXmlValByName(&m_iGreatPeopleRateModifier, L"iGreatPeopleRateModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iGreatGeneralRateModifier, L"iGreatGeneralRateModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iDomesticGreatGeneralRateModifier, L"iDomesticGreatGeneralRateModifier");
@@ -3977,10 +3975,10 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_pabHurry, L"Hurrys", GC.getNumHurryInfos());
 	//TB Combat Mods (Buildings) end
 
-	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iMaxTeamInstances, L"iMaxTeamInstances", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iExtraPlayerInstances, L"iExtraPlayerInstances", 0);
+	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances");
+	pXML->GetOptionalChildXmlValByName(&m_iMaxTeamInstances, L"iMaxTeamInstances");
+	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances");
+	pXML->GetOptionalChildXmlValByName(&m_iExtraPlayerInstances, L"iExtraPlayerInstances");
 
 	pXML->SetVariableListTagPair(&m_piVictoryThreshold, L"VictoryThresholds",  GC.getNumVictoryInfos());
 
@@ -4146,11 +4144,11 @@ bool CvBuildingInfo::readPass3()
 
 void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
+	const bool bDefault = false;
+	const int iDefault = 0;
+	const int iTextDefault = -1;
+	const float fDefault = 0.0f;
+	const CvString cDefault = CvString::format("").GetCString();
 
 	if ( getArtDefineTag() == cDefault ) // "ArtDefineTag"
 	{

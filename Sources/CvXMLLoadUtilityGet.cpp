@@ -642,12 +642,13 @@ bool CvXMLLoadUtility::GetChildXmlValByName(char* pszVal, const wchar_t* szName,
 	}
 }
 
+
 bool CvXMLLoadUtility::GetOptionalChildXmlValByName(char* pszVal, const wchar_t* szName, char* pszDefault)
 {
 	if (TryMoveToXmlFirstChild(szName))
 	{
 		// get the string value of the current xml node
-		bool success = GetXmlVal(pszVal, pszDefault);
+		const bool success = GetXmlVal(pszVal, pszDefault);
 		MoveToXmlParent();
 		return success;
 	}
@@ -720,6 +721,49 @@ bool CvXMLLoadUtility::GetOptionalChildXmlValByName(std::wstring& pszVal,
 	}
 }
 
+void assertBounds(int lower, int upper, int value, const wchar_t* szName)
+{
+	if (value < lower)
+	{
+		FErrorMsg(CvString::format("Index value (%d) is expected to be >= %d. Tag: %s", value, lower, szName).c_str());
+	}
+	else if (value >= upper)
+	{
+		FErrorMsg(CvString::format("Index value (%d) is expected to be < %d. Tag: %s", value, upper, szName).c_str());
+	}
+}
+
+void CvXMLLoadUtility::GetOptionalChildXmlValByName(int8_t* pVal, const wchar_t* szName)
+{
+	int value;
+	GetOptionalChildXmlValByName(&value, szName);
+	assertBounds(SCHAR_MIN, SCHAR_MAX, value, szName);
+	*pVal = value;
+}
+
+void CvXMLLoadUtility::GetOptionalChildXmlValByName(uint8_t* pVal, const wchar_t* szName)
+{
+	int value;
+	GetOptionalChildXmlValByName(&value, szName);
+	assertBounds(0, UCHAR_MAX, value, szName);
+	*pVal = value;
+}
+
+void CvXMLLoadUtility::GetOptionalChildXmlValByName(int16_t* pVal, const wchar_t* szName)
+{
+	int value;
+	GetOptionalChildXmlValByName(&value, szName);
+	assertBounds(SHRT_MIN, SHRT_MAX, value, szName);
+	*pVal = value;
+}
+
+void CvXMLLoadUtility::GetOptionalChildXmlValByName(uint16_t* pVal, const wchar_t* szName)
+{
+	int value;
+	GetOptionalChildXmlValByName(&value, szName);
+	assertBounds(0, USHRT_MAX, value, szName);
+	*pVal = value;
+}
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -727,7 +771,6 @@ bool CvXMLLoadUtility::GetOptionalChildXmlValByName(std::wstring& pszVal,
 //
 //  PURPOSE :   Overloaded function that gets the child value of the tag with szName if there is only one child
 // 				value of that name
-
 //
 //------------------------------------------------------------------------------------------------------
 bool CvXMLLoadUtility::GetChildXmlValByName(std::string& pszVal, const wchar_t* szName, char* pszDefault)
