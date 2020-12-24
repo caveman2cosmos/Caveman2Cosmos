@@ -599,7 +599,7 @@ std::wstring CvProperties::getPropertyDisplay(int index) const
 	return szTemp.GetCString();
 }
 
-void CvProperties::getCheckSum(unsigned int &iSum) const
+void CvProperties::getCheckSum(uint32_t& iSum) const
 {
 	CheckSumC(iSum, m_aiProperty);
 }

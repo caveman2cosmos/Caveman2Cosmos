@@ -389,7 +389,7 @@ bool IntExprConstant::isConstantZero() const
 	return m_iValue == 0;
 }
 
-void IntExprConstant::getCheckSum(unsigned int &iSum) const
+void IntExprConstant::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_iValue);
 }
@@ -431,7 +431,7 @@ int IntExprAttribute::getBindingStrength() const
 	return 100;
 }
 
-void IntExprAttribute::getCheckSum(unsigned int &iSum) const
+void IntExprAttribute::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, (int)m_eAttribute);
 }
@@ -454,7 +454,7 @@ int IntExprProperty::getBindingStrength() const
 	return 100;
 }
 
-void IntExprProperty::getCheckSum(unsigned int &iSum) const
+void IntExprProperty::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, (int)m_eProperty);
 }
@@ -489,7 +489,7 @@ void IntExprOp::buildDisplayString(CvWStringBuffer &szBuffer) const
 		szBuffer.append(")");
 }
 
-void IntExprOp::getCheckSum(unsigned int &iSum) const
+void IntExprOp::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, (int)getType());
 	m_pExpr1->getCheckSum(iSum);
@@ -630,7 +630,7 @@ int IntExprIf::getBindingStrength() const
 	return 25;
 }
 
-void IntExprIf::getCheckSum(unsigned int &iSum) const
+void IntExprIf::getCheckSum(uint32_t& iSum) const
 {
 	m_pExprIf->getCheckSum(iSum);
 	m_pExprThen->getCheckSum(iSum);
@@ -662,7 +662,7 @@ int IntExprIntegrateOp::getBindingStrength() const
 	return m_pExpr->getBindingStrength();
 }
 
-void IntExprIntegrateOp::getCheckSum(unsigned int &iSum) const
+void IntExprIntegrateOp::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, (int)getType());
 	CheckSum(iSum, (int)m_eRelation);
@@ -745,7 +745,7 @@ int IntExprIntegrateCount::getBindingStrength() const
 	return m_pExpr->getBindingStrength();
 }
 
-void IntExprIntegrateCount::getCheckSum(unsigned int &iSum) const
+void IntExprIntegrateCount::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, (int)m_eRelation);
 	CheckSum(iSum, m_iData);
@@ -776,7 +776,7 @@ int IntExprRandom::getBindingStrength() const
 	return 100;
 }
 
-void IntExprRandom::getCheckSum(unsigned int &iSum) const
+void IntExprRandom::getCheckSum(uint32_t& iSum) const
 {
 	m_pExpr->getCheckSum(iSum);
 }
@@ -804,7 +804,7 @@ int IntExprAdapt::getBindingStrength() const
 	return 100;
 }
 
-void IntExprAdapt::getCheckSum(unsigned int &iSum) const
+void IntExprAdapt::getCheckSum(uint32_t& iSum) const
 {
 	m_pExpr->getCheckSum(iSum);
 	CheckSum(iSum, m_iID);
@@ -827,7 +827,7 @@ int IntExprPython::getBindingStrength() const
 	return 100;
 }
 
-void IntExprPython::getCheckSum(unsigned int &iSum) const
+void IntExprPython::getCheckSum(uint32_t& iSum) const
 {
 	CheckSumC(iSum, m_szPythonCallback);
 }

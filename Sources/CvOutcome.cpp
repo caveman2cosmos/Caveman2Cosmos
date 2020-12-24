@@ -1965,7 +1965,7 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 	szBuffer.append(L" )");
 }
 
-void CvOutcome::getCheckSum(unsigned int &iSum) const
+void CvOutcome::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eType);
 	m_iChance->getCheckSum(iSum);

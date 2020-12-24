@@ -252,9 +252,9 @@ void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList, CvXMLLoadUtilit
 	}
 }
 
-void CvOutcomeList::getCheckSum(unsigned int& iSum) const
+void CvOutcomeList::getCheckSum(uint32_t& iSum) const
 {
-	int num = getNumOutcomes();
+	const int num = getNumOutcomes();
 	for (int index = 0; index < num; index++)
 	{
 		m_aOutcome[index]->getCheckSum(iSum);

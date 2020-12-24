@@ -277,7 +277,7 @@ void CvOutcomeMission::copyNonDefaults(CvOutcomeMission* pOutcomeMission, CvXMLL
 	}
 }
 
-void CvOutcomeMission::getCheckSum(unsigned int &iSum) const
+void CvOutcomeMission::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eMission);
 	CheckSum(iSum, m_bKill);

@@ -56,7 +56,7 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 protected:
 	OutcomeTypes m_eType;
 	IntExpr* m_iChance;
