@@ -180,13 +180,13 @@ public:
 
 protected:
 
-	int m_iActionInfoIndex;
+	int16_t m_iActionInfoIndex;
 
-	int m_iHotKeyVal;
-	int m_iHotKeyPriority;
-	int m_iHotKeyValAlt;
-	int m_iHotKeyPriorityAlt;
-	int m_iOrderPriority;
+	int16_t m_iHotKeyVal;
+	int16_t m_iHotKeyPriority;
+	int16_t m_iHotKeyValAlt;
+	int16_t m_iHotKeyPriorityAlt;
+	int16_t m_iOrderPriority;
 
 	bool m_bAltDown;
 	bool m_bShiftDown;
@@ -307,17 +307,17 @@ private:
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
 
-	int m_iGreatPeopleUnitType;
-	int m_iGreatPeopleRateChange;
-	int m_iMissionType;
+	int16_t m_iGreatPeopleUnitType;
+	int16_t m_iGreatPeopleRateChange;
+	int16_t m_iMissionType;
 	// Afforess 03/26/10
-	int m_iHealthPercent;
-	int m_iHappinessPercent;
+	int16_t m_iHealthPercent;
+	int16_t m_iHappinessPercent;
 
-	int m_iExperience;
+	int16_t m_iExperience;
 	//TB Specialist Tags
-	int m_iInsidiousness;
-	int m_iInvestigation;
+	int16_t m_iInsidiousness;
+	int16_t m_iInvestigation;
 
 	// Afforess 03/26/10
 	bool m_bSlave;
@@ -475,32 +475,32 @@ public:
 
 protected:
 
-	int m_iAdvisorType;
-	int m_iAIWeight;
-	int m_iAITradeModifier;
-	int m_iResearchCost;
-	int m_iAdvancedStartCost;
-	int m_iAdvancedStartCostIncrease;
-	int m_iEra;
-	int m_iTradeRoutes;
-	int m_iFeatureProductionModifier;
-	int m_iWorkerSpeedModifier;
+	int16_t m_iAdvisorType;
+	int16_t m_iAIWeight;
+	int16_t m_iAITradeModifier;
+	int16_t m_iResearchCost;
+	int16_t m_iAdvancedStartCost;
+	int16_t m_iAdvancedStartCostIncrease;
+	int16_t m_iEra;
+	int16_t m_iTradeRoutes;
+	int16_t m_iFeatureProductionModifier;
+	int16_t m_iWorkerSpeedModifier;
 	//DPII < Maintenance Modifier >
-	int m_iMaintenanceModifier;
-	int m_iDistanceMaintenanceModifier;
-	int m_iNumCitiesMaintenanceModifier;
-	int m_iCoastalDistanceMaintenanceModifier;
+	int16_t m_iMaintenanceModifier;
+	int16_t m_iDistanceMaintenanceModifier;
+	int16_t m_iNumCitiesMaintenanceModifier;
+	int16_t m_iCoastalDistanceMaintenanceModifier;
 	//DPII < Maintenance Modifier >
-	int m_iFirstFreeUnit;
-	int m_iFirstFreeProphet;
-	int m_iHealth;
-	int m_iHappiness;
-	int m_iFirstFreeTechs;
-	int m_iAssetValue;
-	int m_iPowerValue;
+	int16_t m_iFirstFreeUnit;
+	int16_t m_iFirstFreeProphet;
+	int16_t m_iHealth;
+	int16_t m_iHappiness;
+	int16_t m_iFirstFreeTechs;
+	int16_t m_iAssetValue;
+	int16_t m_iPowerValue;
 
-	int m_iGridX;
-	int m_iGridY;
+	int16_t m_iGridX;
+	int16_t m_iGridY;
 
 	bool m_bRepeat;
 	bool m_bTrade;
@@ -550,13 +550,13 @@ protected:
 	bool m_bRebaseAnywhere;
 	bool m_bEnablesDesertFarming;
 
-	int m_iInflationModifier;
-	int m_iGlobalTradeModifier;
-	int m_iGlobalForeignTradeModifier;
-	int m_iTradeMissionModifier;
-	int m_iCorporationRevenueModifier;
-	int m_iCorporationMaintenanceModifier;
-	int m_iPrereqGameOption;
+	int16_t m_iInflationModifier;
+	int16_t m_iGlobalTradeModifier;
+	int16_t m_iGlobalForeignTradeModifier;
+	int16_t m_iTradeMissionModifier;
+	int16_t m_iCorporationRevenueModifier;
+	int16_t m_iCorporationMaintenanceModifier;
+	int16_t m_iPrereqGameOption;
 	int* m_piFreeSpecialistCount;
 
 	std::vector<PrereqBuilding> m_aPrereqBuilding;
@@ -1106,14 +1106,14 @@ protected:
 	bool m_bCanLeadThroughPeaks;
 	int m_iNumPromotionOverwrites;
 	int* m_piPromotionOverwrites;
-	int m_iObsoleteTech;
-	int m_iControlPoints;
-	int m_iCommandRange;
+	int16_t m_iObsoleteTech;
+	int16_t m_iControlPoints;
+	int16_t m_iCommandRange;
 	bool m_bZoneOfControl;
-	int m_iAssetMultiplier;
-	int m_iPowerMultiplier;
-	int m_iIgnoreTerrainDamage;
-	int m_zobristValue;
+	int16_t m_iAssetMultiplier;
+	int16_t m_iPowerMultiplier;
+	int16_t m_iIgnoreTerrainDamage;
+	int16_t m_zobristValue;
 public:
 /************************************************************************************************/
 /* Afforess						 END															*/
@@ -1129,62 +1129,61 @@ private:
 //----------------------PROTECTED MEMBER VARIABLES----------------------------
 
 protected:
-	int m_iLayerAnimationPath;
-	int m_iPrereqPromotion;
-	int m_iPrereqOrPromotion1;
-	int m_iPrereqOrPromotion2;
-
-	int m_iTechPrereq;
-	int m_iStateReligionPrereq;
-	int m_iMinEraType;
-	int m_iMaxEraType;
-	int m_iVisibilityChange;
-	int m_iMovesChange;
-	int m_iMoveDiscountChange;
-	int m_iAirRangeChange;
-	int m_iInterceptChange;
-	int m_iEvasionChange;
-	int m_iWithdrawalChange;
-	int m_iCargoChange;
-	int m_iSMCargoChange;
-	int m_iSMCargoVolumeChange;
-	int m_iSMCargoVolumeModifierChange;
-	int m_iCollateralDamageChange;
-	int m_iBombardRateChange;
-	int m_iFirstStrikesChange;
-	int m_iChanceFirstStrikesChange;
-	int m_iEnemyHealChange;
-	int m_iNeutralHealChange;
-	int m_iFriendlyHealChange;
-	int m_iSameTileHealChange;
-	int m_iAdjacentTileHealChange;
-	int m_iCombatPercent;
-	int m_iCityAttackPercent;
-	int m_iCityDefensePercent;
-	int m_iHillsAttackPercent;
-	int m_iHillsDefensePercent;
-	int m_iHillsWorkPercent;
+	int16_t m_iLayerAnimationPath;
+	int16_t m_iPrereqPromotion;
+	int16_t m_iPrereqOrPromotion1;
+	int16_t m_iPrereqOrPromotion2;
+	int16_t m_iTechPrereq;
+	int16_t m_iStateReligionPrereq;
+	int16_t m_iMinEraType;
+	int16_t m_iMaxEraType;
+	int16_t m_iVisibilityChange;
+	int16_t m_iMovesChange;
+	int16_t m_iMoveDiscountChange;
+	int16_t m_iAirRangeChange;
+	int16_t m_iInterceptChange;
+	int16_t m_iEvasionChange;
+	int16_t m_iWithdrawalChange;
+	int16_t m_iCargoChange;
+	int16_t m_iSMCargoChange;
+	int16_t m_iSMCargoVolumeChange;
+	int16_t m_iSMCargoVolumeModifierChange;
+	int16_t m_iCollateralDamageChange;
+	int16_t m_iBombardRateChange;
+	int16_t m_iFirstStrikesChange;
+	int16_t m_iChanceFirstStrikesChange;
+	int16_t m_iEnemyHealChange;
+	int16_t m_iNeutralHealChange;
+	int16_t m_iFriendlyHealChange;
+	int16_t m_iSameTileHealChange;
+	int16_t m_iAdjacentTileHealChange;
+	int16_t m_iCombatPercent;
+	int16_t m_iCityAttackPercent;
+	int16_t m_iCityDefensePercent;
+	int16_t m_iHillsAttackPercent;
+	int16_t m_iHillsDefensePercent;
+	int16_t m_iHillsWorkPercent;
 	//ls612: Work rate modifiers
-	int m_iWorkRatePercent;
-	int m_iCommandType;
-	int m_iRevoltProtection;
-	int m_iCollateralDamageProtection;
-	int m_iPillageChange;
-	int m_iUpgradeDiscount;
-	int m_iExperiencePercent;
-	int m_iKamikazePercent;
+	int16_t m_iWorkRatePercent;
+	int16_t m_iCommandType;
+	int16_t m_iRevoltProtection;
+	int16_t m_iCollateralDamageProtection;
+	int16_t m_iPillageChange;
+	int16_t m_iUpgradeDiscount;
+	int16_t m_iExperiencePercent;
+	int16_t m_iKamikazePercent;
 
-	int m_iAirCombatLimitChange;
-	int m_iCelebrityHappy;
-	int m_iCollateralDamageLimitChange;
-	int m_iCollateralDamageMaxUnitsChange;
-	int m_iCombatLimitChange;
-	int m_iExtraDropRange;
+	int16_t m_iAirCombatLimitChange;
+	int16_t m_iCelebrityHappy;
+	int16_t m_iCollateralDamageLimitChange;
+	int16_t m_iCollateralDamageMaxUnitsChange;
+	int16_t m_iCombatLimitChange;
+	int16_t m_iExtraDropRange;
 
-	int m_iSurvivorChance;
-	int m_iVictoryAdjacentHeal;
-	int m_iVictoryHeal;
-	int m_iVictoryStackHeal;
+	int16_t m_iSurvivorChance;
+	int16_t m_iVictoryAdjacentHeal;
+	int16_t m_iVictoryHeal;
+	int16_t m_iVictoryStackHeal;
 	bool m_bDefensiveVictoryMove;
 	bool m_bFreeDrop;
 	bool m_bOffensiveVictoryMove;
@@ -1237,34 +1236,34 @@ protected:
 	SpecialUnitTypes m_eSMNotSpecialCargoPrereq;
 	SpecialUnitTypes m_eSetSpecialUnit;
 	//integers
-	int m_iAttackCombatModifierChange;
-	int m_iDefenseCombatModifierChange;
-	int m_iPursuitChange;
-	int m_iEarlyWithdrawChange;
-	int m_iVSBarbsChange;
-	int m_iArmorChange;
-	int m_iPunctureChange;
-	int m_iOverrunChange;
-	int m_iRepelChange;
-	int m_iFortRepelChange;
-	int m_iRepelRetriesChange;
-	int m_iUnyieldingChange;
-	int m_iKnockbackChange;
-	int m_iKnockbackRetriesChange;
-	int m_iStrAdjperRndChange;
-	int m_iStrAdjperAttChange;
-	int m_iStrAdjperDefChange;
-	int m_iWithdrawAdjperAttChange;
-	int m_iUnnerveChange;
-	int m_iEncloseChange;
-	int m_iLungeChange;
-	int m_iDynamicDefenseChange;
-	int m_iStrengthChange;
-	int m_iLinePriority;
-	int m_iFortitudeChange;
-	int m_iDamageperTurn;
-	int m_iStrAdjperTurn;
-	int m_iWeakenperTurn;
+	int16_t m_iAttackCombatModifierChange;
+	int16_t m_iDefenseCombatModifierChange;
+	int16_t m_iPursuitChange;
+	int16_t m_iEarlyWithdrawChange;
+	int16_t m_iVSBarbsChange;
+	int16_t m_iArmorChange;
+	int16_t m_iPunctureChange;
+	int16_t m_iOverrunChange;
+	int16_t m_iRepelChange;
+	int16_t m_iFortRepelChange;
+	int16_t m_iRepelRetriesChange;
+	int16_t m_iUnyieldingChange;
+	int16_t m_iKnockbackChange;
+	int16_t m_iKnockbackRetriesChange;
+	int16_t m_iStrAdjperRndChange;
+	int16_t m_iStrAdjperAttChange;
+	int16_t m_iStrAdjperDefChange;
+	int16_t m_iWithdrawAdjperAttChange;
+	int16_t m_iUnnerveChange;
+	int16_t m_iEncloseChange;
+	int16_t m_iLungeChange;
+	int16_t m_iDynamicDefenseChange;
+	int16_t m_iStrengthChange;
+	int16_t m_iLinePriority;
+	int16_t m_iFortitudeChange;
+	int16_t m_iDamageperTurn;
+	int16_t m_iStrAdjperTurn;
+	int16_t m_iWeakenperTurn;
 #ifdef STRENGTH_IN_NUMBERS
 	int m_iFrontSupportPercentChange;
 	int m_iShortRangeSupportPercentChange;
@@ -1272,73 +1271,69 @@ protected:
 	int m_iLongRangeSupportPercentChange;
 	int m_iFlankSupportPercentChange;
 #endif
-	int m_iDodgeModifierChange;
-	int m_iPrecisionModifierChange;
-	int m_iPowerShotsChange;
-	int m_iPowerShotCombatModifierChange;
-	int m_iPowerShotPunctureModifierChange;
-	int m_iPowerShotPrecisionModifierChange;
-	int m_iPowerShotCriticalModifierChange;
-	int m_iCriticalModifierChange;
-	int m_iEnduranceChange;
-	int m_iRoundStunProbChange;
-	int m_iPoisonProbabilityModifierChange;
-	//Team Project (3)
-	int m_iCaptureProbabilityModifierChange;
-	int m_iCaptureResistanceModifierChange;
-	//Team Project (4)
-	//WorkRateMod
-	int m_iHillsWorkModifierChange;
-	int m_iPeaksWorkModifierChange;
+	int16_t m_iDodgeModifierChange;
+	int16_t m_iPrecisionModifierChange;
+	int16_t m_iPowerShotsChange;
+	int16_t m_iPowerShotCombatModifierChange;
+	int16_t m_iPowerShotPunctureModifierChange;
+	int16_t m_iPowerShotPrecisionModifierChange;
+	int16_t m_iPowerShotCriticalModifierChange;
+	int16_t m_iCriticalModifierChange;
+	int16_t m_iEnduranceChange;
+	int16_t m_iRoundStunProbChange;
+	int16_t m_iPoisonProbabilityModifierChange;
+	int16_t m_iCaptureProbabilityModifierChange;
+	int16_t m_iCaptureResistanceModifierChange;
+	int16_t m_iHillsWorkModifierChange;
+	int16_t m_iPeaksWorkModifierChange;
+	int16_t m_iBreakdownChanceChange;
+	int16_t m_iBreakdownDamageChange;
+	int16_t m_iTauntChange;
+	int16_t m_iMaxHPChange;
+	int16_t m_iStrengthModifier;
+	int16_t m_iQualityChange;
+	int16_t m_iGroupChange;
+	int16_t m_iLevelPrereq;
+	int16_t m_iDamageModifierChange;
 
-	int m_iBreakdownChanceChange;
-	int m_iBreakdownDamageChange;
-	int m_iTauntChange;
-	int m_iMaxHPChange;
-	int m_iStrengthModifier;
-	int m_iQualityChange;
-	int m_iGroupChange;
-	int m_iLevelPrereq;
-	int m_iDamageModifierChange;
+	int16_t m_iUpkeepModifier;
+	int16_t m_iExtraUpkeep100;
 
-	int m_iUpkeepModifier;
-	int m_iExtraUpkeep100;
-
-	int m_iRBombardDamageChange;
-	int m_iRBombardDamageLimitChange;
-	int m_iRBombardDamageMaxUnitsChange;
-	int m_iDCMBombRangeChange;
-	int m_iDCMBombAccuracyChange;
-	int m_iCombatModifierPerSizeMoreChange;
-	int m_iCombatModifierPerSizeLessChange;
-	int m_iCombatModifierPerVolumeMoreChange;
-	int m_iCombatModifierPerVolumeLessChange;
-	int m_iSelfHealModifier;
-	int m_iNumHealSupport;
-	int m_iExcileChange;
-	int m_iPassageChange;
-	int m_iNoNonOwnedCityEntryChange;
-	int m_iBarbCoExistChange;
-	int m_iBlendIntoCityChange;
-	int m_iUpgradeAnywhereChange;
-	int m_iInsidiousnessChange;
-	int m_iInvestigationChange;
-	int m_iAssassinChange;
-	int m_iStealthStrikesChange;
-	int m_iStealthCombatModifierChange;
-	int m_iStealthDefenseChange;
-	int m_iDefenseOnlyChange;
-	int m_iNoInvisibilityChange;
-	int m_iTrapDamageMax;
-	int m_iTrapDamageMin;
-	int m_iTrapComplexity;
-	int m_iNumTriggers;
-	int m_iTriggerBeforeAttackChange;
-	int m_iHiddenNationalityChange;
-	int m_iAnimalIgnoresBordersChange;
-	int m_iNoDefensiveBonusChange;
-	int m_iGatherHerdChange;
-	int m_iReligiousCombatModifierChange;
+	int16_t m_iRBombardDamageChange;
+	int16_t m_iRBombardDamageLimitChange;
+	int16_t m_iRBombardDamageMaxUnitsChange;
+	int16_t m_iDCMBombRangeChange;
+	int16_t m_iDCMBombAccuracyChange;
+	int16_t m_iCombatModifierPerSizeMoreChange;
+	int16_t m_iCombatModifierPerSizeLessChange;
+	int16_t m_iCombatModifierPerVolumeMoreChange;
+	int16_t m_iCombatModifierPerVolumeLessChange;
+	int16_t m_iSelfHealModifier;
+	int16_t m_iNumHealSupport;
+	int16_t m_iExcileChange;
+	int16_t m_iPassageChange;
+	int16_t m_iNoNonOwnedCityEntryChange;
+	int16_t m_iBarbCoExistChange;
+	int16_t m_iBlendIntoCityChange;
+	int16_t m_iUpgradeAnywhereChange;
+	int16_t m_iInsidiousnessChange;
+	int16_t m_iInvestigationChange;
+	int16_t m_iAssassinChange;
+	int16_t m_iStealthStrikesChange;
+	int16_t m_iStealthCombatModifierChange;
+	int16_t m_iStealthDefenseChange;
+	int16_t m_iDefenseOnlyChange;
+	int16_t m_iNoInvisibilityChange;
+	int16_t m_iTrapDamageMax;
+	int16_t m_iTrapDamageMin;
+	int16_t m_iTrapComplexity;
+	int16_t m_iNumTriggers;
+	int16_t m_iTriggerBeforeAttackChange;
+	int16_t m_iHiddenNationalityChange;
+	int16_t m_iAnimalIgnoresBordersChange;
+	int16_t m_iNoDefensiveBonusChange;
+	int16_t m_iGatherHerdChange;
+	int16_t m_iReligiousCombatModifierChange;
 	//booleans
 	bool m_bStampedeChange;
 	bool m_bRemoveStampede;
@@ -1375,28 +1370,28 @@ protected:
 	//Arrays
 	//int* m_piAIWeightbyUnitCombatTypes;
 	// bool vectors without delayed resolution
-	std::vector<int> m_aiSubCombatChangeTypes;
-	std::vector<int> m_aiRemovesUnitCombatTypes;
-	std::vector<int> m_aiOnGameOptions;
-	std::vector<int> m_aiNotOnGameOptions;
-	std::vector<int> m_aiFreetoUnitCombats;
-	std::vector<int> m_aiNotOnUnitCombatTypes;
-	std::vector<int> m_aiNotOnDomainTypes;
-	std::vector<int> m_aiNoAutoEquiptoCombatClassTypes;
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int16_t> m_aiSubCombatChangeTypes;
+	std::vector<int16_t> m_aiRemovesUnitCombatTypes;
+	std::vector<int16_t> m_aiOnGameOptions;
+	std::vector<int16_t> m_aiNotOnGameOptions;
+	std::vector<int16_t> m_aiFreetoUnitCombats;
+	std::vector<int16_t> m_aiNotOnUnitCombatTypes;
+	std::vector<int8_t> m_aiNotOnDomainTypes;
+	std::vector<int16_t> m_aiNoAutoEquiptoCombatClassTypes;
+	std::vector<int8_t> m_aiMapCategoryTypes;
 	// bool vector with delayed resolution
-	std::vector<int> m_aiCureAfflictionChangeTypes;
-	std::vector<int> m_aiPrereqBonusTypes;
-	std::vector<int> m_aiAddsBuildTypes;
-	std::vector<int> m_aiNegatesInvisibilityTypes;
-	std::vector<int> m_aiPrereqTerrainTypes;
-	std::vector<int> m_aiPrereqFeatureTypes;
-	std::vector<int> m_aiPrereqImprovementTypes;
-	std::vector<int> m_aiPrereqPlotBonusTypes;
-	std::vector<int> m_aiPrereqLocalBuildingTypes;
-	std::vector<int> m_aiTrapSetWithPromotionTypes;
-	std::vector<int> m_aiTrapImmunityUnitCombatTypes;
-	std::vector<int> m_aiTargetUnitCombatTypes;
+	std::vector<int16_t> m_aiCureAfflictionChangeTypes;
+	std::vector<int16_t> m_aiPrereqBonusTypes;
+	std::vector<int16_t> m_aiAddsBuildTypes;
+	std::vector<int16_t> m_aiNegatesInvisibilityTypes;
+	std::vector<int16_t> m_aiPrereqTerrainTypes;
+	std::vector<int16_t> m_aiPrereqFeatureTypes;
+	std::vector<int16_t> m_aiPrereqImprovementTypes;
+	std::vector<int16_t> m_aiPrereqPlotBonusTypes;
+	std::vector<int16_t> m_aiPrereqLocalBuildingTypes;
+	std::vector<int16_t> m_aiTrapSetWithPromotionTypes;
+	std::vector<int16_t> m_aiTrapImmunityUnitCombatTypes;
+	std::vector<int16_t> m_aiTargetUnitCombatTypes;
 	// int vectors utilizing pairing without delayed resolution
 	UnitCombatModifierArray m_aFlankingStrengthbyUnitCombatTypeChange;
 	TerrainModifierArray m_aWithdrawOnTerrainTypesChange;
@@ -1441,7 +1436,7 @@ protected:
 	//TB Combat Mods End  TB SubCombat Mod end
 
 	//Pediahelp
-	std::vector<int> m_aiQualifiedUnitCombatTypes;
+	std::vector<int16_t> m_aiQualifiedUnitCombatTypes;
 
 };
 
@@ -1482,7 +1477,7 @@ public:
 
 protected:
 
-	int m_iTime;
+	int16_t m_iTime;
 
 	bool m_bSound;
 	bool m_bTarget;
@@ -1544,7 +1539,7 @@ public:
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
 protected:
-	int m_iAutomate;
+	int16_t m_iAutomate;
 
 	bool m_bConfirmCommand;
 	bool m_bVisible;
@@ -1578,8 +1573,8 @@ public:
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
 protected:
-	int m_iCommand;
-	int m_iAutomate;
+	int16_t m_iCommand;
+	int16_t m_iAutomate;
 
 	bool m_bConfirmCommand;
 	bool m_bVisible;
@@ -1649,7 +1644,7 @@ public:
 
 protected:
 
-	int m_iOriginalIndex;
+	int16_t m_iOriginalIndex;
 	ActionSubTypes m_eSubType;
 
 private:
@@ -2141,7 +2136,6 @@ public:
 	int getAidChange(int iProperty) const;
 	bool isAidChange(int iProperty) const;
 
-
 	// TB Combat Mod End TB SubCombat Mod end
 	bool hasUnitCombat(UnitCombatTypes eUnitCombat) const;
 	void setTotalModifiedCombatStrengthDetails();
@@ -2172,10 +2166,10 @@ public:
 	BoolExpr* getTrainCondition() const;
 
 protected:
-	int m_iMaxGlobalInstances;
-	int m_iMaxPlayerInstances;
+	int16_t m_iMaxGlobalInstances;
+	int16_t m_iMaxPlayerInstances;
 	bool m_bUnlimitedException;
-	int m_iInstanceCostModifier;
+	int16_t m_iInstanceCostModifier;
 	bool* m_pbPassableRouteNeeded;
 	int* m_piPrereqOrVicinityBonuses;
 	bool m_bWorkerTrade;
@@ -2185,11 +2179,11 @@ protected:
 	bool m_bSlave;
 	bool m_bRequiresStateReligionInCity;
 	mutable bool* m_abHasCombatType;
-	int m_iPrereqVicinityBonus;
-	int m_iBaseFoodChange;
-	int m_iControlPoints;
-	int m_iCommandRange;
-	int m_zobristValue;
+	int16_t m_iPrereqVicinityBonus;
+	int16_t m_iBaseFoodChange;
+	int16_t m_iControlPoints;
+	int16_t m_iCommandRange;
+	int16_t m_zobristValue;
 	CvString* m_paszClassicalArtDefineTags;
 	CvString* m_paszRennArtDefineTags;
 	CvString* m_paszIndustrialArtDefineTags;
@@ -2263,8 +2257,8 @@ public:
 	int getNumUnitUpgrades() const;
 	bool isUnitUpgrade(int i) const;
 
-	std::vector<int> getUnitUpgradeChain() const;
-	void CvUnitInfo::addUnitToUpgradeChain(int i);
+	const std::vector<int> getUnitUpgradeChain() const;
+	void addUnitToUpgradeChain(int i);
 
 	bool getTargetUnitCombat(int i) const;
 	bool getDefenderUnitCombat(int i) const;
@@ -2313,14 +2307,14 @@ public:
 	void copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML);
 	void copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
-	std::vector<int>& getSubCombatTypes();
+	const std::vector<int16_t>& getSubCombatTypes() const;
 
 private:
 	CvPropertyManipulators m_PropertyManipulators;
 
 protected:
-	int m_iDCMBombRange;
-	int m_iDCMBombAccuracy;
+	int16_t m_iDCMBombRange;
+	int16_t m_iDCMBombAccuracy;
 	bool m_bDCMFighterEngage;
 	bool m_bDCMAirBomb1;
 	bool m_bDCMAirBomb2;
@@ -2328,97 +2322,97 @@ protected:
 	bool m_bDCMAirBomb4;
 	bool m_bDCMAirBomb5;
 
-	int m_iAIWeight;
-	int m_iProductionCost;
-	int m_iHurryCostModifier;
-	int m_iAdvancedStartCost;
-	int m_iAdvancedStartCostIncrease;
-	int m_iMinAreaSize;
-	int m_iMoves;
-	int m_iAirRange;
-	int m_iAirUnitCap;
-	int m_iDropRange;
-	int m_iNukeRange;
-	int m_iWorkRate;
-	int m_iBaseDiscover;
-	int m_iDiscoverMultiplier;
-	int m_iBaseHurry;
-	int m_iHurryMultiplier;
-	int m_iBaseTrade;
-	int m_iTradeMultiplier;
-	int m_iGreatWorkCulture;
-	int m_iEspionagePoints;
-	int m_iCombat;
-	int m_iCombatLimit;
-	int m_iAirCombat;
-	int m_iAirCombatLimit;
-	int m_iXPValueAttack;
-	int m_iXPValueDefense;
-	int m_iFirstStrikes;
-	int m_iChanceFirstStrikes;
-	int m_iInterceptionProbability;
+	int16_t m_iAIWeight;
+	int16_t m_iProductionCost;
+	int16_t m_iHurryCostModifier;
+	int16_t m_iAdvancedStartCost;
+	int16_t m_iAdvancedStartCostIncrease;
+	int16_t m_iMinAreaSize;
+	int16_t m_iMoves;
+	int16_t m_iAirRange;
+	int16_t m_iAirUnitCap;
+	int16_t m_iDropRange;
+	int16_t m_iNukeRange;
+	int16_t m_iWorkRate;
+	int16_t m_iBaseDiscover;
+	int16_t m_iDiscoverMultiplier;
+	int16_t m_iBaseHurry;
+	int16_t m_iHurryMultiplier;
+	int16_t m_iBaseTrade;
+	int16_t m_iTradeMultiplier;
+	int16_t m_iGreatWorkCulture;
+	int16_t m_iEspionagePoints;
+	int16_t m_iCombat;
+	int16_t m_iCombatLimit;
+	int16_t m_iAirCombat;
+	int16_t m_iAirCombatLimit;
+	int16_t m_iXPValueAttack;
+	int16_t m_iXPValueDefense;
+	int16_t m_iFirstStrikes;
+	int16_t m_iChanceFirstStrikes;
+	int16_t m_iInterceptionProbability;
 	//ls612: Advanced Nuke Interception
 	//int m_iNukeInterceptionProbability;
 	//int m_iNukeInterceptionRange;
-	int m_iEvasionProbability;
-	int m_iWithdrawalProbability;
-	int m_iCollateralDamage;
-	int m_iCollateralDamageLimit;
-	int m_iCollateralDamageMaxUnits;
-	int m_iCityAttackModifier;
-	int m_iCityDefenseModifier;
-	int m_iAnimalCombatModifier;
-	int m_iHillsAttackModifier;
-	int m_iHillsDefenseModifier;
-	int m_iBombRate;
-	int m_iBombardRate;
-	int m_iSpecialCargo;
-	int m_iSMSpecialCargo;
-	int m_iSMNotSpecialCargo;
-	int m_iDomainCargo;
-	int m_iCargoSpace;
-	int m_iSMCargoSpace;
-	int m_iSMCargoVolume;
-	int m_iConscriptionValue;
-	int m_iCultureGarrisonValue;
-	int m_iBaseUpkeep;
-	int m_iAssetValue;
-	int m_iPowerValue;
-	int m_iSpecialUnitType;
-	int m_iUnitCaptureType;
-	int m_iUnitCombatType;
-	int m_iDomainType;
-	int m_iDefaultUnitAIType;
-	int m_iInvisibleType;
-	int m_iAdvisorType;
-	int m_iMaxStartEra;
-	int m_iForceObsoleteTech;
+	int16_t m_iEvasionProbability;
+	int16_t m_iWithdrawalProbability;
+	int16_t m_iCollateralDamage;
+	int16_t m_iCollateralDamageLimit;
+	int16_t m_iCollateralDamageMaxUnits;
+	int16_t m_iCityAttackModifier;
+	int16_t m_iCityDefenseModifier;
+	int16_t m_iAnimalCombatModifier;
+	int16_t m_iHillsAttackModifier;
+	int16_t m_iHillsDefenseModifier;
+	int16_t m_iBombRate;
+	int16_t m_iBombardRate;
+	int16_t m_iSpecialCargo;
+	int16_t m_iSMSpecialCargo;
+	int16_t m_iSMNotSpecialCargo;
+	int16_t m_iDomainCargo;
+	int16_t m_iCargoSpace;
+	int16_t m_iSMCargoSpace;
+	int16_t m_iSMCargoVolume;
+	int16_t m_iConscriptionValue;
+	int16_t m_iCultureGarrisonValue;
+	int16_t m_iBaseUpkeep;
+	int16_t m_iAssetValue;
+	int16_t m_iPowerValue;
+	int16_t m_iSpecialUnitType;
+	int16_t m_iUnitCaptureType;
+	int16_t m_iUnitCombatType;
+	int8_t m_iDomainType;
+	int16_t m_iDefaultUnitAIType;
+	int16_t m_iInvisibleType;
+	int16_t m_iAdvisorType;
+	int16_t m_iMaxStartEra;
+	int16_t m_iForceObsoleteTech;
 	bool m_bStateReligion;
-	int m_iPrereqGameOption;
-	int m_iNotGameOption;
-	int m_iHolyCity;
-	int m_iReligionType;
-	int m_iStateReligion;
-	int m_iPrereqReligion;
-	int m_iPrereqCorporation;
-	int m_iPrereqAndTech;
-	int m_iPrereqAndBonus;
+	int16_t m_iPrereqGameOption;
+	int16_t m_iNotGameOption;
+	int16_t m_iHolyCity;
+	int16_t m_iReligionType;
+	int16_t m_iStateReligion;
+	int16_t m_iPrereqReligion;
+	int16_t m_iPrereqCorporation;
+	int16_t m_iPrereqAndTech;
+	int16_t m_iPrereqAndBonus;
 
-	std::vector<int> m_aiPrereqAndBuildings;
-	std::vector<int> m_aiPrereqOrBuildings;
+	std::vector<int16_t> m_aiPrereqAndBuildings;
+	std::vector<int16_t> m_aiPrereqOrBuildings;
 
-	std::vector<int> m_aiTargetUnit;
-	std::vector<int> m_aiDefendAgainstUnit;
-	std::vector<int> m_aiSupersedingUnits;
-	std::vector<int> m_aiUnitUpgrades;
-	std::vector<int> m_aiUnitUpgradeChain;
+	std::vector<int16_t> m_aiTargetUnit;
+	std::vector<int16_t> m_aiDefendAgainstUnit;
+	std::vector<int16_t> m_aiSupersedingUnits;
+	std::vector<int16_t> m_aiUnitUpgrades;
+	std::vector<int16_t> m_aiUnitUpgradeChain;
 
 	int m_iGroupSize;
 	int m_iGroupDefinitions;
 	int m_iUnitMeleeWaveSize;
 	int m_iUnitRangedWaveSize;
 	int m_iNumUnitNames;
-	int m_iCommandType;
+	int16_t m_iCommandType;
 	int m_iLeaderExperience;
 
 	bool m_bFoodProduction;
@@ -2501,7 +2495,7 @@ protected:
 	bool* m_pbNotUnitAIType;
 	bool* m_pbBuilds;
 	bool* m_pbGreatPeoples;
-	std::vector<int> m_pbBuildings;
+	std::vector<int16_t> m_pbBuildings;
 	bool* m_pbTerrainNative;
 	bool* m_pbFeatureNative;
 	//bool* m_pbTerrainImpassable;
@@ -2516,7 +2510,7 @@ protected:
 	CvString m_szArtDefineButton;
 	CvWString m_szExtraHoverTextKey;
 
-	std::vector<int> m_aiSeeInvisibleTypes;
+	std::vector<int16_t> m_aiSeeInvisibleTypes;
 
 	CvOutcomeList m_KillOutcomeList;
 	std::vector<CvOutcomeMission*> m_aOutcomeMissions;
@@ -2631,14 +2625,14 @@ protected:
 	bool m_bNoNonTypeProdMods;
 	bool m_bGatherHerd;
 	//boolean vectors without delayed resolution
-	std::vector<int> m_aiSubCombatTypes;
-	std::vector<int> m_aiCureAfflictionTypes;
-	std::vector<int> m_aiHealAsTypes;
-	std::vector<int> m_aiTerrainImpassableTypes;
-	std::vector<int> m_aiFeatureImpassableTypes;
-	std::vector<int> m_aiMapCategoryTypes;
-	std::vector<int> m_aiTrapSetWithPromotionTypes;
-	std::vector<int> m_aiTrapImmunityUnitCombatTypes;
+	std::vector<int16_t> m_aiSubCombatTypes;
+	std::vector<int16_t> m_aiCureAfflictionTypes;
+	std::vector<int16_t> m_aiHealAsTypes;
+	std::vector<int16_t> m_aiTerrainImpassableTypes;
+	std::vector<int16_t> m_aiFeatureImpassableTypes;
+	std::vector<int8_t> m_aiMapCategoryTypes;
+	std::vector<int16_t> m_aiTrapSetWithPromotionTypes;
+	std::vector<int16_t> m_aiTrapImmunityUnitCombatTypes;
 	// int vectors utilizing struct with delayed resolution
 	std::vector<PromotionLineModifier> m_aAfflictionFortitudeModifiers;
 	std::vector<AfflictOnAttack> m_aAfflictOnAttackTypes;
@@ -2683,7 +2677,7 @@ protected:
 	AidArray m_aAidChanges;
 	//TB Combat Mods End  TB SubCombat Mod end
 	//Pediahelp
-	std::vector<int> m_aiQualifiedPromotionTypes;
+	std::vector<int16_t> m_aiQualifiedPromotionTypes;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3550,7 +3544,7 @@ protected:
 
 	CvString* m_paszCityNames;
 
-	std::vector<int> m_aiCivilizationBuildings;
+	std::vector<int16_t> m_aiCivilizationBuildings;
 
 	mutable std::vector<CvWString> m_aszShortDescription;
 	mutable std::vector<CvWString> m_aszAdjective;
@@ -4059,8 +4053,8 @@ protected:
 
 	bool* m_pabFeatureRemove;
 
-	std::vector<int> m_aiPrereqBonusTypes;
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int16_t> m_aiPrereqBonusTypes;
+	std::vector<int8_t> m_aiMapCategoryTypes;
 
 	std::vector<TerrainStructs> m_aTerrainStructs;
 	std::vector<PlaceBonusTypes> m_aPlaceBonusTypes;
@@ -4139,7 +4133,7 @@ protected:
 	bool m_bBad;
 	bool m_bNaval;
 
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int8_t> m_aiMapCategoryTypes;
 
 	CvString m_szSound;
 
@@ -4394,7 +4388,7 @@ protected:
 	int m_iPrereqTech;
 	//int** m_ppiTraitYieldChanges;
 
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int8_t> m_aiMapCategoryTypes;
 public:
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
@@ -4483,8 +4477,8 @@ protected:
 	bool m_bNational;
 	bool m_bGlobal;
 	// bool vector with delayed resolution
-	std::vector<int> m_aiAlternativeImprovementUpgradeTypes;
-	std::vector<int> m_aiFeatureChangeTypes;
+	std::vector<int16_t> m_aiAlternativeImprovementUpgradeTypes;
+	std::vector<int16_t> m_aiFeatureChangeTypes;
 
 	//Post Load Functions
 	//int m_iHighestCost;
@@ -4648,7 +4642,7 @@ protected:
 	bool* m_pbFeature;
 	bool* m_pbFeatureTerrain;
 
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int8_t> m_aiMapCategoryTypes;
 
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
 
@@ -4745,7 +4739,7 @@ protected:
 	bool m_bIgnoreTerrainCulture;
 	bool m_bCanGrowAnywhere;
 
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int8_t> m_aiMapCategoryTypes;
 public:
 
 	void copyNonDefaults(CvFeatureInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -5009,7 +5003,7 @@ protected:
 	int* m_piHillsYieldChange;
 	int* m_pi3DAudioScriptFootstepIndex;
 
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int8_t> m_aiMapCategoryTypes;
 
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
 };
@@ -5764,7 +5758,7 @@ protected:
 	int* m_piProjectsNeeded;
 
 	// Vectors
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int8_t> m_aiMapCategoryTypes;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6385,8 +6379,8 @@ protected:
 	bool m_bBansNonStateReligions;
 	bool m_bFreedomFighter;
 	// bool vector without delayed resolution
-	std::vector<int> m_aiNotOnGameOptions;
-	std::vector<int> m_aiOnGameOptions;
+	std::vector<int16_t> m_aiNotOnGameOptions;
+	std::vector<int16_t> m_aiOnGameOptions;
 	//Arrays
 	int** m_ppaiSpecialistYieldChange;
 	int* m_piYieldModifier;
@@ -8271,22 +8265,22 @@ private:
 	CvProperties m_PrereqPlayerMinProperties;
 	CvProperties m_PrereqPlayerMaxProperties;
 
-	std::vector<int> m_aiUnitsRequired;
-	std::vector<int> m_aiBuildingsRequired;
-	std::vector<int> m_aiPrereqOrTechs;
-	std::vector<int> m_aiPrereqAndTechs;
-	std::vector<int> m_aiObsoleteTechs;
-	std::vector<int> m_aiEvents;
-	std::vector<int> m_aiPrereqEvents;
-	std::vector<int> m_aiFeaturesRequired;
-	std::vector<int> m_aiTerrainsRequired;
-	std::vector<int> m_aiImprovementsRequired;
-	std::vector<int> m_aiBonusesRequired;
-	std::vector<int> m_aiRoutesRequired;
-	std::vector<int> m_aiReligionsRequired;
-	std::vector<int> m_aiCorporationsRequired;
+	std::vector<int16_t> m_aiUnitsRequired;
+	std::vector<int16_t> m_aiBuildingsRequired;
+	std::vector<int16_t> m_aiPrereqOrTechs;
+	std::vector<int16_t> m_aiPrereqAndTechs;
+	std::vector<int16_t> m_aiObsoleteTechs;
+	std::vector<int16_t> m_aiEvents;
+	std::vector<int16_t> m_aiPrereqEvents;
+	std::vector<int16_t> m_aiFeaturesRequired;
+	std::vector<int16_t> m_aiTerrainsRequired;
+	std::vector<int16_t> m_aiImprovementsRequired;
+	std::vector<int16_t> m_aiBonusesRequired;
+	std::vector<int16_t> m_aiRoutesRequired;
+	std::vector<int16_t> m_aiReligionsRequired;
+	std::vector<int16_t> m_aiCorporationsRequired;
 
-	std::vector<int> m_aiTextEra;
+	std::vector<int16_t> m_aiTextEra;
 	std::vector<CvWString> m_aszText;
 	std::vector<CvWString> m_aszWorldNews;
 
@@ -8322,8 +8316,8 @@ private:
 	CvString m_szPythonCanDoUnit;
 
 	// bool vector without delayed resolution
-	std::vector<int> m_aiNotOnGameOptions;
-	std::vector<int> m_aiOnGameOptions;
+	std::vector<int16_t> m_aiNotOnGameOptions;
+	std::vector<int16_t> m_aiOnGameOptions;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -9088,14 +9082,14 @@ protected:
 
 
 	// bool vectors without delayed resolution
-	std::vector<int> m_aiUnitCombatPrereqTypes;
-	std::vector<int> m_aiNotOnUnitCombatTypes;
-	std::vector<int> m_aiNotOnDomainTypes;
-	std::vector<int> m_aiOnGameOptions;
-	std::vector<int> m_aiNotOnGameOptions;
-	std::vector<int> m_aiCriticalOriginCombatClassTypes;
-	std::vector<int> m_aiPromotions;
-	std::vector<int> m_aiBuildings;
+	std::vector<int16_t> m_aiUnitCombatPrereqTypes;
+	std::vector<int16_t> m_aiNotOnUnitCombatTypes;
+	std::vector<int8_t> m_aiNotOnDomainTypes;
+	std::vector<int16_t> m_aiOnGameOptions;
+	std::vector<int16_t> m_aiNotOnGameOptions;
+	std::vector<int16_t> m_aiCriticalOriginCombatClassTypes;
+	std::vector<int16_t> m_aiPromotions;
+	std::vector<int16_t> m_aiBuildings;
 
 	// int vector utilizing pairing without delayed resolution
 	UnitCombatModifierArray m_aUnitCombatContractChanceChanges;
@@ -9687,15 +9681,15 @@ protected:
 
 	// bool vectors without delayed resolution
 	// bool vector with delayed resolution
-	std::vector<int> m_aiCureAfflictionChangeTypes;
-	std::vector<int> m_aiTerrainIgnoreDamageChangeTypes;
-	std::vector<int> m_aiTerrainDoubleMoveChangeTypes;
-	std::vector<int> m_aiFeatureDoubleMoveChangeTypes;
-	std::vector<int> m_aiOnGameOptions;
-	std::vector<int> m_aiNotOnGameOptions;
-	std::vector<int> m_aiGGptsforUnitTypes;
-	std::vector<int> m_aiDefaultStatusTypes;
-	std::vector<int> m_aiTrapImmunityUnitCombatTypes;
+	std::vector<int16_t> m_aiCureAfflictionChangeTypes;
+	std::vector<int16_t> m_aiTerrainIgnoreDamageChangeTypes;
+	std::vector<int16_t> m_aiTerrainDoubleMoveChangeTypes;
+	std::vector<int16_t> m_aiFeatureDoubleMoveChangeTypes;
+	std::vector<int16_t> m_aiOnGameOptions;
+	std::vector<int16_t> m_aiNotOnGameOptions;
+	std::vector<int16_t> m_aiGGptsforUnitTypes;
+	std::vector<int16_t> m_aiDefaultStatusTypes;
+	std::vector<int16_t> m_aiTrapImmunityUnitCombatTypes;
 	// int vectors utilizing pairing without delayed resolution
 	TerrainModifierArray m_aWithdrawOnTerrainTypesChange;
 	FeatureModifierArray m_aWithdrawOnFeatureTypesChange;

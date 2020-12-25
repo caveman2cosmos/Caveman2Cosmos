@@ -733,34 +733,34 @@ void assertBounds(int lower, int upper, int value, const wchar_t* szName)
 	}
 }
 
-void CvXMLLoadUtility::GetOptionalChildXmlValByName(int8_t* pVal, const wchar_t* szName)
+void CvXMLLoadUtility::GetOptionalChildXmlValByName(int8_t* pVal, const wchar_t* szName, int8_t iDefault)
 {
 	int value;
-	GetOptionalChildXmlValByName(&value, szName);
+	GetOptionalChildXmlValByName(&value, szName, iDefault);
 	assertBounds(SCHAR_MIN, SCHAR_MAX, value, szName);
 	*pVal = value;
 }
 
-void CvXMLLoadUtility::GetOptionalChildXmlValByName(uint8_t* pVal, const wchar_t* szName)
+void CvXMLLoadUtility::GetOptionalChildXmlValByName(uint8_t* pVal, const wchar_t* szName, uint8_t iDefault)
 {
 	int value;
-	GetOptionalChildXmlValByName(&value, szName);
+	GetOptionalChildXmlValByName(&value, szName, iDefault);
 	assertBounds(0, UCHAR_MAX, value, szName);
 	*pVal = value;
 }
 
-void CvXMLLoadUtility::GetOptionalChildXmlValByName(int16_t* pVal, const wchar_t* szName)
+void CvXMLLoadUtility::GetOptionalChildXmlValByName(int16_t* pVal, const wchar_t* szName, int16_t iDefault)
 {
 	int value;
-	GetOptionalChildXmlValByName(&value, szName);
+	GetOptionalChildXmlValByName(&value, szName, iDefault);
 	assertBounds(SHRT_MIN, SHRT_MAX, value, szName);
 	*pVal = value;
 }
 
-void CvXMLLoadUtility::GetOptionalChildXmlValByName(uint16_t* pVal, const wchar_t* szName)
+void CvXMLLoadUtility::GetOptionalChildXmlValByName(uint16_t* pVal, const wchar_t* szName, uint16_t iDefault)
 {
 	int value;
-	GetOptionalChildXmlValByName(&value, szName);
+	GetOptionalChildXmlValByName(&value, szName, iDefault);
 	assertBounds(0, USHRT_MAX, value, szName);
 	*pVal = value;
 }

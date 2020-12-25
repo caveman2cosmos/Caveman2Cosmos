@@ -105,10 +105,10 @@ public:
 	// TODO 2013-11-21 (alberts2): check if this can be done with xerxes or remove all references.
 	void MapChildren();	// call this before GetChildXMLValByName to use fast searching
 
-	void GetOptionalChildXmlValByName(int8_t* piVal, const wchar_t* szName);
-	void GetOptionalChildXmlValByName(uint8_t* piVal, const wchar_t* szName);
-	void GetOptionalChildXmlValByName(int16_t* piVal, const wchar_t* szName);
-	void GetOptionalChildXmlValByName(uint16_t* piVal, const wchar_t* szName);
+	void GetOptionalChildXmlValByName(int8_t* piVal, const wchar_t* szName, int8_t iDefault = 0);
+	void GetOptionalChildXmlValByName(uint8_t* piVal, const wchar_t* szName, uint8_t iDefault = 0);
+	void GetOptionalChildXmlValByName(int16_t* piVal, const wchar_t* szName, int16_t iDefault = 0);
+	void GetOptionalChildXmlValByName(uint16_t* piVal, const wchar_t* szName, uint16_t iDefault = 0);
 
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name
@@ -609,10 +609,6 @@ public:
 	// allocate and initialize a list from a tag pair in the xml
 	void SetVariableListTagPair(std::vector<int>, const wchar_t* szRootTagName,
 		int iInfoBaseLength, int iDefaultListVal = 0);
-
-	void SetOptionalIntVector(std::vector<int>* aInfos, const wchar_t* szRootTagName) { return SetOptionalVector<int>(aInfos, szRootTagName); }
-
-	static void CopyNonDefaultsFromIntVector(std::vector<int>& target, const std::vector<int>& source) { return CopyNonDefaultsFromVector<int>(target, source); }
 
 	template <class T>
 	void SetOptionalVectorWithDelayedResolution(std::vector<T>& aInfos, const wchar_t* szRootTagName)

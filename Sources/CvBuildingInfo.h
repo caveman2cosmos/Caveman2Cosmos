@@ -605,7 +605,7 @@ protected:
 	int8_t m_iInvasionChance;
 	int8_t m_iAdjacentDamagePercent;
 	int8_t m_iPrereqPopulation;
-	int m_iPrereqCultureLevel;
+	int8_t m_iPrereqCultureLevel;
 	int8_t m_iWorkableRadius;
 	int16_t m_iPrereqAnyoneBuilding;
 	int16_t m_iExtendsBuilding;
@@ -631,7 +631,7 @@ protected:
 	int8_t m_iCivicOption;
 	int16_t m_iAIWeight;
 	int m_iProductionCost;
-	int16_t m_iHurryCostModifier;
+	int m_iHurryCostModifier;
 	int16_t m_iHurryAngerModifier;
 	int m_iAdvancedStartCost;
 	int m_iAdvancedStartCostIncrease;
@@ -857,10 +857,10 @@ protected:
 	//TechTypes m_eFreeSpecialTech;
 
 	//boolean vectors without delayed resolution
-	//std::vector<int> m_aiFreePromoTypes;
-	std::vector<int> m_aiUnitCombatRetrainTypes;
-	std::vector<int> m_aiMayDamageAttackingUnitCombatTypes;
-	std::vector<int> m_aiMapCategoryTypes;
+	//std::vector<int16_t> m_aiFreePromoTypes;
+	std::vector<int16_t> m_aiUnitCombatRetrainTypes;
+	std::vector<int16_t> m_aiMayDamageAttackingUnitCombatTypes;
+	std::vector<int8_t> m_aiMapCategoryTypes;
 	//integer vectors with pairing without delayed resolution
 	UnitCombatModifierArray m_aUnitCombatRepelModifiers;
 	UnitCombatModifierArray m_aUnitCombatRepelAgainstModifiers;
@@ -872,16 +872,16 @@ protected:
 	TechModifierArray m_aTechHappinessTypes;
 	TechModifierArray m_aTechHealthTypes;
 
-	std::vector<int> m_aiPrereqInCityBuildings;
-	std::vector<int> m_aePrereqOrBonuses;
-	std::vector<int> m_vPrereqOrBuilding;
-	std::vector<int> m_vReplacementBuilding;
-	std::vector<int> m_vReplacedBuilding;
+	std::vector<int16_t> m_aiPrereqInCityBuildings;
+	std::vector<int16_t> m_aePrereqOrBonuses;
+	std::vector<int16_t> m_vPrereqOrBuilding;
+	std::vector<int16_t> m_vReplacementBuilding;
+	std::vector<int16_t> m_vReplacedBuilding;
 
 	//BoolExpr* m_pExprFreePromotionCondition;
 	//Structs
 	std::vector<FreePromoTypes> m_aFreePromoTypes;
-	std::vector<int> m_aiFreeTraitTypes;
+	std::vector<int16_t> m_aiFreeTraitTypes;
 	std::vector<HealUnitCombat> m_aHealUnitCombatTypes;
 	std::vector<EnabledCivilizations> m_aEnabledCivilizationTypes;
 	std::vector<BonusAidModifiers> m_aBonusAidModifiers;

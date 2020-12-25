@@ -774,7 +774,7 @@ protected:
 	//bool m_bNukesValid;
 	TeamTypes m_circumnavigatingTeam;
 
-	std::vector<int> m_aiStatusPromotions;
+	std::vector<int16_t> m_aiStatusPromotions;
 
 	HandicapTypes m_eHandicap;
 	PlayerTypes m_ePausePlayer;
