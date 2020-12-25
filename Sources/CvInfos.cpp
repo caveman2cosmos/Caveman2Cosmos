@@ -28957,20 +28957,10 @@ bool CvAnimationPathInfo::read(CvXMLLoadUtility* pXML)
 
 	return true;
 }
-/************************************************************************************************/
-/* XMLCOPY								 11/19/07								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 void CvAnimationPathInfo::copyNonDefaults(CvAnimationPathInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	int iAudioDefault = -1;  //all audio is default -1
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const bool bDefault = false;
 
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 

@@ -324,8 +324,8 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_ppaiLocalSpecialistCommerceChange(NULL)
 ,m_pabHurry(NULL)
 //ls612 Begin
-, m_iMaxPopAllowed(0)
-, m_iMaxCultureLevelAllowed(0)
+, m_iMaxPopAllowed(-1)
+, m_iMaxCultureLevelAllowed(-1)
 //ls612 End
 //,m_pExprFreePromotionCondition(NULL)
 ,m_bNotShowInCity(false)
@@ -2681,8 +2681,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iRevIdxNational, L"iRevIdxNational");
 	pXML->GetOptionalChildXmlValByName(&m_iRevIdxDistanceModifier, L"iRevIdxDistanceModifier");
 
-	pXML->GetOptionalChildXmlValByName(&m_iMaxPopAllowed, L"iObsoletePopulation", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iMaxCultureLevelAllowed, L"iObsoleteCultureLevel", -1);
+	pXML->GetOptionalChildXmlValByName(&m_iMaxPopAllowed, L"iObsoletePopulation");
+	pXML->GetOptionalChildXmlValByName(&m_iMaxCultureLevelAllowed, L"iObsoleteCultureLevel");
 
 	pXML->GetOptionalChildXmlValByName(&m_iAssetValue, L"iAsset");
 	pXML->GetOptionalChildXmlValByName(&m_iPowerValue, L"iPower");
@@ -3806,7 +3806,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iCityDefenseRecoverySpeedModifier, L"iCityDefenseRecoverySpeedModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iDamageAttackerChance, L"iDamageAttackerChance");
 	pXML->GetOptionalChildXmlValByName(&m_iDamageToAttacker, L"iDamageToAttacker");
-	pXML->GetOptionalChildXmlValByName(&m_iMaxPopulationAllowed, L"iMaxPopulationAllowed", -1);
+	pXML->GetOptionalChildXmlValByName(&m_iMaxPopulationAllowed, L"iMaxPopulationAllowed");
 	pXML->GetOptionalChildXmlValByName(&m_iMaxPopulationChange, L"iMaxPopulationChange");
 	pXML->GetOptionalChildXmlValByName(&m_iInsidiousness, L"iInsidiousness");
 	pXML->GetOptionalChildXmlValByName(&m_iInvestigation, L"iInvestigation");

@@ -539,36 +539,18 @@ public:
 	bool isAnyVicinityBonusYieldChanges() const		{ return m_ppaiVicinityBonusYieldChanges != NULL; }
 	bool isAnyBonusCommercePercentChanges() const	{ return m_ppaiBonusCommercePercentChanges != NULL; }
 
+	bool readPass2(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
+
+	int getNumPrereqOrBonuses() const;
+	BonusTypes getPrereqOrBonuses(int i) const;
+
 protected:
 	void setNotShowInCity();
 
 	bool m_bNoLimit;
 	bool m_bNotShowInCity;
-
-	int m_iFreePromotion_2;
-	int m_iFreePromotion_3;
-	int m_iPrereqVicinityBonus;
-	int m_iPrereqRawVicinityBonus;
-	int m_iGlobalPopulationgrowthratepercentage; // no xml
-	int8_t m_iPopulationgrowthratepercentage;
-	int m_iWorldTradeRoutes; // no xml
-	int8_t m_iLineOfSight;
-	int m_iInflationModifier;
-	int m_iPillageGoldModifier;
-	int8_t m_iInvasionChance;
-	int8_t m_iAdjacentDamagePercent;
-	int8_t m_iPrereqPopulation;
-	int m_iPrereqCultureLevel;
-	int8_t m_iWorkableRadius;
-	int m_iPrereqAnyoneBuilding;
-	int m_iExtendsBuilding;
-	int16_t m_iOccupationTimeModifier;
-	int8_t m_iNoEntryDefenseLevel;
-	int8_t m_iNumUnitFullHeal;
-	int m_iProductionContinueBuilding;
-	int8_t m_iNumPopulationEmployed;
-	int8_t m_iHappinessPercentPerPopulation;
-	int8_t m_iHealthPercentPerPopulation;
 	bool m_bBuildOnlyOnPeaks;
 	bool m_bPrereqPower;
 	bool m_bApplyFreePromotionOnMove;
@@ -580,70 +562,77 @@ protected:
 	bool m_bRequiresActiveCivics;
 	bool m_bZoneOfControl;
 	bool m_bProtectedCulture;
+	bool m_bTeamShare;
+	bool m_bWater;
+	bool m_bRiver;
+	bool m_bPower;
+	bool m_bFreshWater;
+	bool m_bDirtyPower;
+	bool m_bAreaCleanPower;
+	bool m_bOrbital;
+	bool m_bOrbitalInfrastructure;
+	bool m_bNoHolyCity;
+	bool m_bAreaBorderObstacle;
+	bool m_bForceTeamVoteEligible;
+	bool m_bCapital;
+	bool m_bGovernmentCenter;
+	bool m_bGoldenAge;
+	bool m_bMapCentering;
+	bool m_bNoUnhappiness;
+	bool m_bNoUnhealthyPopulation;
+	bool m_bBuildingOnlyHealthy;
+	bool m_bNeverCapture;
+	bool m_bNukeImmune;
+	bool m_bCenterInCity;
+	bool m_bStateReligion;
+	bool m_bAllowsNukes;
+	bool m_bDamageToAttackerIgnoresArmor;
+	bool m_bDamageAllAttackers;
+	bool m_bDamageAttackerCapable;
+	bool m_bQuarantine;
+	bool m_bAutoBuild;
 
-	int* m_piPrereqOrVicinityBonuses;
-	std::vector<BonusTypes> m_aePrereqOrRawVicinityBonuses;
-	int* m_piUnitProductionModifier;
-	bool* m_pbPrereqOrCivics;
-	bool* m_pbPrereqAndCivics;
-
-	int* m_piCommerceAttacks;
-
-	bool* m_pbPrereqOrTerrain;
-	bool* m_pbPrereqAndTerrain;
-	bool* m_pbPrereqOrImprovement;
-	bool* m_pbPrereqOrFeature;
-	int* m_piBonusDefenseChanges;
-	int** m_ppaiBonusCommerceModifier;
-	int* m_piUnitCombatExtraStrength;
-	int** m_ppaiTechCommerceChange;
-	int** m_ppaiTechYieldChange;
-	int** m_ppaiTechSpecialistChange;
-	int** m_ppaiTechCommerceModifier;
-	int** m_ppaiTechYieldModifier;
-	int** m_ppiImprovementYieldChanges;
-	int** m_ppaiBonusYieldChanges;
-	int** m_ppaiBonusCommercePercentChanges;
-	int** m_ppaiVicinityBonusYieldChanges;
-
-//private:
-	int* m_piBuildingProductionModifier;
-	int* m_piGlobalBuildingProductionModifier;
-	int* m_piGlobalBuildingCostModifier;
-	int* m_piBuildingHappinessChanges;
-	int* m_piPrereqNumOfBuilding;
-	bool* m_pbPrereqNotBuilding;
-
-	CvPropertyManipulators m_PropertyManipulators;
-
-public:
-	bool readPass2(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML);
-	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
-	//Alberts2 PrereqBonuses
-	int getNumPrereqOrBonuses() const;
-	BonusTypes getPrereqOrBonuses(int i) const;
-
-protected:
-	int m_iVictoryPrereq;
-	int m_iFreeStartEra;
-	int m_iMaxStartEra;
-	int m_iObsoleteTech;
-	int m_iPrereqAndTech;
-	int m_iNoBonus;
-	int m_iPowerBonus;
-	int m_iFreeBonus;
+	int16_t m_iFreePromotion_2;
+	int16_t m_iFreePromotion_3;
+	int16_t m_iPrereqVicinityBonus;
+	int16_t m_iPrereqRawVicinityBonus;
+	int m_iGlobalPopulationgrowthratepercentage; // no xml
+	int8_t m_iPopulationgrowthratepercentage;
+	int m_iWorldTradeRoutes; // no xml
+	int8_t m_iLineOfSight;
+	int m_iInflationModifier;
+	int m_iPillageGoldModifier;
+	int8_t m_iInvasionChance;
+	int8_t m_iAdjacentDamagePercent;
+	int8_t m_iPrereqPopulation;
+	int m_iPrereqCultureLevel;
+	int8_t m_iWorkableRadius;
+	int16_t m_iPrereqAnyoneBuilding;
+	int16_t m_iExtendsBuilding;
+	int16_t m_iOccupationTimeModifier;
+	int8_t m_iNoEntryDefenseLevel;
+	int8_t m_iNumUnitFullHeal;
+	int16_t m_iProductionContinueBuilding;
+	int8_t m_iNumPopulationEmployed;
+	int8_t m_iHappinessPercentPerPopulation;
+	int8_t m_iHealthPercentPerPopulation;
+	int8_t m_iVictoryPrereq;
+	int8_t m_iFreeStartEra;
+	int8_t m_iMaxStartEra;
+	int16_t m_iObsoleteTech;
+	int16_t m_iPrereqAndTech;
+	int16_t m_iNoBonus;
+	int16_t m_iPowerBonus;
+	int16_t m_iFreeBonus;
 	int8_t m_iNumFreeBonuses;
-	std::vector<std::pair<BonusTypes,int> > m_aExtraFreeBonuses;
-
-	int m_iFreeBuilding;
-	int m_iFreeAreaBuilding;
-	int m_iFreePromotion;
-	int m_iCivicOption;
+	int16_t m_iFreeBuilding;
+	int16_t m_iFreeAreaBuilding;
+	int16_t m_iFreePromotion;
+	int8_t m_iCivicOption;
 	int16_t m_iAIWeight;
 	int m_iProductionCost;
-	int m_iHurryCostModifier;
-	int m_iHurryAngerModifier;
+	int16_t m_iHurryCostModifier;
+	int16_t m_iHurryAngerModifier;
 	int m_iAdvancedStartCost;
 	int m_iAdvancedStartCostIncrease;
 	int8_t m_iMinAreaSize;
@@ -685,20 +674,20 @@ protected:
 	int16_t m_iForeignTradeRouteModifier;
 	int8_t m_iAssetValue;
 	int8_t m_iPowerValue;
-	int m_iSpecialBuildingType;
-	int m_iAdvisorType;
-	int m_iPrereqGameOption;
-	int m_iNotGameOption;
+	int16_t m_iSpecialBuildingType;
+	int8_t m_iAdvisorType;
+	int8_t m_iPrereqGameOption;
+	int8_t m_iNotGameOption;
 	int m_iHolyCity;
-	int m_iReligionType;
-	int m_iStateReligion;
-	int m_iPrereqReligion;
-	int m_iPrereqCorporation;
-	int m_iFoundsCorporation;
+	int8_t m_iReligionType;
+	int8_t m_iStateReligion;
+	int8_t m_iPrereqReligion;
+	int8_t m_iPrereqCorporation;
+	int8_t m_iFoundsCorporation;
 	int m_iGlobalReligionCommerce;
 	int m_iGlobalCorporationCommerce;
-	int m_iPrereqAndBonus;
-	int m_iGreatPeopleUnitType;
+	int16_t m_iPrereqAndBonus;
+	int8_t m_iGreatPeopleUnitType;
 	int8_t m_iGreatPeopleRateChange;
 	int8_t m_iConquestProbability;
 	int8_t m_iMaintenanceModifier;
@@ -723,51 +712,70 @@ protected:
 	int8_t m_iBombardDefenseModifier;
 	int8_t m_iAllCityDefenseModifier;
 	int16_t m_iEspionageDefenseModifier;
-
 	int8_t m_iUnitUpgradePriceModifier;
 	int16_t m_iRevIdxLocal;
 	int16_t m_iRevIdxNational;
 	int8_t m_iRevIdxDistanceModifier;
-
-	int m_iMissionType;
-	int m_iVoteSourceType;
+	int16_t m_iMissionType;
+	int8_t m_iVoteSourceType;
 	int8_t m_iDCMAirbombMission;
 	int8_t m_iMaxGlobalInstances;
 	int8_t m_iMaxTeamInstances;
 	int8_t m_iMaxPlayerInstances;
 	int8_t m_iExtraPlayerInstances;
+	int8_t m_iLinePriority;
+	int m_iOutbreakBase;
+	int m_iOvercomeBase;
+	int m_iTradeCommunicability;
+#ifdef STRENGTH_IN_NUMBERS
+	int m_iFrontSupportPercentModifier;
+	int m_iShortRangeSupportPercentModifier;
+	int m_iMediumRangeSupportPercentModifier;
+	int m_iLongRangeSupportPercentModifier;
+	int m_iFlankSupportPercentModifier;
+#endif
+	int8_t m_iNationalCaptureProbabilityModifier;
+	int8_t m_iNationalCaptureResistanceModifier;
+	int16_t m_iLocalCaptureProbabilityModifier;
+	int16_t m_iLocalCaptureResistanceModifier;
+	int8_t m_iLocalDynamicDefense;
+	int8_t m_iRiverDefensePenalty;
+	int8_t m_iLocalRepel;
+	int8_t m_iMinDefense;
+	int16_t m_iBuildingDefenseRecoverySpeedModifier;
+	int16_t m_iCityDefenseRecoverySpeedModifier;
+	int8_t m_iDamageAttackerChance;
+	int8_t m_iDamageToAttacker;
+	int16_t m_iMaxPopulationAllowed; // no xml
+	int16_t m_iMaxPopulationChange; // no xml
+	int8_t m_iInsidiousness;
+	int8_t m_iInvestigation;
+	int16_t m_iPopulationChange; // no xml
+	int16_t m_iOneTimePopulationPercentLoss; // no xml
+	int16_t m_iMaxPopAllowed;
+	int8_t m_iMaxCultureLevelAllowed;
 
-	float m_fVisibilityPriority;
+	bool* m_pbPrereqOrCivics;
+	bool* m_pbPrereqAndCivics;
+	bool* m_pbPrereqOrTerrain;
+	bool* m_pbPrereqAndTerrain;
+	bool* m_pbPrereqOrImprovement;
+	bool* m_pbPrereqOrFeature;
+	bool* m_pbPrereqNotBuilding;
+	bool* m_pbCommerceFlexible;
+	bool* m_pbCommerceChangeOriginalOwner;
+	bool* m_pabHurry;
 
-	bool m_bTeamShare;
-	bool m_bWater;
-	bool m_bRiver;
-	bool m_bPower;
-	bool m_bFreshWater;
-	bool m_bDirtyPower;
-	bool m_bAreaCleanPower;
-	bool m_bOrbital;
-	bool m_bOrbitalInfrastructure;
-	bool m_bNoHolyCity;
-	bool m_bAreaBorderObstacle;
-	bool m_bForceTeamVoteEligible;
-	bool m_bCapital;
-	bool m_bGovernmentCenter;
-	bool m_bGoldenAge;
-	bool m_bMapCentering;
-	bool m_bNoUnhappiness;
-	bool m_bNoUnhealthyPopulation;
-	bool m_bBuildingOnlyHealthy;
-	bool m_bNeverCapture;
-	bool m_bNukeImmune;
-	bool m_bCenterInCity;
-	bool m_bStateReligion;
-	bool m_bAllowsNukes;
-
-	CvString m_szConstructSound;
-	CvString m_szArtDefineTag;
-	CvString m_szMovieDefineTag;
-
+	int* m_piPrereqOrVicinityBonuses;
+	int* m_piUnitProductionModifier;
+	int* m_piCommerceAttacks;
+	int* m_piBuildingProductionModifier;
+	int* m_piGlobalBuildingProductionModifier;
+	int* m_piGlobalBuildingCostModifier;
+	int* m_piBuildingHappinessChanges;
+	int* m_piPrereqNumOfBuilding;
+	int* m_piBonusDefenseChanges;
+	int* m_piUnitCombatExtraStrength;
 	int* m_piPrereqAndTechs;
 	int* m_piSeaPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
@@ -804,12 +812,33 @@ protected:
 	int* m_piImprovementFreeSpecialist;
 	int* m_piVictoryThreshold;
 
-	bool* m_pbCommerceFlexible;
-	bool* m_pbCommerceChangeOriginalOwner;
-
 	int** m_ppaiSpecialistYieldChange;
 	int** m_ppaiSpecialistCommerceChange;
 	int** m_ppaiBonusYieldModifier;
+	int** m_ppaiBonusCommerceModifier;
+	int** m_ppaiTechCommerceChange;
+	int** m_ppaiTechYieldChange;
+	int** m_ppaiTechSpecialistChange;
+	int** m_ppaiTechCommerceModifier;
+	int** m_ppaiTechYieldModifier;
+	int** m_ppiImprovementYieldChanges;
+	int** m_ppaiBonusYieldChanges;
+	int** m_ppaiBonusCommercePercentChanges;
+	int** m_ppaiVicinityBonusYieldChanges;
+	int** m_ppaiLocalSpecialistYieldChange;
+	int** m_ppaiLocalSpecialistCommerceChange;
+
+	std::vector<BonusTypes> m_aePrereqOrRawVicinityBonuses;
+	std::vector<std::pair<BonusTypes,int> > m_aExtraFreeBonuses;
+	std::vector<BuildingCommerceChange> m_aGlobalBuildingCommerceChanges;
+
+	float m_fVisibilityPriority;
+
+	CvString m_szConstructSound;
+	CvString m_szArtDefineTag;
+	CvString m_szMovieDefineTag;
+
+	CvPropertyManipulators m_PropertyManipulators;
 
 	CvProperties m_Properties;
 	CvProperties m_PropertiesAllCities;
@@ -821,48 +850,12 @@ protected:
 	BoolExpr* m_pExprNewCityFree;
 	BoolExpr* m_pExprConstructCondition;
 
-	std::vector<BuildingCommerceChange> m_aGlobalBuildingCommerceChanges;
-
 	//TB Combat Mods (Buildings) begin
 	UnitTypes m_ePropertySpawnUnit;
 	PropertyTypes m_ePropertySpawnProperty;
 	PromotionLineTypes m_ePromotionLineType;
 	//TechTypes m_eFreeSpecialTech;
 
-	int m_iLinePriority;
-	int m_iOutbreakBase;
-	int m_iOvercomeBase;
-	int m_iTradeCommunicability;
-#ifdef STRENGTH_IN_NUMBERS
-	int m_iFrontSupportPercentModifier;
-	int m_iShortRangeSupportPercentModifier;
-	int m_iMediumRangeSupportPercentModifier;
-	int m_iLongRangeSupportPercentModifier;
-	int m_iFlankSupportPercentModifier;
-#endif
-	int8_t m_iNationalCaptureProbabilityModifier;
-	int8_t m_iNationalCaptureResistanceModifier;
-	int m_iLocalCaptureProbabilityModifier;
-	int m_iLocalCaptureResistanceModifier;
-	int8_t m_iLocalDynamicDefense;
-	int8_t m_iRiverDefensePenalty;
-	int8_t m_iLocalRepel;
-	int8_t m_iMinDefense;
-	int16_t m_iBuildingDefenseRecoverySpeedModifier;
-	int16_t m_iCityDefenseRecoverySpeedModifier;
-	int8_t m_iDamageAttackerChance;
-	int8_t m_iDamageToAttacker;
-	int m_iMaxPopulationAllowed; // no xml
-	int m_iMaxPopulationChange; // no xml
-	int8_t m_iInsidiousness;
-	int8_t m_iInvestigation;
-	int m_iPopulationChange; // no xml
-	int m_iOneTimePopulationPercentLoss; // no xml
-
-	bool m_bDamageToAttackerIgnoresArmor;
-	bool m_bDamageAllAttackers;
-	bool m_bDamageAttackerCapable;
-	bool m_bQuarantine;
 	//boolean vectors without delayed resolution
 	//std::vector<int> m_aiFreePromoTypes;
 	std::vector<int> m_aiUnitCombatRetrainTypes;
@@ -879,24 +872,13 @@ protected:
 	TechModifierArray m_aTechHappinessTypes;
 	TechModifierArray m_aTechHealthTypes;
 
-	int** m_ppaiLocalSpecialistYieldChange;
-	int** m_ppaiLocalSpecialistCommerceChange;
-
 	std::vector<int> m_aiPrereqInCityBuildings;
 	std::vector<int> m_aePrereqOrBonuses;
 	std::vector<int> m_vPrereqOrBuilding;
 	std::vector<int> m_vReplacementBuilding;
 	std::vector<int> m_vReplacedBuilding;
 
-	bool* m_pabHurry;
-
-	//ls612 Begin:
-	int m_iMaxPopAllowed;
-	int m_iMaxCultureLevelAllowed;
-	//ls612 End:
-
-	/*
-	BoolExpr* m_pExprFreePromotionCondition;*/
+	//BoolExpr* m_pExprFreePromotionCondition;
 	//Structs
 	std::vector<FreePromoTypes> m_aFreePromoTypes;
 	std::vector<int> m_aiFreeTraitTypes;
@@ -905,8 +887,6 @@ protected:
 	std::vector<BonusAidModifiers> m_aBonusAidModifiers;
 	std::vector<AidRateChanges> m_aAidRateChanges;
 	//TB Combat Mods (Buildings) end
-
-	bool m_bAutoBuild;
 
 	mutable bool m_bEnablesOtherBuildingsCalculated;
 	mutable bool m_bEnablesOtherBuildingsValue;
