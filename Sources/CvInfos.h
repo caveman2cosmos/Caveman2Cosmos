@@ -478,9 +478,9 @@ protected:
 	int16_t m_iAdvisorType;
 	int16_t m_iAIWeight;
 	int16_t m_iAITradeModifier;
-	int16_t m_iResearchCost;
+	int32_t m_iResearchCost;
 	int16_t m_iAdvancedStartCost;
-	int16_t m_iAdvancedStartCostIncrease;
+	int32_t m_iAdvancedStartCostIncrease;
 	int16_t m_iEra;
 	int16_t m_iTradeRoutes;
 	int16_t m_iFeatureProductionModifier;
@@ -2324,17 +2324,17 @@ protected:
 
 	int16_t m_iAIWeight;
 	int16_t m_iProductionCost;
-	int16_t m_iHurryCostModifier;
-	int16_t m_iAdvancedStartCost;
-	int16_t m_iAdvancedStartCostIncrease;
+	int32_t m_iHurryCostModifier;
+	int32_t m_iAdvancedStartCost;
+	int32_t m_iAdvancedStartCostIncrease;
 	int16_t m_iMinAreaSize;
-	int16_t m_iMoves;
+	int32_t m_iMoves;
 	int16_t m_iAirRange;
 	int16_t m_iAirUnitCap;
 	int16_t m_iDropRange;
 	int16_t m_iNukeRange;
 	int16_t m_iWorkRate;
-	int16_t m_iBaseDiscover;
+	int32_t m_iBaseDiscover;
 	int16_t m_iDiscoverMultiplier;
 	int16_t m_iBaseHurry;
 	int16_t m_iHurryMultiplier;
@@ -2405,7 +2405,7 @@ protected:
 	std::vector<int16_t> m_aiDefendAgainstUnit;
 	std::vector<int16_t> m_aiSupersedingUnits;
 	std::vector<int16_t> m_aiUnitUpgrades;
-	std::vector<int16_t> m_aiUnitUpgradeChain;
+	std::vector<int> m_aiUnitUpgradeChain;
 
 	int m_iGroupSize;
 	int m_iGroupDefinitions;

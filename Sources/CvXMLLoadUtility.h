@@ -109,6 +109,7 @@ public:
 	void GetOptionalChildXmlValByName(uint8_t* piVal, const wchar_t* szName, uint8_t iDefault = 0);
 	void GetOptionalChildXmlValByName(int16_t* piVal, const wchar_t* szName, int16_t iDefault = 0);
 	void GetOptionalChildXmlValByName(uint16_t* piVal, const wchar_t* szName, uint16_t iDefault = 0);
+	void GetOptionalChildXmlValByName(int32_t* piVal, const wchar_t* szName, int32_t iDefault = 0);
 
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name

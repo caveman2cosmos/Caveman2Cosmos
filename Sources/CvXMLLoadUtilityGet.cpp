@@ -765,6 +765,14 @@ void CvXMLLoadUtility::GetOptionalChildXmlValByName(uint16_t* pVal, const wchar_
 	*pVal = value;
 }
 
+void CvXMLLoadUtility::GetOptionalChildXmlValByName(int32_t* pVal, const wchar_t* szName, int32_t iDefault)
+{
+	int value;
+	GetOptionalChildXmlValByName(&value, szName, iDefault);
+	assertBounds(INT_MIN, INT_MAX, value, szName);
+	*pVal = value;
+}
+
 //------------------------------------------------------------------------------------------------------
 //
 //  FUNCTION:   GetChildXmlValByName(std::string& pszVal, const TCHAR* szName, TCHAR* pszDefault = NULL)
