@@ -3756,9 +3756,7 @@ protected:
 	int16_t m_iCorporationMaintenancePercent;
 	int16_t m_iCivicUpkeepPercent;
 	int16_t m_iInflationPercent;
-	/*** REVOLUTION 09/25/09 by DPII ***/
 	int16_t m_iRevolutionIndexPercent;
-	/***********************************/
 	int16_t m_iHealthBonus;
 	int16_t m_iHappyBonus;
 	int16_t m_iAttitudeChange;
@@ -3774,7 +3772,6 @@ protected:
 	int16_t m_iBarbarianCombatModifier;
 	int16_t m_iAIAnimalCombatModifier;
 	int16_t m_iAIBarbarianCombatModifier;
-
 	int16_t m_iStartingDefenseUnits;
 	int16_t m_iStartingWorkerUnits;
 	int16_t m_iStartingExploreUnits;
