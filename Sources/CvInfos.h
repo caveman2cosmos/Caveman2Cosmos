@@ -2885,9 +2885,9 @@ protected:
 	bool m_bCityLoad;
 	bool m_bSMLoadSame;
 
-	int m_iCombatPercent;
-	int m_iWithdrawalChange;
-	int m_iPursuitChange;
+	int16_t m_iCombatPercent;
+	int16_t m_iWithdrawalChange;
+	int16_t m_iPursuitChange;
 
 	// Arrays
 	bool* m_pbCarrierUnitAITypes;
@@ -2920,7 +2920,6 @@ protected:
 
 	bool* m_pabTraitNoUpkeep;
 	bool m_bPolicy;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3119,76 +3118,76 @@ protected:
 	CvString* m_pszCivicAttitudeReason;
 	CvWString m_szWeLoveTheKingKey;
 
-	int m_iPopulationgrowthratepercentage;
-	int m_iReligionSpreadRate;
-	int m_iCivicHappiness;
-	int m_iDistantUnitSupportCostModifier;
-	int m_iExtraCityDefense;
-	int m_iAttitudeShareMod;
-	int m_iEnslavementChance;
-	int m_iForeignTradeRouteModifier;
-	int m_iTaxRateUnhappiness;
-	int m_iInflationModifier;
-	int m_iHurryInflationModifier;
-	int m_iHurryCostModifier;
-	int m_iSharedCivicTradeRouteModifier;
-	int m_iLandmarkHappiness;
-	int m_iCorporationSpreadRate;
-	int m_iRealCorporationMaintenanceModifier;
-	int m_iCityLimit;
-	int m_iCityOverLimitUnhappy;
-	int m_iForeignerUnhappyPercent;
-	int m_iCivicOptionType;
-	int m_iAnarchyLength;
-	int m_iUpkeep;
-	int m_iAIWeight;
-	int m_iGreatPeopleRateModifier;
-	int m_iGreatGeneralRateModifier;
-	int m_iDomesticGreatGeneralRateModifier;
-	int m_iStateReligionGreatPeopleRateModifier;
-	int m_iDistanceMaintenanceModifier;
-	int m_iNumCitiesMaintenanceModifier;
-	int m_iHomeAreaMaintenanceModifier;
-	int m_iOtherAreaMaintenanceModifier;
-	int m_iCorporationMaintenanceModifier;
-	int m_iExtraHealth;
-	int m_iFreeExperience;
-	int m_iWorkerSpeedModifier;
-	int m_iImprovementUpgradeRateModifier;
-	int m_iMilitaryProductionModifier;
-	int m_iFreeUnitUpkeepCivilian;
-	int m_iFreeUnitUpkeepMilitary;
-	int m_iFreeUnitUpkeepCivilianPopPercent;
-	int m_iFreeUnitUpkeepMilitaryPopPercent;
-	int m_iCivilianUnitUpkeepMod;
-	int m_iMilitaryUnitUpkeepMod;
-	int m_iHappyPerMilitaryUnit;
-	int m_iLargestCityHappiness;
-	int m_iWarWearinessModifier;
-	int m_iFreeSpecialist;
-	int m_iTradeRoutes;
-	int m_iTechPrereq;
-	int m_iCivicPercentAnger;
-	int m_iMaxConscript;
-	int m_iStateReligionHappiness;
-	int m_iNonStateReligionHappiness;
-	int m_iStateReligionUnitProductionModifier;
-	int m_iStateReligionBuildingProductionModifier;
-	int m_iStateReligionFreeExperience;
-	int m_iExpInBorderModifier;
-	int m_iRevIdxLocal;
-	int m_iRevIdxNational;
-	int m_iRevIdxDistanceModifier;
-	int m_iRevIdxHolyCityGood;
-	int m_iRevIdxHolyCityBad;
-	int m_iRevIdxSwitchTo;
-	int m_iRevReligiousFreedom;
-	int m_iRevLaborFreedom;
-	int m_iRevEnvironmentalProtection;
-	int m_iRevDemocracyLevel;
-	int m_iNationalCaptureProbabilityModifier;
-	int m_iNationalCaptureResistanceModifier;
-	int m_iFreedomFighterChange;
+	int16_t m_iPopulationgrowthratepercentage;
+	int16_t m_iReligionSpreadRate;
+	int16_t m_iCivicHappiness;
+	int16_t m_iDistantUnitSupportCostModifier;
+	int16_t m_iExtraCityDefense;
+	int16_t m_iAttitudeShareMod;
+	int16_t m_iEnslavementChance;
+	int16_t m_iForeignTradeRouteModifier;
+	int16_t m_iTaxRateUnhappiness;
+	int16_t m_iInflationModifier;
+	int16_t m_iHurryInflationModifier;
+	int16_t m_iHurryCostModifier;
+	int16_t m_iSharedCivicTradeRouteModifier;
+	int16_t m_iLandmarkHappiness;
+	int16_t m_iCorporationSpreadRate;
+	int16_t m_iRealCorporationMaintenanceModifier;
+	int16_t m_iCityLimit;
+	int16_t m_iCityOverLimitUnhappy;
+	int16_t m_iForeignerUnhappyPercent;
+	int16_t m_iCivicOptionType;
+	int16_t m_iAnarchyLength;
+	int16_t m_iUpkeep;
+	int16_t m_iAIWeight;
+	int16_t m_iGreatPeopleRateModifier;
+	int16_t m_iGreatGeneralRateModifier;
+	int16_t m_iDomesticGreatGeneralRateModifier;
+	int16_t m_iStateReligionGreatPeopleRateModifier;
+	int16_t m_iDistanceMaintenanceModifier;
+	int16_t m_iNumCitiesMaintenanceModifier;
+	int16_t m_iHomeAreaMaintenanceModifier;
+	int16_t m_iOtherAreaMaintenanceModifier;
+	int16_t m_iCorporationMaintenanceModifier;
+	int16_t m_iExtraHealth;
+	int16_t m_iFreeExperience;
+	int16_t m_iWorkerSpeedModifier;
+	int16_t m_iImprovementUpgradeRateModifier;
+	int16_t m_iMilitaryProductionModifier;
+	int16_t m_iFreeUnitUpkeepCivilian;
+	int16_t m_iFreeUnitUpkeepMilitary;
+	int16_t m_iFreeUnitUpkeepCivilianPopPercent;
+	int16_t m_iFreeUnitUpkeepMilitaryPopPercent;
+	int16_t m_iCivilianUnitUpkeepMod;
+	int16_t m_iMilitaryUnitUpkeepMod;
+	int16_t m_iHappyPerMilitaryUnit;
+	int16_t m_iLargestCityHappiness;
+	int16_t m_iWarWearinessModifier;
+	int16_t m_iFreeSpecialist;
+	int16_t m_iTradeRoutes;
+	int16_t m_iTechPrereq;
+	int16_t m_iCivicPercentAnger;
+	int16_t m_iMaxConscript;
+	int16_t m_iStateReligionHappiness;
+	int16_t m_iNonStateReligionHappiness;
+	int16_t m_iStateReligionUnitProductionModifier;
+	int16_t m_iStateReligionBuildingProductionModifier;
+	int16_t m_iStateReligionFreeExperience;
+	int16_t m_iExpInBorderModifier;
+	int16_t m_iRevIdxLocal;
+	int16_t m_iRevIdxNational;
+	int16_t m_iRevIdxDistanceModifier;
+	int16_t m_iRevIdxHolyCityGood;
+	int16_t m_iRevIdxHolyCityBad;
+	int16_t m_iRevIdxSwitchTo;
+	int16_t m_iRevReligiousFreedom;
+	int16_t m_iRevLaborFreedom;
+	int16_t m_iRevEnvironmentalProtection;
+	int16_t m_iRevDemocracyLevel;
+	int16_t m_iNationalCaptureProbabilityModifier;
+	int16_t m_iNationalCaptureResistanceModifier;
+	int16_t m_iFreedomFighterChange;
 
 	float m_fRevIdxNationalityMod;
 	float m_fRevIdxGoodReligionMod;
@@ -3334,10 +3333,10 @@ public:
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
 
-	int m_iObsoleteTech;
-	int m_iTechPrereq;
-	int m_iTechPrereqAnyone;
-	int m_iMaxPlayerInstances;
+	int16_t m_iObsoleteTech;
+	int16_t m_iTechPrereq;
+	int16_t m_iTechPrereqAnyone;
+	int8_t m_iMaxPlayerInstances;
 
 	bool m_bValid;
 };
@@ -3514,17 +3513,17 @@ public:
 
 protected:
 
-	int m_iDefaultPlayerColor;
-	int m_iArtStyleType;
-	int m_iUnitArtStyleType; // FlavorUnits by Impaler[WrG]
+	int16_t m_iDefaultPlayerColor;
+	int16_t m_iArtStyleType;
+	int16_t m_iUnitArtStyleType; // FlavorUnits by Impaler[WrG]
 	int m_iNumCityNames;
 	int m_iNumLeaders;
 	int m_iSelectionSoundScriptId;
 	int m_iActionSoundScriptId;
-	int m_iDerivativeCiv;
+	int16_t m_iDerivativeCiv;
 	// TB Tags
-	int m_iSpawnRateModifier;
-	int m_iSpawnRateNPCPeaceModifier;
+	int16_t m_iSpawnRateModifier;
+	int16_t m_iSpawnRateNPCPeaceModifier;
 
 	bool m_bStronglyRestricted;
 	// ! TB Tags
@@ -3593,21 +3592,20 @@ public:
 
 protected:
 
-	int m_iPopulationPercentLead;
-	int m_iLandPercent;
-	int m_iMinLandPercent;
-	int m_iReligionPercent;
+	int16_t m_iPopulationPercentLead;
+	int16_t m_iLandPercent;
+	int16_t m_iMinLandPercent;
+	int16_t m_iReligionPercent;
 	int m_iCityCulture;
-	int m_iNumCultureCities;
+	int16_t m_iNumCultureCities;
 	int m_iTotalCultureRatio;
-	int m_iVictoryDelayTurns;
+	int16_t m_iVictoryDelayTurns;
 
 	bool m_bTargetScore;
 	bool m_bEndScore;
 	bool m_bConquest;
 	bool m_bDiploVote;
 	bool m_bPermanent;
-	//Sevo VCM
 	bool m_bTotalVictory;
 
 	CvString m_szMovie;
@@ -3641,8 +3639,8 @@ public:
 	//---------------------------------------PUBLIC MEMBER VARIABLES---------------------------------
 protected:
 
-	int m_iGoldPerProduction;
-	int m_iProductionPerPopulation;
+	int16_t m_iGoldPerProduction;
+	int16_t m_iProductionPerPopulation;
 
 	bool m_bAnger;
 };
@@ -3742,67 +3740,67 @@ private:
 	CvPropertyManipulators m_PropertyManipulators;
 
 protected:
-	int m_iFreeWinsVsBarbs;
-	int m_iAnimalAttackProb;
-	int m_iStartingLocationPercent;
-	int m_iAdvancedStartPointsMod;
+	int16_t m_iFreeWinsVsBarbs;
+	int16_t m_iAnimalAttackProb;
+	int16_t m_iStartingLocationPercent;
+	int16_t m_iAdvancedStartPointsMod;
 	int m_iStartingGold;
-	int m_iUnitUpkeepPercent;
-	int m_iTrainPercent;
-	int m_iConstructPercent;
-	int m_iResearchPercent;
-	int m_iDistanceMaintenancePercent;
-	int m_iNumCitiesMaintenancePercent;
-	int m_iColonyMaintenancePercent;
-	int m_iMaxColonyMaintenance;
-	int m_iCorporationMaintenancePercent;
-	int m_iCivicUpkeepPercent;
-	int m_iInflationPercent;
+	int16_t m_iUnitUpkeepPercent;
+	int16_t m_iTrainPercent;
+	int16_t m_iConstructPercent;
+	int16_t m_iResearchPercent;
+	int16_t m_iDistanceMaintenancePercent;
+	int16_t m_iNumCitiesMaintenancePercent;
+	int16_t m_iColonyMaintenancePercent;
+	int16_t m_iMaxColonyMaintenance;
+	int16_t m_iCorporationMaintenancePercent;
+	int16_t m_iCivicUpkeepPercent;
+	int16_t m_iInflationPercent;
 	/*** REVOLUTION 09/25/09 by DPII ***/
-	int m_iRevolutionIndexPercent;
+	int16_t m_iRevolutionIndexPercent;
 	/***********************************/
-	int m_iHealthBonus;
-	int m_iHappyBonus;
-	int m_iAttitudeChange;
-	int m_iNoTechTradeModifier;
-	int m_iTechTradeKnownModifier;
-	int m_iUnownedTilesPerGameAnimal;
-	int m_iUnownedTilesPerBarbarianUnit;
-	int m_iUnownedWaterTilesPerBarbarianUnit;
-	int m_iUnownedTilesPerBarbarianCity;
-	int m_iBarbarianCityCreationTurnsElapsed;
-	int m_iBarbarianCityCreationProb;
-	int m_iAnimalCombatModifier;
-	int m_iBarbarianCombatModifier;
-	int m_iAIAnimalCombatModifier;
-	int m_iAIBarbarianCombatModifier;
+	int16_t m_iHealthBonus;
+	int16_t m_iHappyBonus;
+	int16_t m_iAttitudeChange;
+	int16_t m_iNoTechTradeModifier;
+	int16_t m_iTechTradeKnownModifier;
+	int16_t m_iUnownedTilesPerGameAnimal;
+	int16_t m_iUnownedTilesPerBarbarianUnit;
+	int16_t m_iUnownedWaterTilesPerBarbarianUnit;
+	int16_t m_iUnownedTilesPerBarbarianCity;
+	int16_t m_iBarbarianCityCreationTurnsElapsed;
+	int16_t m_iBarbarianCityCreationProb;
+	int16_t m_iAnimalCombatModifier;
+	int16_t m_iBarbarianCombatModifier;
+	int16_t m_iAIAnimalCombatModifier;
+	int16_t m_iAIBarbarianCombatModifier;
 
-	int m_iStartingDefenseUnits;
-	int m_iStartingWorkerUnits;
-	int m_iStartingExploreUnits;
-	int m_iAIStartingUnitMultiplier;
-	int m_iAIStartingDefenseUnits;
-	int m_iAIStartingWorkerUnits;
-	int m_iAIStartingExploreUnits;
-	int m_iBarbarianInitialDefenders;
-	int m_iAIDeclareWarProb;
-	int m_iAIWorkRateModifier;
-	int m_iAIGrowthPercent;
-	int m_iAITrainPercent;
-	int m_iAIWorldTrainPercent;
-	int m_iAIConstructPercent;
-	int m_iAIWorldConstructPercent;
-	int m_iAICreatePercent;
-	int m_iAIResearchPercent;
-	int m_iAIWorldCreatePercent;
-	int m_iAICivicUpkeepPercent;
-	int m_iAIUnitUpkeepPercent;
-	int m_iAIUnitSupplyPercent;
-	int m_iAIUnitUpgradePercent;
-	int m_iAIInflationPercent;
-	int m_iAIWarWearinessPercent;
-	int m_iAIPerEraModifier;
-	int m_iAIAdvancedStartPercent;
+	int16_t m_iStartingDefenseUnits;
+	int16_t m_iStartingWorkerUnits;
+	int16_t m_iStartingExploreUnits;
+	int16_t m_iAIStartingUnitMultiplier;
+	int16_t m_iAIStartingDefenseUnits;
+	int16_t m_iAIStartingWorkerUnits;
+	int16_t m_iAIStartingExploreUnits;
+	int16_t m_iBarbarianInitialDefenders;
+	int16_t m_iAIDeclareWarProb;
+	int16_t m_iAIWorkRateModifier;
+	int16_t m_iAIGrowthPercent;
+	int16_t m_iAITrainPercent;
+	int16_t m_iAIWorldTrainPercent;
+	int16_t m_iAIConstructPercent;
+	int16_t m_iAIWorldConstructPercent;
+	int16_t m_iAICreatePercent;
+	int16_t m_iAIResearchPercent;
+	int16_t m_iAIWorldCreatePercent;
+	int16_t m_iAICivicUpkeepPercent;
+	int16_t m_iAIUnitUpkeepPercent;
+	int16_t m_iAIUnitSupplyPercent;
+	int16_t m_iAIUnitUpgradePercent;
+	int16_t m_iAIInflationPercent;
+	int16_t m_iAIWarWearinessPercent;
+	int16_t m_iAIPerEraModifier;
+	int16_t m_iAIAdvancedStartPercent;
 
 	CvString m_szHandicapName;
 
@@ -3871,36 +3869,35 @@ public:
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
 
-	int m_iGrowthPercent;
-	int m_iTrainPercent;
-	int m_iConstructPercent;
-	int m_iCreatePercent;
-	int m_iResearchPercent;
-	int m_iBuildPercent;
-	int m_iImprovementPercent;
-	int m_iGreatPeoplePercent;
-	int m_iAnarchyPercent;
-	int m_iBarbPercent;
-	int m_iFeatureProductionPercent;
-	int m_iUnitDiscoverPercent;
-	int m_iUnitHurryPercent;
-	int m_iUnitTradePercent;
-	int m_iUnitGreatWorkPercent;
-	int m_iGoldenAgePercent;
-	int m_iHurryPercent;
-	int m_iHurryConscriptAngerPercent;
-	int m_iOccupationTimePopulationPercent;
-	int m_iVictoryDelayPercent;
-	int m_iNumTurnIncrements;
-	// Afforess 12/13/09
-	int m_iUnitMovementPercent;
+	int16_t m_iGrowthPercent;
+	int16_t m_iTrainPercent;
+	int16_t m_iConstructPercent;
+	int16_t m_iCreatePercent;
+	int16_t m_iResearchPercent;
+	int16_t m_iBuildPercent;
+	int16_t m_iImprovementPercent;
+	int16_t m_iGreatPeoplePercent;
+	int16_t m_iAnarchyPercent;
+	int16_t m_iBarbPercent;
+	int16_t m_iFeatureProductionPercent;
+	int16_t m_iUnitDiscoverPercent;
+	int16_t m_iUnitHurryPercent;
+	int16_t m_iUnitTradePercent;
+	int16_t m_iUnitGreatWorkPercent;
+	int16_t m_iGoldenAgePercent;
+	int16_t m_iHurryPercent;
+	int16_t m_iHurryConscriptAngerPercent;
+	int16_t m_iOccupationTimePopulationPercent;
+	int16_t m_iVictoryDelayPercent;
+	int16_t m_iNumTurnIncrements;
+	int16_t m_iUnitMovementPercent;
 
 	CvString m_szGameSpeedName;
 	GameTurnInfo* m_pGameTurnInfo;
 	std::vector<CvDateIncrement> m_aIncrements;
 	bool m_bEndDatesCalculated;
 	//TB GameSpeed begin
-	int m_iTraitGainPercent;
+	int16_t m_iTraitGainPercent;
 	//TB GameSpeed end
 
 	IDValueMapPercent m_Percent;
@@ -4019,35 +4016,25 @@ protected:
 
 	int m_iTime;
 	int m_iCost;
-	int m_iTechPrereq;
-	int m_iImprovement;
-	int m_iRoute;
-	/************************************************************************************************/
-	/* Afforess					  Start		 05/25/10											   */
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
-	int m_iTerrainChange;
-	int m_iFeatureChange;
-	int m_iObsoleteTech;
+	int16_t m_iTechPrereq;
+	int16_t m_iImprovement;
+	int16_t m_iRoute;
+	int16_t m_iTerrainChange;
+	int16_t m_iFeatureChange;
+	int16_t m_iObsoleteTech;
+	int16_t m_iEntityEvent;
+	int16_t m_iMissionType;
+
 	bool m_bMine;
 	bool m_bDisabled;
 	bool m_bHideObsoleteExempt;
-	bool* m_pabNoTechCanRemoveWithNoProductionGain;
-	/************************************************************************************************/
-	/* Afforess						 END															*/
-	/************************************************************************************************/
-	int m_iEntityEvent;
-	int m_iMissionType;
-
 	bool m_bKill;
-
-	// Arrays
 
 	int* m_paiFeatureTech;
 	int* m_paiFeatureTime;
 	int* m_paiFeatureProduction;
 
+	bool* m_pabNoTechCanRemoveWithNoProductionGain;
 	bool* m_pabFeatureRemove;
 
 	std::vector<int16_t> m_aiPrereqBonusTypes;
@@ -4118,12 +4105,12 @@ protected:
 	int m_iExperience;
 	int m_iHealing;
 	int m_iDamagePrereq;
-	int m_iBarbarianUnitProb;
+	int16_t m_iBarbarianUnitProb;
 	int m_iMinBarbarians;
-	int m_iGoodyUnit;
-	int m_iBarbarianUnit;
-	int m_iEraType;
-	int m_iNotEraType;
+	int16_t m_iGoodyUnit;
+	int16_t m_iBarbarianUnit;
+	int8_t m_iEraType;
+	int8_t m_iNotEraType;
 	int m_iResearch;
 
 	bool m_bTech;
@@ -4133,7 +4120,6 @@ protected:
 	std::vector<int8_t> m_aiMapCategoryTypes;
 
 	CvString m_szSound;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4187,11 +4173,11 @@ protected:
 	int m_iAdvancedStartCostIncrease;
 
 	int m_iValue;
-	int m_iMovementCost;
-	int m_iFlatMovementCost;
-	int m_iPrereqBonus;
+	int16_t m_iMovementCost;
+	int16_t m_iFlatMovementCost;
+	int16_t m_iPrereqBonus;
 
-	int m_zobristValue;
+	int16_t m_zobristValue;
 
 	bool m_bSeaTunnel;
 
@@ -4236,9 +4222,8 @@ public:
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
 
-	int m_iDiscoverRand;
-	// Afforess 01/20/10
-	int m_iDepletionRand;
+	int16_t m_iDiscoverRand;
+	int16_t m_iDepletionRand;
 
 	bool m_bBonusMakesValid;
 	bool m_bObsoleteBonusMakesValid;
@@ -5824,13 +5809,13 @@ protected:
 	// TGA_INDEXATION 01/21/08 MRGENIE
 	int m_iTGAIndex;
 
-	int m_iChar;
-	int m_iHolyCityChar;
-	int m_iTechPrereq;
-	int m_iFreeUnit;
-	int m_iNumFreeUnits;
-	int m_iSpreadFactor;
-	int m_iMissionType;
+	int16_t m_iChar;
+	int16_t m_iHolyCityChar;
+	int16_t m_iTechPrereq;
+	int16_t m_iFreeUnit;
+	int16_t m_iNumFreeUnits;
+	int16_t m_iSpreadFactor;
+	int16_t m_iMissionType;
 
 	CvString m_szTechButton;
 	CvString m_szGenericTechButton;
@@ -5933,23 +5918,22 @@ protected:
 	// TGA_INDEXATION 01/21/08 MRGENIE
 	int m_iTGAIndex;
 
-	int m_iChar;
-	int m_iHeadquarterChar;
-	int m_iTechPrereq;
-	int m_iFreeUnit;
-	int m_iSpreadFactor;
-	int m_iSpreadCost;
-	int m_iMaintenance;
-	int m_iMissionType;
-	int m_iBonusProduced;
-
-	int m_iObsoleteTech;
-	int m_iSpread;
-	int m_iHealth;
-	int m_iHappiness;
-	int m_iFreeXP;
-	int m_iMilitaryProductionModifier;
-	int m_iPrereqGameOption;
+	int16_t m_iChar;
+	int16_t m_iHeadquarterChar;
+	int16_t m_iTechPrereq;
+	int16_t m_iFreeUnit;
+	int16_t m_iSpreadFactor;
+	int16_t m_iSpreadCost;
+	int16_t m_iMaintenance;
+	int16_t m_iMissionType;
+	int16_t m_iBonusProduced;
+	int16_t m_iObsoleteTech;
+	int16_t m_iSpread;
+	int16_t m_iHealth;
+	int16_t m_iHappiness;
+	int16_t m_iFreeXP;
+	int16_t m_iMilitaryProductionModifier;
+	int16_t m_iPrereqGameOption;
 
 	int* m_paiPrereqBuilding;
 	std::vector<CvString> m_aszPrereqBuildingforPass3;
@@ -6241,28 +6225,28 @@ private:
 protected:
 	bool** m_ppbFreePromotionUnitCombats;
 
-	int m_iHealth;
-	int m_iHappiness;
-	int m_iMaxAnarchy;
-	int m_iUpkeepModifier;
-	int m_iLevelExperienceModifier;
-	int m_iGreatPeopleRateModifier;
-	int m_iGreatGeneralRateModifier;
-	int m_iDomesticGreatGeneralRateModifier;
-	int m_iMaxGlobalBuildingProductionModifier;
-	int m_iMaxTeamBuildingProductionModifier;
-	int m_iMaxPlayerBuildingProductionModifier;
+	int16_t m_iHealth;
+	int16_t m_iHappiness;
+	int16_t m_iMaxAnarchy;
+	int16_t m_iUpkeepModifier;
+	int16_t m_iLevelExperienceModifier;
+	int16_t m_iGreatPeopleRateModifier;
+	int16_t m_iGreatGeneralRateModifier;
+	int16_t m_iDomesticGreatGeneralRateModifier;
+	int16_t m_iMaxGlobalBuildingProductionModifier;
+	int16_t m_iMaxTeamBuildingProductionModifier;
+	int16_t m_iMaxPlayerBuildingProductionModifier;
 
 /********************************************************************************/
 /**		REVDCM									2/16/10				phungus420	*/
 /**																				*/
 /**		RevTraitEffects															*/
 /********************************************************************************/
-	int m_iRevIdxLocal;
-	int m_iRevIdxNational;
-	int m_iRevIdxDistanceModifier;
-	int m_iRevIdxHolyCityGood;
-	int m_iRevIdxHolyCityBad;
+	int16_t m_iRevIdxLocal;
+	int16_t m_iRevIdxNational;
+	int16_t m_iRevIdxDistanceModifier;
+	int16_t m_iRevIdxHolyCityGood;
+	int16_t m_iRevIdxHolyCityBad;
 	float m_fRevIdxNationalityMod;
 	float m_fRevIdxGoodReligionMod;
 	float m_fRevIdxBadReligionMod;
@@ -6288,75 +6272,75 @@ protected:
 
 	//TB Traits Mods begin
 	//Textual References
-	int m_iPrereqTrait;
-	int m_iPrereqOrTrait1;
-	int m_iPrereqOrTrait2;
+	int16_t m_iPrereqTrait;
+	int16_t m_iPrereqOrTrait1;
+	int16_t m_iPrereqOrTrait2;
 	TechTypes m_ePrereqTech;
 	PromotionLineTypes m_ePromotionLine;
-	int m_iGreatPeopleUnitType;
+	int16_t m_iGreatPeopleUnitType;
 	//Team Project (6)
 	SpecialistTypes m_eEraAdvanceFreeSpecialistType;
-	int m_iGoldenAgeonBirthofGreatPeopleType;
+	int16_t m_iGoldenAgeonBirthofGreatPeopleType;
 	//integers
-	int m_iWarWearinessAccumulationModifier;
-	int m_iCivicAnarchyTimeModifier;
-	int m_iReligiousAnarchyTimeModifier;
-	int m_iImprovementUpgradeRateModifier;
-	int m_iWorkerSpeedModifier;
-	int m_iMaxConscript;
-	int m_iDistanceMaintenanceModifier;
-	int m_iNumCitiesMaintenanceModifier;
-	int m_iCorporationMaintenanceModifier;
-	int m_iStateReligionGreatPeopleRateModifier;
-	int m_iFreeExperience;
-	int m_iFreeUnitUpkeepCivilian;
-	int m_iFreeUnitUpkeepMilitary;
-	int m_iFreeUnitUpkeepCivilianPopPercent;
-	int m_iFreeUnitUpkeepMilitaryPopPercent;
-	int m_iCivilianUnitUpkeepMod;
-	int m_iMilitaryUnitUpkeepMod;
-	int m_iHappyPerMilitaryUnit;
-	int m_iLargestCityHappiness;
-	int m_iFreeSpecialist;
-	int m_iTradeRoutes;
-	int m_iStateReligionHappiness;
-	int m_iNonStateReligionHappiness;
-	int m_iStateReligionUnitProductionModifier;
-	int m_iStateReligionBuildingProductionModifier;
-	int m_iStateReligionFreeExperience;
-	int m_iExpInBorderModifier;
-	int m_iCityDefenseBonus;
-	int m_iMilitaryProductionModifier;
-	int m_iAttitudeModifier;
-	int m_iLinePriority;
-	int m_iEspionageDefense;
-	int m_iMinAnarchy;
-	int m_iMaxTradeRoutesChange;
-	int m_iGoldenAgeDurationModifier;
-	int m_iGreatPeopleRateChange;
-	int m_iHurryAngerModifier;
-	int m_iHurryCostModifier;
-	int m_iEnemyWarWearinessModifier;
-	int m_iForeignTradeRouteModifier;
-	int m_iBombardDefense;
-	int m_iUnitUpgradePriceModifier;
-	int m_iCoastalTradeRoutes;
-	int m_iGlobalPopulationgrowthratepercentage;
-	int m_iCityStartCulture;
-	int m_iGlobalAirUnitCapacity;
-	int m_iCapitalXPModifier;
-	int m_iHolyCityofStateReligionXPModifier;
-	int m_iHolyCityofNonStateReligionXPModifier;
-	int m_iBonusPopulationinNewCities;
-	int m_iMissileRange;
-	int m_iFlightOperationRange;
-	int m_iNavalCargoSpace;
-	int m_iMissileCargoSpace;
-	int m_iNationalCaptureProbabilityModifier;
-	int m_iNationalCaptureResistanceModifier;
-	int m_iStateReligionSpreadProbabilityModifier;
-	int m_iNonStateReligionSpreadProbabilityModifier;
-	int m_iFreedomFighterChange;
+	int16_t m_iWarWearinessAccumulationModifier;
+	int16_t m_iCivicAnarchyTimeModifier;
+	int16_t m_iReligiousAnarchyTimeModifier;
+	int16_t m_iImprovementUpgradeRateModifier;
+	int16_t m_iWorkerSpeedModifier;
+	int16_t m_iMaxConscript;
+	int16_t m_iDistanceMaintenanceModifier;
+	int16_t m_iNumCitiesMaintenanceModifier;
+	int16_t m_iCorporationMaintenanceModifier;
+	int16_t m_iStateReligionGreatPeopleRateModifier;
+	int16_t m_iFreeExperience;
+	int16_t m_iFreeUnitUpkeepCivilian;
+	int16_t m_iFreeUnitUpkeepMilitary;
+	int16_t m_iFreeUnitUpkeepCivilianPopPercent;
+	int16_t m_iFreeUnitUpkeepMilitaryPopPercent;
+	int16_t m_iCivilianUnitUpkeepMod;
+	int16_t m_iMilitaryUnitUpkeepMod;
+	int16_t m_iHappyPerMilitaryUnit;
+	int16_t m_iLargestCityHappiness;
+	int16_t m_iFreeSpecialist;
+	int16_t m_iTradeRoutes;
+	int16_t m_iStateReligionHappiness;
+	int16_t m_iNonStateReligionHappiness;
+	int16_t m_iStateReligionUnitProductionModifier;
+	int16_t m_iStateReligionBuildingProductionModifier;
+	int16_t m_iStateReligionFreeExperience;
+	int16_t m_iExpInBorderModifier;
+	int16_t m_iCityDefenseBonus;
+	int16_t m_iMilitaryProductionModifier;
+	int16_t m_iAttitudeModifier;
+	int16_t m_iLinePriority;
+	int16_t m_iEspionageDefense;
+	int16_t m_iMinAnarchy;
+	int16_t m_iMaxTradeRoutesChange;
+	int16_t m_iGoldenAgeDurationModifier;
+	int16_t m_iGreatPeopleRateChange;
+	int16_t m_iHurryAngerModifier;
+	int16_t m_iHurryCostModifier;
+	int16_t m_iEnemyWarWearinessModifier;
+	int16_t m_iForeignTradeRouteModifier;
+	int16_t m_iBombardDefense;
+	int16_t m_iUnitUpgradePriceModifier;
+	int16_t m_iCoastalTradeRoutes;
+	int16_t m_iGlobalPopulationgrowthratepercentage;
+	int16_t m_iCityStartCulture;
+	int16_t m_iGlobalAirUnitCapacity;
+	int16_t m_iCapitalXPModifier;
+	int16_t m_iHolyCityofStateReligionXPModifier;
+	int16_t m_iHolyCityofNonStateReligionXPModifier;
+	int16_t m_iBonusPopulationinNewCities;
+	int16_t m_iMissileRange;
+	int16_t m_iFlightOperationRange;
+	int16_t m_iNavalCargoSpace;
+	int16_t m_iMissileCargoSpace;
+	int16_t m_iNationalCaptureProbabilityModifier;
+	int16_t m_iNationalCaptureResistanceModifier;
+	int16_t m_iStateReligionSpreadProbabilityModifier;
+	int16_t m_iNonStateReligionSpreadProbabilityModifier;
+	int16_t m_iFreedomFighterChange;
 	//booleans
 	bool m_bMilitaryFoodProduction;
 	bool m_bNegativeTrait;
@@ -8019,7 +8003,6 @@ public:
 
 private:
 	bool m_bDefault;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -8045,7 +8028,6 @@ public:
 
 private:
 	bool m_bDefault;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -8071,7 +8053,6 @@ public:
 
 private:
 	bool m_bDefault;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -8626,8 +8607,11 @@ protected:
 	bool m_bSeeDemographics;
 	bool m_bNoActiveMissions;
 	bool m_bSeeResearch;
-
 	bool m_bDestroyImprovement;
+	bool m_bNuke;
+	bool m_bRevolt;
+	bool m_bDisablePower;
+
 	int m_iDestroyBuildingCostFactor;
 	int m_iDestroyUnitCostFactor;
 	int m_iDestroyProjectCostFactor;
@@ -8647,10 +8631,6 @@ protected:
 	int m_iCounterespionageNumTurns;
 	int m_iCounterespionageMod;
 	int m_iDifficultyMod;
-
-	bool m_bNuke;
-	bool m_bRevolt;
-	bool m_bDisablePower;
 	int m_iPrereqGameOption;
 	int m_iWarWearinessCounter;
 	int m_iSabatogeResearchCostFactor;
@@ -8739,9 +8719,9 @@ public:
 	void getCheckSum(uint32_t& iSum) const;
 
 protected:
-	int m_iVoteInterval;
-	int m_iFreeSpecialist;
-	int m_iCivic;
+	int16_t m_iVoteInterval;
+	int16_t m_iFreeSpecialist;
+	int16_t m_iCivic;
 
 	int* m_aiReligionYields;
 	int* m_aiReligionCommerces;
@@ -9494,76 +9474,76 @@ protected:
 	BonusTypes m_eCulture;
 	EraTypes m_eEra;
 	//Integers
-	int m_iAssetMultiplier;
-	int m_iPowerMultiplier;
-	int m_iIgnoreTerrainDamage;
-	int m_zobristValue;
-	int m_iVisibilityChange;
-	int m_iMovesChange;
-	int m_iMoveDiscountChange;
-	int m_iAirRangeChange;
-	int m_iInterceptChange;
-	int m_iEvasionChange;
-	int m_iWithdrawalChange;
-	int m_iCargoChange;
-	int m_iSMCargoChange;
-	int m_iSMCargoVolumeChange;
-	int m_iSMCargoVolumeModifierChange;
-	int m_iCollateralDamageChange;
-	int m_iBombardRateChange;
-	int m_iFirstStrikesChange;
-	int m_iChanceFirstStrikesChange;
-	int m_iEnemyHealChange;
-	int m_iNeutralHealChange;
-	int m_iFriendlyHealChange;
-	int m_iSameTileHealChange;
-	int m_iAdjacentTileHealChange;
-	int m_iCombatPercent;
-	int m_iCityAttackPercent;
-	int m_iCityDefensePercent;
-	int m_iHillsAttackPercent;
-	int m_iHillsDefensePercent;
-	int m_iHillsWorkPercent;
-	int m_iWorkRatePercent;
-	int m_iRevoltProtection;
-	int m_iCollateralDamageProtection;
-	int m_iPillageChange;
-	int m_iUpgradeDiscount;
-	int m_iExperiencePercent;
-	int m_iKamikazePercent;
-	int m_iAirCombatLimitChange;
-	int m_iCelebrityHappy;
-	int m_iCollateralDamageLimitChange;
-	int m_iCollateralDamageMaxUnitsChange;
-	int m_iCombatLimitChange;
-	int m_iExtraDropRange;
-	int m_iSurvivorChance;
-	int m_iVictoryAdjacentHeal;
-	int m_iVictoryHeal;
-	int m_iVictoryStackHeal;
-	int m_iAttackCombatModifierChange;
-	int m_iDefenseCombatModifierChange;
-	int m_iPursuitChange;
-	int m_iEarlyWithdrawChange;
-	int m_iVSBarbsChange;
-	int m_iArmorChange;
-	int m_iPunctureChange;
-	int m_iOverrunChange;
-	int m_iRepelChange;
-	int m_iFortRepelChange;
-	int m_iRepelRetriesChange;
-	int m_iUnyieldingChange;
-	int m_iKnockbackChange;
-	int m_iKnockbackRetriesChange;
-	int m_iStrAdjperAttChange;
-	int m_iStrAdjperDefChange;
-	int m_iWithdrawAdjperAttChange;
-	int m_iUnnerveChange;
-	int m_iEncloseChange;
-	int m_iLungeChange;
-	int m_iDynamicDefenseChange;
-	int m_iStrengthChange;
-	int m_iFortitudeChange;
+	int16_t m_iAssetMultiplier;
+	int16_t m_iPowerMultiplier;
+	int16_t m_iIgnoreTerrainDamage;
+	int16_t m_zobristValue;
+	int16_t m_iVisibilityChange;
+	int16_t m_iMovesChange;
+	int16_t m_iMoveDiscountChange;
+	int16_t m_iAirRangeChange;
+	int16_t m_iInterceptChange;
+	int16_t m_iEvasionChange;
+	int16_t m_iWithdrawalChange;
+	int16_t m_iCargoChange;
+	int16_t m_iSMCargoChange;
+	int16_t m_iSMCargoVolumeChange;
+	int16_t m_iSMCargoVolumeModifierChange;
+	int16_t m_iCollateralDamageChange;
+	int16_t m_iBombardRateChange;
+	int16_t m_iFirstStrikesChange;
+	int16_t m_iChanceFirstStrikesChange;
+	int16_t m_iEnemyHealChange;
+	int16_t m_iNeutralHealChange;
+	int16_t m_iFriendlyHealChange;
+	int16_t m_iSameTileHealChange;
+	int16_t m_iAdjacentTileHealChange;
+	int16_t m_iCombatPercent;
+	int16_t m_iCityAttackPercent;
+	int16_t m_iCityDefensePercent;
+	int16_t m_iHillsAttackPercent;
+	int16_t m_iHillsDefensePercent;
+	int16_t m_iHillsWorkPercent;
+	int16_t m_iWorkRatePercent;
+	int16_t m_iRevoltProtection;
+	int16_t m_iCollateralDamageProtection;
+	int16_t m_iPillageChange;
+	int16_t m_iUpgradeDiscount;
+	int16_t m_iExperiencePercent;
+	int16_t m_iKamikazePercent;
+	int16_t m_iAirCombatLimitChange;
+	int16_t m_iCelebrityHappy;
+	int16_t m_iCollateralDamageLimitChange;
+	int16_t m_iCollateralDamageMaxUnitsChange;
+	int16_t m_iCombatLimitChange;
+	int16_t m_iExtraDropRange;
+	int16_t m_iSurvivorChance;
+	int16_t m_iVictoryAdjacentHeal;
+	int16_t m_iVictoryHeal;
+	int16_t m_iVictoryStackHeal;
+	int16_t m_iAttackCombatModifierChange;
+	int16_t m_iDefenseCombatModifierChange;
+	int16_t m_iPursuitChange;
+	int16_t m_iEarlyWithdrawChange;
+	int16_t m_iVSBarbsChange;
+	int16_t m_iArmorChange;
+	int16_t m_iPunctureChange;
+	int16_t m_iOverrunChange;
+	int16_t m_iRepelChange;
+	int16_t m_iFortRepelChange;
+	int16_t m_iRepelRetriesChange;
+	int16_t m_iUnyieldingChange;
+	int16_t m_iKnockbackChange;
+	int16_t m_iKnockbackRetriesChange;
+	int16_t m_iStrAdjperAttChange;
+	int16_t m_iStrAdjperDefChange;
+	int16_t m_iWithdrawAdjperAttChange;
+	int16_t m_iUnnerveChange;
+	int16_t m_iEncloseChange;
+	int16_t m_iLungeChange;
+	int16_t m_iDynamicDefenseChange;
+	int16_t m_iStrengthChange;
+	int16_t m_iFortitudeChange;
 #ifdef STRENGTH_IN_NUMBERS
 	int m_iFrontSupportPercentChange;
 	int m_iShortRangeSupportPercentChange;
@@ -9571,62 +9551,60 @@ protected:
 	int m_iLongRangeSupportPercentChange;
 	int m_iFlankSupportPercentChange;
 #endif
-	int m_iDodgeModifierChange;
-	int m_iPrecisionModifierChange;
-	int m_iPowerShotsChange;
-	int m_iPowerShotCombatModifierChange;
-	int m_iPowerShotPunctureModifierChange;
-	int m_iPowerShotPrecisionModifierChange;
-	int m_iPowerShotCriticalModifierChange;
-	int m_iCriticalModifierChange;
-	int m_iEnduranceChange;
-	int m_iRoundStunProbChange;
-	int m_iPoisonProbabilityModifierChange;
-	int m_iCaptureProbabilityModifierChange;
-	int m_iCaptureResistanceModifierChange;
-	int m_iHillsWorkModifierChange;
-	int m_iPeaksWorkModifierChange;
-	int m_iBreakdownChanceChange;
-	int m_iBreakdownDamageChange;
-	int m_iTauntChange;
-	int m_iMaxHPChange;
-	int m_iStrengthModifier;
-	int m_iQualityBase;
-	int m_iGroupBase;
-	int m_iSizeBase;
-	int m_iDamageModifierChange;
-
-	int m_iUpkeepModifier;
-	int m_iExtraUpkeep100;
-
-	int m_iRBombardDamageBase;
-	int m_iRBombardDamageLimitBase;
-	int m_iRBombardDamageMaxUnitsBase;
-	int m_iDCMBombRangeBase;
-	int m_iDCMBombAccuracyBase;
-	int m_iCombatModifierPerSizeMoreChange;
-	int m_iCombatModifierPerSizeLessChange;
-	int m_iCombatModifierPerVolumeMoreChange;
-	int m_iCombatModifierPerVolumeLessChange;
-	int m_iSelfHealModifier;
-	int m_iNumHealSupport;
-	int m_iExcileChange;
-	int m_iPassageChange;
-	int m_iNoNonOwnedCityEntryChange;
-	int m_iBarbCoExistChange;
-	int m_iBlendIntoCityChange;
-	int m_iInsidiousnessChange;
-	int m_iInvestigationChange;
-	int m_iStealthStrikesChange;
-	int m_iStealthCombatModifierChange;
-	int m_iStealthDefenseChange;
-	int m_iDefenseOnlyChange;
-	int m_iNoInvisibilityChange;
-	int m_iNoCaptureChange;
-	int m_iAnimalIgnoresBordersChange;
-	int m_iNoDefensiveBonusChange;
-	int m_iGatherHerdChange;
-	int m_iReligiousCombatModifierChange;
+	int16_t m_iDodgeModifierChange;
+	int16_t m_iPrecisionModifierChange;
+	int16_t m_iPowerShotsChange;
+	int16_t m_iPowerShotCombatModifierChange;
+	int16_t m_iPowerShotPunctureModifierChange;
+	int16_t m_iPowerShotPrecisionModifierChange;
+	int16_t m_iPowerShotCriticalModifierChange;
+	int16_t m_iCriticalModifierChange;
+	int16_t m_iEnduranceChange;
+	int16_t m_iRoundStunProbChange;
+	int16_t m_iPoisonProbabilityModifierChange;
+	int16_t m_iCaptureProbabilityModifierChange;
+	int16_t m_iCaptureResistanceModifierChange;
+	int16_t m_iHillsWorkModifierChange;
+	int16_t m_iPeaksWorkModifierChange;
+	int16_t m_iBreakdownChanceChange;
+	int16_t m_iBreakdownDamageChange;
+	int16_t m_iTauntChange;
+	int16_t m_iMaxHPChange;
+	int16_t m_iStrengthModifier;
+	int16_t m_iQualityBase;
+	int16_t m_iGroupBase;
+	int16_t m_iSizeBase;
+	int16_t m_iDamageModifierChange;
+	int16_t m_iUpkeepModifier;
+	int16_t m_iExtraUpkeep100;
+	int16_t m_iRBombardDamageBase;
+	int16_t m_iRBombardDamageLimitBase;
+	int16_t m_iRBombardDamageMaxUnitsBase;
+	int16_t m_iDCMBombRangeBase;
+	int16_t m_iDCMBombAccuracyBase;
+	int16_t m_iCombatModifierPerSizeMoreChange;
+	int16_t m_iCombatModifierPerSizeLessChange;
+	int16_t m_iCombatModifierPerVolumeMoreChange;
+	int16_t m_iCombatModifierPerVolumeLessChange;
+	int16_t m_iSelfHealModifier;
+	int16_t m_iNumHealSupport;
+	int16_t m_iExcileChange;
+	int16_t m_iPassageChange;
+	int16_t m_iNoNonOwnedCityEntryChange;
+	int16_t m_iBarbCoExistChange;
+	int16_t m_iBlendIntoCityChange;
+	int16_t m_iInsidiousnessChange;
+	int16_t m_iInvestigationChange;
+	int16_t m_iStealthStrikesChange;
+	int16_t m_iStealthCombatModifierChange;
+	int16_t m_iStealthDefenseChange;
+	int16_t m_iDefenseOnlyChange;
+	int16_t m_iNoInvisibilityChange;
+	int16_t m_iNoCaptureChange;
+	int16_t m_iAnimalIgnoresBordersChange;
+	int16_t m_iNoDefensiveBonusChange;
+	int16_t m_iGatherHerdChange;
+	int16_t m_iReligiousCombatModifierChange;
 
 	//Booleans
 	bool m_bCanMovePeaks;
