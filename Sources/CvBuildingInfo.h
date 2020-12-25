@@ -550,25 +550,25 @@ protected:
 	int m_iPrereqVicinityBonus;
 	int m_iPrereqRawVicinityBonus;
 	int m_iGlobalPopulationgrowthratepercentage; // no xml
-	uint8_t m_iPopulationgrowthratepercentage;
+	int8_t m_iPopulationgrowthratepercentage;
 	int m_iWorldTradeRoutes; // no xml
-	uint8_t m_iLineOfSight;
+	int8_t m_iLineOfSight;
 	int m_iInflationModifier;
 	int m_iPillageGoldModifier;
-	uint8_t m_iInvasionChance;
-	uint8_t m_iAdjacentDamagePercent;
-	uint8_t m_iPrereqPopulation;
+	int8_t m_iInvasionChance;
+	int8_t m_iAdjacentDamagePercent;
+	int8_t m_iPrereqPopulation;
 	int m_iPrereqCultureLevel;
-	uint8_t m_iWorkableRadius;
+	int8_t m_iWorkableRadius;
 	int m_iPrereqAnyoneBuilding;
 	int m_iExtendsBuilding;
-	uint16_t m_iOccupationTimeModifier;
-	uint8_t m_iNoEntryDefenseLevel;
-	uint8_t m_iNumUnitFullHeal;
+	int16_t m_iOccupationTimeModifier;
+	int8_t m_iNoEntryDefenseLevel;
+	int8_t m_iNumUnitFullHeal;
 	int m_iProductionContinueBuilding;
-	uint8_t m_iNumPopulationEmployed;
-	uint8_t m_iHappinessPercentPerPopulation;
-	uint8_t m_iHealthPercentPerPopulation;
+	int8_t m_iNumPopulationEmployed;
+	int8_t m_iHappinessPercentPerPopulation;
+	int8_t m_iHealthPercentPerPopulation;
 	bool m_bBuildOnlyOnPeaks;
 	bool m_bPrereqPower;
 	bool m_bApplyFreePromotionOnMove;
@@ -606,7 +606,7 @@ protected:
 	int** m_ppaiBonusCommercePercentChanges;
 	int** m_ppaiVicinityBonusYieldChanges;
 
-private:
+//private:
 	int* m_piBuildingProductionModifier;
 	int* m_piGlobalBuildingProductionModifier;
 	int* m_piGlobalBuildingCostModifier;
@@ -633,58 +633,58 @@ protected:
 	int m_iNoBonus;
 	int m_iPowerBonus;
 	int m_iFreeBonus;
-	uint8_t m_iNumFreeBonuses;
+	int8_t m_iNumFreeBonuses;
 	std::vector<std::pair<BonusTypes,int> > m_aExtraFreeBonuses;
 
 	int m_iFreeBuilding;
 	int m_iFreeAreaBuilding;
 	int m_iFreePromotion;
 	int m_iCivicOption;
-	uint8_t m_iAIWeight;
+	int16_t m_iAIWeight;
 	int m_iProductionCost;
 	int m_iHurryCostModifier;
 	int m_iHurryAngerModifier;
 	int m_iAdvancedStartCost;
 	int m_iAdvancedStartCostIncrease;
-	uint8_t m_iMinAreaSize;
-	uint8_t m_iNumCitiesPrereq;
-	uint8_t m_iNumTeamsPrereq;
-	uint8_t m_iUnitLevelPrereq;
-	uint8_t m_iMinLatitude;
-	uint8_t m_iMaxLatitude;
-	uint8_t m_iGreatPeopleRateModifier;
-	uint8_t m_iGreatGeneralRateModifier;
-	uint8_t m_iDomesticGreatGeneralRateModifier;
-	uint8_t m_iGlobalGreatPeopleRateModifier;
+	int8_t m_iMinAreaSize;
+	int8_t m_iNumCitiesPrereq;
+	int8_t m_iNumTeamsPrereq;
+	int8_t m_iUnitLevelPrereq;
+	int8_t m_iMinLatitude;
+	int8_t m_iMaxLatitude;
+	int8_t m_iGreatPeopleRateModifier;
+	int8_t m_iGreatGeneralRateModifier;
+	int8_t m_iDomesticGreatGeneralRateModifier;
+	int8_t m_iGlobalGreatPeopleRateModifier;
 	int8_t m_iAnarchyModifier;
-	uint8_t m_iGoldenAgeModifier;
+	int8_t m_iGoldenAgeModifier;
 	int8_t m_iGlobalHurryModifier;
-	uint8_t m_iFreeExperience;
-	uint8_t m_iGlobalFreeExperience;
-	uint8_t m_iFoodKept;
-	uint8_t m_iAirlift;
+	int8_t m_iFreeExperience;
+	int8_t m_iGlobalFreeExperience;
+	int8_t m_iFoodKept;
+	int8_t m_iAirlift;
 	int8_t m_iAirModifier;
-	uint8_t m_iAirUnitCapacity;
+	int8_t m_iAirUnitCapacity;
 	int8_t m_iNukeModifier;
 	int m_iNukeExplosionRand; // no xml
-	uint8_t m_iFreeSpecialist;
-	uint8_t m_iAreaFreeSpecialist;
-	uint8_t m_iGlobalFreeSpecialist;
-	uint8_t m_iHappiness;
-	uint8_t m_iAreaHappiness;
-	uint8_t m_iGlobalHappiness;
-	uint8_t m_iStateReligionHappiness;
-	uint8_t m_iWorkerSpeedModifier;
-	int8_t m_iMilitaryProductionModifier;
-	uint8_t m_iSpaceProductionModifier;
-	uint8_t m_iGlobalSpaceProductionModifier;
-	uint8_t m_iTradeRoutes;
-	uint8_t m_iCoastalTradeRoutes;
-	uint8_t m_iGlobalTradeRoutes;
-	uint8_t m_iTradeRouteModifier;
-	uint8_t m_iForeignTradeRouteModifier;
-	uint8_t m_iAssetValue;
-	uint8_t m_iPowerValue;
+	int8_t m_iFreeSpecialist;
+	int8_t m_iAreaFreeSpecialist;
+	int8_t m_iGlobalFreeSpecialist;
+	int8_t m_iHappiness;
+	int8_t m_iAreaHappiness;
+	int8_t m_iGlobalHappiness;
+	int8_t m_iStateReligionHappiness;
+	int8_t m_iWorkerSpeedModifier;
+	int16_t m_iMilitaryProductionModifier;
+	int8_t m_iSpaceProductionModifier;
+	int8_t m_iGlobalSpaceProductionModifier;
+	int8_t m_iTradeRoutes;
+	int8_t m_iCoastalTradeRoutes;
+	int8_t m_iGlobalTradeRoutes;
+	int16_t m_iTradeRouteModifier;
+	int16_t m_iForeignTradeRouteModifier;
+	int8_t m_iAssetValue;
+	int8_t m_iPowerValue;
 	int m_iSpecialBuildingType;
 	int m_iAdvisorType;
 	int m_iPrereqGameOption;
@@ -699,8 +699,8 @@ protected:
 	int m_iGlobalCorporationCommerce;
 	int m_iPrereqAndBonus;
 	int m_iGreatPeopleUnitType;
-	uint8_t m_iGreatPeopleRateChange;
-	uint8_t m_iConquestProbability;
+	int8_t m_iGreatPeopleRateChange;
+	int8_t m_iConquestProbability;
 	int8_t m_iMaintenanceModifier;
 	int8_t m_iGlobalMaintenanceModifier;
 	int m_iAreaMaintenanceModifier; // no xml
@@ -711,31 +711,31 @@ protected:
 	int m_iConnectedCityMaintenanceModifier; // no xml
 	int8_t m_iWarWearinessModifier;
 	int8_t m_iGlobalWarWearinessModifier;
-	uint8_t m_iEnemyWarWearinessModifier;
-	uint8_t m_iHealRateChange;
-	uint8_t m_iHealth;
-	uint8_t m_iAreaHealth;
-	uint8_t m_iGlobalHealth;
+	int8_t m_iEnemyWarWearinessModifier;
+	int8_t m_iHealRateChange;
+	int8_t m_iHealth;
+	int8_t m_iAreaHealth;
+	int8_t m_iGlobalHealth;
 	int8_t m_iGlobalPopulationChange;
-	uint8_t m_iFreeTechs;
+	int8_t m_iFreeTechs;
 	TechTypes m_eFreeSpecialTech;
 	int16_t m_iDefenseModifier;
-	uint8_t m_iBombardDefenseModifier;
-	uint8_t m_iAllCityDefenseModifier;
-	uint8_t m_iEspionageDefenseModifier;
+	int8_t m_iBombardDefenseModifier;
+	int8_t m_iAllCityDefenseModifier;
+	int16_t m_iEspionageDefenseModifier;
 
 	int8_t m_iUnitUpgradePriceModifier;
-	uint8_t m_iRevIdxLocal;
+	int16_t m_iRevIdxLocal;
 	int16_t m_iRevIdxNational;
-	uint8_t m_iRevIdxDistanceModifier;
+	int8_t m_iRevIdxDistanceModifier;
 
 	int m_iMissionType;
 	int m_iVoteSourceType;
-	uint8_t m_iDCMAirbombMission;
-	uint8_t m_iMaxGlobalInstances;
-	int m_iMaxTeamInstances;
-	uint8_t m_iMaxPlayerInstances;
-	uint8_t m_iExtraPlayerInstances;
+	int8_t m_iDCMAirbombMission;
+	int8_t m_iMaxGlobalInstances;
+	int8_t m_iMaxTeamInstances;
+	int8_t m_iMaxPlayerInstances;
+	int8_t m_iExtraPlayerInstances;
 
 	float m_fVisibilityPriority;
 
@@ -787,9 +787,9 @@ protected:
 	int* m_piSpecialistExtraCommerce;
 	int* m_piStateReligionCommerce;
 	int* m_piCommerceHappiness;
-	//uint8_t* m_piReligionChange;
-	//uint8_t* m_piSpecialistCount;
-	//uint8_t* m_piFreeSpecialistCount;
+	//int8_t* m_piReligionChange;
+	//int8_t* m_piSpecialistCount;
+	//int8_t* m_piFreeSpecialistCount;
 	int* m_piReligionChange;
 	int* m_piSpecialistCount;
 	int* m_piFreeSpecialistCount;
@@ -799,7 +799,7 @@ protected:
 	int* m_piUnitCombatFreeExperience;
 	int* m_piDomainFreeExperience;
 	int* m_piDomainProductionModifier;
-	//uint8_t* m_piFlavorValue;
+	//int8_t* m_piFlavorValue;
 	int* m_piFlavorValue;
 	int* m_piImprovementFreeSpecialist;
 	int* m_piVictoryThreshold;
@@ -840,22 +840,22 @@ protected:
 	int m_iLongRangeSupportPercentModifier;
 	int m_iFlankSupportPercentModifier;
 #endif
-	uint8_t m_iNationalCaptureProbabilityModifier;
-	uint8_t m_iNationalCaptureResistanceModifier;
+	int8_t m_iNationalCaptureProbabilityModifier;
+	int8_t m_iNationalCaptureResistanceModifier;
 	int m_iLocalCaptureProbabilityModifier;
 	int m_iLocalCaptureResistanceModifier;
-	uint8_t m_iLocalDynamicDefense;
-	uint8_t m_iRiverDefensePenalty;
-	uint8_t m_iLocalRepel;
-	uint8_t m_iMinDefense;
-	uint16_t m_iBuildingDefenseRecoverySpeedModifier;
-	uint16_t m_iCityDefenseRecoverySpeedModifier;
-	uint8_t m_iDamageAttackerChance;
-	uint8_t m_iDamageToAttacker;
+	int8_t m_iLocalDynamicDefense;
+	int8_t m_iRiverDefensePenalty;
+	int8_t m_iLocalRepel;
+	int8_t m_iMinDefense;
+	int16_t m_iBuildingDefenseRecoverySpeedModifier;
+	int16_t m_iCityDefenseRecoverySpeedModifier;
+	int8_t m_iDamageAttackerChance;
+	int8_t m_iDamageToAttacker;
 	int m_iMaxPopulationAllowed; // no xml
 	int m_iMaxPopulationChange; // no xml
-	uint8_t m_iInsidiousness;
-	uint8_t m_iInvestigation;
+	int8_t m_iInsidiousness;
+	int8_t m_iInvestigation;
 	int m_iPopulationChange; // no xml
 	int m_iOneTimePopulationPercentLoss; // no xml
 
