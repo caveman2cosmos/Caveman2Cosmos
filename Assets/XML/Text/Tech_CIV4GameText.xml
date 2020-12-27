@@ -4930,7 +4930,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CIVIL_ENGINEERING_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Civil Engineering[COLOR_REVERT] allows you to build [COLOR_BUILDING_TEXT]Skyscrapers[COLOR_REVERT] and [COLOR_BUILDING_TEXT]Industrial Parks[COLOR_REVERT]. Obsoletes [COLOR_BUILDING_TEXT]Artesian Well[COLOR_REVERT].</English>
-		<French>[COLOR_TECH_TEXT]Génie Civil[COLOR_REVERT] vous permet de construire des [COLOR_BUILDING_TEXT]Gratte-ciels[COLOR_REVERT] et des [COLOR_BUILDING_TEXT]Zones industrielless[COLOR_REVERT]. rend Obsolète les [COLOR_BUILDING_TEXT]Puits Artésiens[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Génie Civil[COLOR_REVERT] vous permet de construire des [COLOR_BUILDING_TEXT]Gratte-ciels[COLOR_REVERT] et des [COLOR_BUILDING_TEXT]Zones industrielles[COLOR_REVERT]. rend Obsolète les [COLOR_BUILDING_TEXT]Puits Artésiens[COLOR_REVERT].</French>
 		<Spanish>La [COLOR_TECH_TEXT]Ingeniería civil[COLOR_REVERT] te permite construir [COLOR_BUILDING_TEXT]Rascacielos[COLOR_REVERT] y [COLOR_BUILDING_TEXT]Polígonos industriales[COLOR_REVERT]. Deja obsoleto el [COLOR_BUILDING_TEXT]Pozo artesiano[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
