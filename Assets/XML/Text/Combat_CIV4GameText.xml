@@ -154,7 +154,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACKER_DAMAGE_MODIFIER</Tag>
 		<English>[ICON_BULLET]Attacker Damage Modifier: %D1_Bonus%%</English>
-		<French>[ICON_BULLET]Modif de dégats (Attaquant): %D1_Bonus%%</French>
+		<French>[ICON_BULLET]Modif de dégâts (Attaquant): %D1_Bonus%%</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACKER_MAY_AFFLICT</Tag>
@@ -227,9 +227,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACK_UNTIL_DAMAGED</Tag>
-		<English>Repeatedly Attacks until Damaged</English>
+		<English>Repeatedly attacks until damaged</English>
 		<French>Attaque indéfiniment tant que indemne</French>
-		<Italian>Attacco continuo, finchè riceve danni</Italian>
+		<Italian>Attacco continuo, finché riceve danni</Italian>
 		<Polish>Powtarzaj Ataki póki nie otrzymasz Obrażeń</Polish>
 	</TEXT>
 	<TEXT>
@@ -299,7 +299,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DEFENDER_DAMAGE_MODIFIER</Tag>
 		<English>[ICON_BULLET]Defender Damage Modifier: %D1_Bonus%%</English>
-		<French>[ICON_BULLET]Modif de dégats (Défenseur) : %D1_Bonus%%</French>
+		<French>[ICON_BULLET]Modif de dégâts (Défenseur) : %D1_Bonus%%</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DEFENDER_MAY_AFFLICT</Tag>
@@ -348,7 +348,7 @@
 		<Tag>TXT_KEY_COMBAT_DEFENDER_WILL_AFFLICT</Tag>
 		<English>Defender Will Afflict:</English>
 		<French>Le Défenseur va infliger:</French>
-		<Italian>I difensori affligeranno:</Italian>
+		<Italian>I difensori affliggeranno:</Italian>
 		<Polish>Obrońca zada:</Polish>
 	</TEXT>
 	<TEXT>
@@ -388,7 +388,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_FORTIFICATION_COMPARE_ATTACKER_OVERRUN</Tag>
 		<English>vs Attacker Overrun:</English>
-		<French>contre Ecrasement de l'Attaquant:</French>
+		<French>contre Écrasement de l'Attaquant:</French>
 		<Italian>contro Invasione degli attaccanti:</Italian>
 		<Polish>przeciwko Inwazji Atakującego:</Polish>
 	</TEXT>
@@ -417,7 +417,7 @@
 		<Tag>TXT_KEY_COMBAT_FORTIFICATION_COMPARE_FORTIFIED_REPEL</Tag>
 		<English>and Fortified Repel:</English>
 		<French>et Expulsion Fortifié:</French>
-		<Italian>e Respinta forticata:</Italian>
+		<Italian>e Respinta fortificata:</Italian>
 		<Polish>i Odrzut Fortyfikowany:</Polish>
 	</TEXT>
 	<TEXT>
@@ -444,7 +444,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_KNOCKBACK_ATTACKER_KNOCKBACK</Tag>
 		<English>Attacker Knockback:</English>
-		<French>Ecrasement de l'Attaquant:</French>
+		<French>Écrasement de l'Attaquant:</French>
 		<Italian>Sbaraglio degli attaccanti:</Italian>
 		<Polish>Odrzut Atakującego:</Polish>
 	</TEXT>
@@ -458,7 +458,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_KNOCKBACK_TOTAL_KNOCKBACK</Tag>
 		<English>Total Knockback:</English>
-		<French>Total Ecrasement:</French>
+		<French>Total Écrasement:</French>
 		<Italian>Sbaraglio totale:</Italian>
 		<Polish>Całkowity Odrzut:</Polish>
 	</TEXT>
@@ -470,7 +470,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MAY_AFFLICT3</Tag>
 		<English>Opponent Fortitude = Total Chance:</English>
-		<French>Fortitude de l'oposant = Total Chance:</French>
+		<French>Fortitude de l'opposant = Total Chance:</French>
 		<Italian>Forza d'animo dell'avversario = Chance totali:</Italian>
 		<Polish>Wytrzymałość Wroga = Całkowita Szansa:</Polish>
 	</TEXT>
@@ -578,7 +578,7 @@
 		<English>[ICON_BULLET]%D1_Bonus%% Knockback vs. %s2_Type</English>
 		<French>[ICON_BULLET]%D1_Bonus%% de Piétinement contre %s2_Type</French>
 		<German>[ICON_BULLET]%D1_Bonus%% Knockback gegen %s2_Type</German>
-		<Italian>[ICON_BULLET]%D1_Bonus%% allo Sbaraglio contro %s2_Type</Italian>
+		<Italian>[ICON_BULLET]%D1_Bonus%% allo sbaraglio contro %s2_Type</Italian>
 		<Spanish>[ICON_BULLET]%D1_Bonus%% Knockback contra %s2:2_Type</Spanish>
 		<Polish>[ICON_BULLET]%D1_Bonus%% do Odrzucenia vs: %s2_Type</Polish>
 	</TEXT>
@@ -709,7 +709,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_PLUS_ELECTRICAL</Tag>
 		<English>Plus Electrical Damage Modifier:</English>
-		<French>Modif. Dégâts Electriques Pos.:</French>
+		<French>Modif. Dégâts Électriques Pos.:</French>
 		<Italian>Modificatore dovuto a Danno elettrico:</Italian>
 		<Polish>Dodatkowy Modyfikator Obrażeń od Elektryczności:</Polish>
 	</TEXT>
@@ -1029,7 +1029,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</Tag>
-		<English>Nature (Camoflaged)</English>
+		<English>Nature (Camouflaged)</English>
 		<French>
 			<Text>(Capacité Naturelle) Camouflage</Text>
 			<Gender>Female</Gender>
@@ -1223,7 +1223,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</Tag>
 		<English>Nature (Keen Senses)</English>
 		<French>
-			<Text>(Capacité Naturelle) Sens affutés</Text>
+			<Text>(Capacité Naturelle) Sens affûtes</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -1557,7 +1557,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ANIMAL_COMBAT_VENEMOUS</Tag>
-		<English>Nature (Venemous)</English>
+		<English>Nature (Venomous)</English>
 		<French>
 			<Text>(Capacité Naturelle) Vénéneux</Text>
 			<Gender>Female</Gender>
@@ -1829,7 +1829,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_ARMOR_MATERIAL_BARK</Tag>
 		<English>Armor Material (Bark)</English>
 		<French>
-			<Text>(Matériau d'armure) Ecorce</Text>
+			<Text>(Matériau d'armure) Escorce</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -2253,7 +2253,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_ARMOR_TYPE_CHARGED</Tag>
 		<English>Armor Type (Electric Charged)</English>
 		<French>
-			<Text>(Type d'armure) Charges Electriques</Text>
+			<Text>(Type d'armure) Charges Électriques</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -2620,7 +2620,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ATTACK_FORM_A2G_DISINTIGRATION</Tag>
-		<English>Attack (Air2Ground Disintigration)</English>
+		<English>Attack (Air2Ground Disintegration)</English>
 		<French>
 			<Text>(Attaque) Air-Sol Désintégration</Text>
 			<Gender>Female</Gender>
@@ -2805,7 +2805,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ATTACK_FORM_BACKUP_DISINTIGRATION</Tag>
-		<English>Attack (Dist Backup Disintigration)</English>
+		<English>Attack (Dist Backup Disintegration)</English>
 		<French>
 			<Text>(Attaque et à Distance) Désintégration</Text>
 			<Gender>Female</Gender>
@@ -2822,7 +2822,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_ATTACK_FORM_BACKUP_ELECTRICITY</Tag>
 		<English>Attack (Dist Backup Electricity)</English>
 		<French>
-			<Text>(Attaque et à Distance) Electrique</Text>
+			<Text>(Attaque et à Distance) Électrique</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -2837,7 +2837,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_ATTACK_FORM_BACKUP_EMP</Tag>
 		<English>Attack (Dist Backup Electromagnetic)</English>
 		<French>
-			<Text>(Attaque et à Distance) Electromagnétique</Text>
+			<Text>(Attaque et à Distance) Électromagnétique</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -3090,7 +3090,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ATTACK_FORM_DISTANCE_DISINTIGRATION</Tag>
-		<English>Attack (Distance Disintigration)</English>
+		<English>Attack (Distance Disintegration)</English>
 		<French>
 			<Text>(Attaque à Distance) Désintégration</Text>
 			<Gender>Female</Gender>
@@ -3107,7 +3107,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_ATTACK_FORM_DISTANCE_ELECTRICITY</Tag>
 		<English>Attack (Distance Electricity)</English>
 		<French>
-			<Text>(Attaque à Distance) Electrique</Text>
+			<Text>(Attaque à Distance) Électrique</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -3122,7 +3122,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_ATTACK_FORM_DISTANCE_EMP</Tag>
 		<English>Attack (Distance Electromagnetic)</English>
 		<French>
-			<Text>(Attaque à Distance) Electromagnétique</Text>
+			<Text>(Attaque à Distance) Électromagnétique</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -3345,7 +3345,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ATTACK_FORM_H2H_DISINTIGRATION</Tag>
-		<English>Attack (H2H Disintigration)</English>
+		<English>Attack (H2H Disintegration)</English>
 		<French>
 			<Text>(Attaque de Mélée) Désintégration</Text>
 			<Gender>Female</Gender>
@@ -3362,7 +3362,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_ATTACK_FORM_H2H_ELECTRICITY</Tag>
 		<English>Attack (H2H Electricity)</English>
 		<French>
-			<Text>(Attaque de Mélée) Electrique</Text>
+			<Text>(Attaque de Mélée) Électrique</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -3377,7 +3377,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_ATTACK_FORM_H2H_EMP</Tag>
 		<English>Attack (H2H Electromagnetic)</English>
 		<French>
-			<Text>(Attaque de Mélée) Electromagnétique</Text>
+			<Text>(Attaque de Mélée) Électromagnétique</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -3615,7 +3615,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ATTACK_FORM_SIDEARM_DISINTIGRATION</Tag>
-		<English>Attack (Sidearm Disintigration)</English>
+		<English>Attack (Sidearm Disintegration)</English>
 		<French>
 			<Text>(Attaque secondaire) Désintégration</Text>
 			<Gender>Female</Gender>
@@ -3632,7 +3632,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_ATTACK_FORM_SIDEARM_ELECTRICITY</Tag>
 		<English>Attack (Sidearm Electricity)</English>
 		<French>
-			<Text>(Attaque secondaire) Electrique</Text>
+			<Text>(Attaque secondaire) Électrique</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -3647,7 +3647,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_ATTACK_FORM_SIDEARM_EMP</Tag>
 		<English>Attack (Sidearm Electromagnetic)</English>
 		<French>
-			<Text>(Attaque secondaire) Electromagnétique</Text>
+			<Text>(Attaque secondaire) Électromagnétique</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -3881,7 +3881,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_BIOLOGICAL</Tag>
-		<English>Biological Warfares</English>
+		<English>Biological Warfare</English>
 		<French>
 			<Text>Unités de guerre biologique</Text>
 			<Gender>Female</Gender>
@@ -4246,7 +4246,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CONTROL</Tag>
-		<English>Controlers</English>
+		<English>Controllers</English>
 		<French>
 			<Text>Unités de Contrôle</Text>
 			<Gender>Female</Gender>
@@ -8325,6 +8325,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_HEALTH_CARE</Tag>
 		<English>Health Care Units</English>
 		<French>Unités de soins</French>
+		<German>
+			<Text>Sanitäter:Sanitäter:Sanitäter:Sanitäter</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_HELICOPTER</Tag>
@@ -10349,7 +10354,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SHIELD_ELECTROMAGNETIC</Tag>
 		<English>Shield (Electromagnetic)</English>
-		<French>(Protection) Electromagnétique</French>
+		<French>(Protection) Électromagnétique</French>
 		<Polish>Tarcza (Elektromagnetyczna)</Polish>
 	</TEXT>
 	<TEXT>
@@ -11287,7 +11292,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_BIOLOGICAL</Tag>
 		<English>Wields (A2G Biological)</English>
 		<French>
-			<Text>(Equipement) Armes Biologiques - Air-Sol</Text>
+			<Text>(Équipement) Armes Biologiques - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11302,7 +11307,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_BOMBS</Tag>
 		<English>Wields (A2G Bombs)</English>
 		<French>
-			<Text>(Equipement) Bombes - Air-Sol</Text>
+			<Text>(Équipement) Bombes - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11317,7 +11322,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_CHEMICAL</Tag>
 		<English>Wields (A2G Chemical)</English>
 		<French>
-			<Text>(Equipement) Armes Chimiques - Air-Sol</Text>
+			<Text>(Équipement) Armes Chimiques - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11332,7 +11337,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_GUIDED</Tag>
 		<English>Wields (A2G Guided)</English>
 		<French>
-			<Text>(Equipement) Armes Guidées - Air-Sol</Text>
+			<Text>(Équipement) Armes Guidées - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11347,7 +11352,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_LONG_RANGE_MISSILE</Tag>
 		<English>Wields (A2G Long Range Missiles)</English>
 		<French>
-			<Text>(Equipement) Missiles longue portée - Air-Sol</Text>
+			<Text>(Équipement) Missiles longue portée - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11362,7 +11367,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_MEDIUM_RANGE_MISSILE</Tag>
 		<English>Wields (A2G Medium Range Missiles)</English>
 		<French>
-			<Text>(Equipement) Missiles portée moyenne - Air-Sol</Text>
+			<Text>(Équipement) Missiles portée moyenne - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11377,7 +11382,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_RADIOACTIVE</Tag>
 		<English>Wields (A2G Radioactive)</English>
 		<French>
-			<Text>(Equipement) Armes Radioactives - Air-Sol</Text>
+			<Text>(Équipement) Armes Radioactives - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11392,7 +11397,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_SHORT_RANGE_MISSILE</Tag>
 		<English>Wields (A2G Short Range Missiles)</English>
 		<French>
-			<Text>(Equipement) Missiles courte portée - Air-Sol</Text>
+			<Text>(Équipement) Missiles courte portée - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11407,7 +11412,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_A2G_TORPEDO</Tag>
 		<English>Wields (A2G Torpedos)</English>
 		<French>
-			<Text>(Equipement) Torpilles - Air-Sol</Text>
+			<Text>(Équipement) Torpilles - Air-Sol</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11421,26 +11426,26 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ACOUSTOPHORESIS</Tag>
 		<English>Wields (Backup Acoustophoresis)</English>
-		<French>(Equipement secondaire) Acoustophorèse</French>
+		<French>(Équipement secondaire) Acoustophorèse</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Acoustophoresis)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ADVANCED_PATHOGENS</Tag>
 		<English>Wields (Backup Advanced Pathogens)</English>
-		<French>(Equipement secondaire) Pathogènes Avancés</French>
+		<French>(Équipement secondaire) Pathogènes Avancés</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Zaawansowane Patogeny)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ANTIMATTER</Tag>
 		<English>Wields (Backup Antimatter)</English>
-		<French>(Equipement secondaire) Anti-matière</French>
+		<French>(Équipement secondaire) Anti-matière</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Antymateria)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_AXE</Tag>
 		<English>Wields (Dist Backup Axe)</English>
 		<French>
-			<Text>(Equipement secondaire) Hache - A Distance</Text>
+			<Text>(Équipement secondaire) Hache - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11455,7 +11460,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_BALLISTA</Tag>
 		<English>Wields (Dist Backup Ballista)</English>
 		<French>
-			<Text>(Equipement secondaire) Balliste - A Distance</Text>
+			<Text>(Équipement secondaire) Balliste - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11470,7 +11475,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_BLOWGUN</Tag>
 		<English>Wields (Dist Backup Blowgun)</English>
 		<French>
-			<Text>(Equipement secondaire) Sarbacane - A Distance</Text>
+			<Text>(Équipement secondaire) Sarbacane - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11485,7 +11490,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_BOLA</Tag>
 		<English>Wields (Dist Backup Bola)</English>
 		<French>
-			<Text>(Equipement secondaire) Bolas - A Distance</Text>
+			<Text>(Équipement secondaire) Bolas - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11500,7 +11505,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_BOOMERANG</Tag>
 		<English>Wields (Dist Backup Boomerang)</English>
 		<French>
-			<Text>(Equipement secondaire) Boomerang - A Distance</Text>
+			<Text>(Équipement secondaire) Boomerang - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11515,7 +11520,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_CANNONBALL</Tag>
 		<English>Wields (Dist Backup Cannonball)</English>
 		<French>
-			<Text>(Equipement secondaire) Boulet de Canon - A Distance</Text>
+			<Text>(Équipement secondaire) Boulet de Canon - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11530,7 +11535,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_CLUB</Tag>
 		<English>Wields (Dist Backup Club)</English>
 		<French>
-			<Text>(Equipement secondaire) Gourdin - A Distance</Text>
+			<Text>(Équipement secondaire) Gourdin - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11544,20 +11549,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_COILGUN</Tag>
 		<English>Wields (Backup Coilgun)</English>
-		<French>(Equipement secondaire) Canon magnétique</French>
+		<French>(Équipement secondaire) Canon magnétique</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Działo Gaussa)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_DISINTIGRATION</Tag>
-		<English>Wields (Backup Disintigration)</English>
-		<French>(Equipement secondaire) Désintégration</French>
+		<English>Wields (Backup Disintegration)</English>
+		<French>(Équipement secondaire) Désintégration</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Dezintegrator)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_DYNAMITE</Tag>
 		<English>Wields (Dist Backup Dynamite)</English>
 		<French>
-			<Text>(Equipement secondaire) Dynamite - A Distance</Text>
+			<Text>(Équipement secondaire) Dynamite - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11572,7 +11577,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ELECTRICAL</Tag>
 		<English>Wields (Dist Backup Electrical)</English>
 		<French>
-			<Text>(Equipement secondaire) Arme Electrique - A Distance</Text>
+			<Text>(Équipement secondaire) Arme Électrique - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11587,7 +11592,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_EMP</Tag>
 		<English>Wields (Dist Backup Electromagnetic)</English>
 		<French>
-			<Text>(Equipement secondaire) Arme Electromagnétique - A Distance</Text>
+			<Text>(Équipement secondaire) Arme Électromagnétique - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11602,7 +11607,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_EXPLOSIVE_FLASK</Tag>
 		<English>Wields (Dist Backup Explosive Flask)</English>
 		<French>
-			<Text>(Equipement secondaire) Bouteille Explosive - A Distance</Text>
+			<Text>(Équipement secondaire) Bouteille Explosive - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11617,7 +11622,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FIREWORKS</Tag>
 		<English>Wields (Dist Backup Fireworks)</English>
 		<French>
-			<Text>(Equipement secondaire) Pétards - A Distance</Text>
+			<Text>(Équipement secondaire) Pétards - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11632,7 +11637,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FLAME</Tag>
 		<English>Wields (Dist Backup Flame Jet)</English>
 		<French>
-			<Text>(Equipement secondaire) Lance-Flamme - A Distance</Text>
+			<Text>(Équipement secondaire) Lance-Flamme - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11647,7 +11652,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FROST</Tag>
 		<English>Wields (Dist Backup Frost)</English>
 		<French>
-			<Text>(Equipement secondaire) Arme Frigorifiante - A Distance</Text>
+			<Text>(Équipement secondaire) Arme Frigorifiante - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11662,7 +11667,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FULLY_AUTOMATIC</Tag>
 		<English>Wields (Dist Backup Fully-Automatic)</English>
 		<French>
-			<Text>(Equipement secondaire) Arme Automatique - A Distance</Text>
+			<Text>(Équipement secondaire) Arme Automatique - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11676,20 +11681,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FUSION_CANNON</Tag>
 		<English>Wields (Backup Fusion Cannon)</English>
-		<French>(Equipement secondaire) Canon à Fusion</French>
+		<French>(Équipement secondaire) Canon à Fusion</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Działo Fuzyjne)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_GRAVITY</Tag>
 		<English>Wields (Backup Gravity)</English>
-		<French>(Equipement secondaire) Gravité</French>
+		<French>(Équipement secondaire) Gravité</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Grawitacyjna)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_GRENADE</Tag>
 		<English>Wields (Dist Backup Grenade)</English>
 		<French>
-			<Text>(Equipement secondaire) Grenade - A Distance</Text>
+			<Text>(Équipement secondaire) Grenade - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11704,7 +11709,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HAMMER</Tag>
 		<English>Wields (Dist Backup Hammer)</English>
 		<French>
-			<Text>(Equipement secondaire) Marteau - A Distance</Text>
+			<Text>(Équipement secondaire) Marteau - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11719,7 +11724,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HANDGUN</Tag>
 		<English>Wields (Dist Backup Handgun)</English>
 		<French>
-			<Text>(Equipement secondaire) Pistolet - A Distance</Text>
+			<Text>(Équipement secondaire) Pistolet - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11733,14 +11738,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HANDHELD_RAILGUN</Tag>
 		<English>Wields (Backup Handheld Railgun)</English>
-		<French>(Equipement secondaire) Railgun</French>
+		<French>(Équipement secondaire) Railgun</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Ręczny Railgun)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HEAT</Tag>
 		<English>Wields (Dist Backup Heat)</English>
 		<French>
-			<Text>(Equipement secondaire) Arme de Chaleur - A Distance</Text>
+			<Text>(Équipement secondaire) Arme de Chaleur - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11755,7 +11760,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HEAVY_CROSSBOW</Tag>
 		<English>Wields (Dist Backup Heavy Crossbow)</English>
 		<French>
-			<Text>(Equipement secondaire) Arbalète lourde - A Distance</Text>
+			<Text>(Équipement secondaire) Arbalète lourde - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11769,56 +11774,56 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HEAVY_RAILGUN</Tag>
 		<English>Wields (Backup Heavy Railgun)</English>
-		<French>(Equipement secondaire) Railgun lourd</French>
+		<French>(Équipement secondaire) Railgun lourd</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Ciężki Railgun)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_IMPROVED_ELECTRIC</Tag>
 		<English>Wields (Backup Improved Electric)</English>
-		<French>(Equipement secondaire) Electricité</French>
+		<French>(Équipement secondaire) Electricité</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Ulepszona Elektryczna)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_IMPROVED_EMP</Tag>
 		<English>Wields (Backup Improved EMP)</English>
-		<French>(Equipement secondaire) Impulsion Electro-magnétique</French>
+		<French>(Équipement secondaire) Impulsion Electro-magnétique</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Ulepszone EMP)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_IMPROVED_FROST</Tag>
 		<English>Wields (Backup Improved Frost)</English>
-		<French>(Equipement secondaire) Froid</French>
+		<French>(Équipement secondaire) Froid</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Ulepszone Zimno)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_IMPROVED_LASER</Tag>
 		<English>Wields (Backup Improved Laser)</English>
-		<French>(Equipement secondaire) Lasers améliorés</French>
+		<French>(Équipement secondaire) Lasers améliorés</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Ulepszony Laser)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_IMPROVED_NANO</Tag>
 		<English>Wields (Backup Improved Nanospray)</English>
-		<French>(Equipement secondaire) Spray de nanites</French>
+		<French>(Équipement secondaire) Spray de nanites</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Ulepszony Nanospraj)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_IMPROVED_PATHOGENS</Tag>
 		<English>Wields (Backup Improved Pathogens)</English>
-		<French>(Equipement) Pathogènes améliorés de sauvegarde</French>
+		<French>(Équipement) Pathogènes améliorés de sauvegarde</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Ulepszone Patogeny)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_IMPROVED_SONIC</Tag>
 		<English>Wields (Backup Improved Sonic)</English>
-		<French>(Equipement) Sonique amélioré</French>
+		<French>(Équipement) Sonique amélioré</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Ulepszona Soniczna)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ION</Tag>
 		<English>Wields (Dist Backup Ion)</English>
 		<French>
-			<Text>(Equipement secondaire) Arme à ions - A Distance</Text>
+			<Text>(Équipement secondaire) Arme à ions - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11833,7 +11838,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_JAVELIN</Tag>
 		<English>Wields (Dist Backup Javelin)</English>
 		<French>
-			<Text>(Equipement secondaire) Javelot - A Distance</Text>
+			<Text>(Équipement secondaire) Javelot - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11848,7 +11853,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_KNIFE</Tag>
 		<English>Wields (Dist Backup Knife)</English>
 		<French>
-			<Text>(Equipement secondaire) Couteau - A Distance</Text>
+			<Text>(Équipement secondaire) Couteau - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11863,7 +11868,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LASER</Tag>
 		<English>Wields (Dist Backup Laser)</English>
 		<French>
-			<Text>(Equipement secondaire) Arme Laser - A Distance</Text>
+			<Text>(Équipement secondaire) Arme Laser - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11878,7 +11883,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LAUNCHED_STONE</Tag>
 		<English>Wields (Dist Backup Launched Stone)</English>
 		<French>
-			<Text>(Equipement secondaire) Pierres à lancer - A Distance</Text>
+			<Text>(Équipement secondaire) Pierres à lancer - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11893,7 +11898,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LIGHT_CROSSBOW</Tag>
 		<English>Wields (Dist Backup Light Crossbow)</English>
 		<French>
-			<Text>(Equipement secondaire) Arbalète légère - A Distance</Text>
+			<Text>(Équipement secondaire) Arbalète légère - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11908,7 +11913,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LONGBOW</Tag>
 		<English>Wields (Dist Backup Longbow)</English>
 		<French>
-			<Text>(Equipement secondaire) Arc long - A Distance</Text>
+			<Text>(Équipement secondaire) Arc long - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11923,7 +11928,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LONG_RANGE_MISSILE</Tag>
 		<English>Wields (Dist Backup Long Range Missiles)</English>
 		<French>
-			<Text>(Equipement secondaire) Missile à longue porté - A Distance</Text>
+			<Text>(Équipement secondaire) Missile à longue porté - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11937,13 +11942,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_MAGNETIC</Tag>
 		<English>Wields (Backup Magnetic)</English>
-		<French>(Equipement) Magnétique</French>
+		<French>(Équipement) Magnétique</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Magnetyczna)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_MARTIAL_ART</Tag>
 		<English>Wields (Dist Backup Martial Arts Weaponry)</English>
-		<French>(Equipement) Armes Surriken - secondaire</French>
+		<French>(Équipement) Armes Surriken - secondaire</French>
 		<Spanish>
 			<Text>Armas de artes marciales (de reserva):Unidades con armas de artes marciales (de reserva)</Text>
 			<Gender>Female</Gender>
@@ -11954,14 +11959,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_MASS_DRIVER</Tag>
 		<English>Wields (Backup Mass Driver)</English>
-		<French>(Equipement) Conducteur de masse</French>
+		<French>(Équipement) Conducteur de masse</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Tworzenie Sterowników Mass)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_MEDIUM_RANGE_MISSILE</Tag>
 		<English>Wields (Dist Backup Medium Range Missiles)</English>
 		<French>
-			<Text>(Equipement secondaire) Missiles à portée moyenne - secondaire</Text>
+			<Text>(Équipement secondaire) Missiles à portée moyenne - secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -11975,38 +11980,38 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_NANOSPRAY</Tag>
 		<English>Wields (Backup Nanospray)</English>
-		<French>(Equipement) Spray Nanites de secours</French>
+		<French>(Équipement) Spray Nanites de secours</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Nanospraj)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_PATHOGEN_DELIVERY</Tag>
 		<English>Wields (Backup Pathogen Delivery)</English>
-		<French>(Equipement) Projection de Pathogènes de secours</French>
+		<French>(Équipement) Projection de Pathogènes de secours</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Pathogeny)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_PLASMA</Tag>
 		<English>Wields (Backup Plasma)</English>
-		<French>(Equipement) Plasma</French>
+		<French>(Équipement) Plasma</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Plazma)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_PSYCHOKINESIS</Tag>
 		<English>Wields (Backup Psychokinesis)</English>
-		<French>(Equipement) Psychokinésie</French>
+		<French>(Équipement) Psychokinésie</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Psychokineza)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_RAPID_RAILGUN</Tag>
 		<English>Wields (Backup Rapid Railgun)</English>
-		<French>(Equipement) Railgun rapide</French>
+		<French>(Équipement) Railgun rapide</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Szybka Railgun)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_REPEATING_CROSSBOW</Tag>
 		<English>Wields (Dist Backup Repeating Crossbow)</English>
 		<French>
-			<Text>(Equipement secondaire) Arbalète à répétition - secondaire</Text>
+			<Text>(Équipement secondaire) Arbalète à répétition - secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12021,7 +12026,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_RIFLE</Tag>
 		<English>Wields (Dist Backup Rifle)</English>
 		<French>
-			<Text>(Equipement secondaire) Fusil - secondaire</Text>
+			<Text>(Équipement secondaire) Fusil - secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12036,7 +12041,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ROCK</Tag>
 		<English>Wields (Dist Backup Rock)</English>
 		<French>
-			<Text>(Equipement secondaire) Rocher - secondaire</Text>
+			<Text>(Équipement secondaire) Rocher - secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12051,7 +12056,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SEMI_AUTOMATIC</Tag>
 		<English>Wields (Dist Backup Semi-Automatic)</English>
 		<French>
-			<Text>(Equipement secondaire) Arme Semi-Automatique - secondaire</Text>
+			<Text>(Équipement secondaire) Arme Semi-Automatique - secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12066,7 +12071,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SHELLFIRE</Tag>
 		<English>Wields (Dist Backup Shellfire)</English>
 		<French>
-			<Text>(Equipement secondaire) Arme à munitions enflammées - secondaire</Text>
+			<Text>(Équipement secondaire) Arme à munitions enflammées - secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12081,7 +12086,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SHORTBOW</Tag>
 		<English>Wields (Dist Backup Shortbow)</English>
 		<French>
-			<Text>(Equipement secondaire) Arc court - secondaire</Text>
+			<Text>(Équipement secondaire) Arc court - secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12096,7 +12101,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SHORT_RANGE_MISSILE</Tag>
 		<English>Wields (Dist Backup Short Range Missiles)</English>
 		<French>
-			<Text>(Equipement secondaire) Missiles à courte portée - secondaire</Text>
+			<Text>(Équipement secondaire) Missiles à courte portée - secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12111,7 +12116,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SLING</Tag>
 		<English>Wields (Dist Backup Sling)</English>
 		<French>
-			<Text>(Equipement secondaire) Fronde - secondaire</Text>
+			<Text>(Équipement secondaire) Fronde - secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12126,7 +12131,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SONIC</Tag>
 		<English>Wields (Dist Backup Sonic)</English>
 		<French>
-			<Text>(Equipement secondaire) Arme Sonique - secondaire</Text>
+			<Text>(Équipement secondaire) Arme Sonique - secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12140,20 +12145,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_TECHNO_TELEPATHIC</Tag>
 		<English>Wields (Backup Technological Telepathy)</English>
-		<French>(Equipement) Télépathie - Soutien</French>
+		<French>(Équipement) Télépathie - Soutien</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Telepatia Technologiczna)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_TELEPATHY</Tag>
 		<English>Wields (Backup Telepathy)</English>
-		<French>(Equipement) Télépathie</French>
+		<French>(Équipement) Télépathie</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Telepatia)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_TORPEDO</Tag>
 		<English>Wields (Dist Backup Torpedos)</English>
 		<French>
-			<Text>(Equipement secondaire) Torpilles - secondaire</Text>
+			<Text>(Équipement secondaire) Torpilles - secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12168,7 +12173,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DETONATE_BIOLOGICAL</Tag>
 		<English>Wields (Detonate Biological)</English>
 		<French>
-			<Text>(Equipement) Arme biologique - A retardement</Text>
+			<Text>(Équipement) Arme biologique - A retardement</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12183,7 +12188,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DETONATE_CHEMICAL</Tag>
 		<English>Wields (Detonate Chemical)</English>
 		<French>
-			<Text>(Equipement) Arme Chimique - à Détonation</Text>
+			<Text>(Équipement) Arme Chimique - à Détonation</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12198,7 +12203,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DETONATE_DYNAMITE</Tag>
 		<English>Wields (Detonate Dynamite)</English>
 		<French>
-			<Text>(Equipement) Dynamite - à Détonation</Text>
+			<Text>(Équipement) Dynamite - à Détonation</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12213,7 +12218,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DETONATE_GUIDED</Tag>
 		<English>Wields (Detonate Guided)</English>
 		<French>
-			<Text>(Equipement) Arme téléguidée - à Détonation</Text>
+			<Text>(Équipement) Arme téléguidée - à Détonation</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12228,7 +12233,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DETONATE_PSYCH</Tag>
 		<English>Wields (Detonate Psychological)</English>
 		<French>
-			<Text>(Equipement) Arme Psychologique - à Détonation</Text>
+			<Text>(Équipement) Arme Psychologique - à Détonation</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12243,7 +12248,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DETONATE_RADIOACTIVE</Tag>
 		<English>Wields (Detonate Radioactive)</English>
 		<French>
-			<Text>(Equipement) Arme Radioactive - à Détonation</Text>
+			<Text>(Équipement) Arme Radioactive - à Détonation</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12257,26 +12262,26 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_ACOUSTOPHORESIS</Tag>
 		<English>Wields (Distance Acoustophoresis)</English>
-		<French>(Equipement) Arme Acoustophorèse - A Distance</French>
+		<French>(Équipement) Arme Acoustophorèse - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Acoustophoresis)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_ADVANCED_PATHOGENS</Tag>
 		<English>Wields (Distance Advanced Pathogens)</English>
-		<French>(Equipement) arme à pathogènes avancés - A Distance</French>
+		<French>(Équipement) arme à pathogènes avancés - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Zaawansowane Patogeny)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_ANTIMATTER</Tag>
 		<English>Wields (Distance Antimatter)</English>
-		<French>(Equipement) Arme à Anti-matière - A Distance</French>
+		<French>(Équipement) Arme à Anti-matière - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Antimateria)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_AXE</Tag>
 		<English>Wields (Distance Axe)</English>
 		<French>
-			<Text>(Equipement) Hache de jet - A Distance</Text>
+			<Text>(Équipement) Hache de jet - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12291,7 +12296,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_BALLISTA</Tag>
 		<English>Wields (Distance Ballista)</English>
 		<French>
-			<Text>(Equipement) Balliste - A Distance</Text>
+			<Text>(Équipement) Balliste - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12306,7 +12311,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_BLOWGUN</Tag>
 		<English>Wields (Distance Blowgun)</English>
 		<French>
-			<Text>(Equipement) Sarbacane - A Distance</Text>
+			<Text>(Équipement) Sarbacane - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12321,7 +12326,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_BOLA</Tag>
 		<English>Wields (Distance Bola)</English>
 		<French>
-			<Text>(Equipement) Bolas - A Distance</Text>
+			<Text>(Équipement) Bolas - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12336,7 +12341,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_BOOMERANG</Tag>
 		<English>Wields (Distance Boomerang)</English>
 		<French>
-			<Text>(Equipement) Boomerang - A Distance</Text>
+			<Text>(Équipement) Boomerang - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12351,7 +12356,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_CANNONBALL</Tag>
 		<English>Wields (Distance Cannonball)</English>
 		<French>
-			<Text>(Equipement) Boulet de Canon - A Distance</Text>
+			<Text>(Équipement) Boulet de Canon - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12366,7 +12371,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_CLUB</Tag>
 		<English>Wields (Distance Club)</English>
 		<French>
-			<Text>(Equipement) Gourdin - A Distance</Text>
+			<Text>(Équipement) Gourdin - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12380,20 +12385,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_COILGUN</Tag>
 		<English>Wields (Distance Coilgun)</English>
-		<French>(Equipement) Arme Magnétique - A Distance</French>
+		<French>(Équipement) Arme Magnétique - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Działo Gaussa)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_DISINTIGRATION</Tag>
-		<English>Wields (Distance Disintigration)</English>
-		<French>(Equipement) Arme de Désintégration - A Distance</French>
+		<English>Wields (Distance Disintegration)</English>
+		<French>(Équipement) Arme de Désintégration - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Dezintegrator)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_DYNAMITE</Tag>
 		<English>Wields (Distance Dynamite)</English>
 		<French>
-			<Text>(Equipement) Dynamite - A Distance</Text>
+			<Text>(Équipement) Dynamite - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12408,7 +12413,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_ELECTRICAL</Tag>
 		<English>Wields (Distance Electrical)</English>
 		<French>
-			<Text>(Equipement) Arme Electrique - A Distance</Text>
+			<Text>(Équipement) Arme Électrique - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12423,7 +12428,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_EMP</Tag>
 		<English>Wields (Distance Electromagnetic)</English>
 		<French>
-			<Text>(Equipement) Arme Electromagnétique - A Distance</Text>
+			<Text>(Équipement) Arme Électromagnétique - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12438,7 +12443,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_EXPLOSIVE_FLASK</Tag>
 		<English>Wields (Distance Explosive Flask)</English>
 		<French>
-			<Text>(Equipement) Bouteille Explosive - A Distance</Text>
+			<Text>(Équipement) Bouteille Explosive - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12453,7 +12458,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_FIREWORKS</Tag>
 		<English>Wields (Distance Fireworks)</English>
 		<French>
-			<Text>(Equipement) Pétards - A Distance</Text>
+			<Text>(Équipement) Pétards - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12468,7 +12473,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_FLAME</Tag>
 		<English>Wields (Distance Flame Jet)</English>
 		<French>
-			<Text>(Equipement) Lance-Flammes - A Distance</Text>
+			<Text>(Équipement) Lance-Flammes - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12483,7 +12488,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_FROST</Tag>
 		<English>Wields (Distance Frost)</English>
 		<French>
-			<Text>(Equipement) Arme Frigorifique - A Distance</Text>
+			<Text>(Équipement) Arme Frigorifique - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12498,7 +12503,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_FULLY_AUTOMATIC</Tag>
 		<English>Wields (Distance Fully-Automatic)</English>
 		<French>
-			<Text>(Equipement) Arme Automatique - A Distance</Text>
+			<Text>(Équipement) Arme Automatique - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12512,20 +12517,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_FUSION_CANNON</Tag>
 		<English>Wields (Distance Fusion Cannon)</English>
-		<French>(Equipement) Canon à Fusion - A Distance</French>
+		<French>(Équipement) Canon à Fusion - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Działo Fuzyjne)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_GRAVITY</Tag>
 		<English>Wields (Distance Gravity)</English>
-		<French>(Equipement) Arme à Gravité - A Distance</French>
+		<French>(Équipement) Arme à Gravité - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Grawitacja)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_GRENADE</Tag>
 		<English>Wields (Distance Grenade)</English>
 		<French>
-			<Text>(Equipement) Grenade - A Distance</Text>
+			<Text>(Équipement) Grenade - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12540,7 +12545,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_HAMMER</Tag>
 		<English>Wields (Distance Hammer)</English>
 		<French>
-			<Text>(Equipement) Marteau de Jet - A Distance</Text>
+			<Text>(Équipement) Marteau de Jet - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12555,7 +12560,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_HANDGUN</Tag>
 		<English>Wields (Distance Handgun)</English>
 		<French>
-			<Text>(Equipement) Pistolet - A Distance</Text>
+			<Text>(Équipement) Pistolet - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12569,14 +12574,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_HANDHELD_RAILGUN</Tag>
 		<English>Wields (Distance Handheld Railgun)</English>
-		<French>(Equipement) Railgun Portatif - A Distance</French>
+		<French>(Équipement) Railgun Portatif - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Ręczny Railgun)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_HEAT</Tag>
 		<English>Wields (Distance Heat)</English>
 		<French>
-			<Text>(Equipement) Arme Chauffante - A Distance</Text>
+			<Text>(Équipement) Arme Chauffante - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12591,7 +12596,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_HEAVY_CROSSBOW</Tag>
 		<English>Wields (Distance Heavy Crossbow)</English>
 		<French>
-			<Text>(Equipement) Arbalète lourde - A Distance</Text>
+			<Text>(Équipement) Arbalète lourde - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12605,56 +12610,56 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_HEAVY_RAILGUN</Tag>
 		<English>Wields (Distance Heavy Railgun)</English>
-		<French>(Equipement) Railgun Lourd - A Distance</French>
+		<French>(Équipement) Railgun Lourd - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Ciężki Railgun)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_IMPROVED_ELECTRIC</Tag>
 		<English>Wields (Distance Improved Electric)</English>
-		<French>(Equipement) Arme Electrique améliorée - A Distance</French>
+		<French>(Équipement) Arme Électrique améliorée - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Ulepszony Elektryczny)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_IMPROVED_EMP</Tag>
 		<English>Wields (Distance Improved EMP)</English>
-		<French>(Equipement) Arme à EMP améliorée - A Distance</French>
+		<French>(Équipement) Arme à EMP améliorée - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Ulepszona Emp)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_IMPROVED_FROST</Tag>
 		<English>Wields (Distance Improved Frost)</English>
-		<French>(Equipement) Arme frigorifique améliorée - A Distance</French>
+		<French>(Équipement) Arme frigorifique améliorée - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Ulepszone Zimno)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_IMPROVED_LASER</Tag>
 		<English>Wields (Distance Improved Laser)</English>
-		<French>(Equipement) Laser amélioré - A Distance</French>
+		<French>(Équipement) Laser amélioré - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Ulepszona Laser)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_IMPROVED_NANO</Tag>
 		<English>Wields (Distance Improved Nanospray)</English>
-		<French>(Equipement) Nanospray Amélioré - A Distance</French>
+		<French>(Équipement) Nanospray Amélioré - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Ulepszona Nanospray)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_IMPROVED_PATHOGENS</Tag>
 		<English>Wields (Distance Improved Pathogens)</English>
-		<French>(Equipement) Pathogènes améliorés - A Distance</French>
+		<French>(Équipement) Pathogènes améliorés - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Ulepszona Patogeny)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_IMPROVED_SONIC</Tag>
 		<English>Wields (Distance Improved Sonic)</English>
-		<French>(Equipement) Arme sonique améliorée - A Distance</French>
+		<French>(Équipement) Arme sonique améliorée - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Ulepszona Sonic)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_ION</Tag>
 		<English>Wields (Distance Ion)</English>
 		<French>
-			<Text>(Equipement) Pistolet à Ion - A Distance</Text>
+			<Text>(Équipement) Pistolet à Ion - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12669,7 +12674,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_JAVELIN</Tag>
 		<English>Wields (Distance Javelin)</English>
 		<French>
-			<Text>(Equipement) Javelot - A Distance</Text>
+			<Text>(Équipement) Javelot - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12684,10 +12689,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_KNIFE</Tag>
 		<English>Wields (Distance Knife)</English>
 		<French>
-			<Text>(Equipement) Dague de Jet - A Distance</Text>
+			<Text>(Équipement) Dague de Jet - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Wurfmesser (Fernkampf)</German>
 		<Spanish>
 			<Text>Daga (a distancia):Unidades con daga (a distancia)</Text>
 			<Gender>Female</Gender>
@@ -12699,7 +12705,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_LASER</Tag>
 		<English>Wields (Distance Laser)</English>
 		<French>
-			<Text>(Equipement) Arme Laser - A Distance</Text>
+			<Text>(Équipement) Arme Laser - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12714,7 +12720,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_LAUNCHED_STONE</Tag>
 		<English>Wields (Distance Launched Stone)</English>
 		<French>
-			<Text>(Equipement) Lance-pierre - A Distance</Text>
+			<Text>(Équipement) Lance-pierre - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12729,7 +12735,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_LIGHT_CROSSBOW</Tag>
 		<English>Wields (Distance Light Crossbow)</English>
 		<French>
-			<Text>(Equipement) Arbalète légère - A Distance</Text>
+			<Text>(Équipement) Arbalète légère - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12744,7 +12750,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_LONGBOW</Tag>
 		<English>Wields (Distance Longbow)</English>
 		<French>
-			<Text>(Equipement) Arc long - A Distance</Text>
+			<Text>(Équipement) Arc long - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12759,7 +12765,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_LONG_RANGE_MISSILE</Tag>
 		<English>Wields (Distance Long Range Missiles)</English>
 		<French>
-			<Text>(Equipement) Missiles Longue portée - A Distance</Text>
+			<Text>(Équipement) Missiles Longue portée - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12773,14 +12779,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_MAGNETIC</Tag>
 		<English>Wields (Distance Magnetic)</English>
-		<French>(Equipement) Arme Magnétique - A Distance</French>
+		<French>(Équipement) Arme Magnétique - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Magnetyczny)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_MARTIAL_ART</Tag>
 		<English>Wields (Distance Martial Arts Weaponry)</English>
 		<French>
-			<Text>(Equipement) Shuriken - A Distance</Text>
+			<Text>(Équipement) Shuriken - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12794,14 +12800,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_MASS_DRIVER</Tag>
 		<English>Wields (Distance Mass Driver)</English>
-		<French>(Equipement) Conducteur de Masse - A Distance</French>
+		<French>(Équipement) Conducteur de Masse - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Miotacz Masy)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_MEDIUM_RANGE_MISSILE</Tag>
 		<English>Wields (Distance Medium Range Missiles)</English>
 		<French>
-			<Text>(Equipement) Missiles à portée moyenne - A Distance</Text>
+			<Text>(Équipement) Missiles à portée moyenne - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12815,38 +12821,38 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_NANOSPRAY</Tag>
 		<English>Wields (Distance Nanospray)</English>
-		<French>(Equipement) Nanospray - A Distance</French>
+		<French>(Équipement) Nanospray - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Nanospraj)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_PATHOGEN_DELIVERY</Tag>
 		<English>Wields (Distance Pathogen Delivery)</English>
-		<French>(Equipement) Arme à Pathogène - A Distance</French>
+		<French>(Équipement) Arme à Pathogène - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Broń Biologiczna)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_PLASMA</Tag>
 		<English>Wields (Distance Plasma)</English>
-		<French>(Equipement) Arme à Plasma - A Distance</French>
+		<French>(Équipement) Arme à Plasma - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Plazma)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_PSYCHOKINESIS</Tag>
 		<English>Wields (Distance Psychokinesis)</English>
-		<French>(Equipement) Arme Psychokinetique - A Distance</French>
+		<French>(Équipement) Arme Psychokinetique - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Psychokineza)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_RAPID_RAILGUN</Tag>
 		<English>Wields (Distance Rapid Railgun)</English>
-		<French>(Equipement) Railgun rapide - A Distance</French>
+		<French>(Équipement) Railgun rapide - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Szybki Railgun)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_REPEATING_CROSSBOW</Tag>
 		<English>Wields (Distance Repeating Crossbow)</English>
 		<French>
-			<Text>(Equipement) Arbalète à répétition - A Distance</Text>
+			<Text>(Équipement) Arbalète à répétition - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12861,7 +12867,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_RIFLE</Tag>
 		<English>Wields (Distance Rifle)</English>
 		<French>
-			<Text>(Equipement) Fusil - A Distance</Text>
+			<Text>(Équipement) Fusil - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12876,7 +12882,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_ROCK</Tag>
 		<English>Wields (Distance Rock)</English>
 		<French>
-			<Text>(Equipement) Pierres - A Distance</Text>
+			<Text>(Équipement) Pierres - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12892,7 +12898,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SEMI_AUTOMATIC</Tag>
 		<English>Wields (Distance Semi-Automatic)</English>
 		<French>
-			<Text>(Equipement) Arme Semi-Automatique - A Distance</Text>
+			<Text>(Équipement) Arme Semi-Automatique - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12907,7 +12913,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SHELLFIRE</Tag>
 		<English>Wields (Distance Shellfire)</English>
 		<French>
-			<Text>(Equipement) Arme à Munitions enflammées - A Distance</Text>
+			<Text>(Équipement) Arme à Munitions enflammées - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12922,7 +12928,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SHORTBOW</Tag>
 		<English>Wields (Distance Shortbow)</English>
 		<French>
-			<Text>(Equipement) Arc court - A Distance</Text>
+			<Text>(Équipement) Arc court - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12937,7 +12943,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SHORT_RANGE_MISSILE</Tag>
 		<English>Wields (Distance Short Range Missiles)</English>
 		<French>
-			<Text>(Equipement) Missiles à Courte Portée - A Distance</Text>
+			<Text>(Équipement) Missiles à Courte Portée - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12952,7 +12958,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SLING</Tag>
 		<English>Wields (Distance Sling)</English>
 		<French>
-			<Text>(Equipement) Fronde - A Distance</Text>
+			<Text>(Équipement) Fronde - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12967,7 +12973,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SONIC</Tag>
 		<English>Wields (Distance Sonic)</English>
 		<French>
-			<Text>(Equipement) Arme Sonique - A Distance</Text>
+			<Text>(Équipement) Arme Sonique - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12981,20 +12987,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_TECHNO_TELEPATHIC</Tag>
 		<English>Wields (Distance Technological Telepathy)</English>
-		<French>(Equipement) Télépathie technologique - A Distance</French>
+		<French>(Équipement) Télépathie technologique - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Telepatia Technologiczna)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_TELEPATHY</Tag>
 		<English>Wields (Distance Telepathy)</English>
-		<French>(Equipement) Télépathie - A Distance</French>
+		<French>(Équipement) Télépathie - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Telepatia)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_TORPEDO</Tag>
 		<English>Wields (Distance Torpedos)</English>
 		<French>
-			<Text>(Equipement) Torpilles - A Distance</Text>
+			<Text>(Équipement) Torpilles - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13009,7 +13015,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_AXE</Tag>
 		<English>Wields (H2H Axe)</English>
 		<French>
-			<Text>(Equipement) Hache - Corps à Corps</Text>
+			<Text>(Équipement) Hache - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13024,7 +13030,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_BAYONETTE</Tag>
 		<English>Wields (H2H Bayonette)</English>
 		<French>
-			<Text>(Equipement) Bayonnette - Corps à Corps</Text>
+			<Text>(Équipement) Bayonnette - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13039,7 +13045,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_CLUB</Tag>
 		<English>Wields (H2H Club)</English>
 		<French>
-			<Text>(Equipement) Massue - Corps à Corps</Text>
+			<Text>(Équipement) Massue - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13055,7 +13061,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_CROWBAR</Tag>
 		<English>Wields (H2H Crowbar)</English>
 		<French>
-			<Text>(Equipement) Pied de biche - Corps à Corps</Text>
+			<Text>(Équipement) Pied de biche - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13070,7 +13076,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_EMP</Tag>
 		<English>Wields (H2H Electromagnetic)</English>
 		<French>
-			<Text>(Equipement) Gant Electromagnétique - Corps à Corps</Text>
+			<Text>(Équipement) Gant Électromagnétique - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13085,7 +13091,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_ENERGY_GLOVES</Tag>
 		<English>Wields (H2H Energy Gloves)</English>
 		<French>
-			<Text>(Equipement) Gant énergétique - Corps à Corps</Text>
+			<Text>(Équipement) Gant énergétique - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13100,7 +13106,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_FIST</Tag>
 		<English>Wields (H2H Fists)</English>
 		<French>
-			<Text>(Equipement) Poings - Corps à Corps</Text>
+			<Text>(Équipement) Poings - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13116,7 +13122,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_FLAIL</Tag>
 		<English>Wields (H2H Flail)</English>
 		<French>
-			<Text>(Equipement) Fléau - Corps à Corps</Text>
+			<Text>(Équipement) Fléau - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13131,7 +13137,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_FLAMETHROWER</Tag>
 		<English>Wields (H2H Flamethrower)</English>
 		<French>
-			<Text>(Equipement) Lance-Flammes - Corps à Corps</Text>
+			<Text>(Équipement) Lance-Flammes - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13146,7 +13152,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_HAMMER</Tag>
 		<English>Wields (H2H Hammer)</English>
 		<French>
-			<Text>(Equipement) Marteau - Corps à Corps</Text>
+			<Text>(Équipement) Marteau - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13161,7 +13167,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_HANDGUN</Tag>
 		<English>Wields (H2H Handgun)</English>
 		<French>
-			<Text>(Equipement) Pistolet - Corps à Corps</Text>
+			<Text>(Équipement) Pistolet - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13176,7 +13182,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_HYDRAULIC_APPENDAGE</Tag>
 		<English>Wields (H2H Hydraulic Appendage)</English>
 		<French>
-			<Text>(Equipement) Arme Hydraulique - Corps à Corps</Text>
+			<Text>(Équipement) Arme Hydraulique - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13191,7 +13197,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_KNIFE</Tag>
 		<English>Wields (H2H Knife)</English>
 		<French>
-			<Text>(Equipement) Couteau - Corps à Corps</Text>
+			<Text>(Équipement) Couteau - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13206,7 +13212,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_LASER</Tag>
 		<English>Wields (H2H Laser)</English>
 		<French>
-			<Text>(Equipement) Epée Laser - Corps à Corps</Text>
+			<Text>(Équipement) Épée Laser - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13221,7 +13227,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_LONG_BLADE</Tag>
 		<English>Wields (H2H Long Blade)</English>
 		<French>
-			<Text>(Equipement) Epée Longue - Corps à Corps</Text>
+			<Text>(Équipement) Épée Longue - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13236,7 +13242,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_LONG_POLEARM</Tag>
 		<English>Wields (H2H Long Polearm)</English>
 		<French>
-			<Text>(Equipement) Arme à long Manche - Corps à Corps</Text>
+			<Text>(Équipement) Arme à long Manche - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13251,7 +13257,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_MACE</Tag>
 		<English>Wields (H2H Mace)</English>
 		<French>
-			<Text>(Equipement) Masse - Corps à Corps</Text>
+			<Text>(Équipement) Masse - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13266,7 +13272,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_MARTIAL_ART</Tag>
 		<English>Wields (H2H Martial Arts)</English>
 		<French>
-			<Text>(Equipement) Arts Martiaux - Corps à Corps</Text>
+			<Text>(Équipement) Arts Martiaux - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13281,7 +13287,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_OAR</Tag>
 		<English>Wields (H2H Oar)</English>
 		<French>
-			<Text>(Equipement) Rames - Corps à Corps</Text>
+			<Text>(Équipement) Rames - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13296,7 +13302,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_RIFLE_BUTT</Tag>
 		<English>Wields (H2H Rifle Butt)</English>
 		<French>
-			<Text>(Equipement) Crosse de Fusil - Corps à Corps</Text>
+			<Text>(Équipement) Crosse de Fusil - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13311,7 +13317,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_ROCK</Tag>
 		<English>Wields (H2H Rocks)</English>
 		<French>
-			<Text>(Equipement) Pierres - Corps à Corps</Text>
+			<Text>(Équipement) Pierres - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13327,7 +13333,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_SHORT_BLADE</Tag>
 		<English>Wields (H2H Short Blade)</English>
 		<French>
-			<Text>(Equipement) Epée Courte - Corps à Corps</Text>
+			<Text>(Équipement) Épée Courte - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13342,7 +13348,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_SHORT_POLEARM</Tag>
 		<English>Wields (H2H Short Polearm)</English>
 		<French>
-			<Text>(Equipement) Arme à Manche Court - Corps à Corps</Text>
+			<Text>(Équipement) Arme à Manche Court - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13357,7 +13363,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_SPRAY</Tag>
 		<English>Wields (H2H Spray Cannister)</English>
 		<French>
-			<Text>(Equipement) Spray - Corps à Corps</Text>
+			<Text>(Équipement) Spray - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13372,7 +13378,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_STAFF</Tag>
 		<English>Wields (H2H Staff)</English>
 		<French>
-			<Text>(Equipement) Baton - Corps à Corps</Text>
+			<Text>(Équipement) Baton - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13388,7 +13394,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_TASER</Tag>
 		<English>Wields (H2H Taser)</English>
 		<French>
-			<Text>(Equipement) Taser - Corps à Corps</Text>
+			<Text>(Équipement) Taser - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13483,10 +13489,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_AXE</Tag>
 		<English>Wields (Sidearm Axe)</English>
 		<French>
-			<Text>(Equipement) Hache - Arme secondaire</Text>
+			<Text>(Équipement) Hache - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Axt (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Hacha (secundaria):Unidades con hacha (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13498,10 +13505,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_BAYONETTE</Tag>
 		<English>Wields (Sidearm Bayonette)</English>
 		<French>
-			<Text>(Equipement) Bayonnette - Arme secondaire</Text>
+			<Text>(Équipement) Bayonnette - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Bajonett (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Bayoneta (secundaria):Unidades con bayoneta (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13513,10 +13521,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_CLUB</Tag>
 		<English>Wields (Sidearm Club)</English>
 		<French>
-			<Text>(Equipement) Gourdin - Arme secondaire</Text>
+			<Text>(Équipement) Gourdin - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Keule (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Garrote (secundaria):Unidades con garrote (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13528,10 +13537,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_CROWBAR</Tag>
 		<English>Wields (Sidearm Crowbar)</English>
 		<French>
-			<Text>(Equipement) Pied de biche - Arme secondaire</Text>
+			<Text>(Équipement) Pied de biche - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Brecheisen (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Alzaprima (secundaria):Unidades con alzaprima (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13543,10 +13553,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_EMP</Tag>
 		<English>Wields (Sidearm Electromagnetic)</English>
 		<French>
-			<Text>(Equipement) Gant Electromagnétique - Arme secondaire</Text>
+			<Text>(Équipement) Gant Électromagnétique - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Elektromagnet (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Armas electromagnéticas (secundaria):Unidades con armas electromagnéticas (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13558,10 +13569,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_ENERGY_GLOVES</Tag>
 		<English>Wields (Sidearm Energy Gloves)</English>
 		<French>
-			<Text>(Equipement) Gant énergétique - Arme secondaire</Text>
+			<Text>(Équipement) Gant énergétique - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Energiehandschuhe (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Guantes de energía (secundaria):Unidades con guantes de energía (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13573,11 +13585,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_FIST</Tag>
 		<English>Wields (Sidearm Fists)</English>
 		<French>
-			<Text>(Equipement) Poing - Arme secondaire</Text>
+			<Text>(Équipement) Poing - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>Fäuste als Sekundärwaffe</German>
+		<German>(Waffe) Fäuste (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Puños (secundaria):Unidades con puños (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13589,10 +13601,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_FLAIL</Tag>
 		<English>Wields (Sidearm Flail)</English>
 		<French>
-			<Text>(Equipement) Fléau - Arme secondaire</Text>
+			<Text>(Équipement) Fléau - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Dreschflegel (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Mayal (secundaria):Unidades con mayal (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13604,10 +13617,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_FLAMETHROWER</Tag>
 		<English>Wields (Sidearm Flamethrower)</English>
 		<French>
-			<Text>(Equipement) Lance-Flammes - Arme secondaire</Text>
+			<Text>(Équipement) Lance-Flammes - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Flammenwerfer (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Lanzallamas (secundaria):Unidades con lanzallamas (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13619,10 +13633,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_HAMMER</Tag>
 		<English>Wields (Sidearm Hammer)</English>
 		<French>
-			<Text>(Equipement) Marteau - Arme secondaire</Text>
+			<Text>(Équipement) Marteau - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Hammer (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Martillo (secundaria):Unidades con martillo (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13634,10 +13649,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_HANDGUN</Tag>
 		<English>Wields (Sidearm Handgun)</English>
 		<French>
-			<Text>(Equipement) Pistolet - Arme secondaire</Text>
+			<Text>(Équipement) Pistolet - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Pistole (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Pistola (secundaria):Unidades con pistola (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13649,10 +13665,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_HYDRAULIC_APPENDAGE</Tag>
 		<English>Wields (Sidearm Hydraulic Appendage)</English>
 		<French>
-			<Text>(Equipement) Arme Hydraulique - Arme secondaire</Text>
+			<Text>(Équipement) Arme Hydraulique - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Hydraulischer Arm (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Apéndice hidráulico (secundaria):Unidades con apéndice hidráulico (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13664,10 +13681,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_KNIFE</Tag>
 		<English>Wields (Sidearm Knife)</English>
 		<French>
-			<Text>(Equipement) Couteau - Arme secondaire</Text>
+			<Text>(Équipement) Couteau - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Messer (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Daga (secundaria):Unidades con daga (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13679,10 +13697,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_LASER</Tag>
 		<English>Wields (Sidearm Laser)</English>
 		<French>
-			<Text>(Equipement) Laser - Arme secondaire</Text>
+			<Text>(Équipement) Laser - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Laser (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Armas láser (secundaria):Unidades con armas láser (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13694,10 +13713,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_LONG_BLADE</Tag>
 		<English>Wields (Sidearm Long Blade)</English>
 		<French>
-			<Text>(Equipement) Epée Longue - Arme secondaire</Text>
+			<Text>(Équipement) Épée Longue - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Langschwert (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Espada larga (secundaria):Unidades con espada larga (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13709,10 +13729,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_LONG_POLEARM</Tag>
 		<English>Wields (Sidearm Long Polearm)</English>
 		<French>
-			<Text>(Equipement) Lance à long Manche - Arme secondaire</Text>
+			<Text>(Équipement) Lance à long Manche - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Lanze (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Alabarda larga (secundaria):Unidades con alabarda larga (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13724,10 +13745,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_MACE</Tag>
 		<English>Wields (Sidearm Mace)</English>
 		<French>
-			<Text>(Equipement) Masse - Arme secondaire</Text>
+			<Text>(Équipement) Masse - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Streitkolben (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Maza (secundaria):Unidades con maza (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13739,10 +13761,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_MARTIAL_ART</Tag>
 		<English>Wields (Sidearm Martial Arts)</English>
 		<French>
-			<Text>(Equipement) Arts Martiaux - Arme secondaire</Text>
+			<Text>(Équipement) Arts Martiaux - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Kampfsport (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Artes marciales (secundaria):Unidades con artes marciales (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13754,10 +13777,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_OAR</Tag>
 		<English>Wields (Sidearm Oar)</English>
 		<French>
-			<Text>(Equipement) Rames - Arme secondaire</Text>
+			<Text>(Équipement) Rames - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Ruder (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Remo (secundaria):Unidades con remo (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13769,10 +13793,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_RIFLE_BUTT</Tag>
 		<English>Wields (Sidearm Rifle Butt)</English>
 		<French>
-			<Text>(Equipement) Crosse de Fusil - Arme secondaire</Text>
+			<Text>(Équipement) Crosse de Fusil - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Gewehrkolben (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Culata de fusil (secundaria):Unidades con culata de fusil (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13784,10 +13809,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_ROCK</Tag>
 		<English>Wields (Sidearm Rocks)</English>
 		<French>
-			<Text>(Equipement) Pierres - Arme secondaire</Text>
+			<Text>(Équipement) Pierres - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Steine (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Piedras (secundaria):Unidades con piedras (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13799,10 +13825,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_SHORT_BLADE</Tag>
 		<English>Wields (Sidearm Short Blade)</English>
 		<French>
-			<Text>(Equipement) Epée Courte - Arme secondaire</Text>
+			<Text>(Équipement) Épée Courte - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Kurzschwert (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Espada corta (secundaria):Unidades con espada corta (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13814,10 +13841,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_SHORT_POLEARM</Tag>
 		<English>Wields (Sidearm Short Polearm)</English>
 		<French>
-			<Text>(Equipement) Lance à Manche Court - Arme secondaire</Text>
+			<Text>(Équipement) Lance à Manche Court - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Speer (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Alabarda corta (secundaria):Unidades con alabarda corta (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13829,10 +13857,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_SPRAY</Tag>
 		<English>Wields (Sidearm Spray Cannister)</English>
 		<French>
-			<Text>(Equipement) Spray - Arme secondaire</Text>
+			<Text>(Équipement) Spray - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Abwehrspray (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Bote de spray (secundaria):Unidades con bote de spray (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13844,10 +13873,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_STAFF</Tag>
 		<English>Wields (Sidearm Staff)</English>
 		<French>
-			<Text>(Equipement) Baton - Arme secondaire</Text>
+			<Text>(Équipement) Baton - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Stab (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Bastón (secundaria):Unidades con bastón (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -13859,10 +13889,11 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_TASER</Tag>
 		<English>Wields (Sidearm Taser)</English>
 		<French>
-			<Text>(Equipement) Taser - Arme secondaire</Text>
+			<Text>(Équipement) Taser - Arme secondaire</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Waffe) Elektroschocker (Sekundärwaffe)</German>
 		<Spanish>
 			<Text>Pistola táser (secundaria):Unidades con pistola táser (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -14060,6 +14091,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>Nahkampf einhändig</German>
 		<Spanish>
 			<Text>Arma a una mano (CaC):Unidades con arma a una mano (CaC)</Text>
 			<Gender>Female</Gender>
@@ -14075,6 +14107,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>Nahkampf einhändig mit Schild</German>
 		<Spanish>
 			<Text>Arma a una mano y escudo (CaC):Unidades con arma a una mano y escudo (CaC)</Text>
 			<Gender>Female</Gender>
@@ -14106,6 +14139,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>Nahkampf zweihändig mit Schild</German>
 		<Spanish>
 			<Text>Arma a dos manos y escudo (CaC):Unidades con arma a dos manos y escudo (CaC)</Text>
 			<Gender>Female</Gender>

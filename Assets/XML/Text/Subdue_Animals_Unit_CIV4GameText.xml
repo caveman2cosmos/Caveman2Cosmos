@@ -1065,6 +1065,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangener Kaiserpinguin:Gefangenen Kaiserpinguins:Gefangenen Kaiserpinguin:Gefangenen Kaiserpinguin:Gefangene Kaiserpinguine:Gefangenen Kaiserpinguine:Gefangenen Kaiserpinguinen:Gefangenen Kaiserpinguine</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PHEASANT</Tag>
@@ -1389,6 +1394,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_TAPIR</Tag>
 		<English>Subdued Baird's Tapir</English>
 		<French>Tapir de Baird (App.)</French>
+		<German>
+			<Text>Gefangener Baird-Tapir:Gefangenen Baird-Tapirs:Gefangenen Baird-Tapir:Gefangenen Baird-Tapir:Gefangene Baird-Tapire:Gefangenen Baird-Tapire:Gefangenen Baird-Tapiren:Gefangenen Baird-Tapire</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Tapiro addomesticato (Baird's)</Text>
 			<Gender>Male</Gender>

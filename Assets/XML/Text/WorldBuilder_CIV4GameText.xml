@@ -69,16 +69,8 @@
 		<English>Bridge Building</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_WB_CARGO_SPACE</Tag>
-		<English>Cargo</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_WB_CIRCUMNAVIGATED_GLOBE</Tag>
 		<English>Circumnavigated globe: team </English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_WB_CITY</Tag>
-		<English>City</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_CITY_DATA2</Tag>
@@ -107,10 +99,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_DAMAGE</Tag>
 		<English>Damage</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_WB_DEFAULT</Tag>
-		<English>Default</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_DEFENSE</Tag>
@@ -347,10 +335,6 @@
 		<English>Player Data</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_WB_PLOT</Tag>
-		<English>Plot</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_WB_PLOT_DATA</Tag>
 		<English>Plot Data</English>
 	</TEXT>
@@ -466,10 +450,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_TRIGGER_EVENT</Tag>
 		<English>Trigger %s1</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_WB_UNIT</Tag>
-		<English>Unit</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_UNIT_AI</Tag>

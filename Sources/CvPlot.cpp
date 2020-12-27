@@ -8052,7 +8052,8 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			bCity = true;
 		}
 
-		if (isWater() && !isRoute() && !isImpassable(GET_PLAYER(ePlayer).getTeam()))
+		// Apply sea bonus on water tiles, unless tile is impassable
+		if (isWater() && !isImpassable(GET_PLAYER(ePlayer).getTeam()))
 		{
 			iYield += GET_PLAYER(ePlayer).getSeaPlotYield(eYield);
 
@@ -8064,7 +8065,8 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			}
 		}
 
-		if (isRiver() && !isRoute() && !isImpassable(GET_PLAYER(ePlayer).getTeam()))
+		// Apply river bonus on river tiles, unless tile is impassible and without route
+		if (isRiver() && !(!isRoute() && isImpassable(GET_PLAYER(ePlayer).getTeam())))
 		{
 			CvCity* pWorkingCity = getWorkingCity();
 

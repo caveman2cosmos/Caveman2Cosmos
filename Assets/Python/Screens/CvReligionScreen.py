@@ -388,7 +388,7 @@ class CvReligionScreen:
 		self.szMissionaries = localText.getText("TXT_KEY_BUG_RELIGIOUS_MISSIONARY", ())
 
 		self.zoomArt = ArtFileMgr.getInterfaceArtInfo("INTERFACE_BUTTONS_CITYSELECTION").getPath()
-		self.sCity = localText.getText("TXT_KEY_WONDER_CITY", ())
+		self.sCity = localText.getText("TXT_WORD_CITY", ())
 
 		# scroll offset
 		if self.NUM_RELIGIONS > 7:

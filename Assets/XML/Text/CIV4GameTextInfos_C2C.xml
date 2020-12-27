@@ -10,10 +10,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUILDS_FASTER_WITH</Tag>
-		<English>Builds %d1_Mod%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
+		<English>Builds %d1_Mod%% faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit %d1_Mod%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Mod%% schneller mit Bonusgut [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
-		<Italian>Realizza %d1_Mod%% piú velocemente con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
+		<Italian>Realizza %d1_Mod%% più velocemente con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
 		<Spanish>Construye un %d1_Mod%% más rápido con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -202,7 +202,7 @@
 		<Tag>TXT_KEY_GOODY_CRIMINAL</Tag>
 		<English>[SPACE]Your explorers have found a wanted criminal hiding out among these people!</English>
 		<French>[SPACE]Vos explorateurs ont trouvé un criminel recherché, se cachant parmi la population!</French>
-		<German>[SPACE]Unter den Dorfbewohnern hat sich ein gesuchter Verbrecher versteckt!</German>
+		<German>Unter den Dorfbewohnern hat sich ein gesuchter Verbrecher versteckt!</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_HEALER</Tag>
@@ -228,7 +228,7 @@
 		<Tag>TXT_KEY_GOODY_RESEARCH</Tag>
 		<English>[SPACE]The villagers share information that leads your researchers to a major breakthrough!</English>
 		<French>[SPACE]Les villageois vous communiquent des informations qui conduisent vos chercheurs vers une découverte majeure!</French>
-		<German>[SPACE]Die Informationen der Dorfbewohner haben zu einem großen Durchbruch bei Euren Forschungen geführt!</German>
+		<German>Die Informationen der Dorfbewohner haben zu einem großen Durchbruch bei Euren Forschungen geführt!</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_SPEARMAN</Tag>
@@ -249,6 +249,7 @@
 		<Tag>TXT_KEY_GOODY_WISE_WOMAN</Tag>
 		<English>[SPACE]One of the tribe's women has taken a liking to your explorers!</English>
 		<French>[SPACE]Une femme de la tribu est tombée amoureuse d'un de vos éclaireurs!</French>
+		<German>Ein paar Frauen des Stammes haben an Euren Entdeckern Gefallen gefunden!</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CIVILOPEDIA</Tag>
@@ -390,7 +391,7 @@
 		<English>Builds %d1_Mod%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit %d1_Mod%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Mod%% schneller mit Bonusgut [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
-		<Italian>Realizza %d1_Mod%% piú velocemente con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
+		<Italian>Realizza %d1_Mod%% più velocemente con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
 		<Spanish>Construye un %d1_Mod%% más rápido con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -639,7 +640,7 @@
 		<English>Builds %d1_Change%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit : %d1_Change%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Change%% schneller mit [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
-		<Italian>Costruisce il %d1_Change%% piú rapidamente con il [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
+		<Italian>Costruisce il %d1_Change%% più rapidamente con il [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
 		<Spanish>Construye un %d1_Change%% más rápido con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -672,7 +673,7 @@
 		<French>[ICON_BULLET]Peut échapper à une interception (%d1_Amount%% de chance)</French>
 		<German>[ICON_BULLET]Rückzugsmöglichkeit bei Abfangversuch (Erfolgsaussicht: %d1_Amount%%)</German>
 		<Italian>[ICON_BULLET]Può evitare l'intercettazione (%d1_Amount%% di probabilità)</Italian>
-		<Spanish>[ICON_BULLET]Puede eludir la intercepción (probabilidad del %d1_Amount%%)</Spanish>
+		<Spanish>[ICON_BULLET]Puede eludir la interceptación (probabilidad del %d1_Amount%%)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERCEPT_AIRCRAFT</Tag>
@@ -700,7 +701,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WITHDRAWL_PROBABILITY_SHORT</Tag>
-		<English>[ICON_BULLET]Withdrawl Chance: %d1_Amount%%</English>
+		<English>[ICON_BULLET]Withdrawal Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Chances de rompre le combat: %d1_Amount%%</French>
 		<German>[ICON_BULLET]Rückzugschance: %d1_Amount%%</German>
 		<Italian>[ICON_BULLET]Probabilità di ritirata: %d1_Amount%%</Italian>

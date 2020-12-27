@@ -294,14 +294,14 @@
 		<English>This unit will gather intelligence and not awaken until it reaches the maximum espionage bonus</English>
 		<French>Cette Unité va récolter des Informations et devenir à nouveau active lorsqu'elle aura atteint son bonus maximum d'espionnage.</French>
 		<German>Diese Einheit wird Informationen sammeln und nicht aufwachen bis sie ihr Maximum an Spionagepunkten erreicht hat</German>
-		<Italian>Quest'unità raccoglierà informazioni, e non si sveglierà finchè non avrà raggiunto il massimo bonus di spionaggio.</Italian>
+		<Italian>Quest'unità raccoglierà informazioni e non si riattiverà finché non avrà raggiunto il massimo bonus di spionaggio.</Italian>
 		<Spanish>Esta unidad recopilará información y no se activará hasta que alcance la máxima bonificación por espionaje.</Spanish>
 		<Polish>Jednostka będzie zbierać dane i nie obudzi się dopóki nie zbierze kompletnych danych(maksymalnego bonusu do szpiegostwa).</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ESTABLISH</Tag>
 		<English>Establish Base of Operations</English>
-		<French>Etablir une Base d'Opérations</French>
+		<French>Établir une Base d'Opérations</French>
 		<Polish>Utwórz Bazę Operacji</Polish>
 	</TEXT>
 	<TEXT>
@@ -354,7 +354,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GOTO_HELP</Tag>
 		<English>Select a city to send this unit to. The city does not need to be inside the current Viewport.</English>
-		<French>Selectionner une ville où envoyer l'unité (n'a pas besoin d'être dans la fenêtre de vue).</French>
+		<French>Sélectionner une ville où envoyer l'unité (n'a pas besoin d'être dans la fenêtre de vue).</French>
 		<German>Ausgewählte Einheit zu einer beliebigen Zielstadt (auch außerhalb des aktuellen Sichtfelds) beordern.</German>
 		<Spanish>Selecciona una ciudad a la que enviar la unidad. No es necesario que dicha ciudad se encuentre dentro de la Vista parcial actual.</Spanish>
 		<Polish>Wybierz miasto do którego się ma udać jednostka. Miasto nie musi znajdować się na bieżącym Viewporcie.</Polish>
@@ -370,10 +370,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_GREAT_COMMANDER_HELP</Tag>
-		<English>Turns the Great General into a Field Commander: it loses its abilites to join cities, units, or construct wonders, but acquires the ability to earn experience, gain promotions, and lead units in the field.</English>
+		<English>Turns the Great General into a Field Commander: it loses its abilities to join cities, units, or construct wonders, but acquires the ability to earn experience, gain promotions, and lead units in the field.</English>
 		<French>Converti le Général Illustre en Commandant de Terrain, qui perd la possibilité de s'associer aux Villes et Unités, mais peut acquérir de l'expérience et des promotions, et mener les Unités sur le terrain.</French>
 		<German>Verwandelt den Großen General in einen Feldkommandeur, wodurch er seine normalen Fertigkeiten verliert. Dafür kann er nun Erfahrungspunkte und Beförderungen aus Schlachten erhalten, an denen er teilnimmt, und damit die Einheiten in seinem näheren Umfeld unterstützen.</German>
-		<Italian>Trasforma il grande generale in un comandante sul campo, che perchè l'abilità di unirsi a città ed unità e di costruire le Meraviglie, ma ti da l'abilità di guadagnare esperienza, ottenere promozioni e condurre unità sul campo.</Italian>
+		<Italian>Trasforma il grande generale in un comandante sul campo: perderà l'abilità di unirsi a città ed unità e di costruire le Meraviglie, ma ti permetterà di guadagnare esperienza, ottenere promozioni e condurre unità sul campo.</Italian>
 		<Spanish>Convierte al Gran general en un Comandante de tierra, que pierde sus habilidades para unirse a las ciudades y unidades, o construir maravillas, pero le otorga la capacidad de adquirir experiencia y ascensos, y liderar a las unidades en el campo de batalla.</Spanish>
 		<Polish>Zmień Wielkiego Generała w Dowódce Polowego, traci wówczas możliwość by dołączyć do miast, jednostek czy budować cuda, ale daje możliwość zdobywania doświadczenia, promocji oraz prowadzić jednostki na polu bitwy.</Polish>
 	</TEXT>
@@ -676,7 +676,7 @@
 		<Tag>TXT_KEY_MISSION_WAIT_FOR_TECH_HELP</Tag>
 		<English>Allows selection of a desired discovery tech. The unit will sleep until that tech becomes available to research, and then will be consumed in researching it.</English>
 		<French>Permet à la sélection d'unité d'aider à la découvert d'une technologie. L'unité sera en veille jusqu'à ce que la technologie soit disponible pour la recherche, puis sera enlevée.</French>
-		<Italian>Permette la selezione di una tecnologia che si vuole ricercare. L'unità dormirà finchè quella tecnologia potrà essere ricercata, poi l'unità si consumerà ricercando la tecnologia.</Italian>
+		<Italian>Permette la selezione di una tecnologia che si vuole ricercare. L'unità non si riattiverà finché quella tecnologia potrà essere ricercata, poi l'unità si consumerà ricercando la tecnologia.</Italian>
 		<Spanish>Permite seleccionar la tecnología que se desea descubrir. La unidad dormirá hasta que dicha tecnología esté disponible, entonces la investigará y se consumirá.</Spanish>
 		<Polish>Pozwala zaznaczonej jednostce na późniejsze odkrycie technologii. Jednostka będzie uśpiona dopóki technologia nie będzie możliwa do wynalezienia. Gdy już będzie możliwe odkrycie danej technologii jednostka automatycznie zostanie wykorzystana do odkrycia jej.</Polish>
 	</TEXT>

@@ -17,7 +17,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER_TRADITION_STRATEGY</Tag>
 		<English>Provides health and happiness bonuses with game animals. Units built here get free hunting promotion.</English>
-		<French>Procure des bonus en santé et bonheur grâce aux animaux. Les unités construites ici recoivent la promotion 'chasseur'.</French>
+		<French>Procure des bonus en santé et bonheur grâce aux animaux. Les unités construites ici reçoivent la promotion 'chasseur'.</French>
 		<German>Erzeugt Gesundheit und Zufriedenheit mit Großwild. Einheiten die hier gebaut werden, bekommen die Jagtbeförderung kostenlos.</German>
 	</TEXT>
 	<TEXT>
@@ -101,7 +101,7 @@
 		<Tag>TXT_KEY_UNIT_MASTER_HUNTER_PEDIA</Tag>
 		<English>Only Great Hunters may become Master Hunters. Master Hunters are special versions of the normal hunter. They are much more likely to subdue animals so that the food and hammer returns from them are higher.</English>
 		<German>Nur Große Jäger können Meisterjäger werden. Meisterjäger sind spezielle Varianten des normalen Jägers. Es ist wesentlich wahrscheinlicher das sie Tiere bändigen, so das mehr Nahrung und Produktion von ihnen erzeugt wird.</German>
-		<Polish>Tylko Wielcy Łowcy mogą zostać Wybitnymi Łowcami. Wybitni Łowcy są specjalą wersją normalnych myśliwych. Są bardziej sprawni w łapaniu zwierząt żywcem.</Polish>
+		<Polish>Tylko Wielcy Łowcy mogą zostać Wybitnymi Łowcami. Wybitni Łowcy są specjalna wersją normalnych myśliwych. Są bardziej sprawni w łapaniu zwierząt żywcem.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_HUNTER_STRATEGY</Tag>

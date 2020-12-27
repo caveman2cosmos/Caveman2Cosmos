@@ -9687,10 +9687,11 @@ bool CvUnit::pillage()
 		return false;
 	}
 
-	if (pPlot->isOwned()
+	const PlayerTypes ePlayerPillaged = pPlot->getOwner();
+	if (ePlayerPillaged != NO_PLAYER
 	// We should not be calling this without declaring war first, so do not declare war here
 	&& !isEnemy(pPlot->getTeam(), pPlot)
-	&& (pPlot->getImprovementType() == NO_IMPROVEMENT || pPlot->getOwner() != getOwner()))
+	&& (pPlot->getImprovementType() == NO_IMPROVEMENT || ePlayerPillaged != getOwner()))
 	{
 		return false;
 	}
@@ -9720,7 +9721,7 @@ bool CvUnit::pillage()
 	{
 		eTempImprovement = pPlot->getImprovementType();
 
-		if (pPlot->isOwned() && pPlot->getTeam() != getTeam())
+		if (ePlayerPillaged != NO_PLAYER && pPlot->getTeam() != getTeam())
 		{
 			// Use python to determine pillage amounts...
 			iPillageGold = Cy::call<int>(PYGameModule, "doPillageGold", Cy::Args() << pPlot << this);
@@ -9773,10 +9774,10 @@ bool CvUnit::pillage()
 										pPlot->getX(), pPlot->getY()
 									);
 								}
-								if (GET_PLAYER(pPlot->getOwner()).isHuman())
+								if (GET_PLAYER(ePlayerPillaged).isHuman())
 								{
 									AddDLLMessage(
-										pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+										ePlayerPillaged, false, GC.getEVENT_MESSAGE_TIME(),
 										gDLL->getText(
 											"TXT_KEY_MISC_IMP_DESTROYED_BY_MARAUDERS",
 											GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(),
@@ -9835,7 +9836,7 @@ bool CvUnit::pillage()
 						}
 					}
 				}
-				if (pPlot->isOwned() && GET_PLAYER(pPlot->getOwner()).isHuman())
+				if (GET_PLAYER(ePlayerPillaged).isHuman())
 				{
 					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_IMP_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), getVisualCivAdjective(pPlot->getTeam()));
 
@@ -9844,12 +9845,12 @@ bool CvUnit::pillage()
 						szBuffer = szBuffer + CvString::format(" %s: -%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), fInfluenceRatio);
 					}
 					AddDLLMessage(
-						pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
+						ePlayerPillaged, false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
 						"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true, true
 					);
 				}
 				//	A pillage implies a source of danger even if we can't see it
-				GET_PLAYER(pPlot->getOwner()).addPlotDangerSource(pPlot, 100);
+				GET_PLAYER(ePlayerPillaged).addPlotDangerSource(pPlot, 100);
 			}
 		}
 		pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
@@ -9860,12 +9861,12 @@ bool CvUnit::pillage()
 		pPlot->setRouteType(NO_ROUTE, true); // XXX downgrade rail???
 
 		// Afforess - Alert Player of Pillaged Routes
-		if (pPlot->isOwned())
+		if (ePlayerPillaged != NO_PLAYER)
 		{
 			// A pillage implies a source of danger even if we can't see it
-			GET_PLAYER(pPlot->getOwner()).addPlotDangerSource(pPlot, 100);
+			GET_PLAYER(ePlayerPillaged).addPlotDangerSource(pPlot, 100);
 
-			if (GET_PLAYER(pPlot->getOwner()).isHuman())
+			if (GET_PLAYER(ePlayerPillaged).isHuman())
 			{
 				MEMORY_TRACK_EXEMPT();
 				AddDLLMessage(
@@ -21803,7 +21804,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 
 bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 {
-	if (!bKeepCheck &&!::isPromotionValid(ePromotion, getUnitType(), true))
+	if (!bKeepCheck && !::isPromotionValid(ePromotion, getUnitType(), true))
 	{
 		return false;
 	}
@@ -21883,11 +21884,13 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 			promotionInfo.getEncloseChange() != 0 ||
 			promotionInfo.getLungeChange() != 0 ||
 			promotionInfo.getDynamicDefenseChange() != 0 ||
+#ifdef STRENGTH_IN_NUMBERS
 			promotionInfo.getFrontSupportPercentChange() != 0 ||
 			promotionInfo.getShortRangeSupportPercentChange() != 0 ||
 			promotionInfo.getMediumRangeSupportPercentChange() != 0 ||
 			promotionInfo.getLongRangeSupportPercentChange() != 0 ||
 			promotionInfo.getFlankSupportPercentChange() != 0 ||
+#endif
 			promotionInfo.getDodgeModifierChange() != 0 ||
 			promotionInfo.getPrecisionModifierChange() != 0 ||
 			promotionInfo.getPowerShotsChange() != 0 ||
@@ -21925,6 +21928,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 		{
 			return false;
 		}
+#ifdef STRENGTH_IN_NUMBERS
 		if (
 			!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS)
 		&& (
@@ -21935,7 +21939,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 			||	promotionInfo.getFlankSupportPercentChange() != 0
 			)
 		) return false;
-
+#endif
 		return true;
 	}
 	// ! SUPER_SPIES
@@ -21978,6 +21982,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 	}
 */
 
+#ifdef STRENGTH_IN_NUMBERS
 	// Disable Strength In Numbers modifying promos if option is not on
 	if (
 		!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS)
@@ -21989,7 +21994,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 		||	promotionInfo.getFlankSupportPercentChange() != 0
 		)
 	) return false;
-
+#endif
 	// Taken out of CvGameCoreUtils so that it could be looking at the final compiled max movement rather than just the unit base movement.
 /*
 	if (maxMoves() < 2 && promotionInfo.isBlitz())
@@ -22056,11 +22061,13 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 			promotionInfo.getEncloseChange() != 0 ||
 			promotionInfo.getLungeChange() != 0 ||
 			promotionInfo.getDynamicDefenseChange() != 0 ||
+#ifdef STRENGTH_IN_NUMBERS
 			promotionInfo.getFrontSupportPercentChange() != 0 ||
 			promotionInfo.getShortRangeSupportPercentChange() != 0 ||
 			promotionInfo.getMediumRangeSupportPercentChange() != 0 ||
 			promotionInfo.getLongRangeSupportPercentChange() != 0 ||
 			promotionInfo.getFlankSupportPercentChange() != 0 ||
+#endif
 			promotionInfo.getDodgeModifierChange() != 0 ||
 			promotionInfo.getPrecisionModifierChange() != 0 ||
 			promotionInfo.getPowerShotsChange() != 0 ||
