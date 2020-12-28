@@ -889,8 +889,8 @@ class CvInfoScreen:
 		screen.addPanel(self.getNextWidgetName(), "", "", True, True, 45, 70, 470, 620, PanelStyles.PANEL_STYLE_MAIN)
 
 		# Calculate top 5 cities
-		topValues = [None] * 5
 		topCities = [None] * 5
+		topValues = [None] * 5
 		iMedianPop = -1
 		for i in xrange(GC.getMAX_PC_PLAYERS()):
 
@@ -916,45 +916,38 @@ class CvInfoScreen:
 						topCities.insert(iRankLoop, cityX)
 						del topValues[5], topCities[5]
 						break
-		del topValues
+		del topValues, iMedianPop
 
 		# Determine City Data
 		iCitySizes = [-1] * 5
 		aaCitiesXY = [[-1, -1]] * 5
+		szCityNames = [""] * 5
+		szCityDescs = [""] * 5
 		iNumCities = 0
-		szCityNames = ["", "", "", "", ""]
-		szCityDescs = ["", "", "", "", ""]
 
-		for iRank in xrange(5):
+		for cityX in topCities:
 
-			pCity = topCities[iRank]
+			if not cityX:
+				break
 
-			# If this city exists and has data we can use
-			if pCity:
+			pPlayer = GC.getPlayer(cityX.getOwner())
 
-				pPlayer = GC.getPlayer(pCity.getOwner())
+			iTurnYear = GAME.getTurnYear(cityX.getGameTurnFounded())
 
-				iTurnYear = GAME.getTurnYear(pCity.getGameTurnFounded())
+			if iTurnYear < 0:
+				szTurnFounded = TRNSLTR.getText("TXT_KEY_TIME_BC", (-iTurnYear,))
+			else: szTurnFounded = TRNSLTR.getText("TXT_KEY_TIME_AD", (iTurnYear,))
 
-				if iTurnYear < 0:
-					szTurnFounded = TRNSLTR.getText("TXT_KEY_TIME_BC", (-iTurnYear,))
-				else:
-					szTurnFounded = TRNSLTR.getText("TXT_KEY_TIME_AD", (iTurnYear,))
-
-				if pCity.isRevealed(self.iTeam, False) or self.team.isHasMet(pPlayer.getTeam()):
-					szCityNames[iRank] = pCity.getName().upper()
-					szCityDescs[iRank] = "%s, %s" % (pPlayer.getCivilizationAdjective(0), TRNSLTR.getText("TXT_KEY_MISC_FOUNDED_IN", (szTurnFounded,)))
-				else:
-					szCityNames[iRank] = TRNSLTR.getText("TXT_KEY_UNKNOWN", ()).upper()
-					szCityDescs[iRank] = TRNSLTR.getText("TXT_KEY_MISC_FOUNDED_IN", (szTurnFounded,))
-
-				iCitySizes[iRank] = pCity.getPopulation()
-				aaCitiesXY[iRank] = [pCity.getX(), pCity.getY()]
-
-				iNumCities += 1
+			if cityX.isRevealed(self.iTeam, False):
+				szCityNames[iNumCities] = cityX.getName()
+				szCityDescs[iNumCities] = "%s, %s" % (pPlayer.getCivilizationAdjective(0), TRNSLTR.getText("TXT_KEY_MISC_FOUNDED_IN", (szTurnFounded,)))
 			else:
-				iCitySizes[iRank] = -1
-				aaCitiesXY[iRank] = [-1, -1]
+				szCityNames[iNumCities] = TRNSLTR.getText("TXT_KEY_UNKNOWN", ())
+				szCityDescs[iNumCities] = TRNSLTR.getText("TXT_KEY_MISC_FOUNDED_IN", (szTurnFounded,))
+
+			iCitySizes[iNumCities] = cityX.getPopulation()
+			aaCitiesXY[iNumCities] = [cityX.getX(), cityX.getY()]
+			iNumCities += 1
 
 		for iWidgetLoop in xrange(iNumCities):
 
