@@ -148,11 +148,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_HAPPINESS</Tag>
-		<English>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp from [COLOR_BUILDING_TEXT][LINK=s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</English>
-		<French>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp : [COLOR_BUILDING_TEXT][LINK=s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</French>
-		<German>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp durch das Gebäude [COLOR_BUILDING_TEXT][LINK=s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp da [COLOR_BUILDING_TEXT][LINK=s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change %F2_HappOrUnhapp por [COLOR_BUILDING_TEXT][LINK=s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Spanish>
+		<English>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp from [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp : [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp durch das Gebäude [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp da [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappOrUnhapp por [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_REQUIRES</Tag>

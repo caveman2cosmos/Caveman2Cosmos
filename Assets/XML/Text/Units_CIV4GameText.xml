@@ -5674,11 +5674,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CRITICAL_VS_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Critical Chance vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
-		<French>[ICON_BULLET]%D1_Change%% de chances de Critique contre: [LINK=s2_Type]%s3_TypeName[\LINK]</French>
-		<German>[ICON_BULLET]%D1_Change%% Critical Chance gegen [LINK=s2_Type]%s3_TypeName[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Change%% ai colpi critici contro [LINK=s2_Type]%s3_TypeName[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change%% Critical Chance contra [LINK=s2_Type]%s3_TypeName[\LINK]</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change%% do Szansy na Krytyczne Uderzenie vs: [LINK=s2_Type]%s3_TypeName[\LINK]</Polish>
+		<French>[ICON_BULLET]%D1_Change%% de chances de Critique contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Change%% Critical Chance gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Change%% ai colpi critici contro [LINK=%s2_Type]%s3_TypeName[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% Critical Chance contra [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change%% do Szansy na Krytyczne Uderzenie vs: [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CROCODILE_PEDIA</Tag>
@@ -6475,12 +6475,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DODGE_VS_TYPE</Tag>
-		<English>[ICON_BULLET]%D1_Change Dodge vs. [LINK=s2_Type]%s3_TypeName[\LINK]</English>
-		<French>[ICON_BULLET]%D1_Change d'Esquive contre: [LINK=s2_Type]%s3_TypeName[\LINK]</French>
-		<German>[ICON_BULLET]%D1_Change Ausweichen gegen [LINK=s2_Type]%s3_TypeName[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Change alla Schivata contro [LINK=s2_Type]%s3_TypeName[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change Dodge contra [LINK=s2_Type]%s3_TypeName[\LINK]</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change do Uniku vs: [LINK=s2_Type]%s3_TypeName[\LINK]</Polish>
+		<English>[ICON_BULLET]%D1_Change Dodge vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Change d'Esquive contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Change Ausweichen gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Change alla Schivata contro [LINK=%s2_Type]%s3_TypeName[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change Dodge contra [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change do Uniku vs: [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOLPHIN</Tag>
@@ -14077,12 +14077,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KNOCKBACK_VS_TYPE</Tag>
-		<English>[ICON_BULLET]%D1_Change%% Knockback vs. [LINK=s2_Type]%s3_TypeName[\LINK]</English>
-		<French>[ICON_BULLET]%D1_Change%% de Piétinement contre: [LINK=s2_Type]%s3_TypeName[\LINK]</French>
-		<German>[ICON_BULLET]%D1_Change%% Knockback gegen [LINK=s2_Type]%s3_TypeName[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Change%% allo Sbaraglio contro [LINK=s2_Type]%s3_TypeName[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change%% Knockback contra [LINK=s2_Type]%s3_TypeName[\LINK]</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change%% do odrzutu vs: [LINK=s2_Type]%s3_TypeName[\LINK]</Polish>
+		<English>[ICON_BULLET]%D1_Change%% Knockback vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Change%% de Piétinement contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Change%% Knockback gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Change%% allo Sbaraglio contro [LINK=%s2_Type]%s3_TypeName[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% Knockback contra [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change%% do odrzutu vs: [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KOA</Tag>
@@ -20449,12 +20449,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PRECISION_VS_TYPE</Tag>
-		<English>[ICON_BULLET]%D1_Change Precision vs. [LINK=s2_Type]%s3_TypeName[\LINK]</English>
-		<French>[ICON_BULLET]%D1_Change de Précision contre: [LINK=s2_Type]%s3_TypeName[\LINK]</French>
-		<German>[ICON_BULLET]%D1_Change Precision gegen [LINK=s2_Type]%s3_TypeName[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Change alla Precisione contro [LINK=s2_Type]%s3_TypeName[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change Precision contra [LINK=s2_Type]%s3_TypeName[\LINK]</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change do Precyzji vs: [LINK=s2_Type]%s3_TypeName[\LINK]</Polish>
+		<English>[ICON_BULLET]%D1_Change Precision vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Change de Précision contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Change Precision gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Change alla Precisione contro [LINK=%s2_Type]%s3_TypeName[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change Precision contra [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change do Precyzji vs: [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PREMPEH</Tag>
@@ -20644,12 +20644,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PUNCTURE_VS_TYPE</Tag>
-		<English>[ICON_BULLET]%D1_Change Puncture vs. [LINK=s2_Type]%s3_TypeName[\LINK]</English>
-		<French>[ICON_BULLET]%D1_Change de Perforation contre: [LINK=s2_Type]%s3_TypeName[\LINK]</French>
-		<German>[ICON_BULLET]%D1_Change Puncture gegen [LINK=s2_Type]%s3_TypeName[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Change alla Perforazione contro [LINK=s2_Type]%s3_TypeName[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change Puncture contra [LINK=s2_Type]%s3_TypeName[\LINK]</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change do Przebicia vs: [LINK=s2_Type]%s3_TypeName[\LINK]</Polish>
+		<English>[ICON_BULLET]%D1_Change Puncture vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Change de Perforation contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Change Puncture gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Change alla Perforazione contro [LINK=%s2_Type]%s3_TypeName[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change Puncture contra [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change do Przebicia vs: [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PURSUIT</Tag>
@@ -20677,12 +20677,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PURSUIT_VS_TYPE</Tag>
-		<English>[ICON_BULLET]%D1_Change%% Pursuit vs. [LINK=s2_Type]%s3_TypeName[\LINK]</English>
-		<French>[ICON_BULLET]%D1_Change%% de Poursuite contre: [LINK=s2_Type]%s3_TypeName[\LINK]</French>
-		<German>[ICON_BULLET]%D1_Change%% Verfolgung von [LINK=s2_Type]%s3_TypeName[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Change%% all'Inseguimento contro [LINK=s2_Type]%s3_TypeName[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change%% Pursuit contra [LINK=s2_Type]%s3_TypeName[\LINK]</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change%% Pościg kontra [LINK=s2_Type]%s3_TypeName[\LINK]</Polish>
+		<English>[ICON_BULLET]%D1_Change%% Pursuit vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Change%% de Poursuite contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Change%% Verfolgung von [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Change%% all'Inseguimento contro [LINK=%s2_Type]%s3_TypeName[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% Pursuit contra [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change%% Pościg kontra [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PYGMY_WARRIOR</Tag>
@@ -21407,12 +21407,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REPEL_VS_TYPE</Tag>
-		<English>[ICON_BULLET]%D1_Change%% Repel vs. [LINK=s2_Type]%s3_TypeName[\LINK]</English>
-		<French>[ICON_BULLET]%D1_Change%% d'Expulsion contre: [LINK=s2_Type]%s3_TypeName[\LINK]</French>
-		<German>[ICON_BULLET]%D1_Change%% Repel gegen [LINK=s2_Type]%s3_TypeName[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Change%% alla Respinta contro [LINK=s2_Type]%s3_TypeName[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change%% Repel contra [LINK=s2_Type]%s3_TypeName[\LINK]</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change%% do Odepchnięcia vs: [LINK=s2_Type]%s3_TypeName[\LINK]</Polish>
+		<English>[ICON_BULLET]%D1_Change%% Repel vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Change%% d'Expulsion contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Change%% Repel gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Change%% alla Respinta contro [LINK=%s2_Type]%s3_TypeName[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% Repel contra [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change%% do Odepchnięcia vs: [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REPLICATION_MECHANIC</Tag>
@@ -21853,12 +21853,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROUND_STUN_VS_TYPE</Tag>
-		<English>[ICON_BULLET]%D1_Change%% Round Stun Chance vs. [LINK=s2_Type]%s3_TypeName[\LINK]</English>
-		<French>[ICON_BULLET]%D1_Change%% de chances d'Etourdissement contre: [LINK=s2_Type]%s3_TypeName[\LINK]</French>
-		<German>[ICON_BULLET]%D1_Change%% Round Stun Chance gegen [LINK=s2_Type]%s3_TypeName[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Change%% ai colpi stordenti contro [LINK=s2_Type]%s3_TypeName[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change%% Round Stun Chance contra [LINK=s2_Type]%s3_TypeName[\LINK]</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change%% do Szansy na Oszołomienie vs: [LINK=s2_Type]%s3_TypeName[\LINK]</Polish>
+		<English>[ICON_BULLET]%D1_Change%% Round Stun Chance vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Change%% de chances d'Etourdissement contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Change%% Round Stun Chance gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Change%% ai colpi stordenti contro [LINK=%s2_Type]%s3_TypeName[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% Round Stun Chance contra [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change%% do Szansy na Oszołomienie vs: [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROYAL_SPECIAL_FORCES</Tag>
@@ -28670,12 +28670,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WITHDRAW_VS_TYPE</Tag>
-		<English>[ICON_BULLET]%D1_Change%% Withdraw vs. [LINK=s2_Type]%s3_TypeName[\LINK]</English>
-		<French>[ICON_BULLET]%D1_Change%% de Repli contre: [LINK=s2_Type]%s3_TypeName[\LINK]</French>
-		<German>[ICON_BULLET]%D1_Change%% Withdraw gegen [LINK=s2_Type]%s3_TypeName[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Change%% alla Ritirata contro [LINK=s2_Type]%s3_TypeName[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change%% Withdraw contra [LINK=s2_Type]%s3_TypeName[\LINK]</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change%% do Wycofania się vs: [LINK=s2_Type]%s3_TypeName[\LINK]</Polish>
+		<English>[ICON_BULLET]%D1_Change%% Withdraw vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Change%% de Repli contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Change%% Withdraw gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Change%% alla Ritirata contro [LINK=%s2_Type]%s3_TypeName[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% Withdraw contra [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change%% do Wycofania się vs: [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WOLF</Tag>
