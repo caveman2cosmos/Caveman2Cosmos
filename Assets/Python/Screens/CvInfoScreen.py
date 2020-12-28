@@ -232,13 +232,6 @@ class CvInfoScreen:
 
 
 	def redrawContents(self):
-
-		self.iCitySizes = [-1, -1, -1, -1, -1]
-		self.aaCitiesXY = [[-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1]]
-		self.iCityValues = [0, 0, 0, 0, 0]
-		self.pCityPointers = [0, 0, 0, 0, 0]
-		self.scoreCache = [None] * self.iNumGraphs
-
 		screen = CyGInterfaceScreen("InfoScreen", self.screenId)
 		self.deleteAllWidgets(screen)
 		# Specific widgets
@@ -250,30 +243,31 @@ class CvInfoScreen:
 		if not self.iTab:
 			screen.hide("VS_Tab0")
 			screen.show("VS_Tab_Act0")
-			self.drawDemographicsTab()
+			self.drawDemographicsTab(screen)
 
 		elif self.iTab == 1:
 			screen.show("Graph_BG")
 			screen.hide("VS_Tab1")
 			screen.show("VS_Tab_Act1")
-			self.drawGraphTab()
+			self.drawGraphTab(screen)
 
 		elif self.iTab == 2:
 			screen.hide("VS_Tab2")
 			screen.show("VS_Tab_Act2")
-			self.drawTopCitiesTab()
+			self.drawTopCitiesTab(screen)
 
 		elif self.iTab == 3:
 			screen.hide("VS_Tab3")
 			screen.show("VS_Tab_Act3")
-			self.drawStatsTab()
+			self.drawStatsTab(screen)
 
 #############################################################################################################
 #################################################### GRAPH ##################################################
 #############################################################################################################
 
-	def drawGraphTab(self):
+	def drawGraphTab(self, screen):
 
+		self.scoreCache = [None] * self.iNumGraphs
 		self.bPlayerInclude = [True] * GC.getMAX_PC_PLAYERS()
 
 		xRes = self.xRes
@@ -300,7 +294,6 @@ class CvInfoScreen:
 
 		eWidGen = WidgetTypes.WIDGET_GENERAL
 		eFontGame = FontTypes.GAME_FONT
-		screen = CyGInterfaceScreen("InfoScreen", self.screenId)
 
 		y = self.Y_BOT_TEXT - 30
 		screen.setButtonGFC("GraphShiftL", "", "", xGraph - 12, y, 20, 20, eWidGen, 1, 2, ButtonStyles.BUTTON_STYLE_ARROW_LEFT)
@@ -642,9 +635,9 @@ class CvInfoScreen:
 ################################################# DEMOGRAPHICS ##############################################
 #############################################################################################################
 
-	def drawDemographicsTab(self):
+	def drawDemographicsTab(self, screen):
 		if self.demographicsTable:
-			CyGInterfaceScreen("InfoScreen", self.screenId).show(self.demographicsTable)
+			screen.show(self.demographicsTable)
 			return
 		iPlayer = self.iPlayer
 
@@ -781,7 +774,6 @@ class CvInfoScreen:
 		iNetTradeRank		= self.getRank(iPlayer, aiGroupNetTrade)
 
 		eWidGen = WidgetTypes.WIDGET_GENERAL
-		screen = CyGInterfaceScreen("InfoScreen", self.screenId)
 
 		# Create Table
 		self.demographicsTable = table = "DemographicsTable"
@@ -891,41 +883,51 @@ class CvInfoScreen:
 ################################################## TOP CITIES ###############################################
 #############################################################################################################
 
-	def drawTopCitiesTab(self):
-
-		screen = CyGInterfaceScreen("InfoScreen", self.screenId)
+	def drawTopCitiesTab(self, screen):
 
 		# Background Panes
 		screen.addPanel(self.getNextWidgetName(), "", "", True, True, 45, 70, 470, 620, PanelStyles.PANEL_STYLE_MAIN)
 
 		# Calculate top 5 cities
+		topValues = [None] * 5
+		topCities = [None] * 5
+		iMedianPop = -1
 		for i in xrange(GC.getMAX_PC_PLAYERS()):
 
 			for cityX in GC.getPlayer(i).cities():
 
+				iPop = cityX.getPopulation()
+				# Filter out small cities, after the first 5, as an optimization.
+				if topCities[4] and iPop < iMedianPop:
+					continue 
+				if iPop / 2 > iMedianPop:
+					iMedianPop = iPop / 2
+				# City Value, could expand this one...
 				iTotalCityValue = (
-					(
-						cityX.getCulture(i) / 5 +
-						cityX.getYieldRate(YieldTypes.YIELD_FOOD) +
-						cityX.getYieldRate(YieldTypes.YIELD_PRODUCTION) +
-						cityX.getYieldRate(YieldTypes.YIELD_COMMERCE)
-					) * cityX.getPopulation()
+					6 * iPop + cityX.getCulture(i) / 10
+					+ 2 * cityX.getYieldRate(YieldTypes.YIELD_FOOD)
+					+ 3 * cityX.getYieldRate(YieldTypes.YIELD_PRODUCTION)
+					+ 3 * cityX.getYieldRate(YieldTypes.YIELD_COMMERCE)
 				)
 				for iRankLoop in xrange(5):
 
-					if iTotalCityValue > self.iCityValues[iRankLoop]:
-
-						self.addCityToList(iRankLoop, cityX, iTotalCityValue)
+					if iTotalCityValue > topValues[iRankLoop]:
+						topValues.insert(iRankLoop, iTotalCityValue)
+						topCities.insert(iRankLoop, cityX)
+						del topValues[5], topCities[5]
 						break
+		del topValues
 
 		# Determine City Data
+		iCitySizes = [-1] * 5
+		aaCitiesXY = [[-1, -1]] * 5
 		iNumCities = 0
 		szCityNames = ["", "", "", "", ""]
 		szCityDescs = ["", "", "", "", ""]
 
 		for iRank in xrange(5):
 
-			pCity = self.pCityPointers[iRank]
+			pCity = topCities[iRank]
 
 			# If this city exists and has data we can use
 			if pCity:
@@ -946,21 +948,21 @@ class CvInfoScreen:
 					szCityNames[iRank] = TRNSLTR.getText("TXT_KEY_UNKNOWN", ()).upper()
 					szCityDescs[iRank] = TRNSLTR.getText("TXT_KEY_MISC_FOUNDED_IN", (szTurnFounded,))
 
-				self.iCitySizes[iRank] = pCity.getPopulation()
-				self.aaCitiesXY[iRank] = [pCity.getX(), pCity.getY()]
+				iCitySizes[iRank] = pCity.getPopulation()
+				aaCitiesXY[iRank] = [pCity.getX(), pCity.getY()]
 
 				iNumCities += 1
 			else:
-				self.iCitySizes[iRank] = -1
-				self.aaCitiesXY[iRank] = [-1, -1]
+				iCitySizes[iRank] = -1
+				aaCitiesXY[iRank] = [-1, -1]
 
 		for iWidgetLoop in xrange(iNumCities):
 
 			screen.addPanel(self.getNextWidgetName(), "", "", False, True, 225, self.Y_ROWS_CITIES[iWidgetLoop] - 4, 275, 60, PanelStyles.PANEL_STYLE_DAWNTOP)
-			szCityDesc = u"<font=4b>" + str(self.iCitySizes[iWidgetLoop]) + u"</font>" + " - " + u"<font=3b>" + szCityNames[iWidgetLoop] + u"</font>" + "\n" + szCityDescs[iWidgetLoop]
+			szCityDesc = u"<font=4b>" + str(iCitySizes[iWidgetLoop]) + u"</font>" + " - " + u"<font=3b>" + szCityNames[iWidgetLoop] + u"</font>" + "\n" + szCityDescs[iWidgetLoop]
 			screen.addMultilineText(self.getNextWidgetName(), szCityDesc, 231, self.Y_ROWS_CITIES[iWidgetLoop] - 1, 269, 54, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
-			pPlot = CyMap().plot(self.aaCitiesXY[iWidgetLoop][0], self.aaCitiesXY[iWidgetLoop][1])
+			pPlot = CyMap().plot(aaCitiesXY[iWidgetLoop][0], aaCitiesXY[iWidgetLoop][1])
 			pCity = pPlot.getPlotCity()
 
 			iDistance = 200 + pCity.getPopulation() * 5
@@ -983,7 +985,7 @@ class CvInfoScreen:
 		for i in xrange(iNumCities):
 			aaiTopCitiesWonders.append(0)
 			aiTopCitiesNumWonders.append(0)
-			pCity = self.pCityPointers[i]
+			pCity = topCities[i]
 
 			if pCity:
 				aiTempWondersList = []
@@ -1270,32 +1272,11 @@ class CvInfoScreen:
 			screen.setTableText(self.szWondersTable, 3, i+iWBB, szWonderBuiltBy, "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 			screen.setTableText(self.szWondersTable, 4, i+iWBB, szCityName     , "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
-
-	# Recursive
-	def addCityToList(self, iRank, pCity, iTotalCityValue):
-		if iRank > 4:
-			return
-
-		pTempCity = self.pCityPointers[iRank]
-
-		# Verify a city actually exists at this rank
-		if not pTempCity:
-			self.pCityPointers[iRank] = pCity
-			self.iCityValues[iRank] = iTotalCityValue
-			return
-
-		iTempCityValue = self.iCityValues[iRank]
-
-		self.addCityToList(iRank+1, pTempCity, iTempCityValue)
-		self.pCityPointers[iRank] = pCity
-		self.iCityValues[iRank] = iTotalCityValue
-
-
 #############################################################################################################
 ################################################## STATISTICS ###############################################
 #############################################################################################################
 
-	def drawStatsTab(self):
+	def drawStatsTab(self, screen):
 
 		# Bottom Chart
 		if self.bShowImprovement:
@@ -1304,8 +1285,6 @@ class CvInfoScreen:
 		else:
 			self.W_STATS_BOTTOM_CHART_UNITS = 545
 			self.W_STATS_BOTTOM_CHART_BUILDINGS = 390
-
-		screen = CyGInterfaceScreen("InfoScreen", self.screenId)
 
 		iNumUnits = GC.getNumUnitInfos()
 		iNumBuildings = GC.getNumBuildingInfos()
@@ -1332,7 +1311,7 @@ class CvInfoScreen:
 
 		iNumReligionsFounded = 0
 		for iReligionLoop in xrange(GC.getNumReligionInfos()):
-			if (CyStatistics().getPlayerReligionFounded(self.iPlayer, iReligionLoop)):
+			if CyStatistics().getPlayerReligionFounded(self.iPlayer, iReligionLoop):
 				iNumReligionsFounded += 1
 
 		aiUnitsBuilt = []
@@ -1401,29 +1380,14 @@ class CvInfoScreen:
 		iNumRows = screen.getTableNumRows(szTopChart)
 
 		# Graph itself
-		iRow = 0
-		iCol = 0
-		screen.setTableText(szTopChart, iCol, iRow, self.TEXT_TIME_PLAYED, "", eWidGen, 1, 2, 1<<0)
-		iCol = 1
-		screen.setTableText(szTopChart, iCol, iRow, szTimeString, "", eWidGen, 1, 2, 1<<0)
-
-		iRow = 1
-		iCol = 0
-		screen.setTableText(szTopChart, iCol, iRow, self.TEXT_CITIES_BUILT, "", eWidGen, 1, 2, 1<<0)
-		iCol = 1
-		screen.setTableText(szTopChart, iCol, iRow, str(iNumCitiesBuilt), "", eWidGen, 1, 2, 1<<0)
-
-		iRow = 2
-		iCol = 0
-		screen.setTableText(szTopChart, iCol, iRow, self.TEXT_CITIES_RAZED, "", eWidGen, 1, 2, 1<<0)
-		iCol = 1
-		screen.setTableText(szTopChart, iCol, iRow, str(iNumCitiesRazed), "", eWidGen, 1, 2, 1<<0)
-
-		iRow = 3
-		iCol = 0
-		screen.setTableText(szTopChart, iCol, iRow, self.TEXT_NUM_RELIGIONS_FOUNDED, "", eWidGen, 1, 2, 1<<0)
-		iCol = 1
-		screen.setTableText(szTopChart, iCol, iRow, str(iNumReligionsFounded), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(szTopChart, 0, 0, self.TEXT_TIME_PLAYED, "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(szTopChart, 1, 0, szTimeString, "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(szTopChart, 0, 1, self.TEXT_CITIES_BUILT, "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(szTopChart, 1, 1, str(iNumCitiesBuilt), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(szTopChart, 0, 2, self.TEXT_CITIES_RAZED, "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(szTopChart, 1, 2, str(iNumCitiesRazed), "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(szTopChart, 0, 3, self.TEXT_NUM_RELIGIONS_FOUNDED, "", eWidGen, 1, 2, 1<<0)
+		screen.setTableText(szTopChart, 1, 3, str(iNumReligionsFounded), "", eWidGen, 1, 2, 1<<0)
 
 ################################################### BOTTOM PANEL ###################################################
 
@@ -1445,41 +1409,27 @@ class CvInfoScreen:
 			iChartWidth = self.W_STATS_BOTTOM_CHART_UNITS + self.W_STATS_BOTTOM_CHART_BUILDINGS + 196
 
 			# Add Columns
-			iColWidth = int((iChartWidth / 16 * 3))
-			screen.setTableColumnHeader(szUnitsTable, 0, self.TEXT_UNITS, iColWidth)
-			iColWidth = int((iChartWidth / 14 * 1))
+			screen.setTableColumnHeader(szUnitsTable, 0, self.TEXT_UNITS, iChartWidth * 3 / 16)
+			iColWidth = iChartWidth / 14
 			screen.setTableColumnHeader(szUnitsTable, 1, self.TEXT_CURRENT, iColWidth)
-			iColWidth = int((iChartWidth / 14 * 1))
 			screen.setTableColumnHeader(szUnitsTable, 2, self.TEXT_BUILT, iColWidth)
-			iColWidth = int((iChartWidth / 14 * 1))
 			screen.setTableColumnHeader(szUnitsTable, 3, self.TEXT_KILLED, iColWidth)
-			iColWidth = int((iChartWidth / 14 * 1))
 			screen.setTableColumnHeader(szUnitsTable, 4, self.TEXT_LOST, iColWidth)
-			iColWidth = int((iChartWidth / 16 * 3))
-			screen.setTableColumnHeader(szBuildingsTable, 0, self.TEXT_BUILDINGS, iColWidth)
-			iColWidth = int((iChartWidth / 14 * 1))
+			screen.setTableColumnHeader(szBuildingsTable, 0, self.TEXT_BUILDINGS, iChartWidth * 3 / 16)
 			screen.setTableColumnHeader(szBuildingsTable, 1, self.TEXT_BUILT, iColWidth)
-			iColWidth = int((iChartWidth / 14 * 2))
-			screen.setTableColumnHeader(szImprovementsTable, 0, self.TEXT_IMPROVEMENTS, iColWidth)
-			iColWidth = int((iChartWidth / 14 * 1))
+			screen.setTableColumnHeader(szImprovementsTable, 0, self.TEXT_IMPROVEMENTS, iChartWidth / 7)
 			screen.setTableColumnHeader(szImprovementsTable, 1, self.TEXT_CURRENT, iColWidth)
 		else:
 			iChartWidth = self.W_STATS_BOTTOM_CHART_UNITS + self.W_STATS_BOTTOM_CHART_BUILDINGS - 24
 
 			# Add Columns
-			iColWidth = int((iChartWidth / 12 * 3))
-			screen.setTableColumnHeader(szUnitsTable, 0, self.TEXT_UNITS, iColWidth)
-			iColWidth = int((iChartWidth / 12 * 1))
+			screen.setTableColumnHeader(szUnitsTable, 0, self.TEXT_UNITS, iChartWidth / 4)
+			iColWidth = iChartWidth / 12
 			screen.setTableColumnHeader(szUnitsTable, 1, self.TEXT_CURRENT, iColWidth)
-			iColWidth = int((iChartWidth / 12 * 1))
 			screen.setTableColumnHeader(szUnitsTable, 2, self.TEXT_BUILT, iColWidth)
-			iColWidth = int((iChartWidth / 12 * 1))
 			screen.setTableColumnHeader(szUnitsTable, 3, self.TEXT_KILLED, iColWidth)
-			iColWidth = int((iChartWidth / 12 * 1))
 			screen.setTableColumnHeader(szUnitsTable, 4, self.TEXT_LOST, iColWidth)
-			iColWidth = int((iChartWidth / 12 * 4))
-			screen.setTableColumnHeader(szBuildingsTable, 0, self.TEXT_BUILDINGS, iColWidth)
-			iColWidth = int((iChartWidth / 12 * 1))
+			screen.setTableColumnHeader(szBuildingsTable, 0, self.TEXT_BUILDINGS, iChartWidth / 3)
 			screen.setTableColumnHeader(szBuildingsTable, 1, self.TEXT_BUILT, iColWidth)
 
 
@@ -1596,11 +1546,6 @@ class CvInfoScreen:
 				iIndex = screen.getSelectedPullDownID("Info_DebugDD")
 				self.iPlayer = screen.getPullDownData("Info_DebugDD", iIndex)
 				self.determineKnownPlayers()
-
-				# Force recache of all scores
-				self.scoreCache = []
-				for t in xrange(self.iNumGraphs):
-					self.scoreCache.append(None)
 				self.redrawContents()
 
 			iSelected = inputClass.getData()
