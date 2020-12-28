@@ -56,7 +56,6 @@ void CvInfoBase::reset()
 	m_szCachedHelp.clear();
 	m_szCachedStrategy.clear();
 	m_szCachedCivilopedia.clear();
-	//m_szCachedGenericCategory.clear();
 }
 
 bool CvInfoBase::isGraphicalOnly() const
@@ -103,10 +102,6 @@ const wchar_t* CvInfoBase::getStrategyKey() const
 	return m_szStrategyKey;
 }
 
-//const wchar_t* CvInfoBase::getGenericCategoryKey() const
-//{
-//	return m_szGenericCategoryKey;
-//}
 const wchar_t* CvInfoBase::getTextKeyWide() const
 {
 	return m_szTextKey;
@@ -166,37 +161,6 @@ const wchar_t* CvInfoBase::getStrategy() const
 	return m_szCachedStrategy;
 }
 
-//const wchar_t* CvInfoBase::getGenericCategory() const
-//{
-//	if (m_szCachedGenericCategory.empty())
-//	{
-//		m_szCachedGenericCategory = gDLL->getText(m_szGenericCategoryKey);
-//	}
-//
-//	return m_szCachedGenericCategory;
-//}
-
-bool CvInfoBase::isMatchForLink(const std::wstring szLink, bool bKeysOnly) const
-{
-	if (szLink == CvWString(getType()).GetCString())
-	{
-		return true;
-	}
-
-	if (!bKeysOnly)
-	{
-		const uint iNumForms = gDLL->getNumForms(getTextKeyWide());
-		for (uint i = 0; i < iNumForms; i++)
-		{
-			if (szLink == getDescription(i))
-			{
-				return true;
-			}
-		}
-	}
-
-	return false;
-}
 //
 // read from XML
 // TYPE, DESC, BUTTON
@@ -223,23 +187,14 @@ bool CvInfoBase::read(CvXMLLoadUtility* pXML)
 	// STRATEGY
 	pXML->GetOptionalChildXmlValByName(m_szStrategyKey, L"Strategy");
 
-	// GENERICCATEGORY
-	//pXML->GetChildXmlValByName(m_szGenericCategoryKey, L"GenericCategory");
-
 	// BUTTON
 	pXML->GetOptionalChildXmlValByName(m_szButton, L"Button");
 
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 10/26/07							MRGENIE		  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
+	// XML_MODULAR_ART_LOADING - 10/26/07 - MRGENIE
 	CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
 	p_szDirName->setLocationName( &m_szButton, (GC.getModDir()).c_str());
 	SAFE_DELETE(p_szDirName);
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
 
 	return true;
 }
@@ -273,11 +228,6 @@ void CvInfoBase::copyNonDefaults(CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML)
 	{
 		m_szStrategyKey = pClassInfo->getStrategyKey();
 	}
-
-	//if ( getGenericCategoryKey() == NULL || getGenericCategoryKey() == wDefault)
-	//{
-	//	m_szGenericCategoryKey = pClassInfo->getGenericCategoryKey();
-	//}
 
 	if ( getButton() == NULL || getButton() == cDefault)
 	{
@@ -8038,16 +7988,6 @@ const wchar_t* CvActionInfo::getStrategy() const
 
 	return L"";
 }
-
-//const wchar_t* CvActionInfo::getGenericCategory() const
-//{
-//	if (getHotkeyInfo())
-//	{
-//		return getHotkeyInfo()->getGenericCategory();
-//	}
-//
-//	return L"";
-//}
 
 const TCHAR* CvActionInfo::getButton() const
 {

@@ -24,8 +24,6 @@ void CyInfoPythonInterface1()
 		.def("getCivilopedia", &CvInfoBase::pyGetCivilopedia, "wstring ()")
 		.def("getStrategy", &CvInfoBase::pyGetStrategy, "wstring ()")
 		.def("getHelp", &CvInfoBase::pyGetHelp, "wstring ()")
-		.def("isMatchForLink", &CvInfoBase::isMatchForLink, "bool (string)")
-		//.def("getGenericCategory", &CvInfoBase::pyGetGenericCategory, "wstring ()")
 		;
 
 	python::class_<CvScalableInfo>("CvScalableInfo")
