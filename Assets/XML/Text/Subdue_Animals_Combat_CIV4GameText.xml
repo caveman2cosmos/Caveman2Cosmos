@@ -2,16 +2,16 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ANIMAL_COMPLETELY_HARMLESS_LAND_DESC</Tag>
-		<English>Land animal is Completely Harmless</English>
-		<French>Animal Terrestre complètement Inoffensif</French>
+		<English>Land animal is completely harmless</English>
+		<French>Animal Terrestre totalement inoffensif</French>
 		<Italian>Animale terrestre completamente inoffensivo</Italian>
 		<German>Landtier ist komplett harmlos</German>
 		<Polish>Zwierzę lądowe jest kompletnie niegroźne</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ANIMAL_COMPLETELY_HARMLESS_SEA_DESC</Tag>
-		<English>Sea animal is Completely Harmless</English>
-		<French>Animal marin complèment Inoffensif</French>
+		<English>Sea animal is completely harmless</English>
+		<French>Animal marin totalement inoffensif</French>
 		<Italian>Animale marino completamente inoffensivo</Italian>
 		<German>Wassertier ist komplett harmlos</German>
 		<Polish>Zwierzę morskie jest kompletnie niegroźne</Polish>
@@ -34,32 +34,32 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ANIMAL_HARMLESS_LAND_DESC</Tag>
-		<English>Land animal is Harmless</English>
-		<French>Animal Terrestre souvent Inoffensif</French>
+		<English>Land animal is harmless</English>
+		<French>Animal terrestre inoffensif</French>
 		<Italian>Animale terrestre inoffensivo</Italian>
 		<German>Landtier ist harmlos</German>
 		<Polish>Zwierzę lądowe jest niegroźne</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ANIMAL_HARMLESS_SEA_DESC</Tag>
-		<English>Sea animal is Harmless</English>
-		<French>Animal marin souvent Inoffensif</French>
+		<English>Sea animal is harmless</English>
+		<French>Animal marin inoffensif</French>
 		<Italian>Animale marino inoffensivo</Italian>
 		<German>Wassertier ist harmlos</German>
 		<Polish>Zwierzę morskie jest niegroźne</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ANIMAL_MOSTLY_HARMLESS_LAND_DESC</Tag>
-		<English>Land animal is Mostly Harmless</English>
-		<French>Animal Terrestre généralement Inoffensif</French>
+		<English>Land animal is mostly harmless</English>
+		<French>Animal terrestre généralement inoffensif</French>
 		<Italian>Animale terrestre generalmente inoffensivo</Italian>
 		<German>Landtier ist meistens harmlos</German>
 		<Polish>Zwierzę lądowe jest w większości wypadków niegroźne</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ANIMAL_MOSTLY_HARMLESS_SEA_DESC</Tag>
-		<English>Sea animal is Mostly Harmless</English>
-		<French>Animal marin généralement Inoffensif</French>
+		<English>Sea animal is mostly harmless</English>
+		<French>Animal marin généralement inoffensif</French>
 		<Italian>Animale marino generalmente inoffensivo</Italian>
 		<German>Wassertier ist meistens harmlos</German>
 		<Polish>Zwierzę morskie jest w większości wypadków niegroźne</Polish>
@@ -67,7 +67,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ANIMAL_NONTHREATENING_LAND_DESC</Tag>
 		<English>Land animal is non-threatening</English>
-		<French>Animal Terrestre non Dangereux</French>
+		<French>Animal terrestre pas menaçant</French>
 		<Italian>Animale terrestre non pericoloso</Italian>
 		<German>Landtier ist nicht gefährlich</German>
 		<Polish>Zwierzę lądowe nie zagraża</Polish>
@@ -75,7 +75,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ANIMAL_NONTHREATENING_SEA_DESC</Tag>
 		<English>Sea animal is non-threatening</English>
-		<French>Animal marin non Dangereux</French>
+		<French>Animal marin pas menaçant</French>
 		<Italian>Animale marino non pericoloso</Italian>
 		<German>Wassertier ist nicht gefährlich</German>
 		<Polish>Zwierzę morskie nie zagraża</Polish>
@@ -154,7 +154,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SEA_LARGE</Tag>
 		<English>Sea Animals (Large)</English>
-		<French>Grands Animaux marins</French>
+		<French>Grands animaux marins</French>
 		<German>Große Meerestiereinheiten</German>
 		<Italian>Animali marini (Grandi)</Italian>
 		<Spanish>Sea Animales</Spanish>
@@ -163,7 +163,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SEA_SMALL</Tag>
 		<English>Sea Animals (Small)</English>
-		<French>Petits Animaux marins</French>
+		<French>Petits animaux marins</French>
 		<German>Kleine Meerestiereinheiten</German>
 		<Italian>Animali marini (Piccoli)</Italian>
 		<Spanish>Sea Animales</Spanish>

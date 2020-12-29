@@ -44,19 +44,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC</Tag>
 		<English>Tradition - Work Ethic</English>
-		<French>Tradition - Ethique du Travail</French>
+		<French>Tradition - Éthique du Travail</French>
 		<German>Tradition - Arbeitsmoral</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC_EFFECT</Tag>
 		<English>Effect - Tradition - Work Ethic</English>
-		<French>Effet (Tradition - Ethique du Travail)</French>
+		<French>Effet (Tradition - Éthique du Travail)</French>
 		<German>Effekt - Tradition - Arbeitsmoral</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC_PEDIA</Tag>
 		<English>Work ethic is a value based on hard work and diligence.</English>
-		<French>L'Ethique du travail est une valeur basée sur la diligence et le labeur.</French>
+		<French>L'Éthique du travail est une valeur basée sur la diligence et le labeur.</French>
 		<German>Arbeitsmoral basiert auf Fleiß und harter Arbeit.</German>
 	</TEXT>
 	<TEXT>
@@ -86,7 +86,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRADITION_WORK_ETHIC</Tag>
 		<English>Work Ethic</English>
-		<French>Ethique du Travail</French>
+		<French>Éthique du Travail</French>
 		<German>Arbeitsmoral</German>
 	</TEXT>
 </Civ4GameText>

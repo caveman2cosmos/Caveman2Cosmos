@@ -246,7 +246,6 @@ m_ppaiBonusYieldModifier(NULL)
 //New Boolean Arrays
 ,m_pbPrereqOrCivics(NULL)
 ,m_pbPrereqAndCivics(NULL)
-,m_pbPrereqNotBuilding(NULL)
 ,m_pbPrereqOrTerrain(NULL)
 ,m_pbPrereqAndTerrain(NULL)
 ,m_pbPrereqOrImprovement(NULL)
@@ -385,7 +384,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY2(m_ppaiBonusYieldModifier, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY(m_pbPrereqOrCivics);
 	SAFE_DELETE_ARRAY(m_pbPrereqAndCivics);
-	SAFE_DELETE_ARRAY(m_pbPrereqNotBuilding);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrTerrain);
 	SAFE_DELETE_ARRAY(m_pbPrereqAndTerrain);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrImprovement);
@@ -435,6 +433,11 @@ CvBuildingInfo::~CvBuildingInfo()
 	for (int i = 0; i < (int)m_aiPrereqInCityBuildings.size(); i++)
 	{
 		GC.removeDelayedResolution((int*)&(m_aiPrereqInCityBuildings[i]));
+	}
+
+	for (int i = 0; i < (int)m_vPrereqNotInCityBuildings.size(); i++)
+	{
+		GC.removeDelayedResolution((int*)&(m_vPrereqNotInCityBuildings[i]));
 	}
 
 	for (int i=0; i<(int)m_vPrereqOrBuilding.size(); i++)
@@ -864,6 +867,17 @@ bool CvBuildingInfo::isPrereqInCityBuilding(const int i) const
 }
 
 
+int CvBuildingInfo::getPrereqNotInCityBuilding(const int i) const
+{
+	return m_vPrereqNotInCityBuildings[i];
+}
+
+short CvBuildingInfo::getNumPrereqNotInCityBuildings() const
+{
+	return m_vPrereqNotInCityBuildings.size();
+}
+
+
 int CvBuildingInfo::getSpecialistYieldChange(int i, int j) const
 {
 	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
@@ -1044,17 +1058,6 @@ bool CvBuildingInfo::isPrereqOrFeature(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
 	return m_pbPrereqOrFeature ? m_pbPrereqOrFeature[i] : false;
-}
-
-bool CvBuildingInfo::isPrereqNotBuilding(int i) const
-{
-	FASSERT_BOUNDS(NO_BUILDING, GC.getNumBuildingInfos(), i)
-
-	if (i == NO_BUILDING)
-	{
-		return (m_pbPrereqNotBuilding != NULL);
-	}
-	return m_pbPrereqNotBuilding ? m_pbPrereqNotBuilding[i] : false;
 }
 
 int CvBuildingInfo::getPrereqOrVicinityBonuses(int i) const
@@ -2240,7 +2243,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 
 	CheckSumI(iSum, GC.getNumCivicInfos(), m_pbPrereqOrCivics);
 	CheckSumI(iSum, GC.getNumCivicInfos(), m_pbPrereqAndCivics);
-	CheckSumI(iSum, GC.getNumBuildingInfos(), m_pbPrereqNotBuilding);
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbPrereqOrTerrain);
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbPrereqAndTerrain);
 	CheckSumI(iSum, GC.getNumImprovementInfos(), m_pbPrereqOrImprovement);
@@ -2401,6 +2403,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSumC(iSum, m_aePrereqOrRawVicinityBonuses);
 	CheckSumC(iSum, m_aePrereqOrBonuses);
 	CheckSumC(iSum, m_aiPrereqInCityBuildings);
+	CheckSumC(iSum, m_vPrereqNotInCityBuildings);
 	CheckSumC(iSum, m_vPrereqOrBuilding);
 	CheckSumC(iSum, m_vReplacementBuilding);
 	CheckSumC(iSum, m_vReplacedBuilding);
@@ -3853,6 +3856,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetOptionalVectorWithDelayedResolution(m_aiFreeTraitTypes, L"FreeTraitTypes");
 	pXML->SetOptionalVectorWithDelayedResolution(m_aiPrereqInCityBuildings, L"PrereqInCityBuildings");
+	pXML->SetOptionalVectorWithDelayedResolution(m_vPrereqNotInCityBuildings, L"PrereqNotInCityBuildings");
 	pXML->SetOptionalVectorWithDelayedResolution(m_vPrereqOrBuilding, L"PrereqOrBuildings");
 	pXML->SetOptionalVectorWithDelayedResolution(m_vReplacementBuilding, L"ReplacementBuildings");
 
@@ -4051,7 +4055,6 @@ bool CvBuildingInfo::readPass2(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ExtendsBuilding");
 	m_iExtendsBuilding = pXML->GetInfoClass(szTextVal);
 
-	pXML->SetVariableListTagPair(&m_pbPrereqNotBuilding, L"PrereqNotBuildings",  GC.getNumBuildingInfos());
 	pXML->SetVariableListTagPair(&m_piBuildingProductionModifier, L"BuildingProductionModifiers",  GC.getNumBuildingInfos());
 	pXML->SetVariableListTagPair(&m_piGlobalBuildingProductionModifier, L"GlobalBuildingProductionModifiers",  GC.getNumBuildingInfos());
 	pXML->SetVariableListTagPair(&m_piGlobalBuildingCostModifier, L"GlobalBuildingCostModifiers",  GC.getNumBuildingInfos());
@@ -5273,6 +5276,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aFreePromoTypes, pClassInfo->m_aFreePromoTypes);
 	GC.copyNonDefaultDelayedResolutionVector(m_aiFreeTraitTypes, pClassInfo->m_aiFreeTraitTypes);
 	GC.copyNonDefaultDelayedResolutionVector(m_aiPrereqInCityBuildings, pClassInfo->m_aiPrereqInCityBuildings);
+	GC.copyNonDefaultDelayedResolutionVector(m_vPrereqNotInCityBuildings, pClassInfo->m_vPrereqNotInCityBuildings);
 	GC.copyNonDefaultDelayedResolutionVector(m_vPrereqOrBuilding, pClassInfo->m_vPrereqOrBuilding);
 	GC.copyNonDefaultDelayedResolutionVector(m_vReplacementBuilding, pClassInfo->m_vReplacementBuilding);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aHealUnitCombatTypes, pClassInfo->m_aHealUnitCombatTypes);
@@ -5519,24 +5523,6 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 				}
 			}
 		}
-	}
-	if (pClassInfo->m_pbPrereqNotBuilding != NULL)
-	{
-		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
-		{
-			if (bOver || isPrereqNotBuilding(j) == bDefault && pClassInfo->isPrereqNotBuilding(j) != bDefault)
-			{
-				if (m_pbPrereqNotBuilding == NULL)
-				{
-					CvXMLLoadUtility::InitList(&m_pbPrereqNotBuilding, GC.getNumBuildingInfos(), bDefault);
-				}
-				m_pbPrereqNotBuilding[j] = pClassInfo->isPrereqNotBuilding(j);
-			}
-		}
-	}
-	else if (bOver)
-	{
-		SAFE_DELETE_ARRAY(m_pbPrereqNotBuilding);
 	}
 
 	if (pClassInfo->m_piBuildingProductionModifier != NULL)

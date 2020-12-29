@@ -269,11 +269,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MODERN_WINDMILL_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_MODERN_WINDMILL]Modern Windmill[\LINK] (Forced)</English>
-		<French>Construire un [LINK=IMPROVEMENT_MODERNWINDMILL]Moulin à vent Moderne[\LINK] (Forcé)</French>
-		<German>Zwangsarbeit - Bauen a [LINK=IMPROVEMENT_MODERNWINDMILL]Modern-Windrad[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_MODERNWINDMILL]Moderno Mulino a vento[\LINK] (Schiavo)</Italian>
-		<Spanish>Construye un [LINK=IMPROVEMENT_MODERNWINDMILL]Moderno Molino de viento[\LINK] (Forzado)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_MODERNWINDMILL]WspóBczesny MByn[\LINK] (Prace Przym.)</Polish>
+		<French>Construire un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moulin à vent Moderne[\LINK] (Forcé)</French>
+		<German>Zwangsarbeit - Bauen a [LINK=IMPROVEMENT_MODERN_WINDMILL]Modern-Windrad[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moderno Mulino a vento[\LINK] (Schiavo)</Italian>
+		<Spanish>Construye un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moderno Molino de viento[\LINK] (Forzado)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_MODERN_WINDMILL]WspóBczesny MByn[\LINK] (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MOUNTAIN_MINE_SLAVE</Tag>

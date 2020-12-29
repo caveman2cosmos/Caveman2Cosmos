@@ -699,18 +699,6 @@ public:
 		std::sort(target.begin(), target.end());
 	}
 
-	static void CopyNonDefaultsFromStringVector(std::vector<CvWString>& target, std::vector<CvWString>& source)
-	{
-		foreach_(const CvWString& i, source)
-		{
-			if (find(target.begin(), target.end(), i) == target.end())
-			{
-				target.push_back(i);
-			}
-		}
-		std::sort(target.begin(), target.end());
-	}
-
 	template<class T>
 	void SetOptionalVector(std::vector<T>* aInfos, const wchar_t* szRootTagName)
 	{
