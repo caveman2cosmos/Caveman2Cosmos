@@ -29,6 +29,9 @@ public:
 							CvString **ppszListOld, int iNumOldListElements,
 							CvString szDefaultListVal = CvString()) const;
 
+	bool isDuplicate(int iNumValueNew, int *ppiListNew, int iValueOld) const;
+	bool isDuplicate(int iNumValueNew, CvWString *ppiListNew, CvWString wValueOld) const;
+	
 	void setLocationName( CvString *pszTextVal, const char* szDirName);
 	bool isExcludedFile(const char* szLocationName);
 	bool isCommaFile(CvString *pszTextVal, const char* szDirName);
