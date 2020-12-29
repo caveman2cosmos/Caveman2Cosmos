@@ -11914,20 +11914,6 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Units/Transport.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,5,5</Button>
 		</BuildInfo>
-		<!-- Submerged Town (Deep) -->
-		<!-- <BuildInfo>
-			<Type>BUILD_SUBMERGED_TOWN_DEEP</Type>
-			<Description>TXT_KEY_BUILD_SUBMERGED_TOWN_DEEP</Description>
-			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
-			<iTime>300</iTime>
-			<iCost>200</iCost>
-			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_SUBMERGED_TOWN_DEEP</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_T</HotKey>
-			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Units/Transport.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,5,5</Button>
-		</BuildInfo> -->
 		<!-- Sea Air Defense -->
 		<BuildInfo>
 			<Type>BUILD_AQUATIC_ANTI_AIR_DEFENSE</Type>
