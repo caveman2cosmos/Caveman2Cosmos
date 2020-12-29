@@ -24565,12 +24565,14 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		}
 
 		bFirst = true;
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+		for (int iI = 0; iI < kBuilding.getNumPrereqNotInCityBuildings(); ++iI)
 		{
-			if (kBuilding.isPrereqNotBuilding(iI) && (pCity == NULL || pCity->getNumActiveBuilding((BuildingTypes)iI) > 0))
+			const BuildingTypes eBuildingX = static_cast<BuildingTypes>(kBuilding.getPrereqNotInCityBuilding(iI));
+
+			if (pCity == NULL || pCity->getNumActiveBuilding(eBuildingX) > 0)
 			{
 				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_NOT_REQUIRED_TO_BUILD").c_str());
-				szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo((BuildingTypes)iI).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iI).getDescription());
+				szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eBuildingX).getType()).GetCString(), GC.getBuildingInfo(eBuildingX).getDescription());
 				setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
 				bFirst = false;
 			}
