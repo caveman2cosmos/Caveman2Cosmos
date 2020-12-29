@@ -5359,12 +5359,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_HUMANTRAFFICKING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CRIME_HUMANTRAFFICKING_STRATEGY</Strategy>
 			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SLAVERY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SLAVERY</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iInsidiousness>20</iInsidiousness>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -14822,12 +14819,9 @@
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_EARTH_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_EARTH_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -14926,12 +14920,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SEA_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_SEA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15003,12 +14994,9 @@
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SKY_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_SKY_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>

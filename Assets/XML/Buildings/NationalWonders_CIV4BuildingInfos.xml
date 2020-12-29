@@ -3828,12 +3828,9 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_CAMEL</Bonus>
 			</PrereqBonuses>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_CAMEL_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_CAMEL_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<iCost>184</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3870,12 +3867,9 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_ELEPHANTS</Bonus>
 			</PrereqBonuses>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_ELEPHANT_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_ELEPHANT_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<iCost>184</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3917,12 +3911,9 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_HORSE</Bonus>
 			</PrereqBonuses>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_HORSE_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_HORSE_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<iCost>184</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4293,12 +4284,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_BAUXITE_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_ALUMINUM_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_ALUMINUM_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>1900</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4355,12 +4343,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_COPPER_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_COPPER_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_COPPER_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>292</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4414,12 +4399,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_GOLD_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_GOLD_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_GOLD_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>306</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4473,12 +4455,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_IRON_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_IRON_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_IRON_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4532,12 +4511,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_LEAD_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_LEAD_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_LEAD_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>292</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4591,12 +4567,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_PLATINUM_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_PLATINUM_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_PLATINUM_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4650,12 +4623,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_SILVER_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_SILVER_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_SILVER_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>306</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4709,12 +4679,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_TIN_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_TIN_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_TIN_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>368</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4768,12 +4735,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_TITANIUM_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_TITANIUM_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_TITANIUM_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>1980</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -6014,16 +5978,10 @@
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TEMPLE_OF_SET</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TEMPLE_OF_OSIRIS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_TEMPLE_OF_SET</BuildingType>
+				<BuildingType>BUILDING_TEMPLE_OF_OSIRIS</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>320</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -6091,16 +6049,10 @@
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TEMPLE_OF_SET</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TEMPLE_OF_ISIS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_TEMPLE_OF_SET</BuildingType>
+				<BuildingType>BUILDING_TEMPLE_OF_ISIS</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>352</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -6175,16 +6127,10 @@
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TEMPLE_OF_OSIRIS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TEMPLE_OF_ISIS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_TEMPLE_OF_OSIRIS</BuildingType>
+				<BuildingType>BUILDING_TEMPLE_OF_ISIS</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -6691,32 +6637,14 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6747,32 +6675,14 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HIERACOSPHINX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6803,32 +6713,14 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HIERACOSPHINX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6859,32 +6751,14 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HIERACOSPHINX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6915,32 +6789,14 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HIERACOSPHINX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6971,32 +6827,14 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HIERACOSPHINX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
+				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -7027,32 +6865,14 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HIERACOSPHINX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>

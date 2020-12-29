@@ -137,12 +137,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_AFRICAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -169,12 +166,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_NATIVE_ASIAN</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_ASIAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -201,12 +195,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_EUROPEAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -233,12 +224,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -265,12 +253,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_NATIVE_NEANDERTHAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_NATIVE_NEANDERTHAL</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -297,12 +282,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -329,12 +311,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_OCEANIAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -361,12 +340,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -6443,12 +6419,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_NEANDERTHAL_EMBASSY</MovieDefineTag>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
+			</PrereqNotInCityBuildings>
 			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<iCost>60</iCost>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</FreeBuilding>
