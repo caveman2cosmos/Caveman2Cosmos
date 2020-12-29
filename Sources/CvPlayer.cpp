@@ -6516,10 +6516,13 @@ void CvPlayer::doGoody(CvPlot* pPlot, CvUnit* pUnit)
 	{
 		for (int iI = 0; iI < GC.getHandicapInfo(getHandicapType()).getNumGoodies(); iI++)
 		{
-			const GoodyTypes eGoody = (GoodyTypes)GC.getHandicapInfo(getHandicapType()).getGoodies(iI);
-			if (canReceiveGoody(pPlot, eGoody, pUnit))
+			if (GC.getHandicapInfo(getHandicapType()).getNumGoodies() > 0)
 			{
-				aGoodies.push_back(eGoody);
+				GoodyTypes eGoody = (GoodyTypes)GC.getHandicapInfo(getHandicapType()).getGoodies(iI);
+				if (canReceiveGoody(pPlot, eGoody, pUnit))
+				{
+					aGoodies.push_back(eGoody);
+				}
 			}
 		}
 
