@@ -14,7 +14,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GAME_HUNTER</Tag>
 		<English>Game Hunter</English>
-		<French>Maìtre Chasseur</French>
+		<French>Maître chasseur</French>
 		<Italian>
 			<Text>Esperto cacciatore</Text>
 			<Gender>Male</Gender>
@@ -409,7 +409,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELEPHANT</Tag>
 		<English>Subdued Asian Elephant</English>
-		<French>Eléphant d'Asie (App.)</French>
+		<French>Éléphant d'Asie (App.)</French>
 		<Polish>Poskromiony Słoń Indyjski</Polish>
 	</TEXT>
 	<TEXT>
@@ -1023,7 +1023,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OXPECKER</Tag>
 		<English>Subdued Oxpecker</English>
-		<French>Piqueboeuf (App.)</French>
+		<French>Pique-bœuf (App.)</French>
 		<Italian>
 			<Text>Bufaga addomesticata</Text>
 			<Gender>Female</Gender>
@@ -1292,7 +1292,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_LAND</Tag>
-		<English>Subdued Sealion (Land)</English>
+		<English>Subdued Sea Lion (Land)</English>
 		<French>Lion de mer (App.)</French>
 		<Italian>
 			<Text>Leone marino addomesticato</Text>
@@ -1303,7 +1303,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_SEA</Tag>
-		<English>Subdued Sealion (Sea)</English>
+		<English>Subdued Sea Lion (Sea)</English>
 		<French>Lion de mer (App.)</French>
 		<Italian>
 			<Text>Leone marino addomesticato</Text>
@@ -1345,7 +1345,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SIBERIANTIGER</Tag>
 		<English>Subdued Siberian Tiger</English>
-		<French>Tigre de sibérie (App.)</French>
+		<French>Tigre de Sibérie (App.)</French>
 		<Italian>
 			<Text>Tigre siberiana addomesticata</Text>
 			<Gender>Female</Gender>
@@ -1880,7 +1880,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TALESOF_SEALION_SEA</Tag>
-		<English>Tales of Sealion</English>
+		<English>Tales of Sea Lion</English>
 		<French>Histoires de Lions de mer</French>
 		<Italian>
 			<Text>Storie di leoni marini</Text>

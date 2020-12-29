@@ -18,9 +18,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANIMAL_STRATEGY</Tag>
-		<English>Animals spawn in the wilderness and are barbarian animal units. See also [LINK=CONCEPT_SUBDUED_ANIMALS]Subdued Animals[\LINK] and [LINK=CONCEPT_TAMED_ANIMALS]Tamed Animals[\LINK].</English>
-		<French>Les animaux apparaissent dans la nature et sont des unités animales barbares. Voir également [LINK=CONCEPT_SUBDUED_ANIMALS]Animaux apprivoisés[\LINK] et [LINK=CONCEPT_TAMED_ANIMALS]Animaux dressés[\LINK].</French>
-		<German>Tiere sind eine spezielle Art von barbarischen Einheiten, die keiner Zivilisation angehören. Sie entstehen zufällig in der Wildnis und können schwachen Einheiten leicht gefährlich werden. Dafür liefern sie aber auch Nahrung und wichtige Rohstoffe, wenn sie besiegt werden. Mehr Informationen gibt es unter [LINK=CONCEPT_SUBDUED_ANIMALS]Gefangene Tiere[\LINK] und [LINK=CONCEPT_TAMED_ANIMALS]Gezähmte Tiere[\LINK]</German>
+		<English>Animals spawn in the wilderness and are barbarian animal units. See also [LINK=CONCEPT_SUBDUED_ANIMALS]Subdued Animals[\LINK].</English>
+		<French>Les animaux apparaissent dans la nature et sont des unités animales barbares. Voir également [LINK=CONCEPT_SUBDUED_ANIMALS]Animaux apprivoisés[\LINK].</French>
+		<German>Tiere sind eine spezielle Art von barbarischen Einheiten, die keiner Zivilisation angehören. Sie entstehen zufällig in der Wildnis und können schwachen Einheiten leicht gefährlich werden. Dafür liefern sie aber auch Nahrung und wichtige Rohstoffe, wenn sie besiegt werden. Mehr Informationen gibt es unter [LINK=CONCEPT_SUBDUED_ANIMALS]Gefangene Tiere[\LINK].</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Tag>
