@@ -45,22 +45,28 @@ for k, v in dict
 imp_list = []
 b_dict = {}
 _, root, schema = load_tree(path_xml_folder+path_improvements)
+# Loop thru improvements from ImprovementInfos
 for imp_info in root[0].findall(f"{schema}ImprovementInfo"):
-    imp = find_text(imp_info, schema, 'Type')
+    imp = find_text(imp_info, schema, 'Type')[12:]
     b_structs = imp_info.find(f"{schema}BonusTypeStructs")
+    # If improvement has bonus structs, then collect relevant info
     if b_structs != None:
         if imp not in imp_list:
             imp_list.append(imp)
+
         for b_struct in b_structs.findall(f"{schema}BonusTypeStruct"):
-            b_name = find_text(b_struct, schema, 'BonusType')
+            b_name = find_text(b_struct, schema, 'BonusType')[6:]
+            b_trad = find_text(b_struct, schema, 'bBonusTrade', 0)
             b_disc = find_text(b_struct, schema, 'iDiscoverRand', 0)
+            b_depl = find_text(b_struct, schema, 'iDepletionRand', 0)
+            
             if b_dict.get(b_name) == None:
                 b_dict[b_name] = [0]*len(imp_list)
-                b_dict[b_name][imp_list.index(imp)] = b_disc
             else:
                 if len(b_dict[b_name]) < len(imp_list):
                     b_dict[b_name] += [0]*(len(imp_list) - len(b_dict[b_name]))
-                b_dict[b_name][imp_list.index(imp)] = b_disc
+            
+            b_dict[b_name][imp_list.index(imp)] = (int(b_trad), int(b_disc), int(b_depl))
 
 # print(['Bonuses']+imp_list)
 # exit()
