@@ -7934,6 +7934,7 @@
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GAS_LIGHTING</PrereqTech>
 			<iHealthPercent>-100</iHealthPercent>
+			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iUpgradeTime>50</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -8086,6 +8087,7 @@
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<iHealthPercent>-100</iHealthPercent>
+			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iUpgradeTime>40</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
