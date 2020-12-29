@@ -1867,6 +1867,11 @@
 		<English>Dieselpunk</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_DIESELPUNK_PEDIA</Tag>
+		<English>Dieselpunk is based on the aesthetics of the period between the end of the World War I and the beginning of World War II. This sub-genre is sometimes named Decopunk, referring to the Art Deco art style (including its Streamline Moderne variant). The genre combines the artistic and genre influences of the period (including pulp magazines, serial films, film noir, art deco, and wartime pin-ups) with postmodern technology and sensibilities.</English>
+		<Italian>Dieselpunk è basata sull'estetica nel periodo tra la fine della prima guerra mondiale e l'inizio della seconda. Questo sottogenere viene spesso chiamato Decopunk, in riferimento alla corrente artistica Art Deco (inclusa la sua variante moderna). Il genere combina le influenze artistiche di questo periodo (incluse riviste di tendenza, serie tv, film noir, art deco e pin-up) con la tecnologia e la sensibilità post-moderna.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_DIGITIZED_MEMBRANES</Tag>
 		<English>Digitized Membranes</English>
 		<French>Membranes digitales</French>
@@ -7210,7 +7215,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_THEREMIN</Tag>
 		<English>Theremin</English>
-		<Polish>Teremin</Polish>
+		<French>Thérémine</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_THEREMIN_PEDIA</Tag>
+		<English>The theremin is an early electronic musical instrument controlled without discernible physical contact from the player. It is named after its Russian inventor, Professor Léon Theremin, who patented the device in 1928. The controlling section usually consists of two metal antennas which sense the position of the player's hands and control oscillators for frequency with one hand, and amplitude (volume) with the other, so it can be played without being touched. The electric signals from the theremin are amplified and sent to a loudspeaker.</English>
+		<Italian>Il theremin è uno dei primi strumenti musicali elettronici, che può essere suonato anche senza un contatto fisico completo. Prende il nome dal suo inventore, il professore russo Léon Theremin, che brevettò il dispositivo nel 1928. La sezione di controllo consiste solitamente di due antenne metalliche, che rilevano la posizione delle mani del musicista e in base a esse controllano rispettivamente gli oscillatori di frequenza e l'ampiezza (ossia il volume) senza che li si tocchi direttamente. I segnali elettrici del theremin vengono poi amplificati e inviati a un altoparlante.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_THRACIAN</Tag>
