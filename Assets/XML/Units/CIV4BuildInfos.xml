@@ -1849,20 +1849,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/tar_gatherer.dds</Button>
 		</BuildInfo>
-		<!-- Nature Preserve* | Independent -->
-		<BuildInfo>
-			<Type>BUILD_NATURE_PRESERVE</Type>
-			<Description>TXT_KEY_BUILD_NATURE_PRESERVE</Description>
-			<PrereqTech>TECH_TOURISM</PrereqTech>
-			<iTime>800</iTime>
-			<iCost>50</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_NATURE_PRESERVE</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_F</HotKey>
-			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,4,14</Button>
-		</BuildInfo>
 		<!-- Fossil Digsite* | Independent -->
 		<BuildInfo>
 			<Type>BUILD_FOSSIL_DIG_SITE</Type>
@@ -2945,38 +2931,6 @@
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/Button_GrainGather.dds</Button>
-		</BuildInfo>
-		<!-- Seasonal Camp (No Kill) -> (Various, Medieval Lifestyle) -->
-		<BuildInfo>
-			<Type>BUILD_SEASONAL_CAMP</Type>
-			<Description>TXT_KEY_BUILD_SEASONAL_CAMP</Description>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
-			<iTime>100</iTime>
-			<iCost>5</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_SEASONAL_CAMP</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_C</HotKey>
-			<bShiftDown>1</bShiftDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
-		</BuildInfo>
-		<!-- Seasonal Camp (Kill) -> (Various) -->
-		<BuildInfo>
-			<Type>BUILD_SEASONAL_CAMP_KILL</Type>
-			<Description>TXT_KEY_BUILD_SEASONAL_CAMP_KILL</Description>
-			<PrereqTech>TECH_NOMADISM</PrereqTech>
-			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
-			<iTime>100</iTime>
-			<iCost>5</iCost>
-			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_SEASONAL_CAMP</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_C</HotKey>
-			<bShiftDown>1</bShiftDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
 		</BuildInfo>
 
 		<!-- Mountain Mine | End -->
@@ -4778,6 +4732,38 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildCottage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,7</Button>
 		</BuildInfo>
+		<!-- Seasonal Camp (No Kill) -> (Various, Classical Lifestyle) -->
+		<BuildInfo>
+			<Type>BUILD_SEASONAL_CAMP</Type>
+			<Description>TXT_KEY_BUILD_SEASONAL_CAMP</Description>
+			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
+			<iTime>100</iTime>
+			<iCost>5</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_SEASONAL_CAMP</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_C</HotKey>
+			<bShiftDown>1</bShiftDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
+		</BuildInfo>
+		<!-- Seasonal Camp (Kill) -> (Various) -->
+		<BuildInfo>
+			<Type>BUILD_SEASONAL_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_SEASONAL_CAMP_KILL</Description>
+			<PrereqTech>TECH_NOMADISM</PrereqTech>
+			<!-- <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech> -->
+			<iTime>100</iTime>
+			<iCost>5</iCost>
+			<bKill>1</bKill>
+			<ImprovementType>IMPROVEMENT_SEASONAL_CAMP</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_C</HotKey>
+			<bShiftDown>1</bShiftDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
+		</BuildInfo>
 
 		<!-- Manufacturing Complex | End -->
 		<BuildInfo>
@@ -6192,6 +6178,20 @@
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/electricity/Art/solarvoltplant.dds</Button>
+		</BuildInfo>
+		<!-- Nature Preserve* | Wildlife Sanctuary / Independent -->
+		<BuildInfo>
+			<Type>BUILD_NATURE_PRESERVE</Type>
+			<Description>TXT_KEY_BUILD_NATURE_PRESERVE</Description>
+			<PrereqTech>TECH_TOURISM</PrereqTech>
+			<iTime>800</iTime>
+			<iCost>50</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_NATURE_PRESERVE</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_F</HotKey>
+			<iHotKeyPriority>1</iHotKeyPriority>
+			<Button>,Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,4,14</Button>
 		</BuildInfo>
 		<!-- Forest Preserve | Independent -->
 		<BuildInfo>
