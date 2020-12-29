@@ -1517,32 +1517,14 @@
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 			</MapCategoryTypes>
 			<iMilitaryProductionModifier>50</iMilitaryProductionModifier>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_COMMERCIAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_EXPLORATORY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_INDUSTRIOUS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_OBEDIENT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_PARADISE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_REBELLIOUS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_COMMERCIAL</BuildingType>
+				<BuildingType>BUILDING_CULTURE_EXPLORATORY</BuildingType>
+				<BuildingType>BUILDING_CULTURE_INDUSTRIOUS</BuildingType>
+				<BuildingType>BUILDING_CULTURE_OBEDIENT</BuildingType>
+				<BuildingType>BUILDING_CULTURE_PARADISE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_REBELLIOUS</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_COMMERCIAL</Type>
@@ -1566,32 +1548,14 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_AGGRESSIVE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_EXPLORATORY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_INDUSTRIOUS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_OBEDIENT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_PARADISE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_REBELLIOUS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_AGGRESSIVE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_EXPLORATORY</BuildingType>
+				<BuildingType>BUILDING_CULTURE_INDUSTRIOUS</BuildingType>
+				<BuildingType>BUILDING_CULTURE_OBEDIENT</BuildingType>
+				<BuildingType>BUILDING_CULTURE_PARADISE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_REBELLIOUS</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_EXPLORATORY</Type>
@@ -1611,32 +1575,14 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>500</iCommerce>
 			</CommerceChanges>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_AGGRESSIVE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_COMMERCIAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_INDUSTRIOUS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_OBEDIENT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_PARADISE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_REBELLIOUS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_AGGRESSIVE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_COMMERCIAL</BuildingType>
+				<BuildingType>BUILDING_CULTURE_INDUSTRIOUS</BuildingType>
+				<BuildingType>BUILDING_CULTURE_OBEDIENT</BuildingType>
+				<BuildingType>BUILDING_CULTURE_PARADISE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_REBELLIOUS</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_INDUSTRIOUS</Type>
@@ -1656,32 +1602,14 @@
 				<iYield>0</iYield>
 				<iYield>500</iYield>
 			</YieldChanges>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_AGGRESSIVE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_COMMERCIAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_EXPLORATORY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_OBEDIENT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_PARADISE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_REBELLIOUS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_AGGRESSIVE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_COMMERCIAL</BuildingType>
+				<BuildingType>BUILDING_CULTURE_EXPLORATORY</BuildingType>
+				<BuildingType>BUILDING_CULTURE_OBEDIENT</BuildingType>
+				<BuildingType>BUILDING_CULTURE_PARADISE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_REBELLIOUS</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_OBEDIENT</Type>
@@ -1697,32 +1625,14 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_AGGRESSIVE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_COMMERCIAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_EXPLORATORY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_INDUSTRIOUS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_PARADISE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_REBELLIOUS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_AGGRESSIVE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_COMMERCIAL</BuildingType>
+				<BuildingType>BUILDING_CULTURE_EXPLORATORY</BuildingType>
+				<BuildingType>BUILDING_CULTURE_INDUSTRIOUS</BuildingType>
+				<BuildingType>BUILDING_CULTURE_PARADISE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_REBELLIOUS</BuildingType>
+			</PrereqNotInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1753,32 +1663,14 @@
 			</CommerceChanges>
 			<iHappiness>5</iHappiness>
 			<iHealth>5</iHealth>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_AGGRESSIVE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_COMMERCIAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_EXPLORATORY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_INDUSTRIOUS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_OBEDIENT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_REBELLIOUS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_AGGRESSIVE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_COMMERCIAL</BuildingType>
+				<BuildingType>BUILDING_CULTURE_EXPLORATORY</BuildingType>
+				<BuildingType>BUILDING_CULTURE_INDUSTRIOUS</BuildingType>
+				<BuildingType>BUILDING_CULTURE_OBEDIENT</BuildingType>
+				<BuildingType>BUILDING_CULTURE_REBELLIOUS</BuildingType>
+			</PrereqNotInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1815,32 +1707,14 @@
 				<iCommerce>100</iCommerce>
 			</CommerceChanges>
 			<iMilitaryProductionModifier>20</iMilitaryProductionModifier>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_AGGRESSIVE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_COMMERCIAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_EXPLORATORY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_INDUSTRIOUS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_OBEDIENT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CULTURE_PARADISE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_AGGRESSIVE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_COMMERCIAL</BuildingType>
+				<BuildingType>BUILDING_CULTURE_EXPLORATORY</BuildingType>
+				<BuildingType>BUILDING_CULTURE_INDUSTRIOUS</BuildingType>
+				<BuildingType>BUILDING_CULTURE_OBEDIENT</BuildingType>
+				<BuildingType>BUILDING_CULTURE_PARADISE</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iRevIdxLocal>10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1915,20 +1789,11 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HOLACRACY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_MACHINE_RULE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GERONTOCRACY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HOLACRACY</BuildingType>
+				<BuildingType>BUILDING_MACHINE_RULE</BuildingType>
+				<BuildingType>BUILDING_GERONTOCRACY</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1955,20 +1820,11 @@
 				<iYield>20</iYield>
 				<iYield>0</iYield>
 			</YieldChanges>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_NOOCRACY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_MACHINE_RULE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GERONTOCRACY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_NOOCRACY</BuildingType>
+				<BuildingType>BUILDING_MACHINE_RULE</BuildingType>
+				<BuildingType>BUILDING_GERONTOCRACY</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1996,20 +1852,11 @@
 				<iYield>20</iYield>
 				<iYield>0</iYield>
 			</YieldChanges>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_NOOCRACY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HOLACRACY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GERONTOCRACY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_NOOCRACY</BuildingType>
+				<BuildingType>BUILDING_HOLACRACY</BuildingType>
+				<BuildingType>BUILDING_GERONTOCRACY</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2032,20 +1879,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_NOOCRACY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HOLACRACY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_MACHINE_RULE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_NOOCRACY</BuildingType>
+				<BuildingType>BUILDING_HOLACRACY</BuildingType>
+				<BuildingType>BUILDING_MACHINE_RULE</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iRevIdxLocal>-20</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -7122,24 +6960,12 @@
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GLIESE_581D</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PROXIMA_CENTAURI</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_WOLF_1061C</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GLIESE_163C</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_GLIESE_581D</BuildingType>
+				<BuildingType>BUILDING_PROXIMA_CENTAURI</BuildingType>
+				<BuildingType>BUILDING_WOLF_1061C</BuildingType>
+				<BuildingType>BUILDING_GLIESE_163C</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GLIESE_581D</Type>
@@ -7173,24 +6999,12 @@
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GLIESE_667CC</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PROXIMA_CENTAURI</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_WOLF_1061C</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GLIESE_163C</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_GLIESE_667CC</BuildingType>
+				<BuildingType>BUILDING_PROXIMA_CENTAURI</BuildingType>
+				<BuildingType>BUILDING_WOLF_1061C</BuildingType>
+				<BuildingType>BUILDING_GLIESE_163C</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROXIMA_CENTAURI</Type>
@@ -7230,24 +7044,12 @@
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GLIESE_667CC</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GLIESE_581D</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_WOLF_1061C</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GLIESE_163C</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_GLIESE_667CC</BuildingType>
+				<BuildingType>BUILDING_GLIESE_581D</BuildingType>
+				<BuildingType>BUILDING_WOLF_1061C</BuildingType>
+				<BuildingType>BUILDING_GLIESE_163C</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WOLF_1061C</Type>
@@ -7288,24 +7090,12 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GLIESE_667CC</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GLIESE_581D</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PROXIMA_CENTAURI</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GLIESE_163C</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_GLIESE_667CC</BuildingType>
+				<BuildingType>BUILDING_GLIESE_581D</BuildingType>
+				<BuildingType>BUILDING_PROXIMA_CENTAURI</BuildingType>
+				<BuildingType>BUILDING_GLIESE_163C</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HD_85512B</Type>
@@ -7348,12 +7138,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GLIESE_163C</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_GLIESE_163C</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GLIESE_163C</Type>
@@ -7394,28 +7181,13 @@
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GLIESE_667CC</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GLIESE_581D</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_WOLF_1061C</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GLIESE_163C</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PROXIMA_CENTAURI</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_GLIESE_667CC</BuildingType>
+				<BuildingType>BUILDING_GLIESE_581D</BuildingType>
+				<BuildingType>BUILDING_WOLF_1061C</BuildingType>
+				<BuildingType>BUILDING_GLIESE_163C</BuildingType>
+				<BuildingType>BUILDING_PROXIMA_CENTAURI</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KEPLER_186F</Type>
@@ -7459,12 +7231,9 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_KEPLER_22B</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_KEPLER_22B</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KEPLER_22B</Type>
@@ -7507,12 +7276,9 @@
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_KEPLER_186F</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_KEPLER_186F</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PERSEUS_ARM</Type>
@@ -7550,20 +7316,11 @@
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_NORMA_AND_OUTER_ARM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SCUTUM_CRUX_ARM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CARINA_SAGITTARIUS_ARM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_NORMA_AND_OUTER_ARM</BuildingType>
+				<BuildingType>BUILDING_SCUTUM_CRUX_ARM</BuildingType>
+				<BuildingType>BUILDING_CARINA_SAGITTARIUS_ARM</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NORMA_AND_OUTER_ARM</Type>
@@ -7605,20 +7362,11 @@
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PERSEUS_ARM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SCUTUM_CRUX_ARM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CARINA_SAGITTARIUS_ARM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_PERSEUS_ARM</BuildingType>
+				<BuildingType>BUILDING_SCUTUM_CRUX_ARM</BuildingType>
+				<BuildingType>BUILDING_CARINA_SAGITTARIUS_ARM</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SCUTUM_CRUX_ARM</Type>
@@ -7658,20 +7406,11 @@
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PERSEUS_ARM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_NORMA_AND_OUTER_ARM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CARINA_SAGITTARIUS_ARM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_PERSEUS_ARM</BuildingType>
+				<BuildingType>BUILDING_NORMA_AND_OUTER_ARM</BuildingType>
+				<BuildingType>BUILDING_CARINA_SAGITTARIUS_ARM</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARINA_SAGITTARIUS_ARM</Type>
@@ -7708,20 +7447,11 @@
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PERSEUS_ARM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_NORMA_AND_OUTER_ARM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SCUTUM_CRUX_ARM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_PERSEUS_ARM</BuildingType>
+				<BuildingType>BUILDING_NORMA_AND_OUTER_ARM</BuildingType>
+				<BuildingType>BUILDING_SCUTUM_CRUX_ARM</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYADES_STAR_CLUSTER</Type>
@@ -7765,12 +7495,9 @@
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_NGC_6811</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_NGC_6811</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NGC_6811</Type>
@@ -7810,12 +7537,9 @@
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HYADES_STAR_CLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HYADES_STAR_CLUSTER</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CYGNUS_X1</Type>

@@ -3459,20 +3459,11 @@
 				<BuildingType>BUILDING_STONE_QUARRY</BuildingType>
 				<BuildingType>BUILDING_IRON_MINE</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SKY_FESTIVAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_FIRE_FESTIVAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_MARINE_FESTIVAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SKY_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_FIRE_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
+			</PrereqNotInCityBuildings>
 			<ObsoleteTech>TECH_WILDLIFE_CONSERVATION</ObsoleteTech>
 			<iCost>516</iCost>
 			<iHappiness>3</iHappiness>
@@ -3661,20 +3652,11 @@
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SKY_FESTIVAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_EARTH_FESTIVAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_MARINE_FESTIVAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SKY_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
+			</PrereqNotInCityBuildings>
 			<ObsoleteTech>TECH_GAS_LIGHTING</ObsoleteTech>
 			<iCost>516</iCost>
 			<iHappiness>3</iHappiness>
@@ -3904,20 +3886,11 @@
 				<BuildingType>BUILDING_FISHERMAN_HUT</BuildingType>
 				<BuildingType>BUILDING_SHIPYARD</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SKY_FESTIVAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_EARTH_FESTIVAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_FIRE_FESTIVAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SKY_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_FIRE_FESTIVAL</BuildingType>
+			</PrereqNotInCityBuildings>
 			<ObsoleteTech>TECH_DEEP_SEA_EXPLORATION</ObsoleteTech>
 			<iCost>516</iCost>
 			<iHappiness>3</iHappiness>
@@ -4105,20 +4078,11 @@
 				<BuildingType>BUILDING_STARGAZERS_HUT</BuildingType>
 				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_FIRE_FESTIVAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_EARTH_FESTIVAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_MARINE_FESTIVAL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_FIRE_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
+			</PrereqNotInCityBuildings>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<iCost>516</iCost>
 			<iHappiness>3</iHappiness>
@@ -4333,12 +4297,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_STATUE_OF_LIBERTY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_STATUE_OF_LIBERTY</BuildingType>
+			</PrereqNotInCityBuildings>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>
@@ -17589,12 +17550,9 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HOLLYWOOD</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HOLLYWOOD</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COIT_TOWER</Type>
@@ -18631,12 +18589,9 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_MONTE_CARLO</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_MONTE_CARLO</BuildingType>
+			</PrereqNotInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
@@ -18916,12 +18871,9 @@
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_LAS_VEGAS_STRIP</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_LAS_VEGAS_STRIP</BuildingType>
+			</PrereqNotInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
 			</ReplacementBuildings>
@@ -19102,12 +19054,9 @@
 			</PrereqOrBuildings>
 			<iLineOfSight>2</iLineOfSight>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SCAPA_FLOW</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SCAPA_FLOW</BuildingType>
+			</PrereqNotInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19462,12 +19411,9 @@
 				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PEARL_HARBOR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_PEARL_HARBOR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19539,12 +19485,9 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TROYES_FAIR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_TROYES_FAIR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19962,12 +19905,9 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SCARBOROUGH_FAIR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SCARBOROUGH_FAIR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
