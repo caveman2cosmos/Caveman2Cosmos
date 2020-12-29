@@ -148,7 +148,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_STUDY</Tag>
 		<English>This will consume the unit providing a science boost based on which building is available in the city (Butcher or Biology Lab).</English>
-		<French>L'unité disparaîtra, au profit d'un bonus de science, dépendant du type de bâtiment dans la ville (Abbatoir, Laboratoire de biologie...).</French>
+		<French>L'unité disparaîtra, au profit d'un bonus de science, dépendant du type de bâtiment dans la ville (Abattoir, Laboratoire de biologie...).</French>
 		<Italian>Consumerà l'unità, fornendo un bonus alla ricerca basato sull'edificio presente in città (Macelleria o Laboratorio di biologia).</Italian>
 		<Polish>Ta akcja usunie jednostkę dostarczając małej ilości nauki bazując na tym jakie budynki są dostępne w mieście (Rzeźnik lub Laboratorium Biologiczne).</Polish>
 	</TEXT>
