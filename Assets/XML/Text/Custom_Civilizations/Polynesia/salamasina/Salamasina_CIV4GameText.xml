@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- re-Modified by strategyonly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Xml/Schema/Civ4Gametext.xsd">
+  <TEXT>
+    <Tag>TXT_KEY_LEADER_SALAMASINA</Tag>
+    <Russian>Ñàëàìàñèíà</Russian>
+    <English>Salamasina</English>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_LEADER_SALAMASINA_PEDIA</Tag>
+    <Russian>[H1]Ñàëàìàñèíà[\H1][NEWLINE][BOLD]Êîðîëåâà Ñàìîà[\BOLD][NEWLINE][BOLD]Ãîäû æèçíè: [\BOLD] îê.1550 - ? [NEWLINE][PARAGRAPH:2][BOLD]Áèîãðàôèÿ:[\BOLD][NEWLINE][TAB]Королева Саламасина была первым суверенным правителем Самоа, она происходила от королей Тонги, верховных вождей Самоа и Фиджи. Она была первой женщиной, получившей все четыре высших королевских титула и ставшей тафайфой или верховным монархом Самоа. После многих гражданских войн и споров с соседней Тонгой она правила почти 10 десятилетий мира. Считается, что она была дочерью Нафануа, богини войны, которая предсказала приход христианства на Самоа. О ней мало что известно, но нынешний суверенный правитель Самоа Его Королевское Высочество Малиетоа Танумафили II является прямым потомком этой легендарной королевы.[PARAGRAPH:1]Примерно через 550 лет после смелых писаний госпожи Мурасаки, в 1550 году, родилась Саламасина, женщина из Самоа/Тонги, которой суждено было иметь не один или два титула, а неслыханные четыре! Когда Саламасина была маленькой девочкой, она была сделана Тупу О Самоа или Верховным Правителем Самоа и была королевой островов Уполу, Савайи и Тутуила. В молодости она отказалась от любви к безымянному Алапепе и вышла замуж за Тапуманайю, чтобы сохранить мир в Самоа.[PARAGRAPH:1]Королева Саламасина была доброй, справедливой и умелой в руководстве своей страной, прилагая большие усилия и жертвуя для обеспечения мира для всех. За 40 лет ее правления не было войн, люди процветали и были счастливы. Королева Саламасина добилась больших успехов в защите интересов женщин, побуждая их делать ткань тапа и прекрасные коврики. Она также считала, что молодые люди должны иметь свободу выбора супругов, и призывала родителей воздерживаться от норм браков по договоренности. Кроме того, она взяла на мощных тулафали или говорящих руководителей и упорно трудилась, чтобы обуздать свою силу с силой убедить шеф жениться во много раз, что в конечном итоге привели к говорящим руководителям, получающим много прекрасной циновки и другие богатств.[PARAGRAPH:1]Благодаря доброжелательности и лидерству королевы Саламасины браки ее вождей стабилизировались, ее люди наслаждались миром, а искусство процветало. Если бы не королева Саламасина, возможно, сегодня на Самоа все еще устраивались бы браки.</Russian>
+    <English>[H1]Salamasina[\H1][NEWLINE][BOLD]Queen of Samoa[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1550 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Queen Salamasina was the first sovereign ruler of Samoa, she was descended from the Kings of Tonga, the High Chiefs of Samoa and Fiji. She was the first female to attain all of the four paramount royal titles and become the tafaifa or supreme monarch of Samoa. She reigned for nearly 10 decades of peace after many civil wars and disputes with neighbouring Tonga. It is believed she was the daughter of Nafanua, the goddess of War who predicted Christianity arriving in Samoa. Not much is known about her, but the present sovereign ruler of Samoa, His Royal Highness Malietoa Tanumafili II is a direct descendent of this legendary queen.[PARAGRAPH:1]Approximately 550 years after Lady Murasaki's courageous writings, in 1550, was born Salamasina, the Samoan/Tongan female destined to hold not one or two titles but an unheard of four! When Salamasina was a little girl, she was made Tupu O Samoa or the Supreme Ruler of Samoa and was queen of Upolu, Savai'i, and Tutuila islands. As a young woman, she surrendered her love for the untitled Alapepe and married instead Tapumanaia to preserve peace in Samoa.[PARAGRAPH:1]Queen Salamasina was kind, just, and skillful in leading her country, making great effort and sacrifice to ensure peace for all. During her 40 years reign, there were no wars and people prospered and were happy. Queen Salamasina made great strides as an advocate for women's concerns by encouraging them to make tapa cloth and fine mats. She also believed that the young adults should have the freedom to choose their spouses and encouraged parents to refrain from the norm of arranged marriages. Furthermore, she took on the powerful tulafales or talking chiefs and worked hard to curb their power to forcefully persuade a chief to marry many times, which ultimately resulted in the talking chiefs receiving many fine mats and other wealth.[PARAGRAPH:1]Due to Queen Salamasina's benevolence and leadership, the marriages of her chiefs stabilized, her people enjoyed peace, and the arts fluorished. Were it not for Queen Salamasina, perhaps marriages in Samoa today would still be arranged.</English>
+  </TEXT>
+  <TEXT>
+    <Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SALAMASINA_1</Tag>
+    <Russian>Ïðèâåòñòâóþ, [CT_NAME] èç íàðîäà [CT_CIV_SHORT]. Äàâàéòå íàñëàæäàòüñÿ ñåãîäíÿøíèì äíåì, èáî íàøà æèçíü áûëà óãîäíà ñàìèì áîãàìè!</Russian>
+    <English>Hello, [CT_NAME] of the [CT_CIV_SHORT]. Let us enjoy today, for our lives are decreed to be taken by the gods!</English>
+  </TEXT>
+  <TEXT>
+    <Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_SAMPLE_LEADER_1</Tag>
+    <Russian>Âû îòêàçûâàåòåñü îòâå÷àòü</Russian>
+    <English>Your Refuse to talk response</English>
+  </TEXT>
+  <TEXT>
+    <Tag>AI_DIPLO_NO_PEACE_LEADER_SAMPLE_LEADER_1</Tag>
+    <Russian>Âû îòêàçûâàåòåñü îò ìèðíûõ ïåðåãîâîðîâ</Russian>
+    <English>Your refuse to peace talks response</English>
+  </TEXT>
+  <TEXT>
+    <Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_SAMPLE_LEADER_1</Tag>
+    <Russian>Âû äðóæåñêè ïðèâåòñòâóåòå</Russian>
+    <English>Your Friendly Hello Response</English>
+  </TEXT>
+  <TEXT>
+    <Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_SAMPLE_LEADER_1</Tag>
+    <Russian>Âû íåäðóæåñêè ïðèâåòñòâóåòå</Russian>
+    <English>Your Unfriendly Hello Response</English>
+  </TEXT>
+  <TEXT>
+    <Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_SAMPLE_LEADER_1</Tag>
+    <Russian>Âàøè òðåáîâàíèÿ ê äðóãèì öèâèëèçàöèÿì, êîãäà âû ñëàáåé, òî ...</Russian>
+    <English>Your Demands to another civ when you are weaker then they are</English>
+  </TEXT>
+  <TEXT>
+    <Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_SAMPLE_LEADER_1</Tag>
+    <Russian>Âàøè òðåáîâàíèÿ ê äðóãèì öèâèëèçàöèÿì, êîãäà âû ðàâíû, òî ...</Russian>
+    <English>Your Demands to another civ when you are Equal to power as they are</English>
+  </TEXT>
+  <TEXT>
+    <Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_SAMPLE_LEADER_1</Tag>
+    <Russian>Âàøè òðåáîâàíèÿ ê äðóãèì öèâèëèçàöèÿì, êîãäà âû ñèëüíåé, òî ...</Russian>
+    <English>Your Demands to another civ when you are stronger then they are</English>
+  </TEXT>
+</Civ4GameText>
