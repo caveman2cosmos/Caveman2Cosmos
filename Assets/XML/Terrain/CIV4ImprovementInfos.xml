@@ -6873,15 +6873,15 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_MUSHROOMS</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
+					<iDiscoverRand>1500</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_OLIVES</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
+					<iDiscoverRand>1500</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_TEA</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
+					<iDiscoverRand>1500</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<RouteYieldChanges>
@@ -7013,7 +7013,7 @@
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>1000</iDiscoverRand>
+					<iDiscoverRand>1500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>5</iYieldChange>
@@ -7208,7 +7208,7 @@
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>1500</iDiscoverRand>
+					<iDiscoverRand>2000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>3</iYieldChange>
