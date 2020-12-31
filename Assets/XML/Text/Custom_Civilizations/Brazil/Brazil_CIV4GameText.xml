@@ -23,6 +23,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Àìàíèíäåéà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ANAPOLIS</Tag>
@@ -47,6 +48,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Àíàïîëèñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARACAJU</Tag>
@@ -71,6 +73,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Àðàêàæó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BAURU</Tag>
@@ -95,6 +98,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Áàóðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BELEM</Tag>
@@ -119,6 +123,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Áåëåí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BELFORD_ROXO</Tag>
@@ -143,6 +148,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ïîðòó-Àëåãðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BELO_HORIZONTE</Tag>
@@ -167,6 +173,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Áåëó-Îðèçîíòè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BETIM</Tag>
@@ -191,6 +198,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Äóêè-äå-Êàøèàñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BLUMENAU</Tag>
@@ -215,6 +223,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Íîâà-Èãóàñó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BRASILIA</Tag>
@@ -239,6 +248,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Áðàçèëèà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAMPINAS</Tag>
@@ -263,6 +273,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Êàìïèíàñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAMPINA_GRANDE</Tag>
@@ -287,6 +298,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Êàìïèíà-Ãðàíäè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAMPO_GRANDE</Tag>
@@ -311,6 +323,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Êàìïó-Ãðàíäè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CARAPICUIBA</Tag>
@@ -335,6 +348,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Êàðàïèñóèáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAXIAS_DO_SUL</Tag>
@@ -359,6 +373,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ñàíòó-Àíäðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CUIABA</Tag>
@@ -383,6 +398,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Êóÿáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CURITIBA</Tag>
@@ -407,6 +423,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Êóðèòèáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DIADEMA</Tag>
@@ -431,6 +448,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Äèàäåìà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_FEIRA_DE_SANTANA</Tag>
@@ -455,6 +473,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ôåéðà-äè-Ñàíòàíà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_FLORIANOPOLIS</Tag>
@@ -479,6 +498,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ôëîðèàíîïîëèñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_FORTALEZA</Tag>
@@ -503,6 +523,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ôîðòàëåçà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GOIANIA</Tag>
@@ -527,6 +548,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ãîÿíèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_IPATINGA</Tag>
@@ -551,6 +573,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Èïàòèíãà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_JOAO_PESSOA</Tag>
@@ -575,6 +598,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Æóàí-Ïåñîà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_JOINVILLE</Tag>
@@ -599,6 +623,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Æîèíâèëëè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_JUIZ_DE_FORA</Tag>
@@ -623,6 +648,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Æóèñ-äè-Ôîðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_JUNDIAI</Tag>
@@ -647,6 +673,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Æóíäèàè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LONDRINA</Tag>
@@ -671,6 +698,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ëîíäðèíà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MACEIO</Tag>
@@ -695,6 +723,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ìàñåéî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MANAUS</Tag>
@@ -719,6 +748,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ìàíàóñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MARINGA</Tag>
@@ -743,6 +773,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ìàðèíãà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NATAL</Tag>
@@ -767,6 +798,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Íàòàë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OLINDA</Tag>
@@ -791,6 +823,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Îëèíäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PELOTAS</Tag>
@@ -815,6 +848,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ïåëîòàñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PIRACICABA</Tag>
@@ -839,6 +873,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ïèðàñèêàáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PORTO_ALEGRE</Tag>
@@ -863,6 +898,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ïîðòó-Àëåãðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PRESIDENTE_PRUDENTE</Tag>
@@ -887,6 +923,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ïðåçèäåíòè-Ýïèòàñèó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RECIFE</Tag>
@@ -911,6 +948,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ðåñèôè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RIBEIRAO_PRETO</Tag>
@@ -935,6 +973,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ðèáåéðàí-Ïðåòó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SALVADOR</Tag>
@@ -959,6 +998,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ñàëüâàäîð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SANTOS</Tag>
@@ -983,6 +1023,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ñàíòóñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAN_JOSE_DOS_CAMPOS</Tag>
@@ -1007,6 +1048,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ñàí-Æîçå-äóñ-Êàìïóñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAO_CAETANO</Tag>
@@ -1031,6 +1073,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Âîëòà-Ðåäîíäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAO_LUIS</Tag>
@@ -1055,6 +1098,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ñàí-Ëóèñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAO_PAULO</Tag>
@@ -1079,6 +1123,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ñàí Ïàóëó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAO_VINCENTE</Tag>
@@ -1103,6 +1148,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ñàí-Âèñåíòè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SERRA</Tag>
@@ -1127,6 +1173,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ñåððà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SOROCABA</Tag>
@@ -1151,6 +1198,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ñîðîêàáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TERESINA</Tag>
@@ -1175,6 +1223,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Òåðåçèíà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_UBERLANDIA</Tag>
@@ -1199,6 +1248,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Óáåðëàíäèà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VICTORIA</Tag>
@@ -1223,6 +1273,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Âèêòîðèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VILA_VELHA</Tag>
@@ -1247,6 +1298,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Âèëà-Âèëüÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BRAZIL_ADJECTIVE</Tag>
@@ -1258,6 +1310,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Polish>Brazylijska</Polish>
+		<Russian>áðàçèëüöû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BRAZIL_DESC</Tag>
@@ -1265,11 +1318,13 @@
 		<French>Empire brésilien</French>
 		<Italian>Impero Brasiliano</Italian>
 		<Polish>Cesarstwo Brazylii</Polish>
+		<Russian>Áðàçèëèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BRAZIL_PEDIA</Tag>
 		<English>Brazil is thought to have been inhabited for at least 10,000 years by semi-nomadic populations before the first Portuguese explorers, led by Pedro Álvares Cabral, disembarked in 1500. Over the next three centuries, it was resettled by the Portuguese and exploited mainly for brazilwood (Pau-Brasil) at first, and later for sugarcane (Cana-de-Açúcar) agriculture, coffee beans and gold mining. The colony's source of manpower was initially on enslaved Amerindians, and after 1550, mainly African slaves. In 1808, Queen Maria I of Portugal and her son and regent, the future João VI of Portugal, fleeing from Napoleon, relocated to Brazil with the royal family, nobles and government.[PARAGRAPH:2]Salvador is Brazil's third city in population and was the country's capital until 1763.Though they returned to Portugal in 1821, the interlude led to the opening of commercial ports to the United Kingdom - at the time isolated from most European ports by Napoleon - and to the elevation of Brazil to the status of a united kingdom with Portugal's Crown. Then prince regent Dom Pedro I (later Pedro IV of Portugal) declared independence on 7 September 1822, establishing the independent Empire of Brazil. As the crown remained in the hands of the house of Bragança, this was more the severance of the Portuguese empire in two, than an independence movement as seen elsewhere in the Americas.[PARAGRAPH:2]The Brazilian Empire was theoretically a democracy in the British style, although in practice, the emperor-premier-parliament balance of power more closely resembled the autocratic Austrian Empire. Slavery was abolished in 1888, through the "Golden Law", created by Princess Isabel, and intensive European immigration created the basis for industrialization. Pedro I was succeeded by his son, Pedro II - who in old age was caught by a political dispute between the Army and the Cabinet, a crisis arising from the Paraguay War. In order to avoid a civil war between Army and Navy, Pedro II renounced the throne on 15 November 1889, when a federal republic (officially, the Republic of the United States of Brazil) was established by Field Marshal Deodoro da Fonseca.[PARAGRAPH:2]Dom Pedro I declaring independence from Portugal on September 7, 1822. In the late 19th and early 20th centuries, Brazil attracted over 5 million European and Japanese immigrants. That period also saw Brazil industrialize, further colonize, and develop its interior. Brazilian democracy was replaced by dictatorships three times - 1930-1934 and 1937-1945 under Getúlio Vargas, and 1964-1985, under a succession of generals appointed by the military. Since 1985, Brazil has been internationally considered a democracy, specifically a presidential democracy, which was kept after a plebiscite in 1993 where voters had to choose between a presidential or parliamentary system, whilst also choosing if Brazil should reinstate its constitutional monarchy.[PARAGRAPH:2]A key feature of democracy in contemporary Brazil is the existence of a vibrant and participatory civil society. NGOs and citizen organizations are at the forefront of the struggle for human rights, gender equality and economic justice.equality and economic justice.</English>
 		<Polish>Tereny dzisiejszej Brazylii były zasiedlone przez półkoczownicze plemiona Indian już przynajmniej 6 tys. lat przed odkryciem jej przez Portugalczyków w roku 1500. Przez następne 300 lat Brazylia została skolonizowana przez Portugalię i zamieniona w oparte na pracy niewolniczej dochodowe przedsięwzięcie. W kraju powszechne były rebelie niewolników a część zbiegów tworzyła na odległych od kolonialnej cywilizacji terenach własne osiedla zwane quilombos. Przeciw nim były organizowane wyprawy zbrojne. W roku 1808 książę Jan (późniejszy król Portugalii Jan VI) wraz z rodziną schronił się w Brazylii przed najazdem Napoleona Bonaparte na Portugalię. Na początku XIX wieku narastały tendencje separatystyczne i w roku 1822 książę-regent Pedro I ogłosił utworzenie samodzielnego Cesarstwa Brazylii. W roku 1889 jego następca Pedro II został obalony i została utworzona republika federacyjna. Pod koniec XIX i w 1. połowie XX wieku do Brazylii napłynęło ponad 5 milionów imigrantów z Europy i Azji. W tym okresie dynamicznie postępowała industrializacja kraju i ekspansja w głąb interioru. Rządy demokratyczne były zastępowane przez dyktatury: w latach 1930-1945 w praktyce rządził Getúlio Vargas. Vargas do władzy doszedł na skutek wojskowego puczu który następnie określono mianem rewolucji. Początkowo nowy rząd zobowiązał się do szybkiego oddania władzy lecz zamiast tego zlikwidował kongres, zawiesił konstytucję a gubernatorów zastąpił własnymi zwolennikami. W latach 30. doszło do trzech prób obalenia wojskowego rządu. W 1932 roku odbyło się powstanie konstytucjonalistów, w 1935 roku odbyła się antyrządowa rebelia zorganizowana przez komunistów która wykorzystana została do wprowadzenia przez Vargasa pełnej dyktatury i cenzury prasy. Ostatnią próbą zbrojnego obalenia rządu był pucz faszystowski w 1938 roku. Mimo faszyzacji kraju Brazylia w okresie hiszpańskiej wojny domowej wsparła stronę republikańską walcząca z nacjonalistami.W okresie II wojny światowej Brazylia początkowo pozostała neutralna a wojnę Niemcom i Włochom wypowiedziała w sierpniu 1942 roku. Pod wpływem wojny odrzucił wzorce faszyzujące i przyjął bardziej liberalną politykę. Po zwycięstwie aliantów w wojnie światowej, stał się kłopotliwy jako niedawny sojusznik światowych potęg i szybko został obalony w wojskowym puczu. Vargas na krótko powrócił do władzy w 1950 roku w wyniku wyborczego zwycięstwa utworzonej przez niego Brazylijskiej Partii Pracy. W pierwszej fazie prezydentury wprowadził szereg postępowych reform a swoje rządy oparł na środowiskach lewicy. Pod naciskiem narodowców i lewicy prowadził politykę uprzemysłowienia kraju, rozwiązał problem państwowego monopolu naftowego "Petrobras", ograniczył inwestycje obcego kapitału, wprowadził szereg prorobotniczych praw, zakończył działania rządu polegające na ingerencji w działanie związków zawodowych oraz przeprowadził rewizję pracy minimalnej. W 1952 roku zawarł układ militarny ze Stanami Zjednoczonymi Ameryki jednak zachował się neutralnie odmawiając wysłania wojsk brazylijskich do Korei. W ciągu drugiej kadencji kontynuował represje przeciwko ruchowi komunistycznemu. Stopniowo odchodził od postępowych reform tracąc poparcie społeczeństwa i lewicy zmuszony został do walki o wpływy w konserwatywnie nastawionym wojsku. Jego rządy napotkały na silną opozycję, pomimo starań Vargasa największą opozycję stanowiły kręgi wojskowe. Była to reakcja na szereg skandali, które wiązały się z członkami jego administracji. Cztery lata po objęciu władzy na skutek kryzysu politycznego i zmuszeniu go przez wojsko do oddania władzy popełnił samobójstwo.</Polish>
+		<Russian>[NEWLINE][TAB]Считается, что Бразилия была заселена полукочевым населением в течение как минимум 10 000 лет до того, как первые португальские исследователи во главе с Педро Альваресом Кабралом высадились на берег в 1500 году. В течение следующих трех столетий она была заселена португальцами и использовалась в основном для производства бразильской древесины (Pau-Brasil) сначала, а затем для выращивания сахарного тростника (Cana-de-Acucar), кофейных зерен и добычи золота. Первоначально источником рабочей силы колонии были порабощенные американские индейцы, а после 1550 года - в основном африканские рабы. В 1808 году королева Португалии Мария I и ее сын и регент, будущий Жуан VI Португальский, спасаясь от Наполеона, перебрались в Бразилию вместе с королевской семьей, дворянами и правительством.[PARAGRAPH:2]Сальвадор является третьим по численности населения городом Бразилии и был столицей колонии до 1763 года. Хотя члены правящей династии вернулись в Португалию в 1821 году, перерыв привел к открытию торговых портов в Соединенном Королевстве, которое в то время было изолировано от большинства европейских портов Наполеоном, и возвышение Бразилии до статуса Соединенного Королевства с короной Португалии. Затем принц-регент Дон Педро I (позже Педру IV Португальский) объявил независимость 7 сентября 1822 года, учредив независимую Бразильскую империю. Поскольку корона оставалась в руках дома Браганса, это было больше разделением Португальской империи надвое, чем движением за независимость, как это наблюдается в других частях Америки.[PARAGRAPH:2]Бразильская империя теоретически была демократией в британском стиле, хотя на практике соотношение сил император-премьер-парламент больше напоминало автократическую Австрийскую империю. Рабство было отменено в 1888 году «Золотым законом», созданным принцессой Изабель, а интенсивная иммиграция из Европы создала основу для индустриализации. Педру I наследовал его сын Педру II, который в преклонном возрасте стал разменной монетой в политическом споре между армией и кабинетом министров,  ходе кризиса, возникшего в результате войны в Парагвае. Чтобы избежать гражданской войны между армией и флотом, Педру II отрекся от престола 15 ноября 1889 года, когда фельдмаршал Деодоро да Фонсека провозгласил федеративную республику (официально - Республика Соединенных Штатов Бразилии)[PARAGRAPH:2]Дон Педру I провозгласил независимость от Португалии 7 сентября 1822 года. В конце XIX - начале XX веков Бразилия привлекла более 5 миллионов иммигрантов из Европы и Японии. В тот период Бразилия также производила индустриализацию, продолжала колонизацию и развивала внутреннюю территорию. Бразильская демократия трижды сменялась диктатурой: в 1930-1934 и 1937-1945 годах при Гетулиу Варгасе и в 1964-1985 годах при смене генералов, назначенных военными. С 1985 года Бразилия на международном уровне считается демократией, в частности президентской демократией, которая сохранилась после плебисцита 1993 года, когда избиратели должны были выбирать между президентской или парламентской системой, а также выбирать, следует ли Бразилии восстановить свою конституционную монархию.[PARAGRAPH:2]Ключевой особенностью демократии в современной Бразилии является наличие активного гражданского общества с широким участием. НПО и общественные организации находятся на переднем крае борьбы за права человека, гендерное равенство и экономическую справедливость.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BRAZIL_SHORT_DESC</Tag>
@@ -1277,5 +1332,6 @@
 		<French>Brésil</French>
 		<Italian>Brasile</Italian>
 		<Polish>Brazylia</Polish>
+		<Russian>Áðàçèëüöû</Russian>
 	</TEXT>
 </Civ4GameText>

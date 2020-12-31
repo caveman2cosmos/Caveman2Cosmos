@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the World of Civilization Team -->
+<!-- Game Text Infos -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CYBERPUNK</Tag>
+		<Russian>Êèáåðïàíê</Russian>
+		<English>Cyberpunk</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CYBERPUNK_PEDIA</Tag>
+		<Russian>[TAB]Êèáåðïàíê - ïîäæàíð íàó÷íîé ôàíòàñòèêè, îïèñûâàþùèé ìèð íåäàëåêîãî áóäóùåãî, â êîòîðîì âûñîêîå òåõíîëîãè÷åñêîå ðàçâèòèå ñîñåäñòâóåò ñ ãëóáîêèì ñîöèàëüíûì ðàññëîåíèåì, íèùåòîé, áåñïðàâèåì, óëè÷íîé àíàðõèåé â ãîðîäñêèõ òðóùîáàõ.[PARAGRAPH:1]Ñàì òåðìèí ÿâëÿåòñÿ ñìåñüþ ñëîâ cybernetics (êèáåðíåòèêà) è punk (ìóñîð), âïåðâûå åãî èñïîëüçîâàë Áðþñ Áåòêå â êà÷åñòâå íàçâàíèÿ äëÿ ñâîåãî ðàññêàçà 1983 ãîäà.</Russian>
+		<English>Cyberpunk is a postmodern and science fiction genre noted for its focus on "high tech and low life." The name was originally coined by Bruce Bethke as the title of his short story "Cyberpunk," published in 1983. It features advanced science, such as information technology and cybernetics, coupled with a degree of breakdown or radical change in the social order.</English>
+	</TEXT>
+</Civ4GameText>
