@@ -2,12 +2,12 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SPACEPUNK</Tag>
-                <Russian>Космопанк</Russian>
 		<English>Spacepunk</English>
+		<Russian>Космопанк</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SPACEPUNK_PEDIA</Tag>
-                <Russian>Бонус культуры от Космопанка.</Russian>
 		<English>The Spacepunk culture bonus.</English>
+		<Russian>Бонус культуры от Космопанка.</Russian>
 	</TEXT>
 </Civ4GameText>

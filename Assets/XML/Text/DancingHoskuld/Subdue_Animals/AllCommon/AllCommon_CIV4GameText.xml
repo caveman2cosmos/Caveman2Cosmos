@@ -5,414 +5,414 @@
 <!-- -->
 <!-- Game Text - New -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
-  <TEXT>
-    <Tag>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS</Tag>
-    <Russian>Ýêîëîãè÷åñêèå æèâîòíûå</Russian>
-    <English>Dont Change. Ecological Animals</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS_HELP</Tag>
-    <English>Turn this off if you want to reduce the number of animal types in game to reduce memory load. It removes the animals and buildings that rely on the animals.</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Tag>
-    <Russian>Êâàçè-íàöèîíàëüíîå ÷óäî ïðåäîñòàâëÿåò áåñïëàòíûå ýôôåêòû îò ñêàçîê âî âñå ãîðîäà.</Russian>
-    <English>Pseudo national wonder gives free story building in all cities.</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Tag>
-    <English>TBD</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Tag>
-    <English>Free building provided as the effect of another.</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_PEDIA</Tag>
-    <English>TBD</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_AMPHIBIAN_MYTH_EFFECT</Tag>
-    <Russian>Ïåñíÿ îá àìôèáèè</Russian>
-    <English>Myth Effect - Amphibians</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_AMPHIBIAN_STORY</Tag>
-    <Russian>Ñêàçêà îá àìôèáèè</Russian>
-    <English>Story - Amphibians</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_AMPHIBIAN_STORIES</Tag>
-    <Russian>Ñêàçû îá àìôèáèè</Russian>
-    <English>Stories - Amphibians</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_AMPHIBIAN_STORIES_EFFECT</Tag>
-    <Russian>Ïðåäàíèÿ îá àìôèáèè</Russian>
-    <English>Stories - Effect (Amphibians)</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_BIRD_STORY</Tag>
-    <Russian>Ñêàçêà î ïòèöå</Russian>
-    <English>Story - Birds</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_RODENT_STORY</Tag>
-    <Russian>Ñêàçêà î ãðûçóíå</Russian>
-    <English>Story - Rodents</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_REPTILE_STORY</Tag>
-    <Russian>Ñêàçêà î ðåïòèëèè</Russian>
-    <English>Story - Reptiles</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_FISH_STORY</Tag>
-    <Russian>Ñêàçêà î ðûáå</Russian>
-    <English>Story - Tales of Fish</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_UNIT_TAMED_AMPHIBIAN</Tag>
-    <Russian>Êîëîíèÿ àìôèáèé</Russian>
-    <English>Amphibian Colony</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_UNIT_TAMED_AMPHIBIAN_HELP</Tag>
-    <English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Use the [COLOR_HIGHLIGHT_TEXT]Amphibian Colony[COLOR_REVERT] to spread [COLOR_HIGHLIGHT_TEXT]Amphibian Ponds[COLOR_REVERT] to other cities.</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_BIRD_MYTH</Tag>
-    <Russian>Ìèô î ïòèöå</Russian>
-    <English>Myth - Birds</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_BIRD_MYTH_EFFECT</Tag>
-    <Russian>Ïåñíÿ î ïòèöå</Russian>
-    <English>Myth Effect - Birds</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_BIRD_STORY</Tag>
-    <Russian>Ñêàçêà î ïòèöå</Russian>
-    <English>Story - Birds</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_BIRD_STORIES</Tag>
-    <Russian>Ñêàçû î ïòèöå</Russian>
-    <English>Stories - Birds</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_BIRD_STORIES_EFFECT</Tag>
-    <Russian>Ïðåäàíèÿ î ïòèöå</Russian>
-    <English>Stories Effect - Birds</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_OWL_MYTH</Tag>
-    <Russian>Ìèô î ñîâå</Russian>
-    <English>Myth - Owls</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_OWL_MYTH_EFFECT</Tag>
-    <Russian>Ïåñíÿ î ñîâå</Russian>
-    <English>Myth Effect - Owls</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_OWL_STORY</Tag>
-    <Russian>Ñêàçêà î ñîâå</Russian>
-    <English>Story - Owls</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_OWL_STORIES</Tag>
-    <Russian>Ñêàçû î ñîâå</Russian>
-    <English>Stories - Owls</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_OWL_STORIES_EFFECT</Tag>
-    <Russian>Ïðåäàíèÿ î ñîâå</Russian>
-    <English>Stories Effect - Owls</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_RAPTOR_MYTH</Tag>
-    <Russian>Ìèô î ðåïòèëèè</Russian>
-    <English>Myth - Raptors</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_RAPTOR_MYTH_EFFECT</Tag>
-    <Russian>Ïåñíÿ î ðåïòèëèè</Russian>
-    <English>Myth Effect - Raptors</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_RAPTOR_STORY</Tag>
-    <Russian>Ñêàçêà î ðåïòèëèè</Russian>
-    <English>Story - Raptors</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_RAPTOR_STORIES</Tag>
-    <Russian>Ñêàçû î ðåïòèëèè</Russian>
-    <English>Stories - Raptors</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_RAPTOR_STORIES_EFFECT</Tag>
-    <Russian>Ïðåäàíèÿ î ðåïòèëèè</Russian>
-    <English>Stories Effect - Raptors</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_SEA_BIRD_MYTH</Tag>
-    <Russian>Ìèô î ìîðñêîé ïòèöå</Russian>
-    <English>Myth - Sea Birds</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_SEA_BIRD_MYTH_EFFECT</Tag>
-    <Russian>Ïåñíÿ î ìîðñêîé ïòèöå</Russian>
-    <English>Myth Effect - Sea Birds</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_SEA_BIRD_STORY</Tag>
-    <Russian>Ñêàçêà î ìîðñêîé ïòèöå</Russian>
-    <English>Story - Sea Birds</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_SEA_BIRD_STORIES</Tag>
-    <Russian>Ñêàçû î ìîðñêîé ïòèöå</Russian>
-    <English>Stories - Sea Birds</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_SEA_BIRD_STORIES_EFFECT</Tag>
-    <Russian>Ïðåäàíèÿ î ìîðñêîé ïòèöå</Russian>
-    <English>Stories Effect - Sea Birds</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_BUG_MYTH</Tag>
-    <Russian>Ìèô î æóêå</Russian>
-    <English>Myth - Bug</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_BUG_MYTH_EFFECT</Tag>
-    <Russian>Ïåñíÿ î æóêå</Russian>
-    <English>Myth Effect - Bug</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_BUG_STORY</Tag>
-    <Russian>Ñêàçêà î æóêå</Russian>
-    <English>Story - Bug</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_BUG_STORIES</Tag>
-    <Russian>Ñêàçû î æóêå</Russian>
-    <English>Stories - Bug</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_BUG_STORIES_EFFECT</Tag>
-    <Russian>Ïðåäàíèÿ î æóêå</Russian>
-    <English>Stories Effect - Bug</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_FISH_MYTH</Tag>
-    <Russian>Ìèô î ðûáå</Russian>
-    <English>Myth - Tales of Fish</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_LOCAL_FISH_MYTH</Tag>
-    <Russian>Ìèô î ðûáå</Russian>
-    <English>Myth - Fish (local)</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_FISH_MYTH_EFFECT</Tag>
-    <Russian>Ïåñíÿ î ðûáå</Russian>
-    <English>Myth Effect - Fish</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_FISH_STORY</Tag>
-    <Russian>Ñêàçêà î ðûáå</Russian>
-    <English>Story - Fish</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_FISH_STORIES</Tag>
-    <Russian>Ñêàçû î ðûáå</Russian>
-    <English>Stories - Fish</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_FISH_STORIES_EFFECT</Tag>
-    <Russian>Ïðåäàíèÿ î ðûáå</Russian>
-    <English>Stories Effect - Fish</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_REPTILE_MYTH</Tag>
-    <Russian>Ìèô î ðåïòèëèè</Russian>
-    <English>Myth - Reptile</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_REPTILE_MYTH_EFFECT</Tag>
-    <Russian>Ïåñíÿ î ðåïòèëèè</Russian>
-    <English>Myth Effect - Reptile</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_REPTILE_STORY</Tag>
-    <Russian>Ñêàçêà î ðåïòèëèè</Russian>
-    <English>Story - Reptile</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_REPTILE_STORIES</Tag>
-    <Russian>Ñêàçû î ðåïòèëèè</Russian>
-    <English>Stories - Reptile</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_REPTILE_STORIES_EFFECT</Tag>
-    <Russian>Ïðåäàíèÿ î ðåïòèëèè</Russian>
-    <English>Stories Effect - Reptile</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_RODENT_MYTH</Tag>
-    <Russian>Ìèô î ãðûçóíå</Russian>
-    <English>Myth - Rodent</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_RODENT_MYTH_EFFECT</Tag>
-    <Russian>Ïåñíÿ î ãðûçóíå</Russian>
-    <English>Myth Effect - Rodent</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_RODENT_STORY</Tag>
-    <Russian>Ñêàçêà î ãðûçóíå</Russian>
-    <English>Story - Rodent</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_RODENT_STORIES</Tag>
-    <Russian>Ñêàçû î ãðûçóíå</Russian>
-    <English>Stories - Rodent</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_RODENT_STORIES_EFFECT</Tag>
-    <Russian>Ïðåäàíèÿ î ãðûçóíå</Russian>
-    <English>Stories Effect - Rodent</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_WOLF_MYTH</Tag>
-    <Russian>Ìèô î âîëêå</Russian>
-    <English>Myth - Wolf</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_WOLF_MYTH_EFFECT</Tag>
-    <Russian>Ïåñíÿ î âîëêå</Russian>
-    <English>Myth Effect - Wolf</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_WOLF_STORY</Tag>
-    <Russian>Ñêàçêà î âîëêå</Russian>
-    <English>Story - Wolf</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_WOLF_STORIES</Tag>
-    <Russian>Ñêàçû î âîëêå</Russian>
-    <English>Stories - Wolf</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_WOLF_STORIES_EFFECT</Tag>
-    <Russian>Ïðåäàíèÿ î âîëêå</Russian>
-    <English>Stories Effect - Wolf</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_MYTH</Tag>
-    <Russian>Ìèô î íåëåò. ïòèöå</Russian>
-    <English>Myth - Flightless Birds</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_MYTH_EFFECT</Tag>
-    <Russian>Ïåñíÿ î íåëåò. ïòèöå</Russian>
-    <English>Myth Effect - Flightless Birds</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORY</Tag>
-    <Russian>Ñêàçêà î íåëåò. ïòèöå</Russian>
-    <English>Story - Flightless Birds</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORIES</Tag>
-    <Russian>Ñêàçû î íåëåò. ïòèöå</Russian>
-    <English>Stories - Flightless Birds</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORIES_EFFECT</Tag>
-    <Russian>Ïðåäàíèÿ î íåëåò. ïòèöå</Russian>
-    <English>Stories Effect - Flightless Birds</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_PENGUIN_MYTH</Tag>
-    <Russian>Ìèô î ïèíãâèíå</Russian>
-    <English>Myth - Penguin</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_PENGUIN_MYTH_EFFECT</Tag>
-    <Russian>Ïåñíÿ î ïèíãâèíå</Russian>
-    <English>Myth Effect - Penguin</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_PENGUIN_STORY</Tag>
-    <Russian>Ñêàçêà î ïèíãâèíå</Russian>
-    <English>Story - Penguin</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_PENGUIN_STORIES</Tag>
-    <Russian>Ñêàçû î ïèíãâèíå</Russian>
-    <English>Stories - Penguin</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_PENGUIN_STORIES_EFFECT</Tag>
-    <Russian>Ïðåäàíèÿ î ïèíãâèíå</Russian>
-    <English>Stories Effect - Penguin</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_OLD_W_MONKEY_MYTH</Tag>
-    <Russian>Ìèô îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
-    <English>Myth - Old World Monkeys</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_OLD_W_MONKEY_MYTH_EFFECT</Tag>
-    <Russian>Ïåñíÿ îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
-    <English>Myth Effect - Old World Monkeys</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_OLD_W_MONKEY_STORY</Tag>
-    <Russian>Ñêàçêà îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
-    <English>Story - Old World Monkeys</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_OLD_W_MONKEY_STORIES</Tag>
-    <Russian>Ñêàçû îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
-    <English>Stories - Old World Monkeys</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_OLD_W_MONKEY_STORIES_EFFECT</Tag>
-    <Russian>Ïðåäàíèÿ îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
-    <English>Stories Effect - Old World Monkeys</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_MYTH</Tag>
-    <Russian>Ìèô îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
-    <English>Myth - New World Monkeys</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_MYTH_EFFECT</Tag>
-    <Russian>Ïåñíÿ îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
-    <English>Myth Effect - New World Monkeys</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_STORY</Tag>
-    <Russian>Ñêàçêà îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
-    <English>Story - New World Monkeys</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_STORIES</Tag>
-    <Russian>Ñêàçû îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
-    <English>Stories - New World Monkeys</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_STORIES_EFFECT</Tag>
-    <Russian>Ïðåäàíèÿ îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
-    <English>Stories Effect - New World Monkeys</English>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_SPOTTED_CAT_MYTH_EFFECT</Tag>
-    <Russian>Ïåñíÿ î ëåîïàðäå</Russian>
-    <English>Myth Effect - Spotted Cat</English>
-  </TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS</Tag>
+		<Russian>Ýêîëîãè÷åñêèå æèâîòíûå</Russian>
+		<English>Dont Change. Ecological Animals</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS_HELP</Tag>
+		<English>Turn this off if you want to reduce the number of animal types in game to reduce memory load. It removes the animals and buildings that rely on the animals.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Tag>
+		<Russian>Êâàçè-íàöèîíàëüíîå ÷óäî ïðåäîñòàâëÿåò áåñïëàòíûå ýôôåêòû îò ñêàçîê âî âñå ãîðîäà.</Russian>
+		<English>Pseudo national wonder gives free story building in all cities.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Tag>
+		<English>Free building provided as the effect of another.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_PEDIA</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_MYTH_EFFECT</Tag>
+		<Russian>Ïåñíÿ îá àìôèáèè</Russian>
+		<English>Myth Effect - Amphibians</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_STORY</Tag>
+		<Russian>Ñêàçêà îá àìôèáèè</Russian>
+		<English>Story - Amphibians</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_STORIES</Tag>
+		<Russian>Ñêàçû îá àìôèáèè</Russian>
+		<English>Stories - Amphibians</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_STORIES_EFFECT</Tag>
+		<Russian>Ïðåäàíèÿ îá àìôèáèè</Russian>
+		<English>Stories - Effect (Amphibians)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_STORY</Tag>
+		<Russian>Ñêàçêà î ïòèöå</Russian>
+		<English>Story - Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RODENT_STORY</Tag>
+		<Russian>Ñêàçêà î ãðûçóíå</Russian>
+		<English>Story - Rodents</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REPTILE_STORY</Tag>
+		<Russian>Ñêàçêà î ðåïòèëèè</Russian>
+		<English>Story - Reptiles</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FISH_STORY</Tag>
+		<Russian>Ñêàçêà î ðûáå</Russian>
+		<English>Story - Tales of Fish</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_AMPHIBIAN</Tag>
+		<Russian>Êîëîíèÿ àìôèáèé</Russian>
+		<English>Amphibian Colony</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_AMPHIBIAN_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Use the [COLOR_HIGHLIGHT_TEXT]Amphibian Colony[COLOR_REVERT] to spread [COLOR_HIGHLIGHT_TEXT]Amphibian Ponds[COLOR_REVERT] to other cities.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_MYTH</Tag>
+		<Russian>Ìèô î ïòèöå</Russian>
+		<English>Myth - Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_MYTH_EFFECT</Tag>
+		<Russian>Ïåñíÿ î ïòèöå</Russian>
+		<English>Myth Effect - Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_STORY</Tag>
+		<Russian>Ñêàçêà î ïòèöå</Russian>
+		<English>Story - Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_STORIES</Tag>
+		<Russian>Ñêàçû î ïòèöå</Russian>
+		<English>Stories - Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_STORIES_EFFECT</Tag>
+		<Russian>Ïðåäàíèÿ î ïòèöå</Russian>
+		<English>Stories Effect - Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OWL_MYTH</Tag>
+		<Russian>Ìèô î ñîâå</Russian>
+		<English>Myth - Owls</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OWL_MYTH_EFFECT</Tag>
+		<Russian>Ïåñíÿ î ñîâå</Russian>
+		<English>Myth Effect - Owls</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OWL_STORY</Tag>
+		<Russian>Ñêàçêà î ñîâå</Russian>
+		<English>Story - Owls</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OWL_STORIES</Tag>
+		<Russian>Ñêàçû î ñîâå</Russian>
+		<English>Stories - Owls</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OWL_STORIES_EFFECT</Tag>
+		<Russian>Ïðåäàíèÿ î ñîâå</Russian>
+		<English>Stories Effect - Owls</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RAPTOR_MYTH</Tag>
+		<Russian>Ìèô î ðåïòèëèè</Russian>
+		<English>Myth - Raptors</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RAPTOR_MYTH_EFFECT</Tag>
+		<Russian>Ïåñíÿ î ðåïòèëèè</Russian>
+		<English>Myth Effect - Raptors</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RAPTOR_STORY</Tag>
+		<Russian>Ñêàçêà î ðåïòèëèè</Russian>
+		<English>Story - Raptors</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RAPTOR_STORIES</Tag>
+		<Russian>Ñêàçû î ðåïòèëèè</Russian>
+		<English>Stories - Raptors</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RAPTOR_STORIES_EFFECT</Tag>
+		<Russian>Ïðåäàíèÿ î ðåïòèëèè</Russian>
+		<English>Stories Effect - Raptors</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SEA_BIRD_MYTH</Tag>
+		<Russian>Ìèô î ìîðñêîé ïòèöå</Russian>
+		<English>Myth - Sea Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SEA_BIRD_MYTH_EFFECT</Tag>
+		<Russian>Ïåñíÿ î ìîðñêîé ïòèöå</Russian>
+		<English>Myth Effect - Sea Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SEA_BIRD_STORY</Tag>
+		<Russian>Ñêàçêà î ìîðñêîé ïòèöå</Russian>
+		<English>Story - Sea Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SEA_BIRD_STORIES</Tag>
+		<Russian>Ñêàçû î ìîðñêîé ïòèöå</Russian>
+		<English>Stories - Sea Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SEA_BIRD_STORIES_EFFECT</Tag>
+		<Russian>Ïðåäàíèÿ î ìîðñêîé ïòèöå</Russian>
+		<English>Stories Effect - Sea Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUG_MYTH</Tag>
+		<Russian>Ìèô î æóêå</Russian>
+		<English>Myth - Bug</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUG_MYTH_EFFECT</Tag>
+		<Russian>Ïåñíÿ î æóêå</Russian>
+		<English>Myth Effect - Bug</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUG_STORY</Tag>
+		<Russian>Ñêàçêà î æóêå</Russian>
+		<English>Story - Bug</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUG_STORIES</Tag>
+		<Russian>Ñêàçû î æóêå</Russian>
+		<English>Stories - Bug</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUG_STORIES_EFFECT</Tag>
+		<Russian>Ïðåäàíèÿ î æóêå</Russian>
+		<English>Stories Effect - Bug</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FISH_MYTH</Tag>
+		<Russian>Ìèô î ðûáå</Russian>
+		<English>Myth - Tales of Fish</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LOCAL_FISH_MYTH</Tag>
+		<Russian>Ìèô î ðûáå</Russian>
+		<English>Myth - Fish (local)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FISH_MYTH_EFFECT</Tag>
+		<Russian>Ïåñíÿ î ðûáå</Russian>
+		<English>Myth Effect - Fish</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FISH_STORY</Tag>
+		<Russian>Ñêàçêà î ðûáå</Russian>
+		<English>Story - Fish</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FISH_STORIES</Tag>
+		<Russian>Ñêàçû î ðûáå</Russian>
+		<English>Stories - Fish</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FISH_STORIES_EFFECT</Tag>
+		<Russian>Ïðåäàíèÿ î ðûáå</Russian>
+		<English>Stories Effect - Fish</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REPTILE_MYTH</Tag>
+		<Russian>Ìèô î ðåïòèëèè</Russian>
+		<English>Myth - Reptile</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REPTILE_MYTH_EFFECT</Tag>
+		<Russian>Ïåñíÿ î ðåïòèëèè</Russian>
+		<English>Myth Effect - Reptile</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REPTILE_STORY</Tag>
+		<Russian>Ñêàçêà î ðåïòèëèè</Russian>
+		<English>Story - Reptile</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REPTILE_STORIES</Tag>
+		<Russian>Ñêàçû î ðåïòèëèè</Russian>
+		<English>Stories - Reptile</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REPTILE_STORIES_EFFECT</Tag>
+		<Russian>Ïðåäàíèÿ î ðåïòèëèè</Russian>
+		<English>Stories Effect - Reptile</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RODENT_MYTH</Tag>
+		<Russian>Ìèô î ãðûçóíå</Russian>
+		<English>Myth - Rodent</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RODENT_MYTH_EFFECT</Tag>
+		<Russian>Ïåñíÿ î ãðûçóíå</Russian>
+		<English>Myth Effect - Rodent</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RODENT_STORY</Tag>
+		<Russian>Ñêàçêà î ãðûçóíå</Russian>
+		<English>Story - Rodent</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RODENT_STORIES</Tag>
+		<Russian>Ñêàçû î ãðûçóíå</Russian>
+		<English>Stories - Rodent</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RODENT_STORIES_EFFECT</Tag>
+		<Russian>Ïðåäàíèÿ î ãðûçóíå</Russian>
+		<English>Stories Effect - Rodent</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WOLF_MYTH</Tag>
+		<Russian>Ìèô î âîëêå</Russian>
+		<English>Myth - Wolf</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WOLF_MYTH_EFFECT</Tag>
+		<Russian>Ïåñíÿ î âîëêå</Russian>
+		<English>Myth Effect - Wolf</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WOLF_STORY</Tag>
+		<Russian>Ñêàçêà î âîëêå</Russian>
+		<English>Story - Wolf</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WOLF_STORIES</Tag>
+		<Russian>Ñêàçû î âîëêå</Russian>
+		<English>Stories - Wolf</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WOLF_STORIES_EFFECT</Tag>
+		<Russian>Ïðåäàíèÿ î âîëêå</Russian>
+		<English>Stories Effect - Wolf</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_MYTH</Tag>
+		<Russian>Ìèô î íåëåò. ïòèöå</Russian>
+		<English>Myth - Flightless Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_MYTH_EFFECT</Tag>
+		<Russian>Ïåñíÿ î íåëåò. ïòèöå</Russian>
+		<English>Myth Effect - Flightless Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORY</Tag>
+		<Russian>Ñêàçêà î íåëåò. ïòèöå</Russian>
+		<English>Story - Flightless Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORIES</Tag>
+		<Russian>Ñêàçû î íåëåò. ïòèöå</Russian>
+		<English>Stories - Flightless Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORIES_EFFECT</Tag>
+		<Russian>Ïðåäàíèÿ î íåëåò. ïòèöå</Russian>
+		<English>Stories Effect - Flightless Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PENGUIN_MYTH</Tag>
+		<Russian>Ìèô î ïèíãâèíå</Russian>
+		<English>Myth - Penguin</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PENGUIN_MYTH_EFFECT</Tag>
+		<Russian>Ïåñíÿ î ïèíãâèíå</Russian>
+		<English>Myth Effect - Penguin</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PENGUIN_STORY</Tag>
+		<Russian>Ñêàçêà î ïèíãâèíå</Russian>
+		<English>Story - Penguin</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PENGUIN_STORIES</Tag>
+		<Russian>Ñêàçû î ïèíãâèíå</Russian>
+		<English>Stories - Penguin</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PENGUIN_STORIES_EFFECT</Tag>
+		<Russian>Ïðåäàíèÿ î ïèíãâèíå</Russian>
+		<English>Stories Effect - Penguin</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OLD_W_MONKEY_MYTH</Tag>
+		<Russian>Ìèô îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
+		<English>Myth - Old World Monkeys</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OLD_W_MONKEY_MYTH_EFFECT</Tag>
+		<Russian>Ïåñíÿ îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
+		<English>Myth Effect - Old World Monkeys</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OLD_W_MONKEY_STORY</Tag>
+		<Russian>Ñêàçêà îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
+		<English>Story - Old World Monkeys</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OLD_W_MONKEY_STORIES</Tag>
+		<Russian>Ñêàçû îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
+		<English>Stories - Old World Monkeys</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OLD_W_MONKEY_STORIES_EFFECT</Tag>
+		<Russian>Ïðåäàíèÿ îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
+		<English>Stories Effect - Old World Monkeys</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_MYTH</Tag>
+		<Russian>Ìèô îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
+		<English>Myth - New World Monkeys</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_MYTH_EFFECT</Tag>
+		<Russian>Ïåñíÿ îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
+		<English>Myth Effect - New World Monkeys</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_STORY</Tag>
+		<Russian>Ñêàçêà îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
+		<English>Story - New World Monkeys</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_STORIES</Tag>
+		<Russian>Ñêàçû îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
+		<English>Stories - New World Monkeys</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_STORIES_EFFECT</Tag>
+		<Russian>Ïðåäàíèÿ îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
+		<English>Stories Effect - New World Monkeys</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SPOTTED_CAT_MYTH_EFFECT</Tag>
+		<Russian>Ïåñíÿ î ëåîïàðäå</Russian>
+		<English>Myth Effect - Spotted Cat</English>
+	</TEXT>
 </Civ4GameText>

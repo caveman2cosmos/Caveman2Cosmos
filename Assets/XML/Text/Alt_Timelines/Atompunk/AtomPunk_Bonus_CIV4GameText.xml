@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Sid Meier's Civilization 4 Beyond the Sword -->
-<!-- Modified by the World of Civilization Team -->
-<!-- Game Text Infos -->
-<!-- -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ATOMPUNK</Tag>
-                <Russian>Атомпанк</Russian>
 		<English>Atompunk</English>
+		<Russian>Атомпанк</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ATOMPUNK_PEDIA</Tag>
-                <Russian>Атомпанк относится к до-цифровому периоду 1945-1965 гг., Включая модернизм середины века, атомный век и космический век, коммунизм и озабоченность по поводу его преувеличения как паранойи в США наряду с неосоветским стилем, подземным кинематографом, архитектурой Гуги, программа «Спутник», супергеройская беллетристика, рост военно-промышленных сил США и падение Чернобыля. Его эстетика имеет тенденцию к Populuxe и Raygun Gothic, которые описывают ретрофутуристическое видение мира.</Russian>
 		<English>Atompunk relates to the pre-digital period of 1945-1965, including mid-century Modernism, the Atomic Age and Space Age, Communism and concern about it exaggerated as paranoia in the USA along with Neo-Soviet styling, underground cinema, Googie architecture, the Sputnik programme, superhero fiction, the rise of the US military/industrial powers and the fall-out of Chernobyl. Its aesthetic tends toward Populuxe and Raygun Gothic, which describe a retro-futuristic vision of the world.</English>
+		<Russian>Атомпанк относится к до-цифровому периоду 1945-1965 гг., Включая модернизм середины века, атомный век и космический век, коммунизм и озабоченность по поводу его преувеличения как паранойи в США наряду с неосоветским стилем, подземным кинематографом, архитектурой Гуги, программа «Спутник», супергеройская беллетристика, рост военно-промышленных сил США и падение Чернобыля. Его эстетика имеет тенденцию к Populuxe и Raygun Gothic, которые описывают ретрофутуристическое видение мира.</Russian>
 	</TEXT>
 </Civ4GameText>
