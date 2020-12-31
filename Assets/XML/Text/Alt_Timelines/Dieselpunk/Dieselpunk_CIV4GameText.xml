@@ -1,6 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Xml/Schema/Civ4Gametext.xsd">
-<<<<<<< HEAD
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AERODROME</Tag>
 		<English>Aerodrome</English>
@@ -336,7 +335,6 @@
 		<English>The Very Heavy Tank is an alt-timeline dieselpunk unit. It is very powerful but has a national unit limit.</English>
 		<Italian>Il Carro blindato pesante è un'unità in stile Dieselpunk. È molto potente, ma ha un limite nazionale di unità permesse.</Italian>
 	</TEXT>
-=======
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AERODROME</Tag>
 		<English>Aerodrome</English>
@@ -727,5 +725,4 @@
 		<Italian>Il Carro blindato pesante è un'unità in stile Dieselpunk. È molto potente, ma ha un limite nazionale di unità permesse.</Italian>
 		<Russian>Ñâåðõòÿæåëûé òàíê - ýòî þíèò àëüòåðíàòèâíîé âðåìåííîé ëèíèè äèçåëüïàíêà. Â áîþ îí î÷åíü ñèëåí, íî èõ ÷èñëåííîñòü îãðàíè÷åíà.</Russian>
 	</TEXT>
->>>>>>> RU-Translate
 </Civ4GameText>

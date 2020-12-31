@@ -1,6 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
-<<<<<<< HEAD
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AB_MATTER</Tag>
 		<English>AB Matter</English>
@@ -8045,7 +8044,6 @@
 		<Tag>TXT_KEY_BONUS_ZUNI</Tag>
 		<English>Zuñi</English>
 	</TEXT>
-=======
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AB_MATTER</Tag>
 		<English>AB Matter</English>
@@ -17470,5 +17468,4 @@
 		<English>Zuñi</English>
 		<Russian>Çóíè</Russian>
 	</TEXT>
->>>>>>> RU-Translate
 </Civ4GameText>

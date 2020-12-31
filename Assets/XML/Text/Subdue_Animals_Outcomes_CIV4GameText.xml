@@ -1,6 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
-<<<<<<< HEAD
 	<TEXT>
 		<Tag>TXT_KEY_BUTCHER_ANIMAL_HELP</Tag>
 		<English>Butcher the animal.</English>
@@ -191,7 +190,6 @@
 		<Italian>[NUM1:Un:Una] %s1 [NUM1:è stato addomesticato:è stata addomesticata].</Italian>
 		<Polish>%s1 został pochwycony.</Polish>
 	</TEXT>
-=======
 	<TEXT>
 		<Tag>TXT_KEY_BUTCHER_ANIMAL_HELP</Tag>
 		<English>Butcher the animal.</English>
@@ -409,5 +407,4 @@
 		<Polish>%s1 został pochwycony.</Polish>
 		<Russian>%s1 áûë ïðèðó÷åí.</Russian>
 	</TEXT>
->>>>>>> RU-Translate
 </Civ4GameText>
