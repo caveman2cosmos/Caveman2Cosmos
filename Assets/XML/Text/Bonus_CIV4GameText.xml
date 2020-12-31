@@ -6792,6 +6792,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STEAMPUNK</Tag>
 		<English>Steampunk</English>
+		<Russian>Стимпанк</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_STEAMPUNK_PEDIA</Tag>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STEEL_INGOTS</Tag>
