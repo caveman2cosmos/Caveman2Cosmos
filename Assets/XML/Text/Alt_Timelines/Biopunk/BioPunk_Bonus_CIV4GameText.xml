@@ -3,15 +3,15 @@
 <!-- Modified by the World of Civilization Team -->
 <!-- Game Text Infos -->
 <!-- -->
-<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BIOPUNK</Tag>
-		<Russian>Áèîïàíê</Russian>
 		<English>Biopunk</English>
+		<Russian>Áèîïàíê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BIOPUNK_PEDIA</Tag>
-		<Russian>[TAB]Áèîïàíê, êàê íàïðàâëåíèå â íàó÷íîé ôàíòàñòèêå, ïîÿâèëñÿ â 1990-å ãîäû è ñôîêóñèðîâàí íà áëèæàéøåì áóäóùåì è íåïðåäñêàçóåìûì ïîñëåäñòâèÿì áèîòåõíîëîãè÷åñêîé ðåâîëþöèè ïîñëå îòêðûòèÿ ðåêîìáèíàöèè ÄÍÊ. Â áèîïàíêå îáû÷íî îïèñûâàåòñÿ áîðüáà èíäèâèäîâ èëè ãðóïï ïðîòèâ òîòàëèòàðíûõ ïðàâèòåëüñòâ è ìåãàêîðïîðàöèé, êîòîðûå íåïðàâîìåðíî èñïîëüçóþò áèîòåõíîëîãèè êàê ñðåäñòâî íàæèâû èëè ñîöèàëüíîãî êîíòðîëÿ.</Russian>
 		<English>Biopunk emerged during the 1990s and focuses on the near-future unintended consequences of the biotechnology revolution following the discovery of recombinant DNA. Biopunk fiction typically describes the struggles of individuals or groups, often the product of human experimentation, against a backdrop of totalitarian governments or megacorporations which misuse biotechnologies as means of social control or profiteering.</English>
+		<Russian>[TAB]Áèîïàíê, êàê íàïðàâëåíèå â íàó÷íîé ôàíòàñòèêå, ïîÿâèëñÿ â 1990-å ãîäû è ñôîêóñèðîâàí íà áëèæàéøåì áóäóùåì è íåïðåäñêàçóåìûì ïîñëåäñòâèÿì áèîòåõíîëîãè÷åñêîé ðåâîëþöèè ïîñëå îòêðûòèÿ ðåêîìáèíàöèè ÄÍÊ. Â áèîïàíêå îáû÷íî îïèñûâàåòñÿ áîðüáà èíäèâèäîâ èëè ãðóïï ïðîòèâ òîòàëèòàðíûõ ïðàâèòåëüñòâ è ìåãàêîðïîðàöèé, êîòîðûå íåïðàâîìåðíî èñïîëüçóþò áèîòåõíîëîãèè êàê ñðåäñòâî íàæèâû èëè ñîöèàëüíîãî êîíòðîëÿ.</Russian>
 	</TEXT>
 </Civ4GameText>
