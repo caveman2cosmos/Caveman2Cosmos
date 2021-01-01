@@ -4,10 +4,8 @@
 	or TerrainChange tag in the Civ4BuildInfos, don't get placed as improvements ingame. The entry here
 	only controls allowing/disallowing by current plot, e.g. FeatureMakesValids or TerrainMakesValids.
 	- Ordering of entries roughly mimics that of CIV4BuildInfos
-	- SUMBERGED_TOWN_DEEP is currently unused, instead SUBMERGED_TOWN unlocks the ability to build at lower
-	depths with tech advancement. Could stand to be separated if someone cares to flesh out a difference.
 	- Resource discovery/depletion uses odds system; <iDiscoverRand>3000</iDiscoverRand> implies 1 in 3000 per turn
-	- All resources discoverable at low odds thru settlement line (sans mammoth, after seasonal camp)
+	- All land resources discoverable at low odds thru settlement line (sans mammoth, after seasonal camp; naval has fishing camp & submerged town)
 -->
 <Civ4ImprovementInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<ImprovementInfos>
@@ -3712,6 +3710,70 @@
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_GRAPES</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COCA</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COCOA</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COTTON</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_FLAX</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_HENNA</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_INCENSE</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_INDIGO</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_KAVA</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_OPIUM</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PAPYRUS</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PEYOTE</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PRICKLY_PEAR</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SUGAR</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_TOBACCO</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_VANILLA</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
@@ -6688,18 +6750,6 @@
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_MUSHROOMS</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_OLIVES</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
-				</BonusTypeStruct>
-				<BonusTypeStruct>
-					<BonusType>BONUS_TEA</BonusType>
-					<iDiscoverRand>1000</iDiscoverRand>
-				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -6872,7 +6922,31 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_MUSHROOMS</BonusType>
+					<BonusType>BONUS_ALMONDS</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_BANANA</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COCONUT</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_DATES</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_FIG</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_LEMONS</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MANGO</BonusType>
 					<iDiscoverRand>1500</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6880,7 +6954,39 @@
 					<iDiscoverRand>1500</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
+					<BonusType>BONUS_PAPAYA</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PISTACHIO</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_POMEGRANATE</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SPICES</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COFFEE</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_RUBBER</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
 					<BonusType>BONUS_TEA</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MUSHROOMS</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SILK</BonusType>
 					<iDiscoverRand>1500</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -7054,7 +7160,31 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_MUSHROOMS</BonusType>
+					<BonusType>BONUS_ALMONDS</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_BANANA</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COCONUT</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_DATES</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_FIG</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_LEMONS</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MANGO</BonusType>
 					<iDiscoverRand>2000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -7062,7 +7192,39 @@
 					<iDiscoverRand>2000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
+					<BonusType>BONUS_PAPAYA</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PISTACHIO</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_POMEGRANATE</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SPICES</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COFFEE</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_RUBBER</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
 					<BonusType>BONUS_TEA</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MUSHROOMS</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SILK</BonusType>
 					<iDiscoverRand>2000</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -7249,7 +7411,31 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_MUSHROOMS</BonusType>
+					<BonusType>BONUS_ALMONDS</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_BANANA</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COCONUT</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_DATES</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_FIG</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_LEMONS</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MANGO</BonusType>
 					<iDiscoverRand>2000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -7257,7 +7443,39 @@
 					<iDiscoverRand>2000</iDiscoverRand>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
+					<BonusType>BONUS_PAPAYA</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PISTACHIO</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_POMEGRANATE</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SPICES</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COFFEE</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_RUBBER</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
 					<BonusType>BONUS_TEA</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MUSHROOMS</BonusType>
+					<iDiscoverRand>2000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SILK</BonusType>
 					<iDiscoverRand>2000</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -11878,6 +12096,72 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
+			<BonusTypeStructs>
+				<BonusTypeStruct>
+					<BonusType>BONUS_GRAPES</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COCA</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COCOA</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COTTON</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_FLAX</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_HEMP</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_HENNA</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_INCENSE</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_INDIGO</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_KAVA</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_OPIUM</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PAPYRUS</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PEYOTE</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SUGAR</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_TOBACCO</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_VANILLA</BonusType>
+					<iDiscoverRand>1500</iDiscoverRand>
+				</BonusTypeStruct>
+			</BonusTypeStructs>
 			<TechYieldChanges>
 			<TechYieldChange>
 					<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
