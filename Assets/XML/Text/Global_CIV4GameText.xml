@@ -979,6 +979,14 @@
 		<Spanish>[ICON_BULLET]Da [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ACTION_CAN_DISCOVER</Tag>
+		<English>[ICON_BULLET]Each turn when worked, has approximately:</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CHANCE_DISCOVER</Tag>
+		<English>1/%d1 chance of discovering:[SPACE]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ACTION_WAKE_WHEN_READY</Tag>
 		<English>Will awaken when it has accrued the maximum possible espionage points</English>
 		<French>Se réveillera lorsqu'il aura atteint le maximum possible de points d'espionnage</French>
