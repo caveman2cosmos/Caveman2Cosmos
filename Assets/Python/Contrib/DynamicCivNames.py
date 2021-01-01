@@ -375,7 +375,7 @@ class DynamicCivNames:
     ePowerCivic = pPlayer.getCivics(gc.getInfoTypeForString("CIVICOPTION_POWER"))
     bNoRealElections = (gc.getInfoTypeForString("CIVIC_MONARCHY") == eGovCivic or gc.getInfoTypeForString("CIVIC_MONARCHY") == eGovCivic or gc.getInfoTypeForString("CIVIC_DESPOTISM") == eGovCivic or gc.getInfoTypeForString("CIVIC_TOTALITARIANISM") == eGovCivic)
 
-    bFederal = (gc.getInfoTypeForString("CIVIC_FEDERALISM") == eGovCivic and (ePowerCivic == gc.getInfoTypeForString("CIVIC_SENATE") or ePowerCivic == gc.getInfoTypeForString("CIVIC_PARLIAMENT") or ePowerCivic == gc.getInfoTypeForString("CIVIC_PRESIDENT")))
+    bFederal = (gc.getInfoTypeForString("CIVIC_FEDERALISM") == eGovCivic and (ePowerCivic == gc.getInfoTypeForString("CIVIC_LEGISLATURE")))
     bConfederation = (not bFederal and (gc.getInfoTypeForString("CIVIC_FEDERALISM") == eGovCivic))
 
     bPacifist = (pPlayer.getCivics(gc.getInfoTypeForString("CIVICOPTION_MILITARY")) == gc.getInfoTypeForString("CIVIC_PACIFISM"))
@@ -428,7 +428,7 @@ class DynamicCivNames:
           if( not idx == iLeader and gc.getPlayer(idx).getTeam() == pTeam.getID() ) :
             newName += gc.getPlayer(idx).getCivilizationAdjective(0)
             break
-        newName += u" " + localText.getText("TXT_KEY_MOD_DCN_ALLIANCE", ())
+        newName += localText.getText("TXT_KEY_MOD_DCN_ALLIANCE", ())
         return [newName,curShort,curAdj]
       else:
         iLeader = pTeam.getLeaderID()
@@ -436,7 +436,7 @@ class DynamicCivNames:
         for idx in range(0, gc.getMAX_PC_PLAYERS()):
           if not idx == iLeader and gc.getPlayer(idx).getTeam() == pTeam.getID():
             newName += gc.getPlayer(idx).getCivilizationAdjective(0)[0:3]
-        newName += u" " + localText.getText("TXT_KEY_MOD_DCN_ALLIANCE", ())
+        newName += localText.getText("TXT_KEY_MOD_DCN_ALLIANCE", ())
         return [newName,curShort,curAdj]
     
     sSocRep = localText.getText("TXT_KEY_MOD_DCN_SOC_REP", ()).replace('%s','').strip()

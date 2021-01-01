@@ -16,11 +16,8 @@ class DebugUtils:
 
 	def resetUnitMovement(self):
 		for iPlayer in xrange(GC.getMAX_PLAYERS()):
-			CyPlayer = GC.getPlayer(iPlayer)
-			CyUnit, i = CyPlayer.firstUnit(false)
-			while CyUnit:
+			for CyUnit in GC.getPlayer(iPlayer).units():
 				CyUnit.setMoves(0)
-				CyUnit, i = CyPlayer.nextUnit(i, false)
 
 	def allBonuses(self):
 		iNBonuses = GC.getNumBonusInfos()
@@ -110,7 +107,7 @@ class DebugUtils:
 		iObject = popupReturn.getSelectedListBoxValue(0)
 
 		CyPlayer = GC.getPlayer(iPlayer)
-		if CyPlayer.isNone():
+		if CyPlayer is None:
 			return -1 # Error
 
 		iNumUnits = GC.getNumUnitInfos()

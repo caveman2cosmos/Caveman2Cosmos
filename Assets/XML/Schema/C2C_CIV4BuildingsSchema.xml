@@ -689,9 +689,6 @@
 	<ElementType name="PrereqAmountBuildings" content="eltOnly">
 		<element type="PrereqBuilding" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="PrereqInCityBuildings" content="eltOnly">
-		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="SpecialistCommerceChange" content="eltOnly">
 		<element type="SpecialistType"/>
 		<element type="CommerceChanges"/>
@@ -990,6 +987,9 @@
 		<element type="BuildingHappinessChanges" minOccurs="0"/>
 		<element type="PrereqAmountBuildings" minOccurs="0"/>
 		<element type="PrereqInCityBuildings" minOccurs="0"/>
+		<element type="PrereqNotInCityBuildings" minOccurs="0"/>
+		<element type="PrereqOrBuildings" minOccurs="0"/>
+		<element type="ReplacementBuildings" minOccurs="0"/>
 		<element type="SpecialistYieldChanges" minOccurs="0"/>
 		<element type="BonusYieldModifiers" minOccurs="0"/>
 		<element type="ImprovementFreeSpecialists" minOccurs="0"/>
@@ -1217,22 +1217,14 @@
 	<ElementType name="PrereqOrFeature" content="eltOnly">
 		<element type="PrereqFeature" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bPrereqNot" content="textOnly" dt:type="boolean"/>
-	<ElementType name="BuildingMustNotHave" content="textOnly"/>
-	<ElementType name="PrereqNotBuilding" content="eltOnly">
-		<element type="BuildingMustNotHave"/>
-		<element type="bPrereqNot"/>
+	<ElementType name="PrereqInCityBuildings" content="eltOnly">
+		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="PrereqNotBuildings" content="eltOnly">
-		<element type="PrereqNotBuilding" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="PrereqNotInCityBuildings" content="eltOnly">
+		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bReplace" content="textOnly" dt:type="boolean"/>
-	<ElementType name="ReplaceBuilding" content="eltOnly">
-		<element type="BuildingType"/>
-		<element type="bReplace"/>
-	</ElementType>
-	<ElementType name="ReplaceBuildings" content="eltOnly">
-		<element type="ReplaceBuilding" minOccurs="0"/>
+	<ElementType name="ReplacementBuildings" content="eltOnly">
+		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="UnitType" content="textOnly"/>
 	<ElementType name="UnitProductionModifier" content="eltOnly">
@@ -1316,21 +1308,7 @@
 	<ElementType name="GlobalBuildingExtraCommerces" content="eltOnly">
 		<element type="BuildingExtraCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bPrereqBuilding" content="textOnly" dt:type="boolean"/>
-	<ElementType name="PrereqOrBuilding" content="eltOnly">
-		<element type="BuildingType"/>
-		<element type="bPrereqBuilding"/>
-	</ElementType>
 	<ElementType name="PrereqOrBuildings" content="eltOnly">
-		<element type="PrereqOrBuilding" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="bPrereqGameSpeed" content="textOnly" dt:type="boolean"/>
-	<ElementType name="GameSpeedType" content="textOnly"/>
-	<ElementType name="PrereqOrGameSpeed" content="eltOnly">
-		<element type="GameSpeedType"/>
-		<element type="bPrereqGameSpeed"/>
-	</ElementType>
-	<ElementType name="PrereqOrGameSpeeds" content="eltOnly">
-		<element type="PrereqOrGameSpeed" minOccurs="0" maxOccurs="*"/>
+		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 </Schema>

@@ -15,8 +15,8 @@ if str(sys.argv[-1]) == '-rename':
 else:
     actually_rename = False
 
-path_assets_folder =  '../../Assets/'
-path_mp3_files  = '../../Assets/Sounds/Tech/'
+path_assets_folder =  '../../../Assets/'
+path_mp3_files  = '../../../Assets/Sounds/Tech/'
 
 # Substrings from foldernames to not search through. Mormon is really messy, screws up script.
 ignore_list = ['(unloaded)', 'Mormon']

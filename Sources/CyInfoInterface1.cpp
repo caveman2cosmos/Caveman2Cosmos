@@ -24,8 +24,6 @@ void CyInfoPythonInterface1()
 		.def("getCivilopedia", &CvInfoBase::pyGetCivilopedia, "wstring ()")
 		.def("getStrategy", &CvInfoBase::pyGetStrategy, "wstring ()")
 		.def("getHelp", &CvInfoBase::pyGetHelp, "wstring ()")
-		.def("isMatchForLink", &CvInfoBase::isMatchForLink, "bool (string)")
-		//.def("getGenericCategory", &CvInfoBase::pyGetGenericCategory, "wstring ()")
 		;
 
 	python::class_<CvScalableInfo>("CvScalableInfo")
@@ -156,7 +154,7 @@ void CyInfoPythonInterface1()
 /*****************************************************************************************************/
 /**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
 /*****************************************************************************************************/
-		
+
 /************************************************************************************************/
 /* Afforess Promotion Changes                             12/5/09                               */
 /*                                                                                              */
@@ -165,7 +163,7 @@ void CyInfoPythonInterface1()
 		.def("getObsoleteTech", &CvPromotionInfo::getObsoleteTech, "int ()")
 /************************************************************************************************/
 /* Afforess	                         END                                                        */
-/************************************************************************************************/			
+/************************************************************************************************/
 
 		.def("getSound", &CvPromotionInfo::getSound, "string ()")
 
@@ -491,30 +489,26 @@ void CyInfoPythonInterface1()
 		.def("getPrereqNumOfBuilding", &CvBuildingInfo::getPrereqNumOfBuilding, "int (int i)")
 		.def("getFlavorValue", &CvBuildingInfo::getFlavorValue, "int (int i)")
 		.def("getImprovementFreeSpecialist", &CvBuildingInfo::getImprovementFreeSpecialist, "int (int i)")
-		
-/************************************************************************************************/
-/* Afforess	                  Start		 06/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 		.def("isPrereqOrCivics", &CvBuildingInfo::isPrereqOrCivics, "bool (int i)")
 		.def("isPrereqAndCivics", &CvBuildingInfo::isPrereqAndCivics, "bool (int i)")
-		
+
 		.def("isPrereqOrTerrain", &CvBuildingInfo::isPrereqOrTerrain, "bool (int i)")
 		.def("isPrereqAndTerrain", &CvBuildingInfo::isPrereqAndTerrain, "bool (int i)")
-		
+
 		.def("isPrereqOrImprovement", &CvBuildingInfo::isPrereqOrImprovement, "bool (int i)")
 		.def("isPrereqOrFeature", &CvBuildingInfo::isPrereqOrFeature, "bool (int i)")
-		
-		
-		.def("isReplaceBuilding", &CvBuildingInfo::isReplaceBuilding, "bool (int i)")
-		
-		.def("isPrereqOrBuilding", &CvBuildingInfo::isPrereqOrBuilding, "bool (int i)")
-		
+
+		.def("getPrereqOrBuilding", &CvBuildingInfo::getPrereqOrBuilding, "int (int i)")
+		.def("getNumPrereqOrBuilding", &CvBuildingInfo::getNumPrereqOrBuilding, "short ()")
+
+		.def("getReplacementBuilding", &CvBuildingInfo::getReplacementBuilding, "int (int i)")
+		.def("getNumReplacementBuilding", &CvBuildingInfo::getNumReplacementBuilding, "short ()")
+		.def("getReplacedBuilding", &CvBuildingInfo::getReplacedBuilding, "int (int i)")
+		.def("getNumReplacedBuilding", &CvBuildingInfo::getNumReplacedBuilding, "short ()")
+
 		.def("getNumPopulationEmployed", &CvBuildingInfo::getNumPopulationEmployed, "int")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		.def("isCommerceFlexible", &CvBuildingInfo::isCommerceFlexible, "bool (int i)")
 		.def("isPrereqInCityBuilding", &CvBuildingInfo::isPrereqInCityBuilding, "bool (int i)")
 

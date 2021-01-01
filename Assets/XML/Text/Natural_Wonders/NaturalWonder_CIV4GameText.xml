@@ -466,21 +466,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BEACON_GREAT_BARRIER_REEF</Tag>
-		<English>Build [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER_REEF]Beacon[\LINK] (Great Reef)</English>
-		<French>Placer une [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER_REEF]Balise[\LINK] (Great Reef)</French>
-		<German>[LINK=IMPROVEMENT_BEACON_GREAT_BARRIER_REEF]Leuchtfeuer[\LINK] errichten (Great Reef)</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER_REEF]Torre di segnalazione[\LINK] (Great Reef)</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER_REEF]Baliza[\LINK] (Great Reef)</Spanish>
-		<Polish>Wybuduj [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER_REEF]Boję[\LINK](Great Reef)</Polish>
+		<English>Build [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER_REEF]Beacon[\LINK] (Great Barrier Reef)</English>
+		<French>Placer une [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER_REEF]Balise[\LINK] (Great Barrier Reef)</French>
+		<German>[LINK=IMPROVEMENT_BEACON_GREAT_BARRIER_REEF]Leuchtfeuer[\LINK] errichten (Great Barrier Reef)</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER_REEF]Torre di segnalazione[\LINK] (Great Barrier Reef)</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER_REEF]Baliza[\LINK] (Great Barrier Reef)</Spanish>
+		<Polish>Wybuduj [LINK=IMPROVEMENT_BEACON_GREAT_BARRIER_REEF]Boję[\LINK](Great Barrier Reef)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</Tag>
-		<English>Build [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF]Lighthouse[\LINK] (Great Reef)</English>
-		<French>Placer un [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF]Phare[\LINK](Great Reef)</French>
-		<German>[LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF]Leuchtturm[\LINK](Great Reef) bauen</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF]Faro[\LINK](Great Reef)</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF]Faro[\LINK](Great Reef)</Spanish>
-		<Polish>Wybuduj [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF]Latarnię Morską[\LINK](Great Reef)</Polish>
+		<English>Build [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF]Lighthouse[\LINK] (Great Barrier Reef)</English>
+		<French>Placer un [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF]Phare[\LINK](Great Barrier Reef)</French>
+		<German>[LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF]Leuchtturm[\LINK](Great Barrier Reef) bauen</German>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF]Faro[\LINK](Great Barrier Reef)</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF]Faro[\LINK](Great Barrier Reef)</Spanish>
+		<Polish>Wybuduj [LINK=IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF]Latarnię Morską[\LINK](Great Barrier Reef)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_NATURAL_WONDERS_PEDIA</Tag>
@@ -725,7 +725,7 @@
 		<Tag>TXT_KEY_FEATURE_PRAVCICKA_BRANA_PEDIA</Tag>
 		<English>The Pravcicka Brana is located in the Bohemian Switzerland in the Czech Republic. The narrow rock formation is the largest natural sandstone arch in Europe. With a span of 26.5 metres, an inside height of 16 metres, 8 metre maximum width and 3 metre arch it is one of the most striking natural monuments in the Elbe Sandstone Mountains.</English>
 		<French>Le 'Pravcicka Brana' est situé dans la suise bohème, en République tchèque. Cette formation rocheuse de grès constitue le pont naturel le plus large d'Europe (26.5 metres, pour une hauteur de 16 metres, et une épaisseur de 8 mètre au maximum).</French>
-		<German>Das [COLOR_HIGHLIGHT_TEXT]Prebischtor[COLOR_REVERT] (tschechisch: Pravcická brána) ist Europas größte Felsbrücke aus Sandstein. Es befindet sich im Böhmische Schweiz genannten Teil des Elbsandsteingebirges in Tschechien. Die Spannweite des Felsbogens beträgt 26,5 Meter, seine lichte Höhe 16 Meter und seine Breite 8 Meter. Die Bogenstärke ist mit 3 Metern angegeben.[NEWLINE]Das Prebischtor ist offiziell nur von tschechischer Seite aus über Wanderwege von Hrensko (Herrnskretschen) und Mezní Louka (Rainwiese) aus erreichbar. Bis 1982 konnte man über die Felsbrücke laufen, aber wegen der starken Erodierung aufgrund des Besucheransturms musste sie gesperrt werden. Die hinaufführenden Treppen und die Geländer wurden nach der Sperrung entfernt, sodass das Prebischtor seither wieder in der unveränderten, natürlichen Form betrachtet werden kann. Direkt unterhalb des Tores steht seit 1881 das kleine Hotel "Falkennest" mit 50 Betten anstelle eines früheren Wirtshauses. Seit seiner Privatisierung befindet sich das gesamte Prebischtorgelände in Privatbesitz und darf nur noch während der Öffnungszeiten gegen ein Eintrittsgeld besichtigt werden.</German>
+		<German>Das [COLOR_HIGHLIGHT_TEXT]Prebischtor[COLOR_REVERT] (tschechisch: Pravcická brána) ist Europas größte Felsbrücke aus Sandstein. Es befindet sich im Böhmische Schweiz genannten Teil des Elbsandsteingebirges in Tschechien. Die Spannweite des Felsbogens beträgt 26,5 Meter, seine lichte Höhe 16 Meter und seine Breite 8 Meter. Die Bogenstärke ist mit 3 Metern angegeben.[NEWLINE]Das Prebischtor ist offiziell nur von tschechischer Seite aus über Wanderwege von Hrensko (Herrnskretschen) und Mezní Louka (Rainwiese) erreichbar. Bis 1982 konnte man über die Felsbrücke laufen, aber wegen der starken Erodierung aufgrund des Besucheransturms musste sie gesperrt werden. Die hinaufführenden Treppen und die Geländer wurden nach der Sperrung entfernt, sodass das Prebischtor seither wieder in der unveränderten, natürlichen Form betrachtet werden kann. Direkt unterhalb des Tores steht seit 1881 das kleine Hotel "Falkennest" mit 50 Betten anstelle eines früheren Wirtshauses. Seit seiner Privatisierung befindet sich das gesamte Prebischtorgelände in Privatbesitz und darf nur noch während der Öffnungszeiten gegen ein Eintrittsgeld besichtigt werden.</German>
 		<Polish>Brama Pravcicka (cz.: Pravcicka brana, niem.: Prebischtor) - naturalny most skalny w Górach Połabskich w Czechach. Pravcicka Brama jest największym naturalnym skalnym mostem w Europie. Jest symbolem Parku Narodowego Czeska Szwajcaria (Ceske Svycarsko). Rozpiętość łuku bramy u podstawy wynosi 26,5 m., wysokość otworu 16 m, najmniejsza szerokość mostu 8 m, minimalna grubość mostu 2,5 m. Górna powierzchnia stropowej płyty bramy leży na wysokości 21 m. od jej podstawy. Okazałość bramy można podziwiać zarówno z okolicznych tarasów widokowych, jak i bezpośrednio spod jej łuku. Aby uchronić ten pomnik przyrody przed ogromnym naporem turystów wstęp na łuk bramy został zamknięty. Miejscowością wypadową dla pieszych wędrówek jest Hrensko.</Polish>
 	</TEXT>
 	<TEXT>

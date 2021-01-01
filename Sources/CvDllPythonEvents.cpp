@@ -1,8 +1,11 @@
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
+#include "CvDllPythonEvents.h"
 #include "CvGlobals.h"
-
-#include <boost155/functional.hpp>
-#include <boost155/bind.hpp>
+#include "CvPlot.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
+#include "CvUnit.h"
 
 
 namespace logging {
@@ -293,7 +296,7 @@ bool postEvent(EventArgs eventData, const char* eventName)
 
 	for(ptr = eventName; *ptr != '\0'; ptr++)
 	{
-		xSum.add((byte)*ptr);
+		xSum.add((uint8_t)*ptr);
 	}
 
 	std::map<int,ProfileSample*>::const_iterator itr = g_pythonProfiles->find(xSum.get());

@@ -119,7 +119,7 @@
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_CULTURE</Type>
-			<Description>TXT_KEY_CONCEPT_CULTURE</Description>
+			<Description>TXT_WORD_CULTURE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CULTURE_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
@@ -134,7 +134,7 @@
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_ESPIONAGE</Type>
-			<Description>TXT_KEY_ESPIONAGE_CULTURE</Description>
+			<Description>TXT_WORD_ESPIONAGE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA_SR</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
@@ -154,7 +154,7 @@
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_FOOD</Type>
-			<Description>TXT_KEY_CONCEPT_FOOD</Description>
+			<Description>TXT_WORD_FOOD</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_FOOD_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
@@ -244,7 +244,7 @@
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_PRODUCTION</Type>
-			<Description>TXT_KEY_CONCEPT_PRODUCTION</Description>
+			<Description>TXT_KEY_PRODUCTION</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_PRODUCTION_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>

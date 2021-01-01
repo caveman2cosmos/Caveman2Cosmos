@@ -673,14 +673,8 @@
 				<iYield>30</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_ARTIFICIAL_SUPERMASSIVE_BLACK_HOLE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BLACK_HOLE_CONSTELLATION</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_ARTIFICIAL_SUPERMASSIVE_BLACK_HOLE</BuildingType>
+				<BuildingType>BUILDING_BLACK_HOLE_CONSTELLATION</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>

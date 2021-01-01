@@ -24,13 +24,13 @@
 		<Tag>TXT_KEY_PROPERTY_AIR_POLLUTION_CHANGE</Tag>
 		<English>[ICON_BULLET]Changes Air Pollution rate by %D1</English>
 		<French>[ICON_BULLET]Change le Taux de pollution de l'air de %D1</French>
-		<Spanish>[ICON_BULLET]Cambia el nivel de Polución del aire en %D1</Spanish>
+		<Spanish>[ICON_BULLET]Cambia el nivel de polución del aire en %D1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_AIR_POLLUTION_CHANGE_ALL_CITIES</Tag>
 		<English>[ICON_BULLET]Changes Air Pollution rate in all cities by %D1</English>
 		<French>[ICON_BULLET]Change le Taux de pollution de l'air dans toutes les villes de %D1</French>
-		<Spanish>[ICON_BULLET]Cambia el nivel de Polución del aire en %D1 en todas las ciudades</Spanish>
+		<Spanish>[ICON_BULLET]Cambia el nivel de polución del aire en %D1 en todas las ciudades</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_AIR_POLLUTION_DISPLAY</Tag>
@@ -42,13 +42,13 @@
 		<Tag>TXT_KEY_PROPERTY_AIR_POLLUTION_PREREQ_MAX</Tag>
 		<English>[COLOR_WARNING_TEXT]Needs an Air Pollution rate of at most %D1[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert un Taux de pollution de l'air au maximum de %D1[COLOR_REVERT]</French>
-		<Spanish>[COLOR_WARNING_TEXT]Requiere un nivel de Polución del aire de como máximo %D1[COLOR_REVERT]</Spanish>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere un nivel de polución del aire de como máximo %D1[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_AIR_POLLUTION_PREREQ_MIN</Tag>
 		<English>[COLOR_WARNING_TEXT]Needs an Air Pollution rate of at least %D1[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert un Taux de pollution de l'air d'au moins %D1[COLOR_REVERT]</French>
-		<Spanish>[COLOR_WARNING_TEXT]Requiere un nivel de Polución del aire de al menos %D1[COLOR_REVERT]</Spanish>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere un nivel de polución del aire de al menos %D1[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_AIR_POLLUTION_STRATEGY</Tag>
@@ -248,20 +248,22 @@
 		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY</Tag>
 		<English>Flammability</English>
 		<French>Risque d'incendie</French>
+		<German>Brandgefahr</German>
 		<Italian>Rischio d'incendio</Italian>
 		<Spanish>Inflamabilidad</Spanish>
+		<Polish>Palność</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY_CHANGE</Tag>
-		<English>[ICON_BULLET]Changes Flammability by %D1</English>
-		<French>[ICON_BULLET]Change le Risque d'incendie de %D1</French>
-		<Spanish>[ICON_BULLET]Cambia la Inflamabilidad en %D1</Spanish>
+		<English>[ICON_BULLET]Changes flammability by %D1</English>
+		<French>[ICON_BULLET]Change le risque d'incendie de %D1</French>
+		<Spanish>[ICON_BULLET]Cambia la inflamabilidad en %D1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY_CHANGE_ALL_CITIES</Tag>
-		<English>[ICON_BULLET]Changes Flammability in all cities by %D1</English>
-		<French>[ICON_BULLET]Change le Risque d'incendie dans toutes les villes de %D1</French>
-		<Spanish>[ICON_BULLET]Cambia la Inflamabilidad en %D1 en todas las ciudades</Spanish>
+		<English>[ICON_BULLET]Changes flammability in all cities by %D1</English>
+		<French>[ICON_BULLET]Change le risque d'incendie dans toutes les villes de %D1</French>
+		<Spanish>[ICON_BULLET]Cambia la inflamabilidad en %D1 en todas las ciudades</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY_DISPLAY</Tag>
@@ -271,20 +273,20 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY_PREREQ_MAX</Tag>
-		<English>[COLOR_WARNING_TEXT]Needs a Flammability of at most %D1[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Requiert un Risque d'incendie au maximum de %D1[COLOR_REVERT]</French>
-		<Spanish>[COLOR_WARNING_TEXT]Requiere una Inflamabilidad de como máximo %D1[COLOR_REVERT]</Spanish>
+		<English>[COLOR_WARNING_TEXT]Needs a flammability of at most %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un risque d'incendie au maximum de %D1[COLOR_REVERT]</French>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere una inflamabilidad de como máximo %D1[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY_PREREQ_MIN</Tag>
-		<English>[COLOR_WARNING_TEXT]Needs a Flammability of at least %D1[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Requiert un Risque d'incendie d'au moins %D1[COLOR_REVERT]</French>
-		<Spanish>[COLOR_WARNING_TEXT]Requiere una Inflamabilidad de al menos %D1[COLOR_REVERT]</Spanish>
+		<English>[COLOR_WARNING_TEXT]Needs a flammability of at least %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un risque d'incendie d'au moins %D1[COLOR_REVERT]</French>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere una inflamabilidad de al menos %D1[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_FLAMMABILITY_STRATEGY</Tag>
 		<English>[H1]Flammability[\H1][PARAGRAPH:2]Fire events require a minimum Flammability in a city before they trigger. Certain buildings raise the Flammability, certain buildings lower the Flammability. So you are less likely to get a fire in a city with a lot of fire fighting buildings than you are in a city with an oil refinery, etc.</English>
-		<Italian>[H1]Rischio d'incendio[\H1][PARAGRAPH:2]Gli incendi richiedono un rischio d'incendio minimo prima di scoppiare. Alcuni edifici alzano questo rischio, altri lo abbassano. C'è più probabilità di incendio in una città con una refineria, piuttosto che in una con una caserma dei pompieri.</Italian>
+		<Italian>[H1]Rischio d'incendio[\H1][PARAGRAPH:2]Gli incendi richiedono un rischio d'incendio minimo prima di scoppiare. Alcuni edifici alzano questo rischio, altri lo abbassano. C'è più probabilità di incendio in una città con una raffineria, piuttosto che in una con una caserma dei pompieri.</Italian>
 		<Spanish>[H1]Inflamabilidad[\H1][PARAGRAPH:2]Los incendios requieren un nivel de inflamabilidad mínimo en la ciudad para producirse. Ciertos edificios incrementan el riesgo de incendio, ciertos edificios lo reducen. Así, tendrás menos posibilidades de sufrir un incendio en una ciudad con muchos edificios para luchar contra el fuego que en una ciudad con refinerías de petróleo, etc.</Spanish>
 	</TEXT>
 	<TEXT>

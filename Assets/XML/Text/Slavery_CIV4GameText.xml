@@ -40,7 +40,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVERY_ZORO_PEDIA</Tag>
 		<English>Zoroastrianism prohibits the owning of slaves. If you have in the city or as your state religion then your people will be angry if you also run Slavery. Zoroastrianism missionaries (Magi) can also end slavery in your nation like a Great Person can.</English>
-		<Italian>Lo zoroastrismo proibisce la schiaivtù; se lo zoroastrismo è presente in città o è la tua religione ufficiale, i cittadini si arrabbieranno se permetti la schiavitù. I magi, missionari di Zoroastro, possono eliminare la schiavitù dalla tua nazione proprio come farebbe un Grande Personaggio.</Italian>
+		<Italian>Lo zoroastrismo proibisce la schiavitù; se lo zoroastrismo è presente in città o è la tua religione ufficiale, i cittadini si arrabbieranno se permetti la schiavitù. I magi, missionari di Zoroastro, possono eliminare la schiavitù dalla tua nazione proprio come farebbe un Grande Personaggio.</Italian>
 		<Polish>Zaratusztrianizm potępiał niewolnictwo w każdej postaci.</Polish>
 	</TEXT>
 	<TEXT>
@@ -133,7 +133,7 @@
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Tag>
 		<English>Slave Compounds are where state slaves are housed.</English>
 		<French>Les Camps d'esclaves sont les endroits où les esclaves sont autorisés à loger.</French>
-		<Italian>Le baracche degli schiavi sono i luoghi in cuui gli schiavi vengono costretti a vivere.</Italian>
+		<Italian>Le baracche degli schiavi sono i luoghi in cui gli schiavi vengono costretti a vivere.</Italian>
 		<Polish>Baraki Niewolników to miejsce gdzie przebywają i pracują niewolnicy.</Polish>
 	</TEXT>
 	<TEXT>
@@ -174,7 +174,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_MARKET_HELP</Tag>
-		<English>[ICON_BULLET]Slave Market increases the outcomes from using Captives as Slaves eg increases amount of gold you get from selling a captive into slavery.</English>
+		<English>[ICON_BULLET]Slave Market increases the outcomes from using Captives as Slaves - e.g. increases amount of gold you get from selling a captive into slavery.</English>
 		<French>[ICON_BULLET]Le marché d'esclaves augmente les bénéfices de l'utilisation de prisonnier en tant qu'esclaves, ainsi que l'or que vous pouvez obtenir de la vente d'esclaves.</French>
 		<Italian>Il mercato degli schiavi migliora i risultati della vendita di prigionieri come schiavi, incrementando la quantità di oro generata da ogni vendita.</Italian>
 		<Polish>Targ Niewolników zwiększa wpływy z używania jeńców jako niewolników.</Polish>
@@ -197,7 +197,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WV_SLAVERY_HELP</Tag>
 		<English>[ICON_BULLET]Allows you to sell captives into slavery.</English>
-		<French>[ICON_BULLET]vous permet de vendre les prisionniers en tant qu'esclaves.</French>
+		<French>[ICON_BULLET]vous permet de vendre les prisonniers en tant qu'esclaves.</French>
 		<Italian>Ti permette di vendere come schiavi i tuoi prigionieri.</Italian>
 		<Polish>Pozwala na sprzedaż jeńców w niewolę.</Polish>
 	</TEXT>
@@ -210,7 +210,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WV_SLAVERY_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Worldview - Slavery[COLOR_REVERT] indicates salvery is OK in your nation at this time. It can only be removed by a Great Person or Lawyer. It opens up the slave buildings and improves results from using captives as slaves.</English>
+		<English>The [COLOR_UNIT_TEXT]Worldview - Slavery[COLOR_REVERT] indicates slavery is OK in your nation at this time. It can only be removed by a Great Person or Lawyer. It opens up the slave buildings and improves results from using captives as slaves.</English>
 		<French>La [COLOR_UNIT_TEXT]Vision du monde - Esclavage[COLOR_REVERT] indique que l'esclavage est considéré comme normal au sein de votre nation. Peut uniquement être enlevé par un personnage illustre ou un avocat. Il permet l'accès à des bâtiments spécifiques pour l'esclavage, et augmente les chances de capturer des prisonniers esclaves.</French>
 		<Italian>La [COLOR_UNIT_TEXT]Concezione del mondo - Schiavismo[COLOR_REVERT] è un edificio fittizio che indica che nella tua nazione la schiavitù è legale. Può essere rimossa solo da una Grande Persona o da un uomo di legge. Sblocca tutti gli edifici legati agli schiavi e migliora i risultati ottenuti dai tuoi prigionieri.</Italian>
 	</TEXT>
@@ -316,13 +316,6 @@
 		<Polish>Czym większa infrastuktura niewolnicza tym większe pieniądze.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MSG_FREED_SLAVES_AS_GATHERERS</Tag>
-		<English>%d1 Slaves have been freed in %s1.</English>
-		<French>%d1 esclaves ont été libérés à %s1.</French>
-		<Italian>%d1 schaivi sono stati liberati a %s1.</Italian>
-		<Polish>%d1 niewolników zostało sprzedanych w %s1.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MSG_NO_SLAVERY</Tag>
 		<English>Your nation has banned slavery.</English>
 		<French>Votre nation a banni l'esclavage.</French>
@@ -381,7 +374,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_FOOD</Tag>
 		<English>Set city slave to work on farms and pastures.</English>
-		<French>Assigne l'esclave au travail des champs et paturages.</French>
+		<French>Mettez l'esclave de la ville à travailler dans les fermes et les pâturages.</French>
 		<Italian>Obbliga lo schiavo a lavorare nei campi e nei pascoli.</Italian>
 		<Polish>Dołącz niewolnika do miasta do pracy na farmach i zagrodach.</Polish>
 	</TEXT>
@@ -396,7 +389,7 @@
 		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_HEALTH</Tag>
 		<English>Set city slave to work in sanitation and health buildings.</English>
 		<French>Assigne l'esclave au travail pour améliorer la santé</French>
-		<Italian>Obbliga lo schiavo a lavorare negli edific legati alla salute e alla sanità.</Italian>
+		<Italian>Obbliga lo schiavo a lavorare negli edifici legati alla salute e alla sanità.</Italian>
 		<Polish>Dołącz niewolnika do miasta do pracy w lecznicach i do oczyszczania miasta.</Polish>
 	</TEXT>
 	<TEXT>
@@ -514,7 +507,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_CITIZEN_PEDIA</Tag>
 		<English>Settled Citizen TBD - When whipping they are used after ant Settled Slaves and before general population population.</English>
-		<French>Citoyen sédentaire</French>
 		<Italian>CONCETTO NON ANCORA REALIZZATO: quando viene sacrificata la popolazione cittadina, i cittadini sedentari vengono usati dopo gli schiavi sedentari ma prima della popolazione normale.</Italian>
 		<Polish>Osiadły Obywatel - Kiedy przyspieszasz budowę możesz ich użyć ich zamiast populacji miasta.</Polish>
 	</TEXT>
@@ -600,8 +592,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Tag>
-		<English>Captives can join a city as a Settled Slave specialits if the [LINK=CONCEPT_WORLD_VIEW]World View - Slavery[\LINK] is active. If you end the [LINK=CONCEPT_WORLD_VIEW]World View - Slavery[\LINK] these specialists wil become units depending on their speciality.[NEWLINE][ICON_BULLET]Settled Slave (Entertainment) become [LINK=UNIT_STORY_TELLER]Story Tellers[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave (Food) become Food Caravans or better. (check if AI has been done for these)[NEWLINE][ICON_BULLET]Settled Slave (Health) become [LINK=UNIT_HEALER]Healers[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave (Production) become [LINK=UNIT_EARLY_MERCHANT_C2C]Early Merchants[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave, Settled Slave (Commerce and Tutor) become either become population or immigrants - one for each 3 slaves. Left overs become [LINK=UNIT_FREED_SLAVE]Captive - Freed Slaves[\LINK].(To be done) When whipping population to build they are first to go.</English>
-		<Italian>I prigionieri possono unirsi alla città come schiavi sedentari se la [LINK=CONCEPT_WORLD_VIEW]Concezione del mondo - Schiavitù[\LINK] è attiva. Quando la [LINK=CONCEPT_WORLD_VIEW]Concezione del mondo - Schiavitù[\LINK] termina questi specialisti diventano unità in base alla loro specializzazione.[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati all'intrattenimento diventano [LINK=UNIT_STORY_TELLER]Cantastorie[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati al cibo diventano carovane di cibo o meglio. (L'IA per questi non è ancora stata realizzata)[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati alla salute diventano [LINK=UNIT_HEALER]Guaritori[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati alla produzione diventano [LINK=UNIT_EARLY_MERCHANT_C2C]Mercanti primitivi[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari generici e quelli legati al commercio e all'insegnamento diventano popolazione o immigratu - uno per goni 3 slavi. I rimanenti diventano [LINK=UNIT_FREED_SLAVE]Prigionieri - Schiavi liberati[\LINK].CONCETTO NON ANCORA REALIZZATO: quando viene sacrificata la popolazione cittadina, gli schiavi sedentari sono i primi ad essere sacrificati.</Italian>
+		<English>Captives can join a city as a Settled Slave specialists if the [LINK=CONCEPT_WORLD_VIEW]World View - Slavery[\LINK] is active. If you end the [LINK=CONCEPT_WORLD_VIEW]World View - Slavery[\LINK] these specialists wil become units depending on their speciality.[NEWLINE][ICON_BULLET]Settled Slave (Entertainment) become [LINK=UNIT_STORY_TELLER]Story Tellers[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave (Food) become Food Caravans or better. (check if AI has been done for these)[NEWLINE][ICON_BULLET]Settled Slave (Health) become [LINK=UNIT_HEALER]Healers[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave (Production) become [LINK=UNIT_EARLY_MERCHANT_C2C]Early Merchants[\LINK] or better.[NEWLINE][ICON_BULLET]Settled Slave, Settled Slave (Commerce and Tutor) become either become population or immigrants - one for each 3 slaves. Left overs become [LINK=UNIT_FREED_SLAVE]Captive - Freed Slaves[\LINK].(To be done) When whipping population to build they are first to go.</English>
+		<Italian>I prigionieri possono unirsi alla città come schiavi sedentari se la [LINK=CONCEPT_WORLD_VIEW]Concezione del mondo - Schiavitù[\LINK] è attiva. Quando la [LINK=CONCEPT_WORLD_VIEW]Concezione del mondo - Schiavitù[\LINK] termina questi specialisti diventano unità in base alla loro specializzazione.[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati all'intrattenimento diventano [LINK=UNIT_STORY_TELLER]Cantastorie[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati al cibo diventano carovane di cibo o meglio. (L'IA per questi non è ancora stata realizzata)[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati alla salute diventano [LINK=UNIT_HEALER]Guaritori[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari legati alla produzione diventano [LINK=UNIT_EARLY_MERCHANT_C2C]Mercanti primitivi[\LINK] o meglio.[NEWLINE][ICON_BULLET]Gli schiavi sedentari generici e quelli legati al commercio e all'insegnamento diventano popolazione o immigrati - uno per goni 3 slavi. I rimanenti diventano [LINK=UNIT_FREED_SLAVE]Prigionieri - Schiavi liberati[\LINK].CONCETTO NON ANCORA REALIZZATO: quando viene sacrificata la popolazione cittadina, gli schiavi sedentari sono i primi ad essere sacrificati.</Italian>
 		<Polish>Jeńcy moga dołączyć do miasto jako Osiadli Niewolnicy (specjaliści) jeśli [LINK=CONCEPT_WORLD_VIEW]Swiatopogląd - Niewolnictwo[\LINK] jest aktywny. Jeśli zakończysz działanie tego Swiatopoglądu to Ci specjaliśc zamienią się w jednostki (w zależności od typu specjalizacji).[NEWLINE][ICON_BULLET]Osiadły Niewolnik (Rozrywka) zostają [LINK=UNIT_STORY_TELLER]Opowiadaczami[\LINK] lub lepiej.[NEWLINE][ICON_BULLET]Osiadły Niewolnik (Żywność) zostaje Kawananą Żywności lub lepiej.[NEWLINE][ICON_BULLET]Osiadły Niewolnik (Zdrowie) zostają [LINK=UNIT_HEALER]Uzdrowicielami[\LINK] lub lepiej.[NEWLINE][ICON_BULLET]Osiadły Niewolnik (Produkcja) zostają [LINK=UNIT_EARLY_MERCHANT_C2C]Wczesnymi Kupcami[\LINK] lub lepiej.[NEWLINE][ICON_BULLET]Osiadły Niewolnik, Osiadły Niewolnik (Bogactwo i Nauczanie) zwiększają populację lub zostają immigrantami. [LINK=UNIT_FREED_SLAVE]Wyzwoleni Niewolnicy[\LINK] - Kiedy przyspieszasz budowę możesz ich użyć ich zamiast populacji miasta.</Polish>
 	</TEXT>
 	<TEXT>

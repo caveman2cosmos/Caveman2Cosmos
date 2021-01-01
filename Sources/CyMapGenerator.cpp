@@ -25,41 +25,31 @@ CyMapGenerator::CyMapGenerator(CvMapGenerator* pMapGenerator) : m_pMapGenerator(
 
 void CyMapGenerator::doRiver(CyPlot* pStartPlot, CardinalDirectionTypes eCardinalDirection)
 {
-	if (m_pMapGenerator)
-		m_pMapGenerator->doRiver(pStartPlot->getPlot(), eCardinalDirection);
+	m_pMapGenerator->doRiver(pStartPlot->getPlot(), eCardinalDirection);
 }
 
 void CyMapGenerator::addFeatures()
 {
-	if (m_pMapGenerator)
-		m_pMapGenerator->addFeatures();
+	m_pMapGenerator->addFeatures();
 }
 
 void CyMapGenerator::addBonuses()
 {
-	if (m_pMapGenerator)
-		m_pMapGenerator->addBonuses();
+	m_pMapGenerator->addBonuses();
 }
 
 void CyMapGenerator::generatePlotTypes()
 {
-	if (m_pMapGenerator)
-		m_pMapGenerator->generatePlotTypes();
+	m_pMapGenerator->generatePlotTypes();
 }
 
 void CyMapGenerator::generateTerrain()
 {
-	if (m_pMapGenerator)
-		m_pMapGenerator->generateTerrain();
+	m_pMapGenerator->generateTerrain();
 }
 
-void CyMapGenerator::setPlotTypes(boost::python::list& listPlotTypes)
+void CyMapGenerator::setPlotTypes(python::list& listPlotTypes)
 {
-	if (!m_pMapGenerator)
-	{
-		return;
-	}
-
 	int* paiPlotTypes = NULL;
 	gDLL->getPythonIFace()->putSeqInArray(listPlotTypes.ptr() /*src*/, &paiPlotTypes /*dst*/);
 	m_pMapGenerator->setPlotTypes(paiPlotTypes);

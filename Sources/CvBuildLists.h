@@ -12,7 +12,7 @@
 #ifndef CV_BUILD_LISTS_H
 #define CV_BUILD_LISTS_H
 
-#include "CvStructs.h"
+//#include "CvStructs.h"
 
 struct BuildList
 {

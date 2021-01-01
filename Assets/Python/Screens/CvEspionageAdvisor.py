@@ -165,10 +165,11 @@ class TheScreen:
 			self.drawSpyvSpyTab(screen)
 
 		if GAME.isDebugMode():
-			screen.addDropDownBoxGFC("DebugDropdown", 22, 12, 300, iWidGen, 554, -1, iFontTitle)
+			screen.addDropDownBoxGFC("DebugDropdown", 22, 0, 300, iWidGen, 554, -1, iFontTitle)
 			for j in range(GC.getMAX_PC_PLAYERS()):
 				if GC.getPlayer(j).isAlive():
 					screen.addPullDownString("DebugDropdown", GC.getPlayer(j).getName(), j, j, False )
+
 
 	def drawMissionTab(self, screen):
 		iTargetPlayer = self.iTargetPlayer

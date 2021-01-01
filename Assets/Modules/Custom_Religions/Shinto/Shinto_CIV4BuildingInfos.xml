@@ -188,18 +188,9 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
+				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
+				<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHINTO_TEMPLE</BuildingType>

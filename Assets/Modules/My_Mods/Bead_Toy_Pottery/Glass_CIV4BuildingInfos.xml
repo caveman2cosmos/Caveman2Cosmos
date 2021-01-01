@@ -134,19 +134,13 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_SAND</Bonus>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings-->
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
+			</ReplacementBuildings-->
 			<!-- Construction cost -->
 			<iCost>200</iCost>
 			<!-- Main effects -->

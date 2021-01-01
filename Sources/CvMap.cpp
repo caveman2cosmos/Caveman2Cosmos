@@ -7,16 +7,24 @@
 //-----------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvCity.h"
+#include "CvFractal.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvMap.h"
 #include "CvMapGenerator.h"
-#include "CvFractal.h"
 #include "CvPlayerAI.h"
-
+#include "CvPlot.h"
+#include "CvPlotGroup.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
+#include "CvUnit.h"
+#include "CvViewport.h"
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
-
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
@@ -724,8 +732,6 @@ CvCity* CvMap::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, boo
 {
 	PROFILE_FUNC();
 
-	// XXX look for barbarian cities???
-
 	int iBestValue = MAX_INT;
 	CvCity* pBestCity = NULL;
 
@@ -733,37 +739,37 @@ CvCity* CvMap::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, boo
 	{
 		if (eOwner == NO_PLAYER || iI == eOwner)
 		{
-			const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
-			if (kLoopPlayer.isAlive() && (eTeam == NO_TEAM || kLoopPlayer.getTeam() == eTeam))
+			const CvPlayer& player = GET_PLAYER((PlayerTypes)iI);
+
+			if (!player.isAliveAndTeam(eTeam))
 			{
-				foreach_(CvCity* pLoopCity, kLoopPlayer.cities())
+				continue;
+			}
+			// eTeam may be NO_TEAM, this is ok.
+
+			foreach_(CvCity* pLoopCity, player.cities())
+			{
+				if (
+					(!bSameArea || pLoopCity->area() == plot(iX, iY)->area() || bCoastalOnly && pLoopCity->waterArea() == plot(iX, iY)->area())
+				&&
+					(!bCoastalOnly || pLoopCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
+				&&
+					(eTeamAtWarWith == NO_TEAM || atWar(player.getTeam(), eTeamAtWarWith))
+				&&
+					(eDirection == NO_DIRECTION || estimateDirection(dxWrap(pLoopCity->getX() - iX), dyWrap(pLoopCity->getY() - iY)) == eDirection)
+				&&
+					(pSkipCity == NULL || pLoopCity != pSkipCity))
 				{
-					if (!bSameArea || pLoopCity->area() == plot(iX, iY)->area() || (bCoastalOnly && pLoopCity->waterArea() == plot(iX, iY)->area()))
+					const int iValue = plotDistance(iX, iY, pLoopCity->getX(), pLoopCity->getY());
+					if (iValue < iBestValue)
 					{
-						if (!bCoastalOnly || pLoopCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
-						{
-							if (eTeamAtWarWith == NO_TEAM || atWar(kLoopPlayer.getTeam(), eTeamAtWarWith))
-							{
-								if (eDirection == NO_DIRECTION || estimateDirection(dxWrap(pLoopCity->getX() - iX), dyWrap(pLoopCity->getY() - iY)) == eDirection)
-								{
-									if (pSkipCity == NULL || pLoopCity != pSkipCity)
-									{
-										const int iValue = plotDistance(iX, iY, pLoopCity->getX(), pLoopCity->getY());
-										if (iValue < iBestValue)
-										{
-											iBestValue = iValue;
-											pBestCity = pLoopCity;
-										}
-									}
-								}
-							}
-						}
+						iBestValue = iValue;
+						pBestCity = pLoopCity;
 					}
 				}
 			}
 		}
 	}
-
 	return pBestCity;
 }
 
@@ -1585,84 +1591,28 @@ void CvMap::calculateAreas()
 }
 
 
-//int CvMap::percentUnoccupiedLand(bool bExcludeWater, bool bIncludeBarbarian, bool bExcludePeaks, CvArea* pArea, int iRange, CvPlot* pRangeFromPlot)
-//{
-//	int iNumTiles = 0;
-//	int iNumTilesValid = 0;
-//	for (int iI = 0; iI < numPlots(); iI++)
-//	{
-//		const CvPlot* pLoopPlot = plotByIndex(iI);
-//		if (!pLoopPlot->isWater() || !bExcludeWater)
-//		{
-//			if (pArea == NULL || pLoopPlot->area() == pArea)
-//			{
-//				if (!pLoopPlot->isPeak2(true) || !bExcludePeaks)
-//				{
-//					if ((iRange == -1 || pRangeFromPlot == NULL) || (plotDistance(pLoopPlot->getX(), pLoopPlot->getY(), pRangeFromPlot->getX(), pRangeFromPlot->getY()) <= iRange))
-//					{
-//						iNumTiles++;
-//						if (pLoopPlot->getOwner() == NO_PLAYER || (bIncludeBarbarian && pLoopPlot->isHominid()))
-//						{
-//							iNumTilesValid++;
-//						}
-//					}
-//				}
-//			}
-//		}
-//	}
-//	if (iNumTiles > 0)
-//	{
-//		GC.getGame().logMsg("%d Tiles were in %d Range, out of %d total in range tiles", iNumTilesValid, iRange, iNumTiles);
-//		return (iNumTilesValid * 100) / iNumTiles;
-//	}
-//	return 0;
-//}		
-
 void CvMap::toggleCitiesDisplay()
 {
+	m_bCitiesDisplayed = !m_bCitiesDisplayed;
+
 	gDLL->getInterfaceIFace()->clearSelectedCities();
-	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
+	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 	{
-		CvPlayer& kPlayer = GET_PLAYER((PlayerTypes) iPlayer);
+		const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes) iI);
 		if (kPlayer.isAlive())
 		{
-			int iI = 0;
 			foreach_(CvCity* pCity, kPlayer.cities())
 			{
-				iI++;
-				//if (iI > 1)
-				//	break;
-
-				if (m_bCitiesDisplayed)
-				{
-					//pCity->removeEntity();
-					//pCity->destroyEntity();
-					//pCity->plot()->setPlotCity(NULL);
-					//CvWString szBuffer = "Destroying: ";
-					//szBuffer.append(pCity->getName());
-					//AddDLLMessage(GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
-					//pCity->killTestCheap();
-					pCity->setVisible(false);
-				}
-				else
-				{
-					//pCity->createCityEntity(pCity);
-					//pCity->setupGraphical();
-					//pCity->plot()->setPlotCity(pCity);
-					pCity->setVisible(true);
-				}
+				pCity->setVisible(m_bCitiesDisplayed);
 			}
 		}
 	}
-	//gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-	m_bCitiesDisplayed = !m_bCitiesDisplayed;
-	CvWString szBuffer = "City entities hidden";
-	if (m_bCitiesDisplayed)
-		szBuffer = "City entities visible";
-
 	MEMORY_TRACK_EXEMPT();
-
-	AddDLLMessage(GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
+	AddDLLMessage(
+		GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(),
+		m_bCitiesDisplayed ? "City entities visible" : "City entities hidden",
+		"AS2D_EXPOSED", MESSAGE_TYPE_INFO
+	);
 }
 
 void CvMap::toggleUnitsDisplay()

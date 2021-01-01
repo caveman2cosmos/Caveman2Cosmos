@@ -57,14 +57,6 @@
 		<Spanish>[NEWLINE][ICON_BULLET]Tus redes comerciales no están conectadas</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_CHART_HELP</Tag>
-		<English>Zoom in and out by clicking on the body of the chart</English>
-		<French>Pour faire un Zoom avant ou arrière, cliquer sur le Graphique</French>
-		<German>Mit einem Mausklick auf ein Diagramm kann zwischen der verkleinerten Ansicht und der Großansicht umgeschalten werden</German>
-		<Italian>Alterna i livelli di zoom cliccando sul grafico</Italian>
-		<Spanish>Amplía o reduce el gráfico haciendo clic sobre él.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_CREATED_BY_HEADER</Tag>
 		<English>Created by The BUG Mod.</English>
 		<French>Créé par le Mod BUG.</French>
@@ -79,14 +71,6 @@
 		<German>TOT</German>
 		<Italian>SCOMPARSA</Italian>
 		<Spanish>MUERTO</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_DEFAULT</Tag>
-		<English>Default</English>
-		<French>Standard</French>
-		<German>Standard</German>
-		<Italian>Predefinito</Italian>
-		<Spanish>Predeterminado</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_DOMESTIC_TRADE_HEADING</Tag>
@@ -1534,22 +1518,6 @@
 		<Spanish>Escala logarítmica</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGGRAPHSTAB_HOVER</Tag>
-		<English>When checked, displays graphs in BUG format.</English>
-		<French>Lorsque activé, affiche les graphiques et statistiques au format BUG.</French>
-		<German>Zeigt die Diagramme auf der entsprechenden Seite des Info-Bildschirms in einer übersichtlicheren Anordnung an.</German>
-		<Italian>Quando è selezionato, mostra la Scheda dei Grafici nel formato modificato del BUG Mod.</Italian>
-		<Spanish>Cuando se activa, muestra los gráficos y estadísticas en el formato BUG.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGGRAPHSTAB_TEXT</Tag>
-		<English>Graphs tab</English>
-		<French>Statistiques BUG</French>
-		<German>BUG Diagramme</German>
-		<Italian>Scheda Grafici</Italian>
-		<Spanish>Pestaña Gráficos</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGINFOWONDERSPLAYERCOLOR_HOVER</Tag>
 		<English>When checked, displays wonders on the BUG version of the Wonders tab using the owning player's color.</English>
 		<French>Lorsque activé, affiche les Merveilles en utilisant la couleur de joueur l'ayant construite (mode Onglet des Merveille de BUG).</French>
@@ -1564,22 +1532,6 @@
 		<German>Spielerfarben</German>
 		<Italian>Usa Colore del Giocatore</Italian>
 		<Spanish>Usar color del jugador</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGINFOWONDERS_HOVER</Tag>
-		<English>When checked, displays the BUG version of the Wonders tab.</English>
-		<French>Lorsque activé, Affiche la version de BUG de l'Onglet des Merveilles.</French>
-		<German>Zeigt die entsprechende Seite des Info-Bildschirms in einer übersichtlicheren Anordnung an</German>
-		<Italian>Quando è selezionato, mostra la Scheda delle Meraviglie nel formato modificato del BUG Mod.</Italian>
-		<Spanish>Cuando se activa, muestra la versión BUG de la pestaña de Maravillas.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGINFOWONDERS_TEXT</Tag>
-		<English>Wonders tab</English>
-		<French>Onglet Merveilles</French>
-		<German>BUG Wunder</German>
-		<Italian>Scheda Meraviglie</Italian>
-		<Spanish>Pestaña Maravillas</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ADVISORS__BUGMA_HOVER</Tag>
@@ -4949,7 +4901,7 @@
 		<English>When checked, the whip overflow calculation includes the current [ICON_PRODUCTION] rate. Since applying the whip usually affects the rate, the actual overflow may be different.</English>
 		<French>Lorsque activé, Le calcul du surplus par le fouet inclut la [ICON_PRODUCTION] du tour actuel. Comme l'utilisation effective du Fouet a des conséquence sur cette production, le résultat final peut être légèrement différent.</French>
 		<German>Bezieht [ICON_PRODUCTION]/Runde einer Stadt aus der aktuellen Runde in die Berechnung des Produktionsüberschusses ein, da der Einsatz von Zwangsarbeit normalerweise die Rate beeinflusst und damit auch den tatsächlichen Überschuss verändern kann</German>
-		<Italian>Quando è selezionato, il calcolo del surplus da sacrifici include il tasso di produzione ([ICON_PRODUCTION]) corrente. Poichè l'accelerazione solitamente influenza tale tasso, il surplus effettivo può differire da quello mostrato.</Italian>
+		<Italian>Quando è selezionato, il calcolo del surplus da sacrifici include il tasso di produzione ([ICON_PRODUCTION]) corrente. Poiché l'accelerazione solitamente influenza tale tasso, il surplus effettivo può differire da quello mostrato.</Italian>
 		<Spanish>Cuando se activa, el cálculo del excedente producido al sacrificar población incluye la [ICON_PRODUCTION] actual. Dado que sacrificar población normalmente afecta al ratio de producción, el excedente real puede ser diferente.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7344,34 +7296,6 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<German>Alle Einstellungen zurücksetzen</German>
 		<Italian>Resetta tutte le impostazioni</Italian>
 		<Spanish>Resetear toda la configuración</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__ROMRESOURCEBAR_HOVER</Tag>
-		<English>Resource Display shows on main screen what resources player has acquired. Clicking scoreboard button toggles also resource display if this option has been enabled.</English>
-		<French>Lorsque activé, affiche sur l'écran principal les ressources que possède le joueur. Un Clic sur la barre de score permet de changer l'affichage de ces informations lorsque l'option est activé.</French>
-		<German>Die Ressourcenanzeige zeigt auf dem Hauptbild an, zu welche Ressourcen der Spieler Zugriff hat. Durch Klicken auf den Schalter der Punkteanzeige kann man die Ressourcenanzeige ebenfalls ein- und ausschalten solange diese Option aktiviert ist.</German>
-		<Spanish>La Vista de recursos muestra en la interfaz principal qué recursos posee el jugador. Hacer clic sobre el botón de la clasificación también activará la Vista de recursos si esta opción ha sido activada.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__ROMRESOURCEBAR_TEXT</Tag>
-		<English>Resource Display</English>
-		<French>Affichage des Ressources</French>
-		<German>Ressourcenanzeige</German>
-		<Spanish>Vista de recursos</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__ROMRESOURCEBAR_TYPES_HOVER</Tag>
-		<English>Settings: [COLOR_HIGHLIGHT_TEXT]All[COLOR_REVERT] shows all resources, [COLOR_HIGHLIGHT_TEXT]Rush[COLOR_REVERT] shows early military resources like copper and iron, [COLOR_HIGHLIGHT_TEXT]Strategic[COLOR_REVERT] shows industrial and modern era strategic resources, [COLOR_HIGHLIGHT_TEXT]Manufactured[COLOR_REVERT] shows resources made with buildings, [COLOR_HIGHLIGHT_TEXT]Food[COLOR_REVERT] shows all food resources and [COLOR_HIGHLIGHT_TEXT]Luxury[COLOR_REVERT] shows resources that affect happiness.</English>
-		<French>Paramètres: [COLOR_HIGHLIGHT_TEXT]Toutes[COLOR_REVERT] affiche toutes les ressources, [COLOR_HIGHLIGHT_TEXT]Militaires[COLOR_REVERT] affiche les ressources militaires de base (cuivre, fer...), [COLOR_HIGHLIGHT_TEXT]Stratégiques[COLOR_REVERT] affiche les ressources stratégiques des ères industrielle et moderne, [COLOR_HIGHLIGHT_TEXT]Manufacturés[COLOR_REVERT] affiche les ressources produites par les bâtiments, [COLOR_HIGHLIGHT_TEXT]Nourriture[COLOR_REVERT] affiche les ressources de type nourriture et [COLOR_HIGHLIGHT_TEXT]Luxe[COLOR_REVERT] affiche les produits de luxe et ayant une influence sur le moral des Villes.</French>
-		<German>Einstellungen: [COLOR_HIGHLIGHT_TEXT]Alle[COLOR_REVERT] zeigt alle Ressourcen, [COLOR_HIGHLIGHT_TEXT]Kampf[COLOR_REVERT] zeigt frühe militärische Ressourcen wie Kupfer oder Eisen, [COLOR_HIGHLIGHT_TEXT]Strategisch[COLOR_REVERT] zeigt strategische Ressourcen aus der industriellen und modernen Ära, [COLOR_HIGHLIGHT_TEXT]Produziert[COLOR_REVERT] zeigt Ressourcen, die durch Gebäude erzeugt wurden, [COLOR_HIGHLIGHT_TEXT]Nahrung[COLOR_REVERT] zeigt alle Nahrungsressourcen und [COLOR_HIGHLIGHT_TEXT]Luxus[COLOR_REVERT] zeigt Ressourcen, die die Zufriedenheit beeinflussen.</German>
-		<Spanish>Parámetros: [COLOR_HIGHLIGHT_TEXT]Todos[COLOR_REVERT] muestra todos los recursos, [COLOR_HIGHLIGHT_TEXT]Militares[COLOR_REVERT] muestra antiguos recursos militares como el cobre o el hierro, [COLOR_HIGHLIGHT_TEXT]Estratégicos[COLOR_REVERT] muestra recursos estratégicos de las Edades Industrial y Moderna, [COLOR_HIGHLIGHT_TEXT]Manufacturados[COLOR_REVERT] muestra recursos fabricados con edificios, [COLOR_HIGHLIGHT_TEXT]Alimenticios[COLOR_REVERT] muestra todos los recursos alimentarios y [COLOR_HIGHLIGHT_TEXT]Lujos[COLOR_REVERT] muestra recursos que afecten a la felicidad.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__ROMRESOURCEBAR_TYPES_LIST</Tag>
-		<English>All|Rush|Strategic|Manufactured|Food|Luxury</English>
-		<French>Toutes|Militaires|Stratégiques|Manufacturés|Nourriture|Luxe</French>
-		<German>Alle|Kampf|Strategisch|Produziert|Nahrung|Luxus</German>
-		<Spanish>Todos|Militares|Estratégicos|Manufacturados|Alimenticios|Lujos</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__SEATUNNELS_HOVER</Tag>

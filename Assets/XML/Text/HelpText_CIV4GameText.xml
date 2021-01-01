@@ -42,6 +42,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE</Tag>
 		<English>[ICON_BULLET]Base unit upkeep change: %d1%%</English>
-		<German>[ICON_BULLET]Laufende Kosten (Grundwert): %d1%% </German>
+		<German>[ICON_BULLET]laufende Kosten (Grundwert): %d1%% </German>
 	</TEXT>
 </Civ4GameText>

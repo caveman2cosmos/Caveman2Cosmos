@@ -19,12 +19,9 @@
 				<iYield>1000</iYield>
 				<iYield>0</iYield>
 			</YieldChanges>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_HYPESPACE_PORTAL</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_HYPESPACE_PORTAL</BuildingType>
+			</ReplacementBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
@@ -212,14 +209,8 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_QUARK_STAR_BASE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_ELECTROWEAK_STAR_BASE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_QUARK_STAR_BASE</BuildingType>
+				<BuildingType>BUILDING_ELECTROWEAK_STAR_BASE</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -796,18 +787,9 @@
 			</YieldModifiers>
 			<iTradeRoutes>2</iTradeRoutes>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DIMENSION_X</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_HYPESPACE_PORTAL</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
+				<BuildingType>BUILDING_DIMENSION_X</BuildingType>
+				<BuildingType>BUILDING_HYPESPACE_PORTAL</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1032,12 +1014,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INTERGALACTIC_GOVERNMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_INTERGALACTIC_REPUBLIC</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_REPUBLIC</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1075,12 +1054,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INTERGALACTIC_GOVERNMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_INTERGALACTIC_EMPIRE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_EMPIRE</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_TERRAFORMING_BASE</Type>
@@ -2406,12 +2382,9 @@
 			<CommerceChanges>
 				<iCommerce>-50</iCommerce>
 			</CommerceChanges>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_STAR_CANNON</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_STAR_CANNON</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
 			</PrereqInCityBuildings>
@@ -2531,10 +2504,7 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2712,24 +2682,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_ANDROMEDA_COLONY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TRIANGULUM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingType>
+				<BuildingType>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</BuildingType>
+				<BuildingType>BUILDING_ANDROMEDA_COLONY</BuildingType>
+				<BuildingType>BUILDING_TRIANGULUM</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LARGE_MAGELLANIC_CLOUD</Type>
@@ -2778,24 +2736,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_ANDROMEDA_COLONY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TRIANGULUM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingType>
+				<BuildingType>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</BuildingType>
+				<BuildingType>BUILDING_ANDROMEDA_COLONY</BuildingType>
+				<BuildingType>BUILDING_TRIANGULUM</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</Type>
@@ -2840,24 +2786,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_ANDROMEDA_COLONY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TRIANGULUM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingType>
+				<BuildingType>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingType>
+				<BuildingType>BUILDING_ANDROMEDA_COLONY</BuildingType>
+				<BuildingType>BUILDING_TRIANGULUM</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANDROMEDA_COLONY</Type>
@@ -2904,24 +2838,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TRIANGULUM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingType>
+				<BuildingType>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingType>
+				<BuildingType>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</BuildingType>
+				<BuildingType>BUILDING_TRIANGULUM</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRIANGULUM</Type>
@@ -2968,24 +2890,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_ANDROMEDA_COLONY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingType>
+				<BuildingType>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingType>
+				<BuildingType>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</BuildingType>
+				<BuildingType>BUILDING_ANDROMEDA_COLONY</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SCULPTOR_GROUP</Type>
@@ -3023,24 +2933,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_MAFFEI_GROUP</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_FORNAX_CLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_VIRGO_CLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_ERIDANUS_CLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_MAFFEI_GROUP</BuildingType>
+				<BuildingType>BUILDING_FORNAX_CLUSTER</BuildingType>
+				<BuildingType>BUILDING_VIRGO_CLUSTER</BuildingType>
+				<BuildingType>BUILDING_ERIDANUS_CLUSTER</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAFFEI_GROUP</Type>
@@ -3079,24 +2977,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SCULPTOR_GROUP</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_FORNAX_CLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_VIRGO_CLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_ERIDANUS_CLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SCULPTOR_GROUP</BuildingType>
+				<BuildingType>BUILDING_FORNAX_CLUSTER</BuildingType>
+				<BuildingType>BUILDING_VIRGO_CLUSTER</BuildingType>
+				<BuildingType>BUILDING_ERIDANUS_CLUSTER</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FORNAX_CLUSTER</Type>
@@ -3135,24 +3021,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SCULPTOR_GROUP</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_MAFFEI_GROUP</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_VIRGO_CLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_ERIDANUS_CLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SCULPTOR_GROUP</BuildingType>
+				<BuildingType>BUILDING_MAFFEI_GROUP</BuildingType>
+				<BuildingType>BUILDING_VIRGO_CLUSTER</BuildingType>
+				<BuildingType>BUILDING_ERIDANUS_CLUSTER</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIRGO_CLUSTER</Type>
@@ -3192,24 +3066,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SCULPTOR_GROUP</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_MAFFEI_GROUP</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_FORNAX_CLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_ERIDANUS_CLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SCULPTOR_GROUP</BuildingType>
+				<BuildingType>BUILDING_MAFFEI_GROUP</BuildingType>
+				<BuildingType>BUILDING_FORNAX_CLUSTER</BuildingType>
+				<BuildingType>BUILDING_ERIDANUS_CLUSTER</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ERIDANUS_CLUSTER</Type>
@@ -3247,24 +3109,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SCULPTOR_GROUP</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_MAFFEI_GROUP</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_FORNAX_CLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_VIRGO_CLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SCULPTOR_GROUP</BuildingType>
+				<BuildingType>BUILDING_MAFFEI_GROUP</BuildingType>
+				<BuildingType>BUILDING_FORNAX_CLUSTER</BuildingType>
+				<BuildingType>BUILDING_VIRGO_CLUSTER</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMA_SUPERCLUSTER</Type>
@@ -3301,20 +3151,11 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HYDRA_SUPERCLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CENTAURUS_SUPERCLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PERSEUS_PISCES_SUPERCLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HYDRA_SUPERCLUSTER</BuildingType>
+				<BuildingType>BUILDING_CENTAURUS_SUPERCLUSTER</BuildingType>
+				<BuildingType>BUILDING_PERSEUS_PISCES_SUPERCLUSTER</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYDRA_SUPERCLUSTER</Type>
@@ -3352,20 +3193,11 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_COMA_SUPERCLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CENTAURUS_SUPERCLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PERSEUS_PISCES_SUPERCLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_COMA_SUPERCLUSTER</BuildingType>
+				<BuildingType>BUILDING_CENTAURUS_SUPERCLUSTER</BuildingType>
+				<BuildingType>BUILDING_PERSEUS_PISCES_SUPERCLUSTER</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CENTAURUS_SUPERCLUSTER</Type>
@@ -3404,20 +3236,11 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_COMA_SUPERCLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HYDRA_SUPERCLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PERSEUS_PISCES_SUPERCLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_COMA_SUPERCLUSTER</BuildingType>
+				<BuildingType>BUILDING_HYDRA_SUPERCLUSTER</BuildingType>
+				<BuildingType>BUILDING_PERSEUS_PISCES_SUPERCLUSTER</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PERSEUS_PISCES_SUPERCLUSTER</Type>
@@ -3455,20 +3278,11 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_COMA_SUPERCLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HYDRA_SUPERCLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CENTAURUS_SUPERCLUSTER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_COMA_SUPERCLUSTER</BuildingType>
+				<BuildingType>BUILDING_HYDRA_SUPERCLUSTER</BuildingType>
+				<BuildingType>BUILDING_CENTAURUS_SUPERCLUSTER</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL</Type>
@@ -3507,16 +3321,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SLOAN_GREAT_WALL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CFA2_GREAT_WALL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SLOAN_GREAT_WALL</BuildingType>
+				<BuildingType>BUILDING_CFA2_GREAT_WALL</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLOAN_GREAT_WALL</Type>
@@ -3554,16 +3362,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CFA2_GREAT_WALL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL</BuildingType>
+				<BuildingType>BUILDING_CFA2_GREAT_WALL</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CFA2_GREAT_WALL</Type>
@@ -3603,16 +3405,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SLOAN_GREAT_WALL</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL</BuildingType>
+				<BuildingType>BUILDING_SLOAN_GREAT_WALL</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FEYMARCH</Type>

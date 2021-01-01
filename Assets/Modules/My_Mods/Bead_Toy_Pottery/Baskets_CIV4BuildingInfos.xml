@@ -101,10 +101,7 @@
 				<Bonus>BONUS_STRAW</Bonus>
 			</PrereqBonuses>
 			<!--PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings-->
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BASKETWEAVER</BuildingType>
@@ -117,12 +114,9 @@
 			</PrereqAmountBuildings>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BASKETY_FACTORY</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings-->
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BASKETY_FACTORY</BuildingType>
+			</ReplacementBuildings-->
 			<!-- Construction cost -->
 			<iCost>332</iCost>
 			<!-- Main effects -->
@@ -174,31 +168,17 @@
 				<Bonus>BONUS_STRAW</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BARTER_POST</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
+				<BuildingType>BUILDING_BARTER_POST</BuildingType>
+				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BASKETY_WORKSHOP</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_BASKETY_FACTORY</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings-->
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_BASKETY_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_BASKETY_FACTORY</BuildingType>
+			</ReplacementBuildings-->
 			<!-- Construction cost -->
 			<iCost>25</iCost>
 			<!-- Main effects -->

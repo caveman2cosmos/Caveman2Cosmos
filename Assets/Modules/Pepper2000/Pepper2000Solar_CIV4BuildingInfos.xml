@@ -202,12 +202,9 @@
 				<iYield>0</iYield>
 				<iYield>40</iYield>
 			</YieldChanges>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 			</PrereqInCityBuildings>
@@ -241,16 +238,10 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_OUTER</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
+				<BuildingType>BUILDING_SOLAR_ARRAY_OUTER</BuildingType>
+			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 			</PrereqInCityBuildings>
@@ -278,18 +269,9 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_OUTER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SOLAR_ARRAY_TRANSNEPTUNIAN</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_SOLAR_ARRAY_INNER</BuildingType>
+				<BuildingType>BUILDING_SOLAR_ARRAY_OUTER</BuildingType>
+				<BuildingType>BUILDING_SOLAR_ARRAY_TRANSNEPTUNIAN</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3892,12 +3874,9 @@
 				<BuildingType>BUILDING_URANIAN_SF6</BuildingType>
 				<BuildingType>BUILDING_OBERON_MAGNETIC_FIELD</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TERRAFORMED_OBERON</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_TERRAFORMED_OBERON</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_OBERON</Type>
@@ -3931,12 +3910,9 @@
 				<BuildingType>BUILDING_URANIAN_SF6</BuildingType>
 				<BuildingType>BUILDING_OBERON_MAGNETIC_FIELD</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TERRAFORMED_TITANIA</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_TERRAFORMED_TITANIA</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OBERON_HEATING</Type>
@@ -4440,20 +4416,11 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PLUTO_BASE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HAUMEA_COLONY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_MAKEMAKE_COLONY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_PLUTO_BASE</BuildingType>
+				<BuildingType>BUILDING_HAUMEA_COLONY</BuildingType>
+				<BuildingType>BUILDING_MAKEMAKE_COLONY</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAKEMAKE_COLONY</Type>
@@ -4492,20 +4459,11 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PLUTO_BASE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HAUMEA_COLONY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_ERIS_COLONY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_PLUTO_BASE</BuildingType>
+				<BuildingType>BUILDING_HAUMEA_COLONY</BuildingType>
+				<BuildingType>BUILDING_ERIS_COLONY</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HAUMEA_COLONY</Type>
@@ -4544,20 +4502,11 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_MAKEMAKE_COLONY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PLUTO_BASE</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_ERIS_COLONY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_MAKEMAKE_COLONY</BuildingType>
+				<BuildingType>BUILDING_PLUTO_BASE</BuildingType>
+				<BuildingType>BUILDING_ERIS_COLONY</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLUTO_BASE</Type>
@@ -4595,20 +4544,11 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_MAKEMAKE_COLONY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HAUMEA_COLONY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_ERIS_COLONY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_MAKEMAKE_COLONY</BuildingType>
+				<BuildingType>BUILDING_HAUMEA_COLONY</BuildingType>
+				<BuildingType>BUILDING_ERIS_COLONY</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_PLUTO</Type>
@@ -4938,12 +4878,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PLANET_NINE_COLONY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_PLANET_NINE_COLONY</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLANET_NINE_COLONY</Type>
@@ -4983,12 +4920,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SEDNA_COLONY</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SEDNA_COLONY</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

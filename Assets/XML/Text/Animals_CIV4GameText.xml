@@ -359,32 +359,32 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_MYTH</Tag>
-		<English>Myth - Cavelion</English>
+		<English>Myth - Cave Lion</English>
 		<French>Mythe du Lion des cavernes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Cavelion</English>
+		<English>Myth Effect - Cave Lion</English>
 		<French>Effet (Mythe du Lion des cavernes)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_REMAINS</Tag>
-		<English>Remains - Cavelion</English>
+		<English>Remains - Cave Lion</English>
 		<French>Restes de Lion des cavernes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_STORIES</Tag>
-		<English>Stories - Cavelion</English>
+		<English>Stories - Cave Lion</English>
 		<French>Histoires du Lion des cavernes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Cavelion</English>
+		<English>Stories Effect - Cave Lion</English>
 		<French>Effet (Histoires du Lion des cavernes)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_STORY</Tag>
-		<English>Story - Cavelion</English>
+		<English>Story - Cave Lion</English>
 		<French>Histoire du Lion des cavernes</French>
 	</TEXT>
 	<TEXT>
@@ -652,14 +652,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Tag>
-		<English>The six elements make up everything. They are Earth, Air(Sky), Water(Sea), Stone, Metal and Fire. They loose all benefit with Chemestry.</English>
+		<English>The six elements make up everything. They are Earth, Air (Sky), Water (Sea), Stone, Metal and Fire. They lose all benefit with Chemistry.</English>
 		<French>Tout est formé à partir de 6 éléments. Ce sont la Terre, l'Air (Ciel), l'Eau (Mer), la Pierre, le Métal et le Feu. Ils perdent tout leurs avantages avec la Chimie</French>
 		<Polish>Sześć żywiołów tworzy wszystko. Składają si na nie Ziemia, Powietrze (Niebo), Woda (Morze), Kamień, Metal i Ogień. Chemia rozwiewa tą błdną teori i usuwa wszelkie zyski z tych mitów.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Tag>
-		<English>The Elemental Myths provide a small amount of sciencs and education. They are required for many other buildings.</English>
-		<French>Les Mythes des Eléments confèrent un petit bonus d'éducation et de recherche. Ils sont requis pour la constrution d'autres bâtiments.</French>
+		<English>The Elemental Myths provide a small amount of science and education. They are required for many other buildings.</English>
+		<French>Les Mythes des Éléments confèrent un petit bonus d'éducation et de recherche. Ils sont requis pour la construction d'autres bâtiments.</French>
 		<Polish>Mity Żywiołów dostarczają małe ilości nauki i edukacji. Są wymagane do budowy wielu innyc budynków.</Polish>
 	</TEXT>
 	<TEXT>
@@ -696,27 +696,27 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_MYTH</Tag>
 		<English>Myth - Ethiopian Wolf</English>
-		<French>Mythe du Loup Ethiopien</French>
+		<French>Mythe du loup d'Éthiopie</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Ethiopian Wolf</English>
-		<French>Effet (Histoire du Loup Ethiopien)</French>
+		<French>Effet (Histoire du loup d'Éthiopie)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_STORIES</Tag>
 		<English>Stories - Ethiopian Wolf</English>
-		<French>Histoires du Loup Ethiopien</French>
+		<French>Histoires du loup d'Éthiopie</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Ethiopian Wolf</English>
-		<French>Effet (Histoires du Loup Ethiopien)</French>
+		<French>Effet (Histoires du loup d'Éthiopie)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_STORY</Tag>
 		<English>Story - Ethiopian Wolf</English>
-		<French>Histoire du Loup Ethiopien</French>
+		<French>Histoire du loup d'Éthiopie</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FENNECFOX_MYTH</Tag>
@@ -832,7 +832,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_MYTH</Tag>
-		<English>Myth - Americian Alligator</English>
+		<English>Myth - American Alligator</English>
 		<French>
 			<Text>Mythe de l'Alligator d'Amérique</Text>
 			<Gender>Male</Gender>
@@ -842,7 +842,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Americian Alligator</English>
+		<English>Myth Effect - American Alligator</English>
 		<French>
 			<Text>Effet (Mythe de l'Alligator d'Amérique)</Text>
 			<Gender>Male</Gender>
@@ -852,7 +852,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_STORIES</Tag>
-		<English>Stories - Americian Alligator</English>
+		<English>Stories - American Alligator</English>
 		<French>
 			<Text>Histoires du Alligator d'Amérique</Text>
 			<Gender>Male</Gender>
@@ -862,7 +862,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Americian Alligator</English>
+		<English>Stories Effect - American Alligator</English>
 		<French>
 			<Text>Effet (Histoires du Alligator d'Amérique)</Text>
 			<Gender>Male</Gender>
@@ -872,7 +872,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_STORY</Tag>
-		<English>Story - Americian Alligator</English>
+		<English>Story - American Alligator</English>
 		<French>
 			<Text>Histoire du Alligator d'Amérique</Text>
 			<Gender>Male</Gender>
@@ -996,17 +996,17 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Greatwhite shark</English>
+		<English>Myth Effect - Great White Shark</English>
 		<French>Effet (Mythe du Grand requin blanc)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_STORIES</Tag>
-		<English>Stories - Greatwhite shark</English>
+		<English>Stories - Great White Shark</English>
 		<French>Histoires du Grand requin blanc</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Greatwhite shark</English>
+		<English>Stories Effect - Great White Shark</English>
 		<French>Effet (Histoires de Grands Requins blancs</French>
 	</TEXT>
 	<TEXT>
@@ -1063,27 +1063,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_MYTH</Tag>
-		<English>Myth - Hippopatamus</English>
+		<English>Myth - Hippopotamus</English>
 		<French>Mythe de l'Hippopotame</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Hippopatamus</English>
+		<English>Myth Effect - Hippopotamus</English>
 		<French>Effet (Mythe de l'Hippopotames)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_STORIES</Tag>
-		<English>Stories - Hippopatamus</English>
+		<English>Stories - Hippopotamus</English>
 		<French>Histoires de l'Hippopotame</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Hippopatamus</English>
+		<English>Stories Effect - Hippopotamus</English>
 		<French>Effet (Histoire de l'Hippopotame)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_STORY</Tag>
-		<English>Story - Hippopatamus</English>
+		<English>Story - Hippopotamus</English>
 		<French>Histoire de l'Hippopotame</French>
 	</TEXT>
 	<TEXT>
@@ -1271,7 +1271,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Tag>
-		<English>The Landform Myths provide a small amount of sciencs and education.</English>
+		<English>The Landform Myths provide a small amount of science and education.</English>
 		<French>Les mythes associés aux éléments et paysages procurent un léger bonus en science et en éducation.</French>
 	</TEXT>
 	<TEXT>
@@ -1542,27 +1542,27 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_MYTH</Tag>
 		<English>Myth - Muskox</English>
-		<French>Mythe du Boeuf musqué</French>
+		<French>Mythe du Bœuf musqué</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Muskox</English>
-		<French>Effet (Mythe du Boeuf musqué)</French>
+		<French>Effet (Mythe du Bœuf musqué)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_STORIES</Tag>
 		<English>Stories - Muskox</English>
-		<French>Histoires du Boeuf musqué</French>
+		<French>Histoires du Bœuf musqué</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Muskox</English>
-		<French>Effet (Histoires du Boeuf musqué)</French>
+		<French>Effet (Histoires du Bœuf musqué)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_STORY</Tag>
 		<English>Story - Muskox</English>
-		<French>Histoire du Boeuf musqué</French>
+		<French>Histoire du Bœuf musqué</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NARWHAL_MYTH_EFFECT</Tag>
@@ -1998,27 +1998,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_MYTH</Tag>
-		<English>Myth - Redfox</English>
+		<English>Myth - Red Fox</English>
 		<French>Mythe du Renard Roux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Redfox</English>
+		<English>Myth Effect - Red Fox</English>
 		<French>Effet (Mythe du Renard Roux)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_STORIES</Tag>
-		<English>Stories - Redfox</English>
+		<English>Stories - Red Fox</English>
 		<French>Histoires du Renard Roux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Redfox</English>
+		<English>Stories Effect - Red Fox</English>
 		<French>Effet (Histoires du Renard Roux)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_STORY</Tag>
-		<English>Story - Redfox</English>
+		<English>Story - Red Fox</English>
 		<French>Histoire du Renard Roux</French>
 	</TEXT>
 	<TEXT>
@@ -2266,17 +2266,17 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_STORIES</Tag>
-		<English>Stories - Seaturtle</English>
+		<English>Stories - Sea Turtle</English>
 		<French>Histoires de la Tortue des mers</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Seaturtle</English>
+		<English>Stories Effect - Sea Turtle</English>
 		<French>Effet (Histoires de la Tortue des mers)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_STORY</Tag>
-		<English>Story - Seaturtle</English>
+		<English>Story - Sea Turtle</English>
 		<French>Histoire de la Tortue de mer</French>
 		<Polish>Opowieść o Żółwiu Morskim</Polish>
 	</TEXT>
@@ -2649,22 +2649,22 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Whaleshark</English>
+		<English>Myth Effect - Whale Shark</English>
 		<French>Effet (Mythe du Requin baleine)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_STORIES</Tag>
-		<English>Stories - Whaleshark</English>
+		<English>Stories - Whale Shark</English>
 		<French>Histoires de Requins baleine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Whaleshark</English>
+		<English>Stories Effect - Whale Shark</English>
 		<French>Effet (Histoires du Requin baleine)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_STORY</Tag>
-		<English>Story - Whaleshark</English>
+		<English>Story - Whale Shark</English>
 		<French>Histoire - Requin-baleine</French>
 		<Polish>Opowieść o Rekinie Wielorybim</Polish>
 	</TEXT>
@@ -3232,7 +3232,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EWOLF</Tag>
 		<English>Ethiopian Wolf</English>
-		<French>Loup Ethiopien</French>
+		<French>Loup d'Éthiopie</French>
 		<German>
 			<Text>Äthiopischer Wolf:Äthiopischen Wolfs:Äthiopischen Wolf:Äthiopischen Wolf:Äthiopische Wölfe:Äthiopischen Wölfe:Äthiopischen Wölfen:Äthiopischen Wölfe</Text>
 			<Gender>Male</Gender>
@@ -3720,7 +3720,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIZARD_PEDIA</Tag>
-		<English>Generic small to mediun lizard</English>
+		<English>Generic small to medium lizard</English>
 		<French>Lézard commun, petit à moyen</French>
 		<German>Der Begriff [COLOR_UNIT_TEXT]Echse[COLOR_REVERT] ist eine biologisch nicht eindeutige Bezeichnung für eine Gruppe von Reptilien. Gemeint ist entweder eine Unterordnung der Schuppenkriechtiere oder eine Zusammenfassung aller heute lebenden Reptilien (außer Schildkröten). Im weiteren Sinn sind Echsen also auf vier Beinen gehende Reptilien mit langem Schwanz und kurzem Hals, was dem typischen "Echsenhabitus" entspricht.</German>
 		<Polish>Jaszczurki (Lacertilia, dawniej Sauria) grupa gadów łuskonośnych obejmująca czworonożne lub beznogie zwierzęta lądowe o wydłużonym ciele, oczach posiadających powieki, mocnych szczękach i diapsydalnej czaszce. Występują na wszystkich kontynentach poza Antarktydą oraz na wielu wyspach oceanicznych. Są najliczniejszą grupą gadów obejmującą ponad 4000 gatunków.</Polish>
@@ -3889,6 +3889,11 @@
 		<Tag>TXT_KEY_UNIT_PLATYPUS</Tag>
 		<English>Platypus</English>
 		<French>Ornithorynque</French>
+		<German>
+			<Text>Schnabeltier:Schnabeltieres:Schnabeltier:Schnabeltier:Schnabeltiere:Schnabeltiere:Schnabeltieren:Schnabeltiere</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Spanish>
 			<Text>Ornitorrinco</Text>
 			<Gender>Male</Gender>
@@ -3898,17 +3903,24 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLATYPUS_PEDIA</Tag>
 		<English>The platypus (Ornithorhynchus anatinus) is a semi-aquatic mammal endemic to eastern Australia, including Tasmania. Together with the four species of echidna, it is one of the five extant species of monotremes, the only mammals that lay eggs instead of giving birth to live young. It is the sole living representative of its family (Ornithorhynchidae) and genus (Ornithorhynchus), though a number of related species have been found in the fossil record.[PARAGRAPH:2]The unusual appearance of this egg-laying, venomous, duck-billed, beaver-tailed, otter-footed mammal baffled European naturalists when they first encountered it, with some considering it an elaborate fraud. It is one of the few venomous mammals, the male platypus having a spur on the hind foot that delivers a venom capable of causing severe pain to humans. The unique features of the platypus make it an important subject in the study of evolutionary biology and a recognisable and iconic symbol of Australia; it has appeared as a mascot at national events and is featured on the reverse of the Australian 20 cent coin. The platypus is the animal emblem of the state of New South Wales.[PARAGRAPH:2]Until the early 20th century, it was hunted for its fur, but it is now protected throughout its range. Although captive breeding programmes have had only limited success and the platypus is vulnerable to the effects of pollution, it is not under any immediate threat.</English>
-		<French>L'ornithorynque (Ornithorhynchus anatinus) est une espèce de petits mammifères semi-aquatiques endémique de l'est de l'Australie, y compris la Tasmanie. C'est l'une des cinq espèces de l'ordre des monotrèmes, seul ordre de mammifères qui ponde des oeufs au lieu de donner naissance à des petits complètement formés (les quatre autres espèces sont des échidnés). C'est la seule espèce survivante de la famille des Ornithorhynchidae et du genre Ornithorhynchus bien qu'un grand nombre de fragments d'espèces fossiles de cette famille et de ce genre aient été découverts.[PARAGRAPH:2]L'apparence bizarre de ce mammifère pondant des oeufs, muni d'aiguillons venimeux, à la mâchoire cornée ressemblant au bec d'un canard, à queue évoquant un castor, qui lui sert à la fois de gouvernail dans l'eau et de réserve de graisse, et à pattes de loutre a fortement surpris les premiers explorateurs qui l'ont découvert ; bon nombre de naturalistes européens ont cru à une plaisanterie. C'est l'un des rares mammifères venimeux: le mâle porte sur les pattes postérieures un aiguillon qui peut libérer du venin capable d'infliger de vives douleurs à un être humain. Les traits originaux de l'ornithorynque en font un sujet d'études important pour mieux comprendre l'évolution des espèces animales et en ont fait un des symboles de l'Australie: il a été utilisé comme mascotte pour de nombreux évènements nationaux et il figure au verso de la pièce de 20 cents australiens.</French>
+		<French>L'ornithorynque (Ornithorhynchus anatinus) est une espèce de petits mammifères semi-aquatiques endémique de l'est de l'Australie, y compris la Tasmanie. C'est l'une des cinq espèces de l'ordre des monotrèmes, seul ordre de mammifères qui ponde des œufs au lieu de donner naissance à des petits complètement formés (les quatre autres espèces sont des échidnés). C'est la seule espèce survivante de la famille des Ornithorhynchidae et du genre Ornithorhynchus bien qu'un grand nombre de fragments d'espèces fossiles de cette famille et de ce genre aient été découverts.[PARAGRAPH:2]L'apparence bizarre de ce mammifère pondant des œufs, muni d'aiguillons venimeux, à la mâchoire cornée ressemblant au bec d'un canard, à queue évoquant un castor, qui lui sert à la fois de gouvernail dans l'eau et de réserve de graisse, et à pattes de loutre a fortement surpris les premiers explorateurs qui l'ont découvert ; bon nombre de naturalistes européens ont cru à une plaisanterie. C'est l'un des rares mammifères venimeux: le mâle porte sur les pattes postérieures un aiguillon qui peut libérer du venin capable d'infliger de vives douleurs à un être humain. Les traits originaux de l'ornithorynque en font un sujet d'études important pour mieux comprendre l'évolution des espèces animales et en ont fait un des symboles de l'Australie: il a été utilisé comme mascotte pour de nombreux évènements nationaux et il figure au verso de la pièce de 20 cents australiens.</French>
+		<German>Das [COLOR_UNIT_TEXT]Schnabeltier[COLOR_REVERT] (Ornithorhynchus anatinus) ist im Osten und Südosten Australiens heimisch. Es ist eines der wenigen Säuger, die zu den Kloakentieren gehören und Eier legen. Mit seinem stromlinienförmigen Körper und dem relativ platten Schwanz ist der Körperbau des Schnabeltieres dem eines Bibers ähnlich. Sein braunes Fell ist wasserabweisend und seine Füße besitzen Schwimmhäute. Der Schwanz dient als Fettspeicher. Ausscheidungs- und Geschlechtsorgane befinden sich wie bei allen Kloakentieren in derselben Öffnung. Namensgebend ist der breite, biegsame Schnabel, der dem einer Ente ähnelt. Während neugeborene Schnabeltiere noch Backenzähne besitzen, bilden diese sich im Laufe der Entwicklung zurück. Die nach vorn gerichteten Nasenlöcher funktionieren bei Tauchgängen als Schnorchel. Männliche Schnabeltiere besitzen ca. 15 mm lange Giftsporne an den Hinterbeinen. Bei den Weibchen bilden sich diese Anlagen im ersten Lebensjahr zurück. Das Gift wird nur während der Paarung produziert und daher vermutlich nur bei Rivalenkämpfen eingesetzt. Es ist für den Menschen sehr schmerzhaft, aber nicht tödlich.[NEWLINE]Die nachtaktiven Einzelgänger verbringen die meiste Zeit im Wasser, wobei der Schwanz als Steuerruder dient. Der Schwanz wird auch als Greif- und Transportwerkzeug beim Höhlenbau benutzt, indem er eingerollt wird und so Äste und Zweige festhalten kann. Bei niedrigen Temperaturen fallen die Tiere manchmal tagelang in Kältestarre. Ihre Nahrung finden die Schnabeltiere im Wasser, vor allem Krabben, Insektenlarven und Würmer stehen auf dem Speiseplan. Sie können bis zu zwei Minuten tauchen und benutzen den Schnabel, um den Boden zu durchwühlen und Steine umzudrehen. Da Augen und Ohren verschlossen sind, dienen Rezeptoren am Schnabel der Orientierung. Gesammelte Nahrung wird zunächst in den Backentaschen verstaut und erst an der Oberfläche verzehrt. Weibchen legen nach 12 bis 14 Tagen Tragezeit meist drei Eier, die mit ihrer pergamentartigen Schale an Reptilieneier erinnern. Die Weibchen haben keine Zitzen, stattdessen wird die Muttermilch über Drüsen im Brustbereich (Milchfeld) abgesondert. Die Jungtiere lecken die Milch aus dem Fell der Mutter. Fressfeinde sind u.a. Greifvögel, Rautenpythons oder der Buntwaran.[NEWLINE]In einer Legende der Aborigines heißt es, Schabeltiere seien die Nachkommen eines Entenweibchens und eines Schwimmrattenmännchens, was den ungewöhnlichen Körperbau erklären soll. Als im 18. Jahrhundert erstmals Londoner Wissenschaftler das Fell eines Schnabeltiers erhielten, glaubten sie zunächst an einen Scherz. Die genaue Erforschung der Tiere dauerte bis zum Beginn des 20. Jahrhunderts, da sie sich in Gefangenschaft nur schwer halten ließen. Bis zu dieser Zeit wurden sie auch wegen ihres Felles gejagt, wodurch ihre Verbreitung zurückging. Eine weitere Gefahr stellen Fangnetze und Köcher dar, in denen sie sich verfangen und verletzen können. Meist jedoch meiden sie menschliche Siedlungen. Heute stehen Schnabeltiere unter Schutz und dürfen nur mit Sondergenehmigung in Tiergärten gehalten werden. Der Export ist verboten. Da das Schnabeltier als biologisches Kuriosum gilt, findet es zuwweilen auch in der Gesellschaft Aufmerksamkeit. So schrieb Umberto Eco ein Buch mit dem Titel "Kant und das Schnabeltier". Im Film "Dogma" (1999) dient es als Beispiel dafür, dass Gott Humor haben muss. Auch im Videospiel "Chaos auf Deponia" spielt das Schnabeltier eine wichtige Rolle.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POSSUM</Tag>
 		<English>Brushtail Possum</English>
 		<French>Phalanger commun</French>
+		<German>
+			<Text>Kusu:Kusus:Kusu:Kusu:Kusus:Kusus:Kusus:Kusus</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POSSUM_PEDIA</Tag>
 		<English>A possum (plural form: possums) is any of about 70 small- to medium-sized arboreal marsupial species native to Australia, New Guinea, and Sulawesi (and introduced to New Zealand and China). The name derives from their resemblance to the opossums of the Americas (the name is from Algonquian wapathemwa, not Greek or Latin, so the plural is possums, not possa).[PARAGRAPH:2]Possums are quadrupedal diprotodont marsupials with long thick tails. The smallest possum, indeed the smallest diprotodont marsupial, is the Tasmanian pygmy possum, with an adult head-body length of 70 mm (2 3/4 in.) and a weight of 10 g (3/8 oz.). The largest is the bear cuscus that may exceed 7 kg (15lb. 6oz.). Possums are typically nocturnal and at least partially arboreal. The various species inhabit most vegetated habitats, and several species have adjusted well to urban settings. Diets range from generalist herbivores or omnivores (the common brushtail possum) to specialist browsers of eucalyptus (greater glider), insectivores (mountain pygmy possum) and nectar-feeders (honey possum).</English>
 		<French>Trichosurus vulpecula, appelé Phalanger vulpin, Phalanger commun, Opossum d'Australie, Opossum à queue en brosse, Cousou ou localement « possum » (ne pas confondre avec les opossums d'Amérique), est une espèce de petit marsupial arboricole australien à queue préhensile qui se nourrit de feuillages et de fruits mais aussi d'insectes, d'Sufs et d'oisillons. Introduit en Nouvelle-Zélande pour sa fourrure, il y est à présent considéré comme une espèce invasive car, sans prédateur sur cette île, il pille les nids, blesse les arbres et transmet la tuberculose bovine</French>
+		<German>[COLOR_UNIT_TEXT]Kusus[COLOR_REVERT] sind eine Beutelsäugergattung, die in Australien und auf vorgelagerten Inseln beheimatet ist. Die kräftigen Tiere werden maximal 60 cm lang und haben einen bis zu 35 cm langen, buschigen Schwanz. Sie besitzen weiches, wolliges Fell, das weiße, graue, braune und schwarze Töne annehmen kann. Die dreieckigen Ohren sind größer als bei den verwandten Kuskus.[NEWLINE]Im Gegensatz zu anderen Kletterbeutlern sind Kusus keine reinen Baumbewohner. Neben Wäldern und anderen baumreichen Gebieten sind sie zuweilen auch in Gärten und Parks anzutreffen. Den Tag verbringen sie in Baumhöhlen, Scheunen oder auf Dachböden. Bei der nächtlichen Nahrungssuche begeben sie sich oft auf den Boden. Sie verzehren vorwiegend Blätter, Knospen und Früchte. Manchmal fressen sie auch Insekten oder kleine Vögel. Sie sind Einzelgänger und markieren ihr Revier mit Duftdrüsen. Weibchen bringen in der Regel ein einzelnes Jungtier zur Welt, das die ersten vier bis sieben Monate im Beutel verbringt. Kusus können maximal 15 Jahre alt werden.[NEWLINE]Anders als die meisten Beuteltiere sind Kusus Kulturfolger, weshalb sich ihr Lebensraum seit der Landung der Europäer vergrößert hat. Gejagt werden sie hauptsächlich wegen ihres Fells, das in der Pelzbranche sehr begehrt ist. Außerdem verwüsten sie oft Gärten, richten in Jungwäldern Schäden an und übertragen die Rindertuberkulose. Die Einführung der Kusus in Neuseeland zur Fellverwertung führte zur Bedrohung der dort heimischen Tiere, besonders des Kiwis, und des Baumbestandes.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PUFFADDER</Tag>
@@ -3935,11 +3947,17 @@
 		<Tag>TXT_KEY_UNIT_PYGMYHIPPO</Tag>
 		<English>Pygmy Hippo</English>
 		<French>Hippopotame nain</French>
+		<German>
+			<Text>Zwergflusspferd:Zwergflusspferdes:Zwergflusspferd:Zwergflusspferd:Zwergflusspferde:Zwergflusspferde:Zwergflusspferden:Zwergflusspferde</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PYGMYHIPPO_PEDIA</Tag>
-		<English>Main Characteristics[PARAGRAPH:2]Pygmy Hippopotamuses are semi-aquatic mammals. They have a body length between 1.4 and 1.6 m (4.5 - 5 ft), a tail length of approximately 15 cms (6 inches) and they weigh between 245 and 275 kgs (540 - 610 lbs).[PARAGRAPH:2]Their skin is thick, smooth, hairless and dark brown/black in colour. Their body is barrel shaped, they have a broad head and a large mouth. Their legs are short and stocky and they have four toes on each of their feet. Their toes are spread out and have sharp nails, but they lack any webbing. They have small ears and large, round nostrils and when they submerge underwater they are able to close their nostrils and ears to prevent water from entering them.[PARAGRAPH:2]To prevent their skin from cracking they have to moisten it regularly in water or mud and they also have special mucus producing skin glands. These glands excrete a pink fluid, known as blood sweat, that helps to keep their skin moist and helps prevent against infection and sunburn.[PARAGRAPH:2]Pygmy Hippos are found in the forests and swamps of west Africa. They are solitary, reclusive animals that spend most of the day resting in a wallow, mud or river and they emerge at night when they go into the forest to feed.[PARAGRAPH:2]They are non territorial and females have a home range between 40 and 60 hectares whereas males have a larger home range being up to 165 hectares in size. The home ranges of both males and females overlap but they tend to avoid each other, marking their presence with dung. The diet of a Pygmy Hippopotamus mainly consists of shrubs, ferns, broad-leaved plants and fruit.</English>
+		<English>Main Characteristics[PARAGRAPH:2]Pygmy Hippopotamuses are semi-aquatic mammals. They have a body length between 1.4 and 1.6 m (4.5 - 5 ft), a tail length of approximately 15 cm (6 in) and they weigh between 245 and 275 kg (540 - 610 lbs).[PARAGRAPH:2]Their skin is thick, smooth, hairless and dark brown/black in colour. Their body is barrel shaped, they have a broad head and a large mouth. Their legs are short and stocky and they have four toes on each of their feet. Their toes are spread out and have sharp nails, but they lack any webbing. They have small ears and large, round nostrils and when they submerge underwater they are able to close their nostrils and ears to prevent water from entering them.[PARAGRAPH:2]To prevent their skin from cracking they have to moisten it regularly in water or mud and they also have special mucus producing skin glands. These glands excrete a pink fluid, known as blood sweat, that helps to keep their skin moist and helps prevent against infection and sunburn.[PARAGRAPH:2]Pygmy Hippos are found in the forests and swamps of west Africa. They are solitary, reclusive animals that spend most of the day resting in a wallow, mud or river and they emerge at night when they go into the forest to feed.[PARAGRAPH:2]They are non territorial and females have a home range between 40 and 60 hectares whereas males have a larger home range being up to 165 hectares in size. The home ranges of both males and females overlap but they tend to avoid each other, marking their presence with dung. The diet of a Pygmy Hippopotamus mainly consists of shrubs, ferns, broad-leaved plants and fruit.</English>
 		<French>L'hippopotame nain (Hexaprotodon liberiensis) est une espèce d'hippopotame originaire des forêts et des marécages de l'Afrique de l'Ouest. Ce mammifère est un animal discret, solitaire et nocturne même si la masse d'un mâle adulte peut avoisiner 275 kg. Il est une des deux seules espèces encore existantes dans la famille des Hippopotamidae, l'autre étant son cousin beaucoup plus imposant, l'hippopotame commun, dit amphibie.</French>
+		<German>Das [COLOR_UNIT_TEXT]Zwergflusspferd[COLOR_REVERT] (Choeropsis liberiensis oder Hexaprotodon liberiensis) ist eine seltene Art, die im Westen Afrikas lebt. Die Bezeichnung "liberiensis" bedeutet "aus Liberia stammend". Ähnlich wie das Großflusspferd wirkt es mit den vier kurzen, kräftigen Beinen untersetzt. Es wird allerdings mit einer Schulterhöhe von 75 bis 83 Zentimentern nur halb so groß wie sein naher Verwandter. Sein Gewicht beträgt 245 bis 275 Kilogramm, das entspricht knapp einem Viertel des Gewichts des Großflusspferds. Der Kopf ist vergleichsweise schmal, ebenso die Füße. Augen, Nase und Ohren sind relativ weit oben am Kopf, was im Wasser von Vorteil ist. Die dünne Epidermis trocknet an Land schnell aus, weswegen Flusspferde über Drüsen eine schleimige, rötliche Substanz abgeben, die als "Blutschweiß" bezeichnet wird und die Haut rötlich schimmern lässt. Trotzdem ist ein regelmäßiges Schlammbad oder Schwimmen notwendig, wenngleich das Zwergflusspferd weniger vom Wasser abhängig ist als sein Verwandter.[NEWLINE]Der Lebensraum des Zwergflusspferds sind feuchte und sumpfige Urwälder. Da es kälteempfindlich ist, meidet es höhere Lagen. Es ist nachtaktiv und einzelgängerisch und durchstreift sein Revier auf festgelegten Pfaden. Begegnungen mit Artgenossen enden oft friedlich, indem man sich gegenseitig ignoriert. Als Pflanzenfresser ernährt es sich vorwiegend von Farnen, Blättern, Knollen, Trieben und herabgefallenen Früchten, gelegentlich auch von Wasserpflanzen und Gräsern. Die Geburt eines Jungtieres kann an Land oder im Wasser stattfinden. Der Nachwuchs kann innerhalb kürzester Zeit schwimmen. Während der ersten Monate bleibt er im Wasser, während die Mutter auf Nahrungssuche an Land geht.[NEWLINE]Da sein Verbreitungsgebiet sehr klein ist, gibt es in freier Wildbahn lediglich 2000 bis 3000 Tiere (Stand: 2010). Die meisten davon leben im Nationalpark Sapo in Liberia. Durch Rodung wurde der Lebensraum zunehmend verinselt, wodurch die Gefahr von Inzucht besteht. Aufgrund seiner eher versteckten Lebensweise wird das Zwergflusspferd nicht gezielt gejagt, gelegentlich jedoch von Einheimischen für den Fleichbedarf geschossen. Mehrere Zoos, allen voran der Zoo Basel, beteiligen sich am Europäischen Erhaltungsprogramm der Zwergflusspferde. In Gefangenschaft werden die Tiere bis zu 55 Jahre alt.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAY_EAGLE</Tag>
@@ -3949,6 +3967,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Adlerrochen:Adlerrochens:Adlerrochen:Adlerrochen:Adlerrochen:Adlerrochen:Adlerrochen:Adlerrochen</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Aquila di mare</Italian>
 		<Spanish>
 			<Text>Raya águila</Text>
@@ -3981,10 +4004,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAY_MANTA_PEDIA</Tag>
 		<English>There are 2 species of manta rays: the reef manta (Manta alfredi) and the giant manta ray (Manta birostris). The largest species is the giant manta ray, whose central disc can measure up to 9 meters wide.</English>
+		<German>[COLOR_UNIT_TEXT]Mantarochen[COLOR_REVERT] nennt man zwei Arten der Gattung Teufelsrochen (Mobula): den Riffmanta (Mobula alfredi) und den Riesenmanta (Mobula birostris). Bis 2017 gehörten sie zur Gattung Manta, wurden dann aber mit Mobula synonymisiert. Mantarochen sind die größten der insgesamt acht Teufelsrochenarten. Sie erreichen eine Länge bis zu 8 Metern, eine Spannweite bis zu 7 Metern und ein Maximalgewicht von 1300 kg. Sie besitzen einen flachen, rhombenfürmigen Körper mit abgeflachtem Kopf. Die Oberseite ist meist dunkel mit hellen Stellen an den Schultern, die Bauchseite ist weiß. Die Haut ist von einer schleimigen Substanz bedeckt, die vor Krankheiten schützt. Die flossenartigen Loben (zur Planktonaufnahme) sitzen seitlich am Kopf. Auch die Augen befinden sich an den Kopfseiten. Das Maul ist sehr breit und im Gegensatz zu den übrigen Teufelsrochen nur am Oberkiefer bezahnt. Der flossenlose Schwanz ist peitschenförmig und im Vergleich zu vielen anderen Rochen eher kurz. Auf dem Rücken befindet sich eine kleine dreieckige Flosse.[NEWLINE]Mantarochen leben in den Ozeanen der Tropen und Subtropen. In den Sommermonaten kann man sie in Küstennähe antreffen, im Winter ziehen sie sich ins offene Meer zurück. Tagsüber schwimmen sie nahe der Wasseroberfläche, nachts tauchen sie in tiefere Regionen ab. Die Fortbewegung erfolgt durch Schläge mit den Flossen, ähnlich wie der Flügelschlag der Vögel. Ihre Nahrung besteht aus Plankton, Garnelen und seltener auch kleinen Fischen. Mantarochen sind ovovivipar, die Eier werden im Mutterleib ausgebrütet. Die größte Gefahr für die Mantarochen ist die Überfischung. Seit 2011 stehen sie daher unter strengem Schutz.[NEWLINE]Die peruanische Moche-Kultur verehrte das Meer und seine Lebewesen, weshalb sie Mantarochen sehr häufig darstellten. Lange Zeit fürchteten die Menschen diese Tiere aufgrund ihrer Größe. Seeleute glaubten sogar, Mantas könnten Schiffe versenken, indem sie an den Ankern zogen. Erst als 1978 Taucher nahe des Golfs von Kalifornien es schafften, mit den Tieren zu interagieren, änderte sich dieser Standpunkt. Mantarochen werden heute in Aquarien gehalten, wo Besucher sie durch große Glasscheiben betrachten können. Stellenweise werden auch touristische Tauchgänge angeboten.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REEF_SHARK_PEDIA</Tag>
 		<English>The Reef Shark, plays an extremely important role in the Earth's ecosystem. There are 5 types of Reef Sharks: Blacktip Reef Sharks, Gray Reef Sharks, Caribbean Reef Sharks, Whitetip Reef Sharks, and Silvertip Reef Shark. Although they only grow to about 1.6 to 3 meters (5 to 10 feet) in length, these sharks are the apex predators on the very delicate coral reefs. That means, around coral reefs, they are the top of the food chain. The significants of this goes largely unnoticed, but the World Wildlife Fund has classified the Reef Shark as one of the most important species on the entire planet! While scientists are still trying to determine exactly how many of theses species exist, we do know that many of these sharks lose their lives from getting caught in fishing nets. Not only does it significantly reduce their population, it compromises the fragile ecosystem around coral reefs. Many new laws and regulations are being put into place to protect this ever important fish.</English>
+		<German>Als [COLOR_UNIT_TEXT]Riffhaie[COLOR_REVERT] bezeichnet man vier Arten der Requiemhaie, die jedoch nicht alle derselben Gattung angehören. Sie leben in tropischen Gewässern in oder in der Nähe von Korallenriffen.[NEWLINE]In der Regel sind Riffhaie scheu und daher für Menschen ungefährlich. Einige Arten zeigen allerdings Revierverhalten und greifen bei Provokation an. Bisher endete nur eine solche Begegnung tödlich.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RIVER_CROC_LARGE</Tag>
@@ -4036,6 +4061,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>
+			<Text>Säbelzahntiger:Säbelzahntigers:Säbelzahntiger:Säbelzahntiger:Säbelzahntiger:Säbelzahntiger:Säbelzahntiger:Säbelzahntiger</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Tygrys Szablozębny</Polish>
 	</TEXT>
 	<TEXT>
@@ -4061,6 +4091,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAIGA_PEDIA</Tag>
 		<English>The saiga (Saiga tatarica) is a Critically Endangered antelope which originally inhabited a vast area of the Eurasian steppe zone from the foothills of the Carpathians and Caucasus into Dzungaria and Mongolia. They also lived in North America during the Pleistocene. Today the nominate subspecies (Saiga tatarica tatarica) is only found in one location in Russia (steppes of the North-West Precaspian region) and three areas in Kazakhstan (the Ural, Ustiurt and Betpak-dala populations). A proportion of the Ustiurt population migrates south to Uzbekistan and occasionally Turkmenistan in winter. It is extinct in China and southwestern Mongolia. The Mongolian subspecies (Saiga tatarica mongolica) is found only in western Mongolia.</English>
+		<German>Die [COLOR_UNIT_TEXT]Saiga[COLOR_REVERT] (Saiga tatarica) ist eine eurasische Huftierart, die leicht an ihrer charaktaristischen Nase erkannt werden kann. Es gibt zwei Unterarten, die westliche Unterart (Saiga tatarica tatarica) und die Mongolische Saiga (Saiga tatarica mongolica). Saigas ähneln kleinen Schafen, haben aber einen vergleichsweise großen Kopf. Auffällig ist die rüsselartig vergrößerte, komplex aufgebaute Nase, deren genaue Funktion jedoch nicht eindeutig geklärt ist. Die Männchen tragen wachsfarbene, halbtransparente Hörner mit schwarzen Spitzen. Der Schwanz ist recht kurz. Die Mongolische Saiga ist die kleinere der beiden Arten. Das Fell der Saiga ist dicht und wollig, wobei das Winterfell etwa doppelt so lang ist wie das Sommerfell. Auch die Färbung unterscheidet sich je nach Jahreszeit und ist im Winter heller. Gelegentlich gibt es Albinos.[NEWLINE]Ihr Lebensraum sind Steppen und Halbwüsten. Da sie sich im Passgang bewegen, meiden Saigas felsiges Gelände. Hauptsächlich ernähren sie sich von Gräsern, zum Teil auch von Kräutern, Flechten und Sträuchern, mit denen sie im Frühjahr ihren gesamten Wasserbedarf decken. Im Sommer verzehren sie gezielt Sukkulenten oder suchen Wasserstellen auf. Saigas können sogar Salzwasser trinken. Sie sind gute Schwimmer und durchqueren auch breite Ströme wie die Wolga. Ihre aktive Zeit sind die Morgen- und Abendstunden. Sie können täglich bis zu 120 km zurücklegen, was besonders in harten Wintern bzw. bei Nahrungsknappheit notwendig ist. Saigaherden bestehen im Sommer aus 30 bis 40 Exemplaren, im Frühjahr und Herbst wandern oft Tausende Tiere gemeinsam. Zur Paarungszeit im Winter scharen die Böcke einen Harem von durchschnittlich fünf bis zehn Weibchen um sich. Der Nachwuchs kommt im April oder Mai zur Welt. Saigas sind Fluchttiere und können bis zu 80 km/h laufen. Das macht es Wölfen schwer, sie zu erbeuten. Viele Tiere sterben jedoch an Krankheiten, z.B. der Maul- und Klauenseuche.[NEWLINE]Im Pleistozän war die Saiga ein häufiges Tier in den Kältesteppen Europas und Asiens. Über die Beringstraße gelangte sie so auch nach Kanada. Durch verschiedene Einflüsse wie Klimaveränderungen, Krankheiten (2015 war das letzte Massensterben) und Bejagung sind heute beide Unterarten stark gefährdet. In Zoos sieht man sie mittlerweile selten. Eine große Zuchtgruppe gibt es in der Ukraine.</German>
 		<Polish>Suhak, sajga, sumak (Saiga tatarica) ssak z rodziny krętorogich (Bovidae). Pierwsze ślady suhaka pochodzą ze środkowego plejstocenu. Dawniej suhaki zamieszkiwały stepowe i półpustynne środowiska całej Eurazji. Dziś znacznie rzadsze, występują na stepach Azji Środkowej na terenie Rosji, Mongolii i Chin. W XVI i XVII wieku zachodnia granica występowania gatunku sięgała do przedgórza Karpat Wschodnich i do Bugu. W plejstocenie zamieszkiwały Amerykę Północną. Suhak mongolski, klasyfikowany jako podgatunek S. tatarica mongolica lub podgatunek S. borealis mongolica plejstoceńskiego S. borealis, jest endemitem występującym w Mongolii. Ma do 1,35 m długości, do ok. 75 cm wysokości i waży do ok. 45 kg. Latem ma krótką, płową sierść, zimą okrywa ją jaśniejsze, długie i gęste futro. Samce noszą spiczaste rogi długości 30 cm, samice są przeważnie bezrogie. Mięsiste zgrubienie pomiędzy nosem a czołem nadaje głowie łukowaty kształt. Prawdopodobnie jest to przystosowanie do oczyszczania wdychanego powietrza z pyłu i piasku, który wiatr miecie po jej ojczystych pustyniach i suchych stepach. Biegnąc, osiągają prędkość nawet do 35 km/h. Na przełomie XIX i XX wieku na skutek polowań gatunek prawie wyginął. Od roku 1919 został objęty ochroną. Zabijany głównie dla smacznego mięsa oraz rogów, z których wytwarzano afrodyzjaki. Liczebność populacji sajgi rosyjskiej (S. tatarica tatarica) zmniejszyła się gwałtownie z ok. 1,25 mln do mniej niż 50 tys., a suhaka mongolskiego (S. tatarica mongolica) z 5200 osobników w 2000 do 750 w styczniu 2004.</Polish>
 	</TEXT>
 	<TEXT>
@@ -4071,6 +4102,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Salzwasserkrokodil (groß):Salzwasserkrokodils (groß):Salzwasserkrokodil (groß):Salzwasserkrokodil (groß):Salzwasserkrokodile (groß):Salzwasserkrokodile (groß):Salzwasserkrokodilen (groß):Salzwasserkrokodile (groß)</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Coccodrillo marino (grande)</Italian>
 		<Spanish>
 			<Text>Cocodrilo marino grande</Text>
@@ -4087,6 +4123,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Salzwasserkrokodil (klein):Salzwasserkrokodils (klein):Salzwasserkrokodil (klein):Salzwasserkrokodil (klein):Salzwasserkrokodile (klein):Salzwasserkrokodile (klein):Salzwasserkrokodilen (klein):Salzwasserkrokodile (klein)</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Coccodrillo marino (piccolo)</Italian>
 		<Spanish>
 			<Text>Cocodrilo marino pequeño</Text>
@@ -4099,6 +4140,7 @@
 		<Tag>TXT_KEY_UNIT_SALTWATER_CROC_STRATEGY</Tag>
 		<English>Capture salt water crocodiles if you can. They can be used to build special buildings in a costal city.</English>
 		<French>Capturez des crocodiles d'eau de mer si vous le pouvez. Ils peuvent être utilisés pour construire des bâtiments spéciaux dans une ville côtière.</French>
+		<German>Fange Salzwasserkrokodile nach Möglichkeit ein. Sie können für den Bau spezieller Gebäude in Küstenstädten benutzt werden.</German>
 		<Italian>Cattura i coccodrilli marini se riesci. Possono essere usati per costruire edifici speciali in una città costiera.</Italian>
 		<Spanish>Captura los cocodrilos marinos si puedes. Pueden ser utilizados para construir edificios especiales en una ciudad costera.</Spanish>
 	</TEXT>
@@ -4110,11 +4152,17 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Riesenseeadler:Riesenseeadlers:Riesenseeadler:Riesenseeadler:Riesenseeadler:Riesenseeadler:Riesenseeadlern:Riesenseeadler</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Bielik Olbrzymi</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEAEAGLE_PEDIA</Tag>
 		<English>The Steller's sea eagle (Haliaeetus pelagicus) is a large bird of prey in the family Accipitridae. It is an eagle that lives in coastal northeastern Asia and mainly preys on fish and water birds. On average, it is the heaviest eagle in the world, at about 5 to 9 kilograms (11 to 20 lb), but may lag behind the harpy eagle (Harpia harpyja) and Philippine eagle (Pithecophaga jefferyi) in some standard measurements. This bird is named after the German naturalist Georg Wilhelm Steller.</English>
+		<German>Der [COLOR_UNIT_TEXT]Riesenseeadler[COLOR_REVERT] (Haliaeetus pelagicus) gehört zu den Greifvögeln und ist der größte Seeadler. Die englische Bezeichnung lautet "Steller's Sea Eagle" nach dem deutschen Naturforscher Georg Wilhelm Steller, der diese Art entdeckte. Vom Körperbau lässt sich der Riesenseeadler gut von anderen Seeadlern unterscheiden. Seine breiten Flügel wirken recht kurz und der keilförmige Schwanz ist relativ lang. Charakteristisch ist auch der große und kräftige, orangegelbe Schnabel. Weibchen sind größer und deutlich schwerer als Männchen, in der Färbung unterscheiden sie sich jedoch nicht. Bis auf Beine und Schwanz ist das Gefieder dunkelbraun bis schwarz. Die maximale Flügelspannweite beträgt 2,80 Meter.[NEWLINE]Der Riesenseeadler lebt in den Küstenregionen im Nordosten Asiens. Je nach geografischer Lage ist er ein Stand- oder Zugvogel. Seine Brutgebiete sind heute vermutlich nur noch an der Küste der Beringsee. Seine bevorzugte Nahrung sind Lachsfische, Seevögel und Aas. Fische werden entweder beim Waten im seichten Wasser oder aus dem langsamen Suchflug heraus erbeutet. An größeren Kadavern gibt es zuweilen Nahrungsstreitigkeiten mit anderen Tieren. Riesenseeadler sind monogam. Ihre Brutsaison ist von April bis September, wobei ein Gelege meist aus zwei Eiern besteht. Frisch geschlüpfte Küken besitzen noch keine Fähigkeit zur Thermoregulation, weswegen sie von den Eltern unter den Flügeln oder mit dem Bauchgefieder gewärmt werden. Nach ca. 70 Tagen sind sie flügge.[NEWLINE]Die Zerstörung des Lebensraums vor allem durch Abholzung, Erschließungen für die Ölindustrie und den Bau von Wasserkraftwerken sowie Nahrungsmangel durch Überfischung und Umweltverschmutzung sind hauptsächlich dafür verantwortlich, dass die Bestände immer weiter abnehmen. Der Riesenseeadler ist mit ca. 5000 Exemplaren deshalb als gefährdet gelistet. In mehreren Ländern ist er gesetzlich geschützt, die Hauptüberwinterungsquartiere befinden sich z.B. in Naturschutzgebieten Japans.</German>
 		<Polish>Bielik olbrzymi (Haliaeetus pelagicus) - gatunek ptaka drapieżnego z rodziny jastrzębiowatych (Accipitridae). Największy ze wszystkich gatunków bielików - osiąga rozpiętość skrzydeł do 2,5 m. Występuje na północnopacyficznym wybrzeżu Azji. Żywi się rybami, ptakami i ssakami morskimi. Prowadzi dzienny tryb życia. Wyprowadza jeden lęg w roku - samica składa dwa jaja. Wysiadywanie jaj trwa 39 - 45 dni.</Polish>
 	</TEXT>
 	<TEXT>
@@ -4137,6 +4185,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEALION_PEDIA</Tag>
 		<English>There are actually seven species of Sea Lions in the world, but people tend to lump them all into one category. They all belong to a group of animals known as pinnipeds.[PARAGRAPH:2]Sea Lions are very interesting animals that can end up being extremely large. The males are much bigger than the females which helps them to gain the ability to mate with them because the females will look for the largest males out there to be with.[PARAGRAPH:2]Sea Lions are found in bodies of water all over the world, but not in the Northern Atlantic Ocean. Many researchers find this to be a very interesting fact. Yet they cant pinpoint reasons why this is the case. The temperatures are compatible with where some Sea Lions live. There is also plenty of the food that they consume found there.[PARAGRAPH:2]Some species of Sea Lions live in the sub arctic areas while others live in warmer climates including California. They have long torpedo shaped bodies that are well designed for movements both in the water and on land. All species of Sea Lions are considered to be mammals. This is because they give live birth to their young and the females also nurse the pups with milk they produce in their bodies.[PARAGRAPH:2]Source: Sea Lion Facta and Information</English>
+		<German>[COLOR_UNIT_TEXT]Seelöwen[COLOR_REVERT] gehören zur Familie der Ohrenrobben und werden in sieben Arten unterteilt. Sie sind in allen Weltmeeren von den kalten Regionen bis in die Tropen verbreitet. Seelöwen besitzen einen großen Rumpf, kurzes und dickes Fell sowie lange Vorderflossen, mit deren Hilfe sie auf allen Vieren gehen können. Charakteristisch sind die gut sichtbaren Ohrmuscheln, die der Familie ihren Namen geben. Je nach Art werden sie 300 bis 1000 kg schwer.[NEWLINE]Im Wasser jedoch sind sie durch ihren stromlinienförmigen Körper recht flink und können Geschwindigkeiten von maximal 56 km/h erreichen. Durch verschiedene Fähigkeiten wie z.B. Wärmeregulation, Stoffwechsel- und Herzschlagkontrolle können sie außerdem lange und extrem tief tauchen.[NEWLINE]Bereits im Holozän (vor über 11000 Jahren) spielten Seelöwen für die frühen Menschen eine wichtige Rolle. Sie wurden schon frühzeitig in großer Zahl gejagt. Lange Zeit konkurrierten sie mit den Seeleuten um die Fischbestände als Nahrungsquelle. Die Überfischung führte deshalb auch zum Rückgang die Seelöwenbestände. Da die Tiere in der Regel friedlich sind, stellen sie auch eine beliebte Touristenattraktion dar, vor allem in Australien und Neuseeland. Mit dem Klimawandel treten zunehmend Krankheiten auf. Einige Arten wie der Galápagos-Seelöwe werden häufig von Parasiten befallen, was auch tödlich enden kann. Drei Arten sind deshalb als gefährdet eingestuft.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEAOTTER</Tag>
@@ -4162,6 +4211,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEAOTTER_PEDIA</Tag>
 		<English>The sea otter (Enhydra lutris) is a marine mammal native to the coasts of the northern and eastern North Pacific Ocean. Adult sea otters typically weigh between 14 and 45 kg (30 and 100 lb), making them the heaviest members of the weasel family, but among the smallest marine mammals. Unlike most marine mammals, the sea otter's primary form of insulation is an exceptionally thick coat of fur, the densest in the animal kingdom. Although it can walk on land, the sea otter lives mostly in the ocean.[PARAGRAPH:2]The sea otter inhabits offshore environments, where it dives to the sea floor to forage. It preys mostly on marine invertebrates such as sea urchins, various molluscs and crustaceans, and some species of fish. Its foraging and eating habits are noteworthy in several respects. First, its use of rocks to dislodge prey and to open shells makes it one of the few mammal species to use tools. In most of its range, it is a keystone species, controlling sea urchin populations which would otherwise inflict extensive damage to kelp forest ecosystems. Its diet includes prey species that are also valued by humans as food, leading to conflicts between sea otters and fisheries.[PARAGRAPH:2]Sea otters, whose numbers were once estimated at 150,000 - 300,000, were hunted extensively for their fur between 1741 and 1911, and the world population fell to 1,000 - 2,000 individuals in a fraction of their historic range. A subsequent international ban on hunting, conservation efforts, and reintroduction programs into previously populated areas have contributed to numbers rebounding, and the species now occupies about two-thirds of its former range. The recovery of the sea otter is considered an important success in marine conservation, although populations in the Aleutian Islands and California have recently declined or have plateaued at depressed levels. For these reasons, the sea otter remains classified as an endangered species.</English>
+		<German>Der [COLOR_UNIT_TEXT]Seeotter[COLOR_REVERT], auch Kalan oder Meerotter (Enhydra lutris), ist ein Raubtier aus der Marderfamilie und neben dem Küstenotter die einzige Art, die nur im Meer lebt. In der Ökologie stellt der Seeotter eine Schlüsselart dar, da er trotz seines geringen Vorkommens großen Einfluss auf die Artenvielfalt hat. Die meisten Exemplare leben heute an den Küsten des Beringmeers in Alaska, auf den Aleuten und den Kommandeurinseln. Mit maximal 150 cm Körperlänge inklusive Schwanz gehört der Seeotter zu den größten Mardern. Das sehr dichte Fell ist dunkelbraun, am Kopf etwas heller, jedoch ohne isolierende Fettschicht, was unter den Meeressäugern einzigartig ist. Er ist sehr gut an das Wasser angepasst, was man an den nach hinten versetzten Hinterbeinen und den Schwimmhäuten zwischen den Zehen erkennt. Durch die wesentlich kleineren Vorderpfoten ähneln seine Bewegungsabläufe denen der Ohrenrobben. Der Schwanz ist im Gegensatz zu anderen Ottern abgeflacht, des Weiteren hat er nur 32 Zähne (anstatt der für Otter üblichen 36). Der Seeotter ist das einzige Raubtier mit nur zwei Paar Schneidezähnen im Unterkiefer.[NEWLINE]Die kräftigen Backenzähne eignen sich gut zum Zerbeißen von Muscheln oder Schnecken. Auch Werkzeuge werden oft benutzt, um die harten Schalen aufzubrechen. Häufig stehen pflanzenfressende Seeigel aus den Tangwäldern auf dem Speiseplan, was wiederum zum Erhalt dieser Wälder beiträgt. Der Seeotter kann sogar Salzwasser trinken, wobei das überschüssige Salz durch die großen Nieren wieder ausgeschieden wird. Da er im Wasser schläft, umwickelt er sich zuvor mit Seetang, um nicht abgetrieben zu werden. So schützen Mütter auch ihre Jungen, wenn sie auf Nahrungssuche gehen.[NEWLINE]Seeotterfell ist sehr lange haltbar und war schon kurz nach der Entdeckung der Art im Jahre 1741 äußerst begehrt, besonders als Mantelbesatz für russische und chinesische Würdenträger. Durch die Jagd wurden die Tiere fast ausgerottet, weswegen der Handel mit Otterfellen seit 1911 verboten ist. Die Bestände haben sich seitdem erholt. Aktuelle Gefahren drohen dem Seeotter vor allem durch ölverschmutzte Gewässer. Der größte Fressfeind ist der Große Schwertwal. In der Gesellschaft wird der Seeotter als possierlich dargestellt, was auch daran liegt, dass ein auf dem Rücken liegender Seeotter die Vorderpfoten so anhebt, als würde er winken. Er ziert u.a. Postkarten und T-Shirts und steht Modell für Plüschtiere.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEA_ANIMAL_STRATEGY</Tag>
@@ -4176,6 +4226,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Hirsch:Hirschs:Hirsch:Hirsch:Hirsche:Hirsche:Hirschen:Hirsche</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Cervo</Italian>
 		<Spanish>
 			<Text>Ciervo</Text>
@@ -4187,23 +4242,33 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICANELEPHANT</Tag>
 		<English>Subdued African Elephant</English>
-		<French>Eléphant d'Afrique (App.)</French>
+		<French>Éléphant d'Afrique (App.)</French>
+		<German>
+			<Text>Gefangener Afrikanischer Elefant:Gefangenen Afrikanischen Elefanten:Gefangenen Afrikanischen Elefanten:Gefangenen Afrikanischen Elefanten:Gefangene Afrikanische Elefanten:Gefangenen Afrikanischen Elefanten:Gefangenen Afrikanischen Elefanten:Gefangenen Afrikanischen Elefanten</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICANELEPHANT_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - African Elephant
-[SPACE][SPACE] * Myth - Elephant, Master Hnter and Carnival
-[SPACE][SPACE] * Exotic Herbavours Cage and Enclosure</English>
+[SPACE][SPACE] * Myth - Elephant, Master Hunter and Carnival
+[SPACE][SPACE] * Exotic Herbivores Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT]:
-[SPACE][SPACE] * Mythes et Histoire(s) d'Eléphant d'Afrique
-[SPACE][SPACE] * Mythe des Eléphants, Maître Chasseur, Carnaval
+[SPACE][SPACE] * Mythes et Histoire(s) d'Éléphant d'Afrique
+[SPACE][SPACE] * Mythe des Éléphants, Maître Chasseur, Carnaval
 [SPACE][SPACE] * Cage et Enclos pour Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARCTICFOX</Tag>
 		<English>Subdued Arctic Fox</English>
 		<French>Renard arctique (App.)</French>
+		<German>
+			<Text>Gefangener Polarfuchs:Gefangenen Polarfuchses:Gefangenen Polarfuchs:Gefangenen Polarfuchs:Gefangene Polarfüchse:Gefangenen Polarfüchse:Gefangenen Polarfüchsen:Gefangenen Polarfüchse</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARCTICFOX_HELP</Tag>
@@ -4219,6 +4284,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARMADILLO</Tag>
 		<English>Subdued Armadillo</English>
 		<French>Tatou (App.)</French>
+		<German>
+			<Text>Gefangenes Neunbinden-Gürteltier:Gefangenen Neunbinden-Gürteltieres:Gefangenen Neunbinden-Gürteltier:Gefangene Neunbinden-Gürteltier:Gefangene Neunbinden-Gürteltiere:Gefangenen Neunbinden-Gürteltiere:Gefangenen Neunbinden-Gürteltieren:Gefangenen Neunbinden-Gürteltiere</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARMADILLO_HELP</Tag>
@@ -4234,21 +4304,26 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_BABIRUSA</Tag>
 		<English>Subdued Babirusa</English>
 		<French>Babiroussa (App.)</French>
+		<German>
+			<Text>Gefangener Molukken-Hirscheber:Gefangenen Molukken-Hirschebers:Gefangenen Molukken-Hirscheber:Gefangenen Molukken-Hirscheber:Gefangene Molukken-Hirscheber:Gefangenen Molukken-Hirscheber:Gefangenen Molukken-Hirschebern:Gefangenen Molukken-Hirscheber</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BABIRUSA_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story &#38; Stories - Babirusa
 [SPACE][SPACE] * Myth - Boar &#38; Pig Herd
-[SPACE][SPACE] * Exotic Herbavours Cage &#38; Enclosure
+[SPACE][SPACE] * Exotic Herbivores Cage &#38; Enclosure
 [SPACE][SPACE] * Master Hunter &#38; Boar Camp</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de Babiroussa, Mythe des Ours, Enclos à cochons, camp d'ours, Maitre chasseur</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de Babiroussa, Mythe des Ours, Enclos à cochons, camp d'ours, Maître chasseur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BAIRDS_TAPIR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story &#38; Stories - Tapir
-[SPACE][SPACE] * Exotic Herbavours Cage &#38; Enclosure</English>
+[SPACE][SPACE] * Exotic Herbivores Cage &#38; Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Bairds, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
@@ -4256,14 +4331,19 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_BLACK_RHINO</Tag>
 		<English>Subdued Black Rhinoceros</English>
 		<French>Rhinocéros noir (App.)</French>
+		<German>
+			<Text>Gefangenes Spitzmaulnashorn:Gefangenen Spitzmaulnashorns:Gefangenen Spitzmaulnashorn:Gefangene Spitzmaulnashorn:Gefangene Spitzmaulnashörner:Gefangenen Spitzmaulnashörner:Gefangenen Spitzmaulnashörnern:Gefangenen Spitzmaulnashörner</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Poskromiony Nosorożec Czarny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BLACK_RHINO_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story and Stories - Rhinocerous
+[SPACE][SPACE] * Myth, Story and Stories - Rhinoceros
 [SPACE][SPACE] * Unicorn Myth &#38; Master Hunter
-[SPACE][SPACE] * Exotic Herbavours Cage</English>
+[SPACE][SPACE] * Exotic Herbivores Cage</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros noir[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
@@ -4275,13 +4355,18 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangener Flachlandtapir:Gefangenen Flachlandtapirs:Gefangenen Flachlandtapir:Gefangenen Flachlandtapir:Gefangene Flachlandtapire:Gefangenen Flachlandtapire:Gefangenen Flachlandtapiren:Gefangenen Flachlandtapire</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Poskromiony Tapir Brazylijski</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BRAZILIAN_TAPIR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story &#38; Stories - Tapir
-[SPACE][SPACE] * Exotic Herbavours Cage &#38; Enclosure</English>
+[SPACE][SPACE] * Exotic Herbivores Cage &#38; Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Brazilian, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
@@ -4293,6 +4378,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangener Mohrenkaiman:Gefangenen Mohrenkaimans:Gefangenen Mohrenkaiman:Gefangenen Mohrenkaiman:Gefangene Mohrenkaimane:Gefangenen Mohrenkaimane:Gefangenen Mohrenkaimanen:Gefangenen Mohrenkaimane</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Subdued Kajman</Polish>
 	</TEXT>
 	<TEXT>
@@ -4308,6 +4398,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_CUSCUS</Tag>
 		<English>Subdued Cuscus</English>
 		<French>Couscous (App.)</French>
+		<German>
+			<Text>Gefangener Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangene Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangenen Tüpfelkuskus:Gefangenen Tüpfelkuskus</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CUSCUS_HELP</Tag>
@@ -4324,6 +4419,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangener Baumsteigerfrosch:Gefangenen Baumsteigerfroschs:Gefangenen Baumsteigerfrosch:Gefangenen Baumsteigerfrosch:Gefangene Baumsteigerfrösche:Gefangenen Baumsteigerfrösche:Gefangenen Baumsteigerfröschen:Gefangenen Baumsteigerfrösche</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Rana freccia addomesticata</Text>
 			<Gender>Female</Gender>
@@ -4345,11 +4445,21 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangene Wüstenvogelspinne:Gefangenen Wüstenvogelspinne:Gefangenen Wüstenvogelspinne:Gefangene Wüstenvogelspinne:Gefangene Wüstenvogelspinnen:Gefangenen Wüstenvogelspinnen:Gefangenen Wüstenvogelspinnen:Gefangenen Wüstenvogelspinnen</Text>
+			<Gender>Female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DHOLE</Tag>
 		<English>Subdued Dhole</English>
 		<French>Cuon d'Asie (App.)</French>
+		<German>
+			<Text>Gefangener Rothund:Gefangenen Rothundes:Gefangenen Rothund:Gefangenen Rothund:Gefangene Rothunde:Gefangenen Rothunde:Gefangenen Rothunden:Gefangenen Rothunde</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DHOLE_HELP</Tag>
@@ -4362,6 +4472,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_DINGO</Tag>
 		<English>Subdued Dingo</English>
 		<French>Dingo (App.)</French>
+		<German>
+			<Text>Gefangener Dingo:Gefangenen Dingos:Gefangenen Dingo:Gefangenen Dingo:Gefangene Dingos:Gefangenen Dingos:Gefangenen Dingos:Gefangenen Dingos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DINGO_HELP</Tag>
@@ -4375,6 +4490,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELASMOTHERIUM</Tag>
 		<English>Subdued Elasmotherium</English>
 		<French>Elasmotherium (App.)</French>
+		<German>
+			<Text>Gefangenes Elasmotherium:Gefangenen Elasmotheriums:Gefangenen Elasmotherium:Gefangene Elasmotherium:Gefangene Elasmotherien:Gefangenen Elasmotherien:Gefangenen Elasmotherien:Gefangenen Elasmotherien</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Poskromiony Elasmoterium</Polish>
 	</TEXT>
 	<TEXT>
@@ -4382,7 +4502,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story, Stories &#38; Remains - Elasmotherium
 [SPACE][SPACE] * Myths - Rhino &#38; Unicorn
-[SPACE][SPACE] * Exotic Herbavour Cage &#38; Enclosure
+[SPACE][SPACE] * Exotic Herbivores Cage &#38; Enclosure
 [SPACE][SPACE] * Master Hunter &#38; Rhino Camp</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros indien[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
@@ -4401,19 +4521,29 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EWOLF</Tag>
 		<English>Subdued Ethiopian Wolf</English>
-		<French>Loup Ethiopien (App.)</French>
+		<French>Loup d'Éthiopie (App.)</French>
+		<German>
+			<Text>Gefangener Äthiopischer Wolf:Gefangenen Äthiopischen Wolfs:Gefangenen Äthiopischen Wolf:Gefangenen Äthiopischen Wolf:Gefangene Äthiopische Wölfe:Gefangenen Äthiopischen Wölfe:Gefangenen Äthiopischen Wölfen:Gefangenen Äthiopischen Wölfe</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EWOLF_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story &#38; Stories - Ethiopian Wolf
 [SPACE][SPACE] * Wolf Myth &#38; Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Loup Ethiopien, Mythe des Loups, Cage et Enclos à loup</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Loup d'Éthiopie, Mythe des Loups, Cage et Enclos à loup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_FENNECFOX</Tag>
 		<English>Subdued Fennec Fox</English>
 		<French>Fennec (App.)</French>
+		<German>
+			<Text>Gefangener Fennek:Gefangenen Fenneks:Gefangenen Fennek:Gefangenen Fennek:Gefangene Fenneks:Gefangenen Fenneks:Gefangenen Fenneks:Gefangenen Fenneks</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_FENNECFOX_HELP</Tag>
@@ -4425,7 +4555,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR</Tag>
-		<English>Subdued Americian Alligator</English>
+		<English>Subdued American Alligator</English>
 		<French>
 			<Text>Alligator d'Amérique (App.)</Text>
 			<Gender>Male</Gender>
@@ -4455,7 +4585,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story and Stories - Americian Alligator
+[SPACE][SPACE] * Myth, Story and Stories - American Alligator
 [SPACE][SPACE] * Master Hunter, Myth - Reptile, Crocodile and Dragon
 [SPACE][SPACE] * Master Hunter &#38; Reptile Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) de l'Alligator d'Amérique, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
@@ -4472,7 +4602,7 @@
 [SPACE][SPACE] * Myth, Story, Stories &#38; Remains - Glyptodon
 [SPACE][SPACE] * Earth Myth &#38; Taxidermist
 [SPACE][SPACE] * Master Hunter &#38; Zoo</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Constuit[COLOR_REVERT] un Mythe, une ou des Histoires - Glyptodon[NEWLINE][ICON_BULLET]Restes - Glyptodon[NEWLINE][ICON_BULLET]Mythe la Terre</French>
+		<French>[COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] un Mythe, une ou des Histoires - Glyptodon[NEWLINE][ICON_BULLET]Restes - Glyptodon[NEWLINE][ICON_BULLET]Mythe la Terre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GROUNDSLOTH</Tag>
@@ -4503,7 +4633,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story &#38; Stories - Indian Rhinoceros
 [SPACE][SPACE] * Myth - Rhinoceros &#38; Unicorn
-[SPACE][SPACE] * Exotic Herbavour Cage &#38; Enclosure
+[SPACE][SPACE] * Exotic Herbivores Cage &#38; Enclosure
 [SPACE][SPACE] * Rhino camp &#38; master Hunter</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros indien[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
@@ -4524,7 +4654,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:'
 [SPACE][SPACE] * Myth, Story and Stories - Java Rhinoceros
 [SPACE][SPACE] * Myth - Rhinoceros and Unicorn
-[SPACE][SPACE] * Exotic Herbavour Cage and Enclosure
+[SPACE][SPACE] * Exotic Herbivores Cage and Enclosure
 [SPACE][SPACE] * Rhino camp and master Hunter</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros de Java[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
@@ -4563,7 +4693,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_MALAYAN_TAPIR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Tapir and Malayan Tapir
-[SPACE][SPACE] * Exotic Herbavours Cage and Enclosure</English>
+[SPACE][SPACE] * Exotic Herbivores Cage and Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Malayan, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
@@ -4601,7 +4731,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_MOUNTAIN_TAPIR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Tapir and Mountain Tapir
-[SPACE][SPACE] * Exotic Herbavours Cage and Enclosure</English>
+[SPACE][SPACE] * Exotic Herbivores Cage and Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Mountain, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
@@ -4683,13 +4813,13 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_PYGMYHIPPO_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]
 [SPACE][SPACE] * Myth, Story and Stories - Pygmy Hippopotamus
-[SPACE][SPACE] * Exotic Herbavour Cage and Enclosure</English>
+[SPACE][SPACE] * Exotic Herbivores Cage and Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) des Hippopotames nains[NEWLINE][ICON_BULLET]Cage et Enclos pour herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REDFOX_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story and Stories - Redfox
+[SPACE][SPACE] * Myth, Story and Stories - Red Fox
 [SPACE][SPACE] * Wolf Cage and Enclosure
 [SPACE][SPACE] * Canine Totem</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythes et Histoires du renard roux, Cage et Enclos à loup, Totem Canin</French>
@@ -4785,7 +4915,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_TREESLOTH_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Tree Sloth
-[SPACE][SPACE] * Exoctic Herbavours Cage and Enclosure</English>
+[SPACE][SPACE] * Exotic Herbivores Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT]:
 [SPACE][SPACE] * Mythes et Histoire(s) du Paresseux
 [SPACE][SPACE] * Cage et Enclos pour Herbivores exotiques</French>
@@ -4802,7 +4932,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WHALESHARK_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story and Stories - Whaleshark
+[SPACE][SPACE] * Myth, Story and Stories - Whale Shark
 [SPACE][SPACE] * Myths of Sea and Sharks
 [SPACE][SPACE] * Master Sea Hunter and Wonders of the Deep
 [SPACE][SPACE] * Marine and Shark Institute</English>
@@ -4828,7 +4958,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - White Rhinoceros
 [SPACE][SPACE] * Myth - Rhinoceros and Unicorn
-[SPACE][SPACE] * Exotic Herbavour Cage and Enclosure
+[SPACE][SPACE] * Exotic Herbivores Cage and Enclosure
 [SPACE][SPACE] * Rhino camp and master Hunter</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT]:
 [SPACE][SPACE] * Mythes et Histoire(s) du Rhinocéros blanc
@@ -4869,7 +4999,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Zebra and Horse
 [SPACE][SPACE] * Zebra Herd and Hunter's Camp
-[SPACE][SPACE] * Carnival and Exotic Herbavour Cage and Enclosure</English>
+[SPACE][SPACE] * Carnival and Exotic Herbivores Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoire(s)du Zèbre et des chameaux, Troupeaux de zèbres et Camp de Chasseur, Carnaval et Cage et Enclos à Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
@@ -4912,7 +5042,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_JAVA_RHINO</Tag>
 		<English>Tamed Javan Rhinoceros</English>
-		<French>Rinhocéros de Java dompté</French>
+		<French>Rhinocéros de Java dompté</French>
 		<Polish>Oswojony Nosorożec Jawajski</Polish>
 	</TEXT>
 	<TEXT>
@@ -4946,7 +5076,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Tapir:Tapirs:Tapir:Tapir:Tapire:Tapire:Tapiren:Tapire</Text>
+			<Text>Baird-Tapir:Baird-Tapirs:Baird-Tapir:Baird-Tapir:Baird-Tapire:Baird-Tapire:Baird-Tapiren:Baird-Tapire</Text>
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>

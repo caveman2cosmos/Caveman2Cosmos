@@ -141,8 +141,6 @@
 		<Tag>TXT_KEY_UNIT_TRAINED_MAMMOTH_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Mammoth Riders[COLOR_REVERT] are early-game mounted units. This particular rider is using [COLOR_HIGHLIGHT_TEXT]Mammoth[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and its slower then rest of the Riders but much stronger. They have bonus in siege cities and when fighting in polar terrain and vs other mounted units and siege engines.</English>
 		<French>Unité adaptée contre les autres unités montés et les unités de siège. Obtient un bonus lors de l'attaque de villes.</French>
-		<German>Well-suited unit against mounted and siege units. Gets bonus when attacking city</German>
-		<Italian>Well-suited unit against mounted and siege units. Gets bonus when attacking.</Italian>
 		<Spanish>Una unidad adecuada contra unidades montadas y armas de asedio. Obtiene una bonificación al atacar una ciudad.</Spanish>
 	</TEXT>
 	<TEXT>

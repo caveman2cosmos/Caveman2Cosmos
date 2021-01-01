@@ -10,10 +10,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUILDS_FASTER_WITH</Tag>
-		<English>Builds %d1_Mod%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
+		<English>Builds %d1_Mod%% faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit %d1_Mod%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Mod%% schneller mit Bonusgut [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
-		<Italian>Realizza %d1_Mod%% piú velocemente con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
+		<Italian>Realizza %d1_Mod%% più velocemente con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
 		<Spanish>Construye un %d1_Mod%% más rápido con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -26,7 +26,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOUBLE_SPEED_WITH</Tag>
-		<English>Double Production Speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
+		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
 		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
 		<German>Doppelte Produktionsgeschwindigkeit mit Bonusgut [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
 		<Italian>Raddoppia la velocità di produzione con [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Italian>
@@ -106,6 +106,18 @@
 		<Spanish>[COLOR_WARNING_TEXT]Requiere [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_PLOT_BLOCKED</Tag>
+		<English>[COLOR_WARNING_TEXT]Cannot be constructed on a %s1_Name![COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_CHANGE_FEATURE</Tag>
+		<English>[COLOR_YELLOW]Will replace the %s1_Name with %s2_Name[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_YIELD_CHANGE_DESCRIP</Tag>
+		<English>Yield changes:</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STATE_RELIGION_PREREQ</Tag>
 		<English>[ICON_BULLET]This building requires %F1_RelIcon to be your State [ICON_RELIGION].</English>
 		<French>[ICON_BULLET]Ce bâtiment nécessite %F1_RelIcon comme [ICON_RELIGION] d'Etat.</French>
@@ -136,11 +148,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_HAPPINESS</Tag>
-		<English>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp from [COLOR_BUILDING_TEXT][LINK=s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</English>
-		<French>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp : [COLOR_BUILDING_TEXT][LINK=s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</French>
-		<German>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp durch das Gebäude [COLOR_BUILDING_TEXT][LINK=s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp da [COLOR_BUILDING_TEXT][LINK=s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change %F2_HappOrUnhapp por [COLOR_BUILDING_TEXT][LINK=s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Spanish>
+		<English>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp from [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp : [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp durch das Gebäude [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp da [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappOrUnhapp por [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_REQUIRES</Tag>
@@ -190,7 +202,7 @@
 		<Tag>TXT_KEY_GOODY_CRIMINAL</Tag>
 		<English>[SPACE]Your explorers have found a wanted criminal hiding out among these people!</English>
 		<French>[SPACE]Vos explorateurs ont trouvé un criminel recherché, se cachant parmi la population!</French>
-		<German>[SPACE]Unter den Dorfbewohnern hat sich ein gesuchter Verbrecher versteckt!</German>
+		<German>Unter den Dorfbewohnern hat sich ein gesuchter Verbrecher versteckt!</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_HEALER</Tag>
@@ -216,7 +228,7 @@
 		<Tag>TXT_KEY_GOODY_RESEARCH</Tag>
 		<English>[SPACE]The villagers share information that leads your researchers to a major breakthrough!</English>
 		<French>[SPACE]Les villageois vous communiquent des informations qui conduisent vos chercheurs vers une découverte majeure!</French>
-		<German>[SPACE]Die Informationen der Dorfbewohner haben zu einem großen Durchbruch bei Euren Forschungen geführt!</German>
+		<German>Die Informationen der Dorfbewohner haben zu einem großen Durchbruch bei Euren Forschungen geführt!</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_SPEARMAN</Tag>
@@ -237,6 +249,7 @@
 		<Tag>TXT_KEY_GOODY_WISE_WOMAN</Tag>
 		<English>[SPACE]One of the tribe's women has taken a liking to your explorers!</English>
 		<French>[SPACE]Une femme de la tribu est tombée amoureuse d'un de vos éclaireurs!</French>
+		<German>Ein paar Frauen des Stammes haben an Euren Entdeckern Gefallen gefunden!</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CIVILOPEDIA</Tag>
@@ -378,12 +391,12 @@
 		<English>Builds %d1_Mod%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit %d1_Mod%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Mod%% schneller mit Bonusgut [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
-		<Italian>Realizza %d1_Mod%% piú velocemente con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
+		<Italian>Realizza %d1_Mod%% più velocemente con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
 		<Spanish>Construye un %d1_Mod%% más rápido con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_DOUBLE_SPEED_WITH</Tag>
-		<English>Double Production Speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
+		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
 		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
 		<German>Doppelte Produktionsgeschwindigkeit mit Bonusgut [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
 		<Italian>Raddoppia la velocità di produzione con [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Italian>
@@ -399,7 +412,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_REQUIRES_ANYONE</Tag>
-		<English>[COLOR_WARNING_TEXT]Requires Someone to Create [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</English>
+		<English>[COLOR_WARNING_TEXT]Requires someone to create [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Quelqu'un est requis pour créer [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Jemand muss Folgendes erstellen: [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Richiede qualcuno per creare [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</Italian>
@@ -558,7 +571,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FIRST_RECEIVES</Tag>
-		<English>[ICON_BULLET]First to Discover Receives a [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</English>
+		<English>[ICON_BULLET]First to Discover receives a [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Faire cette découverte avant les autres octroie 1 [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Der erste Entdecker erhält eine Einheit: [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Il primo che scopre questa tecnologia riceve [NUM1:un:una:dei:delle] [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Italian>
@@ -627,7 +640,7 @@
 		<English>Builds %d1_Change%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit : %d1_Change%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Change%% schneller mit [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
-		<Italian>Costruisce il %d1_Change%% piú rapidamente con il [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
+		<Italian>Costruisce il %d1_Change%% più rapidamente con il [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
 		<Spanish>Construye un %d1_Change%% más rápido con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -648,7 +661,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOUBLE_SPEED</Tag>
-		<English>Double Production Speed with [LINK=%s1_BonusType]%s2_Bonus</English>
+		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus</English>
 		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
 		<German>Doppelte Produktionsgeschwindigkeit mit Bonusgut [LINK=%s1_BonusType]%2_Bonus[\LINK]</German>
 		<Italian>Il bonus [LINK=%s1_BonusType]%s2_Bonus[\LINK] raddoppia la velocità di produzione</Italian>
@@ -660,7 +673,7 @@
 		<French>[ICON_BULLET]Peut échapper à une interception (%d1_Amount%% de chance)</French>
 		<German>[ICON_BULLET]Rückzugsmöglichkeit bei Abfangversuch (Erfolgsaussicht: %d1_Amount%%)</German>
 		<Italian>[ICON_BULLET]Può evitare l'intercettazione (%d1_Amount%% di probabilità)</Italian>
-		<Spanish>[ICON_BULLET]Puede eludir la intercepción (probabilidad del %d1_Amount%%)</Spanish>
+		<Spanish>[ICON_BULLET]Puede eludir la interceptación (probabilidad del %d1_Amount%%)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERCEPT_AIRCRAFT</Tag>
@@ -688,7 +701,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WITHDRAWL_PROBABILITY_SHORT</Tag>
-		<English>[ICON_BULLET]Withdrawl Chance: %d1_Amount%%</English>
+		<English>[ICON_BULLET]Withdrawal Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Chances de rompre le combat: %d1_Amount%%</French>
 		<German>[ICON_BULLET]Rückzugschance: %d1_Amount%%</German>
 		<Italian>[ICON_BULLET]Probabilità di ritirata: %d1_Amount%%</Italian>

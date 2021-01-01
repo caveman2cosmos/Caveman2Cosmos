@@ -1,9 +1,14 @@
 // area.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
+#include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvMap.h"
+#include "CvInfos.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
 #include "CvTeamAI.h"
 
 // Public Functions...
@@ -632,6 +637,7 @@ void CvArea::changePopulationPerPlayer(PlayerTypes eIndex, int iChange)
 	FAssert(getTotalPopulation() >= 0);
 	m_aiPopulationPerPlayer[eIndex] += iChange;
 	FAssert(getPopulationPerPlayer(eIndex) >= 0);
+	changePower(eIndex, iChange);
 }
 
 
@@ -1177,9 +1183,9 @@ int	CvArea::getRecentCombatDeathRate(PlayerTypes ePlayer, UnitTypes eUnit) const
 	{
 		const TurnCombatResults& turnResults = m_combatRecord[i % COMBAT_RECORD_LENGTH];
 
-		for (std::vector<CombatResultRecord>::const_iterator itr = turnResults.begin(); itr != turnResults.end(); ++itr)
+		foreach_(const CombatResultRecord& record, turnResults)
 		{
-			if ((*itr).eLoser == ePlayer && (eUnit == NO_UNIT || (*itr).eDefeatedUnitType == eUnit))
+			if (record.eLoser == ePlayer && (eUnit == NO_UNIT || record.eDefeatedUnitType == eUnit))
 			{
 				totalDeaths++;
 			}
@@ -1199,10 +1205,10 @@ int	CvArea::getRecentCombatDeathRate(PlayerTypes ePlayer, UnitAITypes eUnitAITyp
 	{
 		const TurnCombatResults& turnResults = m_combatRecord[i % COMBAT_RECORD_LENGTH];
 
-		for (std::vector<CombatResultRecord>::const_iterator itr = turnResults.begin(); itr != turnResults.end(); ++itr)
+		foreach_(const CombatResultRecord& record, turnResults)
 		{
-			if ((*itr).eLoser == ePlayer
-			&& (eUnitAIType == NO_UNITAI || (*itr).eDefeatedUnitType != NO_UNIT && GC.getUnitInfo((*itr).eDefeatedUnitType).getDefaultUnitAIType() == eUnitAIType))
+			if (record.eLoser == ePlayer
+			&& (eUnitAIType == NO_UNITAI || record.eDefeatedUnitType != NO_UNIT && GC.getUnitInfo(record.eDefeatedUnitType).getDefaultUnitAIType() == eUnitAIType))
 			{
 				totalDeaths++;
 			}

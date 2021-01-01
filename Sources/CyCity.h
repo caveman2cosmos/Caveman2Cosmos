@@ -274,6 +274,7 @@ public:
 	int /*TeamTypes*/getTeam() const;
 	int /*PlayerTypes*/getPreviousOwner() const;
 	int /*PlayerTypes*/getOriginalOwner() const;
+	void setOriginalOwner(int /*PlayerTypes*/ iPlayer);
 	int /*CultureLevelTypes*/ getCultureLevel() const;
 	int getCultureThreshold() const;
 	int getSeaPlotYield(int /*YieldTypes*/ eIndex) const;

@@ -1,11 +1,17 @@
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvCity.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvMap.h"
 #include "CvMapExternal.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
 #include "CheckSum.h"
-
 #include "CvDLLFAStarIFaceBase.h"
 
 #define PATH_MOVEMENT_WEIGHT									(1000)
@@ -336,32 +342,13 @@ bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader)
 		}
 	}
 
-/************************************************************************************************/
-/* SUPER_SPIES                             04/05/08                                Faichele     */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/* original code
-	if (kUnit.getInterceptionProbability() == 0)
+	if (kUnit.getInterceptionProbability() == 0 && !kUnit.isSpy())
 	{
 		if (kPromotion.getInterceptChange() != 0)
 		{
 			return false;
 		}
 	}
-*/
-	//TSHEEP - Spy Promotion Override
-	//if (kUnit.getInterceptionProbability() == 0)
-	if (kUnit.getInterceptionProbability() == 0 && !kUnit.isSpy())//TSHEEP End
-	{
-		if (kPromotion.getInterceptChange() != 0)
-		{
-			return false;
-		}
-	}
-/************************************************************************************************/
-/* SUPER_SPIES                             END                                                  */
-/************************************************************************************************/
 
 	if (NO_PROMOTION != kPromotion.getPrereqPromotion())
 	{
@@ -404,35 +391,6 @@ bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader)
 /** ADVANCED COMBAT ODDS                      11/7/09                           PieceOfMind      */
 /** END                                                                                          */
 /*************************************************************************************************/
-
-int getPopulationAsset(int iPopulation)
-{
-	if (iPopulation == MAX_INT)
-	{
-		return MAX_INT;
-	}
-	return (iPopulation * 2);
-}
-
-int getLandPlotsAsset(int iLandPlots)
-{
-	return iLandPlots;
-}
-
-int getPopulationPower(int iPopulation)
-{
-	return (iPopulation / 2);
-}
-
-int getPopulationScore(int iPopulation)
-{
-	return iPopulation;
-}
-
-int getLandPlotsScore(int iLandPlots)
-{
-	return iLandPlots;
-}
 
 int getTechScore(TechTypes eTech)
 {
