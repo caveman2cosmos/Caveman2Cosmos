@@ -2882,7 +2882,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					aYields[iI] = iYield;
 				}
 
-				// Show yields on newline to reduce wrapping, look nicer
+				// Show yields on newline to reduce wrapping, look nicer. TODO use setListHelp
 				if (bIsYield)
 				{
 					bool bFirstYield = true;
@@ -3300,22 +3300,39 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 					else
 					{
-						// TODO: Have different messages for different discovery rates; sort by value, not simply most recent
+						// TODO: Sort messages by iRoundedOdds to reduce excess lines on larger/slower games
 						int iLast = 0;
+						int iRoundedOdds = 0;
+						bool bStartDiscoveryOdds = true;
 
 						FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvDLLWidgetData::parseActionHelp");
 						for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 						{
 							if (GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes) iI).getTechReveal())))
 							{
-								if (GC.getImprovementInfo(eImprovement).getImprovementBonusDiscoverRand(iI) > 0)
+								if (GC.getImprovementInfo(eImprovement).getImprovementBonusDiscoverRand(iI) > 0
+								&&  pMissionPlot->canHaveBonus((BonusTypes)iI))
 								{
+									if (bStartDiscoveryOdds)
+									{
+										szBuffer.append(NEWLINE);
+										szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CAN_DISCOVER"));
+										bStartDiscoveryOdds = false;
+										logging::logMsg("C2C.log", "Discovery of bonus possible!\n");
+									}
+
+									// Round to nearest 1000
+									iRoundedOdds = 1000 + (pMissionPlot->calculateResourceDiscoveryOdds(iI, GC.getImprovementInfo(eImprovement)) / 1000) * 1000;
+									logging::logMsg("C2C.log", "Rounded odds are: %d\n", iRoundedOdds);
 									CvWString szFirstBuffer;
-									szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_ACTION_CHANCE_DISCOVER").c_str());
+									szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_ACTION_CHANCE_DISCOVER", iRoundedOdds).c_str());
 									CvWString szTempBuffer;
+									logging::logMsg("C2C.log", "First buffer\n");
 									szTempBuffer.Format(L"%c", GC.getBonusInfo((BonusTypes)iI).getChar());
-									setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (GC.getImprovementInfo(eImprovement).getImprovementBonusDiscoverRand(iI) != iLast));
-									iLast = GC.getImprovementInfo(eImprovement).getImprovementBonusDiscoverRand(iI);
+									logging::logMsg("C2C.log", "Second bit\n");
+									setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (iRoundedOdds != iLast));
+									iLast = iRoundedOdds;
+									logging::logMsg("C2C.log", "Final?\n");
 								}
 							}
 						}
