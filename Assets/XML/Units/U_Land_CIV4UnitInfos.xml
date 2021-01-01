@@ -7322,7 +7322,7 @@
 			<iCost>125</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>4</iCombat>
+			<iCombat>5</iCombat>
 			<iXPValueAttack>3</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
 			<iChanceFirstStrikes>2</iChanceFirstStrikes>
