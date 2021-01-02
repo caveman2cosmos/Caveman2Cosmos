@@ -4901,7 +4901,7 @@
 		<Tag>TXT_KEY_BONUS_MAMMOTH</Tag>
 		<English>Mammoth</English>
 		<French>Mammouth</French>
-		<Italian>Mammuth</Italian>
+		<Italian>Mammut</Italian>
 		<Spanish>Mamuts</Spanish>
 		<Polish>Mamuty</Polish>
 		<Russian>Ìàìîíòû</Russian>
@@ -4915,7 +4915,12 @@
 		<Tag>TXT_KEY_BONUS_MAMMOTH_GRAVEYARD</Tag>
 		<English>Mammoth Graveyard</English>
 		<Italian>Cimitero dei mammut</Italian>
-		<Russian>Êëàäáèùå ìàìîíòîâ</Russian>
+		<Russian>Кладбище мамонтов</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_MAMMOTH_GRAVEYARD_PEDIA</Tag>
+		<English>When mammoths go extinct in the wild their map bonus is replaced by a graveyard. This may be their bones, or fossils or frozen mammoths.</English>
+		<Russian>Когда мамонты вымирают в дикой природе, их бонусные ресурсы на карте заменяется кладбищами. Это могут быть их кости, или окаменелости, или замороженные туши мамонтов.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MANCHURIAN</Tag>
