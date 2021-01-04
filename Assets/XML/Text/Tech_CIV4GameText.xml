@@ -7619,10 +7619,8 @@ There are some evidence that the species Homo Erectus, some of which were likely
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DIVINE_RIGHT_QUOTE</Tag>
-		<English>"Here commences a new dominion acquired with a title by divine right." - Jonathan Swift</English>
-		<French>"Ici commence un nouveau domaine, acquis avec un titre du droit divin." - Jonathan Swift</French>
+		<English>"I am the State." - Louis XIV (1638-1715)</English>
 		<German>"Der Staat bin ich." - Ludwig XIV. (1638-1715)</German>
-		<Polish>"Tutaj zaczyna się nowe dominium, zdobyte tytułem boskiego prawa." - Jonathan Swift</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DIVINE_RIGHT_STRATEGY</Tag>
@@ -15070,9 +15068,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MICROBIOLOGY_QUOTE</Tag>
-		<English>"I am all for stem cell research." - Stevie Wonder</English>
-		<French>"Je suis pour la recherche sur les cellules souches." - Stevie Wonder</French>
-		<Polish>"Jestem za rozwojem badań nad laseczkami." - Stevie Wonder</Polish>
+		<English>"Inside every human body, roughly 37.2 trillion cells, each and every one working hard to maintain a health, effective system 24/7, and they take their jobs very seriously." - Cells at Work!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MICROBIOLOGY_STRATEGY</Tag>
@@ -17809,9 +17805,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PALEONTOLOGY_QUOTE</Tag>
-		<English>"No fossil is buried with its birth certificate. That, and the scarcity of fossils, means that it is effectively impossible to link fossils into chains of cause and effect in any valid way... To take a line of fossils and claim that they represent a lineage is not a scientific hypothesis that can be tested, but an assertion that carries the same validity as a bedtime story amusing, perhaps even instructive, but not scientific." - Henry Gee, In Search of Deep Time: Beyond the Fossil Record to a New History of Life</English>
-		<French>"Aucun fossile est enterré avec son certificat de naissance. Que, et la rareté des fossiles, signifie qu'il est effectivement impossible de lier fossiles dans les chaînes de cause à effet en aucune façon valable... Pour prendre une ligne de fossiles et prétendre qu'ils représentent une lignée n'est pas une hypothèse scientifique qui peut être testée, mais une affirmation qui porte la même validité que une histoire pour endormir? Amusant, peut-être même instructif, mais pas scientifique." - Henry Gee, In Search of Deep Time: Beyond the Fossil Record to a New History of Life</French>
-		<Polish>“"Żadna skamieniałość nie posiada świadectwa urodzenia. To i rzadkość z jaką skamieniałości występują powoduję, że bardzo ciężko połączyć skamieniałości w jeden ciąg." - Henry Gee</Polish>
+		<English>"Mary Anning is probably the most important unsung collecting force in the history of paleontology." -Stephen Jay Gould</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PALEONTOLOGY_STRATEGY</Tag>
@@ -20445,8 +20439,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_RENAISSANCE_LIFESTYLE_QUOTE</Tag>
-		<English>"Nobody can understand the greatness of the thirteenth century, who does not realize that it was a great growth of new things produced by a living thing. In that sense it was really bolder and freer than what we call the renaissance, which was a resurrection of old things discovered in a dead thing." - G.K. Chesterton</English>
-		<French>"Personne ne peut comprendre la grandeur du XIIIe siècle, s'il ne se rend pas compte qu'il s'agissait d'une grande croissance de choses nouvelles produites par des êtres vivants. En ce sens, elle était vraiment plus audacieuse et plus libre que ce que nous appelons la renaissance, qui était une résurrection de vieilles choses découvertes d'une époque déjà morte." - G.K. Chesterton</French>
+		<English>"Not much was really invented during the Renaissance, if you don’t count modern civilization."[NEWLINE][SPACE] -P.J. O'Rourke</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_RENAISSANCE_LIFESTYLE_STRATEGY</Tag>
