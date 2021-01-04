@@ -12622,8 +12622,8 @@ Current techs which are not in this file:-
 				</PrereqBuilding>
 			</PrereqBuildings>
 			<Quote>TXT_KEY_TECH_LEAD_GLASS_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Sound>AS2D_TECH_LEAD_GLASS</Sound>
+			<SoundMP>AS2D_TECH_LEAD_GLASS</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/GlassBlowing.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,7,7</Button>
 		</TechInfo>
 		<TechInfo>
@@ -12804,8 +12804,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_NAVIGATION</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_HELIOCENTRISM_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Sound>AS2D_TECH_HELIOCENTRISM</Sound>
+			<SoundMP>AS2D_TECH_HELIOCENTRISM</SoundMP>
 			<Button>Art/Interface/Buttons/techtree/Heliocentrism.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -13356,8 +13356,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_MINE_WARFARE_QUOTE</Quote>
-			<Sound>AS2D_TECH_MINE_WARFARE2</Sound>
-			<SoundMP>AS2D_TECH_MINE_WARFARE2</SoundMP>
+			<Sound>AS2D_TECH_MINE_WARFARE</Sound>
+			<SoundMP>AS2D_TECH_MINE_WARFARE</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/minewarfare.dds</Button>
 		</TechInfo>
 		<TechInfo>
