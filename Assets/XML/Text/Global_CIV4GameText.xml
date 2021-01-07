@@ -18994,6 +18994,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UPGRADE_ANYWHERE_TEXT</Tag>
 		<English>[ICON_BULLET]Can upgrade almost anywhere.</English>
 		<French>[ICON_BULLET]Peut être amélioré presque partout.</French>
+		<German>[ICON_BULLET]kann nahezu überall modernisiert werden</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UPKEEP_EXTREME</Tag>

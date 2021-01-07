@@ -27,13 +27,13 @@
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Spot on %s3_TypeName.</English>
 		<French>[ICON_BULLET]%D1_Mod de Perception %F2_Icon lorsque sur une case de type %s3_TypeName.</French>
-		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sicht %s3_TypeName</German>
+		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sicht (%s3_TypeName)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_RANGE_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Spot Range on %s3_TypeName.</English>
 		<French>[ICON_BULLET]%D1_Mod à la portée de Perception %F2_Icon lorsque sur une case de type %s3_TypeName.</French>
-		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sichtweite %s3_TypeName</German>
+		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sichtweite (%s3_TypeName)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_RANGE_CHANGE</Tag>
@@ -57,7 +57,7 @@
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_VEIL_PLOT_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Veil on %s3_Type.</English>
 		<French>[ICON_BULLET]%D1_Mod %F2_Icon Invisibilité sur %s3_Type.</French>
-		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Unsichtbarkeit %s3_Type</German>
+		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Unsichtbarkeit (%s3_Type)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ACCURACY</Tag>
@@ -176,6 +176,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BACKSTAB</Tag>
 		<English>Backstab Promotionline</English>
 		<French>Spécialisation Poignard dans le dos</French>
+		<German>Meucheln</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BACK_DOWN</Tag>
@@ -271,11 +272,13 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_BLEND_INTO_CROWD</Tag>
 		<English>Build Up (Blend Into Crowd) Promotionline</English>
 		<French>Spécialisation (Caché dans la foule)</French>
+		<German>(Training) In der Menge untertauchen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_BLEND_INTO_CROWD_HELP</Tag>
 		<English>On the first, third and fifth rounds spent building up Blend Into Crowd, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Disguise Invisibility[COLOR_REVERT] up to a maximum bonus of +3, provided each promotion level is qualified for by the unit.</English>
 		<French>Lors du premier, troisième et cinquième round passé en développement de la spécialisation Caché dans la foule, L'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]Déguisement[COLOR_REVERT] jusqu'à un bonus maximum de +3, reçu pour chaque niveau de promotion obtenu par l'unité.</French>
+		<German>Dieses Training gibt der Einheit in der ersten, dritten und fünften Runde je 1 Punkt auf [COLOR_HIGHLIGHT_TEXT]Unsichtbarkeit (Verkleidung)[COLOR_REVERT] bis zu einem Maximum von 3 Punkten.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CHASE_PLANS</Tag>
@@ -304,21 +307,25 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CLEVERNESS</Tag>
 		<English>Build Up (Cleverness) Promotionline</English>
 		<French>Spécialisation Ruse</French>
+		<German>(Training) Cleverness</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CLEVERNESS_HELP</Tag>
 		<English>Each round spent building up Cleverness, the unit gains +.2% [COLOR_HIGHLIGHT_TEXT]Insidiousness[COLOR_REVERT] (to aid in getting away with its crimes) up to a maximum bonus of +1.0, provided each promotion level is qualified for by the unit.</English>
 		<French>Pour chaque tour passé en Spécialisation Ruse, l'unité gagne +0.2% [COLOR_HIGHLIGHT_TEXT]d'Incidiosité[COLOR_REVERT] (pour l'aider à s'affranchir de ses crimes), jusqu'à un maximum de +1, et ceci procuré pour chaque niveau de promotion que peut avoir l'unité.</French>
+		<German>Jede Runde Cleverness-Training bringt der Einheit einen 0,2%-Bonus auf [COLOR_HIGHLIGHT_TEXT]Hinterlist[COLOR_REVERT] bis zu einem Maximum von 1%, wodurch sie eher mit ihren Verbrechen davonkommt.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CONCEALMENT</Tag>
 		<English>Build Up (Concealment) Promotionline</English>
 		<French>Spécialisation (Dissimulation )</French>
+		<German>(Training) Verschleierung</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CONCEALMENT_HELP</Tag>
 		<English>On the first, third and fifth rounds spent building up Concealment, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Invisibility[COLOR_REVERT] up to a maximum bonus of +3, provided each promotion level is qualified for by the unit.</English>
 		<French>Lors du premier, troisième et cinquième round passé en développement de la spécialisation Dissimulation, L'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]Camouflage [COLOR_REVERT] jusqu'à un bonus maximum de +3, reçu pour chaque niveau de promotion obtenu par l'unité.</French>
+		<German>Durch Training in Verschleierung erhält die Einheit in der ersten, dritten und fünften Runde je 1 Punkt auf [COLOR_HIGHLIGHT_TEXT]Unsichtbarkeit (Tarnung)[COLOR_REVERT] bis zu einem Maximum von 3 Punkten.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CONTROL_CENTER</Tag>
@@ -525,21 +532,25 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_REVOLUTIONARY_SENTIMENT</Tag>
 		<English>Build Up (Revolutionary Sentiment) Promotionline</English>
 		<French>Spécialisation Retranchement (Sentiment Révolutionnaire)</French>
+		<German>(Training) Revoluzzer</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_REVOLUTIONARY_SENTIMENT_HELP</Tag>
 		<English>Each round spent building up Revolutionary Sentiment, the unit gains -2% [COLOR_HIGHLIGHT_TEXT]Revolt Protection[COLOR_REVERT] (to make a cultural revolution more likely in cities where the national culture isn't a majority for the owner) up to a maximum of -10%, provided each promotion level is qualified for by the unit.</English>
 		<French>Pour chaque tour dépensé en retranchement avec Sentiment révolutionnaire, l'unité reçoit -2% [COLOR_HIGHLIGHT_TEXT]en protection des Révoltes[COLOR_REVERT] (pour rendre une révolution culturelle plus probable dans les villes où la culture nationale n'est pas majoritaire pour le propriétaire) jusqu'à un maximum de -10%, à condition que chaque niveau de promotion soit qualifié par l'unité.</French>
+		<German>Jede Runde Training als Revoluzzer lässt die Einheit den [COLOR_HIGHLIGHT_TEXT]Schutz vor kulturbedingten Revolutionen[COLOR_REVERT] um 2% senken bis zu einem Maximum von 10% (was solche Revolutionen in Städten wahrscheinlicher macht, in denen die nationale Kultur unterrepräsentiert ist).</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SCHEMES</Tag>
 		<English>Build Up (Schemes) Promotionline</English>
 		<French>Spécialisation Retranchement (Coup monté)</French>
+		<German>(Training) Pläne aushecken</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SCHEMES_HELP</Tag>
 		<English>Each round spent building up Schemes, the unit spreads +1 (+1 cumulative to the last round) [COLOR_HIGHLIGHT_TEXT]Crime[COLOR_REVERT] to the local city and plot, up to a maximum bonus of +15.</English>
 		<French>Chaque tour dépensé en retranchement Coup monté, l'unité propage +1 (+1 cumulatif jusqu'au dernier tour) [COLOR_HIGHLIGHT_TEXT]Crime[COLOR_REVERT] à la ville voisine et la case, jusqu'à un maximum de +15.</French>
+		<German>Durch Training in Verbrechensplanung erhöht die Einheit die [COLOR_HIGHLIGHT_TEXT]Kriminalitätsrate[COLOR_REVERT] von Städten und Feldern um 1 Punkt pro Runde (+1 Punkt kumulativ zur letzten Runde) bis zu einem Maximum von 15 Punkten.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SECURITY</Tag>
@@ -731,11 +742,13 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_CONNIVING</Tag>
 		<English>Conniving Promotionline</English>
 		<French>Spécialisation Connivence</French>
+		<German>Heimtücke</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CORRUPTION</Tag>
 		<English>Corruption Promotion Line</English>
 		<French>Spécialisation Corruption</French>
+		<German>Korruption</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_COVER</Tag>
@@ -899,6 +912,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_ENTRAPMENT</Tag>
 		<English>Ensnare Promotionline</English>
 		<French>Spécialisation Piège</French>
+		<German>Falle</German>
 		<Polish>Linia Promocji: Usidlić</Polish>
 	</TEXT>
 	<TEXT>
@@ -966,6 +980,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_FAKE_IDENTITY</Tag>
 		<English>Fake Identity Promotion Line</English>
 		<French>Spécialisation Identité d'emprunt</French>
+		<German>Falsche Identität</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FANATICAL</Tag>
@@ -998,6 +1013,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_FIGHT_THE_POWER</Tag>
 		<English>Fight the Power Promotionline</English>
 		<French>Spécialisation Contre le Pouvoir</French>
+		<German>Widerstand</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FINANCIAL</Tag>
@@ -1046,6 +1062,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_FOMENT</Tag>
 		<English>Foment Promotionline</English>
 		<French>Spécialisation Incitation</French>
+		<German>Aufwiegeln</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_FOREIGN</Tag>
@@ -1132,6 +1149,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_HAWK_EYES</Tag>
 		<English>Hawk Eyes Promotion Line</English>
 		<French>Spécialisation Oeil de faucon</French>
+		<German>Adlerauge</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_HEAL</Tag>
@@ -1156,6 +1174,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_HIDE_IN_SHADOWS</Tag>
 		<English>Hide In Shadows Promotion Line</English>
 		<French>Spécialisation Tapis dans l'ombre</French>
+		<German>Im Schatten verbergen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_HILL_WORKER</Tag>
@@ -1666,6 +1685,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_RED_TAPE</Tag>
 		<English>Red Tape Promotion Line</English>
 		<French>Spécialisation 'Cassette Rouge'</French>
+		<German>Bürokratie</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_REPAIRS</Tag>
@@ -1825,6 +1845,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_SHADOWSTALKER</Tag>
 		<English>Shadowstalker Promotion Line</English>
 		<French>Traqueur des ombres</French>
+		<German>Schattenjäger</German>
 		<Italian>Cacciatore di ombre</Italian>
 		<Spanish>Cazador de sombras</Spanish>
 		<Polish>Linia Promocji: Wojownik Cienia</Polish>
@@ -2013,6 +2034,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_TAKE_PRISONERS</Tag>
 		<English>Take Prisoners Promotionline</English>
 		<French>Spécialisation Capture</French>
+		<German>Gefangennahme</German>
 		<Polish>Linia Promocji: Łapacz Więźniów</Polish>
 	</TEXT>
 	<TEXT>
@@ -2114,6 +2136,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_WANTED</Tag>
 		<English>Wanted Promotion Line</English>
 		<French>Spécialisation Hors-la-loi Recherché</French>
+		<German>Gesuchter Verbrecher</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_WARMTH</Tag>
@@ -2291,7 +2314,7 @@
 		<Tag>TXT_KEY_PROMOTION_ADDS_CANNOT_CAPTURE</Tag>
 		<English>[ICON_BULLET]Gives cause for unit to be unable to capture enemy Cities or Units</English>
 		<French>[ICON_BULLET]Rend l'unité incapable de capturer les villes ou unités ennemies</French>
-		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und Einheiten hinzugefügt</German>
+		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und Einheiten: +1</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADDS_COLD_IMMUNITY_TEXT</Tag>
@@ -2938,6 +2961,7 @@
 		<Tag>TXT_KEY_PROMOTION_ASSASSIN_TEXT</Tag>
 		<English>[ICON_BULLET]Trait - Assassination: %D1_Change</English>
 		<French>[ICON_BULLET]Trait - Assassinat: %D1_Change</French>
+		<German>[ICON_BULLET]Mordanschlag: %D1_Change</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ASTONISHING_ACCUMEN</Tag>
@@ -3163,26 +3187,31 @@
 		<Tag>TXT_KEY_PROMOTION_BACKSTAB1</Tag>
 		<English>Backstab I</English>
 		<French>Poignard dans le dos I</French>
+		<German>Meucheln I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BACKSTAB2</Tag>
 		<English>Backstab II</English>
 		<French>Poignard dans le dos II</French>
+		<German>Meucheln II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BACKSTAB3</Tag>
 		<English>Backstab III</English>
 		<French>Poignard dans le dos III</French>
+		<German>Meucheln III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BACKSTAB4</Tag>
 		<English>Backstab IV</English>
 		<French>Poignard dans le dos IV</French>
+		<German>Meucheln IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BACKSTAB5</Tag>
 		<English>Backstab V</English>
 		<French>Poignard dans le dos V</French>
+		<German>Meucheln V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BACK_DOWN1</Tag>
@@ -3549,11 +3578,13 @@
 		<Tag>TXT_KEY_PROMOTION_BLENDCITY_ADD_TEXT</Tag>
 		<English>[ICON_BULLET]Adds a reason for the unit to peacefully enter all cities, even those you are at war with.</English>
 		<French>[ICON_BULLET]Ajoute la possibilité d'entrer de manière pacifique dans les villes, même pour celles en guerre.</French>
+		<German>[ICON_BULLET]friedliches Betreten aller Städte (selbst von Kriegsgegnern): +1</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BLENDCITY_REMOVE_TEXT</Tag>
 		<English>[ICON_BULLET]Removes a reason for the unit to peacefully enter all cities, even those you are at war with.</English>
 		<French>[ICON_BULLET]Enlève la possibilité d'entrer de manière pacifique dans les villes, même pour celles en guerre.</French>
+		<German>[ICON_BULLET]friedliches Betreten aller Städte (selbst von Kriegsgegnern): -1</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BLITZ</Tag>
@@ -3968,16 +3999,19 @@
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_BLEND_INTO_CROWD1</Tag>
 		<English>Build Up (Blend Into Crowd) I</English>
 		<French>Développement (Caché dans la foule) I</French>
+		<German>(Training) In der Menge untertauchen I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_BLEND_INTO_CROWD2</Tag>
 		<English>Build Up (Blend Into Crowd) II</English>
 		<French>Développement (Caché dans la foule) II</French>
+		<German>(Training) In der Menge untertauchen II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_BLEND_INTO_CROWD3</Tag>
 		<English>Build Up (Blend Into Crowd) III</English>
 		<French>Développement (Caché dans la foule) III</French>
+		<German>(Training) In der Menge untertauchen III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CHASE_PLANS1</Tag>
@@ -4031,41 +4065,49 @@
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CLEVERNESS1</Tag>
 		<English>Build Up (Cleverness) I</English>
 		<French>Spécialisation Ruse I</French>
+		<German>(Training) Cleverness I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CLEVERNESS2</Tag>
 		<English>Build Up (Cleverness) II</English>
 		<French>Spécialisation Ruse II</French>
+		<German>(Training) Cleverness II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CLEVERNESS3</Tag>
 		<English>Build Up (Cleverness) III</English>
 		<French>Spécialisation Ruse III</French>
+		<German>(Training) Cleverness III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CLEVERNESS4</Tag>
 		<English>Build Up (Cleverness) IV</English>
 		<French>Spécialisation Ruse IV</French>
+		<German>(Training) Cleverness IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CLEVERNESS5</Tag>
 		<English>Build Up (Cleverness) V</English>
 		<French>Spécialisation Ruse V</French>
+		<German>(Training) Cleverness V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CONCEALMENT1</Tag>
 		<English>Build Up (Concealment) I</English>
 		<French>Développement (Dissimulation ) I</French>
+		<German>(Training) Verschleierung I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CONCEALMENT2</Tag>
 		<English>Build Up (Concealment) II</English>
 		<French>Développement (Dissimulation ) II</French>
+		<German>(Training) Verschleierung II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CONCEALMENT3</Tag>
 		<English>Build Up (Concealment) III</English>
 		<French>Développement (Dissimulation ) III</French>
+		<German>(Training) Verschleierung III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_CONTROL_CENTER1</Tag>
@@ -4591,51 +4633,61 @@
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_REVOLUTIONARY_SENTIMENT1</Tag>
 		<English>Build Up (Revolutionary Sentiment) I</English>
 		<French>Retranchement (Sentiment révolutionnaire) I</French>
+		<German>(Training) Revoluzzer I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_REVOLUTIONARY_SENTIMENT2</Tag>
 		<English>Build Up (Revolutionary Sentiment) II</English>
 		<French>Retranchement (Sentiment révolutionnaire) II</French>
+		<German>(Training) Revoluzzer II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_REVOLUTIONARY_SENTIMENT3</Tag>
 		<English>Build Up (Revolutionary Sentiment) III</English>
 		<French>Retranchement (Sentiment révolutionnaire) III</French>
+		<German>(Training) Revoluzzer III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_REVOLUTIONARY_SENTIMENT4</Tag>
 		<English>Build Up (Revolutionary Sentiment) IV</English>
 		<French>Retranchement (Sentiment révolutionnaire) IV</French>
+		<German>(Training) Revoluzzer IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_REVOLUTIONARY_SENTIMENT5</Tag>
 		<English>Build Up (Revolutionary Sentiment) V</English>
 		<French>Retranchement (Sentiment révolutionnaire) V</French>
+		<German>(Training) Revoluzzer V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SCHEMES1</Tag>
 		<English>Build Up (Schemes) I</English>
 		<French>Retranchement (Coup monté) I</French>
+		<German>(Training) Pläne aushecken I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SCHEMES2</Tag>
 		<English>Build Up (Schemes) II</English>
 		<French>Retranchement (Coup monté) II</French>
+		<German>(Training) Pläne aushecken II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SCHEMES3</Tag>
 		<English>Build Up (Schemes) III</English>
 		<French>Retranchement (Coup monté) III</French>
+		<German>(Training) Pläne aushecken III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SCHEMES4</Tag>
 		<English>Build Up (Schemes) IV</English>
 		<French>Retranchement (Coup monté) IV</French>
+		<German>(Training) Pläne aushecken IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SCHEMES5</Tag>
 		<English>Build Up (Schemes) V</English>
 		<French>Retranchement (Coup monté) V</French>
+		<German>(Training) Pläne aushecken V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SECURITY1</Tag>
@@ -5972,46 +6024,55 @@
 		<Tag>TXT_KEY_PROMOTION_CONNIVING1</Tag>
 		<English>Conniving I</English>
 		<French>Connivence I</French>
+		<German>Heimtücke I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CONNIVING2</Tag>
 		<English>Conniving II</English>
 		<French>Connivence II</French>
+		<German>Heimtücke II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CONNIVING3</Tag>
 		<English>Conniving III</English>
 		<French>Connivence III</French>
+		<German>Heimtücke III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CONNIVING4</Tag>
 		<English>Conniving IV</English>
 		<French>Connivence IV</French>
+		<German>Heimtücke IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CONNIVING5</Tag>
 		<English>Conniving V</English>
 		<French>Connivence V</French>
+		<German>Heimtücke V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CONNIVING6</Tag>
 		<English>Conniving VI</English>
 		<French>Connivence VI</French>
+		<German>Heimtücke VI</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CONNIVING7</Tag>
 		<English>Conniving VII</English>
 		<French>Connivence VII</French>
+		<German>Heimtücke VII</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CONNIVING8</Tag>
 		<English>Conniving VIII</English>
 		<French>Connivence VIII</French>
+		<German>Heimtücke VIII</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CONNIVING9</Tag>
 		<English>Conniving IX</English>
 		<French>Connivence IX</French>
+		<German>Heimtücke IX</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CONTROL</Tag>
@@ -6104,51 +6165,61 @@
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION1</Tag>
 		<English>Corruption I</English>
 		<French>Corruption I</French>
+		<German>Korruption I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION10</Tag>
 		<English>Corruption X</English>
 		<French>Corruption X</French>
+		<German>Korruption X</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION2</Tag>
 		<English>Corruption II</English>
 		<French>Corruption II</French>
+		<German>Korruption II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION3</Tag>
 		<English>Corruption III</English>
 		<French>Corruption III</French>
+		<German>Korruption III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION4</Tag>
 		<English>Corruption IV</English>
 		<French>Corruption IV</French>
+		<German>Korruption IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION5</Tag>
 		<English>Corruption V</English>
 		<French>Corruption V</French>
+		<German>Korruption V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION6</Tag>
 		<English>Corruption VI</English>
 		<French>Corruption VI</French>
+		<German>Korruption VI</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION7</Tag>
 		<English>Corruption VII</English>
 		<French>Corruption VII</French>
+		<German>Korruption VII</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION8</Tag>
 		<English>Corruption VIII</English>
 		<French>Corruption VIII</French>
+		<German>Korruption VIII</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CORRUPTION9</Tag>
 		<English>Corruption IX</English>
 		<French>Corruption IX</French>
+		<German>Korruption IX</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COVER</Tag>
@@ -7441,6 +7512,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Falle I</German>
 		<Polish>Usidlić I</Polish>
 	</TEXT>
 	<TEXT>
@@ -7451,6 +7523,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Falle II</German>
 		<Polish>Usidlić II</Polish>
 	</TEXT>
 	<TEXT>
@@ -7461,6 +7534,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Falle III</German>
 		<Polish>Usidlić III</Polish>
 	</TEXT>
 	<TEXT>
@@ -7677,16 +7751,19 @@
 		<Tag>TXT_KEY_PROMOTION_FAKE_IDENTITY1</Tag>
 		<English>Fake Identity I</English>
 		<French>Identité d'Emprunt I</French>
+		<German>Falsche Identität I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FAKE_IDENTITY2</Tag>
 		<English>Fake Identity II</English>
 		<French>Identité d'Emprunt II</French>
+		<German>Falsche Identität II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FAKE_IDENTITY3</Tag>
 		<English>Fake Identity III</English>
 		<French>Identité d'Emprunt III</French>
+		<German>Falsche Identität III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FALLEN_GRACE</Tag>
@@ -7706,6 +7783,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Giftzahn</German>
 		<Polish>Cyjanek W Zębie</Polish>
 	</TEXT>
 	<TEXT>
@@ -7837,16 +7915,19 @@
 		<Tag>TXT_KEY_PROMOTION_FIGHT_THE_POWER1</Tag>
 		<English>Fight the Power I</English>
 		<French>Contre le Pouvoir I</French>
+		<German>Widerstand I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIGHT_THE_POWER2</Tag>
 		<English>Fight the Power II</English>
 		<French>Contre le Pouvoir II</French>
+		<German>Widerstand II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIGHT_THE_POWER3</Tag>
 		<English>Fight the Power III</English>
 		<French>Contre le Pouvoir III</French>
+		<German>Widerstand III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FIREARMS1</Tag>
@@ -8181,46 +8262,55 @@
 		<Tag>TXT_KEY_PROMOTION_FOMENT1</Tag>
 		<English>Foment I</English>
 		<French>Incitation I</French>
+		<German>Aufwiegeln I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT2</Tag>
 		<English>Foment II</English>
 		<French>Incitation II</French>
+		<German>Aufwiegeln II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT3</Tag>
 		<English>Foment III</English>
 		<French>Incitation III</French>
+		<German>Aufwiegeln III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT4</Tag>
 		<English>Foment IV</English>
 		<French>Incitation IV</French>
+		<German>Aufwiegeln IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT5</Tag>
 		<English>Foment V</English>
 		<French>Incitation V</French>
+		<German>Aufwiegeln V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT6</Tag>
 		<English>Foment VI</English>
 		<French>Incitation VI</French>
+		<German>Aufwiegeln VI</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT7</Tag>
 		<English>Foment VII</English>
 		<French>Incitation VII</French>
+		<German>Aufwiegeln VII</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT8</Tag>
 		<English>Foment VIII</English>
 		<French>Incitation VIII</French>
+		<German>Aufwiegeln VIII</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FOMENT9</Tag>
 		<English>Foment IX</English>
 		<French>Incitation IX</French>
+		<German>Aufwiegeln IX</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FORCED_MARCH_STATUS</Tag>
@@ -9032,16 +9122,19 @@
 		<Tag>TXT_KEY_PROMOTION_HAWK_EYES1</Tag>
 		<English>Hawk Eyes I</English>
 		<French>Oeil de Faucon I</French>
+		<German>Adlerauge I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HAWK_EYES2</Tag>
 		<English>Hawk Eyes II</English>
 		<French>Oeil de Faucon II</French>
+		<German>Adlerauge II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HAWK_EYES3</Tag>
 		<English>Hawk Eyes III</English>
 		<French>Oeil de Faucon III</French>
+		<German>Adlerauge III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HAWK_RANGE1</Tag>
@@ -9397,16 +9490,19 @@
 		<Tag>TXT_KEY_PROMOTION_HIDE_IN_SHADOWS1</Tag>
 		<English>Hide In Shadows I</English>
 		<French>Tapis dans l'ombre I</French>
+		<German>Im Schatten verbergen I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HIDE_IN_SHADOWS2</Tag>
 		<English>Hide In Shadows II</English>
 		<French>Tapis dans l'ombre II</French>
+		<German>Im Schatten verbergen II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HIDE_IN_SHADOWS3</Tag>
 		<English>Hide In Shadows III</English>
 		<French>Tapis dans l'ombre III</French>
+		<German>Im Schatten verbergen III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HILLSMAN</Tag>
@@ -10059,6 +10155,7 @@
 		<Tag>TXT_KEY_PROMOTION_INSIDIOUSNESS_TEXT</Tag>
 		<English>[ICON_BULLET]%s1_Change%% Insidiousness</English>
 		<French>[ICON_BULLET]%s1_Change%% Incidiosité</French>
+		<German>[ICON_BULLET]Hinterlist: %s1_Change%%</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INSPIRE1</Tag>
@@ -13265,16 +13362,19 @@
 		<Tag>TXT_KEY_PROMOTION_RED_TAPE1</Tag>
 		<English>Red Tape I</English>
 		<French>Paperasserie I</French>
+		<German>Bürokratie I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RED_TAPE2</Tag>
 		<English>Red Tape II</English>
 		<French>Paperasserie II</French>
+		<German>Bürokratie II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RED_TAPE3</Tag>
 		<English>Red Tape III</English>
 		<French>Paperasserie III</French>
+		<German>Bürokratie III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REFLEXES_TEXT</Tag>
@@ -13296,7 +13396,7 @@
 		<Tag>TXT_KEY_PROMOTION_REMOVES_CANNOT_CAPTURE</Tag>
 		<English>[ICON_BULLET]Removes a cause for unit to be unable to capture enemy Cities or Units</English>
 		<French>[ICON_BULLET]Enlève l'incapacité de l'unité de capturer les villes ou unités ennemies</French>
-		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und Einheiten entfernt</German>
+		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und die Gefangennahme von Einheiten: -1</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REMOVES_COLD_IMMUNITY_TEXT</Tag>
@@ -14485,6 +14585,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Schattenjäger I</German>
 		<Italian>
 			<Text>Cacciatore di ombre I</Text>
 			<Gender>Male</Gender>
@@ -14505,6 +14606,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Schattenjäger II</German>
 		<Italian>
 			<Text>Cacciatore di ombre II</Text>
 			<Gender>Male</Gender>
@@ -14525,6 +14627,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Schattenjäger III</German>
 		<Italian>
 			<Text>Cacciatore di ombre III</Text>
 			<Gender>Male</Gender>
@@ -16013,6 +16116,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Gefangennahme I</German>
 		<Polish>Brać Jeńców I</Polish>
 	</TEXT>
 	<TEXT>
@@ -16023,6 +16127,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Gefangennahme II</German>
 		<Polish>Brać Jeńców II</Polish>
 	</TEXT>
 	<TEXT>
@@ -16033,6 +16138,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Gefangennahme III</German>
 		<Polish>Brać Jeńców III</Polish>
 	</TEXT>
 	<TEXT>
@@ -16043,6 +16149,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Gefangennahme IV</German>
 		<Polish>Brać Jeńców IV</Polish>
 	</TEXT>
 	<TEXT>
@@ -16053,6 +16160,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Gefangennahme V</German>
 		<Polish>Brać Jeńców V</Polish>
 	</TEXT>
 	<TEXT>
@@ -16804,11 +16912,13 @@
 		<Tag>TXT_KEY_PROMOTION_UPGRADEANYWHERE_ADD_TEXT</Tag>
 		<English>[ICON_BULLET]Adds a reason for the unit to be capable of upgrading anywhere.</English>
 		<French>[ICON_BULLET]Ajoute la possibilité pour l'unité d'être améliorée n'importe où.</French>
+		<German>[ICON_BULLET]Modernisierung an jedem beliebigen Ort: +1</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UPGRADEANYWHERE_REMOVE_TEXT</Tag>
 		<English>[ICON_BULLET]Removes a reason for the unit to be capable of upgrading anywhere.</English>
 		<French>[ICON_BULLET]Enlève la possibilité pour l'unité d'être améliorée n'importe où.</French>
+		<German>[ICON_BULLET]Modernisierung an jedem beliebigen Ort: -1</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UPGRADE_DISCOUNT</Tag>
@@ -16972,56 +17082,67 @@
 		<Tag>TXT_KEY_PROMOTION_WANTED</Tag>
 		<English>Wanted</English>
 		<French>Hors-la-loi recherché</French>
+		<German>Gesuchter Verbrecher</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WANTED1</Tag>
 		<English>Wanted I</English>
 		<French>Hors-la-loi recherché I</French>
+		<German>Gesuchter Verbrecher I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WANTED2</Tag>
 		<English>Wanted II</English>
 		<French>Hors-la-loi recherché II</French>
+		<German>Gesuchter Verbrecher II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WANTED3</Tag>
 		<English>Wanted III</English>
 		<French>Hors-la-loi recherché III</French>
+		<German>Gesuchter Verbrecher III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WANTED4</Tag>
 		<English>Wanted IV</English>
 		<French>Hors-la-loi recherché IV</French>
+		<German>Gesuchter Verbrecher IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WANTED5</Tag>
 		<English>Wanted V</English>
 		<French>Hors-la-loi recherché V</French>
+		<German>Gesuchter Verbrecher V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WANTED6</Tag>
 		<English>Wanted VI</English>
 		<French>Hors-la-loi recherché VI</French>
+		<German>Gesuchter Verbrecher VI</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WANTED7</Tag>
 		<English>Wanted VII</English>
 		<French>Hors-la-loi recherché VII</French>
+		<German>Gesuchter Verbrecher VII</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WANTED8</Tag>
 		<English>Wanted VIII</English>
 		<French>Hors-la-loi recherché VIII</French>
+		<German>Gesuchter Verbrecher VIII</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WANTED9</Tag>
 		<English>Wanted IX</English>
 		<French>Hors-la-loi recherché IX</French>
+		<German>Gesuchter Verbrecher IX</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WANTED_HELP</Tag>
 		<English>[COLOR_WARNING_TEXT]This unit may be arrested if seen![COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Cette unité peut être arrêtée si repérée![COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Diese Einheit kann verhaftet werden, wenn sie entdeckt wird![COLOR_REVERT]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WARMTH1</Tag>
@@ -17310,6 +17431,7 @@
 		<Tag>TXT_KEY_PROMOTION_WITHDRAW_ON_HILL_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Withdraw when battle is on Hills</English>
 		<French>[ICON_BULLET]%D1_Mod%% de repli lors d'un combat sur des Collines</French>
+		<German>[ICON_BULLET]%D1_Mod%% Rückzugswahrscheinlichkeit (Hügel)</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% alla Ritirata quando la battaglia è in collina</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% Withdraw contra when battle is on Hills</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% szansy uciekczki jeśli walka odbywa się na Wzgórzach</Polish>
@@ -17318,6 +17440,7 @@
 		<Tag>TXT_KEY_PROMOTION_WITHDRAW_ON_PEAK_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Withdraw when battle is on Peaks</English>
 		<French>[ICON_BULLET]%D1_Mod%% de repli lors d'un combat sur des Montagnes</French>
+		<German>[ICON_BULLET]%D1_Mod%% Rückzugswahrscheinlichkeit (Gebirge)</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% alla Ritirata quando la battaglia è in montagna</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% Withdraw contra when battle is on Peaks</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% szansy uciekczki jeśli walka odbywa się w Górach</Polish>
@@ -17326,6 +17449,7 @@
 		<Tag>TXT_KEY_PROMOTION_WITHDRAW_ON_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Withdraw when battle is on [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod%% de repli lors d'un combat sur: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
+		<German>[ICON_BULLET]%D1_Mod%% Rückzugswahrscheinlichkeit ([LINK=%s2_Type]%s3_TypeName[\LINK])</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% alla Ritirata quando la battaglia è [LINK=%s2_Type]%s3_TypeName[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% Withdraw contra when battle is on [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% szansy uciekczki jeśli walka odbywa się na [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>

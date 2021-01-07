@@ -756,6 +756,14 @@
 		<French>Le [COLOR_UNIT_TEXT]Cavalerie Alvarado[COLOR_REVERT] est une unité Guatemala unique.</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_ALWAYS_HOSTILE</Tag>
+		<English>[ICON_BULLET]Can Attack without Declaring War</English>
+		<French>[ICON_BULLET]Peut attaquer sans déclaration de guerre</French>
+		<German>[ICON_BULLET]kann ohne Kriegserklärung angreifen</German>
+		<Italian>[ICON_BULLET]Può attaccare senza dichiarare guerra</Italian>
+		<Spanish>[ICON_BULLET]Puede atacar sin declarar la guerra</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_AGHLAB</Tag>
 		<English>Al Aghlab</English>
 	</TEXT>
@@ -7505,6 +7513,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>[ICON_BULLET]Może uciec po schwytaniu (Szansa: %d1_Amount%%)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_ESPIONAGE_MISSION</Tag>
+		<English>[ICON_BULLET]Can Infiltrate another player's City (%D1_Change [ICON_ESPIONAGE])</English>
+		<French>[ICON_BULLET]Peut infiltrer la ville d'un autre joueur (%D1_Change [ICON_ESPIONAGE])</French>
+		<German>[ICON_BULLET]kann ausländische Städte infiltrieren (%D1_Change [ICON_ESPIONAGE])</German>
+		<Italian>[ICON_BULLET]Può infiltrarsi nella città di un altro giocatore (%D1_Change [ICON_ESPIONAGE])</Italian>
+		<Spanish>[ICON_BULLET]Se puede infiltrar en la ciudad de otro jugador (%D1_Change [ICON_ESPIONAGE])</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_ETHIOPIAN_OROMO_WARRIOR</Tag>
 		<English>Oromo Warrior</English>
 		<French>
@@ -12237,6 +12253,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_IGNORE_ZONE_OF_CONTROL</Tag>
 		<English>[ICON_BULLET]Ignores Zones of Control</English>
 		<French>[ICON_BULLET]Ignore les Zones de Contrôle</French>
+		<German>[ICON_BULLET]ignoriert Kontrollzonen</German>
 		<Italian>[ICON_BULLET]Ignora le zone di controllo</Italian>
 		<Polish>[ICON_BULLET]Ignoruje Stefę Kontroli</Polish>
 	</TEXT>
@@ -15297,6 +15314,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_LUNGE</Tag>
 		<English>[ICON_BULLET]Lunge: Gets +%d1_Amount%% Surround and Destroy Bonus when attacking.</English>
 		<French>[ICON_BULLET]Fente: Reçoit +%d1_Amount%% un bonus d'Encercler et Détruire Bonus en attaquant.</French>
+		<German>[ICON_BULLET]Ausfallschritt: Einheit erhält +%d1_Amount%% Einkesselungsbonus beim Angriff</German>		
 		<Italian>[ICON_BULLET]Affondo: ottiene +%d1_Amount%% al bonus di Circonda e distruggi quando attacca.</Italian>
 		<Polish>[ICON_BULLET]Pchnięcie: Otrzymuje +%d1_Amount%% bonusu Otocz i Zniszcz przy ataku.</Polish>
 	</TEXT>
@@ -15304,6 +15322,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_LUNGE_TOTAL</Tag>
 		<English>[ICON_BULLET]Lunge: Gets +%d1_Amount%% bonus from Surround and Destroy.</English>
 		<French>[ICON_BULLET]Fente: Reçoit +%d1_Amount%% un bonus d'Encercler et Détruire Bonus.</French>
+		<German>[ICON_BULLET]Ausfallschritt: +%d1_Amount%% Einkesselungsbonus</German>		
 		<Italian>[ICON_BULLET]Affondo: ottiene +%d1_Amount%% di bonus da Circonda e distruggi.</Italian>
 		<Polish>[ICON_BULLET]Pchnięcie: Otrzymuje +%d1_Amount%% bonusu z Otocz i Zniszcz.</Polish>
 	</TEXT>
@@ -15311,6 +15330,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_LUNGE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Lunge: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Fente: %d1_Amount%%</French>
+		<German>[ICON_BULLET]Ausfallschritt: %d1_Amount%%</German>		
 		<Italian>[ICON_BULLET]Affondo: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Pchnięcie: %d1_Amount%%</Polish>
 	</TEXT>
@@ -25714,6 +25734,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_TARGETS_UNIT_FIRST</Tag>
 		<English>[ICON_BULLET]Targets any %s1_unit_list first in combat. If Assassination is possible, these units are also the list of units that may be targeted for assassination.</English>
 		<French>[ICON_BULLET]Cible toutes les unités %s1_unit_list en premier au combat. Si l'assassinat est possible, ces unités sont également la liste des unités qui peuvent être ciblées pour l'assassinat.</French>
+		<German>[ICON_BULLET]greift Einheiten vom Typ %s1_unit_list im Kampf zuerst an (wenn ein Mordanschlag möglich ist, werden diese Einheiten ebenfalls bevorzugt als Ziele ausgewählt)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARIACURI</Tag>
@@ -26141,6 +26162,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_THIEF_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Thief[COLOR_REVERT]The main tactic of Thief is to avoid fights and instead sneak around the enemies. Thief is sometimes described as either a "first-person sneaker", "sneak-em-up" or a "first-person looter" to emphasize this difference.</English>
 		<French>La principale technique du [COLOR_UNIT_TEXT]Voleur [COLOR_REVERT] est d'éviter les combats et de passer inaperçu jusqu'à ses ennemis.</French>
+		<German>[COLOR_UNIT_TEXT]Diebe[COLOR_REVERT] gehen offenen Kämpfen aus dem Weg und schleichen sich lieber hinter ihre Gegner, um ihnen die Taschen auszuräumen oder sie hinterrücks zu meucheln.</German>
 		<Spanish>La táctica principal del [COLOR_UNIT_TEXT]Ladrón[COLOR_REVERT] es evitar el combate directo, para moverse sigilosamente alrededor de los enemigos. Los ladrones son descritos a veces como "furtivos en primera persona", "sneak'em up" o "saqueadores en primera persona" para enfatizar esta diferencia.</Spanish>
 		<Polish>Głowną taktyką [COLOR_UNIT_TEXT]złodzieja[COLOR_REVERT] jest unikanie walki i przemykanie cichaczem obok oddziałów wroga.</Polish>
 	</TEXT>
@@ -26586,7 +26608,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_TRADE_MISSION</Tag>
 		<English>[ICON_BULLET]Can Conduct a Trade Mission (Base: %d1, Mult: x%d2)</English>
 		<French>[ICON_BULLET]Peut effectuer une mission commerciale (Base: %d1, Mult: x%d2)</French>
-		<German>[ICON_BULLET]Kann eine Handelsmission ausführen (Base: %d1, Mult: x%d2)</German>
+		<German>[ICON_BULLET]kann eine Handelsmission ausführen (Basiswert: %d1, Mult.: x%d2)</German>
 		<Italian>[ICON_BULLET]Può eseguire una missione commerciale (Base: %d1, Mult: x%d2)</Italian>
 		<Spanish>[ICON_BULLET]Puede realizar una misión comercial (Base: %d1, Mult: x%d2)</Spanish>
 	</TEXT>
@@ -27511,6 +27533,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_UNNERVE</Tag>
 		<English>[ICON_BULLET]Unnerve: Unit counts as +%d1_Amount%% strength when surrounding.</English>
 		<French>[ICON_BULLET]Sang froid : L'unité compte pour +%d1_Amount%% de force lorsqu'elle est encerclée.</French>
+		<German>[ICON_BULLET]Entnerven: Einheit erhält +%d1_Amount%% Stärke beim Einkesseln von Gegnern</German>
 		<Italian>[ICON_BULLET]Snervamento: l'unità riceve +%d1_Amount%% di forza quando circonda il nemico.</Italian>
 		<Polish>[ICON_BULLET]Załamanie: +%d1_Amount%% siły przy poddaniu.</Polish>
 	</TEXT>
@@ -27518,6 +27541,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_UNNERVE_TOTAL</Tag>
 		<English>[ICON_BULLET]Unnerve: Counts as +%d1_Amount%% strength when surrounding.</English>
 		<French>[ICON_BULLET]Sang froid : Compte comme +%d1_Amount%% Puissance lorsqu'encerclé.</French>
+		<German>[ICON_BULLET]Entnerven: +%d1_Amount%% Stärke beim Einkesseln</German>
 		<Italian>[ICON_BULLET]Snervamento: fornisce +%d1_Amount%% alla forza con manovre di accerchiamento.</Italian>
 		<Polish>[ICON_BULLET]Załamanie: +%d1_Amount%% przy odwrocie.</Polish>
 	</TEXT>
@@ -27525,6 +27549,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_UNNERVE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Unnerve: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Sang froid: %d1_Amount%%</French>
+		<German>[ICON_BULLET]Entnerven: %d1_Amount%%</German>
 		<Italian>[ICON_BULLET]Snervamento: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Załamanie: %d1_Amount%%</Polish>
 	</TEXT>
