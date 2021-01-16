@@ -26339,8 +26339,8 @@
 		<ScriptID>AS2D_TECH_MICROBIOLOGY</ScriptID>
 		<SoundID>SND_TECH_MICROBIOLOGY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -26362,8 +26362,8 @@
 		<ScriptID>AS2D_TECH_SEXTANT</ScriptID>
 		<SoundID>SND_TECH_SEXTANT</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -26385,8 +26385,8 @@
 		<ScriptID>AS2D_TECH_METALLURGY</ScriptID>
 		<SoundID>SND_TECH_METALLURGY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -26431,8 +26431,8 @@
 		<ScriptID>AS2D_TECH_STOCK_BROKERING</ScriptID>
 		<SoundID>SND_TECH_STOCK_BROKERING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -26477,8 +26477,8 @@
 		<ScriptID>AS2D_TECH_PATENTRIGHT</ScriptID>
 		<SoundID>SND_TECH_PATENTRIGHT</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -26546,8 +26546,8 @@
 		<ScriptID>AS2D_TECH_BATTLEFIELD_MEDICINE</ScriptID>
 		<SoundID>SND_TECH_BATTLEFIELD_MEDICINE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -27213,8 +27213,8 @@
 		<ScriptID>AS2D_TECH_GRAND_WAR</ScriptID>
 		<SoundID>SND_TECH_GRAND_WAR</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -28731,8 +28731,8 @@
 		<ScriptID>AS2D_TECH_OIL_PAINTING</ScriptID>
 		<SoundID>SND_TECH_OIL_PAINTING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -28846,8 +28846,8 @@
 		<ScriptID>AS2D_TECH_HOT_AIR_BALLOON</ScriptID>
 		<SoundID>SND_TECH_HOT_AIR_BALLOON</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -29007,8 +29007,8 @@
 		<ScriptID>AS2D_TECH_HUMANISM</ScriptID>
 		<SoundID>SND_TECH_HUMANISM</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -31422,8 +31422,8 @@
 		<ScriptID>AS2D_TECH_GEOLOGY</ScriptID>
 		<SoundID>SND_TECH_GEOLOGY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -35102,8 +35102,8 @@
 		<ScriptID>AS2D_TECH_BOTANY</ScriptID>
 		<SoundID>SND_TECH_BOTANY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -35194,8 +35194,8 @@
 		<ScriptID>AS2D_TECH_CALCULUS</ScriptID>
 		<SoundID>SND_TECH_CALCULUS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -35585,8 +35585,8 @@
 		<ScriptID>AS2D_TECH_COLONIALISM</ScriptID>
 		<SoundID>SND_TECH_COLONIALISM</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -36275,8 +36275,8 @@
 		<ScriptID>AS2D_TECH_DUELING</ScriptID>
 		<SoundID>SND_TECH_DUELING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -36413,8 +36413,8 @@
 		<ScriptID>AS2D_TECH_ENLIGHTENMENT</ScriptID>
 		<SoundID>SND_TECH_ENLIGHTENMENT</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -36758,8 +36758,8 @@
 		<ScriptID>AS2D_TECH_FLINTLOCK</ScriptID>
 		<SoundID>SND_TECH_FLINTLOCK</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -38598,8 +38598,8 @@
 		<ScriptID>AS2D_TECH_MERCANTILISM</ScriptID>
 		<SoundID>SND_TECH_MERCANTILISM</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -38848,11 +38848,11 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_MINE_WARFARE2</ScriptID>
-		<SoundID>SND_TECH_MINE_WARFARE2</SoundID>
+		<ScriptID>AS2D_TECH_MINE_WARFARE</ScriptID>
+		<SoundID>SND_TECH_MINE_WARFARE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -39219,8 +39219,8 @@
 		<ScriptID>AS2D_TECH_NAVIGATION</ScriptID>
 		<SoundID>SND_TECH_NAVIGATION</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -39357,8 +39357,8 @@
 		<ScriptID>AS2D_TECH_NOVO_PALEONTOLOGY</ScriptID>
 		<SoundID>SND_TECH_NOVO_PALEONTOLOGY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -40346,8 +40346,8 @@
 		<ScriptID>AS2D_TECH_REPRESENTATIVE_DEMOCRACY</ScriptID>
 		<SoundID>SND_TECH_REPRESENTATIVE_DEMOCRACY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -41358,8 +41358,8 @@
 		<ScriptID>AS2D_TECH_TEAM_SPORTS</ScriptID>
 		<SoundID>SND_TECH_TEAM_SPORTS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -42048,8 +42048,8 @@
 		<ScriptID>AS2D_TECH_WEATHER_FORECASTING</ScriptID>
 		<SoundID>SND_TECH_WEATHER_FORECASTING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -42278,8 +42278,8 @@
 		<ScriptID>AS2D_TECH_ZOOLOGY</ScriptID>
 		<SoundID>SND_TECH_ZOOLOGY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -43060,8 +43060,8 @@
 		<ScriptID>AS2D_TECH_RENAISSANCE_LIFESTYLE</ScriptID>
 		<SoundID>SND_TECH_RENAISSANCE_LIFESTYLE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
-		<iMinVolume>100</iMinVolume>
-		<iMaxVolume>100</iMaxVolume>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
@@ -43706,6 +43706,52 @@
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
+		<iPitchChangeDown>0</iPitchChangeDown>
+		<iPitchChangeUp>0</iPitchChangeUp>
+		<iMinLeftPan>-1</iMinLeftPan>
+		<iMaxLeftPan>-1</iMaxLeftPan>
+		<iMinRightPan>-1</iMinRightPan>
+		<iMaxRightPan>-1</iMaxRightPan>
+		<bLooping>0</bLooping>
+		<iMinTimeDelay>0</iMinTimeDelay>
+		<iMaxTimeDelay>0</iMaxTimeDelay>
+		<bTaperForSoundtracks>0</bTaperForSoundtracks>
+		<iLengthOfSound>0</iLengthOfSound>
+		<fMinDryLevel>1.0</fMinDryLevel>
+		<fMaxDryLevel>1.0</fMaxDryLevel>
+		<fMinWetLevel>0.0</fMinWetLevel>
+		<fMaxWetLevel>0.0</fMaxWetLevel>
+		<iNotPlayPercent>0</iNotPlayPercent>
+	</Script2DSound>
+	<Script2DSound>
+		<ScriptID>AS2D_TECH_HELIOCENTRISM</ScriptID>
+		<SoundID>SND_TECH_HELIOCENTRISM</SoundID>
+		<SoundType>GAME_SPEECH</SoundType>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
+		<iPitchChangeDown>0</iPitchChangeDown>
+		<iPitchChangeUp>0</iPitchChangeUp>
+		<iMinLeftPan>-1</iMinLeftPan>
+		<iMaxLeftPan>-1</iMaxLeftPan>
+		<iMinRightPan>-1</iMinRightPan>
+		<iMaxRightPan>-1</iMaxRightPan>
+		<bLooping>0</bLooping>
+		<iMinTimeDelay>0</iMinTimeDelay>
+		<iMaxTimeDelay>0</iMaxTimeDelay>
+		<bTaperForSoundtracks>0</bTaperForSoundtracks>
+		<iLengthOfSound>0</iLengthOfSound>
+		<fMinDryLevel>1.0</fMinDryLevel>
+		<fMaxDryLevel>1.0</fMaxDryLevel>
+		<fMinWetLevel>0.0</fMinWetLevel>
+		<fMaxWetLevel>0.0</fMaxWetLevel>
+		<iNotPlayPercent>0</iNotPlayPercent>
+	</Script2DSound>
+	<Script2DSound>
+		<ScriptID>AS2D_TECH_LEAD_GLASS</ScriptID>
+		<SoundID>SND_TECH_LEAD_GLASS</SoundID>
+		<SoundType>GAME_SPEECH</SoundType>
+		<iMinVolume>120</iMinVolume>
+		<iMaxVolume>120</iMaxVolume>
 		<iPitchChangeDown>0</iPitchChangeDown>
 		<iPitchChangeUp>0</iPitchChangeUp>
 		<iMinLeftPan>-1</iMinLeftPan>
