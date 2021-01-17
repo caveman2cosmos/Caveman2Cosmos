@@ -29,4 +29,4 @@ python2 "$GET_PIP_SCRIPT" || exit $?
 cd - || exit $?
 rm --recursive "$TEMP_DIR" || exit $?
 
-echo "Done setting up pylint environment"
+echo "Setup finished"
