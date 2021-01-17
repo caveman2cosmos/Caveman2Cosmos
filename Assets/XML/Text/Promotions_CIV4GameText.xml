@@ -11563,15 +11563,6 @@
 		<Polish>Wsparcie Mobilności III</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MOUNTIANEER</Tag>
-		<English>Mountaineer</English>
-		<French>Montagnard</French>
-		<German>Bergsteiger</German>
-		<Italian>Alpinista</Italian>
-		<Spanish>Montañero</Spanish>
-		<Polish>Alpinista</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MOVING_PILLAGE_TEXT</Tag>
 		<English>[ICON_BULLET]Automatically pillages improvements on move.</English>
 		<French>[ICON_BULLET]Réalise automatiquement les pillages des aménagements lors de ses déplacements.</French>

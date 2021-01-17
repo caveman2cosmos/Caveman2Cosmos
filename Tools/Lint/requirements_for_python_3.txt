@@ -1,0 +1,1 @@
+pylint # use latest pylint version for python 3

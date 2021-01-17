@@ -61,7 +61,6 @@ public:
 	const wchar_t* getCivilopediaKey() const;
 	const wchar_t* getHelpKey() const;
 	const wchar_t* getStrategyKey() const;
-	//const wchar_t* getGenericCategoryKey() const;
 
 	// for python wide string handling
 	std::wstring pyGetTextKey() const		{ return getTextKeyWide(); }
@@ -71,7 +70,6 @@ public:
 	std::wstring pyGetCivilopedia() const	{ return getCivilopedia(); }
 	std::wstring pyGetHelp() const			{ return getHelp(); }
 	std::wstring pyGetStrategy() const		{ return getStrategy(); }
-//	std::wstring pyGetGenericCategory()		{ return getGenericCategory(); }
 
 	DllExport const wchar_t* getTextKeyWide() const;
 	DllExport const wchar_t* getDescription(uint uiForm = 0) const;
@@ -79,9 +77,6 @@ public:
 	const wchar_t* getCivilopedia() const;
 	DllExport const wchar_t* getHelp() const;
 	const wchar_t* getStrategy() const;
-/*	const wchar_t* getGenericCategory() const;*/
-
-	bool isMatchForLink(const std::wstring szLink, bool bKeysOnly) const;
 
 	virtual void read(FDataStreamBase* pStream) {}
 	virtual void write(FDataStreamBase* pStream) {}
@@ -101,13 +96,11 @@ protected:
 
 	bool m_bGraphicalOnly;
 	CvString m_szType;
-	CvString m_szButton;	// Used for Infos that don't require an ArtAssetInfo
+	CvString m_szButton; // Used for Infos that don't require an ArtAssetInfo
 	CvWString m_szTextKey;
 	CvWString m_szCivilopediaKey;
 	CvWString m_szHelpKey;
-	CvWString m_szStrategyKey;/*
-	CvWString m_szGenericCategoryKey;*/
-
+	CvWString m_szStrategyKey;
 
 	// translated text
 	std::vector<CvString> m_aszExtraXMLforPass3;
@@ -115,8 +108,7 @@ protected:
 	mutable CvWString m_szCachedText;
 	mutable CvWString m_szCachedHelp;
 	mutable CvWString m_szCachedStrategy;
-	mutable CvWString m_szCachedCivilopedia;/*
-	mutable CvWString m_szCachedGenericCategory;*/
+	mutable CvWString m_szCachedCivilopedia;
 };
 
 //
@@ -1621,8 +1613,8 @@ public:
 	const wchar_t* getDescription() const;
 	const wchar_t* getCivilopedia() const;
 	const wchar_t* getHelp() const;
-	const wchar_t* getStrategy() const;/*
-	const wchar_t* getGenericCategory() const;*/
+	const wchar_t* getStrategy() const;
+
 	virtual const TCHAR* getButton() const;
 	const wchar_t* getTextKeyWide() const;
 

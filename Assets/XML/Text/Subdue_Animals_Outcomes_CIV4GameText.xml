@@ -10,7 +10,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ANIMAL_COMBAT</Tag>
 		<English>Animal vs animal or animal vs man in a spectacular fight.</English>
-		<French>Combat spéctaculaire - Animal contre Humain.</French>
+		<French>Animal contre animal ou animal contre homme dans un combat spectaculaire.</French>
 		<Italian>Spettacolari combattimenti di animali contro animali, o animali contro uomini.</Italian>
 		<Polish>Zwierzę kontra zwierzę lub zwierzę kontra człowiek w walce na arenie!</Polish>
 	</TEXT>
@@ -77,7 +77,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT3</Tag>
-		<English>Man against animals in an arena, skill and style are the point. This will consume the unit providing a tempory happiness boost.</English>
+		<English>Man against animals in an arena, skill and style are the point. This will consume the unit providing a temporary happiness boost.</English>
 		<French>L'Homme contre l'animal dans l'arène. expérience et style sont au rendez-vous. L'unité disparaîtra pour un gain temporaire de bonheur.</French>
 		<Italian>Un uomo contro un animale in un'arena: tutto ciò che conta sono stile e abilità. Consuma l'unità selezionata fornendo un bonus temporaneo alla felicità.</Italian>
 		<Polish>Człowiek przeciwko zwierzętom na arenie. Styl i finezja to podstawa. Ta akcja usunie jednostkę w zamian tymczasowo zwiększając zadowolenie miejskiej populacji.</Polish>
@@ -148,7 +148,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_STUDY</Tag>
 		<English>This will consume the unit providing a science boost based on which building is available in the city (Butcher or Biology Lab).</English>
-		<French>L'unité disparaîtra, au profit d'un bonus de science, dépendant du type de bâtiment dans la ville (Abbatoir, Laboratoire de biologie...).</French>
+		<French>L'unité disparaîtra, au profit d'un bonus de science, dépendant du type de bâtiment dans la ville (Abattoir, Laboratoire de biologie...).</French>
 		<Italian>Consumerà l'unità, fornendo un bonus alla ricerca basato sull'edificio presente in città (Macelleria o Laboratorio di biologia).</Italian>
 		<Polish>Ta akcja usunie jednostkę dostarczając małej ilości nauki bazując na tym jakie budynki są dostępne w mieście (Rzeźnik lub Laboratorium Biologiczne).</Polish>
 	</TEXT>

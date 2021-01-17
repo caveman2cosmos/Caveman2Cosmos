@@ -248,6 +248,9 @@ public:
 	short getNumPrereqInCityBuildings() const;
 	bool isPrereqInCityBuilding(const int i) const;
 
+	int getPrereqNotInCityBuilding(const int i) const;
+	short getNumPrereqNotInCityBuildings() const;
+
 	int getSpecialistYieldChange(int i, int j) const;
 	int* getSpecialistYieldChangeArray(int i) const;
 
@@ -315,7 +318,6 @@ public:
 	bool isPrereqAndTerrain(int i) const;
 	bool isPrereqOrImprovement(int i) const;
 	bool isPrereqOrFeature(int i) const;
-	bool isPrereqNotBuilding(int i) const;
 	int  getBuildingProductionModifier(int i) const;
 	int  getGlobalBuildingProductionModifier(int i) const;
 	int  getGlobalBuildingCostModifier(int i) const;
@@ -623,7 +625,6 @@ private:
 	int* m_piGlobalBuildingCostModifier;
 	int* m_piBuildingHappinessChanges;
 	int* m_piPrereqNumOfBuilding;
-	bool* m_pbPrereqNotBuilding;
 
 	CvPropertyManipulators m_PropertyManipulators;
 
@@ -894,6 +895,7 @@ protected:
 	int** m_ppaiLocalSpecialistCommerceChange;
 
 	std::vector<int> m_aiPrereqInCityBuildings;
+	std::vector<int> m_vPrereqNotInCityBuildings;
 	std::vector<int> m_aePrereqOrBonuses;
 	std::vector<int> m_vPrereqOrBuilding;
 	std::vector<int> m_vReplacementBuilding;

@@ -520,20 +520,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_CORAL</Tag>
 		<English>Build [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]Lighthouse[\LINK] (Coral)</English>
-		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE]Phare[\LINK] (Coral)</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_LIGHTHOUSE]Leuchtturm[\LINK] (Coral)</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Coral)</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Coral)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_LIGHTHOUSE]Latarnię Morską[\LINK] (Coral)</Polish>
+		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]Phare[\LINK] (Coral)</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]Leuchtturm[\LINK] (Coral)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]Faro[\LINK] (Coral)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]Faro[\LINK] (Coral)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]Latarnię Morską[\LINK] (Coral)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_REEF</Tag>
 		<English>Build [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Lighthouse[\LINK] (Reef)</English>
-		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE]Phare[\LINK] (Reef)</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_LIGHTHOUSE]Leuchtturm[\LINK] (Reef)</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Reef)</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Reef)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_LIGHTHOUSE]Latarnię Morską[\LINK] (Reef)</Polish>
+		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Phare[\LINK] (Reef)</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Leuchtturm[\LINK] (Reef)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Faro[\LINK] (Reef)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Faro[\LINK] (Reef)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Latarnię Morską[\LINK] (Reef)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LISTENING_NODE</Tag>
@@ -555,11 +555,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUMBERJACK</Tag>
 		<English>Build [LINK=IMPROVEMENT_LUMBERJACK]Lumberjack[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_LUMBER_JACK]Camp de bûcherons[\LINK]</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_LUMBER_JACK]Holzfällerlager[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_LUMBER_JACK]Campo di legname[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_LUMBER_JACK]Campamento maderero[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_LUMBER_JACK]Obóz Drwali[\LINK]</Polish>
+		<French>Construire un [LINK=IMPROVEMENT_LUMBERJACK]Camp de bûcherons[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_LUMBERJACK]Holzfällerlager[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_LUMBERJACK]Campo di legname[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_LUMBERJACK]Campamento maderero[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_LUMBERJACK]Obóz Drwali[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUMBERMILL</Tag>
@@ -609,10 +609,10 @@
 		<Tag>TXT_KEY_BUILD_MODERN_WINDMILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_MODERN_WINDMILL]Modern Windmill[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moulin à vent Moderne[\LINK]</French>
-		<German>Bauen a [LINK=IMPROVEMENT_MODERNWINDMILL]Modern-Windrad[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_MODERNWINDMILL]Moderno Mulino a vento[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_MODERNWINDMILL]Aerogenerador[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_MODERNWINDMILL]Współczesny Wiatrak[\LINK]</Polish>
+		<German>Bauen a [LINK=IMPROVEMENT_MODERN_WINDMILL]Modern-Windrad[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moderno Mulino a vento[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_MODERN_WINDMILL]Aerogenerador[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_MODERN_WINDMILL]Współczesny Wiatrak[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MOUNTAIN_MINE</Tag>
@@ -666,7 +666,7 @@
 		<German>Bauen ein [LINK=IMPROVEMENT_ORCHARD]Obstplantage[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_ORCHARD]Frutteto[\LINK]</Italian>
 		<Spanish>Plantar [LINK=IMPROVEMENT_ORCHARD]Huerta[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_APPLE_FARM]Sad[\LINK]</Polish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_ORCHARD]Sad[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PASTURE</Tag>

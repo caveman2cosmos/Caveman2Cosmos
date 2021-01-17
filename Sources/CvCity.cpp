@@ -3140,7 +3140,6 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	/* when not ordinarily hiding uncosntructable (since you cannot influence your vicinity bonuses	*/
 	/* so its not useful information for the most part												*/
 	/************************************************************************************************/
-	const int numBuildingInfos = GC.getNumBuildingInfos();
 	if (!bExposed)
 	{
 		if (kBuilding.getPrereqVicinityBonus() != NO_BONUS
@@ -3189,14 +3188,11 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 	if (!bTestVisible && !bIgnoreBuildings || bAffliction)
 	{
-		if (kBuilding.isPrereqNotBuilding(NO_BUILDING))
+		for (int iI = 0; iI < kBuilding.getNumPrereqNotInCityBuildings(); ++iI)
 		{
-			for (int iI = 0; iI < numBuildingInfos; iI++)
+			if (getNumActiveBuilding(static_cast<BuildingTypes>(kBuilding.getPrereqNotInCityBuilding(iI))) > 0)
 			{
-				if (kBuilding.isPrereqNotBuilding(iI) && getNumActiveBuilding((BuildingTypes)iI) > 0)
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 

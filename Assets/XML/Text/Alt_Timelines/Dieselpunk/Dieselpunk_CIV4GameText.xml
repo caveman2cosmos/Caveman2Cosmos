@@ -14,7 +14,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AERODROME_PEDIA</Tag>
 		<English>This wide open field, sometimes paved, sometimes not, sometimes underwater, usually surrounded by hangers, workshops and the like, serves as an arrival and departure point for all manner of aircraft. The emerging airliner industry appreciates a place to park their airships and seaplanes to take on more paying customers.</English>
-		<Italian>Questo ampio spazio aperto, a volte pavimentato mentre altre no, a volte sull'acqua, solitamente circodnato da hangar, officine e altre sttrutture simili serve come punto di arrivo e partenza per molti aerei. L'industria aerea emergente apprezza questo spazio per posteggiare i loro velivoli e idrovolanti per imbarcare i viaggiatori paganti.</Italian>
+		<Italian>Questo ampio spazio aperto, a volte pavimentato mentre altre no, a volte sull'acqua, solitamente circondato da hangar, officine e altre strutture simili serve come punto di arrivo e partenza per molti aerei. L'industria aerea emergente apprezza questo spazio per posteggiare i loro velivoli e idrovolanti per imbarcare i viaggiatori paganti.</Italian>
 		<Polish>Aerodrom - obszar, na którym lądują, startują i kołują statki powietrzne (samoloty, śmigłowce, sterowce). Ich wyposażenie zróżnicowane jest w zależności od liczby odprawianych pasażerów i przeładowywanych towarów.</Polish>
 	</TEXT>
 	<TEXT>
@@ -31,9 +31,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_PEDIA</Tag>
-		<English>Dieselpunk is based on the aesthetics of the interbellum period between the end of the World War I and the beginning of World War II. This sub-genre is sometimes named Decopunk, referring to the Art Deco art style (including its Streamline Moderne variant). The genre combines the artistic and genre influences of the period (including pulp magazines, serial films, film noir, art deco, and wartime pin-ups) with postmodern technology and sensibilities.</English>
+		<English>Dieselpunk is based on the aesthetics of the period between the end of the World War I and the beginning of World War II. This sub-genre is sometimes named Decopunk, referring to the Art Deco art style (including its Streamline Moderne variant). The genre combines the artistic and genre influences of the period (including pulp magazines, serial films, film noir, art deco, and wartime pin-ups) with postmodern technology and sensibilities.</English>
 		<Italian>Dieselpunk è basata sull'estetica nel periodo tra la fine della prima guerra mondiale e l'inizio della seconda. Questo sottogenere viene spesso chiamato Decopunk, in riferimento alla corrente artistica Art Deco (inclusa la sua variante moderna). Il genere combina le influenze artistiche di questo periodo (incluse riviste di tendenza, serie tv, film noir, art deco e pin-up) con la tecnologia e la sensibilità post-moderna.</Italian>
-		<Polish>Dieselpunk - termin, którym określa się odłam cyberpunku z akcją osadzoną najczęściej w latach 20. 30. i 40. XX wieku. Panuje w nim nastrój epoki wynalazków, obalenia starego ładu po Wielkiej Wojnie uważanej za ostatnią wojnę przed wielką przyszłością ludzkości. Panuje futurystyczny entuzjazm. Kina, teatry, tramwaje, telegramy, telefony, radia, samoloty, wyzwolone z wiktoriańskiego gorsetu kobiety niczym Tamara Łempicka.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_STRATEGY</Tag>
@@ -123,7 +122,6 @@
 		<Tag>TXT_KEY_BUILDING_RADIOPLEX_PEDIA</Tag>
 		<English>Radio theater is a dramatized, purely acoustic performance, broadcast on radio or published on audio media, such as tape or CD. With no visual component, radio drama depends on dialogue, music and sound effects to help the listener imagine the characters and story. It is auditory in the physical dimension but equally powerful as a visual force in the psychological dimension.</English>
 		<Italian>Il teatro radio è una performance drammatizzata, puramente acustica, trasmessa alla radio o pubblicata su file audio, come cassette o CD. Senza effetti visivi, le trasmissioni radiofoniche dipendono dal dialogo, dalla musica e dagli effetti sonori per aiutare l'ascoltatore a immaginare i personaggi e la storia. Nella dimensione psicologica, ha la stessa forza di una rappresentazione visiva.</Italian>
-		<Polish>Teatr ze słuchowiskami radiowymi.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RADIOPLEX_STRATEGY</Tag>
@@ -134,24 +132,23 @@
 		<Tag>TXT_KEY_BUILDING_THEREMIN_FACTORY</Tag>
 		<English>Theremin Factory</English>
 		<French>
-			<Text>Usine d'étherphones</Text>
+			<Text>Usine de thérémine</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Fabbrica Theremin</Italian>
-		<Polish>Fabryka Tereminów</Polish>
+		<Italian>Fabbrica di theremin</Italian>
+		<Polish>Fabryka Thereminów</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THEREMIN_FACTORY_PEDIA</Tag>
-		<English>The theremin is an early electronic musical instrument controlled without discernible physical contact from the player. It is named after its Russian inventor, Professor Léon Theremin, who patented the device in 1928. The controlling section usually consists of two metal antennas which sense the position of the player's hands and control oscillators for frequency with one hand, and amplitude (volume) with the other, so it can be played without being touched. The electric signals from the theremin are amplified and sent to a loudspeaker.</English>
-		<Italian>Theremin è un primitivo strumento elettronico musicale controllato senza contatto fisico dal suonatore. È chiamato così sulla base del suo inventore russo, Professor Léon Theremin, che brevettò lo strumento nel 1928. La sezione di controllo consiste di due antenne in metallo che rilevano la posizione delle mani del suonatore che controlla gli oscillatori di frequenza con una mano e il volume con l'altra, cosicché può essere suonato senza contatto. I segnali elettrici dal Theremin sono amplificati e inviati ad un amplificatore.</Italian>
-		<Polish>Theremin (eterofon, termenvox) - instrument muzyczny z grupy elektrofonów elektronicznych skonstruowany przez rosyjskiego fizyka i wynalazcę Lwa Termena. Dźwięki produkowane przez theremin są ubogie harmonicznie i przypominają w swym brzmieniu wycie, jęk, kobiecy głos, gwizd, piłę, flet, skrzypce lub inne instrumenty.</Polish>
+		<English>A theremin factory is an industrial site where workers manufacture theremins, an early electronic musical instrument controlled without discernible physical contact from the player. It is named after its Russian inventor, Professor Léon Theremin, who patented the device in 1928. The controlling section usually consists of two metal antennas which sense the position of the player's hands and control oscillators for frequency with one hand, and amplitude (volume) with the other, so it can be played without being touched. The electric signals from the theremin are amplified and sent to a loudspeaker.</English>
+		<Italian>Una fabbrica di theremin è un sito industriale dove i lavoratori producono theremin, uno dei primi strumenti musicali elettronici, che può essere suonato anche senza un contatto fisico completo. Prende il nome dal suo inventore, il professore russo Léon Theremin, che brevettò il dispositivo nel 1928. La sezione di controllo consiste solitamente di due antenne metalliche, che rilevano la posizione delle mani del musicista e in base a esse controllano rispettivamente gli oscillatori di frequenza e l'ampiezza (ossia il volume) senza che li si tocchi direttamente. I segnali elettrici del theremin vengono poi amplificati e inviati a un altoparlante.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THEREMIN_FACTORY_STRATEGY</Tag>
-		<English>Build a Theremin Factory to increase your city's wealth.</English>
-		<French>Construisez une [COLOR_BUILDING_TEXT]Usine d'étherphones[COLOR_REVERT] pour augmenter la richesse la ville</French>
-		<Italian>Costruisci una Fabbrica Theremin per incrementare la ricchezza della tua città.</Italian>
+		<English>Build a [COLOR_BUILDING_TEXT]Theremin Factory[COLOR_REVERT] to increase your city's wealth.</English>
+		<French>Construisez une [COLOR_BUILDING_TEXT]Usine de thérémine[COLOR_REVERT] pour augmenter la richesse de la ville.</French>
+		<Italian>Costruisci una [COLOR_BUILDING_TEXT]Fabbrica di theremin[COLOR_REVERT] per incrementare la ricchezza della tua città.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZUSE_COMPUTER</Tag>
