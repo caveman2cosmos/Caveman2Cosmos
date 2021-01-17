@@ -12091,7 +12091,7 @@ int CvCityAI::AI_cityValue() const
 {
 
 	AreaAITypes eAreaAI = area()->getAreaAIType(getTeam());
-	if ((eAreaAI == AREAAI_OFFENSIVE) || (eAreaAI == AREAAI_MASSING) || (eAreaAI == AREAAI_DEFENSIVE))
+	if (eAreaAI == AREAAI_OFFENSIVE || eAreaAI == AREAAI_MASSING || eAreaAI == AREAAI_DEFENSIVE)
 	{
 		return 0;
 	}

@@ -4805,61 +4805,56 @@ int CvPlayer::countNumCitiesWithOrbitalInfrastructure() const
 int CvPlayer::countOwnedBonuses(BonusTypes eBonus) const
 {
 	PROFILE("CvPlayer::countOwnedBonuses");
-	CvPlot* pLoopPlot;
-	int iI, iJ;
 
-	if ( eBonus < 0 || eBonus >= GC.getNumBonusInfos() )
+	if (eBonus < 0 || eBonus >= GC.getNumBonusInfos())
 	{
 		FErrorMsg("Bonus value must be valid for countOwnedBonuses");
 		return 0;
 	}
 
-	if ( m_cachedBonusCount == NULL )
+	if (m_cachedBonusCount == NULL)
 	{
 		m_cachedBonusCount = new int[GC.getNumBonusInfos()];
 		m_cachedBonusCountGameTurn = -1;
 	}
 
-	//	We keep a per-turn cached result value for each bonus type
-	//	Strictly this only gives approximately the right answer (since bonuses can
-	//	change hands mid-turn, but the the purposes the evaluation is used for
-	//	that's plenty good enough
-	if ( GC.getGame().getGameTurn() != m_cachedBonusCountGameTurn )
+	// We keep a per-turn cached result value for each bonus type.
+	// This only gives an approximate tally, since bonuses can change hands mid-turn,
+	// but for the purpose of the evaluation that's plenty good enough.
+	if (GC.getGame().getGameTurn() != m_cachedBonusCountGameTurn)
 	{
-		for(iI = 0; iI < GC.getNumBonusInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
 			m_cachedBonusCount[iI] = 0;
 		}
-
 		const bool bAdvancedStart = (getAdvancedStartPoints() >= 0) && (getCurrentEra() < 3);
 
-		//count bonuses outside city radius
-		for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+		// Count bonuses outside city radius
+		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			pLoopPlot = GC.getMap().plotByIndex(iI);
+			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
-			if ((pLoopPlot->getOwner() == getID() && !pLoopPlot->isCityRadius()) ||
-				(bAdvancedStart && pLoopPlot->isRevealed(getTeam(), false)))
+			if (pLoopPlot->getOwner() == getID() && !pLoopPlot->isCityRadius()
+			||	bAdvancedStart && pLoopPlot->isRevealed(getTeam(), false))
 			{
-				BonusTypes ePlotBonus = pLoopPlot->getBonusType(getTeam());
-				if ( NO_BONUS != ePlotBonus )
+				const BonusTypes ePlotBonus = pLoopPlot->getBonusType(getTeam());
+
+				if (NO_BONUS != ePlotBonus)
 				{
 					m_cachedBonusCount[ePlotBonus]++;
 				}
 			}
 		}
-
-		//count bonuses inside city radius or easily claimed
+		// Count bonuses inside city radius or easily claimed
 		foreach_(const CvCity* pLoopCity, cities())
 		{
 			const bool bCommerceCulture = (pLoopCity->getCommerceRate(COMMERCE_CULTURE) > 0);
 
-			for(iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
+			for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 			{
 				m_cachedBonusCount[iJ] += pLoopCity->AI_countNumBonuses((BonusTypes)iJ, true, bCommerceCulture, -1);
 			}
 		}
-
 		m_cachedBonusCountGameTurn = GC.getGame().getGameTurn();
 	}
 
@@ -12681,34 +12676,34 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 
 				m_contractBroker.reset();
 
-				if (isAlive() && !isHuman() && !isNPC() && (getAdvancedStartPoints() >= 0))
+				if (isAlive() && !isHuman() && !isNPC() && getAdvancedStartPoints() >= 0)
 				{
 					AI_doAdvancedStart();
 				}
 
 				if (GC.getGame().getElapsedGameTurns() > 0 && isAlive())
 				{
-					//	Koshling - moved AI turn processing to the START of the turn (ie - before unit movement)
-					//	so as to allow units to answer city unit requests
+					// Koshling - Moved AI turn processing to the START of the turn
+					//	(i.e. before unit movement) so as to allow units to answer city requests.
 					if (GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || !isHuman())
 					{
 						doTurn();
 					}
-					doTurnUnits();
+					doTurnUnits(); // AI create colony (splitEmpire) evaluation at the end of doTurnUnits().
 				}
 
 				if (getID() == GC.getGame().getActivePlayer() && GC.getGame().getElapsedGameTurns() > 0)
 				{
-					MEMORY_TRACK_EXEMPT();
-
 					if (GC.getGame().isNetworkMultiPlayer())
 					{
-						AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_MISC_TURN_BEGINS").GetCString(), "AS2D_NEWTURN", MESSAGE_TYPE_DISPLAY_ONLY);
+						MEMORY_TRACK_EXEMPT();
+						AddDLLMessage(
+							getID(), true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText("TXT_KEY_MISC_TURN_BEGINS").GetCString(),
+							"AS2D_NEWTURN", MESSAGE_TYPE_DISPLAY_ONLY
+						);
 					}
-					else
-					{
-						gDLL->getInterfaceIFace()->playGeneralSound("AS2D_NEWTURN");
-					}
+					else gDLL->getInterfaceIFace()->playGeneralSound("AS2D_NEWTURN");
 				}
 				doWarnings();
 			}
@@ -24305,7 +24300,7 @@ PlayerTypes CvPlayer::getSplitEmpirePlayer(int iAreaId) const
 
 bool CvPlayer::canSplitEmpire() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_NO_VASSAL_STATES))
+	if (isMinorCiv() || GC.getGame().isOption(GAMEOPTION_NO_VASSAL_STATES))
 	{
 		return false;
 	}
@@ -24321,23 +24316,14 @@ bool CvPlayer::canSplitEmpire() const
 		return false;
 	}
 
-	bool bFoundArea = false;
-
 	foreach_(const CvArea* pLoopArea, GC.getMap().areas())
 	{
 		if (canSplitArea(pLoopArea->getID()))
 		{
-			bFoundArea = true;
-			break;
+			return true;
 		}
 	}
-
-	if (!bFoundArea)
-	{
-		return false;
-	}
-
-	return true;
+	return false;
 }
 
 bool CvPlayer::canSplitArea(int iAreaId) const
