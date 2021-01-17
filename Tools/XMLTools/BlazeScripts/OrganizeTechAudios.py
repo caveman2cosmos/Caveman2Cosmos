@@ -90,11 +90,11 @@ def breakcheck(dict_depth, dict_width=4):
             err = True
         else:
             if len(v[0]) != dict_depth:
-                print(f"ERROR: Malformatted or missing:")
+                print("ERROR: Malformatted or missing:")
                 print(f"{k}, {v}")
                 err = True
             if len(v[1]) != dict_depth:
-                print(f"ERROR: Malformatted or missing:")
+                print("ERROR: Malformatted or missing:")
                 print(f"{k}, {v}")
                 err = True
         if err:
