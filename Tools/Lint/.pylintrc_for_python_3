@@ -1,0 +1,50 @@
+[MASTER]
+
+[MESSAGES CONTROL]
+disable=bad-indentation,
+        wrong-import-order,
+        bare-except,
+        cell-var-from-loop,
+        chained-comparison,
+        consider-using-in,
+        consider-using-set-comprehension,
+        consider-using-sys-exit,
+        expression-not-assigned,
+        f-string-without-interpolation,
+        global-statement,
+        import-error,
+        invalid-name,
+        line-too-long,
+        missing-class-docstring,
+        missing-final-newline,
+        missing-function-docstring,
+        missing-module-docstring,
+        no-else-return,
+        no-self-use,
+        redefined-outer-name,
+        simplifiable-if-statement,
+        singleton-comparison,
+        superfluous-parens,
+        syntax-error,
+        too-few-public-methods,
+        too-many-arguments,
+        too-many-branches,
+        too-many-instance-attributes,
+        too-many-locals,
+        too-many-nested-blocks,
+        too-many-statements,
+        trailing-whitespace,
+        undefined-variable,
+        unidiomatic-typecheck,
+        unnecessary-pass,
+        unused-argument,
+        unused-import,
+        unused-variable,
+
+[BASIC]
+
+[FORMAT]
+
+[TYPECHECK]
+
+[DESIGN]
