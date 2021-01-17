@@ -1598,6 +1598,8 @@ class CvMainInterface:
 			screen.hide("InterfaceCenterBackgroundWidget")
 			screen.hide("InterfaceRightBackgroundWidget")
 			screen.hide("MiniMapPanel")
+			screen.hide("CityScrollMinus")
+			screen.hide("CityScrollPlus")
 			screen.hide("InterfaceTopLeft")
 			screen.show("InterfaceTopCenter")
 			screen.hide("InterfaceTopRight")

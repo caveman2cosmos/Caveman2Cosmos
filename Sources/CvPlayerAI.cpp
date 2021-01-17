@@ -747,11 +747,9 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				unit->doDelayedDeath();
 			}
 		}
-	}
-	if (isHuman())
-	{
 		return;
 	}
+
 	const bool bAnyWar = (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0);
 	const int64_t iStartingGold = getGold();
 	const int iTargetGold = AI_goldTarget();
@@ -22418,6 +22416,16 @@ void CvPlayerAI::AI_doSplit()
 	{
 		return;
 	}
+	// Toffer - ToDo
+	//	Need to stop AI from creating colony on another landmass when it should rather relocate its capitol to the other landmass.
+	//	e.g. Its capitol is a lone city on an island, and it has multiple cities on a bigger landmass, it should relocate its capitol
+	//	rather than making a vassal of all the cities on the big landmass, need to look into AI evaluation for palace construction too.
+	//	hint: City->AI_cityValue(bIgnoreColonyMaintenance), (new argument) could be used to see if the oversea area is a better area for the capitol.
+	//		looped over all cities in each area similar to what is done below.
+	//		Need a should relocate capitol function called from here to stop the split if true,
+	//		but also from wherever it is natural to evaluate whether the capitol should be relocated or not.
+	//		Palace should probably be relocated to the other landmass long before the AI considers splitting it up as a colony (this function is called).
+	//		not sure if Forbidden Palace and similar government centers removes oversea maintenance cost from landmass it is on, needs to be looked into.
 
 	std::map<int, int> mapAreaValues;
 
@@ -22436,7 +22444,7 @@ void CvPlayerAI::AI_doSplit()
 	{
 		if (it->second < 0)
 		{
-			int iAreaId = it->first;
+			const int iAreaId = it->first;
 
 			if (canSplitArea(iAreaId))
 			{
@@ -22446,7 +22454,7 @@ void CvPlayerAI::AI_doSplit()
 				{
 					if (pUnit->area()->getID() == iAreaId)
 					{
-						TeamTypes ePlotTeam = pUnit->plot()->getTeam();
+						const TeamTypes ePlotTeam = pUnit->plot()->getTeam();
 
 						if (NO_TEAM != ePlotTeam)
 						{

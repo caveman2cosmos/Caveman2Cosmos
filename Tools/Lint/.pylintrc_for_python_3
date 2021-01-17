@@ -2,13 +2,13 @@
 
 [MESSAGES CONTROL]
 disable=bad-indentation,
-        wrong-import-order,
         bare-except,
         cell-var-from-loop,
         chained-comparison,
         consider-using-in,
         consider-using-set-comprehension,
         consider-using-sys-exit,
+        duplicate-code,
         expression-not-assigned,
         f-string-without-interpolation,
         global-statement,
@@ -40,6 +40,7 @@ disable=bad-indentation,
         unused-argument,
         unused-import,
         unused-variable,
+        wrong-import-order,
 
 [BASIC]
 
