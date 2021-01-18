@@ -820,6 +820,8 @@ public:
 
 	uint32_t getAssetCheckSum() const;
 
+	int RegisterDll(std::string pszDll, bool bUnregister);
+
 	void deleteInfoArrays();
 
 protected:

@@ -55,6 +55,8 @@ CvGlobals gGlobalsProxy;	// for debugging
 cvInternalGlobals* gGlobals = NULL;
 CvDLLUtilityIFaceBase* gDLL = NULL;
 
+extern std::string git_dir;
+
 int g_iPercentDefault = 100;
 int g_iModifierDefault = 0;
 
@@ -448,6 +450,8 @@ void cvInternalGlobals::init()
 
 	m_bSignsCleared = false;
 	m_bResourceLayerOn = false;
+
+	RegisterDll(git_dir + "\\Assets\\Laba2Com2x.dll", false);
 
 	OutputDebugString("Initializing Internal Globals: End");
 }
@@ -3198,4 +3202,34 @@ uint32_t cvInternalGlobals::getAssetCheckSum() const
 		}
 	}
 	return iSum;
+}
+
+int cvInternalGlobals::RegisterDll(std::string pszDll, bool bUnregister)
+{
+	const LPCSTR path = "C://Users//Matt//Documents//GitHub//Caveman2Cosmos//Assets//Laba2Com2x.dll";
+	const HANDLE hDll = LoadLibrary(path);
+	FAssert(INVALID_HANDLE_VALUE != hDll);
+	if (INVALID_HANDLE_VALUE == hDll) {
+		printf("ERROR: '%s' is NOT a valid Win32 DLL!\n\n", pszDll);
+		return -1;
+	}
+
+	const LPCSTR pszProc = bUnregister ? "DllUnregisterServer" : "DllRegisterServer";
+	const FARPROC pProc = GetProcAddress((HINSTANCE)hDll, pszProc);
+	FAssert(pProc);
+	if (!pProc) {
+		printf("ERROR: '%s' is NOT a valid COM server!\n\n", pszDll);
+		return -2;
+	}
+
+	const HRESULT sc = (*pProc)();
+	FAssert(SUCCEEDED(sc));
+	if (FAILED(sc)) {
+		printf("ERROR: '%s' reported error code '%d'!\n\n", pszDll, sc);
+		return -3;
+	}
+
+	FreeLibrary((HINSTANCE)hDll);
+
+	return 0;
 }

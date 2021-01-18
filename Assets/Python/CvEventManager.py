@@ -483,6 +483,9 @@ class CvEventManager:
 
 			elif iModifiers == 3:
 
+				for i in range(100000):
+					GC.addToVector(0)
+
 				if DebugUtils.bDebugMode:
 					if key == InputTypes.KB_U:
 						DebugUtils.putOneOfEveryUnit()

@@ -36,6 +36,8 @@ bool runProcess(const std::string& exe, const std::string& workingDir)
 
 // BUG - EXE/DLL Paths - end
 
+std::string git_dir;
+
 BOOL APIENTRY DllMain(HANDLE hModule, 
 					  DWORD  ul_reason_for_call, 
 					  LPVOID lpReserved)
@@ -68,7 +70,7 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		// If we loaded the directory token file we are in a dev environment and should run FPKLive, and check for DLL changes
 		if (!stream.fail())
 		{
-			std::string git_dir;
+			//std::string git_dir;
 			std::getline(stream, git_dir);
 
 			if(!runProcess(git_dir + "\\Tools\\FPKLive.exe", git_dir + "\\Tools"))

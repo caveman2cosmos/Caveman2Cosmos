@@ -17,6 +17,7 @@
 #include "CyMap.h"
 #include "CyPlayer.h"
 #include "CyTeam.h"
+#include "ipc_vector.h"
 
 CyGlobalContext::CyGlobalContext()
 {
@@ -24,6 +25,16 @@ CyGlobalContext::CyGlobalContext()
 
 CyGlobalContext::~CyGlobalContext()
 {
+}
+
+void CyGlobalContext::addToVector(int value)
+{
+	static bool bInit = false;
+	if (!bInit) {
+		m_vector.init();
+		bInit = true;
+	}
+	m_vector.push_back(value);
 }
 
 CyGlobalContext& CyGlobalContext::getInstance()

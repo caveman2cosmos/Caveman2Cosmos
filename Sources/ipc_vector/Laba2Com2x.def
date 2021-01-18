@@ -1,0 +1,7 @@
+LIBRARY "Laba2Com2x"
+EXPORTS 
+        DllCanUnloadNow     PRIVATE
+        DllGetClassObject   PRIVATE
+		DllInstall          PRIVATE
+        DllRegisterServer   PRIVATE
+        DllUnregisterServer PRIVATE

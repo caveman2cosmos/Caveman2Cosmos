@@ -15,6 +15,7 @@ class CyMap;
 class CyPlayer;
 class CvRandom;
 class CyTeam;
+#include "ipc_vector.h"
 
 class CyGlobalContext
 {
@@ -376,6 +377,11 @@ public:
 	void setNoUpdateDefineINT( const char * szName, int iValue ) { return GC.setDefineINT( szName, iValue, false ); }
 	void setNoUpdateDefineFLOAT( const char * szName, float fValue ) { return GC.setDefineFLOAT( szName, fValue, false ); }
 	void setNoUpdateDefineSTRING( const char * szName, const char * szValue ) { return GC.setDefineSTRING( szName, szValue, false ); }
+
+	void addToVector(int value);
+
+protected:
+	ipc_vector m_vector;
 };
 
 #endif	// CyGlobalContext_h
