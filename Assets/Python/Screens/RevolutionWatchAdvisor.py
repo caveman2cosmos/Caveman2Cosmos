@@ -947,8 +947,8 @@ class RevolutionWatchAdvisor:
 		#			screen.show( szName )
 
 	def hideSpecialists (self):
-		pass
 		""" Function to hide all the specialists and the accompanying data."""
+		pass
 		#screen = self.getScreen()
 		#
 		# Hide Everything related to specialists
