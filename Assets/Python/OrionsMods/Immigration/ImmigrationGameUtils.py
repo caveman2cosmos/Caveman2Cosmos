@@ -1,3 +1,4 @@
+"""
 # # Sid Meier's Civilization 4
 # # Copyright Firaxis Games 2007
 # # ImmigrationGameUtils
@@ -23,12 +24,4 @@ class ImmigrationGameUtils:
 					Immigration.doImmigrantPlacementAI(CyUnit, CyCity, CyPlayer, iPlayer, True)
 					return True
 		return False
-
-
-
-
-
-
-
-
-
+"""

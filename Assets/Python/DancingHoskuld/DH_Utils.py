@@ -44,7 +44,7 @@ def getNearestCity(iPlayer, pPlot, gi_HalfMaxX):
 		#~ return CyTranslator().getText("TXT_KEY_BUTCHER_ANIMAL_HELP", ())
 
 	#~ return u""
-
+"""
 def AI_unitUpdate(argsList):
 	pUnit = argsList[0]
 	pUnitType = pUnit.getUnitType()
@@ -93,3 +93,4 @@ def AI_unitUpdate(argsList):
 
 
 	return False
+"""
