@@ -88,23 +88,23 @@ g_dispatcher = None
 ## Configuration
 
 def addModuleUtils(utils, override=False, log=None):
-	getDispatcher()._addModuleUtils(utils, log)
+	getDispatcher().addModuleUtils(utils, log)
 
 def addClassUtils(utils, override=False, log=None):
-	getDispatcher()._addClassUtils(utils, log)
+	getDispatcher().addClassUtils(utils, log)
 
 
 def addHandler(func, override=False, log=None):
 	addNamedHandler(func.__name__, func, override, log)
 
 def addNamedHandler(name, func, override=False, log=None):
-	getDispatcher()._addHandler(name, func, override, log)
+	getDispatcher().addHandler(name, func, override, log)
 
 def addBoundHandler(utils, func, override=False, log=None):
 	addNamedBoundHandler(func.__name__, utils, func, override, log)
 
 def addNamedBoundHandler(name, utils, func, override=False, log=None):
-	getDispatcher()._addBoundHandler(name, func, override, log)
+	getDispatcher().addBoundHandler(name, func, override, log)
 
 
 def addListener(func, log=None):
@@ -114,7 +114,7 @@ def addListener(func, log=None):
 	addNamedListener(name, func, log)
 
 def addNamedListener(name, func, log=None):
-	getDispatcher()._addListener(name, func, log)
+	getDispatcher().addListener(name, func, log)
 
 def addBoundListener(utils, func, log=None):
 	name = func.__name__
@@ -123,14 +123,14 @@ def addBoundListener(utils, func, log=None):
 	addNamedBoundListener(name, utils, func, log)
 
 def addNamedBoundListener(name, utils, func, log=None):
-	getDispatcher()._addBoundListener(name, utils, func, log)
+	getDispatcher().addBoundListener(name, utils, func, log)
 
 
 def createCallback(name, func, default=None, log=None):
-	getDispatcher()._createCallback(name, func, default, log)
+	getDispatcher().createCallback(name, func, default, log)
 
 def setDefault(name, default):
-	getDispatcher()._setDefault(name, default)
+	getDispatcher().setDefault(name, default)
 
 
 def getDispatcher():
@@ -147,62 +147,62 @@ class Dispatcher:
 		clazz = CvGameUtils.CvGameUtils
 		for name, func in clazz.__dict__.iteritems():
 			if not name.startswith("_") and isinstance(func, types.FunctionType):
-				self._createCallback(name, BugUtil.bindFunction(self._baseUtils, name), None, self._log)
+				self.createCallback(name, BugUtil.bindFunction(self._baseUtils, name), None, self._log)
 
 		# setup defaults
-		self._setDefault("isPlayerResearch", True)
-		self._setDefault("createBarbarianUnits", False)
-		self._setDefault("skipResearchPopup", False)
-		self._setDefault("showTechChooserButton", True)
-		self._setDefault("getFirstRecommendedTech", TechTypes.NO_TECH)
-		self._setDefault("getSecondRecommendedTech", TechTypes.NO_TECH)
-		self._setDefault("canRazeCity", True)
-		self._setDefault("canDeclareWar", True)
-		self._setDefault("skipProductionPopup", False)
-		self._setDefault("showExamineCityButton", True)
-		self._setDefault("getRecommendedUnit", UnitTypes.NO_UNIT)
-		self._setDefault("getRecommendedBuilding", BuildingTypes.NO_BUILDING)
-		self._setDefault("updateColoredPlots", False)
-		self._setDefault("unitCannotMoveInto", False)
-		self._setDefault("cannotHandleAction", False)
-		self._setDefault("cannotFoundCity", False)
-		self._setDefault("cannotSelectionListMove", False)
-		self._setDefault("cannotSelectionListGameNetMessage", False)
-		self._setDefault("cannotDoControl", False)
-		self._setDefault("canDoCivic", False)
-		self._setDefault("cannotDoCivic", False)
-		self._setDefault("canTrain", False)
-		self._setDefault("cannotTrain", False)
-		self._setDefault("canConstruct", False)
-		self._setDefault("cannotConstruct", False)
-		self._setDefault("AI_chooseTech", TechTypes.NO_TECH)
-		self._setDefault("AI_chooseProduction", False)
-		self._setDefault("AI_unitUpdate", False)
-		self._setDefault("AI_doWar", False)
-		self._setDefault("AI_doDiplo", False)
-		self._setDefault("doHolyCity", False)
-		self._setDefault("doResearch", False)
-		self._setDefault("doGoody", False)
-		self._setDefault("doGrowth", False)
-		self._setDefault("doProduction", False)
-		self._setDefault("doCulture", False)
-		self._setDefault("doPlotCulture", False)
-		self._setDefault("doReligion", False)
-		self._setDefault("cannotSpreadReligion", False)
-		self._setDefault("doGreatPeople", False)
-		self._setDefault("doMeltdown", False)
-		self._setDefault("doReviveActivePlayer", False)
-		self._setDefault("citiesDestroyFeatures", True)
-		self._setDefault("canFoundCitiesOnWater", False)
-		self._setDefault("doCombat", False)
-		self._setDefault("getConscriptUnitType", UnitTypes.NO_UNIT)
-		self._setDefault("canPickPlot", True)
-		self._setDefault("getUnitCostMod", -1)
-		self._setDefault("getBuildingCostMod", -1)
-		self._setDefault("canUpgradeAnywhere", False)
-		self._setDefault("getWidgetHelp", u"")
+		self.setDefault("isPlayerResearch", True)
+		self.setDefault("createBarbarianUnits", False)
+		self.setDefault("skipResearchPopup", False)
+		self.setDefault("showTechChooserButton", True)
+		self.setDefault("getFirstRecommendedTech", TechTypes.NO_TECH)
+		self.setDefault("getSecondRecommendedTech", TechTypes.NO_TECH)
+		self.setDefault("canRazeCity", True)
+		self.setDefault("canDeclareWar", True)
+		self.setDefault("skipProductionPopup", False)
+		self.setDefault("showExamineCityButton", True)
+		self.setDefault("getRecommendedUnit", UnitTypes.NO_UNIT)
+		self.setDefault("getRecommendedBuilding", BuildingTypes.NO_BUILDING)
+		self.setDefault("updateColoredPlots", False)
+		self.setDefault("unitCannotMoveInto", False)
+		self.setDefault("cannotHandleAction", False)
+		self.setDefault("cannotFoundCity", False)
+		self.setDefault("cannotSelectionListMove", False)
+		self.setDefault("cannotSelectionListGameNetMessage", False)
+		self.setDefault("cannotDoControl", False)
+		self.setDefault("canDoCivic", False)
+		self.setDefault("cannotDoCivic", False)
+		self.setDefault("canTrain", False)
+		self.setDefault("cannotTrain", False)
+		self.setDefault("canConstruct", False)
+		self.setDefault("cannotConstruct", False)
+		self.setDefault("AI_chooseTech", TechTypes.NO_TECH)
+		self.setDefault("AI_chooseProduction", False)
+		self.setDefault("AI_unitUpdate", False)
+		self.setDefault("AI_doWar", False)
+		self.setDefault("AI_doDiplo", False)
+		self.setDefault("doHolyCity", False)
+		self.setDefault("doResearch", False)
+		self.setDefault("doGoody", False)
+		self.setDefault("doGrowth", False)
+		self.setDefault("doProduction", False)
+		self.setDefault("doCulture", False)
+		self.setDefault("doPlotCulture", False)
+		self.setDefault("doReligion", False)
+		self.setDefault("cannotSpreadReligion", False)
+		self.setDefault("doGreatPeople", False)
+		self.setDefault("doMeltdown", False)
+		self.setDefault("doReviveActivePlayer", False)
+		self.setDefault("citiesDestroyFeatures", True)
+		self.setDefault("canFoundCitiesOnWater", False)
+		self.setDefault("doCombat", False)
+		self.setDefault("getConscriptUnitType", UnitTypes.NO_UNIT)
+		self.setDefault("canPickPlot", True)
+		self.setDefault("getUnitCostMod", -1)
+		self.setDefault("getBuildingCostMod", -1)
+		self.setDefault("canUpgradeAnywhere", False)
+		self.setDefault("getWidgetHelp", u"")
 
-	def _createCallback(self, name, func, default=None, log=None):
+	def createCallback(self, name, func, default=None, log=None):
 		if log is None:
 			log = self._log
 		if default is not None:
@@ -220,22 +220,22 @@ class Dispatcher:
 			BugUtil.trace("Unknown GameUtils callback %s", name)
 			raise
 
-	def _setDefault(self, name, default):
+	def setDefault(self, name, default):
 		self._getCallback(name).setDefault(default)
 
-	def _addHandler(self, name, func, override=False, log=None):
+	def addHandler(self, name, func, override=False, log=None):
 		self._getCallback(name).addHandler(func, override, log)
 
-	def _addBoundHandler(self, name, utils, func, override=False, log=None):
-		self._addHandler(name, self._bind(utils, func), override, log)
+	def addBoundHandler(self, name, utils, func, override=False, log=None):
+		self.addHandler(name, self._bind(utils, func), override, log)
 
-	def _addListener(self, name, func, log=None):
+	def addListener(self, name, func, log=None):
 		self._getCallback(name).addListener(func, log)
 
-	def _addBoundListener(self, name, utils, func, log=None):
-		self._addListener(name, self._bind(utils, func), log)
+	def addBoundListener(self, name, utils, func, log=None):
+		self.addListener(name, self._bind(utils, func), log)
 
-	def _addModuleUtils(self, utils, override=False, log=None):
+	def addModuleUtils(self, utils, override=False, log=None):
 		# Registers all of the handler and listener functions in <utils> that match existing callbacks.
 		BugUtil.debug("BugGameUtils - registering %s", utils.__name__)
 		for name, func in utils.__dict__.iteritems():
@@ -243,12 +243,12 @@ class Dispatcher:
 				if name.endswith("Listener"):
 					name = name[:-len("Listener")]
 					if name in self._callbacks:
-						self._addListener(name, func, log)
+						self.addListener(name, func, log)
 				else:
 					if name in self._callbacks:
-						self._addHandler(name, func, override, log)
+						self.addHandler(name, func, override, log)
 
-	def _addClassUtils(self, utils, override=False, log=None):
+	def addClassUtils(self, utils, override=False, log=None):
 		# Registers all of the handler and listener functions in <utils> that match existing callbacks.
 		clazz = utils.__class__
 		BugUtil.debug("BugGameUtils - registering %s.%s", clazz.__module__, clazz.__name__)
@@ -257,10 +257,10 @@ class Dispatcher:
 				if name.endswith("Listener"):
 					name = name[:-len("Listener")]
 					if name in self._callbacks:
-						self._addBoundListener(name, utils, func, log)
+						self.addBoundListener(name, utils, func, log)
 				else:
 					if name in self._callbacks:
-						self._addBoundHandler(name, utils, func, override, log)
+						self.addBoundHandler(name, utils, func, override, log)
 
 	def _bind(self, utils, func):
 		bound = lambda *args: func(utils, *args)

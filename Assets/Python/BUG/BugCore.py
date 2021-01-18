@@ -22,10 +22,10 @@ class Game(object):
 		self._mods = {}
 		self._emptyMods = {}
 		self._screens = {}
-		self._inited = False
+		self.inited = False
 
 	def _createMod(self, id):
-		if self._inited:
+		if self.inited:
 			raise BugUtil.ConfigError("cannot create mod '%s' after initialization" % id)
 		else:
 			return self._newMod(id)
@@ -36,21 +36,21 @@ class Game(object):
 		self._mods[id] = mod
 		return mod
 
-	def _getMod(self, id):
+	def getMod(self, id):
 		if id in self._mods:
 			return self._mods[id]
-		elif not self._inited:
+		elif not self.inited:
 			BugUtil.info("BugCore - creating uninitialized mod %s", id)
 			return self._newMod(id)
 		else:
 			BugUtil.error("BugCore - invalid mod %s", id)
 
-	def _addMod(self, mod):
-		id = mod._getID()
-		if self._inited:
+	def addMod(self, mod):
+		id = mod.getID()
+		if self.inited:
 			BugUtil.warn("BugCore - cannot add mod %s post-init", id)
 		elif id in self._emptyMods:
-			if not mod._inited:
+			if not mod.inited:
 				BugUtil.error("BugCore - mod %s not initialized", id)
 			del self._emptyMods[id]
 		elif id in self._mods:
@@ -62,32 +62,32 @@ class Game(object):
 		if id in self._mods:
 			del self._mods[id]
 
-	def _initDone(self):
-		if self._inited:
+	def initDone(self):
+		if self.inited:
 			BugUtil.warn("BugCore - game already initialized")
 		else:
 			for mod in self._emptyMods.values():
-				id = mod._getID()
-				if mod._inited:
+				id = mod.getID()
+				if mod.inited:
 					BugUtil.warn("BugCore - mod %s not added; adding", id)
 					del self._emptyMods[id]
 				else:
 					BugUtil.warn("BugCore - mod %s not initialized; removing", id)
 					self._removeMod(id)
-			self._inited = True
+			self.inited = True
 
 	def __getattr__(self, id):
 		"""Returns the Mod with the given ID."""
 		if not id.startswith("_"):
-			mod = self._getMod(id)
+			mod = self.getMod(id)
 			if mod is not None:
 				return mod
 		raise AttributeError(id)
 
-	def _getScreen(self, id):
+	def getScreen(self, id):
 		return self._screens[id]
 
-	def _addScreen(self, screen):
+	def addScreen(self, screen):
 		self._screens[screen.id] = screen
 
 
@@ -97,9 +97,9 @@ class Mod(object):
 	def __init__(self, id):
 		self._id = id
 		self._options = {}
-		self._inited = False
+		self.inited = False
 
-	def _getID(self):
+	def getID(self):
 		return self._id
 
 	def qualify(self, id):
@@ -117,11 +117,11 @@ class Mod(object):
 		except KeyError:
 			raise BugUtil.ConfigError("Option %s not found in mod %s", id, self._id)
 
-	def _initDone(self):
-		if self._inited:
+	def initDone(self):
+		if self.inited:
 			BugUtil.warn("BugCore - mod already initialized")
 		else:
-			self._inited = True
+			self.inited = True
 
 	def __getattr__(self, id):
 		"""Returns the Option with the given ID or False for is/getters
@@ -131,7 +131,7 @@ class Mod(object):
 			if self._hasOption(id):
 				return self._getOption(id)
 			# If not yet initialized, return False for getters and setters
-			if not self._inited:
+			if not self.inited:
 				if id.startswith("get") or id.startswith("is"):
 					return lambda *ignored: False
 				if id.startswith("set"):
@@ -165,4 +165,4 @@ class Mod(object):
 game = Game()
 
 def initDone():
-	game._initDone()
+	game.initDone()
