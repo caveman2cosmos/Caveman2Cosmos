@@ -3611,10 +3611,6 @@ def beforeGeneration():
 		if selection_names_and_values[i][0] != "Wrap:":
 			cachedMenuChoices[i] = 0
 
-def afterGeneration():
-	OutputMessage("Python: SmartMap: Step 6B afterGeneration Post generation cleanup")
-	checkForBadPlots()
-
 #this helper wraps the NiTextOut and also prints to the hapdebugger
 def OutputMessage(message):
 	NiTextOut(message)
@@ -5574,6 +5570,7 @@ class OasisFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 				pPlot.setFeatureType(self.featureForest, 0)
 
 def afterGeneration():
+	checkForBadPlots()
 	CvMapGeneratorUtil.placeC2CBonuses()
 
 # 9.0
