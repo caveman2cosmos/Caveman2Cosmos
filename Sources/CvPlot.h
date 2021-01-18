@@ -177,6 +177,7 @@ public:
 
 	void doTurn();
 
+	int CvPlot::calculateResourceDiscoveryOdds(int iBonus, CvImprovementInfo pInfo) const;
 	void doImprovement();
 
 	void updateCulture(bool bBumpUnits, bool bUpdatePlotGroups);
