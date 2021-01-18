@@ -8,13 +8,8 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
-import random
 import CvMapGeneratorUtil
-import sys
 from CvMapGeneratorUtil import HintedWorld
-from CvMapGeneratorUtil import TerrainGenerator
-from CvMapGeneratorUtil import FeatureGenerator
 from CvMapGeneratorUtil import BonusBalancer
 
 balancer = BonusBalancer()

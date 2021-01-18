@@ -208,16 +208,12 @@
 ##
 
 from CvPythonExtensions import *
-import CvUtil
 import CvMapGeneratorUtil
 import BugUtil
 
 from array	import array
 from random import random, randint, seed, shuffle
 import math
-import sys
-import time
-import os
 #import profile
 
 

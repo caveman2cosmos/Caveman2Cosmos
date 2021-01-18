@@ -2,7 +2,6 @@
 ## Copyright Firaxis Games 2005
 ## Improvements to this screen by Almightix - thanks
 from CvPythonExtensions import *
-import ScreenInput
 import CvScreenEnums
 
 # globals

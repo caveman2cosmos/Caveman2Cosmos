@@ -2,9 +2,7 @@
 # AI_AUTO_PLAY_MOD
 #
 from CvPythonExtensions import *
-import CvTopCivs
 import Popup as PyPopup
-
 import RevDefs
 import SdToolKit
 import RevUtils

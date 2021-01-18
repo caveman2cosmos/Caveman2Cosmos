@@ -1,7 +1,6 @@
 from __future__ import division
 from CvPythonExtensions import *
 from copy import copy, deepcopy
-from sys import maxint
 from math import *
 import BugUtil
 

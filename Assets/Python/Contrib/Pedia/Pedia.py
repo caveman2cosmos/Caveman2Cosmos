@@ -1,13 +1,8 @@
 # Pedia overhauled by Toffer90 for Caveman2Cosmos.
 
 from CvPythonExtensions import *
-from string import split
-
-import ScreenInput
 import HandleInputUtil
-
 import PythonToolTip as pyTT
-
 import UnitUpgradesGraph
 
 GC = CyGlobalContext()

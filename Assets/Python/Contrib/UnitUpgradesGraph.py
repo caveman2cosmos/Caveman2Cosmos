@@ -4,7 +4,6 @@
 ## Automatic layout algorithm by Progor
 ##
 from CvPythonExtensions import *
-import string
 
 # globals
 GC = CyGlobalContext()

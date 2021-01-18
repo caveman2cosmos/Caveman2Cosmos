@@ -16,7 +16,7 @@ import RevUtils
 import LeaderCivNames
 import BugCore
 import BugUtil
-import ANDAutomationsTab
+#import ANDAutomationsTab
 
 gc = CyGlobalContext()
 game = CyGame()

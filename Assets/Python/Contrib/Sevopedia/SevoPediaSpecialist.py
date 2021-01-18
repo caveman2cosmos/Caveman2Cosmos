@@ -11,8 +11,6 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
-import ScreenInput
 import string
 
 gc = CyGlobalContext()

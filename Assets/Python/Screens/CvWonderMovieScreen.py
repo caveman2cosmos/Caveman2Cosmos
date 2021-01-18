@@ -163,4 +163,3 @@ class CvWonderMovieScreen:
 
 	def onClose(self):
 		del self.screenId, self.iMovieType, self.iWonderId, self.fTime, self.bTimer, self.iInfoPanel
-import HandleInputUtil

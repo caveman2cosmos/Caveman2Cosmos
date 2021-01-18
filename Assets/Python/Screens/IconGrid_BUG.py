@@ -1,11 +1,5 @@
-
 from CvPythonExtensions import *
-import CvUtil
-import ScreenInput
-import CvScreenEnums
 import BugUtil
-import math
-
 
 # globals
 gc = CyGlobalContext()

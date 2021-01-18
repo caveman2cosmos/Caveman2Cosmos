@@ -4,10 +4,6 @@
 #
 
 from CvPythonExtensions import *
-
-import CvUtil
-import sys
-import math
 import string
 
 gc = CyGlobalContext()

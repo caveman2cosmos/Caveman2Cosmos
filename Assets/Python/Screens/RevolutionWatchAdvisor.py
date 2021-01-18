@@ -58,7 +58,6 @@ import BugPath
 import BugConfigTracker
 
 import math
-import os.path
 
 # BUG - Options
 import BugCore

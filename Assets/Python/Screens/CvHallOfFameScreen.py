@@ -7,10 +7,7 @@
 
 from CvPythonExtensions import *
 import BugUtil
-import CvUtil
-import ScreenInput
 from CvScreenEnums import *
-import CvReplayScreen
 import CvScreensInterface
 import re
 
