@@ -3296,7 +3296,7 @@ class BonusPlacer:
 
 		iTemp = bonusInfo.getMinAreaSize()
 		if iTemp > 0:
-			iTemp + 2*mc.iWorldSize
+			iTemp += 2*mc.iWorldSize
 			if iTemp > 1 and plot.area().getNumTiles() < iTemp:
 				return False
 
