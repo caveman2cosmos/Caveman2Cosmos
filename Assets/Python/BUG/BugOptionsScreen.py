@@ -94,7 +94,7 @@ class ScreenHandler(BugConfig.Handler):
 	def handle(self, element, id):
 		screen = ScreenConfig(id)
 		element.setState("options-screen", screen)
-		BugCore.game._addScreen(screen)
+		BugCore.game.addScreen(screen)
 
 class TabHandler(BugConfig.Handler):
 
@@ -109,7 +109,7 @@ class TabHandler(BugConfig.Handler):
 
 	def handle(self, element, screenId, module, clazz, id):
 		if screenId:
-			screen = BugCore.game._getScreen(screenId)
+			screen = BugCore.game.getScreen(screenId)
 		else:
 			screen = element.getState("options-screen")
 		if not screen:

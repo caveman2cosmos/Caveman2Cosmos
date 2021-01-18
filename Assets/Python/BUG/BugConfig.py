@@ -446,13 +446,13 @@ class ModHandler(Handler):
 		self.addAttribute("url")
 
 	def handle(self, element, id, name, dll, author, version, build, date, url):
-		element.setState("mod", BugCore.game._getMod(id))
+		element.setState("mod", BugCore.game.getMod(id))
 		element.setState("dll", 1)
 
 	def complete(self, element):
 		mod = element.getState("mod")
-		mod._initDone()
-		BugCore.game._addMod(mod)
+		mod.initDone()
+		BugCore.game.addMod(mod)
 
 
 ## Standard Handlers

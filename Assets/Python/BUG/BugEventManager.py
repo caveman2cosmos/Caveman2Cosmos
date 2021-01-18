@@ -308,7 +308,7 @@ class BugEventManager(CvEventManager.CvEventManager):
 				except:
 					BugUtil.trace("Error in %s event handler %s", eventType, eventHandler)
 
-	def _handleConsumableEvent(self, eventType, argsList):
+	def handleConsumableEvent(self, eventType, argsList):
 		"""Handles events that can be consumed by the handlers, such as keyboard or mouse events.
 
 		If a handler returns non-zero, processing is terminated, and no subsequent handlers are invoked. (Changed)
@@ -326,7 +326,7 @@ class BugEventManager(CvEventManager.CvEventManager):
 				return 1
 		return 0
 
-	def _handleOnPreSaveEvent(self, eventType, argsList):
+	def handleOnPreSaveEvent(self, eventType, argsList):
 		"""Tells BugData to save all script data after other handlers have been called.
 		This won't work as a normal handler because it must be done after other handlers.
 		"""
@@ -334,7 +334,7 @@ class BugEventManager(CvEventManager.CvEventManager):
 		BugData.save()
 
 	# TODO: this probably needs to be more complex
-	def _handleOnSaveEvent(self, eventType, argsList):
+	def handleOnSaveEvent(self, eventType, argsList):
 		"""Handles OnSave events by concatenating the results obtained
 		from each handler to form an overall consolidated save string.
 		"""
@@ -397,10 +397,10 @@ class BugEventManager(CvEventManager.CvEventManager):
 		return 0
 
 EVENT_FUNCTION_MAP = {
-	"kbdEvent": BugEventManager._handleConsumableEvent,
-	"mouseEvent": BugEventManager._handleConsumableEvent,
-	"OnPreSave": BugEventManager._handleOnPreSaveEvent,
-	"OnSave": BugEventManager._handleOnSaveEvent
+	"kbdEvent": BugEventManager.handleConsumableEvent,
+	"mouseEvent": BugEventManager.handleConsumableEvent,
+	"OnPreSave": BugEventManager.handleOnPreSaveEvent,
+	"OnSave": BugEventManager.handleOnSaveEvent
 }
 
 # Sample Event Handlers
