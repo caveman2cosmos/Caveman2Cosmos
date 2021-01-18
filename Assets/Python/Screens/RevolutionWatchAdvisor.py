@@ -2170,7 +2170,7 @@ class RevolutionWatchAdvisor:
 						funcTableWrite = screen.setTableText
 						justify = 1<<2
 					else:
-						return;
+						return
 
 					colorFunc = self.ColorCityValues
 
@@ -2264,7 +2264,7 @@ class RevolutionWatchAdvisor:
 				if (inputClass.getMouseX() == 0):
 					screen.hideScreen()
 
-					CyInterface().selectCity(gc.getPlayer(inputClass.getData1()).getCity(inputClass.getData2()), True);
+					CyInterface().selectCity(gc.getPlayer(inputClass.getData1()).getCity(inputClass.getData2()), True)
 
 					popupInfo = CyPopupInfo()
 					popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
@@ -2305,7 +2305,7 @@ class RevolutionWatchAdvisor:
 				screen = CyGInterfaceScreen( "RevolutionWatchAdvisor", CvScreenEnums.REVOLUTION_WATCH_ADVISOR )
 				screen.hideScreen()
 
-				CyInterface().selectCity(gc.getPlayer(inputClass.getData1()).getCity(inputClass.getData2()), True);
+				CyInterface().selectCity(gc.getPlayer(inputClass.getData1()).getCity(inputClass.getData2()), True)
 
 				popupInfo = CyPopupInfo()
 				popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)

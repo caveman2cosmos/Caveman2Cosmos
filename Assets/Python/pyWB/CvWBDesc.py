@@ -879,7 +879,7 @@ class CvUnitDesc:
 		self.level = 0
 		self.experience = 0
 		self.promotionType = []
-		self.facingDirection = DirectionTypes.NO_DIRECTION;
+		self.facingDirection = DirectionTypes.NO_DIRECTION
 		self.isSleep = False
 		self.isIntercept = False
 		self.isPatrol = False
