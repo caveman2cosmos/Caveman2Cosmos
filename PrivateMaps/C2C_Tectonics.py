@@ -2112,7 +2112,7 @@ def findStartingPlot(argsList):
 						players = 2
 				value = areaValue[area.getID()] / (1 + 2*players)
 				if value > bestAreaValue:
-					bestAreaValue = value;
+					bestAreaValue = value
 					bestArea = area.getID()
 
 			#-----
