@@ -1568,7 +1568,7 @@ class ElevationMap(FloatMap):
 								self.data[i] = self.seaLevelThreshold
 
 
-	def GetDifferenceAroundHex(x, y):
+	def GetDifferenceAroundHex(self, x, y):
 		avg = self.GetAverageInHex(x, y, 1)
 		i = self.GetIndex(x, y)
 		return self.data[i] - avg
