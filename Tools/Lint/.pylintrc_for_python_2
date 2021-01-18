@@ -4,7 +4,6 @@
 disable=anomalous-backslash-in-string,
         anomalous-unicode-escape-in-string,
         arguments-differ,
-        assert-on-tuple,
         assign-to-new-keyword,
         attribute-defined-outside-init,
         bad-continuation,
