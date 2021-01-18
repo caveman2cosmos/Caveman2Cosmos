@@ -2086,7 +2086,7 @@ def generatePlotTypes():
 		for index in range(len(possibleIslandList)):
 			possibleTile = possibleIslandList.random(dice)
 			if possibleTile == None:
-				break;
+				break
 			x, y = possibleTile
 			islandStartList[world.getOffset([x,y])] = [x, y]
 			tileList = getTilesAroundDistance(x,y,islandAreaRadius * 2)
