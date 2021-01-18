@@ -77,16 +77,6 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 			callModule = stackList[1][1]
 		print "[MST] callModule: %s" %callModule
 
-	########################
-	### initialization check
-	########################
-	global bInitialized
-	try:
-		test = bInitialized
-		bInitialized = True
-	except:
-		bInitialized = False
-
 	###########################
 	### civ universal constants
 	###########################
@@ -175,78 +165,8 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	##############################
 	### Not available at init time
 	##############################
-
-	sprint = ""
-	if not bInitialized:
-		if DEBUG:
-			mapStats.mapStatistics()
-	else:
-		global sClimateType, sSeaType, bTeams, mapGetLatitude
-		#######################
-		### retrieve parameters
-		#######################
-		# defLatitude should evaluate to a value between 0 .. 90, using y and/or x
-		sMapName = MAP.getMapScriptName()
-		if not mapVersion==None:
-			sMapName += " " + mapVersion
-		if defLatitude==None:
-			mapGetLatitude = "noPolesGetLatitude(x,y)"	# default - gives value between 0..90
-		else:
-			mapGetLatitude = defLatitude				# shoud give value between 0..90 but negative is ok
-		# adjust sMapInfo for Python Error with percent chars
-		if sMapInfo == None:
-			mapInfo = ""
-		else:
-			mapInfo = str(sMapInfo)
-			mapInfo = mapInfo.replace("%", "%%")
-
-		sprint += "[MST] " + "################################################################### MapScriptTools:getModInfo() ### \n"
-		sprint += "[MST] " + "Initialization Parameters: - %s, - %s \n\n" % (sMapName, mapGetLatitude)
-
-		###############################
-		### user selected map constants
-		###############################
-		GAME = GC.getGame()
-		sClimateType = GC.getClimateInfo(MAP.getClimate()).getType()
-		sSeaType = GC.getSeaLevelInfo(MAP.getSeaLevel()).getType()
-
-		bTeams = teamStart.getTeams() # check if there are teams
-
-		########################
-		### print map & mod info
-		########################
-		sprint += "[MST] " + "============================== \n"
-		sprint += "[MST] " + "MapScriptName:           %s \n\n" % (sMapName)
-		sprint += "[MST] " + "Players/MaxPlayers:      %i / %i \n" % (GAME.countCivPlayersEverAlive(), GC.getMAX_PC_PLAYERS())
-		sprint += "[MST] " + "Difficulty Level:        %s \n" % (GC.getHandicapInfo(GAME.getHandicapType()).getType()[9:].capitalize())
-		if bTeams:
-			sprint += "[MST] " + "- Teams:                 %r \n" % ( teamStart.teamDict )
-			humDict = {}
-			for k in teamStart.humanDict: humDict[k] = iif(teamStart.humanDict[k]==2,'True',iif(teamStart.humanDict[k]==1,'Some','False'))
-			sprint += "[MST] " + "- Team-Humanity:         %r \n" % (humDict)
-		sprint += "[MST] " + "WorldArea: Size          %i x %i \n"  % (iNumPlotsX, iNumPlotsY)
-		sprint += "[MST] " + "Mapsize:                 %s Map - %i Plots \n" % (GC.getWorldInfo(MAP.getWorldSize()).getType()[10:].capitalize(), MAP.numPlots())
-		sprint += "[MST] " + "GameSpeed:               %s Speed - %i Turns, %i Years \n" % (GC.getGameSpeedInfo(GAME.getGameSpeedType()).getType()[10:].capitalize(), GAME.getMaxTurns(), GAME.getTurnYear(GAME.getMaxTurns()) - GAME.getTurnYear(0))
-		sprint += "[MST] " + "Era:                     %s Era \n" % (GC.getEraInfo(GAME.getStartEra()).getType()[4:].capitalize())
-		sprint += "[MST] " + "Climate, Sealevel:       %s, %s Seas \n" % (sClimateType[8:].capitalize(), sSeaType[9:].capitalize())
-		neg = (evalLatitude(MAP.plot(iNumPlotsX-1,iNumPlotsY-1)) > evalLatitude(MAP.plot(iNumPlotsX-2,iNumPlotsY-2)))
-		sprint += "[MST] " + "Latitude: Max,Min        %i, %s%i \n" % ( evalLatitude( MAP.plot(0,0) ), iif(neg,"-",""), evalLatitude( MAP.plot(iNumPlotsX-1,iNumPlotsY-1) ) )
-		if sMapInfo != None:
-			sprint += "[MST] " + "------------------------------ \n"
-			sprint += mapInfo
-		sprint += "[MST] " + "============================== \n"
-		print sprint
-		print "[MST] " + "################################################################### MapScriptTools:getModInfo() ###"
-
-		#####################################
-		### initialize classes (where needed)
-		#####################################
-		marshMaker.initialize()
-		mapRegions.initialize()
-		mapPrint.initialize()
-
-		# debug maps; check if given defLatitude parameter is reasonable
-		if DEBUG: testLatitude()
+	if DEBUG:
+		mapStats.mapStatistics()
 
 
 #######################################################################
