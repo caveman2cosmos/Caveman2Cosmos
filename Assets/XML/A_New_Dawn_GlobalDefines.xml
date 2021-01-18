@@ -212,12 +212,12 @@
 	<Define>
 		<!-- Realistic Corporations: Corporation will be founded when more players than X have the prereq tech for it. -->
 		<DefineName>MINIMUM_PLAYERS_WITH_TECH_FOR_AUTO_CORPORATION_FOUNDING</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- The game will try to found a HQ for a corporation every X turns -->
 		<DefineName>CORPORATION_FOUND_CHECK_TURNS</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- The Time and Gold to Build a Route over an existing route is reduced by the time and Gold already invested in the previous Route -->
