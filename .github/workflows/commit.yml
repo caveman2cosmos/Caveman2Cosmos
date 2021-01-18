@@ -1,5 +1,5 @@
 name: Commit jobs
-on: push
+on: [push, pull_request]
 jobs:
     pylint:
         name: Linting - Pylint
