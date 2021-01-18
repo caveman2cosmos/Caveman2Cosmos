@@ -3067,7 +3067,7 @@ def assignStartingPlots():
 				bestNearScore = plotScores[scoreIndex]
 				altPlotX = altX
 				altPlotY = altY
-		if not (altPlotX,altPlotY) in altFinalPlots:
+		if (altPlotX,altPlotY) not in altFinalPlots:
 			altFinalPlots.append((altPlotX,altPlotY))
 
 	#these are the finalized plots which will be assigned to the players
@@ -4435,7 +4435,7 @@ def listNearSpaceHash(x,y,searchRange):
 			xp, yp = getTileCoordXYWithWrap((x,y),(xd,yd))
 			xh = int(xp/partitionWidth)
 			yh = int(yp/partitionHeight)
-			if not (xh,yh) in hashes:
+			if (xh,yh) not in hashes:
 				hashes.append((xh,yh))
 			yd += ystep
 		xd += xstep
