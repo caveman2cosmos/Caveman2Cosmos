@@ -59,7 +59,7 @@ def find_text(element, schema, child_element):
     if tag != None:
         text = element.find(f"{schema}{child_element}").text
         return text
-    else: return None
+    return None
 
 
 
