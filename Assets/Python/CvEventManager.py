@@ -1837,18 +1837,16 @@ class CvEventManager:
 			if iRoute < 0:
 				print "Error CvEventManager.onBuildingBuilt\n\tROUTE_RAILROAD doesn't exist, aborting python effect for Golden Spike"
 				return
-			MAP = GC.getMap()
-			iX = CyCity.getX()
-			iY = CyCity.getY()
-			iMaxWestX = iMaxEastX = iX
-			iMaxWestY = iMaxEastY = iY
-			CyPlot = MAP.plot(iX, iY)
+			CyPlot = CyCity.plot()
 			iArea = CyPlot.getArea()
+			iMaxWestX = iMaxEastX = iX = CyPlot.getX()
+			iMaxWestY = iMaxEastY = iY = CyPlot.getY()
 			pMaxWest = pMaxEast = CyPlot
 
 			if iPlayer == GAME.getActivePlayer():
 				CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_GOLDEN_SPIKE_BUILT",()), iPlayer)
 
+			MAP = GC.getMap()
 			iGridWidth = MAP.getGridWidth()
 			iGridHeight = MAP.getGridHeight()
 
@@ -1857,7 +1855,7 @@ class CvEventManager:
 				for y in xrange(iGridHeight):
 					pWest = MAP.plot(x, y)
 					pNext = MAP.plot(x+1, y)
-					if x == (iGridWidth - 1):
+					if x == iGridWidth - 1:
 						pNext = MAP.plot(0, y)
 					if pWest.getArea() == iArea and pNext.getArea() == iArea and MAP.generatePathForHypotheticalUnit(CyPlot, pWest, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000) and MAP.generatePathForHypotheticalUnit(CyPlot, pNext, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
 						iPass += 1
@@ -1893,44 +1891,44 @@ class CvEventManager:
 					pCheckPoint2 = MAP.plot(iXOff2, iYParam2)
 					pCheckPoint3 = MAP.plot(iXOff3, iYParam3)
 					if MAP.generatePathForHypotheticalUnit(CyPlot, pCheckPoint1, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
-						for i in xrange(MAP.getLastPathStepNum()):
-							CyPlotZ = MAP.getLastPathPlotByIndex(i)
+						for j in xrange(MAP.getLastPathStepNum()):
+							CyPlotZ = MAP.getLastPathPlotByIndex(j)
 							CyPlotZ.setRouteType(iRoute)
 					if MAP.generatePathForHypotheticalUnit(pCheckPoint1, pCheckPoint2, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
-						for i in xrange(MAP.getLastPathStepNum()):
-							CyPlotZ = MAP.getLastPathPlotByIndex(i)
+						for j in xrange(MAP.getLastPathStepNum()):
+							CyPlotZ = MAP.getLastPathPlotByIndex(j)
 							CyPlotZ.setRouteType(iRoute)
 					if MAP.generatePathForHypotheticalUnit(pCheckPoint2, pCheckPoint3, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
-						for i in xrange(MAP.getLastPathStepNum()):
-							CyPlotZ = MAP.getLastPathPlotByIndex(i)
+						for j in xrange(MAP.getLastPathStepNum()):
+							CyPlotZ = MAP.getLastPathPlotByIndex(j)
 							CyPlotZ.setRouteType(iRoute)
 					if MAP.generatePathForHypotheticalUnit(pCheckPoint3, CyPlot, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
-						for i in xrange(MAP.getLastPathStepNum()):
-							CyPlotZ = MAP.getLastPathPlotByIndex(i)
+						for j in xrange(MAP.getLastPathStepNum()):
+							CyPlotZ = MAP.getLastPathPlotByIndex(j)
 							CyPlotZ.setRouteType(iRoute)
 
 			elif iPass < iGridWidth:
 				for i in xrange(MAP.numPlots()):
 					CyPlotZ = MAP.plotByIndex(i)
-					if CyPlotZ.getArea() == iArea:
-						if CyPlotZ.getOwner() == iPlayer or not CyPlotZ.isOwned():
-							if MAP.generatePathForHypotheticalUnit(CyPlotZ, CyPlot, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
-								pCheckPlot = MAP.getLastPathPlotByIndex(1)
-								iCheckX = pCheckPlot.getX()
-								x = CyPlotZ.getX()
-								y = CyPlotZ.getY()
-								if iCheckX == x + 1 or (x == iGridWidth - 1 and not iCheckX) or x == iX - 1:
-									if (x < iMaxWestX and x < iX and iMaxWestX <= iX) or (x - iGridWidth < iMaxWestX and iMaxWestX <= iX and x > iX) or (x < iMaxWestX and x > iX and iMaxWestX > iX):
-										if x < iMaxWestX or (x > iX and iMaxWestX <= iX) or (x == iMaxWestX and abs(y - iY) <= abs(iMaxWestY - iY)):
-											iMaxWestX = x
-											iMaxWestY = y
-											pMaxWest = CyPlotZ
-								if iCheckX == x - 1 or (iCheckX == iGridWidth - 1 and not x) or x == iX + 1:
-									if (x > iMaxEastX and x > iX and iMaxEastX >= iX) or (x + iGridWidth > iMaxEastX and iMaxEastX >= iX and x < iX) or (x > iMaxEastX and x < iX and iMaxEastX < iX):
-										if x > iMaxEastX or (x < iX and iMaxEastX >= iX) or (x == iMaxEastX and abs(y - iY) <= abs(iMaxEastY - iY)):
-											iMaxEastX = x
-											iMaxEastY = y
-											pMaxEast = CyPlotZ
+					if CyPlotZ.getArea() != iArea or CyPlotZ.isOwned() and CyPlotZ.getOwner() != iPlayer:
+						continue
+					if MAP.generatePathForHypotheticalUnit(CyPlotZ, CyPlot, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
+						pCheckPlot = MAP.getLastPathPlotByIndex(1)
+						iCheckX = pCheckPlot.getX()
+						x = CyPlotZ.getX()
+						y = CyPlotZ.getY()
+						if iCheckX == x + 1 or x == iGridWidth - 1 and not iCheckX or x == iX - 1:
+							if (x < iMaxWestX and x < iX and iMaxWestX <= iX) or (x - iGridWidth < iMaxWestX and iMaxWestX <= iX and x > iX) or (x < iMaxWestX and x > iX and iMaxWestX > iX):
+								if x < iMaxWestX or (x > iX and iMaxWestX <= iX) or (x == iMaxWestX and abs(y - iY) <= abs(iMaxWestY - iY)):
+									iMaxWestX = x
+									iMaxWestY = y
+									pMaxWest = CyPlotZ
+						if iCheckX == x - 1 or (iCheckX == iGridWidth - 1 and not x) or x == iX + 1:
+							if (x > iMaxEastX and x > iX and iMaxEastX >= iX) or (x + iGridWidth > iMaxEastX and iMaxEastX >= iX and x < iX) or (x > iMaxEastX and x < iX and iMaxEastX < iX):
+								if x > iMaxEastX or (x < iX and iMaxEastX >= iX) or (x == iMaxEastX and abs(y - iY) <= abs(iMaxEastY - iY)):
+									iMaxEastX = x
+									iMaxEastY = y
+									pMaxEast = CyPlotZ
 				if MAP.generatePathForHypotheticalUnit(CyPlot, pMaxWest, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
 					for i in xrange(MAP.getLastPathStepNum()):
 						CyPlotZ = MAP.getLastPathPlotByIndex(i)
@@ -2325,7 +2323,7 @@ class CvEventManager:
 					CyPlot = CyPlayer.getStartingPlot()
 					X = CyPlot.getX(); Y = CyPlot.getY()
 
-			if not -1 in (X, Y):
+			if -1 not in (X, Y):
 				if GC.getCivilizationInfo(CyPlayer.getCivilizationType()).getType() == "CIVILIZATION_NEANDERTHAL":
 					iWorker = GC.getInfoTypeForString("UNIT_NEANDERTHAL_GATHERER")
 				else:

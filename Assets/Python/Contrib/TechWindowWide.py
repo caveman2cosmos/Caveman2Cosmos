@@ -302,7 +302,7 @@ class CvTechSplashScreen:
 
 		# Improvements
 		for j in range(GC.getNumBuildInfos()):
-				bTechFound = 0;
+				bTechFound = 0
 				if (GC.getBuildInfo(j).getTechPrereq() == -1):
 					bTechFound = 0
 					for k in range(GC.getNumFeatureInfos()):

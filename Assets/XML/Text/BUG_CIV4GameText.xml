@@ -6811,15 +6811,15 @@
 		<Russian>Ìàêñèìóì BarbCivs</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BARBTECHFRAC_HOVER</Tag>
+		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BARBTECHPERCENT_HOVER</Tag>
 		<English>Former barbarians get all techs known by this fraction of players</English>
 		<German>Ehemalige Barbaren erhalten alle Technologien, die dieser Anteil der Spieler kennt</German>
 		<Spanish>Las nuevas civilizaciones bárbaras obtienen todas las tecnologías conocidas por este número de jugadores.</Spanish>
 		<Russian>Ïðè ñîçäàíèè âàðâàðñêîé ôðàêöèè, îíà ïîëó÷àåò âñå òåõíîëîãèè, êîòîðûìè ðàñïîëàãàåò äàííûé êîíêðåòíûé èãðîê.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BARBTECHFRAC_TEXT</Tag>
-		<English>BarbTech Fraction</English>
+		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BARBTECHPERCENT_TEXT</Tag>
+		<English>BarbTech Percent</English>
 		<French>Tech. Diffus. Barbare</French>
 		<German>BarbTech-Anteil</German>
 		<Spanish>Fracción de tecnología bárbara</Spanish>

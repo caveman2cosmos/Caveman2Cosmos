@@ -1360,7 +1360,7 @@ class TileBuilder:
 				r = getRand(dice) * (this_scatt + 1) + 1
 				rx = int(r * math.cos(t))
 				ry = r * math.sin(t)
-				if not scale == 0:
+				if scale != 0:
 					if scale > 0:
 						if ry < 0:
 							ry = int(ry - scale * shift * ry)
@@ -2086,7 +2086,7 @@ def generatePlotTypes():
 		for index in range(len(possibleIslandList)):
 			possibleTile = possibleIslandList.random(dice)
 			if possibleTile == None:
-				break;
+				break
 			x, y = possibleTile
 			islandStartList[world.getOffset([x,y])] = [x, y]
 			tileList = getTilesAroundDistance(x,y,islandAreaRadius * 2)
