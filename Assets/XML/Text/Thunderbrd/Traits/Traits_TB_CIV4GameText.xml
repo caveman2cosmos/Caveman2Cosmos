@@ -753,6 +753,7 @@ Nachteile:
 	[ICON_BULLET]geschwächte Stadtverteidigung
 	[ICON_BULLET]Nachteile bei diplomatischen Verhandlungen (Das Staatsoberhaupt gilt als impulsiv und jedes Gegenüber rechnet damit, dass es jederzeit einen Streit vom Zaun bricht.)
 	[ICON_BULLET]Preisanstieg für die Modernisierung von Einheiten (Das Austesten neuer Möglichkeiten für vernichtende Angriffe und das Einüben derselben erhöht die Trainingskosten.)</German>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE2</Tag>
 		<English>Aggressive II</English>
@@ -1760,6 +1761,7 @@ Benefits:
 	[ICON_BULLET]You can draft a few more citizens than normal with a conscript action.
 	[ICON_BULLET]Your Military units are faster to train because many of your people are well prepared to unleash their pain on others.
 	[ICON_BULLET]Your cities tolerate being whipped to rush construction and training significantly faster than normal since this is low-grade taking place constantly.</English>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CRUEL_STRATEGY</Tag>
 		<English>Gets some small production benefit at the cost of less happiness, health, and empire stability</English>
@@ -4653,6 +4655,7 @@ Penalties:
 	[ICON_BULLET]Workers lose a quarter of their productivity speed.
 	[ICON_BULLET]Higher Maintenance costs from Number of Cities. Naval transportation costs to support a nation's infrastructure needs are usually a little higher maintenance and land locked cities are more resentfully supported.
 	[ICON_BULLET]The largest cities in your nation are less happy. Your people are more introverted, being accustomed to the relative isolation experienced on naval voyages.</English>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SEAFARING2</Tag>
 		<English>Seafaring II</English>
@@ -5041,7 +5044,7 @@ Primary Penalties:
 	[ICON_BULLET]All cities suffer from a percentage penalty to Research and Culture.
 	[ICON_BULLET]All cities suffer from a percentage penalty to Production and Commerce.
 Side Penalties:
-	[ICON_BULLET]World Wonders are constructed slower. It is unmotivating to think nothing will impress their leader despite their best efforts.
+	[ICON_BULLET]World Wonders are constructed slower. It is demotivating to think nothing will impress their leader despite their best efforts.
 	[ICON_BULLET]All cities suffer a penalty of a base Research and Culture.
 	[ICON_BULLET]All cities suffer a penalty of a base Production and Commerce.
 	[ICON_BULLET]The largest cities in your nation are a little less happy since they live with such strong envy of other metropolitan centers they could never possibly be as impressive as.
@@ -5072,7 +5075,7 @@ Primary Penalties:
 	[ICON_BULLET]All cities suffer from a percentage penalty to Research and Culture.
 	[ICON_BULLET]All cities suffer from a percentage penalty to Production and Commerce.
 Side Penalties:
-	[ICON_BULLET]World Wonders and Team Projects are constructed significantly slower. It is unmotivating to think nothing will impress their leader despite their best efforts.
+	[ICON_BULLET]World Wonders and Team Projects are constructed significantly slower. It is demotivating to think nothing will impress their leader despite their best efforts.
 	[ICON_BULLET]All cities suffer a penalty of a base Research and Culture.
 	[ICON_BULLET]All cities suffer a penalty of a base Production and Commerce.
 	[ICON_BULLET]The largest cities in your nation are a little less happy since they live with such strong envy of other metropolitan centers they could never possibly be as impressive as.
@@ -5104,7 +5107,7 @@ Primary Penalties:
 	[ICON_BULLET]All cities suffer from a percentage penalty to Research and Culture.
 	[ICON_BULLET]All cities suffer from a percentage penalty to Production and Commerce.
 Side Penalties:
-	[ICON_BULLET]World Wonders and Team Projects are constructed much slower. It is unmotivating to think nothing will impress their leader despite their best efforts.
+	[ICON_BULLET]World Wonders and Team Projects are constructed much slower. It is demotivating to think nothing will impress their leader despite their best efforts.
 	[ICON_BULLET]All cities suffer a penalty of a base Research and Culture.
 	[ICON_BULLET]All cities suffer a penalty of a base Production and Commerce.
 	[ICON_BULLET]The largest cities in your nation are a little less happy since they live with such strong envy of other metropolitan centers they could never possibly be as impressive as.
@@ -5130,7 +5133,7 @@ Primary Penalties:
 	[ICON_BULLET]All cities suffer from a percentage penalty to Research and Culture.
 	[ICON_BULLET]All cities suffer from a percentage penalty to Production and Commerce.
 Side Penalties:
-	[ICON_BULLET]World Wonders and Team Projects are constructed significantly slower. It is unmotivating to think nothing will impress their leader despite their best efforts.
+	[ICON_BULLET]World Wonders and Team Projects are constructed significantly slower. It is demotivating to think nothing will impress their leader despite their best efforts.
 	[ICON_BULLET]All cities suffer a penalty of a base Research and Culture.
 	[ICON_BULLET]All cities suffer a penalty of a base Production and Commerce.
 	[ICON_BULLET]The largest cities in your nation are a little less happy since they live with such strong envy of other metropolitan centers they could never possibly be as impressive as.
@@ -5264,27 +5267,6 @@ Vorteile:
 	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Es kann nur am Minimum trainiert werden, da alles andere zu Panik wegen vermeintlicher bevorstehender Konflikte führen würde.)
 	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Die eigenen Truppen lassen aus Angst vor Racheaktionen eher Gnade walten.)
 	</German>
-		<Russian>Negative Trait
-'Please don't hurt me!'
-As afraid as you and your people are of being attacked, the very idea of being assaulted can invigorate them somewhat when they go on the attack. They can be like bullies that are much more confident when they are the aggressor but as soon as they come under fire, they tend to fold. This all stems from their leader having a similar mentality, who panders and blusters to avoid, at all cost, any reproach from anyone.
-Primary Penalties:
-	[ICON_BULLET]Assigns the Cowardly II promotion to all Combatant and Naval Combatant units. Gives a large defense penalty but a small attack bonus.
-	[ICON_BULLET]Increased cost of upkeep per unit. Working for the government is perceived as carrying risk of conflict.
-Side Penalties:
-	[ICON_BULLET]Decrease in the rate of earning Great Military People.
-	[ICON_BULLET]Forts upgrade much slower than usual.
-	[ICON_BULLET]Your workers build fort improvements much slower.
-	[ICON_BULLET]Combatants and Naval Combatants lose Experience when trained.
-	[ICON_BULLET]Combatants and Naval Combatants take longer to train.
-	[ICON_BULLET]Significant increase in War Weariness your people suffer. There is a cultural sense of terror that grips your people when at war.
-	[ICON_BULLET]Significant decrease to the maximum number of population you convert to units during a Conscription action in a city.
-	[ICON_BULLET]Lose some Free Military Units that don't require upkeep as normal that you may be getting from another source.
-	[ICON_BULLET]Units are much more likely to be captured when defeated. They are always looking for way they will survive being under attack.
-Bonuses:
-	[ICON_BULLET]Each military unit you staff in a city makes your citizens feel much safer and thus happier.
-	[ICON_BULLET]Gain an additional Trade route in each city due to the economic amiability of your people so as to appease potential rivals.
-	[ICON_BULLET]Decrease in the cost of upgrading units since training can only cover the bare minimums without freaking out your government employees.
-	[ICON_BULLET]More likely to capture enemy units when defeating them because their terror driven rage tends to surprise foes into submission and because they can empathize, they are likely to take pity on those who surrender.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY3</Tag>
@@ -5339,27 +5321,6 @@ Vorteile:
 	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Es kann nur am Minimum trainiert werden, da alles andere zu Panik wegen vermeintlicher bevorstehender Konflikte führen würde.)
 	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Die eigenen Truppen lassen aus Angst vor Racheaktionen eher Gnade walten.)
 	</German>
-		<Russian>Negative Trait
-'Please don't hurt me!'
-As afraid as you and your people are of being attacked, the very idea of being assaulted can invigorate them somewhat when they go on the attack. They can be like bullies that are much more confident when they are the aggressor but as soon as they come under fire, they tend to fold. This all stems from their leader having a similar mentality, who panders and blusters to avoid, at all cost, any reproach from anyone.
-Primary Penalties:
-	[ICON_BULLET]Assigns the Cowardly III promotion to all Combatant and Naval Combatant units. Gives a large defense penalty but a small attack bonus.
-	[ICON_BULLET]Increased cost of upkeep per unit. Working for the government is perceived as carrying risk of conflict.
-Side Penalties:
-	[ICON_BULLET]Decrease in the rate of earning Great Military People.
-	[ICON_BULLET]Forts upgrade much slower than usual.
-	[ICON_BULLET]Your workers build fort improvements much slower.
-	[ICON_BULLET]Combatants and Naval Combatants lose Experience when trained.
-	[ICON_BULLET]Combatants and Naval Combatants take longer to train.
-	[ICON_BULLET]Strong increase in War Weariness your people suffer. There is a cultural sense of terror that grips your people when at war.
-	[ICON_BULLET]Overwhelming decrease to the maximum number of population you convert to units during a Conscription action in a city.
-	[ICON_BULLET]Lose some Free Military Units that don't require upkeep as normal that you may be getting from another source.
-	[ICON_BULLET]Units are far more likely to be captured when defeated. They are always looking for way they will survive being under attack.
-Bonuses:
-	[ICON_BULLET]Each military unit you staff in a city makes your citizens feel much safer and thus happier.
-	[ICON_BULLET]Gain an additional Trade route in each city due to the economic amiability of your people so as to appease potential rivals.
-	[ICON_BULLET]Decrease in the cost of upgrading units since training can only cover the bare minimums without freaking out your government employees.
-	[ICON_BULLET]More likely to capture enemy units when defeating them because their terror driven rage tends to surprise foes into submission and because they can empathize, they are likely to take pity on those who surrender.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY_PEDIA</Tag>
@@ -5406,27 +5367,6 @@ Vorteile:
 	[ICON_BULLET]eine Handelsroute mehr pro Stadt (Die Händler sind in der Lage, potenzielle Rivalen zu beschwichtigen.)
 	[ICON_BULLET]Preissenkung für die Modernisierung von Einheiten (Es kann nur am Minimum trainiert werden, da alles andere zu Panik wegen vermeintlicher bevorstehender Konflikte führen würde.)
 	[ICON_BULLET]erhöhte Wahrscheinlichkeit für die Gefangennahme gegnerischer Einheiten (Die eigenen Truppen lassen aus Angst vor Racheaktionen eher Gnade walten.)</German>
-		<Russian>Negative Trait
-'Please don't hurt me!'
-As afraid as you and your people are of being attacked, the very idea of being assaulted can invigorate them somewhat when they go on the attack. They can be like bullies that are much more confident when they are the aggressor but as soon as they come under fire, they tend to fold. This all stems from their leader having a similar mentality, who panders and blusters to avoid, at all cost, any reproach from anyone.
-Primary Penalties:
-	[ICON_BULLET]Assigns the Cowardly promotion to all Combatant and Naval Combatant units. Gives a large defense penalty but a small attack bonus.
-	[ICON_BULLET]Strong increase in War Weariness your people suffer. There is a cultural sense of terror that grips your people when at war.
-	[ICON_BULLET]Increased cost of upkeep per unit. Working for the government is perceived as carrying risk of conflict.
-Side Penalties:
-	[ICON_BULLET]Significant decrease in the rate of earning Great Military People.
-	[ICON_BULLET]Forts upgrade twice as slow as normal.
-	[ICON_BULLET]Your workers build fort improvements much slower.
-	[ICON_BULLET]Combatants and Naval Combatants lose some Experience when trained.
-	[ICON_BULLET]Combatants and Naval Combatants take longer to train.
-	[ICON_BULLET]Significant decrease to the maximum number of population you convert to units during a Conscription action in a city.
-	[ICON_BULLET]Lose some Free Military Units that don't require upkeep as normal that you may be getting from another source.
-	[ICON_BULLET]Units are much more likely to be captured when defeated. They are always looking for way they will survive being under attack.
-Bonuses:
-	[ICON_BULLET]Each military unit you staff in a city makes your citizens feel much safer and thus happier.
-	[ICON_BULLET]Gain an additional Trade route in each city due to the economic amiability of your people so as to appease potential rivals.
-	[ICON_BULLET]Strong decrease in the cost of upgrading units since training can only cover the bare minimums without freaking out your government employees.
-	[ICON_BULLET]More likely to capture enemy units when defeating them because their terror driven rage tends to surprise foes into submission and because they can empathize, they are likely to take pity on those who surrender.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY_STRATEGY</Tag>
@@ -13552,30 +13492,6 @@ Benefits:
 	[ICON_BULLET]Maintenance from Distance to Capital is lower.
 	[ICON_BULLET]Maintenance from Number of Cities is lower.
 	[ICON_BULLET]Your people let go of anger tremendously faster from whip rushing construction and training since life has much less meaning in a sick society.</English>
-		<Russian>Negative Trait
-'Let the people get sick so they can figure out how not to. Besides, we can turn our diseased against our enemies who are weak in their sterile environments.'
-There can be an advantage to allowing disease to plague your nation without offering it much resistance. The people CAN end up stronger, those who survive the outbreaks anyhow. Generally speaking, it is not considered a great way to run things in a country, however, and it certainly leads to public resentment. It's certainly cheaper at least.
-Primary Penalties:
-	[ICON_BULLET]Your cities are significantly more Unhealthy.
-	[ICON_BULLET]Disease is significantly increased in all cities.
-Unique Abilities:
-	[ICON_BULLET]Most stealthy unit types and animal units all gain the Unsanitary I Promotion, which causes the promoted units to spread the Disease Property.
-Side Penalties:
-	[ICON_BULLET]Your cities are less Happy thanks to resent for the toll that frequent rampant disease takes on their lives and those of loved ones.
-	[ICON_BULLET]Buildings that improve your capacity to combat Disease are slower to build.
-	[ICON_BULLET]Citizen Type Specialists produce one less Production.
-	[ICON_BULLET]Scientist and Doctor Type Specialists generate one less Research.
-	[ICON_BULLET]Technologies that open up medical knowledge are slower to discover.
-	[ICON_BULLET]Your Healer units are trained with one less Experience Point.
-	[ICON_BULLET]Your Healer units are trained slower.
-	[ICON_BULLET]Your nation suffers from more War Weariness since your people don't feel you have their best interests at heart.
-	[ICON_BULLET]Great Doctors are less likely to be born in your cities.
-	[ICON_BULLET]Your cities require a little more food to grow thanks to a much higher mortality rate.
-Benefits:
-	[ICON_BULLET]Generic Upkeep is cheaper since budgeting for medical care is of no governmental concern.
-	[ICON_BULLET]Maintenance from Distance to Capital is lower.
-	[ICON_BULLET]Maintenance from Number of Cities is lower.
-	[ICON_BULLET]Your people let go of anger tremendously faster from whip rushing construction and training since life has much less meaning in a sick society.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY2</Tag>
@@ -13610,31 +13526,6 @@ Benefits:
 	[ICON_BULLET]Maintenance from Distance to Capital is lower.
 	[ICON_BULLET]Maintenance from Number of Cities is lower.
 	[ICON_BULLET]Your cities gain one trade route since there is no effort to control travel.</English>
-		<Russian>Negative Trait
-'Let the people get sick so they can figure out how not to. Besides, we can turn our diseased against our enemies who are weak in their sterile environments.'
-There can be an advantage to allowing disease to plague your nation without offering it much resistance. The people CAN end up stronger, those who survive the outbreaks anyhow. Generally speaking, it is not considered a great way to run things in a country, however, and it certainly leads to public resentment. It's certainly cheaper at least.
-Primary Penalties:
-	[ICON_BULLET]Your cities are significantly more Unhealthy.
-	[ICON_BULLET]Disease is significantly increased in all cities.
-Unique Abilities:
-	[ICON_BULLET]Most stealthy unit types and animal units all gain the Unsanitary II Promotion, which causes the promoted units to spread the Disease Property.
-Side Penalties:
-	[ICON_BULLET]Your cities are less Happy thanks to resent for the toll that frequent rampant disease takes on their lives and those of loved ones.
-	[ICON_BULLET]Buildings that improve your capacity to combat Disease are slower to build.
-	[ICON_BULLET]Slave Type Specialists produce one less Production.
-	[ICON_BULLET]Doctor Type Specialists generate one less Espionage and Gold.
-	[ICON_BULLET]Technologies that open up medical knowledge are slower to discover.
-	[ICON_BULLET]Your Healer units are trained with a few less Experience Points.
-	[ICON_BULLET]Your Healer units are trained significantly slower.
-	[ICON_BULLET]Your nation suffers from significantly more War Weariness since your people don't feel you have their best interests at heart.
-	[ICON_BULLET]Your Largest Cities are less Happy since infectious diseases hit larger populations more regularly.
-	[ICON_BULLET]Great Doctors are significantly less likely to be born in your cities.
-	[ICON_BULLET]Your cities require a little more food to grow thanks to a much higher mortality rate.
-Benefits:
-	[ICON_BULLET]Generic Upkeep is significantly cheaper since budgeting for medical care is of no governmental concern.
-	[ICON_BULLET]Maintenance from Distance to Capital is lower.
-	[ICON_BULLET]Maintenance from Number of Cities is lower.
-	[ICON_BULLET]Your cities gain one trade route since there is no effort to control travel.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY3</Tag>
@@ -13670,32 +13561,6 @@ Benefits:
 	[ICON_BULLET]Maintenance from Distance to Capital is significantly lower.
 	[ICON_BULLET]Maintenance from Number of Cities is significantly lower.
 	[ICON_BULLET]Your cities gain one trade route since there is no effort to control travel.</English>
-		<Russian>Negative Trait
-'Let the people get sick so they can figure out how not to. Besides, we can turn our diseased against our enemies who are weak in their sterile environments.'
-There can be an advantage to allowing disease to plague your nation without offering it much resistance. The people CAN end up stronger, those who survive the outbreaks anyhow. Generally speaking, it is not considered a great way to run things in a country, however, and it certainly leads to public resentment. It's certainly cheaper at least.
-Primary Penalties:
-	[ICON_BULLET]Your cities are significantly more Unhealthy.
-	[ICON_BULLET]Disease is significantly increased in all cities.
-Unique Abilities:
-	[ICON_BULLET]Most stealthy unit types and animal units all gain the Unsanitary III Promotion, which causes the promoted units to spread the Disease Property.
-Side Penalties:
-	[ICON_BULLET]Your cities are less Happy thanks to resent for the toll that frequent rampant disease takes on their lives and those of loved ones.
-	[ICON_BULLET]Buildings that improve your capacity to combat Disease are slower to build.
-	[ICON_BULLET]Engineer Type Specialists produce one less Production.
-	[ICON_BULLET]Doctor Type Specialists generate one less Culture.
-	[ICON_BULLET]Scientist Type Specialists generate one less Research.
-	[ICON_BULLET]Technologies that open up medical knowledge are slower to discover.
-	[ICON_BULLET]Your Healer units are trained with a few less Experience Points.
-	[ICON_BULLET]Your Healer units are trained significantly slower.
-	[ICON_BULLET]Your nation suffers from significantly more War Weariness since your people don't feel you have their best interests at heart.
-	[ICON_BULLET]Your Largest Cities are significantly less Happy since infectious diseases hit larger populations more regularly.
-	[ICON_BULLET]Great Doctors are a lot less likely to be born in your cities.
-	[ICON_BULLET]Your cities require a little more food to grow thanks to a much higher mortality rate.
-Benefits:
-	[ICON_BULLET]Generic Upkeep is significantly cheaper since budgeting for medical care is of no governmental concern.
-	[ICON_BULLET]Maintenance from Distance to Capital is significantly lower.
-	[ICON_BULLET]Maintenance from Number of Cities is significantly lower.
-	[ICON_BULLET]Your cities gain one trade route since there is no effort to control travel.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY_PEDIA</Tag>
@@ -13703,7 +13568,7 @@ Benefits:
 "Let the people get sick so they can figure out how not to. Besides, we can turn our diseased against our enemies who are weak in their sterile environments."
 There can be an advantage to allowing disease to plague your nation without offering it much resistance. The people CAN end up stronger, those who survive the outbreaks anyhow. Generally speaking, it is not considered a great way to run things in a country, however, and it certainly leads to public resentment. It's certainly cheaper at least.
 Primary Penalties:
-	[ICON_BULLET]A lot more Unhealth in all cities.
+	[ICON_BULLET]A lot more Unhealthiness in all cities.
 	[ICON_BULLET]Your cities require more food to grow thanks to a much higher mortality rate.
 	[ICON_BULLET]Disease is significantly increased in all cities.
 Unique Abilities:
@@ -13725,32 +13590,6 @@ Benefits:
 	[ICON_BULLET]Maintenance from Number of Cities is significantly lower.
 	[ICON_BULLET]Your cities gain one trade route since there is no effort to control travel.
 	[ICON_BULLET]Your people let go of anger much faster from whip rushing construction and training since life has much less meaning in a sick society.</English>
-		<Russian>Negative Trait
-'Let the people get sick so they can figure out how not to. Besides, we can turn our diseased against our enemies who are weak in their sterile environments.'
-There can be an advantage to allowing disease to plague your nation without offering it much resistance. The people CAN end up stronger, those who survive the outbreaks anyhow. Generally speaking, it is not considered a great way to run things in a country, however, and it certainly leads to public resentment. It's certainly cheaper at least.
-Primary Penalties:
-	[ICON_BULLET]A lot more Unhealth in all cities.
-	[ICON_BULLET]Your cities require more food to grow thanks to a much higher mortality rate.
-	[ICON_BULLET]Disease is significantly increased in all cities.
-Unique Abilities:
-	[ICON_BULLET]Most stealthy unit types and animal units all gain the Unsanitary Promotion, which causes the promoted units to spread the Disease Property.
-Side Penalties:
-	[ICON_BULLET]Your cities are less happy thanks to resent for the toll that frequent rampant disease takes on their lives and those of loved ones.
-	[ICON_BULLET]Buildings that improve your capacity to combat Disease are slower to build.
-	[ICON_BULLET]Citizen, Slave and Engineer Type Specialists produce one less Production.
-	[ICON_BULLET]Scientist and Doctor Type Specialists generate one less Research.
-	[ICON_BULLET]Technologies that open up medical knowledge are slower to discover.
-	[ICON_BULLET]Your Healer units are trained with a few less Experience Points.
-	[ICON_BULLET]Your Healer units are trained significantly slower.
-	[ICON_BULLET]Your nation suffers from more War Weariness since your people don't feel you have their best interests at heart.
-	[ICON_BULLET]Your Largest Cities are less Happy since infectious diseases hit larger populations more regularly.
-	[ICON_BULLET]Great Doctors are less likely to be born in your cities.
-Benefits:
-	[ICON_BULLET]Generic Upkeep is significantly cheaper since budgeting for medical care is of no governmental concern.
-	[ICON_BULLET]Maintenance from Distance to Capital is significantly lower.
-	[ICON_BULLET]Maintenance from Number of Cities is significantly lower.
-	[ICON_BULLET]Your cities gain one trade route since there is no effort to control travel.
-	[ICON_BULLET]Your people let go of anger much faster from whip rushing construction and training since life has much less meaning in a sick society.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY_STRATEGY</Tag>
@@ -13791,26 +13630,6 @@ Benefits:
 	[ICON_BULLET]General Upkeep is reduced due to the elimination of a lot of government staff.
 	[ICON_BULLET]Great Military People emerge significantly faster in this nation since your leader came to power relying on some key military figures.
 	[ICON_BULLET]Civic Anarchy time is greatly reduced since resistance to policy changes is met with the punishment of death.</English>
-		<Russian>Negative Trait
-'Let the people of the land rejoice! For I have liberated them from the weak leaders they relied upon before my arrival. The power of this position is now mine to wield and we have a lot more conquering ahead of us!'
-This leader has taken command by force and the people resent him for bypassing due process and disposing of the original leadership. You may be able to enjoy some very strong military benefits, but if you select this trait, do ALL you can to avoid running out of specialist slots and land to work because citizens will cost you far more than they generate thanks to the will to undermine and rebel that exists among those who don't have much to lose to oppose you. Better to keep your population whipped down to a manageable size, or at least openly angry and unhappy than pretending to do you any favors.
-Primary Penalties:
-	[ICON_BULLET]All cities suffer a percentage penalty to Gold and Culture.
-	[ICON_BULLET]Citizen Type Specialists cost a Production.
-Side Penalties:
-	[ICON_BULLET]Your cities are less happy, resentful of the way your leader took power.
-	[ICON_BULLET]National Wonders are slower to construct due to a complete lack of national pride.
-	[ICON_BULLET]On the Revolutions option, your cities are less stable and more likely to revolt.
-	[ICON_BULLET]Your cities lose a base Gold and Culture.
-	[ICON_BULLET]Your Capital suffers a percentage penalty to Food, Production and Commerce.
-	[ICON_BULLET]Your Capital suffers a percentage penalty to Gold and Culture.
-	[ICON_BULLET]Your cities are slightly easier to perform Espionage Missions against since many citizens would help your foes if they feel they can get away with it.
-	[ICON_BULLET]Your cities suffer from a bit more Crime since many citizens wish to foment revolt against you.
-Benefits:
-	[ICON_BULLET]General Upkeep is reduced due to the elimination of a lot of government staff.
-	[ICON_BULLET]Great Military People emerge significantly faster in this nation since your leader came to power relying on some key military figures.
-	[ICON_BULLET]Civic Anarchy time is greatly reduced since resistance to policy changes is met with the punishment of death.
-		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER2</Tag>
@@ -13841,28 +13660,6 @@ Benefits:
 	[ICON_BULLET]General Upkeep is reduced due to the elimination of a lot of government staff.
 	[ICON_BULLET]Great Military People emerge significantly faster in this nation since your leader came to power relying on some key military figures.
 	[ICON_BULLET]Civic Anarchy time is greatly reduced since resistance to policy changes is met with the punishment of death.</English>
-		<Russian>Negative Trait
-'Let the people of the land rejoice! For I have liberated them from the weak leaders they relied upon before my arrival. The power of this position is now mine to wield and we have a lot more conquering ahead of us!'
-This leader has taken command by force and the people resent him for bypassing due process and disposing of the original leadership. You may be able to enjoy some very strong military benefits, but if you select this trait, do ALL you can to avoid running out of specialist slots and land to work because citizens will cost you far more than they generate thanks to the will to undermine and rebel that exists among those who don't have much to lose to oppose you. Better to keep your population whipped down to a manageable size, or at least openly angry and unhappy than pretending to do you any favors.
-Primary Penalties:
-	[ICON_BULLET]All cities suffer a percentage penalty to Gold and Culture.
-	[ICON_BULLET]Citizen Type Specialists cost a Food.
-	[ICON_BULLET]Citizen Type Specialists cost a Gold and Culture.
-Side Penalties:
-	[ICON_BULLET]Your cities are less happy, resentful of the way your leader took power.
-	[ICON_BULLET]National Wonders are slower to construct due to a complete lack of national pride.
-	[ICON_BULLET]On the Revolutions option, your cities are less stable and more likely to revolt.
-	[ICON_BULLET]Your cities lose a base Gold and Culture.
-	[ICON_BULLET]Your Capital suffers a percentage penalty to Food, Production and Commerce.
-	[ICON_BULLET]Your Capital suffers a percentage penalty to Gold and Culture.
-	[ICON_BULLET]Your cities are easier to perform Espionage Missions against since many citizens would help your foes if they feel they can get away with it.
-	[ICON_BULLET]Your units are easier to capture by enemies that defeat them because many such captives feel liberated from military service to your leader.
-	[ICON_BULLET]Your cities suffer from a bit more Crime since many citizens wish to foment revolt against you.
-Benefits:
-	[ICON_BULLET]General Upkeep is reduced due to the elimination of a lot of government staff.
-	[ICON_BULLET]Great Military People emerge significantly faster in this nation since your leader came to power relying on some key military figures.
-	[ICON_BULLET]Civic Anarchy time is greatly reduced since resistance to policy changes is met with the punishment of death.
-		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER3</Tag>
@@ -13894,29 +13691,6 @@ Benefits:
 	[ICON_BULLET]General Upkeep is reduced due to the elimination of a lot of government staff.
 	[ICON_BULLET]Great Military People emerge far faster in this nation since your leader came to power relying on some key military figures.
 	[ICON_BULLET]Civic Anarchy time is greatly reduced since resistance to policy changes is met with the punishment of death.</English>
-		<Russian>Negative Trait
-'Let the people of the land rejoice! For I have liberated them from the weak leaders they relied upon before my arrival. The power of this position is now mine to wield and we have a lot more conquering ahead of us!'
-This leader has taken command by force and the people resent him for bypassing due process and disposing of the original leadership. You may be able to enjoy some very strong military benefits, but if you select this trait, do ALL you can to avoid running out of specialist slots and land to work because citizens will cost you far more than they generate thanks to the will to undermine and rebel that exists among those who don't have much to lose to oppose you. Better to keep your population whipped down to a manageable size, or at least openly angry and unhappy than pretending to do you any favors.
-Primary Penalties:
-	[ICON_BULLET]All cities suffer a percentage penalty to Gold and Culture.
-	[ICON_BULLET]Citizen Type Specialists cost a Commerce.
-	[ICON_BULLET]Citizen Type Specialists cost a Espionage and Research.
-Side Penalties:
-	[ICON_BULLET]Your cities are less happy, resentful of the way your leader took power.
-	[ICON_BULLET]National Wonders are significantly slower to construct due to a complete lack of national pride.
-	[ICON_BULLET]On the Revolutions option, your cities are less stable and more likely to revolt.
-	[ICON_BULLET]Your cities lose a base Gold and Culture.
-	[ICON_BULLET]Your Capital suffers a percentage penalty to Food, Production and Commerce.
-	[ICON_BULLET]Your Capital suffers a percentage penalty to Gold and Culture.
-	[ICON_BULLET]Military units are slower to train since you have to be more selective with who you allow to graduate training.
-	[ICON_BULLET]Your cities are significantly easier to perform Espionage Missions against since many citizens would help your foes if they feel they can get away with it.
-	[ICON_BULLET]Your units are much easier to capture by enemies that defeat them because many such captives feel liberated from military service to your leader.
-	[ICON_BULLET]Your cities suffer from a bit more Crime since many citizens wish to foment revolt against you.
-Benefits:
-	[ICON_BULLET]General Upkeep is reduced due to the elimination of a lot of government staff.
-	[ICON_BULLET]Great Military People emerge far faster in this nation since your leader came to power relying on some key military figures.
-	[ICON_BULLET]Civic Anarchy time is greatly reduced since resistance to policy changes is met with the punishment of death.
-		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER_PEDIA</Tag>
@@ -13941,28 +13715,6 @@ Benefits:
 	[ICON_BULLET]General Upkeep is significantly reduced due to the elimination of a lot of government staff.
 	[ICON_BULLET]Great Military People emerge far faster in this nation since your leader came to power relying on some key military figures.
 	[ICON_BULLET]Civic Anarchy time is greatly reduced since resistance to policy changes is met with the punishment of death.</English>
-		<Russian>Negative Trait
-'Let the people of the land rejoice! For I have liberated them from the weak leaders they relied upon before my arrival. The power of this position is now mine to wield and we have a lot more conquering ahead of us!'
-This leader has taken command by force and the people resent him for bypassing due process and disposing of the original leadership. You may be able to enjoy some very strong military benefits, but if you select this trait, do ALL you can to avoid running out of specialist slots and land to work because citizens will cost you far more than they generate thanks to the will to undermine and rebel that exists among those who don't have much to lose to oppose you. Better to keep your population whipped down to a manageable size, or at least openly angry and unhappy than pretending to do you any favors.
-Primary Penalties:
-	[ICON_BULLET]All cities suffer a percentage penalty to Gold and Culture.
-	[ICON_BULLET]Citizen Type Specialists cost a Food, Production, and Commerce.
-	[ICON_BULLET]Citizen Type Specialists cost a Gold, Research, Culture and Espionage.
-Side Penalties:
-	[ICON_BULLET]Your cities are less happy, resentful of the way your leader took power.
-	[ICON_BULLET]National Wonders are significantly slower to construct due to a complete lack of national pride.
-	[ICON_BULLET]On the Revolutions option, your cities are less stable and more likely to revolt.
-	[ICON_BULLET]Your cities lose a base Gold and Culture.
-	[ICON_BULLET]Your Capital suffers a percentage penalty to Food, Production and Commerce.
-	[ICON_BULLET]Your Capital suffers a percentage penalty to Gold and Culture.
-	[ICON_BULLET]Your cities are easier to perform Espionage Missions against since many citizens would help your foes if they feel they can get away with it.
-	[ICON_BULLET]Your units are easier to capture by enemies that defeat them because many such captives feel liberated from military service to your leader.
-	[ICON_BULLET]Your cities suffer from a bit more Crime since many citizens wish to foment revolt against you.
-Benefits:
-	[ICON_BULLET]General Upkeep is significantly reduced due to the elimination of a lot of government staff.
-	[ICON_BULLET]Great Military People emerge far faster in this nation since your leader came to power relying on some key military figures.
-	[ICON_BULLET]Civic Anarchy time is greatly reduced since resistance to policy changes is met with the punishment of death.
-		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER_STRATEGY</Tag>
@@ -14275,30 +14027,6 @@ Benefits:
 	[ICON_BULLET]On the Revolutions Option, cities are more stable with your religion.
 	[ICON_BULLET]Wherever you have spread your State Religion, you produce Great People faster.
 	[ICON_BULLET]Allows the nation to produce Inquisitor units once technologically unlocked, that can remove all religions but the state religion in a city.</English>
-		<Russian>Negative Trait
-'Our gods are the ONLY gods and those who believe otherwise have earned their wrath and deserve to die!'
-This leader takes his faith to a dramatically unhealthy level of devotion. He likely suffers from cognitive dissonance as he uses his faith to justify all manner of violence and hatred, even though his faith may at its core promote peace and harmony. His people live in fear that if they are not devout, they will run afoul of harsh laws and penalties. But they live in even greater fear of the extremely demanding role they can fall into as religious leaders.
-Primary Penalties:
-	[ICON_BULLET]The anarchy time to change religions is twice as long as normal.
-	[ICON_BULLET]For every non-state religion in a city, you suffer from an additional unhappiness.
-	[ICON_BULLET]Gain a penalty to diplomacy since other leaders fear, and find irritating, your desire to force your religious views on others.
-	[ICON_BULLET]Lose a percentage amount of free experience on units trained in Holy Cities of non-state religions.
-	[ICON_BULLET]When playing with the Religious Disabling option, all Non-State Religions are inactive, and, depending on civics, if they also bar Non-State Religions, their buildings are destroyed rather than simply disabled.
-Abilities:
-	[ICON_BULLET]All combat capable units gain the Devotion I promotion, which gives a strong religious combat modifier, which is a combat modifier that applies as a benefit to your unit if the opponent unit is not of your religion, but as a penalty if they are.
-Side Penalties:
-	[ICON_BULLET]On the Revolutions Option, cities are less stable with multiple religions present.
-	[ICON_BULLET]Priest type City Specialists lose one Food yield.
-	[ICON_BULLET]A small overall Gold percent penalty in all cities. Even the government donates a percentage to the Church.
-	[ICON_BULLET]Priest type City Specialists give an additional Gold and Research.
-	[ICON_BULLET]Religious and Spiritual technologies are discovered slower. The people are terrified of new religious thought.
-	[ICON_BULLET]Non-state religions are significantly more difficult to spread.
-Benefits:
-	[ICON_BULLET]Great Military People are generated a little faster since those with great fervor for the religion are heavily motivated to serve.
-	[ICON_BULLET]On the Revolutions Option, cities are more stable with your religion.
-	[ICON_BULLET]Wherever you have spread your State Religion, you produce Great People faster.
-	[ICON_BULLET]Allows the nation to produce Inquisitor units once technologically unlocked, that can remove all religions but the state religion in a city.
-		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS2</Tag>
@@ -14335,34 +14063,6 @@ Benefits:
 	[ICON_BULLET]Gain a significant Experience point modifier boost in the Holy City of your state religion.
 	[ICON_BULLET]Your state religion is easier to spread.
 	[ICON_BULLET]Gain a happiness wherever you have access to the Incense resource.</English>
-		<Russian>Negative Trait
-'Our gods are the ONLY gods and those who believe otherwise have earned their wrath and deserve to die!'
-This leader takes his faith to a dramatically unhealthy level of devotion. He likely suffers from cognitive dissonance as he uses his faith to justify all manner of violence and hatred, even though his faith may at its core promote peace and harmony. His people live in fear that if they are not devout, they will run afoul of harsh laws and penalties. But they live in even greater fear of the extremely demanding role they can fall into as religious leaders.
-Primary Penalties:
-	[ICON_BULLET]The anarchy time to change religions is prohibitive.
-	[ICON_BULLET]For every non-state religion in a city, you suffer from an additional unhappiness.
-	[ICON_BULLET]Gain a penalty to diplomacy since other leaders fear, and find irritating, your desire to force your religious views on others.
-	[ICON_BULLET]Lose a significant percentage amount of free experience on units trained in Holy Cities of non-state religions.
-Abilities:
-	[ICON_BULLET]All combat capable units gain the Devotion II promotion, which gives a strong religious combat modifier, which is a combat modifier that applies as a benefit to your unit if the opponent unit is not of your religion, but as a penalty if they are.
-Side Penalties:
-	[ICON_BULLET]You earn Great People slower since your people spend much of their lives humbly, and fearfully, devoted to the faith.
-	[ICON_BULLET]On the Revolutions Option, cities are less stable with multiple religions present.
-	[ICON_BULLET]Priest type City Specialists lose one Commerce yield.
-	[ICON_BULLET]An overall Gold percent penalty in all cities. Even the government donates a percentage to the Church.
-	[ICON_BULLET]Priest type City Specialists give an additional Gold and Culture.
-	[ICON_BULLET]Religious and Spiritual technologies are discovered slower. The people are terrified of new religious thought.
-	[ICON_BULLET]Non-state religions are much more difficult to spread.
-Benefits:
-	[ICON_BULLET]Great Military People are generated a little faster since those with great fervor for the religion are heavily motivated to serve.
-	[ICON_BULLET]On the Revolutions Option, cities are more stable with your religion.
-	[ICON_BULLET]Wherever you have spread your State Religion, you produce Great People faster, enough to counter the usual penalty in all cities.
-	[ICON_BULLET]Wherever you have spread your State Religion, your units are trained a little faster.
-	[ICON_BULLET]Wherever you have spread your State Religion, buildings are constructed a bit faster.
-	[ICON_BULLET]Gain a significant Experience point modifier boost in the Holy City of your state religion.
-	[ICON_BULLET]Your state religion is easier to spread.
-	[ICON_BULLET]Gain a happiness wherever you have access to the Incense resource.
-		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS3</Tag>
@@ -14397,32 +14097,6 @@ Benefits:
 	[ICON_BULLET]Wherever you have spread your State Religion, buildings are constructed a bit faster.
 	[ICON_BULLET]Gain a significant Experience point modifier boost in the Holy City of your state religion.
 	[ICON_BULLET]Your state religion is significantly easier to spread.</English>
-		<Russian>Negative Trait
-'Our gods are the ONLY gods and those who believe otherwise have earned their wrath and deserve to die!'
-This leader takes his faith to a dramatically unhealthy level of devotion. He likely suffers from cognitive dissonance as he uses his faith to justify all manner of violence and hatred, even though his faith may at its core promote peace and harmony. His people live in fear that if they are not devout, they will run afoul of harsh laws and penalties. But they live in even greater fear of the extremely demanding role they can fall into as religious leaders.
-Primary Penalties:
-	[ICON_BULLET]The anarchy time to change religions is completely prohibitive.
-	[ICON_BULLET]For every non-state religion in a city, you suffer from two additional unhappiness.
-	[ICON_BULLET]Gain a penalty to diplomacy since other leaders fear, and find irritating, your desire to force your religious views on others.
-	[ICON_BULLET]Lose a significant percentage amount of free experience on units trained in Holy Cities of non-state religions.
-Abilities:
-	[ICON_BULLET]All combat capable units gain the Devotion III promotion, which gives a strong religious combat modifier, which is a combat modifier that applies as a benefit to your unit if the opponent unit is not of your religion, but as a penalty if they are.
-Side Penalties:
-	[ICON_BULLET]You earn Great People slower since your people spend much of their lives humbly, and fearfully, devoted to the faith.
-	[ICON_BULLET]On the Revolutions Option, cities are less stable with multiple religions present.
-	[ICON_BULLET]Priest type City Specialists lose one Production yield.
-	[ICON_BULLET]An overall Gold percent penalty in all cities. Even the government donates a percentage to the Church.
-	[ICON_BULLET]Priest type City Specialists give an additional Gold and Espionage.
-	[ICON_BULLET]Non-state religions are potentially impossible to spread.
-Benefits:
-	[ICON_BULLET]Great Military People are generated a little faster since those with great fervor for the religion are heavily motivated to serve.
-	[ICON_BULLET]On the Revolutions Option, cities are more stable with your religion.
-	[ICON_BULLET]Wherever you have spread your State Religion, you produce Great People faster, enough to counter the usual penalty in all cities.
-	[ICON_BULLET]Wherever you have spread your State Religion, your units are trained a little faster.
-	[ICON_BULLET]Wherever you have spread your State Religion, buildings are constructed a bit faster.
-	[ICON_BULLET]Gain a significant Experience point modifier boost in the Holy City of your state religion.
-	[ICON_BULLET]Your state religion is significantly easier to spread.
-		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS_PEDIA</Tag>
@@ -14455,36 +14129,6 @@ Benefits:
 	[ICON_BULLET]Your state religion is easier to spread.
 	[ICON_BULLET]Allows the nation to produce Inquisitor units once technologically unlocked, that can remove all religions but the state religion in a city.
 	[ICON_BULLET]Gain a happiness wherever you have access to the Incense resource.</English>
-		<Russian>Negative Trait
-'Our gods are the ONLY gods and those who believe otherwise have earned their wrath and deserve to die!'
-This leader takes his faith to a dramatically unhealthy level of devotion. He likely suffers from cognitive dissonance as he uses his faith to justify all manner of violence and hatred, even though his faith may at its core promote peace and harmony. His people live in fear that if they are not devout, they will run afoul of harsh laws and penalties. But they live in even greater fear of the extremely demanding role they can fall into as religious leaders.
-Primary Penalties:
-	[ICON_BULLET]The anarchy time to change religions is absolutely prohibitive and should only be done once and/or during Golden Ages.
-	[ICON_BULLET]For every non-state religion in a city, you suffer from an additional unhappiness.
-	[ICON_BULLET]Gain a strong penalty to diplomacy since other leaders greatly fear, and find irritating, your desire to force your religious views on others.
-	[ICON_BULLET]Lose a significant amount of free experience on units trained in Holy Cities of non-state religions.
-	[ICON_BULLET]When playing with the Religious Disabling option, all Non-State Religions are inactive, and, depending on civics, if they also bar Non-State Religions, their buildings are destroyed rather than simply disabled.
-Abilities:
-	[ICON_BULLET]All combat capable units gain the Devotion promotion, which gives a strong religious combat modifier, which is a combat modifier that applies as a benefit to your unit if the opponent unit is not of your religion, but as a penalty if they are.
-Side Penalties:
-	[ICON_BULLET]You earn Great People slower since your people spend much of their lives humbly, and fearfully, devoted to the faith.
-	[ICON_BULLET]On the Revolutions Option, cities are less stable with multiple religions present.
-	[ICON_BULLET]Priest type City Specialists lose one Food yield.
-	[ICON_BULLET]A small overall Gold percent penalty in all cities. Even the government donates a percentage to the Church.
-	[ICON_BULLET]Priest type City Specialists give an additional Gold, Research, Espionage AND Culture.
-	[ICON_BULLET]Religious and Spiritual technologies are discovered slower. The people are terrified of new religious thought.
-	[ICON_BULLET]Non-state religions are much more difficult to spread.
-Benefits:
-	[ICON_BULLET]Great Military People are generated faster since those with great fervor for the religion are heavily motivated to serve.
-	[ICON_BULLET]On the Revolutions Option, cities are more stable with your religion.
-	[ICON_BULLET]Wherever you have spread your State Religion, you produce Great People faster, enough to counter the penalty.
-	[ICON_BULLET]Wherever you have spread your State Religion, your units are trained a little faster.
-	[ICON_BULLET]Wherever you have spread your State Religion, buildings are constructed a bit faster.
-	[ICON_BULLET]Gain a significant Experience point modifier boost in the Holy City of your state religion.
-	[ICON_BULLET]Your state religion is easier to spread.
-	[ICON_BULLET]Allows the nation to produce Inquisitor units once technologically unlocked, that can remove all religions but the state religion in a city.
-	[ICON_BULLET]Gain a happiness wherever you have access to the Incense resource.
-		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS_STRATEGY</Tag>

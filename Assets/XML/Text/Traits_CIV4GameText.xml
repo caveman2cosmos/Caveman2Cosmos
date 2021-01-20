@@ -739,7 +739,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DISABLED_OFF</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when playing the Developing Leader Option[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce trait est uniquement pour les joueurs ayant activé l'option Dévelopement des Leader[COLOR_REVERT]</French>
+		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce trait est uniquement pour les joueurs ayant activé l'option Développement des Leader[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nur bei aktivierter Einstellung "Führungskräfteentwicklung" verfügbar[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo tratto è disponibile solo se l'opzione "Personalità in sviluppo" è attivata[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Cecha dostępna tylko dla Przywódców w grze z opcją Ulepszenie Przywódców[COLOR_REVERT]</Polish>
@@ -747,7 +747,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DISABLED_ON</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when not playing the Developing Leader Option[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce trait est uniquement pour les joueurs n'utilisant pas l'option Dévelopement des Leader[COLOR_REVERT]</French>
+		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce trait est uniquement pour les joueurs n'utilisant pas l'option Développement des Leader[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]bei aktivierter Einstellung "Führungskräfteentwicklung" nicht verfügbar[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo tratto è disponibile solo se l'opzione "Personalità in sviluppo" è disattivata[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Cecha dostępna tylko dla Przywódców bez gry z opcją Ulepszenie Przywódców[COLOR_REVERT]</Polish>
@@ -1921,7 +1921,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Complottista</Text>
+			<Text>Cospiratore</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
