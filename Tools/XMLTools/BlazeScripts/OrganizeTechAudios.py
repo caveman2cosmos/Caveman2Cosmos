@@ -121,7 +121,7 @@ def mp3_missing_query(mp3_filepath, source, miss_list):
     if check_vanilla(mp3_filepath):
         return
     # Check if file exists
-    elif os.path.exists(f"{path_assets_folder}{mp3_filepath}.mp3") == False:
+    if os.path.exists(f"{path_assets_folder}{mp3_filepath}.mp3") == False:
         print(f"Missing mp3 file from {source}: {mp3_filepath}")
         miss_list.append(mp3_filepath)
         return
@@ -135,7 +135,7 @@ def rename_file(filename, era, techname, element, schema, child_element):
     target_filename = 'Sounds/Tech/' + target_mp3_name
     if filename == target_filename:
         return
-    elif check_vanilla(filename) == False:
+    if check_vanilla(filename) == False:
         # rename file in xml
         print(f"{filename} should be: {target_filename}:")
         full_mp3_filename = f"{path_assets_folder}{filename}.mp3"
@@ -149,14 +149,10 @@ def rename_file(filename, era, techname, element, schema, child_element):
                 os.rename(full_mp3_filename, f"{path_mp3_files}{target_mp3_name}.mp3")
             else:
                 print(f"Cannot find {full_mp3_filename} to rename.")
-            return
         else:
             print(f"{filename} should be: {target_filename}:")
             print(f"Will rename: {schema}{child_element}")
             print(f"Will rename: {full_mp3_filename} (if exists) to {path_mp3_files}{target_mp3_name}.mp3")
-            return
-    else:
-        return
 
 ##############
 
