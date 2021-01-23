@@ -24589,6 +24589,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		if (!bFirst)
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_IN_CITY_VICINITY"));
+			szBuffer.append(ENDCOLR);
 		}
 
 		bFirst = true;
@@ -24603,6 +24604,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		if (!bFirst)
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_IN_CITY_VICINITY"));
+			szBuffer.append(ENDCOLR);
 		}
 
 		bFirst = true;
@@ -24617,6 +24619,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		if (!bFirst)
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_IN_CITY_VICINITY"));
+			szBuffer.append(ENDCOLR);
 		}
 		bFirst = true;
 		for (int iI = 0; iI < GC.getNumFeatureInfos(); ++iI)
@@ -24630,6 +24633,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		if (!bFirst)
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_IN_CITY_VICINITY"));
+			szBuffer.append(ENDCOLR);
 		}
 
 		if (pCity != NULL && kBuilding.isAllowsNukes() && GC.getGame().isNoNukes())
@@ -24643,6 +24647,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES"));
 			pExpr->buildDisplayString(szBuffer);
+			szBuffer.append(ENDCOLR);
 		}
 
 		if (bCivilopediaText)
