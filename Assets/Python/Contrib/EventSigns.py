@@ -269,7 +269,7 @@ class MapSigns:
 		if not thisKey:
 			BugUtil.warn("MapSigns.storeSign() could not determine valid keyname for Plot %s." % (str(pPlot)))
 			return False
-		if not thisKey in self.plotDict:
+		if thisKey not in self.plotDict:
 			self.plotDict[thisKey] = PlotSigns(pPlot)
 		self.plotDict[thisKey].setSign(ePlayer, szCaption)
 

@@ -19,7 +19,7 @@ def _args() -> Namespace:
         help="Lints all modules targeting a specific python version, will lint both versions by default",
         nargs="+",
         required=False,
-        type=_PythonVersion,
+        type=str,
     )
     return parser.parse_args()
 
@@ -66,7 +66,7 @@ def _python_3_modules() -> Tuple[Path, ...]:
 
 
 def _root_path() -> Path:
-    return Path(__file__).parents[2]
+    return (Path(__file__).parents[2]).resolve()
 
 
 def _assert_valid_python_version(version: _PythonVersion) -> None:
@@ -77,20 +77,20 @@ def _assert_valid_python_version(version: _PythonVersion) -> None:
 def _install_pylint_for_python_version(version: _PythonVersion) -> None:
     print(f"Installing pylint for python {version.value}")
     _assert_valid_python_version(version)
+    if version == _PythonVersion.python_2:
+        pylint_version = "pylint==1.9.5"
+    elif version == _PythonVersion.python_3:
+        pylint_version = "pylint"
+    else:
+        raise ValueError(f"Unsupported python version: {version.value}")
     check_call(
-        [
+        args=(
             f"python{version.value}",
             "-m",
             "pip",
             "install",
-            "--requirement",
-            str(
-                _root_path()
-                / "Tools"
-                / "Lint"
-                / f"requirements_for_python_{version.value}.txt"
-            ),
-        ]
+            pylint_version,
+        )
     )
 
 
@@ -114,19 +114,18 @@ def _lint_modules_for_python_version(
 ) -> None:
     print(f"Linting python {version.value} modules")
     _assert_valid_python_version(version)
+    config_file = (
+        _root_path() / "Tools" / "Lint" / f".pylintrc_for_python_{version.value}"
+    )
+
     check_call(
         args=(
+            f"python{version.value}",
+            "-m",
             "pylint",
-            "-j",
-            "0",
-            "--rcfile",
-            str(
-                _root_path()
-                / "Tools"
-                / "Lint"
-                / f".pylintrc_for_python_{version.value}"
-            ),
-            *modules,
+            "--jobs=0",
+            f"--rcfile={config_file}",
+            *[path.resolve() for path in modules],
         )
     )
 

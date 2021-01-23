@@ -136,7 +136,7 @@ class CvReligionScreen:
 		screen = self.getScreen()
 		if screen.isActive():
 			return
-		screen.setRenderInterfaceOnly(True);
+		screen.setRenderInterfaceOnly(True)
 		screen.showScreen( PopupStates.POPUPSTATE_IMMEDIATE, False)
 
 		# Set the background and exit button, and show the screen
@@ -608,7 +608,7 @@ class CvReligionScreen:
 				pCity = pPlayer.getCity(inputClass.getData2())
 #				CyCamera().JustLookAtPlot(pCity.plot())
 
-				CyInterface().selectCity(pCity, True);
+				CyInterface().selectCity(pCity, True)
 
 		elif (self.ReligionScreenInputMap.has_key(inputClass.getFunctionName())):
 			'Calls function mapped in ReligionScreenInputMap'

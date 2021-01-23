@@ -3685,18 +3685,18 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXPR_AND</Tag>
-		<English>And</English>
-		<French>et</French>
+		<English> And </English>
+		<French> et </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXPR_ELSE</Tag>
-		<English>Else</English>
-		<French>sinon</French>
+		<English> Else </English>
+		<French> sinon </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXPR_EQUALS</Tag>
-		<English>Equals</English>
-		<French>egale</French>
+		<English> Equals </English>
+		<French> egale </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXPR_FALSE</Tag>
@@ -3705,8 +3705,8 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXPR_IF</Tag>
-		<English>If</English>
-		<French>si</French>
+		<English>If </English>
+		<French>si </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXPR_IS_CITY</Tag>
@@ -3760,14 +3760,14 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXPR_OR</Tag>
-		<English>Or</English>
-		<French>ou</French>
-		<German>oder</German>
+		<English> Or </English>
+		<French> ou </French>
+		<German> oder </German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXPR_THEN</Tag>
-		<English>Then</English>
-		<French>alors</French>
+		<English> Then </English>
+		<French> alors </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXPR_TRUE</Tag>
@@ -12651,12 +12651,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Requires[SPACE]</English>
-		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
-		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
-		<Spanish>[ICON_BULLET][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
-		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
+		<English>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Requires[SPACE]</English>
+		<French>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
+		<German>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
+		<Polish>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_IN_CITY_VICINITY</Tag>

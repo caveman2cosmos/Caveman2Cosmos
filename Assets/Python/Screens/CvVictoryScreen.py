@@ -66,7 +66,7 @@ class CvVictoryScreen:
 		eFontTitle = FontTypes.TITLE_FONT
 
 		# Build Victory screen.
-		screen.setRenderInterfaceOnly(True);
+		screen.setRenderInterfaceOnly(True)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
 		screen.addDDSGFC("VS_Background", CyArtFileMgr().getInterfaceArtInfo("MAINMENU_SLIDESHOW_LOAD").getPath(), 0, 0, xRes, yRes, eWidGen, 1, 2)
@@ -272,23 +272,23 @@ class CvVictoryScreen:
 					aiVoteBuilding.append((i, iUNTeam, bUnknown))
 
 		# Power History
-		iOurPower = 0;
-		iWorldPower = 0;
-		bestPower = 0;
+		iOurPower = 0
+		iWorldPower = 0
+		bestPower = 0
 
 		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 			CyPlayerX = GC.getPlayer(iPlayerX)
 			if CyPlayerX.isAlive():
 				iTeamX = CyPlayerX.getTeam()
 				for i in xrange(GAME.getGameTurn()):
-					iWorldPower += CyPlayerX.getPowerHistory(i);
+					iWorldPower += CyPlayerX.getPowerHistory(i)
 
 					if iTeamAct == iTeamX:
-						iOurPower += CyPlayerX.getPowerHistory(i);
+						iOurPower += CyPlayerX.getPowerHistory(i)
 					elif iBestTeam == iTeamX:
-						bestPower += CyPlayerX.getPowerHistory(i);
+						bestPower += CyPlayerX.getPowerHistory(i)
 		if iWorldPower < 1:
-			iWorldPower = 1;
+			iWorldPower = 1
 
 		self.deleteAllWidgets()
 		eWidGen = WidgetTypes.WIDGET_GENERAL
@@ -430,13 +430,13 @@ class CvVictoryScreen:
 						iRow = screen.appendTableRow(szTable)
 						screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NO_HOLY", ()), "", eWidGen, 1, 2, 1<<0)
 
-					iReligionFound = 0;
+					iReligionFound = 0
 					if szUnknown:
 						screen.setTableText(szTable, 3, iRow, ufont2 + szUnknown, "", eWidGen, 1, 2, 1<<0)
 					else:
 						for iLoopReligion in xrange(GC.getNumReligionInfos()):
 							if (CyTeamBest.hasHolyCity(iLoopReligion)):
-								iReligionFound = 1;
+								iReligionFound = 1
 								religionPercent = GAME.calculateReligionPercent(iLoopReligion)
 
 								iRefRow += 1

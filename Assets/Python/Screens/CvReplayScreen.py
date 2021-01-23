@@ -91,7 +91,7 @@ class CvReplayScreen:
 		screen = self.getScreen()
 		if screen.isActive():
 			return
-		screen.setRenderInterfaceOnly(True);
+		screen.setRenderInterfaceOnly(True)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
 		self.EXIT_TEXT = u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + u"</font>"
@@ -169,7 +169,7 @@ class CvReplayScreen:
 		screen.setLabel(self.szSliderTextId, "Background", self.SPEED_TEXT, 1<<2, self.X_SPEED, self.Y_SPEED, self.Z_CONTROLS, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		
 		self.szSliderId = self.getNextWidgetName()
-		screen.addSlider(self.szSliderId, self.X_SLIDER, self.Y_SLIDER, self.W_SLIDER, self.H_SLIDER, self.iSpeed - 1, 0, self.NUM_SLIDER_STOPS-1, WidgetTypes.WIDGET_GENERAL, -1, -1, False);
+		screen.addSlider(self.szSliderId, self.X_SLIDER, self.Y_SLIDER, self.W_SLIDER, self.H_SLIDER, self.iSpeed - 1, 0, self.NUM_SLIDER_STOPS-1, WidgetTypes.WIDGET_GENERAL, -1, -1, False)
 
 		self.showEvents(self.iTurn, False)
 															
@@ -290,11 +290,11 @@ class CvReplayScreen:
 	def initGraph(self):
 		screen = self.getScreen()
 		for iPlayer in range(self.replayInfo.getNumPlayers()):
-			screen.addGraphLayer(self.szGraph, iPlayer, self.replayInfo.getColor(iPlayer));
+			screen.addGraphLayer(self.szGraph, iPlayer, self.replayInfo.getColor(iPlayer))
 
-		screen.setGraphLabelX(self.szGraph, localText.getText("TXT_KEY_TURNS", ()));
-		screen.setGraphLabelY(self.szGraph, localText.getText("TXT_KEY_REPLAY_SCREEN_SCORE", ()));
-		screen.setGraphYDataRange(self.szGraph, 0.0, 1.0);
+		screen.setGraphLabelX(self.szGraph, localText.getText("TXT_KEY_TURNS", ()))
+		screen.setGraphLabelY(self.szGraph, localText.getText("TXT_KEY_REPLAY_SCREEN_SCORE", ()))
+		screen.setGraphYDataRange(self.szGraph, 0.0, 1.0)
 		
 	def setPlaying(self, bPlaying):
 		if bPlaying != self.bPlaying:

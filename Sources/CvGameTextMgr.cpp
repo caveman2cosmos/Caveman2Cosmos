@@ -20720,9 +20720,7 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 			}
 			if (!bEval)
 			{
-				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES"));
-				szBuffer.append(" ");
 				pExpr->buildDisplayString(szBuffer);
 				szBuffer.append(ENDCOLR);
 			}
@@ -20766,10 +20764,9 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 					{
 						if (GC.getProjectInfo((ProjectTypes)iI).getEveryoneSpecialUnit() == GC.getUnitInfo(eUnit).getSpecialUnitType())
 						{
-							szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
 							CvWString szProject;
 							szProject.Format(L"<link=%s>%s</link>", CvWString(GC.getProjectInfo((ProjectTypes)iI).getType()).GetCString(), GC.getProjectInfo((ProjectTypes)iI).getDescription());
-							setListHelp(szBuffer, szTempBuffer, szProject, gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+							setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), szProject, gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 							bFirst = false;
 						}
 					}
@@ -20791,10 +20788,9 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 					{
 						if (GC.getProjectInfo((ProjectTypes)iI).isAllowsNukes())
 						{
-							szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
 							CvWString szProject;
 							szProject.Format(L"<link=%s>%s</link>", CvWString(GC.getProjectInfo((ProjectTypes)iI).getType()).GetCString(), GC.getProjectInfo((ProjectTypes)iI).getDescription());
-							setListHelp(szBuffer, szTempBuffer, szProject, gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+							setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), szProject, gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 							bFirst = false;
 						}
 					}
@@ -20803,10 +20799,9 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 					{
 						if (GC.getBuildingInfo((BuildingTypes)iI).isAllowsNukes())
 						{
-							szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
 							CvWString szBuilding;
 							szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo((BuildingTypes)iI).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iI).getDescription());
-							setListHelp(szBuffer, szTempBuffer, szBuilding, gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+							setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), szBuilding, gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 							bFirst = false;
 						}
 					}
@@ -20918,8 +20913,11 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 					{
 						if (bTechChooserText || GC.getGame().getActivePlayer() == NO_PLAYER || !(GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)(GC.getUnitInfo(eUnit).getPrereqAndTechs(iI)))))
 						{
-							szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
-							setListHelp(szBuffer, szTempBuffer, GC.getTechInfo(((TechTypes)(GC.getUnitInfo(eUnit).getPrereqAndTechs(iI)))).getDescription(), gDLL->getText("TXT_KEY_AND").c_str(), bFirst);
+							setListHelp(
+								szBuffer, gDLL->getText("TXT_KEY_REQUIRES"),
+								GC.getTechInfo((TechTypes)GC.getUnitInfo(eUnit).getPrereqAndTechs(iI)).getDescription(),
+								gDLL->getText("TXT_KEY_AND").c_str(), bFirst
+							);
 							bFirst = false;
 						}
 					}
@@ -20943,14 +20941,15 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 
 				for (iI = 0; iI < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); ++iI)
 				{
-					if (GC.getUnitInfo(eUnit).getPrereqOrBonuses(iI) != NO_BONUS)
+					if (GC.getUnitInfo(eUnit).getPrereqOrBonuses(iI) != NO_BONUS
+					&& (pCity == NULL || !pCity->hasBonus((BonusTypes)GC.getUnitInfo(eUnit).getPrereqOrBonuses(iI))))
 					{
-						if ((pCity == NULL) || !(pCity->hasBonus((BonusTypes)GC.getUnitInfo(eUnit).getPrereqOrBonuses(iI))))
-						{
-							szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
-							setListHelp(szBuffer, szTempBuffer, GC.getBonusInfo((BonusTypes) GC.getUnitInfo(eUnit).getPrereqOrBonuses(iI)).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
-							bFirst = false;
-						}
+						setListHelp(
+							szBuffer, gDLL->getText("TXT_KEY_REQUIRES"),
+							GC.getBonusInfo((BonusTypes)GC.getUnitInfo(eUnit).getPrereqOrBonuses(iI)).getDescription(),
+							gDLL->getText("TXT_KEY_OR").c_str(), bFirst
+						);
+						bFirst = false;
 					}
 				}
 				bFirst = true;
@@ -24212,10 +24211,9 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			{
 				if (GC.getProjectInfo((ProjectTypes)iI).getEveryoneSpecialBuilding() == kBuilding.getSpecialBuildingType())
 				{
-					szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
 					CvWString szProject;
 					szProject.Format(L"<link=%s>%s</link>", CvWString(GC.getProjectInfo((ProjectTypes)iI).getType()).GetCString(), GC.getProjectInfo((ProjectTypes)iI).getDescription());
-					setListHelp(szBuffer, szTempBuffer, szProject, gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+					setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), szProject, gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 					bFirst = false;
 				}
 			}
@@ -24356,8 +24354,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 					{
 						szBuffer.append(gDLL->getText("TXT_KEY_SET_WARNING_COLOR").c_str());
 					}
-					szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
-					setListHelp(szBuffer, szTempBuffer, GC.getCivicInfo((CivicTypes(iI))).getDescription(), gDLL->getText("TXT_KEY_AND").c_str(), bFirst);
+					setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getCivicInfo((CivicTypes(iI))).getDescription(), gDLL->getText("TXT_KEY_AND").c_str(), bFirst);
 					bLastCivicWasMet = false;
 					civicRequirementsAllMet = false;
 				}
@@ -24558,8 +24555,11 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		{
 			for (int iI = 0; iI < kBuilding.getNumPrereqOrBuilding(); ++iI)
 			{
-				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
-				setListHelp(szBuffer, szTempBuffer, GC.getBuildingInfo((BuildingTypes)kBuilding.getPrereqOrBuilding(iI)).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+				setListHelp(
+					szBuffer, gDLL->getText("TXT_KEY_REQUIRES"),
+					GC.getBuildingInfo((BuildingTypes)kBuilding.getPrereqOrBuilding(iI)).getDescription(),
+					gDLL->getText("TXT_KEY_OR").c_str(), bFirst
+				);
 				bFirst = false;
 			}
 		}
@@ -24582,14 +24582,14 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		{
 			if (kBuilding.isPrereqOrTerrain(iI))
 			{
-				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
-				setListHelp(szBuffer, szTempBuffer, GC.getTerrainInfo((TerrainTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+				setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getTerrainInfo((TerrainTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 				bFirst = false;
 			}
 		}
 		if (!bFirst)
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_IN_CITY_VICINITY"));
+			szBuffer.append(ENDCOLR);
 		}
 
 		bFirst = true;
@@ -24597,14 +24597,14 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		{
 			if (kBuilding.isPrereqAndTerrain(iI))
 			{
-				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
-				setListHelp(szBuffer, szTempBuffer, GC.getTerrainInfo((TerrainTypes)iI).getDescription(), gDLL->getText("TXT_KEY_AND").c_str(), bFirst);
+				setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getTerrainInfo((TerrainTypes)iI).getDescription(), gDLL->getText("TXT_KEY_AND").c_str(), bFirst);
 				bFirst = false;
 			}
 		}
 		if (!bFirst)
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_IN_CITY_VICINITY"));
+			szBuffer.append(ENDCOLR);
 		}
 
 		bFirst = true;
@@ -24612,28 +24612,28 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		{
 			if (kBuilding.isPrereqOrImprovement(iI))
 			{
-				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
-				setListHelp(szBuffer, szTempBuffer, GC.getImprovementInfo((ImprovementTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+				setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getImprovementInfo((ImprovementTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 				bFirst = false;
 			}
 		}
 		if (!bFirst)
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_IN_CITY_VICINITY"));
+			szBuffer.append(ENDCOLR);
 		}
 		bFirst = true;
 		for (int iI = 0; iI < GC.getNumFeatureInfos(); ++iI)
 		{
 			if (kBuilding.isPrereqOrFeature(iI))
 			{
-				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
-				setListHelp(szBuffer, szTempBuffer, GC.getFeatureInfo((FeatureTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+				setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getFeatureInfo((FeatureTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 				bFirst = false;
 			}
 		}
 		if (!bFirst)
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_IN_CITY_VICINITY"));
+			szBuffer.append(ENDCOLR);
 		}
 
 		if (pCity != NULL && kBuilding.isAllowsNukes() && GC.getGame().isNoNukes())
@@ -24645,10 +24645,9 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		BoolExpr* pExpr = kBuilding.getConstructCondition();
 		if (pExpr && (!pCity || !pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObject()))))
 		{
-			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES"));
-			szBuffer.append(" ");
 			pExpr->buildDisplayString(szBuffer);
+			szBuffer.append(ENDCOLR);
 		}
 
 		if (bCivilopediaText)
@@ -24687,8 +24686,11 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 					bTechChooserText || ePlayer == NO_PLAYER
 				|| !GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)kBuilding.getPrereqAndTechs(iI))))
 				{
-					szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
-					setListHelp(szBuffer, szTempBuffer, GC.getTechInfo(((TechTypes)(kBuilding.getPrereqAndTechs(iI)))).getDescription(), gDLL->getText("TXT_KEY_AND").c_str(), bFirst);
+					setListHelp(
+						szBuffer, gDLL->getText("TXT_KEY_REQUIRES"),
+						GC.getTechInfo((TechTypes)kBuilding.getPrereqAndTechs(iI)).getDescription(),
+						gDLL->getText("TXT_KEY_AND").c_str(), bFirst
+					);
 					bFirst = false;
 				}
 			}
@@ -24713,8 +24715,11 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 				{
 					if (pCity == NULL || !pCity->hasBonus((BonusTypes)kBuilding.getPrereqOrBonuses(iI)))
 					{
-						szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
-						setListHelp(szBonusList, szTempBuffer, GC.getBonusInfo((BonusTypes)kBuilding.getPrereqOrBonuses(iI)).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+						setListHelp(
+							szBonusList, gDLL->getText("TXT_KEY_REQUIRES"),
+							GC.getBonusInfo((BonusTypes)kBuilding.getPrereqOrBonuses(iI)).getDescription(),
+							gDLL->getText("TXT_KEY_OR").c_str(), bFirst
+						);
 						bFirst = false;
 					}
 					else if (NULL != pCity)
@@ -24742,9 +24747,8 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 					{
 						if (pCity == NULL || !pCity->hasBonus(eBonus))
 						{
-							szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
 							szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getBonusInfo(eBonus).getType()).GetCString(), GC.getBonusInfo(eBonus).getDescription());
-							setListHelp(szBonusList, szFirstBuffer, szTempBuffer, gDLL->getText("TXT_KEY_OR"), bFirst);
+							setListHelp(szBonusList, gDLL->getText("TXT_KEY_REQUIRES"), szTempBuffer, gDLL->getText("TXT_KEY_OR"), bFirst);
 							bFirst = false;
 						}
 						else if (NULL != pCity)
