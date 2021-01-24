@@ -1316,7 +1316,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
 		</BuildInfo>
-		<BuildInfo>
+		<!--BuildInfo>
 			<Type>BUILD_LUNAR_HABITATION_COMPLEX</Type>
 			<Description>TXT_KEY_BUILD_LUNAR_HABITATION_COMPLEX</Description>
 			<Help/>
@@ -1334,7 +1334,7 @@
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
-		</BuildInfo>
+		</BuildInfo-->
 		<BuildInfo>
 			<Type>BUILD_LUNAR_MINE</Type>
 			<Description>TXT_KEY_BUILD_LUNAR_MINE</Description>

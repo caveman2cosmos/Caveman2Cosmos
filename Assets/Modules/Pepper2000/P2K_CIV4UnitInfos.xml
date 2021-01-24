@@ -53,10 +53,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
+				<!--Build>
 					<BuildType>BUILD_LUNAR_HABITATION_COMPLEX</BuildType>
 					<bBuild>1</bBuild>
-				</Build>
+				</Build-->
 				<Build>
 					<BuildType>BUILD_LUNAR_BASE</BuildType>
 					<bBuild>1</bBuild>
