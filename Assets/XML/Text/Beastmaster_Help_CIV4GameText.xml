@@ -9,7 +9,7 @@
 		<Tag>TXT_KEY_UNIT_TAMED_BEAR_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Bear Cage and Dancing Bear</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Cage à Ours, et Ours danseur</French>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT] Gabbia-orsi e Orso ballerino</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT] Gabbia dell'orso e Orso ballerino</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_BISON_HELP</Tag>
@@ -90,7 +90,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_WOLF_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Wolf Cage, Kennels, Dog Breeder, War and Guard Dog Trainers</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Cage à Loups, Chenils, Eleveur de chiens, Dresseur de Chiens de guerre et de garde</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Cage à Loups, Chenils, Éleveur de chiens, Dresseur de Chiens de guerre et de garde</French>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT] Gabbia-Lupi, Canile, Addomesticatore di cani, Allenatore di cani da guerra, Allenatore di cani da caccia</Italian>
 	</TEXT>
 </Civ4GameText>

@@ -1,4 +1,5 @@
 import lxml.etree as ET
+from Common import load_tree
 
 path_xml_folder =  '../../../Assets/XML'
 
@@ -45,21 +46,13 @@ worker_obsolete_tech = None
 
 #####################################################
 
-# Given path to xml file, return (root, schema) of that file
-def load_tree(path_to_xml):
-    tree = ET.parse(path_to_xml)
-    root = tree.getroot()
-    tag = root.tag
-    schema = tag[:tag.find('}')+1] #probably some .attrib way to get it but this works too
-    return tree, root, schema
-
 # helper functions to slightly reduce retyping
 def find_text(element, schema, child_element):
     tag = element.find(f"{schema}{child_element}")
     if tag != None:
         text = element.find(f"{schema}{child_element}").text
         return text
-    else: return None
+    return None
 
 
 

@@ -19,7 +19,7 @@ class CvGFCScreen:
 		screen = CyGInterfaceScreen(self.screenName, self.screenID)
 		return screen
 	
-	def setCloseButton(widgetname, text, x, y):
+	def setCloseButton(self, widgetname, text, x, y):
 		#self.getScreen().setButtonGFC(widgetname, text, "", x, y, 50,50, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD)
 		return
 	
@@ -27,7 +27,7 @@ class CvGFCScreen:
 		screen = self.getScreen()
 		screen.addMultilineText( widgetName, unicode(message), 
 								iX, iY, iWidth, iHeight, 
-								WidgetTypes.WIDGET_GENERAL, -1,-1, 1<<0 );
+								WidgetTypes.WIDGET_GENERAL, -1,-1, 1<<0 )
 	
 	def hideScreen(self):
 		self.getScreen().hideScreen()

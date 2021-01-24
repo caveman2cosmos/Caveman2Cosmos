@@ -227,8 +227,8 @@ public:
 	int getBonusProductionModifier(int i) const;
 	int getUnitCombatFreeExperience(int i) const;
 	int getDomainFreeExperience(int i) const;
-	bool isAnyUnitCombatFreeExperience() const;
-	bool isAnyDomainFreeExperience() const;
+	bool isAnyUnitCombatFreeExperience() const { return m_piUnitCombatFreeExperience != NULL; }
+	bool isAnyDomainFreeExperience() const { return m_piDomainFreeExperience != NULL; }
 	int getDomainProductionModifier(int i) const;
 	int getPrereqAndTechs(int i) const;
 	int getBuildingHappinessChanges(int i) const;
@@ -247,6 +247,9 @@ public:
 	int getPrereqInCityBuilding(const int i) const;
 	short getNumPrereqInCityBuildings() const;
 	bool isPrereqInCityBuilding(const int i) const;
+
+	int getPrereqNotInCityBuilding(const int i) const;
+	short getNumPrereqNotInCityBuildings() const;
 
 	int getSpecialistYieldChange(int i, int j) const;
 	int* getSpecialistYieldChangeArray(int i) const;
@@ -311,11 +314,10 @@ public:
 	bool isPrereqOrCivics(int iCivic) const;
 	bool isPrereqAndCivics(int iCivic) const;
 
-	bool isPrereqOrTerrain(int i) const;		//Exposed to Python
-	bool isPrereqAndTerrain(int i) const;		//Exposed to Python
-	bool isPrereqOrImprovement(int i) const;	//Exposed to Python
-	bool isPrereqOrFeature(int i) const;		//Exposed to Python
-	bool isPrereqNotBuilding(int i) const;
+	bool isPrereqOrTerrain(int i) const;
+	bool isPrereqAndTerrain(int i) const;
+	bool isPrereqOrImprovement(int i) const;
+	bool isPrereqOrFeature(int i) const;
 	int  getBuildingProductionModifier(int i) const;
 	int  getGlobalBuildingProductionModifier(int i) const;
 	int  getGlobalBuildingCostModifier(int i) const;
@@ -363,7 +365,7 @@ public:
 	int getTechHappinessChanges(int i) const;
 	int* m_piTechHappinessChanges;
 
-	int getTechHealthChanges(int i) const;		//Exposed to Python
+	int getTechHealthChanges(int i) const;
 	int* m_piTechHealthChanges;
 
 	int getTechCommerceChange(int i, int j) const;
@@ -403,12 +405,13 @@ public:
 	int getOutbreakBase() const;
 	int getOvercomeBase() const;
 	int getTradeCommunicability() const;
-	int getFrontSupportPercentModifier() const;
-	int getShortRangeSupportPercentModifier() const;
-	int getMediumRangeSupportPercentModifier() const;
-	int getLongRangeSupportPercentModifier() const;
-	int getFlankSupportPercentModifier() const;
-	//Team Project (3)
+#ifdef STRENGTH_IN_NUMBERS
+	int getFrontSupportPercentModifier() const			{ return m_iFrontSupportPercentModifier; }
+	int getShortRangeSupportPercentModifier() const		{ return m_iShortRangeSupportPercentModifier; }
+	int getMediumRangeSupportPercentModifier() const	{ return m_iMediumRangeSupportPercentModifier; }
+	int getLongRangeSupportPercentModifier() const		{ return m_iLongRangeSupportPercentModifier; }
+	int getFlankSupportPercentModifier() const			{ return m_iFlankSupportPercentModifier; }
+#endif
 	int getNationalCaptureProbabilityModifier() const;
 	int getNationalCaptureResistanceModifier() const;
 	int getLocalCaptureProbabilityModifier() const;
@@ -482,12 +485,12 @@ public:
 
 	int getLocalSpecialistYieldChange(int i, int j) const;
 	int* getLocalSpecialistYieldChangeArray(int i) const;
+	bool isAnyLocalSpecialistYieldChanges() const { return m_ppaiLocalSpecialistYieldChange; }
 
 	int getLocalSpecialistCommerceChange(int i, int j) const;
 	int* getLocalSpecialistCommerceChangeArray(int i) const;
+	bool isAnyLocalSpecialistCommerceChanges() const { return m_ppaiLocalSpecialistCommerceChange; }
 
-	bool isAnySpecialistCommerceChanges() const;
-	bool isAnyLocalSpecialistCommerceChanges() const;
 	bool isHurry(int i) const;
 
 	//ls612 Begin:
@@ -536,23 +539,24 @@ public:
 
 	bool getNotShowInCity() const;
 
-	bool m_bNoLimit;
-	bool m_bNotShowInCity;
-	bool m_bAnySpecialistYieldChanges;
-	bool m_bAnySpecialistCommerceChanges;
-	bool m_bAnyBonusYieldModifiers;
-	bool m_bAnyTechCommerceChanges;
-	bool m_bAnyTechYieldChanges;
-	bool m_bAnyTechSpecialistChanges;
-	bool m_bAnyTechCommerceModifiers;
-	bool m_bAnyTechYieldModifiers;
-	bool m_bAnyBonusCommerceModifiers;
-	bool m_bAnyBonusYieldChanges;
-	bool m_bAnyVicinityBonusYieldChanges;
-	bool m_bAnyBonusCommercePercentChanges;
+	bool isAnySpecialistYieldChanges() const		{ return m_ppaiSpecialistYieldChange != NULL; }
+	bool isAnySpecialistCommerceChanges() const		{ return m_ppaiSpecialistCommerceChange != NULL; }
+	bool isAnyBonusYieldModifiers() const			{ return m_ppaiBonusYieldModifier != NULL; }
+	bool isAnyTechCommerceChanges() const			{ return m_ppaiTechCommerceChange != NULL; }
+	bool isAnyTechYieldChanges() const				{ return m_ppaiTechYieldChange != NULL; }
+	bool isAnyTechSpecialistChanges() const			{ return m_ppaiTechSpecialistChange != NULL; }
+	bool isAnyTechCommerceModifiers() const			{ return m_ppaiTechCommerceModifier != NULL; }
+	bool isAnyTechYieldModifiers() const			{ return m_ppaiTechYieldModifier != NULL; }
+	bool isAnyBonusCommerceModifiers() const		{ return m_ppaiBonusCommerceModifier != NULL; }
+	bool isAnyBonusYieldChanges() const				{ return m_ppaiBonusYieldChanges != NULL; }
+	bool isAnyVicinityBonusYieldChanges() const		{ return m_ppaiVicinityBonusYieldChanges != NULL; }
+	bool isAnyBonusCommercePercentChanges() const	{ return m_ppaiBonusCommercePercentChanges != NULL; }
 
 protected:
 	void setNotShowInCity();
+
+	bool m_bNoLimit;
+	bool m_bNotShowInCity;
 
 	int m_iFreePromotion_2;
 	int m_iFreePromotion_3;
@@ -621,7 +625,6 @@ private:
 	int* m_piGlobalBuildingCostModifier;
 	int* m_piBuildingHappinessChanges;
 	int* m_piPrereqNumOfBuilding;
-	bool* m_pbPrereqNotBuilding;
 
 	CvPropertyManipulators m_PropertyManipulators;
 
@@ -808,8 +811,6 @@ protected:
 	int* m_piBonusProductionModifier;
 	int* m_piUnitCombatFreeExperience;
 	int* m_piDomainFreeExperience;
-	bool m_bAnyUnitCombatFreeExperience;
-	bool m_bAnyDomainFreeExperience;
 	int* m_piDomainProductionModifier;
 	int* m_piFlavorValue;
 	int* m_piImprovementFreeSpecialist;
@@ -844,11 +845,13 @@ protected:
 	int m_iOutbreakBase;
 	int m_iOvercomeBase;
 	int m_iTradeCommunicability;
+#ifdef STRENGTH_IN_NUMBERS
 	int m_iFrontSupportPercentModifier;
 	int m_iShortRangeSupportPercentModifier;
 	int m_iMediumRangeSupportPercentModifier;
 	int m_iLongRangeSupportPercentModifier;
 	int m_iFlankSupportPercentModifier;
+#endif
 	int m_iNationalCaptureProbabilityModifier;
 	int m_iNationalCaptureResistanceModifier;
 	int m_iLocalCaptureProbabilityModifier;
@@ -892,13 +895,11 @@ protected:
 	int** m_ppaiLocalSpecialistCommerceChange;
 
 	std::vector<int> m_aiPrereqInCityBuildings;
+	std::vector<int> m_vPrereqNotInCityBuildings;
 	std::vector<int> m_aePrereqOrBonuses;
 	std::vector<int> m_vPrereqOrBuilding;
 	std::vector<int> m_vReplacementBuilding;
 	std::vector<int> m_vReplacedBuilding;
-public:
-	bool m_bAnyLocalSpecialistYieldChanges;
-	bool m_bAnyLocalSpecialistCommerceChanges;
 
 protected:
 	bool* m_pabHurry;

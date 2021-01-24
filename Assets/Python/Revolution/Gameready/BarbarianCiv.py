@@ -138,9 +138,15 @@ class BarbarianCiv:
 				# Empty slot
 				iPlayer = iPlayerX
 				CyPlayer = CyPlayerX
+		iNumTechs = GC.getNumTechInfos()
+		techsOwned = []
 		if aList:
 			iPlayer, CyPlayer = aList
 			iCivType = CyPlayer.getCivilizationType()
+			if not bNewWorld:
+				for iTech in xrange(iNumTechs):
+					if CyTeam.isHasTech(iTech):
+						techsOwned.append(iTech)
 			print "[INFO] Reincarnating dead player" + POST_FIX
 
 		elif iPlayer is None:
@@ -210,14 +216,15 @@ class BarbarianCiv:
 		szCityName = CyCity.getName()
 
 		# Add player to game
-		GAME.addPlayer(iPlayer, iLeader, iCivType, False)
+		GAME.addPlayer(iPlayer, iLeader, iCivType, False) # This resets player data.
 
 		CyTeam = GC.getTeam(CyPlayer.getTeam())
 
 		CyPlayer.setNewPlayerAlive(True)
 
 		civName = CyPlayer.getCivilizationDescription(0)
-		print "[INFO] %s has emerged in %s" %(civName, szCityName)
+		print "[BarbCiv] %s has emerged in %s" %(civName, szCityName)
+		print "[BarbCiv] bNewWorld = " + str(bNewWorld)
 
 		# Add replay message
 		mess = TRNSLTR.getText("TXT_KEY_BARBCIV_FORM_MINOR", ()) %(civName, szCityName)
@@ -241,34 +248,33 @@ class BarbarianCiv:
 		# Give techs to new player, with variables for extra techs for builders.
 		if bNewWorld:
 			iMinEra = iEra - self.RevOpt.getNewWorldErasBehind()
-			if iMinEra < 0:
-				iMinEra = 0
-			for iTech in xrange(GC.getNumTechInfos()):
-				if CyTeam.isHasTech(iTech) or not CyPlayer.canEverResearch(iTech): continue
-				if GC.getTechInfo(iTech).getEra() <= iMinEra:
-					CyTeam.setHasTech(iTech, True, iPlayer, False, False)
+			if iMinEra > -1:
+				for iTech in xrange(iNumTechs):
+					if CyPlayer.canEverResearch(iTech) and GC.getTechInfo(iTech).getEra() <= iMinEra:
+						CyTeam.setHasTech(iTech, True, iPlayer, False, False)
 		else:
-			fNumTeams = GAME.countCivTeamsAlive() * 1.0
-			fTechFrac = self.RevOpt.getBarbTechFrac()
-			#print "Free Starting techs:"
-			for iTech in xrange(GC.getNumTechInfos()):
-				if CyTeam.isHasTech(iTech) or not CyPlayer.canEverResearch(iTech): continue
-
-				fKnownRatio = GAME.countKnownTechNumTeams(iTech) / fNumTeams
-				if fKnownRatio < 1 and closeTeams:
-					iCount = 0
-					iTemp = 0
+			iNumTeams = GAME.countCivTeamsAlive()
+			iTechFrac = self.RevOpt.getBarbTechPercent()
+			for iTech in xrange(iNumTechs):
+				if iTech in techsOwned:
+					CyTeam.setHasTech(iTech, True, iPlayer, False, False)
+					continue
+				if not CyPlayer.canEverResearch(iTech):
+					continue
+				iKnownRatio = 100 * GAME.countKnownTechNumTeams(iTech) / iNumTeams
+				if iKnownRatio < 100 and closeTeams:
+					iTeams = 0
+					iKnown = 0
 					for iTeamX in closeTeams:
-						iCount += 1
+						iTeams += 1
 						CyTeamX = GC.getTeam(iTeamX)
 						if CyTeamX.isHasTech(iTech):
-							iTemp += 1
+							iKnown += 1
 
-					fKnownRatio = fKnownRatio/2 + iTemp/(2.0*iCount)
+					iKnownRatio = (iKnownRatio + 100*iKnown/iTeams) / 2
 
-				if fKnownRatio >= fTechFrac:
+				if iKnownRatio >= iTechFrac:
 					CyTeam.setHasTech(iTech, True, iPlayer, False, False)
-					#print "\t " + GC.getTechInfo(iTech).getDescription()
 
 		CyTeam.setIsMinorCiv(True, False)
 

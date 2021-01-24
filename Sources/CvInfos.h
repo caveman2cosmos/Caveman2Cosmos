@@ -61,7 +61,6 @@ public:
 	const wchar_t* getCivilopediaKey() const;
 	const wchar_t* getHelpKey() const;
 	const wchar_t* getStrategyKey() const;
-	//const wchar_t* getGenericCategoryKey() const;
 
 	// for python wide string handling
 	std::wstring pyGetTextKey() const		{ return getTextKeyWide(); }
@@ -71,7 +70,6 @@ public:
 	std::wstring pyGetCivilopedia() const	{ return getCivilopedia(); }
 	std::wstring pyGetHelp() const			{ return getHelp(); }
 	std::wstring pyGetStrategy() const		{ return getStrategy(); }
-//	std::wstring pyGetGenericCategory()		{ return getGenericCategory(); }
 
 	DllExport const wchar_t* getTextKeyWide() const;
 	DllExport const wchar_t* getDescription(uint uiForm = 0) const;
@@ -79,9 +77,6 @@ public:
 	const wchar_t* getCivilopedia() const;
 	DllExport const wchar_t* getHelp() const;
 	const wchar_t* getStrategy() const;
-/*	const wchar_t* getGenericCategory() const;*/
-
-	bool isMatchForLink(const std::wstring szLink, bool bKeysOnly) const;
 
 	virtual void read(FDataStreamBase* pStream) {}
 	virtual void write(FDataStreamBase* pStream) {}
@@ -101,13 +96,11 @@ protected:
 
 	bool m_bGraphicalOnly;
 	CvString m_szType;
-	CvString m_szButton;	// Used for Infos that don't require an ArtAssetInfo
+	CvString m_szButton; // Used for Infos that don't require an ArtAssetInfo
 	CvWString m_szTextKey;
 	CvWString m_szCivilopediaKey;
 	CvWString m_szHelpKey;
-	CvWString m_szStrategyKey;/*
-	CvWString m_szGenericCategoryKey;*/
-
+	CvWString m_szStrategyKey;
 
 	// translated text
 	std::vector<CvString> m_aszExtraXMLforPass3;
@@ -115,8 +108,7 @@ protected:
 	mutable CvWString m_szCachedText;
 	mutable CvWString m_szCachedHelp;
 	mutable CvWString m_szCachedStrategy;
-	mutable CvWString m_szCachedCivilopedia;/*
-	mutable CvWString m_szCachedGenericCategory;*/
+	mutable CvWString m_szCachedCivilopedia;
 };
 
 //
@@ -759,13 +751,13 @@ public:
 	int getDamageperTurn() const;
 	int getStrAdjperTurn() const;
 	int getWeakenperTurn() const;
-	// Strength in Numbers
+#ifdef STRENGTH_IN_NUMBERS
 	int getFrontSupportPercentChange() const;
 	int getShortRangeSupportPercentChange() const;
 	int getMediumRangeSupportPercentChange() const;
 	int getLongRangeSupportPercentChange() const;
 	int getFlankSupportPercentChange() const;
-	//
+#endif
 	int getDodgeModifierChange() const;
 	int getPrecisionModifierChange() const;
 	int getPowerShotsChange() const;
@@ -1214,13 +1206,6 @@ protected:
 	int* m_piFeatureDefensePercent;
 	int* m_piUnitCombatModifierPercent;
 	int* m_piDomainModifierPercent;
-	bool m_bAnyTerrainAttackPercent;
-	bool m_bAnyTerrainDefensePercent;
-	bool m_bAnyFeatureAttackPercent;
-	bool m_bAnyFeatureDefensePercent;
-	bool m_bAnyUnitCombatModifierPercent;
-	bool m_bAnyDomainModifierPercent;
-	//bool m_bAnyAIWeightbyUnitCombatType;
 	//ls612: Terrain Work Modifiers
 	int* m_piTerrainWorkPercent;
 	int* m_piFeatureWorkPercent;
@@ -1272,11 +1257,13 @@ protected:
 	int m_iDamageperTurn;
 	int m_iStrAdjperTurn;
 	int m_iWeakenperTurn;
+#ifdef STRENGTH_IN_NUMBERS
 	int m_iFrontSupportPercentChange;
 	int m_iShortRangeSupportPercentChange;
 	int m_iMediumRangeSupportPercentChange;
 	int m_iLongRangeSupportPercentChange;
 	int m_iFlankSupportPercentChange;
+#endif
 	int m_iDodgeModifierChange;
 	int m_iPrecisionModifierChange;
 	int m_iPowerShotsChange;
@@ -1626,8 +1613,8 @@ public:
 	const wchar_t* getDescription() const;
 	const wchar_t* getCivilopedia() const;
 	const wchar_t* getHelp() const;
-	const wchar_t* getStrategy() const;/*
-	const wchar_t* getGenericCategory() const;*/
+	const wchar_t* getStrategy() const;
+
 	virtual const TCHAR* getButton() const;
 	const wchar_t* getTextKeyWide() const;
 
@@ -1877,11 +1864,13 @@ public:
 	int getLunge() const;
 	int getDynamicDefense() const;
 	int getFortitude() const;
+#ifdef STRENGTH_IN_NUMBERS
 	int getFrontSupportPercent() const;
 	int getShortRangeSupportPercent() const;
 	int getMediumRangeSupportPercent() const;
 	int getLongRangeSupportPercent() const;
 	int getFlankSupportPercent() const;
+#endif
 	int getDodgeModifier() const;
 	int getPrecisionModifier() const;
 	int getPowerShots() const;
@@ -2252,19 +2241,19 @@ public:
 
 	int getTargetUnit(int i) const;
 	int getNumTargetUnits() const;
-	bool isTargetUnit(int i) const;		//Exposed to Python
+	bool isTargetUnit(int i) const;
 
 	int getDefendAgainstUnit(int i) const;
 	int getNumDefendAgainstUnits() const;
-	bool isDefendAgainstUnit(int i) const;		//Exposed to Python
+	bool isDefendAgainstUnit(int i) const;
 
 	int getSupersedingUnit(int i) const;
 	short getNumSupersedingUnits() const;
-	bool isSupersedingUnit(int i) const;		//Exposed to Python
+	bool isSupersedingUnit(int i) const;
 
-	int getUnitUpgrade(int i) const;			//Exposed to Python
-	int getNumUnitUpgrades() const;				//Exposed to Python
-	bool isUnitUpgrade(int i) const;			//Exposed to Python
+	int getUnitUpgrade(int i) const;
+	int getNumUnitUpgrades() const;
+	bool isUnitUpgrade(int i) const;
 
 	std::vector<int> getUnitUpgradeChain() const;
 	void CvUnitInfo::addUnitToUpgradeChain(int i);
@@ -2549,11 +2538,13 @@ protected:
 	int m_iLunge;
 	int m_iDynamicDefense;
 	int m_iFortitude;
+#ifdef STRENGTH_IN_NUMBERS
 	int m_iFrontSupportPercent;
 	int m_iShortRangeSupportPercent;
 	int m_iMediumRangeSupportPercent;
 	int m_iLongRangeSupportPercent;
 	int m_iFlankSupportPercent;
+#endif
 	int m_iDodgeModifier;
 	int m_iPrecisionModifier;
 	int m_iPowerShots;
@@ -3100,8 +3091,8 @@ public:
 	bool isAnyFeatureHappinessChange() const;
 	bool isAnySpecialistValid() const;
 	bool isAnyImprovementYieldChange() const;
-	bool isAnySpecialistCommerceChanges() const;
-	bool isAnySpecialistYieldChanges() const;
+	//bool isAnySpecialistCommerceChanges() const { return m_ppaiSpecialistCommerceChange != NULL; }
+	//bool isAnySpecialistYieldChanges() const { return m_ppaiSpecialistYieldChange != NULL; }
 
 	CvString getCivicAttitudeReason(int i) const;
 	int getCivicAttitudeVectorSize() const;
@@ -3221,8 +3212,6 @@ protected:
 	bool m_bStateReligion;
 	bool m_bNoNonStateReligionSpread;
 	bool m_bAnyImprovementYieldChange;
-	bool m_bAnySpecialistCommerceChanges;
-	bool m_bAnySpecialistYieldChanges;
 	bool m_bAllReligionsActive;
 	bool m_bBansNonStateReligions;
 	bool m_bFreedomFighter;
@@ -3371,7 +3360,7 @@ public:
 	DllExport const TCHAR* getBorderFile() const;
 
 	DllExport int getTextureIndex() const;
-	DllExport const TCHAR* getDeltaString() const;		//Exposed to Python
+	DllExport const TCHAR* getDeltaString() const;
 	DllExport const TCHAR* getConnectString() const;
 	DllExport const TCHAR* getRotateString() const;
 
@@ -4185,7 +4174,7 @@ public:
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 	//	This really belongs on CvInfoBase but you can't change the size of that
 	//	object without crashing the core engine :-(
-	inline int	getZobristValue() const { return m_zobristValue; }
+	inline int getZobristValue() const { return m_zobristValue; }
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -4205,10 +4194,7 @@ protected:
 
 	int m_zobristValue;
 
-	// JOOYO_ADDON, Added by Jooyo, 07/07/09
 	bool m_bSeaTunnel;
-
-	bool m_bAnyPrereqOrBonus;
 
 	// Arrays
 	int* m_piYieldChange;
@@ -6154,7 +6140,7 @@ public:
 	//Arrays
 	int getSpecialistYieldChange(int i, int j) const;
 	int* getSpecialistYieldChangeArray(int i) const;
-	bool m_bAnySpecialistYieldChanges;
+	bool isAnySpecialistYieldChanges() const { return m_ppaiSpecialistYieldChange != NULL; }
 
 	int getYieldModifier(int i) const;
 	int* getYieldModifierArray() const;
@@ -6175,7 +6161,7 @@ public:
 
 	int getSpecialistCommerceChange(int i, int j) const;
 	int* getSpecialistCommerceChangeArray(int i) const;
-	bool m_bAnySpecialistCommerceChanges;
+	bool isAnySpecialistCommerceChanges() const { return m_ppaiSpecialistCommerceChange != NULL; }
 
 	int getFlavorValue(int i) const;
 	int getLessYieldThreshold(int i) const;
@@ -6185,8 +6171,7 @@ public:
 
 	int getImprovementYieldChange(int i, int j) const;
 	int* getImprovementYieldChangeArray(int i) const;
-	bool m_bAnyImprovementYieldChanges;
-	//Team Project (7)
+
 	int getGoldenAgeYieldChanges(int i) const;
 	int* getGoldenAgeYieldChangesArray() const;
 
@@ -9221,13 +9206,13 @@ public:
 	int getDynamicDefenseChange() const;
 	int getStrengthChange() const;
 	int getFortitudeChange() const;
-
+#ifdef STRENGTH_IN_NUMBERS
 	int getFrontSupportPercentChange() const;
 	int getShortRangeSupportPercentChange() const;
 	int getMediumRangeSupportPercentChange() const;
 	int getLongRangeSupportPercentChange() const;
 	int getFlankSupportPercentChange() const;
-
+#endif
 	int getDodgeModifierChange() const;
 	int getPrecisionModifierChange() const;
 	int getPowerShotsChange() const;
@@ -9580,11 +9565,13 @@ protected:
 	int m_iDynamicDefenseChange;
 	int m_iStrengthChange;
 	int m_iFortitudeChange;
+#ifdef STRENGTH_IN_NUMBERS
 	int m_iFrontSupportPercentChange;
 	int m_iShortRangeSupportPercentChange;
 	int m_iMediumRangeSupportPercentChange;
 	int m_iLongRangeSupportPercentChange;
 	int m_iFlankSupportPercentChange;
+#endif
 	int m_iDodgeModifierChange;
 	int m_iPrecisionModifierChange;
 	int m_iPowerShotsChange;
@@ -9689,7 +9676,6 @@ protected:
 
 	//Arrays
 	int* m_piDomainModifierPercent;
-	bool m_bAnyDomainModifierPercent;
 
 	// bool vectors without delayed resolution
 	// bool vector with delayed resolution

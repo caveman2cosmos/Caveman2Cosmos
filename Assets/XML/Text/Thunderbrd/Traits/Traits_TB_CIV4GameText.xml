@@ -474,7 +474,7 @@ Benefits:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT_STRATEGY</Tag>
-		<English>Less happy. Not as quick to birth Great People or grow cities. Stronger slaves and a more conscriptable populace and you draft a segment of any conquered population as soon as you invade a city. Reluctant to adopt new religious views and more judgmental and suppressive of those not adopted, but cities automatically adopt your State Religion. Diplomatic and foreign trade penalty. Suffers from higher crime and disease and lower education.</English>
+		<English>Less happy. Not as quick to birth Great People or grow cities. Stronger slaves, a more conscriptable populace and you draft a segment of any conquered population as soon as you invade a city. Reluctant to adopt new religious views and more judgmental and suppressive of those not adopted, but cities automatically adopt your State Religion. Diplomatic and foreign trade penalty. Suffers from higher crime and disease and lower education.</English>
 		<French>Moins heureux. Pas aussi rapide pour faire naître des Personnages illustres ou développer des villes. Des esclaves plus forts et une population plus enrôlable et vous rédigez un segment de toute population conquise dès que vous envahissez une ville. Réticents à adopter de nouvelles opinions religieuses et plus de jugement et de suppression de ceux qui ne sont pas adoptés, mais les villes adoptent automatiquement votre religion d'État. Sanction diplomatique et commerce extérieur. Souffre d'une criminalité et d'une maladie plus élevées et d'une éducation plus faible.</French>
 	</TEXT>
 	<TEXT>
@@ -637,7 +637,7 @@ Primary Benefits:
 	[ICON_BULLET]All cities gain a percentage modifier to Food and Commerce.
 
 Unique Benefits:
-	[ICON_BULLET]The most anarchy this nation can experience is limited to 10 rounds, possibly modified by gamespeed. Civilized people find agreement faster and hate ineffective governance so puts an end so only tolerates it for so long.
+	[ICON_BULLET]The most anarchy this nation can experience is limited to 10 rounds, possibly modified by game speed. Civilized people find agreement faster and hate ineffective governance so puts an end so only tolerates it for so long.
 	[ICON_BULLET]All Combatant and Naval Combatant units gain the Civilized I Promotion, which gives a solid bonus to Defense, a small penalty to Attack, and a large bonus against Barbarians and Hidden Nationality units.
 
 Side Benefits:
@@ -675,7 +675,7 @@ Primary Benefits:
 	[ICON_BULLET]All cities gain a percentage modifier to Food and Commerce.
 
 Unique Benefits:
-	[ICON_BULLET]The most anarchy this nation can experience is limited to 6 rounds, possibly modified by gamespeed. Civilized people find agreement faster and hate ineffective governance so puts an end so only tolerates it for so long.
+	[ICON_BULLET]The most anarchy this nation can experience is limited to 6 rounds, possibly modified by game speed. Civilized people find agreement faster and hate ineffective governance so puts an end so only tolerates it for so long.
 	[ICON_BULLET]All Combatant and Naval Combatant units gain the Civilized II Promotion, which gives a solid bonus to Defense, a small penalty to Attack, and a large bonus against Ruffian units.
 
 Side Benefits:
@@ -713,7 +713,7 @@ Primary Benefits:
 	[ICON_BULLET]All cities gain a percentage modifier to Food and Commerce.
 
 Unique Benefits:
-	[ICON_BULLET]The most anarchy this nation can experience is limited to a few rounds, possibly modified by gamespeed. Civilized people find agreement faster and hate ineffective governance so puts an end so only tolerates it for so long.
+	[ICON_BULLET]The most anarchy this nation can experience is limited to a few rounds, possibly modified by game speed. Civilized people find agreement faster and hate ineffective governance so puts an end so only tolerates it for so long.
 	[ICON_BULLET]All Combatant and Naval Combatant units gain the Civilized III Promotion, which gives a solid bonus to Defense, a small penalty to Attack, and a large bonus against Criminal units.
 
 Side Benefits:
@@ -746,7 +746,7 @@ Primary Benefits:
 	[ICON_BULLET]All cities gain a percentage modifier to Food and Commerce.
 
 Unique Benefits:
-	[ICON_BULLET]The most anarchy this nation can experience is limited to 4 rounds, possibly modified by gamespeed. Civilized people find agreement faster and hate ineffective governance so puts an end so only tolerates it for so long.
+	[ICON_BULLET]The most anarchy this nation can experience is limited to 4 rounds, possibly modified by game speed. Civilized people find agreement faster and hate ineffective governance so puts an end so only tolerates it for so long.
 	[ICON_BULLET]All Combatant and Naval Combatant units gain the Civilized Promotion, which gives a solid bonus to Defense, a small penalty to Attack, and a large bonus against Barbarians and Hidden Nationality units.
 
 Side Benefits:
@@ -3525,7 +3525,7 @@ Penalties:
 	[ICON_BULLET]Improvements upgrade much slower than normal because the people are impatiently waiting for workers to get it done immediately rather than taking the time themselves to update the land they operate themselves.
 	[ICON_BULLET]Workers are a bit slower because they are always looking for ways to do things in a new and improved fashion and have a hard time focusing on repetitive processes involved in getting things done.
 	[ICON_BULLET]Your nation gets fewer base free military units because even your soldiers balk at getting hand-me-down equipment.
-	[ICON_BULLET]The constant need to make sure that everything is as fully considered for new adjustments during times of policy change ensures that any Anarchy Period takes at least a round at minimum, which may be adjusted by gamespeed.</English>
+	[ICON_BULLET]The constant need to make sure that everything is as fully considered for new adjustments during times of policy change ensures that any Anarchy Period takes at least a round at minimum, which may be adjusted by game speed.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE2</Tag>
@@ -3560,7 +3560,7 @@ Penalties:
 	[ICON_BULLET]Improvements upgrade much slower than normal because the people are impatiently waiting for workers to get it done immediately rather than taking the time themselves to update the land they operate themselves.
 	[ICON_BULLET]Workers are a bit slower because they are always looking for ways to do things in a new and improved fashion and have a hard time focusing on repetitive processes involved in getting things done.
 	[ICON_BULLET]Your nation gets fewer base free military units because even your soldiers balk at getting hand-me-down equipment.
-	[ICON_BULLET]The constant need to make sure that everything is as fully considered for new adjustments during times of policy change ensures that any Anarchy Period takes at least a few rounds at minimum, which may be adjusted by gamespeed.</English>
+	[ICON_BULLET]The constant need to make sure that everything is as fully considered for new adjustments during times of policy change ensures that any Anarchy Period takes at least a few rounds at minimum, which may be adjusted by game speed.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE3</Tag>
@@ -3595,7 +3595,7 @@ Penalties:
 	[ICON_BULLET]Improvements upgrade much slower than normal because the people are impatiently waiting for workers to get it done immediately rather than taking the time themselves to update the land they operate themselves.
 	[ICON_BULLET]Workers are slower because they are always looking for ways to do things in a new and improved fashion and have a hard time focusing on repetitive processes involved in getting things done.
 	[ICON_BULLET]Your nation gets fewer base free military units because even your soldiers balk at getting hand-me-down equipment.
-	[ICON_BULLET]The constant need to make sure that everything is as fully considered for new adjustments during times of policy change ensures that any Anarchy Period takes at least three rounds at minimum, which may be adjusted by gamespeed.</English>
+	[ICON_BULLET]The constant need to make sure that everything is as fully considered for new adjustments during times of policy change ensures that any Anarchy Period takes at least three rounds at minimum, which may be adjusted by game speed.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE_PEDIA</Tag>
@@ -3627,7 +3627,7 @@ Penalties:
 	[ICON_BULLET]Improvements upgrade much slower than normal because the people are impatiently waiting for workers to get it done immediately rather than taking the time themselves to update the land they operate themselves.
 	[ICON_BULLET]Workers are a bit slower because they are always looking for ways to do things in a new and improved fashion and have a hard time focusing on repetitive processes involved in getting things done.
 	[ICON_BULLET]Your nation gets fewer base free military units because even your soldiers balk at getting hand-me-down equipment.
-	[ICON_BULLET]The constant need to make sure that everything is as fully considered for new adjustments during times of policy change ensures that any Anarchy Period takes at least a few rounds at minimum, which may be adjusted by gamespeed.</English>
+	[ICON_BULLET]The constant need to make sure that everything is as fully considered for new adjustments during times of policy change ensures that any Anarchy Period takes at least a few rounds at minimum, which may be adjusted by game speed.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE_STRATEGY</Tag>

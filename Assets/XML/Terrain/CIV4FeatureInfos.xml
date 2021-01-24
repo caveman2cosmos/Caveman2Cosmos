@@ -4294,7 +4294,7 @@
 			<Type>FEATURE_CORAL_REEF_BEACON</Type>
 			<Description>TXT_KEY_FEATURE_CORAL_REEF_BEACON</Description>
 			<Civilopedia>TXT_KEY_FEATURE_CORAL_REEF_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF_BEACON</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -4340,7 +4340,7 @@
 			<Type>FEATURE_CORAL_REEF_LIGHTHOUSE</Type>
 			<Description>TXT_KEY_FEATURE_CORAL_REEF_LIGHTHOUSE</Description>
 			<Civilopedia>TXT_KEY_FEATURE_CORAL_REEF_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF_LIGHTHOUSE</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -4892,7 +4892,7 @@
 			<Type>FEATURE_REEF_BEACON</Type>
 			<Description>TXT_KEY_FEATURE_REEF_BEACON</Description>
 			<Civilopedia>TXT_KEY_FEATURE_REEF_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_REEF</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_REEF_BEACON</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -5055,7 +5055,7 @@
 			<Type>FEATURE_REEF_LIGHTHOUSE</Type>
 			<Description>TXT_KEY_FEATURE_REEF_LIGHTHOUSE</Description>
 			<Civilopedia>TXT_KEY_FEATURE_REEF_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_REEF</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_REEF_LIGHTHOUSE</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>

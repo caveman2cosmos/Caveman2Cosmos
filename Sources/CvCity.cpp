@@ -644,12 +644,13 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iReinforcementCounter = 0;
 
 	//TB Combat Mod (Buildings) begin
+#ifdef STRENGTH_IN_NUMBERS
 	m_iTotalFrontSupportPercentModifier = 0;
 	m_iTotalShortRangeSupportPercentModifier = 0;
 	m_iTotalMediumRangeSupportPercentModifier = 0;
 	m_iTotalLongRangeSupportPercentModifier = 0;
 	m_iTotalFlankSupportPercentModifier = 0;
-	//Team Project (3)
+#endif
 	m_iExtraLocalCaptureProbabilityModifier = 0;
 	m_iExtraLocalCaptureResistanceModifier = 0;
 	m_iExtraLocalDynamicDefense = 0;
@@ -3139,7 +3140,6 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	/* when not ordinarily hiding uncosntructable (since you cannot influence your vicinity bonuses	*/
 	/* so its not useful information for the most part												*/
 	/************************************************************************************************/
-	const int numBuildingInfos = GC.getNumBuildingInfos();
 	if (!bExposed)
 	{
 		if (kBuilding.getPrereqVicinityBonus() != NO_BONUS
@@ -3188,14 +3188,11 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 	if (!bTestVisible && !bIgnoreBuildings || bAffliction)
 	{
-		if (kBuilding.isPrereqNotBuilding(NO_BUILDING))
+		for (int iI = 0; iI < kBuilding.getNumPrereqNotInCityBuildings(); ++iI)
 		{
-			for (int iI = 0; iI < numBuildingInfos; iI++)
+			if (getNumActiveBuilding(static_cast<BuildingTypes>(kBuilding.getPrereqNotInCityBuilding(iI))) > 0)
 			{
-				if (kBuilding.isPrereqNotBuilding(iI) && getNumActiveBuilding((BuildingTypes)iI) > 0)
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 
@@ -5147,10 +5144,10 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 		{
 			PROFILE("CvCity::processBuilding.part2");
 
-			bool bChange = (iChange == 1);
+			const bool bChange = (iChange == 1);
 			for (int iI = 0; iI < kBuilding.getNumFreeTraitTypes(); iI++)
 			{
-				TraitTypes eTrait = (TraitTypes) kBuilding.getFreeTraitType(iI);
+				const TraitTypes eTrait = (TraitTypes) kBuilding.getFreeTraitType(iI);
 				if (GC.getTraitInfo(eTrait).isCivilizationTrait())
 				{
 					GET_PLAYER(getOwner()).setHasTrait(eTrait, bChange);
@@ -5169,7 +5166,7 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 				clearRawVicinityBonusCache((BonusTypes)(kBuilding.getFreeBonus()));
 			}
 
-			int iNum = kBuilding.getNumExtraFreeBonuses();
+			const int iNum = kBuilding.getNumExtraFreeBonuses();
 			for (int iI = 0; iI < iNum; iI++)
 			{
 				changeFreeBonus(kBuilding.getExtraFreeBonus(iI), kBuilding.getExtraFreeBonusNum(iI) * iChange);
@@ -5245,18 +5242,18 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			}
 			if (kBuilding.getReligionType() != NO_RELIGION)
 			{
-				changeStateReligionHappiness(((ReligionTypes)(kBuilding.getReligionType())), (kBuilding.getStateReligionHappiness() * iChange));
+				changeStateReligionHappiness((ReligionTypes)kBuilding.getReligionType(), (kBuilding.getStateReligionHappiness() * iChange));
 			}
 			changeMilitaryProductionModifier(kBuilding.getMilitaryProductionModifier() * iChange);
 			changeSpaceProductionModifier(kBuilding.getSpaceProductionModifier() * iChange);
 			changeExtraTradeRoutes(kBuilding.getTradeRoutes() * iChange);
 			changeTradeRouteModifier(kBuilding.getTradeRouteModifier() * iChange);
 			changeForeignTradeRouteModifier(kBuilding.getForeignTradeRouteModifier() * iChange);
-			changePowerCount(((kBuilding.isPower()) ? iChange : 0), kBuilding.isDirtyPower());
-			changeGovernmentCenterCount((kBuilding.isGovernmentCenter()) ? iChange : 0);
-			changeNoUnhappinessCount((kBuilding.isNoUnhappiness()) ? iChange : 0);
-			changeNoUnhealthyPopulationCount((kBuilding.isNoUnhealthyPopulation()) ? iChange : 0);
-			changeBuildingOnlyHealthyCount((kBuilding.isBuildingOnlyHealthy()) ? iChange : 0);
+			changePowerCount((kBuilding.isPower() ? iChange : 0), kBuilding.isDirtyPower());
+			changeGovernmentCenterCount(kBuilding.isGovernmentCenter() ? iChange : 0);
+			changeNoUnhappinessCount(kBuilding.isNoUnhappiness() ? iChange : 0);
+			changeNoUnhealthyPopulationCount(kBuilding.isNoUnhealthyPopulation() ? iChange : 0);
+			changeBuildingOnlyHealthyCount(kBuilding.isBuildingOnlyHealthy() ? iChange : 0);
 			if (iChange == 1)
 			{
 				changePopulation(kBuilding.getPopulationChange() * iChange);
@@ -5377,13 +5374,14 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 				PropertyTypes eProperty = kBuilding.getAidRateChange(iI).ePropertyType;
 				changeAidRate(eProperty, kBuilding.getAidRateChange(iI).iChange * iChange);
 			}
+#ifdef STRENGTH_IN_NUMBERS
 			changeTotalFrontSupportPercentModifier(kBuilding.getFrontSupportPercentModifier() * iChange);
 			changeTotalShortRangeSupportPercentModifier(kBuilding.getShortRangeSupportPercentModifier() * iChange);
 			changeTotalMediumRangeSupportPercentModifier(kBuilding.getMediumRangeSupportPercentModifier() * iChange);
 			changeTotalLongRangeSupportPercentModifier(kBuilding.getLongRangeSupportPercentModifier() * iChange);
 			changeTotalFlankSupportPercentModifier(kBuilding.getFlankSupportPercentModifier() * iChange);
+#endif
 		}
-
 		if (kBuilding.getPromotionLineType() != NO_PROMOTIONLINE && GC.getPromotionLineInfo(kBuilding.getPromotionLineType()).isAffliction())
 		{
 			changeAfflictionTypeCount(kBuilding.getPromotionLineType(), iChange);
@@ -17801,11 +17799,19 @@ void CvCity::read(FDataStreamBase* pStream)
 	//TB Combat Mod (Buildings) begin
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatRepelModifier);
+#ifdef STRENGTH_IN_NUMBERS
 	WRAPPER_READ(wrapper, "CvCity", &m_iTotalFrontSupportPercentModifier);
 	WRAPPER_READ(wrapper, "CvCity", &m_iTotalShortRangeSupportPercentModifier);
 	WRAPPER_READ(wrapper, "CvCity", &m_iTotalMediumRangeSupportPercentModifier);
 	WRAPPER_READ(wrapper, "CvCity", &m_iTotalLongRangeSupportPercentModifier);
 	WRAPPER_READ(wrapper, "CvCity", &m_iTotalFlankSupportPercentModifier);
+#else
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", &m_iTotalFrontSupportPercentModifier, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", &m_iTotalShortRangeSupportPercentModifier, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", &m_iTotalMediumRangeSupportPercentModifier, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", &m_iTotalLongRangeSupportPercentModifier, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", &m_iTotalFlankSupportPercentModifier, SAVE_VALUE_TYPE_INT);
+#endif
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeIncrement);
 
@@ -18276,11 +18282,13 @@ void CvCity::write(FDataStreamBase* pStream)
 	//TB Combat Mod (Buildings) begin
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatRepelModifier);
+#ifdef STRENGTH_IN_NUMBERS
 	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalFrontSupportPercentModifier);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalShortRangeSupportPercentModifier);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalMediumRangeSupportPercentModifier);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalLongRangeSupportPercentModifier);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalFlankSupportPercentModifier);
+#endif
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeIncrement);
 
@@ -23111,12 +23119,13 @@ void CvCity::clearModifierTotals()
 	//	city yields based on plots being worked until we explicitly add them back in
 	m_bPlotWorkingMasked = true;
 	//TB Combat Mods (Buildings) begin
+#ifdef STRENGTH_IN_NUMBERS
 	m_iTotalFrontSupportPercentModifier = 0;
 	m_iTotalShortRangeSupportPercentModifier = 0;
 	m_iTotalMediumRangeSupportPercentModifier = 0;
 	m_iTotalLongRangeSupportPercentModifier = 0;
 	m_iTotalFlankSupportPercentModifier = 0;
-	//Team Project (3)
+#endif
 	m_iExtraLocalCaptureProbabilityModifier = 0;
 	m_iExtraLocalCaptureResistanceModifier = 0;
 	m_iExtraLocalDynamicDefense = 0;
@@ -24069,6 +24078,7 @@ void CvCity::changeUnitCombatDefenseAgainstModifierTotal(UnitCombatTypes eIndex,
 	m_paiUnitCombatDefenseAgainstModifier[eIndex] += iChange;
 }
 
+#ifdef STRENGTH_IN_NUMBERS
 int CvCity::getTotalFrontSupportPercentModifier() const
 {
 	return m_iTotalFrontSupportPercentModifier;
@@ -24076,7 +24086,7 @@ int CvCity::getTotalFrontSupportPercentModifier() const
 
 void CvCity::changeTotalFrontSupportPercentModifier(int iChange)
 {
-	m_iTotalFrontSupportPercentModifier = (m_iTotalFrontSupportPercentModifier + iChange);
+	m_iTotalFrontSupportPercentModifier += iChange;
 	FAssert(getTotalFrontSupportPercentModifier() >= 0);
 }
 
@@ -24087,7 +24097,7 @@ int CvCity::getTotalShortRangeSupportPercentModifier() const
 
 void CvCity::changeTotalShortRangeSupportPercentModifier(int iChange)
 {
-	m_iTotalShortRangeSupportPercentModifier = (m_iTotalShortRangeSupportPercentModifier + iChange);
+	m_iTotalShortRangeSupportPercentModifier += iChange;
 	FAssert(getTotalShortRangeSupportPercentModifier() >= 0);
 }
 
@@ -24098,7 +24108,7 @@ int CvCity::getTotalMediumRangeSupportPercentModifier() const
 
 void CvCity::changeTotalMediumRangeSupportPercentModifier(int iChange)
 {
-	m_iTotalMediumRangeSupportPercentModifier = (m_iTotalMediumRangeSupportPercentModifier + iChange);
+	m_iTotalMediumRangeSupportPercentModifier += iChange;
 	FAssert(getTotalMediumRangeSupportPercentModifier() >= 0);
 }
 
@@ -24109,7 +24119,7 @@ int CvCity::getTotalLongRangeSupportPercentModifier() const
 
 void CvCity::changeTotalLongRangeSupportPercentModifier(int iChange)
 {
-	m_iTotalLongRangeSupportPercentModifier = (m_iTotalLongRangeSupportPercentModifier + iChange);
+	m_iTotalLongRangeSupportPercentModifier += iChange;
 	FAssert(getTotalLongRangeSupportPercentModifier() >= 0);
 }
 
@@ -24120,9 +24130,10 @@ int CvCity::getTotalFlankSupportPercentModifier() const
 
 void CvCity::changeTotalFlankSupportPercentModifier(int iChange)
 {
-	m_iTotalFlankSupportPercentModifier = (m_iTotalFlankSupportPercentModifier + iChange);
+	m_iTotalFlankSupportPercentModifier += iChange;
 	FAssert(getTotalFlankSupportPercentModifier() >= 0);
 }
+#endif
 
 int CvCity::getUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex) const
 {

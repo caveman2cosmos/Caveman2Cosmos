@@ -1974,7 +1974,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_MYTH</Tag>
-		<English>Myth - Whaleshark</English>
+		<English>Myth - Whale Shark</English>
 		<French>
 			<Text>Mythe - Requin-baleine</Text>
 			<Gender>Male</Gender>
@@ -2032,7 +2032,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARLIN_PEDIA</Tag>
-		<English>A marlin is a fish from the family Istiophoridae (includes about 10 species). It has an elongated body, a spear-like snout or bill, and a long, rigid dorsal fin which extends forward to form a crest. Its common name is thought to derive from its resemblance to a sailor's marlinspike. Even more so than their close relatives, the scombrids, marlins are fast swimmers, reaching speeds of about 80 km/h (50 mph).[PARAGRAPH:2]The larger species include the Atlantic blue marlin, Makaira nigricans, which can reach 5 m (16.4 ft) in length and 818 kg (1,803 lb) in weight and the black marlin, Istiompax indica, which can reach in excess of 5 m (16.4 ft) in length and 670 kg (1,480 lb) in weight. They are popular sporting fish in tropical areas.</English>
+		<English>A marlin is a fish from the family Istiophoridae (includes about 10 species). It has an elongated body, a spear-like snout or bill, and a long, rigid dorsal fin which extends forward to form a crest. Its common name is thought to derive from its resemblance to a sailor's marlin spike. Even more so than their close relatives, the scombrids, marlins are fast swimmers, reaching speeds of about 80 km/h (50 mph).[PARAGRAPH:2]The larger species include the Atlantic blue marlin, Makaira nigricans, which can reach 5 m (16.4 ft) in length and 818 kg (1,803 lb) in weight and the black marlin, Istiompax indica, which can reach in excess of 5 m (16.4 ft) in length and 670 kg (1,480 lb) in weight. They are popular sporting fish in tropical areas.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAY_EAGLE_PEDIA</Tag>
@@ -2051,36 +2051,36 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MACKEREL_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-SPACE][SPACE] * Myth, Story and Stories - Mackerel
-SPACE][SPACE] * Sea and Fish Myth
-SPACE][SPACE] * Fish Pens, Coastal Fish Pens
-SPACE][SPACE] * Marine Institute</English>
+[SPACE][SPACE] * Myth, Story and Stories - Mackerel
+[SPACE][SPACE] * Sea and Fish Myth
+[SPACE][SPACE] * Fish Pens, Coastal Fish Pens
+[SPACE][SPACE] * Marine Institute</English>
 
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de Maquereaux, Mythe de le Mer et des Poissons, Filets de pêche, et Institut maritime</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MARLIN_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-SPACE][SPACE] * Myth, Story and Stories - Marlin
-SPACE][SPACE] * Sea and Fish Myth
-SPACE][SPACE] * Fish Pens, Coastal Fish Pens
-SPACE][SPACE] * Marine Institute</English>
+[SPACE][SPACE] * Myth, Story and Stories - Marlin
+[SPACE][SPACE] * Sea and Fish Myth
+[SPACE][SPACE] * Fish Pens, Coastal Fish Pens
+[SPACE][SPACE] * Marine Institute</English>
 
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythes et Histoire(s) du Marlin, Mythes de la Mer et des Poissons, Filets, Institut de Marine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAY_EAGLE_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-SPACE][SPACE] * Myth, Story and Stories - Eagle Ray
-SPACE][SPACE] * Sea and Fish Myth
-SPACE][SPACE] * Fish Pens, Coastal Fish Pens
-SPACE][SPACE] * Marine Institute</English>
+[SPACE][SPACE] * Myth, Story and Stories - Eagle Ray
+[SPACE][SPACE] * Sea and Fish Myth
+[SPACE][SPACE] * Fish Pens, Coastal Fish Pens
+[SPACE][SPACE] * Marine Institute</English>
 
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de l'aigle de mer, Mythes de le Mer et des Poissons, Filets de pêche, et Institut maritime</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUNA_PEDIA</Tag>
-		<English>See [LINK=UNIT_MACKERAL]Mackerel[/LINK] since tuna are mackerel.</English>
-		<French>Voir [LINK=UNIT_MACKERAL]Maquereau[/LINK] car les thons sont une espèce de Maquereaux.</French>
+		<English>See [LINK=UNIT_MACKEREL]Mackerel[/LINK] since tuna are mackerel.</English>
+		<French>Voir [LINK=UNIT_MACKEREL]Maquereau[/LINK] car les thons sont une espèce de Maquereaux.</French>
 	</TEXT>
 </Civ4GameText>

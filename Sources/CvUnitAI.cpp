@@ -398,21 +398,16 @@ void CvUnitAI::doUnitAIMove()
 	//	If a unit has a contract mission for a unit that has just finished
 	//	give the unit a chance to hook up with it by force-processing contracts
 	//	before doing other AI activities
-	if ( getGroup()->AI_getMissionAIType() == MISSIONAI_CONTRACT_UNIT &&
-		 processContracts(0) )
+	if (getGroup()->AI_getMissionAIType() == MISSIONAI_CONTRACT_UNIT && processContracts(0))
 	{
 		return;
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
+	&& (!isAnimal() || isGatherHerd())
+	&& getGroup()->doMergeCheck())
 	{
-		if (!isAnimal() || isGatherHerd())
-		{
-			if (getGroup()->doMergeCheck())
-			{
-				return;
-			}
-		}
+		return;
 	}
 
 	switch (AI_getUnitAIType())
@@ -11283,7 +11278,7 @@ void CvUnitAI::AI_InfiltratorMove()
 	AI_upgrade();
 	if (isDelayedDeath())
 	{
-		//	Upgrade of original unit was successful
+		// Upgrade of original unit was successful
 		return;
 	}
 
@@ -11330,10 +11325,12 @@ void CvUnitAI::AI_InfiltratorMove()
 		if (GET_PLAYER(getOwner()).AI_isFinancialTrouble() && canTrade(plot()))
 		{
 			getGroup()->pushMission(MISSION_TRADE);
+			return;
 		}
 		else if (canInfiltrate(plot()))
 		{
 			getGroup()->pushMission(MISSION_INFILTRATE);
+			return;
 		}
 		else if (AI_moveIntoNearestOwnedCity())
 		{

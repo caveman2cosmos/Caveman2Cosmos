@@ -617,7 +617,7 @@
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_SHORTCUTS_GAME</Type>
-			<Description>TXT_KEY_SHORTCUTS_GAME</Description>
+			<Description>TXT_WORD_GAME</Description>
 			<Civilopedia>TXT_KEY_SHORTCUTS_GAME_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>

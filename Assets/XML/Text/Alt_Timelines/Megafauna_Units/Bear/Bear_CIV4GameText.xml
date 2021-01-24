@@ -9,7 +9,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_BEAR_HELP</Tag>
 		<English>[ICON_BULLET]Build Bear buildings and units faster in this city.</English>
-		<French>Construit les bâtiments et unités Ours plus vite dans cette Ville.</French>
+		<French>Construit les bâtiments et unités Ours plus vite dans cette ville.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAR_TRAINER</Tag>
@@ -50,7 +50,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAR_TRAINER_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Bear Trainer[COLOR_REVERT] is required to train [LINK=UNIT_BEARRIDER]Bear Riders[\LINK].</English>
-		<Italian>L'[COLOR_BUILDING_TEXT]Allevatore di rosi[COLOR_REVERT] è necessario per addestrare [LINK=UNIT_BEARRIDER]Cavalcatori di orsi[\LINK].</Italian>
+		<Italian>L'[COLOR_BUILDING_TEXT]Allevatore di orsi[COLOR_REVERT] è necessario per addestrare [LINK=UNIT_BEARRIDER]Cavalcatori di orsi[\LINK].</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARKNIGHT</Tag>
@@ -71,7 +71,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARKNIGHT_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Bear Knights[COLOR_REVERT] are slower but stronger version of normal Knight. This mounted unit is using [COLOR_HIGHLIGHT_TEXT]Bears[COLOR_REVERT] instead of [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and has national limit (15).</English>
-		<Italian>I [COLOR_UNIT_TEXT]Cavalieri du orso[COLOR_REVERT] sono</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARRIDER</Tag>
@@ -92,6 +91,5 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARRIDER_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Bear Riders[COLOR_REVERT] are early-game mounted units. This particular rider is using [COLOR_HIGHLIGHT_TEXT]Bears[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and is slower than the rest of the Riders.</English>
-		<Italian>I [COLOR_UNIT_TEXT]Cavalcatori di orsi[COLOR_REVERT] sono</Italian>
 	</TEXT>
 </Civ4GameText>

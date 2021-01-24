@@ -42,7 +42,7 @@ class WBGameDataScreen:
 		self.szColorNay = "<color=255,64,64>"
 		self.szColorYay = "<color=64,255,64>"
 		self.szHidden = "</color>" + TRNSLTR.getText("TXT_KEY_WB_HIDDEN", ())
-		self.szDefault = TRNSLTR.getText("TXT_KEY_WB_DEFAULT", ())
+		self.szDefault = TRNSLTR.getText("TXT_WORD_DEFAULT", ())
 		self.szOk = TRNSLTR.getText("TXT_KEY_MAIN_MENU_OK", ())
 		self.szCancel = TRNSLTR.getText("TXT_KEY_POPUP_CANCEL", ())
 		self.bInEditBox = False
@@ -422,15 +422,15 @@ class WBGameDataScreen:
 
 				if iMaxTurns:
 					iEstimateEndTurn = iGameTurn + iMaxTurns
-					self.GAME.setEstimateEndTurn(iGameTurn + iMaxTurns);
+					self.GAME.setEstimateEndTurn(iGameTurn + iMaxTurns)
 				else:
-					iEstimateEndTurn = 0;
+					iEstimateEndTurn = 0
 					gameSpeed = self.GC.getGameSpeedInfo(self.GAME.getGameSpeedType())
 
 					for i in xrange(gameSpeed.getNumTurnIncrements()):
-						iEstimateEndTurn += gameSpeed.getGameTurnInfo(i).iNumGameTurnsPerIncrement;
+						iEstimateEndTurn += gameSpeed.getGameTurnInfo(i).iNumGameTurnsPerIncrement
 
-					self.GAME.setEstimateEndTurn(iEstimateEndTurn);
+					self.GAME.setEstimateEndTurn(iEstimateEndTurn)
 
 				screen.hide("EstimateEndTurn")
 				screen.modifyLabel("EstimateEndTurn", self.szEstimateEndTurn % iEstimateEndTurn, 1<<0)

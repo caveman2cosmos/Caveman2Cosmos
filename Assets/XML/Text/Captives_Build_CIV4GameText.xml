@@ -2,12 +2,12 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ARCHEOLOGICAL_SITE_SLAVE</Tag>
-		<English>Create [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Archeological Site[\LINK] (Forced)</English>
+		<English>Create [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Archaeological Site[\LINK] (Forced)</English>
 		<French>Examiner le [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Site archéologique[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - Tempel Untersuchen</German>
 		<Italian>Esamina le [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Antiche rovine[\LINK] (Schiavo)</Italian>
 		<Spanish>Prueba (Forzado)</Spanish>
-		<Polish>Badaj [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Staro|ytn Swityni[\LINK] (Prace Przym.)</Polish>
+		<Polish>Badaj [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Strona archeologiczna[\LINK] (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BURN_VEGETATION_SLAVE</Tag>
@@ -208,7 +208,7 @@
 		<English>Build [LINK=ROUTE_JUMPLANE]Jumplane[\LINK] (Forced)</English>
 		<French>Construire un [COLOR_BUILDING_TEXT]Tremplin[COLOR_REVERT] (Forcé)</French>
 		<German>Zwangsarbeit - Jumplane bauen</German>
-		<Italian>Costrusci una Jumplane (Schiavo)</Italian>
+		<Italian>Costruisci una Jumplane (Schiavo)</Italian>
 		<Spanish>Build a Jumplane (Forzado)</Spanish>
 		<Polish>Zbuduj Jumplane (Prace Przym.)</Polish>
 	</TEXT>
@@ -269,11 +269,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MODERN_WINDMILL_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_MODERN_WINDMILL]Modern Windmill[\LINK] (Forced)</English>
-		<French>Construire un [LINK=IMPROVEMENT_MODERNWINDMILL]Moulin à vent Moderne[\LINK] (Forcé)</French>
-		<German>Zwangsarbeit - Bauen a [LINK=IMPROVEMENT_MODERNWINDMILL]Modern-Windrad[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_MODERNWINDMILL]Moderno Mulino a vento[\LINK] (Schiavo)</Italian>
-		<Spanish>Construye un [LINK=IMPROVEMENT_MODERNWINDMILL]Moderno Molino de viento[\LINK] (Forzado)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_MODERNWINDMILL]WspóBczesny MByn[\LINK] (Prace Przym.)</Polish>
+		<French>Construire un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moulin à vent Moderne[\LINK] (Forcé)</French>
+		<German>Zwangsarbeit - Bauen a [LINK=IMPROVEMENT_MODERN_WINDMILL]Modern-Windrad[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moderno Mulino a vento[\LINK] (Schiavo)</Italian>
+		<Spanish>Construye un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moderno Molino de viento[\LINK] (Forzado)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_MODERN_WINDMILL]WspóBczesny MByn[\LINK] (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MOUNTAIN_MINE_SLAVE</Tag>
@@ -327,7 +327,7 @@
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_PASTURE]Weideland[\LINK] errichten</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_PASTURE]pascolo[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_PASTURE]pastizal[\LINK] (Forzado)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_PASTURE]Zagrod[\LINK] (Prace Przym.)</Polish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_PASTURE]pastwisko[\LINK] (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PATH_SLAVE</Tag>
@@ -335,8 +335,7 @@
 		<French>Dégager un [LINK=ROUTE_PATH]passage[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - Weg bauen</German>
 		<Italian>Costruisci una strada in fango (Schiavo)</Italian>
-		<Spanish>Make a Path (Forzado)</Spanish>
-		<Polish>Wytycz BBotnisty Dukt (Prace Przym.)</Polish>
+		<Polish>Zbuduj ścieżkę (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PAVED_ROAD_SLAVE</Tag>
@@ -345,7 +344,7 @@
 		<German>Zwangsarbeit - Gepflasterte Straße bauen</German>
 		<Italian>Costruisci una strada pavimentata (Schiavo)</Italian>
 		<Spanish>Build a Paved Road (Forzado)</Spanish>
-		<Polish>Zbuduj Kamienn Drog (Prace Przym.)</Polish>
+		<Polish>Zbuduj utwardzoną drogę (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PEAT_CUTTER_SLAVE</Tag>
@@ -363,7 +362,7 @@
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_PLANTATION]Plantage[\LINK] bauen</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_PLANTATION]piantagione[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_PLANTATION]plantación[\LINK] (Forzado)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_PLANTATION]Plantacj[\LINK] (Prace Przym.)</Polish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_PLANTATION]plantację[\LINK] (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_BAMBOO_SLAVE</Tag>
@@ -371,8 +370,7 @@
 		<French>[LINK=IMPROVEMENT_PLANT_BAMBOO]Planter une Bambouseraie[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - Plant Bamboo Grove</German>
 		<Italian>Crea un bosco di bambù (Schiavo)</Italian>
-		<Spanish>Plant Bamboo Grove (Forzado)</Spanish>
-		<Polish>Zasadz Gaj Bambusowy (Prace Przym.)</Polish>
+		<Polish>Posadź las bambusowy (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_GATHERING_CAMP_SLAVE</Tag>
@@ -380,7 +378,6 @@
 		<French>Installer un [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Camp de récolte[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Nützliche Pflanzen sammeln[\LINK]</German>
 		<Italian>Costruisci un campo di raccolta di piante (Schiavo)</Italian>
-		<Spanish>Build Plant Gathering Camp (Forzado)</Spanish>
 		<Polish>Zbuduj Zbieraczy Ro[lin (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
@@ -390,7 +387,7 @@
 		<German>Zwangsarbeit - Pflanze Dschungel(Zwangsarbeit)</German>
 		<Italian>Pianta una giungla (Schiavo)</Italian>
 		<Spanish>Make Jungle (Forzado)</Spanish>
-		<Polish>Utwórz D|ungl (Prace Przym.)</Polish>
+		<Polish>Utwórz dżunglę (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_SAVANNA_SLAVE</Tag>
@@ -399,7 +396,7 @@
 		<German>Zwangsarbeit - Plant Savanna</German>
 		<Italian>Crea una savana (Schiavo)</Italian>
 		<Spanish>Plant Savanna (Forzado)</Spanish>
-		<Polish>Zasadz Sawann (Prace Przym.)</Polish>
+		<Polish>Sadź sawannę (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_QUARRY_SLAVE</Tag>
@@ -416,17 +413,17 @@
 		<French>Construire un [COLOR_BUILDING_TEXT]Chemin[COLOR_REVERT] (Forcé)</French>
 		<German>Zwangsarbeit - Baue eine Eisenbahn</German>
 		<Italian>Costruisci una ferrovia (Schiavo)</Italian>
-		<Spanish>Construir un Ferrocarril(Forzado)</Spanish>
-		<Polish>Zbuduj Kolej(Prace Przym.)</Polish>
+		<Spanish>Construir un ferrocarril (Forzado)</Spanish>
+		<Polish>Zbuduj Kolej (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_ROCK_FORMATION_SLAVE</Tag>
 		<English>Remove Rock Formation (Forced)</English>
-		<French>Eliminer la [LINK=FEATURE_DARK_ROCK_FORM1]Formation de roche[\LINK] (Forcé)</French>
+		<French>Supprimer la [LINK=FEATURE_DARK_ROCK_FORM1]formation rocheuse[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - [LINK=FEATURE_DARK_ROCK_FORM1]Steinbildung[\LINK] zu entfernen</German>
 		<Italian>Rimuovere [LINK=FEATURE_DARK_ROCK_FORM1]Formazione rocciosa[\LINK] (Schiavo)</Italian>
 		<Spanish>Eliminar la [LINK=FEATURE_DARK_ROCK_FORM1]Formación de roca[\LINK] (Forzado)</Spanish>
-		<Polish>UsuD [LINK=FEATURE_DARK_ROCK_FORM1]Formacj Skaln[\LINK] (Prace Przym.)</Polish>
+		<Polish>Usuń [LINK=FEATURE_DARK_ROCK_FORM1]formację skalną[\LINK] (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_VEGETATION_SLAVE</Tag>
@@ -435,7 +432,7 @@
 		<German>Zwangsarbeit - Vegetation abholzen</German>
 		<Italian>Disbosca una Vegetazione (Schiavo)</Italian>
 		<Spanish>Talar una vegetación (Forzado)</Spanish>
-		<Polish>Usun Rosliny (Prace Przym.)</Polish>
+		<Polish>Usuń roślinność (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ROAD_SLAVE</Tag>
@@ -479,7 +476,6 @@
 		<French>Construire un [LINK=IMPROVEMENT_SHAFT_MINE]Puits de mine[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - Errichte eine [LINK=IMPROVEMENT_SHAFT_MINE]Schachtmine[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_SHAFT_MINE]Pozzo minerario[\LINK] (Schiavo)</Italian>
-		<Spanish>Build [LINK=IMPROVEMENT_SHAFT_MINE]Shaft Mine[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SHAFT_MINE]GBbok Kopalni[\LINK] (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
@@ -488,7 +484,6 @@
 		<French>Construire une [LINK=IMPROVEMENT_SILK_FARM]Culture de Soie[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - Errichte eine [LINK=IMPROVEMENT_SILK_FARM]Seidenfarm[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_SILK_FARM]Coltura di bachi da seta[\LINK] (Schiavo)</Italian>
-		<Spanish>Build a [LINK=IMPROVEMENT_SILK_FARM]Silk Farm[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SILK_FARM]Farm Jedwabników[\LINK] (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
@@ -497,7 +492,6 @@
 		<French>Construire des [LINK=IMPROVEMENT_SOLAR_PANELS]Panneaux Solaires[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - Bauen ein [LINK=IMPROVEMENT_SOLAR_PANELS]Sonnenkollektoren[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_SOLAR_PANELS]Pannelli solari[\LINK] (Schiavo)</Italian>
-		<Spanish>Costruisci un [LINK=IMPROVEMENT_SOLAR_PANELS]Paneles solares[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SOLAR_PANELS]Panele SBoneczne[\LINK] (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>

@@ -359,32 +359,32 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_MYTH</Tag>
-		<English>Myth - Cavelion</English>
+		<English>Myth - Cave Lion</English>
 		<French>Mythe du Lion des cavernes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Cavelion</English>
+		<English>Myth Effect - Cave Lion</English>
 		<French>Effet (Mythe du Lion des cavernes)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_REMAINS</Tag>
-		<English>Remains - Cavelion</English>
+		<English>Remains - Cave Lion</English>
 		<French>Restes de Lion des cavernes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_STORIES</Tag>
-		<English>Stories - Cavelion</English>
+		<English>Stories - Cave Lion</English>
 		<French>Histoires du Lion des cavernes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Cavelion</English>
+		<English>Stories Effect - Cave Lion</English>
 		<French>Effet (Histoires du Lion des cavernes)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_STORY</Tag>
-		<English>Story - Cavelion</English>
+		<English>Story - Cave Lion</English>
 		<French>Histoire du Lion des cavernes</French>
 	</TEXT>
 	<TEXT>
@@ -652,14 +652,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Tag>
-		<English>The six elements make up everything. They are Earth, Air(Sky), Water(Sea), Stone, Metal and Fire. They loose all benefit with Chemestry.</English>
+		<English>The six elements make up everything. They are Earth, Air (Sky), Water (Sea), Stone, Metal and Fire. They lose all benefit with Chemistry.</English>
 		<French>Tout est formé à partir de 6 éléments. Ce sont la Terre, l'Air (Ciel), l'Eau (Mer), la Pierre, le Métal et le Feu. Ils perdent tout leurs avantages avec la Chimie</French>
 		<Polish>Sześć żywiołów tworzy wszystko. Składają si na nie Ziemia, Powietrze (Niebo), Woda (Morze), Kamień, Metal i Ogień. Chemia rozwiewa tą błdną teori i usuwa wszelkie zyski z tych mitów.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Tag>
-		<English>The Elemental Myths provide a small amount of sciencs and education. They are required for many other buildings.</English>
-		<French>Les Mythes des Eléments confèrent un petit bonus d'éducation et de recherche. Ils sont requis pour la constrution d'autres bâtiments.</French>
+		<English>The Elemental Myths provide a small amount of science and education. They are required for many other buildings.</English>
+		<French>Les Mythes des Éléments confèrent un petit bonus d'éducation et de recherche. Ils sont requis pour la construction d'autres bâtiments.</French>
 		<Polish>Mity Żywiołów dostarczają małe ilości nauki i edukacji. Są wymagane do budowy wielu innyc budynków.</Polish>
 	</TEXT>
 	<TEXT>
@@ -696,27 +696,27 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_MYTH</Tag>
 		<English>Myth - Ethiopian Wolf</English>
-		<French>Mythe du Loup Ethiopien</French>
+		<French>Mythe du loup d'Éthiopie</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Ethiopian Wolf</English>
-		<French>Effet (Histoire du Loup Ethiopien)</French>
+		<French>Effet (Histoire du loup d'Éthiopie)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_STORIES</Tag>
 		<English>Stories - Ethiopian Wolf</English>
-		<French>Histoires du Loup Ethiopien</French>
+		<French>Histoires du loup d'Éthiopie</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Ethiopian Wolf</English>
-		<French>Effet (Histoires du Loup Ethiopien)</French>
+		<French>Effet (Histoires du loup d'Éthiopie)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_STORY</Tag>
 		<English>Story - Ethiopian Wolf</English>
-		<French>Histoire du Loup Ethiopien</French>
+		<French>Histoire du loup d'Éthiopie</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FENNECFOX_MYTH</Tag>
@@ -832,7 +832,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_MYTH</Tag>
-		<English>Myth - Americian Alligator</English>
+		<English>Myth - American Alligator</English>
 		<French>
 			<Text>Mythe de l'Alligator d'Amérique</Text>
 			<Gender>Male</Gender>
@@ -842,7 +842,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Americian Alligator</English>
+		<English>Myth Effect - American Alligator</English>
 		<French>
 			<Text>Effet (Mythe de l'Alligator d'Amérique)</Text>
 			<Gender>Male</Gender>
@@ -852,7 +852,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_STORIES</Tag>
-		<English>Stories - Americian Alligator</English>
+		<English>Stories - American Alligator</English>
 		<French>
 			<Text>Histoires du Alligator d'Amérique</Text>
 			<Gender>Male</Gender>
@@ -862,7 +862,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Americian Alligator</English>
+		<English>Stories Effect - American Alligator</English>
 		<French>
 			<Text>Effet (Histoires du Alligator d'Amérique)</Text>
 			<Gender>Male</Gender>
@@ -872,7 +872,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_STORY</Tag>
-		<English>Story - Americian Alligator</English>
+		<English>Story - American Alligator</English>
 		<French>
 			<Text>Histoire du Alligator d'Amérique</Text>
 			<Gender>Male</Gender>
@@ -996,17 +996,17 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Greatwhite shark</English>
+		<English>Myth Effect - Great White Shark</English>
 		<French>Effet (Mythe du Grand requin blanc)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_STORIES</Tag>
-		<English>Stories - Greatwhite shark</English>
+		<English>Stories - Great White Shark</English>
 		<French>Histoires du Grand requin blanc</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Greatwhite shark</English>
+		<English>Stories Effect - Great White Shark</English>
 		<French>Effet (Histoires de Grands Requins blancs</French>
 	</TEXT>
 	<TEXT>
@@ -1063,27 +1063,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_MYTH</Tag>
-		<English>Myth - Hippopatamus</English>
+		<English>Myth - Hippopotamus</English>
 		<French>Mythe de l'Hippopotame</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Hippopatamus</English>
+		<English>Myth Effect - Hippopotamus</English>
 		<French>Effet (Mythe de l'Hippopotames)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_STORIES</Tag>
-		<English>Stories - Hippopatamus</English>
+		<English>Stories - Hippopotamus</English>
 		<French>Histoires de l'Hippopotame</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Hippopatamus</English>
+		<English>Stories Effect - Hippopotamus</English>
 		<French>Effet (Histoire de l'Hippopotame)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_STORY</Tag>
-		<English>Story - Hippopatamus</English>
+		<English>Story - Hippopotamus</English>
 		<French>Histoire de l'Hippopotame</French>
 	</TEXT>
 	<TEXT>
@@ -1271,7 +1271,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Tag>
-		<English>The Landform Myths provide a small amount of sciencs and education.</English>
+		<English>The Landform Myths provide a small amount of science and education.</English>
 		<French>Les mythes associés aux éléments et paysages procurent un léger bonus en science et en éducation.</French>
 	</TEXT>
 	<TEXT>
@@ -1542,27 +1542,27 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_MYTH</Tag>
 		<English>Myth - Muskox</English>
-		<French>Mythe du Boeuf musqué</French>
+		<French>Mythe du Bœuf musqué</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Muskox</English>
-		<French>Effet (Mythe du Boeuf musqué)</French>
+		<French>Effet (Mythe du Bœuf musqué)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_STORIES</Tag>
 		<English>Stories - Muskox</English>
-		<French>Histoires du Boeuf musqué</French>
+		<French>Histoires du Bœuf musqué</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Muskox</English>
-		<French>Effet (Histoires du Boeuf musqué)</French>
+		<French>Effet (Histoires du Bœuf musqué)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_STORY</Tag>
 		<English>Story - Muskox</English>
-		<French>Histoire du Boeuf musqué</French>
+		<French>Histoire du Bœuf musqué</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NARWHAL_MYTH_EFFECT</Tag>
@@ -1998,27 +1998,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_MYTH</Tag>
-		<English>Myth - Redfox</English>
+		<English>Myth - Red Fox</English>
 		<French>Mythe du Renard Roux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Redfox</English>
+		<English>Myth Effect - Red Fox</English>
 		<French>Effet (Mythe du Renard Roux)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_STORIES</Tag>
-		<English>Stories - Redfox</English>
+		<English>Stories - Red Fox</English>
 		<French>Histoires du Renard Roux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Redfox</English>
+		<English>Stories Effect - Red Fox</English>
 		<French>Effet (Histoires du Renard Roux)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_STORY</Tag>
-		<English>Story - Redfox</English>
+		<English>Story - Red Fox</English>
 		<French>Histoire du Renard Roux</French>
 	</TEXT>
 	<TEXT>
@@ -2266,17 +2266,17 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_STORIES</Tag>
-		<English>Stories - Seaturtle</English>
+		<English>Stories - Sea Turtle</English>
 		<French>Histoires de la Tortue des mers</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Seaturtle</English>
+		<English>Stories Effect - Sea Turtle</English>
 		<French>Effet (Histoires de la Tortue des mers)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_STORY</Tag>
-		<English>Story - Seaturtle</English>
+		<English>Story - Sea Turtle</English>
 		<French>Histoire de la Tortue de mer</French>
 		<Polish>Opowieść o Żółwiu Morskim</Polish>
 	</TEXT>
@@ -2649,22 +2649,22 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Whaleshark</English>
+		<English>Myth Effect - Whale Shark</English>
 		<French>Effet (Mythe du Requin baleine)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_STORIES</Tag>
-		<English>Stories - Whaleshark</English>
+		<English>Stories - Whale Shark</English>
 		<French>Histoires de Requins baleine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Whaleshark</English>
+		<English>Stories Effect - Whale Shark</English>
 		<French>Effet (Histoires du Requin baleine)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_STORY</Tag>
-		<English>Story - Whaleshark</English>
+		<English>Story - Whale Shark</English>
 		<French>Histoire - Requin-baleine</French>
 		<Polish>Opowieść o Rekinie Wielorybim</Polish>
 	</TEXT>
@@ -3232,7 +3232,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EWOLF</Tag>
 		<English>Ethiopian Wolf</English>
-		<French>Loup Ethiopien</French>
+		<French>Loup d'Éthiopie</French>
 		<German>
 			<Text>Äthiopischer Wolf:Äthiopischen Wolfs:Äthiopischen Wolf:Äthiopischen Wolf:Äthiopische Wölfe:Äthiopischen Wölfe:Äthiopischen Wölfen:Äthiopischen Wölfe</Text>
 			<Gender>Male</Gender>
@@ -3720,7 +3720,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIZARD_PEDIA</Tag>
-		<English>Generic small to mediun lizard</English>
+		<English>Generic small to medium lizard</English>
 		<French>Lézard commun, petit à moyen</French>
 		<German>Der Begriff [COLOR_UNIT_TEXT]Echse[COLOR_REVERT] ist eine biologisch nicht eindeutige Bezeichnung für eine Gruppe von Reptilien. Gemeint ist entweder eine Unterordnung der Schuppenkriechtiere oder eine Zusammenfassung aller heute lebenden Reptilien (außer Schildkröten). Im weiteren Sinn sind Echsen also auf vier Beinen gehende Reptilien mit langem Schwanz und kurzem Hals, was dem typischen "Echsenhabitus" entspricht.</German>
 		<Polish>Jaszczurki (Lacertilia, dawniej Sauria) grupa gadów łuskonośnych obejmująca czworonożne lub beznogie zwierzęta lądowe o wydłużonym ciele, oczach posiadających powieki, mocnych szczękach i diapsydalnej czaszce. Występują na wszystkich kontynentach poza Antarktydą oraz na wielu wyspach oceanicznych. Są najliczniejszą grupą gadów obejmującą ponad 4000 gatunków.</Polish>
@@ -3903,7 +3903,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLATYPUS_PEDIA</Tag>
 		<English>The platypus (Ornithorhynchus anatinus) is a semi-aquatic mammal endemic to eastern Australia, including Tasmania. Together with the four species of echidna, it is one of the five extant species of monotremes, the only mammals that lay eggs instead of giving birth to live young. It is the sole living representative of its family (Ornithorhynchidae) and genus (Ornithorhynchus), though a number of related species have been found in the fossil record.[PARAGRAPH:2]The unusual appearance of this egg-laying, venomous, duck-billed, beaver-tailed, otter-footed mammal baffled European naturalists when they first encountered it, with some considering it an elaborate fraud. It is one of the few venomous mammals, the male platypus having a spur on the hind foot that delivers a venom capable of causing severe pain to humans. The unique features of the platypus make it an important subject in the study of evolutionary biology and a recognisable and iconic symbol of Australia; it has appeared as a mascot at national events and is featured on the reverse of the Australian 20 cent coin. The platypus is the animal emblem of the state of New South Wales.[PARAGRAPH:2]Until the early 20th century, it was hunted for its fur, but it is now protected throughout its range. Although captive breeding programmes have had only limited success and the platypus is vulnerable to the effects of pollution, it is not under any immediate threat.</English>
-		<French>L'ornithorynque (Ornithorhynchus anatinus) est une espèce de petits mammifères semi-aquatiques endémique de l'est de l'Australie, y compris la Tasmanie. C'est l'une des cinq espèces de l'ordre des monotrèmes, seul ordre de mammifères qui ponde des oeufs au lieu de donner naissance à des petits complètement formés (les quatre autres espèces sont des échidnés). C'est la seule espèce survivante de la famille des Ornithorhynchidae et du genre Ornithorhynchus bien qu'un grand nombre de fragments d'espèces fossiles de cette famille et de ce genre aient été découverts.[PARAGRAPH:2]L'apparence bizarre de ce mammifère pondant des oeufs, muni d'aiguillons venimeux, à la mâchoire cornée ressemblant au bec d'un canard, à queue évoquant un castor, qui lui sert à la fois de gouvernail dans l'eau et de réserve de graisse, et à pattes de loutre a fortement surpris les premiers explorateurs qui l'ont découvert ; bon nombre de naturalistes européens ont cru à une plaisanterie. C'est l'un des rares mammifères venimeux: le mâle porte sur les pattes postérieures un aiguillon qui peut libérer du venin capable d'infliger de vives douleurs à un être humain. Les traits originaux de l'ornithorynque en font un sujet d'études important pour mieux comprendre l'évolution des espèces animales et en ont fait un des symboles de l'Australie: il a été utilisé comme mascotte pour de nombreux évènements nationaux et il figure au verso de la pièce de 20 cents australiens.</French>
+		<French>L'ornithorynque (Ornithorhynchus anatinus) est une espèce de petits mammifères semi-aquatiques endémique de l'est de l'Australie, y compris la Tasmanie. C'est l'une des cinq espèces de l'ordre des monotrèmes, seul ordre de mammifères qui ponde des œufs au lieu de donner naissance à des petits complètement formés (les quatre autres espèces sont des échidnés). C'est la seule espèce survivante de la famille des Ornithorhynchidae et du genre Ornithorhynchus bien qu'un grand nombre de fragments d'espèces fossiles de cette famille et de ce genre aient été découverts.[PARAGRAPH:2]L'apparence bizarre de ce mammifère pondant des œufs, muni d'aiguillons venimeux, à la mâchoire cornée ressemblant au bec d'un canard, à queue évoquant un castor, qui lui sert à la fois de gouvernail dans l'eau et de réserve de graisse, et à pattes de loutre a fortement surpris les premiers explorateurs qui l'ont découvert ; bon nombre de naturalistes européens ont cru à une plaisanterie. C'est l'un des rares mammifères venimeux: le mâle porte sur les pattes postérieures un aiguillon qui peut libérer du venin capable d'infliger de vives douleurs à un être humain. Les traits originaux de l'ornithorynque en font un sujet d'études important pour mieux comprendre l'évolution des espèces animales et en ont fait un des symboles de l'Australie: il a été utilisé comme mascotte pour de nombreux évènements nationaux et il figure au verso de la pièce de 20 cents australiens.</French>
 		<German>Das [COLOR_UNIT_TEXT]Schnabeltier[COLOR_REVERT] (Ornithorhynchus anatinus) ist im Osten und Südosten Australiens heimisch. Es ist eines der wenigen Säuger, die zu den Kloakentieren gehören und Eier legen. Mit seinem stromlinienförmigen Körper und dem relativ platten Schwanz ist der Körperbau des Schnabeltieres dem eines Bibers ähnlich. Sein braunes Fell ist wasserabweisend und seine Füße besitzen Schwimmhäute. Der Schwanz dient als Fettspeicher. Ausscheidungs- und Geschlechtsorgane befinden sich wie bei allen Kloakentieren in derselben Öffnung. Namensgebend ist der breite, biegsame Schnabel, der dem einer Ente ähnelt. Während neugeborene Schnabeltiere noch Backenzähne besitzen, bilden diese sich im Laufe der Entwicklung zurück. Die nach vorn gerichteten Nasenlöcher funktionieren bei Tauchgängen als Schnorchel. Männliche Schnabeltiere besitzen ca. 15 mm lange Giftsporne an den Hinterbeinen. Bei den Weibchen bilden sich diese Anlagen im ersten Lebensjahr zurück. Das Gift wird nur während der Paarung produziert und daher vermutlich nur bei Rivalenkämpfen eingesetzt. Es ist für den Menschen sehr schmerzhaft, aber nicht tödlich.[NEWLINE]Die nachtaktiven Einzelgänger verbringen die meiste Zeit im Wasser, wobei der Schwanz als Steuerruder dient. Der Schwanz wird auch als Greif- und Transportwerkzeug beim Höhlenbau benutzt, indem er eingerollt wird und so Äste und Zweige festhalten kann. Bei niedrigen Temperaturen fallen die Tiere manchmal tagelang in Kältestarre. Ihre Nahrung finden die Schnabeltiere im Wasser, vor allem Krabben, Insektenlarven und Würmer stehen auf dem Speiseplan. Sie können bis zu zwei Minuten tauchen und benutzen den Schnabel, um den Boden zu durchwühlen und Steine umzudrehen. Da Augen und Ohren verschlossen sind, dienen Rezeptoren am Schnabel der Orientierung. Gesammelte Nahrung wird zunächst in den Backentaschen verstaut und erst an der Oberfläche verzehrt. Weibchen legen nach 12 bis 14 Tagen Tragezeit meist drei Eier, die mit ihrer pergamentartigen Schale an Reptilieneier erinnern. Die Weibchen haben keine Zitzen, stattdessen wird die Muttermilch über Drüsen im Brustbereich (Milchfeld) abgesondert. Die Jungtiere lecken die Milch aus dem Fell der Mutter. Fressfeinde sind u.a. Greifvögel, Rautenpythons oder der Buntwaran.[NEWLINE]In einer Legende der Aborigines heißt es, Schabeltiere seien die Nachkommen eines Entenweibchens und eines Schwimmrattenmännchens, was den ungewöhnlichen Körperbau erklären soll. Als im 18. Jahrhundert erstmals Londoner Wissenschaftler das Fell eines Schnabeltiers erhielten, glaubten sie zunächst an einen Scherz. Die genaue Erforschung der Tiere dauerte bis zum Beginn des 20. Jahrhunderts, da sie sich in Gefangenschaft nur schwer halten ließen. Bis zu dieser Zeit wurden sie auch wegen ihres Felles gejagt, wodurch ihre Verbreitung zurückging. Eine weitere Gefahr stellen Fangnetze und Köcher dar, in denen sie sich verfangen und verletzen können. Meist jedoch meiden sie menschliche Siedlungen. Heute stehen Schnabeltiere unter Schutz und dürfen nur mit Sondergenehmigung in Tiergärten gehalten werden. Der Export ist verboten. Da das Schnabeltier als biologisches Kuriosum gilt, findet es zuwweilen auch in der Gesellschaft Aufmerksamkeit. So schrieb Umberto Eco ein Buch mit dem Titel "Kant und das Schnabeltier". Im Film "Dogma" (1999) dient es als Beispiel dafür, dass Gott Humor haben muss. Auch im Videospiel "Chaos auf Deponia" spielt das Schnabeltier eine wichtige Rolle.</German>
 	</TEXT>
 	<TEXT>
@@ -3955,7 +3955,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PYGMYHIPPO_PEDIA</Tag>
-		<English>Main Characteristics[PARAGRAPH:2]Pygmy Hippopotamuses are semi-aquatic mammals. They have a body length between 1.4 and 1.6 m (4.5 - 5 ft), a tail length of approximately 15 cms (6 inches) and they weigh between 245 and 275 kgs (540 - 610 lbs).[PARAGRAPH:2]Their skin is thick, smooth, hairless and dark brown/black in colour. Their body is barrel shaped, they have a broad head and a large mouth. Their legs are short and stocky and they have four toes on each of their feet. Their toes are spread out and have sharp nails, but they lack any webbing. They have small ears and large, round nostrils and when they submerge underwater they are able to close their nostrils and ears to prevent water from entering them.[PARAGRAPH:2]To prevent their skin from cracking they have to moisten it regularly in water or mud and they also have special mucus producing skin glands. These glands excrete a pink fluid, known as blood sweat, that helps to keep their skin moist and helps prevent against infection and sunburn.[PARAGRAPH:2]Pygmy Hippos are found in the forests and swamps of west Africa. They are solitary, reclusive animals that spend most of the day resting in a wallow, mud or river and they emerge at night when they go into the forest to feed.[PARAGRAPH:2]They are non territorial and females have a home range between 40 and 60 hectares whereas males have a larger home range being up to 165 hectares in size. The home ranges of both males and females overlap but they tend to avoid each other, marking their presence with dung. The diet of a Pygmy Hippopotamus mainly consists of shrubs, ferns, broad-leaved plants and fruit.</English>
+		<English>Main Characteristics[PARAGRAPH:2]Pygmy Hippopotamuses are semi-aquatic mammals. They have a body length between 1.4 and 1.6 m (4.5 - 5 ft), a tail length of approximately 15 cm (6 in) and they weigh between 245 and 275 kg (540 - 610 lbs).[PARAGRAPH:2]Their skin is thick, smooth, hairless and dark brown/black in colour. Their body is barrel shaped, they have a broad head and a large mouth. Their legs are short and stocky and they have four toes on each of their feet. Their toes are spread out and have sharp nails, but they lack any webbing. They have small ears and large, round nostrils and when they submerge underwater they are able to close their nostrils and ears to prevent water from entering them.[PARAGRAPH:2]To prevent their skin from cracking they have to moisten it regularly in water or mud and they also have special mucus producing skin glands. These glands excrete a pink fluid, known as blood sweat, that helps to keep their skin moist and helps prevent against infection and sunburn.[PARAGRAPH:2]Pygmy Hippos are found in the forests and swamps of west Africa. They are solitary, reclusive animals that spend most of the day resting in a wallow, mud or river and they emerge at night when they go into the forest to feed.[PARAGRAPH:2]They are non territorial and females have a home range between 40 and 60 hectares whereas males have a larger home range being up to 165 hectares in size. The home ranges of both males and females overlap but they tend to avoid each other, marking their presence with dung. The diet of a Pygmy Hippopotamus mainly consists of shrubs, ferns, broad-leaved plants and fruit.</English>
 		<French>L'hippopotame nain (Hexaprotodon liberiensis) est une espèce d'hippopotame originaire des forêts et des marécages de l'Afrique de l'Ouest. Ce mammifère est un animal discret, solitaire et nocturne même si la masse d'un mâle adulte peut avoisiner 275 kg. Il est une des deux seules espèces encore existantes dans la famille des Hippopotamidae, l'autre étant son cousin beaucoup plus imposant, l'hippopotame commun, dit amphibie.</French>
 		<German>Das [COLOR_UNIT_TEXT]Zwergflusspferd[COLOR_REVERT] (Choeropsis liberiensis oder Hexaprotodon liberiensis) ist eine seltene Art, die im Westen Afrikas lebt. Die Bezeichnung "liberiensis" bedeutet "aus Liberia stammend". Ähnlich wie das Großflusspferd wirkt es mit den vier kurzen, kräftigen Beinen untersetzt. Es wird allerdings mit einer Schulterhöhe von 75 bis 83 Zentimentern nur halb so groß wie sein naher Verwandter. Sein Gewicht beträgt 245 bis 275 Kilogramm, das entspricht knapp einem Viertel des Gewichts des Großflusspferds. Der Kopf ist vergleichsweise schmal, ebenso die Füße. Augen, Nase und Ohren sind relativ weit oben am Kopf, was im Wasser von Vorteil ist. Die dünne Epidermis trocknet an Land schnell aus, weswegen Flusspferde über Drüsen eine schleimige, rötliche Substanz abgeben, die als "Blutschweiß" bezeichnet wird und die Haut rötlich schimmern lässt. Trotzdem ist ein regelmäßiges Schlammbad oder Schwimmen notwendig, wenngleich das Zwergflusspferd weniger vom Wasser abhängig ist als sein Verwandter.[NEWLINE]Der Lebensraum des Zwergflusspferds sind feuchte und sumpfige Urwälder. Da es kälteempfindlich ist, meidet es höhere Lagen. Es ist nachtaktiv und einzelgängerisch und durchstreift sein Revier auf festgelegten Pfaden. Begegnungen mit Artgenossen enden oft friedlich, indem man sich gegenseitig ignoriert. Als Pflanzenfresser ernährt es sich vorwiegend von Farnen, Blättern, Knollen, Trieben und herabgefallenen Früchten, gelegentlich auch von Wasserpflanzen und Gräsern. Die Geburt eines Jungtieres kann an Land oder im Wasser stattfinden. Der Nachwuchs kann innerhalb kürzester Zeit schwimmen. Während der ersten Monate bleibt er im Wasser, während die Mutter auf Nahrungssuche an Land geht.[NEWLINE]Da sein Verbreitungsgebiet sehr klein ist, gibt es in freier Wildbahn lediglich 2000 bis 3000 Tiere (Stand: 2010). Die meisten davon leben im Nationalpark Sapo in Liberia. Durch Rodung wurde der Lebensraum zunehmend verinselt, wodurch die Gefahr von Inzucht besteht. Aufgrund seiner eher versteckten Lebensweise wird das Zwergflusspferd nicht gezielt gejagt, gelegentlich jedoch von Einheimischen für den Fleichbedarf geschossen. Mehrere Zoos, allen voran der Zoo Basel, beteiligen sich am Europäischen Erhaltungsprogramm der Zwergflusspferde. In Gefangenschaft werden die Tiere bis zu 55 Jahre alt.</German>
 	</TEXT>
@@ -4242,7 +4242,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICANELEPHANT</Tag>
 		<English>Subdued African Elephant</English>
-		<French>Eléphant d'Afrique (App.)</French>
+		<French>Éléphant d'Afrique (App.)</French>
 		<German>
 			<Text>Gefangener Afrikanischer Elefant:Gefangenen Afrikanischen Elefanten:Gefangenen Afrikanischen Elefanten:Gefangenen Afrikanischen Elefanten:Gefangene Afrikanische Elefanten:Gefangenen Afrikanischen Elefanten:Gefangenen Afrikanischen Elefanten:Gefangenen Afrikanischen Elefanten</Text>
 			<Gender>Male</Gender>
@@ -4253,11 +4253,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICANELEPHANT_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - African Elephant
-[SPACE][SPACE] * Myth - Elephant, Master Hnter and Carnival
-[SPACE][SPACE] * Exotic Herbavours Cage and Enclosure</English>
+[SPACE][SPACE] * Myth - Elephant, Master Hunter and Carnival
+[SPACE][SPACE] * Exotic Herbivores Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT]:
-[SPACE][SPACE] * Mythes et Histoire(s) d'Eléphant d'Afrique
-[SPACE][SPACE] * Mythe des Eléphants, Maître Chasseur, Carnaval
+[SPACE][SPACE] * Mythes et Histoire(s) d'Éléphant d'Afrique
+[SPACE][SPACE] * Mythe des Éléphants, Maître Chasseur, Carnaval
 [SPACE][SPACE] * Cage et Enclos pour Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
@@ -4315,15 +4315,15 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story &#38; Stories - Babirusa
 [SPACE][SPACE] * Myth - Boar &#38; Pig Herd
-[SPACE][SPACE] * Exotic Herbavours Cage &#38; Enclosure
+[SPACE][SPACE] * Exotic Herbivores Cage &#38; Enclosure
 [SPACE][SPACE] * Master Hunter &#38; Boar Camp</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de Babiroussa, Mythe des Ours, Enclos à cochons, camp d'ours, Maitre chasseur</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de Babiroussa, Mythe des Ours, Enclos à cochons, camp d'ours, Maître chasseur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BAIRDS_TAPIR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story &#38; Stories - Tapir
-[SPACE][SPACE] * Exotic Herbavours Cage &#38; Enclosure</English>
+[SPACE][SPACE] * Exotic Herbivores Cage &#38; Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Bairds, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
@@ -4341,9 +4341,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BLACK_RHINO_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story and Stories - Rhinocerous
+[SPACE][SPACE] * Myth, Story and Stories - Rhinoceros
 [SPACE][SPACE] * Unicorn Myth &#38; Master Hunter
-[SPACE][SPACE] * Exotic Herbavours Cage</English>
+[SPACE][SPACE] * Exotic Herbivores Cage</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros noir[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
@@ -4366,7 +4366,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_BRAZILIAN_TAPIR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story &#38; Stories - Tapir
-[SPACE][SPACE] * Exotic Herbavours Cage &#38; Enclosure</English>
+[SPACE][SPACE] * Exotic Herbivores Cage &#38; Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Brazilian, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
@@ -4502,7 +4502,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story, Stories &#38; Remains - Elasmotherium
 [SPACE][SPACE] * Myths - Rhino &#38; Unicorn
-[SPACE][SPACE] * Exotic Herbavour Cage &#38; Enclosure
+[SPACE][SPACE] * Exotic Herbivores Cage &#38; Enclosure
 [SPACE][SPACE] * Master Hunter &#38; Rhino Camp</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros indien[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
@@ -4521,7 +4521,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EWOLF</Tag>
 		<English>Subdued Ethiopian Wolf</English>
-		<French>Loup Ethiopien (App.)</French>
+		<French>Loup d'Éthiopie (App.)</French>
 		<German>
 			<Text>Gefangener Äthiopischer Wolf:Gefangenen Äthiopischen Wolfs:Gefangenen Äthiopischen Wolf:Gefangenen Äthiopischen Wolf:Gefangene Äthiopische Wölfe:Gefangenen Äthiopischen Wölfe:Gefangenen Äthiopischen Wölfen:Gefangenen Äthiopischen Wölfe</Text>
 			<Gender>Male</Gender>
@@ -4533,7 +4533,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story &#38; Stories - Ethiopian Wolf
 [SPACE][SPACE] * Wolf Myth &#38; Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Loup Ethiopien, Mythe des Loups, Cage et Enclos à loup</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Loup d'Éthiopie, Mythe des Loups, Cage et Enclos à loup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_FENNECFOX</Tag>
@@ -4555,7 +4555,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR</Tag>
-		<English>Subdued Americian Alligator</English>
+		<English>Subdued American Alligator</English>
 		<French>
 			<Text>Alligator d'Amérique (App.)</Text>
 			<Gender>Male</Gender>
@@ -4585,7 +4585,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story and Stories - Americian Alligator
+[SPACE][SPACE] * Myth, Story and Stories - American Alligator
 [SPACE][SPACE] * Master Hunter, Myth - Reptile, Crocodile and Dragon
 [SPACE][SPACE] * Master Hunter &#38; Reptile Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) de l'Alligator d'Amérique, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
@@ -4602,7 +4602,7 @@
 [SPACE][SPACE] * Myth, Story, Stories &#38; Remains - Glyptodon
 [SPACE][SPACE] * Earth Myth &#38; Taxidermist
 [SPACE][SPACE] * Master Hunter &#38; Zoo</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Constuit[COLOR_REVERT] un Mythe, une ou des Histoires - Glyptodon[NEWLINE][ICON_BULLET]Restes - Glyptodon[NEWLINE][ICON_BULLET]Mythe la Terre</French>
+		<French>[COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] un Mythe, une ou des Histoires - Glyptodon[NEWLINE][ICON_BULLET]Restes - Glyptodon[NEWLINE][ICON_BULLET]Mythe la Terre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GROUNDSLOTH</Tag>
@@ -4633,7 +4633,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story &#38; Stories - Indian Rhinoceros
 [SPACE][SPACE] * Myth - Rhinoceros &#38; Unicorn
-[SPACE][SPACE] * Exotic Herbavour Cage &#38; Enclosure
+[SPACE][SPACE] * Exotic Herbivores Cage &#38; Enclosure
 [SPACE][SPACE] * Rhino camp &#38; master Hunter</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros indien[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
@@ -4654,7 +4654,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:'
 [SPACE][SPACE] * Myth, Story and Stories - Java Rhinoceros
 [SPACE][SPACE] * Myth - Rhinoceros and Unicorn
-[SPACE][SPACE] * Exotic Herbavour Cage and Enclosure
+[SPACE][SPACE] * Exotic Herbivores Cage and Enclosure
 [SPACE][SPACE] * Rhino camp and master Hunter</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros de Java[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
@@ -4693,7 +4693,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_MALAYAN_TAPIR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Tapir and Malayan Tapir
-[SPACE][SPACE] * Exotic Herbavours Cage and Enclosure</English>
+[SPACE][SPACE] * Exotic Herbivores Cage and Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Malayan, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
@@ -4731,7 +4731,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_MOUNTAIN_TAPIR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Tapir and Mountain Tapir
-[SPACE][SPACE] * Exotic Herbavours Cage and Enclosure</English>
+[SPACE][SPACE] * Exotic Herbivores Cage and Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Mountain, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
@@ -4813,13 +4813,13 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_PYGMYHIPPO_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]
 [SPACE][SPACE] * Myth, Story and Stories - Pygmy Hippopotamus
-[SPACE][SPACE] * Exotic Herbavour Cage and Enclosure</English>
+[SPACE][SPACE] * Exotic Herbivores Cage and Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) des Hippopotames nains[NEWLINE][ICON_BULLET]Cage et Enclos pour herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REDFOX_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story and Stories - Redfox
+[SPACE][SPACE] * Myth, Story and Stories - Red Fox
 [SPACE][SPACE] * Wolf Cage and Enclosure
 [SPACE][SPACE] * Canine Totem</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythes et Histoires du renard roux, Cage et Enclos à loup, Totem Canin</French>
@@ -4915,7 +4915,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_TREESLOTH_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Tree Sloth
-[SPACE][SPACE] * Exoctic Herbavours Cage and Enclosure</English>
+[SPACE][SPACE] * Exotic Herbivores Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT]:
 [SPACE][SPACE] * Mythes et Histoire(s) du Paresseux
 [SPACE][SPACE] * Cage et Enclos pour Herbivores exotiques</French>
@@ -4932,7 +4932,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WHALESHARK_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story and Stories - Whaleshark
+[SPACE][SPACE] * Myth, Story and Stories - Whale Shark
 [SPACE][SPACE] * Myths of Sea and Sharks
 [SPACE][SPACE] * Master Sea Hunter and Wonders of the Deep
 [SPACE][SPACE] * Marine and Shark Institute</English>
@@ -4958,7 +4958,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - White Rhinoceros
 [SPACE][SPACE] * Myth - Rhinoceros and Unicorn
-[SPACE][SPACE] * Exotic Herbavour Cage and Enclosure
+[SPACE][SPACE] * Exotic Herbivores Cage and Enclosure
 [SPACE][SPACE] * Rhino camp and master Hunter</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT]:
 [SPACE][SPACE] * Mythes et Histoire(s) du Rhinocéros blanc
@@ -4999,7 +4999,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Zebra and Horse
 [SPACE][SPACE] * Zebra Herd and Hunter's Camp
-[SPACE][SPACE] * Carnival and Exotic Herbavour Cage and Enclosure</English>
+[SPACE][SPACE] * Carnival and Exotic Herbivores Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoire(s)du Zèbre et des chameaux, Troupeaux de zèbres et Camp de Chasseur, Carnaval et Cage et Enclos à Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
@@ -5042,7 +5042,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_JAVA_RHINO</Tag>
 		<English>Tamed Javan Rhinoceros</English>
-		<French>Rinhocéros de Java dompté</French>
+		<French>Rhinocéros de Java dompté</French>
 		<Polish>Oswojony Nosorożec Jawajski</Polish>
 	</TEXT>
 	<TEXT>

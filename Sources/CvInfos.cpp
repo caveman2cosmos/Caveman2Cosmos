@@ -56,7 +56,6 @@ void CvInfoBase::reset()
 	m_szCachedHelp.clear();
 	m_szCachedStrategy.clear();
 	m_szCachedCivilopedia.clear();
-	//m_szCachedGenericCategory.clear();
 }
 
 bool CvInfoBase::isGraphicalOnly() const
@@ -103,10 +102,6 @@ const wchar_t* CvInfoBase::getStrategyKey() const
 	return m_szStrategyKey;
 }
 
-//const wchar_t* CvInfoBase::getGenericCategoryKey() const
-//{
-//	return m_szGenericCategoryKey;
-//}
 const wchar_t* CvInfoBase::getTextKeyWide() const
 {
 	return m_szTextKey;
@@ -166,37 +161,6 @@ const wchar_t* CvInfoBase::getStrategy() const
 	return m_szCachedStrategy;
 }
 
-//const wchar_t* CvInfoBase::getGenericCategory() const
-//{
-//	if (m_szCachedGenericCategory.empty())
-//	{
-//		m_szCachedGenericCategory = gDLL->getText(m_szGenericCategoryKey);
-//	}
-//
-//	return m_szCachedGenericCategory;
-//}
-
-bool CvInfoBase::isMatchForLink(const std::wstring szLink, bool bKeysOnly) const
-{
-	if (szLink == CvWString(getType()).GetCString())
-	{
-		return true;
-	}
-
-	if (!bKeysOnly)
-	{
-		const uint iNumForms = gDLL->getNumForms(getTextKeyWide());
-		for (uint i = 0; i < iNumForms; i++)
-		{
-			if (szLink == getDescription(i))
-			{
-				return true;
-			}
-		}
-	}
-
-	return false;
-}
 //
 // read from XML
 // TYPE, DESC, BUTTON
@@ -223,23 +187,14 @@ bool CvInfoBase::read(CvXMLLoadUtility* pXML)
 	// STRATEGY
 	pXML->GetOptionalChildXmlValByName(m_szStrategyKey, L"Strategy");
 
-	// GENERICCATEGORY
-	//pXML->GetChildXmlValByName(m_szGenericCategoryKey, L"GenericCategory");
-
 	// BUTTON
 	pXML->GetOptionalChildXmlValByName(m_szButton, L"Button");
 
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 10/26/07							MRGENIE		  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
+	// XML_MODULAR_ART_LOADING - 10/26/07 - MRGENIE
 	CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
 	p_szDirName->setLocationName( &m_szButton, (GC.getModDir()).c_str());
 	SAFE_DELETE(p_szDirName);
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
 
 	return true;
 }
@@ -273,11 +228,6 @@ void CvInfoBase::copyNonDefaults(CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML)
 	{
 		m_szStrategyKey = pClassInfo->getStrategyKey();
 	}
-
-	//if ( getGenericCategoryKey() == NULL || getGenericCategoryKey() == wDefault)
-	//{
-	//	m_szGenericCategoryKey = pClassInfo->getGenericCategoryKey();
-	//}
 
 	if ( getButton() == NULL || getButton() == cDefault)
 	{
@@ -2502,11 +2452,13 @@ m_iFortitudeChange(0),
 m_iDamageperTurn(0),
 m_iStrAdjperTurn(0),
 m_iWeakenperTurn(0),
+#ifdef STRENGTH_IN_NUMBERS
 m_iFrontSupportPercentChange(0),
 m_iShortRangeSupportPercentChange(0),
 m_iMediumRangeSupportPercentChange(0),
 m_iLongRangeSupportPercentChange(0),
 m_iFlankSupportPercentChange(0),
+#endif
 m_iDodgeModifierChange(0),
 m_iPrecisionModifierChange(0),
 m_iPowerShotsChange(0),
@@ -2591,13 +2543,6 @@ m_bIgnoreZoneofControlAdd(false),
 m_bIgnoreZoneofControlSubtract(false),
 m_bFliesToMoveAdd(false),
 m_bFliesToMoveSubtract(false),
-m_bAnyTerrainAttackPercent(false),
-m_bAnyTerrainDefensePercent(false),
-m_bAnyFeatureAttackPercent(false),
-m_bAnyFeatureDefensePercent(false),
-m_bAnyUnitCombatModifierPercent(false),
-m_bAnyDomainModifierPercent(false),
-//m_bAnyAIWeightbyUnitCombat(false),
 m_bZeroesXP(false),
 m_bForOffset(false),
 m_bCargoPrereq(false),
@@ -3038,8 +2983,6 @@ bool CvPromotionInfo::changesMoveThroughPlots() const
 			m_bHillsDoubleMove);
 }
 
-// Arrays
-
 int CvPromotionInfo::getTerrainAttackPercent(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
@@ -3048,7 +2991,7 @@ int CvPromotionInfo::getTerrainAttackPercent(int i) const
 
 bool CvPromotionInfo::isAnyTerrainAttackPercent() const
 {
-	return m_bAnyTerrainAttackPercent;
+	return m_piTerrainAttackPercent != NULL;
 }
 
 int CvPromotionInfo::getTerrainDefensePercent(int i) const
@@ -3059,7 +3002,7 @@ int CvPromotionInfo::getTerrainDefensePercent(int i) const
 
 bool CvPromotionInfo::isAnyTerrainDefensePercent() const
 {
-	return m_bAnyTerrainDefensePercent;
+	return m_piTerrainDefensePercent != NULL;
 }
 
 int CvPromotionInfo::getFeatureAttackPercent(int i) const
@@ -3070,7 +3013,7 @@ int CvPromotionInfo::getFeatureAttackPercent(int i) const
 
 bool CvPromotionInfo::isAnyFeatureAttackPercent() const
 {
-	return m_bAnyFeatureAttackPercent;
+	return m_piFeatureAttackPercent != NULL;
 }
 
 int CvPromotionInfo::getFeatureDefensePercent(int i) const
@@ -3081,7 +3024,7 @@ int CvPromotionInfo::getFeatureDefensePercent(int i) const
 
 bool CvPromotionInfo::isAnyFeatureDefensePercent() const
 {
-	return m_bAnyFeatureDefensePercent;
+	return m_piFeatureDefensePercent != NULL;
 }
 
 int CvPromotionInfo::getUnitCombatModifierPercent(int i) const
@@ -3092,7 +3035,7 @@ int CvPromotionInfo::getUnitCombatModifierPercent(int i) const
 
 bool CvPromotionInfo::isAnyUnitCombatModifierPercent() const
 {
-	return m_bAnyUnitCombatModifierPercent;
+	return m_piUnitCombatModifierPercent != NULL;
 }
 
 int CvPromotionInfo::getDomainModifierPercent(int i) const
@@ -3103,7 +3046,7 @@ int CvPromotionInfo::getDomainModifierPercent(int i) const
 
 bool CvPromotionInfo::isAnyDomainModifierPercent() const
 {
-	return m_bAnyDomainModifierPercent;
+	return m_piDomainModifierPercent != NULL;
 }
 
 bool CvPromotionInfo::getTerrainDoubleMove(int i) const
@@ -3477,8 +3420,8 @@ int CvPromotionInfo::getWeakenperTurn() const
 {
 	return m_iWeakenperTurn;
 }
-//
-//Strength in Numbers
+
+#ifdef STRENGTH_IN_NUMBERS
 int CvPromotionInfo::getFrontSupportPercentChange() const
 {
 	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
@@ -3523,7 +3466,7 @@ int CvPromotionInfo::getFlankSupportPercentChange() const
 	}
 	return m_iFlankSupportPercentChange;
 }
-//
+#endif
 
 int CvPromotionInfo::getDodgeModifierChange() const
 {
@@ -5529,11 +5472,13 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iDamageperTurn, L"iDamageperTurn");
 	pXML->GetOptionalChildXmlValByName(&m_iStrAdjperTurn, L"iStrAdjperTurn");
 	pXML->GetOptionalChildXmlValByName(&m_iWeakenperTurn, L"iWeakenperTurn");
+#ifdef STRENGTH_IN_NUMBERS
 	pXML->GetOptionalChildXmlValByName(&m_iFrontSupportPercentChange, L"iFrontSupportPercentChange");
 	pXML->GetOptionalChildXmlValByName(&m_iShortRangeSupportPercentChange, L"iShortRangeSupportPercentChange");
 	pXML->GetOptionalChildXmlValByName(&m_iMediumRangeSupportPercentChange, L"iMediumRangeSupportPercentChange");
 	pXML->GetOptionalChildXmlValByName(&m_iLongRangeSupportPercentChange, L"iLongRangeSupportPercentChange");
 	pXML->GetOptionalChildXmlValByName(&m_iFlankSupportPercentChange, L"iFlankSupportPercentChange");
+#endif
 	pXML->GetOptionalChildXmlValByName(&m_iDodgeModifierChange, L"iDodgeModifierChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPrecisionModifierChange, L"iPrecisionModifierChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPowerShotsChange, L"iPowerShotsChange");
@@ -6070,11 +6015,7 @@ bool CvPromotionInfo::readPass2(CvXMLLoadUtility* pXML)
 
 	return true;
 }
-/************************************************************************************************/
-/* XMLCOPY								 10/14/07								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
 	CvHotkeyInfo::copyNonDefaults(pClassInfo, pXML);
@@ -6184,15 +6125,6 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 			m_piTerrainWorkPercent[j] = pClassInfo->getTerrainWorkPercent(j);
 		}
 	}
-	if (m_piTerrainAttackPercent != NULL)
-	{
-		m_bAnyTerrainAttackPercent = true;
-	}
-	if (m_piTerrainDefensePercent != NULL)
-	{
-		m_bAnyTerrainDefensePercent = true;
-	}
-
 	for (int j = 0; j < GC.getNumFeatureInfos(); j++)
 	{
 		if ((m_piFeatureAttackPercent == NULL || m_piFeatureAttackPercent[j] == iDefault) &&
@@ -6235,14 +6167,6 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 			m_piFeatureWorkPercent[j] = pClassInfo->getFeatureWorkPercent(j);
 		}
 	}
-	if (m_piFeatureAttackPercent != NULL)
-	{
-		m_bAnyFeatureAttackPercent = true;
-	}
-	if (m_piFeatureDefensePercent != NULL)
-	{
-		m_bAnyFeatureDefensePercent = true;
-	}
 	for (int j = 0; j < GC.getNumUnitCombatInfos(); j++)
 	{
 		if ((m_piUnitCombatModifierPercent == NULL || m_piUnitCombatModifierPercent[j] == iDefault) &&
@@ -6275,14 +6199,6 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 		//	m_piAIWeightbyUnitCombatTypes[j] = pClassInfo->getAIWeightbyUnitCombatType(j);
 		//}
 	}
-	if (m_piUnitCombatModifierPercent != NULL)
-	{
-		m_bAnyUnitCombatModifierPercent = true;
-	}
-	//if (m_piAIWeightbyUnitCombatTypes != NULL)
-	//{
-	//	m_bAnyAIWeightbyUnitCombatType = true;
-	//}
 	for (int j = 0; j < NUM_DOMAIN_TYPES; j++)
 	{
 		if ((m_piDomainModifierPercent == NULL || m_piDomainModifierPercent[j] == iDefault) &&
@@ -6294,10 +6210,6 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 			}
 			m_piDomainModifierPercent[j] = pClassInfo->getDomainModifierPercent(j);
 		}
-	}
-	if (m_piDomainModifierPercent != NULL)
-	{
-		m_bAnyDomainModifierPercent = true;
 	}
 
 	if (isDefensiveVictoryMove() == bDefault) m_bDefensiveVictoryMove = pClassInfo->isDefensiveVictoryMove();
@@ -6366,11 +6278,13 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 	if (getDamageperTurn() == iDefault) m_iDamageperTurn = pClassInfo->getDamageperTurn();
 	if (getStrAdjperTurn() == iDefault) m_iStrAdjperTurn = pClassInfo->getStrAdjperTurn();
 	if (getWeakenperTurn() == iDefault) m_iWeakenperTurn = pClassInfo->getWeakenperTurn();
+#ifdef STRENGTH_IN_NUMBERS
 	if (m_iFrontSupportPercentChange == iDefault) m_iFrontSupportPercentChange = pClassInfo->m_iFrontSupportPercentChange;
 	if (m_iShortRangeSupportPercentChange == iDefault) m_iShortRangeSupportPercentChange = pClassInfo->m_iShortRangeSupportPercentChange;
 	if (m_iMediumRangeSupportPercentChange == iDefault) m_iMediumRangeSupportPercentChange = pClassInfo->m_iMediumRangeSupportPercentChange;
 	if (m_iLongRangeSupportPercentChange == iDefault) m_iLongRangeSupportPercentChange = pClassInfo->m_iLongRangeSupportPercentChange;
 	if (m_iFlankSupportPercentChange == iDefault) m_iFlankSupportPercentChange = pClassInfo->m_iFlankSupportPercentChange;
+#endif
 	if (getDodgeModifierChange() == iDefault) m_iDodgeModifierChange = pClassInfo->getDodgeModifierChange();
 	if (getPrecisionModifierChange() == iDefault) m_iPrecisionModifierChange = pClassInfo->getPrecisionModifierChange();
 	if (getPowerShotsChange() == iDefault) m_iPowerShotsChange = pClassInfo->getPowerShotsChange();
@@ -7165,11 +7079,13 @@ void CvPromotionInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iDamageperTurn);
 	CheckSum(iSum, m_iStrAdjperTurn);
 	CheckSum(iSum, m_iWeakenperTurn);
+#ifdef STRENGTH_IN_NUMBERS
 	CheckSum(iSum, m_iFrontSupportPercentChange);
 	CheckSum(iSum, m_iShortRangeSupportPercentChange);
 	CheckSum(iSum, m_iMediumRangeSupportPercentChange);
 	CheckSum(iSum, m_iLongRangeSupportPercentChange);
 	CheckSum(iSum, m_iFlankSupportPercentChange);
+#endif
 	CheckSum(iSum, m_iDodgeModifierChange);
 	CheckSum(iSum, m_iPrecisionModifierChange);
 	CheckSum(iSum, m_iPowerShotsChange);
@@ -7257,13 +7173,6 @@ void CvPromotionInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_bIgnoreZoneofControlSubtract);
 	CheckSum(iSum, m_bFliesToMoveAdd);
 	CheckSum(iSum, m_bFliesToMoveSubtract);
-
-	CheckSum(iSum, m_bAnyTerrainAttackPercent);
-	CheckSum(iSum, m_bAnyTerrainDefensePercent);
-	CheckSum(iSum, m_bAnyFeatureAttackPercent);
-	CheckSum(iSum, m_bAnyFeatureDefensePercent);
-	CheckSum(iSum, m_bAnyUnitCombatModifierPercent);
-	CheckSum(iSum, m_bAnyDomainModifierPercent);
 	CheckSum(iSum, m_bNoSelfHeal);
 	CheckSum(iSum, m_bSetOnHNCapture);
 	CheckSum(iSum, m_bSetOnInvestigated);
@@ -7272,7 +7181,6 @@ void CvPromotionInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_bPlotPrereqsKeepAfter);
 	CheckSum(iSum, m_bRemoveAfterSet);
 	CheckSum(iSum, m_bQuick);
-	//CheckSum(iSum, m_bAnyAIWeightbyUnitCombatType);
 	CheckSum(iSum, m_bZeroesXP);
 	CheckSum(iSum, m_bForOffset);
 	CheckSum(iSum, m_bCargoPrereq);
@@ -8080,16 +7988,6 @@ const wchar_t* CvActionInfo::getStrategy() const
 
 	return L"";
 }
-
-//const wchar_t* CvActionInfo::getGenericCategory() const
-//{
-//	if (getHotkeyInfo())
-//	{
-//		return getHotkeyInfo()->getGenericCategory();
-//	}
-//
-//	return L"";
-//}
 
 const TCHAR* CvActionInfo::getButton() const
 {
@@ -9236,8 +9134,6 @@ CvCivicInfo::CvCivicInfo()
 	, m_bFixedBorders(false)
 	, m_bNoCapitalUnhappiness(false)
 	, m_bNoLandmarkAnger(false)
-	, m_bAnySpecialistYieldChanges(false)
-	, m_bAnySpecialistCommerceChanges(false)
 	, m_bEnablesMAD(false)
 	, m_piBonusMintedPercent(NULL)
 	, m_piImprovementHappinessChanges(NULL)
@@ -10072,17 +9968,6 @@ bool CvCivicInfo::isAnyImprovementYieldChange() const
 	return m_bAnyImprovementYieldChange;
 }
 
-bool CvCivicInfo::isAnySpecialistCommerceChanges() const
-{
-	return m_bAnySpecialistCommerceChanges;
-}
-
-bool CvCivicInfo::isAnySpecialistYieldChanges() const
-{
-	return m_bAnySpecialistYieldChanges;
-}
-
-
 CvString CvCivicInfo::getCivicAttitudeReason(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), i)
@@ -10609,7 +10494,6 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 							// call the function that sets the yield change variable
 							pXML->SetYields(&m_ppiSpecialistYieldPercentChanges[iIndex]);
 							pXML->MoveToXmlParent();
-							m_bAnySpecialistYieldChanges = true;
 						}
 					}
 
@@ -10650,7 +10534,6 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 							// call the function that sets the commerce change variable
 							pXML->SetCommerce(&m_ppiSpecialistCommercePercentChanges[iIndex]);
 							pXML->MoveToXmlParent();
-							m_bAnySpecialistCommerceChanges = true;
 						}
 					}
 
@@ -15012,17 +14895,8 @@ m_iAdvancedStartCostIncrease(0),
 m_iValue(0),
 m_iMovementCost(0),
 m_iFlatMovementCost(0),
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 m_bSeaTunnel(false),
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
 m_iPrereqBonus(NO_BONUS),
-m_bAnyPrereqOrBonus(false),
 m_piYieldChange(NULL),
 m_piTechMovementChange(NULL),
 m_piPrereqOrBonuses(NULL),
@@ -15069,18 +14943,11 @@ int CvRouteInfo::getFlatMovementCost() const
 {
 	return m_iFlatMovementCost;
 }
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 bool CvRouteInfo::isSeaTunnel() const
 {
 	return m_bSeaTunnel;
 }
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
 
 int CvRouteInfo::getPrereqBonus() const
 {
@@ -15089,9 +14956,8 @@ int CvRouteInfo::getPrereqBonus() const
 
 bool CvRouteInfo::isAnyPrereqOrBonus() const
 {
-	return m_bAnyPrereqOrBonus;
+	return m_piPrereqOrBonuses != NULL;
 }
-// Arrays
 
 int CvRouteInfo::getYieldChange(int i) const
 {
@@ -15138,15 +15004,7 @@ bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iValue, L"iValue");
 	pXML->GetOptionalChildXmlValByName(&m_iMovementCost, L"iMovement");
 	pXML->GetOptionalChildXmlValByName(&m_iFlatMovementCost, L"iFlatMovement");
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(&m_bSeaTunnel, L"bSeaTunnel");
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"BonusType");
 	m_iPrereqBonus = pXML->GetInfoClass(szTextVal);
@@ -15184,7 +15042,6 @@ bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 					{
 						OutputDebugString(szTextVal.c_str());
 						m_piPrereqOrBonuses[j] = pXML->GetInfoClass(szTextVal);
-						m_bAnyPrereqOrBonus = true;
 						++j;
 						pXML->MoveToXmlParent();
 					}
@@ -15270,10 +15127,6 @@ void CvRouteInfo::copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXM
 		{
 			m_piPrereqOrBonuses[i] = pClassInfo->getPrereqOrBonus(i);
 		}
-		if (m_piPrereqOrBonuses[i] != iDefault)
-		{
-			m_bAnyPrereqOrBonus = true;
-		}
 	}
 
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators, pXML);
@@ -15290,7 +15143,6 @@ void CvRouteInfo::getCheckSum(unsigned int& iSum) const
 
 	CheckSum(iSum, m_bSeaTunnel);
 	CheckSum(iSum, m_iPrereqBonus);
-	CheckSum(iSum, m_bAnyPrereqOrBonus);
 
 	// Arrays
 
@@ -23200,7 +23052,6 @@ CvTraitInfo::CvTraitInfo()
 	, m_bFreedomFighter(false)
 	//arrays
 	, m_ppaiSpecialistYieldChange(NULL)
-	, m_bAnySpecialistYieldChanges(false)
 	, m_piYieldModifier(NULL)
 	, m_piCapitalYieldModifier(NULL)
 	, m_piCapitalCommerceModifier(NULL)
@@ -23208,13 +23059,10 @@ CvTraitInfo::CvTraitInfo()
 	, m_piSpecialistExtraYield(NULL)
 	, m_piYieldChange(NULL)
 	, m_ppaiSpecialistCommerceChange(NULL)
-	, m_bAnySpecialistCommerceChanges(false)
 	, m_piFlavorValue(NULL)
 	, m_paiLessYieldThreshold(NULL)
 	, m_piSeaPlotYieldChanges(NULL)
 	, m_ppaiImprovementYieldChange(NULL)
-	, m_bAnyImprovementYieldChanges(false)
-
 	, m_piGoldenAgeYieldChanges(NULL)
 	, m_piGoldenAgeCommerceChanges(NULL)
 	//For Pure Traits
@@ -26402,7 +26250,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetYields(&m_ppaiSpecialistYieldChange[k]);
 						pXML->MoveToXmlParent();
-						m_bAnySpecialistYieldChanges = true;
 					}
 				}
 
@@ -26516,7 +26363,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetCommerce(&m_ppaiSpecialistCommerceChange[k]);
 						pXML->MoveToXmlParent();
-						m_bAnySpecialistCommerceChanges = true;
 					}
 				}
 
@@ -26571,7 +26417,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetYields(&m_ppaiImprovementYieldChange[k]);
 						pXML->MoveToXmlParent();
-						m_bAnyImprovementYieldChanges = true;
 					}
 				}
 
@@ -27030,7 +26875,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetYields(&m_ppaiSpecialistYieldChangeFiltered[k]);
 						pXML->MoveToXmlParent();
-						m_bAnySpecialistYieldChanges = true;
 					}
 				}
 
@@ -27134,7 +26978,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetCommerce(&m_ppaiSpecialistCommerceChangeFiltered[k]);
 						pXML->MoveToXmlParent();
-						m_bAnySpecialistCommerceChanges = true;
 					}
 				}
 
@@ -27198,7 +27041,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 						// call the function that sets the yield change variable
 						pXML->SetYields(&m_ppaiImprovementYieldChangeFiltered[k]);
 						pXML->MoveToXmlParent();
-						m_bAnyImprovementYieldChanges = true;
 					}
 				}
 
@@ -27508,7 +27350,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXM
 
 					m_ppaiSpecialistYieldChange[i][j] = iChange;
 					m_ppaiSpecialistYieldChangeFiltered[i][j] = iChange;
-					m_bAnySpecialistYieldChanges = true;
 				}
 			}
 		}
@@ -27552,7 +27393,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXM
 
 					m_ppaiImprovementYieldChange[i][j] = iChange;
 					m_ppaiImprovementYieldChangeFiltered[i][j] = iChange;
-					m_bAnyImprovementYieldChanges = true;
 				}
 			}
 		}
@@ -27703,7 +27543,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXM
 
 					m_ppaiSpecialistCommerceChange[i][j] = iChange;
 					m_ppaiSpecialistCommerceChangeFiltered[i][j] = iChange;
-					m_bAnySpecialistCommerceChanges = true;
 				}
 			}
 		}
@@ -38144,11 +37983,13 @@ CvUnitCombatInfo::CvUnitCombatInfo()
 	, m_iDynamicDefenseChange(0)
 	, m_iStrengthChange(0)
 	, m_iFortitudeChange(0)
+#ifdef STRENGTH_IN_NUMBERS
 	, m_iFrontSupportPercentChange(0)
 	, m_iShortRangeSupportPercentChange(0)
 	, m_iMediumRangeSupportPercentChange(0)
 	, m_iLongRangeSupportPercentChange(0)
 	, m_iFlankSupportPercentChange(0)
+#endif
 	, m_iDodgeModifierChange(0)
 	, m_iPrecisionModifierChange(0)
 	, m_iPowerShotsChange(0)
@@ -38173,10 +38014,8 @@ CvUnitCombatInfo::CvUnitCombatInfo()
 	, m_iGroupBase(-10)
 	, m_iSizeBase(-10)
 	, m_iDamageModifierChange(0)
-
 	, m_iUpkeepModifier(0)
 	, m_iExtraUpkeep100(0)
-
 	, m_iRBombardDamageBase(0)
 	, m_iRBombardDamageLimitBase(0)
 	, m_iRBombardDamageMaxUnitsBase(0)
@@ -38249,11 +38088,7 @@ CvUnitCombatInfo::CvUnitCombatInfo()
 	, m_bForNavalMilitary(false)
 	, m_bHealsAs(false)
 	, m_bNoSelfHeal(false)
-	//Array Derived
-	, m_bAnyDomainModifierPercent(false)
-	//Arrays
 	, m_piDomainModifierPercent(NULL)
-	//PropertyManipulators
 	, m_PropertyManipulators()
 {
 	m_zobristValue = GC.getGame().getSorenRand().getInt();
@@ -38782,6 +38617,7 @@ int CvUnitCombatInfo::getFortitudeChange() const
 	return m_iFortitudeChange;
 }
 
+#ifdef STRENGTH_IN_NUMBERS
 int CvUnitCombatInfo::getFrontSupportPercentChange() const
 {
 	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
@@ -38826,6 +38662,7 @@ int CvUnitCombatInfo::getFlankSupportPercentChange() const
 	}
 	return m_iFlankSupportPercentChange;
 }
+#endif
 
 int CvUnitCombatInfo::getDodgeModifierChange() const
 {
@@ -39363,7 +39200,7 @@ int CvUnitCombatInfo::getDomainModifierPercent(int i) const
 
 bool CvUnitCombatInfo::isAnyDomainModifierPercent() const
 {
-	return m_bAnyDomainModifierPercent;
+	return m_piDomainModifierPercent != NULL;
 }
 
 // bool vector with delayed resolution
@@ -40180,11 +40017,13 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iDynamicDefenseChange, L"iDynamicDefenseChange");
 	pXML->GetOptionalChildXmlValByName(&m_iStrengthChange, L"iStrengthChange");
 	pXML->GetOptionalChildXmlValByName(&m_iFortitudeChange, L"iFortitudeChange");
+#ifdef STRENGTH_IN_NUMBERS
 	pXML->GetOptionalChildXmlValByName(&m_iFrontSupportPercentChange, L"iFrontSupportPercentChange");
 	pXML->GetOptionalChildXmlValByName(&m_iShortRangeSupportPercentChange, L"iShortRangeSupportPercentChange");
 	pXML->GetOptionalChildXmlValByName(&m_iMediumRangeSupportPercentChange, L"iMediumRangeSupportPercentChange");
 	pXML->GetOptionalChildXmlValByName(&m_iLongRangeSupportPercentChange, L"iLongRangeSupportPercentChange");
 	pXML->GetOptionalChildXmlValByName(&m_iFlankSupportPercentChange, L"iFlankSupportPercentChange");
+#endif
 	pXML->GetOptionalChildXmlValByName(&m_iDodgeModifierChange, L"iDodgeModifierChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPrecisionModifierChange, L"iPrecisionModifierChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPowerShotsChange, L"iPowerShotsChange");
@@ -41388,11 +41227,13 @@ void CvUnitCombatInfo::copyNonDefaults(CvUnitCombatInfo* pClassInfo, CvXMLLoadUt
 	if (m_iDynamicDefenseChange == iDefault) m_iDynamicDefenseChange = pClassInfo->m_iDynamicDefenseChange;
 	if (getStrengthChange() == iDefault) m_iStrengthChange = pClassInfo->getStrengthChange();
 	if (getFortitudeChange() == iDefault) m_iFortitudeChange = pClassInfo->getFortitudeChange();
+#ifdef STRENGTH_IN_NUMBERS
 	if (m_iFrontSupportPercentChange == iDefault) m_iFrontSupportPercentChange = pClassInfo->m_iFrontSupportPercentChange;
 	if (m_iShortRangeSupportPercentChange == iDefault) m_iShortRangeSupportPercentChange = pClassInfo->m_iShortRangeSupportPercentChange;
 	if (m_iMediumRangeSupportPercentChange == iDefault) m_iMediumRangeSupportPercentChange = pClassInfo->m_iMediumRangeSupportPercentChange;
 	if (m_iLongRangeSupportPercentChange == iDefault) m_iLongRangeSupportPercentChange = pClassInfo->m_iLongRangeSupportPercentChange;
 	if (m_iFlankSupportPercentChange == iDefault) m_iFlankSupportPercentChange = pClassInfo->m_iFlankSupportPercentChange;
+#endif
 	if (getDodgeModifierChange() == iDefault) m_iDodgeModifierChange = pClassInfo->getDodgeModifierChange();
 	if (getPrecisionModifierChange() == iDefault) m_iPrecisionModifierChange = pClassInfo->getPrecisionModifierChange();
 	if (getPowerShotsChange() == iDefault) m_iPowerShotsChange = pClassInfo->getPowerShotsChange();
@@ -41506,10 +41347,6 @@ void CvUnitCombatInfo::copyNonDefaults(CvUnitCombatInfo* pClassInfo, CvXMLLoadUt
 			}
 			m_piDomainModifierPercent[j] = pClassInfo->getDomainModifierPercent(j);
 		}
-	}
-	if (m_piDomainModifierPercent != NULL)
-	{
-		m_bAnyDomainModifierPercent = true;
 	}
 
 	// bool vector with delayed resolution
@@ -42001,11 +41838,13 @@ void CvUnitCombatInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iDynamicDefenseChange);
 	CheckSum(iSum, m_iStrengthChange);
 	CheckSum(iSum, m_iFortitudeChange);
+#ifdef STRENGTH_IN_NUMBERS
 	CheckSum(iSum, m_iFrontSupportPercentChange);
 	CheckSum(iSum, m_iShortRangeSupportPercentChange);
 	CheckSum(iSum, m_iMediumRangeSupportPercentChange);
 	CheckSum(iSum, m_iLongRangeSupportPercentChange);
 	CheckSum(iSum, m_iFlankSupportPercentChange);
+#endif
 	CheckSum(iSum, m_iDodgeModifierChange);
 	CheckSum(iSum, m_iPrecisionModifierChange);
 	CheckSum(iSum, m_iPowerShotsChange);
@@ -42106,8 +41945,6 @@ void CvUnitCombatInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_bForNavalMilitary);
 	CheckSum(iSum, m_bHealsAs);
 	CheckSum(iSum, m_bNoSelfHeal);
-	//Array Derived
-	CheckSum(iSum, m_bAnyDomainModifierPercent);
 
 	// Arrays
 	CheckSum(iSum, m_piDomainModifierPercent, NUM_DOMAIN_TYPES);

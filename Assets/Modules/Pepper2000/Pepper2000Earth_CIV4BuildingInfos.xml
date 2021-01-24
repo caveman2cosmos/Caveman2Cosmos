@@ -6552,12 +6552,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BINARY_CONSCIOUSNESS_ALGORITHMS</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SLAVE_EM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SLAVE_EM</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_EM</Type>
@@ -6583,12 +6580,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BINARY_CONSCIOUSNESS_ALGORITHMS</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CITIZEN_EM</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CITIZEN_EM</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUANTUM_ENCRYPTION</Type>

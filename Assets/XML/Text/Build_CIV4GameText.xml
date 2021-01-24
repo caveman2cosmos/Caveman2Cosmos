@@ -37,12 +37,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ARCHEOLOGICAL_SITE</Tag>
-		<English>Create [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Archeological Site[\LINK]</English>
-		<French>Créer un [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Site archéologique[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Examne Ruinen[\LINK]</German>
-		<Italian>[LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Esamina le rovine[\LINK]</Italian>
-		<Spanish>[LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Explorar ruinas[\LINK]</Spanish>
-		<Polish>Zbadaj [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Starożytną Świątynię[\LINK]</Polish>
+		<English>Create [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Archaeological Site[\LINK]</English>
+		<French>Créer un [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]site archéologique[\LINK]</French>
+		<German>Erstellen Sie eine [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]archäologische Stätte[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]sito archeologico[\LINK]</Italian>
+		<Spanish>Crear un [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]sitio arqueológico[\LINK]</Spanish>
+		<Polish>Stworzyć [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]stanowisko archeologiczne[\LINK]</Polish> 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BEACON_CORAL</Tag>
@@ -148,7 +148,7 @@
 		<English>Build [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Colony Hydroponics[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Colonie Hydroponique[\LINK]</French>
 		<German>Bauen [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Kolonie Hydrokultur[\LINK]</German>
-		<Italian>Costruisci [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Idroponica Colonia[\LINK]</Italian>
+		<Italian>Costruisci [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Colonia idroponica[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Hidrocultivo colonial[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_HYDROPONICS]Hydroponikę Kolonii[\LINK]</Polish>
 	</TEXT>
@@ -285,7 +285,7 @@
 		<English>Build [LINK=IMPROVEMENT_FARM]Farm[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_FARM]Ferme[\LINK]</French>
 		<German>Anlegen eines [LINK=IMPROVEMENT_FARM]Getreidefeldes[\LINK]</German>
-		<Italian>Cosstruisci una [LINK=IMPROVEMENT_FARM]Fattoria[\LINK]</Italian>
+		<Italian>Costruisci una [LINK=IMPROVEMENT_FARM]Fattoria[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_FARM]Granja[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_FARM]Farmę[\LINK]</Polish>
 	</TEXT>
@@ -486,7 +486,7 @@
 		<English>Build [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Manufacturing Complex[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Complexe de Fabrication[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Fabrikation Zentrum[\LINK]</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Complesso Produzione[\LINK]</Italian>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Complesso di produzione[\LINK]</Italian>
 		<Spanish>Construye un [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Polígono Fabrication[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Kompleks Produkcyjny[\LINK]</Polish>
 	</TEXT>
@@ -495,7 +495,7 @@
 		<English>Build [LINK=ROUTE_JUMPLANE]Jumplane[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_JUMPLANE]Tremplin[\LINK]</French>
 		<German>Jumplane bauen</German>
-		<Italian>Costrusci una Jumplane</Italian>
+		<Italian>Costruisci una Jumplane</Italian>
 		<Spanish>Construir una Vía de impulso</Spanish>
 		<Polish>Zbuduj Punkt Skoku</Polish>
 	</TEXT>
@@ -520,20 +520,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_CORAL</Tag>
 		<English>Build [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]Lighthouse[\LINK] (Coral)</English>
-		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE]Phare[\LINK] (Coral)</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_LIGHTHOUSE]Leuchtturm[\LINK] (Coral)</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Coral)</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Coral)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_LIGHTHOUSE]Latarnię Morską[\LINK] (Coral)</Polish>
+		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]Phare[\LINK] (Coral)</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]Leuchtturm[\LINK] (Coral)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]Faro[\LINK] (Coral)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]Faro[\LINK] (Coral)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]Latarnię Morską[\LINK] (Coral)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_REEF</Tag>
 		<English>Build [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Lighthouse[\LINK] (Reef)</English>
-		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE]Phare[\LINK] (Reef)</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_LIGHTHOUSE]Leuchtturm[\LINK] (Reef)</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Reef)</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Reef)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_LIGHTHOUSE]Latarnię Morską[\LINK] (Reef)</Polish>
+		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Phare[\LINK] (Reef)</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Leuchtturm[\LINK] (Reef)</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Faro[\LINK] (Reef)</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Faro[\LINK] (Reef)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Latarnię Morską[\LINK] (Reef)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LISTENING_NODE</Tag>
@@ -555,11 +555,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUMBERJACK</Tag>
 		<English>Build [LINK=IMPROVEMENT_LUMBERJACK]Lumberjack[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_LUMBER_JACK]Camp de bûcherons[\LINK]</French>
-		<German>Bauen ein [LINK=IMPROVEMENT_LUMBER_JACK]Holzfällerlager[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_LUMBER_JACK]Campo di legname[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_LUMBER_JACK]Campamento maderero[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_LUMBER_JACK]Obóz Drwali[\LINK]</Polish>
+		<French>Construire un [LINK=IMPROVEMENT_LUMBERJACK]Camp de bûcherons[\LINK]</French>
+		<German>Bauen ein [LINK=IMPROVEMENT_LUMBERJACK]Holzfällerlager[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_LUMBERJACK]Campo di legname[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_LUMBERJACK]Campamento maderero[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_LUMBERJACK]Obóz Drwali[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUMBERMILL</Tag>
@@ -609,10 +609,10 @@
 		<Tag>TXT_KEY_BUILD_MODERN_WINDMILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_MODERN_WINDMILL]Modern Windmill[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moulin à vent Moderne[\LINK]</French>
-		<German>Bauen a [LINK=IMPROVEMENT_MODERNWINDMILL]Modern-Windrad[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_MODERNWINDMILL]Moderno Mulino a vento[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_MODERNWINDMILL]Aerogenerador[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_MODERNWINDMILL]Współczesny Wiatrak[\LINK]</Polish>
+		<German>Bauen a [LINK=IMPROVEMENT_MODERN_WINDMILL]Modern-Windrad[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moderno Mulino a vento[\LINK]</Italian>
+		<Spanish>Construir un [LINK=IMPROVEMENT_MODERN_WINDMILL]Aerogenerador[\LINK]</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_MODERN_WINDMILL]Współczesny Wiatrak[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MOUNTAIN_MINE</Tag>
@@ -666,7 +666,7 @@
 		<German>Bauen ein [LINK=IMPROVEMENT_ORCHARD]Obstplantage[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_ORCHARD]Frutteto[\LINK]</Italian>
 		<Spanish>Plantar [LINK=IMPROVEMENT_ORCHARD]Huerta[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_APPLE_FARM]Sad[\LINK]</Polish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_ORCHARD]Sad[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PASTURE</Tag>
@@ -764,7 +764,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_ROCK_FORMATION</Tag>
 		<English>Remove Rock Formation</English>
-		<French>Eliminer la Formation de rochers</French>
+		<French>Supprimer la formation rocheuse</French>
 		<German>[LINK=FEATURE_DARK_ROCK_FORM1]Steinbildung[\LINK] zu entfernen</German>
 		<Italian>Rimuovere [LINK=FEATURE_DARK_ROCK_FORM1]Formazione rocciosa[\LINK]</Italian>
 		<Spanish>Quitar la [LINK=FEATURE_DARK_ROCK_FORM1]Formación rocosa[\LINK]</Spanish>
@@ -902,7 +902,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'Outils en pierre.[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Steinwerkstatt bauen[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Raccoglitore di pietre[\LINK]</Italian>
-		<Spanish>Contruir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK]</Spanish>
+		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Warsztat Kamiennych Narzędzi[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
@@ -911,7 +911,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'Outils en pierre [\LINK] (Détruit)</French>
 		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Steinwerkstatt bauen[\LINK] (Consumed)</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Raccoglitore di pietre[\LINK] (Consumed)</Italian>
-		<Spanish>Contruir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK] (Consumed)</Spanish>
+		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK] (Consumed)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Warsztat Kamiennych Narzędzi[\LINK] (Consumed)</Polish>
 	</TEXT>
 	<TEXT>
@@ -1233,7 +1233,7 @@
 		<French>[LINK=IMPROVEMENT_YOUNG_FOREST]Planter une Forêt[\LINK]</French>
 		<German>Pflanze Wald</German>
 		<Italian>Pianta una foresta</Italian>
-		<Spanish>Plantar un Bosque</Spanish>
+		<Spanish>Plantar un bosque</Spanish>
 		<Polish>Posadź las</Polish>
 	</TEXT>
 	<TEXT>

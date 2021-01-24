@@ -136,7 +136,7 @@ class CvReligionScreen:
 		screen = self.getScreen()
 		if screen.isActive():
 			return
-		screen.setRenderInterfaceOnly(True);
+		screen.setRenderInterfaceOnly(True)
 		screen.showScreen( PopupStates.POPUPSTATE_IMMEDIATE, False)
 
 		# Set the background and exit button, and show the screen
@@ -388,7 +388,7 @@ class CvReligionScreen:
 		self.szMissionaries = localText.getText("TXT_KEY_BUG_RELIGIOUS_MISSIONARY", ())
 
 		self.zoomArt = ArtFileMgr.getInterfaceArtInfo("INTERFACE_BUTTONS_CITYSELECTION").getPath()
-		self.sCity = localText.getText("TXT_KEY_WONDER_CITY", ())
+		self.sCity = localText.getText("TXT_WORD_CITY", ())
 
 		# scroll offset
 		if self.NUM_RELIGIONS > 7:
@@ -608,7 +608,7 @@ class CvReligionScreen:
 				pCity = pPlayer.getCity(inputClass.getData2())
 #				CyCamera().JustLookAtPlot(pCity.plot())
 
-				CyInterface().selectCity(pCity, True);
+				CyInterface().selectCity(pCity, True)
 
 		elif (self.ReligionScreenInputMap.has_key(inputClass.getFunctionName())):
 			'Calls function mapped in ReligionScreenInputMap'

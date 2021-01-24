@@ -9,8 +9,8 @@
 			<list id="MinPopulation" key="MinPopulation" type="int" default="3" values="1,2,3,4,5,6,7,8,9,10" get="getMinPopulation" set="setMinPopulation"/>
 			<list id="NewWorldPolicy" key="NewWorldPolicy" type="int" default="2" values="1,2,3,4" get="getNewWorldPolicy" set="setNewWorldPolicy"/>
 			<list id="NewWorldErasBehind" key="NewWorldErasBehind" type="int" default="2" values="0,1,2,3,4" get="getNewWorldErasBehind" set="setNewWorldErasBehind"/>
-			<list id="BarbTechFrac" key="BarbTechFrac" type="float" default="0.7" listType="float"
-				values="0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0" format="%.1f" get="getBarbTechFrac" set="setBarbTechFrac"/>
+			<list id="BarbTechPercent" key="BarbTechPercent" type="int" default="70" listType="int"
+				values="0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100" get="getBarbTechPercent" set="setBarbTechPercent"/>
 			<list id="MilitaryStrength" key="MilitaryStrength" type="float" default="1.0" listType="float"
 				values="0.2,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8,2.0" format="%.1f" get="getMilitaryStrength" set="setMilitaryStrength"/>
 			<list id="BarbCivMaxCivs" key="MaxCivs" type="int" default="25" values="-1,1,2,3,4,5,6,7,8,9,10,15,20,25,30,35,40" get="getBarbCivMaxCivs" set="setBarbCivMaxCivs"/>
