@@ -8239,6 +8239,7 @@
 		<Tag>TXT_KEY_PROMOTION_FLIES_TO_MOVE_ADD</Tag>
 		<English>[ICON_BULLET]Adds one cause for the unit to fly when moving.</English>
 		<French>[ICON_BULLET]Ajoute la compétence de l'unité à se déplacer en volant.</French>
+		<German>[ICON_BULLET]Fliegende Fortbewegung: +1</German>
 		<Italian>[ICON_BULLET]Aggiunge una causa per cui l'unità è in grado di spostarsi volando.</Italian>
 		<Polish>[ICON_BULLET]Dodaje jeden powód by unieść się w powietrze dla jednostki poruszającej się.</Polish>
 	</TEXT>
@@ -8246,6 +8247,7 @@
 		<Tag>TXT_KEY_PROMOTION_FLIES_TO_MOVE_SUBTRACT</Tag>
 		<English>[ICON_BULLET]Removes one cause for the unit to fly when moving.</English>
 		<French>[ICON_BULLET]Enlève la compétence de l'unité à se déplacer en volant.</French>
+		<German>[ICON_BULLET]Fliegende Fortbewegung: -1</German>
 		<Italian>[ICON_BULLET]Rimuove una causa per cui l'unità è in grado di spostarsi volando.</Italian>
 		<Polish>[ICON_BULLET]Usuwa jeden powód by unieść się w powietrze dla jednostki poruszającej się.</Polish>
 	</TEXT>

@@ -180,6 +180,7 @@
 		<Tag>TXT_KEY_FEATURE_CRATER_LARGE</Tag>
 		<English>Large Crater</English>
 		<French>Grand Cratère</French>
+		<German>Großer Krater</German>
 		<Italian>Cratere grande</Italian>
 		<Spanish>
 			<Text>Gran cráter:Grandes cráteres</Text>
@@ -192,6 +193,7 @@
 		<Tag>TXT_KEY_FEATURE_CRATER_MEDIUM</Tag>
 		<English>Medium Crater</English>
 		<French>Cratère Moyen</French>
+		<German>Mittelgroßer Krater</German>
 		<Italian>Cratere medio</Italian>
 		<Spanish>
 			<Text>Cráter mediano:Cráteres medianos</Text>
@@ -204,12 +206,14 @@
 		<Tag>TXT_KEY_FEATURE_CRATER_PEDIA</Tag>
 		<English>An impact crater is an approximately circular depression in the surface of a planet, moon or other solid body in the Solar System, formed by the hypervelocity impact of a smaller body with the surface. In contrast to volcanic craters, which result from explosion or internal collapse, impact craters typically have raised rims and floors that are lower in elevation than the surrounding terrain. Impact craters range from small, simple, bowl-shaped depressions to large, complex, multi-ringed impact basins. Meteor Crater is perhaps the best-known example of a small impact crater on the Earth.</English>
 		<French>Un cratère d'impact est une dépression approximativement circulaire à la surface d'une planète, d'une lune ou d'un autre corps solide du système solaire, formée par l'impact d'hypervitesse d'un corps plus petit avec la surface. Contrairement aux cratères volcaniques, qui résultent d'une explosion ou d'un effondrement interne, les cratères d'impact ont généralement des rebords et des sols surélevés qui sont plus bas en élévation que le terrain environnant. Les cratères d'impact vont de petites dépressions simples en forme de bol à de grands bassins d'impact complexes à anneaux multiples. Meteor Crater est peut-être l'exemple le plus connu d'un petit cratère d'impact sur la Terre.</French>
+		<German>Einschlagkrater oder Impaktkrater sind mehr oder minder halbkugelige Vertiefungen auf der Oberfläche von festen Planeten oder ähnlichen Himmelskörpern. Sie entstehen durch den Einschlag eines großen harten Objekts wie eines Asteroiden oder eines großen Meteoroiden. Nach den gefundenen Überresten, die als Meteoriten bekannt sind, spricht man auch von Meteoritenkratern. Auf der Erde schützt uns die Atmosphäre vor kleineren Einschlägen, nur größere Objekte ab einem Durchmesser von 50 m, die beim Eintritt nicht vollständig verglühen oder zerplatzen, können beim Aufprall mit hoher Geschwindigkeit tiefe [COLOR_HIGHLIGHT_TEXT]Krater[COLOR_REVERT] in die Erdoberfläche reißen.</German>
 		<Polish>Krater - koliste zagłębienie (lub zniekształcenie) na powierzchni ciała niebieskiego, spowodowane upadkiem meteorytu, planetoidy lub komety. Kratery są najczęściej spotykanymi elementami rzeźby powierzchni ciał o budowie skalistej i skalno-lodowej w Układzie Słonecznym, o ile ciało jest pozbawione atmosfery, a jego powierzchnia nie została przekształcona przez procesy geologiczne. Obserwowalna gęstość występowania kraterów uderzeniowych zawiera informację o wieku struktury geologicznej zawierającej te kratery i o intensywności procesów geologicznych. Na przykład, Io (księżyc Jowisza) jest niemal zupełnie pozbawiony kraterów meteorytowych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_CRATER_SMALL</Tag>
 		<English>Small Crater</English>
 		<French>Petit Cratère</French>
+		<German>Kleiner Krater</German>
 		<Italian>Cratere piccolo</Italian>
 		<Spanish>
 			<Text>Cráter pequeño:Cráteres pequeños</Text>

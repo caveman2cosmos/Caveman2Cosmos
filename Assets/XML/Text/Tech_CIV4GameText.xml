@@ -4522,6 +4522,11 @@
 		<Tag>TXT_KEY_TECH_CAVE_DWELLING</Tag>
 		<English>Cave Dwelling</English>
 		<French>Installation dans les Cavernes</French>
+		<German>
+			<Text>Höhlenbesiedlung:Höhlenbesiedlung:Höhlenbesiedlung:Höhlenbesiedlung</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Italian>Abitazioni nelle caverne</Italian>
 		<Spanish>
 			<Text>Asentamiento en cuevas</Text>
@@ -4533,18 +4538,21 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CAVE_DWELLING_PEDIA</Tag>
 		<English>Cave dwelling is the act of inhabiting a cave or the area beneath the overhanging rocks of a cliff. Some prehistoric humans were cave dwellers and despite the name only a small portion of humanity has ever dwelt in caves: caves are rare across most of the world; most caves are dark, cold, and damp; other cave inhabitants, such as bears and cave bears, cave lions, and cave hyenas, also have made caves inhospitable for people.[PARAGRAPH:2]The Grotte du Vallonnet, a cave in the French Riviera, was used by people approximately one million years ago. Although stone tools and the remains of eaten animals have been found in the cave, there is no indication that people dwelt in it.[PARAGRAPH:2]Since about 750 000 years ago, the Zhoukoudian cave system, in Beijing, China, has been inhabited by various species of human being, including Peking Man (Homo erectus pekinensis) and modern humans (Homo sapiens sapiens). Starting about 170 000 years ago, some Homo sapiens lived in some cave systems in what is now South Africa, such as Pinnacle Point and Diepkloof Rock Shelter. Caves were the ideal place to shelter from the midday sun in the equatorial regions. The stable temperatures of caves provided a cool habitat in summers and a warm, dry shelter in the winter.[PARAGRAPH:2]Approximately 100 000 years ago, some Neanderthal humans dwelt in caves in Europe and western Asia. Caves there also were inhabited by some Cro-Magnons from about 35 000 years ago until approximately 8 000 BC. Both species built shelters, including tents, at the mouths of caves and used the caves' dark interiors for ceremonies. The Cro-Magnon people also made representational paintings on cave walls. Also, about 100 000 years ago, some Homo sapiens worked in Blombos Cave, in what became South Africa. They made the earliest paint workshop now known, but apparently did not dwell in the caves.</English>
+		<German>Das Urbild des Höhlenmenschen als Vorfahr des modernen Menschen ist inzwischen überholt. Obwohl viele archäologische Funde in Höhlen und unter Felsüberhängen (Abris) gemacht wurden, ist heute belegt, dass nur ein kleiner Teil der frühen Menschen wirklich in Höhlen gewohnt hat. Zunächst einmal sind geeignete Grotten im Allgemeinen selten. In Höhlen ist es meist dunkel, kalt und feucht und viele waren zur Zeit der Urmenschen außerdem schon von wilden Raubtieren wie Bären, Löwen und Hyänen bewohnt. Oft gab es bessere und gesündere Alternativen. In äquatornahen Regionen wussten die Menschen Höhlen aber zu schätzen, denn sie boten Schutz vor der sengenden Mittagshitze.[NEWLINE]Berühmte frühe Höhlensiedlungen gab es vor 750000 Jahren im Zhoukoudian-Höhlensystem unterhalb des heutigen Pekings und vor etwa 170000 Jahren in Südafrika. Vor etwa 100000 Jahren lebten Neandertaler in Höhlen in Europa und Westasien und auch der spätere Cro-Magnon-Mensch ist für Höhlenbesiedlung bekannt. Beide Spezies schlugen ihre Unterkünfte am Eingang auf und nutzten die dunklen Innenräume für Rituale und Zeremonien.</German>
 		<Polish>Uważa się, że około 2 miliony lat temu, we wschodniej Afryce Homo habilis skonstruował pierwszą budowlę wykonaną przez człowieka, składającą się z prostego ułożenia kamieni, tak by utrzymać w pozycji gałęzie drzewa. Podobny, kolisty układ kamieni sprzed ok. 500 tysięcy lat został odnaleziony w Terra Amata, niedaleko Nicei we Francji. Na świecie odnaleziono również nieliczne ludzkie siedziby datowane na epokę kamienia.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CAVE_DWELLING_QUOTE</Tag>
 		<English>One just principle from the depths of a cave is more powerful than an army.[PARAGRAPH:2]- José Martí,[PARAGRAPH:1][SPACE][SPACE]"In a speech about the power of diplomacy over war before the Spanish-American War"</English>
 		<French>"Un plan élaboré dans les profondeurs d'une grotte est plus puissant qu'une armée." -Jose Marti</French>
+		<German>"Ein gerechtes Prinzip vom tiefsten Höhlengrunde aus verteidigt, vermag mehr, als eine Armee." - José Martí (1853-1895)</German>
 		<Polish>"Kiedy zaglądasz do jaskini, z początku widzisz bardzo niewiele. Ale kiedy przyzwyczajasz się do ciemności, widzisz coraz więcej. A jeśli odważysz się zostać tam wystarczająco długo, w końcu zobaczysz wszystko." - Nicola Morgan</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CAVE_DWELLING_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Cave Dwelling[COLOR_REVERT] is a prehistoric era technology that allows the construction of the [COLOR_HIGHLIGHT_TEXT]Culture (Neanderthal)[COLOR_REVERT] world wonder, which is the requirement to build [COLOR_UNIT_TEXT]Neanderthal[COLOR_REVERT] units. It also makes cities automatically construct the conceptual building [COLOR_BUILDING_TEXT]Cave Dwelling[COLOR_REVERT] that gives [ICON_PRODUCTION][COLOR_GREEN]Hammers[COLOR_REVERT], [ICON_GOLD][COLOR_GREEN]Gold[COLOR_REVERT] and [ICON_HEALTHY][COLOR_GREEN]Healthiness[COLOR_REVERT] if caves are in the vicinity.</English>
 		<French>Protection contre les intempéries et l'environnement hostile.</French>
+		<German>Die [COLOR_TECH_TEXT]Höhlenbesiedlung[COLOR_REVERT] ermöglicht die [COLOR_HIGHLIGHT_TEXT]Kultur Neandertal[COLOR_REVERT], mit der es möglich wird, [COLOR_UNIT_TEXT]Neandertal-Einheiten[COLOR_REVERT] zu trainieren. Neben anderen neuen Wohnformen werden auch die besonders nützlichen [COLOR_BUILDING_TEXT]Höhlenwohnungen[COLOR_REVERT] und [COLOR_BUILDING_TEXT]Neandertalerhöhlen[COLOR_REVERT] möglich, wenn sich Höhlen in der Nähe der Stadt befinden. Zusätzlich wird eine Gruppe von Weltwundern ([COLOR_HIGHLIGHT_TEXT]Prähistorische Höhlen[COLOR_REVERT]) freigeschaltet.</German>
 		<Spanish>Protección frente al medio.</Spanish>
 		<Polish>Zapewnia ochronę przed otoczeniem.</Polish>
 	</TEXT>
