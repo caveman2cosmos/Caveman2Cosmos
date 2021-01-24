@@ -25,7 +25,7 @@ class DebugUtils:
 		if iNBonuses < map.getGridWidth() * map.getGridHeight():
 			for x in xrange(map.getGridWidth()):
 				for y in xrange((iNBonuses/map.getGridWidth())+1):
-					map.plot(x,y).setBonusType((x + y * map.getGridWidth())%iNBonuses);
+					map.plot(x,y).setBonusType((x + y * map.getGridWidth())%iNBonuses)
 
 	def allImprovements(self):
 		iNImprovements = GC.getNumImprovementInfos()
@@ -33,7 +33,7 @@ class DebugUtils:
 		if (iNImprovements < map.getGridWidth() * map.getGridHeight()):
 			for x in xrange(map.getGridWidth()):
 				for y in xrange((iNImprovements/map.getGridWidth())+1):
-					map.plot(x,y).setImprovementType((x + y * map.getGridWidth())%iNImprovements);
+					map.plot(x,y).setImprovementType((x + y * map.getGridWidth())%iNImprovements)
 
 
 ################ TRIGGERED EVENTS ################

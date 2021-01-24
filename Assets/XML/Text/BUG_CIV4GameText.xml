@@ -73,14 +73,6 @@
 		<Spanish>MUERTO</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_DEFAULT</Tag>
-		<English>Default</English>
-		<French>Standard</French>
-		<German>Standard</German>
-		<Italian>Predefinito</Italian>
-		<Spanish>Predeterminado</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_DOMESTIC_TRADE_HEADING</Tag>
 		<English>Domestic Trade</English>
 		<French>Commerce Domestique</French>
@@ -4909,7 +4901,7 @@
 		<English>When checked, the whip overflow calculation includes the current [ICON_PRODUCTION] rate. Since applying the whip usually affects the rate, the actual overflow may be different.</English>
 		<French>Lorsque activé, Le calcul du surplus par le fouet inclut la [ICON_PRODUCTION] du tour actuel. Comme l'utilisation effective du Fouet a des conséquence sur cette production, le résultat final peut être légèrement différent.</French>
 		<German>Bezieht [ICON_PRODUCTION]/Runde einer Stadt aus der aktuellen Runde in die Berechnung des Produktionsüberschusses ein, da der Einsatz von Zwangsarbeit normalerweise die Rate beeinflusst und damit auch den tatsächlichen Überschuss verändern kann</German>
-		<Italian>Quando è selezionato, il calcolo del surplus da sacrifici include il tasso di produzione ([ICON_PRODUCTION]) corrente. Poichè l'accelerazione solitamente influenza tale tasso, il surplus effettivo può differire da quello mostrato.</Italian>
+		<Italian>Quando è selezionato, il calcolo del surplus da sacrifici include il tasso di produzione ([ICON_PRODUCTION]) corrente. Poiché l'accelerazione solitamente influenza tale tasso, il surplus effettivo può differire da quello mostrato.</Italian>
 		<Spanish>Cuando se activa, el cálculo del excedente producido al sacrificar población incluye la [ICON_PRODUCTION] actual. Dado que sacrificar población normalmente afecta al ratio de producción, el excedente real puede ser diferente.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6024,14 +6016,14 @@
 		<Spanish>Máximo de civilizaciones bárbaras</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BARBTECHFRAC_HOVER</Tag>
+		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BARBTECHPERCENT_HOVER</Tag>
 		<English>Former barbarians get all techs known by this fraction of players</English>
 		<German>Ehemalige Barbaren erhalten alle Technologien, die dieser Anteil der Spieler kennt</German>
 		<Spanish>Las nuevas civilizaciones bárbaras obtienen todas las tecnologías conocidas por este número de jugadores.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BARBTECHFRAC_TEXT</Tag>
-		<English>BarbTech Fraction</English>
+		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BARBTECHPERCENT_TEXT</Tag>
+		<English>BarbTech Percent</English>
 		<French>Tech. Diffus. Barbare</French>
 		<German>BarbTech-Anteil</German>
 		<Spanish>Fracción de tecnología bárbara</Spanish>

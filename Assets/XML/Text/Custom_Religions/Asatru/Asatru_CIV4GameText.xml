@@ -134,7 +134,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THOR_ALTAR_PEDIA</Tag>
-		<English>Thor is the god of thunder in Norse paganism. Most surviving stories relating to Germanic mythology either mention Thor or center on Thor's exploits. Thor was a much revered god of the ancient Germanic peoples from at least the earliest surviving written accounts of the indigenous Germanic tribes to over a thousand years later in the late Viking Age.Thor was appealed to for protection on numerous objects found from various Germanic tribes. Miniature replicas of Mjolnir, the weapon of Thor, became a defiant symbol of Norse paganism during the Christianization of Scandinavia.</English>
+		<English>Thor is the god of thunder in Norse paganism. Most surviving stories relating to Germanic mythology either mention Thor or center on Thor's exploits. Thor was a much revered god of the ancient Germanic peoples from at least the earliest surviving written accounts of the indigenous Germanic tribes to over a thousand years later in the late Viking Age.Thor was appealed to for protection on numerous objects found from various Germanic tribes. Miniature replicas of Mjölnir, the weapon of Thor, became a defiant symbol of Norse paganism during the Christianization of Scandinavia.</English>
 		<Polish>Thor - jeden z głównych bogów nordyckich z dynastii Asów, odpowiednik południowogermańskiego Donara. Bóg burzy i piorunów, bóg sił witalnych, bóg rolnictwa, jako sprowadzający deszcz odpowiedzialny za urodzaje, patronował także ognisku domowemu i małżeństwu. Syn Odyna i Jörd, małżonek Sif. Thor był uznawany za boga bardziej przychylnego ludziom niż Odyn - jest równie gwałtowny, ale mniej tajemniczy. Przedstawiano go zwykle z długą, rudą brodą i młotem Mjöllnirem w ręku - symbolem jego siły. Drzewem poświęconym Thorowi był dąb. Podróżował rydwanem zaprzężonym w kozły. Nie był tak przebiegły jak Odyn i zdarzało mu się wpaść w pułapkę (przykładem tego jest słynna przygoda Thora w gościnie u króla Utgardu, olbrzyma zwanego Skirnirem), ostatecznie jednak zawsze zwyciężał. W czasie zmierzchu bogów Thor zabije Węża Midgardu, wielkiego Jormunganda, lecz zginie zatruty jego jadem.</Polish>
 	</TEXT>
 	<TEXT>
@@ -149,7 +149,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THOR_SANCTUARY_PEDIA</Tag>
-		<English>Thor is the god of thunder in Norse paganism. Most surviving stories relating to Germanic mythology either mention Thor or center on Thor's exploits. Thor was a much revered god of the ancient Germanic peoples from at least the earliest surviving written accounts of the indigenous Germanic tribes to over a thousand years later in the late Viking Age.Thor was appealed to for protection on numerous objects found from various Germanic tribes. Miniature replicas of Mjolnir, the weapon of Thor, became a defiant symbol of Norse paganism during the Christianization of Scandinavia.</English>
+		<English>Thor is the god of thunder in Norse paganism. Most surviving stories relating to Germanic mythology either mention Thor or center on Thor's exploits. Thor was a much revered god of the ancient Germanic peoples from at least the earliest surviving written accounts of the indigenous Germanic tribes to over a thousand years later in the late Viking Age.Thor was appealed to for protection on numerous objects found from various Germanic tribes. Miniature replicas of Mjölnir, the weapon of Thor, became a defiant symbol of Norse paganism during the Christianization of Scandinavia.</English>
 		<Polish>Thor - jeden z głównych bogów nordyckich z dynastii Asów, odpowiednik południowogermańskiego Donara. Bóg burzy i piorunów, bóg sił witalnych, bóg rolnictwa, jako sprowadzający deszcz odpowiedzialny za urodzaje, patronował także ognisku domowemu i małżeństwu. Syn Odyna i Jörd, małżonek Sif. Thor był uznawany za boga bardziej przychylnego ludziom niż Odyn - jest równie gwałtowny, ale mniej tajemniczy. Przedstawiano go zwykle z długą, rudą brodą i młotem Mjöllnirem w ręku - symbolem jego siły. Drzewem poświęconym Thorowi był dąb. Podróżował rydwanem zaprzężonym w kozły. Nie był tak przebiegły jak Odyn i zdarzało mu się wpaść w pułapkę (przykładem tego jest słynna przygoda Thora w gościnie u króla Utgardu, olbrzyma zwanego Skirnirem), ostatecznie jednak zawsze zwyciężał. W czasie zmierzchu bogów Thor zabije Węża Midgardu, wielkiego Jormunganda, lecz zginie zatruty jego jadem.</Polish>
 	</TEXT>
 	<TEXT>
@@ -158,8 +158,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MJOLNIR</Tag>
-		<English>Mojlnir</English>
-		<German>Mjölnir</German>
+		<English>Mjölnir</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ASATRU</Tag>
@@ -196,9 +195,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ASATRU_QUOTE</Tag>
-		<English>"No man lives till eve whom the Norns doom at dawning." - Anglo Saxon Poem (found at cauldronborn.blogspot.com.au)</English>
-		<French>"Aucun Homme de vivra tant que le cauchemar des Nornes est présent." - Poème Anglo Saxon (trouvé sur cauldronborn.blogspot.com.au)</French>
-		<Spanish>"Ningún hombre sobrevive a la condena de los nórdicos al amanecer." - Poema anglosajón (encontrado en cauldronborn.blogspot.com.au)</Spanish>
+		<English>"No man lives till eve whom the Norns doom at dawning." - Anglo Saxon Poem</English>
+		<French>"Aucun Homme de vivra tant que le cauchemar des Nornes est présent." - Poème Anglo Saxon</French>
+		<Spanish>"Ningún hombre sobrevive a la condena de los nórdicos al amanecer." - Poema anglosajón</Spanish>
 		<Polish>"A furore Normannorum libera nos, Domine (przed gniewem Normanów ocal nas, Panie)" - Anglosaxońska modlitwa</Polish>
 	</TEXT>
 	<TEXT>
@@ -234,7 +233,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASATRU_MISSIONARY_STRATEGY</Tag>
-		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Asatruism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</English>
+		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Asatru[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LOKI</Tag>

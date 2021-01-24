@@ -34,7 +34,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAODAI_SHRINE_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Great Temple Tay Ninh[COLOR_REVERT] ([COLOR_BUILDING_TEXT]CaoDai Shrine[COLOR_REVERT]) produces one gold each turn for every city in the world that practises [COLOR_HIGHLIGHT_TEXT]CaoDai[COLOR_REVERT]. It also spreads [COLOR_HIGHLIGHT_TEXT]CaoDai[COLOR_REVERT] thoughout the world and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</English>
+		<English>The [COLOR_BUILDING_TEXT]Great Temple Tay Ninh[COLOR_REVERT] ([COLOR_BUILDING_TEXT]CaoDai Shrine[COLOR_REVERT]) produces one gold each turn for every city in the world that practises [COLOR_HIGHLIGHT_TEXT]CaoDai[COLOR_REVERT]. It also spreads [COLOR_HIGHLIGHT_TEXT]CaoDai[COLOR_REVERT] throughout the world and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAODAI_TEMPLE</Tag>

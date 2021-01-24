@@ -10,10 +10,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUILDS_FASTER_WITH</Tag>
-		<English>Builds %d1_Mod%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
+		<English>Builds %d1_Mod%% faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit %d1_Mod%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Mod%% schneller mit Bonusgut [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
-		<Italian>Realizza %d1_Mod%% piú velocemente con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
+		<Italian>Realizza %d1_Mod%% più velocemente con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
 		<Spanish>Construye un %d1_Mod%% más rápido con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -148,11 +148,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_HAPPINESS</Tag>
-		<English>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp from [COLOR_BUILDING_TEXT][LINK=s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</English>
-		<French>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp : [COLOR_BUILDING_TEXT][LINK=s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</French>
-		<German>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp durch das Gebäude [COLOR_BUILDING_TEXT][LINK=s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp da [COLOR_BUILDING_TEXT][LINK=s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change %F2_HappOrUnhapp por [COLOR_BUILDING_TEXT][LINK=s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Spanish>
+		<English>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp from [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp : [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp durch das Gebäude [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp da [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappOrUnhapp por [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_REQUIRES</Tag>
@@ -391,7 +391,7 @@
 		<English>Builds %d1_Mod%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit %d1_Mod%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Mod%% schneller mit Bonusgut [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
-		<Italian>Realizza %d1_Mod%% piú velocemente con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
+		<Italian>Realizza %d1_Mod%% più velocemente con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
 		<Spanish>Construye un %d1_Mod%% más rápido con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -640,7 +640,7 @@
 		<English>Builds %d1_Change%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit : %d1_Change%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Change%% schneller mit [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
-		<Italian>Costruisce il %d1_Change%% piú rapidamente con il [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
+		<Italian>Costruisce il %d1_Change%% più rapidamente con il [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
 		<Spanish>Construye un %d1_Change%% más rápido con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -673,7 +673,7 @@
 		<French>[ICON_BULLET]Peut échapper à une interception (%d1_Amount%% de chance)</French>
 		<German>[ICON_BULLET]Rückzugsmöglichkeit bei Abfangversuch (Erfolgsaussicht: %d1_Amount%%)</German>
 		<Italian>[ICON_BULLET]Può evitare l'intercettazione (%d1_Amount%% di probabilità)</Italian>
-		<Spanish>[ICON_BULLET]Puede eludir la intercepción (probabilidad del %d1_Amount%%)</Spanish>
+		<Spanish>[ICON_BULLET]Puede eludir la interceptación (probabilidad del %d1_Amount%%)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERCEPT_AIRCRAFT</Tag>
@@ -701,7 +701,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WITHDRAWL_PROBABILITY_SHORT</Tag>
-		<English>[ICON_BULLET]Withdrawl Chance: %d1_Amount%%</English>
+		<English>[ICON_BULLET]Withdrawal Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Chances de rompre le combat: %d1_Amount%%</French>
 		<German>[ICON_BULLET]Rückzugschance: %d1_Amount%%</German>
 		<Italian>[ICON_BULLET]Probabilità di ritirata: %d1_Amount%%</Italian>

@@ -35,8 +35,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DRUID_CATHEDRAL_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Nature Alliance[COLOR_REVERT] greatly increases a city's food from grains and potatoes. It is required to build the druidic cathedral building ([COLOR_BUILDING_TEXT]Nature Legacy[COLOR_REVERT]). It requires Druidic Traditions as the state religion.</English>
-		<French>The [COLOR_BUILDING_TEXT]Nature AllianceCOLOR_REVERT] greatly increases a city's food from grains and potatoes. It is required to build the druidic cathedral building ([COLOR_BUILDING_TEXT]Nature Legacy[COLOR_REVERT]). It requires Druidic Traditions as the state religion.</French>
-		<German>Der [COLOR_BUILDING_TEXT]Nature Alliance[COLOR_REVERT] greatly increases a city's food from grains and potatoes. It is required to build the druidic cathedral building ([COLOR_BUILDING_TEXT]Nature Legacy[COLOR_REVERT]). It requires Druidic Traditions as the state religion.</German>
 		<Italian>L'[COLOR_BUILDING_TEXT]Alleanza della natura[COLOR_REVERT] aumenta la produzione di cibo della città grazie a cereali e patate. Serve per costruire la cattedrale druidica, l'[COLOR_BUILDING_TEXT]Eredità della natura[COLOR_REVERT]. E' necessario che le tradizioni druidiche siano la tua religione di stato.</Italian>
 	</TEXT>
 	<TEXT>
@@ -139,7 +137,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DRUID_MONASTERY_POTATO</Tag>
-		<English>Nature Circle (Potatoe God)</English>
+		<English>Nature Circle (Potatoes God)</English>
 		<French>Cercle Naturel (Pommes de terre)</French>
 		<Italian>Cerchio della natura (Patate)</Italian>
 		<Polish>Krąg Mocy (Bóstwo Ziemniaka)</Polish>
@@ -165,7 +163,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Tag>
-		<English>The Druidic Monastery [COLOR_BUILDING_TEXT]Nature Circle of Power[COLOR_REVERT] is required to build the druidic cathedral building ([COLOR_BUILDING_TEXT]Nature Alliance[COLOR_REVERT]) and druidic missionaries. It does not go obsolete like other monastry buildings. If Druidism is your state religion there are extennsions to this building that increase the amount of food generated from grains and potatoes.</English>
+		<English>The Druidic Monastery [COLOR_BUILDING_TEXT]Nature Circle of Power[COLOR_REVERT] is required to build the druidic cathedral building ([COLOR_BUILDING_TEXT]Nature Alliance[COLOR_REVERT]) and druidic missionaries. It does not go obsolete like other monastery buildings. If Druidism is your state religion there are extensions to this building that increase the amount of food generated from grains and potatoes.</English>
 		<French>Le Monastère druidique [COLOR_BUILDING_TEXT]Le Cercle Naturel de Puissance[COLOR_REVERT]) est requis pour construire la cathédrale druidique ([COLOR_BUILDING_TEXT]Alliance avec la Nature[COLOR_REVERT]) et les missionnaires druides. Il ne devient jamais obsolète comme pour les autres religions. Si les traditions druidiques est votre Religion d'Etat, Il est possible d'ajouter des extensions à ce bâtiment qui augmentent notamment la quantités de nourriture obtenue à partir de certains légumes et céréales.</French>
 		<Italian>Il monastero druidico, il [COLOR_BUILDING_TEXT]Cerchio naturale del potere[COLOR_REVERT], è un prerequisito per costruire l'edificio [COLOR_BUILDING_TEXT]Alleanza della natura[COLOR_REVERT] e per addestrare i missionari druidici; tuttavia, non diventa obsoleto come gli altri monasteri. Se il druidismo è la tua religione di stato, avendo accesso ai cereali e alle patate fornisce un bonus alla produzione di cibo.</Italian>
 	</TEXT>

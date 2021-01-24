@@ -112,7 +112,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 				self.addIntDropdown(screen, col3, col4, "Revolution__NewWorldErasBehind")
 				self.addLabel(screen, left, "Revolution__BarbarianCiv", TRNSLTR.getText("TXT_KEY_REVDCMTAB_BARBCIV_STRENGTH_OPTIONS", ()))
 				col1, col2, col3, col4 = self.addMultiColumnLayout(screen, right, 4, "Strength Settings")
-				self.addFloatDropdown(screen, col1, col2, "Revolution__BarbTechFrac")
+				self.addIntDropdown(screen, col1, col2, "Revolution__BarbTechPercent")
 				self.addFloatDropdown(screen, col3, col4, "Revolution__MilitaryStrength")
 
 				screen.attachHSeparator(left, left + "SepStandardBarbCiv1")

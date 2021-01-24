@@ -3,7 +3,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SABBATEAN</Tag>
 		<English>Culture (Sabbatean)</English>
-		<French>Culture (Sabbatean)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SABBATEAN_PEDIA</Tag>
@@ -12,7 +11,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE</Tag>
 		<English>Active Culture</English>
-		<French>Culture Active</French>
+		<French>Culture active</French>
 		<German>aktive Kultur</German>
 	</TEXT>
 	<TEXT>

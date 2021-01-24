@@ -928,7 +928,7 @@ class Revolution:
 							revIdxHist['Events'][0] += iThisRevIdxChange
 							RevData.updateCityVal(cityX,'RevIdxHistory',revIdxHist)
 
-			if( not sumRevIdx == 0 ) :
+			if sumRevIdx != 0:
 				if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Avg net effect for %s: %d"%(pPlayer.getCivilizationDescription(0),sumRevIdx))
 
 
@@ -5703,17 +5703,18 @@ class Revolution:
 
 						self.prepareRevolution( pPlayer, iRevoltIdx, cityList, pRevPlayer, bIsJoinWar = revData.dict.get('bIsJoinWar',False), switchToRevs = switchToRevs )
 
-		else :
-			if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - Unknown revolution type %s"%(revType))
+		else:
+			if self.LOG_DEBUG: print "[REV] Unknown revolution type: " + revType
 			return
 
-		try :
+		try:
 			cityStr = getCityTextList(cityList)
-			cityStr2 = localText.getText("TXT_KEY_REV_CITY", ())
-			if( len(cityList) > 1 ) :
+			if len(cityList) > 1:
 				cityStr2 = localText.getText("TXT_KEY_REV_CITIES", ())
-		except :
-			if( self.LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - ERROR! with city strings")
+			else:
+				cityStr2 = localText.getText("TXT_WORD_CITY", ())
+		except:
+			if self.LOG_DEBUG: print "[REV] city strings ERROR!"
 			return
 
 

@@ -75,9 +75,8 @@ class SpellDumpDefaultLights(NifSpell):
         if branch.__class__.__name__ == 'NiDirectionalLight': # and branch.get_global_display() == '__MAX_Default_Light':
             print ('NiDirectionalLight in ' + self.stream.name)
             return False
-        else:
-            # keep looking for blocks of interest
-            return True
+        # keep looking for blocks of interest
+        return True
 
 class SpellRemoveDefaultLights(SpellDelBranches):
     """Remove default lights."""

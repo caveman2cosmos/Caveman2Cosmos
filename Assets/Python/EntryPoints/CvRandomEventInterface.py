@@ -1632,7 +1632,7 @@ def getHelpHeroicGesture2(argsList):
   destPlayer = GC.getPlayer(kTriggeredData.eOtherPlayer)
 
   # Get help text
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_ATTITUDE_GOOD", (1, destPlayer.getNameKey()));
+  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_ATTITUDE_GOOD", (1, destPlayer.getNameKey()))
 
   return szHelp
 
@@ -2506,7 +2506,7 @@ def canTriggerMasterBlacksmithDone(argsList):
   trigger = GC.getEventTriggerInfo(kTriggeredData.eTrigger)
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iForge = GC.getInfoTypeForString("BUILDING_FORGE");
+  iForge = GC.getInfoTypeForString("BUILDING_FORGE")
   iBuildingsRequired = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
   if iBuildingsRequired > player.getBuildingCountWithUpgrades(iForge):
     return False
@@ -4309,7 +4309,7 @@ def getHelpCarnation2(argsList):
   destPlayer = GC.getPlayer(kTriggeredData.eOtherPlayer)
 
   # Get help text
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_CARNATION_REVOLUTION_HELP_2", (1, destPlayer.getNameKey()));
+  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_CARNATION_REVOLUTION_HELP_2", (1, destPlayer.getNameKey()))
 
   return szHelp
 

@@ -401,7 +401,7 @@ def WorldBuilderNormalPlayerTabModeCB():
 # Called by the exe for WB and AS #
 #---------------------------------#
 def WorldBuilderOnAdvancedStartBrushSelected(argsList):
-	iList, iIndex, iTab = argsList;
+	iList, iIndex, iTab = argsList
 	print "WorldBuilderOnAdvancedStartBrushSelected, iList=%d, iIndex=%d, type=%d" %(iList, iIndex, iTab)
 	if iTab == advancedStartScreen.getTechTab():
 		showTechChooser()

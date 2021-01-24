@@ -1124,7 +1124,7 @@ class WorldBuilder:
 		iType = GC.getInfoTypeForStringWithHiddenAssert(self.iPlayerAddMode)
 		if iType == -1:
 			if bReveal or (not pPlot.isVisible(self.m_iCurrentTeam, False)):
-				pPlot.setRevealed(self.m_iCurrentTeam, bReveal, False, -1);
+				pPlot.setRevealed(self.m_iCurrentTeam, bReveal, False, -1)
 		elif bReveal:
 			if pPlot.isInvisibleVisible(self.m_iCurrentTeam, iType): return
 			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, 1)

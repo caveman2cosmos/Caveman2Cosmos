@@ -92,31 +92,31 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BARBARYAPE_MYTH</Tag>
-		<English>Myth - Barbaryape</English>
+		<English>Myth - Barbary Ape</English>
 		<French>Mythe du Macaque berbère</French>
 		<Polish>Mit - Magot</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BARBARYAPE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Barbaryape</English>
+		<English>Myth Effect - Barbary Ape</English>
 		<French>Effet (Mythe du Macaque berbère)</French>
 		<Polish>Efekt Mitu - Magot</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BARBARYAPE_STORIES</Tag>
-		<English>Stories - Barbaryape</English>
+		<English>Stories - Barbary Ape</English>
 		<French>Histoires des Macaques berbères</French>
 		<Polish>Historie - Magot</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BARBARYAPE_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Barbaryape</English>
+		<English>Stories Effect - Barbary Ape</English>
 		<French>Effet (Histoires des Macaques berbères)</French>
 		<Polish>Efekt Historii - Magot</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BARBARYAPE_STORY</Tag>
-		<English>Story - Barbaryape</English>
+		<English>Story - Barbary Ape</English>
 		<French>Histoire du Macaque berbère</French>
 		<Polish>Opowieść - Magot</Polish>
 	</TEXT>
@@ -386,27 +386,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GELADA_MYTH</Tag>
-		<English>Myth - Gelada Babbon</English>
+		<English>Myth - Gelada Baboon</English>
 		<French>Mythe du Babouin Gelada</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GELADA_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Gelada Babbon</English>
+		<English>Myth Effect - Gelada Baboon</English>
 		<French>Effet (Mythe du Babouin Gelada)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GELADA_STORIES</Tag>
-		<English>Stories - Gelada Babbon</English>
+		<English>Stories - Gelada Baboon</English>
 		<French>Histoires de Babouins Gelada</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GELADA_STORIES_EFFECT</Tag>
-		<English>Stories Effect - Gelada Babbon</English>
+		<English>Stories Effect - Gelada Baboon</English>
 		<French>Effet (Histoires de Babouin Gelada)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GELADA_STORY</Tag>
-		<English>Story - Gelada Babbon</English>
+		<English>Story - Gelada Baboon</English>
 		<French>Histoire du Babouin Gelada</French>
 	</TEXT>
 	<TEXT>
@@ -867,27 +867,27 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OXPECKER_MYTH</Tag>
 		<English>Myth - Oxpecker</English>
-		<French>Mythe du Piqueboeufs</French>
+		<French>Mythe du Pique-bœufs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OXPECKER_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Oxpecker</English>
-		<French>Effet (Mythe du Piqueboeufs)</French>
+		<French>Effet (Mythe du Pique-bœufs)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OXPECKER_STORIES</Tag>
 		<English>Stories - Oxpecker</English>
-		<French>Histoires de Piqueboeufs</French>
+		<French>Histoires de Pique-bœufs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OXPECKER_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Oxpecker</English>
-		<French>Effet (Histoires de Piqueboeufs)</French>
+		<French>Effet (Histoires de Pique-bœufs)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OXPECKER_STORY</Tag>
 		<English>Story - Oxpecker</English>
-		<French>Histoire du Piqueboeufs</French>
+		<French>Histoire du Pique-bœufs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEACOCK_MYTH</Tag>
@@ -1180,7 +1180,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KANGAROO_RED_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Red Kangaroo and Marsuipial, Marsuipial Herd, Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Red Kangaroo and Marsupial, Marsupial Herd, Cage and Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Kangourou roux et autres Marsupiaux, Troupeau, Cage et Enclos pour Marsupiaux</French>
 	</TEXT>
 	<TEXT>
@@ -1201,7 +1201,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OXPECKER_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Oxpecker and Birds, Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Piqueboeufs et des Oiseaux, Cages à oiseaux, Atelier de plumes</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Pique-bœufs et des Oiseaux, Cages à oiseaux, Atelier de plumes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PEACOCK_HELP</Tag>
@@ -1210,7 +1210,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PUFFADDER_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Puff adder, Myths of Earth and Snakess, Snake Cage and Enclosure, Snake pit and charmer</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Puff adder, Myths of Earth and Snakes, Snake Cage and Enclosure, Snake pit and charmer</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires - Vipère heurtante[NEWLINE][ICON_BULLET]Mythes de la Terre et des Serpents[NEWLINE][ICON_BULLET]Cage à Serpents et Enclos[NEWLINE][ICON_BULLET]Fosse à serpents et Charmeur</French>
 	</TEXT>
 	<TEXT>
@@ -1235,8 +1235,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WALLAROO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Wallaroo and Marsuipial, Kangaroo Herd, Cage and Enclosure</English>
-		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Wallaroo et Marsuipial, Kangaroo Herd, Cage et Enclosure</French>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Wallaroo and Marsupial, Kangaroo Herd, Cage and Enclosure</English>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Wallaroo et Marsupial, Kangaroo Herd, Cage et Enclosure</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WILDEBEEST_HELP</Tag>

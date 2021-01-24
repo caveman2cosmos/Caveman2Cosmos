@@ -44,7 +44,7 @@ class CvDiplomacy:
 		elif szType == "AI_DIPLOCOMMENT_REFUSE_TO_TALK":
 			# Exit...
 			self.addUserComment("USER_DIPLOCOMMENT_EXIT")
-			self.diploScreen.endTrade();
+			self.diploScreen.endTrade()
 
 		# If the AI is offering a city or to give help
 		elif szType in ("AI_DIPLOCOMMENT_OFFER_CITY", "AI_DIPLOCOMMENT_GIVE_HELP"):
