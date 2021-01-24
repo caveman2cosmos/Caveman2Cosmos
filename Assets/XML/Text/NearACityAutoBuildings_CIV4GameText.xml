@@ -4,6 +4,7 @@
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_ALUMINUM_NEAR</Tag>
 		<English>Vicinity Autobuild - Bauxite</English>
 		<French>Minerai à proximité - Bauxite</French>
+		<Russian>Ìåñòîðîæäåíèå - áîêñèòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Tag>
@@ -14,41 +15,49 @@
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Tag>
 		<English>Auto built building.</English>
 		<French>Bâtiment construit automatiquement.</French>
+		<Russian>Àâòîìàòè÷åñêè ïîñòðîåííîå çäàíèå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_CAMEL_NEAR</Tag>
 		<English>Vicinity Autobuild - Camel</English>
 		<French>Troupeau à proximité - Chameaux</French>
+		<Russian>Ïàñòáèùå (àâòî) - Âåðáëþäû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_COPPER_NEAR</Tag>
 		<English>Vicinity Autobuild - Copper</English>
 		<French>Minerai à proximité - Cuivre</French>
+		<Russian>Ìåñòîðîæäåíèå - ìåäü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_ELEPHANT_NEAR</Tag>
 		<English>Vicinity Autobuild - Elephant</English>
 		<French>Troupeau à proximité - Eléphant</French>
+		<Russian>Ïàñòáèùå (àâòî) - Ñëîíû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_GOLD_NEAR</Tag>
 		<English>Vicinity Autobuild - Gold</English>
 		<French>Minerai à proximité - Or</French>
+		<Russian>Ìåñòîðîæäåíèå - çîëîòî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_HORSE_NEAR</Tag>
 		<English>Vicinity Autobuild - Horse</English>
 		<French>Troupeau à proximité - Chevaux</French>
+		<Russian>Ïàñòáèùå (àâòî) - Ëîøàäè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_IRON_NEAR</Tag>
 		<English>Vicinity Autobuild - Iron</English>
 		<French>Minerai à proximité - Fer</French>
+		<Russian>Ìåñòîðîæäåíèå - æåëåçî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_LEAD_NEAR</Tag>
 		<English>Vicinity Autobuild - Lead</English>
 		<French>Minerai à proximité - Plomb</French>
+		<Russian>Ìåñòîðîæäåíèå - ñâèíåö</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Tag>
@@ -59,25 +68,30 @@
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Tag>
 		<English>Auto built building.</English>
 		<French>Bâtiment construit automatiquement.</French>
+		<Russian>Àâòîìàòè÷åñêè ïîñòðîåííîå çäàíèå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_PLATINUM_NEAR</Tag>
 		<English>Vicinity Autobuild - Platinum</English>
 		<French>Minerai à proximité - Platine</French>
+		<Russian>Ìåñòîðîæäåíèå - ïëàòèíà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_SILVER_NEAR</Tag>
 		<English>Vicinity Autobuild - Silver</English>
 		<French>Minerai à proximité - Argent</French>
+		<Russian>Ìåñòîðîæäåíèå - ñåðåáðî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_TIN_NEAR</Tag>
 		<English>Vicinity Autobuild - Tin</English>
 		<French>Minerai à proximité - Etain</French>
+		<Russian>Ìåñòîðîæäåíèå - îëîâî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_TITANIUM_NEAR</Tag>
 		<English>Vicinity Autobuild - Titanum</English>
 		<French>Minerai à proximité - Titane</French>
+		<Russian>Ìåñòîðîæäåíèå - òèòàí</Russian>
 	</TEXT>
 </Civ4GameText>

@@ -3748,7 +3748,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
-			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<iUpgradeTime>50</iUpgradeTime>
 			<iPillageGold>500</iPillageGold>
 			<bOutsideBorders>1</bOutsideBorders>
@@ -3786,7 +3786,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>10</iYieldChange>
 			</YieldChanges>
-			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iPillageGold>1000</iPillageGold>
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
