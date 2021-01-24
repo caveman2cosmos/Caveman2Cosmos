@@ -1392,12 +1392,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp (Consumed)[\LINK]</English>
-		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager[\LINK] aufschlagen (Verschleiß)</German>
+		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager aufschlagen (Verschleiß)[\LINK]</German>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SEASONAL_CAMP]Ñåçîííûé ëàãåðü[\LINK] (Ñîáèðàòåëü)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK]</English>
+		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager aufschlagen[\LINK] </German>
 		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager[\LINK] aufschlagen</German>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SEASONAL_CAMP]Ñåçîííûé ëàãåðü[\LINK]</Russian>
 	</TEXT>

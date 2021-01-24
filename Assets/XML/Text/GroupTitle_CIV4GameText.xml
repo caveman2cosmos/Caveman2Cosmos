@@ -113,6 +113,7 @@
 		<Tag>TXT_KEY_GROUPTITLE_COLONY</Tag>
 		<English>Colony of </English>
 		<French>colonie de </French>
+		<German>(Kolonie) </German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_COMMITTEE</Tag>
@@ -639,5 +640,6 @@
 		<Tag>TXT_KEY_GROUPTITLE_WADDLE</Tag>
 		<English>Waddle of </English>
 		<French>(dandinant) </French>
+		<German>(Floß) </German>
 	</TEXT>
 </Civ4GameText>

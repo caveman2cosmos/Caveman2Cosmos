@@ -2004,7 +2004,7 @@
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__4000BC_HOVER</Tag>
 		<English>Select which turn number 200 000 BC should be.</English>
 		<French>Sélectionnez quel devrait être le numéro de tour de 200 000 av.J.C.</French>
-		<German>Bestimmt die Runde, der das Jahr 200 000 n. Chr. entsprechen soll</German>
+		<German>Bestimmt die Runde, der das Jahr 200000 n.Chr. entsprechen soll</German>
 		<Italian>Indica quale numero di turno debba corrispondere all'anno 200 000 a.C.</Italian>
 		<Spanish>Elige qué número de turno será el año 200 000 a.C.</Spanish>
 		<Russian>Âûáåðèòå êîãäà õîä íîìåð 4000BC äîëæåí áûòü.</Russian>
@@ -2013,7 +2013,7 @@
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__4000BC_TEXT</Tag>
 		<English>200 000 BC is Turn</English>
 		<French>200 000 av. J.C. est le Tour</French>
-		<German>200 000 n.Chr. ist Runde</German>
+		<German>200000 n.Chr. ist Runde</German>
 		<Italian>200 000 a.C. è il turno</Italian>
 		<Spanish>200 000 a.C. es el turno</Spanish>
 		<Russian>4000BC ýòî õîä</Russian>
