@@ -151,6 +151,7 @@
 		<French>L'unité disparaîtra, au profit d'un bonus de science, dépendant du type de bâtiment dans la ville (Abattoir, Laboratoire de biologie...).</French>
 		<Italian>Consumerà l'unità, fornendo un bonus alla ricerca basato sull'edificio presente in città (Macelleria o Laboratorio di biologia).</Italian>
 		<Polish>Ta akcja usunie jednostkę dostarczając małej ilości nauki bazując na tym jakie budynki są dostępne w mieście (Rzeźnik lub Laboratorium Biologiczne).</Polish>
+		<Russian>Ýòî áóäåò ïîòðåáëÿòü îòðÿä, îáåñïå÷èâàþùóþ íàó÷íîå ïîâûøåíèå, îñíîâàííîå, íà êîòîðîì çäàíèå äîñòóïíî â ãîðîäå (Ìÿñíèê èëè áèîëàáîðàòîðèÿ).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_STUDY_MESSAGE</Tag>
@@ -158,30 +159,35 @@
 		<French>Vous avez étudié l'animal.</French>
 		<Italian>Hai studiato l'animale.</Italian>
 		<Polish>Zbadałeś zwierzę.</Polish>
+		<Russian>Âû îáó÷èëè æèâîòíîå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_HERD</Tag>
 		<English>Attempt to convert the subdued animal into a herd resource.</English>
 		<French>Essayez de convertir l'animal apprivoisé en ressource de troupeau.</French>
 		<Polish>Spróbuj zmienić oswojone zwierzę w stado (surowiec na mapie).</Polish>
+		<Russian>Ïîïûòêà ïðåîáðàçîâàòü ïðèðó÷åííîå æèâîòíîå â ðåñóðñ ñòàäà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_HERD_MESSAGE</Tag>
 		<English>A herd now roams this plot.</English>
 		<French>Un troupeau parcourt maintenant cette parcelle.</French>
 		<Polish>Od tego momentu stada zwierząt przemierzają ten teren.</Polish>
+		<Russian>Ñòàäî ñåé÷àñ êî÷óåò ïî ýòîìó ó÷àñòêó.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_PASTURE</Tag>
 		<English>Attempt to settle the domesticated subdued animal into a herd resource and build a pasture.</English>
 		<French>Tenter d'installer l'animal apprivoisé et domestiqué dans une ressource de troupeau et de construire un pâturage.</French>
 		<Polish>Spróbuj zmienić oswojone zwierzę w stado (surowiec na mapie) i zbuduj pastwisko.</Polish>
+		<Russian>Ïîïûòüñÿ ïîäñåëèòü ïðèðó÷åííîå æèâîòíîå â ñòàäî ðåñóðñà è ïîñòðîèòü ïàñòáèùå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_PASTURE_MESSAGE</Tag>
 		<English>Domesticated animals are now bred on this plot.</English>
 		<French>Les animaux domestiques sont maintenant élevés sur cette case.</French>
 		<Polish>Od tego momentu stada zwierząt zasiedlają ten teren.</Polish>
+		<Russian>Îòíûíå íà ýòîì ó÷àñòêå ðàçâîäÿò îäîìàøíåííûõ æèâîòíûõ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SUBDUED_ANIMAL</Tag>
@@ -189,5 +195,6 @@
 		<French>%s1 a été apprivoisé.</French>
 		<Italian>[NUM1:Un:Una] %s1 [NUM1:è stato addomesticato:è stata addomesticata].</Italian>
 		<Polish>%s1 został pochwycony.</Polish>
+		<Russian>%s1 áûë ïðèðó÷åí.</Russian>
 	</TEXT>
 </Civ4GameText>
