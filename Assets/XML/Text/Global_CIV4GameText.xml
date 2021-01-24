@@ -13848,13 +13848,13 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Requires[SPACE]</English>
-		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
-		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
-		<Spanish>[ICON_BULLET][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
-		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Òðåáóåòñÿ:[SPACE]</Russian>
+		<English>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Requires[SPACE]</English>
+		<French>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
+		<German>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
+		<Polish>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
+		<Russian>[NEWLINE][COLOR_WARNING_TEXT]Òðåáóåòñÿ:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_IN_CITY_VICINITY</Tag>
