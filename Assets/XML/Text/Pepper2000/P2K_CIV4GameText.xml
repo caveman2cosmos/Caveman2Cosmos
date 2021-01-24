@@ -165,11 +165,11 @@
 		<English>Build [LINK=IMPROVEMENT_LUNAR_BASE]Lunar Base[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_LUNAR_BASE]Base Lunaire[\LINK]</French>
 	</TEXT>
-	<!--TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_HABITATION_COMPLEX</Tag>
 		<English>Build [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Lunar Habitation Complex[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Complexe d'Habitation Lunaire[\LINK]</French>
-	</TEXT-->
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_MINE</Tag>
 		<English>Build [LINK=IMPROVEMENT_LUNAR_MINE]Lunar Mine[\LINK]</English>
