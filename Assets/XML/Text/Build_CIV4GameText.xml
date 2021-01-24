@@ -1239,12 +1239,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp (Consumed)[\LINK]</English>
-		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager[\LINK] aufschlagen (Verschleiß)</German>
+		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager aufschlagen (Verschleiß)[\LINK]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK]</English>
-		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager[\LINK] aufschlagen</German>
+		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager aufschlagen[\LINK] </German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FISHING_CAMP_KILL</Tag>

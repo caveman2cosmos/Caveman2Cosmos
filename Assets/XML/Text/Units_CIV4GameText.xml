@@ -401,6 +401,11 @@
 		<Tag>TXT_KEY_UNIT_AFRICAN_PENGUIN</Tag>
 		<English>African Penguin</English>
 		<French>Pingouin d'Afrique</French>
+		<German>
+			<Text>Brillenpinguin:Brillenpinguins:Brillenpinguin:Brillenpinguin:Brillenpinguine:Brillenpinguine:Brillenpinguinen:Brillenpinguine</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Pingwin Przylądkowy</Polish>
 	</TEXT>
 	<TEXT>
@@ -754,6 +759,14 @@
 		<Tag>TXT_KEY_UNIT_ALVARADO_CAVALRY_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Alvarado Cavalry[COLOR_REVERT] is a Guatemala unique unit.</English>
 		<French>Le [COLOR_UNIT_TEXT]Cavalerie Alvarado[COLOR_REVERT] est une unité Guatemala unique.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ALWAYS_HOSTILE</Tag>
+		<English>[ICON_BULLET]Can Attack without Declaring War</English>
+		<French>[ICON_BULLET]Peut attaquer sans déclaration de guerre</French>
+		<German>[ICON_BULLET]kann ohne Kriegserklärung angreifen</German>
+		<Italian>[ICON_BULLET]Può attaccare senza dichiarare guerra</Italian>
+		<Spanish>[ICON_BULLET]Puede atacar sin declarar la guerra</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_AGHLAB</Tag>
@@ -2782,11 +2795,17 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Schleiereule:Schleiereule:Schleiereule:Schleiereule:Schleiereulen:Schleiereulen:Schleiereulen:Schleiereulen</Text>
+			<Gender>Female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Płomykówka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARNOWL_PEDIA</Tag>
 		<English>The barn owl (Tyto alba) is the most widely distributed species of owl, and one of the most widespread of all birds. It is also referred to as the common barn owl, to distinguish it from other species in its family, Tytonidae, which forms one of the two main lineages of living owls, the other being the typical owls (Strigidae). The barn owl is found almost everywhere in the world except polar and desert regions, Asia north of the Himalayas, most of Indonesia and some Pacific islands.[PARAGRAPH:2]Phylogenetic evidence shows that there are at least three major lineages of barn owl, one in Eurasia and Africa, one in Australasia and one in the New World, and some highly divergent taxa on islands. Some authorities further split the group, recognising up to five species, and further research needs to be done to clarify the position. There is considerable variation between the sizes and colouring of the approximately 28 subspecies but most are between 33 and 39 cm (13 and 15 in) in length with wingspans ranging from 80 to 95 cm (31 to 37 in). The plumage on head and back is a mottled shade of grey or brown, the underparts vary from white to brown and are sometimes speckled with dark markings. The face is characteristically heart-shaped and is white in most species. This owl does not hoot, but utters an eerie, drawn-out shriek.[PARAGRAPH:2]The barn owl is nocturnal over most of its range but in Britain and some Pacific islands, it also hunts by day. Barn owls specialise in hunting animals on the ground and nearly all of their food consists of small mammals which they locate by sound, their hearing being very acute. They mate for life unless one of the pair gets killed, when a new pair bond may be formed. Breeding takes place at varying times of year according to locality, with a clutch, averaging about four eggs, being laid in a nest in a hollow tree, old building or fissure in a cliff. The female does all the incubation, and she and the young chicks are reliant on the male for food. When large numbers of small prey are readily available, barn owl populations can expand rapidly, and globally the bird is considered to be of least conservation concern. Some subspecies with restricted ranges are more threatened.</English>
+		<German>Die [COLOR_UNIT_TEXT]Schleiereule[COLOR_REVERT] (Tyto alba) gehört zu den am weitesten verbreiteten Vogelarten. Außer in der Tundra, in tropischen Regenwäldern, Wüsten und großen Teilen Asiens ist sie überall anzutreffen. Es gibt über 30 verschiedene Unterarten. Die vergleichsweise hell gefärbten Schleiereulen werden 33 bis 35 Zentimenter lang, wobei die Weibchen etwas größer und dunkler sind als die Männchen. Ihren Namen verdanken sie dem herzförmigen Gesichtsschleier, der je nach Unterart weiß, grau oder leicht rostrot ist. Die dunkelbraunen bis schwarzen Augen sind recht klein. Das Gefieder ist auf der Oberseite meist goldbraun, die Bauchseite variiert je nach Unterart. Schleiereulen besitzen keine Federohren und haben recht lange Beine mit fast unbefiederten Zehen. Ihr Gehör ist ausgesprochen gut. Nestlinge wechseln zweimal ihr Federkleid (Dunenkleid) und öffnen am achten Tag nach der Geburt ihre Augen, deren Iris anfangs blau ist. Auch Schnabel und Zehen besitzen kurz nach der Geburt eine hellere Farbe.[NEWLINE]Der Lebensraum der Schleiereule sind halboffene Landschaften, in Mitteleuropa sind sie als Kulturfolger jedoch nur in offenen Agrarlandschaften mit dörflichen Siedlungen anzutreffen. Mit ihren langen Flügeln gleiten sie bei der Jagd fast geräuschlos über offenes Gelände, um kleine Säugetiere (meist Mäuse) zu erbeuten. Dabei haben sie vermutlich feste Flugrouten, die oft an Zäunen, Hecken und Gräben entlang führen. Tagsüber verstecken sich die nachtaktiven Tiere z.B. in Scheunen, Baumhöhlen oder Felsspalten, wo sie Schutz vor Witterung und hellem Tageslicht finden. In der Abenddämmerung strecken und schütteln sie sich und putzen ausgiebig ihr Gefieder. In der Balzzeit putzt sich das Paar gegenseitig. Männchen paaren sich oft mit mehrern Weibchen, umgekehrt ist es eher selten. Schleiereulen sind ortstreu und überdauern auch strenge und schneereiche Winter in ihren Revieren. Dies und die recht schlechte Nahrungsverwertung führen in Mitteleuropa in strengen Wintern oft zu Bestandseinbrüchen oder gar zur Auslöschung regionaler Vorkommen. Fressfeinde hat die Schleiereule kaum, da sie Konflikte meidet und sich bei Gefahr versteckt. Bei einer Konfrontation nimmt sie eine Drohhaltung ein, schreit und wehrt sich mit ihren Krallen. Liegt sie auf dem Rücken, verfällt sie oft in eine Schreckstarre.[NEWLINE]Die Schleiereule ist als Mäusejäger besonders bei den Landwirten geschätzt. In der Vergangenheit baute man deshalb in Scheunen und Ställe oft "Uhlenlöcher", die als Brutplätze dienten. Die intensive Landnutzung u.a. durch Siedlungsbau und Stadtsanierung sowie die moderne Ackerbewirtschaftung mit der Einschränkung der Lebensräume für Feld- und Wühlmäuse sorgten dafür, dass die Bestände der Schleiereule in den letzten Jahrzehnten deutlich zurückgingen. Da Feldmäuse fast nur noch entlang von Straßen vorkommen, werden Schleiereulen auf der Jagd auch vermehrt Verkehrsopfer. Durch das Anbringen von Nistkästen und die Wiederherstellung von Uhlenlöchern haben sich die Bestände recht gut erholt. Teilweise werden gezüchtete Schleiereulen gezielt ausgewildert. Im Zuge des Klimawandels wird sich der Lebensraum in Europa bis zum Ende des 21. Jahrhunderts in den kühleren Nordosten verschieben. Ein Aberglaube besagt, dass eine an die Scheunentür genagelte Eule den Hof vor Blitzeinschlag und Feuer bewahren soll. In einigen Regionen kündigt der Eulenruf den Tod an, in anderen Gegenden eine Geburt. In Afrika und Indien wird die Schleiereule in der weißen und schwarzen Magie benutzt. Ihr ausgezeichnetes akustisches Ortungssystem dient in der Forschung als Modellsystem für das Richtungshören.</German>
 		<Polish>Płomykówka zwyczajna, płomykówka (Tyto alba) - gatunek średniej wielkości ptaka z rodziny płomykówkowatych (Tytonidae). Spośród wszystkich sów najbardziej rozpowszechniony na świecie gatunek. Zamieszkuje wszystkie kontynenty oprócz Antarktyki. W Polsce nieliczny ptak lęgowy (tylko podgatunek T. alba guttata), osiadły.</Polish>
 	</TEXT>
 	<TEXT>
@@ -7503,6 +7522,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Italian>[ICON_BULLET]Riesce a sfuggire alla cattura (Prob. %d1_Amount%%)</Italian>
 		<Spanish>[ICON_BULLET]Puede evitar la captura (probabilidad del %d1_Amount%%)</Spanish>
 		<Polish>[ICON_BULLET]Może uciec po schwytaniu (Szansa: %d1_Amount%%)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ESPIONAGE_MISSION</Tag>
+		<English>[ICON_BULLET]Can Infiltrate another player's City (%D1_Change [ICON_ESPIONAGE])</English>
+		<French>[ICON_BULLET]Peut infiltrer la ville d'un autre joueur (%D1_Change [ICON_ESPIONAGE])</French>
+		<German>[ICON_BULLET]kann ausländische Städte infiltrieren (%D1_Change [ICON_ESPIONAGE])</German>
+		<Italian>[ICON_BULLET]Può infiltrarsi nella città di un altro giocatore (%D1_Change [ICON_ESPIONAGE])</Italian>
+		<Spanish>[ICON_BULLET]Se puede infiltrar en la ciudad de otro jugador (%D1_Change [ICON_ESPIONAGE])</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ETHIOPIAN_OROMO_WARRIOR</Tag>
@@ -12237,6 +12264,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_IGNORE_ZONE_OF_CONTROL</Tag>
 		<English>[ICON_BULLET]Ignores Zones of Control</English>
 		<French>[ICON_BULLET]Ignore les Zones de Contrôle</French>
+		<German>[ICON_BULLET]ignoriert Kontrollzonen</German>
 		<Italian>[ICON_BULLET]Ignora le zone di controllo</Italian>
 		<Polish>[ICON_BULLET]Ignoruje Stefę Kontroli</Polish>
 	</TEXT>
@@ -15297,6 +15325,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_LUNGE</Tag>
 		<English>[ICON_BULLET]Lunge: Gets +%d1_Amount%% Surround and Destroy Bonus when attacking.</English>
 		<French>[ICON_BULLET]Fente: Reçoit +%d1_Amount%% un bonus d'Encercler et Détruire Bonus en attaquant.</French>
+		<German>[ICON_BULLET]Ausfallschritt: Einheit erhält +%d1_Amount%% Einkesselungsbonus beim Angriff</German>		
 		<Italian>[ICON_BULLET]Affondo: ottiene +%d1_Amount%% al bonus di Circonda e distruggi quando attacca.</Italian>
 		<Polish>[ICON_BULLET]Pchnięcie: Otrzymuje +%d1_Amount%% bonusu Otocz i Zniszcz przy ataku.</Polish>
 	</TEXT>
@@ -15304,6 +15333,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_LUNGE_TOTAL</Tag>
 		<English>[ICON_BULLET]Lunge: Gets +%d1_Amount%% bonus from Surround and Destroy.</English>
 		<French>[ICON_BULLET]Fente: Reçoit +%d1_Amount%% un bonus d'Encercler et Détruire Bonus.</French>
+		<German>[ICON_BULLET]Ausfallschritt: +%d1_Amount%% Einkesselungsbonus</German>		
 		<Italian>[ICON_BULLET]Affondo: ottiene +%d1_Amount%% di bonus da Circonda e distruggi.</Italian>
 		<Polish>[ICON_BULLET]Pchnięcie: Otrzymuje +%d1_Amount%% bonusu z Otocz i Zniszcz.</Polish>
 	</TEXT>
@@ -15311,6 +15341,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_LUNGE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Lunge: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Fente: %d1_Amount%%</French>
+		<German>[ICON_BULLET]Ausfallschritt: %d1_Amount%%</German>		
 		<Italian>[ICON_BULLET]Affondo: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Pchnięcie: %d1_Amount%%</Polish>
 	</TEXT>
@@ -17974,7 +18005,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_STONE_THROWER</Tag>
 		<English>Neanderthal Stone Thrower</English>
 		<French>Lanceur de pierres Néanderthal</French>
-		<German>Neandertaler-Steinewerfer</German>
+		<German>
+			<Text>Neandertaler-Steinewerfer:Neandertaler-Steinewerfers:Neandertaler-Steinewerfer:Neandertaler-Steinewerfer:Neandertaler-Steinewerfer:Neandertaler-Steinewerfer:Neandertaler-Steinewerfern:Neandertaler-Steinewerfer</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_STRATEGY</Tag>
@@ -18002,7 +18037,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WANDERER</Tag>
 		<English>Neanderthal Wanderer</English>
 		<French>Vagabond de Néanderthal</French>
-		<German>Neandertaler-Wanderer</German>
+		<German>
+			<Text>Neandertaler-Wanderer:Neandertaler-Wanderers:Neandertaler-Wanderer:Neandertaler-Wanderer:Neandertaler-Wanderer:Neandertaler-Wanderer:Neandertaler-Wanderern:Neandertaler-Wanderer</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR</Tag>
@@ -24647,6 +24686,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICAN_PENGUIN</Tag>
 		<English>Subdued African Penguin</English>
 		<French>Pingouin d'Afrique (App.)</French>
+		<German>
+			<Text>Gefangener Brillenpinguin:Gefangenen Brillenpinguins:Gefangenen Brillenpinguin:Gefangenen Brillenpinguin:Gefangene Brillenpinguine:Gefangenen Brillenpinguine:Gefangenen Brillenpinguinen:Gefangenen Brillenpinguine</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Poskromiony Pingwin Przylądkowy</Polish>
 	</TEXT>
 	<TEXT>
@@ -24691,6 +24735,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangene Schleiereule:Gefangenen Schleiereule:Gefangenen Schleiereule:Gefangene Schleiereule:Gefangene Schleiereulen:Gefangenen Schleiereulen:Gefangenen Schleiereulen:Gefangenen Schleiereulen</Text>
+			<Gender>Female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Poskromiona Płomykówka Zwyczajna</Polish>
 	</TEXT>
 	<TEXT>
@@ -25690,6 +25739,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_TARGETS_UNIT_FIRST</Tag>
 		<English>[ICON_BULLET]Targets any %s1_unit_list first in combat. If Assassination is possible, these units are also the list of units that may be targeted for assassination.</English>
 		<French>[ICON_BULLET]Cible toutes les unités %s1_unit_list en premier au combat. Si l'assassinat est possible, ces unités sont également la liste des unités qui peuvent être ciblées pour l'assassinat.</French>
+		<German>[ICON_BULLET]greift Einheiten vom Typ %s1_unit_list im Kampf zuerst an (wenn ein Mordanschlag möglich ist, werden diese Einheiten ebenfalls bevorzugt als Ziele ausgewählt)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARIACURI</Tag>
@@ -26117,6 +26167,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_THIEF_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Thief[COLOR_REVERT]The main tactic of Thief is to avoid fights and instead sneak around the enemies. Thief is sometimes described as either a "first-person sneaker", "sneak-em-up" or a "first-person looter" to emphasize this difference.</English>
 		<French>La principale technique du [COLOR_UNIT_TEXT]Voleur [COLOR_REVERT] est d'éviter les combats et de passer inaperçu jusqu'à ses ennemis.</French>
+		<German>[COLOR_UNIT_TEXT]Diebe[COLOR_REVERT] gehen offenen Kämpfen aus dem Weg und schleichen sich lieber hinter ihre Gegner, um ihnen die Taschen auszuräumen oder sie hinterrücks zu meucheln.</German>
 		<Spanish>La táctica principal del [COLOR_UNIT_TEXT]Ladrón[COLOR_REVERT] es evitar el combate directo, para moverse sigilosamente alrededor de los enemigos. Los ladrones son descritos a veces como "furtivos en primera persona", "sneak'em up" o "saqueadores en primera persona" para enfatizar esta diferencia.</Spanish>
 		<Polish>Głowną taktyką [COLOR_UNIT_TEXT]złodzieja[COLOR_REVERT] jest unikanie walki i przemykanie cichaczem obok oddziałów wroga.</Polish>
 	</TEXT>
@@ -26562,7 +26613,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_TRADE_MISSION</Tag>
 		<English>[ICON_BULLET]Can Conduct a Trade Mission (Base: %d1, Mult: x%d2)</English>
 		<French>[ICON_BULLET]Peut effectuer une mission commerciale (Base: %d1, Mult: x%d2)</French>
-		<German>[ICON_BULLET]Kann eine Handelsmission ausführen (Base: %d1, Mult: x%d2)</German>
+		<German>[ICON_BULLET]kann eine Handelsmission ausführen (Basiswert: %d1, Mult.: x%d2)</German>
 		<Italian>[ICON_BULLET]Può eseguire una missione commerciale (Base: %d1, Mult: x%d2)</Italian>
 		<Spanish>[ICON_BULLET]Puede realizar una misión comercial (Base: %d1, Mult: x%d2)</Spanish>
 	</TEXT>
@@ -27487,6 +27538,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_UNNERVE</Tag>
 		<English>[ICON_BULLET]Unnerve: Unit counts as +%d1_Amount%% strength when surrounding.</English>
 		<French>[ICON_BULLET]Sang froid : L'unité compte pour +%d1_Amount%% de force lorsqu'elle est encerclée.</French>
+		<German>[ICON_BULLET]Entnerven: Einheit erhält +%d1_Amount%% Stärke beim Einkesseln von Gegnern</German>
 		<Italian>[ICON_BULLET]Snervamento: l'unità riceve +%d1_Amount%% di forza quando circonda il nemico.</Italian>
 		<Polish>[ICON_BULLET]Załamanie: +%d1_Amount%% siły przy poddaniu.</Polish>
 	</TEXT>
@@ -27494,6 +27546,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_UNNERVE_TOTAL</Tag>
 		<English>[ICON_BULLET]Unnerve: Counts as +%d1_Amount%% strength when surrounding.</English>
 		<French>[ICON_BULLET]Sang froid : Compte comme +%d1_Amount%% Puissance lorsqu'encerclé.</French>
+		<German>[ICON_BULLET]Entnerven: +%d1_Amount%% Stärke beim Einkesseln</German>
 		<Italian>[ICON_BULLET]Snervamento: fornisce +%d1_Amount%% alla forza con manovre di accerchiamento.</Italian>
 		<Polish>[ICON_BULLET]Załamanie: +%d1_Amount%% przy odwrocie.</Polish>
 	</TEXT>
@@ -27501,6 +27554,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_UNNERVE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Unnerve: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Sang froid: %d1_Amount%%</French>
+		<German>[ICON_BULLET]Entnerven: %d1_Amount%%</German>
 		<Italian>[ICON_BULLET]Snervamento: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Załamanie: %d1_Amount%%</Polish>
 	</TEXT>

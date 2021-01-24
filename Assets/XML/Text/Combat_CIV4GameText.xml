@@ -13909,6 +13909,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Kampfstil) Fernkampf mit zwei Ersatzwaffen</German>
 		<Spanish>
 			<Text>Dos armas (de reserva):Unidades con dos armas (de reserva)</Text>
 			<Gender>Female</Gender>
@@ -13924,6 +13925,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Kampfstil) Fernkampf (Ersatzwaffe) einhändig</German>
 		<Spanish>
 			<Text>Arma a una mano (de reserva):Unidades con arma a una mano (de reserva)</Text>
 			<Gender>Female</Gender>
@@ -13939,6 +13941,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Kampfstil) Fernkampf (Ersatzwaffe) einhändig mit Schild</German>
 		<Spanish>
 			<Text>Arma a una mano y escudo (de reserva):Unidades con arma a una mano y escudo (de reserva)</Text>
 			<Gender>Female</Gender>
@@ -13954,6 +13957,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Kampfstil) Fernkampf (Ersatzwaffe) zweihändig</German>
 		<Spanish>
 			<Text>Arma a dos manos (de reserva):Unidades con arma a dos manos (de reserva)</Text>
 			<Gender>Female</Gender>
@@ -13969,6 +13973,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Kampfstil) Fernkampf (Ersatzwaffe) zweihändig mit Schild</German>
 		<Spanish>
 			<Text>Arma a dos manos y escudo (de reserva):Unidades con arma a dos manos y escudo (de reserva)</Text>
 			<Gender>Female</Gender>
@@ -13984,6 +13989,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Kampfstil) Fernkampf mit zwei Waffen</German>
 		<Spanish>
 			<Text>Dos armas (a distancia):Unidades con dos armas (a distancia)</Text>
 			<Gender>Female</Gender>
@@ -13999,7 +14005,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>Fernkampf einhändig</German>
+		<German>(Kampfstil) Fernkampf einhändig</German>
 		<Spanish>
 			<Text>Arma a una mano (a distancia):Unidades con arma a una mano (a distancia)</Text>
 			<Gender>Female</Gender>
@@ -14015,6 +14021,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Kampfstil) Fernkampf einhändig mit Schild</German>
 		<Spanish>
 			<Text>Arma a una mano y escudo (a distancia):Unidades con arma a una mano y escudo (a distancia)</Text>
 			<Gender>Female</Gender>
@@ -14030,6 +14037,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Kampfstil) Fernkampf zweihändig</German>
 		<Spanish>
 			<Text>Arma a dos manos (a distancia):Unidades con arma a dos manos (a distancia)</Text>
 			<Gender>Female</Gender>
@@ -14045,6 +14053,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Kampfstil) Fernkampf zweihändig mit Schild</German>
 		<Spanish>
 			<Text>Arma a dos manos y escudo (a distancia):Unidades con arma a dos manos y escudo (a distancia)</Text>
 			<Gender>Female</Gender>
@@ -14060,6 +14069,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Kampfstil) Fernkampf mit Fahrzeugbewaffnung</German>
 		<Spanish>
 			<Text>Armamento vehicular (a distancia):Unidades con armamento vehicular (a distancia)</Text>
 			<Gender>Female</Gender>
@@ -14075,7 +14085,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>Nahkampf mit zwei Waffen</German>
+		<German>(Kampfstil) Nahkampf mit zwei Waffen</German>
 		<Spanish>
 			<Text>Dos armas (CaC):Unidades con dos armas (CaC)</Text>
 			<Gender>Female</Gender>
@@ -14091,7 +14101,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>Nahkampf einhändig</German>
+		<German>(Kampfstil) Nahkampf einhändig</German>
 		<Spanish>
 			<Text>Arma a una mano (CaC):Unidades con arma a una mano (CaC)</Text>
 			<Gender>Female</Gender>
@@ -14107,7 +14117,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>Nahkampf einhändig mit Schild</German>
+		<German>(Kampfstil) Nahkampf einhändig mit Schild</German>
 		<Spanish>
 			<Text>Arma a una mano y escudo (CaC):Unidades con arma a una mano y escudo (CaC)</Text>
 			<Gender>Female</Gender>
@@ -14123,7 +14133,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>Nahkampf zweihändig</German>
+		<German>(Kampfstil) Nahkampf zweihändig</German>
 		<Spanish>
 			<Text>Arma a dos manos (CaC):Unidades con arma a dos manos (CaC)</Text>
 			<Gender>Female</Gender>
@@ -14139,7 +14149,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>Nahkampf zweihändig mit Schild</German>
+		<German>(Kampfstil) Nahkampf zweihändig mit Schild</German>
 		<Spanish>
 			<Text>Arma a dos manos y escudo (CaC):Unidades con arma a dos manos y escudo (CaC)</Text>
 			<Gender>Female</Gender>
@@ -14155,6 +14165,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Kampfstil) Nahkampf mit Fahrzeugbewaffnung</German>
 		<Spanish>
 			<Text>Armamento vehicular (CaC):Unidades con armamento vehicular (CaC)</Text>
 			<Gender>Female</Gender>
@@ -14170,7 +14181,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>Nahkampf mit zwei Sekundärwaffen</German>
+		<German>(Kampfstil) Nahkampf mit zwei Sekundärwaffen</German>
 		<Spanish>
 			<Text>Dos armas (secundaria):Unidades con dos armas (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -14186,6 +14197,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Kampfstil) Nahkampf (Sekundärwaffe) einhändig</German>
 		<Spanish>
 			<Text>Arma a una mano (secundaria):Unidades con arma de mano cuerpo a cuerpo</Text>
 			<Gender>Female</Gender>
@@ -14201,6 +14213,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Kampfstil) Nahkampf (Sekundärwaffe) einhändig mit Schild</German>
 		<Spanish>
 			<Text>Arma a una mano y escudo (secundaria):Unidades con arma a una mano y escudo (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -14216,6 +14229,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Kampfstil) Nahkampf (Sekundärwaffe) zweihändig</German>
 		<Spanish>
 			<Text>Arma a dos manos (secundaria):Unidades con arma a dos manos (secundaria)</Text>
 			<Gender>Female</Gender>
@@ -14231,6 +14245,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Kampfstil) Nahkampf (Sekundärwaffe) zweihändig mit Schild</German>
 		<Spanish>
 			<Text>Arma a dos manos y escudo (secundaria):Unidades con arma a dos manos y escudo (secundaria)</Text>
 			<Gender>Female</Gender>
