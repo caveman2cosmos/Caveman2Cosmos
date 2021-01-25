@@ -483,7 +483,7 @@
 		<English>Early Quarry</English>
 		<French>Carrière antique</French>
 		<Polish>Wczesny Kamieniołom</Polish>
-		<Russian>Ãîðíûé ïðèèñê</Russian>
+		<Russian>Ïðèèñê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_EXTRACTION_FACILITY</Tag>
@@ -2200,6 +2200,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_BLOCKED</Tag>
 		<English>[COLOR_YELLOW] No upgrade available[COLOR_REVERT]</English>
+		<Russian>[COLOR_YELLOW] Нет доступных обновлений[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_DESTROYS_FEATURE</Tag>
@@ -2217,10 +2218,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_NEED_WORK</Tag>
 		<English>[SPACE]([COLOR_WARNING_TEXT]Need Work[COLOR_REVERT])</English>
+		<Russian>[SPACE]([COLOR_WARNING_TEXT]Клетка должна обрабатываться[COLOR_REVERT])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_NEED_GARRISON</Tag>
 		<English>[SPACE]([COLOR_WARNING_TEXT]Need Garrison[COLOR_REVERT])</English>
+		<Russian>[SPACE]([COLOR_WARNING_TEXT]Нужен гарнизон[COLOR_REVERT])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_NO</Tag>
@@ -2273,6 +2276,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_TURNS</Tag>
 		<English>[SPACE](Upgrade: %d1_Num [NUM1:Turn:Turns]</English>
+		<Russian>[SPACE](Улучшение: %d1_Num [NUM1:ход:ходов]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VERTICAL_FARM</Tag>

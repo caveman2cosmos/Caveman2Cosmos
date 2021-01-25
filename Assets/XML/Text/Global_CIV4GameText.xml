@@ -2658,7 +2658,7 @@
 		<Italian>L'edificio %s1 nella città di %s2 non funziona più. Il cambio delle tue forme di governo lo ha reso obsoleto. Cambia le tue politiche sociali per ripristinare l'edificio %s3.</Italian>
 		<Spanish>[NUM1:El:La:Los:Las] %s1 en la ciudad de %s2 [NUM1:ha:ha:han:han] cerrado. Tus cambios de principios han hecho que caiga en desuso. Cambia tus políticas para que [NUM3:el:la:los:las] %s3 funcion[NUM3:e:e:en:en] de nuevo.</Spanish>
 		<Polish>%s1 w mieście %s2 dalej nie funkcjonuje. Zmiana doktryny spowodowała nieużyteczność. Przywróć poprzednią doktrynę by umożliwić %s3 powrót do pracy.</Polish>
-		<Russian>%s1 â ãîðîäå %s2 áîëüøå íå ôóíêöèîíèðóåò è ïðåêðàòèë çàíèìàòüñÿ áèçíåñîì. Âàøè ïàðàäèãìû çàêîí÷èëè åãî ïîëíîöåííîñòü. Èçìåíèòå ñâîþ ñîöèàëüíóþ ïîëèòèêó, ÷òîáû âåðíóòü %s3 íàçàä ðàáî÷åìó çàêàçó.</Russian>
+		<Russian>%s1 в городе %s2 больше не функционирует и прекратил свою работу. Ваши текущие парадигмы блокируют его функционирование. Чтобы вернуть %s3 работоспособность, измените действующие парадигмы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REMOVED_BUILDINGS_POPULATION</Tag>
@@ -2688,7 +2688,7 @@
 		<Italian>L'edificio %s1 nella città di %s2 non funziona più. Riottieni accesso alle risorse o cambia le condizioni in città per ripristinare l'edificio %s3.</Italian>
 		<Spanish>[NUM1:El:La:Los:Las] %s1 en la ciudad de %s2 [NUM1:ha:ha:han:han] cerrado. Vuelve a obtener los recursos o cambia las condiciones en la ciudad para que [NUM3:el:la:los:las] %s3 funcion[NUM3:e:e:en:en] de nuevo.</Spanish>
 		<Polish>%s1 w mieście %s2 dalej już nie funkcjonuje. Przywróć dostęp do surowców lub zmień doktryny by przywrócić %s3 do pracy.</Polish>
-		<Russian>%s1 â ãîðîäå %s2 áîëüøå íå ôóíêöèîíèðóåò è ïðåêðàòèë çàíèìàòüñÿ áèçíåñîì. Âîçâðàòèòå äîñòóï ê ñðåäñòâàì èëè èçìåíèòå óñëîâèÿ â ãîðîäå, ÷òîáû âåðíóòü %s3 íàçàä ðàáî÷åìó çàêàçó.</Russian>
+		<Russian>%s1 в городе %s2 больше не функционирует и прекратил свою работу. Верните доступ к ресурсам или измените условия в городе, чтобы вернуть восстановить работу для %s3.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REMOVED_FRESH_WATER</Tag>
@@ -2709,6 +2709,7 @@
 		<French>[ICON_BULLET]Les Unités gagnent %D1%% en Expulsion en défendant la Ville.</French>
 		<Italian>[ICON_BULLET]Le unità ottengono %D1%% alla Respinta quando difendono una città.</Italian>
 		<Polish>[ICON_BULLET]Jednostki otrzymują %D1%% do odepchnięcia przy obronie miasta.</Polish>
+		<Russian>[ICON_BULLET]Отряды получают %D1%% к отражению при защите города.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_RESTORED_BUILDINGS</Tag>
@@ -6230,7 +6231,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>Regola della pietà attiva! Perderai in %d1 [NUM1:turno:turni]!</Italian>
 		<Spanish>¡Regla de gracia activa! ¡Perderás en %d1 [NUM1:turno:turnos]!</Spanish>
 		<Polish>Zasada litości aktywna! Przegrasz za %d1 [NUM5:ture:tury:tur]!</Polish>
-		<Russian>Ïðàâèëî ìèëîñåðäèÿ â äåéñòâèè! Âû ïðîèãðàåòå â %d1 [NUM1:turn:turns]!!!</Russian>
+		<Russian>Ïðàâèëî ìèëîñåðäèÿ â äåéñòâèè! Âû ïðîèãðàåòå â %d1 [NUM1:ход:ходов]!!!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOW_PLAYER_DROPPED</Tag>
@@ -6247,6 +6248,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English>Luxury</English>
 		<French>Luxe</French>
 		<Spanish>Lujuria</Spanish>
+		<Russian>Роскошь</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAD_SCREEN_HOVER</Tag>
@@ -6326,11 +6328,13 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MARAUDER_FROM</Tag>
 		<English>[COLOR_SELECTED_TEXT]%s1 has plundered %d2 [ICON_GOLD] from you![COLOR_REVERT]</English>
 		<French>[COLOR_SELECTED_TEXT]%s1 vous a volé %d2 [ICON_GOLD]![COLOR_REVERT]</French>
+		<Russian>[COLOR_SELECTED_TEXT]%s1 похитил у вас %d2 [ICON_GOLD]![COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MARAUDER_YOU</Tag>
 		<English>[COLOR_SELECTED_TEXT]You have plundered %d2 [ICON_GOLD] from %s1![COLOR_REVERT]</English>
 		<French>[COLOR_SELECTED_TEXT]Vous avez pillé %d2 [ICON_GOLD] à %s1![COLOR_REVERT]</French>
+		<Russian>[COLOR_SELECTED_TEXT]Вы получили %d2 [ICON_GOLD] от %s1![COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEMORY_BACKSTAB</Tag>
@@ -7257,6 +7261,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_CITY_MILITIA_EMERGED</Tag>
 		<English>City militia has emerged! Resistance:</English>
 		<French>Des habitants ont pris les armes et se sont constitués en Milice ! Résistance :</French>
+		<Russian>Поднято по тревоге городское ополчение! Сопротивление:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_PRODUCTION_DESTROYED</Tag>
@@ -8014,6 +8019,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>da</Italian>
 		<Spanish>por</Spanish>
 		<Polish>z</Polish>
+		<Russian>от</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_GIFTED_UNIT_TO_YOU</Tag>
@@ -8818,6 +8824,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_NUKE_TRAP</Tag>
 		<English>A %s1_UnitName placed by %s2_PlyrName has detonated in an Earth Rumbling Nuclear Fireball!</English>
 		<French>Un %s1_UnitName placé par %s2_PlyrName a explosé, générant une déflagration nucléaire immense !</French>
+		<Russian>%s1_UnitName размещенный %s2_PlyrName был подорван, породив огненный ядерный гриб!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_NUKE_UNKNOWN</Tag>
@@ -8900,6 +8907,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>Comme les pré-requis sont devenus incompatibles avec votre unité, Votre %s1_Unit a perdu sa promotion %s2_Promotion et peut à présent choisir une nouvelle promotion.</French>
 		<Italian>Dato che una delle sue abilità è incompatibile con la tua unità %s1_Unit, essa ha perso la promozione %s2_Promotion e può ora selezionare una nuova promozione.</Italian>
 		<Polish>Jedna z promocji jest niekompatybilna z Twoją jednostką: %s1_Unit straciła więc promocję: %s2_Promotion i może wybrać nową</Polish>
+		<Russian>Ваш %s1_Unit утратил свою квалификацию %s2_Promotion, поскольку одна из его способностей оказалась несовместимой после переобучения отряда, и теперь может выбрать взамен новую.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_INVALIDATE_NO_RETRAIN</Tag>
@@ -8907,6 +8915,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>Comme les pré-requis sont devenus incompatibles avec votre unité, Votre %s1_Unit a rendu sa promotion %s2_Promotion obsolète.</French>
 		<Italian>Dato che una delle sue abilità è incompatibile con la tua unità %s1_Unit, essa ha perso la promozione %s2_Promotion.</Italian>
 		<Polish>Jedna z promocji jest niekompatybilna z Twoją jednostką: %s1_Unit straciła więc promocję: %s2_Promotion</Polish>
+		<Russian>Ваш %s1_Unit утратил свою квалификацию %s2_Promotion, поскольку одна из его способностей оказалась несовместимой после переобучения отряда.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_NOPROMO_CAN_RETRAIN</Tag>
@@ -9774,6 +9783,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<German>[COLOR_TECH_TEXT][COLOR_REVERT]</German>
 		<Italian>Disattiva[SPACE]</Italian>
 		<Spanish>Desactivar[SPACE]</Spanish>
+		<Russian>Выкл.[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_TURN_ON</Tag>
@@ -9945,7 +9955,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<German>Unsere verwundete Einheit %s1 wurde entgegen aller Wahrscheinlichkeiten zwischen den Toten auf dem Schlachtfeld übersehen und sinnt nach Rache!</German>
 		<Spanish>¡Contra todo pronóstico, [NUM1:nuestro:nuestra:nuestros:nuestras] %s1 [NUM1:herido ha:herida ha:heridos han:heridas han] sobrevivido a la batalla, ¡y [NUM1:está:está:están:están] clamando venganza!</Spanish>
 		<Polish>Przeciwko wszystkim szansą, nasz ranna jednostka: %s1 przetrwała walkę i czeka na okazję do zemsty!</Polish>
-		<Russian>Вопреки всему, наш раненому %s1 удалось остаться незамеченным среди убитых на поле боя, и теперь он жаждет мести!</Russian>
+		<Russian>Вопреки всему, нашему раненому %s1 удалось остаться незамеченным среди убитых на поле боя, и теперь он жаждет мести!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE</Tag>
@@ -12228,7 +12238,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>%D1[ICON_HAPPY] per %d2 [NUM2:turno:turni]</Italian>
 		<Spanish>%D1[ICON_HAPPY] durante %d2 [NUM2:turno:turnos]</Spanish>
 		<Polish>%D1[ICON_HAPPY] na %d2 [NUM2:ture:tur]</Polish>
-		<Russian>%D1[ICON_HAPPY] äëÿ %d2 [NUM2:turn:turns]</Russian>
+		<Russian>%D1[ICON_HAPPY] äëÿ %d2 [NUM2:ход:ходов]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_TEMP_POPULATION_BOOST</Tag>
@@ -13289,6 +13299,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<German>, erfordert: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</German>
 		<Italian>, Richiede: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Italian>
 		<Spanish>, requiere: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Spanish>
+		<Russian>, Требует: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLOT_REQUIRES_OR</Tag>
@@ -13854,7 +13865,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
 		<Polish>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
-		<Russian>[NEWLINE][COLOR_WARNING_TEXT]Òðåáóåòñÿ:[SPACE]</Russian>
+		<Russian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Òðåáóåòñÿ:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_IN_CITY_VICINITY</Tag>
@@ -15738,7 +15749,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_SPECIALIST_DOCTOR_STRATEGY</Tag>
 		<English>Build the [LINK=BUILDING_HEALERHUT]Healer's Hut[\LINK], [LINK=BUILDING_APOTHECARY_SHOP]Apothecary Shop[\LINK], or a [LINK=BUILDING_HOSPITAL]Hospital[\LINK] to add specialist doctors and increase the odds of getting a Great Doctor.</English>
 		<French>Construisez la [LINK=BUILDING_HEALERHUT]Cabane du Guerrisseur[\LINK], l'[LINK=BUILDING_APOTHECARY_SHOP]Herboristerie[\LINK], ou un [LINK=BUILDING_HOSPITAL]Hôpital[\LINK] pour ajouter des spécialistes médecins et augmenter les chances d'obtenir un Médecin Illustre.</French>
-		<Russian></Russian>
+		<Russian>Постройте [LINK=BUILDING_HEALERHUT]Хижину целителя[\LINK], [LINK=BUILDING_APOTHECARY_SHOP]Лавку аптекаря[\LINK] или [LINK=BUILDING_HOSPITAL]Больницу[\LINK], чтобы добавить врачей-специалистов и повысить шансы на рождение Великого Врача.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_ENGINEER</Tag>
