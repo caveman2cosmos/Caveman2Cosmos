@@ -1097,7 +1097,7 @@
 		<Italian>[NEWLINE][SPACE][SPACE][ICON_BULLET]Bonus stabilità: +%S1% per [ICON_RELIGION] di Stato</Italian>
 		<Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]+%S1% a la bonificación a la estabilidad revolucionaria por la [ICON_RELIGION] oficial</Spanish>
 		<Polish>[NEWLINE][SPACE][SPACE][ICON_BULLET]+%S1% do Bonusu Rewolucyjnego z [ICON_RELIGION] narodowej</Polish>
-		<Russian>[NEWLINE][SPACE][SPACE][ICON_BULLET]+%s1% к бонусу революции от государства [ICON_RELIGION]</Russian>
+		<Russian>[NEWLINE][SPACE][SPACE][ICON_BULLET]+%s1% к бонусу революции от государственной [ICON_RELIGION]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GREAT_GENERAL_MODIFIER_C2C</Tag>
