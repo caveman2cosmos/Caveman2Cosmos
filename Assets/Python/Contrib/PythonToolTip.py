@@ -1,4 +1,4 @@
-ffrom CvPythonExtensions import *
+from CvPythonExtensions import *
 
 import ScreenResolution as RES
 
