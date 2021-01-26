@@ -6190,6 +6190,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_CRUISER_PEDIA</Tag>
 		<English>A cruiser is a large type of warship, which had its prime period from the late 19th century to the end of the Cold War. The first cruisers were intended for individual raiding and protection missions on the seas. Over the years, the nature and role of the cruiser has changed considerably, and today the cruiser has largely been replaced by destroyers in its roles.</English>
 		<Polish>Krążownik klasa dużych, silnie uzbrojonych okrętów nawodnych, wyróżniana od II połowy XIX wieku do chwili obecnej. W miarę rozwoju techniki klasa krążowników ewoluowała i dzieliła się na liczne podklasy, różniące się od siebie charakterystykami, w tym wielkością. Najbardziej ogólnym podziałem, wiążącym się ze zmianą rodzaju uzbrojenia i zadań krążowników, jest podział na krążowniki klasyczne (artyleryjskie), dziś już nie występujące i współczesne krążowniki rakietowe.</Polish>
+		<Russian>[TAB]Крейсер - это большой тип боевого корабля, расцвет которого пришелся на конец XIX века до конца холодной войны. Первые крейсера предназначались для индивидуальных рейдов и защиты на море. С годами характер и роль крейсера значительно изменились, и сегодня крейсер в значительной степени заменен на эсминцы.[PARAGRAPH:1]Крейсеры долго выполняли роль эскорта и защитных судов, прикрывая авианосцы и амфибии от вражеских кораблей и самолетов. Во время Второй мировой войны они делились на легкие (класс "CL") и тяжелые (класс "CA")крейсеры. Легкие крейсеры оснащались орудиями диаметром не более 6 дюймов, а на тяжелых находились орудия 6-8 дюймов в диаметре. В отличие от большинства крейсеров Союзников, японские корабли также оснащались запасами торпед "Длинное копье", топливом для которых служил кислород. Кроме того, эти смертоносные торпеды можно было перезаряжать(у других флотов не было торпед такого типа).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CRUISER_STRATEGY</Tag>
@@ -6197,6 +6198,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Le Croiseur léger est un bon navire de guerre contre les navires en bois et à vapeur. Il peut bombarder les défenses de la ville, effectuer des attaques à distance, intercepter des avions et transporter des hydravions.</French>
 		<Spanish>El Crucero es un navío de guerra efectivo contra navíos de madera y a vapor. Puede bombardear las defensas de las ciudades, realizar cañoneos a distancia, interceptar aeronaves y llevar Hidroaviones.</Spanish>
 		<Polish>Jest silnym okrętem wojennym i doskonale nadaje się do walki przeciwko statkom drewnianym oraz parowym. Może bombardować obrone miasta nabrzeżnego, przechwycać samoloty oraz transportować Hydroplany.</Polish>
+		<Russian>Крейсер - прекрасный боевой корабль против деревянных парусников и пароходов. Он может разрушить бомбардировкой оборону города, выполнять дальние атаки, перехватывать самолеты и нести гидросамолеты.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CRUSADER</Tag>
@@ -10508,11 +10510,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_GREAT_DETECTIVE</Tag>
 		<English>Great Detective</English>
 		<French>Détective illustre</French>
+		<Russian>Âåëèêèé ñûùèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_DETECTIVE_STRATEGY</Tag>
 		<English>Use the Great Detective to fight crime and hunt down criminals.</English>
 		<French>Utilisez le détective illustre pour combattre le crime et traquer les criminels.</French>
+		<Russian>Используйте Великого сыщика, чтобы бороться с преступностью и выслеживать преступников.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_ENGINEER</Tag>
@@ -10543,6 +10547,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<German>[COLOR_UNIT_TEXT]Große Ingenieure[COLOR_REVERT] stellen die aktuelle Produktion einer Stadt umgehend fertig.</German>
 		<Italian>I [COLOR_UNIT_TEXT]Grandi Ingegneri[COLOR_REVERT] possono completare istantaneamente la produzione attuale di una città.</Italian>
 		<Spanish>Los [COLOR_UNIT_TEXT]Grandes ingenieros[COLOR_REVERT] pueden completar al instante la producción en activo de una ciudad.</Spanish>
+		<Russian>[COLOR_UNIT_TEXT]Великие инженеры[COLOR_REVERT] способны мгновенно завершить активное производство в городе, включая многие Великие Чудеса.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_FARMER_PEDIA</Tag>
@@ -10611,7 +10616,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Italian>Può diventare uno specialista grande cacciatore stanziato nelle tue città, oppure può costruire gli edifici delle tradizioni.</Italian>
 		<Spanish>Esta unidad puede unirse a una ciudad como Gran cazador o construir en ella edificios de tradiciones.</Spanish>
 		<Polish>Osadź Wielkiego Łowcę w mieście lub stwórz tradycję.</Polish>
-		<Russian>[COLOR_UNIT_TEXT]Великий охотник[COLOR_REVERT] - разновидность [COLOR_UNIT_TEXT]Великого генерала [COLOR_REVERT], заточенная целиком под охоту и промысел. Великий охотник может строить особые здания, связанные с охотой, а также может присоединяться к городам в качестве сверхспециалиста и добавлять опыта к каждому новому охотнику в данном городе.</Russian>
+		<Russian>[COLOR_UNIT_TEXT]Великий охотник[COLOR_REVERT] - разновидность [COLOR_UNIT_TEXT]Великого генерала[COLOR_REVERT], заточенная целиком под охоту и промысел. Великий охотник может строить особые здания, связанные с охотой, а также может присоединяться к городам в качестве сверхспециалиста и добавлять опыта к каждому новому охотнику в данном городе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_SPY</Tag>
@@ -10637,6 +10642,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Szpieg</Polish>
+		<Russian>Âåëèêèé øïèîí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_SPY_STRATEGY</Tag>
@@ -10645,6 +10651,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<German>Mit dem [COLOR_UNIT_TEXT]Großen Spion[COLOR_REVERT] können Sie feindliches Territorium erkunden, sich einen bedeutenden Spionagepunktbonus gegen eine feindliche Zivilisation sichern oder das Gebäude [COLOR_BUILDING_TEXT]Scotland Yard[COLOR_REVERT] errichten, um Ihre Spionageerfolge zu verbessern.</German>
 		<Italian>Usa la [COLOR_UNIT_TEXT]Grande Spia[COLOR_REVERT] per esplorare il territorio nemico, ricevere un grande bonus di punti spionaggio nei confronti di un rivale oppure costruire [COLOR_BUILDING_TEXT]Scotland Yard[COLOR_REVERT] per aumentare la produzione di spionaggio.</Italian>
 		<Spanish>El [COLOR_UNIT_TEXT]Gran espía[COLOR_REVERT] se utiliza para explorar territorio enemigo, recibir una gran bonificación a los puntos de espionaje contra un rival o construir un edificio de [COLOR_BUILDING_TEXT]Scotland Yard[COLOR_REVERT] para aumentar el rendimiento del espionaje.</Spanish>
+		<Russian>Используйте [COLOR_UNIT_TEXT]Великого шпиона[COLOR_REVERT], чтобы исследовать вражескую территорию, получить огромный бонус очков шпионажа против одного из конкурентов или построить здание [COLOR_BUILDING_TEXT]Скотланд-Ярда[COLOR_REVERT] для увеличения производительности [ICON_ESPIONAGE] [COLOR_GREEN]очков шпионажа[COLOR_REVERT].</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREEK_PHALANX</Tag>
@@ -16380,7 +16387,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_LUNGE</Tag>
 		<English>[ICON_BULLET]Lunge: Gets +%d1_Amount%% Surround and Destroy Bonus when attacking.</English>
 		<French>[ICON_BULLET]Fente: Reçoit +%d1_Amount%% un bonus d'Encercler et Détruire Bonus en attaquant.</French>
-		<German>[ICON_BULLET]Ausfallschritt: Einheit erhält +%d1_Amount%% Einkesselungsbonus beim Angriff</German>		
+		<German>[ICON_BULLET]Ausfallschritt: Einheit erhält +%d1_Amount%% Einkesselungsbonus beim Angriff</German>
 		<Italian>[ICON_BULLET]Affondo: ottiene +%d1_Amount%% al bonus di Circonda e distruggi quando attacca.</Italian>
 		<Polish>[ICON_BULLET]Pchnięcie: Otrzymuje +%d1_Amount%% bonusu Otocz i Zniszcz przy ataku.</Polish>
 		<Russian>[ICON_BULLET]Выпад: получает +%d1_Amount%% к сопутствующему урону и бонусу от убийств при атаке.</Russian>
@@ -16389,7 +16396,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_LUNGE_TOTAL</Tag>
 		<English>[ICON_BULLET]Lunge: Gets +%d1_Amount%% bonus from Surround and Destroy.</English>
 		<French>[ICON_BULLET]Fente: Reçoit +%d1_Amount%% un bonus d'Encercler et Détruire Bonus.</French>
-		<German>[ICON_BULLET]Ausfallschritt: +%d1_Amount%% Einkesselungsbonus</German>		
+		<German>[ICON_BULLET]Ausfallschritt: +%d1_Amount%% Einkesselungsbonus</German>
 		<Italian>[ICON_BULLET]Affondo: ottiene +%d1_Amount%% di bonus da Circonda e distruggi.</Italian>
 		<Polish>[ICON_BULLET]Pchnięcie: Otrzymuje +%d1_Amount%% bonusu z Otocz i Zniszcz.</Polish>
 		<Russian>[ICON_BULLET]Выпад: получает +%d1_Amount%% к сопутствующему урону и бонусу от убийств.</Russian>
@@ -16398,7 +16405,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_LUNGE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Lunge: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Fente: %d1_Amount%%</French>
-		<German>[ICON_BULLET]Ausfallschritt: %d1_Amount%%</German>		
+		<German>[ICON_BULLET]Ausfallschritt: %d1_Amount%%</German>
 		<Italian>[ICON_BULLET]Affondo: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Pchnięcie: %d1_Amount%%</Polish>
 		<Russian>[ICON_BULLET]Выпад: %d1_Amount%%</Russian>
@@ -22977,7 +22984,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_REQUIRES</Tag>
 		<English>Valid for[SPACE]</English>
 		<German>für[SPACE]</German>
-		<Russian>[COLOR_WARNING_TEXT]Для получения бонусов требуется юнит[SPACE]</Russian>
+		<Russian>Для получения бонусов требуется юнит[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REQUIRES_STATE_RELIGION</Tag>
@@ -27624,6 +27631,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<German>[ICON_BULLET]Provokation: %D1%%</German>
 		<Italian>[ICON_BULLET]Esca: %D1%% di chance in più di essere attaccata in un gruppo.</Italian>
 		<Polish>[ICON_BULLET]Prowokacja: %D1%% szansa na bycie zaatakowanym wewnątrz grupy jednostek.</Polish>
+		<Russian>[ICON_BULLET]Шанс провокации: %D1%%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAUTALUS</Tag>

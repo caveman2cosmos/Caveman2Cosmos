@@ -122,14 +122,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLOT_BLOCKED</Tag>
 		<English>[COLOR_WARNING_TEXT]Cannot be constructed on a %s1_Name![COLOR_REVERT]</English>
+		<Russian>[COLOR_WARNING_TEXT]Невозможно построить в %s1_Name![COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_CHANGE_FEATURE</Tag>
 		<English>[COLOR_YELLOW]Will replace the %s1_Name with %s2_Name[COLOR_REVERT]</English>
+		<Russian>[COLOR_YELLOW]Заменит %s1_Name на %s2_Name[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_YIELD_CHANGE_DESCRIP</Tag>
 		<English>Yield changes:</English>
+		<Russian>Измен. дохода:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STATE_RELIGION_PREREQ</Tag>
@@ -204,6 +207,7 @@
 		<Tag>TXT_KEY_GOODY_ARCHER</Tag>
 		<English>[SPACE]The tribe has agreed to send one of its archers along with you!</English>
 		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs archers pour partager vos aventures!</French>
+		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих лучников!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_ARQUEBUSIER</Tag>
@@ -215,11 +219,13 @@
 		<Tag>TXT_KEY_GOODY_AXEMAN</Tag>
 		<English>[SPACE]The tribe has agreed to send one of its axemen along with you!</English>
 		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec hache pour partager vos aventures!</French>
+		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих секироносцев!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_COMPOSITE_BOWMAN</Tag>
 		<English>[SPACE]The tribe has agreed to send one of its bowmen along with you!</English>
 		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs archers long pour partager vos aventures!</French>
+		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих лучников!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_CRIMINAL</Tag>
@@ -244,11 +250,13 @@
 		<Tag>TXT_KEY_GOODY_MACEMAN</Tag>
 		<English>[SPACE]The tribe has agreed to send one of its flailmen along with you!</English>
 		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec fléau pour partager vos aventures!</French>
+		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих булавоносцев!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_PIKEMAN</Tag>
 		<English>[SPACE]The tribe has agreed to send one of its pikemen along with you!</English>
 		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs piquiers pour partager vos aventures!</French>
+		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих копейщиков!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_RESEARCH</Tag>
@@ -261,16 +269,19 @@
 		<Tag>TXT_KEY_GOODY_SPEARMAN</Tag>
 		<English>[SPACE]The tribe has agreed to send one of its spearmen along with you!</English>
 		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec lance pour partager vos aventures!</French>
+		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих копьеносцев!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_STONE_AXEMAN</Tag>
 		<English>[SPACE]The tribe has agreed to send one of its strong axeman along with you!</English>
 		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec hache pour partager vos aventures!</French>
+		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих воинов с топорами!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_SWORDSMAN</Tag>
 		<English>[SPACE]The tribe has agreed to send one of its swordsmen along with you!</English>
 		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs épéistes pour partager vos aventures!</French>
+		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих мечников!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_WISE_WOMAN</Tag>
@@ -347,6 +358,7 @@
 		<German>Ihr habt durch die Eroberung von %s2_CityName %d1_Num [ICON_GOLD] erbeutet!!!</German>
 		<Italian>Hai saccheggiato %d1_Num [ICON_GOLD] dalla conquista di %s2_CityName!!!</Italian>
 		<Spanish>Habéis saqueado %d1_Num [ICON_GOLD] con la captura de %s2_CityName.</Spanish>
+		<Russian>Вы получили %d1_Num [ICON_GOLD] после захвата %s2_CityName!!!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PILLAGED_CITY_RAZED</Tag>
@@ -355,16 +367,19 @@
 		<German>Ihr habt durch die Plünderung und Zerstörung der Stadt %s2_CityName %d1_Num [ICON_GOLD] erbeutet!!!</German>
 		<Italian>Hai saccheggiato %d1_Num [ICON_GOLD] dalla distruzione di %s2_CityName!</Italian>
 		<Spanish>Habéis saqueado %d1_Num [ICON_GOLD] con la destrucción de %s2_CityName.</Spanish>
+		<Russian>Вы получили %d1_Num [ICON_GOLD] от уничтожения %s2_CityName!!!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLACED_BONUS</Tag>
 		<English>The fruits of the land are revealed! You have successfully placed or discovered a new source of %s1_BonusName.</English>
 		<French>Les fruits de la terre se dévoilent! Vous avez réussi à placer ou à découvrir une nouvelle source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT].</French>
+		<Russian>Наконец, нам удалось обнаружить плоды этой земли! Вы успешно разместили или обнаружили новый источник %s1_BonusName.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLACED_BONUS_FAIL</Tag>
 		<English>The land refuses to give up its secrets! You have failed to place or discover a resource.</English>
 		<French>La terre refuse de livrer ses secrets! Vous n'avez pas réussi à placer ou à découvrir une ressource.</French>
+		<Russian>Земля отказывается раскрыть свои тайны! Вам не удалось разместить или обнаружить ресурс.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLAYER_ADOPTED_CIVIC</Tag>

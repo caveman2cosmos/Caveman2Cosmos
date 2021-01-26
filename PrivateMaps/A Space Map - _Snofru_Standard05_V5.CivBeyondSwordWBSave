@@ -13,27 +13,6 @@ BeginMap
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_LOW
 EndMap
-BeginPlayer
-	StartingX=68, StartingY=11
-EndPlayer
-BeginPlayer
-	StartingX=39, StartingY=9
-EndPlayer
-BeginPlayer
-	StartingX=112, StartingY=17
-EndPlayer
-BeginPlayer
-	StartingX=59, StartingY=47
-EndPlayer
-BeginPlayer
-	StartingX=92, StartingY=47
-EndPlayer
-BeginPlayer
-	StartingX=10, StartingY=24
-EndPlayer
-BeginPlayer
-	StartingX=72, StartingY=13
-EndPlayer
 BeginPlot
 	x=0,y=0
 	FeatureType=FEATURE_ICE, FeatureVariety=0
@@ -10352,7 +10331,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=24
-	StartingPlot
 	BonusType=BONUS_URANIUM
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
@@ -41465,7 +41443,6 @@ BeginPlot
 	x=39,y=9
 	isNOfRiver
 	RiverWEDirection=1
-	StartingPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
@@ -63231,7 +63208,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=47
-	StartingPlot
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -72602,7 +72578,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=11
-	StartingPlot
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -76810,7 +76785,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=13
-	StartingPlot
 	BonusType=BONUS_OIL
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
@@ -98560,7 +98534,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=92,y=47
-	StartingPlot
 	BonusType=BONUS_BARLEY
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
@@ -119660,7 +119633,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=112,y=17
-	StartingPlot
 	BonusType=BONUS_GRAPES
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2

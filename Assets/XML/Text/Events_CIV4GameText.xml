@@ -1025,7 +1025,7 @@
 		<Italian>Una nuova flotta mercantile è stata costruita nella città %s1_civ_adjective di %s2_city.</Italian>
 		<Spanish>Se ha creado una nueva flota mercantil en la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 		<Polish>Nowa flota handlowa została uformowana w Imperium %s1_civ_adjective w mieście %s2_city.</Polish>
-		<Russian>A new merchant fleet has formed in the %s1_civ_adjective city of %s2_city.</Russian>
+		<Russian>В городе %s2_city державы %s1_civ_adjective был сформирован новый торговый флот.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MERCHANTFLEET2</Tag>
@@ -1034,7 +1034,7 @@
 		<Italian>Una nuova flotta mercantile è stata costruita a %s2_city.</Italian>
 		<Spanish>Se ha creado una nueva flota mercantil en %s2_city.</Spanish>
 		<Polish>Nowa flota handlowa została uformowana w mieście %s2_city.</Polish>
-		<Russian>A new merchant fleet has formed in %s2_city.</Russian>
+		<Russian>В городе %s2_city сформирован новый торговый флот.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MESSED_PAINTING</Tag>
@@ -3204,6 +3204,7 @@
 		<German>Eure Modernisierung %s1_improvement wurde zerstört</German>
 		<Italian>[NUM1:Il tuo:La tua] %s1_improvement è [NUM1:stato distrutto:stata distrutta]</Italian>
 		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_improvement [NUM1:ha quedado destruido:ha quedado destruida:han quedado destruidos:han quedado destruidas]</Spanish>
+		<Russian>Ваше улучшение - %s1_improvement было разрушено</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED_NOOWNER</Tag>
@@ -3617,7 +3618,7 @@
 		<Italian>Equipaggia tutte le unità da combattimento ravvicinato e quelle montate con armi e armature in acciaio "wootz".</Italian>
 		<Spanish>Equipad a todas nuestras unidades cuerpo a cuerpo y montadas con armas y armaduras de acero wootz.</Spanish>
 		<Polish>Wyposaż wszystkie jednostki walczące wręcz nowym pancerzem i bronią z hartowanej stali.</Polish>
-		<Russian>Equip all melee and mounted units with wootz steel armors and weapons.</Russian>
+		<Russian>Выдайте всем рукопашным и конным отрядам новую стальную экипировку и оружие.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CURE_FOR_CANCER_1</Tag>
@@ -4000,7 +4001,7 @@
 		<Italian>[PARAGRAPH:1]Per completare quest'impresa, devi addestrare %d1 [COLOR_UNIT_TEXT][NUM1:spadaccino leggero:spadaccini leggeru][COLOR_REVERT]. È richiesta una fonte di ferro.[PARAGRAPH:1]Otterrai un'ulteriore ricompensa se la tua civiltà utilizza la forma di governo [COLOR_HIGHLIGHT_TEXT]Monarcia[COLOR_REVERT].[PARAGRAPH:1]Fallirai nell'impresa se una civiltà rivale la completa per prima o se raggiungerai il Medioevo senza aver soddisfatto le condizioni.</Italian>
 		<Spanish>[PARAGRAPH:1]Para completar esta misión, deberás entrenar %d1 [COLOR_UNIT_TEXT][NUM1:Soldado:Soldados] con espada ligera, normal o pesada[COLOR_REVERT]. Se requiere una fuente de Hierro.[PARAGRAPH:1]Podrás disponer de una opción de recompensa adicional si tu civilización tiene el principio [COLOR_HIGHLIGHT_TEXT]Monarquía[COLOR_REVERT] activo en el momento de completar la misión.[PARAGRAPH:1]Fallarás esta misión si una civilización rival la completa primero, o si alcanzas la Edad Media sin haber cumplido los objetivos.</Spanish>
 		<Polish>[PARAGRAPH:1]Aby wypełnić warunki zadania należy wytrenować %d1 [NUM1:jednostkę:jednostek] [COLOR_UNIT_TEXT]Lekki Zbrojny[COLOR_REVERT]. Potrzebne jest Żelazo.[PARAGRAPH:1]Dostaniesz dodatkową premię jeśli twoja cywilizacja posiada doktrynę [COLOR_HIGHLIGHT_TEXT]Monarchia[COLOR_REVERT].[PARAGRAPH:1]Przegrasz to zadanie jeśli którakolwiek z innych cywilizacji ukończy je wcześniej, lub nie zdążysz wypełnić warunków przed nadejściem epoki średniowiecznej.</Polish>
-		<Russian>[PARAGRAPH:1]To complete this quest, you must train %d1 [COLOR_UNIT_TEXT]Light, normal or heavy Swordsman[COLOR_REVERT] [NUM1:unit:units]. A source of Iron will be required.[PARAGRAPH:1]An additional reward option will be available if your civilization is operating the [COLOR_HIGHLIGHT_TEXT]Monarchy[COLOR_REVERT] civic.[PARAGRAPH:1]You will fail this quest if a rival civilization completes it first, or if you arrive at the Middle Ages without having met the conditions.</Russian>
+		<Russian>[PARAGRAPH:1]Для выполнения этого задания, вы должны обучить %d1 [NUM1:отряд:отрядов] [COLOR_UNIT_TEXT]Легких, обычных[COLOR_REVERT] или [COLOR_UNIT_TEXT]Тяжелых мечников[COLOR_REVERT]. Вам потребуется ресурс железа.[PARAGRAPH:1]Дополнительная награда будет доступна, если ваша цивилизация использует парадигму [COLOR_HIGHLIGHT_TEXT]Монархия[COLOR_REVERT].[PARAGRAPH:1]Задание будет провалено в случае, если его раньше завершит конкурирующая цивилизация или если вы вступите в Средние века, не выполнив указанных условий.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_EMPIRE_POPULATION_LOSS</Tag>
@@ -6895,21 +6896,21 @@
 		<English>Snake Oil? I'll try that.</English>
 		<French>De l'huile de Serpent? Je veux essayer.</French>
 		<Polish>Wężowy Olej? Spróbuję tego.</Polish>
-		<Russian>Snake Oil? I'll try that.</Russian>
+		<Russian>Змеиное масло? Я попробую это.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SNAKEOIL_2</Tag>
 		<English>Let him sell his wares, but tax them.</English>
 		<French>Laissez le vendre sa marchandise, mais taxez-la.</French>
 		<Polish>Pozwalaj im na sprzedaż swoich produktów, ale opodatkujmy je.</Polish>
-		<Russian>Let him sell his wares, but tax them.</Russian>
+		<Russian>Пускай продает свой товар, но не забывает о налогах.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SNAKEOIL_3</Tag>
 		<English>Run this charlatan out of town and educate our people on his quackery!</English>
 		<French>Virez-moi ce charlatan hors de la ville, et éduquons notre peuple trop naif!</French>
 		<Polish>Wyrzucić tego szarlatana z miasta i zacznijcie edukować naszych ludzi o takich szaleńcach.</Polish>
-		<Russian>Run this charlatan out of town and educate our people on his quackery!</Russian>
+		<Russian>Гоните прочь этого шарлатана и пусть наш народ обучится его трюкам!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SOCIAL_STAGNATION_1</Tag>
@@ -6919,7 +6920,7 @@
 		<Italian>Buon viaggio. Le persone dovrebbero conoscere il proprio posto.</Italian>
 		<Spanish>Buen viaje. La gente debería encontrar su lugar.</Spanish>
 		<Polish>Bardzo dobrze. Ludzi powinni znać swoje miejsce.</Polish>
-		<Russian>Good riddance. People should know their place.</Russian>
+		<Russian>Скатертью дорога. Люди должны знать свое место.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SPY_DISCOVERED</Tag>
@@ -6929,7 +6930,7 @@
 		<Italian>Una spia %s1:2_civ_adjective sta operando negli alti livelli del nostro governo. Cosa dobbiamo fare?</Italian>
 		<Spanish>¡Un espía %s1_civ_adjective esta operando en un puesto de alto nivel de nuestro gobierno! ¿Qué debemos hacer?</Spanish>
 		<Polish>Agent z %s1_civ_adjective szpieguje wysoko postawionych członków naszego rządu. Co powinniśmy zrobić?</Polish>
-		<Russian>A %s1_civ_adjective spy is operating on a high level in our government! What should we do?</Russian>
+		<Russian>В наших высших эшелонах власти обнаружился крот, работающий в интересах %s1_civ_adjective! Что нам делать?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SPY_DISCOVERED_1</Tag>
@@ -6939,7 +6940,7 @@
 		<Italian>Agiamo con discrezione. Offriamo al loro governo il rilascio della spia, dopo averlo interrogato.</Italian>
 		<Spanish>Seamos discretos. Entregar el espía a su gobierno, pero interrogadlo primero.</Spanish>
 		<Polish>Bądźmy dyskretni. Zaoferujcie uwolnienie szpiega, ale wcześniej go przesłuchajcie.</Polish>
-		<Russian>Be discreet. Offer the to release the spy to their government, but question him first.</Russian>
+		<Russian>Будьте осторожны. Предложите их правительству освободить своего шпиона, но прежде допросите его.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SPY_DISCOVERED_2</Tag>
@@ -6949,7 +6950,7 @@
 		<Italian>Ogni uomo ha un suo prezzo. Le sue conoscenze potrebbero tornarci molto utili.</Italian>
 		<Spanish>Todo el mundo tiene su precio. Su conocimiento puede convertirle en un recurso muy valioso.</Spanish>
 		<Polish>Każdy człowiek ma swoją cenę. Jego wiedza może być bardzo cennym atutem dla nas.</Polish>
-		<Russian>Every man has his price. His knowledge could make him a very valuable asset.</Russian>
+		<Russian>У каждого человека своя цена. Его знания могли сделать его очень ценным активом.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SPY_DISCOVERED_3</Tag>
@@ -6959,7 +6960,7 @@
 		<Italian>Questo è un atto di guerra! Certamente, i nostri cittadini reagiranno duramente alla notizia e i fornitori militari vorranno approfittare di questa occasione!</Italian>
 		<Spanish>¡Esto es un acto de guerra! Obviamente, nuestro pueblo y contratistas militares estarán a la altura.</Spanish>
 		<Polish>To jest akt wojny! Jesteśmy pewni, że nasi obywatele i najemnicy ruszą na wojnę z tego powodu!</Polish>
-		<Russian>That is an act of war! Clearly, our people and military contractors will rise to the occasion!</Russian>
+		<Russian>Это явная агрессия! Ясно, что наш народ и военные окажутся на высоте!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SPY_DISCOVERED_3_HELP</Tag>
@@ -6969,7 +6970,7 @@
 		<Italian>[ICON_BULLET]Ricevi %d1 [COLOR_UNIT_TEXT]Carri Armati[COLOR_REVERT].</Italian>
 		<Spanish>[ICON_BULLET]Recibe %d1 [COLOR_UNIT_TEXT][NUM1:Tanque:Tanques][COLOR_REVERT].</Spanish>
 		<Polish>[ICON_BULLET]Otrzymujesz %d1 [COLOR_UNIT_TEXT][NUM1:Tank:Tanks][COLOR_REVERT].</Polish>
-		<Russian>[ICON_BULLET]Receive %d1 [COLOR_UNIT_TEXT][NUM1:Tank:Tanks][COLOR_REVERT].</Russian>
+		<Russian>[ICON_BULLET]Получить %d1 [COLOR_UNIT_TEXT][NUM1:танк:танков][COLOR_REVERT].</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_STEDE_BONNET_1</Tag>
@@ -7067,7 +7068,7 @@
 		<Italian>Sì, dobbiamo pagare qualunque costa per ottenere l'indipendenza energetica.</Italian>
 		<Spanish>Sí, debemos pagar lo que sea para ganar independencia energética.</Spanish>
 		<Polish>Tak, zapłacimy każdą cenę jeżeli pozwoli to nam uzyskać niezależność energetyczną.</Polish>
-		<Russian>Yes, we must pay whatever it costs to gain energy independence.</Russian>
+		<Russian>Да, мы должны заплатить любую цену ради обретения энергетической независимости.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SYNTHETIC_FUELS_2</Tag>
@@ -7077,7 +7078,7 @@
 		<Italian>L'idea è interessante, ma rischiosa. Dai a questo ricercatore abbastanza soldi per assumere del personale e per comprare una certa quantità di equipaggiamento, ma non cedere ad ulteriori richieste.</Italian>
 		<Spanish>La idea es interesante, pero aventurada. Dad a este investigador el suficiente dinero como para que pueda emplear a un equipo y comprar nueva infraestructura, pero no cedáis de cara a otras peticiones.</Spanish>
 		<Polish>Pomysł jest interesujący, ale ryzykowny. Dajcie mu tyle pieniędzy, żeby mógł zaangażować dodatkowy personel, oraz kupić nowocześniejszy sprzęt. Nie możemy spełniać wszystkich jego zachcianek.</Polish>
-		<Russian>The idea is interesting, but risky. Give this researcher enough money to to hire a staff and buy some new equipment, but hold firm on further requests.</Russian>
+		<Russian>Любопытная идея, да больно уж рискованная. Дайте этому исследователю достаточно денег, чтобы он мог нанять персонал и купить новое оборудование, но с условием строгой отчетности.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SYNTHETIC_FUELS_3</Tag>
@@ -7087,7 +7088,7 @@
 		<Italian>Alimenterare un motore a combustione interna creando la benzina dal carbone? Non ho tempo per queste idiozie.</Italian>
 		<Spanish>¿Encenderían ustedes un motor de combustión interna con gasolina exprimida a partir del carbón? No tengo tiempo para absurdeces.</Spanish>
 		<Polish>Zasilać silnik spalinowy paliwem wyciśniętym z węgla? Nie mam czasu na takie bzdury.</Polish>
-		<Russian>You would power an internal combustion engine by squeezing gasoline out of coal? I have no time for such nonsense.</Russian>
+		<Russian>Он заведет двигатель внутреннего сгорания, выжимая бензин из угля? У меня нет времени на подобные глупости.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SYNTHETIC_FUELS_4</Tag>
@@ -7097,7 +7098,7 @@
 		<Italian>Meraviglioso.</Italian>
 		<Spanish>Maravilloso.</Spanish>
 		<Polish>Doskonale.</Polish>
-		<Russian>Wonderful.</Russian>
+		<Russian>Чудесно.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_1</Tag>
@@ -7107,7 +7108,7 @@
 		<Italian>[ICON_BULLET]probabilità del 90% di %D1%F2 a %s3_city</Italian>
 		<Spanish>[ICON_BULLET]Probabilidad del 90% de %D1%F2 en %s3_city</Spanish>
 		<Polish>[ICON_BULLET]90% szansa na %D1%F2 w mieście %s3_city</Polish>
-		<Russian>[ICON_BULLET]90% chance of %D1%F2 in %s3_city</Russian>
+		<Russian>[ICON_BULLET]90% шанс %D1%F2 в %s3_city</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_2</Tag>
@@ -7117,7 +7118,7 @@
 		<Italian>[ICON_BULLET]probabilità del 45% di %D1%F2 a %s3_city</Italian>
 		<Spanish>[ICON_BULLET]Probabilidad del 45% de %D1%F2 en %s3_city</Spanish>
 		<Polish>[ICON_BULLET]45% szansa na %D1%F2 w mieście %s3_city</Polish>
-		<Russian>[ICON_BULLET]45% chance of %D1%F2 in %s3_city</Russian>
+		<Russian>[ICON_BULLET]45% шанс %D1%F2 в %s3_city</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_3</Tag>
@@ -7127,7 +7128,7 @@
 		<Italian>[ICON_BULLET]Non intraprendere azioni.</Italian>
 		<Spanish>[ICON_BULLET]No se realizará ninguna acción.</Spanish>
 		<Polish>[ICON_BULLET]Nie podejmuj żadnych działań.</Polish>
-		<Russian>[ICON_BULLET]Take no action.</Russian>
+		<Russian>[ICON_BULLET]Не предпринимайте никаких действий.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_4</Tag>
@@ -7136,7 +7137,7 @@
 		<Italian>[ICON_BULLET]%D1%F2 a %s3_city</Italian>
 		<Spanish>[ICON_BULLET]%D1 %F2 en %s3_city</Spanish>
 		<Polish>[ICON_BULLET]%D1%F2 w mieście %s3_city</Polish>
-		<Russian>[ICON_BULLET]%D1%F2 in %s3_city</Russian>
+		<Russian>[ICON_BULLET]%D1%F2 в %s3_city</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TANNERY_GLUE_1</Tag>
@@ -7146,28 +7147,28 @@
 		<Italian>Siamo fieri dei risultati del nostro mastro conciatore.</Italian>
 		<Spanish>Aplaudamos los éxitos de nuestro maestro curtidor.</Spanish>
 		<Polish>Radujmy się z odkrycia naszego garbarza.</Polish>
-		<Russian>We applaud the accomplishments of our master tanner.</Russian>
+		<Russian>Мы преклоняемся перед этим достижением нашего кожевника.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TARPIT</Tag>
 		<English>Your troops are stuck in a tar pit.</English>
 		<French>Vos troupes sont prises au piège dans des sables mouvants.</French>
 		<Polish>Twoje wojska ugrzęzły w asfaltowym jeziorku.</Polish>
-		<Russian>Your troops are stuck in a tar pit.</Russian>
+		<Russian>Ваши отряды увязли в смоляной яме.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TARPIT_1</Tag>
 		<English>We are all going to die!</English>
 		<French>Nous allons mourrir!</French>
 		<Polish>Wszyscy zginiemy!</Polish>
-		<Russian>We are all going to die!</Russian>
+		<Russian>Мы все умрем!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TARPIT_2</Tag>
 		<English>Stay Calm and pull them out.</English>
 		<French>Restez calme et tirez-les de là.</French>
 		<Polish>Uspokójcie się i wyciągnijcie ich.</Polish>
-		<Russian>Stay Calm and pull them out.</Russian>
+		<Russian>Без паники, вытаскивайте их!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TAX_COLLECTION_RECORDS_1</Tag>
@@ -7823,7 +7824,7 @@
 		<Italian>I nostri fabbri hanno scoperto una tecnica di fonditura del ferro per produrre armi e corazze durissime in acciaio "wootz".</Italian>
 		<Spanish>Nuestros herreros han descubierto una técnica de forja del hierro para producir armas y armaduras de acero wootz, de mayor dureza.</Spanish>
 		<Polish>Nasi kowale odkryli nową technikę wytapiania żelaza do produkcji pancerzy oraz broni z bardzo wytrzymałej hartowanej stali.</Polish>
-		<Russian>Our smiths have found iron smelting technique to produce extra hard wootz steel armors and weapons.</Russian>
+		<Russian>Наши кузнецы открыли новую технику плавки железа для производства доспехов и оружия из сверхпрочной стали.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_CURE_FOR_CANCER</Tag>
@@ -7851,7 +7852,7 @@
 		<French>Les Dockers de %s2_city ont cessé le travail et font grève pour de meilleures conditions de travail!</French>
 		<Spanish>¡Los trabajadores de los muelles de %s2_city han comenzado una huelga, pidiendo mejores condiciones laborales!</Spanish>
 		<Polish>Pracownicy portowi w %s2_city przygotowują się do strajku wołając o lepsze warunki pracy!</Polish>
-		<Russian>Dock workers in %s2_city have begun a city-wide strike, calling for better working conditions!</Russian>
+		<Russian>Согласно новостям, в городе %s2_city началась всеобщая забастовка докеров, требующих улучшений условий труда!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_DRUG_TRAFFICKERS_HELP_1</Tag>
@@ -8126,7 +8127,7 @@
 		<Italian>Un partigiano locale è diventato un grande esempio per la nostra nazione!</Italian>
 		<Spanish>¡Un plebeyo local ha progresado hasta convertirse en un gran campeón de nuestro imperio!</Spanish>
 		<Polish>Lokalny mieszkaniec dorós3 i sta3 się wielkim bohaterem naszego imperium!</Polish>
-		<Russian>A local commoner has risen up to become a great champion for our empire!</Russian>
+		<Russian>Местный выходец из низов возвысился, став великим бойцом во всей нашей державе!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_HORSE_WHISPERING</Tag>
@@ -8136,7 +8137,7 @@
 		<Italian>I nostri allevatori di cavalli credono che sia possibile ottenere un maggiore legame e una più profonda comprensione dei nostri animali.[PARAGRAPH:1]Hanno bisogno di una rete più coordinata di [COLOR_BUILDING_TEXT]Stalle[COLOR_REVERT] per raggiungere questo obiettivo.</Italian>
 		<Spanish>Nuestros adiestradores de caballos creen que sería posible establecer un vínculo más profundo con nuestros animales de montura.[PARAGRAPH:1]Necesitan una red de [COLOR_BUILDING_TEXT]Establos[COLOR_REVERT] para tratar de alcanzar este objetivo.</Spanish>
 		<Polish>Nasi treserzy koni, uważają, że istnieje możliwość stworzenie głębszej więzi między jeźdźcem a koniem.[PARAGRAPH:1]Żeby to sprawdzić potrzebują większej ilości [COLOR_BUILDING_TEXT]Stajni[COLOR_REVERT] w naszym Imperium.</Polish>
-		<Russian>Our horse trainers believe that it would be possible to gain a much deeper bond with and understanding of our riding animals.[PARAGRAPH:1]They require a larger and more coordinated network of [COLOR_BUILDING_TEXT]Stables[COLOR_REVERT] to pursue this goal.</Russian>
+		<Russian>Наши дрессировщики полагают, что можно обрести гораздо более тесную связь с нашими ездовыми животными и понять их.[PARAGRAPH:1]Им требуется более крупная и более развитая сеть [COLOR_BUILDING_TEXT]Конюшен[COLOR_REVERT] для достижения этой цели.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_IDITAROD</Tag>
@@ -8600,7 +8601,7 @@
 		<Italian>Una specie locale di baco da seta è quasi estinta. C'è ancora tempo per salvarli.</Italian>
 		<Spanish>Una especie local de gusano de seda está cerca de la extinción. Aún estamos a tiempo de salvarla.</Spanish>
 		<Polish>Miejscowa odmiana jedwabnika jest na granicy wyginięcia. Jednak jest jeszcze czas by temu zaradzić!</Polish>
-		<Russian>A local species of silkworm has nearly gone extinct. There is still time to save them.</Russian>
+		<Russian>Местный вид тутового шелкопряда практически исчез. Но еще есть время его спасти.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_SLAVE_REVOLT_WARNING</Tag>
@@ -8637,7 +8638,7 @@
 		<Italian>Gli abitanti di %s2_city sono stanchi della mancanza di avanzamenti sociali. Stanno emigrando, in cerca di opportunità per migliorare le proprie vite.</Italian>
 		<Spanish>La población de la ciudad de %s2_city está harta de la falta de avances sociales. Está emigrando a otros lugares en busca de oportunidades para mejorar sus vidas.</Spanish>
 		<Polish>Poddani w mieście %s2_city muszą być dokarmiani przez pomoc społeczną. Emigrują do innych miast z braku perspektyw w swoim rodzimym mieście.</Polish>
-		<Russian>Subjects in the city of %s2_city are fed up with the lack of social advancement. They are migrating elsewhere for opportunities to better their lives.</Russian>
+		<Russian>Группа вольнодумцев в городе %s2_city тяготятся порочностью нашего общества. Они решили переселиться на чужбину в поисках лучшей доли.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_STEDE_BONNET</Tag>
@@ -8647,7 +8648,7 @@
 		<Italian>Il pirata malfamato [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] sta facenodo rotta per le nostre acque! La sua flotta è appena sopra l'orizzonte!</Italian>
 		<Spanish>¡El famoso pirata [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] ha fijado el rumbo hacia nuestras aguas, buscando saquear y causar alboroto! ¡Su flotilla se divisa sobre el horizonte!</Spanish>
 		<Polish>Sławny pirat [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] zmierza ku naszych wodom w celu rozpętania chaosu! Jego flotylla jest tuż za horyzontem!</Polish>
-		<Russian>The famous Pirate [COLOR_NEGATIVE_TEXT]Stede Bonnet[COLOR_REVERT] has set sail for our waters, seeking plunder and mayhem! His flotilla is just over the horizon!</Russian>
+		<Russian>Знаменитый пират [COLOR_NEGATIVE_TEXT]Стид Боннет[COLOR_REVERT] прибыл в наши воды ради славы и наживы! Его флотилия уже на подходе!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_STREAMLINED_GOVERNMENT_1</Tag>
@@ -8684,7 +8685,7 @@
 		<Italian>Uno scienziato di %s2_city dice di aver scoperto un modo per produrre combustibile sintetico per automobili partendo dal carbone prodotto nelle case. Chiede una grande sovvenzione del governo per sviluppare questa tecnologia.</Italian>
 		<Spanish>Un científico de %s2_city dice haber descubierto un método para producir combustible sintético para automóviles a partir del carbón producido localmente. Solicita una gran subvención al gobierno para poder desarrollar la tecnología.</Spanish>
 		<Polish>Jeden z naukowców w mieście %s2_city twierdzi, że znalazł sposób na wytworzenie syntetycznego paliwa z krajowego węgla. Prosi o znaczne rządowe dopłaty do badań, aby dalej rozwijać tę technologię.</Polish>
-		<Russian>A scientist in %s2_city claims to have discovered a way to produce synthetic automobile fuel from domestically-produced coal. He asks for a large government subsidy to develop the technology.</Russian>
+		<Russian>Ученый из города %s2_city утверждает, что открыл способ производства синтетического автомобильного топлива из местного угля. Он просит власти о крупной субсидии на разработку технологии.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_TANNERY_GLUE_1</Tag>
@@ -8694,7 +8695,7 @@
 		<Italian>La città di %s2_city ha prodotto un mastro conciatore che ha scoperto che la pelle avanzata dalla conciatura può essere trasformata in colla. La conceria locale sta ora vendendo colla a chiunque ne abbia bisogno.</Italian>
 		<Spanish>En la ciudad de %s2_city vive un maestro curtidor que ha averiguado que se pueden transformar los restos de cuero en pegamento. La curtiduría local está vendiendo ahora el pegamento a todo el mundo.</Spanish>
 		<Polish>Miasto %s2_city wypromowało garbarza, który odkrył że resztki skóry mogą być przerobione na klej i teraz sprzedaje swój nowy produkt wszystkim chętnym.</Polish>
-		<Russian>%s2_city has produced a master tanner who has found out that leftover leather can be turned into glue. The local tannery is now selling glue to everyone.</Russian>
+		<Russian>Искусный кожевник из города %s2_city обнаружил, что остатки кожи можно превратить в клей. Местная кожевенная мастерская теперь продает клей всем желающим.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_TAX_COLLECTION_RECORDS_1</Tag>
@@ -9172,7 +9173,7 @@
 		<Italian>Il Ministero del Tesoro %s1_civ_adjective ha annunciato una nuova "politica dei soldi facili". Gli analisti temono il nuovo aumento dell'inflazione.</Italian>
 		<Spanish>El Ministro de Economía %s1_civ_adjective ha anunciado una nueva política de "dinero fácil". Los analistas temen un nuevo aumento de la inflación.</Spanish>
 		<Polish>Skarb Państwa %s1_civ_adjective został zasilony "łatwymi pieniędzmi". Analitycy obawiają się wysokiej inflacji.</Polish>
-		<Russian>The %s1_civ_adjective Treasury has announced a new "easy money" policy. Analysts fear new round of inflation.</Russian>
+		<Russian>Казначейство державы %s1_civ_adjective объявило о новой политике «легких денег». Аналитики опасаются нового витка инфляции.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_FIAT_MONEY_2</Tag>
@@ -9182,7 +9183,7 @@
 		<Italian>Il Ministero del Tesoro %s1_civ_adjective rifiuta le richieste di compensare i disavanzi di bilancio allentando la riserva monetaria.</Italian>
 		<Spanish>El Ministro de Economía %s1_civ_adjective rechaza la propuesta para compensar el déficit presupuestario expandiendo la masa monetaria.</Spanish>
 		<Polish>Skarb Państwa %s1_civ_adjective odrzuca sugestie uzupełnienia deficytu budżetowego dodatkowymi pieniędzmi.</Polish>
-		<Russian>The %s1_civ_adjective Treasury rejects calls to make up for budget deficits by loosening the money supply.</Russian>
+		<Russian>Казначейство державы %s1_civ_adjective отклоняет призывы компенсировать бюджетный дефицит за счет сокращения денежной массы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_FREE_ENTERPRISE_1</Tag>
@@ -9192,7 +9193,7 @@
 		<Italian>L'agenzia spaziale %s1:2_civ_adjective ha iniziato la delocalizzazione dei lavori a società private per la costruzione delle astronavi.</Italian>
 		<Spanish>La agencia espacial %s1:2_civ_adjective ha comenzado a subcontratar la producción de naves espaciales a sociedades privadas.</Spanish>
 		<Polish>Agencja kosmiczna %s1_civ_adjective rozpoczęła współpracę z prywatną korporacją przy budowie statku kosmicznego.</Polish>
-		<Russian>The %s1_civ_adjective Space Agency has begun outsourcing spacecraft construction to private corporations.</Russian>
+		<Russian>Аэрокосмическое агентство державы %s1_civ_adjective начало передавать строительство космических кораблей частным подрядчикам.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_FREE_ENTERPRISE_2</Tag>
@@ -9201,7 +9202,7 @@
 		<Italian>L'agenzia spaziale %s1:2_civ_adjective ha preso in considerazione la possibilità di affidare la costruzione di navette ad aziende private, ma ha deciso di non affidarsi a loro.</Italian>
 		<Spanish>La agencia espacial %s1_civ_adjective ha estado considerando subcontratar la producción de naves espaciales a sociedades privadas, pero ha decidido no hacerlo.</Spanish>
 		<Polish>Agencja Kosmiczna %s1_civ_adjective miała przekazać budowę statku kosmicznego prywatnym korporacjom ale zrezygnowała z tego.</Polish>
-		<Russian>The %s1_civ_adjective Space Agency has contemplated outsourcing spacecraft construction to private corporations but decided against it.</Russian>
+		<Russian>Аэрокосмическое агентство державы %s1_civ_adjective рассматривало возможность передачи строительства космических кораблей частным корпорациям, но отказалось от этой идеи.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_GREEK_FIRE_1</Tag>
@@ -9211,7 +9212,7 @@
 		<Italian>Le navi della marina %s1:2_civ_adjective ora utilizzano una nuova arma che lancia un liquido infuocato. L'acqua non spegne le fiamme e la loro flotta può ora guadagnare la superiorità navale.</Italian>
 		<Spanish>Los navíos de la flota %s1:2_civ_adjective disponen ahora de una nueva arma que dispara un líquido ardiente. El agua no extinguirá las llamas, y su flota puede obtener ahora la supremacía naval.</Spanish>
 		<Polish>Okręty %s1_civ_adjective przewożą teraz nową broń, która wystrzeliwuje pociski z łatwopalną cieczą. Woda nie ugasi jej płomieni a ich flota dzięki temu łatwiej zdominuje morza i oceany.</Polish>
-		<Russian>Ships of the %s1_civ_adjective Navy now sport a new weapon that shoots a fiery liquid. Water will not extinguish the flames, and their fleet may now gain naval superiority.</Russian>
+		<Russian>Корабли державы %s1_civ_adjective теперь оснащены новым оружием, стреляющим огненной жидкостью. Вода не погасит это пламя, и теперь их флот может получить преимущество в морях.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WORLD_HENRY_MORGAN</Tag>

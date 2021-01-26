@@ -2357,6 +2357,7 @@
 		<English>Unquestioning Obedience Promotion Line</English>
 		<French>Spécialisation Obeisance</French>
 		<Polish>Linia Promocji: Bezwarunkowe Posłuszeństwo</Polish>
+		<Russian>Ïîðàáîòèòåëü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_URBAN_TACTICS</Tag>
@@ -3635,7 +3636,7 @@
 		<German>Barbarenjäger</German>
 		<Italian>Cacciatore di barbari</Italian>
 		<Polish>Łowca Barbarzyńców</Polish>
-		<Russian>Ãîçà âàðâàðîâ</Russian>
+		<Russian>Ãðîçà âàðâàðîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BARBARIAN_HUNTER_HELP</Tag>

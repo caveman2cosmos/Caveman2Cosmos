@@ -103,9 +103,7 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 				if szLine:
 					# Store the finished line.
 					aList.append(COLOR + szLine)
-					print ("pre", COLOR, szLine)
 					COLOR = evalColorCodes(szLine, COLOR)
-					print ("post", COLOR)
 
 				if not aWordList:
 					break # Wrapping complete
@@ -127,9 +125,7 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 
 		else: # No wrapping was necessary.
 			aList.append(COLOR + aLine)
-			print ("pre", COLOR, aLine)
 			COLOR = evalColorCodes(aLine, COLOR)
-			print ("post", COLOR)
 	# Find text height in pixels
 	dy = len(aList) * 22 + 16
 	# Find best position.

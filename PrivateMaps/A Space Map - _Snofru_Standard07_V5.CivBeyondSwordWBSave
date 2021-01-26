@@ -13,33 +13,6 @@ BeginMap
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_LOW
 EndMap
-BeginPlayer
-	StartingX=17, StartingY=42
-EndPlayer
-BeginPlayer
-	StartingX=74, StartingY=47
-EndPlayer
-BeginPlayer
-	StartingX=25, StartingY=42
-EndPlayer
-BeginPlayer
-	StartingX=24, StartingY=12
-EndPlayer
-BeginPlayer
-	StartingX=71, StartingY=16
-EndPlayer
-BeginPlayer
-	StartingX=39, StartingY=39
-EndPlayer
-BeginPlayer
-	StartingX=57, StartingY=41
-EndPlayer
-BeginPlayer
-	StartingX=86, StartingY=32
-EndPlayer
-BeginPlayer
-	StartingX=24, StartingY=32
-EndPlayer
 BeginPlot
 	x=0,y=0
 	FeatureType=FEATURE_ICE, FeatureVariety=0
@@ -17982,7 +17955,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=42
-	StartingPlot
 	BonusType=BONUS_GOLD_ORE
 	FeatureType=FEATURE_FOREST_ANCIENT, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
@@ -25183,7 +25155,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=12
-	StartingPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
@@ -25316,7 +25287,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=32
-	StartingPlot
 	BonusType=BONUS_TIN_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
@@ -26420,7 +26390,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=42
-	StartingPlot
 	BonusType=BONUS_DATES
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -41142,7 +41111,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=39
-	StartingPlot
 	BonusType=BONUS_BISON
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -59934,7 +59902,6 @@ BeginPlot
 	x=57,y=41
 	isNOfRiver
 	RiverWEDirection=3
-	StartingPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
@@ -74598,7 +74565,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=16
-	StartingPlot
 	BonusType=BONUS_STONE
 	TerrainType=TERRAIN_BADLAND
 	PlotType=2
@@ -77903,7 +77869,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=47
-	StartingPlot
 	BonusType=BONUS_DONKEY
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -90339,7 +90304,6 @@ BeginPlot
 	x=86,y=32
 	isNOfRiver
 	RiverWEDirection=3
-	StartingPlot
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2

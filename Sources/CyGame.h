@@ -57,7 +57,6 @@ public:
 	int countCivPlayersEverAlive() const;
 	int countCivTeamsAlive() const;
 	int countCivTeamsEverAlive() const;
-	int countHumanPlayersAlive() const;
 
 	int countTotalCivPower() const;
 	int countTotalNukeUnits() const;
@@ -318,6 +317,9 @@ public:
 	bool canEverSpread(int iCorporation) const;
 
 	const char* getC2CVersion() const;
+
+	void assignScenarioStartingPlots();
+
 protected:
 	CvGame& m_pGame;
 };

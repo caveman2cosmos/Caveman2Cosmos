@@ -483,7 +483,7 @@
 		<English>Early Quarry</English>
 		<French>Carrière antique</French>
 		<Polish>Wczesny Kamieniołom</Polish>
-		<Russian>Ãîðíûé ïðèèñê</Russian>
+		<Russian>Ïðèèñê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_EXTRACTION_FACILITY</Tag>
@@ -1955,17 +1955,6 @@
 		<Russian>Современные станции солнечных батарей строятся сейчас в пустынных районах, вдали от потенциально опасной погоды. Эти «солнечные фермы» можно использовать для выработки электроэнергии, очистки воды, управления фабрикой или производства топлива.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_RADIO_TOWER</Tag>
-		<English>Radio Tower</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_RADIO_TOWER_PEDIA</Tag>
-		<English>From Wikipedia: The first experiments in radio communication were conducted by Guglielmo Marconi beginning in 1894. In 1895–1896 he invented the vertical monopole or Marconi antenna, which was initially a wire suspended from a tall wooden pole. He found that the higher the antenna was suspended, the further he could transmit, the first recognition of the need for height in antennas. Radio began to be used commercially for radiotelegraphic communication around 1900. During the first 20 years of radio, long distance radio stations used long wavelengths in the very low frequency band, so even the tallest antennas were electrically short and had very low radiation resistance of 5-25 Ohms, causing excessive power losses in the ground system. Radiotelegraphy stations used huge capacitively-toploaded flattop antennas consisting of horizontal wires strung between multiple 100–300 meters (330–980 ft) steel towers to increase efficiency.
-		AM radio broadcasting began around 1920. The allocation of the medium wave frequencies for broadcasting raised the possibility of using single vertical masts without top loading. The antenna used for broadcasting through the 1920s was the T-antenna, which consisted of two masts with a wire topload strung between them, requiring twice the construction costs and land area of a single mast.
-		The rise of FM radio and television broadcasting in the 1940s and 50s created a need for even taller masts. The earlier AM broadcasting used LF and MF bands, where radio waves propagate as ground waves which follow the contour of the Earth. The ground-hugging waves allowed the signals to travel beyond the horizon, out to hundreds of kilometers. However the newer FM and TV transmitters used the VHF band, in which radio waves travel by line-of-sight, so they are limited by the visual horizon. The only way to cover larger areas is to raise the antenna high enough so it has a line-of-sight path to them.
-		Until August 8, 1991, the Warsaw radio mast was the world's tallest supported structure on land; its collapse left the KVLY/KTHI-TV mast as the tallest.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_STEEL_WATCHTOWER</Tag>
 		<English>Steel Watchtower</English>
 		<French>Tour d'observation en acier</French>
@@ -2211,6 +2200,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_BLOCKED</Tag>
 		<English>[COLOR_YELLOW] No upgrade available[COLOR_REVERT]</English>
+		<Russian>[COLOR_YELLOW] Нет доступных обновлений[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_DESTROYS_FEATURE</Tag>
@@ -2228,10 +2218,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_NEED_WORK</Tag>
 		<English>[SPACE]([COLOR_WARNING_TEXT]Need Work[COLOR_REVERT])</English>
+		<Russian>[SPACE]([COLOR_WARNING_TEXT]Клетка должна обрабатываться[COLOR_REVERT])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_NEED_GARRISON</Tag>
 		<English>[SPACE]([COLOR_WARNING_TEXT]Need Garrison[COLOR_REVERT])</English>
+		<Russian>[SPACE]([COLOR_WARNING_TEXT]Нужен гарнизон[COLOR_REVERT])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_NO</Tag>
@@ -2284,6 +2276,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_TURNS</Tag>
 		<English>[SPACE](Upgrade: %d1_Num [NUM1:Turn:Turns]</English>
+		<Russian>[SPACE](Улучшение: %d1_Num [NUM1:ход:ходов]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VERTICAL_FARM</Tag>

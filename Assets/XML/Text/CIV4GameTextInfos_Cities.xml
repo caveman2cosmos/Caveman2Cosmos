@@ -3,6 +3,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AABENRAA</Tag>
 		<English>Aabenraa</English>
+		<Russian>Обенро</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AACHEN</Tag>
@@ -15,10 +16,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AAKO</Tag>
 		<English>Aako</English>
+		<Russian>Акко</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AALBORG</Tag>
 		<English>Aalborg</English>
+		<Russian>Îëüáîðã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AANG_THONG</Tag>
@@ -33,6 +36,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AARS</Tag>
 		<English>Aars</English>
+		<Russian>Орс</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ABDERA</Tag>
@@ -83,10 +87,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ACHUAR</Tag>
 		<English>Achuar</English>
+		<Russian>Ачуар</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ACHUNI</Tag>
 		<English>Achuni</English>
+		<Russian>Ачуни</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ACIGOL</Tag>
@@ -105,6 +111,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ACUERA</Tag>
 		<English>Acuera</English>
+		<Russian>Акуэра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ADAB</Tag>
@@ -119,6 +126,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ADANA</Tag>
 		<English>Adana</English>
+		<Russian>Адана</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ADDIS_ABABA</Tag>
@@ -173,6 +181,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ADUMMATU</Tag>
 		<English>Adummatu</English>
+		<Russian>Адуммату</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ADWA</Tag>
@@ -181,14 +190,17 @@
 		<German>Adua</German>
 		<Italian>Adua</Italian>
 		<Spanish>Adua</Spanish>
+		<Russian>Адуа</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AD_DAR_AL_BAIDAA</Tag>
 		<English>ad-dar al-bayda'</English>
+		<Russian>Аддар-аль-Байда</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AFOLA</Tag>
 		<English>Afola</English>
+		<Russian>Афола</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AFYON</Tag>
@@ -221,6 +233,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AHSKELON</Tag>
 		<English>Ahskelon</English>
+		<Russian>Ашкелон</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AINU</Tag>
@@ -253,6 +266,7 @@
 		<German>Chenmet-Min</German>
 		<Italian>Khent-menu</Italian>
 		<Spanish>Jent-Min</Spanish>
+		<Russian>Îêñèðèíõ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AKITA</Tag>
@@ -268,6 +282,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AKORIS</Tag>
 		<English>Mer-Nefer</English>
+		<Russian>Ìåð-Íåôåð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AKSHAK</Tag>
@@ -298,6 +313,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ALBAFUCENS</Tag>
 		<English>Alba Fucens</English>
+		<Russian>Âåòóëîíèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ALBUQUERQUE</Tag>
@@ -335,6 +351,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ALEPPO</Tag>
 		<English>Aleppo</English>
+		<Russian>Алеппо</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ALESIA</Tag>
@@ -353,6 +370,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ALFE_MENASHE</Tag>
 		<English>Alfe Menashe</English>
+		<Russian>Альфей-Менаше</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ALICANTE</Tag>
@@ -362,6 +380,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ALICE_SPRINGS</Tag>
 		<English>Alice Springs</English>
+		<Russian>Ýëèñ-Ñïðèíãñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ALIS_UBO</Tag>
@@ -487,6 +506,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AMASYA</Tag>
 		<English>Amasya</English>
+		<Russian>Àìàñüÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AMAZONAS</Tag>
@@ -730,10 +750,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARAD</Tag>
 		<English>Arad</English>
+		<Russian>Àðàä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARAGUAIA</Tag>
 		<English>Araguaia</English>
+		<Russian>Àðàãâàéÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARAMBYS</Tag>
@@ -767,6 +789,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARDEA</Tag>
 		<English>Ardea</English>
+		<Russian>Àðäåÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARG</Tag>
@@ -775,6 +798,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARGENTEUIL</Tag>
 		<English>Argenteuil</English>
+		<Russian>Аржантей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARGENTOMAGOS</Tag>
@@ -790,6 +814,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARIMINUM</Tag>
 		<English>Ariminum</English>
+		<Russian>Àðèìèíóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARKHANGELSK</Tag>
@@ -808,6 +833,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARLINGTON</Tag>
 		<English>Arlington</English>
+		<Russian>Àðëèíãòîí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARLYN</Tag>
@@ -816,10 +842,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARMANT</Tag>
 		<English>Armant</English>
+		<Russian>Àðìàíò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARNHEM</Tag>
 		<English>Arnhem</English>
+		<Russian>Àðíõåì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARNKELL_LAG</Tag>
@@ -828,6 +856,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AROS</Tag>
 		<English>Árós</English>
+		<Russian>Àðîñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARPAD</Tag>
@@ -837,10 +866,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARPINUM</Tag>
 		<English>Arpinum</English>
+		<Russian>Àðïèíóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARRAIA</Tag>
 		<English>Arraia</English>
+		<Russian>Àððàéÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARRAPKHA</Tag>
@@ -854,6 +885,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARRETIUM</Tag>
 		<English>Arretium</English>
+		<Russian>Àððåòèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARSHADA</Tag>
@@ -906,6 +938,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ASHDOD</Tag>
 		<English>Ashdod</English>
+		<Russian>Àøäîä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ASHIKLI_HUYUK</Tag>
@@ -977,6 +1010,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ATAPUERCA</Tag>
 		<English>Atapuerca</English>
+		<Russian>Àòàïóýðêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ATHENS</Tag>
@@ -1042,6 +1076,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AVEIRO</Tag>
 		<English>Aveiro</English>
+		<Russian>Àâåéðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AVIGNON</Tag>
@@ -1057,6 +1092,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AWAN</Tag>
 		<English>Awan</English>
+		<Russian>Àâàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AWATOVI</Tag>
@@ -1113,6 +1149,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AZTALAN</Tag>
 		<English>Aztalan</English>
+		<Russian>Àöòëàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AZZIHAYASA</Tag>
@@ -1157,6 +1194,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BADARI</Tag>
 		<English>Badari</English>
+		<Russian>Íåõåáò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BAD_TIBIRA</Tag>
@@ -1170,6 +1208,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BAHIR_DAR</Tag>
 		<English>Bahir Dar</English>
+		<Russian>Áàõèð-Äàð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BAIRIKI</Tag>
@@ -1178,6 +1217,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BALAT</Tag>
 		<English>Balat</English>
+		<Russian>Ôàþì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BALKH</Tag>
@@ -1283,14 +1323,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BARIA</Tag>
 		<English>Baria</English>
+		<Russian>Áàðèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BARIUM</Tag>
 		<English>Barium</English>
+		<Russian>Áàðèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BARSIP</Tag>
 		<English>Barsip</English>
+		<Russian>Áîðñèïïà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BARUUNURT</Tag>
@@ -1331,6 +1374,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BATSHIREET</Tag>
 		<English>Batshireet</English>
+		<Russian>Áàòøèðèò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BATTAMBANG</Tag>
@@ -1340,6 +1384,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BAT_YAM</Tag>
 		<English>Bat Yam</English>
+		<Russian>Бат-Ям</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BAVAY</Tag>
@@ -1366,6 +1411,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BAYT_RAS</Tag>
 		<English>Bayt Ras</English>
+		<Russian>Áàéò Ðàñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BECAN</Tag>
@@ -1393,6 +1439,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BELISE</Tag>
 		<English>Belise</English>
+		<Russian>Áåëèç</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BELUR</Tag>
@@ -1402,6 +1449,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BENEI_BRAK</Tag>
 		<English>Benei Brak</English>
+		<Russian>Бней-Брак</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BENG_MELEA</Tag>
@@ -1411,6 +1459,7 @@
 		<Tag>TXT_KEY_CITY_NAME_BENIHASAN</Tag>
 		<English>Beni Hasan</English>
 		<French>Beni Hassan</French>
+		<Russian>Áåðåíèêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BERBERA</Tag>
@@ -1449,14 +1498,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BET_LEHEM</Tag>
 		<English>Bet Lehem</English>
+		<Russian>Áåò-Ëåõåì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BET_LID</Tag>
 		<English>Bet Lid</English>
+		<Russian>Áåò-Ëèä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BET_SHEMESH</Tag>
 		<English>Bet Shemesh</English>
+		<Russian>Áåò-Øåìåø</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BHARUCH</Tag>
@@ -1560,6 +1612,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BJORGVIN</Tag>
 		<English>Bjǫrgvin</English>
+		<Russian>Áüîðãâèí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BLACKPOOL</Tag>
@@ -1579,6 +1632,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BOGHAZKOY</Tag>
 		<English>Boghazkoy</English>
+		<Russian>Áîãàçêåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BOGRA</Tag>
@@ -1598,6 +1652,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BOMA</Tag>
 		<English>Boma</English>
+		<Russian>Áîìà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BONAMPAK</Tag>
@@ -1753,6 +1808,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BRISBANE</Tag>
 		<English>Brisbane</English>
+		<Russian>Áðèñáåí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BRISTOL</Tag>
@@ -1770,6 +1826,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BRUNDISIUM</Tag>
 		<English>Brundisium</English>
+		<Russian>Áðóíäèçèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BRUSSELS</Tag>
@@ -1889,6 +1946,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAESARAUGUSTA</Tag>
 		<English>Caesaraugusta</English>
+		<Russian>Öåçàðàóãóñòà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAESAREA</Tag>
@@ -1899,6 +1957,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAESERIA</Tag>
 		<English>Caeseria</English>
+		<Russian>Êåñàðèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAFER_HUYUK</Tag>
@@ -1972,6 +2031,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CANBERRA</Tag>
 		<English>Canberra</English>
+		<Russian>Êàíáåððà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CANNES</Tag>
@@ -2010,6 +2070,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CARCHEMISH</Tag>
 		<English>Carchemish</English>
+		<Russian>Êàðõåìèø</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CARDIFF</Tag>
@@ -2054,6 +2115,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CASTRUM_NOVUM</Tag>
 		<English>Castrum Novum</English>
+		<Russian>Êàñòðóì Íîâóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CATUMAGOS</Tag>
@@ -2117,6 +2179,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CHALCO</Tag>
 		<English>Chalco</English>
+		<Russian>×àëêî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CHALKIS</Tag>
@@ -2390,6 +2453,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CIRCEII</Tag>
 		<English>Circeii</English>
+		<Russian>Öèðöåè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CIRCEO</Tag>
@@ -2402,6 +2466,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CIVITAS_VANGIONUM</Tag>
 		<English>Civitas Vangionum</English>
+		<Russian>Íóöåðèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CLEVELAN</Tag>
@@ -2419,6 +2484,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CLUSIUM</Tag>
 		<English>Clusium</English>
+		<Russian>Êëóçèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_COATEPEC</Tag>
@@ -2519,6 +2585,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_COPENHAGEN</Tag>
 		<English>Copenhagen</English>
+		<Russian>Êîïåíãàãåí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CORDOBA</Tag>
@@ -2530,6 +2597,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CORFINIUM</Tag>
 		<English>Corfinium</English>
+		<Russian>Êîðôèíèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CORINTH</Tag>
@@ -2587,6 +2655,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CRETEIL</Tag>
 		<English>Creteil</English>
+		<Russian>Кретей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CROATA</Tag>
@@ -2808,6 +2877,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DERBY</Tag>
 		<English>Derby</English>
+		<Russian>Äåðáè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DESEROKEN</Tag>
@@ -2821,6 +2891,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DEVENTER</Tag>
 		<English>Deventer</English>
+		<Russian>Девентер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DEYONONGDADAGANA</Tag>
@@ -2829,6 +2900,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DGANIA</Tag>
 		<English>Dgania</English>
+		<Russian>Дгания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DHAKA</Tag>
@@ -2859,10 +2931,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DILMUN</Tag>
 		<English>Dilmun</English>
+		<Russian>Дильмун</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DIMONA</Tag>
 		<English>Dimona</English>
+		<Russian>Димона</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DIOMA</Tag>
@@ -2871,6 +2945,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DIOSPOLIS</Tag>
 		<English>Diospolis</English>
+		<Russian>Äèîñïîëü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DIRE_DAWA</Tag>
@@ -2996,10 +3071,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DURNOVARIA</Tag>
 		<English>Durnovaria</English>
+		<Russian>Äóðíîâàðèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DUROBRIWAS</Tag>
 		<English>Durobriwas</English>
+		<Russian>Äóðîáðèâàñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DUROCORTERON</Tag>
@@ -3076,6 +3153,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_EBURACUM</Tag>
 		<English>Eburacum</English>
+		<Russian>Ýáóðàêóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ECATEPEC</Tag>
@@ -3085,6 +3163,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ECHIGO</Tag>
 		<English>Echigo</English>
+		<Russian>Ìóðîðàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ECHIZEN</Tag>
@@ -3102,6 +3181,7 @@
 		<French>Béhédet</French>
 		<Italian>Behedet</Italian>
 		<Spanish>Behedet</Spanish>
+		<Russian>Íåôåðõåñåñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_EDZNA</Tag>
@@ -3135,10 +3215,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ELAMTU</Tag>
 		<English>Elamtu</English>
+		<Russian>Эламту</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ELAT</Tag>
 		<English>Elat</English>
+		<Russian>Эйлат</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ELCHE</Tag>
@@ -3167,10 +3249,12 @@
 		<Tag>TXT_KEY_CITY_NAME_ELLAHUN</Tag>
 		<English>Shedet</English>
 		<German>Schedet</German>
+		<Russian>Øåäåò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ELLASAR</Tag>
 		<English>Ellasar</English>
+		<Russian>Ýëëàñàð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ELLICHPUR</Tag>
@@ -3285,6 +3369,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ESBJERG</Tag>
 		<English>Esbjerg</English>
+		<Russian>Ýñáüîðã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ESHNUNNA</Tag>
@@ -3425,6 +3510,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_FREDERIKSHAVN</Tag>
 		<English>Frederikshavn</English>
+		<Russian>Ôðåäåðèêñõàâí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_FREGELLAE</Tag>
@@ -3629,6 +3715,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GEORGETOWN</Tag>
 		<English>Georgetown</English>
+		<Russian>Äæîðäæòàóí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GEPID</Tag>
@@ -3662,6 +3749,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GIVATAAIM</Tag>
 		<English>Givataaim</English>
+		<Russian>Гиватаим</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GIZA</Tag>
@@ -3675,6 +3763,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GLADSTONE</Tag>
 		<English>Gladstone</English>
+		<Russian>Ãëàäñòîí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GLOUCESTER</Tag>
@@ -3840,6 +3929,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HADERA</Tag>
 		<English>Hadera</English>
+		<Russian>Хадера</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HADERSLEV</Tag>
@@ -3880,6 +3970,7 @@
 		<Tag>TXT_KEY_CITY_NAME_HAIFA</Tag>
 		<English>Haifa</English>
 		<Italian>Haifa</Italian>
+		<Russian>Õàéôà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HAKODATE</Tag>
@@ -4075,6 +4166,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HAWARA</Tag>
 		<English>Hawara</English>
+		<Russian>Êëåîïàòðèäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HAWILA_ASSARAW</Tag>
@@ -4087,6 +4179,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HEBRON</Tag>
 		<English>Hebron</English>
+		<Russian>Õåáðîí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HECATOMPYLOS</Tag>
@@ -4182,6 +4275,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HERZELIA</Tag>
 		<English>Herzelia</English>
+		<Russian>Херцлия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HEYUAN</Tag>
@@ -4260,10 +4354,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HOBART</Tag>
 		<English>Hobart</English>
+		<Russian>Õîáàðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HOD_HASHRON</Tag>
 		<English>Hod Hashron</English>
+		<Russian>Ход-Хашрон</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HOI_CHAN</Tag>
@@ -4285,6 +4381,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HOLON</Tag>
 		<English>Holon</English>
+		<Russian>Холон</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HOLSTEBRO</Tag>
@@ -4753,6 +4850,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_JERUSALEM</Tag>
 		<English>Jerusalem</English>
+		<Russian>Èåðóñàëèì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_JIDDA</Tag>
@@ -4924,6 +5022,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KALININGRAD</Tag>
 		<English>Kaliningrad</English>
+		<Russian>Êàëèíèíãðàä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KALPI</Tag>
@@ -4984,6 +5083,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KANESH</Tag>
 		<English>Kanesh</English>
+		<Russian>Êàíåø</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KANGABA</Tag>
@@ -4992,6 +5092,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KANKAN</Tag>
 		<English>Kankan</English>
+		<Russian>Êàíêàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KANNAPOLIS</Tag>
@@ -5078,6 +5179,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KARMIEL</Tag>
 		<English>Karmiel</English>
+		<Russian>Кармель</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KARNAK</Tag>
@@ -5092,6 +5194,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KASHAMARKA</Tag>
 		<English>Kashamarka</English>
+		<Russian>Êàøàìàðêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KASKASE</Tag>
@@ -5138,6 +5241,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KAZALLU</Tag>
 		<English>Kazallu</English>
+		<Russian>Êàçàëëó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KAZAN</Tag>
@@ -5154,6 +5258,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KEFAR_SABA</Tag>
 		<English>Kefar Saba</English>
+		<Russian>Êåôàð-Ñàáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KELEIA</Tag>
@@ -5171,6 +5276,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KESH</Tag>
 		<English>Kesh</English>
+		<Russian>Êåø</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KHABAROVSK</Tag>
@@ -5214,6 +5320,7 @@
 		<German>Chemenu</German>
 		<Italian>Khemnu</Italian>
 		<Spanish>Khemnu</Spanish>
+		<Russian>Õåìåíó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KHLUNG</Tag>
@@ -5295,6 +5402,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KIROV</Tag>
 		<English>Kirov</English>
+		<Russian>Êèðîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KISH</Tag>
@@ -5350,6 +5458,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KNOXVILLE</Tag>
 		<English>Knoxville</English>
+		<Russian>Íîêñâèëë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KOBDO</Tag>
@@ -5376,6 +5485,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KOCHISHI</Tag>
 		<English>Kōchi-shi</English>
+		<Russian>Âàêàÿìà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KOJONUP</Tag>
@@ -5404,6 +5514,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KOMAGANE</Tag>
 		<English>Komagane</English>
+		<Russian>Ãèôó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KONG</Tag>
@@ -5416,11 +5527,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KONYA</Tag>
 		<English>Konya</English>
+		<Russian>Êîíüÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KOPTOS</Tag>
 		<English>Koptos</English>
 		<Spanish>Coptos</Spanish>
+		<Russian>Êîïòîñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KOROR</Tag>
@@ -5515,6 +5628,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KRYAT_SHNONE</Tag>
 		<English>Kryat Shnone</English>
+		<Russian>Кирьят-Шмона</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KUARA</Tag>
@@ -5549,6 +5663,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KULTEPE</Tag>
 		<English>Kultepe</English>
+		<Russian>Êóë-òåïå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KUMGANG</Tag>
@@ -5567,6 +5682,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KURATOVO</Tag>
 		<English>Kuratovo</English>
+		<Russian>Òþìåíü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KURA_TAWHITI</Tag>
@@ -5674,6 +5790,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KōZUKE</Tag>
 		<English>Kōzuke</English>
+		<Russian>Èòèíîìèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LABASA</Tag>
@@ -5711,6 +5828,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LALIBELA</Tag>
 		<English>Lalibela</English>
+		<Russian>Ëàëèáåëà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LAMANAIN</Tag>
@@ -5775,6 +5893,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LAURIACUM</Tag>
 		<English>Lauriacum</English>
+		<Russian>Ëàóðèàêóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LAUTOKA</Tag>
@@ -5783,6 +5902,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LAVO</Tag>
 		<English>Lavapuri</English>
+		<Russian>Ëàâàïóðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LA_LIBERTAD</Tag>
@@ -5879,6 +5999,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LE_BAM</Tag>
 		<English>Le Bam</English>
+		<Russian>Ïðîâèäåíñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LE_HAVRE</Tag>
@@ -5920,6 +6041,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LIK</Tag>
 		<English>Lik</English>
+		<Russian>Ëèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LILLE</Tag>
@@ -5942,10 +6064,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LINCOLN</Tag>
 		<English>Lincoln</English>
+		<Russian>Ëèíêîëüí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LINGAPURA</Tag>
 		<English>Lingapura</English>
+		<Russian>Ëèíãàïóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LIODHUSA</Tag>
@@ -5968,6 +6092,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LITTLE_ROCK</Tag>
 		<English>Little Rock</English>
+		<Russian>Литл-Рок</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LIUNGA_KAUPING</Tag>
@@ -5981,6 +6106,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LIXUS</Tag>
 		<English>Lixus</English>
+		<Russian>Ëèêñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LKA</Tag>
@@ -5998,6 +6124,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LOD</Tag>
 		<English>Lod</English>
+		<Russian>Ëîä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LODOSE</Tag>
@@ -6011,6 +6138,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LONDINIUM</Tag>
 		<English>Londinium</English>
+		<Russian>Ëîíäèíèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LONDON</Tag>
@@ -6086,10 +6214,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LUGANVILLE</Tag>
 		<English>Luganville</English>
+		<Russian>Ëóãàíâèëëü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LUGDUNUM</Tag>
 		<English>Lugdunum</English>
+		<Russian>Ëóãäóíà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LUGO</Tag>
@@ -6104,6 +6234,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LUKKA</Tag>
 		<English>Lukka</English>
+		<Russian>Ëóêêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LUN</Tag>
@@ -6498,6 +6629,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MEAUX</Tag>
 		<English>Meaux</English>
+		<Russian>Мо</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MECCA</Tag>
@@ -6530,6 +6662,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MEDIOLANUM</Tag>
 		<English>Mediolanum</English>
+		<Russian>Медиолан</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MEGARA</Tag>
@@ -6553,6 +6686,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MELBOURNE</Tag>
 		<English>Melbourne</English>
+		<Russian>Ìåëüáóðí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MELUHHA</Tag>
@@ -6567,10 +6701,12 @@
 		<Tag>TXT_KEY_CITY_NAME_MENDES</Tag>
 		<English>Djedet</English>
 		<Spanish>Dyedet</Spanish>
+		<Russian>Äæåäåò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MENTOR</Tag>
 		<English>Mentor</English>
+		<Russian>Ìåíòîð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MEPSILA</Tag>
@@ -6584,10 +6720,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MERIMDE</Tag>
 		<English>Merimde</English>
+		<Russian>Мерида</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MERSIN</Tag>
 		<English>Mersin</English>
+		<Russian>Ìåðñèí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MERTOLA</Tag>
@@ -6614,6 +6752,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_METOLA</Tag>
 		<English>Metola</English>
+		<Russian>Метола</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_METZ</Tag>
@@ -6623,6 +6762,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_METZADA</Tag>
 		<English>Metzada</English>
+		<Russian>Мецада</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MHLAHLANDLELA</Tag>
@@ -6638,10 +6778,12 @@
 		<Tag>TXT_KEY_CITY_NAME_MIDDELBURG</Tag>
 		<English>Middelburg</English>
 		<French>Middelbourg</French>
+		<Russian>Ìèääåëüáóðã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MIDDELFART</Tag>
 		<English>Middelfart</English>
+		<Russian>Ìèääåëüôàðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MIKI</Tag>
@@ -6661,6 +6803,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MINASPATA</Tag>
 		<English>Minaspata</English>
+		<Russian>Ìèíàñïàòà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MINNEAPOLIS</Tag>
@@ -6678,6 +6821,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MIRA</Tag>
 		<English>Mira</English>
+		<Russian>Ìèðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MIRANDA_DO_DOURO</Tag>
@@ -6687,10 +6831,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MITO</Tag>
 		<English>Mito</English>
+		<Russian>Ìèòî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MIZPE_RAMON</Tag>
 		<English>Mizpe Ramon</English>
+		<Russian>Ìèöïå-Ðàìîí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MLAMBONGWENYA</Tag>
@@ -6704,10 +6850,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MODIEIN</Tag>
 		<English>Modiein</English>
+		<Russian>Модиин</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MOKPO</Tag>
 		<English>Mokpo</English>
+		<Russian>Ìîêïî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MOMBAY</Tag>
@@ -6764,6 +6912,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MOUSTIER</Tag>
 		<English>Moustier</English>
+		<Russian>Ìóñòüå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MPONGOZA</Tag>
@@ -6802,6 +6951,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MUG</Tag>
 		<English>Mug</English>
+		<Russian>Ìóã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MUISAK</Tag>
@@ -6871,6 +7021,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MURSILASA</Tag>
 		<English>Mursilasa</English>
+		<Russian>Ìóðñèëàñà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MUSCAT</Tag>
@@ -6988,6 +7139,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NAHARIA</Tag>
 		<English>Naharia</English>
+		<Russian>Нахария</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NAHU</Tag>
@@ -7039,6 +7191,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NAKHON_SI_THAMMARAT</Tag>
 		<English>Nakhon Si Thammarat</English>
+		<Russian>Накхонситхаммарат</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NAMPO</Tag>
@@ -7092,6 +7245,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NARITA</Tag>
 		<English>Narita</English>
+		<Russian>Íàðèòà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NASHART</Tag>
@@ -7123,6 +7277,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NAVAJO</Tag>
 		<English>Navajo</English>
+		<Russian>Íàâàõî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NAXOS</Tag>
@@ -7132,6 +7287,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NAZZERATH</Tag>
 		<English>Nazzerath</English>
+		<Russian>Назарет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NCANDU</Tag>
@@ -7146,6 +7302,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NEAPOLIS</Tag>
 		<English>Neapolis</English>
+		<Russian>Íåàïîëü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NEHARDEA</Tag>
@@ -7172,10 +7329,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NEMAUSUS</Tag>
 		<English>Nemausus</English>
+		<Russian>Íåìàóñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NEMETOCENNA</Tag>
 		<English>Nemetocenna</English>
+		<Russian>Íåìåòîöåííà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NEMETODURON</Tag>
@@ -7205,6 +7364,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NERIBTUM</Tag>
 		<English>Nerebtum</English>
+		<Russian>Íåðåáòóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NERIK</Tag>
@@ -7217,10 +7377,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NESS_ZIONA</Tag>
 		<English>Ness Ziona</English>
+		<Russian>Нес-Циона</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NETANYA</Tag>
 		<English>Netanya</English>
+		<Russian>Íåòàíüÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NETT</Tag>
@@ -7315,11 +7477,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NIKSUM</Tag>
 		<English>Niksum</English>
+		<Russian>Íèêñóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NIMES</Tag>
 		<English>Nîmes</English>
 		<Spanish>Nimes</Spanish>
+		<Russian>Íèìåñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NIM_LI_PUNIT</Tag>
@@ -7346,6 +7510,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NIORO</Tag>
 		<English>Nioro</English>
+		<Russian>Íèîðî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NIPPUR</Tag>
@@ -7355,6 +7520,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NIRASAKI</Tag>
 		<English>Nirasaki</English>
+		<Russian>Êàâàñàêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NISIBIS</Tag>
@@ -7432,6 +7598,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NOUMEA</Tag>
 		<English>Noumea</English>
+		<Russian>Íîóìåà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NOVA_JUSTINIANA</Tag>
@@ -7464,6 +7631,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NOWIJO_MAGOS</Tag>
 		<English>Nowijo Magos</English>
+		<Russian>Íîâèîìàã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NUBIAN</Tag>
@@ -7484,6 +7652,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NUK</Tag>
 		<English>Nuk</English>
+		<Russian>Íóê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NUKUALOFA</Tag>
@@ -7610,6 +7779,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OLIVA</Tag>
 		<English>Oliva</English>
+		<Russian>Îëèâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OLMEC</Tag>
@@ -7627,6 +7797,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OLODUNON</Tag>
 		<English>Olodunon</English>
+		<Russian>Îëóäóíóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OLYMPIA</Tag>
@@ -7641,6 +7812,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OMBOS</Tag>
 		<English>Ombos</English>
+		<Russian>Ïàòèðèñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OMI</Tag>
@@ -7676,6 +7848,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ONJING</Tag>
 		<English>Onjing</English>
+		<Russian>Îíäæèí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ONNAGHEE</Tag>
@@ -7688,6 +7861,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ONO</Tag>
 		<English>Ono</English>
+		<Russian>Êèòàêþñþ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ONOALAGONA</Tag>
@@ -7785,10 +7959,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OSTIA</Tag>
 		<English>Ostia</English>
+		<Russian>Îñòèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OSTOGERON</Tag>
 		<English>Ostogeron</English>
+		<Russian>Îñòîãåðîí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OSTRA_AROS</Tag>
@@ -7797,10 +7973,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OTHENSWE</Tag>
 		<English>Oðenswe</English>
+		<Russian>Îäåíñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OTORONGO</Tag>
 		<English>Otorongo</English>
+		<Russian>Îòîðîíãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OTRANTO</Tag>
@@ -7810,6 +7988,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OTSUKI</Tag>
 		<English>Otsuki</English>
+		<Russian>Îöóêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OVIEDO</Tag>
@@ -7856,6 +8035,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PACHA_KAMAQ</Tag>
 		<English>Pacha Kamaq</English>
+		<Russian>Ïà÷à-Êàìàê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PADERBORN</Tag>
@@ -7881,6 +8061,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PAGO_PAGO</Tag>
 		<English>Pago Pago</English>
+		<Russian>Ïàãî-Ïàãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PAHARPUR</Tag>
@@ -7890,6 +8071,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PAIKANG</Tag>
 		<English>Paikang</English>
+		<Russian>Ïàéêàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PAISHIYAUVADA</Tag>
@@ -7921,6 +8103,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PALIKIR</Tag>
 		<English>Palikir</English>
+		<Russian>Ïàëèêèð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PALMA</Tag>
@@ -7930,6 +8113,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PALMELA</Tag>
 		<English>Palmela</English>
+		<Russian>Ïàëüìåëà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PALMYRA</Tag>
@@ -7942,6 +8126,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PALO_ALTO</Tag>
 		<English>Palo Alto</English>
+		<Russian>Ôîðò Óýðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PALTESKJA</Tag>
@@ -7960,6 +8145,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PANGI</Tag>
 		<English>Pangi</English>
+		<Russian>Ïàíãè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PAPEETE</Tag>
@@ -8030,6 +8216,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PAUI</Tag>
 		<English>Paui</English>
+		<Russian>Ïàóè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PAZURISH_DAGAN</Tag>
@@ -8071,10 +8258,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PERTH</Tag>
 		<English>Perth</English>
+		<Russian>Ïåðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PER_AMUN</Tag>
 		<English>Per-Amun</English>
+		<Russian>Ïåð-Àìóí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PESHAWAR</Tag>
@@ -8084,6 +8273,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PETAH_TIQWA</Tag>
 		<English>Petah Tiqwa</English>
+		<Russian>Ïåòàõ-Òèêâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PETERBOROUGH</Tag>
@@ -8093,6 +8283,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PETROZAVODSK</Tag>
 		<English>Petrozavodsk</English>
+		<Russian>Ïåòðîçàâîäñê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PHANAT_NIKHOM</Tag>
@@ -8197,6 +8388,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PIRAE</Tag>
 		<English>Pirae</English>
+		<Russian>Ïèðû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PIRAMESSES</Tag>
@@ -8228,6 +8420,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PITHOM</Tag>
 		<English>Pithom</English>
+		<Russian>Ôàðàôðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PITTSBURGH</Tag>
@@ -8471,6 +8664,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_QIRU</Tag>
 		<English>Q'iru</English>
+		<Russian>Êèðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_QOHAITO</Tag>
@@ -8479,6 +8673,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_QORIWAYRACHINA</Tag>
 		<English>Qoriwayrachina</English>
+		<Russian>Êîðèâàéðàõèíà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_QOSQO</Tag>
@@ -8518,6 +8713,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RAANANA</Tag>
 		<English>Raanana</English>
+		<Russian>Раанана</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RAGUSA</Tag>
@@ -8537,22 +8733,27 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RAJAVIHARA</Tag>
 		<English>Rajavihara</English>
+		<Russian>Ðàäæàâèãàð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RAKAIA</Tag>
 		<English>Rakaia</English>
+		<Russian>Ðàêàéÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RAMADI</Tag>
 		<English>Ramadi</English>
+		<Russian>Ðàìàäè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RAMAT_GAN</Tag>
 		<English>Ramat Gan</English>
+		<Russian>Рамат-Ган</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RAMLE</Tag>
 		<English>Ramle</English>
+		<Russian>Рамле</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RANCHI</Tag>
@@ -8574,6 +8775,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RAPOSA</Tag>
 		<English>Raposa</English>
+		<Russian>Ðàïîçà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RAPUWAI</Tag>
@@ -8582,10 +8784,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RAQOTE</Tag>
 		<English>Raqote</English>
+		<Russian>Àðñèíîÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RAROTONGA</Tag>
 		<English>Rarotonga</English>
+		<Russian>Ðàðîòîíãà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RASAPPA</Tag>
@@ -8626,6 +8830,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_REHOVOT</Tag>
 		<English>Rehovot</English>
+		<Russian>Реховот</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_REIMS</Tag>
@@ -8640,6 +8845,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RENO</Tag>
 		<English>Reno</English>
+		<Russian>Èíäèàíàïîëèñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_REWALSAR</Tag>
@@ -8677,6 +8883,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RIBLAH</Tag>
 		<English>Riblah</English>
+		<Russian>Рибла</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RICHMOND</Tag>
@@ -8695,10 +8902,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RISHON_LEZION</Tag>
 		<English>Rishon Lezion</English>
+		<Russian>Ришон-ле-Цион</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ROCKHAMPTON</Tag>
 		<English>Rockhampton</English>
+		<Russian>Рокгемптон</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ROENNE</Tag>
@@ -8708,6 +8917,7 @@
 		<Tag>TXT_KEY_CITY_NAME_ROERMOND</Tag>
 		<English>Roermond</English>
 		<French>Ruremonde</French>
+		<Russian>Рурмонд</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ROG</Tag>
@@ -8732,10 +8942,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ROSH_HAAYN</Tag>
 		<English>Rosh haayn</English>
+		<Russian>Рош-ха-Аин</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ROSH_HANIKRA</Tag>
 		<English>Rosh Hanikra</English>
+		<Russian>Рош-Ханикра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ROSKILDE</Tag>
@@ -8788,6 +9000,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RYBINSK</Tag>
 		<English>Rybinsk</English>
+		<Russian>Ðûáèíñê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAARBRUCKEN</Tag>
@@ -8830,6 +9043,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAINT_DENIS</Tag>
 		<English>Saint Denis</English>
+		<Russian>Ñåí-Äåíè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAINT_ETIENNE</Tag>
@@ -8839,6 +9053,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAIPAN</Tag>
 		<English>Saipan</English>
+		<Russian>Ñàéïàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAJINO</Tag>
@@ -8851,6 +9066,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAKURA</Tag>
 		<English>Sakura</English>
+		<Russian>Ñàêóðàìîðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SALAMANCA</Tag>
@@ -8918,6 +9134,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAMBHUPURA</Tag>
 		<English>Sambhupura</English>
+		<Russian>Ñàìáõóïóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAMUHA</Tag>
@@ -8941,6 +9158,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SANGSONG</Tag>
 		<English>Sangsong</English>
+		<Russian>Ñàíñîí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SANTANDER</Tag>
@@ -9006,6 +9224,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAQSAYWAMAN</Tag>
 		<English>Saqsaywaman</English>
+		<Russian>Ñàêñàéâàìàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SARABURI</Tag>
@@ -9025,6 +9244,7 @@
 		<Tag>TXT_KEY_CITY_NAME_SARAI_LITTLE</Tag>
 		<English>Little Sarai</English>
 		<French>Petit Saraï</French>
+		<Russian>Ìàëûé Ñàðàé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SARAI_NEW</Tag>
@@ -9033,6 +9253,7 @@
 		<German>Neu-Sarai</German>
 		<Italian>Nuova Saraj</Italian>
 		<Spanish>Nueva Sarai</Spanish>
+		<Russian>Íîâûé Ñàðàé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SARATOV</Tag>
@@ -9070,18 +9291,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SATAPO</Tag>
 		<English>Satapo</English>
+		<Russian>Ñàòàïî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SATICULA</Tag>
 		<English>Saticula</English>
+		<Russian>Ñàòèêóëà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SATRICUM</Tag>
 		<English>Satricum</English>
+		<Russian>Ñàòðèêóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SATURIWA</Tag>
 		<English>Saturiwa</English>
+		<Russian>Ñàòóðèâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAVANNAH</Tag>
@@ -9188,6 +9413,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SEMNA</Tag>
 		<English>Semna</English>
+		<Russian>Ñàêêàðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SENA</Tag>
@@ -9223,6 +9449,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SETIA</Tag>
 		<English>Setia</English>
+		<Russian>Ñåòèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SETUBAL</Tag>
@@ -9268,6 +9495,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SHANGIAN</Tag>
 		<English>Shangian</English>
+		<Russian>Ñÿíãàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SHAOGUAN</Tag>
@@ -9281,10 +9509,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SHAUGAWAUMIKONG</Tag>
 		<English>Shaugawaumikong</English>
+		<Russian>Шаугаваумиконг</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SHEFAYM</Tag>
 		<English>Shefaym</English>
+		<Russian>Шефайм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SHEFFIELD</Tag>
@@ -9327,6 +9557,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SHRESTAPURA</Tag>
 		<English>Shresthapura</English>
+		<Russian>Øðåñòõàïóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SHUAR</Tag>
@@ -9335,6 +9566,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SHUBAT_ENLIL</Tag>
 		<English>Shubat-Enlil</English>
+		<Russian>Øóáàò-Ýíëèëü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SHURUPPAK</Tag>
@@ -9378,6 +9610,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SIGNIA</Tag>
 		<English>Signia</English>
+		<Russian>Ñèãíèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SIGTUNA</Tag>
@@ -9387,6 +9620,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SILKEBORG</Tag>
 		<English>Silkeborg</English>
+		<Russian>Ñèëüêåáîðã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SILLUSTANI</Tag>
@@ -9400,6 +9634,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SIMHAPURA</Tag>
 		<English>Simhapura</English>
+		<Russian>Ñèìõàïóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SINES</Tag>
@@ -9429,6 +9664,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SIRMIUM</Tag>
 		<English>Sirmium</English>
+		<Russian>Ñèðìèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SITIO</Tag>
@@ -9447,6 +9683,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SKANDERBORG</Tag>
 		<English>Skanderborg</English>
+		<Russian>Ñêàíäåðáîðã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SKANNAYUTENATE</Tag>
@@ -9505,6 +9742,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SOLEB</Tag>
 		<English>Soleb</English>
+		<Russian>Àíêèðîíïîëü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SOLINGEN</Tag>
@@ -9524,6 +9762,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SORA</Tag>
 		<English>Sora</English>
+		<Russian>Âîëüòóðí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SORGUN</Tag>
@@ -9545,6 +9784,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SOUTHERN_CROSS</Tag>
 		<English>Southern Cross</English>
+		<Russian>Ñàóñåí-Êðîññ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SPAHAN</Tag>
@@ -9564,6 +9804,7 @@
 		<French>Spire</French>
 		<Italian>Spira</Italian>
 		<Spanish>Espira</Spanish>
+		<Russian>Øïåéåð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SPIRO_MOUNDS</Tag>
@@ -9597,10 +9838,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_STAFANGR</Tag>
 		<English>Stafangr</English>
+		<Russian>Ñòàâàíãåð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_STALINGRAD</Tag>
 		<English>Stalingrad</English>
+		<Russian>Ñòàëèíãðàä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_STARAYARUSSA</Tag>
@@ -9647,6 +9890,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ST_AUGUSTINE</Tag>
 		<English>St. Augustine</English>
+		<Russian>Ñåíò-Îãàñòèí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ST_LOUIS</Tag>
@@ -9658,6 +9902,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ST_PAUL</Tag>
 		<English>St. Paul</English>
+		<Russian>Сент-Пол</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ST_PETERSBURG</Tag>
@@ -9675,6 +9920,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SUESSA</Tag>
 		<English>Suessa</English>
+		<Russian>Ïóòåîëû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SUHAR</Tag>
@@ -9684,6 +9930,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SUKHOTHAI</Tag>
 		<English>Sukhothai</English>
+		<Russian>Ñóõîòàé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SULCI</Tag>
@@ -9737,6 +9984,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SURFERS_PARADISE</Tag>
 		<English>Surfer's Paradise</English>
+		<Russian>Ðàé ñåðôåðîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SURRA_MAN_RAA</Tag>
@@ -9750,6 +9998,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SURYAPARVATA</Tag>
 		<English>Sri Suryaparvata</English>
+		<Russian>Øðè-Ñóðüÿïàðâàòà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SUR_MARRATI</Tag>
@@ -9764,6 +10013,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SUTRIUM</Tag>
 		<English>Sutrium</English>
+		<Russian>Ñóòðèóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SUURIN</Tag>
@@ -9781,6 +10031,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SUZAMA</Tag>
 		<English>Suzama</English>
+		<Russian>Àñàõèãàâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SUZDAL</Tag>
@@ -9799,6 +10050,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SYDNEY</Tag>
 		<English>Sydney</English>
+		<Russian>Ñèäíåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SYRAKOUSAI</Tag>
@@ -9953,6 +10205,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TAMPA_BAY</Tag>
 		<English>Tampa</English>
+		<Russian>Тампа</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TAMRALIPTA</Tag>
@@ -9980,6 +10233,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TANJAH</Tag>
 		<English>Tanjah</English>
+		<Russian>Òàíäæà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TAOTHO</Tag>
@@ -10000,6 +10254,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TARENTUM</Tag>
 		<English>Tarentum</English>
+		<Russian>Òàðåíò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TARQON</Tag>
@@ -10025,6 +10280,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TASA</Tag>
 		<English>Tasa</English>
+		<Russian>Ïåëóñèóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TATARS</Tag>
@@ -10097,6 +10353,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TEL_AVIV</Tag>
 		<English>Tel Aviv</English>
+		<Russian>Òåëü-Àâèâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TEMAIR</Tag>
@@ -10158,6 +10415,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TEPLACINGO</Tag>
 		<English>Teplacingo</English>
+		<Russian>Òåïëà÷èíãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TEQUIXQUIAC</Tag>
@@ -10195,6 +10453,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TEXMULACAN</Tag>
 		<English>Texmulacan</English>
+		<Russian>Òåêñìóëàêàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_THAENAE</Tag>
@@ -10292,6 +10551,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TIBERIUS</Tag>
 		<English>Tiberius</English>
+		<Russian>Òèâåðèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TIDDU</Tag>
@@ -10316,6 +10576,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TIL_BARSIP</Tag>
 		<English>Til Barsip</English>
+		<Russian>Òåëü-Áîðñèï</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TIL_GARIMMU</Tag>
@@ -10334,6 +10595,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TINAWATAWA</Tag>
 		<English>Tinawatawa</English>
+		<Russian>Òèíàâàòàâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TINGI</Tag>
@@ -10383,6 +10645,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TLAPANALOYA</Tag>
 		<English>Tlapanaloya</English>
+		<Russian>Òëàïàíàëîÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TLATELOLCO</Tag>
@@ -10411,6 +10674,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TOGANE</Tag>
 		<English>Togane</English>
+		<Russian>Òîêóñèìà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TOKCHON</Tag>
@@ -10420,6 +10684,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TOKI</Tag>
 		<English>Toki</English>
+		<Russian>Áåïïó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TOKONDA</Tag>
@@ -10467,6 +10732,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TOSOTSENGEL</Tag>
 		<English>Tosotsengel</English>
+		<Russian>Òîñîöåíãåë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TOUENHO</Tag>
@@ -10493,6 +10759,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TOWNSVILLE</Tag>
 		<English>Townsville</English>
+		<Russian>Òàóíñâèëë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TOYAMA</Tag>
@@ -10521,6 +10788,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TRENT</Tag>
 		<English>Trent</English>
+		<Russian>Òðåíò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TRENTO</Tag>
@@ -10698,6 +10966,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TYRUS</Tag>
 		<English>Tyrus</English>
+		<Russian>Òèð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TZINTZUNTZEN</Tag>
@@ -10746,6 +11015,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_UKHTA</Tag>
 		<English>Ukhta</English>
+		<Russian>Óõòà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_UKPIAGVIK</Tag>
@@ -10976,6 +11246,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VELITRAE</Tag>
 		<English>Velitrae</English>
+		<Russian>Âåëèòðû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VEMB</Tag>
@@ -10984,6 +11255,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VENANGO</Tag>
 		<English>Venango</English>
+		<Russian>Âåíàíãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VENLO</Tag>
@@ -11018,6 +11290,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VERSAILLES</Tag>
 		<English>Versailles</English>
+		<Russian>Âåðñàëü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VESTRA_AROS</Tag>
@@ -11031,6 +11304,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VIANA_DO_CASTELO</Tag>
 		<English>Viana do Castelo</English>
+		<Russian>Âèàíà-äà-Êàñòåëëî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VIANGCHAN</Tag>
@@ -11040,6 +11314,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VIBORG</Tag>
 		<English>Viborg</English>
+		<Russian>Âûáîðã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VIENNA</Tag>
@@ -11076,10 +11351,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VIMAYAPURA</Tag>
 		<English>Vimayapura</English>
+		<Russian>Âèìàÿïóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VIROCONIUM</Tag>
 		<English>Viroconium</English>
+		<Russian>Âèðîêîíèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VISBY</Tag>
@@ -11089,6 +11366,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VISEU</Tag>
 		<English>Viseu</English>
+		<Russian>Âèçå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VISIGOTH</Tag>
@@ -11234,6 +11512,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WASHINGTON_DC</Tag>
 		<English>Washington D.C.</English>
+		<Russian>Âàøèíãòîí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WATA</Tag>
@@ -11439,6 +11718,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_YAVNE</Tag>
 		<English>Yavne</English>
+		<Russian>Явне</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_YAWAR_WAQAQ</Tag>
@@ -11447,6 +11727,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_YAYOI</Tag>
 		<English>Yayoi</English>
+		<Russian>Яйой</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_YEHA</Tag>
@@ -11482,6 +11763,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_YOKNEAM</Tag>
 		<English>Yokneam</English>
+		<Russian>Йокнеам</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_YOKOHAMA</Tag>
@@ -11524,6 +11806,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ZABID</Tag>
 		<English>Zabid</English>
+		<Russian>Забид</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ZAFARRAYA</Tag>
@@ -11601,6 +11884,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ZINACATEPEC</Tag>
 		<English>Zinacatepec</English>
+		<Russian>Цинакатепек</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ZITLALTEPEC</Tag>
@@ -11614,10 +11898,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ZOFIM</Tag>
 		<English>Zofim</English>
+		<Russian>Цофим</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ZORAN</Tag>
 		<English>Zoran</English>
+		<Russian>Цоран</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ZURICH</Tag>
