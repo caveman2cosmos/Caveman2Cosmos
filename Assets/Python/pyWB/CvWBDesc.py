@@ -1924,6 +1924,7 @@ Randomize Resources=0\nEndMap\n"
 	# add player starting plots if using random civs
 	def getAssignedStartingPlots(self):
 		MAP = GC.getMap()
+
 		for i in xrange(GC.getMAX_PC_PLAYERS()):
 			pPlayer = GC.getPlayer(i)
 			if pPlayer.isAlive():
@@ -1931,7 +1932,9 @@ Randomize Resources=0\nEndMap\n"
 
 				if pWBPlayer.iStartingX > -1 and pWBPlayer.iStartingY > -1:
 					pPlayer.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
-				else: pPlayer.setStartingPlot(pPlayer.findStartingPlot(True), True)
+
+		GAME.assignScenarioStartingPlots()
+
 		self.clearCache()
 		return 0 # ok
 
@@ -2010,10 +2013,10 @@ Randomize Resources=0\nEndMap\n"
 			for item in pWBPlayer.aszCityList:
 				player.addCityName(item)
 
-			if pWBPlayer.bRandomStartLocation:
-				player.setStartingPlot(player.findStartingPlot(True), True)
-			else:
+			if not pWBPlayer.bRandomStartLocation:
 				player.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
+
+		GAME.assignScenarioStartingPlots()
 
 		# Apply city data
 		for item in self.plotDesc:
