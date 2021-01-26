@@ -13,66 +13,6 @@ BeginMap
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
 EndMap
-BeginPlayer
-	StartingX=92, StartingY=33
-EndPlayer
-BeginPlayer
-	StartingX=52, StartingY=22
-EndPlayer
-BeginPlayer
-	StartingX=33, StartingY=56
-EndPlayer
-BeginPlayer
-	StartingX=73, StartingY=35
-EndPlayer
-BeginPlayer
-	StartingX=54, StartingY=17
-EndPlayer
-BeginPlayer
-	StartingX=27, StartingY=13
-EndPlayer
-BeginPlayer
-	StartingX=93, StartingY=52
-EndPlayer
-BeginPlayer
-	StartingX=39, StartingY=27
-EndPlayer
-BeginPlayer
-	StartingX=57, StartingY=60
-EndPlayer
-BeginPlayer
-	StartingX=46, StartingY=33
-EndPlayer
-BeginPlayer
-	StartingX=10, StartingY=48
-EndPlayer
-BeginPlayer
-	StartingX=69, StartingY=13
-EndPlayer
-BeginPlayer
-	StartingX=92, StartingY=44
-EndPlayer
-BeginPlayer
-	StartingX=84, StartingY=11
-EndPlayer
-BeginPlayer
-	StartingX=34, StartingY=39
-EndPlayer
-BeginPlayer
-	StartingX=65, StartingY=47
-EndPlayer
-BeginPlayer
-	StartingX=36, StartingY=44
-EndPlayer
-BeginPlayer
-	StartingX=74, StartingY=60
-EndPlayer
-BeginPlayer
-	StartingX=43, StartingY=11
-EndPlayer
-BeginPlayer
-	StartingX=67, StartingY=28
-EndPlayer
 BeginPlot
 	x=0,y=0
 	FeatureType=FEATURE_ICE, FeatureVariety=0
@@ -10493,7 +10433,6 @@ BeginPlot
 	x=10,y=48
 	RiverNSDirection=2
 	isWOfRiver
-	StartingPlot
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
@@ -28034,7 +27973,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=13
-	StartingPlot
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -34829,7 +34767,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=56
-	StartingPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -35827,7 +35764,6 @@ BeginPlot
 	x=34,y=39
 	isNOfRiver
 	RiverWEDirection=1
-	StartingPlot
 	FeatureType=FEATURE_SWAMP, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=2
@@ -38030,7 +37966,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=44
-	StartingPlot
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
@@ -41162,7 +41097,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=27
-	StartingPlot
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
@@ -45378,7 +45312,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	StartingPlot
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_JAGGED
 	PlotType=1
@@ -48761,7 +48694,6 @@ BeginPlot
 	x=46,y=33
 	RiverNSDirection=2
 	isWOfRiver
-	StartingPlot
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=2
@@ -55201,7 +55133,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=22
-	StartingPlot
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
@@ -57501,7 +57432,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=47
-	StartingPlot
 	BonusType=BONUS_FOSSIL_BEDS
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
@@ -60778,7 +60708,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	StartingPlot
 	FeatureType=FEATURE_BAMBOO, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
@@ -69329,7 +69258,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=47
-	StartingPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=1
@@ -71361,7 +71289,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=28
-	StartingPlot
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=2
@@ -73438,7 +73365,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=13
-	StartingPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
@@ -77921,7 +77847,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=35
-	StartingPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=1
@@ -79165,7 +79090,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=60
-	StartingPlot
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=1
@@ -89684,7 +89608,6 @@ BeginPlot
 	x=84,y=11
 	RiverNSDirection=2
 	isWOfRiver
-	StartingPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -98392,7 +98315,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=92,y=33
-	StartingPlot
 	BonusType=BONUS_MANGANESE
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
@@ -98460,7 +98382,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=92,y=44
-	StartingPlot
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -99566,7 +99487,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=52
-	StartingPlot
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot

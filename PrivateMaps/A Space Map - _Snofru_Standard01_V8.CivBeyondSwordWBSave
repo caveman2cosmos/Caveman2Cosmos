@@ -13,30 +13,6 @@ BeginMap
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
 EndMap
-BeginPlayer
-	StartingX=68, StartingY=46
-EndPlayer
-BeginPlayer
-	StartingX=37, StartingY=23
-EndPlayer
-BeginPlayer
-	StartingX=90, StartingY=47
-EndPlayer
-BeginPlayer
-	StartingX=52, StartingY=8
-EndPlayer
-BeginPlayer
-	StartingX=80, StartingY=20
-EndPlayer
-BeginPlayer
-	StartingX=51, StartingY=29
-EndPlayer
-BeginPlayer
-	StartingX=3, StartingY=45
-EndPlayer
-BeginPlayer
-	StartingX=118, StartingY=45
-EndPlayer
 BeginPlot
 	x=0,y=0
 	FeatureType=FEATURE_ICE, FeatureVariety=0
@@ -3413,7 +3389,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=45
-	StartingPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
@@ -38769,7 +38744,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=23
-	StartingPlot
 	BonusType=BONUS_BISON
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
@@ -53145,7 +53119,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=29
-	StartingPlot
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
@@ -54066,7 +54039,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=8
-	StartingPlot
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
@@ -71332,7 +71304,6 @@ BeginPlot
 	x=68,y=46
 	isNOfRiver
 	RiverWEDirection=3
-	StartingPlot
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -83867,7 +83838,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=20
-	StartingPlot
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
@@ -94517,7 +94487,6 @@ BeginPlot
 	x=90,y=47
 	RiverNSDirection=2
 	isWOfRiver
-	StartingPlot
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
@@ -123611,7 +123580,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=118,y=45
-	StartingPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot

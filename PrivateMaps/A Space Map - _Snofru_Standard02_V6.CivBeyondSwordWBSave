@@ -13,30 +13,6 @@ BeginMap
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
 EndMap
-BeginPlayer
-	StartingX=15, StartingY=29
-EndPlayer
-BeginPlayer
-	StartingX=1, StartingY=44
-EndPlayer
-BeginPlayer
-	StartingX=0, StartingY=12
-EndPlayer
-BeginPlayer
-	StartingX=22, StartingY=43
-EndPlayer
-BeginPlayer
-	StartingX=50, StartingY=21
-EndPlayer
-BeginPlayer
-	StartingX=32, StartingY=44
-EndPlayer
-BeginPlayer
-	StartingX=91, StartingY=35
-EndPlayer
-BeginPlayer
-	StartingX=61, StartingY=21
-EndPlayer
 BeginPlot
 	x=0,y=0
 	FeatureType=FEATURE_ICE, FeatureVariety=0
@@ -101,7 +77,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=12
-	StartingPlot
 	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -1363,7 +1338,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=44
-	StartingPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=1
@@ -16041,7 +16015,6 @@ BeginPlot
 	x=15,y=29
 	isNOfRiver
 	RiverWEDirection=1
-	StartingPlot
 	BonusType=BONUS_INDIGO
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
@@ -23427,7 +23400,6 @@ BeginPlot
 	x=22,y=43
 	RiverNSDirection=2
 	isWOfRiver
-	StartingPlot
 	BonusType=BONUS_TOBACCO
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
@@ -33988,7 +33960,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=44
-	StartingPlot
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
@@ -52884,7 +52855,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=21
-	StartingPlot
 	BonusType=BONUS_DEER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
@@ -64156,7 +64126,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=21
-	StartingPlot
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
@@ -95661,7 +95630,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=35
-	StartingPlot
 	FeatureType=FEATURE_BAMBOO, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2

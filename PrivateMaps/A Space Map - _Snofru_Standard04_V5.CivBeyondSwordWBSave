@@ -13,42 +13,6 @@ BeginMap
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
 EndMap
-BeginPlayer
-	StartingX=38, StartingY=23
-EndPlayer
-BeginPlayer
-	StartingX=17, StartingY=26
-EndPlayer
-BeginPlayer
-	StartingX=110, StartingY=19
-EndPlayer
-BeginPlayer
-	StartingX=21, StartingY=8
-EndPlayer
-BeginPlayer
-	StartingX=104, StartingY=47
-EndPlayer
-BeginPlayer
-	StartingX=13, StartingY=43
-EndPlayer
-BeginPlayer
-	StartingX=59, StartingY=32
-EndPlayer
-BeginPlayer
-	StartingX=58, StartingY=13
-EndPlayer
-BeginPlayer
-	StartingX=90, StartingY=10
-EndPlayer
-BeginPlayer
-	StartingX=86, StartingY=31
-EndPlayer
-BeginPlayer
-	StartingX=70, StartingY=8
-EndPlayer
-BeginPlayer
-	StartingX=36, StartingY=44
-EndPlayer
 BeginPlot
 	x=0,y=0
 	FeatureType=FEATURE_ICE, FeatureVariety=0
@@ -13460,7 +13424,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=43
-	StartingPlot
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
@@ -17515,7 +17478,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=26
-	StartingPlot
 	BonusType=BONUS_COCONUT
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
@@ -21635,7 +21597,6 @@ BeginPlot
 	x=21,y=8
 	RiverNSDirection=2
 	isWOfRiver
-	StartingPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -37984,7 +37945,6 @@ BeginPlot
 	x=36,y=44
 	RiverNSDirection=2
 	isWOfRiver
-	StartingPlot
 	BonusType=BONUS_IRON_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
@@ -40001,7 +39961,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	StartingPlot
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -61435,7 +61394,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=13
-	StartingPlot
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
 EndPlot
@@ -62583,7 +62541,6 @@ BeginPlot
 	x=59,y=32
 	RiverNSDirection=2
 	isWOfRiver
-	StartingPlot
 	BonusType=BONUS_ELEPHANTS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
@@ -74102,7 +74059,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=8
-	StartingPlot
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -91435,7 +91391,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=31
-	StartingPlot
 	FeatureType=FEATURE_FOREST, FeatureVariety=2
 	TerrainType=TERRAIN_JAGGED
 	PlotType=1
@@ -95572,7 +95527,6 @@ BeginPlot
 	x=90,y=10
 	isNOfRiver
 	RiverWEDirection=3
-	StartingPlot
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=1
@@ -110812,7 +110766,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=104,y=47
-	StartingPlot
 	BonusType=BONUS_BISON
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
@@ -117042,7 +116995,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=19
-	StartingPlot
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
