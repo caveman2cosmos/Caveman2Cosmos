@@ -766,7 +766,7 @@
 			<Description>TXT_KEY_STRATEGY_NAVAL</Description>
 			<Civilopedia>TXT_KEY_STRATEGY_NAVAL_PEDIA</Civilopedia>
 		</NewConceptInfo>
-                <NewConceptInfo>
+		<NewConceptInfo>
 			<Type>CONCEPT_STRATEGY_SPACE_EXPLORATION</Type>
 			<Description>TXT_KEY_STRATEGY_SPACE_EXPLORATION</Description>
 			<Civilopedia>TXT_KEY_STRATEGY_SPACE_EXPLORATION_PEDIA</Civilopedia>
