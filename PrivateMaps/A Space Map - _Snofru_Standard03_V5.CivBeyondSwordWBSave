@@ -13,30 +13,6 @@ BeginMap
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
 EndMap
-BeginPlayer
-	StartingX=48, StartingY=29
-EndPlayer
-BeginPlayer
-	StartingX=41, StartingY=44
-EndPlayer
-BeginPlayer
-	StartingX=6, StartingY=18
-EndPlayer
-BeginPlayer
-	StartingX=107, StartingY=47
-EndPlayer
-BeginPlayer
-	StartingX=99, StartingY=35
-EndPlayer
-BeginPlayer
-	StartingX=69, StartingY=24
-EndPlayer
-BeginPlayer
-	StartingX=86, StartingY=37
-EndPlayer
-BeginPlayer
-	StartingX=84, StartingY=23
-EndPlayer
 BeginPlot
 	x=0,y=0
 	FeatureType=FEATURE_ICE, FeatureVariety=0
@@ -6280,7 +6256,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=18
-	StartingPlot
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
@@ -42499,7 +42474,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=44
-	StartingPlot
 	BonusType=BONUS_DONKEY
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -49700,7 +49674,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=29
-	StartingPlot
 	BonusType=BONUS_ELEPHANTS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
@@ -71312,7 +71285,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=24
-	StartingPlot
 	BonusType=BONUS_PLATINUM_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
@@ -86974,7 +86946,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=23
-	StartingPlot
 	BonusType=BONUS_COAL
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
@@ -89170,7 +89141,6 @@ BeginPlot
 	x=86,y=37
 	RiverNSDirection=2
 	isWOfRiver
-	StartingPlot
 	BonusType=BONUS_POTATOES
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
@@ -102560,7 +102530,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=35
-	StartingPlot
 	BonusType=BONUS_TITANIUM_ORE
 	FeatureType=FEATURE_BAMBOO, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
@@ -110955,7 +110924,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=107,y=47
-	StartingPlot
 	BonusType=BONUS_BAUXITE_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND

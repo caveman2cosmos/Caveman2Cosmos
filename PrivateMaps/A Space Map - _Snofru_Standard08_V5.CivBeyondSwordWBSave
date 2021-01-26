@@ -13,66 +13,6 @@ BeginMap
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
 EndMap
-BeginPlayer
-	StartingX=116, StartingY=10
-EndPlayer
-BeginPlayer
-	StartingX=87, StartingY=22
-EndPlayer
-BeginPlayer
-	StartingX=63, StartingY=33
-EndPlayer
-BeginPlayer
-	StartingX=104, StartingY=34
-EndPlayer
-BeginPlayer
-	StartingX=75, StartingY=39
-EndPlayer
-BeginPlayer
-	StartingX=24, StartingY=22
-EndPlayer
-BeginPlayer
-	StartingX=13, StartingY=37
-EndPlayer
-BeginPlayer
-	StartingX=12, StartingY=28
-EndPlayer
-BeginPlayer
-	StartingX=50, StartingY=9
-EndPlayer
-BeginPlayer
-	StartingX=120, StartingY=26
-EndPlayer
-BeginPlayer
-	StartingX=33, StartingY=44
-EndPlayer
-BeginPlayer
-	StartingX=35, StartingY=16
-EndPlayer
-BeginPlayer
-	StartingX=45, StartingY=43
-EndPlayer
-BeginPlayer
-	StartingX=86, StartingY=34
-EndPlayer
-BeginPlayer
-	StartingX=19, StartingY=47
-EndPlayer
-BeginPlayer
-	StartingX=49, StartingY=32
-EndPlayer
-BeginPlayer
-	StartingX=67, StartingY=19
-EndPlayer
-BeginPlayer
-	StartingX=95, StartingY=16
-EndPlayer
-BeginPlayer
-	StartingX=107, StartingY=23
-EndPlayer
-BeginPlayer
-	StartingX=11, StartingY=25
-EndPlayer
 BeginPlot
 	x=0,y=0
 	FeatureType=FEATURE_ICE, FeatureVariety=0
@@ -11526,7 +11466,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=25
-	StartingPlot
 	BonusType=BONUS_BAUXITE_ORE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_ROCKY
@@ -12577,7 +12516,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=28
-	StartingPlot
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
 	PlotType=2
@@ -13671,7 +13609,6 @@ BeginPlot
 	x=13,y=37
 	RiverNSDirection=2
 	isWOfRiver
-	StartingPlot
 	BonusType=BONUS_PAPYRUS
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
@@ -20025,7 +19962,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=47
-	StartingPlot
 	BonusType=BONUS_TOBACCO
 	FeatureType=FEATURE_VERY_TALL_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
@@ -25116,7 +25052,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=22
-	StartingPlot
 	BonusType=BONUS_PRIME_TIMBER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
@@ -34585,7 +34520,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=44
-	StartingPlot
 	FeatureType=FEATURE_TAR_PIT, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
@@ -36522,7 +36456,6 @@ BeginPlot
 	x=35,y=16
 	isNOfRiver
 	RiverWEDirection=3
-	StartingPlot
 	BonusType=BONUS_HORSE
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
@@ -47276,7 +47209,6 @@ BeginPlot
 	x=45,y=43
 	isNOfRiver
 	RiverWEDirection=1
-	StartingPlot
 	BonusType=BONUS_OLIVES
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
@@ -51417,7 +51349,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=32
-	StartingPlot
 	BonusType=BONUS_PAPAYA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
@@ -52356,7 +52287,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=9
-	StartingPlot
 	BonusType=BONUS_OPIUM
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
@@ -66000,7 +65930,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=33
-	StartingPlot
 	BonusType=BONUS_LEMONS
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
@@ -70107,7 +70036,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
-	StartingPlot
 	BonusType=BONUS_LEMONS
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
@@ -78714,7 +78642,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	StartingPlot
 	BonusType=BONUS_OLIVES
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
@@ -90135,7 +90062,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=34
-	StartingPlot
 	BonusType=BONUS_BANANA
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
@@ -91110,7 +91036,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=22
-	StartingPlot
 	BonusType=BONUS_FOSSIL_BEDS
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
@@ -99385,7 +99310,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=16
-	StartingPlot
 	BonusType=BONUS_WHEAT
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -109013,7 +108937,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=104,y=34
-	StartingPlot
 	BonusType=BONUS_URANIUM
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -112093,7 +112016,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=107,y=23
-	StartingPlot
 	BonusType=BONUS_DATES
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -121435,7 +121357,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=116,y=10
-	StartingPlot
 	BonusType=BONUS_OBSIDIAN
 	TerrainType=TERRAIN_BARREN
 	PlotType=2
@@ -125716,7 +125637,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=120,y=26
-	StartingPlot
 	BonusType=BONUS_OBSIDIAN
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
 	TerrainType=TERRAIN_ROCKY
