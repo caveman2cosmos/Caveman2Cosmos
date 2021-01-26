@@ -42,7 +42,7 @@ FONT_LEFT_JUSTIFY=1<<0
 # if the string is non unicode, convert it to unicode by decoding it using utf-8
 def convertToUnicode(s):
 	if isinstance(s, str):
-		return s.decode("utf-8")
+		return s.decode("iso8859")
 	return s
 
 # if the string is unicode, convert it to str by encoding it using utf-8
@@ -55,7 +55,8 @@ def convertToStr(txt):
 			if ordinal > 255:
 				txt[i] = '?'
 			i += 1
-		return txt.encode("utf-8")
+		 # Toffer - "iso8859" = "latin-1". Tried UTF-8 here, caused problem for german characters like "ß".
+		return txt.encode("iso8859")
 	return txt
 
 def remove_diacriticals(txt):
@@ -65,7 +66,8 @@ def remove_diacriticals(txt):
 		('é', 'e'), ('è', 'e'), ('ê', 'e'),
 		('ù', 'u'), ('û', 'u'), ('ü', 'u'),
 		('ô', 'o'), ('õ', 'o'), ('ö', 'o'),
-		('ç', 'c'), ('î', 'i'), ('ï', 'i')
+		('ç', 'c'), ('î', 'i'), ('ï', 'i'),
+		('ß', 'ss')
 	]
 	while accent:
 		a, b = accent.pop()
