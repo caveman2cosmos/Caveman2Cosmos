@@ -60,7 +60,7 @@ def convertToStr(txt):
 	return txt
 
 # Used to reduce text to ascii, exe enforce ascii in some cases.
-def remove_diacriticals(txt):
+def convertToAscii(txt):
 	txt = convertToStr(txt)
 	# convert to ascii equivalent where possible.
 	accent = [
