@@ -28445,38 +28445,40 @@ BuildTypes CvUnitAI::AI_findBestFort(const CvPlot* pPlot) const
 
 	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 	{
-		const BuildTypes eBuild = ((BuildTypes)iI);
+		const BuildTypes eBuild = static_cast<BuildTypes>(iI);
 
 		if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
 		{
 			const CvImprovementInfo& kImprovement = GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement());
 			// Is fort or tower
-			if (kImprovement.isActsAsCity() || kImprovement.getVisibilityChange() > 0)
+			if ((kImprovement.isActsAsCity() || kImprovement.getVisibilityChange() > 0)
+			&& canBuild(pPlot, eBuild)
+			// If not (plot in workable radius of any city and is tower line improvement); 'plot in workable radius of owned city' might be better?
+			// Toffer - The next condition seems iffy considering the above comment about it...
+			&& (!pPlot->isCityRadius() || kImprovement.isActsAsCity()))
 			{
-				if (canBuild(pPlot, eBuild))
+				int iValue =
+				(
+					kImprovement.getDefenseModifier() * 100
+					+
+					kImprovement.getVisibilityChange() * 1000 // Each visibility equals 10% defense mod
+				);
+				if (kImprovement.isActsAsCity())
 				{
-					// If not (plot in workable radius of any city and is tower line improvement); 'plot in workable radius of owned city' might be better?
-					if (!(pPlot->isCityRadius() && !kImprovement.isActsAsCity()))
-					{
-						int iValue = kImprovement.getDefenseModifier() * 100;
-						if (kImprovement.isActsAsCity())
-						{
-							iValue += 5000;
-						}
-						if (kImprovement.isZOCSource())
-						{
-							iValue += 5000;
-						}
-						if (iValue > 0)
-						{
-							iValue /= (GC.getBuildInfo(eBuild).getTime() + 1);
+					iValue += 5000; // Equals 50% defense mod
+				}
+				if (kImprovement.isZOCSource())
+				{
+					iValue += 5000; // Equals 50% defense mod
+				}
+				if (iValue > 0)
+				{
+					iValue /= (GC.getBuildInfo(eBuild).getTime() + 1);
 
-							if (iValue > iBestTempBuildValue)
-							{
-								iBestTempBuildValue = iValue;
-								eBestTempBuild = eBuild;
-							}
-						}
+					if (iValue > iBestTempBuildValue)
+					{
+						iBestTempBuildValue = iValue;
+						eBestTempBuild = eBuild;
 					}
 				}
 			}
