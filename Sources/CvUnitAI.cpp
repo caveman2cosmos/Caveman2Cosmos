@@ -28471,7 +28471,7 @@ BuildTypes CvUnitAI::AI_findBestFort(const CvPlot* pPlot) const
 						{
 							iValue /= (GC.getBuildInfo(eBuild).getTime() + 1);
 
-							if (iValue < iBestTempBuildValue)
+							if (iValue > iBestTempBuildValue)
 							{
 								iBestTempBuildValue = iValue;
 								eBestTempBuild = eBuild;
