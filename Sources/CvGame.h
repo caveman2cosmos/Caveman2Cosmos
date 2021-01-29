@@ -55,6 +55,7 @@ public:
 	void initFreeState();
 	DllExport void initFreeUnits();
 
+	void assignScenarioStartingPlots();
 	void assignStartingPlots();
 	void normalizeStartingPlots();
 

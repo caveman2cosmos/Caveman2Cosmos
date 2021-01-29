@@ -151,7 +151,6 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 	{
 		if (!m_pPlotCondition->evaluate(pUnit->plot()->getGameObject()))
 		{
-			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES"));
 			m_pPlotCondition->buildDisplayString(szBuffer);
 		}
@@ -161,7 +160,6 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 	{
 		if (!m_pUnitCondition->evaluate(pUnit->getGameObject()))
 		{
-			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES"));
 			m_pUnitCondition->buildDisplayString(szBuffer);
 		}

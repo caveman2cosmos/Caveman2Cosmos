@@ -2064,8 +2064,7 @@ void CvDLLWidgetData::parseHurryHelp(CvWidgetDataStruct &widgetDataStruct, CvWSt
 			{
 				if (GC.getCivicInfo((CivicTypes)iI).isHurry(widgetDataStruct.m_iData1))
 				{
-					CvWString szTempBuffer = NEWLINE + gDLL->getText("TXT_KEY_REQUIRES");
-					setListHelp(szBuffer, szTempBuffer, GC.getCivicInfo((CivicTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+					setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getCivicInfo((CivicTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 					bFirst = false;
 				}
 			}
@@ -2074,8 +2073,7 @@ void CvDLLWidgetData::parseHurryHelp(CvWidgetDataStruct &widgetDataStruct, CvWSt
 			{
 				if (GC.getBuildingInfo((BuildingTypes)iI).isHurry(widgetDataStruct.m_iData1))
 				{
-					CvWString szTempBuffer = NEWLINE + gDLL->getText("TXT_KEY_REQUIRES");
-					setListHelp(szBuffer, szTempBuffer, GC.getBuildingInfo((BuildingTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+					setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getBuildingInfo((BuildingTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 					bFirst = false;
 				}
 			}
@@ -2148,8 +2146,7 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 				{
 					if (getWorldSizeMaxConscript((CivicTypes)iI) > 0)
 					{
-						CvWString szTempBuffer = NEWLINE + gDLL->getText("TXT_KEY_REQUIRES");
-						setListHelp(szBuffer, szTempBuffer, GC.getCivicInfo((CivicTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+						setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getCivicInfo((CivicTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 						bFirst = false;
 					}
 				}
@@ -3742,40 +3739,30 @@ void CvDLLWidgetData::parseFreeCitizenHelp(CvWidgetDataStruct &widgetDataStruct,
 void CvDLLWidgetData::parseDisabledCitizenHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
-	if (pHeadSelectedCity != NULL)
+
+	if (pHeadSelectedCity != NULL && widgetDataStruct.m_iData1 != NO_SPECIALIST)
 	{
-		if (widgetDataStruct.m_iData1 != NO_SPECIALIST)
+		GAMETEXT.parseSpecialistHelpActual(szBuffer, (SpecialistTypes)widgetDataStruct.m_iData1, pHeadSelectedCity, false, 1);
+
+		if (!pHeadSelectedCity->isSpecialistValid(((SpecialistTypes)widgetDataStruct.m_iData1), 1))
 		{
-// BUG - Specialist Actual Effects - start
-			GAMETEXT.parseSpecialistHelpActual(szBuffer, ((SpecialistTypes)(widgetDataStruct.m_iData1)), pHeadSelectedCity, false, 1);
-// BUG - Specialist Actual Effects - end
+			bool bFirst = true;
 
-			if (!(pHeadSelectedCity->isSpecialistValid(((SpecialistTypes)(widgetDataStruct.m_iData1)), 1)))
+			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				bool bFirst = true;
+				const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
-				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+				if (GC.getBuildingInfo(eLoopBuilding).getSpecialistCount(widgetDataStruct.m_iData1) > 0
+				&& pHeadSelectedCity->getNumBuilding(eLoopBuilding) <= 0 && !isLimitedWonder(eLoopBuilding)
+				&& (GC.getBuildingInfo(eLoopBuilding).getSpecialBuildingType() == NO_SPECIALBUILDING || pHeadSelectedCity->canConstruct(eLoopBuilding)))
 				{
-					const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-
-					if (GC.getBuildingInfo(eLoopBuilding).getSpecialistCount(widgetDataStruct.m_iData1) > 0)
-					{
-						if ((pHeadSelectedCity->getNumBuilding(eLoopBuilding) <= 0) && !isLimitedWonder(eLoopBuilding))
-						{
-							if ((GC.getBuildingInfo(eLoopBuilding).getSpecialBuildingType() == NO_SPECIALBUILDING) || pHeadSelectedCity->canConstruct(eLoopBuilding))
-							{
-								CvWString szTempBuffer = NEWLINE + gDLL->getText("TXT_KEY_REQUIRES");
-								setListHelp(szBuffer, szTempBuffer, GC.getBuildingInfo(eLoopBuilding).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
-								bFirst = false;
-							}
-						}
-					}
+					setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getBuildingInfo(eLoopBuilding).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+					bFirst = false;
 				}
-
-				if (!bFirst)
-				{
-					szBuffer.append(ENDCOLR);
-				}
+			}
+			if (!bFirst)
+			{
+				szBuffer.append(ENDCOLR);
 			}
 		}
 	}
