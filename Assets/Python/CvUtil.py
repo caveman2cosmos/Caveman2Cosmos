@@ -53,14 +53,16 @@ def convertToStr(txt):
 		while i < length:
 			ordinal = ord(txt[i])
 			if ordinal > 255:
-				txt[i] = '?'
+				txt = txt[:i] + '?' + txt[i+1:]
 			i += 1
 		 # Toffer - "iso8859" = "latin-1". Tried UTF-8 here, caused problem for german characters like "ß".
 		return txt.encode("iso8859")
 	return txt
 
-def remove_diacriticals(txt):
+# Used to reduce text to ascii, exe enforce ascii in some cases.
+def convertToAscii(txt):
 	txt = convertToStr(txt)
+	# convert to ascii equivalent where possible.
 	accent = [
 		('à', 'a'), ('ä', 'a'), ('â', 'a'),
 		('é', 'e'), ('è', 'e'), ('ê', 'e'),
@@ -72,6 +74,14 @@ def remove_diacriticals(txt):
 	while accent:
 		a, b = accent.pop()
 		txt = txt.replace(a, b)
+	# get rid of any "above ascii ordinals" that may be left here.
+	i = 0
+	length = len(txt)
+	while i < length:
+		ordinal = ord(txt[i])
+		if ordinal > 128:
+			txt = txt[:i] + '?' + txt[i+1:]
+		i += 1
 	return txt
 
 class RedirectDebug:

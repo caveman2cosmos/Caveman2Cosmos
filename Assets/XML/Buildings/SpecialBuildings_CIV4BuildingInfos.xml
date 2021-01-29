@@ -12815,7 +12815,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ACADEMY</Type>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
