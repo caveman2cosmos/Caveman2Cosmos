@@ -28437,7 +28437,7 @@ bool CvUnitAI::AI_claimForts(CvReachablePlotSet* pReachablePlots, int iMinValue,
 	return false;
 }
 
-BuildTypes CvUnitAI::AI_findBestFort(CvPlot* pPlot) const
+BuildTypes CvUnitAI::AI_findBestFort(const CvPlot* pPlot) const
 {
 	PROFILE_FUNC();
 	int iBestTempBuildValue = 0;
@@ -28445,7 +28445,7 @@ BuildTypes CvUnitAI::AI_findBestFort(CvPlot* pPlot) const
 
 	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 	{
-		BuildTypes eBuild = ((BuildTypes)iI);
+		const BuildTypes eBuild = ((BuildTypes)iI);
 
 		if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
 		{
@@ -28467,13 +28467,15 @@ BuildTypes CvUnitAI::AI_findBestFort(CvPlot* pPlot) const
 						{
 							iValue += 5000;
 						}
-
-						iValue /= (GC.getBuildInfo(eBuild).getTime() + 1);
-
-						if (iValue < iBestTempBuildValue)
+						if (iValue > 0)
 						{
-							iBestTempBuildValue = iValue;
-							eBestTempBuild = eBuild;
+							iValue /= (GC.getBuildInfo(eBuild).getTime() + 1);
+
+							if (iValue < iBestTempBuildValue)
+							{
+								iBestTempBuildValue = iValue;
+								eBestTempBuild = eBuild;
+							}
 						}
 					}
 				}
@@ -28488,19 +28490,19 @@ bool CvUnitAI::AI_StrategicForts()
 {
 	PROFILE_FUNC();
 
-	int iBestValue = 0;
-	int iPathTurns = 0;
-	BuildTypes eBestBuild = NO_BUILD;
-	CvPlot* pLoopPlot = NULL;
-	CvPlot* pBestPlot = NULL;
-	CvPlot* endTurnPlot = NULL;
-	bool bWarPlan = GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0;
 	if (isNPC())
 	{
 		return false;
 	}
+	int iBestValue = 0;
+	int iPathTurns = 0;
+	BuildTypes eBestBuild = NO_BUILD;
+	CvPlot* pLoopPlot = NULL;
+	const CvPlot* pBestPlot = NULL;
+	const CvPlot* endTurnPlot = NULL;
+	const bool bWarPlan = GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0;
 
-	CvPlayerAI& kOwner = GET_PLAYER(getOwner());
+	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	CvReachablePlotSet plotSet(getGroup(), 0, MAX_INT);
 
 	for(CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
@@ -28513,7 +28515,7 @@ bool CvUnitAI::AI_StrategicForts()
 			{
 				if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT)
 				{
-					BuildTypes eBestTempBuild = AI_findBestFort(pLoopPlot);
+					const BuildTypes eBestTempBuild = AI_findBestFort(pLoopPlot);
 
 					if (eBestTempBuild != NO_BUILD)
 					{
