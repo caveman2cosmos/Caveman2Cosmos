@@ -9,10 +9,10 @@ def find_all_functions(py_file):
         a = ast.parse(code, py_file)
         #return [n.name for n in ast.walk(a) if type(n) == ast.FunctionDef]
         return [n.name for n in ast.iter_child_nodes(a) if type(n) == ast.FunctionDef]
-    except SyntaxError as e:
-        print str(e)
-    except Exception as e:
-        print str(e)
+    except SyntaxError as ex:
+        print(ex)
+    except Exception as ex:
+        print(ex)
     return []
 
 def namespace(element):
