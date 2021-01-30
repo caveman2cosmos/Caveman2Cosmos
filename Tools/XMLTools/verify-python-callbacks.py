@@ -58,9 +58,9 @@ def verify_callbacks(xml_files, py_files):
 
 def get_files(root, file_pattern):
     matches = []
-    for root, _, filenames in os.walk(root):
+    for directory_path, _, filenames in os.walk(root):
         for filename in fnmatch.filter(filenames, file_pattern):
-            matches.append(os.path.join(root, filename))
+            matches.append(os.path.join(directory_path, filename))
     return matches
 
 CIV4_ASSETS = r'C:\Program Files (x86)\Civilization IV Complete\Civ4\Assets\Python'
