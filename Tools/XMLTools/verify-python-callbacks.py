@@ -2,6 +2,8 @@ import ast
 import glob
 import re
 from lxml import etree
+import os
+import fnmatch
 
 def find_all_functions(py_file):
     try:
@@ -55,8 +57,6 @@ def verify_callbacks(xml_files, py_files):
             etree.ElementTree(root).write(filename, encoding="utf-8", xml_declaration=True, pretty_print=True)
 
 def get_files(root, file_pattern):
-    import os
-    import fnmatch
     matches = []
     for root, _, filenames in os.walk(root):
         for filename in fnmatch.filter(filenames, file_pattern):
