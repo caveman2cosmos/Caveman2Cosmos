@@ -1325,13 +1325,13 @@ bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildT
 {
 	PROFILE_FUNC();
 
-	int iBestValue = 0;
 	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	const ImprovementTypes eRuins = GC.getIMPROVEMENT_CITY_RUINS();
 	const bool bSafeAutomation = kOwner.isOption(PLAYEROPTION_SAFE_AUTOMATION);
 
 	BuildTypes eBestBuild = NO_BUILD;
 	CvPlot* pBestPlot = NULL;
+	int iBestValue = 0;
 
 	for (int iPass = 0; iPass < 2; iPass++)
 	{
@@ -1347,48 +1347,47 @@ bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildT
 
 				if (iValue > iBestValue)
 				{
-					BuildTypes eBuild = pCity->AI_getBestBuild(iI);
-					FAssertMsg(eBuild < GC.getNumBuildInfos(), "Invalid Build");
+					const BuildTypes eBuild = pCity->AI_getBestBuild(iI);
 
-					if (eBuild != NO_BUILD)
+					if (eBuild == NO_BUILD || !canBuild(pLoopPlot, eBuild))
 					{
-						if (0 == iPass)
+						continue;
+					}
+					if (iPass == 0)
+					{
+						iBestValue = iValue;
+						pBestPlot = pLoopPlot;
+						eBestBuild = eBuild;
+						continue;
+					}
+					// Second pass
+					int iPathTurns;
+					if ((!pBestPlot->isVisible(getTeam(),false) || !pBestPlot->isVisibleEnemyUnit(this))
+					&& generatePath(pBestPlot, 0, true, &iPathTurns))
+					{
+						// XXX take advantage of range (warning... this could lead to some units doing nothing...)
+						int iMaxWorkers = 1;
+						if (getPathMovementRemaining() == 0)
 						{
+							iPathTurns++;
+						}
+						else if (iPathTurns <= 1)
+						{
+							iMaxWorkers = AI_calculatePlotWorkersNeeded(pLoopPlot, eBuild);
+						}
+						if (pUnit != NULL && pUnit->plot()->isCity() && iPathTurns == 1 && getPathMovementRemaining() > 0)
+						{
+							iMaxWorkers += 10;
+						}
+						if (kOwner.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_BUILD, getGroup()) < iMaxWorkers)
+						{
+							// XXX - This could be improved greatly by looking at the real build time
+							//	and other factors when deciding whether to stack.
+							iValue /= 1 + iPathTurns;
+
 							iBestValue = iValue;
 							pBestPlot = pLoopPlot;
 							eBestBuild = eBuild;
-						}
-						else if ((!pLoopPlot->isVisible(getTeam(),false) || !pLoopPlot->isVisibleEnemyUnit(this)) && canBuild(pLoopPlot, eBuild))
-						{
-							int iPathTurns;
-							if (generatePath(pLoopPlot, 0, true, &iPathTurns))
-							{
-								// XXX take advantage of range (warning... this could lead to some units doing nothing...)
-								int iMaxWorkers = 1;
-								if (getPathMovementRemaining() == 0)
-								{
-									iPathTurns++;
-								}
-								else if (iPathTurns <= 1)
-								{
-									iMaxWorkers = AI_calculatePlotWorkersNeeded(pLoopPlot, eBuild);
-								}
-								if (pUnit != NULL && pUnit->plot()->isCity() && iPathTurns == 1 && getPathMovementRemaining() > 0)
-								{
-									iMaxWorkers += 10;
-								}
-								if (kOwner.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_BUILD, getGroup()) < iMaxWorkers)
-								{
-									//XXX this could be improved greatly by
-									//looking at the real build time and other factors
-									//when deciding whether to stack.
-									iValue /= (iPathTurns+1);
-
-									iBestValue = iValue;
-									pBestPlot = pLoopPlot;
-									eBestBuild = eBuild;
-								}
-							}
 						}
 					}
 				}
@@ -1396,16 +1395,11 @@ bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildT
 		}
 		if (0 == iPass && eBestBuild != NO_BUILD)
 		{
-			FAssert(pBestPlot != NULL);
 			int iPathTurns;
 			if ((!pBestPlot->isVisible(getTeam(),false) || !pBestPlot->isVisibleEnemyUnit(this))
-			&& canBuild(pBestPlot, eBestBuild) && generatePath(pBestPlot, 0, true, &iPathTurns))
+			&& generatePath(pBestPlot, 0, true, &iPathTurns))
 			{
 				int iMaxWorkers = 1;
-				if (pUnit != NULL && pUnit->plot()->isCity())
-				{
-					iMaxWorkers += 10;
-				}
 				if (getPathMovementRemaining() == 0)
 				{
 					iPathTurns++;
@@ -1413,6 +1407,10 @@ bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildT
 				else if (iPathTurns <= 1)
 				{
 					iMaxWorkers = AI_calculatePlotWorkersNeeded(pBestPlot, eBestBuild);
+				}
+				if (pUnit != NULL && pUnit->plot()->isCity())
+				{
+					iMaxWorkers += 10;
 				}
 
 				if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pBestPlot, MISSIONAI_BUILD, getGroup()) < iMaxWorkers)
@@ -1442,12 +1440,14 @@ bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildT
 
 bool CvUnitAI::AI_isCityAIType() const
 {
-	return ((AI_getUnitAIType() == UNITAI_CITY_DEFENSE) ||
-			  (AI_getUnitAIType() == UNITAI_CITY_COUNTER) ||
-					(AI_getUnitAIType() == UNITAI_CITY_SPECIAL) ||
-						(AI_getUnitAIType() == UNITAI_RESERVE) ||
-							(AI_getUnitAIType() == UNITAI_PILLAGE_COUNTER) ||
-							(AI_getUnitAIType() == UNITAI_PROPERTY_CONTROL));
+	return (
+			AI_getUnitAIType() == UNITAI_CITY_DEFENSE
+		||	AI_getUnitAIType() == UNITAI_CITY_COUNTER
+		||	AI_getUnitAIType() == UNITAI_CITY_SPECIAL
+		||	AI_getUnitAIType() == UNITAI_RESERVE
+		||	AI_getUnitAIType() == UNITAI_PILLAGE_COUNTER
+		||	AI_getUnitAIType() == UNITAI_PROPERTY_CONTROL
+	);
 }
 
 
@@ -1456,47 +1456,17 @@ int CvUnitAI::AI_getBirthmark() const
 	return m_iBirthmark;
 }
 
-
 void CvUnitAI::AI_setBirthmark(int iNewValue)
 {
 	m_iBirthmark = iNewValue;
-	if (AI_getUnitAIType() == UNITAI_EXPLORE_SEA)
-	{
-		if (GC.getGame().circumnavigationAvailable())
-		{
-			m_iBirthmark -= m_iBirthmark % 4;
-			int iExplorerCount = GET_PLAYER(getOwner()).AI_getNumAIUnits(UNITAI_EXPLORE_SEA);
-			iExplorerCount += getOwner() % 4;
-			if (GC.getMap().isWrapX())
-			{
-				if ((iExplorerCount % 2) == 1)
-				{
-					m_iBirthmark += 1;
-				}
-			}
-			if (GC.getMap().isWrapY())
-			{
-				if (!GC.getMap().isWrapX())
-				{
-					iExplorerCount *= 2;
-				}
-
-				if (((iExplorerCount >> 1) % 2) == 1)
-				{
-					m_iBirthmark += 2;
-				}
-			}
-		}
-	}
 }
 
 
 UnitAITypes CvUnitAI::AI_getUnitAIType() const
 {
-	//	A unit should never have no unitAI so if that state
-	//	is found to exist (empirically it's been seen but the underlying cause
-	//	has not yet been found) set it to its default AI
-	if ( m_eUnitAIType == NO_UNITAI )
+	// A unit should never have no unitAI, so if that state is found to exist set it to its default AI.
+	//	- Empirically it's been seen but the underlying cause has not yet been found. -
+	if (m_eUnitAIType == NO_UNITAI)
 	{
 		FErrorMsg("Unit has no UnitAI!");
 
@@ -1505,7 +1475,6 @@ UnitAITypes CvUnitAI::AI_getUnitAIType() const
 		area()->changeNumAIUnits(getOwner(), m_eUnitAIType, 1);
 		GET_PLAYER(getOwner()).AI_changeNumAIUnits(m_eUnitAIType, 1);
 	}
-
 	return m_eUnitAIType;
 }
 
@@ -1531,127 +1500,93 @@ void CvUnitAI::AI_setUnitAIType(UnitAITypes eNewValue)
 
 int CvUnitAI::AI_sacrificeValue(const CvPlot* pPlot) const
 {
-	int iValue;
-	int iCollateralDamageValue = 0;
-	if (pPlot != NULL)
-	{
-		int iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(this) - 1), collateralDamageMaxUnits());
-
-		if (iPossibleTargets > 0)
-		{
-			iCollateralDamageValue = collateralDamage();
-			iCollateralDamageValue += std::max(0, iCollateralDamageValue - 100);
-			iCollateralDamageValue *= iPossibleTargets;
-			iCollateralDamageValue /= 5;
-		}
-	}
-
 	if (getDomainType() == DOMAIN_AIR)
 	{
-		iValue = 128 * (100 + currInterceptionProbability());
+		int iValue = 128 * (100 + currInterceptionProbability());
 		if (m_pUnitInfo->getNukeRange() != -1)
 		{
 			iValue += 25000;
 		}
 		iValue /= std::max(1, (1 + m_pUnitInfo->getProductionCost()));
-		iValue *= (maxHitPoints() - getDamage());
-		iValue /= 100;
+		iValue *= maxHitPoints() - getDamage();
+		return iValue / 100;
 	}
-	else
+	int iValue = 128 * currEffectiveStr(pPlot, ((pPlot == NULL) ? NULL : this));
+
+	if (iValue > 0)
 	{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  05/14/10								jdog5000	  */
-/*																							  */
-/* General AI																				   */
-/************************************************************************************************/
-/*
-// original bts code
-		iValue  = 128 * (currEffectiveStr(pPlot, ((pPlot == NULL) ? NULL : this)));
-		iValue *= (100 + iCollateralDamageValue);
-		iValue /= (100 + cityDefenseModifier());
-		iValue *= (100 + withdrawalProbability());
-		iValue /= std::max(1, (1 + m_pUnitInfo->getProductionCost()));
-		iValue /= (10 + getExperience());
-*/
-		iValue  = 128 * (currEffectiveStr(pPlot, ((pPlot == NULL) ? NULL : this)));
+		int iCollateralDamageValue = 0;
+		if (pPlot != NULL)
+		{
+			const int iPossibleTargets = std::min(pPlot->getNumVisiblePotentialEnemyDefenders(this) - 1, collateralDamageMaxUnits());
+
+			if (iPossibleTargets > 0)
+			{
+				iCollateralDamageValue = collateralDamage() + std::max(0, iCollateralDamageValue - 100);
+				iCollateralDamageValue *= iPossibleTargets;
+				iCollateralDamageValue /= 5;
+			}
+		}
+		//  TB Combat Mods:
+		//  Determine Withdraw odds
+		const int AdjustedWithdrawalstep1 = withdrawalProbability();
+		const int AdjustedWithdrawalstep2 = AdjustedWithdrawalstep1 > 100 ? 100 : AdjustedWithdrawalstep1;
+		const int AdjustedWithdrawal = AdjustedWithdrawalstep2 < 0 ? 0 : AdjustedWithdrawalstep2;
+		const int timePercentage = ((100 - earlyWithdrawTotal()) > 100 ? 100 : (100 - earlyWithdrawTotal())); // InitialEarlyWithdrawPercentage
 
 		//TB Combat Mods (Pursuit and Early Withdraw)
 		//first method employed - keeping simply commented out as backup
-		//int AdjustedWithdrawalstep1 = withdrawalProbability();
-		//int AdjustedWithdrawalstep2 = ((AdjustedWithdrawalstep1 > 100) ? 100 : AdjustedWithdrawalstep1);
-		//int AdjustedWithdrawal = ((AdjustedWithdrawalstep2 < 0) ? 0 : AdjustedWithdrawalstep2);
-		//int InitialEarlyWithdrawPercentage = ((100 - earlyWithdrawTotal()) > 100 ? 100 : (100 - earlyWithdrawTotal()));
-		//int AdjustedEarlyWithdraw = (((InitialEarlyWithdrawPercentage < 0) ? 0 : InitialEarlyWithdrawPercentage) * AdjustedWithdrawal);
+		//int AdjustedEarlyWithdraw = (((timePercentage < 0) ? 0 : timePercentage) * AdjustedWithdrawal);
 		//int EvaluationalWithdrawOdds = AdjustedEarlyWithdraw + AdjustedWithdrawal;
 
-		//  TB Combat Mods:
-		//  Determine Withdraw odds
-		int AdjustedWithdrawalstep1 = withdrawalProbability();
-		int AdjustedWithdrawalstep2 = ((AdjustedWithdrawalstep1 > 100) ? 100 : AdjustedWithdrawalstep1);
-		int AdjustedWithdrawal = ((AdjustedWithdrawalstep2 < 0) ? 0 : AdjustedWithdrawalstep2);
-		int InitialEarlyWithdrawPercentage = ((100 - earlyWithdrawTotal()) > 100 ? 100 : (100 - earlyWithdrawTotal()));
-
-		int expectedrndcnt = 4;
-		int timepercentage = InitialEarlyWithdrawPercentage;
-		int expectedrnds = ((expectedrndcnt * timepercentage)/100)+1;
+		// Simplification: expected round count of 4 (4/100 = 1/25)
+		const int expectedRnds = 1 + timePercentage / 25;
 
 		int y = AdjustedWithdrawal;
 		int z = AdjustedWithdrawal;
-		int Time;
-		for (Time = 0; Time < expectedrnds; ++Time)
-			{
-				z += ((AdjustedWithdrawal * y)/100);
-				y = ((AdjustedWithdrawal * y)/100);
-			}
-
-		int EvaluatedWithdrawOdds = z;
+		for (int Time = 0; Time < expectedRnds; ++Time)
+		{
+			z += AdjustedWithdrawal * y / 100;
+			y = AdjustedWithdrawal * y / 100;
+		}
+		const int EvaluatedWithdrawOdds = z;
 
 		//* figure out odds of knockback
-		int iAttackerKnockback = knockbackTotal();
-		int iAttackerKnockbackTries = knockbackRetriesTotal();
-		int iknockbackzero = (iAttackerKnockback < 0 ? 0 : iAttackerKnockback);
-		int iknockbacktotal = (iknockbackzero > 100 ? 100 : iknockbackzero);
+		const int iAttackerKnockback = knockbackTotal();
+		const int iAttackerKnockbackTries = knockbackRetriesTotal();
+		const int iKnockbackZero = iAttackerKnockback < 0 ? 0 : iAttackerKnockback;
+		const int iKnockbackTotal = iKnockbackZero > 100 ? 100 : iKnockbackZero;
 
-		y = iknockbacktotal;
-		z = iknockbacktotal;
-
-		for (Time = 0; Time < iAttackerKnockbackTries; ++Time)
-			{
-				z += ((iknockbacktotal * y)/100);
-				y = ((iknockbacktotal * y)/100);
-			}
-
-		int EvaluatedKnockbackOdds = z;
-
-		if ( iValue > 0 )
+		y = iKnockbackTotal;
+		z = iKnockbackTotal;
+		for (int Time = 0; Time < iAttackerKnockbackTries; ++Time)
 		{
-			iValue *= (100 + iCollateralDamageValue);
-			iValue /= (100 + cityDefenseModifier());
-			iValue *= (100 + EvaluatedWithdrawOdds);
-			iValue /= 100;
-			iValue *= (100 + EvaluatedKnockbackOdds);
-			iValue /= 100;
-			//TB Combat Mods End (above EvaluationalWithdrawOdds replaces withdrawalProbability())
-
-			iValue /= (10 + getExperience());
-
-			// Value units which can't kill units later, also combat limits mean higher survival odds
-			if (combatLimit() < 100)
-			{
-				iValue *= 150;
-				iValue /= 100;
-
-				iValue *= 100;
-				iValue /= std::max(1, combatLimit());
-			}
-
-			iValue /= std::max(1, (1 + m_pUnitInfo->getProductionCost()));
+			z += iKnockbackTotal * y / 100;
+			y = iKnockbackTotal * y / 100;
 		}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
-	}
+		const int EvaluatedKnockbackOdds = z;
 
+		iValue *= 100 + iCollateralDamageValue;
+		iValue /= 100 + cityDefenseModifier();
+		iValue *= 100 + EvaluatedWithdrawOdds;
+		iValue /= 100;
+		iValue *= 100 + EvaluatedKnockbackOdds;
+		iValue /= 100;
+		//TB Combat Mods End (above EvaluationalWithdrawOdds replaces EvaluatedWithdrawOdds)
+
+		iValue /= (10 + getExperience());
+
+		// Value units which can't kill units later, also combat limits mean higher survival odds
+		if (combatLimit() < 100)
+		{
+			iValue *= 150;
+			iValue /= 100;
+
+			iValue *= 100;
+			iValue /= std::max(1, combatLimit());
+		}
+		iValue /= std::max(1, 1 + m_pUnitInfo->getProductionCost());
+	}
 	return iValue;
 }
 
@@ -1664,18 +1599,18 @@ void CvUnitAI::AI_animalMove()
 	//TB Animal Mod Begin
 	if (canAttack())
 	{
-		bool bReckless = GC.getGame().isOption(GAMEOPTION_RECKLESS_ANIMALS);
-		int iAttackProb = GC.getHandicapInfo(GC.getGame().getHandicapType()).getAnimalAttackProb();
+		const bool bReckless = GC.getGame().isOption(GAMEOPTION_RECKLESS_ANIMALS);
+		const int iAttackProb = GC.getHandicapInfo(GC.getGame().getHandicapType()).getAnimalAttackProb();
 		// Attack potential targets first. Animals are pretty good at assessing their chances of taking down prey, therefore 60% odds prereq.
 		if ((bReckless || iAttackProb > 99 || GC.getGame().getSorenRandNum(100, "Animal Attack") < iAttackProb)
-			&& AI_attackTargets(2, (bReckless ? 0 : 60), 0, false, true))
+		&& AI_attackTargets(2, bReckless ? 0 : 60, 0, false, true))
 		{
 			return;
 		}
 		// Then attack elsewhere, recklessness based on animal aggression.
 		// 5% odds assessment is there to account for some small understanding of likelihood of success even in an aggressive action.
 		if ((bReckless || GC.getGame().getSorenRandNum(10, "Animal Attack") < getMyAggression(iAttackProb))
-			&& AI_anyAttack(2, (bReckless ? 0 : 5), 0, false, true))
+		&& AI_anyAttack(2, (bReckless ? 0 : 5), 0, false, true))
 		{
 			return;
 		}
@@ -1689,7 +1624,6 @@ void CvUnitAI::AI_animalMove()
 		return;
 	}
 	getGroup()->pushMission(MISSION_SKIP);
-	return;
 }
 
 
@@ -1705,16 +1639,11 @@ void CvUnitAI::AI_settleMove()
 
 	if (GET_PLAYER(getOwner()).getNumCities() == 0)
 	{
-/************************************************************************************************/
-/* Afforess & Fuyu					  Start	  09/18/10									   */
-/*																							  */
-/* Check for Good City Sites Near Starting Location											 */
-/************************************************************************************************/
-		int iGameSpeedPercent = ( (2 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent())
-			+ GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent()
-			+ GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent() ) / 4;
-		int iMaxFoundTurn = (iGameSpeedPercent + 50) / 100; //quick 0, normal/epic 1, marathon 2
-		if ( canMove() && !GET_PLAYER(getOwner()).AI_isPlotCitySite(plot()) && GC.getGame().getElapsedGameTurns() <= iMaxFoundTurn )
+		// Afforess & Fuyu - Check for Good City Sites Near Starting Location
+		const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
+		const int iMaxFoundTurn = iGameSpeedPercent / 100;
+
+		if (canMove() && !GET_PLAYER(getOwner()).AI_isPlotCitySite(plot()) && GC.getGame().getElapsedGameTurns() <= iMaxFoundTurn)
 		{
 			int iBestValue = 0;
 			int iBestFoundTurn = 0;
@@ -1729,17 +1658,17 @@ void CvUnitAI::AI_settleMove()
 					int iPlotValue = pCitySite->getFoundValue(getOwner());
 					if (iPlotValue > iBestValue)
 					{
-						int iPathTurns;
 						//Can this unit reach the plot this turn? (getPathLastNode()->m_iData2 == 1)
 						//Will this unit still have movement points left to found the city the same turn? (getPathLastNode()->m_iData1 > 0))
+						int iPathTurns;
 						if (generatePath(pCitySite,0,false,&iPathTurns))
 						{
-							int iFoundTurn = GC.getGame().getElapsedGameTurns() + iPathTurns - ((getPathMovementRemaining() > 0)? 1 : 0);
+							const int iFoundTurn = GC.getGame().getElapsedGameTurns() + iPathTurns - (getPathMovementRemaining() > 0 ? 1 : 0);
 							if (iFoundTurn <= iMaxFoundTurn)
 							{
 								iPlotValue *= 100; //more precision
 								//the slower the game speed, the less penalty the plotvalue gets for long walks towards it. On normal it's -18% per turn
-								iPlotValue *= 100 - std::min( 100, ( (1800/iGameSpeedPercent) * iFoundTurn ) );
+								iPlotValue *= 100 - std::min(100, iFoundTurn * 1800 / iGameSpeedPercent);
 								iPlotValue /= 100;
 								if (iPlotValue > iBestValue)
 								{
@@ -1756,17 +1685,22 @@ void CvUnitAI::AI_settleMove()
 			if (pBestPlot != NULL)
 			{
 				//Don't give up coast or river, don't settle on bonus with food
-				if ( (plot()->isRiver() && !pBestPlot->isRiver())
-					|| (plot()->isCoastalLand(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()) && !pBestPlot->isCoastalLand(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
-					|| (pBestPlot->getBonusType(NO_TEAM) != NO_BONUS && pBestPlot->calculateNatureYield(YIELD_FOOD, getTeam(), true) > 0) )
+				if (plot()->isRiver() && !pBestPlot->isRiver())
 				{
-					pBestPlot = NULL;
+					const int iOceanMinSize = GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize();
+
+					if (plot()->isCoastalLand(iOceanMinSize) && !pBestPlot->isCoastalLand(iOceanMinSize)
+					|| pBestPlot->getBonusType(NO_TEAM) != NO_BONUS
+					&& pBestPlot->calculateNatureYield(YIELD_FOOD, getTeam(), true) > 0)
+					{
+						pBestPlot = NULL;
+					}
 				}
 			}
 
 			if (pBestPlot != NULL)
 			{
-				if( gUnitLogLevel >= 2 )
+				if (gUnitLogLevel >= 2)
 				{
 					logBBAI("	Settler not founding in place but moving %d, %d to nearby city site at %d, %d (%d turns away) with value %d)", (pBestPlot->getX() - getX()), (pBestPlot->getY() - getY()), pBestPlot->getX(), pBestPlot->getY(), iBestFoundTurn, iBestValue);
 				}
@@ -1774,9 +1708,7 @@ void CvUnitAI::AI_settleMove()
 				return;
 			}
 		}
-/************************************************************************************************/
-/* Afforess & Fuyu						 END													*/
-/************************************************************************************************/
+		// ! Afforess & Fuyu - Check for Good City Sites Near Starting Location
 
 		// RevDCM TODO: What makes sense for rebels here?
 		if (canFound(plot()))
@@ -1790,21 +1722,14 @@ void CvUnitAI::AI_settleMove()
 		}
 	}
 
-	int iDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 3);
+	const int iDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 3);
 
 	if (iDanger > 0)
 	{
-		if ((!getGroup()->canDefend() && ((plot()->getOwner() == getOwner()) || (iDanger > 2))) ||
-			GET_PLAYER(getOwner()).AI_getVisiblePlotDanger(plot(), 2, false, getGroup(), 70))
+		if (!getGroup()->canDefend() && (plot()->getOwner() == getOwner() || iDanger > 2)
+		|| GET_PLAYER(getOwner()).AI_getVisiblePlotDanger(plot(), 2, false, getGroup(), 70))
 		{
-			if (!getGroup()->canDefend())
-			{
-				if (AI_retreatToCity())
-				{
-					return;
-				}
-			}
-			if (AI_safety())
+			if (!getGroup()->canDefend() && AI_retreatToCity() || AI_safety())
 			{
 				return;
 			}
@@ -1812,45 +1737,43 @@ void CvUnitAI::AI_settleMove()
 		}
 	}
 
-	//	Don't found new cities if that would cause more unhappiness when we already have
-	//	happiness issues
+	// Don't found new cities if that would cause more unhappiness when we already have happiness issues
 	bool bInhibitFounding = false;
 
 	if (GET_PLAYER(getOwner()).getCityLimit() > 0)
 	{
-		if ( GET_PLAYER(getOwner()).getCityOverLimitUnhappy() > 0 )
+		if (GET_PLAYER(getOwner()).getCityOverLimitUnhappy() > 0)
 		{
-			//	Soft limit.  If we already have unhappy cities don't create
-			//	settlers that will increase overall unhappiness as they found
-			//	new cities
-			bInhibitFounding = (GET_PLAYER(getOwner()).getCityLimit() <= GET_PLAYER(getOwner()).getNumCities() &&
-								GET_PLAYER(getOwner()).AI_getOverallHappyness(GET_PLAYER(getOwner()).getCityOverLimitUnhappy()) < 0);
+			// Soft limit - If we already have unhappy cities don't create settlers
+			//	that will increase overall unhappiness as they found new cities
+			bInhibitFounding =
+			(
+				GET_PLAYER(getOwner()).getCityLimit() <= GET_PLAYER(getOwner()).getNumCities()
+				&&
+				GET_PLAYER(getOwner()).AI_getOverallHappyness(GET_PLAYER(getOwner()).getCityOverLimitUnhappy()) < 0
+			);
 		}
-		else
+		else // Hard limit
 		{
-			//	Hard limit
 			bInhibitFounding = (GET_PLAYER(getOwner()).getCityLimit() <= GET_PLAYER(getOwner()).getNumCities());
 		}
 	}
 
-	if ( !bInhibitFounding )
+	if (!bInhibitFounding)
 	{
 		bInhibitFounding = GET_PLAYER(getOwner()).AI_isFinancialTrouble();
 
-		if( bInhibitFounding && gUnitLogLevel >= 2 )
+		if (bInhibitFounding && gUnitLogLevel >= 2)
 		{
 			logBBAI("	Settler (%d) inhibited from founding due to financial difficulties", getID());
 		}
 	}
-	else
+	else if (gUnitLogLevel >= 2)
 	{
-		if( gUnitLogLevel >= 2 )
-		{
-			logBBAI("	Settler (%d) inhibited from founding due to city limit unhappyness", getID());
-		}
+		logBBAI("	Settler (%d) inhibited from founding due to city limit unhappyness", getID());
 	}
 
-	if ( !bInhibitFounding )
+	if (!bInhibitFounding)
 	{
 		int iAreaBestFoundValue = 0;
 		int iOtherBestFoundValue = 0;
@@ -1864,7 +1787,7 @@ void CvUnitAI::AI_settleMove()
 			{
 				if (plot() == pCitySitePlot && canFound(plot()))
 				{
-					if( gUnitLogLevel >= 2 )
+					if (gUnitLogLevel >= 2)
 					{
 						logBBAI("	Settler (%d) founding in place since it's at a city site %d, %d", getID(), getX(), getY());
 					}
@@ -1881,7 +1804,7 @@ void CvUnitAI::AI_settleMove()
 						// safety check. (cf. conditions in AI_found)
 						if (getGroup()->canDefend() && getGroup()->getStrength() > (AI_minSettlerDefense()/2))
 						{
-							if( gUnitLogLevel >= 2 )
+							if (gUnitLogLevel >= 2)
 							{
 								logBBAI("	Settler (%d) continuing mission to %d, %d, current group strength (%d)", getID(), pCitySitePlot->getX(), pCitySitePlot->getY(), getGroup()->getStrength());
 							}
@@ -1891,11 +1814,8 @@ void CvUnitAI::AI_settleMove()
 								getGroup()->pushMission(MISSION_MOVE_TO, pEndTurnPlot->getX(), pEndTurnPlot->getY(), MOVE_SAFE_TERRITORY, false, false, MISSIONAI_FOUND, pCitySitePlot);
 								return;
 							}
-							else
-							{
-								getGroup()->pushMission(MISSION_SKIP);
-								return;
-							}
+							getGroup()->pushMission(MISSION_SKIP);
+							return;
 						}
 					}
 				}
@@ -1909,14 +1829,9 @@ void CvUnitAI::AI_settleMove()
 		}
 
 		// No new settling of colonies when AI is in financial trouble
-		if( plot()->isCity() && (plot()->getOwner() == getOwner()) )
+		if (plot()->isCity() && plot()->getOwner() == getOwner() && GET_PLAYER(getOwner()).AI_isFinancialTrouble())
 		{
-			if( GET_PLAYER(getOwner()).AI_isFinancialTrouble() )
-			{
-				// Thomas SG
-				//iOtherBestFoundValue = 0;
-				iOtherBestFoundValue /= 4;
-			}
+			iOtherBestFoundValue /= 4;
 		}
 
 		if (iAreaBestFoundValue == 0 && iOtherBestFoundValue == 0
@@ -1936,7 +1851,6 @@ void CvUnitAI::AI_settleMove()
 		}
 
 		if (iOtherBestFoundValue * 100 > iAreaBestFoundValue * 110 && plot()->getOwner() == getOwner()
-
 		&& AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, NO_UNITAI, -1, -1, -1, 0, MOVE_SAFE_TERRITORY))
 		{
 			return;
@@ -1985,21 +1899,13 @@ void CvUnitAI::AI_settleMove()
 					return;
 				}
 #if 0
-				else
+				else // No units were available to escort us.  Let the city know that building some might be a good idea
 				{
-					//	No units were available to escort us.  Let the city know that building some might
-					//	be a good idea
 					plot()->getPlotCity()->AI_noteUnitEscortNeeded();
 				}
 #endif
 			}
-
-			// Afforess: removed, unneeded, causes settlers to get stuck in cities.
-			//if (AI_retreatToCity())
-			//{
-			//	return;
-			//}
-			}
+		}
 
 		if (plot()->isCity() && plot()->getOwner() == getOwner() && getGroup()->getNumUnits() < 3
 		&& GC.getGame().getMaxCityElimination() > 0 && GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot()))
@@ -2019,17 +1925,13 @@ void CvUnitAI::AI_settleMove()
 			{
 				return;
 			}
-
 			// BBAI TODO: Go to a good city (like one with a transport) ...
 		}
 	}
 
-	if (!getGroup()->canDefend())
+	if (!getGroup()->canDefend() && AI_retreatToCity())
 	{
-		if (AI_retreatToCity())
-		{
-			return;
-		}
+		return;
 	}
 
 	// Settler AI
@@ -2043,10 +1945,10 @@ void CvUnitAI::AI_settleMove()
 	{
 		return;
 	}
-
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
 }
+
 
 int CvUnitAI::AI_minSettlerDefense() const
 {
@@ -2061,6 +1963,7 @@ int CvUnitAI::AI_minSettlerDefense() const
 		)
 	);
 }
+
 
 void CvUnitAI::AI_workerMove()
 {

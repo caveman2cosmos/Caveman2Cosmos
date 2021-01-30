@@ -25530,7 +25530,7 @@ bool CvPlayerAI::AI_advancedStartPlaceCity(const CvPlot* pPlot)
 		doAdvancedStartAction(ADVANCEDSTARTACTION_CITY, pPlot->getX(), pPlot->getY(), -1, true);
 
 		pCity = pPlot->getPlotCity();
-		if ((pCity == NULL) || (pCity->getOwner() != getID()))
+		if (pCity == NULL || pCity->getOwner() != getID())
 		{
 			//this should never happen since the cost for a city should be 0 if
 			//the city can't be placed.
@@ -25539,83 +25539,55 @@ bool CvPlayerAI::AI_advancedStartPlaceCity(const CvPlot* pPlot)
 			return false;
 		}
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 06/07/10											   */
-/************************************************************************************************/
+
 	//Only expand culture when we have lots to spare. Never expand for the capital, the palace works fine on it's own
-	if (pCity != getCapitalCity() && getAdvancedStartPoints() > getAdvancedStartCultureCost(true, pCity) * 50)
+	if (pCity != getCapitalCity()
+	&& getAdvancedStartPoints() > getAdvancedStartCultureCost(true, pCity) * 50
+	&& pCity->getCultureLevel() <= 1)
 	{
-		if (pCity->getCultureLevel() <= 1)
-		{
-			doAdvancedStartAction(ADVANCEDSTARTACTION_CULTURE, pPlot->getX(), pPlot->getY(), -1, true);
-			//to account for culture expansion.
-			pCity->AI_updateBestBuild();
-		}
+		doAdvancedStartAction(ADVANCEDSTARTACTION_CULTURE, pPlot->getX(), pPlot->getY(), -1, true);
+		//to account for culture expansion.
+		pCity->AI_updateBestBuild();
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	int iPlotsImproved = 0;
-/************************************************************************************************/
-/* Afforess					  Start		 06/07/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	for (int iI = 0; iI < pCity->getNumCityPlots(); iI++)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	{
 		if (iI != CITY_HOME_PLOT)
 		{
 			CvPlot* pLoopPlot = plotCity(pPlot->getX(), pPlot->getY(), iI);
-			if ((pLoopPlot != NULL) && (pLoopPlot->getWorkingCity() == pCity))
+			if (pLoopPlot != NULL && pLoopPlot->getWorkingCity() == pCity && pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
 			{
-				if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
-				{
-					iPlotsImproved++;
-				}
+				iPlotsImproved++;
 			}
 		}
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 06/07/10											   */
-/************************************************************************************************/
+
 	int iDivisor = std::max(1, 2000 / std::max(1, getAdvancedStartPoints()));
 
 	int iTargetPopulation = pCity->happyLevel() + (getCurrentEra() / 2);
 	iTargetPopulation /= iDivisor;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	while (iPlotsImproved < iTargetPopulation)
 	{
 		CvPlot* pBestPlot;
 		ImprovementTypes eBestImprovement = NO_IMPROVEMENT;
 		int iBestValue = 0;
-/************************************************************************************************/
-/* Afforess					  Start		 06/07/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 		for (int iI = 0; iI < pCity->getNumCityPlots(); iI++)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 		{
-			int iValue = pCity->AI_getBestBuildValue(iI);
+			const int iValue = pCity->AI_getBestBuildValue(iI);
 			if (iValue > iBestValue)
 			{
-				BuildTypes eBuild = pCity->AI_getBestBuild(iI);
+				const BuildTypes eBuild = pCity->AI_getBestBuild(iI);
 				if (eBuild != NO_BUILD)
 				{
-					ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+					const ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
 					if (eImprovement != NO_IMPROVEMENT)
 					{
 						CvPlot* pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
-						if ((pLoopPlot != NULL) && (pLoopPlot->getImprovementType() != eImprovement))
+						if (pLoopPlot != NULL && pLoopPlot->getImprovementType() != eImprovement)
 						{
 							eBestImprovement = eImprovement;
 							pBestPlot = pLoopPlot;
@@ -25626,27 +25598,22 @@ bool CvPlayerAI::AI_advancedStartPlaceCity(const CvPlot* pPlot)
 			}
 		}
 
-		if (iBestValue > 0)
-		{
-
-			FAssert(pBestPlot != NULL);
-			doAdvancedStartAction(ADVANCEDSTARTACTION_IMPROVEMENT, pBestPlot->getX(), pBestPlot->getY(), eBestImprovement, true);
-			iPlotsImproved++;
-			if (pCity->getPopulation() < iPlotsImproved)
-			{
-				doAdvancedStartAction(ADVANCEDSTARTACTION_POP, pBestPlot->getX(), pBestPlot->getY(), -1, true);
-			}
-		}
-		else
+		if (iBestValue < 1)
 		{
 			break;
 		}
+		FAssert(pBestPlot != NULL);
+		doAdvancedStartAction(ADVANCEDSTARTACTION_IMPROVEMENT, pBestPlot->getX(), pBestPlot->getY(), eBestImprovement, true);
+		iPlotsImproved++;
+		if (pCity->getPopulation() < iPlotsImproved)
+		{
+			doAdvancedStartAction(ADVANCEDSTARTACTION_POP, pBestPlot->getX(), pBestPlot->getY(), -1, true);
+		}
 	}
-
 
 	while (iPlotsImproved > pCity->getPopulation())
 	{
-		int iPopCost = getAdvancedStartPopCost(true, pCity);
+		const int iPopCost = getAdvancedStartPopCost(true, pCity);
 		if (iPopCost <= 0 || iPopCost > getAdvancedStartPoints())
 		{
 			break;
@@ -25657,7 +25624,6 @@ bool CvPlayerAI::AI_advancedStartPlaceCity(const CvPlot* pPlot)
 		}
 		doAdvancedStartAction(ADVANCEDSTARTACTION_POP, pPlot->getX(), pPlot->getY(), -1, true);
 	}
-
 	pCity->AI_updateAssignWork();
 
 	return true;

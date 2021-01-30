@@ -11380,18 +11380,15 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 			{
 				const int iCultureRange = cultureDistance(iDX, iDY, true);
 
-				if (iCultureRange > eNewValue)
+				if (iCultureRange > eNewValue && iCultureRange <= eOldValue)
 				{
-					if (iCultureRange <= eOldValue)
+					FAssert(iCultureRange <= GC.getNumCultureLevelInfos());
+
+					CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
+
+					if (pLoopPlot != NULL)
 					{
-						FAssert(iCultureRange <= GC.getNumCultureLevelInfos());
-
-						CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-						if (pLoopPlot != NULL)
-						{
-							pLoopPlot->changeCultureRangeCities(getOwner(), iCultureRange, -1, bUpdatePlotGroups);
-						}
+						pLoopPlot->changeCultureRangeCities(getOwner(), iCultureRange, -1, bUpdatePlotGroups);
 					}
 				}
 			}
