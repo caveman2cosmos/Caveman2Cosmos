@@ -38,3 +38,15 @@ jobs:
                       --workdir /host_dir ubuntu:18.04 \
                       bash -c \
                       "./Test/Python3/setup.sh && pytest -c Test/Python3/pytest.ini ."
+    validate-xmls:
+        name: Validate XMLs
+        runs-on: windows-2019
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v2
+              with:
+                  lfs: true
+            - name: Run XmlValidator
+              working-directory: ${{ github.workspace }}/Tools
+              run: |
+                  ${{ github.workspace }}/Tools/XmlValidator.exe -a
