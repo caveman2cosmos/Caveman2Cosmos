@@ -6,16 +6,11 @@ import os
 import fnmatch
 
 def find_all_functions(py_file):
-    try:
-        code = open(py_file).read()
-        a = ast.parse(code, py_file)
-        #return [n.name for n in ast.walk(a) if type(n) == ast.FunctionDef]
-        return [n.name for n in ast.iter_child_nodes(a) if type(n) == ast.FunctionDef]
-    except SyntaxError as ex:
-        print(ex)
-    except Exception as ex:
-        print(ex)
-    return []
+    code = open(py_file).read()
+    a = ast.parse(code, py_file)
+    #return [n.name for n in ast.walk(a) if type(n) == ast.FunctionDef]
+    return [n.name for n in ast.iter_child_nodes(a) if type(n) == ast.FunctionDef]
+
 
 def namespace(element):
     m = re.match(r'\{(.*)\}', element.tag)
