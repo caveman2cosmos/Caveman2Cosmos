@@ -705,110 +705,82 @@ bool CvUnitAI::AI_follow()
 	{
 		return true;
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  03/31/10							  jdog5000		*/
-/*																							  */
-/* War tactics AI																			   */
-/************************************************************************************************/
 	// Pushing MISSION_MOVE_TO missions when not all units could move resulted in stack being
 	// broken up on the next turn.  Also, if we can't attack now we don't want to queue up an
 	// attack for next turn, better to re-evaluate.
-	bool bCanAllMove = getGroup()->canAllMove();
+	const bool bCanAllMove = getGroup()->canAllMove();
 
-	if( bCanAllMove )
+	if (bCanAllMove && AI_cityAttack(1, 65, true))
 	{
-		if (AI_cityAttack(1, 65, true))
-		{
-			return true;
-		}
+		return true;
 	}
-
-	if (isEnemy(plot()->getTeam()))
+	if (isEnemy(plot()->getTeam()) && getGroup()->canPillage(plot()))
 	{
-		if (getGroup()->canPillage(plot()))
-		{
-			getGroup()->pushMission(MISSION_PILLAGE);
-			return true;
-		}
+		getGroup()->pushMission(MISSION_PILLAGE);
+		return true;
 	}
-
-	if( bCanAllMove )
+	if (bCanAllMove && AI_anyAttack(1, 70, 2, true, true))
 	{
-		if (AI_anyAttack(1, 70, 2, true, true))
-		{
-			return true;
-		}
+		return true;
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
-
-	if (isFound())
+	if (isFound() && area()->getBestFoundValue(getOwner()) > 0 && AI_foundRange(FOUND_RANGE, true))
 	{
-		if (area()->getBestFoundValue(getOwner()) > 0)
-		{
-			if (AI_foundRange(FOUND_RANGE, true))
-			{
-				return true;
-			}
-		}
+		return true;
 	}
-
 	return false;
 }
 
 
-// XXX what if a unit gets stuck b/c of it's UnitAIType???
+// XXX what if a unit gets stuck due to its UnitAIType???
 // XXX is this function costing us a lot? (it's recursive...)
 bool CvUnitAI::AI_upgrade()
 {
 	PROFILE_FUNC();
-
-//	FAssertMsg(!isHuman(), "isHuman did not return false as expected");
 	FAssertMsg(AI_getUnitAIType() != NO_UNITAI, "AI_getUnitAIType() is not expected to be equal with NO_UNITAI");
 
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
-	UnitAITypes eUnitAI = AI_getUnitAIType();
-	CvArea* pArea = area();
-
-	int iCurrentValue = kPlayer.AI_unitValue(getUnitType(), eUnitAI, pArea);
-
-	//TB Note: New game theory being introduced here - a unitAI should NEVER change its AI when upgrading!
-	//This was causing an infinite spam of units that the game couldn't get enough of a count of because
-	//the AI kept upgrading their best pick for something and then upgrading it to another unit that couldn't be that AI type.
-	//NOW, we should ALWAYS maintain the role a unit was designed for.
-	//Watch for odd problems this might introduce elsewhere though.
-	//for (int iPass = 0; iPass < 2; iPass++)
-	//{
-	UnitTypes eBestUnit = NO_UNIT;
-	int iBestValue = 0;
-	int iNumUpgrades = GC.getUnitInfo(getUnitType()).getNumUnitUpgrades();
-
-	for (int iI = 0; iI < iNumUpgrades; iI++)
+	// TB Note: New game theory being introduced here - a unitAI should NEVER change its AI when upgrading!
+	// This was causing an infinite spam of units that the game couldn't get enough of a count of because
+	// the AI kept upgrading their best pick for something and then upgrading it to another unit that couldn't be that AI type.
+	// NOW, we should ALWAYS maintain the role a unit was designed for.
+	// Watch for odd problems this might introduce elsewhere though.
+	const CvUnitInfo& unitInfo = GC.getUnitInfo(getUnitType());
+	const int iNumUpgrades = unitInfo.getNumUnitUpgrades();
+	if (iNumUpgrades > 0)
 	{
-		UnitTypes eLoopUnit = (UnitTypes)GC.getUnitInfo(getUnitType()).getUnitUpgrade(iI);
-		if (!GC.getUnitInfo(eLoopUnit).getNotUnitAIType(eUnitAI) && GC.getUnitInfo(eLoopUnit).getUnitAIType(eUnitAI)
-		&& canUpgrade(eLoopUnit) && kPlayer.AI_unitValue(eLoopUnit, eUnitAI, pArea) > iCurrentValue)
-		{
-			int iValue = (1 + GC.getGame().getSorenRandNum(10000, "AI Upgrade"));
+		const CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
+		const UnitAITypes eUnitAI = AI_getUnitAIType();
+		const CvArea* pArea = area();
+		const int iCurrentValue = kPlayer.AI_unitValue(getUnitType(), eUnitAI, pArea);
 
-			if (iValue > iBestValue)
+		UnitTypes eBestUnit = NO_UNIT;
+		int iBestValue = 0;
+		for (int iI = 0; iI < iNumUpgrades; iI++)
+		{
+			const UnitTypes eUnitX = (UnitTypes)unitInfo.getUnitUpgrade(iI);
+
+			if (GC.getUnitInfo(eUnitX).getUnitAIType(eUnitAI)
+			&& !GC.getUnitInfo(eUnitX).getNotUnitAIType(eUnitAI)
+			&& canUpgrade(eUnitX)
+			&& kPlayer.AI_unitValue(eUnitX, eUnitAI, pArea) > iCurrentValue)
 			{
-				iBestValue = iValue;
-				eBestUnit = eLoopUnit;
+				const int iValue = 1 + GC.getGame().getSorenRandNum(10000, "AI Upgrade");
+
+				if (iValue > iBestValue)
+				{
+					iBestValue = iValue;
+					eBestUnit = eUnitX;
+				}
 			}
 		}
-	}
-
-	if (eBestUnit != NO_UNIT)
-	{
-		if( gUnitLogLevel >= 2 )
+		if (eBestUnit != NO_UNIT)
 		{
-			logBBAI("	%S at (%d,%d) upgrading to %S", getName(0).GetCString(), getX(), getY(), GC.getUnitInfo(eBestUnit).getDescription());
+			if (gUnitLogLevel >= 2)
+			{
+				logBBAI("	%S at (%d,%d) upgrading to %S", getName(0).GetCString(), getX(), getY(), GC.getUnitInfo(eBestUnit).getDescription());
+			}
+			return upgrade(eBestUnit);
 		}
-		return upgrade(eBestUnit);
 	}
-	//}
 	return false;
 }
 
@@ -817,11 +789,10 @@ bool CvUnitAI::AI_promote()
 {
 	PROFILE_FUNC();
 
-	if ( !isPromotionReady() )
+	if (!isPromotionReady())
 	{
 		return false;
 	}
-
 	int iBestValue = 0;
 	PromotionTypes eBestPromotion = NO_PROMOTION;
 
@@ -829,26 +800,26 @@ bool CvUnitAI::AI_promote()
 	{
 		if (canPromote((PromotionTypes)iI, -1))
 		{
-			int iValue = AI_promotionValue((PromotionTypes)iI);
+			const int iValue = AI_promotionValue((PromotionTypes)iI);
 
 			if (iValue > iBestValue)
 			{
 				iBestValue = iValue;
-				eBestPromotion = ((PromotionTypes)iI);
+				eBestPromotion = (PromotionTypes)iI;
 			}
 		}
 	}
 
 	if (eBestPromotion != NO_PROMOTION)
 	{
-		if( gUnitLogLevel > 2 )
+		if (gUnitLogLevel > 2)
 		{
 			CvWString szString;
 			getUnitAIString(szString, AI_getUnitAIType());
 			logBBAI("	%S's %S chooses promotion %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), GC.getPromotionInfo(eBestPromotion).getDescription());
 		}
 
-		if(promote(eBestPromotion, -1))
+		if (promote(eBestPromotion, -1))
 		{
 			AI_promote();
 			return true;
@@ -860,7 +831,7 @@ bool CvUnitAI::AI_promote()
 
 int CvUnitAI::AI_groupFirstVal() const
 {
-	if ( m_iGroupLeadOverride != -1 )
+	if (m_iGroupLeadOverride != -1)
 	{
 		return m_iGroupLeadOverride;
 	}
@@ -876,17 +847,13 @@ int CvUnitAI::AI_groupFirstVal() const
 	case UNITAI_BARB_CRIMINAL:
 	case UNITAI_INFILTRATOR:
 		return LEADER_PRIORITY_MIN;
-		break;
 
 	case UNITAI_SETTLE:
 		return 21;
-		break;
-
 	case UNITAI_WORKER:
 		return 20;
-		break;
 
-	//	Koshling - changed priorities of UNITAI_ATTACK and UNITAI_ATTACK_CITY
+	// Koshling - changed priorities of UNITAI_ATTACK and UNITAI_ATTACK_CITY
 	//	to be constants with city attack higher.  Previously they overlapped, and were
 	//	dependent on collateral damage and bombardment.  This is (a) no longer necessary
 	//	since the AI routines now check the group capability (so the unit with the capability
@@ -896,61 +863,42 @@ int CvUnitAI::AI_groupFirstVal() const
 	//	following turn, ...
 	case UNITAI_ATTACK:
 		return 14;
-
 	case UNITAI_ATTACK_CITY:
 		return 17;
-
 	case UNITAI_COLLATERAL:
 		return 7;
-		break;
-
 	case UNITAI_PILLAGE:
 		return 12;
-		break;
-
 	case UNITAI_RESERVE:
 		return 6;
-		break;
-
 	case UNITAI_COUNTER:
 		return 5;
-		break;
-
 	case UNITAI_CITY_DEFENSE:
 		return 3;
-		break;
 
 	case UNITAI_CITY_COUNTER:
 	case UNITAI_PILLAGE_COUNTER:
 	case UNITAI_SEE_INVISIBLE:
 	case UNITAI_SEE_INVISIBLE_SEA:
 		return 2;
-		break;
 
 	case UNITAI_CITY_SPECIAL:
 	case UNITAI_INVESTIGATOR:
 		return 1;
-		break;
 
 	case UNITAI_PARADROP:
 		return 4;
-		break;
-
 	case UNITAI_SUBDUED_ANIMAL:
-		return 7;	//	Must be less than the result for UNITAI_HUNTER
-		break;
+		return 7; // Must be less than the result for UNITAI_HUNTER
 
 	case UNITAI_HUNTER_ESCORT:
 	case UNITAI_EXPLORE:
 		return 8;
-		break;
+
 	case UNITAI_HUNTER:
 		return 9;
-		break;
-
 	case UNITAI_MISSIONARY:
 		return 20;
-		break;
 
 	case UNITAI_PROPHET:
 	case UNITAI_ARTIST:
@@ -961,63 +909,40 @@ int CvUnitAI::AI_groupFirstVal() const
 	case UNITAI_MERCHANT:
 	case UNITAI_ENGINEER:
 		return 11;
-		break;
 
 	case UNITAI_SPY:
 		return 9;
-		break;
 
 	case UNITAI_ICBM:
 		break;
 
 	case UNITAI_WORKER_SEA:
 		return 8;
-		break;
-
 	case UNITAI_ATTACK_SEA:
 		return 3;
-		break;
-
 	case UNITAI_RESERVE_SEA:
 		return 2;
-		break;
 
 	case UNITAI_ESCORT_SEA:
 	case UNITAI_ESCORT:
 		return 1;
-		break;
 
 	case UNITAI_EXPLORE_SEA:
 		return 5;
-		break;
-
 	case UNITAI_ASSAULT_SEA:
 		return 11;
-		break;
-
 	case UNITAI_SETTLER_SEA:
 		return 9;
-		break;
-
 	case UNITAI_MISSIONARY_SEA:
 		return 9;
-		break;
-
 	case UNITAI_SPY_SEA:
 		return 10;
-		break;
-
 	case UNITAI_CARRIER_SEA:
 		return 7;
-		break;
-
 	case UNITAI_MISSILE_CARRIER_SEA:
 		return 6;
-		break;
-
 	case UNITAI_PIRATE_SEA:
 		return 4;
-		break;
 
 	case UNITAI_ATTACK_AIR:
 	case UNITAI_DEFENSE_AIR:
@@ -1027,7 +952,6 @@ int CvUnitAI::AI_groupFirstVal() const
 
 	case UNITAI_ATTACK_CITY_LEMMING:
 		return 1;
-		break;
 
 	default:
 		FAssert(false);
@@ -1050,11 +974,11 @@ int CvUnitAI::AI_getPredictedHitPoints() const
 
 void CvUnitAI::AI_setPredictedHitPoints(int iPredictedHitPoints)
 {
-	m_iPredictedHitPoints	= iPredictedHitPoints;
-	if ( iPredictedHitPoints == -1 )
+	m_iPredictedHitPoints = iPredictedHitPoints;
+
+	if (iPredictedHitPoints == -1)
 	{
-		//	This is a reset
-		m_bHasAttacked			= false;
+		m_bHasAttacked = false; // This is a reset
 	}
 }
 
@@ -1070,11 +994,11 @@ int CvUnitAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy, CvUnit** 
 	PROFILE_FUNC();
 
 	CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, !bPotentialEnemy, bPotentialEnemy, false, bAssassinate);
-	if ( ppDefender != NULL )
+
+	if (ppDefender != NULL)
 	{
 		*ppDefender = pDefender;
 	}
-
 	return AI_attackOddsAtPlot(pPlot, pDefender, (ppDefender != NULL));
 }
 
@@ -1125,7 +1049,7 @@ int CvUnitAI::AI_attackOddsAtPlot(const CvPlot* pPlot, CvUnit* pDefender, bool m
 		}
 	}
 
-	int iResult = AI_attackOddsAtPlotInternal(pPlot, pDefender, modifyPredictedResults);
+	const int iResult = AI_attackOddsAtPlotInternal(pPlot, pDefender, modifyPredictedResults);
 
 	if ( !modifyPredictedResults )
 	{
@@ -1139,32 +1063,24 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 {
 	PROFILE_FUNC();
 
-	int iOurStrength;
-	int iTheirStrength;
-	int iOurFirepower;
-	//int iTheirFirepower;
-	int iBaseOdds;
-	//int iStrengthFactor;
-	int iDamageToUs;
-	int iDamageToThem;
-	int iNeededRoundsUs;
-	int iNeededRoundsThem;
-	int iHitLimitThem;
-
-	iOurStrength = ((getDomainType() == DOMAIN_AIR) ? airCurrCombatStr(NULL) : currCombatStr(NULL,NULL));
-	iOurFirepower = ((getDomainType() == DOMAIN_AIR) ? iOurStrength : currFirepower(NULL,NULL));
-
+	int iOurStrength = ((getDomainType() == DOMAIN_AIR) ? airCurrCombatStr(NULL) : currCombatStr(NULL,NULL));
 	if (iOurStrength == 0)
 	{
 		return 1;
 	}
-
-	int iTheirOdds;
+	int iOurFirepower = ((getDomainType() == DOMAIN_AIR) ? iOurStrength : currFirepower(NULL,NULL));
 
 	const bool bSamePlot = pDefender->plot() == plot();
 
+	int iDamageToUs;
+	int iDamageToThem;
+	int iTheirStrength;
+	int iTheirOdds;
 	getDefenderCombatValues(*pDefender, pPlot, iOurStrength, iOurFirepower, iTheirOdds, iTheirStrength, iDamageToUs, iDamageToThem, NULL, pDefender, bSamePlot);
-	iBaseOdds = 100 - iTheirOdds/10;	//	getDefenderCombatValues returns odds based on the combat die (which is 1000 sided)
+
+	int iBaseOdds = 100 - iTheirOdds/10; // getDefenderCombatValues returns odds based on the combat die (which is 1000 sided)
+
+	//int iTheirFirepower;
 #if 0
 	iTheirStrength = pDefender->currCombatStr(pPlot, this);
 	iTheirFirepower = pDefender->currFirepower(pPlot, this);
@@ -1181,39 +1097,32 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 	}
 
 #if 0
-	iStrengthFactor = ((iOurFirepower + iTheirFirepower + 1) / 2);
+	const int iStrengthFactor = (iOurFirepower + iTheirFirepower + 1) / 2;
 
 	//TB Combat Mods Begin
-	int iAttackArmorTotal = armorTotal();
-	int iDefendPunctureTotal = pDefender->punctureTotal();
-	int iAttackPunctureTotal = punctureTotal();
-	int iDefendArmorTotal = pDefender->armorTotal();
+	const int iUnmodifiedDefenderArmor = pDefender->armorTotal() - punctureTotal();
+	const int iUnmodifiedAttackerArmor = armorTotal() - pDefender->punctureTotal();
 
-	int iUnmodifiedDefenderArmor = (iDefendArmorTotal - iAttackPunctureTotal);
-	int iUnmodifiedAttackerArmor = (iAttackArmorTotal - iDefendPunctureTotal);
-	int iModifiedDefenderArmorZero = (iUnmodifiedDefenderArmor < 0 ? 0 : iUnmodifiedDefenderArmor);
-	int iModifiedAttackerArmorZero = (iUnmodifiedAttackerArmor < 0 ? 0 : iUnmodifiedAttackerArmor);
-	int iModifiedDefenderArmor = (iModifiedDefenderArmorZero < 95 ? iModifiedDefenderArmorZero : 95);
-	int iModifiedAttackerArmor = (iModifiedAttackerArmorZero < 95 ? iModifiedAttackerArmorZero: 95);
+	const int iModifiedDefenderArmorZero = iUnmodifiedDefenderArmor < 0 ? 0 : iUnmodifiedDefenderArmor;
+	const int iModifiedAttackerArmorZero = iUnmodifiedAttackerArmor < 0 ? 0 : iUnmodifiedAttackerArmor;
 
-	int iDefenderArmor = (100 - iModifiedDefenderArmor);
-	int iAttackerArmor = (100 - iModifiedAttackerArmor);
-	// UncutDragon
-/* original code
-	iDamageToUs = std::max(1,((GC.getCOMBAT_DAMAGE() * (iTheirFirepower + iStrengthFactor)) / (iOurFirepower + iStrengthFactor)));
-	iDamageToThem = std::max(1,((GC.getCOMBAT_DAMAGE() * (iOurFirepower + iStrengthFactor)) / (iTheirFirepower + iStrengthFactor)));
-	// /UncutDragon
-*/	// modified by both UncutDragon and TB
+	const int iModifiedDefenderArmor = (iModifiedDefenderArmorZero < 95 ? iModifiedDefenderArmorZero : 95);
+	const int iModifiedAttackerArmor = (iModifiedAttackerArmorZero < 95 ? iModifiedAttackerArmorZero: 95);
+
+	const int iDefenderArmor = (100 - iModifiedDefenderArmor);
+	const int iAttackerArmor = (100 - iModifiedAttackerArmor);
+
 	iDamageToUs = std::max(1, ((((GC.getCOMBAT_DAMAGE() * (iTheirFirepower + iStrengthFactor)) / (iOurFirepower + iStrengthFactor)) * iAttackerArmor)/100));
 	iDamageToThem = std::max(1, ((((GC.getCOMBAT_DAMAGE() * (iOurFirepower + iStrengthFactor)) / (iTheirFirepower + iStrengthFactor)) * iDefenderArmor)/100));
 #endif
-	// /UncutDragon
+
 	if (getDomainType() != DOMAIN_AIR)
 	{
 		int iOurFirstStrikesTimes2 = (pDefender->immuneToFirstStrikes() ? 0 : 2*firstStrikes() + chanceFirstStrikes());
 		int iTheirFirstStrikesTimes2 = (immuneToFirstStrikes() ? 0 : 2*pDefender->firstStrikes() + pDefender->chanceFirstStrikes());
-		//	First assess damage from excess first strike rounds
-		if ( iOurFirstStrikesTimes2 > iTheirFirstStrikesTimes2 )
+
+		// First assess damage from excess first strike rounds
+		if (iOurFirstStrikesTimes2 > iTheirFirstStrikesTimes2)
 		{
 			pDefender->AI_setPredictedHitPoints(std::max(0,pDefender->currHitPoints() - ((iOurFirstStrikesTimes2-iTheirFirstStrikesTimes2)*iDamageToThem*iBaseOdds)/200));
 
@@ -1222,14 +1131,14 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 
 			if (iTheirStrength == 0)
 			{
-				if ( !modifyPredictedResults )
+				if (!modifyPredictedResults)
 				{
 					pDefender->AI_setPredictedHitPoints(-1);
 				}
 				return 99;
 			}
 		}
-		else if ( iOurFirstStrikesTimes2 < iTheirFirstStrikesTimes2 )
+		else if (iOurFirstStrikesTimes2 < iTheirFirstStrikesTimes2)
 		{
 			AI_setPredictedHitPoints(std::max(0,currHitPoints() - ((iTheirFirstStrikesTimes2-iOurFirstStrikesTimes2)*iDamageToUs*(100-iBaseOdds))/200));
 
@@ -1238,7 +1147,7 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 
 			if (iOurStrength == 0)
 			{
-				if ( !modifyPredictedResults )
+				if (!modifyPredictedResults)
 				{
 					AI_setPredictedHitPoints(-1);
 				}
@@ -1251,23 +1160,21 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 	}
 	//TB Combat Mods End
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
+	const int iHitLimitThem = pDefender->maxHitPoints() - combatLimit(pDefender);
 
-	iHitLimitThem = pDefender->maxHitPoints() - combatLimit(pDefender);
-
-	iNeededRoundsUs = (std::max(0, pDefender->currHitPoints() - iHitLimitThem) + iDamageToThem - 1 ) / iDamageToThem;
-	iNeededRoundsThem = (std::max(0, currHitPoints()) + iDamageToUs - 1 ) / iDamageToUs;
+	int iNeededRoundsUs = (std::max(0, pDefender->currHitPoints() - iHitLimitThem) + iDamageToThem - 1 ) / iDamageToThem;
+	int iNeededRoundsThem = (std::max(0, currHitPoints()) + iDamageToUs - 1 ) / iDamageToUs;
 
 #if 0
 	if (getDomainType() != DOMAIN_AIR)
 	{
 		// From Mongoose SDK
-		if (!pDefender->immuneToFirstStrikes()) {
-			iNeededRoundsUs   -= ((iBaseOdds * firstStrikes()) + ((iBaseOdds * chanceFirstStrikes()) / 2)) / 100;
+		if (!pDefender->immuneToFirstStrikes())
+		{
+			iNeededRoundsUs -= ((iBaseOdds * firstStrikes()) + ((iBaseOdds * chanceFirstStrikes()) / 2)) / 100;
 		}
-		if (!immuneToFirstStrikes()) {
+		if (!immuneToFirstStrikes())
+		{
 			iNeededRoundsThem -= (((100 - iBaseOdds) * pDefender->firstStrikes()) + (((100 - iBaseOdds) * pDefender->chanceFirstStrikes()) / 2)) / 100;
 		}
 		iNeededRoundsUs   = std::max(1, iNeededRoundsUs);
@@ -1275,10 +1182,11 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 	}
 #endif
 
-	int iRoundsDiff = iNeededRoundsUs - iNeededRoundsThem;
+	const int iRoundsDiff = iNeededRoundsUs - iNeededRoundsThem;
+
 	if (iRoundsDiff > 0)
 	{
-		if ( modifyPredictedResults )
+		if (modifyPredictedResults)
 		{
 			AI_setPredictedHitPoints(0);
 
@@ -1289,26 +1197,28 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 			//	amount they have left (as a percentage of where they started) since their attacks as rounds go on
 			//	will be diluted less (down to around this amount)
 			int iWinnerBaseLossPercent = 0;
+
 			if (pDefender->currHitPoints() != 0)
 			{
 				iWinnerBaseLossPercent += 100 - (100*iNeededRoundsThem*iDamageToThem)/pDefender->currHitPoints();
 			}
-
 			iDamageToThem -= (iDamageToThem*iWinnerBaseLossPercent)/100;
+
 			FAssert(pDefender->currHitPoints() > iNeededRoundsThem*iDamageToThem);
+
 			pDefender->AI_setPredictedHitPoints(pDefender->currHitPoints() - iNeededRoundsThem*iDamageToThem);
 		}
 
-		iTheirStrength *= (100 + (100*iRoundsDiff)/std::max(1,iNeededRoundsThem));
+		iTheirStrength *= 100 + 100 * iRoundsDiff / std::max(1, iNeededRoundsThem);
 		iTheirStrength /= 100;
 	}
 	else
 	{
-		if ( modifyPredictedResults )
+		if (modifyPredictedResults)
 		{
 			pDefender->AI_setPredictedHitPoints(0);
 
-			if ( iRoundsDiff != 0 )
+			if (iRoundsDiff != 0)
 			{
 				//	Adjust the predicted damage to allow for the effect of strength reductions
 				//	between the attack rounds
@@ -1316,20 +1226,19 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 				//	so see how much the base prediction is for the attacker, then reduce the damage to the attacker by the
 				//	amount they have left (as a percentage of where they started) since their attacks as rounds go on
 				//	will be diluted less (down to around this amount)
-				int iWinnerBaseLossPercent = 100 - (100*iNeededRoundsUs*iDamageToUs)/currHitPoints();
+				const int iWinnerBaseLossPercent = 100 - 100 * iNeededRoundsUs * iDamageToUs / currHitPoints();
 
-				iDamageToUs -= (iDamageToUs*iWinnerBaseLossPercent)/100;
+				iDamageToUs -= iDamageToUs * iWinnerBaseLossPercent / 100;
 			}
-			//	If iRoundsDiff == 0 both units can wind up at a notional 0 HP so cannot assert left over
-			//	HP in that case
+			// If iRoundsDiff == 0 both units can wind up at a notional 0 HP so cannot assert left over HP in that case
 			AI_setPredictedHitPoints(std::max(0,currHitPoints() - iNeededRoundsUs*iDamageToUs));
 		}
 
-		iOurStrength *= (100 - (100*iRoundsDiff)/std::max(1,iNeededRoundsUs));
+		iOurStrength *= 100 - 100 * iRoundsDiff / std::max(1, iNeededRoundsUs);
 		iOurStrength /= 100;
 	}
 
-	int iOdds = (((iOurStrength * 100) / (iOurStrength + iTheirStrength)));
+	int iOdds = iOurStrength * 100 / (iOurStrength + iTheirStrength);
 
 	//	Koshling - modify the calculated odds to account for withdrawal chances
 	//	and the AI player's rose-tinted-spectacles value - this used to simply add
@@ -1339,80 +1248,74 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 	//	win againts a massively stronger opponent.  Changed it to be multiplicative instead
 	//  TB Combat Mods (I'm hoping this calculates out right...):
 	//  Determine Withdraw odds
-	int AdjustedWithdrawalstep1 = withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(this);
-	int AdjustedWithdrawalstep2 = ((AdjustedWithdrawalstep1 > 100) ? 100 : AdjustedWithdrawalstep1);
-	int AdjustedWithdrawal = ((AdjustedWithdrawalstep2 < 0) ? 0 : AdjustedWithdrawalstep2);
-	int InitialEarlyWithdrawPercentage = (earlyWithdrawTotal() > 100 ? 100 : earlyWithdrawTotal());
+	const int AdjustedWithdrawalstep1 = withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(this);
+	const int AdjustedWithdrawalstep2 = AdjustedWithdrawalstep1 > 100 ? 100 : AdjustedWithdrawalstep1;
 
-	int expectedrndcnt = std::min(iNeededRoundsUs, iNeededRoundsThem);
-	int timepercentage = InitialEarlyWithdrawPercentage;
-	int expectedrnds = ((expectedrndcnt * timepercentage)/100);	//	Don't add 1 here since z is initialised to the result of the one certain round
+	const int AdjustedWithdrawal = AdjustedWithdrawalstep2 < 0 ? 0 : AdjustedWithdrawalstep2;
+
+	const int expectedRndCnt = std::min(iNeededRoundsUs, iNeededRoundsThem);
+	const int timePercentage = earlyWithdrawTotal() > 100 ? 100 : earlyWithdrawTotal(); // InitialEarlyWithdrawPercentage
+
+	const int expectedRnds = expectedRndCnt * timePercentage / 100; // Don't add 1 here since z is initialised to the result of the one certain round
 
 	int y = AdjustedWithdrawal;
 	int z = AdjustedWithdrawal;
-	int Time;
-	for (Time = 0; Time < expectedrnds; ++Time)
+
+	for (int Time = 0; Time < expectedRnds; ++Time)
 	{
-		z += ((AdjustedWithdrawal * y)/100);
-		y = ((AdjustedWithdrawal * (100 - z))/100);	//	Prob next round is prob per round times prob you haven't already
+		z += AdjustedWithdrawal * y / 100;
+		y = AdjustedWithdrawal * (100 - z) / 100; // Prob next round is prob per round times prob you haven't already
 	}
+	const int EvaluatedWithdrawOdds = z;
 
-	int EvaluatedWithdrawOdds = z;
+	// Figure out odds of repel
+	const int iFortRepelWithOverrun = pDefender->fortifyRepelModifier() - overrunTotal();
 
-	//* figure out odds of repel
-	int irepel = pDefender->repelTotal();
-	int ifortrepel = pDefender->fortifyRepelModifier();
-	int ioverrun = overrunTotal();
-	int iunyielding = unyieldingTotal();
-	int ifortrepelwoverrun = ifortrepel-ioverrun;
-	int ifortrepelzero = (ifortrepelwoverrun < 0 ? 0 : ifortrepelwoverrun);
-	int ifortrepeltotal = (ifortrepelzero > 100 ? 100 : ifortrepelzero);
-	int irepelwunyielding = irepel + ifortrepeltotal - iunyielding;
-	int irepelzero = (irepelwunyielding < 0 ? 0 : irepelwunyielding);
-	int irepeltotal = (irepelzero  > 100 ? 100 : irepelzero);
+	const int iFortRepelZero = iFortRepelWithOverrun < 0 ? 0 : iFortRepelWithOverrun;
+	const int iFortRepelTotal = iFortRepelZero > 100 ? 100 : iFortRepelZero;
 
-	y = irepeltotal;
-	z = irepeltotal;
+	const int iRepelWithUnyielding = pDefender->repelTotal() + iFortRepelTotal - unyieldingTotal();
 
-	for (Time = 0; Time < expectedrndcnt; ++Time)
+	const int iRepelZero = iRepelWithUnyielding < 0 ? 0 : iRepelWithUnyielding;
+	const int iRepelTotal = iRepelZero  > 100 ? 100 : iRepelZero;
+
+	y = iRepelTotal;
+	z = iRepelTotal;
+
+	for (int Time = 0; Time < expectedRndCnt; ++Time)
 	{
-		z += ((irepeltotal * y)/100);
-		y = ((irepeltotal * (100 - z))/100);	//	Prob next round is prob per round times prob you haven't already
+		z += iRepelTotal * y / 100;
+		y = iRepelTotal * (100 - z) / 100; // Prob next round is prob per round times prob you haven't already
 	}
+	const int EvaluatedRepelOdds = z;
 
-	int EvaluatedRepelOdds = z;
+	// Figure out odds of knockback
+	const int iKnockbackVsUnyielding = knockbackVSOpponentProbTotal(pDefender) - pDefender->unyieldingTotal();
 
-	//* figure out odds of knockback
-	int iknockback = knockbackVSOpponentProbTotal(pDefender);
-	int idefunyielding = pDefender->unyieldingTotal();
-	int iknockbackvsunyielding = iknockback - idefunyielding;
-	int iknockbackzero = (iknockbackvsunyielding < 0 ? 0 : iknockbackvsunyielding);
-	int iknockbacktotal = (iknockbackzero > 100 ? 100 : iknockbackzero);
-	int iAttackerKnockbackTries = knockbackRetriesTotal();
+	const int iKnockbackZero = iKnockbackVsUnyielding < 0 ? 0 : iKnockbackVsUnyielding;
+	const int iKnockbackTotal = iKnockbackZero > 100 ? 100 : iKnockbackZero;
 
-	y = iknockbacktotal;
-	z = iknockbacktotal;
+	const int iAttackerKnockbackTries = knockbackRetriesTotal();
+	y = iKnockbackTotal;
+	z = iKnockbackTotal;
 
-	for (Time = 0; Time < iAttackerKnockbackTries; ++Time)
+	for (int Time = 0; Time < iAttackerKnockbackTries; ++Time)
 	{
-		z += ((iknockbacktotal * y)/100);
-		y = ((iknockbacktotal * (100 - z))/100);	//	Prob next round is prob per round times prob you haven't already
+		z += iKnockbackTotal * y / 100;
+		y = iKnockbackTotal * (100 - z) / 100; // Prob next round is prob per round times prob you haven't already
 	}
+	const int EvaluatedKnockbackOdds = z;
 
-	int EvaluatedKnockbackOdds = z;
-
-	int iOddsModifier = EvaluatedWithdrawOdds + EvaluatedKnockbackOdds - EvaluatedRepelOdds;
+	const int iOddsModifier = EvaluatedWithdrawOdds + EvaluatedKnockbackOdds - EvaluatedRepelOdds;
 
 	//	Surviving is not winning - give survival by withdrawal/knockback half the value of a win
-	iOdds += (iOdds*2*GET_PLAYER(getOwner()).AI_getAttackOddsChange() + ((100 - iOdds) * iOddsModifier)/2) / 100;
+	iOdds += (iOdds * 2*GET_PLAYER(getOwner()).AI_getAttackOddsChange() + (100 - iOdds) * iOddsModifier / 2) / 100;
 
-	if ( !modifyPredictedResults )
+	if (!modifyPredictedResults)
 	{
 		AI_setPredictedHitPoints(-1);
 		pDefender->AI_setPredictedHitPoints(-1);
 	}
-
-	// From Mongoose SDK
 	return range(iOdds, 1, 99);
 }
 
