@@ -11,10 +11,7 @@ import lxml.etree as ET
 from Common import load_tree
 
 # RUN SCRIPT WITH "-rename" to automatically rename entries in the defines, sounds folder
-if str(sys.argv[-1]) == '-rename':
-    actually_rename = True
-else:
-    actually_rename = False
+actually_rename = bool(str(sys.argv[-1]) == '-rename')
 
 path_assets_folder =  '../../../Assets/'
 path_mp3_files  = '../../../Assets/Sounds/Tech/'
