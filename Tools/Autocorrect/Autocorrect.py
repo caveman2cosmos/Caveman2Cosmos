@@ -94,7 +94,6 @@ def autocorrect(files, mode, args):
                     etree.ElementTree(root).write(filename, encoding="utf-8", xml_declaration=True, pretty_print=True)
     except ExitEarly:
         print('\n\nExited early, progress has been saved')
-        pass
     finally:
         # We can't have changed the lists unless we were in interactive mode
         if mode == Mode.INTERACTIVE:
@@ -373,7 +372,6 @@ def apply_corrections_interactive(tag, text, matches, ignore_words, ignore_rules
                 raise ExitEarly
             else: # key == b's':
                 print(Fore.GREEN + indent + 'Skipping this suggestion')
-                pass
 
     return corrected_text, corrected_text_mrks
 
