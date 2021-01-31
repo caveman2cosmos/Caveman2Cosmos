@@ -7766,24 +7766,6 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<Russian>Ïðèðîñò ñëîæíîñòè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEOBSOLETEBUILDINGS_HOVER</Tag>
-		<English>Hides Obsolete Buildings from the main city screen.</English>
-		<French>Masque les Bâtiments Obsolètes de l'Ecran principal de la ville.</French>
-		<German>Blendet veraltete Gebäude in der Stadtansicht aus.</German>
-		<Italian>Nasconde gli edifici obsoleti dallo schermo principale della città.</Italian>
-		<Spanish>Oculta los edificios obsoletos de la vista principal de la ciudad.</Spanish>
-		<Russian>Óñòàðåâøèå ïîñòðîéêè íà ãëàâíîì ýêðàíå ãîðîäà áóäóò ñêðûòû.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEOBSOLETEBUILDINGS_TEXT</Tag>
-		<English>Hide Obsolete Buildings</English>
-		<French>Masquer les Bâtiments Obsolètes</French>
-		<German>Veraltete Gebäude ausblenden</German>
-		<Italian>Nascondi edifici obsoleti</Italian>
-		<Spanish>Ocultar edificios obsoletos</Spanish>
-		<Russian>Ñêðûòü óñòàðåâø. çäàíèÿ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEREPLACEDBUILDINGS_HOVER</Tag>
 		<English>Hides any buildings from the city contruct queue if their upgraded form can be built immediately. (e.g The harbor will be hidden if the Port is available).</English>
 		<French>Masque tous les bâtiments de la liste de production si la version améliorée de ces bâtiments est déjà disponible (example: sera masqué si le Port est disponible).</French>
@@ -8231,24 +8213,6 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<Italian>Mostra tratti delle civiltà</Italian>
 		<Spanish>Mostrar rasgos de civilización</Spanish>
 		<Russian>Ïîêàç ÷åðò öèâèëèçàöèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__SHOWCOASTALBUILDINGS_HOVER</Tag>
-		<English>Shows coastal buildings in the city queue when they are hidden because of coastal or river prerequisites</English>
-		<French>Affiche les Bâtiments côtiers dans la Liste de production lorsqu'il sont cachés en raison des pré-requis (côtes ou rivière)</French>
-		<German>Mit dieser Option werden Gebäude in der Liste der Stadtansicht angezeigt, die normalerweise ausgeblendet werden, da sie Küsten- oder Flusslage erfordern.</German>
-		<Italian>Mostra gli edifici costieri nella coda di produzione della città quando sono bloccati da prerequisiti di costa o fiume</Italian>
-		<Spanish>Muestra los edificios costeros en la cola de producción aunque estén ocultos por los requisitos de costa o río alrededor.</Spanish>
-		<Russian>Ïîêàçûâàåò ïðèáðåæíûå çäàíèÿ â ãîðîäñêîé î÷åðåäè, êîãäà îíè ñêðûòû èç-çà íåâûïîëíåííûõ óñëîâèé äëÿ ñòðîèòåëüñòâà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__SHOWCOASTALBUILDINGS_TEXT</Tag>
-		<English>Show Coastal Buildings</English>
-		<French>Voir les Bâtiments Côtiers</French>
-		<German>Küstengebäude zeigen</German>
-		<Italian>Mostra edifici costieri</Italian>
-		<Spanish>Mostrar edificios costeros</Spanish>
-		<Russian>Ïîêàç ïðèáðåæí. ñòðîåíèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__SHOWREVCIVICS_HOVER</Tag>

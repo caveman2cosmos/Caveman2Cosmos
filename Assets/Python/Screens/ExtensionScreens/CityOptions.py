@@ -37,7 +37,7 @@ class CityOptions:
 		screen.addScrollPanel(scrlPnl, "", x0, y0 + ySpace, dx, dy - 3*ySpace, ePnlMain)
 		screen.setStyle(scrlPnl, "ScrollPanel_Alt_Style")
 		y = 0
-		screen.setTextAt("IconSizeCO", scrlPnl, aFontList[4] + TRNSLTR.getText("TXT_KEY_ICON_SIZE", (mainInterface.MainOpt.getBuildIconSize(),)), 1<<0, 0, y, 0, eFontGame, eWidGen, 1, 1)
+		screen.setTextAt("IconSizeCO", scrlPnl, aFontList[4] + TRNSLTR.getText("TXT_KEY_ICON_SIZE", (mainInterface.CityOpt.getBuildIconSize(),)), 1<<0, 0, y, 0, eFontGame, eWidGen, 1, 1)
 		#y += ySpace
 
 		iBtnDx = 32 + xRes / 60
@@ -66,7 +66,7 @@ class CityOptions:
 			elif NAME == "IconSizeCO":
 				popup = CyPopup(4999, EventContextTypes.EVENTCONTEXT_SELF, True)
 				popup.setPosition(self.xRes/3, self.yRes/3)
-				popup.createSpinBox(0, "", mainInterface.MainOpt.getBuildIconSize(), 4, 128, 32)
+				popup.createSpinBox(0, "", mainInterface.CityOpt.getBuildIconSize(), 4, 128, 32)
 				popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 		return 1
 

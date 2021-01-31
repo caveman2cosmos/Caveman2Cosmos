@@ -34,12 +34,12 @@ class CvMainInterface:
 		global g_mainInterface
 		g_mainInterface = self
 
-		global MainOpt, ClockOpt, ScoreOpt, CityScreenOpt, RoMOpt
+		global MainOpt, CityOpt, ClockOpt, ScoreOpt, RoMOpt
 		import BugCore
 		ClockOpt = BugCore.game.NJAGC
 		ScoreOpt = BugCore.game.Scores
 		MainOpt = self.MainOpt = BugCore.game.MainInterface
-		CityScreenOpt = BugCore.game.CityScreen
+		CityOpt = self.CityOpt = BugCore.game.CityScreen
 		RoMOpt = BugCore.game.RoMSettings
 
 		import InputData
@@ -111,7 +111,7 @@ class CvMainInterface:
 			if MainOpt.isRememberFieldOfView():
 				self.iField_View = int(MainOpt.getFieldOfView())
 			# Raw Yields
-			self.bYieldView, self.iYieldType = RawYields.getViewAndType(CityScreenOpt.getRawYieldsDefaultView())
+			self.bYieldView, self.iYieldType = RawYields.getViewAndType(CityOpt.getRawYieldsDefaultView())
 			self.iYieldTiles = RawYields.WORKED_TILES
 			self.RAW_YIELD_HELP = (
 				"TXT_KEY_RAW_YIELD_VIEW_TRADE",
@@ -2586,7 +2586,7 @@ class CvMainInterface:
 			else:
 				szTxt = TRNSLTR.getText("INTERFACE_CITY_HAPPY_NO_UNHAPPY", (CyCity.happyLevel(),))
 
-			if CityScreenOpt.isShowAngerCounter() and bOwnCity:
+			if CityOpt.isShowAngerCounter() and bOwnCity:
 				# BUG - Anger Display
 				iAngerTimer = max(CyCity.getHurryAngerTimer(), CyCity.getConscriptAngerTimer())
 				if iAngerTimer > 0:
@@ -2606,7 +2606,7 @@ class CvMainInterface:
 			iWidth = a4thX - 16
 			a16thX = a4thX / 4
 			# Trade List and Raw Yields
-			bRawYields = CityScreenOpt.isShowRawYields()
+			bRawYields = CityOpt.isShowRawYields()
 			if bRawYields:
 				bYieldView = self.bYieldView
 				iYieldType = self.iYieldType
@@ -2878,7 +2878,7 @@ class CvMainInterface:
 					iGPTurns = (iGreatPeopleTreshold - iGreatPeopleProgress + iGreatPeopleRate - 1) / iGreatPeopleRate
 				else:
 					iGPTurns = None
-				if CityScreenOpt.isShowCityGreatPersonInfo():
+				if CityOpt.isShowCityGreatPersonInfo():
 					bOne = MainOpt.isGPBarTypesNone() or MainOpt.isGPBarTypesOne()
 					szTxt = GPUtil.getGreatPeopleText(CyCity, iGPTurns, w - 32, False, bOne, False, uFont2)
 				else:
@@ -3169,13 +3169,13 @@ class CvMainInterface:
 					szTxt2 += "*"
 				szTxt1 += GC.getUnitInfo(iType).getDescription()
 				# BUG - Production Decay
-				if CityScreenOpt.isShowProductionDecayQueue():
+				if CityOpt.isShowProductionDecayQueue():
 					if CyCity.getUnitProduction(iType) > 0:
 						if CyCity.isUnitProductionDecay(iType):
 							szTxt1 = TRNSLTR.getText("TXT_KEY_BUG_PRODUCTION_DECAY_THIS_TURN", (szTxt1,))
 						elif CyCity.getUnitProductionTime(iType) > 0:
 							iDecayTurns = CyCity.getUnitProductionDecayTurns(iType)
-							if iDecayTurns <= CityScreenOpt.getProductionDecayQueueUnitThreshold():
+							if iDecayTurns <= CityOpt.getProductionDecayQueueUnitThreshold():
 								szTxt1 = TRNSLTR.getText("TXT_KEY_BUG_PRODUCTION_DECAY_WARNING", (szTxt1,))
 				szName += "UNIT|"
 
@@ -3185,13 +3185,13 @@ class CvMainInterface:
 					szTxt2 = "<color=0,255,255,255>"
 				szTxt2 += str(CyCity.getBuildingProductionTurnsLeft(iType, iNode))
 				# BUG - Production Decay
-				if CityScreenOpt.isShowProductionDecayQueue():
+				if CityOpt.isShowProductionDecayQueue():
 					if CyCity.getBuildingProduction(iType) > 0:
 						if CyCity.isBuildingProductionDecay(iType):
 							szTxt1 = TRNSLTR.getText("TXT_KEY_BUG_PRODUCTION_DECAY_THIS_TURN", (szTxt1,))
 						elif CyCity.getBuildingProductionTime(iType) > 0:
 							iDecayTurns = CyCity.getBuildingProductionDecayTurns(iType)
-							if iDecayTurns <= CityScreenOpt.getProductionDecayQueueBuildingThreshold():
+							if iDecayTurns <= CityOpt.getProductionDecayQueueBuildingThreshold():
 								szTxt1 = TRNSLTR.getText("TXT_KEY_BUG_PRODUCTION_DECAY_WARNING", (szTxt1,))
 				szName += "BUILDING|"
 
@@ -3343,7 +3343,7 @@ class CvMainInterface:
 		eWidGen = WidgetTypes.WIDGET_GENERAL
 		# City Tabs
 		y = self.yBotBar + 32
-		iSize = MainOpt.getBuildIconSize()
+		iSize = CityOpt.getBuildIconSize()
 		dx = iSize + 4
 		dA = iSize - 8
 		szPath = "Art/Interface/screens/City/"
@@ -3571,7 +3571,7 @@ class CvMainInterface:
 		else: self.bFreshQueue = True
 		iPlayer = InCity.iPlayer
 		iPlayerAct = self.iPlayer
-		iSize = MainOpt.getBuildIconSize()
+		iSize = CityOpt.getBuildIconSize()
 		dx = iSize + 4
 		iBtnPerRow = (w - 16) / dx
 		xStart = x = (w - 16) % (dx * iBtnPerRow) / 2
@@ -4150,11 +4150,11 @@ class CvMainInterface:
 			# BUG - Whip Assist
 			HURRY_WHIP = self.HURRY_POPULATION
 			HURRY_BUY = self.HURRY_GOLD
-			bShowWhipAssist = CityScreenOpt.isShowWhipAssist()
+			bShowWhipAssist = CityOpt.isShowWhipAssist()
 			if bShowWhipAssist and CyCity.canHurry(HURRY_WHIP, False):
 				iHurryPop = CyCity.hurryPopulation(HURRY_WHIP)
 				iOverflow = CyCity.hurryProduction(HURRY_WHIP) - CyCity.productionLeft()
-				if CityScreenOpt.isWhipAssistOverflowCountCurrentProduction():
+				if CityOpt.isWhipAssistOverflowCountCurrentProduction():
 					iOverflow += CyCity.getCurrentProductionDifference(False, True)
 				iMaxOverflow = max(iNeeded, CyCity.getCurrentProductionDifference(False, False))
 				iLost = max(0, iOverflow - iMaxOverflow)
@@ -5807,9 +5807,9 @@ class CvMainInterface:
 # # # # # # #
 # Pop-Up Callbacks
 def applyCityTabOptions(iPlayer, userData, popupReturn):
-	MainOpt.setBuildIconSize(popupReturn.getSpinnerWidgetValue(0))
+	CityOpt.setBuildIconSize(popupReturn.getSpinnerWidgetValue(0))
 	import BugOptions
-	BugOptions.getOptions(MainOpt._id).write()
+	BugOptions.getOptions(CityOpt._id).write()
 	screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
 	g_mainInterface.buildCityTabButtons(screen, g_mainInterface.InCity.CyCity)
 	g_mainInterface.updateCityTab(screen, g_mainInterface.iCityTab)
