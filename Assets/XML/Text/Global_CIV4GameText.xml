@@ -5035,10 +5035,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ICON_SIZE</Tag>
-		<English>Icon Size:</English>
-		<French>Taille d'Icones:</French>
-		<German>Symbolgröße:</German>
-		<Russian>Размер изображения:</Russian>
+		<English>Change tab icon size: %d1</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INCREASE_LOCAL_REBELS</Tag>

@@ -1,7 +1,6 @@
 from CvPythonExtensions import *
 import HandleInputUtil
 import cPickle
-import PythonToolTip as pyTT
 
 # globals
 GC = CyGlobalContext()
@@ -330,12 +329,11 @@ class CvDomesticAdvisor:
 		self.CyPlayer = CyPlayer = GC.getActivePlayer()
 		import InputData
 		self.InputData = InputData.instance
-		self.TXT_NAME = TRNSLTR.getText("TXT_WORD_NAME", ())
-		# Tool Tip
-		self.szTextTT = ""
-		self.iOffsetTT = []
-		self.bLockedTT = False
 
+		import PythonToolTip
+		self.tooltip = PythonToolTip.PythonToolTip()
+
+		self.TXT_NAME = TRNSLTR.getText("TXT_WORD_NAME", ())
 
 		# Determine our size/positions.
 		import ScreenResolution as SR
@@ -1577,37 +1575,12 @@ class CvDomesticAdvisor:
 			self.CyPlayer.getCity(userData[2]).setName(newName, False)
 			screen.setTableText(self.currentPage, 1, userData[3], newName, "", WidgetTypes.WIDGET_GENERAL, 1, 1, 1<<0)
 
-	# Tooltip
-	def updateTooltip(self, screen, szText, xPos = -1, yPos = -1, uFont = ""):
-		if not szText:
-			return
-		if szText != self.szTextTT:
-			self.szTextTT = szText
-			if not uFont:
-				uFont = self.aFontList[6]
-			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
-			POINT = Win32.getCursorPos()
-			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
-		else:
-			if xPos == yPos == -1:
-				POINT = Win32.getCursorPos()
-				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
-			screen.moveToFront("Tooltip")
-			screen.show("Tooltip")
-		if xPos == yPos == -1:
-			self.bLockedTT = True
-
 	#--------------------------#
 	# Base operation functions #
 	#||||||||||||||||||||||||||#
 	def update(self, fDelta):
-		if self.bLockedTT:
-			POINT = Win32.getCursorPos()
-			iX = POINT.x + self.iOffsetTT[0]
-			iY = POINT.y + self.iOffsetTT[1]
-			if iX < 0: iX = 0
-			if iY < 0: iY = 0
-			self.getScreen().moveItem("Tooltip", iX, iY, 0)
+		if self.tooltip.bLockedTT:
+			self.tooltip.handle(self.getScreen())
 
 	def handleInput(self, inputClass):
 		screen = self.getScreen()
@@ -1634,16 +1607,15 @@ class CvDomesticAdvisor:
 					szText = TRNSLTR.getText("TXT_KEY_CDA_STOP_EDITING", ())
 				else:
 					szText = TRNSLTR.getText("TXT_KEY_CDA_START_EDITING", ())
-				self.updateTooltip(screen, szText)
+				self.tooltip.handle(screen, szText)
 
 			elif NAME == "CityNameWidth":
 				szText = "Left click to increase by 1.\nRight click to decrease by 1.\n\nHold shift to modify by 10, ctrl to modify by 5 or both to modify by 20."
-				self.updateTooltip(screen, szText)
+				self.tooltip.handle(screen, szText)
 
 			return
 
-		screen.hide("Tooltip")
-		self.bLockedTT = False
+		self.tooltip.reset(screen)
 
 		if iCode == NotifyCode.NOTIFY_LISTBOX_ITEM_SELECTED:
 
@@ -1916,8 +1888,5 @@ class CvDomesticAdvisor:
 				screen.hideScreen()
 
 	def onClose(self):
-		del self.eventManager.OverrideEventApply[5000], self.eventManager
-		del self.CyPlayer, self.iPlayer, self.cityList
-		del self.InputData, self.szTextTT, self.iOffsetTT, self.bLockedTT
-		del self.xRes, self.yRes, self.aFontList, self.hTable1, self.hTable2, self.xTable2, self.wTable2
-		del self.TXT_NAME
+		del self.eventManager.OverrideEventApply[5000], self.eventManager, self.InputData, self.CyPlayer, self.iPlayer, self.cityList, \
+			self.TXT_NAME, self.xRes, self.yRes, self.aFontList, self.hTable1, self.hTable2, self.xTable2, self.wTable2

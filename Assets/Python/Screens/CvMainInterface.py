@@ -38,7 +38,7 @@ class CvMainInterface:
 		import BugCore
 		ClockOpt = BugCore.game.NJAGC
 		ScoreOpt = BugCore.game.Scores
-		MainOpt = BugCore.game.MainInterface
+		MainOpt = self.MainOpt = BugCore.game.MainInterface
 		CityScreenOpt = BugCore.game.CityScreen
 		RoMOpt = BugCore.game.RoMSettings
 
@@ -89,6 +89,7 @@ class CvMainInterface:
 		self.iWaitingCounter = 0
 		self.bShowTimeTextAlt = False
 		self.iTimeTextCounter = 0
+		self.cityOptions = None
 
 
 	def interfaceScreen(self):
@@ -1171,6 +1172,7 @@ class CvMainInterface:
 		# Show the screen immidiately and pass input to the game.
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, True)
 
+
 	# Will update the screen (every 250 ms)
 	def updateScreen(self):
 		screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
@@ -1435,6 +1437,9 @@ class CvMainInterface:
 				# Remove potential Help Text
 				if self.bTooltip:
 					self.hideTooltip(screen)
+
+				if self.cityOptions:
+					self.cityOptions.exit(screen, self)
 
 				screen.hide("CityTab0")
 				screen.hide("CityTab1")
@@ -3749,6 +3754,9 @@ class CvMainInterface:
 				x += dx
 				iCount += 1
 
+		if self.cityOptions:
+			self.cityOptions.drawOptions(screen, self)
+
 
 	def exitCityTab(self, screen, iTab):
 		screen.deleteWidget("CityTab|BG0")
@@ -5088,6 +5096,12 @@ class CvMainInterface:
 	# Will handle the input for this screen...
 	def handleInput(self, inputClass):
 		HandleInputUtil.debugInput(inputClass)
+
+		screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
+
+		if self.cityOptions:
+			return self.cityOptions.handleInput(screen, inputClass, self)
+
 		bAlt, bCtrl, bShift = self.InputData.getModifierKeys()
 		iCode	= inputClass.eNotifyCode
 		iData	= inputClass.iData
@@ -5096,8 +5110,7 @@ class CvMainInterface:
 		iData1	= inputClass.iData1
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
 
-		# Begin
-		screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
+
 		if iCode == 16: # Key Down
 
 			if iData in (2, 3, 4, 5, 6, 7, 8, 9, 10, 11): # 0-9
@@ -5616,11 +5629,8 @@ class CvMainInterface:
 					self.updateCityTab(screen, self.iCityTab)
 
 				elif TYPE == "Options":
-					popup = CyPopup(4999, EventContextTypes.EVENTCONTEXT_SELF, True)
-					popup.setPosition(self.xRes/3, self.yRes/3)
-					popup.setBodyString(self.aFontList[5] + TRNSLTR.getText("TXT_KEY_ICON_SIZE", ()), 1<<0)
-					popup.createSpinBox(0, "", MainOpt.getBuildIconSize(), 4, 128, 32)
-					popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
+					import CityOptions
+					self.cityOptions = CityOptions.CityOptions(screen, self)
 
 			elif BASE == "BldgList":
 				if TYPE == "Demolish":
