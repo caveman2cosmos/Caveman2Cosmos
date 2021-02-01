@@ -5034,10 +5034,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Russian>[ICON_BULLET]Óñêîðåíèå ïðîèçâîäñòâà âûçûâàåò %d1 áîëüøå èíôëÿöèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ICON_SIZE</Tag>
-		<English>Change tab icon size: %d1</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_INCREASE_LOCAL_REBELS</Tag>
 		<English>[NEWLINE][ICON_BULLET]Increases local rebelliousness</English>
 		<French>[NEWLINE][ICON_BULLET]Augmente la rebellion locale</French>

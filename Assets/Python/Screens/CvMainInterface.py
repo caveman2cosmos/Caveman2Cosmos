@@ -3754,9 +3754,6 @@ class CvMainInterface:
 				x += dx
 				iCount += 1
 
-		if self.cityOptions:
-			self.cityOptions.drawOptions(screen, self)
-
 
 	def exitCityTab(self, screen, iTab):
 		screen.deleteWidget("CityTab|BG0")
@@ -5808,12 +5805,14 @@ class CvMainInterface:
 # Pop-Up Callbacks
 def applyCityTabOptions(iPlayer, userData, popupReturn):
 	CityOpt.setBuildIconSize(popupReturn.getSpinnerWidgetValue(0))
-	import BugOptions
-	BugOptions.getOptions(CityOpt._id).write()
 	screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
 	g_mainInterface.buildCityTabButtons(screen, g_mainInterface.InCity.CyCity)
 	g_mainInterface.updateCityTab(screen, g_mainInterface.iCityTab)
+	g_mainInterface.cityOptions.drawOptions(screen, g_mainInterface)
 
+
+# # # # # # #
+# Mini-Classes
 class City:
 	def __init__(self, CyCity, iCityID):
 		self.CyCity		= CyCity

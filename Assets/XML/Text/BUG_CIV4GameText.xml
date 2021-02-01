@@ -7802,42 +7802,6 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<Russian>Ñêðûòü íåäîñòóïíûå çàäàíèÿ </Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEUNCONSTRUCTABLEBUILDINGS_HOVER</Tag>
-		<English>Hides all buildings from the city queue that cannot be constructed. Change takes effect after loading any save or staring a new game.</English>
-		<French>Masque tous les bâtiments qui ne peuvent pas être construits de la liste de production.</French>
-		<German>Blendet alle Gebäude in der Produktionsliste der Stadt aus, die momentan nicht errichtet werden können.</German>
-		<Italian>Nasconde dalla coda di produzione della città tutti gli edifici che non possono essere costruiti.</Italian>
-		<Spanish>Oculta todos los edificios de la cola de producción de la ciudad que no pueden ser construidos.</Spanish>
-		<Russian>Ñêðûâàåò âñå çäàíèÿ èç ãîðîäñêîé î÷åðåäè, êîòîðûå íå ìîãóò áûòü ïîñòðîåíû â äàííûé ìîìåíò.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEUNCONSTRUCTABLEBUILDINGS_TEXT</Tag>
-		<English>Hide Unconstructable Buildings</English>
-		<French>Masquer les Bâtiments non-Constructibles</French>
-		<German>Nur aktuell baubare Gebäude anzeigen</German>
-		<Italian>Nascondi edifici non costruibili</Italian>
-		<Spanish>Ocultar edificios no construibles</Spanish>
-		<Russian>Ñêðûòü íåäîñòóï. ïîñòðîéêè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEUNTRAINABLEUNITS_HOVER</Tag>
-		<English>Hides all units from the city queue that cannot be constructed. Change takes effect after loading any save or staring a new game.</English>
-		<French>Masque toutes les unités qui ne peuvent pas être construites de la liste de production.</French>
-		<German>Blendet alle Einheiten in der Produktionsliste der Stadt aus, die momentan nicht ausgebildet werden können.</German>
-		<Italian>Nasconde dalla coda di produzione della città tutte le unità che non possono essere costruite.</Italian>
-		<Spanish>Oculta todas las unidades de la cola de producción de la ciudad que no pueden ser entrenadas.</Spanish>
-		<Russian>Èñêëþ÷àåò èç ãîðîäñêîé î÷åðåäè ëþáûå îòðÿäû, êîòîðûå íå ìîãóò áûòü ïîñòðîåíû â äàííûé ìîìåíò.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEUNTRAINABLEUNITS_TEXT</Tag>
-		<English>Hide Untrainable Units</English>
-		<French>Masquer les Unités non-Constructibles</French>
-		<German>Nur aktuell trainierbare Einheiten anzeigen</German>
-		<Italian>Nascondi unità non costruibili</Italian>
-		<Spanish>Ocultar unidades no entrenables</Spanish>
-		<Russian>Ñêðûòü íåäîñò. þíèòû</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IGNOREDISABLEDBUILDINGALERTS_HOVER</Tag>
 		<English>When resources, civics, or other factors cause a building to be disabled in one of your cities, you will not recieve a notification of the event.</English>
 		<German>Wenn Gebäude aufgrund fehlender Ressourcen, durch eine gewählte Gesellschaftsform oder durch andere Faktoren abgeschaltet werden, wird keine Hinweismeldung mehr angezeigt.</German>

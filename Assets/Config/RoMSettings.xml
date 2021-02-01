@@ -58,9 +58,6 @@
 			<option id="HideReplacedBuildings" key="HideReplacedBuildings" type="boolean" default="False" get="isHideReplacedBuildings" set="setHideReplacedBuildings">
 				<change module="ANewDawnSettings" function="changedHideReplacedBuildings"/>
 			</option>
-			<option id="HideUnconstructableBuildings" key="HideUnconstructableBuildings" type="boolean" default="True" get="isHideUnconstructableBuildings" set="setHideUnconstructableBuildings"/>
-
-			<option id="HideUntrainableUnits" key="HideUntrainableUnits" type="boolean" default="True" get="isHideUntrainableUnits" set="setHideUntrainableUnits"/>
 
 			<option id="PlayWaitingAlertSound" key="PlayWaitingAlertSound" type="boolean" default="False" get="isPlayWaitingAlertSound" set="setPlayWaitingAlertSound"/>
 
