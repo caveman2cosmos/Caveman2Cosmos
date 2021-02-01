@@ -82,11 +82,13 @@ public:
 	int getNumBonuses(int /* BonusTypes */ eIndex);
 	int getNumBonusesOnLand(int /* BonusTypes */ eIndex);
 
+	python::list plots() const;
 	CyPlot* plotByIndex(int iIndex);
 	CyPlot* sPlotByIndex(int iIndex);
 	CyPlot* plot(int iX, int iY);
 	CyPlot* sPlot(int iX, int iY) ;
 	CyPlot* pointToPlot(float fX, float fY);
+
 	int getIndexAfterLastArea();
 	int getNumAreas();
 	int getNumLandAreas();
