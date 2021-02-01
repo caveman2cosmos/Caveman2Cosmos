@@ -49,7 +49,7 @@ worker_obsolete_tech = None
 # helper functions to slightly reduce retyping
 def find_text(element, schema, child_element):
     tag = element.find(f"{schema}{child_element}")
-    if tag != None:
+    if tag is not None:
         text = element.find(f"{schema}{child_element}").text
         return text
     return None
@@ -72,7 +72,7 @@ impWaterDict = {}
 _, root, schema = load_tree(path_xml_folder+impInfoPath)
 for buildInfo in root[0].findall(f"{schema}ImprovementInfo"):
     impWaterDef = find_text(buildInfo, schema, 'bWaterImprovement')
-    if impWaterDef != None:
+    if impWaterDef is not None:
         impWaterDict[find_text(buildInfo, schema, 'Type')] = int(impWaterDef)
     else:
         impWaterDict[find_text(buildInfo, schema, 'Type')] = 0
@@ -106,7 +106,7 @@ print("BE SURE TO DOUBLE CHECK FOR '_KILL' OR OTHER ODD BUILD ACTIONS; DO A QUIC
 
 
 unit_list = []
-if unitInfoPath != None:
+if unitInfoPath is not None:
     _, root, schema = load_tree(path_xml_folder+unitInfoPath)
     for unitInfo in root[0].findall(f"{schema}UnitInfo"):
         unit_type = find_text(unitInfo, schema, 'Type')
