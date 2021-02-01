@@ -24,8 +24,7 @@ class NaturalWonders:
 			if GAME.getSorenRandNum(100, "Random Plot") >= self.iPlaceChance: continue
 
 			WonderPlot = []
-			for i in xrange(CyMap().numPlots()):
-				pPlot = CyMap().plotByIndex(i)
+			for pPlot in CyMap().plots():
 				if pPlot.getBonusType(-1) > -1: continue
 
 				## Nearby Plot Check ##
