@@ -227,8 +227,7 @@ class WorldBuilder:
 
 	def refreshReveal(self):
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
-		for i in xrange(MAP.numPlots()):
-			pPlot = MAP.plotByIndex(i)
+		for pPlot in MAP.plots():
 			if pPlot.isNone(): continue
 			self.showRevealed(pPlot)
 
@@ -1112,8 +1111,7 @@ class WorldBuilder:
 
 
 	def revealAll(self, bReveal):
-		for i in xrange(MAP.numPlots()):
-			pPlot = MAP.plotByIndex(i)
+		for pPlot in MAP.plots():
 			if pPlot.isNone(): continue
 			self.RevealCurrentPlot(bReveal, pPlot)
 		self.refreshReveal()
@@ -1398,8 +1396,8 @@ class WorldBuilder:
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
 
 		if NAME == "WorldBuilderEraseAll":
-			for i in xrange(MAP.numPlots()):
-				self.m_pCurrentPlot = MAP.plotByIndex(i)
+			for plot in MAP.plots():
+				self.m_pCurrentPlot = plot
 				self.placeObject()
 
 		elif NAME == "TradeScreen":
