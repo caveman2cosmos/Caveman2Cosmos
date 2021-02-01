@@ -1191,7 +1191,7 @@ class CvMainInterface:
 				elif not ParallelMaps.bIsSwitchingMap:
 					szTxt = CyGameTextMgr().getUnitHelp(dataTT[4], False, True, True, dataTT[5])
 					self.updateTooltip(screen, szTxt)
-				self.bUpdateUnitTT == False
+				self.bUpdateUnitTT = False
 			# Tooltip sometimes get stuck...
 			POINT = Win32.getCursorPos()
 			xDiff = POINT.x - self.xMouseTT
@@ -5369,7 +5369,7 @@ class CvMainInterface:
 
 			elif NAME == "AdvisorButton":
 				advisorTip = self.AdvisorButtonTip[ID]
-				szTxt = "<color=101,229,255>" + advisorTip[0] + "  <color=144,255,72>&#60" + advisorTip[1] + "&#62"
+				szTxt = "<color=101,229,255>" + advisorTip[0] + "  <color=144,255,72>&#60" + advisorTip[1] + "&#62</color>"
 				if ID == 1:
 					self.treasuryHelp(screen, szTxt)
 				else:

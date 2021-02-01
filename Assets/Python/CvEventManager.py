@@ -1568,11 +1568,10 @@ class CvEventManager:
 				bWrapY = MAP.isWrapY()
 
 				bOK = False
-				for i in xrange(MAP.numPlots()):
+				for CyPlot in MAP.plots():
 					if bOK: # No adjacent bunkers
 						bOK = False
 						continue
-					CyPlot = MAP.plotByIndex(i)
 					if CyPlot.getOwner() == iPlayer and CyPlot.getArea() == iArea and CyPlot.getImprovementType() != iBunker and CyPlot.canHaveImprovement(iBunker, -1, True):
 						x = CyPlot.getX()
 						y = CyPlot.getY()
@@ -1656,8 +1655,7 @@ class CvEventManager:
 
 			iThePopu = 0
 			iThePath = 0
-			for i in xrange(MAP.numPlots()):
-				CyPlotZ = MAP.plotByIndex(i)
+			for CyPlotZ in MAP.plots():
 				if CyPlotZ.getArea() == iArea:
 					iOwner = CyPlotZ.getOwner()
 					if iOwner == iPlayer and iSilk > -1 and CyPlotZ.getBonusType(-1) == iSilk:
@@ -1908,8 +1906,7 @@ class CvEventManager:
 							CyPlotZ.setRouteType(iRoute)
 
 			elif iPass < iGridWidth:
-				for i in xrange(MAP.numPlots()):
-					CyPlotZ = MAP.plotByIndex(i)
+				for CyPlotZ in MAP.plots():
 					if CyPlotZ.getArea() != iArea or CyPlotZ.isOwned() and CyPlotZ.getOwner() != iPlayer:
 						continue
 					if MAP.generatePathForHypotheticalUnit(CyPlotZ, CyPlot, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
