@@ -306,7 +306,7 @@ void CyGamePythonInterface()
 
 		.def("getC2CVersion", &CyGame::getC2CVersion, "const char* ()")
 
-		.def("assignScenarioStartingPlots", &CyGame::assignScenarioStartingPlots, "void ()")
+		.def("assignStartingPlots", &CyGame::assignStartingPlots, "void (bool bScenario, bool bMapScript)")
 	;
 
 

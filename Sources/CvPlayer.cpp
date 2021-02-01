@@ -2022,23 +2022,21 @@ int CvPlayer::getBestUnitTypeCargoVolume(UnitAITypes eUnitAI) const
 
 int CvPlayer::startingPlotRange() const
 {
-	int iRange = (GC.getMap().maxStepDistance() + 10);
+	int iRange = 10 + GC.getMap().maxStepDistance();
 
-	iRange *= GC.getSTARTING_DISTANCE_PERCENT();
-	iRange /= 100;
+	// GC.getSTARTING_DISTANCE_PERCENT() / 100
+	// GC.getMap().getLandPlots() / (NUM_CITY_PLOTS * GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities() * GC.getGame().countCivPlayersAlive())
+	iRange *= GC.getSTARTING_DISTANCE_PERCENT() * GC.getMap().getLandPlots();
+	iRange /= 100 * NUM_CITY_PLOTS * GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities() * GC.getGame().countCivPlayersAlive();
 
-	iRange *= (GC.getMap().getLandPlots() / (GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities() * GC.getGame().countCivPlayersAlive()));
-	iRange /= NUM_CITY_PLOTS;
-
-	iRange += std::min(((GC.getMap().getNumAreas() + 1) / 2), GC.getGame().countCivPlayersAlive());
+	iRange += std::min((GC.getMap().getNumAreas() + 1) / 2, GC.getGame().countCivPlayersAlive());
 
 	int iResult = 0;
 	if (Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "minStartingDistanceModifier", iResult))
 	{
-		iRange *= std::max<int>(0, (iResult + 100));
+		iRange *= std::max<int>(0, iResult + 100);
 		iRange /= 100;
 	}
-
 	return std::max(iRange, GC.getDefineINT("MIN_CIV_STARTING_DISTANCE"));
 }
 
@@ -9598,37 +9596,50 @@ CvPlot* CvPlayer::getStartingPlot() const
 }
 
 
-void CvPlayer::setStartingPlot(const CvPlot* pNewValue, bool bUpdateStartDist)
+void CvPlayer::setStartingPlot(CvPlot* newPlot, const bool bUpdateStartDist)
 {
-	const CvPlot* pOldStartingPlot = getStartingPlot();
+	CvPlot* oldPlot = getStartingPlot();
 
-	if (pOldStartingPlot != pNewValue)
+	if (oldPlot != newPlot)
 	{
-		if (pOldStartingPlot != NULL)
+		if (oldPlot != NULL)
 		{
-			pOldStartingPlot->area()->changeNumStartingPlots(-1);
+			oldPlot->area()->changeNumStartingPlots(-1);
 
-			if (bUpdateStartDist)
+			bool bValid = true;
+			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				GC.getMap().updateMinOriginalStartDist(pOldStartingPlot->area());
+				if (iI != getID() && GET_PLAYER((PlayerTypes)iI).getStartingPlot() == oldPlot)
+				{
+					bValid = false;
+					break;
+				}
 			}
+			if (bValid) oldPlot->setStartingPlot(false);
 		}
 
-		if (pNewValue == NULL)
+		if (newPlot == NULL)
 		{
 			m_iStartingX = INVALID_PLOT_COORD;
 			m_iStartingY = INVALID_PLOT_COORD;
+
+			if (bUpdateStartDist && oldPlot != NULL)
+			{
+				GC.getMap().updateMinOriginalStartDist(oldPlot->area());
+			}
 		}
 		else
 		{
-			m_iStartingX = pNewValue->getX();
-			m_iStartingY = pNewValue->getY();
+			newPlot->setStartingPlot(true);
+
+			m_iStartingX = newPlot->getX();
+			m_iStartingY = newPlot->getY();
 
 			getStartingPlot()->area()->changeNumStartingPlots(1);
 
 			if (bUpdateStartDist)
 			{
-				GC.getMap().updateMinOriginalStartDist(getStartingPlot()->area());
+				GC.getMap().updateMinOriginalStartDist(newPlot->area());
 			}
 		}
 	}

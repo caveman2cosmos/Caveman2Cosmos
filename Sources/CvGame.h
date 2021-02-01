@@ -55,8 +55,7 @@ public:
 	void initFreeState();
 	DllExport void initFreeUnits();
 
-	void assignScenarioStartingPlots();
-	void assignStartingPlots();
+	void assignStartingPlots(const bool bScenario = false, const bool bMapScript = false);
 	void normalizeStartingPlots();
 
 	DllExport void update();

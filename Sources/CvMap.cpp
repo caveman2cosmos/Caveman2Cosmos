@@ -538,7 +538,7 @@ void CvMap::updateMinOriginalStartDist(const CvArea* pArea)
 					{
 					    //int iCrowDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
 					    //iDist = std::min(iDist,  iCrowDistance * 2);
-						if ((pLoopPlot->getMinOriginalStartDist() == -1) || (iDist < pLoopPlot->getMinOriginalStartDist()))
+						if (pLoopPlot->getMinOriginalStartDist() == -1 || iDist < pLoopPlot->getMinOriginalStartDist())
 						{
 							pLoopPlot->setMinOriginalStartDist(iDist);
 						}

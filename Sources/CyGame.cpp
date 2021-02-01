@@ -1214,7 +1214,7 @@ const char* CyGame::getC2CVersion() const
 	return GC.getDefineSTRING("C2C_VERSION");
 }
 
-void CyGame::assignScenarioStartingPlots()
+void CyGame::assignStartingPlots(bool bScenario, bool bMapScript)
 {
-	m_pGame.assignScenarioStartingPlots();
+	m_pGame.assignStartingPlots(bScenario, bMapScript);
 }

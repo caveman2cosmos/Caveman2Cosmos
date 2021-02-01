@@ -383,7 +383,7 @@ public:
 	int specialistCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const;
 
 	CvPlot* getStartingPlot() const;
-	void setStartingPlot(const CvPlot* pNewValue, bool bUpdateStartDist);
+	void setStartingPlot(CvPlot* pNewValue, const bool bUpdateStartDist);
 
 	int getTotalPopulation() const;
 	int getAveragePopulation() const;

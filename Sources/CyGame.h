@@ -318,7 +318,7 @@ public:
 
 	const char* getC2CVersion() const;
 
-	void assignScenarioStartingPlots();
+	void assignStartingPlots(bool bScenario, bool bMapScript);
 
 protected:
 	CvGame& m_pGame;

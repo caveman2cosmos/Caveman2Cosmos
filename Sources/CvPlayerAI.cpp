@@ -3053,7 +3053,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	{
 		if (pPlot->getMinOriginalStartDist() == -1)
 		{
-			iValue += GC.getMap().maxStepDistance() * 10;
+			iValue += GC.getMap().maxStepDistance() * 100;
 		}
 		else
 		{
@@ -3075,8 +3075,8 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 				if (iClosenessFactor < 1000)
 				{
-					iValue *= 9000 + iClosenessFactor;
-					iValue /= 10000;
+					iValue *= 5000 + iClosenessFactor;
+					iValue /= 6000;
 				}
 			}
 		}
@@ -3094,7 +3094,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			iValue *= 1000 + iMinDistanceFactor;
 			iValue /= 2000;
 		}
-		iValue /= 10;
+		iValue /= 100;
 	}
 
 	if (bAdvancedStart && pPlot->getBonusType() != NO_BONUS)

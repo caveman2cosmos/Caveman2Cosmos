@@ -217,8 +217,6 @@ void CvPlot::uninit()
 // Initializes data members that are serialized.
 void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 {
-	int iI;
-
 	//--------------------------------
 	// Uninit class
 	uninit();
@@ -286,7 +284,7 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_workingCity.reset();
 	m_workingCityOverride.reset();
 
-	for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
+	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 	{
 		m_aiYield[iI] = 0;
 	}
@@ -294,7 +292,7 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_bIsActivePlayerNoDangerCache = false;
 	m_bIsActivePlayerHasDangerCache = false;
 
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		m_abIsTeamBorderCache[iI] = false;
 	}
