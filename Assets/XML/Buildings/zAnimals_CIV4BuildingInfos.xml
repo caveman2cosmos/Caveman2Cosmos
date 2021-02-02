@@ -22068,7 +22068,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_LOON_STORIES</ArtDefineTag>
 		</BuildingInfo>
-		<!-- Review Point - Toffer 03.02.21 -->
 		<BuildingInfo>
 			<Type>BUILDING_TOUCAN_MYTH</Type>
 			<MapCategoryTypes>
@@ -22078,7 +22077,12 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TOUCAN_MYTH</ArtDefineTag>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_TOUCAN_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_TOUCAN_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -22094,12 +22098,16 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_TOUCAN_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_TOUCAN_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOUCAN_MYTH_EFFECT</Type>
@@ -22122,8 +22130,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TOUCAN_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TOUCAN_MYTH_EFFECT</BuildingType>
@@ -22132,6 +22138,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TOUCAN_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22147,6 +22154,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_TOUCAN_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOUCAN_STORIES</Type>
@@ -22157,9 +22165,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TOUCAN_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_TOUCAN_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TOUCAN_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -22167,6 +22172,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_TOUCAN_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22174,6 +22180,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_TOUCAN_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -22183,6 +22190,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_TOUCAN_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOUCAN_STORIES_EFFECT</Type>
@@ -22213,7 +22221,12 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FLAMINGO_MYTH</ArtDefineTag>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_FLAMINGO_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_FLAMINGO_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -22229,12 +22242,16 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_FLAMINGO_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_FLAMINGO_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLAMINGO_MYTH_EFFECT</Type>
@@ -22257,8 +22274,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FLAMINGO_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FLAMINGO_MYTH_EFFECT</BuildingType>
@@ -22267,6 +22282,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_FLAMINGO_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22282,6 +22298,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_FLAMINGO_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLAMINGO_STORIES</Type>
@@ -22292,9 +22309,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FLAMINGO_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_FLAMINGO_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FLAMINGO_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -22302,6 +22316,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_FLAMINGO_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22309,6 +22324,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_FLAMINGO_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -22318,6 +22334,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_FLAMINGO_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLAMINGO_STORIES_EFFECT</Type>
@@ -22348,7 +22365,12 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EAGLE_BALD_MYTH</ArtDefineTag>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_EAGLE_BALD_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_EAGLE_BALD_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -22366,12 +22388,16 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_EAGLE_BALD_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_EAGLE_BALD_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EAGLE_BALD_MYTH_EFFECT</Type>
@@ -22394,8 +22420,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EAGLE_BALD_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EAGLE_BALD_MYTH_EFFECT</BuildingType>
@@ -22404,6 +22428,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EAGLE_BALD_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22419,6 +22444,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_EAGLE_BALD_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EAGLE_BALD_STORIES</Type>
@@ -22429,9 +22455,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EAGLE_BALD_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_EAGLE_BALD_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EAGLE_BALD_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -22439,6 +22462,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_EAGLE_BALD_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22446,6 +22470,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_EAGLE_BALD_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -22455,6 +22480,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_EAGLE_BALD_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EAGLE_BALD_STORIES_EFFECT</Type>
@@ -22476,6 +22502,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_EAGLE_BALD_STORIES</ArtDefineTag>
 		</BuildingInfo>
+		<!-- Review Point - Toffer 03.02.21 -->
 		<BuildingInfo>
 			<Type>BUILDING_CAPUCHIN_MYTH</Type>
 			<MapCategoryTypes>
@@ -22531,8 +22558,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CAPUCHIN_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAPUCHIN_MYTH_EFFECT</BuildingType>
@@ -22541,6 +22566,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CAPUCHIN_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22556,6 +22582,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_CAPUCHIN_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPUCHIN_STORIES</Type>
@@ -22566,9 +22593,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CAPUCHIN_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_CAPUCHIN_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAPUCHIN_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -22576,6 +22600,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CAPUCHIN_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22583,6 +22608,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_CAPUCHIN_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -22592,6 +22618,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_CAPUCHIN_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPUCHIN_STORIES_EFFECT</Type>
@@ -22668,8 +22695,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CAPYBARA_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAPYBARA_MYTH_EFFECT</BuildingType>
@@ -22678,6 +22703,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CAPYBARA_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22693,6 +22719,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_CAPYBARA_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPYBARA_STORIES</Type>
@@ -22703,9 +22730,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CAPYBARA_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_CAPYBARA_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAPYBARA_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -22713,6 +22737,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CAPYBARA_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22720,6 +22745,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_CAPYBARA_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -22729,6 +22755,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_CAPYBARA_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPYBARA_STORIES_EFFECT</Type>
@@ -22805,8 +22832,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CHEETAH_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CHEETAH_MYTH_EFFECT</BuildingType>
@@ -22815,6 +22840,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CHEETAH_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22830,6 +22856,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_CHEETAH_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHEETAH_STORIES</Type>
@@ -22840,9 +22867,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CHEETAH_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_CHEETAH_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CHEETAH_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -22850,6 +22874,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CHEETAH_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22857,6 +22882,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_CHEETAH_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -22866,6 +22892,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_CHEETAH_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHEETAH_STORIES_EFFECT</Type>
@@ -22942,8 +22969,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CHIMPANZEE_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CHIMPANZEE_MYTH_EFFECT</BuildingType>
@@ -22952,6 +22977,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CHIMPANZEE_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22967,6 +22993,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_CHIMPANZEE_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHIMPANZEE_STORIES</Type>
@@ -22977,9 +23004,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CHIMPANZEE_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_CHIMPANZEE_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CHIMPANZEE_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -22987,6 +23011,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CHIMPANZEE_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22994,6 +23019,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_CHIMPANZEE_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -23003,6 +23029,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_CHIMPANZEE_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHIMPANZEE_STORIES_EFFECT</Type>
@@ -23079,8 +23106,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DESERT_TORTOISE_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DESERT_TORTOISE_MYTH_EFFECT</BuildingType>
@@ -23089,6 +23114,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_DESERT_TORTOISE_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -23104,6 +23130,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_DESERT_TORTOISE_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESERT_TORTOISE_STORIES</Type>
@@ -23114,9 +23141,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DESERT_TORTOISE_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_DESERT_TORTOISE_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DESERT_TORTOISE_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -23124,6 +23148,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_DESERT_TORTOISE_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -23131,6 +23156,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_DESERT_TORTOISE_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -23140,6 +23166,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_DESERT_TORTOISE_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESERT_TORTOISE_STORIES_EFFECT</Type>
@@ -23216,8 +23243,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZEBRA_MYTH_EFFECT</BuildingType>
@@ -23226,6 +23251,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ZEBRA_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -23241,6 +23267,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZEBRA_STORIES</Type>
@@ -23251,9 +23278,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_ZEBRA_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZEBRA_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -23261,6 +23285,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_ZEBRA_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -23268,6 +23293,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_ZEBRA_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -23277,6 +23303,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZEBRA_STORIES_EFFECT</Type>
@@ -23406,8 +23433,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_MAMMOTH_STORIES</ArtDefineTag>
-			<FreeBuilding>BUILDING_PALEOLITHIC_MAMMOTH_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -23422,6 +23447,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_PALEOLITHIC_MAMMOTH_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -23431,6 +23457,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_MAMMOTH_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_MAMMOTH_STORIES_EFFECT</Type>
@@ -23717,8 +23744,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ANTEATER_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANTEATER_MYTH_EFFECT</BuildingType>
@@ -23727,6 +23752,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ANTEATER_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -23742,6 +23768,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_ANTEATER_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANTEATER_STORIES</Type>
@@ -23752,9 +23779,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ANTEATER_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_ANTEATER_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANTEATER_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -23762,6 +23786,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_ANTEATER_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -23769,6 +23794,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_ANTEATER_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -23778,6 +23804,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_ANTEATER_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANTEATER_STORIES_EFFECT</Type>
@@ -23852,8 +23879,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BADGER_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BADGER_MYTH_EFFECT</BuildingType>
@@ -23862,6 +23887,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BADGER_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -23877,6 +23903,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BADGER_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BADGER_STORIES</Type>
@@ -23887,9 +23914,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BADGER_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_BADGER_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BADGER_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -23897,6 +23921,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BADGER_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -23904,6 +23929,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_BADGER_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -23913,6 +23939,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BADGER_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BADGER_STORIES_EFFECT</Type>
@@ -23987,8 +24014,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BALLPYTHON_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BALLPYTHON_MYTH_EFFECT</BuildingType>
@@ -23997,6 +24022,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BALLPYTHON_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24012,6 +24038,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BALLPYTHON_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BALLPYTHON_STORIES</Type>
@@ -24022,9 +24049,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BALLPYTHON_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_BALLPYTHON_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BALLPYTHON_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -24032,6 +24056,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BALLPYTHON_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24039,6 +24064,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_BALLPYTHON_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -24048,6 +24074,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BALLPYTHON_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BALLPYTHON_STORIES_EFFECT</Type>
@@ -24122,8 +24149,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BARBARYAPE_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BARBARYAPE_MYTH_EFFECT</BuildingType>
@@ -24132,6 +24157,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BARBARYAPE_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24147,6 +24173,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BARBARYAPE_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BARBARYAPE_STORIES</Type>
@@ -24157,9 +24184,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BARBARYAPE_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_BARBARYAPE_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BARBARYAPE_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -24167,6 +24191,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BARBARYAPE_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24174,6 +24199,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_BARBARYAPE_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -24183,6 +24209,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BARBARYAPE_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BARBARYAPE_STORIES_EFFECT</Type>
@@ -24257,8 +24284,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BEAVER_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BEAVER_MYTH_EFFECT</BuildingType>
@@ -24267,6 +24292,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BEAVER_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24282,6 +24308,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BEAVER_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BEAVER_STORIES</Type>
@@ -24292,9 +24319,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BEAVER_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_BEAVER_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BEAVER_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -24302,6 +24326,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BEAVER_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24309,6 +24334,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_BEAVER_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -24318,6 +24344,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BEAVER_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BEAVER_STORIES_EFFECT</Type>
@@ -24392,8 +24419,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BENGALTIGER_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BENGALTIGER_MYTH_EFFECT</BuildingType>
@@ -24402,6 +24427,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BENGALTIGER_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24417,6 +24443,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BENGALTIGER_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BENGALTIGER_STORIES</Type>
@@ -24427,9 +24454,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BENGALTIGER_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_BENGALTIGER_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BENGALTIGER_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -24437,6 +24461,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BENGALTIGER_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24444,6 +24469,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_BENGALTIGER_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -24453,6 +24479,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BENGALTIGER_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BENGALTIGER_STORIES_EFFECT</Type>
@@ -24527,8 +24554,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BISON_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BISON_MYTH_EFFECT</BuildingType>
@@ -24537,6 +24562,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BISON_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24552,6 +24578,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BISON_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BISON_STORIES</Type>
@@ -24562,9 +24589,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BISON_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_BISON_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BISON_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -24572,6 +24596,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BISON_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24579,6 +24604,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_BISON_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -24588,6 +24614,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BISON_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BISON_STORIES_EFFECT</Type>
@@ -24662,8 +24689,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BOAR_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BOAR_MYTH_EFFECT</BuildingType>
@@ -24672,6 +24697,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BOAR_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24687,6 +24713,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BOAR_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BOAR_STORIES</Type>
@@ -24697,9 +24724,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BOAR_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_BOAR_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BOAR_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -24707,6 +24731,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BOAR_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24714,6 +24739,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_BOAR_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -24723,6 +24749,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BOAR_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BOAR_STORIES_EFFECT</Type>
@@ -24799,8 +24826,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BONGO_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BONGO_MYTH_EFFECT</BuildingType>
@@ -24809,6 +24834,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BONGO_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24824,6 +24850,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BONGO_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BONGO_STORIES</Type>
@@ -24834,9 +24861,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BONGO_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_BONGO_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BONGO_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -24844,6 +24868,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BONGO_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24851,6 +24876,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_BONGO_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -24860,6 +24886,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BONGO_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BONGO_STORIES_EFFECT</Type>
@@ -24936,8 +24963,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CROW_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CROW_MYTH_EFFECT</BuildingType>
@@ -24946,6 +24971,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CROW_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24961,6 +24987,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_CROW_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CROW_STORIES</Type>
@@ -24971,9 +24998,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CROW_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_CROW_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CROW_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -24981,6 +25005,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CROW_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24988,6 +25013,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_CROW_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -24997,6 +25023,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_CROW_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CROW_STORIES_EFFECT</Type>
@@ -25073,8 +25100,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAZELLE_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GAZELLE_MYTH_EFFECT</BuildingType>
@@ -25083,6 +25108,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GAZELLE_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -25098,6 +25124,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GAZELLE_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GAZELLE_STORIES</Type>
@@ -25108,9 +25135,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAZELLE_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_GAZELLE_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GAZELLE_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -25118,6 +25142,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GAZELLE_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -25125,6 +25150,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_GAZELLE_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -25134,6 +25160,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GAZELLE_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GAZELLE_STORIES_EFFECT</Type>
@@ -25210,8 +25237,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GELADA_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GELADA_MYTH_EFFECT</BuildingType>
@@ -25220,6 +25245,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GELADA_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -25235,6 +25261,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GELADA_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GELADA_STORIES</Type>
@@ -25245,9 +25272,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GELADA_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_GELADA_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GELADA_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -25255,6 +25279,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GELADA_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -25262,6 +25287,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_GELADA_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -25271,6 +25297,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GELADA_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GELADA_STORIES_EFFECT</Type>
@@ -25347,8 +25374,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GEMSBOK_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GEMSBOK_MYTH_EFFECT</BuildingType>
@@ -25357,6 +25382,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GEMSBOK_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -25372,6 +25398,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GEMSBOK_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GEMSBOK_STORIES</Type>
@@ -25382,9 +25409,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GEMSBOK_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_GEMSBOK_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GEMSBOK_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -25392,6 +25416,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GEMSBOK_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -25399,6 +25424,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_GEMSBOK_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -25408,6 +25434,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GEMSBOK_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GEMSBOK_STORIES_EFFECT</Type>
@@ -25484,8 +25511,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GERENUK_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GERENUK_MYTH_EFFECT</BuildingType>
@@ -25494,6 +25519,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GERENUK_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -25509,6 +25535,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GERENUK_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GERENUK_STORIES</Type>
@@ -25519,9 +25546,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GERENUK_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_GERENUK_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GERENUK_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -25529,6 +25553,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GERENUK_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -25536,6 +25561,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_GERENUK_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -25545,6 +25571,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GERENUK_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GERENUK_STORIES_EFFECT</Type>
@@ -25621,8 +25648,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GORILLA_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GORILLA_MYTH_EFFECT</BuildingType>
@@ -25631,6 +25656,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GORILLA_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -25646,6 +25672,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GORILLA_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GORILLA_STORIES</Type>
@@ -25656,9 +25683,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GORILLA_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_GORILLA_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GORILLA_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -25666,6 +25690,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GORILLA_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -25673,6 +25698,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_GORILLA_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -25682,6 +25708,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GORILLA_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GORILLA_STORIES_EFFECT</Type>
@@ -25758,8 +25785,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KANGAROO_GREY_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KANGAROO_GREY_MYTH_EFFECT</BuildingType>
@@ -25768,6 +25793,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -25783,6 +25809,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_KANGAROO_GREY_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KANGAROO_GREY_STORIES</Type>
@@ -25793,9 +25820,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KANGAROO_GREY_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_KANGAROO_GREY_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -25803,6 +25827,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -25810,6 +25835,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_KANGAROO_GREY_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -25819,6 +25845,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_KANGAROO_GREY_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KANGAROO_GREY_STORIES_EFFECT</Type>
@@ -25895,8 +25922,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GULL_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GULL_MYTH_EFFECT</BuildingType>
@@ -25905,6 +25930,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GULL_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -25920,6 +25946,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GULL_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GULL_STORIES</Type>
@@ -25930,9 +25957,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GULL_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_GULL_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GULL_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -25940,6 +25964,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GULL_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -25947,6 +25972,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_GULL_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -25956,6 +25982,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GULL_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GULL_STORIES_EFFECT</Type>
@@ -26032,8 +26059,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HYENA_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYENA_MYTH_EFFECT</BuildingType>
@@ -26042,6 +26067,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HYENA_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26057,6 +26083,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_HYENA_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYENA_STORIES</Type>
@@ -26067,9 +26094,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HYENA_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_HYENA_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYENA_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -26077,6 +26101,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_HYENA_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26084,6 +26109,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_HYENA_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -26093,6 +26119,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_HYENA_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYENA_STORIES_EFFECT</Type>
@@ -26169,8 +26196,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_IMPALA_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_IMPALA_MYTH_EFFECT</BuildingType>
@@ -26179,6 +26204,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_IMPALA_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26194,6 +26220,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_IMPALA_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IMPALA_STORIES</Type>
@@ -26204,9 +26231,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_IMPALA_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_IMPALA_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_IMPALA_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -26214,6 +26238,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_IMPALA_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26221,6 +26246,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_IMPALA_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -26230,6 +26256,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_IMPALA_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IMPALA_STORIES_EFFECT</Type>
@@ -26306,8 +26333,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_JAGUAR_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_JAGUAR_MYTH_EFFECT</BuildingType>
@@ -26316,6 +26341,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_JAGUAR_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26331,6 +26357,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_JAGUAR_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JAGUAR_STORIES</Type>
@@ -26341,9 +26368,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_JAGUAR_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_JAGUAR_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_JAGUAR_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -26351,6 +26375,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_JAGUAR_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26358,6 +26383,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_JAGUAR_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -26367,6 +26393,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_JAGUAR_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JAGUAR_STORIES_EFFECT</Type>
@@ -26475,8 +26502,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KOALA_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KOALA_MYTH_EFFECT</BuildingType>
@@ -26485,6 +26510,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_KOALA_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26500,6 +26526,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_KOALA_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOALA_STORIES</Type>
@@ -26510,9 +26537,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KOALA_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_KOALA_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KOALA_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -26520,6 +26544,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_KOALA_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26527,6 +26552,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_KOALA_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -26536,6 +26562,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_KOALA_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOALA_STORIES_EFFECT</Type>
@@ -26612,8 +26639,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KOOKABURRA_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KOOKABURRA_MYTH_EFFECT</BuildingType>
@@ -26622,6 +26647,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_KOOKABURRA_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26637,6 +26663,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_KOOKABURRA_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOOKABURRA_STORIES</Type>
@@ -26647,9 +26674,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KOOKABURRA_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_KOOKABURRA_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KOOKABURRA_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -26657,6 +26681,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_KOOKABURRA_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26664,6 +26689,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_KOOKABURRA_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -26673,6 +26699,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_KOOKABURRA_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOOKABURRA_STORIES_EFFECT</Type>
@@ -26749,8 +26776,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LION_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LION_MYTH_EFFECT</BuildingType>
@@ -26759,6 +26784,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LION_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26774,6 +26800,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_LION_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LION_STORIES</Type>
@@ -26784,9 +26811,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LION_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_LION_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LION_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -26794,6 +26818,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_LION_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26801,6 +26826,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_LION_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -26810,6 +26836,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_LION_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LION_STORIES_EFFECT</Type>
@@ -26884,8 +26911,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_IGUANA_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_IGUANA_MYTH_EFFECT</BuildingType>
@@ -26894,6 +26919,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_IGUANA_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26909,6 +26935,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_IGUANA_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IGUANA_STORIES</Type>
@@ -26919,9 +26946,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_IGUANA_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_IGUANA_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_IGUANA_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -26929,6 +26953,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_IGUANA_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26936,6 +26961,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_IGUANA_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -26945,6 +26971,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_IGUANA_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IGUANA_STORIES_EFFECT</Type>
@@ -27019,8 +27046,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KOMODO_DRAGON_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KOMODO_DRAGON_MYTH_EFFECT</BuildingType>
@@ -27029,6 +27054,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_KOMODO_DRAGON_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -27044,6 +27070,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_KOMODO_DRAGON_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOMODO_DRAGON_STORIES</Type>
@@ -27054,9 +27081,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KOMODO_DRAGON_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_KOMODO_DRAGON_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KOMODO_DRAGON_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -27064,6 +27088,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_KOMODO_DRAGON_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -27071,6 +27096,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_KOMODO_DRAGON_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -27080,6 +27106,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_KOMODO_DRAGON_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOMODO_DRAGON_STORIES_EFFECT</Type>
@@ -27154,8 +27181,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NILE_MONITOR_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NILE_MONITOR_MYTH_EFFECT</BuildingType>
@@ -27164,6 +27189,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_NILE_MONITOR_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -27179,6 +27205,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_NILE_MONITOR_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NILE_MONITOR_STORIES</Type>
@@ -27189,9 +27216,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NILE_MONITOR_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_NILE_MONITOR_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NILE_MONITOR_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -27199,6 +27223,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_NILE_MONITOR_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -27206,6 +27231,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_NILE_MONITOR_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -27215,6 +27241,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_NILE_MONITOR_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NILE_MONITOR_STORIES_EFFECT</Type>
@@ -27291,8 +27318,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LLAMA_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LLAMA_MYTH_EFFECT</BuildingType>
@@ -27301,6 +27326,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LLAMA_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -27316,6 +27342,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_LLAMA_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LLAMA_STORIES</Type>
@@ -27326,9 +27353,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LLAMA_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_LLAMA_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LLAMA_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -27336,6 +27360,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_LLAMA_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -27343,6 +27368,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_LLAMA_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -27352,6 +27378,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_LLAMA_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LLAMA_STORIES_EFFECT</Type>
@@ -27466,10 +27493,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NEW_W_MONKEY_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
-			<FreeBuilding>BUILDING_NEW_W_MONKEY_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NEW_W_MONKEY_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -27477,6 +27501,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_NEW_W_MONKEY_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -27484,6 +27509,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_NEW_W_MONKEY_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -27493,6 +27519,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_NEW_W_MONKEY_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEW_W_MONKEY_STORIES_EFFECT</Type>
@@ -27608,10 +27635,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OLD_W_MONKEY_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
-			<FreeBuilding>BUILDING_OLD_W_MONKEY_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OLD_W_MONKEY_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -27619,6 +27643,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_OLD_W_MONKEY_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -27626,6 +27651,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_OLD_W_MONKEY_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -27635,6 +27661,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_OLD_W_MONKEY_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OLD_W_MONKEY_STORIES_EFFECT</Type>
@@ -27711,8 +27738,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MANDRILL_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANDRILL_MYTH_EFFECT</BuildingType>
@@ -27721,6 +27746,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MANDRILL_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -27736,6 +27762,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_MANDRILL_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MANDRILL_STORIES</Type>
@@ -27746,9 +27773,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MANDRILL_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_MANDRILL_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANDRILL_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -27756,6 +27780,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_MANDRILL_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -27763,6 +27788,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_MANDRILL_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -27772,6 +27798,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_MANDRILL_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MANDRILL_STORIES_EFFECT</Type>
@@ -27848,8 +27875,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OKAPI_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OKAPI_MYTH_EFFECT</BuildingType>
@@ -27858,6 +27883,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_OKAPI_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -27873,6 +27899,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_OKAPI_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OKAPI_STORIES</Type>
@@ -27883,9 +27910,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OKAPI_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_OKAPI_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OKAPI_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -27893,6 +27917,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_OKAPI_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -27900,6 +27925,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_OKAPI_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -27909,6 +27935,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_OKAPI_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OKAPI_STORIES_EFFECT</Type>
@@ -27985,8 +28012,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ORANGUTAN_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORANGUTAN_MYTH_EFFECT</BuildingType>
@@ -27995,6 +28020,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ORANGUTAN_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -28010,6 +28036,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_ORANGUTAN_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORANGUTAN_STORIES</Type>
@@ -28020,9 +28047,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ORANGUTAN_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_ORANGUTAN_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORANGUTAN_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -28030,6 +28054,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_ORANGUTAN_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -28037,6 +28062,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_ORANGUTAN_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -28046,6 +28072,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_ORANGUTAN_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORANGUTAN_STORIES_EFFECT</Type>
@@ -28122,8 +28149,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OXPECKER_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OXPECKER_MYTH_EFFECT</BuildingType>
@@ -28132,6 +28157,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_OXPECKER_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -28147,6 +28173,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_OXPECKER_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OXPECKER_STORIES</Type>
@@ -28157,9 +28184,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OXPECKER_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_OXPECKER_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OXPECKER_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -28167,6 +28191,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_OXPECKER_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -28174,6 +28199,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_OXPECKER_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -28183,6 +28209,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_OXPECKER_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OXPECKER_STORIES_EFFECT</Type>
@@ -28259,8 +28286,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PEACOCK_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PEACOCK_MYTH_EFFECT</BuildingType>
@@ -28269,6 +28294,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PEACOCK_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -28284,6 +28310,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PEACOCK_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEACOCK_STORIES</Type>
@@ -28294,9 +28321,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PEACOCK_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_PEACOCK_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PEACOCK_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -28304,6 +28328,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PEACOCK_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -28311,6 +28336,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_PEACOCK_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -28320,6 +28346,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PEACOCK_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEACOCK_STORIES_EFFECT</Type>
@@ -28396,8 +28423,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PROCOPTODON_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PROCOPTODON_MYTH_EFFECT</BuildingType>
@@ -28406,6 +28431,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PROCOPTODON_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -28421,6 +28447,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PROCOPTODON_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROCOPTODON_STORIES</Type>
@@ -28431,9 +28458,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PROCOPTODON_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_PROCOPTODON_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PROCOPTODON_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -28441,6 +28465,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PROCOPTODON_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -28448,6 +28473,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_PROCOPTODON_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -28457,6 +28483,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PROCOPTODON_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROCOPTODON_STORIES_EFFECT</Type>
@@ -28596,8 +28623,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_QUOLL_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_QUOLL_MYTH_EFFECT</BuildingType>
@@ -28606,6 +28631,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_QUOLL_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -28621,6 +28647,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_QUOLL_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUOLL_STORIES</Type>
@@ -28631,9 +28658,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_QUOLL_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_QUOLL_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_QUOLL_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -28641,6 +28665,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_QUOLL_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -28648,6 +28673,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_QUOLL_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -28657,6 +28683,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_QUOLL_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUOLL_STORIES_EFFECT</Type>
@@ -28733,8 +28760,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RATEL_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RATEL_MYTH_EFFECT</BuildingType>
@@ -28743,6 +28768,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_RATEL_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -28758,6 +28784,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_RATEL_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RATEL_STORIES</Type>
@@ -28768,9 +28795,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RATEL_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_RATEL_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RATEL_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -28778,6 +28802,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_RATEL_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -28785,6 +28810,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_RATEL_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -28794,6 +28820,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_RATEL_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RATEL_STORIES_EFFECT</Type>
@@ -28870,8 +28897,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KANGAROO_RED_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KANGAROO_RED_MYTH_EFFECT</BuildingType>
@@ -28880,6 +28905,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_KANGAROO_RED_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -28895,6 +28921,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_KANGAROO_RED_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KANGAROO_RED_STORIES</Type>
@@ -28905,9 +28932,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KANGAROO_RED_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_KANGAROO_RED_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KANGAROO_RED_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -28915,6 +28939,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_KANGAROO_RED_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -28922,6 +28947,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_KANGAROO_RED_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -28931,6 +28957,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_KANGAROO_RED_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KANGAROO_RED_STORIES_EFFECT</Type>
@@ -29017,8 +29044,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COBRA_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COBRA_MYTH_EFFECT</BuildingType>
@@ -29027,6 +29052,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_COBRA_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -29042,6 +29068,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_COBRA_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COBRA_STORIES</Type>
@@ -29052,9 +29079,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COBRA_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_COBRA_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COBRA_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -29062,6 +29086,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_COBRA_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -29069,6 +29094,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_COBRA_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -29078,6 +29104,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_COBRA_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COBRA_STORIES_EFFECT</Type>
@@ -29152,8 +29179,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PUFFADDER_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PUFFADDER_MYTH_EFFECT</BuildingType>
@@ -29162,6 +29187,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_PUFFADDER_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -29177,6 +29203,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PUFFADDER_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PUFFADDER_STORIES</Type>
@@ -29187,9 +29214,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PUFFADDER_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_PUFFADDER_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PUFFADDER_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -29197,6 +29221,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PUFFADDER_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -29204,6 +29229,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_PUFFADDER_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -29213,6 +29239,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PUFFADDER_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PUFFADDER_STORIES_EFFECT</Type>
@@ -29327,10 +29354,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SNAKES_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
-			<FreeBuilding>BUILDING_SNAKES_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SNAKES_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -29338,6 +29362,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SNAKES_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -29345,6 +29370,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_SNAKES_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -29354,6 +29380,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SNAKES_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SNAKES_STORIES_EFFECT</Type>
@@ -29428,8 +29455,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VIPER_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VIPER_MYTH_EFFECT</BuildingType>
@@ -29438,6 +29463,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_VIPER_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -29453,6 +29479,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_VIPER_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIPER_STORIES</Type>
@@ -29463,9 +29490,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VIPER_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_VIPER_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VIPER_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -29473,6 +29497,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_VIPER_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -29480,6 +29505,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_VIPER_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -29489,6 +29515,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_VIPER_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIPER_STORIES_EFFECT</Type>
@@ -29519,8 +29546,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WARTHOG_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WARTHOG_MYTH_EFFECT</BuildingType>
@@ -29529,6 +29554,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_WARTHOG_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -29544,6 +29570,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_WARTHOG_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WARTHOG_STORIES</Type>
@@ -29554,9 +29581,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WARTHOG_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_WARTHOG_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WARTHOG_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -29564,6 +29588,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_WARTHOG_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -29571,6 +29596,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_WARTHOG_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -29580,6 +29606,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_WARTHOG_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WARTHOG_STORIES_EFFECT</Type>
@@ -29656,8 +29683,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WALLAROO_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WALLAROO_MYTH_EFFECT</BuildingType>
@@ -29666,6 +29691,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_WALLAROO_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -29681,6 +29707,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_WALLAROO_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WALLAROO_STORIES</Type>
@@ -29691,9 +29718,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WALLAROO_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_WALLAROO_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WALLAROO_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -29701,6 +29725,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_WALLAROO_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -29708,6 +29733,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_WALLAROO_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -29717,6 +29743,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_WALLAROO_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WALLAROO_STORIES_EFFECT</Type>
@@ -29793,8 +29820,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BUFFALO_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BUFFALO_MYTH_EFFECT</BuildingType>
@@ -29803,6 +29828,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BUFFALO_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -29818,6 +29844,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BUFFALO_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUFFALO_STORIES</Type>
@@ -29828,9 +29855,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BUFFALO_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_BUFFALO_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BUFFALO_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -29838,6 +29862,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BUFFALO_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -29845,6 +29870,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_BUFFALO_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -29854,6 +29880,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_BUFFALO_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUFFALO_STORIES_EFFECT</Type>
@@ -29930,8 +29957,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WILDEBEEST_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WILDEBEEST_MYTH_EFFECT</BuildingType>
@@ -29940,6 +29965,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_WILDEBEEST_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -29955,6 +29981,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_WILDEBEEST_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WILDEBEEST_STORIES</Type>
@@ -29965,9 +29992,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WILDEBEEST_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_WILDEBEEST_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WILDEBEEST_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -29975,6 +29999,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_WILDEBEEST_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -29982,6 +30007,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_WILDEBEEST_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -29991,6 +30017,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_WILDEBEEST_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WILDEBEEST_STORIES_EFFECT</Type>
@@ -30067,8 +30094,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GALAPAGOS_TORTOISE_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_MYTH_EFFECT</BuildingType>
@@ -30077,6 +30102,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -30092,6 +30118,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GALAPAGOS_TORTOISE_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALAPAGOS_TORTOISE_STORIES</Type>
@@ -30102,9 +30129,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GALAPAGOS_TORTOISE_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_GALAPAGOS_TORTOISE_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -30112,6 +30136,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -30119,6 +30144,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_GALAPAGOS_TORTOISE_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -30128,6 +30154,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GALAPAGOS_TORTOISE_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALAPAGOS_TORTOISE_STORIES_EFFECT</Type>
