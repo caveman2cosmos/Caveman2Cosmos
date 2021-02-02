@@ -2148,7 +2148,6 @@ int CvPlayer::findStartingArea() const
 CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 {
 	PROFILE_FUNC();
-
 	{
 		int result = -1;
 		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "findStartingPlot", Cy::Args() << getID(), result))
@@ -2161,7 +2160,6 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 			FErrorMsg("python findStartingPlot() returned an invalid plot index!");
 		}
 	}
-
 	int iBestArea = -1;
 
 	bool bNew = false;
@@ -2180,7 +2178,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 	}
 
 	const MapCategoryTypes earth = GC.getMAPCATEGORY_EARTH();
-	//int iRange = startingPlotRange();
+
 	for (int iPass = 0; iPass < 2; iPass++)
 	{
 		CvPlot *pBestPlot = NULL;
@@ -2190,29 +2188,34 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 		{
 			CvPlot* plot = GC.getMap().plotByIndex(iI);
 
-			if (!plot->isMapCategoryType(earth) || iBestArea != -1 && plot->getArea() != iBestArea)
+			if (plot->isStartingPlot()
+			|| !plot->isMapCategoryType(earth)
+			|| iBestArea != -1 && plot->getArea() != iBestArea)
 			{
 				continue;
 			}
-			//the distance factor is now done inside foundValue
+			// The distance factor is now done inside foundValue
 			int iValue = plot->getFoundValue(getID());
 
-			if (bRandomize && iValue > 0)
+			if (iValue > 0)
 			{
-				iValue += GC.getGame().getSorenRandNum(10000, "Randomize Starting Location");
-			}
-
-			if (iValue > iBestValue)
-			{
-				iBestValue = iValue;
-				pBestPlot = plot;
+				if (bRandomize)
+				{
+					iValue += GC.getGame().getSorenRandNum(500 + iValue/50, "Randomize Starting Location");
+				}
+				if (iValue > iBestValue && (!bRandomize || pBestPlot == NULL || GC.getGame().getSorenRandNum(2, "Randomize Starting Location") > 0))
+				{
+					//FErrorMsg(CvString::format("iBestValue=%d", iValue).c_str());
+					iBestValue = iValue;
+					pBestPlot = plot;
+				}
 			}
 		}
 		if (pBestPlot != NULL)
 		{
 			return pBestPlot;
 		}
-		FAssertMsg(iPass != 0, "CvPlayer::findStartingPlot - could not find starting plot in first pass.");
+		FAssertMsg(iPass != 0, "CvPlayer::findStartingPlot - could not find starting plot in first pass. This happens for space scenarios");
 		iBestArea = -1; // best area was in space (scenario specific), do another pass with no best area restriction.
 	}
 	FErrorMsg("Could not find starting plot.");

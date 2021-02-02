@@ -94,7 +94,6 @@ def autocorrect(files, mode, args):
                     etree.ElementTree(root).write(filename, encoding="utf-8", xml_declaration=True, pretty_print=True)
     except ExitEarly:
         print('\n\nExited early, progress has been saved')
-        pass
     finally:
         # We can't have changed the lists unless we were in interactive mode
         if mode == Mode.INTERACTIVE:
@@ -159,7 +158,7 @@ def apply_spellcheck(matches, ignore_words, spell, google):
             if not google_candidate or google_candidate == word:
                 matches.remove(match)
                 continue
-            candidates = [google_candidate] + candidates 
+            candidates = [google_candidate] + candidates
         except urllib.error.HTTPError as ex:
             print('**** ERROR: google spell check request failed: ' + ex.reason)
             print('**** Falling back to default spellcheck')
@@ -178,8 +177,8 @@ def get_instance_key(tag, match):
 
 def matches_summary(matches, indent):
     messages = [m['message'] for m in matches]
-    for m in set(messages): 
-        freq = messages.count(m) 
+    for m in set(messages):
+        freq = messages.count(m)
         print (Fore.YELLOW + indent + str(freq) + 'x ' + m)
 
 def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, ignore_instances, mode, indent, fancy, langtool, spell, google):
@@ -193,7 +192,7 @@ def autocorrect_element(eng_elem, tag, ignore_words, ignore_tags, ignore_rules, 
 
     if results and 'matches' in results and len(results['matches']) > 0:
         matches = [m for m in results['matches'] if (m['rule']['id'] not in ignore_rules and get_instance_key(tag, m) not in ignore_instances)]
-        
+
         # remove_ignore_matches(result.matches, ignore_tags, ignore_rules, ignore_instances)
         apply_spellcheck(matches, ignore_words, spell, google)
 
@@ -373,7 +372,6 @@ def apply_corrections_interactive(tag, text, matches, ignore_words, ignore_rules
                 raise ExitEarly
             else: # key == b's':
                 print(Fore.GREEN + indent + 'Skipping this suggestion')
-                pass
 
     return corrected_text, corrected_text_mrks
 

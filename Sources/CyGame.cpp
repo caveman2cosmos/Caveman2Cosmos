@@ -155,11 +155,6 @@ int CyGame::countCivTeamsEverAlive() const
 	return m_pGame.countCivTeamsEverAlive();
 }
 
-int CyGame::countHumanPlayersAlive() const
-{
-	return m_pGame.countHumanPlayersAlive();
-}
-
 int CyGame::countTotalCivPower() const
 {
 	return m_pGame.countTotalCivPower();
@@ -1217,4 +1212,9 @@ bool CyGame::canEverSpread(int iCorporation) const
 const char* CyGame::getC2CVersion() const
 {
 	return GC.getDefineSTRING("C2C_VERSION");
+}
+
+void CyGame::assignScenarioStartingPlots()
+{
+	m_pGame.assignScenarioStartingPlots();
 }

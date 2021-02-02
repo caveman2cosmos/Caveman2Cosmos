@@ -269,7 +269,7 @@ class MapSigns:
 		if not thisKey:
 			BugUtil.warn("MapSigns.storeSign() could not determine valid keyname for Plot %s." % (str(pPlot)))
 			return False
-		if not thisKey in self.plotDict:
+		if thisKey not in self.plotDict:
 			self.plotDict[thisKey] = PlotSigns(pPlot)
 		self.plotDict[thisKey].setSign(ePlayer, szCaption)
 
@@ -528,8 +528,7 @@ def applySaltpeter(argsList):
 	iForest = GC.getInfoTypeForString('FEATURE_FOREST')
 
 	listPlots = []
-	for i in range(MAP.numPlots()):
-		CyPlot = MAP.plotByIndex(i)
+	for CyPlot in MAP.plots():
 		if (CyPlot.getOwner() == iPlayer and CyPlot.getFeatureType() == iForest and CyPlot.isHills()):
 			iDistance = plotDistance(kTriggeredData.iPlotX, kTriggeredData.iPlotY, CyPlot.getX(), CyPlot.getY())
 			if iDistance > 0:

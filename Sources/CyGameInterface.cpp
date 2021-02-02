@@ -51,7 +51,6 @@ void CyGamePythonInterface()
 		.def("countCivPlayersEverAlive", &CyGame::countCivPlayersEverAlive, "int ()")
 		.def("countCivTeamsAlive", &CyGame::countCivTeamsAlive, "int ()")
 		.def("countCivTeamsEverAlive", &CyGame::countCivTeamsEverAlive, "int ()")
-		.def("countHumanPlayersAlive", &CyGame::countHumanPlayersAlive, "int ()")
 
 		.def("countTotalCivPower", &CyGame::countTotalCivPower, "int ()")
 		.def("countTotalNukeUnits", &CyGame::countTotalNukeUnits, "int ()")
@@ -306,6 +305,8 @@ void CyGamePythonInterface()
 		.def("canEverSpread", &CyGame::canEverSpread, "bool (int iCorporation)")
 
 		.def("getC2CVersion", &CyGame::getC2CVersion, "const char* ()")
+
+		.def("assignScenarioStartingPlots", &CyGame::assignScenarioStartingPlots, "void ()")
 	;
 
 

@@ -8,6 +8,7 @@
 		<Italian>Vengo in pace alla ricerca di aiuto. Cosa mi rispondi?</Italian>
 		<Spanish>Vengo en son de paz a pedir ayuda. ¿Qué me decís?</Spanish>
 		<Polish>Przybywam w pokoju. Czy pomożesz mi?</Polish>
+		<Russian>Я прихожу с миром просить о помощи. Что ты на это скажешь?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_LOGAN_1</Tag>
@@ -17,6 +18,7 @@
 		<Italian>Ho nelle mani il destino di [CT_EMPIRE]. Dammi ciò che chiedo.</Italian>
 		<Spanish>Tengo el destino del [CT_EMPIRE] en mis manos. Dadme lo que os exijo.</Spanish>
 		<Polish>W moich rękach leży los [CT_EMPIRE]. Daj mi czego się domagam.</Polish>
+		<Russian>Я держу судьбу [CT_EMPIRE] в своей длани. Дай мне то, что я требую.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_LOGAN_1</Tag>
@@ -26,6 +28,7 @@
 		<Italian>La mia tribù ha bisogno di aiuto, potete aiutarci?</Italian>
 		<Spanish>Mi puebla está necesitada. ¿Podrá ayudarnos el [CT_EMPIRE]?</Spanish>
 		<Polish>Mieszkańcy mojego imperium potrzebują Twojej pomocy. Pomożesz?</Polish>
+		<Russian>Мой народ бедствует, может ли [CT_EMPIRE] помочь нам?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_LOGAN_1</Tag>
@@ -35,6 +38,7 @@
 		<Italian>Salve. Mi chiamo [OUR_NAME], capo e protettore del popolo [OUR_CIV_ADJ]. Ti considero un amico. È nel tuo migliore interesse che io non cambi mai idea.</Italian>
 		<Spanish>Hola. Soy [OUR_NAME], jefe y protector del pueblo [OUR_CIV_ADJ:1]. Os considero mis amigos. Y más os vale que nunca cambie de opinión.</Spanish>
 		<Polish>Witam, jestem [OUR_NAME], wódz i obrońca ludu [OUR_CIV_ADJ]. Traktuję Cię jak przyjaciela. W Twoim interesie leży nie zmieniać tego statusu.</Polish>
+		<Russian>Привет тебе. Я - [OUR_NAME], вождь и защитник людей [OUR_CIV_ADJ]. Считаю тебя своим другом. В ваших же интересах, чтобы я никогда не менял этого мнения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_LOGAN_1</Tag>
@@ -44,6 +48,7 @@
 		<Italian>È bello avere notizie da [CT_EMPIRE]. A cosa debbo quest'onore?</Italian>
 		<Spanish>Es un placer oír al [CT_EMPIRE]. ¿A qué debo este honor?</Spanish>
 		<Polish>Dobrze usłyszeć znajomy głos z CT_EMPIRE]. Czym mogę służyć?</Polish>
+		<Russian>Приятно такое слышать от [CT_EMPIRE]. Чем обязаны вашим визитом?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_LOGAN_1</Tag>
@@ -53,6 +58,7 @@
 		<Italian>Ti sei avviato lungo un cammino che porterà alla tua distruzione. Prova pure a cercare di spiegarti.</Italian>
 		<Spanish>Habéis hollado una senda que os llevará a la destrucción. Intentad explicaros como queráis.</Spanish>
 		<Polish>Wstąpiłeś na ściężkę, która doprowadzi Cię do zguby. Masz coś na usprawiedliwienie?</Polish>
+		<Russian>Вы вступили на путь, который приведет к вашей гибели. Не стесняйтесь пытаться объясниться.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_LOGAN_1</Tag>
@@ -62,6 +68,7 @@
 		<Italian>Pace? Mai!</Italian>
 		<Spanish>¿Paz? ¡Jamás!</Spanish>
 		<Polish>Pokój? Nigdy!</Polish>
+		<Russian>Мир? Да ни за что!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_LOGAN_1</Tag>
@@ -71,6 +78,7 @@
 		<Italian>Vuoi parlare? È un po' troppo tardi per farlo.</Italian>
 		<Spanish>¿Ahora queréis hablar? Es un poco tarde para eso.</Spanish>
 		<Polish>Chcesz rozmawiać? Niestety jest już na to zbyt późno.</Polish>
+		<Russian>Ты хочешь поговорить? Теперь уже слишком поздно.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LOGAN</Tag>
@@ -79,6 +87,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</English>
+		<Russian>Ëîãàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LOGAN_PEDIA</Tag>
@@ -88,5 +97,6 @@
 		<Italian>[H1]Logan[\H1][NEWLINE][BOLD]Capo dei mingo[NEWLINE]Vita:[\BOLD] c. 1725 - 1780[PARAGRAPH:2][BOLD]Informazioni:[\BOLD][NEWLINE]Logan era il capo della tribù mingo, una fazione della potente Confederazione irochese, che viveva sulle terre di frontiera della Virginia nel XVIII secolo. Si sa poco della sua vita prima che le azioni di uno sprovveduto colono inglese richiamassero dolorosamente su di lui l'attenzione inglese.[PARAGRAPH:1]Nel 1774 un uomo di nome Daniel Greathouse, rispondendo alla chiamata di un negoziante nervoso, guidò un gruppo di miliziani in quello che venne conosciuto come il Massacro di Yellow Creek. Morirono circa una dozzina di irochesi, molti dei quali parenti di Logan, e tra i quali c'erano sua sorella e sua figlia.[PARAGRAPH:1]Come risposta Logan organizzò un gruppo di irochesi e li guidò in una serie di brutali incursioni contro gli insediamenti di frontiera della Virginia. Gli attacchi di Logan e della sua banda ebbero così tanto successo che il governatore della Virginia, tale Lord Dunmore, dichiarò guerra all'intera nazione mingo. Le forze inglesi e quelle dei mingo si scontrarono sul campo a Point Pleasant, dove la superiorità numerica diede la vittoria ai virginiani.[PARAGRAPH:1]Logan non era però presente alla battaglia. Invece inviò un messaggio in cui diceva che non vedeva ulteriore necessità di combattere i bianchi. Questo messaggio, conosciuto come il "Lamento di Logan", sarebbe diventato una sorta di manifesto per i nativi e per i loro sostenitori bianchi, dimostrando che coloro che così spesso venivano chiamati "selvaggi" erano in realtà esseri razionali, proprio come gli inglesi. Nel suo messaggio, Logan diceva: "Nel corso dell'ultima lunga e sanguinosa guerra [la guerra franco-indiana], Logan è rimasto inattivo nella sua capanna, sostenendo la pace. Tale era il mio amore per i bianchi che avevo anche pensato di vivere con voi, se non fosse stato per l'offesa di un uomo... Questo ha causato la mia vendetta. L'ho cercata; ho ucciso molte persone; ho soddisfatto la mia sete di vendetta; per la mia terra gioisco all'apparire dei raggi della pace."</Italian>
 		<Spanish>[H1]Logan[\H1][NEWLINE][BOLD]Jefe de los mingo[NEWLINE]Vivió:[\BOLD] alrededor de 1725 - 1780[PARAGRAPH:2][BOLD]Biografía:[\BOLD][NEWLINE]Logan era el jefe de la tribu de los mingo, una rama de la poderosa Confederación Iroquesa que vivía en la tierra fronteriza de Virginia en el s. XVIII. Poco se sabe de su vida antes que los actos de un imprudente colono inglés hicieran que el líder iroqués llamara dolorosamente la atención de los ingleses.[PARAGRAPH:1]En 1774, un hombre llamado Daniel Greathouse, en respuesta a la llamada de un posadero nervioso, condujo a una pequeña milicia en lo que posteriormente se conoció como "la matanza de Yellow Creek". Greathouse y sus hombres mataron a una veintena de iroqueses aproximadamente, muchos de ellos parientes de Logan, incluyendo a su hermana y a su hija.[PARAGRAPH:1]Como respuesta, Logan montó una partida de sus fieles iroqueses y los lideró en una serie de incursiones brutales por los asentamientos fronterizos de Virginia. Tanto daño hicieron los ataques de Logan y su pequeño grupo que el gobernador de Virginia, un lord Dunmore, declaró la guerra contra toda la nación mingo. Las fuerzas mingo e inglesas se encontraron en el campo de Point Pleasant, donde la superioridad numérica de los virginianos les valió la victoria.[PARAGRAPH:1]Sin embargo, Logan no estuvo presente en la batalla. En vez de eso, hizo llegar un mensaje en el que decía que ya no veía la necesidad de combatir a los blancos. Este mensaje, que pasó a conocerse como "El lamento de Logan" se convertiría en una especie de manifiesto para los indígenas y sus defensores blancos, pues en él demostraba que los conocidos frecuentemente como "salvajes" eran en verdad seres racionales, como los ingleses. En este mensaje, Logan decía: "Durante el transcurso de la guerra larga y sangrienta (la Guerra Franco-India), Logan se quedó sin hacer nada en su cabaña y defendió la paz. Tal era mi amor por los blancos: incluso había pensado vivir con vosotros, si no hubiera sido por las heridas de un hombre... fueron las que me hicieron clamar venganza. La he buscado; he matado a muchos; me he saciado de ella; y por mi país me regocijo ante los rayos de luz de la paz."</Spanish>
 		<Polish>[H1]Logan[\H1][NEWLINE][BOLD]Wódz Mingo[NEWLINE]Żył:[\BOLD] ok. 1725 - 1780</Polish>
+		<Russian>[H1]Логан[\H1][NEWLINE][BOLD]Вождь Минго[NEWLINE]Годы жизни: [\BOLD]ок.1725 - 1780 гг.[PARAGRAPH:2][BOLD]Биография:[\BOLD][NEWLINE][TAB]Логан был вождем племени Минго, ответвления могущественной Конфедерации ирокезов, жившего в приграничной Вирджинии в XVIII веке. Мало что известно о его юности, прежде чем действия одного заблудшего английского колониста болезненно привлекли внимание англичан к лидеру ирокезов.[PARAGRAPH:1]В 1774 году человек по имени Дэниел Грейтхаус, откликнувшись на вызов мнительного трактирщика, возглавил небольшое ополчение в так называемой резне в Желтом ручье. Примерно дюжина ирокезов была убита Грейтхаузом и его людьми, многие из которых были прямыми кровными родственниками Логана, включая его сестру и дочь.[PARAGRAPH:1]В ответ Логан собрал группу своих собратьев-ирокезов и возглавил серию их жестоких набегов через приграничные поселения Вирджинии. Атаки Логана и его небольшой группы были настолько успешными, что губернатор Вирджинии, некий лорд Данмор, объявил войну всему племени Минго. Минго и английские войска встретились на поле Пойнт Плезант, где превосходящие силы вирджинцев одержали победу.[PARAGRAPH:1]Логан, однако, не присутствовал на поле битвы. Вместо этого он сообщил, что больше не видит необходимости сражаться с белыми. Это сообщение, получившее название «Плач Логана», станет своего рода манифестом для туземцев и их белых сторонников, демонстрируя, что те, кого так часто называли «дикарями», на самом деле были разумными существами, такими же, как англичане. В своем сообщении Логан сказал: «В течение последней долгой и кровопролитной войны [франко-индейской войны] Логан бездействовал в своей вигваме, выступая за мир. Такова была моя любовь к белым - я даже подумал чтобы жить с тобой, но из-за раны, нанесенные одному человеку... толкнули меня на месть. Я искал ее; я убил многих; я пресытился своей местью; за свою страну я радуюсь сиянию мира».</Russian>
 	</TEXT>
 </Civ4GameText>

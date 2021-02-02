@@ -1301,9 +1301,9 @@
 			<Type>BUILD_LUNAR_OUTPOST</Type>
 			<Description>TXT_KEY_BUILD_LUNAR_OUTPOST</Description>
 			<Help/>
-			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<iTime>1000</iTime>
-			<iCost>5000</iCost>
+			<iCost>2000</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_LUNAR_OUTPOST</ImprovementType>
 			<RouteType>NONE</RouteType>
@@ -1320,9 +1320,9 @@
 			<Type>BUILD_LUNAR_HABITATION_COMPLEX</Type>
 			<Description>TXT_KEY_BUILD_LUNAR_HABITATION_COMPLEX</Description>
 			<Help/>
-			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<iTime>-1</iTime>
-			<iCost>2000</iCost>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<iTime>1000</iTime>
+			<iCost>5000</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_LUNAR_HABITATION_COMPLEX</ImprovementType>
 			<RouteType>NONE</RouteType>

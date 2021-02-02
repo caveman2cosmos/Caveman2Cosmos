@@ -1137,7 +1137,7 @@ void CvUnit::convert(CvUnit* pUnit, const bool bKillOriginal)
 
 void CvUnit::kill(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 {
-	//	If it's already dead (but delayed death in process) don't try to re-kill it
+	// If it's already dead (but delayed death in process) don't try to re-kill it.
 	if (m_bDeathDelay)
 	{
 		return;
@@ -12121,34 +12121,22 @@ bool CvUnit::goldenAge()
 
 bool CvUnit::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestVisible) const
 {
-    FAssertMsg(eBuild < GC.getNumBuildInfos(), "Index out of bounds");
-	if (!(hasBuild(eBuild)))
+	if (!hasBuild(eBuild))
 	{
 		return false;
 	}
 
-	/************************************************************************************************/
-	/* Afforess	                  Start		 07/12/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	if (getGroup()->isAutomated())
 	{
 		if (!GET_PLAYER(getOwner()).isAutomatedCanBuild(eBuild))
 		{
 			return false;
 		}
-		if (plot()->getWorkingCity() != NULL)
+		if (plot()->getWorkingCity() != NULL && !plot()->getWorkingCity()->isAutomatedCanBuild(eBuild))
 		{
-			if (!plot()->getWorkingCity()->isAutomatedCanBuild(eBuild))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 
 	if (!(GET_PLAYER(getOwner()).canBuild(pPlot, eBuild, false, bTestVisible)))
 	{
@@ -12166,11 +12154,6 @@ bool CvUnit::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestVisible)
 // Returns true if build finished...
 bool CvUnit::build(BuildTypes eBuild)
 {
-	bool bFinished;
-	CvWString szBuffer;
-
-	FAssertMsg(eBuild < GC.getNumBuildInfos(), "Invalid Build");
-
 	if (!canBuild(plot(), eBuild))
 	{
 		return false;
@@ -12179,14 +12162,14 @@ bool CvUnit::build(BuildTypes eBuild)
 	//TBNOTE: There were still some crashes in this so workers cannot merge or split anymore.
 	//if (GC.getBuildInfo(eBuild).isKill())
 	//{
-	//	if ( !canPerformActionSM() )
+	//	if (!canPerformActionSM())
 	//	{
 	//		getGroup()->clearMissionQueue();
 	//		if (isHuman())
 	//		{
 	//			MEMORY_TRACK_EXEMPT();
 
-	//			szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_CANT_FINISH_BUILD", getNameKey(), GC.getBuildInfo(eBuild).getTextKeyWide());
+	//			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_CANT_FINISH_BUILD", getNameKey(), GC.getBuildInfo(eBuild).getTextKeyWide());
 	//			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_YELLOW(), getX(), getY());
 	//		}
 	//		return false;
@@ -12198,59 +12181,47 @@ bool CvUnit::build(BuildTypes eBuild)
 	NotifyEntity((MissionTypes)GC.getBuildInfo(eBuild).getMissionType());
 
 	GET_PLAYER(getOwner()).changeGold(-(GET_PLAYER(getOwner()).getBuildCost(plot(), eBuild)));
-/************************************************************************************************/
-/* Afforess	                  Start		 02/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bFinished = plot()->changeBuildProgress(eBuild, workRate(false), getOwner());
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+	bool bFinished = plot()->changeBuildProgress(eBuild, workRate(false), getOwner());
 
 	finishMoves(); // needs to be at bottom because movesLeft() can affect workRate()...
 
 	if (bFinished)
 	{
+		const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
 		// Super Forts begin *culture*
-		if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
+		if (kBuild.getImprovement() != NO_IMPROVEMENT
+		&& GC.getImprovementInfo((ImprovementTypes)kBuild.getImprovement()).getCulture() > 0)
 		{
-			if(GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement()).getCulture() > 0)
+			if (plot()->getOwner() == NO_PLAYER)
 			{
-				if(plot()->getOwner() == NO_PLAYER)
-				{
-					plot()->setOwner(getOwner(),true,true);
-				}
+				plot()->setOwner(getOwner(),true,true);
+			}
 
-				//	Special case for plot-grabbing improvements - to get the AI to behave sensibly
-				//	we nee to split the group here or else an escorted worker will now move away, taking its
-				//	escort with it, leaving the fort undefended until some other defensive unit can
-				//	get there.  By splitting the group we let the escort occupy the fort at higher
-				//	priority than re-grouping with the worker, which then has to wait for another escort
-				//	if it needs one
-				if ( !isHuman() )
-				{
-					getGroup()->AI_makeForceSeparate();
-				}
+			// Special case for plot-grabbing improvements - to get the AI to behave sensibly
+			// we nee to split the group here or else an escorted worker will now move away, taking its
+			// escort with it, leaving the fort undefended until some other defensive unit can get there.
+			// By splitting the group we let the escort occupy the fort at higher priority than
+			// re-grouping with the worker, which then has to wait for another escort if it needs one
+			if (!isHuman())
+			{
+				getGroup()->AI_makeForceSeparate();
 			}
 		}
 		// Super Forts end
-		//ls612: Workers now get XP on finishing a build
-		int iCost = GC.getBuildInfo(eBuild).getTime();
-		int iSpeedModifier = workRate(true);
-		if (iCost > 0 && !GC.getBuildInfo(eBuild).isKill())
-		{
-			changeExperience100(iCost / std::max(1, (2 * iSpeedModifier) / 100));
-		}
 
-		if (GC.getBuildInfo(eBuild).isKill())
+		if (kBuild.isKill())
 		{
-			if ( plot()->getWorkingCity() != NULL )
+			if (plot()->getWorkingCity() != NULL)
 			{
 				OutputDebugString(CvString::format("Worker at (%d,%d) consumed by build for city %S\n", getX(), getY(), plot()->getWorkingCity()->getName().GetCString()).c_str());
-				//plot()->getWorkingCity()->AI_changeWorkersHave(-1);
 			}
 			kill(true, NO_PLAYER, true);
+		}
+		else if (kBuild.getTime() > 0)
+		{
+			//ls612: Workers now get XP on finishing a build
+			changeExperience100(kBuild.getTime() / std::max(1, workRate(true) / 50));
 		}
 	}
 
