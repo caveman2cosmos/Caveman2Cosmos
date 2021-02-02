@@ -21200,7 +21200,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DOLPHIN_STORY</ArtDefineTag>
 		</BuildingInfo>
-		<!-- Review Point - Toffer 29.12.20 -->
 		<BuildingInfo>
 			<Type>BUILDING_KRAKEN_MYTH</Type>
 			<MapCategoryTypes>
@@ -21210,16 +21209,18 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KRAKEN_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_KRAKEN_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_KRAKEN_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
@@ -21230,9 +21231,16 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_KRAKEN_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_KRAKEN_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KRAKEN_MYTH_EFFECT</Type>
@@ -21255,8 +21263,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KRAKEN_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KRAKEN_MYTH_EFFECT</BuildingType>
@@ -21265,6 +21271,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_KRAKEN_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21280,6 +21287,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_KRAKEN_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KRAKEN_STORIES</Type>
@@ -21290,9 +21298,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KRAKEN_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<FreeBuilding>BUILDING_KRAKEN_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KRAKEN_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -21300,6 +21305,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_KRAKEN_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21307,6 +21313,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_KRAKEN_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -21316,6 +21323,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_KRAKEN_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KRAKEN_STORIES_EFFECT</Type>
@@ -21346,16 +21354,18 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DUGONG_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_DUGONG_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_DUGONG_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
@@ -21366,9 +21376,16 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_DUGONG_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_DUGONG_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUGONG_MYTH_EFFECT</Type>
@@ -21391,8 +21408,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DUGONG_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DUGONG_MYTH_EFFECT</BuildingType>
@@ -21401,6 +21416,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_DUGONG_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21416,6 +21432,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_DUGONG_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUGONG_STORIES</Type>
@@ -21426,9 +21443,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DUGONG_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<FreeBuilding>BUILDING_DUGONG_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DUGONG_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -21436,6 +21450,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_DUGONG_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21443,6 +21458,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_DUGONG_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -21452,6 +21468,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_DUGONG_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUGONG_STORIES_EFFECT</Type>
@@ -21482,17 +21499,18 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ORCA_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_SAILING</PrereqTech>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LEVIATHAN_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_ORCA_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_ORCA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_LEVIATHAN_MYTH_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
@@ -21503,9 +21521,16 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_ORCA_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_ORCA_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORCA_MYTH_EFFECT</Type>
@@ -21528,8 +21553,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ORCA_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORCA_MYTH_EFFECT</BuildingType>
@@ -21538,6 +21561,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ORCA_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21553,6 +21577,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_ORCA_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORCA_STORIES</Type>
@@ -21563,9 +21588,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ORCA_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<FreeBuilding>BUILDING_ORCA_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORCA_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -21573,6 +21595,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_ORCA_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21580,6 +21603,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_ORCA_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -21589,6 +21613,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_ORCA_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORCA_STORIES_EFFECT</Type>
@@ -21619,17 +21644,18 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MINKIE_WHALE_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_SAILING</PrereqTech>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LEVIATHAN_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_MINKIE_WHALE_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_MINKIE_WHALE_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_LEVIATHAN_MYTH_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
@@ -21640,9 +21666,16 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_MINKIE_WHALE_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_MINKIE_WHALE_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MINKIE_WHALE_MYTH_EFFECT</Type>
@@ -21665,8 +21698,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MINKIE_WHALE_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINKIE_WHALE_MYTH_EFFECT</BuildingType>
@@ -21675,6 +21706,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MINKIE_WHALE_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21690,6 +21722,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_MINKIE_WHALE_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MINKIE_WHALE_STORIES</Type>
@@ -21700,9 +21733,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MINKIE_WHALE_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<FreeBuilding>BUILDING_MINKIE_WHALE_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINKIE_WHALE_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -21710,6 +21740,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_MINKIE_WHALE_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21717,6 +21748,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_MINKIE_WHALE_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -21726,6 +21758,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_MINKIE_WHALE_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MINKIE_WHALE_STORIES_EFFECT</Type>
@@ -21756,13 +21789,17 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SEA_OTTER_MYTH</ArtDefineTag>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SEA_OTTER_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_SEA_OTTER_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -21773,12 +21810,16 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SEA_OTTER_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SEA_OTTER_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEA_OTTER_MYTH_EFFECT</Type>
@@ -21801,8 +21842,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SEA_OTTER_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEA_OTTER_MYTH_EFFECT</BuildingType>
@@ -21811,6 +21850,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SEA_OTTER_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21826,6 +21866,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SEA_OTTER_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEA_OTTER_STORIES</Type>
@@ -21836,9 +21877,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SEA_OTTER_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_SEA_OTTER_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEA_OTTER_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -21846,6 +21884,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SEA_OTTER_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21853,6 +21892,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_SEA_OTTER_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -21862,6 +21902,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SEA_OTTER_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEA_OTTER_STORIES_EFFECT</Type>
@@ -21892,13 +21933,17 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LOON_MYTH</ArtDefineTag>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_LOON_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_LOON_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -21909,12 +21954,16 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_LOON_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_LOON_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOON_MYTH_EFFECT</Type>
@@ -21937,8 +21986,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LOON_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LOON_MYTH_EFFECT</BuildingType>
@@ -21947,6 +21994,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LOON_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21962,6 +22010,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_LOON_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOON_STORIES</Type>
@@ -21972,9 +22021,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LOON_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_LOON_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LOON_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -21982,6 +22028,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_LOON_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21989,6 +22036,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_LOON_STORIES_EFFECT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -21998,6 +22046,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_LOON_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOON_STORIES_EFFECT</Type>
@@ -22019,6 +22068,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_LOON_STORIES</ArtDefineTag>
 		</BuildingInfo>
+		<!-- Review Point - Toffer 03.02.21 -->
 		<BuildingInfo>
 			<Type>BUILDING_TOUCAN_MYTH</Type>
 			<MapCategoryTypes>
@@ -22034,7 +22084,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -22170,7 +22219,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -22307,7 +22355,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -22445,7 +22492,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -22583,7 +22629,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -22721,7 +22766,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -22859,7 +22903,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -22997,7 +23040,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -23135,7 +23177,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -23272,7 +23313,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -23506,7 +23546,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
@@ -23555,7 +23594,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
@@ -23598,7 +23636,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LEVIATHAN_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
@@ -23642,7 +23679,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -23778,7 +23814,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -23914,7 +23949,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -24050,7 +24084,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -24186,7 +24219,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -24322,7 +24354,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -24458,7 +24489,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -24594,7 +24624,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -24731,7 +24760,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -24869,7 +24897,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -25007,7 +25034,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -25145,7 +25171,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -25283,7 +25308,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -25421,7 +25445,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -25559,7 +25582,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -25697,7 +25719,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -25835,7 +25856,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -25973,7 +25993,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -26111,7 +26130,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -26249,7 +26267,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -26386,7 +26403,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -26420,7 +26436,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -26558,7 +26573,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -26696,7 +26710,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -26833,7 +26846,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -26969,7 +26981,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -27105,7 +27116,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -27242,7 +27252,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -27380,7 +27389,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -27522,7 +27530,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -27665,7 +27672,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -27803,7 +27809,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -27941,7 +27946,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -28079,7 +28083,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -28217,7 +28220,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -28355,7 +28357,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -28556,7 +28557,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -28694,7 +28694,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -28832,7 +28831,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -28981,7 +28979,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -29117,7 +29114,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -29254,7 +29250,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -29395,7 +29390,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -29623,7 +29617,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -29761,7 +29754,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -29899,7 +29891,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -30037,7 +30028,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
