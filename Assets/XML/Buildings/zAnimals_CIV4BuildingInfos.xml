@@ -20910,29 +20910,27 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_WHALESHARK_STORIES</ArtDefineTag>
 		</BuildingInfo>
-		<!-- Review Point - Toffer 29.12.20 -->
 		<BuildingInfo>
 			<Type>BUILDING_SEATURTLE_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SEATURTLE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SEATURTLE_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_SEATURTLE_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_SEATURTLE_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
@@ -20943,9 +20941,16 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SEATURTLE_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SEATURTLE_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEATURTLE_MYTH_EFFECT</Type>
@@ -20961,15 +20966,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEATURTLE_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SEATURTLE_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SEATURTLE_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEATURTLE_MYTH_EFFECT</BuildingType>
@@ -20978,6 +20981,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SEATURTLE_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20985,6 +20989,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SEATURTLE_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEATURTLE_STORIES</Type>
@@ -20995,9 +21008,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SEATURTLE_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<FreeBuilding>BUILDING_SEATURTLE_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEATURTLE_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -21005,6 +21015,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SEATURTLE_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21012,6 +21023,17 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_SEATURTLE_STORIES_EFFECT</FreeBuilding>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SEATURTLE_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEATURTLE_STORIES_EFFECT</Type>
@@ -21035,26 +21057,25 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DOLPHIN_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DOLPHIN_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DOLPHIN_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_DOLPHIN_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<FreeBuilding>BUILDING_DOLPHIN_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
@@ -21065,9 +21086,16 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_DOLPHIN_MYTH_EFFECT</BuildingType>
-			</PrereqNotInCityBuildings>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_DOLPHIN_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DOLPHIN_MYTH_EFFECT</Type>
@@ -21083,15 +21111,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DOLPHIN_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DOLPHIN_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DOLPHIN_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DOLPHIN_MYTH_EFFECT</BuildingType>
@@ -21100,6 +21126,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_DOLPHIN_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21107,6 +21134,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_DOLPHIN_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DOLPHIN_STORIES</Type>
@@ -21117,9 +21153,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DOLPHIN_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<FreeBuilding>BUILDING_DOLPHIN_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DOLPHIN_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -21127,6 +21160,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_DOLPHIN_STORIES_EFFECT</BuildingType>
 			</PrereqNotInCityBuildings>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21134,6 +21168,17 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_DOLPHIN_STORIES_EFFECT</FreeBuilding>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_DOLPHIN_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DOLPHIN_STORIES_EFFECT</Type>
@@ -21155,25 +21200,23 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DOLPHIN_STORY</ArtDefineTag>
 		</BuildingInfo>
+		<!-- Review Point - Toffer 29.12.20 -->
 		<BuildingInfo>
 			<Type>BUILDING_KRAKEN_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_KRAKEN_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KRAKEN_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_KRAKEN_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -21205,15 +21248,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KRAKEN_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_KRAKEN_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KRAKEN_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KRAKEN_MYTH_EFFECT</BuildingType>
@@ -21229,6 +21272,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KRAKEN_STORIES</Type>
@@ -21256,6 +21307,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KRAKEN_STORIES_EFFECT</Type>
@@ -21279,23 +21339,20 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUGONG_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DUGONG_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DUGONG_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_DUGONG_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -21327,15 +21384,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUGONG_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DUGONG_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DUGONG_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DUGONG_MYTH_EFFECT</BuildingType>
@@ -21351,6 +21408,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUGONG_STORIES</Type>
@@ -21378,6 +21443,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUGONG_STORIES_EFFECT</Type>
@@ -21401,17 +21475,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORCA_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORCA_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORCA_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_SAILING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_ORCA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -21449,15 +21521,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORCA_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORCA_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORCA_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORCA_MYTH_EFFECT</BuildingType>
@@ -21473,6 +21545,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORCA_STORIES</Type>
@@ -21500,6 +21580,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORCA_STORIES_EFFECT</Type>
@@ -21523,17 +21612,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MINKIE_WHALE_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MINKIE_WHALE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MINKIE_WHALE_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_SAILING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MINKIE_WHALE_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -21571,15 +21658,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MINKIE_WHALE_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MINKIE_WHALE_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MINKIE_WHALE_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINKIE_WHALE_MYTH_EFFECT</BuildingType>
@@ -21595,6 +21682,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MINKIE_WHALE_STORIES</Type>
@@ -21622,6 +21717,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MINKIE_WHALE_STORIES_EFFECT</Type>
@@ -21645,16 +21749,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEA_OTTER_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SEA_OTTER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEA_OTTER_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_SEA_OTTER_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -21692,15 +21794,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEA_OTTER_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SEA_OTTER_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEA_OTTER_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEA_OTTER_MYTH_EFFECT</BuildingType>
@@ -21716,6 +21818,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEA_OTTER_STORIES</Type>
@@ -21743,6 +21853,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEA_OTTER_STORIES_EFFECT</Type>
@@ -21766,16 +21885,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOON_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_LOON_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LOON_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_LOON_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -21813,15 +21930,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOON_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_LOON_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LOON_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LOON_MYTH_EFFECT</BuildingType>
@@ -21837,6 +21954,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOON_STORIES</Type>
@@ -21864,6 +21989,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOON_STORIES_EFFECT</Type>
@@ -21887,16 +22021,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOUCAN_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TOUCAN_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TOUCAN_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_TOUCAN_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -21934,15 +22066,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOUCAN_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TOUCAN_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TOUCAN_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TOUCAN_MYTH_EFFECT</BuildingType>
@@ -21958,6 +22090,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOUCAN_STORIES</Type>
@@ -21985,6 +22125,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOUCAN_STORIES_EFFECT</Type>
@@ -22008,16 +22157,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLAMINGO_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_FLAMINGO_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLAMINGO_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_FLAMINGO_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -22055,15 +22202,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLAMINGO_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_FLAMINGO_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLAMINGO_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FLAMINGO_MYTH_EFFECT</BuildingType>
@@ -22079,6 +22226,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLAMINGO_STORIES</Type>
@@ -22106,6 +22261,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLAMINGO_STORIES_EFFECT</Type>
@@ -22129,16 +22293,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EAGLE_BALD_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EAGLE_BALD_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EAGLE_BALD_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_EAGLE_BALD_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -22178,15 +22340,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EAGLE_BALD_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EAGLE_BALD_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EAGLE_BALD_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EAGLE_BALD_MYTH_EFFECT</BuildingType>
@@ -22202,6 +22364,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EAGLE_BALD_STORIES</Type>
@@ -22229,6 +22399,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EAGLE_BALD_STORIES_EFFECT</Type>
@@ -22252,16 +22431,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPUCHIN_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CAPUCHIN_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAPUCHIN_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_CAPUCHIN_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -22301,15 +22478,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPUCHIN_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CAPUCHIN_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAPUCHIN_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAPUCHIN_MYTH_EFFECT</BuildingType>
@@ -22325,6 +22502,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPUCHIN_STORIES</Type>
@@ -22352,6 +22537,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPUCHIN_STORIES_EFFECT</Type>
@@ -22375,16 +22569,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPYBARA_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CAPYBARA_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAPYBARA_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_CAPYBARA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -22424,15 +22616,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPYBARA_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CAPYBARA_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAPYBARA_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAPYBARA_MYTH_EFFECT</BuildingType>
@@ -22448,6 +22640,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPYBARA_STORIES</Type>
@@ -22475,6 +22675,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPYBARA_STORIES_EFFECT</Type>
@@ -22498,16 +22707,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHEETAH_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CHEETAH_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHEETAH_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_CHEETAH_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -22547,15 +22754,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHEETAH_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CHEETAH_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHEETAH_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CHEETAH_MYTH_EFFECT</BuildingType>
@@ -22571,6 +22778,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHEETAH_STORIES</Type>
@@ -22598,6 +22813,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHEETAH_STORIES_EFFECT</Type>
@@ -22621,16 +22845,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHIMPANZEE_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CHIMPANZEE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHIMPANZEE_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_CHIMPANZEE_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -22670,15 +22892,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHIMPANZEE_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CHIMPANZEE_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHIMPANZEE_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CHIMPANZEE_MYTH_EFFECT</BuildingType>
@@ -22694,6 +22916,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHIMPANZEE_STORIES</Type>
@@ -22721,6 +22951,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHIMPANZEE_STORIES_EFFECT</Type>
@@ -22744,16 +22983,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESERT_TORTOISE_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DESERT_TORTOISE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DESERT_TORTOISE_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_DESERT_TORTOISE_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -22793,15 +23030,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESERT_TORTOISE_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DESERT_TORTOISE_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DESERT_TORTOISE_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DESERT_TORTOISE_MYTH_EFFECT</BuildingType>
@@ -22817,6 +23054,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESERT_TORTOISE_STORIES</Type>
@@ -22844,6 +23089,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESERT_TORTOISE_STORIES_EFFECT</Type>
@@ -22867,16 +23121,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZEBRA_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ZEBRA_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_ZEBRA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -22916,15 +23168,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZEBRA_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ZEBRA_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZEBRA_MYTH_EFFECT</BuildingType>
@@ -22940,6 +23192,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZEBRA_STORIES</Type>
@@ -22967,6 +23227,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZEBRA_STORIES_EFFECT</Type>
@@ -22990,16 +23259,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_MAMMOTH_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_MAMMOTH_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -23047,14 +23314,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_MAMMOTH_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_MAMMOTH_STORY</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
@@ -23081,6 +23347,15 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_MAMMOTH_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_MAMMOTH_STORIES</Type>
@@ -23107,6 +23382,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_MAMMOTH_STORIES_EFFECT</Type>
@@ -23203,6 +23487,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BELUGA_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BELUGA_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
@@ -23250,6 +23537,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LEVIATHAN_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_LEVIATHAN_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
@@ -23293,6 +23583,9 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NARWHAL_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NARWHAL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
@@ -23336,16 +23629,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANTEATER_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ANTEATER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANTEATER_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_ANTEATER_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -23383,15 +23674,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANTEATER_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ANTEATER_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANTEATER_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANTEATER_MYTH_EFFECT</BuildingType>
@@ -23407,6 +23698,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANTEATER_STORIES</Type>
@@ -23434,6 +23733,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANTEATER_STORIES_EFFECT</Type>
@@ -23457,16 +23765,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BADGER_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BADGER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BADGER_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_BADGER_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -23504,15 +23810,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BADGER_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BADGER_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BADGER_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BADGER_MYTH_EFFECT</BuildingType>
@@ -23528,6 +23834,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BADGER_STORIES</Type>
@@ -23555,6 +23869,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BADGER_STORIES_EFFECT</Type>
@@ -23578,16 +23901,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BALLPYTHON_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BALLPYTHON_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BALLPYTHON_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_BALLPYTHON_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -23625,15 +23946,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BALLPYTHON_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BALLPYTHON_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BALLPYTHON_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BALLPYTHON_MYTH_EFFECT</BuildingType>
@@ -23649,6 +23970,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BALLPYTHON_STORIES</Type>
@@ -23676,6 +24005,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BALLPYTHON_STORIES_EFFECT</Type>
@@ -23699,16 +24037,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BARBARYAPE_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BARBARYAPE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BARBARYAPE_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_BARBARYAPE_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -23746,15 +24082,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BARBARYAPE_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BARBARYAPE_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BARBARYAPE_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BARBARYAPE_MYTH_EFFECT</BuildingType>
@@ -23770,6 +24106,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BARBARYAPE_STORIES</Type>
@@ -23797,6 +24141,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BARBARYAPE_STORIES_EFFECT</Type>
@@ -23820,16 +24173,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BEAVER_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BEAVER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEAVER_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_BEAVER_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -23867,15 +24218,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BEAVER_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BEAVER_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEAVER_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BEAVER_MYTH_EFFECT</BuildingType>
@@ -23891,6 +24242,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BEAVER_STORIES</Type>
@@ -23918,6 +24277,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BEAVER_STORIES_EFFECT</Type>
@@ -23941,16 +24309,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BENGALTIGER_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BENGALTIGER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BENGALTIGER_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_BENGALTIGER_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -23988,15 +24354,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BENGALTIGER_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BENGALTIGER_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BENGALTIGER_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BENGALTIGER_MYTH_EFFECT</BuildingType>
@@ -24012,6 +24378,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BENGALTIGER_STORIES</Type>
@@ -24039,6 +24413,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BENGALTIGER_STORIES_EFFECT</Type>
@@ -24062,16 +24445,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BISON_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BISON_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BISON_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_BISON_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -24109,15 +24490,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BISON_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BISON_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BISON_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BISON_MYTH_EFFECT</BuildingType>
@@ -24133,6 +24514,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BISON_STORIES</Type>
@@ -24160,6 +24549,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BISON_STORIES_EFFECT</Type>
@@ -24183,16 +24581,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BOAR_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BOAR_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BOAR_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_BOAR_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -24230,15 +24626,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BOAR_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BOAR_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BOAR_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BOAR_MYTH_EFFECT</BuildingType>
@@ -24254,6 +24650,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BOAR_STORIES</Type>
@@ -24281,6 +24685,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BOAR_STORIES_EFFECT</Type>
@@ -24304,16 +24717,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BONGO_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BONGO_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BONGO_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_BONGO_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -24353,15 +24764,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BONGO_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BONGO_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BONGO_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BONGO_MYTH_EFFECT</BuildingType>
@@ -24377,6 +24788,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BONGO_STORIES</Type>
@@ -24404,6 +24823,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BONGO_STORIES_EFFECT</Type>
@@ -24427,16 +24855,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CROW_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CROW_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CROW_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_CROW_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -24476,15 +24902,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CROW_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CROW_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CROW_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CROW_MYTH_EFFECT</BuildingType>
@@ -24500,6 +24926,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CROW_STORIES</Type>
@@ -24527,6 +24961,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CROW_STORIES_EFFECT</Type>
@@ -24550,16 +24993,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GAZELLE_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GAZELLE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAZELLE_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_GAZELLE_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -24599,15 +25040,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GAZELLE_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GAZELLE_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAZELLE_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GAZELLE_MYTH_EFFECT</BuildingType>
@@ -24623,6 +25064,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GAZELLE_STORIES</Type>
@@ -24650,6 +25099,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GAZELLE_STORIES_EFFECT</Type>
@@ -24673,16 +25131,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GELADA_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GELADA_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GELADA_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_GELADA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -24722,15 +25178,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GELADA_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GELADA_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GELADA_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GELADA_MYTH_EFFECT</BuildingType>
@@ -24746,6 +25202,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GELADA_STORIES</Type>
@@ -24773,6 +25237,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GELADA_STORIES_EFFECT</Type>
@@ -24796,16 +25269,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GEMSBOK_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GEMSBOK_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GEMSBOK_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_GEMSBOK_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -24845,15 +25316,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GEMSBOK_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GEMSBOK_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GEMSBOK_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GEMSBOK_MYTH_EFFECT</BuildingType>
@@ -24869,6 +25340,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GEMSBOK_STORIES</Type>
@@ -24896,6 +25375,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GEMSBOK_STORIES_EFFECT</Type>
@@ -24919,16 +25407,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GERENUK_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GERENUK_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GERENUK_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_GERENUK_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -24968,15 +25454,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GERENUK_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GERENUK_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GERENUK_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GERENUK_MYTH_EFFECT</BuildingType>
@@ -24992,6 +25478,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GERENUK_STORIES</Type>
@@ -25019,6 +25513,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GERENUK_STORIES_EFFECT</Type>
@@ -25042,16 +25545,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GORILLA_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GORILLA_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GORILLA_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_GORILLA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -25091,15 +25592,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GORILLA_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GORILLA_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GORILLA_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GORILLA_MYTH_EFFECT</BuildingType>
@@ -25115,6 +25616,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GORILLA_STORIES</Type>
@@ -25142,6 +25651,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GORILLA_STORIES_EFFECT</Type>
@@ -25165,16 +25683,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KANGAROO_GREY_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_KANGAROO_GREY_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KANGAROO_GREY_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_KANGAROO_GREY_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -25214,15 +25730,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KANGAROO_GREY_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_KANGAROO_GREY_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KANGAROO_GREY_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KANGAROO_GREY_MYTH_EFFECT</BuildingType>
@@ -25238,6 +25754,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KANGAROO_GREY_STORIES</Type>
@@ -25265,6 +25789,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KANGAROO_GREY_STORIES_EFFECT</Type>
@@ -25288,16 +25821,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GULL_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GULL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GULL_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_GULL_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -25337,15 +25868,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GULL_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GULL_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GULL_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GULL_MYTH_EFFECT</BuildingType>
@@ -25361,6 +25892,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GULL_STORIES</Type>
@@ -25388,6 +25927,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GULL_STORIES_EFFECT</Type>
@@ -25411,16 +25959,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYENA_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HYENA_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYENA_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_HYENA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -25460,15 +26006,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYENA_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HYENA_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HYENA_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYENA_MYTH_EFFECT</BuildingType>
@@ -25484,6 +26030,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYENA_STORIES</Type>
@@ -25511,6 +26065,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYENA_STORIES_EFFECT</Type>
@@ -25534,16 +26097,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IMPALA_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_IMPALA_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_IMPALA_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_IMPALA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -25583,15 +26144,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IMPALA_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_IMPALA_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_IMPALA_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_IMPALA_MYTH_EFFECT</BuildingType>
@@ -25607,6 +26168,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IMPALA_STORIES</Type>
@@ -25634,6 +26203,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IMPALA_STORIES_EFFECT</Type>
@@ -25657,16 +26235,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JAGUAR_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_JAGUAR_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JAGUAR_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_JAGUAR_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -25706,15 +26282,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JAGUAR_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_JAGUAR_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JAGUAR_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_JAGUAR_MYTH_EFFECT</BuildingType>
@@ -25730,6 +26306,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JAGUAR_STORIES</Type>
@@ -25757,6 +26341,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JAGUAR_STORIES_EFFECT</Type>
@@ -25780,16 +26373,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WARTHOG_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_WARTHOG_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WARTHOG_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_WARTHOG_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -25815,16 +26406,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOALA_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_KOALA_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KOALA_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_KOALA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -25864,15 +26453,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOALA_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_KOALA_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KOALA_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KOALA_MYTH_EFFECT</BuildingType>
@@ -25888,6 +26477,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOALA_STORIES</Type>
@@ -25915,6 +26512,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOALA_STORIES_EFFECT</Type>
@@ -25938,16 +26544,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOOKABURRA_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_KOOKABURRA_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KOOKABURRA_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_KOOKABURRA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -25987,15 +26591,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOOKABURRA_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_KOOKABURRA_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KOOKABURRA_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KOOKABURRA_MYTH_EFFECT</BuildingType>
@@ -26011,6 +26615,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOOKABURRA_STORIES</Type>
@@ -26038,6 +26650,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOOKABURRA_STORIES_EFFECT</Type>
@@ -26061,16 +26682,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LION_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_LION_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LION_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_LION_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -26110,15 +26729,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LION_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_LION_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LION_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LION_MYTH_EFFECT</BuildingType>
@@ -26134,6 +26753,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LION_STORIES</Type>
@@ -26161,6 +26788,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LION_STORIES_EFFECT</Type>
@@ -26184,16 +26820,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IGUANA_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_IGUANA_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_IGUANA_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_IGUANA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -26231,15 +26865,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IGUANA_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_IGUANA_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_IGUANA_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_IGUANA_MYTH_EFFECT</BuildingType>
@@ -26255,6 +26889,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IGUANA_STORIES</Type>
@@ -26282,6 +26924,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IGUANA_STORIES_EFFECT</Type>
@@ -26305,16 +26956,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOMODO_DRAGON_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_KOMODO_DRAGON_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KOMODO_DRAGON_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_KOMODO_DRAGON_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -26352,15 +27001,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOMODO_DRAGON_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_KOMODO_DRAGON_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KOMODO_DRAGON_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KOMODO_DRAGON_MYTH_EFFECT</BuildingType>
@@ -26376,6 +27025,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOMODO_DRAGON_STORIES</Type>
@@ -26403,6 +27060,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOMODO_DRAGON_STORIES_EFFECT</Type>
@@ -26426,16 +27092,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NILE_MONITOR_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NILE_MONITOR_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NILE_MONITOR_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_NILE_MONITOR_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -26473,15 +27137,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NILE_MONITOR_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NILE_MONITOR_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NILE_MONITOR_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NILE_MONITOR_MYTH_EFFECT</BuildingType>
@@ -26497,6 +27161,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NILE_MONITOR_STORIES</Type>
@@ -26524,6 +27196,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NILE_MONITOR_STORIES_EFFECT</Type>
@@ -26547,16 +27228,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LLAMA_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_LLAMA_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LLAMA_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_LLAMA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -26596,15 +27275,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LLAMA_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_LLAMA_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LLAMA_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LLAMA_MYTH_EFFECT</BuildingType>
@@ -26620,6 +27299,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LLAMA_STORIES</Type>
@@ -26647,6 +27334,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LLAMA_STORIES_EFFECT</Type>
@@ -26670,17 +27366,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEW_W_MONKEY_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NEW_W_MONKEY_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEW_W_MONKEY_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_NEW_W_MONKEY_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -26721,17 +27415,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEW_W_MONKEY_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NEW_W_MONKEY_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NEW_W_MONKEY_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_WRITING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
+			<PrereqTech>TECH_WRITING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NEW_W_MONKEY_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
@@ -26739,6 +27431,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_NEW_W_MONKEY_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26746,6 +27439,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_NEW_W_MONKEY_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEW_W_MONKEY_STORIES</Type>
@@ -26774,6 +27476,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEW_W_MONKEY_STORIES_EFFECT</Type>
@@ -26797,17 +27508,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OLD_W_MONKEY_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_OLD_W_MONKEY_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLD_W_MONKEY_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_OLD_W_MONKEY_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -26849,17 +27558,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OLD_W_MONKEY_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_OLD_W_MONKEY_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OLD_W_MONKEY_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_WRITING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
+			<PrereqTech>TECH_WRITING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OLD_W_MONKEY_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
@@ -26867,6 +27574,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_OLD_W_MONKEY_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26874,6 +27582,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_OLD_W_MONKEY_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OLD_W_MONKEY_STORIES</Type>
@@ -26902,6 +27619,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OLD_W_MONKEY_STORIES_EFFECT</Type>
@@ -26925,16 +27651,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MANDRILL_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MANDRILL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MANDRILL_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_MANDRILL_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -26974,15 +27698,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MANDRILL_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MANDRILL_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MANDRILL_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANDRILL_MYTH_EFFECT</BuildingType>
@@ -26998,6 +27722,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MANDRILL_STORIES</Type>
@@ -27025,6 +27757,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MANDRILL_STORIES_EFFECT</Type>
@@ -27048,16 +27789,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OKAPI_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_OKAPI_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OKAPI_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_OKAPI_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -27097,15 +27836,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OKAPI_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_OKAPI_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OKAPI_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OKAPI_MYTH_EFFECT</BuildingType>
@@ -27121,6 +27860,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OKAPI_STORIES</Type>
@@ -27148,6 +27895,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OKAPI_STORIES_EFFECT</Type>
@@ -27171,16 +27927,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORANGUTAN_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORANGUTAN_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORANGUTAN_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_ORANGUTAN_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -27220,15 +27974,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORANGUTAN_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ORANGUTAN_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORANGUTAN_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORANGUTAN_MYTH_EFFECT</BuildingType>
@@ -27244,6 +27998,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORANGUTAN_STORIES</Type>
@@ -27271,6 +28033,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORANGUTAN_STORIES_EFFECT</Type>
@@ -27294,16 +28065,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OXPECKER_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_OXPECKER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OXPECKER_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_OXPECKER_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -27343,15 +28112,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OXPECKER_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_OXPECKER_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OXPECKER_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OXPECKER_MYTH_EFFECT</BuildingType>
@@ -27367,6 +28136,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OXPECKER_STORIES</Type>
@@ -27394,6 +28171,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OXPECKER_STORIES_EFFECT</Type>
@@ -27417,16 +28203,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEACOCK_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEACOCK_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PEACOCK_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_PEACOCK_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -27466,15 +28250,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEACOCK_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEACOCK_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PEACOCK_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PEACOCK_MYTH_EFFECT</BuildingType>
@@ -27490,6 +28274,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEACOCK_STORIES</Type>
@@ -27517,6 +28309,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEACOCK_STORIES_EFFECT</Type>
@@ -27540,16 +28341,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROCOPTODON_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PROCOPTODON_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROCOPTODON_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_PROCOPTODON_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -27589,15 +28388,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROCOPTODON_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PROCOPTODON_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PROCOPTODON_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PROCOPTODON_MYTH_EFFECT</BuildingType>
@@ -27613,6 +28412,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROCOPTODON_STORIES</Type>
@@ -27640,6 +28447,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROCOPTODON_STORIES_EFFECT</Type>
@@ -27726,16 +28542,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUOLL_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_QUOLL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_QUOLL_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_QUOLL_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -27775,15 +28589,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUOLL_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_QUOLL_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_QUOLL_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_QUOLL_MYTH_EFFECT</BuildingType>
@@ -27799,6 +28613,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUOLL_STORIES</Type>
@@ -27826,6 +28648,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUOLL_STORIES_EFFECT</Type>
@@ -27849,16 +28680,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RATEL_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_RATEL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RATEL_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_RATEL_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -27898,15 +28727,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RATEL_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_RATEL_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RATEL_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RATEL_MYTH_EFFECT</BuildingType>
@@ -27922,6 +28751,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RATEL_STORIES</Type>
@@ -27949,6 +28786,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RATEL_STORIES_EFFECT</Type>
@@ -27972,16 +28818,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KANGAROO_RED_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_KANGAROO_RED_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KANGAROO_RED_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_KANGAROO_RED_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -28021,15 +28865,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KANGAROO_RED_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_KANGAROO_RED_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KANGAROO_RED_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KANGAROO_RED_MYTH_EFFECT</BuildingType>
@@ -28045,6 +28889,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KANGAROO_RED_STORIES</Type>
@@ -28072,6 +28924,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KANGAROO_RED_STORIES_EFFECT</Type>
@@ -28107,16 +28968,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COBRA_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_COBRA_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COBRA_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_COBRA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -28154,15 +29013,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COBRA_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_COBRA_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COBRA_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COBRA_MYTH_EFFECT</BuildingType>
@@ -28178,6 +29037,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COBRA_STORIES</Type>
@@ -28205,6 +29072,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COBRA_STORIES_EFFECT</Type>
@@ -28228,16 +29104,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PUFFADDER_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PUFFADDER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PUFFADDER_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_PUFFADDER_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -28275,15 +29149,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PUFFADDER_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PUFFADDER_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PUFFADDER_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PUFFADDER_MYTH_EFFECT</BuildingType>
@@ -28299,6 +29173,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PUFFADDER_STORIES</Type>
@@ -28326,6 +29208,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PUFFADDER_STORIES_EFFECT</Type>
@@ -28349,17 +29240,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SNAKES_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SNAKES_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SNAKES_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_SNAKES_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -28400,17 +29289,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SNAKES_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SNAKES_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SNAKES_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_WRITING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
+			<PrereqTech>TECH_WRITING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SNAKES_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
@@ -28418,6 +29305,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SNAKES_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
+			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -28425,6 +29313,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SNAKES_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SNAKES_STORIES</Type>
@@ -28453,6 +29350,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SNAKES_STORIES_EFFECT</Type>
@@ -28476,16 +29382,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIPER_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_VIPER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VIPER_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_VIPER_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -28523,15 +29427,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIPER_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_VIPER_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VIPER_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VIPER_MYTH_EFFECT</BuildingType>
@@ -28547,6 +29451,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIPER_STORIES</Type>
@@ -28574,6 +29486,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIPER_STORIES_EFFECT</Type>
@@ -28597,15 +29518,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WARTHOG_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_WARTHOG_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WARTHOG_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WARTHOG_MYTH_EFFECT</BuildingType>
@@ -28621,6 +29542,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WARTHOG_STORIES</Type>
@@ -28648,6 +29577,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WARTHOG_STORIES_EFFECT</Type>
@@ -28671,16 +29609,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WALLAROO_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_WALLAROO_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WALLAROO_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_WALLAROO_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -28720,15 +29656,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WALLAROO_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_WALLAROO_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WALLAROO_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WALLAROO_MYTH_EFFECT</BuildingType>
@@ -28744,6 +29680,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WALLAROO_STORIES</Type>
@@ -28771,6 +29715,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WALLAROO_STORIES_EFFECT</Type>
@@ -28794,16 +29747,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUFFALO_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BUFFALO_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BUFFALO_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_BUFFALO_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -28843,15 +29794,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUFFALO_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BUFFALO_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BUFFALO_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BUFFALO_MYTH_EFFECT</BuildingType>
@@ -28867,6 +29818,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUFFALO_STORIES</Type>
@@ -28894,6 +29853,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUFFALO_STORIES_EFFECT</Type>
@@ -28917,16 +29885,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WILDEBEEST_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_WILDEBEEST_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WILDEBEEST_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_WILDEBEEST_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -28966,15 +29932,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WILDEBEEST_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_WILDEBEEST_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WILDEBEEST_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WILDEBEEST_MYTH_EFFECT</BuildingType>
@@ -28990,6 +29956,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WILDEBEEST_STORIES</Type>
@@ -29017,6 +29991,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WILDEBEEST_STORIES_EFFECT</Type>
@@ -29040,16 +30023,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALAPAGOS_TORTOISE_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GALAPAGOS_TORTOISE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GALAPAGOS_TORTOISE_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_GALAPAGOS_TORTOISE_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -29089,15 +30070,15 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALAPAGOS_TORTOISE_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GALAPAGOS_TORTOISE_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GALAPAGOS_TORTOISE_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_MYTH_EFFECT</BuildingType>
@@ -29113,6 +30094,14 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALAPAGOS_TORTOISE_STORIES</Type>
@@ -29140,6 +30129,15 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALAPAGOS_TORTOISE_STORIES_EFFECT</Type>
