@@ -202,7 +202,7 @@ bool CvPropertyManipulators::read(CvXMLLoadUtility *pXML, const wchar_t* szTagNa
 	return true;
 }
 
-void CvPropertyManipulators::copyNonDefaults(CvPropertyManipulators *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyManipulators::copyNonDefaults(const CvPropertyManipulators* pProp, CvXMLLoadUtility* pXML)
 {
 	//if (m_apSources.empty())
 	{

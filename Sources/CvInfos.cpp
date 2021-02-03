@@ -199,7 +199,7 @@ bool CvInfoBase::read(CvXMLLoadUtility* pXML)
 	return true;
 }
 
-void CvInfoBase::copyNonDefaults(CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML)
+void CvInfoBase::copyNonDefaults(const CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML)
 {
 	const CvString cDefault = CvString::format("").GetCString();
 	const CvWString wDefault = CvWString::format(L"").GetCString();
@@ -13642,7 +13642,7 @@ void CvHandicapInfo::copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtilit
 
 	if (getRevolutionIndexPercent() == iDefault) m_iRevolutionIndexPercent = pClassInfo->getRevolutionIndexPercent();
 
-	m_Percent.copyNonDefaults(&(pClassInfo->m_Percent), pXML);
+	m_Percent.copyNonDefaults(&pClassInfo->m_Percent);
 
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators, pXML);
 }
@@ -13987,7 +13987,7 @@ void CvGameSpeedInfo::copyNonDefaults(CvGameSpeedInfo* pClassInfo, CvXMLLoadUtil
 	if (getTraitGainPercent() == iDefault) m_iTraitGainPercent = pClassInfo->getTraitGainPercent();
 	//TB GameSpeed end
 
-	m_Percent.copyNonDefaults(&(pClassInfo->m_Percent), pXML);
+	m_Percent.copyNonDefaults(&pClassInfo->m_Percent);
 }
 
 void CvGameSpeedInfo::getCheckSum(unsigned int &iSum) const
@@ -20494,7 +20494,7 @@ void CvWorldInfo::copyNonDefaults(CvWorldInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (getCommandersLevelThresholdsPercent() == iDefault) m_iCommandersLevelThresholdsPercent = pClassInfo->getCommandersLevelThresholdsPercent();
 	if (m_iOceanMinAreaSize == iDefault) m_iOceanMinAreaSize = pClassInfo->getOceanMinAreaSize();
 
-	m_Percent.copyNonDefaults(&(pClassInfo->m_Percent), pXML);
+	m_Percent.copyNonDefaults(&pClassInfo->m_Percent);
 }
 
 void CvWorldInfo::getCheckSum(unsigned int& iSum) const
