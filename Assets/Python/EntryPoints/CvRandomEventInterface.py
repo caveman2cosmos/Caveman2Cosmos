@@ -1989,7 +1989,7 @@ def canTriggerTheGoths(argsList):
     return False
 
 # Find an eligible plot
-  for plot in GC.getMap().numPlots():
+  for plot in GC.getMap().plots():
     if (plot.getOwner() == -1 and not plot.isWater() and not plot.isImpassable() and plot.area().getCitiesPerPlayer(kTriggeredData.ePlayer) > 0 and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
       return True
 
