@@ -228,6 +228,7 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_iNoEntryDefenseLevel(0)
 ,m_iNumUnitFullHeal(0)
 ,m_iExtendsBuilding(-1)
+,m_iObsoletesToBuilding(-1)
 ,m_iNumPopulationEmployed(0)
 ,m_iHealthPercentPerPopulation(0)
 ,m_iHappinessPercentPerPopulation(0)
@@ -318,14 +319,10 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_bDamageAllAttackers(false)
 ,m_bDamageAttackerCapable(false)
 ,m_bQuarantine(false)
-//Team Project (1)
 ,m_ppaiLocalSpecialistYieldChange(NULL)
 ,m_ppaiLocalSpecialistCommerceChange(NULL)
 ,m_pabHurry(NULL)
-//ls612 Begin
 , m_iMaxPopAllowed(0)
-, m_iMaxCultureLevelAllowed(0)
-//ls612 End
 //,m_pExprFreePromotionCondition(NULL)
 ,m_bNotShowInCity(false)
 ,m_ePropertySpawnUnit(NO_UNIT)
@@ -1772,17 +1769,12 @@ bool CvBuildingInfo::isHurry(int i) const
 }
 //TB Combat Mods (Buildings) end
 
-//ls612 Begin:
+
 int CvBuildingInfo::getMaxPopAllowed() const
 {
 	return m_iMaxPopAllowed;
 }
 
-int CvBuildingInfo::getMaxCultureLevelAllowed() const
-{
-	return m_iMaxCultureLevelAllowed;
-}
-//ls612 End:
 
 bool CvBuildingInfo::EnablesOtherBuildings() const
 {
@@ -2180,6 +2172,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iWorkableRadius);
 	CheckSum(iSum, m_iPrereqAnyoneBuilding);
 	CheckSum(iSum, m_iExtendsBuilding);
+	CheckSum(iSum, m_iObsoletesToBuilding);
 	CheckSum(iSum, m_iOccupationTimeModifier);
 	CheckSum(iSum, m_iNoEntryDefenseLevel);
 	CheckSum(iSum, m_iNumUnitFullHeal);
@@ -2304,7 +2297,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_bDamageAttackerCapable);
 	CheckSum(iSum, m_bQuarantine);
 	CheckSum(iSum, m_iMaxPopAllowed);
-	CheckSum(iSum, m_iMaxCultureLevelAllowed);
 
 	//Structs
 	int iNumElements = m_aFreePromoTypes.size();
@@ -2645,7 +2637,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iRevIdxDistanceModifier, L"iRevIdxDistanceModifier");
 
 	pXML->GetOptionalChildXmlValByName(&m_iMaxPopAllowed, L"iObsoletePopulation", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iMaxCultureLevelAllowed, L"iObsoleteCultureLevel", -1);
 
 	pXML->GetOptionalChildXmlValByName(&m_iAssetValue, L"iAsset");
 	pXML->GetOptionalChildXmlValByName(&m_iPowerValue, L"iPower");
@@ -4013,6 +4004,9 @@ bool CvBuildingInfo::readPass2(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ExtendsBuilding");
 	m_iExtendsBuilding = pXML->GetInfoClass(szTextVal);
 
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoletesToBuilding");
+	m_iObsoletesToBuilding = pXML->GetInfoClass(szTextVal);
+
 	pXML->SetVariableListTagPair(&m_piBuildingProductionModifier, L"BuildingProductionModifiers",  GC.getNumBuildingInfos());
 	pXML->SetVariableListTagPair(&m_piGlobalBuildingProductionModifier, L"GlobalBuildingProductionModifiers",  GC.getNumBuildingInfos());
 	pXML->SetVariableListTagPair(&m_piGlobalBuildingCostModifier, L"GlobalBuildingCostModifiers",  GC.getNumBuildingInfos());
@@ -4274,10 +4268,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (getRevIdxNational() == iDefault) m_iRevIdxNational = pClassInfo->getRevIdxNational();
 	if (getRevIdxDistanceModifier() == iDefault) m_iRevIdxDistanceModifier = pClassInfo->getRevIdxDistanceModifier();
 
-	//ls612 Begin
 	if (getMaxPopAllowed() == -1) m_iMaxPopAllowed = pClassInfo->getMaxPopAllowed();
-	if (getMaxCultureLevelAllowed() == -1) m_iMaxCultureLevelAllowed = pClassInfo->getMaxCultureLevelAllowed();
-	//ls612 End
+
 	if (getVisibilityPriority() == fDefault) m_fVisibilityPriority = pClassInfo->getVisibilityPriority();
 
 	for ( int j = 0; j < NUM_YIELD_TYPES; j++)
@@ -5415,6 +5407,8 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 	if (getProductionContinueBuilding() == NO_BUILDING) m_iProductionContinueBuilding = pClassInfo->getProductionContinueBuilding();
 	if (getPrereqAnyoneBuilding() == NO_BUILDING) m_iPrereqAnyoneBuilding = pClassInfo->getPrereqAnyoneBuilding();
 	if (getExtendsBuilding() == NO_BUILDING) m_iExtendsBuilding = pClassInfo->getExtendsBuilding();
+	if (getObsoletesToBuilding() == NO_BUILDING) m_iObsoletesToBuilding = pClassInfo->getObsoletesToBuilding();
+
 
 	if (pClassInfo->m_piPrereqNumOfBuilding != NULL)
 	{

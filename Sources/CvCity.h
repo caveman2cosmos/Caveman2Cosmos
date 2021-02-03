@@ -381,7 +381,7 @@ public:
 	int getBonusYieldRateModifier(YieldTypes eIndex, BonusTypes eBonus) const;
 	void processBonus(BonusTypes eBonus, int iChange);
 
-	void processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolete = false, bool bReplacingNow = false, bool bReligiouslyDisabling = false);
+	void processBuilding(const BuildingTypes eBuilding, const int iChange, const bool bReligiouslyDisabling = false);
 	void processProcess(ProcessTypes eProcess, int iChange);
 	void processSpecialist(SpecialistTypes eSpecialist, int iChange);
 
@@ -1223,7 +1223,7 @@ public:
 
 	int getNumRealBuilding(BuildingTypes eIndex) const;
 	void setNumRealBuilding(BuildingTypes eIndex, int iNewValue);
-	void setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool bFirst, PlayerTypes eOriginalOwner, int iOriginalTime);
+	void setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNewValue, const bool bFirst, const PlayerTypes eOriginalOwner, const int iOriginalTime);
 
 	bool isValidBuildingLocation(BuildingTypes eIndex) const;
 
@@ -1420,7 +1420,7 @@ public:
 
 	void doInvasion();
 
-	void setDisabledBuilding(const BuildingTypes eIndex, const bool bNewValue);
+	void setDisabledBuilding(const BuildingTypes eIndex, const bool bNewValue, const bool bProcess = true);
 	bool isDisabledBuilding(const short iIndex) const;
 
 	void setReligiouslyDisabledBuilding(BuildingTypes eIndex, bool bNewValue);

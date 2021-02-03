@@ -2699,9 +2699,8 @@
 		<Polish>%s1 w mieście %s2 uniemożliwił dostęp do świeżej wody.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_REMOVED_MAX_CULTURE</Tag>
-		<English>The %s1 in the City of %s2 has shut down to the local culture level being too high.</English>
-		<French>Le bâtiment %s1 de la ville de %s2 a été désactivé, car le niveau culturel est trop haut.</French>
+		<Tag>TXT_KEY_CITY_REMOVED_MAX_POPULATION</Tag>
+		<English>The %s1 in the City of %s2 has shut down due to the population level being too high.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REPEL</Tag>

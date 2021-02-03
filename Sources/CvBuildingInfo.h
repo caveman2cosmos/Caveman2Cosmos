@@ -300,6 +300,7 @@ public:
 	int getWorkableRadius() const					{ return m_iWorkableRadius; }
 	int getPrereqAnyoneBuilding() const				{ return m_iPrereqAnyoneBuilding; }
 	int getExtendsBuilding() const					{ return m_iExtendsBuilding; }
+	int getObsoletesToBuilding() const				{ return m_iObsoletesToBuilding; }
 	int getOccupationTimeModifier() const			{ return m_iOccupationTimeModifier; }
 	int getNoEntryDefenseLevel() const;
 	int getNumUnitFullHeal() const					{ return m_iNumUnitFullHeal; }
@@ -493,10 +494,7 @@ public:
 
 	bool isHurry(int i) const;
 
-	//ls612 Begin:
 	int getMaxPopAllowed() const;
-	int getMaxCultureLevelAllowed() const;
-	//ls612 End:
 
 	//BoolExpr* getFreePromotionCondition();
 	//Struct
@@ -575,6 +573,7 @@ protected:
 	int m_iWorkableRadius;
 	int m_iPrereqAnyoneBuilding;
 	int m_iExtendsBuilding;
+	int m_iObsoletesToBuilding;
 	int m_iOccupationTimeModifier;
 	int m_iNoEntryDefenseLevel;
 	int m_iNumUnitFullHeal;
@@ -904,10 +903,7 @@ protected:
 protected:
 	bool* m_pabHurry;
 
-	//ls612 Begin:
 	int m_iMaxPopAllowed;
-	int m_iMaxCultureLevelAllowed;
-	//ls612 End:
 
 	/*
 	BoolExpr* m_pExprFreePromotionCondition;*/

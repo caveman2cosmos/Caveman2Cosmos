@@ -499,6 +499,7 @@
 	<ElementType name="iNumUnitFullHeal" content="textOnly" dt:type="int"/>
 	<ElementType name="iOccupationTimeModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="ExtendsBuilding" content="textOnly"/>
+	<ElementType name="ObsoletesToBuilding" content="textOnly"/>
 	<ElementType name="iNumPopulationEmployed" content="textOnly" dt:type="int"/>
 	<ElementType name="iHealthPercentPerPopulation" content="textOnly" dt:type="int"/>
 	<ElementType name="iHappinessPercentPerPopulation" content="textOnly" dt:type="int"/>
@@ -948,6 +949,7 @@
 		<element type="CommerceAttacks" minOccurs="0"/>
 		<element type="UnitCombatExtraStrengths" minOccurs="0"/>
 		<element type="ExtendsBuilding" minOccurs="0"/>
+		<element type="ObsoletesToBuilding" minOccurs="0"/>
 		<element type="iNumPopulationEmployed" minOccurs="0"/>
 		<element type="iHealthPercentPerPopulation" minOccurs="0"/>
 		<element type="iHappinessPercentPerPopulation" minOccurs="0"/>

@@ -4901,18 +4901,29 @@ void CvTeam::changeObsoleteBuildingCount(BuildingTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
+		const bool bWasObsolete = m_paiObsoleteBuildingCount[eIndex] > 0;
+
 		m_paiObsoleteBuildingCount[eIndex] += iChange;
 		FAssert(getObsoleteBuildingCount(eIndex) >= 0);
 
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		if (!bWasObsolete && iChange > 0)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
+			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
-				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
+				if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
 				{
-					if (pLoopCity->getNumBuilding(eIndex) > 0)
+					foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 					{
-						pLoopCity->processBuilding(eIndex, (isObsoleteBuilding(eIndex) ? -1 : 1), isObsoleteBuilding(eIndex));
+						if (pLoopCity->getNumRealBuilding(eIndex) > 0)
+						{
+							pLoopCity->setNumRealBuilding(eIndex, 0);
+
+							const int iObsoletesToBuilding = GC.getBuildingInfo(eIndex).getObsoletesToBuilding();
+							if (iObsoletesToBuilding != -1 && pLoopCity->getNumRealBuilding((BuildingTypes)iObsoletesToBuilding) == 0)
+							{
+								pLoopCity->setNumRealBuilding((BuildingTypes)iObsoletesToBuilding, 1);
+							}
+						}
 					}
 				}
 			}

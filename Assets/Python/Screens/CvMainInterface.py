@@ -2948,7 +2948,7 @@ class CvMainInterface:
 		iRow = 0
 		y = -2
 		for szName, i, CvBuildingInfo in aBuildingList:
-			iBuilt = CyCity.getNumBuilding(i)
+			iBuilt = CyCity.getNumRealBuilding(i)
 			if iBuilt:
 				szStat = ""
 
