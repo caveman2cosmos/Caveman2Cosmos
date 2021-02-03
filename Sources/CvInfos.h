@@ -84,7 +84,7 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual bool readPass2(CvXMLLoadUtility* /*pXML*/) { FErrorMsg("Override this"); return false; }
 	virtual bool readPass3() { FErrorMsg("Override this"); return false; }
-	virtual void copyNonDefaults(const CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML);
+	virtual void copyNonDefaults(const CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML = NULL);
 	virtual void copyNonDefaultsReadPass2(CvInfoBase* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false)
 	{ /* AIAndy: Default implementation for full copy of info without knowledge of one/twopass */ }
 	virtual void getCheckSum(unsigned int& iSum) const { };
@@ -124,7 +124,7 @@ public:
 	DllExport float getInterfaceScale() const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvScalableInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaults(const CvScalableInfo* pClassInfo);
 
 protected:
 
@@ -145,7 +145,7 @@ public:
 	virtual ~CvHotkeyInfo();
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvHotkeyInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaults(const CvHotkeyInfo* pClassInfo);
 
 	int getActionInfoIndex() const;
 	void setActionInfoIndex(int i);
@@ -9114,11 +9114,8 @@ public:
 	virtual ~CvUnitCombatInfo();
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvUnitCombatInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvUnitCombatInfo* pClassInfo);
 	void getCheckSum(unsigned int& iSum) const;
-
-	//bool readPass2(CvXMLLoadUtility* pXML);
-	//void copyNonDefaultsReadPass2(CvUnitCombatInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
 	const CvOutcomeList* getKillOutcomeList() const;
 	int getNumActionOutcomes() const;
@@ -9749,7 +9746,7 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvMapCategoryInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaults(const CvMapCategoryInfo* pClassInfo);
 
 	void getCheckSum(unsigned int& iSum) const;
 
@@ -9779,7 +9776,7 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvIdeaClassInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaults(const CvIdeaClassInfo* pClassInfo);
 	void copyNonDefaultsReadPass2(CvIdeaClassInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	void getCheckSum(unsigned int& iSum) const;
@@ -9810,7 +9807,7 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvIdeaInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaults(const CvIdeaInfo* pClassInfo);
 	void copyNonDefaultsReadPass2(CvIdeaInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 	void getCheckSum(unsigned int& iSum) const;
@@ -9846,7 +9843,7 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 
-	void copyNonDefaults(CvInvisibleInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaults(const CvInvisibleInfo* pClassInfo);
 	void getCheckSum(unsigned int& iSum) const;
 
 	//References

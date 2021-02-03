@@ -1575,7 +1575,7 @@ bool CvOutcome::read(CvXMLLoadUtility* pXML)
 	return true;
 }
 
-void CvOutcome::copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML)
+void CvOutcome::copyNonDefaults(CvOutcome* pOutcome)
 {
 	GC.copyNonDefaultDelayedResolution((int*)&m_eType, (int*)&(pOutcome->m_eType));
 	//if (m_eType == NO_OUTCOME)
@@ -1658,7 +1658,7 @@ void CvOutcome::copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML)
 		}
 	}
 
-	m_Properties.copyNonDefaults(pOutcome->getProperties(), pXML);
+	m_Properties.copyNonDefaults(pOutcome->getProperties());
 
 	if (!m_pPlotCondition)
 	{
@@ -1696,7 +1696,6 @@ void CvOutcome::copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML)
 		m_pPythonPossibleFunc = pOutcome->m_pPythonPossibleFunc;
 		pOutcome->m_pPythonPossibleFunc = NULL;
 	}
-
 }
 
 void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUnit) const
