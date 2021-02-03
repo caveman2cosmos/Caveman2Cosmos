@@ -12869,11 +12869,6 @@ void CvPlot::doPreAttackTraps(CvUnit* pAttacker)
 }
 // /UncutDragon
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/20/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 
 PlayerTypes CvPlot::getClaimingOwner() const
 {
@@ -13330,20 +13325,20 @@ int CvPlot::getEnemyBorderPlotCount(PlayerTypes ePlayer) const
 	int iCount = 0;
 	foreach_(const CvPlot* pAdjacentPlot, adjacent())
 	{
-		if (pAdjacentPlot->getOwner() != NO_PLAYER)
+		const PlayerTypes ePlayerX = pAdjacentPlot->getOwner();
+		if (ePlayerX != NO_PLAYER && ePlayerX != ePlayer)
 		{
-			if (GET_PLAYER(pAdjacentPlot->getOwner()).AI_getAttitude(ePlayer) >= ATTITUDE_ANNOYED)
+			const AttitudeTypes eAttitude = GET_PLAYER(ePlayerX).AI_getAttitude(ePlayer);
+
+			if (eAttitude < ATTITUDE_CAUTIOUS)
 			{
-				iCount++;
+				iCount += 1 + (eAttitude < ATTITUDE_ANNOYED);
 			}
 		}
 	}
 	return iCount;
 }
 
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 CvProperties* CvPlot::getProperties()
 {

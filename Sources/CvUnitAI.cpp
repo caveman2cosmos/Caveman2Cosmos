@@ -28302,100 +28302,79 @@ bool CvUnitAI::AI_StrategicForts()
 	{
 		return false;
 	}
-	int iBestValue = 0;
-	int iPathTurns = 0;
-	BuildTypes eBestBuild = NO_BUILD;
-	CvPlot* pLoopPlot = NULL;
-	const CvPlot* pBestPlot = NULL;
-	const CvPlot* endTurnPlot = NULL;
-	const bool bWarPlan = GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0;
-
 	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
+	const TeamTypes eTeam = getTeam();
+	const bool bWarPlan = GET_TEAM(eTeam).getAnyWarPlanCount(true) > 0;
+
 	CvReachablePlotSet plotSet(getGroup(), 0, MAX_INT);
-
-	for(CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
+	BuildTypes eBestBuild = NO_BUILD;
+	CvPlot* pBestPlot = NULL;
+	int iBestValue = 0;
+	for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
 	{
-		pLoopPlot = itr.plot();
+		CvPlot* pLoopPlot = itr.plot();
 
-		if (/*AI_plotValid(pLoopPlot) &&*/ pLoopPlot->area() == area())
+		if (/*AI_plotValid(pLoopPlot) &&*/ pLoopPlot->area() == area()
+		&& (pLoopPlot->getOwner() == NO_PLAYER || pLoopPlot->getTeam() == eTeam)
+		&& pLoopPlot->getImprovementType() == NO_IMPROVEMENT)
 		{
-			if (pLoopPlot->getOwner() == NO_PLAYER || pLoopPlot->getTeam() == getTeam())
+			const BuildTypes eBestTempBuild = AI_findBestFort(pLoopPlot);
+
+			if (eBestTempBuild != NO_BUILD
+			&& (!pLoopPlot->isVisible(eTeam, false) || !pLoopPlot->isVisibleEnemyUnit(this))
+			&& kOwner.AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_BUILD, getGroup(), 3) == 0)
 			{
-				if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT)
+				int iPathTurns = 0;
+				if (generateSafePathforVulnerable(pLoopPlot, &iPathTurns))
 				{
-					const BuildTypes eBestTempBuild = AI_findBestFort(pLoopPlot);
-
-					if (eBestTempBuild != NO_BUILD)
+					//	Koshling - adjusted a bit to take advantage of super forts choke calculations
+					const int iValue = 
+					(
+						1000
+						*
+						std::max(100, pLoopPlot->getFoundValue(getOwner())/2 + kOwner.AI_getPlotChokeValue(pLoopPlot))
+						*
+						(pLoopPlot->getBorderPlotCount() + 1)
+						*
+						(pLoopPlot->getEnemyBorderPlotCount(getOwner()) + 1) * (bWarPlan ? 3 : 1)
+						/
+						((GC.getBuildInfo(eBestTempBuild).getTime() + 1) * (iPathTurns + 1))
+					);
+					if (iValue > iBestValue)
 					{
-						//	Koshling - adjusted a bit to take advantage of super forts choke calculations
-						int iValue = std::max(100, pLoopPlot->getFoundValue(getOwner())/2 + kOwner.AI_getPlotChokeValue(pLoopPlot));
-						iValue *= (pLoopPlot->getBorderPlotCount() + 1);
-						iValue *= ((pLoopPlot->getEnemyBorderPlotCount(getOwner()) + 1) * (bWarPlan ? 3 : 1));
-						iValue /= (GC.getBuildInfo(eBestTempBuild).getTime() + 1);
-
-						if (!pLoopPlot->isVisible(getTeam(),false) || !pLoopPlot->isVisibleEnemyUnit(this))
-						{
-							if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_BUILD, getGroup(), 3) == 0)
-							{
-								int iPathTurns;
-								if (generateSafePathforVulnerable(pLoopPlot, &iPathTurns))
-								{
-									iValue *= 1000;
-									iValue /= (iPathTurns + 1);
-
-									if (iValue > iBestValue)
-									{
-										iBestValue = iValue;
-										eBestBuild = eBestTempBuild;
-										pBestPlot = pLoopPlot;
-									}
-								}
-							}
-						}
+						iBestValue = iValue;
+						eBestBuild = eBestTempBuild;
+						pBestPlot = pLoopPlot;
 					}
 				}
 			}
 		}
 	}
-
-	//No real value
-	if (iBestValue < 250)
+	// No real value or plot
+	if (iBestValue < 250 || pBestPlot == NULL)
 	{
 		return false;
 	}
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild)
 
-	if (pBestPlot != NULL)
+	if (!atPlot(pBestPlot))
 	{
-		FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBestBuild)
-
-		if (!atPlot(pBestPlot))
+		int iPathTurns = 0;
+		if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
 		{
-			if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
+			const CvPlot* endTurnPlot = getPathEndTurnPlot();
+			if (endTurnPlot != NULL)
 			{
-				endTurnPlot = getPathEndTurnPlot();
-				if (endTurnPlot != NULL)
-				{
-					return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, pBestPlot);
-				}
-				else
-				{
-					getGroup()->pushMission(MISSION_SKIP);
-					return true;
-				}
+				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, pBestPlot);
 			}
-			else
-			{
-				getGroup()->pushMission(MISSION_SKIP,-1,-1,0,false,false,MISSIONAI_WAIT_FOR_ESCORT);
-				return true;
-			}
-		}
-		else
-		{
-			getGroup()->pushMission(MISSION_BUILD, eBestBuild, -1, 0, (getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BUILD, pBestPlot);
+			getGroup()->pushMission(MISSION_SKIP);
 			return true;
 		}
+		getGroup()->pushMission(MISSION_SKIP,-1,-1,0,false,false,MISSIONAI_WAIT_FOR_ESCORT);
+		return true;
 	}
-	return false;
+	getGroup()->pushMission(MISSION_BUILD, eBestBuild, -1, 0, (getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BUILD, pBestPlot);
+	return true;
 }
 
 bool CvUnitAI::AI_caravan(bool bAnyCity)
