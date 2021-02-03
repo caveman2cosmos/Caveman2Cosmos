@@ -5316,7 +5316,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	return true;
 }
 
-void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
+void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 {
 	CvHotkeyInfo::copyNonDefaults(pClassInfo);
 

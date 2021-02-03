@@ -630,7 +630,7 @@ private:
 
 public:
 	bool readPass2(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvBuildingInfo* pClassInfo);
 	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 	//Alberts2 PrereqBonuses
 	int getNumPrereqOrBonuses() const;

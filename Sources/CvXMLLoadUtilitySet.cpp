@@ -1821,7 +1821,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 						{
 							if (!bForceOverwrite)
 							{
-								pClassInfo->copyNonDefaults(aInfos[uiExistPosition], this);
+								pClassInfo->copyNonDefaults(aInfos[uiExistPosition]);
 							}
 							SAFE_DELETE(aInfos[uiExistPosition])
 							aInfos[uiExistPosition] = pClassInfo.release();
@@ -1831,7 +1831,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 							CvInfoReplacement<T>* pExisting = pReplacements->getReplacement(uiExistPosition, uiReplacementID);
 							if (pExisting) 
 							{
-								pClassInfo->copyNonDefaults(pExisting->getInfo(), this);
+								pClassInfo->copyNonDefaults(pExisting->getInfo());
 								pExisting->setInfo(pClassInfo.release());
 							}
 							else if (pReplacementCondition.get())
