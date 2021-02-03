@@ -227,7 +227,7 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_iOccupationTimeModifier(0)
 ,m_iNoEntryDefenseLevel(0)
 ,m_iNumUnitFullHeal(0)
-,m_iExtendsBuilding(NO_BUILDING)
+,m_iExtendsBuilding(-1)
 ,m_iNumPopulationEmployed(0)
 ,m_iHealthPercentPerPopulation(0)
 ,m_iHappinessPercentPerPopulation(0)
@@ -798,10 +798,7 @@ int CvBuildingInfo::getBuildingHappinessChanges(int i) const
 	{
 		return m_piBuildingHappinessChanges ? 1 : 0;
 	}
-	else
-	{
-		return m_piBuildingHappinessChanges ? m_piBuildingHappinessChanges[i] : 0;
-	}
+	return m_piBuildingHappinessChanges ? m_piBuildingHappinessChanges[i] : 0;
 }
 
 int CvBuildingInfo::getPrereqNumOfBuilding(int i) const
@@ -812,10 +809,7 @@ int CvBuildingInfo::getPrereqNumOfBuilding(int i) const
 	{
 		return m_piPrereqNumOfBuilding ? 1 : 0;
 	}
-	else
-	{
-		return m_piPrereqNumOfBuilding ? m_piPrereqNumOfBuilding[i] : 0;
-	}
+	return m_piPrereqNumOfBuilding ? m_piPrereqNumOfBuilding[i] : 0;
 }
 
 int CvBuildingInfo::getFlavorValue(int i) const
@@ -1091,10 +1085,7 @@ int CvBuildingInfo::getBuildingProductionModifier(int i) const
 	{
 		return (m_piBuildingProductionModifier == NULL) ? 0 : 1;
 	}
-	else
-	{
-		return m_piBuildingProductionModifier ? m_piBuildingProductionModifier[i] : 0;
-	}
+	return m_piBuildingProductionModifier ? m_piBuildingProductionModifier[i] : 0;
 }
 
 int CvBuildingInfo::getGlobalBuildingProductionModifier(int i) const
@@ -1105,10 +1096,7 @@ int CvBuildingInfo::getGlobalBuildingProductionModifier(int i) const
 	{
 		return (m_piGlobalBuildingProductionModifier == NULL) ? 0 : 1;
 	}
-	else
-	{
-		return m_piGlobalBuildingProductionModifier ? m_piGlobalBuildingProductionModifier[i] : 0;
-	}
+	return m_piGlobalBuildingProductionModifier ? m_piGlobalBuildingProductionModifier[i] : 0;
 }
 
 int CvBuildingInfo::getGlobalBuildingCostModifier(int i) const
@@ -1119,10 +1107,7 @@ int CvBuildingInfo::getGlobalBuildingCostModifier(int i) const
 	{
 		return (m_piGlobalBuildingCostModifier == NULL) ? 0 : 1;
 	}
-	else
-	{
-		return m_piGlobalBuildingCostModifier ? m_piGlobalBuildingCostModifier[i] : 0;
-	}
+	return m_piGlobalBuildingCostModifier ? m_piGlobalBuildingCostModifier[i] : 0;
 }
 
 int CvBuildingInfo::getTechHappinessChanges(int i) const
@@ -1133,10 +1118,7 @@ int CvBuildingInfo::getTechHappinessChanges(int i) const
 	{
 		return (m_piTechHappinessChanges == NULL) ? 0 : 1;
 	}
-	else
-	{
-		return m_piTechHappinessChanges ? m_piTechHappinessChanges[i] : 0;
-	}
+	return m_piTechHappinessChanges ? m_piTechHappinessChanges[i] : 0;
 }
 
 int CvBuildingInfo::getTechHealthChanges(int i) const
@@ -1147,10 +1129,7 @@ int CvBuildingInfo::getTechHealthChanges(int i) const
 	{
 		return m_piTechHealthChanges ? 1 : 0;
 	}
-	else
-	{
-		return m_piTechHealthChanges ? m_piTechHealthChanges[i] : 0;
-	}
+	return m_piTechHealthChanges ? m_piTechHealthChanges[i] : 0;
 }
 
 int CvBuildingInfo::getCommerceAttacks(int i) const
@@ -1185,11 +1164,8 @@ int CvBuildingInfo::getBonusYieldChanges(int i, int j) const
 	{
 		return (m_ppaiBonusYieldChanges ? 1 : 0);
 	}
-	else
-	{
-		FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
-		return (m_ppaiBonusYieldChanges && m_ppaiBonusYieldChanges[i]) ? m_ppaiBonusYieldChanges[i][j] : 0;
-	}
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+	return (m_ppaiBonusYieldChanges && m_ppaiBonusYieldChanges[i]) ? m_ppaiBonusYieldChanges[i][j] : 0;
 }
 
 int* CvBuildingInfo::getBonusYieldChangesArray(int i) const
@@ -1219,11 +1195,8 @@ int CvBuildingInfo::getVicinityBonusYieldChanges(int i, int j) const
 	{
 		return m_ppaiVicinityBonusYieldChanges ? 1 : 0;
 	}
-	else
-	{
-		FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
-		return (m_ppaiVicinityBonusYieldChanges && m_ppaiVicinityBonusYieldChanges[i]) ? m_ppaiVicinityBonusYieldChanges[i][j] : 0;
-	}
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+	return (m_ppaiVicinityBonusYieldChanges && m_ppaiVicinityBonusYieldChanges[i]) ? m_ppaiVicinityBonusYieldChanges[i][j] : 0;
 }
 
 int* CvBuildingInfo::getVicinityBonusYieldChangesArray(int i) const
@@ -1240,11 +1213,8 @@ int CvBuildingInfo::getTechCommerceChange(int i, int j) const
 	{
 		return m_ppaiTechCommerceChange ? 1 : 0;
 	}
-	else
-	{
-		FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
-		return (m_ppaiTechCommerceChange && m_ppaiTechCommerceChange[i]) ? m_ppaiTechCommerceChange[i][j] : 0;
-	}
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
+	return (m_ppaiTechCommerceChange && m_ppaiTechCommerceChange[i]) ? m_ppaiTechCommerceChange[i][j] : 0;
 }
 
 int* CvBuildingInfo::getTechCommerceChangeArray(int i) const
@@ -1260,11 +1230,8 @@ int CvBuildingInfo::getTechYieldChange(int i, int j) const
 	{
 		return (m_ppaiTechYieldChange ? 1 : 0);
 	}
-	else
-	{
-		FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
-		return (m_ppaiTechYieldChange && m_ppaiTechYieldChange[i]) ? m_ppaiTechYieldChange[i][j] : 0;
-	}
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+	return (m_ppaiTechYieldChange && m_ppaiTechYieldChange[i]) ? m_ppaiTechYieldChange[i][j] : 0;
 }
 
 int* CvBuildingInfo::getTechYieldChangeArray(int i) const
@@ -1280,11 +1247,8 @@ int CvBuildingInfo::getTechSpecialistChange(int i, int j) const
 	{
 		return (m_ppaiTechSpecialistChange ? 1 : 0);
 	}
-	else
-	{
-		FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), j)
-		return (m_ppaiTechSpecialistChange && m_ppaiTechSpecialistChange[i]) ? m_ppaiTechSpecialistChange[i][j] : 0;
-	}
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), j)
+	return (m_ppaiTechSpecialistChange && m_ppaiTechSpecialistChange[i]) ? m_ppaiTechSpecialistChange[i][j] : 0;
 }
 
 int* CvBuildingInfo::getTechSpecialistChangeArray(int i) const
@@ -1300,11 +1264,8 @@ int CvBuildingInfo::getTechCommerceModifier(int i, int j) const
 	{
 		return (m_ppaiTechCommerceModifier ? 1 : 0);
 	}
-	else
-	{
-		FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
-		return (m_ppaiTechCommerceModifier && m_ppaiTechCommerceModifier[i]) ? m_ppaiTechCommerceModifier[i][j] : 0;
-	}
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
+	return (m_ppaiTechCommerceModifier && m_ppaiTechCommerceModifier[i]) ? m_ppaiTechCommerceModifier[i][j] : 0;
 }
 
 int* CvBuildingInfo::getTechCommerceModifierArray(int i) const
@@ -1339,10 +1300,7 @@ int CvBuildingInfo::getUnitCombatExtraStrength(int i) const
 	{
 		return m_piUnitCombatExtraStrength ? 1 : 0;
 	}
-	else
-	{
-		return m_piUnitCombatExtraStrength ? m_piUnitCombatExtraStrength[i] : 0;
-	}
+	return m_piUnitCombatExtraStrength ? m_piUnitCombatExtraStrength[i] : 0;
 }
 
 //TB Combat Mods (Buildings) begin

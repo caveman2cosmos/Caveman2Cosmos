@@ -10283,18 +10283,16 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		bFirst = true;
 		for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 		{
-			if (isWorldWonder((BuildingTypes)iI) || isNationalWonder((BuildingTypes)iI))
+			if ((isWorldWonder((BuildingTypes)iI) || isNationalWonder((BuildingTypes)iI))
+			&& pCity->getNumBuilding((BuildingTypes)iI) > 0)
 			{
-				if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
+				if (bFirst)
 				{
-					if (bFirst)
-					{
-						szString.append(NEWLINE);
-						bFirst = false;
-					}
-					szTempBuffer.Format(L"<img=%S size=24></img>", GC.getBuildingInfo((BuildingTypes)iI).getButton());
-					szString.append(szTempBuffer);
+					szString.append(NEWLINE);
+					bFirst = false;
 				}
+				szTempBuffer.Format(L"<img=%S size=24></img>", GC.getBuildingInfo((BuildingTypes)iI).getButton());
+				szString.append(szTempBuffer);
 			}
 		}
 	}
@@ -10304,13 +10302,11 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		bFirst = true;
 		for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 		{
-			if (isWorldWonder((BuildingTypes)iI) || isNationalWonder((BuildingTypes)iI))
+			if ((isWorldWonder((BuildingTypes)iI) || isNationalWonder((BuildingTypes)iI))
+			&& pCity->getNumBuilding((BuildingTypes)iI) > 0)
 			{
-				if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
-				{
-					setListHelp(szString, NEWLINE, GC.getBuildingInfo((BuildingTypes)iI).getDescription(), L", ", bFirst);
-					bFirst = false;
-				}
+				setListHelp(szString, NEWLINE, GC.getBuildingInfo((BuildingTypes)iI).getDescription(), L", ", bFirst);
+				bFirst = false;
 			}
 		}
 	}
@@ -23965,7 +23961,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	{
 // BUG - Building Double Commerce - start
 		if (GC.getGame().getActivePlayer() != NO_PLAYER &&
-			(pCity->getNumRealBuilding(eBuilding) == 0 || (pCity->getNumRealBuilding(eBuilding) > 0 && pCity->getBuildingOriginalOwner(eBuilding) == GC.getGame().getActivePlayer())))
+			(pCity->getNumBuilding(eBuilding) == 0 || (pCity->getNumBuilding(eBuilding) > 0 && pCity->getBuildingOriginalOwner(eBuilding) == GC.getGame().getActivePlayer())))
 		{
 			if (getBugOptionBOOL("CityScreen__BuildingDoubleCommerce", true, "BUG_BUILDING_DOUBLE_COMMERCE"))
 			{
@@ -24054,19 +24050,11 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		}
 	}
 
-	if ((pCity == NULL) || pCity->getNumRealBuilding(eBuilding) < GC.getCITY_MAX_NUM_BUILDINGS())
+	if ((pCity == NULL) || pCity->getNumBuilding(eBuilding) < 1)
 	{
 		if (!bCivilopediaText)
 		{
-			if (pCity == NULL)
-			{
-				if (kBuilding.getProductionCost() > 0)
-				{
-					szTempBuffer.Format(L"\n%d%c", (ePlayer != NO_PLAYER ? GET_PLAYER(ePlayer).getProductionNeeded(eBuilding) : kBuilding.getProductionCost()), GC.getYieldInfo(YIELD_PRODUCTION).getChar());
-					szBuffer.append(szTempBuffer);
-				}
-			}
-			else
+			if (pCity != NULL)
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_NUM_TURNS", pCity->getProductionTurnsLeft(eBuilding, ((gDLL->ctrlKey() || !(gDLL->shiftKey())) ? 0 : pCity->getOrderQueueLength()))));
@@ -24087,6 +24075,11 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 					szTempBuffer.Format(L" - %d%c", pCity->getProductionNeeded(eBuilding), GC.getYieldInfo(YIELD_PRODUCTION).getChar());
 					szBuffer.append(szTempBuffer);
 				}
+			}
+			else if (kBuilding.getProductionCost() > 0)
+			{
+				szTempBuffer.Format(L"\n%d%c", (ePlayer != NO_PLAYER ? GET_PLAYER(ePlayer).getProductionNeeded(eBuilding) : kBuilding.getProductionCost()), GC.getYieldInfo(YIELD_PRODUCTION).getChar());
+				szBuffer.append(szTempBuffer);
 			}
 		}
 

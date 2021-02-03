@@ -508,9 +508,19 @@ int CyCity::flatHurryAngerLength() const
 	return m_pCity->flatHurryAngerLength();
 }
 
+void CyCity::setNumRealBuilding(int /*BuildingTypes*/ iIndex, int iNewValue)
+{
+	m_pCity->setNumRealBuilding((BuildingTypes) iIndex, iNewValue);
+}
+
+int CyCity::getNumRealBuilding(int /*BuildingTypes*/ iIndex) const
+{
+	return m_pCity->getNumRealBuilding((BuildingTypes) iIndex);
+}
+
 int CyCity::getNumBuilding(int /*BuildingTypes*/ iIndex) const
 {
-	return iIndex != -1 ? m_pCity->getNumBuilding((BuildingTypes) iIndex) : 0;
+	return m_pCity->getNumBuilding((BuildingTypes) iIndex);
 }
 
 int CyCity::getNumActiveBuilding(int /*BuildingTypes*/ iIndex) const
@@ -1540,16 +1550,6 @@ int CyCity::getEspionageDefenseModifier() const
 bool CyCity::isWorkingPlot(const CyPlot& kPlot) const
 {
 	return m_pCity->isWorkingPlot(kPlot.getPlot());
-}
-
-int CyCity::getNumRealBuilding(int /*BuildingTypes*/ iIndex) const
-{
-	return m_pCity->getNumRealBuilding((BuildingTypes) iIndex);
-}
-
-void CyCity::setNumRealBuilding(int /*BuildingTypes*/ iIndex, int iNewValue)
-{
-	m_pCity->setNumRealBuilding((BuildingTypes) iIndex, iNewValue);
 }
 
 bool CyCity::isHasReligion(int /*ReligionTypes*/ iIndex) const

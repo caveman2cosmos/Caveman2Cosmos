@@ -4414,18 +4414,18 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 		const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
 
-		if (
-			// We are not exceeding max buildings
-			getNumBuilding(eBuilding) < GC.getCITY_MAX_NUM_BUILDINGS()
-		&&	(
+		if (getNumBuilding(eBuilding) < 1 // We are not exceeding max buildings
+		&&
+			(
 				!isLimitedWonder(eBuilding) // Building is not a wonder
-			|| ( // Or production isn't automated or we aren't considering a wonder (we don't want automated production producing wonders)
-					!isProductionAutomated()
-				&&	(
-						iFocusFlags == 0
-					||	(iFocusFlags & BUILDINGFOCUS_WONDEROK)
-					||	(iFocusFlags & BUILDINGFOCUS_WORLDWONDER)
-					)
+				||
+				// Or production isn't automated or we aren't considering a wonder (we don't want automated production producing wonders)
+				!isProductionAutomated()
+				&&
+				(
+					iFocusFlags == 0
+					|| (iFocusFlags & BUILDINGFOCUS_WONDEROK)
+					|| (iFocusFlags & BUILDINGFOCUS_WORLDWONDER)
 				)
 			)
 		// adviser is not one we are ignoring
@@ -4433,8 +4433,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 		// We can actually build the building
 		&& canConstruct(eBuilding)
 		// Automated production doesn't look at buildings with prerequisites?
-		&& (!isProductionAutomated() || buildingInfo.getPrereqNumOfBuilding(NO_BUILDING) <= 0)
-		)
+		&& (!isProductionAutomated() || buildingInfo.getPrereqNumOfBuilding(NO_BUILDING) <= 0))
 		{
 			// Toffer - ToDo - Change iValue type to int64_t,
 			//	or reduce scoring as it gets dangerously close to overflowing as it is.

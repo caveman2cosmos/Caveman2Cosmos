@@ -775,7 +775,7 @@ void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 			for (int i=0; i<iNum; i++)
 			{
 				const PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
-				const bool bHasBuilding = m_pCity->getNumRealBuilding(kBuilding.eBuilding) > 0;
+				const bool bHasBuilding = m_pCity->getNumBuilding(kBuilding.eBuilding) > 0;
 				const bool bInRange = (iNewValue >= kBuilding.iMinValue) && (iNewValue <= kBuilding.iMaxValue);
 				if (!bInRange)
 				{

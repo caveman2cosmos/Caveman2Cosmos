@@ -1975,8 +1975,6 @@ protected:
 	int* m_paiUnitCombatFreeExperience;
 	int* m_paiFreePromotionCount;
 	int* m_paiNumRealBuilding;
-	mutable int* m_paiBuildingReplaced;
-	mutable bool m_bHasCalculatedBuildingReplacement;
 
 	bool* m_pabWorkingPlot;
 	bool* m_pabHasReligion;
@@ -2046,8 +2044,6 @@ protected:
 	void recalculatePopulationgrowthratepercentage();
 	virtual bool AI_addBestCitizen(bool bWorkers, bool bSpecialists, int* piBestPlot = NULL, SpecialistTypes* peBestSpecialist = NULL) = 0;
 	virtual bool AI_removeWorstCitizen(SpecialistTypes eIgnoreSpecialist = NO_SPECIALIST) = 0;
-	void calculateBuildingReplacements() const;
-	void changeBuildingReplacementCount(BuildingTypes eBuilding, bool bAdd);
 
 	//TB Building tags
 	void setExtraLocalCaptureProbabilityModifier(int iValue);
@@ -2197,7 +2193,6 @@ private:
 	mutable bool m_canTrainCachePopulated;
 	mutable bool m_canTrainCacheDirty;
 	mutable int m_cachedBuildingYieldModifers[NUM_YIELD_TYPES];
-	int m_recalcBuilding;
 	bool m_bPlotWorkingMasked;
 	mutable int m_totalCommerceRateModifier[NUM_COMMERCE_TYPES];
 
@@ -2303,7 +2298,6 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, hasBonus, BonusTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isCoastal, int);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getNumBuilding, BuildingTypes);
-		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getNumRealBuilding, BuildingTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getNumActiveBuilding, BuildingTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getCommerceRateTimes100, CommerceTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getBaseCommerceRateTimes100, CommerceTypes);

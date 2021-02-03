@@ -15541,7 +15541,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 						pTeam.isHasTech((TechTypes)buildingInfo.getObsoleteTech())))
 				{
 					//+0.5 per city that does not yet have that building
-					iTempValue = (iTempValue * std::min(getNumCities(), (getNumCities()*GC.getCITY_MAX_NUM_BUILDINGS() - getBuildingCount((BuildingTypes)iI))))/2;
+					iTempValue = iTempValue * std::min(getNumCities(), getNumCities() - getBuildingCount((BuildingTypes)iI)) / 2;
 					if (gPlayerLogLevel > 2 && iTempValue != 0)
 					{
 						logBBAI("Civic %S nat wonder happiness change value %d",
@@ -15836,17 +15836,14 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iTempValue = 0;
 	if (kCivic.isAnyBuildingHealthChange())
 	{
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			iTempValue = kCivic.getBuildingHealthChanges(iI);
-			if (iTempValue != 0)
+			const int iHealthChange = kCivic.getBuildingHealthChanges(iI);
+
+			if (iHealthChange != 0 && !isLimitedWonder((BuildingTypes)iI))
 			{
-				// Nationalism
-				if (!isLimitedWonder((BuildingTypes)iI))
-				{
-						//+0.5 per city that does not yet have that building
-						iTempValue += (iTempValue * std::min(getNumCities(), (getNumCities()*GC.getCITY_MAX_NUM_BUILDINGS() - getBuildingCount((BuildingTypes)iI))))/2;
-				}
+				//+0.5 per city that does not yet have that building
+				iTempValue += iHealthChange * std::min(getNumCities(), getNumCities() - getBuildingCount((BuildingTypes)iI)) / 2;
 			}
 		}
 	}
@@ -17030,7 +17027,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 
 			if (NULL != pCity)
 			{
-				if (pCity->getNumRealBuilding((BuildingTypes)iData) > 0)
+				if (pCity->getNumBuilding((BuildingTypes)iData) > 0)
 				{
 					const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iData);
 					if (kBuilding.getProductionCost() > 1 && !isWorldWonder((BuildingTypes)iData))
@@ -17367,7 +17364,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 			int iTempValue = 0;
 			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
+				if (pCity->getNumBuilding((BuildingTypes)iI) > 0)
 				{
 					if (GC.getBuildingInfo((BuildingTypes)iI).isPrereqPower())
 					{

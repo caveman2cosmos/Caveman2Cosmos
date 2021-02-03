@@ -479,11 +479,7 @@ def canApplyLooters3(argsList):
 			continue
 		iCost = info.getProductionCost()
 		if iCost <= iTreshold and iCost > 0:
-
-			for j in xrange(info.getNumReplacementBuilding()):
-				if CyCity.getNumRealBuilding(info.getReplacementBuilding(j)):
-					break
-			else: return True
+			return True
 
 	return False
 
@@ -506,11 +502,7 @@ def applyLooters3(argsList):
 			continue
 		iCost = info.getProductionCost()
 		if iCost <= iTreshold and iCost > 0:
-
-			for j in xrange(info.getNumReplacementBuilding()):
-				if CyCity.getNumRealBuilding(info.getReplacementBuilding(j)):
-					break
-			else: aList.append(i)
+			aList.append(i)
 
 	iMax = GAME.getSorenRandNum(2, "Looters event number of buildings destroyed") + 1
 	iCount = 0
@@ -599,10 +591,7 @@ def canApplyHurricane1(argsList):
 		info = GC.getBuildingInfo(i)
 		if info.isNukeImmune() or info.isAutoBuild() or info.getProductionCost() < 1:
 			continue
-		for j in xrange(info.getNumReplacementBuilding()):
-			if CyCity.getNumRealBuilding(info.getReplacementBuilding(j)):
-				break
-		else: return True
+		return True
 	return False
 
 def canApplyHurricane2(argsList):
@@ -623,11 +612,7 @@ def applyHurricane1(argsList):
 		info = GC.getBuildingInfo(i)
 		if info.isNukeImmune() or info.isAutoBuild() or info.getProductionCost() < 1:
 			continue
-
-		for j in xrange(info.getNumReplacementBuilding()):
-			if CyCity.getNumRealBuilding(info.getReplacementBuilding(j)):
-				break
-		else: aList.append(i)
+		aList.append(i)
 
 	if aList:
 		iBuilding = aList[GAME.getSorenRandNum(len(aList), "Hurricane")]
@@ -705,11 +690,7 @@ def applyTsunami2(argsList):
 			continue
 		info = GC.getBuildingInfo(i)
 		if info.getProductionCost() > 0 and not info.isAutoBuild():
-
-			for j in xrange(info.getNumReplacementBuilding()):
-				if CyCity.getNumRealBuilding(info.getReplacementBuilding(j)):
-					break
-			else: listBuildings.append(i)
+			listBuildings.append(i)
 
 	for i in xrange(5):
 		if len(listBuildings) > 0:
@@ -7460,16 +7441,12 @@ def doMinorFire(argsList):
 		if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
 			continue
 
-		for j in xrange(info.getNumReplacementBuilding()):
-			if CyCity.getNumRealBuilding(info.getReplacementBuilding(j)):
-				break
-		else:
-			randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
-			iFlamm = info.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
-			iFlammScore = iFlamm + randNum
-			if iFlammScore > iHighFlamm:
-				iHighFlamm = iFlammScore
-				iBurnBuilding = i
+		randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
+		iFlamm = info.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
+		iFlammScore = iFlamm + randNum
+		if iFlammScore > iHighFlamm:
+			iHighFlamm = iFlammScore
+			iBurnBuilding = i
 
 	if iBurnBuilding != -1:
 		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBurnBuilding).getTextKey(), ))
@@ -7502,16 +7479,13 @@ def doMajorFire(argsList):
 			if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
 				continue
 
-			for k in xrange(info.getNumReplacementBuilding()):
-				if CyCity.getNumRealBuilding(info.getReplacementBuilding(k)):
-					break
-			else:
-				randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
-				iFlamm = info.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
-				iFlammScore = iFlamm + randNum
-				if iFlammScore > iHighFlamm:
-					iHighFlamm = iFlammScore
-					iBurnBuilding = j
+			randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
+			iFlamm = info.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
+			iFlammScore = iFlamm + randNum
+			if iFlammScore > iHighFlamm:
+				iHighFlamm = iFlammScore
+				iBurnBuilding = j
+
 		if iBurnBuilding != -1:
 			CyInterface().addMessage(
 				kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(),
@@ -7557,14 +7531,12 @@ def doCatastrophicFire(argsList):
 			info = GC.getBuildingInfo(j)
 			if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
 				continue
-			for k in xrange(info.getNumReplacementBuilding()):
-				if CyCity.getNumRealBuilding(info.getReplacementBuilding(k)):
-					break
-			else:
-				iFlammScore = info.getProperties().getValueByProperty(iProp) + GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
-				if iFlammScore > iHighFlamm:
-					iHighFlamm = iFlammScore
-					iBurnBuilding = j
+
+			iFlammScore = info.getProperties().getValueByProperty(iProp) + GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
+			if iFlammScore > iHighFlamm:
+				iHighFlamm = iFlammScore
+				iBurnBuilding = j
+
 		if iBurnBuilding != -1:
 			szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBurnBuilding).getTextKey(),))
 			CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBurnBuilding).getButton(), GC.getInfoTypeForString("COLOR_RED"), CyCity.getX(), CyCity.getY(), True, True)
