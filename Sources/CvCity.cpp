@@ -3234,8 +3234,6 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			const BuildingTypes eReplacement = (BuildingTypes)kBuilding.getReplacementBuilding(iI);
 			if (getNumActiveBuilding(eReplacement) > 0
 			// Toffer - This is not the right place to do HIDE_REPLACED_BUILDINGS...
-			// This option can now stop AI from building a replaced building,
-			// when the option is only supposed to be an interface option for the human player.
 			|| GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_HIDE_REPLACED_BUILDINGS)
 			&& canConstruct(eReplacement, true, false, false, true))
 			{
@@ -5030,14 +5028,14 @@ void CvCity::processBonus(BonusTypes eBonus, int iChange)
 }
 
 
-//Team Project (5)
+
 void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolete, bool bReplacingNow, bool bReligiouslyDisabling)
 {
 	PROFILE_FUNC();
 
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	FAssert(iChange == 1 || iChange == -1);
-	//Team Project (5)
+
 	if (!bReligiouslyDisabling && kBuilding.isOrbitalInfrastructure())
 	{
 		GET_PLAYER(getOwner()).noteOrbitalInfrastructureCountDirty();
@@ -5090,9 +5088,8 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 					}
 				}
 
-				//	Property manipukators must be serialized since the propagation can mean we're
-				//	updating properties on many entities (and granular locking produces too much
-				//	overhead)
+				// Property manipulators must be serialized as the propagation can mean we're updating
+				//	properties on many entities (granular locking produces too much overhead).
 				const CvProperties* pProp = kBuilding.getProperties();
 				if (!pProp->isEmpty())
 				{
@@ -5124,9 +5121,8 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 						changeNumNationalWonders(-1);
 					}
 				}
-				//	Property manipukators must be serialized since the propagation can mean we're
-				//	updating properties on many entities (and granular locking produces too much
-				//	overhead)
+				// Property manipulators must be serialized as the propagation can mean we're updating
+				//	properties on many entities (granular locking produces too much overhead).
 				const CvProperties* pProp = kBuilding.getProperties();
 				if (!pProp->isEmpty())
 				{
@@ -5294,7 +5290,6 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			changeCommerceHappinessPer(((CommerceTypes)iI), (kBuilding.getCommerceHappiness(iI) * iChange));
 		}
 
-		//Team Project (5)
 		if (!bReligiouslyDisabling)
 		{
 			for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
@@ -5357,7 +5352,6 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 				changeUnitCombatExtraStrength((UnitCombatTypes)iI, kBuilding.getUnitCombatExtraStrength(iI) * iChange);
 			}
 
-			//Team Project (5)
 			if (!bReligiouslyDisabling)
 			{
 				changeInvasionChance(kBuilding.getInvasionChance() * iChange);
@@ -5424,60 +5418,50 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 		{
 			PROFILE("CvCity::processBuilding.CombatInfos");
-			changeUnitCombatProductionModifier(((UnitCombatTypes)iI), kBuilding.getUnitCombatProdModifier(iI) * iChange);
+
+			const UnitCombatTypes eCombatX = static_cast<UnitCombatTypes>(iI);
+
+			changeUnitCombatProductionModifier(eCombatX, kBuilding.getUnitCombatProdModifier(iI) * iChange);
+
 			if (!bReligiouslyDisabling)
 			{
-				changeUnitCombatRepelModifierTotal(((UnitCombatTypes)iI), kBuilding.getUnitCombatRepelModifier(iI) * iChange);
+				changeUnitCombatRepelModifierTotal(eCombatX, kBuilding.getUnitCombatRepelModifier(iI) * iChange);
 				//TB Defense Mod
-				changeUnitCombatRepelAgainstModifierTotal(((UnitCombatTypes)iI), kBuilding.getUnitCombatRepelAgainstModifier(iI) * iChange);
-				changeUnitCombatDefenseAgainstModifierTotal(((UnitCombatTypes)iI), kBuilding.getUnitCombatDefenseAgainstModifier(iI) * iChange);
-				//
+				changeUnitCombatRepelAgainstModifierTotal(eCombatX, kBuilding.getUnitCombatRepelAgainstModifier(iI) * iChange);
+				changeUnitCombatDefenseAgainstModifierTotal(eCombatX, kBuilding.getUnitCombatDefenseAgainstModifier(iI) * iChange);
 			}
-			if (kBuilding.getUnitCombatOngoingTrainingDuration(iI) > 0)
+			const int iUnitCombatOngoingTrainingDuration = kBuilding.getUnitCombatOngoingTrainingDuration(iI);
+			if (iUnitCombatOngoingTrainingDuration > 0)
 			{
-				if (iChange == 1 && (kBuilding.getUnitCombatOngoingTrainingDuration(iI) < getUnitCombatOngoingTrainingTimeIncrement((UnitCombatTypes)iI)))
+				if (iChange == 1 && iUnitCombatOngoingTrainingDuration > getUnitCombatOngoingTrainingTimeIncrement(eCombatX))
 				{
-					setUnitCombatOngoingTrainingTimeIncrement(((UnitCombatTypes)iI), kBuilding.getUnitCombatOngoingTrainingDuration(iI));
+					setUnitCombatOngoingTrainingTimeIncrement(eCombatX, iUnitCombatOngoingTrainingDuration);
 				}
-				if (iChange == -1 && (kBuilding.getUnitCombatOngoingTrainingDuration(iI) == getUnitCombatOngoingTrainingTimeIncrement((UnitCombatTypes)iI)))
+				if (iChange == -1 && iUnitCombatOngoingTrainingDuration == getUnitCombatOngoingTrainingTimeIncrement(eCombatX))
 				{
-					int itrain = 0;
-					int besttrainer = 0;
-					BuildingTypes BestBuilding;
+					int iBestValue = 0;
 					for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 					{
-						if (GC.getBuildingInfo((BuildingTypes)iJ).getUnitCombatOngoingTrainingDuration(iI) > 0)
+						const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iJ);
+						const int iTrain = GC.getBuildingInfo(eBuildingX).getUnitCombatOngoingTrainingDuration(iI);
+
+						if (iTrain > iBestValue && eBuildingX != eBuilding && getNumActiveBuilding(eBuildingX) > 0)
 						{
-							BuildingTypes consideredBuilding = ((BuildingTypes)iJ);
-							if (getNumActiveBuilding(consideredBuilding) > 0 && (consideredBuilding != ((BuildingTypes)iI)))
-							{
-								itrain = GC.getBuildingInfo(consideredBuilding).getUnitCombatOngoingTrainingDuration(iI);
-								if (itrain < besttrainer)
-								{
-									besttrainer = itrain;
-									BestBuilding = consideredBuilding;
-								}
-							}
+							iBestValue = iTrain;
 						}
 					}
-					if (BestBuilding != NULL)
-					{
-						setUnitCombatOngoingTrainingTimeIncrement(((UnitCombatTypes)iI), GC.getBuildingInfo(BestBuilding).getUnitCombatOngoingTrainingDuration(iI));
-					}
-					else
-					{
-						setUnitCombatOngoingTrainingTimeIncrement(((UnitCombatTypes)iI), 0);
-					}
+					setUnitCombatOngoingTrainingTimeIncrement(eCombatX, iBestValue);
 				}
 			}
 		}
 		//TB Combat Mods (Buildings) end
+
 		//TB Building Tags
-//Team Project (3)
 		changeExtraLocalCaptureProbabilityModifier(kBuilding.getLocalCaptureProbabilityModifier() * iChange);
 		changeExtraLocalCaptureResistanceModifier(kBuilding.getLocalCaptureResistanceModifier() * iChange);
 		changeExtraInsidiousness(kBuilding.getInsidiousness() * iChange);
 		changeExtraInvestigation(kBuilding.getInvestigation() * iChange);
+
 		//TB Defense Mod
 		if (!bReligiouslyDisabling)
 		{
@@ -5492,8 +5476,7 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			}
 			changeExtraCityDefenseRecoverySpeedModifier(kBuilding.getCityDefenseRecoverySpeedModifier() * iChange);
 		}
-		//
-//Team Project (1)
+
 		// TODO reform loop to iterate on the mappings
 		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
@@ -5539,27 +5522,23 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 						setMinimumDefenseLevel(iMinBuildingDefenseLevel);
 					}
 				}
-				else
+				else if (iMinBuildingDefenseLevel == iCurrentMinDefenseLevel)
 				{
-					if (iMinBuildingDefenseLevel == iCurrentMinDefenseLevel)
+					int iNewMinDefenseLevel = 0;
+
+					for (int iJ = 0; iJ < GC.getNumBuildingInfos(); ++iJ)
 					{
-						int iNewMinDefenseLevel = 0;
-
-						for (int iJ = 0; iJ < GC.getNumBuildingInfos(); ++iJ)
+						if (getNumActiveBuilding((BuildingTypes)iJ) > 0)
 						{
-							if (getNumActiveBuilding((BuildingTypes)iJ) > 0)
-							{
-								int iLevel = GC.getBuildingInfo((BuildingTypes)iJ).getNoEntryDefenseLevel();
+							int iLevel = GC.getBuildingInfo((BuildingTypes)iJ).getNoEntryDefenseLevel();
 
-								if (iLevel > iNewMinDefenseLevel)
-								{
-									iNewMinDefenseLevel = iLevel;
-								}
+							if (iLevel > iNewMinDefenseLevel)
+							{
+								iNewMinDefenseLevel = iLevel;
 							}
 						}
-
-						setMinimumDefenseLevel(iNewMinDefenseLevel);
 					}
+					setMinimumDefenseLevel(iNewMinDefenseLevel);
 				}
 			}
 
@@ -5568,7 +5547,6 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 				changeZoCCount(iChange);
 			}
 
-			//Team Project (5)
 			if (!bReligiouslyDisabling)
 			{
 				if (kBuilding.isProtectedCulture())
@@ -5700,7 +5678,6 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			}
 		}
 
-		//Team Project (5)
 		GET_TEAM(getTeam()).processBuilding(eBuilding, iChange, bReligiouslyDisabling);
 
 		if (!bReligiouslyDisabling)

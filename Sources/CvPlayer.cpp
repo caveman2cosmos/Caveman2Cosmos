@@ -7711,13 +7711,10 @@ void CvPlayer::removeBuilding(BuildingTypes building)
 
 
 // courtesy of the Gourd Bros...
-	//Team Project (5)
 void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pArea, bool bReligiouslyDisabling)
 {
 	FAssert(iChange == 1 || iChange == -1);
 
-	//DPII < Maintenance Modifiers >
-	//Team Project (5)
 	if (!bReligiouslyDisabling)
 	{
 		const BuildingTypes eFreeBuilding = static_cast<BuildingTypes>(GC.getBuildingInfo(eBuilding).getFreeBuilding());
@@ -7737,13 +7734,12 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 			changeHasCivicOptionCount(((CivicOptionTypes)GC.getBuildingInfo(eBuilding).getCivicOption()), iChange);
 		}
 	}
-	//DPII < Maintenance Modifiers >
 	changeMaintenanceModifier(GC.getBuildingInfo(eBuilding).getGlobalMaintenanceModifier() * iChange);
 	changeDistanceMaintenanceModifier(GC.getBuildingInfo(eBuilding).getDistanceMaintenanceModifier() * iChange);
 	changeNumCitiesMaintenanceModifier(GC.getBuildingInfo(eBuilding).getNumCitiesMaintenanceModifier() * iChange);
 	changeCoastalDistanceMaintenanceModifier(GC.getBuildingInfo(eBuilding).getCoastalDistanceMaintenanceModifier() * iChange);
 	changeConnectedCityMaintenanceModifier(GC.getBuildingInfo(eBuilding).getConnectedCityMaintenanceModifier() * iChange);
-	//DPII < Maintenance Modifiers >
+
 	changeGreatPeopleRateModifier(GC.getBuildingInfo(eBuilding).getGlobalGreatPeopleRateModifier() * iChange);
 	changeGreatGeneralRateModifier(GC.getBuildingInfo(eBuilding).getGreatGeneralRateModifier() * iChange);
 	changeDomesticGreatGeneralRateModifier(GC.getBuildingInfo(eBuilding).getDomesticGreatGeneralRateModifier() * iChange);
@@ -7806,7 +7802,7 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 			}
 		}
 	}
-	//DPII < Maintenance Modifiers >
+
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
 		changeSeaPlotYield(((YieldTypes)iI), (GC.getBuildingInfo(eBuilding).getGlobalSeaPlotYieldChange(iI) * iChange));
@@ -7840,7 +7836,6 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 			changeExtraSpecialistCommerce(((SpecialistTypes)iI), ((CommerceTypes)iJ), (GC.getBuildingInfo(eBuilding).getSpecialistCommerceChange(iI, iJ) * iChange));
 		}
 	}
-	//Team Project (3)
 	//TB Building tags
 	changeExtraNationalCaptureProbabilityModifier(GC.getBuildingInfo(eBuilding).getNationalCaptureProbabilityModifier() * iChange);
 	changeExtraNationalCaptureResistanceModifier(GC.getBuildingInfo(eBuilding).getNationalCaptureResistanceModifier() * iChange);
