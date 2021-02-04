@@ -15159,7 +15159,7 @@ bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 
 			for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
 			{
-				const CvCity* pCity = itr.plot()->getPlotCity();
+				CvCity* pCity = itr.plot()->getPlotCity();
 
 				if (pCity != NULL && pCity->isInViewport())
 				{
