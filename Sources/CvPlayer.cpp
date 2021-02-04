@@ -16578,16 +16578,6 @@ void CvPlayer::doGold()
 {
 	PROFILE_FUNC()
 
-	bool bStrike;
-	int iGoldChange;
-	int iDisbandUnit;
-	int iI;
-
-/************************************************************************************************/
-/* Afforess					  Start		 12/21/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	if(GC.getUSE_CAN_DO_GOLD_CALLBACK())
 	{
 		if (Cy::call<bool>(PYGameModule, "doGold", Cy::Args() << getID()))
@@ -16595,10 +16585,7 @@ void CvPlayer::doGold()
 			return;
 		}
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-	iGoldChange = calculateGoldRate();
+	const int iGoldChange = calculateGoldRate();
 
 	//	KOSHLING - this assert appears to be out of date.  It gets hit and then handled by the strike
 	//	code immediately below which doesn't really have any other purpose
@@ -16606,7 +16593,7 @@ void CvPlayer::doGold()
 
 	changeGold(iGoldChange);
 
-	bStrike = false;
+	bool bStrike = false;
 
 	if (getGold() < 0)
 	{
@@ -16625,9 +16612,9 @@ void CvPlayer::doGold()
 
 		if (getStrikeTurns() > 1)
 		{
-			iDisbandUnit = (getStrikeTurns() / 2); // XXX mod?
+			const int iDisbandUnit = (getStrikeTurns() / 2); // XXX mod?
 
-			for (iI = 0; iI < iDisbandUnit; iI++)
+			for (int iI = 0; iI < iDisbandUnit; iI++)
 			{
 				disbandUnit(true);
 
@@ -16649,20 +16636,12 @@ void CvPlayer::doResearch()
 {
 	PROFILE_FUNC()
 
-	bool bForceResearchChoice;
-	int iOverflowResearch;
-
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
 		m_aiPathLengthCache[iI] = -1;
 		m_aiCostPathLengthCache[iI] = -1;
 	}
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/21/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	if(GC.getUSE_CAN_DO_RESEARCH_CALLBACK())
 	{
 		if (Cy::call<bool>(PYGameModule, "doResearch", Cy::Args() << getID()))
@@ -16670,12 +16649,10 @@ void CvPlayer::doResearch()
 			return;
 		}
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 	if (isResearch())
 	{
-		bForceResearchChoice = false;
+		bool bForceResearchChoice = false;
 
 		if (getCurrentResearch() == NO_TECH)
 		{
@@ -16692,15 +16669,15 @@ void CvPlayer::doResearch()
 			}
 		}
 
-		TechTypes eCurrentTech = getCurrentResearch();
+		const TechTypes eCurrentTech = getCurrentResearch();
 		if (eCurrentTech == NO_TECH)
 		{
-			int iOverflow = (100 * calculateResearchRate()) / std::max(1, calculateResearchModifier(eCurrentTech));
+			const int64_t iOverflow = (100 * calculateResearchRate()) / std::max(1, calculateResearchModifier(eCurrentTech));
 			changeOverflowResearch(iOverflow);
 		}
 		else
 		{
-			iOverflowResearch = (getOverflowResearch() * calculateResearchModifier(eCurrentTech)) / 100;
+			const uint64_t iOverflowResearch = (getOverflowResearch() * calculateResearchModifier(eCurrentTech)) / 100;
 			setOverflowResearch(0);
 			GET_TEAM(getTeam()).changeResearchProgress(eCurrentTech, (calculateResearchRate(eCurrentTech) + iOverflowResearch), getID());
 		}
@@ -16720,8 +16697,6 @@ void CvPlayer::doEspionageOneOffPoints(int iChange)
 	{
 		GET_TEAM(getTeam()).changeEspionagePointsEver(iChange);
 
-		int iSpending = 0;
-
 		// Divide up Espionage between Teams
 		for (int iLoop = 0; iLoop < MAX_PC_TEAMS; iLoop++)
 		{
@@ -16731,7 +16706,7 @@ void CvPlayer::doEspionageOneOffPoints(int iChange)
 				{
 					if (GET_TEAM(getTeam()).isHasMet((TeamTypes)iLoop))
 					{
-						iSpending = getEspionageSpending((TeamTypes)iLoop, iChange);
+						const int iSpending = getEspionageSpending((TeamTypes)iLoop, iChange);
 
 						if (iSpending > 0)
 						{
@@ -19224,21 +19199,14 @@ int CvPlayer::getAdvancedStartImprovementCost(ImprovementTypes eImprovement, boo
 // Adding or removing Tech
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
+int64_t CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 {
-	if (eTech == NO_TECH)
+	if (eTech == NO_TECH || 0 == getNumCities())
 	{
 		return -1;
 	}
 
-	if (0 == getNumCities())
-	{
-		return -1;
-	}
-
-	int iNumTechs = 0;
-
-	int iCost = (GET_TEAM(getTeam()).getResearchCost(eTech) * GC.getTechInfo(eTech).getAdvancedStartCost()) / 100;
+	const int64_t iCost = (GET_TEAM(getTeam()).getResearchCost(eTech) * GC.getTechInfo(eTech).getAdvancedStartCost()) / 100;
 	if (iCost < 0)
 	{
 		return -1;
@@ -19261,7 +19229,7 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 		// Search through all techs to see if any of the currently owned ones requires this tech
 		for (int iTechLoop = 0; iTechLoop < GC.getNumTechInfos(); iTechLoop++)
 		{
-			TechTypes eTechLoop = (TechTypes) iTechLoop;
+			const TechTypes eTechLoop = (TechTypes) iTechLoop;
 
 			if (GET_TEAM(getTeam()).isHasTech(eTechLoop))
 			{
@@ -19310,7 +19278,7 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 			// All Buildings
 			for (int iBuildingLoop = 0; iBuildingLoop < GC.getNumBuildingInfos(); iBuildingLoop++)
 			{
-				BuildingTypes eBuilding = (BuildingTypes) iBuildingLoop;
+				const BuildingTypes eBuilding = (BuildingTypes) iBuildingLoop;
 
 				if (pLoopCity->getNumRealBuilding(eBuilding) > 0)
 				{
@@ -19330,6 +19298,8 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 			}
 		}
 	}
+
+	int iNumTechs = 0;
 
 	// Increase cost if the XML defines that additional units will cost more
 	if (0 != GC.getTechInfo(eTech).getAdvancedStartCostIncrease())

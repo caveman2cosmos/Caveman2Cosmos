@@ -432,7 +432,7 @@ public:
 	int getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, const CvCity* pCity = NULL) const; // Exposed to Python 
 	int getAdvancedStartImprovementCost(ImprovementTypes eImprovement, bool bAdd, const CvPlot* pPlot = NULL) const; // Exposed to Python 
 	int getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, const CvPlot* pPlot = NULL) const; // Exposed to Python 
-	int getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const; // Exposed to Python 
+	int64_t getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const; // Exposed to Python 
 	int getAdvancedStartVisibilityCost(const CvPlot* pPlot = NULL) const; // Exposed to Python 
 
 	int getGoldenAgeTurns() const;// Exposed to Python  
