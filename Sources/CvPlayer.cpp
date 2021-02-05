@@ -20700,31 +20700,15 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalGreatPeopleRate);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivilianUnitUpkeepMod);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMilitaryUnitUpkeepMod);
-
-		double fUnitUpkeepCivilian100;
-		WRAPPER_READ(wrapper, "CvPlayer", &fUnitUpkeepCivilian100);
-		m_iUnitUpkeepCivilian100 = static_cast<int64_t>(fUnitUpkeepCivilian100 + 0.01);
-
-		double fUnitUpkeepMilitary100;
-		WRAPPER_READ(wrapper, "CvPlayer", &fUnitUpkeepMilitary100);
-		m_iUnitUpkeepMilitary100 = static_cast<int64_t>(fUnitUpkeepMilitary100 + 0.01);
-
-		double fFinalUnitUpkeep;
-		WRAPPER_READ(wrapper, "CvPlayer", &fFinalUnitUpkeep);
-		m_iFinalUnitUpkeep = static_cast<int64_t>(fFinalUnitUpkeep + 0.01);
-
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepCivilian100);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepMilitary100);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iFinalUnitUpkeep);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepCivilian);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepMilitary);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitUpkeepCivilianPopPercent);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitUpkeepMilitaryPopPercent);
-
-		double fGold;
-		WRAPPER_READ(wrapper, "CvPlayer", &fGold);
-		m_iGold += static_cast<int64_t>(fGold + 0.01); // +0.01 to avoid different rounding result on different CPU's
-
-		double fCulture;
-		WRAPPER_READ(wrapper, "CvPlayer", &fCulture);
-		m_iCulture += static_cast<int64_t>(fCulture + 0.01); // +0.01 to avoid different rounding result on different CPU's
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iGold);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iCulture);
 
 		// Toffer - Read maps
 		{
@@ -21532,26 +21516,15 @@ void CvPlayer::write(FDataStreamBase* pStream)
 
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCivilianUnitUpkeepMod);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMilitaryUnitUpkeepMod);
-
-		double fUnitUpkeepCivilian100 = static_cast<double>(m_iUnitUpkeepCivilian100);
-		WRAPPER_WRITE(wrapper, "CvPlayer", fUnitUpkeepCivilian100);
-
-		double fUnitUpkeepMilitary100 = static_cast<double>(m_iUnitUpkeepMilitary100);
-		WRAPPER_WRITE(wrapper, "CvPlayer", fUnitUpkeepMilitary100);
-
-		double fFinalUnitUpkeep = static_cast<double>(m_iFinalUnitUpkeep);
-		WRAPPER_WRITE(wrapper, "CvPlayer", fFinalUnitUpkeep);
-
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepCivilian100);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepMilitary100);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFinalUnitUpkeep);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnitUpkeepCivilian);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnitUpkeepMilitary);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitUpkeepCivilianPopPercent);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitUpkeepMilitaryPopPercent);
-
-		double fGold = static_cast<double>(m_iGold);
-		WRAPPER_WRITE(wrapper, "CvPlayer", fGold);
-
-		double fCulture = static_cast<double>(this->m_iCulture);
-		WRAPPER_WRITE(wrapper, "CvPlayer", fCulture);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGold);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCulture);
 		// Toffer - Write maps
 		{
 			// Unit counters

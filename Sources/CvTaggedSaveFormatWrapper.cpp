@@ -3101,12 +3101,12 @@ void CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, 
 
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_LONG_LONG) )
 		{
-			m_stream->ReadString((char*)ll);
+			m_stream->Read(sizeof(int64_t), (char*)ll);
 		}
 	}
 	else
 	{
-		m_stream->ReadString((char*)ll);
+			m_stream->Read(sizeof(int64_t), (char*)ll);
 	}
 }
 
@@ -3124,12 +3124,12 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint6
 
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG) )
 		{
-			m_stream->ReadString((char*)ll);
+			m_stream->Read(sizeof(uint64_t), (char*)ll);
 		}
 	}
 	else
 	{
-		m_stream->ReadString((char*)ll);
+		m_stream->Read(sizeof(uint64_t), (char*)ll);
 	}
 }
 
@@ -3155,12 +3155,12 @@ void CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, 
 				//	Incompatible save
 				HandleIncompatibleSave(CvString::format("Save format is not compatible (%s)", name).c_str());
 			}
-			m_stream->ReadString((char*)values);
+			m_stream->Read(count * sizeof(int64_t), (char*)values);
 		}
 	}
 	else
 	{
-		m_stream->ReadString((char*)values);
+		m_stream->Read(count * sizeof(int64_t), (char*)values);
 	}
 }
 
@@ -3186,12 +3186,12 @@ void CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, 
 				//	Incompatible save
 				HandleIncompatibleSave(CvString::format("Save format is not compatible (%s)", name).c_str());
 			}
-			m_stream->ReadString((char*)values);
+			m_stream->Read(count * sizeof(uint64_t), (char*)values);
 		}
 	}
 	else
 	{
-		m_stream->ReadString((char*)values);
+		m_stream->Read(count * sizeof(uint64_t), (char*)values);
 	}
 }
 
