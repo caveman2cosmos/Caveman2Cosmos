@@ -5407,7 +5407,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 		}
 		case TRADE_CITIES:
 		{
-			CvCity* pCityTraded = getCity(item.m_iData);
+			CvCity* pCityTraded = getCity((int)item.m_iData);
 
 			if (NULL != pCityTraded && pCityTraded->getLiberationPlayer(false) == eWhoTo)
 			{
@@ -5428,7 +5428,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 		}
 		case TRADE_WORKER:
 		{
-			CvUnit* pUnitTraded = getUnit(item.m_iData);
+			CvUnit* pUnitTraded = getUnit((int)item.m_iData);
 
 			if (pUnitTraded != NULL && GET_PLAYER(eWhoTo).getCapitalCity() != NULL
 			&& GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY)
@@ -5445,7 +5445,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 		}
 		case TRADE_MILITARY_UNIT:
 		{
-			CvUnit* pUnitTraded = getUnit(item.m_iData);
+			CvUnit* pUnitTraded = getUnit((int)item.m_iData);
 			CvCity* pTheirCapitalCity = GET_PLAYER(eWhoTo).getCapitalCity();
 
 			if (pUnitTraded != NULL && pTheirCapitalCity != NULL && pUnitTraded->canMove()
@@ -5748,15 +5748,15 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 	switch (item.m_eItemType)
 	{
 	case TRADE_TECHNOLOGIES:
-		return GET_TEAM(getTeam()).AI_techTrade(((TechTypes)(item.m_iData)), GET_PLAYER(eWhoTo).getTeam());
+		return GET_TEAM(getTeam()).AI_techTrade((TechTypes)item.m_iData, GET_PLAYER(eWhoTo).getTeam());
 		break;
 
 	case TRADE_RESOURCES:
-		return AI_bonusTrade(((BonusTypes)(item.m_iData)), eWhoTo);
+		return AI_bonusTrade((BonusTypes)item.m_iData, eWhoTo);
 		break;
 
 	case TRADE_CITIES:
-		pCity = getCity(item.m_iData);
+		pCity = getCity((int)item.m_iData);
 		if (pCity != NULL)
 		{
 			return AI_cityTrade(pCity, eWhoTo);
@@ -5822,7 +5822,7 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 		break;
 	case TRADE_WORKER:
 		{
-			CvUnit* pUnit = getUnit(item.m_iData);
+			CvUnit* pUnit = getUnit((int)item.m_iData);
 			if (pUnit != NULL)
 			{
 				return AI_workerTrade(pUnit, eWhoTo);
@@ -5831,7 +5831,7 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 		break;
 	case TRADE_MILITARY_UNIT:
 		{
-			CvUnit* pUnit = getUnit(item.m_iData);
+			CvUnit* pUnit = getUnit((int)item.m_iData);
 			if (pUnit != NULL)
 			{
 				return AI_militaryUnitTrade(pUnit, eWhoTo);
@@ -18085,8 +18085,8 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 		break;
 	case ADVANCEDSTARTACTION_TECH:
 		{
-			TechTypes eTech = (TechTypes) iData;
-			int iCost = getAdvancedStartTechCost(eTech, bAdd);
+			const TechTypes eTech = (TechTypes) iData;
+			const int64_t iCost = getAdvancedStartTechCost(eTech, bAdd);
 
 			if (iCost < 0)
 			{
@@ -18099,15 +18099,14 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 				if (getAdvancedStartPoints() >= iCost)
 				{
 					GET_TEAM(getTeam()).setHasTech(eTech, true, getID(), false, false);
-					changeAdvancedStartPoints(-iCost);
+					changeAdvancedStartPoints(iCost > MAX_INT ? -MAX_INT : (int)-iCost);
 				}
 			}
-
 			// Remove Tech from the Team
 			else
 			{
 				GET_TEAM(getTeam()).setHasTech(eTech, false, getID(), false, false);
-				changeAdvancedStartPoints(iCost);
+				changeAdvancedStartPoints(iCost > MAX_INT ? MAX_INT : (int)iCost);
 			}
 
 			if (getID() == GC.getGame().getActivePlayer())
@@ -18121,7 +18120,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 			if (pPlot == NULL)
 				return;
 
-			int iCost = getAdvancedStartVisibilityCost(pPlot);
+			const int iCost = getAdvancedStartVisibilityCost(pPlot);
 			if (iCost < 0)
 			{
 				return;
@@ -18827,7 +18826,7 @@ int64_t CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 		return -1;
 	}
 
-	const int64_t iCost = (GET_TEAM(getTeam()).getResearchCost(eTech) * GC.getTechInfo(eTech).getAdvancedStartCost()) / 100;
+	int64_t iCost = (GET_TEAM(getTeam()).getResearchCost(eTech) * GC.getTechInfo(eTech).getAdvancedStartCost()) / 100;
 	if (iCost < 0)
 	{
 		return -1;
@@ -22424,13 +22423,13 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 
 	if (kEvent.getPrereqGameOption() != NO_GAMEOPTION)
 	{
-		if (!(GC.getGame().isOption((GameOptionTypes)kEvent.getPrereqGameOption())))
+		if (!GC.getGame().isOption((GameOptionTypes)kEvent.getPrereqGameOption()))
 		{
 			return false;
 		}
 	}
 
-	int iGold = std::min(getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, false), getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, true));
+	const int64_t iGold = std::min<int64_t>(getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, false), getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, true));
 
 	if (iGold != 0)
 	{
@@ -22498,7 +22497,7 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 
 	if (NO_BONUS != kEvent.getBonusGift())
 	{
-		BonusTypes eBonus = (BonusTypes)kEvent.getBonusGift();
+		const BonusTypes eBonus = (BonusTypes)kEvent.getBonusGift();
 		if (NO_PLAYER == kTriggeredData.m_eOtherPlayer)
 		{
 			return false;
@@ -22522,7 +22521,7 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 
 	if (kEvent.isCityEffect())
 	{
-		CvCity* pCity =	getCity(kTriggeredData.m_iCityId);
+		const CvCity* pCity = getCity(kTriggeredData.m_iCityId);
 		if (NULL == pCity || !pCity->canApplyEvent(eEvent, kTriggeredData))
 		{
 			return false;
@@ -22535,7 +22534,7 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 			return false;
 		}
 
-		CvCity* pCity = GET_PLAYER(kTriggeredData.m_eOtherPlayer).getCity(kTriggeredData.m_iOtherPlayerCityId);
+		const CvCity* pCity = GET_PLAYER(kTriggeredData.m_eOtherPlayer).getCity(kTriggeredData.m_iOtherPlayerCityId);
 		if (NULL == pCity || !pCity->canApplyEvent(eEvent, kTriggeredData))
 		{
 			return false;
@@ -22544,17 +22543,14 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 
 	if (kTriggeredData.m_eTrigger > NO_EVENTTRIGGER && ::isPlotEventTrigger(kTriggeredData.m_eTrigger))
 	{
-		CvPlot* pPlot = GC.getMap().plot(kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY);
-		if (NULL != pPlot)
+		const CvPlot* pPlot = GC.getMap().plot(kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY);
+		if (NULL != pPlot && !pPlot->canApplyEvent(eEvent))
 		{
-			if (!pPlot->canApplyEvent(eEvent))
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
-	CvUnit* pUnit = getUnit(kTriggeredData.m_iUnitId);
+	const CvUnit* pUnit = getUnit(kTriggeredData.m_iUnitId);
 	if (NULL != pUnit)
 	{
 		if (!pUnit->canApplyEvent(eEvent))
@@ -22657,7 +22653,7 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 			return false;
 		}
 
-		TeamTypes eWorstEnemy = GET_TEAM(GET_PLAYER(kTriggeredData.m_eOtherPlayer).getTeam()).AI_getWorstEnemy();
+		const TeamTypes eWorstEnemy = GET_TEAM(GET_PLAYER(kTriggeredData.m_eOtherPlayer).getTeam()).AI_getWorstEnemy();
 		if (NO_TEAM == eWorstEnemy || eWorstEnemy == getTeam())
 		{
 			return false;
@@ -22730,7 +22726,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 	//	-1 iEventTriggeredId implies a replay after a reset of modifiers and only modifier effects
 	//	should be applied
-	bool	adjustModifiersOnly = (iEventTriggeredId == -1);
+	bool adjustModifiersOnly = (iEventTriggeredId == -1);
 
 	if ( !adjustModifiersOnly )
 	{
@@ -22770,13 +22766,14 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 	if ( !adjustModifiersOnly )
 	{
-		int iGold = getEventCost(eEvent, pTriggeredData->m_eOtherPlayer, false);
-		int iRandomGold = getEventCost(eEvent, pTriggeredData->m_eOtherPlayer, true);
-
+		int64_t iGold = getEventCost(eEvent, pTriggeredData->m_eOtherPlayer, false);
+		int64_t iRandomGold = getEventCost(eEvent, pTriggeredData->m_eOtherPlayer, true);
+		iRandomGold -= iGold;
+		iRandomGold = iRandomGold > MAX_INT ? MAX_INT -1 : iRandomGold;
 		if (iGold > 0)
-			iGold += GC.getGame().getSorenRandNum(iRandomGold - iGold + 1, "Event random gold");
+			iGold += GC.getGame().getSorenRandNum((int)iRandomGold + 1, "Event random gold");
 		else if (iGold < 0)
-			iGold -= GC.getGame().getSorenRandNum(abs(iRandomGold - iGold - 1), "Event random gold");
+			iGold -= GC.getGame().getSorenRandNum(abs((int)iRandomGold - 1), "Event random gold");
 
 		if (iGold != 0)
 		{
@@ -22802,7 +22799,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 			if (eBestTech != NO_TECH)
 			{
-				const uint64_t iBeakers  = GET_TEAM(getTeam()).changeResearchProgressPercent(eBestTech, kEvent.getTechPercent(), getID());
+				const uint64_t iBeakers = GET_TEAM(getTeam()).changeResearchProgressPercent(eBestTech, kEvent.getTechPercent(), getID());
 
 				if (iBeakers > 0)
 				{
@@ -22925,7 +22922,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 		while ((int)apSpreadReligionCities.size() > kEvent.getConvertOwnCities())
 		{
-			int iChosen = GC.getGame().getSorenRandNum(apSpreadReligionCities.size(), "Even Spread Religion (own)");
+			const int iChosen = GC.getGame().getSorenRandNum(apSpreadReligionCities.size(), "Even Spread Religion (own)");
 
 			int i = 0;
 			for (std::vector<CvCity*>::iterator it = apSpreadReligionCities.begin(); it != apSpreadReligionCities.end(); ++it)
@@ -23601,11 +23598,11 @@ TechTypes CvPlayer::getBestEventTech(EventTypes eEvent, PlayerTypes eOtherPlayer
 	return eBestTech;
 }
 
-int CvPlayer::getEventCost(EventTypes eEvent, PlayerTypes eOtherPlayer, bool bRandom) const
+int64_t CvPlayer::getEventCost(EventTypes eEvent, PlayerTypes eOtherPlayer, bool bRandom) const
 {
 	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
-	int iGold = kEvent.getGold();
+	int64_t iGold = kEvent.getGold();
 	if (bRandom)
 	{
 		iGold += kEvent.getRandomGold();
@@ -23877,7 +23874,7 @@ void CvPlayer::trigger(const EventTriggeredData& kData)
 	}
 	else
 	{
-		EventTypes eEvent = AI_chooseEvent(kData.getID());
+		const EventTypes eEvent = AI_chooseEvent(kData.getID());
 		if (NO_EVENT != eEvent)
 		{
 			applyEvent(eEvent, kData.getID());
@@ -26133,11 +26130,11 @@ bool CvPlayer::getItemTradeString(PlayerTypes eOtherPlayer, bool bOffer, bool bS
 			CvCity* pCity = NULL;
 			if (bOffer)
 			{
-				pCity = GET_PLAYER(eOtherPlayer).getCity(zTradeData.m_iData);
+				pCity = GET_PLAYER(eOtherPlayer).getCity((int)zTradeData.m_iData);
 			}
 			else
 			{
-				pCity = getCity(zTradeData.m_iData);
+				pCity = getCity((int)zTradeData.m_iData);
 			}
 			if (NULL != pCity)
 			{
@@ -26216,11 +26213,11 @@ bool CvPlayer::getItemTradeString(PlayerTypes eOtherPlayer, bool bOffer, bool bS
 			CvUnit* pUnit = NULL;
 			if (bOffer)
 			{
-				pUnit = GET_PLAYER(eOtherPlayer).getUnit(zTradeData.m_iData);
+				pUnit = GET_PLAYER(eOtherPlayer).getUnit((int)zTradeData.m_iData);
 			}
 			else
 			{
-				pUnit = getUnit(zTradeData.m_iData);
+				pUnit = getUnit((int)zTradeData.m_iData);
 			}
 			if (pUnit != NULL)
 			{
@@ -26235,11 +26232,11 @@ bool CvPlayer::getItemTradeString(PlayerTypes eOtherPlayer, bool bOffer, bool bS
 			CvUnit* pUnit = NULL;
 			if (bOffer)
 			{
-				pUnit = GET_PLAYER(eOtherPlayer).getUnit(zTradeData.m_iData);
+				pUnit = GET_PLAYER(eOtherPlayer).getUnit((int)zTradeData.m_iData);
 			}
 			else
 			{
-				pUnit = getUnit(zTradeData.m_iData);
+				pUnit = getUnit((int)zTradeData.m_iData);
 			}
 			if (pUnit != NULL)
 			{

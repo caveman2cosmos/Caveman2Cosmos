@@ -253,6 +253,7 @@ float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, in
 int getEspionageModifier(TeamTypes eOurTeam, TeamTypes eTargetTeam);
 
 DllExport void setTradeItem(TradeData* pItem, TradeableItems eItemType = TRADE_ITEM_NONE, int iData = 0);
+void setTradeItem(TradeData* pItem, TradeableItems eItemType, int64_t iData);
 
 bool isPlotEventTrigger(EventTriggerTypes eTrigger);
 

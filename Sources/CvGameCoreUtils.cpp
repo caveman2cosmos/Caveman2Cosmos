@@ -1374,6 +1374,11 @@ int getEspionageModifier(TeamTypes eOurTeam, TeamTypes eTargetTeam)
 
 void setTradeItem(TradeData* pItem, TradeableItems eItemType, int iData)
 {
+	setTradeItem(pItem, eItemType, (int64_t)iData);
+}
+
+void setTradeItem(TradeData* pItem, TradeableItems eItemType, int64_t iData)
+{
 	pItem->m_eItemType = eItemType;
 	pItem->m_iData = iData;
 	pItem->m_bOffering = false;

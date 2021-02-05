@@ -183,7 +183,7 @@ public:
 	int getAdvancedStartBuildingCost(int /*BuildingTypes*/ eBuilding, bool bAdd, const CyCity* pCity) const;
 	int getAdvancedStartImprovementCost(int /*ImprovementTypes*/ eImprovement, bool bAdd, const CyPlot* pPlot) const;
 	int getAdvancedStartRouteCost(int /*RouteTypes*/ eRoute, bool bAdd, const CyPlot* pPlot) const;
-	int getAdvancedStartTechCost(int /*TechTypes*/ eTech, bool bAdd) const;
+	int64_t getAdvancedStartTechCost(int /*TechTypes*/ eTech, bool bAdd) const;
 	int getAdvancedStartVisibilityCost(const CyPlot* pPlot) const;
 
 	int getEspionageSpending(int /*PlayerTypes*/ ePlayer) const;
@@ -223,7 +223,7 @@ public:
 
 	int getNumMilitaryUnits() const;
 
-	int getOverflowResearch() const;
+	uint64_t getOverflowResearch() const;
 	bool isBuildingOnlyHealthy() const;
 
 	int64_t getTreasuryUpkeep() const;

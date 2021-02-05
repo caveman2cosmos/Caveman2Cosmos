@@ -211,7 +211,7 @@ public:
 
 	PlayerVoteTypes AI_diploVote(const VoteSelectionSubData& kVoteData, VoteSourceTypes eVoteSource, bool bPropose);
 
-	int AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pList, bool bIgnoreAnnual = false, int iExtra = 1) const;
+	int64_t AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pList, bool bIgnoreAnnual = false, int iExtra = 1) const;
 	bool AI_goldDeal(const CLinkList<TradeData>* pList) const;
 	bool AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData>* pTheirList, const CLinkList<TradeData>* pOurList, int iChange = 1) const;
 	bool AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeData>* pTheirList, const CLinkList<TradeData>* pOurList, CLinkList<TradeData>* pTheirInventory, CLinkList<TradeData>* pOurInventory, CLinkList<TradeData>* pTheirCounter, CLinkList<TradeData>* pOurCounter) const;
@@ -219,7 +219,7 @@ public:
 	int AI_maxGoldTrade(PlayerTypes ePlayer) const;
 
 	int AI_maxGoldPerTurnTrade(PlayerTypes ePlayer) const;
-	int AI_goldPerTurnTradeVal(int iGoldPerTurn) const;
+	int64_t AI_goldPerTurnTradeVal(int64_t iGoldPerTurn) const;
 
 	int AI_bonusVal(BonusTypes eBonus, int iChange = 1, bool bForTrade = false) const;
 	int AI_baseBonusVal(BonusTypes eBonus, bool bForTrade = false) const;
@@ -230,7 +230,7 @@ public:
 	int AI_cityTradeVal(CvCity* pCity) const;
 	DenialTypes AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const;
 
-	int AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer) const;
+	int64_t AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer) const;
 	DenialTypes AI_stopTradingTrade(TeamTypes eTradeTeam, PlayerTypes ePlayer) const;
 
 	int AI_civicTradeVal(CivicTypes eCivic, PlayerTypes ePlayer) const;
@@ -363,7 +363,7 @@ public:
 
 	void AI_doCommerce();
 
-	EventTypes AI_chooseEvent(int iTriggeredId, int* pValue = NULL) const;
+	EventTypes AI_chooseEvent(int iTriggeredId, int64_t* pValue = NULL) const;
 	virtual void AI_launch(VictoryTypes eVictory);
 
 	int AI_getCultureVictoryStage() const;
@@ -479,7 +479,7 @@ public:
 	int countCityReligionRevolts() const;
 
 	int AI_workerTradeVal(const CvUnit* pUnit) const;
-	int AI_militaryUnitTradeVal(const CvUnit* pUnit) const;
+	int64_t AI_militaryUnitTradeVal(const CvUnit* pUnit) const;
 	int AI_corporationTradeVal(CorporationTypes eCorporation, PlayerTypes ePlayer) const;
 	int AI_pledgeVoteTradeVal(VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const;
 	int AI_secretaryGeneralTradeVal(VoteSourceTypes eVoteSource, PlayerTypes ePlayer) const;
@@ -620,7 +620,7 @@ protected:
 	int AI_getHealthWeight(int iHealth, int iExtraPop) const;
 
 	void AI_convertUnitAITypesForCrush();
-	int AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const;
+	int64_t AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const;
 
 	void AI_doEnemyUnitData();
 	void AI_invalidateCloseBordersAttitudeCache();
@@ -639,9 +639,9 @@ private:
 	static int plotDangerCacheReads;
 #endif
 
-	techPath* findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
-	int	 techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
-	TechTypes findStartTech(techPath* path) const;
+	const techPath* findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
+	int techPathValuePerUnitCost(const techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
+	TechTypes findStartTech(const techPath* path) const;
 
 	typedef stdext::hash_map<TechTypes, int> TechTypesValueMap;
 	mutable TechTypesValueMap m_cachedTechValues;

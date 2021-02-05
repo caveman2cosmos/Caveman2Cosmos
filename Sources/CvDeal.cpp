@@ -70,7 +70,7 @@ void CvDeal::kill(bool bKillTeam)
 	{
 		CvWString szString;
 		CvWStringBuffer szDealString;
-		CvWString szCancelString = gDLL->getText("TXT_KEY_POPUP_DEAL_CANCEL");
+		const CvWString szCancelString = gDLL->getText("TXT_KEY_POPUP_DEAL_CANCEL");
 
 		if (GET_TEAM(GET_PLAYER(getFirstPlayer()).getTeam()).isHasMet(GET_PLAYER(getSecondPlayer()).getTeam()))
 		{
@@ -118,7 +118,7 @@ void CvDeal::addTrades(CLinkList<TradeData>* pFirstList, CLinkList<TradeData>* p
 	CLLNode<TradeData>* pNode;
 
 	//Afforess: Prevent humans from gifting AI's "negative" value deals
-	int iHumanValue = 0;
+	int64_t iHumanValue = 0;
 	if (pFirstList != NULL && bCheckAllowed)
 	{
 		for (pNode = pFirstList->head(); pNode; pNode = pFirstList->next(pNode))

@@ -1209,7 +1209,7 @@ public:
 	void applyEvent(EventTypes eEvent, int iTriggeredId, bool bUpdateTrigger = true);
 	bool canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const;
 	TechTypes getBestEventTech(EventTypes eEvent, PlayerTypes eOtherPlayer) const;
-	int getEventCost(EventTypes eEvent, PlayerTypes eOtherPlayer, bool bRandom) const;
+	int64_t getEventCost(EventTypes eEvent, PlayerTypes eOtherPlayer, bool bRandom) const;
 	bool canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer, ReligionTypes eReligion) const;
 	const EventTriggeredData* getEventCountdown(EventTypes eEvent) const;
 	void setEventCountdown(EventTypes eEvent, const EventTriggeredData& kEventTriggered);
@@ -1684,7 +1684,7 @@ public:
 	virtual bool AI_demandRebukedWar(PlayerTypes ePlayer) const = 0;
 	virtual AttitudeTypes AI_getAttitude(PlayerTypes ePlayer, bool bForced = true) const = 0;
 	virtual PlayerVoteTypes AI_diploVote(const VoteSelectionSubData& kVoteData, VoteSourceTypes eVoteSource, bool bPropose) = 0;
-	virtual int AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pList, bool bIgnoreAnnual = false, int iExtra = 0) const = 0;
+	virtual int64_t AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pList, bool bIgnoreAnnual = false, int iExtra = 0) const = 0;
 	virtual bool AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData>* pTheirList, const CLinkList<TradeData>* pOurList, int iChange = 1) const = 0;
 	virtual bool AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeData>* pTheirList, const CLinkList<TradeData>* pOurList, CLinkList<TradeData>* pTheirInventory, CLinkList<TradeData>* pOurInventory, CLinkList<TradeData>* pTheirCounter, CLinkList<TradeData>* pOurCounter) const = 0;
 	virtual int AI_bonusVal(BonusTypes eBonus, int iChange = 0, bool bForTrade = false) const = 0;
@@ -1715,7 +1715,7 @@ public:
 	virtual int AI_getMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2) const = 0;
 	virtual void AI_changeMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2, int iChange) = 0;
 	virtual void AI_doCommerce() = 0;
-	virtual EventTypes AI_chooseEvent(int iTriggeredId, int* pValue = NULL) const = 0;
+	virtual EventTypes AI_chooseEvent(int iTriggeredId, int64_t* pValue = NULL) const = 0;
 	virtual void AI_launch(VictoryTypes eVictory) = 0;
 	virtual void AI_doAdvancedStart(bool bNoExit = false) = 0;
 	virtual void AI_updateBonusValue() = 0;

@@ -49,7 +49,7 @@ public:
 	bool isPossible(const CvPlayerAI& kPlayer) const;
 	bool execute(CvUnit& kUnit, PlayerTypes eDefeatedUnitPlayer = NO_PLAYER, UnitTypes eDefeatedUnitType = NO_UNIT) const;
 
-	int AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade = false) const;
+	int64_t AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade = false) const;
 
 	void buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& kUnit) const;
 

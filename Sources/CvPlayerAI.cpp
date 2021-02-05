@@ -945,13 +945,13 @@ void CvPlayerAI::AI_doPeace()
 	TradeData item;
 	TechTypes eBestReceiveTech;
 	TechTypes eBestGiveTech;
-	int iReceiveGold;
-	int iGiveGold;
-	int iGold;
+	int64_t iReceiveGold;
+	int64_t iGiveGold;
+	int64_t iGold;
 	int iValue;
 	int iBestValue;
-	int iOurValue;
-	int iTheirValue;
+	int64_t iOurValue;
+	int64_t iTheirValue;
 	int iI, iJ;
 
 	FAssert(!isHuman());
@@ -981,11 +981,6 @@ void CvPlayerAI::AI_doPeace()
 								FAssertMsg(iI != getID(), "iI is not expected to be equal with getID()");
 								FAssert(GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam());
 
-/************************************************************************************************/
-/* Afforess					  Start		 04/06/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 								bool bConsiderPeace;
 								if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 								{
@@ -997,9 +992,6 @@ void CvPlayerAI::AI_doPeace()
 									bConsiderPeace = (GET_TEAM(getTeam()).AI_getAtWarCounter(GET_PLAYER((PlayerTypes)iI).getTeam()) > 10);
 								}
 								if (bConsiderPeace)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 								{
 									if (AI_getContactTimer(((PlayerTypes)iI), CONTACT_PEACE_TREATY) == 0)
 									{
@@ -1027,35 +1019,13 @@ void CvPlayerAI::AI_doPeace()
 													pDiplo->setAIContact(true);
 													pDiplo->setOurOfferList(theirList);
 													pDiplo->setTheirOfferList(ourList);
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD						 02/04/08							Glider1		*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-													// RevolutionDCM start - new diplomacy option
 													AI_beginDiplomacy(pDiplo, (PlayerTypes)iI);
-													// gDLL->beginDiplomacy(pDiplo, (PlayerTypes)iI);
-													// RevolutionDCM end
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD						 END								 Glider1		*/
-/************************************************************************************************/
 													abContacted[GET_PLAYER((PlayerTypes)iI).getTeam()] = true;
 												}
 											}
-											else
+											else if( GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).AI_acceptSurrender(getTeam()) )
 											{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  01/22/09								jdog5000	  */
-/*																							  */
-/* War Strategy AI																			  */
-/************************************************************************************************/
-												if( GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).AI_acceptSurrender(getTeam()) )
-												{
-													GC.getGame().implementDeal(getID(), ((PlayerTypes)iI), &ourList, &theirList);
-												}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
+												GC.getGame().implementDeal(getID(), ((PlayerTypes)iI), &ourList, &theirList);
 											}
 										}
 
@@ -1104,7 +1074,7 @@ void CvPlayerAI::AI_doPeace()
 															iOurValue += GET_TEAM(getTeam()).AI_techTradeVal(eBestReceiveTech, GET_PLAYER((PlayerTypes)iI).getTeam());
 														}
 
-														iGold = std::min((iTheirValue - iOurValue), GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID()));
+														iGold = std::min<int64_t>((iTheirValue - iOurValue), GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID()));
 
 														if (iGold > 0)
 														{
@@ -1153,7 +1123,7 @@ void CvPlayerAI::AI_doPeace()
 
 															if (canTradeItem(((PlayerTypes)iI), item, true))
 															{
-																if (GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).AI_techTradeVal((TechTypes)iJ, getTeam()) <= (iOurValue - iTheirValue))
+																if ((int64_t)GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).AI_techTradeVal((TechTypes)iJ, getTeam()) <= (iOurValue - iTheirValue))
 																{
 																	iValue = (1 + GC.getGame().getSorenRandNum(10000, "AI Peace Trading (Tech #2)"));
 
@@ -1171,7 +1141,7 @@ void CvPlayerAI::AI_doPeace()
 															iTheirValue += GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).AI_techTradeVal(eBestGiveTech, getTeam());
 														}
 
-														iGold = std::min((iOurValue - iTheirValue), AI_maxGoldTrade((PlayerTypes)iI));
+														iGold = std::min<int64_t>((iOurValue - iTheirValue), AI_maxGoldTrade((PlayerTypes)iI));
 
 														if (iGold > 0)
 														{
@@ -4237,11 +4207,7 @@ int CvPlayerAI::AI_goldTarget() const
 	return iGold + AI_getExtraGoldTarget();
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  05/14/10								jdog5000	  */
-/*																							  */
-/* Tech AI																					  */
-/************************************************************************************************/
+
 TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAsync, TechTypes eIgnoreTech, AdvisorTypes eIgnoreAdvisor) const
 {
 	MEMORY_TRACK()
@@ -4355,7 +4321,7 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 	{
 		if (canEverResearch(m_eBestResearchTarget) && !kTeam.isHasTech(m_eBestResearchTarget))
 		{
-			techPath* path = findBestPath(m_eBestResearchTarget, iValue, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+			const techPath* path = findBestPath(m_eBestResearchTarget, iValue, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
 
 			eFirstTech = findStartTech(path);
 
@@ -4431,7 +4397,7 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 								{
 									MEMORY_TRACK_NAME("CvPlayerAI::AI_bestTech.bestPath");
 
-									techPath* path = findBestPath((TechTypes)iI, iValue, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+									const techPath* path = findBestPath((TechTypes)iI, iValue, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
 									//iValue = AI_techValue( (TechTypes)iI, iPathLength, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave );
 
 									/*if( gPlayerLogLevel >= 3 )
@@ -4495,7 +4461,7 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 
 struct TechResearchDist
 {
-	TechResearchDist(TechTypes tech = NO_TECH, int dist = 0) : tech(tech), dist(dist) {}
+	TechResearchDist(TechTypes tech = NO_TECH, int64_t dist = 0) : tech(tech), dist(dist) {}
 
 	bool operator<(const TechResearchDist& other) const
 	{
@@ -4503,7 +4469,7 @@ struct TechResearchDist
 	}
 
 	TechTypes tech;
-	int dist;
+	int64_t dist;
 };
 
 //	Calculate an estimate of the value of the average tech amongst those we could currently research
@@ -4519,10 +4485,10 @@ int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, i
 	std::vector<TechResearchDist> researchCosts;
 	for (int idx = 0; idx < GC.getNumTechInfos(); idx++)
 	{
-		TechTypes techType = static_cast<TechTypes>(idx);
+		const TechTypes techType = static_cast<TechTypes>(idx);
 		if (techType != eRelativeTo && canResearch(techType))
 		{
-			researchCosts.push_back(TechResearchDist(techType, std::abs(team.getResearchCost(techType) - iCost)));
+			researchCosts.push_back(TechResearchDist(techType, (int64_t)std::abs((double)team.getResearchCost(techType) - iCost)));
 		}
 	}
 
@@ -4537,9 +4503,9 @@ int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, i
 
 	int iTotal = 0;
 	int iDivisor = 1;
-	for(std::vector<TechResearchDist>::const_iterator itr = researchCosts.begin(); itr != researchCosts.end(); ++itr)
+	foreach_(const TechResearchDist& itr, researchCosts)
 	{
-		int iValue = AI_TechValueCached(itr->tech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+		const int iValue = AI_TechValueCached(itr.tech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
 
 		while ( MAX_INT - iTotal < iValue / iDivisor )
 		{
@@ -4553,8 +4519,8 @@ int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, i
 	return (iTotal / researchCosts.size()) * iDivisor;
 }
 
-int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave, bool considerFollowOns) const
-{;
+int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave, bool considerFollowOns) const
+{
 	PROFILE_FUNC();
 	MEMORY_TRACK();
 
@@ -4656,19 +4622,19 @@ int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusC
 	return iValue;
 }
 
-int	 CvPlayerAI::techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const
+int CvPlayerAI::techPathValuePerUnitCost(const techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const
 {
-	int	iCost = 0;
-	int	iValue = 0;
+	int64_t iCost = 0;
+	int64_t iValue = 0;
 	int iScaleFactor = 1;
 
 	logBBAI("  Evaluate tech path value:" );
-	for(std::vector<TechTypes>::const_iterator itr = path->begin(); itr != path->end(); ++itr)
+	foreach_(const TechTypes& loopTech, *path)
 	{
-		int iTempCost = std::max(1,GET_TEAM(getTeam()).getResearchCost(eTech) - GET_TEAM(getTeam()).getResearchProgress(eTech));
-		int iTempValue = AI_TechValueCached(*itr, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+		const int64_t iTempCost = std::max<int64_t>(1, GET_TEAM(getTeam()).getResearchCost(eTech) - GET_TEAM(getTeam()).getResearchProgress(eTech));
+		const int64_t iTempValue = AI_TechValueCached(loopTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
 
-		logBBAI("	tech %S: cost %d, value %d", GC.getTechInfo(*itr).getDescription(), iTempCost, iTempValue );
+		logBBAI("	tech %S: cost %d, value %d", GC.getTechInfo(loopTech).getDescription(), iTempCost, iTempValue);
 
 		iCost += iTempCost;
 		iValue += iTempValue/iScaleFactor;
@@ -4680,14 +4646,14 @@ int	 CvPlayerAI::techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool 
 		}
 	}
 
-	int iCostFactor = iCost;
-	int iIterator = ((int)GC.getGame().getCurrentEra() - 1);
+	int64_t iCostFactor = iCost;
+	const int iIterator = ((int)GC.getGame().getCurrentEra() - 1);
 	for (int iI = 0; iI < iIterator; iI++)
 	{
 		iCostFactor /= 2;
 	}
-	iCostFactor = std::max(1, iCostFactor);
-	iValue = std::max(1,(100*iValue)/(bIgnoreCost ? 1 : iCostFactor));
+	iCostFactor = std::max<int64_t>(1, iCostFactor);
+	iValue = std::max<int64_t>(1, (100*iValue)/(bIgnoreCost ? 1 : iCostFactor));
 
 	if ( iValue > MAX_INT/iScaleFactor )
 	{
@@ -4695,42 +4661,41 @@ int	 CvPlayerAI::techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool 
 	}
 	else
 	{
-		return iValue*iScaleFactor;
+		return (int)iValue*iScaleFactor;
 	}
 }
 
-techPath*	CvPlayerAI::findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const
+const techPath* CvPlayerAI::findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const
 {
 	PROFILE_FUNC();
 
 	std::vector<techPath*> possiblePaths;
-	techPath*	initialSeed = new techPath();
+	techPath* initialSeed = new techPath();
 
 	possiblePaths.push_back(initialSeed);
 
 	constructTechPathSet(eTech, possiblePaths, *initialSeed);
 
 	//	Find the lowest cost of the possible paths
-	int	iValue;
 	int	iBestValue = 0;
-	techPath* bestPath = NULL;
+	const techPath* bestPath = NULL;
 
-	for(std::vector<techPath*>::const_iterator itr = possiblePaths.begin(); itr != possiblePaths.end(); ++itr)
+	foreach_(const techPath* path, possiblePaths)
 	{
-		iValue = techPathValuePerUnitCost(*itr, eTech, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+		const int iValue = techPathValuePerUnitCost(path, eTech, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
 		logBBAI("  Evaluated tech path value leading to %S as %d", GC.getTechInfo(eTech).getDescription(), iValue );
 		if ( iValue >= iBestValue )
 		{
 			iBestValue = iValue;
-			bestPath = *itr;
+			bestPath = path;
 		}
 	}
 
-	for(std::vector<techPath*>::const_iterator itr = possiblePaths.begin(); itr != possiblePaths.end(); ++itr)
+	foreach_(const techPath* path, possiblePaths)
 	{
-		if ( *itr != bestPath )
+		if (path != bestPath)
 		{
-			delete *itr;
+			delete path;
 		}
 	}
 
@@ -4738,13 +4703,13 @@ techPath*	CvPlayerAI::findBestPath(TechTypes eTech, int& valuePerUnitCost, bool 
 	return bestPath;
 }
 
-TechTypes CvPlayerAI::findStartTech(techPath* path) const
+TechTypes CvPlayerAI::findStartTech(const techPath* path) const
 {
-	for(std::vector<TechTypes>::const_iterator itr = path->begin(); itr != path->end(); ++itr)
+	foreach_(const TechTypes& tech, *path)
 	{
-		if ( canResearch(*itr) )
+		if (canResearch(tech))
 		{
-			return *itr;
+			return tech;
 		}
 	}
 
@@ -4756,28 +4721,28 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 	PROFILE_FUNC();
 
-	CvCity* pCapitalCity;
 	ImprovementTypes eImprovement;
 	RouteTypes eRoute;
 
 	int iNumBonuses;
-	int iValue;
 	int iTempValue;
 	int iBuildValue;
 	int iBonusValue;
 	int iI, iJ;
+
+	const CvTechInfo& kTech = GC.getTechInfo(eTech);
 
 	if ( gPlayerLogLevel > 2 )
 	{
 		logBBAI("Player %d (%S) calculate value for tech %S",
 				getID(),
 				getCivilizationDescription(0),
-				GC.getTechInfo(eTech).getDescription());
+				kTech.getDescription());
 	}
 
-	pCapitalCity = getCapitalCity();
+	const CvCity* pCapitalCity = getCapitalCity();
 
-	CvTeam& kTeam = GET_TEAM(getTeam());
+	const CvTeam& kTeam = GET_TEAM(getTeam());
 
 	//bool bWarPlan = (kTeam.getAnyWarPlanCount(true) > 0);
 	bool bCapitalAlone = (GC.getGame().getElapsedGameTurns() > 0) ? AI_isCapitalAreaAlone() : false;
@@ -4791,31 +4756,28 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	int iCityCount = getNumCities();
 	//int iTeamCityCount = kTeam.getNumCities();
 
-	iValue = 0;
+	int iValue = 0;
 
 	int iRandomMax = 2000;
 	//iValue += iRandomFactor;
 
 	// Map stuff
-	if (GC.getTechInfo(eTech).isExtraWaterSeeFrom())
+	if (kTech.isExtraWaterSeeFrom() && iCoastalCities > 0)
 	{
-		if (iCoastalCities > 0)
-		{
-			iValue += 100;
+		iValue += 100;
 
-			if (bCapitalAlone)
-			{
-				iValue += 400;
-			}
+		if (bCapitalAlone)
+		{
+			iValue += 400;
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isMapCentering())
+	if (kTech.isMapCentering())
 	{
 		iValue += 100;
 	}
 
-	if (GC.getTechInfo(eTech).isMapVisible())
+	if (kTech.isMapVisible())
 	{
 		iValue += 100;
 
@@ -4826,7 +4788,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	}
 
 	// Expand trading options
-	if (GC.getTechInfo(eTech).isMapTrading())
+	if (kTech.isMapTrading())
 	{
 		iValue += 100;
 
@@ -4836,14 +4798,14 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isTechTrading() && !GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING))
+	if (kTech.isTechTrading() && !GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING))
 	{
 		iValue += 500;
 
 		iValue += 500 * iHasMetCount;
 	}
 
-	if (GC.getTechInfo(eTech).isGoldTrading())
+	if (kTech.isGoldTrading())
 	{
 		iValue += 200;
 
@@ -4853,7 +4815,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isOpenBordersTrading())
+	if (kTech.isOpenBordersTrading())
 	{
 		if (iHasMetCount > 0)
 		{
@@ -4863,64 +4825,55 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 			{
 				iValue += 400;
 			}
-/************************************************************************************************/
-/* REVOLUTION_MOD						 05/30/08								jdog5000	  */
-/*																							  */
-/* Revolution AI																				*/
-/************************************************************************************************/
 			if( isMinorCiv() && GC.getGame().isOption(GAMEOPTION_START_AS_MINORS) )
 			{
 				iValue += 250 + 120*iHasMetCount;
 			}
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isDefensivePactTrading())
+	if (kTech.isDefensivePactTrading())
 	{
 		iValue += 400;
 	}
 
-	if (GC.getTechInfo(eTech).isPermanentAllianceTrading() && (GC.getGame().isOption(GAMEOPTION_PERMANENT_ALLIANCES)))
+	if (kTech.isPermanentAllianceTrading() && GC.getGame().isOption(GAMEOPTION_PERMANENT_ALLIANCES))
 	{
 		iValue += 200;
 	}
 
-	if (GC.getTechInfo(eTech).isVassalStateTrading() && !(GC.getGame().isOption(GAMEOPTION_NO_VASSAL_STATES)))
+	if (kTech.isVassalStateTrading() && !GC.getGame().isOption(GAMEOPTION_NO_VASSAL_STATES))
 	{
 		iValue += 200;
 	}
 
 	// Tile improvement abilities
-	if (GC.getTechInfo(eTech).isBridgeBuilding())
+	if (kTech.isBridgeBuilding())
 	{
 		iValue += 400;
 	}
 
-	if (GC.getTechInfo(eTech).isIrrigation())
+	if (kTech.isIrrigation())
 	{
 		iValue += 400;
 	}
 
-	if (GC.getTechInfo(eTech).isIgnoreIrrigation())
+	if (kTech.isIgnoreIrrigation())
 	{
 		iValue += 500;
 	}
 
-	if (GC.getTechInfo(eTech).isWaterWork())
+	if (kTech.isWaterWork())
 	{
 		iValue += (600 * iCoastalCities);
 	}
 
-	const CvTechInfo& kTech = GC.getTechInfo(eTech);
 	iTempValue = 0;
 	if (kTech.isCanPassPeaks())
 	{
 		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 		{
-			CvPlot* pPlot = GC.getMap().plotByIndex(iI);
+			const CvPlot* pPlot = GC.getMap().plotByIndex(iI);
 			if (pPlot->isAsPeak() && pPlot->getOwner() != NO_PLAYER
 			&& GET_PLAYER(pPlot->getOwner()).getID() == getID())
 			{
@@ -5012,17 +4965,17 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	iValue += (GC.getTechInfo(eTech).getFeatureProductionModifier() * 2);
-	iValue += (GC.getTechInfo(eTech).getWorkerSpeedModifier() * 4);
-	iValue += (GC.getTechInfo(eTech).getTradeRoutes() * (std::max((getNumCities() + 2), iConnectedForeignCities) + 1) * ((bFinancialTrouble) ? 200 : 100));
+	iValue += (kTech.getFeatureProductionModifier() * 2);
+	iValue += (kTech.getWorkerSpeedModifier() * 4);
+	iValue += (kTech.getTradeRoutes() * (std::max((getNumCities() + 2), iConnectedForeignCities) + 1) * ((bFinancialTrouble) ? 200 : 100));
 
 	if ( AI_isDoVictoryStrategy(AI_VICTORY_DOMINATION4) )
 	{
-		iValue += (GC.getTechInfo(eTech).getHealth() * 350);
+		iValue += (kTech.getHealth() * 350);
 	}
 	else
 	{
-		iValue += (GC.getTechInfo(eTech).getHealth() * 200);
+		iValue += (kTech.getHealth() * 200);
 	}
 
 	for (iJ = 0; iJ < GC.getNumRouteInfos(); iJ++)
@@ -5032,12 +4985,12 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 	for (iJ = 0; iJ < NUM_DOMAIN_TYPES; iJ++)
 	{
-		iValue += (GC.getTechInfo(eTech).getDomainExtraMoves(iJ) * 200);
+		iValue += (kTech.getDomainExtraMoves(iJ) * 200);
 	}
 
 	for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 	{
-		if (GC.getTechInfo(eTech).isCommerceFlexible(iJ))
+		if (kTech.isCommerceFlexible(iJ))
 		{
 			iValue += 100;
 			if ((iJ == COMMERCE_CULTURE) && (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2)))
@@ -5049,7 +5002,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 	for (iJ = 0; iJ < GC.getNumTerrainInfos(); iJ++)
 	{
-		if (GC.getTechInfo(eTech).isTerrainTrade(iJ))
+		if (kTech.isTerrainTrade(iJ))
 		{
 			if (GC.getTerrainInfo((TerrainTypes)iJ).isWaterTerrain())
 			{
@@ -5112,11 +5065,11 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	{
 		if (GC.getTechInfo(eTech).getCommerceModifier(iI) != 0)
 		{
-			iValue += (GC.getTechInfo(eTech).getCommerceModifier(iI) * 100);
+			iValue += (kTech.getCommerceModifier(iI) * 100);
 		}
 
 		//Extra check for financially challenged AIs
-		if (iI == 0 && GC.getTechInfo(eTech).getCommerceModifier(iI) < 0)
+		if (iI == 0 && kTech.getCommerceModifier(iI) < 0)
 		{
 			if (AI_isFinancialTrouble())
 			{
@@ -5158,11 +5111,6 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 				for (int iK = 0; iK < GC.getNumTerrainInfos(); iK++)
 				{
 					iImprovementValue += (kImprovement.getTerrainMakesValid(iK) ? 50 : 0);
-/************************************************************************************************/
-/* Afforess					  Start		 05/22/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 					//Desert has negative defense
 					if (GC.getTerrainInfo((TerrainTypes)iK).getDefenseModifier() < 0)
 					{
@@ -5171,9 +5119,6 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 							iImprovementValue += 50;
 						}
 					}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 				}
 
 				for (int iK = 0; iK < GC.getNumFeatureInfos(); iK++)
@@ -5393,8 +5338,8 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 			int iRevealValue = 150;
 			iRevealValue += (AI_bonusVal((BonusTypes)iJ) * 50);
 
-			BonusClassTypes eBonusClass = (BonusClassTypes)GC.getBonusInfo((BonusTypes)iJ).getBonusClassType();
-			int iBonusClassTotal = (paiBonusClassRevealed[eBonusClass] + paiBonusClassUnrevealed[eBonusClass]);
+			const BonusClassTypes eBonusClass = (BonusClassTypes)GC.getBonusInfo((BonusTypes)iJ).getBonusClassType();
+			const int iBonusClassTotal = (paiBonusClassRevealed[eBonusClass] + paiBonusClassUnrevealed[eBonusClass]);
 
 			//iMultiplier is basically a desperation value
 			//it gets larger as the AI runs out of options
@@ -5429,7 +5374,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		// K-Mod: Value for enabling resources that are already revealed
 		else if (GC.getBonusInfo((BonusTypes)iJ).getTechCityTrade() == eTech &&	GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes)iJ).getTechReveal())))
 		{
-			int iOwned = countOwnedBonuses((BonusTypes)iJ);
+			const int iOwned = countOwnedBonuses((BonusTypes)iJ);
 			if (iOwned > 0)
 			{
 				int iEnableValue = 150;
@@ -5453,7 +5398,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 	/* ------------------ Unit Value  ------------------ */
 	bool bEnablesUnitWonder;
-	int iUnitValue = AI_techUnitValue( eTech, iPathLength, bEnablesUnitWonder );
+	const int iUnitValue = AI_techUnitValue( eTech, iPathLength, bEnablesUnitWonder );
 
 	if ( gPlayerLogLevel > 2 )
 	{
@@ -5465,7 +5410,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 	if (bEnablesUnitWonder)
 	{
-		int iWonderRandom = ((bAsync) ? GC.getASyncRand().get(400, "AI Research Wonder Unit ASYNC") : GC.getGame().getSorenRandNum(400, "AI Research Wonder Unit"));
+		const int iWonderRandom = ((bAsync) ? GC.getASyncRand().get(400, "AI Research Wonder Unit ASYNC") : GC.getGame().getSorenRandNum(400, "AI Research Wonder Unit"));
 		iValue += iWonderRandom + (bCapitalAlone ? 200 : 0);
 
 		iRandomMax += 400;
@@ -5474,7 +5419,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 	/* ------------------ Building Value  ------------------ */
 	bool bEnablesWonder;
-	int iBuildingValue = AI_techBuildingValue( eTech, iPathLength, bEnablesWonder );
+	const int iBuildingValue = AI_techBuildingValue( eTech, iPathLength, bEnablesWonder );
 
 	if ( gPlayerLogLevel > 2 )
 	{
@@ -5488,7 +5433,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	// if it gives at least one wonder
 	if (bEnablesWonder)
 	{
-		int iWonderRandom = ((bAsync) ? GC.getASyncRand().get(800, "AI Research Wonder Building ASYNC") : GC.getGame().getSorenRandNum(800, "AI Research Wonder Building"));
+		const int iWonderRandom = ((bAsync) ? GC.getASyncRand().get(800, "AI Research Wonder Building ASYNC") : GC.getGame().getSorenRandNum(800, "AI Research Wonder Building"));
 		iValue += (500 + iWonderRandom) / (bAdvancedStart ? 5 : 1);
 
 		iRandomMax += 800;
@@ -5548,7 +5493,6 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		iRandomMax += 200;
 	}
 
-
 	/* ------------------ Process Value  ------------------ */
 	bool bIsGoodProcess = false;
 	for (iJ = 0; iJ < GC.getNumProcessInfos(); iJ++)
@@ -5606,7 +5550,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		{
 			iValue += 200;
 
-			CivicTypes eCivic = getCivics((CivicOptionTypes)(GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType()));
+			const CivicTypes eCivic = getCivics((CivicOptionTypes)(GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType()));
 			if (NO_CIVIC != eCivic)
 			{
 				int iCurrentCivicValue = AI_civicValue(eCivic);
@@ -5631,7 +5575,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 				{
 					logBBAI("Player %d - tech %S enabled civic %S with value %d vs current %d - additional tech value %d",
 							getID(),
-							GC.getTechInfo(eTech).getDescription(),
+							kTech.getDescription(),
 							GC.getCivicInfo((CivicTypes)iJ).getDescription(),
 							iNewCivicValue,
 							iCurrentCivicValue,
@@ -5649,7 +5593,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 			int iPotentialReligions = 0;
 			for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 			{
-				TechTypes eReligionTech = (TechTypes)GC.getReligionInfo((ReligionTypes)iJ).getTechPrereq();
+				const TechTypes eReligionTech = (TechTypes)GC.getReligionInfo((ReligionTypes)iJ).getTechPrereq();
 				if (kTeam.isHasTech(eReligionTech))
 				{
 					if (!(GC.getGame().isReligionSlotTaken((ReligionTypes)iJ)))
@@ -5682,7 +5626,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 /************************************************************************************************/
 							if(canFoundReligion())
 							{
-								ReligionTypes eFavorite = (ReligionTypes)GC.getLeaderHeadInfo(getLeaderType()).getFavoriteReligion();
+								const ReligionTypes eFavorite = (ReligionTypes)GC.getLeaderHeadInfo(getLeaderType()).getFavoriteReligion();
 								if (eFavorite != NO_RELIGION)
 								{
 									if (iJ == eFavorite)
@@ -5776,7 +5720,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 			int iFreeStuffValue = 0;
 
-			if ((UnitTypes)GC.getTechInfo(eTech).getFirstFreeUnit() != NO_UNIT)
+			if ((UnitTypes)kTech.getFirstFreeUnit() != NO_UNIT)
 			{
 				int iGreatPeopleRandom = ((bAsync) ? GC.getASyncRand().get(3200, "AI Research Great People ASYNC") : GC.getGame().getSorenRandNum(3200, "AI Research Great People"));
 				iFreeStuffValue += iGreatPeopleRandom;
@@ -5794,9 +5738,9 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 			//	Free techs are REALLY valuable - as an estimate we assume they are at least as valuable as the enabling tech
 			//	since we'll be able to choose anything accessible once it is researched and up to twice as much as that on a
 			//	random scale
-			if ( GC.getTechInfo(eTech).getFirstFreeTechs() > 0 )
+			if ( kTech.getFirstFreeTechs() > 0 )
 			{
-				int	iPercentageMultiplier = GC.getTechInfo(eTech).getFirstFreeTechs()*((bCapitalAlone ? 150 : 100) + (bAsync ? GC.getASyncRand().get(100, "AI Research Free Tech ASYNC") : GC.getGame().getSorenRandNum(100, "AI Research Free Tech")));
+				int	iPercentageMultiplier = kTech.getFirstFreeTechs()*((bCapitalAlone ? 150 : 100) + (bAsync ? GC.getASyncRand().get(100, "AI Research Free Tech ASYNC") : GC.getGame().getSorenRandNum(100, "AI Research Free Tech")));
 
 				iFreeStuffValue += (iValue*iPercentageMultiplier)/100;
 			}
@@ -5816,17 +5760,17 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	iValue += GC.getTechInfo(eTech).getAIWeight();
+	iValue += kTech.getAIWeight();
 
 	if (!isHuman() && iValue > 0)
 	{
 		for (int iJ = 0; iJ < GC.getNumFlavorTypes(); iJ++)
 		{
-			iValue += (AI_getFlavorValue((FlavorTypes)iJ) * GC.getTechInfo(eTech).getFlavorValue(iJ) * 20);
+			iValue += (AI_getFlavorValue((FlavorTypes)iJ) * kTech.getFlavorValue(iJ) * 20);
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isRepeat())
+	if (kTech.isRepeat())
 	{
 		iValue /= 10;
 	}
@@ -5836,7 +5780,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		logBBAI("Player %d (%S) raw value for tech %S is %d",
 				getID(),
 				getCivilizationDescription(0),
-				GC.getTechInfo(eTech).getDescription(),
+				kTech.getDescription(),
 				iValue);
 	}
 
@@ -5849,7 +5793,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	//Tech Whore
 	if (!GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING))
 	{
-		if (GC.getTechInfo(eTech).isTechTrading() || kTeam.isTechTrading())
+		if (kTech.isTechTrading() || kTeam.isTechTrading())
 		{
 			if (((bAsync) ? GC.getASyncRand().get(100, "AI Tech Whore ASYNC") : GC.getGame().getSorenRandNum(100, "AI Tech Whore")) < (GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING) ? 20 : 10))
 			{
@@ -5872,14 +5816,11 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 					}
 				}
 
-				if (iKnownCount == 0)
+				if (iKnownCount == 0 && iPossibleKnownCount > 2)
 				{
-					if (iPossibleKnownCount > 2)
-					{
-						int iTradeModifier = std::min(150, 25 * (iPossibleKnownCount - 2));
-						iValue *= 100 + iTradeModifier;
-						iValue /= 100;
-					}
+					const int iTradeModifier = std::min(150, 25 * (iPossibleKnownCount - 2));
+					iValue *= 100 + iTradeModifier;
+					iValue /= 100;
 				}
 			}
 		}
@@ -5887,12 +5828,12 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 
 	if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3))
 	{
-		int iCVValue = AI_cultureVictoryTechValue(eTech);
+		const int iCVValue = AI_cultureVictoryTechValue(eTech);
 		iValue *= (iCVValue + 10);
 		iValue /= ((iCVValue < 100) ? 400 : 100);
 	}
 
-	int iRandomFactor = ((bAsync) ? GC.getASyncRand().get(20, "AI Research ASYNC") : GC.getGame().getSorenRandNum(20, "AI Research"));
+	const int iRandomFactor = ((bAsync) ? GC.getASyncRand().get(20, "AI Research ASYNC") : GC.getGame().getSorenRandNum(20, "AI Research"));
 	iValue += (iValue*(iRandomFactor-10))/100;
 
 	iValue = std::max(1, iValue);
@@ -8353,8 +8294,8 @@ PlayerVoteTypes CvPlayerAI::AI_diploVote(const VoteSelectionSubData& kVoteData, 
 			bValid = false;
 
 			FAssert(kVoteData.ePlayer != NO_PLAYER);
-			CvPlayer& kPlayer = GET_PLAYER(kVoteData.ePlayer);
-			CvCity* pCity = kPlayer.getCity(kVoteData.iCityId);
+			const CvPlayer& kPlayer = GET_PLAYER(kVoteData.ePlayer);
+			const CvCity* pCity = kPlayer.getCity(kVoteData.iCityId);
 			if (NULL != pCity && NO_PLAYER != kVoteData.eOtherPlayer && kVoteData.eOtherPlayer != pCity->getOwner())
 			{
 				if (!bPropose && eSecretaryGeneral == getTeam() || GET_PLAYER(kVoteData.eOtherPlayer).getTeam() == getTeam())
@@ -8387,22 +8328,20 @@ PlayerVoteTypes CvPlayerAI::AI_diploVote(const VoteSelectionSubData& kVoteData, 
 }
 
 
-int CvPlayerAI::AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pList, bool bIgnoreAnnual, int iChange) const
+int64_t CvPlayerAI::AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pList, bool bIgnoreAnnual, int iChange) const
 {
-	CLLNode<TradeData>* pNode;
 	CvCity* pCity;
-	int iValue;
 
 	FAssertMsg(ePlayer != getID(), "shouldn't call this function on ourselves");
 
-	iValue = 0;
+	int64_t iValue = 0;
 
 	if (atWar(getTeam(), GET_PLAYER(ePlayer).getTeam()))
 	{
 		iValue += GET_TEAM(getTeam()).AI_endWarVal(GET_PLAYER(ePlayer).getTeam());
 	}
 
-	for (pNode = pList->head(); pNode; pNode = pList->next(pNode))
+	for (CLLNode<TradeData>* pNode = pList->head(); pNode; pNode = pList->next(pNode))
 	{
 		FAssertMsg(!(pNode->m_data.m_bHidden), "(pNode->m_data.m_bHidden) did not return false as expected");
 
@@ -8421,7 +8360,7 @@ int CvPlayerAI::AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pLis
 			}
 			break;
 		case TRADE_CITIES:
-			pCity = GET_PLAYER(ePlayer).getCity(pNode->m_data.m_iData);
+			pCity = GET_PLAYER(ePlayer).getCity((int)pNode->m_data.m_iData);
 			if (pCity != NULL)
 			{
 				iValue += AI_cityTradeVal(pCity);
@@ -8475,11 +8414,6 @@ int CvPlayerAI::AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pLis
 		case TRADE_RELIGION:
 			iValue += AI_religionTradeVal(((ReligionTypes)(pNode->m_data.m_iData)), ePlayer);
 			break;
-/************************************************************************************************/
-/* Afforess					  Start		 06/16/10											   */
-/*																							  */
-/* Advanced Diplomacy																		   */
-/************************************************************************************************/
 		case TRADE_EMBASSY:
 			iValue += GET_TEAM(getTeam()).AI_embassyTradeVal(GET_PLAYER(ePlayer).getTeam());
 			break;
@@ -8506,7 +8440,7 @@ int CvPlayerAI::AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pLis
 			break;
 		case TRADE_WORKER:
 			{
-				CvUnit* pUnit = GET_PLAYER(ePlayer).getUnit(pNode->m_data.m_iData);
+				const CvUnit* pUnit = GET_PLAYER(ePlayer).getUnit((int)pNode->m_data.m_iData);
 				if (pUnit != NULL)
 				{
 					iValue += AI_workerTradeVal(pUnit);
@@ -8515,16 +8449,13 @@ int CvPlayerAI::AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pLis
 			break;
 		case TRADE_MILITARY_UNIT:
 			{
-				CvUnit* pUnit = GET_PLAYER(ePlayer).getUnit(pNode->m_data.m_iData);
+				const CvUnit* pUnit = GET_PLAYER(ePlayer).getUnit((int)pNode->m_data.m_iData);
 				if (pUnit != NULL)
 				{
 					iValue += AI_militaryUnitTradeVal(pUnit);
 				}
 			}
 			break;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 		}
 	}
 
@@ -8534,11 +8465,9 @@ int CvPlayerAI::AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pLis
 
 bool CvPlayerAI::AI_goldDeal(const CLinkList<TradeData>* pList) const
 {
-	CLLNode<TradeData>* pNode;
-
-	for (pNode = pList->head(); pNode; pNode = pList->next(pNode))
+	for (CLLNode<TradeData>* pNode = pList->head(); pNode; pNode = pList->next(pNode))
 	{
-		FAssert(!(pNode->m_data.m_bHidden));
+		FAssert(!pNode->m_data.m_bHidden);
 
 		switch (pNode->m_data.m_eItemType)
 		{
@@ -8559,9 +8488,6 @@ bool CvPlayerAI::AI_goldDeal(const CLinkList<TradeData>* pList) const
 /// considering proposals from the human player made in the diplomacy window as well as a couple other places.
 bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData>* pTheirList, const CLinkList<TradeData>* pOurList, int iChange) const
 {
-	CLLNode<TradeData>* pNode;
-	int iThreshold;
-
 	FAssertMsg(ePlayer != getID(), "shouldn't call this function on ourselves");
 
 	if (AI_goldDeal(pTheirList) && AI_goldDeal(pOurList))
@@ -8571,7 +8497,7 @@ bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData
 
 	if (iChange > -1)
 	{
-		for (pNode = pOurList->head(); pNode; pNode = pOurList->next(pNode))
+		for (CLLNode<TradeData>* pNode = pOurList->head(); pNode; pNode = pOurList->next(pNode))
 		{
 			if (getTradeDenial(ePlayer, pNode->m_data) != NO_DENIAL)
 			{
@@ -8584,12 +8510,8 @@ bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData
 	{
 		return true;
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 04/02/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	for (pNode = pOurList->head(); pNode; pNode = pOurList->next(pNode))
+
+	for (CLLNode<TradeData>* pNode = pOurList->head(); pNode; pNode = pOurList->next(pNode))
 	{
 		if( pNode->m_data.m_eItemType == TRADE_CORPORATION )
 		{
@@ -8599,17 +8521,9 @@ bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData
 			}
 		}
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  10/23/09								jdog5000	  */
-/*																							  */
-/* Diplomacy AI																				 */
-/************************************************************************************************/
 	// Don't always accept giving deals, TRADE_VASSAL and TRADE_SURRENDER come with strings attached
 	bool bVassalTrade = false;
-	for (pNode = pTheirList->head(); pNode; pNode = pTheirList->next(pNode))
+	for (CLLNode<TradeData>* pNode = pTheirList->head(); pNode; pNode = pTheirList->next(pNode))
 	{
 		if( pNode->m_data.m_eItemType == TRADE_VASSAL )
 		{
@@ -8647,18 +8561,11 @@ bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData
 			return true;
 		}
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 
-	int iOurValue = GET_PLAYER(ePlayer).AI_dealVal(getID(), pOurList, false, iChange);
-	int iTheirValue = AI_dealVal(ePlayer, pTheirList, false, iChange);
-/************************************************************************************************/
-/* Afforess					  Start		 5/30/11												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	for (pNode = pOurList->head(); pNode; pNode = pOurList->next(pNode))
+	int64_t iOurValue = GET_PLAYER(ePlayer).AI_dealVal(getID(), pOurList, false, iChange);
+	const int64_t iTheirValue = AI_dealVal(ePlayer, pTheirList, false, iChange);
+
+	for (CLLNode<TradeData>* pNode = pOurList->head(); pNode; pNode = pOurList->next(pNode))
 	{
 		if( pNode->m_data.m_eItemType == TRADE_CITIES )
 		{
@@ -8679,9 +8586,6 @@ bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData
 			}
 		}
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	if (iOurValue > 0 && 0 == pTheirList->getLength() && 0 == iTheirValue)
 	{
 		if (GET_TEAM(getTeam()).isVassal(GET_PLAYER(ePlayer).getTeam()) && CvDeal::isVassalTributeDeal(pOurList))
@@ -8711,22 +8615,14 @@ bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData
 			}
 		}
 
-		iThreshold = (GET_TEAM(getTeam()).AI_getHasMetCounter(GET_PLAYER(ePlayer).getTeam()) + 50);
+		int iThreshold = (GET_TEAM(getTeam()).AI_getHasMetCounter(GET_PLAYER(ePlayer).getTeam()) + 50);
 
 		iThreshold *= 2;
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  06/12/10								jdog5000	  */
-/*																							  */
-/* Diplomacy AI																				 */
-/************************************************************************************************/
 		if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).AI_isLandTarget(getTeam()))
 		{
 			iThreshold *= 3;
 		}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 
 		iThreshold *= (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getPower(false) + 100);
 		iThreshold /= (GET_TEAM(getTeam()).getPower(false) + 100);
@@ -8747,44 +8643,36 @@ bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData
 
 bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeData>* pTheirList, const CLinkList<TradeData>* pOurList, CLinkList<TradeData>* pTheirInventory, CLinkList<TradeData>* pOurInventory, CLinkList<TradeData>* pTheirCounter, CLinkList<TradeData>* pOurCounter) const
 {
-	CLLNode<TradeData>* pNode;
 	CLLNode<TradeData>* pBestNode;
-	CLLNode<TradeData>* pGoldPerTurnNode;
-	CLLNode<TradeData>* pGoldNode;
-	bool* pabBonusDeal;
 	CvCity* pCity;
-	bool bTheirGoldDeal;
-	bool bOurGoldDeal;
-	int iHumanDealWeight;
-	int iAIDealWeight;
-	int iGoldData;
-	int iGoldWeight;
-	int iWeight;
-	int iBestWeight;
+	int64_t iGoldData;
+	int64_t iGoldWeight;
+	int64_t iWeight;
+	int64_t iBestWeight;
 	int iValue;
 	int iBestValue;
 	int iI;
 
-	bTheirGoldDeal = AI_goldDeal(pTheirList);
-	bOurGoldDeal = AI_goldDeal(pOurList);
+	bool bTheirGoldDeal = AI_goldDeal(pTheirList);
+	bool bOurGoldDeal = AI_goldDeal(pOurList);
 
 	if (bOurGoldDeal && bTheirGoldDeal)
 	{
 		return false;
 	}
 
-	pabBonusDeal = new bool[GC.getNumBonusInfos()];
+	bool* pabBonusDeal = new bool[GC.getNumBonusInfos()];
 
 	for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
 		pabBonusDeal[iI] = false;
 	}
 
-	pGoldPerTurnNode = NULL;
-	pGoldNode = NULL;
+	CLLNode<TradeData>* pGoldPerTurnNode = NULL;
+	CLLNode<TradeData>* pGoldNode = NULL;
 
-	iHumanDealWeight = AI_dealVal(ePlayer, pTheirList);
-	iAIDealWeight = GET_PLAYER(ePlayer).AI_dealVal(getID(), pOurList);
+	int64_t iHumanDealWeight = AI_dealVal(ePlayer, pTheirList);
+	int64_t iAIDealWeight = GET_PLAYER(ePlayer).AI_dealVal(getID(), pOurList);
 
 	const int iGoldValuePercent = AI_goldTradeValuePercent();
 
@@ -8793,7 +8681,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 
 	bool bOfferingCity = false;
 	bool bReceivingCity = false;
-	for (pNode = pTheirList->head(); pNode; pNode = pTheirList->next(pNode))
+	for (CLLNode<TradeData>* pNode = pTheirList->head(); pNode; pNode = pTheirList->next(pNode))
 	{
 		if (pNode->m_data.m_eItemType == TRADE_CITIES)
 		{
@@ -8828,7 +8716,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 
 						if (GET_PLAYER(ePlayer).getTradeDenial(getID(), pNode->m_data) == NO_DENIAL)
 						{
-							pCity = GET_PLAYER(ePlayer).getCity(pNode->m_data.m_iData);
+							pCity = GET_PLAYER(ePlayer).getCity((int)pNode->m_data.m_iData);
 
 							if (pCity != NULL)
 							{
@@ -8885,36 +8773,23 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 			}
 		}
 
-		int iGoldWeight = iAIDealWeight - iHumanDealWeight;
+		iGoldWeight = iAIDealWeight - iHumanDealWeight;
 
-		if (iGoldWeight > 0)
+		if (iGoldWeight > 0 && pGoldNode)
 		{
-			if (pGoldNode)
+			iGoldData = iGoldWeight * 100;
+			iGoldData /= iGoldValuePercent;
+
+			if (iGoldData * iGoldValuePercent < iGoldWeight * 100)
 			{
-				iGoldData = iGoldWeight * 100;
-				iGoldData /= iGoldValuePercent;
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH					   09/17/09					 dilandau & jdog5000	  */
-/*																							  */
-/* Bugfix																						*/
-/************************************************************************************************/
-/* original bts code
-				if ((iGoldData * iGoldValuePercent) < iGoldWeight)
-*/
-				if ((iGoldData * iGoldValuePercent) < iGoldWeight * 100)
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH						END												  */
-/************************************************************************************************/
-				{
-					iGoldData++;
-				}
-				if (GET_PLAYER(ePlayer).AI_maxGoldTrade(getID()) >= iGoldData)
-				{
-					pGoldNode->m_data.m_iData = iGoldData;
-					iHumanDealWeight += (iGoldData * iGoldValuePercent) / 100;
-					pTheirCounter->insertAtEnd(pGoldNode->m_data);
-					pGoldNode = NULL;
-				}
+				iGoldData++;
+			}
+			if (GET_PLAYER(ePlayer).AI_maxGoldTrade(getID()) >= iGoldData)
+			{
+				pGoldNode->m_data.m_iData = iGoldData;
+				iHumanDealWeight += (iGoldData * iGoldValuePercent) / 100;
+				pTheirCounter->insertAtEnd(pGoldNode->m_data);
+				pGoldNode = NULL;
 			}
 		}
 
@@ -8946,18 +8821,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 						iWeight += GET_TEAM(getTeam()).AI_techTradeVal((TechTypes)(pNode->m_data.m_iData), GET_PLAYER(ePlayer).getTeam());
 						break;
 					case TRADE_RESOURCES:
-						/************************************************************************************************/
-						/* Afforess					  Start		 5/30/11												*/
-						/*																							  */
-						/*																							  */
-						/************************************************************************************************/
-						/*
-						if (!pabBonusDeal[pNode->m_data.m_iData])
-						 */
 						if (!bOfferingCity && !pabBonusDeal[pNode->m_data.m_iData])
-						/************************************************************************************************/
-						/* Afforess						 END															*/
-						/************************************************************************************************/
 						{
 							if (GET_PLAYER(ePlayer).getNumTradeableBonuses((BonusTypes)(pNode->m_data.m_iData)) > 1)
 							{
@@ -9001,11 +8865,6 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 				}
 			}
 		}
-/************************************************************************************************/
-/* Afforess					  Start		 08/24/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 		for (pNode = pTheirInventory->head(); pNode && iAIDealWeight > iHumanDealWeight; pNode = pTheirInventory->next(pNode))
 		{
 			if (!pNode->m_data.m_bOffering && !pNode->m_data.m_bHidden)
@@ -9039,10 +8898,10 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 
 					if (getTradeDenial(ePlayer, pNode->m_data) == NO_DENIAL)
 					{
-						CvUnit* pUnit = getUnit(pNode->m_data.m_iData);
+						const CvUnit* pUnit = getUnit((int)pNode->m_data.m_iData);
 						if (pUnit != NULL)
 						{
-							iWeight = std::max(GET_PLAYER(ePlayer).AI_militaryUnitTradeVal(pUnit), GET_PLAYER(ePlayer).AI_workerTradeVal(pUnit));
+							iWeight = std::max<int64_t>(GET_PLAYER(ePlayer).AI_militaryUnitTradeVal(pUnit), GET_PLAYER(ePlayer).AI_workerTradeVal(pUnit));
 							if (iWeight > 0)
 							{
 								iHumanDealWeight += iWeight;
@@ -9053,9 +8912,6 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 				}
 			}
 		}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 		iGoldWeight = iAIDealWeight - iHumanDealWeight;
 
 		if (iGoldWeight > 0)
@@ -9070,7 +8926,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 					iGoldData++;
 				}
 
-				iGoldData = std::min(iGoldData, GET_PLAYER(ePlayer).AI_maxGoldTrade(getID()));
+				iGoldData = std::min<int64_t>(iGoldData, GET_PLAYER(ePlayer).AI_maxGoldTrade(getID()));
 
 				if (iGoldData > 0)
 				{
@@ -9081,18 +8937,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 				}
 			}
 		}
-/************************************************************************************************/
-/* Afforess					  Start		 5/30/11												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-/*
- 		if (iAIDealWeight > iHumanDealWeight)
- */
 		if (!bOfferingCity && iAIDealWeight > iHumanDealWeight)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 		{
 			if (pGoldPerTurnNode)
 			{
@@ -9103,7 +8948,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 					iGoldData++;
 				}
 
-				iGoldData = std::min(iGoldData, GET_PLAYER(ePlayer).AI_maxGoldPerTurnTrade(getID()));
+				iGoldData = std::min<int64_t>(iGoldData, GET_PLAYER(ePlayer).AI_maxGoldPerTurnTrade(getID()));
 
 				if (iGoldData > 0)
 				{
@@ -9114,55 +8959,39 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 				}
 			}
 		}
-/************************************************************************************************/
-/* Afforess					  Start		 5/30/11												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 		if (!bOfferingCity)
 		{
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-		for (pNode = pTheirInventory->head(); pNode && iAIDealWeight > iHumanDealWeight; pNode = pTheirInventory->next(pNode))
-		{
-			if (!pNode->m_data.m_bOffering && !pNode->m_data.m_bHidden)
+			for (pNode = pTheirInventory->head(); pNode && iAIDealWeight > iHumanDealWeight; pNode = pTheirInventory->next(pNode))
 			{
-				if (pNode->m_data.m_eItemType == TRADE_RESOURCES)
+				if (!pNode->m_data.m_bOffering && !pNode->m_data.m_bHidden)
 				{
-					FAssert(GET_PLAYER(ePlayer).canTradeItem(getID(), pNode->m_data));
-
-					if (GET_PLAYER(ePlayer).getTradeDenial(getID(), pNode->m_data) == NO_DENIAL)
+					if (pNode->m_data.m_eItemType == TRADE_RESOURCES)
 					{
-						iWeight = 0;
+						FAssert(GET_PLAYER(ePlayer).canTradeItem(getID(), pNode->m_data));
 
-						if (!pabBonusDeal[pNode->m_data.m_iData])
+						if (GET_PLAYER(ePlayer).getTradeDenial(getID(), pNode->m_data) == NO_DENIAL)
 						{
-							if (GET_PLAYER(ePlayer).getNumTradeableBonuses((BonusTypes)(pNode->m_data.m_iData)) > 0)
+							iWeight = 0;
+
+							if (!pabBonusDeal[pNode->m_data.m_iData])
 							{
-								iWeight += AI_bonusTradeVal(((BonusTypes)(pNode->m_data.m_iData)), ePlayer, 1);
-								pabBonusDeal[pNode->m_data.m_iData] = true;
+								if (GET_PLAYER(ePlayer).getNumTradeableBonuses((BonusTypes)(pNode->m_data.m_iData)) > 0)
+								{
+									iWeight += AI_bonusTradeVal(((BonusTypes)(pNode->m_data.m_iData)), ePlayer, 1);
+									pabBonusDeal[pNode->m_data.m_iData] = true;
+								}
 							}
-						}
 
-						if (iWeight > 0)
-						{
-							iHumanDealWeight += iWeight;
-							pTheirCounter->insertAtEnd(pNode->m_data);
+							if (iWeight > 0)
+							{
+								iHumanDealWeight += iWeight;
+								pTheirCounter->insertAtEnd(pNode->m_data);
+							}
 						}
 					}
 				}
 			}
 		}
-/************************************************************************************************/
-/* Afforess					  Start		 5/30/11												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-		}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	}
 	else if (iHumanDealWeight > iAIDealWeight)
 	{
@@ -9215,7 +9044,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 
 						if (getTradeDenial(ePlayer, pNode->m_data) == NO_DENIAL)
 						{
-							pCity = getCity(pNode->m_data.m_iData);
+							pCity = getCity((int)pNode->m_data.m_iData);
 
 							if (pCity != NULL)
 							{
@@ -9277,20 +9106,17 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 
 		iGoldWeight = iHumanDealWeight - iAIDealWeight;
 
-		if (iGoldWeight > 0)
+		if (iGoldWeight > 0 && pGoldNode)
 		{
-			if (pGoldNode)
-			{
-				int iGoldData = iGoldWeight * 100;
-				iGoldData /= iGoldValuePercent;
+			int64_t iGoldData = iGoldWeight * 100;
+			iGoldData /= iGoldValuePercent;
 
-				if (AI_maxGoldTrade(ePlayer) >= iGoldData)
-				{
-					pGoldNode->m_data.m_iData = iGoldData;
-					iAIDealWeight += ((iGoldData * iGoldValuePercent) / 100);
-					pOurCounter->insertAtEnd(pGoldNode->m_data);
-					pGoldNode = NULL;
-				}
+			if (AI_maxGoldTrade(ePlayer) >= iGoldData)
+			{
+				pGoldNode->m_data.m_iData = iGoldData;
+				iAIDealWeight += ((iGoldData * iGoldValuePercent) / 100);
+				pOurCounter->insertAtEnd(pGoldNode->m_data);
+				pGoldNode = NULL;
 			}
 		}
 
@@ -9333,13 +9159,10 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 						break;
 					}
 
-					if (iWeight > 0)
+					if (iWeight > 0 && iHumanDealWeight >= (iAIDealWeight + iWeight))
 					{
-						if (iHumanDealWeight >= (iAIDealWeight + iWeight))
-						{
-							iAIDealWeight += iWeight;
-							pOurCounter->insertAtEnd(pNode->m_data);
-						}
+						iAIDealWeight += iWeight;
+						pOurCounter->insertAtEnd(pNode->m_data);
 					}
 				}
 			}
@@ -9357,23 +9180,15 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 					{
 						iWeight = GET_TEAM(GET_PLAYER(ePlayer).getTeam()).AI_mapTradeVal(getTeam());
 
-						if (iWeight > 0)
+						if (iWeight > 0 && iHumanDealWeight >= iAIDealWeight + iWeight)
 						{
-							if (iHumanDealWeight >= (iAIDealWeight + iWeight))
-							{
-								iAIDealWeight += iWeight;
-								pOurCounter->insertAtEnd(pNode->m_data);
-							}
+							iAIDealWeight += iWeight;
+							pOurCounter->insertAtEnd(pNode->m_data);
 						}
 					}
 				}
 			}
 		}
-/************************************************************************************************/
-/* Afforess					  Start		 04/06/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 		for (pNode = pOurInventory->head(); pNode && iHumanDealWeight > iAIDealWeight; pNode = pOurInventory->next(pNode))
 		{
 			if (!pNode->m_data.m_bOffering && !pNode->m_data.m_bHidden)
@@ -9410,7 +9225,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 
 					if (getTradeDenial(ePlayer, pNode->m_data) == NO_DENIAL)
 					{
-						CvUnit* pUnit = getUnit(pNode->m_data.m_iData);
+						CvUnit* pUnit = getUnit((int)pNode->m_data.m_iData);
 						if (pUnit != NULL)
 						{
 							iWeight = AI_militaryUnitTradeVal(pUnit);
@@ -9427,49 +9242,40 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 				}
 			}
 		}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 		iGoldWeight = iHumanDealWeight - iAIDealWeight;
-		if (iGoldWeight > 0)
+		if (iGoldWeight > 0 && pGoldNode)
 		{
-			if (pGoldNode)
+			iGoldData = iGoldWeight * 100;
+			iGoldData /= AI_goldTradeValuePercent();
+
+			iGoldData = std::min<int64_t>(iGoldData, AI_maxGoldTrade(ePlayer));
+
+			if (iGoldData > 0)
 			{
-				iGoldData = iGoldWeight * 100;
-				iGoldData /= AI_goldTradeValuePercent();
-
-				iGoldData = std::min(iGoldData, AI_maxGoldTrade(ePlayer));
-
-				if (iGoldData > 0)
-				{
-					pGoldNode->m_data.m_iData = iGoldData;
-					iAIDealWeight += (iGoldData * AI_goldTradeValuePercent()) / 100;
-					pOurCounter->insertAtEnd(pGoldNode->m_data);
-					pGoldNode = NULL;
-				}
+				pGoldNode->m_data.m_iData = iGoldData;
+				iAIDealWeight += (iGoldData * AI_goldTradeValuePercent()) / 100;
+				pOurCounter->insertAtEnd(pGoldNode->m_data);
+				pGoldNode = NULL;
 			}
 		}
 
-		if (iHumanDealWeight > iAIDealWeight)
+		if (iHumanDealWeight > iAIDealWeight && pGoldPerTurnNode)
 		{
-			if (pGoldPerTurnNode)
+			iGoldData = 0;
+
+			while (GET_PLAYER(ePlayer).AI_goldPerTurnTradeVal(iGoldData + 1) <= (iHumanDealWeight - iAIDealWeight))
 			{
-				iGoldData = 0;
+				iGoldData++;
+			}
 
-				while (GET_PLAYER(ePlayer).AI_goldPerTurnTradeVal(iGoldData + 1) <= (iHumanDealWeight - iAIDealWeight))
-				{
-					iGoldData++;
-				}
+			iGoldData = std::min<int64_t>(iGoldData, AI_maxGoldPerTurnTrade(ePlayer));
 
-				iGoldData = std::min(iGoldData, AI_maxGoldPerTurnTrade(ePlayer));
-
-				if (iGoldData > 0)
-				{
-					pGoldPerTurnNode->m_data.m_iData = iGoldData;
-					iAIDealWeight += GET_PLAYER(ePlayer).AI_goldPerTurnTradeVal(pGoldPerTurnNode->m_data.m_iData);
-					pOurCounter->insertAtEnd(pGoldPerTurnNode->m_data);
-					pGoldPerTurnNode = NULL;
-				}
+			if (iGoldData > 0)
+			{
+				pGoldPerTurnNode->m_data.m_iData = iGoldData;
+				iAIDealWeight += GET_PLAYER(ePlayer).AI_goldPerTurnTradeVal(pGoldPerTurnNode->m_data.m_iData);
+				pOurCounter->insertAtEnd(pGoldPerTurnNode->m_data);
+				pGoldPerTurnNode = NULL;
 			}
 		}
 	}
@@ -9543,9 +9349,9 @@ int CvPlayerAI::AI_maxGoldPerTurnTrade(PlayerTypes ePlayer) const
 }
 
 
-int CvPlayerAI::AI_goldPerTurnTradeVal(int iGoldPerTurn) const
+int64_t CvPlayerAI::AI_goldPerTurnTradeVal(int64_t iGoldPerTurn) const
 {
-	int iValue = iGoldPerTurn * getTreatyLength();
+	int64_t iValue = iGoldPerTurn * getTreatyLength();
 	iValue *= AI_goldTradeValuePercent();
 	iValue /= 100;
 
@@ -9556,8 +9362,8 @@ int CvPlayerAI::AI_bonusVal(BonusTypes eBonus, int iChange, bool bForTrade) cons
 {
 	PROFILE_FUNC();
 
-	int iBonusCount = getNumAvailableBonuses(eBonus);
-	bool bAssumeHasBonusChanges = (iChange == 0 || iChange == 1 && iBonusCount == 0 || iChange == -1 && iBonusCount == 1);
+	const int iBonusCount = getNumAvailableBonuses(eBonus);
+	const bool bAssumeHasBonusChanges = (iChange == 0 || iChange == 1 && iBonusCount == 0 || iChange == -1 && iBonusCount == 1);
 	int iValue = 0;
 
 	if (bAssumeHasBonusChanges)
@@ -10702,11 +10508,9 @@ DenialTypes CvPlayerAI::AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const
 }
 
 
-int CvPlayerAI::AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer) const
+int64_t CvPlayerAI::AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer) const
 {
 	CvDeal* pLoopDeal;
-	int iModifier;
-	int iValue;
 	int iLoop;
 
 	FAssertMsg(ePlayer != getID(), "shouldn't call this function on ourselves");
@@ -10715,10 +10519,10 @@ int CvPlayerAI::AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer
 	FAssertMsg(GET_TEAM(eTradeTeam).isAlive(), "GET_TEAM(eWarTeam).isAlive is expected to be true");
 	FAssertMsg(!atWar(eTradeTeam, GET_PLAYER(ePlayer).getTeam()), "eTeam should be at peace with eWarTeam");
 
-	iValue = (50 + (GC.getGame().getGameTurn() / 2));
+	int64_t iValue = (50 + (GC.getGame().getGameTurn() / 2));
 	iValue += (GET_TEAM(eTradeTeam).getNumCities() * 5);
 
-	iModifier = 0;
+	int iModifier = 0;
 
 	switch (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).AI_getAttitude(eTradeTeam))
 	{
@@ -10790,7 +10594,7 @@ int CvPlayerAI::AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer
 
 	if (isHuman())
 	{
-		return std::max(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
+		return std::max<int64_t>(iValue, GC.getDefineINT("DIPLOMACY_VALUE_REMAINDER"));
 	}
 	else
 	{
@@ -16872,7 +16676,7 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 							{
 								SpecialistTypes theGreatSpecialistTarget = (SpecialistTypes)0;
 
-								CvCity* pCity = pSpyPlot->getPlotCity();
+								const CvCity* pCity = pSpyPlot->getPlotCity();
 								if (NULL != pCity)
 								{
 									//loop through all great specialist types
@@ -16900,7 +16704,7 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 									}
 								}
 
-								int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
+								const int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
 
 								if (iValue > iBestValue)
 								{
@@ -16926,7 +16730,7 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 						const CvEspionageMissionInfo& kMissionInfo = GC.getEspionageMissionInfo((EspionageMissionTypes)iMission);
 						if (kMissionInfo.getCounterespionageNumTurns() > 0)
 						{
-							int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
+							const int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, -1);
 
 							if (iValue > iBestValue)
 							{
@@ -16949,7 +16753,7 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 					{
 						for (int iTech = 0; iTech < GC.getNumTechInfos(); iTech++)
 						{
-							TechTypes eTech = (TechTypes)iTech;
+							const TechTypes eTech = (TechTypes)iTech;
 							int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, eTech);
 
 							iValue *= 2; //Increase AI weight of techvalues TSHEEP
@@ -17000,10 +16804,10 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 	{
 		if (pPlot->getOwner() == eTargetPlayer)
 		{
-			ImprovementTypes eImprovement = pPlot->getImprovementType();
+			const ImprovementTypes eImprovement = pPlot->getImprovementType();
 			if (eImprovement != NO_IMPROVEMENT)
 			{
-				BonusTypes eBonus = pPlot->getNonObsoleteBonusType(GET_PLAYER(eTargetPlayer).getTeam());
+				const BonusTypes eBonus = pPlot->getNonObsoleteBonusType(GET_PLAYER(eTargetPlayer).getTeam());
 				if (NO_BONUS != eBonus)
 				{
 					iValue += GET_PLAYER(eTargetPlayer).AI_bonusVal(eBonus, -1);
@@ -17108,15 +16912,14 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 		*/
 		SpecialistTypes theGreatSpecialistTarget = (SpecialistTypes)0;
 
-		CvCity* pCity = pPlot->getPlotCity();
+		const CvCity* pCity = pPlot->getPlotCity();
 		if (NULL != pCity)
 		{
 			for (int iSpecialist = 7; iSpecialist < GC.getNumSpecialistInfos(); iSpecialist++)
 			{
-				SpecialistTypes tempSpecialist = (SpecialistTypes)0;
-				if (pCity->getFreeSpecialistCount((SpecialistTypes)iSpecialist) > 0)
+				const SpecialistTypes tempSpecialist = (SpecialistTypes)iSpecialist;
+				if (pCity->getFreeSpecialistCount(tempSpecialist) > 0)
 				{
-					tempSpecialist = (SpecialistTypes)iSpecialist;
 					if (tempSpecialist > theGreatSpecialistTarget)
 					{
 						theGreatSpecialistTarget = tempSpecialist;
@@ -17169,7 +16972,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 		iValue += iCounterValue;
 
 		//TSHEEP - Make Counterespionage matter
-		CvCity* pCity = pPlot->getPlotCity();
+		const CvCity* pCity = pPlot->getPlotCity();
 
 		if (NULL != pCity)
 		{
@@ -17195,7 +16998,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 
 	if (bMalicious && GC.getEspionageMissionInfo(eMission).getCityInsertCultureAmountFactor() > 0)
 	{
-		CvCity* pCity = pPlot->getPlotCity();
+		const CvCity* pCity = pPlot->getPlotCity();
 		if (NULL != pCity)
 		{
 			if (pCity->getOwner() != getID())
@@ -17273,7 +17076,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 	{
 		if (iCost < GET_TEAM(getTeam()).getResearchLeft((TechTypes)iData) * 4 / 3)
 		{
-			int iTempValue = GET_TEAM(getTeam()).AI_techTradeVal((TechTypes)iData, GET_PLAYER(eTargetPlayer).getTeam());
+			int64_t iTempValue = GET_TEAM(getTeam()).AI_techTradeVal((TechTypes)iData, GET_PLAYER(eTargetPlayer).getTeam());
 
 			if( GET_TEAM(getTeam()).getBestKnownTechScorePercent() < 85 )
 			{
@@ -17312,7 +17115,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 
 	if (bMalicious && GC.getEspionageMissionInfo(eMission).isNuke())
 	{
-		CvCity* pCity = pPlot->getPlotCity();
+		const CvCity* pCity = pPlot->getPlotCity();
 
 		if (NULL != pCity)
 		{
@@ -17360,7 +17163,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 
 	if (bMalicious && GC.getEspionageMissionInfo(eMission).isDisablePower())
 	{
-		CvCity* pCity = pPlot->getPlotCity();
+		const CvCity* pCity = pPlot->getPlotCity();
 
 		if (NULL != pCity)
 		{
@@ -17385,7 +17188,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 
 	if (bMalicious && GC.getEspionageMissionInfo(eMission).getWarWearinessCounter() > 0)
 	{
-		CvCity* pCity = pPlot->getPlotCity();
+		const CvCity* pCity = pPlot->getPlotCity();
 
 		if (NULL != pCity)
 		{
@@ -18934,21 +18737,12 @@ void CvPlayerAI::AI_doReligion()
 {
 	PROFILE_FUNC();
 
-	ReligionTypes eBestReligion;
-
 	FAssertMsg(!isHuman(), "isHuman did not return false as expected");
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  07/20/09								jdog5000	  */
-/*																							  */
-/* Barbarian AI, efficiency																	 */
-/************************************************************************************************/
+
 	if( isNPC() )
 	{
 		return;
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 
 	if (AI_getReligionTimer() > 0)
 	{
@@ -18963,7 +18757,7 @@ void CvPlayerAI::AI_doReligion()
 
 	FAssertMsg(AI_getReligionTimer() == 0, "AI Religion timer is expected to be 0");
 
-	eBestReligion = AI_bestReligion();
+	ReligionTypes eBestReligion = AI_bestReligion();
 
 	if (eBestReligion == NO_RELIGION)
 	{
@@ -19077,10 +18871,10 @@ void CvPlayerAI::AI_doDiplo()
 	TechTypes eBestGiveTech;
 	TeamTypes eBestTeam;
 	bool bCancelDeal;
-	int iGold;
-	int iGoldData;
-	uint64_t iBestValue;
-	int iOurValue;
+	int64_t iGold;
+	int64_t iGoldData;
+	int64_t iBestValue;
+	int64_t iOurValue;
 	int iLoop;
 
 	const int iGoldValuePercent = AI_goldTradeValuePercent();
@@ -20119,7 +19913,7 @@ void CvPlayerAI::AI_doDiplo()
 											}
 
 											iOurValue = GET_TEAM(getTeam()).AI_techTradeVal(eBestReceiveTech, GET_PLAYER((PlayerTypes)iI).getTeam());
-											int iTheirValue =
+											int64_t iTheirValue =
 											(
 												eBestGiveTech != NO_TECH
 												?
@@ -20128,19 +19922,19 @@ void CvPlayerAI::AI_doDiplo()
 												0
 											);
 
-											int iReceiveGold = 0;
-											int iGiveGold = 0;
+											int64_t iReceiveGold = 0;
+											int64_t iGiveGold = 0;
 
 											if (iTheirValue > iOurValue)
 											{
-												const int iGoldWeight = iTheirValue - iOurValue;
+												const int64_t iGoldWeight = iTheirValue - iOurValue;
 												iGoldData = (iGoldWeight * 100) / iGoldValuePercent;
 												if (iGoldWeight * 100 > iGoldData * iGoldValuePercent)
 												{
 													iGoldData++;
 												}
 
-												iGold = std::min(iGoldData, GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID()));
+												iGold = std::min<int64_t>(iGoldData, GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID()));
 
 												if (iGold > 0)
 												{
@@ -20157,7 +19951,7 @@ void CvPlayerAI::AI_doDiplo()
 											{
 
 												iGoldData = ((iOurValue - iTheirValue) * 100) / iGoldValuePercent;
-												iGold = std::min(iGoldData, AI_maxGoldTrade((PlayerTypes)iI));
+												iGold = std::min<int64_t>(iGoldData, AI_maxGoldTrade((PlayerTypes)iI));
 
 												if (iGold > 0)
 												{
@@ -20234,7 +20028,7 @@ void CvPlayerAI::AI_doDiplo()
 										{
 											if (GC.getGame().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getContactRand(CONTACT_TRADE_JOIN_WAR), "AI Diplo Trade War") == 0)
 											{
-												TeamTypes eBestWarTeam = AI_bestJoinWarTeam((PlayerTypes)iI);
+												const TeamTypes eBestWarTeam = AI_bestJoinWarTeam((PlayerTypes)iI);
 
 												if (eBestWarTeam != NO_TEAM)
 												{
@@ -20263,7 +20057,7 @@ void CvPlayerAI::AI_doDiplo()
 															}
 
 															iOurValue = GET_TEAM(getTeam()).AI_declareWarTradeVal(eBestWarTeam, GET_PLAYER((PlayerTypes)iI).getTeam());
-															int iTheirValue =
+															int64_t iTheirValue =
 															(
 																eBestGiveTech != NO_TECH
 																?
@@ -20272,19 +20066,19 @@ void CvPlayerAI::AI_doDiplo()
 																0
 															);
 
-															int iReceiveGold = 0;
-															int iGiveGold = 0;
+															int64_t iReceiveGold = 0;
+															int64_t iGiveGold = 0;
 
 															if (iTheirValue > iOurValue)
 															{
-																const int iGoldWeight = iTheirValue - iOurValue;
+																const int64_t iGoldWeight = iTheirValue - iOurValue;
 																iGoldData = (iGoldWeight * 100) / iGoldValuePercent;
 																if (iGoldWeight * 100 > iGoldData * iGoldValuePercent)
 																{
 																	iGoldData++;
 																}
 
-																iGold = std::min(iGoldData, GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID()));
+																iGold = std::min<int64_t>(iGoldData, GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID()));
 
 																if (iGold > 0)
 																{
@@ -20301,7 +20095,7 @@ void CvPlayerAI::AI_doDiplo()
 															{
 
 																iGoldData = ((iOurValue - iTheirValue) * 100) / iGoldValuePercent;
-																iGold = std::min(iGoldData, AI_maxGoldTrade((PlayerTypes)iI));
+																iGold = std::min<int64_t>(iGoldData, AI_maxGoldTrade((PlayerTypes)iI));
 
 																if (iGold > 0)
 																{
@@ -20414,7 +20208,7 @@ void CvPlayerAI::AI_doDiplo()
 									{
 										if (GC.getGame().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getContactRand(CONTACT_TRADE_JOIN_WAR), "AI Diplo Trade War") == 0)
 										{
-											TeamTypes eBestStopTradeTeam = AI_bestStopTradeTeam((PlayerTypes)iI);
+											const TeamTypes eBestStopTradeTeam = AI_bestStopTradeTeam((PlayerTypes)iI);
 
 											if (eBestStopTradeTeam != NO_TEAM)
 											{
@@ -20439,7 +20233,7 @@ void CvPlayerAI::AI_doDiplo()
 												}
 
 												iOurValue = AI_stopTradingTradeVal(eBestStopTradeTeam, ((PlayerTypes)iI));
-												int iTheirValue =
+												int64_t iTheirValue =
 												(
 													eBestGiveTech != NO_TECH
 													?
@@ -20447,19 +20241,19 @@ void CvPlayerAI::AI_doDiplo()
 													:
 													0
 												);
-												int iReceiveGold = 0;
-												int iGiveGold = 0;
+												int64_t iReceiveGold = 0;
+												int64_t iGiveGold = 0;
 
 												if (iTheirValue > iOurValue)
 												{
-													const int iGoldWeight = iTheirValue - iOurValue;
+													const int64_t iGoldWeight = iTheirValue - iOurValue;
 													iGoldData = (iGoldWeight * 100) / iGoldValuePercent;
 													if (iGoldWeight * 100 > iGoldData * iGoldValuePercent)
 													{
 														iGoldData++;
 													}
 
-													iGold = std::min(iGoldData, GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID()));
+													iGold = std::min<int64_t>(iGoldData, GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID()));
 
 													if (iGold > 0)
 													{
@@ -20475,7 +20269,7 @@ void CvPlayerAI::AI_doDiplo()
 												else if (iOurValue > iTheirValue)
 												{
 													iGoldData = ((iOurValue - iTheirValue) * 100) / iGoldValuePercent;
-													iGold = std::min(iGoldData, AI_maxGoldTrade((PlayerTypes)iI));
+													iGold = std::min<int64_t>(iGoldData, AI_maxGoldTrade((PlayerTypes)iI));
 
 													if (iGold > 0)
 													{
@@ -20822,7 +20616,7 @@ void CvPlayerAI::AI_doDiplo()
 												{
 													const int iTheirValue = GET_PLAYER((PlayerTypes)iI).AI_workerTradeVal(pWorker);
 													iGold = AI_maxGoldTrade((PlayerTypes)iI);
-													iGold = std::min(iGold, iTheirValue);
+													iGold = std::min<int64_t>(iGold, iTheirValue);
 													if (iGold >= iTheirValue && iTheirValue > 0)
 													{
 														setTradeItem(&item, TRADE_GOLD, iTheirValue);
@@ -20923,8 +20717,8 @@ void CvPlayerAI::AI_doDiplo()
 												}
 												if (eBestTech != NO_TECH)
 												{
-													int iUnitValue = 0;
-													int iTechValue = GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).AI_techTradeVal(eBestTech, getTeam());
+													int64_t iUnitValue = 0;
+													const int64_t iTechValue = GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).AI_techTradeVal(eBestTech, getTeam());
 													for (int iJ = 0; iJ < GET_PLAYER((PlayerTypes)iI).getNumUnits(); iJ++)
 													{
 														if (paiMilitaryUnits[iJ] > 0)
@@ -20943,16 +20737,16 @@ void CvPlayerAI::AI_doDiplo()
 													ourList.clear();
 													theirList.clear();
 
-													int iNeededGold = iUnitValue - iTechValue;
+													const int64_t iNeededGold = iUnitValue - iTechValue;
 													//Units are worth more than the tech
 													if (iNeededGold > 0)
 													{
 														iGold = AI_maxGoldTrade((PlayerTypes)iI);
 
-														setTradeItem(&item, TRADE_GOLD, std::min(iNeededGold, iGold));
+														setTradeItem(&item, TRADE_GOLD, (int)std::min<int64_t>(iNeededGold, iGold));
 														if (canTradeItem((PlayerTypes)iI, item, true))
 														{
-															setTradeItem(&item, TRADE_GOLD, std::min(iNeededGold, iGold));
+															setTradeItem(&item, TRADE_GOLD, (int)std::min<int64_t>(iNeededGold, iGold));
 															ourList.insertAtEnd(item);
 														}
 													}
@@ -20961,10 +20755,10 @@ void CvPlayerAI::AI_doDiplo()
 													{
 														iGold = GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID());
 
-														setTradeItem(&item, TRADE_GOLD, std::min(-iNeededGold, iGold));
+														setTradeItem(&item, TRADE_GOLD, (int)std::min<int64_t>(-iNeededGold, iGold));
 														if (GET_PLAYER((PlayerTypes)iI).canTradeItem(getID(), item, true))
 														{
-															setTradeItem(&item, TRADE_GOLD, std::min(-iNeededGold, iGold));
+															setTradeItem(&item, TRADE_GOLD, (int)std::min<int64_t>(-iNeededGold, iGold));
 															theirList.insertAtEnd(item);
 														}
 													}
@@ -21011,9 +20805,6 @@ void CvPlayerAI::AI_doDiplo()
 									}
 								}
 							}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 							if (AI_getContactTimer(((PlayerTypes)iI), CONTACT_TRADE_BONUS) == 0)
 							{
 								PROFILE("CvPlayerAI::AI_doDiplo.ContactTradeBonus");
@@ -21098,18 +20889,7 @@ void CvPlayerAI::AI_doDiplo()
 														pDiplo->setAIContact(true);
 														pDiplo->setOurOfferList(theirList);
 														pDiplo->setTheirOfferList(ourList);
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD						 02/04/08							Glider1		*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-														// RevolutionDCM start - new diplomacy option
 														AI_beginDiplomacy(pDiplo, (PlayerTypes)iI);
-														// gDLL->beginDiplomacy(pDiplo, (PlayerTypes)iI);
-														// RevolutionDCM end
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD						 END								 Glider1		*/
-/************************************************************************************************/																abContacted[GET_PLAYER((PlayerTypes)iI).getTeam()] = true;
 													}
 												}
 												else
@@ -21154,18 +20934,7 @@ void CvPlayerAI::AI_doDiplo()
 													pDiplo->setAIContact(true);
 													pDiplo->setOurOfferList(theirList);
 													pDiplo->setTheirOfferList(ourList);
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD						 02/04/08							Glider1		*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-													// RevolutionDCM start - new diplomacy option
 													AI_beginDiplomacy(pDiplo, (PlayerTypes)iI);
-													// gDLL->beginDiplomacy(pDiplo, (PlayerTypes)iI);
-													// RevolutionDCM end
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD						 END								 Glider1		*/
-/************************************************************************************************/															abContacted[GET_PLAYER((PlayerTypes)iI).getTeam()] = true;
 												}
 											}
 											else
@@ -21267,7 +21036,7 @@ void CvPlayerAI::AI_doDiplo()
 
 											if (canTradeItem(((PlayerTypes)iI), item, true))
 											{
-												const int iValue =
+												const int64_t iValue =
 												(
 													(1 + GC.getGame().getSorenRandNum(100, "AI Tech Trading #2"))
 													*
@@ -21282,7 +21051,7 @@ void CvPlayerAI::AI_doDiplo()
 										}
 
 										iOurValue = GET_TEAM(getTeam()).AI_declareWarTradeVal(eBestTeam, GET_PLAYER((PlayerTypes)iI).getTeam());
-										int iTheirValue;
+										int64_t iTheirValue;
 										if (eBestGiveTech != NO_TECH)
 										{
 											iTheirValue = GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).AI_techTradeVal(eBestGiveTech, getTeam());
@@ -21294,7 +21063,7 @@ void CvPlayerAI::AI_doDiplo()
 											logging::logMsg("C2C.log", "%S considering contacting %S to buy a war ally, no best tech offer\n", this->getName(), GET_PLAYER((PlayerTypes)iI).getName());
 										}
 
-										int iBestValue2 = 0;
+										int64_t iBestValue2 = 0;
 										TechTypes eBestGiveTech2 = NO_TECH;
 
 										if ((iTheirValue < iOurValue) && (eBestGiveTech != NO_TECH))
@@ -21307,7 +21076,7 @@ void CvPlayerAI::AI_doDiplo()
 
 													if (canTradeItem(((PlayerTypes)iI), item, true))
 													{
-														const uint64_t iValue =
+														const int64_t iValue =
 														(
 															(1 + GC.getGame().getSorenRandNum(100, "AI Tech Trading #2"))
 															*
@@ -21324,18 +21093,18 @@ void CvPlayerAI::AI_doDiplo()
 
 											if (eBestGiveTech2 != NO_TECH)
 											{
-												int iTechValue = GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).AI_techTradeVal(eBestGiveTech2, getTeam());
+												int64_t iTechValue = GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).AI_techTradeVal(eBestGiveTech2, getTeam());
 												iTheirValue += iTechValue;
 												logging::logMsg("C2C.log", "%S considering contacting %S to buy a war ally, 2nd best tech offer %S at a value of %d (total: %d)\n", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), GC.getTechInfo((TechTypes)eBestGiveTech2).getDescription(), iTechValue, iTheirValue);
 											}
 										}
 
-										int iReceiveGold = 0;
-										int iGiveGold = 0;
+										int64_t iReceiveGold = 0;
+										int64_t iGiveGold = 0;
 
 										if (iTheirValue > iOurValue)
 										{
-											iGold = std::min(((iTheirValue - iOurValue) * 100) / iGoldValuePercent, GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID()));
+											iGold = std::min<int64_t>(((iTheirValue - iOurValue) * 100) / iGoldValuePercent, GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID()));
 
 											logging::logMsg("C2C.log", "%S considering contacting %S to buy a war ally, asking for %d gold\n", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), iGold);
 
@@ -21352,7 +21121,7 @@ void CvPlayerAI::AI_doDiplo()
 										}
 										else if (iOurValue > iTheirValue)
 										{
-											iGold = std::min(((iOurValue - iTheirValue) * 100) / iGoldValuePercent, AI_maxGoldTrade((PlayerTypes)iI));
+											iGold = std::min<int64_t>(((iOurValue - iTheirValue) * 100) / iGoldValuePercent, AI_maxGoldTrade((PlayerTypes)iI));
 
 											logging::logMsg("C2C.log", "%S considering contacting %S to buy a war ally, offering %d gold\n", this->getName(), GET_PLAYER((PlayerTypes)iI).getName(), iGold);
 
@@ -21766,7 +21535,7 @@ void CvPlayerAI::write(FDataStreamBase* pStream)
 }
 
 
-int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const
+int64_t CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const
 {
 	if (kTriggeredData.m_eTrigger == NO_EVENTTRIGGER)
 	{
@@ -21775,10 +21544,10 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(kTriggeredData.m_eTrigger);
 	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
-	int iNumCities = getNumCities();
+	const int iNumCities = getNumCities();
 	CvCity* pCity = getCity(kTriggeredData.m_iCityId);
-	CvPlot* pPlot = GC.getMap().plot(kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY);
-	CvUnit* pUnit = getUnit(kTriggeredData.m_iUnitId);
+	const CvPlot* pPlot = GC.getMap().plot(kTriggeredData.m_iPlotX, kTriggeredData.m_iPlotY);
+	const CvUnit* pUnit = getUnit(kTriggeredData.m_iUnitId);
 
 	int iHappy = 0;
 	int iHealth = 0;
@@ -21818,9 +21587,9 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 
 	//Proportional to #turns in the game...
 	//(AI evaluation will generally assume proper game speed scaling!)
-	int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent();
+	const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent();
 
-	int iValue = GC.getGame().getSorenRandNum(kEvent.getAIValue(), "AI Event choice");
+	int64_t iValue = GC.getGame().getSorenRandNum(kEvent.getAIValue(), "AI Event choice");
 	iValue += (getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, false) + getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, true)) / 2;
 
 	iValue += kEvent.getEspionagePoints();
@@ -21849,7 +21618,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 
 	if (kEvent.isDisbandUnit())
 	{
-		CvUnit* pUnit = getUnit(kTriggeredData.m_iUnitId);
+		const CvUnit* pUnit = getUnit(kTriggeredData.m_iUnitId);
 		if (NULL != pUnit)
 		{
 			int iUnitValue = pUnit->getUnitInfo().getProductionCost();
@@ -22111,8 +21880,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 		{
 			if (NO_PROMOTION != kEvent.getUnitCombatPromotion(i))
 			{
-				int iLoop;
-				for (CvUnit* pLoopUnit = firstUnit(&iLoop); NULL != pLoopUnit; pLoopUnit = nextUnit(&iLoop))
+				foreach_(const CvUnit* pLoopUnit, units())
 				{
 					//if (pLoopUnit->getUnitCombatType() == i)
 					//{
@@ -22164,7 +21932,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 	//Religion
 	if (kTriggeredData.m_eReligion != NO_RELIGION)
 	{
-		ReligionTypes eReligion = kTriggeredData.m_eReligion;
+		const ReligionTypes eReligion = kTriggeredData.m_eReligion;
 
 		int iReligionValue = 15;
 
@@ -22188,7 +21956,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 
 	if (NO_PLAYER != kTriggeredData.m_eOtherPlayer)
 	{
-		CvPlayerAI& kOtherPlayer = GET_PLAYER(kTriggeredData.m_eOtherPlayer);
+		const CvPlayerAI& kOtherPlayer = GET_PLAYER(kTriggeredData.m_eOtherPlayer);
 
 		int iDiploValue = 0;
 		//if we like this player then value positive attitude, if however we really hate them then
@@ -22198,7 +21966,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 		if (kEvent.getTheirEnemyAttitudeModifier() != 0)
 		{
 			//Oh wow this sure is mildly complicated.
-			TeamTypes eWorstEnemy = GET_TEAM(GET_PLAYER(kTriggeredData.m_eOtherPlayer).getTeam()).AI_getWorstEnemy();
+			const TeamTypes eWorstEnemy = GET_TEAM(GET_PLAYER(kTriggeredData.m_eOtherPlayer).getTeam()).AI_getWorstEnemy();
 
 			if (NO_TEAM != eWorstEnemy && eWorstEnemy != getTeam())
 			{
@@ -22246,7 +22014,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 		{
 			//If the gold goes to another player instead of the void, then this is a positive
 			//thing if we like the player, otherwise it's a negative thing.
-			int iGiftValue = (getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, false) + getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, true)) / 2;
+			int64_t iGiftValue = (getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, false) + getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, true)) / 2;
 			iGiftValue *= -iOtherPlayerAttitudeWeight;
 			iGiftValue /= 110;
 
@@ -22271,7 +22039,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 		iValue += (iDiploValue * iGameSpeedPercent) / 100;
 	}
 
-	int iThisEventValue = iValue;
+	int64_t iThisEventValue = iValue;
 	//XXX THIS IS VULNERABLE TO NON-TRIVIAL RECURSIONS!
 	//Event A effects Event B, Event B effects Event A
 	for (int iEvent = 0; iEvent < GC.getNumEventInfos(); ++iEvent)
@@ -22311,7 +22079,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 	return iValue;
 }
 
-EventTypes CvPlayerAI::AI_chooseEvent(int iTriggeredId, int* pValue) const
+EventTypes CvPlayerAI::AI_chooseEvent(int iTriggeredId, int64_t* pValue) const
 {
 	const EventTriggeredData* pTriggeredData = getEventTriggered(iTriggeredId);
 	if (NULL == pTriggeredData || pTriggeredData->m_eTrigger == NO_EVENTTRIGGER)
@@ -22321,15 +22089,14 @@ EventTypes CvPlayerAI::AI_chooseEvent(int iTriggeredId, int* pValue) const
 
 	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(pTriggeredData->m_eTrigger);
 
-	int iBestValue = -MAX_INT;
+	int64_t iBestValue = -MAX_INT;
 	EventTypes eBestEvent = NO_EVENT;
 
 	for (int i = 0; i < kTrigger.getNumEvents(); i++)
 	{
-		int iValue = -MAX_INT;
+		int64_t iValue = -MAX_INT;
 		if (kTrigger.getEvent(i) != NO_EVENT)
 		{
-			CvEventInfo& kEvent = GC.getEventInfo((EventTypes)kTrigger.getEvent(i));
 			if (canDoEvent((EventTypes)kTrigger.getEvent(i), *pTriggeredData))
 			{
 				iValue = AI_eventValue((EventTypes)kTrigger.getEvent(i), *pTriggeredData);
@@ -25942,14 +25709,14 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 
 	//Spend econ points on a tech?
 	int iTechRand = 90 + GC.getGame().getSorenRandNum(20, "AI AS Buy Tech 1");
-	int iTotalTechSpending = 0;
+	int64_t iTotalTechSpending = 0;
 
 	if (getCurrentEra() == 0)
 	{
-		TechTypes eTech = AI_bestTech(1);
-		if ((eTech != NO_TECH) && !GC.getTechInfo(eTech).isRepeat())
+		const TechTypes eTech = AI_bestTech(1);
+		if (eTech != NO_TECH && !GC.getTechInfo(eTech).isRepeat())
 		{
-			int iTechCost = getAdvancedStartTechCost(eTech, true);
+			const int64_t iTechCost = getAdvancedStartTechCost(eTech, true);
 			if (iTechCost > 0)
 			{
 				doAdvancedStartAction(ADVANCEDSTARTACTION_TECH, -1, -1, eTech, true);
@@ -25962,13 +25729,13 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 	bool bDonePlacingCities = false;
 	for (int iPass = 0; iPass < 100; ++iPass)
 	{
-		int iRand = iTechRand + 10 * getNumCities();
+		const int iRand = iTechRand + 10 * getNumCities();
 		if ((iRand > 0) && (GC.getGame().getSorenRandNum(100, "AI AS Buy Tech 2") < iRand))
 		{
-			TechTypes eTech = AI_bestTech(1);
+			const TechTypes eTech = AI_bestTech(1);
 			if ((eTech != NO_TECH) && !GC.getTechInfo(eTech).isRepeat())
 			{
-				int iTechCost = getAdvancedStartTechCost(eTech, true);
+				const int64_t iTechCost = getAdvancedStartTechCost(eTech, true);
 				if ((iTechCost > 0) && ((iTechCost + iTotalTechSpending) < (iCityPoints / 4)))
 				{
 					doAdvancedStartAction(ADVANCEDSTARTACTION_TECH, -1, -1, eTech, true);
@@ -26041,10 +25808,10 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 	while (!bDoneWithTechs)
 	{
 		bDoneWithTechs = true;
-		TechTypes eTech = AI_bestTech(1);
+		const TechTypes eTech = AI_bestTech(1);
 		if (eTech != NO_TECH && !GC.getTechInfo(eTech).isRepeat())
 		{
-			const int iTechCost = getAdvancedStartTechCost(eTech, true);
+			const int64_t iTechCost = getAdvancedStartTechCost(eTech, true);
 			if (iTechCost > 0 && iTechCost + iLastPointsTotal - getAdvancedStartPoints() <= iCityPoints)
 			{
 				doAdvancedStartAction(ADVANCEDSTARTACTION_TECH, -1, -1, eTech, true);
@@ -28076,18 +27843,17 @@ UnitTypes CvPlayerAI::bestBuildableUnitForAIType(DomainTypes eDomain, UnitAIType
 	return NO_UNIT;
 }
 
-int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
+int64_t CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 {
 	PROFILE_FUNC();
 
-	int iValue;
+	int64_t iValue;
 	const UnitTypes eUnit = pUnit->getUnitType();
 	const UnitAITypes eAIType = (UnitAITypes)GC.getUnitInfo(eUnit).getDefaultUnitAIType();
 
 	if ( eAIType == UNITAI_SUBDUED_ANIMAL )
 	{
-		int iBestValue = 0;
-		int iI;
+		int64_t iBestValue = 0;
 		CvCity* pEvaluationCity = getCapitalCity();
 
 		if ( pEvaluationCity == NULL || (pUnit->getDomainType() == DOMAIN_SEA && !pEvaluationCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize())) )
@@ -28100,7 +27866,7 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 			const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 
 			//	Subdued animals are rated primarily on what they can construct
-			for (iI = 0; iI < kUnit.getNumBuildings(); iI++)
+			for (int iI = 0; iI < kUnit.getNumBuildings(); iI++)
 			{
 				const BuildingTypes eBuilding = (BuildingTypes)kUnit.getBuildings(iI);
 
@@ -28136,7 +27902,7 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 					const CvOutcomeList* pOutcomeList = kUnit.getActionOutcomeList(iI);
 					if (pOutcomeList->isPossibleInPlot(*pUnit, *(pEvaluationCity->plot()), true))
 					{
-						const int iValue = pOutcomeList->AI_getValueInPlot(*pUnit, *(pEvaluationCity->plot()), true);
+						const int64_t iValue = pOutcomeList->AI_getValueInPlot(*pUnit, *pEvaluationCity->plot(), true);
 						if (iValue > iBestValue)
 						{
 							iBestValue = iValue;
@@ -28158,7 +27924,7 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 							const CvOutcomeList* pOutcomeList = kInfo.getActionOutcomeList(iI);
 							if (pOutcomeList->isPossibleInPlot(*pUnit, *(pEvaluationCity->plot()), true))
 							{
-								const int iValue = pOutcomeList->AI_getValueInPlot(*pUnit, *(pEvaluationCity->plot()), true);
+								const int64_t iValue = pOutcomeList->AI_getValueInPlot(*pUnit, *pEvaluationCity->plot(), true);
 								if (iValue > iBestValue)
 								{
 									iBestValue = iValue;
@@ -28505,10 +28271,10 @@ TeamTypes CvPlayerAI::AI_bestStopTradeTeam(PlayerTypes eOtherPlayer)
 		&& playerOther.canStopTradingWithTeam(eTeamX)
 		&& playerOther.AI_stopTradingTrade(eTeamX, getID()) == NO_DENIAL)
 		{
-			const int iValue = AI_stopTradingTradeVal(eTeamX, eOtherPlayer);
+			const int64_t iValue = AI_stopTradingTradeVal(eTeamX, eOtherPlayer);
 			if (iValue < iBestValue)
 			{
-				iBestValue = iValue;
+				iBestValue = (int)iValue;
 				eBestTeam = eTeamX;
 			}
 		}

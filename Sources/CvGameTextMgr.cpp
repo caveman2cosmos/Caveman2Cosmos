@@ -32373,7 +32373,7 @@ void CvGameTextMgr::getTradeString(CvWStringBuffer& szBuffer, const TradeData& t
 		szBuffer.assign(CvWString::format(L"%s", GC.getBonusInfo((BonusTypes)tradeData.m_iData).getDescription()));
 		break;
 	case TRADE_CITIES:
-		szBuffer.assign(CvWString::format(L"%s", GET_PLAYER(ePlayer1).getCity(tradeData.m_iData)->getName().GetCString()));
+		szBuffer.assign(CvWString::format(L"%s", GET_PLAYER(ePlayer1).getCity((int)tradeData.m_iData)->getName().GetCString()));
 		break;
 	case TRADE_PEACE:
 	case TRADE_WAR:
@@ -32389,7 +32389,7 @@ void CvGameTextMgr::getTradeString(CvWStringBuffer& szBuffer, const TradeData& t
 		break;
 	case TRADE_WORKER:
 	case TRADE_MILITARY_UNIT:
-		szBuffer.assign(CvWString::format(L"%s", GET_PLAYER(ePlayer1).getUnit(tradeData.m_iData)->getName().GetCString()));
+		szBuffer.assign(CvWString::format(L"%s", GET_PLAYER(ePlayer1).getUnit((int)tradeData.m_iData)->getName().GetCString()));
 		break;
 	case TRADE_EMBASSY:
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_EMBASSY"));
@@ -35916,15 +35916,15 @@ void CvGameTextMgr::eventTechHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, 
 	}
 }
 
-void CvGameTextMgr::eventGoldHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, PlayerTypes ePlayer, PlayerTypes eOtherPlayer)
+void CvGameTextMgr::eventGoldHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, PlayerTypes ePlayer, PlayerTypes eOtherPlayer) const
 {
 	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
-	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
+	const CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 
-	int iGold1 = kPlayer.getEventCost(eEvent, eOtherPlayer, false);
-	int iGold2 = kPlayer.getEventCost(eEvent, eOtherPlayer, true);
+	const int64_t iGold1 = kPlayer.getEventCost(eEvent, eOtherPlayer, false);
+	int64_t iGold2 = kPlayer.getEventCost(eEvent, eOtherPlayer, true);
 
-	if (iGold1 != iGold2) iGold2 = abs(iGold2);
+	if (iGold1 != iGold2) iGold2 = (int64_t)abs((double)iGold2);
 
 	if (0 != iGold1 || 0 != iGold2)
 	{

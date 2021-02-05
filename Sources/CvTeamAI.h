@@ -70,7 +70,7 @@ public:
 	int AI_minorKeepWarVal(TeamTypes eTeam) const;
 	int AI_getBarbarianCivWarVal(TeamTypes eTeam, int iMaxDistance = 10) const;
 
-	uint64_t AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const;
+	int64_t AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const;
 	DenialTypes AI_techTrade(const TechTypes eTech, const TeamTypes eTeam) const;
 
 	int AI_mapTradeVal(TeamTypes eTeam) const;
@@ -241,7 +241,7 @@ protected:
 
 	mutable int m_endWarValueCache[MAX_TEAMS];
 
-	mutable stdext::hash_map<int,int> m_tradeTechValueCache;
+	mutable stdext::hash_map<int, int64_t> m_tradeTechValueCache;
 	mutable int	m_tradeTechValuesCachedTurn;
 };
 

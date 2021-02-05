@@ -15527,7 +15527,7 @@ bool CvUnitAI::AI_outcomeMission()
 	const CvPlot* pBestPlot = NULL;
 	const CvPlot* pBestMissionPlot = NULL;
 	MissionTypes eBestMission = NO_MISSION;
-	int iBestValue = 0;
+	int64_t iBestValue = 0;
 
 	// favor the closest city
 	CvCity* pClosestCity = plot()->getPlotCity();
@@ -15563,48 +15563,40 @@ bool CvUnitAI::AI_outcomeMission()
 		const MissionTypes eMission = it->first;
 		const CvOutcomeList* pOutcomeList = it->second;
 
-		if (eMission != NO_MISSION)
+		if (eMission != NO_MISSION && pOutcomeList->isPossibleSomewhere(*this))
 		{
-			if (pOutcomeList->isPossibleSomewhere(*this))
+			if (pClosestCity)
 			{
-				if (pClosestCity)
+				foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 				{
-					foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
+					//if (pLoopCity->area() == area())
+					if (plotSet.find(pLoopCity->plot()) != plotSet.end()
+					&& pOutcomeList->isPossibleInPlot(*this, *pLoopCity->plot()))
 					{
-						//if (pLoopCity->area() == area())
-						if (plotSet.find(pLoopCity->plot()) != plotSet.end())
+						const int64_t iValue = pOutcomeList->AI_getValueInPlot(*this, *pLoopCity->plot());
+						if (iValue > iBestValue)
 						{
-							if (pOutcomeList->isPossibleInPlot(*this, *(pLoopCity->plot())))
+							if (generatePath(pLoopCity->plot(), MOVE_NO_ENEMY_TERRITORY, true))
 							{
-								const int iValue = pOutcomeList->AI_getValueInPlot(*this, *(pLoopCity->plot()));
-								if (iValue > iBestValue)
-								{
-									if (generatePath(pLoopCity->plot(), MOVE_NO_ENEMY_TERRITORY, true))
-									{
-										iBestValue = iValue;
-										pBestPlot = getPathEndTurnPlot();
-										pBestMissionPlot = pLoopCity->plot();
-										eBestMission = eMission;
-									}
-								}
+								iBestValue = iValue;
+								pBestPlot = getPathEndTurnPlot();
+								pBestMissionPlot = pLoopCity->plot();
+								eBestMission = eMission;
 							}
 						}
 					}
 				}
-				else
+			}
+			// There is no city in this area, so try to execute an outcome mission at the current location
+			else if (pOutcomeList->isPossibleInPlot(*this, *plot()))
+			{
+				const int64_t iValue = pOutcomeList->AI_getValueInPlot(*this, *plot());
+				if (iValue > iBestValue)
 				{
-					// There is no city in this area, so try to execute an outcome mission at the current location
-					if (pOutcomeList->isPossibleInPlot(*this, *(plot())))
-					{
-						const int iValue = pOutcomeList->AI_getValueInPlot(*this, *(plot()));
-						if (iValue > iBestValue)
-						{
-							iBestValue = iValue;
-							pBestPlot = getPathEndTurnPlot();
-							pBestMissionPlot = plot();
-							eBestMission = eMission;
-						}
-					}
+					iBestValue = iValue;
+					pBestPlot = getPathEndTurnPlot();
+					pBestMissionPlot = plot();
+					eBestMission = eMission;
 				}
 			}
 		}
@@ -15637,15 +15629,7 @@ bool CvUnitAI::AI_outcomeMission()
 				}
 			}
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  03/09/09								jdog5000	  */
-/*																							  */
-/* Unit AI																					  */
-/************************************************************************************************/
 			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_NO_ENEMY_TERRITORY | MOVE_WITH_CAUTION | MOVE_AVOID_ENEMY_UNITS, false, false, NO_MISSIONAI, pBestMissionPlot);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 		}
 	}
 
