@@ -11844,7 +11844,7 @@ void CvGame::recalculateModifiers()
 			foreach_(CvCity* pLoopCity, kLoopPlayer.cities())
 			{
 				pLoopCity->doVicinityBonus();
-				pLoopCity->checkBuildings(true, true, true, true, true, false);
+				pLoopCity->checkBuildings(false);
 			}
 		}
 	}

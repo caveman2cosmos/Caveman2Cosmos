@@ -8107,6 +8107,7 @@ void CvTeam::recalculateModifiers()
 			GET_PLAYER((PlayerTypes)iI).recalculateModifiers();
 		}
 	}
+
 	//	Reapply techs
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{

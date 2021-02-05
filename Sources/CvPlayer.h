@@ -2242,7 +2242,6 @@ public:
 
 	void updateTechHappinessandHealth();
 	void checkReligiousDisablingAllBuildings();
-	bool isBuildingtoDisplayReligiouslyDisabled(BuildingTypes eBuilding) const;
 
 	void doGoldenAgebyPercentage(int iPercent);
 	//TB Traits end

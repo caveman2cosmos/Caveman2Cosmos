@@ -2758,7 +2758,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		pNewCity->setOccupationCultureLevel((CultureLevelTypes)iOccupationRange);
 	}
 
-	pNewCity->checkBuildings(true, true, true, true, true, false);
+	pNewCity->checkBuildings(false);
 
 	pCityPlot->setRevealed(GET_PLAYER(eOldOwner).getTeam(), true, false, NO_TEAM, false);
 
@@ -14959,11 +14959,8 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 		{
 			processCivics(getCivics(eIndex), 1);
 		}
-/************************************************************************************************/
-/* Afforess					  Start		 07/20/10											   */
-/*																							  */
-/* Check Buildings, Clear Caches																*/
-/************************************************************************************************/
+
+		// Afforess - Check Buildings, Clear Caches
 		bool bUpdateHealth = false;
 		bool bUpdateHappiness = false;
 		if (eNewValue != NO_CIVIC && eOldCivic != NO_CIVIC)
@@ -14993,15 +14990,12 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 		}
 		foreach_ (CvCity* city, cities())
 		{
-			city->checkBuildings(false, true, false, false, false);
+			city->checkBuildings();
 			if (bUpdateHappiness)
 				city->updateFeatureHappiness();
 			if (bUpdateHealth)
 				city->updateImprovementHealth();
 		}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 		GC.getGame().updateSecretaryGeneral();
 
@@ -15013,20 +15007,9 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 			{
 				gDLL->updateDiplomacyAttitude(true);
 			}
-/************************************************************************************************/
-/* REVOLUTION_MOD						 04/28/08								jdog5000	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-/*
-			if (!isBarbarian())
-*/
 			// Silence announcement for civs that are not alive, ie rebel civs who may not be born
 			// and also for minor civs
 			if (!isNPC() && !isMinorCiv() && isAlive())
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
 			{
 				if (getCivics(eIndex) != NO_CIVIC)
 				{
@@ -31911,34 +31894,6 @@ void CvPlayer::checkReligiousDisablingAllBuildings()
 	for_each(cities(), CvCity::fn::checkReligiousDisablingAllBuildings());
 }
 
-bool CvPlayer::isBuildingtoDisplayReligiouslyDisabled(BuildingTypes eBuilding) const
-{
-	if (GC.getBuildingInfo(eBuilding).getReligionType() == NO_RELIGION && GC.getBuildingInfo(eBuilding).getPrereqReligion() == NO_RELIGION)
-	{
-		return false;
-	}
-
-	if (hasBannedNonStateReligions())
-	{
-		return false;
-	}
-
-	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
-	{
-		const ReligionTypes eReligion = ((ReligionTypes)iI);
-		if (GC.getBuildingInfo(eBuilding).getReligionType() != NO_RELIGION || GC.getBuildingInfo(eBuilding).getPrereqReligion() != NO_RELIGION)
-		{
-			if (GC.getBuildingInfo(eBuilding).getReligionType() == eReligion || GC.getBuildingInfo(eBuilding).getPrereqReligion() == eReligion)
-			{
-				if (!hasBannedNonStateReligions() && !hasAllReligionsActive() && getStateReligion() != eReligion)
-				{
-					return true;
-				}
-			}
-		}
-	}
-	return false;
-}
 
 void CvPlayer::doGoldenAgebyPercentage(int iPercent)
 {

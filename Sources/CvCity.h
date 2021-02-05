@@ -381,7 +381,7 @@ public:
 	int getBonusYieldRateModifier(YieldTypes eIndex, BonusTypes eBonus) const;
 	void processBonus(BonusTypes eBonus, int iChange);
 
-	void processBuilding(const BuildingTypes eBuilding, const int iChange, const bool bReligiouslyDisabling = false);
+	void processBuilding(const BuildingTypes eBuilding, const int iChange, const bool bReligiously = false);
 	void processProcess(ProcessTypes eProcess, int iChange);
 	void processSpecialist(SpecialistTypes eSpecialist, int iChange);
 
@@ -1402,7 +1402,7 @@ public:
 	bool hasVicinityBonus(BonusTypes eBonus) const;
 	void clearRawVicinityBonusCache(BonusTypes eBonus);
 	bool hasRawVicinityBonus(BonusTypes eBonus) const;
-	void checkBuildings(bool bBonus = true, bool bCivics = true, bool bWar = true, bool bPower = true, bool bPopulation = true, bool bAlertOwner = true);
+	void checkBuildings(bool bAlertOwner = true);
 	void doVicinityBonus();
 	bool isDevelopingCity() const;
 

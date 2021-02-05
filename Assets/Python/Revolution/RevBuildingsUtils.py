@@ -62,7 +62,7 @@ def getBuildingsDistanceMod(CyCity):
 
 	for iBuilding in range(GC.getNumBuildingInfos()):
 		iDistanceModifier = GC.getBuildingInfo(iBuilding).getRevIdxDistanceModifier()
-		if iDistanceModifier && CyCity.getNumActiveBuilding(iBuilding) > 0:
+		if iDistanceModifier and CyCity.getNumActiveBuilding(iBuilding) > 0:
 			distModifier += iDistanceModifier
 
 	return distModifier

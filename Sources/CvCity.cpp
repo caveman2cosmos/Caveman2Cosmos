@@ -1389,7 +1389,7 @@ void CvCity::doTurn()
 	//Does vicinity bonus checks
 	doVicinityBonus();
 	//Checks conditions of buildings, may disable or enable some
-	checkBuildings(true, false, true, true, false);
+	checkBuildings();
 	checkFreeBuildings();
 	//Extra Hammer from settling on Forest
 	if (getExtraYieldTurns() > 0)
@@ -5019,14 +5019,48 @@ void CvCity::processBonus(BonusTypes eBonus, int iChange)
 
 
 
-void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, const bool bReligiouslyDisabling)
+void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, const bool bReligiously)
 {
 	PROFILE_FUNC();
-
-	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	FAssert(iChange == 1 || iChange == -1);
 
-	if (!bReligiouslyDisabling && kBuilding.isOrbitalInfrastructure())
+	// Toffer - Sanity control
+	if (iChange == -1)
+	{
+		if (getNumBuilding(eBuilding) == 0)
+		{
+			FErrorMsg("Trying to process out a building that is already processed out! Code copes, but it shouldn't have to!");
+			return;
+		}
+		if (isReligiouslyDisabledBuilding(eBuilding))
+		{
+			if (bReligiously)
+			{
+				FErrorMsg("Trying to religiously process out a building that is already religiously processed out! Code copes, but it shouldn't have to!");
+				return;
+			}
+			FErrorMsg("Trying to process out a building that is already religiously processed out! Code copes, but it shouldn't have to!");
+			setReligiouslyDisabledBuilding(eBuilding, false);
+		}
+	}
+	else if (bReligiously)
+	{
+		if (!isReligiouslyDisabledBuilding(eBuilding))
+		{
+			FErrorMsg("Trying to religiously process in a building that was never religiously processed out! Code copes, but it shouldn't have to!");
+			return;
+		}
+		if (isDisabledBuilding(eBuilding))
+		{
+			FErrorMsg("Trying to religiously process in a building that is disabled! Code copes, but it shouldn't have to!");
+			return;
+		}
+	}
+
+	// Process the building
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+
+	if (!bReligiously && kBuilding.isOrbitalInfrastructure())
 	{
 		GET_PLAYER(getOwner()).noteOrbitalInfrastructureCountDirty();
 	}
@@ -5041,16 +5075,6 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 
 		if (iChange > 0)
 		{
-			for (int iI = 0; iI < kBuilding.getNumReplacedBuilding(); iI++)
-			{
-				const BuildingTypes eReplaced = (BuildingTypes)kBuilding.getReplacedBuilding(iI);
-
-				if (getNumRealBuilding(eReplaced) > 0)
-				{
-					setNumRealBuilding(eReplaced, 0);
-				}
-			}
-
 			changeNumBuildings(1);
 			if (isLimitedWonder(eBuilding) && !kBuilding.isNoLimit())
 			{
@@ -5067,7 +5091,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 					changeNumNationalWonders(1);
 				}
 			}
-			if (!bReligiouslyDisabling)
+			if (!bReligiously)
 			{
 				CorporationTypes eCorporation = (CorporationTypes)kBuilding.getFoundsCorporation();
 				if (NO_CORPORATION != eCorporation && !GC.getGame().isCorporationFounded(eCorporation))
@@ -5197,7 +5221,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 
 		changePopulationgrowthratepercentage(kBuilding.getPopulationgrowthratepercentage(), iChange == 1);
 
-		if (!bReligiouslyDisabling)
+		if (!bReligiously)
 		{
 			changeGreatPeopleRateModifier(kBuilding.getGreatPeopleRateModifier() * iChange);
 		}
@@ -5303,7 +5327,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		changeCommerceHappinessPer(eCommerceX, kBuilding.getCommerceHappiness(iI) * iChange);
 	}
 
-	if (!bReligiouslyDisabling)
+	if (!bReligiously)
 	{
 		for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 		{
@@ -5365,7 +5389,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			changeUnitCombatExtraStrength((UnitCombatTypes)iI, kBuilding.getUnitCombatExtraStrength(iI) * iChange);
 		}
 
-		if (!bReligiouslyDisabling)
+		if (!bReligiously)
 		{
 			changeInvasionChance(kBuilding.getInvasionChance() * iChange);
 			changeLineOfSight(kBuilding.getLineOfSight() * iChange);
@@ -5437,7 +5461,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 
 		changeUnitCombatProductionModifier(eCombatX, kBuilding.getUnitCombatProdModifier(iI) * iChange);
 
-		if (!bReligiouslyDisabling)
+		if (!bReligiously)
 		{
 			changeUnitCombatRepelModifierTotal(eCombatX, kBuilding.getUnitCombatRepelModifier(iI) * iChange);
 			//TB Defense Mod
@@ -5477,7 +5501,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 	changeExtraInvestigation(kBuilding.getInvestigation() * iChange);
 
 	//TB Defense Mod
-	if (!bReligiouslyDisabling)
+	if (!bReligiously)
 	{
 		changeExtraLocalDynamicDefense(kBuilding.getLocalDynamicDefense() * iChange);
 		changeExtraRiverDefensePenalty(kBuilding.getRiverDefensePenalty() * iChange);
@@ -5563,7 +5587,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			changeZoCCount(iChange);
 		}
 
-		if (!bReligiouslyDisabling)
+		if (!bReligiously)
 		{
 			if (kBuilding.isProtectedCulture())
 			{
@@ -5685,14 +5709,14 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getTeam()) && (iI == getOwner() || kBuilding.isTeamShare()))
 			{
-				GET_PLAYER((PlayerTypes)iI).processBuilding(eBuilding, iChange, area(), bReligiouslyDisabling);
+				GET_PLAYER((PlayerTypes)iI).processBuilding(eBuilding, iChange, area(), bReligiously);
 			}
 		}
 	}
 
-	GET_TEAM(getTeam()).processBuilding(eBuilding, iChange, bReligiouslyDisabling);
+	GET_TEAM(getTeam()).processBuilding(eBuilding, iChange, bReligiously);
 
-	if (!bReligiouslyDisabling)
+	if (!bReligiously)
 	{
 		PROFILE("CvCity::processBuilding.NotReligiouslyDisabling");
 
@@ -5740,7 +5764,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 	// New or removed buildings can affect the assessment of the best plot builds
 	AI_markBestBuildValuesStale();
 
-	if (!bReligiouslyDisabling && GC.getGame().isOption(GAMEOPTION_RELIGIOUS_DISABLING))
+	if (!bReligiously && GC.getGame().isOption(GAMEOPTION_RELIGIOUS_DISABLING))
 	{
 		checkReligiousDisabling(eBuilding, GET_PLAYER(getOwner()));
 		setMaintenanceDirty(true);
@@ -7116,7 +7140,7 @@ int CvCity::cultureGarrison(PlayerTypes ePlayer) const
 int CvCity::getNumBuilding(BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-	return std::min(1, isDisabledBuilding(eIndex) ? 0 : getNumRealBuilding(eIndex));
+	return std::min(1, (isDisabledBuilding(eIndex) || isReligiouslyDisabledBuilding(eIndex)) ? 0 : getNumRealBuilding(eIndex));
 }
 
 
@@ -7434,7 +7458,7 @@ void CvCity::setPopulation(int iNewValue)
 		GET_TEAM(getTeam()).changeTotalPopulation(iNewValue - iOldPopulation);
 		GC.getGame().changeTotalPopulation(iNewValue - iOldPopulation);
 
-		checkBuildings(false, false, false, false, true);
+		checkBuildings();
 
 		if (plot()->getFeatureType() != NO_FEATURE)
 		{
@@ -10638,7 +10662,7 @@ int CvCity::getFreeExperience() const
 
 void CvCity::changeFreeExperience(int iChange)
 {
-	m_iFreeExperience = (m_iFreeExperience + iChange);
+	m_iFreeExperience += iChange;
 	FAssert(getFreeExperience() >= 0);
 }
 
@@ -14820,7 +14844,19 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNew
 				}
 			}
 			// ! Toffer
-			processBuilding(eIndex, 1, isReligiouslyDisabledBuilding(eIndex));
+
+			processBuilding(eIndex, 1);
+
+			const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eIndex);
+			for (int iI = 0; iI < kBuilding.getNumReplacedBuilding(); iI++)
+			{
+				const BuildingTypes eReplaced = (BuildingTypes)kBuilding.getReplacedBuilding(iI);
+
+				if (getNumBuilding(eReplaced) > 0)
+				{
+					setDisabledBuilding(eReplaced, true);
+				}
+			}
 
 			if (bFirst)
 			{
@@ -14939,20 +14975,27 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNew
 		}
 		else // Building removal
 		{
-			m_paiBuildingOriginalOwner[eIndex] = NO_PLAYER;
-			m_paiBuildingOriginalTime[eIndex] = MIN_INT;
-
 			if (isDisabledBuilding(eIndex))
 			{
 				setDisabledBuilding(eIndex, false, false);
 			}
-			else processBuilding(eIndex, 0, isReligiouslyDisabledBuilding(eIndex));
+			else
+			{
+				if (isReligiouslyDisabledBuilding(eIndex))
+				{
+					setReligiouslyDisabledBuilding(eIndex, false);
+				}
+				processBuilding(eIndex, -1);
+			}
+
+			m_paiBuildingOriginalOwner[eIndex] = NO_PLAYER;
+			m_paiBuildingOriginalTime[eIndex] = MIN_INT;
 
 			//Remove any extensions of this building
 			const int iExtensionOf = GC.getBuildingInfo(eIndex).getExtendsBuilding();
 			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				if (getNumBuilding((BuildingTypes)iI) > 0
+				if (getNumRealBuilding((BuildingTypes)iI) > 0
 				// avoid infinite recursion
 				&& iI != eIndex && iExtensionOf != iI
 				&& GC.getBuildingInfo((BuildingTypes)iI).getExtendsBuilding() == eIndex)
@@ -15216,6 +15259,10 @@ void CvCity::checkReligiousDisablingAllBuildings()
 
 void CvCity::checkReligiousDisabling(const BuildingTypes eBuilding, const CvPlayer& player)
 {
+	if (isDisabledBuilding(eBuilding))
+	{
+		return;
+	}
 	const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
 
 	const ReligionTypes eReligion = (ReligionTypes)building.getReligionType();
@@ -15238,52 +15285,16 @@ void CvCity::checkReligiousDisabling(const BuildingTypes eBuilding, const CvPlay
 
 		if (eReligion == eReligionX || eReligionReq == eReligionX)
 		{
-			if (isDisabledBuilding(eBuilding) && (player.getStateReligion() == eReligionX || !player.hasBannedNonStateReligions()))
+			if (isReligiouslyDisabledBuilding(eBuilding))
 			{
-				setDisabledBuilding(eBuilding, false);
-
-				MEMORY_TRACK_EXEMPT();
-				const CvWString szBuffer =
-				(
-					gDLL->getText
-					(
-						"TXT_KEY_CITY_RELIGIOUSLY_RESTORED_BUILDINGS",
-						getNameKey(), GC.getReligionInfo(eReligionX).getDescription(), building.getDescription()
-					)
-				);
-				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, building.getButton(), GC.getCOLOR_WHITE(), getX(), getY(), true, true);
+				if (player.hasAllReligionsActive() || player.getStateReligion() == eReligionX)
+				{
+					setReligiouslyDisabledBuilding(eBuilding, false);
+				}
 			}
-			if (!isDisabledBuilding(eBuilding))
+			else if (!player.hasAllReligionsActive() && player.getStateReligion() != eReligionX)
 			{
-				if (player.getStateReligion() != eReligionX && player.hasBannedNonStateReligions())
-				{
-					setDisabledBuilding(eBuilding, true);
-
-					MEMORY_TRACK_EXEMPT();
-					const CvWString szBuffer =
-					(
-						gDLL->getText(
-							"TXT_KEY_CITY_RELIGIOUSLY_DISABLED_COMPLETELY_BUILDINGS",
-							getNameKey(), GC.getReligionInfo(eReligionX).getDescription(), building.getDescription()
-						)
-					);
-					AddDLLMessage(
-						getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT,
-						building.getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true
-					);
-				}
-
-				if (isReligiouslyDisabledBuilding(eBuilding))
-				{
-					if (player.hasAllReligionsActive() || player.getStateReligion() == eReligionX)
-					{
-						setReligiouslyDisabledBuilding(eBuilding, false);
-					}
-				}
-				else if (!player.hasAllReligionsActive() && player.getStateReligion() != eReligionX)
-				{
-					setReligiouslyDisabledBuilding(eBuilding, true);
-				}
+				setReligiouslyDisabledBuilding(eBuilding, true);
 			}
 		}
 	}
@@ -20987,9 +20998,19 @@ int CvCity::getAdditionalDefenseByBuilding(BuildingTypes eBuilding) const
 }
 
 
-void CvCity::checkBuildings(bool bBonus, bool bCivics, bool bWar, bool bPower, bool bPopulation, bool bAlertOwner)
+void CvCity::checkBuildings(bool bAlertOwner)
 {
 	PROFILE_FUNC();
+	const CvPlayer& player = GET_PLAYER(getOwner());
+	bAlertOwner = bAlertOwner && !player.isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS);
+
+	const bool bBannedNonStateReligions = player.hasBannedNonStateReligions() && getReligionCount() > 0;
+	ReligionTypes eReligion = NO_RELIGION;
+	ReligionTypes eStateReligion = NO_RELIGION;
+	if (bBannedNonStateReligions)
+	{
+		eStateReligion = player.getStateReligion();
+	}
 
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
@@ -20997,7 +21018,7 @@ void CvCity::checkBuildings(bool bBonus, bool bCivics, bool bWar, bool bPower, b
 
 		if (getNumRealBuilding(eBuildingX) > 0)
 		{
-			bool bRestoreBuildings = false;
+			bool bMsg = true;
 			bool bObsoleteBuildings = false;
 
 			bool bMissingBonus = false;
@@ -21007,256 +21028,218 @@ void CvCity::checkBuildings(bool bBonus, bool bCivics, bool bWar, bool bPower, b
 			bool bRequiresPower = false;
 			bool bRequiresPopulation = false;
 			bool bPopulationTooHigh = false;
+			bool bReligionBanned = false;
 
 			const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuildingX);
 
-			/* Check for Appropriate Resources */
-			if (bBonus)
+			while (true) // This loop will never actually loop.
 			{
-				bool bNeedsBonus = false;
-				bool bHasBonus = false;
-				bool bHasRawVicinityBonus = false;
-				bool bNeedsRawVicinityBonus = false;
-				bool bNeedsVicinityBonus = false;
-				bool bHasVicinityBonus = false;
-				if (kBuilding.getPrereqVicinityBonus() != NO_BONUS)
+				/* Check for replacement that is not disabled */
+				for (int iJ = 0; iJ < kBuilding.getNumReplacementBuilding(); ++iJ)
 				{
-					bNeedsVicinityBonus = true;
-					bHasVicinityBonus = hasVicinityBonus((BonusTypes)kBuilding.getPrereqVicinityBonus());
-				}
-				if (kBuilding.getPrereqRawVicinityBonus() != NO_BONUS)
-				{
-					bNeedsRawVicinityBonus = true;
-					bHasRawVicinityBonus = hasRawVicinityBonus((BonusTypes)kBuilding.getPrereqRawVicinityBonus());
-				}
-
-				if (!bNeedsVicinityBonus || bHasVicinityBonus)
-				{
-					bool bHasORVicinityBonus = false;
-					bool bNeedsORVicinityBonus = false;
-
-					for (int iJ = 0; iJ < GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); iJ++)
+					if (getNumBuilding((BuildingTypes)kBuilding.getReplacementBuilding(iJ)) > 0)
 					{
-						if (kBuilding.getPrereqOrVicinityBonuses(iJ) != NO_BONUS)
+						bObsoleteBuildings = true;
+						bMsg = false;
+						break;
+					}
+				}
+				if (bObsoleteBuildings) break;
+
+				/* Check for Appropriate Resources */
+				{
+					bool bNeedsBonus = false;
+					bool bHasBonus = false;
+					bool bHasRawVicinityBonus = false;
+					bool bNeedsRawVicinityBonus = false;
+					bool bNeedsVicinityBonus = false;
+					bool bHasVicinityBonus = false;
+					if (kBuilding.getPrereqVicinityBonus() != NO_BONUS)
+					{
+						bNeedsVicinityBonus = true;
+						bHasVicinityBonus = hasVicinityBonus((BonusTypes)kBuilding.getPrereqVicinityBonus());
+					}
+					if (kBuilding.getPrereqRawVicinityBonus() != NO_BONUS)
+					{
+						bNeedsRawVicinityBonus = true;
+						bHasRawVicinityBonus = hasRawVicinityBonus((BonusTypes)kBuilding.getPrereqRawVicinityBonus());
+					}
+
+					if (!bNeedsVicinityBonus || bHasVicinityBonus)
+					{
+						bool bHasORVicinityBonus = false;
+						bool bNeedsORVicinityBonus = false;
+
+						for (int iJ = 0; iJ < GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); iJ++)
 						{
-							bNeedsORVicinityBonus = true;
-							if (hasVicinityBonus((BonusTypes)kBuilding.getPrereqOrVicinityBonuses(iJ)))
+							if (kBuilding.getPrereqOrVicinityBonuses(iJ) != NO_BONUS)
 							{
-								bHasORVicinityBonus = true;
+								bNeedsORVicinityBonus = true;
+								if (hasVicinityBonus((BonusTypes)kBuilding.getPrereqOrVicinityBonuses(iJ)))
+								{
+									bHasORVicinityBonus = true;
+									break;
+								}
+							}
+						}
+
+						bNeedsVicinityBonus |= bNeedsORVicinityBonus;
+						if (bNeedsORVicinityBonus)
+						{
+							bHasVicinityBonus = bHasORVicinityBonus;
+						}
+					}
+
+					if (!bNeedsRawVicinityBonus || bHasRawVicinityBonus)
+					{
+						bool bHasORRawVicinityBonus = false;
+						bool bNeedsORRawVicinityBonus = false;
+
+						foreach_(BonusTypes bonus, kBuilding.getPrereqOrRawVicinityBonuses())
+						{
+							bNeedsORRawVicinityBonus = true;
+							if (hasRawVicinityBonus(bonus))
+							{
+								bHasORRawVicinityBonus = true;
 								break;
 							}
 						}
-					}
 
-					bNeedsVicinityBonus |= bNeedsORVicinityBonus;
-					if (bNeedsORVicinityBonus)
-					{
-						bHasVicinityBonus = bHasORVicinityBonus;
-					}
-				}
-
-				if (!bNeedsRawVicinityBonus || bHasRawVicinityBonus)
-				{
-					bool bHasORRawVicinityBonus = false;
-					bool bNeedsORRawVicinityBonus = false;
-
-					foreach_(BonusTypes bonus, kBuilding.getPrereqOrRawVicinityBonuses())
-					{
-						bNeedsORRawVicinityBonus = true;
-						if (hasRawVicinityBonus(bonus))
+						bNeedsRawVicinityBonus |= bNeedsORRawVicinityBonus;
+						if (bNeedsORRawVicinityBonus)
 						{
-							bHasORRawVicinityBonus = true;
-							break;
+							bHasRawVicinityBonus = bHasORRawVicinityBonus;
 						}
 					}
 
-					bNeedsRawVicinityBonus |= bNeedsORRawVicinityBonus;
-					if (bNeedsORRawVicinityBonus)
+					// We lack the nessecary resource, turn off the building
+					if (bNeedsRawVicinityBonus && !bHasRawVicinityBonus
+					|| bNeedsVicinityBonus && !bHasVicinityBonus)
 					{
-						bHasRawVicinityBonus = bHasORRawVicinityBonus;
+						bObsoleteBuildings = true;
+						bMissingBonus = true;
+						break;
 					}
-				}
 
-				//We have the resource, turn on any buildings that are disabled
-				if (bNeedsRawVicinityBonus && bHasRawVicinityBonus)
-				{
-					bRestoreBuildings = true;
-				}
-				//we lack the nessecary resource, turn off the building
-				else if (bNeedsRawVicinityBonus && !bHasRawVicinityBonus)
-				{
-					bObsoleteBuildings = true;
-					bMissingBonus = true;
-				}
-				if (bNeedsVicinityBonus && bHasVicinityBonus)
-				{
-					bRestoreBuildings = true;
-				}
-				//we lack the nessecary resource, turn off the building
-				else if (bNeedsVicinityBonus && !bHasVicinityBonus)
-				{
-					bObsoleteBuildings = true;
-					bMissingBonus = true;
-				}
-
-				//	Check trade-available resource requirements
-				if (kBuilding.getPrereqAndBonus() != NO_BONUS)
-				{
-					bNeedsBonus = true;
-					bHasBonus = hasBonus((BonusTypes)kBuilding.getPrereqAndBonus());
-				}
-				if (!bNeedsBonus || bHasBonus)
-				{
-					bool bHasORBonus = false;
-					bool bNeedsORBonus = false;
-
-					for (int iJ = 0; iJ < kBuilding.getNumPrereqOrBonuses(); iJ++)
+					// Check trade-available resource requirements
+					if (kBuilding.getPrereqAndBonus() != NO_BONUS)
 					{
-						if (kBuilding.getPrereqOrBonuses(iJ) != NO_BONUS)
+						bNeedsBonus = true;
+						bHasBonus = hasBonus((BonusTypes)kBuilding.getPrereqAndBonus());
+					}
+					if (!bNeedsBonus || bHasBonus)
+					{
+						bool bHasORBonus = false;
+						bool bNeedsORBonus = false;
+
+						for (int iJ = 0; iJ < kBuilding.getNumPrereqOrBonuses(); iJ++)
 						{
-							bNeedsORBonus = true;
-							if (hasBonus((BonusTypes)kBuilding.getPrereqOrBonuses(iJ)))
+							if (kBuilding.getPrereqOrBonuses(iJ) != NO_BONUS)
 							{
-								bHasORBonus = true;
-								break;
+								bNeedsORBonus = true;
+								if (hasBonus((BonusTypes)kBuilding.getPrereqOrBonuses(iJ)))
+								{
+									bHasORBonus = true;
+									break;
+								}
 							}
 						}
+
+						bNeedsBonus |= bNeedsORBonus;
+						if (bNeedsORBonus)
+						{
+							bHasBonus = bHasORBonus;
+						}
 					}
 
-					bNeedsBonus |= bNeedsORBonus;
-					if (bNeedsORBonus)
+					//we lack the nessecary resource, turn off the building
+					if (bNeedsBonus && !bHasBonus)
 					{
-						bHasBonus = bHasORBonus;
+						bObsoleteBuildings = true;
+						bMissingBonus = true;
+						break;
 					}
 				}
 
-				//We have the resource, turn on any buildings that are disabled
-				if (bNeedsBonus && bHasBonus)
-				{
-					bRestoreBuildings = true;
-				}
-				//we lack the nessecary resource, turn off the building
-				else if (bNeedsBonus && !bHasBonus)
-				{
-					bObsoleteBuildings = true;
-					bMissingBonus = true;
-				}
-			}
-
-			/* Check fresh water */
-			if (kBuilding.isFreshWater())
-			{
-				if (plot()->isFreshWater() || hasFreshWater())
-				{
-					bRestoreBuildings = true;
-				}
-				else
-				{
-					bObsoleteBuildings = true;
-					bMissingFreshWater = true;
-				}
-			}
-
-
-			/* Check War Conditions */
-			if (bWar && kBuilding.isPrereqWar())
-			{
-				if (GET_TEAM(getTeam()).isAtWar())
-				{
-					bRestoreBuildings = true;
-				}
-				else
+				/* Check War Conditions */
+				if (kBuilding.isPrereqWar() && !GET_TEAM(getTeam()).isAtWar())
 				{
 					bObsoleteBuildings = true;
 					bRequiresWar = true;
+					break;
 				}
-			}
 
-			/* Check Civic Requirements */
-			if (bCivics)
-			{
-				if (kBuilding.isRequiresActiveCivics())
+				/* Check Civic Requirements */
+				if (kBuilding.isRequiresActiveCivics() && !player.hasValidCivics(eBuildingX))
 				{
-					if (GET_PLAYER(getOwner()).hasValidCivics(eBuildingX))
+					bObsoleteBuildings = true;
+					bRequiresCivics = true;
+					break;
+				}
+
+				/*Check Elecricity Requirements */
+				if (kBuilding.isPrereqPower() && !isPower())
+				{
+					bObsoleteBuildings = true;
+					bRequiresPower = true;
+					break;
+				}
+
+				/* Check fresh water */
+				if (kBuilding.isFreshWater() && !plot()->isFreshWater() && !hasFreshWater())
+				{
+					bObsoleteBuildings = true;
+					bMissingFreshWater = true;
+					break;
+				}
+
+				/* Check The Employed Population */
+				if (kBuilding.getNumPopulationEmployed() > 0
+				&& visiblePopulation() - kBuilding.getNumPopulationEmployed() < 0)
+				{
+					bObsoleteBuildings = true;
+					bRequiresPopulation = true;
+					break;
+				}
+
+				/* Check max population requirement */
+				if (kBuilding.getMaxPopAllowed() > 0 && kBuilding.getMaxPopAllowed() < getPopulation())
+				{
+					bObsoleteBuildings = true;
+					bPopulationTooHigh = true;
+					break;
+				}
+
+				/* Check banned non-state religion */
+				if (bBannedNonStateReligions)
+				{
+					eReligion = (ReligionTypes)kBuilding.getReligionType();
+					if (eReligion == NO_RELIGION)
 					{
-						bRestoreBuildings = true;
+						eReligion = (ReligionTypes)kBuilding.getPrereqReligion();
 					}
-					else
+					if (eReligion != NO_RELIGION && eStateReligion != eReligion)
 					{
 						bObsoleteBuildings = true;
-						bRequiresCivics = true;
+						bReligionBanned = true;
+						break;
 					}
 				}
-			}
-
-			/*Check Elecricity Requirements */
-			if (bPower)
-			{
-				if (kBuilding.isPrereqPower())
-				{
-					if (isPower())
-					{
-						bRestoreBuildings = true;
-					}
-					else
-					{
-						bObsoleteBuildings = true;
-						bRequiresPower = true;
-					}
-				}
-			}
-
-			/* Check The Employed Population */
-			if (bPopulation && !isReligiouslyDisabledBuilding(eBuildingX))
-			{
-				if (kBuilding.getNumPopulationEmployed() > 0)
-				{
-					if (visiblePopulation() < 0)
-					{
-						//Try and re-assign work before turning off the building
-						AI_assignWorkingPlots();
-
-						if (visiblePopulation() < 0)
-						{
-							bObsoleteBuildings = true;
-							bRequiresPopulation = true;
-						}
-					}
-					else if (visiblePopulation() - kBuilding.getNumPopulationEmployed() >= 0)
-					{
-						bRestoreBuildings = true;
-					}
-				}
-				if (bObsoleteBuildings || bRestoreBuildings)
-				{
-					const int iMaxPop = GC.getBuildingInfo(eBuildingX).getMaxPopAllowed();
-					if (iMaxPop > 0)
-					{
-						if (iMaxPop < getPopulation())
-						{
-							bObsoleteBuildings = true;
-							bPopulationTooHigh = true;
-						}
-						else
-						{
-							bRestoreBuildings = true;
-						}
-					}
-				}
+				break; // The while loop is not supposed to loop.
 			}
 
 			if (isDisabledBuilding(eBuildingX))
 			{
-				if (bRestoreBuildings && !bObsoleteBuildings)
+				if (!bObsoleteBuildings)
 				{
 					setDisabledBuilding(eBuildingX, false);
 
-					if (bAlertOwner && !GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
+					if (bAlertOwner)
 					{
 						MEMORY_TRACK_EXEMPT();
 						AddDLLMessage(
 							getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_CITY_RESTORED_BUILDINGS", getNameKey(), kBuilding.getDescription(), kBuilding.getDescription()),
+							gDLL->getText("TXT_KEY_CITY_RESTORED_BUILDINGS", getNameKey(), kBuilding.getDescription()),
 							NULL, MESSAGE_TYPE_MINOR_EVENT, kBuilding.getButton(), GC.getCOLOR_WHITE(), getX(), getY(), true, true
 						);
 					}
@@ -21266,7 +21249,7 @@ void CvCity::checkBuildings(bool bBonus, bool bCivics, bool bWar, bool bPower, b
 			{
 				setDisabledBuilding(eBuildingX, true);
 
-				if (bAlertOwner && !GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
+				if (bAlertOwner && bMsg)
 				{
 					// Toffer - Should combine the text messages if there's more than one reason.
 					CvWString szBuffer;
@@ -21279,12 +21262,14 @@ void CvCity::checkBuildings(bool bBonus, bool bCivics, bool bWar, bool bPower, b
 						szBuffer = gDLL->getText("TXT_KEY_CITY_REMOVED_BUILDINGS_CIVICS", kBuilding.getDescription(), getNameKey(), kBuilding.getDescription());
 					else if (bRequiresPower)
 						szBuffer = gDLL->getText("TXT_KEY_CITY_REMOVED_BUILDINGS_POWER", kBuilding.getDescription(), getNameKey());
-					else if (bRequiresPopulation)
-						szBuffer = gDLL->getText("TXT_KEY_CITY_REMOVED_BUILDINGS_POPULATION", kBuilding.getDescription(), getNameKey());
 					else if (bMissingFreshWater)
 						szBuffer = gDLL->getText("TXT_KEY_CITY_REMOVED_FRESH_WATER", kBuilding.getDescription(), getNameKey());
+					else if (bRequiresPopulation)
+						szBuffer = gDLL->getText("TXT_KEY_CITY_REMOVED_BUILDINGS_POPULATION", kBuilding.getDescription(), getNameKey());
 					else if (bPopulationTooHigh)
 						szBuffer = gDLL->getText("TXT_KEY_CITY_REMOVED_MAX_POPULATION", kBuilding.getDescription(), getNameKey());
+					else if (bReligionBanned)
+						szBuffer = gDLL->getText("TXT_KEY_CITY_RELIGIOUSLY_DISABLED_COMPLETELY_BUILDINGS", getNameKey(), GC.getReligionInfo(eReligion).getDescription(), kBuilding.getDescription());
 					else
 					{
 						FAssert(false);
@@ -21788,20 +21773,47 @@ void CvCity::setDisabledBuilding(const BuildingTypes eIndex, const bool bNewValu
 	{
 		if (itr == m_vDisabledBuildings.end())
 		{
-			m_vDisabledBuildings.push_back(eIndex);
 			if (bProcess)
 			{
+				if (isReligiouslyDisabledBuilding(eIndex))
+				{
+					// Needs to be fully processed in before we disable it.
+					setReligiouslyDisabledBuilding(eIndex, false);
+				}
 				processBuilding(eIndex, -1);
+			}
+			m_vDisabledBuildings.push_back(eIndex);
+			// Enable replaced buildings
+			if (bProcess)
+			{
+				const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eIndex);
+				bool bEnabled = false;
+				for (int iI = 0; iI < kBuilding.getNumReplacedBuilding(); iI++)
+				{
+					const BuildingTypes eReplaced = (BuildingTypes)kBuilding.getReplacedBuilding(iI);
+
+					if (getNumRealBuilding(eReplaced) > 0)
+					{
+						setDisabledBuilding(eReplaced, false);
+						bEnabled = true;
+					}
+				}
+				if (bEnabled)
+				{
+					// This will disable all we enabled above which shouldn't be enabled.
+					// One of them may replace the others, or there might be other reasons for them being disabled.
+					checkBuildings();
+				}
 			}
 		}
 	}
 	else if (itr != m_vDisabledBuildings.end())
 	{
-		m_vDisabledBuildings.erase(itr);
 		if (bProcess)
 		{
 			processBuilding(eIndex, 1);
 		}
+		m_vDisabledBuildings.erase(itr);
 	}
 }
 
@@ -21811,7 +21823,8 @@ bool CvCity::isDisabledBuilding(const short iIndex) const
 	return find(m_vDisabledBuildings.begin(), m_vDisabledBuildings.end(), iIndex) != m_vDisabledBuildings.end();
 }
 
-//Team Project (5)
+
+// SAVEBREAK - Toffer - Change m_pabReligiouslyDisabledBuilding to vector containing eIndex elements.
 bool CvCity::isReligiouslyDisabledBuilding(BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
@@ -21822,20 +21835,19 @@ void CvCity::setReligiouslyDisabledBuilding(BuildingTypes eIndex, bool bNewValue
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 
-	const bool bOldValue = isReligiouslyDisabledBuilding(eIndex);
+	const bool bOldValue = m_pabReligiouslyDisabledBuilding[eIndex];
+
 	ReligionTypes eReligion = (ReligionTypes)GC.getBuildingInfo(eIndex).getReligionType();
 	if (eReligion == NO_RELIGION)
 	{
 		eReligion = (ReligionTypes)GC.getBuildingInfo(eIndex).getPrereqReligion();
 	}
-
 	FAssert(eReligion != NO_RELIGION);
 
 	if (bOldValue != bNewValue)
 	{
-		m_pabReligiouslyDisabledBuilding[eIndex] = bNewValue;
-
 		processBuilding(eIndex, bNewValue ? -1 : 1, true);
+		m_pabReligiouslyDisabledBuilding[eIndex] = bNewValue;
 
 		if (!bNewValue)
 		{
@@ -21847,15 +21859,12 @@ void CvCity::setReligiouslyDisabledBuilding(BuildingTypes eIndex, bool bNewValue
 				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eIndex).getButton(), GC.getCOLOR_WHITE(), getX(), getY(), true, true);
 			}
 		}
-		else
+		else if (/*!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS) && */GET_PLAYER(getOwner()).isHuman())
 		{
-			if (/*!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS) && */GET_PLAYER(getOwner()).isHuman())
-			{
-				MEMORY_TRACK_EXEMPT();
+			MEMORY_TRACK_EXEMPT();
 
-				CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_RELIGIOUSLY_DISABLED_BUILDINGS", getNameKey(), GC.getReligionInfo(eReligion).getDescription(), GC.getBuildingInfo(eIndex).getDescription());
-				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eIndex).getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true);
-			}
+			CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_RELIGIOUSLY_DISABLED_BUILDINGS", getNameKey(), GC.getReligionInfo(eReligion).getDescription(), GC.getBuildingInfo(eIndex).getDescription());
+			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eIndex).getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true);
 		}
 	}
 }
@@ -22770,22 +22779,6 @@ void CvCity::clearModifierTotals()
 		ownerPlotGroup->removePlot(plot(), false);
 	}
 
-	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
-	{
-		if (isHasCorporation((CorporationTypes)iI))
-		{
-			applyCorporationModifiers((CorporationTypes)iI, false);
-		}
-	}
-
-	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
-	{
-		if (isHasReligion((ReligionTypes)iI))
-		{
-			applyReligionModifiers((ReligionTypes)iI, false);
-		}
-	}
-
 	m_iNumNationalWonders = 0;
 	m_iNumWorldWonders = 0;
 	m_iNumTeamWonders = 0;
@@ -23083,7 +23076,7 @@ void CvCity::recalculateModifiers()
 
 			// Toffer - Xml changes may have invalidated a building the city have; hence bValid.
 
-			const bool bObsolete = GET_TEAM(getTeam()).isObsoleteBuilding(eBuildingX);
+			const bool bObsolete = GET_TEAM(getTeam()).isHasTech((TechTypes)info.getObsoleteTech());
 			bool bValid = 
 			(
 				!bObsolete
@@ -23094,18 +23087,6 @@ void CvCity::recalculateModifiers()
 					getNumRealBuilding((BuildingTypes)info.getExtendsBuilding()) > 0
 				)
 			);
-			if (bValid)
-			{
-				// Is it replaced by another building.
-				for (int iJ = 0; iJ < info.getNumReplacementBuilding(); ++iJ)
-				{
-					if (getNumRealBuilding((BuildingTypes)info.getReplacementBuilding(iJ)) > 0)
-					{
-						bValid = false;
-						break;
-					}
-				}
-			}
 			if (!bValid) // Forget it.
 			{
 				// @SAVEBREAK - Toffer - These should be changed to a vector of 3 element arrays at some point,
@@ -23122,9 +23103,22 @@ void CvCity::recalculateModifiers()
 					}
 				}
 			}
-			else if (getNumBuilding(eBuildingX) > 0) // Process it in, unless it's disabled.
+			else
 			{
-				processBuilding(eBuildingX, 1, isReligiouslyDisabledBuilding(eBuildingX));
+				// Is it replaced by another building.
+				for (int iJ = 0; iJ < info.getNumReplacementBuilding(); ++iJ)
+				{
+					if (getNumRealBuilding((BuildingTypes)info.getReplacementBuilding(iJ)) > 0)
+					{
+						setDisabledBuilding((BuildingTypes)info.getReplacementBuilding(iJ), true, false);
+						bValid = false;
+						break;
+					}
+				}
+				if (bValid)
+				{
+					processBuilding(eBuildingX, 1);
+				}
 			}
 		}
 	}
@@ -23148,7 +23142,8 @@ void CvCity::recalculateModifiers()
 			applyReligionModifiers((ReligionTypes)iI, true);
 		}
 	}
-	//Team Project (5)
+
+	//checkBuildings(false);
 	checkReligiousDisablingAllBuildings();
 
 	//	Replay events in so far as they effect modifiers

@@ -21358,7 +21358,16 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	if (pCity != NULL)
 	{
 		ePlayer = pCity->getOwner();
-		bRelDisabled = GET_PLAYER(ePlayer).isBuildingtoDisplayReligiouslyDisabled(eBuilding);
+
+		if (pCity->isDisabledBuilding(eBuilding))
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_BUILDING_DISABLED"));
+		}
+		else if (pCity->isReligiouslyDisabledBuilding(eBuilding))
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_BUILDING_DISABLED_RELIGIOUSLY"));
+			bRelDisabled = !bCivilopediaText;
+		}
 	}
 	else
 	{
@@ -21370,10 +21379,6 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		eTeam = GET_PLAYER(ePlayer).getTeam();
 	}
 
-	if (bCivilopediaText || !GC.getGame().isOption(GAMEOPTION_RELIGIOUS_DISABLING))
-	{
-		bRelDisabled = false;
-	}
 
 	if (!bCivilopediaText)
 	{
@@ -24146,7 +24151,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 			}
 		}
 
-		if ((gDLL->getChtLvl() > 0) && gDLL->ctrlKey() && (pCity != NULL))
+		if (gDLL->getChtLvl() > 0 && gDLL->ctrlKey() && pCity != NULL)
 		{
 			int iBuildingValue = pCity->AI_buildingValue(eBuilding);
 			szBuffer.append(CvWString::format(L"\nAI Building Value = %d", iBuildingValue));
