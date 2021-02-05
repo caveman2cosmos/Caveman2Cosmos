@@ -11,7 +11,9 @@
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvXMLLoadUtility.h"
 
 using namespace std;
 
@@ -179,17 +181,17 @@ void CvXMLLoadUtilityModTools::setLocationName( CvString *pszTextVal, const char
 /*
 		if ( szTextVal == "" )	// this shouldn't exist
 		{
-			p_szLogWrite->XmlArtTagVerification("CRASH WARNING, Your theme <Path> tag is found emtpy in: %s\\%s", szDirName.GetCString(), GC.getCurrentXMLFile().GetCString());
+			DEBUG_LOG("XmlArtTagVerification.log", "CRASH WARNING, Your theme <Path> tag is found emtpy in: %s\\%s", szDirName.GetCString(), GC.getCurrentXMLFile().GetCString());
 		}
 		else if (szTextVal == "None")	// this shouldn't exist!
 		{
-			p_szLogWrite->XmlArtTagVerification("CRASH WARNING, Your theme <Path> tag is set to: %s in: %s\\%s", szTextVal.GetCString(), szDirName.GetCString(), GC.getCurrentXMLFile().GetCString());		
+			DEBUG_LOG("XmlArtTagVerification.log", "CRASH WARNING, Your theme <Path> tag is set to: %s in: %s\\%s", szTextVal.GetCString(), szDirName.GetCString(), GC.getCurrentXMLFile().GetCString());		
 		}
 		else
 		{
 		}
 */
-			p_szLogWrite->XmlArtTagVerification("CRASH WARNING, Your theme <Path> %s, seems not to be relative to the Module path: %s", szTextVal.GetCString(), szDirName);		
+			DEBUG_LOG("XmlArtTagVerification.log", "CRASH WARNING, Your theme <Path> %s, seems not to be relative to the Module path: %s", szTextVal.GetCString(), szDirName);		
 #endif
 		}
 	}
@@ -199,15 +201,15 @@ void CvXMLLoadUtilityModTools::setLocationName( CvString *pszTextVal, const char
 		//the passed is crap, we don't want to continue anything with it
 		if ( szTextVal == "" )
 		{
-			p_szLogWrite->XmlArtTagVerification("One art tag is found emtpy in: %s", GC.getCurrentXMLFile().GetCString());
+			DEBUG_LOG("XmlArtTagVerification.log", "One art tag is found emtpy in: %s", GC.getCurrentXMLFile().GetCString());
 		}
 		else if (szTextVal == "None")
 		{
-			p_szLogWrite->XmlArtTagVerification("One art tag is set to: %s in: %s", szTextVal.GetCString(), GC.getCurrentXMLFile().GetCString());		
+			DEBUG_LOG("XmlArtTagVerification.log", "One art tag is set to: %s in: %s", szTextVal.GetCString(), GC.getCurrentXMLFile().GetCString());		
 		}
 		else
 		{		
-			p_szLogWrite->XmlArtTagVerification("One art tag: %s, seems not to be relative to the module path in: %s", szTextVal.GetCString(), GC.getCurrentXMLFile().GetCString());		
+			DEBUG_LOG("XmlArtTagVerification.log", "One art tag: %s, seems not to be relative to the module path in: %s", szTextVal.GetCString(), GC.getCurrentXMLFile().GetCString());		
 		}
 #endif
 	}	
@@ -223,15 +225,15 @@ void CvXMLLoadUtilityModTools::setLocationName( CvString *pszTextVal, const char
 		//the passed is crap, we don't want to continue anything with it
 		if ( szTextVal == "" )
 		{
-			p_szLogWrite->XmlArtTagVerification("One art tag is found emtpy in: %s", GC.getCurrentXMLFile().GetCString());
+			DEBUG_LOG("XmlArtTagVerification.log", "One art tag is found emtpy in: %s", GC.getCurrentXMLFile().GetCString());
 		}
 		else if (szTextVal == "None")
 		{
-			p_szLogWrite->XmlArtTagVerification("One art tag is set to: %s in: %s", szTextVal.GetCString(), GC.getCurrentXMLFile().GetCString());		
+			DEBUG_LOG("XmlArtTagVerification.log", "One art tag is set to: %s in: %s", szTextVal.GetCString(), GC.getCurrentXMLFile().GetCString());		
 		}
 		else
 		{		
-			p_szLogWrite->XmlArtTagVerification("One art tag: %s, seems not to be relative to the module path in: %s", szTextVal.GetCString(), GC.getCurrentXMLFile().GetCString());		
+			DEBUG_LOG("XmlArtTagVerification.log", "One art tag: %s, seems not to be relative to the module path in: %s", szTextVal.GetCString(), GC.getCurrentXMLFile().GetCString());		
 		}
 #endif
 		}
@@ -270,11 +272,7 @@ bool CvXMLLoadUtilityModTools::isExcludedFile(const char* szLocationName)
 		//compare
 		if ( szLocationNameStripTemp == "mht" )  //if its a thema file, force static linking
 		{
-#ifdef _DEBUG
-		CvXMLLoadUtility* p_szLogWrite = new CvXMLLoadUtility;
-		p_szLogWrite->XmlArtTagVerification("You are now loading an alternative theme: %s", szLocationName);
-		SAFE_DELETE(p_szLogWrite);
-#endif
+			DEBUG_LOG("XmlArtTagVerification.log", "You are now loading an alternative theme: %s", szLocationName);
 			return true;
 		}
 	}
@@ -580,25 +578,6 @@ bool CvXMLLoadUtilityModTools::isModularArt(const char* szLocationName)
 	return true;
 }
 
-// Fully based on CString
-CvString CvXMLLoadUtilityModTools::GetProgramDir()
-{
-	CvString szExeLocation = _pgmptr;
-	if ( szExeLocation == NULL)
-	{
-		FErrorMsg("Not running Stdlib Compatible Operating System?");
-	}
-	
-	string::size_type posDot = szExeLocation.find_last_of('\\');
-
-	if(posDot != string::npos) 
-	{
-		szExeLocation.erase(posDot + 1);
-	}
-
-	return szExeLocation;
-}
-
 CvString CvXMLLoadUtilityModTools::deleteFileName(const char* szDirName, const char szLocateChar)
 {	
 	CvString szDirNameStrip = szDirName;
@@ -649,9 +628,7 @@ void CvXMLLoadUtilityModTools::writeThm(const char* szTextVal)
 #ifdef _DEBUG
 		CvString szPrint = GetProgramDir();
 		szPrint.append(szTextVal);
-		CvXMLLoadUtility* p_szLogWrite = new CvXMLLoadUtility;
-		p_szLogWrite->XmlArtTagVerification("Your Theme file: %s seems to be corrupted", szPrint.GetCString());
-		SAFE_DELETE(p_szLogWrite);
+		DEBUG_LOG("XmlArtTagVerification.log", "Your Theme file: %s seems to be corrupted", szPrint.GetCString());
 #endif
 */
 	}

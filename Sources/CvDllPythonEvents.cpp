@@ -1,7 +1,11 @@
 #include "CvGameCoreDLL.h"
-
-#include <boost155/functional.hpp>
-#include <boost155/bind.hpp>
+#include "CvCity.h"
+#include "CvDllPythonEvents.h"
+#include "CvGlobals.h"
+#include "CvPlot.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
+#include "CvUnit.h"
 
 
 namespace logging {
@@ -292,7 +296,7 @@ bool postEvent(EventArgs eventData, const char* eventName)
 
 	for(ptr = eventName; *ptr != '\0'; ptr++)
 	{
-		xSum.add((byte)*ptr);
+		xSum.add((uint8_t)*ptr);
 	}
 
 	std::map<int,ProfileSample*>::const_iterator itr = g_pythonProfiles->find(xSum.get());
@@ -430,13 +434,14 @@ void CvDllPythonEvents::reportGameStart()
 	}
 }
 
-void CvDllPythonEvents::reportGameEnd()
+void CvDllPythonEvents::reportGameEnd(int iGameTurn)
 {
 	if (preEvent())
 	{
 		EventArgs eventData;
 		eventData
-			.arg("event", "GameEnd");
+			.arg("event", "GameEnd")
+			.arg("iGameTurn", iGameTurn);
 		postEvent(eventData, "GameEnd");
 	}
 }

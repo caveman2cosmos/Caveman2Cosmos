@@ -14,6 +14,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Płazów</Polish>
+		<Russian>Ìèô îá àìôèáèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_POND</Tag>
@@ -29,6 +30,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Klatka - Płazy</Polish>
+		<Russian>Çàòîí äëÿ àìôèáèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM</Tag>
@@ -44,6 +46,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Sztandar Wojskowy (Zwierzęca Maskotka)</Polish>
+		<Russian>Çâåðèíûé òîòåì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS</Tag>
@@ -55,6 +58,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Sztandar Wojskowy (Wilki)</Polish>
+		<Russian>Òîòåì «Ñîáàêà»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS_HELP</Tag>
@@ -62,6 +66,7 @@
 		<French>[ICON_BULLET]Construit les bâtiments et unités canines plus vite dans cette Ville.</French>
 		<Italian>Questo edificio ti permette di addestrare le unità canine più velocemente.</Italian>
 		<Polish>Szybciej buduj jedn. psów i budynki z nimi związane.</Polish>
+		<Russian>Àâòîìàòè÷åñêè ñòðîèò âñå çäàíèÿ ñâÿçàííûå ñ ñîáàêàìè, óñêîðÿÿ èõ îáó÷åíèå â äàííîì ãîðîäå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS</Tag>
@@ -73,12 +78,14 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Polish>Sztandar Wojskowy (Robotnicy)</Polish>
+		<Russian>Òîòåì «Ðàáîòíèê»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS_HELP</Tag>
 		<English>[ICON_BULLET]Build Worker units faster in this city.</English>
 		<French>[ICON_BULLET]Les unités ouvriers sont entraînées plus vite dans cette ville</French>
 		<Italian>Costruisce le unità di lavoratori più velocemente.</Italian>
+		<Russian>Óñêîðÿåò îáó÷åíèå ðàáîòíèêîâ â ýòîì ãîðîäå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTELOPE_MYTH</Tag>
@@ -94,11 +101,13 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit (T) Antylopy</Polish>
+		<Russian>Ìèô îá àíòèëîïå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTELOPE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Antelope</English>
-		<French>Effet (Mythe de l'Antilope)</French>
+		<French>Effet - Mythe de l'Antilope</French>
+		<Russian>Ïåñíÿ îá àíòèëîïå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAD_BOY_CAGE</Tag>
@@ -114,6 +123,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Klatka - Groźne Zwierzęta</Polish>
+		<Russian>Êëåòêè ñ õèùíèêàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAR_CAGE</Tag>
@@ -129,6 +139,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Klatka - Niedźwiedź</Polish>
+		<Russian>Êëåòêè ñ ìåäâåäÿìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BELUGA_MYTH</Tag>
@@ -144,10 +155,12 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Bieługi</Polish>
+		<Russian>Ìèô î áåëóãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BELUGA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Beluga Whale</English>
+		<Russian>Ïåñíÿ î áåëóãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIG_CAT_CAGE</Tag>
@@ -163,6 +176,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Klatka - Wielki kot</Polish>
+		<Russian>Êëåòêè ñ êîøà÷üèìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIRD_CAGE</Tag>
@@ -178,6 +192,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Klatka - Ptaki</Polish>
+		<Russian>Êëåòêè ñ ïòèöàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BISON_HERD</Tag>
@@ -193,6 +208,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Stado - Bizony</Polish>
+		<Russian>Ñòàäî áèçîíîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BOAR_MYTH</Tag>
@@ -208,10 +224,11 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Dzika</Polish>
+		<Russian>Ìèô î êàáàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BOXING_KANGAROO</Tag>
-		<English>Boxing Kangaroo</English>
+		<English>Carnival - Boxing Kangaroo</English>
 		<French>
 			<Text>Kangourou Boxeur</Text>
 			<Gender>Male</Gender>
@@ -223,6 +240,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Kangura</Polish>
+		<Russian>Áîêñèðóþùèé êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_HERD</Tag>
@@ -238,6 +256,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Stado - Bawołów</Polish>
+		<Russian>Ñòàäî áóéâîëîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_TRAINER</Tag>
@@ -253,6 +272,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Treser Bawołów</Polish>
+		<Russian>Äðåññ. áóéâîëîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULL_MYTH</Tag>
@@ -268,11 +288,13 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Byka</Polish>
+		<Russian>Ìèô î áûêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Bull</English>
-		<French>Effet (Mythe du Taureau)</French>
+		<French>Effet - Mythe du Taureau</French>
+		<Russian>Ïåñíÿ î áûêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAMEL_HERD</Tag>
@@ -288,6 +310,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Stado - Wielbłądy</Polish>
+		<Russian>Ñòàäî âåðáëþäîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAMEL_MYTH</Tag>
@@ -303,56 +326,67 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Wielbłąda</Polish>
+		<Russian>Ìèô î âåðáëþäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPUCHIN_MYTH</Tag>
 		<English>Myth - Capuchin</English>
 		<French>Mythe du Capucin</French>
+		<Russian>Ìèô î êàïóöèå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPUCHIN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Capuchin</English>
-		<French>Effet (Mythe du Capucin)</French>
+		<French>Effet - Mythe du Capucin</French>
+		<Russian>Ïåñíÿ î êàïóöèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPUCHIN_STORIES</Tag>
 		<English>Stories - Capuchin</English>
 		<French>Histoires du Capucin</French>
+		<Russian>Ñêàçû î êàïóöèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPUCHIN_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Capuchin</English>
-		<French>Effet (Histoire du Capucin)</French>
+		<French>Effet - Histoire du Capucin</French>
+		<Russian>Ïðåäàíèÿ î êàïóöèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPUCHIN_STORY</Tag>
 		<English>Story - Capuchin</English>
 		<French>Histoire du Capucin</French>
+		<Russian>Ñêàçêà î êàïóöèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPYBARA_MYTH</Tag>
 		<English>Myth - Capybara</English>
 		<French>Mythe du Cabiaï</French>
+		<Russian>Ìèô î âîäîñâèíêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPYBARA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Capybara</English>
-		<French>Effet (Mythe du Cabiaï)</French>
+		<French>Effet - Mythe du Cabiaï</French>
+		<Russian>Ïåñíÿ î âîäîñâèíêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPYBARA_STORIES</Tag>
 		<English>Stories - Capybara</English>
 		<French>Histoires de Cabiaï</French>
+		<Russian>Ñêàçû î âîäîñâèíêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPYBARA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Capybara</English>
-		<French>Effet (Histoire du Cabiaï)</French>
+		<French>Effet - Histoire du Cabiaï</French>
+		<Russian>Ïðåäàíèÿ î âîäîñâèíêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPYBARA_STORY</Tag>
 		<English>Story - Capybara</English>
 		<French>Histoire du Cabiaï</French>
+		<Russian>Ñêàçêà î âîäîñâèíêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARNIVAL</Tag>
@@ -369,6 +403,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Karnawał</Polish>
+		<Russian>Êàðíàâàë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CEPHALOPOD_INSTITUTE</Tag>
@@ -384,6 +419,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Centrum Badań Głowonogów</Polish>
+		<Russian>Öåíòð èçó÷. êàëüìàðîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CETAEA_INSTITUTE</Tag>
@@ -399,56 +435,67 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Centrum Badań Wielorybów</Polish>
+		<Russian>Öåíòð èçó÷. êèòîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHEETAH_MYTH</Tag>
 		<English>Myth - Cheetah</English>
 		<French>Mythe du Cheetah</French>
+		<Russian>Ìèô î ãåïàðäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHEETAH_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Cheetah</English>
-		<French>Effet (Mythe du Cheetah</French>
+		<French>Effet - Mythe du Cheetah</French>
+		<Russian>Ïåñíÿ î ãåïàðäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHEETAH_STORIES</Tag>
 		<English>Stories - Cheetah</English>
 		<French>Histoires du Cheetah</French>
+		<Russian>Ñêàçû î ãåïàðäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHEETAH_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Cheetah</English>
-		<French>Effet (Histoire du Cheetah</French>
+		<French>Effet - Histoire du Cheetah</French>
+		<Russian>Ïðåäàíèÿ î ãåïàðäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHEETAH_STORY</Tag>
 		<English>Story - Cheetah</English>
 		<French>Histoire du Cheetah</French>
+		<Russian>Ñêàçêà î ãåïàðäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHIMPANZEE_MYTH</Tag>
 		<English>Myth - Chimpanzee</English>
 		<French>Mythe du Chimpanzé</French>
+		<Russian>Ìèô î øèìïàíçå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHIMPANZEE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Chimpanzee</English>
-		<French>Effet (Mythe du Chimpanzé)</French>
+		<French>Effet - Mythe du Chimpanzé</French>
+		<Russian>Ïåñíÿ î øèìïàíçå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHIMPANZEE_STORIES</Tag>
 		<English>Stories - Chimpanzee</English>
 		<French>Histoires du Chimpanzé</French>
+		<Russian>Ñêàçû î øèìïàíçå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHIMPANZEE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Chimpanzee</English>
-		<French>Effet (Histoires de Chimpanzés)</French>
+		<French>Effet - Histoires de Chimpanzés</French>
+		<Russian>Ïðåäàíèÿ î øèìïàíçå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHIMPANZEE_STORY</Tag>
 		<English>Story - Chimpanzee</English>
 		<French>Histoire du Chimpanzé</French>
+		<Russian>Ñêàçêà î øèìïàíçå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COASTAL_FISH_FARM</Tag>
@@ -464,31 +511,37 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Farma Ryb Przybrzeżnych</Polish>
+		<Russian>Ðûáíàÿ ôåðìà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COD_MYTH</Tag>
 		<English>Myth - Cod</English>
 		<French>Mythe de la Morue</French>
+		<Russian>Ìèô î òðåñêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COD_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Cod</English>
-		<French>Effet (Mythe de la Morue)</French>
+		<French>Effet - Mythe de la Morue</French>
+		<Russian>Ïåñíÿ î òðåñêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COD_STORIES</Tag>
 		<English>Stories - Cod</English>
 		<French>Histoires de la Morue</French>
+		<Russian>Ñêàçû î òðåñêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COD_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Cod</English>
-		<French>Effet (Histoire de la Morue)</French>
+		<French>Effet - Histoire de la Morue</French>
+		<Russian>Ïðåäàíèÿ î òðåñêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COD_STORY</Tag>
 		<English>Story - Cod</English>
 		<French>Histoire de la Morue</French>
+		<Russian>Ñêàçêà î òðåñêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COW_HERD</Tag>
@@ -504,6 +557,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Stado - Krowy</Polish>
+		<Russian>Ñòàäî êîðîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_MYTH</Tag>
@@ -519,11 +573,13 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Krabów</Polish>
+		<Russian>Ìèô î êðàáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Crab</English>
-		<French>Effet (Mythe du Crabe)</French>
+		<French>Effet - Mythe du Crabe</French>
+		<Russian>Ïåñíÿ î êðàáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_NETS</Tag>
@@ -539,21 +595,25 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Polish>Sieci na kraby</Polish>
+		<Russian>Ñåòè íà êðàáîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_STORIES</Tag>
 		<English>Stories - Crab</English>
 		<French>Histoires de Crabes</French>
+		<Russian>Ñêàçû î êðàáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Crab</English>
-		<French>Effet (Histoires de Crabes)</French>
+		<French>Effet - Histoires de Crabes</French>
+		<Russian>Ïðåäàíèÿ î êðàáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_STORY</Tag>
 		<English>Story - Crab</English>
 		<French>Histoire du Crabe</French>
+		<Russian>Ñêàçêà î êðàáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCING_BEAR</Tag>
@@ -571,6 +631,7 @@
 		</Italian>
 		<Spanish>Carnival - Oso Pisador</Spanish>
 		<Polish>Karnawał - Tańczący Niedźwiedź</Polish>
+		<Russian>Òàíöóþùèé ìåäâåäü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_HERD</Tag>
@@ -586,6 +647,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Stado - Jelenie</Polish>
+		<Russian>Ñòàäî îëåíåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_MYTH</Tag>
@@ -601,36 +663,43 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit (T) Jelenia</Polish>
+		<Russian>Ìèô îá îëåíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_MYTH_EFFECT</Tag>
 		<English>Myth Effect (T) - Deer</English>
-		<French>Effet (Mythe (T) du Cerf)</French>
+		<French>Effet - Mythe (T) du Cerf</French>
+		<Russian>Ïåñíÿ îá îëåíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESERT_TORTOISE_MYTH</Tag>
 		<English>Myth - Desert Tortoise</English>
 		<French>Mythe de la Tortue du désert</French>
+		<Russian>Ìèô î ãîôåðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESERT_TORTOISE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Desert Tortoise</English>
-		<French>Effet (Mythe de la Tortue du désert)</French>
+		<French>Effet - Mythe de la Tortue du désert</French>
+		<Russian>Ïåñíÿ î ãîôåðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESERT_TORTOISE_STORIES</Tag>
 		<English>Stories - Desert Tortoise</English>
 		<French>Histoires de la Tortue du désert</French>
+		<Russian>Ñêàçû î ãîôåðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESERT_TORTOISE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Desert Tortoise</English>
-		<French>Effet (Histoire de la Tortue du désert)</French>
+		<French>Effet - Histoire de la Tortue du désert</French>
+		<Russian>Ïðåäàíèÿ î ãîôåðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DESERT_TORTOISE_STORY</Tag>
 		<English>Story - Desert Tortoise</English>
 		<French>Histoire de la Tortue du désert</French>
+		<Russian>Ñêàçêà î ãîôåðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOG_KENNEL</Tag>
@@ -646,6 +715,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Polish>Psie budy</Polish>
+		<Russian>Ñîáà÷èé âîëüåð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOLPHIN_MYTH</Tag>
@@ -661,6 +731,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Delfina</Polish>
+		<Russian>Ìèô î äåëüôèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DONKEY_HERD</Tag>
@@ -676,6 +747,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Stado - Osły</Polish>
+		<Russian>Ñòàäî îñëîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DRAGON_MYTH</Tag>
@@ -691,6 +763,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Smoka</Polish>
+		<Russian>Ìèô î äðàêîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUGONG_MYTH</Tag>
@@ -706,31 +779,37 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Dugonga</Polish>
+		<Russian>Ìèô î äþãîíè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EAGLE_BALD_MYTH</Tag>
 		<English>Myth - Bald Eagle</English>
 		<French>Mythe du Pygargue à tête blanche</French>
+		<Russian>Ìèô î áåëîã. îðëàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EAGLE_BALD_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Bald Eagle</English>
-		<French>Effet (Mythe du Pygargue à tête blanche)</French>
+		<French>Effet - Mythe du Pygargue à tête blanche</French>
+		<Russian>Ïåñíÿ î áåëîã. îðëàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EAGLE_BALD_STORIES</Tag>
 		<English>Stories - Bald Eagle</English>
 		<French>Histoires du Pygargue à tête blanche</French>
+		<Russian>Ñêàçû î áåëîã. îðëàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EAGLE_BALD_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Bald Eagle</English>
-		<French>Effet (Histoire du Pygargue à tête blanche)</French>
+		<French>Effet - Histoire du Pygargue à tête blanche</French>
+		<Russian>Ïðåäàíèÿ î áåëîã. îðëàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EAGLE_BALD_STORY</Tag>
 		<English>Story - Bald Eagle</English>
 		<French>Histoire du Pygargue à tête blanche</French>
+		<Russian>Ñêàçêà î áåëîã. îðëàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTH_MYTH</Tag>
@@ -746,11 +825,13 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Ziemi</Polish>
+		<Russian>Ìèô î Çåìëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTH_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Earth</English>
-		<French>Effet (Mythe de la Terre)</French>
+		<French>Effet - Mythe de la Terre</French>
+		<Russian>Ïåñíÿ î Çåìëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEPHANT_HERD</Tag>
@@ -766,6 +847,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Stado - Słonie</Polish>
+		<Russian>Ñòàäî ñëîíîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEPHANT_MYTH</Tag>
@@ -781,6 +863,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Słonia</Polish>
+		<Russian>Ìèô î ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS</Tag>
@@ -796,6 +879,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Klatka - Egzotyczny roślinożerca</Polish>
+		<Russian>Êëåòêè ñ êîïûòíûìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEATHER_WORKER</Tag>
@@ -811,6 +895,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Pierzarz</Polish>
+		<Russian>Ìàñòåð ïåðüåâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FISH_PENS</Tag>
@@ -826,6 +911,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Polish>Zagroda Rybna</Polish>
+		<Russian>Çàòîí äëÿ ðûáû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUR_FARM</Tag>
@@ -841,6 +927,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Ferma Futer</Polish>
+		<Russian>Ìåõîâàÿ ôåðìà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOAT_HERD</Tag>
@@ -856,6 +943,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Efekt Mitu - Koza</Polish>
+		<Russian>Ñòàäî êîçëîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOAT_MYTH</Tag>
@@ -871,6 +959,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Kóz</Polish>
+		<Russian>Ìèô î êîçëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOVENORS_MENAGERIE</Tag>
@@ -886,6 +975,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Menażeria Gubernatora</Polish>
+		<Russian>Ãîðîäñêîé çâåðèíåö</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOVENORS_PETS</Tag>
@@ -901,6 +991,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Polish>Maskotka Gubernatora</Polish>
+		<Russian>Ãîðîäñêîé ïèòîìíèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_MYTH</Tag>
@@ -916,6 +1007,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Żarłacza Białego</Polish>
+		<Russian>Ìèô î áåëîé àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAMMERHEAD_SHARK_MYTH</Tag>
@@ -931,6 +1023,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Rekina-młota</Polish>
+		<Russian>Ìèô îá àêóëå-ìîëîò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAWKING</Tag>
@@ -946,6 +1039,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Chata Sokolnika</Polish>
+		<Russian>Ñîêîëèíàÿ îõîòà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORSE_HERD</Tag>
@@ -961,6 +1055,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Stado - Konie</Polish>
+		<Russian>Òàáóí ëîøàäåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMPBACK_MYTH</Tag>
@@ -976,6 +1071,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Humpbaka</Polish>
+		<Russian>Ìèô î ãîðáàòîì êèòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAKEN_MYTH</Tag>
@@ -991,6 +1087,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Krakena</Polish>
+		<Russian>Ìèô î Êðàêåíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEVIATHAN_MYTH</Tag>
@@ -1006,6 +1103,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Lewiatana</Polish>
+		<Russian>Ìèô î Ëåâèàôàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LION_MYTH</Tag>
@@ -1021,6 +1119,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Lwa</Polish>
+		<Russian>Ìèô î ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LLAMA_HERD</Tag>
@@ -1036,6 +1135,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Stado - Lam</Polish>
+		<Russian>Ñòàäî ëàì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LLAMA_MYTH</Tag>
@@ -1047,31 +1147,37 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Lam</Polish>
+		<Russian>Ìèô î ëàìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MACKEREL_MYTH</Tag>
 		<English>Myth - Mackerel</English>
 		<French>Mythe du Maquereau</French>
+		<Russian>Ìèô î ìàêðåëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MACKEREL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Mackerel</English>
-		<French>Effet (Mythe du Maquereau)</French>
+		<French>Effet - Mythe du Maquereau</French>
+		<Russian>Ïåñíÿ î ìàêðåëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MACKEREL_STORIES</Tag>
 		<English>Stories - Mackerel</English>
 		<French>Histoires du Maquereau</French>
+		<Russian>Ñêàçû î ìàêðåëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MACKEREL_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Mackerel</English>
-		<French>Effet (Histoire du Maquereau)</French>
+		<French>Effet - Histoire du Maquereau</French>
+		<Russian>Ïðåäàíèÿ î ìàêðåëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MACKEREL_STORY</Tag>
 		<English>Story - Mackerel</English>
 		<French>Histoire du Maquereau</French>
+		<Russian>Ñêàçêà î ìàêðåëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE</Tag>
@@ -1087,31 +1193,37 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Instytut Morski</Polish>
+		<Russian>Ìîðñêîé èíñòèòóò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARLIN_MYTH</Tag>
 		<English>Myth - Marlin</English>
 		<French>Mythe du Marlin</French>
+		<Russian>Ìèô î ìàðëèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARLIN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Marlin</English>
-		<French>Effet (Mythe du Marlin)</French>
+		<French>Effet - Mythe du Marlin</French>
+		<Russian>Ïåñíÿ î ìàðëèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARLIN_STORIES</Tag>
 		<English>Stories - Marlin</English>
 		<French>Histoires du Marlin</French>
+		<Russian>Ñêàçû î ìàðëèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARLIN_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Marlin</English>
-		<French>Effet (Histoire du Marlin)</French>
+		<French>Effet - Histoire du Marlin</French>
+		<Russian>Ïðåäàíèÿ î ìàðëèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARLIN_STORY</Tag>
 		<English>Story - Marlin</English>
 		<French>Histoire du Marlin</French>
+		<Russian>Ñêàçêà î ìàðëèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARSUPIAL_CAGE</Tag>
@@ -1127,6 +1239,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Klatka - Torbacze</Polish>
+		<Russian>Êëåòêè ñ ñóì÷àòûìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARSUPIAL_MYTH</Tag>
@@ -1142,11 +1255,13 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit (T) Torbacza</Polish>
+		<Russian>Ìèô î ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARSUPIAL_MYTH_EFFECT</Tag>
 		<English>Myth Effect (T) - Marsupial</English>
-		<French>Effet (Mythe (T) - Marsupial)</French>
+		<French>Effet - Mythe (T) - Marsupial</French>
+		<Russian>Ïåñíÿ î ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER</Tag>
@@ -1162,6 +1277,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Wybitny Łowca</Polish>
+		<Russian>Õèæèíà îõîòíèêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_SEA_HUNTER</Tag>
@@ -1177,6 +1293,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Wybitny Morski Łowca</Polish>
+		<Russian>Øêîëà ðûáàëêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERMAID_MYTH</Tag>
@@ -1192,6 +1309,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Syreny</Polish>
+		<Russian>Ìèô î ðóñàëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINKIE_WHALE_MYTH</Tag>
@@ -1207,6 +1325,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Płetwala</Polish>
+		<Russian>Ìèô î ïîëîñàòèêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MULE_TRAINER</Tag>
@@ -1222,6 +1341,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Treser Mułów</Polish>
+		<Russian>Äðåññ. ìóëîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_HERD</Tag>
@@ -1237,6 +1357,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Stado - Woły Piżmowe</Polish>
+		<Russian>Ñòàäî îâöåáûêîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NARWHAL_MYTH</Tag>
@@ -1252,6 +1373,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Narwala</Polish>
+		<Russian>Ìèô î íàðâàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM</Tag>
@@ -1267,6 +1389,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Bandera (Zwierzęca Maskotka)</Polish>
+		<Russian>Ìîðñêîé øòàíäàðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOCTURNAL_CAGE</Tag>
@@ -1282,6 +1405,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Klatka - Zwierzęta Nocne</Polish>
+		<Russian>Êëåòêè ñ íî÷íûìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OLD_MAN_MYTH</Tag>
@@ -1297,6 +1421,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Starego człowieka z lasu</Polish>
+		<Russian>Ìèô î ëåøåì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCA_MYTH</Tag>
@@ -1312,6 +1437,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Orki</Polish>
+		<Russian>Ìèô î êàñàòêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_CAT_MYTH</Tag>
@@ -1323,11 +1449,13 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Lew Jaskiniowy</Polish>
+		<Russian>Ìèô î äðåâíåé êîøêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Paleolithic Cat</English>
-		<French>Effet (Mythe du Félin Paléolithique)</French>
+		<French>Effet - Mythe du Félin Paléolithique</French>
+		<Russian>Ïåñíÿ î äðåâíåé êîøêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_MYTH</Tag>
@@ -1339,34 +1467,40 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Mamutów</Polish>
+		<Russian>Ìèô î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Paleolithic Mammoth</English>
-		<French>Effet (Mythe du Mammouth Paléolithique)</French>
+		<French>Effet - Mythe du Mammouth Paléolithique</French>
+		<Russian>Ïåñíÿ î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</Tag>
 		<English>Remains - Mammoth</English>
 		<French>Restes de Mammouths</French>
+		<Russian>Ïàìÿòü î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORIES</Tag>
 		<English>Stories - Mammoths</English>
 		<French>Histoires des Mammouths</French>
 		<Polish>Historie - Mamutach</Polish>
+		<Russian>Ñêàçû î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORIES_EFFECT</Tag>
 		<English>Effect - Stories Mammoths</English>
-		<French>Effet (Histoires des Mammouths)</French>
+		<French>Effet - Histoires des Mammouths</French>
 		<Polish>Efekt - Historie Mamutach</Polish>
+		<Russian>Ïðåäàíèÿ î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORY</Tag>
 		<English>Story - Mammoths</English>
 		<French>Histoire des Mammouths</French>
 		<Polish>Opowieść o Kopalnych Mamutach</Polish>
+		<Russian>Ñêàçêà î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</Tag>
@@ -1378,11 +1512,13 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Paleolitycznych Torbaczy</Polish>
+		<Russian>Ìèô î äðåâ. ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Paleolithic Marsupial</English>
-		<French>Effet (Mythe du Marsupial Paléolithique)</French>
+		<French>Effet - Mythe du Marsupial Paléolithique</French>
+		<Russian>Ïåñíÿ î äðåâ. ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHOENIX_MYTH</Tag>
@@ -1398,6 +1534,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Feniksa</Polish>
+		<Russian>Ìèô î Ôåíèêñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIG_HERD</Tag>
@@ -1413,6 +1550,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Stado - Świnie</Polish>
+		<Russian>Ñòàäî ñâèíåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POULTRY_HERD</Tag>
@@ -1428,6 +1566,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Stado - Drobiu</Polish>
+		<Russian>Ñòàÿ ïòèö</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRIMATE_CAGE</Tag>
@@ -1443,6 +1582,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Klatka - Małpa</Polish>
+		<Russian>Êëåòêè ñ ïðèìàòàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RATITE_HERD</Tag>
@@ -1458,71 +1598,85 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Stado - Strusi</Polish>
+		<Russian>Ñòàÿ ñòðàóñîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAYS_STORIES</Tag>
 		<English>Stories - Rays</English>
 		<French>Histoires de Raies</French>
+		<Russian>Ñêàçû î ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAYS_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Rays</English>
-		<French>Effet (Histoires des Raies)</French>
+		<French>Effet - Histoires des Raies</French>
+		<Russian>Ïðåäàíèÿ î ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAYS_STORY</Tag>
 		<English>Story - Rays</English>
 		<French>Histoire de Raie</French>
+		<Russian>Ñêàçêà î ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_EAGLE_MYTH</Tag>
 		<English>Myth - Eagle Ray</English>
 		<French>Mythe de l'Aigle de mer</French>
+		<Russian>Ìèô îá îðë. ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_EAGLE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Eagle Ray</English>
-		<French>Effet (Mythe de l'Aigle de mer)</French>
+		<French>Effet - Mythe de l'Aigle de mer</French>
+		<Russian>Ïåñíÿ îá îðë. ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_EAGLE_STORIES</Tag>
 		<English>Stories - Eagle Ray</English>
 		<French>Histoires de l'Aigle de mer</French>
+		<Russian>Ñêàçû îá îðë. ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_EAGLE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Eagle Ray</English>
-		<French>Effet (Histoires de l'Aigle de mer)</French>
+		<French>Effet - Histoires de l'Aigle de mer</French>
+		<Russian>Ïðåäàíèÿ îá îðë. ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_EAGLE_STORY</Tag>
 		<English>Story - Eagle Ray</English>
 		<French>Histoire de l'Aigle de mer</French>
+		<Russian>Ñêàçêà îá îðë. ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_MANTA_MYTH</Tag>
 		<English>Myth - Manta Ray</English>
 		<French>Mythe de la Raie manta</French>
+		<Russian>Ìèô î ìàíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_MANTA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Manta Ray</English>
-		<French>Effet (Mythe de la Raie manta)</French>
+		<French>Effet - Mythe de la Raie manta</French>
+		<Russian>Ïåñíÿ î ìàíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_MANTA_STORIES</Tag>
 		<English>Stories - Manta Ray</English>
 		<French>Histoires de la Raie manta</French>
+		<Russian>Ñêàçû î ìàíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_MANTA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Manta Ray</English>
-		<French>Effet (Histoire de la Raie manta)</French>
+		<French>Effet - Histoire de la Raie manta</French>
+		<Russian>Ïðåäàíèÿ î ìàíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_MANTA_STORY</Tag>
 		<English>Story - Manta Ray</English>
 		<French>Histoire de la Raie manta</French>
+		<Russian>Ñêàçêà î ìàíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_MYTH</Tag>
@@ -1538,6 +1692,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Manty</Polish>
+		<Russian>Ìèô î ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_SHARK_MYTH</Tag>
@@ -1553,6 +1708,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Rekina Rafowego</Polish>
+		<Russian>Ìèô î ðèô. àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REPTILE_CAGE</Tag>
@@ -1568,6 +1724,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Klatka - Gady</Polish>
+		<Russian>Òåððàðèóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REPTILE_MYTH</Tag>
@@ -1583,6 +1740,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Gadów</Polish>
+		<Russian>Ìèô î ðåïòèëèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RODENT_CAGE</Tag>
@@ -1598,6 +1756,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Klatka - Gryzonie</Polish>
+		<Russian>Êëåòêè ñ ãðûçóíàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROO_HERD</Tag>
@@ -1613,6 +1772,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Stado - Kangurów</Polish>
+		<Russian>Ñòàäî êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE</Tag>
@@ -1628,6 +1788,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Centrum Badań Rekinów</Polish>
+		<Russian>Öåíòð èçó÷. àêóë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SCAVENGER_MYTH</Tag>
@@ -1643,21 +1804,23 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit (OJ) Padlinożerców</Polish>
+		<Russian>Ìèô î ñòåðâÿòíèêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SCAVENGER_MYTH_EFFECT</Tag>
-		<English>Myth (S) - Scavenger</English>
+		<English>Myth Effect (S) - Scavenger</English>
 		<French>
-			<Text>Effet (Mythe (R) du Mendiant)</Text>
+			<Text>Effet - Mythe (R) du Mendiant</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
 		<Italian>
-			<Text>Mito (CP) dello spazzino</Text>
+			<Text>Effetto - Mito (CP) dello spazzino</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
-		<Polish>Mit (OJ) Padlinożerców</Polish>
+		<Polish>Efekt - Mit (OJ) Padlinożerców</Polish>
+		<Russian>Ìèô î ñòåðâÿòíèêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEAL_CAGE</Tag>
@@ -1669,10 +1832,11 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Klatka - Foka</Polish>
+		<Russian>Êëåòêè ñ òþëåíÿìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_MYTH</Tag>
-		<English>Myth - Seaturtle</English>
+		<English>Myth - Sea turtle</English>
 		<French>
 			<Text>Mythe de la Tortue de mer</Text>
 			<Gender>Male</Gender>
@@ -1684,11 +1848,13 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Żółwia Morskiego</Polish>
+		<Russian>Ìèô î ìîð. ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Seaturtle</English>
-		<French>Effet (Mythe de la Tortue de mer)</French>
+		<English>Myth Effect - Sea turtle</English>
+		<French>Effet - Mythe de la Tortue de mer</French>
+		<Russian>Ïåñíÿ î ìîð. ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_MYTH</Tag>
@@ -1704,11 +1870,13 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Morza</Polish>
+		<Russian>Ìèô î ìîðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Sea</English>
-		<French>Effet (Mythe de la Mer)</French>
+		<French>Effet - Mythe de la Mer</French>
+		<Russian>Ïåñíÿ î ìîðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHARK_MYTH</Tag>
@@ -1724,6 +1892,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Opowieśći o rekinach</Polish>
+		<Russian>Ìèô îá àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHEEP_HERD</Tag>
@@ -1733,6 +1902,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<Russian>Îòàðà îâåö</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKY_MYTH</Tag>
@@ -1748,12 +1918,14 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Nieba</Polish>
+		<Russian>Ìèô î íåáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKY_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Sky</English>
-		<French>Effet (Mythe du Ciel)</French>
+		<French>Effet - Mythe du Ciel</French>
 		<Polish>Efekt Mitu - Niebo</Polish>
+		<Russian>Ïåñíÿ î íåáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_CHARMER</Tag>
@@ -1769,6 +1941,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Zaklinacz Węży</Polish>
+		<Russian>Çàêëèíàòåëü çìåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_PIT</Tag>
@@ -1784,6 +1957,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Dół z wężami</Polish>
+		<Russian>ßìà ñî çìåÿìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPOTTED_CAT_MYTH</Tag>
@@ -1795,6 +1969,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Plamistego Kota</Polish>
+		<Russian>Ìèô î ëåîïàðäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIGER_MYTH</Tag>
@@ -1810,11 +1985,13 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Tygrysa</Polish>
+		<Russian>Ìèô î òèãðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIGER_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Tiger</English>
-		<French>Effet (Mythe du Tigre)</French>
+		<French>Effet - Mythe du Tigre</French>
+		<Russian>Ïåñíÿ î òèãðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER</Tag>
@@ -1830,6 +2007,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Chata Rzeźbiarza Muszli</Polish>
+		<Russian>Ëîâåö óñòðèö</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_HUNTER</Tag>
@@ -1841,6 +2019,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Polish>Tradycja - Łowcy</Polish>
+		<Russian>Ñîþç îõîòíèêîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_NAVAL_TOTEM</Tag>
@@ -1852,6 +2031,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Polish>Tradycja - Bandera (Maskotka)</Polish>
+		<Russian>Òðàäèöèè øòàíäàðòîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_SEA_HUNTING</Tag>
@@ -1863,6 +2043,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Polish>Tradycja - Polowania na morzu</Polish>
+		<Russian>Òðàäèöèè ðûáàëêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_TOTEM</Tag>
@@ -1874,10 +2055,11 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Polish>Tradycja - Sztandar Wojskowy (Maskotka)</Polish>
+		<Russian>Òðàäèöèè òîòåìîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL</Tag>
-		<English>Trained Seal</English>
+		<English>Carnival - Trained Seal</English>
 		<French>Phoques dressés</French>
 		<Italian>
 			<Text>Foche ammaestrate</Text>
@@ -1885,6 +2067,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Polish>Tresowana Foka</Polish>
+		<Russian>Äðåññ. òþëåíåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TUNA_MYTH</Tag>
@@ -1900,21 +2083,25 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Tuńczyka</Polish>
+		<Russian>Ìèô î òóíöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TUNA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Tuna</English>
-		<French>Effet (Mythe du Thon)</French>
+		<French>Effet - Mythe du Thon</French>
+		<Russian>Ïåñíÿ î òóíöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TUNA_STORIES</Tag>
 		<English>Stories - Tuna</English>
 		<French>Histoires du Thon</French>
+		<Russian>Ñêàçû î òóíöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TUNA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Tuna</English>
-		<French>Effet (Histoire du Thon)</French>
+		<French>Effet - Histoire du Thon</French>
+		<Russian>Ïðåäàíèÿ î òóíöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNICORN_MYTH</Tag>
@@ -1930,12 +2117,14 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Jednorożca</Polish>
+		<Russian>Ìèô îá åäèíîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_CAGE</Tag>
 		<English>Enclosure - Walrus</English>
 		<French>Enclos - Morses</French>
 		<Polish>Klatka - Mors</Polish>
+		<Russian>Êëåòêè ñ ìîðæàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_MYTH</Tag>
@@ -1951,6 +2140,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Morsa</Polish>
+		<Russian>Ìèô î ìîðæå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WEASEL_MYTH</Tag>
@@ -1966,15 +2156,17 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit (T) Łasicy</Polish>
+		<Russian>Ìèô î õîðüêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WEASEL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Weasel</English>
-		<French>Effet (Mythe de la Belette)</French>
+		<French>Effet - Mythe de la Belette</French>
+		<Russian>Ïåñíÿ î õîðüêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_MYTH</Tag>
-		<English>Myth - Whaleshark</English>
+		<English>Myth - Whale Shark</English>
 		<French>
 			<Text>Mythe - Requin-baleine</Text>
 			<Gender>Male</Gender>
@@ -1986,6 +2178,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Rekina Wielorybiego</Polish>
+		<Russian>Ìèô î êèò. àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLF_CAGE</Tag>
@@ -2001,6 +2194,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Klatka - Wilk</Polish>
+		<Russian>Êëåòêè ñ âîëêàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WONDERS_OF_THE_DEEP</Tag>
@@ -2016,6 +2210,7 @@
 			<Plural>1</Plural>
 		</Italian>
 		<Polish>Cuda Głębin</Polish>
+		<Russian>×óäåñà ãëóáèí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COD_PEDIA</Tag>
@@ -2032,11 +2227,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARLIN_PEDIA</Tag>
-		<English>A marlin is a fish from the family Istiophoridae (includes about 10 species). It has an elongated body, a spear-like snout or bill, and a long, rigid dorsal fin which extends forward to form a crest. Its common name is thought to derive from its resemblance to a sailor's marlinspike. Even more so than their close relatives, the scombrids, marlins are fast swimmers, reaching speeds of about 80 km/h (50 mph).[PARAGRAPH:2]The larger species include the Atlantic blue marlin, Makaira nigricans, which can reach 5 m (16.4 ft) in length and 818 kg (1,803 lb) in weight and the black marlin, Istiompax indica, which can reach in excess of 5 m (16.4 ft) in length and 670 kg (1,480 lb) in weight. They are popular sporting fish in tropical areas.</English>
+		<English>A marlin is a fish from the family Istiophoridae (includes about 10 species). It has an elongated body, a spear-like snout or bill, and a long, rigid dorsal fin which extends forward to form a crest. Its common name is thought to derive from its resemblance to a sailor's marlin spike. Even more so than their close relatives, the scombrids, marlins are fast swimmers, reaching speeds of about 80 km/h (50 mph).[PARAGRAPH:2]The larger species include the Atlantic blue marlin, Makaira nigricans, which can reach 5 m (16.4 ft) in length and 818 kg (1,803 lb) in weight and the black marlin, Istiompax indica, which can reach in excess of 5 m (16.4 ft) in length and 670 kg (1,480 lb) in weight. They are popular sporting fish in tropical areas.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAY_EAGLE_PEDIA</Tag>
 		<English>The eagle rays are a group of cartilaginous fishes in the family Myliobatidae, consisting mostly of large species living in the open ocean rather than on the sea bottom.[PARAGRAPH:2]Eagle rays feed on mollusks and crustaceans, crushing their shells with their flattened teeth. Devil and manta rays filter plankton from the water. They are excellent swimmers and are able to breach the water up to several metres above the surface. Compared with other rays, they have long tails, and well-defined rhomboidal bodies. They are ovoviviparous, giving birth to up to six young at a time. They range from 0.48 to 9.1 m (1.6 to 29.9 ft) in length.</English>
+		<German>Als [COLOR_UNIT_TEXT]Adlerrochen[COLOR_REVERT] bezeichnet man mehrere Arten aus der Gattung Aetobatus und der Familie Myliobatidae. Bis 2016 gehörten alle derselben Familie an. Man findet sie vorwiegend in tropischen und subtropischen Gewässern. Der Gewöhnliche Adlerrochen als häufigste Art ist bereits ab und an in den Sommermonaten als Irrgast in der Nordsee gesichtet worden.[NEWLINE]Adlerrochen sind sehr groß und können bis zu drei Meter breit werden. Der rhombische Rumpf ist kräftig und der Kopf steht deutlich hervor. Die Augen sitzen seitlich. Die Spritzlöcher sind bei Myliobatidae von oben nicht sichtbar. Das breite Maul befindet sich auf der Unterseite, wobei sich bei Aeobatus nur je eine Zahnreihe an Ober- und Unterkiefer befindet, bei Myliobatidae sind es mehrere Reihen. Der Schwanz ist lang und peitschenartig. Ihre Nahrung besteht hauptsächlich aus Mollusken und Krustentieren.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_COD_HELP</Tag>
@@ -2045,42 +2241,38 @@
 [SPACE][SPACE] * Sea and Fish Myth
 [SPACE][SPACE] * Fish Pens, Coastal Fish Pens
 [SPACE][SPACE] * Marine Institute</English>
-
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de la morue, Mythe de poissons, Filets de pêche, et Institut maritime</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MACKEREL_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-SPACE][SPACE] * Myth, Story and Stories - Mackerel
-SPACE][SPACE] * Sea and Fish Myth
-SPACE][SPACE] * Fish Pens, Coastal Fish Pens
-SPACE][SPACE] * Marine Institute</English>
-
+[SPACE][SPACE] * Myth, Story and Stories - Mackerel
+[SPACE][SPACE] * Sea and Fish Myth
+[SPACE][SPACE] * Fish Pens, Coastal Fish Pens
+[SPACE][SPACE] * Marine Institute</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de Maquereaux, Mythe de le Mer et des Poissons, Filets de pêche, et Institut maritime</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MARLIN_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-SPACE][SPACE] * Myth, Story and Stories - Marlin
-SPACE][SPACE] * Sea and Fish Myth
-SPACE][SPACE] * Fish Pens, Coastal Fish Pens
-SPACE][SPACE] * Marine Institute</English>
-
+[SPACE][SPACE] * Myth, Story and Stories - Marlin
+[SPACE][SPACE] * Sea and Fish Myth
+[SPACE][SPACE] * Fish Pens, Coastal Fish Pens
+[SPACE][SPACE] * Marine Institute</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythes et Histoire(s) du Marlin, Mythes de la Mer et des Poissons, Filets, Institut de Marine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAY_EAGLE_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-SPACE][SPACE] * Myth, Story and Stories - Eagle Ray
-SPACE][SPACE] * Sea and Fish Myth
-SPACE][SPACE] * Fish Pens, Coastal Fish Pens
-SPACE][SPACE] * Marine Institute</English>
-
+[SPACE][SPACE] * Myth, Story and Stories - Eagle Ray
+[SPACE][SPACE] * Sea and Fish Myth
+[SPACE][SPACE] * Fish Pens, Coastal Fish Pens
+[SPACE][SPACE] * Marine Institute</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de l'aigle de mer, Mythes de le Mer et des Poissons, Filets de pêche, et Institut maritime</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUNA_PEDIA</Tag>
-		<English>See [LINK=UNIT_MACKERAL]Mackerel[/LINK] since tuna are mackerel.</English>
-		<French>Voir [LINK=UNIT_MACKERAL]Maquereau[/LINK] car les thons sont une espèce de Maquereaux.</French>
+		<English>See [LINK=UNIT_MACKEREL]Mackerel[/LINK] since tuna are mackerel.</English>
+		<French>Voir [LINK=UNIT_MACKEREL]Maquereau[/LINK] car les thons sont une espèce de Maquereaux.</French>
 	</TEXT>
 </Civ4GameText>

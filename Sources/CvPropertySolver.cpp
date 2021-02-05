@@ -9,6 +9,7 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
 
 PropertySourceContext::PropertySourceContext(CvPropertySource *pSource, CvGameObject *pObject) : m_pSource(pSource), m_pObject(pObject), m_iData1(0), m_iData2(0)
 {
@@ -237,9 +238,8 @@ void callInstantiatePropagator(CvGameObject* pObject, CvPropertyPropagator* pPro
 void CvPropertySolver::instantiateManipulators(CvGameObject* pObject, const CvPropertyManipulators* pMani)
 {
 	// Sources
-	for (int j=0; j<pMani->getNumSources(); j++)
+	foreach_(CvPropertySource* pSource, pMani->getSources())
 	{
-		CvPropertySource* pSource = pMani->getSource(j);
 		const RelationTypes eRelation = pSource->getRelation();
 		if (eRelation == NO_RELATION)
 		{
@@ -251,9 +251,8 @@ void CvPropertySolver::instantiateManipulators(CvGameObject* pObject, const CvPr
 		}
 	}
 	// Interactions
-	for (int j=0; j<pMani->getNumInteractions(); j++)
+	foreach_(CvPropertyInteraction* pInteraction, pMani->getInteractions())
 	{
-		CvPropertyInteraction* pInteraction = pMani->getInteraction(j);
 		const RelationTypes eRelation = pInteraction->getRelation();
 		if (eRelation == NO_RELATION)
 		{
@@ -265,9 +264,8 @@ void CvPropertySolver::instantiateManipulators(CvGameObject* pObject, const CvPr
 		}
 	}
 	// Propagators
-	for (int j=0; j<pMani->getNumPropagators(); j++)
+	foreach_(CvPropertyPropagator* pPropagator, pMani->getPropagators())
 	{
-		CvPropertyPropagator* pPropagator = pMani->getPropagator(j);
 		const RelationTypes eRelation = pPropagator->getRelation();
 		if (eRelation == NO_RELATION)
 		{

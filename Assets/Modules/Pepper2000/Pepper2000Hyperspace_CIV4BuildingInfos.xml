@@ -244,14 +244,8 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_REAL_PROJECTIVE_SPACE_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_COMPLEX_PROJECTIVE_SPACE_COLONY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_REAL_PROJECTIVE_SPACE_COLONY</BuildingType>
+				<BuildingType>BUILDING_COMPLEX_PROJECTIVE_SPACE_COLONY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>

@@ -91,10 +91,10 @@ public:
 	DllExport void DeInit();
 
 	// Deletes Maps, Reloads Infos from XML, Rebuilds Maps
-	DllExport void Reset();																														// Exposed to Python
+	DllExport void Reset();
 	
 	// Builds Maps
-	DllExport void buildArtFileInfoMaps();																							// Exposed to Python
+	DllExport void buildArtFileInfoMaps();
 
 	// Adds an Art File List
 	void addArtInfoItem(CvArtFileMgr::ArtInfoItem* item) { m_artInfoItems.push_back(item);	}
@@ -122,8 +122,5 @@ private:
 
 	std::vector<ArtInfoItem*> m_artInfoItems;
 };
-
-// Singleton Accessor
-#define ARTFILEMGR CvArtFileMgr::GetInstance()
 
 #endif

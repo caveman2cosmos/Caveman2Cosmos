@@ -178,6 +178,7 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_AIRCRAFT_MUSEUM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_AIRCRAFT_MUSEUM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMA_GAMING_LEAGUE</Type>
@@ -206,6 +207,7 @@
 			<iGlobalHappiness>4</iGlobalHappiness>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMA_GAMING_LEAGUE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ANIMA_GAMING_LEAGUE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARCHIVES</Type>
@@ -290,14 +292,8 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_TRAVOIS_MAKER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_WHEELWRIGHT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_TRAVOIS_MAKER</BuildingType>
+				<BuildingType>BUILDING_WHEELWRIGHT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 			<iCost>148</iCost>
@@ -325,6 +321,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_BASKETROPEWAYS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BASKETROPEWAYS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BFM</Type>
@@ -338,14 +335,8 @@
 			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_OFFICES</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>990</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -377,6 +368,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_BFM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BFM</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -433,6 +425,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_BOTANICAL_GARDENS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_BOTANICAL_GARDENS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BULL_LEAPING</Type>
@@ -445,34 +438,13 @@
 			<Strategy>TXT_KEY_BUILDING_BULL_LEAPING_STRATEGY</Strategy>
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BULL_MYTH_EFFECT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BISON_HERD</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BISON_CAMP</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_COW_HERD</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_COW_FARM</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_ICEAGEBISON_CAMP</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_BULL_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BISON_HERD</BuildingType>
+				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
+				<BuildingType>BUILDING_COW_HERD</BuildingType>
+				<BuildingType>BUILDING_COW_FARM</BuildingType>
+				<BuildingType>BUILDING_ICEAGEBISON_CAMP</BuildingType>
+				<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_COMBAT_SPORTS</ObsoleteTech>
 			<iCost>60</iCost>
@@ -563,6 +535,7 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_CAPITAL_ADMINISTRATION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CAPITAL_ADMINISTRATION</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -600,6 +573,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_CAPTURED_FIRE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CAPTURED_FIRE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CENTERS_FOR_DISEASE_CONTROL</Type>
@@ -848,6 +822,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_COMPUTER_CENTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_COMPUTER_CENTER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COSMONAUT_TRAINING_CENTRE</Type>
@@ -933,6 +908,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_COURIER_SYSTEM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_COURIER_SYSTEM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CYBERSECURITY_CENTER</Type>
@@ -963,6 +939,7 @@
 			<FreeBuilding>BUILDING_CYBERSECURITY_OFFICE</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CYBERSECURITY_CENTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CYBERSECURITY_CENTER</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1014,6 +991,7 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_RESEARCH</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DEEP_SPACE_RESEARCH</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEPARTMENT_EDUCATION</Type>
@@ -1065,6 +1043,7 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_EDUCATION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_EDUCATION</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1082,14 +1061,8 @@
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_OFFICES</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1540</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1106,6 +1079,7 @@
 			<FreeBuilding>BUILDING_POWER_LINES</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_ENERGY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_ENERGY</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1152,6 +1126,7 @@
 			</UnitCombatFreeExperiences>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_FOREIGN_WONDER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_FOREIGN_WONDER</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1209,6 +1184,7 @@
 			</UnitProductionModifiers>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_VEHICLES</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_VEHICLES</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1223,14 +1199,8 @@
 			<PrereqTech>TECH_PLUMBING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_OFFICES</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>368</iCost>
 			<BonusProductionModifiers>
@@ -1257,6 +1227,7 @@
 			<FreeBuilding>BUILDING_WATER_PIPES</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_WATER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_WATER</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1317,6 +1288,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_DISTRICT_COURTHOUSE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DISTRICT_COURTHOUSE</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1365,6 +1337,7 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_DUTCH_DIKE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_DUTCH_DIKE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELECTRONIC_GAMING_LEAGUE</Type>
@@ -1396,6 +1369,7 @@
 			</GlobalCommerceModifiers>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_ELECTRONIC_GAMING_LEAGUE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ELECTRONIC_GAMING_LEAGUE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FEDERAL_PRISON</Type>
@@ -1412,12 +1386,9 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SAFETY_ORBITAL_PRISON</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_SAFETY_ORBITAL_PRISON</BuildingType>
+			</ReplacementBuildings>
 			<iCost>1070</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -1461,6 +1432,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_FEDERAL_PRISON</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FEDERAL_PRISON</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1495,6 +1467,7 @@
 			<FreeBuilding>BUILDING_FERTILITYFESTIVAL_EFFECT</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_FERTILITYFESTIVAL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FERTILITYFESTIVAL</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1533,6 +1506,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_FLAK_TOWER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FLAK_TOWER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FOUNDLING_HOSPITAL</Type>
@@ -1650,6 +1624,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GCA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GCA</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1688,6 +1663,7 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GRANDCENTRAL_STATION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GRANDCENTRAL_STATION</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1803,14 +1779,8 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PHARMACY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
+				<BuildingType>BUILDING_PHARMACY</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<iCost>664</iCost>
@@ -1845,6 +1815,7 @@
 			</GlobalBuildingExtraCommerces>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_APOTHECARY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_APOTHECARY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_ARTIST</Type>
@@ -1897,6 +1868,7 @@
 			</GlobalBuildingExtraCommerces>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_ARTIST</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_ARTIST</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_BAKER</Type>
@@ -1949,6 +1921,7 @@
 			</GlobalBuildingExtraCommerces>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_BAKER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_BAKER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_BLACKSMITH</Type>
@@ -1971,14 +1944,8 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_FORGE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_FOUNDRY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_FORGE</BuildingType>
+				<BuildingType>BUILDING_FOUNDRY</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
@@ -2013,6 +1980,7 @@
 			</GlobalBuildingExtraCommerces>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_BLACKSMITH</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_BLACKSMITH</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_BUTCHER</Type>
@@ -2032,14 +2000,8 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BUTCHERY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_BUTCHERY</BuildingType>
+				<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
@@ -2074,6 +2036,7 @@
 			</GlobalBuildingExtraCommerces>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_BUTCHER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_BUTCHER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_CARPENTER</Type>
@@ -2126,6 +2089,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_CARPENTER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_CARPENTER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_CLERKS</Type>
@@ -2148,14 +2112,8 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PAPER_MAKER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PAPER_FACTORY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_PAPER_MAKER</BuildingType>
+				<BuildingType>BUILDING_PAPER_FACTORY</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>688</iCost>
@@ -2190,6 +2148,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_CLERKS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_CLERKS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_CRAFTS</Type>
@@ -2212,14 +2171,8 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_CRAFT_HUT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_CRAFT_HUT</BuildingType>
+				<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_APPLIED_ECONOMICS</ObsoleteTech>
 			<iCost>688</iCost>
@@ -2254,6 +2207,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_CRAFTS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_CRAFTS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_DRAPERS</Type>
@@ -2276,18 +2230,9 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SEAMSTRESS_HUT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_TEXTILE_MILL</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_TEXTILE_FACTORY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_SEAMSTRESS_HUT</BuildingType>
+				<BuildingType>BUILDING_TEXTILE_MILL</BuildingType>
+				<BuildingType>BUILDING_TEXTILE_FACTORY</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
@@ -2327,6 +2272,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_DRAPERS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_DRAPERS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_EQUESTRIAN</Type>
@@ -2349,14 +2295,8 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
+				<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<iCost>712</iCost>
@@ -2391,6 +2331,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_EQUESTRIAN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_EQUESTRIAN</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_FISHMONGER</Type>
@@ -2443,6 +2384,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_FISHMONGER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_FISHMONGER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_GLASSBLOWERS</Type>
@@ -2495,6 +2437,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_GLASSBLOWERS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_GLASSBLOWERS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_GOLDSMITH</Type>
@@ -2547,6 +2490,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_GOLDSMITH</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_GOLDSMITH</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_GROCERS</Type>
@@ -2569,14 +2513,8 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GROCER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SUPERMARKET</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_GROCER</BuildingType>
+				<BuildingType>BUILDING_SUPERMARKET</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664 </iCost>
@@ -2611,6 +2549,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_GROCERS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_GROCERS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_LUMBER</Type>
@@ -2663,6 +2602,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_LUMBER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_LUMBER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_MASON</Type>
@@ -2685,14 +2625,8 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BRICK_MASON</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BRICK_FACTORY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_BRICK_MASON</BuildingType>
+				<BuildingType>BUILDING_BRICK_FACTORY</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
@@ -2727,6 +2661,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_MASON</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_MASON</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_MERCERS</Type>
@@ -2749,14 +2684,8 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BAZAAR</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_BAZAAR</BuildingType>
+				<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_APPLIED_ECONOMICS</ObsoleteTech>
 			<iCost>664</iCost>
@@ -2791,6 +2720,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_MERCERS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_MERCERS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_POTTERS</Type>
@@ -2843,6 +2773,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_POTTERS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_POTTERS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_SERVANTS</Type>
@@ -2896,6 +2827,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_SERVANTS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_SERVANTS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_TAILOR</Type>
@@ -2948,6 +2880,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_TAILOR</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_TAILOR</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUILD_VICTUALLERS</Type>
@@ -2970,14 +2903,8 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PUB</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DIVE_BAR</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_PUB</BuildingType>
+				<BuildingType>BUILDING_DIVE_BAR</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
@@ -3012,6 +2939,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_VICTUALLERS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GUILD_VICTUALLERS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HEROIC_EPIC</Type>
@@ -3056,6 +2984,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_HEROIC_EPIC</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HEROIC_EPIC</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HHUNTINGBOW</Type>
@@ -3073,18 +3002,9 @@
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_FLETCHER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_HUNTING_INSTRUCTION</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_FLETCHER</BuildingType>
+				<BuildingType>BUILDING_HUNTING_INSTRUCTION</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<iCost>236</iCost>
@@ -3102,6 +3022,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HHUNTINGBOW</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HHUNTINGBOW</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOLOGRAPHIC_GAMING_LEAGUE</Type>
@@ -3120,14 +3041,8 @@
 				<Bonus>BONUS_HOLOGRAPHIC_PROJECTORS</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_HOLOGRAPHIC_NETWORKS</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_EXOCORTEX_NETWORKS</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_HOLOGRAPHIC_NETWORKS</BuildingType>
+				<BuildingType>BUILDING_EXOCORTEX_NETWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>7050</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3140,6 +3055,7 @@
 			</GlobalCommerceModifiers>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOLOGRAPHIC_GAMING_LEAGUE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HOLOGRAPHIC_GAMING_LEAGUE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOMELAND_SECURITY</Type>
@@ -3261,6 +3177,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_OF_PARLIMENT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HOUSE_OF_PARLIMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IRON_WORKS</Type>
@@ -3274,14 +3191,8 @@
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_FACTORY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1480</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3425,6 +3336,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_LOGROLLERS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_LOGROLLERS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MANHATTAN</Type>
@@ -3442,14 +3354,8 @@
 				<Bonus>BONUS_HEAVY_WATER</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
+				<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -3498,14 +3404,8 @@
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			</TechTypes>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GRANARY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 			<iCost>100</iCost>
@@ -3528,6 +3428,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_MICROLITH_WEAPONS_FACTORY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MICROLITH_WEAPONS_FACTORY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MIND_STORAGE</Type>
@@ -3566,6 +3467,7 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<fVisibilityPriority>2</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_MIND_STORAGE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MIND_STORAGE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MODERN_ART_THEATRE</Type>
@@ -3627,6 +3529,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_MODERN_ART_THEATRE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MODERN_ART_THEATRE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOVIE_STUDIO</Type>
@@ -3667,6 +3570,7 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_MOVIE_STUDIO</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MOVIE_STUDIO</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3704,6 +3608,7 @@
 			<FreeBuilding>BUILDING_MEDICAL_DATABASE_GOOD</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_MEDICAL_DATABASE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MEDICAL_DATABASE</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3803,6 +3708,7 @@
 			<FreeBuilding>BUILDING_EFFECT_NATIONAL_ACADEMY_DATABASE</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_ACADEMIC_DATABASE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_ACADEMIC_DATABASE</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3907,6 +3813,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_EPIC</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_EPIC</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAMEL_NATIONAL</Type>
@@ -3921,12 +3828,9 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_CAMEL</Bonus>
 			</PrereqBonuses>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_CAMEL_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_CAMEL_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<iCost>184</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3947,6 +3851,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CAMEL_NATIONAL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CAMEL_NATIONAL</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3962,12 +3867,9 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_ELEPHANTS</Bonus>
 			</PrereqBonuses>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_ELEPHANT_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_ELEPHANT_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<iCost>184</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3993,6 +3895,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_ELEPHANT_NATIONAL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ELEPHANT_NATIONAL</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4008,12 +3911,9 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_HORSE</Bonus>
 			</PrereqBonuses>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_HORSE_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_HORSE_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<iCost>184</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4038,6 +3938,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HORSE_NATIONAL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HORSE_NATIONAL</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4083,6 +3984,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_FIRE_SERVICE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_FIRE_SERVICE</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4111,6 +4013,7 @@
 			<FreeBuilding>BUILDING_SAFETY_NAT_LEGAL_DATABASE</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_LEGAL_DATABASE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_LEGAL_DATABASE</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4140,14 +4043,8 @@
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_OFFICES</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1030</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4270,6 +4167,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_MINT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_MINT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_PARK</Type>
@@ -4324,6 +4222,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_PARK</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_PARK</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SCIENCE_FOUNDATION</Type>
@@ -4360,6 +4259,7 @@
 			<iFreeTechs>1</iFreeTechs>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SCIENCE_FOUNDATION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SCIENCE_FOUNDATION</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_ALUMINUM</Type>
@@ -4384,12 +4284,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_BAUXITE_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_ALUMINUM_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_ALUMINUM_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>1900</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4421,6 +4318,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_ALUMINUM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_ALUMINUM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_COPPER</Type>
@@ -4445,12 +4343,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_COPPER_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_COPPER_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_COPPER_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>292</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4479,6 +4374,7 @@
 			</PropertyManipulators>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_COPPER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_COPPER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_GOLD</Type>
@@ -4503,12 +4399,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_GOLD_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_GOLD_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_GOLD_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>306</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4537,6 +4430,7 @@
 			</PropertyManipulators>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_GOLD</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_GOLD</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_IRON</Type>
@@ -4561,12 +4455,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_IRON_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_IRON_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_IRON_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4595,6 +4486,7 @@
 			</PropertyManipulators>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_IRON</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_IRON</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_LEAD</Type>
@@ -4619,12 +4511,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_LEAD_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_LEAD_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_LEAD_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>292</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4653,6 +4542,7 @@
 			</PropertyManipulators>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_LEAD</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_LEAD</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_PLATINUM</Type>
@@ -4677,12 +4567,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_PLATINUM_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_PLATINUM_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_PLATINUM_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4711,6 +4598,7 @@
 			</PropertyManipulators>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_PLATINUM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_PLATINUM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_SILVER</Type>
@@ -4735,12 +4623,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_SILVER_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_SILVER_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_SILVER_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>306</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4769,6 +4654,7 @@
 			</PropertyManipulators>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_SILVER</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_SILVER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_TIN</Type>
@@ -4793,12 +4679,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_TIN_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_TIN_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_TIN_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>368</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4827,6 +4710,7 @@
 			</PropertyManipulators>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_TIN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_TIN</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMELTER_TITANIUM</Type>
@@ -4851,12 +4735,9 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_TITANIUM_ORE</Bonus>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_AUTOBUILD_TITANIUM_NEAR</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_AUTOBUILD_TITANIUM_NEAR</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>1980</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -4885,6 +4766,7 @@
 			</PropertyManipulators>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_TITANIUM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SMELTER_TITANIUM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SPORTS_LEAGUE</Type>
@@ -4944,18 +4826,9 @@
 				<BuildingType>BUILDING_TV_STUDIO</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_COMMUNICATION_TOWER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
+				<BuildingType>BUILDING_COMMUNICATION_TOWER</BuildingType>
+				<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>2260</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4996,6 +4869,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_TVSTATION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TVSTATION</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NOBLEGARDEN</Type>
@@ -5054,6 +4928,7 @@
 			</BonusHappinessChanges>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NOBLEGARDEN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NOBLEGARDEN</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_WEATHER_SERVICE</Type>
@@ -5074,18 +4949,9 @@
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_COMMUNICATION_TOWER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
+				<BuildingType>BUILDING_COMMUNICATION_TOWER</BuildingType>
+				<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_WEATHER_CONTROL</ObsoleteTech>
 			<iCost>1740</iCost>
@@ -5121,6 +4987,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>5</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_WEATHER_SERVICE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_WEATHER_SERVICE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_ZOO</Type>
@@ -5215,6 +5082,7 @@
 			</GlobalCommerceModifiers>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_ONLINE_UNIVERSITY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ONLINE_UNIVERSITY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_PRISON</Type>
@@ -5245,6 +5113,7 @@
 			<iAIWeight>10</iAIWeight>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_PRISON</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ORBITAL_PRISON</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALACE</Type>
@@ -5287,6 +5156,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_PALACE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PALACE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLICE_ACADEMY</Type>
@@ -5303,14 +5173,8 @@
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1600</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5369,6 +5233,7 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_POLICE_ACADEMY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_POLICE_ACADEMY</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5382,14 +5247,8 @@
 			<Strategy>TXT_KEY_BUILDING_PROPAGANDA_NET_STRATEGY</Strategy>
 			<PrereqTech>TECH_PROPAGANDA</PrereqTech>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_OFFICES</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
@@ -5497,6 +5356,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_RADIOTELESCOPE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_RADIOTELESCOPE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RAILROAD_MUSEUM</Type>
@@ -5561,6 +5421,7 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_RAILROAD_MUSEUM</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_RAILROAD_MUSEUM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RED_CROSS</Type>
@@ -5617,6 +5478,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_RED_CROSS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_RED_CROSS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RESEARCH_HOSPITAL</Type>
@@ -5669,6 +5531,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_RESEARCH_HOSPITAL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_RESEARCH_HOSPITAL</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5741,6 +5604,7 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_RUSSIAN_RESEARCH_INSTITUTE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_RUSSIAN_RESEARCH_INSTITUTE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SECRET_ARMY_BASE</Type>
@@ -5798,6 +5662,7 @@
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_AREA51</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SECRET_ARMY_BASE</MovieDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SECRET_ARMY_BASE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACE_LABORATORY</Type>
@@ -5812,18 +5677,9 @@
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_NASA</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_NASA</BuildingType>
+				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>3370</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5863,6 +5719,7 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_SPACE_LABORATORY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SPACE_LABORATORY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STATUE_OF_CHAMPION</Type>
@@ -5881,26 +5738,11 @@
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_ARENA</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_COLOSSEUM</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_FLAVIAN</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_ARENA</BuildingType>
+				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
+				<BuildingType>BUILDING_FLAVIAN</BuildingType>
+				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
+				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>468</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5942,6 +5784,7 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_KINGS_SAGA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_KINGS_SAGA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STRATEGIC_GRAIN_RESERVE</Type>
@@ -5955,14 +5798,8 @@
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<bRiver>1</bRiver>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GRANARY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MODERN_GRANARY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_GRANARY</BuildingType>
+				<BuildingType>BUILDING_MODERN_GRANARY</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6141,16 +5978,10 @@
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TEMPLE_OF_SET</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TEMPLE_OF_OSIRIS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_TEMPLE_OF_SET</BuildingType>
+				<BuildingType>BUILDING_TEMPLE_OF_OSIRIS</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>320</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -6200,6 +6031,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_ISIS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EGYPTIAN_MYTH_ISIS</MovieDefineTag>			
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TEMPLE_OF_OSIRIS</Type>
@@ -6217,16 +6049,10 @@
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TEMPLE_OF_SET</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TEMPLE_OF_ISIS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_TEMPLE_OF_SET</BuildingType>
+				<BuildingType>BUILDING_TEMPLE_OF_ISIS</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>352</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -6283,6 +6109,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_OSIRIS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EGYPTIAN_MYTH_OSIRIS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TEMPLE_OF_SET</Type>
@@ -6300,16 +6127,10 @@
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TEMPLE_OF_OSIRIS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_TEMPLE_OF_ISIS</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_TEMPLE_OF_OSIRIS</BuildingType>
+				<BuildingType>BUILDING_TEMPLE_OF_ISIS</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -6360,6 +6181,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_SET</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EGYPTIAN_MYTH_SET</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOMB</Type>
@@ -6501,6 +6323,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_TOXIC_WASTE_DUMP</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TOXIC_WASTE_DUMP</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRAVEL_AGENCY</Type>
@@ -6626,6 +6449,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_TRAVEL_AGENCY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TRAVEL_AGENCY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TREASURY</Type>
@@ -6732,14 +6556,8 @@
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_OFFICES</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>2360</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6753,6 +6571,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_UN_MISSION</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_UN_MISSION</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WORLD_BANK</Type>
@@ -6800,6 +6619,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_WORLD_BANK</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_WORLD_BANK</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HIERACOSPHINX_BREEDER</Type>
@@ -6817,32 +6637,14 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6873,32 +6675,14 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HIERACOSPHINX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6929,32 +6713,14 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HIERACOSPHINX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6985,32 +6751,14 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HIERACOSPHINX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -7041,32 +6789,14 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HIERACOSPHINX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -7097,32 +6827,14 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HIERACOSPHINX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
+				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -7153,32 +6865,14 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_HIERACOSPHINX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
+				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -7197,11 +6891,11 @@
 		<BuildingInfo>
 			<Type>BUILDING_SPY_TRAINING_FACILITY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
 			<Description>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_SPY_TRAINING_FACILITY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SPY_TRAINING_FACILITY</MovieDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7257,6 +6951,7 @@
 			<Strategy>TXT_KEY_BUILDING_HEAVY_WATER_PRODUCTION_PLANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HEAVY_WATER_PRODUCTION_PLANT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HEAVY_WATER_PRODUCTION_PLANT</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_OIL_REFINERY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -7331,6 +7026,7 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GARDEN_CITY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_GARDEN_CITY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FUSION_PLANT</Type>
@@ -7341,6 +7037,7 @@
 			<Strategy>TXT_KEY_BUILDING_FUSION_PLANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FUSION_PLANT</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_FUSION_PLANT</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_PLANTNUCLEAR</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -7440,14 +7137,8 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
+				<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
 			</PrereqOrBuildings>
 			<Flavors>
 				<Flavor>
@@ -7555,6 +7246,7 @@
 			<Help>TXT_KEY_BUILDING_WEMBLEY_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WEMBLEY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_WEMBLEY</MovieDefineTag>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
 			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<MapCategoryTypes>

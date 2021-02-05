@@ -71,7 +71,6 @@ from CvPythonExtensions import *
 import CvUtil
 import BugUtil
 import BugCore
-import PlayerUtil
 import Roman
 import RandomNameUtils
 import random
@@ -118,9 +117,8 @@ class UnitNameEventManager:
 		#~ self.Prompt = "Enter a rename convention"
 
 	def __eventUnitRenameBegin(self, argsList):
-		header = localText.getText("TXT_KEY_UNIT_NAME_EM_HEADER_1",())  #BugUtil.getPlainText("TXT_KEY_REMINDER_HEADER")
-		#~ header = "Unit Name Testing (cancel to quit)"  #BugUtil.getPlainText("TXT_KEY_REMINDER_HEADER")
-		prompt = self.Prompt   #"Enter a rename convention"   #BugUtil.getPlainText("TXT_KEY_REMINDER_PROMPT")
+		header = localText.getText("TXT_KEY_UNIT_NAME_EM_HEADER_1",())
+		prompt = self.Prompt   #"Enter a rename convention"
 		ok = BugUtil.getPlainText("TXT_KEY_MAIN_MENU_OK")
 		cancel = BugUtil.getPlainText("TXT_KEY_POPUP_CANCEL")
 		popup = PyPopup.PyPopup(RENAME_EVENT_ID, EventContextTypes.EVENTCONTEXT_SELF)
@@ -363,7 +361,7 @@ class UnitReName(object):
 			#BUGPrint("UnitNameEM-ini0 [isAdvanced-NO]")
 			zsUnitNameConv = "DEFAULT"
 
-		if not (zsUnitNameConv == "DEFAULT"):
+		if zsUnitNameConv != "DEFAULT":
 			return zsUnitNameConv
 
 		#BUGPrint("UnitNameEM-iniA [" + zsUnitNameConv + "]" + UnitCombat[11:])
@@ -372,7 +370,7 @@ class UnitReName(object):
 
 		#BUGPrint("UnitNameEM-iniB [" + zsUnitNameConv + "]")
 
-		if not (zsUnitNameConv == "DEFAULT"):
+		if zsUnitNameConv != "DEFAULT":
 			return zsUnitNameConv
 
 		#BUGPrint("UnitNameEM-iniC [" + zsUnitNameConv + "]")

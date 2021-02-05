@@ -8,9 +8,56 @@
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvGlobals.h"
 #include "CvXMLLoadUtility.h"
 #include "BoolExpr.h"
+#include "IntExpr.h"
+#include "CheckSum.h"
+#include "FVariableSystem.h"
 #include "wchar_utils.h"
+
+static bool getBefore(BoolExprChange change)
+{
+	switch (change)
+	{
+	case BOOLEXPR_CHANGE_REMAINS_TRUE:
+	case BOOLEXPR_CHANGE_BECOMES_FALSE:
+		return true;
+
+	default:
+	case BOOLEXPR_CHANGE_REMAINS_FALSE:
+	case BOOLEXPR_CHANGE_BECOMES_TRUE:
+		return false;
+	}
+}
+
+static bool getAfter(BoolExprChange change)
+{
+	switch (change)
+	{
+	case BOOLEXPR_CHANGE_REMAINS_TRUE:
+	case BOOLEXPR_CHANGE_BECOMES_TRUE:
+		return true;
+
+	default:
+	case BOOLEXPR_CHANGE_REMAINS_FALSE:
+	case BOOLEXPR_CHANGE_BECOMES_FALSE:
+		return false;
+	}
+}
+
+static BoolExprChange getChange(bool before, bool after)
+{
+	if (before)
+	{
+		return after ? BOOLEXPR_CHANGE_REMAINS_TRUE : BOOLEXPR_CHANGE_BECOMES_FALSE;
+	}
+	else
+	{
+		return after ? BOOLEXPR_CHANGE_REMAINS_FALSE : BOOLEXPR_CHANGE_BECOMES_TRUE;
+	}
+}
+
 
 BoolExpr::~BoolExpr()
 {
@@ -389,6 +436,16 @@ bool BoolExprConstant::evaluate(CvGameObject *pObject)
 	return m_bValue;
 }
 
+BoolExprChange BoolExprConstant::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+{
+	return m_bValue ? BOOLEXPR_CHANGE_REMAINS_TRUE : BOOLEXPR_CHANGE_REMAINS_FALSE;
+}
+
+bool BoolExprConstant::getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd)
+{
+	return false;
+}
+
 void BoolExprConstant::readConstant(CvXMLLoadUtility* pXML)
 {
 	CvString szTextVal;
@@ -426,6 +483,35 @@ BoolExprHas::~BoolExprHas()
 bool BoolExprHas::evaluate(CvGameObject *pObject)
 {
 	return pObject->hasGOM(m_eGOM, m_iID);
+}
+
+BoolExprChange BoolExprHas::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+{
+	const bool result = pObject->hasGOM(m_eGOM, m_iID);
+	for (GOMOverride* it = pBegin; it != pEnd; ++it)
+	{
+		if ((it->pObject == pObject) && (it->GOM == m_eGOM) && (it->id == m_iID))
+		{
+			if (it->bHas == result)
+			{
+				break; // does not change expression result
+			}
+			return it->bHas ? BOOLEXPR_CHANGE_BECOMES_TRUE : BOOLEXPR_CHANGE_BECOMES_FALSE;
+		}
+	}
+	return result ? BOOLEXPR_CHANGE_REMAINS_TRUE : BOOLEXPR_CHANGE_REMAINS_FALSE;
+}
+
+bool BoolExprHas::getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd)
+{
+	for (GOMQuery* it = pBegin; it != pEnd; ++it)
+	{
+		if ((it->GOM == m_eGOM) && (it->id == m_iID))
+		{
+			return true;
+		}
+	}
+	return false;
 }
 
 void BoolExprHas::readContent(CvXMLLoadUtility* pXML)
@@ -512,6 +598,16 @@ bool BoolExprIs::evaluate(CvGameObject *pObject)
 	return pObject->isTag(m_eTag);
 }
 
+BoolExprChange BoolExprIs::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+{
+	return pObject->isTag(m_eTag) ? BOOLEXPR_CHANGE_REMAINS_TRUE : BOOLEXPR_CHANGE_REMAINS_FALSE;
+}
+
+bool BoolExprIs::getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd)
+{
+	return false;
+}
+
 void BoolExprIs::buildDisplayString(CvWStringBuffer &szBuffer) const
 {
 	// This is only the quick and dirty variant. Needs some proper text usage still.
@@ -569,6 +665,31 @@ bool BoolExprNot::evaluate(CvGameObject *pObject)
 	return !m_pExpr->evaluate(pObject);
 }
 
+BoolExprChange BoolExprNot::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+{
+	BoolExprChange result = m_pExpr->evaluateChange(pObject, pBegin, pEnd);
+	switch (result)
+	{
+	default:
+	case BOOLEXPR_CHANGE_REMAINS_TRUE:
+		return BOOLEXPR_CHANGE_REMAINS_FALSE;
+
+	case BOOLEXPR_CHANGE_REMAINS_FALSE:
+		return BOOLEXPR_CHANGE_REMAINS_TRUE;
+
+	case BOOLEXPR_CHANGE_BECOMES_TRUE:
+		return BOOLEXPR_CHANGE_BECOMES_FALSE;
+
+	case BOOLEXPR_CHANGE_BECOMES_FALSE:
+		return BOOLEXPR_CHANGE_BECOMES_TRUE;
+	}
+}
+
+bool BoolExprNot::getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd)
+{
+	return m_pExpr->getInvolvesGOM(pBegin, pEnd);
+}
+
 void BoolExprNot::buildDisplayString(CvWStringBuffer &szBuffer) const
 {
 	szBuffer.append(gDLL->getText("TXT_KEY_EXPR_NOT_"));
@@ -598,25 +719,52 @@ bool BoolExprAnd::evaluate(CvGameObject *pObject)
 	return m_pExpr1->evaluate(pObject) && m_pExpr2->evaluate(pObject);
 }
 
+BoolExprChange BoolExprAnd::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+{
+	BoolExprChange result1 = m_pExpr1->evaluateChange(pObject, pBegin, pEnd);
+	if (result1 == BOOLEXPR_CHANGE_REMAINS_FALSE)
+	{
+		return BOOLEXPR_CHANGE_REMAINS_FALSE;
+	}
+	BoolExprChange result2 = m_pExpr2->evaluateChange(pObject, pBegin, pEnd);
+	if (result2 == BOOLEXPR_CHANGE_REMAINS_FALSE)
+	{
+		return BOOLEXPR_CHANGE_REMAINS_FALSE;
+	}
+	if (result1 == BOOLEXPR_CHANGE_REMAINS_TRUE)
+	{
+		return result2;
+	}
+	if (result2 == BOOLEXPR_CHANGE_REMAINS_TRUE)
+	{
+		return result1;
+	}
+	if (result1 != result2)
+	{
+		return BOOLEXPR_CHANGE_REMAINS_FALSE;
+	}
+	return result1;
+}
+
+bool BoolExprAnd::getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd)
+{
+	return m_pExpr1->getInvolvesGOM(pBegin, pEnd) || m_pExpr2->getInvolvesGOM(pBegin, pEnd);
+}
+
 void BoolExprAnd::buildDisplayString(CvWStringBuffer &szBuffer) const
 {
-	bool bBrackets1 = false;
-	bool bBrackets2 = false;
-	if (getBindingStrength() > m_pExpr1->getBindingStrength())
-		bBrackets1 = true;
-	if (getBindingStrength() > m_pExpr2->getBindingStrength())
-		bBrackets2 = true;
-	if (bBrackets1)
-		szBuffer.append("(");
+	const bool bBrackets1 = getBindingStrength() > m_pExpr1->getBindingStrength();
+	const bool bBrackets2 = getBindingStrength() > m_pExpr2->getBindingStrength();
+
+	if (bBrackets1) szBuffer.append("(");
 	m_pExpr1->buildDisplayString(szBuffer);
-	if (bBrackets1)
-		szBuffer.append(")");
+	if (bBrackets1) szBuffer.append(")");
+
 	szBuffer.append(gDLL->getText("TXT_KEY_EXPR_AND"));
-	if (bBrackets2)
-		szBuffer.append("(");
+
+	if (bBrackets2) szBuffer.append("(");
 	m_pExpr2->buildDisplayString(szBuffer);
-	if (bBrackets2)
-		szBuffer.append(")");
+	if (bBrackets2) szBuffer.append(")");
 }
 
 int BoolExprAnd::getBindingStrength() const
@@ -643,25 +791,52 @@ bool BoolExprOr::evaluate(CvGameObject *pObject)
 	return m_pExpr1->evaluate(pObject) || m_pExpr2->evaluate(pObject);
 }
 
+BoolExprChange BoolExprOr::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+{
+	BoolExprChange result1 = m_pExpr1->evaluateChange(pObject, pBegin, pEnd);
+	if (result1 == BOOLEXPR_CHANGE_REMAINS_TRUE)
+	{
+		return BOOLEXPR_CHANGE_REMAINS_TRUE;
+	}
+	BoolExprChange result2 = m_pExpr2->evaluateChange(pObject, pBegin, pEnd);
+	if (result2 == BOOLEXPR_CHANGE_REMAINS_TRUE)
+	{
+		return BOOLEXPR_CHANGE_REMAINS_TRUE;
+	}
+	if (result1 == BOOLEXPR_CHANGE_REMAINS_FALSE)
+	{
+		return result2;
+	}
+	if (result2 == BOOLEXPR_CHANGE_REMAINS_FALSE)
+	{
+		return result1;
+	}
+	if (result1 != result2)
+	{
+		return BOOLEXPR_CHANGE_REMAINS_TRUE;
+	}
+	return result1;
+}
+
+bool BoolExprOr::getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd)
+{
+	return m_pExpr1->getInvolvesGOM(pBegin, pEnd) || m_pExpr2->getInvolvesGOM(pBegin, pEnd);
+}
+
 void BoolExprOr::buildDisplayString(CvWStringBuffer &szBuffer) const
 {
-	bool bBrackets1 = false;
-	bool bBrackets2 = false;
-	if (getBindingStrength() > m_pExpr1->getBindingStrength())
-		bBrackets1 = true;
-	if (getBindingStrength() > m_pExpr2->getBindingStrength())
-		bBrackets2 = true;
-	if (bBrackets1)
-		szBuffer.append("(");
+	const bool bBrackets1 = getBindingStrength() > m_pExpr1->getBindingStrength();
+	const bool bBrackets2 = getBindingStrength() > m_pExpr2->getBindingStrength();
+
+	if (bBrackets1) szBuffer.append("(");
 	m_pExpr1->buildDisplayString(szBuffer);
-	if (bBrackets1)
-		szBuffer.append(")");
+	if (bBrackets1) szBuffer.append(")");
+
 	szBuffer.append(gDLL->getText("TXT_KEY_EXPR_OR"));
-	if (bBrackets2)
-		szBuffer.append("(");
+
+	if (bBrackets2) szBuffer.append("(");
 	m_pExpr2->buildDisplayString(szBuffer);
-	if (bBrackets2)
-		szBuffer.append(")");
+	if (bBrackets2) szBuffer.append(")");
 }
 
 int BoolExprOr::getBindingStrength() const
@@ -687,25 +862,52 @@ bool BoolExprBEqual::evaluate(CvGameObject *pObject)
 	return m_pExpr1->evaluate(pObject) == m_pExpr2->evaluate(pObject);
 }
 
+BoolExprChange BoolExprBEqual::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+{
+	BoolExprChange result1 = m_pExpr1->evaluateChange(pObject, pBegin, pEnd);
+	BoolExprChange result2 = m_pExpr2->evaluateChange(pObject, pBegin, pEnd);
+	if (result1 == result2)
+	{
+		return BOOLEXPR_CHANGE_REMAINS_TRUE;
+	}
+	if (result1 == BOOLEXPR_CHANGE_REMAINS_TRUE)
+	{
+		return result2;
+	}
+	if (result2 == BOOLEXPR_CHANGE_REMAINS_TRUE)
+	{
+		return result1;
+	}
+	if (result1 == BOOLEXPR_CHANGE_REMAINS_FALSE)
+	{
+		return (result2 == BOOLEXPR_CHANGE_BECOMES_FALSE) ? BOOLEXPR_CHANGE_BECOMES_TRUE : BOOLEXPR_CHANGE_BECOMES_FALSE;
+	}
+	if (result2 == BOOLEXPR_CHANGE_REMAINS_FALSE)
+	{
+		return (result1 == BOOLEXPR_CHANGE_BECOMES_FALSE) ? BOOLEXPR_CHANGE_BECOMES_TRUE : BOOLEXPR_CHANGE_BECOMES_FALSE;
+	}
+	return BOOLEXPR_CHANGE_REMAINS_FALSE;
+}
+
+bool BoolExprBEqual::getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd)
+{
+	return m_pExpr1->getInvolvesGOM(pBegin, pEnd) || m_pExpr2->getInvolvesGOM(pBegin, pEnd);
+}
+
 void BoolExprBEqual::buildDisplayString(CvWStringBuffer &szBuffer) const
 {
-	bool bBrackets1 = false;
-	bool bBrackets2 = false;
-	if (getBindingStrength() > m_pExpr1->getBindingStrength())
-		bBrackets1 = true;
-	if (getBindingStrength() > m_pExpr2->getBindingStrength())
-		bBrackets2 = true;
-	if (bBrackets1)
-		szBuffer.append("(");
+	const bool bBrackets1 = getBindingStrength() > m_pExpr1->getBindingStrength();
+	const bool bBrackets2 = getBindingStrength() > m_pExpr2->getBindingStrength();
+
+	if (bBrackets1) szBuffer.append("(");
 	m_pExpr1->buildDisplayString(szBuffer);
-	if (bBrackets1)
-		szBuffer.append(")");
+	if (bBrackets1) szBuffer.append(")");
+
 	szBuffer.append(gDLL->getText("TXT_KEY_EXPR_EQUALS"));
-	if (bBrackets2)
-		szBuffer.append("(");
+
+	if (bBrackets2) szBuffer.append("(");
 	m_pExpr2->buildDisplayString(szBuffer);
-	if (bBrackets2)
-		szBuffer.append(")");
+	if (bBrackets2) szBuffer.append(")");
 }
 
 int BoolExprBEqual::getBindingStrength() const
@@ -732,35 +934,42 @@ bool BoolExprIf::evaluate(CvGameObject *pObject)
 	return m_pExprIf->evaluate(pObject) ? m_pExprThen->evaluate(pObject) : m_pExprElse->evaluate(pObject);
 }
 
+BoolExprChange BoolExprIf::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+{
+	BoolExprChange resultif = m_pExprIf->evaluateChange(pObject, pBegin, pEnd);
+	BoolExprChange resultthen = m_pExprThen->evaluateChange(pObject, pBegin, pEnd);
+	BoolExprChange resultelse = m_pExprElse->evaluateChange(pObject, pBegin, pEnd);
+
+	bool before = getBefore(resultif) ? getBefore(resultthen) : getBefore(resultelse);
+	bool after = getAfter(resultif) ? getAfter(resultthen) : getAfter(resultelse);
+	return getChange(before, after);
+}
+
+bool BoolExprIf::getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd)
+{
+	return m_pExprIf->getInvolvesGOM(pBegin, pEnd) || m_pExprThen->getInvolvesGOM(pBegin, pEnd) || m_pExprElse->getInvolvesGOM(pBegin, pEnd);
+}
+
 void BoolExprIf::buildDisplayString(CvWStringBuffer &szBuffer) const
 {
-	bool bBracketsIf = false;
-	bool bBracketsThen = false;
-	bool bBracketsElse = false;
-	if (getBindingStrength() > m_pExprIf->getBindingStrength())
-		bBracketsIf = true;
-	if (getBindingStrength() > m_pExprThen->getBindingStrength())
-		bBracketsThen = true;
-	if (getBindingStrength() > m_pExprElse->getBindingStrength())
-		bBracketsElse = true;
+	const bool bBracketsIf = getBindingStrength() > m_pExprIf->getBindingStrength();
+	const bool bBracketsThen = getBindingStrength() > m_pExprThen->getBindingStrength();
+	const bool bBracketsElse = getBindingStrength() > m_pExprElse->getBindingStrength();
+
 	szBuffer.append(gDLL->getText("TXT_KEY_EXPR_IF"));
-	if (bBracketsIf)
-		szBuffer.append("(");
+	if (bBracketsIf) szBuffer.append("(");
 	m_pExprIf->buildDisplayString(szBuffer);
-	if (bBracketsIf)
-		szBuffer.append(")");
+	if (bBracketsIf) szBuffer.append(")");
+
 	szBuffer.append(gDLL->getText("TXT_KEY_EXPR_THEN"));
-	if (bBracketsThen)
-		szBuffer.append("(");
+	if (bBracketsThen) szBuffer.append("(");
 	m_pExprThen->buildDisplayString(szBuffer);
-	if (bBracketsThen)
-		szBuffer.append(")");
+	if (bBracketsThen) szBuffer.append(")");
+
 	szBuffer.append(gDLL->getText("TXT_KEY_EXPR_ELSE"));
-	if (bBracketsElse)
-		szBuffer.append("(");
+	if (bBracketsElse) szBuffer.append("(");
 	m_pExprElse->buildDisplayString(szBuffer);
-	if (bBracketsElse)
-		szBuffer.append(")");
+	if (bBracketsElse) szBuffer.append(")");
 }
 
 int BoolExprIf::getBindingStrength() const
@@ -793,6 +1002,44 @@ bool BoolExprIntegrateOr::evaluate(CvGameObject *pObject)
 	return bAcc;
 }
 
+void evalExprChangeIntegrateOr(CvGameObject* pObject, BoolExpr* pExpr, BoolExprChange* bAcc, GOMOverride* pBegin, GOMOverride* pEnd)
+{
+	if (*bAcc == BOOLEXPR_CHANGE_REMAINS_TRUE)
+	{
+		return;
+	}
+	BoolExprChange change = pExpr->evaluateChange(pObject, pBegin, pEnd);
+	if (change == BOOLEXPR_CHANGE_REMAINS_TRUE)
+	{
+		*bAcc = BOOLEXPR_CHANGE_REMAINS_TRUE;
+		return;
+	}
+	switch (*bAcc)
+	{
+	case BOOLEXPR_CHANGE_REMAINS_FALSE:
+		*bAcc = change;
+		return;
+
+	case BOOLEXPR_CHANGE_BECOMES_FALSE:
+		if (change == BOOLEXPR_CHANGE_BECOMES_TRUE)
+		{
+			*bAcc = BOOLEXPR_CHANGE_BECOMES_TRUE;
+		}
+	}
+}
+
+BoolExprChange BoolExprIntegrateOr::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+{
+	BoolExprChange bAcc = BOOLEXPR_CHANGE_REMAINS_FALSE;
+	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(evalExprChangeIntegrateOr, _1, m_pExpr, &bAcc, pBegin, pEnd));
+	return bAcc;
+}
+
+bool BoolExprIntegrateOr::getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd)
+{
+	return m_pExpr->getInvolvesGOM(pBegin, pEnd);
+}
+
 void BoolExprIntegrateOr::buildDisplayString(CvWStringBuffer &szBuffer) const
 {
 	// TODO: Proper rendering of relations
@@ -820,27 +1067,32 @@ BoolExprComp::~BoolExprComp()
 	SAFE_DELETE(m_pExpr2);
 }
 
+BoolExprChange BoolExprComp::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+{
+	// we do not currently trace changes indirectly over int expressions
+	// so just use the normal evaluation and assume remains
+	return evaluate(pObject) ? BOOLEXPR_CHANGE_REMAINS_TRUE : BOOLEXPR_CHANGE_REMAINS_FALSE;
+}
+
+bool BoolExprComp::getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd)
+{
+	return false;
+}
+
 void BoolExprComp::buildDisplayString(CvWStringBuffer &szBuffer) const
 {
-	bool bBrackets1 = false;
-	bool bBrackets2 = false;
-	if (getBindingStrength() > m_pExpr1->getBindingStrength())
-		bBrackets1 = true;
-	if (getBindingStrength() > m_pExpr2->getBindingStrength())
-		bBrackets2 = true;
-	if (bBrackets1)
-		szBuffer.append("(");
+	const bool bBrackets1 = getBindingStrength() > m_pExpr1->getBindingStrength();
+	const bool bBrackets2 = getBindingStrength() > m_pExpr2->getBindingStrength();
+
+	if (bBrackets1) szBuffer.append("(");
 	m_pExpr1->buildDisplayString(szBuffer);
-	if (bBrackets1)
-		szBuffer.append(")");
-	szBuffer.append(" ");
+	if (bBrackets1) szBuffer.append(")");
+
 	buildOpNameString(szBuffer);
-	szBuffer.append(" ");
-	if (bBrackets2)
-		szBuffer.append("(");
+
+	if (bBrackets2) szBuffer.append("(");
 	m_pExpr2->buildDisplayString(szBuffer);
-	if (bBrackets2)
-		szBuffer.append(")");
+	if (bBrackets2) szBuffer.append(")");
 }
 
 int BoolExprComp::getBindingStrength() const
@@ -868,7 +1120,7 @@ BoolExprTypes BoolExprGreater::getType() const
 
 void BoolExprGreater::buildOpNameString(CvWStringBuffer &szBuffer) const
 {
-	szBuffer.append(">");
+	szBuffer.append(" > ");
 }
 
 
@@ -884,7 +1136,7 @@ BoolExprTypes BoolExprGreaterEqual::getType() const
 
 void BoolExprGreaterEqual::buildOpNameString(CvWStringBuffer &szBuffer) const
 {
-	szBuffer.append(">=");
+	szBuffer.append(" >= ");
 }
 
 
@@ -900,5 +1152,5 @@ BoolExprTypes BoolExprEqual::getType() const
 
 void BoolExprEqual::buildOpNameString(CvWStringBuffer &szBuffer) const
 {
-	szBuffer.append("=");
+	szBuffer.append(" = ");
 }

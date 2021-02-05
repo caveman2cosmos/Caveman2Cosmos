@@ -2,12 +2,13 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ARCHEOLOGICAL_SITE_SLAVE</Tag>
-		<English>Create [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Archeological Site[\LINK] (Forced)</English>
+		<English>Create [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Archaeological Site[\LINK] (Forced)</English>
 		<French>Examiner le [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Site archéologique[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - Tempel Untersuchen</German>
 		<Italian>Esamina le [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Antiche rovine[\LINK] (Schiavo)</Italian>
 		<Spanish>Prueba (Forzado)</Spanish>
-		<Polish>Badaj [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Staro|ytn Swityni[\LINK] (Prace Przym.)</Polish>
+		<Polish>Badaj [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Strona archeologiczna[\LINK] (Prace Przym.)</Polish>
+		<Russian>Соорудить [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Археологические раскопки[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BURN_VEGETATION_SLAVE</Tag>
@@ -17,6 +18,7 @@
 		<Italian>Brucia la foresta (Schiavo)</Italian>
 		<Spanish>Burn Forest (Forzado)</Spanish>
 		<Polish>Spal Las (Prace Przym.)</Polish>
+		<Russian>Поджечь лес (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COMMAND_BUNKER_SLAVE</Tag>
@@ -26,6 +28,7 @@
 		<Italian>Costruisci un [LINK=IMPROVEMENT_COMMAND_BUNKER]Command Bunker[\LINK] (Schiavo)</Italian>
 		<Spanish>Build a [LINK=IMPROVEMENT_COMMAND_BUNKER]Command Bunker[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_COMMAND_BUNKER]Command Bunkier[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_COMMAND_BUNKER]Командный бункер[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COMMAND_CENTER_SLAVE</Tag>
@@ -35,6 +38,7 @@
 		<Italian>Costruisci un [LINK=IMPROVEMENT_COMMAND_CENTER]Command Center[\LINK] (Schiavo)</Italian>
 		<Spanish>Build a [LINK=IMPROVEMENT_COMMAND_CENTER]Command Center[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_COMMAND_CENTER]Nowoczesny Bunkier[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_COMMAND_BUNKER]Командный центр[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COTTAGE_SLAVE</Tag>
@@ -44,6 +48,7 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_COTTAGE]villetta[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_COTTAGE]villa[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_COTTAGE]Chat[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_COTTAGE]Дом[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DRAIN_SWAMP_SLAVE</Tag>
@@ -53,11 +58,13 @@
 		<Italian>Drena un [LINK=FEATURE_SWAMP]Acquitrino[\LINK] (Schiavo)</Italian>
 		<Spanish>Drain a [LINK=FEATURE_SWAMP]Swamp[\LINK] (Forzado)</Spanish>
 		<Polish>Melioruj [LINK=FEATURE_SWAMP]Bagnisko[\LINK] (Prace Przym.)</Polish>
+		<Russian>Осушить [LINK=FEATURE_SWAMP]болото[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_EARLY_MOUNTAIN_MINE_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_EARLY_MOUNTAIN_MINE]Early Mountain Mine[\LINK] (Forced)</English>
 		<French>Construire une [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mine de montagne primitive[\LINK] (Forcé)</French>
+		<Russian>Строить [LINK=IMPROVEMENT_EARLY_MOUNTAIN_MINE]примитивный рудник[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ELECTRIC_RAILROAD_SLAVE</Tag>
@@ -67,6 +74,7 @@
 		<Italian>Costruisci una ferrovia elettrica (Schiavo)</Italian>
 		<Spanish>Construir un Ferrocarril eléctrico (Forzado)</Spanish>
 		<Polish>Zbuduj Kolej Elektryczn (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=ROUTE_ELECTRIC_RAILROAD]магистраль[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FACTORY_SLAVE</Tag>
@@ -76,6 +84,7 @@
 		<Italian>Costruisci una fabbrica (Schiavo)</Italian>
 		<Spanish>Build Factory (Forzado)</Spanish>
 		<Polish>Zbuduj Fabryk (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_FACTORY]фабрику[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FARM_SLAVE</Tag>
@@ -85,15 +94,17 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_FARM]fattoria[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_FARM]granja[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_FARM]Farm[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_FARM]ферму[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FOREST_PRESERVE_SLAVE</Tag>
-		<English>Preserve [LINK=IMPROVEMENT_FOREST_PRESERVE]Forest[\LINK] (Forced)</English>
+		<English>Build [LINK=IMPROVEMENT_FOREST_PRESERVE]Forest Preserve[\LINK] (Forced)</English>
 		<French>Préserver [LINK=IMPROVEMENT_FOREST_PRESERVE]forêt[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - Wald [LINK=IMPROVEMENT_FOREST_PRESERVE]aufforsten[\LINK]</German>
 		<Italian>Preserva la [LINK=IMPROVEMENT_FOREST_PRESERVE]Foresta[\LINK] (Schiavo)</Italian>
 		<Spanish>Conservar [LINK=IMPROVEMENT_FOREST_PRESERVE]Bosque[\LINK] (Forzado)</Spanish>
 		<Polish>ChroD [LINK=IMPROVEMENT_FOREST_PRESERVE]Las[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_FOREST_PRESERVE]Лесной заповедник[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FORT_SLAVE</Tag>
@@ -103,6 +114,7 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_FORT]fortezza[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_FORT]fuerte[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_FORT]Fort[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_FORT]Форт[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FOSSIL_DIG_SITE_SLAVE</Tag>
@@ -112,6 +124,7 @@
 		<Italian>Costruisci uno scavo archeologico (Schiavo)</Italian>
 		<Spanish>Dig Fossils (Forzado)</Spanish>
 		<Polish>Kop SkamieniaBo[ci (Prace Przym.)</Polish>
+		<Russian>Искать [LINK=IMPROVEMENT_FOSSIL_DIG_SITE]окаменелости[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FRUIT_GATHERING_CAMP_SLAVE</Tag>
@@ -121,6 +134,7 @@
 		<Italian>Costruisci un campo di raccolta di frutti (Schiavo)</Italian>
 		<Spanish>Build Fruit Gathering Camp (Forzado)</Spanish>
 		<Polish>Zbuduj Obóz Zbieraczy Owoców (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_FRUIT_GATHERING_CAMP]Лагерь сбора фруктов[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GEOTHERMAL_FACTORY_SLAVE</Tag>
@@ -130,6 +144,7 @@
 		<Italian>Costruisci un [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Impianto geotermico[\LINK] (Schiavo)</Italian>
 		<Spanish>Construye un [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Geothermal Factory[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Fabryk Geotermaln[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Геотермальную станцию[\LINK](принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP_SLAVE</Tag>
@@ -139,6 +154,7 @@
 		<Italian>Costruisci un campo di raccolta di uva (Schiavo)</Italian>
 		<Spanish>Build Grape Camp (Forzado)</Spanish>
 		<Polish>Zbuduj Zbieraczy Winogron (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]виноградник[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GROUNDWATER_WELL_SLAVE</Tag>
@@ -148,6 +164,7 @@
 		<Italian>Costruisci un [LINK=IMPROVEMENT_GROUNDWATER_WELL]Pozzo d'irrigazione[\LINK] (Schiavo)</Italian>
 		<Spanish>Build a [LINK=IMPROVEMENT_GROUNDWATER_WELL]Groundwater Well[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_GROUNDWATER_WELL]Studni GBbinow[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_GROUNDWATER_WELL]Скважину[\LINK](принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HAMLET_SLAVE</Tag>
@@ -157,6 +174,7 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_HAMLET]Casale[\LINK] (Schiavo)</Italian>
 		<Spanish>Construye un [LINK=IMPROVEMENT_HAMLET]Caserío[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_HAMLET]Osad[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_HAMLET]Деревню[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HIGHWAY_SLAVE</Tag>
@@ -166,6 +184,7 @@
 		<Italian>Costruisci un'autostrada (Schiavo)</Italian>
 		<Spanish>Build a Highway (Forzado)</Spanish>
 		<Polish>Zbuduj Autostrad (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=ROUTE_HIGHWAY]шоссе[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HUNTING_CAMP_SLAVE</Tag>
@@ -175,6 +194,7 @@
 		<Italian>Costruisci un [LINK=IMPROVEMENT_HUNTING_CAMP]campo[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_HUNTING_CAMP]campamento[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_HUNTING_CAMP]Obóz[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_HUNTING_CAMP]Охотничий лагерь[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HUNTING_PRESERVE_SLAVE</Tag>
@@ -184,6 +204,7 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_HUNTING_PRESERVE]Riserva di caccia[\LINK] (Schiavo)</Italian>
 		<Spanish>Construye un [LINK=IMPROVEMENT_HUNTING_PRESERVE]Coto de Caza[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_HUNTING_PRESERVE]Rezerwat My[liwski[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_HUNTING_PRESERVE]Охотничий заповедник[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HYBRID_FOREST_SLAVE</Tag>
@@ -193,6 +214,7 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_HYBRID_FOREST]Foresta ibrida[\LINK] (Schiavo)</Italian>
 		<Spanish>Build a [LINK=IMPROVEMENT_HYBRID_FOREST]Hybrid Forest[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_HYBRID_FOREST]Las Hybrydowy[\LINK] (Prace Przym.)</Polish>
+		<Russian>Посадить [LINK=IMPROVEMENT_HYBRID_FOREST]Гибридный лес[\LINK](принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HYDROCARBON_WELL_SLAVE</Tag>
@@ -202,15 +224,17 @@
 		<Italian>Costruisci un [LINK=IMPROVEMENT_HYDROCARBON_WELL]pozzo[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_HYDROCARBON_WELL]pozo[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_HYDROCARBON_WELL]Studni[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_HYDROCARBON_WELL]Углеводородную скважину[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_JUMPLANE_SLAVE</Tag>
 		<English>Build [LINK=ROUTE_JUMPLANE]Jumplane[\LINK] (Forced)</English>
 		<French>Construire un [COLOR_BUILDING_TEXT]Tremplin[COLOR_REVERT] (Forcé)</French>
 		<German>Zwangsarbeit - Jumplane bauen</German>
-		<Italian>Costrusci una Jumplane (Schiavo)</Italian>
+		<Italian>Costruisci una Jumplane (Schiavo)</Italian>
 		<Spanish>Build a Jumplane (Forzado)</Spanish>
 		<Polish>Zbuduj Jumplane (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=ROUTE_JUMPLANE]гипертуннель[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_JUNGLE_CAMP_SLAVE</Tag>
@@ -220,6 +244,7 @@
 		<Italian>Costruisci un campo nella giungla (Schiavo)</Italian>
 		<Spanish>Build Jungle Camp (Forzado)</Spanish>
 		<Polish>Zbuduj Obóz w d|ungli (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_JUNGLE_CAMP]Лагерь в джунглях[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUMBERJACK_SLAVE</Tag>
@@ -229,6 +254,7 @@
 		<Italian>Costruisci un taglialegna (Schiavo)</Italian>
 		<Spanish>Lumberjack (Forzado)</Spanish>
 		<Polish>Drwal (Prace Przym.)</Polish>
+		<Russian>[LINK=IMPROVEMENT_LUMBERJACK]Вырубка[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUMBERMILL_SLAVE</Tag>
@@ -238,6 +264,7 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_LUMBERMILL]segheria[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_LUMBERMILL]aserradero[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_LUMBERMILL]Tartak[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_LUMBERMILL]Лесопилку[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MAGLEV_SLAVE</Tag>
@@ -247,6 +274,7 @@
 		<Italian>Costruisci una linea Maglev (Schiavo)</Italian>
 		<Spanish>Build a Maglev (Forzado)</Spanish>
 		<Polish>Zbuduj Maglev (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=ROUTE_MAGLEV]маглев[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MINE_SLAVE</Tag>
@@ -256,6 +284,7 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_MINE]miniera[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_MINE]mina[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_MINE]Kopalni[\LINK] (Prace Przym.)</Polish>
+		<Russian>Копать [LINK=IMPROVEMENT_MINE]Рудник[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MODERN_MINE_SLAVE</Tag>
@@ -265,15 +294,17 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_MODERN_MINE]Miniera moderna[\LINK] (Schiavo)</Italian>
 		<Spanish>Build [LINK=IMPROVEMENT_MODERN_MINE]Modern Mine[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_MODERN_MINE]WspóBczesn Kopalni[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_MODERN_MINE]Шахту[\LINK](принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MODERN_WINDMILL_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_MODERN_WINDMILL]Modern Windmill[\LINK] (Forced)</English>
-		<French>Construire un [LINK=IMPROVEMENT_MODERNWINDMILL]Moulin à vent Moderne[\LINK] (Forcé)</French>
-		<German>Zwangsarbeit - Bauen a [LINK=IMPROVEMENT_MODERNWINDMILL]Modern-Windrad[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_MODERNWINDMILL]Moderno Mulino a vento[\LINK] (Schiavo)</Italian>
-		<Spanish>Construye un [LINK=IMPROVEMENT_MODERNWINDMILL]Moderno Molino de viento[\LINK] (Forzado)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_MODERNWINDMILL]WspóBczesny MByn[\LINK] (Prace Przym.)</Polish>
+		<French>Construire un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moulin à vent Moderne[\LINK] (Forcé)</French>
+		<German>Zwangsarbeit - Bauen a [LINK=IMPROVEMENT_MODERN_WINDMILL]Modern-Windrad[\LINK]</German>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moderno Mulino a vento[\LINK] (Schiavo)</Italian>
+		<Spanish>Construye un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moderno Molino de viento[\LINK] (Forzado)</Spanish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_MODERN_WINDMILL]WspóBczesny MByn[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_MODERNWINDMILL]Современную ветряную мельницу[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MOUNTAIN_MINE_SLAVE</Tag>
@@ -283,6 +314,7 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_MOUNTAIN_MINE]Miniera della montagna[\LINK] (Schiavo)</Italian>
 		<Spanish>Construye una [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mina de la montana[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_MOUNTAIN_MINE]Górsk Kopalni[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_MOUNTAIN_MINE]Глубинную шахту[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MUSHROOM_GATHERER_SLAVE</Tag>
@@ -292,6 +324,7 @@
 		<Italian>Costruisci un raccoglitore di funghi (Schiavo)</Italian>
 		<Spanish>Build a Mushroom Gatherer (Forzado)</Spanish>
 		<Polish>Zbuduj Zbieracza Grzybów (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Грибник[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_NATURE_PRESERVE_SLAVE</Tag>
@@ -301,6 +334,7 @@
 		<Italian>Istituisci una riserva naturale (Schiavo)</Italian>
 		<Spanish>Preserve site (Forzado)</Spanish>
 		<Polish>ZaBó| Rezerwat (Prace Przym.)</Polish>
+		<Russian>Создать [LINK=IMPROVEMENT_NATURE_PRESERVE]Природный заповедник[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_NOMADIC_HERD_SLAVE</Tag>
@@ -310,6 +344,7 @@
 		<Italian>Costruisci un pascolo nomade (Schiavo)</Italian>
 		<Spanish>Nomadic Herd (Forzado)</Spanish>
 		<Polish>Nomadyczne Stado (Prace Przym.)</Polish>
+		<Russian>[LINK=IMPROVEMENT_NOMADIC_HERD]Кочевые стада[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ORCHARD_SLAVE</Tag>
@@ -319,6 +354,7 @@
 		<Italian>Costruisci un [LINK=IMPROVEMENT_ORCHARD]frutteto[\LINK] (Schiavo)</Italian>
 		<Spanish>Build an [LINK=IMPROVEMENT_ORCHARD]Orchard[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_ORCHARD]Sad[\LINK] (Prace Przym.)</Polish>
+		<Russian>Посадить [LINK=IMPROVEMENT_ORCHARD]Сад[\LINK](принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PASTURE_SLAVE</Tag>
@@ -327,7 +363,8 @@
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_PASTURE]Weideland[\LINK] errichten</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_PASTURE]pascolo[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_PASTURE]pastizal[\LINK] (Forzado)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_PASTURE]Zagrod[\LINK] (Prace Przym.)</Polish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_PASTURE]pastwisko[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_PASTURE]Пастбище[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PATH_SLAVE</Tag>
@@ -335,8 +372,8 @@
 		<French>Dégager un [LINK=ROUTE_PATH]passage[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - Weg bauen</German>
 		<Italian>Costruisci una strada in fango (Schiavo)</Italian>
-		<Spanish>Make a Path (Forzado)</Spanish>
-		<Polish>Wytycz BBotnisty Dukt (Prace Przym.)</Polish>
+		<Polish>Zbuduj ścieżkę (Prace Przym.)</Polish>
+		<Russian>Проложить [LINK=ROUTE_PATH]тракт[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PAVED_ROAD_SLAVE</Tag>
@@ -345,7 +382,8 @@
 		<German>Zwangsarbeit - Gepflasterte Straße bauen</German>
 		<Italian>Costruisci una strada pavimentata (Schiavo)</Italian>
 		<Spanish>Build a Paved Road (Forzado)</Spanish>
-		<Polish>Zbuduj Kamienn Drog (Prace Przym.)</Polish>
+		<Polish>Zbuduj utwardzoną drogę (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=ROUTE_PAVED_ROAD]мощенную дорогу[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PEAT_CUTTER_SLAVE</Tag>
@@ -355,6 +393,7 @@
 		<Italian>Costruisci un tagliatore di torba (Schiavo)</Italian>
 		<Spanish>Build a Peat Cutter (Forzado)</Spanish>
 		<Polish>Zbuduj Wyrobisko Torfu (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_PEAT_CUTTER]Сбор торфа[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANTATION_SLAVE</Tag>
@@ -363,7 +402,8 @@
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_PLANTATION]Plantage[\LINK] bauen</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_PLANTATION]piantagione[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_PLANTATION]plantación[\LINK] (Forzado)</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_PLANTATION]Plantacj[\LINK] (Prace Przym.)</Polish>
+		<Polish>Zbuduj [LINK=IMPROVEMENT_PLANTATION]plantację[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_PLANTATION]Плантацию[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_BAMBOO_SLAVE</Tag>
@@ -371,8 +411,8 @@
 		<French>[LINK=IMPROVEMENT_PLANT_BAMBOO]Planter une Bambouseraie[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - Plant Bamboo Grove</German>
 		<Italian>Crea un bosco di bambù (Schiavo)</Italian>
-		<Spanish>Plant Bamboo Grove (Forzado)</Spanish>
-		<Polish>Zasadz Gaj Bambusowy (Prace Przym.)</Polish>
+		<Polish>Posadź las bambusowy (Prace Przym.)</Polish>
+		<Russian>Посадить [LINK=IMPROVEMENT_PLANT_BAMBOO]бамбуковую рощу[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_GATHERING_CAMP_SLAVE</Tag>
@@ -380,8 +420,8 @@
 		<French>Installer un [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Camp de récolte[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Nützliche Pflanzen sammeln[\LINK]</German>
 		<Italian>Costruisci un campo di raccolta di piante (Schiavo)</Italian>
-		<Spanish>Build Plant Gathering Camp (Forzado)</Spanish>
 		<Polish>Zbuduj Zbieraczy Ro[lin (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]сбор дикоросов[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_JUNGLE_SLAVE</Tag>
@@ -390,7 +430,8 @@
 		<German>Zwangsarbeit - Pflanze Dschungel(Zwangsarbeit)</German>
 		<Italian>Pianta una giungla (Schiavo)</Italian>
 		<Spanish>Make Jungle (Forzado)</Spanish>
-		<Polish>Utwórz D|ungl (Prace Przym.)</Polish>
+		<Polish>Utwórz dżunglę (Prace Przym.)</Polish>
+		<Russian>Посадить [LINK=IMPROVEMENT_PLANT_JUNGLE]джунгли[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_SAVANNA_SLAVE</Tag>
@@ -399,7 +440,8 @@
 		<German>Zwangsarbeit - Plant Savanna</German>
 		<Italian>Crea una savana (Schiavo)</Italian>
 		<Spanish>Plant Savanna (Forzado)</Spanish>
-		<Polish>Zasadz Sawann (Prace Przym.)</Polish>
+		<Polish>Sadź sawannę (Prace Przym.)</Polish>
+		<Russian>Посадить [LINK=IMPROVEMENT_PLANT_SAVANNA]саванну[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_QUARRY_SLAVE</Tag>
@@ -409,6 +451,7 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_QUARRY]cava[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_QUARRY]cantera[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_QUARRY]KamienioBom[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_QUARRY]Каменоломню[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_RAILROAD_SLAVE</Tag>
@@ -416,17 +459,19 @@
 		<French>Construire un [COLOR_BUILDING_TEXT]Chemin[COLOR_REVERT] (Forcé)</French>
 		<German>Zwangsarbeit - Baue eine Eisenbahn</German>
 		<Italian>Costruisci una ferrovia (Schiavo)</Italian>
-		<Spanish>Construir un Ferrocarril(Forzado)</Spanish>
-		<Polish>Zbuduj Kolej(Prace Przym.)</Polish>
+		<Spanish>Construir un ferrocarril (Forzado)</Spanish>
+		<Polish>Zbuduj Kolej (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=ROUTE_RAILROAD]Ж.Д.[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_ROCK_FORMATION_SLAVE</Tag>
 		<English>Remove Rock Formation (Forced)</English>
-		<French>Eliminer la [LINK=FEATURE_DARK_ROCK_FORM1]Formation de roche[\LINK] (Forcé)</French>
+		<French>Supprimer la [LINK=FEATURE_DARK_ROCK_FORM1]formation rocheuse[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - [LINK=FEATURE_DARK_ROCK_FORM1]Steinbildung[\LINK] zu entfernen</German>
 		<Italian>Rimuovere [LINK=FEATURE_DARK_ROCK_FORM1]Formazione rocciosa[\LINK] (Schiavo)</Italian>
 		<Spanish>Eliminar la [LINK=FEATURE_DARK_ROCK_FORM1]Formación de roca[\LINK] (Forzado)</Spanish>
-		<Polish>UsuD [LINK=FEATURE_DARK_ROCK_FORM1]Formacj Skaln[\LINK] (Prace Przym.)</Polish>
+		<Polish>Usuń [LINK=FEATURE_DARK_ROCK_FORM1]formację skalną[\LINK] (Prace Przym.)</Polish>
+		<Russian>Убрать [LINK=FEATURE_DARK_ROCK_FORM1]Скалы[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_VEGETATION_SLAVE</Tag>
@@ -435,7 +480,8 @@
 		<German>Zwangsarbeit - Vegetation abholzen</German>
 		<Italian>Disbosca una Vegetazione (Schiavo)</Italian>
 		<Spanish>Talar una vegetación (Forzado)</Spanish>
-		<Polish>Usun Rosliny (Prace Przym.)</Polish>
+		<Polish>Usuń roślinność (Prace Przym.)</Polish>
+		<Russian>Расчистить заросли (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ROAD_SLAVE</Tag>
@@ -445,6 +491,7 @@
 		<Italian>Costruisci una [LINK=CONCEPT_MOVEMENT]strada[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir una [LINK=CONCEPT_MOVEMENT]carretera[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=CONCEPT_MOVEMENT]Drog[\LINK] (Prace Przym.)</Polish>
+		<Russian>Проложить [LINK=ROUTE_ROAD]Дорогу[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SANITIZE_SLAVE</Tag>
@@ -454,6 +501,7 @@
 		<Italian>Disinfetta (Schiavo)</Italian>
 		<Spanish>Sanitize (Forzado)</Spanish>
 		<Polish>Zdezynfekuj (Prace Przym.)</Polish>
+		<Russian>Очистка (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SCAVENGING_CAMP_SLAVE</Tag>
@@ -463,6 +511,7 @@
 		<Italian>Costruisci un campo degli spazzini (Schiavo)</Italian>
 		<Spanish>Scavenging Camp (Forzado)</Spanish>
 		<Polish>Obóz Zbieracz Padliny (Prace Przym.)</Polish>
+		<Russian>[LINK=IMPROVEMENT_SCAVENGING_CAMP]Лагерь сборщиков туш[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEED_CAMP_SLAVE</Tag>
@@ -472,6 +521,7 @@
 		<Italian>Costruisci un raccoglitore di cereali (Schiavo)</Italian>
 		<Spanish>Recolectar Granos (Forzado)</Spanish>
 		<Polish>Zbieraj Ziarna (Prace Przym.)</Polish>
+		<Russian>[LINK=IMPROVEMENT_SEED_CAMP]Лагерь сборщиков семян[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SHAFT_MINE_SLAVE</Tag>
@@ -479,8 +529,8 @@
 		<French>Construire un [LINK=IMPROVEMENT_SHAFT_MINE]Puits de mine[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - Errichte eine [LINK=IMPROVEMENT_SHAFT_MINE]Schachtmine[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_SHAFT_MINE]Pozzo minerario[\LINK] (Schiavo)</Italian>
-		<Spanish>Build [LINK=IMPROVEMENT_SHAFT_MINE]Shaft Mine[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SHAFT_MINE]GBbok Kopalni[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_SHAFT_MINE]Штольню[\LINK](принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SILK_FARM_SLAVE</Tag>
@@ -488,8 +538,8 @@
 		<French>Construire une [LINK=IMPROVEMENT_SILK_FARM]Culture de Soie[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - Errichte eine [LINK=IMPROVEMENT_SILK_FARM]Seidenfarm[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_SILK_FARM]Coltura di bachi da seta[\LINK] (Schiavo)</Italian>
-		<Spanish>Build a [LINK=IMPROVEMENT_SILK_FARM]Silk Farm[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SILK_FARM]Farm Jedwabników[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_SILK_FARM]Ферму шелкопряда[\LINK](принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SOLAR_PANELS_SLAVE</Tag>
@@ -497,8 +547,8 @@
 		<French>Construire des [LINK=IMPROVEMENT_SOLAR_PANELS]Panneaux Solaires[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - Bauen ein [LINK=IMPROVEMENT_SOLAR_PANELS]Sonnenkollektoren[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_SOLAR_PANELS]Pannelli solari[\LINK] (Schiavo)</Italian>
-		<Spanish>Costruisci un [LINK=IMPROVEMENT_SOLAR_PANELS]Paneles solares[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SOLAR_PANELS]Panele SBoneczne[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_SOLAR_PANELS]Солнечные батареи[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP_SLAVE</Tag>
@@ -508,6 +558,7 @@
 		<Italian>Costruisci un raccoglitore di rocce (Schiavo)</Italian>
 		<Spanish>Contruir un Taller de Herramientas de Piedra (Forzado)</Spanish>
 		<Polish>Zbuduj Warsztat Kamiennych Narzdzi (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Мастерскую каменных орудий[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SUBURBS_SLAVE</Tag>
@@ -517,50 +568,62 @@
 		<Italian>Costruisci [LINK=IMPROVEMENT_SUBURBS]Sobborghi[\LINK] (Schiavo)</Italian>
 		<Spanish>Construye [LINK=IMPROVEMENT_SUBURBS]Suburbios[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SUBURBS]Przedmie[cia[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_SUBURBS]Пригород[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_DESERT_SLAVE</Tag>
 		<English>Terraform Towards [LINK=IMPROVEMENT_TERRAFORM_DESERT]Desert[\LINK] (Forced)</English>
+		<Russian>Терраформ. до [LINK=IMPROVEMENT_TERRAFORM_DESERT]Пустыни[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_DUNES_SLAVE</Tag>
 		<English>Terraform Towards [LINK=IMPROVEMENT_TERRAFORM_DUNES]Dunes[\LINK] (Forced)</English>
+		<Russian>Терраформ. до [LINK=IMPROVEMENT_TERRAFORM_DUNES]Дюн[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_GRASS_SLAVE</Tag>
 		<English>Terraform Towards [LINK=IMPROVEMENT_TERRAFORM_GRASS]Grass[\LINK] (Forced)</English>
+		<Russian>Терраформ. до [LINK=IMPROVEMENT_TERRAFORM_GRASS]Травы[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_LUSH_SLAVE</Tag>
 		<English>Terraform Towards [LINK=IMPROVEMENT_TERRAFORM_LUSH]Lush[\LINK] (Forced)</English>
+		<Russian>Терраформ. в [LINK=IMPROVEMENT_TERRAFORM_LUSH]Заросли[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_MUDDY_SLAVE</Tag>
 		<English>Terraform Towards [LINK=IMPROVEMENT_TERRAFORM_MUDDY]Muddy[\LINK] (Forced)</English>
+		<Russian>Терраформ. в [LINK=IMPROVEMENT_TERRAFORM_MUDDY]Грязь[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_PERMAFROST_SLAVE</Tag>
 		<English>Terraform Towards [LINK=IMPROVEMENT_TERRAFORM_PERMAFROST]Permafrost[\LINK] (Forced)</English>
+		<Russian>Терраформ. до [LINK=IMPROVEMENT_TERRAFORM_PERMAFROST]Вечной мерзлоты[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_PLAINS_SLAVE</Tag>
 		<English>Terraform Towards [LINK=IMPROVEMENT_TERRAFORM_PLAINS]Plains[\LINK] (Forced)</English>
+		<Russian>Терраформ. до [LINK=IMPROVEMENT_TERRAFORM_PLAINS]Равнин[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_ROCKY_SLAVE</Tag>
 		<English>Terraform Towards [LINK=IMPROVEMENT_TERRAFORM_ROCKY]Rocky[\LINK] (Forced)</English>
+		<Russian>Терраформ. до [LINK=IMPROVEMENT_TERRAFORM_ROCKY]Скал[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_SCRUB_SLAVE</Tag>
 		<English>Terraform Towards [LINK=IMPROVEMENT_TERRAFORM_SCRUB]Scrub[\LINK] (Forced)</English>
+		<Russian>Терраформ. до [LINK=IMPROVEMENT_TERRAFORM_SCRUB]Кустарников[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_TUNDRA_SLAVE</Tag>
 		<English>Terraform Towards [LINK=IMPROVEMENT_TERRAFORM_TUNDRA]Tundra[\LINK] (Forced)</English>
+		<Russian>Терраформ. до [LINK=IMPROVEMENT_TERRAFORM_TUNDRA]Тундры[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORM_TAIGA_SLAVE</Tag>
 		<English>Terraform Towards [LINK=IMPROVEMENT_TERRAFORM_TUNDRA]Taiga[\LINK] (Forced)</English>
+		<Russian>Терраформ. до [LINK=IMPROVEMENT_TERRAFORM_TAIGA]Тайги[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_THATCH_CUTTER_SLAVE</Tag>
@@ -570,6 +633,7 @@
 		<Italian>Costruisci un tagliatore di paglia (Schiavo)</Italian>
 		<Spanish>Build a Thatch Cutter (Forzado)</Spanish>
 		<Polish>Zbuduj Zbieracza SBomy (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_THATCH_CUTTER]Резчика соломы[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TOWN_SLAVE</Tag>
@@ -579,6 +643,7 @@
 		<Italian>Costruisci un [LINK=IMPROVEMENT_TOWN]Paesi[\LINK] (Schiavo)</Italian>
 		<Spanish>Construye los [LINK=IMPROVEMENT_TOWN]Pueblos[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_TOWN]Miasteczko[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_TOWN]Городок[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TRAIL_SLAVE</Tag>
@@ -588,6 +653,7 @@
 		<Italian>Costruisci un sentiero (Schiavo)</Italian>
 		<Spanish>Make a Path (Forzado)</Spanish>
 		<Polish>Wytycz Scie|k (Prace Przym.)</Polish>
+		<Russian>Проложить [LINK=ROUTE_TRAIL]тропу[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TREEFARM_SLAVE</Tag>
@@ -597,6 +663,7 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_TREEFARM]Coltivazione di alberi[\LINK] (Schiavo)</Italian>
 		<Spanish>Build a [LINK=IMPROVEMENT_TREEFARM]Treefarm[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_TREEFARM]Farme Drzew[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_TREEFARM]Заказник[\LINK](принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_VILLAGE_SLAVE</Tag>
@@ -606,6 +673,7 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_VILLAGE]Villaggio[\LINK] (Schiavo)</Italian>
 		<Spanish>Construye un [LINK=IMPROVEMENT_VILLAGE]Aldea[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_VILLAGE]Wiosk[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_VILLAGE]Поселок[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WATERMILL_SLAVE</Tag>
@@ -615,6 +683,7 @@
 		<Italian>Costruisci un [LINK=IMPROVEMENT_WATERMILL]mulino ad acqua[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_WATERMILL]molino de agua[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WATERMILL]MByn Wodny[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_WATERMILL]Водяную мельницу[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WILDLIFE_SANCTUARY_SLAVE</Tag>
@@ -624,6 +693,7 @@
 		<Italian>Costruisci un [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Safari[\LINK] (Schiavo)</Italian>
 		<Spanish>Build [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Safari[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Safari[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_WILDLIFE_SANCTUARY]Заповедник дикой природы[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WINDMILL_SLAVE</Tag>
@@ -633,6 +703,7 @@
 		<Italian>Costruisci un [LINK=IMPROVEMENT_WINDMILL]mulino a vento[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_WINDMILL]molino de viento[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WINDMILL]Wiatrak[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_WINDMILL]Ветряную мельницу[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WINERY_SLAVE</Tag>
@@ -642,6 +713,7 @@
 		<Italian>Costruisci un'[LINK=IMPROVEMENT_WINERY]azienda vinicola[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_WINERY]bodega[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WINERY]Winiarni[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_WINERY]Винокурню[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WOOD_GATHERER_SLAVE</Tag>
@@ -651,6 +723,7 @@
 		<Italian>Costruisci un raccoglitore di legno (Schiavo)</Italian>
 		<Spanish>Gather wood (Forzado)</Spanish>
 		<Polish>Zbieraj Drewno (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_WOOD_GATHERER]Сборщика древесины[\LINK] (принуд.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WORKSHOP_SLAVE</Tag>
@@ -660,5 +733,6 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_WORKSHOP]bottega[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_WORKSHOP]taller[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WORKSHOP]Warsztat[\LINK] (Prace Przym.)</Polish>
+		<Russian>Строить [LINK=IMPROVEMENT_WORKSHOP]Мастерскую[\LINK] (принуд.)</Russian>
 	</TEXT>
 </Civ4GameText>

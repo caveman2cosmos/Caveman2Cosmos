@@ -1403,68 +1403,7 @@ class Pedia:
 				elif szPrefix == "ERA":
 					return self.pediaJump(self.PEDIA_CONCEPTS, "Eras", iType)
 
-		print "Ambiguous link, may lead to the wrong pedia page."
-		for i in xrange(GC.getNumTechInfos()):
-			if GC.getTechInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_TECHS, "", i)
-		for i in xrange(GC.getNumUnitInfos()):
-			if GC.getUnitInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_UNITS_0, "", i)
-		for i in xrange(GC.getNumUnitCombatInfos()):
-			if GC.getUnitCombatInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_SPECIAL, "UnitCombat", i)
-		for i in xrange(GC.getNumPromotionInfos()):
-			if GC.getPromotionInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_PROMOTIONS, "", i)
-		for i in xrange(GC.getNumBuildingInfos()):
-			if GC.getBuildingInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_BUILDINGS_0, "", i)
-		for i in xrange(GC.getNumProjectInfos()):
-			if GC.getProjectInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_SPECIAL, "Project", i)
-		for i in xrange(GC.getNumSpecialistInfos()):
-			if GC.getSpecialistInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_SPECIAL, "Specialist", i)
-		for i in xrange(GC.getNumTerrainInfos()):
-			if GC.getTerrainInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_LANDSCAPE, "Terrain", i)
-		for i in xrange(GC.getNumFeatureInfos()):
-			if GC.getFeatureInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_LANDSCAPE, "Feature", i)
-		for i in xrange(GC.getNumRouteInfos()):
-			if GC.getRouteInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_SPECIAL, "Route", i)
-		for i in xrange(GC.getNumBonusInfos()):
-			if GC.getBonusInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_BONUSES, "", i)
-		for i in xrange(GC.getNumImprovementInfos()):
-			if GC.getImprovementInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_LANDSCAPE, "Improvement", i)
-		for i in xrange(GC.getNumCivilizationInfos()):
-			if GC.getCivilizationInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_LEADERSHIP, "Civ", i)
-		for i in xrange(GC.getNumLeaderHeadInfos()):
-			if GC.getLeaderHeadInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_LEADERSHIP, "Leader", i)
-		for i in xrange(GC.getNumCivicInfos()):
-			if GC.getCivicInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_LEADERSHIP, "Civic", i)
-		for i in xrange(GC.getNumReligionInfos()):
-			if GC.getReligionInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_LEADERSHIP, "Religion", i)
-		for i in xrange(GC.getNumCorporationInfos()):
-			if GC.getCorporationInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_SPECIAL, "Corporation", i)
-		for i in xrange(GC.getNumConceptInfos()):
-			if GC.getConceptInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_CONCEPTS, "", i)
-		for i in xrange(GC.getNumNewConceptInfos()):
-			if GC.getNewConceptInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_CONCEPTS, "NEW", i)
-		for i in xrange(GC.getNumTraitInfos()):
-			if GC.getTraitInfo(i).isMatchForLink(szLink, False):
-				return self.pediaJump(self.PEDIA_LEADERSHIP, "Trait", i)
-		print "Error - Invalid Link"
+		print "[ERROR] - Invalid Link"
 
 	def back(self):
 		if len(self.pediaHistory) > 2:
@@ -1761,15 +1700,16 @@ class Pedia:
 
 	def onClose(self):
 		print "Exit Pedia"
-		del self.aWidgetBucket, self.bMovie, self.InputData
-		del self.fKeyTimer, self.bKeyPress, self.szTextTT, self.iOffsetTT, self.bLockedTT
-		del self.CyPlayer, self.bIndex, self.pediaFuture, self.SECTION, self.nWidgetCount, self.iGroupCategory
-		del self.Y_BOT_TEXT, self.H_EDGE_PANEL, self.H_MID_SECTION, self.W_CATEGORIES, self.W_ITEMS
-		del self.X_PEDIA_PAGE, self.Y_PEDIA_PAGE, self.R_PEDIA_PAGE, self.B_PEDIA_PAGE, self.W_PEDIA_PAGE, self.H_PEDIA_PAGE
-		del self.mapScreenFunctions, self.mapListGenerators, self.iNumEras, self.categoryGraphics, self.ICON_SIZE
-		del self.pediaIndex, self.inPage, self.aList
-		del self.PEDIA_BUILDINGS_0, self.PEDIA_UNITS_0, self.PEDIA_MAIN, self.PEDIA_CONCEPTS, self.PEDIA_TECHS, self.PEDIA_UNITS_1, self.PEDIA_UNITS_2, self.PEDIA_PROMOTIONS
-		del self.PEDIA_BUILDINGS_1, self.PEDIA_BUILDINGS_2, self.PEDIA_BONUSES, self.PEDIA_LANDSCAPE, self.PEDIA_LEADERSHIP, self.PEDIA_SPECIAL, self.PEDIA_UPG_TREES
+		del self.aWidgetBucket, self.bMovie, self.InputData, \
+			self.fKeyTimer, self.bKeyPress, self.szTextTT, self.iOffsetTT, self.bLockedTT, \
+			self.CyPlayer, self.bIndex, self.pediaFuture, self.SECTION, self.nWidgetCount, self.iGroupCategory, \
+			self.Y_BOT_TEXT, self.H_EDGE_PANEL, self.H_MID_SECTION, self.W_CATEGORIES, self.W_ITEMS, \
+			self.X_PEDIA_PAGE, self.Y_PEDIA_PAGE, self.R_PEDIA_PAGE, self.B_PEDIA_PAGE, self.W_PEDIA_PAGE, self.H_PEDIA_PAGE, \
+			self.mapScreenFunctions, self.mapListGenerators, self.iNumEras, self.categoryGraphics, self.ICON_SIZE, \
+			self.pediaIndex, self.inPage, self.aList, \
+			self.PEDIA_BUILDINGS_0, self.PEDIA_UNITS_0, self.PEDIA_MAIN, self.PEDIA_CONCEPTS, self.PEDIA_TECHS, self.PEDIA_UNITS_1, self.PEDIA_UNITS_2, self.PEDIA_PROMOTIONS, \
+			self.PEDIA_BUILDINGS_1, self.PEDIA_BUILDINGS_2, self.PEDIA_BONUSES, self.PEDIA_LANDSCAPE, self.PEDIA_LEADERSHIP, self.PEDIA_SPECIAL, self.PEDIA_UPG_TREES
+
 		if not self.pediaHistory:
 			self.pediaHistory = [(-1, "", 0)]
 		else:

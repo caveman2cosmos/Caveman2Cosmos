@@ -228,8 +228,7 @@ class WorldBuilder:
 
 	def refreshReveal(self):
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
-		for i in xrange(MAP.numPlots()):
-			pPlot = MAP.plotByIndex(i)
+		for pPlot in MAP.plots():
 			if pPlot.isNone(): continue
 			self.showRevealed(pPlot)
 
@@ -359,8 +358,7 @@ class WorldBuilder:
 		elif self.iPlayerAddMode == "Ownership":
 			self.m_pCurrentPlot.setOwner(-1)
 		elif self.iPlayerAddMode == "Units":
-			for i in xrange (self.m_pCurrentPlot.getNumUnits()):
-				pUnit = self.m_pCurrentPlot.getUnit(i)
+			for pUnit in self.m_pCurrentPlot.units():
 				if pUnit.getUnitType() == self.iSelection:
 					pUnit.kill(False, PlayerTypes.NO_PLAYER)
 					return 1
@@ -1114,8 +1112,7 @@ class WorldBuilder:
 
 
 	def revealAll(self, bReveal):
-		for i in xrange(MAP.numPlots()):
-			pPlot = MAP.plotByIndex(i)
+		for pPlot in MAP.plots():
 			if pPlot.isNone(): continue
 			self.RevealCurrentPlot(bReveal, pPlot)
 		self.refreshReveal()
@@ -1125,7 +1122,7 @@ class WorldBuilder:
 		iType = GC.getInfoTypeForStringWithHiddenAssert(self.iPlayerAddMode)
 		if iType == -1:
 			if bReveal or (not pPlot.isVisible(self.m_iCurrentTeam, False)):
-				pPlot.setRevealed(self.m_iCurrentTeam, bReveal, False, -1);
+				pPlot.setRevealed(self.m_iCurrentTeam, bReveal, False, -1)
 		elif bReveal:
 			if pPlot.isInvisibleVisible(self.m_iCurrentTeam, iType): return
 			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, 1)
@@ -1425,8 +1422,8 @@ class WorldBuilder:
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
 
 		if NAME == "WorldBuilderEraseAll":
-			for i in xrange(MAP.numPlots()):
-				self.m_pCurrentPlot = MAP.plotByIndex(i)
+			for plot in MAP.plots():
+				self.m_pCurrentPlot = plot
 				self.placeObject()
 
 		elif NAME == "TradeScreen":

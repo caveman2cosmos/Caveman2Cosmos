@@ -51,7 +51,6 @@ void CyGamePythonInterface()
 		.def("countCivPlayersEverAlive", &CyGame::countCivPlayersEverAlive, "int ()")
 		.def("countCivTeamsAlive", &CyGame::countCivTeamsAlive, "int ()")
 		.def("countCivTeamsEverAlive", &CyGame::countCivTeamsEverAlive, "int ()")
-		.def("countHumanPlayersAlive", &CyGame::countHumanPlayersAlive, "int ()")
 
 		.def("countTotalCivPower", &CyGame::countTotalCivPower, "int ()")
 		.def("countTotalNukeUnits", &CyGame::countTotalNukeUnits, "int ()")
@@ -142,18 +141,6 @@ void CyGamePythonInterface()
 		.def("getForcedAIAutoPlay", &CyGame::getForcedAIAutoPlay, "int (int iPlayer)")
 		.def("setForcedAIAutoPlay", &CyGame::setForcedAIAutoPlay, "void (int iPlayer, int iValue, bool bForced)")
 
-		.def("getWaterAnimalSpawnChance", &CyGame::getWaterAnimalSpawnChance, "int ()")
-		.def("setWaterAnimalSpawnChance", &CyGame::setWaterAnimalSpawnChance, "void (int)")
-		.def("changeWaterAnimalSpawnChance", &CyGame::changeWaterAnimalSpawnChance, "void (int)")
-
-		.def("getXResolution", &CyGame::getXResolution, "int ()")
-		.def("setXResolution", &CyGame::setXResolution, "void (int)")
-		.def("changeXResolution", &CyGame::changeXResolution, "void (int)")
-
-		.def("getYResolution", &CyGame::getYResolution, "int ()")
-		.def("setYResolution", &CyGame::setYResolution, "void (int)")
-		.def("changeYResolution", &CyGame::changeYResolution, "void (int)")
-
 		.def("isScoreDirty", &CyGame::isScoreDirty, "bool ()")
 		.def("setScoreDirty", &CyGame::setScoreDirty)
 		.def("getCircumnavigatedTeam", &CyGame::getCircumnavigatedTeam, "int ()")
@@ -229,10 +216,6 @@ void CyGamePythonInterface()
 
 		.def("isSpecialBuildingValid", &CyGame::isSpecialBuildingValid)
 		.def("makeSpecialBuildingValid", &CyGame::makeSpecialBuildingValid)
-
-		//TB Nukefix (Reversal) The following two lines should be commented out
-		//.def("isNukesValid", &CyGame::isNukesValid, "bool")
-		//.def("makeNukesValid", &CyGame::makeNukesValid, " void (bool bValid)")
 
 		.def("isInAdvancedStart", &CyGame::isInAdvancedStart, "bool")
 
@@ -322,6 +305,8 @@ void CyGamePythonInterface()
 		.def("canEverSpread", &CyGame::canEverSpread, "bool (int iCorporation)")
 
 		.def("getC2CVersion", &CyGame::getC2CVersion, "const char* ()")
+
+		.def("assignScenarioStartingPlots", &CyGame::assignScenarioStartingPlots, "void ()")
 	;
 
 

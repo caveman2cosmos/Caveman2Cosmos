@@ -78500,7 +78500,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/unique/Philistine/Light_Hoplite/greekphalanx.nif</NIF>
+			<NIF>Art/Unique/Philistines/Light_hoplite/greekphalanx.nif</NIF>
 			<KFM>Art/Units/Charlemagne_PapalSpearman/PapalSpearman.kfm</KFM>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
@@ -79239,7 +79239,6 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
-<!-- Culture had wrong flag
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_MAGOS</Type>
 			<Button>Art/culture/Magos.dds</Button>
@@ -79278,7 +79277,6 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
--->
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_TOFANGCHI</Type>
 			<Button>Art/culture/Tofangchi.dds</Button>

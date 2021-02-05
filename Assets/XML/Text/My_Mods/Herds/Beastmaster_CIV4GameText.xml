@@ -14,25 +14,30 @@
 		<Tag>TXT_KEY_BUILDING_DONKEY_BREEDER</Tag>
 		<English>Donkey Breeder</English>
 		<French>Éleveur d'ânes</French>
+		<Russian>Îñëèíûé ïèòîìíèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORSE_BREEDER</Tag>
 		<English>Horse Breeder</English>
 		<French>Éleveur de chevaux</French>
+		<Russian>Ëîøàäèíûé ïèòîìíèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_DONKEY_PAIR</Tag>
 		<English>Breeding Pair - Donkey</English>
-		<French>Couple reproducteur - Anes</French>
+		<French>Couple reproducteur - Ânes</French>
+		<Russian>Çàâîä÷èê îñëîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_HORSE_PAIR</Tag>
 		<English>Breeding Pair - Horse</English>
 		<French>Couple reproducteur - Chevaux</French>
+		<Russian>Çàâîä÷èê ëîøàäåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_WOLF_PAIR</Tag>
 		<English>Breeding Pair - Wolf</English>
 		<French>Couple reproducteur - Loup</French>
+		<Russian>Çàâîä÷èê âîëêîâ</Russian>
 	</TEXT>
 </Civ4GameText>

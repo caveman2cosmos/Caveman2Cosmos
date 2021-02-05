@@ -197,8 +197,9 @@
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Base number of turns between decay, higher means lower decay rate -->
 		<DefineName>HURRY_INFLATION_DECAY_RATE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FREE_TRADE_AGREEMENT_ESPIONAGE_MISSION_COST_MODIFIER</DefineName>
@@ -211,12 +212,12 @@
 	<Define>
 		<!-- Realistic Corporations: Corporation will be founded when more players than X have the prereq tech for it. -->
 		<DefineName>MINIMUM_PLAYERS_WITH_TECH_FOR_AUTO_CORPORATION_FOUNDING</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- The game will try to found a HQ for a corporation every X turns -->
 		<DefineName>CORPORATION_FOUND_CHECK_TURNS</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- The Time and Gold to Build a Route over an existing route is reduced by the time and Gold already invested in the previous Route -->
@@ -321,6 +322,6 @@ The Great Wall is always dynamic if viewports are enabled regardless of this set
 	</Define>
 	<Define>
 		<DefineName>C2C_VERSION</DefineName>
-		<DefineTextVal>v40-dev</DefineTextVal>
+		<DefineTextVal>v41.1</DefineTextVal>
 	</Define>
 </Civ4Defines>

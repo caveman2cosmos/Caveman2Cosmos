@@ -5,11 +5,12 @@
 		<English>Military Standard (Deer)</English>
 		<French>Standards Militaires (Cervidés)</French>
 		<Polish>Sztandar Wojskowy (Deer)</Polish>
+		<Russian>Òîòåì «Îëåíü»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DEER_HELP</Tag>
 		<English>[ICON_BULLET]Build Deer buildings and units faster in this city.</English>
-		<French>[ICON_BULLET]Construit les bâtiments et unités cervidées plus vite dans cette Ville.</French>
+		<French>[ICON_BULLET]Construit les bâtiments et unités cervidés plus vite dans cette Ville.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_TRAINER</Tag>
@@ -21,32 +22,35 @@
 		</French>
 		<Italian>Allevatore di cervi</Italian>
 		<Polish>Treser Jeleni</Polish>
+		<Russian>Ïðèðó÷åíèå îëåíåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_TRAINER_EFFECT</Tag>
 		<English>Effect - Heritage - Deer</English>
 		<French>Effet - Patrimoine (Cervidés)</French>
 		<Polish>Efekt - Dziedzictwo Tresera Jeleni</Polish>
+		<Russian>Ïèòîìíèê îëåíåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_TRAINER_EFFECT_HELP</Tag>
 		<English>[ICON_BULLET]This free building is used to enable the building of the special deer units in all your cities.</English>
-		<French>Ce bâtiment permet l'entraînement d'unités cervidées dans toutes vos villes.</French>
+		<French>Ce bâtiment permet l'entraînement d'unités cervidés dans toutes vos villes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE</Tag>
 		<English>Heritage - Deer</English>
 		<French>Patrimoine (Cervidés)</French>
 		<Polish>Dziedzictwo - Jeleń</Polish>
+		<Russian>Ðàçâåäåíèå îëåíåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE_PEDIA</Tag>
-		<English>The Heratage building upgrades the Training Wonder to allow the special units to be built in all your cities.</English>
+		<English>The Heritage building upgrades the Training Wonder to allow the special units to be built in all your cities.</English>
 		<French>Le bâtiment du patrimoine améliore la merveille de la formation pour permettre la construction d'unités spéciales dans toutes vos villes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE_STRATEGY</Tag>
-		<English>The Deer Heritage buildings allows the building ofdeer units in all your cities.</English>
+		<English>The Deer Heritage buildings allows the building of deer units in all your cities.</English>
 		<French>Les bâtiments Héritages Cervidés permettent de construire des unités de cerfs dans toutes vos villes.</French>
 	</TEXT>
 	<TEXT>
@@ -70,6 +74,7 @@
 		</French>
 		<Italian>Cavalcatore di cervi</Italian>
 		<Polish>Jeździec (Jeleń)</Polish>
+		<Russian>Íàåçäíèê íà îëåíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEERRIDER_PEDIA</Tag>
@@ -91,6 +96,7 @@
 		</French>
 		<Italian>Arciere su cervo</Italian>
 		<Polish>Jeleni Łucznik</Polish>
+		<Russian>Ëó÷íèê íà îëåíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEER_ARCHER_PEDIA</Tag>
@@ -107,6 +113,7 @@
 		<English>Light Deer Cavalry</English>
 		<French>Cavalier léger cervidé</French>
 		<Polish>Lekka Kawaleria (Jeleń)</Polish>
+		<Russian>Êàâàëåðèñò íà îëåíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEER_LIGHT_PEDIA</Tag>

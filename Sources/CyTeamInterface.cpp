@@ -10,9 +10,6 @@ void CyTeamPythonInterface()
 	OutputDebugString("Python Extension Module - CyTeamPythonInterface\n");
 
 	python::class_<CyTeam>("CyTeam")
-
-		.def("isNone", &CyTeam::isNone, "bool () - is this instance valid?")
-
 		.def("isRebelAgainst", &CyTeam::isRebelAgainst, "bool ( int iTeam )" )
 		.def("setRebelAgainst", &CyTeam::setRebelAgainst, "void ( int iTeam, bool bNewValue )" )
 		.def("countRebelAgainst", &CyTeam::countRebelAgainst, "int ( )" )

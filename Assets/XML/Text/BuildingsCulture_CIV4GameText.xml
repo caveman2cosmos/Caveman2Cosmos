@@ -1,194 +1,330 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
-<!--
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_X_CASTILIAN</Tag>
-		<English>Culture (Castilian)</English>
-		<French>Culture (Castillane)</French>
-		<Polish>Kultura (Kastylijska)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_X_CASTILIAN_PEDIA</Tag>
-		<English>The Kingdom of Castile was one of the medieval kingdoms of the Iberian Peninsula. It emerged as a political autonomous entity in the 9th century. It was called County of Castile and was held in vassalage from the Kingdom of Leon. Its name comes from the host of castles constructed in the region. It was one of the kingdoms that founded the Crown of Castile, and the Kingdom of Spain.</English>
-		<Polish>Kastylia (hiszp. Castilla) - kraina historyczna w środkowej Hiszpanii na rozległym płaskowyżu Meseta na wysokości 600-1000 m n.p.m. Nazwa pochodzi od licznych zamków występujących w jej granicach w średniowieczu. Kastylia była kolebką języka kastylijskiego, który jest utożsamiany ze współczesnym językiem hiszpańskim. Jest otoczona łańcuchami górskimi, a środkiem biegnie pasmo górskie Gór Kastylijskich(Kordyliera Centralna ze szczytem Almanzor - 2592 m) do 2600 m n.p.m. Góry te dzielą Kastylię na dwie części: Starą Kastylię (Castilla la Vieja) iNową Kastylię (Castilla la Nueva).</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_X_LEON</Tag>
-		<English>Culture (Leon)</English>
-		<Polish>Kultura (Leon)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_X_LEON_PEDIA</Tag>
-		<English>TBD</English>
-		<French>A compléter</French>
-		<Polish>Leon - prowincja Hiszpanii. Powierzchnia 15 600 km2, 530 000 mieszkańców (dane z 2001 r.)</Polish>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SABBATEAN</Tag>
 		<English>Culture (Sabbatean)</English>
-		<French>Culture (Sabbatean)</French>
+		<Russian>Ñàááàòèàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SABBATEAN_PEDIA</Tag>
 		<English>Sabbateans (Sabbatians) is a complex general term that refers to a variety of followers of, disciples and believers in Sabbatai Zevi (1626-1676), a Jewish rabbi who was proclaimed to be the Jewish Messiah in 1665 by Nathan of Gaza. Vast numbers of Jews in the Jewish diaspora accepted his claims, even after he became a Jewish apostate with his conversion to Islam in 1666. Sabbatai Zevi's followers, both during his "Messiahship" and after his conversion to Islam, are known as Sabbateans. They can be grouped into three: "Maaminim" (believers), "Haberim" (associates), and "Ba'ale Milhamah" (warriors).</English>
 	</TEXT>
--->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE</Tag>
 		<English>Active Culture</English>
-		<French>Culture Active</French>
+		<French>Culture active</French>
+		<German>aktive Kultur</German>
+		<Russian>Àêòèâíàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_AFRICAN</Tag>
 		<English>C.Ac. African</English>
 		<French>Cult. Act. Africaine</French>
+		<German>
+			<Text>Kultur Afrika (aktiv):Kultur Afrika (aktiv):Kultur Afrika (aktiv):Kultur Afrika (aktiv)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Африканская (АкК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_ASIAN</Tag>
 		<English>C.Ac. Asian</English>
 		<French>Cult. Act. Asiatique</French>
+		<German>
+			<Text>Kultur Asien (aktiv):Kultur Asien (aktiv):Kultur Asien (aktiv):Kultur Asien (aktiv)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Азиатская (АкК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_EUROPEAN</Tag>
 		<English>C.Ac. European</English>
 		<French>Cult. Act. Européenne</French>
+		<German>
+			<Text>Kultur Europa (aktiv):Kultur Europa (aktiv):Kultur Europa (aktiv):Kultur Europa (aktiv)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Европейская (АкК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Tag>
 		<English>C.Ac. Middle Eastern</English>
 		<French>Cult. Act. du Moyen-Orient</French>
+		<German>
+			<Text>Kultur Naher Osten (aktiv):Kultur Naher Osten (aktiv):Kultur Naher Osten (aktiv):Kultur Naher Osten (aktiv)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Ближневосточная (АкК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_NEANDERTHAL</Tag>
 		<English>C.Ac. Neanderthal</English>
 		<French>Cult. Act. Néanderthal</French>
+		<German>
+			<Text>Kultur Neandertal (aktiv):Kultur Neandertal (aktiv):Kultur Neandertal (aktiv):Kultur Neandertal (aktiv)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Неандертальская (АкК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</Tag>
 		<English>C.Ac. North American</English>
 		<French>Cult. Act. Nord-américaine</French>
+		<German>
+			<Text>Kultur Nordamerika (aktiv):Kultur Nordamerika (aktiv):Kultur Nordamerika (aktiv):Kultur Nordamerika (aktiv)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Североамериканская (АкК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_OCEANIAN</Tag>
 		<English>C.Ac. Oceanian</English>
 		<French>Cult. Act. Océanique</French>
+		<German>
+			<Text>Kultur Ozeanien (aktiv):Kultur Ozeanien (aktiv):Kultur Ozeanien (aktiv):Kultur Ozeanien (aktiv)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Океанийская (АкК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Tag>
 		<English>While the citizens of a city may identify with a variety of existing cultures, those cultures may or may not be recognized at a local level.</English>
+		<German>Während sich die Bürger der Städte einer Vielzahl von existenten Kulturen zugehörig fühlen können, wird doch nur ein kleiner Teil davon genug Einfluss gewinnen, um im ganzen Reich anerkannt und damit Teil der nationalen Kultur zu werden.</German>
+		<Russian>Хотя жители города могут соотносить себя с множеством существующих культур, подобные культуры могут быть признаны или не признаны на местном уровне.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_STRATEGY</Tag>
 		<English>C.Ac. = Culture Active[NEWLINE]This building shows that the culture is an integrated and recognized part of your nation's culture, obtained by having a corresponding Native Culture (C.N.) or Adopted Culture (C.Ad.) in your empire.</English>
 		<French>Cult. Act. = Culture active[NEWLINE]Ce bâtiment montre que la culture fait partie intégrante et reconnue de la culture de votre nation. It is obtained by having a corresponding Native Culture (C.N.) or Adopted Culture (C.Ad.) in your empire.</French>
+		<German>Als aktiv werden bei C2C Kultureinflüsse bezeichnet, die ein vollwertiger Bestandteil der jeweiligen nationalen Kultur geworden sind. [COLOR_BUILDING_TEXT]Aktive Kulturen[COLOR_REVERT] entstehen aus den entsprechenden Urkulturen, aber auch aus Kulturen, die von der Nation übernommen wurden.</German>
+		<Russian>Активная культура = (АкК)[NEWLINE]Эта постройка показывает, что данная культура является интегрированной и признанной частью культуры вашей державы, полученной путем наличия соответствующей родной культуры (Р.К.) или принятой культуры (ПрК) в вашей цивилизации.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Tag>
 		<English>C.Ac. South American</English>
 		<French>Cult. Act. Sud-américaine</French>
+		<German>
+			<Text>Kultur Südamerika (aktiv):Kultur Südamerika (aktiv):Kultur Südamerika (aktiv):Kultur Südamerika (aktiv)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Южноамериканская (АкК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED</Tag>
 		<English>Adopted Culture</English>
 		<French>Culture Adoptée</French>
+		<German>übernommene Kultur</German>
+		<Russian>Ïðèíÿòàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_AFRICAN</Tag>
 		<English>C.Ad. African</English>
 		<French>Cult. Adopt. Africaine</French>
+		<German>
+			<Text>Kultur Afrika (übernommen):Kultur Afrika (übernommen):Kultur Afrika (übernommen):Kultur Afrika (übernommen)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Африканская (ПрК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_ASIAN</Tag>
 		<English>C.Ad. Asian</English>
 		<French>Cult. Adopt. Asiatique</French>
+		<German>
+			<Text>Kultur Asien (übernommen):Kultur Asien (übernommen):Kultur Asien (übernommen):Kultur Asien (übernommen)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Азиатская (ПрК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_EUROPEAN</Tag>
 		<English>C.Ad. European</English>
 		<French>Cult. Adopt. Européenne</French>
+		<German>
+			<Text>Kultur Europa (übernommen):Kultur Europa (übernommen):Kultur Europa (übernommen):Kultur Europa (übernommen)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Европейская (ПрК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</Tag>
 		<English>C.Ad. Middle Eastern</English>
 		<French>Cult. Adopt. du Moyen-Orient</French>
+		<German>
+			<Text>Kultur Naher Osten (übernommen):Kultur Naher Osten (übernommen):Kultur Naher Osten (übernommen):Kultur Naher Osten (übernommen)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Ближневосточная (ПрК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_NEANDERTHAL</Tag>
 		<English>C.Ad. Neanderthal</English>
 		<French>Cult. Adopt. Néanderthal</French>
+		<German>
+			<Text>Kultur Neandertal (übernommen):Kultur Neandertal (übernommen):Kultur Neandertal (übernommen):Kultur Neandertal (übernommen)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Неандертальская (ПрК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_NORTH_AMERICAN</Tag>
 		<English>C.Ad. North American</English>
 		<French>Cult. Adopt. Nord-américaine</French>
+		<German>
+			<Text>Kultur Nordamerika (übernommen):Kultur Nordamerika (übernommen):Kultur Nordamerika (übernommen):Kultur Nordamerika (übernommen)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Североамериканская (ПрК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_OCEANIAN</Tag>
 		<English>C.Ad. Oceanian</English>
 		<French>Cult. Adopt. Océanique</French>
+		<German>
+			<Text>Kultur Ozeanien (übernommen):Kultur Ozeanien (übernommen):Kultur Ozeanien (übernommen):Kultur Ozeanien (übernommen)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Океанийская (ПрК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Tag>
 		<English>Through military might, societial pressure, or economic power, when sufficient peoples integrate into an existing nation, the values of that nation inevitably end up incorporating the newly introduced cultures and experiences of those peoples. After all, is it really "their" culture if so many of our own citizens identify with it?</English>
+		<German>Im Laufe der Geschichte ist es schon häufig passiert, dass Zivilisationen kulturelle Elemente von besiegten Gegnern, eingewanderten Flüchtlingen oder langjährigen Geschäftspartnern übernommen haben. Letzten Endes läuft es immer auf die Frage hinaus: Können "fremde" Kulturen und Gebräuche noch fremd sein, wenn sich so viele Bürger mit ihnen identifizieren?</German>
+		<Russian>Благодаря военной и экономической мощи или социальному давлению, когда достаточное количество народов интегрируется в существующую нацию, ценности этой нации неизбежно в конечном итоге включают в себя недавно представленные культуры и опыт этих народов. В конце концов, действительно ли это «их» культура, если так много наших граждан соотносят себя с ней?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_STRATEGY</Tag>
 		<English>C.Ad. = Culture Adopted[NEWLINE]By owning 3 cities with the same foreign "Local Culture" that differs from your native culture, you will get that foreign culture as an "Adopted Culture".</English>
 		<French>Cult. Adopt. = Culture adoptée :[NEWLINE]En possédant 3 villes avec la même "culture locale" étrangère (pas votre culture d'origine), vous obtiendrez cette culture étrangère en tant que "culture adoptée".</French>
+		<German>Wenn eine Zivilisation über mehr als 3 Städte verfügt, in denen die gleiche fremde Kultur lokal präsent ist, wird diese automatisch als [COLOR_BUILDING_TEXT]übernommene Kultur[COLOR_REVERT] national anerkannt.</German>
+		<Russian>Принятая культура = (ПрК)[NEWLINE]Приобретая 3 города с одинаковой иностранной «местной культурой», отличающейся от вашей родной, данная иностранная культура получает статус «принятой культуры».</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Tag>
 		<English>C.Ad. South American</English>
 		<French>Cult. Adopt. Sud-américaine</French>
+		<German>
+			<Text>Kultur Südamerika (übernommen):Kultur Südamerika (übernommen):Kultur Südamerika (übernommen):Kultur Südamerika (übernommen)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Южноамериканская (ПрК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL</Tag>
 		<English>Local Culture</English>
 		<French>Culture Locale</French>
+		<German>lokale Kultur</German>
+		<Russian>Ìåñòíàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_AFRICAN</Tag>
 		<English>C.L. African</English>
 		<French>Cult. Loc. Africaine</French>
+		<German>
+			<Text>Kultur Afrika (lokal):Kultur Afrika (lokal):Kultur Afrika (lokal):Kultur Afrika (lokal)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Африканская (МК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_ASIAN</Tag>
 		<English>C.L. Asian</English>
 		<French>Cult. Loc. Asiatique</French>
+		<German>
+			<Text>Kultur Asien (lokal):Kultur Asien (lokal):Kultur Asien (lokal):Kultur Asien (lokal)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Азиатская (МК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_EUROPEAN</Tag>
 		<English>C.L. European</English>
 		<French>Cult. Loc. Européenne</French>
+		<German>
+			<Text>Kultur Europa (lokal):Kultur Europa (lokal):Kultur Europa (lokal):Kultur Europa (lokal)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Европейская (МК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Tag>
 		<English>C.L. Middle Eastern</English>
 		<French>Cult. Loc. du Moyen-Orient</French>
+		<German>
+			<Text>Kultur Naher Osten (lokal):Kultur Naher Osten (lokal):Kultur Naher Osten (lokal):Kultur Naher Osten (lokal)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Ближневосточная (МК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_NEANDERTHAL</Tag>
 		<English>C.L. Neanderthal</English>
 		<French>Cult. Loc. Néanderthal</French>
+		<German>
+			<Text>Kultur Neandertal (lokal):Kultur Neandertal (lokal):Kultur Neandertal (lokal):Kultur Neandertal (lokal)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Неандертальская (МК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</Tag>
 		<English>C.L. North American</English>
 		<French>Cult. Loc. Nord-américaine</French>
+		<German>
+			<Text>Kultur Nordamerika (lokal):Kultur Nordamerika (lokal):Kultur Nordamerika (lokal):Kultur Nordamerika (lokal)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Североамериканская (МК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_OCEANIAN</Tag>
 		<English>C.L. Oceanian</English>
 		<French>Cult. Loc. Océanique</French>
+		<German>
+			<Text>Kultur Ozeanien (lokal):Kultur Ozeanien (lokal):Kultur Ozeanien (lokal):Kultur Ozeanien (lokal)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Океанийская (МК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Tag>
 		<English>There is more to the culture and essence of a city than the values of its rulers; cities may be conquered and captured and taken and retaken and rebel and convert, but so long as people remain, they will retain their own local cultural values.</English>
+		<German>Städte sind unterschiedlichen kulturellen Einflüssen ausgesetzt. Sie können belagert, eingenommen und zurückerobert werden. Es kann Rebellionen und Revolten geben. Aber egal, was auch passiert, die ortsansässigen Menschen werden ihre eigene [COLOR_BUILDING_TEXT]lokale Kultur[COLOR_REVERT] und ihre Gebräuche beibehalten und pflegen, auch wenn diese sich von der Nationalkultur unterscheiden.</German>
+		<Russian>Культура и сущность города - это не только ценности его правителей; города могут быть завоеваны и захвачены или возвращены обратно в ходе восстания, но пока есть его жители, они будут сохранять свои местные культурные ценности.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Tag>
 		<English>C.L. South American</English>
 		<French>Cult. Loc. Sud-américaine</French>
+		<German>
+			<Text>Kultur Südamerika (lokal):Kultur Südamerika (lokal):Kultur Südamerika (lokal):Kultur Südamerika (lokal)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Южноамериканская (МК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE</Tag>
@@ -198,71 +334,121 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Kulturursprung:Kulturursprungs:Kulturursprung:Kulturursprung</Text>
-			<Gender>neuter:neuter:neuter:neuter</Gender>
-			<Plural>0:0:0:0</Plural>
-		</German>
+		<German>Urkultur</German>
 		<Italian>
 			<Text>Cultura d'origine</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Tubylcza Kultura</Polish>
+		<Russian>Ðîäíàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_AFRICAN</Tag>
 		<English>C.N. African</English>
 		<French>Cult. Orig. Africaine</French>
+		<German>
+			<Text>Urkultur Afrika:Urkultur Afrika:Urkultur Afrika:Urkultur Afrika</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Африканская (РК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_ASIAN</Tag>
 		<English>C.N. Asian</English>
 		<French>Cult. Orig. Asiatique</French>
+		<German>
+			<Text>Urkultur Asien:Urkultur Asien:Urkultur Asien:Urkultur Asien</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Азиатская (РК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_EUROPEAN</Tag>
 		<English>C.N. European</English>
 		<French>Cult. Orig. Européenne</French>
+		<German>
+			<Text>Urkultur Europa:Urkultur Europa:Urkultur Europa:Urkultur Europa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Европейская (РК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</Tag>
 		<English>C.N. Middle Eastern</English>
 		<French>Cult. Orig. du Moyen-Orient</French>
+		<German>
+			<Text>Urkultur Naher Osten:Urkultur Naher Osten:Urkultur Naher Osten:Urkultur Naher Osten</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Ближневосточная (РК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_NEANDERTHAL</Tag>
 		<English>C.N. Neanderthal</English>
 		<French>Cult. Orig. Néanderthal</French>
+		<German>
+			<Text>Urkultur Neandertal:Urkultur Neandertal:Urkultur Neandertal:Urkultur Neandertal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Неандертальская (РК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</Tag>
 		<English>C.N. North American</English>
 		<French>Cult. Orig. Nord-américaine</French>
+		<German>
+			<Text>Urkultur Nordamerika:Urkultur Nordamerika:Urkultur Nordamerika:Urkultur Nordamerika</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Североамериканская (РК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_OCEANIAN</Tag>
 		<English>C.N. Oceanian</English>
 		<French>Cult. Orig. Océanique</French>
+		<German>
+			<Text>Urkultur Ozeanien:Urkultur Ozeanien:Urkultur Ozeanien:Urkultur Ozeanien</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Океанийская (РК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Tag>
 		<English>At the very roughest of scales, human cultures can claim ancestry with one of several continental histories they associate more closely with than any other.</English>
+		<German>Die kulturellen Wurzeln einer Zivilisation liegen oft weit in der Vorgeschichte, aber sie prägen die einzelnen Individuen auch heute noch.</German>
+		<Russian>В самых грубых масштабах человеческие культуры могут претендовать на происхождение из одной из нескольких общеконтинентальных, с которыми они связаны более тесно, чем с любой другой.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_STRATEGY</Tag>
 		<English>C.N. = Culture Native[NEWLINE]Every civilization have one explicit native culture.</English>
 		<French>Cult. Orig. = Culture d'Origine[NEWLINE]Chaque civilisation a une culture native explicite.</French>
+		<German>Jede Zivilisation hat eine feste [COLOR_BUILDING_TEXT]Urkultur[COLOR_REVERT]. Diese Urkultur leitet sich bei C2C aus der Region ab, zu der die Zivilisation die meisten historischen Bezüge hat.</German>
+		<Russian>Родная культура = (РК)[NEWLINE] У каждой цивилизации есть своя изначальная родная культура.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</Tag>
 		<English>C.N. South American</English>
 		<French>Cult. Orig. Sud-américaine</French>
+		<German>
+			<Text>Urkultur Südamerika:Urkultur Südamerika:Urkultur Südamerika:Urkultur Südamerika</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Russian>Южноамериканская (РК)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ABBASID</Tag>
 		<English>Culture (Abbasid)</English>
 		<French>Culture (Abbaside)</French>
+		<Russian>Àááàñèäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ABBASID_PEDIA</Tag>
@@ -282,6 +468,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Aborygeńska)</Polish>
+		<Russian>Êóëüòóðà àáîðèãåíîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ABORIGINE_PEDIA</Tag>
@@ -291,6 +478,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ADENAN</Tag>
 		<English>Culture (Adenan)</English>
+		<Russian>Àäåíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ADENAN_PEDIA</Tag>
@@ -299,6 +487,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AFGHAN</Tag>
 		<English>Culture (Afghan)</English>
+		<Russian>Àôãàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AFGHAN_PEDIA</Tag>
@@ -318,6 +507,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Ainu)</Polish>
+		<Russian>Àéíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AINU_PEDIA</Tag>
@@ -343,6 +533,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Aka)</Polish>
+		<Russian>Àêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AKA_PEDIA</Tag>
@@ -355,6 +546,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AKKADIAN</Tag>
 		<English>Culture (Akkadian)</English>
 		<Polish>Kultura (Akkadyjska</Polish>
+		<Russian>Àêêàäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AKKADIAN_PEDIA</Tag>
@@ -364,6 +556,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AKSUMITE</Tag>
 		<English>Culture (Aksumite)</English>
+		<Russian>Àêñóìèòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AKSUMITE_PEDIA</Tag>
@@ -372,6 +565,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ALACALUFE</Tag>
 		<English>Culture (Alacalufe)</English>
+		<Russian>Àëàêàëóôñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ALACALUFE_PEDIA</Tag>
@@ -381,6 +575,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ALBANIAN</Tag>
 		<English>Culture (Albanian)</English>
 		<French>Culture (Albanaise)</French>
+		<Russian>Àëáàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ALBANIAN_PEDIA</Tag>
@@ -390,6 +585,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ALEMANNIC</Tag>
 		<English>Culture (Alemannic)</English>
 		<French>Culture (Allémanique)</French>
+		<Russian>Àëåìàííñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ALEMANNIC_PEDIA</Tag>
@@ -398,6 +594,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ALGERIAN</Tag>
 		<English>Culture (Algerian)</English>
+		<Russian>Àëæèðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ALGERIAN_PEDIA</Tag>
@@ -419,6 +616,7 @@
 		</Italian>
 		<Spanish>Culture (American)</Spanish>
 		<Polish>Kultura (Amerykańska)</Polish>
+		<Russian>Àìåðèêàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AMERICAN_PEDIA</Tag>
@@ -428,6 +626,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AMIS</Tag>
 		<English>Culture (Amis)</English>
+		<Russian>Êóëüòóðà àìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AMIS_PEDIA</Tag>
@@ -437,6 +636,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ANASAZI</Tag>
 		<English>Culture (Anasazi)</English>
 		<Polish>Kultura (Anasazi)</Polish>
+		<Russian>Êóëüòóðà àíàñàçè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ANASAZI_PEDIA</Tag>
@@ -447,6 +647,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ANDAMANESE</Tag>
 		<English>Culture (Andamanese)</English>
 		<French>Culture (Andamanaise)</French>
+		<Russian>Àíäàìàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ANDAMANESE_PEDIA</Tag>
@@ -456,6 +657,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ANGOLAN</Tag>
 		<English>Culture (Angolan)</English>
 		<French>Culture (Angolaise)</French>
+		<Russian>Àíãîëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ANGOLAN_PEDIA</Tag>
@@ -475,6 +677,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Apaczy)</Polish>
+		<Russian>Àïà÷ñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_APACHE_PEDIA</Tag>
@@ -495,6 +698,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Arabska)</Polish>
+		<Russian>Àðàáñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ARABIAN_PEDIA</Tag>
@@ -504,6 +708,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ARAGONESE</Tag>
 		<English>Culture (Aragonese)</English>
+		<Russian>Àðàãîíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ARAGONESE_PEDIA</Tag>
@@ -518,6 +723,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Arawak)</Polish>
+		<Russian>Àðàâàêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ARAWAK_PEDIA</Tag>
@@ -533,6 +739,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Kultura (Argentyńska)</Polish>
+		<Russian>Àðãåíòèíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ARGENTINIAN_PEDIA</Tag>
@@ -553,6 +760,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Armeńska)</Polish>
+		<Russian>Àðìÿíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ARMENIAN_PEDIA</Tag>
@@ -563,6 +771,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ARVERNIAN</Tag>
 		<English>Culture (Avernian)</English>
+		<Russian>Àâåðíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ARVERNIAN_PEDIA</Tag>
@@ -572,6 +781,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ASHANTI</Tag>
 		<English>Culture (Ashanti)</English>
 		<Polish>Kultura (Aszanti)</Polish>
+		<Russian>Êóëüòóðà àøàíòè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ASHANTI_PEDIA</Tag>
@@ -592,6 +802,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Asyryjska)</Polish>
+		<Russian>Àññèðèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ASSYRIAN_PEDIA</Tag>
@@ -603,6 +814,7 @@
 		<English>Culture (Athenian)</English>
 		<French>Culture (Athénienne)</French>
 		<Polish>Kultura (Ateńska)</Polish>
+		<Russian>Àôèíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ATHENIAN_PEDIA</Tag>
@@ -623,6 +835,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Australijska)</Polish>
+		<Russian>Àâñòðàëèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AUSTRALIAN_PEDIA</Tag>
@@ -644,6 +857,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Austriacka)</Polish>
+		<Russian>Àâñòðèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AUSTRIAN_PEDIA</Tag>
@@ -654,6 +868,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AVARIC</Tag>
 		<English>Culture (Avaric)</English>
+		<Russian>Àâàðèêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AVARIC_PEDIA</Tag>
@@ -663,6 +878,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AYMARA</Tag>
 		<English>Culture (Aymara)</English>
 		<Polish>Kultura (Aymara)</Polish>
+		<Russian>Êóëüòóðà àéìàðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AYMARA_PEDIA</Tag>
@@ -672,6 +888,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AZANDE</Tag>
 		<English>Culture (Azande)</English>
+		<Russian>Çàíäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AZANDE_PEDIA</Tag>
@@ -691,6 +908,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Aztecka)</Polish>
+		<Russian>Àöòåêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_AZTEC_PEDIA</Tag>
@@ -711,6 +929,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Babilońska)</Polish>
+		<Russian>Âàâèëîíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BABYLONIAN_PEDIA</Tag>
@@ -720,6 +939,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BACTRIC</Tag>
 		<English>Culture (Bactric)</English>
+		<Russian>Áàêòðèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BACTRIC_PEDIA</Tag>
@@ -728,6 +948,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BAHRAINI</Tag>
 		<English>Culture (Bahraini)</English>
+		<Russian>Áàõðåéíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BAHRAINI_PEDIA</Tag>
@@ -747,6 +968,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Bandańska)</Polish>
+		<Russian>Áàíäàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BANDANESE_PEDIA</Tag>
@@ -755,6 +977,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BANGLADESHI</Tag>
 		<English>Culture (Bangladeshi)</English>
+		<Russian>Áàíãëàäåøñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BANGLADESHI_PEDIA</Tag>
@@ -763,6 +986,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BASHKIR</Tag>
 		<English>Culture (Bashkir)</English>
+		<Russian>Áàøêèðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BASHKIR_PEDIA</Tag>
@@ -782,6 +1006,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Basków)</Polish>
+		<Russian>Áàñêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BASQUE_PEDIA</Tag>
@@ -791,6 +1016,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BATAVIAN</Tag>
 		<English>Culture (Batavian)</English>
+		<Russian>Áàòàâñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BATAVIAN_PEDIA</Tag>
@@ -799,6 +1025,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BATEK</Tag>
 		<English>Culture (Batek)</English>
+		<Russian>Áàòåêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BATEK_PEDIA</Tag>
@@ -808,6 +1035,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BAVARIAN</Tag>
 		<English>Culture (Bavarian)</English>
 		<French>Culture (Bavaroise)</French>
+		<Russian>Áàâàðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BAVARIAN_PEDIA</Tag>
@@ -817,6 +1045,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BEDOUIN</Tag>
 		<English>Culture (Bedouin)</English>
 		<French>Culture (Bedouine)</French>
+		<Russian>Áåäóèíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BEDOUIN_PEDIA</Tag>
@@ -832,6 +1061,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Belgijska)</Polish>
+		<Russian>Áåëüãèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BELGIAN_PEDIA</Tag>
@@ -842,6 +1072,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BELIZEAN</Tag>
 		<English>Culture (Belizean)</English>
+		<Russian>Áåëèçñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BELIZEAN_PEDIA</Tag>
@@ -861,6 +1092,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Bengalska)</Polish>
+		<Russian>Áåíãàëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BENGALI_PEDIA</Tag>
@@ -881,6 +1113,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Beninu)</Polish>
+		<Russian>Áåíèíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BENIN_PEDIA</Tag>
@@ -902,6 +1135,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Berberska)</Polish>
+		<Russian>Áåðáåðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BERBER_PEDIA</Tag>
@@ -914,6 +1148,7 @@
 		<English>Culture (Blackfoot)</English>
 		<French>Culture (Pieds-Noirs)</French>
 		<Polish>Kultura (Blackfoot)</Polish>
+		<Russian>Êóëüòóðà ÷åðíîíîãèõ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BLACKFOOT_PEDIA</Tag>
@@ -924,6 +1159,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BOLIVIAN</Tag>
 		<English>Culture (Bolivian)</English>
 		<French>Culture (Bolivienne)</French>
+		<Russian>Áîëèâèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BOLIVIAN_PEDIA</Tag>
@@ -943,6 +1179,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Brazylijska)</Polish>
+		<Russian>Áðàçèëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BRAZILIAN_PEDIA</Tag>
@@ -953,6 +1190,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BRETON</Tag>
 		<English>Culture (Breton)</English>
 		<French>Culture (Bretonne)</French>
+		<Russian>Áðåòîíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BRETON_PEDIA</Tag>
@@ -961,6 +1199,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BRITON</Tag>
 		<English>Culture (Briton)</English>
+		<Russian>Áðèòòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BRITON_PEDIA</Tag>
@@ -971,6 +1210,7 @@
 		<English>Culture (Bulgarian)</English>
 		<French>Culture (Bulgare)</French>
 		<Polish>Kultura (Bułgarska)</Polish>
+		<Russian>Áîëãàðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BULGARIAN_PEDIA</Tag>
@@ -980,6 +1220,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BURGUNDIAN</Tag>
 		<English>Culture (Burgundian)</English>
+		<Russian>Áóðãóíäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BURGUNDIAN_PEDIA</Tag>
@@ -999,6 +1240,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Birmańska)</Polish>
+		<Russian>Áèðìàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BURMESE_PEDIA</Tag>
@@ -1019,6 +1261,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Bizantyjska)</Polish>
+		<Russian>Âèçàíòèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_BYZANTINE_PEDIA</Tag>
@@ -1034,6 +1277,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Kultura (Kalifornijska)</Polish>
+		<Russian>Êàëèôîðíèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CALIFORNIAN_PEDIA</Tag>
@@ -1043,6 +1287,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CAMBEBA</Tag>
 		<English>Culture (Cambeba)</English>
+		<Russian>Êàìáåáñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CAMBEBA_PEDIA</Tag>
@@ -1062,6 +1307,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Kanadyjska)</Polish>
+		<Russian>Êàíàäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CANADIAN_PEDIA</Tag>
@@ -1072,6 +1318,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CANARI</Tag>
 		<English>Culture (Canari)</English>
 		<French>Culture (Canari)</French>
+		<Russian>Êóëüòóðà êàíàðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CANARI_PEDIA</Tag>
@@ -1092,6 +1339,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Kantońska)</Polish>
+		<Russian>Êàíòîíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CANTONESE_PEDIA</Tag>
@@ -1102,6 +1350,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CAPAYAN</Tag>
 		<English>Culture (Capayan)</English>
+		<Russian>Êàïàÿíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CAPAYAN_PEDIA</Tag>
@@ -1110,6 +1359,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CARAL_SUPE</Tag>
 		<English>Culture (Caral Supe)</English>
+		<Russian>Êóëüòóðà Êàðàëü-Ñóïå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CARAL_SUPE_PEDIA</Tag>
@@ -1129,6 +1379,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Karaibska)</Polish>
+		<Russian>Êàðèáñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CARIB_PEDIA</Tag>
@@ -1150,6 +1401,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Kartagińska0</Polish>
+		<Russian>Êàðôàãåíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CARTHAGINIAN_PEDIA</Tag>
@@ -1159,6 +1411,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CATALONIAN</Tag>
 		<English>Culture (Catalonian)</English>
+		<Russian>Êàòàëîíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CATALONIAN_PEDIA</Tag>
@@ -1167,6 +1420,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CELTIBERIAN</Tag>
 		<English>Culture (Celtiberian)</English>
+		<Russian>Êåëüòèáåðèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CELTIBERIAN_PEDIA</Tag>
@@ -1186,6 +1440,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Celtycka)</Polish>
+		<Russian>Êåëüòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CELTIC_PEDIA</Tag>
@@ -1202,6 +1457,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Cetacea Sapien)</Polish>
+		<Russian>Êóëüòóðà äåëüôèíîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN_PEDIA</Tag>
@@ -1223,6 +1479,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Cejlońska)</Polish>
+		<Russian>Öåéëîíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CEYLONESE_PEDIA</Tag>
@@ -1233,6 +1490,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHACHAPOYA</Tag>
 		<English>Culture (Chachapoya)</English>
+		<Russian>×à÷àïîéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHACHAPOYA_PEDIA</Tag>
@@ -1248,10 +1506,12 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Cham)</Polish>
+		<Russian>Òÿìñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHAMORRAN</Tag>
 		<English>Culture (Chamorran)</English>
+		<Russian>×àìîððñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHAMORRAN_PEDIA</Tag>
@@ -1264,6 +1524,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHAVIN</Tag>
 		<English>Culture (Chavin)</English>
+		<Russian>×àâèíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHAVIN_PEDIA</Tag>
@@ -1272,6 +1533,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHECHEN</Tag>
 		<English>Culture (Chechen)</English>
+		<Russian>×å÷åíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHECHEN_PEDIA</Tag>
@@ -1291,6 +1553,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Czirokeska)</Polish>
+		<Russian>×åðîêåçñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHEROKEE_PEDIA</Tag>
@@ -1310,6 +1573,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Czejenów)</Polish>
+		<Russian>Øàéåííñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHEYENNE_PEDIA</Tag>
@@ -1321,6 +1585,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHILEAN</Tag>
 		<English>Culture (Chilean)</English>
 		<French>Culture (Chilean)</French>
+		<Russian>×èëèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHILEAN_PEDIA</Tag>
@@ -1329,6 +1594,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHIMU</Tag>
 		<English>Culture (Chimú)</English>
+		<Russian>Êóëüòóðà ×èìó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHIMU_PEDIA</Tag>
@@ -1348,6 +1614,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Chińska)</Polish>
+		<Russian>Êèòàéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHINESE_PEDIA</Tag>
@@ -1358,6 +1625,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHIPPEWA</Tag>
 		<English>Culture (Chippewa)</English>
 		<Polish>Kultura (Chippewa)</Polish>
+		<Russian>Êóëüòóðà ÷èïïåóà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHIPPEWA_PEDIA</Tag>
@@ -1378,6 +1646,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Chola)</Polish>
+		<Russian>×îëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHOLA_PEDIA</Tag>
@@ -1398,6 +1667,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Chumash)</Polish>
+		<Russian>×óìàøñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CHUMASH_PEDIA</Tag>
@@ -1409,6 +1679,7 @@
 		<English>Culture (Colombian)</English>
 		<French>Culture (Colombienne)</French>
 		<Polish>Kultura (Kolumbijska)</Polish>
+		<Russian>Êîëóìáèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_COLOMBIAN_PEDIA</Tag>
@@ -1429,6 +1700,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Komańczy)</Polish>
+		<Russian>Êóëüòóðà êîìàí÷åé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_COMANCHE_PEDIA</Tag>
@@ -1446,6 +1718,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Konfederacka)</Polish>
+		<Russian>Êóëüòóðà êîíôåäåðàòîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CONFEDERATES_PEDIA</Tag>
@@ -1466,6 +1739,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Kri)</Polish>
+		<Russian>Êóëüòóðà êðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CREE_PEDIA</Tag>
@@ -1478,6 +1752,7 @@
 		<English>Culture (Croatian)</English>
 		<French>Culture (Croate)</French>
 		<Polish>Kultura (Chorwacka)</Polish>
+		<Russian>Õîðâàòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CROATIAN_PEDIA</Tag>
@@ -1498,6 +1773,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Kubańska)</Polish>
+		<Russian>Êóáèíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CUBAN_PEDIA</Tag>
@@ -1507,6 +1783,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CZECH</Tag>
 		<English>Culture (Czech)</English>
+		<Russian>×åøñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_CZECH_PEDIA</Tag>
@@ -1515,6 +1792,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_DACIAN</Tag>
 		<English>Culture (Dacian)</English>
+		<Russian>Äàêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_DACIAN_PEDIA</Tag>
@@ -1529,6 +1807,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Dahomej)</Polish>
+		<Russian>Äàãîìåéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_DAHOMEY_PEDIA</Tag>
@@ -1540,6 +1819,7 @@
 		<English>Culture (Danish)</English>
 		<French>Culture (Danoise)</French>
 		<Polish>Kultura (Duńska)</Polish>
+		<Russian>Äàòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_DANISH_PEDIA</Tag>
@@ -1549,6 +1829,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_DAYAK</Tag>
 		<English>Culture (Dayak)</English>
+		<Russian>Äàÿêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_DAYAK_PEDIA</Tag>
@@ -1563,6 +1844,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Dene)</Polish>
+		<Russian>Êóëüòóðà äåíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_DENE_PEDIA</Tag>
@@ -1573,6 +1855,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_DRAVIDIAN</Tag>
 		<English>Culture (Dravidian)</English>
+		<Russian>Äðàâèäèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_DRAVIDIAN_PEDIA</Tag>
@@ -1592,6 +1875,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Holenderska)</Polish>
+		<Russian>Ãîëëàíäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_DUTCH_PEDIA</Tag>
@@ -1603,6 +1887,7 @@
 		<English>Culture (Dzungar)</English>
 		<French>Culture (Dzoungar)</French>
 		<Polish>Kultura (Dżungarska)</Polish>
+		<Russian>Äæóíãàðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_DZUNGAR_PEDIA</Tag>
@@ -1612,6 +1897,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ECUADORIAN</Tag>
 		<English>Culture (Ecuadorian)</English>
+		<Russian>Ýêâàäîðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ECUADORIAN_PEDIA</Tag>
@@ -1631,6 +1917,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Egipska)</Polish>
+		<Russian>Åãèïåòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_EGYPTIAN_PEDIA</Tag>
@@ -1651,6 +1938,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Angielska)</Polish>
+		<Russian>Àíãëèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ENGLISH_PEDIA</Tag>
@@ -1662,6 +1950,7 @@
 		<English>Culture (Epirus)</English>
 		<French>Culture (Epirus)</French>
 		<Polish>Kultura (Epiru)</Polish>
+		<Russian>Ýïèðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_EPIRUS_PEDIA</Tag>
@@ -1671,6 +1960,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ESTONIAN</Tag>
 		<English>Culture (Estonian)</English>
+		<Russian>Ýñòîíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ESTONIAN_PEDIA</Tag>
@@ -1690,6 +1980,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Etiopska)</Polish>
+		<Russian>Ýôèîïñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ETHIOPIAN_PEDIA</Tag>
@@ -1699,6 +1990,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ETRUSCAN</Tag>
 		<English>Culture (Etruscan)</English>
+		<Russian>Ýòðóññêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ETRUSCAN_PEDIA</Tag>
@@ -1707,6 +1999,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_FATIMID</Tag>
 		<English>Culture (Fatimid)</English>
+		<Russian>Ôàòèìèäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_FATIMID_PEDIA</Tag>
@@ -1717,6 +2010,7 @@
 		<English>Culture (Fijian)</English>
 		<French>Culture (Fidjienne)</French>
 		<Polish>Kultura (Fidżi)</Polish>
+		<Russian>Êóëüòóðà ôèäæè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_FIJIAN_PEDIA</Tag>
@@ -1727,6 +2021,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_FILIPINO</Tag>
 		<English>Culture (Filipino)</English>
 		<French>Culture (Filipino)</French>
+		<Russian>Ôèëèïïèíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_FILIPINO_PEDIA</Tag>
@@ -1737,6 +2032,7 @@
 		<English>Culture (Finnish)</English>
 		<French>Culture (Finnoise)</French>
 		<Polish>Kultura (Fińska)</Polish>
+		<Russian>Ôèíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_FINNISH_PEDIA</Tag>
@@ -1746,6 +2042,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_FLEMISH</Tag>
 		<English>Culture (Flemish)</English>
+		<Russian>Ôëàìàíäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_FLEMISH_PEDIA</Tag>
@@ -1765,6 +2062,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Frankijska)</Polish>
+		<Russian>Ôðàíêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_FRANKS_PEDIA</Tag>
@@ -1785,6 +2083,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Francuska)</Polish>
+		<Russian>Ôðàíöóçñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_FRENCH_PEDIA</Tag>
@@ -1794,6 +2093,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_FUEGIAN</Tag>
 		<English>Culture (Fuegian)</English>
+		<Russian>Ôóýãèíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_FUEGIAN_PEDIA</Tag>
@@ -1813,6 +2113,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Fulani)</Polish>
+		<Russian>Ôóëàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_FULANI_PEDIA</Tag>
@@ -1822,6 +2123,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_FURAWI</Tag>
 		<English>Culture (Furawi)</English>
+		<Russian>Ôîðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_FURAWI_PEDIA</Tag>
@@ -1830,6 +2132,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GALATIAN</Tag>
 		<English>Culture (Galatian)</English>
+		<Russian>Ãàëàòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GALATIAN_PEDIA</Tag>
@@ -1838,6 +2141,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GAUCHO</Tag>
 		<English>Culture (Gaucho)</English>
+		<Russian>Ãàó÷ñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GAUCHO_PEDIA</Tag>
@@ -1846,6 +2150,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GEORGIAN</Tag>
 		<English>Culture (Georgian)</English>
+		<Russian>Ãðóçèíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GEORGIAN_PEDIA</Tag>
@@ -1865,6 +2170,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Niemiecka)</Polish>
+		<Russian>Íåìåöêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GERMAN_PEDIA</Tag>
@@ -1876,6 +2182,7 @@
 		<English>Culture (Ghana)</English>
 		<French>Culture (Ghanéenne)</French>
 		<Polish>Kultura (Ghana)</Polish>
+		<Russian>Ãàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GHANA_PEDIA</Tag>
@@ -1885,6 +2192,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GHURID</Tag>
 		<English>Culture (Ghurid)</English>
+		<Russian>Ãóðèäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GHURID_PEDIA</Tag>
@@ -1893,6 +2201,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GOKTURK</Tag>
 		<English>Culture (Gokturk)</English>
+		<Russian>Òþðêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GOKTURK_PEDIA</Tag>
@@ -1912,6 +2221,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Gocka)</Polish>
+		<Russian>Ãîòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GOTH_PEDIA</Tag>
@@ -1933,6 +2243,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Grecka)</Polish>
+		<Russian>Ãðå÷åñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GREEK_PEDIA</Tag>
@@ -1942,6 +2253,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GUANCHES</Tag>
 		<English>Culture (Guanches)</English>
+		<Russian>Ãóàí÷ñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GUANCHES_PEDIA</Tag>
@@ -1950,6 +2262,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GUARANI</Tag>
 		<English>Culture (Guarani)</English>
+		<Russian>Ãóàðàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GUARANI_PEDIA</Tag>
@@ -1958,6 +2271,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GUATEMALAN</Tag>
 		<English>Culture (Guatemalan)</English>
+		<Russian>Ãâàòåìàëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GUATEMALAN_PEDIA</Tag>
@@ -1966,6 +2280,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GUYANESE</Tag>
 		<English>Culture (Guyanese)</English>
+		<Russian>Ãàéàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_GUYANESE_PEDIA</Tag>
@@ -1980,6 +2295,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Haida)</Polish>
+		<Russian>Õàéäàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HAIDA_PEDIA</Tag>
@@ -1992,6 +2308,7 @@
 		<French>Culture (Haitienne)</French>
 		<Italian>Cultura (Haitiana)</Italian>
 		<Polish>Kultura (Haitańska)</Polish>
+		<Russian>Ãàèòÿíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HAITIAN_PEDIA</Tag>
@@ -2012,6 +2329,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Hausa)</Polish>
+		<Russian>Õàóññêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HAUSA_PEDIA</Tag>
@@ -2027,6 +2345,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Kultura (Hawajska)</Polish>
+		<Russian>Ãàâàéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HAWAIIAN_PEDIA</Tag>
@@ -2036,6 +2355,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HELVETIAN</Tag>
 		<English>Culture (Helvetian)</English>
+		<Russian>Ãåëüâåòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HELVETIAN_PEDIA</Tag>
@@ -2049,6 +2369,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
+		<Russian>Êóëüòóðà Õýìóäó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HEMUDU_PEDIA</Tag>
@@ -2069,6 +2390,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Herero)</Polish>
+		<Russian>Ãåðåðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HERERO_PEDIA</Tag>
@@ -2078,6 +2400,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HIMYARITE</Tag>
 		<English>Culture (Himyarite)</English>
+		<Russian>Õèìüÿðèòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HIMYARITE_PEDIA</Tag>
@@ -2097,6 +2420,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Hetycka)</Polish>
+		<Russian>Õåòòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HITTITE_PEDIA</Tag>
@@ -2119,6 +2443,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Św. Cesarsta Rzymskiego)</Polish>
+		<Russian>Ñâÿùåííàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HOLY_ROMAN_PEDIA</Tag>
@@ -2128,6 +2453,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HONGKONGER</Tag>
 		<English>Culture (Hongkonger)</English>
+		<Russian>Ãîíêîíãñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HONGKONGER_PEDIA</Tag>
@@ -2136,6 +2462,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HOPEWELL</Tag>
 		<English>Culture (Hopewell)</English>
+		<Russian>Õîóïâåëëñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HOPEWELL_PEDIA</Tag>
@@ -2155,6 +2482,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Hopi)</Polish>
+		<Russian>Õîïñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HOPI_PEDIA</Tag>
@@ -2165,6 +2493,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HUASTEC</Tag>
 		<English>Culture (Huastec)</English>
 		<Polish>Kultura (Huasteków)</Polish>
+		<Russian>Óàñòåêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HUASTEC_PEDIA</Tag>
@@ -2185,6 +2514,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Hunów)</Polish>
+		<Russian>Ãóííñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HUNGARIAN</Tag>
@@ -2200,6 +2530,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Węgierska)</Polish>
+		<Russian>Âåíãåðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HUNGARIAN_PEDIA</Tag>
@@ -2227,6 +2558,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Huronów)</Polish>
+		<Russian>Ãóðîíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HURON_PEDIA</Tag>
@@ -2237,6 +2569,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HURRIANS</Tag>
 		<English>Culture (Hurrians)</English>
+		<Russian>Õóððèòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HURRIANS_PEDIA</Tag>
@@ -2245,6 +2578,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HYKSOSI</Tag>
 		<English>Culture (Hyksosi)</English>
+		<Russian>Ãèêñîññêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_HYKSOSI_PEDIA</Tag>
@@ -2255,6 +2589,7 @@
 		<English>Culture (Icelandic)</English>
 		<French>Culture (Icelandaise)</French>
 		<Polish>Kultura (Islandzka)</Polish>
+		<Russian>Èñëàíäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ICELANDIC_PEDIA</Tag>
@@ -2264,6 +2599,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ILLYRIAN</Tag>
 		<English>Culture (Illyrian)</English>
+		<Russian>Èëëèðèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ILLYRIAN_PEDIA</Tag>
@@ -2272,6 +2608,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ILOCANO</Tag>
 		<English>Culture (Ilocano)</English>
+		<Russian>Èëîêàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ILOCANO_PEDIA</Tag>
@@ -2291,6 +2628,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Inkaska)</Polish>
+		<Russian>Èíêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_INCAN_PEDIA</Tag>
@@ -2312,6 +2650,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Indyjska)</Polish>
+		<Russian>Èíäèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_INDIAN_PEDIA</Tag>
@@ -2333,6 +2672,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Indonezyjska)</Polish>
+		<Russian>Èíäîíåçèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_INDONESIAN_PEDIA</Tag>
@@ -2343,6 +2683,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_INDUS</Tag>
 		<English>Culture (Indus)</English>
 		<French>Culture (Indus)</French>
+		<Russian>Èíäóññêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_INDUS_PEDIA</Tag>
@@ -2362,6 +2703,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Inuitów)</Polish>
+		<Russian>Èíóèòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_INUIT_PEDIA</Tag>
@@ -2372,6 +2714,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_IRANIAN</Tag>
 		<English>Culture (Iranian)</English>
+		<Russian>Èðàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_IRANIAN_PEDIA</Tag>
@@ -2380,6 +2723,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_IRAQI</Tag>
 		<English>Culture (Iraqi)</English>
+		<Russian>Èðàêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_IRAQI_PEDIA</Tag>
@@ -2395,6 +2739,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Irlandzka)</Polish>
+		<Russian>Èðëàíäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_IRISH_PEDIA</Tag>
@@ -2416,6 +2761,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Irokezów)</Polish>
+		<Russian>Èðîêåçñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_IROQUOIS_PEDIA</Tag>
@@ -2436,6 +2782,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Żydowska)</Polish>
+		<Russian>Èçðàèëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ISRAELI_PEDIA</Tag>
@@ -2456,6 +2803,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Włoska)</Polish>
+		<Russian>Èòàëüÿíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ITALIAN_PEDIA</Tag>
@@ -2467,6 +2815,7 @@
 		<English>Culture (Jamaican)</English>
 		<French>Culture (Jamaicaine)</French>
 		<Polish>Kultura (Jamajska)</Polish>
+		<Russian>ßìàéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_JAMAICAN_PEDIA</Tag>
@@ -2487,6 +2836,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Japońska)</Polish>
+		<Russian>ßïîíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_JAPANESE_PEDIA</Tag>
@@ -2496,6 +2846,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_JAVANESE</Tag>
 		<English>Culture (Javanese)</English>
+		<Russian>ßâàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_JAVANESE_PEDIA</Tag>
@@ -2515,6 +2866,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Jivaro)</Polish>
+		<Russian>Äæèâàðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_JIVARO_PEDIA</Tag>
@@ -2531,6 +2883,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Jomon)</Polish>
+		<Russian>Äçåìîíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_JOMON_PEDIA</Tag>
@@ -2542,6 +2895,7 @@
 		<English>Culture (Jordanian)</English>
 		<French>Culture (Jordanienne)</French>
 		<Polish>Kultura (Jordańska)</Polish>
+		<Russian>Èîðäàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_JORDANIAN_PEDIA</Tag>
@@ -2557,6 +2911,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Joseon)</Polish>
+		<Russian>×îñîíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_JOSEON_PEDIA</Tag>
@@ -2566,6 +2921,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_JUTE</Tag>
 		<English>Culture (Jute)</English>
+		<Russian>Þòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_JUTE_PEDIA</Tag>
@@ -2585,6 +2941,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Kanem-Bornu)</Polish>
+		<Russian>Êàíåìñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KANEM_BORNU_PEDIA</Tag>
@@ -2594,6 +2951,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KENYAN</Tag>
 		<English>Culture (Kenyan)</English>
+		<Russian>Êåíèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KENYAN_PEDIA</Tag>
@@ -2603,6 +2961,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KHAZAKH</Tag>
 		<English>Culture (Kazakh)</English>
 		<French>Culture (Kazakh)</French>
+		<Russian>Êàçàõñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KHAZAKH_PEDIA</Tag>
@@ -2611,6 +2970,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KHAZAR</Tag>
 		<English>Culture (Khazar)</English>
+		<Russian>Õàçàðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KHAZAR_PEDIA</Tag>
@@ -2619,6 +2979,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KHITAN</Tag>
 		<English>Culture (Khitan)</English>
+		<Russian>Êèäàíüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KHITAN_PEDIA</Tag>
@@ -2638,6 +2999,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Khmerska)</Polish>
+		<Russian>Êõìåðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KHMER_PEDIA</Tag>
@@ -2648,6 +3010,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KHWARAZMIAN</Tag>
 		<English>Culture (Khwarazmian)</English>
+		<Russian>Õîðåçìèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KHWARAZMIAN_PEDIA</Tag>
@@ -2656,6 +3019,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KILLKE</Tag>
 		<English>Culture (Killke)</English>
+		<Russian>Êóëüòóðà Êèëüêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KILLKE_PEDIA</Tag>
@@ -2664,6 +3028,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KIPCHAK</Tag>
 		<English>Culture (Kipchak)</English>
+		<Russian>Êûï÷àêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KIPCHAK_PEDIA</Tag>
@@ -2672,6 +3037,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KITARAN</Tag>
 		<English>Culture (Kitaran)</English>
+		<Russian>Êèòàðàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KITARAN_PEDIA</Tag>
@@ -2691,6 +3057,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Klamatów)</Polish>
+		<Russian>Êëàìàòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KLAMATH_PEDIA</Tag>
@@ -2701,6 +3068,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KOGI</Tag>
 		<English>Culture (Kogi)</English>
+		<Russian>Êóëüòóðà êîãè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KOGI_PEDIA</Tag>
@@ -2720,6 +3088,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Kongijska)</Polish>
+		<Russian>Êîíãîëåçñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KONGOLESE_PEDIA</Tag>
@@ -2730,6 +3099,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KONJO</Tag>
 		<English>Culture (Konjo)</English>
 		<Polish>Kultura (Konjo)</Polish>
+		<Russian>Êóëüòóðà êîíäæî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KONJO_PEDIA</Tag>
@@ -2749,6 +3119,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Koreańska)</Polish>
+		<Russian>Êîðåéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KOREAN_PEDIA</Tag>
@@ -2759,6 +3130,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KURDISH</Tag>
 		<English>Culture (Kurdish)</English>
+		<Russian>Êóðäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KURDISH_PEDIA</Tag>
@@ -2767,6 +3139,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KUSHAN</Tag>
 		<English>Culture (Kushan)</English>
+		<Russian>Êóøàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KUSHAN_PEDIA</Tag>
@@ -2775,6 +3148,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KUSHITE</Tag>
 		<English>Culture (Kushite)</English>
+		<Russian>Êóøèòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KUSHITE_PEDIA</Tag>
@@ -2783,6 +3157,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KUWAITI</Tag>
 		<English>Culture (Kuwaiti)</English>
+		<Russian>Êóâåéòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_KUWAITI_PEDIA</Tag>
@@ -2791,6 +3166,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LATVIAN</Tag>
 		<English>Culture (Latvian)</English>
+		<Russian>Ëàòûøñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LATVIAN_PEDIA</Tag>
@@ -2799,6 +3175,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LA_PLATAN</Tag>
 		<English>Culture (La Platan)</English>
+		<Russian>Êóëüòóðà Ëà-Ïëàòà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LA_PLATAN_PEDIA</Tag>
@@ -2807,6 +3184,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LEBANESE</Tag>
 		<English>Culture (Lebanese)</English>
+		<Russian>Ëèâàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LEBANESE_PEDIA</Tag>
@@ -2816,6 +3194,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LIANGZHU</Tag>
 		<English>Culture (Liangzhu)</English>
 		<Polish>Kultura (Liangzhu)</Polish>
+		<Russian>Êóëüòóðà ëÿí÷æó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LIANGZHU_PEDIA</Tag>
@@ -2825,6 +3204,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LIBYAN</Tag>
 		<English>Culture (Libyan)</English>
+		<Russian>Ëèâèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LIBYAN_PEDIA</Tag>
@@ -2833,6 +3213,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LITHUANIAN</Tag>
 		<English>Culture (Lithuanian)</English>
+		<Russian>Ëèòîâñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LITHUANIAN_PEDIA</Tag>
@@ -2841,6 +3222,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LONGOBARDIAN</Tag>
 		<English>Culture (Longobardian)</English>
+		<Russian>Ëàíãîáàðäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LONGOBARDIAN_PEDIA</Tag>
@@ -2860,6 +3242,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Luba)</Polish>
+		<Russian>Ëóáñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LUBA_PEDIA</Tag>
@@ -2869,6 +3252,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LULE</Tag>
 		<English>Culture (Lule)</English>
+		<Russian>Êóëüòóðà ëóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LULE_PEDIA</Tag>
@@ -2877,6 +3261,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LUNDA</Tag>
 		<English>Culture (Lunda)</English>
+		<Russian>Ëóíäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LUNDA_PEDIA</Tag>
@@ -2885,6 +3270,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LUSITANIAN</Tag>
 		<English>Culture (Lusitanian)</English>
+		<Russian>Ëóçèòàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LUSITANIAN_PEDIA</Tag>
@@ -2895,6 +3281,7 @@
 		<English>Culture (Lydian)</English>
 		<French>Culture (Lydienne)</French>
 		<Polish>Kultura (Lidijska)</Polish>
+		<Russian>Ëèäèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_LYDIAN_PEDIA</Tag>
@@ -2906,6 +3293,7 @@
 		<English>Culture (Macedonian)</English>
 		<French>Culture (Macédonienne)</French>
 		<Polish>Kultura (Macedońska)</Polish>
+		<Russian>Ìàêåäîíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MACEDONIAN_PEDIA</Tag>
@@ -2915,6 +3303,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MALAGASY</Tag>
 		<English>Culture (Malagasy)</English>
+		<Russian>Ìàëàãàñèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MALAGASY_PEDIA</Tag>
@@ -2925,6 +3314,7 @@
 		<English>Culture (Malaysian)</English>
 		<French>Culture (Malaisienne)</French>
 		<Polish>Kultura (Malajska)</Polish>
+		<Russian>Ìàëàçèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MALAYSIAN_PEDIA</Tag>
@@ -2945,6 +3335,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Mali)</Polish>
+		<Russian>Ìàëèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MALINESE_PEDIA</Tag>
@@ -2954,6 +3345,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MAMELUK</Tag>
 		<English>Culture (Mameluk)</English>
+		<Russian>Ìàìåëþêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MAMELUK_PEDIA</Tag>
@@ -2973,6 +3365,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Mandżurska)</Polish>
+		<Russian>Ìàíü÷æóðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MANCHURIAN_PEDIA</Tag>
@@ -2984,6 +3377,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MANDAN</Tag>
 		<English>Culture (Mandan)</English>
 		<Polish>Kultura (Mandańska)</Polish>
+		<Russian>Ìàíäàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MANDAN_PEDIA</Tag>
@@ -2993,6 +3387,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MANI</Tag>
 		<English>Culture (Mani)</English>
+		<Russian>Êóëüòóðà ìàíè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MANI_PEDIA</Tag>
@@ -3012,6 +3407,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Maoryska)</Polish>
+		<Russian>Ìàîðèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MAORI_PEDIA</Tag>
@@ -3032,6 +3428,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Mapuche)</Polish>
+		<Russian>Àðàóêàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MAPUCHE_PEDIA</Tag>
@@ -3041,6 +3438,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MARIC</Tag>
 		<English>Culture (Maric)</English>
+		<Russian>Ìàðàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MARIC_PEDIA</Tag>
@@ -3060,6 +3458,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Masajska)</Polish>
+		<Russian>Ìàñàéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MASAI_PEDIA</Tag>
@@ -3072,6 +3471,7 @@
 		<English>Culture (Massagetae)</English>
 		<French>Culture (Massagètes)</French>
 		<Polish>Kultura (Massagecka)</Polish>
+		<Russian>Ìàññàãåòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MASSAGETAE_PEDIA</Tag>
@@ -3092,6 +3492,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Majów)</Polish>
+		<Russian>Êóëüòóðà ìàéÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MAYAN_PEDIA</Tag>
@@ -3102,6 +3503,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MEDIAN</Tag>
 		<English>Culture (Median)</English>
+		<Russian>Ìèäèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MEDIAN_PEDIA</Tag>
@@ -3110,6 +3512,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MELANESIAN</Tag>
 		<English>Culture (Melanesian)</English>
+		<Russian>Ìåëàíåçèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MELANESIAN_PEDIA</Tag>
@@ -3129,6 +3532,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Merina)</Polish>
+		<Russian>Ìåðèíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MERINA_PEDIA</Tag>
@@ -3149,6 +3553,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Meksykańska)</Polish>
+		<Russian>Ìåêñèêàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MEXICAN_PEDIA</Tag>
@@ -3158,6 +3563,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MICRONESIAN</Tag>
 		<English>Culture (Micronesian)</English>
+		<Russian>Ìèêðîíåçèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MICRONESIAN_PEDIA</Tag>
@@ -3166,6 +3572,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MING</Tag>
 		<English>Culture (Ming)</English>
+		<Russian>Êóëüòóðà Ìèí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MING_PEDIA</Tag>
@@ -3185,6 +3592,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Minojska)</Polish>
+		<Russian>Ìèíîéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MINOAN_PEDIA</Tag>
@@ -3195,6 +3603,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MISSISSIPPIAN</Tag>
 		<English>Culture (Mississippian)</English>
+		<Russian>Ìèññèñèïïñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MISSISSIPPIAN_PEDIA</Tag>
@@ -3203,6 +3612,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MITTANNI</Tag>
 		<English>Culture (Mittanni)</English>
+		<Russian>Ìèòàííèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MITTANNI_PEDIA</Tag>
@@ -3212,6 +3622,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MIXTEC</Tag>
 		<English>Culture (Mixtec)</English>
 		<Polish>Kultura (Misteków)</Polish>
+		<Russian>Ìèêñòåêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MIXTEC_PEDIA</Tag>
@@ -3227,6 +3638,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Moche)</Polish>
+		<Russian>Ìî÷èêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MOCHE_PEDIA</Tag>
@@ -3236,6 +3648,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MOCOVI</Tag>
 		<English>Culture (Mocovi)</English>
+		<Russian>Êóëüòóðà ìîêîâè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MOCOVI_PEDIA</Tag>
@@ -3244,6 +3657,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MOHAWK</Tag>
 		<English>Culture (Mohawk)</English>
+		<Russian>Ìîõîêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MOHAWK_PEDIA</Tag>
@@ -3252,6 +3666,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MOLLO</Tag>
 		<English>Culture (Mollo)</English>
+		<Russian>Êóëüòóðà Ìîëüî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MOLLO_PEDIA</Tag>
@@ -3271,6 +3686,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Mongolska)</Polish>
+		<Russian>Ìîíãîëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MONGOLIAN_PEDIA</Tag>
@@ -3291,6 +3707,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Marokańska)</Polish>
+		<Russian>Ìàðîêêàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MOROCCAN_PEDIA</Tag>
@@ -3312,6 +3729,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Mogolska)</Polish>
+		<Russian>Ìîãîëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MUGHAL_PEDIA</Tag>
@@ -3321,6 +3739,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MUISCA</Tag>
 		<English>Culture (Muisca)</English>
+		<Russian>Êóëüòóðà ÷èá÷à</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MUISCA_PEDIA</Tag>
@@ -3340,6 +3759,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Mutapa)</Polish>
+		<Russian>Ìîíîìîòàï. êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_MUTAPA_PEDIA</Tag>
@@ -3349,6 +3769,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NABATEANS</Tag>
 		<English>Culture (Nabateans)</English>
+		<Russian>Íàáàòåéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NABATEANS_PEDIA</Tag>
@@ -3357,6 +3778,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NAHUA</Tag>
 		<English>Culture (Nahua)</English>
+		<Russian>Íàóàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NAHUA_PEDIA</Tag>
@@ -3366,6 +3788,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NAMA</Tag>
 		<English>Culture (Nama)</English>
 		<Polish>Kultura (Nama)</Polish>
+		<Russian>Íàìñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NAMA_PEDIA</Tag>
@@ -3386,6 +3809,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Nawaho)</Polish>
+		<Russian>Íàâàõñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NAVAJO_PEDIA</Tag>
@@ -3402,6 +3826,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Nazca)</Polish>
+		<Russian>Êóëüòóðà íàñêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NAZCA_PEDIA</Tag>
@@ -3417,7 +3842,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Kultur Neanderthal:Kultur Neanderthal:Kultur Neanderthal:Kultur Neanderthal</Text>
+			<Text>Kultur Neandertal:Kultur Neandertal:Kultur Neandertal:Kultur Neandertal</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
@@ -3427,10 +3852,12 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Neandertalska)</Polish>
+		<Russian>Íåàíäåðò. êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_PEDIA</Tag>
 		<English>Genetic evidence suggests interbreeding took place with Homo sapiens (anatomically modern humans) between roughly 80,000 and 50,000 years ago in the Middle East, resulting in 1% - 4% of the genome of people from Eurasia having been contributed by Neanderthals.</English>
+		<German>Der [COLOR_HIGHLIGHT_TEXT]Neandertaler[COLOR_REVERT] (Homo neanderthalensis, alte Schreibweise: Neanderthaler) ist ein ausgestorbener Verwandter des Homo sapiens, des anatomisch modernen Menschen. Er entwickelte sich parallel zu diesem in Europa und dehnte sein Siedlungsgebiet während der letzten Eiszeit bis nach West- und Zentralasien aus. Beide Gattungen stammen von einen gemeinsamen afrikanischen Vorfahren ab. Die Bezeichnung Neandertaler leitet sich vom ersten Fundort eines Skelettes dieser Menschengattung, dem Neandertal im heutigen Bundesland Nordrhein-Westfalen, ab.[NEWLINE]Das herausstechendste Unterscheidungsmerkmal ist die Schädelform. Der Kopf des Neandertalers ist langgestreckt und ragt weit nach hinten. Die breiteste Stelle befindet sich tiefer als beim Homo sapiens und durch die niedrige, fliehende Stirn wirkt er auch deutlich flacher. Der Schädel hat einen markanten Vorsprung am Hinterkopf und zwei stark hervortretende Überaugenwülste. Außerdem verfügt der Neandertaler über eine größere und breitere Nasenöffnung. Seine Ober- und Unterkieferknochen sind höher und länger. Die Schneidezähne sind größer, die Backenzähne schmaler. Aufgrund dieser Unterschiede ragt die untere Gesichtshälfte deutlich hervor, aber trotzdem verfügten Neandertaler nicht über unser deutlich vorspringendes Kinn. Neandertaler waren insgesamt etwas kleiner als die damaligen Homo sapiens und etwa so schwer wie heutige Europäer. Aufgrund anatomischer Besonderheiten wie einer größeren Brusthöhle und einem kleineren Zwischenraum zwischen Brustkorb und Hüfte war der Rumpf deutlich kompakter und stämmiger. Sie verfügten über eine ungewöhnlich starke Brust- und Rückenmuskulatur und starke Arme, während die Beine kürzer als die des Homo sapiens waren.[NEWLINE]Neandertaler besaßen alle notwendigen Voraussetzungen zur Entwicklung einer Sprache. Durch vielfältige Funde ist außerdem belegt, dass sie das Feuer beherrschten und in ihren Lagern entfachen konnten. Sie verfügten über ausgezeichnete Jagdfertigkeiten, nahmen aber auch pflanzliche Nahrung zu sich, die teilweise bereits durch Kochen verdaulicher gemacht wurde. Außerdem standen Schnecken, Muscheln und Meerestiere auf dem Speiseplan. Die Unterkünfte der Neandertaler waren regional unterschiedlich, je nach Klima hielten sich manche Gruppen vorzugsweise in Höhlen und Grotten oder unter Felsüberhängen (Abris) auf. Andere bauten sich einfache Behausungen aus Fellen, Strauchwerk und Ästen, aber auch Mammutknochen und Stoßzähne wurden verwendet. Die Lagerstätten wurden nicht nur anhand von vorkommender Nahrung gewählt, sondern häufig auch in direkter Nähe von Rohstoffvorkommen besonders für die Herstellung von Steinwerkzeugen angelegt. Neandertaler verwendeten Steinmesser zum Schneiden und Schaben, außerdem nutzten sie bearbeitete hölzerne Spieße als Jagdwaffen. Dabei wurde Birkenpech verwendet, um steinerne Blattspitzen in hölzerne Waffen einzukleben. Anhand von Funden wurde belegt, dass die Neandertaler bereits über Glättwerkzeuge aus Knochen zur Bearbeitung von Leder verfügten. Sie fertigten als vermutlich erste Menschenart auch Kleidung selbst an. Neandertaler trugen bereits Körperschmuck u.a. aus natürlichen Pigmenten, Muschelschalen und Tierklauen. Von ihnen stammen auch die ältesten Höhlenmalereien in Europa. Sie bestatten ihre Toten und ließen Grabbeigaben zurück, was auf eine Art von frühem Totenkult schließen lässt.[NEWLINE]Die Gründe für das Aussterben der Neandertaler sind auch heute noch unbekannt. Anhand von DNA-Untersuchungen ihres Erbguts haben sich Hinweise auf Kreuzungen mit Homo sapiens ergeben. Es wurden keine Anzeichen für Kriege gefunden und heute gilt als sicher, dass Neandertaler und Homo sapiens wohl an die 5000 Jahre lang gemeinsam in Europa lebten. Die wahrscheinlichste Ursache ist die zunehmende Übervölkerung der Siedlungsgebiete durch den Homo sapiens, der sich schneller und öfter fortpflanzen konnte. Er wurde früher geschlechtsreif und hatte allgemein mehr Nachkommen. Dazu konnte er besser in dicht besiedelten Gebieten überleben als der Neandertaler.</German>
 		<Polish>Człowiek neandertalski, neandertalczyk - wymarły przedstawiciel rodzaju Homo (człowiek), znany z plejstocenu (ok. 400 000 do ok. 24 500 lat temu), w zależności od autorów klasyfikowany jako podgatunekczłowieka rozumnego - Homo sapiens neanderthalensis - lub odrębny od niego gatunek - Homo neanderthalensis.</Polish>
 	</TEXT>
 	<TEXT>
@@ -3447,6 +3874,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Nepalska)</Polish>
+		<Russian>Íåïàëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NEPALESE_PEDIA</Tag>
@@ -3463,6 +3891,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Nowozelandzka)</Polish>
+		<Russian>Íîâîçåëàíäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NEW_ZEALANDER_PEDIA</Tag>
@@ -3472,6 +3901,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NIGERIAN</Tag>
 		<English>Culture (Nigerian)</English>
+		<Russian>Íèãåðèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NIGERIAN_PEDIA</Tag>
@@ -3481,6 +3911,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NOK</Tag>
 		<English>Culture (Nok)</English>
 		<Polish>Kultura (Nok)</Polish>
+		<Russian>Íîêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NOK_PEDIA</Tag>
@@ -3490,6 +3921,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NOONGAR</Tag>
 		<English>Culture (Noongar)</English>
+		<Russian>Íóíãàðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NOONGAR_PEDIA</Tag>
@@ -3509,6 +3941,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Nootka)</Polish>
+		<Russian>Íóòêàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NOOTKA_PEDIA</Tag>
@@ -3519,6 +3952,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NORMAN</Tag>
 		<English>Culture (Norman)</English>
+		<Russian>Íîðìàííñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NORMAN_PEDIA</Tag>
@@ -3529,6 +3963,7 @@
 		<English>Culture (Norwegian)</English>
 		<French>Culture (Norvégienne)</French>
 		<Polish>Kultura (Norweska)</Polish>
+		<Russian>Íîðâåæñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NORWEGIAN_PEDIA</Tag>
@@ -3549,6 +3984,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Nubijska)</Polish>
+		<Russian>Íóáèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NUBIAN_PEDIA</Tag>
@@ -3559,6 +3995,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NUMIDIAN</Tag>
 		<English>Culture (Numidian)</English>
+		<Russian>Íóìèäèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NUMIDIAN_PEDIA</Tag>
@@ -3567,6 +4004,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ODAWA</Tag>
 		<English>Culture (Odawa)</English>
+		<Russian>Êóëüòóðà îäàâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ODAWA_PEDIA</Tag>
@@ -3586,6 +4024,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Olmecka)</Polish>
+		<Russian>Îëüìåêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_OLMEC_PEDIA</Tag>
@@ -3595,6 +4034,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_OMANI</Tag>
 		<English>Culture (Omani)</English>
+		<Russian>Îìàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_OMANI_PEDIA</Tag>
@@ -3603,6 +4043,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_OPHIR</Tag>
 		<English>Culture (Ophir)</English>
+		<Russian>Îôèðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_OPHIR_PEDIA</Tag>
@@ -3611,6 +4052,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ORANG_ASLI</Tag>
 		<English>Culture (Orang Asli)</English>
+		<Russian>Êóëüòóðà Îðàíã-Àñëè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ORANG_ASLI_PEDIA</Tag>
@@ -3630,6 +4072,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Turecka)</Polish>
+		<Russian>Îñìàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_OTTOMAN_PEDIA</Tag>
@@ -3640,6 +4083,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PAIUTE</Tag>
 		<English>Culture (Paiute)</English>
+		<Russian>Ïàèþñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PAIUTE_PEDIA</Tag>
@@ -3659,6 +4103,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Pakistańska)</Polish>
+		<Russian>Ïàêèñòàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PAKISTANI_PEDIA</Tag>
@@ -3668,6 +4113,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PALESTINIAN</Tag>
 		<English>Culture (Palestinian)</English>
+		<Russian>Ïàëåñòèíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PALESTINIAN_PEDIA</Tag>
@@ -3676,6 +4122,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PANAMAN</Tag>
 		<English>Culture (Panaman)</English>
+		<Russian>Ïàíàìñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PANAMAN_PEDIA</Tag>
@@ -3695,6 +4142,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Papuaska)</Polish>
+		<Russian>Ïàïóàññêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PAPUAN_PEDIA</Tag>
@@ -3704,6 +4152,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PARAGUAYAN</Tag>
 		<English>Culture (Paraguayan)</English>
+		<Russian>Ïàðàãâàéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PARAGUAYAN_PEDIA</Tag>
@@ -3723,6 +4172,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Partyjska)</Polish>
+		<Russian>Ïàðôèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PARTHIAN_PEDIA</Tag>
@@ -3733,6 +4183,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PASHTUN</Tag>
 		<English>Culture (Pashtun)</English>
+		<Russian>Ïóøòóíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PASHTUN_PEDIA</Tag>
@@ -3752,6 +4203,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Perska)</Polish>
+		<Russian>Ïåðñèäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PERSIAN_PEDIA</Tag>
@@ -3762,6 +4214,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PERUVIAN</Tag>
 		<English>Culture (Peruvian)</English>
+		<Russian>Ïåðóàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PERUVIAN_PEDIA</Tag>
@@ -3770,6 +4223,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PHILISTINE</Tag>
 		<English>Culture (Philistine)</English>
+		<Russian>Ôèëèñòèìëÿíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PHILISTINE_PEDIA</Tag>
@@ -3789,6 +4243,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Fenicka)</Polish>
+		<Russian>Ôèíèêèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PHOENICIAN_PEDIA</Tag>
@@ -3800,6 +4255,7 @@
 		<English>Culture (Pictish)</English>
 		<French>Culture (Picte)</French>
 		<Polish>Kultura (Piktyjska)</Polish>
+		<Russian>Ïèêòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PICTISH_PEDIA</Tag>
@@ -3809,6 +4265,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PILAGA</Tag>
 		<English>Culture (Pilaga)</English>
+		<Russian>Êóëüòóðà ïèëàãà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PILAGA_PEDIA</Tag>
@@ -3818,6 +4275,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PIMA</Tag>
 		<English>Culture (Pima)</English>
 		<Polish>Kultura (Pima)</Polish>
+		<Russian>Ïèìñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PIMA_PEDIA</Tag>
@@ -3838,6 +4296,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Polska)</Polish>
+		<Russian>Ïîëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_POLISH_PEDIA</Tag>
@@ -3858,6 +4317,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Polinezyjska)</Polish>
+		<Russian>Ïîëèíåçèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_POLYNESIAN_PEDIA</Tag>
@@ -3878,6 +4338,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Portugalska)</Polish>
+		<Russian>Ïîðòóãàëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PORTUGUESE_PEDIA</Tag>
@@ -3887,6 +4348,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_POVERTY_POINT</Tag>
 		<English>Culture (Poverty Point)</English>
+		<Russian>Êóëüòóðà Ïîâåðòè-Ïîéíò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_POVERTY_POINT_PEDIA</Tag>
@@ -3895,6 +4357,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_POYA</Tag>
 		<English>Culture (Poya)</English>
+		<Russian>Êóëüòóðà Ïîéÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_POYA_PEDIA</Tag>
@@ -3914,6 +4377,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Pruska)</Polish>
+		<Russian>Ïðóññêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PRUSSIAN_PEDIA</Tag>
@@ -3923,6 +4387,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PUELCHE</Tag>
 		<English>Culture (Puelche)</English>
+		<Russian>Êóëüòóðà ïóýëü÷å</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PUELCHE_PEDIA</Tag>
@@ -3931,6 +4396,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PUNTIC</Tag>
 		<English>Culture (Puntic)</English>
+		<Russian>Ïóíòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_PUNTIC_PEDIA</Tag>
@@ -3940,6 +4406,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_QIANG</Tag>
 		<English>Culture (Qiang)</English>
 		<Polish>Kultura (Qiang)</Polish>
+		<Russian>Öÿíüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_QIANG_PEDIA</Tag>
@@ -3949,10 +4416,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_QIN</Tag>
 		<English>Culture (Qin)</English>
+		<Russian>Öèíüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_QING</Tag>
 		<English>Culture (Qing)</English>
+		<Russian>Êóëüòóðà Öèí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_QING_PEDIA</Tag>
@@ -3965,6 +4434,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_QUEBECKER</Tag>
 		<English>Culture (Quebecker)</English>
+		<Russian>Êâåáåêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_QUEBECKER_PEDIA</Tag>
@@ -3984,6 +4454,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Keczua)</Polish>
+		<Russian>Êå÷óàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_QUECHUA_PEDIA</Tag>
@@ -3993,6 +4464,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_QUERANDI</Tag>
 		<English>Culture (Querandi)</English>
+		<Russian>Êåðàíäèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_QUERANDI_PEDIA</Tag>
@@ -4001,6 +4473,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_QULLA</Tag>
 		<English>Culture (Qulla)</English>
+		<Russian>Êóëüòóðà Êîëüà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_QULLA_PEDIA</Tag>
@@ -4020,6 +4493,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Rapa Nui)</Polish>
+		<Russian>Ðàïàíóéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_RAPA_NUI_PEDIA</Tag>
@@ -4030,6 +4504,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_RED_OCHER</Tag>
 		<English>Culture (Red Ocher)</English>
+		<Russian>Êóëüòóðà êðàñíîêîæèõ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_RED_OCHER_PEDIA</Tag>
@@ -4040,6 +4515,7 @@
 		<English>Culture (Rhodesian)</English>
 		<French>Culture (Rhodésien)</French>
 		<Polish>Kultura (Rodezyjska)</Polish>
+		<Russian>Ðîäåçèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_RHODESIAN_PEDIA</Tag>
@@ -4060,10 +4536,12 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Rzymska)</Polish>
+		<Russian>Ðèìñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ROMANI</Tag>
 		<English>Culture (Romani)</English>
+		<Russian>Öûãàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ROMANI_PEDIA</Tag>
@@ -4080,6 +4558,7 @@
 		<English>Culture (Roxolani)</English>
 		<French>Culture (Roxolani)</French>
 		<Polish>Kultura (Roksolańska)</Polish>
+		<Russian>Ðîêñîëàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ROXOLANI_PEDIA</Tag>
@@ -4100,6 +4579,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Rosyjska)</Polish>
+		<Russian>Ðóññêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_RUSSIAN_PEDIA</Tag>
@@ -4109,6 +4589,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SAFAVID</Tag>
 		<English>Culture (Safavid)</English>
+		<Russian>Ñåôåâèäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SAFAVID_PEDIA</Tag>
@@ -4117,6 +4598,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SAFFARID</Tag>
 		<English>Culture (Saffarid)</English>
+		<Russian>Ñàôôàðèäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SAFFARID_PEDIA</Tag>
@@ -4125,6 +4607,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SAKA</Tag>
 		<English>Culture (Saka)</English>
+		<Russian>Ñàêñêàÿ  êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SAKA_PEDIA</Tag>
@@ -4134,6 +4617,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SAMI</Tag>
 		<English>Culture (Sami)</English>
 		<Polish>Kultura (Sami)</Polish>
+		<Russian>Ñààìñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SAMI_PEDIA</Tag>
@@ -4144,6 +4628,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SAMOAN</Tag>
 		<English>Culture (Samoan)</English>
 		<Polish>Kultura (Samoańska)</Polish>
+		<Russian>Êóëüòóðà  ñàìîà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SAMOAN_PEDIA</Tag>
@@ -4153,6 +4638,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SARMATIAN</Tag>
 		<English>Culture (Sarmatian)</English>
+		<Russian>Ñàðìàòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SARMATIAN_PEDIA</Tag>
@@ -4172,6 +4658,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Sasanidzka)</Polish>
+		<Russian>Ñàñàíèäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SASSANIAN_PEDIA</Tag>
@@ -4182,6 +4669,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SAUDI</Tag>
 		<English>Culture (Saudi)</English>
 		<French>Culture (Saoudite)</French>
+		<Russian>Ñàóäèòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SAUDI_PEDIA</Tag>
@@ -4201,6 +4689,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Saksońska)</Polish>
+		<Russian>Ñàêñîíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SAXON_PEDIA</Tag>
@@ -4221,6 +4710,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Szkocka)</Polish>
+		<Russian>Øîòëàíäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SCOTTISH_PEDIA</Tag>
@@ -4237,6 +4727,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Scytów)</Polish>
+		<Russian>Ñêèôñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SCYTHIAN_PEDIA</Tag>
@@ -4246,6 +4737,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SELJUK</Tag>
 		<English>Culture (Seljuk)</English>
+		<Russian>Ñåëüäæóêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SELJUK_PEDIA</Tag>
@@ -4254,6 +4746,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SEMANG</Tag>
 		<English>Culture (Semang)</English>
+		<Russian>Ñåìàíãñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SEMANG_PEDIA</Tag>
@@ -4273,6 +4766,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Seminoli)</Polish>
+		<Russian>Ñåìèíîëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SEMINOLE_PEDIA</Tag>
@@ -4284,6 +4778,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SENEGALI</Tag>
 		<English>Culture (Senegali)</English>
 		<French>Culture (Sénégalaise)</French>
+		<Russian>Ñåíåãàëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SENEGALI_PEDIA</Tag>
@@ -4292,6 +4787,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SENNAR</Tag>
 		<English>Culture (Sennar)</English>
+		<Russian>Ñåííàðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SENNAR_PEDIA</Tag>
@@ -4300,6 +4796,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SERBIAN</Tag>
 		<English>Culture (Serbian)</English>
+		<Russian>Ñåðáñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SERBIAN_PEDIA</Tag>
@@ -4314,6 +4811,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Szang)</Polish>
+		<Russian>Øàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SHANG_PEDIA</Tag>
@@ -4334,6 +4832,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Syjamska)</Polish>
+		<Russian>Ñèàìñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SIAMESE_PEDIA</Tag>
@@ -4354,6 +4853,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Syberyjska)</Polish>
+		<Russian>Ñèáèðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SIBERIAN_PEDIA</Tag>
@@ -4363,6 +4863,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SICAN</Tag>
 		<English>Culture (Sican)</English>
+		<Russian>Ñèêàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SICAN_PEDIA</Tag>
@@ -4371,6 +4872,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SICILIAN</Tag>
 		<English>Culture (Sicilian)</English>
+		<Russian>Ñèöèëèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SICILIAN_PEDIA</Tag>
@@ -4379,6 +4881,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SINTASHTA</Tag>
 		<English>Culture (Sintashta)</English>
+		<Russian>Ñèíòàøòèíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SINTASHTA_PEDIA</Tag>
@@ -4398,6 +4901,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Siuksów)</Polish>
+		<Russian>Êóëüòóðà ñèó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SIOUX_PEDIA</Tag>
@@ -4408,6 +4912,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SLOVAKIAN</Tag>
 		<English>Culture (Slovakian)</English>
+		<Russian>Ñëîâàöêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SLOVAKIAN_PEDIA</Tag>
@@ -4418,6 +4923,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SLOVENIAN</Tag>
 		<English>Culture (Slovenian)</English>
 		<French>Culture (Slovénienne)</French>
+		<Russian>Ñëîâåíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SLOVENIAN_PEDIA</Tag>
@@ -4437,6 +4943,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Somalijska)</Polish>
+		<Russian>Ñîìàëèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SOMALI_PEDIA</Tag>
@@ -4448,6 +4955,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SONGHAI</Tag>
 		<English>Culture (Songhai)</English>
 		<Polish>Kultura (Songhaj)</Polish>
+		<Russian>Ñîíãàéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SONGHAI_PEDIA</Tag>
@@ -4468,6 +4976,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Południowo Afrykańska)</Polish>
+		<Russian>Þæíîàôð. êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SOUTH_AFRICAN_PEDIA</Tag>
@@ -4483,6 +4992,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Kultura (Sowiecka)</Polish>
+		<Russian>Ñîâåòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SOVIET_PEDIA</Tag>
@@ -4503,6 +5013,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Hiszpańska)</Polish>
+		<Russian>Èñïàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SPANISH_PEDIA</Tag>
@@ -4519,6 +5030,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Spartańska)</Polish>
+		<Russian>Ñïàðòàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SPARTAN_PEDIA</Tag>
@@ -4529,14 +5041,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_STRATEGY</Tag>
 		<English>Gives access to unique buildings and units.</English>
+		<German>Jede Kultur ermöglicht spezielle Gebäude und Einheiten.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_STRATEGY</Tag>
 		<English>Gives access to unique buildings and units.[PARAGRAPH:1][COLOR_HIGHLIGHT_TEXT]IMPORTANT NOTE:[COLOR_REVERT] Neanderthal units require the corresponding [LINK=BUILDING_CULTURE_LOCAL_NEANDERTHAL]Neanderthal Local Culture[\LINK] to be constructed in the city (unlocked by this Culture), which [COLOR_RED]will remove your ability to construct Prehistoric non-Neanderthal units[COLOR_REVERT] in cities that have that Local Culture![PARAGRAPH:1]In practice, this means your units early in the game will be stronger, but cost more to produce as well as preventing you from training certain stealth or throwing units such as the [LINK=UNIT_AMBUSHER]Ambusher[\LINK] and [LINK=UNIT_ATLATL]Atlatlist[\LINK].</English>
+		<German>Jede Kultur ermöglicht spezielle Gebäude und Einheiten.[NEWLINE][COLOR_WARNING_TEXT]WICHTIG:[COLOR_REVERT] In Städten mit der lokalen Kultur Neandertal ist ausschließlich das Training von Neandertal-Einheiten möglich, alle anderen prähistorischen Einheiten können nicht ausgebildet werden.[NEWLINE]Das bedeutet zwar stärkere (und kostenintensivere) Einheiten zu Beginn des Spiels, aber auch den kompletten Verzicht auf bestimmte Wurfwaffen- und Tarneinheiten.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_STRATEGY</Tag>
 		<English>A regional Local Culture (C.L.) determines what specific World Cultures may be completed in that city. Obtaining a C.L. in your city comes in one of four ways:[NEWLINE]1) Your first city gains a C.L. based on your civ's Native Culture.[NEWLINE]2) A settler-type unit will carry all C.L.s present from the city that trained it to a city it founds.[NEWLINE]3) A captured city will maintain its C.L.(s), and you may manually construct your own native or adopted C.L.s (if not already present).[NEWLINE]4) Adopting a culture into your empire (having 3 (+mapsize variant) of the same C.L.s across all your cities) will result all your cities being able to construct that C.L.</English>
+		<German>Eine lokale Kultur kann auf folgende 4 Arten und Weisen in eine Stadt gelangen:[NEWLINE]1. Die erste Stadt einer Zivilisation erhält automatisch die Urkultur als lokale Kultur.[NEWLINE]2. Eine Siedler-Einheit übernimmt jeweils alle lokalen Kulturen der Ausbildungsstadt und überträgt sie auf die neugegründete Stadt.[NEWLINE]3. Eine eingenommene Stadt behält ihre lokalen Kulturen, aber der neue Herrscher kann manuell Ur- oder übernommene Kulturen in der Stadt etablieren (wenn noch nicht vorhanden).[NEWLINE]4. Wenn eine Kultur in eine Zivilisation übernommen wird, können alle Städte diese als lokale Kultur etablieren.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_NEANDERTHAL_STRATEGY</Tag>
@@ -4546,6 +5061,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SUDANESE</Tag>
 		<English>Culture (Sudanese)</English>
 		<French>Culture (Soudanaise)</French>
+		<Russian>Ñóäàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SUDANESE_PEDIA</Tag>
@@ -4565,6 +5081,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Sumeryjska)</Polish>
+		<Russian>Øóìåðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SUMERIAN_PEDIA</Tag>
@@ -4575,6 +5092,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SUNDANESE</Tag>
 		<English>Culture (Sundanese)</English>
 		<French>Culture (Sundanaise)</French>
+		<Russian>Ñóíäàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SUNDANESE_PEDIA</Tag>
@@ -4583,6 +5101,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SURINAMESE</Tag>
 		<English>Culture (Surinamese)</English>
+		<Russian>Ñóðèíàìñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SURINAMESE_PEDIA</Tag>
@@ -4602,6 +5121,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Suahili)</Polish>
+		<Russian>Ñóàõèëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SWAHILI_PEDIA</Tag>
@@ -4622,6 +5142,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Swazi)</Polish>
+		<Russian>Êóëüòóðà ñâàçè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SWAZI_PEDIA</Tag>
@@ -4632,6 +5153,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SWEDISH</Tag>
 		<English>Culture (Swedish)</English>
+		<Russian>Øâåäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SWEDISH_PEDIA</Tag>
@@ -4651,6 +5173,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Szwajcarska)</Polish>
+		<Russian>Øâåéöàðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SWISS_PEDIA</Tag>
@@ -4672,6 +5195,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Syryjska)</Polish>
+		<Russian>Ñèðèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_SYRIAN_PEDIA</Tag>
@@ -4681,6 +5205,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TAGALOG</Tag>
 		<English>Culture (Tagalog)</English>
+		<Russian>Òàãàëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TAGALOG_PEDIA</Tag>
@@ -4691,6 +5216,7 @@
 		<English>Culture (Tahitian)</English>
 		<French>Culture (Tahitienne)</French>
 		<Polish>Kultura (Tahitańska)</Polish>
+		<Russian>Òàèòÿíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TAHITIAN_PEDIA</Tag>
@@ -4700,6 +5226,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TAIRONA</Tag>
 		<English>Culture (Tairona)</English>
+		<Russian>Òàéðîíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TAIRONA_PEDIA</Tag>
@@ -4710,6 +5237,7 @@
 		<English>Culture (Taiwanese)</English>
 		<French>Culture (Taiwanaise)</French>
 		<Polish>Kultura (Tajwańska)</Polish>
+		<Russian>Òàéâàíüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TAIWANESE_PEDIA</Tag>
@@ -4719,6 +5247,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TAJIK</Tag>
 		<English>Culture (Tajik)</English>
+		<Russian>Òàäæèêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TAJIK_PEDIA</Tag>
@@ -4738,6 +5267,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Tamilska)</Polish>
+		<Russian>Òàìèëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TAMIL_PEDIA</Tag>
@@ -4748,6 +5278,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TANG</Tag>
 		<English>Culture (Tang)</English>
+		<Russian>Êóëüòóðà Òàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TANG_PEDIA</Tag>
@@ -4756,6 +5287,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TANZANIAN</Tag>
 		<English>Culture (Tanzanian)</English>
+		<Russian>Òàíçàíèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TANZANIAN_PEDIA</Tag>
@@ -4766,6 +5298,7 @@
 		<English>Culture (Tarascan)</English>
 		<French>Culture (Tarascane)</French>
 		<Polish>Kultura (Taraskańska)</Polish>
+		<Russian>Òàðàñêèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TARASCAN_PEDIA</Tag>
@@ -4775,6 +5308,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TASMANIAN</Tag>
 		<English>Culture (Tasmanian)</English>
+		<Russian>Òàñìàíèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TASMANIAN_PEDIA</Tag>
@@ -4784,6 +5318,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TATAR</Tag>
 		<English>Culture (Tatar)</English>
+		<Russian>Òàòàðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TATAR_PEDIA</Tag>
@@ -4794,6 +5329,7 @@
 		<English>Culture (Texan)</English>
 		<French>Culture (Texanne)</French>
 		<Polish>Kultura (Teksańska)</Polish>
+		<Russian>Òåõàññêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TEXAN_PEDIA</Tag>
@@ -4814,6 +5350,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Tajlandzka)</Polish>
+		<Russian>Òàéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_THAI_PEDIA</Tag>
@@ -4823,6 +5360,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_THRACIAN</Tag>
 		<English>Culture (Thracian)</English>
+		<Russian>Ôðàêèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_THRACIAN_PEDIA</Tag>
@@ -4831,6 +5369,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_THREE_KINGDOMS</Tag>
 		<English>Culture (Three Kingdoms)</English>
+		<Russian>Êóëüòóðà Òðîåöàðñòâèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_THREE_KINGDOMS_PEDIA</Tag>
@@ -4850,6 +5389,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Tybetańska)</Polish>
+		<Russian>Òèáåòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TIBETAN_PEDIA</Tag>
@@ -4861,6 +5401,7 @@
 		<English>Culture (Timurid)</English>
 		<French>Culture (Timuride)</French>
 		<Polish>Kultura (Timuridzka)</Polish>
+		<Russian>Òèìóðèäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TIMURID_PEDIA</Tag>
@@ -4870,6 +5411,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TIWI</Tag>
 		<English>Culture (Tiwi)</English>
+		<Russian>Êóëüòóðà Òèâè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TIWI_PEDIA</Tag>
@@ -4879,6 +5421,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TLATILCO</Tag>
 		<English>Culture (Tlatilco)</English>
 		<Polish>Kultura (Tlatilco)</Polish>
+		<Russian>Òëàòèëüêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TLATILCO_PEDIA</Tag>
@@ -4889,6 +5432,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TLAXCALTEC</Tag>
 		<English>Culture (Tlaxcaltec)</English>
 		<Polish>Kultura (Tlaxcaltec)</Polish>
+		<Russian>Òëàêñêàëüòåê. êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TLAXCALTEC_PEDIA</Tag>
@@ -4897,6 +5441,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TOBA</Tag>
 		<English>Culture (Toba)</English>
+		<Russian>Òîáàñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TOBA_PEDIA</Tag>
@@ -4916,6 +5461,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Toltecka)</Polish>
+		<Russian>Òóëüòåêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TOLTEC_PEDIA</Tag>
@@ -4932,6 +5478,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Kultura (Tongan)</Polish>
+		<Russian>Òîíãîëåçñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TONGAN_PEDIA</Tag>
@@ -4942,6 +5489,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TOTONAC</Tag>
 		<English>Culture (Totonac)</English>
 		<French>Culture (Totonac)</French>
+		<Russian>Òîòîíàêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TOTONAC_PEDIA</Tag>
@@ -4950,6 +5498,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TRANSOXANIAN</Tag>
 		<English>Culture (Transoxanian)</English>
+		<Russian>Òðàíñîêñèàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TRANSOXANIAN_PEDIA</Tag>
@@ -4969,6 +5518,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Trojańska)</Polish>
+		<Russian>Òðîÿíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TROJAN_PEDIA</Tag>
@@ -4989,6 +5539,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Tuaregów)</Polish>
+		<Russian>Òóàðåãñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TUAREG_PEDIA</Tag>
@@ -4999,6 +5550,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TUCANO</Tag>
 		<English>Culture (Tucano)</English>
+		<Russian>Òóêàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TUCANO_PEDIA</Tag>
@@ -5007,6 +5559,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TUNGUS</Tag>
 		<English>Culture (Tungus)</English>
+		<Russian>Òóíãóññêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TUNGUS_PEDIA</Tag>
@@ -5015,6 +5568,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TUNISIAN</Tag>
 		<English>Culture (Tunisian)</English>
+		<Russian>Òóíèññêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TUNISIAN_PEDIA</Tag>
@@ -5034,6 +5588,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Tupi)</Polish>
+		<Russian>Òóïèíàìñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TUPI_PEDIA</Tag>
@@ -5044,6 +5599,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TURKISH</Tag>
 		<English>Culture (Turkish)</English>
+		<Russian>Òóðåöêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TURKISH_PEDIA</Tag>
@@ -5063,6 +5619,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Turkmeńska)</Polish>
+		<Russian>Òóðêìåíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_TURKMEN_PEDIA</Tag>
@@ -5083,6 +5640,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Ujgurska)</Polish>
+		<Russian>Óéãóðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_UIGHUR_PEDIA</Tag>
@@ -5092,6 +5650,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_UKRAINIAN</Tag>
 		<English>Culture (Ukrainian)</English>
+		<Russian>Óêðàèíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_UKRAINIAN_PEDIA</Tag>
@@ -5100,6 +5659,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_URUGUAYAN</Tag>
 		<English>Culture (Uruguayan)</English>
+		<Russian>Óðóãâàéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_URUGUAYAN_PEDIA</Tag>
@@ -5109,6 +5669,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_UZBEK</Tag>
 		<English>Culture (Uzbek)</English>
 		<French>Culture (Ouzbèke)</French>
+		<Russian>Óçáåêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_UZBEK_PEDIA</Tag>
@@ -5118,6 +5679,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_VALDIVIAN</Tag>
 		<English>Culture (Valdivian)</English>
 		<French>Culture (Valdive)</French>
+		<Russian>Âàëüâèäèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_VALDIVIAN_PEDIA</Tag>
@@ -5126,6 +5688,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_VANATUAN</Tag>
 		<English>Culture (Vanatuan)</English>
+		<Russian>Êóëüòóðà Âàíóàòó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_VANATUAN_PEDIA</Tag>
@@ -5135,6 +5698,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_VANDAL</Tag>
 		<English>Culture (Vandal)</English>
 		<French>Culture (Vandale)</French>
+		<Russian>Âàíäàëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_VANDAL_PEDIA</Tag>
@@ -5145,6 +5709,7 @@
 		<English>Culture (Venetian)</English>
 		<French>Culture (Vénitienne)</French>
 		<Polish>Kultura (Wenecka)</Polish>
+		<Russian>Âåíåöèàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_VENETIAN_PEDIA</Tag>
@@ -5165,6 +5730,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Wenezuelska)</Polish>
+		<Russian>Âåíåñóýëüñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_VENEZUELAN_PEDIA</Tag>
@@ -5185,6 +5751,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Wietnamska)</Polish>
+		<Russian>Âüåòíàìñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_VIETNAMESE_PEDIA</Tag>
@@ -5205,6 +5772,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Wikingów)</Polish>
+		<Russian>Êóëüòóðà âèêèíãîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_VIKING_PEDIA</Tag>
@@ -5214,6 +5782,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_WALLACHIAN</Tag>
 		<English>Culture (Wallachian)</English>
+		<Russian>Âàëàõñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_WALLACHIAN_PEDIA</Tag>
@@ -5227,6 +5796,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
+		<Russian>Âàðàéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_WARAY_PEDIA</Tag>
@@ -5236,6 +5806,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_WARI</Tag>
 		<English>Culture (Wari)</English>
+		<Russian>Êóëüòóðà âàðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_WARI_PEDIA</Tag>
@@ -5245,6 +5816,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_WAYANA</Tag>
 		<English>Culture (Wayana)</English>
 		<Polish>Kultura (Wayana)</Polish>
+		<Russian>Âàéàííñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_WAYANA_PEDIA</Tag>
@@ -5253,6 +5825,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_WAYUU</Tag>
 		<English>Culture (Wayuu)</English>
+		<Russian>Êóëüòóðà âàéþ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_WAYUU_PEDIA</Tag>
@@ -5272,6 +5845,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Walijska)</Polish>
+		<Russian>Âàëëèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_WELSH_PEDIA</Tag>
@@ -5282,6 +5856,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_XIA</Tag>
 		<English>Culture (Xia)</English>
+		<Russian>Êóëüòóðà ñèà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_XIA_PEDIA</Tag>
@@ -5290,6 +5865,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_XIANBEI</Tag>
 		<English>Culture (Xianbei)</English>
+		<Russian>Ñÿíüáèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_XIANBEI_PEDIA</Tag>
@@ -5299,6 +5875,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_XIONGNU</Tag>
 		<English>Culture (Xiongnu)</English>
 		<Polish>Kultura (Xiongnu)</Polish>
+		<Russian>Õóííñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_XIONGNU_PEDIA</Tag>
@@ -5310,6 +5887,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_YAGHAN</Tag>
 		<English>Culture (Yaghan)</English>
 		<Polish>Kultura (Yagan)</Polish>
+		<Russian>ßãàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_YAGHAN_PEDIA</Tag>
@@ -5319,6 +5897,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_YAGUA</Tag>
 		<English>Culture (Yagua)</English>
+		<Russian>ßãóàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_YAGUA_PEDIA</Tag>
@@ -5334,6 +5913,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Yamato)</Polish>
+		<Russian>Êóëüòóðà ÿìàòî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_YAMATO_PEDIA</Tag>
@@ -5344,6 +5924,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_YANOMAMI</Tag>
 		<English>Culture (Yanomami)</English>
 		<Polish>Kultura (Yanomami)</Polish>
+		<Russian>Êóëüòóðà ÿíîìàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_YANOMAMI_PEDIA</Tag>
@@ -5355,6 +5936,7 @@
 		<English>Culture (Yemeni)</English>
 		<French>Culture (Yeménite)</French>
 		<Polish>Kultura (Jemeńska)</Polish>
+		<Russian>Éåìåíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_YEMENI_PEDIA</Tag>
@@ -5364,6 +5946,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_YOLNGU</Tag>
 		<English>Culture (Yolngu)</English>
+		<Russian>Êóëüòóðà éîëóíãó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_YOLNGU_PEDIA</Tag>
@@ -5372,6 +5955,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ZANZIBARI</Tag>
 		<English>Culture (Zanzibari)</English>
+		<Russian>Çàíçèáàðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ZANZIBARI_PEDIA</Tag>
@@ -5391,6 +5975,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Zapoteków)</Polish>
+		<Russian>Ñàïîòåêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ZAPOTEC_PEDIA</Tag>
@@ -5402,6 +5987,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ZENU</Tag>
 		<English>Culture (Zenu)</English>
 		<French>Culture (Zénou)</French>
+		<Russian>Êóëüòóðà ñåíó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ZENU_PEDIA</Tag>
@@ -5410,6 +5996,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ZIMBABWEAN</Tag>
 		<English>Culture (Zimbabwean)</English>
+		<Russian>Êóëüòóðà Çèìáàáâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ZIMBABWEAN_PEDIA</Tag>
@@ -5429,6 +6016,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Kultura (Zulusów)</Polish>
+		<Russian>Çóëóññêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ZULU_PEDIA</Tag>
@@ -5439,6 +6027,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ZUNI</Tag>
 		<English>Culture (Zuni)</English>
 		<Polish>Kultura (Zuni)</Polish>
+		<Russian>Êóëüòóðà çóíè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_ZUNI_PEDIA</Tag>

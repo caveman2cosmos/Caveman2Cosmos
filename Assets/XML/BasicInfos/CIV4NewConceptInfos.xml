@@ -617,7 +617,7 @@
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_SHORTCUTS_GAME</Type>
-			<Description>TXT_KEY_SHORTCUTS_GAME</Description>
+			<Description>TXT_WORD_GAME</Description>
 			<Civilopedia>TXT_KEY_SHORTCUTS_GAME_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
@@ -765,6 +765,11 @@
 			<Type>CONCEPT_STRATEGY_NAVAL</Type>
 			<Description>TXT_KEY_STRATEGY_NAVAL</Description>
 			<Civilopedia>TXT_KEY_STRATEGY_NAVAL_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
+			<Type>CONCEPT_STRATEGY_SPACE_EXPLORATION</Type>
+			<Description>TXT_KEY_STRATEGY_SPACE_EXPLORATION</Description>
+			<Civilopedia>TXT_KEY_STRATEGY_SPACE_EXPLORATION_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_STRATEGY_OCC</Type>

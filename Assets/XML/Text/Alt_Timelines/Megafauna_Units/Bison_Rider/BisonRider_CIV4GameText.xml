@@ -5,6 +5,7 @@
 		<English>Military Standard (Bison)</English>
 		<French>Standards Militaires (Bisons)</French>
 		<Polish>Sztandar Wojskowy (Bizon)</Polish>
+		<Russian>Òîòåì «Áèçîí»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_BISON_HELP</Tag>
@@ -22,22 +23,25 @@
 		</French>
 		<Italian>Allevatore di bisonti</Italian>
 		<Polish>Treser Bizonów</Polish>
+		<Russian>Ïðèðó÷åíèå áèçîíîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BISON_TRAINER_EFFECT</Tag>
 		<English>Effect - Heritage - Bison</English>
 		<French>Effet - Patrimoine (Bisons)</French>
 		<Polish>Efekt - Dziedzictwo - Bizon</Polish>
+		<Russian>Ïèòîìíèê áèçîíîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BISON_TRAINER_HERITAGE</Tag>
 		<English>Heritage - Bison</English>
 		<French>Patrimoine (Bisons)</French>
 		<Polish>Dziedzictwo - Bizon</Polish>
+		<Russian>Ðàçâåäåíèå áèçîíîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BISON_TRAINER_HERITAGE_PEDIA</Tag>
-		<English>Instead of only being able to train Bison units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the ciy with the Bison Trainer World Wonder.</English>
+		<English>Instead of only being able to train Bison units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the city with the Bison Trainer World Wonder.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BISON_TRAINER_HERITAGE_STRATEGY</Tag>
@@ -64,6 +68,7 @@
 		</French>
 		<Italian>Cavalcatore di bisonti</Italian>
 		<Polish>Jeździec (Bizon)</Polish>
+		<Russian>Íàåçäíèê íà áèçîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BISON_RIDER_PEDIA</Tag>

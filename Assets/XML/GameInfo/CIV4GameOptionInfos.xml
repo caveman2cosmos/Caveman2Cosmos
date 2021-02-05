@@ -1,12 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- TB Notes regarding EnforcesGameOptionOnTypes and EnforcesGameOptionOffTypes (same formatting for Off, just change all Ons to Offs in the following)
 	Formatting: (note: may use this set multiple times to indicate more options that fall under the same enforcement guideline)
-				<EnforcesGameOptionOnTypes>
-					<EnforcesGameOptionOnType>
-						<GameOptionType>GAMEOPTION_WHATEVERYOUWANNAINDICATE</GameOptionType>
-						<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn>
-					</EnforcesGameOptionOnType>
-				</EnforcesGameOptionOnTypes>
+			<EnforcesGameOptionOnTypes>
+ 				<GameOptionType>GAMEOPTION_WHATEVERYOUWANNAINDICATE</GameOptionType>
+ 			</EnforcesGameOptionOnTypes>
 	These tags, if used, go under bVisible and EnforcesGameOptionOnTypes comes before EnforcesGameOptionOffTypes.
 	EnforcesGameOptionOn will turn on indicated option(s) as the game is initialized, regardless of whether the indicated option(s) were set on or not.
 	EnforcesGameOptionOff does the opposite: turns the indicated option(s) off if the option with the tag in use is on.
@@ -97,6 +94,9 @@
 			<Help>TXT_KEY_GAMEOPTION_ADVANCED_ECONOMY_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+			<EnforcesGameOptionOnTypes>
+ 				<GameOptionType>GAMEOPTION_ADVANCED_DIPLOMACY</GameOptionType>
+ 			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_REALISTIC_CORPORATIONS</Type>
@@ -147,10 +147,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOffTypes>
-				<EnforcesGameOptionOffType>
-					<GameOptionType>GAMEOPTION_MIN_CITY_BORDER</GameOptionType>
-					<bEnforcesGameOptionOff>1</bEnforcesGameOptionOff>
-				</EnforcesGameOptionOffType>
+				<GameOptionType>GAMEOPTION_MIN_CITY_BORDER</GameOptionType>
 			</EnforcesGameOptionOffTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -223,10 +220,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOffTypes>
-				<EnforcesGameOptionOffType>
-					<GameOptionType>GAMEOPTION_BARBARIAN_WORLD</GameOptionType>
-					<bEnforcesGameOptionOff>1</bEnforcesGameOptionOff>
-				</EnforcesGameOptionOffType>
+				<GameOptionType>GAMEOPTION_BARBARIAN_WORLD</GameOptionType>
 			</EnforcesGameOptionOffTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -299,10 +293,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOffTypes>
-				<EnforcesGameOptionOffType>
-					<GameOptionType>GAMEOPTION_ANIMALS_STAY_OUT</GameOptionType>
-					<bEnforcesGameOptionOff>1</bEnforcesGameOptionOff>
-				</EnforcesGameOptionOffType>
+				<GameOptionType>GAMEOPTION_ANIMALS_STAY_OUT</GameOptionType>
 			</EnforcesGameOptionOffTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -379,13 +370,6 @@
 			<Type>GAMEOPTION_NO_VASSAL_STATES</Type>
 			<Description>TXT_KEY_GAMEOPTION_NO_VASSAL_STATES</Description>
 			<Help>TXT_KEY_GAMEOPTION_NO_VASSAL_STATES_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_ESPIONAGE</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_ESPIONAGE</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_ESPIONAGE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
@@ -536,10 +520,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 			<EnforcesGameOptionOnTypes>
-				<EnforcesGameOptionOnType>
- 					<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
-					<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn>
- 				</EnforcesGameOptionOnType>
+ 				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
  			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -591,10 +572,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
 			<EnforcesGameOptionOnTypes>
-				<EnforcesGameOptionOnType>
-					<GameOptionType>GAMEOPTION_UPRANGE</GameOptionType>
-					<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn>
-				</EnforcesGameOptionOnType>
+				<GameOptionType>GAMEOPTION_UPRANGE</GameOptionType>
 			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>

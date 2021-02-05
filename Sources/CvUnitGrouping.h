@@ -12,8 +12,10 @@
 #ifndef CV_UNIT_GROUPING_H
 #define CV_UNIT_GROUPING_H
 
-//#include "CvEnums.h"
 //#include "CvUnitFilters.h"
+
+class CvCity;
+class CvPlayer;
 
 enum UnitGroupingTypes
 {

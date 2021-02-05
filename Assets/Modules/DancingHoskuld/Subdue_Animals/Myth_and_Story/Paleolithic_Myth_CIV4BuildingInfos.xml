@@ -45,25 +45,13 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</Type>
@@ -120,25 +108,13 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</Type>
@@ -195,25 +171,13 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</Type>

@@ -262,7 +262,8 @@ class CvEventManager:
 					"ISHTAR"				: GC.getInfoTypeForString('BUILDING_ISHTAR'),
 					"GREAT_JAGUAR_TEMPLE"	: GC.getInfoTypeForString('BUILDING_GREAT_JAGUAR_TEMPLE'),
 					"GREAT_BATH"			: GC.getInfoTypeForString('BUILDING_GREAT_BATH'),
-					"TOPKAPI_PALACE"		: GC.getInfoTypeForString("BUILDING_TOPKAPI_PALACE")
+					"TOPKAPI_PALACE"		: GC.getInfoTypeForString("BUILDING_TOPKAPI_PALACE"),
+					"NEANDERTHAL_EMBASSY"	: GC.getInfoTypeForString("BUILDING_NEANDERTHAL_EMBASSY")
 				}
 				self.mapUnitType = {
 					"MONK"		: GC.getInfoTypeForString("UNIT_MONK"),
@@ -575,11 +576,11 @@ class CvEventManager:
 		# Find special buildings built where by whom.
 		mapBuildingType = self.mapBuildingType
 		aList0 = [ # Only meant for world wonders
-			"CRUSADE",			"KENTUCKY_DERBY",	"GREAT_ZIMBABWE",		"HELSINKI",				"ALAMO",
-			"LASCAUX",			"WORLD_BANK",		"TAIPEI_101",			"ZIZKOV",				"CYRUS_CYLINDER",
-			"FA_MEN_SI",		"WEMBLEY",			"PERGAMON",				"CYRUS_TOMB",			"TSUKIJI",
-			"BIODOME",			"NAZCA_LINES",		"THE_MOTHERLAND_CALLS",	"GREAT_JAGUAR_TEMPLE",	"GREAT_BATH",
-			"TOPKAPI_PALACE"
+			"CRUSADE",			"KENTUCKY_DERBY",		"GREAT_ZIMBABWE",		"HELSINKI",				"ALAMO",
+			"LASCAUX",			"WORLD_BANK",			"TAIPEI_101",			"CYRUS_CYLINDER",
+			"FA_MEN_SI",		"WEMBLEY",				"PERGAMON",				"CYRUS_TOMB",			"TSUKIJI",
+			"BIODOME",			"NAZCA_LINES",			"THE_MOTHERLAND_CALLS",	"GREAT_JAGUAR_TEMPLE",	"GREAT_BATH",
+			"TOPKAPI_PALACE",
 		] # KEY
 		aList1 = [] # iBuilding
 		aList2 = [] # iTech (Obsolete)
@@ -631,10 +632,7 @@ class CvEventManager:
 		# [0][X] = KEY		[1][X] = iBuilding		[2][X] = iTech (Obsolete)		[3][X] = iCityID		[4][X] = iOwner
 		''' X:
 		[0]  Crusade			[1]  Kentucky Derby			[2]  Great Zimbabwe			[3]  Helsinki			[4]  Alamo
-		[5]  Lascaux			[6]  World Bank				[7]  Taipei 101				[8]  Zizkov				[9]  Cyrus Cylinder
-		[10] Fa Men Si			[11] Wembley Stadium		[12] Pergamon Altar			[13] Tomb of Cyrus		[14] Tsukiji
-		[15] Biodome			[16] Nazca Lines			[17] The Motherland Calls	[18] Jaguar Temple		[19] Great Bath
-		[20] Topkapi Palace
+		[5]  Lascaux			[6]  World Bank				[7]  Taipei 101				[8]  Cyrus Cylinder		etc.
 		'''
 
 	def onGameStart(self, argsList):
@@ -694,12 +692,10 @@ class CvEventManager:
 					aList.append(iPromo)
 			if not aList: continue
 
-			CyUnit, i = CyPlayer.firstUnit(False)
-			while CyUnit:
+			for CyUnit in CyPlayer.units():
 				if CyUnit.isFound():
 					for iPromo in aList:
 						CyUnit.setHasPromotion(iPromo, True)
-				CyUnit, i = CyPlayer.nextUnit(i, False)
 
 	def onMapRegen(self, argsList):
 		if not CyInterface().isInAdvancedStart():
@@ -754,31 +750,6 @@ class CvEventManager:
 				KEY = aWonderTuple[0][i]
 				if KEY == "WORLD_BANK":
 					CyPlayer.changeGold(CyPlayer.getGold()//200)
-				elif KEY == "ZIZKOV":
-					MAP = GC.getMap()
-					iPlayerAct = GAME.getActivePlayer()
-					TECH_SATELLITES = self.TECH_SATELLITES
-					iChance = 50 + (MAP.getWorldSize() + 3)**2 + 64 * self.iVictoryDelayPrcntGS / 100
-					iTeam = CyPlayer.getTeam()
-					for iPlayerX in xrange(self.MAX_PC_PLAYERS):
-						CyPlayerX = GC.getPlayer(iPlayerX)
-						if not CyPlayerX.isAlive():
-							continue
-						iTeamX = CyPlayerX.getTeam()
-						if iTeamX == iTeam:
-							continue
-						CyTeamX = GC.getTeam(iTeamX)
-						if CyTeamX.isVassal(iTeam):
-							continue
-						if TECH_SATELLITES > -1 and CyTeamX.isHasTech(TECH_SATELLITES):
-							continue
-
-						if not GAME.getSorenRandNum(iChance, "Zizkov"):
-							GC.getMap().resetRevealedPlots(iTeamX)
-							if iPlayer == iPlayerAct:
-								CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MSG_ZIZKOV_YOU", (CyPlayerX.getCivilizationDescription(0),)), iPlayer)
-							elif iPlayerX == iPlayerAct:
-								CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MSG_ZIZKOV",()), iPlayerX)
 
 				elif KEY == "CYRUS_CYLINDER":
 					if not iGameTurn % (4*self.iVictoryDelayPrcntGS/100 + 1):
@@ -808,8 +779,7 @@ class CvEventManager:
 		bMajor = not iGameTurn % (128 * self.iVictoryDelayPrcntGS / 100)
 
 		if bMinor or bMajor:
-			CyUnit, i = CyPlayer.firstUnit(False)
-			while CyUnit:
+			for CyUnit in CyPlayer.units():
 				if not CyUnit.isDead() and CyUnit.isAnimal():
 					if not GAME.getSorenRandNum(15 - bMajor*10, "Aging"): # 1 in 15/5
 						if not CyUnit.isHasPromotion(GC.getInfoTypeForString("PROMOTION_COMBAT1")):
@@ -828,7 +798,6 @@ class CvEventManager:
 							CyUnit.setBaseCombatStr(CyUnit.baseCombatStr() + 1)
 						else:
 							CyUnit.setExperience(CyUnit.getExperience() + 3, -1)
-				CyUnit, i = CyPlayer.nextUnit(i, False)
 
 
 	def onEndPlayerTurn(self, argsList):
@@ -1244,21 +1213,6 @@ class CvEventManager:
 						else:
 							CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
 
-		elif iImprovement == mapImpType['IMPROVEMENT_YOUNG_FOREST']:
-			CyPlot = GC.getMap().plot(iX, iY)
-			CyPlot.setImprovementType(-1)
-			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST_YOUNG'), 0)
-
-		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_BAMBOO']:
-			CyPlot = GC.getMap().plot(iX, iY)
-			CyPlot.setImprovementType(-1)
-			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
-
-		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_SAVANNA']:
-			CyPlot = GC.getMap().plot(iX, iY)
-			CyPlot.setImprovementType(-1)
-			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_SAVANNA'), 0)
-
 		elif iImprovement == mapImpType['IMPROVEMENT_FARM']:
 			iPlayer = GC.getMap().plot(iX, iY).getOwner()
 			if iPlayer != -1:
@@ -1409,20 +1363,6 @@ class CvEventManager:
 					CyPlayerX = GC.getPlayer(iPlayerX)
 					if CyPlayerX.isAlive():
 						CyPlayerX.AI_changeAttitudeExtra(iTeam, 3)
-			elif KEY == "ZIZKOV":
-				TECH_SATELLITES = self.TECH_SATELLITES
-				iTeam = CyPlayer.getTeam()
-				for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
-					if iTeamX == iTeam:
-						continue
-					CyTeamX = GC.getTeam(iTeamX)
-					if not CyTeamX.isEverAlive() or CyTeamX.isVassal(iTeam):
-						continue
-					if TECH_SATELLITES > -1 and CyTeamX.isHasTech(TECH_SATELLITES):
-						continue
-					# Covers whole map for others
-					GC.getMap().resetRevealedPlots(iTeamX)
-				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_GLOBAL_JAM",()))
 			elif KEY == "TSUKIJI":
 				CyTeam = GC.getTeam(CyPlayer.getTeam())
 				BOAT = GC.getInfoTypeForString("IMPROVEMENT_FISHING_BOATS")
@@ -1571,13 +1511,11 @@ class CvEventManager:
 		elif iBuilding == mapBuildingType["NANITE_DEFUSER"]:
 
 			for iPlayerX in xrange(self.MAX_PLAYERS):
-				CyUnit, i = CyPlayer.firstUnit(False)
-				while CyUnit:
+				for CyUnit in GC.getPlayer(iPlayerX).units():
 					if CyUnit.isNone() or CyUnit.isDead():
 						print "CvEventManager\onBuildingBuilt", ("CyUnit.isDead()", CyUnit.isDead()), ("CyUnit.isNone()", CyUnit.isNone())
 					elif CyUnit.nukeRange() > -1:
 						CyUnit.kill(0, -1)
-					CyUnit, i = CyPlayer.nextUnit(i, False)
 				# Global message
 				iPlayerAct = GAME.getActivePlayer()
 				if iPlayerAct > -1:
@@ -1630,11 +1568,10 @@ class CvEventManager:
 				bWrapY = MAP.isWrapY()
 
 				bOK = False
-				for i in xrange(MAP.numPlots()):
+				for CyPlot in MAP.plots():
 					if bOK: # No adjacent bunkers
 						bOK = False
 						continue
-					CyPlot = MAP.plotByIndex(i)
 					if CyPlot.getOwner() == iPlayer and CyPlot.getArea() == iArea and CyPlot.getImprovementType() != iBunker and CyPlot.canHaveImprovement(iBunker, -1, True):
 						x = CyPlot.getX()
 						y = CyPlot.getY()
@@ -1718,8 +1655,7 @@ class CvEventManager:
 
 			iThePopu = 0
 			iThePath = 0
-			for i in xrange(MAP.numPlots()):
-				CyPlotZ = MAP.plotByIndex(i)
+			for CyPlotZ in MAP.plots():
 				if CyPlotZ.getArea() == iArea:
 					iOwner = CyPlotZ.getOwner()
 					if iOwner == iPlayer and iSilk > -1 and CyPlotZ.getBonusType(-1) == iSilk:
@@ -1899,18 +1835,16 @@ class CvEventManager:
 			if iRoute < 0:
 				print "Error CvEventManager.onBuildingBuilt\n\tROUTE_RAILROAD doesn't exist, aborting python effect for Golden Spike"
 				return
-			MAP = GC.getMap()
-			iX = CyCity.getX()
-			iY = CyCity.getY()
-			iMaxWestX = iMaxEastX = iX
-			iMaxWestY = iMaxEastY = iY
-			CyPlot = MAP.plot(iX, iY)
+			CyPlot = CyCity.plot()
 			iArea = CyPlot.getArea()
+			iMaxWestX = iMaxEastX = iX = CyPlot.getX()
+			iMaxWestY = iMaxEastY = iY = CyPlot.getY()
 			pMaxWest = pMaxEast = CyPlot
 
 			if iPlayer == GAME.getActivePlayer():
 				CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_GOLDEN_SPIKE_BUILT",()), iPlayer)
 
+			MAP = GC.getMap()
 			iGridWidth = MAP.getGridWidth()
 			iGridHeight = MAP.getGridHeight()
 
@@ -1919,7 +1853,7 @@ class CvEventManager:
 				for y in xrange(iGridHeight):
 					pWest = MAP.plot(x, y)
 					pNext = MAP.plot(x+1, y)
-					if x == (iGridWidth - 1):
+					if x == iGridWidth - 1:
 						pNext = MAP.plot(0, y)
 					if pWest.getArea() == iArea and pNext.getArea() == iArea and MAP.generatePathForHypotheticalUnit(CyPlot, pWest, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000) and MAP.generatePathForHypotheticalUnit(CyPlot, pNext, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
 						iPass += 1
@@ -1955,44 +1889,43 @@ class CvEventManager:
 					pCheckPoint2 = MAP.plot(iXOff2, iYParam2)
 					pCheckPoint3 = MAP.plot(iXOff3, iYParam3)
 					if MAP.generatePathForHypotheticalUnit(CyPlot, pCheckPoint1, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
-						for i in xrange(MAP.getLastPathStepNum()):
-							CyPlotZ = MAP.getLastPathPlotByIndex(i)
+						for j in xrange(MAP.getLastPathStepNum()):
+							CyPlotZ = MAP.getLastPathPlotByIndex(j)
 							CyPlotZ.setRouteType(iRoute)
 					if MAP.generatePathForHypotheticalUnit(pCheckPoint1, pCheckPoint2, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
-						for i in xrange(MAP.getLastPathStepNum()):
-							CyPlotZ = MAP.getLastPathPlotByIndex(i)
+						for j in xrange(MAP.getLastPathStepNum()):
+							CyPlotZ = MAP.getLastPathPlotByIndex(j)
 							CyPlotZ.setRouteType(iRoute)
 					if MAP.generatePathForHypotheticalUnit(pCheckPoint2, pCheckPoint3, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
-						for i in xrange(MAP.getLastPathStepNum()):
-							CyPlotZ = MAP.getLastPathPlotByIndex(i)
+						for j in xrange(MAP.getLastPathStepNum()):
+							CyPlotZ = MAP.getLastPathPlotByIndex(j)
 							CyPlotZ.setRouteType(iRoute)
 					if MAP.generatePathForHypotheticalUnit(pCheckPoint3, CyPlot, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
-						for i in xrange(MAP.getLastPathStepNum()):
-							CyPlotZ = MAP.getLastPathPlotByIndex(i)
+						for j in xrange(MAP.getLastPathStepNum()):
+							CyPlotZ = MAP.getLastPathPlotByIndex(j)
 							CyPlotZ.setRouteType(iRoute)
 
 			elif iPass < iGridWidth:
-				for i in xrange(MAP.numPlots()):
-					CyPlotZ = MAP.plotByIndex(i)
-					if CyPlotZ.getArea() == iArea:
-						if CyPlotZ.getOwner() == iPlayer or not CyPlotZ.isOwned():
-							if MAP.generatePathForHypotheticalUnit(CyPlotZ, CyPlot, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
-								pCheckPlot = MAP.getLastPathPlotByIndex(1)
-								iCheckX = pCheckPlot.getX()
-								x = CyPlotZ.getX()
-								y = CyPlotZ.getY()
-								if iCheckX == x + 1 or (x == iGridWidth - 1 and not iCheckX) or x == iX - 1:
-									if (x < iMaxWestX and x < iX and iMaxWestX <= iX) or (x - iGridWidth < iMaxWestX and iMaxWestX <= iX and x > iX) or (x < iMaxWestX and x > iX and iMaxWestX > iX):
-										if x < iMaxWestX or (x > iX and iMaxWestX <= iX) or (x == iMaxWestX and abs(y - iY) <= abs(iMaxWestY - iY)):
-											iMaxWestX = x
-											iMaxWestY = y
-											pMaxWest = CyPlotZ
-								if iCheckX == x - 1 or (iCheckX == iGridWidth - 1 and not x) or x == iX + 1:
-									if (x > iMaxEastX and x > iX and iMaxEastX >= iX) or (x + iGridWidth > iMaxEastX and iMaxEastX >= iX and x < iX) or (x > iMaxEastX and x < iX and iMaxEastX < iX):
-										if x > iMaxEastX or (x < iX and iMaxEastX >= iX) or (x == iMaxEastX and abs(y - iY) <= abs(iMaxEastY - iY)):
-											iMaxEastX = x
-											iMaxEastY = y
-											pMaxEast = CyPlotZ
+				for CyPlotZ in MAP.plots():
+					if CyPlotZ.getArea() != iArea or CyPlotZ.isOwned() and CyPlotZ.getOwner() != iPlayer:
+						continue
+					if MAP.generatePathForHypotheticalUnit(CyPlotZ, CyPlot, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
+						pCheckPlot = MAP.getLastPathPlotByIndex(1)
+						iCheckX = pCheckPlot.getX()
+						x = CyPlotZ.getX()
+						y = CyPlotZ.getY()
+						if iCheckX == x + 1 or x == iGridWidth - 1 and not iCheckX or x == iX - 1:
+							if (x < iMaxWestX and x < iX and iMaxWestX <= iX) or (x - iGridWidth < iMaxWestX and iMaxWestX <= iX and x > iX) or (x < iMaxWestX and x > iX and iMaxWestX > iX):
+								if x < iMaxWestX or (x > iX and iMaxWestX <= iX) or (x == iMaxWestX and abs(y - iY) <= abs(iMaxWestY - iY)):
+									iMaxWestX = x
+									iMaxWestY = y
+									pMaxWest = CyPlotZ
+						if iCheckX == x - 1 or (iCheckX == iGridWidth - 1 and not x) or x == iX + 1:
+							if (x > iMaxEastX and x > iX and iMaxEastX >= iX) or (x + iGridWidth > iMaxEastX and iMaxEastX >= iX and x < iX) or (x > iMaxEastX and x < iX and iMaxEastX < iX):
+								if x > iMaxEastX or (x < iX and iMaxEastX >= iX) or (x == iMaxEastX and abs(y - iY) <= abs(iMaxEastY - iY)):
+									iMaxEastX = x
+									iMaxEastY = y
+									pMaxEast = CyPlotZ
 				if MAP.generatePathForHypotheticalUnit(CyPlot, pMaxWest, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
 					for i in xrange(MAP.getLastPathStepNum()):
 						CyPlotZ = MAP.getLastPathPlotByIndex(i)
@@ -2001,6 +1934,24 @@ class CvEventManager:
 					for i in xrange(MAP.getLastPathStepNum()):
 						CyPlotZ = MAP.getLastPathPlotByIndex(i)
 						CyPlotZ.setRouteType(iRoute)
+		elif iBuilding == mapBuildingType["ZIZKOV"]:
+			TECH_SATELLITES = self.TECH_SATELLITES
+			iTeam = CyPlayer.getTeam()
+			for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
+				if iTeamX == iTeam:
+					continue
+				CyTeamX = GC.getTeam(iTeamX)
+				if not CyTeamX.isEverAlive() or CyTeamX.isVassal(iTeam):
+					continue
+				if TECH_SATELLITES > -1 and CyTeamX.isHasTech(TECH_SATELLITES):
+					continue
+				# Covers whole map for others
+				GC.getMap().resetRevealedPlots(iTeamX)
+			CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_MSG_ZIZKOV_JAM",()))
+		elif iBuilding == mapBuildingType["NEANDERTHAL_EMBASSY"]:
+			iLocal = GC.getInfoTypeForString("BUILDING_CULTURE_LOCAL_NEANDERTHAL")
+			for cityX in CyPlayer.cities():
+				cityX.setNumRealBuilding(iLocal, 1)
 
 
 	def onProjectBuilt(self, argsList):
@@ -2279,14 +2230,13 @@ class CvEventManager:
 
 
 	def onUnitSpreadReligionAttempt(self, argsList):
-		CyUnit, iReligion, bSuccess = argsList
-		if not bSuccess:
-			iPlayer = CyUnit.getOwner()
+		#unit, iReligion, bSuccess = argsList
+		if not argsList[2]:
+			unit = argsList[0]
 			aWonderTuple = self.aWonderTuple
-			if "FA_MEN_SI" in aWonderTuple[0]:
-				if iPlayer == aWonderTuple[4][aWonderTuple[0].index("FA_MEN_SI")]:
-					CyCity = GC.getMap().plot(CyUnit.getX(), CyUnit.getY()).getPlotCity()
-					CyCity.setHasReligion(GC.getUnitInfo(CyUnit.getUnitType()).getPrereqReligion(), True, True, True)
+			if "FA_MEN_SI" in aWonderTuple[0] and unit.getOwner() == aWonderTuple[4][aWonderTuple[0].index("FA_MEN_SI")]:
+				CyCity = GC.getMap().plot(unit.getX(), unit.getY()).getPlotCity()
+				CyCity.setHasReligion(GC.getUnitInfo(unit.getUnitType()).getPrereqReligion(), True, True, True)
 
 
 	'''
@@ -2370,7 +2320,7 @@ class CvEventManager:
 					CyPlot = CyPlayer.getStartingPlot()
 					X = CyPlot.getX(); Y = CyPlot.getY()
 
-			if not -1 in (X, Y):
+			if -1 not in (X, Y):
 				if GC.getCivilizationInfo(CyPlayer.getCivilizationType()).getType() == "CIVILIZATION_NEANDERTHAL":
 					iWorker = GC.getInfoTypeForString("UNIT_NEANDERTHAL_GATHERER")
 				else:
@@ -2378,7 +2328,7 @@ class CvEventManager:
 
 				CyUnit = CyPlayer.initUnit(iWorker, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
-			else: print "Found no valid plot to place the gatherer. \nNew civ from revolution or barb. city perhaps?"
+			else: print "Found no valid plot to place the gatherer.\n\tNew civ from revolution or barbCiv perhaps?"
 
 		# Obsolete python building-effects
 		aWonderTuple = self.aWonderTuple

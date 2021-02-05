@@ -51,5 +51,6 @@ void CyGameTextMgrInterface()
 		.def("getActiveDealsString", &CyGameTextMgr::getActiveDealsString, "wstring (int iThisPlayer, int iOtherPlayer)")
 		.def("getDealString", &CyGameTextMgr::getDealString, "wstring (CyDeal* pDeal, int iPlayerPerspective)")
 		.def("getFinanceUnitUpkeepString", &CyGameTextMgr::getFinanceUnitUpkeepString, "wstring (int iPlayer)")
+		.def("getDefenseHelp", &CyGameTextMgr::getDefenseHelp, "wstring (CyCity* pCity)")
 	;
 }

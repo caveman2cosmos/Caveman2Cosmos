@@ -93,9 +93,6 @@ def canConstruct(argsList):
 def cannotConstruct(argsList):
 	return GameUtils.cannotConstruct(argsList)
 
-def cannotCreate(argsList):
-	return GameUtils.cannotCreate(argsList)
-
 def cannotMaintain(argsList):
 	return GameUtils.cannotMaintain(argsList)
 
@@ -122,9 +119,6 @@ def calculateScore(argsList):
 
 def doHolyCity():
 	return GameUtils.doHolyCity()
-
-def doGold(argsList):
-	return GameUtils.doGold(argsList)
 
 def doResearch(argsList):
 	return GameUtils.doResearch(argsList)
@@ -173,9 +167,6 @@ def doCombat(argsList):
 
 def getConscriptUnitType(argsList):
 	return GameUtils.getConscriptUnitType(argsList)
-
-def getCityFoundValue(argsList):
-	return GameUtils.getCityFoundValue(argsList)
 
 def canPickPlot(argsList):
 	return GameUtils.canPickPlot(argsList)

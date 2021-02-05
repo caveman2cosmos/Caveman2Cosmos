@@ -5,11 +5,13 @@
 		<English>Military Standard (Bears)</English>
 		<French>Standards Militaires (Ours)</French>
 		<Polish>Sztandar Wojskowy (Niedźwiedź)</Polish>
+		<Russian>Òîòåì «Ìåäâåäü»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_BEAR_HELP</Tag>
 		<English>[ICON_BULLET]Build Bear buildings and units faster in this city.</English>
-		<French>Construit les bâtiments et unités Ours plus vite dans cette Ville.</French>
+		<French>Construit les bâtiments et unités Ours plus vite dans cette ville.</French>
+		<Russian>Óñîðÿåò òðåíèðîâêó ìåäâåäåé è ïîñòðîéêó â ãîðîäå çäàíèé äëÿ íèõ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAR_TRAINER</Tag>
@@ -21,18 +23,21 @@
 		</French>
 		<Italian>Allevatore di orsi</Italian>
 		<Polish>Treser Niedźwiedzi</Polish>
+		<Russian>Ïðèðó÷åíèå ìåäâåäåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAR_TRAINER_EFFECT</Tag>
 		<English>Effect - Heritage - Bears</English>
 		<French>Effet - Patrimoine (Ours)</French>
 		<Polish>Efekt - Dziedzictwo - Niedźwiedź</Polish>
+		<Russian>Ïèòîìíèê ìåäâåäåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAR_TRAINER_HERITAGE</Tag>
 		<English>Heritage - Bears</English>
 		<French>Patrimoine (Ours)</French>
 		<Polish>Dziedzictwo - Niedźwiedź</Polish>
+		<Russian>Ðàçâåäåíèå ìåäâåäåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAR_TRAINER_HERITAGE_PEDIA</Tag>
@@ -41,6 +46,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAR_TRAINER_HERITAGE_STRATEGY</Tag>
 		<English>Allows the training of bear units in all cities. Requires Bear Trainer Wonder.</English>
+		<Russian>Ïîçâîëÿåò òðåíèðîâàòü ìåäâåäåé âî âñåõ âàøèõ ãîðîäàõ. Òðåáóåò ÷óäî Äðåññèðîâêà ìåäâåäåé.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAR_TRAINER_PEDIA</Tag>
@@ -50,7 +56,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAR_TRAINER_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Bear Trainer[COLOR_REVERT] is required to train [LINK=UNIT_BEARRIDER]Bear Riders[\LINK].</English>
-		<Italian>L'[COLOR_BUILDING_TEXT]Allevatore di rosi[COLOR_REVERT] è necessario per addestrare [LINK=UNIT_BEARRIDER]Cavalcatori di orsi[\LINK].</Italian>
+		<Italian>L'[COLOR_BUILDING_TEXT]Allevatore di orsi[COLOR_REVERT] è necessario per addestrare [LINK=UNIT_BEARRIDER]Cavalcatori di orsi[\LINK].</Italian>
+		<Russian>[COLOR_BUILDING_TEXT]Äðåññèðîâêà ìåäâåäåé[COLOR_REVERT] íóæíà äëÿ ñîçäàíèÿ [COLOR_UNIT_TEXT]Íàåçäíèêà íà ìåäâåäås[COLOR_REVERT].</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARKNIGHT</Tag>
@@ -62,6 +69,7 @@
 		</French>
 		<Italian>Cavaliere su orso</Italian>
 		<Polish>Rycerz (Niedźwiedź)</Polish>
+		<Russian>Ðûöàðü íà ìåäâåäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARKNIGHT_PEDIA</Tag>
@@ -71,7 +79,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARKNIGHT_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Bear Knights[COLOR_REVERT] are slower but stronger version of normal Knight. This mounted unit is using [COLOR_HIGHLIGHT_TEXT]Bears[COLOR_REVERT] instead of [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and has national limit (15).</English>
-		<Italian>I [COLOR_UNIT_TEXT]Cavalieri du orso[COLOR_REVERT] sono</Italian>
+		<Russian>[COLOR_UNIT_TEXT]Ðûöàðü íà ìåäâåäå[COLOR_REVERT] ñåðüåçíî ????</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARRIDER</Tag>
@@ -83,6 +91,7 @@
 		</French>
 		<Italian>Cavalcatore di orsi</Italian>
 		<Polish>Jeździec (Niedźwiedź)</Polish>
+		<Russian>Íàåçäíèê íà ìåäâåäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARRIDER_PEDIA</Tag>
@@ -92,6 +101,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARRIDER_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Bear Riders[COLOR_REVERT] are early-game mounted units. This particular rider is using [COLOR_HIGHLIGHT_TEXT]Bears[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and is slower than the rest of the Riders.</English>
-		<Italian>I [COLOR_UNIT_TEXT]Cavalcatori di orsi[COLOR_REVERT] sono</Italian>
+		<Russian>[COLOR_UNIT_TEXT]Íàåçäíèê íà ìåäâåäå[COLOR_REVERT] ñåðüåçíî ????</Russian>
 	</TEXT>
 </Civ4GameText>

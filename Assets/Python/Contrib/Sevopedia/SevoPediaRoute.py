@@ -86,7 +86,7 @@ class SevoPediaRoute:
 				else:
 					sign = ""
 				szYield = (u"%s: %s%i " % (gc.getYieldInfo(k).getDescription().upper(), sign, iYieldChange))
-				screen.appendListBoxStringNoUpdate(panelName, u"<font=%d>" % iFontSize + szYield + (u"%c" % gc.getYieldInfo(k).getChar()) + u"</font>", WidgetTypes.WIDGET_GENERAL, 0, 0, CvUtil.FONT_LEFT_JUSTIFY)
+				screen.appendListBoxStringNoUpdate(panelName, u"<font=%d>" % iFontSize + szYield + (u"%c" % gc.getYieldInfo(k).getChar()) + u"</font>", WidgetTypes.WIDGET_GENERAL, 0, 0, 1<<0)
 
 		screen.updateListBox(panelName)
 
@@ -121,7 +121,7 @@ class SevoPediaRoute:
 			szYield += localText.getText("TXT_KEY_PEDIA_NO_PLOT_YIELD_CHANGE", ())
 
 			listName = self.top.getNextWidgetName()
-			screen.addMultilineText(listName, szYield, self.X_BONUS_YIELDS_PANE+5, self.Y_BONUS_YIELDS_PANE+30, self.W_BONUS_YIELDS_PANE-10, self.H_BONUS_YIELDS_PANE-35, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+			screen.addMultilineText(listName, szYield, self.X_BONUS_YIELDS_PANE+5, self.Y_BONUS_YIELDS_PANE+30, self.W_BONUS_YIELDS_PANE-10, self.H_BONUS_YIELDS_PANE-35, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
 		return
 
@@ -190,7 +190,7 @@ class SevoPediaRoute:
 		splitText = string.split( szSpecialText, "\n" )
 		for special in splitText:
 			if len( special ) != 0:
-				screen.appendListBoxString( listName, special, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+				screen.appendListBoxString( listName, special, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0 )
 
 	def placeHistory(self):
 
@@ -198,7 +198,7 @@ class SevoPediaRoute:
 
 		panelName = self.top.getNextWidgetName()
 		screen.addPanel(panelName, CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_CONCEPT", ()), "", True, False, self.X_HISTORY_PANE, self.Y_HISTORY_PANE, self.W_HISTORY_PANE, self.H_HISTORY_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
-		screen.addMultilineText(panelName, CyTranslator().getText("TXT_KEY_CONCEPT_MOVEMENT_PEDIA", ()), self.X_HISTORY_PANE+10, self.Y_HISTORY_PANE + 30, self.W_HISTORY_PANE -20, self.H_HISTORY_PANE- 55, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.addMultilineText(panelName, CyTranslator().getText("TXT_KEY_CONCEPT_MOVEMENT_PEDIA", ()), self.X_HISTORY_PANE+10, self.Y_HISTORY_PANE + 30, self.W_HISTORY_PANE -20, self.H_HISTORY_PANE- 55, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
 	def placeLinks(self, bRedraw):
 
@@ -218,7 +218,7 @@ class SevoPediaRoute:
 		for iI in range(gc.getNumRouteInfos()):
 			if (not gc.getRouteInfo(rowListName[iI][1]).isGraphicalOnly()):
 				if bRedraw:
-					screen.appendListBoxString(self.top.LIST_ID, rowListName[iI][0], WidgetTypes.WIDGET_HELP_MOVE_BONUS, rowListName[iI][1], 0, CvUtil.FONT_LEFT_JUSTIFY)
+					screen.appendListBoxString(self.top.LIST_ID, rowListName[iI][0], WidgetTypes.WIDGET_HELP_MOVE_BONUS, rowListName[iI][1], 0, 1<<0)
 				if rowListName[iI][1] == self.iRoute:
 					iSelected = i
 				i += 1

@@ -5,11 +5,12 @@
 		<English>Military Standard (Giraffe)</English>
 		<French>Standards Militaires (Girafe)</French>
 		<Polish>Sztandar Wojskowy (Żyrafa)</Polish>
+		<Russian>Òîòåì «Æèðàô»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE_HELP</Tag>
 		<English>[ICON_BULLET]Build Giraffe buildings and units faster in this city.</English>
-		<French>Construit les bâtiments et unités Girafes plus vite dans cette Ville.</French>
+		<French>Construit les bâtiments et unités Girafes plus vite dans cette ville.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER</Tag>
@@ -21,22 +22,25 @@
 		</French>
 		<Italian>Allevatore di giraffe</Italian>
 		<Polish>Treser Żyraf</Polish>
+		<Russian>Ïðèðó÷åíèå æèðàôîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT</Tag>
 		<English>Effect - Heritage - Giraffes</English>
 		<French>Effet - Patrimoine (Girafes)</French>
 		<Polish>Efekt - Dziedzictwo - Żyrafa</Polish>
+		<Russian>Ïèòîìíèê æèðàôîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT_HELP</Tag>
-		<English>[ICON_BULLET]This free building is used to enable the building of the special Giraffeunits in all your cities.</English>
+		<English>[ICON_BULLET]This free building is used to enable the building of the special Giraffe units in all your cities.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE</Tag>
 		<English>Heritage - Giraffe</English>
 		<French>Patrimoine (Girafes)</French>
 		<Polish>Dziedzictwo - Żyrafa</Polish>
+		<Russian>Ðàçâåäåíèå æèðàôîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE_PEDIA</Tag>
@@ -45,7 +49,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE_STRATEGY</Tag>
 		<English>Allows Giraffe units to be built in all your cities.</English>
-		<French>Permet d'entraîner des unités avec Girafes dans toutes vos Villes.</French>
+		<French>Permet d'entraîner des unités avec Girafes dans toutes vos villes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Tag>
@@ -56,6 +60,7 @@
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] is required to train [LINK=UNIT_GIRAFFE_ARCHER]Giraffe Archers[\LINK].</English>
 		<Italian>L'[COLOR_BUILDING_TEXT]Allevatore di giraffe[COLOR_REVERT] è necessario per addestrare [LINK=UNIT_GIRAFFE_ARCHER]Arcieri su giraffe[\LINK].</Italian>
+		<Russian>The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] is required to train [COLOR_UNIT_TEXT]Giraffe Archers[COLOR_REVERT].</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_ARCHER</Tag>
@@ -67,6 +72,7 @@
 		</French>
 		<Italian>Arciere su giraffa</Italian>
 		<Polish>Żyrafi Łucznik</Polish>
+		<Russian>Ëó÷íèê íà æèðàôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_ARCHER_PEDIA</Tag>
@@ -76,34 +82,40 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_ARCHER_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Giraffe Archer[COLOR_REVERT] is similar to [COLOR_UNIT_TEXT]Horse Archer[COLOR_REVERT] but better against archers, with a bonus to hills and city defense and savanna terrain combat.</English>
-		<Italian>Gli [COLOR_UNIT_TEXT]Arcieri su giraffa[COLOR_REVERT] sono</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_CARABINIER</Tag>
 		<English>Giraffe Carabinier</English>
+		<Russian>Êàðàáèíåð íà æèðàôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_CAVALRY</Tag>
 		<English>Giraffe Cavalry</English>
+		<Russian>Êàâàëåðèÿ íà æèðàôàõ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_CROSSBOW</Tag>
 		<English>Giraffe Crossbow</English>
+		<Russian>Àðáàëåò÷èê íà æèðàôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_CUIRASSIER</Tag>
 		<English>Giraffe Cuirassier</English>
+		<Russian>Êèðàñèð íà æèðàôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_DRAGOON</Tag>
 		<English>Giraffe Dragoon</English>
+		<Russian>Äðàãóí íà æèðàôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_TRENCH_CAVALRY</Tag>
 		<English>Giraffe Trench Cavalry</English>
+		<Russian>Îêîïíûé æèðàô</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_URBAN_GIRAFFEMAN</Tag>
 		<English>Giraffe Urban Rider</English>
+		<Russian>Ðåéäåð íà æèðàôå</Russian>
 	</TEXT>
 </Civ4GameText>

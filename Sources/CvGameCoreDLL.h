@@ -54,6 +54,7 @@
 #include <algorithm>
 #include <set>
 #include <fstream>
+#include <queue>
 
 //
 // Google sparsehash
@@ -143,7 +144,6 @@ DECLARE_FLAGS(ECacheAccess::flags);
 // #define STRENGTH_IN_NUMBERS
 // #define GLOBAL_WARMING
 // #define THE_GREAT_WALL
-// #define PARALLEL_MAPS
 // #define NOMADIC_START
 
 //
@@ -179,8 +179,10 @@ void EnableDetailedTrace(bool enable);
 void IFPSetCount(ProfileSample* sample, int count);
 #endif
 
-int intSqrt(unsigned int iValue, const bool bTreatNegAsPos=false);
+int intSqrt(const unsigned int iValue, const bool bTreatNegAsPos=false);
 int64_t intSqrt64(const uint64_t iValue);
+int intPow(const int x, const int p);
+int64_t intPow64(const int64_t x, const int p);
 
 #define	MEMORY_TRACK()
 #define MEMORY_TRACK_EXEMPT()
@@ -259,8 +261,21 @@ using bst::bind;
 namespace python = boost::python;
 #endif
 
-//#include <boost155/range/adaptor/filtered.hpp>
-//#include <boost155/range/adaptor/transformed.hpp>
+//
+// Xercesc
+//
+#include <xercesc/dom/DOM.hpp>
+#include <xercesc/util/XMLString.hpp>
+#include <xercesc/util/PlatformUtils.hpp>
+#include <xercesc/parsers/XercesDOMParser.hpp>
+#include <xercesc/sax/SAXException.hpp>
+#include <xercesc/sax/HandlerBase.hpp>
+#include <xercesc/sax/SAXException.hpp>
+#include <xercesc/sax/HandlerBase.hpp>
+#include <xercesc/framework/MemBufInputSource.hpp>
+#include <xercesc/framework/XMLGrammarPoolImpl.hpp>
+#include <xercesc/framework/Wrapper4InputSource.hpp>
+#include <xercesc/validators/common/Grammar.hpp>
 
 // Stupid define comes from windows and interferes with our stuff
 #undef Yield
@@ -283,15 +298,9 @@ namespace python = boost::python;
 #include "copy_iterator.h"
 #include "index_iterator_base.h"
 #include "logging.h"
-
 #include "algorithm2.h"
-
 #include "scoring.h"
-
-#include "CvAllocator.h"
-
 #include "FAssert.h"
-#include "CheckSum.h"
 #include "Stopwatch.h"
 #include "CvGameCoreDLLDefNew.h"
 #include "CvGameCoreDLLUnDefNew.h"
@@ -306,37 +315,23 @@ namespace python = boost::python;
 
 #include "CvDLLUtilityIFaceBase.h"
 #include "CvDLLEngineIFaceBase.h"
-#include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLPythonIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
-#include "CvDLLXMLIFaceBase.h"
-#include "CvDLLFlagEntityIFaceBase.h"
 
-#include "CvBuildingInfo.h"
 #include "BetterBTSAI.h"
 #include "CvGameCoreUtils.h"
 #include "CvBugOptions.h"
-#include "CvPopupInfo.h"
-#include "CvEventReporter.h"
-#include "CvMessageControl.h"
-#include "CvDeal.h"
+#include "CvInfos.h"
 #include "CvInfoWater.h"
 #include "CvViewport.h"
-#include "CvTalkingHeadMessage.h"
 #include "FProfiler.h"
-#include "CvPython.h"
 
 #include "SCvDebug.h"
 #include "SCvInternalGlobals.h"
 
-#include "CyGlobalContext.h"
-#include "CyArtFileMgr.h"
 #include "CyDeal.h"
 #include "CyMap.h"
 #include "CyArea.h"
-//#include "CyGame.h"
-//#include "CyTeam.h"
-//#include "CyPlayer.h"
 #include "CyCity.h"
 #include "CyUnit.h"
 #include "CySelectionGroup.h"

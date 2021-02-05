@@ -2,9 +2,10 @@
 // Python wrapper class for CvGame
 //
 
-#include "CvCity.h"
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CyCity.h"
 #include "CyDeal.h"
@@ -152,11 +153,6 @@ int CyGame::countCivTeamsAlive() const
 int CyGame::countCivTeamsEverAlive() const
 {
 	return m_pGame.countCivTeamsEverAlive();
-}
-
-int CyGame::countHumanPlayersAlive() const
-{
-	return m_pGame.countHumanPlayersAlive();
 }
 
 int CyGame::countTotalCivPower() const
@@ -737,6 +733,8 @@ bool CyGame::isOption(int /*GameOptionTypes*/ eIndex) const
 void CyGame::setOption(int /*GameOptionTypes*/ eIndex, bool bEnabled)
 {
 	m_pGame.setOption((GameOptionTypes)eIndex, bEnabled);
+	if (bEnabled)
+		m_pGame.enforceOptionCompatibility((GameOptionTypes)eIndex);
 }
 
 bool CyGame::isMPOption(int /*MultiplayerOptionTypes*/ eIndex) const
@@ -1078,12 +1076,12 @@ void CyGame::changeHumanPlayer(int eOldHuman, int eNewHuman)
 
 void CyGame::logw(std::wstring str)
 {
-	m_pGame.logMsg((TCHAR*)(CvString(str) + "\n").c_str());
+	logging::logMsgW("C2C.log", (wchar_t*)(CvString(str) + "\n").c_str());
 }
 
 void CyGame::log(TCHAR* str)
 {
-	m_pGame.logMsg(str);
+	logging::logMsg("C2C.log", str);
 }
 
 void CyGame::addReplayMessage(int /*ReplayMessageTypes*/ eType, int /*PlayerTypes*/ ePlayer, std::wstring pszText, int iPlotX, int iPlotY, int /*ColorTypes*/ eColor)
@@ -1191,51 +1189,6 @@ void CyGame::setModderGameOption(int /*ModderGameOptionTypes*/ eIndex, int iNewV
 	m_pGame.setModderGameOption((ModderGameOptionTypes)eIndex, iNewValue);
 }
 
-int CyGame::getWaterAnimalSpawnChance() const
-{
-	return m_pGame.getWaterAnimalSpawnChance();
-}
-
-void CyGame::setWaterAnimalSpawnChance(int iNewValue)
-{
-	m_pGame.setWaterAnimalSpawnChance(iNewValue);
-}
-
-void CyGame::changeWaterAnimalSpawnChance(int iNewValue)
-{
-	m_pGame.changeWaterAnimalSpawnChance(iNewValue);
-}
-
-int CyGame::getXResolution() const
-{
-	return m_pGame.getXResolution();
-}
-
-void CyGame::setXResolution(int iNewValue)
-{
-	m_pGame.setXResolution(iNewValue);
-}
-
-void CyGame::changeXResolution(int iNewValue)
-{
-	m_pGame.changeXResolution(iNewValue);
-}
-
-int CyGame::getYResolution() const
-{
-	return m_pGame.getYResolution();
-}
-
-void CyGame::setYResolution(int iNewValue)
-{
-	m_pGame.setYResolution(iNewValue);
-}
-
-void CyGame::changeYResolution(int iNewValue)
-{
-	m_pGame.changeYResolution(iNewValue);
-}
-
 bool CyGame::canEverResearch(int iTech) const
 {
 	return m_pGame.canEverResearch((TechTypes)iTech);
@@ -1259,4 +1212,9 @@ bool CyGame::canEverSpread(int iCorporation) const
 const char* CyGame::getC2CVersion() const
 {
 	return GC.getDefineSTRING("C2C_VERSION");
+}
+
+void CyGame::assignScenarioStartingPlots()
+{
+	m_pGame.assignScenarioStartingPlots();
 }

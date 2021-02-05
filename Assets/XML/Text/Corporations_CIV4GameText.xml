@@ -23,10 +23,12 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ïðîäóêòû èç çëàêîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_1_HQ</Tag>
 		<English>Cereal Mills HQ</English>
+		<Russian>Продукты из злаков</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_1_PEDIA</Tag>
@@ -59,16 +61,18 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Суши от Сида</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_2_HQ</Tag>
 		<English>Sid's Sushi Co HQ</English>
+		<Russian>Суши от Сида</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_2_PEDIA</Tag>
 		<English>Sushi is an ancient form of food preservation that originated in Southeast Asia in the fourth century BC. This technique of wrapping fish in vinegar-soaked rice spread through out Asia, making its way to China in the thirteenth century and later to Japan.[PARAGRAPH:1]In Japan, the dish became extremely popular in the early nineteenth century, when a sushi stall owner in Edo began placing bits of extremely fresh and even raw fish within or atop the classic bed of vinegar rice. It was here that modern sushi was born. Sushi has since become Japan's signature dish, and from the 1980s onward has become a popular delicacy throughout the world.</English>
 		<French>Le sushi vient d'une ancienne forme de conservation des aliments apparue dans le Sud-est asiatique au IVe siècle av. J.-C. Cette technique, qui consiste à enrouler du poisson dans du riz imbibé de vinaigre, se répandit en Asie pour parvenir en Chine au XIIIe siècle, avant de gagner le Japon.[PARAGRAPH:1]Au Japon, ce mets devint extrêmement populaire au début du XIXe siècle, quand un vendeur de sushis d'Edo commença à placer des morceaux de poisson extrêmement frais, voire crus, sur le classique gâteau de riz au vinaigre. Le sushi moderne était né. Depuis, le sushi est devenu un mets emblématique du Japon, que les gourmets s'arrachent dans le monde entier depuis les années 1980.</French>
-		<German>Sushi ist eine alte Form der Nahrungsmittelkonservierung, die im 4. Jahrhundert n. Chr. in Südostasien entstand. Die Technik, Fisch in essiggetränkten Reis einzuwickeln, verbreitete sich im 13. Jahrhundert bis nach China und später nach Japan.[PARAGRAPH:1]In Japan wurde das Gericht im frühen 19. Jahrhundert extrem populär, als ein Sushi-Budenbesitzer in Edo Stücke extrem frischen und sogar rohen Fischs in das klassische Bett aus Essigreis bzw. darauf legte. Das moderne Sushi war geboren. Seither ist Sushi das Nationalgericht Japans und seit 1980 entwickelte es sich auf der ganzen Welt zu einer beliebten Delikatesse.</German>
+		<German>Sushi ist eine alte Form der Nahrungsmittelkonservierung, die im 4. Jahrhundert n.Chr. in Südostasien entstand. Die Technik, Fisch in essiggetränkten Reis einzuwickeln, verbreitete sich im 13. Jahrhundert bis nach China und später nach Japan.[PARAGRAPH:1]In Japan wurde das Gericht im frühen 19. Jahrhundert extrem populär, als ein Sushi-Budenbesitzer in Edo Stücke extrem frischen und sogar rohen Fischs in das klassische Bett aus Essigreis bzw. darauf legte. Das moderne Sushi war geboren. Seither ist Sushi das Nationalgericht Japans und seit 1980 entwickelte es sich auf der ganzen Welt zu einer beliebten Delikatesse.</German>
 		<Italian>Il sushi è un'antica forma di preparazione del cibo che ebbe origine nel Sudest asiatico nel quarto secolo a.C. La tecnica di avvolgere il pesce nel riso cotto nell'aceto di riso si diffuse in tutta l'Asia, arrivando in Cina nel tredicesimo secolo e più tardi in Giappone.[PARAGRAPH:1]In Giappone questo piatto divenne estremamente popolare nel diciannovesimo secolo, quando il proprietario di un chiosco di sushi a Edo cominciò a mettere pezzi di pesce estremamente fresco, o addirittura crudo, all'interno o sopra il riso. Così nacque il sushi moderno. Da allora è uno dei piatti caratteristici del Giappone e dagli anni '80 in poi è diventata una specialità famosa in tutto il mondo.</Italian>
 		<Spanish>El sushi es una antigua forma de conservación de alimentos que se originó en el sureste de Asia en el siglo IV a. C. La técnica de envolver el pescado en arroz empapado en vinagre se extendió por Asia, llegó a China en el siglo XIII y, posteriormente, a Japón.[PARAGRAPH:1]En Japón, este plato se volvió tremendamente popular a principios del siglo XIX, cuando el dueño de un puesto de sushi de Edo empezó a poner trocitos de pescado recién hecho e incluso crudo dentro o alrededor del clásico lecho de arroz envinagrado. Fue aquí donde nació el sushi moderno. Desde entonces, el sushi se ha convertido en el plato más característico de Japón, y desde 1980 en adelante, se ha considerado un manjar en todo el mundo.</Spanish>
 	</TEXT>
@@ -95,10 +99,12 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ýòàíîë-ñòàíäàðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_3_HQ</Tag>
 		<English>Ethanol Inc. HQ</English>
+		<Russian>Этанол-стандарт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_3_PEDIA</Tag>
@@ -131,10 +137,12 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Êðåàòèâñòðîé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_4_HQ</Tag>
 		<English>Creative Constructions HQ</English>
+		<Russian>Креативстрой</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_4_PEDIA</Tag>
@@ -167,10 +175,12 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ãîðíûå ðåñóðñû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_5_HQ</Tag>
 		<English>Mining Inc HQ</English>
+		<Russian>Горные ресурсы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_5_PEDIA</Tag>
@@ -203,10 +213,12 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ïðîìàëþìèíèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_6_HQ</Tag>
 		<English>Aluminum Co HQ</English>
+		<Russian>Промалюминий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_6_PEDIA</Tag>
@@ -239,10 +251,12 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ìèðîâûå þâåëèðû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_7_HQ</Tag>
 		<English>Civilized Jewelers Inc HQ</English>
+		<Russian>Мировые ювелиры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_7_PEDIA</Tag>
@@ -255,6 +269,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE</Tag>
 		<English>Adventure Tours</English>
+		<Russian>Àäâåí÷åð-òóð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_FRANCHISE</Tag>
@@ -271,6 +286,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ôèëèàë "ÀÒ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_FRANCHISE_PEDIA</Tag>
@@ -294,6 +310,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Àäâåí÷åð-òóð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_PEDIA</Tag>
@@ -305,6 +322,7 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BULLSEYE</Tag>
 		<English>Bullseye</English>
 		<French>Gran'Frais</French>
+		<Russian>ßáëî÷êî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_HQ</Tag>
@@ -317,6 +335,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>ßáëî÷êî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_PEDIA</Tag>
@@ -334,6 +353,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ìàãàçèí "ßáëî÷êî"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_STORE_PEDIA</Tag>
@@ -344,6 +364,7 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD</Tag>
 		<English>Burgerworld</English>
 		<French>MondoBurger</French>
+		<Russian>Ìèð áóðãåðîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_HQ</Tag>
@@ -356,6 +377,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ìèð áóðãåðîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_PEDIA</Tag>
@@ -373,6 +395,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ðåñòîðàí "ÌÁ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_RESTAURANT_PEDIA</Tag>
@@ -384,6 +407,7 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH</Tag>
 		<English>Emperors Clothing</English>
 		<French>Habits Impériaux</French>
+		<Russian>Îäåæäà èìïåðàòîðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_HQ</Tag>
@@ -396,6 +420,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Îäåæäà èìïåðàòîðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_HQ_PEDIA</Tag>
@@ -418,6 +443,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Àòåëüå "ÎÈ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_STORE_PEDIA</Tag>
@@ -428,6 +454,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE</Tag>
 		<English>East West Traders</English>
+		<Russian>Âîñòîê-Çàïàä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE_HQ</Tag>
@@ -440,6 +467,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Âîñòîê-Çàïàä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE_PEDIA</Tag>
@@ -457,6 +485,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ìàãàçèí "ÂÇ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE_STORE_PEDIA</Tag>
@@ -467,6 +496,7 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_FASHION</Tag>
 		<English>Fashion House</English>
 		<French>Maison de la Mode</French>
+		<Russian>Äîì Ìîä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_FASHION_HQ</Tag>
@@ -479,6 +509,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Äîì Ìîä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_FASHION_HQ_PEDIA</Tag>
@@ -500,6 +531,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Àòåëüå "ÄÌ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_FASHION_STORE_PEDIA</Tag>
@@ -511,6 +543,7 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MALLWART</Tag>
 		<English>MallWart</English>
 		<French>Carouf'</French>
+		<Russian>Ìàëëâàðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MALLWART_HQ</Tag>
@@ -523,6 +556,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ìàëëâàðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MALLWART_PEDIA</Tag>
@@ -542,6 +576,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ìàãàçèí "Ìàëëâàðò"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MALLWART_STORE_PEDIA</Tag>
@@ -552,6 +587,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MAPSTER</Tag>
 		<English>Mapster</English>
+		<Russian>Ìàïñòåð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MAPSTER_HQ</Tag>
@@ -564,6 +600,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ìàïñòåð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MAPSTER_HQ_PEDIA</Tag>
@@ -572,12 +609,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MAPSTER_PEDIA</Tag>
 		<English>Mass media denotes a section of the media specifically designed to reach a large audience. The term was coined in the 1920s with the advent of nationwide radio networks, mass-circulation newspapers and magazines. However, some forms of mass media such as books and manuscripts had already been in use for centuries.[NEWLINE]Mass media includes Internet media (like blogs, message boards, podcasts, and video sharing) because individuals now have a means to exposure that is comparable in scale to that previously restricted to a select group of mass media producers. The communications audience has been viewed by some commentators as forming a mass society with special characteristics, notably atomization or lack of social connections, which render it especially susceptible to the influence of modern mass-media techniques such as advertising and propaganda. The term "MSM" or "mainstream media" has been widely used in the blogosphere in discussion of the mass media and media bias.</English>
-		<Italian>Mass media indica una parte dei media progettati esplicitamente per raggiungere una grande quantità di persone. Il termine venne coniato negli anni 20 con l'avvento delle reti radio nazionali e la circolazione di massa dei quotidiani. Comunque, forme di comunicazione di massa come libri e manoscritti erano in uso già da secoli.[NEWLINE]I mass media includono i media su internet (come blog, messaggis, podcast e video sharing) perchè gli individui hanno ora un mezzo per esprimersi comparabile a quello prima riservato solo a un gruppo diproduttori di mass media. L'audience delle comunicazioni è stata vista da alcuni commentatori come una società di massa con speciali caratteristiche, come l'atomizzazione e la perdita di connessioni sociali, che la rendono suscettibile alle moderne tecniche di influenza dei mass media, come la pubblicità e la propaanda. L'acronimo "MSM", mainstream media, viene ampiamente usato nella bloosfera nelle discussioni riuardati i mass media.</Italian>
+		<Italian>Mass media indica una parte dei media progettati esplicitamente per raggiungere una grande quantità di persone. Il termine venne coniato negli anni venti del XX secolo con l'avvento delle reti radio nazionali e la circolazione di massa dei quotidiani. Comunque, forme di comunicazione di massa come libri e manoscritti erano in uso già da secoli.[NEWLINE]I mass media includono i media su internet (come blog, messaggi, podcast e video sharing) perché gli individui hanno ora un mezzo per esprimersi comparabile a quello prima riservato solo a un gruppo di produttori di mass media. L'audience delle comunicazioni è stata vista da alcuni commentatori come una società di massa con speciali caratteristiche, come l'atomizzazione e la perdita di connessioni sociali, che la rendono suscettibile alle moderne tecniche di influenza dei mass media, come la pubblicità e la propaganda.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS</Tag>
 		<English>Big McDowells</English>
 		<Spanish>McDowells</Spanish>
+		<Russian>Áèã-Ìàêäàóýëë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_HQ</Tag>
@@ -590,11 +628,12 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Áèã-Ìàêäàóýëë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_PEDIA</Tag>
-		<English>Fast Food Restaurants are the lifeblood of these companies. Serving Burgers and Fries for lunch and Dinner and a Muffin Sandwich for breakfast for hungry customer, in foreign branches the same company not only makes Fast Food but also Pub/Diner Food available to the consumers there since smaller investments in foreign cities is risky and given the turnover rate of unsuccessful restaurants it will be a heavy risk to go in without major corporation backing. Hong Kongs Fast Food branches for example have implemented several Hong Kong Cuisine Classics to their menu and some places like Germany allow beer to be served in their restaurants.[PARAGRAPH:1]Built under a Bureaucratic factory System, food produced here is cheap, fast and filling which has been so effective that it has a social effect termed as "McDonaldization" where Efficiency, Calculability, Predictability and Control is what society needs.</English>
-		<Italian>I ristoranti fast food sono la linfa vitale di queste compagnie. Servendo panini e patatine a pranzo e cena, oltre a muffin per colazione, nelle filiali straniere la stessa compagnia rende disponibili ai propri clienti non solo cibi da fast food, ma anche cibo da pub, dato che i piccoli investimenti in città straniere sono rischiosi e, dato il tasso elevato di ristoranti che non hanno successo, sarebbe un grande rischio aprire un ristorante senza avere le spalle coperte da una corporazione. I fast food di Hong Konghanno aggiunto ai propri menù molti classici della cucina di Hong Kong, mentre alcuni posti, come la Germania, permettono la vendita di birra nei ristoranti.[PARAGRAPH:1]Prodotto con un sistema burocratico, questo cibo è economico,veloce e riempitivo, un fatto così importante da creare il termine "McDonaldizzazione" dove efficienza, calcolabilità, prevedibilità e controllo sono ciò di cui la società ha bisogno.</Italian>
+		<English>Fast Food Restaurants are the lifeblood of these companies. Serving Burgers and Fries for lunch and Dinner and a Muffin Sandwich for breakfast for hungry customer, in foreign branches the same company not only makes Fast Food but also Pub/Diner Food available to the consumers there since smaller investments in foreign cities is risky and given the turnover rate of unsuccessful restaurants it will be a heavy risk to go in without major corporation backing. Hong Kong's Fast Food branches for example have implemented several Hong Kong Cuisine Classics to their menu and some places like Germany allow beer to be served in their restaurants. Built under a Bureaucratic factory System, food produced here is cheap, fast and filling which has been so effective that it has a social effect termed as "McDonaldization" where efficiency, calculability, predictability and control is what society needs.</English>
+		<Italian>I ristoranti fast food sono la linfa vitale di queste compagnie. Servendo panini e patatine a pranzo e cena, oltre a muffin per colazione, nelle filiali straniere la stessa compagnia rende disponibili ai propri clienti non solo cibi da fast food, ma anche cibo da pub, dato che i piccoli investimenti in città straniere sono rischiosi e, dato il tasso elevato di ristoranti che non hanno successo, sarebbe un grande rischio aprire un ristorante senza avere le spalle coperte da una corporazione. I fast food di Hong Kong hanno aggiunto ai propri menù molti classici della cucina di Hong Kong, mentre alcuni posti, come la Germania, permettono la vendita di birra nei ristoranti. Prodotto con un sistema burocratico, questo cibo è economico, veloce e riempitivo, un fatto così importante da creare il termine "McDonaldizzazione" dove efficienza, calcolabilità, prevedibilità e controllo sono ciò di cui la società ha bisogno.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_RESTAURANT</Tag>
@@ -607,6 +646,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ðåñòîðàí "ÁÌ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_RESTAURANT_PEDIA</Tag>
@@ -617,6 +657,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MILEHIGH</Tag>
 		<English>MileHigh Travels International</English>
+		<Russian>Ìèëõàé Òðåâåë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_FRANCHISE</Tag>
@@ -629,6 +670,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ôèëèàë "ÌÒ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_FRANCHISE_PEDIA</Tag>
@@ -646,6 +688,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ìèëõàé Òðåâåë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_PEDIA</Tag>
@@ -654,6 +697,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOBBY</Tag>
 		<English>Mobby Meats International</English>
+		<Russian>Ìÿñî Ìîááè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOBBY_HQ</Tag>
@@ -666,6 +710,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ìÿñî Ìîááè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOBBY_PEDIA</Tag>
@@ -683,6 +728,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ìàãàçèí "ÌÌ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOBBY_STORE_PEDIA</Tag>
@@ -694,6 +740,7 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOONBEAN</Tag>
 		<English>MoonBean Coffee</English>
 		<French>Cafés MoonBean</French>
+		<Russian>Ìóíáèí êàôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_HQ</Tag>
@@ -706,6 +753,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ìóíáèí êàôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_HQ_PEDIA</Tag>
@@ -722,6 +770,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ðåñòîðàí "ÌÊ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_SHOP_PEDIA</Tag>
@@ -731,6 +780,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_RED</Tag>
 		<English>Red Curtains</English>
+		<Russian>Êðàñíûå êóëèñû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_RED_HQ</Tag>
@@ -743,6 +793,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Êðàñíûå êóëèñû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_RED_PEDIA</Tag>
@@ -760,6 +811,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Òåàòð "ÊÊ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_RED_THEATER_PEDIA</Tag>
@@ -770,6 +822,7 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_SAFARI</Tag>
 		<English>Safari Hunters</English>
 		<French>Chasseurs Safari</French>
+		<Russian>Îõîòíèêè ñàôàðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_SAFARI_GUIDE</Tag>
@@ -782,6 +835,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ôèëèàë "ÎÑ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_SAFARI_GUIDE_PEDIA</Tag>
@@ -799,6 +853,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Îõîòíèêè ñàôàðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_SAFARI_PEDIA</Tag>
@@ -809,6 +864,7 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER</Tag>
 		<English>Ultimate Soldiers</English>
 		<French>Soldats Ultimes</French>
+		<Russian>Óíèâåðñàëüíûå ñîëäàòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_HQ</Tag>
@@ -816,12 +872,14 @@
 		<French>Le Siège de Soldats Ultimes</French>
 		<German>Ultimate Soldiers Zentrale</German>
 		<Italian>QG di Ultimate Soldiers</Italian>
+		<Russian>Óíèâåðñàëüíûå ñîëäàòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_PEDIA</Tag>
 		<English>Arms Production has always been mostly a government duty during the earlier with most of the weapons being built by the nation owned armories, but with private investors such as Smith and Wesson and Krupp Steelworks and Boeing, weapon production shifted from the duty of the government to the private sector. Billions of dollars is spent yearly to devise new and inventive ways to not only protect the nation from threats but also extend their influence worldwide against other groups that may fall afoul of the interests of the government. As well as producing weapons, this company also covers Private Military Contractors, who hires mostly professional soldiers (80% of the PMCs soldiers consists of ex-military or law enforcement) who have at least 5-10 years of experience in the military branches but has "Retired" by the government due to their age and placing them in non-military roles such as office work. An approved PMC usually offer security services to a variety of people or certain areas that normal soldiers cannot reach due to chain of command, others work as soldiers of fortune or belief. Contrary to popular belief in fiction, no PMC is willing to recruit fresh out of school soldiers since sending them back in a body bag can be very poor for their reputation of professional soldiers.</English>
 		<German>Die Produktion von Waffen war früher hauptsächlich Aufgabe der Regierungen. Die meisten Waffen wurden durch nationale Waffenerzeuger hergestellt. Durch den zunehmenden Einfluss privater Investoren wie Smith and Wesson, Krupp Stahlwerke und Boeing hat sich die Waffenerzeugung in den privaten Sektor verlagert. Viele Milliarden Dollar werden jährlich in die Rüstungsindustrie gesteckt - nicht nur um die Nationen vor Bedrohungen von Außen zu schützen, sondern auch um den weltweiten Einfluss auf andere Gruppierungen zu stärken, die eventuell gegen die Interessen der Regierungen handeln könnten. Dieses Unternehmen stellt Waffen her und beliefert aber ebenso private militärische Vertragspartner, die professionell ausgebildete und erfahrene Soldaten für Spezialeinsätze engagieren. Durch die private Organisation haben sie oftmals Möglichkeiten, die normalen Soldaten beispielsweise aufgrund der Befehlsketten nicht zur Verfügung stehen. Entgegen landläufiger Meinungen möchte keiner dieser Vertragspartner Frischlinge einstellen - sie in Leichensäcken zurückzuschicken könnte dem professionellen Image schaden.</German>
 		<Italian>La produzione di armi è sempre stata per lo più un dovere del governo all'inizio, con la maggior parte delle armi costruite dalle armerie statali, ma con gli investitori privati, come Smith, Wesson, Acciaierie Krupp e Boeing, la produzione di armi si è spostata da dovere del governo al settore privato. Miliardi di dollari vengono spesi ogni anno per escogitare modi nuovi e fantasiosi per non solo proteggere la nazione dalle minacce, ma anche per estendere la sua influenza in tutto il mondo contro altri gruppi che possono rientrare negli interessi del governo. Oltre alla produzione di armi, questa azienda si estende anche alle PMC, che assumono per lo più i militari di carriera (80% dei soldati delle PMC è composto di ex militari) che hanno almeno 5-10 anni di esperienza nei rami militari, ma sono "in pensione" a causa della loro età e vengono impiegati in ruoli non militari, come il lavoro d'ufficio. Un PMC approvato offre in genere servizi di protezione a una varietà di persone o di talune regioni che i soldati normali non possono raggiungere a causa della catena di comando, altri lavorano come soldati di ventura o per convinzioni personali. Contrariamente alla credenza popolare nella finzione, nessuna PMC è disposta a reclutare soldati freschi di scuola in quanto riportarli indietro in un sacco di plastica può essere molto negativo per la loro fama di soldati professionisti.</Italian>
+		<Russian>Îðóæåéíîå ïðîèçâîäñòâî âñåãäà áûëî ãëàâíûì îáðàçîì ïðàâèòåëüñòâåííîé îáÿçàííîñòüþ âî âðåìÿ ðàíåå ñ áîëüøåé ÷àñòüþ îðóæèÿ, ïîñòðîåííîãî ñêëàäàìè îðóæèÿ íàõîäèâøèìèñÿ â ñîáñòâåííîñòè ñòðàíû, íî ñ ÷àñòíûìè èíâåñòîðàìè, òàêèìè êàê Ñìèò è Ñòàëåëèòåéíûé çàâîä Âåññîíà è Krupp è Áîèíã, ïðîèçâîäñòâî îðóæèÿ, ïåðåìåùåííîå îò îáÿçàííîñòè ïðàâèòåëüñòâà ÷àñòíîìó ñåêòîðó. Ìèëëèàðäû äîëëàðîâ ïîòðà÷åíû åæåãîäíî, ÷òîáû ñîçäàòü íîâûå è èçîáðåòàòåëüíûå ïóòè ê íå, òîëüêî çàùèùàþò ñòðàíó îò óãðîç, íî òàêæå è ðàñøèðÿþò èõ âëèÿíèå âî âñåì ìèðå ïðîòèâ äðóãèõ ãðóïï, êîòîðûå ìîãóò ñòîëêíóòüñÿ ñ èíòåðåñàìè ïðàâèòåëüñòâà. Òàê æå êàê ïðîèçâîäñòâî îðóæèÿ, ýòà êîìïàíèÿ òàêæå ïîêðûâàåò ×àñòíûõ Âîåííûõ Ïîäðÿä÷èêîâ, êîòîðûå íàíèìàþò ãëàâíûì îáðàçîì êàäðîâûõ âîåííûõ (80% ñîëäàò PMCs ñîñòîÿò èç ýêñ-âîîðóæåííûõ ñèë èëè ïðîâåäåíèÿ çàêîíîâ â æèçíü), ó êîãî åñòü ïî êðàéíåé ìåðå 5-10 ëåò îïûòà â âîåííûõ îòäåëåíèÿõ, íî ''Óäàëèëñÿ'' ïðàâèòåëüñòâîì èç-çà èõ âîçðàñòà è ðàçìåùåíèÿ èõ â íåâîåííûõ ðîëÿõ, òàêèõ êàê îôèñíàÿ ðàáîòà. Îäîáðåííûé PMC îáû÷íî ïðåäëàãàåò ñëóæáû áåçîïàñíîñòè ìíîæåñòâó ëþäåé èëè îïðåäåëåííûõ îáëàñòåé, êîòîðûõ íîðìàëüíûå ñîëäàòû íå ìîãóò äîñòèãíóòü èç-çà öåïè èíñòàíöèé, äðóãèå ðàáîòàþò íàåìíèêàìè èëè âåðîé. Ïðîòèâîðå÷àùèé øèðîêî ðàñïðîñòðàíåííîìó ìíåíèþ â áåëëåòðèñòèêå, íèêàêîé PMC íå ãîòîâ ïðèíÿòü íà ðàáîòó íîâûé èç øêîëüíûõ ñîëäàò íà÷èíàÿ ñ îòñûëàíèÿ íàçàä èõ â ïîõîðîííîì ìåøêå, ìîæåò áûòü î÷åíü áåäíûì äëÿ èõ ðåïóòàöèè êàäðîâûõ âîåííûõ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_TRAINER</Tag>
@@ -834,18 +892,21 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Áàçà "ÓÑ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_TRAINER_PEDIA</Tag>
 		<English>PMCs do not only provide military services for armies, but they also provide a source of military training for various military institutions. Thanks to the high quality former soldiers and spec-ops, they are used to help out in training men in a variety of military related things such as explosive disarmament, improving combat efficiency as well as other military skills that may improve one's chance in combat. With the end of the Cold War and the reduction of standing armies, PMCs also offer employment opportunities to discharged soldiers worldwide.</English>
 		<German>Private militärische Vertragspartner bieten einerseits Militärservices für Armeen, andererseits stellen sie auch Militärtraining für diverse militärische Institutionen zur Verfügung. Durch die hohen Ausbildungsstandards und langjährigen Erfahrungen der Soldaten auch in Spezialeinsätzen sind die Trainer besonders gut geeignet, Rekruten hochspezialisiert auszubilden in Bombenentschärfung, Kampfeffizienz, diverse andere militärische Fähigkeiten, die die eigenen Kampfchancen verbessern. Nach dem Ende des Kalten Krieges und der Verringerung der stehenden Streitkräfte stellen diese privaten militärischen Partner auch eine ausgezeichnete Beschäftigung für ehemalige Soldaten aller Welt dar.</German>
 		<Italian>Le PMC non solo forniscono servizi militari per gli eserciti, ma forniscono anche una fonte di addestramento militare per varie istituzioni. Grazie ai soldati di alta qualità ed ex forze speciali, sono utilizzate per contribuire alla formazione in una varietà di compiti correlati ai militari, come il disarmo di esplosivi, il miglioramento dell'efficienza in combattimento così come altre abilità militari che possono migliorare la possibilità proprio in combattimento. Con la fine della Guerra Fredda e la riduzione di eserciti permanenti, le PMC offrono anche opportunità di lavoro ai soldati in congedo in tutto il mondo.</Italian>
+		<Russian>PMCs íå òîëüêî ïðåäîñòàâëÿþò âîåííûå ñëóæáû àðìèÿì, íî îíè òàêæå îáåñïå÷èâàþò èñòî÷íèê âîåííîé ïîäãîòîâêè äëÿ ðàçëè÷íûõ âîåííûõ ó÷ðåæäåíèé. Áëàãîäàðÿ âûñîêîêà÷åñòâåííûì áûâøèì ñîëäàòàì è ñïåêóëÿöèè-ops, îíè èñïîëüçóþòñÿ, ÷òîáû âûðó÷èòü â ó÷åáíûõ ìóæ÷èíàõ âî ìíîæåñòâå ñâÿçàííûõ âåùåé âîîðóæåííûõ ñèë, òàêèõ êàê âçðûâ÷àòîå ðàçîðóæåíèå, ïîâûøàÿ áîåâóþ ýôôåêòèâíîñòü òàê æå êàê äðóãèå âîåííûå íàâûêè, êîòîðûå ìîãóò óëó÷øèòü øàíñ â áîþ. Ñ êîíöîì õîëîäíîé âîéíû è ñîêðàùåíèåì ïîñòîÿííûõ àðìèé, PMCs òàêæå ïðåäëàãàþò âîçìîæíîñòè òðóäîóñòðîéñòâà îñâîáîæäåííûì îò îáÿçàòåëüñòâ ñîëäàòàì âî âñåì ìèðå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_WONKA</Tag>
 		<English>Wonka Confectioneries</English>
 		<French>Confiseries Wonka</French>
 		<German>Wonka Confiserie</German>
+		<Russian>Êîíäèòåðñêàÿ Âîíêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_WONKA_HQ</Tag>
@@ -858,6 +919,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Êîíäèòåðñêàÿ Âîíêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_WONKA_PEDIA</Tag>
@@ -877,6 +939,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ðåñòîðàí "ÊÂ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_WONKA_SHOP_PEDIA</Tag>
@@ -892,6 +955,7 @@
 		<German>[ICON_BULLET]%d1%% Einkommen aus Kapitalgesellschaften</German>
 		<Italian>[ICON_BULLET]%d1%% di rendita dalle Corporazioni</Italian>
 		<Spanish>[ICON_BULLET]%d1%%[ICON_GOLD] por corporaciones</Spanish>
+		<Russian>[ICON_BULLET]%d1%% Äîõîä ñ êîðïîðàöèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CORPORATION_ALL_CITIES</Tag>
@@ -900,6 +964,7 @@
 		<German>[ICON_BULLET]alle Städte: %s1_yield_symbols pro konsumierter Ressource</German>
 		<Italian>[ICON_BULLET]Tutte le città: %s1_yield_symbols per risorse consumate</Italian>
 		<Spanish>[ICON_BULLET]Todas las ciudades: %s1_yield_symbols por recurso consumido</Spanish>
+		<Russian>[ICON_BULLET]Âñå ãîðîäà: %s1_yield_symbols çà êàæäûé ïîòðåáëÿåìûé ðåñóðñ </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CORPORATION_BONUS_CONSUMES</Tag>
@@ -912,6 +977,7 @@
 		<German>[ICON_BULLET]Erzeugt:</German>
 		<Italian>[ICON_BULLET]Genera:</Italian>
 		<Spanish>[ICON_BULLET]Genera:</Spanish>
+		<Russian>[ICON_BULLET]Ïðîèçâîäèò:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CORPORATION_HAPPINESS</Tag>
@@ -920,6 +986,7 @@
 		<German>[ICON_BULLET]Städte erhalten +%d1 [ICON_HAPPY]</German>
 		<Italian>[ICON_BULLET]Le città ricevono +%d1 [ICON_HAPPY]</Italian>
 		<Spanish>[ICON_BULLET]Las ciudades reciben +%d1[ICON_HAPPY]</Spanish>
+		<Russian>[ICON_BULLET]Ãîðîäà ïîëó÷àþò +%d1 [ICON_HAPPY]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CORPORATION_HEALTHINESS</Tag>
@@ -928,6 +995,7 @@
 		<German>[ICON_BULLET]Städte erhalten +%d1 [ICON_HEALTHY]</German>
 		<Italian>[ICON_BULLET]Le città ricevono +%d1 [ICON_HEALTHY]</Italian>
 		<Spanish>[ICON_BULLET]Las ciudades reciben +%d1[ICON_HEALTHY]</Spanish>
+		<Russian>[ICON_BULLET]Ãîðîäà ïîëó÷àþò +%d1 [ICON_HEALTHY]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CORPORATION_UNHAPPINESS</Tag>
@@ -936,6 +1004,7 @@
 		<German>[ICON_BULLET]Städte erhalten +%d1 [ICON_UNHAPPY]</German>
 		<Italian>[ICON_BULLET]Le città ricevono +%d1 [ICON_UNHAPPY]</Italian>
 		<Spanish>[ICON_BULLET]Las ciudades reciben +%d1[ICON_UNHAPPY]</Spanish>
+		<Russian>[ICON_BULLET]Ãîðîäà ïîëó÷àþò +%d1 [ICON_UNHAPPY]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CORPORATION_UNHEALTHINESS</Tag>
@@ -944,5 +1013,6 @@
 		<German>[ICON_BULLET]Städte erhalten +%d1 [ICON_UNHEALTHY]</German>
 		<Italian>[ICON_BULLET]Le città ricevono +%d1 [ICON_UNHEALTHY]</Italian>
 		<Spanish>[ICON_BULLET]Las ciudades reciben +%d1[ICON_UNHEALTHY]</Spanish>
+		<Russian>[ICON_BULLET]Ãîðîäà ïîëó÷àþò +%d1 [ICON_UNHEALTHY]</Russian>
 	</TEXT>
 </Civ4GameText>

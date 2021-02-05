@@ -6,6 +6,7 @@
 		<French>Traditions du Maître Chasseur</French>
 		<German>Tradition des Meisterjägers</German>
 		<Polish>Tradycje Wybitnego Łowcy</Polish>
+		<Russian>Îõîòíè÷èé êëóá</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER_TRADITION_PEDIA</Tag>
@@ -17,7 +18,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER_TRADITION_STRATEGY</Tag>
 		<English>Provides health and happiness bonuses with game animals. Units built here get free hunting promotion.</English>
-		<French>Procure des bonus en santé et bonheur grâce aux animaux. Les unités construites ici recoivent la promotion 'chasseur'.</French>
+		<French>Procure des bonus en santé et bonheur grâce aux animaux. Les unités construites ici reçoivent la promotion 'chasseur'.</French>
 		<German>Erzeugt Gesundheit und Zufriedenheit mit Großwild. Einheiten die hier gebaut werden, bekommen die Jagtbeförderung kostenlos.</German>
 	</TEXT>
 	<TEXT>
@@ -26,6 +27,7 @@
 		<French>Spécialisation Maître Chasseur</French>
 		<German>Meisterjäger</German>
 		<Polish>Wybitny Łowca</Polish>
+		<Russian>Îïûòíûé îõîòíèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SEA_MASTER_HUNTER</Tag>
@@ -33,6 +35,7 @@
 		<French>Maître Chasseur des Mers</French>
 		<German>Meisterjäger des Meeres</German>
 		<Polish>Wybitny Morski Łowca</Polish>
+		<Russian>Îïûòíûé ðûáàê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MASTER_HUNTER1</Tag>
@@ -40,6 +43,7 @@
 		<French>Maître Chasseur I</French>
 		<German>Meisterjäger I</German>
 		<Polish>Wybitny Łowca I</Polish>
+		<Russian>Îïûòíûé îõîòíèê I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MASTER_HUNTER2</Tag>
@@ -47,6 +51,7 @@
 		<French>Maître Chasseur II</French>
 		<German>Meisterjäger II</German>
 		<Polish>Wybitny Łowca II</Polish>
+		<Russian>Îïûòíûé îõîòíèê II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MASTER_HUNTER3</Tag>
@@ -54,6 +59,7 @@
 		<French>Maître Chasseur III</French>
 		<German>Meisterjäger III</German>
 		<Polish>Wybitny Łowca III</Polish>
+		<Russian>Îïûòíûé îõîòíèê III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SEA_MASTER_HUNTER1</Tag>
@@ -61,6 +67,7 @@
 		<French>Maître Chasseur des Mers I</French>
 		<German>Meisterjäger des Meeres I</German>
 		<Polish>Wybitny Morski Łowca I</Polish>
+		<Russian>Îïûòíûé ðûáàê I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SEA_MASTER_HUNTER2</Tag>
@@ -68,6 +75,7 @@
 		<French>Maître Chasseur des Mers II</French>
 		<German>Meisterjäger des Meeres II</German>
 		<Polish>Wybitny Morski Łowca II</Polish>
+		<Russian>Îïûòíûé ðûáàê II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SEA_MASTER_HUNTER3</Tag>
@@ -75,6 +83,7 @@
 		<French>Maître Chasseur des Mers III</French>
 		<German>Meisterjäger des Meeres III</German>
 		<Polish>Wybitny Morski Łowca III</Polish>
+		<Russian>Îïûòíûé ðûáàê III</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_BIG_GAME_HUNTER</Tag>
@@ -82,6 +91,7 @@
 		<French>Maître de Chasse Safari</French>
 		<German>Meister Großwildjäger</German>
 		<Polish>Wybitny Myśliwy Grubej Zwierzyny</Polish>
+		<Russian>Ìàñòåð-çàãîíùèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_GAME_HUNTER</Tag>
@@ -89,6 +99,7 @@
 		<French>Maître de Chasse sportive</French>
 		<German>Meister Wildjäger</German>
 		<Polish>Wybitny Myśliwy</Polish>
+		<Russian>Ìàñòåð-îõîòíèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_HUNTER</Tag>
@@ -96,12 +107,13 @@
 		<French>Maître Chasseur</French>
 		<German>Meisterfährtenleser</German>
 		<Polish>Wybitny Łowca</Polish>
+		<Russian>Ìàñòåð-çâåðîëîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_HUNTER_PEDIA</Tag>
 		<English>Only Great Hunters may become Master Hunters. Master Hunters are special versions of the normal hunter. They are much more likely to subdue animals so that the food and hammer returns from them are higher.</English>
 		<German>Nur Große Jäger können Meisterjäger werden. Meisterjäger sind spezielle Varianten des normalen Jägers. Es ist wesentlich wahrscheinlicher das sie Tiere bändigen, so das mehr Nahrung und Produktion von ihnen erzeugt wird.</German>
-		<Polish>Tylko Wielcy Łowcy mogą zostać Wybitnymi Łowcami. Wybitni Łowcy są specjalą wersją normalnych myśliwych. Są bardziej sprawni w łapaniu zwierząt żywcem.</Polish>
+		<Polish>Tylko Wielcy Łowcy mogą zostać Wybitnymi Łowcami. Wybitni Łowcy są specjalna wersją normalnych myśliwych. Są bardziej sprawni w łapaniu zwierząt żywcem.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_HUNTER_STRATEGY</Tag>
@@ -116,12 +128,14 @@
 		<French>Maître Ranger</French>
 		<German>Meister Ranger</German>
 		<Polish>Wybitny Strażnik Lasu</Polish>
+		<Russian>Ìàñòåð-ñëåäîïûò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_TRACKER</Tag>
 		<English>Master Tracker</English>
 		<French>Maître Pisteur</French>
 		<Polish>Wybitny Tropiciel</Polish>
+		<Russian>Ìàñòåð-ëîâåö</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_WARDEN</Tag>
@@ -129,5 +143,6 @@
 		<French>Maître Garde-chasse</French>
 		<German>Meisteraufseher</German>
 		<Polish>Wybitny Opiekun</Polish>
+		<Russian>Ìàñòåð-çâåðîáîé</Russian>
 	</TEXT>
 </Civ4GameText>

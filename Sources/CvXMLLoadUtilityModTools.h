@@ -25,7 +25,6 @@ class CvXMLLoadUtilityModTools
 {
 //---------------------------------------PUBLIC INTERFACE---------------------------------
 public:
-	
 	void StringArrayExtend( CvString **ppszListNew, int* iNumNewListElements,
 							CvString **ppszListOld, int iNumOldListElements,
 							CvString szDefaultListVal = CvString()) const;
@@ -37,11 +36,9 @@ public:
 	bool isExcludedFile(const char* szLocationName);
 	bool isCommaFile(CvString *pszTextVal, const char* szDirName);
 	bool isModularArt(const char* szLocationName);
-	CvString GetProgramDir();
 	CvString deleteFileName(const char* szDirName, const char szLocateChar);
 
 	void writeThm(const char* szTextVal);
-
 };
 
 #endif	// XML_LOAD_UTILITY_H

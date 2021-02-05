@@ -14246,6 +14246,13 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>DIPLO_WRUB_EARLY</SoundID>
+			<Filename>Sounds/Diplomacy/Wrub_Early</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
 			<SoundID>SND_TECH_HEAT_TREATMENT</SoundID>
 			<Filename>Sounds/Tech/01_Heat_Treatment</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -16752,7 +16759,7 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_MINE_WARFARE2</SoundID>
+			<SoundID>SND_TECH_MINE_WARFARE</SoundID>
 			<Filename>Sounds/Tech/05_Mine_Warfare</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
@@ -18049,6 +18056,20 @@
 		<SoundData>
 			<SoundID>SND_TECH_ORATORY</SoundID>
 			<Filename>Sounds/Tech/02_Oratory</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_TECH_HELIOCENTRISM</SoundID>
+			<Filename>Sounds/Tech/05_Heliocentrism</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_TECH_LEAD_GLASS</SoundID>
+			<Filename>Sounds/Tech/05_Lead_Glass</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>

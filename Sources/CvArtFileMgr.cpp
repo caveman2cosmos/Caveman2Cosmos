@@ -12,6 +12,8 @@
 //  Copyright (c) 2004 Firaxis Games, Inc. All rights reserved.
 //---------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvArtFileMgr.h"
+#include "CvXMLLoadUtility.h"
 
 // Macro for Building Art Info Maps
 #if 0	// DEBUGGING
@@ -114,7 +116,7 @@ static CvArtFileMgr* gs_ArtFileMgr = NULL;
 
 CvArtFileMgr& CvArtFileMgr::GetInstance()
 {
-	if ( gs_ArtFileMgr == NULL )
+	if (gs_ArtFileMgr == NULL)
 	{
 		gs_ArtFileMgr = new CvArtFileMgr();
 
@@ -144,10 +146,9 @@ CvArtFileMgr& CvArtFileMgr::GetInstance()
 //----------------------------------------------------------------------------
 void CvArtFileMgr::Init()
 {
-	int i;
-	for(i=0;i<(int)m_artInfoItems.size();i++)
+	foreach_(ArtInfoItem* item, m_artInfoItems)
 	{
-		m_artInfoItems[i]->init();
+		item->init();
 	}
 }
 
@@ -160,10 +161,9 @@ void CvArtFileMgr::Init()
 //----------------------------------------------------------------------------
 void CvArtFileMgr::DeInit()
 {
-	int i;
-	for(i=0;i<(int)m_artInfoItems.size();i++)
+	foreach_(ArtInfoItem* item, m_artInfoItems)
 	{
-		m_artInfoItems[i]->deInit();
+		item->deInit();
 	}
 }
 
@@ -192,9 +192,8 @@ void CvArtFileMgr::Reset()
 //----------------------------------------------------------------------------
 void CvArtFileMgr::buildArtFileInfoMaps()
 {
-	int i;
-	for(i=0;i<(int)m_artInfoItems.size();i++)
+	foreach_(ArtInfoItem* item, m_artInfoItems)
 	{
-		m_artInfoItems[i]->buildMap();
+		item->buildMap();
 	}
 }
