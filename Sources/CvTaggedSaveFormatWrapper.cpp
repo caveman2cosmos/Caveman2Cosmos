@@ -314,7 +314,7 @@ typedef struct value_entry_unsigned_int_array
 {
 	int id;
 	int numInts;
-	uint16_t value[VAR];
+	uint32_t value[VAR];
 } value_entry_unsigned_int_array;
 
 //	Value entry for type long
