@@ -180,7 +180,6 @@ m_piAreaYieldModifier(NULL),
 m_piGlobalYieldModifier(NULL),
 m_piCommerceChange(NULL),
 m_piCommercePerPopChange(NULL),
-m_piObsoleteSafeCommerceChange(NULL),
 m_piCommerceChangeDoubleTime(NULL),
 m_piCommerceModifier(NULL),
 m_piGlobalCommerceModifier(NULL),
@@ -352,7 +351,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_piGlobalYieldModifier);
 	SAFE_DELETE_ARRAY(m_piCommerceChange);
 	SAFE_DELETE_ARRAY(m_piCommercePerPopChange);
-	SAFE_DELETE_ARRAY(m_piObsoleteSafeCommerceChange);
 	SAFE_DELETE_ARRAY(m_piCommerceChangeDoubleTime);
 	SAFE_DELETE_ARRAY(m_piCommerceModifier);
 	SAFE_DELETE_ARRAY(m_piGlobalCommerceModifier);
@@ -593,17 +591,6 @@ int CvBuildingInfo::getCommercePerPopChange(int i) const
 int* CvBuildingInfo::getCommercePerPopChangeArray() const
 {
 	return m_piCommercePerPopChange;
-}
-
-int CvBuildingInfo::getObsoleteSafeCommerceChange(int i) const
-{
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
-	return m_piObsoleteSafeCommerceChange ? m_piObsoleteSafeCommerceChange[i] : 0;
-}
-
-int* CvBuildingInfo::getObsoleteSafeCommerceChangeArray() const
-{
-	return m_piObsoleteSafeCommerceChange;
 }
 
 int CvBuildingInfo::getCommerceChangeDoubleTime(int i) const
@@ -2066,7 +2053,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSumI(iSum, NUM_YIELD_TYPES, m_piGlobalYieldModifier);
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_piCommerceChange);
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_piCommercePerPopChange);
-	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_piObsoleteSafeCommerceChange);
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_piCommerceChangeDoubleTime);
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_piCommerceModifier);
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_piGlobalCommerceModifier);
@@ -2744,16 +2730,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	else
 	{
 		SAFE_DELETE_ARRAY(m_piCommercePerPopChange);
-	}
-
-	if (pXML->TryMoveToXmlFirstChild(L"ObsoleteSafeCommerceChanges"))
-	{
-		pXML->SetCommerce(&m_piObsoleteSafeCommerceChange);
-		pXML->MoveToXmlParent();
-	}
-	else
-	{
-		SAFE_DELETE_ARRAY(m_piObsoleteSafeCommerceChange);
 	}
 
 	if (pXML->TryMoveToXmlFirstChild(L"CommerceChangeDoubleTimes"))
@@ -4341,14 +4317,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 				CvXMLLoadUtility::InitList(&m_piCommercePerPopChange,NUM_COMMERCE_TYPES,iDefault);
 			}
 			m_piCommercePerPopChange[j] = pClassInfo->getCommercePerPopChange(j);
-		}
-		if ( getObsoleteSafeCommerceChange(j) == iDefault && pClassInfo->getObsoleteSafeCommerceChange(j) != iDefault)
-		{
-			if ( NULL == m_piObsoleteSafeCommerceChange )
-			{
-				CvXMLLoadUtility::InitList(&m_piObsoleteSafeCommerceChange,NUM_COMMERCE_TYPES,iDefault);
-			}
-			m_piObsoleteSafeCommerceChange[j] = pClassInfo->getObsoleteSafeCommerceChange(j);
 		}
 		if ( getCommerceChangeDoubleTime(j) == iDefault && pClassInfo->getCommerceChangeDoubleTime(j) != iDefault)
 		{

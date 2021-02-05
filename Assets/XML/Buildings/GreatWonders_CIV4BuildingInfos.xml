@@ -152,6 +152,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ALHAMBRA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<bTeamShare>1</bTeamShare>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -159,10 +160,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ALHAMBRA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ALHAMBRA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ALHAMBRA</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_ALHAMBRA</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
@@ -172,6 +170,8 @@
 			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_ALHAMBRA_2</ObsoletesToBuilding>
 			<iCost>2640</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -203,6 +203,13 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iAllCityDefense>30</iAllCityDefense>
 			<bGovernmentCenter>1</bGovernmentCenter>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -223,17 +230,10 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_TOURISM</PropertyType>
-					<iAmountPerTurn>4</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_ALHAMBRA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ALHAMBRA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALHAMBRA_2</Type>
@@ -245,38 +245,24 @@
 			<Description>TXT_KEY_BUILDING_ALHAMBRA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALHAMBRA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ALHAMBRA_STRATEGY</Strategy>
-			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
-			<StateReligion>RELIGION_ISLAM</StateReligion>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
-			<ReligionChanges>
-				<ReligionChange>
-					<ReligionType>RELIGION_ISLAM</ReligionType>
-					<iReligionChange>1</iReligionChange>
-				</ReligionChange>
-			</ReligionChanges>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<iAsset>5</iAsset>
-			<iConquestProb>100</iConquestProb>
-			<bTeamShare>1</bTeamShare>
-			<bNukeImmune>1</bNukeImmune>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_TOURISM</PropertyType>
-					<iAmountPerTurn>4</iAmountPerTurn>
+					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>4</iAsset>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_ALHAMBRA</ArtDefineTag>
 		</BuildingInfo>
@@ -297,6 +283,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_ANGKOR_WAT_2</ObsoletesToBuilding>
 			<iCost>1512</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -304,11 +291,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -352,9 +339,45 @@
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_TOURISM</PropertyType>
-					<iAmountPerTurn>8</iAmountPerTurn>
+					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_ANGKOR_WAT_2</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<bNoLimit>1</bNoLimit>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_ANGKOR_WAT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANGKOR_WAT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANGKOR_WAT_STRATEGY</Strategy>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>16</iCommerce>
+			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>10</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iAsset>12</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_RELIGION</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_ANGKOR_WAT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANTIKYTHERA_MECHANISM</Type>
@@ -421,11 +444,11 @@
 				<BuildingType>BUILDING_GAS_STATION</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>7080</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
@@ -476,11 +499,11 @@
 			<StateReligion>RELIGION_ZOROASTRIANISM</StateReligion>
 			<iCitiesPrereq>8</iCitiesPrereq>
 			<iCost>1008</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -537,11 +560,11 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iHappiness>1</iHappiness>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -984,11 +1007,11 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1035,11 +1058,11 @@
 			<iCost>7380</iCost>
 			<iHealth>1</iHealth>
 			<iHappiness>10</iHappiness>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1213,11 +1236,11 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_WEARABLE_COMPUTERS</ObsoleteTech>
 			<iCost>4620</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1330,11 +1353,11 @@
 					<iProductonModifier>50</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1444,11 +1467,11 @@
 				<iYield>0</iYield>
 				<iYield>2</iYield>
 			</SeaPlotYieldChanges>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1522,11 +1545,11 @@
 			</PrereqInCityBuildings>
 			<iCost>7380</iCost>
 			<iHappiness>1</iHappiness>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
@@ -1910,12 +1933,8 @@
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1978,11 +1997,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2117,12 +2136,9 @@
 			<iCost>834</iCost>
 			<CommerceChanges>
 				<iCommerce>6</iCommerce>
-			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2132,7 +2148,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceHappinesses>
 			<CommerceChangeOriginalOwners>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
@@ -2206,11 +2221,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2274,12 +2289,8 @@
 			<CommerceChanges>
 				<iCommerce>-30</iCommerce>
 				<iCommerce>10</iCommerce>
-			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2408,11 +2419,11 @@
 			<PrereqTech>TECH_RADIO</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<iCost>5220</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2473,11 +2484,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
@@ -2597,14 +2608,9 @@
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2666,11 +2672,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2735,13 +2741,9 @@
 			<iCost>5940</iCost>
 			<CommerceChanges>
 				<iCommerce>-50</iCommerce>
-				<iCommerce>20</iCommerce>
-			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>22</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeOriginalOwners>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
@@ -3000,11 +3002,11 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iHappiness>1</iHappiness>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -3074,11 +3076,11 @@
 				<BuildingType>BUILDING_BANK</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>3480</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -3309,11 +3311,11 @@
 			<iHurryCostModifier>200</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4480,11 +4482,11 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4734,11 +4736,11 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<iCost>1800</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4791,11 +4793,11 @@
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_ANCIENT_MEDICINE</PrereqTech>
 			<iCost>1458</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4872,12 +4874,8 @@
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>10</iCommerce>
-			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -4974,11 +4972,11 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
 			<iCost>3480</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -5226,12 +5224,8 @@
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
 				<iCommerce>25</iCommerce>
-			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeOriginalOwners>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
@@ -5350,11 +5344,11 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iHappiness>2</iHappiness>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -5516,11 +5510,11 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -5586,12 +5580,14 @@
 			</PrereqInCityBuildings>
 			<iCost>7380</iCost>
 			<iHappiness>1</iHappiness>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<SpecialistCounts>
@@ -5694,11 +5690,11 @@
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
 			<StateReligion>RELIGION_BUDDHISM</StateReligion>
 			<iCost>1566</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -5841,11 +5837,11 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_WALLS</ConstructSound>
 			<iHappiness>1</iHappiness>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<DomainFreeExperiences>
@@ -5905,11 +5901,11 @@
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ConstructSound>AS2D_BUILD_STONEHENGE</ConstructSound>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6025,11 +6021,11 @@
 			<Bonus>BONUS_BRICKS</Bonus>
 			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
 			<iCost>1920</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6085,11 +6081,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6212,11 +6208,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6361,11 +6357,11 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_SCREW_PROPELLER</ObsoleteTech>
 			<iCost>2640</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6427,11 +6423,11 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<ObsoleteTech>TECH_COMMUNISM</ObsoleteTech>
 			<iCost>2280</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6495,11 +6491,11 @@
 			<ReligionType>RELIGION_JUDAISM</ReligionType>
 			<StateReligion>RELIGION_JUDAISM</StateReligion>
 			<iCost>1104</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
@@ -6595,11 +6591,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6863,11 +6859,11 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</SeaPlotYieldChanges>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6956,11 +6952,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7152,11 +7148,11 @@
 			</ConstructCondition>
 			<ObsoleteTech>TECH_MEGASTRUCTURE_ENGINEERING</ObsoleteTech>
 			<iCost>3780</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7338,11 +7334,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7518,11 +7514,11 @@
 				<iCommerce>25</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7693,11 +7689,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7765,11 +7761,11 @@
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<iCost>1992</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>6</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7827,12 +7823,8 @@
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
 				<iCommerce>25</iCommerce>
-			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7896,11 +7888,11 @@
 			<iCitiesPrereq>4</iCitiesPrereq>
 			<iCost>1512</iCost>
 			<iHealth>1</iHealth>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7954,11 +7946,11 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
 			<iCost>1920</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -8088,11 +8080,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -8366,10 +8358,10 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>100</iCommerce>
@@ -8436,11 +8428,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -8553,11 +8545,11 @@
 			<CommerceModifiers>
 				<iCommerce>25</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -8832,11 +8824,11 @@
 			<CommerceModifiers>
 				<iCommerce>50</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeOriginalOwners>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
@@ -9258,11 +9250,11 @@
 			<iCost>624</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHurryCostModifier>200</iHurryCostModifier>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -9475,11 +9467,11 @@
 				<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>4620</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -9536,11 +9528,11 @@
 			<PrereqTech>TECH_TERRA_COMPUTER</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<iCost>38430</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 				<iCommerce>20</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeOriginalOwners>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
@@ -9600,11 +9592,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -9654,11 +9646,11 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_TERRA_COTTA</ConstructSound>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -9712,11 +9704,11 @@
 			<iTeamsPrereq>3</iTeamsPrereq>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<iCost>1860</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -9771,11 +9763,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -9916,11 +9908,11 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</GlobalSeaPlotYieldChanges>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -9975,11 +9967,11 @@
 				<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>5220</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10087,11 +10079,11 @@
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<iCost>4800</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10192,11 +10184,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10259,12 +10251,8 @@
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
 				<iCommerce>10</iCommerce>
-			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10331,11 +10319,11 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_CORPORATION</ObsoleteTech>
 			<iCost>1152</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10411,11 +10399,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10520,11 +10508,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10592,11 +10580,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10655,11 +10643,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10741,11 +10729,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10873,11 +10861,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -10944,11 +10932,11 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_SCIENTIFIC_METHOD</ObsoleteTech>
 			<iCost>1566</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -11083,11 +11071,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -11137,11 +11125,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -11289,11 +11277,11 @@
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -11344,11 +11332,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -11420,11 +11408,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -11475,11 +11463,11 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<iCost>3330</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -11536,11 +11524,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -11609,11 +11597,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -11848,11 +11836,11 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -11982,11 +11970,11 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<iCost>1860</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -12046,11 +12034,11 @@
 				<BuildingType>BUILDING_INSURANCE_OFFICE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>7080</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
@@ -12110,11 +12098,11 @@
 				<BuildingType>BUILDING_CONSTRUCTION_FIRM</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>7080</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
@@ -12224,11 +12212,11 @@
 				<iCommerce>-15</iCommerce>
 				<iCommerce>25</iCommerce>
 			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -12394,11 +12382,11 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -12680,11 +12668,11 @@
 				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>7080</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
@@ -12853,11 +12841,11 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iCost>4800</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<iGlobalWarWearinessModifier>-25</iGlobalWarWearinessModifier>
 			<iAsset>15</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -12886,11 +12874,11 @@
 				<BuildingType>BUILDING_PRESS_AGENCY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>7080</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -12955,9 +12943,9 @@
 			<iCost>7080</iCost>
 			<FreeBonus>BONUS_GOLD_INGOTS</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
@@ -13105,6 +13093,8 @@
 			</BonusProductionModifiers>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -13112,11 +13102,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -13217,6 +13202,8 @@
 			</BonusProductionModifiers>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -13224,11 +13211,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -13329,6 +13311,8 @@
 			</BonusProductionModifiers>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -13336,11 +13320,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -13441,16 +13420,13 @@
 			</BonusProductionModifiers>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -13555,6 +13531,8 @@
 			</BonusProductionModifiers>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -13566,11 +13544,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -13669,6 +13642,8 @@
 			</BonusProductionModifiers>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -13680,11 +13655,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -13784,18 +13754,13 @@
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
+				<iCommerce>14</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -13896,18 +13861,13 @@
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
+				<iCommerce>14</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14008,18 +13968,13 @@
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
+				<iCommerce>14</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14119,16 +14074,13 @@
 			</BonusProductionModifiers>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>10</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14229,16 +14181,13 @@
 			</BonusProductionModifiers>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>10</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14344,16 +14293,13 @@
 			</BonusProductionModifiers>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>10</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14446,16 +14392,13 @@
 			</BonusProductionModifiers>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14526,16 +14469,13 @@
 			</BonusProductionModifiers>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14606,16 +14546,13 @@
 			</BonusProductionModifiers>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15934,11 +15871,11 @@
 			<iAsset>6</iAsset>
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16021,11 +15958,11 @@
 			<iAsset>6</iAsset>
 			<iPower>6</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16073,11 +16010,11 @@
 			<iTradeRouteModifier>50</iTradeRouteModifier>
 			<iAsset>15</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
@@ -16119,11 +16056,11 @@
 			<iHappiness>1</iHappiness>
 			<iAsset>6</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16173,11 +16110,11 @@
 			<iConquestProb>100</iConquestProb>
 			<iAsset>6</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16245,11 +16182,11 @@
 			<iAsset>6</iAsset>
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16300,11 +16237,11 @@
 			<iAreaHealth>1</iAreaHealth>
 			<iAsset>15</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
@@ -16348,11 +16285,11 @@
 			<iForeignTradeRouteModifier>50</iForeignTradeRouteModifier>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16402,11 +16339,11 @@
 			<iAsset>12</iAsset>
 			<iPower>8</iPower>
 			<fVisibilityPriority>10.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16494,11 +16431,11 @@
 			<YieldChanges>
 				<iYield>4</iYield>
 			</YieldChanges>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16552,11 +16489,11 @@
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16612,11 +16549,11 @@
 			<iAsset>16</iAsset>
 			<iPower>8</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16664,11 +16601,11 @@
 			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16724,11 +16661,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16770,11 +16707,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16825,11 +16762,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16954,11 +16891,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17000,14 +16937,9 @@
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>10</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17059,11 +16991,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17109,11 +17041,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17186,11 +17118,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17280,14 +17212,9 @@
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 				<iCommerce>25</iCommerce>
 			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17337,14 +17264,9 @@
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>6</iCommerce>
 				<iCommerce>8</iCommerce>
 			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17396,11 +17318,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17443,11 +17365,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17490,11 +17412,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17625,11 +17547,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17716,11 +17638,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17768,14 +17690,9 @@
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>6</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17808,11 +17725,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17930,11 +17847,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17984,11 +17901,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18038,11 +17955,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18091,11 +18008,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18144,11 +18061,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18213,11 +18130,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18294,11 +18211,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18414,11 +18331,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18475,11 +18392,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18543,11 +18460,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18597,11 +18514,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18674,11 +18591,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18730,11 +18647,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18884,11 +18801,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -18954,11 +18871,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -19006,11 +18923,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -19084,11 +19001,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -19131,11 +19048,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -19186,11 +19103,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -19335,11 +19252,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -19442,11 +19359,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -19494,11 +19411,11 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -19564,11 +19481,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -19624,11 +19541,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -19913,12 +19830,9 @@
 			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>4</iCommerce>
-			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -20056,11 +19970,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -20142,11 +20056,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -20254,11 +20168,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -20307,11 +20221,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>

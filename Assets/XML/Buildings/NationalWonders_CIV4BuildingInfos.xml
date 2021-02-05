@@ -463,11 +463,11 @@
 			<ConstructSound>AS2D_BUILD_WALLS</ConstructSound>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<DomainFreeExperiences>
 				<DomainFreeExperience>
 					<DomainType>DOMAIN_LAND</DomainType>
@@ -881,11 +881,11 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7184,11 +7184,11 @@
 			<iAsset>8</iAsset>
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>

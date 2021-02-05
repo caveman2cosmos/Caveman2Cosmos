@@ -207,8 +207,6 @@ public:
 	int* getCommerceChangeArray() const;
 	int getCommercePerPopChange(int i) const;
 	int* getCommercePerPopChangeArray() const;
-	int getObsoleteSafeCommerceChange(int i) const;
-	int* getObsoleteSafeCommerceChangeArray() const;
 	int getCommerceChangeDoubleTime(int i) const;
 	int getCommerceModifier(int i) const;
 	int* getCommerceModifierArray() const;
@@ -795,7 +793,6 @@ protected:
 	int* m_piGlobalYieldModifier;
 	int* m_piCommerceChange;
 	int* m_piCommercePerPopChange;
-	int* m_piObsoleteSafeCommerceChange;
 	int* m_piCommerceChangeDoubleTime;
 	int* m_piCommerceModifier;
 	int* m_piGlobalCommerceModifier;

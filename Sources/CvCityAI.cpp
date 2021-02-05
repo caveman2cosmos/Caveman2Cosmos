@@ -9120,8 +9120,6 @@ void CvCityAI::AI_doHurry(bool bForce)
 				building.getCommerceChange(COMMERCE_CULTURE) > 0
 				||
 				building.getCommercePerPopChange(COMMERCE_CULTURE) > 0
-				||
-				building.getObsoleteSafeCommerceChange(COMMERCE_CULTURE) > 0
 			)
 			&& (getCommerceRateTimes100(COMMERCE_CULTURE) == 0 || plot()->calculateCulturePercent(getOwner()) < 40))
 			{
@@ -12665,9 +12663,8 @@ void CvCityAI::AI_updateSpecialYieldMultiplier()
 		}
 		m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] += std::max(-25, GC.getBuildingInfo(eProductionBuilding).getFoodKept());
 
-		if ((GC.getBuildingInfo(eProductionBuilding).getCommerceChange(COMMERCE_CULTURE) > 0)
-			|| (GC.getBuildingInfo(eProductionBuilding).getCommercePerPopChange(COMMERCE_CULTURE) > 0)
-			|| (GC.getBuildingInfo(eProductionBuilding).getObsoleteSafeCommerceChange(COMMERCE_CULTURE) > 0))
+		if (GC.getBuildingInfo(eProductionBuilding).getCommerceChange(COMMERCE_CULTURE) > 0
+		||  GC.getBuildingInfo(eProductionBuilding).getCommercePerPopChange(COMMERCE_CULTURE) > 0)
 		{
 			//const int iTargetCultureRate = AI_calculateTargetCulturePerTurn();
 			//if (iTargetCultureRate > 0)
@@ -14227,7 +14224,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			 kBuilding.getGlobalCommerceModifier(COMMERCE_GOLD) > 0 ||
 			 kBuilding.getSpecialistExtraCommerce(COMMERCE_GOLD) > 0 ||
 			 kBuilding.getStateReligionCommerce(COMMERCE_GOLD) > 0 ||
-			 kBuilding.getObsoleteSafeCommerceChange(COMMERCE_GOLD) > 0 ||
 			 kBuilding.getCommerceAttacks(COMMERCE_GOLD) > 0 ||
 			 kBuilding.getTechCommerceChange(NO_TECH, COMMERCE_GOLD) > 0 ||
 			 kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_GOLD) > 0 )
@@ -14245,7 +14241,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			 kBuilding.getGlobalCommerceModifier(COMMERCE_RESEARCH) > 0 ||
 			 kBuilding.getSpecialistExtraCommerce(COMMERCE_RESEARCH) > 0 ||
 			 kBuilding.getStateReligionCommerce(COMMERCE_RESEARCH) > 0 ||
-			 kBuilding.getObsoleteSafeCommerceChange(COMMERCE_RESEARCH) > 0 ||
 			 kBuilding.getCommerceAttacks(COMMERCE_RESEARCH) > 0 ||
 			 kBuilding.getTechCommerceChange(NO_TECH, COMMERCE_RESEARCH) > 0 ||
 			 kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_RESEARCH) > 0)
@@ -14263,7 +14258,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			 kBuilding.getGlobalCommerceModifier(COMMERCE_CULTURE) > 0 ||
 			 kBuilding.getSpecialistExtraCommerce(COMMERCE_CULTURE) > 0 ||
 			 kBuilding.getStateReligionCommerce(COMMERCE_CULTURE) > 0 ||
-			 kBuilding.getObsoleteSafeCommerceChange(COMMERCE_CULTURE) > 0 ||
 			 kBuilding.getCommerceAttacks(COMMERCE_CULTURE) > 0 ||
 			 kBuilding.getTechCommerceChange(NO_TECH, COMMERCE_CULTURE) > 0 ||
 			 kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_CULTURE) > 0)
@@ -14463,7 +14457,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			 kBuilding.getGlobalCommerceModifier(COMMERCE_ESPIONAGE) > 0 ||
 			 kBuilding.getSpecialistExtraCommerce(COMMERCE_ESPIONAGE) > 0 ||
 			 kBuilding.getStateReligionCommerce(COMMERCE_ESPIONAGE) > 0 ||
-			 kBuilding.getObsoleteSafeCommerceChange(COMMERCE_ESPIONAGE) > 0 ||
 			 kBuilding.getCommerceAttacks(COMMERCE_ESPIONAGE) > 0 ||
 			 kBuilding.getTechCommerceChange(NO_TECH, COMMERCE_ESPIONAGE) > 0 ||
 			 kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_ESPIONAGE) > 0)
@@ -16377,7 +16370,6 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	int iResult = 0;
 	iResult += 4*(iBaseCommerceChange + GET_TEAM(getTeam()).getBuildingCommerceChange(eBuilding, (CommerceTypes)iI) + aiFreeSpecialistCommerce[iI]);
 
-	iResult += kBuilding.getObsoleteSafeCommerceChange(iI) * 4;
 	iResult += kBuilding.getCommerceAttacks(iI) * 2;
 
 	if ((CommerceTypes)iI == COMMERCE_CULTURE)
@@ -16615,14 +16607,10 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 		iResult += 40;
 	}
 
-	if (kBuilding.isCommerceChangeOriginalOwner(iI))
+	if (kBuilding.isCommerceChangeOriginalOwner(iI)
+	&& (kBuilding.getCommerceChange(iI) > 0 || kBuilding.getCommercePerPopChange(iI) > 0))
 	{
-		if (kBuilding.getCommerceChange(iI) > 0
-		|| kBuilding.getCommercePerPopChange(iI) > 0
-		|| kBuilding.getObsoleteSafeCommerceChange(iI) > 0)
-		{
-			iResult++;
-		}
+		iResult++;
 	}
 
 	if (iI == COMMERCE_GOLD && kOwner.AI_isFinancialTrouble())

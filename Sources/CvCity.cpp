@@ -9079,28 +9079,29 @@ int CvCity::getBuildingBadHappiness() const
 
 int CvCity::getBuildingHappiness(BuildingTypes eBuilding) const
 {
-	int iHappiness = GC.getBuildingInfo(eBuilding).getHappiness();
+	const CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
+	int iHappiness = 
+	(
+		info.getHappiness()
+		+
+		info.getHappinessPercentPerPopulation() * getPopulation() / 100
+		+
+		getBuildingHappyChange(eBuilding)
+		+
+		GET_PLAYER(getOwner()).getExtraBuildingHappiness(eBuilding)
+		+
+		GET_TEAM(getTeam()).getTechExtraBuildingHappiness(eBuilding)
+	);
 
-	if (GC.getBuildingInfo(eBuilding).getReligionType() != NO_RELIGION)
+	if (info.getReligionType() != NO_RELIGION && info.getReligionType() == GET_PLAYER(getOwner()).getStateReligion())
 	{
-		if (GC.getBuildingInfo(eBuilding).getReligionType() == GET_PLAYER(getOwner()).getStateReligion())
-		{
-			iHappiness += GC.getBuildingInfo(eBuilding).getStateReligionHappiness();
-		}
+		iHappiness += info.getStateReligionHappiness();
 	}
-
-	iHappiness += GET_PLAYER(getOwner()).getExtraBuildingHappiness(eBuilding);
 
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
-		iHappiness += ((GC.getBuildingInfo(eBuilding).getCommerceHappiness(iI) * GET_PLAYER(getOwner()).getCommercePercent((CommerceTypes)iI)) / 100);
+		iHappiness += info.getCommerceHappiness(iI) * GET_PLAYER(getOwner()).getCommercePercent((CommerceTypes)iI) / 100;
 	}
-
-	iHappiness += getBuildingHappyChange(eBuilding);
-
-	iHappiness += (GC.getBuildingInfo(eBuilding).getHappinessPercentPerPopulation() * getPopulation()) / 100;
-
-	iHappiness += GET_TEAM(getTeam()).getTechExtraBuildingHappiness(eBuilding);
 
 	return iHappiness;
 }
@@ -12813,93 +12814,91 @@ int CvCity::getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex
 	return iExtraRateTimes100;
 }
 
+
 int CvCity::getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding)
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-	int iExtraRate = kBuilding.getObsoleteSafeCommerceChange(eIndex);
-	if (!GET_TEAM(getTeam()).isObsoleteBuilding(eBuilding))
+
+	int iExtraRate = kBuilding.getCommerceChange(eIndex);
+	if (iExtraRate < 0 && eIndex == COMMERCE_GOLD && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
 	{
-		int iBaseCommerceChange = kBuilding.getCommerceChange(eIndex);
-		if (iBaseCommerceChange < 0 && eIndex == COMMERCE_GOLD && GC.getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE())
+		iExtraRate = 0;
+	}
+	iExtraRate += getPopulation() * kBuilding.getCommercePerPopChange(eIndex) / 100;
+
+	iExtraRate += getBuildingCommerceChange(eBuilding, eIndex);
+
+	if (kBuilding.getReligionType() != NO_RELIGION
+	&& kBuilding.getReligionType() == GET_PLAYER(getOwner()).getStateReligion())
+	{
+		iExtraRate += GET_PLAYER(getOwner()).getStateReligionBuildingCommerce(eIndex);
+	}
+
+	if (kBuilding.getGlobalReligionCommerce() != NO_RELIGION)
+	{
+		iExtraRate += GC.getReligionInfo((ReligionTypes)(kBuilding.getGlobalReligionCommerce())).getGlobalReligionCommerce(eIndex) * GC.getGame().countReligionLevels((ReligionTypes)(kBuilding.getGlobalReligionCommerce()));
+	}
+	if (kBuilding.getGlobalCorporationCommerce() != NO_CORPORATION)
+	{
+		iExtraRate += GC.getCorporationInfo((CorporationTypes)(kBuilding.getGlobalCorporationCommerce())).getHeadquarterCommerce(eIndex) * GC.getGame().countCorporationLevels((CorporationTypes)(kBuilding.getGlobalCorporationCommerce()));
+	}
+	// ignore double-time check since this assumes you are building it this turn
+
+	// Specialists
+	for (int iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
+	{
+		if (kBuilding.getFreeSpecialistCount((SpecialistTypes)iI) != 0)
 		{
-			iBaseCommerceChange = 0;
+			iExtraRate += getAdditionalBaseCommerceRateBySpecialist(eIndex, (SpecialistTypes)iI, kBuilding.getFreeSpecialistCount((SpecialistTypes)iI));
 		}
-		iBaseCommerceChange += ((kBuilding.getCommercePerPopChange(eIndex) * getPopulation()) / 100);
-		iExtraRate += iBaseCommerceChange;
-		iExtraRate += getBuildingCommerceChange(eBuilding, eIndex);
-		if (kBuilding.getReligionType() != NO_RELIGION)
+	}
+
+	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+	{
+		if (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isHasTech((TechTypes)iI))
 		{
-			if (kBuilding.getReligionType() == GET_PLAYER(getOwner()).getStateReligion())
-			{
-				iExtraRate += GET_PLAYER(getOwner()).getStateReligionBuildingCommerce(eIndex);
-			}
+			iExtraRate += (kBuilding.getTechCommerceChange(iI, eIndex));
 		}
-		if (kBuilding.getGlobalReligionCommerce() != NO_RELIGION)
-		{
-			iExtraRate += GC.getReligionInfo((ReligionTypes)(kBuilding.getGlobalReligionCommerce())).getGlobalReligionCommerce(eIndex) * GC.getGame().countReligionLevels((ReligionTypes)(kBuilding.getGlobalReligionCommerce()));
-		}
-		if (kBuilding.getGlobalCorporationCommerce() != NO_CORPORATION)
-		{
-			iExtraRate += GC.getCorporationInfo((CorporationTypes)(kBuilding.getGlobalCorporationCommerce())).getHeadquarterCommerce(eIndex) * GC.getGame().countCorporationLevels((CorporationTypes)(kBuilding.getGlobalCorporationCommerce()));
-		}
-		// ignore double-time check since this assumes you are building it this turn
+	}
 
-		// Specialists
-		for (int iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
-		{
-			if (kBuilding.getFreeSpecialistCount((SpecialistTypes)iI) != 0)
-			{
-				iExtraRate += getAdditionalBaseCommerceRateBySpecialist(eIndex, (SpecialistTypes)iI, kBuilding.getFreeSpecialistCount((SpecialistTypes)iI));
-			}
-		}
+	if (kBuilding.isForceAllTradeRoutes())
+	{
+		int iCurrentTradeRevenue = GET_PLAYER(getOwner()).calculateTotalExports(YIELD_COMMERCE);
 
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-		{
-			if (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isHasTech((TechTypes)iI))
-			{
-				iExtraRate += (kBuilding.getTechCommerceChange(iI, eIndex));
-			}
-		}
+		GET_PLAYER(getOwner()).changeForceAllTradeRoutes(1);
 
-		if (kBuilding.isForceAllTradeRoutes())
-		{
-			int iCurrentTradeRevenue = GET_PLAYER(getOwner()).calculateTotalExports(YIELD_COMMERCE);
+		int iFutureTradeRevenue = GET_PLAYER(getOwner()).calculateTotalExports(YIELD_COMMERCE);
 
-			GET_PLAYER(getOwner()).changeForceAllTradeRoutes(1);
+		GET_PLAYER(getOwner()).changeForceAllTradeRoutes(-1);
 
-			int iFutureTradeRevenue = GET_PLAYER(getOwner()).calculateTotalExports(YIELD_COMMERCE);
+		iExtraRate += (iFutureTradeRevenue - iCurrentTradeRevenue) * GET_PLAYER(getOwner()).getCommercePercent(eIndex) / 100;
+	}
 
-			GET_PLAYER(getOwner()).changeForceAllTradeRoutes(-1);
+	int iFreeSpecialistCommerce = 0;
 
-			iExtraRate += (iFutureTradeRevenue - iCurrentTradeRevenue) * GET_PLAYER(getOwner()).getCommercePercent(eIndex) / 100;
-		}
+	for (int iI = 1; iI < kBuilding.getFreeSpecialist() + 1; iI++)
+	{
+		SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
+		if (eNewSpecialist == NO_SPECIALIST) break;
 
-		int iFreeSpecialistCommerce = 0;
+		iFreeSpecialistCommerce += GET_PLAYER(getOwner()).specialistCommerce(eNewSpecialist, eIndex);
+	}
+	iExtraRate += iFreeSpecialistCommerce;
 
-		for (int iI = 1; iI < kBuilding.getFreeSpecialist() + 1; iI++)
-		{
-			SpecialistTypes eNewSpecialist = getBestSpecialist(iI);
-			if (eNewSpecialist == NO_SPECIALIST) break;
-
-			iFreeSpecialistCommerce += GET_PLAYER(getOwner()).specialistCommerce(eNewSpecialist, eIndex);
-		}
-		iExtraRate += iFreeSpecialistCommerce;
-
-		if (kBuilding.getNumPopulationEmployed() > 0)
-		{
-			int* paiCommerce = new int[NUM_COMMERCE_TYPES];
-			int* paiYield = new int[NUM_YIELD_TYPES];
-			int iGreatPeopleRate;
-			int iHappiness;
-			int iHealthiness;
-			removeWorstCitizenActualEffects(kBuilding.getNumPopulationEmployed(), iGreatPeopleRate, iHappiness, iHealthiness, paiYield, paiCommerce);
-			iExtraRate += paiCommerce[eIndex];
-			SAFE_DELETE_ARRAY(paiCommerce);
-			SAFE_DELETE_ARRAY(paiYield);
-		}
+	if (kBuilding.getNumPopulationEmployed() > 0)
+	{
+		int* paiCommerce = new int[NUM_COMMERCE_TYPES];
+		int* paiYield = new int[NUM_YIELD_TYPES];
+		int iGreatPeopleRate;
+		int iHappiness;
+		int iHealthiness;
+		removeWorstCitizenActualEffects(kBuilding.getNumPopulationEmployed(), iGreatPeopleRate, iHappiness, iHealthiness, paiYield, paiCommerce);
+		iExtraRate += paiCommerce[eIndex];
+		SAFE_DELETE_ARRAY(paiCommerce);
+		SAFE_DELETE_ARRAY(paiYield);
 	}
 
 	return iExtraRate;

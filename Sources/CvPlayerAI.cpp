@@ -2605,7 +2605,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	{
 		for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 		{
-			if (isBuildingFree((BuildingTypes)iJ) && GC.getBuildingInfo((BuildingTypes)iJ).getObsoleteSafeCommerceChange(COMMERCE_CULTURE) > 0)
+			if (isBuildingFree((BuildingTypes)iJ) && GC.getBuildingInfo((BuildingTypes)iJ).getCommerceChange(COMMERCE_CULTURE) > 0)
 			{
 				bEasyCulture = true;
 				break;
@@ -6000,19 +6000,16 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 				//	it somwhat if its a special build
 				iBuildingValue += kLoopBuilding.getAIWeight()/(kLoopBuilding.getProductionCost() == -1 ? 5 : 1);
 
-				if (!isLimitedWonder(eLoopBuilding))
+				if (!isLimitedWonder(eLoopBuilding) && kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) > 0)
 				{
-					if (kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) > 0 || kLoopBuilding.getObsoleteSafeCommerceChange(COMMERCE_CULTURE) > 0)
-					{
-						bIsCultureBuilding = true;
-					}
+					bIsCultureBuilding = true;
 				}
 
                 if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2))
                 {
                     const int iMultiplier = (isLimitedWonder(eLoopBuilding) ? 1 : 3);
-                    iBuildingValue += (150 * (kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) + kLoopBuilding.getObsoleteSafeCommerceChange(COMMERCE_CULTURE))) * iMultiplier;
-                    iBuildingValue += kLoopBuilding.getCommerceModifier(COMMERCE_CULTURE) * 4 * iMultiplier ;
+                    iBuildingValue += 150 * kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) * iMultiplier;
+                    iBuildingValue += kLoopBuilding.getCommerceModifier(COMMERCE_CULTURE) * 4 * iMultiplier;
                 }
 
 				if (bFinancialTrouble)
@@ -6049,35 +6046,24 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 					iBuildingValue += kLoopBuilding.getHealth() * 150;
 				}
 
-				if (kLoopBuilding.getPrereqAndTech() == eTech)
+				if (iPathLength <= 1 && kLoopBuilding.getPrereqAndTech() == eTech
+				&& getTotalPopulation() > 5 && isWorldWonder(eLoopBuilding)
+				&& !GC.getGame().isBuildingMaxedOut(eLoopBuilding))
 				{
-					if (iPathLength <= 1)
+					bEnablesWonder = true;
+
+					if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1)
+					&& 
+						(
+							kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) >= 3
+							||
+							kLoopBuilding.getCommerceModifier(COMMERCE_CULTURE) >= 10
+						)
+					) iValue += 400;
+
+					if (bCapitalAlone)
 					{
-						if (getTotalPopulation() > 5)
-						{
-							if (isWorldWonder(eLoopBuilding))
-							{
-								if (!GC.getGame().isBuildingMaxedOut(eLoopBuilding))
-								{
-									bEnablesWonder = true;
-
-									if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1))
-									{
-										if (kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) >= 3 ||
-											kLoopBuilding.getObsoleteSafeCommerceChange(COMMERCE_CULTURE) >= 3 ||
-											kLoopBuilding.getCommerceModifier(COMMERCE_CULTURE) >= 10)
-										{
-											iValue += 400;
-										}
-									}
-
-									if (bCapitalAlone)
-									{
-										iBuildingValue += 400;
-									}
-								}
-							}
-						}
+						iBuildingValue += 400;
 					}
 				}
 
@@ -6188,106 +6174,94 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 				{
 					iBuildingValue += iBestValue;
 				}
-				else
-				{
-					iBuildingValue += iTotalValue;
-				}
+				else iBuildingValue += iTotalValue;
 
 				//	Average value per city
 				iBuildingValue /= std::max(1,getNumCities());
 
-				if ( gPlayerLogLevel > 2 )
+				if (gPlayerLogLevel > 2)
 				{
-					logBBAI("\tBuilding %S new mechanism value: %d",
-							kLoopBuilding.getDescription(),
-							iBuildingValue);
+					logBBAI("\tBuilding %S new mechanism value: %d", kLoopBuilding.getDescription(), iBuildingValue);
 				}
 
 				iValue += iBuildingValue;
 			}
-			else
+			else if (canConstruct(eLoopBuilding))
 			{
-				if (canConstruct(eLoopBuilding))
+				if (!isLimitedWonder(eLoopBuilding)
+				&& (kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) > 0 || kLoopBuilding.getCommercePerPopChange(COMMERCE_CULTURE) > 0))
 				{
-					if (!isLimitedWonder(eLoopBuilding))
+					iExistingCultureBuildingCount++;
+				}
+
+				int iNumExisting = 0;
+
+				foreach_(const CvCity* pLoopCity, cities())
+				{
+					if (pLoopCity->getNumBuilding(eLoopBuilding))
 					{
-						if (kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) > 0 ||
-							kLoopBuilding.getCommercePerPopChange(COMMERCE_CULTURE) > 0 ||
-							kLoopBuilding.getObsoleteSafeCommerceChange(COMMERCE_CULTURE) > 0)
+						iNumExisting++;
+					}
+				}
+
+				if (iNumExisting > 0)
+				{
+					int iTempValue = 0;
+					int iJ;
+
+					for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+					{
+						int iCommerceChange = kLoopBuilding.getTechCommerceChange(eTech, iJ);
+						int iCommerceModifier = kLoopBuilding.getTechCommerceModifier(eTech, iJ);
+
+						if ( iCommerceChange != 0 )
 						{
-							iExistingCultureBuildingCount++;
+							iTempValue += 400*iCommerceChange;
+						}
+						if ( iCommerceModifier != 0 )
+						{
+							iTempValue += (4*getCommerceRate((CommerceTypes)iJ)*iCommerceModifier)/getNumCities();
 						}
 					}
 
-					int iNumExisting = 0;
-
-					foreach_(const CvCity* pLoopCity, cities())
+					for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 					{
-						if ( pLoopCity->getNumBuilding(eLoopBuilding) )
+						int iYieldChange = kLoopBuilding.getTechYieldChange(eTech, iJ);
+						int iYieldModifier = kLoopBuilding.getTechYieldModifier(eTech, iJ);
+
+						if ( iYieldChange != 0 )
 						{
-							iNumExisting++;
+							iTempValue += 400*iYieldChange;
+						}
+						if ( iYieldModifier != 0 )
+						{
+							iTempValue += (4*calculateTotalYield((YieldTypes)iJ)*iYieldModifier)/getNumCities();
 						}
 					}
 
-					if ( iNumExisting > 0 )
+					for (iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
 					{
-						int iTempValue = 0;
-						int iJ;
+						int iSpecialistChange = kLoopBuilding.getTechSpecialistChange(eTech, iJ);
 
-						for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+						if ( iSpecialistChange != 0 )
 						{
-							int iCommerceChange = kLoopBuilding.getTechCommerceChange(eTech, iJ);
-							int iCommerceModifier = kLoopBuilding.getTechCommerceModifier(eTech, iJ);
+							iTempValue += 800*iSpecialistChange;
+						}
+					}
 
-							if ( iCommerceChange != 0 )
-							{
-								iTempValue += 400*iCommerceChange;
-							}
-							if ( iCommerceModifier != 0 )
-							{
-								iTempValue += (4*getCommerceRate((CommerceTypes)iJ)*iCommerceModifier)/getNumCities();
-							}
+					if ( iTempValue != 0 )
+					{
+						iTempValue = (iTempValue * BUILDING_VALUE_TO_TECH_BUILDING_VALUE_MULTIPLIER)/100;
+
+						if ( gPlayerLogLevel > 2 )
+						{
+							logBBAI("\tBuilding %S is modified.  We have %d of them, total value: %d",
+									kLoopBuilding.getDescription(),
+									iNumExisting,
+									iTempValue);
 						}
 
-						for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
-						{
-							int iYieldChange = kLoopBuilding.getTechYieldChange(eTech, iJ);
-							int iYieldModifier = kLoopBuilding.getTechYieldModifier(eTech, iJ);
-
-							if ( iYieldChange != 0 )
-							{
-								iTempValue += 400*iYieldChange;
-							}
-							if ( iYieldModifier != 0 )
-							{
-								iTempValue += (4*calculateTotalYield((YieldTypes)iJ)*iYieldModifier)/getNumCities();
-							}
-						}
-
-						for (iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
-						{
-							int iSpecialistChange = kLoopBuilding.getTechSpecialistChange(eTech, iJ);
-
-							if ( iSpecialistChange != 0 )
-							{
-								iTempValue += 800*iSpecialistChange;
-							}
-						}
-
-						if ( iTempValue != 0 )
-						{
-							iTempValue = (iTempValue * BUILDING_VALUE_TO_TECH_BUILDING_VALUE_MULTIPLIER)/100;
-
-							if ( gPlayerLogLevel > 2 )
-							{
-								logBBAI("\tBuilding %S is modified.  We have %d of them, total value: %d",
-										kLoopBuilding.getDescription(),
-										iNumExisting,
-										iTempValue);
-							}
-
-							iValue += iTempValue;
-						}
+						iValue += iTempValue;
 					}
 				}
 			}
@@ -22782,7 +22756,7 @@ int CvPlayerAI::AI_cultureVictoryTechValue(TechTypes eTech) const
 		{
 			const CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo(eLoopBuilding);
 
-			iValue += (150 * (kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) + kLoopBuilding.getCommercePerPopChange(COMMERCE_CULTURE) + kLoopBuilding.getObsoleteSafeCommerceChange(COMMERCE_CULTURE))) / 20;
+			iValue += 15 * (kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) + kLoopBuilding.getCommercePerPopChange(COMMERCE_CULTURE)) / 2;
 			iValue += kLoopBuilding.getCommerceModifier(COMMERCE_CULTURE) * 2;
 		}
 	}

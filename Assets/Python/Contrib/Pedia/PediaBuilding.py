@@ -142,7 +142,7 @@ class PediaBuilding:
 			szText2 = ""
 		for k in range(CommerceTypes.NUM_COMMERCE_TYPES):
 			char = unichr(8500 + k)
-			iTemp = CvTheBuildingInfo.getObsoleteSafeCommerceChange(k) + CvTheBuildingInfo.getCommerceChange(k)
+			iTemp = CvTheBuildingInfo.getCommerceChange(k)
 			if iTemp:
 				if iTemp < 0:
 					szValue = " <color=255,0,0,255>"

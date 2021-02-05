@@ -252,11 +252,11 @@
 			<iConquestProb>100</iConquestProb>
 			<iAsset>14</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -319,11 +319,11 @@
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -404,11 +404,11 @@
 			<!-- RevolutionDCM End  -->
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -637,11 +637,11 @@
 			<iAsset>10</iAsset>
 			<iPower>10</iPower>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -918,11 +918,11 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAsset>3</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1137,11 +1137,11 @@
 			<iMaintenanceModifier>10</iMaintenanceModifier>
 			<iAsset>6</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1213,12 +1213,8 @@
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<ObsoleteSafeCommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>

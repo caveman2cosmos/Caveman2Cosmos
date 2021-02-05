@@ -21315,50 +21315,45 @@ void buildingHelpTechAndSpecialistModifiers(/* in out*/ CvWStringBuffer& szBuffe
  * Adds option to display actual effects.
  */
 void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTypes eBuilding, bool bCivilopediaText, bool bStrategyText, bool bTechChooserText, CvCity* pCity, bool bActual)
-// BUG - Building Actual Effects - end
 {
 	PROFILE_FUNC();
-
-	CvWString szFirstBuffer;
-	CvWString szTempBuffer;
-	UnitTypes eGreatPeopleUnit;
-	PlayerTypes ePlayer;
-	TeamTypes eTeam = NO_TEAM;
-	bool bFirst;
-	int iLast;
-	bool bRelDisabled = false;
 
 	if (NO_BUILDING == eBuilding)
 	{
 		return;
 	}
+	PlayerTypes ePlayer;
+	bool bRelDisabled = false;
 
-	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 	if (pCity != NULL)
 	{
-		ePlayer = pCity->getOwner();
-
 		if (pCity->isDisabledBuilding(eBuilding))
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_BUILDING_DISABLED"));
+			szBuffer.append(CvWString::format(L"%s", GC.getBuildingInfo(eBuilding).getDescription()));
+			return;
 		}
 		else if (pCity->isReligiouslyDisabledBuilding(eBuilding))
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_BUILDING_DISABLED_RELIGIOUSLY"));
 			bRelDisabled = !bCivilopediaText;
 		}
+		ePlayer = pCity->getOwner();
 	}
-	else
-	{
-		ePlayer = GC.getGame().getActivePlayer();
-	}
+	else ePlayer = GC.getGame().getActivePlayer();
 
+	TeamTypes eTeam = NO_TEAM;
 	if (ePlayer != NO_PLAYER)
 	{
 		eTeam = GET_PLAYER(ePlayer).getTeam();
 	}
-
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	CvWString szFirstBuffer;
+	CvWString szTempBuffer;
+	bool bFirst;
+	int iLast;
+	UnitTypes eGreatPeopleUnit;
 
 	if (!bCivilopediaText)
 	{
@@ -21486,21 +21481,19 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 				if (NULL == pCity)
 				{
 					aiCommerces[iI] = iBaseCommerceChange;
-					aiCommerces[iI] += kBuilding.getObsoleteSafeCommerceChange(iI);
 				}
-				else if (pCity->getNumBuilding(eBuilding) <= 0)
+				else if (pCity->getNumBuilding(eBuilding) > 0)
+				{
+					aiCommerces[iI] = pCity->getBuildingCommerceByBuilding((CommerceTypes)iI, eBuilding) + (pCity->getBonusCommercePercentChanges((CommerceTypes)iI, eBuilding) / 100);
+				}
+				else
 				{
 					aiCommerces[iI] = iBaseCommerceChange;
-					aiCommerces[iI] += kBuilding.getObsoleteSafeCommerceChange(iI);
 					if (ePlayer != NO_PLAYER)
 					{
 						aiCommerces[iI] += GET_TEAM(eTeam).getBuildingCommerceChange(eBuilding, (CommerceTypes)iI);
 						aiCommerceModifiers[iI] += GET_TEAM(eTeam).getBuildingCommerceModifier(eBuilding, (CommerceTypes)iI);
 					}
-				}
-				else
-				{
-					aiCommerces[iI] = pCity->getBuildingCommerceByBuilding((CommerceTypes)iI, eBuilding) + (pCity->getBonusCommercePercentChanges((CommerceTypes)iI, eBuilding) / 100);
 				}
 			}
 			setCommerceChangeHelp(szBuffer, L", ", L"", L"", aiCommerces, false, false);

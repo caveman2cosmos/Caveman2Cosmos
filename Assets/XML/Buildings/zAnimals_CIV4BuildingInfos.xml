@@ -14076,11 +14076,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_DESIGNER_MICROBIOLOGY</ObsoleteTech>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<FreeBonus>BONUS_POISON</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<TechCommerceChanges>
@@ -14492,11 +14492,11 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<iHappiness>1</iHappiness>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -14871,11 +14871,11 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<iHappiness>1</iHappiness>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -15297,11 +15297,11 @@
 			<iConquestProb>25</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -15606,11 +15606,11 @@
 			<iConquestProb>25</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
@@ -15700,11 +15700,11 @@
 			<iConquestProb>25</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -15775,11 +15775,11 @@
 			<iConquestProb>25</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -15816,11 +15816,11 @@
 			<iConquestProb>25</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -15930,11 +15930,11 @@
 			<iConquestProb>25</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
@@ -15976,11 +15976,11 @@
 			<iConquestProb>25</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
@@ -16162,11 +16162,11 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<iHappiness>1</iHappiness>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>

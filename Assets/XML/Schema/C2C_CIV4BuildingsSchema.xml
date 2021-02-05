@@ -546,9 +546,6 @@
 	<ElementType name="CommercePerPopChanges" content="eltOnly">
 		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="ObsoleteSafeCommerceChanges" content="eltOnly">
-		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="CommerceChangeDoubleTimes" content="eltOnly">
 		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
@@ -967,7 +964,6 @@
 		<element type="GlobalYieldModifiers" minOccurs="0"/>
 		<element type="CommerceChanges" minOccurs="0"/>
 		<element type="CommercePerPopChanges" minOccurs="0"/>
-		<element type="ObsoleteSafeCommerceChanges" minOccurs="0"/>
 		<element type="CommerceChangeDoubleTimes" minOccurs="0"/>
 		<element type="CommerceModifiers" minOccurs="0"/>
 		<element type="GlobalCommerceModifiers" minOccurs="0"/>
