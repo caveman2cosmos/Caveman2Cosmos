@@ -2022,8 +2022,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int64_t value)
+void CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int64_t value)
 {
 	PROFILE_FUNC();
 
@@ -2042,12 +2041,11 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int6
 	}
 	else
 	{
-		m_stream->Write(value);
+		m_stream->WriteString((const char*)value);
 	}
 }
 
-void
-CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, uint64_t value) 
+void CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, uint64_t value) 
 {
 	PROFILE_FUNC();
 
@@ -2066,12 +2064,11 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, uint
 	}
 	else
 	{
-		m_stream->Write(value);
+		m_stream->WriteString((const char*)value);
 	}
 }
 
-void
-CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int count, const int64_t values[])
+void CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int count, const int64_t values[])
 {
 	PROFILE_FUNC();
 
@@ -2087,16 +2084,15 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 		entry.numLongLongs = count;
 
 		m_stream->Write(VALUE_ENTRY_LONG_LONG_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
-		m_stream->Write(count, values);
+		m_stream->WriteString((const char*)values);
 	}
 	else
 	{
-		m_stream->Write(count, values);
+		m_stream->Write((const char*)values);
 	}
 }
 
-void
-CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int count, const uint64_t values[])
+void CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int count, const uint64_t values[])
 {
 	PROFILE_FUNC();
 
@@ -2112,11 +2108,11 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 		entry.numLongLongs = count;
 
 		m_stream->Write(VALUE_ENTRY_LONG_LONG_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
-		m_stream->Write(count, values);
+		m_stream->WriteString((const char*)values);
 	}
 	else
 	{
-		m_stream->Write(count, values);
+		m_stream->WriteString((const char*)values);
 	}
 }
 
@@ -3093,8 +3089,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int64_t* ll)
+void CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int64_t* ll)
 {
 	PROFILE_FUNC();
 
@@ -3106,12 +3101,12 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int64
 
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_LONG_LONG) )
 		{
-			m_stream->Read(ll);
+			m_stream->ReadString((char*)ll);
 		}
 	}
 	else
 	{
-		m_stream->Read(ll);
+		m_stream->ReadString((char*)ll);
 	}
 }
 
@@ -3129,18 +3124,17 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint6
 
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG) )
 		{
-			m_stream->Read(ll);
+			m_stream->ReadString((char*)ll);
 		}
 	}
 	else
 	{
-		m_stream->Read(ll);
+		m_stream->ReadString((char*)ll);
 	}
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, int64_t values[])
+void CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, int64_t values[])
 {
 	PROFILE_FUNC();
 
@@ -3161,18 +3155,17 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 				//	Incompatible save
 				HandleIncompatibleSave(CvString::format("Save format is not compatible (%s)", name).c_str());
 			}
-			m_stream->Read(count, values);
+			m_stream->ReadString((char*)values);
 		}
 	}
 	else
 	{
-		m_stream->Read(count, values);
+		m_stream->ReadString((char*)values);
 	}
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, uint64_t values[])
+void CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, uint64_t values[])
 {
 	PROFILE_FUNC();
 
@@ -3193,12 +3186,12 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 				//	Incompatible save
 				HandleIncompatibleSave(CvString::format("Save format is not compatible (%s)", name).c_str());
 			}
-			m_stream->Read(count, values);
+			m_stream->ReadString((char*)values);
 		}
 	}
 	else
 	{
-		m_stream->Read(count, values);
+		m_stream->ReadString((char*)values);
 	}
 }
 

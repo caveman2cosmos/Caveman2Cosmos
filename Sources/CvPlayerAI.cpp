@@ -17403,7 +17403,7 @@ void CvPlayerAI::AI_changePeacetimeTradeValue(PlayerTypes eIndex, int iChange)
 		AI_invalidateAttitudeCache(eIndex);
 		GET_PLAYER(eIndex).AI_invalidateAttitudeCache(getID());
 
-		m_aiPeacetimeTradeValue[eIndex] = (m_aiPeacetimeTradeValue[eIndex] + iChange);
+		m_aiPeacetimeTradeValue[eIndex] += iChange;
 		FAssert(AI_getPeacetimeTradeValue(eIndex) >= 0);
 
 		if (iChange < 0)

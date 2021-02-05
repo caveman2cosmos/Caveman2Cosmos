@@ -322,31 +322,6 @@ void FDataIOStream::Read(int count, unsigned long values[])
 }
 
 
-void FDataIOStream::Read(int64_t* ll)
-{
-	stream.read((char*)ll, sizeof(int64_t));
-	FAssert(stream.good());
-}
-
-void FDataIOStream::Read(uint64_t* ll)
-{
-	stream.read((char*)ll, sizeof(uint64_t));
-	FAssert(stream.good());
-}
-
-void FDataIOStream::Read(int count, int64_t values[])
-{
-	stream.read((char*)values, sizeof(int64_t)*count);
-	FAssert(stream.good());
-}
-
-void FDataIOStream::Read(int count, uint64_t values[])
-{
-	stream.read((char*)values, sizeof(uint64_t)*count);
-	FAssert(stream.good());
-}
-
-
 void FDataIOStream::Read(float* value)
 {
 	stream.read((char*)value, sizeof(float));
@@ -493,31 +468,6 @@ void FDataIOStream::Write(int count, const long values[])
 void FDataIOStream::Write(int count, const unsigned long values[])
 {
 	stream.write((char*)values, sizeof(unsigned long)*count);
-	FAssert(stream.good());
-}
-
-
-void FDataIOStream::Write(int64_t value)
-{
-	stream.write((char*)&value, sizeof(int64_t));
-	FAssert(stream.good());
-}
-
-void FDataIOStream::Write(uint64_t value)
-{
-	stream.write((char*)&value, sizeof(uint64_t));
-	FAssert(stream.good());
-}
-
-void FDataIOStream::Write(int count, const int64_t values[])
-{
-	stream.write((char*)values, sizeof(int64_t)*count);
-	FAssert(stream.good());
-}
-
-void FDataIOStream::Write(int count, const uint64_t values[])
-{
-	stream.write((char*)values, sizeof(uint64_t)*count);
 	FAssert(stream.good());
 }
 

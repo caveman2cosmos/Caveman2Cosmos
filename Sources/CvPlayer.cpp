@@ -16623,7 +16623,7 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 	{
 		// Buy (Steal) Tech
 		TechTypes eTech = (TechTypes)iExtraData;
-		int64_t iProdCost = MAX_INT64;
+		int64_t iProdCost = ULLONG_MAX;
 
 		if (NO_TECH == eTech)
 		{

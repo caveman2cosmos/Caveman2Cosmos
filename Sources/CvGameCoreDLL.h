@@ -74,15 +74,19 @@
 //
 // Basic types
 //
-typedef unsigned int        uint;
+#include <boost/cstdint.hpp>
 
-typedef short               int16_t;
-typedef long long           int64_t;
+using boost::int8_t;
+using boost::int16_t;
+using boost::int32_t;
+using boost::int64_t;
 
 typedef unsigned char       uint8_t;
 typedef unsigned short      uint16_t;
 typedef unsigned int        uint32_t;
-typedef unsigned long long  uint64_t;
+using boost::uint64_t;
+
+typedef unsigned int        uint;
 
 //
 // Type traits
