@@ -893,11 +893,11 @@ void CvTeam::shareItems(TeamTypes eTeam)
 							{
 								if (GET_PLAYER((PlayerTypes)iK).isAliveAndTeam(getID()))
 								{
-									GET_PLAYER((PlayerTypes)iK).processBuilding((BuildingTypes)iJ, pLoopCity->getNumBuilding((BuildingTypes)iJ), pLoopCity->area());
+									GET_PLAYER((PlayerTypes)iK).processBuilding((BuildingTypes)iJ, 1, pLoopCity->area());
 								}
 							}
 						}
-						processBuilding(((BuildingTypes)iJ), pLoopCity->getNumBuilding((BuildingTypes)iJ));
+						processBuilding((BuildingTypes)iJ, 1);
 					}
 				}
 			}

@@ -2307,7 +2307,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	int iOccupationTimeModifier = 100;
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (pOldCity->getNumBuilding((BuildingTypes)iI) > 0
+		if (pOldCity->getNumActiveBuilding((BuildingTypes)iI) > 0
 		&& GC.getBuildingInfo((BuildingTypes)iI).getOccupationTimeModifier() != 0)
 		{
 			iOccupationTimeModifier += GC.getBuildingInfo((BuildingTypes)iI).getOccupationTimeModifier();
@@ -2585,7 +2585,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		paiNumRealBuilding[iI] = pOldCity->getNumBuilding((BuildingTypes)iI);
+		paiNumRealBuilding[iI] = pOldCity->getNumRealBuilding((BuildingTypes)iI);
 		paiBuildingOriginalOwner[iI] = pOldCity->getBuildingOriginalOwner((BuildingTypes)iI);
 		paiBuildingOriginalTime[iI] = pOldCity->getBuildingOriginalTime((BuildingTypes)iI);
 	}
@@ -2657,7 +2657,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			{
 				iNum += paiNumRealBuilding[iI];
 			}
-			pNewCity->setNumRealBuildingTimed((BuildingTypes)iI, std::min(1, iNum) > 0, false, ((PlayerTypes)(paiBuildingOriginalOwner[iI])), paiBuildingOriginalTime[iI]);
+			pNewCity->setNumRealBuildingTimed((BuildingTypes)iI, std::min(1, iNum) > 0, false, (PlayerTypes)paiBuildingOriginalOwner[iI], paiBuildingOriginalTime[iI]);
 		}
 	}
 
@@ -4108,7 +4108,7 @@ void CvPlayer::dumpStats() const
 			for (int i = 0; i < num; i++)
 			{
 				const PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
-				if (pLoopCity->getNumBuilding(kBuilding.eBuilding) > 0)
+				if (pLoopCity->getNumRealBuilding(kBuilding.eBuilding) > 0)
 				{
 					logBBAI("				%S: %S", kInfo.getDescription(), GC.getBuildingInfo(kBuilding.eBuilding).getDescription());
 				}
@@ -4934,7 +4934,7 @@ int CvPlayer::countCityFeatures(FeatureTypes eFeature) const
 
 int CvPlayer::countNumBuildings(BuildingTypes eBuilding) const
 {
-	return algo::accumulate(cities() | transformed(CvCity::fn::getNumBuilding(eBuilding)), 0);
+	return algo::accumulate(cities() | transformed(CvCity::fn::getNumRealBuilding(eBuilding)), 0);
 }
 
 
@@ -7703,9 +7703,9 @@ void CvPlayer::removeBuilding(BuildingTypes building)
 {
 	if (building != NO_BUILDING)
 	{
-		foreach_(CvCity* pLoopCity, cities() | filtered(CvCity::fn::getNumBuilding(building) > 0))
+		foreach_(CvCity* pLoopCity, cities() | filtered(CvCity::fn::getNumRealBuilding(building) > 0))
 		{
-			pLoopCity->setNumRealBuilding(building, pLoopCity->getNumBuilding(building) - 1);
+			pLoopCity->setNumRealBuilding(building, 0);
 			break;
 		}
 	}
@@ -16768,22 +16768,11 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 	}
 	else if (kMission.getBuyUnitCostFactor() > 0)
 	{
-/************************************************************************************************/
-/* SUPER_SPIES							 RevolutionDCM												  */
-/************************************************************************************************/
-		//RevolutionDCM start
 		//Bribe
-		if (NULL != pSpyUnit)
+		if (NULL != pSpyUnit && pSpyUnit->canBribe(pPlot, false))
 		{
-			if (pSpyUnit->canBribe(pPlot, false))
-			{
-				iMissionCost = iBaseMissionCost * kMission.getBuyUnitCostFactor();
-			}
+			iMissionCost = iBaseMissionCost * kMission.getBuyUnitCostFactor();
 		}
-		//RevolutionDCM end
-/************************************************************************************************/
-/* SUPER_SPIES							 END												  */
-/************************************************************************************************/
 	}
 	else if (kMission.getDestroyBuildingCostFactor() > 0)
 	{
@@ -16794,35 +16783,27 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 		{
 			for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 			{
-				if (NULL != pCity && pCity->getNumBuilding((BuildingTypes)iBuilding) > 0)
+				if (NULL != pCity && pCity->getNumActiveBuilding((BuildingTypes)iBuilding) > 0
+				&& canSpyDestroyBuilding(eTargetPlayer, (BuildingTypes)iBuilding))
 				{
-					if (canSpyDestroyBuilding(eTargetPlayer, (BuildingTypes)iBuilding))
-					{
-						int iValue = getProductionNeeded((BuildingTypes)iBuilding);
+					const int iValue = getProductionNeeded((BuildingTypes)iBuilding);
 
-						if (iValue < iCost)
-						{
-							iCost = iValue;
-							eBuilding = (BuildingTypes)iBuilding;
-						}
+					if (iValue < iCost)
+					{
+						iCost = iValue;
+						eBuilding = (BuildingTypes)iBuilding;
 					}
 				}
 			}
 		}
-		else
-		{
-			iCost = getProductionNeeded(eBuilding);
-		}
+		else iCost = getProductionNeeded(eBuilding);
 
-		if (NO_BUILDING != eBuilding)
+
+		if (NO_BUILDING != eBuilding && NULL != pCity
+		&& pCity->getNumActiveBuilding(eBuilding) > 0
+		&& canSpyDestroyBuilding(eTargetPlayer, eBuilding))
 		{
-			if (NULL != pCity && pCity->getNumBuilding(eBuilding) > 0)
-			{
-				if (canSpyDestroyBuilding(eTargetPlayer, eBuilding))
-				{
-					iMissionCost = iBaseMissionCost + ((100 + kMission.getDestroyBuildingCostFactor()) * iCost) / 100;
-				}
-			}
+			iMissionCost = iBaseMissionCost + ((100 + kMission.getDestroyBuildingCostFactor()) * iCost) / 100;
 		}
 	}
 	else if (kMission.getBuyCityCostFactor() > 0)
@@ -17166,7 +17147,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 			// Destroy Building
 			if (kMission.getDestroyBuildingCostFactor() > 0)
 			{
-				pCity->setNumRealBuilding((BuildingTypes)iExtraData, pCity->getNumBuilding((BuildingTypes)iExtraData) - 1);
+				pCity->setNumRealBuilding((BuildingTypes)iExtraData, pCity->getNumActiveBuilding((BuildingTypes)iExtraData) - 1);
 				bSomethingHappened = true;
 				bShowExplosion = true;
 				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED_IN",
@@ -17946,7 +17927,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 				{
 					if (getAdvancedStartPoints() >= iCost)
 					{
-						pCity->setNumRealBuilding(eBuilding, pCity->getNumBuilding(eBuilding)+1);
+						pCity->setNumRealBuilding(eBuilding, 1);
 						changeAdvancedStartPoints(-iCost);
 						if (GC.getBuildingInfo(eBuilding).getFoodKept() != 0)
 						{
@@ -17958,7 +17939,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 				// Remove Building from the map
 				else
 				{
-					pCity->setNumRealBuilding(eBuilding, pCity->getNumBuilding(eBuilding)-1);
+					pCity->setNumRealBuilding(eBuilding, 0);
 					changeAdvancedStartPoints(iCost);
 					if (GC.getBuildingInfo(eBuilding).getFoodKept() != 0)
 					{
@@ -18518,7 +18499,7 @@ int CvPlayer::getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, c
 		}
 		else
 		{
-			if (pCity->getNumBuilding(eBuilding) <= 0)
+			if (pCity->getNumRealBuilding(eBuilding) <= 0)
 			{
 				return -1;
 			}
@@ -18530,7 +18511,7 @@ int CvPlayer::getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, c
 			{
 				const BuildingTypes eBuildingLoop = static_cast<BuildingTypes>(iBuildingLoop);
 
-				if (pCity->getNumBuilding(eBuildingLoop) > 0 && GC.getBuildingInfo(eBuildingLoop).getNumPrereqInCityBuildings() > 0)
+				if (pCity->getNumRealBuilding(eBuildingLoop) > 0 && GC.getBuildingInfo(eBuildingLoop).getNumPrereqInCityBuildings() > 0)
 				{
 					return -1;
 				}
@@ -18910,7 +18891,7 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 			{
 				BuildingTypes eBuilding = (BuildingTypes) iBuildingLoop;
 
-				if (pLoopCity->getNumBuilding(eBuilding) > 0)
+				if (pLoopCity->getNumRealBuilding(eBuilding) > 0)
 				{
 					if (GC.getBuildingInfo(eBuilding).getPrereqAndTech() == eTech)
 					{
@@ -22181,7 +22162,7 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 			for (int i = 0; i < kTrigger.getNumBuildingsRequired(); ++i)
 			{
 				const BuildingTypes eTestBuilding = static_cast<BuildingTypes>(kTrigger.getBuildingRequired(i));
-				if (eTestBuilding != NO_BUILDING && pCity->getNumBuilding(eTestBuilding) > 0)
+				if (eTestBuilding != NO_BUILDING && pCity->getNumActiveBuilding(eTestBuilding) > 0)
 				{
 					aeBuildings.push_back(eTestBuilding);
 				}
@@ -27831,7 +27812,7 @@ int CvPlayer::getSevoWondersScore(int mode)
 					{
 						numWondersPossible++;
 						//This building is a world wonder
-						if (pLoopCity->getNumBuilding((BuildingTypes)iJ) > 0)
+						if (pLoopCity->getNumRealBuilding((BuildingTypes)iJ) > 0)
 						{
 							// This city contains this wonder
 							// Increment the wonder counter
@@ -27877,7 +27858,7 @@ void CvPlayer::recalculatePopulationgrowthratepercentage()
 		{
 			foreach_(const CvCity* pLoopCity, cities())
 			{
-				if (pLoopCity->getNumBuilding(eLoopBuilding) > 0)
+				if (pLoopCity->getNumActiveBuilding(eLoopBuilding) > 0)
 				{
 					changePopulationgrowthratepercentage(GC.getBuildingInfo(eLoopBuilding).getGlobalPopulationgrowthratepercentage(),true);
 				}
@@ -28384,7 +28365,7 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
 			const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-			if (pLoopCity->getNumBuilding(eLoopBuilding) > 0)
+			if (pLoopCity->getNumActiveBuilding(eLoopBuilding) > 0)
 			{
 				int iTempValue = 0;
 
@@ -28402,8 +28383,6 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 				{
 					iTempValue += aiBaseCommerceRate[iJ] * kLoopBuilding.getBonusCommerceModifier(eBonus, iJ) / 33;
 				}
-				iTempValue *= pLoopCity->getNumBuilding(eLoopBuilding);
-
 				iConsumption += iTempValue;
 			}
 		}

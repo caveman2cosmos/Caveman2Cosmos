@@ -2221,7 +2221,7 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 			for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 			{
 				if (kPlayer.canDoEspionageMission(eMission, eTargetPlayer, pPlot, iBuilding, pUnit)
-				&& pCity->getNumBuilding((BuildingTypes)iBuilding) > 0)
+				&& pCity->getNumActiveBuilding((BuildingTypes)iBuilding) > 0)
 				{
 					const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iBuilding);
 					const int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iBuilding, pUnit);
@@ -3002,11 +3002,7 @@ bool CvDLLButtonPopup::launchFoundReligionPopup(CvPopup* pPopup, CvPopupInfo &in
 	return true;
 }
 
-/************************************************************************************************/
-/* Afforess	                  Start		 09/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 bool CvDLLButtonPopup::invasionPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
 	const CvCity* pCity = GET_PLAYER(GC.getGame().getActivePlayer()).getCity(info.getData1());
@@ -3017,13 +3013,10 @@ bool CvDLLButtonPopup::invasionPopup(CvPopup* pPopup, CvPopupInfo &info)
 
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			if (pCity->getNumBuilding((BuildingTypes)iI) > 0)
+			if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0 && GC.getBuildingInfo((BuildingTypes)iI).getInvasionChance() > 0)
 			{
-				if (GC.getBuildingInfo((BuildingTypes)iI).getInvasionChance() > 0)
-				{
-					eBuilding = (BuildingTypes)iI;
-					break;
-				}
+				eBuilding = (BuildingTypes)iI;
+				break;
 			}
 		}
 
@@ -3043,6 +3036,7 @@ bool CvDLLButtonPopup::invasionPopup(CvPopup* pPopup, CvPopupInfo &info)
 
 	return true;
 }
+
 bool CvDLLButtonPopup::launchSelectShadowUnitPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
 	int iUnitID = info.getData1();

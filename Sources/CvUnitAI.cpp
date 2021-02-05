@@ -15179,7 +15179,7 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 			&& player.canConstruct(eBuilding, false, false, true)
 			&& player.AI_getNumBuildingsNeeded(eBuilding, (getDomainType() == DOMAIN_SEA)) > 0)
 		{
-			const int numBuildings = algo::count_if(player.cities(), CvCity::fn::getNumBuilding(eBuilding) != 0);
+			const int numBuildings = algo::count_if(player.cities(), CvCity::fn::getNumRealBuilding(eBuilding) != 0);
 			const bool canBuild = numBuildings < iMaxCount &&
 					(
 						iDecayProbabilityRate == 0 || getDecayedConstructProbability(iConstructBelow, iDecayProbabilityRate, numBuildings) >= iContructRand

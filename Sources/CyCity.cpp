@@ -518,11 +518,6 @@ int CyCity::getNumRealBuilding(int /*BuildingTypes*/ iIndex) const
 	return m_pCity->getNumRealBuilding((BuildingTypes) iIndex);
 }
 
-int CyCity::getNumBuilding(int /*BuildingTypes*/ iIndex) const
-{
-	return m_pCity->getNumBuilding((BuildingTypes) iIndex);
-}
-
 int CyCity::getNumActiveBuilding(int /*BuildingTypes*/ iIndex) const
 {
 	return m_pCity->getNumActiveBuilding((BuildingTypes) iIndex);

@@ -1653,7 +1653,7 @@ void CvMap::toggleUnitsDisplay()
 			{
 				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 				{
-					if (pCity->getNumBuilding((BuildingTypes)iI) > 0)
+					if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
 					{
 						int iBuiltTime = pCity->getBuildingOriginalTime((BuildingTypes)iI);
 						if (iBuiltTime < paiFirstBuilt[iI])

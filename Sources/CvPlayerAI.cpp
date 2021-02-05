@@ -6198,7 +6198,7 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 
 				foreach_(const CvCity* pLoopCity, cities())
 				{
-					if (pLoopCity->getNumBuilding(eLoopBuilding))
+					if (pLoopCity->getNumRealBuilding(eLoopBuilding))
 					{
 						iNumExisting++;
 					}
@@ -10386,46 +10386,41 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 
 int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 {
-	int iI;
-
 	FAssert(pCity->getOwner() != getID());
 
 	int iValue = 500;
 	//consider infrastructure
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (pCity->getNumBuilding((BuildingTypes)iI) > 0)
+		if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
 		{
 			if (isWorldWonder((BuildingTypes)iI))
 			{
-				iValue += pCity->getNumBuilding((BuildingTypes)iI) * GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 3;
+				iValue += GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 3;
 			}
 			else if (isLimitedWonder((BuildingTypes)iI))
 			{
-				iValue += pCity->getNumBuilding((BuildingTypes)iI) * GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 5;
+				iValue += GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 5;
 			}
 			else
 			{
-				iValue += pCity->getNumBuilding((BuildingTypes)iI) * GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 10;
+				iValue += GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 10;
 			}
 		}
 	}
-	for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
-		if (pCity->isHasReligion((ReligionTypes)iI))
+		if (pCity->isHasReligion((ReligionTypes)iI) && getStateReligion() == iI)
 		{
-			if (getStateReligion() == iI)
+			iValue += 100;
+			if (pCity->isHolyCity((ReligionTypes)iI))
 			{
-				iValue += 100;
-				if (pCity->isHolyCity((ReligionTypes)iI))
-				{
-					iValue += 500;
-				}
-				break;
+				iValue += 500;
 			}
+			break;
 		}
 	}
-	for (iI = 0; iI < GC.getNumCorporationInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
 		if (pCity->isHasCorporation((CorporationTypes)iI))
 		{
@@ -10440,21 +10435,10 @@ int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 	iValue += (pCity->getPopulation() * 50);
 
 	iValue += (pCity->getCultureLevel() * 200);
-	/************************************************************************************************/
-	/* Afforess												 5/29/11								*/
-	/*																							  */
-	/* Improved AI																				  */
-	/************************************************************************************************/
-	/*
-	iValue += (((((pCity->getPopulation() * 50) + GC.getGame().getElapsedGameTurns() + 100) * 4) * pCity->plot()->calculateCulturePercent(pCity->getOwner())) / 100);
 
-	 */
 	iValue += (((GC.getGame().getElapsedGameTurns() + 100) * 4) * pCity->plot()->calculateCulturePercent(pCity->getOwner())) / 400;
-	/************************************************************************************************/
-	/* Afforess								   END												  */
-	/************************************************************************************************/
 
-	for (iI = 0; iI < pCity->getNumCityPlots(); iI++)
+	for (int iI = 0; iI < pCity->getNumCityPlots(); iI++)
 	{
 		const CvPlot* pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
 
@@ -10520,35 +10504,32 @@ int CvPlayerAI::AI_ourCityValue(CvCity* pCity) const
 	//consider infrastructure
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (pCity->getNumBuilding((BuildingTypes)iI) > 0)
+		if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
 		{
 			if (isWorldWonder((BuildingTypes)iI))
 			{
-				iValue += pCity->getNumBuilding((BuildingTypes)iI) * GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 3;
+				iValue += GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 3;
 			}
 			else if (isLimitedWonder((BuildingTypes)iI))
 			{
-				iValue += pCity->getNumBuilding((BuildingTypes)iI) * GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 5;
+				iValue += GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 5;
 			}
 			else
 			{
-				iValue += pCity->getNumBuilding((BuildingTypes)iI) * GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 8;
+				iValue += GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 8;
 			}
 		}
 	}
 	for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
-		if (pCity->isHasReligion((ReligionTypes)iI))
+		if (pCity->isHasReligion((ReligionTypes)iI) && getStateReligion() == iI)
 		{
-			if (getStateReligion() == iI)
+			iValue += 100;
+			if (pCity->isHolyCity((ReligionTypes)iI))
 			{
-				iValue += 100;
-				if (pCity->isHolyCity((ReligionTypes)iI))
-				{
-					iValue += 500;
-				}
-				break;
+				iValue += 500;
 			}
+			break;
 		}
 	}
 	for (iI = 0; iI < GC.getNumCorporationInfos(); iI++)
@@ -16739,7 +16720,7 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 								{
 									BuildingTypes eBuilding = (BuildingTypes)iBuilding;
 
-									if (pCity->getNumBuilding(eBuilding) > 0)
+									if (pCity->getNumActiveBuilding(eBuilding) > 0)
 									{
 										int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, iBuilding);
 
@@ -16989,35 +16970,20 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 		}
 	}
 
-	if (bMalicious && GC.getEspionageMissionInfo(eMission).getDestroyBuildingCostFactor() > 0)
+	if (bMalicious
+	&& GC.getEspionageMissionInfo(eMission).getDestroyBuildingCostFactor() > 0
+	&& canSpyDestroyBuilding(eTargetPlayer, (BuildingTypes)iData))
 	{
-		if (canSpyDestroyBuilding(eTargetPlayer, (BuildingTypes)iData))
-		{
-			CvCity* pCity = pPlot->getPlotCity();
+		CvCity* pCity = pPlot->getPlotCity();
 
-			if (NULL != pCity)
+		if (NULL != pCity && pCity->getNumActiveBuilding((BuildingTypes)iData) > 0)
+		{
+			const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iData);
+			if (kBuilding.getProductionCost() > 1 && !isWorldWonder((BuildingTypes)iData))
 			{
-				if (pCity->getNumBuilding((BuildingTypes)iData) > 0)
-				{
-					const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iData);
-					if (kBuilding.getProductionCost() > 1 && !isWorldWonder((BuildingTypes)iData))
-					{
-						// BBAI TODO: Should this be based on production cost of building?  Others are
-						/*int iEspionageFlags = 0;
-						iEspionageFlags |= BUILDINGFOCUS_FOOD;
-						iEspionageFlags |= BUILDINGFOCUS_PRODUCTION;
-						iEspionageFlags |= BUILDINGFOCUS_DEFENSE;
-						iEspionageFlags |= BUILDINGFOCUS_HAPPY;
-						iEspionageFlags |= BUILDINGFOCUS_HEALTHY;
-						iEspionageFlags |= BUILDINGFOCUS_GOLD;
-						iEspionageFlags |= BUILDINGFOCUS_RESEARCH;*/
-						iValue += pCity->AI_buildingValue((BuildingTypes)iData);
-						// K-Mod
-						iValue *= 60 + kBuilding.getProductionCost();
-						iValue /= 100;
-						// K-Mod end
-					}
-				}
+				iValue += pCity->AI_buildingValue((BuildingTypes)iData);
+				iValue *= 60 + kBuilding.getProductionCost();
+				iValue /= 100;
 			}
 		}
 	}
@@ -17334,7 +17300,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 			int iTempValue = 0;
 			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				if (pCity->getNumBuilding((BuildingTypes)iI) > 0)
+				if (pCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
 				{
 					if (GC.getBuildingInfo((BuildingTypes)iI).isPrereqPower())
 					{
@@ -27570,11 +27536,7 @@ void CvPlayerAI::AI_setPushReligiousVictory()
 			}
 		}
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 07/26/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	int iPercentThreshold = (2*iVictoryTarget) / 3;
 	bool bHasHolyBuilding = false;
 	if (getStateReligion() != NO_RELIGION)
@@ -27599,7 +27561,7 @@ void CvPlayerAI::AI_setPushReligiousVictory()
 		iPercentThreshold /= 2;
 	}
 
-	if(bStateReligionBest)
+	if (bStateReligionBest)
 	{
 		if( (iStateReligionInfluence > iPercentThreshold) || (pTeamAI.getTotalLand(true) > 50) )
 		{
@@ -27607,11 +27569,6 @@ void CvPlayerAI::AI_setPushReligiousVictory()
 			return;
 		}
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
-
 }
 
 
@@ -27794,11 +27751,7 @@ int CvPlayerAI::countCityReligionRevolts() const
 /************************************************************************************************/
 /* Inquisitions						 END														*/
 /************************************************************************************************/
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 
 int CvPlayerAI::AI_getEmbassyAttitude(PlayerTypes ePlayer) const
 {
@@ -28037,23 +27990,18 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 			{
 				const BuildingTypes eBuilding = (BuildingTypes)kUnit.getBuildings(iI);
 
-				if (NO_BUILDING != eBuilding)
+				if (NO_BUILDING != eBuilding && canConstruct(eBuilding, false, false, true)
+				&& AI_getNumBuildingsNeeded(eBuilding, pUnit->getDomainType() == DOMAIN_SEA) > 0)
 				{
-					if (canConstruct(eBuilding, false, false, true))
+					foreach_(CvCity* pLoopCity, cities())
 					{
-						if (AI_getNumBuildingsNeeded(eBuilding, (pUnit->getDomainType() == DOMAIN_SEA)) > 0)
+						if (pLoopCity->area() == pEvaluationCity->area() && pLoopCity->getNumRealBuilding(eBuilding) == 0)
 						{
-							foreach_(CvCity* pLoopCity, cities())
-							{
-								if (pLoopCity->area() == pEvaluationCity->area() && pLoopCity->getNumBuilding(eBuilding) == 0)
-								{
-									const int iValue = pLoopCity->AI_buildingValue(eBuilding);
+							const int iValue = pLoopCity->AI_buildingValue(eBuilding);
 
-									if (iValue > iBestValue)
-									{
-										iBestValue = iValue;
-									}
-								}
+							if (iValue > iBestValue)
+							{
+								iBestValue = iValue;
 							}
 						}
 					}
@@ -38243,39 +38191,32 @@ int CvPlayerAI::AI_getNavalMilitaryProductionCityCount() const
 	m_iNavalMilitaryProductionCityCount = iCount;
 	return iCount;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 
 int	CvPlayerAI::AI_getNumBuildingsNeeded(BuildingTypes eBuilding, bool bCoastal) const
 {
-	//	Total needed to have one in every city
+	// Total needed to have one in every city
 	BuildingCountMap::const_iterator itr = m_numBuildingsNeeded.find(eBuilding);
 
-	if ( itr == m_numBuildingsNeeded.end() )
+	if (itr == m_numBuildingsNeeded.end())
 	{
 		int	result = 0;
 
 		foreach_(const CvCity* pLoopCity, cities())
 		{
-			if ( (!bCoastal || pLoopCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize())) && pLoopCity->getNumBuilding(eBuilding) == 0 )
+			if ((!bCoastal || pLoopCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
+			&& pLoopCity->getNumRealBuilding(eBuilding) == 0)
 			{
 				result++;
 			}
 		}
-
 		{
 			MEMORY_TRACK_EXEMPT();
-
 			m_numBuildingsNeeded[eBuilding] = result;
 		}
-
 		return result;
 	}
-	else
-	{
-		return itr->second;
-	}
+	return itr->second;
 }
 
 void CvPlayerAI::AI_changeNumBuildingsNeeded(BuildingTypes eBuilding, int iChange)

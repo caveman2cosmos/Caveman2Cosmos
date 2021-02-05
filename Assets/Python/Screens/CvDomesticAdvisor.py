@@ -505,7 +505,7 @@ class CvDomesticAdvisor:
 		# add National Wonders
 		for i in xrange(GC.getNumBuildingInfos()):
 			info = GC.getBuildingInfo(i)
-			if info.getMaxGlobalInstances() == -1 and info.getMaxPlayerInstances() == 1 and CyCity.getNumBuilding(i) > 0 and not info.isCapital():
+			if info.getMaxGlobalInstances() == -1 and info.getMaxPlayerInstances() == 1 and CyCity.getNumRealBuilding(i) > 0 and not info.isCapital():
 				# Use bullets as markers for National Wonders
 				szReturn += unichr(8854)
 
@@ -857,10 +857,8 @@ class CvDomesticAdvisor:
 
 	def getBuildingState(self, CyCity, szKey, arg):
 
-		if CyCity.getNumBuilding(arg) > 0:
-			if CyCity.getNumActiveBuilding(arg) > 0:
-				return self.objectHave
-			return "x"
+		if CyCity.getNumRealBuilding(arg) > 0:
+			return self.objectHave
 		elif CyCity.getFirstBuildingOrder(arg) != -1:
 			return self.objectUnderConstruction
 		elif CyCity.canConstruct(arg, False, False, False):

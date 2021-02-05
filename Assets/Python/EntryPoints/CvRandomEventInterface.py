@@ -2419,7 +2419,7 @@ def getHelpClassicLiteratureDone3(argsList):
 
 	szCityName = ""
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
-		if city.getNumBuilding(iGreatLibrary):
+		if city.getNumRealBuilding(iGreatLibrary):
 			szCityName = city.getNameKey()
 			break
 
@@ -2429,7 +2429,7 @@ def canApplyClassicLiteratureDone3(argsList):
 	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
-		if city.getNumBuilding(iGreatLibrary):
+		if city.getNumRealBuilding(iGreatLibrary):
 			return True
 	return False
 
@@ -2437,7 +2437,7 @@ def applyClassicLiteratureDone3(argsList):
 	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
-		if city.getNumBuilding(iGreatLibrary):
+		if city.getNumRealBuilding(iGreatLibrary):
 			city.changeFreeSpecialistCount(GC.getInfoTypeForString("SPECIALIST_SCIENTIST"), 1)
 			return
 
@@ -2566,30 +2566,24 @@ def canTriggerBestDefenseDone(argsList):
   return True
 
 def getHelpBestDefenseDone2(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_BEST_DEFENSE_DONE_HELP_2", (3, ))
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_BEST_DEFENSE_DONE_HELP_2", (3, ))
 
 def applyBestDefenseDone2(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
+	kTriggeredData = argsList[1]
 
-  for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
-    loopPlayer = GC.getPlayer(iPlayer)
-    if loopPlayer.isAlive() and iPlayer != kTriggeredData.ePlayer:
-      loopTeam = GC.getTeam(loopPlayer.getTeam())
-      if loopTeam.isHasMet(GC.getPlayer(kTriggeredData.ePlayer).getTeam()):
-        loopPlayer.AI_changeAttitudeExtra(kTriggeredData.ePlayer, 3)
+	for iPlayer in xrange(GC.getMAX_PC_PLAYERS()):
+		loopPlayer = GC.getPlayer(iPlayer)
+		if loopPlayer.isAlive() and iPlayer != kTriggeredData.ePlayer:
+			loopTeam = GC.getTeam(loopPlayer.getTeam())
+			if loopTeam.isHasMet(GC.getPlayer(kTriggeredData.ePlayer).getTeam()):
+				loopPlayer.AI_changeAttitudeExtra(kTriggeredData.ePlayer, 3)
 
 
 def canApplyBestDefenseDone3(argsList):
 	iGreatWall = GC.getInfoTypeForString("BUILDING_GREAT_WALL")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
-		if city.getNumBuilding(iGreatWall):
+		if city.getNumRealBuilding(iGreatWall):
 			return True
 	return False
 
@@ -2630,7 +2624,7 @@ def canApplySportsLeagueDone3(argsList):
 	iZeus = GC.getInfoTypeForString("BUILDING_CIRCUS_MAXIMUS")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
-		if city.getNumBuilding(iZeus):
+		if city.getNumRealBuilding(iZeus):
 			return True
 	return False
 
@@ -2716,14 +2710,8 @@ def applyCrusadeDone1(argsList):
 			player.initUnit(iUnitType, holyCity.getX(), holyCity.getY(), UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.DIRECTION_SOUTH)
 
 def getHelpCrusadeDone2(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  holyCity = GAME.getHolyCity(kTriggeredData.eReligion)
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_CRUSADE_DONE_HELP_2", (GC.getBuildingInfo(kTriggeredData.eBuilding).getTextKey(), holyCity.getNameKey()))
-
-  return szHelp
+	kTriggeredData = argsList[1]
+	return TRNSLTR.getText("TXT_KEY_EVENT_CRUSADE_DONE_HELP_2", (GC.getBuildingInfo(kTriggeredData.eBuilding).getTextKey(), GAME.getHolyCity(kTriggeredData.eReligion).getNameKey()))
 
 def canApplyCrusadeDone2(argsList):
 	kTriggeredData = argsList[1]
@@ -2731,7 +2719,7 @@ def canApplyCrusadeDone2(argsList):
 		return False
 	city = GAME.getHolyCity(kTriggeredData.eReligion)
 
-	if city is None or city.getNumBuilding(kTriggeredData.eBuilding):
+	if city is None or city.getNumRealBuilding(kTriggeredData.eBuilding):
 		return False
 	return True
 
@@ -3335,7 +3323,7 @@ def canTriggerNobleKnightsDone(argsList):
   iBuilding = GC.getInfoTypeForString("BUILDING_ORACLE")
 
   for loopCity in player.cities():
-    if loopCity.getNumBuilding(iBuilding):
+    if loopCity.getNumRealBuilding(iBuilding):
       kActualTriggeredDataObject.iPlotX = loopCity.getX()
       kActualTriggeredDataObject.iPlotY = loopCity.getY()
       kActualTriggeredDataObject.iCityId = loopCity.getID()
@@ -3750,7 +3738,7 @@ def getHelpNuclearProtest1(argsList):
 ######## Preaching Researcher #######
 
 def canTriggerPreachingResearcherCity(argsList):
-	if GC.getPlayer(argsList[1]).getCity(argsList[2]).getNumBuilding(GC.getInfoTypeForString("BUILDING_UNIVERSITY")):
+	if GC.getPlayer(argsList[1]).getCity(argsList[2]).getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_UNIVERSITY")):
 		return True
 	return False
 
@@ -7638,9 +7626,9 @@ def doGlobalWarming(argsList):
 
 		if plot.isCity():
 			city = plot.getPlotCity()
-			iGW += city.getNumBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING1")) * 100
-			iGW += city.getNumBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING2")) * 10000
-			iGW += city.getNumBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING3")) * 1000000
+			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING1")) * 100
+			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING2")) * 10000
+			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING3")) * 1000000
 
 	maxRand = GAME.getEstimateEndTurn() * iNumPlots
 	iIce = 2*iNumPlots / countIce
@@ -8009,7 +7997,7 @@ def doEventLawyer(argsList):
 
 		# Removes buildings
 		for iBuildingLoop in xrange(GC.getNumBuildingInfos( )):
-			if pCity.getNumBuilding(iBuildingLoop):
+			if pCity.getNumRealBuilding(iBuildingLoop):
 				pBuilding = GC.getBuildingInfo( iBuildingLoop )
 				iRequiredCorporation = pBuilding.getFoundsCorporation( )
 				for iCorpLoop in xrange(GC.getNumCorporationInfos()):

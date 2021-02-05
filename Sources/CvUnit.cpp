@@ -9294,7 +9294,7 @@ bool CvUnit::airBomb(int iX, int iY)
 					iCount = 0;
 					for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 					{
-						if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 2 && pCity->getNumBuilding((BuildingTypes)iI))
+						if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 2 && pCity->getNumActiveBuilding((BuildingTypes)iI))
 						{
 							iCount++;
 						}
@@ -9307,7 +9307,7 @@ bool CvUnit::airBomb(int iX, int iY)
 					iCount = 0;
 					for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 					{
-						if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 3 && pCity->getNumBuilding((BuildingTypes)iI))
+						if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 3 && pCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
 						{
 							iCount++;
 						}
@@ -11006,7 +11006,7 @@ bool CvUnit::canConstruct(const CvPlot* pPlot, BuildingTypes eBuilding, bool bTe
 		return false;
 	}
 
-	if (pCity->getNumBuilding(eBuilding) > 0)
+	if (pCity->getNumRealBuilding(eBuilding) > 0)
 	{
 		return false;
 	}
@@ -28134,7 +28134,7 @@ bool CvUnit::airBomb2(int iX, int iY)
 		{
 			iI = GC.getGame().getSorenRandNum(buildingList.getLength(), "Airbomb building");
 			build = buildingList.nodeNum(iI)->m_data;
-			if (pCity->getNumBuilding((BuildingTypes)build) > 0)
+			if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0)
 			{
 				bNoTarget = false;
 			}
@@ -28154,13 +28154,13 @@ bool CvUnit::airBomb2(int iX, int iY)
 					iAttempts++;
 					iI = GC.getGame().getSorenRandNum(buildingList.getLength(), "Airbomb building");
 					build = buildingList.nodeNum(iI)->m_data;
-					if (pCity->getNumBuilding((BuildingTypes)build) > 0 || iAttempts > iMaxAttempts)
+					if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0 || iAttempts > iMaxAttempts)
 					{
 						bNoTarget = false;
 					}
 				}
 			}
-			if (pCity->getNumBuilding((BuildingTypes)build) > 0)
+			if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0)
 			{
 				bNoTarget = false;
 				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), maxXPValue(NULL, pCity->isHominid()), true, pCity->getOwner() == getOwner());
@@ -28373,7 +28373,7 @@ bool CvUnit::airBomb3(int iX, int iY)
 		{
 			iI = GC.getGame().getSorenRandNum(buildingList.getLength(), "Airbomb building");
 			build = buildingList.nodeNum(iI)->m_data;
-			if (pCity->getNumBuilding((BuildingTypes)build) > 0)
+			if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0)
 			{
 				bNoTarget = false;
 			}
@@ -28393,13 +28393,13 @@ bool CvUnit::airBomb3(int iX, int iY)
 					iAttempts++;
 					iI = GC.getGame().getSorenRandNum(buildingList.getLength(), "Airbomb building");
 					build = buildingList.nodeNum(iI)->m_data;
-					if (pCity->getNumBuilding((BuildingTypes)build) > 0 || iAttempts > iMaxAttempts)
+					if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0 || iAttempts > iMaxAttempts)
 					{
 						bNoTarget = false;
 					}
 				}
 			}
-			if (pCity->getNumBuilding((BuildingTypes)build) > 0)
+			if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0)
 			{
 				pCity->setNumRealBuilding((BuildingTypes)build, 0);
 
@@ -29974,7 +29974,7 @@ bool CvUnit::performInquisition()
 			//Remove temples, monasteries, etc...
 			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				if (pCity->getNumBuilding((BuildingTypes)iI) > 0)
+				if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
 				{
 					const CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 					for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
@@ -31951,7 +31951,7 @@ int CvUnit::getCityCommunicability(PromotionLineTypes eAfflictionLine) const
 		for (int iI = 0; iI < GC.getPromotionLineInfo(eAfflictionLine).getNumBuildings(); iI++)
 		{
 			BuildingTypes eAfflictionBuilding = (BuildingTypes)GC.getPromotionLineInfo(eAfflictionLine).getBuilding(iI);
-			if (pCity->getNumBuilding(eAfflictionBuilding) > 0)
+			if (pCity->getNumActiveBuilding(eAfflictionBuilding) > 0)
 			{
 				iCommunicability += GC.getBuildingInfo(eAfflictionBuilding).getTradeCommunicability();
 			}
