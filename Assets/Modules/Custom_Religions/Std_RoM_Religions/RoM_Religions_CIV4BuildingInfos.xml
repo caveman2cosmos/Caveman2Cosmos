@@ -21,7 +21,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_PTAH</MovieDefineTag>
 			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
 			<PrereqTech>TECH_WRITING</PrereqTech>
@@ -94,7 +94,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_TOTH</MovieDefineTag>
 			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
@@ -193,7 +193,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ERECTION</MovieDefineTag>
 			<ReligionType>RELIGION_HELLENISM</ReligionType>
 			<StateReligion>RELIGION_HELLENISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
@@ -288,7 +288,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_FIDIAS</MovieDefineTag>
 			<ReligionType>RELIGION_HELLENISM</ReligionType>
 			<StateReligion>RELIGION_HELLENISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
@@ -382,7 +382,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_NECROMANTEION</MovieDefineTag>
 			<ReligionType>RELIGION_HELLENISM</ReligionType>
 			<StateReligion>RELIGION_HELLENISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
@@ -482,7 +482,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_PYRAMID_OF_THE_MOON</MovieDefineTag>
 			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 			<StateReligion>RELIGION_NAGHUALISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
@@ -564,7 +564,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_PYRAMID_OF_THE_SUN</MovieDefineTag>
 			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 			<StateReligion>RELIGION_NAGHUALISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
@@ -949,7 +949,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>

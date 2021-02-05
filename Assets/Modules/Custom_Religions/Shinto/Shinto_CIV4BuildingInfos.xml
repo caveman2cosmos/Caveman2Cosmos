@@ -272,7 +272,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MATSUMOTO_CASTLE</MovieDefineTag>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<StateReligion>RELIGION_SHINTO</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
 			<ObsoleteTech>TECH_COMMUNISM</ObsoleteTech>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
@@ -334,7 +334,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ITSUKUSHIMA_SHRINE</MovieDefineTag>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<StateReligion>RELIGION_SHINTO</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>

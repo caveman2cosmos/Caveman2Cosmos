@@ -130,11 +130,6 @@ int CyGame::getVoteSourceReligion(int /*VoteSourceTypes*/ eVoteSource) const
 	return m_pGame.getVoteSourceReligion((VoteSourceTypes) eVoteSource);
 }
 
-void CyGame::setVoteSourceReligion(int /*VoteSourceTypes*/ eVoteSource, int /*ReligionTypes*/ eReligion, bool bAnnounce)
-{
-	m_pGame.setVoteSourceReligion((VoteSourceTypes)eVoteSource, (ReligionTypes)eReligion, bAnnounce);
-}
-
 int CyGame::countCivPlayersAlive() const
 {
 	return m_pGame.countCivPlayersAlive();

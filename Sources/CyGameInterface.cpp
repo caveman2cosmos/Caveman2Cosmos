@@ -45,7 +45,6 @@ void CyGamePythonInterface()
 		.def("getSecretaryGeneral", &CyGame::getSecretaryGeneral, "int (int eVoteSource)")
 		.def("canHaveSecretaryGeneral", &CyGame::canHaveSecretaryGeneral, "bool (int eVoteSource)")
 		.def("getVoteSourceReligion", &CyGame::getVoteSourceReligion, "int (int /*VoteSourceTypes*/ eVoteSource)")
-		.def("setVoteSourceReligion", &CyGame::setVoteSourceReligion, "void (int /*VoteSourceTypes*/ eVoteSource, int /*ReligionTypes*/ eReligion, bool bAnnounce)")
 
 		.def("countCivPlayersAlive", &CyGame::countCivPlayersAlive, "int ()")
 		.def("countCivPlayersEverAlive", &CyGame::countCivPlayersEverAlive, "int ()")

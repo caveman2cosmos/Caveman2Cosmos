@@ -20,7 +20,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HELLSMOUTH</MovieDefineTag>
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<StateReligion>RELIGION_VOODOO</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>

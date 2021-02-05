@@ -16426,23 +16426,6 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 
 	if (GC.getCivicInfo(eCivic).getNonStateReligionHappiness() != 0)
 	{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH					   08/28/09				  EmperorFool & jdog5000	  */
-/*																							  */
-/* Bugfix																					   */
-/************************************************************************************************/
-/* original bts code
-		if (GC.getCivicInfo(eCivic).isStateReligion())
-		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_NON_STATE_REL_HAPPINESS_NO_STATE"));
-		}
-		else
-		{
-			szHelpText.append(NEWLINE);
-			szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_NON_STATE_REL_HAPPINESS_WITH_STATE", abs(GC.getCivicInfo(eCivic).getNonStateReligionHappiness()), ((GC.getCivicInfo(eCivic).getNonStateReligionHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))));
-		}
-*/
 		if (!GC.getCivicInfo(eCivic).isStateReligion())
 		{
 			szHelpText.append(NEWLINE);
@@ -16453,9 +16436,6 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 			szHelpText.append(NEWLINE);
 			szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_NON_STATE_REL_HAPPINESS_WITH_STATE", abs(GC.getCivicInfo(eCivic).getNonStateReligionHappiness()), ((GC.getCivicInfo(eCivic).getNonStateReligionHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))));
 		}
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH						END												  */
-/************************************************************************************************/
 	}
 
 	//	State Religion Unit Production Modifier
@@ -24302,7 +24282,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_MOUNTAIN"));
 		}
 
-		if (kBuilding.isStateReligion()
+		if (kBuilding.needStateReligionInCity()
 		&& (NULL == pCity || NO_PLAYER == ePlayer || NO_RELIGION == GET_PLAYER(ePlayer).getStateReligion() || !pCity->isHasReligion(GET_PLAYER(ePlayer).getStateReligion())))
 		{
 			szBuffer.append(NEWLINE);
@@ -24325,16 +24305,14 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 
 		if (kBuilding.getReligionType() != NO_RELIGION)
 		{
-			ReligionTypes eReligion = (ReligionTypes)kBuilding.getReligionType();
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_RELIGION_DECLARED", GC.getReligionInfo((ReligionTypes)(kBuilding.getReligionType())).getChar()));
 		}
 
-		if (kBuilding.getStateReligion() != NO_RELIGION)
+		if (kBuilding.getPrereqStateReligion() != NO_RELIGION)
 		{
-			ReligionTypes eReligion = (ReligionTypes)kBuilding.getStateReligion();
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_STATE_RELIGION_PREREQ", GC.getReligionInfo((ReligionTypes)(kBuilding.getStateReligion())).getChar()));
+			szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_STATE_RELIGION_PREREQ", GC.getReligionInfo((ReligionTypes)(kBuilding.getPrereqStateReligion())).getChar()));
 		}
 	}
 

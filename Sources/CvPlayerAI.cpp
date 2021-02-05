@@ -9923,13 +9923,9 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 									}
 								}
 
-								bool bIsStateReligion = (((ReligionTypes) kLoopBuilding.getStateReligion()) != NO_RELIGION);
-
-								// bCanNeverBuild when true is accurate, it may be false in some cases where we will never be able to build
-								bool bCanNeverBuild = (bHasTechForBuilding && !bCanConstruct && !bIsStateReligion);
-
-								// if we can never build this, it is worthless
-								if (bCanNeverBuild)
+								// If we can never build this, it is worthless
+								// When statement is true it is accurate, it may be false in some cases where we will never be able to build
+								if (bHasTechForBuilding && !bCanConstruct && kLoopBuilding.getPrereqStateReligion() < 0)
 								{
 									iTempNonTradeValue = 0;
 									iTempTradeValue = 0;

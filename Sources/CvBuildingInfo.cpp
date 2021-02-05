@@ -166,7 +166,7 @@ m_bBuildingOnlyHealthy(false),
 m_bNeverCapture(false),
 m_bNukeImmune(false),
 m_bCenterInCity(false),
-m_bStateReligion(false),
+m_bStateReligionInCity(false),
 m_bAllowsNukes(false),
 m_piPrereqAndTechs(NULL),
 m_piSeaPlotYieldChange(NULL),
@@ -684,10 +684,7 @@ int CvBuildingInfo::getSpecialistCount(int i) const
 	{
 		return m_piSpecialistCount ? 1 : 0;
 	}
-	else
-	{
-		return m_piSpecialistCount ? m_piSpecialistCount[i] : 0;
-	}
+	return m_piSpecialistCount ? m_piSpecialistCount[i] : 0;
 }
 
 int CvBuildingInfo::getFreeSpecialistCount(int i) const
@@ -698,10 +695,7 @@ int CvBuildingInfo::getFreeSpecialistCount(int i) const
 	{
 		return m_piFreeSpecialistCount ? 1 : 0;
 	}
-	else
-	{
-		return m_piFreeSpecialistCount ? m_piFreeSpecialistCount[i] : 0;
-	}
+	return m_piFreeSpecialistCount ? m_piFreeSpecialistCount[i] : 0;
 }
 
 int CvBuildingInfo::getBonusHealthChanges(int i) const
@@ -712,10 +706,7 @@ int CvBuildingInfo::getBonusHealthChanges(int i) const
 	{
 		return m_piBonusHealthChanges ? 1 : 0;
 	}
-	else
-	{
-		return m_piBonusHealthChanges ? m_piBonusHealthChanges[i] : 0;
-	}
+	return m_piBonusHealthChanges ? m_piBonusHealthChanges[i] : 0;
 }
 
 int CvBuildingInfo::getBonusHappinessChanges(int i) const
@@ -726,10 +717,7 @@ int CvBuildingInfo::getBonusHappinessChanges(int i) const
 	{
 		return m_piBonusHappinessChanges ? 1 : 0;
 	}
-	else
-	{
-		return m_piBonusHappinessChanges ? m_piBonusHappinessChanges[i] : 0;
-	}
+	return m_piBonusHappinessChanges ? m_piBonusHappinessChanges[i] : 0;
 }
 
 int CvBuildingInfo::getBonusProductionModifier(int i) const
@@ -746,10 +734,7 @@ int CvBuildingInfo::getUnitCombatFreeExperience(int i) const
 	{
 		return m_piUnitCombatFreeExperience ? 1 : 0;
 	}
-	else
-	{
-		return m_piUnitCombatFreeExperience ? m_piUnitCombatFreeExperience[i] : 0;
-	}
+	return m_piUnitCombatFreeExperience ? m_piUnitCombatFreeExperience[i] : 0;
 }
 
 int CvBuildingInfo::getDomainFreeExperience(int i) const
@@ -760,10 +745,7 @@ int CvBuildingInfo::getDomainFreeExperience(int i) const
 	{
 		return m_piDomainFreeExperience ? 1 : 0;
 	}
-	else
-	{
-		return m_piDomainFreeExperience ? m_piDomainFreeExperience[i] : 0;
-	}
+	return m_piDomainFreeExperience ? m_piDomainFreeExperience[i] : 0;
 }
 
 int CvBuildingInfo::getDomainProductionModifier(int i) const
@@ -774,10 +756,7 @@ int CvBuildingInfo::getDomainProductionModifier(int i) const
 	{
 		return m_piDomainProductionModifier ? 1 : 0;
 	}
-	else
-	{
-		return m_piDomainProductionModifier ? m_piDomainProductionModifier[i] : 0;
-	}
+	return m_piDomainProductionModifier ? m_piDomainProductionModifier[i] : 0;
 }
 
 int CvBuildingInfo::getPrereqAndTechs(int i) const
@@ -823,10 +802,7 @@ int CvBuildingInfo::getImprovementFreeSpecialist(int i) const
 	{
 		return m_piImprovementFreeSpecialist ? 1 : 0;
 	}
-	else
-	{
-		return m_piImprovementFreeSpecialist ? m_piImprovementFreeSpecialist[i] : 0;
-	}
+	return m_piImprovementFreeSpecialist ? m_piImprovementFreeSpecialist[i] : 0;
 }
 
 bool CvBuildingInfo::isCommerceFlexible(int i) const
@@ -2075,7 +2051,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_bNeverCapture);
 	CheckSum(iSum, m_bNukeImmune);
 	CheckSum(iSum, m_bCenterInCity);
-	CheckSum(iSum, m_bStateReligion);
+	CheckSum(iSum, m_bStateReligionInCity);
 	CheckSum(iSum, m_bAllowsNukes);
 
 	CheckSumI(iSum, GC.getNUM_BUILDING_AND_TECH_PREREQS(), m_piPrereqAndTechs);
@@ -2561,7 +2537,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bNeverCapture, L"bNeverCapture");
 	pXML->GetOptionalChildXmlValByName(&m_bNukeImmune, L"bNukeImmune");
 	pXML->GetOptionalChildXmlValByName(&m_bCenterInCity, L"bCenterInCity");
-	pXML->GetOptionalChildXmlValByName(&m_bStateReligion, L"bStateReligion");
+	pXML->GetOptionalChildXmlValByName(&m_bStateReligionInCity, L"bNeedStateReligionInCity");
 	pXML->GetOptionalChildXmlValByName(&m_iAIWeight, L"iAIWeight");
 	pXML->GetOptionalChildXmlValByName(&m_iProductionCost, L"iCost", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iHurryCostModifier, L"iHurryCostModifier");
@@ -4128,7 +4104,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (getNotGameOption() == iTextDefault) m_iNotGameOption = pClassInfo->getNotGameOption();
 	if (getHolyCity() == iTextDefault) m_iHolyCity = pClassInfo->getHolyCity();
 	if (getReligionType() == iTextDefault) m_iReligionType = pClassInfo->getReligionType();
-	if (getStateReligion() == iTextDefault) m_iStateReligion = pClassInfo->getStateReligion();
+	if (getPrereqStateReligion() == iTextDefault) m_iStateReligion = pClassInfo->getPrereqStateReligion();
 	if (getPrereqReligion() == iTextDefault) m_iPrereqReligion = pClassInfo->getPrereqReligion();
 	if (getPrereqCorporation() == iTextDefault) m_iPrereqCorporation = pClassInfo->getPrereqCorporation();
 	if (getFoundsCorporation() == iTextDefault) m_iFoundsCorporation = pClassInfo->getFoundsCorporation();
@@ -4199,7 +4175,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (isNeverCapture() == bDefault) m_bNeverCapture = pClassInfo->isNeverCapture();
 	if (isNukeImmune() == bDefault) m_bNukeImmune = pClassInfo->isNukeImmune();
 	if (isCenterInCity() == bDefault) m_bCenterInCity = pClassInfo->isCenterInCity();
-	if (isStateReligion() == bDefault) m_bStateReligion = pClassInfo->isStateReligion();
+	if (needStateReligionInCity() == bDefault) m_bStateReligionInCity = pClassInfo->needStateReligionInCity();
 
 	if (getAIWeight() == iDefault) m_iAIWeight = pClassInfo->getAIWeight();
 	if (m_iProductionCost == iTextDefault) m_iProductionCost = pClassInfo->getProductionCost();

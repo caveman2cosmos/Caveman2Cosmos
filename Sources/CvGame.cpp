@@ -9384,6 +9384,8 @@ ReligionTypes CvGame::getVoteSourceReligion(VoteSourceTypes eVoteSource) const
 
 void CvGame::setVoteSourceReligion(VoteSourceTypes eVoteSource, ReligionTypes eReligion, bool bAnnounce)
 {
+	FAssert(eReligion != NO_RELIGION);
+
 	m_mapVoteSourceReligions[eVoteSource] = eReligion;
 
 	if (bAnnounce && NO_RELIGION != eReligion)

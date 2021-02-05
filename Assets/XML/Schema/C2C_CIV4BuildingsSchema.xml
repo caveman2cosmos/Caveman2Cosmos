@@ -341,7 +341,7 @@
 	<ElementType name="HolyCity" content="textOnly"/>
 	<ElementType name="ReligionType" content="textOnly"/>
 	<ElementType name="StateReligion" content="textOnly"/>
-	<ElementType name="bStateReligion" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNeedStateReligionInCity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="PrereqReligion" content="textOnly"/>
 	<ElementType name="PrereqCorporation" content="textOnly"/>
 	<ElementType name="FoundsCorporation" content="textOnly"/>
@@ -778,7 +778,7 @@
 		<element type="HolyCity" minOccurs="0"/>
 		<element type="ReligionType" minOccurs="0"/>
 		<element type="StateReligion" minOccurs="0"/>
-		<element type="bStateReligion" minOccurs="0"/>
+		<element type="bNeedStateReligionInCity" minOccurs="0"/>
 		<element type="PrereqReligion" minOccurs="0"/>
 		<element type="PrereqCorporation" minOccurs="0"/>
 		<element type="FoundsCorporation" minOccurs="0"/>

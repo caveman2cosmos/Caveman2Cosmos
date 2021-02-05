@@ -7032,13 +7032,15 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 		return false;
 	}
 
-	if (kBuilding.getStateReligion() != NO_RELIGION && !bExposed)
+	if (!bExposed)
 	{
-		if (getStateReligion() != kBuilding.getStateReligion())
+		const ReligionTypes eType = (ReligionTypes) kBuilding.getPrereqStateReligion();
+
+		if (eType != NO_RELIGION && eType != getStateReligion())
 		{
 			if (probabilityEverConstructable != NULL)
 			{
-				*probabilityEverConstructable = algo::any_of(cities(), CvCity::fn::isHasReligion((ReligionTypes)kBuilding.getStateReligion())) ? 20 : 5;
+				*probabilityEverConstructable = algo::any_of(cities(), CvCity::fn::isHasReligion(eType)) ? 20 : 5;
 			}
 			return false;
 		}

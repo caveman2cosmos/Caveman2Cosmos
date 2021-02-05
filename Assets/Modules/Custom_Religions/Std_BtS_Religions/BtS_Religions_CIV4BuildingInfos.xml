@@ -21,7 +21,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CAVES</MovieDefineTag>
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
 			<StateReligion>RELIGION_BUDDHISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
@@ -102,7 +102,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_NARA</MovieDefineTag>
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
 			<StateReligion>RELIGION_BUDDHISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<Bonus>BONUS_SCULPTURES</Bonus>
@@ -175,7 +175,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SAN_MARCOS_CATHEDRAL</MovieDefineTag>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
 			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -272,7 +272,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_VATICAN_LIBRARY</MovieDefineTag>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
 			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
@@ -356,7 +356,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CONFUCIO</MovieDefineTag>
 			<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
 			<StateReligion>RELIGION_CONFUCIANISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_CONFUCIANISM</PrereqReligion>
 			<PrereqBonuses>
 				<Bonus>BONUS_BOOKS</Bonus>
@@ -458,7 +458,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SOLOMON</MovieDefineTag>
 			<ReligionType>RELIGION_JUDAISM</ReligionType>
 			<StateReligion>RELIGION_JUDAISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_JUDAISM</PrereqReligion>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
@@ -540,7 +540,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_AKSHARDHAM</MovieDefineTag>
 			<ReligionType>RELIGION_HINDUISM</ReligionType>
 			<StateReligion>RELIGION_HINDUISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
@@ -626,7 +626,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MEENAKSHI</MovieDefineTag>
 			<ReligionType>RELIGION_HINDUISM</ReligionType>
 			<StateReligion>RELIGION_HINDUISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
@@ -718,7 +718,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ESTAMBUL</MovieDefineTag>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -795,7 +795,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_DESERT</MovieDefineTag>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
@@ -879,7 +879,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_KHARJITE</MovieDefineTag>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
@@ -960,7 +960,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_QUANZHEN</MovieDefineTag>
 			<ReligionType>RELIGION_TAOISM</ReligionType>
 			<StateReligion>RELIGION_TAOISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_TAOISM</PrereqReligion>
 			<PrereqBonuses>
 				<Bonus>BONUS_BOOKS</Bonus>
@@ -1057,7 +1057,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_WUDANG</MovieDefineTag>
 			<ReligionType>RELIGION_TAOISM</ReligionType>
 			<StateReligion>RELIGION_TAOISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_TAOISM</PrereqReligion>
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>

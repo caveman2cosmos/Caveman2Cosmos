@@ -2894,7 +2894,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 	if (!bExposed)
 	{
-		if (kBuilding.isStateReligion())
+		if (kBuilding.needStateReligionInCity())
 		{
 			const ReligionTypes eStateReligion = GET_PLAYER(getOwner()).getStateReligion();
 
@@ -12620,14 +12620,18 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex)
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
-	if (getNumBuilding(eBuilding) > 0)
+	if (getNumRealBuilding(eBuilding) > 0)
 	{
-		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-		if (!(kBuilding.isCommerceChangeOriginalOwner(eIndex)) || (getBuildingOriginalOwner(eBuilding) == getOwner()))
+		if (isDisabledBuilding(eBuilding))
 		{
-			int iCommerce = kBuilding.getObsoleteSafeCommerceChange(eIndex) * getNumBuilding(eBuilding);
+			return 0;
+		}
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+		if (!kBuilding.isCommerceChangeOriginalOwner(eIndex) || getBuildingOriginalOwner(eBuilding) == getOwner())
+		{
+			int iCommerce = 0;
 
-			if (getNumActiveBuilding(eBuilding) > 0)
+			if (!isReligiouslyDisabledBuilding(eBuilding))
 			{
 				int iBaseCommerceChange = kBuilding.getCommerceChange(eIndex);
 
@@ -12636,44 +12640,45 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 					iBaseCommerceChange = 0;
 				}
 
-				iBaseCommerceChange += ((kBuilding.getCommercePerPopChange(eIndex) * getPopulation()) / 100);
+				iBaseCommerceChange += kBuilding.getCommercePerPopChange(eIndex) * getPopulation() / 100;
+				iCommerce += iBaseCommerceChange + getBuildingCommerceChange(eBuilding, eIndex);
 
-				//Team Project (5)
-				if (!isReligiouslyDisabledBuilding(eBuilding))
+				if (GC.getBuildingInfo(eBuilding).getReligionType() != NO_RELIGION
+				&& GC.getBuildingInfo(eBuilding).getReligionType() == GET_PLAYER(getOwner()).getStateReligion())
 				{
-					iCommerce += (iBaseCommerceChange + getBuildingCommerceChange(eBuilding, eIndex)) * getNumActiveBuilding(eBuilding);
-
-					if (GC.getBuildingInfo(eBuilding).getReligionType() != NO_RELIGION)
-					{
-						if (GC.getBuildingInfo(eBuilding).getReligionType() == GET_PLAYER(getOwner()).getStateReligion())
-						{
-							iCommerce += GET_PLAYER(getOwner()).getStateReligionBuildingCommerce(eIndex) * getNumActiveBuilding(eBuilding);
-						}
-					}
-
-					if (GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce() != NO_RELIGION)
-					{
-						iCommerce += (GC.getReligionInfo((ReligionTypes)(GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce())).getGlobalReligionCommerce(eIndex) * GC.getGame().countReligionLevels((ReligionTypes)(GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce()))) * getNumActiveBuilding(eBuilding);
-					}
+					iCommerce += GET_PLAYER(getOwner()).getStateReligionBuildingCommerce(eIndex);
 				}
 
-				if (GC.getBuildingInfo(eBuilding).getGlobalCorporationCommerce() != NO_CORPORATION)
+				if (GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce() != NO_RELIGION)
 				{
-					iCommerce += (GC.getCorporationInfo((CorporationTypes)(GC.getBuildingInfo(eBuilding).getGlobalCorporationCommerce())).getHeadquarterCommerce(eIndex) * GC.getGame().countCorporationLevels((CorporationTypes)(GC.getBuildingInfo(eBuilding).getGlobalCorporationCommerce()))) * getNumActiveBuilding(eBuilding);
+					iCommerce += 
+					(
+						GC.getReligionInfo((ReligionTypes)GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce()).getGlobalReligionCommerce(eIndex)
+						*
+						GC.getGame().countReligionLevels((ReligionTypes)GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce())
+					);
 				}
 			}
 
-			if ((GC.getBuildingInfo(eBuilding).getCommerceChangeDoubleTime(eIndex) != 0) &&
-				(getBuildingOriginalTime(eBuilding) != MIN_INT) &&
-				((GC.getGame().getGameTurnYear() - getBuildingOriginalTime(eBuilding)) >= GC.getBuildingInfo(eBuilding).getCommerceChangeDoubleTime(eIndex)))
+			if (GC.getBuildingInfo(eBuilding).getGlobalCorporationCommerce() != NO_CORPORATION)
 			{
-				return (iCommerce * 2);
+				iCommerce +=
+				(
+					GC.getCorporationInfo((CorporationTypes)GC.getBuildingInfo(eBuilding).getGlobalCorporationCommerce()).getHeadquarterCommerce(eIndex)
+					*
+					GC.getGame().countCorporationLevels((CorporationTypes)GC.getBuildingInfo(eBuilding).getGlobalCorporationCommerce())
+				);
 			}
 
+			if (GC.getBuildingInfo(eBuilding).getCommerceChangeDoubleTime(eIndex) != 0
+			&& getBuildingOriginalTime(eBuilding) != MIN_INT
+			&& GC.getGame().getGameTurnYear() - getBuildingOriginalTime(eBuilding) >= GC.getBuildingInfo(eBuilding).getCommerceChangeDoubleTime(eIndex))
+			{
+				return iCommerce * 2;
+			}
 			return iCommerce;
 		}
 	}
-
 	return 0;
 }
 
@@ -12943,7 +12948,7 @@ void CvCity::updateBuildingCommerce()
 {
 	PROFILE_FUNC();
 
-	//	Disabled during modifier recalc (and called explicitly there after re-enabling)
+	// Disabled during modifier recalc (and called explicitly there after re-enabling)
 	if (!GC.getGame().isRecalculatingModifiers())
 	{
 		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
@@ -12953,14 +12958,11 @@ void CvCity::updateBuildingCommerce()
 			for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 			{
 				//ls612: Support for Orbital buildings
-				if (!GC.getBuildingInfo((BuildingTypes)iJ).isOrbital())
-				{
-					iNewBuildingCommerce += getBuildingCommerceByBuilding(((CommerceTypes)iI), ((BuildingTypes)iJ));
-				}
-				else
+				if (GC.getBuildingInfo((BuildingTypes)iJ).isOrbital())
 				{
 					iNewBuildingCommerce += getOrbitalBuildingCommerceByBuilding(((CommerceTypes)iI), ((BuildingTypes)iJ));
 				}
+				else iNewBuildingCommerce += getBuildingCommerceByBuilding(((CommerceTypes)iI), ((BuildingTypes)iJ));
 			}
 
 			if (getBuildingCommerce((CommerceTypes)iI) != iNewBuildingCommerce)
@@ -14810,8 +14812,10 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNew
 
 	if (bNewValue != (m_paiNumRealBuilding[eIndex] > 0))
 	{
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eIndex);
+
 		// Changing the buildings in a city invaldiates lots of cached data so flush the caches
-		if (GC.getBuildingInfo(eIndex).EnablesOtherBuildings())
+		if (kBuilding.EnablesOtherBuildings())
 		{
 			AI_FlushBuildingValueCache(true);
 			FlushCanConstructCache();
@@ -14830,24 +14834,20 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNew
 			m_paiBuildingOriginalOwner[eIndex] = eOriginalOwner;
 			m_paiBuildingOriginalTime[eIndex] = iOriginalTime;
 
-			// Toffer - Shouldn't this be moved to CvGame::processBuilding(...)?
-			if (GC.getBuildingInfo(eIndex).isStateReligion())
+			// Toffer - This seems misplaced... 
+			//	Shouldn't it be in CvGame::processBuilding(), and be processed out if the building is destroyed?
+			if (kBuilding.needStateReligionInCity() && kBuilding.getVoteSourceType() > -1)
 			{
-				for (int iI = 0; iI < GC.getNumVoteSourceInfos(); ++iI)
+				const VoteSourceTypes eVoteSource = (VoteSourceTypes) kBuilding.getVoteSourceType();
+				if (eVoteSource > NO_VOTESOURCE && GC.getGame().getVoteSourceReligion(eVoteSource) == NO_RELIGION)
 				{
-					if (GC.getBuildingInfo(eIndex).getVoteSourceType() == (VoteSourceTypes)iI
-					&& GC.getGame().getVoteSourceReligion((VoteSourceTypes)iI) == NO_RELIGION)
-					{
-						FAssert(GET_PLAYER(getOwner()).getStateReligion() != NO_RELIGION);
-						GC.getGame().setVoteSourceReligion((VoteSourceTypes)iI, GET_PLAYER(getOwner()).getStateReligion(), true);
-					}
+					GC.getGame().setVoteSourceReligion(eVoteSource, GET_PLAYER(getOwner()).getStateReligion(), true);
 				}
 			}
 			// ! Toffer
 
 			processBuilding(eIndex, 1);
 
-			const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eIndex);
 			for (int iI = 0; iI < kBuilding.getNumReplacedBuilding(); iI++)
 			{
 				const BuildingTypes eReplaced = (BuildingTypes)kBuilding.getReplacedBuilding(iI);
@@ -14860,30 +14860,28 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNew
 
 			if (bFirst)
 			{
-				if (GC.getBuildingInfo(eIndex).isCapital())
+				if (kBuilding.isCapital())
 				{
 					GET_PLAYER(getOwner()).setCapitalCity(this);
 				}
 
 				if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 				{
-					if (GC.getBuildingInfo(eIndex).isGoldenAge())
+					if (kBuilding.isGoldenAge())
 					{
 						GET_PLAYER(getOwner()).changeGoldenAgeTurns(1 + GET_PLAYER(getOwner()).getGoldenAgeLength());
 					}
 
-					if (GC.getBuildingInfo(eIndex).getGlobalPopulationChange() != 0)
+					if (kBuilding.getGlobalPopulationChange() != 0)
 					{
 						for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 						{
 							if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getTeam())
-							&& (iI == getOwner() || GC.getBuildingInfo(eIndex).isTeamShare()))
+							&& (iI == getOwner() || kBuilding.isTeamShare()))
 							{
 								foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 								{
-									pLoopCity->setPopulation(
-										std::max(1, pLoopCity->getPopulation() + GC.getBuildingInfo(eIndex).getGlobalPopulationChange())
-									);
+									pLoopCity->setPopulation(std::max(1, pLoopCity->getPopulation() + kBuilding.getGlobalPopulationChange()));
 									// so subsequent cities don't starve with the extra citizen working nothing
 									pLoopCity->AI_updateAssignWork();
 								}
@@ -14893,24 +14891,24 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNew
 
 					for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 					{
-						if (GC.getBuildingInfo(eIndex).getReligionChange(iI) > 0)
+						if (kBuilding.getReligionChange(iI) > 0)
 						{
 							setHasReligion(((ReligionTypes)iI), true, true, true);
 						}
 					}
 
-					if (GC.getBuildingInfo(eIndex).getFreeTechs() > 0)
+					if (kBuilding.getFreeTechs() > 0)
 					{
 						if (isHuman())
 						{
 							GET_PLAYER(getOwner()).chooseTech(
-								GC.getBuildingInfo(eIndex).getFreeTechs(),
-								gDLL->getText("TXT_KEY_MISC_COMPLETED_WONDER_CHOOSE_TECH", GC.getBuildingInfo(eIndex).getTextKeyWide())
+								kBuilding.getFreeTechs(),
+								gDLL->getText("TXT_KEY_MISC_COMPLETED_WONDER_CHOOSE_TECH", kBuilding.getTextKeyWide())
 							);
 						}
 						else
 						{
-							for (int iI = 0; iI < GC.getBuildingInfo(eIndex).getFreeTechs(); iI++)
+							for (int iI = 0; iI < kBuilding.getFreeTechs(); iI++)
 							{
 								GET_PLAYER(getOwner()).AI_chooseFreeTech();
 							}
@@ -14921,11 +14919,7 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNew
 					{
 						GC.getGame().addReplayMessage(
 							REPLAY_MESSAGE_MAJOR_EVENT, getOwner(),
-							gDLL->getText(
-								"TXT_KEY_MISC_COMPLETES_WONDER",
-								GET_PLAYER(getOwner()).getNameKey(),
-								GC.getBuildingInfo(eIndex).getTextKeyWide()
-							),
+							gDLL->getText("TXT_KEY_MISC_COMPLETES_WONDER", GET_PLAYER(getOwner()).getNameKey(), kBuilding.getTextKeyWide()),
 							getX(), getY(), GC.getCOLOR_BUILDING_TEXT()
 						);
 						for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -14937,14 +14931,9 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNew
 									MEMORY_TRACK_EXEMPT();
 									AddDLLMessage(
 										(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
-										gDLL->getText(
-											"TXT_KEY_MISC_WONDER_COMPLETED",
-											GET_PLAYER(getOwner()).getNameKey(),
-											GC.getBuildingInfo(eIndex).getTextKeyWide()
-										),
+										gDLL->getText("TXT_KEY_MISC_WONDER_COMPLETED", GET_PLAYER(getOwner()).getNameKey(), kBuilding.getTextKeyWide()),
 										"AS2D_WONDER_BUILDING_BUILD", MESSAGE_TYPE_MAJOR_EVENT,
-										GC.getBuildingInfo(eIndex).getArtInfo()->getButton(),
-										GC.getCOLOR_BUILDING_TEXT(), getX(), getY(), true, true
+										kBuilding.getArtInfo()->getButton(), GC.getCOLOR_BUILDING_TEXT(), getX(), getY(), true, true
 									);
 								}
 								else
@@ -14952,13 +14941,9 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNew
 									MEMORY_TRACK_EXEMPT();
 									AddDLLMessage(
 										(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
-										gDLL->getText(
-											"TXT_KEY_MISC_WONDER_COMPLETED_UNKNOWN",
-											GC.getBuildingInfo(eIndex).getTextKeyWide()
-										),
+										gDLL->getText("TXT_KEY_MISC_WONDER_COMPLETED_UNKNOWN", kBuilding.getTextKeyWide()),
 										"AS2D_WONDER_BUILDING_BUILD", MESSAGE_TYPE_MAJOR_EVENT,
-										GC.getBuildingInfo(eIndex).getArtInfo()->getButton(),
-										GC.getCOLOR_BUILDING_TEXT()
+										kBuilding.getArtInfo()->getButton(), GC.getCOLOR_BUILDING_TEXT()
 									);
 								}
 							}
@@ -14968,7 +14953,7 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNew
 				GC.getGame().incrementBuildingCreatedCount(eIndex);
 			}
 
-			if (GC.getBuildingInfo(eIndex).isAllowsNukes())
+			if (kBuilding.isAllowsNukes())
 			{
 				GET_PLAYER(getOwner()).makeNukesValid(true);
 			}
@@ -14992,7 +14977,7 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNew
 			m_paiBuildingOriginalTime[eIndex] = MIN_INT;
 
 			//Remove any extensions of this building
-			const int iExtensionOf = GC.getBuildingInfo(eIndex).getExtendsBuilding();
+			const int iExtensionOf = kBuilding.getExtendsBuilding();
 			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
 				if (getNumRealBuilding((BuildingTypes)iI) > 0
@@ -15007,7 +14992,7 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNew
 
 #ifdef THE_GREAT_WALL
 		//great wall
-		if (bFirst && GC.getBuildingInfo(eIndex).isAreaBorderObstacle())
+		if (bFirst && kBuilding.isAreaBorderObstacle())
 		{
 			int iCountExisting = 0;
 			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)

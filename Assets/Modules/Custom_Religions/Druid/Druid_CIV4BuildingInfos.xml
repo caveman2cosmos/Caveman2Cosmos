@@ -19,7 +19,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<FreePromotion>PROMOTION_WOODSMAN1</FreePromotion>
@@ -127,7 +127,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<FreePromotion>PROMOTION_GUERILLA1</FreePromotion>

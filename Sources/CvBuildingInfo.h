@@ -103,7 +103,7 @@ public:
 
 	int getHolyCity() const							{ return m_iHolyCity; }
 	int getReligionType() const						{ return m_iReligionType; }
-	int getStateReligion() const					{ return m_iStateReligion; }
+	int getPrereqStateReligion() const				{ return m_iStateReligion; }
 	int getPrereqReligion() const					{ return m_iPrereqReligion; }
 	int getPrereqCorporation() const				{ return m_iPrereqCorporation; }
 	int getFoundsCorporation() const				{ return m_iFoundsCorporation; }
@@ -177,7 +177,7 @@ public:
 	bool isNeverCapture() const						{ return m_bNeverCapture; }
 	bool isNukeImmune() const						{ return m_bNukeImmune; }
 	bool isCenterInCity() const						{ return m_bCenterInCity; }
-	bool isStateReligion() const					{ return m_bStateReligion; }
+	bool needStateReligionInCity() const			{ return m_bStateReligionInCity; }
 	bool isAllowsNukes() const						{ return m_bAllowsNukes; }
 
 	const TCHAR* getConstructSound() const			{ return m_szConstructSound; }
@@ -776,7 +776,7 @@ protected:
 	bool m_bNeverCapture;
 	bool m_bNukeImmune;
 	bool m_bCenterInCity;
-	bool m_bStateReligion;
+	bool m_bStateReligionInCity;
 	bool m_bAllowsNukes;
 
 	CvString m_szConstructSound;

@@ -19,7 +19,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<StateReligion>RELIGION_NGAIISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<FreePromotion>PROMOTION_GUARDIAN</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
@@ -149,7 +149,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<StateReligion>RELIGION_NGAIISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<FreePromotion>PROMOTION_VENGEANCE</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
@@ -217,7 +217,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<StateReligion>RELIGION_NGAIISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -290,7 +290,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<StateReligion>RELIGION_NGAIISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -331,7 +331,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<StateReligion>RELIGION_NGAIISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -372,7 +372,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<StateReligion>RELIGION_NGAIISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>

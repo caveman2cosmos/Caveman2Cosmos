@@ -2530,14 +2530,7 @@ def applyMasterBlacksmithDone1(argsList):
   CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(iBonus).getButton(), GC.getInfoTypeForString("COLOR_WHITE"), plot.getX(), plot.getY(), True, True)
 
 def canApplyMasterBlacksmithDone3(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-
-  if player.getStateReligion() == -1:
-    return False
-
-  return True
+	return GC.getPlayer(argsList[1].ePlayer).getStateReligion() > -1
 
 ######## THE BEST DEFENSE ###########
 

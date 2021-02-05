@@ -28,11 +28,11 @@
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bGovernmentCenter>1</bGovernmentCenter>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -165,17 +165,18 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
 			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_ALHAMBRA_2</ObsoletesToBuilding>
 			<iCost>2640</iCost>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -233,6 +234,51 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_ALHAMBRA_2</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<bNoLimit>1</bNoLimit>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_ALHAMBRA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ALHAMBRA_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ALHAMBRA_STRATEGY</Strategy>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
+			<ReligionType>RELIGION_ISLAM</ReligionType>
+			<StateReligion>RELIGION_ISLAM</StateReligion>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>8</iCommerce>
+			</CommerceChanges>
+			<CommerceChangeOriginalOwners>
+				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
+				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
+				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
+			</CommerceChangeOriginalOwners>
+			<ReligionChanges>
+				<ReligionChange>
+					<ReligionType>RELIGION_ISLAM</ReligionType>
+					<iReligionChange>1</iReligionChange>
+				</ReligionChange>
+			</ReligionChanges>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
+			<iAsset>5</iAsset>
+			<iConquestProb>100</iConquestProb>
+			<bTeamShare>1</bTeamShare>
+			<bNukeImmune>1</bNukeImmune>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>4</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_ALHAMBRA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANGKOR_WAT</Type>
@@ -424,7 +470,7 @@
 				<PrereqTech>TECH_SCULPTURE</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
 			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
 			<StateReligion>RELIGION_ZOROASTRIANISM</StateReligion>
@@ -614,7 +660,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_JUDAISM</PrereqReligion>
 			<ReligionType>RELIGION_JUDAISM</ReligionType>
 			<StateReligion>RELIGION_JUDAISM</StateReligion>
@@ -2411,7 +2457,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_CONFUCIANISM</PrereqReligion>
 			<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
 			<StateReligion>RELIGION_CONFUCIANISM</StateReligion>
@@ -5460,7 +5506,7 @@
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
 			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
@@ -5643,7 +5689,7 @@
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_SCULPTURES</Bonus>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
 			<StateReligion>RELIGION_BUDDHISM</StateReligion>
@@ -6444,7 +6490,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MONOTHEISM</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_JUDAISM</PrereqReligion>
 			<ReligionType>RELIGION_JUDAISM</ReligionType>
 			<StateReligion>RELIGION_JUDAISM</StateReligion>
@@ -7462,7 +7508,7 @@
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
 			<StateReligion>RELIGION_BUDDHISM</StateReligion>
@@ -8031,7 +8077,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 			<StateReligion>RELIGION_NAGHUALISM</StateReligion>
@@ -9662,7 +9708,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PAPACY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<iTeamsPrereq>3</iTeamsPrereq>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<iCost>1860</iCost>
@@ -9711,7 +9757,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HINDU_BRIHADEESWARAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HINDU_BRIHADEESWARAR_STRATEGY</Strategy>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
 			<ReligionType>RELIGION_HINDUISM</ReligionType>
 			<StateReligion>RELIGION_HINDUISM</StateReligion>
@@ -10351,7 +10397,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ALGEBRA</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -10889,7 +10935,7 @@
 				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_MARBLE</Bonus>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<ReligionType>RELIGION_HELLENISM</ReligionType>
 			<StateReligion>RELIGION_HELLENISM</StateReligion>
@@ -11552,7 +11598,7 @@
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_TAOISM</PrereqReligion>
 			<ReligionType>RELIGION_TAOISM</ReligionType>
 			<StateReligion>RELIGION_TAOISM</StateReligion>
@@ -16663,7 +16709,7 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AACHENCATHEDRAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_AACHENCATHEDRAL</MovieDefineTag>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
 			<PrereqTech>TECH_PAPACY</PrereqTech>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
@@ -16752,7 +16798,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ALAMUT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ALAMUT</MovieDefineTag>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
 			<PrereqOrTerrain>
@@ -17871,7 +17917,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELCAMINODESANTIAGO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ELCAMINODESANTIAGO</MovieDefineTag>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -17977,7 +18023,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ESCORIAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ESCORIAL</MovieDefineTag>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<Bonus>BONUS_STONE</Bonus>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
@@ -18348,7 +18394,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_OF_WISDOM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HOUSE_OF_WISDOM</MovieDefineTag>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<PrereqBonuses>
@@ -18480,7 +18526,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KRAK_DES_CHEVS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KRAK_DES_CHEVS</MovieDefineTag>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<TechTypes>

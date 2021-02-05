@@ -6205,7 +6205,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						if (kBuilding.getVoteSourceType() == iI)
 						{
 							int votingSourceValue = 0;
-							if (kBuilding.isStateReligion())
+							if (kBuilding.needStateReligionInCity())
 							{
 								int iShareReligionCount = 0;
 								int iPlayerCount = 0;
@@ -16139,7 +16139,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					{
 						if (kBuilding.getVoteSourceType() == iI)
 						{
-							if (kBuilding.isStateReligion())
+							if (kBuilding.needStateReligionInCity())
 							{
 								int iShareReligionCount = 0;
 								int iPlayerCount = 0;

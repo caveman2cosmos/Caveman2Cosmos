@@ -311,7 +311,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_ANDEANISM</ReligionType>
 			<StateReligion>RELIGION_ANDEANISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -395,7 +395,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
 			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
 			<PrereqOrTerrain>

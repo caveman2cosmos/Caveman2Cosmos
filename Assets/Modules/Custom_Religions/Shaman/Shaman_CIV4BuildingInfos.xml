@@ -19,7 +19,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<FreePromotion>PROMOTION_WOODSMAN1</FreePromotion>
@@ -80,7 +80,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<FreePromotion>PROMOTION_GUERILLA1</FreePromotion>

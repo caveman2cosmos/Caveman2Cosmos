@@ -19,7 +19,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<StateReligion>RELIGION_YORUBA</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
@@ -86,7 +86,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<StateReligion>RELIGION_YORUBA</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
@@ -203,7 +203,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<StateReligion>RELIGION_YORUBA</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
@@ -302,7 +302,7 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<StateReligion>RELIGION_YORUBA</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>

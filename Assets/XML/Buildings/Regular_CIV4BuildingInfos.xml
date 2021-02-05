@@ -18380,7 +18380,7 @@
 				<Bonus>BONUS_PAPER</Bonus>
 				<Bonus>BONUS_BOOKS</Bonus>
 			</PrereqBonuses>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqInCityBuildings>
@@ -29881,7 +29881,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FASCISM</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>
@@ -71193,7 +71193,7 @@
 				<Bonus>BONUS_BOOKS</Bonus>
 				<Bonus>BONUS_PAPER</Bonus>
 			</PrereqBonuses>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
 			<iCost>192</iCost>
 			<CommerceChanges>
@@ -71987,7 +71987,7 @@
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_STATE_CHURCH</CivicOption>
