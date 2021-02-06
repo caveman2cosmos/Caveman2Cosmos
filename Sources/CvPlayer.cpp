@@ -21664,7 +21664,7 @@ void CvPlayer::createGreatPeople(UnitTypes eGreatPersonUnit, bool bIncrementThre
 
 const EventTriggeredData* CvPlayer::getEventOccured(EventTypes eEvent, bool bIncludeExpiredEvents) const
 {
-	FAssert(eEvent >= 0 && eEvent < GC.getNumEventInfos());
+	FASSERT_BOUNDS(0, GC.getNumEventInfos(), eEvent)
 
 	CvEventMap::const_iterator it = m_mapEventsOccured.find(eEvent);
 
@@ -21683,7 +21683,7 @@ bool CvPlayer::isTriggerFired(EventTriggerTypes eEventTrigger) const
 
 void CvPlayer::resetEventOccured(EventTypes eEvent, bool bAnnounce)
 {
-	FAssert(eEvent >= 0 && eEvent < GC.getNumEventInfos());
+	FASSERT_BOUNDS(0, GC.getNumEventInfos(), eEvent)
 
 	CvEventMap::iterator it = m_mapEventsOccured.find(eEvent);
 
@@ -21696,7 +21696,7 @@ void CvPlayer::resetEventOccured(EventTypes eEvent, bool bAnnounce)
 
 void CvPlayer::setEventOccured(EventTypes eEvent, const EventTriggeredData& kEventTriggered, bool bOthers)
 {
-	FAssert(eEvent >= 0 && eEvent < GC.getNumEventInfos());
+	FASSERT_BOUNDS(0, GC.getNumEventInfos(), eEvent)
 
 	m_mapEventsOccured[eEvent] = kEventTriggered;
 
@@ -21736,7 +21736,7 @@ void CvPlayer::setEventOccured(EventTypes eEvent, const EventTriggeredData& kEve
 
 const EventTriggeredData* CvPlayer::getEventCountdown(EventTypes eEvent) const
 {
-	FAssert(eEvent >= 0 && eEvent < GC.getNumEventInfos());
+	FASSERT_BOUNDS(0, GC.getNumEventInfos(), eEvent)
 
 	CvEventMap::const_iterator it = m_mapEventCountdown.find(eEvent);
 
@@ -21750,14 +21750,14 @@ const EventTriggeredData* CvPlayer::getEventCountdown(EventTypes eEvent) const
 
 void CvPlayer::setEventCountdown(EventTypes eEvent, const EventTriggeredData& kEventTriggered)
 {
-	FAssert(eEvent >= 0 && eEvent < GC.getNumEventInfos());
+	FASSERT_BOUNDS(0, GC.getNumEventInfos(), eEvent)
 
 	m_mapEventCountdown[eEvent] = kEventTriggered;
 }
 
 void CvPlayer::resetEventCountdown(EventTypes eEvent)
 {
-	FAssert(eEvent >= 0 && eEvent < GC.getNumEventInfos());
+	FASSERT_BOUNDS(0, GC.getNumEventInfos(), eEvent)
 
 	CvEventMap::iterator it = m_mapEventCountdown.find(eEvent);
 
@@ -21780,7 +21780,7 @@ void CvPlayer::resetTriggerFired(EventTriggerTypes eTrigger)
 
 void CvPlayer::setTriggerFired(const EventTriggeredData& kTriggeredData, bool bOthers, bool bAnnounce)
 {
-	FAssert(kTriggeredData.m_eTrigger > NO_EVENTTRIGGER && kTriggeredData.m_eTrigger < GC.getNumEventTriggerInfos());
+	FASSERT_BOUNDS(0, GC.getNumEventTriggerInfos(), kTriggeredData.m_eTrigger)
 
 	if (kTriggeredData.m_eTrigger == NO_EVENTTRIGGER)
 	{

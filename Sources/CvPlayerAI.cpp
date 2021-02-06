@@ -4553,8 +4553,8 @@ int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, i
 	return (iTotal / researchCosts.size()) * iDivisor;
 }
 
-int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave, bool considerFollowOns) const
-{;
+int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave, bool considerFollowOns) const
+{
 	PROFILE_FUNC();
 	MEMORY_TRACK();
 
@@ -26274,7 +26274,6 @@ int CvPlayerAI::AI_getNumCitySites() const
 
 bool CvPlayerAI::AI_isPlotCitySite(const CvPlot* pPlot) const
 {
-	std::vector<int>::iterator it;
 	const int iPlotIndex = GC.getMap().plotNum(pPlot->getX(), pPlot->getY());
 
 	if ( m_bCitySitesNotCalculated )
@@ -26282,20 +26281,11 @@ bool CvPlayerAI::AI_isPlotCitySite(const CvPlot* pPlot) const
 		calculateCitySites();
 	}
 
-	for (it = m_aiAICitySites.begin(); it != m_aiAICitySites.end(); ++it)
-	{
-		if ((*it) == iPlotIndex)
-		{
-			return true;
-		}
-	}
-	return false;
-
+	return std::contains(m_aiAICitySites, iPlotIndex);
 }
 
 int CvPlayerAI::AI_getNumAreaCitySites(int iAreaID, int& iBestValue) const
 {
-	std::vector<int>::iterator it;
 	int iCount = 0;
 	iBestValue = 0;
 
@@ -26304,9 +26294,9 @@ int CvPlayerAI::AI_getNumAreaCitySites(int iAreaID, int& iBestValue) const
 		calculateCitySites();
 	}
 
-	for (it = m_aiAICitySites.begin(); it != m_aiAICitySites.end(); ++it)
+	foreach_(const int& i, m_aiAICitySites)
 	{
-		CvPlot* pCitySitePlot = GC.getMap().plotByIndex((*it));
+		CvPlot* pCitySitePlot = GC.getMap().plotByIndex(i);
 		if (pCitySitePlot->getArea() == iAreaID)
 		{
 			iCount++;
@@ -26318,7 +26308,6 @@ int CvPlayerAI::AI_getNumAreaCitySites(int iAreaID, int& iBestValue) const
 
 int CvPlayerAI::AI_getNumAdjacentAreaCitySites(int iWaterAreaID, int iExcludeArea, int& iBestValue) const
 {
-	std::vector<int>::iterator it;
 	int iCount = 0;
 	iBestValue = 0;
 
@@ -26327,9 +26316,9 @@ int CvPlayerAI::AI_getNumAdjacentAreaCitySites(int iWaterAreaID, int iExcludeAre
 		calculateCitySites();
 	}
 
-	for (it = m_aiAICitySites.begin(); it != m_aiAICitySites.end(); ++it)
+	foreach_(const int& i, m_aiAICitySites)
 	{
-		CvPlot* pCitySitePlot = GC.getMap().plotByIndex((*it));
+		CvPlot* pCitySitePlot = GC.getMap().plotByIndex(i);
 		if (pCitySitePlot->getArea() != iExcludeArea)
 		{
 			if (pCitySitePlot->isAdjacentToArea(iWaterAreaID))
