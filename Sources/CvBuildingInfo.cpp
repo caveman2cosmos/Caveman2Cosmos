@@ -955,11 +955,11 @@ int* CvBuildingInfo::getBonusYieldModifierArray(int i) const
 
 int CvBuildingInfo::getGlobalBuildingCommerceChange(int iBuilding, int iCommerce) const
 {
-	for (std::vector<BuildingCommerceChange>::const_iterator it = m_aGlobalBuildingCommerceChanges.begin(); it != m_aGlobalBuildingCommerceChanges.end(); ++it)
+	foreach_(const BuildingCommerceChange& it, m_aGlobalBuildingCommerceChanges)
 	{
-		if ((*it).eBuilding == (BuildingTypes)iBuilding && (*it).eCommerce == (CommerceTypes)iCommerce)
+		if (it.eBuilding == (BuildingTypes)iBuilding && it.eCommerce == (CommerceTypes)iCommerce)
 		{
-			return (*it).iChange;
+			return it.iChange;
 		}
 	}
 
@@ -2415,11 +2415,11 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	//	m_pExprFreePromotionCondition->getCheckSum(iSum);
 	//TB Combat Mods (Buildings) end
 
-	for (std::vector<BuildingCommerceChange>::const_iterator it = m_aGlobalBuildingCommerceChanges.begin(); it != m_aGlobalBuildingCommerceChanges.end(); ++it)
+	foreach_(const BuildingCommerceChange& it, m_aGlobalBuildingCommerceChanges)
 	{
-		CheckSum(iSum, (*it).eBuilding);
-		CheckSum(iSum, (*it).eCommerce);
-		CheckSum(iSum, (*it).iChange);
+		CheckSum(iSum, it.eBuilding);
+		CheckSum(iSum, it.eCommerce);
+		CheckSum(iSum, it.iChange);
 	}
 
 	CheckSum(iSum, m_iMaxGlobalInstances);
@@ -5498,9 +5498,9 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 
 	for (int j = 0; j < GC.getNumBuildingInfos(); j++)
 	{
-		for (std::vector<BuildingCommerceChange>::const_iterator it = m_aGlobalBuildingCommerceChanges.begin(); it != m_aGlobalBuildingCommerceChanges.end(); ++it)
+		foreach_(const BuildingCommerceChange& it, m_aGlobalBuildingCommerceChanges)
 		{
-			if ((*it).eBuilding == (BuildingTypes)j)
+			if (it.eBuilding == (BuildingTypes)j)
 			{
 				//obviously some modder already set this Building to some value
 				//we don't want to overwrite his settings with the older(assuming he added

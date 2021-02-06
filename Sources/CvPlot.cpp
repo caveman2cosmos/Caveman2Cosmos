@@ -1274,12 +1274,8 @@ void CvPlot::verifyUnitValidPlot()
 	PROFILE_FUNC();
 
 	bool bAnyMoved = false;
-	std::vector<CvUnit*> aUnits;
 
-	foreach_(CvUnit* pLoopUnit, units())
-	{
-		aUnits.push_back(pLoopUnit);
-	}
+	std::vector<CvUnit*> aUnits(beginUnits(), endUnits());
 
 	for (std::vector<CvUnit*>::iterator it = aUnits.begin(); it != aUnits.end(); )
 	{
@@ -1364,9 +1360,8 @@ void CvPlot::verifyUnitValidPlot()
 	//	having been moved
 	if ( bAnyMoved )
 	{
-		for (std::vector<CvUnit*>::iterator it = aUnits.begin(); it != aUnits.end(); ++it)
+		foreach_(CvUnit* pLoopUnit, aUnits)
 		{
-			CvUnit* pLoopUnit = *it;
 			CvSelectionGroup* pGroup = pLoopUnit->getGroup();
 
 			if ( pGroup != NULL && !pGroup->isMidMove() )

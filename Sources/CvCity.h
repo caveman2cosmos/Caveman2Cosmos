@@ -1549,11 +1549,11 @@ public:
 			averageScore = 0;
 			minScore = MAX_INT;
 			maxScore = -MAX_INT;
-			for (std::vector<ScoredBuilding>::const_iterator itr = scores.begin(); itr != scores.end(); ++itr)
+			foreach_(const ScoredBuilding& itr, scores)
 			{
-				averageScore = averageScore + itr->score / scores.size();
-				minScore = std::min(minScore, itr->score);
-				maxScore = std::max(maxScore, itr->score);
+				averageScore = averageScore + itr.score / scores.size();
+				minScore = std::min(minScore, itr.score);
+				maxScore = std::max(maxScore, itr.score);
 			}
 		}
 	};

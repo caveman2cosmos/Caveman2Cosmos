@@ -23542,9 +23542,9 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL_BUILDINGCOST_MOD", it->first));
 
 				int iI = 0;
-				for (std::vector<int>::const_iterator itr = it->second.begin(); itr != it->second.end(); ++itr)
+				foreach_(const int& itr, it->second)
 				{
-					const BuildingTypes eBuildingX = static_cast<BuildingTypes>(*itr);
+					const BuildingTypes eBuildingX = static_cast<BuildingTypes>(itr);
 
 					if (iI++ % 3 == 0)
 					{

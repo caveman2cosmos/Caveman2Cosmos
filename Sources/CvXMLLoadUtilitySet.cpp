@@ -220,9 +220,9 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 			std::vector<CvString> aszFiles;
 			gDLL->enumerateFiles(aszFiles, "modules\\*_GlobalDefines.xml");
 
-			for (std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
+			foreach_(const CvString& szFile, aszFiles)
 			{
-				if (!ReadGlobalDefines(*it, cache))
+				if (!ReadGlobalDefines(szFile, cache))
 				{
 					OutputDebugString("Setting Global Defines: End\n");
 					return false;
@@ -232,9 +232,9 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 			std::vector<CvString> aszModularFiles;
 			gDLL->enumerateFiles(aszModularFiles, "modules\\*_PythonCallbackDefines.xml");
 
-			for (std::vector<CvString>::iterator it = aszModularFiles.begin(); it != aszModularFiles.end(); ++it)
+			foreach_(const CvString& szFile, aszModularFiles)
 			{
-				if (!ReadGlobalDefines(*it, cache))
+				if (!ReadGlobalDefines(szFile, cache))
 				{
 					OutputDebugString("Setting Global Defines: End\n");
 					return false;
@@ -253,9 +253,9 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 			//aszFiles.reserve(10000);
 			pModEnumVector->loadModControlArray(aszFiles, "globaldefines");
 
-			for (std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
+			foreach_(const CvString& szFile, aszFiles)
 			{
-				if (!ReadGlobalDefines(*it, cache))
+				if (!ReadGlobalDefines(szFile, cache))
 				{
 					SAFE_DELETE(pModEnumVector);
 					OutputDebugString("Setting Global Defines: End\n");
@@ -268,9 +268,9 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 			pModEnumVector->loadModControlArray(aszModularFiles, "pythoncallbackdefines");
 			SAFE_DELETE(pModEnumVector);
 
-			for (std::vector<CvString>::iterator it = aszModularFiles.begin(); it != aszModularFiles.end(); ++it)
+			foreach_(const CvString& szFile, aszModularFiles)
 			{
-				if (!ReadGlobalDefines(*it, cache))
+				if (!ReadGlobalDefines(szFile, cache))
 				{
 					OutputDebugString("Setting Global Defines: End\n");
 					return false;

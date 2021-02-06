@@ -3018,12 +3018,12 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						if (!bFoundValid)
 						{
 							bool bFirst = true;
-							for (std::vector<BonusTypes>::iterator it = aeOrBonuses.begin(); it != aeOrBonuses.end(); ++it)
+							foreach_(const BonusTypes& it, aeOrBonuses)
 							{
-								CvWString szFirstBuffer = NEWLINE + gDLL->getText("TXT_KEY_BUILDING_REQUIRES_LIST");
+								const CvWString szFirstBuffer = NEWLINE + gDLL->getText("TXT_KEY_BUILDING_REQUIRES_LIST");
 								CvWString szTempBuffer;
 								szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),
-									CvWString(GC.getBonusInfo(*it).getType()).GetCString(), GC.getBonusInfo(*it).getDescription());
+									CvWString(GC.getBonusInfo(it).getType()).GetCString(), GC.getBonusInfo(it).getDescription());
 								setListHelp(szBuffer, szFirstBuffer.GetCString(), szTempBuffer, gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 								bFirst = false;
 							}

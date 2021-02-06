@@ -22941,7 +22941,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 		while ((int)apSpreadReligionCities.size() > kEvent.getConvertOwnCities())
 		{
-			int iChosen = GC.getGame().getSorenRandNum(apSpreadReligionCities.size(), "Even Spread Religion (own)");
+			const int iChosen = GC.getGame().getSorenRandNum(apSpreadReligionCities.size(), "Even Spread Religion (own)");
 
 			int i = 0;
 			for (std::vector<CvCity*>::iterator it = apSpreadReligionCities.begin(); it != apSpreadReligionCities.end(); ++it)
@@ -22955,9 +22955,9 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 			}
 		}
 
-		for (std::vector<CvCity*>::iterator it = apSpreadReligionCities.begin(); it != apSpreadReligionCities.end(); ++it)
+		foreach_(CvCity* city, apSpreadReligionCities)
 		{
-			(*it)->setHasReligion(pTriggeredData->m_eReligion, true, true, false);
+			city->setHasReligion(pTriggeredData->m_eReligion, true, true, false);
 		}
 
 		apSpreadReligionCities.clear();
@@ -22984,7 +22984,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 		while ((int)apSpreadReligionCities.size() > kEvent.getConvertOtherCities())
 		{
-			int iChosen = GC.getGame().getSorenRandNum(apSpreadReligionCities.size(), "Even Spread Religion (other)");
+			const int iChosen = GC.getGame().getSorenRandNum(apSpreadReligionCities.size(), "Even Spread Religion (other)");
 
 			int i = 0;
 			for (std::vector<CvCity*>::iterator it = apSpreadReligionCities.begin(); it != apSpreadReligionCities.end(); ++it)
@@ -22998,9 +22998,9 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 			}
 		}
 
-		for (std::vector<CvCity*>::iterator it = apSpreadReligionCities.begin(); it != apSpreadReligionCities.end(); ++it)
+		foreach_(CvCity* city, apSpreadReligionCities)
 		{
-			(*it)->setHasReligion(pTriggeredData->m_eReligion, true, true, false);
+			city->setHasReligion(pTriggeredData->m_eReligion, true, true, false);
 		}
 
 		if (0 != kEvent.getOurAttitudeModifier())
@@ -23718,25 +23718,22 @@ void CvPlayer::doEvents()
 		}
 	}
 
-	for (std::vector<int>::iterator it = aCleanup.begin(); it != aCleanup.end(); ++it)
+	foreach_(const int& it, aCleanup)
 	{
 		bool bDelete = true;
 
 		for (int i = 0; i < GC.getNumEventInfos(); ++i)
 		{
 			const EventTriggeredData* pTriggeredData = getEventCountdown((EventTypes)i);
-			if (NULL != pTriggeredData)
+			if (NULL != pTriggeredData && pTriggeredData->m_iId == it)
 			{
-				if (pTriggeredData->m_iId == *it)
-				{
-					bDelete = false;
-					break;
-				}
+				bDelete = false;
+				break;
 			}
 		}
 		if (bDelete)
 		{
-			deleteEventTriggered(*it);
+			deleteEventTriggered(it);
 		}
 	}
 }

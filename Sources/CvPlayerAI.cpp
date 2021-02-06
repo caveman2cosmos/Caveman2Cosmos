@@ -4537,9 +4537,9 @@ int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, i
 
 	int iTotal = 0;
 	int iDivisor = 1;
-	for(std::vector<TechResearchDist>::const_iterator itr = researchCosts.begin(); itr != researchCosts.end(); ++itr)
+	foreach_(const TechResearchDist& itr, researchCosts)
 	{
-		int iValue = AI_TechValueCached(itr->tech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+		const int iValue = AI_TechValueCached(itr.tech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
 
 		while ( MAX_INT - iTotal < iValue / iDivisor )
 		{
@@ -4663,12 +4663,12 @@ int	 CvPlayerAI::techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool 
 	int iScaleFactor = 1;
 
 	logBBAI("  Evaluate tech path value:" );
-	for(std::vector<TechTypes>::const_iterator itr = path->begin(); itr != path->end(); ++itr)
+	foreach_(const TechTypes& loopTech, *path)
 	{
 		int iTempCost = std::max(1,GET_TEAM(getTeam()).getResearchCost(eTech) - GET_TEAM(getTeam()).getResearchProgress(eTech));
-		int iTempValue = AI_TechValueCached(*itr, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+		int iTempValue = AI_TechValueCached(loopTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
 
-		logBBAI("	tech %S: cost %d, value %d", GC.getTechInfo(*itr).getDescription(), iTempCost, iTempValue );
+		logBBAI("	tech %S: cost %d, value %d", GC.getTechInfo(loopTech).getDescription(), iTempCost, iTempValue);
 
 		iCost += iTempCost;
 		iValue += iTempValue/iScaleFactor;
@@ -4715,22 +4715,22 @@ techPath*	CvPlayerAI::findBestPath(TechTypes eTech, int& valuePerUnitCost, bool 
 	int	iBestValue = 0;
 	techPath* bestPath = NULL;
 
-	for(std::vector<techPath*>::const_iterator itr = possiblePaths.begin(); itr != possiblePaths.end(); ++itr)
+	foreach_(techPath* path, possiblePaths)
 	{
-		iValue = techPathValuePerUnitCost(*itr, eTech, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+		iValue = techPathValuePerUnitCost(path, eTech, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
 		logBBAI("  Evaluated tech path value leading to %S as %d", GC.getTechInfo(eTech).getDescription(), iValue );
 		if ( iValue >= iBestValue )
 		{
 			iBestValue = iValue;
-			bestPath = *itr;
+			bestPath = path;
 		}
 	}
 
-	for(std::vector<techPath*>::const_iterator itr = possiblePaths.begin(); itr != possiblePaths.end(); ++itr)
+	foreach_(const techPath* path, possiblePaths)
 	{
-		if ( *itr != bestPath )
+		if (path != bestPath)
 		{
-			delete *itr;
+			delete path;
 		}
 	}
 
@@ -4740,16 +4740,17 @@ techPath*	CvPlayerAI::findBestPath(TechTypes eTech, int& valuePerUnitCost, bool 
 
 TechTypes CvPlayerAI::findStartTech(techPath* path) const
 {
-	for(std::vector<TechTypes>::const_iterator itr = path->begin(); itr != path->end(); ++itr)
+	foreach_(const TechTypes& tech, *path)
 	{
-		if ( canResearch(*itr) )
+		if (canResearch(tech))
 		{
-			return *itr;
+			return tech;
 		}
 	}
 
 	return NO_TECH;
 }
+
 int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const
 {
 	MEMORY_TRACK()
@@ -21596,9 +21597,9 @@ void CvPlayerAI::read(FDataStreamBase* pStream)
 		std::vector<CvUnit*> unitsToCull(beginUnits(), endUnits());
 		unitsToCull.resize(std::min<size_t>(iCull, unitsToCull.size()));
 
-		for (std::vector<CvUnit*>::const_iterator itr = unitsToCull.begin(); itr != unitsToCull.end(); ++itr)
+		foreach_(CvUnit* unit, unitsToCull)
 		{
-			(*itr)->kill(false);
+			unit->kill(false);
 		}
 	}
 

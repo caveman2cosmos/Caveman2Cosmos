@@ -11290,9 +11290,9 @@ CvDiplomacyInfo::~CvDiplomacyInfo()
 // note - Response member vars allocated by CvXmlLoadUtility
 void CvDiplomacyInfo::uninit()
 {
-	for (std::vector<CvDiplomacyResponse*>::iterator it = m_pResponses.begin(); it != m_pResponses.end(); ++it)
+	foreach_(const CvDiplomacyResponse* it, m_pResponses)
 	{
-		SAFE_DELETE(*it);
+		SAFE_DELETE(it);
 	}
 	m_pResponses.clear();
 }
@@ -34259,11 +34259,11 @@ int CvEventInfo::getNumWorldNews() const
 
 int CvEventInfo::getBuildingYieldChange(int iBuilding, int iYield) const
 {
-	for (std::vector<BuildingYieldChange>::const_iterator it = m_aBuildingYieldChanges.begin(); it != m_aBuildingYieldChanges.end(); ++it)
+	foreach_(const BuildingYieldChange& it, m_aBuildingYieldChanges)
 	{
-		if ((*it).eBuilding == (BuildingTypes)iBuilding && (*it).eYield == (YieldTypes)iYield)
+		if (it.eBuilding == (BuildingTypes)iBuilding && it.eYield == (YieldTypes)iYield)
 		{
-			return (*it).iChange;
+			return it.iChange;
 		}
 	}
 
@@ -34277,11 +34277,11 @@ int CvEventInfo::getNumBuildingYieldChanges() const
 
 int CvEventInfo::getBuildingCommerceChange(int iBuilding, int iCommerce) const
 {
-	for (std::vector<BuildingCommerceChange>::const_iterator it = m_aBuildingCommerceChanges.begin(); it != m_aBuildingCommerceChanges.end(); ++it)
+	foreach_(const BuildingCommerceChange& it, m_aBuildingCommerceChanges)
 	{
-		if ((*it).eBuilding == (BuildingTypes)iBuilding && (*it).eCommerce == (CommerceTypes)iCommerce)
+		if (it.eBuilding == (BuildingTypes)iBuilding && it.eCommerce == (CommerceTypes)iCommerce)
 		{
-			return (*it).iChange;
+			return it.iChange;
 		}
 	}
 
@@ -34295,11 +34295,11 @@ int CvEventInfo::getNumBuildingCommerceChanges() const
 
 int CvEventInfo::getBuildingCommerceModifier(int iBuilding, int iCommerce) const
 {
-	for (std::vector<BuildingCommerceChange>::const_iterator it = m_aBuildingCommerceModifiers.begin(); it != m_aBuildingCommerceModifiers.end(); ++it)
+	foreach_(const BuildingCommerceChange& it, m_aBuildingCommerceModifiers)
 	{
-		if ((*it).eBuilding == (BuildingTypes)iBuilding && (*it).eCommerce == (CommerceTypes)iCommerce)
+		if (it.eBuilding == (BuildingTypes)iBuilding && it.eCommerce == (CommerceTypes)iCommerce)
 		{
-			return (*it).iChange;
+			return it.iChange;
 		}
 	}
 
@@ -34485,25 +34485,25 @@ void CvEventInfo::getCheckSum(unsigned int& iSum) const
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_piUnitCombatPromotions);
 	CheckSumI(iSum, GC.getNumUnitInfos(), m_piUnitPromotions);
 
-	for (std::vector<BuildingYieldChange>::const_iterator it = m_aBuildingYieldChanges.begin(); it != m_aBuildingYieldChanges.end(); ++it)
+	foreach_(const BuildingYieldChange& it, m_aBuildingYieldChanges)
 	{
-		CheckSum(iSum, (*it).eBuilding);
-		CheckSum(iSum, (*it).eYield);
-		CheckSum(iSum, (*it).iChange);
+		CheckSum(iSum, it.eBuilding);
+		CheckSum(iSum, it.eYield);
+		CheckSum(iSum, it.iChange);
 	}
 
-	for (std::vector<BuildingCommerceChange>::const_iterator it = m_aBuildingCommerceChanges.begin(); it != m_aBuildingCommerceChanges.end(); ++it)
+	foreach_(const BuildingCommerceChange& it, m_aBuildingCommerceChanges)
 	{
-		CheckSum(iSum, (*it).eBuilding);
-		CheckSum(iSum, (*it).eCommerce);
-		CheckSum(iSum, (*it).iChange);
+		CheckSum(iSum, it.eBuilding);
+		CheckSum(iSum, it.eCommerce);
+		CheckSum(iSum, it.iChange);
 	}
 
-	for (std::vector<BuildingCommerceChange>::const_iterator it = m_aBuildingCommerceModifiers.begin(); it != m_aBuildingCommerceModifiers.end(); ++it)
+	foreach_(const BuildingCommerceChange& it, m_aBuildingCommerceModifiers)
 	{
-		CheckSum(iSum, (*it).eBuilding);
-		CheckSum(iSum, (*it).eCommerce);
-		CheckSum(iSum, (*it).iChange);
+		CheckSum(iSum, it.eBuilding);
+		CheckSum(iSum, it.eCommerce);
+		CheckSum(iSum, it.iChange);
 	}
 
 	CheckSumC(iSum, m_aBuildingHappyChanges);
@@ -35139,9 +35139,9 @@ void CvEventInfo::copyNonDefaults(CvEventInfo* pClassInfo, CvXMLLoadUtility* pXM
 	bool bNoDuplicate = true;
 	for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); iBuilding++)
 	{
-		for (std::vector<BuildingYieldChange>::const_iterator it = m_aBuildingYieldChanges.begin(); it != m_aBuildingYieldChanges.end(); ++it)
+		foreach_(const BuildingYieldChange& it, m_aBuildingYieldChanges)
 		{
-			if ((*it).eBuilding == (BuildingTypes)iBuilding)
+			if (it.eBuilding == (BuildingTypes)iBuilding)
 			{
 				//obviously some modder already set this Building to some value
 				//we don't want to overwrite his settings with the older(assuming he added
@@ -35169,9 +35169,9 @@ void CvEventInfo::copyNonDefaults(CvEventInfo* pClassInfo, CvXMLLoadUtility* pXM
 	bNoDuplicate = true;
 	for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); iBuilding++)
 	{
-		for (std::vector<BuildingCommerceChange>::const_iterator it = m_aBuildingCommerceChanges.begin(); it != m_aBuildingCommerceChanges.end(); ++it)
+		foreach_(const BuildingCommerceChange& it, m_aBuildingCommerceChanges)
 		{
-			if ((*it).eBuilding == (BuildingTypes)iBuilding)
+			if (it.eBuilding == (BuildingTypes)iBuilding)
 			{
 				//obviously some modder already set this Building to some value
 				//we don't want to overwrite his settings with the older(assuming he added
@@ -35199,9 +35199,9 @@ void CvEventInfo::copyNonDefaults(CvEventInfo* pClassInfo, CvXMLLoadUtility* pXM
 	bNoDuplicate = true;
 	for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); iBuilding++)
 	{
-		for (std::vector<BuildingCommerceChange>::const_iterator it = m_aBuildingCommerceModifiers.begin(); it != m_aBuildingCommerceModifiers.end(); ++it)
+		foreach_(const BuildingCommerceChange& it, m_aBuildingCommerceModifiers)
 		{
-			if ((*it).eBuilding == (BuildingTypes)iBuilding)
+			if (it.eBuilding == (BuildingTypes)iBuilding)
 			{
 				//obviously some modder already set this Building to some value
 				//we don't want to overwrite his settings with the older(assuming he added

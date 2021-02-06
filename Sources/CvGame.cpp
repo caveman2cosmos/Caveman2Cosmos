@@ -6349,26 +6349,22 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 		//So we ARE going by spawn here but it's still a random check per plot rather than placing an amount.  Before this, determine how many should spawn this round, then pick a plot for each of those spawns.
 		//The density factor is going to be interesting.  Perhaps each plot should get a likelihood value and vary that by the density factor around that plot.
 		//The spawn rate... is high more likely or low and what kind of numeric range are we working with?
-		const int iNumAreas = GC.getMap().getNumAreas();
-
-		for (int iI = 0; iI < iNumAreas; iI++)
+		foreach_(CvArea* pArea, GC.getMap().areas())
 		{
-			CvArea* pArea = GC.getMap().getArea(iI);
-			int iValidPlots = 0;
-			for (std::vector<CvPlot*>::iterator it = validPlots[j].begin(); it < validPlots[j].end(); ++it)
-			{
-				CvPlot* pPlot = *it;
-				if (pPlot->area() == pArea)
-				{
-					iValidPlots++;
-				}
-			}
+			const int iValidPlots = algo::count_if(validPlots[j], CvPlot::fn::area() == pArea);
+			//int iValidPlots = 0;
+			//foreach_(const CvPlot* pPlot, validPlots[j])
+			//{
+			//	if (pPlot->area() == pArea)
+			//	{
+			//		iValidPlots++;
+			//	}
+			//}
 			pArea->setNumValidPlotsbySpawn(eSpawn, iValidPlots);
 		}
 
-		for (std::vector<CvPlot*>::iterator it = validPlots[j].begin(); it < validPlots[j].end(); ++it)
+		foreach_(const CvPlot* pPlot, validPlots[j])
 		{
-			const CvPlot* pPlot = *it;
 			const int iArea = pPlot->getArea();
 			const CvArea* pArea = pPlot->area();
 			const int iTotalAreaSize = pArea->getNumTiles();
@@ -9351,11 +9347,11 @@ void CvGame::removePlotExtraYield(int iX, int iY)
 
 int CvGame::getPlotExtraCost(int iX, int iY) const
 {
-	for (std::vector<PlotExtraCost>::const_iterator it = m_aPlotExtraCosts.begin(); it != m_aPlotExtraCosts.end(); ++it)
+	foreach_(const PlotExtraCost& it, m_aPlotExtraCosts)
 	{
-		if ((*it).m_iX == iX && (*it).m_iY == iY)
+		if (it.m_iX == iX && it.m_iY == iY)
 		{
-			return (*it).m_iCost;
+			return it.m_iCost;
 		}
 	}
 
@@ -9366,11 +9362,11 @@ void CvGame::changePlotExtraCost(int iX, int iY, int iCost)
 {
 	bool bFound = false;
 
-	for (std::vector<PlotExtraCost>::iterator it = m_aPlotExtraCosts.begin(); it != m_aPlotExtraCosts.end(); ++it)
+	foreach_(PlotExtraCost& it, m_aPlotExtraCosts)
 	{
-		if ((*it).m_iX == iX && (*it).m_iY == iY)
+		if (it.m_iX == iX && it.m_iY == iY)
 		{
-			(*it).m_iCost += iCost;
+			it.m_iCost += iCost;
 			bFound = true;
 			break;
 		}
