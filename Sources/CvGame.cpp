@@ -6344,7 +6344,6 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 
 		logging::logMsg("C2C.log", "Spawn chance per plot for %s is 1 to %d .", spawnInfo.getType(), (int)adjustedSpawnRate);
 
-
 		int spawnCount = 0;
 		//So we ARE going by spawn here but it's still a random check per plot rather than placing an amount.  Before this, determine how many should spawn this round, then pick a plot for each of those spawns.
 		//The density factor is going to be interesting.  Perhaps each plot should get a likelihood value and vary that by the density factor around that plot.
@@ -6352,14 +6351,6 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 		foreach_(CvArea* pArea, GC.getMap().areas())
 		{
 			const int iValidPlots = algo::count_if(validPlots[j], CvPlot::fn::area() == pArea);
-			//int iValidPlots = 0;
-			//foreach_(const CvPlot* pPlot, validPlots[j])
-			//{
-			//	if (pPlot->area() == pArea)
-			//	{
-			//		iValidPlots++;
-			//	}
-			//}
 			pArea->setNumValidPlotsbySpawn(eSpawn, iValidPlots);
 		}
 
