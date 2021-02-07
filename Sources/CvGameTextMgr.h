@@ -265,32 +265,27 @@ public:
 	void getOtherRelationsString(CvWStringBuffer& szString, TeamTypes eThisTeam, TeamTypes eOtherTeam, TeamTypes eSkipTeam);
 // BUG - Leaderhead Relations - end
 
-// BUG - Finance Advisor - start
-	void buildFinanceSpecialistGoldString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer);
-// BUG - Finance Advisor - end
-
-	void buildFinanceInflationString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
-	void buildFinanceUnitUpkeepString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
-	void buildFinanceAwaySupplyString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
-	void buildFinanceCityMaintString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
-	void buildFinanceCivicUpkeepString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
-	void buildFinanceForeignIncomeString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
+	void buildFinanceSpecialistGoldString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer) const;
+	void buildFinanceInflationString(CvWStringBuffer& szDetails, PlayerTypes ePlayer) const;
+	void buildFinanceUnitUpkeepString(CvWStringBuffer& szDetails, PlayerTypes ePlayer) const;
+	void buildFinanceAwaySupplyString(CvWStringBuffer& szDetails, PlayerTypes ePlayer) const;
+	void buildFinanceCityMaintString(CvWStringBuffer& szDetails, PlayerTypes ePlayer) const;
+	void buildFinanceCivicUpkeepString(CvWStringBuffer& szDetails, PlayerTypes ePlayer) const;
+	void buildFinanceForeignIncomeString(CvWStringBuffer& szDetails, PlayerTypes ePlayer) const;
 
 	DllExport void getTradeScreenTitleIcon(CvString& szButton, CvWidgetDataStruct& widgetData, PlayerTypes ePlayer);
 	DllExport void getTradeScreenIcons(std::vector< std::pair<CvString, CvWidgetDataStruct> >& aIconInfos, PlayerTypes ePlayer);
 	DllExport void getTradeScreenHeader(CvWString& szHeader, PlayerTypes ePlayer, PlayerTypes eOtherPlayer, bool bAttitude);
 
-// BUG - Trade Hover - start
-	void buildDomesticTradeString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
-	void buildForeignTradeString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
-	void buildTradeString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer, PlayerTypes eWithPlayer=NO_PLAYER, bool bDomestic=true, bool bForeign=true, bool bHeading=true);
-// BUG - Trade Hover - end
+	void buildDomesticTradeString(CvWStringBuffer& szDetails, PlayerTypes ePlayer) const;
+	void buildForeignTradeString(CvWStringBuffer& szDetails, PlayerTypes ePlayer) const;
+	void buildTradeString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer, PlayerTypes eWithPlayer=NO_PLAYER, bool bDomestic=true, bool bForeign=true, bool bHeading=true) const;
 
 	DllExport void getGlobeLayerName(GlobeLayerTypes eType, int iOption, CvWString& strName);
 
 	DllExport void getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* pFlagPlot, bool bAlt, CvWStringBuffer& strHelp);
-	void getRebasePlotHelp(CvPlot* pPlot, CvWString& strHelp);
-	void getNukePlotHelp(CvPlot* pPlot, CvWString& strHelp);
+	void getRebasePlotHelp(const CvPlot* pPlot, CvWString& strHelp) const;
+	void getNukePlotHelp(const CvPlot* pPlot, CvWString& strHelp) const;
 	DllExport void getInterfaceCenterText(CvWString& strText);
 	DllExport void getTurnTimerText(CvWString& strText);
 	DllExport void getFontSymbols(std::vector< std::vector<wchar_t> >& aacSymbols, std::vector<int>& aiMaxNumRows);
@@ -306,26 +301,25 @@ public:
 	DllExport void getBuildingDataForWB(bool bStickyButton, std::vector<CvWBData>& mapBuildingData);
 	DllExport void getTerrainDataForWB(std::vector<CvWBData>& mapTerrainData, std::vector<CvWBData>& mapFeatureData, std::vector<CvWBData>& mapPlotData, std::vector<CvWBData>& mapRouteData);
 	DllExport void getTerritoryDataForWB(std::vector<CvWBData>& mapTerritoryData);
-
 	DllExport void getTechDataForWB(std::vector<CvWBData>& mapTechData);
 	DllExport void getPromotionDataForWB(std::vector<CvWBData>& mapPromotionData);
-	void getTraitDataForWB(std::vector<CvWBData>& mapTraitData);
+	//void getTraitDataForWB(std::vector<CvWBData>& mapTraitData) const;
 	DllExport void getBonusDataForWB(std::vector<CvWBData>& mapBonusData);
 	DllExport void getImprovementDataForWB(std::vector<CvWBData>& mapImprovementData);
-	void getRouteDataForWB(std::vector<CvWBData>& mapRouteData);
+	//void getRouteDataForWB(std::vector<CvWBData>& mapRouteData) const;
 	DllExport void getReligionDataForWB(bool bHolyCity, std::vector<CvWBData>& mapReligionData);
 	DllExport void getCorporationDataForWB(bool bHeadquarters, std::vector<CvWBData>& mapCorporationData);
 
 	// AIAndy: Game object relation texts
-	void getGameObjectName(CvWString& szString, GameObjectTypes eObject);
-	void buildGameObjectRelationString(CvWStringBuffer& szBuffer, GameObjectTypes eObject, RelationTypes eRelation, int iData);
+	void getGameObjectName(CvWString& szString, GameObjectTypes eObject) const;
+	void buildGameObjectRelationString(CvWStringBuffer& szBuffer, GameObjectTypes eObject, RelationTypes eRelation, int iData) const;
 
 private:
-	void eventTechHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, TechTypes eTech, PlayerTypes ePlayer, PlayerTypes eOtherPlayer);
-	void eventGoldHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, PlayerTypes ePlayer, PlayerTypes eOtherPlayer);
+	void eventTechHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, TechTypes eTech, PlayerTypes ePlayer, PlayerTypes eOtherPlayer) const;
+	void eventGoldHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, PlayerTypes ePlayer, PlayerTypes eOtherPlayer) const;
 
-	void setCityPlotYieldValueString(CvWStringBuffer &szString, CvCity* pCity, int iIndex, bool bAvoidGrowth, bool bIgnoreGrowth, bool bIgnoreFood = false);
-	void setYieldValueString(CvWStringBuffer &szString, int iValue, bool bActive = false, bool bMakeWhitespace = false);
+	void setCityPlotYieldValueString(CvWStringBuffer& szString, CvCity* pCity, int iIndex, bool bAvoidGrowth, bool bIgnoreGrowth, bool bIgnoreFood = false) const;
+	void setYieldValueString(CvWStringBuffer& szString, int iValue, bool bActive = false, bool bMakeWhitespace = false) const;
 };
 
 // Singleton Accessor
