@@ -829,7 +829,7 @@ bool CvUnitAI::AI_promote()
 	{
 		if (canPromote((PromotionTypes)iI, -1))
 		{
-			int iValue = AI_promotionValue((PromotionTypes)iI);
+			const int iValue = AI_promotionValue((PromotionTypes)iI);
 
 			if (iValue > iBestValue)
 			{
@@ -1139,32 +1139,27 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 {
 	PROFILE_FUNC();
 
-	int iOurStrength;
 	int iTheirStrength;
-	int iOurFirepower;
-	//int iTheirFirepower;
-	int iBaseOdds;
-	//int iStrengthFactor;
 	int iDamageToUs;
 	int iDamageToThem;
 	int iNeededRoundsUs;
 	int iNeededRoundsThem;
 	int iHitLimitThem;
 
-	iOurStrength = ((getDomainType() == DOMAIN_AIR) ? airCurrCombatStr(NULL) : currCombatStr(NULL,NULL));
-	iOurFirepower = ((getDomainType() == DOMAIN_AIR) ? iOurStrength : currFirepower(NULL,NULL));
-
+	int iOurStrength = ((getDomainType() == DOMAIN_AIR) ? airCurrCombatStr(NULL) : currCombatStr(NULL,NULL));
 	if (iOurStrength == 0)
 	{
 		return 1;
 	}
+
+	int iOurFirepower = ((getDomainType() == DOMAIN_AIR) ? iOurStrength : currFirepower(NULL,NULL));
 
 	int iTheirOdds;
 
 	const bool bSamePlot = pDefender->plot() == plot();
 
 	getDefenderCombatValues(*pDefender, pPlot, iOurStrength, iOurFirepower, iTheirOdds, iTheirStrength, iDamageToUs, iDamageToThem, NULL, pDefender, bSamePlot);
-	iBaseOdds = 100 - iTheirOdds/10;	//	getDefenderCombatValues returns odds based on the combat die (which is 1000 sided)
+	int iBaseOdds = 100 - iTheirOdds/10;	//	getDefenderCombatValues returns odds based on the combat die (which is 1000 sided)
 #if 0
 	iTheirStrength = pDefender->currCombatStr(pPlot, this);
 	iTheirFirepower = pDefender->currFirepower(pPlot, this);
@@ -1444,7 +1439,7 @@ bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildT
 
 				if (iValue > iBestValue)
 				{
-					BuildTypes eBuild = pCity->AI_getBestBuild(iI);
+					const BuildTypes eBuild = pCity->AI_getBestBuild(iI);
 					FAssertMsg(eBuild < GC.getNumBuildInfos(), "Invalid Build");
 
 					if (eBuild != NO_BUILD)
@@ -11675,7 +11670,7 @@ void CvUnitAI::AI_cityAutomated()
 
 
 // XXX make sure we include any new UnitAITypes...
-int CvUnitAI::AI_promotionValue(PromotionTypes ePromotion)
+int CvUnitAI::AI_promotionValue(PromotionTypes ePromotion) const
 {
 	return GET_PLAYER(getOwner()).AI_promotionValue(ePromotion, getUnitType(), this, AI_getUnitAIType());
 }
@@ -18186,7 +18181,7 @@ CvCity* CvUnitAI::AI_pickTargetCity(int iFlags, int iMaxPathTurns, bool bHuntBar
 }
 
 // Returns true if a mission was pushed...
-bool CvUnitAI::AI_goToTargetCity(int iFlags, int iMaxPathTurns, CvCity* pTargetCity )
+bool CvUnitAI::AI_goToTargetCity(int iFlags, int iMaxPathTurns, const CvCity* pTargetCity)
 {
 	PROFILE_FUNC();
 
@@ -18464,16 +18459,16 @@ bool CvUnitAI::AI_goToTargetBarbCity(int iMaxPathTurns)
 	return false;
 }
 
-bool CvUnitAI::AI_pillageAroundCity(CvCity* pTargetCity, int iBonusValueThreshold, int iMaxPathTurns )
+bool CvUnitAI::AI_pillageAroundCity(const CvCity* pTargetCity, int iBonusValueThreshold, int iMaxPathTurns)
 {
 	PROFILE_FUNC();
 
 	int iBestValue = 0;
 	CvPlot* endTurnPlot = NULL;
 	CvPlot* pBestPlot = NULL;
-	CvPlot* pBestPillagePlot = NULL;
+	const CvPlot* pBestPillagePlot = NULL;
 
-	foreach_(CvPlot* pLoopPlot, pTargetCity->plots())
+	foreach_(const CvPlot* pLoopPlot, pTargetCity->plots())
 	{
 		if (AI_plotValid(pLoopPlot) && !(pLoopPlot->isNPC()))
 		{
@@ -19193,25 +19188,20 @@ bool CvUnitAI::AI_rangeAttack(int iRange)
 
 bool CvUnitAI::AI_leaveAttack(int iRange, int iOddsThreshold, int iStrengthThreshold)
 {
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
-	CvCity* pCity;
 	CvPlot* endTurnPlot = NULL;
-	int iSearchRange;
 	int iPathTurns;
 	int iValue;
-	int iBestValue;
 	int iDX, iDY;
 
 	FAssert(canMove());
 
-	iSearchRange = iRange;
+	const int iSearchRange = iRange;
 
-	iBestValue = 0;
-	pBestPlot = NULL;
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
 
 
-	pCity = plot()->getPlotCity();
+	const CvCity* pCity = plot()->getPlotCity();
 
 	if ((pCity != NULL) && (pCity->getOwner() == getOwner()))
 	{
@@ -19235,7 +19225,7 @@ bool CvUnitAI::AI_leaveAttack(int iRange, int iOddsThreshold, int iStrengthThres
 	{
 		for (iDY = -(iSearchRange); iDY <= iSearchRange; iDY++)
 		{
-			pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
+			const CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
 			if (pLoopPlot != NULL)
 			{
@@ -19293,7 +19283,7 @@ bool CvUnitAI::AI_leaveAttack(int iRange, int iOddsThreshold, int iStrengthThres
 
 }
 
-int CvUnitAI::AI_blockadeValue(CvPlot* pLoopPlot, const CvCity* pCity, CvPlot*& endTurnPlot) const
+int CvUnitAI::AI_blockadeValue(const CvPlot* pLoopPlot, const CvCity* pCity, CvPlot*& endTurnPlot) const
 {
 	int iValue = 0;
 	int	iPathTurns;
@@ -19346,7 +19336,7 @@ bool CvUnitAI::AI_blockade()
 	int iBestRange;
 	int iBestValue = 0;
 	CvPlot* pBestPlot = NULL;
-	CvPlot* pBestBlockadePlot = NULL;
+	const CvPlot* pBestBlockadePlot = NULL;
 
 	CvReachablePlotSet plotSet(getGroup(), 0, MAX_INT);
 
@@ -24667,11 +24657,11 @@ bool CvUnitAI::AI_airOffensiveCity()
 	FAssert(canAirAttack() || nukeRange() >= 0);
 
 	int iBestValue = 0;
-	CvPlot* pBestPlot = NULL;
+	const CvPlot* pBestPlot = NULL;
 
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* plotX = GC.getMap().plotByIndex(iI);
+		const CvPlot* plotX = GC.getMap().plotByIndex(iI);
 
 		// Limit to cities and forts, true for any city but only this team's forts
 		if (plotX->isCity(true, getTeam())
@@ -24702,7 +24692,7 @@ bool CvUnitAI::AI_airOffensiveCity()
 
 
 // Function for ranking the value of a plot as a base for offensive air units
-int CvUnitAI::AI_airOffenseBaseValue(CvPlot* pPlot)
+int CvUnitAI::AI_airOffenseBaseValue(const CvPlot* pPlot) const
 {
 	if (pPlot == NULL)
 	{
@@ -24793,7 +24783,7 @@ int CvUnitAI::AI_airOffenseBaseValue(CvPlot* pPlot)
 		// Loop over operational range
 		const int iRange = airRange();
 
-		foreach_(CvPlot* plotX, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
+		foreach_(const CvPlot* plotX, CvPlot::rect(pPlot->getX(), pPlot->getY(), iRange, iRange))
 		{
 			if (plotX->area() != NULL)
 			{
@@ -25933,7 +25923,7 @@ bool CvUnitAI::AI_trade(int iValueThreshold)
 {
 	int iPathTurns;
 	int iBestValue = 0;
-	CvPlot* pBestPlot = NULL;
+	const CvPlot* pBestPlot = NULL;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
@@ -28098,24 +28088,16 @@ bool CvUnitAI::AI_RbombardUnit(int iRange, int iHighestOddsThreshold, int iMinSt
 }
 
 // Returns true if a mission was pushed...
-bool CvUnitAI::AI_RbombardCity(CvCity* pCity)
+bool CvUnitAI::AI_RbombardCity(const CvCity* pCity)
 {
 	PROFILE_FUNC();
 
-	//CvUnit* pDefender;
-	CvPlot* pPlot;
-
-	if(!GC.isDCM_RANGE_BOMBARD())
+	if (!GC.isDCM_RANGE_BOMBARD() || pCity == NULL)
 	{
 		return false;
 	}
 
-	if (pCity == NULL)
-	{
-		return false;
-	}
-
-	pPlot = pCity->plot();
+	const CvPlot* pPlot = pCity->plot();
 	if (pPlot == NULL)
 	{
 		return false; // ok will never happen but anyway...
@@ -30062,7 +30044,7 @@ bool CvUnitAI::AI_joinMilitaryCity(bool bNaval)
 	return false;
 }
 
-bool CvUnitAI::AI_isPlotWellDefended(const CvPlot* pPlot, bool bIncludeAdjacent, int iOddsOfDefeat)
+bool CvUnitAI::AI_isPlotWellDefended(const CvPlot* pPlot, bool bIncludeAdjacent, int iOddsOfDefeat) const
 {
 	PROFILE_FUNC();
 

@@ -19676,7 +19676,7 @@ void CvPlayerAI::AI_doDiplo()
 								if (AI_getContactTimer(((PlayerTypes)iI), CONTACT_STOP_TRADING) == 0)
 								{
 									int iRand = GC.getLeaderHeadInfo(getPersonalityType()).getContactRand(CONTACT_STOP_TRADING);
-									AttitudeTypes eAttitude = AI_getAttitude((PlayerTypes)iI);
+									const AttitudeTypes eAttitude = AI_getAttitude((PlayerTypes)iI);
 									if (eAttitude != ATTITUDE_FRIENDLY)
 									{
 										iRand *= (eAttitude == ATTITUDE_PLEASED ? 10 : 100);
@@ -20413,7 +20413,7 @@ void CvPlayerAI::AI_doDiplo()
 									{
 										if (GC.getGame().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getContactRand(CONTACT_TRADE_JOIN_WAR), "AI Diplo Trade War") == 0)
 										{
-											TeamTypes eBestStopTradeTeam = AI_bestStopTradeTeam((PlayerTypes)iI);
+											const TeamTypes eBestStopTradeTeam = AI_bestStopTradeTeam((PlayerTypes)iI);
 
 											if (eBestStopTradeTeam != NO_TEAM)
 											{
@@ -28476,7 +28476,7 @@ TeamTypes CvPlayerAI::AI_bestMakePeaceTeam(PlayerTypes ePlayer)
 	return eBestTeam;
 }
 
-TeamTypes CvPlayerAI::AI_bestStopTradeTeam(PlayerTypes eOtherPlayer)
+TeamTypes CvPlayerAI::AI_bestStopTradeTeam(PlayerTypes eOtherPlayer) const
 {
 	const CvPlayer& playerOther = GET_PLAYER(eOtherPlayer);
 	const TeamTypes eOtherTeam = playerOther.getTeam();
@@ -30138,7 +30138,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			{
 				if (pUnit->plot() != NULL)
 				{
-					CvCity* pCity = pUnit->plot()->getPlotCity();
+					const CvCity* pCity = pUnit->plot()->getPlotCity();
 					if (pCity != NULL)
 					{
 						int iNumCriminals = pUnit->plot()->getNumCriminals();

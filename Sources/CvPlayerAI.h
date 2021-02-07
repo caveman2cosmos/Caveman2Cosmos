@@ -487,7 +487,7 @@ public:
 	int AI_getEmbassyAttitude(PlayerTypes ePlayer) const;
 	TeamTypes AI_bestJoinWarTeam(PlayerTypes ePlayer);
 	TeamTypes AI_bestMakePeaceTeam(PlayerTypes ePlayer);
-	TeamTypes AI_bestStopTradeTeam(PlayerTypes ePlayer);
+	TeamTypes AI_bestStopTradeTeam(PlayerTypes ePlayer) const;
 	int AI_militaryBonusVal(BonusTypes eBonus);
 	int AI_getCivicShareAttitude(PlayerTypes ePlayer) const;
 	int AI_getCivicAttitudeChange(PlayerTypes ePlayer) const;
