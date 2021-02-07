@@ -481,12 +481,12 @@ public:
 	int AI_workerTradeVal(const CvUnit* pUnit) const;
 	int AI_militaryUnitTradeVal(const CvUnit* pUnit) const;
 	int AI_corporationTradeVal(CorporationTypes eCorporation, PlayerTypes ePlayer) const;
-	int AI_pledgeVoteTradeVal(VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const;
+	int AI_pledgeVoteTradeVal(const VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const;
 	int AI_secretaryGeneralTradeVal(VoteSourceTypes eVoteSource, PlayerTypes ePlayer) const;
 
 	int AI_getEmbassyAttitude(PlayerTypes ePlayer) const;
-	TeamTypes AI_bestJoinWarTeam(PlayerTypes ePlayer);
-	TeamTypes AI_bestMakePeaceTeam(PlayerTypes ePlayer);
+	TeamTypes AI_bestJoinWarTeam(PlayerTypes ePlayer) const;
+	TeamTypes AI_bestMakePeaceTeam(PlayerTypes ePlayer) const;
 	TeamTypes AI_bestStopTradeTeam(PlayerTypes ePlayer) const;
 	int AI_militaryBonusVal(BonusTypes eBonus);
 	int AI_getCivicShareAttitude(PlayerTypes ePlayer) const;

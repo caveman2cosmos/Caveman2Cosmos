@@ -10536,19 +10536,12 @@ int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 	return iValue * 15;
 }
 
-/************************************************************************************************/
-/* Afforess												 5/29/11								*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 int CvPlayerAI::AI_ourCityValue(CvCity* pCity) const
 {
-	CvPlot* pLoopPlot;
-	int iI;
-
 	int iValue = 150;
 	//consider infrastructure
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
 		if (pCity->getNumBuilding((BuildingTypes)iI) > 0)
 		{
@@ -10566,7 +10559,7 @@ int CvPlayerAI::AI_ourCityValue(CvCity* pCity) const
 			}
 		}
 	}
-	for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
 		if (pCity->isHasReligion((ReligionTypes)iI))
 		{
@@ -10581,7 +10574,7 @@ int CvPlayerAI::AI_ourCityValue(CvCity* pCity) const
 			}
 		}
 	}
-	for (iI = 0; iI < GC.getNumCorporationInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
 		if (pCity->isHasCorporation((CorporationTypes)iI))
 		{
@@ -10598,9 +10591,9 @@ int CvPlayerAI::AI_ourCityValue(CvCity* pCity) const
 
 	iValue += (((GC.getGame().getElapsedGameTurns() + 100) * 4) * pCity->plot()->calculateCulturePercent(pCity->getOwner())) / 400;
 
-	for (iI = 0; iI < pCity->getNumCityPlots(); iI++)
+	for (int iI = 0; iI < pCity->getNumCityPlots(); iI++)
 	{
-		pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
+		const CvPlot* pLoopPlot = plotCity(pCity->getX(), pCity->getY(), iI);
 
 		if (pLoopPlot != NULL)
 		{
@@ -10632,9 +10625,7 @@ int CvPlayerAI::AI_ourCityValue(CvCity* pCity) const
 	}
 	return iValue;
 }
-/************************************************************************************************/
-/* Afforess								   END												  */
-/************************************************************************************************/
+
 
 DenialTypes CvPlayerAI::AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const
 {
@@ -10644,11 +10635,7 @@ DenialTypes CvPlayerAI::AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const
 	{
 		return NO_DENIAL;
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 5/29/11												*/
-/*																							  */
-/* Improved AI																				  */
-/************************************************************************************************/
+
 	if (pCity->getID() == getCapitalCity()->getID())
 	{
 		return DENIAL_JOKING;
@@ -10685,9 +10672,7 @@ DenialTypes CvPlayerAI::AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const
 			return NO_DENIAL;
 		}
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 	if (GET_PLAYER(ePlayer).getTeam() != getTeam())
 	{
 		return DENIAL_NEVER;
@@ -20233,7 +20218,7 @@ void CvPlayerAI::AI_doDiplo()
 										{
 											if (GC.getGame().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getContactRand(CONTACT_TRADE_JOIN_WAR), "AI Diplo Trade War") == 0)
 											{
-												TeamTypes eBestWarTeam = AI_bestJoinWarTeam((PlayerTypes)iI);
+												const TeamTypes eBestWarTeam = AI_bestJoinWarTeam((PlayerTypes)iI);
 
 												if (eBestWarTeam != NO_TEAM)
 												{
@@ -28195,7 +28180,7 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 	return iValue;
 }
 
-int CvPlayerAI::AI_pledgeVoteTradeVal(VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const
+int CvPlayerAI::AI_pledgeVoteTradeVal(const VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const
 {
 	return 1;
 }
@@ -28376,7 +28361,7 @@ int CvPlayerAI::AI_getCivicShareAttitude(PlayerTypes ePlayer) const
 }
 
 
-TeamTypes CvPlayerAI::AI_bestJoinWarTeam(PlayerTypes eOtherPlayer)
+TeamTypes CvPlayerAI::AI_bestJoinWarTeam(PlayerTypes eOtherPlayer) const
 {
 	const CvPlayer& playerOther = GET_PLAYER(eOtherPlayer);
 	const TeamTypes eOtherTeam = playerOther.getTeam();
@@ -28430,7 +28415,7 @@ TeamTypes CvPlayerAI::AI_bestJoinWarTeam(PlayerTypes eOtherPlayer)
 	return eWarTeam;
 }
 
-TeamTypes CvPlayerAI::AI_bestMakePeaceTeam(PlayerTypes ePlayer)
+TeamTypes CvPlayerAI::AI_bestMakePeaceTeam(PlayerTypes ePlayer) const
 {
 	//kWarTeam is the team that is at war with the player we want them to make peace with
 	const CvTeamAI& kWarTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam());
