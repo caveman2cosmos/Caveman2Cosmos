@@ -2290,7 +2290,7 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, const CvPlot*, plot);
 
-		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isReligiouslyLimitedBuilding, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, hasFullyActiveBuilding, BuildingTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, canConstruct, BuildingTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, canTrain, UnitTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isHasReligion, ReligionTypes);

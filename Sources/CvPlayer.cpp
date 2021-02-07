@@ -28531,67 +28531,56 @@ void CvPlayer::checkAIStrategy()
 	}
 }
 
-int CvPlayer::getBuildingCommerceChange(BuildingTypes building, CommerceTypes CommerceType) const
+int CvPlayer::getBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes CommerceType) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), building)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, CommerceType)
-	return m_ppiBuildingCommerceChange[building][CommerceType];
+	return m_ppiBuildingCommerceChange[eBuilding][CommerceType];
 }
 
-void CvPlayer::changeBuildingCommerceChange(BuildingTypes building, CommerceTypes CommerceType, int iChange)
+void CvPlayer::changeBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes CommerceType, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), building)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, CommerceType)
 
 	if (iChange != 0)
 	{
-		m_ppiBuildingCommerceChange[building][CommerceType] += iChange;
+		m_ppiBuildingCommerceChange[eBuilding][CommerceType] += iChange;
 
 		foreach_(CvCity* pLoopCity, cities())
 		{
-			if (pLoopCity->getNumActiveBuilding(building) > 0)
+			if (pLoopCity->hasFullyActiveBuilding(eBuilding))
 			{
-				if (!pLoopCity->isReligiouslyLimitedBuilding(building))
-				{
-					pLoopCity->changeBuildingCommerceChange(building, CommerceType, iChange);
-				}
+				pLoopCity->changeBuildingCommerceChange(eBuilding, CommerceType, iChange);
 			}
 		}
-
 		setCommerceDirty();
 	}
 }
 
-int CvPlayer::getBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2) const
+int CvPlayer::getBuildingCommerceModifier(BuildingTypes eBuilding, CommerceTypes eCommerce) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex1)
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex2)
-	return m_ppiBuildingCommerceModifier[eIndex1][eIndex2];
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
+	return m_ppiBuildingCommerceModifier[eBuilding][eCommerce];
 }
 
-void CvPlayer::changeBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2, int iChange)
+void CvPlayer::changeBuildingCommerceModifier(BuildingTypes eBuilding, CommerceTypes eCommerce, int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex1)
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex2)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
 
 	if (iChange != 0)
 	{
-		//int iOldValue = getBuildingCommerceModifier(eIndex1, eIndex2);
-		m_ppiBuildingCommerceModifier[eIndex1][eIndex2] += iChange;
+		m_ppiBuildingCommerceModifier[eBuilding][eCommerce] += iChange;
 
 		foreach_(CvCity* pLoopCity, cities())
 		{
-			if (pLoopCity->getNumActiveBuilding(eIndex1) > 0)
+			if (pLoopCity->hasFullyActiveBuilding(eBuilding))
 			{
-				if (!pLoopCity->isReligiouslyLimitedBuilding(eIndex1))
-				{
-					const int iExistingValue = pLoopCity->getBuildingCommerceModifier(eIndex1, eIndex2);
-					// set the new
-					pLoopCity->updateCommerceModifierByBuilding(eIndex1, eIndex2, iExistingValue + iChange);
-				}
+				pLoopCity->updateCommerceModifierByBuilding(eBuilding, eCommerce, pLoopCity->getBuildingCommerceModifier(eBuilding, eCommerce) + iChange);
 			}
 		}
-
 		setCommerceDirty();
 	}
 }

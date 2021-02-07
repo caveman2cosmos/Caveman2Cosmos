@@ -33066,15 +33066,18 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	int iBuildingFood = 0;
 	for (i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		const int iCount = city.getNumActiveBuilding((BuildingTypes)i);
-		if (iCount > 0)
+		if (city.hasFullyActiveBuilding((BuildingTypes)i))
 		{
-			const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)i);
-			//Team Project (5)
-			if (!city.isReligiouslyLimitedBuilding((BuildingTypes)i))
-			{
-				iBuildingFood += iCount * (kBuilding.getYieldChange(YIELD_FOOD) + ((kBuilding.getYieldPerPopChange(YIELD_FOOD)*city.getPopulation())/100) + city.getBuildingYieldChange((BuildingTypes)i, YIELD_FOOD) + GET_TEAM(city.getTeam()).getBuildingYieldModifier((BuildingTypes)i, YIELD_FOOD));
-			}
+			iBuildingFood +=
+			(
+				GC.getBuildingInfo((BuildingTypes)i).getYieldChange(YIELD_FOOD)
+				+
+				GC.getBuildingInfo((BuildingTypes)i).getYieldPerPopChange(YIELD_FOOD) * city.getPopulation() / 100
+				+
+				city.getBuildingYieldChange((BuildingTypes)i, YIELD_FOOD)
+				+
+				GET_TEAM(city.getTeam()).getBuildingYieldModifier((BuildingTypes)i, YIELD_FOOD)
+			);
 		}
 	}
 	if (iBuildingFood != 0)
@@ -34846,32 +34849,18 @@ void CvGameTextMgr::buildCityBillboardIconString( CvWStringBuffer& szBuffer, CvC
 			}
 		}
 
-// BUG - Airport Icon - start
-//Modified by Afforess 4/30/10
 		if (getBugOptionBOOL("CityBar__AirportIcons", true, "BUG_CITYBAR_AIRPORT_ICONS"))
 		{
-			bool bHasAirport = false;
 			for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); iBuilding++)
 			{
-				if (pCity->getNumActiveBuilding((BuildingTypes)iBuilding) > 0)
+				if (pCity->hasFullyActiveBuilding((BuildingTypes)iBuilding)
+				&& GC.getBuildingInfo((BuildingTypes)iBuilding).getAirlift() > 0)
 				{
-					//Team Project (5)
-					if (!pCity->isReligiouslyLimitedBuilding((BuildingTypes)iBuilding))
-					{
-						if (GC.getBuildingInfo((BuildingTypes)iBuilding).getAirlift() > 0)
-						{
-							bHasAirport = true;
-							break;
-						}
-					}
+					szBuffer.append(CvWString::format(L"%c", gDLL->getSymbolID(AIRPORT_CHAR)));
+					break;
 				}
 			}
-			if (bHasAirport)
-			{
-				szBuffer.append(CvWString::format(L"%c", gDLL->getSymbolID(AIRPORT_CHAR)));
-			}
 		}
-// BUG - Airport Icon - start
 	}
 
 	// religion icons
@@ -35972,18 +35961,17 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 
 			int iModifier = 100;
 			int iTestValue = pCity->getTradeRouteModifier();
-			int iValue = 0;
 			int iTradeRouteModifier = 0;
-			// getTradeRouteModifier()
-			for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
+
+			for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 			{
-				if (pCity->getNumActiveBuilding((BuildingTypes)iBuilding) > 0 && !pCity->isReligiouslyLimitedBuilding((BuildingTypes)iBuilding))
+				if (pCity->hasFullyActiveBuilding((BuildingTypes)iI))
 				{
-					iValue = pCity->getNumActiveBuilding((BuildingTypes)iBuilding) * GC.getBuildingInfo((BuildingTypes)iBuilding).getTradeRouteModifier();
+					const int iValue = GC.getBuildingInfo((BuildingTypes)iI).getTradeRouteModifier();
 					if (0 != iValue)
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_BUILDING", GC.getBuildingInfo((BuildingTypes)iBuilding).getTextKeyWide(), iValue));
+						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_BUILDING", GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide(), iValue));
 						iTradeRouteModifier += iValue;
 					}
 				}
@@ -35993,7 +35981,7 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 
 			iModifier += iTradeRouteModifier;
 
-			iValue = pCity->getPopulationTradeModifier();
+			int iValue = pCity->getPopulationTradeModifier();
 			if (0 != iValue)
 			{
 				szBuffer.append(NEWLINE);
@@ -38280,21 +38268,13 @@ void CvGameTextMgr::setEmploymentHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	bool bFirst = true;
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (city.getNumActiveBuilding((BuildingTypes)iI) > 0)
+		if (city.hasFullyActiveBuilding((BuildingTypes)iI) && GC.getBuildingInfo((BuildingTypes)iI).getNumPopulationEmployed() > 0)
 		{
-			//Team Project (5)
-			if (!city.isReligiouslyLimitedBuilding((BuildingTypes)iI))
-			{
-				if (GC.getBuildingInfo((BuildingTypes)iI).getNumPopulationEmployed() > 0)
-				{
-					if (!bFirst) szBuffer.append(NEWLINE);
-					szBuffer.append(CvWString::format(L"%s: %d %c", GC.getBuildingInfo((BuildingTypes)iI).getDescription(), GC.getBuildingInfo((BuildingTypes)iI).getNumPopulationEmployed(), gDLL->getSymbolID(CITIZEN_CHAR)));
-					bFirst = false;
-				}
-			}
+			if (!bFirst) szBuffer.append(NEWLINE);
+			szBuffer.append(CvWString::format(L"%s: %d %c", GC.getBuildingInfo((BuildingTypes)iI).getDescription(), GC.getBuildingInfo((BuildingTypes)iI).getNumPopulationEmployed(), gDLL->getSymbolID(CITIZEN_CHAR)));
+			bFirst = false;
 		}
 	}
-
 	szBuffer.append(DOUBLE_SEPARATOR);
 	szBuffer.append(NEWLINE);
 	szBuffer.append(gDLL->getText("TXT_KEY_MISC_TOTAL_EMPLOYED", city.getNumPopulationEmployed()));

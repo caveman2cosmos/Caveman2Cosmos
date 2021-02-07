@@ -10872,47 +10872,49 @@ void CvPlot::processArea(CvArea* pArea, int iChange)
 
 	if (pCity != NULL)
 	{
+		const PlayerTypes eOwner = pCity->getOwner();
 		// XXX make sure all of this (esp. the changePower()) syncs up...
-		pArea->changePower(pCity->getOwner(), iChange * pCity->getPopulation());
+		pArea->changePower(eOwner, iChange * pCity->getPopulation());
 
-		pArea->changeCitiesPerPlayer(pCity->getOwner(), iChange);
-		pArea->changePopulationPerPlayer(pCity->getOwner(), (pCity->getPopulation() * iChange));
+		pArea->changeCitiesPerPlayer(eOwner, iChange);
+		pArea->changePopulationPerPlayer(eOwner, (pCity->getPopulation() * iChange));
 
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+		const int iNumBuildingInfos = GC.getNumBuildingInfos();
+
+		for (int iI = 0; iI < iNumBuildingInfos; ++iI)
 		{
-			if (pCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
+			const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iI);
+			if (pCity->getNumActiveBuilding(eBuildingX) > 0)
 			{
-				const CvBuildingInfo& building = GC.getBuildingInfo((BuildingTypes)iI);
+				const CvBuildingInfo& building = GC.getBuildingInfo(eBuildingX);
 
-				pArea->changePower(pCity->getOwner(), building.getPowerValue() * iChange * pCity->getNumActiveBuilding((BuildingTypes)iI));
+				pArea->changePower(eOwner, building.getPowerValue() * iChange);
 
-				if (!pCity->isReligiouslyLimitedBuilding((BuildingTypes)iI))
+				if (!pCity->isReligiouslyLimitedBuilding(eBuildingX))
 				{
 					if (building.getAreaHealth() > 0)
 					{
-						pArea->changeBuildingGoodHealth(pCity->getOwner(), building.getAreaHealth() * iChange * pCity->getNumActiveBuilding((BuildingTypes)iI));
+						pArea->changeBuildingGoodHealth(eOwner, building.getAreaHealth() * iChange * pCity->getNumActiveBuilding(eBuildingX));
 					}
-					else pArea->changeBuildingBadHealth(pCity->getOwner(), building.getAreaHealth() * iChange * pCity->getNumActiveBuilding((BuildingTypes)iI));
+					else pArea->changeBuildingBadHealth(eOwner, building.getAreaHealth() * iChange * pCity->getNumActiveBuilding(eBuildingX));
 
-					pArea->changeBuildingHappiness(pCity->getOwner(), building.getAreaHappiness() * iChange * pCity->getNumActiveBuilding((BuildingTypes)iI));
-					pArea->changeFreeSpecialist(pCity->getOwner(), building.getAreaFreeSpecialist() * iChange * pCity->getNumActiveBuilding((BuildingTypes)iI));
-				}
-				pArea->changeCleanPowerCount(pCity->getTeam(), building.isAreaCleanPower() ? iChange * pCity->getNumActiveBuilding((BuildingTypes)iI) : 0);
-				pArea->changeBorderObstacleCount(pCity->getTeam(), building.isAreaBorderObstacle() ? iChange * pCity->getNumActiveBuilding((BuildingTypes)iI) : 0);
+					pArea->changeBuildingHappiness(eOwner, building.getAreaHappiness() * iChange * pCity->getNumActiveBuilding(eBuildingX));
+					pArea->changeFreeSpecialist(eOwner, building.getAreaFreeSpecialist() * iChange * pCity->getNumActiveBuilding(eBuildingX));
 
-				for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
-				{
-					if (!pCity->isReligiouslyLimitedBuilding((BuildingTypes)iI))
+					for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 					{
-						pArea->changeYieldRateModifier(pCity->getOwner(), (YieldTypes)iJ, building.getAreaYieldModifier(iJ) * iChange * pCity->getNumActiveBuilding((BuildingTypes)iI));
+						pArea->changeYieldRateModifier(eOwner, (YieldTypes)iJ, building.getAreaYieldModifier(iJ) * iChange);
 					}
 				}
+				pArea->changeCleanPowerCount(pCity->getTeam(), building.isAreaCleanPower() ? iChange * pCity->getNumActiveBuilding(eBuildingX) : 0);
+				pArea->changeBorderObstacleCount(pCity->getTeam(), building.isAreaBorderObstacle() ? iChange * pCity->getNumActiveBuilding(eBuildingX) : 0);
+
 			}
 		}
 
 		for (int iI = 0; iI < NUM_UNITAI_TYPES; ++iI)
 		{
-			pArea->changeNumTrainAIUnits(pCity->getOwner(), ((UnitAITypes)iI), (pCity->getNumTrainUnitAI((UnitAITypes)iI) * iChange));
+			pArea->changeNumTrainAIUnits(eOwner, (UnitAITypes)iI, pCity->getNumTrainUnitAI((UnitAITypes)iI) * iChange);
 		}
 
 		for (int iI = 0; iI < MAX_PLAYERS; ++iI)

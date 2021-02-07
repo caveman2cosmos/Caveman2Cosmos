@@ -8793,7 +8793,7 @@ void CvCity::changeBuildingGoodHealth(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iBuildingGoodHealth = (m_iBuildingGoodHealth + iChange);
+		m_iBuildingGoodHealth += iChange;
 		FAssert(getBuildingGoodHealth() >= 0);
 
 		AI_setAssignWorkDirty(true);
