@@ -81,12 +81,13 @@ using boost::int16_t;
 using boost::int32_t;
 using boost::int64_t;
 
-typedef unsigned char       uint8_t;
-typedef unsigned short      uint16_t;
-typedef unsigned int        uint32_t;
+using boost::uint8_t;
+using boost::uint16_t;
+//using boost::uint32_t;
 using boost::uint64_t;
 
-typedef unsigned int        uint;
+typedef unsigned int uint32_t;
+typedef unsigned int uint;
 
 //
 // Type traits
@@ -103,8 +104,6 @@ typedef unsigned int        uint;
 #define MIN_UNSIGNED_SHORT                  (0x0000)
 #define MAX_UNSIGNED_INT                    (0xffffffff)
 #define MIN_UNSIGNED_INT                    (0x00000000)
-
-#define MAX_INT64                           9223372036854775807
 
 #define SAFE_DELETE(p)       { if(p) { delete (p);     (p)=NULL; } }
 #define SAFE_DELETE_ARRAY(p) { if(p) { delete[] (p);   (p)=NULL; } }
