@@ -5079,56 +5079,20 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 	{
 		GET_PLAYER(getOwner()).noteOrbitalInfrastructureCountDirty();
 	}
-	//TB: Makes it possible to use old built buildings to qualify for x buildings built anywhere prerequisites so as to get around
-	//Obsoletion and replacement issues.  However, this does still mean that the building needed to have BEEN built previously.
-	//Moving here also fixes from other prereqs that may be eliminating or upsetting the count.
-	GET_TEAM(getTeam()).changeBuildingCount(eBuilding, iChange);
-	GET_PLAYER(getOwner()).changeBuildingCount(eBuilding, iChange);
 
 	{
 		PROFILE("CvCity::processBuilding.properties");
 
+		const CvProperties* pProp = kBuilding.getProperties();
+		const CvProperties* pPropAllCities = kBuilding.getPropertiesAllCities();
 		if (iChange > 0)
 		{
-			changeNumBuildings(1);
-			if (isLimitedWonder(eBuilding) && !kBuilding.isNoLimit())
-			{
-				if (isWorldWonder(eBuilding))
-				{
-					changeNumWorldWonders(1);
-				}
-				else if (isTeamWonder(eBuilding))
-				{
-					changeNumTeamWonders(1);
-				}
-				else if (isNationalWonder(eBuilding))
-				{
-					changeNumNationalWonders(1);
-				}
-			}
-			if (!bReligiously)
-			{
-				CorporationTypes eCorporation = (CorporationTypes)kBuilding.getFoundsCorporation();
-				if (NO_CORPORATION != eCorporation && !GC.getGame().isCorporationFounded(eCorporation))
-				{
-					setHeadquarters(eCorporation);
-				}
-
-				if (kBuilding.getFreeSpecialTech() != NO_TECH)
-				{
-					GET_TEAM(getTeam()).setHasTech(kBuilding.getFreeSpecialTech(), true, getOwner(), true, true);
-				}
-			}
-
 			// Property manipulators must be serialized as the propagation can mean we're updating
 			//	properties on many entities (granular locking produces too much overhead).
-			const CvProperties* pProp = kBuilding.getProperties();
 			if (!pProp->isEmpty())
 			{
 				getProperties()->addProperties(pProp);
 			}
-			//GET_PLAYER(getOwner()).getProperties()->addProperties(kBuilding.getProperties());
-			const CvProperties* pPropAllCities = kBuilding.getPropertiesAllCities();
 			if (!pPropAllCities->isEmpty())
 			{
 				GET_TEAM(getTeam()).addPropertiesAllCities(pPropAllCities);
@@ -5136,32 +5100,12 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		}
 		else
 		{
-			// When wonders obsolete, give back to the city their slot towards the wonder limit.
-			if (isLimitedWonder(eBuilding) && !kBuilding.isNoLimit())
-			{
-				changeNumBuildings(-1);
-				if (isWorldWonder(eBuilding))
-				{
-					changeNumWorldWonders(-1);
-				}
-				else if (isTeamWonder(eBuilding))
-				{
-					changeNumTeamWonders(-1);
-				}
-				else if (isNationalWonder(eBuilding))
-				{
-					changeNumNationalWonders(-1);
-				}
-			}
 			// Property manipulators must be serialized as the propagation can mean we're updating
 			//	properties on many entities (granular locking produces too much overhead).
-			const CvProperties* pProp = kBuilding.getProperties();
 			if (!pProp->isEmpty())
 			{
-				getProperties()->subtractProperties(kBuilding.getProperties());
+				getProperties()->subtractProperties(pProp);
 			}
-			//GET_PLAYER(getOwner()).getProperties()->subtractProperties(kBuilding.getProperties());
-			const CvProperties* pPropAllCities = kBuilding.getPropertiesAllCities();
 			if (!pPropAllCities->isEmpty())
 			{
 				GET_TEAM(getTeam()).subtractPropertiesAllCities(pPropAllCities);
@@ -5214,12 +5158,6 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 					kBuilding.getType(), GC.getUnitInfo(kBuilding.getPropertySpawnUnit()).getType()).c_str());
 
 			changePropertySpawn(iChange, kBuilding.getPropertySpawnProperty(), kBuilding.getPropertySpawnUnit());
-		}
-
-		//TB Nukefix reset nuke validation
-		if (kBuilding.isAllowsNukes())
-		{//TB Nukefix (changed to GET_PLAYER(getOwner() rather than GC.getGame)
-			GET_PLAYER(getOwner()).makeNukesValid(true);
 		}
 
 		if (kBuilding.getFreePromotion_2() != NO_PROMOTION)
@@ -7152,6 +7090,7 @@ int CvCity::cultureGarrison(PlayerTypes ePlayer) const
 }
 
 
+// Toffer - Change to "bool CvCity::isActiveBuilding(BuildingTypes eIndex) const".
 int CvCity::getNumActiveBuilding(BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
@@ -14762,28 +14701,33 @@ void CvCity::alterWorkingPlot(int iIndex)
 }
 
 
-int CvCity::getNumRealBuilding(BuildingTypes eIndex) const
+// Toffer - Change to "bool CvCity::hasBuilding(BuildingTypes eIndex) const".
+int CvCity::getNumRealBuilding(const BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	return m_paiNumRealBuilding[eIndex];
 }
 
 
-void CvCity::setNumRealBuilding(BuildingTypes eIndex, int iNewValue)
+void CvCity::setNumRealBuilding(const BuildingTypes eIndex, const int iNewValue)
 {
-	setNumRealBuildingTimed(eIndex, iNewValue > 0, true, getOwner(), GC.getGame().getGameTurnYear());
+	if (iNewValue > 0)
+	{
+		setNumRealBuildingTimed(eIndex, true, getOwner(), GC.getGame().getGameTurnYear());
+	}
+	else setNumRealBuildingTimed(eIndex, false, NO_PLAYER, MIN_INT);
 }
 
 
 // Toffer, we should really change the building count to a boolean,
 //	simplifies a lot to remove the unsupported capability of having more than one of the same building.
-void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNewValue, const bool bFirst, const PlayerTypes eOriginalOwner, const int iOriginalTime)
+void CvCity::setNumRealBuildingTimed(const BuildingTypes eBuilding, const bool bNewValue, const PlayerTypes eOriginalOwner, const int iOriginalTime, const bool bFirst)
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding)
 
-	if (bNewValue != (m_paiNumRealBuilding[eIndex] > 0))
+	if (bNewValue != (m_paiNumRealBuilding[eBuilding] > 0))
 	{
-		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eIndex);
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 		// Changing the buildings in a city invaldiates lots of cached data so flush the caches
 		if (kBuilding.EnablesOtherBuildings())
@@ -14799,26 +14743,18 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNew
 		invalidateCachedCanTrainForUnit(NO_UNIT);
 #endif
 
-		m_paiNumRealBuilding[eIndex] = bNewValue;
+		// @SAVEBREAK - Toffer - These should be changed to a map (eBuildingX : [ePlayer, iTime]) at some point.
+		m_paiNumRealBuilding[eBuilding] = bNewValue;
+		m_paiBuildingOriginalOwner[eBuilding] = eOriginalOwner;
+		m_paiBuildingOriginalTime[eBuilding] = iOriginalTime;
+
+		setupBuilding(eBuilding, bNewValue, bFirst);
+
 		if (bNewValue) // Building addition
 		{
-			m_paiBuildingOriginalOwner[eIndex] = eOriginalOwner;
-			m_paiBuildingOriginalTime[eIndex] = iOriginalTime;
+			processBuilding(eBuilding, 1, false, true);
 
-			// Toffer - This seems misplaced... 
-			//	Shouldn't it be in CvGame::processBuilding(), and be processed out if the building is destroyed?
-			if (kBuilding.needStateReligionInCity() && kBuilding.getVoteSourceType() > -1)
-			{
-				const VoteSourceTypes eVoteSource = (VoteSourceTypes) kBuilding.getVoteSourceType();
-				if (eVoteSource > NO_VOTESOURCE && GC.getGame().getVoteSourceReligion(eVoteSource) == NO_RELIGION)
-				{
-					GC.getGame().setVoteSourceReligion(eVoteSource, GET_PLAYER(getOwner()).getStateReligion(), true);
-				}
-			}
-			// ! Toffer
-
-			processBuilding(eIndex, 1, false, true);
-
+			// Disable any buildings replaced by this one.
 			for (int iI = 0; iI < kBuilding.getNumReplacedBuilding(); iI++)
 			{
 				const BuildingTypes eReplaced = (BuildingTypes)kBuilding.getReplacedBuilding(iI);
@@ -14828,27 +14764,120 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNew
 					setDisabledBuilding(eReplaced, true);
 				}
 			}
-
-			if (bFirst)
+		}
+		else // Building removal
+		{
+			if (isDisabledBuilding(eBuilding))
 			{
-				if (kBuilding.isCapital())
+				setDisabledBuilding(eBuilding, false, false);
+			}
+			else
+			{
+				if (isReligiouslyDisabledBuilding(eBuilding))
 				{
-					GET_PLAYER(getOwner()).setCapitalCity(this);
+					setReligiouslyDisabledBuilding(eBuilding, false);
+				}
+				processBuilding(eBuilding, -1, false, true);
+			}
+
+			//Remove any extensions of this building
+			const int iExtensionOf = kBuilding.getExtendsBuilding();
+			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			{
+				if (getNumRealBuilding((BuildingTypes)iI) > 0
+				// avoid infinite recursion
+				&& iI != eBuilding && iExtensionOf != iI
+				&& GC.getBuildingInfo((BuildingTypes)iI).getExtendsBuilding() == eBuilding)
+				{
+					setNumRealBuilding((BuildingTypes)iI, 0);
+				}
+			}
+		}
+	}
+}
+
+// Toffer - Function added only for readability reasons.
+void CvCity::setupBuilding(const BuildingTypes eBuilding, const bool bNewValue, const bool bFirst)
+{
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+
+	const int iChange = bNewValue ? 1 : -1;
+	GET_TEAM(getTeam()).changeBuildingCount(eBuilding, iChange);
+	GET_PLAYER(getOwner()).changeBuildingCount(eBuilding, iChange);
+
+	changeNumBuildings(iChange);
+	if (isLimitedWonder(eBuilding) && !kBuilding.isNoLimit())
+	{
+		if (isWorldWonder(eBuilding))
+		{
+			changeNumWorldWonders(iChange);
+		}
+		else if (isTeamWonder(eBuilding))
+		{
+			changeNumTeamWonders(iChange);
+		}
+		else if (isNationalWonder(eBuilding))
+		{
+			changeNumNationalWonders(iChange);
+		}
+	}
+	if (!bNewValue) // Building removal
+	{
+		if (!isWorldWonder(eBuilding)) // World wonders can only be built once, so the count is essential to keep track of.
+		{
+			GC.getGame().changeNumBuildings(eBuilding, iChange);
+		}
+	}
+	else // Building addition
+	{
+		GC.getGame().changeNumBuildings(eBuilding, iChange);
+
+		if (kBuilding.needStateReligionInCity() && kBuilding.getVoteSourceType() > -1)
+		{
+			const VoteSourceTypes eVoteSource = (VoteSourceTypes) kBuilding.getVoteSourceType();
+			if (eVoteSource > NO_VOTESOURCE && GC.getGame().getVoteSourceReligion(eVoteSource) == NO_RELIGION)
+			{
+				GC.getGame().setVoteSourceReligion(eVoteSource, GET_PLAYER(getOwner()).getStateReligion(), true);
+			}
+		}
+
+		if (kBuilding.isAllowsNukes())
+		{
+			GET_PLAYER(getOwner()).makeNukesValid(true);
+		}
+
+		if (bFirst) // Not city copy on owner change, actually built.
+		{
+			if (kBuilding.isCapital())
+			{
+				GET_PLAYER(getOwner()).setCapitalCity(this);
+			}
+
+			if (NO_CORPORATION != (CorporationTypes)kBuilding.getFoundsCorporation()
+			&& !GC.getGame().isCorporationFounded((CorporationTypes)kBuilding.getFoundsCorporation()))
+			{
+				setHeadquarters((CorporationTypes)kBuilding.getFoundsCorporation());
+			}
+
+			if (kBuilding.getFreeSpecialTech() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(kBuilding.getFreeSpecialTech()))
+			{
+				GET_TEAM(getTeam()).setHasTech(kBuilding.getFreeSpecialTech(), true, getOwner(), true, true);
+			}
+
+			if (GC.getGame().isFinalInitialized() && !gDLL->GetWorldBuilderMode())
+			{
+				if (kBuilding.isGoldenAge())
+				{
+					GET_PLAYER(getOwner()).changeGoldenAgeTurns(1 + GET_PLAYER(getOwner()).getGoldenAgeLength());
 				}
 
-				if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
+				if (kBuilding.getGlobalPopulationChange() != 0)
 				{
-					if (kBuilding.isGoldenAge())
-					{
-						GET_PLAYER(getOwner()).changeGoldenAgeTurns(1 + GET_PLAYER(getOwner()).getGoldenAgeLength());
-					}
-
-					if (kBuilding.getGlobalPopulationChange() != 0)
+					if (kBuilding.isTeamShare())
 					{
 						for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 						{
-							if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getTeam())
-							&& (iI == getOwner() || kBuilding.isTeamShare()))
+							if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getTeam()))
 							{
 								foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 								{
@@ -14859,115 +14888,90 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNew
 							}
 						}
 					}
-
-					for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
+					else
 					{
-						if (kBuilding.getReligionChange(iI) > 0)
+						foreach_(CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 						{
-							setHasReligion(((ReligionTypes)iI), true, true, true);
+							pLoopCity->setPopulation(std::max(1, pLoopCity->getPopulation() + kBuilding.getGlobalPopulationChange()));
+							// so subsequent cities don't starve with the extra citizen working nothing
+							pLoopCity->AI_updateAssignWork();
 						}
 					}
+				}
 
-					if (kBuilding.getFreeTechs() > 0)
+				for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
+				{
+					if (kBuilding.getReligionChange(iI) > 0)
 					{
-						if (isHuman())
-						{
-							GET_PLAYER(getOwner()).chooseTech(
-								kBuilding.getFreeTechs(),
-								gDLL->getText("TXT_KEY_MISC_COMPLETED_WONDER_CHOOSE_TECH", kBuilding.getTextKeyWide())
-							);
-						}
-						else
-						{
-							for (int iI = 0; iI < kBuilding.getFreeTechs(); iI++)
-							{
-								GET_PLAYER(getOwner()).AI_chooseFreeTech();
-							}
-						}
+						setHasReligion(((ReligionTypes)iI), true, true, true);
 					}
+				}
 
-					if (isWorldWonder(eIndex))
+				if (kBuilding.getFreeTechs() > 0)
+				{
+					if (isHuman())
 					{
-						GC.getGame().addReplayMessage(
-							REPLAY_MESSAGE_MAJOR_EVENT, getOwner(),
-							gDLL->getText("TXT_KEY_MISC_COMPLETES_WONDER", GET_PLAYER(getOwner()).getNameKey(), kBuilding.getTextKeyWide()),
-							getX(), getY(), GC.getCOLOR_BUILDING_TEXT()
+						GET_PLAYER(getOwner()).chooseTech(
+							kBuilding.getFreeTechs(),
+							gDLL->getText("TXT_KEY_MISC_COMPLETED_WONDER_CHOOSE_TECH", kBuilding.getTextKeyWide())
 						);
-						for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+					}
+					else
+					{
+						for (int iI = 0; iI < kBuilding.getFreeTechs(); iI++)
 						{
-							if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+							GET_PLAYER(getOwner()).AI_chooseFreeTech();
+						}
+					}
+				}
+
+				if (isWorldWonder(eBuilding))
+				{
+					GC.getGame().addReplayMessage(
+						REPLAY_MESSAGE_MAJOR_EVENT, getOwner(),
+						gDLL->getText("TXT_KEY_MISC_COMPLETES_WONDER", GET_PLAYER(getOwner()).getNameKey(), kBuilding.getTextKeyWide()),
+						getX(), getY(), GC.getCOLOR_BUILDING_TEXT()
+					);
+					for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+					{
+						if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+						{
+							if (isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 							{
-								if (isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
-								{
-									MEMORY_TRACK_EXEMPT();
-									AddDLLMessage(
-										(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
-										gDLL->getText("TXT_KEY_MISC_WONDER_COMPLETED", GET_PLAYER(getOwner()).getNameKey(), kBuilding.getTextKeyWide()),
-										"AS2D_WONDER_BUILDING_BUILD", MESSAGE_TYPE_MAJOR_EVENT,
-										kBuilding.getArtInfo()->getButton(), GC.getCOLOR_BUILDING_TEXT(), getX(), getY(), true, true
-									);
-								}
-								else
-								{
-									MEMORY_TRACK_EXEMPT();
-									AddDLLMessage(
-										(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
-										gDLL->getText("TXT_KEY_MISC_WONDER_COMPLETED_UNKNOWN", kBuilding.getTextKeyWide()),
-										"AS2D_WONDER_BUILDING_BUILD", MESSAGE_TYPE_MAJOR_EVENT,
-										kBuilding.getArtInfo()->getButton(), GC.getCOLOR_BUILDING_TEXT()
-									);
-								}
+								MEMORY_TRACK_EXEMPT();
+								AddDLLMessage(
+									(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
+									gDLL->getText("TXT_KEY_MISC_WONDER_COMPLETED", GET_PLAYER(getOwner()).getNameKey(), kBuilding.getTextKeyWide()),
+									"AS2D_WONDER_BUILDING_BUILD", MESSAGE_TYPE_MAJOR_EVENT,
+									kBuilding.getArtInfo()->getButton(), GC.getCOLOR_BUILDING_TEXT(), getX(), getY(), true, true
+								);
+							}
+							else
+							{
+								MEMORY_TRACK_EXEMPT();
+								AddDLLMessage(
+									(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
+									gDLL->getText("TXT_KEY_MISC_WONDER_COMPLETED_UNKNOWN", kBuilding.getTextKeyWide()),
+									"AS2D_WONDER_BUILDING_BUILD", MESSAGE_TYPE_MAJOR_EVENT,
+									kBuilding.getArtInfo()->getButton(), GC.getCOLOR_BUILDING_TEXT()
+								);
 							}
 						}
 					}
 				}
-				GC.getGame().incrementBuildingCreatedCount(eIndex);
-			}
-
-			if (kBuilding.isAllowsNukes())
-			{
-				GET_PLAYER(getOwner()).makeNukesValid(true);
 			}
 		}
-		else // Building removal
-		{
-			if (isDisabledBuilding(eIndex))
-			{
-				setDisabledBuilding(eIndex, false, false);
-			}
-			else
-			{
-				if (isReligiouslyDisabledBuilding(eIndex))
-				{
-					setReligiouslyDisabledBuilding(eIndex, false);
-				}
-				processBuilding(eIndex, -1, false, true);
-			}
-			m_paiBuildingOriginalOwner[eIndex] = NO_PLAYER;
-			m_paiBuildingOriginalTime[eIndex] = MIN_INT;
-
-			//Remove any extensions of this building
-			const int iExtensionOf = kBuilding.getExtendsBuilding();
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-			{
-				if (getNumRealBuilding((BuildingTypes)iI) > 0
-				// avoid infinite recursion
-				&& iI != eIndex && iExtensionOf != iI
-				&& GC.getBuildingInfo((BuildingTypes)iI).getExtendsBuilding() == eIndex)
-				{
-					setNumRealBuilding((BuildingTypes)iI, 0);
-				}
-			}
-		}
-
+	}
 #ifdef THE_GREAT_WALL
-		//great wall
-		if (bFirst && kBuilding.isAreaBorderObstacle())
+	//great wall
+	if (bFirst) // Not city copy on owner change, actually built or destroyed.
+	{
+		if (kBuilding.isAreaBorderObstacle())
 		{
 			int iCountExisting = 0;
 			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				if (eIndex != iI && GC.getBuildingInfo((BuildingTypes)iI).isAreaBorderObstacle())
+				if (eBuilding != iI && GC.getBuildingInfo((BuildingTypes)iI).isAreaBorderObstacle())
 				{
 					iCountExisting += getNumActiveBuilding((BuildingTypes)iI);
 				}
@@ -14984,8 +14988,8 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNew
 				processGreatWall(true, true);
 			}
 		}
-#endif // THE_GREAT_WALL
 	}
+#endif // THE_GREAT_WALL
 }
 
 bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
@@ -23038,7 +23042,7 @@ void CvCity::recalculateModifiers()
 			);
 			if (!bValid) // Forget it.
 			{
-				// @SAVEBREAK - Toffer - These should be changed to a vector of 3 element arrays at some point,
+				// @SAVEBREAK - Toffer - These should be changed to a map (eBuildingX : [ePlayer, iTime]) at some point.
 				m_paiNumRealBuilding[eBuildingX] = 0;
 				m_paiBuildingOriginalOwner[eBuildingX] = NO_PLAYER;
 				m_paiBuildingOriginalTime[eBuildingX] = MIN_INT;

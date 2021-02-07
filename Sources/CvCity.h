@@ -1220,9 +1220,10 @@ public:
 	void alterWorkingPlot(int iIndex);
 	void processWorkingPlot(int iPlot, int iChange, bool yieldsOnly = false);
 
-	int getNumRealBuilding(BuildingTypes eIndex) const;
-	void setNumRealBuilding(BuildingTypes eIndex, int iNewValue);
-	void setNumRealBuildingTimed(const BuildingTypes eIndex, const bool bNewValue, const bool bFirst, const PlayerTypes eOriginalOwner, const int iOriginalTime);
+	int getNumRealBuilding(const BuildingTypes eIndex) const;
+	void setNumRealBuilding(const BuildingTypes eIndex, const int iNewValue);
+	void setNumRealBuildingTimed(const BuildingTypes eBuilding, const bool bNewValue, const PlayerTypes eOriginalOwner, const int iOriginalTime, const bool bFirst = true);
+	void setupBuilding(const BuildingTypes eBuilding, const bool bNewValue, const bool bFirst);
 
 	bool isValidBuildingLocation(BuildingTypes eIndex) const;
 

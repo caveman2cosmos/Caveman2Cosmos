@@ -2657,7 +2657,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			{
 				iNum += paiNumRealBuilding[iI];
 			}
-			pNewCity->setNumRealBuildingTimed((BuildingTypes)iI, std::min(1, iNum) > 0, false, (PlayerTypes)paiBuildingOriginalOwner[iI], paiBuildingOriginalTime[iI]);
+			pNewCity->setNumRealBuildingTimed((BuildingTypes)iI, std::min(1, iNum) > 0, (PlayerTypes)paiBuildingOriginalOwner[iI], paiBuildingOriginalTime[iI], false);
 		}
 	}
 
