@@ -58,15 +58,12 @@ public:
 	virtual void		Read(uint8_t*) = 0;
 	virtual void		Read(int count, char values[]) = 0;
 	virtual void		Read(int count, uint8_t values[]) = 0;
-
 	virtual void		Read(bool *) = 0;
 	virtual void		Read(int count, bool values[]) = 0;
-
 	virtual void		Read(short	*s) = 0;
 	virtual void		Read(uint16_t* s)  = 0;
 	virtual void		Read(int count, short values[]) = 0;
 	virtual void		Read(int count, uint16_t values[]) = 0;
-
 	virtual void		Read(int* i) = 0;
 	virtual void		Read(unsigned int* i) = 0;
 	virtual void 		Read(int count, int values[]) = 0;

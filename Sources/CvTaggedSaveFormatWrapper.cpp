@@ -59,45 +59,36 @@ public:
 	
 	virtual char*		ReadString() { char* result = m_wrapped->ReadString(); m_lenRead += (result == NULL ? 0 : strlen(result)); return result; }
 	virtual wchar_t*	ReadWideString() { wchar_t* result = m_wrapped->ReadWideString(); m_lenRead += (result == NULL ? 0 : 2*wcslen(result)); return result; }
-
-	virtual void		Read(char *arg) { m_wrapped->Read(arg); m_lenRead++; }
-	virtual void		Read(byte *arg) { m_wrapped->Read(arg); m_lenRead++; }
-	virtual void		Read(int count, char values[]) { m_wrapped->Read(count, values); m_lenRead += count; }
-	virtual void		Read(int count, byte values[]) { m_wrapped->Read(count, values); m_lenRead += count; }
-
-	virtual void		Read(bool *arg) { m_wrapped->Read(arg); m_lenRead++; }
-	virtual void		Read(int count, bool values[]) { m_wrapped->Read(count, values); m_lenRead += count; }
-
-	virtual void		Read(short* s) { m_wrapped->Read(s); m_lenRead += 2; }
-	virtual void		Read(uint16_t* s) { m_wrapped->Read(s); m_lenRead += 2; }
-	virtual void		Read(int count, short values[]){ m_wrapped->Read(count, values); m_lenRead += count*2; }
-	virtual void		Read(int count, uint16_t values[]) { m_wrapped->Read(count, values); m_lenRead += count*2; }
-
-	virtual void		Read(int* i){ m_wrapped->Read(i); m_lenRead += 4; }
-	virtual void		Read(unsigned int* i) { m_wrapped->Read(i); m_lenRead += 4; }
-	virtual void 		Read(int count, int values[]) { m_wrapped->Read(count, values); m_lenRead += 4*count; }
+	virtual void		Read(char *arg) { m_wrapped->Read(arg); m_lenRead++;}
+	virtual void		Read(byte *arg) { m_wrapped->Read(arg); m_lenRead++;}
+	virtual void		Read(int count, char values[]){ m_wrapped->Read(count, values); m_lenRead += count;}
+	virtual void		Read(int count, byte values[]) { m_wrapped->Read(count, values); m_lenRead += count;}
+	virtual void		Read(bool *arg) { m_wrapped->Read(arg); m_lenRead++;}
+	virtual void		Read(int count, bool values[]) { m_wrapped->Read(count, values); m_lenRead += count;}
+	virtual void		Read(short* s) { m_wrapped->Read(s); m_lenRead += 2;}
+	virtual void		Read(uint16_t* s)  { m_wrapped->Read(s); m_lenRead += 2;}
+	virtual void		Read(int count, short values[]){ m_wrapped->Read(count, values); m_lenRead += count*2;}
+	virtual void		Read(int count, uint16_t values[]) { m_wrapped->Read(count, values); m_lenRead += count*2;}
+	virtual void		Read(int* i){ m_wrapped->Read(i); m_lenRead += 4;}
+	virtual void		Read(unsigned int* i) { m_wrapped->Read(i); m_lenRead += 4;}
+	virtual void 		Read(int count, int values[]) { m_wrapped->Read(count, values); m_lenRead += 4*count;}
 	virtual void 		Read(int count, unsigned int values[]) { m_wrapped->Read(count, values); m_lenRead += 4*count; }
 
-	virtual void		Read(long* l) { m_wrapped->Read(l); m_lenRead += 4; }
-	virtual void		Read(unsigned long* l)  { m_wrapped->Read(l); m_lenRead += 4; }
-	virtual void 		Read(int count, long values[]) { m_wrapped->Read(count, values); m_lenRead += 4*count; }
-	virtual void 		Read(int count, unsigned long values[])  { m_wrapped->Read(count, values); m_lenRead += 4*count; }
+	virtual void		Read(long* l) { m_wrapped->Read(l); m_lenRead += 4;}
+	virtual void		Read(unsigned long* l)  { m_wrapped->Read(l); m_lenRead += 4;}
+	virtual void 		Read(int count, long values[]) { m_wrapped->Read(count, values); m_lenRead += 4*count;}
+	virtual void 		Read(int count, unsigned long values[])  { m_wrapped->Read(count, values); m_lenRead += 4*count;}
 
-	virtual void		Read(int64_t* ll) { m_wrapped->Read(ll); m_lenRead += 4; }
-	virtual void		Read(uint64_t* ll) { m_wrapped->Read(ll); m_lenRead += 4; }
-	virtual void 		Read(int count, int64_t values[]) { m_wrapped->Read(count, values); m_lenRead += 4*count; }
-	virtual void 		Read(int count, uint64_t values[]) { m_wrapped->Read(count, values); m_lenRead += 4*count; }
-
-	virtual void		Read(float* value) { m_wrapped->Read(value); m_lenRead += sizeof(float); }
-	virtual void		Read(int count, float values[]) { m_wrapped->Read(count, values); m_lenRead += count*sizeof(float); }
+	virtual void		Read(float* value) { m_wrapped->Read(value); m_lenRead += sizeof(float);}
+	virtual void		Read(int count, float values[]) { m_wrapped->Read(count, values); m_lenRead += count*sizeof(float);}
 
 	virtual void		Read(double* value) { m_wrapped->Read(value); m_lenRead += sizeof(double);}
-	virtual void		Read(int count, double values[]) { m_wrapped->Read(count, values); m_lenRead += count*sizeof(double); }
+	virtual void		Read(int count, double values[]) { m_wrapped->Read(count, values); m_lenRead += count*sizeof(double);}
 
-	virtual void		Write(char value) { m_wrapped->Write(value); }
+	virtual void		Write( char value) { m_wrapped->Write(value); }
 	virtual void		Write(byte value) { m_wrapped->Write(value); }
-	virtual void		Write(int count, const char values[]) { m_wrapped->Write(count, values); }
-	virtual void		Write(int count, const byte values[]) { m_wrapped->Write(count, values); }
+	virtual void		Write(int count, const  char values[]) { m_wrapped->Write(count, values); }
+	virtual void		Write(int count, const  byte values[]) { m_wrapped->Write(count, values); }
 
 	virtual void		Write(bool value) { m_wrapped->Write(value); }
 	virtual void		Write(int count, const bool values[]) { m_wrapped->Write(count, values); }
@@ -116,11 +107,6 @@ public:
 	virtual void		Write(unsigned long  value) { m_wrapped->Write(value); }
 	virtual void 		Write(int count, const long values[]) { m_wrapped->Write(count, values); }
 	virtual void		Write(int count, const unsigned long values[]) { m_wrapped->Write(count, values); }
-
-	virtual void		Write(int64_t value) { m_wrapped->Write(value); }
-	virtual void		Write(uint64_t value) { m_wrapped->Write(value); }
-	virtual void 		Write(int count, const int64_t values[]) { m_wrapped->Write(count, values); }
-	virtual void		Write(int count, const uint64_t values[]) { m_wrapped->Write(count, values); }
 
 	virtual void		Write(float value) { m_wrapped->Write(value); }
 	virtual void		Write(int count, const float values[]) { m_wrapped->Write(count, values); }
@@ -325,7 +311,7 @@ typedef struct value_entry_long
 } value_entry_long;
 
 //	Value entry for type unsigned long
-typedef struct value_entry_unsigned_long {
+typedef struct value_entry_unsigned_long{
 	int id;
 	unsigned long value;
 } value_entry_unsigned_long;
@@ -344,38 +330,8 @@ typedef struct value_entry_unsigned_long_array
 {
 	int id;
 	int numLongs;
-	unsigned long value[VAR];
-} value_entry_unsigned_long_array;
-
-//	Value entry for type long long
-typedef struct value_entry_long_long
-{
-	int id;
-	int64_t value;
-} value_entry_long_long;
-
-//	Value entry for type unsigned long long
-typedef struct value_entry_unsigned_long_long {
-	int id;
-	int64_t value;
-} value_entry_unsigned_long_long;
-
-//	Value entry for type long long array
-typedef struct value_entry_long_long_array
-{
-	int id;
-	int numLongLongs;
-	int64_t value[VAR];
-} value_entry_long_long_array;
-#define VALUE_ENTRY_LONG_LONG_ARRAY_SIZE_FROM_NUM(numLongLongs)	((int)sizeof(value_entry_long_long_array)+((int)sizeof(int64_t))*(numLongLongs-VAR))
-
-//	Value entry for type unsigned long array
-typedef struct value_entry_unsigned_long_long_array
-{
-	int id;
-	int numLongLongs;
 	uint16_t value[VAR];
-} value_entry_unsigned_long_long_array;
+} value_entry_unsigned_long_array;
 
 //	Value entry for type float
 typedef struct value_entry_float
@@ -1948,7 +1904,7 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, long
 }
 
 void
-CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, unsigned long value) 
+CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, unsigned long  value) 
 {
 	PROFILE_FUNC();
 
@@ -2018,101 +1974,6 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 	else
 	{
 		m_stream->Write(count, values);
-	}
-}
-
-
-void CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int64_t value)
-{
-	PROFILE_FUNC();
-
-	FAssert(m_stream != NULL);
-
-	if ( m_useTaggedFormat )
-	{
-		value_entry_long_long entry;
-
-		DEBUG_TRACE3("Write long long %s: %d\n", name, value)
-
-		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_LONG_LONG, true);
-		entry.value = value;
-
-		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
-	}
-	else
-	{
-		m_stream->WriteString((const char*)value);
-	}
-}
-
-void CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, uint64_t value) 
-{
-	PROFILE_FUNC();
-
-	FAssert(m_stream != NULL);
-
-	if ( m_useTaggedFormat )
-	{
-		value_entry_unsigned_long_long entry;
-
-		DEBUG_TRACE3("Write unsigned long long %s: %lu\n", name, value)
-
-		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG, true);
-		entry.value = value;
-
-		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
-	}
-	else
-	{
-		m_stream->WriteString((const char*)value);
-	}
-}
-
-void CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int count, const int64_t values[])
-{
-	PROFILE_FUNC();
-
-	FAssert(m_stream != NULL);
-
-	if ( m_useTaggedFormat )
-	{
-		value_entry_long_long_array entry;
-
-		DEBUG_TRACE3("Write long long array %s, count=%d\n", name, count)
-
-		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_LONG_LONG_ARRAY, true);
-		entry.numLongLongs = count;
-
-		m_stream->Write(VALUE_ENTRY_LONG_LONG_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
-		m_stream->WriteString((const char*)values);
-	}
-	else
-	{
-		m_stream->Write((const char*)values);
-	}
-}
-
-void CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int count, const uint64_t values[])
-{
-	PROFILE_FUNC();
-
-	FAssert(m_stream != NULL);
-
-	if ( m_useTaggedFormat )
-	{
-		value_entry_unsigned_long_long_array entry;
-
-		DEBUG_TRACE3("Write unsigned long long array %s, count=%d\n", name, count)
-
-		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG_ARRAY, true);
-		entry.numLongLongs = count;
-
-		m_stream->Write(VALUE_ENTRY_LONG_LONG_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
-		m_stream->WriteString((const char*)values);
-	}
-	else
-	{
-		m_stream->WriteString((const char*)values);
 	}
 }
 
@@ -2978,7 +2839,6 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 	}
 }
 
-
 void
 CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, long* l)
 {
@@ -3089,113 +2949,6 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 }
 
 
-void CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int64_t* ll)
-{
-	PROFILE_FUNC();
-
-	FAssert(m_stream != NULL);
-
-	if ( m_useTaggedFormat )
-	{
-		DEBUG_TRACE2("Read long long, name %s\n", name)
-
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_LONG_LONG) )
-		{
-			m_stream->ReadString((char*)ll);
-		}
-	}
-	else
-	{
-		m_stream->ReadString((char*)ll);
-	}
-}
-
-
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint64_t* ll)
-{
-	PROFILE_FUNC();
-
-	FAssert(m_stream != NULL);
-
-	if ( m_useTaggedFormat )
-	{
-		DEBUG_TRACE2("Read unsigned long long, name %s\n", name)
-
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG) )
-		{
-			m_stream->ReadString((char*)ll);
-		}
-	}
-	else
-	{
-		m_stream->ReadString((char*)ll);
-	}
-}
-
-
-void CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, int64_t values[])
-{
-	PROFILE_FUNC();
-
-	FAssert(m_stream != NULL);
-
-	if ( m_useTaggedFormat )
-	{
-		DEBUG_TRACE3("Read long long array, name %s, count=%d\n", name, count)
-
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_LONG_LONG_ARRAY) )
-		{
-			int num;
-
-			m_stream->Read(&num);
-
-			if ( num != count )
-			{
-				//	Incompatible save
-				HandleIncompatibleSave(CvString::format("Save format is not compatible (%s)", name).c_str());
-			}
-			m_stream->ReadString((char*)values);
-		}
-	}
-	else
-	{
-		m_stream->ReadString((char*)values);
-	}
-}
-
-
-void CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, uint64_t values[])
-{
-	PROFILE_FUNC();
-
-	FAssert(m_stream != NULL);
-
-	if ( m_useTaggedFormat )
-	{
-		DEBUG_TRACE3("Read unsigned long long array, name %s, count=%d\n", name, count)
-
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG_ARRAY) )
-		{
-			int num;
-
-			m_stream->Read(&num);
-
-			if ( num != count )
-			{
-				//	Incompatible save
-				HandleIncompatibleSave(CvString::format("Save format is not compatible (%s)", name).c_str());
-			}
-			m_stream->ReadString((char*)values);
-		}
-	}
-	else
-	{
-		m_stream->ReadString((char*)values);
-	}
-}
-
-
 
 void
 CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, float* value)
@@ -3250,6 +3003,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 		m_stream->Read(count, values);
 	}
 }
+
 
 
 void
@@ -3944,20 +3698,6 @@ CvTaggedSaveFormatWrapper::SkipElement()
 	case SAVE_VALUE_TYPE_UNSIGNED_LONG_ARRAY:
 		m_stream->Read(&arraySize);
 		ConsumeBytes(sizeof(unsigned long)*arraySize);
-		break;
-	case SAVE_VALUE_TYPE_LONG_LONG:
-		ConsumeBytes(sizeof(value_entry_long_long)-sizeof(int));
-		break;
-	case SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG:
-		ConsumeBytes(sizeof(value_entry_unsigned_long_long)-sizeof(int));
-		break;
-	case SAVE_VALUE_TYPE_LONG_LONG_ARRAY:
-		m_stream->Read(&arraySize);
-		ConsumeBytes(sizeof(int64_t)*arraySize);
-		break;
-	case SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG_ARRAY:
-		m_stream->Read(&arraySize);
-		ConsumeBytes(sizeof(uint64_t)*arraySize);
 		break;
 	case SAVE_VALUE_TYPE_FLOAT:
 		ConsumeBytes(sizeof(value_entry_float)-sizeof(int));

@@ -8,12 +8,12 @@
 
 void FDataIOStream::OpenRead(CvString szFile)
 {
-	stream.open(szFile.c_str(), std::ios::binary | std::ios::in);
+	stream.open(szFile.c_str(),std::ios::binary | std::ios::in);
 }
 
 void FDataIOStream::OpenWrite(CvString szFile)
 {
-	stream.open(szFile.c_str(), std::ios::binary | std::ios::out | std::ios::trunc);
+	stream.open(szFile.c_str(),std::ios::binary | std::ios::out | std::ios::trunc);
 	FAssert(stream.good());
 }
 
