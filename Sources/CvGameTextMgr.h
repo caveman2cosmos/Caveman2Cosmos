@@ -47,8 +47,6 @@ public:
 	void setYearStr(CvWString& szString, int iGameTurn, bool bSave, CalendarTypes eCalendar, int iStartYear, GameSpeedTypes eSpeed);
 	void setDateStr(CvWString& szString, int iGameTurn, bool bSave, CalendarTypes eCalendar, int iStartYear, GameSpeedTypes eSpeed);
 	void setInterfaceTime(CvWString& szString, PlayerTypes ePlayer);
-	void setGoldStr(CvWString& szString, PlayerTypes ePlayer);
-	void setResearchStr(CvWString& szString, PlayerTypes ePlayer);
 	void setOOSSeeds(CvWString& szString, PlayerTypes ePlayer);
 	void setNetStats(CvWString& szString, PlayerTypes ePlayer);
 	DllExport void setMinimizePopupHelp(CvWString& szString, const CvPopupInfo & info);

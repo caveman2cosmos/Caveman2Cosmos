@@ -45,20 +45,6 @@ std::wstring CyGameTextMgr::getInterfaceTimeStr(int /*PlayerTypes*/ iPlayer)
 	return szBuffer;
 }
 
-std::wstring CyGameTextMgr::getGoldStr(int /*PlayerTypes*/ iPlayer)
-{
-	CvWString szBuffer;
-	GAMETEXT.setGoldStr(szBuffer, ((PlayerTypes)iPlayer));
-	return szBuffer;
-}
-
-std::wstring CyGameTextMgr::getResearchStr(int /*PlayerTypes*/ iPlayer)
-{
-	CvWString szBuffer;
-	GAMETEXT.setResearchStr(szBuffer, ((PlayerTypes)iPlayer));
-	return szBuffer;
-}
-
 std::wstring CyGameTextMgr::getOOSSeeds(int /*PlayerTypes*/ iPlayer)
 {
 	CvWString szBuffer;

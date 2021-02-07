@@ -169,7 +169,6 @@ public:
 	int getResearchProgress(int /*TechTypes*/ eIndex) const;
 	void setResearchProgress(int /*TechTypes*/ eIndex, int iNewValue, int /*PlayerTypes*/ ePlayer);
 	void changeResearchProgress(int /*TechTypes*/ eIndex, int iChange, int /*PlayerTypes*/ ePlayer);
-	int getTechCount(int /*TechTypes*/ eIndex) const;
 
 	bool isTerrainTrade(int /*TerrainTypes*/ eIndex) const;
 	bool isRiverTrade() const;

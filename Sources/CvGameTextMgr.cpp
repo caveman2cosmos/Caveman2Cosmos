@@ -338,51 +338,6 @@ void CvGameTextMgr::setInterfaceTime(CvWString& szString, PlayerTypes ePlayer)
 }
 
 
-void CvGameTextMgr::setGoldStr(CvWString& szString, PlayerTypes ePlayer)
-{
-	if (GET_PLAYER(ePlayer).getGold() < 0)
-	{
-		szString.Format(L"%c: " SETCOLR L"%d" SETCOLR, GC.getCommerceInfo(COMMERCE_GOLD).getChar(), TEXT_COLOR("COLOR_NEGATIVE_TEXT"), GET_PLAYER(ePlayer).getGold());
-	}
-	else
-	{
-		szString.Format(L"%c: %d", GC.getCommerceInfo(COMMERCE_GOLD).getChar(), GET_PLAYER(ePlayer).getGold());
-	}
-
-	const int iGoldRate = GET_PLAYER(ePlayer).calculateGoldRate();
-	if (iGoldRate < 0)
-	{
-		szString += gDLL->getText("TXT_KEY_MISC_NEG_GOLD_PER_TURN", iGoldRate);
-	}
-	else if (iGoldRate > 0)
-	{
-		szString += gDLL->getText("TXT_KEY_MISC_POS_GOLD_PER_TURN", iGoldRate);
-	}
-
-	if (GET_PLAYER(ePlayer).isStrike())
-	{
-		szString += gDLL->getText("TXT_KEY_MISC_STRIKE");
-	}
-}
-
-
-void CvGameTextMgr::setResearchStr(CvWString& szString, PlayerTypes ePlayer)
-{
-	CvWString szTempBuffer;
-
-	szString = gDLL->getText("TXT_KEY_MISC_RESEARCH_STRING", GC.getTechInfo(GET_PLAYER(ePlayer).getCurrentResearch()).getTextKeyWide());
-
-	if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getTechCount(GET_PLAYER(ePlayer).getCurrentResearch()) > 0)
-	{
-		szTempBuffer.Format(L" %d", (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getTechCount(GET_PLAYER(ePlayer).getCurrentResearch()) + 1));
-		szString+=szTempBuffer;
-	}
-
-	szTempBuffer.Format(L" (%d)", GET_PLAYER(ePlayer).getResearchTurnsLeft(GET_PLAYER(ePlayer).getCurrentResearch(), true));
-	szString+=szTempBuffer;
-}
-
-
 void CvGameTextMgr::setOOSSeeds(CvWString& szString, PlayerTypes ePlayer)
 {
 	if (GET_PLAYER(ePlayer).isHuman())
