@@ -3980,7 +3980,7 @@ void CvUnitAI::AI_attackCityMove()
 
 			if (bAnyWarPlan)
 			{
-				CvCity* pTargetCity = area()->getTargetCity(getOwner());
+				const CvCity* pTargetCity = area()->getTargetCity(getOwner());
 
 				if (pTargetCity != NULL && AI_solveBlockageProblem(pTargetCity->plot(), !GET_TEAM(getTeam()).isAtWar()))
 				{
@@ -3991,11 +3991,11 @@ void CvUnitAI::AI_attackCityMove()
 	}
 	else
 	{
-		int iTargetCount = GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(this, MISSIONAI_GROUP);
+		const int iTargetCount = GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(this, MISSIONAI_GROUP);
 		if( ((iTargetCount * 4) > getGroup()->getNumUnits()) || ((getGroup()->getNumUnits() + iTargetCount) >= (bHuntBarbs ? 3 : AI_stackOfDoomExtra())) )
 		{
 			MissionAITypes eMissionAIType = MISSIONAI_GROUP;
-			int iJoiners = GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(this, &eMissionAIType, 1, getGroup(), 2);
+			const int iJoiners = GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(this, &eMissionAIType, 1, getGroup(), 2);
 
 			if( (iJoiners*6) > getGroup()->getNumUnits() )
 			{
@@ -15076,6 +15076,7 @@ bool CvUnitAI::AI_join(int iMaxCount)
 	return false;
 }
 
+/*
 CvUnitAI* CvUnitAI::AI_cityConstructionTargeted(const CvCity* pCity, BuildingTypes eBuilding, const CvSelectionGroup* omitGroup) const
 {
 	PROFILE_FUNC();
@@ -15101,6 +15102,7 @@ CvUnitAI* CvUnitAI::AI_cityConstructionTargeted(const CvCity* pCity, BuildingTyp
 
 	return NULL;
 }
+*/
 
 //	Should we disband this unit?
 bool CvUnitAI::AI_scrapSubdued()
@@ -23438,7 +23440,7 @@ void CvUnitAI::contractFulfilled()
 	GET_PLAYER(getOwner()).getContractBroker().removeUnit(this);
 }
 
-bool CvUnitAI::AI_workerNeedsDefender(CvPlot* pPlot) const
+bool CvUnitAI::AI_workerNeedsDefender(const CvPlot* pPlot) const
 {
 	PROFILE_FUNC();
 
@@ -23448,7 +23450,7 @@ bool CvUnitAI::AI_workerNeedsDefender(CvPlot* pPlot) const
 	}
 
 	//	Check danger level both where we are now and where we are headed
-	int	iDanger = std::max(pPlot->getDangerCount(getOwner()), plot()->getDangerCount(getOwner()));
+	const int iDanger = std::max(pPlot->getDangerCount(getOwner()), plot()->getDangerCount(getOwner()));
 
 	//	Need to adjust this threshold based on experience with AI testing - 25 is an initial good guess
 	if ( iDanger > 20 )
@@ -26177,11 +26179,6 @@ bool CvUnitAI::AI_reconSpy(int iRange)
 	return false;
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  10/25/09							   jdog5000		*/
-/*																							   */
-/* Espionage AI																				  */
-/************************************************************************************************/
 /// \brief Spy decision on whether to cause revolt in besieged city
 ///
 /// Have spy breakdown city defenses if we have troops in position to capture city this turn.
@@ -26249,18 +26246,18 @@ bool CvUnitAI::AI_revoltCitySpy()
 	return false;
 }
 
-int CvUnitAI::AI_getEspionageTargetValue(CvPlot* pPlot, int iMaxPath, int iMinUsefulValue)
+int CvUnitAI::AI_getEspionageTargetValue(const CvPlot* pPlot, int iMaxPath, int iMinUsefulValue) const
 {
 	PROFILE_FUNC();
 
-	CvTeamAI& kTeam = GET_TEAM(getTeam());
+	const CvTeamAI& kTeam = GET_TEAM(getTeam());
 	int iValue = 0;
 
 	if (pPlot->isOwned() && pPlot->getTeam() != getTeam() && !GET_TEAM(getTeam()).isVassal(pPlot->getTeam()))
 	{
 		if (AI_plotValid(pPlot))
 		{
-			CvCity* pCity = pPlot->getPlotCity();
+			const CvCity* pCity = pPlot->getPlotCity();
 			if (pCity != NULL)
 			{
 				iValue += pCity->getPopulation();
@@ -26268,7 +26265,7 @@ int CvUnitAI::AI_getEspionageTargetValue(CvPlot* pPlot, int iMaxPath, int iMinUs
 
 				// BBAI TODO: Should go to cities where missions will be cheaper ...
 
-				int iRand = GC.getGame().getSorenRandNum(6, "AI spy choose city");
+				const int iRand = GC.getGame().getSorenRandNum(6, "AI spy choose city");
 				iValue += iRand * iRand;
 
 				if( area()->getTargetCity(getOwner()) == pCity )
@@ -26285,7 +26282,7 @@ int CvUnitAI::AI_getEspionageTargetValue(CvPlot* pPlot, int iMaxPath, int iMinUs
 			}
 			else
 			{
-				BonusTypes eBonus = pPlot->getNonObsoleteBonusType(getTeam());
+				const BonusTypes eBonus = pPlot->getNonObsoleteBonusType(getTeam());
 				if (eBonus != NO_BONUS)
 				{
 					iValue += GET_PLAYER(pPlot->getOwner()).AI_baseBonusVal(eBonus) - 10;
@@ -26337,11 +26334,11 @@ bool CvUnitAI::AI_cityOffenseSpy(const int iMaxPath, const CvCity* pSkipCity)
 	const int iTreshold = bValid ? 1 : (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 51 : 1);
 
 	CvReachablePlotSet plotSet(getGroup(), 0, MAX_INT);
-	CvPlot* pBestPlot = NULL;
+	const CvPlot* pBestPlot = NULL;
 	int iBestValue = 0;
 	for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 	{
-		CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
+		const CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
 
 		if (playerX.isAliveAndTeam(eTeam, false) && !team.isVassal(playerX.getTeam()))
 		{
@@ -26395,12 +26392,11 @@ bool CvUnitAI::AI_bonusOffenseSpy(int iRange)
 	PROFILE_FUNC();
 
 	const CvPlot* pBestPlot = NULL;
-
 	int iBestValue = 10;
 
 	const int iSearchRange = AI_searchRange(iRange);
 
-	foreach_(CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
+	foreach_(const CvPlot* pLoopPlot, CvPlot::rect(getX(), getY(), iSearchRange, iSearchRange))
 	{
 		if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
 		{
@@ -26410,7 +26406,7 @@ bool CvUnitAI::AI_bonusOffenseSpy(int iRange)
 				if (GET_PLAYER(getOwner()).AI_getAttitudeWeight(pLoopPlot->getOwner()) < (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 51 : 1)
 					|| GET_TEAM(getTeam()).AI_getWarPlan(pLoopPlot->getTeam()) != NO_WARPLAN )
 				{
-					int iValue = AI_getEspionageTargetValue(pLoopPlot, iRange, iBestValue);
+					const int iValue = AI_getEspionageTargetValue(pLoopPlot, iRange, iBestValue);
 					if (iValue > iBestValue)
 					{
 						iBestValue = iValue;
@@ -26428,21 +26424,15 @@ bool CvUnitAI::AI_bonusOffenseSpy(int iRange)
 			getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_ATTACK_SPY);
 			return true;
 		}
-		else
+		else if ( getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0, false, false, MISSIONAI_ATTACK_SPY))
 		{
-			if ( getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0, false, false, MISSIONAI_ATTACK_SPY))
-			{
-				getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_ATTACK_SPY);
-				return true;
-			}
+			getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_ATTACK_SPY);
+			return true;
 		}
 	}
 
 	return false;
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 
 //Returns true if the spy performs espionage.
 bool CvUnitAI::AI_espionageSpy()
@@ -27643,7 +27633,7 @@ bool CvUnitAI::AI_choke(int iRange, bool bDefensive)
 }
 
 
-bool CvUnitAI::AI_solveBlockageProblem(CvPlot* pDestPlot, bool bDeclareWar)
+bool CvUnitAI::AI_solveBlockageProblem(const CvPlot* pDestPlot, bool bDeclareWar)
 {
 	PROFILE_FUNC();
 
@@ -27652,23 +27642,21 @@ bool CvUnitAI::AI_solveBlockageProblem(CvPlot* pDestPlot, bool bDeclareWar)
 
 	if (pDestPlot != NULL)
 	{
-		FAStarNode* pStepNode;
-
-		CvPlot* pSourcePlot = plot();
+		const CvPlot* pSourcePlot = plot();
 
 		if (gDLL->getFAStarIFace()->GeneratePath(&GC.getStepFinder(), pSourcePlot->getX(), pSourcePlot->getY(), pDestPlot->getX(), pDestPlot->getY(), false, -1, true))
 		{
-			pStepNode = gDLL->getFAStarIFace()->GetLastNode(&GC.getStepFinder());
+			const FAStarNode* pStepNode = gDLL->getFAStarIFace()->GetLastNode(&GC.getStepFinder());
 
 			while (pStepNode != NULL)
 			{
 				int iPathTurns;
-				CvPlot* pStepPlot = GC.getMap().plotSorenINLINE(pStepNode->m_iX, pStepNode->m_iY);
+				const CvPlot* pStepPlot = GC.getMap().plotSorenINLINE(pStepNode->m_iX, pStepNode->m_iY);
 				if (canMoveOrAttackInto(pStepPlot) && generatePath(pStepPlot, 0, false, &iPathTurns))
 				{
 					if (bDeclareWar && pStepNode->m_pPrev != NULL)
 					{
-						CvPlot* pPlot = GC.getMap().plotSorenINLINE(pStepNode->m_pPrev->m_iX, pStepNode->m_pPrev->m_iY);
+						const CvPlot* pPlot = GC.getMap().plotSorenINLINE(pStepNode->m_pPrev->m_iX, pStepNode->m_pPrev->m_iY);
 						if (pPlot->getTeam() != NO_TEAM)
 						{
 							if (!getGroup()->canMoveIntoWithWar(pPlot, true, true))
@@ -27679,7 +27667,7 @@ bool CvUnitAI::AI_solveBlockageProblem(CvPlot* pDestPlot, bool bDeclareWar)
 									if (kTeam.canDeclareWar(pPlot->getTeam()))
 									{
 										WarPlanTypes eWarPlan = WARPLAN_LIMITED;
-										WarPlanTypes eExistingWarPlan = kTeam.AI_getWarPlan(pDestPlot->getTeam());
+										const WarPlanTypes eExistingWarPlan = kTeam.AI_getWarPlan(pDestPlot->getTeam());
 										if (eExistingWarPlan != NO_WARPLAN)
 										{
 											if ((eExistingWarPlan == WARPLAN_TOTAL) || (eExistingWarPlan == WARPLAN_PREPARING_TOTAL))
@@ -27693,19 +27681,7 @@ bool CvUnitAI::AI_solveBlockageProblem(CvPlot* pDestPlot, bool bDeclareWar)
 											}
 										}
 										kTeam.AI_setWarPlan(pPlot->getTeam(), eWarPlan, true);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  03/29/10								jdog5000	  */
-/*																							  */
-/* War tactics AI																			   */
-/************************************************************************************************/
-/* original bts code
-										return (AI_targetCity());
-*/
 										return (AI_goToTargetCity(MOVE_AVOID_ENEMY_WEIGHT_2));
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
-
 									}
 								}
 							}
@@ -27714,7 +27690,7 @@ bool CvUnitAI::AI_solveBlockageProblem(CvPlot* pDestPlot, bool bDeclareWar)
 					if (pStepPlot->isVisible(getTeam(),false) && pStepPlot->isVisibleEnemyUnit(this))
 					{
 						FAssert(canAttack());
-						CvPlot* pBestPlot = pStepPlot;
+						const CvPlot* pBestPlot = pStepPlot;
 						//To prevent puppeteering attempt to barge through
 						//if quite close
 						if (iPathTurns > 3)
@@ -27734,16 +27710,16 @@ bool CvUnitAI::AI_solveBlockageProblem(CvPlot* pDestPlot, bool bDeclareWar)
 	return false;
 }
 
-int CvUnitAI::AI_calculatePlotWorkersNeeded(CvPlot* pPlot, BuildTypes eBuild)
+int CvUnitAI::AI_calculatePlotWorkersNeeded(const CvPlot* pPlot, BuildTypes eBuild) const
 {
-	int iBuildTime = pPlot->getBuildTime(eBuild) - pPlot->getBuildProgress(eBuild);
-	int iWorkRate = workRate(true);
+	const int iWorkRate = workRate(true);
 
 	if (iWorkRate <= 0)
 	{
 		FAssert(false);
 		return 1;
 	}
+	const int iBuildTime = pPlot->getBuildTime(eBuild) - pPlot->getBuildProgress(eBuild);
 	int iTurns = iBuildTime / iWorkRate;
 
 	if (iBuildTime > (iTurns * iWorkRate))
@@ -27753,19 +27729,10 @@ int CvUnitAI::AI_calculatePlotWorkersNeeded(CvPlot* pPlot, BuildTypes eBuild)
 
 	int iNeeded = std::max(1, (iTurns + 2) / 3);
 
-	/********************************************************************************/
-	/* 	BETTER_BTS_AI_MOD						7/31/08				jdog5000	*/
-	/* 																			*/
-	/* 	Bugfix																	*/
-	/********************************************************************************/
-	//if (pPlot->getBonusType() != NO_BONUS)
 	if (pPlot->getNonObsoleteBonusType(getTeam()) != NO_BONUS)
 	{
 		iNeeded *= 2;
 	}
-	/********************************************************************************/
-	/* 	BETTER_BTS_AI_MOD						END								*/
-	/********************************************************************************/
 
 	return iNeeded;
 
@@ -30602,6 +30569,7 @@ int	CvUnitAI::AI_genericUnitValueTimes100(UnitValueFlags eFlags) const
 	return m_iGenericValue;
 }
 
+/*
 bool CvUnitAI::AI_approximatePath(CvPlot* pToPlot, int iFlags, int* piPathTurns) const
 {
 	PROFILE_FUNC();
@@ -30681,6 +30649,7 @@ bool CvUnitAI::AI_approximatePath(CvPlot* pToPlot, int iFlags, int* piPathTurns)
 
 	return true;
 }
+*/
 
 bool CvUnitAI::AI_isCityGarrison(const CvCity* pCity) const
 {

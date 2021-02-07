@@ -401,23 +401,22 @@ protected:
 
 	bool AI_choke(int iRange = 1, bool bDefensive = false);
 
-	bool AI_solveBlockageProblem(CvPlot* pDestPlot, bool bDeclareWar);
+	bool AI_solveBlockageProblem(const CvPlot* pDestPlot, bool bDeclareWar);
 
-	int AI_calculatePlotWorkersNeeded(CvPlot* pPlot, BuildTypes eBuild);
+	int AI_calculatePlotWorkersNeeded(const CvPlot* pPlot, BuildTypes eBuild) const;
 
-	int AI_getEspionageTargetValue(CvPlot* pPlot, int iMaxPath, int iMinUsefulValue);
+	int AI_getEspionageTargetValue(const CvPlot* pPlot, int iMaxPath, int iMinUsefulValue) const;
 
 	bool AI_canGroupWithAIType(UnitAITypes eUnitAI) const;
 	bool AI_allowGroup(const CvUnit* pUnit, UnitAITypes eUnitAI) const;
 
-	bool AI_workerNeedsDefender(CvPlot* pPlot) const;
+	bool AI_workerNeedsDefender(const CvPlot* pPlot) const;
 	bool AI_workerReleaseDefenderIfNotNeeded() const;
 	bool processContracts(int iMinPriority = 0);
 	void contractFulfilled();
 
-
-	bool AI_approximatePath(CvPlot* pToPlot, int iFlags, int* piPathTurns) const;
-	CvUnitAI* AI_cityConstructionTargeted(const CvCity* pCity, BuildingTypes eBuilding, const CvSelectionGroup* omitGroup) const;
+	//bool AI_approximatePath(CvPlot* pToPlot, int iFlags, int* piPathTurns) const;
+	//CvUnitAI* AI_cityConstructionTargeted(const CvCity* pCity, BuildingTypes eBuilding, const CvSelectionGroup* omitGroup) const;
 
 	// added so under cheat mode we can call protected functions for testing
 	friend class CvGameTextMgr;
