@@ -7126,7 +7126,7 @@ void CvTeam::setTechExtraBuildingHappiness(BuildingTypes eIndex, int iNewValue)
 				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)i).cities())
 				{
 					const int iNumBuildings = pLoopCity->getNumActiveBuilding(eIndex);
-					if (iNumBuildings > 0 && !pLoopCity->isReligiouslyDisabledBuilding(eIndex))
+					if (iNumBuildings > 0 && !pLoopCity->isReligiouslyLimitedBuilding(eIndex))
 					{
 						// Remove the old value
 						if (iOldValue > 0)
@@ -7168,7 +7168,7 @@ void CvTeam::setTechExtraBuildingHealth(BuildingTypes eIndex, int iNewValue)
 				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)i).cities())
 				{
 					const int iNumBuildings = pLoopCity->getNumActiveBuilding(eIndex);
-					if (iNumBuildings > 0 && !pLoopCity->isReligiouslyDisabledBuilding(eIndex))
+					if (iNumBuildings > 0 && !pLoopCity->isReligiouslyLimitedBuilding(eIndex))
 					{
 						// Remove the old value
 						if (iOldValue > 0)
@@ -7700,7 +7700,7 @@ void CvTeam::changeBuildingCommerceChange(BuildingTypes eIndex1, CommerceTypes e
 				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
 					if (pLoopCity->getNumActiveBuilding(eIndex1) > 0
-					&& !pLoopCity->isReligiouslyDisabledBuilding(eIndex1))
+					&& !pLoopCity->isReligiouslyLimitedBuilding(eIndex1))
 					{
 						pLoopCity->updateCommerceRateByBuilding(
 							eIndex1, eIndex2,
@@ -7736,7 +7736,7 @@ void CvTeam::changeBuildingYieldChange(BuildingTypes eIndex1, YieldTypes eIndex2
 			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
 			{
 				algo::for_each(GET_PLAYER((PlayerTypes)iI).cities()
-					| filtered(CvCity::fn::getNumActiveBuilding(eIndex1) > 0 && !CvCity::fn::isReligiouslyDisabledBuilding(eIndex1)),
+					| filtered(CvCity::fn::getNumActiveBuilding(eIndex1) > 0 && !CvCity::fn::isReligiouslyLimitedBuilding(eIndex1)),
 					CvCity::fn::changeBaseYieldRate(eIndex2, getBuildingYieldChange(eIndex1, eIndex2))
 				);
 			}
@@ -7802,7 +7802,7 @@ void CvTeam::changeBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes
 				{
 					if (pLoopCity->getNumActiveBuilding(eIndex1) > 0)
 					{
-						if (!pLoopCity->isReligiouslyDisabledBuilding(eIndex1))
+						if (!pLoopCity->isReligiouslyLimitedBuilding(eIndex1))
 						{
 							const int iExistingValue = pLoopCity->getBuildingCommerceModifier(eIndex1, eIndex2);
 							// set the new
@@ -7838,7 +7838,7 @@ void CvTeam::changeBuildingYieldModifier(BuildingTypes eIndex1, YieldTypes eInde
 			{
 				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
-					if (pLoopCity->getNumActiveBuilding(eIndex1) > 0 && !pLoopCity->isReligiouslyDisabledBuilding(eIndex1))
+					if (pLoopCity->getNumActiveBuilding(eIndex1) > 0 && !pLoopCity->isReligiouslyLimitedBuilding(eIndex1))
 					{
 						const int iExistingValue = pLoopCity->getBuildingYieldModifier(eIndex1, eIndex2);
 						// set the new

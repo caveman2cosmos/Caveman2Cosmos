@@ -21340,7 +21340,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 			szBuffer.append(CvWString::format(L"%s", GC.getBuildingInfo(eBuilding).getDescription()));
 			return;
 		}
-		else if (pCity->isReligiouslyDisabledBuilding(eBuilding))
+		else if (pCity->isReligiouslyLimitedBuilding(eBuilding))
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_BUILDING_DISABLED_RELIGIOUSLY"));
 			bRelDisabled = !bCivilopediaText;
@@ -33071,7 +33071,7 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		{
 			const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)i);
 			//Team Project (5)
-			if (!city.isReligiouslyDisabledBuilding((BuildingTypes)i))
+			if (!city.isReligiouslyLimitedBuilding((BuildingTypes)i))
 			{
 				iBuildingFood += iCount * (kBuilding.getYieldChange(YIELD_FOOD) + ((kBuilding.getYieldPerPopChange(YIELD_FOOD)*city.getPopulation())/100) + city.getBuildingYieldChange((BuildingTypes)i, YIELD_FOOD) + GET_TEAM(city.getTeam()).getBuildingYieldModifier((BuildingTypes)i, YIELD_FOOD));
 			}
@@ -34856,7 +34856,7 @@ void CvGameTextMgr::buildCityBillboardIconString( CvWStringBuffer& szBuffer, CvC
 				if (pCity->getNumActiveBuilding((BuildingTypes)iBuilding) > 0)
 				{
 					//Team Project (5)
-					if (!pCity->isReligiouslyDisabledBuilding((BuildingTypes)iBuilding))
+					if (!pCity->isReligiouslyLimitedBuilding((BuildingTypes)iBuilding))
 					{
 						if (GC.getBuildingInfo((BuildingTypes)iBuilding).getAirlift() > 0)
 						{
@@ -35977,7 +35977,7 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 			// getTradeRouteModifier()
 			for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 			{
-				if (pCity->getNumActiveBuilding((BuildingTypes)iBuilding) > 0 && !pCity->isReligiouslyDisabledBuilding((BuildingTypes)iBuilding))
+				if (pCity->getNumActiveBuilding((BuildingTypes)iBuilding) > 0 && !pCity->isReligiouslyLimitedBuilding((BuildingTypes)iBuilding))
 				{
 					iValue = pCity->getNumActiveBuilding((BuildingTypes)iBuilding) * GC.getBuildingInfo((BuildingTypes)iBuilding).getTradeRouteModifier();
 					if (0 != iValue)
@@ -38283,7 +38283,7 @@ void CvGameTextMgr::setEmploymentHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		if (city.getNumActiveBuilding((BuildingTypes)iI) > 0)
 		{
 			//Team Project (5)
-			if (!city.isReligiouslyDisabledBuilding((BuildingTypes)iI))
+			if (!city.isReligiouslyLimitedBuilding((BuildingTypes)iI))
 			{
 				if (GC.getBuildingInfo((BuildingTypes)iI).getNumPopulationEmployed() > 0)
 				{

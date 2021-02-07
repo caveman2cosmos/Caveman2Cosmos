@@ -1220,10 +1220,11 @@ public:
 	void alterWorkingPlot(int iIndex);
 	void processWorkingPlot(int iPlot, int iChange, bool yieldsOnly = false);
 
+	bool hasFullyActiveBuilding(const BuildingTypes eIndex) const;
 	int getNumRealBuilding(const BuildingTypes eIndex) const;
 	void setNumRealBuilding(const BuildingTypes eIndex, const int iNewValue);
 	void setNumRealBuildingTimed(const BuildingTypes eBuilding, const bool bNewValue, const PlayerTypes eOriginalOwner, const int iOriginalTime, const bool bFirst = true);
-	void setupBuilding(const BuildingTypes eBuilding, const bool bNewValue, const bool bFirst);
+	void setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes eBuilding, const bool bNewValue, const bool bFirst);
 
 	bool isValidBuildingLocation(BuildingTypes eIndex) const;
 
@@ -1423,8 +1424,8 @@ public:
 	void setDisabledBuilding(const BuildingTypes eIndex, const bool bNewValue, const bool bProcess = true);
 	bool isDisabledBuilding(const short iIndex) const;
 
-	void setReligiouslyDisabledBuilding(BuildingTypes eIndex, bool bNewValue);
-	bool isReligiouslyDisabledBuilding(BuildingTypes eIndex) const;
+	void setReligiouslyLimitedBuilding(BuildingTypes eIndex, bool bNewValue);
+	bool isReligiouslyLimitedBuilding(BuildingTypes eIndex) const;
 
 	bool isZoneOfControl() const;
 
@@ -1754,7 +1755,6 @@ protected:
 	int m_iGoldFromLostProduction;
 	int m_iCiv;
 	float m_fPopulationgrowthratepercentageLog;
-#define INVALID_GROWTH_PERCENT_LOG ((float)-10000.0)	//	Used to detect old format saves when loading
 
 	bool m_bBuiltFoodProducedUnit;
 	bool m_bResetTechs;
@@ -2290,7 +2290,7 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, const CvPlot*, plot);
 
-		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isReligiouslyDisabledBuilding, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isReligiouslyLimitedBuilding, BuildingTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, canConstruct, BuildingTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, canTrain, UnitTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isHasReligion, ReligionTypes);

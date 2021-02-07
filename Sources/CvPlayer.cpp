@@ -19867,8 +19867,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iForeignTradeRouteModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTaxRateUnhappiness);
 
-		m_fPopulationgrowthratepercentageLog = INVALID_GROWTH_PERCENT_LOG;
-
 		WRAPPER_READ(wrapper, "CvPlayer", &m_fPopulationgrowthratepercentageLog);
 
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iReligionSpreadRate);
@@ -27848,8 +27846,6 @@ void CvPlayer::recalculatePopulationgrowthratepercentage()
 
 	m_fPopulationgrowthratepercentageLog = 0;
 
-	//	Game has been restored from an old save format so we have to calculate
-	//	from first principles
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
 		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
@@ -27868,41 +27864,27 @@ void CvPlayer::recalculatePopulationgrowthratepercentage()
 
 	for(int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 	{
-		CivicTypes eCivic = getCivics((CivicOptionTypes)iI);
+		const CivicTypes eCivic = getCivics((CivicOptionTypes)iI);
 
-		if ( eCivic != NO_CIVIC )
+		if (eCivic != NO_CIVIC && GC.getCivicInfo(eCivic).getPopulationgrowthratepercentage() != 0)
 		{
-			if ( GC.getCivicInfo(eCivic).getPopulationgrowthratepercentage() != 0 )
-			{
-				changePopulationgrowthratepercentage(GC.getCivicInfo(eCivic).getPopulationgrowthratepercentage(),true);
-			}
+			changePopulationgrowthratepercentage(GC.getCivicInfo(eCivic).getPopulationgrowthratepercentage(),true);
 		}
 	}
 
-	//Team Project (6)
 	for(int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
-		TraitTypes eTrait = ((TraitTypes)iI);
-		if (hasTrait(eTrait))
+		const TraitTypes eTrait = static_cast<TraitTypes>(iI);
+		if (hasTrait(eTrait) && GC.getTraitInfo(eTrait).getGlobalPopulationgrowthratepercentage() != 0)
 		{
-			if ( GC.getTraitInfo(eTrait).getGlobalPopulationgrowthratepercentage() != 0 )
-			{
-				changePopulationgrowthratepercentage(GC.getTraitInfo(eTrait).getGlobalPopulationgrowthratepercentage(),true);
-			}
+			changePopulationgrowthratepercentage(GC.getTraitInfo(eTrait).getGlobalPopulationgrowthratepercentage(),true);
 		}
 	}
 }
 
 int CvPlayer::getPopulationgrowthratepercentage() const
 {
-	if ( m_fPopulationgrowthratepercentageLog == INVALID_GROWTH_PERCENT_LOG )
-	{
-		((CvPlayer*)this)->recalculatePopulationgrowthratepercentage();
-	}
-
-	float fMultiplier = exp(m_fPopulationgrowthratepercentageLog);
-
-	return (int)(fMultiplier*100 - 100);
+	return (int)(exp(m_fPopulationgrowthratepercentageLog)*100 - 100);
 }
 
 void CvPlayer::setPopulationgrowthratepercentage(int iNewValue)
@@ -27912,14 +27894,7 @@ void CvPlayer::setPopulationgrowthratepercentage(int iNewValue)
 
 void CvPlayer::changePopulationgrowthratepercentage(int iChange, bool bAdd)
 {
-	if ( m_fPopulationgrowthratepercentageLog == INVALID_GROWTH_PERCENT_LOG )
-	{
-		recalculatePopulationgrowthratepercentage();
-	}
-
-	float logdiff = (bAdd ? 1 : -1)*log((100+(float)iChange)/100);
-
-	m_fPopulationgrowthratepercentageLog += logdiff;
+	m_fPopulationgrowthratepercentageLog += (bAdd ? 1 : -1)*log((100+(float)iChange)/100);
 }
 
 int CvPlayer::getReligionSpreadRate() const
@@ -28576,7 +28551,7 @@ void CvPlayer::changeBuildingCommerceChange(BuildingTypes building, CommerceType
 		{
 			if (pLoopCity->getNumActiveBuilding(building) > 0)
 			{
-				if (!pLoopCity->isReligiouslyDisabledBuilding(building))
+				if (!pLoopCity->isReligiouslyLimitedBuilding(building))
 				{
 					pLoopCity->changeBuildingCommerceChange(building, CommerceType, iChange);
 				}
@@ -28608,7 +28583,7 @@ void CvPlayer::changeBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTyp
 		{
 			if (pLoopCity->getNumActiveBuilding(eIndex1) > 0)
 			{
-				if (!pLoopCity->isReligiouslyDisabledBuilding(eIndex1))
+				if (!pLoopCity->isReligiouslyLimitedBuilding(eIndex1))
 				{
 					const int iExistingValue = pLoopCity->getBuildingCommerceModifier(eIndex1, eIndex2);
 					// set the new

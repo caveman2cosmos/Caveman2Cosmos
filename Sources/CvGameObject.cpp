@@ -671,7 +671,7 @@ void CvGameObjectCity::foreachManipulator(ManipCallbackFn func) const
 		if(m_pCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
 		{
 			//Team Project (5)
-			if (!m_pCity->isReligiouslyDisabledBuilding((BuildingTypes)iI))
+			if (!m_pCity->isReligiouslyLimitedBuilding((BuildingTypes)iI))
 			{
 				func(GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators());
 			}

@@ -10886,7 +10886,7 @@ void CvPlot::processArea(CvArea* pArea, int iChange)
 
 				pArea->changePower(pCity->getOwner(), building.getPowerValue() * iChange * pCity->getNumActiveBuilding((BuildingTypes)iI));
 
-				if (!pCity->isReligiouslyDisabledBuilding((BuildingTypes)iI))
+				if (!pCity->isReligiouslyLimitedBuilding((BuildingTypes)iI))
 				{
 					if (building.getAreaHealth() > 0)
 					{
@@ -10902,7 +10902,7 @@ void CvPlot::processArea(CvArea* pArea, int iChange)
 
 				for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 				{
-					if (!pCity->isReligiouslyDisabledBuilding((BuildingTypes)iI))
+					if (!pCity->isReligiouslyLimitedBuilding((BuildingTypes)iI))
 					{
 						pArea->changeYieldRateModifier(pCity->getOwner(), (YieldTypes)iJ, building.getAreaYieldModifier(iJ) * iChange * pCity->getNumActiveBuilding((BuildingTypes)iI));
 					}
