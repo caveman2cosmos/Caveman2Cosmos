@@ -1799,7 +1799,7 @@ public:
 	virtual int	AI_genericUnitValueTimes100(UnitValueFlags eFlags) const = 0;
 	virtual int AI_getBirthmark() const = 0;
 	virtual void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd) = 0;
-	virtual bool isWaitingOnUnitAI(int iIndex) = 0;
+	virtual bool isWaitingOnUnitAI(int iIndex) const = 0;
 	virtual bool isWaitingOnUnitAIAny() const = 0;
 
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
@@ -2264,7 +2264,7 @@ public:
 	virtual int AI_getPredictedHitPoints() const = 0;
 	virtual void AI_setPredictedHitPoints(int iPredictedHitPoints) = 0;
 	virtual bool AI_getHasAttacked() const = 0;
-	virtual int AI_beneficialPropertyValueToCity(CvCity* pCity, PropertyTypes eProperty) const = 0;
+	virtual int AI_beneficialPropertyValueToCity(const CvCity* pCity, PropertyTypes eProperty) const = 0;
 
 	bool isUsingDummyEntities() const;
 	static bool isDummyEntity(const CvEntity* entity);

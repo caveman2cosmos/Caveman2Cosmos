@@ -325,14 +325,14 @@ protected:
 	bool AI_carrierSeaTransport();
 	bool AI_connectPlot(CvPlot* pPlot, int iRange = 0);
 	bool AI_improveCity(CvCity* pCity);
-	bool AI_improveLocalPlot(int iRange, CvCity* pIgnoreCity);
+	bool AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity);
 	bool AI_nextCityToImprove(CvCity* pCity);
 	bool AI_nextCityToImproveAirlift();
 	bool AI_irrigateTerritory();
 	bool AI_fortTerritory(bool bCanal, bool bAirbase);
 	bool AI_improveBonus(int iMinValue = 0, CvPlot** ppBestPlot = NULL, BuildTypes* peBestBuild = NULL, int* piBestValue = NULL);
 	bool AI_improvePlot(CvPlot* pPlot, BuildTypes eBuild);
-	BuildTypes AI_betterPlotBuild(CvPlot* pPlot, BuildTypes eBuild);
+	BuildTypes AI_betterPlotBuild(const CvPlot* pPlot, BuildTypes eBuild) const;
 	bool AI_connectBonus(bool bTestTrade = true);
 	bool AI_connectCity();
 	bool AI_routeCity();
@@ -439,11 +439,11 @@ public:
 	void AI_AutomatedpillageMove();
 	void AI_autoAirStrike();
 	bool AI_airBombCities();
-	bool AI_moveToTarget(CvUnit* pTarget);
+	bool AI_moveToTarget(const CvUnit* pTarget);
 	void AI_shadowMove();
 	bool AI_protectTarget(const CvUnit* pTarget);
 	bool AI_joinMilitaryCity(bool bNaval = false);
-	bool AI_isPlotWellDefended(CvPlot* pPlot, bool bIncludeAdjacent, int iOddsOfDefeat);
+	bool AI_isPlotWellDefended(const CvPlot* pPlot, bool bIncludeAdjacent, int iOddsOfDefeat);
 
 	int	AI_genericUnitValueTimes100(UnitValueFlags eFlags) const;
 	void AI_flushValueCache();
@@ -454,7 +454,7 @@ public:
 	virtual int AI_getPredictedHitPoints() const;
 	virtual void AI_setPredictedHitPoints(int iPredictedHitPoints);
 	virtual bool AI_getHasAttacked() const;
-	virtual int AI_beneficialPropertyValueToCity(CvCity* pCity, PropertyTypes eProperty) const;
+	virtual int AI_beneficialPropertyValueToCity(const CvCity* pCity, PropertyTypes eProperty) const;
 
 	//	KOSHLING - inform the AI of unit losses so that it can adjust internal counts
 	virtual void AI_killed();
@@ -483,7 +483,7 @@ public:
 	bool generateSafePathforVulnerable(const CvPlot* pToPlot, int* piPathTurns = NULL) const;
 
 	void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd);
-	bool isWaitingOnUnitAI(int iIndex);
+	bool isWaitingOnUnitAI(int iIndex) const;
 	bool isWaitingOnUnitAIAny() const;
 	void setWaitingOnUnitAIAny();
 	bool AI_isNegativePropertyUnit() const;
