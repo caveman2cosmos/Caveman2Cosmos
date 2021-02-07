@@ -10,8 +10,6 @@ void CyGameTextMgrInterface()
 	OutputDebugString("Python Extension Module - CyTextMgr\n");
 
 	python::class_<CyGameTextMgr>("CyGameTextMgr")
-		.def("isNone", &CyGameTextMgr::isNone, "bool () - Checks to see if pointer points to a real object")
-
 		.def("Reset", &CyGameTextMgr::Reset, "void ()")
 		.def("getTimeStr", &CyGameTextMgr::getTimeStr, "wstring (int iGameTurn, bool bSave)")
 		.def("getDateStr", &CyGameTextMgr::getDateStr, "wstring (int iGameTurn, bool bSave, int /*CalendarTypes*/ eCalendar, int iStartYear, int /*GameSpeedTypes*/ eSpeed)")

@@ -674,6 +674,11 @@ void CyTeam::changeResearchProgress(int /*TechTypes*/ eIndex, int iChange, int /
 		m_pTeam->changeResearchProgress((TechTypes)eIndex, iChange, (PlayerTypes)ePlayer);
 }
 
+int CyTeam::getTechCount(int /*TechTypes*/ eIndex) const
+{
+	return m_pTeam->getTechCount((TechTypes)eIndex);
+}
+
 bool CyTeam::isTerrainTrade(int /*TerrainTypes*/ eIndex) const
 {
 	return m_pTeam->isTerrainTrade((TerrainTypes)eIndex);
