@@ -34566,7 +34566,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 							for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 							{
 								eQualifyPromo = ((PromotionTypes)iI);
-								CvPromotionInfo& kQualifier = GC.getPromotionInfo(eQualifyPromo);
+								const CvPromotionInfo& kQualifier = GC.getPromotionInfo(eQualifyPromo);
 								if (isHasPromotion(eQualifyPromo) && kQualifier.getPromotionLine() != NO_PROMOTIONLINE)
 								{
 									if (kQualifier.getPromotionLine() == kPrereq2.getPromotionLine())
@@ -34737,7 +34737,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 
 		for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 		{
-			UnitCombatTypes ePrereq = (UnitCombatTypes)iI;
+			const UnitCombatTypes ePrereq = (UnitCombatTypes)iI;
 			if (GC.getPromotionInfo(ePromotion).getUnitCombat(iI))
 			{
 				bHasPrereq = true;
@@ -37109,7 +37109,7 @@ void CvUnit::doSetUnitCombats()
 void CvUnit::setFreePromotion(PromotionTypes ePromotion, bool bAdding, TraitTypes eTrait)
 {
 	const int numTraitInfos = GC.getNumTraitInfos();
-	CvPlayer& pPlayer = GET_PLAYER(getOwner());
+	const CvPlayer& pPlayer = GET_PLAYER(getOwner());
 
 	if (bAdding && !isHasPromotion(ePromotion))
 	{
