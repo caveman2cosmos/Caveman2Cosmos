@@ -15263,9 +15263,10 @@ int CvUnit::fortifyRepelModifier() const
 }
 //TB Combat Mods end
 
-int CvUnit::experienceNeeded() const
+int CvUnit::experienceNeeded(int iLvlOffset) const
 {
-	int iExperienceNeeded = calcBaseExpNeeded(getLevel(), getOwner());
+	int iLevel = getLevel() + iLvlOffset;
+	int iExperienceNeeded = calcBaseExpNeeded(iLevel, getOwner());
 
 	if (isCommander())
 	{
@@ -21779,16 +21780,15 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 	const CvPromotionInfo& promotionInfo = GC.getPromotionInfo(ePromotion);
 
 	// Disable S&D modifying promos if option is not on:
-	if
-	(
-		!GC.getGame().isOption(GAMEOPTION_SAD)
-	&& (
-			promotionInfo.getUnnerveChange()
-		||	promotionInfo.getEncloseChange()
-		||	promotionInfo.getLungeChange()
-		||	promotionInfo.getDynamicDefenseChange()
-		)
-	) return false;
+	if	( !GC.getGame().isOption(GAMEOPTION_SAD)
+		&& (
+				promotionInfo.getUnnerveChange() != 0
+			||	promotionInfo.getEncloseChange() != 0
+			||	promotionInfo.getLungeChange() != 0
+			||	promotionInfo.getDynamicDefenseChange() != 0
+			)
+		) 
+		return false;
 
 	//Disable via NotOnGameOption tag:
 	for (int iI = 0; iI < promotionInfo.getNumNotOnGameOptions(); iI++)
@@ -21911,20 +21911,20 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 	}
 	// ! SUPER_SPIES
 
-	if (
-		noDefensiveBonus()
-	&& (
-			promotionInfo.getDefenseCombatModifierChange()
-		||	promotionInfo.getFortRepelChange()
-		||	promotionInfo.getRepelChange()
-		||	promotionInfo.getRepelRetriesChange()
-		||	promotionInfo.getStrAdjperDefChange()
-		||	promotionInfo.getHillsDefensePercent()
-		||	promotionInfo.isAnyTerrainDefensePercent()
-		||	promotionInfo.isAnyFeatureDefensePercent()
-		||	promotionInfo.getCityDefensePercent()
+	if (noDefensiveBonus() && 
+		(
+				promotionInfo.getDefenseCombatModifierChange() != 0
+			||	promotionInfo.getFortRepelChange() != 0
+			||	promotionInfo.getRepelChange() != 0
+			||	promotionInfo.getRepelRetriesChange() != 0
+			||	promotionInfo.getStrAdjperDefChange() != 0
+			||	promotionInfo.getHillsDefensePercent() != 0
+			||	promotionInfo.isAnyTerrainDefensePercent()
+			||	promotionInfo.isAnyFeatureDefensePercent()
+			||	promotionInfo.getCityDefensePercent() != 0
+			)
 		)
-	) return false;
+		return false;
 
 // TB Combat Mods
 	// Conditionally disabled the maximum withdrawal cap, only if pursuit is NOT in play
@@ -22090,7 +22090,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 			return false;
 		}
 
-		if (promotionInfo.getQualityChange() > 0 && getExperience() >= experienceNeeded())
+		if (promotionInfo.getQualityChange() > 0 && getExperience() >= experienceNeeded(1))
 		{
 			return false;
 		}
