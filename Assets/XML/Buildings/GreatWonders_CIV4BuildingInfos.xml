@@ -239,9 +239,6 @@
 			<Type>BUILDING_ALHAMBRA_2</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ALHAMBRA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALHAMBRA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ALHAMBRA_STRATEGY</Strategy>
@@ -347,9 +344,6 @@
 			<Type>BUILDING_ANGKOR_WAT_2</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ANGKOR_WAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANGKOR_WAT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANGKOR_WAT_STRATEGY</Strategy>
@@ -1912,21 +1906,19 @@
 			<Civilopedia>TXT_KEY_BUILDING_CHEOMSEONGDAE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CHEOMSEONGDAE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CHEOMSEONGDAE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_CHEOMSEONGDAE</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_CHEOMSEONGDAE</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
+			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqTech>TECH_STARGAZING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MASONRY</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_MARBLE</Bonus>
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_SATELLITES</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_CHEOMSEONGDAE_2</ObsoletesToBuilding>
 			<iCost>876</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHurryCostModifier>200</iHurryCostModifier>
@@ -1944,6 +1936,18 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iGoldenAgeModifier>20</iGoldenAgeModifier>
 			<iFreeTechs>1</iFreeTechs>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAsset>14</iAsset>
 			<Flavors>
 				<Flavor>
@@ -1958,18 +1962,41 @@
 			<iConquestProb>100</iConquestProb>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_CHEOMSEONGDAE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CHEOMSEONGDAE</MovieDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CHEOMSEONGDAE_2</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<bNoLimit>1</bNoLimit>
+			<Description>TXT_KEY_BUILDING_CHEOMSEONGDAE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CHEOMSEONGDAE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CHEOMSEONGDAE_STRATEGY</Strategy>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>8</iCommerce>
+			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>6</iAmountPerTurn>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_TOURISM</PropertyType>
-					<iAmountPerTurn>4</iAmountPerTurn>
+					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>4</iAsset>
+			<bNukeImmune>1</bNukeImmune>
+			<iConquestProb>100</iConquestProb>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_CHEOMSEONGDAE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHICHEN_ITZA</Type>
@@ -1981,16 +2008,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_CHICHEN_ITZA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CHICHEN_ITZA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CHICHEN_ITZA</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_CHICHEN_ITZA</MovieDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
+			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			</TechTypes>
-			<iPrereqPopulation>13</iPrereqPopulation>
 			<ObsoleteTech>TECH_DIVINE_RIGHT</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_CHICHEN_ITZA_2</ObsoletesToBuilding>
 			<iCost>876</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -2017,6 +2044,13 @@
 			<iAllCityDefense>25</iAllCityDefense>
 			<iTradeRoutes>2</iTradeRoutes>
 			<iTradeRouteModifier>25</iTradeRouteModifier>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>4</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAsset>12</iAsset>
 			<iPower>8</iPower>
 			<Flavors>
@@ -2026,17 +2060,38 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_CHICHEN_ITZA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CHICHEN_ITZA</MovieDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CHICHEN_ITZA_2</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<bNoLimit>1</bNoLimit>
+			<Description>TXT_KEY_BUILDING_CHICHEN_ITZA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CHICHEN_ITZA_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CHICHEN_ITZA_STRATEGY</Strategy>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>12</iCommerce>
+			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_TOURISM</PropertyType>
-					<iAmountPerTurn>6</iAmountPerTurn>
+					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>5</iAsset>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_CHICHEN_ITZA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CCC</Type>
@@ -2588,12 +2643,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_EDINBURGH_CASTLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EDINBURGH_CASTLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EDINBURGH_CASTLE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_EDINBURGH</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_CASTLE</ConstructSound>
-			<fVisibilityPriority>100</fVisibilityPriority>
-			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CASTLE</BuildingType>
@@ -2604,7 +2656,10 @@
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_EDINBURGH_CASTLE_2</ObsoletesToBuilding>
 			<iCost>1800</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2614,7 +2669,7 @@
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>1000</iCommerce>
+				<iCommerce>100</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<CommerceChangeOriginalOwners>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
@@ -2626,6 +2681,13 @@
 			<iDefense>100</iDefense>
 			<iEspionageDefense>25</iEspionageDefense>
 			<bGovernmentCenter>1</bGovernmentCenter>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAsset>12</iAsset>
 			<Flavors>
 				<Flavor>
@@ -2638,17 +2700,47 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<fVisibilityPriority>100</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_EDINBURGH_CASTLE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EDINBURGH</MovieDefineTag>
+		</BuildingInfo>
+		<!-- Toffer - Idea:
+			Add extension buildings to the obsolete castle along the line of "Edinburgh Artillery" or "Machine Gun Posts",
+				adding some defense value to the city, at the cost of the tourism property.
+			One could also add a mutually exclusive extension building that instead bolster the tourism/culture/cash aspect,
+				leaders with high military flavour would prefer the defense extension, while others may prefer the peaceful route.
+		-->
+		<BuildingInfo>
+			<Type>BUILDING_EDINBURGH_CASTLE_2</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<bNoLimit>1</bNoLimit>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EDINBURGH_CASTLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EDINBURGH_CASTLE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_EDINBURGH_CASTLE_STRATEGY</Strategy>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>8</iCommerce>
+			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_TOURISM</PropertyType>
-					<iAmountPerTurn>4</iAmountPerTurn>
+					<iAmountPerTurn>6</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>5</iAsset>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<fVisibilityPriority>100</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_EDINBURGH_CASTLE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EDISON</Type>
