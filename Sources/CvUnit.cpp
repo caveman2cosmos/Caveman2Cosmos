@@ -17681,7 +17681,7 @@ void CvUnit::changeExperience100(int iChange, int iMax, bool bFromCombat, bool b
 
 	if (bFromCombat)
 	{
-		const CvPlayer& kPlayer = GET_PLAYER(getOwner());
+		CvPlayer& kPlayer = GET_PLAYER(getOwner());
 		//TB GG Types mod
 		if (getGGExperienceEarnedTowardsType() == NO_UNIT)
 		{
