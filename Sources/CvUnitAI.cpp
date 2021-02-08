@@ -14264,37 +14264,20 @@ bool CvUnitAI::AI_spreadCorporation()
 
 	if ( pBestSpreadPlot == NULL )
 	{
-		CvTeam& kTeam = GET_TEAM(getTeam());
+		const CvTeam& kTeam = GET_TEAM(getTeam());
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  08/21/09								jdog5000	  */
-	/*																							  */
-	/* Unit AI, Efficiency																		  */
-	/************************************************************************************************/
-			//if (kLoopPlayer.isAlive() && (bHasHQ || (getTeam() == kLoopPlayer.getTeam())))
+			const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 			if (kLoopPlayer.isAlive() && ((bHasHQ && canEnterTerritory(GET_PLAYER((PlayerTypes)iI).getTeam())) || (getTeam() == kLoopPlayer.getTeam())))
 			{
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					   END												  */
-	/************************************************************************************************/
-				int iLoopPlayerCorpCount = kLoopPlayer.countCorporations(eCorporation);
-				CvTeam& kLoopTeam = GET_TEAM(kLoopPlayer.getTeam());
+				const int iLoopPlayerCorpCount = kLoopPlayer.countCorporations(eCorporation);
+				const CvTeam& kLoopTeam = GET_TEAM(kLoopPlayer.getTeam());
 				foreach_(CvCity* pLoopCity, kLoopPlayer.cities())
 				{
 					if (AI_plotValid(pLoopCity->plot()) && (itr = m_cachedMissionaryPlotset->find(pLoopCity->plot())) != m_cachedMissionaryPlotset->end())
 					{
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  08/19/09								jdog5000	  */
-	/*																							  */
-	/* Unit AI, Efficiency																		  */
-	/************************************************************************************************/
 						// BBAI efficiency: check same area
 						if ( /*pLoopCity->area() == area() &&*/ canSpreadCorporation(pLoopCity->plot(), eCorporation))
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					   END												  */
-	/************************************************************************************************/
 						{
 							if (!(pLoopCity->plot()->isVisibleEnemyUnit(this)))
 							{

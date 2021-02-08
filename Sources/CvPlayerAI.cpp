@@ -22313,7 +22313,6 @@ EventTypes CvPlayerAI::AI_chooseEvent(int iTriggeredId, int* pValue) const
 		int iValue = -MAX_INT;
 		if (kTrigger.getEvent(i) != NO_EVENT)
 		{
-			CvEventInfo& kEvent = GC.getEventInfo((EventTypes)kTrigger.getEvent(i));
 			if (canDoEvent((EventTypes)kTrigger.getEvent(i), *pTriggeredData))
 			{
 				iValue = AI_eventValue((EventTypes)kTrigger.getEvent(i), *pTriggeredData);
