@@ -24096,9 +24096,10 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_OBSOLETE_WITH", CvWString(GC.getTechInfo((TechTypes)kBuilding.getObsoleteTech()).getType()).GetCString(), GC.getTechInfo((TechTypes) kBuilding.getObsoleteTech()).getTextKeyWide()));
 
-			if (kBuilding.getDefenseModifier() != 0 || kBuilding.getBombardDefenseModifier() != 0)
+			const int iObsoletesToBuilding = kBuilding.getObsoletesToBuilding();
+			if (iObsoletesToBuilding != -1)
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_OBSOLETE_EXCEPT"));
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_OBSOLETE_WITH_TO", CvWString(GC.getBuildingInfo((BuildingTypes)iObsoletesToBuilding).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iObsoletesToBuilding).getDescription()));
 			}
 		}
 
