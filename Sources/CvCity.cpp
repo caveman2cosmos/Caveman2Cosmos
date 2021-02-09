@@ -14721,17 +14721,6 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eBuilding, const bool b
 		if (bNewValue) // Building addition
 		{
 			processBuilding(eBuilding, 1, false, true);
-
-			// Disable any buildings replaced by this one.
-			for (int iI = 0; iI < kBuilding.getNumReplacedBuilding(); iI++)
-			{
-				const BuildingTypes eReplaced = (BuildingTypes)kBuilding.getReplacedBuilding(iI);
-
-				if (getNumActiveBuilding(eReplaced) > 0)
-				{
-					setDisabledBuilding(eReplaced, true);
-				}
-			}
 		}
 		else // Building removal
 		{
@@ -14758,6 +14747,37 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eBuilding, const bool b
 				&& GC.getBuildingInfo((BuildingTypes)iI).getExtendsBuilding() == eBuilding)
 				{
 					setNumRealBuilding((BuildingTypes)iI, 0);
+				}
+			}
+		}
+
+		// Disable\Enable buildings replaced by this one.
+		for (int iI = 0; iI < kBuilding.getNumReplacedBuilding(); iI++)
+		{
+			const BuildingTypes eReplaced = (BuildingTypes)kBuilding.getReplacedBuilding(iI);
+
+			if (getNumRealBuilding(eReplaced) > 0)
+			{
+				if (bNewValue)
+				{
+					setDisabledBuilding(eReplaced, true);
+				}
+				else
+				{
+					bool bEnableBuilding = true;
+					const CvBuildingInfo& replaced = GC.getBuildingInfo(eReplaced);
+					for (int iJ = 0; iJ < replaced.getNumReplacementBuilding(); ++iJ)
+					{
+						if (getNumRealBuilding((BuildingTypes)replaced.getReplacementBuilding(iJ)) > 0)
+						{
+							bEnableBuilding = false;
+							break;
+						}
+					}
+					if (bEnableBuilding)
+					{
+						setDisabledBuilding(eReplaced, false);
+					}
 				}
 			}
 		}
@@ -20906,7 +20926,7 @@ void CvCity::checkBuildings(bool bAlertOwner)
 
 		if (getNumRealBuilding(eBuildingX) > 0)
 		{
-			bool bMsg = true;
+			bool bIsReplaced = false;
 			bool bDisableBuilding = false;
 
 			bool bMissingBonus = false;
@@ -20922,17 +20942,20 @@ void CvCity::checkBuildings(bool bAlertOwner)
 
 			while (true) // This loop will never actually loop.
 			{
-				/* Check for replacement that is not disabled */
+				/* Check if disabled through replacement */
 				for (int iJ = 0; iJ < kBuilding.getNumReplacementBuilding(); ++iJ)
 				{
-					if (getNumActiveBuilding((BuildingTypes)kBuilding.getReplacementBuilding(iJ)) > 0)
+					// Toffer, we get into some ugly causality territory if we restrict this to getNumActiveBuilding.
+					//	Better to say that if the replacement gets disabled, then that means all it replaced also went disabled (which is what they are anyway).
+					//	If we try to enable the replaced when the replacement goes disabled,
+					//	then the order we check the replaced in is important as many of the replaced are replacements for the other replaced.
+					if (getNumRealBuilding((BuildingTypes)kBuilding.getReplacementBuilding(iJ)) > 0)
 					{
-						bDisableBuilding = true;
-						bMsg = false;
+						bIsReplaced = true;
 						break;
 					}
 				}
-				if (bDisableBuilding) break;
+				if (bIsReplaced) break;
 
 				/* Check for Appropriate Resources */
 				{
@@ -21115,6 +21138,7 @@ void CvCity::checkBuildings(bool bAlertOwner)
 				}
 				break; // The while loop is not supposed to loop.
 			}
+			if (bIsReplaced) continue; // Replacement disabling/enabling is handled in setNumRealBuilding(...).
 
 			if (isDisabledBuilding(eBuildingX))
 			{
@@ -21137,7 +21161,7 @@ void CvCity::checkBuildings(bool bAlertOwner)
 			{
 				setDisabledBuilding(eBuildingX, true);
 
-				if (bAlertOwner && bMsg)
+				if (bAlertOwner)
 				{
 					// Toffer - Should combine the text messages if there's more than one reason.
 					CvWString szBuffer;

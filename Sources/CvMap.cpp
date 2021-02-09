@@ -1692,11 +1692,6 @@ void CvMap::toggleUnitsDisplay()
 						{
 							paiBuiltNum[iI][7]++;
 						}
-
-						//if (pCity->getBuildingOriginalTime((BuildingTypes)iI) > 1000)
-						//{
-						//	pCity->setNumRealBuilding((BuildingTypes)iI, 0);
-						//}
 					}
 				}
 			}
