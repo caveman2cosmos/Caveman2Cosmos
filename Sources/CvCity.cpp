@@ -21695,28 +21695,6 @@ void CvCity::setDisabledBuilding(const BuildingTypes eIndex, const bool bNewValu
 				processBuilding(eIndex, -1);
 			}
 			m_vDisabledBuildings.push_back(eIndex);
-			// Enable replaced buildings
-			if (bProcess)
-			{
-				const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eIndex);
-				bool bEnabled = false;
-				for (int iI = 0; iI < kBuilding.getNumReplacedBuilding(); iI++)
-				{
-					const BuildingTypes eReplaced = (BuildingTypes)kBuilding.getReplacedBuilding(iI);
-
-					if (getNumRealBuilding(eReplaced) > 0)
-					{
-						setDisabledBuilding(eReplaced, false);
-						bEnabled = true;
-					}
-				}
-				if (bEnabled)
-				{
-					// This will disable all we enabled above which shouldn't be enabled.
-					// One of them may replace the others, or there might be other reasons for them being disabled.
-					checkBuildings();
-				}
-			}
 		}
 	}
 	else if (itr != m_vDisabledBuildings.end())
