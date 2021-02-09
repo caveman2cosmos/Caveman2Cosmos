@@ -7457,7 +7457,6 @@
 			<Strategy>TXT_KEY_BUILDING_POTALA_PALACE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_POTALA</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_BUDDHIST</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
