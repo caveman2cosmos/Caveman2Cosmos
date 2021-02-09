@@ -7,12 +7,23 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-//#include "CvProperties.h"
+#include "CvCity.h"
+#include "CvCityAI.h"
+#include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvMap.h"
+#include "CvOutcome.h"
+#include "CvProperties.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvPython.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
 #include "CvXMLLoadUtility.h"
 #include "CyUnit.h"
 #include "CyPlot.h"
+#include "CheckSum.h"
+#include "IntExpr.h"
 
 CvOutcome::CvOutcome(): m_eUnitType(NO_UNIT),
 						m_iChance(NULL),
@@ -115,11 +126,12 @@ UnitTypes CvOutcome::getUnitType() const
 
 bool CvOutcome::getUnitToCity(const CvUnit& kUnit) const
 {
-	// evaluate does not actually change the object so const_cast is fine
 	if (m_bUnitToCity)
+	{
+		// evaluate does not actually change the object so const_cast is fine
 		return m_bUnitToCity->evaluate(const_cast<CvUnit&>(kUnit).getGameObject());
-	else
-		return false;
+	}
+	return false;
 }
 
 PromotionTypes CvOutcome::getPromotionType() const
@@ -989,16 +1001,20 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	{
 		return false;
 	}
-
 	CvWStringBuffer szBuffer;
 
 	CvPlayer& kPlayer = GET_PLAYER(kUnit.getOwner());
+
 	const bool bToCoastalCity = GC.getOutcomeInfo(getType()).getToCoastalCity();
-	const CvUnitInfo* pUnitInfo;
-	if (eDefeatedUnitType > NO_UNIT)
-		pUnitInfo = &GC.getUnitInfo(eDefeatedUnitType);
-	else
-		pUnitInfo = &kUnit.getUnitInfo();
+
+	const CvUnitInfo* pUnitInfo =
+	(
+		eDefeatedUnitType > NO_UNIT
+		?
+		pUnitInfo = &GC.getUnitInfo(eDefeatedUnitType)
+		:
+		pUnitInfo = &kUnit.getUnitInfo()
+	);
 
 	CvWString& szMessage = GC.getOutcomeInfo(getType()).getMessageText();
 	bool bNothing = true;
@@ -1018,31 +1034,36 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 		szBuffer.append(GC.getPromotionInfo(m_ePromotionType).getDescription());
 	}
 
-	bool bUnitToCity = getUnitToCity(kUnit);
-	if (GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS) && 
-		m_eUnitType > NO_UNIT && 
-		(GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_SUBDUED")) ||
-		GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_IDEA"))))
-	{
-		bUnitToCity = true;
-	}
+	const bool bUnitToCity =
+	(
+		getUnitToCity(kUnit)
+		||
+		m_eUnitType > NO_UNIT
+		&&
+		GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS)
+		&& (
+			GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_SUBDUED())
+			||
+			GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_IDEA())
+		)
+	);
+
 	if (m_eUnitType > NO_UNIT && !bUnitToCity)
 	{
-		CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, kUnit.plot()->getX(), kUnit.plot()->getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-		FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
-		int iDmg = GC.getDefineINT("ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE");
-		iDmg = (iDmg * pUnit->maxHitPoints())/100;
-		pUnit->setDamage(iDmg, NO_PLAYER, false);
-		pUnit->finishMoves();
+		CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, kUnit.getX(), kUnit.getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+
+		if (pUnit != NULL)
+		{
+			pUnit->finishMoves();
+		}
+		else FErrorMsg("pUnit is expected to be assigned a valid unit object");
 
 		if (!bFirst)
 		{
 			szBuffer.append(L", ");
 		}
-		else
-		{
-			bFirst = false;
-		}
+		else bFirst = false;
+
 		szBuffer.append(GC.getUnitInfo(m_eUnitType).getDescription());
 	}
 
@@ -1067,9 +1088,9 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 	if (aiYield[YIELD_PRODUCTION] || aiYield[YIELD_FOOD] || aiCommerce[COMMERCE_CULTURE] || m_iGPP || (bUnitToCity && m_eUnitType > NO_UNIT) || m_iHappinessTimer || m_iPopulationBoost || m_iReduceAnarchyLength)
 	{
-		CvCity* pCity = GC.getMap().findCity(kUnit.plot()->getX(), kUnit.plot()->getY(), kUnit.getOwner(), NO_TEAM, true, bToCoastalCity);
+		CvCity* pCity = GC.getMap().findCity(kUnit.getX(), kUnit.getY(), kUnit.getOwner(), NO_TEAM, true, bToCoastalCity);
 		if (!pCity)
-			pCity = GC.getMap().findCity(kUnit.plot()->getX(), kUnit.plot()->getY(), kUnit.getOwner(), NO_TEAM, false, bToCoastalCity);
+			pCity = GC.getMap().findCity(kUnit.getX(), kUnit.getY(), kUnit.getOwner(), NO_TEAM, false, bToCoastalCity);
 
 		if (pCity)
 		{
@@ -1077,10 +1098,8 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 			{
 				szBuffer.append(L", ");
 			}
-			else
-			{
-				bFirst = false;
-			}
+			else bFirst = false;
+
 			if (aiYield[YIELD_PRODUCTION])
 			{
 				pCity->changeProduction(aiYield[YIELD_PRODUCTION]);
@@ -1125,9 +1144,8 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 			if (m_iHappinessTimer)
 			{
 				pCity->changeHappinessTimer(m_iHappinessTimer);
-				int iHappy = GC.getDefineINT("TEMP_HAPPY");
 				szBuffer.append(L" ");
-				szBuffer.append(gDLL->getText("TXT_KEY_OUTCOME_TEMP_HAPPY", iHappy, m_iHappinessTimer));
+				szBuffer.append(gDLL->getText("TXT_KEY_OUTCOME_TEMP_HAPPY", GC.getTEMP_HAPPY(), m_iHappinessTimer));
 			}
 
 			if (m_iPopulationBoost)
@@ -1140,8 +1158,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 			int iReduce = getReduceAnarchyLength(kUnit);
 			if (iReduce)
 			{
-				int iOccupation = pCity->getOccupationTimer();
-				iReduce = std::min(iReduce, iOccupation);
+				iReduce = std::min(iReduce, pCity->getOccupationTimer());
 				if (iReduce)
 				{
 					pCity->changeOccupationTimer(-iReduce);
@@ -1153,11 +1170,12 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 			if (bUnitToCity && m_eUnitType > NO_UNIT)
 			{
 				CvUnit* pUnit = kPlayer.initUnit(m_eUnitType, pCity->getX(), pCity->getY(), (UnitAITypes)GC.getUnitInfo(m_eUnitType).getDefaultUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-				FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
-				int iDmg = GC.getDefineINT("ANIMAL_DAMAGE_PERCENT_AFTER_SUBDUE");
-				iDmg = (iDmg * pUnit->maxHitPoints())/100;
-				pUnit->setDamage(iDmg, NO_PLAYER, false);
-				pUnit->finishMoves();
+
+				if (pUnit != NULL)
+				{
+					pUnit->finishMoves();
+				}
+				else FErrorMsg("pUnit is expected to be assigned a valid unit object");
 
 				szBuffer.append(L" ");
 				szBuffer.append(GC.getUnitInfo(m_eUnitType).getDescription());
@@ -1184,7 +1202,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	iGoldTimes100 += aiCommerce[COMMERCE_GOLD] * 100;
 	iResearchTimes100 += aiCommerce[COMMERCE_RESEARCH] * 100;
 	iEspionageTimes100 += aiCommerce[COMMERCE_ESPIONAGE] * 100;
-	
+
 	if (iGoldTimes100)
 	{
 		kPlayer.changeGold(iGoldTimes100 / 100);
@@ -1192,10 +1210,8 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 		{
 			szBuffer.append(L", ");
 		}
-		else
-		{
-			bFirst = false;
-		}
+		else bFirst = false;
+
 		CvWString szTemp;
 		szTemp.Format(L" %d%c", iGoldTimes100 / 100, GC.getCommerceInfo(COMMERCE_GOLD).getChar());
 		szBuffer.append(szTemp);
@@ -1211,10 +1227,8 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 			{
 				szBuffer.append(L", ");
 			}
-			else
-			{
-				bFirst = false;
-			}
+			else bFirst = false;
+
 			CvWString szTemp;
 			szTemp.Format(L" %d%c", iResearchTimes100 / 100, GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
 			szBuffer.append(szTemp);
@@ -1228,10 +1242,8 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 		{
 			szBuffer.append(L", ");
 		}
-		else
-		{
-			bFirst = false;
-		}
+		else bFirst = false;
+
 		CvWString szTemp;
 		szTemp.Format(L" %d%c", iEspionageTimes100 / 100, GC.getCommerceInfo(COMMERCE_ESPIONAGE).getChar());
 		szBuffer.append(szTemp);
@@ -1244,10 +1256,8 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 		{
 			szBuffer.append(L", ");
 		}
-		else
-		{
-			bFirst = false;
-		}
+		else bFirst = false;
+
 		szBuffer.append(GC.getBonusInfo(m_eBonusType).getDescription());
 	}
 
@@ -1257,10 +1267,8 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 		{
 			szBuffer.append(L", ");
 		}
-		else
-		{
-			bFirst = false;
-		}
+		else bFirst = false;
+
 		szBuffer.append(gDLL->getText("TXT_KEY_OUTCOME_KILLS_UNIT"));
 	}
 
@@ -1270,10 +1278,8 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 		{
 			szBuffer.append(L", ");
 		}
-		else
-		{
-			bFirst = false;
-		}
+		else bFirst = false;
+
 		szBuffer.append(GC.getEventTriggerInfo(m_eEventTrigger).getDescription());
 	}
 
@@ -1283,7 +1289,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	{
 		MEMORY_TRACK_EXEMPT();
 
-		AddDLLMessage(kUnit.getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer.getCString(), NULL, MESSAGE_TYPE_INFO, pUnitInfo->getButton(), NO_COLOR, kUnit.plot()->getX(), kUnit.plot()->getY(), true, true);
+		AddDLLMessage(kUnit.getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer.getCString(), NULL, MESSAGE_TYPE_INFO, pUnitInfo->getButton(), NO_COLOR, kUnit.getX(), kUnit.getY(), true, true);
 	}
 
 	if (m_eEventTrigger != NO_EVENTTRIGGER)
@@ -1295,7 +1301,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 		}
 		else
 		{
-			kPlayer.initTriggeredData(m_eEventTrigger, true, -1, kUnit.plot()->getX(), kUnit.plot()->getY());
+			kPlayer.initTriggeredData(m_eEventTrigger, true, -1, kUnit.getX(), kUnit.getY());
 		}
 	}
 
@@ -1327,7 +1333,6 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	{
 		kUnit.kill(true);
 	}
-
 	return true;
 }
 
@@ -1396,7 +1401,7 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 	{
 		// short circuit plot city as this method will be called for city plots most of the time
 		CvCityAI* pCity = (CvCityAI*) kPlot.getPlotCity();
-		if (!pCity || (bToCoastalCity && (!pCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))))
+		if (!pCity || (bToCoastalCity && (!pCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))))
 			pCity = (CvCityAI*) GC.getMap().findCity(kPlot.getX(), kPlot.getY(), kUnit.getOwner(), NO_TEAM, true, bToCoastalCity);
 		if (!pCity)
 			pCity = (CvCityAI*) GC.getMap().findCity(kPlot.getX(), kPlot.getY(), kUnit.getOwner(), NO_TEAM, false, bToCoastalCity);
@@ -1714,8 +1719,8 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 	bool bUnitToCity = getUnitToCity(kUnit);
 	if (GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS) && 
 		m_eUnitType > NO_UNIT && 
-		(GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_SUBDUED")) ||
-		GC.getUnitInfo(m_eUnitType).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_IDEA"))))
+		(GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_SUBDUED()) ||
+		GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_IDEA())))
 	{
 		bUnitToCity = true;
 	}
@@ -1804,7 +1809,7 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 
 		if (m_iHappinessTimer)
 		{
-			const int iHappy = GC.getDefineINT("TEMP_HAPPY");
+			const int iHappy = GC.getTEMP_HAPPY();
 			szBuffer.append(L" ");
 			szBuffer.append(gDLL->getText("TXT_KEY_OUTCOME_TEMP_HAPPY", iHappy, m_iHappinessTimer));
 		}

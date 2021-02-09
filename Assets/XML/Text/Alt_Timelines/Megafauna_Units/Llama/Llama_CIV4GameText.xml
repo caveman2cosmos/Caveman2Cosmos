@@ -10,6 +10,7 @@
 		</French>
 		<Italian>Arciere su lama</Italian>
 		<Polish>Llami Łucznik</Polish>
+		<Russian>Ëó÷íèê íà ëàìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LLAMA_ARCHER_PEDIA</Tag>
@@ -31,11 +32,12 @@
 		</French>
 		<Italian>Cavalcatore di lama</Italian>
 		<Polish>Jeździec (Llama)</Polish>
+		<Russian>Íàåçäíèê íà ëàìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LLAMA_RIDER_PEDIA</Tag>
 		<English>The Llama Rider is a rider on a llama, which is a furry animal native to South America. The Inca used these animals in their empire before the Spanish conquered them.</English>
-		<Italian>Il cavalcatore di lama è un uomo che cavalca un lama, un animale peloso nativoo del Sudamerica. Gli Inca usavano quati animali nel loro impero prima della conquista da parte degli Spagnoli.</Italian>
+		<Italian>Il cavalcatore di lama è un uomo che cavalca un lama, un animale peloso nativo del Sudamerica. Gli Inca usavano questi animali nel loro impero prima della conquista da parte degli Spagnoli.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LLAMA_RIDER_STRATEGY</Tag>

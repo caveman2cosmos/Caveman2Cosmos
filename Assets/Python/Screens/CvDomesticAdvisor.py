@@ -145,7 +145,7 @@ class CvDomesticAdvisor:
 			}
 			self.COLUMNS_LIST = COLUMNS_LIST = [
 # Name						Width	Type	CyCityFunction				selfFunction		Arg				Title
-("ADVISE_CULTURE",			150,	"text",	None,						self.advise,		"Culture",		TRNSLTR.getText("TXT_KEY_CONCEPT_CULTURE", ())),
+("ADVISE_CULTURE",			150,	"text",	None,						self.advise,		"Culture",		TRNSLTR.getText("TXT_WORD_CULTURE", ())),
 ("ADVISE_MILITARY",			150,	"text",	None,						self.advise,		"Military",		TRNSLTR.getText("TXT_KEY_ADVISOR_MILITARY", ())),
 ("ADVISE_RELIGION",			150,	"text",	None,						self.advise,		"Religion",		TRNSLTR.getText("TXT_KEY_CONCEPT_RELIGION", ())),
 ("ADVISE_RESEARCH",			150,	"text",	None,						self.advise,		"Research",		TRNSLTR.getText("TXT_KEY_COMMERCE_RESEARCH", ())),
@@ -330,7 +330,7 @@ class CvDomesticAdvisor:
 		self.CyPlayer = CyPlayer = GC.getActivePlayer()
 		import InputData
 		self.InputData = InputData.instance
-		self.TXT_NAME = TRNSLTR.getText("TXT_KEY_NAME", ())
+		self.TXT_NAME = TRNSLTR.getText("TXT_WORD_NAME", ())
 		# Tool Tip
 		self.szTextTT = ""
 		self.iOffsetTT = []
@@ -436,12 +436,10 @@ class CvDomesticAdvisor:
 			bCanLiberate = True
 		else:
 			bCanLiberate = False
-			CyCity, i = CyPlayer.firstCity(False)
-			while CyCity:
+			for CyCity in CyPlayer.cities():
 				if CyCity.getLiberationPlayer(False) != -1:
 					bCanLiberate = True
 					break
-				CyCity, i = CyPlayer.nextCity(i, False)
 
 		if bCanLiberate:
 			screen.setImageButton("DomesticSplit", "", 8, 2, iSize, iSize, WidgetTypes.WIDGET_ACTION, GC.getControlInfo(ControlTypes.CONTROL_FREE_COLONY).getActionInfoIndex(), -1)
@@ -730,7 +728,7 @@ class CvDomesticAdvisor:
 
 	def calculateHurryGoldCost(self, city, szKey, arg):
 		if city.canHurry(self.HURRY_TYPE_GOLD, False):
-			return unicode(city.hurryGold(self.HURRY_TYPE_GOLD))
+			return unicode(city.getHurryGold(self.HURRY_TYPE_GOLD))
 		else:
 			return self.objectNotPossible
 
@@ -981,11 +979,8 @@ class CvDomesticAdvisor:
 		y = CyCity.getBaseYieldRate(arg)
 		aList = []
 		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
-			CyPlayerX = GC.getPlayer(iPlayerX)
-			CyCity, i = CyPlayerX.firstCity(False)
-			while CyCity:
+			for CyCity in GC.getPlayer(iPlayerX).cities():
 				aList.append(CyCity.getBaseYieldRate(arg))
-				CyCity, i = CyPlayerX.nextCity(i, False)
 
 		return len([i for i in aList if i > y]) + 1
 
@@ -994,11 +989,8 @@ class CvDomesticAdvisor:
 		y = CyCity.getYieldRate(arg)
 		aList = []
 		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
-			CyPlayerX = GC.getPlayer(iPlayerX)
-			CyCity, i = CyPlayerX.firstCity(False)
-			while CyCity:
+			for CyCity in GC.getPlayer(iPlayerX).cities():
 				aList.append(CyCity.getYieldRate(arg))
-				CyCity, i = CyPlayerX.nextCity(i, False)
 
 		return len([i for i in aList if i > y]) + 1
 
@@ -1007,11 +999,8 @@ class CvDomesticAdvisor:
 		y = CyCity.getCommerceRate(arg)
 		aList = []
 		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
-			CyPlayerX = GC.getPlayer(iPlayerX)
-			CyCity, i = CyPlayerX.firstCity(False)
-			while CyCity:
+			for CyCity in GC.getPlayer(iPlayerX).cities():
 				aList.append(CyCity.getCommerceRate(arg))
-				CyCity, i = CyPlayerX.nextCity(i, False)
 
 		return len([i for i in aList if i > y]) + 1
 
@@ -1210,10 +1199,8 @@ class CvDomesticAdvisor:
 
 		self.cityList = cityList = []
 		CyPlayer = self.CyPlayer
-		CyCity, i = CyPlayer.firstCity(False)
-		while CyCity:
+		for CyCity in CyPlayer.cities():
 			cityList.append(CyCity)
-			CyCity, i = CyPlayer.nextCity(i, False)
 
 		# Hide building icons
 		for i in xrange(GC.getNumBuildingInfos()):

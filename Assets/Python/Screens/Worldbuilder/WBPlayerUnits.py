@@ -127,8 +127,7 @@ class WBPlayerUnits:
 			playerX = GC.getPlayer(iPlayerX)
 			if iOwnerType == 2 and playerX.getTeam() != pPlayer.getTeam() or not playerX.isAlive():
 				continue
-			unitX, i = playerX.firstUnit(False)
-			while unitX:
+			for unitX in playerX.units():
 				bCopy = True
 				if iPlotType == 0:
 					if unitX.getX() != pUnit.getX() or unitX.getY() != pUnit.getY():
@@ -154,7 +153,6 @@ class WBPlayerUnits:
 						bCopy = False
 				if bCopy:
 					lUnits.append([unitX.getOwner(), unitX.getID()])
-				unitX, i = playerX.nextUnit(i, False)
 		lUnits.sort()
 		self.placeCurrentUnit()
 
@@ -165,25 +163,25 @@ class WBPlayerUnits:
 		global iCityOwner
 		pPlayer = GC.getPlayer(iPlayer)
 
-		lCities = []
-		pCity = pPlayer.getCity(iCityID)
 		if iCityOwner > -1:
 			pCity = GC.getPlayer(iCityOwner).getCity(iCityID)
-		if pCity.isNone():
+		else: pCity = pPlayer.getCity(iCityID)
+
+		if pCity is None:
 			cityX, i = pPlayer.firstCity(False)
 			if cityX:
 				pCity = cityX
 				iCityID = cityX.getID()
 				iCityOwner = cityX.getOwner()
 
+		lCities = []
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 			if iOwnerType == 1 and iPlayerX != iPlayer:
 				continue
 			playerX = GC.getPlayer(iPlayerX)
 			if iOwnerType == 2 and playerX.getTeam() != pPlayer.getTeam() or not playerX.isAlive():
 				continue
-			cityX, i = playerX.firstCity(False)
-			while cityX:
+			for cityX in playerX.cities():
 				bCopy = True
 				if iPlotType == 0:
 					if cityX.getX() != pCity.getX() or cityX.getY() != pCity.getY():
@@ -193,7 +191,6 @@ class WBPlayerUnits:
 						bCopy = False
 				if bCopy:
 					lCities.append([cityX.getOwner(), cityX.getID()])
-				cityX, i = playerX.nextCity(i, False)
 		lCities.sort()
 		self.placeCurrentCity()
 
@@ -261,7 +258,7 @@ class WBPlayerUnits:
 		for i in lCities:
 			pPlayerX = GC.getPlayer(i[0])
 			loopCity = pPlayerX.getCity(i[1])
-			if loopCity.isNone(): continue
+			if loopCity is None: continue
 			iRow = screen.appendTableRow("WBCityList")
 			sColor = CyTranslator().getText("[COLOR_NEGATIVE_TEXT]", ())
 			if iCityID == loopCity.getID() and iCityOwner == loopCity.getOwner():
@@ -284,7 +281,7 @@ class WBPlayerUnits:
 		pCityOwner = GC.getPlayer(iCityOwner)
 		if not pCityOwner: return
 		pCity = pCityOwner.getCity(iCityID)
-		if pCity.isNone(): return
+		if pCity is None: return
 		sText = CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=4b>" + pCity.getName() + "</color></font>"
 		screen.setText("GoToCity", "Background", sText, 1<<2, screen.getXResolution()/4, self.iTable_Y - 60, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		iXMap = screen.getXResolution()/4 - 10
@@ -382,7 +379,7 @@ class WBPlayerUnits:
 			sText += "\n" + CyTranslator().getText("[COLOR_WARNING_TEXT]", ()) + CyTranslator().getText("INTERFACE_CITY_MAINTENANCE", ()) + " </color>"
 			sText += u"-%d.%02d%c" %(iMaintenance/100, iMaintenance%100, GC.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
 
-		sText += "\n" + CyTranslator().getText("TXT_KEY_WB_CITY", ()) + " ID: " + str(pCity.getID())
+		sText += "\n" + CyTranslator().getText("TXT_WORD_CITY", ()) + " ID: " + str(pCity.getID())
 		sText += "\n" + "X: " + str(pCity.getX()) + ", Y: " + str(pCity.getY())
 		sText += "\n" + CyTranslator().getText("TXT_KEY_WB_AREA_ID", ()) + ": "  + str(pCity.plot().getArea())
 
@@ -395,7 +392,7 @@ class WBPlayerUnits:
 		iActivity = pGroup.getActivityType()
 		if iActivity > -1 and iActivity < len(WorldBuilder.Activities):
 			sText += "\n" + WorldBuilder.Activities[iActivity]
-		sText += "\n" + CyTranslator().getText("TXT_KEY_WB_UNIT", ()) + " ID: " + str(pUnit.getID())
+		sText += "\n" + CyTranslator().getText("TXT_WORD_UNIT", ()) + " ID: " + str(pUnit.getID())
 		sText += "\n" + CyTranslator().getText("TXT_KEY_WB_GROUP", ()) + " ID: " + str(pUnit.getGroupID())
 		sText += "\n" + "X: " + str(pUnit.getX()) + ", Y: " + str(pUnit.getY())
 		sText += "\n" + CyTranslator().getText("TXT_KEY_WB_AREA_ID", ()) + ": "  + str(pUnit.plot().getArea())
@@ -412,20 +409,21 @@ class WBPlayerUnits:
 		pCityOwner = GC.getPlayer(iCityOwner)
 		if pCityOwner:
 			pCity = pCityOwner.getCity(iCityID)
-			if not pCity.isNone():
+			if pCity:
 				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY_DATA", ()), 9, 9, False)
 				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY_DATA2", ()), 10, 10, False)
 				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ()), 14, 14, False)
-				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY", ()) + " " + CyTranslator().getText("TXT_KEY_WB_PLOT_DATA", ()), 12, 12, False)
-				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY", ()) + " " + CyTranslator().getText("TXT_KEY_CONCEPT_EVENTS", ()), 13, 13, False)
+				szCity = CyTranslator().getText("TXT_WORD_CITY", ()) + " "
+				screen.addPullDownString("CurrentPage", szCity + CyTranslator().getText("TXT_KEY_WB_PLOT_DATA", ()), 12, 12, False)
+				screen.addPullDownString("CurrentPage", szCity + CyTranslator().getText("TXT_KEY_CONCEPT_EVENTS", ()), 13, 13, False)
 		pUnitOwner = GC.getPlayer(iUnitOwner)
 		if pUnitOwner:
 			pUnit = pUnitOwner.getUnit(iUnitID)
 			if not pUnit.isNone():
 				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_UNIT_DATA", ()), 5, 5, False)
 				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_PROMOTION", ()), 6, 6, False)
-				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_UNIT", ()) + " " + CyTranslator().getText("TXT_KEY_WB_PLOT_DATA", ()), 7, 7, False)
-				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_UNIT", ()) + " " + CyTranslator().getText("TXT_KEY_CONCEPT_EVENTS", ()), 8, 8, False)
+				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_WORD_UNIT", ()) + " " + CyTranslator().getText("TXT_KEY_WB_PLOT_DATA", ()), 7, 7, False)
+				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_WORD_UNIT", ()) + " " + CyTranslator().getText("TXT_KEY_CONCEPT_EVENTS", ()), 8, 8, False)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_INFO_SCREEN", ()), 11, 11, False)
 
 	def handleInput(self, inputClass):

@@ -1,6 +1,15 @@
 #include "CvGameCoreDLL.h"
-#include "CvPlayerAI.h"
+#include "CvCity.h"
+#include "CvEventReporter.h"
+#include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvMap.h"
+#include "CvMessageControl.h"
+#include "CvPathGenerator.h"
+#include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvSelectionGroup.h"
+#include "CvUnit.h"
 #include "FInputDevice.h"
 
 //
@@ -171,9 +180,9 @@ void CvEventReporter::gameStart()
 	m_kPythonEventMgr.reportGameStart();
 }
 
-void CvEventReporter::gameEnd()
+void CvEventReporter::gameEnd(int iGameTurn)
 {
-	m_kPythonEventMgr.reportGameEnd();
+	m_kPythonEventMgr.reportGameEnd(iGameTurn);
 }
 
 void CvEventReporter::mapRegen()

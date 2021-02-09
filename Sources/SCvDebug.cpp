@@ -1,6 +1,6 @@
 #include "CvGameCoreDLL.h"
 
-unsigned __int64 SCvDebug::m_mode = 0;
+uint64_t SCvDebug::m_mode = 0;
 
 bool SCvDebug::checkMode(Mode mode)
 {
@@ -14,5 +14,5 @@ void SCvDebug::setMode(Mode mode, bool on)
 	if (on)
 		m_mode |= 1 << mode;
 	else
-		m_mode &= ~((unsigned __int64)1 << mode);
+		m_mode &= ~((uint64_t)1 << mode);
 }

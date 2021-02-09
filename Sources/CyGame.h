@@ -21,7 +21,6 @@ public:
 	CyGame();
 	explicit CyGame(CvGame& pGame);			// Call from C++
 	explicit CyGame(CvGameAI& pGame);		// Call from C++;
-	//bool isNone() const { return m_pGame == NULL; }
 
 	int getCurrentMap() const;
 
@@ -58,7 +57,6 @@ public:
 	int countCivPlayersEverAlive() const;
 	int countCivTeamsAlive() const;
 	int countCivTeamsEverAlive() const;
-	int countHumanPlayersAlive() const;
 
 	int countTotalCivPower() const;
 	int countTotalNukeUnits() const;
@@ -150,20 +148,6 @@ public:
 	bool isForcedAIAutoPlay(int iPlayer) const;
 	int getForcedAIAutoPlay(int iPlayer) const;
 	void setForcedAIAutoPlay(int iPlayer, int iNewValue, bool bForced = false);
-
-	// < Water Animals Start >
-	int getWaterAnimalSpawnChance() const;
-	void setWaterAnimalSpawnChance(int iNewValue);
-	void changeWaterAnimalSpawnChance(int iChange);
-
-	int getXResolution() const;
-	void setXResolution(int iNewValue);
-	void changeXResolution(int iChange);
-
-	int getYResolution() const;
-	void setYResolution(int iNewValue);
-	void changeYResolution(int iChange);
-	// < Water Animals End   >
 
 	bool isScoreDirty() const;
 	void setScoreDirty(bool bNewValue);
@@ -299,8 +283,6 @@ public:
 	void log(TCHAR* str);
 	void logw(std::wstring str);
 
-	void drawBattleEffects();
-
 	int getCultureThreshold(int /*CultureLevelTypes*/ eLevel) const;
 
 	void setPlotExtraYield(int iX, int iY, int /*YieldTypes*/ eYield, int iExtraYield);
@@ -324,16 +306,20 @@ public:
 	int getHighToLowCounter() const;
 	bool cheatCodesEnabled() const;
 	void setVictoryValid(int iVictory, bool bNewVal);
+
 	bool isModderGameOption(int /*ModderGameOptionTypes*/ eIndex) const;
 	int getModderGameOption(int /*ModderGameOptionTypes*/ eIndex) const;
 	void setModderGameOption(int /*ModderGameOptionTypes*/ eIndex, int iNewValue);
-	void setFutureEras();
+
 	bool canEverResearch(int iTech) const;
 	bool canEverConstruct(int iBuilding) const;
 	bool canEverTrain(int iUnit) const;
 	bool canEverSpread(int iCorporation) const;
 
 	const char* getC2CVersion() const;
+
+	void assignScenarioStartingPlots();
+
 protected:
 	CvGame& m_pGame;
 };

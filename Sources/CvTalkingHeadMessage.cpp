@@ -1,5 +1,8 @@
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
+#include "CvGlobals.h"
+#include "CvTalkingHeadMessage.h"
+#include "CvViewport.h"
 
 CvTalkingHeadMessage::CvTalkingHeadMessage(int iMessageTurn, int iLen, LPCWSTR pszDesc, LPCTSTR pszSound, InterfaceMessageTypes eType, LPCTSTR pszIcon, ColorTypes eColor, int iX, int iY, bool bShowOffScreenArrows, bool bShowOnScreenArrows) :
 	m_iTurn(iMessageTurn),
@@ -66,7 +69,7 @@ void CvTalkingHeadMessage::write(FDataStreamBase& stream) const
 	stream.Write(m_bShown);
 }
 
-const wchar* CvTalkingHeadMessage::getDescription() const
+const wchar_t* CvTalkingHeadMessage::getDescription() const
 {
 	return (m_szDescription);
 }
@@ -114,7 +117,7 @@ void CvTalkingHeadMessage::setFlashColor(ColorTypes eColor)
 
 int CvTalkingHeadMessage::getX() const
 {
-	CvViewport* pViewport = GC.getCurrentViewport();
+	const CvViewport* pViewport = GC.getCurrentViewport();
 
 	return (m_iFlashX == -1 || !pViewport->isInViewportX(m_iFlashX)) ? -1 : pViewport->getViewportXFromMapX(m_iFlashX);
 }
@@ -126,7 +129,7 @@ void CvTalkingHeadMessage::setX(int i)
 
 int CvTalkingHeadMessage::getY() const
 {
-	CvViewport* pViewport = GC.getCurrentViewport();
+	const CvViewport* pViewport = GC.getCurrentViewport();
 
 	return (m_iFlashY == -1 || !pViewport->isInViewportY(m_iFlashY)) ? -1 : pViewport->getViewportYFromMapY(m_iFlashY);
 }

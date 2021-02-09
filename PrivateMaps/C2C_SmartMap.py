@@ -3067,7 +3067,7 @@ def assignStartingPlots():
 				bestNearScore = plotScores[scoreIndex]
 				altPlotX = altX
 				altPlotY = altY
-		if not (altPlotX,altPlotY) in altFinalPlots:
+		if (altPlotX,altPlotY) not in altFinalPlots:
 			altFinalPlots.append((altPlotX,altPlotY))
 
 	#these are the finalized plots which will be assigned to the players
@@ -4093,19 +4093,13 @@ def preComputeWetness():
 			for nearDir in playerStartCross:
 				otherX, otherY = getTileCoordXYWithWrap((x,y), nearDir)
 				otherPlot = cymap.plot(otherX,otherY)
-				dx,dy = nearDir
-				if abs(dx) < 2 and abs(dy) < 2:
-					if otherPlot.isLake():
-						wetness += 32
-					if otherPlot.isFreshWater() or otherPlot.isRiver():
-						wetness += 16
-					continue
 				#smaller bonuses for plots not near but in the start cross
-				else:
-					if otherPlot.isLake():
-						wetness += 12
-					if otherPlot.isFreshWater() or otherPlot.isRiver():
-						wetness += 6
+				dx, dy = nearDir
+				bNear = abs(dx) < 2 and abs(dy) < 2
+				if otherPlot.isWater() and otherPlot.isFreshWater():
+					wetness += 12 + bNear * 20
+				elif otherPlot.isFreshWater():
+					wetness += 6 + bNear * 10
 
 			preComputedWetness[plotIndex] = wetness
 			if wetness > maxWetness:
@@ -4441,7 +4435,7 @@ def listNearSpaceHash(x,y,searchRange):
 			xp, yp = getTileCoordXYWithWrap((x,y),(xd,yd))
 			xh = int(xp/partitionWidth)
 			yh = int(yp/partitionHeight)
-			if not (xh,yh) in hashes:
+			if (xh,yh) not in hashes:
 				hashes.append((xh,yh))
 			yd += ystep
 		xd += xstep

@@ -1,4 +1,8 @@
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
+#include "CvGlobals.h"
+#include "CvMap.h"
+#include "CvPlot.h"
 #include "CyArea.h"
 #include "CyCity.h"
 #include "CyPlot.h"
@@ -52,7 +56,7 @@ bool CyPlot::isAdjacentToArea(const CyArea& kArea) const
 
 bool CyPlot::isCoastal() const
 {
-	return m_pPlot ? m_pPlot->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()) : false;
+	return m_pPlot ? m_pPlot->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()) : false;
 }
 
 bool CyPlot::isLake() const
@@ -271,9 +275,9 @@ int CyPlot::getUpgradeTimeLeft(int /*ImprovementTypes*/ eImprovement, int /*Play
 	return m_pPlot ? m_pPlot->getUpgradeTimeLeft((ImprovementTypes) eImprovement, (PlayerTypes) ePlayer) : -1;
 }
 
-void CyPlot::changeUpgradeProgress(int iChange)
+void CyPlot::changeImprovementUpgradeProgress(int iChange)
 {
-	if (m_pPlot) m_pPlot->changeUpgradeProgressHundredths(iChange*100);
+	if (m_pPlot) m_pPlot->changeImprovementUpgradeProgress(iChange*100);
 }
 
 bool CyPlot::isStartingPlot() const
@@ -358,7 +362,7 @@ bool CyPlot::isHills() const
 
 bool CyPlot::isPeak() const
 {
-	return m_pPlot ? m_pPlot->isPeak2(true) : false;
+	return m_pPlot ? m_pPlot->isAsPeak() : false;
 }
 
 void CyPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGraphics)
@@ -458,12 +462,14 @@ void CyPlot::setRouteType(int /*RouteTypes*/ eNewValue)
 
 CyCity* CyPlot::getPlotCity() const
 {
-	return m_pPlot ? new CyCity(m_pPlot->getPlotCity()) : NULL;
+	CvCity* city = m_pPlot ? m_pPlot->getPlotCity() : NULL;
+	return city ? new CyCity(city) : NULL;
 }
 
 CyCity* CyPlot::getWorkingCity() const
 {
-	return m_pPlot ? new CyCity(m_pPlot->getWorkingCity()) : NULL;
+	CvCity* city = m_pPlot ? m_pPlot->getWorkingCity() : NULL;
+	return city ? new CyCity(city) : NULL;
 }
 
 int CyPlot::getRiverID() const
@@ -569,6 +575,19 @@ bool CyPlot::isInvisibleVisible(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ 
 void CyPlot::changeInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible, int iChange, int iIntensity)
 {
 	if (m_pPlot) m_pPlot->changeInvisibleVisibilityCount((TeamTypes) eTeam, (InvisibleTypes) eInvisible, iChange, iIntensity);
+}
+
+python::list CyPlot::units() const
+{
+	python::list list = python::list();
+	if (m_pPlot)
+	{
+		foreach_(CvUnit* unit, m_pPlot->units())
+		{
+			list.append(new CyUnit(unit));
+		}
+	}
+	return list;
 }
 
 int CyPlot::getNumUnits() const

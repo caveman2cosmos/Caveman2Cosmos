@@ -99,7 +99,7 @@
 		<Tag>TXT_KEY_BUILDING_ELEPHANT_HERD_STRATEGY</Tag>
 		<English>Only subdued elephants can build the elephant herd. It provides a elephant resource. Based on an idea by Sarkyn.</English>
 		<French>Seuls les éléphants apprivoisés peuvent constituer le troupeau d'éléphants. Il fournit une ressource d'éléphant. Basé sur une idée de Sarkyn.</French>
-		<Italian>Solo gli elefanti addomesticati possono costruire un Branco - Elefanti; quest'edificio fornisce una fonte di elefanti. Basato su un'idea di Sarkyn.</Italian>
+		<Italian>Solo gli elefanti addomesticati possono costruire un Branco - Elefanti; quest'edificio fornisce una fonte di elefanti.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_STRATEGY</Tag>
@@ -146,19 +146,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAWKING_STRATEGY</Tag>
 		<English>Build Hawking Hut to increase your cities Espionage and Food.</English>
-		<French>Contruisez la [COLOR_BUILDING_TEXT]Hutte du fauconnier[COLOR_REVERT] pour augmenter l'espionage et la nourriture de votre ville.</French>
+		<French>Construisez la [COLOR_BUILDING_TEXT]Hutte du fauconnier[COLOR_REVERT] pour augmenter l'espionnage et la nourriture de votre ville.</French>
 		<Italian>Costruisci la capanna del falconiere per incrementare lo spionaggio ed il cibo della tua città.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORSE_HERD_STRATEGY</Tag>
 		<English>Only subdued horses can build the horse herd. It provides a horse resource.</English>
 		<French>Le troupeau de chevaux peut être construit directement par des chevaux apprivoisés.</French>
-		<Italian>Solo i cavalli addomesticati possono costruire un Branco - Cavalli; quest'edificio fornisce una fonte di cavalli. Basato su un'idea di Sarkyn.</Italian>
+		<Italian>Solo i cavalli addomesticati possono costruire un Branco - Cavalli; quest'edificio fornisce una fonte di cavalli.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LLAMA_HERD_STRATEGY</Tag>
 		<English>Only subdued llamas can build the Llama herd. It provides a Llama resource.</English>
-		<French>Le troupeau de lamas peut être construit directement par des Lamaes apprivoisés.</French>
+		<French>Seuls les lamas maîtrisés peuvent construire le troupeau de lamas. Il fournit une ressource Llama.</French>
 		<Italian>Solo i lama addomesticati possono costruire un Branco - Lama; quest'edificio fornisce una fonte di lama.</Italian>
 	</TEXT>
 	<TEXT>
@@ -180,7 +180,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MULE_TRAINER_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Mule Trainer[COLOR_REVERT] is required to build the Mule units. The [COLOR_UNIT_TEXT]Pack Mule[COLOR_REVERT] is recon unit that can traverse mountains. The [COLOR_UNIT_TEXT]Work Mule[COLOR_REVERT] is a worker unit.</English>
-		<French>Le [COLOR_BUILDING_TEXT]Dresseur de Mules[COLOR_REVERT] est requis pour produire des unités avec mules. L'[COLOR_UNIT_TEXT]Aclaireur avec Mule[COLOR_REVERT] est une unité de reconnaissance qui peut passer les montagnes. L'[COLOR_UNIT_TEXT]Ouvrier avec Mule[COLOR_REVERT] est un ouvrier particulièrement efficace.</French>
+		<French>Le [COLOR_BUILDING_TEXT]Dresseur de Mules[COLOR_REVERT] est requis pour produire des unités avec mules. L'[COLOR_UNIT_TEXT]Éclaireur avec Mule[COLOR_REVERT] est une unité de reconnaissance qui peut passer les montagnes. L'[COLOR_UNIT_TEXT]Ouvrier avec Mule[COLOR_REVERT] est un ouvrier particulièrement efficace.</French>
 		<Italian>L'[COLOR_BUILDING_TEXT]addestratore di muli[COLOR_REVERT] è necessario per costruire le unità di muli. Il [COLOR_UNIT_TEXT]branco di muli[COLOR_REVERT] è un'unità da ricognizione che può attraversare le montagne. Il [COLOR_UNIT_TEXT]Mulo da lavoro[COLOR_REVERT] è invece una speciale unità di lavoratori.</Italian>
 	</TEXT>
 	<TEXT>
@@ -197,7 +197,7 @@
 		<Tag>TXT_KEY_BUILDING_PIG_HERD_STRATEGY</Tag>
 		<English>Only subdued pigs can build the pig herd. It provides a pig resource.</English>
 		<French>Le troupeau de cochons peut être construit directement par des sangliers apprivoisés.</French>
-		<Italian>Solo i maiali addomesticati possono costruire un Branco - Maiali; quest'edificio fornisce una fonte di maiali. Basato su un'idea di Sarkyn.</Italian>
+		<Italian>Solo i maiali addomesticati possono costruire un Branco - Maiali; quest'edificio fornisce una fonte di maiali.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POULTRY_HERD_STRATEGY</Tag>
@@ -206,7 +206,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RATITE_HERD_STRATEGY</Tag>
 		<English>Ratite Flocks provide carcass, eggs and feathers as well as happiness, food and production.</English>
-		<French>Les troupeaux de ratites fournissent des carcasse, des oeufs et des plumes, ainsi que bonheur, nourriture et production.</French>
+		<French>Les troupeaux de ratites fournissent des carcasse, des œufs et des plumes, ainsi que bonheur, nourriture et production.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROO_HERD_STRATEGY</Tag>
@@ -285,13 +285,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUNTER_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Hunter units[COLOR_REVERT] specialise in capturing animal units. They are not as good as [COLOR_UNIT_TEXT]recon units[COLOR_REVERT] when it comes to scouting.</English>
-		<French>Les [COLOR_UNIT_TEXT]unités de chasse[COLOR_REVERT] sont spécialisées dans la capture des unités animales. Elle peuvent éventuellemnt faire de l'exploration, même si elle n'obtiennent pas autant d'avantages que les [COLOR_UNIT_TEXT]unités de reconnaissance units[COLOR_REVERT].</French>
+		<French>Les [COLOR_UNIT_TEXT]unités de chasse[COLOR_REVERT] sont spécialisées dans la capture des unités animales. Elle peuvent éventuellement faire de l'exploration, même si elle n'obtiennent pas autant d'avantages que les [COLOR_UNIT_TEXT]unités de reconnaissance units[COLOR_REVERT].</French>
 		<Italian>Le unità di [COLOR_UNIT_TEXT]Cacciatori[COLOR_REVERT] sono specializzate nella cattura di animali. Non sono efficaci come le [COLOR_UNIT_TEXT]Unità da ricognizione[COLOR_REVERT] quando devono esplorare un territorio.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEA_ANIMAL_STRATEGY</Tag>
 		<English>All units have a small chance of subduing any animal unit. Sometimes instead of subduing an animal it will become a resource. Subdued animals can be used to build special buildings or traded for food, money or hammers.</English>
-		<French>Toutes les unités ont une petite probabilité d'apprivoiser une unité animale. De temps en temps, celle-ci peut devenir une ressource. Les animaux apprivoisés peuvent servient pour construire des bâtiments spéciaux.</French>
+		<French>Toutes les unités ont une petite probabilité d'apprivoiser une unité animale. De temps en temps, celle-ci peut devenir une ressource. Les animaux soumis peuvent être utilisés pour construire des bâtiments spéciaux ou échangés contre de la nourriture, de l'argent ou de la production.</French>
 		<Italian>Tutte le unità hanno una piccola chance di addomesticare un animale. A volte gli animali non vengono addomesticati, bensì diventano risorse sulla mappa. Gli animali addomesticati possono essere usati per costruire edifici speciali, possono essere migliorati in unità da combattimento e possono perfino essere venduti in cambio di cibo, oro o produzione.</Italian>
 	</TEXT>
 	<TEXT>

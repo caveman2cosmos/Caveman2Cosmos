@@ -72,8 +72,8 @@ public:
 	void parseSpecialistHelpActual(CvWStringBuffer &szHelpString, SpecialistTypes eSpecialist, CvCity* pCity, bool bCivilopediaText = false, int iChange = 0);
 // BUG - Specialist Actual Effects - end
 	void parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const CvCity& kCity);
-	void parsePromotionHelp(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar* pcNewline = NEWLINE);
-	void parsePromotionHelpInternal(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar* pcNewline, bool bAccrueLines);
+	void parsePromotionHelp(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar_t* pcNewline = NEWLINE);
+	void parsePromotionHelpInternal(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar_t* pcNewline, bool bAccrueLines);
 	void parseCivicInfo(CvWStringBuffer &szBuffer, CivicTypes eCivic, bool bCivilopediaText = false, bool bPlayerContext = false, bool bSkipName = false);
 	void parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePlayer);
 	/*** Dexy - Fixed Borders START ****/
@@ -217,11 +217,7 @@ public:
 	void buildRiverTradeString( CvWStringBuffer& szBuffer, TechTypes eTech, bool bList = false, bool bPlayerContext = false );
 	void buildSpecialBuildingString( CvWStringBuffer& szBuffer, TechTypes eTech, int iBuildingType, bool bList = false, bool bPlayerContext = false );
 	void buildYieldChangeString( CvWStringBuffer& szBuffer, TechTypes eTech, int iYieldType, bool bList = false, bool bPlayerContext = false );
-/************************************************************************************************/
-/* Afforess	                  Start		 01/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	void buildBuildingTechCommerceChangeString( CvWStringBuffer& szBuffer, TechTypes eTech, int iBuildingType, bool bList = false, bool bPlayerContext = false );
 	void buildBuildingTechYieldChangeString( CvWStringBuffer& szBuffer, TechTypes eTech, int iBuildingType, bool bList = false, bool bPlayerContext = false );
 	void buildBuildingTechSpecialistChangeString( CvWStringBuffer& szBuffer, TechTypes eTech, int iBuildingType, bool bList = false, bool bPlayerContext = false );
@@ -231,11 +227,9 @@ public:
 	void buildBuildingTechHealthChangesString( CvWStringBuffer& szBuffer, TechTypes eTech, int iBuildingType, bool bList = false, bool bPlayerContext = false );
 	void buildEmbassyString( CvWStringBuffer& szBuffer, TechTypes eTech, bool bList = false, bool bPlayerContext = false );
 	bool setBuildingAdditionalDefenseHelp(CvWStringBuffer &szBuffer, const CvCity& city, const CvWString& szStart, bool bStarted = false);
-	void setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city);
+	void getDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city);
 	void setEmploymentHelp(CvWStringBuffer &szBuffer, CvCity& city);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	bool buildBonusRevealString( CvWStringBuffer& szBuffer, TechTypes eTech, int iBonusType, bool bFirst, bool bList = false, bool bPlayerContext = false );
 	bool buildCivicRevealString( CvWStringBuffer& szBuffer, TechTypes eTech, int iCivicType, bool bFirst, bool bList = false, bool bPlayerContext = false );
 	bool buildProcessInfoString( CvWStringBuffer& szBuffer, TechTypes eTech, int iProcessType, bool bFirst, bool bList = false, bool bPlayerContext = false );
@@ -299,7 +293,7 @@ public:
 	void getNukePlotHelp(CvPlot* pPlot, CvWString& strHelp);
 	DllExport void getInterfaceCenterText(CvWString& strText);
 	DllExport void getTurnTimerText(CvWString& strText);
-	DllExport void getFontSymbols(std::vector< std::vector<wchar> >& aacSymbols, std::vector<int>& aiMaxNumRows);
+	DllExport void getFontSymbols(std::vector< std::vector<wchar_t> >& aacSymbols, std::vector<int>& aiMaxNumRows);
 	DllExport void assignFontIds(int iFirstSymbolCode, int iPadAmount);
 
 	DllExport void getCityDataForAS(std::vector<CvWBData>& mapCityList, std::vector<CvWBData>& mapBuildingList, std::vector<CvWBData>& mapAutomateList);

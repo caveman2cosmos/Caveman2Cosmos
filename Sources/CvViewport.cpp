@@ -1,4 +1,11 @@
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
+#include "CvCity.h"
+#include "CvPlot.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
+#include "CvUnit.h"
+#include "CvViewport.h"
 
 CvViewport::CvViewport(CvMap* pMap, bool bIsFullMapContext) 
 	: m_pMap(pMap)

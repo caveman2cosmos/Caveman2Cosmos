@@ -7,9 +7,18 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
 #include "CvGame.h"
-#include "CvXMLLoadUtility.h"
+#include "CvGameObject.h"
+#include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvPlayer.h"
+#include "CvPlot.h"
+#include "CvProperties.h"
 #include "CvTeam.h"
+#include "CvUnit.h"
+#include "CvXMLLoadUtility.h"
+#include "CheckSum.h"
 
 CvProperties::CvProperties()
 {
@@ -324,9 +333,9 @@ void CvProperties::readWrapper(FDataStreamBase *pStream)
 			// Handle old save game before property remapping
 			WRAPPER_READ(wrapper, "CvProperties", &eProp);
 			if (eProp == 0) // crime
-				eProp = GC.getInfoTypeForString("PROPERTY_CRIME");
+				eProp = (int)GC.getPROPERTY_CRIME();
 			else if (eProp == 1) // flammability
-				eProp = GC.getInfoTypeForString("PROPERTY_FLAMMABILITY");
+				eProp = (int)GC.getPROPERTY_FLAMMABILITY();
 			if (eProp == -1) // removed property
 			{
 				WRAPPER_SKIP_ELEMENT(wrapper, "CvProperties", iVal, SAVE_VALUE_TYPE_INT);

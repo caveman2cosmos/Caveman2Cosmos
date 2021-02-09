@@ -63,6 +63,11 @@ def recalculateModifiers():
 	BugGameUtils.getDispatcher().getBaseUtils().reset()
 	#import CvEventInterface
 	#CvEventInterface.getEventManager().reset()
+	import DynamicCivNames
+	GC = CyGlobalContext()
+	for loopPlayer in range(GC.getMAX_PC_PLAYERS()):
+		if GC.getPlayer(loopPlayer).isAlive():
+			DynamicCivNames.g_DynamicCivNames.setNewNameByCivics(loopPlayer)
 
 def onPbemSend(argsList):
 	import smtplib, MimeWriter, base64, StringIO
@@ -176,18 +181,9 @@ def getOptionINT(argsList):
 	except:
 		return default
 
-def gameStartSave():
-	autoSave("[Start]")
-
-def gameEndSave():
-	autoSave("[End]")
-
 def gameExitSave():
-	autoSave("[Exit]")
-
-def autoSave(prefix):
 	import AutoSave
-	AutoSave.autoSave(prefix)
+	AutoSave.autoSave("[Exit]")
 
 # Referenced by the BtS exe.
 def getConsoleMacro(argsList): return ""

@@ -1073,6 +1073,14 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_ASIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_ASIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_ASIAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
 					<UnitType>UNIT_MASTER_TRACKER</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_TRACKER_ASIAN</EarlyArtDefineTag>
@@ -6851,6 +6859,14 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_GREEK</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_GREEK</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_GREEK</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
 					<UnitType>UNIT_MASTER_TRACKER</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_TRACKER_GREEK</EarlyArtDefineTag>
@@ -8536,6 +8552,14 @@
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_MEAST</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_MEAST</LateArtDefineTag>
 						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_MEAST</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_MEAST</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_MEAST</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_MEAST</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -10551,6 +10575,14 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_SOUTH_AMERICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_SOUTH_AMERICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_SOUTH_AMERICAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
 					<UnitType>UNIT_MASTER_TRACKER</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_TRACKER_SOUTH_AMERICA</EarlyArtDefineTag>
@@ -12425,6 +12457,14 @@
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_NATIVE_AMERICAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_NATIVE_AMERICAN</LateArtDefineTag>
 						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_NATIVE_AMERICAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_NATIVE_AMERICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_NATIVE_AMERICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_NATIVE_AMERICAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -14320,6 +14360,14 @@
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_NATIVE_AMERICAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_NATIVE_AMERICAN</LateArtDefineTag>
 						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_NATIVE_AMERICAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_NATIVE_AMERICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_NATIVE_AMERICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_NATIVE_AMERICAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -16338,6 +16386,14 @@
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_AFRICAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_AFRICAN</LateArtDefineTag>
 						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_AFRICAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_AFRICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_AFRICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_AFRICAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -19124,6 +19180,14 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_GREEK</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_GREEK</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_GREEK</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
 					<UnitType>UNIT_MASTER_TRACKER</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_TRACKER_GREEK</EarlyArtDefineTag>
@@ -21685,6 +21749,14 @@
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_INDIA</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_INDIA</LateArtDefineTag>
 						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_INDIA</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_INDIA</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_INDIA</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_INDIA</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -24547,6 +24619,14 @@
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_EGYPTIAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_EGYPTIAN</LateArtDefineTag>
 						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_EGYPTIAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_EGYPTIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_EGYPTIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_EGYPTIAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -27435,6 +27515,14 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_NATIVE_AMERICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_NATIVE_AMERICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_NATIVE_AMERICAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
 					<UnitType>UNIT_MASTER_TRACKER</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_TRACKER_NATIVE_AMERICAN</EarlyArtDefineTag>
@@ -29299,6 +29387,14 @@
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_MEAST</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_MEAST</LateArtDefineTag>
 						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_MEAST</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_MEAST</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_MEAST</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_MEAST</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -33017,6 +33113,14 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_GREEK</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_GREEK</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_GREEK</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
 					<UnitType>UNIT_MASTER_TRACKER</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_TRACKER_GREEK</EarlyArtDefineTag>
@@ -35626,6 +35730,14 @@
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_MEAST</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_MEAST</LateArtDefineTag>
 						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_MEAST</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_MEAST</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_MEAST</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_MEAST</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -38852,6 +38964,14 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_ASIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_ASIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_ASIAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
 					<UnitType>UNIT_MASTER_TRACKER</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_TRACKER_ASIAN</EarlyArtDefineTag>
@@ -40958,6 +41078,14 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_ASIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_ASIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_ASIAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
 					<UnitType>UNIT_MASTER_TRACKER</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_TRACKER_ASIAN</EarlyArtDefineTag>
@@ -43056,6 +43184,14 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_ASIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_ASIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_ASIAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
 					<UnitType>UNIT_MASTER_TRACKER</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_TRACKER_ASIAN</EarlyArtDefineTag>
@@ -45101,6 +45237,14 @@
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_AFRICAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_AFRICAN</LateArtDefineTag>
 						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_AFRICAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_AFRICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_AFRICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_AFRICAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -47226,6 +47370,14 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_AFRICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_AFRICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_AFRICAN</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
 					<UnitType>UNIT_MASTER_TRACKER</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_TRACKER_AFRICAN</EarlyArtDefineTag>
@@ -49225,6 +49377,14 @@
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_MEAST</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_MEAST</LateArtDefineTag>
 						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_MEAST</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_MEAST</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_MEAST</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_MEAST</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -51258,6 +51418,14 @@
 						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_SOUTH_AMERICA</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_SOUTH_AMERICA</LateArtDefineTag>
 						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_RANGER_SOUTH_AMERICA</MiddleArtDefineTag>
+					</UnitMeshGroup>
+				</StyleUnit>
+				<StyleUnit>
+					<UnitType>UNIT_MASTER_CHASER</UnitType>
+					<UnitMeshGroup>
+						<EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_SOUTH_AMERICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_SOUTH_AMERICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_MASTER_CHASER_SOUTH_AMERICAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>

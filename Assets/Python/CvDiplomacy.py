@@ -44,7 +44,7 @@ class CvDiplomacy:
 		elif szType == "AI_DIPLOCOMMENT_REFUSE_TO_TALK":
 			# Exit...
 			self.addUserComment("USER_DIPLOCOMMENT_EXIT")
-			self.diploScreen.endTrade();
+			self.diploScreen.endTrade()
 
 		# If the AI is offering a city or to give help
 		elif szType in ("AI_DIPLOCOMMENT_OFFER_CITY", "AI_DIPLOCOMMENT_GIVE_HELP"):
@@ -262,11 +262,9 @@ class CvDiplomacy:
 			for iPlayerX in range(GC.getMAX_PC_PLAYERS()):
 				CyPlayerX = GC.getPlayer(iPlayerX)
 				if CyPlayerX.isAlive() and CyTeamAct.isAtWar(CyPlayerX.getTeam()):
-					CyCity, i = CyPlayerX.firstCity(False)
-					while CyCity:
-						if CyCity.isRevealed(iTeamAct):
+					for CyCity in CyPlayerX.cities():
+						if CyCity.isRevealed(iTeamAct, False):
 							self.addUserComment("USER_DIPLOCOMMENT_TARGET_CITY", iPlayerX, CyCity.getID(), CyCity.getNameKey())
-						CyCity, i = CyPlayerX.nextCity(i, False)
 
 			self.addUserComment("USER_DIPLOCOMMENT_SOMETHING_ELSE")
 			self.addUserComment("USER_DIPLOCOMMENT_EXIT")

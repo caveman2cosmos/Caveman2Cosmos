@@ -5,11 +5,12 @@
 		<English>Military Standard (Zebra)</English>
 		<French>Standards Militaires (Zèbres)</French>
 		<Polish>Sztandar Wojskowy (Zebra)</Polish>
+		<Russian>Òîòåì «Çåáðà»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_ZEBRA_HELP</Tag>
 		<English>[ICON_BULLET]Build Zebra buildings and units faster in this city.</English>
-		<French>Construit les bâtiments et unités Zèbres plus vite dans cette Ville.</French>
+		<French>Construit les bâtiments et unités Zèbres plus vite dans cette ville.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_HERD</Tag>
@@ -21,6 +22,7 @@
 		</French>
 		<Italian>Recinto-Zebra</Italian>
 		<Polish>Stado - Zebra</Polish>
+		<Russian>Ñòàäî çåáð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_TRAINER</Tag>
@@ -32,12 +34,14 @@
 		</French>
 		<Italian>Allevatore di zebre</Italian>
 		<Polish>Treser Zebr</Polish>
+		<Russian>Ïðèðó÷åíèå çåáð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_TRAINER_EFFECT</Tag>
 		<English>Effect - Heritage - Zebras</English>
 		<French>Effet - Patrimoine (Zèbres)</French>
 		<Polish>Efekt - Dziedzictwo - Zebra</Polish>
+		<Russian>Ïèòîìíèê çåáð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_TRAINER_HELP</Tag>
@@ -49,6 +53,7 @@
 		<English>Heritage - Zebra</English>
 		<French>Patrimoine (Zèbres)</French>
 		<Polish>Dziedzictwo - Zebra</Polish>
+		<Russian>Ðàçâåäåíèå çåáð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_TRAINER_HERITAGE_PEDIA</Tag>
@@ -80,6 +85,7 @@
 		</French>
 		<Italian>Arciere su zebra</Italian>
 		<Polish>Zebryjski Łucznik</Polish>
+		<Russian>Ëó÷íèê íà çåáðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_ARCHER_STRATEGY</Tag>
@@ -95,6 +101,7 @@
 		</French>
 		<Italian>Cavalleria su zebra</Italian>
 		<Polish>Kawaleria (Zebra)</Polish>
+		<Russian>Êàâàëåðèñò íà çåáðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_CAVALRY_STRATEGY</Tag>
@@ -110,6 +117,7 @@
 		</French>
 		<Italian>Carro trainato da zebre</Italian>
 		<Polish>Rydwan (Zebra)</Polish>
+		<Russian>Êîëåñíèöà ñ çåáðàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_CHARIOT_STRATEGY</Tag>
@@ -125,6 +133,7 @@
 		</French>
 		<Italian>Corazziere su zebra</Italian>
 		<Polish>Kirasjer (Zebra)</Polish>
+		<Russian>Êèðàñèð íà çåáðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_CUIRASSIER_STRATEGY</Tag>
@@ -140,6 +149,7 @@
 		</French>
 		<Italian>Cavaliere su zebra</Italian>
 		<Polish>Rycerz (Zebra)</Polish>
+		<Russian>Ðûöàðü íà çåáðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_KNIGHT_STRATEGY</Tag>

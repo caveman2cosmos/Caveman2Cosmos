@@ -8,8 +8,8 @@
 // Passed to Python
 //
 
-#include "CvGlobals.h"
-
+class CvArtFileMgr;
+class CvInternalGlobals;
 class CyGame;
 class CyMap;
 class CyPlayer;
@@ -99,7 +99,6 @@ public:
 	CvTechInfo* getTechInfo(int i) const;
 	CvSpecialBuildingInfo* getSpecialBuildingInfo(int i) const;
 	CvPromotionInfo* getPromotionInfo(int i) const;
-	CvAnimationPathInfo * getAnimationPathInfo(int i) const;
 	CvEmphasizeInfo * getEmphasizeInfo(int i) const;
 	CvUpkeepInfo * getUpkeepInfo(int i) const;
 	CvCultureLevelInfo * getCultureLevelInfo(int i) const;
@@ -163,25 +162,19 @@ public:
 	CvArtInfoUnit* getUnitArtInfo(int i) const;
 	CvArtInfoBuilding* getBuildingArtInfo(int i) const;
 	CvArtInfoCivilization* getCivilizationArtInfo(int i) const;
-	CvArtInfoLeaderhead* getLeaderheadArtInfo(int i) const;
 	CvArtInfoBonus* getBonusArtInfo(int i) const;
 	CvArtInfoImprovement* getImprovementArtInfo(int i) const;
-	CvArtInfoTerrain* getTerrainArtInfo(int i) const;
-	CvArtInfoFeature* getFeatureArtInfo(int i) const;
-
 
 	// Structs
-
-	const char* getEntityEventTypes(int i) const { return GC.getEntityEventTypes((EntityEventTypes) i); }
+/*
 	const char* getAnimationOperatorTypes(int i) const { return GC.getAnimationOperatorTypes((AnimationOperatorTypes) i); }
 	const char* getFunctionTypes(int i) const { return GC.getFunctionTypes((FunctionTypes) i); }
-	const char* getFlavorTypes(int i) const { return GC.getFlavorTypes((FlavorTypes) i); }
-	const char* getArtStyleTypes(int i) const { return GC.getArtStyleTypes((ArtStyleTypes) i); }
 	const char* getCitySizeTypes(int i) const { return GC.getCitySizeTypes(i); }
 	const char* getContactTypes(int i) const { return GC.getContactTypes((ContactTypes) i); }
+*/
+	const char* getArtStyleTypes(int i) const { return GC.getArtStyleTypes((ArtStyleTypes) i); }
+	const char* getFlavorTypes(int i) const { return GC.getFlavorTypes((FlavorTypes) i); }
 	const char* getDiplomacyPowerTypes(int i) const { return GC.getDiplomacyPowerTypes((DiplomacyPowerTypes) i); }
-	const char *getFootstepAudioTypes(int i) { return GC.getFootstepAudioTypes(i); }
-	const char *getFootstepAudioTags(int i) { return GC.getFootstepAudioTags(i); }
 
 	int getNumEffectInfos() const { return GC.getNumEffectInfos(); }
 	int getNumTerrainInfos() const { return GC.getNumTerrainInfos(); }
@@ -256,24 +249,6 @@ public:
 	int getNumInvisibleInfos() const { return GC.getNumInvisibleInfos(); }
 	int getNumVoteSourceInfos() const { return GC.getNumVoteSourceInfos(); }
 
-	// ArtInfos
-	int getNumInterfaceArtInfos() const { return ARTFILEMGR.getNumInterfaceArtInfos(); }
-	int getNumMovieArtInfos() const { return ARTFILEMGR.getNumMovieArtInfos(); }
-	int getNumMiscArtInfos() const { return ARTFILEMGR.getNumMiscArtInfos(); }
-	int getNumUnitArtInfos() const { return ARTFILEMGR.getNumUnitArtInfos(); }
-	int getNumBuildingArtInfos() const { return ARTFILEMGR.getNumBuildingArtInfos(); }
-	int getNumCivilizationArtInfos() const { return ARTFILEMGR.getNumCivilizationArtInfos(); }
-	int getNumLeaderheadArtInfos() const { return ARTFILEMGR.getNumLeaderheadArtInfos(); }
-	int getNumImprovementArtInfos() const { return ARTFILEMGR.getNumImprovementArtInfos(); }
-	int getNumBonusArtInfos() const { return ARTFILEMGR.getNumBonusArtInfos(); }
-	int getNumTerrainArtInfos() const { return ARTFILEMGR.getNumTerrainArtInfos(); }
-	int getNumFeatureArtInfos() const { return ARTFILEMGR.getNumFeatureArtInfos(); }
-	int getNumAnimationPathInfos() const { return GC.getNumAnimationPathInfos(); }
-	int getNumAnimationCategoryInfos() const { return GC.getNumAnimationCategoryInfos(); }
-	int getNumUnitArtStyleTypeInfos() const { return GC.getNumUnitArtStyleTypeInfos(); }
-
-
-	int getNumEntityEventTypes() const { return GC.getNumEntityEventTypes(); }
 	int getNumAnimationOperatorTypes() const { return GC.getNumAnimationOperatorTypes(); }
 	int getNumArtStyleTypes() const { return GC.getNumArtStyleTypes(); }
 	int getNumFlavorTypes() const { return GC.getNumFlavorTypes(); }
@@ -286,32 +261,14 @@ public:
 	// Globals Defines
 	//////////////////////
 
-/************************************************************************************************/
-/* MOD_COMPONENT_CONTROL                   08/02/07                            MRGENIE          */
-/*                                                                                              */
-/* Return true/false from                                                                       */
-/************************************************************************************************/
 	bool getDefineBOOL( const char * szName ) const { return GC.getDefineBOOL( szName ); }
-/************************************************************************************************/
-/* MOD_COMPONENT_CONTROL                   END                                                  */
-/************************************************************************************************/
 	int getDefineINT( const char * szName ) const { return GC.getDefineINT( szName ); }
 	float getDefineFLOAT( const char * szName ) const { return GC.getDefineFLOAT( szName ); }
 	const char * getDefineSTRING( const char * szName ) const { return GC.getDefineSTRING( szName ); }
+
 	void setDefineINT( const char * szName, int iValue ) { return GC.setDefineINT( szName, iValue ); }
 	void setDefineFLOAT( const char * szName, float fValue ) { return GC.setDefineFLOAT( szName, fValue ); }
 	void setDefineSTRING( const char * szName, const char * szValue ) { return GC.setDefineSTRING( szName, szValue ); }
-/************************************************************************************************/
-/* Mod Globals    Start                          09/13/10                           phungus420  */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool isDCM_BATTLE_EFFECTS() const { return GC.isDCM_BATTLE_EFFECTS(); }
-	int getBATTLE_EFFECT_LESS_FOOD() const { return GC.getBATTLE_EFFECT_LESS_FOOD(); }
-	int getBATTLE_EFFECT_LESS_PRODUCTION() const { return GC.getBATTLE_EFFECT_LESS_PRODUCTION(); }
-	int getBATTLE_EFFECT_LESS_COMMERCE() const { return GC.getBATTLE_EFFECT_LESS_COMMERCE(); }
-	int getBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS() const { return GC.getBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS(); }
-	int getMAX_BATTLE_TURNS() const { return GC.getMAX_BATTLE_TURNS(); }
 
 	bool isDCM_AIR_BOMBING() const { return GC.isDCM_AIR_BOMBING(); }
 	bool isDCM_RANGE_BOMBARD() const { return GC.isDCM_RANGE_BOMBARD(); }
@@ -333,9 +290,6 @@ public:
 	bool isSS_ENABLED() const { return GC.isSS_ENABLED(); }
 	bool isSS_BRIBE() const { return GC.isSS_BRIBE(); }
 	bool isSS_ASSASSINATE() const { return GC.isSS_ASSASSINATE(); }
-/************************************************************************************************/
-/* Mod Globals                        END                                           phungus420  */
-/************************************************************************************************/
 
 	int getMOVE_DENOMINATOR() const { return GC.getMOVE_DENOMINATOR(); }
 	int getNUM_UNIT_PREREQ_OR_BONUSES() const { return GC.getNUM_UNIT_PREREQ_OR_BONUSES(); }
@@ -357,16 +311,13 @@ public:
 	int getNUM_UNIT_AND_TECH_PREREQS() const { return GC.getNUM_UNIT_AND_TECH_PREREQS(); }
 	int getNUM_AND_TECH_PREREQS() const { return GC.getNUM_AND_TECH_PREREQS(); }
 	int getNUM_OR_TECH_PREREQS() const { return GC.getNUM_OR_TECH_PREREQS(); }
-	int getLAKE_MAX_AREA_SIZE() const { return GC.getLAKE_MAX_AREA_SIZE(); }
 	int getNUM_ROUTE_PREREQ_OR_BONUSES() const { return GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); }
 	int getNUM_BUILDING_AND_TECH_PREREQS() const { return GC.getNUM_BUILDING_AND_TECH_PREREQS(); }
-	int getMIN_WATER_SIZE_FOR_OCEAN() const { return GC.getMIN_WATER_SIZE_FOR_OCEAN(); }
 	int getFORTIFY_MODIFIER_PER_TURN() const { return GC.getFORTIFY_MODIFIER_PER_TURN(); }
 	int getMAX_CITY_DEFENSE_DAMAGE() const { return GC.getMAX_CITY_DEFENSE_DAMAGE(); }
 	int getNUM_CORPORATION_PREREQ_BONUSES() const { return GC.getNUM_CORPORATION_PREREQ_BONUSES(); }
 	int getPEAK_SEE_THROUGH_CHANGE() const { return GC.getPEAK_SEE_THROUGH_CHANGE(); }
 	int getHILLS_SEE_THROUGH_CHANGE() const { return GC.getHILLS_SEE_THROUGH_CHANGE(); }
-	int getSEAWATER_SEE_FROM_CHANGE() const { return GC.getSEAWATER_SEE_FROM_CHANGE(); }
 	int getPEAK_SEE_FROM_CHANGE() const { return GC.getPEAK_SEE_FROM_CHANGE(); }
 	int getHILLS_SEE_FROM_CHANGE() const { return GC.getHILLS_SEE_FROM_CHANGE(); }
 	int getUSE_SPIES_NO_ENTER_BORDERS() const { return GC.getUSE_SPIES_NO_ENTER_BORDERS(); }
@@ -417,26 +368,14 @@ public:
 	int getNUM_CITY_PLOTS() const { return NUM_CITY_PLOTS; }
 	int getCITY_HOME_PLOT() const { return CITY_HOME_PLOT; }
 
-// BUG - BUG Info - start
-	void setIsBug(bool bIsBug) { GC.setIsBug(bIsBug); }										// Exposed to Python
-// BUG - BUG Info - end
+	void setIsBug() { GC.setIsBug(); }
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int getPEAK_EXTRA_DEFENSE() const { return GC.getPEAK_EXTRA_DEFENSE(); }
 	int getPEAK_EXTRA_MOVEMENT() const { return GC.getPEAK_EXTRA_MOVEMENT(); }
-	bool isXMLLogging() const { return GC.isXMLLogging(); }
-	void setXMLLogging(bool bNewVal) { GC.setXMLLogging(bNewVal); }
 	
 	void setNoUpdateDefineINT( const char * szName, int iValue ) { return GC.setDefineINT( szName, iValue, false ); }
 	void setNoUpdateDefineFLOAT( const char * szName, float fValue ) { return GC.setDefineFLOAT( szName, fValue, false ); }
 	void setNoUpdateDefineSTRING( const char * szName, const char * szValue ) { return GC.setDefineSTRING( szName, szValue, false ); }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 };
 
 #endif	// CyGlobalContext_h

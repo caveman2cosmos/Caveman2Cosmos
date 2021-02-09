@@ -3,41 +3,41 @@
 	<BonusClassInfos>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_MISC</Type>
-			<iUnique>0</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_CROP</Type>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_LIVESTOCK</Type>
-			<iUnique>3</iUnique>
+			<iUniqueRange>3</iUniqueRange>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_SEAFOOD</Type>
-			<iUnique>0</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_STRATEGIC</Type>
-			<iUnique>1</iUnique>
+			<iUniqueRange>1</iUniqueRange>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_LUXURY</Type>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_PRODUCTION</Type>
-			<iUnique>2</iUnique>
+			<iUniqueRange>2</iUniqueRange>
 		</BonusClassInfo>
 		<!-- Represents resources, that are produced by buildings, and are not meant to be placed on map -->
 		<BonusClassInfo>
 			<Type>BONUSCLASS_MANUFACTURED</Type>
-			<iUnique>0</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 		</BonusClassInfo>
 		<!-- Represents resources, that are produced by cultural wonders, and are not meant to be placed on map -->
 		<BonusClassInfo>
 			<Type>BONUSCLASS_CULTURE</Type>
-			<iUnique>0</iUnique>
+			<iUniqueRange>0</iUniqueRange>
 		</BonusClassInfo>
 	</BonusClassInfos>
 </Civ4BonusClassInfos>

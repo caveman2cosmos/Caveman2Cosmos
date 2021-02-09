@@ -97,7 +97,7 @@ public:
 	void changeImprovementDuration(int iChange);
 
 	int getUpgradeTimeLeft(int /*ImprovementTypes*/ eImprovement, int /*PlayerTypes*/ ePlayer) const;
-	void changeUpgradeProgress(int iChange);
+	void changeImprovementUpgradeProgress(int iChange);
 
 	bool isStartingPlot() const;
 	void setStartingPlot(bool bNewValue);
@@ -163,6 +163,7 @@ public:
 	bool isInvisibleVisible(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible) const;
 	void changeInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible, int iChange, int iIntensity);
 
+	python::list units() const;
 	int getNumUnits() const;
 	CyUnit* getUnit(int iIndex) const;
 

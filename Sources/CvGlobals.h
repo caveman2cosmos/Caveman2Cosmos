@@ -152,7 +152,7 @@ class CvMapSwitchInfo;
 #include "GlobalDefines.h"
 #include <stack>
 
-extern CvDLLUtilityIFaceBase* g_DLL;
+extern CvDLLUtilityIFaceBase* gDLL;
 
 class cvInternalGlobals
 {
@@ -170,9 +170,9 @@ public:
 	void uninit();
 	void clearTypesMap();
 
+	CvDLLUtilityIFaceBase* getDLLIFace() const			{ return gDLL; }
 	CvDiplomacyScreen* getDiplomacyScreen() const 		{ return m_diplomacyScreen; }
 	CMPDiplomacyScreen* getMPDiplomacyScreen() const 	{ return m_mpDiplomacyScreen; }
-
 	FMPIManager*& getFMPMgrPtr()	 					{ return m_pFMPMgr; }
 	CvPortal& getPortal() const 						{ return *m_portal; }
 	CvSetupData& getSetupData() const 					{ return *m_setupData; }
@@ -260,11 +260,6 @@ public:
 	DirectionTypes getTurnRightDirection(int i) const;
 	DirectionTypes getXYDirection(int i, int j) const;
 
-/************************************************************************************************/
-/* SORT_ALPHABET                           11/19/07                                MRGENIE      */
-/*                                                                                              */
-/* Method for alphabetically order tags                                                         */
-/************************************************************************************************/
 	//
 	// Global Infos
 	// All info type strings are upper case and are kept in this hash map for fast lookup
@@ -272,56 +267,45 @@ public:
 
 	// returns the infos index, use this when searching for an info type string
 	int getInfoTypeForString(const char* szType, bool hideAssert = false) const;
-
-	void LogMissingType( const char* szType ) const;
-
-	bool hasInfoTypeForString(const char* szType, bool hideAssert = false) const;
-/*
-	DllExport void setInfoTypeFromString(const char* szType, int idx);
-*/
 	void setInfoTypeFromString(const char* szType, int idx);
 	void logInfoTypeMap(const char* tagMsg = "");
-/************************************************************************************************/
-/* SORT_ALPHABET                           END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
 	void infoTypeFromStringReset();
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 	void addToInfosVectors(void *infoVector);
 	void infosReset();
+	void cacheInfoTypes();
 	int getOrCreateInfoTypeForString(const char* szType);
 
 	void addDelayedResolution(int* pType, CvString szString);
 	CvString* getDelayedResolution(int* pType);
 	void removeDelayedResolution(int* pType);
+	template<class T>
+	void removeDelayedResolutionVector(const std::vector<T>& vector)
+	{
+		foreach_(T type, vector)
+			removeDelayedResolution((int*)&type);
+	}
 	void copyNonDefaultDelayedResolution(int* pTypeSelf, int* pTypeOther);
 	template<class T>
-	void copyNonDefaultDelayedResolutionVector(std::vector<T>& aTarget, std::vector<T>& aSource)
+	void copyNonDefaultDelayedResolutionVector(std::vector<T>& aTarget, const std::vector<T>& aSource)
 	{
 		std::stack<CvString> aszTemp;
-		std::vector<T>::iterator it = aTarget.end(), it2 = aSource.begin();
+		std::vector<T>::const_iterator it = aTarget.end(), it2 = aSource.begin();
 		while (it > aTarget.begin())
 		{
 			it--;
-			aszTemp.push(*getDelayedResolution(&*it));
-			removeDelayedResolution(&*it);
+			aszTemp.push(*getDelayedResolution((int*)&*it));
+			removeDelayedResolution((int*)&*it);
 		}
 		aTarget.insert(aTarget.end(), aSource.begin(), aSource.end());
 		it = aTarget.begin(); // because insert() invalidates the previous iterator
 		while (aszTemp.size())
 		{
-			addDelayedResolution(&*it++, aszTemp.top());
+			addDelayedResolution((int*)&*it++, aszTemp.top());
 			aszTemp.pop();
 		}
 		while (it2 != aSource.end())
 		{
-			addDelayedResolution(&*it++, *getDelayedResolution(&*it2++));
+			addDelayedResolution((int*)&*it++, *getDelayedResolution((int*)&*it2++));
 		}
 	}
 	void resolveDelayedResolution();
@@ -493,16 +477,6 @@ public:
 	void setXMLLogging(bool bNewVal);
 
 	void updateReplacements();
-
-#define DECLARE_GET_METHOD(dataType, VAR) \
-	dataType get##VAR() const { return m_##VAR; }
-	DO_FOR_EACH_INT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
-	DO_FOR_EACH_ENUM_GLOBAL_DEFINE(DECLARE_GET_METHOD)
-	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
-
-#define DECLARE_BOOL_GET_METHOD(dataType, VAR) \
-	dataType is##VAR() const { return m_##VAR; }
-	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(DECLARE_BOOL_GET_METHOD)
 
 	int getNumCityTabInfos() const;
 	CvInfoBase& getCityTabInfo(CityTabTypes e) const;
@@ -704,10 +678,6 @@ public:
 	int getTypesEnum(const char* szType) const;				// use this when searching for a type
 	void setTypesEnum(const char* szType, int iEnum);
 
-	int& getNumEntityEventTypes();
-	CvString*& getEntityEventTypes();
-	CvString& getEntityEventTypes(EntityEventTypes e);
-
 	int& getNumAnimationOperatorTypes();
 	CvString*& getAnimationOperatorTypes();
 	CvString& getAnimationOperatorTypes(AnimationOperatorTypes e);
@@ -759,35 +729,29 @@ public:
 	void cacheEnumGlobals();
 	void cacheGlobals();
 
+#define DECLARE_GET_METHOD(dataType, VAR) \
+	dataType get##VAR() const { return m_##VAR; }
+
+	DO_FOR_EACH_INT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+	DO_FOR_EACH_ENUM_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+
+	DO_FOR_EACH_INFO_TYPE(DECLARE_GET_METHOD)
+
+#define DECLARE_IS_METHOD(dataType, VAR) \
+	dataType is##VAR() const { return m_##VAR; }
+
+	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(DECLARE_IS_METHOD)
+
 	// ***** EXPOSED TO PYTHON *****
-/************************************************************************************************/
-/* MOD_COMPONENT_CONTROL                   08/02/07                            MRGENIE          */
-/*                                                                                              */
-/* Return true/false from                                                                       */
-/************************************************************************************************/
-	bool getDefineBOOL( const char * szName ) const;
-/************************************************************************************************/
-/* MOD_COMPONENT_CONTROL                   END                                                  */
-/************************************************************************************************/
+	bool getDefineBOOL(const char * szName) const;
+	int getDefineINT(const char * szName) const;
+	float getDefineFLOAT(const char * szName) const;
+	const char * getDefineSTRING(const char * szName) const;
 
-	void setGraphicalDetailPagingEnabled(bool bEnabled);
-	bool getGraphicalDetailPagingEnabled() const;
-	int getGraphicalDetailPageInRange() const;
-
-	int getDefineINT( const char * szName ) const;
-	float getDefineFLOAT( const char * szName ) const;
-	const char * getDefineSTRING( const char * szName ) const;
-/************************************************************************************************/
-/* Afforess	                  Start		 08/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	void setDefineINT( const char * szName, int iValue, bool bUpdate = true);
 	void setDefineFLOAT( const char * szName, float fValue, bool bUpdate = true );
 	void setDefineSTRING( const char * szName, const char * szValue, bool bUpdate = true );
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	float getPLOT_SIZE() const;
 
@@ -822,7 +786,6 @@ public:
 
 	////////////// END DEFINES //////////////////
 
-	inline CvDLLUtilityIFaceBase* getDLLIFace() const { return g_DLL; }		// inlined for perf reasons, do not use outside of dll
 	void setDLLProfiler(FProfiler* prof);
 	FProfiler* getDLLProfiler() const;
 	void enableDLLProfiler(bool bEnable);
@@ -832,90 +795,34 @@ public:
 	bool IsGraphicsInitialized() const;
 	void SetGraphicsInitialized(bool bVal);
 
-	// for caching
-	bool readBuildingInfoArray(FDataStreamBase* pStream);
-	void writeBuildingInfoArray(FDataStreamBase* pStream);
-
-	bool readTechInfoArray(FDataStreamBase* pStream);
-	void writeTechInfoArray(FDataStreamBase* pStream);
-
-	bool readUnitInfoArray(FDataStreamBase* pStream);
-	void writeUnitInfoArray(FDataStreamBase* pStream);
-
-	bool readLeaderHeadInfoArray(FDataStreamBase* pStream);
-	void writeLeaderHeadInfoArray(FDataStreamBase* pStream);
-
-	bool readCivilizationInfoArray(FDataStreamBase* pStream);
-	void writeCivilizationInfoArray(FDataStreamBase* pStream);
-
-	bool readPromotionInfoArray(FDataStreamBase* pStream);
-	void writePromotionInfoArray(FDataStreamBase* pStream);
-
-	bool readDiplomacyInfoArray(FDataStreamBase* pStream);
-	void writeDiplomacyInfoArray(FDataStreamBase* pStream);
-
-	bool readCivicInfoArray(FDataStreamBase* pStream);
-	void writeCivicInfoArray(FDataStreamBase* pStream);
-
-	bool readHandicapInfoArray(FDataStreamBase* pStream);
-	void writeHandicapInfoArray(FDataStreamBase* pStream);
-
-	bool readBonusInfoArray(FDataStreamBase* pStream);
-	void writeBonusInfoArray(FDataStreamBase* pStream);
-
-	bool readImprovementInfoArray(FDataStreamBase* pStream);
-	void writeImprovementInfoArray(FDataStreamBase* pStream);
-
-	bool readEventInfoArray(FDataStreamBase* pStream);
-	void writeEventInfoArray(FDataStreamBase* pStream);
-
-	bool readEventTriggerInfoArray(FDataStreamBase* pStream);
-	void writeEventTriggerInfoArray(FDataStreamBase* pStream);
-
 	//
 	// additional accessors for initting globals
 	//
-
 	void setInterface(CvInterface* pVal);
-	 void setDiplomacyScreen(CvDiplomacyScreen* pVal);
-	 void setMPDiplomacyScreen(CMPDiplomacyScreen* pVal);
-	 void setMessageQueue(CMessageQueue* pVal);
-	 void setHotJoinMessageQueue(CMessageQueue* pVal);
-	 void setMessageControl(CMessageControl* pVal);
-	 void setSetupData(CvSetupData* pVal);
-	 void setMessageCodeTranslator(CvMessageCodeTranslator* pVal);
-	 void setDropMgr(CvDropMgr* pVal);
-	 void setPortal(CvPortal* pVal);
-	 void setStatsReport(CvStatsReporter* pVal);
-	 void setPathFinder(FAStar* pVal);
-	 void setInterfacePathFinder(FAStar* pVal);
-	 void setStepFinder(FAStar* pVal);
-	 void setRouteFinder(FAStar* pVal);
-	 void setBorderFinder(FAStar* pVal);
-	 void setAreaFinder(FAStar* pVal);
-	 void setPlotGroupFinder(FAStar* pVal);
+	void setDiplomacyScreen(CvDiplomacyScreen* pVal);
+	void setMPDiplomacyScreen(CMPDiplomacyScreen* pVal);
+	void setMessageQueue(CMessageQueue* pVal);
+	void setHotJoinMessageQueue(CMessageQueue* pVal);
+	void setMessageControl(CMessageControl* pVal);
+	void setSetupData(CvSetupData* pVal);
+	void setMessageCodeTranslator(CvMessageCodeTranslator* pVal);
+	void setDropMgr(CvDropMgr* pVal);
+	void setPortal(CvPortal* pVal);
+	void setStatsReport(CvStatsReporter* pVal);
+	void setPathFinder(FAStar* pVal);
+	void setInterfacePathFinder(FAStar* pVal);
+	void setStepFinder(FAStar* pVal);
+	void setRouteFinder(FAStar* pVal);
+	void setBorderFinder(FAStar* pVal);
+	void setAreaFinder(FAStar* pVal);
+	void setPlotGroupFinder(FAStar* pVal);
+	void setIsBug();
 
-// BUG - BUG Info - start
-	void setIsBug(bool bIsBug);
-// BUG - BUG Info - end
-
-	unsigned int getAssetCheckSum();
+	uint32_t getAssetCheckSum() const;
 
 	void deleteInfoArrays();
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-	void doResetInfoClasses(int iNumSaveGameVector, std::vector<CvString> m_aszSaveGameVector);
-	void StoreExeSettings();
-	void LoadExeSettings();
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 
 protected:
-
 	bool m_bGraphicsInitialized;
 	bool m_bDLLProfiler;
 	bool m_bLogging;
@@ -994,7 +901,7 @@ protected:
 		static const size_t Seed = 0x811C9DC5;  // 2166136261
 
 		// hash a single byte
-		static inline size_t fnv1a(unsigned char oneByte, size_t hash = Seed)
+		static inline size_t fnv1a(uint8_t oneByte, size_t hash = Seed)
 		{
 			return (oneByte ^ hash) * Prime;
 		}
@@ -1002,8 +909,8 @@ protected:
 		// hash a block of memory
 		static inline size_t fnv1a(const void* data, size_t numBytes, size_t hash = Seed)
 		{
-			assert(data);
-			const unsigned char* ptr = (const unsigned char*)data;
+			FAssert(data);
+			const uint8_t* ptr = (const uint8_t*)data;
 			while (numBytes--)
 				hash = fnv1a(*ptr++, hash);
 			return hash;
@@ -1200,9 +1107,6 @@ protected:
 	TypesMap m_typesMap;
 
 	// XXX These are duplicates and are kept for enumeration convenience - most could be removed, Moose
-	CvString *m_paszEntityEventTypes;
-	int m_iNumEntityEventTypes;
-
 	CvString *m_paszAnimationOperatorTypes;
 	int m_iNumAnimationOperatorTypes;
 
@@ -1240,7 +1144,9 @@ protected:
 
 #define DECLARE_MEMBER_VAR(dataType, VAR) \
 	dataType m_##VAR;
+
 	DO_FOR_EACH_GLOBAL_DEFINE(DECLARE_MEMBER_VAR)
+	DO_FOR_EACH_INFO_TYPE(DECLARE_MEMBER_VAR)
 
 	bool m_bXMLLogging;
 
@@ -1252,16 +1158,11 @@ protected:
 	int m_iViewportSizeX;
 	int m_iViewportSizeY;
 	int m_iViewportCenterOnSelectionCenterBorder;
-	bool m_bGraphicalDetailPagingEnabled;
 
 	const char* m_szAlternateProfilSampleName;
 	FProfiler* m_Profiler;		// profiler
 	CvString m_szDllProfileText;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
-/*                                                                                              */
-/* Efficiency, Options                                                                          */
-/************************************************************************************************/
+
 public:
 	int getDefineINT( const char * szName, const int iDefault ) const;
 
@@ -1269,12 +1170,10 @@ public:
 public:
 	bool getBBAI_AIR_COMBAT() const;
 	bool getBBAI_HUMAN_VASSAL_WAR_BUILD() const;
-	bool getBBAI_HUMAN_AS_VASSAL_OPTION() const;
 
 protected:
 	bool m_bBBAI_AIR_COMBAT;
 	bool m_bBBAI_HUMAN_VASSAL_WAR_BUILD;
-	bool m_bBBAI_HUMAN_AS_VASSAL_OPTION;
 
 // Tech Diffusion
 public:
@@ -1282,22 +1181,6 @@ public:
 
 protected:
 	bool m_bTECH_DIFFUSION_ENABLE;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
-	int* m_iStoreExeSettingsCommerceInfo;
-	int* m_iStoreExeSettingsYieldInfo;
-	int* m_iStoreExeSettingsReligionInfo;
-	int* m_iStoreExeSettingsCorporationInfo;
-	int* m_iStoreExeSettingsBonusInfo;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 
 	bool m_bSignsCleared;
 	bool m_bIsInPedia;
@@ -1332,9 +1215,6 @@ public:
 //	by the core engine to establish memory allocators)
 class CvGlobals
 {
-	friend class CvXMLLoadUtility;
-	friend class ProxyTracker;
-
 public:
 	DllExport inline static CvGlobals& getInstance();
 
@@ -1963,7 +1843,6 @@ public:
 		PROXY_TRACK("getVictoryInfo");
 		return gGlobals->getVictoryInfo(eVictoryNum);
 	}
-
 	//
 	// Global Types
 	// All type strings are upper case and are kept in this hash map for fast lookup
@@ -2161,7 +2040,7 @@ public:
 	{
 		if (pDll != NULL)
 		{
-			FAssertMsg(g_DLL == NULL, "Dll interface already set?");
+			FAssertMsg(gDLL == NULL, "Dll interface already set?");
 
 			OutputDebugString("setDLLIFace()\n");
 			if (gGlobals == NULL)
@@ -2170,19 +2049,19 @@ public:
 				gGlobals = new cvInternalGlobals();
 			}
 
-			g_DLL = pDll;
+			gDLL = pDll;
 		}
 		else
 		{
-			FAssertMsg(g_DLL != NULL, "Dll interface not set?");
-			g_DLL = NULL;
+			FAssertMsg(gDLL != NULL, "Dll interface not set?");
+			gDLL = NULL;
 			delete gGlobals;
 		}
 	}
 	DllExport CvDLLUtilityIFaceBase* getDLLIFaceNonInl()
 	{
 		//PROXY_TRACK("getDLLIFaceNonInl");
-		return g_DLL;
+		return gDLL;
 	}
 	DllExport void setDLLProfiler(FProfiler* prof)
 	{
@@ -2203,136 +2082,6 @@ public:
 	{
 		PROXY_TRACK("SetGraphicsInitialized");
 		gGlobals->SetGraphicsInitialized(bVal);
-	}
-	DllExport bool readBuildingInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readBuildingInfoArray");
-		return gGlobals->readBuildingInfoArray(pStream);
-	}
-	DllExport void writeBuildingInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeBuildingInfoArray");
-		gGlobals->writeBuildingInfoArray(pStream);
-	}
-	DllExport bool readTechInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readTechInfoArray");
-		return gGlobals->readTechInfoArray(pStream);
-	}
-	DllExport void writeTechInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeTechInfoArray");
-		gGlobals->writeTechInfoArray(pStream);
-	}
-	DllExport bool readUnitInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readUnitInfoArray");
-		return gGlobals->readUnitInfoArray(pStream);
-	}
-	DllExport void writeUnitInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeUnitInfoArray");
-		gGlobals->writeUnitInfoArray(pStream);
-	}
-	DllExport bool readLeaderHeadInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readLeaderHeadInfoArray");
-		return gGlobals->readLeaderHeadInfoArray(pStream);
-	}
-	DllExport void writeLeaderHeadInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeLeaderHeadInfoArray");
-		gGlobals->writeLeaderHeadInfoArray(pStream);
-	}
-	DllExport bool readCivilizationInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readCivilizationInfoArray");
-		return gGlobals->readCivilizationInfoArray(pStream);
-	}
-	DllExport void writeCivilizationInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeCivilizationInfoArray");
-		gGlobals->writeCivilizationInfoArray(pStream);
-	}
-	DllExport bool readPromotionInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readPromotionInfoArray");
-		return gGlobals->readPromotionInfoArray(pStream);
-	}
-	DllExport void writePromotionInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writePromotionInfoArray");
-		gGlobals->writePromotionInfoArray(pStream);
-	}
-	DllExport bool readDiplomacyInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readDiplomacyInfoArray");
-		return gGlobals->readDiplomacyInfoArray(pStream);
-	}
-	DllExport void writeDiplomacyInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeDiplomacyInfoArray");
-		gGlobals->writeDiplomacyInfoArray(pStream);
-	}
-	DllExport bool readCivicInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readCivicInfoArray");
-		return gGlobals->readCivicInfoArray(pStream);
-	}
-	DllExport void writeCivicInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeCivicInfoArray");
-		gGlobals->writeCivicInfoArray(pStream);
-	}
-	DllExport bool readHandicapInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readHandicapInfoArray");
-		return gGlobals->readHandicapInfoArray(pStream);
-	}
-	DllExport void writeHandicapInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeHandicapInfoArray");
-		gGlobals->writeHandicapInfoArray(pStream);
-	}
-	DllExport bool readBonusInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readBonusInfoArray");
-		return gGlobals->readBonusInfoArray(pStream);
-	}
-	DllExport void writeBonusInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeBonusInfoArray");
-		gGlobals->writeBonusInfoArray(pStream);
-	}
-	DllExport bool readImprovementInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readImprovementInfoArray");
-		return gGlobals->readImprovementInfoArray(pStream);
-	}
-	DllExport void writeImprovementInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeImprovementInfoArray");
-		gGlobals->writeImprovementInfoArray(pStream);
-	}
-	DllExport bool readEventInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readEventInfoArray");
-		return gGlobals->readEventInfoArray(pStream);
-	}
-	DllExport void writeEventInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeEventInfoArray");
-		gGlobals->writeEventInfoArray(pStream);
-	}
-	DllExport bool readEventTriggerInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("readEventTriggerInfoArray");
-		return gGlobals->readEventTriggerInfoArray(pStream);
-	}
-	DllExport void writeEventTriggerInfoArray(FDataStreamBase* pStream)
-	{
-		PROXY_TRACK("writeEventTriggerInfoArray");
-		gGlobals->writeEventTriggerInfoArray(pStream);
 	}
 	//
 	// additional accessors for initting globals
@@ -2483,6 +2232,34 @@ public:
 		PROXY_TRACK("getNumGraphicLevels");
 		return NUM_GRAPHICLEVELS;
 	}
+	// code to cache infos was deleted. https://github.com/caveman2cosmos/Caveman2Cosmos/issues/751
+	DllExport bool readBuildingInfoArray(FDataStreamBase* pStream)		{ return false; }
+	DllExport bool readTechInfoArray(FDataStreamBase* pStream)			{ return false; }
+	DllExport bool readUnitInfoArray(FDataStreamBase* pStream)			{ return false; }
+	DllExport bool readLeaderHeadInfoArray(FDataStreamBase* pStream)	{ return false; }
+	DllExport bool readCivilizationInfoArray(FDataStreamBase* pStream)	{ return false; }
+	DllExport bool readPromotionInfoArray(FDataStreamBase* pStream)		{ return false; }
+	DllExport bool readDiplomacyInfoArray(FDataStreamBase* pStream)		{ return false; }
+	DllExport bool readCivicInfoArray(FDataStreamBase* pStream)			{ return false; }
+	DllExport bool readHandicapInfoArray(FDataStreamBase* pStream)		{ return false; }
+	DllExport bool readBonusInfoArray(FDataStreamBase* pStream)			{ return false; }
+	DllExport bool readImprovementInfoArray(FDataStreamBase* pStream)	{ return false; }
+	DllExport bool readEventInfoArray(FDataStreamBase* pStream)			{ return false; }
+	DllExport bool readEventTriggerInfoArray(FDataStreamBase* pStream)	{ return false; }
+
+	DllExport void writeBuildingInfoArray(FDataStreamBase* pStream)		{}
+	DllExport void writeTechInfoArray(FDataStreamBase* pStream)			{}
+	DllExport void writeUnitInfoArray(FDataStreamBase* pStream)			{}
+	DllExport void writeLeaderHeadInfoArray(FDataStreamBase* pStream)	{}
+	DllExport void writeCivilizationInfoArray(FDataStreamBase* pStream)	{}
+	DllExport void writePromotionInfoArray(FDataStreamBase* pStream)	{}
+	DllExport void writeDiplomacyInfoArray(FDataStreamBase* pStream)	{}
+	DllExport void writeCivicInfoArray(FDataStreamBase* pStream)		{}
+	DllExport void writeHandicapInfoArray(FDataStreamBase* pStream)		{}
+	DllExport void writeBonusInfoArray(FDataStreamBase* pStream)		{}
+	DllExport void writeImprovementInfoArray(FDataStreamBase* pStream)	{}
+	DllExport void writeEventInfoArray(FDataStreamBase* pStream)		{}
+	DllExport void writeEventTriggerInfoArray(FDataStreamBase* pStream)	{}
 };
 
 extern CvGlobals gGlobalsProxy;	// for debugging
@@ -2505,12 +2282,6 @@ inline CvGlobals& CvGlobals::getInstance()
 	return gGlobalsProxy;
 }
 
-//
-// helpers
-//
-#define GC cvInternalGlobals::getInstance()
-#define gDLL g_DLL
-
 #endif
 
 /**********************************************************************
@@ -2529,11 +2300,6 @@ Defines common constants and functions for use throughout the BUG Mod.
 
 #ifndef BUG_MOD_H
 #define BUG_MOD_H
-
-// name of the Python module where all the BUG functions that the DLL calls must live
-// MUST BE A BUILT-IN MODULE IN THE ENTRYPOINTS FOLDER
-// currently CvAppInterface
-#define PYBugModule				PYCivModule
 
 // Increment this by 1 each time you commit new/changed functions/constants in the Python API.
 #define BUG_DLL_API_VERSION		6

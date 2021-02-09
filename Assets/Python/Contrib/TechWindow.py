@@ -1,6 +1,6 @@
 ## TechWindowWide
 ##
-## Originally by SirRethcir: Techanzeige hinzugef¸gt
+## Originally by SirRethcir: Techanzeige hinzugef√ºgt
 ## Enhanced by Roamty, Caesium, Guarav
 ##
 ## Copyright (c) 2008 The BUG Mod.
@@ -76,7 +76,7 @@ class CvTechSplashScreen:
 #		self.H_QUOTE = self.H_UPPER_PANEL - (self.iMarginSpace * 2) - 38
 		self.H_QUOTE = 135
 
-#---Ge‰ndert START - siehe original Datei -----------------
+#---Ge√§ndert START - siehe original Datei -----------------
 		# Lower Panel
 
 		self.X_LOWER_PANEL = self.X_MAIN_PANEL + self.iMarginSpace
@@ -103,7 +103,7 @@ class CvTechSplashScreen:
 		self.Y_ALLOWS_PANEL2 = self.Y_SPECIAL_PANEL + self.H_ALLOWS_PANEL + self.H_ALLOWS_SPACE
 		self.Y_ALLOWS_PANEL3 = self.Y_SPECIAL_PANEL + 2 * (self.H_ALLOWS_PANEL + self.H_ALLOWS_SPACE)
 		self.Y_ALLOWS_PANEL4 = self.Y_SPECIAL_PANEL + 3 * (self.H_ALLOWS_PANEL + self.H_ALLOWS_SPACE)
-#---Ge‰ndert ENDE ------------------------------------------
+#---Ge√§ndert ENDE ------------------------------------------
 
 		# Contents
 
@@ -262,7 +262,7 @@ class CvTechSplashScreen:
 
 		# Improvements
 		for j in range(GC.getNumBuildInfos()):
-			bTechFound = 0;
+			bTechFound = 0
 			if GC.getBuildInfo(j).getTechPrereq() == -1:
 				for k in range(GC.getNumFeatureInfos()):
 					if GC.getBuildInfo(j).getFeatureTech(k) == self.iTech:

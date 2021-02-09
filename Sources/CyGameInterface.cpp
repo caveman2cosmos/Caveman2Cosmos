@@ -16,8 +16,6 @@ void CyGamePythonInterface()
 
 	python::class_<CyGame>("CyGame")
 
-		//.def("isNone", &CyGame::isNone, "CyGame* () - is the instance valid?")
-
 		.def("getCurrentMap", &CyGame::getCurrentMap, "int ()")
 
 		.def("isMultiplayer", &CyGame::isMultiplayer, "CyGame* () - is the instance valid?")
@@ -53,7 +51,6 @@ void CyGamePythonInterface()
 		.def("countCivPlayersEverAlive", &CyGame::countCivPlayersEverAlive, "int ()")
 		.def("countCivTeamsAlive", &CyGame::countCivTeamsAlive, "int ()")
 		.def("countCivTeamsEverAlive", &CyGame::countCivTeamsEverAlive, "int ()")
-		.def("countHumanPlayersAlive", &CyGame::countHumanPlayersAlive, "int ()")
 
 		.def("countTotalCivPower", &CyGame::countTotalCivPower, "int ()")
 		.def("countTotalNukeUnits", &CyGame::countTotalNukeUnits, "int ()")
@@ -144,18 +141,6 @@ void CyGamePythonInterface()
 		.def("getForcedAIAutoPlay", &CyGame::getForcedAIAutoPlay, "int (int iPlayer)")
 		.def("setForcedAIAutoPlay", &CyGame::setForcedAIAutoPlay, "void (int iPlayer, int iValue, bool bForced)")
 
-		.def("getWaterAnimalSpawnChance", &CyGame::getWaterAnimalSpawnChance, "int ()")
-		.def("setWaterAnimalSpawnChance", &CyGame::setWaterAnimalSpawnChance, "void (int)")
-		.def("changeWaterAnimalSpawnChance", &CyGame::changeWaterAnimalSpawnChance, "void (int)")
-
-		.def("getXResolution", &CyGame::getXResolution, "int ()")
-		.def("setXResolution", &CyGame::setXResolution, "void (int)")
-		.def("changeXResolution", &CyGame::changeXResolution, "void (int)")
-
-		.def("getYResolution", &CyGame::getYResolution, "int ()")
-		.def("setYResolution", &CyGame::setYResolution, "void (int)")
-		.def("changeYResolution", &CyGame::changeYResolution, "void (int)")
-
 		.def("isScoreDirty", &CyGame::isScoreDirty, "bool ()")
 		.def("setScoreDirty", &CyGame::setScoreDirty)
 		.def("getCircumnavigatedTeam", &CyGame::getCircumnavigatedTeam, "int ()")
@@ -232,10 +217,6 @@ void CyGamePythonInterface()
 		.def("isSpecialBuildingValid", &CyGame::isSpecialBuildingValid)
 		.def("makeSpecialBuildingValid", &CyGame::makeSpecialBuildingValid)
 
-		//TB Nukefix (Reversal) The following two lines should be commented out
-		//.def("isNukesValid", &CyGame::isNukesValid, "bool")
-		//.def("makeNukesValid", &CyGame::makeNukesValid, " void (bool bValid)")
-
 		.def("isInAdvancedStart", &CyGame::isInAdvancedStart, "bool")
 
 		.def("getHolyCity", &CyGame::getHolyCity, python::return_value_policy<python::manage_new_object>(), "CyCity getHolyCity()")
@@ -288,8 +269,6 @@ void CyGamePythonInterface()
 		.def("log", &CyGame::log, "void log(str)")
 		.def("logw", &CyGame::logw, "void log(wstring str)")
 
-		.def("drawBattleEffects", &CyGame::drawBattleEffects, "void ()")
-
 		.def("getCultureThreshold", &CyGame::getCultureThreshold, "int getCultureThreshold(CultureLevelTypes eLevel)")
 
 		.def("setPlotExtraYield", &CyGame::setPlotExtraYield, "void (int iX, int iY, int /*YieldTypes*/ eYield, int iExtraYield)")
@@ -315,15 +294,19 @@ void CyGamePythonInterface()
 		.def("getHighToLowCounter", &CyGame::getHighToLowCounter)
 		.def("cheatCodesEnabled", &CyGame::cheatCodesEnabled)
 		.def("setVictoryValid", &CyGame::setVictoryValid, "(int iVictoryType, bool bNewVal)")
+
 		.def("isModderGameOption", &CyGame::isModderGameOption, "bool ()")
 		.def("getModderGameOption", &CyGame::getModderGameOption, "bool ()")
 		.def("setModderGameOption", &CyGame::setModderGameOption, "void ()")
-		.def("setFutureEras", &CyGame::setFutureEras, "void ()")
+
 		.def("canEverResearch", &CyGame::canEverResearch, "bool (int iTech)")
 		.def("canEverConstruct", &CyGame::canEverConstruct, "bool (int iBuilding)")
 		.def("canEverTrain", &CyGame::canEverTrain, "bool (int iUnit)")
 		.def("canEverSpread", &CyGame::canEverSpread, "bool (int iCorporation)")
+
 		.def("getC2CVersion", &CyGame::getC2CVersion, "const char* ()")
+
+		.def("assignScenarioStartingPlots", &CyGame::assignScenarioStartingPlots, "void ()")
 	;
 
 

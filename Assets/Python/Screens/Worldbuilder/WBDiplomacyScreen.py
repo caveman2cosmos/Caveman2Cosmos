@@ -52,7 +52,7 @@ class WBDiplomacyScreen:
 
 		screen.addDropDownBoxGFC("CurrentPage", 20, screen.getYResolution() - 42, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_GLOBELAYER_RESOURCES_GENERAL", ()), 0, 0, not bDiplomacyPage)
-		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_ESPIONAGE_CULTURE", ()), 1, 1, bDiplomacyPage)
+		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_WORD_ESPIONAGE", ()), 1, 1, bDiplomacyPage)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_CONCEPT_TRADE", ()), 2, 2, False)
 		
 		sText = "<font=3b>" + CyTranslator().getText("TXT_KEY_WB_HIDE_DEAD", ()) + "</font>"
@@ -212,11 +212,13 @@ class WBDiplomacyScreen:
 			screen.setTableText("WBDiplomacy", 9, iRow, "<font=3>" + sWeariness + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1036, iTeam, 1<<1)
 			
 	def setEspionagePage(self):
+		eWidGen = WidgetTypes.WIDGET_GENERAL
 		screen = CyGInterfaceScreen( "WBDiplomacyScreen", CvScreenEnums.WB_DIPLOMACY)
-		screen.addDropDownBoxGFC("CurrentMemory", screen.getXResolution()/5 + 20, screen.getYResolution() - 40, 450, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+		screen.addDropDownBoxGFC("CurrentMemory", screen.getXResolution()/5 + 20, screen.getYResolution() - 40, 450, eWidGen, 1, 2, FontTypes.GAME_FONT)
 		for i in xrange(MemoryTypes.NUM_MEMORY_TYPES):
 			screen.addPullDownString("CurrentMemory", GC.getMemoryInfo(i).getDescription(), i, i, i == iSelectedMemory)
 
+		szEspionage = CyTranslator().getText("TXT_WORD_ESPIONAGE", ())
 		iWidth = screen.getXResolution() - 40
 		iHeight = screen.getYResolution() - self.iTable_Y - 40
 		screen.addTableControlGFC( "WBEspionage", 9, 20, self.iTable_Y, iWidth, iHeight, True, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
@@ -224,24 +226,24 @@ class WBDiplomacyScreen:
 		iWidth2 = iWidth *3/16
 		screen.setTableColumnHeader("WBEspionage", 0, CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_CIV", ()), iWidth2)
 		screen.setTableColumnHeader("WBEspionage", 1, CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_LEADER", ()), iWidth2)
-		screen.setTableColumnHeader("WBEspionage", 2, CyTranslator().getText("TXT_KEY_ESPIONAGE_CULTURE", ()), iWidth1)
+		screen.setTableColumnHeader("WBEspionage", 2, szEspionage, iWidth1)
 		screen.setTableColumnHeader("WBEspionage", 3, CyTranslator().getText("TXT_KEY_ESPIONAGE_SCREEN_SPENDING_WEIGHT", ()), iWidth1)
-		screen.setTableColumnHeader("WBEspionage", 4, CyTranslator().getText("TXT_KEY_REPLAY_SCREEN_TURNS", ()), iWidth1)
+		screen.setTableColumnHeader("WBEspionage", 4, CyTranslator().getText("TXT_KEY_TURNS", ()), iWidth1)
 		screen.setTableColumnHeader("WBEspionage", 5, CyTranslator().getText("TXT_KEY_WB_MODIFIER", ()), iWidth1)
 		screen.setTableColumnHeader("WBEspionage", 6, CyTranslator().getText("TXT_KEY_WB_MEMORY", ()), iWidth1)
 
 		sText = CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=4b>" + CyTranslator().getText("TXT_KEY_WB_CITY_ALL", ()) + " (+/-)</font></color>"
 		iX = screen.getXResolution() - 20 - iWidth1
-		screen.setText("CEModifierAll", "Background", sText, 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setText("CEModifierAll", "Background", sText, 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, eWidGen, 1, 2)
 		iX -= iWidth1
-		screen.setText("CETurnsAll", "Background", sText, 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		screen.setLabel("CounterEspionageHeader", "Background", u"<font=4b>" + CyTranslator().getText("TXT_KEY_WB_COUNTER_ESPIONAGE", ()) + "</font>", 1<<2, iX, self.iTable_Y - 60, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setText("CETurnsAll", "Background", sText, 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, eWidGen, 1, 2)
+		screen.setLabel("CounterEspionageHeader", "Background", u"<font=4b>" + CyTranslator().getText("TXT_KEY_WB_COUNTER_ESPIONAGE", ()) + "</font>", 1<<2, iX, self.iTable_Y - 60, -0.1, FontTypes.TITLE_FONT, eWidGen, 1, 2)
 
 		iX -= iWidth1
-		screen.setText("WeightAll", "Background", sText, 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setText("WeightAll", "Background", sText, 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, eWidGen, 1, 2)
 		iX -= iWidth1
-		screen.setText("EspionageAll", "Background", sText, 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		screen.setLabel("EspionageHeader", "Background", u"<font=4b>" + CyTranslator().getText("TXT_KEY_ESPIONAGE_CULTURE", ()) + "</font>", 1<<2, iX, self.iTable_Y - 60, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setText("EspionageAll", "Background", sText, 1<<1, iX, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, eWidGen, 1, 2)
+		screen.setLabel("EspionageHeader", "Background", "<font=4b>" + szEspionage, 1<<2, iX, self.iTable_Y - 60, -0.1, FontTypes.TITLE_FONT, eWidGen, 1, 2)
 		
 		for iPlayer in lPlayers:
 			iRow = screen.appendTableRow("WBEspionage")
@@ -270,11 +272,11 @@ class WBDiplomacyScreen:
 				sWeight = str(GC.getPlayer(iSelectedPlayer).getEspionageSpendingWeightAgainstTeam(iTeam))
 				sTurns = str(GC.getTeam(iSelectedTeam).getCounterespionageTurnsLeftAgainstTeam(iTeam))
 				sModifier = str(GC.getTeam(iSelectedTeam).getCounterespionageModAgainstTeam(iTeam))
-			screen.setTableInt("WBEspionage", 2, iRow, "<font=3>" + sEspionage + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1030, iTeam, 1<<1)
-			screen.setTableInt("WBEspionage", 3, iRow, "<font=3>" + sWeight + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1031, iPlayer, 1<<1)
-			screen.setTableInt("WBEspionage", 4, iRow, "<font=3>" + sTurns + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1032, iTeam, 1<<1)
-			screen.setTableInt("WBEspionage", 5, iRow, "<font=3>" + sModifier + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1033, iTeam, 1<<1)
-			screen.setTableInt("WBEspionage", 6, iRow, "<font=3>" + sMemory + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1034, iPlayer, 1<<1)
+			screen.setTableInt("WBEspionage", 2, iRow, "<font=3>" + sEspionage, "", WidgetTypes.WIDGET_PYTHON, 1030, iTeam, 1<<1)
+			screen.setTableInt("WBEspionage", 3, iRow, "<font=3>" + sWeight, "", WidgetTypes.WIDGET_PYTHON, 1031, iPlayer, 1<<1)
+			screen.setTableInt("WBEspionage", 4, iRow, "<font=3>" + sTurns, "", WidgetTypes.WIDGET_PYTHON, 1032, iTeam, 1<<1)
+			screen.setTableInt("WBEspionage", 5, iRow, "<font=3>" + sModifier, "", WidgetTypes.WIDGET_PYTHON, 1033, iTeam, 1<<1)
+			screen.setTableInt("WBEspionage", 6, iRow, "<font=3>" + sMemory, "", WidgetTypes.WIDGET_PYTHON, 1034, iPlayer, 1<<1)
 			
 	def handleInput (self, inputClass):
 		screen = CyGInterfaceScreen("WBDiplomacyScreen", CvScreenEnums.WB_DIPLOMACY)

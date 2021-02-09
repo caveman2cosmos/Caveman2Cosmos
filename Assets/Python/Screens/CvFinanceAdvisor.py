@@ -40,12 +40,7 @@ class CvFinanceAdvisor:
 			H_EDGE_PANEL = 29
 			uFontEdge = "<font=2b>"
 
-		if xRes > 1700:
-			self.aFontList = aFontList = [uFontEdge, "<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1>"]
-		elif xRes > 1400:
-			self.aFontList = aFontList = [uFontEdge, "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0>"]
-		else:
-			self.aFontList = aFontList = [uFontEdge, "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0b>", "<font=0>", "<font=0>"]
+		self.aFontList = aFontList = [uFontEdge] + SR.aFontList
 
 		self.Y_TOP_PAGE = Y_TOP_PAGE = H_EDGE_PANEL - 6
 		self.H_PAGE = H_PAGE = yRes - Y_TOP_PAGE - H_EDGE_PANEL + 8
@@ -122,7 +117,7 @@ class CvFinanceAdvisor:
 		# Variables
 		xRes = self.xRes
 		yRes = self.yRes
-		uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1 = self.aFontList
+		uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1b, uFont1 = self.aFontList
 		CyPlayer = self.CyPlayer
 		iPlayer = self.iPlayer
 
@@ -137,8 +132,7 @@ class CvFinanceAdvisor:
 		############
 		iCommerce = iTiles = iYield0 = iYield1 = iYield2 = iYield3 = iYield4 = 0
 		iTeam = CyPlayer.getTeam()
-		CyCity, i = CyPlayer.firstCity(False)
-		while CyCity:
+		for CyCity in CyPlayer.cities():
 			if not CyCity.isDisorder():
 				# Work plots
 				for j in range(GC.getNUM_CITY_PLOTS()):
@@ -149,7 +143,7 @@ class CvFinanceAdvisor:
 				# Trade
 				for j in range(CyCity.getTradeRoutes()):
 					CyCityX = CyCity.getTradeCity(j)
-					if not CyCityX or CyCityX.isNone(): continue
+					if not CyCityX: continue
 
 					trade = CyCity.calculateTradeYield(YieldTypes.YIELD_COMMERCE, CyCity.calculateTradeProfitTimes100(CyCityX))
 					if CyCityX.getTeam() == iTeam:
@@ -161,7 +155,6 @@ class CvFinanceAdvisor:
 				# specialists
 				for iType in range(GC.getNumSpecialistInfos()):
 					iYield4 += CyPlayer.specialistYield(iType, YieldTypes.YIELD_COMMERCE) * (CyCity.getSpecialistCount(iType) + CyCity.getFreeSpecialistCount(iType))
-			CyCity, i = CyPlayer.nextCity(i, False)
 
 		Pnl = "FinAdv_Scroll_1"
 		screen.addScrollPanel(Pnl, "", x0, y0 + 32, dx, dy - 64, ePanelHudHelp)
@@ -252,7 +245,7 @@ class CvFinanceAdvisor:
 		totalMaintenance = CyPlayer.getTotalMaintenance()
 		totalCivicUpkeep = CyPlayer.getCivicUpkeep([], False)
 
-		iInflation = CyPlayer.calculateInflatedCosts() - CyPlayer.calculatePreInflatedCosts()
+		iInflation = CyPlayer.getFinalExpense() - CyPlayer.calculatePreInflatedCosts()
 		self.goldFromCivs = goldFromCivs = CyPlayer.getGoldPerTurn()
 
 		y = -2
@@ -319,7 +312,7 @@ class CvFinanceAdvisor:
 		eComGold = CommerceTypes.COMMERCE_GOLD
 		# Variables
 		xRes = self.xRes
-		uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1 = self.aFontList
+		uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1b, uFont1 = self.aFontList
 		iconCommerceList = self.iconCommerceList
 		CyPlayer = self.CyPlayer
 
@@ -434,8 +427,7 @@ class CvFinanceAdvisor:
 		iWealthCount = 0
 		fWealth = 0.0
 		eWealth = GC.getInfoTypeForString("PROCESS_WEALTH")
-		CyCity, i = CyPlayer.firstCity(False)
-		while CyCity:
+		for CyCity in CyPlayer.cities():
 			if not CyCity.isDisorder():
 				fCityTaxes = CyCity.getYieldRate(YieldTypes.YIELD_COMMERCE) * iTaxRate / 100.0
 				fTaxes += fCityTaxes
@@ -496,7 +488,6 @@ class CvFinanceAdvisor:
 					if iCount > 0:
 						entry[3] += iCount
 						entry[4] += iCount * fCityTotal * iMultiplier / 100.0
-			CyCity, i = CyPlayer.nextCity(i, False)
 
 		iTotalMinusTaxes = int(fBuildings) + int(fHeadquarters) + int(fShrines) + int(fCorporations) + int(fSpecialists) + int(fWealth) + int(fPlayerGoldModifierEffect) + int(fBonusGoldModifierEffect)
 		for entry in multipliers:

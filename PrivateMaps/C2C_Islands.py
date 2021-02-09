@@ -275,11 +275,11 @@ class IslandsMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 	def generatePlotsByRegion(self):
 		# Sirian's MultilayeredFractal class, controlling function.
 		# You -MUST- customize this function for each use of the class.
-		iPlayers = self.gc.getGame().countCivPlayersEverAlive()
+		iPlayers = self.GC.getGame().countCivPlayersEverAlive()
 		userInputTinyIslands = self.map.getCustomMapOption(1)
 
 		# Sea Level adjustment (from user input), limited to value of 5%.
-		sea = self.gc.getSeaLevelInfo(self.map.getSeaLevel()).getSeaLevelChange()
+		sea = self.GC.getSeaLevelInfo(self.map.getSeaLevel()).getSeaLevelChange()
 		sea = min(sea, 5)
 		sea = max(sea, -5)
 
@@ -610,7 +610,7 @@ def assignStartingPlots():
 				player.AI_updateFoundValues(True)
 				iRange = player.startingPlotRange()
 				iPass = 0
-				validFn = None
+				#validFn = None
 				# Loop through all plots in the region.
 				for iX in range(westX, eastX + 1):
 					for iY in range(southY, northY + 1):
@@ -618,7 +618,7 @@ def assignStartingPlots():
 						if pPlot.isWater(): continue
 						if not pPlot.isCoastal(): continue
 						if areaID != pPlot.getArea(): continue
-						if validFn != None and not validFn(playerID, iX, iY): continue
+						#if validFn != None and not validFn(playerID, iX, iY): continue
 						val = pPlot.getFoundValue(playerID)
 						if val > iBestValue:
 

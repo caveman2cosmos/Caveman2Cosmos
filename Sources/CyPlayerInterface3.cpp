@@ -4,6 +4,9 @@
 #include "CySelectionGroup.h"
 #include "CyUnit.h"
 
+//
+// published python interface for CyPlayer
+//
 
 void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 {
@@ -56,9 +59,7 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getRevIdxNational", &CyPlayer::getRevIdxNational, "int ()")
 		.def("canFoundReligion", &CyPlayer::canFoundReligion, "bool ()")
 
-
 		.def("getNumMilitaryUnits", &CyPlayer::getNumMilitaryUnits, "int ()")
-
 
 		.def("getOverflowResearch", &CyPlayer::getOverflowResearch, "int ()")
 		.def("isBuildingOnlyHealthy", &CyPlayer::isBuildingOnlyHealthy, "bool ()")
@@ -92,7 +93,6 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getStateReligionFreeExperience", &CyPlayer::getStateReligionFreeExperience, "int ()")
 		.def("getCapitalCity", &CyPlayer::getCapitalCity, python::return_value_policy<python::manage_new_object>(), "CyCity* (int iID)")
 		.def("getCitiesLost", &CyPlayer::getCitiesLost, "int ()")
-
 
 		.def("getAssets", &CyPlayer::getAssets, "int ()")
 		.def("getPower", &CyPlayer::getPower, "int ()")
@@ -182,23 +182,28 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("changeCombatExperience", &CyPlayer::changeCombatExperience, "void (int) - Combat experience used to produce Warlords")
 		.def("setCombatExperience", &CyPlayer::setCombatExperience, "void (int) - Combat experience used to produce Warlords")
 
-
-
 		.def("getQueuePosition", &CyPlayer::getQueuePosition, "int")
 		.def("clearResearchQueue", &CyPlayer::clearResearchQueue, "void ()")
 		.def("pushResearch", &CyPlayer::pushResearch, "void (int /*TechTypes*/ iIndex, bool bClear)")
 		.def("getLengthResearchQueue", &CyPlayer::getLengthResearchQueue, "int ()")
+
 		.def("addCityName", &CyPlayer::addCityName, "void (std::wstring szName)")
 		.def("getNumCityNames", &CyPlayer::getNumCityNames, "int ()")
 		.def("getCityName", &CyPlayer::getCityName, "std::wstring (int iIndex)")
+
+		.def("cities", &CyPlayer::cities)
 		.def("firstCity", &CyPlayer::firstCity, "tuple(CyCity, int iterOut) (bool bReverse) - gets the first city")
 		.def("nextCity", &CyPlayer::nextCity, "tuple(CyCity, int iterOut) (int iterIn, bool bReverse) - gets the next city")
 		.def("getNumCities", &CyPlayer::getNumCities, "int ()")
 		.def("getCity", &CyPlayer::getCity, python::return_value_policy<python::manage_new_object>(), "CyCity* (int iID)")
+
+		.def("units", &CyPlayer::units)
 		.def("firstUnit", &CyPlayer::firstUnit, "tuple(CyUnit, int iterOut) (bool bReverse) - gets the first unit")
 		.def("nextUnit", &CyPlayer::nextUnit, "tuple(CyUnit, int iterOut) (int iterIn, bool bReverse) - gets the next unit")
 		.def("getNumUnits", &CyPlayer::getNumUnits, "int ()")
 		.def("getUnit", &CyPlayer::getUnit, python::return_value_policy<python::manage_new_object>(), "CyUnit* (int iID)")
+
+		.def("groups", &CyPlayer::groups)
 		.def("getNumSelectionGroups", &CyPlayer::getNumSelectionGroups, "int ()")
 		.def("getSelectionGroup", &CyPlayer::getSelectionGroup, python::return_value_policy<python::manage_new_object>(), "CvSelectionGroup* (int iID)")
 

@@ -14,6 +14,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Stado - Mamuty</Polish>
+		<Russian>Òàáóí ìàìîíòîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAMMOTH_HERD_PEDIA</Tag>
@@ -36,18 +37,21 @@
 		</French>
 		<Italian>Allevatore di mammut</Italian>
 		<Polish>Treser Mamutów</Polish>
+		<Russian>Ïðèðó÷åíèå ìàìîíòîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAMMOTH_TRAINER_EFFECT</Tag>
 		<English>Effect - Heritage - Mammoths</English>
 		<French>Effet - Patrimoine (Mammouth)</French>
 		<Polish>Efekt - Dziedzictwo - Mamut</Polish>
+		<Russian>Ïèòîìíèê ìàìîíòîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE</Tag>
 		<English>Heritage - Mammoth</English>
 		<French>Patrimoine (Mammouth)</French>
 		<Polish>Dziedzictwo - Mamut</Polish>
+		<Russian>Ðàçâåäåíèå ìàìîíòîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE_PEDIA</Tag>
@@ -77,6 +81,7 @@
 		</French>
 		<Italian>Mammut con balista</Italian>
 		<Polish>Mamut-Ballista</Polish>
+		<Russian>Ìàìîíò ñ áàëëèñòîé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALLISTA_MAMMOTH_PEDIA</Tag>
@@ -96,10 +101,12 @@
 		</French>
 		<Italian>Mammut con bombarda</Italian>
 		<Polish>Mamut-Bombard</Polish>
+		<Russian>Ìàìîíò ñ ïóøêîé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_MAMMOTH_RIDER</Tag>
 		<English>Neanderthal Mammoth Rider</English>
+		<Russian>Íåàíä. ìàìîíò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MAMMOTH</Tag>
@@ -115,6 +122,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Poskromiony Mamut</Polish>
+		<Russian>Ìàìîíò (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRAINED_MAMMOTH</Tag>
@@ -132,6 +140,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Jeździec (Mamut)</Polish>
+		<Russian>Íàåçäíèê íà ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRAINED_MAMMOTH_PEDIA</Tag>
@@ -141,8 +150,6 @@
 		<Tag>TXT_KEY_UNIT_TRAINED_MAMMOTH_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Mammoth Riders[COLOR_REVERT] are early-game mounted units. This particular rider is using [COLOR_HIGHLIGHT_TEXT]Mammoth[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and its slower then rest of the Riders but much stronger. They have bonus in siege cities and when fighting in polar terrain and vs other mounted units and siege engines.</English>
 		<French>Unité adaptée contre les autres unités montés et les unités de siège. Obtient un bonus lors de l'attaque de villes.</French>
-		<German>Well-suited unit against mounted and siege units. Gets bonus when attacking city</German>
-		<Italian>Well-suited unit against mounted and siege units. Gets bonus when attacking.</Italian>
 		<Spanish>Una unidad adecuada contra unidades montadas y armas de asedio. Obtiene una bonificación al atacar una ciudad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -160,5 +167,6 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Mamut Bojowy</Polish>
+		<Russian>Áîåâîé ìàìîíò</Russian>
 	</TEXT>
 </Civ4GameText>

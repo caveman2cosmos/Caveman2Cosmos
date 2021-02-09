@@ -50,9 +50,10 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 	elif not dx:
 		print "CvMainInterface: This will probably never happen, but hey it did."
 		dx = 1
+	iMaxX = dx - 24
 	# Wrap long lines
 	aList = []
-	COLOUR = ""
+	COLOR = ""
 	for iWidth, aLine in aWidthList:
 		iMoreLines = float(iWidth) / dx
 		if iMoreLines > 1.0:
@@ -101,31 +102,30 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 			while True:
 				if szLine:
 					# Store the finished line.
-					aList.append(COLOUR + szLine)
-					COLOUR = evalColorCodes(szLine)
-				if aWordList:
-					# A line must start with the first word.
-					szLine = aWordList.pop(0)
-					# Is it already too long?
-					iWidth = CyIF.determineWidth(uFont + szLine)
-					if iWidth >= dx -24:
-						continue # Oh well... Wrap a new line
-					# A line should have more than just one word.
-					while True:
-						if aWordList:
-							iWidth = CyIF.determineWidth(uFont + szLine + " " + aWordList[0])
-							if iWidth >= dx -24:
-								# Wrap a new line
-								break
-							else: # Add another word to the line.
-								szLine += " " + aWordList.pop(0)
-						else: # Wrapping complete
-							break
-				else: # Wrapping complete
-					break
+					aList.append(COLOR + szLine)
+					COLOR = evalColorCodes(szLine, COLOR)
+
+				if not aWordList:
+					break # Wrapping complete
+
+				# A line must start with the first word.
+				szLine = aWordList.pop(0)
+				# Is it already too long?
+				if CyIF.determineWidth(uFont + szLine) >= iMaxX:
+					continue # Oh well... Wrap a new line
+
+				# A line should have more than just one word.
+				while aWordList:
+
+					if CyIF.determineWidth(uFont + szLine + " " + aWordList[0]) >= iMaxX:
+						break # Wrap a new line
+
+					# Add another word to the line.
+					szLine += " " + aWordList.pop(0)
+
 		else: # No wrapping was necessary.
-			aList.append(COLOUR + aLine)
-			COLOUR = evalColorCodes(aLine)
+			aList.append(COLOR + aLine)
+			COLOR = evalColorCodes(aLine, COLOR)
 	# Find text height in pixels
 	dy = len(aList) * 22 + 16
 	# Find best position.
@@ -162,21 +162,25 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 	return x, y
 
 
-def evalColorCodes(szText):
+# Evaluates if there's a color that should wrap to next line.
+def evalColorCodes(szText, COLOR):
 	i = szText.find("<color=")
-	if i != -1:
-		if i:
-			szText = szText[i:]
-		while True:
-			i = szText[1:].find("<color=")
-			if i != -1:
-				szText = szText[i+1:]
-			else: # Is color resolved?
-				if szText.find("/color>") != -1:
-					return ""	# Resolved
-				else:	# Not Resolved
-					break
-	else: # No color code found
-		return ""
+	if i == -1: # No color code found
+		if not COLOR or szText.find("/color>") != -1:
+			return ""
+		return COLOR
+
+	if i: szText = szText[i:]
+
+	# Only interested in the last color
+	while True:
+		i = szText[1:].find("<color=")
+		if i == -1:
+			# Is color resolved?
+			if szText.find("/color>") != -1:
+				return "" # Resolved
+			break # Not Resolved
+		szText = szText[i+1:]
+
 	idxEnd = szText.find(">") + 1
 	return szText[:idxEnd]

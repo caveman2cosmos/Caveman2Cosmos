@@ -226,16 +226,10 @@
 				<BuildingType>BUILDING_CLOCKWORK_WORKSHOP</BuildingType>
 			</PrereqInCityBuildings>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_AIRPORT</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_AIRPORT</BuildingType>
+				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
+			</ReplacementBuildings>
 			<iAsset>5</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 		</BuildingInfo>

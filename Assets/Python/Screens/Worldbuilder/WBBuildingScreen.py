@@ -102,14 +102,12 @@ class WBBuildingScreen:
 			pPlayerX = GC.getPlayer(iPlayerX)
 			if iOwnerType == 1 and iPlayerX != iPlayer: continue
 			if iOwnerType == 2 and pPlayerX.getTeam() != pCity.getTeam(): continue
-			(loopCity, iter) = pPlayerX.firstCity(False)
-			while(loopCity):
+			for loopCity in pPlayerX.cities():
 				if iPlotType == 2 or (iPlotType == 1 and loopCity.plot().getArea() == pCity.plot().getArea()):
 					sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
 					if loopCity.getID() == pCity.getID() and iPlayerX == iPlayer:
 						sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 					self.lCities.append([loopCity, iPlayerX, sColor])
-				(loopCity, iter) = pPlayerX.nextCity(iter, False)
 		self.placeCityTable()
 
 	def placeCityTable(self):
@@ -178,7 +176,7 @@ class WBBuildingScreen:
 			sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
 			if pCity.getNumRealBuilding(item[1]):
 				sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
-			elif pCity.isHasBuilding(item[1]):
+			elif pCity.getNumBuilding(item[1]):
 				sColor = CyTranslator().getText("[COLOR_YELLOW]", ())
 			screen.setTableText("WBBuilding", iColumn, iRow, "<font=3>" + sColor + item[0] + "</font></color>", ItemInfo.getButton(), WidgetTypes.WIDGET_HELP_BUILDING, item[1], 1, 1<<0 )
 
@@ -213,7 +211,7 @@ class WBBuildingScreen:
 			sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
 			if pCity.getNumRealBuilding(item[1]):
 				sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
-			elif pCity.isHasBuilding(item[1]):
+			elif pCity.getNumBuilding(item[1]):
 				sColor = CyTranslator().getText("[COLOR_YELLOW]", ())
 			screen.setTableText("WBWonders", iColumn, iRow, "<font=3>" + sColor + item[0] + "</font></color>", ItemInfo.getButton(), WidgetTypes.WIDGET_HELP_BUILDING, item[1], 1, 1<<0 )
 
@@ -344,8 +342,7 @@ class WBBuildingScreen:
 		info = GC.getBuildingInfo(item)
 		iType = iChangeType or bAvailable
 		if bApplyAll and not bWonder:
-			cityX, i = pPlayerX.firstCity(False)
-			while cityX:
+			for cityX in pPlayerX.cities():
 				bModify = True
 				if info.isWater() and not cityX.isCoastal(info.getMinAreaSize()): bModify = False
 				if info.isRiver() and not cityX.plot().isRiver(): bModify = False
@@ -358,7 +355,6 @@ class WBBuildingScreen:
 					if iChangeType == 2 and not bAvailable:
 						iType = not cityX.getNumRealBuilding(item)
 					self.doEffects(cityX, item, iType)
-				cityX, i = pPlayerX.nextCity(i, False)
 		else:
 			if bAvailable:
 				if info.isCapital(): return

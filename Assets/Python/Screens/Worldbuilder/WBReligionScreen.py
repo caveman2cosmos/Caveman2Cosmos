@@ -77,10 +77,8 @@ class WBReligionScreen:
 			pPlayerX = GC.getPlayer(iPlayerX)
 			if iOwnerType == 1 and iPlayerX != iSelectedPlayer: continue
 			if iOwnerType == 2 and pPlayerX.getTeam() != iSelectedTeam: continue
-			(loopCity, iter) = pPlayerX.firstCity(False)
-			while(loopCity):
+			for loopCity in pPlayerX.cities():
 				lCities.append([loopCity, iPlayerX])
-				(loopCity, iter) = pPlayerX.nextCity(iter, False)
 		self.placeCityTable()
 
 	def placeCityTable(self):
@@ -144,7 +142,7 @@ class WBReligionScreen:
 			iRow = screen.appendTableRow("WBHolyCity")
 			screen.setTableText("WBHolyCity", 0, iRow, "", GC.getReligionInfo(i).getButton(), WidgetTypes.WIDGET_HELP_RELIGION, i, 1, 1<<0)
 			pHolyCity = CyGame().getHolyCity(i)
-			if not pHolyCity.isNone():
+			if pHolyCity:
 				iPlayerX = pHolyCity.getOwner()
 				pPlayerX = GC.getPlayer(iPlayerX)
 				sColor = u"<color=%d,%d,%d,%d>" %(pPlayerX.getPlayerTextColorR(), pPlayerX.getPlayerTextColorG(), pPlayerX.getPlayerTextColorB(), pPlayerX.getPlayerTextColorA())

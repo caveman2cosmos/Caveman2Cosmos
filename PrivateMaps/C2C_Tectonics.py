@@ -662,7 +662,7 @@ class voronoiMap:
 					self.heightMap[i] = self.heightMap[i] - 1
 
 
-	def min( height, left, right, top, bottom ):
+	def min(self, height, left, right, top, bottom):
 		minHeight = height
 		if ( minHeight > left ):
 			minHeight = left
@@ -1443,8 +1443,8 @@ def generatePlotTypes():
 #Rivers map second try...
 class riversMap:
 	def __init__(self):
-		self.gc = CyGlobalContext()
-		self.dice = self.gc.getGame().getMapRand()
+		self.GC = CyGlobalContext()
+		self.dice = self.GC.getGame().getMapRand()
 		self.map = CyMap()
 		self.mapWidth = self.map.getGridWidth()
 		self.mapHeight = self.map.getGridHeight()
@@ -1543,7 +1543,7 @@ class riversMap:
 					if self.dice.get(1000,"Start river in flatland") < probability + self.heightMap[x + y*self.mapWidth]:
 						seeds.append( plot )
 		for plot in seeds:
-			riverID = self.gc.getMap().getNextRiverID()
+			riverID = self.GC.getMap().getNextRiverID()
 			self.startRiver(riverID, plot)
 		self.file.close()
 
@@ -1683,8 +1683,8 @@ class riversMap:
 # of the surrounding squares. This would simplify this a lot but I'm too lazy for now to rewrite all.
 class riversFromSea:
 	def __init__(self):
-		self.gc = CyGlobalContext()
-		self.dice = self.gc.getGame().getMapRand()
+		self.GC = CyGlobalContext()
+		self.dice = self.GC.getGame().getMapRand()
 		self.map = CyMap()
 		self.width = self.map.getGridWidth()
 		self.height = self.map.getGridHeight()
@@ -1722,7 +1722,7 @@ class riversFromSea:
 				tries = tries + 1
 				(x,y,flow) = self.generateRiver(i,coastShare)
 			if flow != CardinalDirectionTypes.NO_CARDINALDIRECTION:
-				riverID = self.gc.getMap().getNextRiverID()
+				riverID = self.GC.getMap().getNextRiverID()
 				self.riverLength[riverID] = 0
 				self.riverTurns[riverID] = 0
 				self.addRiverFrom(x,y,flow,riverID)
@@ -2043,60 +2043,60 @@ def okMapEdge( x, y, ok=3 ):
 # Starting position generation.
 #
 def findStartingPlot(argsList):
-	gc = CyGlobalContext()
-	map = CyMap()
-	map.recalculateAreas()
-	dice = gc.getGame().getMapRand()
-	iPlayers = gc.getGame().countCivPlayersEverAlive()
-	areas = CvMapGeneratorUtil.getAreas()
-	areaValue = {}
+	GC = CyGlobalContext()
+	GAME = GC.getGame()
+	iPlayers = GAME.countCivPlayersEverAlive()
 
-	########## Temudjin START
-	#if iPlayers < 2 or iPlayers > 18:
 	if iPlayers < 2:
-	########## Temudjin END
-		bSuccessFlag = False
 		CyPythonMgr().allowDefaultImpl()
 		return
 
-	allOnBest = false
-	isolatedStarts = false
-	userInputLandmass = CyMap().getCustomMapOption(0)
-	if (userInputLandmass == 4):	 #				 "Islands"
-		isolatedStarts = true
-	if (userInputLandmass == 7):	 #				 "Terra"
-		allOnBest = true
+	MAP = GC.getMap()
+	# Toffer - Note
+	## This function is called twice by the dll before it realize that all players got a starting position set.
+	## Should probably investigate why the dll doesn't register it right away, code-flow analysis.
+	iCurrentPlayer = argsList[0]
+	sPlot = GC.getPlayer(iCurrentPlayer).getStartingPlot()
+	iResult = MAP.plotNum(sPlot.getX(), sPlot.getY())
+	if iResult > -1:
+		return iResult
+	# ! Toffer
+	MAP.recalculateAreas()
+	userInputLandmass = MAP.getCustomMapOption(0)
 
+	allOnBest = userInputLandmass == 7 # "Terra"
+	isolatedStarts = userInputLandmass == 4 # "Islands"
+
+	areas = CvMapGeneratorUtil.getAreas()
+	areaValue = {}
 	for area in areas:
 		if area.isWater(): continue
 		areaValue[area.getID()] = area.calculateTotalBestNatureYield() + area.getNumRiverEdges() + 2 * area.countCoastalLand() + 3 * area.countNumUniqueBonusTypes()
 
 	# Shuffle players so the same player doesn't always get the first pick.
 	player_list = []
-	for plrCheckLoop in range(gc.getMAX_PC_PLAYERS()):
-		if CyGlobalContext().getPlayer(plrCheckLoop).isEverAlive():
+	iCount = 0
+	for plrCheckLoop in range(GC.getMAX_PC_PLAYERS()):
+		if GC.getPlayer(plrCheckLoop).isEverAlive():
 			player_list.append(plrCheckLoop)
+			iCount += 1
+
+	dice = GAME.getMapRand()
 	shuffledPlayers = []
-	for playerLoop in range(iPlayers):
-		iChoosePlayer = dice.get(len(player_list), "Shuffling Players - Highlands PYTHON")
-		shuffledPlayers.append(player_list[iChoosePlayer])
-		del player_list[iChoosePlayer]
+	while player_list:
+		shuffledPlayers.append(player_list.pop(dice.get(iCount, "Shuffling Players - Tectonics.py")))
+		iCount -= 1
+	del player_list
 
 	# Loop through players, assigning starts for each.
-	for assign_loop in range(iPlayers):
-		playerID = shuffledPlayers[assign_loop]
-		player = gc.getPlayer(playerID)
-		if (allOnBest):
+	for i, playerID in enumerate(shuffledPlayers):
+
+		if allOnBest:
 			def isValid(playerID, x, y):
-				map = CyMap()
-				pPlot = map.plot(x, y)
-				if (pPlot.getArea() != map.findBiggestArea(False).getID()):
+				MAP = CyMap()
+				if MAP.plot(x, y).getArea() != MAP.findBiggestArea(False).getID():
 					return False
-				########## Temudjin START
-				#return True
-				# Also check for Temudjin's cool starting plots
-				return ( okLandPlots(x,y,10) and okMapEdge(x,y,3) )
-				########## Temudjin END
+				return okLandPlots(x,y,10) and okMapEdge(x,y,3)
 		else:
 			bestAreaValue = 0
 			global bestArea
@@ -2105,36 +2105,37 @@ def findStartingPlot(argsList):
 				if area.isWater(): continue
 				players = 2*area.getNumStartingPlots()
 				#Avoid single players on landmasses:
-				if (false == isolatedStarts and players == 0):
-					if (assign_loop == iPlayers - 1):
+				if not isolatedStarts and not players:
+					if i == iPlayers - 1:
 						players = 4
 					else:
 						players = 2
-				value = areaValue[area.getID()] / (1 + 2*players )
-				if (value > bestAreaValue):
-					bestAreaValue = value;
+				value = areaValue[area.getID()] / (1 + 2*players)
+				if value > bestAreaValue:
+					bestAreaValue = value
 					bestArea = area.getID()
 
 			#-----
 			def isValid(playerID, x, y):
-				global bestArea
 				plot = CyMap().plot(x,y)
-				if (plot.getArea() != bestArea):
-					return false
-				if (plot.getLatitude() >= 75):
-					return false
-				########## Temudjin START
-				#return True
-				# Also check for Temudjin's cool starting plots
-				return ( okLandPlots(x,y,10) and okMapEdge(x,y,3) )
-				########## Temudjin END
+				if plot.getArea() != bestArea or plot.getLatitude() >= 75:
+					return False
+
+				return okLandPlots(x,y,10) and okMapEdge(x,y,3)
 			#-----
 
-		findstart = CvMapGeneratorUtil.findStartingPlot(playerID,isValid)
-		sPlot = map.plotByIndex(findstart)
-		player.setStartingPlot(sPlot,true)
+		findstart = CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
+		if playerID == iCurrentPlayer:
+			iResult = findstart
 
-	return None
+		sPlot = MAP.plotByIndex(findstart)
+		print ("SP - Player: %d" % playerID, "x=%d, y=%d" %(sPlot.getX(), sPlot.getY()))
+		GC.getPlayer(playerID).setStartingPlot(sPlot, True)
+
+	# Toffer - Note
+	## This used to return None, but then the dll would use default implementation for this one player.
+	return iResult
+
 
 class MediterraneanFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 	def getLatitudeAtPlot(self, iX, iY):

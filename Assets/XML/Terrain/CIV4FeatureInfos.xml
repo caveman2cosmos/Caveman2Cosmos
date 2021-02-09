@@ -1103,6 +1103,10 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
@@ -1375,6 +1379,10 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
@@ -1535,14 +1543,6 @@
 			<iGrowth>20</iGrowth>
 			<iPopDestroys>5</iPopDestroys>
 			<TerrainBooleans>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_LUSH</TerrainType>
 					<bTerrain>1</bTerrain>
@@ -1879,7 +1879,7 @@
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>25</iDefense>
-			<iPopDestroys>6</iPopDestroys>
+			<iPopDestroys>-1</iPopDestroys>
 			<bNoCity>1</bNoCity>
 			<FootstepSounds>
 				<FootstepSound>
@@ -1977,6 +1977,7 @@
 			<iDefense>15</iDefense>
 			<iAppearance>500</iAppearance>
 			<iGrowth>20</iGrowth>
+			<iPopDestroys>3</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -4249,7 +4250,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iMovement>4</iMovement>
 			<iAppearance>500</iAppearance>
@@ -4293,11 +4294,11 @@
 			<Type>FEATURE_CORAL_REEF_BEACON</Type>
 			<Description>TXT_KEY_FEATURE_CORAL_REEF_BEACON</Description>
 			<Civilopedia>TXT_KEY_FEATURE_CORAL_REEF_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF_BEACON</ArtDefineTag>
 			<YieldChanges>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iMovement>2</iMovement>
 			<iTurnDamage>5</iTurnDamage>
@@ -4339,11 +4340,11 @@
 			<Type>FEATURE_CORAL_REEF_LIGHTHOUSE</Type>
 			<Description>TXT_KEY_FEATURE_CORAL_REEF_LIGHTHOUSE</Description>
 			<Civilopedia>TXT_KEY_FEATURE_CORAL_REEF_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF_LIGHTHOUSE</ArtDefineTag>
 			<YieldChanges>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iMovement>1</iMovement>
 			<TerrainBooleans>
@@ -4398,7 +4399,7 @@
 			<iDefense>25</iDefense>
 			<iAppearance>80</iAppearance>
 			<iWarmingDefense>3</iWarmingDefense>
-			<iPopDestroys>6</iPopDestroys>
+			<iPopDestroys>-1</iPopDestroys>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bAddsFreshWater>1</bAddsFreshWater>
 			<!-- GWMod new XML field M.A. -->
@@ -4520,6 +4521,10 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -4726,7 +4731,7 @@
 			<YieldChanges>
 				<iYieldChange>-1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>-1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
 			</YieldChanges>
 			<iMovement>5</iMovement>
 			<iAppearance>400</iAppearance>
@@ -4887,11 +4892,11 @@
 			<Type>FEATURE_REEF_BEACON</Type>
 			<Description>TXT_KEY_FEATURE_REEF_BEACON</Description>
 			<Civilopedia>TXT_KEY_FEATURE_REEF_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_REEF</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_REEF_BEACON</ArtDefineTag>
 			<YieldChanges>
-				<iYieldChange>-1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>-1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
@@ -5050,11 +5055,11 @@
 			<Type>FEATURE_REEF_LIGHTHOUSE</Type>
 			<Description>TXT_KEY_FEATURE_REEF_LIGHTHOUSE</Description>
 			<Civilopedia>TXT_KEY_FEATURE_REEF_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_REEF</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_REEF_LIGHTHOUSE</ArtDefineTag>
 			<YieldChanges>
-				<iYieldChange>-1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>-1</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
@@ -5242,6 +5247,14 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -5610,6 +5623,14 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LAKE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>

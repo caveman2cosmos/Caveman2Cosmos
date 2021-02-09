@@ -6,13 +6,15 @@
 		<French>Divertir la ville.</French>
 		<Italian>Intrattieni la città.</Italian>
 		<Polish>Rozbaw miasto.</Polish>
+		<Russian>Ðàçâëåêè ãîðîä.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ENTERTAIN_CITY_HELP</Tag>
 		<English>Spread your culture to the city and reduce anarchy length.</English>
 		<French>Répand votre culture dans la ville, et réduit la durée de l'anarchie.</French>
-		<Italian>Diffondi la tua cultura nella città per ridurre la lunghezza dell'anarchia.</Italian>
+		<Italian>Diffondi la tua cultura nella città per ridurre la durata del periodo di anarchia.</Italian>
 		<Polish>Rozszerz swoją kultur w mieście i zmniejsz czas trwania anarchii.</Polish>
+		<Russian>Ðàñïðîñòðàíÿÿ âàøó êóëüòóðó â ãîðîäå, âû ýòèì ñàìûì ñîêðàùàåòå ïðîäîëæèòåëüíîñòü àíàðõèè.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ENTERTAIN_CITY</Tag>
@@ -20,13 +22,15 @@
 		<French>Divertir la ville.</French>
 		<Italian>Hai intrattenuto la città.</Italian>
 		<Polish>Rozbaw miasto.</Polish>
+		<Russian>Ïîâåñåëè òîëïó.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ENTERTAIN_CITY_MESSAGE</Tag>
 		<English>Entertain the city.</English>
-		<French>Divertir la Ville.</French>
+		<French>Divertir la ville.</French>
 		<Italian>Hai intrattenuto la città.</Italian>
 		<Polish>Rozbaw miasto.</Polish>
+		<Russian>Óñòðîèòü ñïåêòàêëü.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EXPERIENCED_ARTIST</Tag>
@@ -34,12 +38,14 @@
 		<French>Artiste expérimenté</French>
 		<Italian>Artista esperto</Italian>
 		<Polish>Doświadczony Artysta</Polish>
+		<Russian>Çàñëóæåííûé àðòèñò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARD</Tag>
 		<English>Bard</English>
 		<French>Barde</French>
 		<Italian>Bardo</Italian>
+		<Russian>Áàðä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARD_PEDIA</Tag>
@@ -48,9 +54,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARD_STRATEGY</Tag>
-		<English>A Bard can[NEWLINE][ICON_BULLET] boost culture in a city[NEWLINE][ICON_BULLET] remove anarchy due to conquest[NEWLINE][ICON_BULLET] end a slave revolt.</English>
-		<French>Un Barde peut[NEWLINE][ICON_BULLET] augmenter la culture d'une ville[NEWLINE][ICON_BULLET] réduire l'anarchie lié à la conquête[NEWLINE][ICON_BULLET] mettre fin à une révolte d'esclaves.</French>
-		<Italian>Una bard può[NEWLINE][ICON_BULLET]Aumentare la cultura in una città[NEWLINE][ICON_BULLET]Rimuovere l'anarchia dovuta alla conquista[NEWLINE][ICON_BULLET]Sedare una rivolta di schiavi</Italian>
+		<English>A Bard can[NEWLINE][ICON_BULLET] boost culture in a city[NEWLINE][ICON_BULLET] remove anarchy due to conquest[NEWLINE][ICON_BULLET] end a slave revolt</English>
+		<French>Un Barde peut[NEWLINE][ICON_BULLET] augmenter la culture d'une ville[NEWLINE][ICON_BULLET] réduire l'anarchie lié à la conquête[NEWLINE][ICON_BULLET] mettre fin à une révolte d'esclaves</French>
+		<Italian>Un bardo può[NEWLINE][ICON_BULLET] aumentare la cultura in una città[NEWLINE][ICON_BULLET] rimuovere l'anarchia dovuta alla conquista[NEWLINE][ICON_BULLET] sedare una rivolta di schiavi</Italian>
+		<Russian>Áàðäû ìîãóò [NEWLINE][ICON_BULLET] óâåëè÷èâàòü êóëüòóðó â ãîðîäå [NEWLINE][ICON_BULLET] óñòðàíÿòü àíàðõèþ ïîñëå çàâîåâàíèÿ [NEWLINE][ICON_BULLET] îñòàíàâëèâàòü áóíòû ðàáîâ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CELEBRITY</Tag>
@@ -58,6 +65,7 @@
 		<French>Célébrité</French>
 		<Italian>Celebrità</Italian>
 		<Polish>Celebryta</Polish>
+		<Russian>Çíàìåíèòîñòü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CELEBRITY_PEDIA</Tag>
@@ -71,17 +79,20 @@
 		<French>Conteur d'histoire</French>
 		<Italian>Cantastorie</Italian>
 		<Polish>Gawdziarz</Polish>
+		<Russian>Ñêàçèòåëü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STORY_TELLER_PEDIA</Tag>
 		<English>Since the beginning of time, story telling has been an art capable of influence in a country culture for ever, and able to make the story teller an important person in society.</English>
 		<Italian>Sin dall'alba dei tempi, l'arte dei cantastorie è stata in grado di influenzare la cultura di una nazione per sempre, in grado di rendere il cantastorie una persona importante per la società.</Italian>
 		<Polish>Klechdarz (bajdała) osoba zajmująca si opowiadaniem lub wymyślaniem bajek, przypowieści lub klechd. Czsto opowiada o legendarnej przeszłości regionu, niezwykłych wydarzeniach i postaciach czy osobliwościach krajobrazu. W Polsce klechdarze stanowią dość liczną grup wśród mieszkańców Podhala i Tatr.</Polish>
+		<Russian>С незапамятных времен рассказывание историй было искусством, способным навсегда влиять на культуру страны и сделать сказителя важной личностью в обществе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STORY_TELLER_STRATEGY</Tag>
 		<English>The Entertainer units can[NEWLINE][ICON_BULLET] boost culture in a city[NEWLINE][ICON_BULLET] remove anarchy due to conquest[NEWLINE][ICON_BULLET] end a slave revolt[NEWLINE][ICON_BULLET]spread dances and tell stories.</English>
 		<French>Le Conteur d'histoire peut[NEWLINE][ICON_BULLET] augmenter la culture d'une ville[NEWLINE][ICON_BULLET] réduire l'anarchie lié à la conquête[NEWLINE][ICON_BULLET] mettre fin à une révolte d'esclaves[NEWLINE][ICON_BULLET]diffuser des danses et raconter des histoires.</French>
-		<Italian>Il cantastorie può[NEWLINE][ICON_BULLET]Aumentare la cultura in una città[NEWLINE][ICON_BULLET]Rimuovere l'anarchia dovuta alla conquista[NEWLINE][ICON_BULLET]Sedare una rivolta di schiavi[NEWLINE][ICON_BULLET]spread dances and tell stories</Italian>
+		<Italian>Il cantastorie può[NEWLINE][ICON_BULLET]aumentare la cultura in una città[NEWLINE][ICON_BULLET]rimuovere l'anarchia dovuta alla conquista[NEWLINE][ICON_BULLET]sedare una rivolta di schiavi[NEWLINE][ICON_BULLET]diffondere danze e raccontare storie</Italian>
+		<Russian>Ñêàçèòåëü ìîãóò [NEWLINE][ICON_BULLET] óâåëè÷èâàòü êóëüòóðó â ãîðîäå [NEWLINE][ICON_BULLET] óñòðàíÿòü àíàðõèþ ïîñëå çàâîåâàíèÿ [NEWLINE][ICON_BULLET] îñòàíàâëèâàòü áóíòû ðàáîâ.</Russian>
 	</TEXT>
 </Civ4GameText>

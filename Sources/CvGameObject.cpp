@@ -8,8 +8,15 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
+#include "CvCity.h"
+#include "CvGame.h"
+#include "CvGlobals.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
 #include "CvTeamAI.h"
+#include "CvUnit.h"
 #include "CyCity.h"
 #include "CyGame.h"
 #include "CyPlayer.h"
@@ -197,15 +204,11 @@ void CvGameObjectTeam::foreach(GameObjectTypes eType, bst::function<void (CvGame
 			break;
 
 		case GAMEOBJECT_PLAYER:
-			for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
+			for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 			{
-				CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
-				if (kLoopPlayer.isAlive())
+				if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(m_pTeam->getID()))
 				{
-					if (kLoopPlayer.getTeam() == m_pTeam->getID())
-					{
-						func((CvGameObject*)&CvGameObjectPlayer(&kLoopPlayer));
-					}
+					func((CvGameObject*)&CvGameObjectPlayer(&GET_PLAYER((PlayerTypes)iI)));
 				}
 			}
 			break;
@@ -366,11 +369,8 @@ void CvGameObjectPlot::foreach(GameObjectTypes eType, bst::function<void (CvGame
 			break;
 
 		case GAMEOBJECT_UNIT:
-			CLLNode<IDInfo>* pUnitNode = m_pPlot->headUnitNode();
-			while (pUnitNode != NULL)
+			foreach_(CvUnit* pUnit, m_pPlot->units())
 			{
-				CvUnit* pUnit = ::getUnit(pUnitNode->m_data);
-				pUnitNode = m_pPlot->nextUnitNode(pUnitNode);
 				func(pUnit->getGameObject());
 			}
 			break;
@@ -762,7 +762,7 @@ void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
 	const int iNum = kInfo.getNumPropertyBuildings();
 	//TB Combat Mods (disease special manifestation and removal system)
-	//PropertyTypes eDiseaseType = (PropertyTypes)GC.getInfoTypeForString("PROPERTY_DISEASE");
+	//const PropertyTypes eDiseaseType = GC.getPROPERTY_DISEASE();
 
 	//if (eProperty != eDiseaseType)
 	//{

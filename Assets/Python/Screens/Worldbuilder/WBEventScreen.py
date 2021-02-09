@@ -131,8 +131,7 @@ class WBEventScreen:
 		screen.setTableColumnHeader("WBEventUnit", 1, "", 24)
 		screen.setTableColumnHeader("WBEventUnit", 2, "", iWidth - 48)
 
-		for i in xrange(pPlot.getNumUnits()):
-			pUnitX = pPlot.getUnit(i)
+		for pUnitX in pPlot.units():
 			if pUnitX.isNone(): continue
 			iRow = screen.appendTableRow("WBEventUnit")
 			sText = pUnitX.getName()
@@ -209,19 +208,17 @@ class WBEventScreen:
 			return
 		iHeight = (screen.getYResolution()/2 - self.iTable_Y - 2) / 24 * 24 + 2
 
-		sHeader = CyTranslator().getText("TXT_KEY_WB_CITY", ()) + " II"
+		sHeader = CyTranslator().getText("TXT_WORD_CITY", ()) + " II"
 		screen.addTableControlGFC("WBOtherCity", 1, screen.getXResolution() * 3/5 + 10, self.iTable_Y, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 		screen.setTableColumnHeader("WBOtherCity", 0, "", iWidth)
 
-		(loopCity, iter) = GC.getPlayer(iOtherPlayer).firstCity(False)
-		while(loopCity):
+		for loopCity in GC.getPlayer(iOtherPlayer).cities():
 			iRow = screen.appendTableRow("WBOtherCity")
 			sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
 			if loopCity.getID() == iOtherCity:
 				sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 				sHeader = loopCity.getName()
 			screen.setTableText("WBOtherCity", 0, iRow, "<font=3>" + sColor + loopCity.getName() + "</font></color>", "", WidgetTypes.WIDGET_PYTHON, 7200 + iOtherPlayer, loopCity.getID(), 1<<0)
-			(loopCity, iter) = GC.getPlayer(iOtherPlayer).nextCity(iter, False)
 		screen.setLabel("OtherCityText", "Background", "<font=3b>" + sHeader + "</font>", 1<<2, screen.getXResolution() *7/10, self.iTable_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		
 	def placeOtherPlayers(self):

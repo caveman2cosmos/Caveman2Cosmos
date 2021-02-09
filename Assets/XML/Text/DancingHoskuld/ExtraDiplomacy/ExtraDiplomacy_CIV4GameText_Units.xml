@@ -1733,6 +1733,7 @@
 		</German>
 		<Italian>Avvocato</Italian>
 		<Polish>Prawnik</Polish>
+		<Russian>Àäâîêàò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DIPLOMAT_EARLY</Tag>
@@ -1744,6 +1745,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Dyplomata - Klasyczny</Polish>
+		<Russian>Äèïëîìàò (äðåâíîñòü)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DIPLOMAT_INDUST</Tag>
@@ -1755,6 +1757,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Dyplomata - Era Przemysłowa</Polish>
+		<Russian>Äèïëîìàò (èíäóñòð.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DIPLOMAT_MESSENGER</Tag>
@@ -1766,6 +1769,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Dyplomata - Posłaniec</Polish>
+		<Russian>Ãîíåö</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DIPLOMAT_MODERN</Tag>
@@ -1777,6 +1781,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Dyplomata - Współczesność</Polish>
+		<Russian>Äèïëîìàò (ñîâð.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DIPLOMAT_PEDIA</Tag>
@@ -1801,11 +1806,17 @@
 		<Tag>TXT_KEY_UNIT_GREAT_STATESMAN</Tag>
 		<English>Great Statesman</English>
 		<French>Homme d'Etat Illustre</French>
+		<German>
+			<Text>Großer Staatsmann:Großen Staatsmannes:Großen Staatsmann:Großen Staatsmann:Große Staatsmänner:Großen Staatsmänner:Großen Staatsmännern:Große Staatsmänner</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Grande uomo di stato</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Wielki Ustawodawca</Polish>
+		<Russian>Âåëèêèé ïîëèòèê</Russian>
 	</TEXT>
 </Civ4GameText>

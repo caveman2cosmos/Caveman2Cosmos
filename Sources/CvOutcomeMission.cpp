@@ -7,8 +7,16 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvGameObject.h"
+#include "CvGlobals.h"
+#include "CvOutcomeList.h"
+#include "CvOutcomeMission.h"
+#include "CvProperties.h"
 #include "CvPlayerAI.h"
+#include "CvUnit.h"
 #include "CvXMLLoadUtility.h"
+#include "CheckSum.h"
+#include "IntExpr.h"
 
 CvOutcomeMission::CvOutcomeMission() :
 m_eMission(NO_MISSION),
@@ -143,7 +151,6 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 	{
 		if (!m_pPlotCondition->evaluate(pUnit->plot()->getGameObject()))
 		{
-			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES"));
 			m_pPlotCondition->buildDisplayString(szBuffer);
 		}
@@ -153,7 +160,6 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 	{
 		if (!m_pUnitCondition->evaluate(pUnit->getGameObject()))
 		{
-			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES"));
 			m_pUnitCondition->buildDisplayString(szBuffer);
 		}

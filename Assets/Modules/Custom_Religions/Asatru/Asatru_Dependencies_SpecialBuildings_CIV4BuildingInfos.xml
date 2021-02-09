@@ -4,10 +4,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_BELIEF_REINCARNATION</Type>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_ASATRU_TEMPLE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_ASATRU_TEMPLE</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 	</BuildingInfos>
