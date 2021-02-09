@@ -4414,18 +4414,18 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 		const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
 
-		if (
-			// We are not exceeding max buildings
-			getNumBuilding(eBuilding) < GC.getCITY_MAX_NUM_BUILDINGS()
-		&&	(
+		if (getNumRealBuilding(eBuilding) < 1 // We are not exceeding max buildings
+		&&
+			(
 				!isLimitedWonder(eBuilding) // Building is not a wonder
-			|| ( // Or production isn't automated or we aren't considering a wonder (we don't want automated production producing wonders)
-					!isProductionAutomated()
-				&&	(
-						iFocusFlags == 0
-					||	(iFocusFlags & BUILDINGFOCUS_WONDEROK)
-					||	(iFocusFlags & BUILDINGFOCUS_WORLDWONDER)
-					)
+				||
+				// Or production isn't automated or we aren't considering a wonder (we don't want automated production producing wonders)
+				!isProductionAutomated()
+				&&
+				(
+					iFocusFlags == 0
+					|| (iFocusFlags & BUILDINGFOCUS_WONDEROK)
+					|| (iFocusFlags & BUILDINGFOCUS_WORLDWONDER)
 				)
 			)
 		// adviser is not one we are ignoring
@@ -4433,8 +4433,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 		// We can actually build the building
 		&& canConstruct(eBuilding)
 		// Automated production doesn't look at buildings with prerequisites?
-		&& (!isProductionAutomated() || buildingInfo.getPrereqNumOfBuilding(NO_BUILDING) <= 0)
-		)
+		&& (!isProductionAutomated() || buildingInfo.getPrereqNumOfBuilding(NO_BUILDING) <= 0))
 		{
 			// Toffer - ToDo - Change iValue type to int64_t,
 			//	or reduce scoring as it gets dangerously close to overflowing as it is.
@@ -4470,7 +4469,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 					{
 						const BuildingTypes eBuildingX = static_cast<BuildingTypes>(buildingInfo.getReplacedBuilding(iI));
 
-						if (getNumBuilding(eBuildingX) > 0)
+						if (getNumActiveBuilding(eBuildingX) > 0)
 						{
 							PROFILE("AI_bestBuildingThreshold.Replace");
 
@@ -4521,7 +4520,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 						}
 					}
 					if ((bEnablesCondition || GC.getBuildingInfo((BuildingTypes)iI).isPrereqInCityBuilding(eBuilding) || GC.getBuildingInfo((BuildingTypes)iI).isPrereqOrBuilding(eBuilding))
-					&& getNumBuilding((BuildingTypes)iI) == 0 && canConstructInternal((BuildingTypes)iI, false, false, false, true, eBuilding))
+					&& getNumRealBuilding((BuildingTypes)iI) == 0 && canConstructInternal((BuildingTypes)iI, false, false, false, true, eBuilding))
 					{
 						PROFILE("AI_bestBuildingThreshold.Enablement");
 
@@ -4545,7 +4544,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				// Scaled by the ratio of cities in the area / total, giving a guess as to how important this area is in general
 				weighting = (100 * weighting * area()->getCitiesPerPlayer(getOwner())) / player.getNumCities();
 				// If we have none of the free buildings at all then also increase the score weighting
-				if (getNumBuilding(eFreeAreaBuilding) == 0)
+				if (getNumRealBuilding(eFreeAreaBuilding) == 0)
 				{
 					weighting++;
 				}
@@ -5055,7 +5054,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 				//	and it gives no unhealthy and that's the reason we have it, count it!
 				bool bCountHappy = !isNoUnhappiness();
 
-				if (getNumBuilding(eBuilding) > 0 && kBuilding.isNoUnhappiness())
+				if (getNumActiveBuilding(eBuilding) > 0 && kBuilding.isNoUnhappiness())
 				{
 					bCountHappy = true;
 				}
@@ -5135,7 +5134,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						const int iBuildingHappinessChanges = kBuilding.getBuildingHappinessChanges(iI);
 						if (iBuildingHappinessChanges != 0)
 						{
-							iValue += (iBuildingHappinessChanges * (kOwner.getBuildingCount((BuildingTypes)iI) - getNumBuilding((BuildingTypes)iI)) * 8);
+							iValue += (iBuildingHappinessChanges * (kOwner.getBuildingCount((BuildingTypes)iI) - getNumRealBuilding((BuildingTypes)iI)) * 8);
 						}
 					}
 
@@ -5179,7 +5178,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 				//	and it gives no unhealthy and that's the reason we have it, count it!
 				bool bCountHealth = !isNoUnhealthyPopulation();
 
-				if (getNumBuilding(eBuilding) > 0 && kBuilding.isNoUnhealthyPopulation())
+				if (getNumActiveBuilding(eBuilding) > 0 && kBuilding.isNoUnhealthyPopulation())
 				{
 					bCountHealth = true;
 				}
@@ -5329,7 +5328,8 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								{
 									for (int iI = 0; iI < kUnit.getNumPrereqAndBuildings(); ++iI)
 									{
-										if (getNumBuilding((BuildingTypes)kUnit.getPrereqAndBuilding(iI)) > 0)
+										// Toffer - seems strange to use break here if only one of X "AND" requirements are met...
+										if (getNumActiveBuilding((BuildingTypes)kUnit.getPrereqAndBuilding(iI)) > 0)
 										{
 											bUnitIsOtherwiseEnabled = true;
 											break;
@@ -6023,7 +6023,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 									if (iModifier > -100)
 									{
 										const int iCount = count_if(kOwner.cities(),
-											CvCity::fn::getNumBuilding(eLoopBuilding) == 0
+											CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
 										);
 										const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
 										globalBuildingProductionModifierValue += ((iOriginalCost - iNewCost)*iCount) / 10;
@@ -6074,7 +6074,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 									}
 
 									const int iCount = count_if(kOwner.cities(),
-										CvCity::fn::getNumBuilding(eLoopBuilding) == 0
+										CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
 									);
 
 									iValue += (iOriginalCost - iNewCost) * iCount / 10;
@@ -6184,7 +6184,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 										// if we have less than the number needed in culture cities
 										//		OR we are one of the top cities and we do not have the building
 										if (iLoopBuildingsBuilt < iCulturalVictoryNumCultureCities ||
-											(iCultureRank <= iCulturalVictoryNumCultureCities && 0 == getNumBuilding(eLoopBuilding)))
+											(iCultureRank <= iCulturalVictoryNumCultureCities && 0 == getNumRealBuilding(eLoopBuilding)))
 										{
 											iValue += iLoopBuildingCultureModifier;
 
@@ -6206,7 +6206,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						if (kBuilding.getVoteSourceType() == iI)
 						{
 							int votingSourceValue = 0;
-							if (kBuilding.isStateReligion())
+							if (kBuilding.needStateReligionInCity())
 							{
 								int iShareReligionCount = 0;
 								int iPlayerCount = 0;
@@ -9121,8 +9121,6 @@ void CvCityAI::AI_doHurry(bool bForce)
 				building.getCommerceChange(COMMERCE_CULTURE) > 0
 				||
 				building.getCommercePerPopChange(COMMERCE_CULTURE) > 0
-				||
-				building.getObsoleteSafeCommerceChange(COMMERCE_CULTURE) > 0
 			)
 			&& (getCommerceRateTimes100(COMMERCE_CULTURE) == 0 || plot()->calculateCulturePercent(getOwner()) < 40))
 			{
@@ -12666,9 +12664,8 @@ void CvCityAI::AI_updateSpecialYieldMultiplier()
 		}
 		m_aiSpecialYieldMultiplier[YIELD_PRODUCTION] += std::max(-25, GC.getBuildingInfo(eProductionBuilding).getFoodKept());
 
-		if ((GC.getBuildingInfo(eProductionBuilding).getCommerceChange(COMMERCE_CULTURE) > 0)
-			|| (GC.getBuildingInfo(eProductionBuilding).getCommercePerPopChange(COMMERCE_CULTURE) > 0)
-			|| (GC.getBuildingInfo(eProductionBuilding).getObsoleteSafeCommerceChange(COMMERCE_CULTURE) > 0))
+		if (GC.getBuildingInfo(eProductionBuilding).getCommerceChange(COMMERCE_CULTURE) > 0
+		||  GC.getBuildingInfo(eProductionBuilding).getCommercePerPopChange(COMMERCE_CULTURE) > 0)
 		{
 			//const int iTargetCultureRate = AI_calculateTargetCulturePerTurn();
 			//if (iTargetCultureRate > 0)
@@ -14228,7 +14225,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			 kBuilding.getGlobalCommerceModifier(COMMERCE_GOLD) > 0 ||
 			 kBuilding.getSpecialistExtraCommerce(COMMERCE_GOLD) > 0 ||
 			 kBuilding.getStateReligionCommerce(COMMERCE_GOLD) > 0 ||
-			 kBuilding.getObsoleteSafeCommerceChange(COMMERCE_GOLD) > 0 ||
 			 kBuilding.getCommerceAttacks(COMMERCE_GOLD) > 0 ||
 			 kBuilding.getTechCommerceChange(NO_TECH, COMMERCE_GOLD) > 0 ||
 			 kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_GOLD) > 0 )
@@ -14246,7 +14242,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			 kBuilding.getGlobalCommerceModifier(COMMERCE_RESEARCH) > 0 ||
 			 kBuilding.getSpecialistExtraCommerce(COMMERCE_RESEARCH) > 0 ||
 			 kBuilding.getStateReligionCommerce(COMMERCE_RESEARCH) > 0 ||
-			 kBuilding.getObsoleteSafeCommerceChange(COMMERCE_RESEARCH) > 0 ||
 			 kBuilding.getCommerceAttacks(COMMERCE_RESEARCH) > 0 ||
 			 kBuilding.getTechCommerceChange(NO_TECH, COMMERCE_RESEARCH) > 0 ||
 			 kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_RESEARCH) > 0)
@@ -14264,7 +14259,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			 kBuilding.getGlobalCommerceModifier(COMMERCE_CULTURE) > 0 ||
 			 kBuilding.getSpecialistExtraCommerce(COMMERCE_CULTURE) > 0 ||
 			 kBuilding.getStateReligionCommerce(COMMERCE_CULTURE) > 0 ||
-			 kBuilding.getObsoleteSafeCommerceChange(COMMERCE_CULTURE) > 0 ||
 			 kBuilding.getCommerceAttacks(COMMERCE_CULTURE) > 0 ||
 			 kBuilding.getTechCommerceChange(NO_TECH, COMMERCE_CULTURE) > 0 ||
 			 kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_CULTURE) > 0)
@@ -14464,7 +14458,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			 kBuilding.getGlobalCommerceModifier(COMMERCE_ESPIONAGE) > 0 ||
 			 kBuilding.getSpecialistExtraCommerce(COMMERCE_ESPIONAGE) > 0 ||
 			 kBuilding.getStateReligionCommerce(COMMERCE_ESPIONAGE) > 0 ||
-			 kBuilding.getObsoleteSafeCommerceChange(COMMERCE_ESPIONAGE) > 0 ||
 			 kBuilding.getCommerceAttacks(COMMERCE_ESPIONAGE) > 0 ||
 			 kBuilding.getTechCommerceChange(NO_TECH, COMMERCE_ESPIONAGE) > 0 ||
 			 kBuilding.getTechCommerceModifier(NO_TECH, COMMERCE_ESPIONAGE) > 0)
@@ -14715,16 +14708,6 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 			buildingsToCalculate.insert(eBuilding);
 			const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
 
-			for (int iI = 0; iI < building.getNumReplacedBuilding(); iI++)
-			{
-				const BuildingTypes eBuildingX = static_cast<BuildingTypes>(building.getReplacedBuilding(iI));
-
-				if (buildingsToCalculate.find(eBuildingX) == buildingsToCalculate.end() && getNumBuilding(eBuildingX) > 0)
-				{
-					buildingsToCalculate.insert(eBuildingX);
-				}
-			}
-
 			if (building.EnablesOtherBuildings())
 			{
 				CvGameObjectCity* pObject = const_cast<CvGameObjectCity*>(getGameObject());
@@ -14748,26 +14731,18 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				for (int iJ = 0; iJ < iNumBuildings; iJ++)
 				{
 					const BuildingTypes eType = static_cast<BuildingTypes>(iJ);
-					if (buildingsToCalculate.find(eType) == buildingsToCalculate.end())
+					if (buildingsToCalculate.find(eType) == buildingsToCalculate.end() && getNumRealBuilding(eType) == 0)
 					{
 						// check if this building enables the construct condition of another building
-						bool bEnablesCondition = false;
-						BoolExpr* condition = GC.getBuildingInfo(eType).getConstructCondition();
-						if (condition != NULL)
+						bool bEnablesCondition = GC.getBuildingInfo(eType).isPrereqInCityBuilding(iBuilding) || GC.getBuildingInfo(eType).isPrereqOrBuilding(iBuilding);
+						if (!bEnablesCondition)
 						{
-							if (condition->evaluateChange(pObject, &(*queries.begin()), &(*queries.end())) == BOOLEXPR_CHANGE_BECOMES_TRUE)
-							{
-								bEnablesCondition = true;
-							}
+							BoolExpr* condition = GC.getBuildingInfo(eType).getConstructCondition();
+							bEnablesCondition = condition != NULL && condition->evaluateChange(pObject, &(*queries.begin()), &(*queries.end())) == BOOLEXPR_CHANGE_BECOMES_TRUE;
 						}
-						if (bEnablesCondition || (GC.getBuildingInfo(eType).isPrereqInCityBuilding(iBuilding)
-							|| GC.getBuildingInfo(eType).isPrereqOrBuilding(iBuilding)))
+						if (bEnablesCondition && canConstructInternal(eType, false, false, false, true, eBuilding))
 						{
-							if (getNumBuilding(eType) == 0 &&
-								canConstructInternal(eType, false, false, false, true, eBuilding))
-							{
-								buildingsToCalculate.insert(eType);
-							}
+							buildingsToCalculate.insert(eType);
 						}
 					}
 				}
@@ -15097,7 +15072,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					const int iBuildingHappinessChanges = kBuilding.getBuildingHappinessChanges(iI);
 					if (iBuildingHappinessChanges != 0)
 					{
-						iValue += (iBuildingHappinessChanges * (kOwner.getBuildingCount((BuildingTypes)iI) - getNumBuilding((BuildingTypes)iI)) * 8);
+						iValue += (iBuildingHappinessChanges * (kOwner.getBuildingCount((BuildingTypes)iI) - getNumRealBuilding((BuildingTypes)iI)) * 8);
 					}
 				}
 
@@ -15298,7 +15273,8 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							{
 								for (int iI = 0; iI < kUnit.getNumPrereqAndBuildings(); ++iI)
 								{
-									if (getNumBuilding((BuildingTypes)kUnit.getPrereqAndBuilding(iI)) > 0)
+									// Toffer - seems strange to use break here if only one of X "AND" requirements are met...
+									if (getNumActiveBuilding((BuildingTypes)kUnit.getPrereqAndBuilding(iI)) > 0)
 									{
 										bUnitIsOtherwiseEnabled = true;
 										break;
@@ -15974,7 +15950,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								if (iModifier > -100)
 								{
 									const int iCount = count_if(kOwner.cities(),
-										CvCity::fn::getNumBuilding(eLoopBuilding) == 0
+										CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
 									);
 									const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
 									globalBuildingProductionModifierValue += ((iOriginalCost - iNewCost)*iCount) / 10;
@@ -16025,7 +16001,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								}
 
 								const int iCount = count_if(kOwner.cities(),
-									CvCity::fn::getNumBuilding(eLoopBuilding) == 0
+									CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
 								);
 								iValue += (iOriginalCost - iNewCost) * iCount / 10;
 							}
@@ -16127,7 +16103,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							&&	(
 									kOwner.getBuildingCount(eType) < iCulturalVictoryNumCultureCities
 									|| iCultureRank <= iCulturalVictoryNumCultureCities
-									&& 0 == getNumBuilding(eType)
+									&& 0 == getNumRealBuilding(eType)
 								)
 							) iValue += bCulturalVictory3 ? iCultureModifier * 3 : iCultureModifier;
 						}
@@ -16140,7 +16116,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					{
 						if (kBuilding.getVoteSourceType() == iI)
 						{
-							if (kBuilding.isStateReligion())
+							if (kBuilding.needStateReligionInCity())
 							{
 								int iShareReligionCount = 0;
 								int iPlayerCount = 0;
@@ -16378,7 +16354,6 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	int iResult = 0;
 	iResult += 4*(iBaseCommerceChange + GET_TEAM(getTeam()).getBuildingCommerceChange(eBuilding, (CommerceTypes)iI) + aiFreeSpecialistCommerce[iI]);
 
-	iResult += kBuilding.getObsoleteSafeCommerceChange(iI) * 4;
 	iResult += kBuilding.getCommerceAttacks(iI) * 2;
 
 	if ((CommerceTypes)iI == COMMERCE_CULTURE)
@@ -16616,14 +16591,10 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 		iResult += 40;
 	}
 
-	if (kBuilding.isCommerceChangeOriginalOwner(iI))
+	if (kBuilding.isCommerceChangeOriginalOwner(iI)
+	&& (kBuilding.getCommerceChange(iI) > 0 || kBuilding.getCommercePerPopChange(iI) > 0))
 	{
-		if (kBuilding.getCommerceChange(iI) > 0
-		|| kBuilding.getCommercePerPopChange(iI) > 0
-		|| kBuilding.getObsoleteSafeCommerceChange(iI) > 0)
-		{
-			iResult++;
-		}
+		iResult++;
 	}
 
 	if (iI == COMMERCE_GOLD && kOwner.AI_isFinancialTrouble())

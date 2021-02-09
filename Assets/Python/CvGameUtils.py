@@ -663,7 +663,7 @@ class CvGameUtils:
 					lBuildings = []
 					lWonders = []
 					for i in xrange(GC.getNumBuildingInfos()):
-						if pCity.getNumBuilding(i):
+						if pCity.getNumRealBuilding(i):
 							if isLimitedWonder(i):
 								lWonders.append(GC.getBuildingInfo(i).getDescription())
 							else:
@@ -691,7 +691,7 @@ class CvGameUtils:
 				return CyGameTextMgr().parseReligionInfo(iData2, False)
 ## Building Widget Text##
 			elif iData1 == 7870:
-				return CyGameTextMgr().getBuildingHelp(iData2, False, False, False, None)
+				return CyGameTextMgr().getBuildingHelp(iData2, False, None, False, False, False)
 ## Tech Widget Text##
 			elif iData1 == 7871:
 				if iData2 == -1:

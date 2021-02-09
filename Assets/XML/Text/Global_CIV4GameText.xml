@@ -2699,9 +2699,8 @@
 		<Polish>%s1 w mieście %s2 uniemożliwił dostęp do świeżej wody.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_REMOVED_MAX_CULTURE</Tag>
-		<English>The %s1 in the City of %s2 has shut down to the local culture level being too high.</English>
-		<French>Le bâtiment %s1 de la ville de %s2 a été désactivé, car le niveau culturel est trop haut.</French>
+		<Tag>TXT_KEY_CITY_REMOVED_MAX_POPULATION</Tag>
+		<English>The %s1 in the City of %s2 has shut down due to the population level being too high.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REPEL</Tag>
@@ -2710,16 +2709,6 @@
 		<Italian>[ICON_BULLET]Le unità ottengono %D1%% alla Respinta quando difendono una città.</Italian>
 		<Polish>[ICON_BULLET]Jednostki otrzymują %D1%% do odepchnięcia przy obronie miasta.</Polish>
 		<Russian>[ICON_BULLET]Отряды получают %D1%% к отражению при защите города.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_RESTORED_BUILDINGS</Tag>
-		<English>The City of %s1 has had its %s2 restored and the %s3 is in working condition again.</English>
-		<French>Le bâtiment [COLOR_BUILDING_TEXT]%s3[COLOR_REVERT] de %s1 est à nouveau fonctionnel.</French>
-		<German>Das Gebäude %s3 in %s1 ist wieder betriebsbereit, da die Versorgung mit %s2 wieder aufgenommen wurde.</German>
-		<Italian>La città di %s1 ha ripristinato %s2 e l'edificio %s3 è di nuovo in funzione.</Italian>
-		<Spanish>La ciudad de %s1 ha reabierto [NUM2:su:su:sus:sus] %s2 y [NUM3:el:la:los:las] %s3 [NUM3:funciona:funciona:funcionan:funcionan] de nuevo.</Spanish>
-		<Polish>Miasto %s1 przywróciło %s3 do pracy.</Polish>
-		<Russian>Ãîðîäó %s1 âîññòàíîâèëè åãî %s2, è %s3 â èñïðàâíîì ñîñòîÿíèè ñíîâà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_SCREEN_CONCEPTUAL</Tag>

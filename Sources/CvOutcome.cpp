@@ -453,9 +453,9 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 			return false;
 		}
 
-		for (int i=0; i<iPrereqBuildings; i++)
+		for (int i=0; i < iPrereqBuildings; i++)
 		{
-			if (pCity->getNumBuilding(kInfo.getPrereqBuilding(i)) <= 0)
+			if (pCity->getNumActiveBuilding(kInfo.getPrereqBuilding(i)) <= 0)
 			{
 				return false;
 			}
@@ -785,9 +785,9 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 			return false;
 		}
 
-		for (int i=0; i<iPrereqBuildings; i++)
+		for (int i = 0; i < iPrereqBuildings; i++)
 		{
-			if (pCity->getNumBuilding(kInfo.getPrereqBuilding(i)) <= 0)
+			if (pCity->getNumActiveBuilding(kInfo.getPrereqBuilding(i)) <= 0)
 			{
 				return false;
 			}

@@ -611,7 +611,7 @@ class CvEventManager:
 					else:
 						aList4[k] = iPlayer
 					for CyCity in CyPlayer.cities():
-						if CyCity.getNumBuilding(iBuilding):
+						if CyCity.getNumActiveBuilding(iBuilding):
 							if aList0[k] == "CRUSADE" and CyCity.getBuildingOriginalOwner(iBuilding) != iPlayer:
 								# The Crusade is tied to the player who initiated it.
 								aList4[k] = -1
@@ -2582,7 +2582,7 @@ class CvEventManager:
 					artPath = 'Art/Interface/Buttons/General/warning_popup.dds'
 
 					for iBuilding in xrange(GC.getNumBuildingInfos()):
-						if not CyCity.getNumBuilding(iBuilding): continue
+						if not CyCity.getNumRealBuilding(iBuilding): continue
 						CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 						if CvBuildingInfo.getMaxGlobalInstances() == 1:
 
@@ -2699,7 +2699,7 @@ class CvEventManager:
 					iX = CyCity.getX()
 					iY = CyCity.getY()
 					for iBuilding in xrange(GC.getNumBuildingInfos()):
-						if CyCity.getNumBuilding(iBuilding):
+						if CyCity.getNumRealBuilding(iBuilding):
 							CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 							if CvBuildingInfo.getMaxGlobalInstances() == 1:
 

@@ -488,7 +488,7 @@ public:
 
 	int getBuildingCreatedCount(BuildingTypes eIndex) const;
 	bool isBuildingMaxedOut(BuildingTypes eIndex, int iExtra = 0) const;
-	void incrementBuildingCreatedCount(BuildingTypes eIndex);
+	void changeNumBuildings(const BuildingTypes eIndex, const short iChange);
 
 	int getProjectCreatedCount(ProjectTypes eIndex) const;
 	bool isProjectMaxedOut(ProjectTypes eIndex, int iExtra = 0) const;
