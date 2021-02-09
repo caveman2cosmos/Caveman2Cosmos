@@ -5038,7 +5038,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			return;
 		}
 	}
-	else if (!bAlphaOmega && getNumRealBuilding(eBuilding) != 0)
+	else if (!bAlphaOmega && getNumActiveBuilding(eBuilding) != 0)
 	{
 		FErrorMsg("Trying to process in a building that is already processed in! Code copes, but it shouldn't have to!");
 		return;
@@ -23005,7 +23005,7 @@ void CvCity::recalculateModifiers()
 				}
 				if (bValid)
 				{
-					processBuilding(eBuildingX, 1);
+					processBuilding(eBuildingX, 1, false, true);
 				}
 			}
 		}
