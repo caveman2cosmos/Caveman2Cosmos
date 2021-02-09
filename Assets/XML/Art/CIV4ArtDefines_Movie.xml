@@ -502,10 +502,6 @@
 			<Path>Art/Movies/Wonders/Nara.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SAN_MARCOS_CATHEDRAL</Type>
-			<Path>Art/Movies/Wonders/SanMarco.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_VATICAN_LIBRARY</Type>
 			<Path>Art/Movies/Wonders/Papal.bik</Path>
 		</MovieArtInfo>
@@ -524,10 +520,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_MEENAKSHI</Type>
 			<Path>Art/Movies/Wonders/Meenakshi.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_DESERT</Type>
-			<Path>Art/Movies/Wonders/Djenne.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ESTAMBUL</Type>
@@ -984,10 +976,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SHRINE_SIKH</Type>
 			<Path>Art/Movies/Wonders/AnandpurSahib.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_NATIONAL_LIBRARY_SERVICE</Type>
-			<Path>Art/Movies/Wonders/Behistun_InscriptionMovie.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_AURORA</Type>
