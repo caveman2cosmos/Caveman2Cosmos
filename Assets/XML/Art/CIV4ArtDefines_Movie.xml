@@ -294,10 +294,6 @@
 			<Path>Art/Movies/Wonders/PontDuGard.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SECRET_ARMY_BASE</Type>
-			<Path>Art/Movies/Wonders/SecretArmyBase.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SILKROAD</Type>
 			<Path>Art/Movies/Wonders/SilkRoad.bik</Path>
 		</MovieArtInfo>
@@ -914,10 +910,6 @@
 			<Path>Art/movies/Wonders/HadrianWall.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_HOMELAND_SECURITY</Type>
-			<Path>Art/movies/Wonders/HomelandSecurity.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PENICILLIN</Type>
 			<Path>Art/Movies/Wonders/Penicillin.bik</Path>
 		</MovieArtInfo>
@@ -1448,10 +1440,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_TRADITION_ARCHERY</Type>
 			<Path>Art/Movies/special/TRADITION_ARCHERY.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_NOBLEGARDEN</Type>
-			<Path>Art/Movies/Wonders/Noblegarden.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CHILEHAUS</Type>
@@ -2828,10 +2816,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ONLINE_UNIVERSITY</Type>
 			<Path>Art/Movies/national_wonders/ONLINE_UNIVERSITY.dds</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_ORBITAL_PRISON</Type>
-			<Path>Art/Movies/national_wonders/ORBITAL_PRISON.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PALACE</Type>
