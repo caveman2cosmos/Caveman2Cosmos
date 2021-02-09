@@ -4074,7 +4074,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_LIBRARY_SERVICE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_LIBRARY_SERVICE</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4881,7 +4880,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_NOBLEGARDEN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NOBLEGARDEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<MovieDefineTag>ART_DEF_MOVIE_NOBLEGARDEN</MovieDefineTag>
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<Bonus>BONUS_ANTI_GRAVITY_FIELD_GENERATORS</Bonus>
 			<bPrereqPower>1</bPrereqPower>
@@ -5661,7 +5659,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_AREA51</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SECRET_ARMY_BASE</MovieDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SECRET_ARMY_BASE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
