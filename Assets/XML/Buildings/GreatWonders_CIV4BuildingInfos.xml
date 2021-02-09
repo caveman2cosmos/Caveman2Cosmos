@@ -12523,7 +12523,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_MILITARY_ACADEMIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_WEST_POINT</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_WESTP</MovieDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_WEST_POINT</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_WESTPOINT</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
@@ -12677,6 +12677,7 @@
 			<Strategy>TXT_KEY_BUILDING_VINTAGE_WINERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHAMPAGNE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CHAMPAGNE</MovieDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<PrereqInCityBuildings>
@@ -12716,6 +12717,7 @@
 			<Strategy>TXT_KEY_BUILDING_VINTAGE_WINERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VINTAGE_RED_WINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_VINTAGE_RED_WINE</MovieDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<PrereqInCityBuildings>
@@ -12754,6 +12756,7 @@
 			<Strategy>TXT_KEY_BUILDING_VINTAGE_WINERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VINTAGE_WHITE_WINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_VINTAGE_WHITE_WINE</MovieDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<PrereqInCityBuildings>
@@ -13128,6 +13131,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_HARVARD_UNIVERSITY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSITY_OF_BOLOGNA</Type>
@@ -13240,6 +13244,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_BOLOGNA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSITY_OF_SALAMANCA</Type>
@@ -13352,6 +13357,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_SALAMANCA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSITY_OF_COIMBRA</Type>
@@ -13466,6 +13472,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_COIMBRA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSITY_OF_BARCELONA</Type>
@@ -13580,6 +13587,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_BARCELONA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MONTPELLIER_UNIVERSITY</Type>
@@ -13694,6 +13702,7 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_MONTPELLIER_UNIVERSITY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SORBONNE_UNIVERSITY</Type>
@@ -13708,6 +13717,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_SORBONNE_UNIVERSITY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SORBONNE_UNIVERSITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			<TechTypes>
@@ -13820,6 +13830,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_BASEL</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_BASEL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			<TechTypes>
@@ -13932,6 +13943,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_JAGIELLONIAN_UNIVERSITY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_JAGIELLONIAN_UNIVERSITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			<TechTypes>
@@ -14044,6 +14056,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_MURCIA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_MURCIA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<TechTypes>
@@ -14154,6 +14167,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_OXFORD_UNIVERSITY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_OXFORD_UNIVERSITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<TechTypes>
@@ -14269,6 +14283,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_EDINBURGH</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_EDINBURGH</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<TechTypes>
@@ -14379,6 +14394,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_PADUA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_PADUA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -14459,6 +14475,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_CAMBRIDGE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_CAMBRIDGE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -14539,6 +14556,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_HEIDELBERG_UNIVERSITY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HEIDELBERG_UNIVERSITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -14885,6 +14903,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_MILITARY_ACADEMIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_EVELPIDON_MILITARY_ACADEMY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_EVELPIDON_MILITARY_ACADEMY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<iPrereqPopulation>15</iPrereqPopulation>
@@ -14938,6 +14957,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_MILITARY_ACADEMIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_REPUBLIC_OF_CHINA_NAVAL_ACADEMY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_REPUBLIC_OF_CHINA_NAVAL_ACADEMY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GRAND_WAR</PrereqTech>
 			<iPrereqPopulation>15</iPrereqPopulation>
@@ -14991,6 +15011,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_MILITARY_ACADEMIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_IMPERIAL_JAPANESE_NAVAL_ACADEMY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_IMPERIAL_JAPANESE_NAVAL_ACADEMY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GRAND_WAR</PrereqTech>
 			<iPrereqPopulation>15</iPrereqPopulation>
@@ -15044,6 +15065,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_MILITARY_ACADEMIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ROYAL_AIR_FORCE_ACADEMY</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ROYAL_AIR_FORCE_ACADEMY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
 			<iPrereqPopulation>15</iPrereqPopulation>
@@ -15097,6 +15119,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_MILITARY_ACADEMIES</SpecialBuildingType>
 			<ArtDefineTag>ART_DEF_BUILDING_ACCADEMIA_AERONAUTICA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ACCADEMIA_AERONAUTICA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
 			<iPrereqPopulation>15</iPrereqPopulation>
@@ -15229,6 +15252,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_FIST</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_FEATHER</Type>
@@ -15276,6 +15300,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_FEATHER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_SHADOWS</Type>
@@ -15325,6 +15350,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_SHADOWS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_CENTAUR</Type>
@@ -15375,6 +15401,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_CENTAUR</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_WARRIOR</Type>
@@ -15416,6 +15443,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_WARRIOR</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_WAVES</Type>
@@ -15461,6 +15489,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_WAVES</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_WIND</Type>
@@ -15502,6 +15531,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_WIND</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_WILD</Type>
@@ -15543,6 +15573,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_WILD</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_LEECH</Type>
@@ -15584,6 +15615,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_LEECH</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_WOLF</Type>
@@ -15628,6 +15660,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<MovieDefineTag>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_WOLF</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HARAPPAN_FAKE_GEMS</Type>
