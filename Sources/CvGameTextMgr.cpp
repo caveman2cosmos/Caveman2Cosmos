@@ -35976,8 +35976,7 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 					}
 				}
 			}
-			FAssert(iTradeRouteModifier == iTestValue); // Toffer - This one triggers - 21.07.20
-			// I can only speculate that replaced/obsolete buildings are not being processed in and out correctly during recalc.
+			FAssert(iTradeRouteModifier == iTestValue);
 
 			iModifier += iTradeRouteModifier;
 
