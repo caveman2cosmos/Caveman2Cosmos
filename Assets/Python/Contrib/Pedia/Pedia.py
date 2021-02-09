@@ -1467,7 +1467,7 @@ class Pedia:
 				elif "UNIT" in szSplit:
 					self.tooltip.handle(screen, CyGameTextMgr().getUnitHelp(ID, False, True, True, None))
 				elif "BUILDING" in szSplit:
-					self.tooltip.handle(screen, CyGameTextMgr().getBuildingHelp(ID, False, False, True, None, False))
+					self.tooltip.handle(screen, CyGameTextMgr().getBuildingHelp(ID, False, None, False, False, True))
 				elif "PROMO" in szSplit:
 					self.tooltip.handle(screen, CyGameTextMgr().getPromotionHelp(ID, False))
 				elif "TECH" in szSplit:

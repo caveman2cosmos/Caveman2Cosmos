@@ -100,7 +100,7 @@ std::wstring CyGameTextMgr::getSpecificUnitHelp(CyUnit* pUnit, bool bOneLine, bo
 std::wstring CyGameTextMgr::getBuildingHelp(int iBuilding, bool bCivilopediaText, bool bStrategyText, bool bTechChooserText, CyCity* pCity, bool bActual)
 {
 	CvWStringBuffer szBuffer;
-	GAMETEXT.setBuildingHelpActual(szBuffer, (BuildingTypes)iBuilding, bCivilopediaText, bStrategyText, bTechChooserText, ((pCity != NULL) ? pCity->getCity() : NULL), bActual);
+	GAMETEXT.setBuildingHelp(szBuffer, (BuildingTypes)iBuilding, bActual, pCity != NULL ? pCity->getCity() : NULL, bCivilopediaText, bStrategyText, bTechChooserText);
 	return szBuffer.getCString();
 }
 
