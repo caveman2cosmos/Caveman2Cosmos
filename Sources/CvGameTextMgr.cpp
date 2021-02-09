@@ -21322,8 +21322,24 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	{
 		if (pCity->isDisabledBuilding(eBuilding))
 		{
+			szBuffer.append(CvWString::format(L"%s\n", GC.getBuildingInfo(eBuilding).getDescription()));
 			szBuffer.append(gDLL->getText("TXT_KEY_HELPTEXT_BUILDING_DISABLED"));
-			szBuffer.append(CvWString::format(L"%s", GC.getBuildingInfo(eBuilding).getDescription()));
+			bool bFirst = true;
+			for (int iI = 0; iI < GC.getBuildingInfo(eBuilding).getNumReplacementBuilding(); ++iI)
+			{
+				if (pCity->getNumRealBuilding((BuildingTypes)GC.getBuildingInfo(eBuilding).getReplacementBuilding(iI)) > 0)
+				{
+					if (bFirst)
+					{
+						szBuffer.append(L"\n");
+						szBuffer.append(gDLL->getText("TXT_KEY_PEDIA_REPLACED_BY"));
+						bFirst = false;
+					}
+					else szBuffer.append(L",");
+
+					szBuffer.append(CvWString::format(L" %s", GC.getBuildingInfo((BuildingTypes)GC.getBuildingInfo(eBuilding).getReplacementBuilding(iI)).getDescription()));
+				}
+			}
 			return;
 		}
 		else if (pCity->isReligiouslyLimitedBuilding(eBuilding))
@@ -21957,12 +21973,9 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 						{
 							szBuffer.append(NEWLINE);
 							szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DAMAGE_ATTACKER_START", GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide()));
+							bFirst = false;
 						}
-						else if (!bFirst)
-						{
-							szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DAMAGE_ATTACKER_MIDDLE", GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide()));
-						}
-						bFirst = false;
+						else szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DAMAGE_ATTACKER_MIDDLE", GC.getUnitCombatInfo(eUnitCombat).getTextKeyWide()));
 					}
 				}
 			}
@@ -22949,16 +22962,14 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			{
 				if (kBuilding.getSpecialistYieldChangeArray(iI) != NULL )
 				{
-					if (!bFirst)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
-					}
 					if (bFirst)
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getSymbolID(BULLET_CHAR));
 						bFirst = false;
 					}
+					else szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
+
 					szFirstBuffer = gDLL->getText("TXT_KEY_BUILDING_FROM_IN_ALL_CITIES", CvWString(GC.getSpecialistInfo((SpecialistTypes) iI).getType()).GetCString(), GC.getSpecialistInfo((SpecialistTypes) iI).getTextKeyWide());
 					setYieldChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getSpecialistYieldChangeArray(iI), false, false);
 				}
@@ -22971,16 +22982,14 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			{
 				if (kBuilding.getSpecialistCommerceChangeArray(iI) != NULL )
 				{
-					if (!bFirst)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
-					}
 					if (bFirst)
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getSymbolID(BULLET_CHAR));
 						bFirst = false;
 					}
+					else szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
+
 					szFirstBuffer = gDLL->getText("TXT_KEY_BUILDING_FROM_IN_ALL_CITIES", CvWString(GC.getSpecialistInfo((SpecialistTypes) iI).getType()).GetCString(), GC.getSpecialistInfo((SpecialistTypes) iI).getTextKeyWide());
 					setCommerceChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getSpecialistCommerceChangeArray(iI), false, false);
 				}
@@ -22994,16 +23003,14 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			{
 				if (kBuilding.getLocalSpecialistYieldChangeArray(iI) != NULL )
 				{
-					if (!bFirst)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
-					}
 					if (bFirst)
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getSymbolID(BULLET_CHAR));
 						bFirst = false;
 					}
+					else szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
+
 					szFirstBuffer = gDLL->getText("TXT_KEY_BUILDING_FROM_SPECIALIST", CvWString(GC.getSpecialistInfo((SpecialistTypes) iI).getType()).GetCString(), GC.getSpecialistInfo((SpecialistTypes) iI).getTextKeyWide());
 					setYieldChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getLocalSpecialistYieldChangeArray(iI), false, false);
 				}
@@ -23016,16 +23023,14 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			{
 				if (kBuilding.getLocalSpecialistCommerceChangeArray(iI) != NULL )
 				{
-					if (!bFirst)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
-					}
 					if (bFirst)
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getSymbolID(BULLET_CHAR));
 						bFirst = false;
 					}
+					else szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
+
 					szFirstBuffer = gDLL->getText("TXT_KEY_BUILDING_FROM_SPECIALIST", CvWString(GC.getSpecialistInfo((SpecialistTypes) iI).getType()).GetCString(), GC.getSpecialistInfo((SpecialistTypes) iI).getTextKeyWide());
 					setCommerceChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getLocalSpecialistCommerceChangeArray(iI), false, false);
 				}
@@ -23041,16 +23046,14 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			{
 				if (kBuilding.getBonusYieldModifierArray(iI) != NULL )
 				{
-					if (!bFirst)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
-					}
 					if (bFirst)
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getSymbolID(BULLET_CHAR));
 						bFirst = false;
 					}
+					else szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
+
 					szFirstBuffer = gDLL->getText("TXT_KEY_BUILDING_WITH_BONUS", CvWString(GC.getBonusInfo((BonusTypes) iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes) iI).getTextKeyWide());
 					setYieldChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getBonusYieldModifierArray(iI), true, false);
 				}
@@ -23064,16 +23067,14 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			{
 				if (kBuilding.getBonusCommerceModifierArray(iI) != NULL )
 				{
-					if (!bFirst)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
-					}
 					if (bFirst)
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getSymbolID(BULLET_CHAR));
 						bFirst = false;
 					}
+					else szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
+
 					szFirstBuffer = gDLL->getText("TXT_KEY_BUILDING_WITH_BONUS", CvWString(GC.getBonusInfo((BonusTypes) iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes) iI).getTextKeyWide());
 					setCommerceChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getBonusCommerceModifierArray(iI), true, false);
 				}
@@ -23088,16 +23089,14 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			{
 				if (kBuilding.getVicinityBonusYieldChangesArray(iI) != NULL )
 				{
-					if (!bFirst)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
-					}
 					if (bFirst)
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getSymbolID(BULLET_CHAR));
 						bFirst = false;
 					}
+					else szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
+
 					szFirstBuffer = gDLL->getText("TXT_KEY_BUILDING_WITH_BONUS", CvWString(GC.getBonusInfo((BonusTypes) iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes) iI).getTextKeyWide());
 					szFirstBuffer += gDLL->getText("TXT_KEY_IN_CITY_VICINITY");
 					setYieldChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getVicinityBonusYieldChangesArray(iI), false, false);
@@ -23113,16 +23112,14 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			{
 				if (kBuilding.getBonusYieldChangesArray(iI) != NULL )
 				{
-					if (!bFirst)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
-					}
 					if (bFirst)
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getSymbolID(BULLET_CHAR));
 						bFirst = false;
 					}
+					else szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
+
 					szFirstBuffer = gDLL->getText("TXT_KEY_BUILDING_WITH_BONUS", CvWString(GC.getBonusInfo((BonusTypes) iI).getType()).GetCString(), GC.getBonusInfo((BonusTypes) iI).getTextKeyWide());
 					setYieldChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getBonusYieldChangesArray(iI), false, false);
 				}
