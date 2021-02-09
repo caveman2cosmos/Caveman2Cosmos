@@ -22998,7 +22998,7 @@ void CvCity::recalculateModifiers()
 				{
 					if (getNumRealBuilding((BuildingTypes)info.getReplacementBuilding(iJ)) > 0)
 					{
-						setDisabledBuilding((BuildingTypes)info.getReplacementBuilding(iJ), true, false);
+						setDisabledBuilding(eBuildingX, true, false);
 						bValid = false;
 						break;
 					}
