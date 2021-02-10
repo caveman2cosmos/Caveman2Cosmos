@@ -15866,17 +15866,23 @@ CvUnit* CvPlayer::addUnit()
 }
 
 #ifdef PARALLEL_MAPS
-void CvPlayer::addUnit(CvUnit* unit)
+void CvPlayer::addUnitToMap(CvUnit& unit, MapTypes map)
 {
-	m_units[GC.getGame().getCurrentMap()]->load(reinterpret_cast<CvUnitAI*>(unit));
+	m_units[map]->load(static_cast<CvUnitAI*>(&unit));
+	deleteUnit(unit.getID());
 }
 #endif
 
 void CvPlayer::deleteUnit(int iID)
 {
+	deleteUnit(iID, CURRENT_MAP);
+}
+
+void CvPlayer::deleteUnit(int iID, MapTypes index)
+{
 	if (getUnit(iID)->isCommander())
 	{
-		for (int i=0; i < (int)Commanders.size(); i++)
+		for (uint32_t i = 0; i < Commanders.size(); i++)
 		{
 			if (Commanders[i]->getID() == iID)
 			{
@@ -15893,7 +15899,7 @@ void CvPlayer::deleteUnit(int iID)
 			}
 		}
 	}
-	m_units[CURRENT_MAP]->removeAt(iID);
+	m_units[index]->removeAt(iID);
 }
 
 CvSelectionGroup* CvPlayer::firstSelectionGroup(int *pIterIdx, bool bRev) const

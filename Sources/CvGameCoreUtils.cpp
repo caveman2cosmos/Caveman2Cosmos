@@ -4529,7 +4529,9 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType)
 	case MISSION_FENGAGE: szString = L"MISSION_FENGAGE"; break;
 	case MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER: szString = L"MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER"; break;
 	case MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER: szString = L"MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER"; break;
-
+#ifdef PARALLEL_MAPS
+	case MISSION_GO_TO_MAP_EARTH: szString = L"MISSION_GO_TO_MAP_EARTH"; break;
+#endif
 	default: szString = CvWString::format(L"UNKOWN_MISSION(%d)", eMissionType); break;
 	}
 }

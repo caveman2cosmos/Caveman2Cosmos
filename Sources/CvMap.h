@@ -282,6 +282,7 @@ protected:
 #endif
 
 	void calculateAreas();
+	void updateIncomingUnits();
 };
 
 #endif

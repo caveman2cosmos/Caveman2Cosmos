@@ -1114,9 +1114,10 @@ public:
 	CvUnit* getUnit(int iID) const;
 	CvUnit* addUnit();
 #ifdef PARALLEL_MAPS
-	void addUnit(CvUnit* unit);
+	void addUnitToMap(CvUnit& unit, MapTypes map);
 #endif
 	void deleteUnit(int iID);
+	void deleteUnit(int iID, MapTypes map);
 
 	// selection groups iteration
 	DECLARE_INDEX_ITERATOR(const CvPlayer, CvSelectionGroup, group_iterator, firstSelectionGroup, nextSelectionGroup);

@@ -1245,6 +1245,29 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 				return true;
 			}
 			break;
+#ifdef PARALLEL_MAPS
+		case MISSION_GO_TO_MAP_EARTH:
+		{
+			const CvMissionInfo& info = GC.getMissionInfo((MissionTypes)iMission);
+
+			const TechTypes requiredTech = info.getTechRequired();
+			if (requiredTech != NO_TECH && !GET_TEAM(pLoopUnit->getTeam()).isHasTech(requiredTech))
+			{
+				return false;
+			}
+			const BuildingTypes requiredBuilding = info.getBuildingRequired();
+			if (requiredBuilding == NO_BUILDING)
+			{
+				return true;
+			}
+			const CvCity* city = pLoopUnit->plot()->getPlotCity();
+			if (city && city->getNumBuilding(requiredBuilding))
+			{
+				return true;
+			}
+			break;
+		}
+#endif
 		default:
 			// AIAndy: Assumed to be an outcome mission
 			// FAssert(false);
@@ -2009,7 +2032,15 @@ bool CvSelectionGroup::startMission()
 							bAction = true;
 						}
 						break;
-
+#ifdef PARALLEL_MAPS
+					case MISSION_GO_TO_MAP_EARTH:
+					{
+						const int travelTurns = 1;
+						GC.getMapByIndex(MAP_INITIAL).addIncomingUnit(pLoopUnit, travelTurns);
+						GET_PLAYER(pLoopUnit->getOwner()).deleteUnit(pLoopUnit->getID(), MAP_INITIAL);
+						break;
+					}
+#endif
 					default:
 						// AIAndy: Assumed to be an outcome mission
 						// FAssert(false);
@@ -2539,6 +2570,9 @@ bool CvSelectionGroup::continueMission(int iSteps)
 			case MISSION_WAIT_FOR_TECH:
 			case MISSION_AMBUSH:
 			case MISSION_ASSASSINATE:
+#ifdef PARALLEL_MAPS
+			case MISSION_GO_TO_MAP_EARTH:
+#endif
 				bDone = true;
 				break;
 

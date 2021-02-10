@@ -23,6 +23,11 @@ CyMap::CyMap(CvMap* pMap) : m_pMap(pMap)
 {
 }
 
+void CyMap::setMap(CvMap& map)
+{
+	m_pMap = &map;
+}
+
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/

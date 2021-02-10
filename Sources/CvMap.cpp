@@ -377,19 +377,21 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 
 
 #ifdef PARALLEL_MAPS
-namespace {
-	void updateIncomingUnits(std::vector<std::pair<CvUnit*, int> > incomingUnits)
+//void updateIncomingUnits(std::vector<std::pair<CvUnit*, int> > incomingUnits, const CvMap& map)
+void CvMap::updateIncomingUnits()
+{
+	for (std::vector<std::pair<CvUnit*, int> >::iterator itr = m_IncomingUnits.begin(), itrEnd = m_IncomingUnits.end(); itr != itrEnd; ++itr)
 	{
-		for (std::vector<std::pair<CvUnit*, int> >::iterator itr = incomingUnits.begin(); itr != incomingUnits.end(); ++itr)
+		const int travelTurnsLeft = (*itr).second--;
+		if (travelTurnsLeft <= 0)
 		{
-			int* travelTurnsLeft = &(*itr).second;
-			travelTurnsLeft--;
-			if (travelTurnsLeft <= 0)
+			if (m_pMapPlots == NULL)
 			{
-				CvUnit* unit = (*itr).first;
-				GET_PLAYER(unit->getOwner()).addUnit(unit);
-				incomingUnits.erase(itr);
+				GC.switchMap(getType());
 			}
+			CvUnit* unit = (*itr).first;
+			GET_PLAYER(unit->getOwner()).addUnitToMap(*unit, getType());
+			m_IncomingUnits.erase(itr);
 		}
 	}
 }
@@ -402,7 +404,7 @@ void CvMap::doTurn()
 	PROFILE("CvMap::doTurn()")
 
 #ifdef PARALLEL_MAPS
-	updateIncomingUnits(m_IncomingUnits);
+	updateIncomingUnits();
 #endif
 	for (int iI = 0; iI < numPlots(); iI++)
 	{

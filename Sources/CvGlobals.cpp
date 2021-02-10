@@ -17,6 +17,7 @@
 #include "CvTeamAI.h"
 #include "CvViewport.h"
 #include "CvXMLLoadUtility.h"
+#include "CyGlobalContext.h"
 #include "FVariableSystem.h"
 #include <time.h> 
 #include <sstream>
@@ -1784,6 +1785,9 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_BUILD_DOMESTICATED_HERD);
 	REGISTER_MISSION(MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER);
 	REGISTER_MISSION(MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER);
+#ifdef PARALLEL_MAPS
+	REGISTER_MISSION(MISSION_GO_TO_MAP_EARTH);
+#endif
 }
 
 CvInfoBase& cvInternalGlobals::getAttitudeInfo(AttitudeTypes eAttitudeNum) const
@@ -2952,6 +2956,7 @@ void cvInternalGlobals::switchMap(MapTypes eMap)
 
 	GC.getMap().beforeSwitch();
 	GC.getGame().setCurrentMap(eMap);
+	CyGlobalContext::getInstance().getCyMap()->setMap(GC.getMap());
 	GC.getMap().afterSwitch();
 }
 
