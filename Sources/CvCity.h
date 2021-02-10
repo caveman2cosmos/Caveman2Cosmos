@@ -1225,6 +1225,7 @@ public:
 	void setNumRealBuilding(const BuildingTypes eIndex, const int iNewValue);
 	void setNumRealBuildingTimed(const BuildingTypes eBuilding, const bool bNewValue, const PlayerTypes eOriginalOwner, const int iOriginalTime, const bool bFirst = true);
 	void setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes eBuilding, const bool bNewValue, const bool bFirst);
+	void handleBuildingCounts(const BuildingTypes eBuilding, const int iChange, const bool bWonder);
 
 	bool isValidBuildingLocation(BuildingTypes eIndex) const;
 

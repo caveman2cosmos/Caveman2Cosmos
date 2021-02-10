@@ -14784,15 +14784,15 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eBuilding, const bool b
 	}
 }
 
-// Toffer - Function added only for readability reasons.
-void CvCity::setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes eBuilding, const bool bNewValue, const bool bFirst)
-{
-	const int iChange = bNewValue ? 1 : -1;
-	GET_TEAM(getTeam()).changeBuildingCount(eBuilding, iChange);
-	GET_PLAYER(getOwner()).changeBuildingCount(eBuilding, iChange);
 
+// Toffer - Called by setupBuilding() and recalculateModifiers(), game-count left out as it isn't recalculated and doesn't need to be either.
+void CvCity::handleBuildingCounts(const BuildingTypes eBuilding, const int iChange, const bool bWonder)
+{
+	GET_PLAYER(getOwner()).changeBuildingCount(eBuilding, iChange);
+	GET_TEAM(getTeam()).changeBuildingCount(eBuilding, iChange);
 	changeNumBuildings(iChange);
-	if (isLimitedWonder(eBuilding) && !kBuilding.isNoLimit())
+
+	if (bWonder)
 	{
 		if (isWorldWonder(eBuilding))
 		{
@@ -14807,6 +14807,16 @@ void CvCity::setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes 
 			changeNumNationalWonders(iChange);
 		}
 	}
+}
+
+
+// Toffer - Function added only for readability reasons.
+void CvCity::setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes eBuilding, const bool bNewValue, const bool bFirst)
+{
+	const int iChange = bNewValue ? 1 : -1;
+
+	handleBuildingCounts(eBuilding, iChange, isLimitedWonder(eBuilding) && !kBuilding.isNoLimit());
+
 	if (!bNewValue) // Building removal
 	{
 		if (!isWorldWonder(eBuilding)) // World wonders can only be built once, so the count is essential to keep track of.
@@ -23005,6 +23015,7 @@ void CvCity::recalculateModifiers()
 						break;
 					}
 				}
+				handleBuildingCounts(eBuildingX, 1, isLimitedWonder(eBuildingX) && !info.isNoLimit());
 				if (bValid)
 				{
 					processBuilding(eBuildingX, 1, false, true);
