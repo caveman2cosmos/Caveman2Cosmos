@@ -39278,27 +39278,22 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HIGH_WALLS</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HIGH_WALLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HIGH_WALLS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WALLS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HIGH_WALLS</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_WALLS</ConstructSound>
-			<bCenterInCity>1</bCenterInCity>
-			<fVisibilityPriority>1000</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
+			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_WALLS</BuildingType>
-			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OLD_CITY_WALLS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_BARRICADES</BuildingType>
 				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
@@ -39307,6 +39302,7 @@
 				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>252</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -39323,6 +39319,13 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iNoEntryDefenseLevel>50</iNoEntryDefenseLevel>
 			<iMinDefense>25</iMinDefense>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAsset>1</iAsset>
 			<iPower>5</iPower>
 			<Flavors>
@@ -39331,16 +39334,11 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iConquestProb>25</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-4</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<iConquestProb>25</iConquestProb>
+			<bCenterInCity>1</bCenterInCity>
+			<fVisibilityPriority>1000</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_HIGH_WALLS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HIGHTECHCOAL_PLANT</Type>
@@ -84951,23 +84949,21 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WALLS</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_WALLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WALLS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WALLS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WALLS</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_WALLS</ConstructSound>
-			<bCenterInCity>1</bCenterInCity>
-			<fVisibilityPriority>1000</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_OLD_CITY_WALLS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
 				<BuildingType>BUILDING_BARRICADES</BuildingType>
@@ -84977,6 +84973,7 @@
 				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>146</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_STONE</BonusType>
@@ -84993,6 +84990,13 @@
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<iNoEntryDefenseLevel>60</iNoEntryDefenseLevel>
 			<iMinDefense>20</iMinDefense>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-4</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 			<iAsset>1</iAsset>
 			<iPower>4</iPower>
 			<Flavors>
@@ -85001,16 +85005,11 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iConquestProb>25</iConquestProb>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<iAIWeight>1</iAIWeight>
+			<iConquestProb>25</iConquestProb>
+			<bCenterInCity>1</bCenterInCity>
+			<fVisibilityPriority>1000</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_WALLS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WALNUT_GROVE</Type>

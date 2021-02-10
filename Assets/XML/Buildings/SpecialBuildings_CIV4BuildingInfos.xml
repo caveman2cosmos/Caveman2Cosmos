@@ -16050,5 +16050,25 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</ArtDefineTag>
 		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_OLD_CITY_WALLS</Type>
+			<Description>TXT_KEY_BUILDING_OLD_CITY_WALLS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WALLS_PEDIA</Civilopedia>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
+			</CommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<iConquestProb>80</iConquestProb>
+			<ArtDefineTag>ART_DEF_BUILDING_OLD_CITY_WALLS</ArtDefineTag>
+		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>
