@@ -766,11 +766,9 @@ void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 	//if (eProperty != eDiseaseType)
 	//{
 	//
-	if (!kInfo.isOAType()
 #ifdef OUTBREAKS_AND_AFFLICTIONS
-		|| !GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS)
-#endif // OUTBREAKS_AND_AFFLICTIONS
-		)
+	if (!kInfo.isOAType() || !GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
+#endif
 	{
 		//TB Combat Mods end
 		if (!GET_PLAYER(m_pCity->getOwner()).isNPC())
