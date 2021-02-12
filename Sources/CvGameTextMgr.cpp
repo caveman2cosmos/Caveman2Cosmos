@@ -34642,7 +34642,7 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 			{
 				foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)j).cities())
 				{
-					if (pLoopCity->getNumActiveBuilding((BuildingTypes)i) > 0 && !GET_TEAM(pLoopCity->getTeam()).isObsoleteBuilding((BuildingTypes)i))
+					if (pLoopCity->getNumActiveBuilding((BuildingTypes)i) > 0)
 					{
 						iBuildingMod += building.getGlobalGreatPeopleRateModifier();
 					}

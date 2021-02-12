@@ -15145,12 +15145,10 @@ void CvCity::setFreeBuilding(const BuildingTypes eIndex, const bool bNewValue)
 	if (bNewValue)
 	{
 		if (itr == m_vFreeBuildings.end()
-		&& isValidBuildingLocation(eIndex)
-		&& !GET_TEAM(getTeam()).isObsoleteBuilding(eIndex)
-		&& !isDisabledBuilding(eIndex)
 		// Buildings built manually shouldn't disappear when the free building effect ends,
-		// therefore we won't count it as a free building just yet.
-		&& getNumRealBuilding(eIndex) < 1)
+		&& getNumRealBuilding(eIndex) < 1 // therefore we won't count it as a free building just yet.
+		&& !GET_TEAM(getTeam()).isObsoleteBuilding(eIndex)
+		&& isValidBuildingLocation(eIndex))
 		{
 			m_vFreeBuildings.push_back(eIndex);
 			setNumRealBuilding(eIndex, 1);

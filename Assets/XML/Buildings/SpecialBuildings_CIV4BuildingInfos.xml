@@ -16066,6 +16066,10 @@
 					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_WALLS</BuildingType>
+				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
+			</ReplacementBuildings>
 			<iAsset>1</iAsset>
 			<iConquestProb>80</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_OLD_CITY_WALLS</ArtDefineTag>

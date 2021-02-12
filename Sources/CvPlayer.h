@@ -247,6 +247,7 @@ public:
 	int countUnimprovedBonuses(const CvArea* pArea, const CvPlot* pFromPlot = NULL) const;
 	int countCityFeatures(FeatureTypes eFeature) const;
 	int countNumBuildings(BuildingTypes eBuilding) const;
+	bool hasBuilding(const BuildingTypes eBuilding) const;
 	int countNumCitiesConnectedToCapital() const;
 	int countPotentialForeignTradeCities(const CvArea* pIgnoreArea = NULL) const;
 	int countPotentialForeignTradeCitiesConnected() const;

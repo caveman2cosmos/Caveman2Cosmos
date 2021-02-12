@@ -2304,8 +2304,9 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 {
 	PROFILE_FUNC();
 
+	const int iNumBuildingInfos = GC.getNumBuildingInfos();
 	int iOccupationTimeModifier = 100;
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < iNumBuildingInfos; iI++)
 	{
 		if (pOldCity->getNumActiveBuilding((BuildingTypes)iI) > 0
 		&& GC.getBuildingInfo((BuildingTypes)iI).getOccupationTimeModifier() != 0)
@@ -2511,9 +2512,9 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	bool* pabHolyCity = new bool[GC.getNumReligionInfos()];
 	bool* pabHasCorporation = new bool[GC.getNumCorporationInfos()];
 	bool* pabHeadquarters = new bool[GC.getNumCorporationInfos()];
-	int* paiNumRealBuilding = new int[GC.getNumBuildingInfos()];
-	int* paiBuildingOriginalOwner = new int[GC.getNumBuildingInfos()];
-	int* paiBuildingOriginalTime = new int[GC.getNumBuildingInfos()];
+	int* paiNumRealBuilding = new int[iNumBuildingInfos];
+	int* paiBuildingOriginalOwner = new int[iNumBuildingInfos];
+	int* paiBuildingOriginalTime = new int[iNumBuildingInfos];
 
 	for (int iI = 0; iI < GC.getNumVoteSourceInfos(); ++iI)
 	{
@@ -2583,7 +2584,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		pabHeadquarters[iI] = pOldCity->isHeadquarters((CorporationTypes)iI);
 	}
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < iNumBuildingInfos; iI++)
 	{
 		paiNumRealBuilding[iI] = pOldCity->getNumRealBuilding((BuildingTypes)iI);
 		paiBuildingOriginalOwner[iI] = pOldCity->getBuildingOriginalOwner((BuildingTypes)iI);
@@ -2592,7 +2593,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 	BuildingChangeArray aBuildingHappyChange;
 	BuildingChangeArray aBuildingHealthChange;
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+	for (int iI = 0; iI < iNumBuildingInfos; ++iI)
 	{
 		int iChange = pOldCity->getBuildingHappyChange((BuildingTypes)iI);
 		if (0 != iChange)
@@ -2647,17 +2648,28 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		pNewCity->setCultureTimes100(((PlayerTypes)iI), aiCulture[iI], false, false);
 	}
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	CvTeam& team = GET_TEAM(getTeam());
+	for (int iI = 0; iI < iNumBuildingInfos; iI++)
 	{
-		if (paiNumRealBuilding[iI] > 0 && !GC.getBuildingInfo((BuildingTypes)iI).isNeverCapture())
+		if (paiNumRealBuilding[iI] > 0)
 		{
-			int iNum = 0;
-			if (!isProductionMaxedBuilding((BuildingTypes)iI, true)
-			&& (!bConquest || bRecapture || GC.getGame().getSorenRandNum(100, "Capture Probability") < GC.getBuildingInfo((BuildingTypes)iI).getConquestProbability()))
+			const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iI);
+
+			if (!GC.getBuildingInfo(eBuildingX).isNeverCapture() && !isProductionMaxedBuilding(eBuildingX, true)
+			&& (!bConquest || bRecapture || GC.getGame().getSorenRandNum(100, "Capture Probability") < GC.getBuildingInfo(eBuildingX).getConquestProbability()))
 			{
-				iNum += paiNumRealBuilding[iI];
+				if (team.isObsoleteBuilding((BuildingTypes)iI))
+				{
+					const int iObsoletesToBuilding = GC.getBuildingInfo((BuildingTypes)iI).getObsoletesToBuilding();
+
+					if (iObsoletesToBuilding != -1 && paiNumRealBuilding[iObsoletesToBuilding] == 0)
+					{
+						pNewCity->setNumRealBuilding((BuildingTypes)iObsoletesToBuilding, 1);
+						continue;
+					}
+				}
+				pNewCity->setNumRealBuildingTimed(eBuildingX, true, (PlayerTypes)paiBuildingOriginalOwner[iI], paiBuildingOriginalTime[iI], false);
 			}
-			pNewCity->setNumRealBuildingTimed((BuildingTypes)iI, std::min(1, iNum) > 0, (PlayerTypes)paiBuildingOriginalOwner[iI], paiBuildingOriginalTime[iI], false);
 		}
 	}
 
@@ -2853,7 +2865,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			&&
 			(
 					getTeam() == GET_PLAYER(eHighestCulturePlayer).getTeam()
-				||	GET_TEAM(getTeam()).isOpenBorders(GET_PLAYER(eHighestCulturePlayer).getTeam())
+				||	team.isOpenBorders(GET_PLAYER(eHighestCulturePlayer).getTeam())
 				||	GET_TEAM(GET_PLAYER(eHighestCulturePlayer).getTeam()).isVassal(getTeam())
 			)
 		);
@@ -4937,6 +4949,11 @@ int CvPlayer::countNumBuildings(BuildingTypes eBuilding) const
 	return algo::accumulate(cities() | transformed(CvCity::fn::getNumRealBuilding(eBuilding)), 0);
 }
 
+bool CvPlayer::hasBuilding(const BuildingTypes eBuilding) const
+{
+	return eBuilding != NO_BUILDING && algo::any_of(cities(), CvCity::fn::getNumRealBuilding(eBuilding) > 0);
+}
+
 
 int CvPlayer::countNumCitiesConnectedToCapital() const
 {
@@ -6984,17 +7001,9 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 		return false;
 	}
 
-	if (GC.getGame().isBuildingMaxedOut(eBuilding))
-	{
-		return false;
-	}
-
-	if (currentTeam.isBuildingMaxedOut(eBuilding))
-	{
-		return false;
-	}
-
-	if (isBuildingMaxedOut(eBuilding))
+	if (isBuildingMaxedOut(eBuilding)
+	|| currentTeam.isBuildingMaxedOut(eBuilding)
+	|| GC.getGame().isBuildingMaxedOut(eBuilding))
 	{
 		return false;
 	}
@@ -7053,28 +7062,17 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 
 	if (kBuilding.getVictoryPrereq() != NO_VICTORY)
 	{
-		if (!(GC.getGame().isVictoryValid((VictoryTypes)(kBuilding.getVictoryPrereq()))))
-		{
-			return false;
-		}
-
-		if (isMinorCiv())
-		{
-			return false;
-		}
-
-		if (currentTeam.getVictoryCountdown((VictoryTypes)kBuilding.getVictoryPrereq()) >= 0)
+		if (isMinorCiv()
+		|| !GC.getGame().isVictoryValid((VictoryTypes)kBuilding.getVictoryPrereq())
+		|| currentTeam.getVictoryCountdown((VictoryTypes)kBuilding.getVictoryPrereq()) >= 0)
 		{
 			return false;
 		}
 	}
 
-	if (kBuilding.getMaxStartEra() != NO_ERA)
+	if (kBuilding.getMaxStartEra() != NO_ERA && GC.getGame().getStartEra() > kBuilding.getMaxStartEra())
 	{
-		if (GC.getGame().getStartEra() > kBuilding.getMaxStartEra())
-		{
-			return false;
-		}
+		return false;
 	}
 
 	const int numBuildingInfos = GC.getNumBuildingInfos();
@@ -7083,14 +7081,12 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 	{
 		for (int iI = 0; iI < numBuildingInfos; iI++)
 		{
-			const BuildingTypes ePrereqBuilding = static_cast<BuildingTypes>(iI);
+			const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iI);
 
-			if (currentTeam.isObsoleteBuilding(ePrereqBuilding))
+			if (!currentTeam.isObsoleteBuilding(eBuildingX)
+			&& getBuildingCount(eBuildingX) < getBuildingPrereqBuilding(eBuilding, eBuildingX, 0))
 			{
-				if (getBuildingCount(ePrereqBuilding) < getBuildingPrereqBuilding(eBuilding, ePrereqBuilding, 0))
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 	}
@@ -7122,17 +7118,15 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 			return false;
 		}
 
-		if (eSpecialBuilding != NO_SPECIALBUILDING)
+		if (eSpecialBuilding != NO_SPECIALBUILDING
+		&& !GC.getGame().isSpecialBuildingValid((SpecialBuildingTypes)kBuilding.getSpecialBuildingType()))
 		{
-			if (!(GC.getGame().isSpecialBuildingValid((SpecialBuildingTypes)(kBuilding.getSpecialBuildingType()))))
-			{
-				return false;
-			}
+			return false;
 		}
 
 		if (getNumCities() < kBuilding.getNumCitiesPrereq())
 		{
-			if ( probabilityEverConstructable != NULL )
+			if (probabilityEverConstructable != NULL)
 			{
 				*probabilityEverConstructable = 20;
 			}
@@ -7141,7 +7135,7 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 
 		if (getHighestUnitLevel() < kBuilding.getUnitLevelPrereq())
 		{
-			if ( probabilityEverConstructable != NULL )
+			if (probabilityEverConstructable != NULL)
 			{
 				*probabilityEverConstructable = 20;
 			}
@@ -7152,9 +7146,12 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 		{
 			for (int iI = 0; iI < numBuildingInfos; iI++)
 			{
-				if (getBuildingCount((BuildingTypes)iI) < getBuildingPrereqBuilding(eBuilding, (BuildingTypes)iI, (bContinue ? 0 : getBuildingMaking(eBuilding))))
+				const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iI);
+
+				if (!currentTeam.isObsoleteBuilding(eBuildingX)
+				&& getBuildingCount(eBuildingX) < getBuildingPrereqBuilding(eBuilding, eBuildingX, bContinue ? 0 : getBuildingMaking(eBuilding)))
 				{
-					if ( probabilityEverConstructable != NULL )
+					if (probabilityEverConstructable != NULL)
 					{
 						*probabilityEverConstructable = 20;
 					}
@@ -9075,12 +9072,9 @@ bool CvPlayer::hasStateReligionShrine() const
 
 	const CvCity* pHolyCity = GC.getGame().getHolyCity(eStateReligion);
 
-	if (pHolyCity != NULL)
+	if (pHolyCity != NULL && pHolyCity->hasShrine(eStateReligion))
 	{
-		if (pHolyCity->hasShrine(eStateReligion))
-		{
-			return (pHolyCity->getOwner() == getID());
-		}
+		return pHolyCity->getOwner() == getID();
 	}
 	return false;
 }
