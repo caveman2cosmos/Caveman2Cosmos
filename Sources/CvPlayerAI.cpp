@@ -11736,6 +11736,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			{
 				iValue += ((iCombatValue * kUnitInfo.getKnockback()) / 100);
 			}
+#ifdef BATTLEWORN
 			if (kUnitInfo.getStrAdjperRnd() != 0)
 			{
 				iValue += ((iCombatValue * kUnitInfo.getStrAdjperRnd()) / 100);
@@ -11748,6 +11749,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			{
 				iValue += ((iCombatValue * kUnitInfo.getWithdrawAdjperAtt()) / 100);
 			}
+#endif // BATTLEWORN
 	//TB Combat Mods End
 			//	Also useful if attack stacks can make use of defensive terrain, though
 			//	its not a huge factor since we can assume some defensive units will be
@@ -11965,6 +11967,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				{
 					iValue += ((iCombatValue * kUnitInfo.getKnockback()) / 80);
 				}
+#ifdef BATTLEWORN
 				if (kUnitInfo.getStrAdjperRnd() != 0)
 				{
 					iValue += ((iCombatValue * kUnitInfo.getStrAdjperRnd()) / 100);
@@ -11977,6 +11980,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				{
 					iValue += ((iCombatValue * kUnitInfo.getWithdrawAdjperAtt()) / 100);
 				}
+#endif // BATTLEWORN
 			}
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD					   END												  */
@@ -12133,6 +12137,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			iValue += ((iCombatValue * kUnitInfo.getRepel()) / 85);
 			iValue += ((iCombatValue * kUnitInfo.getFortRepel()) / 100);
 			iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 100);
+#ifdef BATTLEWORN
 			if (kUnitInfo.getStrAdjperRnd() != 0)
 			{
 				iValue += ((iCombatValue * kUnitInfo.getStrAdjperRnd()) / 100);
@@ -12141,6 +12146,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			{
 				iValue += ((iCombatValue * kUnitInfo.getStrAdjperDef()) / 100);
 			}
+#endif // BATTLEWORN
 			//TB Combat Mods End
 			break;
 		case UNITAI_CITY_COUNTER:
@@ -12176,6 +12182,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			iValue += ((iCombatValue * kUnitInfo.getRepel()) / 85);
 			iValue += ((iCombatValue * kUnitInfo.getFortRepel()) / 100);
 			iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 100);
+#ifdef BATTLEWORN
 			if (kUnitInfo.getStrAdjperRnd() != 0)
 			{
 				iValue += ((iCombatValue * kUnitInfo.getStrAdjperRnd()) / 100);
@@ -12184,9 +12191,9 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			{
 				iValue += ((iCombatValue * kUnitInfo.getStrAdjperDef()) / 100);
 			}
+#endif // BATTLEWORN
 			//TB Combat Mods End
 			break;
-
 
 		case UNITAI_HEALER:
 		case UNITAI_HEALER_SEA:
@@ -12257,7 +12264,9 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			//TB Combat Mods Begin
 			iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 100);
 			iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 200);
+#ifdef BATTLEWORN
 			iValue += ((iCombatValue * kUnitInfo.getWithdrawAdjperAtt()) / 100);
+#endif
 			//TB Combat Mods End
 			iValue *= (100 + kUnitInfo.getMoves() * 30);
 			iValue *= (100 + kUnitInfo.getAnimalCombatModifier());
@@ -30949,7 +30958,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			}
 		}
 	}
-
+#ifdef BATTLEWORN
 	iTemp = kPromotion.getStrAdjperRndChange();
 	if (iTemp != 0)
 	{
@@ -31000,6 +31009,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			iValue += iTemp;
 		}
 	}
+#endif // BATTLEWORN
 
 	for (iI = 0; iI < kPromotion.getNumAfflictOnAttackChangeTypes(); ++iI)
 	{
@@ -35863,7 +35873,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 			}
 		}
 	}
-
+#ifdef BATTLEWORN
 	iTemp = kUnitCombat.getStrAdjperAttChange();
 	if (iTemp != 0)
 	{
@@ -35908,6 +35918,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 			iValue += iTemp;
 		}
 	}
+#endif // BATTLEWORN
 
 	for (iI = 0; iI < kUnitCombat.getNumAfflictOnAttackChangeTypes(); ++iI)
 	{

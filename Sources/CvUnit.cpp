@@ -15777,7 +15777,10 @@ bool CvUnit::canFliesToMove() const
 
 int CvUnit::strAdjperRndTotal() const
 {
-	int iStrAdjperRnd = m_pUnitInfo->getStrAdjperRnd() + getExtraStrAdjperRnd();
+	int iStrAdjperRnd = getExtraStrAdjperRnd();
+#ifdef BATTLEWORN
+	iStrAdjperRnd += m_pUnitInfo->getStrAdjperRnd();
+#endif
 	if (iStrAdjperRnd < 0)
 	{
 		iStrAdjperRnd = std::max(0, (iStrAdjperRnd + enduranceTotal()));
@@ -15787,7 +15790,10 @@ int CvUnit::strAdjperRndTotal() const
 
 int CvUnit::strAdjperAttTotal() const
 {
-	int iStrAdjperAtt = m_pUnitInfo->getStrAdjperAtt() + getExtraStrAdjperAtt();
+	int iStrAdjperAtt = getExtraStrAdjperAtt();
+#ifdef BATTLEWORN
+	iStrAdjperAtt += m_pUnitInfo->getStrAdjperAtt();
+#endif
 	if (iStrAdjperAtt < 0)
 	{
 		iStrAdjperAtt = std::max(0, (iStrAdjperAtt + enduranceTotal()));
@@ -15797,12 +15803,19 @@ int CvUnit::strAdjperAttTotal() const
 
 int CvUnit::strAdjperDefTotal() const
 {
-	return (m_pUnitInfo->getStrAdjperDef() + getExtraStrAdjperDef());
+	return
+#ifdef BATTLEWORN
+		m_pUnitInfo->getStrAdjperDef() + 
+#endif
+		getExtraStrAdjperDef();
 }
 
 int CvUnit::withdrawAdjperAttTotal() const
 {
-	int iWithdrawAdjperAtt = m_pUnitInfo->getWithdrawAdjperAtt() + getExtraWithdrawAdjperAtt();
+	int iWithdrawAdjperAtt = getExtraWithdrawAdjperAtt();
+#ifdef BATTLEWORN
+	iWithdrawAdjperAtt += m_pUnitInfo->getWithdrawAdjperAtt();
+#endif
 	if (iWithdrawAdjperAtt < 0)
 	{
 		iWithdrawAdjperAtt = std::max(0, (iWithdrawAdjperAtt + enduranceTotal()));
@@ -21847,10 +21860,12 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 			promotionInfo.getUnyieldingChange() != 0 ||
 			promotionInfo.getKnockbackChange() != 0 ||
 			promotionInfo.getKnockbackRetriesChange() != 0 ||
+#ifdef BATTLEWORN
 			promotionInfo.getStrAdjperRndChange() != 0 ||
 			promotionInfo.getStrAdjperAttChange() != 0 ||
 			promotionInfo.getStrAdjperDefChange() != 0 ||
 			promotionInfo.getWithdrawAdjperAttChange() != 0 ||
+#endif // BATTLEWORN
 			promotionInfo.getUnnerveChange() != 0 ||
 			promotionInfo.getEncloseChange() != 0 ||
 			promotionInfo.getLungeChange() != 0 ||
@@ -21921,7 +21936,9 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 			||	promotionInfo.getFortRepelChange() != 0
 			||	promotionInfo.getRepelChange() != 0
 			||	promotionInfo.getRepelRetriesChange() != 0
+#ifdef BATTLEWORN
 			||	promotionInfo.getStrAdjperDefChange() != 0
+#endif // BATTLEWORN
 			||	promotionInfo.getHillsDefensePercent() != 0
 			||	promotionInfo.isAnyTerrainDefensePercent()
 			||	promotionInfo.isAnyFeatureDefensePercent()
@@ -22024,10 +22041,12 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 			promotionInfo.getUnyieldingChange() != 0 ||
 			promotionInfo.getKnockbackChange() != 0 ||
 			promotionInfo.getKnockbackRetriesChange() != 0 ||
+#ifdef BATTLEWORN
 			promotionInfo.getStrAdjperRndChange() != 0 ||
 			promotionInfo.getStrAdjperAttChange() != 0 ||
 			promotionInfo.getStrAdjperDefChange() != 0 ||
 			promotionInfo.getWithdrawAdjperAttChange() != 0 ||
+#endif // BATTLEWORN
 			promotionInfo.getUnnerveChange() != 0 ||
 			promotionInfo.getEncloseChange() != 0 ||
 			promotionInfo.getLungeChange() != 0 ||
@@ -22466,9 +22485,11 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 	changeExtraUnyielding(kUnitCombat.getUnyieldingChange() * iChange);//no merge/split
 	changeExtraKnockback(kUnitCombat.getKnockbackChange() * iChange);//no merge/split
 	changeExtraKnockbackRetries(kUnitCombat.getKnockbackRetriesChange() * iChange);//no merge/split
+#ifdef BATTLEWORN
 	changeExtraStrAdjperAtt(kUnitCombat.getStrAdjperAttChange() * iChange);//no merge/split
 	changeExtraStrAdjperDef(kUnitCombat.getStrAdjperDefChange() * iChange);//no merge/split
 	changeExtraWithdrawAdjperAtt(kUnitCombat.getWithdrawAdjperAttChange() * iChange);//no merge/split
+#endif // BATTLEWORN
 	changeExtraUnnerve(kUnitCombat.getUnnerveChange() * iChange);//no merge/split
 	changeExtraEnclose(kUnitCombat.getEncloseChange() * iChange);//no merge/split
 	changeExtraLunge(kUnitCombat.getLungeChange() * iChange);//no merge/split
@@ -23052,10 +23073,12 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	changeIgnoreZoneofControlCount((kPromotion.isIgnoreZoneofControlSubtract()) ? -iChange : 0);
 	changeFliesToMoveCount((kPromotion.isFliesToMoveAdd()) ? iChange : 0);
 	changeFliesToMoveCount((kPromotion.isFliesToMoveSubtract()) ? -iChange : 0);
+#ifdef BATTLEWORN
 	changeExtraStrAdjperRnd(kPromotion.getStrAdjperRndChange() * iChange);
 	changeExtraStrAdjperAtt(kPromotion.getStrAdjperAttChange() * iChange);
 	changeExtraStrAdjperDef(kPromotion.getStrAdjperDefChange() * iChange);
 	changeExtraWithdrawAdjperAtt(kPromotion.getWithdrawAdjperAttChange() * iChange);
+#endif // BATTLEWORN
 	changeExtraUnnerve(kPromotion.getUnnerveChange() * iChange);
 	changeExtraEnclose(kPromotion.getEncloseChange() * iChange);
 	changeExtraLunge(kPromotion.getLungeChange() * iChange);

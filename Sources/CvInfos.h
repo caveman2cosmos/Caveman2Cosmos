@@ -732,13 +732,12 @@ public:
 	int getUnyieldingChange() const;
 	int getKnockbackChange() const;
 	int getKnockbackRetriesChange() const;
-	//
-	// Battleworn
+#ifdef BATTLEWORN
 	int getStrAdjperRndChange() const;
 	int getStrAdjperAttChange() const;
 	int getStrAdjperDefChange() const;
 	int getWithdrawAdjperAttChange() const;
-	//
+#endif // BATTLEWORN
 	// S&D Extended
 	int getUnnerveChange() const;
 	int getEncloseChange() const;
@@ -1243,10 +1242,12 @@ protected:
 	int m_iUnyieldingChange;
 	int m_iKnockbackChange;
 	int m_iKnockbackRetriesChange;
+#ifdef BATTLEWORN
 	int m_iStrAdjperRndChange;
 	int m_iStrAdjperAttChange;
 	int m_iStrAdjperDefChange;
 	int m_iWithdrawAdjperAttChange;
+#endif // BATTLEWORN
 	int m_iUnnerveChange;
 	int m_iEncloseChange;
 	int m_iLungeChange;
@@ -1855,10 +1856,12 @@ public:
 	int getUnyielding() const;
 	int getKnockback() const;
 	int getKnockbackRetries() const;
+#ifdef BATTLEWORN
 	int getStrAdjperRnd() const;
 	int getStrAdjperAtt() const;
 	int getStrAdjperDef() const;
 	int getWithdrawAdjperAtt() const;
+#endif // BATTLEWORN
 	int getUnnerve() const;
 	int getEnclose() const;
 	int getLunge() const;
@@ -2529,10 +2532,12 @@ protected:
 	int m_iUnyielding;
 	int m_iKnockback;
 	int m_iKnockbackRetries;
+#ifdef BATTLEWORN
 	int m_iStrAdjperRnd;
 	int m_iStrAdjperAtt;
 	int m_iStrAdjperDef;
 	int m_iWithdrawAdjperAtt;
+#endif // BATTLEWORN
 	int m_iUnnerve;
 	int m_iEnclose;
 	int m_iLunge;
@@ -9197,9 +9202,11 @@ public:
 	int getUnyieldingChange() const;
 	int getKnockbackChange() const;
 	int getKnockbackRetriesChange() const;
+#ifdef BATTLEWORN
 	int getStrAdjperAttChange() const;
 	int getStrAdjperDefChange() const;
 	int getWithdrawAdjperAttChange() const;
+#endif // BATTLEWORN
 	int getUnnerveChange() const;
 	int getEncloseChange() const;
 	int getLungeChange() const;
@@ -9556,9 +9563,11 @@ protected:
 	int m_iUnyieldingChange;
 	int m_iKnockbackChange;
 	int m_iKnockbackRetriesChange;
+#ifdef BATTLEWORN
 	int m_iStrAdjperAttChange;
 	int m_iStrAdjperDefChange;
 	int m_iWithdrawAdjperAttChange;
+#endif // BATTLEWORN
 	int m_iUnnerveChange;
 	int m_iEncloseChange;
 	int m_iLungeChange;
