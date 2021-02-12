@@ -16054,11 +16054,43 @@
 			<Type>BUILDING_OLD_CITY_WALLS</Type>
 			<Description>TXT_KEY_BUILDING_OLD_CITY_WALLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WALLS_PEDIA</Civilopedia>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_WALLS</BuildingType>
+				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
+			</ReplacementBuildings>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_WALLS</BuildingType>
+					<iProductionModifier>50</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
+					<iProductionModifier>33</iProductionModifier>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<TechCommerceChanges>
+				<TechCommerceChange>
+					<PrereqTech>TECH_RIFLING</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<PrereqTech>TECH_TOURISM</PrereqTech>
+					<TechCommerce>
+						<iCommerce>1</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16066,10 +16098,6 @@
 					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_WALLS</BuildingType>
-				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
-			</ReplacementBuildings>
 			<iAsset>1</iAsset>
 			<iConquestProb>80</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_OLD_CITY_WALLS</ArtDefineTag>
