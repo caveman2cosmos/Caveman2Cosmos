@@ -4950,16 +4950,14 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	iTempValue = 0;
 	for (iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
-		if (GC.getCorporationInfo((CorporationTypes)iI).getObsoleteTech() != NO_TECH)
+		if (GC.getCorporationInfo((CorporationTypes)iI).getObsoleteTech() != NO_TECH
+		&&  GC.getCorporationInfo((CorporationTypes)iI).getObsoleteTech() == eTech)
 		{
-			if (GC.getCorporationInfo((CorporationTypes)iI).getObsoleteTech() == eTech)
+			foreach_(const CvCity* pLoopCity, cities())
 			{
-				foreach_(const CvCity* pLoopCity, cities())
+				if (pLoopCity->isHasCorporation((CorporationTypes)iI))
 				{
-					if (pLoopCity->isHasCorporation((CorporationTypes)iI))
-					{
-						iTempValue -= AI_corporationValue((CorporationTypes)iI, pLoopCity);
-					}
+					iTempValue -= AI_corporationValue((CorporationTypes)iI, pLoopCity);
 				}
 			}
 		}
@@ -4975,27 +4973,21 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	iTempValue = 0;
 	for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
-		if (GC.getPromotionInfo((PromotionTypes)iI).getObsoleteTech() != NO_TECH)
+		if (GC.getPromotionInfo((PromotionTypes)iI).getObsoleteTech() != NO_TECH
+		&&  GC.getPromotionInfo((PromotionTypes)iI).getObsoleteTech() == eTech)
 		{
-			if (GC.getPromotionInfo((PromotionTypes)iI).getObsoleteTech() == eTech)
+			foreach_(const CvUnit* pLoopUnit, units())
 			{
-				foreach_(const CvUnit* pLoopUnit, units())
+				if (pLoopUnit->isHasPromotion((PromotionTypes)iI))
 				{
-					if (pLoopUnit->isHasPromotion((PromotionTypes)iI))
-					{
-						iTempValue -= AI_promotionValue((PromotionTypes)iI, pLoopUnit->getUnitType(), pLoopUnit, pLoopUnit->AI_getUnitAIType());
-					}
+					iTempValue -= AI_promotionValue((PromotionTypes)iI, pLoopUnit->getUnitType(), pLoopUnit, pLoopUnit->AI_getUnitAIType());
 				}
 			}
 		}
 	}
 	iValue += iTempValue / 100;
 
-	if ( gPlayerLogLevel > 2 )
-	{
-		logBBAI("\tPromotion value: %d",
-				iTempValue / 100);
-	}
+	if (gPlayerLogLevel > 2) logBBAI("\tPromotion value: %d", iTempValue / 100);
 
 	iTempValue = 0;
 
@@ -10301,27 +10293,12 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-/************************************************************************************************/
-/* Fuyu & Afforess				  Start		 6/22/10										*/
-/*																							  */
-/*  Better AI: Strategic For Current Era														*/
-/************************************************************************************************/
-//disregard obsolete buildings
-		if ((TechTypes)GC.getBuildingInfo((BuildingTypes)iI).getObsoleteTech() != NO_TECH)
+		if (GET_TEAM(getTeam()).isObsoleteBuilding((BuildingTypes)iI)
+		|| !GC.getGame().canEverConstruct((BuildingTypes)iI))
 		{
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBuildingInfo((BuildingTypes)iI).getObsoleteTech())))
-			{
-				continue;
-			}
-
-			if (!GC.getGame().canEverConstruct((BuildingTypes)iI))
-			{
-				continue;
-			}
+			continue;
 		}
-/************************************************************************************************/
-/* Fuyu						  END															*/
-/************************************************************************************************/
+
 		if (GC.getBuildingInfo((BuildingTypes) iI).getPrereqAndBonus() == eBonus)
 		{
 			bStrategic = true;
@@ -10332,6 +10309,7 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 			if (GC.getBuildingInfo((BuildingTypes) iI).getPrereqOrBonuses(iJ) == eBonus)
 			{
 				bStrategic = true;
+				break;
 			}
 		}
 	}
@@ -15483,21 +15461,16 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
 			iTempValue = kCivic.getBuildingHappinessChanges(iI);
-			if (iTempValue != 0 && !isLimitedWonder((BuildingTypes)iI))
+			if (iTempValue != 0 && !isLimitedWonder((BuildingTypes)iI) && !pTeam.isObsoleteBuilding((BuildingTypes)iI))
 			{
 				const CvBuildingInfo& buildingInfo = GC.getBuildingInfo((BuildingTypes)iI);
-				if (buildingInfo.getPrereqAndTech() == NO_TECH ||
-					  GC.getTechInfo((TechTypes)buildingInfo.getPrereqAndTech()).getEra() <= getCurrentEra() &&
-					 (buildingInfo.getObsoleteTech() == NO_TECH ||
-						pTeam.isHasTech((TechTypes)buildingInfo.getObsoleteTech())))
+				if (buildingInfo.getPrereqAndTech() == NO_TECH || GC.getTechInfo((TechTypes)buildingInfo.getPrereqAndTech()).getEra() <= getCurrentEra())
 				{
 					//+0.5 per city that does not yet have that building
-					iTempValue = iTempValue * std::min(getNumCities(), getNumCities() - getBuildingCount((BuildingTypes)iI)) / 2;
+					iTempValue = iTempValue * (getNumCities() - getBuildingCount((BuildingTypes)iI)) / 2;
 					if (gPlayerLogLevel > 2 && iTempValue != 0)
 					{
-						logBBAI("Civic %S nat wonder happiness change value %d",
-								 kCivic.getDescription(),
-								 iTempValue);
+						logBBAI("Civic %S nat wonder happiness change value %d", kCivic.getDescription(), iTempValue);
 					}
 					iValue += iTempValue;
 				}

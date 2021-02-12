@@ -1002,22 +1002,12 @@ class CvDomesticAdvisor:
 
 
 	def canAdviseToConstruct(self, CyCity, i):
+		if not CyCity.canConstruct(i, True, False, False):
+			return False
 		info = GC.getBuildingInfo(i)
 		if info.isGovernmentCenter() or info.isCapital():
 			return False
-		if not CyCity.canConstruct(i, True, False, False):
-			return False
-		CyTeam = GC.getTeam(CyGame().getActiveTeam())
-		iTech = info.getObsoleteTech()
-		if iTech > -1 and CyTeam.isHasTech(iTech):
-			return False
 
-		# Special building obsolete check
-		info = GC.getSpecialBuildingInfo(info.getSpecialBuildingType())
-		if info:
-			iTech = info.getObsoleteTech()
-			if iTech > -1 and CyTeam.isHasTech(iTech):
-				return False
 		return True
 
 	def advise(self, CyCity, szKey, type):
