@@ -20710,13 +20710,13 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 		}
 
 
-		BoolExpr* pExpr = GC.getUnitInfo(eUnit).getTrainCondition();
+		const BoolExpr* pExpr = GC.getUnitInfo(eUnit).getTrainCondition();
 		if (pExpr)
 		{
 			bool bEval = false;
 			if (pCity)
 			{
-				bEval = pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObject())); // Const wegcasten ist hier ok da evaluate nicht wirklich etwas ändert
+				bEval = pExpr->evaluate(pCity->getGameObject());
 			}
 			if (!bEval)
 			{
@@ -24642,8 +24642,8 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_NO_NUKES"));
 		}
 
-		BoolExpr* pExpr = kBuilding.getConstructCondition();
-		if (pExpr && (!pCity || !pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObject()))))
+		const BoolExpr* pExpr = kBuilding.getConstructCondition();
+		if (pExpr && (!pCity || !pExpr->evaluate(pCity->getGameObject())))
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES"));
 			pExpr->buildDisplayString(szBuffer);

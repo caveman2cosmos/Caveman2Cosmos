@@ -4528,7 +4528,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				{
 					// check if this building enables the construct condition of another building
 					bool bEnablesCondition = false;
-					BoolExpr* condition = GC.getBuildingInfo((BuildingTypes)iI).getConstructCondition();
+					const BoolExpr* condition = GC.getBuildingInfo((BuildingTypes)iI).getConstructCondition();
 					if (condition != NULL)
 					{
 						if (condition->evaluateChange(pObject, &(*queries.begin()), &(*queries.end())) == BOOLEXPR_CHANGE_BECOMES_TRUE)
@@ -14863,7 +14863,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					{
 						// check if this building enables the construct condition of another building
 						bool bEnablesCondition = false;
-						BoolExpr* condition = GC.getBuildingInfo(eType).getConstructCondition();
+						const BoolExpr* condition = GC.getBuildingInfo(eType).getConstructCondition();
 						if (condition != NULL)
 						{
 							if (condition->evaluateChange(pObject, &(*queries.begin()), &(*queries.end())) == BOOLEXPR_CHANGE_BECOMES_TRUE)

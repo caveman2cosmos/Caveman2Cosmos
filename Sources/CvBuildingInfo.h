@@ -533,7 +533,7 @@ public:
 
 	bool isNewCityFree(CvGameObject* pObject);
 
-	BoolExpr* getConstructCondition() const;
+	const BoolExpr* getConstructCondition() const;
 
 	int getVictoryThreshold(int i) const;
 
