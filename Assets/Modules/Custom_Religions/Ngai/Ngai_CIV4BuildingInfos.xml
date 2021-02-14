@@ -24,8 +24,6 @@
 			<FreePromotion>PROMOTION_GUARDIAN</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -89,7 +87,6 @@
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>176</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>4</iAsset>
@@ -154,7 +151,6 @@
 			<FreePromotion>PROMOTION_VENGEANCE</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>4</iAsset>
@@ -221,7 +217,6 @@
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -417,7 +412,6 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>

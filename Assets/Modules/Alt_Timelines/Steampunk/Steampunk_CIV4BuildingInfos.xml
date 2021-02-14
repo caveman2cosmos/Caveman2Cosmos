@@ -27,7 +27,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>3930</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>

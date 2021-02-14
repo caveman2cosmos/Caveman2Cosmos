@@ -28,7 +28,6 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>2</iAsset>
@@ -110,7 +109,6 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1104</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAnarchyModifier>-50</iAnarchyModifier>
 			<iGoldenAgeModifier>20</iGoldenAgeModifier>
@@ -183,7 +181,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1920</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
@@ -279,7 +276,6 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1800</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -367,7 +363,6 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1512</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
 			<iStateReligionHappiness>3</iStateReligionHappiness>
@@ -465,7 +460,6 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1404</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
@@ -551,7 +545,6 @@
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
 			<iHappiness>3</iHappiness>
@@ -637,7 +630,6 @@
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>50</iGreatPeopleRateModifier>
 			<iHappiness>3</iHappiness>
@@ -724,7 +716,6 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>2208</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
@@ -800,7 +791,6 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>2640</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<iHappiness>1</iHappiness>
@@ -884,7 +874,6 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>2208</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
 			<iHappiness>1</iHappiness>
@@ -968,7 +957,6 @@
 			</PrereqBonuses>
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGlobalHealth>1</iGlobalHealth>
 			<iStateReligionHappiness>3</iStateReligionHappiness>
@@ -1059,7 +1047,6 @@
 			<PrereqReligion>RELIGION_TAOISM</PrereqReligion>
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGlobalHealth>1</iGlobalHealth>
 			<iStateReligionHappiness>3</iStateReligionHappiness>

@@ -27,7 +27,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>2280</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAsset>5</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>

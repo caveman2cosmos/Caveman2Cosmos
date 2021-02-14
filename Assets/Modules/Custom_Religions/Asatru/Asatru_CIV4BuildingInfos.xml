@@ -21,7 +21,6 @@
 			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>280</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iWarWearinessModifier>-25</iWarWearinessModifier>
 			<iHappiness>1</iHappiness>
@@ -111,7 +110,6 @@
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>216</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iWarWearinessModifier>-15</iWarWearinessModifier>
 			<HealUnitCombatTypes>
@@ -182,7 +180,6 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -247,7 +244,6 @@
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iWarWearinessModifier>-10</iWarWearinessModifier>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -320,7 +316,6 @@
 			</PrereqBonuses>
 			<iCost>1296</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -392,7 +387,6 @@
 			</PrereqBonuses>
 			<iCost>1296</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iDefense>100</iDefense>
@@ -459,7 +453,6 @@
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iCost>1296</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>2</iAsset>
@@ -522,7 +515,6 @@
 			<FreePromotion>PROMOTION_MJOLNIR</FreePromotion>
 			<iCost>216</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
@@ -575,7 +567,6 @@
 			<FreeBuilding>BUILDING_THOR_ALTAR</FreeBuilding>
 			<iCost>1296</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iWarWearinessModifier>-50</iWarWearinessModifier>
 			<iGlobalWarWearinessModifier>-20</iGlobalWarWearinessModifier>

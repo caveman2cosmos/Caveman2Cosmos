@@ -18240,24 +18240,6 @@ int CvPlayer::getAdvancedStartUnitCost(UnitTypes eUnit, bool bAdd, const CvPlot*
 			return -1;
 		}
 	}
-
-	// Increase cost if the XML defines that additional units will cost more
-	if (0 != GC.getUnitInfo(eUnit).getAdvancedStartCostIncrease())
-	{
-		int iNumUnitType = algo::count_if(units(), CvUnit::fn::getUnitType() == eUnit);
-
-		if (!bAdd)
-		{
-			--iNumUnitType;
-		}
-
-		if (iNumUnitType > 0)
-		{
-			iCost *= 100 + GC.getUnitInfo(eUnit).getAdvancedStartCostIncrease() * iNumUnitType;
-			iCost /= 100;
-		}
-	}
-
 	return iCost;
 }
 
@@ -18449,23 +18431,15 @@ int CvPlayer::getAdvancedStartCultureCost(bool bAdd, const CvCity* pCity) const
 
 int CvPlayer::getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, const CvCity* pCity) const
 {
-	if (0 == getNumCities())
+	if (0 == getNumCities() || isLimitedWonder(eBuilding))
 	{
 		return -1;
 	}
 
-	int iNumBuildingType = 0;
-
-	int iCost = (getProductionNeeded(eBuilding) * GC.getBuildingInfo(eBuilding).getAdvancedStartCost()) / 100;
+	int iCost = getProductionNeeded(eBuilding);
 
 	if (iCost < 0)
 	{
-		return -1;
-	}
-
-	if (GC.getBuildingInfo(eBuilding).getFreeStartEra() != NO_ERA && GC.getGame().getStartEra() >=  GC.getBuildingInfo(eBuilding).getFreeStartEra())
-	{
-		// you get this building for free
 		return -1;
 	}
 
@@ -18484,14 +18458,7 @@ int CvPlayer::getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, c
 		iCost *= 100;
 		iCost /= std::max(1, 100 + pCity->getProductionModifier(eBuilding));
 
-		if (bAdd)
-		{
-			if (!pCity->canConstruct(eBuilding, true, false, false))
-			{
-				return -1;
-			}
-		}
-		else
+		if (!bAdd)
 		{
 			if (pCity->getNumRealBuilding(eBuilding) <= 0)
 			{
@@ -18499,8 +18466,6 @@ int CvPlayer::getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, c
 			}
 
 			// Check other buildings in this city and make sure none of them require this one
-
-			// Loop through Buildings to see which are present
 			for (int iBuildingLoop = 0; iBuildingLoop < GC.getNumBuildingInfos(); iBuildingLoop++)
 			{
 				const BuildingTypes eBuildingLoop = static_cast<BuildingTypes>(iBuildingLoop);
@@ -18511,25 +18476,11 @@ int CvPlayer::getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, c
 				}
 			}
 		}
-	}
-
-	// Increase cost if the XML defines that additional Buildings will cost more
-	if (0 != GC.getBuildingInfo(eBuilding).getAdvancedStartCostIncrease())
-	{
-		iNumBuildingType = countNumBuildings(eBuilding);
-
-		if (!bAdd)
+		else if (!pCity->canConstruct(eBuilding, true, false, false))
 		{
-			--iNumBuildingType;
-		}
-
-		if (iNumBuildingType > 0)
-		{
-			iCost *= 100 + GC.getBuildingInfo(eBuilding).getAdvancedStartCostIncrease() * std::max(0, iNumBuildingType - getNumCities());
-			iCost /= 100;
+			return -1;
 		}
 	}
-
 	return iCost;
 }
 
@@ -18548,8 +18499,6 @@ int CvPlayer::getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, const CvPl
 	{
 		return -1;
 	}
-
-	int iNumRoutes = 0;
 
 	int iCost = GC.getRouteInfo(eRoute).getAdvancedStartCost();
 
@@ -18572,15 +18521,7 @@ int CvPlayer::getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, const CvPl
 
 		if (bAdd)
 		{
-		/************************************************************************************************/
-		/* Afforess	Mountains Start		 09/18/09										   		 */
-		/*																							  */
-		/*																							  */
-		/************************************************************************************************/
 			if (pPlot->isImpassable(getTeam()) || pPlot->isWater()) // added getTeam()
-		/************************************************************************************************/
-		/* Afforess	Mountains End	   END															 */
-		/************************************************************************************************/
 			{
 				return -1;
 			}
@@ -18590,13 +18531,9 @@ int CvPlayer::getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, const CvPl
 				return -1;
 			}
 		}
-		else
+		else if (pPlot->getRouteType() != eRoute)
 		{
-			// Need Route to remove it
-			if (pPlot->getRouteType() != eRoute)
-			{
-				return -1;
-			}
+			return -1; // Need Route to remove it
 		}
 
 		// Must be owned by me
@@ -18611,48 +18548,17 @@ int CvPlayer::getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, const CvPl
 	{
 		if (GC.getBuildInfo((BuildTypes) iBuildLoop).getRoute() == eRoute)
 		{
-			if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo((BuildTypes) iBuildLoop).getTechPrereq())))
+			if (!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo((BuildTypes) iBuildLoop).getTechPrereq()))
 			{
 				return -1;
 			}
-			else if (GC.getBuildInfo((BuildTypes)iBuildLoop).getObsoleteTech() != NO_TECH)
+			if (GC.getBuildInfo((BuildTypes)iBuildLoop).getObsoleteTech() != NO_TECH
+			&& GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo((BuildTypes) iBuildLoop).getObsoleteTech()))
 			{
-				if (GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo((BuildTypes) iBuildLoop).getObsoleteTech()))
-				{
-					return -1;
-				}
+				return -1;
 			}
 		}
 	}
-
-	// Increase cost if the XML defines that additional units will cost more
-	if (0 != GC.getRouteInfo(eRoute).getAdvancedStartCostIncrease())
-	{
-		int iPlotLoop = 0;
-		CvPlot* pPlot;
-
-		for (iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); iPlotLoop++)
-		{
-			pPlot = GC.getMap().plotByIndex(iPlotLoop);
-
-			if (pPlot->getRouteType() == eRoute)
-			{
-				++iNumRoutes;
-			}
-		}
-
-		if (!bAdd)
-		{
-			--iNumRoutes;
-		}
-
-		if (iNumRoutes > 0)
-		{
-			iCost *= 100 + GC.getRouteInfo(eRoute).getAdvancedStartCostIncrease() * iNumRoutes;
-			iCost /= 100;
-		}
-	}
-
 	return iCost;
 }
 
@@ -18662,25 +18568,16 @@ int CvPlayer::getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, const CvPl
 
 int CvPlayer::getAdvancedStartImprovementCost(ImprovementTypes eImprovement, bool bAdd, const CvPlot* pPlot) const
 {
-	if (eImprovement == NO_IMPROVEMENT)
+	if (eImprovement == NO_IMPROVEMENT || 0 == getNumCities())
 	{
 		return -1;
 	}
 
-	if (0 == getNumCities())
-	{
-		return -1;
-	}
-
-	int iNumImprovements = 0;
 	int iCost = GC.getImprovementInfo(eImprovement).getAdvancedStartCost();
-
-		// This denotes cities may not be purchased through Advanced Start
 	if (iCost < 0)
 	{
 		return -1;
 	}
-
 	iCost *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getBuildPercent();
 	iCost /= 100;
 
@@ -18711,11 +18608,9 @@ int CvPlayer::getAdvancedStartImprovementCost(ImprovementTypes eImprovement, boo
 					{
 						iCost += GC.getFeatureInfo(eFeature).getAdvancedStartRemoveCost();
 					}
-
 					break;
 				}
 			}
-
 			if (!bValid)
 			{
 				return -1;
@@ -18727,13 +18622,9 @@ int CvPlayer::getAdvancedStartImprovementCost(ImprovementTypes eImprovement, boo
 				return -1;
 			}
 		}
-		else
+		else if (pPlot->getImprovementType() != eImprovement)
 		{
-			// Need this improvement in order to remove it
-			if (pPlot->getImprovementType() != eImprovement)
-			{
-				return -1;
-			}
+			return -1; // Need this improvement in order to remove it
 		}
 
 		// Must be owned by me
@@ -18748,48 +18639,17 @@ int CvPlayer::getAdvancedStartImprovementCost(ImprovementTypes eImprovement, boo
 	{
 		if (GC.getBuildInfo((BuildTypes) iBuildLoop).getImprovement() == eImprovement)
 		{
-			if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo((BuildTypes) iBuildLoop).getTechPrereq())))
+			if (!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo((BuildTypes) iBuildLoop).getTechPrereq()))
 			{
 				return -1;
 			}
-			else if (GC.getBuildInfo((BuildTypes)iBuildLoop).getObsoleteTech() != NO_TECH)
+			if (GC.getBuildInfo((BuildTypes)iBuildLoop).getObsoleteTech() != NO_TECH
+			&& GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo((BuildTypes)iBuildLoop).getObsoleteTech()))
 			{
-				if (GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildInfo((BuildTypes)iBuildLoop).getObsoleteTech()))
-				{
-					return -1;
-				}
+				return -1;
 			}
 		}
 	}
-
-	// Increase cost if the XML defines that additional units will cost more
-	if (0 != GC.getImprovementInfo(eImprovement).getAdvancedStartCostIncrease())
-	{
-		int iPlotLoop = 0;
-		CvPlot* pPlot;
-
-		for (iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); iPlotLoop++)
-		{
-			pPlot = GC.getMap().plotByIndex(iPlotLoop);
-
-			if (pPlot->getImprovementType() == eImprovement)
-			{
-				++iNumImprovements;
-			}
-		}
-
-		if (!bAdd)
-		{
-			--iNumImprovements;
-		}
-
-		if (iNumImprovements > 0)
-		{
-			iCost *= 100 + GC.getImprovementInfo(eImprovement).getAdvancedStartCostIncrease() * iNumImprovements;
-			iCost /= 100;
-		}
-	}
-
 	return iCost;
 }
 
@@ -18799,32 +18659,18 @@ int CvPlayer::getAdvancedStartImprovementCost(ImprovementTypes eImprovement, boo
 
 int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 {
-	if (eTech == NO_TECH)
+	if (eTech == NO_TECH || 0 == getNumCities() || GC.getTechInfo(eTech).isGlobal())
 	{
 		return -1;
 	}
 
-	if (0 == getNumCities())
-	{
-		return -1;
-	}
-
-	int iNumTechs = 0;
-
-	int iCost = (GET_TEAM(getTeam()).getResearchCost(eTech) * GC.getTechInfo(eTech).getAdvancedStartCost()) / 100;
+	int iCost = GET_TEAM(getTeam()).getResearchCost(eTech);
 	if (iCost < 0)
 	{
 		return -1;
 	}
 
-	if (bAdd)
-	{
-		if (!canResearch(eTech))
-		{
-			return -1;
-		}
-	}
-	else if (!bAdd)
+	if (!bAdd)
 	{
 		if (!GET_TEAM(getTeam()).isHasTech(eTech))
 		{
@@ -18832,27 +18678,24 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 		}
 
 		// Search through all techs to see if any of the currently owned ones requires this tech
-		for (int iTechLoop = 0; iTechLoop < GC.getNumTechInfos(); iTechLoop++)
+		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
-			TechTypes eTechLoop = (TechTypes) iTechLoop;
+			const TechTypes eTechLoop = static_cast<TechTypes>(iI);
 
 			if (GET_TEAM(getTeam()).isHasTech(eTechLoop))
 			{
-				int iPrereqLoop;
-
 				// Or Prereqs
-				for (iPrereqLoop = 0; iPrereqLoop < GC.getNUM_OR_TECH_PREREQS(); iPrereqLoop++)
+				for (int iJ = 0; iJ < GC.getNUM_OR_TECH_PREREQS(); iJ++)
 				{
-					if (GC.getTechInfo(eTechLoop).getPrereqOrTechs(iPrereqLoop) == eTech)
+					if (GC.getTechInfo(eTechLoop).getPrereqOrTechs(iJ) == eTech)
 					{
 						return -1;
 					}
 				}
-
 				// And Prereqs
-				for (iPrereqLoop = 0; iPrereqLoop < GC.getNUM_AND_TECH_PREREQS(); iPrereqLoop++)
+				for (iJ = 0; iJ < GC.getNUM_AND_TECH_PREREQS(); iJ++)
 				{
-					if (GC.getTechInfo(eTechLoop).getPrereqAndTechs(iPrereqLoop) == eTech)
+					if (GC.getTechInfo(eTechLoop).getPrereqAndTechs(iJ) == eTech)
 					{
 						return -1;
 					}
@@ -18903,30 +18746,10 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 			}
 		}
 	}
-
-	// Increase cost if the XML defines that additional units will cost more
-	if (0 != GC.getTechInfo(eTech).getAdvancedStartCostIncrease())
+	else if (!canResearch(eTech))
 	{
-		for (int iTechLoop = 0; iTechLoop < GC.getNumTechInfos(); iTechLoop++)
-		{
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes) iTechLoop))
-			{
-				++iNumTechs;
-			}
-		}
-
-		if (!bAdd)
-		{
-			--iNumTechs;
-		}
-
-		if (iNumTechs > 0)
-		{
-			iCost *= 100 + GC.getTechInfo(eTech).getAdvancedStartCostIncrease() * iNumTechs;
-			iCost /= 100;
-		}
+		return -1;
 	}
-
 	return iCost;
 }
 

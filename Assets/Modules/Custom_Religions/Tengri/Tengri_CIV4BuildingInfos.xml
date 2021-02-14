@@ -22,7 +22,6 @@
 			<FreePromotion>PROMOTION_WIND_HORSE</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>104</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iHealth>1</iHealth>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -88,7 +87,6 @@
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>104</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iHealth>1</iHealth>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -142,7 +140,6 @@
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>135</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>6</iAsset>
@@ -198,7 +195,6 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -242,7 +238,6 @@
 			<FreePromotion>PROMOTION_WIND_HORSE2</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>104</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iHealth>1</iHealth>
 			<iStateReligionHappiness>2</iStateReligionHappiness>

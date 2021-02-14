@@ -35,7 +35,6 @@
 			</ConstructCondition>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>1000</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>6</iAsset>
@@ -248,7 +247,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1540</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>14</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -631,7 +629,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4620</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGreatGeneralRateModifier>50</iGreatGeneralRateModifier>
 			<iAsset>10</iAsset>
@@ -915,7 +912,6 @@
 			</ConstructCondition>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>1540</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAsset>3</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
@@ -1131,7 +1127,6 @@
 			<iHealthPercentPerPopulation>5</iHealthPercentPerPopulation>
 			<iCost>4440</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iFoodKept>20</iFoodKept>
 			<iMaintenanceModifier>10</iMaintenanceModifier>

@@ -4134,7 +4134,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
-			<iAdvancedStartCost>250</iAdvancedStartCost>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9192,7 +9191,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
-			<iAdvancedStartCost>350</iAdvancedStartCost>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19597,7 +19595,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
-			<iAdvancedStartCost>200</iAdvancedStartCost>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -19635,7 +19632,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
-			<iAdvancedStartCost>150</iAdvancedStartCost>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -30588,7 +30584,6 @@
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>300</iAdvancedStartCost>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -30629,7 +30624,6 @@
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>300</iAdvancedStartCost>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -30670,7 +30664,6 @@
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>300</iAdvancedStartCost>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -34312,7 +34305,6 @@
 			</MapCategoryTypes>
 			<iCost>3525</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -52709,7 +52701,6 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<iAdvancedStartCost>350</iAdvancedStartCost>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -59751,7 +59742,6 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
-			<iAdvancedStartCost>530</iAdvancedStartCost>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -61688,7 +61678,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iAdvancedStartCost>200</iAdvancedStartCost>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -73743,8 +73732,6 @@
 			</Flavors>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<bTeamShare>1</bTeamShare>
-			<iAdvancedStartCost>200</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>3</iAdvancedStartCostIncrease>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -88938,7 +88925,6 @@
 			</PrereqInCityBuildings>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>200</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<CommerceChanges>
 				<iCommerce>-2</iCommerce>
 			</CommerceChanges>
@@ -88988,7 +88974,6 @@
 			</PrereqInCityBuildings>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>425</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>

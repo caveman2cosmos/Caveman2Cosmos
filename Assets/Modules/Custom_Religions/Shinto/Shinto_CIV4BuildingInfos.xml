@@ -25,7 +25,6 @@
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaintenanceModifier>-10</iMaintenanceModifier>
 			<iHealth>1</iHealth>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -87,7 +86,6 @@
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>216</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iWarWearinessModifier>-10</iWarWearinessModifier>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -146,7 +144,6 @@
 			<FreePromotion>PROMOTION_BUSHIDO</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>280</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaintenanceModifier>-15</iMaintenanceModifier>
 			<iWarWearinessModifier>-15</iWarWearinessModifier>
 			<iHappiness>1</iHappiness>
@@ -287,7 +284,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1860</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iMaintenanceModifier>-50</iMaintenanceModifier>
 			<iDefense>50</iDefense>
@@ -343,7 +339,6 @@
 			<bWater>1</bWater>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1566</iCost>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>100</iConquestProb>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>14</iAsset>

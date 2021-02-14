@@ -88,7 +88,6 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<!-- Properties diffusion -->
 			<PropertyManipulators>
 				<PropertySource>
@@ -156,7 +155,6 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<!-- Properties diffusion -->
 			<PropertyManipulators>
 				<PropertySource>
@@ -228,7 +226,6 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<!-- Properties diffusion -->
 			<PropertyManipulators>
 				<PropertySource>
@@ -295,7 +292,6 @@
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DORADO</Type>
@@ -319,7 +315,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1056</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>2</iHappiness>
 			<iAsset>10</iAsset>
@@ -412,7 +407,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2208</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iDefense>100</iDefense>

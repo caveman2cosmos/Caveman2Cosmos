@@ -139,7 +139,6 @@
 	</ElementType>
 	<ElementType name="Button" content="textOnly"/>
 	<ElementType name="iAdvancedStartCost" content="textOnly" dt:type="int"/>
-	<ElementType name="iAdvancedStartCostIncrease" content="textOnly" dt:type="int"/>
 	<ElementType name="iValue" content="textOnly" dt:type="int"/>
 	<ElementType name="iMovement" content="textOnly" dt:type="int"/>
 	<ElementType name="iFlatMovement" content="textOnly" dt:type="int"/>
@@ -156,7 +155,6 @@
 		<element type="Description" minOccurs="0"/>
 		<element type="iValue" minOccurs="0"/>
 		<element type="iAdvancedStartCost" minOccurs="0"/>
-		<element type="iAdvancedStartCostIncrease" minOccurs="0"/>
 		<element type="iMovement" minOccurs="0"/>
 		<element type="iFlatMovement" minOccurs="0"/>
 <!-- JOOYO_ADDON							START	-->

@@ -6899,7 +6899,6 @@
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>850</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<CommerceChanges>
 				<iCommerce>-2</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7177,7 +7176,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2690</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAsset>8</iAsset>
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -7254,7 +7252,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2820</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHappiness>2</iHappiness>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>

@@ -5471,9 +5471,8 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 									if (iAllowedUnitsValue > 0)
 									{
-										//	Just because we can build new units here doesn't add much if we can already
-										//	build them a ton of other places
-										iAllowedUnitsValue = (iAllowedUnitsValue*3)/(3+std::min(10,kOwner.countNumBuildings(eBuilding)));
+										// Just because we can build new units here doesn't add much if we can already build them a ton of other places
+										iAllowedUnitsValue = iAllowedUnitsValue * 3 / (3 + std::min(10, kOwner.countNumBuildings(eBuilding)));
 									}
 
 									iValue += bUnitIsBonusEnabled ? iAllowedUnitsValue : iAllowedUnitsValue/5;
@@ -6151,9 +6150,8 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 					if (religiousBuildingValue > 0)
 					{
-						//	Just because we can build new units here doesn't add much if we can already
-						//	build them a ton of other places
-						religiousBuildingValue = (religiousBuildingValue*3)/(3+std::min(10,kOwner.countNumBuildings(eBuilding)));
+						// Just because we can build new units here doesn't add much if we can already build them a ton of other places
+						religiousBuildingValue = religiousBuildingValue * 3 / (3 + std::min(10, kOwner.countNumBuildings(eBuilding)));
 					}
 
 					iValue += religiousBuildingValue;
@@ -15420,8 +15418,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								if (unitsEnabledValue > 0)
 								{
 									if (bWarPlan) unitsEnabledValue *= 2;
-									//	Just because we can build new units here doesn't add much if we can already
-									//	build them a ton of other places
+									// Just because we can build new units here doesn't add much if we can already build them a ton of other places
 									unitsEnabledValue = unitsEnabledValue * 3 / (3 + std::min(10, kOwner.countNumBuildings(eBuilding)));
 									iValue += bUnitIsBonusEnabled ? unitsEnabledValue : unitsEnabledValue/5;
 								}
@@ -16074,9 +16071,8 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 				if (religiousBuildingValue > 0)
 				{
-					//	Just because we can build new units here doesn't add much if we can already
-					//	build them a ton of other places
-					religiousBuildingValue = (religiousBuildingValue*3)/(3+std::min(10,kOwner.countNumBuildings(eBuilding)));
+					// Just because we can build new units here doesn't add much if we can already build them a ton of other places
+					religiousBuildingValue = religiousBuildingValue * 3 / (3 + std::min(10, kOwner.countNumBuildings(eBuilding)));
 				}
 
 				iValue += religiousBuildingValue;

@@ -1270,16 +1270,17 @@ def getHelpWiningMonks2(argsList):
 ######## INDEPENDENTFILMS ###########
 
 def canTriggerIndependentFilms(argsList):
+	# Toffer - Perhaps change this to:
+	#return not GC.getPlayer(argsList[0].ePlayer).hasBonus(GC.getInfoTypeForString("BONUS_HIT_MOVIES"))
+	# There would be a functionality change though, it can then only trigger once for any player.
+	kTriggeredData = argsList[0]
+	player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  kTriggeredData = argsList[0]
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-
-  for i in xrange(GC.getNumBuildingInfos()):
-    if GC.getBuildingInfo(i).getFreeBonus() == GC.getInfoTypeForString("BONUS_HIT_MOVIES"):
-      if player.countNumBuildings(i) > 0:
-        return False
-
-  return True
+	iBonus = GC.getInfoTypeForString("BONUS_HIT_MOVIES")
+	for i in xrange(GC.getNumBuildingInfos()):
+		if GC.getBuildingInfo(i).getFreeBonus() == iBonus and player.hasBuilding(i) > 0:
+			return False
+	return True
 
 def doIndependentFilms(argsList):
 	GC.getPlayer(argsList[1].ePlayer).getCity(
@@ -1290,17 +1291,7 @@ def doIndependentFilms(argsList):
 	return 1
 
 def getHelpIndependentFilms(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  player = GC.getPlayer(kTriggeredData.ePlayer)
-  city = player.getCity(kTriggeredData.iCityId)
-
-  iBonus = GC.getInfoTypeForString("BONUS_HIT_MOVIES")
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_INDEPENDENTFILMS_HELP_1", ( 1, GC.getBonusInfo(iBonus).getChar(), city.getNameKey()))
-
-  return szHelp
+	return TRNSLTR.getText("TXT_KEY_EVENT_INDEPENDENTFILMS_HELP_1", (1, GC.getBonusInfo(GC.getInfoTypeForString("BONUS_HIT_MOVIES")).getChar(), GC.getPlayer(argsList[1].ePlayer).getCity(argsList[1].iCityId).getNameKey()))
 
 ######## ANCIENT OLYMPICS ###########
 
@@ -2786,13 +2777,7 @@ def applyCrusadeDone3(argsList):
 ######## ESTEEMEED_PLAYWRIGHT ###########
 
 def canTriggerEsteemedPlaywright(argsList):
-	kTriggeredData = argsList[0]
-	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
-
-	SLAVERY = GC.getInfoTypeForString("BUILDING_SLAVERY")
-	if SLAVERY > -1 and	CyPlayer.countNumBuildings(SLAVERY):
-		return False
-	return True
+	return not GC.getPlayer(argsList[0].ePlayer).hasBuilding(GC.getInfoTypeForString("BUILDING_SLAVERY"))
 
 
 ######## SECRET_KNOWLEDGE ###########
@@ -4265,9 +4250,8 @@ def canTriggerSyntheticFuels(argsList):
   if pPlayer.hasBonus(bCoal) < 1:
     return False
   for i in xrange(GC.getNumBuildingInfos()):
-    if GC.getBuildingInfo(i).getFreeBonus() == bOil:
-      if pPlayer.countNumBuildings(i) > 0:
-        return False
+    if GC.getBuildingInfo(i).getFreeBonus() == bOil and pPlayer.hasBuilding(i):
+      return False
   return True
 
 def canTriggerCitySyntheticFuels(argsList):
@@ -4414,13 +4398,7 @@ def canTriggerMoreFiatMoney(argsList):
 ##### INDUSTRIAL_ACTION #####
 
 def canTriggerIndustrialAction(argsList):
-	kTriggeredData = argsList[0]
-	CyPlayer = GC.getPlayer(kTriggeredData.ePlayer)
-
-	SLAVERY = GC.getInfoTypeForString("BUILDING_SLAVERY")
-	if SLAVERY > -1 and	CyPlayer.countNumBuildings(SLAVERY):
-		return False
-	return True
+	return not GC.getPlayer(argsList[0].ePlayer).hasBuilding(GC.getInfoTypeForString("BUILDING_SLAVERY"))
 
 def canDoTriggerCityIndustrialAction(argsList):
 

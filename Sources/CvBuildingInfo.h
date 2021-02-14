@@ -53,8 +53,6 @@ public:
 	int getProductionCost() const					{ return m_iProductionCost; }
 	int getHurryCostModifier() const				{ return m_iHurryCostModifier; }
 	int getHurryAngerModifier() const				{ return m_iHurryAngerModifier; }
-	int getAdvancedStartCost() const				{ return m_iAdvancedStartCost; }
-	int getAdvancedStartCostIncrease() const		{ return m_iAdvancedStartCostIncrease; }
 	int getMinAreaSize() const						{ return m_iMinAreaSize; }
 	int getNumCitiesPrereq() const					{ return m_iNumCitiesPrereq; }
 	int getNumTeamsPrereq() const					{ return m_iNumTeamsPrereq; }
@@ -653,8 +651,6 @@ protected:
 	int m_iProductionCost;
 	int m_iHurryCostModifier;
 	int m_iHurryAngerModifier;
-	int m_iAdvancedStartCost;
-	int m_iAdvancedStartCostIncrease;
 	int m_iMinAreaSize;
 	int m_iNumCitiesPrereq;
 	int m_iNumTeamsPrereq;

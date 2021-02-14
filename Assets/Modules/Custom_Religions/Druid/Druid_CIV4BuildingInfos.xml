@@ -25,7 +25,6 @@
 			<FreePromotion>PROMOTION_WOODSMAN1</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>104</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<iHealth>2</iHealth>
 			<iHappiness>1</iHappiness>
@@ -133,7 +132,6 @@
 			<FreePromotion>PROMOTION_GUERILLA1</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>104</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHealth>2</iHealth>
 			<iHealthPercentPerPopulation>5</iHealthPercentPerPopulation>
 			<iHappiness>1</iHappiness>
@@ -428,7 +426,6 @@
 			<GlobalReligionCommerce>RELIGION_DRUIDIC_TRADITIONS</GlobalReligionCommerce>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>
 			<CommerceChanges>

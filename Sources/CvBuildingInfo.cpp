@@ -52,8 +52,6 @@ m_iAIWeight(0),
 m_iProductionCost(-1),
 m_iHurryCostModifier(0),
 m_iHurryAngerModifier(0),
-m_iAdvancedStartCost(100),
-m_iAdvancedStartCostIncrease(0),
 m_iMinAreaSize(0),
 m_iNumCitiesPrereq(0),
 m_iNumTeamsPrereq(0),
@@ -1928,8 +1926,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iProductionCost);
 	CheckSum(iSum, m_iHurryCostModifier);
 	CheckSum(iSum, m_iHurryAngerModifier);
-	CheckSum(iSum, m_iAdvancedStartCost);
-	CheckSum(iSum, m_iAdvancedStartCostIncrease);
 	CheckSum(iSum, m_iMinAreaSize);
 	CheckSum(iSum, m_iNumCitiesPrereq);
 	CheckSum(iSum, m_iNumTeamsPrereq);
@@ -2528,8 +2524,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iProductionCost, L"iCost", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iHurryCostModifier, L"iHurryCostModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iHurryAngerModifier, L"iHurryAngerModifier");
-	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCost, L"iAdvancedStartCost", 100);
-	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCostIncrease, L"iAdvancedStartCostIncrease");
 	pXML->GetOptionalChildXmlValByName(&m_iMinAreaSize, L"iMinAreaSize");
 	pXML->GetOptionalChildXmlValByName(&m_iConquestProbability, L"iConquestProb", 50);
 	pXML->GetOptionalChildXmlValByName(&m_iNumCitiesPrereq, L"iCitiesPrereq");
@@ -4157,8 +4151,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (m_iProductionCost == iTextDefault) m_iProductionCost = pClassInfo->getProductionCost();
 	if (getHurryCostModifier() == iDefault) m_iHurryCostModifier = pClassInfo->getHurryCostModifier();
 	if (getHurryAngerModifier() == iDefault) m_iHurryAngerModifier = pClassInfo->getHurryAngerModifier();
-	if (getAdvancedStartCost() == 100) m_iAdvancedStartCost = pClassInfo->getAdvancedStartCost();
-	if (getAdvancedStartCostIncrease() == iDefault) m_iAdvancedStartCostIncrease = pClassInfo->getAdvancedStartCostIncrease();
 	if (getMinAreaSize() == iDefault) m_iMinAreaSize = pClassInfo->getMinAreaSize();
 	if (getConquestProbability() == 50) m_iConquestProbability = pClassInfo->getConquestProbability();
 	if (getNumCitiesPrereq() == iDefault) m_iNumCitiesPrereq = pClassInfo->getNumCitiesPrereq();

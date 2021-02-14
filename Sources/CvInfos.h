@@ -350,25 +350,23 @@ public:
 	CvTechInfo();
 	virtual ~CvTechInfo();
 
-	//	Validate tech info da after load (debug only)
+	// Validate tech info da after load (debug only)
 	static void validate();
 
 	int getAdvisorType() const;
 	int getAIWeight() const;
 	int getAITradeModifier() const;
 	int getResearchCost() const;
-	int getAdvancedStartCost() const;
-	int getAdvancedStartCostIncrease() const;
 	int getEra() const;
 	int getTradeRoutes() const;
 	int getFeatureProductionModifier() const;
 	int getWorkerSpeedModifier() const;
-	//DPII < Maintenance Modifier >
+
 	int getMaintenanceModifier() const;
 	int getDistanceMaintenanceModifier() const;
 	int getNumCitiesMaintenanceModifier() const;
 	int getCoastalDistanceMaintenanceModifier() const;
-	//DPII < Maintenance Modifier >
+
 	int getFirstFreeUnit() const;
 	int getFirstFreeProphet() const;
 	int getHealth() const;
@@ -471,8 +469,6 @@ protected:
 	int m_iAIWeight;
 	int m_iAITradeModifier;
 	int m_iResearchCost;
-	int m_iAdvancedStartCost;
-	int m_iAdvancedStartCostIncrease;
 	int m_iEra;
 	int m_iTradeRoutes;
 	int m_iFeatureProductionModifier;
@@ -1674,7 +1670,6 @@ public:
 	int getProductionCost() const;
 	int getHurryCostModifier() const;
 	int getAdvancedStartCost() const;
-	int getAdvancedStartCostIncrease() const;
 	int getMinAreaSize() const;
 	int getMoves() const;
 	int getAirRange() const;
@@ -2324,7 +2319,6 @@ protected:
 	int m_iProductionCost;
 	int m_iHurryCostModifier;
 	int m_iAdvancedStartCost;
-	int m_iAdvancedStartCostIncrease;
 	int m_iMinAreaSize;
 	int m_iMoves;
 	int m_iAirRange;
@@ -4154,7 +4148,6 @@ public:
 	virtual ~CvRouteInfo();
 
 	int getAdvancedStartCost() const;
-	int getAdvancedStartCostIncrease() const;
 
 	int getValue() const;
 	int getMovementCost() const;
@@ -4185,7 +4178,6 @@ private:
 
 protected:
 	int m_iAdvancedStartCost;
-	int m_iAdvancedStartCostIncrease;
 
 	int m_iValue;
 	int m_iMovementCost;
@@ -4268,7 +4260,6 @@ public:
 	virtual ~CvImprovementInfo();
 
 	int getAdvancedStartCost() const;
-	int getAdvancedStartCostIncrease() const;
 
 	int getTilesPerGoody() const;
 	int getGoodyUniqueRange() const;
@@ -4403,7 +4394,6 @@ private:
 
 protected:
 	int m_iAdvancedStartCost;
-	int m_iAdvancedStartCostIncrease;
 
 	int m_iTilesPerGoody;
 	int m_iGoodyUniqueRange;
