@@ -12,7 +12,6 @@
 			<Description>TXT_KEY_ROUTE_LUNAR_PATH</Description>
 			<iValue>5</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>100</iMovement>
 			<iFlatMovement>100</iFlatMovement>
 			<BonusType>NONE</BonusType>
@@ -26,7 +25,6 @@
 			<Description>TXT_KEY_ROUTE_PLANETARY_MAGLEV</Description>
 			<iValue>5</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>100</iMovement>
 			<iFlatMovement>100</iFlatMovement>
 			<BonusType>BONUS_COPPER_WARES</BonusType>
