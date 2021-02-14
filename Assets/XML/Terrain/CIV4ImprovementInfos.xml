@@ -12429,13 +12429,6 @@
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_JUMPLANE</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>2</iYield>
-					</RouteYields>
-				</RouteYieldChange>
 			</RouteYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
@@ -12522,13 +12515,6 @@
 			<RouteYieldChanges>
 				<RouteYieldChange>
 					<RouteType>ROUTE_TUNNEL</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_JUMPLANE</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -12670,13 +12656,6 @@
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_JUMPLANE</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>2</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 			</RouteYieldChanges>

@@ -3716,4 +3716,20 @@
 		<French>[ICON_BULLET]Peut construire les Villes dans le nuage d'Oort, et l'espace transtellaire</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà â Îáëàêå Îîðòà è ìåæçâåçäíîì ïðîñòðàíñòâå</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LUNAR_PATH</Tag>
+		<English>Build [LINK=ROUTE_LUNAR_PATH]Lunar Path[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PLANETARY_MAGLEV</Tag>
+		<English>Build [LINK=ROUTE_PLANETARY_MAGLEV]Planetary Maglev[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ROUTE_LUNAR_PATH</Tag>
+		<English>Lunar Path</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ROUTE_PLANETARY_MAGLEV</Tag>
+		<English>Planetary Maglev</English>
+	</TEXT>
 </Civ4GameText>
