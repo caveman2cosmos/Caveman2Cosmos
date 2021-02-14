@@ -579,7 +579,7 @@
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ISHTAR</Type>
-			<Path>Art/Movies/Wonders/Ishtar.bik</Path>
+			<Path>Art/Movies/Wonders/ISHTAR.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_NIMRUD</Type>
@@ -3388,6 +3388,38 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_VINTAGE_WHITE_WINE</Type>
 			<Path>Art/Movies/group_wonders/VINTAGE_WHITE_WINE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CAODAI_SHRINE</Type>
+			<Path>Art/Movies/wonders/CAODAI_SHRINE.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_RODNOVERY_SHRINE</Type>
+			<Path>Art/Movies/wonders/RODNOVERY_SHRINE_ARKONA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HINDU_BRIHADEESWARAR</Type>
+			<Path>Art/Movies/wonders/HINDU_BRIHADEESWARAR.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MASADA</Type>
+			<Path>Art/Movies/wonders/MASADA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_POTALA</Type>
+			<Path>Art/Movies/wonders/POTALA.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ZOROASTRIAN_SHRINE</Type>
+			<Path>Art/Movies/wonders/ZOROASTRIAN_SHRINE_PIR_E_SABZ.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TEMPLE_OF_HEAVEN</Type>
+			<Path>Art/Movies/wonders/TEMPLE_OF_HEAVEN.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AZTEC_SACRIFICIAL_ALTAR</Type>
+			<Path>Art/Movies/wonders/AZTEC_SACRIFICIAL_ALTAR_TLALOC.dds</Path>
 		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>
