@@ -29,8 +29,8 @@ public:
 	void addTeam(TeamTypes eTeam);
 	void shareItems(TeamTypes eTeam);
 	void shareCounters(TeamTypes eTeam);
-	//Team Project (5)
-	void processBuilding(BuildingTypes eBuilding, int iChange, bool bReligiouslyDisabling = false);
+
+	void processBuilding(const CvBuildingInfo& building, int iChange, bool bReligiouslyDisabling = false);
 
 	void doTurn();
 

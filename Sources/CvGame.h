@@ -661,7 +661,7 @@ public:
 	bool isCivEverActive(CivilizationTypes eCivilization) const;
 	bool isLeaderEverActive(LeaderHeadTypes eLeader) const;
 
-	void processBuilding(BuildingTypes eBuilding, int iChange);
+	void processBuilding(const CvBuildingInfo& building, int iChange);
 
 	bool foundBarbarianCity();
 

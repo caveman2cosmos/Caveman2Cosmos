@@ -10135,13 +10135,13 @@ bool CvGame::isLeaderEverActive(LeaderHeadTypes eLeader) const
 	return false;
 }
 
-void CvGame::processBuilding(BuildingTypes eBuilding, int iChange)
+void CvGame::processBuilding(const CvBuildingInfo& building, int iChange)
 {
 	PROFILE_FUNC();
 
 	for (int iI = 0; iI < GC.getNumVoteSourceInfos(); ++iI)
 	{
-		if (GC.getBuildingInfo(eBuilding).getVoteSourceType() == (VoteSourceTypes)iI)
+		if (building.getVoteSourceType() == (VoteSourceTypes)iI)
 		{
 			changeDiploVote((VoteSourceTypes)iI, iChange);
 		}

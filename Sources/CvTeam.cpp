@@ -889,7 +889,8 @@ void CvTeam::shareItems(TeamTypes eTeam)
 				{
 					if (pLoopCity->getNumActiveBuilding((BuildingTypes)iJ) > 0)
 					{
-						if (GC.getBuildingInfo((BuildingTypes)iJ).isTeamShare())
+						const CvBuildingInfo& buildingInfo = GC.getBuildingInfo((BuildingTypes)iJ);
+						if (buildingInfo.isTeamShare())
 						{
 							for (iK = 0; iK < MAX_PLAYERS; iK++)
 							{
@@ -899,7 +900,7 @@ void CvTeam::shareItems(TeamTypes eTeam)
 								}
 							}
 						}
-						processBuilding(((BuildingTypes)iJ), pLoopCity->getNumBuilding((BuildingTypes)iJ));
+						processBuilding(buildingInfo, pLoopCity->getNumBuilding((BuildingTypes)iJ));
 					}
 				}
 			}
@@ -1023,7 +1024,7 @@ void CvTeam::shareCounters(TeamTypes eTeam)
 }
 
 
-void CvTeam::processBuilding(BuildingTypes eBuilding, int iChange, bool bReligiouslyDisabling)
+void CvTeam::processBuilding(const CvBuildingInfo& building, int iChange, bool bReligiouslyDisabling)
 {
 	PROFILE_FUNC();
 
@@ -1031,17 +1032,17 @@ void CvTeam::processBuilding(BuildingTypes eBuilding, int iChange, bool bReligio
 	{
 		for (int i = 0; i < GC.getNumVoteSourceInfos(); ++i)
 		{
-			if (GC.getBuildingInfo(eBuilding).getVoteSourceType() == i)
+			if (building.getVoteSourceType() == i)
 			{
-				changeForceTeamVoteEligibilityCount((VoteSourceTypes)i, (GC.getBuildingInfo(eBuilding).isForceTeamVoteEligible()) ? iChange : 0);
+				changeForceTeamVoteEligibilityCount((VoteSourceTypes)i, building.isForceTeamVoteEligible() ? iChange : 0);
 			}
 		}
-		if (iChange > 0 && GC.getBuildingInfo(eBuilding).isMapCentering())
+		if (iChange > 0 && building.isMapCentering())
 		{
 			setMapCentering(true);
 		}
 	}
-	changeEnemyWarWearinessModifier(GC.getBuildingInfo(eBuilding).getEnemyWarWearinessModifier() * iChange);
+	changeEnemyWarWearinessModifier(building.getEnemyWarWearinessModifier() * iChange);
 }
 
 

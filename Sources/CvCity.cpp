@@ -4975,15 +4975,15 @@ void CvCity::processBonus(BonusTypes eBonus, int iChange)
 		}
 		for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 		{
-			if (GET_PLAYER(getOwner()).hasTrait((TraitTypes)iI))
+			const TraitTypes eTrait = (TraitTypes)iI;
+			if (GET_PLAYER(getOwner()).hasTrait(eTrait))
 			{
-				TraitTypes eTrait = (TraitTypes)iI;
 				int iValue = 0;
 				for (int iJ = 0; iJ < GC.getTraitInfo(eTrait).getNumBonusHappinessChanges(); iJ++)
 				{
 					if (GC.getTraitInfo(eTrait).getBonusHappinessChange(iJ).eBonus == eBonus)
 					{
-						iValue = GC.getTraitInfo((TraitTypes)iI).getBonusHappinessChange(iJ).iModifier;
+						iValue = GC.getTraitInfo(eTrait).getBonusHappinessChange(iJ).iModifier;
 					}
 				}
 				if (iValue >= 0)
@@ -5448,7 +5448,7 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 					{
 						if (GC.getBuildingInfo((BuildingTypes)iJ).getUnitCombatOngoingTrainingDuration(iI) > 0)
 						{
-							BuildingTypes consideredBuilding = ((BuildingTypes)iJ);
+							const BuildingTypes consideredBuilding = ((BuildingTypes)iJ);
 							if (getNumActiveBuilding(consideredBuilding) > 0 && (consideredBuilding != ((BuildingTypes)iI)))
 							{
 								itrain = GC.getBuildingInfo(consideredBuilding).getUnitCombatOngoingTrainingDuration(iI);
@@ -5701,11 +5701,11 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 		}
 
 		//Team Project (5)
-		GET_TEAM(getTeam()).processBuilding(eBuilding, iChange, bReligiouslyDisabling);
+		GET_TEAM(getTeam()).processBuilding(kBuilding, iChange, bReligiouslyDisabling);
 
 		if (!bReligiouslyDisabling)
 		{
-			GC.getGame().processBuilding(eBuilding, iChange);
+			GC.getGame().processBuilding(kBuilding, iChange);
 
 			// Note: this whole section was pretty well qualified to be ignored on religious disabling.
 			if (!bObsolete)
