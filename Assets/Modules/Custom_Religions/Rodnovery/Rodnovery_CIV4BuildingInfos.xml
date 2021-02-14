@@ -214,6 +214,7 @@
 			<Strategy>TXT_KEY_BUILDING_RODNOVERY_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODNOVERY_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_RODNOVERY_SHRINE</MovieDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

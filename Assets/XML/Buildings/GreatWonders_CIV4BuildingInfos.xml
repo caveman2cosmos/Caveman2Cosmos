@@ -6479,6 +6479,7 @@
 			<Strategy>TXT_KEY_BUILDING_JEWISH_MASADA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MASADA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_MASADA</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_JEWISH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MONOTHEISM</PrereqTech>
@@ -7478,6 +7479,7 @@
 			<Strategy>TXT_KEY_BUILDING_POTALA_PALACE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_POTALA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_POTALA</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
@@ -9760,6 +9762,7 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ConstructSound>AS2D_BUILD_HINDU</ConstructSound>
 			<ArtDefineTag>ART_DEF_BUILDING_HINDU_BRIHADEESWARAR</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_HINDU_BRIHADEESWARAR</MovieDefineTag>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11497,6 +11500,7 @@
 			<Strategy>TXT_KEY_BUILDING_TAOIST_TEMPLE_OF_HEAVEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_HEAVEN</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TEMPLE_OF_HEAVEN</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_TAOIST</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
@@ -11810,6 +11814,7 @@
 			<Strategy>TXT_KEY_BUILDING_AZTEC_SACRIFICIAL_ALTAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AZTEC_SACRIFICIAL_ALTAR</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_AZTEC_SACRIFICIAL_ALTAR</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_CEREMONIAL_ALTAR</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>

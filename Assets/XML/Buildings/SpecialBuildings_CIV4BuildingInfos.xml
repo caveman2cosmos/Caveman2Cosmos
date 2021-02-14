@@ -13323,6 +13323,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_ZOROASTRIAN_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_ZOROASTRIAN_SHRINE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MESOAMERICAN_SHRINE</Type>

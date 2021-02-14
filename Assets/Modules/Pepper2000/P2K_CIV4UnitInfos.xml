@@ -2367,7 +2367,7 @@
 			</UnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_MAGLEV</BuildType>
+					<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2469,7 +2469,7 @@
 			</UnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_MAGLEV</BuildType>
+					<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -9883,7 +9883,7 @@
 			</UnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
+					<BuildType>BUILD_LUNAR_PATH</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -9954,11 +9954,11 @@
 			</UnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
+					<BuildType>BUILD_LUNAR_PATH</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MAGLEV</BuildType>
+					<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
