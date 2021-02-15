@@ -7892,9 +7892,16 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 		}
 
 		// check plot terrain/features against player current tech, allow if bTests within +1 era
-		if (!canBuildPlotTechPrereq(pPlot, eBuild, bTestEra, bTestVisible))
+		if (kBuild.getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)kBuild.getRoute()).isSeaTunnel())
 		{
-			return false;
+			if (!canBuildPlotTechPrereq(pPlot, eBuild, bTestEra, bTestVisible))
+			{
+				return false;
+			}
+			if (pPlot->isWater() && kBuild.getRoute() != NO_ROUTE && !GC.getRouteInfo((RouteTypes)kBuild.getRoute()).isSeaTunnel())
+			{
+				return false;
+			}
 		}
 	}
 
