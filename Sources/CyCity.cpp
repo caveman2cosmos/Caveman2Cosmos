@@ -908,6 +908,11 @@ int CyCity::getExtraTradeRoutes() const
 	return m_pCity->getExtraTradeRoutes();
 }
 
+int CyCity::getMaxTradeRoutes() const
+{
+	return m_pCity->getMaxTradeRoutes();
+}
+
 void CyCity::changeExtraTradeRoutes(int iChange)
 {
 	m_pCity->changeExtraTradeRoutes(iChange);

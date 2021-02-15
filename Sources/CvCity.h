@@ -844,6 +844,8 @@ public:
 	int getExtraTradeRoutes() const;
 	void changeExtraTradeRoutes(int iChange);
 
+	int getMaxTradeRoutes() const;
+
 	int getTradeRouteModifier() const;
 	void changeTradeRouteModifier(int iChange);
 
