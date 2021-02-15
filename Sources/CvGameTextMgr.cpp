@@ -27857,30 +27857,35 @@ void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes 
 
 	bTechFound = false;
 
-	if (GC.getBuildInfo((BuildTypes) iImprovement).getTechPrereq() == NO_TECH)
+	if (GC.getBuildInfo((BuildTypes)iImprovement).getTechPrereq() == NO_TECH)
 	{
-		for (iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
+		if (GC.getBuildInfo((BuildTypes)iImprovement).getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)GC.getBuildInfo((BuildTypes)iImprovement).getRoute()).isSeaTunnel())
 		{
-			if (GC.getBuildInfo((BuildTypes) iImprovement).getFeatureTech(iJ) == eTech)
+			for (iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
 			{
-				bTechFound = true;
+				if (GC.getBuildInfo((BuildTypes)iImprovement).getFeatureTech(iJ) == eTech)
+				{
+					bTechFound = true;
+				}
 			}
-		}
-		for (iJ = 0; iJ < GC.getBuildInfo((BuildTypes)iImprovement).getNumTerrainStructs(); iJ++)
-		{
-			if (GC.getBuildInfo((BuildTypes)iImprovement).getTerrainStruct(iJ).ePrereqTech == eTech)
+			for (iJ = 0; iJ < GC.getBuildInfo((BuildTypes)iImprovement).getNumTerrainStructs(); iJ++)
 			{
-				bTechFound = true;
+				if (GC.getBuildInfo((BuildTypes)iImprovement).getTerrainStruct(iJ).ePrereqTech == eTech)
+				{
+					bTechFound = true;
+				}
 			}
 		}
 	}
 	else
 	{
-		if (GC.getBuildInfo((BuildTypes) iImprovement).getTechPrereq() == eTech)
+		if (GC.getBuildInfo((BuildTypes)iImprovement).getTechPrereq() == eTech)
 		{
 			bTechFound = true;
 		}
 	}
+
+
 
 	if (bTechFound)
 	{
