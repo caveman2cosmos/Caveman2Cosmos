@@ -230,6 +230,7 @@ public:
 	int getMilitaryProductionModifier() const;
 	int getSpaceProductionModifier() const;
 	int getExtraTradeRoutes() const;
+	int getMaxTradeRoutes() const;
 	void changeExtraTradeRoutes(int iChange);
 	int getTradeRouteModifier() const;
 	int getForeignTradeRouteModifier() const;
