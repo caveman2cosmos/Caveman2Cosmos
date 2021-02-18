@@ -12408,39 +12408,16 @@ void CvPlayer::verifyAlive()
 		)
 		{
 			setAlive(false);
-			// Choose a random AI to take over if we die when on autoplay. (Testing)
+			// Toffer - Take over alive AI with lowest index if we die when on autoplay.
 			if (isHumanDisabled())
 			{
-				std::vector<int> Potentials;
 				for (int x = 0; x < MAX_PC_PLAYERS; x++)
 				{
-					if (GET_PLAYER((PlayerTypes)x).isAlive()
-					&& !GET_PLAYER((PlayerTypes)x).isHumanDisabled()
-					&& !GET_PLAYER((PlayerTypes)x).isHuman()
-					&&  GET_PLAYER((PlayerTypes)x).getNumCities() > 0)
+					if (GET_PLAYER((PlayerTypes)x).isAlive() && !GET_PLAYER((PlayerTypes)x).isHumanDisabled() && !GET_PLAYER((PlayerTypes)x).isHuman())
 					{
-						Potentials.push_back(x);
+						GC.getGame().changeHumanPlayer((PlayerTypes)getID(), (PlayerTypes)x);
+						break;
 					}
-				}
-				if (Potentials.empty())
-				{
-					for (int x = 0; x < MAX_PC_PLAYERS; x++)
-					{
-						if (GET_PLAYER((PlayerTypes)x).isAlive()
-						&& !GET_PLAYER((PlayerTypes)x).isHumanDisabled()
-						&& !GET_PLAYER((PlayerTypes)x).isHuman())
-						{
-							Potentials.push_back(x);
-						}
-					}
-				}
-				if (!Potentials.empty())
-				{
-					GC.getGame().changeHumanPlayer
-					(
-						(PlayerTypes)getID(),
-						(PlayerTypes)GC.getGame().getSorenRand().get(Potentials.size(), "Picking new player for dead player...")
-					);
 				}
 			}
 		}
