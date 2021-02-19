@@ -17,6 +17,10 @@
 					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
+				<Build>
+					<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
