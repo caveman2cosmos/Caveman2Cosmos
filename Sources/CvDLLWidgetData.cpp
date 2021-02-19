@@ -3030,75 +3030,80 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						}
 					}
 
-					// Save tech prereq to avoid double-posting if terrain happens to share same tech prereq
-					TechTypes featureTechRequired = NO_TECH;
-
-					// Check feature prereqs against current plot
-					if (ePlotFeature != NO_FEATURE)
+					if (GC.getBuildInfo(eBuild).getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)GC.getBuildInfo(eBuild).getRoute()).isSeaTunnel())
 					{
-						featureTechRequired = (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature);
+						// Save tech prereq to avoid double-posting if terrain happens to share same tech prereq
+						TechTypes featureTechRequired = NO_TECH;
 
-						// If the plot feature requires a different tech than the base tile itself AND we don't have that tech
-						if ( (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)
-						&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)) )
+						// Check feature prereqs against current plot
+						if (ePlotFeature != NO_FEATURE)
 						{
-							// If the base never obsoletes OR we don't have the tech which obsoletes it
-							if (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
-							|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech()))
+							featureTechRequired = (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature);
+							if (featureTechRequired != NO_TECH)
 							{
-								szBuffer.append(NEWLINE);
+								// If the plot feature requires a different tech than the base tile itself AND we don't have that tech
+								if ((TechTypes)GC.getBuildInfo(eBuild).getTechPrereq() != (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)
+									&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)))
+								{
+									// If the base never obsoletes OR we don't have the tech which obsoletes it
+									if (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
+										|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech()))
+									{
+										szBuffer.append(NEWLINE);
 
-								// If the feature blocks the improvement from ever being constructable or not, different messages
-								// WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ FEATURE BLOCKING IN CIV4BuildInfos, REALLY SHOULD BE BETTER SOMEHOW
-								if (GC.getTechInfo(featureTechRequired).isDisable())
-								{
-									szBuffer.append(gDLL->getText("TXT_KEY_BUILD_PLOT_BLOCKED",
-										GC.getFeatureInfo(ePlotFeature).getTextKeyWide()));
-								}
-								else
-								{
-									szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
-										CvWString(GC.getTechInfo(featureTechRequired).getType()).GetCString(),
-										GC.getTechInfo(featureTechRequired).getTextKeyWide()));
+										// If the feature blocks the improvement from ever being constructable or not, different messages
+										// WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ FEATURE BLOCKING IN CIV4BuildInfos, REALLY SHOULD BE BETTER SOMEHOW
+										if (GC.getTechInfo(featureTechRequired).isDisable())
+										{
+											szBuffer.append(gDLL->getText("TXT_KEY_BUILD_PLOT_BLOCKED",
+												GC.getFeatureInfo(ePlotFeature).getTextKeyWide()));
+										}
+										else
+										{
+											szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
+												CvWString(GC.getTechInfo(featureTechRequired).getType()).GetCString(),
+												GC.getTechInfo(featureTechRequired).getTextKeyWide()));
+										}
+									}
 								}
 							}
 						}
-					}
-					// Check terrain prereqs against current plot
-					for (int iI = 0; iI < GC.getBuildInfo(eBuild).getNumTerrainStructs(); iI++)
-					{
-						const TerrainTypes eTerrain = GC.getBuildInfo(eBuild).getTerrainStruct(iI).eTerrain;
-						if (eTerrain == pMissionPlot->getTerrainType()
-						||  eTerrain == GC.getTERRAIN_PEAK() && pMissionPlot->isAsPeak()
-						||  eTerrain == GC.getTERRAIN_HILL() && pMissionPlot->isHills())
+						// Check terrain prereqs against current plot
+						for (int iI = 0; iI < GC.getBuildInfo(eBuild).getNumTerrainStructs(); iI++)
 						{
-							const TechTypes terrainTechRequired = GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech;
-
-							// If there is a tech required to build on the terrain that differs from the base tech prereq and feature prereq,
-							// we don't have that tech, and the build doesn't obsolete OR we don't have the obsolete tech:
-							if (terrainTechRequired != NO_TECH
-							&&  terrainTechRequired != featureTechRequired
-							&&  terrainTechRequired != (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq()
-							&&  !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(terrainTechRequired)
-							&&  (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
-								|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech())))
+							const TerrainTypes eTerrain = GC.getBuildInfo(eBuild).getTerrainStruct(iI).eTerrain;
+							if (eTerrain == pMissionPlot->getTerrainType()
+								|| eTerrain == GC.getTERRAIN_PEAK() && pMissionPlot->isAsPeak()
+								|| eTerrain == GC.getTERRAIN_HILL() && pMissionPlot->isHills())
 							{
-								szBuffer.append(NEWLINE);
-								// If the terrain blocks the improvement from ever being constructable or not, different messages
-								// WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ TERRAIN BLOCKING IN CIV4BuildInfos, REALLY SHOULD BE BETTER SOMEHOW
-								if (GC.getTechInfo(terrainTechRequired).isDisable())
+								const TechTypes terrainTechRequired = GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech;
+
+								// If there is a tech required to build on the terrain that differs from the base tech prereq and feature prereq,
+								// we don't have that tech, and the build doesn't obsolete OR we don't have the obsolete tech:
+								if (terrainTechRequired != NO_TECH
+									&& terrainTechRequired != featureTechRequired
+									&& terrainTechRequired != (TechTypes)GC.getBuildInfo(eBuild).getTechPrereq()
+									&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(terrainTechRequired)
+									&& (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
+										|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getObsoleteTech())))
 								{
-									szBuffer.append(gDLL->getText("TXT_KEY_BUILD_PLOT_BLOCKED",
-										GC.getTerrainInfo(ePlotTerrain).getTextKeyWide()));
+									szBuffer.append(NEWLINE);
+									// If the terrain blocks the improvement from ever being constructable or not, different messages
+									// WORKAROUND FOR IDENTIFYING DUMMY_TECH PREREQ TERRAIN BLOCKING IN CIV4BuildInfos, REALLY SHOULD BE BETTER SOMEHOW
+									if (GC.getTechInfo(terrainTechRequired).isDisable())
+									{
+										szBuffer.append(gDLL->getText("TXT_KEY_BUILD_PLOT_BLOCKED",
+											GC.getTerrainInfo(ePlotTerrain).getTextKeyWide()));
+									}
+									else
+									{
+										szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
+											CvWString(GC.getTechInfo(terrainTechRequired).getType()).GetCString(),
+											GC.getTechInfo(terrainTechRequired).getTextKeyWide()));
+									}
+									// Avoid duplicating if terrain pops up twice due to the isAsPeak or isHills checks
+									break;
 								}
-								else
-								{
-									szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING",
-										CvWString(GC.getTechInfo(terrainTechRequired).getType()).GetCString(),
-										GC.getTechInfo(terrainTechRequired).getTextKeyWide()));
-								}
-								// Avoid duplicating if terrain pops up twice due to the isAsPeak or isHills checks
-								break;
 							}
 						}
 					}

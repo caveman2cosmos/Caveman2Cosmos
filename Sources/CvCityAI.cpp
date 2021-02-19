@@ -8766,7 +8766,7 @@ void CvCityAI::AI_updateBestBuild()
 				FAssert(m_aiBestBuildValue[iI] <= 0 || m_aeBestBuild[iI] != NO_BUILD);
 				FAssert(m_aeBestBuild[iI] == NO_BUILD || m_aiBestBuildValue[iI] > 0);
 
-				if (eLastBestBuildType != NO_BUILD
+				if (eLastBestBuildType != NO_BUILD && m_aeBestBuild[iI] != NO_BUILD
 				&& eLastBestBuildType != m_aeBestBuild[iI]
 				&& iWorkerCount > 0
 				&& gCityLogLevel >= 2)
