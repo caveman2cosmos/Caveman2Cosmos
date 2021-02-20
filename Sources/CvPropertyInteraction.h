@@ -22,6 +22,7 @@ public:
 	CvPropertyInteraction();
 	CvPropertyInteraction(PropertyTypes eSourceProperty, PropertyTypes eTargetProperty);
 	virtual ~CvPropertyInteraction();
+
 	PropertyTypes getSourceProperty() const;
 	PropertyTypes getTargetProperty() const;
 	void setSourceProperty(PropertyTypes eProperty);
@@ -33,7 +34,7 @@ public:
 	int getRelationData() const;
 	void setRelationData(int iRelationData);
 
-	bool isActive(CvGameObject* pObject) const;
+	bool isActive(const CvGameObject* pObject) const;
 
 	virtual PropertyInteractionTypes getType() const = 0;
 
