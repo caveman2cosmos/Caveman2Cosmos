@@ -11934,7 +11934,7 @@ bool CvUnit::testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier)
 	{
 		if (!isEnemy(kTargetPlayer.getTeam()))
 		{
-			kTargetPlayer.AI_changeMemoryCount(getOwner(), MEMORY_SPY_CAUGHT, 1);
+			GET_PLAYER(eTargetPlayer).AI_changeMemoryCount(getOwner(), MEMORY_SPY_CAUGHT, 1);
 		}
 
 		MEMORY_TRACK_EXEMPT();
@@ -17017,7 +17017,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		}
 
 		//	Koshling - modified a little to merge Super Forts logic
-		const ImprovementTypes eImprovement = pNewPlot->getImprovementType();
+		ImprovementTypes eImprovement = pNewPlot->getImprovementType();
 		if(eImprovement != NO_IMPROVEMENT && GC.getImprovementInfo(eImprovement).isActsAsCity() && !isNoCapture()  && !isBlendIntoCity() && !isHiddenNationality() && GET_PLAYER(getOwner()).isInvasionCapablePlayer() && !isCargo())
 		{
 			PROFILE("CvUnit::setXY.NewPlot2.ActAsCity");
@@ -17030,7 +17030,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 			}
 			else
 			{
-				const CvPlayer& pNewPlotOwner = GET_PLAYER(pNewPlot->getOwner());
+				CvPlayer& pNewPlotOwner = GET_PLAYER(pNewPlot->getOwner());
 				if ((isEnemy(pNewPlotOwner.getTeam()) || !pNewPlotOwner.isAlive())
 					&& !canCoexistWithTeamOnPlot(pNewPlotOwner.getTeam(), *pNewPlot)
 					&& canFight()
@@ -17038,7 +17038,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 				{
 					bDoAcquireFort = true;
 
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_CAPTURED_BY", GC.getImprovementInfo(eImprovement).getText(), GET_PLAYER(getOwner()).getCivilizationDescriptionKey());
+					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_CAPTURED_BY", GC.getImprovementInfo(eImprovement).getText(), GET_PLAYER(getOwner()).getCivilizationDescriptionKey());
 					AddDLLMessage(pNewPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYCAPTURED", MESSAGE_TYPE_MAJOR_EVENT, GC.getImprovementInfo(eImprovement).getButton(), GC.getCOLOR_RED(), pNewPlot->getX(), pNewPlot->getY(), true, true);
 				}
 			}
@@ -26965,7 +26965,7 @@ bool CvUnit::canRangeStrikeAt(const CvPlot* pPlot, int iX, int iY) const
 		return false;
 	}
 
-	const CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
+	CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
 
 	if (NULL == pTargetPlot)
 	{
@@ -26997,7 +26997,7 @@ bool CvUnit::canRangeStrikeAt(const CvPlot* pPlot, int iX, int iY) const
 		return false;
 	}
 
-	const CvUnit* pDefender = airStrikeTarget(pTargetPlot);
+	CvUnit* pDefender = airStrikeTarget(pTargetPlot);
 	if (NULL == pDefender)
 	{
 		return false;
@@ -27469,10 +27469,21 @@ bool CvUnit::isSuicide() const
 
 int CvUnit::getDropRange() const
 {
+/*****************************************************************************************************/
+/**  Author: TheLadiesOgre                                                                          **/
+/**  Date: 16.09.2009                                                                               **/
+/**  ModComp: TLOTags                                                                               **/
+/**  Reason Added: Implement iExtraDropRange                                                        **/
+/**  Notes:                                                                                         **/
+/*****************************************************************************************************
+	return (m_pUnitInfo->getDropRange());*/
 	return (m_pUnitInfo->getDropRange() + getExtraDropRange());
+/*****************************************************************************************************/
+/**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
+/*****************************************************************************************************/
 }
 
-void CvUnit::getDefenderCombatValues(const CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower, int& iTheirOdds, int& iTheirStrength, int& iOurDamage, int& iTheirDamage, CombatDetails* pTheirDetails, const CvUnit* pDefender, bool bSamePlot) const
+void CvUnit::getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower, int& iTheirOdds, int& iTheirStrength, int& iOurDamage, int& iTheirDamage, CombatDetails* pTheirDetails, CvUnit* pDefender, bool bSamePlot) const
 {
 	//TB Combat Mod begin
 	iTheirStrength = std::max(1,kDefender.currCombatStr(pPlot, this, pTheirDetails));
@@ -30004,7 +30015,7 @@ bool CvUnit::performInquisition()
 
 		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
-			const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
+			CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 			if (kLoopPlayer.isAlive()
 			&& (pPlot->isVisible(kLoopPlayer.getTeam(), true) || pPlot->isRevealed(kLoopPlayer.getTeam(), true)))
 			{
@@ -37203,7 +37214,7 @@ void CvUnit::doSetUnitCombats()
 void CvUnit::setFreePromotion(PromotionTypes ePromotion, bool bAdding, TraitTypes eTrait)
 {
 	const int numTraitInfos = GC.getNumTraitInfos();
-	const CvPlayer& pPlayer = GET_PLAYER(getOwner());
+	CvPlayer& pPlayer = GET_PLAYER(getOwner());
 
 	if (bAdding && !isHasPromotion(ePromotion))
 	{

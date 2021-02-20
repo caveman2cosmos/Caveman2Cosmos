@@ -119,7 +119,7 @@ private:
 			return false;
 		}
 
-		const CvUnitInfo& fromUnitInfo = GC.getUnitInfo(eFromUnit);
+		CvUnitInfo &fromUnitInfo = GC.getUnitInfo(eFromUnit);
 
 		if (fromUnitInfo.isUnitUpgrade(eToUnit))
 		{

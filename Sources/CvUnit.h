@@ -1799,7 +1799,7 @@ public:
 	virtual int	AI_genericUnitValueTimes100(UnitValueFlags eFlags) const = 0;
 	virtual int AI_getBirthmark() const = 0;
 	virtual void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd) = 0;
-	virtual bool isWaitingOnUnitAI(int iIndex) const = 0;
+	virtual bool isWaitingOnUnitAI(int iIndex) = 0;
 	virtual bool isWaitingOnUnitAIAny() const = 0;
 
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
@@ -2219,9 +2219,9 @@ protected:
 	void increaseBattleRounds( CvBattleDefinition & battleDefinition ) const;
 	int computeWaveSize( bool bRangedRound, int iAttackerMax, int iDefenderMax ) const;
 
-	void getDefenderCombatValues(const CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower,
+	void getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower,
 		int& iTheirOdds, int& iTheirStrength, int& iOurDamage, int& iTheirDamage,
-		CombatDetails* pTheirDetails = NULL, const CvUnit* pDefender = NULL, bool bSamePlot = false) const;
+		CombatDetails* pTheirDetails = NULL, CvUnit* pDefender = NULL, bool bSamePlot = false) const;
 
 	bool isCombatVisible(const CvUnit* pDefender) const;
 	void resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition& kBattle, bool bSamePlot = false);
@@ -2264,7 +2264,7 @@ public:
 	virtual int AI_getPredictedHitPoints() const = 0;
 	virtual void AI_setPredictedHitPoints(int iPredictedHitPoints) = 0;
 	virtual bool AI_getHasAttacked() const = 0;
-	virtual int AI_beneficialPropertyValueToCity(const CvCity* pCity, PropertyTypes eProperty) const = 0;
+	virtual int AI_beneficialPropertyValueToCity(CvCity* pCity, PropertyTypes eProperty) const = 0;
 
 	bool isUsingDummyEntities() const;
 	static bool isDummyEntity(const CvEntity* entity);

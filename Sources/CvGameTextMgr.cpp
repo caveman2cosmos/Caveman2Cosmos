@@ -9802,7 +9802,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 }
 
 
-void CvGameTextMgr::setCityPlotYieldValueString(CvWStringBuffer& szString, CvCity* pCity, int iIndex, bool bAvoidGrowth, bool bIgnoreGrowth, bool bIgnoreFood) const
+void CvGameTextMgr::setCityPlotYieldValueString(CvWStringBuffer &szString, CvCity* pCity, int iIndex, bool bAvoidGrowth, bool bIgnoreGrowth, bool bIgnoreFood)
 {
 	PROFILE_FUNC();
 
@@ -9824,7 +9824,7 @@ void CvGameTextMgr::setCityPlotYieldValueString(CvWStringBuffer& szString, CvCit
 		setYieldValueString(szString, 0, /*bActive*/ false, /*bMakeWhitespace*/ true);
 }
 
-void CvGameTextMgr::setYieldValueString(CvWStringBuffer &szString, int iValue, bool bActive, bool bMakeWhitespace) const
+void CvGameTextMgr::setYieldValueString(CvWStringBuffer &szString, int iValue, bool bActive, bool bMakeWhitespace)
 {
 	PROFILE_FUNC();
 
@@ -12909,7 +12909,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	{
 		return;
 	}
-	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
+	CvPromotionInfo &kPromotion = GC.getPromotionInfo(ePromotion);
 
 	//for (iI = 0; iI < kPromotion.getNumAIWeightbyUnitCombatTypes(); iI++)
 	//{
@@ -20730,13 +20730,13 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 		}
 
 
-		const BoolExpr* pExpr = GC.getUnitInfo(eUnit).getTrainCondition();
+		BoolExpr* pExpr = GC.getUnitInfo(eUnit).getTrainCondition();
 		if (pExpr)
 		{
 			bool bEval = false;
 			if (pCity)
 			{
-				bEval = pExpr->evaluate(pCity->getGameObject());
+				bEval = pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObject())); // Const wegcasten ist hier ok da evaluate nicht wirklich etwas ändert
 			}
 			if (!bEval)
 			{
@@ -24662,8 +24662,8 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_NO_NUKES"));
 		}
 
-		const BoolExpr* pExpr = kBuilding.getConstructCondition();
-		if (pExpr && (!pCity || !pExpr->evaluate(pCity->getGameObject())))
+		BoolExpr* pExpr = kBuilding.getConstructCondition();
+		if (pExpr && (!pCity || !pExpr->evaluate(const_cast<CvGameObjectCity*>(pCity->getGameObject()))))
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES"));
 			pExpr->buildDisplayString(szBuffer);
@@ -32536,7 +32536,7 @@ void CvGameTextMgr::setFeatureHelp(CvWStringBuffer &szBuffer, FeatureTypes eFeat
 	{
 		for (int iI = 0; iI < GC.getFeatureInfo(eFeature).getNumMapCategoryTypes(); iI++)
 		{
-			const MapCategoryTypes eMapCategory = (MapCategoryTypes)GC.getFeatureInfo(eFeature).getMapCategoryType(iI);
+			MapCategoryTypes eMapCategory = (MapCategoryTypes)GC.getFeatureInfo(eFeature).getMapCategoryType(iI);
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
 		}
@@ -32630,21 +32630,21 @@ void CvGameTextMgr::setTerrainHelp(CvWStringBuffer &szBuffer, TerrainTypes eTerr
 	{
 		for (int iI = 0; iI < terrain.getNumMapCategoryTypes(); iI++)
 		{
-			const MapCategoryTypes eMapCategory = (MapCategoryTypes)terrain.getMapCategoryType(iI);
+			MapCategoryTypes eMapCategory = (MapCategoryTypes)terrain.getMapCategoryType(iI);
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_TERRAIN", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
 		}
 	}
 }
 
-
-void CvGameTextMgr::buildFinanceSpecialistGoldString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer) const
+// BUG - Finance Advisor - start
+void CvGameTextMgr::buildFinanceSpecialistGoldString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
 {
 	if (NO_PLAYER == ePlayer)
 	{
 		return;
 	}
-	const CvPlayer& player = GET_PLAYER(ePlayer);
+	CvPlayer& player = GET_PLAYER(ePlayer);
 
 	int* iCounts = new int[GC.getNumSpecialistInfos()];
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
@@ -32692,15 +32692,15 @@ void CvGameTextMgr::buildFinanceSpecialistGoldString(CvWStringBuffer& szBuffer, 
 	szBuffer.append(gDLL->getText("TXT_KEY_BUG_FINANCIAL_ADVISOR_SPECIALIST_TOTAL_GOLD", iTotal/100));
 	SAFE_DELETE_ARRAY(iCounts);
 }
+// BUG - Finance Advisor - end
 
-
-void CvGameTextMgr::buildFinanceInflationString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer) const
+void CvGameTextMgr::buildFinanceInflationString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
 {
 	if (NO_PLAYER == ePlayer)
 	{
 		return;
 	}
-	const CvPlayer& kPlayer = GET_PLAYER(ePlayer);
+	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 
 	const long long iInflationCost = kPlayer.getInflationCost();
 	if (iInflationCost > 0)
@@ -32715,7 +32715,7 @@ void CvGameTextMgr::buildFinanceInflationString(CvWStringBuffer& szBuffer, Playe
 	}
 }
 
-void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer) const
+void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
 {
 	if (NO_PLAYER == ePlayer)
 	{
@@ -32847,18 +32847,18 @@ void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, Play
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_2", player.getFinalUnitUpkeep()));
 }
 
-void CvGameTextMgr::buildFinanceAwaySupplyString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer) const
+void CvGameTextMgr::buildFinanceAwaySupplyString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
 {
 	if (NO_PLAYER == ePlayer)
 	{
 		return;
 	}
-	const CvPlayer& player = GET_PLAYER(ePlayer);
+	CvPlayer& player = GET_PLAYER(ePlayer);
 
 	int iPaidUnits = 0;
 	int iBaseCost = 0;
-	const int iCost = player.calculateUnitSupply(iPaidUnits, iBaseCost);
-	const int iHandicap = iCost - iBaseCost;
+	int iCost = player.calculateUnitSupply(iPaidUnits, iBaseCost);
+	int iHandicap = iCost - iBaseCost;
 
 	CvWString szHandicap;
 	if (iHandicap != 0)
@@ -32870,7 +32870,7 @@ void CvGameTextMgr::buildFinanceAwaySupplyString(CvWStringBuffer& szBuffer, Play
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_SUPPLY_COST", iPaidUnits, GC.getDefineINT("INITIAL_FREE_OUTSIDE_UNITS"), iBaseCost, szHandicap.GetCString(), iCost));
 }
 
-void CvGameTextMgr::buildFinanceCityMaintString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer) const
+void CvGameTextMgr::buildFinanceCityMaintString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
 {
 	if (NO_PLAYER == ePlayer)
 	{
@@ -32960,17 +32960,17 @@ void CvGameTextMgr::buildFinanceCityMaintString(CvWStringBuffer& szBuffer, Playe
 	}
 }
 
-void CvGameTextMgr::buildFinanceCivicUpkeepString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer) const
+void CvGameTextMgr::buildFinanceCivicUpkeepString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
 {
 	if (NO_PLAYER == ePlayer)
 	{
 		return;
 	}
-	const CvPlayer& player = GET_PLAYER(ePlayer);
+	CvPlayer& player = GET_PLAYER(ePlayer);
 	CvWString szCivicOptionCosts;
 	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); ++iI)
 	{
-		const CivicTypes eCivic = player.getCivics((CivicOptionTypes)iI);
+		CivicTypes eCivic = player.getCivics((CivicOptionTypes)iI);
 		if (NO_CIVIC != eCivic)
 		{
 			CvWString szTemp;
@@ -32983,18 +32983,18 @@ void CvGameTextMgr::buildFinanceCivicUpkeepString(CvWStringBuffer& szBuffer, Pla
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_CIVIC_UPKEEP_COST", szCivicOptionCosts.GetCString(), player.getCivicUpkeep()));
 }
 
-void CvGameTextMgr::buildFinanceForeignIncomeString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer) const
+void CvGameTextMgr::buildFinanceForeignIncomeString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
 {
 	if (NO_PLAYER == ePlayer)
 	{
 		return;
 	}
-	const CvPlayer& player = GET_PLAYER(ePlayer);
+	CvPlayer& player = GET_PLAYER(ePlayer);
 
 	CvWString szPlayerIncome;
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		const CvPlayer& otherPlayer = GET_PLAYER((PlayerTypes)iI);
+		CvPlayer& otherPlayer = GET_PLAYER((PlayerTypes)iI);
 		if (otherPlayer.isAlive() && player.getGoldPerTurnByPlayer((PlayerTypes)iI) != 0)
 		{
 			CvWString szTemp;
@@ -35895,7 +35895,7 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 	}
 }
 
-void CvGameTextMgr::eventTechHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, TechTypes eTech, PlayerTypes eActivePlayer, PlayerTypes eOtherPlayer) const
+void CvGameTextMgr::eventTechHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, TechTypes eTech, PlayerTypes eActivePlayer, PlayerTypes eOtherPlayer)
 {
 	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
@@ -35941,7 +35941,7 @@ void CvGameTextMgr::eventTechHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, 
 	}
 }
 
-void CvGameTextMgr::eventGoldHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, PlayerTypes ePlayer, PlayerTypes eOtherPlayer) const
+void CvGameTextMgr::eventGoldHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, PlayerTypes ePlayer, PlayerTypes eOtherPlayer)
 {
 	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
@@ -36731,7 +36731,7 @@ void CvGameTextMgr::getTradeScreenIcons(std::vector< std::pair<CvString, CvWidge
 
 void CvGameTextMgr::getTradeScreenHeader(CvWString& szHeader, PlayerTypes ePlayer, PlayerTypes eOtherPlayer, bool bAttitude)
 {
-	const CvPlayer& kPlayer = GET_PLAYER(ePlayer);
+	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 	szHeader.Format(L"%s - %s", CvWString(kPlayer.getName()).GetCString(), CvWString(kPlayer.getCivilizationDescription()).GetCString());
 	if (bAttitude)
 	{
@@ -36740,24 +36740,24 @@ void CvGameTextMgr::getTradeScreenHeader(CvWString& szHeader, PlayerTypes ePlaye
 }
 
 // BUG - Trade Hover - start
-void CvGameTextMgr::buildDomesticTradeString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer) const
+void CvGameTextMgr::buildDomesticTradeString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
 {
 	buildTradeString(szBuffer, ePlayer, NO_PLAYER, true, false, false);
 }
 
-void CvGameTextMgr::buildForeignTradeString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer) const
+void CvGameTextMgr::buildForeignTradeString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
 {
 	buildTradeString(szBuffer, ePlayer, NO_PLAYER, false, true, false);
 }
 
-void CvGameTextMgr::buildTradeString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer, PlayerTypes eWithPlayer, bool bDomestic, bool bForeign, bool bHeading) const
+void CvGameTextMgr::buildTradeString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer, PlayerTypes eWithPlayer, bool bDomestic, bool bForeign, bool bHeading)
 {
 	if (NO_PLAYER == ePlayer)
 	{
 		return;
 	}
 
-	const CvPlayer& player = GET_PLAYER(ePlayer);
+	CvPlayer& player = GET_PLAYER(ePlayer);
 	if (bHeading)
 	{
 		if (ePlayer == eWithPlayer)
@@ -36789,7 +36789,7 @@ void CvGameTextMgr::buildTradeString(CvWStringBuffer& szBuffer, PlayerTypes ePla
 
 		if (bForeign && !player.canHaveTradeRoutesWith(eWithPlayer))
 		{
-			const CvPlayer& withPlayer = GET_PLAYER(eWithPlayer);
+			CvPlayer& withPlayer = GET_PLAYER(eWithPlayer);
 			bool bCanTrade = true;
 			if (!GET_PLAYER(eWithPlayer).isAlive())
 			{
@@ -37193,16 +37193,16 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 	}
 }
 
-void CvGameTextMgr::getRebasePlotHelp(const CvPlot* pPlot, CvWString& strHelp) const
+void CvGameTextMgr::getRebasePlotHelp(CvPlot* pPlot, CvWString& strHelp)
 {
 	if (NULL != pPlot)
 	{
-		const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+		CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 		if (NULL != pHeadSelectedUnit)
 		{
 			if (pPlot->isFriendlyCity(*pHeadSelectedUnit, true))
 			{
-				const CvCity* pCity = pPlot->getPlotCity();
+				CvCity* pCity = pPlot->getPlotCity();
 				if (NULL != pCity)
 				{
 					int iNumUnits = pCity->plot()->countNumAirUnits(GC.getGame().getActiveTeam());
@@ -37239,11 +37239,11 @@ void CvGameTextMgr::getRebasePlotHelp(const CvPlot* pPlot, CvWString& strHelp) c
 	}
 }
 
-void CvGameTextMgr::getNukePlotHelp(const CvPlot* pPlot, CvWString& strHelp) const
+void CvGameTextMgr::getNukePlotHelp(CvPlot* pPlot, CvWString& strHelp)
 {
 	if (NULL != pPlot)
 	{
-		const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+		CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 		if (NULL != pHeadSelectedUnit)
 		{
@@ -37776,8 +37776,7 @@ void CvGameTextMgr::getPromotionDataForWB(std::vector<CvWBData>& mapPromotionDat
 	}
 }
 
-/*
-void CvGameTextMgr::getTraitDataForWB(std::vector<CvWBData>& mapTraitData) const
+void CvGameTextMgr::getTraitDataForWB(std::vector<CvWBData>& mapTraitData)
 {
 	CvWStringBuffer szBuffer;
 	for (int i=0; i < GC.getNumTraitInfos(); i++)
@@ -37787,7 +37786,6 @@ void CvGameTextMgr::getTraitDataForWB(std::vector<CvWBData>& mapTraitData) const
 		mapTraitData.push_back(CvWBData(i, szBuffer.getCString(), GC.getTraitInfo((TraitTypes) i).getButton()));
 	}
 }
-*/
 
 void CvGameTextMgr::getBonusDataForWB(std::vector<CvWBData>& mapBonusData)
 {
@@ -37815,8 +37813,7 @@ void CvGameTextMgr::getImprovementDataForWB(std::vector<CvWBData>& mapImprovemen
 	}
 }
 
-/*
-void CvGameTextMgr::getRouteDataForWB(std::vector<CvWBData>& mapRouteData) const
+void CvGameTextMgr::getRouteDataForWB(std::vector<CvWBData>& mapRouteData)
 {
 	CvWStringBuffer szBuffer;
 	for (int i=0; i < GC.getNumRouteInfos(); i++)
@@ -37830,7 +37827,6 @@ void CvGameTextMgr::getRouteDataForWB(std::vector<CvWBData>& mapRouteData) const
 		}
 	}
 }
-*/
 
 void CvGameTextMgr::getReligionDataForWB(bool bHolyCity, std::vector<CvWBData>& mapReligionData)
 {
@@ -38427,7 +38423,7 @@ void CvGameTextMgr::buildMaintenanceModifiersString(CvWStringBuffer &szBuffer, T
 	}
 }
 
-void CvGameTextMgr::getGameObjectName(CvWString &szString, GameObjectTypes eObject) const
+void CvGameTextMgr::getGameObjectName(CvWString &szString, GameObjectTypes eObject)
 {
 	switch (eObject)
 	{
@@ -38452,7 +38448,7 @@ void CvGameTextMgr::getGameObjectName(CvWString &szString, GameObjectTypes eObje
 	}
 }
 
-void CvGameTextMgr::buildGameObjectRelationString(CvWStringBuffer& szBuffer, GameObjectTypes eObject, RelationTypes eRelation, int iData) const
+void CvGameTextMgr::buildGameObjectRelationString(CvWStringBuffer &szBuffer, GameObjectTypes eObject, RelationTypes eRelation, int iData)
 {
 	if ((eObject == NO_GAMEOBJECT) || (eRelation == NO_RELATION))
 		return;
