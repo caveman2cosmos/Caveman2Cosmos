@@ -23,7 +23,7 @@
 		<BuildInfo>
 			<Type>BUILD_PLANETARY_MAGLEV</Type>
 			<Description>TXT_KEY_BUILD_PLANETARY_MAGLEV</Description>
-			<PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
+			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<iTime>600</iTime>
 			<iCost>50</iCost>
 			<bKill>0</bKill>
@@ -36,7 +36,7 @@
         <BuildInfo>
 			<Type>BUILD_ORBITAL_TRAJECTORY</Type>
 			<Description>TXT_KEY_BUILD_ORBITAL_TRAJECTORY</Description>
-			<PrereqTech>TECH_COILGUN</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iTime>600</iTime>
 			<iCost>100</iCost>
 			<bKill>0</bKill>

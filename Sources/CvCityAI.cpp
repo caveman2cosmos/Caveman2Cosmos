@@ -8766,8 +8766,14 @@ void CvCityAI::AI_updateBestBuild()
 				FAssert(m_aiBestBuildValue[iI] <= 0 || m_aeBestBuild[iI] != NO_BUILD);
 				FAssert(m_aeBestBuild[iI] == NO_BUILD || m_aiBestBuildValue[iI] > 0);
 
+/* Toffer - This needs to be made capable of both dealing with:
+		"from route to route", "from imp to imp", "from route to imp", and "from imp to route" log messages.
+	Was easier to comment it out to fix the CTD than to make it compatible with both routes and improvements.
+
 				if (eLastBestBuildType != NO_BUILD && m_aeBestBuild[iI] != NO_BUILD
 				&& eLastBestBuildType != m_aeBestBuild[iI]
+				&& GC.getBuildInfo(eLastBestBuildType).getImprovement() != -1
+				
 				&& iWorkerCount > 0
 				&& gCityLogLevel >= 2)
 				{
@@ -8781,6 +8787,7 @@ void CvCityAI::AI_updateBestBuild()
 						m_aiBestBuildValue[iI], iWorkerCount
 					);
 				}
+*/
 			}
 		}
 	}

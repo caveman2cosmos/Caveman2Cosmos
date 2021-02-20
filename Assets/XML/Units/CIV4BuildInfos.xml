@@ -7239,7 +7239,7 @@
 		<BuildInfo>
 			<Type>BUILD_WOODEN_WATCHTOWER</Type>
 			<Description>TXT_KEY_BUILD_WOODEN_WATCHTOWER</Description>
-			<PrereqTech>TECH_CARPENTRY</PrereqTech>
+			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>1</iCost>
@@ -7337,7 +7337,7 @@
 		<BuildInfo>
 			<Type>BUILD_FORTIFIED_CAVE</Type>
 			<Description>TXT_KEY_BUILD_FORTIFIED_CAVE</Description>
-			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_POTTERY</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>20</iCost>
@@ -7369,7 +7369,7 @@
 		<BuildInfo>
 			<Type>BUILD_WOODEN_PALISADE</Type>
 			<Description>TXT_KEY_BUILD_WOODEN_PALISADE</Description>
-			<PrereqTech>TECH_CARPENTRY</PrereqTech>
+			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_MATHEMATICS</ObsoleteTech>
 			<iTime>400</iTime>
 			<iCost>20</iCost>
@@ -11229,7 +11229,7 @@
 		<BuildInfo>
 			<Type>BUILD_BREAK_ICE</Type>
 			<Description>TXT_KEY_BUILD_BREAK_ICE</Description>
-			<PrereqTech>TECH_COMBUSTION</PrereqTech>
+			<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>25</iCost>
 			<bKill>0</bKill>
@@ -11237,7 +11237,7 @@
 			<FeatureStructs>
 				<FeatureStruct>
 					<FeatureType>FEATURE_ICE</FeatureType>
-					<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
+					<PrereqTech>NONE</PrereqTech>
 					<iTime>300</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -11363,7 +11363,7 @@
 		<BuildInfo>
 			<Type>BUILD_FISHING_CAMP_KILL</Type>
 			<Description>TXT_KEY_BUILD_FISHING_CAMP_KILL</Description>
-			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
+			<PrereqTech>TECH_FISHING</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>5</iCost>
 			<bKill>1</bKill>
