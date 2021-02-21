@@ -8610,7 +8610,6 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<ImprovementPillage>IMPROVEMENT_FACTORY</ImprovementPillage>
-			<!-- Other improvements also can upgrade to Manufacturing Complex: Factory (Cold Climate) -->
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_ROBOTICS</PrereqTech>
@@ -8713,13 +8712,13 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</ImprovementInfo>
-		<!-- Factory (Cold Climate) -> Manufacturing Complex Era -->
+		<!-- Factory -> Manufacturing Complex Era -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_FACTORY_COLD_CLIMATE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FACTORY_COLD</Description>
+			<Type>IMPROVEMENT_FACTORY</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FACTORY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FACTORY</ArtDefineTag>
-			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
+			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>-2</iYieldChange>
 				<iYieldChange>7</iYieldChange>
@@ -8733,6 +8732,46 @@
 			<iHealthPercent>-100</iHealthPercent>
 			<iPillageGold>100</iPillageGold>
 			<TerrainMakesValids>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_PLAINS</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_BARREN</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_LUSH</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_TAIGA</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bMakesValid>1</bMakesValid>
@@ -8854,172 +8893,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</ImprovementInfo>
-		<!-- Factory -> Manufacturing Complex Era -->
-		<ImprovementInfo>
-			<Type>IMPROVEMENT_FACTORY</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FACTORY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FACTORY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FACTORY</ArtDefineTag>
-			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
-			<YieldChanges>
-				<iYieldChange>-2</iYieldChange>
-				<iYieldChange>7</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
-			<bRequiresFlatlands>1</bRequiresFlatlands>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iUpgradeTime>35</iUpgradeTime>
-			<iAirBombDefense>5</iAirBombDefense>
-			<iHealthPercent>-100</iHealthPercent>
-			<iPillageGold>100</iPillageGold>
-			<TerrainMakesValids>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_BARREN</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_BADLAND</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_JAGGED</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_TAIGA</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-			</TerrainMakesValids>
-			<ImprovementPillage>IMPROVEMENT_WORKSHOP</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementUpgrade>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_ORGANIC_CHEMISTRY</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_CONSUMERISM</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_MANUFACTURING</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
-			<RouteYieldChanges>
-				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_MAGLEV</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_VACTRAIN</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVITY_TRAIN</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_JUMPLANE</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-			</RouteYieldChanges>
-			<iCulture>2</iCulture>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-					<RelationType>RELATION_NEAR</RelationType>
-					<iDistance>1</iDistance>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-		</ImprovementInfo>
-		<!-- Workshop -> Factory OR Factory (Cold Climate) Era -->
+		<!-- Workshop -> Factory -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WORKSHOP</Type>
 			<Description>TXT_KEY_IMPROVEMENT_WORKSHOP</Description>
@@ -9080,9 +8954,6 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<ImprovementUpgrade>IMPROVEMENT_FACTORY</ImprovementUpgrade>
-			<AlternativeImprovementUpgradeTypes>
-				<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
-			</AlternativeImprovementUpgradeTypes>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_GUILDS</PrereqTech>
