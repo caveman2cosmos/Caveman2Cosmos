@@ -95,7 +95,7 @@
 			</TerrainMakesValids>
 			<iUniqueRange>2</iUniqueRange>
 			<FeatureMakesValids/>
-			<ImprovementPillage/>
+			<ImprovementPillage>IMPROVEMENT_SPACE_STATION_LV1</ImprovementPillage>			
 			<ImprovementUpgrade>IMPROVEMENT_SPACE_STATION_LV3</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<RouteYieldChanges/>
@@ -145,7 +145,7 @@
 			</TerrainMakesValids>
 			<iUniqueRange>2</iUniqueRange>
 			<FeatureMakesValids/>
-			<ImprovementPillage/>
+			<ImprovementPillage>IMPROVEMENT_SPACE_STATION_LV2</ImprovementPillage>
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<RouteYieldChanges/>
@@ -1628,7 +1628,7 @@
 			<iHappiness>0</iHappiness>
 			<iPillageGold>200</iPillageGold>
 			<FeatureMakesValids/>
-			<ImprovementPillage/>
+			<ImprovementPillage>IMPROVEMENT_JOVIAN_LUNAR_BASE</ImprovementPillage>
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<RouteYieldChanges/>
@@ -3157,7 +3157,7 @@
 			<iHappiness>0</iHappiness>
 			<iPillageGold>200</iPillageGold>
 			<FeatureMakesValids/>
-			<ImprovementPillage/>
+			<ImprovementPillage>IMPROVEMENT_SATELLITE_STATION</ImprovementPillage>
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<RouteYieldChanges/>
@@ -3794,6 +3794,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<ImprovementPillage>IMPROVEMENT_LUNAR_BASE</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_LUNAR_HABITATION_COMPLEX</ImprovementUpgrade>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -3807,6 +3808,7 @@
 				<iYieldChange>10</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_LUNAR_OUTPOST</ImprovementPillage>
 			<iPillageGold>1000</iPillageGold>
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
@@ -3847,6 +3849,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_LUNAR_MINING_OUTPOST</ImprovementPillage>
 			<iPillageGold>200</iPillageGold>
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
