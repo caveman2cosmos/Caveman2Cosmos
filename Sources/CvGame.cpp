@@ -5882,7 +5882,13 @@ void CvGame::doTurn()
 		}
 	}
 
-	GC.getMap().doTurn();
+	foreach_(CvMap* map, GC.getMaps())
+	{
+		if (map != nullptr)
+		{
+			map->doTurn();
+		}
+	}
 
 	createBarbarianCities(false);
 	if (isOption(GAMEOPTION_NEANDERTHAL_CITIES))
@@ -5996,6 +6002,15 @@ void CvGame::doTurn()
 			}
 		}
 	}
+
+	foreach_(CvMap* map, GC.getMaps())
+	{
+		if (map != nullptr)
+		{
+			map->updateIncomingUnits();
+		}
+	}
+
 	doIncreasingDifficulty();
 	doFlexibleDifficulty();
 	doFinalFive();
@@ -7479,9 +7494,6 @@ void CvGame::updateTurnTimer()
 void CvGame::testAlive()
 {
 	PROFILE_FUNC();
-
-	if (m_eCurrentMap != MAP_INITIAL)	// XXX - Currently players are killed after switching to a new map.
-		return;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{

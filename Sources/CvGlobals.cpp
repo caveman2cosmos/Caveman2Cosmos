@@ -2951,13 +2951,13 @@ void cvInternalGlobals::cacheInfoTypes()
 
 void cvInternalGlobals::switchMap(MapTypes eMap)
 {	
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eMap);
+	FASSERT_BOUNDS(0, getNumMapInfos(), eMap);
 	FAssert(eMap != CURRENT_MAP);
 
-	GC.getMap().beforeSwitch();
-	GC.getGame().setCurrentMap(eMap);
-	CyGlobalContext::getInstance().getCyMap()->setMap(GC.getMap());
-	GC.getMap().afterSwitch();
+	getMap().beforeSwitch();
+	getGame().setCurrentMap(eMap);
+	*CyGlobalContext::getInstance().getCyMap() = getMap();
+	getMap().afterSwitch();
 }
 
 CvViewport* cvInternalGlobals::getCurrentViewport() const

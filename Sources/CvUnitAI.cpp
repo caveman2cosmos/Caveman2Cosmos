@@ -80,6 +80,12 @@ CvUnitAI::CvUnitAI(bool bIsDummy) : CvUnit(bIsDummy)
 }
 
 
+CvUnitAI::CvUnitAI(const CvUnitAI& other) : CvUnit(other)
+{
+	AI_reset(NO_UNITAI, true);
+}
+
+
 CvUnitAI::~CvUnitAI()
 {
 	AI_uninit();

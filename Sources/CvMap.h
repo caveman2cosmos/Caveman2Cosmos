@@ -20,6 +20,7 @@ class CvPlotGroup;
 class CvSelectionGroup;
 #ifdef PARALLEL_MAPS
 class CvUnit;
+class CvUnitAI;
 #endif
 class CvViewport;
 
@@ -71,7 +72,8 @@ public:
 	void afterSwitch();
 
 #ifdef PARALLEL_MAPS
-	void addIncomingUnit(CvUnit* unit, int numTravelTurns);
+	void updateIncomingUnits();
+	void addIncomingUnit(CvUnitAI& unit, int numTravelTurns);
 #endif
 
 	//	Viewports are owned by their underlying maps
@@ -278,11 +280,10 @@ protected:
 	FFreeListTrashArray<CvArea> m_areas;
 
 #ifdef PARALLEL_MAPS
-	std::vector<std::pair<CvUnit*, int> > m_IncomingUnits;
+	std::vector<std::pair<CvUnitAI, int> > m_IncomingUnits;
 #endif
 
 	void calculateAreas();
-	void updateIncomingUnits();
 };
 
 #endif

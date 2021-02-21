@@ -1,5 +1,5 @@
-from CvPythonExtensions import *
-import CvUtil
+from CvPythonExtensions import CyGlobalContext, CyGame
+from CvUtil import sendImmediateMessage
 
 GC = CyGlobalContext()
 bIsSwitchingMap = False
@@ -16,13 +16,12 @@ class ParallelMaps:
 		if GC.enableMultiMaps():
 			GC.updateMaps()
 			self.pEventManager.addEventHandler("kbdEvent", self.filterInput)
-			CvUtil.sendImmediateMessage("Multi-Maps enabled.")
+			sendImmediateMessage("Multi-Maps enabled.")
 
 	def filterInput(self, argsList):
-		eventType = argsList[0]
-		if self.pEventManager.bAlt and eventType == EventType.EVT_KEYDOWN:
+		if self.pEventManager.bAlt:
 			i = argsList[1] -2
-			if i < GC.getNumMapInfos() and i != CyGame().getCurrentMap():
+			if i < GC.getNumMapCategoryInfos() and i != GC.getGame().getCurrentMap():
 				global bIsSwitchingMap
 				bIsSwitchingMap = True
 				if not GC.mapInitialized(i):
@@ -30,6 +29,6 @@ class ParallelMaps:
 				GC.switchMap(i)
 				bIsSwitchingMap = False
 				if i == 0:
-					CvUtil.sendImmediateMessage("Initial map")
+					sendImmediateMessage("Initial map")
 				else:
-					CvUtil.sendImmediateMessage("Map %d" %i)
+					sendImmediateMessage("Map %d" %i)

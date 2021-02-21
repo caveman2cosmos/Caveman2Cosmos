@@ -2177,9 +2177,9 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 	{
 		iBestArea = findStartingArea();
 	}
-
+#ifndef PARALLEL_MAPS
 	const MapCategoryTypes earth = GC.getMAPCATEGORY_EARTH();
-
+#endif
 	for (int iPass = 0; iPass < 2; iPass++)
 	{
 		CvPlot *pBestPlot = NULL;
@@ -2190,7 +2190,9 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 			CvPlot* plot = GC.getMap().plotByIndex(iI);
 
 			if (plot->isStartingPlot()
+#ifndef PARALLEL_MAPS
 			|| !plot->isMapCategoryType(earth)
+#endif
 			|| iBestArea != -1 && plot->getArea() != iBestArea)
 			{
 				continue;
@@ -12382,9 +12384,11 @@ void CvPlayer::verifyAlive()
 		if (
 			// No city nor units is always defeat
 			getNumCities() == 0
+			//algo::all_of(getAllCities(), bind(&FFreeListTrashArray<CvCityAI>::getCount, &_1) == 0)
 		&&
 			( // No city confirmed
 				getNumUnits() == 0
+				//algo::all_of(getAllUnits(), bind(&FFreeListTrashArray<CvUnitAI>::getCount, &_1) == 0)
 				||
 				// Are units enough to stay alive?
 				!GC.getGame().isOption(GAMEOPTION_COMPLETE_KILLS) // If option is active, YES.
@@ -12445,6 +12449,8 @@ void CvPlayer::verifyAlive()
 		}
 	}
 	else if (getNumCities() > 0 || getNumUnits() > 0)
+	//else if (algo::any_of(getAllCities(), bind(FFreeListTrashArray<CvCityAI>::getCount, &_1) > 0)
+	//|| algo::any_of(getAllUnits(), bind(FFreeListTrashArray<CvUnitAI>::getCount, &_1) > 0))
 	{
 		setAlive(true);
 	}
@@ -15866,10 +15872,11 @@ CvUnit* CvPlayer::addUnit()
 }
 
 #ifdef PARALLEL_MAPS
-void CvPlayer::addUnitToMap(CvUnit& unit, MapTypes map)
+CvUnit& CvPlayer::addUnit(CvUnit& unit)
 {
-	m_units[map]->load(static_cast<CvUnitAI*>(&unit));
-	deleteUnit(unit.getID());
+	CvUnit& newUnit = *addUnit();
+	newUnit = unit;
+	return newUnit;
 }
 #endif
 

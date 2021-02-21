@@ -190,6 +190,10 @@ public:
 /***** Parallel Maps - Begin *****/
 /*********************************/
 	inline CvMap& getMap() const;
+	CvMap& getMapByIndex(MapTypes eIndex) const;
+	int getNumMaps() const						{ return m_maps.size(); }
+	const std::vector<CvMap*>& getMaps() const	{ return m_maps; }
+
 	CvViewport* getCurrentViewport() const;
 	int	getViewportSizeX() const;
 	int	getViewportSizeY() const;
@@ -208,8 +212,6 @@ public:
 	CvMapSwitchInfo& getMapSwitchInfo(MapSwitchTypes eMapSwitch) const;
 
 	void switchMap(MapTypes eMap);
-	CvMap& getMapByIndex(MapTypes eIndex) const;
-	int getNumMaps() const { return m_maps.size(); }
 	void updateMaps();
 	void initializeMap(MapTypes eMap);
 	bool mapInitialized(MapTypes eMap) const;

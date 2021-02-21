@@ -1248,24 +1248,21 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 #ifdef PARALLEL_MAPS
 		case MISSION_GO_TO_MAP_EARTH:
 		{
+			if (CURRENT_MAP == MAP_INITIAL)
+				return false;
+
 			const CvMissionInfo& info = GC.getMissionInfo((MissionTypes)iMission);
 
 			const TechTypes requiredTech = info.getTechRequired();
 			if (requiredTech != NO_TECH && !GET_TEAM(pLoopUnit->getTeam()).isHasTech(requiredTech))
-			{
 				return false;
-			}
+
 			const BuildingTypes requiredBuilding = info.getBuildingRequired();
 			if (requiredBuilding == NO_BUILDING)
-			{
 				return true;
-			}
+
 			const CvCity* city = pLoopUnit->plot()->getPlotCity();
-			if (city && city->getNumBuilding(requiredBuilding))
-			{
-				return true;
-			}
-			break;
+			return city && city->getNumBuilding(requiredBuilding);
 		}
 #endif
 		default:
@@ -2035,8 +2032,8 @@ bool CvSelectionGroup::startMission()
 #ifdef PARALLEL_MAPS
 					case MISSION_GO_TO_MAP_EARTH:
 					{
-						const int travelTurns = 1;
-						GC.getMapByIndex(MAP_INITIAL).addIncomingUnit(pLoopUnit, travelTurns);
+						GC.getMapByIndex(MAP_INITIAL).addIncomingUnit(static_cast<CvUnitAI&>(*pLoopUnit), 1);
+						pLoopUnit->plot()->removeUnit(pLoopUnit);
 						GET_PLAYER(pLoopUnit->getOwner()).deleteUnit(pLoopUnit->getID(), MAP_INITIAL);
 						break;
 					}

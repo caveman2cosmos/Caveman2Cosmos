@@ -456,10 +456,13 @@ class CvUnit : public CvDLLEntity
 public:
 
 	CvUnit(bool bIsDummy = false);
+	CvUnit(const CvUnit& other);
 	virtual ~CvUnit();
 
 	CvGameObjectUnit* getGameObject() { return &m_GameObject; }
 	const CvGameObjectUnit* getGameObject() const { return &m_GameObject; }
+
+	CvUnit& operator=(const CvUnit& other);
 
 	// Comparison operators
 	// Use address identity for now (more than one map means x/y compare wouldn't work)

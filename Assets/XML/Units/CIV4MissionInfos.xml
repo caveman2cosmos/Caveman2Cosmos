@@ -1796,5 +1796,28 @@
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Missions/nohumansacrifice.dds</Button>
 		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_GO_TO_MAP_EARTH</Type>
+			<Description>TXT_KEY_MISSION_GO_TO_MAP_EARTH</Description>
+			<Help>TXT_KEY_MISSION_GO_TO_MAP_EARTH</Help>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>NONE</EntityEventType>
+			<iTime>0</iTime>
+			<bTarget>0</bTarget>
+			<bBuild>0</bBuild>
+			<bSound>1</bSound>
+			<HotKey/>
+			<bAltDown>0</bAltDown>
+			<bShiftDown>1</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<HotKeyAlt/>
+			<bAltDownAlt>0</bAltDownAlt>
+			<bShiftDownAlt>0</bShiftDownAlt>
+			<bCtrlDownAlt>0</bCtrlDownAlt>
+			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/missions/ClaimTerritory.dds</Button>
+		</MissionInfo>
 	</MissionInfos>
 </Civ4MissionInfos>

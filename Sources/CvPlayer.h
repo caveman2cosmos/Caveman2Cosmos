@@ -1114,7 +1114,7 @@ public:
 	CvUnit* getUnit(int iID) const;
 	CvUnit* addUnit();
 #ifdef PARALLEL_MAPS
-	void addUnitToMap(CvUnit& unit, MapTypes map);
+	CvUnit& addUnit(CvUnit& unit);
 #endif
 	void deleteUnit(int iID);
 	void deleteUnit(int iID, MapTypes map);
