@@ -31852,8 +31852,6 @@ void CvGameTextMgr::setRouteHelp(CvWStringBuffer &szBuffer, RouteTypes eRoute, b
 		}
 		if (bQualified)
 		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(BULLET_CHAR);
 
 			for (iI = 0; iI < GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); iI++)
 			{
