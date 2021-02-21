@@ -13859,18 +13859,18 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES</Tag>
-		<English>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Requires[SPACE]</English>
-		<French>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
-		<German>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
-		<Russian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Òðåáóåòñÿ:[SPACE]</Russian>
+		<English>[NEWLINE][COLOR_WARNING_TEXT]Requires[SPACE]</English>
+		<French>[NEWLINE][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
+		<German>[NEWLINE][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
+		<Italian>[NEWLINE][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
+		<Spanish>[NEWLINE][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
+		<Polish>[NEWLINE][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
+		<Russian>[NEWLINE][COLOR_WARNING_TEXT]Òðåáóåòñÿ:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_IN_CITY_VICINITY</Tag>
-		<English>[COLOR_WARNING_TEXT]Bonus required in city and in city vicinity, or manufactured locally:</English>
-		<French>[COLOR_WARNING_TEXT]Bonus requis dans la ville et ses environs, ou fabriqué localement:</French>
+		<English>[COLOR_WARNING_TEXT]Bonus required in city and in city vicinity, or manufactured locally:[SPACE]</English>
+		<French>[COLOR_WARNING_TEXT]Bonus requis dans la ville et ses environs, ou fabriqué localement:[SPACE]</French>
 		<Russian>[COLOR_WARNING_TEXT]Íåîáõîäèì îõâàò ãîðîäñêîé ãðàíèöåé:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
@@ -13885,9 +13885,9 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_RAW_IN_CITY_VICINITY</Tag>
-		<English>[COLOR_WARNING_TEXT]Bonus required in city vicinity, or manufactured locally (No need for improvement):</English>
-		<French>[COLOR_WARNING_TEXT]Bonus requis dans les environs de la ville ou fabriqué localement (pas besoin d'amélioration):</French>
-		<Russian>[COLOR_WARNING_TEXT]Бонус, расположенный в окрестностях города или произведенный на месте (не требует улучшения): </Russian>
+		<English>[COLOR_WARNING_TEXT]Bonus required in city vicinity, or manufactured locally (No need for improvement):[SPACE]</English>
+		<French>[COLOR_WARNING_TEXT]Bonus requis dans les environs de la ville ou fabriqué localement (pas besoin d'amélioration):[SPACE]</French>
+		<Russian>[COLOR_WARNING_TEXT]Бонус, расположенный в окрестностях города или произведенный на месте (не требует улучшения):[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_RAW_VICINITY_BONUS</Tag>
