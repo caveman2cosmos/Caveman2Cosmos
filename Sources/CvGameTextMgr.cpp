@@ -21001,12 +21001,6 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 					}
 				}
 
-				for (iI = 0; iI < GC.getUnitInfo(eUnit).getNumPrereqAndBuildings(); ++iI)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_UNIT_REQUIRES_STRING", GC.getBuildingInfo((BuildingTypes)GC.getUnitInfo(eUnit).getPrereqAndBuilding(iI)).getTextKeyWide()));
-				}
-
 				if (GC.getUnitInfo(eUnit).isStateReligion())
 				{
 					if ((pCity == NULL) || GET_PLAYER(ePlayer).getStateReligion() == NO_RELIGION || !pCity->isHasReligion(GET_PLAYER(ePlayer).getStateReligion()))
