@@ -21317,4 +21317,13 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Polish>Naciśnij SHIFT aby zobaczyć Klasy Bojowe</Polish>
 		<Russian>Íàæìèòå SHIFT äëÿ ïðîñìîòðà áîåâûõ êëàññîâ</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_REQUIRES_STRING</Tag>
+		<!-- %s1_Text = can be any building, bonus, civic etc -->
+		<English>[COLOR_WARNING_TEXT]Requires %s1_Text[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert : %s1_Text[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Erfordert: %s1_Text[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede %s1_Text[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Text[COLOR_REVERT]</Spanish>
+	</TEXT>
 </Civ4GameText>
