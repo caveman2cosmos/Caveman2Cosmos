@@ -43,6 +43,11 @@ CyMap& CyMap::operator=(CvMap& kMap)
 	return *this;
 }
 
+bool CyMap::plotsInitialized() const
+{
+	return m_pMap->plotsInitialized();
+}
+
 bool CyMap::viewportsEnabled()
 {
 	return GC.viewportsEnabled();

@@ -111,8 +111,8 @@ void CyGlobalContextPythonInterface1(python::class_<CyGlobalContext>& x)
 		.def("getPromotionLineInfo", &CyGlobalContext::getPromotionLineInfo, python::return_value_policy<python::reference_existing_object>(), "(PromotionLineID) - CvInfo for PromotionLineID")
 		//TB Promotion Line Mod end
 
-		//.def("getNumMapCategoryInfos", &CyGlobalContext::getNumMapCategoryInfos, "() - Total Map Category Infos XML\\Terrains\\CIV4MapCategoryInfos.xml")
-		//.def("getMapCategoryInfo", &CyGlobalContext::getMapCategoryInfo, python::return_value_policy<python::reference_existing_object>(), "(MapCategoryID) - CvInfo for MapCategoryID")
+		.def("getNumMapCategoryInfos", &CyGlobalContext::getNumMapCategoryInfos, "() - Total Map Category Infos XML\\Terrains\\CIV4MapCategoryInfos.xml")
+		.def("getMapCategoryInfo", &CyGlobalContext::getMapCategoryInfo, python::return_value_policy<python::reference_existing_object>(), "(MapCategoryID) - CvInfo for MapCategoryID")
 
 		//.def("getNumIdeaClassInfos", &CyGlobalContext::getNumIdeaClassInfos, "() - Total Idea Class Infos XML\\GameInfo\\CIV4IdeaClassInfos.xml")
 		//.def("getIdeaClassInfo", &CyGlobalContext::getIdeaClassInfo, python::return_value_policy<python::reference_existing_object>(), "(IdeaClassID) - CvInfo for IdeaClassID")

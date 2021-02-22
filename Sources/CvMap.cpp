@@ -1568,6 +1568,11 @@ void CvMap::addIncomingUnit(CvUnitAI& unit, int numTravelTurns)
 {
 	m_IncomingUnits.push_back(std::make_pair(unit, numTravelTurns));
 }
+
+bool CvMap::plotsInitialized() const
+{
+	return m_pMapPlots != nullptr;
+}
 #endif
 /*******************************/
 /***** Parallel Maps - End *****/

@@ -13,12 +13,12 @@ void CyMapPythonInterface()
 	OutputDebugString("Python Extension Module - CyMapPythonInterface\n");
 
 	python::class_<CyMap>("CyMap")
-		.def("isNone", &CyMap::isNone, "bool () - valid CyMap() interface")
-
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
 		.def("getType", &CyMap::getType, "int ()")
+
+		.def("plotsInitialized", &CyMap::plotsInitialized)
 
 		.def("viewportsEnabled", &CyMap::viewportsEnabled, "bool ()")
 		.def("getViewportWidth", &CyMap::getViewportWidth, "int ()")

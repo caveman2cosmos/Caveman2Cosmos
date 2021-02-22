@@ -564,7 +564,6 @@ public:
 	void scrap();
 
 	bool canTradeUnit(PlayerTypes eReceivingPlayer) const;
-
 	void tradeUnit(PlayerTypes eReceivingPlayer);
 	bool spyNuke(int iX, int iY, bool bCaught);
 	bool spyNukeAffected(const CvPlot* pPlot, TeamTypes eTeam, int iRange) const;
@@ -574,7 +573,10 @@ public:
 	int getHurryFood(const CvPlot* pPlot) const;
 	bool canHurryFood(const CvPlot* pPlot) const;
 	bool hurryFood();
-
+#ifdef PARALLEL_MAPS
+	bool canGoToMap(const CvMissionInfo& info) const;
+	void goToMap(MapTypes eMap);
+#endif
 	bool canPerformInquisition(const CvPlot* pPlot) const;
 	bool performInquisition();
 	//SAD

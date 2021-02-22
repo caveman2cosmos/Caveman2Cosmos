@@ -652,11 +652,11 @@ CvMapSwitchInfo& cvInternalGlobals::getMapSwitchInfo(MapSwitchTypes eMapSwitch) 
 
 void cvInternalGlobals::updateMaps()
 {
-	for (int i = 1; i < GC.getNumMapInfos(); i++)
+	for (int i = 1; i < GC.getNumMapCategoryInfos(); i++)
 	{
-		m_maps.push_back(NULL);
+		m_maps.push_back(new CvMap((MapTypes)i));
 	}
-	FAssert(m_maps.size() == GC.getNumMapInfos());
+	FAssert(m_maps.size() == GC.getNumMapCategoryInfos());
 
 	for (int i = 0; i < MAX_PLAYERS; i++)
 	{
@@ -1787,6 +1787,22 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER);
 #ifdef PARALLEL_MAPS
 	REGISTER_MISSION(MISSION_GO_TO_MAP_EARTH);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_SUBTERRANEAN);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_AQUATIC);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_CISLUNAR);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_LUNAR);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_SOLAR_SYSTEM);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_MARTIAN);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_VENUSIAN);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_JOVIAN);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_TITANIC);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_INTERSTELLAR);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_PLASMA);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_GALACTIC);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_MILKY_WAY);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_UNIVERSAL);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_DISTANT);
+	REGISTER_MISSION(MISSION_GO_TO_MAP_HYPERSPACE);
 #endif
 }
 
@@ -3020,15 +3036,13 @@ void cvInternalGlobals::reprocessSigns()
 void cvInternalGlobals::initializeMap(MapTypes eMap)
 {
 	OutputDebugString("Initializing Map: Start\n");
-	while ( m_maps.size() < (size_t)eMap )
-	{
-		//	Sparse or out of order initialization
-		m_maps.push_back(NULL);
-	}
+	//while ( m_maps.size() < (size_t)eMap )
+	//{
+	//	//	Sparse or out of order initialization
+	//	m_maps.push_back(NULL);
+	//}
 
-	FAssertMsg(m_maps[eMap] == NULL, "Memory leak allocating a map that already exists");
-
-	m_maps[eMap] = new CvMap(eMap);
+	//m_maps[eMap] = new CvMap(eMap);
 
 	for (int i = 0; i < MAX_PLAYERS; i++)
 	{

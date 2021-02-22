@@ -42627,3 +42627,26 @@ ReligionTypes CvUnit::getReligion() const
 {
 	return m_eReligionType;
 }
+
+#ifdef PARALLEL_MAPS
+bool CvUnit::canGoToMap(const CvMissionInfo& info) const
+{
+	const TechTypes requiredTech = info.getTechRequired();
+	if (requiredTech != NO_TECH && !GET_TEAM(getTeam()).isHasTech(requiredTech))
+		return false;
+
+	const BuildingTypes requiredBuilding = info.getBuildingRequired();
+	if (requiredBuilding == NO_BUILDING)
+		return true;
+
+	const CvCity* city = plot()->getPlotCity();
+	return city && city->getNumBuilding(requiredBuilding);
+}
+
+void CvUnit::goToMap(MapTypes eMap)
+{
+	GC.getMapByIndex(eMap).addIncomingUnit(static_cast<CvUnitAI&>(*this), 1);
+	plot()->removeUnit(this);
+	GET_PLAYER(getOwner()).deleteUnit(getID(), eMap);
+}
+#endif

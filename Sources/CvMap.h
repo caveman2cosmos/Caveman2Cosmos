@@ -74,6 +74,8 @@ public:
 #ifdef PARALLEL_MAPS
 	void updateIncomingUnits();
 	void addIncomingUnit(CvUnitAI& unit, int numTravelTurns);
+
+	bool plotsInitialized() const;
 #endif
 
 	//	Viewports are owned by their underlying maps
