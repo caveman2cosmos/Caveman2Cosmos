@@ -1759,7 +1759,6 @@
 			<Strategy>TXT_KEY_BUILDING_EDEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EDEN</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_EDEN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ECOSYNTHESIS</PrereqTech>
 			<iCost>38544</iCost>

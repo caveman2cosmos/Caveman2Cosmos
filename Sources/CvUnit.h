@@ -958,7 +958,7 @@ public:
 	//TB Combat Mods begin
 	int fortifyRepelModifier() const;
 	//TB Combat Mods End
-	int experienceNeeded() const;
+	int experienceNeeded(int iLvlOffset = 0) const;
 	int attackXPValue() const;
 	int defenseXPValue() const;
 	int maxXPValue(const CvUnit* pVictim, bool bBarb = false) const;
