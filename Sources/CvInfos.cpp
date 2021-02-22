@@ -20592,54 +20592,6 @@ bool CvMapInfo::read(CvXMLLoadUtility* pXML)
 	return true;
 }
 
-//======================================================================================================
-//					CvMapSwitchInfo
-//======================================================================================================
-
-CvMapSwitchInfo::CvMapSwitchInfo() :
-m_iMap(NO_MAP),
-m_szEvent(NULL),
-m_bManual(false)
-{
-}
-
-CvMapSwitchInfo::~CvMapSwitchInfo()
-{
-}
-
-int CvMapSwitchInfo::getMap() const
-{
-	return m_iMap;
-}
-
-const TCHAR* CvMapSwitchInfo::getEvent() const
-{
-	return m_szEvent;
-}
-
-bool CvMapSwitchInfo::isManual() const
-{
-	return m_bManual;
-}
-
-bool CvMapSwitchInfo::read(CvXMLLoadUtility* pXML)
-{
-	CvString szTextVal;
-
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"Map");
-	m_iMap = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(m_szEvent, L"SwitchEvent");
-	pXML->GetOptionalChildXmlValByName(&m_bManual, L"bManual");
-
-	return true;
-}
-
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/

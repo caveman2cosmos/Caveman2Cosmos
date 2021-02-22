@@ -876,7 +876,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 /***** Parallel Maps - Begin *****/
 /*********************************/
 	LoadGlobalClassInfo(GC.m_paMapInfo, "CIV4MapInfo", "GameInfo", L"/Civ4MapInfos/MapInfos/MapInfo", false);
-	LoadGlobalClassInfo(GC.m_paMapSwitchInfo, "CIV4MapSwitchInfo", "GameInfo", L"/Civ4MapSwitchInfos/MapSwitchInfos/MapSwitchInfo", false);
 	GC.updateMaps();
 /*******************************/
 /***** Parallel Maps - End *****/

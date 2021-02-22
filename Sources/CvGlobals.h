@@ -138,15 +138,7 @@ class CvModLoadControlInfo;
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
-
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 class CvMapInfo;
-class CvMapSwitchInfo;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 #include "CvInfoReplacements.h"
 #include "GlobalDefines.h"
@@ -203,9 +195,7 @@ public:
 	bool viewportsEnabled() const;
 	bool getReprocessGreatWallDynamically() const;
 	int getNumMapInfos() const;
-	int getNumMapSwitchInfos() const;
 	CvMapInfo& getMapInfo(MapTypes eMap) const;
-	CvMapSwitchInfo& getMapSwitchInfo(MapSwitchTypes eMapSwitch) const;
 
 	void switchMap(MapTypes eMap);
 	CvMap& getMapByIndex(MapTypes eIndex) const;
@@ -1088,15 +1078,7 @@ protected:
 	std::vector<CvUnitArtStyleTypeInfo*> m_paUnitArtStyleTypeInfo;
 	std::vector<CvPropertyInfo*> m_paPropertyInfo;
 	std::vector<CvOutcomeInfo*> m_paOutcomeInfo;
-
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 	std::vector<CvMapInfo*> m_paMapInfo;
-	std::vector<CvMapSwitchInfo*> m_paMapSwitchInfo;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 	//////////////////////////////////////////////////////////////////////////
 	// GLOBAL TYPES

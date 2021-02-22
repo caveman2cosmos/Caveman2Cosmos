@@ -5443,24 +5443,6 @@ protected:
 	CvString m_szMapScript;
 };
 
-class CvMapSwitchInfo : public CvInfoBase
-{
-public:
-	CvMapSwitchInfo();
-	virtual ~CvMapSwitchInfo();
-
-	int getMap() const;
-	const TCHAR* getEvent() const;
-	bool isManual() const;
-
-	bool read(CvXMLLoadUtility* pXML);
-
-protected:
-	int m_iMap;
-	CvString m_szEvent;
-	bool m_bManual;
-};
-
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
@@ -5468,7 +5450,7 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //  class : CvClimateInfo
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvClimateInfo :	public CvInfoBase
+class CvClimateInfo : public CvInfoBase
 {
 public:
 

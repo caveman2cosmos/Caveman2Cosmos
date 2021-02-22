@@ -632,21 +632,10 @@ int cvInternalGlobals::getNumMapInfos() const
 	return multiMapsEnabled() ? m_paMapInfo.size() : 1;
 }
 
-int cvInternalGlobals::getNumMapSwitchInfos() const
-{
-	return m_paMapSwitchInfo.size();
-}
-
 CvMapInfo& cvInternalGlobals::getMapInfo(MapTypes eMap) const
 {
 	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eMap)
 	return *(m_paMapInfo[eMap]);
-}
-
-CvMapSwitchInfo& cvInternalGlobals::getMapSwitchInfo(MapSwitchTypes eMapSwitch) const
-{
-	FASSERT_BOUNDS(0, GC.getNumMapSwitchInfos(), eMapSwitch)
-	return *(m_paMapSwitchInfo[eMapSwitch]);
 }
 
 void cvInternalGlobals::updateMaps()
