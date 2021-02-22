@@ -875,12 +875,8 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	LoadGlobalClassInfo(GC.m_paMapInfo, "CIV4MapInfo", "GameInfo", L"/Civ4MapInfos/MapInfos/MapInfo", true);
+	LoadGlobalClassInfo(GC.m_paMapInfo, "CIV4MapInfo", "GameInfo", L"/Civ4MapInfos/MapInfos/MapInfo", false);
 	LoadGlobalClassInfo(GC.m_paMapSwitchInfo, "CIV4MapSwitchInfo", "GameInfo", L"/Civ4MapSwitchInfos/MapSwitchInfos/MapSwitchInfo", false);
-	for (int i = 0; i < GC.getNumMapInfos(); i++)
-	{
-		GC.getMapInfo((MapTypes)i).readPass3();
-	}
 	GC.updateMaps();
 /*******************************/
 /***** Parallel Maps - End *****/

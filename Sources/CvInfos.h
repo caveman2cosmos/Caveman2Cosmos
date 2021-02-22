@@ -5425,17 +5425,14 @@ public:
 
 	int getGridWidth() const;
 	int getGridHeight() const;
+
 	int getWrapX() const;
 	int getWrapY() const;
+
 	const CvString getInitialWBMap() const;
 	const CvString getMapScript() const;
-	/*bool isTechShareMap(MapTypes eMap) const;*/
-	const TCHAR* getStartingEvent() const;
-	int getSwitchType() const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-	bool readPass3();
 
 protected:
 	int m_iGridWidth;
@@ -5444,9 +5441,6 @@ protected:
 	int m_iWrapY;
 	CvString m_szInitialWBMap;
 	CvString m_szMapScript;
-	/*bool* m_pabTechShareMaps;*/
-	CvString m_szStartingEvent;
-	int m_iSwitchType;
 };
 
 class CvMapSwitchInfo : public CvInfoBase

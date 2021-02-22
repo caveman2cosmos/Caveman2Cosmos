@@ -20538,10 +20538,7 @@ m_iGridHeight(0),
 m_iWrapX(-1),
 m_iWrapY(-1),
 m_szInitialWBMap(NULL),
-m_szMapScript(NULL),
-//m_pabTechShareMaps(NULL),
-m_szStartingEvent(NULL),
-m_iSwitchType(0)
+m_szMapScript(NULL)
 {
 }
 
@@ -20579,21 +20576,6 @@ const CvString CvMapInfo::getMapScript() const
 	return m_szMapScript;
 }
 
-//bool CvMapInfo::isTechShareMap(MapTypes eMap) const
-//{
-//	return m_pabTechShareMaps[eMap];
-//}
-
-const TCHAR* CvMapInfo::getStartingEvent() const
-{
-	return m_szStartingEvent;
-}
-
-int CvMapInfo::getSwitchType() const
-{
-	return m_iSwitchType;
-}
-
 bool CvMapInfo::read(CvXMLLoadUtility* pXML)
 {
 	if (!CvInfoBase::read(pXML))
@@ -20607,42 +20589,6 @@ bool CvMapInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iWrapY, L"bWrapY");
 	pXML->GetOptionalChildXmlValByName(m_szInitialWBMap, L"InitialWBMap");
 	pXML->GetOptionalChildXmlValByName(m_szMapScript, L"MapScript");
-	pXML->GetOptionalChildXmlValByName(m_szStartingEvent, L"StartingEvent");
-
-	CvString szTextVal;
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"SwitchType");
-	m_aszExtraXMLforPass3.push_back(szTextVal);
-
-	return true;
-}
-
-bool CvMapInfo::readPass2(CvXMLLoadUtility* pXML)
-{
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-
-	//pXML->SetVariableListTagPair(&m_pabTechShareMaps, L"SharedTechs", sizeof(CvMapInfo), GC.getNumMapInfos());
-
-	return true;
-}
-
-bool CvMapInfo::readPass3()
-{
-	if (m_aszExtraXMLforPass3.size() < 1)
-	{
-		FAssert(false);
-		return false;
-	}
-
-	if (m_aszExtraXMLforPass3[0].length() > 0)
-		m_iSwitchType = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
-	else
-		m_iSwitchType = NO_MAPSWITCH;
-
-	m_aszExtraXMLforPass3.clear();
-
 	return true;
 }
 
