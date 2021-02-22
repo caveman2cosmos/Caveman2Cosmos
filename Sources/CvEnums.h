@@ -1394,15 +1394,10 @@ enum UnitCombatTypes
 {
 	NO_UNITCOMBAT = -1,
 };
-//TB Promotion Line Mod begin
+
 enum PromotionLineTypes
 {
 	NO_PROMOTIONLINE = -1,
-};
-
-enum MapCategoryTypes
-{
-	NO_MAPCATEGORY = -1,
 };
 
 enum IdeaClassTypes

@@ -5835,7 +5835,7 @@ void CvGame::setName(const TCHAR* szName)
 
 bool CvGame::isDestroyedCityName(CvWString& szName) const
 {
-	return std::contains(m_aszDestroyedCities, szName);
+	return algo::contains(m_aszDestroyedCities, szName);
 }
 
 void CvGame::addDestroyedCityName(const CvWString& szName)
@@ -5846,7 +5846,7 @@ void CvGame::addDestroyedCityName(const CvWString& szName)
 
 bool CvGame::isGreatPersonBorn(CvWString& szName) const
 {
-	return std::contains(m_aszGreatPeopleBorn, szName);
+	return algo::contains(m_aszGreatPeopleBorn, szName);
 }
 
 void CvGame::addGreatPersonBornName(const CvWString& szName)
@@ -6385,14 +6385,14 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			//TB Spawn Modification End
 
 
-			//Actually, here the unit is selected already based on the spawn info itself.  Derive that then derive the MapCategoryTypes
-			//of the unit and ensure that pPlot has the MapCategoryType of the unit.  Easy... no need to include MapCategoryTypes on the
+			//Actually, here the unit is selected already based on the spawn info itself.  Derive that then derive the MapTypes
+			//of the unit and ensure that pPlot has the MapType of the unit.  Easy... no need to include MapTypes on the
 			//Spawn Info file.
-			const int iCount = GC.getUnitInfo(spawnInfo.getUnitType()).getNumMapCategoryTypes();
+			const int iCount = GC.getUnitInfo(spawnInfo.getUnitType()).getNumMapTypes();
 			bool bFound = (iCount < 1);
 			for (int iI = 0; iI < iCount; iI++)
 			{
-				if (pPlot->isMapCategoryType((MapCategoryTypes)GC.getUnitInfo(spawnInfo.getUnitType()).getMapCategoryType(iI)))
+				if (pPlot->isMapType((MapTypes)GC.getUnitInfo(spawnInfo.getUnitType()).getMapType(iI)))
 				{
 					bFound = true;
 				}
@@ -6401,7 +6401,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			{
 				continue;
 			}
-			//Note: correct MapCategoryType checks throughout the code so that if one is valid that gets checked later, the validation is still there!
+			//Note: correct MapType checks throughout the code so that if one is valid that gets checked later, the validation is still there!
 
 			// Safety valve - if there are over a certain number of total barbarian units in existance halt all spawns
 			// else the game can run into fatal issues when it uses up the entire id space of units (8191 at once per player)
@@ -6664,7 +6664,7 @@ void CvGame::doGlobalWarming()
 				continue;
 			}
 			// Toffer - Multimap note - Need to make this whole thing specific to which map global warming is happening on.
-			// For now we could restrict these effects to earth mapcategory terrains by adding a RANDPLOT_NOT_SPACE flag for syncRandPlot (ToDo).
+			// For now we could restrict these effects to earth maptype terrains by adding a RANDPLOT_NOT_SPACE flag for syncRandPlot (ToDo).
 			CvPlot* pPlot = GC.getMap().syncRandPlot(RANDPLOT_NOT_CITY); // GWMod removed check for water tile M.A.
 
 			if (pPlot == NULL)
@@ -6778,7 +6778,7 @@ void CvGame::doGlobalWarming()
 				continue;
 			}
 			// Toffer - Multimap note - Need to make this whole thing specific to which map the nukes were used on.
-			// For now we could restrict these effects to earth mapcategory terrains by adding a RANDPLOT_NOT_SPACE flag for syncRandPlot (ToDo).
+			// For now we could restrict these effects to earth maptype terrains by adding a RANDPLOT_NOT_SPACE flag for syncRandPlot (ToDo).
 			CvPlot* pPlot = GC.getMap().syncRandPlot(RANDPLOT_LAND | RANDPLOT_NOT_CITY);
 
 			if (pPlot == NULL)
@@ -7051,7 +7051,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	}
 
 	// Find plot
-	const MapCategoryTypes earth = GC.getMAPCATEGORY_EARTH();
+	const MapTypes earth = GC.getMAPCATEGORY_EARTH();
 	const int iUnownedTilesThreshold = GC.getHandicapInfo(getHandicapType()).getUnownedTilesPerBarbarianCity();
 
 	int iBestValue = 0;
@@ -7061,7 +7061,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
-		if (pLoopPlot->isMapCategoryType(earth) && !pLoopPlot->isWater() && !pLoopPlot->isVisibleToCivTeam())
+		if (pLoopPlot->isMapType(earth) && !pLoopPlot->isWater() && !pLoopPlot->isVisibleToCivTeam())
 		{
 			int iTargetCities = pLoopPlot->area()->getNumUnownedTiles();
 
@@ -10093,7 +10093,7 @@ void CvGame::doVoteSelection()
 
 bool CvGame::isEventActive(EventTriggerTypes eTrigger) const
 {
-	return !std::contains(m_aeInactiveTriggers, eTrigger);
+	return !algo::contains(m_aeInactiveTriggers, eTrigger);
 }
 
 void CvGame::initEvents()

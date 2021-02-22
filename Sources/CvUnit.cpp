@@ -5845,11 +5845,11 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		return false;
 	}
 
-	int iCount = m_pUnitInfo->getNumMapCategoryTypes();
+	const int iCount = m_pUnitInfo->getNumMapTypes();
 	bool bFound = (iCount < 1);
 	for (int iI = 0; iI < iCount; iI++)
 	{
-		if (pPlot->isMapCategoryType((MapCategoryTypes)m_pUnitInfo->getMapCategoryType(iI)))
+		if (pPlot->isMapType((MapTypes)m_pUnitInfo->getMapType(iI)))
 		{
 			bFound = true;
 			break;
@@ -7567,11 +7567,11 @@ bool CvUnit::canUnload() const
 		}
 	}
 
-	int iCount = m_pUnitInfo->getNumMapCategoryTypes();
+	const int iCount = m_pUnitInfo->getNumMapTypes();
 	bool bFound = (iCount < 1);
 	for (int iI = 0; iI < iCount; iI++)
 	{
-		if (kPlot.isMapCategoryType((MapCategoryTypes)m_pUnitInfo->getMapCategoryType(iI)))
+		if (kPlot.isMapType((MapTypes)m_pUnitInfo->getMapType(iI)))
 		{
 			bFound = true;
 			break;
@@ -21412,13 +21412,13 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 
 	CvPlot* pPlot = plot();
 	{
-		const int iCount = kPromotion.getNumMapCategoryTypes();
+		const int iCount = kPromotion.getNumMapTypes();
 		bool bFound = (iCount < 1);
 		if (pPlot != NULL)
 		{
 			for (int iI = 0; iI < iCount; iI++)
 			{
-				if (pPlot->isMapCategoryType((MapCategoryTypes)kPromotion.getMapCategoryType(iI)))
+				if (pPlot->isMapType((MapTypes)kPromotion.getMapType(iI)))
 				{
 					bFound = true;
 					break;
@@ -21433,7 +21433,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		bFound = (iCount < 1);
 		for (int iI = 0; iI < iCount; iI++)
 		{
-			if (m_pUnitInfo->isMapCategoryType((MapCategoryTypes)kPromotion.getMapCategoryType(iI)))
+			if (m_pUnitInfo->isMapType((MapTypes)kPromotion.getMapType(iI)))
 			{
 				bFound = true;
 				break;

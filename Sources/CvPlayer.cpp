@@ -2177,7 +2177,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 		iBestArea = findStartingArea();
 	}
 
-	const MapCategoryTypes earth = GC.getMAPCATEGORY_EARTH();
+	const MapTypes earth = GC.getMAPCATEGORY_EARTH();
 
 	for (int iPass = 0; iPass < 2; iPass++)
 	{
@@ -2189,7 +2189,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 			CvPlot* plot = GC.getMap().plotByIndex(iI);
 
 			if (plot->isStartingPlot()
-			|| !plot->isMapCategoryType(earth)
+			|| !plot->isMapType(earth)
 			|| iBestArea != -1 && plot->getArea() != iBestArea)
 			{
 				continue;
@@ -6314,11 +6314,11 @@ bool CvPlayer::canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvU
 			}
 		}
 	}
-	const int iCount = GC.getGoodyInfo(eGoody).getNumMapCategoryTypes();
+	const int iCount = GC.getGoodyInfo(eGoody).getNumMapTypes();
 	bFound = (iCount < 1);
 	for (int iI = 0; iI < iCount; iI++)
 	{
-		if (pPlot->isMapCategoryType((MapCategoryTypes)GC.getGoodyInfo(eGoody).getMapCategoryType(iI)))
+		if (pPlot->isMapType((MapTypes)GC.getGoodyInfo(eGoody).getMapType(iI)))
 		{
 			bFound = true;
 			break;
