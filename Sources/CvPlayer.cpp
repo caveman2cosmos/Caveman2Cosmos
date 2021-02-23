@@ -4391,7 +4391,7 @@ void CvPlayer::updateMaintenance() const
 
 	setMaintenanceDirty(false);
 
-	FAssert(m_iTotalMaintenance >= 0);
+	FASSERT_NOT_NEGATIVE(m_iTotalMaintenance)
 }
 
 
@@ -8304,7 +8304,7 @@ int CvPlayer::calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const
 		iSupply /= 100;
 	}
 
-	FAssert(iSupply >= 0);
+	FASSERT_NOT_NEGATIVE(iSupply)
 
 	return iSupply;
 }
@@ -9677,8 +9677,8 @@ int CvPlayer::getTotalLand() const
 
 void CvPlayer::changeTotalLand(int iChange)
 {
-	m_iTotalLand = (m_iTotalLand + iChange);
-	FAssert(getTotalLand() >= 0);
+	m_iTotalLand += iChange;
+	FASSERT_NOT_NEGATIVE(getTotalLand())
 }
 
 int CvPlayer::getTotalLandScored() const
@@ -9694,7 +9694,7 @@ void CvPlayer::changeTotalLandScored(int iChange)
 		changeLandScore(iChange);
 
 		m_iTotalLandScored += iChange;
-		FAssert(getTotalLandScored() >= 0);
+		FASSERT_NOT_NEGATIVE(getTotalLandScored())
 	}
 }
 
@@ -9783,7 +9783,7 @@ void CvPlayer::changeGoldenAgeTurns(int iChange)
 		const bool bOldGoldenAge = isGoldenAge();
 
 		m_iGoldenAgeTurns += iChange;
-		FAssert(getGoldenAgeTurns() >= 0);
+		FASSERT_NOT_NEGATIVE(getGoldenAgeTurns())
 
 		if (bOldGoldenAge != isGoldenAge())
 		{
@@ -9854,8 +9854,8 @@ int CvPlayer::getNumUnitGoldenAges() const
 
 void CvPlayer::changeNumUnitGoldenAges(int iChange)
 {
-	m_iNumUnitGoldenAges = (m_iNumUnitGoldenAges + iChange);
-	FAssert(getNumUnitGoldenAges() >= 0);
+	m_iNumUnitGoldenAges += iChange;
+	FASSERT_NOT_NEGATIVE(getNumUnitGoldenAges())
 }
 
 
@@ -9867,8 +9867,8 @@ int CvPlayer::getStrikeTurns() const
 
 void CvPlayer::changeStrikeTurns(int iChange)
 {
-	m_iStrikeTurns = (m_iStrikeTurns + iChange);
-	FAssert(getStrikeTurns() >= 0);
+	m_iStrikeTurns += iChange;
+	FASSERT_NOT_NEGATIVE(getStrikeTurns())
 }
 
 
@@ -9891,7 +9891,7 @@ void CvPlayer::changeAnarchyTurns(int iChange, bool bHideMessages)
 		const bool bOldAnarchy = isAnarchy();
 
 		m_iAnarchyTurns += iChange;
-		FAssert(getAnarchyTurns() >= 0);
+		FASSERT_NOT_NEGATIVE(getAnarchyTurns())
 
 		if (bOldAnarchy != isAnarchy())
 		{
@@ -9962,7 +9962,7 @@ void CvPlayer::updateMaxAnarchyTurns()
 	}
 
 	m_iMaxAnarchyTurns = iBestValue;
-	FAssert(getMaxAnarchyTurns() >= 0);
+	FASSERT_NOT_NEGATIVE(getMaxAnarchyTurns())
 }
 
 int CvPlayer::getMinAnarchyTurns() const
@@ -9995,7 +9995,7 @@ void CvPlayer::updateMinAnarchyTurns()
 		iWorstValue = getMaxAnarchyTurns();
 	}
 	m_iMinAnarchyTurns = iWorstValue;
-	FAssert(getMinAnarchyTurns() >= 0);
+	FASSERT_NOT_NEGATIVE(getMinAnarchyTurns())
 }
 
 
@@ -10311,7 +10311,7 @@ bool CvPlayer::isNonStateReligionCommerce() const
 
 void CvPlayer::changeNonStateReligionCommerce(int iNewValue)
 {
-	FAssert(m_iNonStateReligionCommerceCount >= 0 && m_iNonStateReligionCommerceCount <= 2);
+	FASSERT_BOUNDS(0, 3, m_iNonStateReligionCommerceCount)
 
 	m_iNonStateReligionCommerceCount += iNewValue;
 
@@ -10333,7 +10333,7 @@ bool CvPlayer::isUpgradeAnywhere() const
 
 void CvPlayer::changeUpgradeAnywhere(int iNewValue)
 {
-	FAssert(m_iUpgradeAnywhereCount >= 0 && m_iUpgradeAnywhereCount <= 2);
+	FASSERT_BOUNDS(0, 3, m_iUpgradeAnywhereCount)
 
 	m_iUpgradeAnywhereCount += iNewValue;
 }
@@ -10522,8 +10522,8 @@ int CvPlayer::getNumNukeUnits() const
 
 void CvPlayer::changeNumNukeUnits(int iChange)
 {
-	m_iNumNukeUnits = (m_iNumNukeUnits + iChange);
-	FAssert(getNumNukeUnits() >= 0);
+	m_iNumNukeUnits += iChange;
+	FASSERT_NOT_NEGATIVE(getNumNukeUnits())
 }
 
 
@@ -10538,7 +10538,7 @@ void CvPlayer::changeNumOutsideUnits(int iChange)
 	if (iChange != 0)
 	{
 		m_iNumOutsideUnits += iChange;
-		FAssert(getNumOutsideUnits() >= 0);
+		FASSERT_NOT_NEGATIVE(getNumOutsideUnits())
 
 		if (getID() == GC.getGame().getActivePlayer())
 		{
@@ -10818,8 +10818,8 @@ void CvPlayer::changeNumMilitaryUnits(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iNumMilitaryUnits = (m_iNumMilitaryUnits + iChange);
-		FAssert(getNumMilitaryUnits() >= 0);
+		m_iNumMilitaryUnits += iChange;
+		FASSERT_NOT_NEGATIVE(getNumMilitaryUnits())
 
 		if (getID() == GC.getGame().getActivePlayer())
 		{
@@ -10864,8 +10864,8 @@ void CvPlayer::changeMilitaryFoodProductionCount(int iChange, bool bLimited)
 {
 	if (iChange != 0)
 	{
-		m_iMilitaryFoodProductionCount = (m_iMilitaryFoodProductionCount + iChange);
-		FAssert(getMilitaryFoodProductionCount() >= 0);
+		m_iMilitaryFoodProductionCount += iChange;
+		FASSERT_NOT_NEGATIVE(getMilitaryFoodProductionCount())
 
 		if (!bLimited && getTeam() == GC.getGame().getActiveTeam())
 		{
@@ -10884,7 +10884,7 @@ int CvPlayer::getHighestUnitLevel()	const
 void CvPlayer::setHighestUnitLevel(int iNewValue)
 {
 	m_iHighestUnitLevel = iNewValue;
-	FAssert(getHighestUnitLevel() >= 0);
+	FASSERT_NOT_NEGATIVE(getHighestUnitLevel())
 }
 
 
@@ -10896,9 +10896,9 @@ int CvPlayer::getMaxConscript() const
 
 void CvPlayer::changeMaxConscript(int iChange)
 {
-	m_iMaxConscript = (m_iMaxConscript + iChange);
+	m_iMaxConscript += iChange;
 	//TB Note: this should be allowed to be negative.  BUT there's a report to the core so I'm going to leave this here and cap at 0 in getMaxConscript
-	FAssert(getMaxConscript() >= 0);
+	FASSERT_NOT_NEGATIVE(getMaxConscript())
 }
 
 
@@ -10911,7 +10911,7 @@ int CvPlayer::getConscriptCount() const
 void CvPlayer::setConscriptCount(int iNewValue)
 {
 	m_iConscriptCount = iNewValue;
-	FAssert(getConscriptCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getConscriptCount())
 }
 
 
@@ -10930,7 +10930,7 @@ int CvPlayer::getOverflowResearch() const
 void CvPlayer::setOverflowResearch(int iNewValue)
 {
 	m_iOverflowResearch = iNewValue;
-	FAssert(getOverflowResearch() >= 0);
+	FASSERT_NOT_NEGATIVE(getOverflowResearch())
 }
 
 
@@ -10956,8 +10956,8 @@ void CvPlayer::changeNoUnhealthyPopulationCount(int iChange, bool bLimited)
 {
 	if (iChange != 0)
 	{
-		m_iNoUnhealthyPopulationCount = (m_iNoUnhealthyPopulationCount + iChange);
-		FAssert(getNoUnhealthyPopulationCount() >= 0);
+		m_iNoUnhealthyPopulationCount += iChange;
+		FASSERT_NOT_NEGATIVE(getNoUnhealthyPopulationCount())
 
 		if (!bLimited)
 		{
@@ -10998,8 +10998,8 @@ void CvPlayer::changeBuildingOnlyHealthyCount(int iChange, bool bLimited)
 {
 	if (iChange != 0)
 	{
-		m_iBuildingOnlyHealthyCount = (m_iBuildingOnlyHealthyCount + iChange);
-		FAssert(getBuildingOnlyHealthyCount() >= 0);
+		m_iBuildingOnlyHealthyCount += iChange;
+		FASSERT_NOT_NEGATIVE(getBuildingOnlyHealthyCount())
 
 		if (!bLimited)
 		{
@@ -11223,7 +11223,7 @@ void CvPlayer::changeBuildingGoodHealth(int iChange)
 	if (iChange != 0)
 	{
 		m_iBuildingGoodHealth += iChange;
-		FAssert(getBuildingGoodHealth() >= 0);
+		FASSERT_NOT_NEGATIVE(getBuildingGoodHealth())
 
 		AI_makeAssignWorkDirty();
 	}
@@ -11438,7 +11438,7 @@ void CvPlayer::changeNoForeignTradeCount(int iChange, bool bLimited)
 	if (iChange != 0)
 	{
 		m_iNoForeignTradeCount += iChange;
-		FAssert(getNoForeignTradeCount() >= 0);
+		FASSERT_NOT_NEGATIVE(getNoForeignTradeCount())
 
 		if (!bLimited)
 		{
@@ -11465,7 +11465,7 @@ void CvPlayer::changeNoCorporationsCount(int iChange, bool bLimited)
 	if (iChange != 0)
 	{
 		m_iNoCorporationsCount += iChange;
-		FAssert(getNoCorporationsCount() >= 0);
+		FASSERT_NOT_NEGATIVE(getNoCorporationsCount())
 
 		if (!bLimited)
 		{
@@ -11492,7 +11492,7 @@ void CvPlayer::changeNoForeignCorporationsCount(int iChange, bool bLimited)
 	if (iChange != 0)
 	{
 		m_iNoForeignCorporationsCount += iChange;
-		FAssert(getNoForeignCorporationsCount() >= 0);
+		FASSERT_NOT_NEGATIVE(getNoForeignCorporationsCount())
 
 		if (!bLimited)
 		{
@@ -11513,7 +11513,7 @@ void CvPlayer::changeCoastalTradeRoutes(int iChange)
 	if (iChange != 0)
 	{
 		m_iCoastalTradeRoutes += iChange;
-		FAssert(getCoastalTradeRoutes() >= 0);
+		FASSERT_NOT_NEGATIVE(getCoastalTradeRoutes())
 
 		updateTradeRoutes();
 	}
@@ -11553,7 +11553,7 @@ void CvPlayer::setRevolutionTimer(int iNewValue)
 	if (getRevolutionTimer() != iNewValue)
 	{
 		m_iRevolutionTimer = iNewValue;
-		FAssert(getRevolutionTimer() >= 0);
+		FASSERT_NOT_NEGATIVE(getRevolutionTimer())
 
 		if (getID() == GC.getGame().getActivePlayer())
 		{
@@ -11580,7 +11580,7 @@ void CvPlayer::setConversionTimer(int iNewValue)
 	if (getConversionTimer() != iNewValue)
 	{
 		m_iConversionTimer = iNewValue;
-		FAssert(getConversionTimer() >= 0);
+		FASSERT_NOT_NEGATIVE(getConversionTimer())
 
 		if (getID() == GC.getGame().getActivePlayer())
 		{
@@ -11616,7 +11616,7 @@ void CvPlayer::changeStateReligionCount(int iChange, bool bLimited)
 		//GC.getGame().updateCitySight(false, true);
 
 		m_iStateReligionCount += iChange;
-		FAssert(getStateReligionCount() >= 0);
+		FASSERT_NOT_NEGATIVE(getStateReligionCount())
 
 		// religion visibility now part of espionage
 		//GC.getGame().updateCitySight(true, true);
@@ -11657,7 +11657,7 @@ bool CvPlayer::isNoNonStateReligionSpread() const
 void CvPlayer::changeNoNonStateReligionSpreadCount(int iChange)
 {
 	m_iNoNonStateReligionSpreadCount += iChange;
-	FAssert(getNoNonStateReligionSpreadCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getNoNonStateReligionSpreadCount())
 }
 
 
@@ -11878,7 +11878,7 @@ int CvPlayer::getWinsVsBarbs() const
 void CvPlayer::changeWinsVsBarbs(int iChange)
 {
 	m_iWinsVsBarbs += iChange;
-	FAssert(m_iWinsVsBarbs >= 0);
+	FASSERT_NOT_NEGATIVE(m_iWinsVsBarbs)
 }
 
 
@@ -11914,19 +11914,19 @@ int CvPlayer::getUnitPower() const
 void CvPlayer::changePower(int iChange)
 {
 	m_iPower += iChange;
-	FAssert(getPower() >= 0);
+	FASSERT_NOT_NEGATIVE(getPower())
 }
 
 void CvPlayer::changeTechPower(int iChange)
 {
 	m_iTechPower += iChange;
-	FAssert(getTechPower() >= 0);
+	FASSERT_NOT_NEGATIVE(getTechPower())
 }
 
 void CvPlayer::changeUnitPower(int iChange)
 {
 	m_iUnitPower += iChange;
-	FAssert(getUnitPower() >= 0);
+	FASSERT_NOT_NEGATIVE(getUnitPower())
 }
 
 
@@ -11962,7 +11962,7 @@ void CvPlayer::changePopScore(int iChange)
 	if (iChange != 0)
 	{
 		m_iPopulationScore += iChange;
-		FAssert(getPopScore() >= 0);
+		FASSERT_NOT_NEGATIVE(getPopScore())
 
 		GC.getGame().setScoreDirty(true);
 	}
@@ -12002,7 +12002,7 @@ void CvPlayer::changeLandScore(int iChange)
 	if (iChange != 0)
 	{
 		m_iLandScore += iChange;
-		FAssert(getLandScore() >= 0);
+		FASSERT_NOT_NEGATIVE(getLandScore())
 
 		GC.getGame().setScoreDirty(true);
 	}
@@ -12025,7 +12025,7 @@ void CvPlayer::changeWondersScore(int iChange)
 	if (iChange != 0)
 	{
 		m_iWondersScore += iChange;
-		FAssert(getWondersScore() >= 0);
+		FASSERT_NOT_NEGATIVE(getWondersScore())
 
 		GC.getGame().setScoreDirty(true);
 	}
@@ -12043,13 +12043,12 @@ void CvPlayer::changeTechScore(int iChange)
 	if (iChange != 0)
 	{
 		m_iTechScore += iChange;
-		FAssert(getTechScore() >= 0);
+		FASSERT_NOT_NEGATIVE(getTechScore())
 
 		GC.getGame().setScoreDirty(true);
 
 		//	Change in techs invalidates cached player level buildability of buildings
 		clearCanConstructCache(NO_BUILDING, true);
-
 	}
 }
 
@@ -13503,7 +13502,7 @@ void CvPlayer::updateExtraYieldThreshold(YieldTypes eIndex)
 	if (getExtraYieldThreshold(eIndex) != iBestValue)
 	{
 		m_aiExtraYieldThreshold[eIndex] = iBestValue;
-		FAssert(getExtraYieldThreshold(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getExtraYieldThreshold(eIndex))
 
 		updateYield();
 	}
@@ -13541,7 +13540,7 @@ void CvPlayer::updateLessYieldThreshold(YieldTypes eIndex)
 	if (getLessYieldThreshold(eIndex) != iWorstValue)
 	{
 		m_aiLessYieldThreshold[eIndex] = iWorstValue;
-		FAssert(getLessYieldThreshold(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getLessYieldThreshold(eIndex))
 
 		updateYield();
 	}
@@ -13802,7 +13801,7 @@ void CvPlayer::changeStateReligionBuildingCommerce(CommerceTypes eIndex, int iCh
 	if (iChange != 0)
 	{
 		m_aiStateReligionBuildingCommerce[eIndex] += iChange;
-		FAssert(getStateReligionBuildingCommerce(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getStateReligionBuildingCommerce(eIndex))
 
 		setCommerceDirty(eIndex);
 	}
@@ -13856,7 +13855,7 @@ void CvPlayer::changeCommerceFlexibleCount(CommerceTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiCommerceFlexibleCount[eIndex] += iChange;
-		FAssert(getCommerceFlexibleCount(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getCommerceFlexibleCount(eIndex))
 
 		if (!isCommerceFlexible(eIndex))
 		{
@@ -14035,7 +14034,7 @@ void CvPlayer::changeImprovementCount(ImprovementTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eIndex)
 	m_paiImprovementCount[eIndex] += iChange;
-	FAssert(getImprovementCount(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getImprovementCount(eIndex))
 }
 
 
@@ -14373,7 +14372,7 @@ void CvPlayer::changeBuildingCount(BuildingTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	m_paiBuildingCount[eIndex] += iChange;
-	FAssert(getBuildingCount(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getBuildingCount(eIndex))
 
 	clearCanConstructCache(eIndex, true);
 }
@@ -14434,7 +14433,7 @@ void CvPlayer::changeBuildingGroupCount(SpecialBuildingTypes eIndex, int iChange
 {
 	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex)
 	m_paiBuildingGroupCount[eIndex] += iChange;
-	FAssert(getBuildingGroupCount(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getBuildingGroupCount(eIndex))
 
 	clearCanConstructCacheForGroup(eIndex, true);
 }
@@ -14496,7 +14495,7 @@ void CvPlayer::changeBuildingGroupMaking(SpecialBuildingTypes eIndex, int iChang
 	if (iChange != 0)
 	{
 		m_paiBuildingGroupMaking[eIndex] += iChange;
-		FAssert(getBuildingGroupMaking(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getBuildingGroupMaking(eIndex))
 
 		if (getID() == GC.getGame().getActivePlayer())
 		{
@@ -14543,7 +14542,7 @@ void CvPlayer::changeHurryCount(HurryTypes eIndex, int iChange)
 
 	const int oldHurryCount = m_paiHurryCount[eIndex];
 	m_paiHurryCount[eIndex] += iChange;
-	FAssert(getHurryCount(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getHurryCount(eIndex))
 
 	// if we just went from 0 to 1 (or the reverse)
 	if ((oldHurryCount > 0) != (m_paiHurryCount[eIndex] > 0))
@@ -14552,7 +14551,7 @@ void CvPlayer::changeHurryCount(HurryTypes eIndex, int iChange)
 		if (GC.getHurryInfo(eIndex).getProductionPerPopulation() > 0)
 		{
 			m_iPopRushHurryCount += iChange;
-			FAssert(m_iPopRushHurryCount >= 0);
+			FASSERT_NOT_NEGATIVE(m_iPopRushHurryCount)
 		}
 	}
 }
@@ -14574,7 +14573,7 @@ void CvPlayer::changeSpecialBuildingNotRequiredCount(SpecialBuildingTypes eIndex
 {
 	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex)
 	m_paiSpecialBuildingNotRequiredCount[eIndex] += iChange;
-	FAssert(getSpecialBuildingNotRequiredCount(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getSpecialBuildingNotRequiredCount(eIndex))
 }
 
 
@@ -14595,7 +14594,7 @@ void CvPlayer::changeHasCivicOptionCount(CivicOptionTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumCivicOptionInfos(), eIndex)
 	m_paiHasCivicOptionCount[eIndex] += iChange;
-	FAssert(getHasCivicOptionCount(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getHasCivicOptionCount(eIndex))
 }
 
 
@@ -14619,7 +14618,7 @@ void CvPlayer::changeNoCivicUpkeepCount(CivicOptionTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_paiNoCivicUpkeepCount[eIndex] += iChange;
-		FAssert(getNoCivicUpkeepCount(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getNoCivicUpkeepCount(eIndex))
 
 		if (getID() == GC.getGame().getActivePlayer())
 		{
@@ -14709,7 +14708,7 @@ void CvPlayer::changeHasReligionCount(ReligionTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_paiHasReligionCount[eIndex] += iChange;
-		FAssert(getHasReligionCount(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getHasReligionCount(eIndex))
 
 		//AIAndy: Commented out for now to make interfaith project work properly
 		//GC.getGame().updateBuildingCommerce();
@@ -14726,7 +14725,7 @@ void CvPlayer::changeHasCorporationCount(CorporationTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_paiHasCorporationCount[eIndex] += iChange;
-		FAssert(getHasCorporationCount(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getHasCorporationCount(eIndex))
 
 		//AIAndy: Commented out to keep same as religion one, this expensive function will be called at next turn change anyway
 		//GC.getGame().updateBuildingCommerce();
@@ -17631,7 +17630,7 @@ int CvPlayer::getEspionageSpendingWeightAgainstTeam(TeamTypes eIndex) const
 void CvPlayer::setEspionageSpendingWeightAgainstTeam(TeamTypes eIndex, int iValue)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
-	FAssert(iValue >= 0);
+	FASSERT_NOT_NEGATIVE(iValue)
 
 	iValue = std::min(std::max(0, iValue), 99);
 
@@ -28069,7 +28068,7 @@ void CvPlayer::changeWorldTradeRoutes(int iChange)
 	if (iChange != 0)
 	{
 		m_iWorldTradeRoutes += iChange;
-		FAssert(getWorldTradeRoutes() >= 0);
+		FASSERT_NOT_NEGATIVE(getWorldTradeRoutes())
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
@@ -28117,7 +28116,7 @@ void CvPlayer::setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue)
 	if (iOldValue != iNewValue)
 	{
 		m_paiFreeSpecialistCount[eIndex] = iNewValue;
-		FAssert(getFreeSpecialistCount(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getFreeSpecialistCount(eIndex))
 
 		algo::for_each(cities(), CvCity::fn::changeFreeSpecialistCount(eIndex, iNewValue - iOldValue));
 	}
@@ -30552,7 +30551,7 @@ void CvPlayer::changePlayerWideAfflictionCount(PromotionLineTypes ePromotionLine
 	if (iChange != 0)
 	{
 		m_paiPlayerWideAfflictionCount[ePromotionLineType] += iChange;
-		FAssert(getPlayerWideAfflictionCount(ePromotionLineType) >= 0);
+		FASSERT_NOT_NEGATIVE(getPlayerWideAfflictionCount(ePromotionLineType))
 
 		if (getID() == GC.getGame().getActivePlayer())
 		{
@@ -30568,7 +30567,7 @@ void CvPlayer::setPlayerWideAfflictionCount(PromotionLineTypes ePromotionLineTyp
 	if (iChange != 0)
 	{
 		m_paiPlayerWideAfflictionCount[ePromotionLineType] = iChange;
-		FAssert(getPlayerWideAfflictionCount(ePromotionLineType) >= 0);
+		FASSERT_NOT_NEGATIVE(getPlayerWideAfflictionCount(ePromotionLineType))
 
 		if (getID() == GC.getGame().getActivePlayer())
 		{
@@ -30703,7 +30702,7 @@ void CvPlayer::changeExtraSpecialistCommerce(SpecialistTypes eIndex1, CommerceTy
 	{
 		m_ppaaiSpecialistExtraCommerce[eIndex1][eIndex2] += iChange;
 		//TB Note: should be allowed to be negative.
-		//FAssert(getExtraSpecialistCommerce(eIndex1, eIndex2) >= 0);
+		//FASSERT_NOT_NEGATIVE(getExtraSpecialistCommerce(eIndex1, eIndex2))
 
 		updateExtraSpecialistCommerce();
 
@@ -30729,7 +30728,7 @@ void CvPlayer::changeSpecialistExtraYield(YieldTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiSpecialistExtraYield[eIndex] += iChange;
-		FAssert(getSpecialistExtraYield(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getSpecialistExtraYield(eIndex))
 
 		updateYield();
 

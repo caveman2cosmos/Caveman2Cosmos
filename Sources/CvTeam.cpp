@@ -3384,7 +3384,7 @@ bool CvTeam::isMapTrading()	const
 void CvTeam::changeMapTradingCount(int iChange)
 {
 	m_iMapTradingCount += iChange;
-	FAssert(getMapTradingCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getMapTradingCount())
 }
 
 
@@ -3422,7 +3422,7 @@ bool CvTeam::isGoldTrading() const
 void CvTeam::changeGoldTradingCount(int iChange)
 {
 	m_iGoldTradingCount += iChange;
-	FAssert(getGoldTradingCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getGoldTradingCount())
 }
 
 
@@ -3441,7 +3441,7 @@ bool CvTeam::isOpenBordersTrading() const
 void CvTeam::changeOpenBordersTradingCount(int iChange)
 {
 	m_iOpenBordersTradingCount += iChange;
-	FAssert(getOpenBordersTradingCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getOpenBordersTradingCount())
 }
 
 int CvTeam::getDefensivePactTradingCount() const
@@ -3588,7 +3588,7 @@ void CvTeam::changeWaterWorkCount(int iChange)
 	if (iChange != 0)
 	{
 		m_iWaterWorkCount += iChange;
-		FAssert(getWaterWorkCount() >= 0);
+		FASSERT_NOT_NEGATIVE(getWaterWorkCount())
 
 		AI_makeAssignWorkDirty();
 	}

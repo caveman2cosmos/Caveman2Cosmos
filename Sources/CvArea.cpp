@@ -733,7 +733,7 @@ void CvArea::changePower(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 	m_aiPower[eIndex] += iChange;
-	FAssert(m_aiPower[eIndex] > -1);
+	FASSERT_NOT_NEGATIVE(m_aiPower[eIndex])
 }
 
 bool CvArea::hasBestFoundValue(PlayerTypes eIndex) const
