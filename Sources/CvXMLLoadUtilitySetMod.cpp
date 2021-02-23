@@ -207,7 +207,7 @@ void CvXMLLoadUtilitySetMod::setModLoadControlDirArray(bool bSetModControl)
 			//break when we just finished checking the top level
 			if (iDirDepthTemp == 0)
 			{
-				FAssert(iDirDepthTemp >= 0); //should never reach negative values!!
+				FASSERT_NOT_NEGATIVE(iDirDepthTemp) //should never reach negative values!!
 				break;
 			}
 		}

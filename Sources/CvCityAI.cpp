@@ -443,7 +443,7 @@ void CvCityAI::AI_assignWorkingPlots()
 		}
 
 		// extraSpecialists() is less than extraPopulation()
-		FAssertMsg(extraSpecialists() >= 0, "extraSpecialists() is expected to be non-negative (invalid Index)");
+		FASSERT_NOT_NEGATIVE(extraSpecialists())
 
 		// do we have population unassigned
 		while (extraPopulation() > 0)
@@ -492,7 +492,7 @@ void CvCityAI::AI_assignWorkingPlots()
 				}
 			}
 		}
-		FAssertMsg(iExtraSpecialists >= 0, "added too many specialists");
+		FASSERT_NOT_NEGATIVE(iExtraSpecialists)
 
 		// if we still have population to assign, assign specialists
 		while (extraSpecialists() > 0)
@@ -7518,25 +7518,25 @@ void CvCityAI::AI_setEmphasize(EmphasizeTypes eIndex, bool bNewValue)
 		if (GC.getEmphasizeInfo(eIndex).isAvoidGrowth())
 		{
 			m_iEmphasizeAvoidGrowthCount += ((AI_isEmphasize(eIndex)) ? 1 : -1);
-			FAssert(AI_getEmphasizeAvoidGrowthCount() >= 0);
+			FASSERT_NOT_NEGATIVE(AI_getEmphasizeAvoidGrowthCount())
 		}
 
 		if (GC.getEmphasizeInfo(eIndex).isGreatPeople())
 		{
 			m_iEmphasizeGreatPeopleCount += ((AI_isEmphasize(eIndex)) ? 1 : -1);
-			FAssert(AI_getEmphasizeGreatPeopleCount() >= 0);
+			FASSERT_NOT_NEGATIVE(AI_getEmphasizeGreatPeopleCount())
 		}
 
 		if (GC.getEmphasizeInfo(eIndex).isAvoidAngryCitizens())
 		{
 			m_iEmphasizeAvoidAngryCitizensCount += ((AI_isEmphasize(eIndex)) ? 1 : -1);
-			FAssert(AI_getEmphasizeAvoidAngryCitizensCount() >= 0);
+			FASSERT_NOT_NEGATIVE(AI_getEmphasizeAvoidAngryCitizensCount())
 		}
 
 		if (GC.getEmphasizeInfo(eIndex).isAvoidUnhealthyCitizens())
 		{
 			m_iEmphasizeAvoidUnhealthyCitizensCount += ((AI_isEmphasize(eIndex)) ? 1 : -1);
-			FAssert(AI_getEmphasizeAvoidUnhealthyCitizensCount() >= 0);
+			FASSERT_NOT_NEGATIVE(AI_getEmphasizeAvoidUnhealthyCitizensCount())
 		}
 
 		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
@@ -7544,7 +7544,7 @@ void CvCityAI::AI_setEmphasize(EmphasizeTypes eIndex, bool bNewValue)
 			if (GC.getEmphasizeInfo(eIndex).getYieldChange(iI))
 			{
 				m_aiEmphasizeYieldCount[iI] += AI_isEmphasize(eIndex) ? 1 : -1;
-				FAssert(m_aiEmphasizeYieldCount[iI] >= 0);
+				FASSERT_NOT_NEGATIVE(m_aiEmphasizeYieldCount[iI])
 			}
 		}
 
@@ -7553,7 +7553,7 @@ void CvCityAI::AI_setEmphasize(EmphasizeTypes eIndex, bool bNewValue)
 			if (GC.getEmphasizeInfo(eIndex).getCommerceChange(iI))
 			{
 				m_aiEmphasizeCommerceCount[iI] += AI_isEmphasize(eIndex) ? 1 : -1;
-				FAssert(m_aiEmphasizeCommerceCount[iI] >= 0);
+				FASSERT_NOT_NEGATIVE(m_aiEmphasizeCommerceCount[iI])
 			}
 		}
 
@@ -7597,7 +7597,7 @@ void CvCityAI::AI_forceEmphasizeCulture(bool bNewValue)
 		m_bForceEmphasizeCulture = bNewValue;
 
 		m_aiEmphasizeCommerceCount[COMMERCE_CULTURE] += (bNewValue ? 1 : -1);
-		FAssert(m_aiEmphasizeCommerceCount[COMMERCE_CULTURE] >= 0);
+		FASSERT_NOT_NEGATIVE(m_aiEmphasizeCommerceCount[COMMERCE_CULTURE])
 	}
 }
 
@@ -13229,7 +13229,7 @@ int CvCityAI::AI_getWorkersNeeded() const
 void CvCityAI::AI_changeWorkersHave(int iChange)
 {
 	m_iWorkersHave += iChange;
-	//FAssert(m_iWorkersHave >= 0);
+	//FASSERT_NOT_NEGATIVE(m_iWorkersHave)
 	m_iWorkersHave = std::max(0, m_iWorkersHave);
 }
 
