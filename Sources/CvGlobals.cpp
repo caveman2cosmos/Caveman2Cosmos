@@ -133,7 +133,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_Profiler(NULL)
 	, m_VarSystem(NULL)
 	, m_fPLOT_SIZE(0)
-	, m_bMultimapsEnabled(false)
 	, m_bViewportsEnabled(false)
 	, m_iViewportFocusBorder(0)
 	, m_iViewportCenterOnSelectionCenterBorder(5)
@@ -427,7 +426,7 @@ void cvInternalGlobals::init()
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	m_maps.push_back(new CvMap(MAP_INITIAL));
+	m_maps.push_back(new CvMap(MAP_EARTH));
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
@@ -617,7 +616,7 @@ int cvInternalGlobals::getNumMapInfos() const
 
 CvMapInfo& cvInternalGlobals::getMapInfo(MapTypes eMap) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eMap)
+	FASSERT_BOUNDS(0, NUM_MAPS, eMap)
 	return *(m_paMapInfo[eMap]);
 }
 
@@ -2889,11 +2888,6 @@ void cvInternalGlobals::cacheInfoTypes()
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-bool cvInternalGlobals::multiMapsEnabled() const
-{
-	return m_bMultimapsEnabled;
-}
-
 bool cvInternalGlobals::viewportsEnabled() const
 {
 	return m_bViewportsEnabled;
@@ -2908,12 +2902,12 @@ void cvInternalGlobals::updateMaps()
 {
 	if (getDefineINT("ENABLE_MULTI_MAPS"))
 	{
-		for (int i = 1; i < GC.getNumMapInfos(); i++)
+		for (int i = 1; i < NUM_MAPS; i++)
 		{
 			m_maps.push_back(new CvMap((MapTypes)i));
 		}
 
-		FAssert(m_maps.size() == GC.getNumMapInfos());
+		FAssert(m_maps.size() == NUM_MAPS);
 
 		for (int i = 0; i < MAX_PLAYERS; i++)
 		{
@@ -2936,8 +2930,8 @@ bool cvInternalGlobals::getResourceLayer() const
 
 void cvInternalGlobals::switchMap(MapTypes eMap)
 {	
-	FASSERT_BOUNDS(0, getNumMapInfos(), eMap);
-	FAssert(eMap != CURRENT_MAP);
+	FASSERT_BOUNDS(0, NUM_MAPS, eMap)
+	FAssert(eMap != CURRENT_MAP)
 
 	getMap().beforeSwitch();
 	getGame().setCurrentMap(eMap);
@@ -2982,7 +2976,7 @@ CvMapExternal& cvInternalGlobals::getMapExternal() const
 
 CvMap& cvInternalGlobals::getMapByIndex(MapTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eIndex)
+	FASSERT_BOUNDS(0, NUM_MAPS, eIndex)
 	return *m_maps[eIndex];
 }
 
@@ -3001,37 +2995,9 @@ void cvInternalGlobals::reprocessSigns()
 		m_bSignsCleared = false;
 	}
 }
-
-void cvInternalGlobals::initializeMap(MapTypes eMap)
-{
-	FASSERT_BOUNDS(0, getNumMapInfos(), eMap)
-
-	OutputDebugString("Initializing Map: Start\n");
-	//while ( m_maps.size() < (size_t)eMap )
-	//{
-	//	//	Sparse or out of order initialization
-	//	m_maps.push_back(NULL);
-	//}
-
-	//m_maps[eMap] = new CvMap(eMap);
-
-	for (int i = 0; i < MAX_PLAYERS; i++)
-	{
-		GET_PLAYER((PlayerTypes)i).initContainersForMap(eMap);
-	}
-	OutputDebugString("Initializing Map: End\n");
-}
-
-bool cvInternalGlobals::mapInitialized(MapTypes eMap) const
-{
-	FASSERT_BOUNDS(0, getNumMapInfos(), eMap)
-	return (m_maps.size() > (size_t)eMap && m_maps[eMap] != NULL);
-}
-
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
-
 
 void cvInternalGlobals::addDelayedResolution(int *pType, CvString szString)
 {

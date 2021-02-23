@@ -31,16 +31,10 @@ public:
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	bool enableMultiMaps();
-	bool multiMapsEnabled() const;
 	void switchMap(int iMap);
 	int getNumMapInfos() const;
 	CvMapInfo* getMapInfo(int iMap) const;
 	CyMap* getMapByIndex(int iIndex);
-	int getNumMaps() const;
-	void updateMaps();
-	void initializeMap(int iMap);
-	bool mapInitialized(int iMap) const;
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/	

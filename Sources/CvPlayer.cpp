@@ -339,7 +339,7 @@ void CvPlayer::init(PlayerTypes eID)
 	reset(eID);
 	//--------------------------------
 	// Init containers
-	initContainersForMap(MAP_INITIAL);
+	addContainersForEachMap();
 	m_eventsTriggered.init();
 	//--------------------------------
 	// Init non-saved data
@@ -467,13 +467,8 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 
 	//--------------------------------
 	// Init containers
-	for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
-	{
-		if (GC.mapInitialized((MapTypes)i))
-		{
-			initContainersForMap((MapTypes)i);
-		}
-	}
+	addContainersForEachMap();
+
 	m_eventsTriggered.init();
 
 	m_contractBroker.init(eID);
@@ -792,8 +787,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_bMADTrigger[iI] = false;
 	}
 
-	m_vStartingX = std::vector<int>(GC.getNumMapInfos(), INVALID_PLOT_COORD);
-	m_vStartingY = std::vector<int>(GC.getNumMapInfos(), INVALID_PLOT_COORD);
+	m_vStartingX = std::vector<int>(NUM_MAPS, INVALID_PLOT_COORD);
+	m_vStartingY = std::vector<int>(NUM_MAPS, INVALID_PLOT_COORD);
 	m_iTotalPopulation = 0;
 	m_iTotalLand = 0;
 	m_iTotalLandScored = 0;
@@ -2034,7 +2029,7 @@ int CvPlayer::startingPlotRange() const
 	iRange += std::min(((GC.getMap().getNumAreas() + 1) / 2), GC.getGame().countCivPlayersAlive());
 
 	int iResult = 0;
-	if (Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "minStartingDistanceModifier", iResult))
+	if (Cy::call_optional(GC.getMap().getMapScript(), "minStartingDistanceModifier", iResult))
 	{
 		iRange *= std::max<int>(0, (iResult + 100));
 		iRange /= 100;
@@ -12386,8 +12381,8 @@ bool hasAny(const std::vector<FFreeListTrashArray<T>*>& vector)
 {
 	foreach_(const FFreeListTrashArray<T>* container, vector)
 		if (container->getCount() > 0)
-			return false;
-	return true;
+			return true;
+	return false;
 }
 
 void CvPlayer::verifyAlive()
@@ -12402,13 +12397,9 @@ void CvPlayer::verifyAlive()
 		// Check if player is defeated
 		if (
 			// No city nor units is always defeat
-			//getNumCities() == 0
-			//algo::all_of(getAllCities(), bind(FFreeListTrashArray<CvCityAI>::getCount, _1) == 0)
 			!hasAny(m_cities)
 		&&
 			( // No city confirmed
-				//getNumUnits() == 0
-				//algo::all_of(getAllUnits(), bind(FFreeListTrashArray<CvUnitAI>::getCount, _1) == 0)
 				!hasAny(m_units)
 				||
 				// Are units enough to stay alive?
@@ -15700,8 +15691,7 @@ CLLNode<CvWString>* CvPlayer::headCityNameNode() const
 
 void CvPlayer::addContainersForEachMap()
 {
-	for (int i = m_groupCycles.size(), num = GC.getNumMapInfos(); i < num; i++)
-	//while ((int)m_groupCycles.size() < GC.getNumMapInfos())
+	for (int i = m_groupCycles.size(); i < NUM_MAPS; i++)
 	{
 		m_groupCycles.push_back(new CLinkList<int>);
 		m_plotGroups.push_back(new FFreeListTrashArray<CvPlotGroup>);

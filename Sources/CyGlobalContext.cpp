@@ -57,21 +57,6 @@ CyMap* CyGlobalContext::getCyMap() const
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-bool CyGlobalContext::enableMultiMaps()
-{
-	if (GC.getDefineINT("ENABLE_MULTI_MAPS"))
-	{
-		GC.enableMultiMaps();
-		return true;
-	}
-	return false;
-}
-
-bool CyGlobalContext::multiMapsEnabled() const
-{
-	return GC.multiMapsEnabled();
-}
-
 void CyGlobalContext::switchMap(int iMap)
 {
 	GC.switchMap((MapTypes)iMap);
@@ -93,27 +78,6 @@ CyMap* CyGlobalContext::getMapByIndex(int iIndex)
 	cyMap = GC.getMapByIndex((MapTypes)iIndex);
 	return &cyMap;
 }
-
-int CyGlobalContext::getNumMaps() const
-{
-	return GC.getNumMaps();
-}
-
-void CyGlobalContext::updateMaps()
-{
-	GC.updateMaps();
-}
-
-void CyGlobalContext::initializeMap(int iMap)
-{
-	GC.initializeMap((MapTypes)iMap);
-}
-
-bool CyGlobalContext::mapInitialized(int iMap) const
-{
-	return GC.mapInitialized((MapTypes)iMap);
-}
-
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/	

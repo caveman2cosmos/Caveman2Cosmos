@@ -2081,70 +2081,104 @@ bool CvSelectionGroup::startMission()
 #ifdef PARALLEL_MAPS
 					case MISSION_GO_TO_MAP_EARTH:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_EARTH());
+						bAction = true;
+						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_SUBTERRANEAN:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_SUBTERRANEAN());
+						bAction = true;
+						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_AQUATIC:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_AQUATIC());
+						bAction = true;
+						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_CISLUNAR:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_CISLUNAR());
+						bAction = true;
+						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_LUNAR:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_LUNAR());
+						bAction = true;
+						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_SOLAR_SYSTEM:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_SOLAR_SYSTEM());
+						bAction = true;
+						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_MARTIAN:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_MARTIAN());
+						bAction = true;
+						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_VENUSIAN:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_VENUSIAN());
+						bAction = true;
+						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_JOVIAN:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_JOVIAN());
+						bAction = true;
+						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_TITANIC:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_TITANIC());
+						bAction = true;
+						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_INTERSTELLAR:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_INTERSTELLAR());
+						bAction = true;
+						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_PLASMA:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_PLASMA());
+						bAction = true;
+						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_GALACTIC:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_GALACTIC());
+						bAction = true;
+						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_MILKY_WAY:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_MILKY_WAY());
+						bAction = true;
+						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_UNIVERSAL:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_UNIVERSAL());
+						bAction = true;
+						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_DISTANT:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_DISTANT());
+						bAction = true;
+						bDelete = true;
 						break;
 
 					case MISSION_GO_TO_MAP_HYPERSPACE:
 						pLoopUnit->goToMap(GC.getMAPCATEGORY_HYPERSPACE());
+						bAction = true;
+						bDelete = true;
 						break;
 #endif
 					default:

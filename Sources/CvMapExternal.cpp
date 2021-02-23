@@ -192,43 +192,18 @@ CvPlot* CvMapExternal::pointToPlot(float fX, float fY)
 // Serialization:
 void CvMapExternal::read(FDataStreamBase* pStream)
 {
-	PROFILE_FUNC();
-
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
-	bool bInitialized = false;
-	bool bMultiMapFormat = false;
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", bMultiMapFormat, SAVE_VALUE_TYPE_BOOL)
 
-	WRAPPER_READ(wrapper, "CvMapExternal", &bMultiMapFormat);
-
-	if ( bMultiMapFormat )
+	foreach_(CvMap* map, GC.getMaps())
 	{
-		for (int i = 0; i < GC.getNumMapInfos(); i++)
-		{
-			WRAPPER_READ(wrapper, "CvMapExternal", &bInitialized);
-
-			if (bInitialized)
-			{
-				//	If this is a load straight from the startup menus then only map 0 will
-				//	have been initialized, so any others in the save must be initialized too before
-				//	they can be loaded
-				if ( !GC.mapInitialized((MapTypes)i) )
-				{
-					GC.initializeMap((MapTypes)i);
-				}
-
-				// Cast to the internal class
-				CvMap&	map = GC.getMapByIndex((MapTypes)i);
-
-				map.read(pStream);
-			}
-		}
-	}
-	else
-	{
-		GC.getMap().read(pStream);
+		bool bInitialized = false;
+		WRAPPER_READ(wrapper, "CvMapExternal", &bInitialized)
+		if (bInitialized)
+			map->read(pStream);
 	}
 
 	GC.getCurrentViewport()->setActionState(VIEWPORT_ACTION_STATE_LOADING);
@@ -236,28 +211,15 @@ void CvMapExternal::read(FDataStreamBase* pStream)
 
 void CvMapExternal::write(FDataStreamBase* pStream)
 {
-	PROFILE_FUNC();
-
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
 
-	bool bMultiMapFormat = true;	//	Always save in multimap format
-
-	WRAPPER_WRITE(wrapper, "CvMapExternal", bMultiMapFormat);
-
-	for (int iI = 0; iI < GC.getNumMapInfos(); iI++)
+	foreach_(CvMap* map, GC.getMaps())
 	{
-		const bool bInitialized = GC.mapInitialized((MapTypes)iI);
-
-		WRAPPER_WRITE(wrapper, "CvMapExternal", bInitialized);
-
-		if ( bInitialized )
-		{
-			// Cast to the internal class
-			CvMap&	map = GC.getMapByIndex((MapTypes)iI);
-
-			map.write(pStream);
-		}
+		const bool bInitialized = map->plotsInitialized();
+		WRAPPER_WRITE(wrapper, "CvMapExternal", bInitialized)
+		if (bInitialized)
+			map->write(pStream);
 	}
 }

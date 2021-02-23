@@ -226,9 +226,7 @@ CvUnit::CvUnit(const CvUnit& other)
 
 	m_iMaxMoveCacheTurn = -1;
 
-	const bool bIsDummy = false;
-
-	if (g_dummyUnit == NULL && !bIsDummy)
+	if (g_dummyUnit == NULL)
 	{
 		g_dummyUnit = new CvUnitAI(true);
 
@@ -435,7 +433,7 @@ void CvUnit::changeIdentity(UnitTypes eUnit)
 
 void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOwner, int iX, int iY, DirectionTypes eFacingDirection, int iBirthmark)
 {
-	FAssert(NO_UNIT != eUnit);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
 
 	//	If the current viewport is not yet initialized center it on the first unit created for the active player
 	if (GC.getGame().getActivePlayer() == eOwner
@@ -1019,10 +1017,10 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 
 CvUnit& CvUnit::operator=(const CvUnit& other)
 {
-
-	uninit();
-
+	//uninit();
 	//clearCityOfOrigin();
+
+	//static_cast<CvUnitAI&>(*this) = static_cast<const CvUnitAI&>(other);
 
 	m_iHealUnitCombatCount = other.m_iHealUnitCombatCount;
 	m_iDCMBombRange = other.m_iDCMBombRange;
@@ -1391,15 +1389,40 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 	m_aiExtraBuildTypes = other.m_aiExtraBuildTypes;
 	m_aExtraAidChanges = other.m_aExtraAidChanges;
 
-	m_promotionKeyedInfo = other.m_promotionKeyedInfo;
-	m_promotionLineKeyedInfo = other.m_promotionLineKeyedInfo;
-	m_terrainKeyedInfo = other.m_terrainKeyedInfo;
-	m_featureKeyedInfo = other.m_featureKeyedInfo;
-	m_unitCombatKeyedInfo = other.m_unitCombatKeyedInfo;
+	if (!other.m_promotionKeyedInfo.empty())
+		m_promotionKeyedInfo = other.m_promotionKeyedInfo;
+
+	if (!other.m_promotionLineKeyedInfo.empty())
+		m_promotionLineKeyedInfo = other.m_promotionLineKeyedInfo;
+
+	if (!other.m_terrainKeyedInfo.empty())
+		m_terrainKeyedInfo = other.m_terrainKeyedInfo;
+
+	if (!other.m_featureKeyedInfo.empty())
+		m_featureKeyedInfo = other.m_featureKeyedInfo;
+
+	if (!other.m_unitCombatKeyedInfo.empty())
+		m_unitCombatKeyedInfo = other.m_unitCombatKeyedInfo;
 
 	m_pPlayerInvestigated = other.m_pPlayerInvestigated;
 	m_Properties = other.m_Properties;
-
+/*
+	m_iBirthmark = other.m_iBirthmark;
+	m_eUnitAIType = other.m_eUnitAIType;
+	m_iAutomatedAbortTurn = other.m_iAutomatedAbortTurn;
+	//int m_contractsLastEstablishedTurn;
+	//ContractualState m_contractualState;
+	m_iGarrisonCity = other.m_iGarrisonCity;
+	m_iAffirmedGarrisonCity = other.m_iAffirmedGarrisonCity;
+	m_eIntendedConstructBuilding = other.m_eIntendedConstructBuilding;
+	m_iGroupLeadOverride = other.m_iGroupLeadOverride;
+	m_iPredictedHitPoints = other.m_iPredictedHitPoints;
+	m_bHasAttacked = other.m_bHasAttacked;
+	m_bWaitingOnUnitAIAny = other.m_bWaitingOnUnitAIAny;
+	m_iGenericValue = other.m_iGenericValue;
+	m_eGenericValueFlagsCached = other.m_eGenericValueFlagsCached;
+	m_aiWaitingOnUnitAITypes = other.m_aiWaitingOnUnitAITypes;
+*/
 	return *this;
 }
 
@@ -17286,8 +17309,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 						}
 						else
 						{
-							CvUnit* pDefender = NULL;
-							pDefender = pNewPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, true, false, false, true);
+							CvUnit* pDefender = pNewPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, true, false, false, true);
 							if (pDefender != NULL)
 							{
 								attack(pNewPlot, true, false, true);

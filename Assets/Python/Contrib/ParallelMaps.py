@@ -1,4 +1,4 @@
-from CvPythonExtensions import CyGlobalContext
+from CvPythonExtensions import CyGlobalContext, MapTypes
 import BugEventManager
 
 GC = CyGlobalContext()
@@ -13,7 +13,7 @@ class ParallelMaps:
 	def filterInput(self, argsList):
 		if BugEventManager.g_eventManager.bAlt:
 			i = argsList[1] -2
-			if i < GC.getNumMapInfos() \
+			if i < MapTypes.NUM_MAPS \
 			and i != GC.getGame().getCurrentMap() \
 			and GC.getMapByIndex(i).plotsInitialized():
 				global bIsSwitchingMap
