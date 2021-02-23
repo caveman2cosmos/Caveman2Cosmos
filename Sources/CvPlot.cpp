@@ -696,14 +696,12 @@ void CvPlot::doTurn()
 		setOwner(NO_PLAYER, false, false);
 	}
 #ifdef _DEBUG
+	foreach_ (CvUnit* unit, units())
 	{
-		foreach_ (CvUnit* unit, units())
+		FAssertMsg(unit->atPlot(this), "pLoopUnit is expected to be at the current plot instance");
+		if (!unit->atPlot(this))
 		{
-			FAssertMsg(unit->atPlot(this), "pLoopUnit is expected to be at the current plot instance");
-			if (!unit->atPlot(this))
-			{
-				removeUnit(unit);
-			}
+			removeUnit(unit);
 		}
 	}
 #endif

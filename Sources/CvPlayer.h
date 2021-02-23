@@ -128,8 +128,9 @@ public:
 	int startingPlotRange() const;
 	bool startingPlotWithinRange(CvPlot* pPlot, PlayerTypes ePlayer, int iRange, int iPass) const;
 	int startingPlotDistanceFactor(const CvPlot* pPlot, PlayerTypes ePlayer, int iRange) const;
-	int findStartingArea() const;
+	int findStartingArea(const CvMap& map) const;
 	CvPlot* findStartingPlot(bool bRandomize = false);
+	CvPlot* findStartingPlot(const CvMap& map, bool bRandomize = false);
 
 	CvPlotGroup* initPlotGroup(CvPlot* pPlot, bool bRecalculateBonuses);
 
@@ -1731,8 +1732,8 @@ public:
 	virtual int AI_maxGoldTrade(PlayerTypes ePlayer) const = 0;
 protected:
 
-	int m_iStartingX;
-	int m_iStartingY;
+	std::vector<int> m_vStartingX;
+	std::vector<int> m_vStartingY;
 	int m_iTotalPopulation;
 	int m_iTotalLand;
 	int m_iTotalLandScored;

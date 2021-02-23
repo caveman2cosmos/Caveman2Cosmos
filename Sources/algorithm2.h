@@ -4,6 +4,7 @@
 #define algorithm2_h__
 
 #include "flatten_range.h"
+#include "CvTaggedSaveFormatWrapper.h"
 
 // We wrap some existing range algorithms here to make them easier to use without auto keyword.
 // Instead of returning the complicated iterator type we return an optional of a value for direct use.
@@ -335,12 +336,30 @@ namespace algo {
 	// Custom
 	// FUNCTION TEMPLATE contains
 	// test if an element exists in a range
-	template<class Item_>
-	bool contains(const std::vector<Item_>& rng, const Item_& item) {
-		foreach_(const Item_& element, rng)
+	template <class T>
+	bool contains(const std::vector<T>& vector, const T& item) {
+		foreach_(const T& element, vector)
 			if (element == item)
 				return true;
 		return false;
+	}
+
+	template <class T>
+	void read(std::vector<T>& vector, CvTaggedSaveFormatWrapper& wrapper) {
+		size_t size = 0;
+		WRAPPER_READ_DECORATED(wrapper, "CvGame", &size, "size")
+		for (uint32_t i = 0; i < size; i++) {
+			T element;
+			WRAPPER_READ(wrapper, "CvGame", &element)
+			vector.push_back(element);
+		}
+	}
+
+	template <class T>
+	void write(const std::vector<T>& vector, CvTaggedSaveFormatWrapper& wrapper) {
+		WRAPPER_WRITE_DECORATED(wrapper, "CvGame", vector.size(), "size")
+		foreach_(const T& element, vector)
+			WRAPPER_WRITE(wrapper, "CvGame", element)
 	}
 
 	// FUNCTION TEMPLATE contains

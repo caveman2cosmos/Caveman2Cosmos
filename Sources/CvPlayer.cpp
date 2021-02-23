@@ -792,8 +792,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_bMADTrigger[iI] = false;
 	}
 
-	m_iStartingX = INVALID_PLOT_COORD;
-	m_iStartingY = INVALID_PLOT_COORD;
+	m_vStartingX = std::vector<int>(GC.getNumMapInfos(), INVALID_PLOT_COORD);
+	m_vStartingY = std::vector<int>(GC.getNumMapInfos(), INVALID_PLOT_COORD);
 	m_iTotalPopulation = 0;
 	m_iTotalLand = 0;
 	m_iTotalLandScored = 0;
@@ -2123,14 +2123,14 @@ namespace {
 }
 
 // Returns the id of the best area, or -1 if it doesn't matter:
-int CvPlayer::findStartingArea() const
+int CvPlayer::findStartingArea(const CvMap& map) const
 {
 	PROFILE_FUNC();
 
 	int result = -1;
-	if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "findStartingArea", Cy::Args() << getID(), result))
+	if (Cy::call_override(map.getMapScript(), "findStartingArea", Cy::Args() << getID(), result))
 	{
-		if (result == -1 || GC.getMap().getArea(result) != NULL)
+		if (result == -1 || map.getArea(result) != NULL)
 		{
 			return result;
 		}
@@ -2139,24 +2139,27 @@ int CvPlayer::findStartingArea() const
 	const CvArea* bestStartingArea =
 	(
 		scoring::max_score(
-			GC.getMap().areas() | filtered(!CvArea::fn::isWater()), calculateStartingAreaScore
+			map.areas() | filtered(!CvArea::fn::isWater()), calculateStartingAreaScore
 		).get_value_or(nullptr)
 	);
 	return bestStartingArea ? bestStartingArea->getID() : -1;
 }
 
-
 CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
+{
+	return findStartingPlot(GC.getMap(), bRandomize);
+}
+
+CvPlot* CvPlayer::findStartingPlot(const CvMap& map, bool bRandomize)
 {
 	PROFILE_FUNC();
 	{
 		int result = -1;
-		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "findStartingPlot", Cy::Args() << getID(), result))
+		if (Cy::call_override(map.getMapScript(), "findStartingPlot", Cy::Args() << getID(), result))
 		{
-			CvPlot *pPlot = GC.getMap().plotByIndex(result);
-			if (pPlot != NULL)
+			if (result > -1 && result < map.numPlots())
 			{
-				return pPlot;
+				return map.plotByIndex(result);
 			}
 			FErrorMsg("python findStartingPlot() returned an invalid plot index!");
 		}
@@ -2175,7 +2178,7 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 
 	if (!bNew)
 	{
-		iBestArea = findStartingArea();
+		iBestArea = findStartingArea(map);
 	}
 #ifndef PARALLEL_MAPS
 	const MapTypes earth = GC.getMAPCATEGORY_EARTH();
@@ -2185,9 +2188,9 @@ CvPlot* CvPlayer::findStartingPlot(bool bRandomize)
 		CvPlot *pBestPlot = NULL;
 		int iBestValue = 0;
 
-		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+		for (int iI = 0; iI < map.numPlots(); iI++)
 		{
-			CvPlot* plot = GC.getMap().plotByIndex(iI);
+			CvPlot* plot = map.plotByIndex(iI);
 
 			if (plot->isStartingPlot()
 #ifndef PARALLEL_MAPS
@@ -9605,7 +9608,7 @@ int CvPlayer::specialistCommerceTimes100(SpecialistTypes eSpecialist, CommerceTy
 
 CvPlot* CvPlayer::getStartingPlot() const
 {
-	return GC.getMap().plotSorenINLINE(m_iStartingX, m_iStartingY);
+	return GC.getMap().plotSorenINLINE(m_vStartingX[CURRENT_MAP], m_vStartingY[CURRENT_MAP]);
 }
 
 
@@ -9627,13 +9630,13 @@ void CvPlayer::setStartingPlot(const CvPlot* pNewValue, bool bUpdateStartDist)
 
 		if (pNewValue == NULL)
 		{
-			m_iStartingX = INVALID_PLOT_COORD;
-			m_iStartingY = INVALID_PLOT_COORD;
+			m_vStartingX[CURRENT_MAP] = INVALID_PLOT_COORD;
+			m_vStartingY[CURRENT_MAP] = INVALID_PLOT_COORD;
 		}
 		else
 		{
-			m_iStartingX = pNewValue->getX();
-			m_iStartingY = pNewValue->getY();
+			m_vStartingX[CURRENT_MAP] = pNewValue->getX();
+			m_vStartingY[CURRENT_MAP] = pNewValue->getY();
 
 			getStartingPlot()->area()->changeNumStartingPlots(1);
 
@@ -12401,12 +12404,12 @@ void CvPlayer::verifyAlive()
 			// No city nor units is always defeat
 			//getNumCities() == 0
 			//algo::all_of(getAllCities(), bind(FFreeListTrashArray<CvCityAI>::getCount, _1) == 0)
-			hasAny(m_cities)
+			!hasAny(m_cities)
 		&&
 			( // No city confirmed
 				//getNumUnits() == 0
 				//algo::all_of(getAllUnits(), bind(FFreeListTrashArray<CvUnitAI>::getCount, _1) == 0)
-				hasAny(m_units)
+				!hasAny(m_units)
 				||
 				// Are units enough to stay alive?
 				!GC.getGame().isOption(GAMEOPTION_COMPLETE_KILLS) // If option is active, YES.
@@ -19536,8 +19539,10 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMADIncoming);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMADOutgoing);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMADNukesCount);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iStartingX);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iStartingY);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iStartingX, SAVE_VALUE_TYPE_INT);
+		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iStartingY, SAVE_VALUE_TYPE_INT);
+		algo::read(m_vStartingX, wrapper);
+		algo::read(m_vStartingY, wrapper);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalPopulation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalLand);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTotalLandScored);
@@ -20850,8 +20855,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMADIncoming);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMADOutgoing);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMADNukesCount);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iStartingX);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iStartingY);
+		algo::write(m_vStartingX, wrapper);
+		algo::write(m_vStartingY, wrapper);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalPopulation);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalLand);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTotalLandScored);

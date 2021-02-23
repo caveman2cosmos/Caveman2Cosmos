@@ -48,7 +48,7 @@ class CvMap : public CvMapInterfaceBase
 	friend class CyMap;
 
 public:
-	explicit CvMap(/* Parallel Maps */ MapTypes eMap);
+	explicit CvMap(MapTypes eMap);
 	virtual ~CvMap();
 
 	CvMapInterfaceBase*	getUnderlyingMap() const { return const_cast<CvMap*>(this); }
@@ -63,20 +63,17 @@ protected:
 	void setup();
 
 public:
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 	MapTypes getType() const;
 
 	void beforeSwitch();
 	void afterSwitch();
 
-#ifdef PARALLEL_MAPS
 	void updateIncomingUnits();
 	void addIncomingUnit(CvUnitAI& unit, int numTravelTurns);
 
 	bool plotsInitialized() const;
-#endif
+
+	const char* getMapScript() const;
 
 	//	Viewports are owned by their underlying maps
 	int	getNumViewports() const;
@@ -85,9 +82,6 @@ public:
 	void deleteViewport(int iIndex);
 	void setCurrentViewport(int iIndex);
 	CvViewport* getCurrentViewport() const;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 	void erasePlots();
 	void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false);

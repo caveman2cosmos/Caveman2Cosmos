@@ -1884,7 +1884,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		owner.AI_changeNumAIUnits(AI_getUnitAIType(), -1);
 		AI_killed(); // Update AI counts for this unit
 		//GC.getGame().logOOSSpecial(15, getID(), INVALID_PLOT_COORD, INVALID_PLOT_COORD);
-		setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true);
+		setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true, false);
 
 		joinGroup(NULL, false, false);
 
@@ -42745,6 +42745,8 @@ void CvUnit::goToMap(MapTypes eMap)
 {
 	GC.getMapByIndex(eMap).addIncomingUnit(static_cast<CvUnitAI&>(*this), 1);
 	plot()->removeUnit(this);
+	joinGroup(nullptr);
+	//setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true, false);
 	GET_PLAYER(getOwner()).deleteUnit(getID(), eMap);
 }
 #endif

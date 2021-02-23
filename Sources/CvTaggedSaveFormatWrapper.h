@@ -7,9 +7,8 @@
 
 // CvTaggedSaveFormatWrapper.h
 
-
-//	Forward declarations
 class DictionaryEntry;
+class FDataStreamBase;
 
 //	Class types we know how to remap on load (so that
 //	if new classes of this type are added the load still ties up the old

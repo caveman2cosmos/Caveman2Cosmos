@@ -387,10 +387,11 @@ void CvMap::updateIncomingUnits()
 			{
 				GC.switchMap(getType());
 			}
-			CvUnit& unit = (*itr).first;
-			CvPlayer& owner = GET_PLAYER(unit.getOwner());
-			owner.addUnit(unit);
-			owner.findStartingPlot()->addUnit(&unit);
+			CvUnit& offMapUnit = (*itr).first;
+			CvPlayer& owner = GET_PLAYER(offMapUnit.getOwner());
+			CvUnit& onMapUnit = owner.addUnit(offMapUnit);
+			CvPlot* startingPlot = owner.findStartingPlot(*this);
+			onMapUnit.setXY(startingPlot->getX(), startingPlot->getY());
 			//m_IncomingUnits.erase(itr);
 		}
 	}
@@ -1232,7 +1233,7 @@ void CvMap::invalidateIsTeamBorderCache(TeamTypes eTeam)
 //
 void CvMap::read(FDataStreamBase* pStream)
 {
-	OutputDebugString("Reading Map: Start");
+	OutputDebugString("Reading Map: Start\n");
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -1279,7 +1280,7 @@ void CvMap::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 
-	OutputDebugString("Reading Map: End");
+	OutputDebugString("Reading Map: End\n");
 }
 
 // save object to a stream
@@ -1321,8 +1322,6 @@ void CvMap::write(FDataStreamBase* pStream)
 
 void CvMap::beforeSwitch()
 {
-	PROFILE_FUNC();
-
 #ifdef THE_GREAT_WALL
 	if ( GC.getCurrentViewport()->getTransformType() == VIEWPORT_TRANSFORM_TYPE_WINDOW )
 	{
@@ -1379,8 +1378,6 @@ void CvMap::beforeSwitch()
 
 void CvMap::afterSwitch()
 {
-	PROFILE_FUNC();
-
 	if (m_pMapPlots == NULL)		// if it hasn't been initialized yet...
 	{
 		if (GC.getMapInfo(getType()).getInitialWBMap().GetLength() > 0)
@@ -1398,15 +1395,6 @@ void CvMap::afterSwitch()
 			{
 				AddDLLMessage((PlayerTypes)0, true, GC.getEVENT_MESSAGE_TIME(), L"Worldbuilder map failed to load");
 			}
-		}
-		else if (GC.getMapInfo(getType()).getMapScript().GetLength() > 0)
-		{
-			init();
-			CvMapGenerator& kGenerator = CvMapGenerator::GetInstance();
-			kGenerator.setUseDefaultMapScript(false);
-			kGenerator.generateRandomMap();
-			kGenerator.addGameElements();
-			kGenerator.setUseDefaultMapScript(true);
 		}
 		else
 		{
@@ -1498,6 +1486,17 @@ void CvMap::afterSwitch()
 #endif
 	gDLL->getEngineIFace()->setResourceLayer(GC.getResourceLayer());
 	gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
+}
+
+const char* CvMap::getMapScript() const
+{
+	if (m_eType > MAP_INITIAL)
+	{
+		const CvString& module = GC.getMapInfo(m_eType).getMapScript();
+		if (module.GetLength() > 0)
+			return module.c_str();
+	}
+	return gDLL->getPythonIFace()->getMapScriptModule();
 }
 
 int	CvMap::getNumViewports() const
