@@ -321,7 +321,7 @@ CvPlayer::~CvPlayer()
 
 	SAFE_DELETE_ARRAY(m_cachedBonusCount);
 
-	for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+	for (int i = 0, num = m_groupCycles.size(); i < num; i++)
 	{
 		SAFE_DELETE(m_groupCycles[i]);
 		SAFE_DELETE(m_plotGroups[i]);
@@ -748,7 +748,7 @@ void CvPlayer::uninit()
 
 	m_contractBroker.reset();
 
-	for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+	for (int i = 0, num = m_groupCycles.size(); i < num; i++)
 	{
 		m_groupCycles[i]->clear();
 		m_plotGroups[i]->uninit();
@@ -1469,7 +1469,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_aUnitExtraCosts.clear();
 		m_triggersFired.clear();
 	}
-	for (int i = 0, numMaps = GC.getNumMapInfos(); i < numMaps; i++)
+	for (int i = 0, num = m_groupCycles.size(); i < num; i++)
 	{
 		m_plotGroups[i]->removeAll();
 		m_cities[i]->removeAll();
@@ -3050,7 +3050,7 @@ CvUnit* CvPlayer::initUnit(UnitTypes eUnit, int iX, int iY, UnitAITypes eUnitAI,
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(eUnit != NO_UNIT, "Unit is not assigned a valid value");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
 
 	CvUnit* pUnit = addUnit();
 	FAssertMsg(pUnit != NULL, "Unit is not assigned a valid value");
@@ -12378,6 +12378,14 @@ void CvPlayer::setNewPlayerAlive(bool bNewValue)
 	}
 }
 
+template <class T>
+bool hasAny(const std::vector<FFreeListTrashArray<T>*>& vector)
+{
+	foreach_(const FFreeListTrashArray<T>* container, vector)
+		if (container->getCount() > 0)
+			return false;
+	return true;
+}
 
 void CvPlayer::verifyAlive()
 {
@@ -12391,12 +12399,14 @@ void CvPlayer::verifyAlive()
 		// Check if player is defeated
 		if (
 			// No city nor units is always defeat
-			getNumCities() == 0
-			//algo::all_of(getAllCities(), bind(&FFreeListTrashArray<CvCityAI>::getCount, &_1) == 0)
+			//getNumCities() == 0
+			//algo::all_of(getAllCities(), bind(FFreeListTrashArray<CvCityAI>::getCount, _1) == 0)
+			hasAny(m_cities)
 		&&
 			( // No city confirmed
-				getNumUnits() == 0
-				//algo::all_of(getAllUnits(), bind(&FFreeListTrashArray<CvUnitAI>::getCount, &_1) == 0)
+				//getNumUnits() == 0
+				//algo::all_of(getAllUnits(), bind(FFreeListTrashArray<CvUnitAI>::getCount, _1) == 0)
+				hasAny(m_units)
 				||
 				// Are units enough to stay alive?
 				!GC.getGame().isOption(GAMEOPTION_COMPLETE_KILLS) // If option is active, YES.
@@ -15687,23 +15697,29 @@ CLLNode<CvWString>* CvPlayer::headCityNameNode() const
 
 void CvPlayer::addContainersForEachMap()
 {
-	while ((int)m_groupCycles.size() < GC.getNumMapInfos())
+	for (int i = m_groupCycles.size(), num = GC.getNumMapInfos(); i < num; i++)
+	//while ((int)m_groupCycles.size() < GC.getNumMapInfos())
 	{
 		m_groupCycles.push_back(new CLinkList<int>);
 		m_plotGroups.push_back(new FFreeListTrashArray<CvPlotGroup>);
 		m_cities.push_back(new FFreeListTrashArray<CvCityAI>);
 		m_units.push_back(new FFreeListTrashArray<CvUnitAI>);
 		m_selectionGroups.push_back(new FFreeListTrashArray<CvSelectionGroupAI>);
+
+		m_plotGroups[i]->init();
+		m_cities[i]->init();
+		m_units[i]->init();
+		m_selectionGroups[i]->init(); 
 	}
 }
 
 void CvPlayer::initContainersForMap(MapTypes mapIndex)
 {
-	int index = static_cast<int>(mapIndex);
-	m_plotGroups[index]->init();
-	m_cities[index]->init();
-	m_units[index]->init();
-	m_selectionGroups[index]->init(); 
+	//const int index = static_cast<int>(mapIndex);
+	m_plotGroups[mapIndex]->init();
+	m_cities[mapIndex]->init();
+	m_units[mapIndex]->init();
+	m_selectionGroups[mapIndex]->init(); 
 }
 
 
@@ -15794,7 +15810,6 @@ int CvPlayer::getNumCities() const
 {
 	return m_cities[CURRENT_MAP]->getCount();
 }
-
 
 CvCity* CvPlayer::getCity(int iID) const
 {

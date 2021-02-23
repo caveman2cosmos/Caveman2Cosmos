@@ -610,27 +610,9 @@ DirectionTypes cvInternalGlobals::getXYDirection(int i, int j) const
 	return m_aaeXYDirection[i][j];
 }
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-bool cvInternalGlobals::multiMapsEnabled() const
-{
-	return m_bMultimapsEnabled;
-}
-
-bool cvInternalGlobals::viewportsEnabled() const
-{
-	return m_bViewportsEnabled;
-}
-
-bool cvInternalGlobals::getReprocessGreatWallDynamically() const
-{
-	return m_bViewportsEnabled || (getDefineBOOL("DYNAMIC_GREAT_WALL") != 0);
-}
-
 int cvInternalGlobals::getNumMapInfos() const
 {
-	return multiMapsEnabled() ? m_paMapInfo.size() : 1;
+	return m_paMapInfo.size();
 }
 
 CvMapInfo& cvInternalGlobals::getMapInfo(MapTypes eMap) const
@@ -638,36 +620,6 @@ CvMapInfo& cvInternalGlobals::getMapInfo(MapTypes eMap) const
 	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eMap)
 	return *(m_paMapInfo[eMap]);
 }
-
-void cvInternalGlobals::updateMaps()
-{
-	for (int i = 1; i < GC.getNumMapCategoryInfos(); i++)
-	{
-		m_maps.push_back(new CvMap((MapTypes)i));
-	}
-	FAssert(m_maps.size() == GC.getNumMapCategoryInfos());
-
-	for (int i = 0; i < MAX_PLAYERS; i++)
-	{
-		GET_PLAYER((PlayerTypes)i).addContainersForEachMap();
-	}
-}
-
-void cvInternalGlobals::setResourceLayer(bool bOn)
-{
-	m_bResourceLayerOn = bOn;
-
-	gDLL->getEngineIFace()->setResourceLayer(bOn);
-}
-
-bool cvInternalGlobals::getResourceLayer() const
-{
-	return m_bResourceLayerOn;
-}
-
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 int cvInternalGlobals::getNumWorldInfos() const
 {
@@ -2937,6 +2889,50 @@ void cvInternalGlobals::cacheInfoTypes()
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
+bool cvInternalGlobals::multiMapsEnabled() const
+{
+	return m_bMultimapsEnabled;
+}
+
+bool cvInternalGlobals::viewportsEnabled() const
+{
+	return m_bViewportsEnabled;
+}
+
+bool cvInternalGlobals::getReprocessGreatWallDynamically() const
+{
+	return m_bViewportsEnabled || getDefineBOOL("DYNAMIC_GREAT_WALL");
+}
+
+void cvInternalGlobals::updateMaps()
+{
+	if (getDefineINT("ENABLE_MULTI_MAPS"))
+	{
+		for (int i = 1; i < GC.getNumMapInfos(); i++)
+		{
+			m_maps.push_back(new CvMap((MapTypes)i));
+		}
+
+		FAssert(m_maps.size() == GC.getNumMapInfos());
+
+		for (int i = 0; i < MAX_PLAYERS; i++)
+		{
+			GET_PLAYER((PlayerTypes)i).addContainersForEachMap();
+		}
+	}
+}
+
+void cvInternalGlobals::setResourceLayer(bool bOn)
+{
+	m_bResourceLayerOn = bOn;
+
+	gDLL->getEngineIFace()->setResourceLayer(bOn);
+}
+
+bool cvInternalGlobals::getResourceLayer() const
+{
+	return m_bResourceLayerOn;
+}
 
 void cvInternalGlobals::switchMap(MapTypes eMap)
 {	
@@ -3008,6 +3004,8 @@ void cvInternalGlobals::reprocessSigns()
 
 void cvInternalGlobals::initializeMap(MapTypes eMap)
 {
+	FASSERT_BOUNDS(0, getNumMapInfos(), eMap)
+
 	OutputDebugString("Initializing Map: Start\n");
 	//while ( m_maps.size() < (size_t)eMap )
 	//{
@@ -3026,6 +3024,7 @@ void cvInternalGlobals::initializeMap(MapTypes eMap)
 
 bool cvInternalGlobals::mapInitialized(MapTypes eMap) const
 {
+	FASSERT_BOUNDS(0, getNumMapInfos(), eMap)
 	return (m_maps.size() > (size_t)eMap && m_maps[eMap] != NULL);
 }
 

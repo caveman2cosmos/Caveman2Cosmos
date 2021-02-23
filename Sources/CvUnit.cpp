@@ -1391,21 +1391,14 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 	m_aiExtraBuildTypes = other.m_aiExtraBuildTypes;
 	m_aExtraAidChanges = other.m_aExtraAidChanges;
 
-	//if (!bConstructorCall)
-	{
-		m_promotionKeyedInfo.clear();
-		m_promotionLineKeyedInfo.clear();
-		m_terrainKeyedInfo.clear();
-		m_featureKeyedInfo.clear();
-		m_unitCombatKeyedInfo.clear();
+	m_promotionKeyedInfo = other.m_promotionKeyedInfo;
+	m_promotionLineKeyedInfo = other.m_promotionLineKeyedInfo;
+	m_terrainKeyedInfo = other.m_terrainKeyedInfo;
+	m_featureKeyedInfo = other.m_featureKeyedInfo;
+	m_unitCombatKeyedInfo = other.m_unitCombatKeyedInfo;
 
-		//if (!bIdentityChange)
-		//{
-		//	AI_reset(NO_UNITAI, true);
-		//}
-	}
 	m_pPlayerInvestigated = other.m_pPlayerInvestigated;
-	m_Properties.clear();
+	m_Properties = other.m_Properties;
 
 	return *this;
 }

@@ -668,12 +668,9 @@ void CvGame::uninit()
 		{
 			if ( GC.mapInitialized((MapTypes)i) )
 			{
-				// Cast to the internal class
-				CvMap&	map = GC.getMapByIndex((MapTypes)i);
-
 				CvMapInitData defaultMapData;
 
-				map.reset(&defaultMapData);
+				GC.getMapByIndex((MapTypes)i).reset(&defaultMapData);
 			}
 		}
 
@@ -11936,7 +11933,6 @@ const CvProperties* CvGame::getPropertiesConst() const
 
 MapTypes CvGame::getCurrentMap() const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), m_eCurrentMap)
 	return m_eCurrentMap;
 }
 

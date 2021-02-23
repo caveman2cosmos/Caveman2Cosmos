@@ -391,7 +391,7 @@ void CvMap::updateIncomingUnits()
 			CvPlayer& owner = GET_PLAYER(unit.getOwner());
 			owner.addUnit(unit);
 			owner.findStartingPlot()->addUnit(&unit);
-			m_IncomingUnits.erase(itr);
+			//m_IncomingUnits.erase(itr);
 		}
 	}
 }

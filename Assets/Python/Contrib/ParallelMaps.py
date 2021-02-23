@@ -1,5 +1,5 @@
-from CvPythonExtensions import CyGlobalContext, CyGame
-from CvUtil import sendImmediateMessage
+from CvPythonExtensions import CyGlobalContext
+import BugEventManager
 
 GC = CyGlobalContext()
 bIsSwitchingMap = False
@@ -8,27 +8,15 @@ bIsSwitchingMap = False
 class ParallelMaps:
 
 	def __init__(self, pEventManager):
-		self.pEventManager = pEventManager
-		self.pEventManager.addEventHandler("kbdEvent", self.enableMultiMaps)
-
-	def enableMultiMaps(self, argsList):
-		self.pEventManager.removeEventHandler("kbdEvent", self.enableMultiMaps)
-		if GC.enableMultiMaps():
-			GC.updateMaps()
-			self.pEventManager.addEventHandler("kbdEvent", self.filterInput)
-			sendImmediateMessage("Multi-Maps enabled.")
+		pEventManager.addEventHandler("kbdEvent", self.filterInput)
 
 	def filterInput(self, argsList):
-		if self.pEventManager.bAlt:
+		if BugEventManager.g_eventManager.bAlt:
 			i = argsList[1] -2
-			if i < GC.getNumMapCategoryInfos() and i != GC.getGame().getCurrentMap():
+			if i < GC.getNumMapInfos() \
+			and i != GC.getGame().getCurrentMap() \
+			and GC.getMapByIndex(i).plotsInitialized():
 				global bIsSwitchingMap
 				bIsSwitchingMap = True
-				if not GC.mapInitialized(i):
-					GC.initializeMap(i)
 				GC.switchMap(i)
 				bIsSwitchingMap = False
-				if i == 0:
-					sendImmediateMessage("Initial map")
-				else:
-					sendImmediateMessage("Map %d" %i)
