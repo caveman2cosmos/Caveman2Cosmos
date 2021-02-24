@@ -13576,6 +13576,8 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	int	iIsAnimalIgnoresBordersChange = 0;
 	int iNoDefensiveBonusChange = 0;
 
+	bool bDefWarning = false;
+
 
 	for (iI = 0; iI < (int)linePromotionsOwned.size(); iI++)
 	{
@@ -13740,6 +13742,16 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		iHiddenNationality += promo.getHiddenNationalityChange();
 		iIsAnimalIgnoresBordersChange += promo.getAnimalIgnoresBordersChange();
 		iNoDefensiveBonusChange += promo.getNoDefensiveBonusChange();
+
+		if (iDefenseCombatModifierChange > 0 ||
+			iRepelChange > 0 ||
+			iFortRepelChange > 0 ||
+			iRepelRetriesChange > 0 ||
+			iStrAdjperDefChange > 0 ||
+			iHillsDefensePercent > 0)
+		{
+			bDefWarning = true;
+		}
 	}
 
 	if (iGetControlPoints > 0)
@@ -14530,6 +14542,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	}
 	if (iCityDefensePercent != 0)
 	{
+		bDefWarning = true;
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CITY_DEFENSE_TEXT", iCityDefensePercent));
 	}
@@ -15080,6 +15093,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		}
 		if (iTerrainDefensePercent != 0)
 		{
+			bDefWarning = true;
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DEFENSE_TEXT", iTerrainDefensePercent, GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
 		}
@@ -15132,6 +15146,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		}
 		if (iFeatureDefensePercent != 0)
 		{
+			bDefWarning = true;
 			szBuffer.append(pcNewline);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DEFENSE_TEXT", iFeatureDefensePercent, GC.getFeatureInfo((FeatureTypes) iI).getTextKeyWide()));
 		}
@@ -15620,6 +15635,12 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	{
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_LEVEL_PREREQ_TEXT", GC.getPromotionInfo(ePromotion).getLevelPrereq()));
+	}
+
+	if (bDefWarning)
+	{
+		szBuffer.append(pcNewline);
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DEF_WARN_TEXT"));
 	}
 
 	if (GC.getPromotionInfo(ePromotion).getHelp()[0] != '\0')
@@ -16512,7 +16533,6 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		szHelpText.append(NEWLINE);
 		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_NO_NON_STATE_SPREAD"));
 	}
-
 	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
 	if (kCivic.getReligionSpreadRate() > 0)
 	{
@@ -20979,12 +20999,6 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 						setListHelp(szBuffer,szTempBuffer, desc.c_str(), separator.c_str(), bFirst);
 						bFirst = false;
 					}
-				}
-
-				for (iI = 0; iI < GC.getUnitInfo(eUnit).getNumPrereqAndBuildings(); ++iI)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_UNIT_REQUIRES_STRING", GC.getBuildingInfo((BuildingTypes)GC.getUnitInfo(eUnit).getPrereqAndBuilding(iI)).getTextKeyWide()));
 				}
 
 				if (GC.getUnitInfo(eUnit).isStateReligion())
@@ -27857,30 +27871,35 @@ void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes 
 
 	bTechFound = false;
 
-	if (GC.getBuildInfo((BuildTypes) iImprovement).getTechPrereq() == NO_TECH)
+	if (GC.getBuildInfo((BuildTypes)iImprovement).getTechPrereq() == NO_TECH)
 	{
-		for (iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
+		if (GC.getBuildInfo((BuildTypes)iImprovement).getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)GC.getBuildInfo((BuildTypes)iImprovement).getRoute()).isSeaTunnel())
 		{
-			if (GC.getBuildInfo((BuildTypes) iImprovement).getFeatureTech(iJ) == eTech)
+			for (iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
 			{
-				bTechFound = true;
+				if (GC.getBuildInfo((BuildTypes)iImprovement).getFeatureTech(iJ) == eTech)
+				{
+					bTechFound = true;
+				}
 			}
-		}
-		for (iJ = 0; iJ < GC.getBuildInfo((BuildTypes)iImprovement).getNumTerrainStructs(); iJ++)
-		{
-			if (GC.getBuildInfo((BuildTypes)iImprovement).getTerrainStruct(iJ).ePrereqTech == eTech)
+			for (iJ = 0; iJ < GC.getBuildInfo((BuildTypes)iImprovement).getNumTerrainStructs(); iJ++)
 			{
-				bTechFound = true;
+				if (GC.getBuildInfo((BuildTypes)iImprovement).getTerrainStruct(iJ).ePrereqTech == eTech)
+				{
+					bTechFound = true;
+				}
 			}
 		}
 	}
 	else
 	{
-		if (GC.getBuildInfo((BuildTypes) iImprovement).getTechPrereq() == eTech)
+		if (GC.getBuildInfo((BuildTypes)iImprovement).getTechPrereq() == eTech)
 		{
 			bTechFound = true;
 		}
 	}
+
+
 
 	if (bTechFound)
 	{
@@ -31827,8 +31846,6 @@ void CvGameTextMgr::setRouteHelp(CvWStringBuffer &szBuffer, RouteTypes eRoute, b
 		}
 		if (bQualified)
 		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(BULLET_CHAR);
 
 			for (iI = 0; iI < GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); iI++)
 			{

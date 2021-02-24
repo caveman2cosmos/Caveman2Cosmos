@@ -128,7 +128,6 @@ class CvMainInterface:
 			self.iMaxPcPlayers			= GC.getMAX_PC_PLAYERS()
 			self.iMaxDefenseDamage		= GC.getMAX_CITY_DEFENSE_DAMAGE()
 			self.fMoveDenominator = float(GC.getMOVE_DENOMINATOR())
-			self.iMaxTradeRoutes		= GC.getDefineINT("MAX_TRADE_ROUTES")
 			self.bNegGoldIsMaintenance	= GC.getDefineINT("TREAT_NEGATIVE_GOLD_AS_MAINTENANCE")
 			self.iNumTechInfos			= GC.getNumTechInfos()
 			self.iNumReligionInfos		= GC.getNumReligionInfos()
@@ -2627,7 +2626,7 @@ class CvMainInterface:
 				screen.show("TradeRouteListLabel")
 			# Trade
 			aList = []
-			for iRoute in xrange(self.iMaxTradeRoutes):
+			for iRoute in xrange(CyCity.getMaxTradeRoutes()):
 				CyCityX = CyCity.getTradeCity(iRoute)
 				if not CyCityX: continue
 				iPlayerX = CyCityX.getOwner()
