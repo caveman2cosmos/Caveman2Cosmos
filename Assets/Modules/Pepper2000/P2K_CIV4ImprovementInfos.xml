@@ -95,7 +95,7 @@
 			</TerrainMakesValids>
 			<iUniqueRange>2</iUniqueRange>
 			<FeatureMakesValids/>
-			<ImprovementPillage/>
+			<ImprovementPillage>IMPROVEMENT_SPACE_STATION_LV1</ImprovementPillage>			
 			<ImprovementUpgrade>IMPROVEMENT_SPACE_STATION_LV3</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<RouteYieldChanges/>
@@ -145,7 +145,7 @@
 			</TerrainMakesValids>
 			<iUniqueRange>2</iUniqueRange>
 			<FeatureMakesValids/>
-			<ImprovementPillage/>
+			<ImprovementPillage>IMPROVEMENT_SPACE_STATION_LV2</ImprovementPillage>
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<RouteYieldChanges/>
@@ -538,9 +538,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_MOON</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -574,9 +571,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_MARS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_GRASS</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -618,9 +612,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_NEUTRON_STAR</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_NEUTRON_STAR</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>0</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -648,11 +639,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_HYPERSPACE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_HYPERSPACE</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -678,11 +664,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_PAST</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_PAST</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -708,11 +689,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_FUTURE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_FUTURE</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -738,11 +714,6 @@
 			<Description>TXT_KEY_BUILD_TERRAFORM_BRANESPACE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_BRANESPACE</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirBombDefense>-1</iAirBombDefense>
@@ -1628,7 +1599,7 @@
 			<iHappiness>0</iHappiness>
 			<iPillageGold>200</iPillageGold>
 			<FeatureMakesValids/>
-			<ImprovementPillage/>
+			<ImprovementPillage>IMPROVEMENT_JOVIAN_LUNAR_BASE</ImprovementPillage>
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<RouteYieldChanges/>
@@ -3157,7 +3128,7 @@
 			<iHappiness>0</iHappiness>
 			<iPillageGold>200</iPillageGold>
 			<FeatureMakesValids/>
-			<ImprovementPillage/>
+			<ImprovementPillage>IMPROVEMENT_SATELLITE_STATION</ImprovementPillage>
 			<ImprovementUpgrade>NONE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes/>
 			<RouteYieldChanges/>
@@ -3794,6 +3765,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<ImprovementPillage>IMPROVEMENT_LUNAR_BASE</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_LUNAR_HABITATION_COMPLEX</ImprovementUpgrade>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -3807,6 +3779,7 @@
 				<iYieldChange>10</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_LUNAR_OUTPOST</ImprovementPillage>
 			<iPillageGold>1000</iPillageGold>
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
@@ -3847,6 +3820,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_LUNAR_MINING_OUTPOST</ImprovementPillage>
 			<iPillageGold>200</iPillageGold>
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
