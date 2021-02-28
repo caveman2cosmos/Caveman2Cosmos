@@ -276,7 +276,8 @@ protected:
 	FFreeListTrashArray<CvArea> m_areas;
 
 #ifdef PARALLEL_MAPS
-	std::vector<std::pair<CvUnitAI, int> > m_IncomingUnits;
+	typedef std::pair<CvUnitAI, int> IncomingUnit;
+	std::vector<IncomingUnit> m_IncomingUnits;
 #endif
 
 	void calculateAreas();

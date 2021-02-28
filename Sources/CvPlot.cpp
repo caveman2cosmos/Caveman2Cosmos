@@ -75,7 +75,7 @@ CvPlot::CvPlot()
 	m_aiFoundValue = NULL;
 	m_aiPlayerCityRadiusCount = NULL;
 	m_aiPlotGroup = NULL;
-	m_aiVisibilityCount = new short[MAX_TEAMS];
+	m_aiVisibilityCount = NULL;
 	m_aiLastSeenTurn = NULL;
 	m_aiDangerCount = NULL;
 	m_aiStolenVisibilityCount = NULL;
@@ -8792,6 +8792,9 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 int CvPlot::getVisibilityCount(TeamTypes eTeam) const
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
+#ifdef PARALLEL_MAPS
+	return m_aiVisibilityCount ? m_aiVisibilityCount[eTeam] : 0;
+#endif
 	return m_aiVisibilityCount[eTeam];
 }
 
@@ -8853,24 +8856,9 @@ void CvPlot::clearVisibilityCounts()
 	{
 		m_aiVisibilityCount[iI] = 0;
 	}
-	SAFE_DELETE(m_aiStolenVisibilityCount);
-	if (NULL != m_apaiInvisibleVisibilityCount)
-	{
-		for (int iI = 0; iI < MAX_TEAMS; ++iI)
-		{
-			SAFE_DELETE_ARRAY(m_apaiInvisibleVisibilityCount[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_apaiInvisibleVisibilityCount);
-	}
-
-	//if (NULL != m_apaiCachedHighestTeamInvisibilityIntensity)
-	//{
-	//	for (int iI = 0; iI < MAX_TEAMS; ++iI)
-	//	{
-	//		SAFE_DELETE_ARRAY(m_apaiCachedHighestTeamInvisibilityIntensity[iI]);
-	//	}
-	//	SAFE_DELETE_ARRAY(m_apaiCachedHighestTeamInvisibilityIntensity);
-	//}
+	SAFE_DELETE_ARRAY(m_aiStolenVisibilityCount);
+	SAFE_DELETE_ARRAY2(m_apaiInvisibleVisibilityCount, MAX_TEAMS);
+	//SAFE_DELETE_ARRAY2(m_apaiCachedHighestTeamInvisibilityIntensity, MAX_TEAMS);
 	m_resultHashMap->clear();
 	g_bestDefenderCache->clear();
 	m_aPlotTeamVisibilityIntensity.clear();

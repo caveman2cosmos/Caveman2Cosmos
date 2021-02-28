@@ -377,7 +377,7 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 #ifdef PARALLEL_MAPS
 void CvMap::updateIncomingUnits()
 {
-	for (std::vector<std::pair<CvUnitAI, int> >::iterator itr = m_IncomingUnits.begin(), itrEnd = m_IncomingUnits.end(); itr != itrEnd; ++itr)
+	for (std::vector<IncomingUnit>::iterator itr = m_IncomingUnits.begin(), itrEnd = m_IncomingUnits.end(); itr != itrEnd; ++itr)
 	{
 		if ((*itr).second-- <= 0)
 		{
@@ -387,10 +387,16 @@ void CvMap::updateIncomingUnits()
 			}
 			CvUnit& offMapUnit = (*itr).first;
 			CvPlayer& owner = GET_PLAYER(offMapUnit.getOwner());
-			CvUnit& onMapUnit = owner.addUnit(offMapUnit);
 			CvPlot* startingPlot = owner.findStartingPlot(*this);
-			onMapUnit.setXY(startingPlot->getX(), startingPlot->getY());
-			onMapUnit.reloadEntity(true);
+			//CvUnit& onMapUnit = owner.addUnit(offMapUnit);
+			CvUnit* onMapUnit = owner.initUnit(offMapUnit.getUnitType(), startingPlot->getX(), startingPlot->getY(), offMapUnit.AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+			if (onMapUnit == NULL)
+			{
+				FErrorMsg("CvPlayer::initUnit returned NULL");
+				continue;
+			}
+			//onMapUnit.setXY(startingPlot->getX(), startingPlot->getY());
+			//onMapUnit.reloadEntity(true);
 			m_IncomingUnits.erase(itr);
 		}
 	}
@@ -1277,6 +1283,16 @@ void CvMap::read(FDataStreamBase* pStream)
 
 	setup();
 
+	size_t numUnits;
+	WRAPPER_READ_DECORATED(wrapper, "CvMap", &numUnits, "numUnits")
+	for (uint32_t i = 0; i < numUnits; i++)
+	{
+		int turns;
+		WRAPPER_READ_DECORATED(wrapper, "CvMap", &turns, "turns")
+		m_IncomingUnits.push_back(std::make_pair(CvUnitAI(), turns));
+		m_IncomingUnits[i].first.read(pStream);
+	}
+
 	WRAPPER_READ_OBJECT_END(wrapper);
 
 	OutputDebugString("Reading Map: End\n");
@@ -1315,6 +1331,13 @@ void CvMap::write(FDataStreamBase* pStream)
 
 	// call the read of the free list CvArea class allocations
 	WriteStreamableFFreeListTrashArray(m_areas, pStream);
+
+	WRAPPER_WRITE_DECORATED(wrapper, "CvMap", m_IncomingUnits.size(), "numUnits")
+	foreach_(IncomingUnit& incomingUnit, m_IncomingUnits)
+	{
+		WRAPPER_WRITE_DECORATED(wrapper, "CvMap", incomingUnit.second, "turns")
+		incomingUnit.first.write(pStream);
+	}
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }

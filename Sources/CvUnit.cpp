@@ -1035,8 +1035,8 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 	//	m_iGroupID = other.m_iGroupID;
 	//}
 	m_iHotKeyNumber = other.m_iHotKeyNumber;
-	m_iX = other.m_iX;
-	m_iY = other.m_iY;
+	//m_iX = other.m_iX;
+	//m_iY = other.m_iY;
 	m_iLastMoveTurn = other.m_iLastMoveTurn;
 	m_iReconX = other.m_iReconX;
 	m_iReconY = other.m_iReconY;
@@ -42766,9 +42766,10 @@ bool CvUnit::canGoToMap(const CvMissionInfo& info) const
 void CvUnit::goToMap(MapTypes eMap)
 {
 	GC.getMapByIndex(eMap).addIncomingUnit(static_cast<CvUnitAI&>(*this), 1);
-	plot()->removeUnit(this);
-	joinGroup(nullptr);
+	//plot()->removeUnit(this);
+	//joinGroup(nullptr);
 	//setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true, false);
-	GET_PLAYER(getOwner()).deleteUnit(getID(), eMap);
+	//GET_PLAYER(getOwner()).deleteUnit(getID(), eMap);
+	kill(false, NO_PLAYER);
 }
 #endif
