@@ -826,6 +826,7 @@
 		<German>[ICON_BULLET]kann ohne Kriegserklärung angreifen</German>
 		<Italian>[ICON_BULLET]Può attaccare senza dichiarare guerra</Italian>
 		<Spanish>[ICON_BULLET]Puede atacar sin declarar la guerra</Spanish>
+		<Russian>[ICON_BULLET]Может атаковать без объявления войны</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_AGHLAB</Tag>
@@ -6312,6 +6313,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_CUTTHROAT_STRATEGY</Tag>
 		<English>Cutthroats blend the Criminal and Ruffian lines. They have elements of both but in general are the best of both worlds. They can infilitrate cities but also blend with barbarians. Cutthroats aren't as skilled at getting information as Burglars but, like Assassins which are a blend of Criminal and Strike Team, Cutthroats are much stronger than the normal Criminal. This is largely due to their larger group size.[PARAGRAPH:2]Bands of Cutthroats were a major problem for travellers throughout the middle ages and they could gang up in cities and be equally major problems for Law Enforcement. In the Middle Ages, many would live by the sword and die by the sword and if they had enough skill to do so, would reject that the Law had any bearing on them whatsoever. Banding with others of their ilk, the Criminal Guilds rose to some significant power.</English>
 		<French>Coupe-gorge mélange les lignes Criminal et Ruffian. Ils ont des éléments des deux mais sont en général les meilleurs des deux mondes. Ils peuvent infiltrer les villes mais aussi se mélanger aux barbares. Coupe-gorge n'est pas aussi habile à obtenir des informations que les cambrioleurs mais, comme les Assassins qui sont un mélange de Criminel et Strike Team, Coupe-gorge sont beaucoup plus forts que le Criminal normal. Cela est largement dû à leur plus grande taille de groupe.[PARAGRAPH:2]Les bandes coupées étaient un problème majeur pour les voyageurs à travers le moyen âge et elles pouvaient se regrouper dans les villes et être également des problèmes majeurs pour les forces de l'ordre. Au Moyen-Âge, beaucoup vivraient par l'épée et mourraient par l'épée et s'ils avaient suffisamment d'habileté pour le faire, rejetteraient que la loi avait une quelconque incidence sur eux. Se regroupant avec d'autres de leur acabit, les guildes criminelles ont atteint un certain pouvoir important.</French>
+		<Russian>[TAB]Головорезы сочетают в себе черты преступника и шпиона. В них есть элементы и того и другого, но в целом они лучшее из обоих миров. Они могут проникать в города, но также могут сливаться с варварами. Головорезы не так искусны в получении информации, как Воры или Мошенники, но, как и убийцы, представляющие собой помесь преступников и ударных групп, головорезы намного сильнее обычных преступников. Во многом это связано с их большим размером группы.[PARAGRAPH:2]Банды головорезов были серьезной проблемой для путешественников в Средние века, они могли собираться в городах и быть столь же серьезной проблемой для сил правопорядка. В средневековье жизнь многих зависела от меча и заканчивалась от меча, и если бы у них было достаточно навыков для этого, они бы отвергли жизнь под властью Закона, ибо он - удел слабых. Объединяясь с себе подобными в Гильдии преступников они достигли значительной власти.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CYAXARES</Tag>
@@ -9299,7 +9301,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wozy Zaopatrzeniowe</Polish>
-		<Russian>Òîâàðíûé ïîåçä</Russian>
+		<Russian>Òîâàðíûé âîç</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FOREST_GUARDIANS</Tag>
