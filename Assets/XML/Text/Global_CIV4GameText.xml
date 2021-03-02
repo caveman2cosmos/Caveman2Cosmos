@@ -21340,4 +21340,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Italian>[COLOR_WARNING_TEXT]Richiede %s1_Text[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Text[COLOR_REVERT]</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ENEMY_TROOPS_SPOTTED</Tag>
+		<English>The enemy has been spotted near %s1_CityName!</English>
+	</TEXT>
 </Civ4GameText>
