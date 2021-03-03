@@ -414,22 +414,6 @@
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>MAX_WORLD_WONDERS_PER_CITY</DefineName>
-		<iDefineIntVal>14</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_TEAM_WONDERS_PER_CITY</DefineName>
-		<iDefineIntVal>16</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_NATIONAL_WONDERS_PER_CITY</DefineName>
-		<iDefineIntVal>31</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_NATIONAL_WONDERS_PER_CITY_FOR_OCC</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>INITIAL_CITY_POPULATION</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
