@@ -262,6 +262,10 @@
 		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
+		<DefineName>EVENT_MESSAGE_STAGGER_TIME</DefineName>
+		<iDefineIntVal>3</iDefineIntVal>
+	</Define>
+	<Define>
 		<DefineName>START_YEAR</DefineName>
 		<iDefineIntVal>-200000</iDefineIntVal>
 	</Define>
