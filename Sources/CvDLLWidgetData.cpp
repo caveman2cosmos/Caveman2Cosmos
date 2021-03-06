@@ -4749,27 +4749,6 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 	if (kActiveTeam.isHasMet(eTeam) || GC.getGame().isDebugMode())
 	{
-		if (!kPlayer.isHuman())
-		{
-			if (!kPlayer.AI_isWillingToTalk(eActivePlayer))
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_REFUSES_TO_TALK"));
-			}
-			if (!gDLL->altKey() && !gDLL->ctrlKey() || gDLL->getChtLvl() <= 0)
-			{
-				szBuffer.append(NEWLINE);
-				GAMETEXT.getEspionageString(szBuffer, ePlayer, eActivePlayer);
-
-				GAMETEXT.getAttitudeString(szBuffer, ePlayer, eActivePlayer);
-			}
-		}
-		else
-		{
-			szBuffer.append(NEWLINE);
-			GAMETEXT.getEspionageString(szBuffer, ePlayer, eActivePlayer);
-		}
-
 		if (!gDLL->altKey() && !gDLL->ctrlKey() || gDLL->getChtLvl() <= 0)
 		{
 			if (gDLL->ctrlKey() && ePlayer != eActivePlayer)
@@ -4786,7 +4765,28 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 		if (eTeam != eActiveTeam)
 		{
-			if( !(kActiveTeam.isAtWar(eTeam)))
+			if (!kPlayer.isHuman())
+			{
+				if (!kPlayer.AI_isWillingToTalk(eActivePlayer))
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_MISC_REFUSES_TO_TALK"));
+				}
+				if (!gDLL->altKey() && !gDLL->ctrlKey() || gDLL->getChtLvl() <= 0)
+				{
+					szBuffer.append(NEWLINE);
+					GAMETEXT.getEspionageString(szBuffer, ePlayer, eActivePlayer);
+
+					GAMETEXT.getAttitudeString(szBuffer, ePlayer, eActivePlayer);
+				}
+			}
+			else
+			{
+				szBuffer.append(NEWLINE);
+				GAMETEXT.getEspionageString(szBuffer, ePlayer, eActivePlayer);
+			}
+
+			if (!kActiveTeam.isAtWar(eTeam))
 			{
 				if (kActiveTeam.canDeclareWar(eTeam))
 				{
@@ -4798,7 +4798,6 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 					szBuffer.append(NEWLINE);
 					szBuffer.append(gDLL->getText("TXT_KEY_MISC_CANNOT_DECLARE_WAR"));
 				}
-
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_SHIFT_ALT_PREPARE_WAR"));
 			}
