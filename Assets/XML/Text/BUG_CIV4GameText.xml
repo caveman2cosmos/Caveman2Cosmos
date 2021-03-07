@@ -1332,7 +1332,7 @@
 		<Tag>TXT_KEY_BUG_OPT_ACO__SHOWSHIFTINSTRUCTIONS_HOVER</Tag>
 		<English>Select when to show the instructions for pressing [SHIFT] to see the alternate view.</English>
 		<French>Sélectionner dans quelle condition afficher le conseil concernant la touche [SHIFT] qui permet d'afficher la vue alternative.</French>
-		<German>Bestimmt, wann der Hinweis zum Drücken der [SHIFT]-Taste für den Wechsel zur alternativen Ansicht angezeigt wird</German>
+		<German>Bestimmt, wann der Hinweis zum Drücken der [UMSCHALT]-Taste für den Wechsel zur alternativen Ansicht angezeigt wird</German>
 		<Italian>Quando è selezionato, mostra la vista alternativa delle istruzioni premendo [SHIFT].</Italian>
 		<Spanish>Indica cuándo mostrar las instrucciones para presionar [SHIFT] para ver la vista alternativa.</Spanish>
 	</TEXT>
@@ -1340,7 +1340,7 @@
 		<Tag>TXT_KEY_BUG_OPT_ACO__SHOWSHIFTINSTRUCTIONS_TEXT</Tag>
 		<English>[SHIFT] Instructions</English>
 		<French>Conseil [SHIFT]</French>
-		<German>[SHIFT]-Hinweis</German>
+		<German>[UMSCHALT]-Hinweis</German>
 		<Italian>[SHIFT] Istruzioni</Italian>
 		<Spanish>[SHIFT] Instrucciones</Spanish>
 	</TEXT>

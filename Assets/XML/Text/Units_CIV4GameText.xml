@@ -411,6 +411,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AFRICAN_PENGUIN_PEDIA</Tag>
 		<English>African Penguins are about 68 cm in length, and weigh between 2.1 and 3.7 kg. Spheniscus is a diminutive of the Greek word spen, meaning a wedge, which refers to their streamlined swimming shape, while demersus is a Latin word meaning plunging.[PARAGRAPH:2]African Penguins are black above and white below, with a black chin and face patch separated from the crown by a broad white band. They have a narrow black band across the chest and down the flanks towards its legs. Some birds show a double bar on the throat and chest, which is a diagnostic feature of Magellanic Penguins. Males tend to be larger with heavier bills, but these differences usually can only be seen when a pair is seen together. Juveniles differ from adults by being entirely blue-grey above, and lacking the white face markings and black breast band of the adults.[PARAGRAPH:2]The African Penguin is the only penguin species that breeds in Africa, and it is found nowhere else. Its distribution coincides roughly with the cold, nutrient rich, Benguela Current. The distribution of African Penguins is further determined by the availability of offshore islands as breeding sites.</English>
+		<German>Der [COLOR_UNIT_TEXT]Brillenpinguin[COLOR_REVERT] (Spheniscus demersus) ist die einzige Pinguinart, die heute noch in Afrikas freier Wildbahn lebt. Dazu gehören die Westküste und zahlreiche Inseln von Angola bis zur südafrikanischen Ostküste und nach Mosambik.[NEWLINE]Brillenpinguine werden maximal 70 cm groß und 3 kg schwer. Sie sind auffällig schwarz-weiß gefärbt. Die Hinterseite, das Kinn und die Wangen sind schwarz, der Bauch ist weiß mit einem schmalen, schwarzen Band über der Brust und den Körperseiten. Vom Schnabel aus und um die Augen geht ein rosa Fleck, welcher ihnen den deutschen Namen verschaffte. Brillenpinguine leben in Kolonien. Die Eiablage erfolgt in Küstennähe, wobei sie teilweise Höhlen nutzen, die sie mit Holzstücken und Federn auspolstern. Auch selbst ausgescharrte, flache Vertiefungen dienen als Brutplatz. Ein Weibchen legt zwei Eier. Jungtiere besitzen zunächst ein Daunenkleid, bevor sie nach drei Monaten ihr Alterskleid bekommen. Die Nahrung der Brillenpinguine besteht zum größten Teil aus Schwarmfischen, teilweise jagen sie auch Krebse und andere Krustentiere.[NEWLINE]Pinguineier galten in den 1950er und 1960er Jahren als Delikatesse, besonders in der französichen Küche. Das führte zum dramatischen Rückgang der Population. Dazu kam die Nutzung des Guanos als Dünger, der jedoch als Nistmaterial gebraucht wird. Schiffsunglücke, Ölkatastrophen usw. verschmutzen den Lebensraum der Tiere, was häufig tödlich endet. Die Fischerei entzieht den Pinguinen die Nahrungsgrundlage, weshalb sie ihre Jagdreviere weiter ausdehnen und auch mit weniger nahrhafter Beute vorliebnehmen müssen. Die Organisation SANCCOB betreibt in Südafrika eine Auffangstation für Seevögel, die durch Ölkrisen zu Schaden gekommen sind. Dadurch sind die Pinguinbestände wieder um 19 % gewachsen. Des Weiteren werden Brillenpinguine weltweit in Zoos gehalten, da sie nicht zwingend niedrige Temperaturen benötigen.</German>
 		<Polish>Pingwin przylądkowy, pingwin toniec (Spheniscus demersus) - gatunek ptaka z rodziny pingwinów (Spheniscidae), o czarnym wierzchu ciała i masce, z wyraźną białą brwią. Skóra wokół oczu i nad nimi różowa, dziób czarny z jasną przepaską przy końcu. Spód ciała biały, z czarnym pasem na piersi. Żyje samotnie lub w stadkach, żeruje na morzu.</Polish>
 	</TEXT>
 	<TEXT>
@@ -15677,6 +15678,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_MAMMOTH</Tag>
 		<English>Mammoth</English>
 		<French>Mammouth</French>
+		<German>
+			<Text>Mammut:Mammuts:Mammut:Mammut:Mammuts:Mammuts:Mammuts:Mammuts</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Mammuth</Italian>
 		<Spanish>
 			<Text>Mamut</Text>

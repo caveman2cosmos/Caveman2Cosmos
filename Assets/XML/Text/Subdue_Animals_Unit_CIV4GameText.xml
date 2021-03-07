@@ -960,6 +960,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_NILECROC</Tag>
 		<English>Subdued Nile Crocodile</English>
 		<French>Crocodile du Nil (App.)</French>
+		<German>
+			<Text>Gefangenes Nilkrokodil:Gefangenen Nilkrokodils:Gefangenen Nilkrokodil:Gefangene Nilkrokodil:Gefangene Nilkrokodile:Gefangenen Nilkrokodile:Gefangenen Nilkrokodilen:Gefangenen Nilkrokodile</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Coccodrillo del Nilo addomesticato</Text>
 			<Gender>Male</Gender>

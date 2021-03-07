@@ -47,6 +47,7 @@
 		<Tag>TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_HIT_MODIFIER</Tag>
 		<English>Attacker to Hit Modifier/Round:</English>
 		<French>Modificateur d'Attaque/Round:</French>
+		<German>Angriffsmodifikator pro Runde:</German>
 		<Italian>Modificatore d'attacco per turno:</Italian>
 		<Polish>Celność Atakującego / Runda:</Polish>
 	</TEXT>
@@ -84,6 +85,7 @@
 		<Tag>TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_HIT_MODIFIER</Tag>
 		<English>Defender to Hit Modifier/Round:</English>
 		<French>Modificateur de Défense/Round:</French>
+		<German>Verteidigungsmodifikator pro Runde:</German>		
 		<Italian>Modificatore di difesa per turno:</Italian>
 		<Polish>Celność Obrońcy / Runda:</Polish>
 	</TEXT>
@@ -300,6 +302,7 @@
 		<Tag>TXT_KEY_COMBAT_DEFENDER_DAMAGE_MODIFIER</Tag>
 		<English>[ICON_BULLET]Defender Damage Modifier: %D1_Bonus%%</English>
 		<French>[ICON_BULLET]Modif de dégâts (Défenseur) : %D1_Bonus%%</French>
+		<German>[ICON_BULLET]Schadensmodifikator (Verteidiger): %D1_Bonus%%</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DEFENDER_MAY_AFFLICT</Tag>
@@ -586,6 +589,7 @@
 		<Tag>TXT_KEY_COMBAT_PLOT_ODDS_DEFENDER_RETREAT</Tag>
 		<English>Defender Retreat odds: %s1%%</English>
 		<French>Retraite du Défenseur: %s1%%</French>
+		<German>Rückzugschance (Verteidiger): %s1%%</German>
 		<Italian>Probabilità di ritirata dei difensori: %s1%%</Italian>
 		<Polish>Szanse na Odwrót Obrońcy: %s1%%</Polish>
 	</TEXT>
@@ -593,6 +597,7 @@
 		<Tag>TXT_KEY_COMBAT_PLOT_ODDS_KNOCKBACK</Tag>
 		<English>Defender Knocked Back odds: %s1%%</English>
 		<French>Défenseur écrasé: %s1%%</French>
+		<German>Zurückstoßen des Verteidigers: %s1%%</German>
 		<Italian>Probabilità di sbaraglio dei difensori: %s1%%</Italian>
 		<Polish>Szansa na Odrzut: %s1%%</Polish>
 	</TEXT>
@@ -600,6 +605,7 @@
 		<Tag>TXT_KEY_COMBAT_PLOT_ODDS_REPEL</Tag>
 		<English>Attacker Repelled odds: %s1%%</English>
 		<French>Expulsion de l'Attaquant: %s1%%</French>
+		<German>Abwehr des Angreifers: %s1%%</German>
 		<Italian>Probabilità di respinta degli attaccanti: %s1%%</Italian>
 		<Polish>Szansa na Odepchnięcie: %s1%%</Polish>
 	</TEXT>
@@ -833,6 +839,7 @@
 		<Tag>TXT_KEY_COMBAT_WITHDRAW_ODDS_DEFENDER_EARLY_WITHDRAW</Tag>
 		<English>Defender Early Withdraw:</English>
 		<French>Retraite rapide du Défenseur:</French>
+		<German>Früher Rückzug (Verteidiger):</German>
 		<Italian>Ritirata rapida dei difensori:</Italian>
 		<Polish>Wczesna Ucieczka Obrońcy:</Polish>
 	</TEXT>
@@ -847,6 +854,7 @@
 		<Tag>TXT_KEY_COMBAT_WITHDRAW_ODDS_DEFENDER_WITHDRAWAL</Tag>
 		<English>Defender Withdrawal:</English>
 		<French>Repli du Défenseur:</French>
+		<German>Rückzug (Verteidiger):</German>
 		<Italian>Ritirata dei difensori:</Italian>
 		<Polish>Ucieczka Obrońcy: %s1</Polish>
 	</TEXT>
