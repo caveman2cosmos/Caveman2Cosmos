@@ -4,57 +4,68 @@
 		<Tag>TXT_KEY_BUILDING_AARDVARK_MYTH</Tag>
 		<English>Myth - Aardvark</English>
 		<French>Mythe de l'Oryctérope du Cap</French>
+		<Russian>Ìèô î òðóáêîçóáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AARDVARK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Aardvark</English>
 		<French>Effet (Mythe de l'Oryctérope du Cap)</French>
+		<Russian>Ïåñíÿ î òðóáêîçóáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AARDVARK_STORIES</Tag>
 		<English>Stories - Aardvark</English>
 		<French>Histoires de l'Oryctérope du Cap</French>
+		<Russian>Ñêàçû î òðóáêîçóáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AARDVARK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Aardvark</English>
 		<French>Effet (Histoires de l'Oryctérope du Cap)</French>
+		<Russian>Ïðåäàíèÿ î òðóáêîçóáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AARDVARK_STORY</Tag>
 		<English>Story - Aardvark</English>
 		<French>Histoire de l'Oryctérope du Cap</French>
+		<Russian>Ñêàçêà î òðóáêîçóáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AFRICANELEPHANT_MYTH</Tag>
 		<English>Myth - Elephant, African</English>
 		<French>Mythe de l'Eléphant d'Afrique</French>
+		<Russian>Ìèô îá àôð. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AFRICANELEPHANT_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Elephant, African</English>
 		<French>Effet (Mythe de l'Eléphant d'Afrique)</French>
+		<Russian>Ïåñíÿ îá àôð. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AFRICANELEPHANT_STORIES</Tag>
 		<English>Stories - Elephant, African</English>
 		<French>Histoires de l'Eléphant d'Afrique</French>
+		<Russian>Ñêàçû îá àôð. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AFRICANELEPHANT_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Elephant, African</English>
 		<French>Effet (Histoires de l'Eléphant d'Afrique)</French>
+		<Russian>Ïðåäàíèÿ îá àôð. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AFRICANELEPHANT_STORY</Tag>
 		<English>Story - Elephant, African</English>
 		<French>Histoire de l'Eléphant d'Afrique</French>
+		<Russian>Ñêàçêà îá àôð. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE</Tag>
 		<English>Animal Myth Requirement</English>
 		<French>Pré-requis pour Mythe Animal</French>
 		<German>Grundlage für Tiermythen</German>
+		<Russian>Ìèô î æèâîòíîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE_PEDIA</Tag>
@@ -78,6 +89,7 @@
 		<English>Pseudo national wonder gives free story building in all cities.</English>
 		<French>Sorte de Merveille nationale qui donne un bâtiment histoire gratuit dans chaque ville</French>
 		<Polish>Pseudo Cud Narodowy. Dostarcza darmowe Opowieści do wszystkich Twoich miast.</Polish>
+		<Russian>Êâàçè-íàöèîíàëüíîå ÷óäî ïðåäîñòàâëÿåò áåñïëàòíûå ýôôåêòû îò ñêàçîê âî âñå ãîðîäà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Tag>
@@ -89,6 +101,7 @@
 		<English>Animal Story Requirement</English>
 		<French>Pré-requis pour Histoire Animale</French>
 		<German>Grundlage für Tiergeschichten</German>
+		<Russian>Ñêàçêà î æèâîòíîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Tag>
@@ -100,191 +113,226 @@
 		<Tag>TXT_KEY_BUILDING_ARCTICFOX_MYTH</Tag>
 		<English>Myth - Arctic Fox</English>
 		<French>Mythe du Renard arctique</French>
+		<Russian>Ìèô î ïåñöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCTICFOX_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Arctic Fox</English>
 		<French>Effet (Mythe du Renard arctique)</French>
+		<Russian>Ïåñíÿ î ïåñöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCTICFOX_STORIES</Tag>
 		<English>Stories - Arctic Fox</English>
 		<French>Histoires du Renard arctique</French>
+		<Russian>Ñêàçû î ïåñöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCTICFOX_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Arctic Fox</English>
 		<French>Effet (Histoires du Renard arctique)</French>
+		<Russian>Ïðåäàíèÿ î ïåñöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCTICFOX_STORY</Tag>
 		<English>Story - Arctic Fox</English>
 		<French>Histoire du Renard arctique</French>
+		<Russian>Ñêàçêà î ïåñöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARMADILLO_MYTH</Tag>
 		<English>Myth - Armadillo</English>
 		<French>Mythe du Tatou</French>
+		<Russian>Ìèô î áðîíåíîñöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARMADILLO_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Armadillo</English>
 		<French>Effet (Mythe du Tatou)</French>
+		<Russian>Ïåñíÿ î áðîíåíîñöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARMADILLO_STORIES</Tag>
 		<English>Stories - Armadillo</English>
 		<French>Histoires du Tatou</French>
+		<Russian>Ñêàçû î áðîíåíîñöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARMADILLO_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Armadillo</English>
 		<French>Effet (Histoires du Tatou)</French>
+		<Russian>Ïðåäàíèÿ î áðîíåíîñöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARMADILLO_STORY</Tag>
 		<English>Story - Armadillo</English>
 		<French>Histoire du Tatou</French>
+		<Russian>Ñêàçêà î áðîíåíîñöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASIANELEPHANT_MYTH</Tag>
 		<English>Myth - Elephant, Asian</English>
 		<French>Mythe de l'Eléphant d'Asie</French>
+		<Russian>Ìèô îá àçèàò. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASIANELEPHANT_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Elephant, Asian</English>
 		<French>Effet (Mythe de l'Eléphant d'Asie)</French>
+		<Russian>Ïåñíÿ îá àçèàò. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASIANELEPHANT_STORIES</Tag>
 		<English>Stories - Elephant, Asian</English>
 		<French>Histoires de l'Eléphant d'Asie</French>
+		<Russian>Ñêàçû îá àçèàò. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASIANELEPHANT_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Elephant, Asian</English>
 		<French>Effet (Histoires de l'Eléphant d'Asie)</French>
+		<Russian>Ïðåäàíèÿ îá àçèàò. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASIANELEPHANT_STORY</Tag>
 		<English>Story - Elephant, Asian</English>
 		<French>Histoire de l'Eléphant d'Asie</French>
+		<Russian>Ñêàçêà îá àçèàò. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BABIRUSA_MYTH</Tag>
 		<English>Myth - Babirusa</English>
 		<French>Mythe du babiroussas</French>
+		<Russian>Ìèô î áàáèðóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BABIRUSA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Babirusa</English>
 		<French>Effet (Mythe du babiroussas)</French>
+		<Russian>Ïåñíÿ î áàáèðóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BABIRUSA_STORIES</Tag>
 		<English>Stories - Babirusa</English>
 		<French>Histoires du babiroussas</French>
+		<Russian>Ñêàçû î áàáèðóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BABIRUSA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Babirusa</English>
 		<French>Effet (Histoires du babiroussas)</French>
+		<Russian>Ïðåäàíèÿ î áàáèðóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BABIRUSA_STORY</Tag>
 		<English>Story - Babirusa</English>
 		<French>Histoire du babiroussas</French>
+		<Russian>Ñêàçêà î áàáèðóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAIRDS_TAPIR_MYTH</Tag>
 		<English>Myth - Tapir, Baird's</English>
 		<French>Mythe du Tapir de Baird</French>
 		<Polish>Mit - Tapir Panamski</Polish>
+		<Russian>Ìèô î òàïèðå Áýðäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAIRDS_TAPIR_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Tapir, Baird's</English>
 		<French>Effet (Mythe du Tapir de Baird</French>
 		<Polish>Efekt Mitu - Tapir Panamski</Polish>
+		<Russian>Ïåñíÿ î òàïèðå Áýðäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAIRDS_TAPIR_STORIES</Tag>
 		<English>Stories - Baird's Tapir</English>
 		<French>Histoires des Tapirs de Baird</French>
 		<Polish>Historie - Tapir Panamski</Polish>
+		<Russian>Ñêàçû î òàïèðå Áýðäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAIRDS_TAPIR_STORIES_EFFECT</Tag>
 		<English>Stories Effect (Baird's Tapir)</English>
 		<French>Effet (Histoires des Tapirs de Baird)</French>
 		<Polish>Efekt Historii - Tapir Panamski</Polish>
+		<Russian>Ïðåäàíèÿ î òàïèðå Áýðäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAIRDS_TAPIR_STORY</Tag>
 		<English>Story - Baird's Tapir</English>
 		<French>Histoire du Tapir de Baird</French>
 		<Polish>Opowieść - Tapir Panamski</Polish>
+		<Russian>Ñêàçêà î òàïèðå Áýðäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACK_RHINO_MYTH</Tag>
 		<English>Myth - Rhinoceros, Black</English>
 		<French>Mythe du Rhinocéros noir</French>
 		<Polish>Mit - Nosorożec Czarny</Polish>
+		<Russian>Ìèô î ÷åðí. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACK_RHINO_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Rhinoceros, Black</English>
 		<French>Effet (Mythe du Rhinocéros noir)</French>
 		<Polish>Efekt Mitu - Nosorożec Czarny</Polish>
+		<Russian>Ïåñíÿ î ÷åðí. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACK_RHINO_STORIES</Tag>
 		<English>Stories - Rhinoceros, Black</English>
 		<French>Histoires du Rhinocéros noir</French>
 		<Polish>Historie - Nosorożec Czarny</Polish>
+		<Russian>Ñêàçû î ÷åðí. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACK_RHINO_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Rhinoceros, Black</English>
 		<French>Effet (Histoires du Rhinocéros noir)</French>
 		<Polish>Efekt Historii - Nosorożec Czarny</Polish>
+		<Russian>Ïðåäàíèÿ î ÷åðí. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACK_RHINO_STORY</Tag>
 		<English>Story - Rhinoceros, Black</English>
 		<French>Histoire du Rhinocéros noir</French>
 		<Polish>Opowieść - Nosorożec Czarny</Polish>
+		<Russian>Ñêàçêà î ÷åðí. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRAZILIAN_TAPIR_MYTH</Tag>
 		<English>Myth - Tapir, Brazilian</English>
 		<French>Mythe du Tapir du Brésil</French>
 		<Polish>Mit - Tapir</Polish>
+		<Russian>Ìèô î áðàç. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRAZILIAN_TAPIR_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Tapir, Brazilian</English>
 		<French>Effet (Mythe du Tapir du Brésil)</French>
 		<Polish>Efekt Mitu - Tapir Brazylijski</Polish>
+		<Russian>Ïåñíÿ î áðàç. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRAZILIAN_TAPIR_STORIES</Tag>
 		<English>Stories - Tapir, Brazilian</English>
 		<French>Histoires des Tapirs du Brésil</French>
 		<Polish>Historie - Tapir Brazylijski</Polish>
+		<Russian>Ñêàçû î áðàç. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRAZILIAN_TAPIR_STORIES_EFFECT</Tag>
 		<English>Stories Effect (Brazilian Tapir)</English>
 		<French>Effet (Histoires des Tapirs du Brésil)</French>
 		<Polish>Efekt Historii - Tapir Brazylijski</Polish>
+		<Russian>Ïðåäàíèÿ î áðàç. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRAZILIAN_TAPIR_STORY</Tag>
 		<English>Story - Tapir, Brazilian</English>
 		<French>Histoire du Tapir du Brésil</French>
 		<Polish>Opowieść - Tapir Brazylijski</Polish>
+		<Russian>Ñêàçêà î áðàç. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAIMAN_MYTH</Tag>
@@ -295,6 +343,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mit - Kajman</Polish>
+		<Russian>Ìèô î êàéìàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAIMAN_MYTH_EFFECT</Tag>
@@ -305,6 +354,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Mitu - Kajman</Polish>
+		<Russian>Ïåñíÿ î êàéìàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAIMAN_STORIES</Tag>
@@ -315,6 +365,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Historie - Kajman</Polish>
+		<Russian>Ñêàçû î êàéìàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAIMAN_STORIES_EFFECT</Tag>
@@ -325,67 +376,80 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Historii - Kajman</Polish>
+		<Russian>Ïðåäàíèÿ î êàéìàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAIMAN_STORY</Tag>
 		<English>Story - Caiman</English>
 		<French>Histoire du Caïman</French>
 		<Polish>Opowieść - Kajman</Polish>
+		<Russian>Ñêàçêà î êàéìàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARIBOU_MYTH</Tag>
 		<English>Myth - Caribou</English>
 		<French>Mythe du Caribou</French>
+		<Russian>Ìèô î êàðèáó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARIBOU_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Caribou</English>
 		<French>Effet (Mythe du Caribou)</French>
+		<Russian>Ïåñíÿ î êàðèáó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARIBOU_STORIES</Tag>
 		<English>Stories - Caribou</English>
 		<French>Histoires du Caribou</French>
+		<Russian>Ñêàçû î êàðèáó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARIBOU_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Caribou</English>
 		<French>Effet (Histoires du Caribou)</French>
+		<Russian>Ïðåäàíèÿ î êàðèáó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARIBOU_STORY</Tag>
 		<English>Story - Caribou</English>
 		<French>Histoire du Caribou</French>
+		<Russian>Ñêàçêà î êàðèáó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_MYTH</Tag>
 		<English>Myth - Cave Lion</English>
 		<French>Mythe du Lion des cavernes</French>
+		<Russian>Ìèô î ïåù. ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Cave Lion</English>
 		<French>Effet (Mythe du Lion des cavernes)</French>
+		<Russian>Ïåñíÿ î ïåù. ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_REMAINS</Tag>
 		<English>Remains - Cave Lion</English>
 		<French>Restes de Lion des cavernes</French>
+		<Russian>Ïàìÿòü î ïåù. ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_STORIES</Tag>
 		<English>Stories - Cave Lion</English>
 		<French>Histoires du Lion des cavernes</French>
+		<Russian>Ñêàçû î ïåù. ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Cave Lion</English>
 		<French>Effet (Histoires du Lion des cavernes)</French>
+		<Russian>Ïðåäàíèÿ î ïåù. ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_LION_STORY</Tag>
 		<English>Story - Cave Lion</English>
 		<French>Histoire du Lion des cavernes</French>
+		<Russian>Ñêàçêà î ïåù. ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CROCODILE_MYTH</Tag>
@@ -401,6 +465,7 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit - Krokodyl</Polish>
+		<Russian>Ìèô î êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CROCODILE_MYTH_EFFECT</Tag>
@@ -411,6 +476,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Mitu - Krokodyl</Polish>
+		<Russian>Ïåñíÿ î êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CROCODILE_STORIES</Tag>
@@ -421,6 +487,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Historie - Krokodyl</Polish>
+		<Russian>Ñêàçû î êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CROCODILE_STORIES_EFFECT</Tag>
@@ -431,6 +498,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Historii - Krokodyl</Polish>
+		<Russian>Ïðåäàíèÿ î êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CROCODILE_STORY</Tag>
@@ -441,209 +509,249 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Opowieść - Krokodyl</Polish>
+		<Russian>Ñêàçêà î êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CUSCUS_MYTH</Tag>
 		<English>Myth - Cuscus</English>
 		<French>Mythe du Couscous</French>
+		<Russian>Ìèô î êóñêóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CUSCUS_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Cuscus</English>
 		<French>Effet (Mythe du Couscous)</French>
+		<Russian>Ïåñíÿ î êóñêóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CUSCUS_STORIES</Tag>
 		<English>Stories - Cuscus</English>
 		<French>Histoires du Couscous</French>
+		<Russian>Ñêàçû î êóñêóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CUSCUS_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Cuscus</English>
 		<French>Effet (Histoire du Couscous)</French>
+		<Russian>Ïðåäàíèÿ î êóñêóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CUSCUS_STORY</Tag>
 		<English>Story - Cuscus</English>
 		<French>Histoire du Couscous</French>
+		<Russian>Ñêàçêà î êóñêóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DART_FROG_MYTH</Tag>
 		<English>Myth - Dart Frog</English>
 		<French>Mythe de la Grenouille venimeuse</French>
+		<Russian>Ìèô î æàáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DART_FROG_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Dart Frog</English>
 		<French>Effet (Mythe de la Grenouille venimeuse)</French>
+		<Russian>Ïåñíÿ î æàáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DART_FROG_STORIES</Tag>
 		<English>Stories - Dart Frog</English>
 		<French>Histoires de la Grenouille venimeuse</French>
+		<Russian>Ñêàçû î æàáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DART_FROG_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Dart Frog</English>
 		<French>Effet (Histoires de la Grenouille venimeuse)</French>
+		<Russian>Ïðåäàíèÿ î æàáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DART_FROG_STORY</Tag>
 		<English>Story - Dart Frog</English>
 		<French>Histoire de la Grenouille venimeuse</French>
+		<Russian>Ñêàçêà î æàáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DHOLE_MYTH</Tag>
 		<English>Myth - Dhole</English>
 		<French>Mythe du Cuon d'Asie</French>
+		<Russian>Ìèô î êðàñíîì âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DHOLE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Dhole</English>
 		<French>Effet (Mythe du Cuon d'Asie)</French>
+		<Russian>Ïåñíÿ î êðàñíîì âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DHOLE_STORIES</Tag>
 		<English>Stories - Dhole</English>
 		<French>Histoires du Cuon d'Asie</French>
+		<Russian>Ñêàçû î êðàñíîì âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DHOLE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Dhole</English>
 		<French>Effet (Histoires du Cuon d'Asie)</French>
+		<Russian>Ïðåäàíèÿ î êðàñíîì âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DHOLE_STORY</Tag>
 		<English>Story - Dhole</English>
 		<French>Histoire du Cuon d'Asie</French>
+		<Russian>Ñêàçêà î êðàñíîì âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DINGO_MYTH</Tag>
 		<English>Myth - Dingo</English>
 		<French>Mythe du Dingo</French>
+		<Russian>Ìèô î äèíãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DINGO_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Dingo</English>
 		<French>Effet (Mythe du Dingo)</French>
+		<Russian>Ïåñíÿ î äèíãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DINGO_STORIES</Tag>
 		<English>Stories - Dingo</English>
 		<French>Histoires du Dingo</French>
+		<Russian>Ñêàçû î äèíãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DINGO_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Dingo</English>
 		<French>Effet (Histoires du Dingo)</French>
+		<Russian>Ïðåäàíèÿ î äèíãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DINGO_STORY</Tag>
 		<English>Story - Dingo</English>
 		<French>Histoire du Dingo</French>
+		<Russian>Ñêàçêà î äèíãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOLPHIN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Dolphin</English>
 		<French>Effet (Mythe du Dauphin)</French>
+		<Russian>Ïåñíÿ î äåëüôèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOLPHIN_STORIES</Tag>
 		<English>Stories - Dolphin</English>
 		<French>Histoires du Dauphin</French>
+		<Russian>Ñêàçû î äåëüôèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOLPHIN_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Dolphin</English>
 		<French>Effet (Histoires du Dauphin)</French>
+		<Russian>Ïðåäàíèÿ î äåëüôèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOLPHIN_STORY</Tag>
 		<English>Story - Dolphin</English>
 		<French>Histoire du Dauphin</French>
 		<Polish>Opowieść o Delfinie</Polish>
+		<Russian>Ñêàçêà î äåëüôèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUCK_MYTH</Tag>
 		<English>Myth - Duck</English>
 		<French>Mythe du Canard</French>
+		<Russian>Ìèô îá óòêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUCK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Duck</English>
 		<French>Effet (Mythe du Canard)</French>
+		<Russian>Ïåñíÿ îá óòêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUCK_STORIES</Tag>
 		<English>Stories - Duck</English>
 		<French>Histoires du Canard</French>
+		<Russian>Ñêàçû îá óòêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUCK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Duck</English>
 		<French>Effet (Histoires du Canard)</French>
+		<Russian>Ïðåäàíèÿ îá óòêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUCK_STORY</Tag>
 		<English>Story - Duck</English>
 		<French>Histoire du Canard</French>
+		<Russian>Ñêàçêà îá óòêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUGONG_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Dugong</English>
 		<French>Effet (Mythe du Lamantin)</French>
+		<Russian>Ïåñíÿ î äþãîíè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUGONG_STORIES</Tag>
 		<English>Stories - Dugong</English>
 		<French>Histoires du Lamantin</French>
+		<Russian>Ñêàçû î äþãîíè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUGONG_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Dugong</English>
 		<French>Effet (Histoires du Lamantin)</French>
+		<Russian>Ïðåäàíèÿ î äþãîíè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUGONG_STORY</Tag>
 		<English>Story - Dugong</English>
 		<French>Histoire du Lamantin</French>
 		<Polish>Opowieść o Dugongu</Polish>
+		<Russian>Ñêàçêà î äþãîíè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_MYTH</Tag>
 		<English>Myth - Elasmotherium</English>
 		<French>Mythe de l'Elasmotherium</French>
 		<Polish>Mit - Elasmoterium</Polish>
+		<Russian>Ìèô îá ýëàñìîòåðèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Elasmotherium</English>
 		<French>Effet (Mythe de Elasmotherium)</French>
 		<Polish>Efekt Mitu - Elasmoterium</Polish>
+		<Russian>Ïåñíÿ îá ýëàñìîòåðèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_REMAINS</Tag>
 		<English>Remains - Elasmotherium</English>
 		<French>Restes d'Elasmotherium</French>
 		<Polish>Resztki - Elasmoterium</Polish>
+		<Russian>Ïàìÿòü î ýëàñìîòåðèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_STORIES</Tag>
 		<English>Stories - Elasmotherium</English>
 		<French>Histoires de l'Elasmotherium</French>
 		<Polish>Historie - Elasmoterium</Polish>
+		<Russian>Ñêàçû îá ýëàñìîòåðèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Elasmotherium</English>
 		<French>Effet (Histoires de l'Elasmotherium)</French>
 		<Polish>Efekt Historii - Elasmoterium</Polish>
+		<Russian>Ïðåäàíèÿ î ýëàñìîòåðèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_STORY</Tag>
 		<English>Story - Elasmotherium</English>
 		<French>Histoire de l'Elasmotherium</French>
 		<Polish>Opowieść - Elasmoterium</Polish>
+		<Russian>Ñêàçêà îá ýëàñìîòåðèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Tag>
@@ -655,130 +763,155 @@
 		<English>The six elements make up everything. They are Earth, Air (Sky), Water (Sea), Stone, Metal and Fire. They lose all benefit with Chemistry.</English>
 		<French>Tout est formé à partir de 6 éléments. Ce sont la Terre, l'Air (Ciel), l'Eau (Mer), la Pierre, le Métal et le Feu. Ils perdent tout leurs avantages avec la Chimie</French>
 		<Polish>Sześć żywiołów tworzy wszystko. Składają si na nie Ziemia, Powietrze (Niebo), Woda (Morze), Kamień, Metal i Ogień. Chemia rozwiewa tą błdną teori i usuwa wszelkie zyski z tych mitów.</Polish>
+		<Russian>Øåñòü ýëåìåíòîâ ñîñòàâëÿþò âñå. Ê íèì îòíîñÿòñÿ çåìëÿ, âîçäóõ(íåáî), âîäà(ìîðå), êàìåíü, ìåòàëë è îãîíü. Îíè òåðÿþò âñå ïðåèìóùåñòâî ñ èçó÷åíèåì Õèìèè.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Tag>
 		<English>The Elemental Myths provide a small amount of science and education. They are required for many other buildings.</English>
 		<French>Les Mythes des Éléments confèrent un petit bonus d'éducation et de recherche. Ils sont requis pour la construction d'autres bâtiments.</French>
 		<Polish>Mity Żywiołów dostarczają małe ilości nauki i edukacji. Są wymagane do budowy wielu innyc budynków.</Polish>
+		<Russian>Ìèôû îá ýëåìåíòàõ îáåñïå÷èâàþò íåáîëüøîå êîëè÷åñòâî íàóêè è îáðàçîâàíèÿ. Îíè íåîáõîäèìû äëÿ ìíîãèõ äðóãèõ çäàíèé.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEPHANT_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Elephant</English>
 		<French>Effet (Mythe de l'Eléphant)</French>
 		<Polish>Efekt Mitu - Słoń</Polish>
+		<Russian>Ïåñíÿ î ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPEROR_PENGUIN_MYTH</Tag>
 		<English>Myth - Emperor Penguin</English>
 		<French>Mythe du Manchot Empereur</French>
+		<Russian>Ìèô îá èìï. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPEROR_PENGUIN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Emperor Penguin</English>
 		<French>Effet (Mythe du Manchot Empereur)</French>
+		<Russian>Ïåñíÿ îá èìï. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPEROR_PENGUIN_STORIES</Tag>
 		<English>Stories - Emperor Penguin</English>
 		<French>Histoires des Manchots Empereurs</French>
+		<Russian>Ñêàçû îá èìï. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPEROR_PENGUIN_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Emperor Penguin</English>
 		<French>Effet (Histoires des Manchots Empereurs)</French>
+		<Russian>Ïðåäàíèÿ îá èìï. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPEROR_PENGUIN_STORY</Tag>
 		<English>Story - Emperor Penguin</English>
 		<French>Histoire du Manchot Empereur</French>
+		<Russian>Ñêàçêà îá èìï. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_MYTH</Tag>
 		<English>Myth - Ethiopian Wolf</English>
 		<French>Mythe du loup d'Éthiopie</French>
+		<Russian>Ìèô îá ýô. øàêàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Ethiopian Wolf</English>
 		<French>Effet (Histoire du loup d'Éthiopie)</French>
+		<Russian>Ïåñíÿ îá ýô. øàêàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_STORIES</Tag>
 		<English>Stories - Ethiopian Wolf</English>
 		<French>Histoires du loup d'Éthiopie</French>
+		<Russian>Ñêàçû îá ýô. øàêàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Ethiopian Wolf</English>
 		<French>Effet (Histoires du loup d'Éthiopie)</French>
+		<Russian>Ïðåäàíèÿ îá ýô. øàêàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EWOLF_STORY</Tag>
 		<English>Story - Ethiopian Wolf</English>
 		<French>Histoire du loup d'Éthiopie</French>
+		<Russian>Ñêàçêà îá ýô. øàêàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FENNECFOX_MYTH</Tag>
 		<English>Myth - Fennec Fox</English>
 		<French>Mythe du Fennec</French>
+		<Russian>Ìèô î ëèñèöå-ôåíåê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FENNECFOX_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Fennec Fox</English>
 		<French>Effet (Mythe du Fennec)</French>
+		<Russian>Ïåñíÿ î ëèñèöå-ôåíåê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FENNECFOX_STORIES</Tag>
 		<English>Stories - Fennec Fox</English>
 		<French>Histoires du Fennec</French>
+		<Russian>Ñêàçû î ëèñèöå-ôåíåê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FENNECFOX_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Fennec Fox</English>
 		<French>Effet (Histoires du Fennec)</French>
+		<Russian>Ïðåäàíèÿ î ëèñèöå-ôåíåê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FENNECFOX_STORY</Tag>
 		<English>Story - Fennec Fox</English>
 		<French>Histoire du Fennec</French>
+		<Russian>Ñêàçêà î ëèñèöå-ôåíåê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIRE_MYTH</Tag>
 		<English>Myth - Fire</English>
 		<French>Mythe du Feu</French>
 		<Polish>Mit - Ogień</Polish>
+		<Russian>Ìèô îá îãíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIRE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Fire</English>
 		<French>Effet (Mythe du Feu)</French>
 		<Polish>Efekt Mitu - Ogień</Polish>
+		<Russian>Ïåñíÿ îá îãíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_MYTH</Tag>
 		<English>Myth - Flamingo</English>
 		<French>Mythe du Flamant rose</French>
+		<Russian>Ìèô î ôëàìèíãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Flamingo</English>
 		<French>Effet (Mythe du Flamant rose)</French>
+		<Russian>Ïåñíÿ î ôëàìèíãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_STORIES</Tag>
 		<English>Stories - Flamingo</English>
 		<French>Histoires du Flamingo</French>
+		<Russian>Ñêàçû î ôëàìèíãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Flamingo</English>
 		<French>Effet (Histoires de Flamants roses)</French>
+		<Russian>Ïðåäàíèÿ î ôëàìèíãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_STORY</Tag>
 		<English>Story - Flamingo</English>
 		<French>Histoire du Flamingo</French>
+		<Russian>Ñêàçêà î ôëàìèíãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_ASIAN_MYTH</Tag>
@@ -789,6 +922,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mit - Aligator Chiński</Polish>
+		<Russian>Ìèô î êèò. àëëèãàòîð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_ASIAN_MYTH_EFFECT</Tag>
@@ -799,6 +933,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Mitu - Aligator Chiński</Polish>
+		<Russian>Ïåñíÿ î êèò. àëëèãàòîðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_ASIAN_STORIES</Tag>
@@ -809,6 +944,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Polish>Historie - Aligator Chiński</Polish>
+		<Russian>Ñêàçû î êèò. àëëèãàòîðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_ASIAN_STORIES_EFFECT</Tag>
@@ -819,6 +955,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Historii - Aligator Chiński</Polish>
+		<Russian>Ïðåäàíèÿ î êèò. àëëèãàòîðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_ASIAN_STORY</Tag>
@@ -829,6 +966,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Opowieść - Aligator Chiński</Polish>
+		<Russian>Ñêàçêà î êèò. àëëèãàòîðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_MYTH</Tag>
@@ -839,6 +977,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mit - Aligator Amerykański</Polish>
+		<Russian>Ìèô îá àëëèãàòîðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_MYTH_EFFECT</Tag>
@@ -849,6 +988,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Mitu - Aligator Amerykański</Polish>
+		<Russian>Ïåñíÿ îá àëëèãàòîðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_STORIES</Tag>
@@ -859,6 +999,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Historie - Aligator Amerykański</Polish>
+		<Russian>Ñêàçû îá àëëèãàòîðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_STORIES_EFFECT</Tag>
@@ -869,6 +1010,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Historii - Aligator Amerykański</Polish>
+		<Russian>Ïðåäàíèÿ îá àëëèãàòîðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GATOR_STORY</Tag>
@@ -879,6 +1021,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Opowieść - Aligator Amerykański</Polish>
+		<Russian>Ñêàçêà îá àëëèãàòîðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GHARIAL_MYTH</Tag>
@@ -889,6 +1032,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mit - Gawial</Polish>
+		<Russian>Ìèô î ãàâèàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GHARIAL_MYTH_EFFECT</Tag>
@@ -899,6 +1043,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Mitu - Gawial</Polish>
+		<Russian>Ïåñíÿ î ãàâèàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GHARIAL_STORIES</Tag>
@@ -909,6 +1054,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Historie - Gawial</Polish>
+		<Russian>Ñêàçû î ãàâèàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GHARIAL_STORIES_EFFECT</Tag>
@@ -919,6 +1065,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Historii - Gawial</Polish>
+		<Russian>Ïðåäàíèÿ î ãàâèàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GHARIAL_STORY</Tag>
@@ -929,6 +1076,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Opowieść - Gawial</Polish>
+		<Russian>Ñêàçêà î ãàâèàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_MYTH</Tag>
@@ -943,325 +1091,387 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
+		<Russian>Ìèô î æèðàôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Giraffe</English>
 		<French>Effet (Mythe de la Girafe)</French>
+		<Russian>Ïåñíÿ î æèðàôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_STORIES</Tag>
 		<English>Stories - Giraffe</English>
 		<French>Histoires de la Girafe</French>
+		<Russian>Ñêàçû î æèðàôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Giraffe</English>
 		<French>Effet (Histoires de la Girafe)</French>
+		<Russian>Ïðåäàíèÿ î æèðàôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_STORY</Tag>
 		<English>Story - Giraffe</English>
 		<French>Histoire de la Girafe</French>
+		<Russian>Ñêàçêà î æèðàôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLYPTO_MYTH</Tag>
 		<English>Myth - Paleolithic Glyptodon</English>
 		<French>Mythe du Glyptodon</French>
+		<Russian>Ìèô î ãëèïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLYPTO_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Paleolithic Glyptodon</English>
 		<French>Effet (Mythe du Glyptodon)</French>
+		<Russian>Ïåñíÿ î ãëèïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLYPTO_REMAINS</Tag>
 		<English>Remains - Glyptodon</English>
 		<French>Restes de Glyptodon</French>
+		<Russian>Ïàìÿòü î ãëèïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLYPTO_STORIES</Tag>
 		<English>Stories - Paleolithic Glyptodon</English>
 		<French>Histoires de Glyptodons</French>
+		<Russian>Ñêàçû î ãëèïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLYPTO_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Paleolithic Glyptodon</English>
 		<French>Effet (Histoires du Glyptodon)</French>
+		<Russian>Ïðåäàíèÿ î ãëèïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLYPTO_STORY</Tag>
 		<English>Story - Paleolithic Glyptodon</English>
 		<French>Histoire du Glyptodon</French>
+		<Russian>Ñêàçêà î ãëèïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Great White Shark</English>
 		<French>Effet (Mythe du Grand requin blanc)</French>
+		<Russian>Ïåñíÿ î áåëîé àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_STORIES</Tag>
 		<English>Stories - Great White Shark</English>
 		<French>Histoires du Grand requin blanc</French>
+		<Russian>Ñêàçû î áåëîé àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Great White Shark</English>
 		<French>Effet (Histoires de Grands Requins blancs</French>
+		<Russian>Ïðåäàíèÿ î áåëîé àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_STORY</Tag>
 		<English>Story - Great White Shark</English>
 		<French>Histoire - Grand Requin Blanc</French>
 		<Polish>Opowieść o Żarłaczu Białym</Polish>
+		<Russian>Ñêàçêà î áåëîé àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREY_WOLF_MYTH</Tag>
 		<English>Myth - Wolf, Grey</English>
 		<French>Mythe du Loup gris</French>
+		<Russian>Ìèô î âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREY_WOLF_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Wolf, Grey</English>
 		<French>Effet (Mythe du Loup gris)</French>
+		<Russian>Ïåñíÿ î âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREY_WOLF_STORIES</Tag>
 		<English>Stories - Wolf, Grey</English>
 		<French>Histoires du Loup gris</French>
+		<Russian>Ñêàçû î âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREY_WOLF_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Wolf, Grey</English>
 		<French>Effet (Histoires du Loup gris)</French>
+		<Russian>Ïðåäàíèÿ î âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREY_WOLF_STORY</Tag>
 		<English>Story - Wolf, Grey</English>
 		<French>Histoire du Loup gris</French>
+		<Russian>Ñêàçêà î âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAMMERHEAD_SHARK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Hammerhead shark</English>
 		<French>Effet (Mythe du Requin-marteau</French>
+		<Russian>Ïåñíÿ îá àêóëå-ìîëîò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAMMERHEAD_SHARK_STORIES</Tag>
 		<English>Stories - Hammerhead shark</English>
 		<French>Histoires du Requin-marteau</French>
+		<Russian>Ñêàçû îá àêóëå-ìîëîò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAMMERHEAD_SHARK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Hammerhead shark</English>
 		<French>Effet (Histoires de Requins-marteau)</French>
+		<Russian>Ïðåäàíèÿ îá àêóëå-ìîëîò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAMMERHEAD_SHARK_STORY</Tag>
 		<English>Story - Hammerhead Shark</English>
 		<French>Histoire - Requin marteau</French>
 		<Polish>Opowieść o Rekinie-młocie</Polish>
+		<Russian>Ñêàçêà îá àêóëå-ìîëîò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_MYTH</Tag>
 		<English>Myth - Hippopotamus</English>
 		<French>Mythe de l'Hippopotame</French>
+		<Russian>Ìèô î áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Hippopotamus</English>
 		<French>Effet (Mythe de l'Hippopotames)</French>
+		<Russian>Ïåñíÿ î áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_STORIES</Tag>
 		<English>Stories - Hippopotamus</English>
 		<French>Histoires de l'Hippopotame</French>
+		<Russian>Ñêàçû î áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Hippopotamus</English>
 		<French>Effet (Histoire de l'Hippopotame)</French>
+		<Russian>Ïðåäàíèÿ î áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOPOTAMUS_STORY</Tag>
 		<English>Story - Hippopotamus</English>
 		<French>Histoire de l'Hippopotame</French>
+		<Russian>Ñêàçêà î áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOS_MYTH</Tag>
 		<English>Myth - Hippos</English>
 		<French>Mythe de l'Hippopotame</French>
+		<Russian>Ìèô î áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOS_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Hippos</English>
 		<French>Effet (Mythe de l'Hippopotame)</French>
+		<Russian>Ïåñíÿ î áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOS_STORIES</Tag>
 		<English>Stories - Hippos</English>
 		<French>Histoires de l'Hippopotame</French>
+		<Russian>Ñêàçû î áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOS_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Hippos</English>
 		<French>Effet (Histoires de l'Hippopotame)</French>
+		<Russian>Ïðåäàíèÿ î áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIPPOS_STORY</Tag>
 		<English>Story - Hippos</English>
 		<French>Histoire de l'Hippopotame</French>
+		<Russian>Ñêàçêà î áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORNED_OWL_MYTH</Tag>
 		<English>Myth - Great Horned Owl</English>
 		<French>Mythe du Hibou grand duc</French>
+		<Russian>Ìèô î ôèëèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORNED_OWL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Great Horned Owl</English>
 		<French>Effet (Mythe du Hibou grand duc)</French>
+		<Russian>Ïåñíÿ î ôèëèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORNED_OWL_STORIES</Tag>
 		<English>Stories - Great Horned Owl</English>
 		<French>Histoires du Hibou grand duc</French>
+		<Russian>Ñêàçû î ôèëèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORNED_OWL_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Great Horned Owl</English>
 		<French>Effet (Histoires du Hibou grand duc)</French>
+		<Russian>Ïðåäàíèÿ î ôèëèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HORNED_OWL_STORY</Tag>
 		<English>Story - Great Horned Owl</English>
 		<French>Histoire du Hibou grand duc</French>
+		<Russian>Ñêàçêà î ôèëèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMPBACK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Humpback Whale</English>
 		<French>Effet (Mythe de la Baleine à bosse</French>
+		<Russian>Ïåñíÿ î ãîðáàòîì êèòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMPBACK_STORIES</Tag>
 		<English>Stories - Humpback Whale</English>
 		<French>Histoires de la Baleine à bosse</French>
+		<Russian>Ñêàçû î ãîðáàòîì êèòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMPBACK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Humpback Whale</English>
 		<French>Effet (Histoires de la Baleine à bosse)</French>
+		<Russian>Ïðåäàíèÿ î ãîðáàòîì êèòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUMPBACK_STORY</Tag>
 		<English>Story - Humpback Whale</English>
 		<French>Histoire de la Baleine à bosses</French>
 		<Polish>Opowieść o Humpbaku</Polish>
+		<Russian>Ñêàçêà î ãîðáàòîì êèòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IBEX_MYTH</Tag>
 		<English>Myth - Ibex</English>
 		<French>Mythe du Bouquetin</French>
+		<Russian>Ìèô î êîçåðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IBEX_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Ibex</English>
 		<French>Effet (Mythe du Bouquetin)</French>
+		<Russian>Ïåñíÿ î êîçåðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IBEX_STORIES</Tag>
 		<English>Stories - Ibex</English>
 		<French>Histoires du Bouquetin</French>
+		<Russian>Ñêàçû î êîçåðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IBEX_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Ibex</English>
 		<French>Effet (Histoires du Bouquetin)</French>
+		<Russian>Ïðåäàíèÿ î êîçåðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IBEX_STORY</Tag>
 		<English>Story - Ibex</English>
 		<French>Histoire du Bouquetin</French>
+		<Russian>Ñêàçêà î êîçåðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDIAN_RHINO_MYTH</Tag>
 		<English>Myth - Rhinoceros, Indian</English>
 		<French>Mythe du Rhinocéros indien</French>
 		<Polish>Mit - Nosorożec Indyjski</Polish>
+		<Russian>Ìèô î èíä. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDIAN_RHINO_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Rhinoceros, Indian</English>
 		<French>Effet (Mythe du Rhinocéros indien)</French>
 		<Polish>Efekt Mitu - Nosorożec Indyjski</Polish>
+		<Russian>Ïåñíÿ î èíä. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDIAN_RHINO_STORIES</Tag>
 		<English>Stories - Rhinoceros, Indian</English>
 		<French>Histoires du Rhinocéros indien</French>
 		<Polish>Historie - Nosorożec Indyjski</Polish>
+		<Russian>Ñêàçû î èíä. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDIAN_RHINO_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Rhinoceros, Indian</English>
 		<French>Effet (Histoires du Rhinocéros indien)</French>
 		<Polish>Efekt Historii - Nosorożec Indyjski</Polish>
+		<Russian>Ïðåäàíèÿ î èíä. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDIAN_RHINO_STORY</Tag>
 		<English>Story - Rhinoceros, Indian</English>
 		<French>Histoire du Rhinocéros indien</French>
 		<Polish>Opowieść - Nosorożec Indyjski</Polish>
+		<Russian>Ñêàçêà î èíä. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAVA_RHINO_MYTH</Tag>
 		<English>Myth - Rhinoceros, Java</English>
 		<French>Mythe du Rhinocéros de Java</French>
 		<Polish>Mit - Nosorożec Jawajski</Polish>
+		<Russian>Ìèô î ÿâàí. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAVA_RHINO_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Rhinoceros, Java</English>
 		<French>Effet (Mythe du Rhinocéros de Java)</French>
 		<Polish>Efekt Mitu - Nosorożec Jawajski</Polish>
+		<Russian>Ïåñíÿ î ÿâàí. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAVA_RHINO_STORIES</Tag>
 		<English>Stories - Rhinoceros, Java</English>
 		<French>Histoires du Rhinocéros de Java</French>
 		<Polish>Historie - Nosorożec Jawajski</Polish>
+		<Russian>Ñêàçû î ÿâàí. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAVA_RHINO_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Rhinoceros, Java</English>
 		<French>Effet (Histoires du Rhinocéros de Java)</French>
 		<Polish>Efekt Historii - Nosorożec Jawajski</Polish>
+		<Russian>Ïðåäàíèÿ î ÿâàí. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAVA_RHINO_STORY</Tag>
 		<English>Story - Rhinoceros, Java</English>
 		<French>Histoire du Rhinocéros de Java</French>
 		<Polish>Opowieść - Nosorożec Jawajski</Polish>
+		<Russian>Ñêàçêà î ÿâàí. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAKEN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Kraken</English>
 		<French>Effet (Mythe du Kraken)</French>
+		<Russian>Ïåñíÿ î Êðàêåíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAKEN_STORIES</Tag>
 		<English>Stories - Kraken</English>
 		<French>Histoires du Kraken</French>
+		<Russian>Ñêàçû î Êðàêåíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAKEN_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Kraken</English>
 		<French>Effet (Histoires du Kraken)</French>
+		<Russian>Ïðåäàíèÿ î Êðàêåíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAKEN_STORY</Tag>
 		<English>Story - Kraken</English>
 		<French>Histoire du Kraken</French>
 		<Polish>Opowieść o Krakenie</Polish>
+		<Russian>Ñêàçêà î Êðàêåíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Tag>
@@ -1278,296 +1488,351 @@
 		<Tag>TXT_KEY_BUILDING_LEVIATHAN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Leviathan</English>
 		<French>Effet (Mythe du Léviathan)</French>
+		<Russian>Ïåñíÿ î Ëåâèàôàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LION_STORY</Tag>
 		<English>Story - Lion</English>
 		<French>Histoire du Lion</French>
 		<Polish>Opowieść o Lwie</Polish>
+		<Russian>Ñêàçêà î ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIZARD_MYTH</Tag>
 		<English>Myth - Lizard</English>
 		<French>Mythe du lézard</French>
 		<Polish>Mit - Jaszczurka</Polish>
+		<Russian>Ìèô î ÿùåðèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIZARD_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Lizard</English>
 		<French>Effet (Mythe du lézard)</French>
 		<Polish>Efekt Mitu - Jaszczurka</Polish>
+		<Russian>Ïåñíÿ î ÿùåðèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIZARD_STORIES</Tag>
 		<English>Stories - Lizard</English>
 		<French>Histoires des lézards</French>
 		<Polish>Historie - Jaszczurka</Polish>
+		<Russian>Ñêàçû î ÿùåðèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIZARD_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Lizard</English>
 		<French>Effet (Histoires du lézard)</French>
 		<Polish>Efekt Historii - Jaszczurka</Polish>
+		<Russian>Ïðåäàíèÿ î ÿùåðèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LIZARD_STORY</Tag>
 		<English>Story - Lizard</English>
 		<French>Histoire du lézard</French>
 		<Polish>Opowieść - Jaszczurka</Polish>
+		<Russian>Ñêàçêà î ÿùåðèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LLAMA_STORY</Tag>
 		<English>Story - Llama</English>
 		<French>Histoire du Lama</French>
 		<Polish>Opowieść o Llamie</Polish>
+		<Russian>Ñêàçêà î ëàìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LOON_MYTH</Tag>
 		<English>Myth - Loon</English>
 		<French>Mythe du Plongeon</French>
+		<Russian>Ìèô î ãàãàðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LOON_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Loon</English>
 		<French>Effet (Mythe du Plongeon</French>
+		<Russian>Ïåñíÿ î ãàãàðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LOON_STORIES</Tag>
 		<English>Stories - Loon</English>
 		<French>Histoires du Plongeon</French>
+		<Russian>Ñêàçû î ãàãàðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LOON_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Loon</English>
 		<French>Effet (Histoires de Plongeons)</French>
+		<Russian>Ïðåäàíèÿ î ãàãàðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LOON_STORY</Tag>
 		<English>Story - Loon</English>
 		<French>Histoire du Plongeon</French>
+		<Russian>Ñêàçêà î ãàãàðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LYNX_MYTH</Tag>
 		<English>Myth - Lynx</English>
 		<French>Mythe du Lynx</French>
+		<Russian>Ìèô î ðûñè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LYNX_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Lynx</English>
 		<French>Effet (Mythe du Lynx)</French>
+		<Russian>Ïåñíÿ î ðûñè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LYNX_STORIES</Tag>
 		<English>Stories - Lynx</English>
 		<French>Histoires du Lynx</French>
+		<Russian>Ñêàçû î ðûñè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LYNX_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Lynx</English>
 		<French>Effet (Histoires du Lynx)</French>
+		<Russian>Ïðåäàíèÿ î ðûñè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LYNX_STORY</Tag>
 		<English>Story - Lynx</English>
 		<French>Histoire du Lynx</French>
+		<Russian>Ñêàçêà î ðûñè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MALAYAN_TAPIR_MYTH</Tag>
 		<English>Myth - Tapir, Malayan</English>
 		<French>Mythe du Tapir Malais</French>
 		<Polish>Mit - Tapir Malajski</Polish>
+		<Russian>Ìèô î ìàë. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MALAYAN_TAPIR_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Tapir, Malayan</English>
 		<French>Effet (Mythe du Tapir Malais)</French>
 		<Polish>Efekt Mitu - Tapir Malajski</Polish>
+		<Russian>Ïåñíÿ î ìàë. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MALAYAN_TAPIR_STORIES</Tag>
 		<English>Stories - Malayan Tapir</English>
 		<French>Histoires des Tapirs Malais</French>
 		<Polish>Historie - Tapir Malajski</Polish>
+		<Russian>Ñêàçû î ìàë. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MALAYAN_TAPIR_STORIES_EFFECT</Tag>
 		<English>Stories Effect (Malayan Tapir)</English>
 		<French>Effet (Histoires des Tapirs Malais)</French>
 		<Polish>Efekt Historii - Tapir Malajski</Polish>
+		<Russian>Ïðåäàíèÿ î ìàë. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MALAYAN_TAPIR_STORY</Tag>
 		<English>Story - Malayan Tapir</English>
 		<French>Histoire du Tapir Malais</French>
 		<Polish>Opowieść - Tapir Malajski</Polish>
+		<Russian>Ñêàçêà î ìàë. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANEDWOLF_MYTH</Tag>
 		<English>Myth - Maned Wolf</English>
 		<French>Mythe du Loup à crinière</French>
+		<Russian>Ìèô î ãðèâ. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANEDWOLF_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Maned Wolf</English>
 		<French>Effet (Mythe du Loup à crinière)</French>
+		<Russian>Ïåñíÿ î ãðèâ. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANEDWOLF_STORIES</Tag>
 		<English>Stories - Maned Wolf</English>
 		<French>Histoires du Loup à crinière</French>
+		<Russian>Ñêàçû î ãðèâ. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANEDWOLF_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Maned Wolf</English>
 		<French>Effet (Histoires du Loup à crinière</French>
+		<Russian>Ïðåäàíèÿ î ãðèâ. âîëê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANEDWOLF_STORY</Tag>
 		<English>Story - Maned Wolf</English>
 		<French>Histoire du Loup à crinière</French>
+		<Russian>Ñêàçêà î ãðèâ. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAL_MYTH</Tag>
 		<English>Myth - Metal</English>
 		<French>Mythe du Métal</French>
 		<Polish>Mit - Metal</Polish>
+		<Russian>Ìèô î ìåòàëëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Metal</English>
 		<French>Effet (Mythe du Métal)</French>
 		<Polish>Efekt Mitu - Metal</Polish>
+		<Russian>Ïåñíÿ î ìåòàëëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINKIE_WHALE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Minke Whale</English>
 		<French>Effet (Mythe du Petit rorqual)</French>
+		<Russian>Ïåñíÿ î ïîëîñàòèêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINKIE_WHALE_STORIES</Tag>
 		<English>Stories - Minke Whale</English>
 		<French>Histoires du Petit rorqual</French>
+		<Russian>Ñêàçû î ïîëîñàòèêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINKIE_WHALE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Minke Whale</English>
 		<French>Effet (Histoires du Petit rorqual)</French>
+		<Russian>Ïðåäàíèÿ î ïîëîñàòèêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINKIE_WHALE_STORY</Tag>
 		<English>Story - Minke Whale</English>
 		<French>Histoire de la Baleine de Minke</French>
 		<Polish>Opowieść o Kaszalocie</Polish>
+		<Russian>Ñêàçêà î ïîëîñàòèêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONOTREMES_MYTH</Tag>
 		<English>Myth - Monotremes</English>
 		<French>Mythe de l'Échidné</French>
+		<Russian>Ìèô î åõèäíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONOTREMES_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Monotremes</English>
 		<French>Effet (Mythe de l'Échidné)</French>
+		<Russian>Ïåñíÿ î åõèäíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONOTREMES_STORIES</Tag>
 		<English>Stories - Monotremes</English>
 		<French>Histoires de l'Échidné</French>
+		<Russian>Ñêàçû î åõèäíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONOTREMES_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Monotremes</English>
 		<French>Effet (Histoires de l'Echidné)</French>
+		<Russian>Ïðåäàíèÿ î åõèäíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONOTREMES_STORY</Tag>
 		<English>Story - Monotremes</English>
 		<French>Histoire de l'Échidné</French>
+		<Russian>Ñêàçêà î åõèäíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOOSE_MYTH</Tag>
 		<English>Myth - Moose</English>
 		<French>Mythe de l'Elan</French>
+		<Russian>Ìèô î ëîñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOOSE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Moose</English>
 		<French>Effet (Mythe de l'Elan)</French>
+		<Russian>Ïåñíÿ î ëîñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOOSE_STORIES</Tag>
 		<English>Stories - Moose</English>
 		<French>Histoires de l'Elan</French>
+		<Russian>Ñêàçû î ëîñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOOSE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Moose</English>
 		<French>Effet (Histoires de l'Elan)</French>
+		<Russian>Ïðåäàíèÿ î ëîñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOOSE_STORY</Tag>
 		<English>Story - Moose</English>
 		<French>Histoire de l'Elan</French>
+		<Russian>Ñêàçêà î ëîñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOUNTAIN_TAPIR_MYTH</Tag>
 		<English>Myth - Tapir, Mountain</English>
 		<French>Mythe du Tapir des Montagnes</French>
 		<Polish>Mit - Tapir Górski</Polish>
+		<Russian>Ìèô î ãîðíîì òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOUNTAIN_TAPIR_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Tapir, Mountain</English>
 		<French>Effet (Mythe du Tapir des Montagnes</French>
 		<Polish>Efekt Mitu - Tapir Górski</Polish>
+		<Russian>Ïåñíÿ î ãîðíîì òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOUNTAIN_TAPIR_STORIES</Tag>
 		<English>Stories - Tapir, Mountain</English>
 		<French>Histoires des Tapirs des Montagnes</French>
 		<Polish>Historie - Tapir Górski</Polish>
+		<Russian>Ñêàçû î ãîðíîì òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOUNTAIN_TAPIR_STORIES_EFFECT</Tag>
 		<English>Stories Effect (Mountain Tapir)</English>
 		<French>Effet (Histoires des Tapirs des Montagnes)</French>
 		<Polish>Efekt Historii - Tapir Górski</Polish>
+		<Russian>Ïðåäàíèÿ î ãîðíîì òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOUNTAIN_TAPIR_STORY</Tag>
 		<English>Story - Tapir, Mountain</English>
 		<French>Histoire du Tapir des Montagnes</French>
 		<Polish>Opowieść - Tapir Górski</Polish>
+		<Russian>Ñêàçêà î ãîðíîì òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_MYTH</Tag>
 		<English>Myth - Muskox</English>
 		<French>Mythe du Bœuf musqué</French>
+		<Russian>Ìèô îá îâöåáûêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Muskox</English>
 		<French>Effet (Mythe du Bœuf musqué)</French>
+		<Russian>Ïåñíÿ îá îâöåáûêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_STORIES</Tag>
 		<English>Stories - Muskox</English>
 		<French>Histoires du Bœuf musqué</French>
+		<Russian>Ñêàçû îá îâöåáûêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Muskox</English>
 		<French>Effet (Histoires du Bœuf musqué)</French>
+		<Russian>Ïðåäàíèÿ îá îâöåáûêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_STORY</Tag>
 		<English>Story - Muskox</English>
 		<French>Histoire du Bœuf musqué</French>
+		<Russian>Ñêàçêà îá îâöåáûêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NARWHAL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Narwhal</English>
 		<French>Effet (Mythe du Narval)</French>
+		<Russian>Ïåñíÿ î íàðâàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NILECROC_MYTH</Tag>
@@ -1578,6 +1843,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mit - Krokodyl Nilowy</Polish>
+		<Russian>Ìèô î íèë. êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NILECROC_MYTH_EFFECT</Tag>
@@ -1588,6 +1854,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Mitu - Krokodyl Nilowy</Polish>
+		<Russian>Ïåñíÿ î íèë. êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NILECROC_STORIES</Tag>
@@ -1598,6 +1865,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Historie - Krokodyl Nilowy</Polish>
+		<Russian>Ñêàçû î íèë. êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NILECROC_STORIES_EFFECT</Tag>
@@ -1608,6 +1876,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Historii - Krokodyl Nilowy</Polish>
+		<Russian>Ïðåäàíèÿ î íèë. êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NILECROC_STORY</Tag>
@@ -1618,441 +1887,526 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Opowieść - Krokodyl Nilowy</Polish>
+		<Russian>Ñêàçêà î íèë. êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUMBAT_MYTH</Tag>
 		<English>Myth - Numbat</English>
 		<French>Mythe du Numbat</French>
+		<Russian>Ìèô î ñóì÷. ìóðàâüåäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUMBAT_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Numbat</English>
 		<French>Effet (Mythe du Numbat)</French>
+		<Russian>Ïåñíÿ î ñóì÷. ìóðàâüåäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUMBAT_STORIES</Tag>
 		<English>Stories - Numbat</English>
 		<French>Histoires du Numbat</French>
+		<Russian>Ñêàçû î ñóì÷. ìóðàâüåäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUMBAT_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Numbat</English>
 		<French>Effet (Histoires du Numbat)</French>
+		<Russian>Ïðåäàíèÿ î ñóì÷. ìóðàâüåäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUMBAT_STORY</Tag>
 		<English>Story - Numbat</English>
 		<French>Histoire du Numbat</French>
+		<Russian>Ñêàçêà î ñóì÷. ìóðàâüåäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OPOSSUM_MYTH</Tag>
 		<English>Myth - Opossum</English>
 		<French>Mythe de l'Opossum</French>
+		<Russian>Ìèô îá îïîññóìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OPOSSUM_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Opossum</English>
 		<French>Effet (Mythe de l'Opossum)</French>
+		<Russian>Ïåñíÿ îá îïîññóìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OPOSSUM_STORIES</Tag>
 		<English>Stories - Opossum</English>
 		<French>Histoires de l'Opossum</French>
+		<Russian>Ñêàçû îá îïîññóìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OPOSSUM_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Opossum</English>
 		<French>Effet (Histoires de l'Opossum)</French>
+		<Russian>Ïðåäàíèÿ îá îïîññóìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OPOSSUM_STORY</Tag>
 		<English>Story - Opossum</English>
 		<French>Histoire du Opossum</French>
+		<Russian>Ñêàçêà îá îïîññóìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Orca</English>
 		<French>Effet (Mythe de l'Orque)</French>
+		<Russian>Ïåñíÿ î êàñàòêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCA_STORIES</Tag>
 		<English>Stories - Orca</English>
 		<French>Histoires de l'Orque</French>
+		<Russian>Ñêàçû î êàñàòêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Orca</English>
 		<French>Effet (Histoires de l'Orque)</French>
+		<Russian>Ïðåäàíèÿ î êàñàòêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCA_STORY</Tag>
 		<English>Story - Orca</English>
 		<French>Histoire de l'Orque</French>
 		<Polish>Opowieść o Orce</Polish>
+		<Russian>Ñêàçêà î êàñàòêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_MYTH</Tag>
 		<English>Myth - Paleolithic Birds</English>
 		<French>Mythe des oiseaux du paléolithique</French>
 		<Polish>Mit - Ptaki Kopalne</Polish>
+		<Russian>Ìèô î äðåâíåé ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Paleolithic Birds</English>
 		<French>Effet (Mythe des oiseaux du Paléolithique)</French>
 		<Polish>Efekt Mitu - Ptaki Kopalne</Polish>
+		<Russian>Ïåñíÿ î äðåâíåé ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_STORIES</Tag>
 		<English>Stories - Paleolithic Birds</English>
 		<French>Histoires des Oiseaux du paléolithique</French>
 		<Polish>Historie o Ptakach Kopalnych</Polish>
+		<Russian>Ñêàçû î äðåâíåé ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Paleolithic Birds</English>
 		<French>Effet (Histoires des oiseaux du paléolithique)</French>
 		<Polish>Efekt - Historie o Ptakach Kopalnych</Polish>
+		<Russian>Ïðåäàíèÿ î äðåâíåé ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_STORY</Tag>
 		<English>Story - Paleolithic Birds</English>
 		<French>Histoire des oiseaux du Paléolithique</French>
 		<Polish>Opowieść - Ptaki Kopalne</Polish>
+		<Russian>Ñêàçêà î äðåâíåé ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_CAT_STORIES</Tag>
 		<English>Stories - Paleolithic Cats</English>
 		<French>Histoires des félins du paléolithique</French>
 		<Polish>Historie o Kotach Kopalnych</Polish>
+		<Russian>Ñêàçû î äðåâíåé êîøêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Paleolithic Cats</English>
 		<French>Effet (Histoires des félins du paléolithique)</French>
 		<Polish>Efekt - Historie o Kotach Kopalnych</Polish>
+		<Russian>Ïðåäàíèÿ î äðåâíåé êîøêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_CAT_STORY</Tag>
 		<English>Story - Paleolithic Cats</English>
 		<French>Histoire des chats du paléolithique</French>
 		<Polish>Opowieść o Kotach Kopalnych</Polish>
+		<Russian>Ñêàçêà î äðåâíåé êîøêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_MYTH</Tag>
 		<English>Myth - Dire Wolf</English>
 		<French>Mythe du Loup sinistre</French>
+		<Russian>Ìèô î ëþòîâîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Dire Wolf</English>
 		<French>Effet (Mythe du Loup sinistre)</French>
+		<Russian>Ïåñíÿ î ëþòîâîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_REMAINS</Tag>
 		<English>Remains - Dire Wolf</English>
 		<French>Restes de Loup sinistre</French>
+		<Russian>Ïàìÿòü î ëþòîâîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_STORIES</Tag>
 		<English>Stories - Dire Wolf</English>
 		<French>Histoires du Loup sinistre</French>
+		<Russian>Ñêàçû î ëþòîâîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Dire Wolf</English>
 		<French>Effet (Histoires du Loup sinistre)</French>
+		<Russian>Ïðåäàíèÿ î ëþòîâîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_STORY</Tag>
 		<English>Story - Dire Wolf</English>
 		<French>Histoire du Loup sinistre</French>
+		<Russian>Ñêàçêà î ëþòîâîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_MYTH</Tag>
 		<English>Myth - Paleolithic Ground Sloth</English>
 		<French>Mythe du Xénarthre</French>
+		<Russian>Ìèô î ãèã. ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Paleolithic Ground Sloth</English>
 		<French>Effet (Mythe du Xénarthre)</French>
+		<Russian>Ïåñíÿ î ãèã. ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</Tag>
 		<English>Remains - Ground Sloth</English>
 		<French>Restes de Xénarthre</French>
+		<Russian>Ïàìÿòü î ãèã. ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_STORIES</Tag>
 		<English>Stories - Paleolithic Ground Sloth</English>
 		<French>Histoires des Xénarthres</French>
+		<Russian>Ñêàçû î ãèã. ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Paleolithic Ground Sloth</English>
 		<French>Effet (Histoires des Xénarthres)</French>
+		<Russian>Ïðåäàíèÿ î ãèã. ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_STORY</Tag>
 		<English>Story - Paleolithic Ground Sloth</English>
 		<French>Histoire du Xénarthre</French>
+		<Russian>Ñêàçêà î ãèã. ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</Tag>
 		<English>Stories - Paleolithic Marsupials</English>
 		<French>Histoires des Marsupiaux du Paléolithique</French>
 		<Polish>Historie o Kopalnych Torbaczach</Polish>
+		<Russian>Ñêàçû î äðåâ. ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Paleolithic Marsupials</English>
 		<French>Effet (Histoires des Marsupiaux du Paléolithique)</French>
 		<Polish>Efekt - Historie o Kopalnych Torbaczach</Polish>
+		<Russian>Ïðåäàíèÿ î äðåâ. ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_STORY</Tag>
 		<English>Story - Paleolithic Marsupials</English>
 		<French>Histoire des Marsupiaux du Paléolithique</French>
 		<Polish>Opowieść o Kopalnych Torbaczach</Polish>
+		<Russian>Ñêàçêà î äðåâ. ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANTHER_MYTH</Tag>
 		<English>Myth - Panther</English>
 		<French>Mythe de la Panthère</French>
+		<Russian>Ìèô î ïàíòåðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANTHER_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Panther</English>
 		<French>Effet (Mythe de la Panthère)</French>
+		<Russian>Ïåñíÿ î ïàíòåðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANTHER_STORIES</Tag>
 		<English>Stories - Panther</English>
 		<French>Histoires de la Panthère</French>
+		<Russian>Ñêàçû î ïàíòåðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANTHER_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Panther</English>
 		<French>Effet (Histoires de la Panthère)</French>
+		<Russian>Ïðåäàíèÿ î ïàíòåðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANTHER_STORY</Tag>
 		<English>Story - Panther</English>
 		<French>Histoire de la Panthère</French>
+		<Russian>Ñêàçêà î ïàíòåðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHEASANT_MYTH</Tag>
 		<English>Myth - Pheasant</English>
 		<French>Mythe du Faisan</French>
+		<Russian>Ìèô î ôàçàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHEASANT_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Pheasant</English>
 		<French>Effet (Mythe du Faisan)</French>
+		<Russian>Ïåñíÿ î ôàçàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHEASANT_STORIES</Tag>
 		<English>Stories - Pheasant</English>
 		<French>Histoires du Faisan</French>
+		<Russian>Ñêàçû î ôàçàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHEASANT_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Pheasant</English>
 		<French>Effet (Histoires du Faisan)</French>
+		<Russian>Ïðåäàíèÿ î ôàçàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHEASANT_STORY</Tag>
 		<English>Story - Pheasant</English>
 		<French>Histoire du Faisan</French>
+		<Russian>Ñêàçêà î ôàçàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIGEON_MYTH</Tag>
 		<English>Myth - Pigeon</English>
 		<French>Mythe du Pigeon</French>
+		<Russian>Ìèô î ãîëóáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIGEON_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Pigeon</English>
 		<French>Effet (Mythe du Pigeon)</French>
+		<Russian>Ïåñíÿ î ãîëóáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIGEON_STORIES</Tag>
 		<English>Stories - Pigeon</English>
 		<French>Histoires du Pigeon</French>
+		<Russian>Ñêàçû î ãîëóáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIGEON_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Pigeon</English>
 		<French>Effet (Histoires du Pigeon)</French>
+		<Russian>Ïðåäàíèÿ î ãîëóáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIGEON_STORY</Tag>
 		<English>Story - Pigeon</English>
 		<French>Histoire du Pigeon</French>
+		<Russian>Ñêàçêà î ãîëóáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PLATYPUS_MYTH</Tag>
 		<English>Myth - Platypus</English>
 		<French>Mythe de l'Ornithorynque</French>
+		<Russian>Ìèô îá óòêîíîñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PLATYPUS_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Platypus</English>
 		<French>Effet (Mythe de l'Ornithorynque)</French>
+		<Russian>Ïåñíÿ îá óòêîíîñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PLATYPUS_STORIES</Tag>
 		<English>Stories - Platypus</English>
 		<French>Histoires de l'Ornithorynque</French>
+		<Russian>Ñêàçû îá óòêîíîñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PLATYPUS_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Platypus</English>
 		<French>Effet (Histoires de l'Ornithorynque)</French>
+		<Russian>Ïðåäàíèÿ îá óòêîíîñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PLATYPUS_STORY</Tag>
 		<English>Story - Platypus</English>
 		<French>Histoire de l'Ornithorynque</French>
+		<Russian>Ñêàçêà îá óòêîíîñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POSSUM_MYTH</Tag>
 		<English>Myth - Possum</English>
 		<French>Mythe du Phalanger commun</French>
+		<Russian>Ìèô î ïîññóìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POSSUM_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Possum</English>
 		<French>Effet (Mythe du Phalanger commun)</French>
+		<Russian>Ïåñíÿ î ïîññóìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POSSUM_STORIES</Tag>
 		<English>Stories - Possum</English>
 		<French>Histoires du Phalanger commun</French>
+		<Russian>Ñêàçû î ïîññóìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POSSUM_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Possum</English>
 		<French>Effet (Histoires du Phalanger commun)</French>
+		<Russian>Ïðåäàíèÿ î ïîññóìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POSSUM_STORY</Tag>
 		<English>Story - Possum</English>
 		<French>Histoire du Phalanger commun</French>
+		<Russian>Ñêàçêà î ïîññóìå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PYGMYHIPPO_MYTH</Tag>
 		<English>Myth - Pygmy Hippopotamus</English>
 		<French>Mythe de l'Hippopotame nain</French>
+		<Russian>Ìèô î êàðë. áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PYGMYHIPPO_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Pygmy Hippopotamus</English>
 		<French>Effet (Mythe de l'Hippopotame nain)</French>
+		<Russian>Ïåñíÿ î êàðë. áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PYGMYHIPPO_STORIES</Tag>
 		<English>Stories - Pygmy Hippopotamus</English>
 		<French>Histoires de l'Hippopotame nain</French>
+		<Russian>Ñêàçû î êàðë. áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PYGMYHIPPO_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Pygmy Hippopotamus</English>
 		<French>Effet (Histoires de l'Hippopotame nain)</French>
+		<Russian>Ïðåäàíèÿ î êàðë. áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PYGMYHIPPO_STORY</Tag>
 		<English>Story - Pygmy Hippopotamus</English>
 		<French>Histoire de l'Hippopotame nain</French>
+		<Russian>Ñêàçêà î êàðë. áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACCOON_MYTH</Tag>
 		<English>Myth - Raccoon</English>
 		<French>Mythe du Raton-Laveur</French>
+		<Russian>Ìèô î åíîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACCOON_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Raccoon</English>
 		<French>Effet (Mythe du Raton-Laveur)</French>
+		<Russian>Ïåñíÿ î åíîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACCOON_STORIES</Tag>
 		<English>Stories - Raccoon</English>
 		<French>Histoires du Raton-Laveur</French>
+		<Russian>Ñêàçû î åíîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACCOON_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Raccoon</English>
 		<French>Effet (Histoires du Raton-Laveur)</French>
+		<Russian>Ïðåäàíèÿ î åíîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACCOON_STORY</Tag>
 		<English>Story - Raccoon</English>
 		<French>Histoire du Raton-Laveur</French>
+		<Russian>Ñêàçêà î åíîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAY_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Ray</English>
 		<French>Effet (Mythe de la Raie)</French>
+		<Russian>Ïåñíÿ î ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_MYTH</Tag>
 		<English>Myth - Red Fox</English>
 		<French>Mythe du Renard Roux</French>
+		<Russian>Ìèô î ëèñèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Red Fox</English>
 		<French>Effet (Mythe du Renard Roux)</French>
+		<Russian>Ïåñíÿ î ëèñèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_STORIES</Tag>
 		<English>Stories - Red Fox</English>
 		<French>Histoires du Renard Roux</French>
+		<Russian>Ñêàçû î ëèñèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Red Fox</English>
 		<French>Effet (Histoires du Renard Roux)</French>
+		<Russian>Ïðåäàíèÿ î ëèñèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_STORY</Tag>
 		<English>Story - Red Fox</English>
 		<French>Histoire du Renard Roux</French>
+		<Russian>Ñêàçêà î ëèñèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_SHARK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Reef shark</English>
 		<French>Effet (Mythe du Requin des récifs)</French>
+		<Russian>Ïåñíÿ î ðèô. àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_SHARK_STORIES</Tag>
 		<English>Stories - Reef shark</English>
 		<French>Histoires du Requin des récifs</French>
+		<Russian>Ñêàçû î ðèô. àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_SHARK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Reef shark</English>
 		<French>Effet (Histoires de Requins des récifs)</French>
+		<Russian>Ïðåäàíèÿ î ðèô. àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_SHARK_STORY</Tag>
 		<English>Story - Reef Shark</English>
 		<French>Histoire - Requin des Récifs</French>
 		<Polish>Opowieść o Żarłaczu Karaibskim</Polish>
+		<Russian>Ñêàçêà î ðèôîâîé àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RHINO_TAXONOMY_MYTH</Tag>
 		<English>Myth - Rhinoceroses</English>
 		<French>Mythe du Rhinocéros</French>
 		<Polish>Mit - Rhinoceroses</Polish>
+		<Russian>Ìèô î íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RHINO_TAXONOMY_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Rhinoceroses</English>
 		<French>Effet (Mythe du Rhinocéros)</French>
 		<Polish>Efekt Mitu - Rhinoceroses</Polish>
+		<Russian>Ïåñíÿ î íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RIVER_CROC_MYTH</Tag>
@@ -2063,6 +2417,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mit - Krokodyl Błotny</Polish>
+		<Russian>Ìèô î ðå÷. êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RIVER_CROC_MYTH_EFFECT</Tag>
@@ -2073,6 +2428,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Mitu - Krokodyl Błotny</Polish>
+		<Russian>Ïåñíÿ î ðå÷. êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RIVER_CROC_STORIES</Tag>
@@ -2083,6 +2439,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Historie - Krokodyl Błotny</Polish>
+		<Russian>Ñêàçû î ðå÷. êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RIVER_CROC_STORIES_EFFECT</Tag>
@@ -2093,6 +2450,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Historii - Krokodyl Błotny</Polish>
+		<Russian>Ïðåäàíèÿ î ðå÷. êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RIVER_CROC_STORY</Tag>
@@ -2103,91 +2461,108 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Opowieść - Krokodyl Błotny</Polish>
+		<Russian>Ñêàçêà î ðå÷. êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROCKHOPPER_PENGUIN_MYTH</Tag>
 		<English>Myth - Rockhopper Penguin</English>
 		<French>Mythe du Gorfou sauteur</French>
+		<Russian>Ìèô î ñêàë. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROCKHOPPER_PENGUIN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Rockhopper Penguin</English>
 		<French>Effet (Mythe du Gorfou sauteur)</French>
+		<Russian>Ïåñíÿ î ñêàë. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROCKHOPPER_PENGUIN_STORIES</Tag>
 		<English>Stories - Rockhopper Penguin</English>
 		<French>Histoire des Gorfous sauteurs</French>
+		<Russian>Ñêàçû î ñêàë. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROCKHOPPER_PENGUIN_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Rockhopper Penguin</English>
 		<French>Effet (Histoires des Gorfous sauteurs)</French>
+		<Russian>Ïðåäàíèÿ î ñêàë. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROCKHOPPER_PENGUIN_STORY</Tag>
 		<English>Story - Rockhopper Penguin</English>
 		<French>Histoire du Gorfou sauteur</French>
+		<Russian>Ñêàçêà î ñêàë. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SABRETOOTH_MYTH</Tag>
 		<English>Myth - Sabretooth</English>
 		<French>Mythe du Tigre à dents de sabre</French>
 		<Polish>Mit - Tygrys Szablozębny</Polish>
+		<Russian>Ìèô î ñàáë. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SABRETOOTH_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Sabretooth</English>
 		<French>Effet (Mythe du Tigre à dents de sabre)</French>
+		<Russian>Ïåñíÿ î ñàáë. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SABRETOOTH_REMAINS</Tag>
 		<English>Remains - Sabretooth</English>
 		<French>Restes de Tigre à dents de sabre</French>
 		<Polish>Resztki - Tygrys Szablozębny</Polish>
+		<Russian>Ïàìÿòü î ñàáë. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SABRETOOTH_STORIES</Tag>
 		<English>Stories - Sabretooth</English>
 		<French>Histoires du Tigre à dents de sabre</French>
 		<Polish>Historie - Tygrys Szablozębny</Polish>
+		<Russian>Ñêàçû î ñàáë. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SABRETOOTH_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Sabretooth</English>
 		<French>Effet (Histoires du Tigre à dents de sabre)</French>
 		<Polish>Efekt Historii - Tygrys Szablozębny</Polish>
+		<Russian>Ïðåäàíèÿ î ñàáë. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SABRETOOTH_STORY</Tag>
 		<English>Story - Sabretooth</English>
 		<French>Histoire du Tigre à dents de sabre</French>
 		<Polish>Opowieść - Tygrys Szablozębny</Polish>
+		<Russian>Ñêàçêà î ñàáë. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAIGA_MYTH</Tag>
 		<English>Myth - Saiga</English>
 		<French>Mythe de l'Antilope Saiga</French>
+		<Russian>Ìèô î ñàéãàêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAIGA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Saiga</English>
 		<French>Effet (Mythe de l'Antilope Saiga)</French>
+		<Russian>Ïåñíÿ î ñàéãàêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAIGA_STORIES</Tag>
 		<English>Stories - Saiga</English>
 		<French>Histoires de l'Antilope Saiga</French>
+		<Russian>Ñêàçû î ñàéãàêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAIGA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Saiga</English>
 		<French>Effet (Histoires de l'Antilope Saiga)</French>
+		<Russian>Ïðåäàíèÿ î ñàéãàêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAIGA_STORY</Tag>
 		<English>Story - Saiga</English>
 		<French>Histoire de l'Antilope Saiga</French>
+		<Russian>Ñêàçêà î ñàéãàêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALTWATER_CROC_MYTH</Tag>
@@ -2198,6 +2573,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mit - Krokodyl Różańcowy</Polish>
+		<Russian>Ìèô î ìîð. êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALTWATER_CROC_MYTH_EFFECT</Tag>
@@ -2208,6 +2584,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Mitu - Krokodyl Różańcowy</Polish>
+		<Russian>Ïåñíÿ î ìîð. êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALTWATER_CROC_STORIES</Tag>
@@ -2218,6 +2595,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Historie - Krokodyl Różańcowy</Polish>
+		<Russian>Ñêàçû î ìîð. êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALTWATER_CROC_STORIES_EFFECT</Tag>
@@ -2228,6 +2606,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Efekt Historii - Krokodyl Różańcowy</Polish>
+		<Russian>Ïðåäàíèÿ î ìîð. êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALTWATER_CROC_STORY</Tag>
@@ -2238,540 +2617,645 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Opowieść - Krokodyl Różańcowy</Polish>
+		<Russian>Ñêàçêà î ìîð. êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEALION_MYTH</Tag>
 		<English>Myth - Sea Lion</English>
 		<French>Mythe du Lion des mers</French>
+		<Russian>Ìèô î ìîðñêîì ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEALION_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Sea Lion</English>
 		<French>Effet (Mythe du Lion des mers)</French>
+		<Russian>Ïåñíÿ î ìîðñêîì ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEALION_STORIES</Tag>
 		<English>Stories - Sea Lion</English>
 		<French>Histoires du Lion des mers</French>
+		<Russian>Ñêàçû î ìîðñêîì ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEALION_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Sea Lion</English>
 		<French>Effet (Histoires de Lions des mers)</French>
+		<Russian>Ïðåäàíèÿ î ìîðñêîì ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEALION_STORY</Tag>
 		<English>Story - Sea Lion</English>
 		<French>Histoire du Lion des mers</French>
+		<Russian>Ñêàçêà î ìîðñêîì ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_STORIES</Tag>
 		<English>Stories - Sea Turtle</English>
 		<French>Histoires de la Tortue des mers</French>
+		<Russian>Ñêàçû î ìîð. ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Sea Turtle</English>
 		<French>Effet (Histoires de la Tortue des mers)</French>
+		<Russian>Ïðåäàíèÿ î ìîð. ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_STORY</Tag>
 		<English>Story - Sea Turtle</English>
 		<French>Histoire de la Tortue de mer</French>
 		<Polish>Opowieść o Żółwiu Morskim</Polish>
+		<Russian>Ñêàçêà î ìîð. ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_OTTER_MYTH</Tag>
 		<English>Myth - Sea Otter</English>
 		<French>Mythe de la Loutre de mer</French>
+		<Russian>Ìèô î êàëàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_OTTER_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Sea Otter</English>
 		<French>Effet (Mythe de la Loutre de mer)</French>
+		<Russian>Ïåñíÿ î êàëàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_OTTER_STORIES</Tag>
 		<English>Stories - Sea Otter</English>
 		<French>Histoires de Loutres de mer</French>
+		<Russian>Ñêàçû î êàëàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_OTTER_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Sea Otter</English>
 		<French>Effet (Histoires de la Loutre de mer)</French>
+		<Russian>Ïðåäàíèÿ î êàëàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_OTTER_STORY</Tag>
 		<English>Story - Sea Otter</English>
 		<French>Histoire de la Loutre de mer</French>
+		<Russian>Ñêàçêà î êàëàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHARK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Shark</English>
 		<French>Effet (Mythe du Requin)</French>
+		<Russian>Ïåñíÿ îá àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHARK_STORIES</Tag>
 		<English>Stories - Shark</English>
 		<French>Histoires de Requins</French>
+		<Russian>Ñêàçû îá àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHARK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Shark</English>
 		<French>Effet (Histoires du Requin)</French>
+		<Russian>Ïðåäàíèÿ îá àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHARK_STORY</Tag>
 		<English>Story - Shark</English>
 		<French>Histoire du Requin</French>
+		<Russian>Ñêàçêà îá àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SIBERIAN_TIGER_MYTH</Tag>
 		<English>Myth - Siberian Tiger</English>
 		<French>Mythe du Tigre de Sibérie</French>
+		<Russian>Ìèô î ñèá. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SIBERIAN_TIGER_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Siberian Tiger</English>
 		<French>Effet (Mythe du Tigre de Sibérie)</French>
+		<Russian>Ïåñíÿ î ñèá. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SIBERIAN_TIGER_STORIES</Tag>
 		<English>Stories - Siberian Tiger</English>
 		<French>Histoires du Tigre de Sibérie</French>
+		<Russian>Ñêàçû î ñèá. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SIBERIAN_TIGER_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Siberian Tiger</English>
 		<French>Effet (Histoires du Tigre de Sibérie)</French>
+		<Russian>Ïðåäàíèÿ î ñèá. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SIBERIAN_TIGER_STORY</Tag>
 		<English>Story - Siberian Tiger</English>
 		<French>Histoire du Tigre de Sibérie</French>
+		<Russian>Ñêàçêà î ñèá. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKUNK_MYTH</Tag>
 		<English>Myth - Skunk</English>
 		<French>Mythe de la Moufette</French>
+		<Russian>Ìèô î ñêóíñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKUNK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Skunk</English>
 		<French>Effet (Mythe de la Moufette)</French>
+		<Russian>Ïåñíÿ î ñêóíñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKUNK_STORIES</Tag>
 		<English>Stories - Skunk</English>
 		<French>Histoires de la Moufette</French>
+		<Russian>Ñêàçû î ñêóíñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKUNK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Skunk</English>
 		<French>Effet (Histoires de la Moufette)</French>
+		<Russian>Ïðåäàíèÿ î ñêóíñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKUNK_STORY</Tag>
 		<English>Story - Skunk</English>
 		<French>Histoire de la Moufette</French>
+		<Russian>Ñêàçêà î ñêóíñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNOW_LEOPARD_MYTH</Tag>
 		<English>Myth - Snow Leopard</English>
 		<French>Mythe du Léopard des neiges</French>
+		<Russian>Ìèô î ñíåæíîì áàðñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNOW_LEOPARD_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Snow Leopard</English>
 		<French>Effet (Mythe du Léopard des neiges)</French>
+		<Russian>Ïåñíÿ î ñíåæíîì áàðñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNOW_LEOPARD_STORIES</Tag>
 		<English>Stories - Snow Leopard</English>
 		<French>Histoires du Léopard des neiges</French>
+		<Russian>Ñêàçû î ñíåæíîì áàðñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNOW_LEOPARD_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Snow Leopard</English>
 		<French>Effet (Histoires du Léopard des neiges)</French>
+		<Russian>Ïðåäàíèÿ î ñíåæíîì áàðñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNOW_LEOPARD_STORY</Tag>
 		<English>Story - Snow Leopard</English>
 		<French>Histoire du Léopard des neiges</French>
+		<Russian>Ñêàçêà î ñíåæíîì áàðñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STONE_MYTH</Tag>
 		<English>Myth - Stone</English>
 		<French>Mythe de la Pierre</French>
 		<Polish>Mit - Kamień</Polish>
+		<Russian>Ìèô î êàìíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STONE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Stone</English>
 		<French>Effet (Mythe de la pierre)</French>
+		<Russian>Ïåñíÿ î êàìíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TAPIR_MYTH</Tag>
 		<English>Myth - Tapir</English>
 		<French>Mythe du Tapir</French>
 		<Polish>Mit - Tapir</Polish>
+		<Russian>Ìèô î òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TAPIR_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Tapir</English>
 		<French>Effet (Mythe du Tapir)</French>
 		<Polish>Efekt Mitu - Tapir</Polish>
+		<Russian>Ïåñíÿ î òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TAPIR_STORIES</Tag>
 		<English>Stories - Tapir</English>
 		<French>Histoires des Tapirs</French>
 		<Polish>Historie - Tapir</Polish>
+		<Russian>Ñêàçû î òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TAPIR_STORIES_EFFECT</Tag>
 		<English>Stories effect - Tapir</English>
 		<French>Effet (Histoires des Tapirs)</French>
 		<Polish>Efekt Historie - Tapir</Polish>
+		<Russian>Ïðåäàíèÿ î òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TAPIR_STORY</Tag>
 		<English>Story - Tapir</English>
 		<French>Histoire du Tapir</French>
 		<Polish>Opowieść - Tapir</Polish>
+		<Russian>Ñêàçêà î òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TARANTULA_MYTH</Tag>
 		<English>Myth - Tarantula</English>
 		<French>Mythe de la Tarentule</French>
+		<Russian>Ìèô î òàðàíòóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TARANTULA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Tarantula</English>
 		<French>Effet (Mythe de la Tarentule)</French>
+		<Russian>Ïåñíÿ î òàðàíòóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TARANTULA_STORIES</Tag>
 		<English>Stories - Tarantula</English>
 		<French>Histoires de la Tarentule</French>
+		<Russian>Ñêàçû î òàðàíòóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TARANTULA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Tarantula</English>
 		<French>Effet (Histoires de la Tarentule)</French>
+		<Russian>Ïðåäàíèÿ î òàðàíòóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TARANTULA_STORY</Tag>
 		<English>Story - Tarantula</English>
 		<French>Histoire de la Tarentule</French>
+		<Russian>Ñêàçêà î òàðàíòóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERN_MYTH</Tag>
 		<English>Myth - Arctic Tern</English>
 		<French>Mythe du Sterne Arctique</French>
+		<Russian>Ìèô î ïîë. êðà÷êå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Arctic Tern</English>
 		<French>Effet (Mythe du Sterne Arctique)</French>
+		<Russian>Ïåñíÿ î ïîë. êðà÷êå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERN_STORIES</Tag>
 		<English>Stories - Arctic Tern</English>
 		<French>Histoires du Sterne Arctique</French>
+		<Russian>Ñêàçû î ïîë. êðà÷êå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERN_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Arctic Tern</English>
 		<French>Effet (Histoires du Sterne Arctique)</French>
+		<Russian>Ïðåäàíèÿ î ïîë. êðà÷êå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERN_STORY</Tag>
 		<English>Story - Arctic Tern</English>
 		<French>Histoire du Sterne Arctique</French>
+		<Russian>Ñêàçêà î ïîë. êðà÷êå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THYLACINE_MYTH</Tag>
 		<English>Myth - Thylacine</English>
 		<French>Mythe du Thylacine</French>
+		<Russian>Ìèô î ñóì÷. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THYLACINE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Thylacine</English>
 		<French>Effet (Mythe du Thylacine)</French>
+		<Russian>Ïåñíÿ î ñóì÷. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THYLACINE_REMAINS</Tag>
 		<English>Remains - Thylacine</English>
 		<French>Restes de Thylacine</French>
+		<Russian>Ïàìÿòü î ñóì÷. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THYLACINE_STORIES</Tag>
 		<English>Stories - Thylacine</English>
 		<French>Histoires du Thylacine</French>
+		<Russian>Ñêàçû î ñóì÷. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THYLACINE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Thylacine</English>
 		<French>Effet (Histoires du Thylacine</French>
+		<Russian>Ïðåäàíèÿ î ñóì÷. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THYLACINE_STORY</Tag>
 		<English>Story - Thylacine</English>
 		<French>Histoire du Thylacine</French>
+		<Russian>Ñêàçêà î ñóì÷. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOUCAN_MYTH</Tag>
 		<English>Myth - Toucan</English>
 		<French>Mythe du Toucan</French>
+		<Russian>Ìèô î òóêàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOUCAN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Toucan</English>
 		<French>Effet (Mythe du Toucan)</French>
+		<Russian>Ïåñíÿ î òóêàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOUCAN_STORIES</Tag>
 		<English>Stories - Toucan</English>
 		<French>Histoires du Toucan</French>
+		<Russian>Ñêàçû î òóêàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOUCAN_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Toucan</English>
 		<French>Effet (Histoires du Toucan)</French>
+		<Russian>Ïðåäàíèÿ î òóêàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOUCAN_STORY</Tag>
 		<English>Story - Toucan</English>
 		<French>Histoire du Toucan</French>
+		<Russian>Ñêàçêà î òóêàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TREESLOTH_MYTH</Tag>
 		<English>Myth - Tree Sloth</English>
 		<French>Mythe du paresseux</French>
+		<Russian>Ìèô î ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TREESLOTH_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Tree Sloth</English>
 		<French>Effet (Mythe du paresseux)</French>
+		<Russian>Ïåñíÿ î ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TREESLOTH_STORIES</Tag>
 		<English>Stories - Tree Sloth</English>
 		<French>Histoires du paresseux</French>
+		<Russian>Ñêàçû î ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TREESLOTH_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Tree Sloth</English>
 		<French>Effet (Histoires du paresseux)</French>
+		<Russian>Ïðåäàíèÿ î ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TREESLOTH_STORY</Tag>
 		<English>Story - Tree Sloth</English>
 		<French>Histoire du paresseux</French>
+		<Russian>Ñêàçêà î ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TUNA_STORY</Tag>
 		<English>Story - Tuna</English>
 		<French>Histoire - Thon</French>
 		<Polish>Opowieść o Tuńczyku</Polish>
+		<Russian>Ñêàçêà î òóíöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURKEY_MYTH</Tag>
 		<English>Myth - Turkey</English>
 		<French>Mythe de la Dinde</French>
+		<Russian>Ìèô îá èíäåéêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURKEY_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Turkey</English>
 		<French>Effet (Mythe de la Dinde)</French>
+		<Russian>Ïåñíÿ îá èíäåéêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURKEY_STORIES</Tag>
 		<English>Stories - Turkey</English>
 		<French>Histoires de la Dinde</French>
+		<Russian>Ñêàçû îá èíäåéêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURKEY_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Turkey</English>
 		<French>Effet (Histoires de la Dinde)</French>
+		<Russian>Ïðåäàíèÿ îá èíäåéêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURKEY_STORY</Tag>
 		<English>Story - Turkey</English>
 		<French>Histoire de la Dinde</French>
+		<Russian>Ñêàçêà îá èíäåéêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VULTURE_MYTH</Tag>
 		<English>Myth - Vulture</English>
 		<French>Mythe du Vautour</French>
+		<Russian>Ìèô î ãðèôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VULTURE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Vulture</English>
 		<French>Effet (Mythe du Vautour)</French>
+		<Russian>Ïåñíÿ î ãðèôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VULTURE_STORIES</Tag>
 		<English>Stories - Vulture</English>
 		<French>Histoires du Vautour</French>
+		<Russian>Ñêàçû î ãðèôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VULTURE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Vulture</English>
 		<French>Effet (Histoires du Vautour)</French>
+		<Russian>Ïðåäàíèÿ î ãðèôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VULTURE_STORY</Tag>
 		<English>Story - Vulture</English>
 		<French>Histoire du Vautour</French>
+		<Russian>Ñêàçêà î ãðèôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Walrus</English>
 		<French>Effet (Mythe du Morse)</French>
+		<Russian>Ïåñíÿ î ìîðæå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_STORIES</Tag>
 		<English>Stories - Walrus</English>
 		<French>Histoires de Morses</French>
+		<Russian>Ñêàçû î ìîðæå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Walrus</English>
 		<French>Effet (Histoires de Morses)</French>
+		<Russian>Ïðåäàíèÿ î ìîðæå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_STORY</Tag>
 		<English>Story - Walrus</English>
 		<French>Histoire du Morse</French>
+		<Russian>Ñêàçêà î ìîðæå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Whale Shark</English>
 		<French>Effet (Mythe du Requin baleine)</French>
+		<Russian>Ïåñíÿ î êèò. àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_STORIES</Tag>
 		<English>Stories - Whale Shark</English>
 		<French>Histoires de Requins baleine</French>
+		<Russian>Ñêàçû î êèò. àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Whale Shark</English>
 		<French>Effet (Histoires du Requin baleine)</French>
+		<Russian>Ïðåäàíèÿ î êèò. àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_STORY</Tag>
 		<English>Story - Whale Shark</English>
 		<French>Histoire - Requin-baleine</French>
 		<Polish>Opowieść o Rekinie Wielorybim</Polish>
+		<Russian>Ñêàçêà î êèòîâîé àêóëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHITE_RHINO_MYTH</Tag>
 		<English>Myth - Rhinoceros, White</English>
 		<French>Mythe du Rhinocéros blanc</French>
 		<Polish>Mit - Nosorożec Biały</Polish>
+		<Russian>Ìèô î áåë. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHITE_RHINO_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Rhinoceros, White</English>
 		<French>Effet (Mythe du Rhinocéros blanc)</French>
 		<Polish>Efekt Mitu - Nosorożec Biały</Polish>
+		<Russian>Ïåñíÿ î áåë. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHITE_RHINO_STORIES</Tag>
 		<English>Stories - Rhinoceros, White</English>
 		<French>Histoires du Rhinocéros blanc</French>
 		<Polish>Historie - Nosorożec Biały</Polish>
+		<Russian>Ñêàçû î áåë. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHITE_RHINO_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Rhinoceros, White</English>
 		<French>Effet (Histoires du Rhinocéros blanc)</French>
 		<Polish>Efekt Historii - Nosorożec Biały</Polish>
+		<Russian>Ïðåäàíèÿ î áåë. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHITE_RHINO_STORY</Tag>
 		<English>Story - Rhinoceros, White</English>
 		<French>Histoire du Rhinocéros blanc</French>
 		<Polish>Opowieść - Nosorożec Biały</Polish>
+		<Russian>Ñêàçêà î áåë. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLVERINE_MYTH</Tag>
 		<English>Myth - Wolverine</English>
 		<French>Mythe du Carcajou</French>
+		<Russian>Ìèô î ðîñîìàõå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLVERINE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Wolverine</English>
 		<French>Effet (Mythe du Carcajou)</French>
+		<Russian>Ïåñíÿ î ðîñîìàõå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLVERINE_STORIES</Tag>
 		<English>Stories - Wolverine</English>
 		<French>Histoires du Carcajou</French>
+		<Russian>Ñêàçû î ðîñîìàõå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLVERINE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Wolverine</English>
 		<French>Effet (Histoires du Carcajou)</French>
+		<Russian>Ïðåäàíèÿ î ðîñîìàõå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLVERINE_STORY</Tag>
 		<English>Story - Wolverine</English>
 		<French>Histoire du Carcajou</French>
+		<Russian>Ñêàçêà î ðîñîìàõå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOMBAT_MYTH</Tag>
 		<English>Myth - Wombat</English>
 		<French>Mythe du Wombat</French>
+		<Russian>Ìèô î âîìáàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOMBAT_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Wombat</English>
 		<French>Effet (Mythe du Wombat)</French>
+		<Russian>Ïåñíÿ î âîìáàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOMBAT_STORIES</Tag>
 		<English>Stories - Wombat</English>
 		<French>Histoires du Wombat</French>
+		<Russian>Ñêàçû î âîìáàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOMBAT_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Wombat</English>
 		<French>Effet (Histoire du Wombat)</French>
+		<Russian>Ïðåäàíèÿ î âîìáàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOMBAT_STORY</Tag>
 		<English>Story - Wombat</English>
 		<French>Histoire du Wombat</French>
+		<Russian>Ñêàçêà î âîìáàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_MYTH</Tag>
 		<English>Myth - Zebra</English>
 		<French>Mythe du Zèbre</French>
+		<Russian>Ìèô î çåáðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Zebra</English>
 		<French>Effet (Mythe du Zèbre)</French>
+		<Russian>Ïåñíÿ î çåáðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_STORIES</Tag>
 		<English>Stories - Zebra</English>
 		<French>Histoires de Zèbres</French>
+		<Russian>Ñêàçû î çåáðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Zebra</English>
 		<French>Effet (Histoires du Zèbre)</French>
+		<Russian>Ïðåäàíèÿ î çåáðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_STORY</Tag>
 		<English>Story - Zebra</English>
 		<French>Histoire du Zèbre</French>
+		<Russian>Ñêàçêà î çåáðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARCTICFOX</Tag>
@@ -2782,6 +3266,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ïåñåö</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARCTICFOX_PEDIA</Tag>
@@ -2797,6 +3282,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Áðîíåíîñåö</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARMADILLO_PEDIA</Tag>
@@ -2812,6 +3298,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Áàáèðóñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BABIRUSA_PEDIA</Tag>
@@ -2839,6 +3326,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Borsuk</Polish>
+		<Russian>Áàðñóê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BADGER_PEDIA</Tag>
@@ -2865,6 +3353,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Czarny Niedźwiedź</Polish>
+		<Russian>×åðíûé ìåäâåäü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLACKBEAR_PEDIA</Tag>
@@ -2881,6 +3370,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Nosorożec Czarny</Polish>
+		<Russian>×åðíûé íîñîðîã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLACK_RHINO_PEDIA</Tag>
@@ -2909,6 +3399,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Dzik</Polish>
+		<Russian>Êàáàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOAR_PEDIA</Tag>
@@ -2930,6 +3421,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Tapir Brazylijski</Polish>
+		<Russian>Áðàçèëüñêèé òàïèð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BROWN_BEAR</Tag>
@@ -2955,6 +3447,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Niedźwiedź Brunatny</Polish>
+		<Russian>Áóðûé ìåäâåäü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BROWN_BEAR_PEDIA</Tag>
@@ -2997,6 +3490,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Bawół Wodny</Polish>
+		<Russian>Àôð. áóéâîë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BUFFALO_CAPE_PEDIA</Tag>
@@ -3012,6 +3506,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>×åðíûé êàéìàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAIMAN_BLACK_PEDIA</Tag>
@@ -3039,6 +3534,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Tur</Polish>
+		<Russian>Çóáð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CUSCUS</Tag>
@@ -3049,6 +3545,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Êóñêóñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CUSCUS_PEDIA</Tag>
@@ -3075,6 +3572,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Æàáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DESERT_TARANTULA</Tag>
@@ -3089,6 +3587,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ïóñòûííûé òàðàíòóë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DHOLE</Tag>
@@ -3099,6 +3598,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Êðàñíûé âîëê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DHOLE_PEDIA</Tag>
@@ -3114,6 +3614,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Äèíãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DINGO_PEDIA</Tag>
@@ -3146,6 +3647,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Orzeł</Polish>
+		<Russian>Îðåë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EAGLE_BALD</Tag>
@@ -3156,6 +3658,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Áåëîãîëîâûé îðëàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EAGLE_BALD_PEDIA</Tag>
@@ -3178,6 +3681,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ýëàñìîòåðèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELASMOTHERIUM_PEDIA</Tag>
@@ -3199,6 +3703,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Àôð. ñëîí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELEPHANT_ASIAN</Tag>
@@ -3214,6 +3719,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Słoń</Polish>
+		<Russian>Ñëîí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELEPHANT_PEDIA</Tag>
@@ -3238,6 +3744,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ýôèîïñêèé øàêàë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EWOLF_PEDIA</Tag>
@@ -3254,6 +3761,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ëèñè÷êà-ôåíåê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FENNECFOX_PEDIA</Tag>
@@ -3275,6 +3783,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Aligator Amerykański</Polish>
+		<Russian>Àëëèãàòîð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GATOR_ASIAN</Tag>
@@ -3290,6 +3799,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Aligator Chiński</Polish>
+		<Russian>Êèòàéñêèé àëëèãàòîð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GATOR_ASIAN_PEDIA</Tag>
@@ -3323,6 +3833,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Gazela</Polish>
+		<Russian>Ãàçåëü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GAZELLE_PEDIA</Tag>
@@ -3346,6 +3857,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Dżelada</Polish>
+		<Russian>Ãåëàäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GELADA_PEDIA</Tag>
@@ -3372,6 +3884,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Oryks</Polish>
+		<Russian>Ñåðíîáûê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GERENUK</Tag>
@@ -3391,6 +3904,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Ãåðåíóê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GERENUK_PEDIA</Tag>
@@ -3418,6 +3932,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Gawial</Polish>
+		<Russian>Ãàâèàë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIANT_SQUID</Tag>
@@ -3439,6 +3954,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Kałamarnica Olbrzymia</Polish>
+		<Russian>Ãèãàíòñêèé êàëüìàð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIANT_SQUID_PEDIA</Tag>
@@ -3465,6 +3981,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Żyrafa</Polish>
+		<Russian>Æèðàô</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_PEDIA</Tag>
@@ -3481,6 +3998,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ãëèïòîäîí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GLYPTO_PEDIA</Tag>
@@ -3502,6 +4020,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ãèãàíòñêèé ëåíèâåö</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GROUNDSLOTH_PEDIA</Tag>
@@ -3533,6 +4052,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Puchacz Wirginijski</Polish>
+		<Russian>Ôèëèí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HORNEDOWL_PEDIA</Tag>
@@ -3560,6 +4080,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Koń</Polish>
+		<Russian>Ëîøàäü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYENA</Tag>
@@ -3581,6 +4102,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Hiena</Polish>
+		<Russian>Ãèåíà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IBEX</Tag>
@@ -3602,6 +4124,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Koziorożec</Polish>
+		<Russian>Êîçåðîã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INDIAN_RHINO</Tag>
@@ -3618,6 +4141,7 @@
 		</German>
 		<Italian>Rinoceronte indiano</Italian>
 		<Polish>Nosorożec Indyjski</Polish>
+		<Russian>Èíäèéñêèé íîñîðîã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INDIAN_RHINO_PEDIA</Tag>
@@ -3642,6 +4166,7 @@
 		</German>
 		<Italian>Rinoceronte di Giava</Italian>
 		<Polish>Nosorożec Jawajski</Polish>
+		<Russian>ßâàíñêèé íîñîðîã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAVA_RHINO_PEDIA</Tag>
@@ -3664,6 +4189,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Òðîï. òàðàíòóë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEMUR</Tag>
@@ -3674,6 +4200,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ëåìóð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEMUR_PEDIA</Tag>
@@ -3705,6 +4232,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Lew</Polish>
+		<Russian>Ëåâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIZARD</Tag>
@@ -3716,6 +4244,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Jaszczurka</Polish>
+		<Russian>ßùåðèöà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIZARD_PEDIA</Tag>
@@ -3723,6 +4252,7 @@
 		<French>Lézard commun, petit à moyen</French>
 		<German>Der Begriff [COLOR_UNIT_TEXT]Echse[COLOR_REVERT] ist eine biologisch nicht eindeutige Bezeichnung für eine Gruppe von Reptilien. Gemeint ist entweder eine Unterordnung der Schuppenkriechtiere oder eine Zusammenfassung aller heute lebenden Reptilien (außer Schildkröten). Im weiteren Sinn sind Echsen also auf vier Beinen gehende Reptilien mit langem Schwanz und kurzem Hals, was dem typischen "Echsenhabitus" entspricht.</German>
 		<Polish>Jaszczurki (Lacertilia, dawniej Sauria) grupa gadów łuskonośnych obejmująca czworonożne lub beznogie zwierzęta lądowe o wydłużonym ciele, oczach posiadających powieki, mocnych szczękach i diapsydalnej czaszce. Występują na wszystkich kontynentach poza Antarktydą oraz na wielu wyspach oceanicznych. Są najliczniejszą grupą gadów obejmującą ponad 4000 gatunków.</Polish>
+		<Russian>Îáûêíîâåííûå ìàëûå è ñðåäíèå ïî ãàáàðèòàì ÿùåðèöû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MALAYAN_TAPIR</Tag>
@@ -3734,6 +4264,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Tapir Malajski</Polish>
+		<Russian>Ìàëàéñêèé òàïèð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANEDWOLF</Tag>
@@ -3744,6 +4275,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ãðèâèñòûé âîëê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANEDWOLF_PEDIA</Tag>
@@ -3765,6 +4297,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Tapir Górski</Polish>
+		<Russian>Ãîðíûé òàïèð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NILECROC</Tag>
@@ -3786,6 +4319,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Krokodyl Nilowy</Polish>
+		<Russian>Íèëüñêèé êðîêîäèë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NILECROC_PEDIA</Tag>
@@ -3800,6 +4334,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ñóì÷àòûé ìóðàâüåä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OPOSSUM</Tag>
@@ -3809,6 +4344,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Îïîññóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OPOSSUM_PEDIA</Tag>
@@ -3829,6 +4365,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ïèíãâèí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIGEON</Tag>
@@ -3850,6 +4387,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Gołąb</Polish>
+		<Russian>Ãîëóáü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIGEON_PEDIA</Tag>
@@ -3877,6 +4415,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Świnia</Polish>
+		<Russian>Ñâèíüÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIG_PEDIA</Tag>
@@ -3898,6 +4437,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Óòêîíîñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLATYPUS_PEDIA</Tag>
@@ -3914,6 +4454,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ïîññóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POSSUM_PEDIA</Tag>
@@ -3941,6 +4482,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Żmija Sykliwa</Polish>
+		<Russian>Øóìÿùàÿ ãàäþêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PYGMYHIPPO</Tag>
@@ -3951,6 +4493,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Карликовый бегемот</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PYGMYHIPPO_PEDIA</Tag>
@@ -3978,6 +4521,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Płaszczka</Polish>
+		<Russian>Îðëÿêîâûé ñêàò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAY_MANTA</Tag>
@@ -3999,6 +4543,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Manta</Polish>
+		<Russian>Ìàíòà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAY_MANTA_PEDIA</Tag>
@@ -4030,6 +4575,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Duży Krokodyl</Polish>
+		<Russian>Êðóïíûé êðîêîäèë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RIVER_CROC_SMALL</Tag>
@@ -4051,6 +4597,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Mały Krokodyl</Polish>
+		<Russian>Ìåëêèé êðîêîäèë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SABRETOOTH</Tag>
@@ -4066,6 +4613,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Tygrys Szablozębny</Polish>
+		<Russian>Ñàáëåçóáûé òèãð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAIGA</Tag>
@@ -4086,6 +4634,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Suhak</Polish>
+		<Russian>Ñàéãàê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAIGA_PEDIA</Tag>
@@ -4113,6 +4662,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Krokodyl Różańcowy (Duży)</Polish>
+		<Russian>Áîë. ìîð. êðîêîäèë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SALTWATER_CROC_SMALL</Tag>
@@ -4134,6 +4684,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Krokodyl Różańcowy (Mały)</Polish>
+		<Russian>Ìàë. ìîð. êðîêîäèë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SALTWATER_CROC_STRATEGY</Tag>
@@ -4157,6 +4708,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Bielik Olbrzymi</Polish>
+		<Russian>Îðëàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEAEAGLE_PEDIA</Tag>
@@ -4180,6 +4732,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Lew Morski</Polish>
+		<Russian>Ìîðñêîé ëåâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEALION_PEDIA</Tag>
@@ -4206,6 +4759,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Wydra Morska</Polish>
+		<Russian>Êàëàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEAOTTER_PEDIA</Tag>
@@ -4238,6 +4792,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Jeleń</Polish>
+		<Russian>Îëåíü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICANELEPHANT</Tag>
@@ -4248,6 +4803,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Àôð. ñëîí (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICANELEPHANT_HELP</Tag>
@@ -4269,6 +4825,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ïåñåö (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARCTICFOX_HELP</Tag>
@@ -4289,6 +4846,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Áðîíåíîñåö (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARMADILLO_HELP</Tag>
@@ -4309,21 +4867,22 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Áàáèðóñ (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BABIRUSA_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story &#38; Stories - Babirusa
-[SPACE][SPACE] * Myth - Boar &#38; Pig Herd
-[SPACE][SPACE] * Exotic Herbivores Cage &#38; Enclosure
-[SPACE][SPACE] * Master Hunter &#38; Boar Camp</English>
+[SPACE][SPACE] * Myth, Story &amp; Stories - Babirusa
+[SPACE][SPACE] * Myth - Boar &amp; Pig Herd
+[SPACE][SPACE] * Exotic Herbivores Cage &amp; Enclosure
+[SPACE][SPACE] * Master Hunter &amp; Boar Camp</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de Babiroussa, Mythe des Ours, Enclos à cochons, camp d'ours, Maître chasseur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BAIRDS_TAPIR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story &#38; Stories - Tapir
-[SPACE][SPACE] * Exotic Herbivores Cage &#38; Enclosure</English>
+[SPACE][SPACE] * Myth, Story &amp; Stories - Tapir
+[SPACE][SPACE] * Exotic Herbivores Cage &amp; Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Bairds, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
@@ -4337,12 +4896,13 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Poskromiony Nosorożec Czarny</Polish>
+		<Russian>×åðíûé íîñîðîã (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BLACK_RHINO_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Rhinoceros
-[SPACE][SPACE] * Unicorn Myth &#38; Master Hunter
+[SPACE][SPACE] * Unicorn Myth &amp; Master Hunter
 [SPACE][SPACE] * Exotic Herbivores Cage</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros noir[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
@@ -4361,12 +4921,13 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Poskromiony Tapir Brazylijski</Polish>
+		<Russian>Áðàçèëüñêèé òàïèð (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BRAZILIAN_TAPIR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story &#38; Stories - Tapir
-[SPACE][SPACE] * Exotic Herbivores Cage &#38; Enclosure</English>
+[SPACE][SPACE] * Myth, Story &amp; Stories - Tapir
+[SPACE][SPACE] * Exotic Herbivores Cage &amp; Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Brazilian, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
@@ -4384,15 +4945,17 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Subdued Kajman</Polish>
+		<Russian>Êàéìàí (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAIMAN_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story &#38; Stories - Caiman
-[SPACE][SPACE] * Myth - Crocodiles &#38; Reptiles
-[SPACE][SPACE] * Taxidermist, Zoo &#38; Enclosure</English>
+[SPACE][SPACE] * Myth, Story &amp; Stories - Caiman
+[SPACE][SPACE] * Myth - Crocodiles &amp; Reptiles
+[SPACE][SPACE] * Taxidermist, Zoo &amp; Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Caiman, Mythe du Crocodiles, Cages à oiseaux, Atelier de Plumes et Perroquets</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Kajman</Polish>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Ñòðîèòü[COLOR_REVERT] Ìèô, Ñêàç è Ðàññêàçû î êàéìàíàõ[NEWLINE][ICON_BULLET]Ìèôû î êðîêîäèëàõ[NEWLINE][ICON_BULLET]Êëåòêè è âîëüåðû ñ ïòèöàìè[NEWLINE][ICON_BULLET]Ìàñòåð ïåðüåâ è Ïîïóãàè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CUSCUS</Tag>
@@ -4403,12 +4966,13 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Êóñêóñ (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CUSCUS_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story &#38; Stories - Cuscus
-[SPACE][SPACE] * Marsupial Myth &#38; Enclosure</English>
+[SPACE][SPACE] * Myth, Story &amp; Stories - Cuscus
+[SPACE][SPACE] * Marsupial Myth &amp; Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) des couscous[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
@@ -4429,12 +4993,13 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
+		<Russian>Æàáà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DART_FROG_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Dart Frog
-[SPACE][SPACE] * Amphibian Myth, Pond &#38; Enclosure</English>
+[SPACE][SPACE] * Amphibian Myth, Pond &amp; Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) des Grenouilles venimeuses[NEWLINE][ICON_BULLET]Mythe - Amphibiens[NEWLINE][ICON_BULLET]Mare à amphibiens et enclos</French>
 	</TEXT>
 	<TEXT>
@@ -4450,6 +5015,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ïóñòûííûé òàðàíòóë (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DHOLE</Tag>
@@ -4460,12 +5026,13 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Êðàñíûé âîëê (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DHOLE_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Dhole
-[SPACE][SPACE] * Wolf Myth &#38; Enclosure</English>
+[SPACE][SPACE] * Wolf Myth &amp; Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythes et Histoires du cuons et de Canins, Cage et Enclos à Loup</French>
 	</TEXT>
 	<TEXT>
@@ -4477,13 +5044,14 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Äèíãî (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DINGO_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story &#38; Stories - Dingo
-[SPACE][SPACE] * Dog Breeder &#38; Kennels
-[SPACE][SPACE] * Wolf Myth &#38; Enclosure</English>
+[SPACE][SPACE] * Myth, Story &amp; Stories - Dingo
+[SPACE][SPACE] * Dog Breeder &amp; Kennels
+[SPACE][SPACE] * Wolf Myth &amp; Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du Dingo , Eleveur de chiens et Chenils, Cage et Enclos à loup</French>
 	</TEXT>
 	<TEXT>
@@ -4496,14 +5064,15 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Poskromiony Elasmoterium</Polish>
+		<Russian>Ýëàñìîòåðèé (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELASMOTHERIUM_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story, Stories &#38; Remains - Elasmotherium
-[SPACE][SPACE] * Myths - Rhino &#38; Unicorn
-[SPACE][SPACE] * Exotic Herbivores Cage &#38; Enclosure
-[SPACE][SPACE] * Master Hunter &#38; Rhino Camp</English>
+[SPACE][SPACE] * Myth, Story, Stories &amp; Remains - Elasmotherium
+[SPACE][SPACE] * Myths - Rhino &amp; Unicorn
+[SPACE][SPACE] * Exotic Herbivores Cage &amp; Enclosure
+[SPACE][SPACE] * Master Hunter &amp; Rhino Camp</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros indien[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
@@ -4511,7 +5080,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_EMPEROR_PENGUIN_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Emperor Penguin
-[SPACE][SPACE] * Myths of Sea, Flightless Birds &#38; Sea Birds
+[SPACE][SPACE] * Myths of Sea, Flightless Birds &amp; Sea Birds
 [SPACE][SPACE] * Bird Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construisez[COLOR_REVERT]:
 [SPACE][SPACE] * Les Mythes et Histoires des Manchots Empereurs
@@ -4527,12 +5096,13 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ýôèîïñêèé øàêàë (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EWOLF_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story &#38; Stories - Ethiopian Wolf
-[SPACE][SPACE] * Wolf Myth &#38; Enclosure</English>
+[SPACE][SPACE] * Myth, Story &amp; Stories - Ethiopian Wolf
+[SPACE][SPACE] * Wolf Myth &amp; Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Loup d'Éthiopie, Mythe des Loups, Cage et Enclos à loup</French>
 	</TEXT>
 	<TEXT>
@@ -4544,12 +5114,13 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ëèñèöà-ôåíåê (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_FENNECFOX_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Fennec Fox
-[SPACE][SPACE] * Zoo, Taxidermist &#38; Totems
+[SPACE][SPACE] * Zoo, Taxidermist &amp; Totems
 [SPACE][SPACE] * Fox Traps and Fur Farm</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de Fennec, pièges à renard, et fermes de fourrures, Cage et Enclos à loup</French>
 	</TEXT>
@@ -4567,6 +5138,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Subdued Aligator Amerykański</Polish>
+		<Russian>Àëëèãàòîð (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_ASIAN</Tag>
@@ -4582,24 +5154,27 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Subdued Aligator Chiński</Polish>
+		<Russian>Êèòàéñêèé àëëèãàòîð (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_ASIAN_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Chinese Alligator
 [SPACE][SPACE] * Myth - Reptile, Crocodile and Dragon
-[SPACE][SPACE] * Master Hunter &#38; Reptile Enclosure</English>
+[SPACE][SPACE] * Master Hunter &amp; Reptile Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) de l'Alligator de Chine, Maître chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Aligator Chiński</Polish>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Ñòðîèòü[COLOR_REVERT] Ìèô, Ñêàç è Ðàññêàçû î êèòàéñê. àëëèãàòîðàõ[NEWLINE][ICON_BULLET]Ìàñòåð-îõîòíèê, Ìèôû î ðåïòèëèÿõ, êðîêîäèëàõ è Äðàêîíàõ[NEWLINE][ICON_BULLET]Êëåòêà è âîëüåð äëÿ ðåïòèëèé è Ïëîõèõ ïàðíåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - American Alligator
 [SPACE][SPACE] * Master Hunter, Myth - Reptile, Crocodile and Dragon
-[SPACE][SPACE] * Master Hunter &#38; Reptile Enclosure</English>
+[SPACE][SPACE] * Master Hunter &amp; Reptile Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) de l'Alligator d'Amérique, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Aligator Amerykański</Polish>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Ñòðîèòü[COLOR_REVERT] Ìèô, Ñêàç è Ðàññêàçû î àìåð. àëëèãàòîðàõ[NEWLINE][ICON_BULLET]Ìàñòåð-îõîòíèê, Ìèôû î ðåïòèëèÿõ, êðîêîäèëàõ è Äðàêîíàõ[NEWLINE][ICON_BULLET]Êëåòêà è âîëüåð äëÿ ðåïòèëèé è Ïëîõèõ ïàðíåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GLYPTO</Tag>
@@ -4610,13 +5185,14 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ãëèïòîäîí (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GLYPTO_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story, Stories &#38; Remains - Glyptodon
-[SPACE][SPACE] * Earth Myth &#38; Taxidermist
-[SPACE][SPACE] * Master Hunter &#38; Zoo</English>
+[SPACE][SPACE] * Myth, Story, Stories &amp; Remains - Glyptodon
+[SPACE][SPACE] * Earth Myth &amp; Taxidermist
+[SPACE][SPACE] * Master Hunter &amp; Zoo</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] un Mythe, une ou des Histoires - Glyptodon[NEWLINE][ICON_BULLET]Restes - Glyptodon[NEWLINE][ICON_BULLET]Mythe la Terre</French>
 	</TEXT>
 	<TEXT>
@@ -4628,13 +5204,14 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ãèãàíòñêèé ëåíèâåö (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GROUNDSLOTH_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story, Stories &#38; Remains - Ground Sloth
-[SPACE][SPACE] * Earth Myth &#38; Taxidermist
-[SPACE][SPACE] * Master Hunter &#38; Zoo</English>
+[SPACE][SPACE] * Myth, Story, Stories &amp; Remains - Ground Sloth
+[SPACE][SPACE] * Earth Myth &amp; Taxidermist
+[SPACE][SPACE] * Master Hunter &amp; Zoo</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Xénarthre, Restes de Xénarthre</French>
 	</TEXT>
 	<TEXT>
@@ -4652,14 +5229,15 @@
 		</German>
 		<Italian>Rinoceronte indiano ammaestrato</Italian>
 		<Polish>Poskromiony Nosorożec Indyjski</Polish>
+		<Russian>Èíäèéñêèé íîñîðîã (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_INDIAN_RHINO_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story &#38; Stories - Indian Rhinoceros
-[SPACE][SPACE] * Myth - Rhinoceros &#38; Unicorn
-[SPACE][SPACE] * Exotic Herbivores Cage &#38; Enclosure
-[SPACE][SPACE] * Rhino camp &#38; master Hunter</English>
+[SPACE][SPACE] * Myth, Story &amp; Stories - Indian Rhinoceros
+[SPACE][SPACE] * Myth - Rhinoceros &amp; Unicorn
+[SPACE][SPACE] * Exotic Herbivores Cage &amp; Enclosure
+[SPACE][SPACE] * Rhino camp &amp; master Hunter</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros indien[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
@@ -4678,6 +5256,7 @@
 		</German>
 		<Italian>Rinoceronte di Giava ammaestrato</Italian>
 		<Polish>Poskromiony Nosorożec Jawajski</Polish>
+		<Russian>ßâàíñêèé íîñîðîã (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_JAVA_RHINO_HELP</Tag>
@@ -4702,6 +5281,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Òðîï. òàðàíòóë (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_LIZARD</Tag>
@@ -4713,6 +5293,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Poskromiona Jaszczurka</Polish>
+		<Russian>ßùåðèöà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_LIZARD_HELP</Tag>
@@ -4722,6 +5303,7 @@
 [SPACE][SPACE] * Reptile Cage and Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Lézard, Mythes de la Terre et de Reptiles, Cage et Enclos à Reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Jaszczurki</Polish>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Ñòðîèòü[COLOR_REVERT] Ìèô, Ñêàç è Ðàññêàçû î ÿùåðèöàõ[NEWLINE][ICON_BULLET]Ìèôû î Çåìëå è Ðåïòèëèÿõ[NEWLINE][ICON_BULLET]Âîëüåð äëÿ ðåïòèëèé è Òåððàðèóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MALAYAN_TAPIR</Tag>
@@ -4733,6 +5315,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Poskromiony Tapir Malajski</Polish>
+		<Russian>Ìàëàéñêèé òàïèð (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MALAYAN_TAPIR_HELP</Tag>
@@ -4745,9 +5328,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MAMMOTH_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story, Story &#38; Remains - Mammoth
-[SPACE][SPACE] * Master Hunter, Mammoth Herd &#38; Elephant Myth
-[SPACE][SPACE] * Carnival &#38; Exotic Herbivore Cage</English>
+[SPACE][SPACE] * Myth, Story, Story &amp; Remains - Mammoth
+[SPACE][SPACE] * Master Hunter, Mammoth Herd &amp; Elephant Myth
+[SPACE][SPACE] * Carnival &amp; Exotic Herbivore Cage</English>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT] Recinto-Mammut, Mito dell'elefante, Mito del mammut paleolitico, Mastro cacciatore, Carnevale, Gabbia-Erbivori esotici</Italian>
 	</TEXT>
 	<TEXT>
@@ -4759,6 +5342,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ãðèâèñòûé âîëê (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MANEDWOLF_HELP</Tag>
@@ -4781,6 +5365,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Poskromoiony Tapir Górski</Polish>
+		<Russian>Ãîðíûé òàïèð (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MOUNTAIN_TAPIR_HELP</Tag>
@@ -4798,6 +5383,7 @@
 [SPACE][SPACE] * Reptile Myth and Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Nile Crocodile, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Krokodyl Nilowy</Polish>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Ñòðîèòü[COLOR_REVERT] Ìèô, Ñêàç è Ðàññêàçû î íèëüñêèõ êðîêîäèëàõ[NEWLINE][ICON_BULLET]Ìàñòåð-îõîòíèê, Ìèôû î ðåïòèëèÿõ, êðîêîäèëàõ è Äðàêîíàõ[NEWLINE][ICON_BULLET]Êëåòêà è âîëüåð äëÿ ðåïòèëèé è Ïëîõèõ ïàðíåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NUMBAT</Tag>
@@ -4808,6 +5394,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Russian>Ñóì÷àòûé ìóðàâüåä (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NUMBAT_HELP</Tag>
@@ -4821,6 +5408,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_OPOSSUM</Tag>
 		<English>Subdued Opossum</English>
 		<French>Opossum (App.)</French>
+		<Russian>Îïîññóì (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OPOSSUM_HELP</Tag>
@@ -4844,6 +5432,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
+		<Russian>Óòêîíîñ (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PLATYPUS_HELP</Tag>
@@ -4856,6 +5445,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_POSSUM</Tag>
 		<English>Subdued Brushtail Possum</English>
 		<French>Phalanger commun (App.)</French>
+		<Russian>Ïîññóì (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_POSSUM_HELP</Tag>
@@ -4868,6 +5458,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_PYGMYHIPPO</Tag>
 		<English>Subdued Pygmy Hippo</English>
 		<French>Hippopotame nain (App.)</French>
+		<Russian>Карликовый бегемот (ручн.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PYGMYHIPPO_HELP</Tag>
@@ -4901,6 +5492,7 @@
 [SPACE][SPACE] * Master Hunter and Reptile Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Crocodile de rivières, Maître chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Krokodyl Błotny</Polish>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Ñòðîèòü[COLOR_REVERT] Ìèô, Ñêàç è Ðàññêàçû î ðå÷í. êðîêîäèëàõ[NEWLINE][ICON_BULLET]Ìàñòåð-îõîòíèê, Ìèôû î ðåïòèëèÿõ, êðîêîäèëàõ è Äðàêîíàõ[NEWLINE][ICON_BULLET]Êëåòêà è âîëüåð äëÿ ðåïòèëèé è Ïëîõèõ ïàðíåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ROCKHOPPER_HELP</Tag>
@@ -4915,6 +5507,7 @@
 		<English>Subdued Sabretooth</English>
 		<French>Tigre dents de Sabre (App.)</French>
 		<Polish>Oswojony Tygrys Szablozębny</Polish>
+		<Russian>Ñàáëåçóáûé òèãð (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROC_HELP</Tag>
@@ -4924,6 +5517,7 @@
 [SPACE][SPACE] * Master Hunter and Reptile Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Crocodile de mer, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Krokodyl Różańcowy</Polish>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Ñòðîèòü[COLOR_REVERT] Ìèô, Ñêàç è Ðàññêàçû î ìîðñêèõ êðîêîäèëàõ[NEWLINE][ICON_BULLET]Ìàñòåð-îõîòíèê, Ìèôû î ðåïòèëèÿõ, êðîêîäèëàõ è Äðàêîíàõ[NEWLINE][ICON_BULLET]Êëåòêà è âîëüåð äëÿ ðåïòèëèé è Ïëîõèõ ïàðíåé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_LAND_HELP</Tag>
@@ -4943,6 +5537,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<Russian>Òàðàíòóë (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TARANTULA_HELP</Tag>
@@ -4958,11 +5553,12 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_THYLACINE</Tag>
 		<English>Subdued Thylacine</English>
 		<French>Thylacine (App.)</French>
+		<Russian>Ñóì÷àòûé âîëê (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_THYLACINE_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-[SPACE][SPACE] * Myth, Story, Stories &#38; Remains - Thylacine
+[SPACE][SPACE] * Myth, Story, Stories &amp; Remains - Thylacine
 [SPACE][SPACE] * Myth - Marsupial and Paleolithic Marsupial</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du Thylacine, Restes de Thylacine, Mythe du Marsupial</French>
 	</TEXT>
@@ -4970,6 +5566,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_TREESLOTH</Tag>
 		<English>Subdued Tree Sloth</English>
 		<French>Paresseux (App.)</French>
+		<Russian>Ëåíèâåö (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TREESLOTH_HELP</Tag>
@@ -5012,6 +5609,7 @@
 		</French>
 		<Italian>Rinoceronte bianco ammaestrato</Italian>
 		<Polish>Poskromiony Nosorożec Biały</Polish>
+		<Russian>Áåëûé íîñîðîã (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WHITE_RHINO_HELP</Tag>
@@ -5030,6 +5628,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_WOMBAT</Tag>
 		<English>Subdued Wombat</English>
 		<French>Wombat (App.)</French>
+		<Russian>Âîìáàò (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WOMBAT_HELP</Tag>
@@ -5053,6 +5652,7 @@
 		<Italian>Zebra addomesticata</Italian>
 		<Spanish>Cebra</Spanish>
 		<Polish>Poskromiona Zebra</Polish>
+		<Russian>Çåáðà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ZEBRA_HELP</Tag>
@@ -5071,12 +5671,14 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Oswojony Baird's Tapir</Polish>
+		<Russian>Òàïèð (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_BLACK_RHINO</Tag>
 		<English>Tamed Black Rhinoceros</English>
 		<French>Rhinocéros noir dompté</French>
 		<Polish>Oswojony Nosorożec Czarny</Polish>
+		<Russian>Íîñîðîã (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_BRAZILIAN_TAPIR</Tag>
@@ -5087,29 +5689,34 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Oswojony Tapir Brazylijski</Polish>
+		<Russian>Áðàçèëüñêèé òàïèð (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_GIRAFFE</Tag>
 		<English>Tamed Giraffe</English>
 		<French>Girafe (domptée)</French>
+		<Russian>Æèðàô (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_INDIAN_RHINO</Tag>
 		<English>Tamed Indian Rhinoceros</English>
 		<French>Rhinocéros Indien dompté</French>
 		<Polish>Oswojony Nosorożec Indyjski</Polish>
+		<Russian>Èíäèéñêèé íîñîðîã (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_JAVA_RHINO</Tag>
 		<English>Tamed Javan Rhinoceros</English>
 		<French>Rhinocéros de Java dompté</French>
 		<Polish>Oswojony Nosorożec Jawajski</Polish>
+		<Russian>ßâàíñêèé íîñîðîã (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_MALAYAN_TAPIR</Tag>
 		<English>Tamed Malayan Tapir</English>
 		<French>Tapir Malais (dompté)</French>
 		<Polish>Oswojony Malayan Tapir</Polish>
+		<Russian>Ìàëàéñêèé òàïèð (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_MOUNTAIN_TAPIR</Tag>
@@ -5120,12 +5727,14 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Oswojony Mountain Tapir</Polish>
+		<Russian>Ãîðíûé òàïèð (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_WHITE_RHINO</Tag>
 		<English>Tamed White Rhinoceros</English>
 		<French>Rhinocéros Blanc dompté</French>
 		<Polish>Oswojony Nosorożec Biały</Polish>
+		<Russian>Áåëûé íîñîðîã (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAPIR</Tag>
@@ -5147,6 +5756,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Tapir</Polish>
+		<Russian>Òàïèð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAPIR_PEDIA</Tag>
@@ -5163,6 +5773,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THYLACINE</Tag>
 		<English>Thylacine</English>
+		<Russian>Ñóì÷àòûé âîëê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THYLACINE_PEDIA</Tag>
@@ -5172,6 +5783,7 @@
 		<Tag>TXT_KEY_UNIT_TREESLOTH</Tag>
 		<English>Three-toed Sloth</English>
 		<French>Paresseux</French>
+		<Russian>Ëåíèâåö</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TREESLOTH_PEDIA</Tag>
@@ -5198,11 +5810,13 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Żmija</Polish>
+		<Russian>Ãàäþêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIPER_CHAIN</Tag>
 		<English>Chain Viper</English>
 		<French>Vipère de Russell</French>
+		<Russian>Öåïî÷íàÿ ãàäþêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIPER_CHAIN_PEDIA</Tag>
@@ -5233,6 +5847,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Walabia</Polish>
+		<Russian>Êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLABY_PEDIA</Tag>
@@ -5259,6 +5874,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Kangur Górski</Polish>
+		<Russian>Ãîðíûé êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLAROO_PEDIA</Tag>
@@ -5285,6 +5901,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Mors</Polish>
+		<Russian>Ìîðæ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALRUS_PEDIA</Tag>
@@ -5306,6 +5923,7 @@
 		</French>
 		<Italian>Rinoceronte bianco</Italian>
 		<Polish>Nosorożec Biały</Polish>
+		<Russian>Áåëûé íîñîðîã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WHITE_RHINO_PEDIA</Tag>
@@ -5317,10 +5935,12 @@
 		</French>
 		<Italian>Rinoceronte bianco</Italian>
 		<Polish>Nosorożec Biały</Polish>
+		<Russian>Áåëûå íîñîðîãè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WOMBAT</Tag>
 		<English>Wombat</English>
+		<Russian>Âîìáàò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WOMBAT_PEDIA</Tag>
@@ -5336,5 +5956,6 @@
 			<Plural>0</Plural>
 		</French>
 		<Spanish>Cebra</Spanish>
+		<Russian>Çåáðà</Russian>
 	</TEXT>
 </Civ4GameText>

@@ -2366,42 +2366,17 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, const CvCity* pCity) 
 // Improved as per Blake - thanks!
 int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStartingLoc) const
 {
-	CvCity* pNearestCity;
-	CvArea* pArea;
-	CvPlot* pPlot;
-	CvPlot* pLoopPlot;
-	FeatureTypes eFeature;
-	BonusTypes eBonus;
-	ImprovementTypes eBonusImprovement;
-	bool bHasGoodBonus;
-	int iDifferentAreaTile;
-	int iTeamAreaCities;
-	int iTempValue;
-	int iRange;
-	int iI;
-	bool bIsCoastal;
-	int iResourceValue = 0;
-	int iSpecialFood = 0;
-	int iSpecialFoodPlus = 0;
-	int iSpecialFoodMinus = 0;
-	int iSpecialProduction = 0;
-	int iSpecialCommerce = 0;
-
-	bool bNeutralTerritory = true;
-
-	int iNumAreaCities;
-
-	pPlot = GC.getMap().plot(iX, iY);
-
 	if (!canFound(iX, iY))
 	{
 		return 0;
 	}
-	bIsCoastal = pPlot->isCoastalLand(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize());
-	pArea = pPlot->area();
-	iNumAreaCities = pArea->getCitiesPerPlayer(getID());
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 
 	bool bAdvancedStart = getAdvancedStartPoints() >= 0;
+	const bool bIsCoastal = pPlot->isCoastalLand(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize());
+
+	CvArea* pArea = pPlot->area();
+	const int iNumAreaCities = pArea->getCitiesPerPlayer(getID());
 
 	if (!bStartingLoc && !bAdvancedStart && !bIsCoastal && iNumAreaCities == 0)
 	{
@@ -2425,9 +2400,9 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 	if (!bStartingLoc && !m_bCitySitesNotCalculated && !AI_isPlotCitySite(pPlot))
 	{
-		for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
+		for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 		{
-			pLoopPlot = plotCity(iX, iY, iI);
+			CvPlot* pLoopPlot = plotCity(iX, iY, iI);
 			if (pLoopPlot == NULL)
 			{
 				continue;
@@ -2444,12 +2419,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		}
 	}
 
-	std::vector<int> paiBonusCount;
-
-	for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
-	{
-		paiBonusCount.push_back(0);
-	}
+	std::vector<int> paiBonusCount(GC.getNumBonusInfos(), 0);
 
 	if (iMinRivalRange != -1)
 	{
@@ -2468,54 +2438,57 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		{
 			return 0;
 		}
-		for (iI = 0; iI < NUM_CITY_PLOTS_2; iI++)
+		for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 		{
-			pLoopPlot = plotCity(iX, iY, iI);
-			if (pLoopPlot == NULL)
+			if (plotCity(iX, iY, iI) == NULL)
 			{
 				return 0;
 			}
 		}
 	}
-
-	int iOwnedTiles = 0;
-
-	for (iI = 0; iI < NUM_CITY_PLOTS_2; iI++)
+	else
 	{
-		pLoopPlot = plotCity(iX, iY, iI);
-
-		if (pLoopPlot == NULL || pLoopPlot->isOwned() && pLoopPlot->getTeam() != getTeam())
+		int iOwnedTiles = 0;
+		for (int iI = 0; iI < NUM_CITY_PLOTS_2; iI++)
 		{
-			iOwnedTiles++;
-		}
-	}
+			CvPlot* pLoopPlot = plotCity(iX, iY, iI);
 
-	if (iOwnedTiles > NUM_CITY_PLOTS_2 / 3)
-	{
-		return 0;
+			if (pLoopPlot == NULL || pLoopPlot->isOwned() && pLoopPlot->getTeam() != getTeam())
+			{
+				iOwnedTiles++;
+			}
+		}
+		if (iOwnedTiles > 10)
+		{
+			return 0;
+		}
 	}
 
 	int iBadTile = 0;
 
-	for (iI = 0; iI < NUM_CITY_PLOTS_2; iI++)
+	for (int iI = 0; iI < NUM_CITY_PLOTS_2; iI++)
 	{
-		pLoopPlot = plotCity(iX, iY, iI);
+		CvPlot* pLoopPlot = plotCity(iX, iY, iI);
 
 		if (iI != CITY_HOME_PLOT)
 		{
-			if (pLoopPlot == NULL || pLoopPlot->isImpassable(getTeam()))
+			if (pLoopPlot == NULL)
 			{
-				iBadTile += 2;
+				iBadTile += 4;
+			}
+			else if (pLoopPlot->isImpassable(getTeam()))
+			{
+				iBadTile += 3;
 			}
 			else if (!pLoopPlot->isFreshWater() && !pLoopPlot->isHills())
 			{
-				if (pLoopPlot->calculateBestNatureYield(YIELD_FOOD, getTeam()) == 0 || pLoopPlot->calculateTotalBestNatureYield(getTeam()) <= 1)
-				{
-					iBadTile += 2;
-				}
-				else if (pLoopPlot->isWater() && !bIsCoastal && pLoopPlot->calculateBestNatureYield(YIELD_FOOD, getTeam()) <= 1)
+				if (pLoopPlot->isWater() && (!bIsCoastal || pLoopPlot->calculateBestNatureYield(YIELD_FOOD, getTeam()) < 2))
 				{
 					iBadTile++;
+				}
+				else if (pLoopPlot->calculateBestNatureYield(YIELD_FOOD, getTeam()) < 2 || pLoopPlot->calculateTotalBestNatureYield(getTeam()) < 3)
+				{
+					iBadTile += 2;
 				}
 			}
 			else if (pLoopPlot->isOwned() && pLoopPlot->getTeam() == getTeam() && (pLoopPlot->isCityRadius() || abCitySiteRadius[iI]))
@@ -2526,18 +2499,18 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	}
 	iBadTile /= 2;
 
-	if (!bStartingLoc && (iBadTile > NUM_CITY_PLOTS / 2 || pArea->getNumTiles() <= 2))
+	if (!bStartingLoc && (iBadTile > 15 || pArea->getNumTiles() <= 2))
 	{
-		bHasGoodBonus = false;
+		bool bHasGoodBonus = false;
 
-		for (iI = 0; iI < NUM_CITY_PLOTS_2; iI++)
+		for (int iI = 0; iI < NUM_CITY_PLOTS_2; iI++)
 		{
-			pLoopPlot = plotCity(iX, iY, iI);
+			CvPlot* pLoopPlot = plotCity(iX, iY, iI);
 
 			if (pLoopPlot != NULL && !pLoopPlot->isOwned()
 			&& (pLoopPlot->isWater() || (pLoopPlot->area() == pArea) || (pLoopPlot->area()->getCitiesPerPlayer(getID()) > 0)))
 			{
-				eBonus = pLoopPlot->getBonusType(getTeam());
+				BonusTypes eBonus = pLoopPlot->getBonusType(getTeam());
 
 				if (eBonus != NO_BONUS
 				&& (getNumTradeableBonuses(eBonus) == 0 || AI_bonusVal(eBonus) > 10 || GC.getBonusInfo(eBonus).getYieldChange(YIELD_FOOD) > 0))
@@ -2553,15 +2526,9 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		}
 	}
 
-	int iTakenTiles = 0;
-	int iTeammateTakenTiles = 0;
-	int iHealth = 0;
-	int iValue = 1000;
-
-	int iGreed = 100;
-
 	// K-Mod - EasyCulture means that it will be easy for us to pop the culture to the 2nd border
 	bool bEasyCulture = false;
+	int iGreed = 100;
 
 	if (bAdvancedStart)
 	{
@@ -2569,7 +2536,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	}
 	else if (!bStartingLoc)
 	{
-		for (iI = 0; iI < GC.getNumTraitInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 		{
 			if (hasTrait((TraitTypes)iI))
 			{
@@ -2594,7 +2561,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		}
 		else
 		{
-			for (iI = 0; (iGreed < 140 && iI < GC.getNumProcessInfos()); iI++)
+			for (int iI = 0; (iGreed < 140 && iI < GC.getNumProcessInfos()); iI++)
 			{
 				if (canMaintain((ProcessTypes)iI))
 				{
@@ -2602,7 +2569,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 				}
 			}
 
-			for (iI = 0; (iGreed < 140 && iI < GC.getNumSpecialistInfos()); iI++)
+			for (int iI = 0; (iGreed < 140 && iI < GC.getNumSpecialistInfos()); iI++)
 			{
 				if (isSpecialistValid((SpecialistTypes)iI))
 				{
@@ -2616,7 +2583,6 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 				iGreed = std::max(iGreed, 125 + (5 * std::min(3, pArea->getCitiesPerPlayer(getID()) )) );
 			}
 		}
-
 		iGreed = range(iGreed, 100, 150);
 	}
 
@@ -2661,15 +2627,30 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	// ! K-Mod
 
 	//iClaimThreshold is the culture required to pop the 2nd borders.
-	int iClaimThreshold = GC.getGame().getCultureThreshold((CultureLevelTypes)(std::min(2, (GC.getNumCultureLevelInfos() - 1))));
-	iClaimThreshold = std::max(1, iClaimThreshold);
-	iClaimThreshold *= (bEasyCulture ? 140 : 100);
+	const int iClaimThreshold =
+	(
+		std::max(1, GC.getGame().getCultureThreshold((CultureLevelTypes)std::min(2, GC.getNumCultureLevelInfos() - 1)))
+		* (bEasyCulture ? 140 : 100)
+	);
 
+	int iTakenTiles = 0;
+	int iTeammateTakenTiles = 0;
+	int iHealth = 0;
+	int iValue = 1000;
+
+	int iResourceValue = 0;
+	int iSpecialFood = 0;
+	int iSpecialFoodPlus = 0;
+	int iSpecialFoodMinus = 0;
+	int iSpecialProduction = 0;
+	int iSpecialCommerce = 0;
 	int iYieldLostHere = 0;
 
-	for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
+	bool bNeutralTerritory = true;
+
+	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 	{
-		pLoopPlot = plotCity(iX, iY, iI);
+		CvPlot* pLoopPlot = plotCity(iX, iY, iI);
 
 		if (pLoopPlot == NULL)
 		{
@@ -2686,11 +2667,9 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		}
 		else
 		{
-			iTempValue = 0;
+			int iTempValue = 0;
 
-			eFeature = pLoopPlot->getFeatureType();
-			eBonus = pLoopPlot->getBonusType((bStartingLoc) ? NO_TEAM : getTeam());
-			eBonusImprovement = NO_IMPROVEMENT;
+			ImprovementTypes eBonusImprovement = NO_IMPROVEMENT;
 
 			int iCultureMultiplier;
 			if (!pLoopPlot->isOwned() || (pLoopPlot->getOwner() == getID()))
@@ -2700,11 +2679,10 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			else
 			{
 				bNeutralTerritory = false;
-				int iOurCulture = pLoopPlot->getCulture(getID());
-				int iOtherCulture = std::max(1, pLoopPlot->getCulture(pLoopPlot->getOwner()));
+				const int iOtherCulture = std::max(1, pLoopPlot->getCulture(pLoopPlot->getOwner()));
 
-				iCultureMultiplier = (100 * iOurCulture) + iClaimThreshold;
-				iCultureMultiplier /= (((100 * iOtherCulture) + iClaimThreshold) / 100);
+				iCultureMultiplier = 100 * pLoopPlot->getCulture(getID()) + iClaimThreshold;
+				iCultureMultiplier /= (100 * iOtherCulture + iClaimThreshold) / 100;
 
 				iCultureMultiplier = std::min(100, iCultureMultiplier);
 				//The multiplier is basically normalized...
@@ -2712,11 +2690,13 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 				//50% means the hostile culture is fairly firmly entrenched.
 			}
 
-			if (iCultureMultiplier < ((iNumAreaCities > 0) ? 25 : 50))
+			if (iCultureMultiplier < 50 - 25*(iNumAreaCities > 0))
 			{
 				//discourage hopeless cases, especially on other continents.
-				iTakenTiles += (iNumAreaCities > 0) ? 1 : 2;
+				iTakenTiles += 2 - (iNumAreaCities > 0);
 			}
+
+			const BonusTypes eBonus = pLoopPlot->getBonusType((bStartingLoc) ? NO_TEAM : getTeam());
 
 			if (eBonus != NO_BONUS)
 			{
@@ -2732,6 +2712,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 				}
 			}
 
+			const FeatureTypes eFeature = pLoopPlot->getFeatureType();
 			int aiYield[NUM_YIELD_TYPES];
 
 			for (int iYieldType = 0; iYieldType < NUM_YIELD_TYPES; ++iYieldType)
@@ -2756,7 +2737,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 					}
 					else
 					{
-						int iBonusYieldChange = GC.getBonusInfo(eBonus).getYieldChange(eYield);
+						const int iBonusYieldChange = GC.getBonusInfo(eBonus).getYieldChange(eYield);
 						aiYield[eYield] += iBonusYieldChange;
 						iBasePlotYield += iBonusYieldChange;
 
@@ -2781,68 +2762,48 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 			if (iI == CITY_HOME_PLOT)
 			{
-				iTempValue += aiYield[YIELD_FOOD] * 60;
-				iTempValue += aiYield[YIELD_PRODUCTION] * 60;
-				iTempValue += aiYield[YIELD_COMMERCE] * 40;
-			}
-			else if (aiYield[YIELD_FOOD] >= GC.getFOOD_CONSUMPTION_PER_POPULATION())
-			{
-				iTempValue += aiYield[YIELD_FOOD] * 40;
-				iTempValue += aiYield[YIELD_PRODUCTION] * 40;
-				iTempValue += aiYield[YIELD_COMMERCE] * 30;
-
-				if (bStartingLoc)
-				{
-					iTempValue *= 2;
-				}
-			}
-			else if (aiYield[YIELD_FOOD] == GC.getFOOD_CONSUMPTION_PER_POPULATION() - 1)
-			{
-				iTempValue += aiYield[YIELD_FOOD] * 25;
-				iTempValue += aiYield[YIELD_PRODUCTION] * 25;
-				iTempValue += aiYield[YIELD_COMMERCE] * 20;
+				iTempValue += aiYield[YIELD_FOOD] * (120 + 30*bStartingLoc);
+				iTempValue += aiYield[YIELD_PRODUCTION] * 100;
+				iTempValue += aiYield[YIELD_COMMERCE] * 80;
 			}
 			else
 			{
-				iTempValue += aiYield[YIELD_FOOD] * 15;
-				iTempValue += aiYield[YIELD_PRODUCTION] * 15;
-				iTempValue += aiYield[YIELD_COMMERCE] * 10;
+				iTempValue += aiYield[YIELD_FOOD] * (60 + 15*bStartingLoc);
+				iTempValue += aiYield[YIELD_PRODUCTION] * 50;
+				iTempValue += aiYield[YIELD_COMMERCE] * 40;
+			}
+			if (bStartingLoc) // Yield holds much value for new game starting positions.
+			{
+				iTempValue *= 2;
 			}
 
-			if (pLoopPlot->isWater() && aiYield[YIELD_COMMERCE] > 1)
+			if (pLoopPlot->isWater())
 			{
-				// Upside is much higher based on multipliers above, with lighthouse a standard coast
-				// plot moves up into the higher multiplier category.
-				iTempValue += bIsCoastal ? 40 + 10*aiYield[YIELD_COMMERCE] : -10*aiYield[YIELD_COMMERCE];
+				if (aiYield[YIELD_COMMERCE] > 1)
+				{
+					// Upside is much higher based on multipliers above, with lighthouse a standard coast
+					// plot moves up into the higher multiplier category.
+					iTempValue += bIsCoastal ? 40 + 10*aiYield[YIELD_COMMERCE] : -10*aiYield[YIELD_COMMERCE];
 
-				if (bIsCoastal && aiYield[YIELD_FOOD] >= GC.getFOOD_CONSUMPTION_PER_POPULATION())
-				{
-					iSpecialFoodPlus += 1;
+					if (bIsCoastal && aiYield[YIELD_FOOD] >= GC.getFOOD_CONSUMPTION_PER_POPULATION())
+					{
+						iSpecialFoodPlus += 1;
+					}
 				}
-				if (bStartingLoc && !pPlot->isStartingPlot())
+				if (!bIsCoastal)
 				{
-					// I'm pretty much forbidding starting 1 tile inland non-coastal.
-					// with more than a few coast tiles.
-					iTempValue += bIsCoastal ? 0 : -400;
+					iTempValue -= 400;
 				}
 			}
 
-			if (pLoopPlot->isRiver())
+			// Favor extra river tiles for eventual building yields, if we are on a river
+			if (pLoopPlot->isRiver() && pPlot->isRiver())
 			{
-				// Afforess 07/21/10
-				// Favor extra river tiles for eventual building yields, if we are on a river
-				if (pPlot->isRiver())
-				{
-					iTempValue += 10 * GC.getGame().getRiverBuildings();
-				}
-				else
-				{
-					iTempValue += 10;
-				}
+				iTempValue += 25 + 10 * GC.getGame().getRiverBuildings();
 			}
 			if (pLoopPlot->isAsPeak())
 			{// Defense bonus...
-				iTempValue += 10;
+				iTempValue += 25;
 			}
 
 			if (bEasyCulture)
@@ -2904,8 +2865,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 					{
 						if (eBonusImprovement != NO_IMPROVEMENT)
 						{
-							int iSpecialFoodTemp;
-							iSpecialFoodTemp = pLoopPlot->calculateBestNatureYield(YIELD_FOOD, getTeam()) + GC.getImprovementInfo(eBonusImprovement).getImprovementBonusYield(eBonus, YIELD_FOOD);
+							int iSpecialFoodTemp = pLoopPlot->calculateBestNatureYield(YIELD_FOOD, getTeam()) + GC.getImprovementInfo(eBonusImprovement).getImprovementBonusYield(eBonus, YIELD_FOOD);
 
 							iSpecialFood += iSpecialFoodTemp;
 
@@ -2936,7 +2896,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	}
 	iValue += std::max(0, iResourceValue);
 
-	if (iResourceValue < 250 && iTakenTiles > NUM_CITY_PLOTS / 3)
+	if (iResourceValue < 250 && iTakenTiles > 12)
 	{
 		return 0;
 	}
@@ -2948,16 +2908,16 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 	iValue += iHealth / 5;
 
+	if (bStartingLoc && pArea->getNumStartingPlots() == 0)
+	{
+		iValue += 1000;
+	}
 	if (bIsCoastal)
 	{
 		if (bStartingLoc)
 		{
 			//let other penalties bring this down.
-			iValue += 600;
-			if (!pPlot->isStartingPlot() && pArea->getNumStartingPlots() == 0)
-			{
-				iValue += 1000;
-			}
+			iValue += 1000;
 		}
 		else if (pArea->getCitiesPerPlayer(getID()) != 0)
 		{
@@ -3014,25 +2974,22 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 	if (pPlot->isRiver())
 	{
-		iValue += 100 * GC.getGame().getRiverBuildings();
+		iValue += 400;
 	}
 
 	if (bIsCoastal)
 	{
-		/* Koshling - analogous for coastal buildings.
-		Coefficient is lower just based on sampling the numbers in C2C at the time I added this.*/
-		iValue += 25 * GC.getGame().getCoastalBuildings();
+		iValue += 50 * GC.getGame().getCoastalBuildings();
 	}
 
 	if (pPlot->isFreshWater())
 	{
-		iValue += 10 * GC.getGame().getRiverBuildings();
-		iValue += (GC.getDefineINT("FRESH_WATER_HEALTH_CHANGE") * 30);
+		iValue += 200;
 	}
 
 	if (bStartingLoc)
 	{
-		iRange = GREATER_FOUND_RANGE;
+		const int iRange = GREATER_FOUND_RANGE;
 		int iGreaterBadTile = 0;
 
 		foreach_(const CvPlot* pLoopPlot, CvPlot::rect(iX, iY, iRange, iRange))
@@ -3040,12 +2997,13 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			if ((pLoopPlot->isWater() || pLoopPlot->area() == pArea)
 			&& plotDistance(iX, iY, pLoopPlot->getX(), pLoopPlot->getY()) <= iRange)
 			{
-				iTempValue = 0;
-				iTempValue += (pLoopPlot->getYield(YIELD_FOOD) * 15);
-				iTempValue += (pLoopPlot->getYield(YIELD_PRODUCTION) * 11);
-				iTempValue += (pLoopPlot->getYield(YIELD_COMMERCE) * 5);
-				iValue += iTempValue;
-				if (iTempValue < 21)
+				const int iTempValue =
+				(
+					13 * pLoopPlot->getYield(YIELD_FOOD) +
+					11 * pLoopPlot->getYield(YIELD_PRODUCTION) +
+					 7 * pLoopPlot->getYield(YIELD_COMMERCE)
+				);
+				if (iTempValue < 28)
 				{
 					iGreaterBadTile += 2;
 					if (pLoopPlot->getFeatureType() != NO_FEATURE
@@ -3054,23 +3012,21 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 						iGreaterBadTile--;
 					}
 				}
+				iValue += iTempValue;
 			}
 		}
 
-		if (!pPlot->isStartingPlot())
+		iGreaterBadTile /= 2;
+		if (iGreaterBadTile > 12)
 		{
-			iGreaterBadTile /= 2;
-			if (iGreaterBadTile > 12)
-			{
-				iValue *= 11;
-				iValue /= iGreaterBadTile;
-			}
+			iValue *= 11;
+			iValue /= iGreaterBadTile;
 		}
 		int iWaterCount = 0;
 
-		for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
+		for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 		{
-			pLoopPlot = plotCity(iX, iY, iI);
+			CvPlot* pLoopPlot = plotCity(iX, iY, iI);
 
 			if (pLoopPlot != NULL && pLoopPlot->isWater())
 			{
@@ -3097,7 +3053,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	{
 		if (pPlot->getMinOriginalStartDist() == -1)
 		{
-			iValue += GC.getMap().maxStepDistance() * 100;
+			iValue += GC.getMap().maxStepDistance() * 10;
 		}
 		else
 		{
@@ -3106,49 +3062,39 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		}
 
 		// Nice hacky way to avoid this messing with normalizer, use elsewhere?
-		if (!pPlot->isStartingPlot())
+		int iMinDistanceFactor = MAX_INT;
+		int iMinRange = startingPlotRange();
+
+		iValue *= 100;
+		for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 		{
-			int iMinDistanceFactor = MAX_INT;
-			int iMinRange = startingPlotRange();
-
-			iValue *= 100;
-			for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
+			if (GET_PLAYER((PlayerTypes)iJ).isAlive() && iJ != getID())
 			{
-				if (GET_PLAYER((PlayerTypes)iJ).isAlive() && iJ != getID())
-				{
-					int iClosenessFactor = GET_PLAYER((PlayerTypes)iJ).startingPlotDistanceFactor(pPlot, getID(), iMinRange);
-					iMinDistanceFactor = std::min(iClosenessFactor, iMinDistanceFactor);
+				int iClosenessFactor = GET_PLAYER((PlayerTypes)iJ).startingPlotDistanceFactor(pPlot, getID(), iMinRange);
+				iMinDistanceFactor = std::min(iClosenessFactor, iMinDistanceFactor);
 
-					if (iClosenessFactor < 1000)
-					{
-						iValue *= 2000 + iClosenessFactor;
-						iValue /= 3000;
-					}
+				if (iClosenessFactor < 1000)
+				{
+					iValue *= 9000 + iClosenessFactor;
+					iValue /= 10000;
 				}
 			}
-
-			if (iMinDistanceFactor > 1000)
-			{
-				//give a maximum boost of 25% for somewhat distant locations, don't go overboard.
-				iMinDistanceFactor = std::min(1500, iMinDistanceFactor);
-				iValue *= (1000 + iMinDistanceFactor);
-				iValue /= 2000;
-			}
-			else if (iMinDistanceFactor < 1000)
-			{
-				//this is too close so penalize again.
-				iValue *= iMinDistanceFactor;
-				iValue /= 1000;
-				iValue *= iMinDistanceFactor;
-				iValue /= 1000;
-			}
-			iValue /= 10;
-
-			if (pPlot->getBonusType() != NO_BONUS)
-			{
-				iValue /= 2;
-			}
 		}
+
+		if (iMinDistanceFactor > 1000)
+		{
+			//give a maximum boost of 20% for somewhat distant locations, don't go overboard.
+			iMinDistanceFactor = std::min(1500, iMinDistanceFactor);
+			iValue *= 1500 + iMinDistanceFactor;
+			iValue /= 2500;
+		}
+		else if (iMinDistanceFactor < 1000)
+		{
+			//this is too close so penalize again.
+			iValue *= 1000 + iMinDistanceFactor;
+			iValue /= 2000;
+		}
+		iValue /= 10;
 	}
 
 	if (bAdvancedStart && pPlot->getBonusType() != NO_BONUS)
@@ -3157,7 +3103,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		iValue /= 100;
 	}
 
-	pNearestCity = GC.getMap().findCity(iX, iY, isNPC() ? NO_PLAYER : getID());
+	CvCity* pNearestCity = GC.getMap().findCity(iX, iY, isNPC() ? NO_PLAYER : getID());
 
 	if (pNearestCity == NULL)
 	{
@@ -3223,13 +3169,9 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		return 1;
 	}
 
-	if (pArea->getNumCities() == 0)
+	if (pArea->getNumCities() != 0)
 	{
-		iValue *= 2;
-	}
-	else
-	{
-		iTeamAreaCities = GET_TEAM(getTeam()).countNumCitiesByArea(pArea);
+		const int iTeamAreaCities = GET_TEAM(getTeam()).countNumCitiesByArea(pArea);
 
 		if (pArea->getNumCities() == iTeamAreaCities)
 		{
@@ -3249,6 +3191,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			iValue /= 4;
 		}
 	}
+	else iValue *= 2;
 
 	if (!bStartingLoc)
 	{
@@ -3262,7 +3205,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		{
 			int iBonusCount = 0;
 			int iUniqueBonusCount = 0;
-			for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
+			for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 			{
 				iBonusCount += paiBonusCount[iI];
 				iUniqueBonusCount += (paiBonusCount[iI] > 0) ? 1 : 0;
@@ -3289,11 +3232,11 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 	if (bStartingLoc)
 	{
-		iDifferentAreaTile = 0;
+		int iDifferentAreaTile = 0;
 
-		for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
+		for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 		{
-			pLoopPlot = plotCity(iX, iY, iI);
+			CvPlot* pLoopPlot = plotCity(iX, iY, iI);
 
 			if (pLoopPlot == NULL || !pLoopPlot->isWater() && pLoopPlot->area() != pArea)
 			{
@@ -5378,6 +5321,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 	//to ensure the feature-remove is only counted once rather than once per build
 	//which could be a lot since nearly every build clears jungle...
 
+	//TB Note: I'm thinking buildinfo feature tech is NOT the right call here at all?
 	for (iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
 	{
 		bool bIsFeatureRemove = false;
@@ -25921,23 +25865,20 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 				}
 				break;
 			}
-			else
+			//If this point is reached, the advanced start system is broken.
+			//Find a new starting plot for this player
+			setStartingPlot(findStartingPlot(), true);
+			//Redo Starting visibility
+			CvPlot* pStartingPlot = getStartingPlot();
+			if (NULL != pStartingPlot)
 			{
-				//If this point is reached, the advanced start system is broken.
-				//Find a new starting plot for this player
-				setStartingPlot(findStartingPlot(false), true);
-				//Redo Starting visibility
-				CvPlot* pStartingPlot = getStartingPlot();
-				if (NULL != pStartingPlot)
+				for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); ++iPlotLoop)
 				{
-					for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); ++iPlotLoop)
-					{
-						CvPlot* pPlot = GC.getMap().plotByIndex(iPlotLoop);
+					CvPlot* pPlot = GC.getMap().plotByIndex(iPlotLoop);
 
-						if (plotDistance(pPlot->getX(), pPlot->getY(), pStartingPlot->getX(), pStartingPlot->getY()) <= GC.getDefineINT("ADVANCED_START_SIGHT_RANGE"))
-						{
-							pPlot->setRevealed(getTeam(), true, false, NO_TEAM, false);
-						}
+					if (plotDistance(pPlot->getX(), pPlot->getY(), pStartingPlot->getX(), pStartingPlot->getY()) <= GC.getDefineINT("ADVANCED_START_SIGHT_RANGE"))
+					{
+						pPlot->setRevealed(getTeam(), true, false, NO_TEAM, false);
 					}
 				}
 			}

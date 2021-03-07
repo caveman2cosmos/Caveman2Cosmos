@@ -265,6 +265,16 @@ int CyMap::getNumBonusesOnLand(int /* BonusTypes */ eIndex)
 	return m_pMap ? m_pMap->getNumBonusesOnLand((BonusTypes)eIndex) : -1;
 }
 
+python::list CyMap::plots() const
+{
+	python::list list = python::list();
+	for (int i = 0, numPlots = m_pMap->numPlots(); i < numPlots; i++)
+	{
+		list.append(new CyPlot(m_pMap->plotByIndex(i)));
+	}
+	return list;
+}
+
 CyPlot* CyMap::plotByIndex(int iIndex)
 {
 	return m_pMap ? new CyPlot(m_pMap->plotByIndex(iIndex)) : NULL;

@@ -128,7 +128,6 @@ class CvMainInterface:
 			self.iMaxPcPlayers			= GC.getMAX_PC_PLAYERS()
 			self.iMaxDefenseDamage		= GC.getMAX_CITY_DEFENSE_DAMAGE()
 			self.fMoveDenominator = float(GC.getMOVE_DENOMINATOR())
-			self.iMaxTradeRoutes		= GC.getDefineINT("MAX_TRADE_ROUTES")
 			self.bNegGoldIsMaintenance	= GC.getDefineINT("TREAT_NEGATIVE_GOLD_AS_MAINTENANCE")
 			self.iNumTechInfos			= GC.getNumTechInfos()
 			self.iNumReligionInfos		= GC.getNumReligionInfos()
@@ -1191,7 +1190,7 @@ class CvMainInterface:
 				elif not ParallelMaps.bIsSwitchingMap:
 					szTxt = CyGameTextMgr().getUnitHelp(dataTT[4], False, True, True, dataTT[5])
 					self.updateTooltip(screen, szTxt)
-				self.bUpdateUnitTT == False
+				self.bUpdateUnitTT = False
 			# Tooltip sometimes get stuck...
 			POINT = Win32.getCursorPos()
 			xDiff = POINT.x - self.xMouseTT
@@ -2627,7 +2626,7 @@ class CvMainInterface:
 				screen.show("TradeRouteListLabel")
 			# Trade
 			aList = []
-			for iRoute in xrange(self.iMaxTradeRoutes):
+			for iRoute in xrange(CyCity.getMaxTradeRoutes()):
 				CyCityX = CyCity.getTradeCity(iRoute)
 				if not CyCityX: continue
 				iPlayerX = CyCityX.getOwner()
@@ -5369,7 +5368,7 @@ class CvMainInterface:
 
 			elif NAME == "AdvisorButton":
 				advisorTip = self.AdvisorButtonTip[ID]
-				szTxt = "<color=101,229,255>" + advisorTip[0] + "  <color=144,255,72>&#60" + advisorTip[1] + "&#62"
+				szTxt = "<color=101,229,255>" + advisorTip[0] + "  <color=144,255,72>&#60" + advisorTip[1] + "&#62</color>"
 				if ID == 1:
 					self.treasuryHelp(screen, szTxt)
 				else:

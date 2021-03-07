@@ -239,14 +239,6 @@
 		<DefineName>BUG_LEADERHEAD_HOVER_HIDDEN_ATTITUDE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
-	<Define>
-		<DefineName>BUG_LEADERHEAD_HOVER_WORST_ENEMY</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BUG_LEADERHEAD_HOVER_DEFENSIVE_PACTS</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
 	<!-- Plot -->
 	<Define>
 		<DefineName>BUG_PLOT_HOVER_LAT_LONG</DefineName>
@@ -272,11 +264,6 @@
 	</Define>
 	<Define>
 		<DefineName>BUG_UNIT_EXPERIENCE_MODIFIERS_HOVER</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<!-- Specialist -->
-	<Define>
-		<DefineName>BUG_SPECIALIST_HOVER_ACTUAL_EFFECTS</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
@@ -531,10 +518,6 @@
 	<Define>
 		<!-- Dynamic Civ Names   NOTE turned off in C2C code-->
 		<DefineName>DYNAMIC_CIV_NAMES</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>CHOOSE_RELIGION</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>

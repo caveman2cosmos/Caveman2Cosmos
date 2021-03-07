@@ -566,7 +566,7 @@ class CvDomesticAdvisor:
 		nTotalTradeProfit = 0
 
 		# For each trade route possible
-		for nTradeRoute in xrange(GC.getDefineINT("MAX_TRADE_ROUTES")):
+		for nTradeRoute in xrange(CyCity.getMaxTradeRoutes()):
 			# Get the next trade city
 			pTradeCity = CyCity.getTradeCity(nTradeRoute)
 			# Not quite sure what this does but it's in the MainInterface
@@ -588,7 +588,7 @@ class CvDomesticAdvisor:
 		nRoutes = 0
 
 		# For each trade route possible
-		for nTradeRoute in range (GC.getDefineINT("MAX_TRADE_ROUTES")):
+		for nTradeRoute in xrange(city.getMaxTradeRoutes()):
 			# Get the next trade city
 			pTradeCity = city.getTradeCity(nTradeRoute)
 			# Not quite sure what this does but it's in the MainInterface
