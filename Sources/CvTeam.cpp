@@ -117,15 +117,18 @@ void CvTeam::init(TeamTypes eID)
 	// Init other game data
 	AI_init();
 
-	if( GC.getGame().isFinalInitialized() )
+	if (GC.getGame().isFinalInitialized())
 	{
 		//logging::logMsg("C2C.log", "   Checking for declarations of war against reset team %d\n", (int)getID());
 
+		const bool bMinorCiv = isMinorCiv();
+		const bool bNPC = isNPC();
+
 		for (int iI = 0; iI < MAX_TEAMS; iI++)
 		{
-			if( iI != getID() )
+			if (iI != getID() && GET_TEAM((TeamTypes)iI).isAlive())
 			{
-				if( GET_TEAM((TeamTypes)iI).isMinorCiv() || (isMinorCiv() && GET_TEAM((TeamTypes)iI).isAlive()))
+				if (bMinorCiv || GET_TEAM((TeamTypes)iI).isMinorCiv())
 				{
 					GET_TEAM((TeamTypes)iI).declareWar(getID(), false, WARPLAN_LIMITED);
 					GET_TEAM((TeamTypes)iI).setHasMet(getID(),false);
@@ -134,16 +137,13 @@ void CvTeam::init(TeamTypes eID)
 				}
 				//TBNOTE: THIS WILL NEED TO BE ADJUSTED so that it's not so patently sweeping for all NPCs IF AN NPC IS
 				//SUPPOSED TO BE FRIENDLY WITH PLAYERS or any other NPC faction!
-				if( GET_TEAM((TeamTypes)iI).isNPC() || (isNPC() && GET_TEAM((TeamTypes)iI).isAlive()))
+				if (bNPC || GET_TEAM((TeamTypes)iI).isNPC())
 				{
-					if (GC.getGame().isOption(GAMEOPTION_PEACE_AMONG_NPCS) && GET_TEAM((TeamTypes)iI).isNPC() && isNPC())
+					if (bNPC && GC.getGame().isOption(GAMEOPTION_PEACE_AMONG_NPCS) && GET_TEAM((TeamTypes)iI).isNPC())
 					{
 						continue;
 					}
-					else
-					{
-						GET_TEAM((TeamTypes)iI).declareWar(getID(), false, WARPLAN_LIMITED);
-					}
+					GET_TEAM((TeamTypes)iI).declareWar(getID(), false, WARPLAN_LIMITED);
 					//logging::logMsg("C2C.log", "   Barb team %d declared war, using war plan %d\n", iI, (int)GET_TEAM((TeamTypes)iI).AI_getWarPlan(getID()));
 				}
 			}
@@ -3056,7 +3056,7 @@ void CvTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 	return;
 }
 
-void	CvTeam::declareWarAsMinor()
+void CvTeam::declareWarAsMinor()
 {
 	if ( isAlive() )
 	{
