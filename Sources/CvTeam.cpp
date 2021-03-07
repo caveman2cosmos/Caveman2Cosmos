@@ -4955,15 +4955,8 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 
 			// Multiple Research
 			setHasTech(eIndex, true, ePlayer, true, true);
-			
-			//Once tech cost increases past 21 474 837 beakers, all techs in queue are researched due to integer overflow.
-			//This disables edge case in late game (or very slow speeds), and simply disables Multiple Research for very expensive techs.
-			//This is temporary fix until better solution is found.
-			if (getResearchCost(eIndex) < MAX_INT/100)
-			{
-				iOverflow = GET_PLAYER(ePlayer).doMultipleResearch(iOverflow);
-				GET_PLAYER(ePlayer).changeOverflowResearch(iOverflow);
-			}			
+			iOverflow = GET_PLAYER(ePlayer).doMultipleResearch(iOverflow);
+			GET_PLAYER(ePlayer).changeOverflowResearch(iOverflow);
 		}
 	}
 }
