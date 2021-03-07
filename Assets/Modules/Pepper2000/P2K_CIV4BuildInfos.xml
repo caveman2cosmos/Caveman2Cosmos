@@ -18,7 +18,7 @@
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/BuildPath.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/buildlunarpath.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_PLANETARY_MAGLEV</Type>
@@ -31,7 +31,7 @@
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/BuildMaglev.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/buildplanetarymaglev.dds</Button>
 		</BuildInfo>
         <BuildInfo>
 			<Type>BUILD_ORBITAL_TRAJECTORY</Type>

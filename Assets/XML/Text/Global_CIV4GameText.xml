@@ -4117,6 +4117,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English> Or </English>
 		<French> ou </French>
 		<German> oder </German>
+		<Russian> или </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXPR_THEN</Tag>
@@ -4150,10 +4151,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_0</Tag>
 		<English>[NEWLINE]Total costs before inflation = %d1[ICON_GOLD][NEWLINE]</English>
+		<Russian>[NEWLINE]Общие затраты до инфляции = %d1[ICON_GOLD][NEWLINE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_1</Tag>
 		<English>[NEWLINE]Inflation rate = %d1.%d2%%[NEWLINE][NEWLINE]Cost due to Inflation = %d3[ICON_GOLD]</English>
+		<Russian>[NEWLINE]Уровень инфляции = %d1.%d2%%[NEWLINE][NEWLINE]Стоимость из-за инфляции = %d3[ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_SOURCES_OF_INFLATION</Tag>
@@ -4199,39 +4202,47 @@ Calendrier: 2150 AD - 2300 AD</French>
 		[NEWLINE][ICON_BULLET]z budynków = %d3%
 		[NEWLINE][ICON_BULLET]z projektów = %d4%
 		[NEWLINE][ICON_BULLET]z przyśpieszania produkcji = %d5%</Polish>
-		<Russian>[NEWLINE]Èñòî÷íèêè Èíôëÿöèè[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Ïàðàäèãì = %d1%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Òåõíîëîãèé = %d2%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ èç Çäàíèé = %d3%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ èç Ïðîåêòîâ = %d4%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Ñïåøêè Ïðîèçâîäñòâà = %d5%</Russian>
+		<Russian>[NEWLINE]Èñòî÷íèêè Èíôëÿöèè[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Ïàðàäèãì = %d1%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Òåõíîëîãèé = %d2%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ èç Çäàíèé = %d3%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ èç Ïðîåêòîâ = %d4%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Óñêîð. Ïðîèçâîäñòâà = %d5%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_CIVILIAN</Tag>
 		<English>[SPACE]Civilian Unit upkeep:[NEWLINE][SPACE][SPACE] * Upkeep: %s1 [ICON_GOLD]</English>
+		<Russian>[SPACE]Содержание гражд. юнитов:[NEWLINE][SPACE][SPACE] * Содержание: %s1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MILITARY</Tag>
 		<English>[SPACE]Military Unit upkeep:[NEWLINE][SPACE][SPACE] * Upkeep: %s1 [ICON_GOLD]</English>
+		<Russian>[SPACE]Содержание отрядов:[NEWLINE][SPACE][SPACE] * Содержание: %s1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_CIVIC</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Civic change: %s1 [ICON_GOLD]</English>
+		<Russian>[NEWLINE][SPACE][SPACE] * Смена парадигм: %s1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_TRAIT</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Trait change: %s1 [ICON_GOLD]</English>
+		<Russian>[NEWLINE][SPACE][SPACE] * Смена черт лидера: %s1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_FREE</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Free: %d1 [ICON_GOLD]</English>
+		<Russian>[NEWLINE][SPACE][SPACE] * Бесплатно: %d1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_HANDICAP_ADJUSTMENT</Tag>
 		<English>[NEWLINE][ICON_BULLET]Handicap adjustment: %d1 [ICON_GOLD][NEWLINE]</English>
+		<Russian>[NEWLINE][ICON_BULLET]Отладка убытков: %d1 [ICON_GOLD][NEWLINE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_1</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Total: %d1 [ICON_GOLD][NEWLINE]</English>
+		<Russian>[NEWLINE][SPACE][SPACE] * Итого: %d1 [ICON_GOLD][NEWLINE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_2</Tag>
 		<English>[NEWLINE]--------------------------------[NEWLINE] Total unit upkeep: %d1 [ICON_GOLD]</English>
+		<Russian>[NEWLINE]--------------------------------[NEWLINE] Общее содержание войск: %d1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FIRST_FLANK_SUPPORT</Tag>
@@ -8977,18 +8988,21 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>Comme les pré-requis sont devenus incompatibles avec votre unité, Votre %s1_Unit a perdu sa promotion %s2_Promotion.</French>
 		<Italian>Avendo perso una delle promozioni prerequisito, la tua unità %s1_Unit ha perso la promozione %s2_Promotion.</Italian>
 		<Polish>Straciłeś jedną z wytycznych potrzebnych do promocji więc, Twoja jednostka: %s1_Unit traci: %s2_Promotion</Polish>
+		<Russian>Потеряв одну из базовых квалификаций, ваш %s1_Unit утратил свою квалификацию %s2_Promotion.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_CAN_RETRAIN</Tag>
 		<English>Since your unit is inapable of Ranged Assault Attacks, your %s1_Unit has lost its %s2_Promotion promotion and may now select a new promotion.</English>
 		<French>Comme votre unité est inapte à mener des Attaques à distance, Votre %s1_Unit a perdu sa promotion %s2_Promotion et peut à présent choisir une nouvelle promotion.</French>
 		<Polish>Ponieważ Twoja jednostka jest niezdolna do ataków dystansowych, Twój %s1_Unit stracił swoją %s2_Promotion promocję i teraz może wybrać inną.</Polish>
+		<Russian>Поскольку ваш отряд не способен к дальнобойным атакам, ваш %s1_Unit утратил свою квалификацию %s2_Promotion и теперь может выбрать другой навык.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_NO_RETRAIN</Tag>
 		<English>Since your unit is inapable of Ranged Assault Attacks, your %s1_Unit has lost its %s2_Promotion promotion.</English>
 		<French>Comme votre unité est inapte à mener des Attaques à distance, Votre %s1_Unit a perdu sa promotion %s2_Promotion.</French>
 		<Polish>Ponieważ Twoja jednostka jest niezdolna do ataków dystansowych, Twój %s1_Unit stracił swoją %s2_Promotion promocję.</Polish>
+		<Russian>Поскольку ваш отряд не способен к дальнобойным атакам, ваш %s1_Unit утратил свою квалификацию %s2_Promotion.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_TECH_CAN_RETRAIN</Tag>
@@ -21325,5 +21339,9 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[COLOR_WARNING_TEXT]Erfordert: %s1_Text[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Richiede %s1_Text[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Text[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ENEMY_TROOPS_SPOTTED</Tag>
+		<English>The enemy has been spotted near %s1_CityName!</English>
 	</TEXT>
 </Civ4GameText>

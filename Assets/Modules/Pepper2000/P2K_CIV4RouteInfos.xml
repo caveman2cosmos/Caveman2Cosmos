@@ -19,7 +19,7 @@
 			<PrereqOrBonuses/>
 			<Yields/>
 			<TechMovementChanges/>
-			<Button>Art/Interface/Buttons/Builds/path.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/buildlunarpath.dds</Button>
 		</RouteInfo>
 		<RouteInfo>
 			<Type>ROUTE_PLANETARY_MAGLEV</Type>
@@ -41,7 +41,7 @@
 				<iYield>1</iYield>
 			</Yields>
 			<TechMovementChanges/>
-			<Button>Art/Interface/Buttons/Builds/BuildMaglev.dds</Button>
+			<Button>Art/Interface/Buttons/Builds/buildplanetarymaglev.dds</Button>
 		</RouteInfo>
 		<RouteInfo>
 			<Type>ROUTE_ORBITAL_TRAJECTORY</Type>

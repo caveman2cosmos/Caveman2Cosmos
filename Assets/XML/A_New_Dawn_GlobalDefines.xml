@@ -245,10 +245,6 @@
 		<iDefineIntVal>75</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>BANDIT_SPAWN_MODIFIER</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>KILLERRABBIT_SPAWN_MODIFIER</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
