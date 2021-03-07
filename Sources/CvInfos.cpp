@@ -31527,9 +31527,6 @@ bool CvGameText::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(m_szType, L"Tag");
 	//pXML->GetXmlVal(m_szType);		// TAG
 
-	//static const int iMaxNumLanguages = GC.getDefineINT("MAX_NUM_LANGUAGES");
-	//int iNumLanguages = NUM_LANGUAGES ? NUM_LANGUAGES : iMaxNumLanguages + 1;
-
 	int iFallback = 0;
 
 	CvWString wszTextVal;

@@ -303,16 +303,6 @@
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_3FACTORY]Ôàáðèêó[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_FACTORY_COLD</Tag>
-		<English>Build [LINK=IMPROVEMENT_FACTORY_COLD_CLIMATE]Factory[\LINK] (Cold Climate)</English>
-		<French>Construire une [LINK=IMPROVEMENT_FACTORY_COLD_CLIMATE]Usine (Climat froid)[\LINK]</French>
-		<German>Errichte [LINK=IMPROVEMENT_FACTORY]Fabrik (Cold Climate)[\LINK]</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_FACTORY]Fabbrica (Cold Climate)[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_FACTORY]Fábrica (Cold Climate)[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_FACTORY]Fabrykę (Cold Climate)[\LINK]</Polish>
-		<Russian>Строить [LINK=IMPROVEMENT_3FACTORY_2]Фабрику[\LINK] (Хол. климат)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_FARM</Tag>
 		<English>Build [LINK=IMPROVEMENT_FARM]Farm[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_FARM]Ferme[\LINK]</French>
@@ -1262,7 +1252,7 @@
 		<Tag>TXT_KEY_BUILD_WATERMILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_WATERMILL]Watermill[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_WATERMILL]Moulin à eau[\LINK]</French>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WATERMILL]Âäÿíóþ ìåëüíèöó[\LINK]</Russian>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WATERMILL]Âîäÿíóþ ìåëüíèöó[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WETLANDS_CAMP</Tag>

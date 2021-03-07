@@ -6327,22 +6327,6 @@
 		<Russian>Âèä îáîðîíèòåëüíîãî ñîþçà:</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__CHOOSE_RELIGION_HOVER</Tag>
-		<English>Works the same as the game option version, except that you not only choose your own founding faith, but also the AI's</English>
-		<French>Cette Option fonctionne de la même manière que l'option originale du Jeu, mais permet également de choisir les Religions qui sont découvertes par l'IA</French>
-		<German>Funktioniert wie die normale Spieloption, außer dass man nicht nur den selbst erforschten Glauben, sondern auch den der KIs auswählen kann</German>
-		<Spanish>Funciona igual que la opción de juego original, excepto que no solo escoges tu religión, sino también la de la IA.</Spanish>
-		<Russian>Ýòà îïöèÿ óñòàíàâëèâàåò îãðàíè÷åíèÿ íà êîíêðåòíûå ðåëèãèè, êîòîðûå ìîæåò îñíîâàòü èãðîê, ëèáî ÈÈ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__CHOOSE_RELIGION_TEXT</Tag>
-		<English>Choose Religions</English>
-		<French>Choix des Religions</French>
-		<German>Religion auswählen</German>
-		<Spanish>Elegir religión</Spanish>
-		<Russian>Âûáîð ðåëèãèé</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_ACTIVE_DEFENSE_HOVER</Tag>
 		<English>Allows patrolling fighters to actively engage enemy units</English>
 		<French>Autorise les avions de Chasse en patrouille d'engager automatiquement les unités ennemies</French>
