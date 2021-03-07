@@ -6656,9 +6656,18 @@ void CvTeam::read(FDataStreamBase* pStream)
 			WRAPPER_SKIP_ELEMENT(wrapper, "CvTeam", m_paiResearchProgress[i], SAVE_VALUE_ANY);
 		}
 	}
+	// @SAVEBREAK DELETE
 	int* m_paiResearchProgress = new int[GC.getNumTechInfos()];
+	for (int i = 0, num = GC.getNumTechInfos(); i < num; i++)
+	{
+		m_paiResearchProgress[i] = 0;
+	}
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiResearchProgress);
-
+	for (int i = 0, num = GC.getNumTechInfos(); i < num; i++)
+	{
+		this->m_paiResearchProgress[i] += m_paiResearchProgress[i];
+	}
+	// @SAVEBREAK
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), m_paiTerrainTradeCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_VICTORIES, GC.getNumVictoryInfos(), m_aiVictoryCountdown);

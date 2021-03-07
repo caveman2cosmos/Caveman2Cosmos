@@ -375,11 +375,11 @@ void CvGameTextMgr::setResearchStr(CvWString& szString, PlayerTypes ePlayer)
 	if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getTechCount(GET_PLAYER(ePlayer).getCurrentResearch()) > 0)
 	{
 		szTempBuffer.Format(L" %d", (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getTechCount(GET_PLAYER(ePlayer).getCurrentResearch()) + 1));
-		szString+=szTempBuffer;
+		szString += szTempBuffer;
 	}
 
 	szTempBuffer.Format(L" (%d)", GET_PLAYER(ePlayer).getResearchTurnsLeft(GET_PLAYER(ePlayer).getCurrentResearch(), true));
-	szString+=szTempBuffer;
+	szString += szTempBuffer;
 }
 
 
@@ -17589,7 +17589,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 	}
 
 	//ls612: Tech Commerce Modifiers
-	setCommerceChangeHelp(szBuffer, szTempBuffer, L": ", L"", GC.getTechInfo(eTech).getCommerceModifierArray(), true, true);
+	setCommerceChangeHelp(szBuffer, szTempBuffer, L": ", L"", kTech.getCommerceModifierArray(), true, true);
 
 	buildRiverTradeString(szBuffer, eTech, true, bPlayerContext);
 
@@ -17881,7 +17881,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_TECH_NUM_TURNS", GET_PLAYER(GC.getGame().getActivePlayer()).getResearchTurnsLeft(eTech, (gDLL->ctrlKey() || !(gDLL->shiftKey())))));
 
-			szTempBuffer.Format(L" (%d/%d %c)", GET_TEAM(GC.getGame().getActiveTeam()).getResearchProgress(eTech), GET_TEAM(GC.getGame().getActiveTeam()).getResearchCost(eTech), GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
+			szTempBuffer.Format(L" (%d/%llu %c)", (int)GET_TEAM(GC.getGame().getActiveTeam()).getResearchProgress(eTech), GET_TEAM(GC.getGame().getActiveTeam()).getResearchCost(eTech), GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
 			szBuffer.append(szTempBuffer);
 		}
 	}
