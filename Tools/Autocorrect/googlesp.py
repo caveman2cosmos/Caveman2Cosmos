@@ -28,7 +28,7 @@ class GoogleSp:
 
     def get_page(self, url):
         # the type of header affects the type of response google returns
-        # for example, using the commented out header below google does not 
+        # for example, using the commented out header below google does not
         # include "Including results for" results and gives back a different set of results
         # than using the updated user_agent yanked from chrome's headers
         # user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
@@ -41,7 +41,7 @@ class GoogleSp:
         return html
 
 # p.s. Yes, I'm using hard tabs for indentation.  bite me
-# set tabs to whatever level of indentation you like in your editor 
-# for crying out loud, at least they're consistent here, and use 
+# set tabs to whatever level of indentation you like in your editor
+# for crying out loud, at least they're consistent here, and use
 # the ST2 command "Indentation: Convert to Spaces", which will convert
 # to spaces if you really need to be part of the 'soft tabs only' crowd =)

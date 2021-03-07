@@ -7,6 +7,7 @@
 		<German>Jägerweitsicht I</German>
 		<Italian>Occhio del cacciatore I</Italian>
 		<Polish>Wzrok Łowcy I</Polish>
+		<Russian>Ïðèöåë I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HUNTING_SIGHT2</Tag>
@@ -15,6 +16,7 @@
 		<German>Jägerweitsicht II</German>
 		<Italian>Occhio del cacciatore II</Italian>
 		<Polish>Wzrok Łowcy II</Polish>
+		<Russian>Ïðèöåë II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SUBDUE_ANIMAL</Tag>
@@ -32,5 +34,6 @@
 		<Italian>Domatore</Italian>
 		<Spanish>Domar animales</Spanish>
 		<Polish>Poskrom Zwierzę</Polish>
+		<Russian>Öàðü çâåðåé</Russian>
 	</TEXT>
 </Civ4GameText>

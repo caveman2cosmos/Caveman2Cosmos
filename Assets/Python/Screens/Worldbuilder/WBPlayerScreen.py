@@ -361,7 +361,7 @@ class WBPlayerScreen:
 
 		elif inputClass.getFunctionName().find("CoastalTrade") > -1:
 			if inputClass.getData1() == 1030:
-				pPlayer.changeCoastalTradeRoutes(min(iChange, GC.getDefineINT("MAX_TRADE_ROUTES") - pPlayer.getCoastalTradeRoutes()))
+				pPlayer.changeCoastalTradeRoutes(iChange)
 			elif inputClass.getData1() == 1031:
 				pPlayer.changeCoastalTradeRoutes(- min(iChange, pPlayer.getCoastalTradeRoutes()))
 			self.placeStats()

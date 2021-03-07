@@ -185,7 +185,6 @@ class PediaImprovement:
 			Pnl = aName()
 			screen.addScrollPanel(Pnl, "", X_MAIN + W_STATS - 2, y + 24, W_REQUIRES + 4, H_BOT_ROW - 50, ePnlBlue50)
 			screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
-			PF + "CIVIC"
 			x = 4
 			for iType, BTN in aList0:
 				screen.setImageButtonAt(szChild + str(iType), Pnl, BTN, x, -2, S_BOT_ROW, S_BOT_ROW, eWidGen, 1, 1)

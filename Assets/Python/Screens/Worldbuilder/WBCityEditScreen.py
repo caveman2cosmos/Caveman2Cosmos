@@ -438,7 +438,7 @@ class WBCityEditScreen:
 
 		elif inputClass.getFunctionName().find("CityTradeRoute") > -1:
 			if inputClass.getData1() == 1030:
-				pCity.changeExtraTradeRoutes(min(iChange, GC.getDefineINT("MAX_TRADE_ROUTES") - pCity.getTradeRoutes()))
+				pCity.changeExtraTradeRoutes(min(iChange, pCity.getMaxTradeRoutes() - pCity.getTradeRoutes()))
 			elif inputClass.getData1() == 1031:
 				pCity.changeExtraTradeRoutes(- min(iChange, pCity.getTradeRoutes()))
 			self.placeStats()

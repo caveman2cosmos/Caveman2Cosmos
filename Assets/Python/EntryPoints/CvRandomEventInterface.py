@@ -837,8 +837,7 @@ def canTriggerDustbowlCont(argsList):
   map = GC.getMap()
   iBestValue = map.getGridWidth() + map.getGridHeight()
   bestPlot = None
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in map.plots():
     if (plot.getOwner() == kTriggeredData.ePlayer and plot.getImprovementType() == iFarmType and plot.getTerrainType() == iPlainsType):
       iValue = plotDistance(kOrigTriggeredData.iPlotX, kOrigTriggeredData.iPlotY, plot.getX(), plot.getY())
       if iValue < iBestValue:
@@ -892,15 +891,14 @@ def canApplySaltpeter(argsList):
 
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  plot = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
+  plot = map.plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
   if (plot == None):
     return False
 
   iForest = GC.getInfoTypeForString("FEATURE_FOREST")
 
   iNumPlots = 0
-  for i in xrange(map.numPlots()):
-    loopPlot = map.plotByIndex(i)
+  for loopPlot in map.plots():
     if (loopPlot.getOwner() == kTriggeredData.ePlayer and loopPlot.getFeatureType() == iForest and loopPlot.isHills()):
       iDistance = plotDistance(kTriggeredData.iPlotX, kTriggeredData.iPlotY, loopPlot.getX(), loopPlot.getY())
       if iDistance > 0:
@@ -916,15 +914,14 @@ def applySaltpeter(argsList):
 
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
-  plot = GC.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
+  plot = map.plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
   if (plot == None):
     return
 
   iForest = GC.getInfoTypeForString("FEATURE_FOREST")
 
   listPlots = []
-  for i in xrange(map.numPlots()):
-    loopPlot = map.plotByIndex(i)
+  for loopPlot in map.plots():
     if (loopPlot.getOwner() == kTriggeredData.ePlayer and loopPlot.getFeatureType() == iForest and loopPlot.isHills()):
       iDistance = plotDistance(kTriggeredData.iPlotX, kTriggeredData.iPlotY, loopPlot.getX(), loopPlot.getY())
       if iDistance > 0:
@@ -1348,14 +1345,13 @@ def doAncientOlympics2(argsList):
   iEvent = argsList[0]
   kTriggeredData = argsList[1]
 
-  map = GC.getMap()
+  plots = GC.getMap().plots()
 
   for j in xrange(GC.getMAX_PC_PLAYERS()):
     loopPlayer = GC.getPlayer(j)
     if j != kTriggeredData.ePlayer and loopPlayer.isAlive() and not loopPlayer.isMinorCiv():
 
-      for i in xrange(map.numPlots()):
-        plot = map.plotByIndex(i)
+      for plot in plots:
         if not plot.isWater() and plot.getOwner() == kTriggeredData.ePlayer and plot.isAdjacentPlayer(j, True):
           loopPlayer.AI_changeMemoryCount(kTriggeredData.ePlayer, MemoryTypes.MEMORY_EVENT_GOOD_TO_US, 1)
           break
@@ -1811,9 +1807,7 @@ def canTriggerTheHuns(argsList):
 
 
 # Find an eligible plot
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in GC.getMap().plots():
     if (plot.getOwner() == -1 and not plot.isWater() and not plot.isImpassable() and plot.area().getCitiesPerPlayer(kTriggeredData.ePlayer) > 0 and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
       return True
 
@@ -1904,9 +1898,7 @@ def canTriggerTheVandals(argsList):
     return False
 
 # Find an eligible plot
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in GC.getMap().plots():
     if (plot.getOwner() == -1 and not plot.isWater() and not plot.isImpassable() and plot.area().getCitiesPerPlayer(kTriggeredData.ePlayer) > 0 and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
       return True
 
@@ -1997,9 +1989,7 @@ def canTriggerTheGoths(argsList):
     return False
 
 # Find an eligible plot
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in GC.getMap().plots():
     if (plot.getOwner() == -1 and not plot.isWater() and not plot.isImpassable() and plot.area().getCitiesPerPlayer(kTriggeredData.ePlayer) > 0 and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
       return True
 
@@ -2007,8 +1997,8 @@ def canTriggerTheGoths(argsList):
 
 
 def getHelpThGoths1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
+  #iEvent = argsList[0]
+  #kTriggeredData = argsList[1]
 
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_THE_GOTHS_HELP_1", ())
 
@@ -2090,9 +2080,7 @@ def canTriggerThePhilistines(argsList):
     return False
 
 # Find an eligible plot
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in GC.getMap().plots():
     if (plot.getOwner() == -1 and not plot.isWater() and not plot.isImpassable() and plot.area().getCitiesPerPlayer(kTriggeredData.ePlayer) > 0 and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
       return True
 
@@ -2183,9 +2171,7 @@ def canTriggerTheVedicAryans(argsList):
     return False
 
 # Find an eligible plot
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in GC.getMap().plots():
     if (plot.getOwner() == -1 and not plot.isWater() and not plot.isImpassable() and plot.area().getCitiesPerPlayer(kTriggeredData.ePlayer) > 0 and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
       return True
 
@@ -2351,15 +2337,11 @@ def canTriggerHarbormaster(argsList):
     return False
 
   map = GC.getMap()
-
   iNumWater = 0
 
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
-
+  for plot in map.plots():
     if plot.isWater():
       iNumWater += 1
-
     if 100 * iNumWater >= 40 * map.numPlots():
       return True
 
@@ -2536,8 +2518,7 @@ def canApplyMasterBlacksmithDone1(argsList):
   map = GC.getMap()
   iBestValue = map.getGridWidth() + map.getGridHeight()
   bestPlot = None
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in map.plots():
     if (plot.getOwner() == kTriggeredData.ePlayer and plot.canHaveBonus(iBonus, False)):
       iValue = plotDistance(city.getX(), city.getY(), plot.getX(), plot.getY())
       if iValue < iBestValue:
@@ -3251,12 +3232,9 @@ def canTriggerWarships(argsList):
   map = GC.getMap()
   iNumWater = 0
 
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
-
+  for plot in map.plots():
     if plot.isWater():
       iNumWater += 1
-
     if 100 * iNumWater >= 55 * map.numPlots():
       return True
 
@@ -3411,8 +3389,7 @@ def canTriggerOverwhelm(argsList):
   map = GC.getMap()
   iNumWater = 0
 
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in map.plots():
     if plot.isWater():
       iNumWater += 1
     if 100 * iNumWater >= 55 * map.numPlots():
@@ -3627,20 +3604,16 @@ def expireHostileTakeover1(argsList):
   return False
 
 def getHostileTakeoverListResources(corporation, player):
-  map = GC.getMap()
   listHave = []
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in GC.getMap().plots():
     if plot.getOwner() == player.getID():
       iBonus = plot.getBonusType(player.getTeam())
-      if iBonus != -1:
-        if not iBonus in listHave:
+      if iBonus != -1 and not iBonus in listHave:
           listHave.append(iBonus)
   listNeed = []
   for i in xrange(GC.getNUM_CORPORATION_PREREQ_BONUSES()):
     iBonus = corporation.getPrereqBonus(i)
-    if iBonus != -1:
-      if not iBonus in listHave:
+    if iBonus != -1 and not iBonus in listHave:
         listNeed.append(iBonus)
   return listNeed
 
@@ -4619,9 +4592,7 @@ def canTriggerTheBuccaneers(argsList):
     return False
 
 # Find an eligible plot
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in GC.getMap().plots():
     if (plot.getOwner() == -1 and not plot.isWater() and not plot.isImpassable() and plot.area().getCitiesPerPlayer(kTriggeredData.ePlayer) > 0 and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
       return True
 
@@ -4722,8 +4693,7 @@ def canTriggerBlackbeard(argsList):
 	else: return False
 
 	# Find an eligible plot
-	for i in xrange(MAP.numPlots()):
-		plot = MAP.plotByIndex(i)
+	for plot in MAP.plots():
 		if plot.getOwner() == -1 and plot.isWater() and not plot.isLake() \
 		and not plot.isImpassable() and plot.getNumUnits() == 0 \
 		and plot.isAdjacentPlayer(iPlayer, True):
@@ -4794,8 +4764,7 @@ def canTriggerPiratesoftheNeutralZones(argsList):
 		return False
 
 	# Find an eligible plot
-	for i in xrange(MAP.numPlots()):
-		plot = MAP.plotByIndex(i)
+	for plot in MAP.plots():
 		if plot.getOwner() == -1 and plot.isWater() and not plot.isImpassable() and not plot.isLake() and plot.isAdjacentPlayer(iPlayer, True) and not plot.getNumUnits():
 			break
 	else: return False
@@ -4809,9 +4778,7 @@ def applyPiratesoftheNeutralZones1(argsList):
 	iPlayer = argsList[1].ePlayer
 
 	plots = []
-	MAP = GC.getMap()
-	for i in xrange(MAP.numPlots()):
-		plot = MAP.plotByIndex(i)
+	for plot in GC.getMap().plots():
 		if plot.getOwner() == -1 and plot.isWater() and not plot.isImpassable() and not plot.isLake() and plot.isAdjacentPlayer(iPlayer, True) and not plot.getNumUnits():
 			plots.append(plot)
 
@@ -4907,9 +4874,7 @@ def canTriggerMalaccanPirates(argsList):
     return False
 
 # Find an eligible plot
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in GC.getMap().plots():
     if (plot.getOwner() == -1 and plot.isWater() and not plot.isImpassable() and not plot.getNumUnits() > 0 and not plot.isLake() and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
       return True
 
@@ -5047,9 +5012,7 @@ def canTriggerHenryMorgan(argsList):
     return False
 
 # Find an eligible plot
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in GC.getMap().plots():
     if (plot.getOwner() == -1 and plot.isWater() and not plot.isImpassable() and not plot.getNumUnits() > 0 and not plot.isLake() and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
       return True
 
@@ -5218,9 +5181,7 @@ def canTriggerStedeBonnet(argsList):
     return False
 
 # Find an eligible plot
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in GC.getMap().plots():
     if (plot.getOwner() == -1 and plot.isWater() and not plot.isImpassable() and not plot.getNumUnits() > 0 and not plot.isLake() and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
       return True
 
@@ -5367,11 +5328,8 @@ def canTriggerTheCorsairs(argsList):
   if not bFoundValid:
     return False
 
-
 # Find an eligible plot
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in GC.getMap().plots():
     if (plot.getOwner() == -1 and plot.isWater() and not plot.isImpassable() and not plot.getNumUnits() > 0 and not plot.isLake() and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
       return True
 
@@ -5525,9 +5483,7 @@ def canTriggerIllyrianPirates(argsList):
     return False
 
 # Find an eligible plot
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in GC.getMap().plots():
     if (plot.getOwner() == -1 and plot.isWater() and not plot.isImpassable() and not plot.getNumUnits() > 0 and not plot.isLake() and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
       return True
 
@@ -5620,17 +5576,15 @@ def canTriggerMahdiArmy(argsList):
     return False
 
 # Find an eligible plot
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in GC.getMap().plots():
     if (plot.getOwner() == -1 and not plot.isWater() and not plot.isImpassable() and plot.area().getCitiesPerPlayer(kTriggeredData.ePlayer) > 0 and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
       return True
 
   return False
 
 def getHelpMahdiArmy1(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
+  #iEvent = argsList[0]
+  #kTriggeredData = argsList[1]
 
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_MAHDI_ARMY_HELP_1", ())
 
@@ -5712,9 +5666,7 @@ def canTriggerTheTaliban(argsList):
     return False
 
 # Find an eligible plot
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in GC.getMap().plots():
     if (plot.getOwner() == -1 and not plot.isWater() and not plot.isImpassable() and plot.area().getCitiesPerPlayer(kTriggeredData.ePlayer) > 0 and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
       return True
 
@@ -5857,9 +5809,7 @@ def canTriggerMercenariesAncient(argsList):
 		return False
 
 	# Find an eligible plot
-	MAP = GC.getMap()
-	for i in xrange(MAP.numPlots()):
-		plot = MAP.plotByIndex(i)
+	for plot in GC.getMap().plots():
 		if (plot.getOwner() == -1 and not plot.isWater() and not plot.isImpassable()
 		and plot.area().getCitiesPerPlayer(kTriggeredData.ePlayer) > 0
 		and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)
@@ -5949,8 +5899,7 @@ def canTriggerMercenariesClassical(argsList):
 
 	# Find an eligible plot
 	MAP = GC.getMap()
-	for i in xrange(MAP.numPlots()):
-		plot = MAP.plotByIndex(i)
+	for plot in MAP.plots():
 		if (plot.getOwner() == -1 and not plot.isWater() and not plot.isImpassable()
 		and plot.area().getCitiesPerPlayer(kTriggeredData.ePlayer) > 0
 		and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)
@@ -6038,8 +5987,7 @@ def canTriggerMercenariesMedieval(argsList):
 
 	# Find an eligible plot
 	MAP = GC.getMap()
-	for i in xrange(MAP.numPlots()):
-		plot = MAP.plotByIndex(i)
+	for plot in MAP.plots():
 		if (plot.getOwner() == -1 and not plot.isWater() and not plot.isImpassable()
 		and plot.area().getCitiesPerPlayer(kTriggeredData.ePlayer) > 0
 		and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)
@@ -6348,9 +6296,7 @@ def canTriggerSilverRain(argsList):
 
 
 # Find an eligible plot
-  map = GC.getMap()
-  for i in xrange(map.numPlots()):
-    plot = map.plotByIndex(i)
+  for plot in GC.getMap().plots():
     if (plot.getOwner() == -1 and not plot.isWater() and not plot.isImpassable() and plot.area().getCitiesPerPlayer(kTriggeredData.ePlayer) > 0 and plot.isAdjacentPlayer(kTriggeredData.ePlayer, True)):
       return True
 
@@ -7015,12 +6961,10 @@ def triggerNewWorldCities(argsList):
 
 	iNumUnits = GC.getNumUnitInfos()
 	MAP = GC.getMap()
-	iNumPlots = MAP.numPlots()
 	while iNeededCities > 0:
 		iBestValue = 0
 		pBestPlot = None
-		for i in xrange(iNumPlots):
-			CyPlot = MAP.plotByIndex(i)
+		for CyPlot in MAP.plots():
 			if not CyPlot.isWater() and CyPlot.isCoastal() and CyPlayer.canFound(CyPlot.getX(), CyPlot.getY()):
 				iValue = CyPlot.getFoundValue(iPlayer)
 				if iValue > iBestValue:
@@ -7657,8 +7601,7 @@ def doGlobalWarming(argsList):
 	iNumPlots = GC.getMap().numPlots()
 	countIce = 1
 	iGW = 0
-	for i in xrange(iNumPlots):
-		plot = GC.getMap().plotByIndex(i)
+	for plot in GC.getMap().plots():
 		iFeature = plot.getFeatureType()
 		if iFeature == FEATURE_ICE:
 			iGW -= 5

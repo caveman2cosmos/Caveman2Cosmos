@@ -29,8 +29,7 @@ class WoodlandCycle:
 
 	def cache(self):
 		self.plots = plots = []
-		for i in xrange(MAP.numPlots()):
-			plot = MAP.plotByIndex(i)
+		for plot in MAP.plots():
 			if plot.isWater() or plot.isPeak(): continue
 			plots.append(plot)
 		self.iMaxIndex = len(plots)

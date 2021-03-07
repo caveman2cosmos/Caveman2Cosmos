@@ -106,7 +106,7 @@ class LanguageTool():
                     }
 
         """
-        r = session.get(self.api_url + "languages")
+        r = self.session.get(self.api_url + "languages")
         return r.json()
 
     def _is_in_pwl(self, match):

@@ -403,7 +403,7 @@ def handleAutomatedBuildCheckboxClicked(argsList):
 	import CvUtil
 	iNumBuildInfos = GC.getNumBuildInfos()
 	for CyCity in CyPlayer.cities():
-		if szName.rfind(CvUtil.remove_diacriticals(CyCity.getName())) > -1:
+		if szName.rfind(CvUtil.convertToAscii(CyCity.getName())) > -1:
 			iCityID = CyCity.getID()
 			for k in range(iNumBuildInfos):
 				if szName.rfind(GC.getBuildInfo(k).getDescription()) > -1:

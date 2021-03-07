@@ -129,6 +129,7 @@
 			<Strategy>TXT_KEY_BUILDING_CAODAI_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAODAI_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_CAODAI_SHRINE</MovieDefineTag>
 			<HolyCity>RELIGION_CAO_DAI</HolyCity>
 			<ReligionType>RELIGION_CAO_DAI</ReligionType>
 			<GlobalReligionCommerce>RELIGION_CAO_DAI</GlobalReligionCommerce>
