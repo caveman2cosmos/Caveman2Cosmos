@@ -6506,7 +6506,6 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 							const int iFinalIndex = aRandomList[iResult];
 							const UnitCombatTypes eGroupVolume = kUnit.getGroupSpawnUnitCombatType(iFinalIndex).eUnitCombat;
 							CvWString szTitle = kUnit.getGroupSpawnUnitCombatType(iFinalIndex).m_szTitle;
-							const CvWString szOriginal = pUnit->getName();
 							//remove old group volume unitcombat
 							if (eGroupVolume != NO_UNITCOMBAT)
 							{
@@ -6529,8 +6528,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 							//adjust the name of the unit
 							if (!szTitle.empty())
 							{
-								szNewNameBuffer.append(gDLL->getText(szTitle));
-								szNewNameBuffer.append(gDLL->getText(szOriginal));
+								szNewNameBuffer.append(gDLL->getText(szTitle, pUnit->getNameKey()));
 								pUnit->setName(szNewNameBuffer);
 								szNewNameBuffer.clear();
 								szTitle.clear();
