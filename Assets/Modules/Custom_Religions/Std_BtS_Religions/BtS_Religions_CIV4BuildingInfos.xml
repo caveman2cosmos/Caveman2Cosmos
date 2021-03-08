@@ -172,7 +172,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<MovieDefineTag>ART_DEF_MOVIE_SAN_MARCOS_CATHEDRAL</MovieDefineTag>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
 			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -792,7 +791,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<MovieDefineTag>ART_DEF_MOVIE_DESERT</MovieDefineTag>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
 			<bStateReligion>1</bStateReligion>

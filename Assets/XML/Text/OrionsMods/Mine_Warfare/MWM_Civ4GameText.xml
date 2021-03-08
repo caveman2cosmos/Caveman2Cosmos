@@ -79,10 +79,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAND_MINE_HELP</Tag>
 		<English>[ICON_BULLET]Harmless until armed.</English>
+		<Russian>[ICON_BULLET]Безопасна до установки.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MINE_SWEEPER_HELP</Tag>
 		<English>[ICON_BULLET]Can remove mines.</English>
+		<Russian>[ICON_BULLET]Может удалять мины.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ARM_MINE</Tag>
@@ -147,10 +149,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE_FIELD_HELP</Tag>
 		<English>[ICON_BULLET]Harmless until armed.[NEWLINE][COLOR_WARNING_TEXT]Requires Harbor[COLOR_REVERT]</English>
+		<Russian>[ICON_BULLET]Безопасна до установки.[NEWLINE][COLOR_WARNING_TEXT]Требуется: Гавань[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE_HELP</Tag>
 		<English>[ICON_BULLET]Harmless until armed.</English>
+		<Russian>[ICON_BULLET]Безопасна до установки.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ARM_MINE</Tag>
@@ -297,37 +301,46 @@
 	<TEXT>
 		<Tag>TXT_KEY_DETONATE_NUCLEAR_MINE</Tag>
 		<English>Detonate Nuclear mine</English>
+		<Russian>Взорвать ядерную мину</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DETONATE_LAND_MINE</Tag>
 		<English>Detonate Land Mine</English>
+		<Russian>Взорвать мину</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DETONATE_LAND_MINE_MESSAGE</Tag>
 		<English>Detonated Land Mine</English>
+		<Russian>Взорвалась мина</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DETONATE_SEA_MINE</Tag>
 		<English>Detonate Sea Mine</English>
+		<Russian>Взорвать морскую мину</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_DETONATE_SEA_MINE_MESSAGE</Tag>
 		<English>Sea mine was detonated</English>
+		<Russian>Взорвалась морская мина</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_SWEEP_FOR_LAND_MINE_MESSAGE</Tag>
 		<English>Sweeping land mines</English>
+		<Russian>Обезвреживание мин</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_SWEEP_FOR_SEA_MINE_MESSAGE</Tag>
 		<English>Sweeping sea mines</English>
+		<Russian>Траление морских мин</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SWEEP_FOR_LAND_MINE</Tag>
 		<English>Sweep land mines</English>
+		<Russian>Обезвредить мины</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SWEEP_FOR_SEA_MINE</Tag>
 		<English>Sweep sea mines</English>
+		<Russian>Тралить мины</Russian>
 	</TEXT>
 </Civ4GameText>

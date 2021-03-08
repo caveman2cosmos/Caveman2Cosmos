@@ -1972,15 +1972,6 @@
 		<Polish>[NEWLINE]CTRL-ALT-O = Opcje Gry</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CHOOSE_RELIGION</Tag>
-		<English>[NEWLINE]Choose Religion</English>
-		<French>[NEWLINE]Choix des Religions</French>
-		<German>[NEWLINE]Religion auswählen</German>
-		<Italian>[NEWLINE]Scegli Religione</Italian>
-		<Spanish>[NEWLINE]Elegir religión</Spanish>
-		<Polish>[NEWLINE]Wybór Religii</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_A_SHORTCUT</Tag>
 		<English>[NEWLINE]CTRL-A = Abandon City or Demolish Buildings!</English>
 		<French>[NEWLINE]CTRL-A = Abandonner Ville ou Démolir des Bâtiments!</French>

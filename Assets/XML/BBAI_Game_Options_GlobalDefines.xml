@@ -39,26 +39,4 @@
 		<DefineName>BBAI_HUMAN_VASSAL_WAR_BUILD</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
-	<Define>
-		<!-- Better BTS AI: Changes behavior of defensive pacts (Def: 0) :
-			0 : Default BETTER BTS: If a member of a pact DOWS, only they loose their pact(s) and only they are at war.
-					Other pacts agreements between non-aggressive members remain intact. If however an external aggressor attacks a pact,
-					the directly involved members of the pact retaliate with war but their pact is cancelled and must renegotiated.
-					Note that all other uninvolved pacts that were in place between the retaliating parties, are cancelled at that time as well.
-			1 : Defensive pacts are multi-party capable pacts that do not cancel when a pact member is DOWED on and all members DOW on the aggressor.  However if a particular aggressor in the pact DOWs, he looses his defense pact and only that member is at war. All other aggreements in the defense party remain intact.
-			2 : Offensive pacts: Defensive pacts do not cancel when a pact member is DOWED on, and do not cancel if any pact member DOWS either (multi-party offensive and defensive pacts)
-		 -->
-		<DefineName>BBAI_DEFENSIVE_PACT_BEHAVIOR</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<!-- Fuyu: Changes behavior of unit capturing for AI players (Def: 1) :
-			0 : Default BTS: Workers are mostly destroyed if an AI player captures them.
-			1 : Workers are only destroyed if an AI player captures them from a human player,
-				only rare worker destruction in AI vs AI wars.
-			2 : AI always captures workers, never kills them.
-		 -->
-		<DefineName>BBAI_UNIT_CAPTURE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
 </Civ4Defines>

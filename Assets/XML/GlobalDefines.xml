@@ -24,10 +24,6 @@
 		<DefineName>SAVE_VERSION</DefineName>
 		<iDefineIntVal>302</iDefineIntVal>
 	</Define>
-	<Define>
-		<DefineName>MAX_NUM_LANGUAGES</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
-	</Define>
 
 	<!-- GRAPHICS PAGING OPTIONS -->
 
@@ -54,7 +50,7 @@
 		Higher values mean faster paging in at the expense of more stuttering.
 	 -->
 	<Define>
-		<DefineName>MAX_PAGING_FRAME_TIME_MS</DefineName>
+		<DefineName>PAGING_FRAME_TIME_MS</DefineName>
 		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
 	<!-- Distance in tiles at which to page in different components -->
@@ -414,27 +410,7 @@
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>MAX_WORLD_WONDERS_PER_CITY</DefineName>
-		<iDefineIntVal>14</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_TEAM_WONDERS_PER_CITY</DefineName>
-		<iDefineIntVal>16</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_NATIONAL_WONDERS_PER_CITY</DefineName>
-		<iDefineIntVal>31</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_NATIONAL_WONDERS_PER_CITY_FOR_OCC</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>INITIAL_CITY_POPULATION</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>INITIAL_AI_CITY_PRODUCTION</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
@@ -734,14 +710,6 @@
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>ESCAPE_MODIFIER_PER_TURN</DefineName>
-		<iDefineIntVal>4</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>ESTABLISH_MODIFIER_PER_TURN</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>MAX_FORTIFY_TURNS</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
@@ -966,10 +934,6 @@
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>FORCED_WAR_WAR_WEARINESS_MODIFIER</DefineName>
-		<iDefineIntVal>-50</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>MULTIPLAYER_WAR_WEARINESS_MODIFIER</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
@@ -1084,10 +1048,6 @@
 	<Define>
 		<DefineName>EXPERIENCE_FROM_WITHDRAWL</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_EXPERIENCE_AFTER_UPGRADE</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BUILDING_PRODUCTION_DECAY_TIME</DefineName>
@@ -1686,10 +1646,6 @@
 		<iDefineIntVal>75</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>ADVANCED_START_CULTURE_COST_INCREASE</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>ADVANCED_START_VISIBILITY_COST</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
@@ -1716,10 +1672,6 @@
 	<Define>
 		<DefineName>FIRST_EVENT_DELAY_TURNS</DefineName>
 		<iDefineIntVal>20</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>CIVILOPEDIA_SHOW_ACTIVE_CIVS_ONLY</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>USE_MODDERS_PLAYEROPTION_1</DefineName>
@@ -1752,10 +1704,6 @@
 	<Define>
 		<DefineName>USE_SPIES_NO_ENTER_BORDERS</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BONUS_OBSOLETE_VALUE_MODIFIER</DefineName>
-		<iDefineIntVal>150</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FORCE_UNOWNED_CITY_TIMER</DefineName>
