@@ -116,10 +116,10 @@
 				<BuildingType>BUILDING_EMU_STORY</BuildingType>
 				<BuildingType>BUILDING_EWOLF_STORIES</BuildingType>
 				<BuildingType>BUILDING_EWOLF_STORY</BuildingType>
-				<BuildingType>BUILDING_FLAMINGO_STORIES</BuildingType>
-				<BuildingType>BUILDING_FLAMINGO_STORY</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_STORIES</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_STORY</BuildingType>
+				<BuildingType>BUILDING_FLAMINGO_STORIES</BuildingType>
+				<BuildingType>BUILDING_FLAMINGO_STORY</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_PENGUIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_PENGUIN_STORY</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORIES</BuildingType>
@@ -183,8 +183,6 @@
 				<BuildingType>BUILDING_JAVA_RHINO_STORIES</BuildingType>
 				<BuildingType>BUILDING_JAVA_RHINO_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORIES</BuildingType>
-				<BuildingType>BUILDING_KANGAROO_GREY_STORIES</BuildingType>
-				<BuildingType>BUILDING_KANGAROO_GREY_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_RED_STORIES</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_RED_STORY</BuildingType>
@@ -254,18 +252,16 @@
 				<BuildingType>BUILDING_OXPECKER_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORY</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORY</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</BuildingType>
-				<BuildingType>BUILDING_PROCOPTODON_STORIES</BuildingType>
-				<BuildingType>BUILDING_PROCOPTODON_STORY</BuildingType>
 				<BuildingType>BUILDING_PANDA_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_PANDA_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_PANTHER_STORIES</BuildingType>
@@ -286,6 +282,8 @@
 				<BuildingType>BUILDING_POLAR_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_POSSUM_STORIES</BuildingType>
 				<BuildingType>BUILDING_POSSUM_STORY</BuildingType>
+				<BuildingType>BUILDING_PROCOPTODON_STORIES</BuildingType>
+				<BuildingType>BUILDING_PROCOPTODON_STORY</BuildingType>
 				<BuildingType>BUILDING_PUFFADDER_STORIES</BuildingType>
 				<BuildingType>BUILDING_PUFFADDER_STORY</BuildingType>
 				<BuildingType>BUILDING_PYGMYHIPPO_STORIES</BuildingType>
@@ -326,12 +324,12 @@
 				<BuildingType>BUILDING_SALTWATER_CROC_STORY</BuildingType>
 				<BuildingType>BUILDING_SEAEAGLE_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEAEAGLE_STORY</BuildingType>
-				<BuildingType>BUILDING_SEA_OTTER_STORIES</BuildingType>
-				<BuildingType>BUILDING_SEA_OTTER_STORY</BuildingType>
 				<BuildingType>BUILDING_SEALION_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEALION_STORY</BuildingType>
 				<BuildingType>BUILDING_SEATURTLE_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEATURTLE_STORY</BuildingType>
+				<BuildingType>BUILDING_SEA_OTTER_STORIES</BuildingType>
+				<BuildingType>BUILDING_SEA_OTTER_STORY</BuildingType>
 				<BuildingType>BUILDING_SECRETARYBIRD_STORIES</BuildingType>
 				<BuildingType>BUILDING_SECRETARYBIRD_STORY</BuildingType>
 				<BuildingType>BUILDING_SHARK_STORIES</BuildingType>
@@ -352,8 +350,6 @@
 				<BuildingType>BUILDING_SUN_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORIES</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORY</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_STORIES</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_TERN_STORIES</BuildingType>
 				<BuildingType>BUILDING_TERN_STORY</BuildingType>
 				<BuildingType>BUILDING_THYLACINE_STORIES</BuildingType>
@@ -505,10 +501,10 @@
 				<BuildingType>BUILDING_EMU_STORY</BuildingType>
 				<BuildingType>BUILDING_EWOLF_STORIES</BuildingType>
 				<BuildingType>BUILDING_EWOLF_STORY</BuildingType>
-				<BuildingType>BUILDING_FLAMINGO_STORIES</BuildingType>
-				<BuildingType>BUILDING_FLAMINGO_STORY</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_STORIES</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_STORY</BuildingType>
+				<BuildingType>BUILDING_FLAMINGO_STORIES</BuildingType>
+				<BuildingType>BUILDING_FLAMINGO_STORY</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_PENGUIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_PENGUIN_STORY</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORIES</BuildingType>
@@ -572,8 +568,6 @@
 				<BuildingType>BUILDING_JAVA_RHINO_STORIES</BuildingType>
 				<BuildingType>BUILDING_JAVA_RHINO_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORIES</BuildingType>
-				<BuildingType>BUILDING_KANGAROO_GREY_STORIES</BuildingType>
-				<BuildingType>BUILDING_KANGAROO_GREY_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_RED_STORIES</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_RED_STORY</BuildingType>
@@ -643,18 +637,16 @@
 				<BuildingType>BUILDING_OXPECKER_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORY</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORY</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</BuildingType>
-				<BuildingType>BUILDING_PROCOPTODON_STORIES</BuildingType>
-				<BuildingType>BUILDING_PROCOPTODON_STORY</BuildingType>
 				<BuildingType>BUILDING_PANDA_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_PANDA_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_PANTHER_STORIES</BuildingType>
@@ -675,6 +667,8 @@
 				<BuildingType>BUILDING_POLAR_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_POSSUM_STORIES</BuildingType>
 				<BuildingType>BUILDING_POSSUM_STORY</BuildingType>
+				<BuildingType>BUILDING_PROCOPTODON_STORIES</BuildingType>
+				<BuildingType>BUILDING_PROCOPTODON_STORY</BuildingType>
 				<BuildingType>BUILDING_PUFFADDER_STORIES</BuildingType>
 				<BuildingType>BUILDING_PUFFADDER_STORY</BuildingType>
 				<BuildingType>BUILDING_PYGMYHIPPO_STORIES</BuildingType>
@@ -715,12 +709,12 @@
 				<BuildingType>BUILDING_SALTWATER_CROC_STORY</BuildingType>
 				<BuildingType>BUILDING_SEAEAGLE_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEAEAGLE_STORY</BuildingType>
-				<BuildingType>BUILDING_SEA_OTTER_STORIES</BuildingType>
-				<BuildingType>BUILDING_SEA_OTTER_STORY</BuildingType>
 				<BuildingType>BUILDING_SEALION_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEALION_STORY</BuildingType>
 				<BuildingType>BUILDING_SEATURTLE_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEATURTLE_STORY</BuildingType>
+				<BuildingType>BUILDING_SEA_OTTER_STORIES</BuildingType>
+				<BuildingType>BUILDING_SEA_OTTER_STORY</BuildingType>
 				<BuildingType>BUILDING_SECRETARYBIRD_STORIES</BuildingType>
 				<BuildingType>BUILDING_SECRETARYBIRD_STORY</BuildingType>
 				<BuildingType>BUILDING_SHARK_STORIES</BuildingType>
@@ -741,8 +735,6 @@
 				<BuildingType>BUILDING_SUN_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORIES</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORY</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_STORIES</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_TERN_STORIES</BuildingType>
 				<BuildingType>BUILDING_TERN_STORY</BuildingType>
 				<BuildingType>BUILDING_THYLACINE_STORIES</BuildingType>
@@ -894,10 +886,10 @@
 				<BuildingType>BUILDING_EMU_STORY</BuildingType>
 				<BuildingType>BUILDING_EWOLF_STORIES</BuildingType>
 				<BuildingType>BUILDING_EWOLF_STORY</BuildingType>
-				<BuildingType>BUILDING_FLAMINGO_STORIES</BuildingType>
-				<BuildingType>BUILDING_FLAMINGO_STORY</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_STORIES</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_STORY</BuildingType>
+				<BuildingType>BUILDING_FLAMINGO_STORIES</BuildingType>
+				<BuildingType>BUILDING_FLAMINGO_STORY</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_PENGUIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_PENGUIN_STORY</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORIES</BuildingType>
@@ -961,8 +953,6 @@
 				<BuildingType>BUILDING_JAVA_RHINO_STORIES</BuildingType>
 				<BuildingType>BUILDING_JAVA_RHINO_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORIES</BuildingType>
-				<BuildingType>BUILDING_KANGAROO_GREY_STORIES</BuildingType>
-				<BuildingType>BUILDING_KANGAROO_GREY_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_RED_STORIES</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_RED_STORY</BuildingType>
@@ -1032,18 +1022,16 @@
 				<BuildingType>BUILDING_OXPECKER_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORY</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORY</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</BuildingType>
-				<BuildingType>BUILDING_PROCOPTODON_STORIES</BuildingType>
-				<BuildingType>BUILDING_PROCOPTODON_STORY</BuildingType>
 				<BuildingType>BUILDING_PANDA_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_PANDA_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_PANTHER_STORIES</BuildingType>
@@ -1064,6 +1052,8 @@
 				<BuildingType>BUILDING_POLAR_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_POSSUM_STORIES</BuildingType>
 				<BuildingType>BUILDING_POSSUM_STORY</BuildingType>
+				<BuildingType>BUILDING_PROCOPTODON_STORIES</BuildingType>
+				<BuildingType>BUILDING_PROCOPTODON_STORY</BuildingType>
 				<BuildingType>BUILDING_PUFFADDER_STORIES</BuildingType>
 				<BuildingType>BUILDING_PUFFADDER_STORY</BuildingType>
 				<BuildingType>BUILDING_PYGMYHIPPO_STORIES</BuildingType>
@@ -1104,12 +1094,12 @@
 				<BuildingType>BUILDING_SALTWATER_CROC_STORY</BuildingType>
 				<BuildingType>BUILDING_SEAEAGLE_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEAEAGLE_STORY</BuildingType>
-				<BuildingType>BUILDING_SEA_OTTER_STORIES</BuildingType>
-				<BuildingType>BUILDING_SEA_OTTER_STORY</BuildingType>
 				<BuildingType>BUILDING_SEALION_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEALION_STORY</BuildingType>
 				<BuildingType>BUILDING_SEATURTLE_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEATURTLE_STORY</BuildingType>
+				<BuildingType>BUILDING_SEA_OTTER_STORIES</BuildingType>
+				<BuildingType>BUILDING_SEA_OTTER_STORY</BuildingType>
 				<BuildingType>BUILDING_SECRETARYBIRD_STORIES</BuildingType>
 				<BuildingType>BUILDING_SECRETARYBIRD_STORY</BuildingType>
 				<BuildingType>BUILDING_SHARK_STORIES</BuildingType>
@@ -1130,8 +1120,6 @@
 				<BuildingType>BUILDING_SUN_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORIES</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORY</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_STORIES</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_TERN_STORIES</BuildingType>
 				<BuildingType>BUILDING_TERN_STORY</BuildingType>
 				<BuildingType>BUILDING_THYLACINE_STORIES</BuildingType>
