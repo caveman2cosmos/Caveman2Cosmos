@@ -12,6 +12,8 @@
 				<BuildingType>BUILDING_AFRICANGREY_STORY</BuildingType>
 				<BuildingType>BUILDING_AFRICAN_PENGUIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_AFRICAN_PENGUIN_STORY</BuildingType>
+				<BuildingType>BUILDING_AMPHIBIAN_STORIES</BuildingType>
+				<BuildingType>BUILDING_AMPHIBIAN_STORY</BuildingType>
 				<BuildingType>BUILDING_ANTEATER_STORIES</BuildingType>
 				<BuildingType>BUILDING_ANTEATER_STORY</BuildingType>
 				<BuildingType>BUILDING_ARCTICFOX_STORIES</BuildingType>
@@ -312,6 +314,8 @@
 				<BuildingType>BUILDING_RACCOON_STORIES</BuildingType>
 				<BuildingType>BUILDING_RACCOON_STORY</BuildingType>
 				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_RAPTOR_STORIES</BuildingType>
+				<BuildingType>BUILDING_RAPTOR_STORY</BuildingType>
 				<BuildingType>BUILDING_RATEL_STORIES</BuildingType>
 				<BuildingType>BUILDING_RATEL_STORY</BuildingType>
 				<BuildingType>BUILDING_RAVEN_STORIES</BuildingType>
@@ -374,6 +378,8 @@
 				<BuildingType>BUILDING_SPECTACLED_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_SUN_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_SUN_BEAR_STORY</BuildingType>
+				<BuildingType>BUILDING_TAPIR_STORIES</BuildingType>
+				<BuildingType>BUILDING_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORIES</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORY</BuildingType>
 				<BuildingType>BUILDING_TERN_STORIES</BuildingType>
@@ -426,6 +432,8 @@
 				<BuildingType>BUILDING_AFRICANGREY_STORY</BuildingType>
 				<BuildingType>BUILDING_AFRICAN_PENGUIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_AFRICAN_PENGUIN_STORY</BuildingType>
+				<BuildingType>BUILDING_AMPHIBIAN_STORIES</BuildingType>
+				<BuildingType>BUILDING_AMPHIBIAN_STORY</BuildingType>
 				<BuildingType>BUILDING_ANTEATER_STORIES</BuildingType>
 				<BuildingType>BUILDING_ANTEATER_STORY</BuildingType>
 				<BuildingType>BUILDING_ARCTICFOX_STORIES</BuildingType>
@@ -726,6 +734,8 @@
 				<BuildingType>BUILDING_RACCOON_STORIES</BuildingType>
 				<BuildingType>BUILDING_RACCOON_STORY</BuildingType>
 				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_RAPTOR_STORIES</BuildingType>
+				<BuildingType>BUILDING_RAPTOR_STORY</BuildingType>
 				<BuildingType>BUILDING_RATEL_STORIES</BuildingType>
 				<BuildingType>BUILDING_RATEL_STORY</BuildingType>
 				<BuildingType>BUILDING_RAVEN_STORIES</BuildingType>
@@ -788,6 +798,8 @@
 				<BuildingType>BUILDING_SPECTACLED_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_SUN_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_SUN_BEAR_STORY</BuildingType>
+				<BuildingType>BUILDING_TAPIR_STORIES</BuildingType>
+				<BuildingType>BUILDING_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORIES</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORY</BuildingType>
 				<BuildingType>BUILDING_TERN_STORIES</BuildingType>
@@ -840,6 +852,8 @@
 				<BuildingType>BUILDING_AFRICANGREY_STORY</BuildingType>
 				<BuildingType>BUILDING_AFRICAN_PENGUIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_AFRICAN_PENGUIN_STORY</BuildingType>
+				<BuildingType>BUILDING_AMPHIBIAN_STORIES</BuildingType>
+				<BuildingType>BUILDING_AMPHIBIAN_STORY</BuildingType>
 				<BuildingType>BUILDING_ANTEATER_STORIES</BuildingType>
 				<BuildingType>BUILDING_ANTEATER_STORY</BuildingType>
 				<BuildingType>BUILDING_ARCTICFOX_STORIES</BuildingType>
@@ -1140,6 +1154,8 @@
 				<BuildingType>BUILDING_RACCOON_STORIES</BuildingType>
 				<BuildingType>BUILDING_RACCOON_STORY</BuildingType>
 				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_RAPTOR_STORIES</BuildingType>
+				<BuildingType>BUILDING_RAPTOR_STORY</BuildingType>
 				<BuildingType>BUILDING_RATEL_STORIES</BuildingType>
 				<BuildingType>BUILDING_RATEL_STORY</BuildingType>
 				<BuildingType>BUILDING_RAVEN_STORIES</BuildingType>
@@ -1202,6 +1218,8 @@
 				<BuildingType>BUILDING_SPECTACLED_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_SUN_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_SUN_BEAR_STORY</BuildingType>
+				<BuildingType>BUILDING_TAPIR_STORIES</BuildingType>
+				<BuildingType>BUILDING_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORIES</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORY</BuildingType>
 				<BuildingType>BUILDING_TERN_STORIES</BuildingType>
