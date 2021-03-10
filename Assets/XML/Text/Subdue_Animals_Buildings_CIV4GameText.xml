@@ -89,7 +89,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTELOPE_MYTH</Tag>
-		<English>Myth (T) - Antelope</English>
+		<English>Myth - Antelope</English>
 		<French>
 			<Text>Mythe (T) de l'Antilope</Text>
 			<Gender>Male</Gender>
@@ -651,7 +651,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_MYTH</Tag>
-		<English>Myth (T) - Deer</English>
+		<English>Myth - Deer</English>
 		<French>
 			<Text>Mythe (T) du Cerf</Text>
 			<Gender>Male</Gender>
@@ -667,7 +667,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_MYTH_EFFECT</Tag>
-		<English>Myth Effect (T) - Deer</English>
+		<English>Myth Effect - Deer</English>
 		<French>Effet - Mythe (T) du Cerf</French>
 		<Russian>Ïåñíÿ îá îëåíå</Russian>
 	</TEXT>
@@ -1243,7 +1243,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARSUPIAL_MYTH</Tag>
-		<English>Myth (T) - Marsupial</English>
+		<English>Myth - Marsupial</English>
 		<French>
 			<Text>Mythe (T) du Marsupial</Text>
 			<Gender>Male</Gender>
@@ -1259,7 +1259,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARSUPIAL_MYTH_EFFECT</Tag>
-		<English>Myth Effect (T) - Marsupial</English>
+		<English>Myth Effect - Marsupial</English>
 		<French>Effet - Mythe (T) - Marsupial</French>
 		<Russian>Ïåñíÿ î ñóì÷àòîì</Russian>
 	</TEXT>
@@ -1792,7 +1792,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SCAVENGER_MYTH</Tag>
-		<English>Myth (S) - Scavenger</English>
+		<English>Myth - Scavenger</English>
 		<French>
 			<Text>Mythe (R) du Mendiant</Text>
 			<Gender>Male</Gender>
@@ -1808,7 +1808,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SCAVENGER_MYTH_EFFECT</Tag>
-		<English>Myth Effect (S) - Scavenger</English>
+		<English>Myth Effect - Scavenger</English>
 		<French>
 			<Text>Effet - Mythe (R) du Mendiant</Text>
 			<Gender>Male</Gender>
@@ -2144,7 +2144,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WEASEL_MYTH</Tag>
-		<English>Myth (T) - Weasel</English>
+		<English>Myth - Weasel</English>
 		<French>
 			<Text>Mythe (T) de la belette</Text>
 			<Gender>Male</Gender>
