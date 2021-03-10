@@ -252,7 +252,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAIRDS_TAPIR_STORIES_EFFECT</Tag>
-		<English>Stories Effect (Baird's Tapir)</English>
+		<English>Stories Effect - Baird's Tapir</English>
 		<French>Effet (Histoires des Tapirs de Baird)</French>
 		<Polish>Efekt Historii - Tapir Panamski</Polish>
 		<Russian>Ïðåäàíèÿ î òàïèðå Áýðäà</Russian>
@@ -322,7 +322,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRAZILIAN_TAPIR_STORIES_EFFECT</Tag>
-		<English>Stories Effect (Brazilian Tapir)</English>
+		<English>Stories Effect - Brazilian Tapir</English>
 		<French>Effet (Histoires des Tapirs du Brésil)</French>
 		<Polish>Efekt Historii - Tapir Brazylijski</Polish>
 		<Russian>Ïðåäàíèÿ î áðàç. òàïèðå</Russian>
@@ -1622,7 +1622,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MALAYAN_TAPIR_STORIES_EFFECT</Tag>
-		<English>Stories Effect (Malayan Tapir)</English>
+		<English>Stories Effect - Malayan Tapir</English>
 		<French>Effet (Histoires des Tapirs Malais)</French>
 		<Polish>Efekt Historii - Tapir Malajski</Polish>
 		<Russian>Ïðåäàíèÿ î ìàë. òàïèðå</Russian>
@@ -1786,7 +1786,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOUNTAIN_TAPIR_STORIES_EFFECT</Tag>
-		<English>Stories Effect (Mountain Tapir)</English>
+		<English>Stories Effect - Mountain Tapir</English>
 		<French>Effet (Histoires des Tapirs des Montagnes)</French>
 		<Polish>Efekt Historii - Tapir Górski</Polish>
 		<Russian>Ïðåäàíèÿ î ãîðíîì òàïèðå</Russian>
@@ -2848,7 +2848,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TAPIR_STORIES_EFFECT</Tag>
-		<English>Stories effect - Tapir</English>
+		<English>Stories Effect - Tapir</English>
 		<French>Effet (Histoires des Tapirs)</French>
 		<Polish>Efekt Historie - Tapir</Polish>
 		<Russian>Ïðåäàíèÿ î òàïèðå</Russian>
