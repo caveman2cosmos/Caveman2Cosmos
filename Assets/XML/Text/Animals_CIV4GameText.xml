@@ -871,7 +871,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIRE_MYTH</Tag>
-		<English>Myth - Fire</English>
+		<English>Myth (L) - Fire</English>
 		<French>Mythe du Feu</French>
 		<Polish>Mit - Ogień</Polish>
 		<Russian>Ìèô îá îãíå</Russian>
@@ -1666,7 +1666,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAL_MYTH</Tag>
-		<English>Myth - Metal</English>
+		<English>Myth (L) - Metal</English>
 		<French>Mythe du Métal</French>
 		<Polish>Mit - Metal</Polish>
 		<Russian>Ìèô î ìåòàëëå</Russian>
@@ -2814,7 +2814,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STONE_MYTH</Tag>
-		<English>Myth - Stone</English>
+		<English>Myth (L) - Stone</English>
 		<French>Mythe de la Pierre</French>
 		<Polish>Mit - Kamień</Polish>
 		<Russian>Ìèô î êàìíå</Russian>
@@ -3275,7 +3275,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARMADILLO</Tag>
-		<English>Nine-banded Armadillo</English>
+		<English>Nine-Banded Armadillo</English>
 		<French>Tatou à neuf bandes</French>
 		<German>
 			<Text>Neunbinden-Gürteltier:Neunbinden-Gürteltieres:Neunbinden-Gürteltier:Neunbinden-Gürteltier:Neunbinden-Gürteltiere:Neunbinden-Gürteltiere:Neunbinden-Gürteltieren:Neunbinden-Gürteltiere</Text>
@@ -4193,7 +4193,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEMUR</Tag>
-		<English>Ring-tailed Lemur</English>
+		<English>Ring-Tailed Lemur</English>
 		<French>Lémur catta</French>
 		<German>
 			<Text>Katta:Kattas:Katta:Katta:Kattas:Kattas:Kattas:Kattas</Text>
@@ -4644,7 +4644,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SALTWATER_CROC_LARGE</Tag>
-		<English>Saltwater crocodile (4-7 meter)</English>
+		<English>Saltwater Crocodile (4-7 meter)</English>
 		<French>
 			<Text>Grand Crocodile de mer</Text>
 			<Gender>Male</Gender>
@@ -4666,7 +4666,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SALTWATER_CROC_SMALL</Tag>
-		<English>Saltwater crocodile (2-4 meter)</English>
+		<English>Saltwater Crocodile (2-4 meter)</English>
 		<French>
 			<Text>Petit Crocodile de mer</Text>
 			<Gender>Male</Gender>
@@ -5830,7 +5830,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLABY</Tag>
-		<English>Ring-tailed Wallaby</English>
+		<English>Ring-Tailed Wallaby</English>
 		<French>
 			<Text>Wallaby</Text>
 			<Gender>Male</Gender>

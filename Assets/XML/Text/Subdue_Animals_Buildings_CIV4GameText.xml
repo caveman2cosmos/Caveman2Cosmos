@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_MYTH</Tag>
-		<English>Myth - Amphibians</English>
+		<English>Myth (B) - Amphibians</English>
 		<French>
 			<Text>Mythe - Amphibiens</Text>
 			<Gender>Male</Gender>
@@ -813,7 +813,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTH_MYTH</Tag>
-		<English>Myth - Earth</English>
+		<English>Myth (L) - Earth</English>
 		<French>
 			<Text>Mythe de la Terre</Text>
 			<Gender>Male</Gender>
@@ -851,7 +851,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEPHANT_MYTH</Tag>
-		<English>Myth - Elephant</English>
+		<English>Myth (B) - Elephant</English>
 		<French>
 			<Text>Mythe de l'Eléphant</Text>
 			<Gender>Male</Gender>
@@ -1728,7 +1728,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REPTILE_MYTH</Tag>
-		<English>Myth - Reptiles</English>
+		<English>Myth (B) - Reptiles</English>
 		<French>
 			<Text>Mythe - Reptiles</Text>
 			<Gender>Male</Gender>
@@ -1836,7 +1836,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_MYTH</Tag>
-		<English>Myth - Sea turtle</English>
+		<English>Myth - Sea Turtle</English>
 		<French>
 			<Text>Mythe de la Tortue de mer</Text>
 			<Gender>Male</Gender>
@@ -1858,7 +1858,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEA_MYTH</Tag>
-		<English>Myth - Sea</English>
+		<English>Myth (L) - Sea</English>
 		<French>
 			<Text>Mythe de la Mer</Text>
 			<Gender>Male</Gender>
@@ -1906,7 +1906,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKY_MYTH</Tag>
-		<English>Myth - Sky</English>
+		<English>Myth (L) - Sky</English>
 		<French>
 			<Text>Mythe du Ciel</Text>
 			<Gender>Male</Gender>
@@ -1961,7 +1961,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPOTTED_CAT_MYTH</Tag>
-		<English>Myth - Spotted Cat</English>
+		<English>Myth (B) - Spotted Cat</English>
 		<French>Mythe du Chat moucheté</French>
 		<Italian>
 			<Text>Mito del felino maculato</Text>
