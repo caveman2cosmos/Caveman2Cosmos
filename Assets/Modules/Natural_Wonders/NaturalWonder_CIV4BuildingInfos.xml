@@ -1912,6 +1912,7 @@
 			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_OASIS</FeatureType>
@@ -1980,6 +1981,7 @@
 			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CRATER</FeatureType>
@@ -2062,6 +2064,7 @@
 			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -2212,9 +2215,14 @@
 			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -2294,6 +2302,7 @@
 			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
@@ -2384,6 +2393,7 @@
 			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_REEF</FeatureType>

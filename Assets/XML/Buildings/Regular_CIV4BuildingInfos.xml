@@ -89185,6 +89185,9 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_METAL_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_MINING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+			</TechTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDING_METAL_MYTH_EFFECT</FreeBuilding>
 			<iCost>132</iCost>
