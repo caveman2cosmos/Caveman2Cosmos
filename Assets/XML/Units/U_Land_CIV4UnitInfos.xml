@@ -42172,15 +42172,6 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<Buildings>
-				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
-				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
-				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
-				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
-				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
-				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
-				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
-			</Buildings>
 			<PrereqTech>TECH_LINGUISTICS</PrereqTech>
 			<iCost>120</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
@@ -42281,11 +42272,6 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<Buildings>
-				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
-				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
-				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
-			</Buildings>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<iCost>200</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
