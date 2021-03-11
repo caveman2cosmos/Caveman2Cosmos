@@ -64,7 +64,7 @@
 			<FreeBuilding>BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</BuildingType>
@@ -185,7 +185,7 @@
 			<FreeBuilding>BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</BuildingType>
@@ -306,7 +306,7 @@
 			<FreeBuilding>BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</BuildingType>
@@ -427,7 +427,7 @@
 			<FreeBuilding>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</BuildingType>

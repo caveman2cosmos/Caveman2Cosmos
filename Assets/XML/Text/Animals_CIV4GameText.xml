@@ -81,7 +81,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Tag>
-		<English>Animal Stories buildings represents educational boost from animals after invention of [LINK=TECH_LITERATURE]Literature[\LINK] - needs [LINK=BUILDING_LIBRARY]Library[\LINK]</English>
+		<English>Animal Stories buildings represents educational boost from animals after invention of [LINK=TECH_LITERATURE]Literature[\LINK] - needs [LINK=BUILDING_LIBRARY]Library[\LINK] to create [LINK=BUILDING_ANIMAL_STORIES_REQUIRE]Animal Stories Requirement[\LINK].[NEWLINE]This is done to declutter Library building.</English>
 		<French>Les bâtiments des histoires animales représentent un coup de pouce éducatif provenant des animaux, après l'invention de la [LINK=TECH_LITERATURE]Littérature[\LINK] - nécessite une [LINK=BUILDING_LIBRARY]Bibliothèque[\LINK]</French>
 	</TEXT>
 	<TEXT>
@@ -102,6 +102,10 @@
 		<French>Pré-requis pour Histoire Animale</French>
 		<German>Grundlage für Tiergeschichten</German>
 		<Russian>Ñêàçêà î æèâîòíîì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_REQUIRE</Tag>
+		<English>Animal Stories Requirement</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Tag>

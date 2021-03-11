@@ -113,7 +113,7 @@
 			<FreeBuilding>BUILDING_CROW_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CROW_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CROW_STORIES_EFFECT</BuildingType>
