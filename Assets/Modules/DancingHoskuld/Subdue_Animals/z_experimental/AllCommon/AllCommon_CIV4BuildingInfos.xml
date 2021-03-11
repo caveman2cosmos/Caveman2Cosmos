@@ -1245,6 +1245,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_EAGLE_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_EAGLE_BALD_MYTH_EFFECT</BuildingType>
