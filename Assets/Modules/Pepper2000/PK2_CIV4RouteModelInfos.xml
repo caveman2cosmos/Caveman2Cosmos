@@ -2,8 +2,8 @@
 <Civ4RouteModelInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<RouteModelInfos>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadA00.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadA00.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadA00.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadA00.nif</LateModelFile>
 			<ModelFileKey>A00</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -12,8 +12,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadA01.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadA01.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadA01.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadA01.nif</LateModelFile>
 			<ModelFileKey>A01</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -22,8 +22,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadA02.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadA02.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadA02.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadA02.nif</LateModelFile>
 			<ModelFileKey>A02</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -32,8 +32,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB01.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB01.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB01.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB01.nif</LateModelFile>
 			<ModelFileKey>B01</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -42,8 +42,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB02.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB02.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB02.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB02.nif</LateModelFile>
 			<ModelFileKey>B02</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -52,8 +52,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB03.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB03.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB03.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB03.nif</LateModelFile>
 			<ModelFileKey>B03</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -62,8 +62,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB04.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB04.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB04.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB04.nif</LateModelFile>
 			<ModelFileKey>B04</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -72,8 +72,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB05.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB05.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB05.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB05.nif</LateModelFile>
 			<ModelFileKey>B05</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -82,8 +82,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB06.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB06.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB06.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB06.nif</LateModelFile>
 			<ModelFileKey>B06</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -92,8 +92,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB07.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB07.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB07.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB07.nif</LateModelFile>
 			<ModelFileKey>B07</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -102,8 +102,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB08.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB08.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB08.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB08.nif</LateModelFile>
 			<ModelFileKey>B08</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -112,8 +112,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB05.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB05.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB05.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB05.nif</LateModelFile>
 			<ModelFileKey>C01</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -122,8 +122,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB06.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB06.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB06.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB06.nif</LateModelFile>
 			<ModelFileKey>C02</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -132,8 +132,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC03.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC03.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC03.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC03.nif</LateModelFile>
 			<ModelFileKey>C03</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -142,8 +142,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC04.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC04.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</LateModelFile>
 			<ModelFileKey>C04</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -152,8 +152,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB03.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB03.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB03.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB03.nif</LateModelFile>
 			<ModelFileKey>C05OtherDir</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -162,8 +162,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC06.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC06.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</LateModelFile>
 			<ModelFileKey>C06</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -172,8 +172,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC07.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC07.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC07.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC07.nif</LateModelFile>
 			<ModelFileKey>C07</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -182,8 +182,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC08.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC08.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC08.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC08.nif</LateModelFile>
 			<ModelFileKey>C08</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -192,8 +192,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC09.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC09.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC09.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC09.nif</LateModelFile>
 			<ModelFileKey>C09</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -202,8 +202,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC10.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC10.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC10.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC10.nif</LateModelFile>
 			<ModelFileKey>C10</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -212,8 +212,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB07.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB07.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB07.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB07.nif</LateModelFile>
 			<ModelFileKey>C11</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -222,8 +222,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC12.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC12.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC12.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC12.nif</LateModelFile>
 			<ModelFileKey>C12</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -232,8 +232,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB08.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB08.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB08.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB08.nif</LateModelFile>
 			<ModelFileKey>C13</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -242,8 +242,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC14.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC14.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC14.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC14.nif</LateModelFile>
 			<ModelFileKey>C14</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -252,8 +252,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD02.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD02.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>D01</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -262,8 +262,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD02.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD02.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>D02</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -272,8 +272,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD03.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD03.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD03.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD03.nif</LateModelFile>
 			<ModelFileKey>D03</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -282,8 +282,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC04.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC04.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</LateModelFile>
 			<ModelFileKey>D04</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -292,8 +292,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD05.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD05.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD05.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD05.nif</LateModelFile>
 			<ModelFileKey>D05</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -302,8 +302,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB04.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB04.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB04.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB04.nif</LateModelFile>
 			<ModelFileKey>D06</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -312,8 +312,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD07.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD07.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD07.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD07.nif</LateModelFile>
 			<ModelFileKey>D07</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -322,8 +322,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD08.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD08.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD08.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD08.nif</LateModelFile>
 			<ModelFileKey>D08</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -332,8 +332,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB08.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB08.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB08.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB08.nif</LateModelFile>
 			<ModelFileKey>D09</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -342,8 +342,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB07.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB07.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB07.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB07.nif</LateModelFile>
 			<ModelFileKey>D10</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -352,8 +352,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC06.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC06.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</LateModelFile>
 			<ModelFileKey>D11</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -362,8 +362,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC07.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC07.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC07.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC07.nif</LateModelFile>
 			<ModelFileKey>D12</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -372,8 +372,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC04.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC04.nifnif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</LateModelFile>
 			<ModelFileKey>D13</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -382,8 +382,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC04.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC04.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</LateModelFile>
 			<ModelFileKey>D14</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -392,8 +392,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC10.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC10.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC10.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC10.nif</LateModelFile>
 			<ModelFileKey>D15</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -402,8 +402,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC06.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC06.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</LateModelFile>
 			<ModelFileKey>D16</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -412,8 +412,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC12.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC12.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC12.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC12.nif</LateModelFile>
 			<ModelFileKey>D17</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -422,8 +422,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC14.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC14.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC14.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC14.nif</LateModelFile>
 			<ModelFileKey>D18</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -432,8 +432,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD19.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD19.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD19.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD19.nif</LateModelFile>
 			<ModelFileKey>D19</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -442,8 +442,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD20.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD20.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD20.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD20.nif</LateModelFile>
 			<ModelFileKey>D20</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -452,8 +452,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD02.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD02.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>E01</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -462,8 +462,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD02.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD02.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>E02</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -472,8 +472,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD20.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD20.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD20.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD20.nif</LateModelFile>
 			<ModelFileKey>E03</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -482,8 +482,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC04.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC04.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</LateModelFile>
 			<ModelFileKey>E04</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -492,8 +492,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD05.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD05.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD05.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD05.nif</LateModelFile>
 			<ModelFileKey>E05</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -502,8 +502,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB04.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB04.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB04.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB04.nif</LateModelFile>
 			<ModelFileKey>E06</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -512,8 +512,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC08.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC08.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC08.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC08.nif</LateModelFile>
 			<ModelFileKey>E07</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -522,8 +522,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD20.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD20.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD20.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD20.nif</LateModelFile>
 			<ModelFileKey>E08</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -532,8 +532,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC09.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC09.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC09.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC09.nif</LateModelFile>
 			<ModelFileKey>E09</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -542,8 +542,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD19.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD19.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD19.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD19.nif</LateModelFile>
 			<ModelFileKey>E10</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -552,8 +552,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC06.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC06.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</LateModelFile>
 			<ModelFileKey>E11</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -562,8 +562,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadB06.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadB06.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadB06.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB06.nif</LateModelFile>
 			<ModelFileKey>E12</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -572,8 +572,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD19.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD19.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD19.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD19.nif</LateModelFile>
 			<ModelFileKey>E13</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -582,8 +582,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC04.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC04.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</LateModelFile>
 			<ModelFileKey>E14</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -592,8 +592,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD02.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD02.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>F01</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -602,8 +602,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD02.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD02.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>F02</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -612,8 +612,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD02.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD02.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>F03</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -622,8 +622,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD02.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD02.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>F04</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -632,8 +632,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC08.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC08.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC08.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC08.nif</LateModelFile>
 			<ModelFileKey>F05</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -642,8 +642,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD20.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD20.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD20.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD20.nif</LateModelFile>
 			<ModelFileKey>F06</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -652,8 +652,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC06.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC06.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</LateModelFile>
 			<ModelFileKey>F07</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -662,8 +662,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadC06.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadC06.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</LateModelFile>
 			<ModelFileKey>F08</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -672,8 +672,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD02.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD02.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>G01</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -682,8 +682,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD02.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD02.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>G02</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -692,8 +692,8 @@
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
 		<RouteModelInfo>
-			<ModelFile>Art/Terrain/Routes/Path1/RoadD02.nif</ModelFile>
-			<LateModelFile>Art/Terrain/Routes/Path/RoadD02.nif</LateModelFile>
+			<ModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</ModelFile>
+			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>H01</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_LUNAR_PATH</RouteType>
@@ -701,7 +701,7 @@
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
 		</RouteModelInfo>
-	<RouteModelInfo>
+		<RouteModelInfo>
 			<ModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneA00.nif</ModelFile>
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneA00.nif</LateModelFile>
 			<ModelFileKey>A00</ModelFileKey>

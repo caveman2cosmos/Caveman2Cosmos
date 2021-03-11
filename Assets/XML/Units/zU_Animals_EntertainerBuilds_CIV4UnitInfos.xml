@@ -12,6 +12,8 @@
 				<BuildingType>BUILDING_AFRICANGREY_STORY</BuildingType>
 				<BuildingType>BUILDING_AFRICAN_PENGUIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_AFRICAN_PENGUIN_STORY</BuildingType>
+				<BuildingType>BUILDING_AMPHIBIAN_STORIES</BuildingType>
+				<BuildingType>BUILDING_AMPHIBIAN_STORY</BuildingType>
 				<BuildingType>BUILDING_ANTEATER_STORIES</BuildingType>
 				<BuildingType>BUILDING_ANTEATER_STORY</BuildingType>
 				<BuildingType>BUILDING_ARCTICFOX_STORIES</BuildingType>
@@ -42,12 +44,15 @@
 				<BuildingType>BUILDING_BEAVER_STORY</BuildingType>
 				<BuildingType>BUILDING_BENGALTIGER_STORIES</BuildingType>
 				<BuildingType>BUILDING_BENGALTIGER_STORY</BuildingType>
+				<BuildingType>BUILDING_BIRD_STORIES</BuildingType>
+				<BuildingType>BUILDING_BIRD_STORY</BuildingType>
 				<BuildingType>BUILDING_BISON_STORIES</BuildingType>
 				<BuildingType>BUILDING_BISON_STORY</BuildingType>
 				<BuildingType>BUILDING_BLACK_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_BLACK_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_BLACK_RHINO_STORIES</BuildingType>
 				<BuildingType>BUILDING_BLACK_RHINO_STORY</BuildingType>
+				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
 				<BuildingType>BUILDING_BOAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_BOAR_STORY</BuildingType>
 				<BuildingType>BUILDING_BONGO_STORIES</BuildingType>
@@ -60,6 +65,8 @@
 				<BuildingType>BUILDING_BROWN_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_BUFFALO_STORIES</BuildingType>
 				<BuildingType>BUILDING_BUFFALO_STORY</BuildingType>
+				<BuildingType>BUILDING_BUG_STORIES</BuildingType>
+				<BuildingType>BUILDING_BUG_STORY</BuildingType>
 				<BuildingType>BUILDING_CAIMAN_STORIES</BuildingType>
 				<BuildingType>BUILDING_CAIMAN_STORY</BuildingType>
 				<BuildingType>BUILDING_CAPUCHIN_STORIES</BuildingType>
@@ -100,6 +107,8 @@
 				<BuildingType>BUILDING_DINGO_STORY</BuildingType>
 				<BuildingType>BUILDING_DOLPHIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_DOLPHIN_STORY</BuildingType>
+				<BuildingType>BUILDING_DONKEY_STORIES</BuildingType>
+				<BuildingType>BUILDING_DONKEY_STORY</BuildingType>
 				<BuildingType>BUILDING_DUCK_STORIES</BuildingType>
 				<BuildingType>BUILDING_DUCK_STORY</BuildingType>
 				<BuildingType>BUILDING_DUGONG_STORIES</BuildingType>
@@ -116,10 +125,16 @@
 				<BuildingType>BUILDING_EMU_STORY</BuildingType>
 				<BuildingType>BUILDING_EWOLF_STORIES</BuildingType>
 				<BuildingType>BUILDING_EWOLF_STORY</BuildingType>
-				<BuildingType>BUILDING_FLAMINGO_STORIES</BuildingType>
-				<BuildingType>BUILDING_FLAMINGO_STORY</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_STORIES</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_STORY</BuildingType>
+				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
+				<BuildingType>BUILDING_FISH_STORIES</BuildingType>
+				<BuildingType>BUILDING_FISH_STORY</BuildingType>
+				<BuildingType>BUILDING_FLAMINGO_STORIES</BuildingType>
+				<BuildingType>BUILDING_FLAMINGO_STORY</BuildingType>
+				<BuildingType>BUILDING_FLIGHTLESS_BIRD_STORIES</BuildingType>
+				<BuildingType>BUILDING_FLIGHTLESS_BIRD_STORY</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_PENGUIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_PENGUIN_STORY</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORIES</BuildingType>
@@ -166,6 +181,8 @@
 				<BuildingType>BUILDING_HIPPOS_STORY</BuildingType>
 				<BuildingType>BUILDING_HORNED_OWL_STORIES</BuildingType>
 				<BuildingType>BUILDING_HORNED_OWL_STORY</BuildingType>
+				<BuildingType>BUILDING_HORSE_STORIES</BuildingType>
+				<BuildingType>BUILDING_HORSE_STORY</BuildingType>
 				<BuildingType>BUILDING_HUMPBACK_STORIES</BuildingType>
 				<BuildingType>BUILDING_HUMPBACK_STORY</BuildingType>
 				<BuildingType>BUILDING_HYENA_STORIES</BuildingType>
@@ -183,8 +200,6 @@
 				<BuildingType>BUILDING_JAVA_RHINO_STORIES</BuildingType>
 				<BuildingType>BUILDING_JAVA_RHINO_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORIES</BuildingType>
-				<BuildingType>BUILDING_KANGAROO_GREY_STORIES</BuildingType>
-				<BuildingType>BUILDING_KANGAROO_GREY_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_RED_STORIES</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_RED_STORY</BuildingType>
@@ -224,12 +239,14 @@
 				<BuildingType>BUILDING_MOA_STORY</BuildingType>
 				<BuildingType>BUILDING_MONOTREMES_STORIES</BuildingType>
 				<BuildingType>BUILDING_MONOTREMES_STORY</BuildingType>
+				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
 				<BuildingType>BUILDING_MOOSE_STORIES</BuildingType>
 				<BuildingType>BUILDING_MOOSE_STORY</BuildingType>
 				<BuildingType>BUILDING_MOUNTAIN_TAPIR_STORIES</BuildingType>
 				<BuildingType>BUILDING_MOUNTAIN_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_MUSKOX_STORIES</BuildingType>
 				<BuildingType>BUILDING_MUSKOX_STORY</BuildingType>
+				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
 				<BuildingType>BUILDING_NEW_W_MONKEY_STORIES</BuildingType>
 				<BuildingType>BUILDING_NEW_W_MONKEY_STORY</BuildingType>
 				<BuildingType>BUILDING_NILECROC_STORIES</BuildingType>
@@ -250,22 +267,22 @@
 				<BuildingType>BUILDING_ORCA_STORY</BuildingType>
 				<BuildingType>BUILDING_OSTRICH_STORIES</BuildingType>
 				<BuildingType>BUILDING_OSTRICH_STORY</BuildingType>
+				<BuildingType>BUILDING_OWL_STORIES</BuildingType>
+				<BuildingType>BUILDING_OWL_STORY</BuildingType>
 				<BuildingType>BUILDING_OXPECKER_STORIES</BuildingType>
 				<BuildingType>BUILDING_OXPECKER_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORY</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORY</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</BuildingType>
-				<BuildingType>BUILDING_PROCOPTODON_STORIES</BuildingType>
-				<BuildingType>BUILDING_PROCOPTODON_STORY</BuildingType>
 				<BuildingType>BUILDING_PANDA_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_PANDA_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_PANTHER_STORIES</BuildingType>
@@ -286,6 +303,8 @@
 				<BuildingType>BUILDING_POLAR_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_POSSUM_STORIES</BuildingType>
 				<BuildingType>BUILDING_POSSUM_STORY</BuildingType>
+				<BuildingType>BUILDING_PROCOPTODON_STORIES</BuildingType>
+				<BuildingType>BUILDING_PROCOPTODON_STORY</BuildingType>
 				<BuildingType>BUILDING_PUFFADDER_STORIES</BuildingType>
 				<BuildingType>BUILDING_PUFFADDER_STORY</BuildingType>
 				<BuildingType>BUILDING_PYGMYHIPPO_STORIES</BuildingType>
@@ -294,6 +313,9 @@
 				<BuildingType>BUILDING_QUOLL_STORY</BuildingType>
 				<BuildingType>BUILDING_RACCOON_STORIES</BuildingType>
 				<BuildingType>BUILDING_RACCOON_STORY</BuildingType>
+				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_RAPTOR_STORIES</BuildingType>
+				<BuildingType>BUILDING_RAPTOR_STORY</BuildingType>
 				<BuildingType>BUILDING_RATEL_STORIES</BuildingType>
 				<BuildingType>BUILDING_RATEL_STORY</BuildingType>
 				<BuildingType>BUILDING_RAVEN_STORIES</BuildingType>
@@ -312,12 +334,16 @@
 				<BuildingType>BUILDING_REDPANDA_STORY</BuildingType>
 				<BuildingType>BUILDING_REEF_SHARK_STORIES</BuildingType>
 				<BuildingType>BUILDING_REEF_SHARK_STORY</BuildingType>
+				<BuildingType>BUILDING_REPTILE_STORIES</BuildingType>
+				<BuildingType>BUILDING_REPTILE_STORY</BuildingType>
 				<BuildingType>BUILDING_RHEA_STORIES</BuildingType>
 				<BuildingType>BUILDING_RHEA_STORY</BuildingType>
 				<BuildingType>BUILDING_RIVER_CROC_STORIES</BuildingType>
 				<BuildingType>BUILDING_RIVER_CROC_STORY</BuildingType>
 				<BuildingType>BUILDING_ROCKHOPPER_PENGUIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_ROCKHOPPER_PENGUIN_STORY</BuildingType>
+				<BuildingType>BUILDING_RODENT_STORIES</BuildingType>
+				<BuildingType>BUILDING_RODENT_STORY</BuildingType>
 				<BuildingType>BUILDING_SABRETOOTH_STORIES</BuildingType>
 				<BuildingType>BUILDING_SABRETOOTH_STORY</BuildingType>
 				<BuildingType>BUILDING_SAIGA_STORIES</BuildingType>
@@ -326,12 +352,14 @@
 				<BuildingType>BUILDING_SALTWATER_CROC_STORY</BuildingType>
 				<BuildingType>BUILDING_SEAEAGLE_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEAEAGLE_STORY</BuildingType>
-				<BuildingType>BUILDING_SEA_OTTER_STORIES</BuildingType>
-				<BuildingType>BUILDING_SEA_OTTER_STORY</BuildingType>
 				<BuildingType>BUILDING_SEALION_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEALION_STORY</BuildingType>
 				<BuildingType>BUILDING_SEATURTLE_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEATURTLE_STORY</BuildingType>
+				<BuildingType>BUILDING_SEA_BIRD_STORIES</BuildingType>
+				<BuildingType>BUILDING_SEA_BIRD_STORY</BuildingType>
+				<BuildingType>BUILDING_SEA_OTTER_STORIES</BuildingType>
+				<BuildingType>BUILDING_SEA_OTTER_STORY</BuildingType>
 				<BuildingType>BUILDING_SECRETARYBIRD_STORIES</BuildingType>
 				<BuildingType>BUILDING_SECRETARYBIRD_STORY</BuildingType>
 				<BuildingType>BUILDING_SHARK_STORIES</BuildingType>
@@ -350,10 +378,10 @@
 				<BuildingType>BUILDING_SPECTACLED_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_SUN_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_SUN_BEAR_STORY</BuildingType>
+				<BuildingType>BUILDING_TAPIR_STORIES</BuildingType>
+				<BuildingType>BUILDING_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORIES</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORY</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_STORIES</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_TERN_STORIES</BuildingType>
 				<BuildingType>BUILDING_TERN_STORY</BuildingType>
 				<BuildingType>BUILDING_THYLACINE_STORIES</BuildingType>
@@ -376,12 +404,15 @@
 				<BuildingType>BUILDING_WALRUS_STORY</BuildingType>
 				<BuildingType>BUILDING_WARTHOG_STORIES</BuildingType>
 				<BuildingType>BUILDING_WARTHOG_STORY</BuildingType>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
 				<BuildingType>BUILDING_WHALESHARK_STORIES</BuildingType>
 				<BuildingType>BUILDING_WHALESHARK_STORY</BuildingType>
 				<BuildingType>BUILDING_WHITE_RHINO_STORIES</BuildingType>
 				<BuildingType>BUILDING_WHITE_RHINO_STORY</BuildingType>
 				<BuildingType>BUILDING_WILDEBEEST_STORIES</BuildingType>
 				<BuildingType>BUILDING_WILDEBEEST_STORY</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORIES</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORY</BuildingType>
 				<BuildingType>BUILDING_WOLVERINE_STORIES</BuildingType>
 				<BuildingType>BUILDING_WOLVERINE_STORY</BuildingType>
 				<BuildingType>BUILDING_WOMBAT_STORIES</BuildingType>
@@ -401,6 +432,8 @@
 				<BuildingType>BUILDING_AFRICANGREY_STORY</BuildingType>
 				<BuildingType>BUILDING_AFRICAN_PENGUIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_AFRICAN_PENGUIN_STORY</BuildingType>
+				<BuildingType>BUILDING_AMPHIBIAN_STORIES</BuildingType>
+				<BuildingType>BUILDING_AMPHIBIAN_STORY</BuildingType>
 				<BuildingType>BUILDING_ANTEATER_STORIES</BuildingType>
 				<BuildingType>BUILDING_ANTEATER_STORY</BuildingType>
 				<BuildingType>BUILDING_ARCTICFOX_STORIES</BuildingType>
@@ -431,12 +464,15 @@
 				<BuildingType>BUILDING_BEAVER_STORY</BuildingType>
 				<BuildingType>BUILDING_BENGALTIGER_STORIES</BuildingType>
 				<BuildingType>BUILDING_BENGALTIGER_STORY</BuildingType>
+				<BuildingType>BUILDING_BIRD_STORIES</BuildingType>
+				<BuildingType>BUILDING_BIRD_STORY</BuildingType>
 				<BuildingType>BUILDING_BISON_STORIES</BuildingType>
 				<BuildingType>BUILDING_BISON_STORY</BuildingType>
 				<BuildingType>BUILDING_BLACK_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_BLACK_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_BLACK_RHINO_STORIES</BuildingType>
 				<BuildingType>BUILDING_BLACK_RHINO_STORY</BuildingType>
+				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
 				<BuildingType>BUILDING_BOAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_BOAR_STORY</BuildingType>
 				<BuildingType>BUILDING_BONGO_STORIES</BuildingType>
@@ -449,6 +485,8 @@
 				<BuildingType>BUILDING_BROWN_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_BUFFALO_STORIES</BuildingType>
 				<BuildingType>BUILDING_BUFFALO_STORY</BuildingType>
+				<BuildingType>BUILDING_BUG_STORIES</BuildingType>
+				<BuildingType>BUILDING_BUG_STORY</BuildingType>
 				<BuildingType>BUILDING_CAIMAN_STORIES</BuildingType>
 				<BuildingType>BUILDING_CAIMAN_STORY</BuildingType>
 				<BuildingType>BUILDING_CAPUCHIN_STORIES</BuildingType>
@@ -489,6 +527,8 @@
 				<BuildingType>BUILDING_DINGO_STORY</BuildingType>
 				<BuildingType>BUILDING_DOLPHIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_DOLPHIN_STORY</BuildingType>
+				<BuildingType>BUILDING_DONKEY_STORIES</BuildingType>
+				<BuildingType>BUILDING_DONKEY_STORY</BuildingType>
 				<BuildingType>BUILDING_DUCK_STORIES</BuildingType>
 				<BuildingType>BUILDING_DUCK_STORY</BuildingType>
 				<BuildingType>BUILDING_DUGONG_STORIES</BuildingType>
@@ -505,10 +545,16 @@
 				<BuildingType>BUILDING_EMU_STORY</BuildingType>
 				<BuildingType>BUILDING_EWOLF_STORIES</BuildingType>
 				<BuildingType>BUILDING_EWOLF_STORY</BuildingType>
-				<BuildingType>BUILDING_FLAMINGO_STORIES</BuildingType>
-				<BuildingType>BUILDING_FLAMINGO_STORY</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_STORIES</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_STORY</BuildingType>
+				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
+				<BuildingType>BUILDING_FISH_STORIES</BuildingType>
+				<BuildingType>BUILDING_FISH_STORY</BuildingType>
+				<BuildingType>BUILDING_FLAMINGO_STORIES</BuildingType>
+				<BuildingType>BUILDING_FLAMINGO_STORY</BuildingType>
+				<BuildingType>BUILDING_FLIGHTLESS_BIRD_STORIES</BuildingType>
+				<BuildingType>BUILDING_FLIGHTLESS_BIRD_STORY</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_PENGUIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_PENGUIN_STORY</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORIES</BuildingType>
@@ -555,6 +601,8 @@
 				<BuildingType>BUILDING_HIPPOS_STORY</BuildingType>
 				<BuildingType>BUILDING_HORNED_OWL_STORIES</BuildingType>
 				<BuildingType>BUILDING_HORNED_OWL_STORY</BuildingType>
+				<BuildingType>BUILDING_HORSE_STORIES</BuildingType>
+				<BuildingType>BUILDING_HORSE_STORY</BuildingType>
 				<BuildingType>BUILDING_HUMPBACK_STORIES</BuildingType>
 				<BuildingType>BUILDING_HUMPBACK_STORY</BuildingType>
 				<BuildingType>BUILDING_HYENA_STORIES</BuildingType>
@@ -572,8 +620,6 @@
 				<BuildingType>BUILDING_JAVA_RHINO_STORIES</BuildingType>
 				<BuildingType>BUILDING_JAVA_RHINO_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORIES</BuildingType>
-				<BuildingType>BUILDING_KANGAROO_GREY_STORIES</BuildingType>
-				<BuildingType>BUILDING_KANGAROO_GREY_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_RED_STORIES</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_RED_STORY</BuildingType>
@@ -613,12 +659,14 @@
 				<BuildingType>BUILDING_MOA_STORY</BuildingType>
 				<BuildingType>BUILDING_MONOTREMES_STORIES</BuildingType>
 				<BuildingType>BUILDING_MONOTREMES_STORY</BuildingType>
+				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
 				<BuildingType>BUILDING_MOOSE_STORIES</BuildingType>
 				<BuildingType>BUILDING_MOOSE_STORY</BuildingType>
 				<BuildingType>BUILDING_MOUNTAIN_TAPIR_STORIES</BuildingType>
 				<BuildingType>BUILDING_MOUNTAIN_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_MUSKOX_STORIES</BuildingType>
 				<BuildingType>BUILDING_MUSKOX_STORY</BuildingType>
+				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
 				<BuildingType>BUILDING_NEW_W_MONKEY_STORIES</BuildingType>
 				<BuildingType>BUILDING_NEW_W_MONKEY_STORY</BuildingType>
 				<BuildingType>BUILDING_NILECROC_STORIES</BuildingType>
@@ -639,22 +687,22 @@
 				<BuildingType>BUILDING_ORCA_STORY</BuildingType>
 				<BuildingType>BUILDING_OSTRICH_STORIES</BuildingType>
 				<BuildingType>BUILDING_OSTRICH_STORY</BuildingType>
+				<BuildingType>BUILDING_OWL_STORIES</BuildingType>
+				<BuildingType>BUILDING_OWL_STORY</BuildingType>
 				<BuildingType>BUILDING_OXPECKER_STORIES</BuildingType>
 				<BuildingType>BUILDING_OXPECKER_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORY</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORY</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</BuildingType>
-				<BuildingType>BUILDING_PROCOPTODON_STORIES</BuildingType>
-				<BuildingType>BUILDING_PROCOPTODON_STORY</BuildingType>
 				<BuildingType>BUILDING_PANDA_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_PANDA_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_PANTHER_STORIES</BuildingType>
@@ -675,6 +723,8 @@
 				<BuildingType>BUILDING_POLAR_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_POSSUM_STORIES</BuildingType>
 				<BuildingType>BUILDING_POSSUM_STORY</BuildingType>
+				<BuildingType>BUILDING_PROCOPTODON_STORIES</BuildingType>
+				<BuildingType>BUILDING_PROCOPTODON_STORY</BuildingType>
 				<BuildingType>BUILDING_PUFFADDER_STORIES</BuildingType>
 				<BuildingType>BUILDING_PUFFADDER_STORY</BuildingType>
 				<BuildingType>BUILDING_PYGMYHIPPO_STORIES</BuildingType>
@@ -683,6 +733,9 @@
 				<BuildingType>BUILDING_QUOLL_STORY</BuildingType>
 				<BuildingType>BUILDING_RACCOON_STORIES</BuildingType>
 				<BuildingType>BUILDING_RACCOON_STORY</BuildingType>
+				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_RAPTOR_STORIES</BuildingType>
+				<BuildingType>BUILDING_RAPTOR_STORY</BuildingType>
 				<BuildingType>BUILDING_RATEL_STORIES</BuildingType>
 				<BuildingType>BUILDING_RATEL_STORY</BuildingType>
 				<BuildingType>BUILDING_RAVEN_STORIES</BuildingType>
@@ -701,12 +754,16 @@
 				<BuildingType>BUILDING_REDPANDA_STORY</BuildingType>
 				<BuildingType>BUILDING_REEF_SHARK_STORIES</BuildingType>
 				<BuildingType>BUILDING_REEF_SHARK_STORY</BuildingType>
+				<BuildingType>BUILDING_REPTILE_STORIES</BuildingType>
+				<BuildingType>BUILDING_REPTILE_STORY</BuildingType>
 				<BuildingType>BUILDING_RHEA_STORIES</BuildingType>
 				<BuildingType>BUILDING_RHEA_STORY</BuildingType>
 				<BuildingType>BUILDING_RIVER_CROC_STORIES</BuildingType>
 				<BuildingType>BUILDING_RIVER_CROC_STORY</BuildingType>
 				<BuildingType>BUILDING_ROCKHOPPER_PENGUIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_ROCKHOPPER_PENGUIN_STORY</BuildingType>
+				<BuildingType>BUILDING_RODENT_STORIES</BuildingType>
+				<BuildingType>BUILDING_RODENT_STORY</BuildingType>
 				<BuildingType>BUILDING_SABRETOOTH_STORIES</BuildingType>
 				<BuildingType>BUILDING_SABRETOOTH_STORY</BuildingType>
 				<BuildingType>BUILDING_SAIGA_STORIES</BuildingType>
@@ -715,12 +772,14 @@
 				<BuildingType>BUILDING_SALTWATER_CROC_STORY</BuildingType>
 				<BuildingType>BUILDING_SEAEAGLE_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEAEAGLE_STORY</BuildingType>
-				<BuildingType>BUILDING_SEA_OTTER_STORIES</BuildingType>
-				<BuildingType>BUILDING_SEA_OTTER_STORY</BuildingType>
 				<BuildingType>BUILDING_SEALION_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEALION_STORY</BuildingType>
 				<BuildingType>BUILDING_SEATURTLE_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEATURTLE_STORY</BuildingType>
+				<BuildingType>BUILDING_SEA_BIRD_STORIES</BuildingType>
+				<BuildingType>BUILDING_SEA_BIRD_STORY</BuildingType>
+				<BuildingType>BUILDING_SEA_OTTER_STORIES</BuildingType>
+				<BuildingType>BUILDING_SEA_OTTER_STORY</BuildingType>
 				<BuildingType>BUILDING_SECRETARYBIRD_STORIES</BuildingType>
 				<BuildingType>BUILDING_SECRETARYBIRD_STORY</BuildingType>
 				<BuildingType>BUILDING_SHARK_STORIES</BuildingType>
@@ -739,10 +798,10 @@
 				<BuildingType>BUILDING_SPECTACLED_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_SUN_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_SUN_BEAR_STORY</BuildingType>
+				<BuildingType>BUILDING_TAPIR_STORIES</BuildingType>
+				<BuildingType>BUILDING_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORIES</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORY</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_STORIES</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_TERN_STORIES</BuildingType>
 				<BuildingType>BUILDING_TERN_STORY</BuildingType>
 				<BuildingType>BUILDING_THYLACINE_STORIES</BuildingType>
@@ -765,12 +824,15 @@
 				<BuildingType>BUILDING_WALRUS_STORY</BuildingType>
 				<BuildingType>BUILDING_WARTHOG_STORIES</BuildingType>
 				<BuildingType>BUILDING_WARTHOG_STORY</BuildingType>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
 				<BuildingType>BUILDING_WHALESHARK_STORIES</BuildingType>
 				<BuildingType>BUILDING_WHALESHARK_STORY</BuildingType>
 				<BuildingType>BUILDING_WHITE_RHINO_STORIES</BuildingType>
 				<BuildingType>BUILDING_WHITE_RHINO_STORY</BuildingType>
 				<BuildingType>BUILDING_WILDEBEEST_STORIES</BuildingType>
 				<BuildingType>BUILDING_WILDEBEEST_STORY</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORIES</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORY</BuildingType>
 				<BuildingType>BUILDING_WOLVERINE_STORIES</BuildingType>
 				<BuildingType>BUILDING_WOLVERINE_STORY</BuildingType>
 				<BuildingType>BUILDING_WOMBAT_STORIES</BuildingType>
@@ -790,6 +852,8 @@
 				<BuildingType>BUILDING_AFRICANGREY_STORY</BuildingType>
 				<BuildingType>BUILDING_AFRICAN_PENGUIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_AFRICAN_PENGUIN_STORY</BuildingType>
+				<BuildingType>BUILDING_AMPHIBIAN_STORIES</BuildingType>
+				<BuildingType>BUILDING_AMPHIBIAN_STORY</BuildingType>
 				<BuildingType>BUILDING_ANTEATER_STORIES</BuildingType>
 				<BuildingType>BUILDING_ANTEATER_STORY</BuildingType>
 				<BuildingType>BUILDING_ARCTICFOX_STORIES</BuildingType>
@@ -820,12 +884,15 @@
 				<BuildingType>BUILDING_BEAVER_STORY</BuildingType>
 				<BuildingType>BUILDING_BENGALTIGER_STORIES</BuildingType>
 				<BuildingType>BUILDING_BENGALTIGER_STORY</BuildingType>
+				<BuildingType>BUILDING_BIRD_STORIES</BuildingType>
+				<BuildingType>BUILDING_BIRD_STORY</BuildingType>
 				<BuildingType>BUILDING_BISON_STORIES</BuildingType>
 				<BuildingType>BUILDING_BISON_STORY</BuildingType>
 				<BuildingType>BUILDING_BLACK_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_BLACK_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_BLACK_RHINO_STORIES</BuildingType>
 				<BuildingType>BUILDING_BLACK_RHINO_STORY</BuildingType>
+				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
 				<BuildingType>BUILDING_BOAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_BOAR_STORY</BuildingType>
 				<BuildingType>BUILDING_BONGO_STORIES</BuildingType>
@@ -838,6 +905,8 @@
 				<BuildingType>BUILDING_BROWN_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_BUFFALO_STORIES</BuildingType>
 				<BuildingType>BUILDING_BUFFALO_STORY</BuildingType>
+				<BuildingType>BUILDING_BUG_STORIES</BuildingType>
+				<BuildingType>BUILDING_BUG_STORY</BuildingType>
 				<BuildingType>BUILDING_CAIMAN_STORIES</BuildingType>
 				<BuildingType>BUILDING_CAIMAN_STORY</BuildingType>
 				<BuildingType>BUILDING_CAPUCHIN_STORIES</BuildingType>
@@ -878,6 +947,8 @@
 				<BuildingType>BUILDING_DINGO_STORY</BuildingType>
 				<BuildingType>BUILDING_DOLPHIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_DOLPHIN_STORY</BuildingType>
+				<BuildingType>BUILDING_DONKEY_STORIES</BuildingType>
+				<BuildingType>BUILDING_DONKEY_STORY</BuildingType>
 				<BuildingType>BUILDING_DUCK_STORIES</BuildingType>
 				<BuildingType>BUILDING_DUCK_STORY</BuildingType>
 				<BuildingType>BUILDING_DUGONG_STORIES</BuildingType>
@@ -894,10 +965,16 @@
 				<BuildingType>BUILDING_EMU_STORY</BuildingType>
 				<BuildingType>BUILDING_EWOLF_STORIES</BuildingType>
 				<BuildingType>BUILDING_EWOLF_STORY</BuildingType>
-				<BuildingType>BUILDING_FLAMINGO_STORIES</BuildingType>
-				<BuildingType>BUILDING_FLAMINGO_STORY</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_STORIES</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_STORY</BuildingType>
+				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
+				<BuildingType>BUILDING_FISH_STORIES</BuildingType>
+				<BuildingType>BUILDING_FISH_STORY</BuildingType>
+				<BuildingType>BUILDING_FLAMINGO_STORIES</BuildingType>
+				<BuildingType>BUILDING_FLAMINGO_STORY</BuildingType>
+				<BuildingType>BUILDING_FLIGHTLESS_BIRD_STORIES</BuildingType>
+				<BuildingType>BUILDING_FLIGHTLESS_BIRD_STORY</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_PENGUIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_PENGUIN_STORY</BuildingType>
 				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORIES</BuildingType>
@@ -944,6 +1021,8 @@
 				<BuildingType>BUILDING_HIPPOS_STORY</BuildingType>
 				<BuildingType>BUILDING_HORNED_OWL_STORIES</BuildingType>
 				<BuildingType>BUILDING_HORNED_OWL_STORY</BuildingType>
+				<BuildingType>BUILDING_HORSE_STORIES</BuildingType>
+				<BuildingType>BUILDING_HORSE_STORY</BuildingType>
 				<BuildingType>BUILDING_HUMPBACK_STORIES</BuildingType>
 				<BuildingType>BUILDING_HUMPBACK_STORY</BuildingType>
 				<BuildingType>BUILDING_HYENA_STORIES</BuildingType>
@@ -961,8 +1040,6 @@
 				<BuildingType>BUILDING_JAVA_RHINO_STORIES</BuildingType>
 				<BuildingType>BUILDING_JAVA_RHINO_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORIES</BuildingType>
-				<BuildingType>BUILDING_KANGAROO_GREY_STORIES</BuildingType>
-				<BuildingType>BUILDING_KANGAROO_GREY_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORY</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_RED_STORIES</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_RED_STORY</BuildingType>
@@ -1002,12 +1079,14 @@
 				<BuildingType>BUILDING_MOA_STORY</BuildingType>
 				<BuildingType>BUILDING_MONOTREMES_STORIES</BuildingType>
 				<BuildingType>BUILDING_MONOTREMES_STORY</BuildingType>
+				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
 				<BuildingType>BUILDING_MOOSE_STORIES</BuildingType>
 				<BuildingType>BUILDING_MOOSE_STORY</BuildingType>
 				<BuildingType>BUILDING_MOUNTAIN_TAPIR_STORIES</BuildingType>
 				<BuildingType>BUILDING_MOUNTAIN_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_MUSKOX_STORIES</BuildingType>
 				<BuildingType>BUILDING_MUSKOX_STORY</BuildingType>
+				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
 				<BuildingType>BUILDING_NEW_W_MONKEY_STORIES</BuildingType>
 				<BuildingType>BUILDING_NEW_W_MONKEY_STORY</BuildingType>
 				<BuildingType>BUILDING_NILECROC_STORIES</BuildingType>
@@ -1028,22 +1107,22 @@
 				<BuildingType>BUILDING_ORCA_STORY</BuildingType>
 				<BuildingType>BUILDING_OSTRICH_STORIES</BuildingType>
 				<BuildingType>BUILDING_OSTRICH_STORY</BuildingType>
+				<BuildingType>BUILDING_OWL_STORIES</BuildingType>
+				<BuildingType>BUILDING_OWL_STORY</BuildingType>
 				<BuildingType>BUILDING_OXPECKER_STORIES</BuildingType>
 				<BuildingType>BUILDING_OXPECKER_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORY</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORY</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</BuildingType>
-				<BuildingType>BUILDING_PROCOPTODON_STORIES</BuildingType>
-				<BuildingType>BUILDING_PROCOPTODON_STORY</BuildingType>
 				<BuildingType>BUILDING_PANDA_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_PANDA_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_PANTHER_STORIES</BuildingType>
@@ -1064,6 +1143,8 @@
 				<BuildingType>BUILDING_POLAR_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_POSSUM_STORIES</BuildingType>
 				<BuildingType>BUILDING_POSSUM_STORY</BuildingType>
+				<BuildingType>BUILDING_PROCOPTODON_STORIES</BuildingType>
+				<BuildingType>BUILDING_PROCOPTODON_STORY</BuildingType>
 				<BuildingType>BUILDING_PUFFADDER_STORIES</BuildingType>
 				<BuildingType>BUILDING_PUFFADDER_STORY</BuildingType>
 				<BuildingType>BUILDING_PYGMYHIPPO_STORIES</BuildingType>
@@ -1072,6 +1153,9 @@
 				<BuildingType>BUILDING_QUOLL_STORY</BuildingType>
 				<BuildingType>BUILDING_RACCOON_STORIES</BuildingType>
 				<BuildingType>BUILDING_RACCOON_STORY</BuildingType>
+				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
+				<BuildingType>BUILDING_RAPTOR_STORIES</BuildingType>
+				<BuildingType>BUILDING_RAPTOR_STORY</BuildingType>
 				<BuildingType>BUILDING_RATEL_STORIES</BuildingType>
 				<BuildingType>BUILDING_RATEL_STORY</BuildingType>
 				<BuildingType>BUILDING_RAVEN_STORIES</BuildingType>
@@ -1090,12 +1174,16 @@
 				<BuildingType>BUILDING_REDPANDA_STORY</BuildingType>
 				<BuildingType>BUILDING_REEF_SHARK_STORIES</BuildingType>
 				<BuildingType>BUILDING_REEF_SHARK_STORY</BuildingType>
+				<BuildingType>BUILDING_REPTILE_STORIES</BuildingType>
+				<BuildingType>BUILDING_REPTILE_STORY</BuildingType>
 				<BuildingType>BUILDING_RHEA_STORIES</BuildingType>
 				<BuildingType>BUILDING_RHEA_STORY</BuildingType>
 				<BuildingType>BUILDING_RIVER_CROC_STORIES</BuildingType>
 				<BuildingType>BUILDING_RIVER_CROC_STORY</BuildingType>
 				<BuildingType>BUILDING_ROCKHOPPER_PENGUIN_STORIES</BuildingType>
 				<BuildingType>BUILDING_ROCKHOPPER_PENGUIN_STORY</BuildingType>
+				<BuildingType>BUILDING_RODENT_STORIES</BuildingType>
+				<BuildingType>BUILDING_RODENT_STORY</BuildingType>
 				<BuildingType>BUILDING_SABRETOOTH_STORIES</BuildingType>
 				<BuildingType>BUILDING_SABRETOOTH_STORY</BuildingType>
 				<BuildingType>BUILDING_SAIGA_STORIES</BuildingType>
@@ -1104,12 +1192,14 @@
 				<BuildingType>BUILDING_SALTWATER_CROC_STORY</BuildingType>
 				<BuildingType>BUILDING_SEAEAGLE_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEAEAGLE_STORY</BuildingType>
-				<BuildingType>BUILDING_SEA_OTTER_STORIES</BuildingType>
-				<BuildingType>BUILDING_SEA_OTTER_STORY</BuildingType>
 				<BuildingType>BUILDING_SEALION_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEALION_STORY</BuildingType>
 				<BuildingType>BUILDING_SEATURTLE_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEATURTLE_STORY</BuildingType>
+				<BuildingType>BUILDING_SEA_BIRD_STORIES</BuildingType>
+				<BuildingType>BUILDING_SEA_BIRD_STORY</BuildingType>
+				<BuildingType>BUILDING_SEA_OTTER_STORIES</BuildingType>
+				<BuildingType>BUILDING_SEA_OTTER_STORY</BuildingType>
 				<BuildingType>BUILDING_SECRETARYBIRD_STORIES</BuildingType>
 				<BuildingType>BUILDING_SECRETARYBIRD_STORY</BuildingType>
 				<BuildingType>BUILDING_SHARK_STORIES</BuildingType>
@@ -1128,10 +1218,10 @@
 				<BuildingType>BUILDING_SPECTACLED_BEAR_STORY</BuildingType>
 				<BuildingType>BUILDING_SUN_BEAR_STORIES</BuildingType>
 				<BuildingType>BUILDING_SUN_BEAR_STORY</BuildingType>
+				<BuildingType>BUILDING_TAPIR_STORIES</BuildingType>
+				<BuildingType>BUILDING_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORIES</BuildingType>
 				<BuildingType>BUILDING_TARANTULA_STORY</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_STORIES</BuildingType>
-				<BuildingType>BUILDING_BAIRDS_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_TERN_STORIES</BuildingType>
 				<BuildingType>BUILDING_TERN_STORY</BuildingType>
 				<BuildingType>BUILDING_THYLACINE_STORIES</BuildingType>
@@ -1154,12 +1244,15 @@
 				<BuildingType>BUILDING_WALRUS_STORY</BuildingType>
 				<BuildingType>BUILDING_WARTHOG_STORIES</BuildingType>
 				<BuildingType>BUILDING_WARTHOG_STORY</BuildingType>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
 				<BuildingType>BUILDING_WHALESHARK_STORIES</BuildingType>
 				<BuildingType>BUILDING_WHALESHARK_STORY</BuildingType>
 				<BuildingType>BUILDING_WHITE_RHINO_STORIES</BuildingType>
 				<BuildingType>BUILDING_WHITE_RHINO_STORY</BuildingType>
 				<BuildingType>BUILDING_WILDEBEEST_STORIES</BuildingType>
 				<BuildingType>BUILDING_WILDEBEEST_STORY</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORIES</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORY</BuildingType>
 				<BuildingType>BUILDING_WOLVERINE_STORIES</BuildingType>
 				<BuildingType>BUILDING_WOLVERINE_STORY</BuildingType>
 				<BuildingType>BUILDING_WOMBAT_STORIES</BuildingType>

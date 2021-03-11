@@ -81,8 +81,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Tag>
-		<English>Animal Stories buildings represents educational boost from animals after invention of [LINK=TECH_LITERATURE]Literature[\LINK]- needs [LINK=BUILDING_LIBRARY]Library[\LINK]</English>
-		<French>Les bâtiments des histoires animales représentent un coup de pouce éducatif provenant des animaux, après l'invention de la [LINK=TECH_LITERATURE]Littérature[\LINK]- nécessite une [LINK=BUILDING_LIBRARY]Bibliothèque[\LINK]</French>
+		<English>Animal Stories buildings represents educational boost from animals after invention of [LINK=TECH_LITERATURE]Literature[\LINK] - needs [LINK=BUILDING_LIBRARY]Library[\LINK]</English>
+		<French>Les bâtiments des histoires animales représentent un coup de pouce éducatif provenant des animaux, après l'invention de la [LINK=TECH_LITERATURE]Littérature[\LINK] - nécessite une [LINK=BUILDING_LIBRARY]Bibliothèque[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Tag>
@@ -252,7 +252,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BAIRDS_TAPIR_STORIES_EFFECT</Tag>
-		<English>Stories Effect (Baird's Tapir)</English>
+		<English>Stories Effect - Baird's Tapir</English>
 		<French>Effet (Histoires des Tapirs de Baird)</French>
 		<Polish>Efekt Historii - Tapir Panamski</Polish>
 		<Russian>Ïðåäàíèÿ î òàïèðå Áýðäà</Russian>
@@ -322,7 +322,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRAZILIAN_TAPIR_STORIES_EFFECT</Tag>
-		<English>Stories Effect (Brazilian Tapir)</English>
+		<English>Stories Effect - Brazilian Tapir</English>
 		<French>Effet (Histoires des Tapirs du Brésil)</French>
 		<Polish>Efekt Historii - Tapir Brazylijski</Polish>
 		<Russian>Ïðåäàíèÿ î áðàç. òàïèðå</Russian>
@@ -871,7 +871,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIRE_MYTH</Tag>
-		<English>Myth - Fire</English>
+		<English>Myth (L) - Fire</English>
 		<French>Mythe du Feu</French>
 		<Polish>Mit - Ogień</Polish>
 		<Russian>Ìèô îá îãíå</Russian>
@@ -1622,7 +1622,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MALAYAN_TAPIR_STORIES_EFFECT</Tag>
-		<English>Stories Effect (Malayan Tapir)</English>
+		<English>Stories Effect - Malayan Tapir</English>
 		<French>Effet (Histoires des Tapirs Malais)</French>
 		<Polish>Efekt Historii - Tapir Malajski</Polish>
 		<Russian>Ïðåäàíèÿ î ìàë. òàïèðå</Russian>
@@ -1666,7 +1666,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAL_MYTH</Tag>
-		<English>Myth - Metal</English>
+		<English>Myth (L) - Metal</English>
 		<French>Mythe du Métal</French>
 		<Polish>Mit - Metal</Polish>
 		<Russian>Ìèô î ìåòàëëå</Russian>
@@ -1786,7 +1786,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOUNTAIN_TAPIR_STORIES_EFFECT</Tag>
-		<English>Stories Effect (Mountain Tapir)</English>
+		<English>Stories Effect - Mountain Tapir</English>
 		<French>Effet (Histoires des Tapirs des Montagnes)</French>
 		<Polish>Efekt Historii - Tapir Górski</Polish>
 		<Russian>Ïðåäàíèÿ î ãîðíîì òàïèðå</Russian>
@@ -2814,7 +2814,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STONE_MYTH</Tag>
-		<English>Myth - Stone</English>
+		<English>Myth (L) - Stone</English>
 		<French>Mythe de la Pierre</French>
 		<Polish>Mit - Kamień</Polish>
 		<Russian>Ìèô î êàìíå</Russian>
@@ -2848,7 +2848,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TAPIR_STORIES_EFFECT</Tag>
-		<English>Stories effect - Tapir</English>
+		<English>Stories Effect - Tapir</English>
 		<French>Effet (Histoires des Tapirs)</French>
 		<Polish>Efekt Historie - Tapir</Polish>
 		<Russian>Ïðåäàíèÿ î òàïèðå</Russian>
@@ -3275,7 +3275,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARMADILLO</Tag>
-		<English>Nine-banded Armadillo</English>
+		<English>Nine-Banded Armadillo</English>
 		<French>Tatou à neuf bandes</French>
 		<German>
 			<Text>Neunbinden-Gürteltier:Neunbinden-Gürteltieres:Neunbinden-Gürteltier:Neunbinden-Gürteltier:Neunbinden-Gürteltiere:Neunbinden-Gürteltiere:Neunbinden-Gürteltieren:Neunbinden-Gürteltiere</Text>
@@ -4193,7 +4193,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEMUR</Tag>
-		<English>Ring-tailed Lemur</English>
+		<English>Ring-Tailed Lemur</English>
 		<French>Lémur catta</French>
 		<German>
 			<Text>Katta:Kattas:Katta:Katta:Kattas:Kattas:Kattas:Kattas</Text>
@@ -4644,7 +4644,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SALTWATER_CROC_LARGE</Tag>
-		<English>Saltwater crocodile (4-7 meter)</English>
+		<English>Saltwater Crocodile (4-7 meter)</English>
 		<French>
 			<Text>Grand Crocodile de mer</Text>
 			<Gender>Male</Gender>
@@ -4666,7 +4666,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SALTWATER_CROC_SMALL</Tag>
-		<English>Saltwater crocodile (2-4 meter)</English>
+		<English>Saltwater Crocodile (2-4 meter)</English>
 		<French>
 			<Text>Petit Crocodile de mer</Text>
 			<Gender>Male</Gender>
@@ -4764,7 +4764,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEAOTTER_PEDIA</Tag>
 		<English>The sea otter (Enhydra lutris) is a marine mammal native to the coasts of the northern and eastern North Pacific Ocean. Adult sea otters typically weigh between 14 and 45 kg (30 and 100 lb), making them the heaviest members of the weasel family, but among the smallest marine mammals. Unlike most marine mammals, the sea otter's primary form of insulation is an exceptionally thick coat of fur, the densest in the animal kingdom. Although it can walk on land, the sea otter lives mostly in the ocean.[PARAGRAPH:2]The sea otter inhabits offshore environments, where it dives to the sea floor to forage. It preys mostly on marine invertebrates such as sea urchins, various molluscs and crustaceans, and some species of fish. Its foraging and eating habits are noteworthy in several respects. First, its use of rocks to dislodge prey and to open shells makes it one of the few mammal species to use tools. In most of its range, it is a keystone species, controlling sea urchin populations which would otherwise inflict extensive damage to kelp forest ecosystems. Its diet includes prey species that are also valued by humans as food, leading to conflicts between sea otters and fisheries.[PARAGRAPH:2]Sea otters, whose numbers were once estimated at 150,000 - 300,000, were hunted extensively for their fur between 1741 and 1911, and the world population fell to 1,000 - 2,000 individuals in a fraction of their historic range. A subsequent international ban on hunting, conservation efforts, and reintroduction programs into previously populated areas have contributed to numbers rebounding, and the species now occupies about two-thirds of its former range. The recovery of the sea otter is considered an important success in marine conservation, although populations in the Aleutian Islands and California have recently declined or have plateaued at depressed levels. For these reasons, the sea otter remains classified as an endangered species.</English>
-		<German>Der [COLOR_UNIT_TEXT]Seeotter[COLOR_REVERT], auch Kalan oder Meerotter (Enhydra lutris), ist ein Raubtier aus der Marderfamilie und neben dem Küstenotter die einzige Art, die nur im Meer lebt. In der Ökologie stellt der Seeotter eine Schlüsselart dar, da er trotz seines geringen Vorkommens großen Einfluss auf die Artenvielfalt hat. Die meisten Exemplare leben heute an den Küsten des Beringmeers in Alaska, auf den Aleuten und den Kommandeurinseln. Mit maximal 150 cm Körperlänge inklusive Schwanz gehört der Seeotter zu den größten Mardern. Das sehr dichte Fell ist dunkelbraun, am Kopf etwas heller, jedoch ohne isolierende Fettschicht, was unter den Meeressäugern einzigartig ist. Er ist sehr gut an das Wasser angepasst, was man an den nach hinten versetzten Hinterbeinen und den Schwimmhäuten zwischen den Zehen erkennt. Durch die wesentlich kleineren Vorderpfoten ähneln seine Bewegungsabläufe denen der Ohrenrobben. Der Schwanz ist im Gegensatz zu anderen Ottern abgeflacht, des Weiteren hat er nur 32 Zähne (anstatt der für Otter üblichen 36). Der Seeotter ist das einzige Raubtier mit nur zwei Paar Schneidezähnen im Unterkiefer.[NEWLINE]Die kräftigen Backenzähne eignen sich gut zum Zerbeißen von Muscheln oder Schnecken. Auch Werkzeuge werden oft benutzt, um die harten Schalen aufzubrechen. Häufig stehen pflanzenfressende Seeigel aus den Tangwäldern auf dem Speiseplan, was wiederum zum Erhalt dieser Wälder beiträgt. Der Seeotter kann sogar Salzwasser trinken, wobei das überschüssige Salz durch die großen Nieren wieder ausgeschieden wird. Da er im Wasser schläft, umwickelt er sich zuvor mit Seetang, um nicht abgetrieben zu werden. So schützen Mütter auch ihre Jungen, wenn sie auf Nahrungssuche gehen.[NEWLINE]Seeotterfell ist sehr lange haltbar und war schon kurz nach der Entdeckung der Art im Jahre 1741 äußerst begehrt, besonders als Mantelbesatz für russische und chinesische Würdenträger. Durch die Jagd wurden die Tiere fast ausgerottet, weswegen der Handel mit Otterfellen seit 1911 verboten ist. Die Bestände haben sich seitdem erholt. Aktuelle Gefahren drohen dem Seeotter vor allem durch ölverschmutzte Gewässer. Der größte Fressfeind ist der Große Schwertwal. In der Gesellschaft wird der Seeotter als possierlich dargestellt, was auch daran liegt, dass ein auf dem Rücken liegender Seeotter die Vorderpfoten so anhebt, als würde er winken. Er ziert u.a. Postkarten und T-Shirts und steht Modell für Plüschtiere.</German>
+		<German>Der [COLOR_UNIT_TEXT]Seeotter[COLOR_REVERT], auch Kalan oder Meerotter (Enhydra lutris), ist ein Raubtier aus der Marderfamilie und neben dem Küstenotter die einzige Art, die nur im Meer lebt. In der Ökologie stellt der Seeotter eine Schlüsselart dar, da er trotz seines geringen Vorkommens großen Einfluss auf die Artenvielfalt hat. Die meisten Exemplare leben heute an den Küsten des Beringmeers in Alaska, auf den Aleuten und den Kommandeurinseln.[NEWLINE]Mit maximal 150 cm Körperlänge inklusive Schwanz gehört der Seeotter zu den größten Mardern. Das sehr dichte Fell ist dunkelbraun, am Kopf etwas heller, jedoch ohne isolierende Fettschicht, was unter den Meeressäugern einzigartig ist. Er ist sehr gut an das Wasser angepasst, was man an den nach hinten versetzten Hinterbeinen und den Schwimmhäuten zwischen den Zehen erkennt. Durch die wesentlich kleineren Vorderpfoten ähneln seine Bewegungsabläufe denen der Ohrenrobben. Der Schwanz ist im Gegensatz zu anderen Ottern abgeflacht, des Weiteren hat er nur 32 Zähne (anstatt der für Otter üblichen 36). Der Seeotter ist das einzige Raubtier mit nur zwei Paar Schneidezähnen im Unterkiefer. Die kräftigen Backenzähne eignen sich gut zum Zerbeißen von Muscheln oder Schnecken. Auch Werkzeuge werden oft benutzt, um die harten Schalen aufzubrechen. Häufig stehen pflanzenfressende Seeigel aus den Tangwäldern auf dem Speiseplan, was wiederum zum Erhalt dieser Wälder beiträgt. Der Seeotter kann sogar Salzwasser trinken, wobei das überschüssige Salz durch die großen Nieren wieder ausgeschieden wird. Da er im Wasser schläft, umwickelt er sich zuvor mit Seetang, um nicht abgetrieben zu werden. So schützen Mütter auch ihre Jungen, wenn sie auf Nahrungssuche gehen.[NEWLINE]Seeotterfell ist sehr lange haltbar und war schon kurz nach der Entdeckung der Art im Jahre 1741 äußerst begehrt, besonders als Mantelbesatz für russische und chinesische Würdenträger. Durch die Jagd wurden die Tiere fast ausgerottet, weswegen der Handel mit Otterfellen seit 1911 verboten ist. Die Bestände haben sich seitdem erholt. Aktuelle Gefahren drohen dem Seeotter vor allem durch ölverschmutzte Gewässer. Der größte Fressfeind ist der Große Schwertwal. In der Gesellschaft wird der Seeotter als possierlich dargestellt, was auch daran liegt, dass ein auf dem Rücken liegender Seeotter die Vorderpfoten so anhebt, als würde er winken. Er ziert u.a. Postkarten und T-Shirts und steht Modell für Plüschtiere.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEA_ANIMAL_STRATEGY</Tag>
@@ -5132,6 +5132,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangener Mississippi-Alligator:Gefangenen Mississippi-Alligators:Gefangenen Mississippi-Alligator:Gefangenen Mississippi-Alligator:Gefangene Mississippi-Alligatoren:Gefangenen Mississippi-Alligatoren:Gefangenen Mississippi-Alligatoren:Gefangenen Mississippi-Alligatoren</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Subdued Aligator Amerykański</Polish>
 		<Russian>Àëëèãàòîð (ðó÷í.)</Russian>
 	</TEXT>
@@ -5143,6 +5148,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangener China-Alligator:Gefangenen China-Alligators:Gefangenen China-Alligator:Gefangenen China-Alligator:Gefangene China-Alligatoren:Gefangenen China-Alligatoren:Gefangenen China-Alligatoren:Gefangenen China-Alligatoren</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Subdued Aligator Chiński</Polish>
 		<Russian>Êèòàéñêèé àëëèãàòîð (ðó÷í.)</Russian>
 	</TEXT>
@@ -5170,6 +5180,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_GLYPTO</Tag>
 		<English>Subdued Glyptodon</English>
 		<French>Glyptodon (App.)</French>
+		<German>
+			<Text>Gefangener Glyptodon:Gefangenen Glyptodons:Gefangenen Glyptodon:Gefangenen Glyptodon:Gefangene Glyptodons:Gefangenen Glyptodons:Gefangenen Glyptodons:Gefangenen Glyptodons</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Russian>Ãëèïòîäîí (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -5184,6 +5199,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_GROUNDSLOTH</Tag>
 		<English>Subdued Ground Sloth</English>
 		<French>Xénarthre (App.)</French>
+		<German>
+			<Text>Gefangenes Megatherium:Gefangenen Megatheriums:Gefangenen Megatherium:Gefangene Megatherium:Gefangene Megatherien:Gefangenen Megatherien:Gefangenen Megatherien:Gefangenen Megatherien</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Russian>Ãèãàíòñêèé ëåíèâåö (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -5202,6 +5222,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangenes Panzernashorn:Gefangenen Panzernashorns:Gefangenen Panzernashorn:Gefangene Panzernashorn:Gefangene Panzernashörner:Gefangenen Panzernashörner:Gefangenen Panzernashörnern:Gefangenen Panzernashörner</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Rinoceronte indiano ammaestrato</Italian>
 		<Polish>Poskromiony Nosorożec Indyjski</Polish>
 		<Russian>Èíäèéñêèé íîñîðîã (ðó÷í.)</Russian>
@@ -5224,6 +5249,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangenes Java-Nashorn:Gefangenen Java-Nashorns:Gefangenen Java-Nashorn:Gefangene Java-Nashorn:Gefangene Java-Nashörner:Gefangenen Java-Nashörner:Gefangenen Java-Nashörnern:Gefangenen Java-Nashörner</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Rinoceronte di Giava ammaestrato</Italian>
 		<Polish>Poskromiony Nosorożec Jawajski</Polish>
 		<Russian>ßâàíñêèé íîñîðîã (ðó÷í.)</Russian>
@@ -5246,12 +5276,22 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangene Dschungelvogelspinne:Gefangenen Dschungelvogelspinne:Gefangenen Dschungelvogelspinne:Gefangene Dschungelvogelspinne:Gefangene Dschungelvogelspinnen:Gefangenen Dschungelvogelspinnen:Gefangenen Dschungelvogelspinnen:Gefangenen Dschungelvogelspinnen</Text>
+			<Gender>Female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Russian>Òðîï. òàðàíòóë (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_LIZARD</Tag>
 		<English>Subdued Lizard</English>
 		<French>Lézard (App.)</French>
+		<German>
+			<Text>Gefangene Echse:Gefangenen Echse:Gefangenen Echse:Gefangene Echse:Gefangene Echsen:Gefangenen Echsen:Gefangenen Echsen:Gefangenen Echsen</Text>
+			<Gender>Female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Poskromiona Jaszczurka</Polish>
 		<Russian>ßùåðèöà (ðó÷í.)</Russian>
 	</TEXT>
@@ -5269,6 +5309,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_MALAYAN_TAPIR</Tag>
 		<English>Subdued Malayan Tapir</English>
 		<French>Tapir Malais (App.)</French>
+		<German>
+			<Text>Gefangener Schabrackentapir:Gefangenen Schabrackentapirs:Gefangenen Schabrackentapir:Gefangenen Schabrackentapir:Gefangene Schabrackentapire:Gefangenen Schabrackentapire:Gefangenen Schabrackentapiren:Gefangenen Schabrackentapire</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Poskromiony Tapir Malajski</Polish>
 		<Russian>Ìàëàéñêèé òàïèð (ðó÷í.)</Russian>
 	</TEXT>
@@ -5292,6 +5337,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_MANEDWOLF</Tag>
 		<English>Subdued Maned Wolf</English>
 		<French>Loup à crinière (App.)</French>
+		<German>
+			<Text>Gefangener Mähnenwolf:Gefangenen Mähnenwolfs:Gefangenen Mähnenwolf:Gefangenen Mähnenwolf:Gefangene Mähnenwölfe:Gefangenen Mähnenwölfe:Gefangenen Mähnenwölfen:Gefangenen Mähnenwölfe</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Russian>Ãðèâèñòûé âîëê (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -5309,6 +5359,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangener Bergtapir:Gefangenen Bergtapirs:Gefangenen Bergtapir:Gefangenen Bergtapir:Gefangene Bergtapire:Gefangenen Bergtapire:Gefangenen Bergtapiren:Gefangenen Bergtapire</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Poskromoiony Tapir Górski</Polish>
 		<Russian>Ãîðíûé òàïèð (ðó÷í.)</Russian>
 	</TEXT>
@@ -5334,6 +5389,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_NUMBAT</Tag>
 		<English>Subdued Numbat</English>
 		<French>Numbat (App.)</French>
+		<German>
+			<Text>Gefangener Numbat:Gefangenen Numbats:Gefangenen Numbat:Gefangenen Numbat:Gefangene Numbats:Gefangenen Numbats:Gefangenen Numbats:Gefangenen Numbats</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Russian>Ñóì÷àòûé ìóðàâüåä (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -5770,7 +5830,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLABY</Tag>
-		<English>Ring-tailed Wallaby</English>
+		<English>Ring-Tailed Wallaby</English>
 		<French>
 			<Text>Wallaby</Text>
 			<Gender>Male</Gender>

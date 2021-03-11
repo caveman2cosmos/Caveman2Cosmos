@@ -299,7 +299,7 @@
 		<Tag>TXT_ACO_PRESSSHIFT</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Press SHIFT for more detail[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Appuyez sur MAJ pour plus de détails[COLOR_REVERT]</French>
-		<German>[COLOR_HIGHLIGHT_TEXT][UMSCHALTEN] drücken für mehr Einzelheiten[COLOR_REVERT]</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]&lt;UMSCHALT&gt;[COLOR_REVERT] für mehr Einzelheiten</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Tieni premuto SHIFT per maggiori dettagli[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Pulse SHIFT para más detalles[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Naciśnij SHIFT po więcej informacji[COLOR_REVERT]</Polish>
@@ -9456,7 +9456,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_SHIFT_ALT_PREPARE_WAR</Tag>
 		<English>(&lt;SHIFT+ALT&gt; to Prepare for War)</English>
 		<French>(&lt;SHIFT+ALT&gt; pour Préparer la Guerre)</French>
-		<German>(&lt;SHIFT+ALT&gt; zur Kriegsvorbereitung)</German>
+		<German>(&lt;UMSCHALT+ALT&gt; zur Kriegsvorbereitung)</German>
 		<Italian>(&lt;SHIFT+ALT&gt; per prepararti alla guerra)</Italian>
 		<Spanish>(&lt;SHIFT+ALT&gt; para preparar la guerra)</Spanish>
 		<Polish>(SHIFT+ALT) aby Wypowiedzieć Wojnę)</Polish>
@@ -9715,7 +9715,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_TRAIT_CYCLING_HELP</Tag>
 		<English>Hold down shift and mouseover again to open up the next trait's full display.</English>
 		<French>Maintenez la touche MAJ enfoncée et placer la souris pour afficher l'ensemble des informations concernant le prochain trait.</French>
-		<German>Drücken Sie [SHIFT] beim Aufrufen dieser Daten, um ausführliche Informationen über die nächste Eigenschaft dieses Oberhaupts zu erhalten.</German>
+		<German>Drücken Sie &lt;UMSCHALT&gt; beim Aufrufen dieser Daten, um ausführliche Informationen über die nächste Eigenschaft dieses Oberhaupts zu erhalten.</German>
 		<Italian>Tieni premuto SHIFT e sposta sopra il cursore del mouse per vedere le caratteristiche approfondite del prossimo tratto.</Italian>
 		<Polish>Przytrzymaj wciśnięty SHIFT i najedź myszką by otworzyć pełne okno następnej cechy.</Polish>
 		<Russian>Удерживайте Shift и наведите курсор мыши еще раз, чтобы открыть полный экран с характеристиками черт.</Russian>
@@ -21295,6 +21295,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_TB_PRESSALT_STR</Tag>
 		<English>Press ALT to view all Strength In Numbers Modifiers</English>
 		<French>Appuyer sur 'ALT' pour voir tous les modificateurs du Combat</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]&lt;ALT&gt;[COLOR_REVERT] für Gemeinsam-sind-wir-stark-Modifikatoren[COLOR_REVERT]</German>	
 		<Italian>Premi ALT per vedere tutti i modificatori riguardanti La forza nei numeri</Italian>
 		<Polish>Naciśnij ALT aby zobaczyć Modyfikatory Siły-w-Grupie</Polish>
 		<Russian>Нажмите ALT, чтобы просмотреть все модификаторы Силы в числах</Russian>
@@ -21303,6 +21304,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_TB_PRESSCTRL</Tag>
 		<English>[ICON_BULLET]Press CTRL for Advanced Combat calculations.</English>
 		<French>[ICON_BULLET]Appuyer sur [BOLD]CTRL[\BOLD] pour les calculs du Combat Avancé.</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]&lt;STRG&gt;[COLOR_REVERT] für Berechnung erweiterter Siegchancen[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Premi [BOLD]CTRL[\BOLD] per i calcoli di Combattimento avanzato.</Italian>
 		<Polish>[ICON_BULLET]Naciśnij [BOLD]CTRL[\BOLD] dla Zaawansowanych Obliczeń Walki.</Polish>
 		<Russian>[ICON_BULLET]Нажмите CTRL для расширенных расчетов боя.</Russian>
@@ -21339,5 +21341,9 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[COLOR_WARNING_TEXT]Erfordert: %s1_Text[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Richiede %s1_Text[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Text[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ENEMY_TROOPS_SPOTTED</Tag>
+		<English>The enemy has been spotted near %s1_CityName!</English>
 	</TEXT>
 </Civ4GameText>

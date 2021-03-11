@@ -116,6 +116,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangenes Mammut:Gefangenen Mammuts:Gefangenen Mammut:Gefangene Mammut:Gefangene Mammuts:Gefangenen Mammuts:Gefangenen Mammuts:Gefangenen Mammuts</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Mammut addomesticato</Text>
 			<Gender>Male</Gender>
