@@ -1,7 +1,10 @@
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "FDataIOStream.h"
 #include "logging.h"
+
+extern std::string modDir;
 
 namespace logging
 {
@@ -24,7 +27,14 @@ namespace logging
 		{
 			static char buf[2048];
 			_vsnprintf(buf, 2048 -4, msg, (char*)(&msg +1));
-			gDLL->logMsg(file, buf);
+
+			std::fstream stream;
+			const std::string path = modDir + "\\Logs\\" + file;
+			stream.open(path.c_str(), std::ios::out | std::ios::app);
+			FAssert(stream.is_open())
+			stream << buf << "\n";
+			stream.close();
+
 			OutputDebugString(buf);
 		}
 	}
@@ -42,7 +52,18 @@ namespace logging
 		}
 	}
 
-#ifndef _DEBUG
-	void skipLog(const char* file, char* msg, ...) { }
-#endif
+	void clearLogs()
+	{
+		const std::string path = modDir + "\\Logs\\*.*";
+		WIN32_FIND_DATA FileInformation;
+		HANDLE hFile = FindFirstFile(path.c_str(), &FileInformation);
+		if (hFile != INVALID_HANDLE_VALUE)
+		{
+			do {
+				const std::string cFile = modDir + "\\Logs\\" + FileInformation.cFileName;
+				const bool deleted = DeleteFile(cFile.c_str());
+				//FAssert(deleted)
+			} while (FindNextFile(hFile, &FileInformation));
+		}
+	}
 }
