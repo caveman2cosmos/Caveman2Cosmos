@@ -329,6 +329,10 @@
 		<Russian>Ìèô î âåðáëþäå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CAMEL_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Camel</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPUCHIN_MYTH</Tag>
 		<English>Myth - Capuchin</English>
 		<French>Mythe du Capucin</French>
@@ -766,6 +770,10 @@
 		<Russian>Ìèô î äðàêîíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DRAGON_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Dragon</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUGONG_MYTH</Tag>
 		<English>Myth - Dugong</English>
 		<French>
@@ -960,6 +968,10 @@
 		</Italian>
 		<Polish>Mit Kóz</Polish>
 		<Russian>Ìèô î êîçëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOAT_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Goat</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOVENORS_MENAGERIE</Tag>
@@ -1312,6 +1324,10 @@
 		<Russian>Ìèô î ðóñàëêå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MERMAID_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Mermaid</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINKIE_WHALE_MYTH</Tag>
 		<English>Myth - Minke Whale</English>
 		<French>
@@ -1422,6 +1438,10 @@
 		</Italian>
 		<Polish>Mit Starego człowieka z lasu</Polish>
 		<Russian>Ìèô î ëåøåì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OLD_MAN_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Old Man of the Forest</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCA_MYTH</Tag>
@@ -1535,6 +1555,10 @@
 		</Italian>
 		<Polish>Mit Feniksa</Polish>
 		<Russian>Ìèô î Ôåíèêñå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PHOENIX_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Phoenix</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIG_HERD</Tag>
@@ -1852,7 +1876,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEATURTLE_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Sea turtle</English>
+		<English>Myth Effect - Sea Turtle</English>
 		<French>Effet - Mythe de la Tortue de mer</French>
 		<Russian>Ïåñíÿ î ìîð. ÷åðåïàõå</Russian>
 	</TEXT>
@@ -2118,6 +2142,10 @@
 		</Italian>
 		<Polish>Mit Jednorożca</Polish>
 		<Russian>Ìèô îá åäèíîðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_UNICORN_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Unicorn</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_CAGE</Tag>

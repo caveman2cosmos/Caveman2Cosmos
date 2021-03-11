@@ -153,6 +153,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
+			<FreeBuilding>BUILDING_CAMEL_MYTH_EFFECT</FreeBuilding>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_CAMEL_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -168,6 +172,18 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CAMEL_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_CAMEL_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_CAMEL_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEER_MYTH</Type>
@@ -337,6 +353,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
+			<FreeBuilding>BUILDING_GOAT_MYTH_EFFECT</FreeBuilding>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_GOAT_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -352,6 +372,18 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GOAT_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_GOAT_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_GOAT_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HORSE_MYTH</Type>
@@ -479,6 +511,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
+			<FreeBuilding>BUILDING_OLD_MAN_MYTH_EFFECT</FreeBuilding>
+			<PrereqNotInCityBuildings>
+				<BuildingType>BUILDING_OLD_MAN_MYTH_EFFECT</BuildingType>
+			</PrereqNotInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -494,6 +530,18 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_OLD_MAN_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_OLD_MAN_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_OLD_MAN_MYTH</ArtDefineTag>
+			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SCAVENGER_MYTH</Type>
