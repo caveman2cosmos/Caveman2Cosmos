@@ -52,7 +52,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ANTELOPE_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_ANTELOPE_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WEASEL_MYTH</ArtDefineTag>
@@ -229,7 +229,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_DEER_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_DEER_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEER_MYTH</ArtDefineTag>
@@ -305,7 +305,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ELEPHANT_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_ELEPHANT_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELEPHANT_MYTH</ArtDefineTag>
@@ -463,7 +463,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MARSUPIAL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_MARSUPIAL_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARSUPIAL_MYTH</ArtDefineTag>
@@ -587,7 +587,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SCAVENGER_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SCAVENGER_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCAVENGER_MYTH</ArtDefineTag>
@@ -666,7 +666,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SPOTTED_CAT_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SPOTTED_CAT_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SPOTTED_CAT_MYTH</ArtDefineTag>
@@ -737,7 +737,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_TIGER_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_TIGER_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TIGER_MYTH</ArtDefineTag>
@@ -813,7 +813,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_WEASEL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_WEASEL_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WEASEL_MYTH</ArtDefineTag>
