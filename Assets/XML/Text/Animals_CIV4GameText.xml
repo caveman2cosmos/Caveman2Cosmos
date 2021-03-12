@@ -62,7 +62,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE</Tag>
-		<English>Animal Myth Requirement</English>
+		<English>Autobuild - Animal Myth Requirement</English>
 		<French>Pré-requis pour Mythe Animal</French>
 		<German>Grundlage für Tiermythen</German>
 		<Russian>Ìèô î æèâîòíîì</Russian>
@@ -98,14 +98,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORY_REQUIRE</Tag>
-		<English>Animal Story Requirement</English>
+		<English>Autobuild - Animal Story Requirement</English>
 		<French>Pré-requis pour Histoire Animale</French>
 		<German>Grundlage für Tiergeschichten</German>
 		<Russian>Ñêàçêà î æèâîòíîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_REQUIRE</Tag>
-		<English>Animal Stories Requirement</English>
+		<English>Autobuild - Animal Stories Requirement</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Tag>

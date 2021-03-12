@@ -228,7 +228,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BOXING_KANGAROO</Tag>
-		<English>Carnival - Boxing Kangaroo</English>
+		<English>Unit Reward - Carnival (Boxing Kangaroo)</English>
 		<French>
 			<Text>Kangourou Boxeur</Text>
 			<Gender>Male</Gender>
@@ -411,7 +411,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CEPHALOPOD_INSTITUTE</Tag>
-		<English>Center for Cephalopod Studies</English>
+		<English>Unit Reward - Center for Cephalopod Studies</English>
 		<French>
 			<Text>Centre d'étude des Céphalopodes</Text>
 			<Gender>Male</Gender>
@@ -427,7 +427,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CETAEA_INSTITUTE</Tag>
-		<English>Center for Whale Studies</English>
+		<English>Unit Reward - Center for Whale Studies</English>
 		<French>
 			<Text>Centre d'étude des Baleines</Text>
 			<Gender>Male</Gender>
@@ -503,7 +503,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COASTAL_FISH_FARM</Tag>
-		<English>Coastal Fish Farm</English>
+		<English>Unit Reward - Coastal Fish Farm</English>
 		<French>
 			<Text>Ferme à Poissons du Littoral</Text>
 			<Gender>Female</Gender>
@@ -587,7 +587,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_NETS</Tag>
-		<English>Crab Nets</English>
+		<English>Unit Reward - Crab Nets</English>
 		<French>
 			<Text>Pièges à Crabes</Text>
 			<Gender>Male</Gender>
@@ -621,7 +621,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCING_BEAR</Tag>
-		<English>Carnival - Dancing Bear</English>
+		<English>Unit Reward - Carnival (Dancing Bear)</English>
 		<French>
 			<Text>Carnaval - Ours Dansant</Text>
 			<Gender>Male</Gender>
@@ -891,7 +891,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FEATHER_WORKER</Tag>
-		<English>Feather Worker</English>
+		<English>Unit Reward - Feather Worker</English>
 		<French>
 			<Text>Atelier de Plumes</Text>
 			<Gender>Male</Gender>
@@ -907,7 +907,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FISH_PENS</Tag>
-		<English>Fish Pens</English>
+		<English>Unit Reward - Fish Pens</English>
 		<French>
 			<Text>Enclos à Poissons</Text>
 			<Gender>Male</Gender>
@@ -923,7 +923,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUR_FARM</Tag>
-		<English>Farm - Animal (Fur)</English>
+		<English>Unit Reward - Fur Farm</English>
 		<French>
 			<Text>Ferme de Fourrures</Text>
 			<Gender>Female</Gender>
@@ -975,7 +975,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOVENORS_MENAGERIE</Tag>
-		<English>Governor's Menagerie</English>
+		<English>Unit Reward - Governor's Menagerie</English>
 		<French>
 			<Text>Ménagerie du Gouverneur</Text>
 			<Gender>Female</Gender>
@@ -991,7 +991,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOVENORS_PETS</Tag>
-		<English>Governor's Pets</English>
+		<English>Unit Reward - Governor's Pets</English>
 		<French>
 			<Text>Animaux du Gouverneurs</Text>
 			<Gender>Male</Gender>
@@ -1039,7 +1039,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAWKING</Tag>
-		<English>Hawking Hut</English>
+		<English>Unit Reward - Hawking Hut</English>
 		<French>
 			<Text>Cabane du Fauconnier</Text>
 			<Gender>Female</Gender>
@@ -1193,7 +1193,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE</Tag>
-		<English>Marine Institute</English>
+		<English>Unit Reward - Marine Institute</English>
 		<French>
 			<Text>Institut de la Mer</Text>
 			<Gender>Male</Gender>
@@ -1277,7 +1277,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER</Tag>
-		<English>Master Hunter</English>
+		<English>Unit Reward - Master Hunter</English>
 		<French>
 			<Text>Cabane du Maître chasseur</Text>
 			<Gender>Male</Gender>
@@ -1293,7 +1293,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_SEA_HUNTER</Tag>
-		<English>Master Sea Hunter</English>
+		<English>Unit Reward - Master Sea Hunter</English>
 		<French>
 			<Text>Maître Chasseur des mers</Text>
 			<Gender>Male</Gender>
@@ -1393,7 +1393,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM</Tag>
-		<English>Naval Standard (Animal mascot)</English>
+		<English>Unit Reward - Naval Standard (Animal mascot)</English>
 		<French>
 			<Text>Mascotte de la Marine</Text>
 			<Gender>Female</Gender>
@@ -1800,7 +1800,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE</Tag>
-		<English>Center for Shark Studies</English>
+		<English>Unit Reward - Center for Shark Studies</English>
 		<French>
 			<Text>Centre d'étude des Requins</Text>
 			<Gender>Male</Gender>
@@ -1953,7 +1953,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_CHARMER</Tag>
-		<English>Snake Charmer</English>
+		<English>Unit Reward - Snake Charmer</English>
 		<French>
 			<Text>Charmeur de Serpents</Text>
 			<Gender>Male</Gender>
@@ -1969,7 +1969,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_PIT</Tag>
-		<English>Snake Pit</English>
+		<English>Unit Reward - Snake Pit</English>
 		<French>
 			<Text>Fosse à Serpents</Text>
 			<Gender>Female</Gender>
@@ -2019,7 +2019,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER</Tag>
-		<English>Shell Worker's Hut</English>
+		<English>Unit Reward - Shell Worker's Hut</English>
 		<French>
 			<Text>Cabane du sculpteur de carapaces</Text>
 			<Gender>Female</Gender>
@@ -2083,7 +2083,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL</Tag>
-		<English>Carnival - Trained Seal</English>
+		<English>Unit Reward - Carnival (Trained Seal)</English>
 		<French>Phoques dressés</French>
 		<Italian>
 			<Text>Foche ammaestrate</Text>
@@ -2226,7 +2226,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WONDERS_OF_THE_DEEP</Tag>
-		<English>Wonders of the Deep</English>
+		<English>Unit Reward - Wonders of the Deep</English>
 		<French>
 			<Text>Merveilles des profondeurs</Text>
 			<Gender>Female</Gender>
