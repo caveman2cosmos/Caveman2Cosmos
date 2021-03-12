@@ -1,7 +1,6 @@
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
-#include "FDataIOStream.h"
 #include "logging.h"
 
 extern std::string modDir;
