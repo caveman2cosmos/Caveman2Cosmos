@@ -1503,21 +1503,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORIES</Tag>
-		<English>Stories - Mammoths</English>
+		<English>Stories - Paleolithic Mammoth</English>
 		<French>Histoires des Mammouths</French>
 		<Polish>Historie - Mamutach</Polish>
 		<Russian>Ñêàçû î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORIES_EFFECT</Tag>
-		<English>Effect - Stories Mammoths</English>
+		<English>Stories Effect - Paleolithic Mammoth</English>
 		<French>Effet - Histoires des Mammouths</French>
 		<Polish>Efekt - Historie Mamutach</Polish>
 		<Russian>Ïðåäàíèÿ î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORY</Tag>
-		<English>Story - Mammoths</English>
+		<English>Story - Paleolithic Mammoth</English>
 		<French>Histoire des Mammouths</French>
 		<Polish>Opowieść o Kopalnych Mamutach</Polish>
 		<Russian>Ñêàçêà î ìàìîíòå</Russian>
@@ -1752,7 +1752,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REPTILE_MYTH</Tag>
-		<English>Myth (B) - Reptiles</English>
+		<English>Myth (B) - Reptile</English>
 		<French>
 			<Text>Mythe - Reptiles</Text>
 			<Gender>Male</Gender>
