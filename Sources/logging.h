@@ -94,7 +94,8 @@ namespace logging
 	void logMsg(const char* file, char* msg, ...);
 	void logMsgW(const char* file, wchar_t* msg, ...);
 
-	void clearLogs();
+	void createLogsFolder();
+	void deleteLogs();
 }
 
 #ifdef _DEBUG
