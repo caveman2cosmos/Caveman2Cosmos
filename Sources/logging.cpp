@@ -54,6 +54,9 @@ namespace logging
 
 	void clearLogs()
 	{
+		const std::string logsDir = modDir + "\\Logs";
+		CreateDirectory(logsDir.c_str(), NULL);
+
 		const std::string path = modDir + "\\Logs\\*.*";
 		WIN32_FIND_DATA FileInformation;
 		HANDLE hFile = FindFirstFile(path.c_str(), &FileInformation);
