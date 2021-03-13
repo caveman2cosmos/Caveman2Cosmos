@@ -6868,13 +6868,6 @@
 				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -23524,6 +23517,7 @@
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
@@ -23538,17 +23532,6 @@
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_PALEONTOLOGY</ID>
-						</Has>
-					</Active>
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors>
@@ -23569,6 +23552,7 @@
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORY</BuildingType>
@@ -23604,22 +23588,12 @@
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_PALEONTOLOGY</ID>
-						</Has>
-					</Active>
 				</PropertySource>
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
