@@ -8840,9 +8840,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_ADVANCED_COMPUTERS</PrereqTech>
+			<PrereqTech>TECH_EXOCORTEX_NETWORKS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_EXOCORTEX_NETWORKS</PrereqTech>
+				<PrereqTech>TECH_ADVANCED_COMPUTERS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
