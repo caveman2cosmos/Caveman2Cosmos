@@ -1020,7 +1020,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	bool bNothing = true;
 	if (!szMessage.empty())
 	{
-		szBuffer.append(gDLL->getText(szMessage, kUnit.getNameKey(), pUnitInfo->getDescription()));
+		szBuffer.append(gDLL->getText(szMessage, kUnit.getNameKey(), pUnitInfo->getTextKeyWide()));
 		szBuffer.append(L" ( ");
 		bNothing = false;
 	}

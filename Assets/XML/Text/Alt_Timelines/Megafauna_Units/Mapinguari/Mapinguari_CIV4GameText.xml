@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND</Tag>
-		<English>Mapinguari Compound</English>
+		<English>Unit Reward - Mapinguari Compound</English>
 		<French>
 			<Text>Enceinte Mapinguari</Text>
 			<Gender>Male</Gender>
@@ -21,7 +21,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_GUARD</Tag>
-		<English>Mapinguari Changing of the Guard Ceremony</English>
+		<English>Autobuild - Mapinguari Changing of the Guard Ceremony</English>
 		<Polish>Strażnik Mapinguari</Polish>
 		<Russian>Êàðàóë ìàïèíãóàðè</Russian>
 	</TEXT>

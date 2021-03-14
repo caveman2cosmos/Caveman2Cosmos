@@ -30,7 +30,7 @@
 	<!-- Start paging out if memory exceeds this amount (in KB) -->
 	<Define>
 		<DefineName>MAX_DESIRED_MEMORY_USED</DefineName>
-		<iDefineIntVal>2000000</iDefineIntVal>
+		<iDefineIntVal>1800000</iDefineIntVal>
 	</Define>
 
 	<!-- If specified, instead of MAX_DESIRED_MEMORY_USED, a set of test 
@@ -51,7 +51,7 @@
 	 -->
 	<Define>
 		<DefineName>PAGING_FRAME_TIME_MS</DefineName>
-		<iDefineIntVal>200</iDefineIntVal>
+		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<!-- Distance in tiles at which to page in different components -->
 	 <Define>
