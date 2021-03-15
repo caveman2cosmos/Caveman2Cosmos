@@ -23,7 +23,6 @@
 			<Bonus>BONUS_HORSE</Bonus>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>104</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>

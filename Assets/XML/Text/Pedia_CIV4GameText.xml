@@ -1183,13 +1183,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_UNIT_CAN_BE_CAPTURED</Tag>
-		<English>[NEWLINE][ICON_BULLET]Can be captured</English>
-		<French>[NEWLINE][ICON_BULLET]Peut être capturé</French>
-		<German>[NEWLINE][ICON_BULLET]kann gefangen werden</German>
-		<Italian>[NEWLINE][ICON_BULLET]Può essere catturata</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Se puede capturar</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Może zostać przejęty</Polish>
-		<Russian>[NEWLINE][ICON_BULLET]Ìîæåò áûòü çàõâà÷åí</Russian>
+		<English>[ICON_BULLET]Can be captured</English>
+		<French>[ICON_BULLET]Peut être capturé</French>
+		<German>[ICON_BULLET]kann gefangen werden</German>
+		<Italian>[ICON_BULLET]Può essere catturata</Italian>
+		<Spanish>[ICON_BULLET]Se puede capturar</Spanish>
+		<Polish>[ICON_BULLET]Może zostać przejęty</Polish>
+		<Russian>[ICON_BULLET]Ìîæåò áûòü çàõâà÷åí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_UNIT_COLLATERAL_DAMAGES_MAX_UNITS</Tag>
@@ -1203,23 +1203,23 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_UNIT_DRAFTABLE</Tag>
-		<English>[NEWLINE][ICON_BULLET]Can be drafted when requirements are met</English>
-		<French>[NEWLINE][ICON_BULLET]Peut être recrutés lorsque les conditions sont réunies</French>
-		<German>[NEWLINE][ICON_BULLET]Einheit kann rekrutiert werden, wenn die Bedingungen erfüllt sind</German>
-		<Italian>[NEWLINE][ICON_BULLET]Può essere reclutata quando i requisiti sono soddisfatti</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Se puede reclutar cuando se cumplan las condiciones</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Może zostać zwerbowany gdy są spełnione wymagania</Polish>
-		<Russian>[NEWLINE][ICON_BULLET]Ïîäðàçäåëåíèå ìîæåò áûòü ïðèçâàíî, êîãäà âûïîëíåíû íåîáõîäèìûå óñëîâèÿ</Russian>
+		<English>[ICON_BULLET]Can be drafted when requirements are met</English>
+		<French>[ICON_BULLET]Peut être recrutés lorsque les conditions sont réunies</French>
+		<German>[ICON_BULLET]Einheit kann rekrutiert werden, wenn die Bedingungen erfüllt sind</German>
+		<Italian>[ICON_BULLET]Può essere reclutata quando i requisiti sono soddisfatti</Italian>
+		<Spanish>[ICON_BULLET]Se puede reclutar cuando se cumplan las condiciones</Spanish>
+		<Polish>[ICON_BULLET]Może zostać zwerbowany gdy są spełnione wymagania</Polish>
+		<Russian>[ICON_BULLET]Ïîäðàçäåëåíèå ìîæåò áûòü ïðèçâàíî, êîãäà âûïîëíåíû íåîáõîäèìûå óñëîâèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_UNIT_IGNORES_BUILDING_DEFENSE</Tag>
-		<English>[NEWLINE][ICON_BULLET]Ignores Building Defense</English>
-		<French>[NEWLINE][ICON_BULLET]Ignore les Protections des Bâtiments</French>
-		<German>[NEWLINE][ICON_BULLET]Ignoriert Verteidigung durch Gebäude</German>
-		<Italian>[NEWLINE][ICON_BULLET]Ignora le difese degli edifici</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Ignora la defensa por edificios</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Ignoruje Obronę Budynku</Polish>
-		<Russian>[NEWLINE][ICON_BULLET]Èãíîðèðóåò çàùèòó çäàíèé</Russian>
+		<English>[ICON_BULLET]Ignores Building Defense</English>
+		<French>[ICON_BULLET]Ignore les Protections des Bâtiments</French>
+		<German>[ICON_BULLET]Ignoriert Verteidigung durch Gebäude</German>
+		<Italian>[ICON_BULLET]Ignora le difese degli edifici</Italian>
+		<Spanish>[ICON_BULLET]Ignora la defensa por edificios</Spanish>
+		<Polish>[ICON_BULLET]Ignoruje Obronę Budynku</Polish>
+		<Russian>[ICON_BULLET]Èãíîðèðóåò çàùèòó çäàíèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_UNIT_UNITS</Tag>

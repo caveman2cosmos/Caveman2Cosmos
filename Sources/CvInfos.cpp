@@ -1206,8 +1206,6 @@ m_iAdvisorType(NO_ADVISOR),
 m_iAIWeight(0),
 m_iAITradeModifier(0),
 m_iResearchCost(-1),
-m_iAdvancedStartCost(100),
-m_iAdvancedStartCostIncrease(0),
 m_iEra(NO_ERA),
 m_iTradeRoutes(0),
 m_iFeatureProductionModifier(0),
@@ -1338,16 +1336,6 @@ int CvTechInfo::getAITradeModifier() const
 int CvTechInfo::getResearchCost() const
 {
 	return m_iResearchCost;
-}
-
-int CvTechInfo::getAdvancedStartCost() const
-{
-	return m_iAdvancedStartCost;
-}
-
-int CvTechInfo::getAdvancedStartCostIncrease() const
-{
-	return m_iAdvancedStartCostIncrease;
 }
 
 int CvTechInfo::getEra() const
@@ -1734,8 +1722,6 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iAIWeight, L"iAIWeight");
 	pXML->GetOptionalChildXmlValByName(&m_iAITradeModifier, L"iAITradeModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iResearchCost, L"iCost");
-	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCost, L"iAdvancedStartCost", 100);
-	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCostIncrease, L"iAdvancedStartCostIncrease");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Era");
 	m_iEra = pXML->GetInfoClass(szTextVal);
@@ -1986,8 +1972,6 @@ void CvTechInfo::copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if (getAIWeight() == iDefault) m_iAIWeight = pClassInfo->getAIWeight();
 	if (getAITradeModifier() == iDefault) m_iAITradeModifier = pClassInfo->getAITradeModifier();
 	if (m_iResearchCost == iDefault) m_iResearchCost = pClassInfo->m_iResearchCost;
-	if (getAdvancedStartCost() == 100) m_iAdvancedStartCost = pClassInfo->getAdvancedStartCost();
-	if (getAdvancedStartCostIncrease() == iDefault) m_iAdvancedStartCostIncrease = pClassInfo->getAdvancedStartCostIncrease();
 	if (m_iEra == NO_ERA) m_iEra = pClassInfo->getEra();
 	GC.copyNonDefaultDelayedResolution((int*)&m_iFirstFreeUnit, (int*)&pClassInfo->m_iFirstFreeUnit);
 	GC.copyNonDefaultDelayedResolution((int*)&m_iFirstFreeProphet, (int*)&pClassInfo->m_iFirstFreeProphet);
@@ -2226,8 +2210,6 @@ void CvTechInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iAIWeight);
 	CheckSum(iSum, m_iAITradeModifier);
 	CheckSum(iSum, m_iResearchCost);
-	CheckSum(iSum, m_iAdvancedStartCost);
-	CheckSum(iSum, m_iAdvancedStartCostIncrease);
 	CheckSum(iSum, m_iEra);
 	CheckSum(iSum, m_iTradeRoutes);
 	CheckSum(iSum, m_iFeatureProductionModifier);
@@ -14891,7 +14873,6 @@ void CvGoodyInfo::getCheckSum(unsigned int& iSum) const
 //------------------------------------------------------------------------------------------------------
 CvRouteInfo::CvRouteInfo() :
 m_iAdvancedStartCost(100),
-m_iAdvancedStartCostIncrease(0),
 m_iValue(0),
 m_iMovementCost(0),
 m_iFlatMovementCost(0),
@@ -14922,11 +14903,6 @@ CvRouteInfo::~CvRouteInfo()
 int CvRouteInfo::getAdvancedStartCost() const
 {
 	return m_iAdvancedStartCost;
-}
-
-int CvRouteInfo::getAdvancedStartCostIncrease() const
-{
-	return m_iAdvancedStartCostIncrease;
 }
 
 int CvRouteInfo::getValue() const
@@ -14999,7 +14975,6 @@ bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 	//shouldHaveType = false;
 
 	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCost, L"iAdvancedStartCost", 100);
-	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCostIncrease, L"iAdvancedStartCostIncrease");
 
 	pXML->GetOptionalChildXmlValByName(&m_iValue, L"iValue");
 	pXML->GetOptionalChildXmlValByName(&m_iMovementCost, L"iMovement");
@@ -15082,7 +15057,6 @@ void CvRouteInfo::copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXM
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
 	if (getAdvancedStartCost() == 100) m_iAdvancedStartCost = pClassInfo->getAdvancedStartCost();
-	if (getAdvancedStartCostIncrease() == iDefault) m_iAdvancedStartCostIncrease = pClassInfo->getAdvancedStartCostIncrease();
 	if (getValue() == iDefault) m_iValue = pClassInfo->getValue();
 	if (getMovementCost() == iDefault) m_iMovementCost = pClassInfo->getMovementCost();
 	if (getFlatMovementCost() == iDefault) m_iFlatMovementCost = pClassInfo->getFlatMovementCost();
@@ -15135,7 +15109,6 @@ void CvRouteInfo::copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXM
 void CvRouteInfo::getCheckSum(unsigned int& iSum) const
 {
 	CheckSum(iSum, m_iAdvancedStartCost);
-	CheckSum(iSum, m_iAdvancedStartCostIncrease);
 
 	CheckSum(iSum, m_iValue);
 	CheckSum(iSum, m_iMovementCost);
@@ -15244,7 +15217,6 @@ void CvImprovementBonusInfo::getCheckSum(unsigned int &iSum) const
 //------------------------------------------------------------------------------------------------------
 CvImprovementInfo::CvImprovementInfo() :
 m_iAdvancedStartCost(100),
-m_iAdvancedStartCostIncrease(0),
 m_iTilesPerGoody(0),
 m_iGoodyUniqueRange(0),
 m_iFeatureGrowthProbability(0),
@@ -15346,11 +15318,6 @@ CvImprovementInfo::~CvImprovementInfo()
 int CvImprovementInfo::getAdvancedStartCost() const
 {
 	return m_iAdvancedStartCost;
-}
-
-int CvImprovementInfo::getAdvancedStartCostIncrease() const
-{
-	return m_iAdvancedStartCostIncrease;
 }
 
 int CvImprovementInfo::getTilesPerGoody() const
@@ -15853,7 +15820,6 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 void CvImprovementInfo::getCheckSum(unsigned int &iSum) const
 {
 	CheckSum(iSum, m_iAdvancedStartCost);
-	CheckSum(iSum, m_iAdvancedStartCostIncrease);
 
 	CheckSum(iSum, m_iTilesPerGoody);
 	CheckSum(iSum, m_iGoodyUniqueRange);
@@ -16021,7 +15987,6 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCost, L"iAdvancedStartCost", 100);
-	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCostIncrease, L"iAdvancedStartCostIncrease");
 	pXML->GetOptionalChildXmlValByName(&m_bActsAsCity, L"bActsAsCity", true);
 	pXML->GetOptionalChildXmlValByName(&m_bHillsMakesValid, L"bHillsMakesValid");
 	pXML->GetOptionalChildXmlValByName(&m_bFreshWaterMakesValid, L"bFreshWaterMakesValid");
@@ -16321,7 +16286,6 @@ void CvImprovementInfo::copyNonDefaults(CvImprovementInfo* pClassInfo, CvXMLLoad
 	}
 
 	if (getAdvancedStartCost() == 100) m_iAdvancedStartCost = pClassInfo->getAdvancedStartCost();
-	if (getAdvancedStartCostIncrease() == iDefault) m_iAdvancedStartCostIncrease = pClassInfo->getAdvancedStartCostIncrease();
 	if (getTilesPerGoody() == iDefault) m_iTilesPerGoody = pClassInfo->getTilesPerGoody();
 	if (getGoodyUniqueRange() == iDefault) m_iGoodyUniqueRange = pClassInfo->getGoodyUniqueRange();
 	if (getFeatureGrowthProbability() == iDefault) m_iFeatureGrowthProbability = pClassInfo->getFeatureGrowthProbability();
@@ -31562,9 +31526,6 @@ bool CvGameText::read(CvXMLLoadUtility* pXML)
 	//pXML->TryMoveToXmlFirstChild(); // Move down to Child level
 	pXML->GetChildXmlValByName(m_szType, L"Tag");
 	//pXML->GetXmlVal(m_szType);		// TAG
-
-	//static const int iMaxNumLanguages = GC.getDefineINT("MAX_NUM_LANGUAGES");
-	//int iNumLanguages = NUM_LANGUAGES ? NUM_LANGUAGES : iMaxNumLanguages + 1;
 
 	int iFallback = 0;
 

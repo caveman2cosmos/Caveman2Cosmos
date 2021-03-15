@@ -2021,40 +2021,33 @@
 			<bNoRevealMap>1</bNoRevealMap>
 			<iWorkRate>200</iWorkRate>
 			<Builds>
+				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
+				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
 				<Build>
-					<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
+					<BuildType>BUILD_WHALING_BOATS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
+				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WHALING_BOATS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WHALING_SHIPS</BuildType>
+					<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
 					<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
+				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
+				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
 				<Build>
 					<BuildType>BUILD_BEACON_CORAL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
 					<BuildType>BUILD_BEACON_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -2261,8 +2254,8 @@
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANTS</BonusType>

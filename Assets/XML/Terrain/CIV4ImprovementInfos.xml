@@ -874,6 +874,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_NOMADIC_HERD</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
@@ -917,6 +918,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -1128,6 +1130,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_ORCHARD</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_LUMBERJACK</ImprovementType>
@@ -1283,6 +1286,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -1464,6 +1468,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -1533,6 +1538,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_WINERY</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -1571,6 +1577,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -1792,6 +1799,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -2051,6 +2059,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_PLANTATION</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_LUMBERJACK</ImprovementType>
@@ -2264,6 +2273,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -2298,6 +2308,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -2404,6 +2415,7 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
+			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 		</ImprovementInfo>
 
@@ -2585,6 +2597,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_REFINING</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_TAR_GATHERER</ImprovementPillage>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iAirBombDefense>10</iAirBombDefense>
 			<iPillageGold>75</iPillageGold>
@@ -2702,6 +2715,7 @@
 					<iDiscoverRand>1000</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_HYDROCARBON_WELL</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -3131,6 +3145,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_QUARRY</ImprovementUpgrade>
 		</ImprovementInfo>
 
@@ -3148,6 +3163,8 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_FARM</ImprovementPillage>
+			<!-- Other improvements also can upgrade to Vertical Farm: Mushroom Gatherer, Orchard, Pasture, Plantation, Silk Farm, Winery -->
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bCarriesIrrigation>1</bCarriesIrrigation>
@@ -3948,6 +3965,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_SEED_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -4214,6 +4232,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_FARM</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_THATCH_CUTTER</ImprovementType>
@@ -5300,6 +5319,8 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bHillsMakesValid>1</bHillsMakesValid>
 			<PrereqTech>TECH_NANOMINING</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_MODERN_MINE</ImprovementPillage>
+			<!-- Other improvements also can upgrade to Core Mine: Quarry -->
 			<iAdvancedStartCost>64</iAdvancedStartCost>
 			<iAirBombDefense>10</iAirBombDefense>
 			<iPillageGold>100</iPillageGold>
@@ -5894,6 +5915,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_SHAFT_MINE</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_CORE_MINE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -6211,6 +6233,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_MINE</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_MODERN_MINE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -6544,6 +6567,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_SHAFT_MINE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -6838,6 +6862,8 @@
 					<iDiscoverRand>1000</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_EARLY_QUARRY</ImprovementPillage>
+			<!-- Other improvements also can upgrade to Quarry: Salt Gatherer -->
 			<ImprovementUpgrade>IMPROVEMENT_CORE_MINE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -7020,6 +7046,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_QUARRY</ImprovementUpgrade>
 		</ImprovementInfo>
 		<!-- Stone Tools Workshop -> Mine OR Early Quarry Lifestyle -->
@@ -7150,6 +7177,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_MINE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_EARLY_QUARRY</ImprovementType>
@@ -7386,6 +7414,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
+			<ImprovementPillage>IMPROVEMENT_LUMBERMILL</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_HYBRID_FOREST</ImprovementUpgrade>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
@@ -7627,6 +7656,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_LUMBERJACK</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_TREEFARM</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -7822,6 +7852,8 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_WOOD_GATHERER</ImprovementPillage>
+			<!-- Other improvements also can upgrade to Lumberjack: Fruit and Plant Picking Camps -->
 			<ImprovementUpgrade>IMPROVEMENT_LUMBERMILL</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -7913,6 +7945,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_LUMBERJACK</ImprovementUpgrade>
 		</ImprovementInfo>
 
@@ -8470,6 +8503,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<ImprovementPillage>IMPROVEMENT_SEASONAL_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_HAMLET</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -8678,13 +8712,13 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</ImprovementInfo>
-		<!-- Factory (Cold Climate) -> Manufacturing Complex Era -->
+		<!-- Factory -> Manufacturing Complex Era -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_FACTORY_COLD_CLIMATE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FACTORY_COLD</Description>
+			<Type>IMPROVEMENT_FACTORY</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FACTORY_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FACTORY</ArtDefineTag>
-			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
+			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>-2</iYieldChange>
 				<iYieldChange>7</iYieldChange>
@@ -8698,6 +8732,46 @@
 			<iHealthPercent>-100</iHealthPercent>
 			<iPillageGold>100</iPillageGold>
 			<TerrainMakesValids>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_PLAINS</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_BARREN</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_LUSH</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_TAIGA</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bMakesValid>1</bMakesValid>
@@ -8819,172 +8893,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</ImprovementInfo>
-		<!-- Factory -> Manufacturing Complex Era -->
-		<ImprovementInfo>
-			<Type>IMPROVEMENT_FACTORY</Type>
-			<Description>TXT_KEY_IMPROVEMENT_FACTORY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FACTORY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_FACTORY</ArtDefineTag>
-			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
-			<YieldChanges>
-				<iYieldChange>-2</iYieldChange>
-				<iYieldChange>7</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
-			<bActsAsCity>0</bActsAsCity>
-			<bRequiresFlatlands>1</bRequiresFlatlands>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iUpgradeTime>35</iUpgradeTime>
-			<iAirBombDefense>5</iAirBombDefense>
-			<iHealthPercent>-100</iHealthPercent>
-			<iPillageGold>100</iPillageGold>
-			<TerrainMakesValids>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_BARREN</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_BADLAND</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_JAGGED</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_TAIGA</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-			</TerrainMakesValids>
-			<ImprovementPillage>IMPROVEMENT_WORKSHOP</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementUpgrade>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_ORGANIC_CHEMISTRY</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_CONSUMERISM</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_MANUFACTURING</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
-			<RouteYieldChanges>
-				<RouteYieldChange>
-					<RouteType>ROUTE_RAILROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_HIGHWAY</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_MAGLEV</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_VACTRAIN</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_GRAVITY_TRAIN</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_JUMPLANE</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-			</RouteYieldChanges>
-			<iCulture>2</iCulture>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-					<RelationType>RELATION_NEAR</RelationType>
-					<iDistance>1</iDistance>
-					<iAmountPerTurn>5</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-		</ImprovementInfo>
-		<!-- Workshop -> Factory OR Factory (Cold Climate) Era -->
+		<!-- Workshop -> Factory -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_WORKSHOP</Type>
 			<Description>TXT_KEY_IMPROVEMENT_WORKSHOP</Description>
@@ -9045,9 +8954,6 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<ImprovementUpgrade>IMPROVEMENT_FACTORY</ImprovementUpgrade>
-			<AlternativeImprovementUpgradeTypes>
-				<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
-			</AlternativeImprovementUpgradeTypes>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_GUILDS</PrereqTech>
@@ -9170,6 +9076,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_HYDROELECTRICITY</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_WATERMILL</ImprovementPillage>
 			<bRiverSideMakesValid>1</bRiverSideMakesValid>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bRequiresRiverSide>1</bRequiresRiverSide>
@@ -9254,6 +9161,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_WINDMILL</ImprovementPillage>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
 			<iUpgradeTime>20</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -9684,6 +9592,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_SEED_CAMP</ImprovementPillage>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iUpgradeTime>10</iUpgradeTime>
 			<iPillageGold>8</iPillageGold>
@@ -9694,7 +9603,7 @@
 				</FeatureMakesValid>
 			</FeatureMakesValids>
 			<TechYieldChanges>
-			<TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
@@ -9949,6 +9858,7 @@
 			</RiverSideYieldChange>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_SEED_CAMP</ImprovementPillage>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -10117,6 +10027,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_SEED_CAMP</ImprovementPillage>
 			<bRequiresIrrigation>1</bRequiresIrrigation>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -10261,6 +10172,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_SEED_CAMP</ImprovementPillage>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>5</iPillageGold>
@@ -10359,6 +10271,7 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_RADAR_TOWER</ArtDefineTag>
 			<PrereqTech>TECH_RADAR</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementPillage>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>400</iAdvancedStartCost>
 			<iUpgradeTime>25</iUpgradeTime>
@@ -10525,6 +10438,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<ImprovementPillage>IMPROVEMENT_STONE_WATCHTOWER</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_RADAR_TOWER</ImprovementUpgrade>
 			<iCulture>10</iCulture>
 			<iVisibilityChange>3</iVisibilityChange>
@@ -10616,6 +10530,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<ImprovementPillage>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementUpgrade>
 			<iCulture>1</iCulture>
 			<iVisibilityChange>2</iVisibilityChange>
@@ -10723,6 +10638,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COMMAND_CENTER</ArtDefineTag>
 			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_COMMAND_BUNKER</ImprovementPillage>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
 			<iAirBombDefense>60</iAirBombDefense>
 			<iDefenseModifier>100</iDefenseModifier>
@@ -10890,6 +10806,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<ImprovementPillage>IMPROVEMENT_FORT</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_COMMAND_CENTER</ImprovementUpgrade>
 			<iCulture>10</iCulture>
 			<iCultureRange>1</iCultureRange>
@@ -10984,6 +10901,8 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<ImprovementPillage>IMPROVEMENT_WOODEN_PALISADE</ImprovementPillage>
+			<!-- Other improvements also can upgrade to Fort: Fortified Cave with Cache -->
 			<ImprovementUpgrade>IMPROVEMENT_COMMAND_BUNKER</ImprovementUpgrade>
 			<iCulture>10</iCulture>
 			<iCultureRange>1</iCultureRange>
@@ -11013,6 +10932,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
+			<ImprovementPillage>IMPROVEMENT_FORTIFIED_CAVE</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_FORT</ImprovementUpgrade>
 			<iCulture>1</iCulture>
 			<iCultureRange>1</iCultureRange>
@@ -11127,6 +11047,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<ImprovementPillage>IMPROVEMENT_ABATIS_THORN_HEDGE</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_FORT</ImprovementUpgrade>
 			<iCulture>5</iCulture>
 			<iUniqueRange>2</iUniqueRange>
@@ -11655,6 +11576,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WHALING_BOATS</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_WHALING_BOATS</ImprovementPillage>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -11737,6 +11659,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_WHALING_SHIPS</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -11757,6 +11680,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FISHING_BOATS</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -12037,6 +11961,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_HARVEST_KELP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HARVEST_KELP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HARVEST_KELP</ArtDefineTag>
+			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<YieldChanges>
 				<iYield>1</iYield>
 				<iYield>0</iYield>
@@ -12160,6 +12085,7 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_MARINE_PRESERVE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FOREST_PRESERVE</ArtDefineTag>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -12210,6 +12136,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -12260,6 +12187,7 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -12355,6 +12283,8 @@
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
+			<ImprovementPillage>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementPillage>
+			<!-- Other improvements also can upgrade to Extraction Facility: Fishing Camp -->
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -12429,13 +12359,6 @@
 						<iYield>1</iYield>
 					</RouteYields>
 				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_JUMPLANE</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>2</iYield>
-					</RouteYields>
-				</RouteYieldChange>
 			</RouteYieldChanges>
 			<PropertyManipulators>
 				<PropertySource>
@@ -12485,6 +12408,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_FISHING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_EXTRACTION_FACILITY</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -12522,13 +12446,6 @@
 			<RouteYieldChanges>
 				<RouteYieldChange>
 					<RouteType>ROUTE_TUNNEL</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_JUMPLANE</RouteType>
 					<RouteYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -12670,13 +12587,6 @@
 						<iYield>0</iYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
-					</RouteYields>
-				</RouteYieldChange>
-				<RouteYieldChange>
-					<RouteType>ROUTE_JUMPLANE</RouteType>
-					<RouteYields>
-						<iYield>0</iYield>
-						<iYield>2</iYield>
 					</RouteYields>
 				</RouteYieldChange>
 			</RouteYieldChanges>

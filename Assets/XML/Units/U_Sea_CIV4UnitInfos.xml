@@ -557,11 +557,8 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_ASTROLABE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			</TechTypes>
-			<iCost>370</iCost>
+			<PrereqTech>TECH_COMPASS</PrereqTech>
+			<iCost>340</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>

@@ -88,7 +88,7 @@ def writeLog():
 					pFile.write("City: %s\n" % CvUtil.convertToStr(pCity.getName()))
 					pFile.write("X: %d, Y: %d\n" % (pCity.getX(), pCity.getY()))
 					pFile.write("Population: %d\n" % (pCity.getPopulation()))
-					pFile.write("Buildings: %d\n" % (pCity.getNumBuildings()))
+					pFile.write("Buildings: %d\n" % (pCity.getNumRealBuildings()))
 					pFile.write("Improved Plots: %d\n" % (pCity.countNumImprovedPlots()))
 					pFile.write("Tiles Worked: %d, Specialists: %d\n" % (pCity.getWorkingPopulation(), pCity.getSpecialistPopulation()))
 					pFile.write("Great People: %d\n" % pCity.getNumGreatPeople())

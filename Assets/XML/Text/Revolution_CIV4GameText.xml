@@ -1854,7 +1854,7 @@
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_AI_AUTOPLAY</Tag>
 		<English>[NEWLINE]CTRL-SHIFT-X = AI Autoplay</English>
 		<French>[NEWLINE]CTRL-SHIFT-X = Jeu automatique par l'IA pour x Tours</French>
-		<German>[NEWLINE]CTRL-SHIFT-X = KI Autoplay</German>
+		<German>[NEWLINE]STRG-UMSCHALT-X = KI Autoplay</German>
 		<Italian>[NEWLINE]CTRL-SHIFT-X = Automazione IA</Italian>
 		<Spanish>[NEWLINE]CTRL-SHIFT-X = Juego automático de la IA</Spanish>
 	</TEXT>
@@ -1970,15 +1970,6 @@
 		<Italian>[NEWLINE]CTRL-ALT-O = Opzioni di gioco</Italian>
 		<Spanish>[NEWLINE]CTRL-ALT-O = Opciones de juego</Spanish>
 		<Polish>[NEWLINE]CTRL-ALT-O = Opcje Gry</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CHOOSE_RELIGION</Tag>
-		<English>[NEWLINE]Choose Religion</English>
-		<French>[NEWLINE]Choix des Religions</French>
-		<German>[NEWLINE]Religion auswählen</German>
-		<Italian>[NEWLINE]Scegli Religione</Italian>
-		<Spanish>[NEWLINE]Elegir religión</Spanish>
-		<Polish>[NEWLINE]Wybór Religii</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_A_SHORTCUT</Tag>
@@ -2102,7 +2093,7 @@
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_INIT_POPUP</Tag>
 		<English>[NEWLINE]CTRL-SHIFT-Q = This popup</English>
 		<French>[NEWLINE]CTRL-SHIFT-Q = Cette Fenêtre</French>
-		<German>[NEWLINE]CTRL-SHIFT-Q = Dieses Fenster</German>
+		<German>[NEWLINE]STRG-UMSCHALT-Q = Dieses Fenster</German>
 		<Italian>[NEWLINE]CTRL-SHIFT-Q = Questo Popup</Italian>
 		<Spanish>[NEWLINE]CTRL-SHIFT-Q = Este cuadro</Spanish>
 		<Polish>[NEWLINE]CTRL-SHIFT-Q = To Okienko</Polish>

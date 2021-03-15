@@ -6571,5 +6571,13 @@
 			<Type>ART_DEF_FILTER_SHOW_UNLIMITED</Type>
 			<Path>Art/BUG/World_Off.dds</Path>
 		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>ART_DEF_CHECKBOX_CHECKED</Type>
+			<Path>Art/Interface/buttons/general/checkbox_checked.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>ART_DEF_CHECKBOX_UNCHECKED</Type>
+			<Path>Art/Interface/buttons/general/checkbox_unchecked.dds</Path>
+		</InterfaceArtInfo>
 	</InterfaceArtInfos>
 </Civ4ArtDefines>

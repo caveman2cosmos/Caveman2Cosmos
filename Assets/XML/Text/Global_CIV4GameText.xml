@@ -299,7 +299,7 @@
 		<Tag>TXT_ACO_PRESSSHIFT</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Press SHIFT for more detail[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Appuyez sur MAJ pour plus de détails[COLOR_REVERT]</French>
-		<German>[COLOR_HIGHLIGHT_TEXT][UMSCHALTEN] drücken für mehr Einzelheiten[COLOR_REVERT]</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]&lt;UMSCHALT&gt;[COLOR_REVERT] für mehr Einzelheiten</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Tieni premuto SHIFT per maggiori dettagli[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Pulse SHIFT para más detalles[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Naciśnij SHIFT po więcej informacji[COLOR_REVERT]</Polish>
@@ -2699,9 +2699,8 @@
 		<Polish>%s1 w mieście %s2 uniemożliwił dostęp do świeżej wody.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_REMOVED_MAX_CULTURE</Tag>
-		<English>The %s1 in the City of %s2 has shut down to the local culture level being too high.</English>
-		<French>Le bâtiment %s1 de la ville de %s2 a été désactivé, car le niveau culturel est trop haut.</French>
+		<Tag>TXT_KEY_CITY_REMOVED_MAX_POPULATION</Tag>
+		<English>The %s1 in the City of %s2 has shut down due to the population level being too high.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REPEL</Tag>
@@ -2710,16 +2709,6 @@
 		<Italian>[ICON_BULLET]Le unità ottengono %D1%% alla Respinta quando difendono una città.</Italian>
 		<Polish>[ICON_BULLET]Jednostki otrzymują %D1%% do odepchnięcia przy obronie miasta.</Polish>
 		<Russian>[ICON_BULLET]Отряды получают %D1%% к отражению при защите города.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_RESTORED_BUILDINGS</Tag>
-		<English>The City of %s1 has had its %s2 restored and the %s3 is in working condition again.</English>
-		<French>Le bâtiment [COLOR_BUILDING_TEXT]%s3[COLOR_REVERT] de %s1 est à nouveau fonctionnel.</French>
-		<German>Das Gebäude %s3 in %s1 ist wieder betriebsbereit, da die Versorgung mit %s2 wieder aufgenommen wurde.</German>
-		<Italian>La città di %s1 ha ripristinato %s2 e l'edificio %s3 è di nuovo in funzione.</Italian>
-		<Spanish>La ciudad de %s1 ha reabierto [NUM2:su:su:sus:sus] %s2 y [NUM3:el:la:los:las] %s3 [NUM3:funciona:funciona:funcionan:funcionan] de nuevo.</Spanish>
-		<Polish>Miasto %s1 przywróciło %s3 do pracy.</Polish>
-		<Russian>Ãîðîäó %s1 âîññòàíîâèëè åãî %s2, è %s3 â èñïðàâíîì ñîñòîÿíèè ñíîâà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_SCREEN_CONCEPTUAL</Tag>
@@ -4117,6 +4106,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English> Or </English>
 		<French> ou </French>
 		<German> oder </German>
+		<Russian> или </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXPR_THEN</Tag>
@@ -4150,10 +4140,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_0</Tag>
 		<English>[NEWLINE]Total costs before inflation = %d1[ICON_GOLD][NEWLINE]</English>
+		<Russian>[NEWLINE]Общие затраты до инфляции = %d1[ICON_GOLD][NEWLINE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_1</Tag>
 		<English>[NEWLINE]Inflation rate = %d1.%d2%%[NEWLINE][NEWLINE]Cost due to Inflation = %d3[ICON_GOLD]</English>
+		<Russian>[NEWLINE]Уровень инфляции = %d1.%d2%%[NEWLINE][NEWLINE]Стоимость из-за инфляции = %d3[ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_SOURCES_OF_INFLATION</Tag>
@@ -4199,39 +4191,47 @@ Calendrier: 2150 AD - 2300 AD</French>
 		[NEWLINE][ICON_BULLET]z budynków = %d3%
 		[NEWLINE][ICON_BULLET]z projektów = %d4%
 		[NEWLINE][ICON_BULLET]z przyśpieszania produkcji = %d5%</Polish>
-		<Russian>[NEWLINE]Èñòî÷íèêè Èíôëÿöèè[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Ïàðàäèãì = %d1%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Òåõíîëîãèé = %d2%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ èç Çäàíèé = %d3%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ èç Ïðîåêòîâ = %d4%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Ñïåøêè Ïðîèçâîäñòâà = %d5%</Russian>
+		<Russian>[NEWLINE]Èñòî÷íèêè Èíôëÿöèè[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Ïàðàäèãì = %d1%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Òåõíîëîãèé = %d2%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ èç Çäàíèé = %d3%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ èç Ïðîåêòîâ = %d4%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Óñêîð. Ïðîèçâîäñòâà = %d5%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_CIVILIAN</Tag>
 		<English>[SPACE]Civilian Unit upkeep:[NEWLINE][SPACE][SPACE] * Upkeep: %s1 [ICON_GOLD]</English>
+		<Russian>[SPACE]Содержание гражд. юнитов:[NEWLINE][SPACE][SPACE] * Содержание: %s1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MILITARY</Tag>
 		<English>[SPACE]Military Unit upkeep:[NEWLINE][SPACE][SPACE] * Upkeep: %s1 [ICON_GOLD]</English>
+		<Russian>[SPACE]Содержание отрядов:[NEWLINE][SPACE][SPACE] * Содержание: %s1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_CIVIC</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Civic change: %s1 [ICON_GOLD]</English>
+		<Russian>[NEWLINE][SPACE][SPACE] * Смена парадигм: %s1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_TRAIT</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Trait change: %s1 [ICON_GOLD]</English>
+		<Russian>[NEWLINE][SPACE][SPACE] * Смена черт лидера: %s1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_FREE</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Free: %d1 [ICON_GOLD]</English>
+		<Russian>[NEWLINE][SPACE][SPACE] * Бесплатно: %d1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_HANDICAP_ADJUSTMENT</Tag>
 		<English>[NEWLINE][ICON_BULLET]Handicap adjustment: %d1 [ICON_GOLD][NEWLINE]</English>
+		<Russian>[NEWLINE][ICON_BULLET]Отладка убытков: %d1 [ICON_GOLD][NEWLINE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_1</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Total: %d1 [ICON_GOLD][NEWLINE]</English>
+		<Russian>[NEWLINE][SPACE][SPACE] * Итого: %d1 [ICON_GOLD][NEWLINE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_2</Tag>
 		<English>[NEWLINE]--------------------------------[NEWLINE] Total unit upkeep: %d1 [ICON_GOLD]</English>
+		<Russian>[NEWLINE]--------------------------------[NEWLINE] Общее содержание войск: %d1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FIRST_FLANK_SUPPORT</Tag>
@@ -5032,13 +5032,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Spanish>[ICON_BULLET]Acelerar la producción aumenta la inflación un %d1</Spanish>
 		<Polish>[ICON_BULLET]Przyspieszenie produkcji spowoduje o %d1 większą inflacje</Polish>
 		<Russian>[ICON_BULLET]Óñêîðåíèå ïðîèçâîäñòâà âûçûâàåò %d1 áîëüøå èíôëÿöèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ICON_SIZE</Tag>
-		<English>Icon Size:</English>
-		<French>Taille d'Icones:</French>
-		<German>Symbolgröße:</German>
-		<Russian>Размер изображения:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INCREASE_LOCAL_REBELS</Tag>
@@ -8977,18 +8970,21 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>Comme les pré-requis sont devenus incompatibles avec votre unité, Votre %s1_Unit a perdu sa promotion %s2_Promotion.</French>
 		<Italian>Avendo perso una delle promozioni prerequisito, la tua unità %s1_Unit ha perso la promozione %s2_Promotion.</Italian>
 		<Polish>Straciłeś jedną z wytycznych potrzebnych do promocji więc, Twoja jednostka: %s1_Unit traci: %s2_Promotion</Polish>
+		<Russian>Потеряв одну из базовых квалификаций, ваш %s1_Unit утратил свою квалификацию %s2_Promotion.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_CAN_RETRAIN</Tag>
 		<English>Since your unit is inapable of Ranged Assault Attacks, your %s1_Unit has lost its %s2_Promotion promotion and may now select a new promotion.</English>
 		<French>Comme votre unité est inapte à mener des Attaques à distance, Votre %s1_Unit a perdu sa promotion %s2_Promotion et peut à présent choisir une nouvelle promotion.</French>
 		<Polish>Ponieważ Twoja jednostka jest niezdolna do ataków dystansowych, Twój %s1_Unit stracił swoją %s2_Promotion promocję i teraz może wybrać inną.</Polish>
+		<Russian>Поскольку ваш отряд не способен к дальнобойным атакам, ваш %s1_Unit утратил свою квалификацию %s2_Promotion и теперь может выбрать другой навык.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_NO_RETRAIN</Tag>
 		<English>Since your unit is inapable of Ranged Assault Attacks, your %s1_Unit has lost its %s2_Promotion promotion.</English>
 		<French>Comme votre unité est inapte à mener des Attaques à distance, Votre %s1_Unit a perdu sa promotion %s2_Promotion.</French>
 		<Polish>Ponieważ Twoja jednostka jest niezdolna do ataków dystansowych, Twój %s1_Unit stracił swoją %s2_Promotion promocję.</Polish>
+		<Russian>Поскольку ваш отряд не способен к дальнобойным атакам, ваш %s1_Unit утратил свою квалификацию %s2_Promotion.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_TECH_CAN_RETRAIN</Tag>
@@ -9442,7 +9438,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_SHIFT_ALT_PREPARE_WAR</Tag>
 		<English>(&lt;SHIFT+ALT&gt; to Prepare for War)</English>
 		<French>(&lt;SHIFT+ALT&gt; pour Préparer la Guerre)</French>
-		<German>(&lt;SHIFT+ALT&gt; zur Kriegsvorbereitung)</German>
+		<German>(&lt;UMSCHALT+ALT&gt; zur Kriegsvorbereitung)</German>
 		<Italian>(&lt;SHIFT+ALT&gt; per prepararti alla guerra)</Italian>
 		<Spanish>(&lt;SHIFT+ALT&gt; para preparar la guerra)</Spanish>
 		<Polish>(SHIFT+ALT) aby Wypowiedzieć Wojnę)</Polish>
@@ -9701,7 +9697,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_TRAIT_CYCLING_HELP</Tag>
 		<English>Hold down shift and mouseover again to open up the next trait's full display.</English>
 		<French>Maintenez la touche MAJ enfoncée et placer la souris pour afficher l'ensemble des informations concernant le prochain trait.</French>
-		<German>Drücken Sie [SHIFT] beim Aufrufen dieser Daten, um ausführliche Informationen über die nächste Eigenschaft dieses Oberhaupts zu erhalten.</German>
+		<German>Drücken Sie &lt;UMSCHALT&gt; beim Aufrufen dieser Daten, um ausführliche Informationen über die nächste Eigenschaft dieses Oberhaupts zu erhalten.</German>
 		<Italian>Tieni premuto SHIFT e sposta sopra il cursore del mouse per vedere le caratteristiche approfondite del prossimo tratto.</Italian>
 		<Polish>Przytrzymaj wciśnięty SHIFT i najedź myszką by otworzyć pełne okno następnej cechy.</Polish>
 		<Russian>Удерживайте Shift и наведите курсор мыши еще раз, чтобы открыть полный экран с характеристиками черт.</Russian>
@@ -13859,18 +13855,18 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES</Tag>
-		<English>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Requires[SPACE]</English>
-		<French>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
-		<German>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
-		<Russian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Òðåáóåòñÿ:[SPACE]</Russian>
+		<English>[NEWLINE][COLOR_WARNING_TEXT]Requires[SPACE]</English>
+		<French>[NEWLINE][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
+		<German>[NEWLINE][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
+		<Italian>[NEWLINE][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
+		<Spanish>[NEWLINE][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
+		<Polish>[NEWLINE][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
+		<Russian>[NEWLINE][COLOR_WARNING_TEXT]Òðåáóåòñÿ:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_IN_CITY_VICINITY</Tag>
-		<English>[COLOR_WARNING_TEXT]Bonus required in city and in city vicinity, or manufactured locally:</English>
-		<French>[COLOR_WARNING_TEXT]Bonus requis dans la ville et ses environs, ou fabriqué localement:</French>
+		<English>[COLOR_WARNING_TEXT]Bonus required in city and in city vicinity, or manufactured locally:[SPACE]</English>
+		<French>[COLOR_WARNING_TEXT]Bonus requis dans la ville et ses environs, ou fabriqué localement:[SPACE]</French>
 		<Russian>[COLOR_WARNING_TEXT]Íåîáõîäèì îõâàò ãîðîäñêîé ãðàíèöåé:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
@@ -13885,9 +13881,9 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_RAW_IN_CITY_VICINITY</Tag>
-		<English>[COLOR_WARNING_TEXT]Bonus required in city vicinity, or manufactured locally (No need for improvement):</English>
-		<French>[COLOR_WARNING_TEXT]Bonus requis dans les environs de la ville ou fabriqué localement (pas besoin d'amélioration):</French>
-		<Russian>[COLOR_WARNING_TEXT]Бонус, расположенный в окрестностях города или произведенный на месте (не требует улучшения): </Russian>
+		<English>[COLOR_WARNING_TEXT]Bonus required in city vicinity, or manufactured locally (No need for improvement):[SPACE]</English>
+		<French>[COLOR_WARNING_TEXT]Bonus requis dans les environs de la ville ou fabriqué localement (pas besoin d'amélioration):[SPACE]</French>
+		<Russian>[COLOR_WARNING_TEXT]Бонус, расположенный в окрестностях города или произведенный на месте (не требует улучшения):[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_RAW_VICINITY_BONUS</Tag>
@@ -21281,6 +21277,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_TB_PRESSALT_STR</Tag>
 		<English>Press ALT to view all Strength In Numbers Modifiers</English>
 		<French>Appuyer sur 'ALT' pour voir tous les modificateurs du Combat</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]&lt;ALT&gt;[COLOR_REVERT] für Gemeinsam-sind-wir-stark-Modifikatoren[COLOR_REVERT]</German>	
 		<Italian>Premi ALT per vedere tutti i modificatori riguardanti La forza nei numeri</Italian>
 		<Polish>Naciśnij ALT aby zobaczyć Modyfikatory Siły-w-Grupie</Polish>
 		<Russian>Нажмите ALT, чтобы просмотреть все модификаторы Силы в числах</Russian>
@@ -21289,6 +21286,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_TB_PRESSCTRL</Tag>
 		<English>[ICON_BULLET]Press CTRL for Advanced Combat calculations.</English>
 		<French>[ICON_BULLET]Appuyer sur [BOLD]CTRL[\BOLD] pour les calculs du Combat Avancé.</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]&lt;STRG&gt;[COLOR_REVERT] für Berechnung erweiterter Siegchancen[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Premi [BOLD]CTRL[\BOLD] per i calcoli di Combattimento avanzato.</Italian>
 		<Polish>[ICON_BULLET]Naciśnij [BOLD]CTRL[\BOLD] dla Zaawansowanych Obliczeń Walki.</Polish>
 		<Russian>[ICON_BULLET]Нажмите CTRL для расширенных расчетов боя.</Russian>
@@ -21316,5 +21314,18 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;UMSCHALT&gt;[COLOR_REVERT] für Anzeige der Kategorien</German>
 		<Polish>Naciśnij SHIFT aby zobaczyć Klasy Bojowe</Polish>
 		<Russian>Íàæìèòå SHIFT äëÿ ïðîñìîòðà áîåâûõ êëàññîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_REQUIRES_STRING</Tag>
+		<!-- %s1_Text = can be any building, bonus, civic etc -->
+		<English>[COLOR_WARNING_TEXT]Requires %s1_Text[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert : %s1_Text[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Erfordert: %s1_Text[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede %s1_Text[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Text[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ENEMY_TROOPS_SPOTTED</Tag>
+		<English>The enemy has been spotted near %s1_CityName!</English>
 	</TEXT>
 </Civ4GameText>
