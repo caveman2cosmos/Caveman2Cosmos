@@ -10,7 +10,6 @@
 			<Era>C2C_ERA_ANCIENT</Era>
 			<bGlobal>1</bGlobal>
 			<iCost>242</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<OrPreReqs>
 				<PrereqTech>TECH_LEISURE</PrereqTech>
 			</OrPreReqs>

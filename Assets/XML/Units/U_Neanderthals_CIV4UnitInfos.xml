@@ -2254,8 +2254,8 @@
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANTS</BonusType>

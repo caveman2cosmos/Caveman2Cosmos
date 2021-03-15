@@ -668,13 +668,9 @@ void CvGameObjectCity::foreachManipulator(ManipCallbackFn func) const
 	// Building manipulators apply to cities
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if(m_pCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
+		if (m_pCity->hasFullyActiveBuilding((BuildingTypes)iI))
 		{
-			//Team Project (5)
-			if (!m_pCity->isReligiouslyDisabledBuilding((BuildingTypes)iI))
-			{
-				func(GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators());
-			}
+			func(GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators());
 		}
 	}
 
@@ -775,7 +771,7 @@ void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 			for (int i=0; i<iNum; i++)
 			{
 				const PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
-				const bool bHasBuilding = m_pCity->getNumRealBuilding(kBuilding.eBuilding) > 0;
+				const bool bHasBuilding = m_pCity->getNumActiveBuilding(kBuilding.eBuilding) > 0;
 				const bool bInRange = (iNewValue >= kBuilding.iMinValue) && (iNewValue <= kBuilding.iMaxValue);
 				if (!bInRange)
 				{

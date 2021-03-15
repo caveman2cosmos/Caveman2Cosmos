@@ -27,7 +27,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -77,7 +76,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -127,7 +125,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -177,7 +174,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -256,7 +252,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -331,7 +326,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -388,7 +382,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -494,7 +487,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -989,7 +981,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -1065,7 +1056,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -1115,7 +1105,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -1165,7 +1154,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -1222,7 +1210,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iUniqueRange>2</iUniqueRange>
@@ -1281,7 +1268,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iUniqueRange>2</iUniqueRange>
@@ -1342,7 +1328,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iUniqueRange>2</iUniqueRange>
@@ -1403,7 +1388,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iUniqueRange>2</iUniqueRange>
@@ -1496,7 +1480,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iUniqueRange>2</iUniqueRange>
@@ -1588,7 +1571,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iUniqueRange>2</iUniqueRange>
@@ -1637,7 +1619,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iUniqueRange>2</iUniqueRange>
@@ -1686,7 +1667,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iUniqueRange>2</iUniqueRange>
@@ -1753,7 +1733,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iUniqueRange>2</iUniqueRange>
@@ -1812,7 +1791,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iUniqueRange>2</iUniqueRange>
@@ -1861,7 +1839,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iUniqueRange>2</iUniqueRange>
@@ -1910,7 +1887,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iUniqueRange>2</iUniqueRange>
@@ -1985,7 +1961,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iUniqueRange>2</iUniqueRange>
@@ -2044,7 +2019,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -2162,7 +2136,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -2210,7 +2183,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -2258,7 +2230,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -2330,7 +2301,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -2462,7 +2432,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -2548,7 +2517,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -2626,7 +2594,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -2694,7 +2661,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -2754,7 +2720,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -2850,7 +2815,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -2938,7 +2902,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -2986,7 +2949,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -3052,7 +3014,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -3118,7 +3079,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -3182,7 +3142,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -3250,7 +3209,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -3308,7 +3266,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -3356,7 +3313,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -3416,7 +3372,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
@@ -3478,7 +3433,6 @@
 			<bPermanent>0</bPermanent>
 			<bUseLSystem>0</bUseLSystem>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>

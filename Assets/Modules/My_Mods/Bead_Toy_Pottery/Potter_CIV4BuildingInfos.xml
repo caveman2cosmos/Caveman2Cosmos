@@ -157,7 +157,6 @@
 			</BonusCommerceModifiers>
 			<!-- Special properties -->
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<!-- Properties diffusion -->
 			<Properties>
 				<Property>
@@ -227,7 +226,6 @@
 			</BonusCommerceModifiers>
 			<!-- Special properties -->
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<!-- Properties diffusion -->
 			<Properties>
 				<Property>
@@ -494,7 +492,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses-->
 			<!-- Special properties -->
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<!-- Properties diffusion -->
 			<Properties>
 				<Property>
@@ -553,7 +550,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<!-- Properties diffusion -->
 			<Properties>
 				<Property>

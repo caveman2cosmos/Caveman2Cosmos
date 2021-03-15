@@ -1148,44 +1148,76 @@ void setBestStartingPlotFromSet(CvPlayerAI* playerX, std::vector<CvPlot*>& start
 	startingPlots.erase(startingPlots.begin() + iBestPlot);
 }
 
-// Toffer - Scenarios with random players use this code.
-void CvGame::assignScenarioStartingPlots()
+
+void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 {
+	PROFILE_FUNC();
 
-	std::vector<CvPlayerAI*> alivePlayers;
-
-	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+	if (!bScenario && !bMapScript)
 	{
-		CvPlayerAI* playerX = &GET_PLAYER((PlayerTypes)iI);
-
-		if (playerX->isAlive())
+		// Python override - Most mapscripts overide
+		bool bAssignStartingPlots = false;
+		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "assignStartingPlots", bAssignStartingPlots)
+		&& bAssignStartingPlots)
 		{
-			alivePlayers.push_back(playerX);
+			return;
 		}
 	}
-	// Scenario may arbitrary define the starting plot for only some of the player slots.
-	const int iNumPlayers = alivePlayers.size();
 
-	std::vector<CvPlot*> startingPlots;
-
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	std::vector<CvPlayerAI*> alivePlayers;
 	{
-		gDLL->callUpdater(); // allow window updates during launch
-
-		CvPlot* pPlot = GC.getMap().plotByIndex(iI);
-
-		if (pPlot->isStartingPlot())
+		bool bAllDone = true;
+		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
-			for (int iJ = 0; iJ < iNumPlayers; iJ++)
+			CvPlayerAI* playerX = &GET_PLAYER((PlayerTypes)iI);
+
+			if (playerX->isAlive())
 			{
-				if (alivePlayers[iJ]->getStartingPlot() == pPlot)
+				alivePlayers.push_back(playerX);
+
+				if (bAllDone && playerX->getStartingPlot() == NULL)
 				{
-					pPlot = NULL;
-					break;
+					bAllDone = false;
 				}
 			}
-			if (pPlot)
+		}
+		if (bAllDone)
+		{
+			return;
+		}
+	}
+	const int iNumPlayers = alivePlayers.size();
+	std::vector<CvPlot*> startingPlots;
+
+	// Scenario may arbitrary define the starting plot for only some of the player slots.
+	// World mapscript only assigns starting plot flag to plots, not starting plot to players.
+	if (bScenario || bMapScript)
+	{
+		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+		{
+			gDLL->callUpdater(); // allow window updates during launch
+
+			CvPlot* pPlot = GC.getMap().plotByIndex(iI);
+
+			if (pPlot->isStartingPlot())
 			{
+				if (bScenario)
+				{
+					// Only scenarios assign starting plots to players.
+					// Check if the starting plot is already assign a player.
+					for (int iJ = 0; iJ < iNumPlayers; iJ++)
+					{
+						if (alivePlayers[iJ]->getStartingPlot() == pPlot)
+						{
+							pPlot = NULL;
+							break;
+						}
+					}
+					if (!pPlot)
+					{
+						continue;
+					}
+				}
 				startingPlots.push_back(pPlot);
 			}
 		}
@@ -1227,7 +1259,7 @@ void CvGame::assignScenarioStartingPlots()
 					{
 						setBestStartingPlotFromSet(aliveAIs[iCountAI], startingPlots);
 					}
-					else aliveAIs[iCountAI]->setStartingPlot(aliveAIs[iCountAI]->findStartingPlot(true), true);
+					else aliveAIs[iCountAI]->setStartingPlot(aliveAIs[iCountAI]->findStartingPlot(bScenario), true);
 
 					iCountAI++;
 					iOrder++;
@@ -1238,7 +1270,7 @@ void CvGame::assignScenarioStartingPlots()
 		{
 			setBestStartingPlotFromSet(aliveHumans[iI].second, startingPlots);
 		}
-		else aliveHumans[iI].second->setStartingPlot(aliveHumans[iI].second->findStartingPlot(true), true);
+		else aliveHumans[iI].second->setStartingPlot(aliveHumans[iI].second->findStartingPlot(bScenario), true);
 	}
 	while (iNumAIs > iCountAI)
 	{
@@ -1246,68 +1278,8 @@ void CvGame::assignScenarioStartingPlots()
 		{
 			setBestStartingPlotFromSet(aliveAIs[iCountAI], startingPlots);
 		}
-		else aliveAIs[iCountAI]->setStartingPlot(aliveAIs[iCountAI]->findStartingPlot(true), true);
+		else aliveAIs[iCountAI]->setStartingPlot(aliveAIs[iCountAI]->findStartingPlot(bScenario), true);
 
-		iCountAI++;
-	}
-}
-
-void CvGame::assignStartingPlots()
-{
-	PROFILE_FUNC();
-	{
-		// Python override - Most mapscripts overide
-		bool bAssignStartingPlots = false;
-		if (Cy::call_override(gDLL->getPythonIFace()->getMapScriptModule(), "assignStartingPlots", bAssignStartingPlots)
-		&& bAssignStartingPlots)
-		{
-			return;
-		}
-	}
-	std::vector<CvPlayerAI*> aliveAIs;
-	std::vector< std::pair<int, CvPlayerAI*> > aliveHumans;
-
-	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
-	{
-		CvPlayerAI* playerX = &GET_PLAYER((PlayerTypes)iI);
-
-		if (playerX->isAlive() && playerX->getStartingPlot() == NULL)
-		{
-			if (playerX->isHuman())
-			{
-				aliveHumans.push_back(std::make_pair(GC.getHandicapInfo(playerX->getHandicapType()).getStartingLocationPercent(), playerX));
-			}
-			else aliveAIs.push_back(playerX);
-		}
-	}
-	std::sort(aliveHumans.begin(), aliveHumans.end());
-
-	const int iNumAIs = aliveAIs.size();
-	const int iNumHumans = aliveHumans.size();
-
-	int iOrder = 0;
-	int iCountAI = 0;
-	for (int iI = 0; iI < iNumHumans; iI++)
-	{
-		iOrder++;
-		if (!aliveAIs.empty())
-		{
-			const int iMyOrder = (iNumHumans + iNumAIs) * aliveHumans[iI].first / 100;
-			if (iOrder < iMyOrder)
-			{
-				while (iNumAIs > iCountAI && iOrder < iMyOrder)
-				{
-					aliveAIs[iCountAI]->setStartingPlot(aliveAIs[iCountAI]->findStartingPlot(), true);
-					iCountAI++;
-					iOrder++;
-				}
-			}
-		}
-		aliveHumans[iI].second->setStartingPlot(aliveHumans[iI].second->findStartingPlot(), true);
-	}
-	while (iNumAIs > iCountAI)
-	{
-		aliveAIs[iCountAI]->setStartingPlot(aliveAIs[iCountAI]->findStartingPlot(), true);
 		iCountAI++;
 	}
 }
@@ -5170,10 +5142,11 @@ bool CvGame::isBuildingMaxedOut(BuildingTypes eIndex, int iExtra) const
 }
 
 
-void CvGame::incrementBuildingCreatedCount(BuildingTypes eIndex)
+void CvGame::changeNumBuildings(const BuildingTypes eIndex, const short iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
-	m_paiBuildingCreatedCount[eIndex]++;
+	m_paiBuildingCreatedCount[eIndex] += iChange;
+	FAssert(m_paiBuildingCreatedCount[eIndex] > -1);
 }
 
 
@@ -6506,7 +6479,6 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 							const int iFinalIndex = aRandomList[iResult];
 							const UnitCombatTypes eGroupVolume = kUnit.getGroupSpawnUnitCombatType(iFinalIndex).eUnitCombat;
 							CvWString szTitle = kUnit.getGroupSpawnUnitCombatType(iFinalIndex).m_szTitle;
-							const CvWString szOriginal = pUnit->getName();
 							//remove old group volume unitcombat
 							if (eGroupVolume != NO_UNITCOMBAT)
 							{
@@ -6529,8 +6501,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 							//adjust the name of the unit
 							if (!szTitle.empty())
 							{
-								szNewNameBuffer.append(gDLL->getText(szTitle));
-								szNewNameBuffer.append(gDLL->getText(szOriginal));
+								szNewNameBuffer.append(gDLL->getText(szTitle, pUnit->getNameKey()));
 								pUnit->setName(szNewNameBuffer);
 								szNewNameBuffer.clear();
 								szTitle.clear();
@@ -9412,6 +9383,8 @@ ReligionTypes CvGame::getVoteSourceReligion(VoteSourceTypes eVoteSource) const
 
 void CvGame::setVoteSourceReligion(VoteSourceTypes eVoteSource, ReligionTypes eReligion, bool bAnnounce)
 {
+	FAssert(eReligion != NO_RELIGION);
+
 	m_mapVoteSourceReligions[eVoteSource] = eReligion;
 
 	if (bAnnounce && NO_RELIGION != eReligion)
@@ -10164,10 +10137,12 @@ bool CvGame::foundBarbarianCity()
 	int iBestValue = 0;
 	CvPlot* pBestPlot = NULL;
 
+	const MapCategoryTypes earth = GC.getMAPCATEGORY_EARTH();
+
 	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 	{
 		CvPlot* plotX = GC.getMap().plotByIndex(iPlot);
-		if (plotX->isWater() || plotX->isImpassable() || plotX->isCity() || plotX->getImprovementType() != NO_IMPROVEMENT)
+		if (plotX->isWater() || plotX->isImpassable() || plotX->isCity() || plotX->getImprovementType() != NO_IMPROVEMENT || !plotX->isMapCategoryType(earth))
 		{
 			continue;
 		}
@@ -11872,7 +11847,7 @@ void CvGame::recalculateModifiers()
 			foreach_(CvCity* pLoopCity, kLoopPlayer.cities())
 			{
 				pLoopCity->doVicinityBonus();
-				pLoopCity->checkBuildings(true, true, true, true, true, false);
+				pLoopCity->checkBuildings(false);
 			}
 		}
 	}

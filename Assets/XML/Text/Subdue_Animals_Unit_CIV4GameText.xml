@@ -1043,6 +1043,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_NILECROC</Tag>
 		<English>Subdued Nile Crocodile</English>
 		<French>Crocodile du Nil (App.)</French>
+		<German>
+			<Text>Gefangenes Nilkrokodil:Gefangenen Nilkrokodils:Gefangenen Nilkrokodil:Gefangene Nilkrokodil:Gefangene Nilkrokodile:Gefangenen Nilkrokodile:Gefangenen Nilkrokodilen:Gefangenen Nilkrokodile</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Coccodrillo del Nilo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1379,7 +1384,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROCL</Tag>
-		<English>Subdued Salt water crocodile (large)</English>
+		<English>Subdued Saltwater Crocodile (Large)</English>
 		<French>Grand Crocodile de mer (App.)</French>
 		<Italian>
 			<Text>Coccodrillo marino (grande) addomesticato</Text>
@@ -1391,7 +1396,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROCS</Tag>
-		<English>Subdued Salt water crocodile (small)</English>
+		<English>Subdued Saltwater Crocodile (Small)</English>
 		<French>Petit Crocodile de mer (App.)</French>
 		<Italian>
 			<Text>Coccodrillo marino (piccolo) addomesticato</Text>
@@ -2002,7 +2007,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TALESOF_SALTWATER_CROCL</Tag>
-		<English>Tales of Salt water crocodile (large)</English>
+		<English>Tales of Saltwater Crocodile (Large)</English>
 		<French>
 			<Text>Histoires de Grands Crocodiles des mers</Text>
 			<Gender>Male</Gender>
@@ -2018,7 +2023,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TALESOF_SALTWATER_CROCS</Tag>
-		<English>Tales of Salt water crocodile (small)</English>
+		<English>Tales of Saltwater Crocodile (Small)</English>
 		<French>
 			<Text>Histoires de petits Crocodiles des mers</Text>
 			<Gender>Male</Gender>

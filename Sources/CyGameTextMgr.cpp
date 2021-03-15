@@ -97,10 +97,10 @@ std::wstring CyGameTextMgr::getSpecificUnitHelp(CyUnit* pUnit, bool bOneLine, bo
 	return szBuffer.getCString();
 }
 
-std::wstring CyGameTextMgr::getBuildingHelp(int iBuilding, bool bCivilopediaText, bool bStrategyText, bool bTechChooserText, CyCity* pCity, bool bActual)
+std::wstring CyGameTextMgr::getBuildingHelp(int iBuilding, bool bActual, CyCity* pCity, bool bCivilopediaText, bool bStrategyText, bool bTechChooserText)
 {
 	CvWStringBuffer szBuffer;
-	GAMETEXT.setBuildingHelpActual(szBuffer, (BuildingTypes)iBuilding, bCivilopediaText, bStrategyText, bTechChooserText, ((pCity != NULL) ? pCity->getCity() : NULL), bActual);
+	GAMETEXT.setBuildingHelp(szBuffer, (BuildingTypes)iBuilding, bActual, pCity != NULL ? pCity->getCity() : NULL, bCivilopediaText, bStrategyText, bTechChooserText);
 	return szBuffer.getCString();
 }
 

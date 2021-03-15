@@ -27,7 +27,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_1_HQ</Tag>
-		<English>Cereal Mills HQ</English>
+		<English>HQ - Cereal Mills</English>
 		<Russian>Продукты из злаков</Russian>
 	</TEXT>
 	<TEXT>
@@ -66,7 +66,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_2_HQ</Tag>
-		<English>Sid's Sushi Co HQ</English>
+		<English>HQ - Sid's Sushi Co</English>
 		<Russian>Суши от Сида</Russian>
 	</TEXT>
 	<TEXT>
@@ -105,7 +105,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_3_HQ</Tag>
-		<English>Ethanol Inc. HQ</English>
+		<English>HQ - Ethanol Inc.</English>
 		<Russian>Этанол-стандарт</Russian>
 	</TEXT>
 	<TEXT>
@@ -144,7 +144,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_4_HQ</Tag>
-		<English>Creative Constructions HQ</English>
+		<English>HQ - Creative Constructions</English>
 		<Russian>Креативстрой</Russian>
 	</TEXT>
 	<TEXT>
@@ -183,7 +183,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_5_HQ</Tag>
-		<English>Mining Inc HQ</English>
+		<English>HQ - Mining Inc</English>
 		<Russian>Горные ресурсы</Russian>
 	</TEXT>
 	<TEXT>
@@ -222,7 +222,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_6_HQ</Tag>
-		<English>Aluminum Co HQ</English>
+		<English>HQ - Aluminum Co</English>
 		<Russian>Промалюминий</Russian>
 	</TEXT>
 	<TEXT>
@@ -261,7 +261,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_7_HQ</Tag>
-		<English>Civilized Jewelers Inc HQ</English>
+		<English>HQ - Civilized Jewelers Inc</English>
 		<Russian>Мировые ювелиры</Russian>
 	</TEXT>
 	<TEXT>
@@ -305,7 +305,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_HQ</Tag>
-		<English>Adventure Tours HQ</English>
+		<English>HQ - Adventure Tours</English>
 		<French>Le Siège de Aventure Tours</French>
 		<German>
 			<Text>Adventure-Tours-Zentrale:Adventure-Tours-Zentrale:Adventure-Tours-Zentrale:Adventure-Tours-Zentrale</Text>
@@ -335,7 +335,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_HQ</Tag>
-		<English>Bullseye HQ</English>
+		<English>HQ - Bullseye</English>
 		<French>Le Siège de Gran'Frais</French>
 		<German>Bullseye Zentrale</German>
 		<Italian>QG di Bullseye</Italian>
@@ -379,7 +379,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_HQ</Tag>
-		<English>Burgerworld HQ</English>
+		<English>HQ - Burgerworld</English>
 		<French>Le Siège de MondoBurger</French>
 		<German>Burgerworld-Zentrale</German>
 		<Italian>QG di Burgerworld</Italian>
@@ -424,7 +424,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_HQ</Tag>
-		<English>Emperors Clothing HQ</English>
+		<English>HQ - Emperors Clothing</English>
 		<French>Siège des Habits Impériaux</French>
 		<German>Emperors-Clothing-Zentrale</German>
 		<Italian>QG di Emperors Clothing</Italian>
@@ -474,7 +474,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE_HQ</Tag>
-		<English>East West Traders HQ</English>
+		<English>HQ - East West Traders</English>
 		<French>Le Siège de 'East West Traders'</French>
 		<German>East-West-Traders-Zentrale</German>
 		<Italian>QG di East West Traders</Italian>
@@ -518,7 +518,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_FASHION_HQ</Tag>
-		<English>Fashion House HQ</English>
+		<English>HQ - Fashion House</English>
 		<French>Le Siège de Maison de la Mode</French>
 		<German>Fashion-House-Zentrale</German>
 		<Italian>GQ di Fashion House</Italian>
@@ -568,7 +568,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MALLWART_HQ</Tag>
-		<English>MallWart HQ</English>
+		<English>HQ - MallWart</English>
 		<French>Le Siège de Carouf'</French>
 		<German>MallWart-Zentrale</German>
 		<Italian>QG di MallWart</Italian>
@@ -614,7 +614,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MAPSTER_HQ</Tag>
-		<English>Mapster HQ</English>
+		<English>HQ - Mapster</English>
 		<French>Le Siège de Mapster</French>
 		<German>Mapster-Zentrale</German>
 		<Italian>QG di Mapster</Italian>
@@ -644,7 +644,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_HQ</Tag>
-		<English>Big McDowells HQ</English>
+		<English>HQ - Big McDowells</English>
 		<French>Le Siège de Big McDowells</French>
 		<German>Big-McDowells-Zentrale</German>
 		<Italian>QG di Big McDowells</Italian>
@@ -707,7 +707,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_HQ</Tag>
-		<English>MileHigh Travels International HQ</English>
+		<English>HQ - MileHigh Travels International</English>
 		<French>Le Siège de 'MileHigh Voyages International'</French>
 		<German>MileHigh-Travels-International-Zentrale</German>
 		<Italian>QG di MileHigh Travels International</Italian>
@@ -730,7 +730,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOBBY_HQ</Tag>
-		<English>Mobby Meats International HQ</English>
+		<English>HQ - Mobby Meats International</English>
 		<French>Le Siège de 'Mobby Meats International'</French>
 		<German>Mobby-Meats-International-Zentrale</German>
 		<Italian>QG di Mobby Meats International</Italian>
@@ -775,7 +775,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_HQ</Tag>
-		<English>MoonBean Coffee HQ</English>
+		<English>HQ - MoonBean Coffee</English>
 		<French>Siège des Cafés MoonBean</French>
 		<German>MoonBean-Coffee-Zentrale</German>
 		<Italian>QG di MoonBean Coffee</Italian>
@@ -817,7 +817,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_RED_HQ</Tag>
-		<English>Red Curtains HQ</English>
+		<English>HQ - Red Curtains</English>
 		<French>Le Siège de Red Curtains</French>
 		<German>Red-Curtains-Zentrale</German>
 		<Italian>QG di Red Curtains</Italian>
@@ -880,7 +880,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_SAFARI_HQ</Tag>
-		<English>Safari Hunters HQ</English>
+		<English>HQ - Safari Hunters</English>
 		<French>Siège des Chasseurs Safari</French>
 		<German>Safari-Hunters-Zentrale</German>
 		<Italian>QG di Safari Hunters</Italian>
@@ -905,7 +905,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_HQ</Tag>
-		<English>Ultimate Soldiers HQ</English>
+		<English>HQ - Ultimate Soldiers</English>
 		<French>Le Siège de Soldats Ultimes</French>
 		<German>Ultimate Soldiers Zentrale</German>
 		<Italian>QG di Ultimate Soldiers</Italian>
@@ -947,7 +947,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_WONKA_HQ</Tag>
-		<English>Wonka Confectioneries HQ</English>
+		<English>HQ - Wonka Confectioneries</English>
 		<French>Siège des Confiseries Wonka</French>
 		<German>Wonka Confiserie Zentrale</German>
 		<Italian>QG di Wonka Confectioneries</Italian>
