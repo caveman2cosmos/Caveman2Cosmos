@@ -318,6 +318,6 @@ The Great Wall is always dynamic if viewports are enabled regardless of this set
 	</Define>
 	<Define>
 		<DefineName>C2C_VERSION</DefineName>
-		<DefineTextVal>v41.1</DefineTextVal>
+		<DefineTextVal>v41.2</DefineTextVal>
 	</Define>
 </Civ4Defines>
