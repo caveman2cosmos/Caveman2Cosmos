@@ -247,6 +247,7 @@ public:
 	int countUnimprovedBonuses(const CvArea* pArea, const CvPlot* pFromPlot = NULL) const;
 	int countCityFeatures(FeatureTypes eFeature) const;
 	int countNumBuildings(BuildingTypes eBuilding) const;
+	bool hasBuilding(const BuildingTypes eBuilding) const;
 	int countNumCitiesConnectedToCapital() const;
 	int countPotentialForeignTradeCities(const CvArea* pIgnoreArea = NULL) const;
 	int countPotentialForeignTradeCitiesConnected() const;
@@ -383,7 +384,7 @@ public:
 	int specialistCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const;
 
 	CvPlot* getStartingPlot() const;
-	void setStartingPlot(const CvPlot* pNewValue, bool bUpdateStartDist);
+	void setStartingPlot(CvPlot* pNewValue, const bool bUpdateStartDist);
 
 	int getTotalPopulation() const;
 	int getAveragePopulation() const;
@@ -2242,7 +2243,6 @@ public:
 
 	void updateTechHappinessandHealth();
 	void checkReligiousDisablingAllBuildings();
-	bool isBuildingtoDisplayReligiouslyDisabled(BuildingTypes eBuilding) const;
 
 	void doGoldenAgebyPercentage(int iPercent);
 	//TB Traits end

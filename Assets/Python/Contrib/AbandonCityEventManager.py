@@ -113,7 +113,7 @@ class CityDemolish:
 		aList = []
 		iSum = 0
 		for iType in xrange(GC.getNumBuildingInfos()):
-			if CyCity.getNumRealBuilding(iType) and not CyTeam.isObsoleteBuilding(iType) and not CyCity.isFreeBuilding(iType):
+			if CyCity.getNumRealBuilding(iType) and not CyCity.isFreeBuilding(iType):
 				if isWorldWonder(iType) or isTeamWonder(iType):
 					continue
 				CvBuildingInfo = GC.getBuildingInfo(iType)
@@ -191,10 +191,8 @@ class CityDemolish:
 			iForeignPop = iPopulation - iOwnCulturePop
 
 			# Judge
-			UNIT = GC.getInfoTypeForString("UNIT_JUDGE")
-			iBuilding = GC.getInfoTypeForString("BUILDING_COURTHOUSE")
-			if UNIT > -1 and iBuilding > -1 and CyCity.getNumBuilding(iBuilding):
-				CyMessageControl().sendModNetMessage(905, iPlayer, iCity, -1, UNIT)
+			if CyCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_COURTHOUSE")):
+				CyMessageControl().sendModNetMessage(905, iPlayer, iCity, -1, GC.getInfoTypeForString("UNIT_JUDGE"))
 
 			# Tribal Guardian
 			iExp = -1
@@ -238,7 +236,7 @@ class CityDemolish:
 					if bContinue: continue
 					# Building Prereq
 					for i in xrange(CvUnitInfo.getNumPrereqAndBuildings()):
-						if not CyCity.getNumBuilding(CvUnitInfo.getPrereqAndBuilding(i)):
+						if not CyCity.getNumActiveBuilding(CvUnitInfo.getPrereqAndBuilding(i)):
 							continue
 					# Bonus Prereq
 					iBonus = CvUnitInfo.getPrereqAndBonus()
@@ -360,7 +358,7 @@ class CityDemolish:
 		print "ACEM - handleInput"
 		if iNotifyCode == NotifyCode.NOTIFY_CURSOR_MOVE_ON:
 			if szSplit[0] in ("List", "ListBtn"):
-				szText = CyGameTextMgr().getBuildingHelp(ID, False, False, False, self.CyCity, True)
+				szText = CyGameTextMgr().getBuildingHelp(ID, True, self.CyCity, False, False, False)
 				self.updateTooltip(screen, szText, self.xListTooltip)
 		elif iNotifyCode == NotifyCode.NOTIFY_CLICKED:
 			if szSplit[0] == "Exit":

@@ -1594,10 +1594,6 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>CITY_MAX_NUM_BUILDINGS</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>RANGED_ATTACKS_USE_MOVES</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>

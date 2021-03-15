@@ -130,11 +130,6 @@ int CyGame::getVoteSourceReligion(int /*VoteSourceTypes*/ eVoteSource) const
 	return m_pGame.getVoteSourceReligion((VoteSourceTypes) eVoteSource);
 }
 
-void CyGame::setVoteSourceReligion(int /*VoteSourceTypes*/ eVoteSource, int /*ReligionTypes*/ eReligion, bool bAnnounce)
-{
-	m_pGame.setVoteSourceReligion((VoteSourceTypes)eVoteSource, (ReligionTypes)eReligion, bAnnounce);
-}
-
 int CyGame::countCivPlayersAlive() const
 {
 	return m_pGame.countCivPlayersAlive();
@@ -1214,7 +1209,7 @@ const char* CyGame::getC2CVersion() const
 	return GC.getDefineSTRING("C2C_VERSION");
 }
 
-void CyGame::assignScenarioStartingPlots()
+void CyGame::assignStartingPlots(bool bScenario, bool bMapScript)
 {
-	m_pGame.assignScenarioStartingPlots();
+	m_pGame.assignStartingPlots(bScenario, bMapScript);
 }
