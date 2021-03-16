@@ -3719,10 +3719,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LUNAR_PATH</Tag>
 		<English>Build [LINK=ROUTE_LUNAR_PATH]Lunar Path[\LINK]</English>
+		<Russian>Ïðîëîæèòü [LINK=ROUTE_LUNAR_PATH]Ëóí. òðàññó[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANETARY_MAGLEV</Tag>
 		<English>Build [LINK=ROUTE_PLANETARY_MAGLEV]Planetary Maglev[\LINK]</English>
+		<Russian>Ñòðîèòü [LINK=ROUTE_PLANETARY_MAGLEV]Ìîíîðåëüñ[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_LUNAR_PATH</Tag>

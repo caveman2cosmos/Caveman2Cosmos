@@ -331,6 +331,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAMEL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Camel</English>
+		<Russian>Ïåñíÿ î âåðáëþäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPUCHIN_MYTH</Tag>
@@ -772,6 +773,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DRAGON_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Dragon</English>
+		<Russian>Ïåñíÿ î äðàêîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUGONG_MYTH</Tag>
@@ -972,6 +974,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOAT_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Goat</English>
+		<Russian>Ïåñíÿ î êîçëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOVENORS_MENAGERIE</Tag>
@@ -1326,6 +1329,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERMAID_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Mermaid</English>
+		<Russian>Ïåñíÿ î ðóñàëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINKIE_WHALE_MYTH</Tag>
@@ -1442,6 +1446,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OLD_MAN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Old Man of the Forest</English>
+		<Russian>Ïåñíÿ î ëåøåì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCA_MYTH</Tag>
@@ -1559,6 +1564,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHOENIX_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Phoenix</English>
+		<Russian>Ïåñíÿ î Ôåíèêñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIG_HERD</Tag>
@@ -2146,6 +2152,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNICORN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Unicorn</English>
+		<Russian>Ïåñíÿ îá åäèíîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALRUS_CAGE</Tag>
