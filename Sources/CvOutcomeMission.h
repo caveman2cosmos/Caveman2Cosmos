@@ -29,14 +29,14 @@ public:
 //	IntExpr* getCost();
 	GameObjectTypes getPayerType() const;
 
-	bool isPossible(const CvUnit* pUnit, bool bTestVisible = false) const;
-	void buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& pUnit) const;
+	bool isPossible(CvUnit* pUnit, bool bTestVisible = false) const;
+	void buildDisplayString(CvWStringBuffer& szBuffer, CvUnit* pUnit);
 	void execute(CvUnit* pUnit);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvOutcomeMission* pOutcomeMission);
 
-	void getCheckSum(uint32_t& iSum) const;
+	void getCheckSum(unsigned int& iSum) const;
 
 protected:
 	MissionTypes m_eMission;

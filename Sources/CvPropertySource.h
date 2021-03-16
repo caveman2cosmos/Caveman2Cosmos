@@ -32,7 +32,7 @@ public:
 	int getRelationData() const;
 	void setRelationData(int iRelationData);
 
-	virtual bool isActive(const CvGameObject* pObject) const;
+	virtual bool isActive(CvGameObject* pObject) const;
 
 	virtual PropertySourceTypes getType() const = 0;
 
@@ -44,7 +44,7 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp);
 
-	virtual void getCheckSum(uint32_t& iSum) const;
+	virtual void getCheckSum(unsigned int& iSum) const;
 protected:
 	PropertyTypes m_eProperty;
 	GameObjectTypes m_eObjectType;
@@ -73,7 +73,7 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp);
 
-	virtual void getCheckSum(uint32_t& iSum) const;
+	virtual void getCheckSum(unsigned int& iSum) const;
 
 protected:
 	IntExpr* m_pAmountPerTurn;
@@ -99,7 +99,7 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp);
 
-	virtual void getCheckSum(uint32_t& iSum) const;
+	virtual void getCheckSum(unsigned int& iSum) const;
 
 protected:
 	int m_iAmountPerTurn;
@@ -118,7 +118,7 @@ public:
 
 	virtual PropertySourceTypes getType() const { return PROPERTYSOURCE_DECAY; }
 
-	virtual bool isActive(const CvGameObject* pObject) const;
+	virtual bool isActive(CvGameObject* pObject) const;
 
 	virtual int getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext = NULL) const;
 	virtual int getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, const PropertySourceContext* pContext = NULL) const;
@@ -128,7 +128,7 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertySource* pProp);
 
-	virtual void getCheckSum(uint32_t& iSum) const;
+	virtual void getCheckSum(unsigned int& iSum) const;
 
 protected:
 	int m_iPercent;

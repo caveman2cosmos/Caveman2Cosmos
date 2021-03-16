@@ -1022,7 +1022,7 @@ void CvSelectionGroupAI::AI_noteSizeChange(int iChange, int iVolume)
 {
 	if ( m_eMissionAIType != NO_MISSIONAI )
 	{
-		const CvPlot* pPlot = AI_getMissionAIPlot();
+		CvPlot* pPlot = AI_getMissionAIPlot();
 
 		if ( pPlot != NULL )
 		{
@@ -1037,7 +1037,7 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 
 	if ( m_eMissionAIType != NO_MISSIONAI )
 	{
-		const CvPlot* pPlot = AI_getMissionAIPlot();
+		CvPlot* pPlot = AI_getMissionAIPlot();
 
 		if ( pPlot != NULL )
 		{
@@ -1069,7 +1069,7 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 
 	if ( m_eMissionAIType != NO_MISSIONAI )
 	{
-		const CvPlot* pPlot = AI_getMissionAIPlot();
+		CvPlot* pPlot = AI_getMissionAIPlot();
 
 		if ( pPlot != NULL )
 		{
@@ -1141,7 +1141,7 @@ int CvSelectionGroupAI::AI_getGenericValueTimes100(UnitValueFlags eFlags) const
 	return iResult;
 }
 
-bool CvSelectionGroupAI::AI_hasBeneficialPropertyEffectForCity(const CvCity* pCity) const
+bool CvSelectionGroupAI::AI_hasBeneficialPropertyEffectForCity(CvCity* pCity) const
 {
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
@@ -1154,7 +1154,7 @@ bool CvSelectionGroupAI::AI_hasBeneficialPropertyEffectForCity(const CvCity* pCi
 	return false;
 }
 
-CvUnit* CvSelectionGroupAI::AI_ejectBestPropertyManipulator(const CvCity* pTargetCity)
+CvUnit* CvSelectionGroupAI::AI_ejectBestPropertyManipulator(CvCity* pTargetCity)
 {	
 	CvUnit* pBestUnit = NULL;
 	int iBestUnitValue = 0;
@@ -1231,7 +1231,7 @@ CvUnit* CvSelectionGroupAI::AI_findBestDefender(const CvPlot* pDefendPlot, bool 
 	return pBestUnit;
 }
 
-CvUnit* CvSelectionGroupAI::AI_ejectBestDefender(const CvPlot* pDefendPlot, bool allowAllDefenders)
+CvUnit* CvSelectionGroupAI::AI_ejectBestDefender(CvPlot* pDefendPlot, bool allowAllDefenders)
 {
 	CvUnit*	pBestUnit = AI_findBestDefender(pDefendPlot, allowAllDefenders, true);
 

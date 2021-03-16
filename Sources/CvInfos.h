@@ -6167,49 +6167,49 @@ public:
 	// int vector utilizing struct with delayed resolution
 
 	int getNumImprovementUpgradeModifierTypes() const;
-	ImprovementModifier getImprovementUpgradeModifier(int iImprovement) const;
+	ImprovementModifier getImprovementUpgradeModifier(int iImprovement);
 
 	int getNumBuildWorkerSpeedModifierTypes() const;
-	BuildModifier getBuildWorkerSpeedModifier(int iBuild) const;
+	BuildModifier getBuildWorkerSpeedModifier(int iBuild);
 
 	int getNumDisallowedTraitTypes() const;
-	DisallowedTraitType isDisallowedTraitType(int iTrait) const;
+	DisallowedTraitType isDisallowedTraitType(int iTrait);
 
 	int getNumDomainFreeExperiences() const;
-	DomainModifier getDomainFreeExperience(int iDomain) const;
+	DomainModifier getDomainFreeExperience(int iDomain);
 
 	int getNumDomainProductionModifiers() const;
-	DomainModifier getDomainProductionModifier(int iDomain) const;
+	DomainModifier getDomainProductionModifier(int iDomain);
 
 	int getNumTechResearchModifiers() const;
-	TechModifier getTechResearchModifier(int iTech) const;
+	TechModifier getTechResearchModifier(int iTech);
 
 	int getNumBuildingProductionModifiers() const;
-	BuildingModifier getBuildingProductionModifier(int iBuilding) const;
+	BuildingModifier getBuildingProductionModifier(int iBuilding);
 
 	int getNumSpecialBuildingProductionModifiers() const;
-	SpecialBuildingModifier getSpecialBuildingProductionModifier(int iSpecialBuilding) const;
+	SpecialBuildingModifier getSpecialBuildingProductionModifier(int iSpecialBuilding);
 
 	int getNumBuildingHappinessModifiers() const;
-	BuildingModifier getBuildingHappinessModifier(int iBuilding) const;
+	BuildingModifier getBuildingHappinessModifier(int iBuilding);
 
 	int getNumUnitProductionModifiers() const;
-	UnitModifier getUnitProductionModifier(int iUnit) const;
+	UnitModifier getUnitProductionModifier(int iUnit);
 
 	int getNumSpecialUnitProductionModifiers() const;
-	SpecialUnitModifier getSpecialUnitProductionModifier(int iSpecialUnit) const;
+	SpecialUnitModifier getSpecialUnitProductionModifier(int iSpecialUnit);
 
 	int getNumCivicOptionNoUpkeepTypes() const;
-	CivicOptionTypeBool isCivicOptionNoUpkeepType(int iCivicOption) const;
+	CivicOptionTypeBool isCivicOptionNoUpkeepType(int iCivicOption);
 
-  int getNumUnitCombatFreeExperiences() const;
-	UnitCombatModifier getUnitCombatFreeExperience(int iUnitCombat) const;
+	int getNumUnitCombatFreeExperiences() const;
+	UnitCombatModifier getUnitCombatFreeExperience(int iUnitCombat);
 
 	int getNumUnitCombatProductionModifiers() const;
-	UnitCombatModifier getUnitCombatProductionModifier(int iUnitCombat) const;
+	UnitCombatModifier getUnitCombatProductionModifier(int iUnitCombat);
 
 	int getNumBonusHappinessChanges() const;
-	BonusModifier getBonusHappinessChange(int iBonus) const;
+	BonusModifier getBonusHappinessChange(int iBonus);
 
 	const CvPropertyManipulators* getPropertyManipulators() const;
 
