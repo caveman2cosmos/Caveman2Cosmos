@@ -16,22 +16,23 @@ namespace logging
 			obj[itr->name] = itr->value;
 		}
 		obj["type"] = picojson::value(type);
-		gDLL->logMsg("EventsJson.log", picojson::value(obj).serialize().c_str());
+		logging::logMsg("EventsJson.log", picojson::value(obj).serialize().c_str());
 #endif
 	}
 
-	void logMsg(const char* file, char* msg, ...)
+	void logMsg(const char* file, const char* msg, ...)
 	{
 		if (GC.isXMLLogging())
 		{
 			static char buf[2048];
 			_vsnprintf(buf, 2048 -4, msg, (char*)(&msg +1));
+			strcat(buf, "\n");
 
-			std::fstream stream;
+			static std::fstream stream;
 			const std::string path = modDir + "\\Logs\\" + file;
 			stream.open(path.c_str(), std::ios::out | std::ios::app);
 			FAssert(stream.is_open())
-			stream << buf << "\n";
+			stream << buf;
 			stream.close();
 
 			OutputDebugString(buf);
@@ -46,12 +47,13 @@ namespace logging
 			_vsnwprintf(buf, 2048 -4, msg, (char*)(&msg +1));
 			static char buf2[2048];
 			wcstombs(buf2, buf, 2048 -4);
+			strcat(buf2, "\n");
 
 			std::fstream stream;
 			const std::string path = modDir + "\\Logs\\" + file;
 			stream.open(path.c_str(), std::ios::out | std::ios::app);
 			FAssert(stream.is_open())
-			stream << buf2 << "\n";
+			stream << buf2;
 			stream.close();
 
 			OutputDebugString(buf2);

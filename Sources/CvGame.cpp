@@ -8129,12 +8129,10 @@ void CvGame::logRandomResult(const wchar_t* szStreamName, const char* pszLog, in
 		if (isFinalInitialized())
 		{
 			static int iLine = 0;
-			TCHAR szFile[1024];
-			sprintf(szFile, "RandomLogger - Player %d - Set %d.log", getActivePlayer(), getGameTurn()/50);
-			TCHAR szOut[1024];
-
-			sprintf(szOut, "%d\t%d\t%S\t%s\t%d\t%d\n", ++iLine, getGameTurn()+1, szStreamName, pszLog, iMax, iResult);
-			gDLL->logMsg(szFile,szOut, false, false);
+			logging::logMsg(
+				(bst::format("RandomLogger - Player %d - Set %d.log") % getActivePlayer() % (getGameTurn()/50)).str().c_str(),
+				"%d\t%d\t%S\t%s\t%d\t%d\n", ++iLine, getGameTurn()+1, szStreamName, pszLog, iMax, iResult
+			);
 		}
 	}
 }
