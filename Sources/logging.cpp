@@ -39,7 +39,7 @@ namespace logging
 		}
 	}
 
-	void logMsgW(const char* file, wchar_t* msg, ...)
+	void logMsgW(const char* file, const wchar_t* msg, ...)
 	{
 		if (GC.isXMLLogging())
 		{

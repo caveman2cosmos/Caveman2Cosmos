@@ -1206,8 +1206,6 @@ m_iAdvisorType(NO_ADVISOR),
 m_iAIWeight(0),
 m_iAITradeModifier(0),
 m_iResearchCost(-1),
-m_iAdvancedStartCost(100),
-m_iAdvancedStartCostIncrease(0),
 m_iEra(NO_ERA),
 m_iTradeRoutes(0),
 m_iFeatureProductionModifier(0),
@@ -1338,16 +1336,6 @@ int CvTechInfo::getAITradeModifier() const
 int CvTechInfo::getResearchCost() const
 {
 	return m_iResearchCost;
-}
-
-int CvTechInfo::getAdvancedStartCost() const
-{
-	return m_iAdvancedStartCost;
-}
-
-int CvTechInfo::getAdvancedStartCostIncrease() const
-{
-	return m_iAdvancedStartCostIncrease;
 }
 
 int CvTechInfo::getEra() const
@@ -1734,8 +1722,6 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iAIWeight, L"iAIWeight");
 	pXML->GetOptionalChildXmlValByName(&m_iAITradeModifier, L"iAITradeModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iResearchCost, L"iCost");
-	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCost, L"iAdvancedStartCost", 100);
-	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCostIncrease, L"iAdvancedStartCostIncrease");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Era");
 	m_iEra = pXML->GetInfoClass(szTextVal);
@@ -1986,8 +1972,6 @@ void CvTechInfo::copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if (getAIWeight() == iDefault) m_iAIWeight = pClassInfo->getAIWeight();
 	if (getAITradeModifier() == iDefault) m_iAITradeModifier = pClassInfo->getAITradeModifier();
 	if (m_iResearchCost == iDefault) m_iResearchCost = pClassInfo->m_iResearchCost;
-	if (getAdvancedStartCost() == 100) m_iAdvancedStartCost = pClassInfo->getAdvancedStartCost();
-	if (getAdvancedStartCostIncrease() == iDefault) m_iAdvancedStartCostIncrease = pClassInfo->getAdvancedStartCostIncrease();
 	if (m_iEra == NO_ERA) m_iEra = pClassInfo->getEra();
 	GC.copyNonDefaultDelayedResolution((int*)&m_iFirstFreeUnit, (int*)&pClassInfo->m_iFirstFreeUnit);
 	GC.copyNonDefaultDelayedResolution((int*)&m_iFirstFreeProphet, (int*)&pClassInfo->m_iFirstFreeProphet);
@@ -2226,8 +2210,6 @@ void CvTechInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iAIWeight);
 	CheckSum(iSum, m_iAITradeModifier);
 	CheckSum(iSum, m_iResearchCost);
-	CheckSum(iSum, m_iAdvancedStartCost);
-	CheckSum(iSum, m_iAdvancedStartCostIncrease);
 	CheckSum(iSum, m_iEra);
 	CheckSum(iSum, m_iTradeRoutes);
 	CheckSum(iSum, m_iFeatureProductionModifier);
@@ -14891,7 +14873,6 @@ void CvGoodyInfo::getCheckSum(unsigned int& iSum) const
 //------------------------------------------------------------------------------------------------------
 CvRouteInfo::CvRouteInfo() :
 m_iAdvancedStartCost(100),
-m_iAdvancedStartCostIncrease(0),
 m_iValue(0),
 m_iMovementCost(0),
 m_iFlatMovementCost(0),
@@ -14922,11 +14903,6 @@ CvRouteInfo::~CvRouteInfo()
 int CvRouteInfo::getAdvancedStartCost() const
 {
 	return m_iAdvancedStartCost;
-}
-
-int CvRouteInfo::getAdvancedStartCostIncrease() const
-{
-	return m_iAdvancedStartCostIncrease;
 }
 
 int CvRouteInfo::getValue() const
@@ -14999,7 +14975,6 @@ bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 	//shouldHaveType = false;
 
 	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCost, L"iAdvancedStartCost", 100);
-	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCostIncrease, L"iAdvancedStartCostIncrease");
 
 	pXML->GetOptionalChildXmlValByName(&m_iValue, L"iValue");
 	pXML->GetOptionalChildXmlValByName(&m_iMovementCost, L"iMovement");
@@ -15082,7 +15057,6 @@ void CvRouteInfo::copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXM
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
 	if (getAdvancedStartCost() == 100) m_iAdvancedStartCost = pClassInfo->getAdvancedStartCost();
-	if (getAdvancedStartCostIncrease() == iDefault) m_iAdvancedStartCostIncrease = pClassInfo->getAdvancedStartCostIncrease();
 	if (getValue() == iDefault) m_iValue = pClassInfo->getValue();
 	if (getMovementCost() == iDefault) m_iMovementCost = pClassInfo->getMovementCost();
 	if (getFlatMovementCost() == iDefault) m_iFlatMovementCost = pClassInfo->getFlatMovementCost();
@@ -15135,7 +15109,6 @@ void CvRouteInfo::copyNonDefaults(CvRouteInfo* pClassInfo, CvXMLLoadUtility* pXM
 void CvRouteInfo::getCheckSum(unsigned int& iSum) const
 {
 	CheckSum(iSum, m_iAdvancedStartCost);
-	CheckSum(iSum, m_iAdvancedStartCostIncrease);
 
 	CheckSum(iSum, m_iValue);
 	CheckSum(iSum, m_iMovementCost);
@@ -15244,7 +15217,6 @@ void CvImprovementBonusInfo::getCheckSum(unsigned int &iSum) const
 //------------------------------------------------------------------------------------------------------
 CvImprovementInfo::CvImprovementInfo() :
 m_iAdvancedStartCost(100),
-m_iAdvancedStartCostIncrease(0),
 m_iTilesPerGoody(0),
 m_iGoodyUniqueRange(0),
 m_iFeatureGrowthProbability(0),
@@ -15346,11 +15318,6 @@ CvImprovementInfo::~CvImprovementInfo()
 int CvImprovementInfo::getAdvancedStartCost() const
 {
 	return m_iAdvancedStartCost;
-}
-
-int CvImprovementInfo::getAdvancedStartCostIncrease() const
-{
-	return m_iAdvancedStartCostIncrease;
 }
 
 int CvImprovementInfo::getTilesPerGoody() const
@@ -15853,7 +15820,6 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 void CvImprovementInfo::getCheckSum(unsigned int &iSum) const
 {
 	CheckSum(iSum, m_iAdvancedStartCost);
-	CheckSum(iSum, m_iAdvancedStartCostIncrease);
 
 	CheckSum(iSum, m_iTilesPerGoody);
 	CheckSum(iSum, m_iGoodyUniqueRange);
@@ -16021,7 +15987,6 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCost, L"iAdvancedStartCost", 100);
-	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCostIncrease, L"iAdvancedStartCostIncrease");
 	pXML->GetOptionalChildXmlValByName(&m_bActsAsCity, L"bActsAsCity", true);
 	pXML->GetOptionalChildXmlValByName(&m_bHillsMakesValid, L"bHillsMakesValid");
 	pXML->GetOptionalChildXmlValByName(&m_bFreshWaterMakesValid, L"bFreshWaterMakesValid");
@@ -16321,7 +16286,6 @@ void CvImprovementInfo::copyNonDefaults(CvImprovementInfo* pClassInfo, CvXMLLoad
 	}
 
 	if (getAdvancedStartCost() == 100) m_iAdvancedStartCost = pClassInfo->getAdvancedStartCost();
-	if (getAdvancedStartCostIncrease() == iDefault) m_iAdvancedStartCostIncrease = pClassInfo->getAdvancedStartCostIncrease();
 	if (getTilesPerGoody() == iDefault) m_iTilesPerGoody = pClassInfo->getTilesPerGoody();
 	if (getGoodyUniqueRange() == iDefault) m_iGoodyUniqueRange = pClassInfo->getGoodyUniqueRange();
 	if (getFeatureGrowthProbability() == iDefault) m_iFeatureGrowthProbability = pClassInfo->getFeatureGrowthProbability();
@@ -25583,7 +25547,7 @@ int CvTraitInfo::getNumImprovementUpgradeModifierTypes() const
 	return (int)m_aImprovementUpgradeModifierTypes.size();
 }
 
-ImprovementModifier CvTraitInfo::getImprovementUpgradeModifier(int iImprovement)
+ImprovementModifier CvTraitInfo::getImprovementUpgradeModifier(int iImprovement) const
 {
 	FASSERT_BOUNDS(0, getNumImprovementUpgradeModifierTypes(), iImprovement)
 
@@ -25609,7 +25573,7 @@ int CvTraitInfo::getNumBuildWorkerSpeedModifierTypes() const
 	return (int)m_aBuildWorkerSpeedModifierTypes.size();
 }
 
-BuildModifier CvTraitInfo::getBuildWorkerSpeedModifier(int iBuild)
+BuildModifier CvTraitInfo::getBuildWorkerSpeedModifier(int iBuild) const
 {
 	FASSERT_BOUNDS(0, getNumBuildWorkerSpeedModifierTypes(), iBuild)
 
@@ -25634,7 +25598,7 @@ int CvTraitInfo::getNumDisallowedTraitTypes() const
 	return (int)m_aDisallowedTraitTypes.size();
 }
 
-DisallowedTraitType CvTraitInfo::isDisallowedTraitType(int iTrait)
+DisallowedTraitType CvTraitInfo::isDisallowedTraitType(int iTrait) const
 {
 	FASSERT_BOUNDS(0, getNumDisallowedTraitTypes(), iTrait)
 
@@ -25646,7 +25610,7 @@ int CvTraitInfo::getNumDomainFreeExperiences() const
 	return (int)m_aDomainFreeExperiences.size();
 }
 
-DomainModifier CvTraitInfo::getDomainFreeExperience(int iDomain)
+DomainModifier CvTraitInfo::getDomainFreeExperience(int iDomain) const
 {
 	FASSERT_BOUNDS(0, getNumDomainFreeExperiences(), iDomain)
 
@@ -25671,7 +25635,7 @@ int CvTraitInfo::getNumDomainProductionModifiers() const
 	return (int)m_aDomainProductionModifiers.size();
 }
 
-DomainModifier CvTraitInfo::getDomainProductionModifier(int iDomain)
+DomainModifier CvTraitInfo::getDomainProductionModifier(int iDomain) const
 {
 	FASSERT_BOUNDS(0, getNumDomainProductionModifiers(), iDomain)
 
@@ -25696,7 +25660,7 @@ int CvTraitInfo::getNumTechResearchModifiers() const
 	return (int)m_aTechResearchModifiers.size();
 }
 
-TechModifier CvTraitInfo::getTechResearchModifier(int iTech)
+TechModifier CvTraitInfo::getTechResearchModifier(int iTech) const
 {
 	FASSERT_BOUNDS(0, getNumTechResearchModifiers(), iTech)
 
@@ -25721,7 +25685,7 @@ int CvTraitInfo::getNumBuildingProductionModifiers() const
 	return (int)m_aBuildingProductionModifiers.size();
 }
 
-BuildingModifier CvTraitInfo::getBuildingProductionModifier(int iBuilding)
+BuildingModifier CvTraitInfo::getBuildingProductionModifier(int iBuilding) const
 {
 	FASSERT_BOUNDS(0, getNumBuildingProductionModifiers(), iBuilding)
 
@@ -25746,7 +25710,7 @@ int CvTraitInfo::getNumSpecialBuildingProductionModifiers() const
 	return (int)m_aSpecialBuildingProductionModifiers.size();
 }
 
-SpecialBuildingModifier CvTraitInfo::getSpecialBuildingProductionModifier(int iSpecialBuilding)
+SpecialBuildingModifier CvTraitInfo::getSpecialBuildingProductionModifier(int iSpecialBuilding) const
 {
 	FASSERT_BOUNDS(0, getNumSpecialBuildingProductionModifiers(), iSpecialBuilding)
 
@@ -25771,7 +25735,7 @@ int CvTraitInfo::getNumBuildingHappinessModifiers() const
 	return (int)m_aBuildingHappinessModifiers.size();
 }
 
-BuildingModifier CvTraitInfo::getBuildingHappinessModifier(int iBuilding)
+BuildingModifier CvTraitInfo::getBuildingHappinessModifier(int iBuilding) const
 {
 	FASSERT_BOUNDS(0, getNumBuildingHappinessModifiers(), iBuilding)
 
@@ -25796,7 +25760,7 @@ int CvTraitInfo::getNumUnitProductionModifiers() const
 	return (int)m_aUnitProductionModifiers.size();
 }
 
-UnitModifier CvTraitInfo::getUnitProductionModifier(int iUnit)
+UnitModifier CvTraitInfo::getUnitProductionModifier(int iUnit) const
 {
 	FASSERT_BOUNDS(0, getNumUnitProductionModifiers(), iUnit)
 
@@ -25821,7 +25785,7 @@ int CvTraitInfo::getNumSpecialUnitProductionModifiers() const
 	return (int)m_aSpecialUnitProductionModifiers.size();
 }
 
-SpecialUnitModifier CvTraitInfo::getSpecialUnitProductionModifier(int iSpecialUnit)
+SpecialUnitModifier CvTraitInfo::getSpecialUnitProductionModifier(int iSpecialUnit) const
 {
 	FASSERT_BOUNDS(0, getNumSpecialUnitProductionModifiers(), iSpecialUnit)
 
@@ -25846,7 +25810,7 @@ int CvTraitInfo::getNumCivicOptionNoUpkeepTypes() const
 	return (int)m_aCivicOptionNoUpkeepTypes.size();
 }
 
-CivicOptionTypeBool CvTraitInfo::isCivicOptionNoUpkeepType(int iCivicOption)
+CivicOptionTypeBool CvTraitInfo::isCivicOptionNoUpkeepType(int iCivicOption) const
 {
 	FASSERT_BOUNDS(0, getNumCivicOptionNoUpkeepTypes(), iCivicOption)
 
@@ -25872,7 +25836,7 @@ int CvTraitInfo::getNumUnitCombatFreeExperiences() const
 	return (int)m_aUnitCombatFreeExperiences.size();
 }
 
-UnitCombatModifier CvTraitInfo::getUnitCombatFreeExperience(int iUnitCombat)
+UnitCombatModifier CvTraitInfo::getUnitCombatFreeExperience(int iUnitCombat) const
 {
 	FASSERT_BOUNDS(0, getNumUnitCombatFreeExperiences(), iUnitCombat)
 
@@ -25897,7 +25861,7 @@ int CvTraitInfo::getNumUnitCombatProductionModifiers() const
 	return (int)m_aUnitCombatProductionModifiers.size();
 }
 
-UnitCombatModifier CvTraitInfo::getUnitCombatProductionModifier(int iUnitCombat)
+UnitCombatModifier CvTraitInfo::getUnitCombatProductionModifier(int iUnitCombat) const
 {
 	FASSERT_BOUNDS(0, getNumUnitCombatProductionModifiers(), iUnitCombat)
 
@@ -25922,7 +25886,7 @@ int CvTraitInfo::getNumBonusHappinessChanges() const
 	return (int)m_aBonusHappinessChanges.size();
 }
 
-BonusModifier CvTraitInfo::getBonusHappinessChange(int iBonus)
+BonusModifier CvTraitInfo::getBonusHappinessChange(int iBonus) const
 {
 	FASSERT_BOUNDS(0, getNumBonusHappinessChanges(), iBonus)
 

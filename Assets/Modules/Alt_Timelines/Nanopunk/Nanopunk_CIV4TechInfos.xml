@@ -19,8 +19,8 @@
 				<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_HYPERSONIC_FLIGHT</PrereqTech>
 				<PrereqTech>TECH_MASS_SURVEILLANCE</PrereqTech>
+				<PrereqTech>TECH_HYPERSONIC_FLIGHT</PrereqTech>
 			</AndPreReqs>
 			<!-- System -->
 			<iAsset>48</iAsset>

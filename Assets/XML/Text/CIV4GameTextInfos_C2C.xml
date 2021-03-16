@@ -87,6 +87,10 @@
 		<Russian>[COLOR_WARNING_TEXT]Устаревает из-за [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OBSOLETE_WITH_TO</Tag>
+		<English>[SPACE](Turns into [LINK=%s1]%s2[\LINK])</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROVIDES</Tag>
 		<English>[ICON_BULLET]Provides %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</English>
 		<French>[ICON_BULLET]Fournit %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</French>

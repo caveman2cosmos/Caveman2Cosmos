@@ -350,25 +350,23 @@ public:
 	CvTechInfo();
 	virtual ~CvTechInfo();
 
-	//	Validate tech info da after load (debug only)
+	// Validate tech info da after load (debug only)
 	static void validate();
 
 	int getAdvisorType() const;
 	int getAIWeight() const;
 	int getAITradeModifier() const;
 	int getResearchCost() const;
-	int getAdvancedStartCost() const;
-	int getAdvancedStartCostIncrease() const;
 	int getEra() const;
 	int getTradeRoutes() const;
 	int getFeatureProductionModifier() const;
 	int getWorkerSpeedModifier() const;
-	//DPII < Maintenance Modifier >
+
 	int getMaintenanceModifier() const;
 	int getDistanceMaintenanceModifier() const;
 	int getNumCitiesMaintenanceModifier() const;
 	int getCoastalDistanceMaintenanceModifier() const;
-	//DPII < Maintenance Modifier >
+
 	int getFirstFreeUnit() const;
 	int getFirstFreeProphet() const;
 	int getHealth() const;
@@ -471,8 +469,6 @@ protected:
 	int m_iAIWeight;
 	int m_iAITradeModifier;
 	int m_iResearchCost;
-	int m_iAdvancedStartCost;
-	int m_iAdvancedStartCostIncrease;
 	int m_iEra;
 	int m_iTradeRoutes;
 	int m_iFeatureProductionModifier;
@@ -1674,7 +1670,6 @@ public:
 	int getProductionCost() const;
 	int getHurryCostModifier() const;
 	int getAdvancedStartCost() const;
-	int getAdvancedStartCostIncrease() const;
 	int getMinAreaSize() const;
 	int getMoves() const;
 	int getAirRange() const;
@@ -2324,7 +2319,6 @@ protected:
 	int m_iProductionCost;
 	int m_iHurryCostModifier;
 	int m_iAdvancedStartCost;
-	int m_iAdvancedStartCostIncrease;
 	int m_iMinAreaSize;
 	int m_iMoves;
 	int m_iAirRange;
@@ -4154,7 +4148,6 @@ public:
 	virtual ~CvRouteInfo();
 
 	int getAdvancedStartCost() const;
-	int getAdvancedStartCostIncrease() const;
 
 	int getValue() const;
 	int getMovementCost() const;
@@ -4185,7 +4178,6 @@ private:
 
 protected:
 	int m_iAdvancedStartCost;
-	int m_iAdvancedStartCostIncrease;
 
 	int m_iValue;
 	int m_iMovementCost;
@@ -4268,7 +4260,6 @@ public:
 	virtual ~CvImprovementInfo();
 
 	int getAdvancedStartCost() const;
-	int getAdvancedStartCostIncrease() const;
 
 	int getTilesPerGoody() const;
 	int getGoodyUniqueRange() const;
@@ -4403,7 +4394,6 @@ private:
 
 protected:
 	int m_iAdvancedStartCost;
-	int m_iAdvancedStartCostIncrease;
 
 	int m_iTilesPerGoody;
 	int m_iGoodyUniqueRange;
@@ -6181,49 +6171,49 @@ public:
 	// int vector utilizing struct with delayed resolution
 
 	int getNumImprovementUpgradeModifierTypes() const;
-	ImprovementModifier getImprovementUpgradeModifier(int iImprovement);
+	ImprovementModifier getImprovementUpgradeModifier(int iImprovement) const;
 
 	int getNumBuildWorkerSpeedModifierTypes() const;
-	BuildModifier getBuildWorkerSpeedModifier(int iBuild);
+	BuildModifier getBuildWorkerSpeedModifier(int iBuild) const;
 
 	int getNumDisallowedTraitTypes() const;
-	DisallowedTraitType isDisallowedTraitType(int iTrait);
+	DisallowedTraitType isDisallowedTraitType(int iTrait) const;
 
 	int getNumDomainFreeExperiences() const;
-	DomainModifier getDomainFreeExperience(int iDomain);
+	DomainModifier getDomainFreeExperience(int iDomain) const;
 
 	int getNumDomainProductionModifiers() const;
-	DomainModifier getDomainProductionModifier(int iDomain);
+	DomainModifier getDomainProductionModifier(int iDomain) const;
 
 	int getNumTechResearchModifiers() const;
-	TechModifier getTechResearchModifier(int iTech);
+	TechModifier getTechResearchModifier(int iTech) const;
 
 	int getNumBuildingProductionModifiers() const;
-	BuildingModifier getBuildingProductionModifier(int iBuilding);
+	BuildingModifier getBuildingProductionModifier(int iBuilding) const;
 
 	int getNumSpecialBuildingProductionModifiers() const;
-	SpecialBuildingModifier getSpecialBuildingProductionModifier(int iSpecialBuilding);
+	SpecialBuildingModifier getSpecialBuildingProductionModifier(int iSpecialBuilding) const;
 
 	int getNumBuildingHappinessModifiers() const;
-	BuildingModifier getBuildingHappinessModifier(int iBuilding);
+	BuildingModifier getBuildingHappinessModifier(int iBuilding) const;
 
 	int getNumUnitProductionModifiers() const;
-	UnitModifier getUnitProductionModifier(int iUnit);
+	UnitModifier getUnitProductionModifier(int iUnit) const;
 
 	int getNumSpecialUnitProductionModifiers() const;
-	SpecialUnitModifier getSpecialUnitProductionModifier(int iSpecialUnit);
+	SpecialUnitModifier getSpecialUnitProductionModifier(int iSpecialUnit) const;
 
 	int getNumCivicOptionNoUpkeepTypes() const;
-	CivicOptionTypeBool isCivicOptionNoUpkeepType(int iCivicOption);
+	CivicOptionTypeBool isCivicOptionNoUpkeepType(int iCivicOption) const;
 	//Team Project (8)
 	int getNumUnitCombatFreeExperiences() const;
-	UnitCombatModifier getUnitCombatFreeExperience(int iUnitCombat);
+	UnitCombatModifier getUnitCombatFreeExperience(int iUnitCombat) const;
 
 	int getNumUnitCombatProductionModifiers() const;
-	UnitCombatModifier getUnitCombatProductionModifier(int iUnitCombat);
+	UnitCombatModifier getUnitCombatProductionModifier(int iUnitCombat) const;
 
 	int getNumBonusHappinessChanges() const;
-	BonusModifier getBonusHappinessChange(int iBonus);
+	BonusModifier getBonusHappinessChange(int iBonus) const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const;
 

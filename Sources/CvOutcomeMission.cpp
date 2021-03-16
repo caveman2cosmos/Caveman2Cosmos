@@ -66,12 +66,12 @@ GameObjectTypes CvOutcomeMission::getPayerType() const
 	return m_ePayerType;
 }
 
-void callSetPayer(CvGameObject* pObject, CvGameObject** ppPayer)
+void callSetPayer(const CvGameObject* pObject, const CvGameObject** ppPayer)
 {
 	*ppPayer = pObject;
 }
 
-bool CvOutcomeMission::isPossible(CvUnit* pUnit, bool bTestVisible) const
+bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 {
 	//if (!bTestVisible)
 	//{
@@ -101,7 +101,7 @@ bool CvOutcomeMission::isPossible(CvUnit* pUnit, bool bTestVisible) const
 	//{
 		if (!getPropertyCost()->isEmpty())
 		{
-			CvGameObject* pPayer = NULL;
+			const CvGameObject* pPayer = NULL;
 			if ((m_ePayerType == NO_GAMEOBJECT) || (m_ePayerType == GAMEOBJECT_UNIT))
 			{
 				pPayer = pUnit->getGameObject();
@@ -126,7 +126,7 @@ bool CvOutcomeMission::isPossible(CvUnit* pUnit, bool bTestVisible) const
 	return true;
 }
 
-void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUnit)
+void CvOutcomeMission::buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& pUnit) const
 {
 	if (!m_PropertyCost.isEmpty())
 	{
@@ -137,7 +137,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 	
 	if (m_iCost)
 	{
-		if (m_iCost->evaluate(pUnit->getGameObject())!=0)
+		if (m_iCost->evaluate(pUnit.getGameObject())!=0)
 		{	/*GC.getGame().getGameObject()->adaptValueToGame(m_iID, m_pExpr->evaluate(GC.getGame().getGameObject())*/
 			CvWString szTempBuffer;
 
@@ -149,7 +149,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 
 	if (m_pPlotCondition)
 	{
-		if (!m_pPlotCondition->evaluate(pUnit->plot()->getGameObject()))
+		if (!m_pPlotCondition->evaluate(pUnit.plot()->getGameObject()))
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES"));
 			m_pPlotCondition->buildDisplayString(szBuffer);
@@ -158,7 +158,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 
 	if (m_pUnitCondition)
 	{
-		if (!m_pUnitCondition->evaluate(pUnit->getGameObject()))
+		if (!m_pUnitCondition->evaluate(pUnit.getGameObject()))
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES"));
 			m_pUnitCondition->buildDisplayString(szBuffer);
@@ -171,7 +171,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 		szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CONSUME_UNIT"));
 	}
 
-	m_OutcomeList.buildDisplayString(szBuffer, *pUnit);
+	m_OutcomeList.buildDisplayString(szBuffer, pUnit);
 }
 
 void CvOutcomeMission::execute(CvUnit* pUnit)
@@ -185,7 +185,7 @@ void CvOutcomeMission::execute(CvUnit* pUnit)
 
 	if (!getPropertyCost()->isEmpty())
 	{
-		CvGameObject* pPayer = NULL;
+		const CvGameObject* pPayer = NULL;
 		if ((m_ePayerType == NO_GAMEOBJECT) || (m_ePayerType == GAMEOBJECT_UNIT))
 		{
 			pPayer = pUnit->getGameObject();

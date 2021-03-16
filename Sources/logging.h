@@ -92,7 +92,7 @@ namespace logging
 	void log_json_event(const char* type, const JsonValues& values);
 
 	void logMsg(const char* file, const char* msg, ...);
-	void logMsgW(const char* file, wchar_t* msg, ...);
+	void logMsgW(const char* file, const wchar_t* msg, ...);
 
 	void createLogsFolder();
 	void deleteLogs();

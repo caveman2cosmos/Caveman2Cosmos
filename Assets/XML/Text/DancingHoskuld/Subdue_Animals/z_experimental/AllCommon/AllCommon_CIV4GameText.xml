@@ -116,7 +116,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FISH_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Fish</English>
+		<English>Myth Effect - Tales of Fish</English>
 		<French>Effet (Mythe des Poissons)</French>
 		<Polish>Efekt Mitu - Ryby</Polish>
 		<Russian>Ïåñíÿ î ðûáå</Russian>
@@ -183,6 +183,10 @@
 		<French>Mythe des Poissons (local)</French>
 		<Polish>Mit - Ryby (regionalne)</Polish>
 		<Russian>Ìèô î ðûáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LOCAL_FISH_MYTH_EFFECT</Tag>
+		<English>Myth Effect - Fish</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEW_W_MONKEY_MYTH</Tag>
@@ -357,7 +361,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REPTILE_STORY</Tag>
-		<English>Story (B) - Reptiles</English>
+		<English>Story (B) - Reptile</English>
 		<French>Histoire des Reptiles</French>
 		<Polish>Opowieść - Gady</Polish>
 		<Russian>Ñêàçêà î ðåïòèëèè</Russian>
@@ -392,7 +396,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RODENT_STORY</Tag>
-		<English>Story (B) - Rodents</English>
+		<English>Story (B) - Rodent</English>
 		<French>Histoire des Rongeurs</French>
 		<Polish>Opowieść - Gryzonie</Polish>
 		<Russian>Ñêàçêà î ãðûçóíå</Russian>
