@@ -19,13 +19,12 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<FreePromotion>PROMOTION_WOODSMAN1</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>104</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<iHealth>2</iHealth>
 			<iHappiness>1</iHappiness>
@@ -127,13 +126,12 @@
 			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<FreePromotion>PROMOTION_GUERILLA1</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>104</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHealth>2</iHealth>
 			<iHealthPercentPerPopulation>5</iHealthPercentPerPopulation>
 			<iHappiness>1</iHappiness>
@@ -204,11 +202,11 @@
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iAsset>3</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -428,14 +426,13 @@
 			<GlobalReligionCommerce>RELIGION_DRUIDIC_TRADITIONS</GlobalReligionCommerce>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -482,11 +479,11 @@
 			<iHealth>1</iHealth>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>4</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>

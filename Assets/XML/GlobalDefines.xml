@@ -48,9 +48,10 @@
 
 	<!-- Maximum amount of time in a frame that can be spent on paging operations.
 		Higher values mean faster paging in at the expense of more stuttering.
+		Currently this define is unused
 	 -->
 	<Define>
-		<DefineName>PAGING_FRAME_TIME_MS</DefineName>
+		<DefineName>MAX_PAGING_FRAME_TIME_MS</DefineName>
 		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
 	<!-- Distance in tiles at which to page in different components -->
@@ -1592,10 +1593,6 @@
 	<Define>
 		<DefineName>LAND_UNITS_CAN_ATTACK_WATER_CITIES</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>CITY_MAX_NUM_BUILDINGS</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>RANGED_ATTACKS_USE_MOVES</DefineName>

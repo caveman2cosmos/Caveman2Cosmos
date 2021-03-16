@@ -33,7 +33,6 @@ class CvGameUtils:
 
 		self.iNationalMint = GC.getInfoTypeForString("BUILDING_NATIONAL_MINT")
 		self.iHimejiCastle = GC.getInfoTypeForString("BUILDING_HIMEJI_CASTLE")
-		self.iHimejiCastleObsoleteTech = GC.getBuildingInfo(self.iHimejiCastle).getObsoleteTech()
 
 		self.iReplicators = GC.getInfoTypeForString("BONUS_REPLICATORS")
 		self.iRapidPrototyping = GC.getInfoTypeForString("TECH_RAPID_PROTOTYPING")
@@ -376,13 +375,9 @@ class CvGameUtils:
 	def doPillageGold(self, argsList):
 		CyPlot, CyUnit, = argsList
 
-		obsoleteTech = self.iHimejiCastleObsoleteTech
-
 		iPlayer = CyPlot.getOwner()
-		if iPlayer > -1:
-			CyPlayer = GC.getPlayer(iPlayer)
-			if obsoleteTech == -1 or not GC.getTeam(CyPlayer.getTeam()).isHasTech(obsoleteTech) and CyPlayer.countNumBuildings(self.iHimejiCastle):
-				return 0
+		if iPlayer > -1 and GC.getPlayer(iPlayer).hasBuilding(self.iHimejiCastle):
+			return 0
 
 		iTemp = GC.getImprovementInfo(CyPlot.getImprovementType()).getPillageGold()
 		gold = GAME.getSorenRandNum(iTemp, "Pillage Gold 1")
@@ -390,8 +385,7 @@ class CvGameUtils:
 
 		gold += CyUnit.getPillageChange() * gold / 100.0
 
-		CyPlayer = GC.getPlayer(CyUnit.getOwner())
-		if obsoleteTech == -1 or not GC.getTeam(CyPlayer.getTeam()).isHasTech(obsoleteTech) and CyPlayer.countNumBuildings(self.iHimejiCastle):
+		if GC.getPlayer(CyUnit.getOwner()).hasBuilding(self.iHimejiCastle):
 			gold *= 2
 
 		return int(gold)
@@ -400,9 +394,7 @@ class CvGameUtils:
 	def doCityCaptureGold(self, argsList):
 		CyCity, iOwnerNew, = argsList
 
-		ownerOld = GC.getPlayer(CyCity.getOwner())
-		obsoleteTech = self.iHimejiCastleObsoleteTech
-		if obsoleteTech == -1 or not GC.getTeam(ownerOld.getTeam()).isHasTech(obsoleteTech) and ownerOld.countNumBuildings(self.iHimejiCastle):
+		if GC.getPlayer(CyCity.getOwner()).hasBuilding(self.iHimejiCastle):
 			return 0
 
 		gold = self.BASE_CAPTURE_GOLD
@@ -663,7 +655,7 @@ class CvGameUtils:
 					lBuildings = []
 					lWonders = []
 					for i in xrange(GC.getNumBuildingInfos()):
-						if pCity.getNumBuilding(i):
+						if pCity.getNumRealBuilding(i):
 							if isLimitedWonder(i):
 								lWonders.append(GC.getBuildingInfo(i).getDescription())
 							else:
@@ -691,7 +683,7 @@ class CvGameUtils:
 				return CyGameTextMgr().parseReligionInfo(iData2, False)
 ## Building Widget Text##
 			elif iData1 == 7870:
-				return CyGameTextMgr().getBuildingHelp(iData2, False, False, False, None)
+				return CyGameTextMgr().getBuildingHelp(iData2, False, None, False, False, False)
 ## Tech Widget Text##
 			elif iData1 == 7871:
 				if iData2 == -1:

@@ -9463,7 +9463,6 @@
 			</UnitAIs>
 			<PrereqTech>TECH_REGENERATIVE_MEDICINE</PrereqTech>
 			<iCost>4300</iCost>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iCombat>140</iCombat>
@@ -9652,7 +9651,6 @@
 				<BonusType>BONUS_NEUROIMPLANTS</BonusType>
 			</PrereqBonuses>
 			<iCost>5250</iCost>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iCombat>220</iCombat>
@@ -23358,7 +23356,6 @@
 				<BonusType>BONUS_NANOTUBES</BonusType>
 			</PrereqBonuses>
 			<iCost>8300</iCost>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iBaseUpkeep>21</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iAirRange>3</iAirRange>
@@ -23439,7 +23436,6 @@
 				<BonusType>BONUS_NANOBOTS</BonusType>
 			</PrereqBonuses>
 			<iCost>5200</iCost>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
 			<iCombat>160</iCombat>
@@ -23531,7 +23527,6 @@
 				<BonusType>BONUS_NANOBOTS</BonusType>
 			</PrereqBonuses>
 			<iCost>10200</iCost>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
 			<iCombat>360</iCombat>

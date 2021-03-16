@@ -93,7 +93,7 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		break;
 
 	case WIDGET_BUILD_LIST_CONSTRUCT:
-		GAMETEXT.setBuildingHelp(szBuffer, (BuildingTypes)widgetDataStruct.m_iData1);
+		GAMETEXT.setBuildingHelp(szBuffer, (BuildingTypes)widgetDataStruct.m_iData1, false);
 		break;
 
 	case WIDGET_BUILD_LIST_CREATE:
@@ -1954,7 +1954,7 @@ void CvDLLWidgetData::parseConstructHelp(CvWidgetDataStruct &widgetDataStruct, C
 
 	if (pHeadSelectedCity != NULL)
 	{
-		GAMETEXT.setBuildingHelpActual(szBuffer, (BuildingTypes)widgetDataStruct.m_iData1, false, widgetDataStruct.m_bOption, false, pHeadSelectedCity);
+		GAMETEXT.setBuildingHelp(szBuffer, (BuildingTypes)widgetDataStruct.m_iData1, true, pHeadSelectedCity, false, widgetDataStruct.m_bOption);
 	}
 }
 
@@ -2550,11 +2550,11 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					if (pMissionCity->canConstruct(eBuilding, false, false, true))
 					{
 						szBuffer.append(NEWLINE);
-						GAMETEXT.setBuildingHelpActual(szBuffer, ((BuildingTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData())), false, false, false, pMissionCity);
+						GAMETEXT.setBuildingHelp(szBuffer, (BuildingTypes)GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData(), true, pMissionCity);
 					}
 					else if (!GC.getGame().isBuildingMaxedOut(eBuilding))
 					{
-						GAMETEXT.buildBuildingRequiresString(szBuffer, ((BuildingTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData())), false, false, pMissionCity);
+						GAMETEXT.buildBuildingRequiresString(szBuffer, (BuildingTypes)GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData(), false, false, pMissionCity);
 					}
 				}
 			}
@@ -3018,12 +3018,12 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						if (!bFoundValid)
 						{
 							bool bFirst = true;
-							for (std::vector<BonusTypes>::iterator it = aeOrBonuses.begin(); it != aeOrBonuses.end(); ++it)
+							foreach_(const BonusTypes& it, aeOrBonuses)
 							{
-								CvWString szFirstBuffer = NEWLINE + gDLL->getText("TXT_KEY_BUILDING_REQUIRES_LIST");
+								const CvWString szFirstBuffer = NEWLINE + gDLL->getText("TXT_KEY_BUILDING_REQUIRES_LIST");
 								CvWString szTempBuffer;
 								szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),
-									CvWString(GC.getBonusInfo(*it).getType()).GetCString(), GC.getBonusInfo(*it).getDescription());
+									CvWString(GC.getBonusInfo(it).getType()).GetCString(), GC.getBonusInfo(it).getDescription());
 								setListHelp(szBuffer, szFirstBuffer.GetCString(), szTempBuffer, gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 								bFirst = false;
 							}
@@ -3758,7 +3758,7 @@ void CvDLLWidgetData::parseDisabledCitizenHelp(CvWidgetDataStruct &widgetDataStr
 				const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
 				if (GC.getBuildingInfo(eLoopBuilding).getSpecialistCount(widgetDataStruct.m_iData1) > 0
-				&& pHeadSelectedCity->getNumBuilding(eLoopBuilding) <= 0 && !isLimitedWonder(eLoopBuilding)
+				&& pHeadSelectedCity->getNumActiveBuilding(eLoopBuilding) <= 0 && !isLimitedWonder(eLoopBuilding)
 				&& (GC.getBuildingInfo(eLoopBuilding).getSpecialBuildingType() == NO_SPECIALBUILDING || pHeadSelectedCity->canConstruct(eLoopBuilding)))
 				{
 					setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getBuildingInfo(eLoopBuilding).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
@@ -4749,27 +4749,6 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 	if (kActiveTeam.isHasMet(eTeam) || GC.getGame().isDebugMode())
 	{
-		if (!kPlayer.isHuman())
-		{
-			if (!kPlayer.AI_isWillingToTalk(eActivePlayer))
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_REFUSES_TO_TALK"));
-			}
-			if (!gDLL->altKey() && !gDLL->ctrlKey() || gDLL->getChtLvl() <= 0)
-			{
-				szBuffer.append(NEWLINE);
-				GAMETEXT.getEspionageString(szBuffer, ePlayer, eActivePlayer);
-
-				GAMETEXT.getAttitudeString(szBuffer, ePlayer, eActivePlayer);
-			}
-		}
-		else
-		{
-			szBuffer.append(NEWLINE);
-			GAMETEXT.getEspionageString(szBuffer, ePlayer, eActivePlayer);
-		}
-
 		if (!gDLL->altKey() && !gDLL->ctrlKey() || gDLL->getChtLvl() <= 0)
 		{
 			if (gDLL->ctrlKey() && ePlayer != eActivePlayer)
@@ -4786,7 +4765,28 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 		if (eTeam != eActiveTeam)
 		{
-			if( !(kActiveTeam.isAtWar(eTeam)))
+			if (!kPlayer.isHuman())
+			{
+				if (!kPlayer.AI_isWillingToTalk(eActivePlayer))
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_MISC_REFUSES_TO_TALK"));
+				}
+				if (!gDLL->altKey() && !gDLL->ctrlKey() || gDLL->getChtLvl() <= 0)
+				{
+					szBuffer.append(NEWLINE);
+					GAMETEXT.getEspionageString(szBuffer, ePlayer, eActivePlayer);
+
+					GAMETEXT.getAttitudeString(szBuffer, ePlayer, eActivePlayer);
+				}
+			}
+			else
+			{
+				szBuffer.append(NEWLINE);
+				GAMETEXT.getEspionageString(szBuffer, ePlayer, eActivePlayer);
+			}
+
+			if (!kActiveTeam.isAtWar(eTeam))
 			{
 				if (kActiveTeam.canDeclareWar(eTeam))
 				{
@@ -4798,7 +4798,6 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 					szBuffer.append(NEWLINE);
 					szBuffer.append(gDLL->getText("TXT_KEY_MISC_CANNOT_DECLARE_WAR"));
 				}
-
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_SHIFT_ALT_PREPARE_WAR"));
 			}
@@ -5568,7 +5567,7 @@ void CvDLLWidgetData::parseSelectedHelp(CvWidgetDataStruct &widgetDataStruct, Cv
 			break;
 
 		case ORDER_CONSTRUCT:
-			GAMETEXT.setBuildingHelpActual(szBuffer, order.getBuildingType(), false, false, false, pHeadSelectedCity);
+			GAMETEXT.setBuildingHelp(szBuffer, order.getBuildingType(), true, pHeadSelectedCity);
 			break;
 
 		case ORDER_CREATE:
@@ -5615,7 +5614,7 @@ void CvDLLWidgetData::parseBuildListQueueHelp(CvWidgetDataStruct &widgetDataStru
 				break;
 
 			case ORDER_CONSTRUCT:
-				GAMETEXT.setBuildingHelp(szBuffer, (BuildingTypes)(pOrder->iData1));
+				GAMETEXT.setBuildingHelp(szBuffer, (BuildingTypes)pOrder->iData1, false);
 				break;
 
 			case ORDER_CREATE:

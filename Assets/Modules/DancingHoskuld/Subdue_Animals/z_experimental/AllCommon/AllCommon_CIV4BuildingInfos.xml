@@ -65,7 +65,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_WRITING</PrereqTech>
 			<iCost>176</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -103,7 +102,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iCost>450</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -115,7 +113,7 @@
 			<FreeBuilding>BUILDING_AMPHIBIAN_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AMPHIBIAN_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_AMPHIBIAN_STORIES_EFFECT</BuildingType>
@@ -227,7 +225,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIRD_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_WRITING</PrereqTech>
 			<iCost>176</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -265,7 +262,6 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIRD_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iCost>450</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -277,7 +273,7 @@
 			<FreeBuilding>BUILDING_BIRD_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BIRD_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BIRD_STORIES_EFFECT</BuildingType>
@@ -392,7 +388,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BUG_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_WRITING</PrereqTech>
 			<iCost>176</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -430,7 +425,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BUG_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iCost>450</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -442,7 +436,7 @@
 			<FreeBuilding>BUILDING_BUG_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BUG_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BUG_STORIES_EFFECT</BuildingType>
@@ -554,7 +548,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FISH_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_WRITING</PrereqTech>
 			<iCost>176</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -592,7 +585,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FISH_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iCost>450</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -604,7 +596,7 @@
 			<FreeBuilding>BUILDING_FISH_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FISH_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_FISH_STORIES_EFFECT</BuildingType>
@@ -796,7 +788,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLIGHTLESS_BIRD_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_WRITING</PrereqTech>
 			<iCost>176</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -834,7 +825,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLIGHTLESS_BIRD_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iCost>450</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -846,7 +836,7 @@
 			<FreeBuilding>BUILDING_FLIGHTLESS_BIRD_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FLIGHTLESS_BIRD_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_FLIGHTLESS_BIRD_STORIES_EFFECT</BuildingType>
@@ -958,7 +948,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OWL_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_WRITING</PrereqTech>
 			<iCost>176</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -996,7 +985,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OWL_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iCost>450</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1008,7 +996,7 @@
 			<FreeBuilding>BUILDING_OWL_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OWL_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_OWL_STORIES_EFFECT</BuildingType>
@@ -1126,7 +1114,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PENGUIN_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_WRITING</PrereqTech>
 			<iCost>176</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1164,7 +1151,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PENGUIN_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iCost>450</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1176,7 +1162,7 @@
 			<FreeBuilding>BUILDING_PENGUIN_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PENGUIN_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PENGUIN_STORIES_EFFECT</BuildingType>
@@ -1296,7 +1282,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RAPTOR_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_WRITING</PrereqTech>
 			<iCost>176</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1334,7 +1319,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RAPTOR_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iCost>450</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1346,7 +1330,7 @@
 			<FreeBuilding>BUILDING_RAPTOR_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RAPTOR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_RAPTOR_STORIES_EFFECT</BuildingType>
@@ -1458,7 +1442,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REPTILE_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_WRITING</PrereqTech>
 			<iCost>176</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1496,7 +1479,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REPTILE_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iCost>450</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1508,7 +1490,7 @@
 			<FreeBuilding>BUILDING_REPTILE_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_REPTILE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_REPTILE_STORIES_EFFECT</BuildingType>
@@ -1620,7 +1602,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODENT_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_WRITING</PrereqTech>
 			<iCost>176</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1658,7 +1639,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODENT_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iCost>450</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1670,7 +1650,7 @@
 			<FreeBuilding>BUILDING_RODENT_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RODENT_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_RODENT_STORIES_EFFECT</BuildingType>
@@ -1782,7 +1762,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEA_BIRD_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_WRITING</PrereqTech>
 			<iCost>176</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1820,7 +1799,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEA_BIRD_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iCost>450</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1832,7 +1810,7 @@
 			<FreeBuilding>BUILDING_SEA_BIRD_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEA_BIRD_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SEA_BIRD_STORIES_EFFECT</BuildingType>
@@ -1956,7 +1934,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WOLF_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_WRITING</PrereqTech>
 			<iCost>176</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1994,7 +1971,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WOLF_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iCost>450</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2006,7 +1982,7 @@
 			<FreeBuilding>BUILDING_WOLF_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WOLF_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_WOLF_STORIES_EFFECT</BuildingType>

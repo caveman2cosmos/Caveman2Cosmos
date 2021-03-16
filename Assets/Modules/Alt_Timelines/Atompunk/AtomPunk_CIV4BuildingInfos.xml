@@ -27,7 +27,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>8070</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -42,7 +41,6 @@
 			<Strategy>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VIDEOPHONE_NETWORK</ArtDefineTag>
-			<!-- RevolutionDCM End  -->
 			<ObsoleteTech>TECH_KNOWLEDGE_MANAGEMENT</ObsoleteTech>
 			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 			<MapCategoryTypes>
@@ -66,7 +64,6 @@
 			<iMaintenanceModifier>10</iMaintenanceModifier>
 			<iHappiness>2</iHappiness>
 			<iTradeRoutes>2</iTradeRoutes>
-			<!-- RevolutionDCM End  -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -97,7 +94,6 @@
 			<Strategy>TXT_KEY_BUILDING_PUSHBUTTON_AUTOMAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PUSHBUTTON_AUTOMAT</ArtDefineTag>
-			<!-- RevolutionDCM End  -->
 			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -111,7 +107,6 @@
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<iHealth>2</iHealth>
 			<iHappiness>1</iHappiness>
-			<!-- RevolutionDCM End  -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldModifiers>
 				<iYield>5</iYield>
@@ -436,7 +431,6 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHealth>-3</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -472,7 +466,6 @@
 			<Strategy>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CLEAN_NUCLEAR_REACTOR</ArtDefineTag>
-			<!-- RevolutionDCM End  -->
 			<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -492,7 +485,6 @@
 			<bPower>1</bPower>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<!-- RevolutionDCM End  -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -517,7 +509,6 @@
 			<Strategy>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HI_TECH_NUCLEAR_REACTOR</ArtDefineTag>
-			<!-- RevolutionDCM End  -->
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ATOMPUNK</PrereqTech>
@@ -532,7 +523,6 @@
 			<bPower>1</bPower>
 			<iCost>1845</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<!-- RevolutionDCM End  -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -564,7 +554,6 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NUCLEAR_POWERCOMPLEX</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NUCLEAR_POWERCOMPLEX</MovieDefineTag>
-			<!-- RevolutionDCM End  -->
 			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ATOMPUNK</PrereqTech>
@@ -590,7 +579,6 @@
 			<bPower>1</bPower>
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<!-- RevolutionDCM End  -->
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
 				<iCommerce>-15000</iCommerce>
@@ -629,7 +617,6 @@
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
 				<iCommerce>25</iCommerce>
@@ -723,7 +710,6 @@
 			</ConstructCondition>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaintenanceModifier>10</iMaintenanceModifier>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -769,7 +755,6 @@
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<iCost>2690</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>5</iYield>
@@ -823,28 +808,25 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOOD_ATOM</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GOOD_ATOM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_ATOM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GOOD_ATOM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GOOD_ATOM</ArtDefineTag>
 			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ATOMPUNK</PrereqTech>
 				<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			</TechTypes>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<bPower>1</bPower>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
+			<bNeverCapture>1</bNeverCapture>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>200</iYield>
 			</YieldChanges>
+			<ArtDefineTag>ART_DEF_BUILDING_GOOD_ATOM</ArtDefineTag>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

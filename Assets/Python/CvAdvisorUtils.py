@@ -601,7 +601,7 @@ def cityAdvise(CyCity, iPlayer):
 							popupInfo.addPopup(iPlayer)
 							g_iAdvisorNags += 1
 
-				if CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) == 0 and not CyCity.isOccupation():
+				if CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) < 10 and not CyCity.isOccupation():
 
 					if (iTurn + 21) % 40 == iTurnFounded % 40:
 
@@ -615,7 +615,7 @@ def cityAdvise(CyCity, iPlayer):
 
 							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
-							iValue = CvBuildingInfoX.getObsoleteSafeCommerceChange(CommerceTypes.COMMERCE_CULTURE)
+							iValue = CvBuildingInfoX.getCommerceChange(CommerceTypes.COMMERCE_CULTURE)
 							if iValue <= iBestValue: continue
 
 							if CyCity.canConstruct(iBuildingX, False, False, False):

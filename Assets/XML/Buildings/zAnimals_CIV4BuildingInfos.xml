@@ -26,6 +26,21 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_ANIMAL_STORIES_REQUIRE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_ANIMAL_STORIES_REQUIRE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE_PEDIA</Civilopedia>
+			<PrereqTech>TECH_LITERATURE</PrereqTech>
+			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_MYTH</ArtDefineTag>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqInCityBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_TAMER_COMPLEX</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -151,7 +166,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COD_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_COD_STORIES_EFFECT</BuildingType>
@@ -297,7 +312,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CRAB_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CRAB_STORIES_EFFECT</BuildingType>
@@ -442,7 +457,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DART_FROG_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_DART_FROG_STORIES_EFFECT</BuildingType>
@@ -587,7 +602,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RAY_EAGLE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_RAY_EAGLE_STORIES_EFFECT</BuildingType>
@@ -732,7 +747,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MACKEREL_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_MACKEREL_STORIES_EFFECT</BuildingType>
@@ -877,7 +892,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RAY_MANTA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_RAY_MANTA_STORIES_EFFECT</BuildingType>
@@ -1022,7 +1037,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARLIN_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_MARLIN_STORIES_EFFECT</BuildingType>
@@ -1169,7 +1184,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RAYS_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_RAYS_STORIES_EFFECT</BuildingType>
@@ -1314,7 +1329,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TARANTULA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_TARANTULA_STORIES_EFFECT</BuildingType>
@@ -1459,7 +1474,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TUNA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_TUNA_STORIES_EFFECT</BuildingType>
@@ -1604,7 +1619,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASIANBEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_ASIANBEAR_STORIES_EFFECT</BuildingType>
@@ -1726,7 +1741,6 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<PrereqTech>TECH_WRITING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BEAR_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
@@ -1762,10 +1776,9 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BEAR_STORIES_EFFECT</BuildingType>
@@ -1910,7 +1923,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BLACK_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BLACK_BEAR_STORIES_EFFECT</BuildingType>
@@ -2055,7 +2068,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BROWN_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BROWN_BEAR_STORIES_EFFECT</BuildingType>
@@ -2200,7 +2213,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAVE_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CAVE_BEAR_STORIES_EFFECT</BuildingType>
@@ -2408,7 +2421,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GRIZZLY_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GRIZZLY_STORIES_EFFECT</BuildingType>
@@ -2553,7 +2566,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PANDA_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PANDA_BEAR_STORIES_EFFECT</BuildingType>
@@ -2698,7 +2711,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_POLAR_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_POLAR_BEAR_STORIES_EFFECT</BuildingType>
@@ -2843,7 +2856,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_REDPANDA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_REDPANDA_STORIES_EFFECT</BuildingType>
@@ -2988,7 +3001,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLOTH_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SLOTH_BEAR_STORIES_EFFECT</BuildingType>
@@ -3133,7 +3146,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SPECTACLED_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SPECTACLED_BEAR_STORIES_EFFECT</BuildingType>
@@ -3278,7 +3291,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SUN_BEAR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SUN_BEAR_STORIES_EFFECT</BuildingType>
@@ -3423,7 +3436,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AFRICANGREY_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_AFRICANGREY_STORIES_EFFECT</BuildingType>
@@ -3568,7 +3581,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AFRICAN_PENGUIN_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_AFRICAN_PENGUIN_STORIES_EFFECT</BuildingType>
@@ -3713,7 +3726,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BARNOWL_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BARNOWL_STORIES_EFFECT</BuildingType>
@@ -3858,7 +3871,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BARREDOWL_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BARREDOWL_STORIES_EFFECT</BuildingType>
@@ -4003,7 +4016,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BOOBY_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BOOBY_STORIES_EFFECT</BuildingType>
@@ -4148,7 +4161,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CASSOWARY_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CASSOWARY_STORIES_EFFECT</BuildingType>
@@ -4293,7 +4306,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EAGLE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_EAGLE_STORIES_EFFECT</BuildingType>
@@ -4438,7 +4451,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EMU_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_EMU_STORIES_EFFECT</BuildingType>
@@ -4583,7 +4596,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALAPAGOS_PENGUIN_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GALAPAGOS_PENGUIN_STORIES_EFFECT</BuildingType>
@@ -4728,7 +4741,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HAAST_EAGLE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_HAAST_EAGLE_STORIES_EFFECT</BuildingType>
@@ -4936,7 +4949,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HARPYEAGLE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_HARPYEAGLE_STORIES_EFFECT</BuildingType>
@@ -5081,7 +5094,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HAWK_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_HAWK_STORIES_EFFECT</BuildingType>
@@ -5226,7 +5239,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MACAW_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_MACAW_STORIES_EFFECT</BuildingType>
@@ -5371,7 +5384,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MOA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_MOA_STORIES_EFFECT</BuildingType>
@@ -5579,7 +5592,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OSTRICH_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_OSTRICH_STORIES_EFFECT</BuildingType>
@@ -5724,7 +5737,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PARROT_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PARROT_STORIES_EFFECT</BuildingType>
@@ -5869,7 +5882,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RAVEN_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_RAVEN_STORIES_EFFECT</BuildingType>
@@ -6014,7 +6027,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RAZORBILL_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_RAZORBILL_STORIES_EFFECT</BuildingType>
@@ -6159,7 +6172,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RHEA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_RHEA_STORIES_EFFECT</BuildingType>
@@ -6304,7 +6317,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEAEAGLE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SEAEAGLE_STORIES_EFFECT</BuildingType>
@@ -6449,7 +6462,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SECRETARYBIRD_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SECRETARYBIRD_STORIES_EFFECT</BuildingType>
@@ -6594,7 +6607,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ARCTICFOX_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_ARCTICFOX_STORIES_EFFECT</BuildingType>
@@ -6739,7 +6752,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GREY_WOLF_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GREY_WOLF_STORIES_EFFECT</BuildingType>
@@ -6855,13 +6868,6 @@
 				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</BuildingType>
 			</ReplacementBuildings>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -6884,7 +6890,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
@@ -7089,7 +7095,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DHOLE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_DHOLE_STORIES_EFFECT</BuildingType>
@@ -7234,7 +7240,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DINGO_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_DINGO_STORIES_EFFECT</BuildingType>
@@ -7379,7 +7385,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EWOLF_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_EWOLF_STORIES_EFFECT</BuildingType>
@@ -7524,7 +7530,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FENNECFOX_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_FENNECFOX_STORIES_EFFECT</BuildingType>
@@ -7669,7 +7675,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANEDWOLF_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_MANEDWOLF_STORIES_EFFECT</BuildingType>
@@ -7814,7 +7820,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_REDFOX_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_REDFOX_STORIES_EFFECT</BuildingType>
@@ -7959,7 +7965,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_THYLACINE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_THYLACINE_STORIES_EFFECT</BuildingType>
@@ -8167,7 +8173,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AFRICANELEPHANT_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_AFRICANELEPHANT_STORIES_EFFECT</BuildingType>
@@ -8312,7 +8318,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASIANELEPHANT_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_ASIANELEPHANT_STORIES_EFFECT</BuildingType>
@@ -8457,7 +8463,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GIRAFFE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GIRAFFE_STORIES_EFFECT</BuildingType>
@@ -8602,7 +8608,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HIPPOPOTAMUS_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_HIPPOPOTAMUS_STORIES_EFFECT</BuildingType>
@@ -8750,10 +8756,9 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HIPPOS_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_HIPPOS_STORIES_EFFECT</BuildingType>
@@ -8898,7 +8903,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PYGMYHIPPO_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PYGMYHIPPO_STORIES_EFFECT</BuildingType>
@@ -9043,7 +9048,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CUSCUS_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CUSCUS_STORIES_EFFECT</BuildingType>
@@ -9188,7 +9193,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NUMBAT_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_NUMBAT_STORIES_EFFECT</BuildingType>
@@ -9333,7 +9338,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OPOSSUM_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_OPOSSUM_STORIES_EFFECT</BuildingType>
@@ -9478,7 +9483,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_POSSUM_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_POSSUM_STORIES_EFFECT</BuildingType>
@@ -9623,7 +9628,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WOMBAT_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_WOMBAT_STORIES_EFFECT</BuildingType>
@@ -9768,7 +9773,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AARDVARK_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_AARDVARK_STORIES_EFFECT</BuildingType>
@@ -9913,7 +9918,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ARMADILLO_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_ARMADILLO_STORIES_EFFECT</BuildingType>
@@ -10058,7 +10063,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BABIRUSA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BABIRUSA_STORIES_EFFECT</BuildingType>
@@ -10211,7 +10216,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GLYPTO_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GLYPTO_STORIES_EFFECT</BuildingType>
@@ -10427,7 +10432,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_STORIES_EFFECT</BuildingType>
@@ -10639,7 +10644,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MONOTREMES_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_MONOTREMES_STORIES_EFFECT</BuildingType>
@@ -10784,7 +10789,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PLATYPUS_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PLATYPUS_STORIES_EFFECT</BuildingType>
@@ -10929,7 +10934,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TREESLOTH_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_TREESLOTH_STORIES_EFFECT</BuildingType>
@@ -11135,7 +11140,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ELASMOTHERIUM_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_ELASMOTHERIUM_STORIES_EFFECT</BuildingType>
@@ -11343,7 +11348,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BLACK_RHINO_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BLACK_RHINO_STORIES_EFFECT</BuildingType>
@@ -11488,7 +11493,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INDIAN_RHINO_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_INDIAN_RHINO_STORIES_EFFECT</BuildingType>
@@ -11633,7 +11638,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_JAVA_RHINO_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_JAVA_RHINO_STORIES_EFFECT</BuildingType>
@@ -11778,7 +11783,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WHITE_RHINO_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_WHITE_RHINO_STORIES_EFFECT</BuildingType>
@@ -11923,7 +11928,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SABRETOOTH_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SABRETOOTH_STORIES_EFFECT</BuildingType>
@@ -12131,7 +12136,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GATOR_ASIAN_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GATOR_ASIAN_STORIES_EFFECT</BuildingType>
@@ -12276,7 +12281,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAIMAN_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CAIMAN_STORIES_EFFECT</BuildingType>
@@ -12430,7 +12435,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CROCODILE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CROCODILE_STORIES_EFFECT</BuildingType>
@@ -12575,7 +12580,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GATOR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GATOR_STORIES_EFFECT</BuildingType>
@@ -12720,7 +12725,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GHARIAL_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GHARIAL_STORIES_EFFECT</BuildingType>
@@ -12865,7 +12870,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NILECROC_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_NILECROC_STORIES_EFFECT</BuildingType>
@@ -13010,7 +13015,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RIVER_CROC_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_RIVER_CROC_STORIES_EFFECT</BuildingType>
@@ -13155,7 +13160,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SALTWATER_CROC_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SALTWATER_CROC_STORIES_EFFECT</BuildingType>
@@ -13300,7 +13305,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LIZARD_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_LIZARD_STORIES_EFFECT</BuildingType>
@@ -13452,7 +13457,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TAPIR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_TAPIR_STORIES_EFFECT</BuildingType>
@@ -13597,7 +13602,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MALAYAN_TAPIR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_MALAYAN_TAPIR_STORIES_EFFECT</BuildingType>
@@ -13742,7 +13747,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MOUNTAIN_TAPIR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_MOUNTAIN_TAPIR_STORIES_EFFECT</BuildingType>
@@ -13887,7 +13892,7 @@
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BAIRDS_TAPIR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BAIRDS_TAPIR_STORIES_EFFECT</BuildingType>
@@ -14031,7 +14036,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BRAZILIAN_TAPIR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BRAZILIAN_TAPIR_STORIES_EFFECT</BuildingType>
@@ -14091,11 +14096,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_DESIGNER_MICROBIOLOGY</ObsoleteTech>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<FreeBonus>BONUS_POISON</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<TechCommerceChanges>
@@ -14507,11 +14512,11 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<iHappiness>1</iHappiness>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -14886,11 +14891,11 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<iHappiness>1</iHappiness>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -15312,11 +15317,11 @@
 			<iConquestProb>25</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -15621,11 +15626,11 @@
 			<iConquestProb>25</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
@@ -15715,11 +15720,11 @@
 			<iConquestProb>25</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -15790,11 +15795,11 @@
 			<iConquestProb>25</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -15831,11 +15836,11 @@
 			<iConquestProb>25</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -15945,11 +15950,11 @@
 			<iConquestProb>25</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
@@ -15991,11 +15996,11 @@
 			<iConquestProb>25</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
@@ -16177,11 +16182,11 @@
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<iHappiness>1</iHappiness>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -16685,7 +16690,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAVE_LION_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CAVE_LION_STORIES_EFFECT</BuildingType>
@@ -16892,7 +16897,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MOOSE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_MOOSE_STORIES_EFFECT</BuildingType>
@@ -17036,7 +17041,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARIBOU_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CARIBOU_STORIES_EFFECT</BuildingType>
@@ -17180,7 +17185,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TERN_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_TERN_STORIES_EFFECT</BuildingType>
@@ -17324,7 +17329,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SIBERIAN_TIGER_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SIBERIAN_TIGER_STORIES_EFFECT</BuildingType>
@@ -17468,7 +17473,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_IBEX_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_IBEX_STORIES_EFFECT</BuildingType>
@@ -17612,7 +17617,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SKUNK_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SKUNK_STORIES_EFFECT</BuildingType>
@@ -17756,7 +17761,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PIGEON_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PIGEON_STORIES_EFFECT</BuildingType>
@@ -17900,7 +17905,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PANTHER_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PANTHER_STORIES_EFFECT</BuildingType>
@@ -18044,7 +18049,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LYNX_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_LYNX_STORIES_EFFECT</BuildingType>
@@ -18190,7 +18195,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HUMPBACK_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_HUMPBACK_STORIES_EFFECT</BuildingType>
@@ -18334,7 +18339,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WOLVERINE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_WOLVERINE_STORIES_EFFECT</BuildingType>
@@ -18478,7 +18483,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VULTURE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_VULTURE_STORIES_EFFECT</BuildingType>
@@ -18622,7 +18627,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TURKEY_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_TURKEY_STORIES_EFFECT</BuildingType>
@@ -18766,7 +18771,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SNOW_LEOPARD_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SNOW_LEOPARD_STORIES_EFFECT</BuildingType>
@@ -18910,7 +18915,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SAIGA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SAIGA_STORIES_EFFECT</BuildingType>
@@ -19054,7 +19059,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MUSKOX_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_MUSKOX_STORIES_EFFECT</BuildingType>
@@ -19198,7 +19203,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RACCOON_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_RACCOON_STORIES_EFFECT</BuildingType>
@@ -19342,7 +19347,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DUCK_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_DUCK_STORIES_EFFECT</BuildingType>
@@ -19486,7 +19491,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PHEASANT_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PHEASANT_STORIES_EFFECT</BuildingType>
@@ -19630,7 +19635,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HORNED_OWL_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_HORNED_OWL_STORIES_EFFECT</BuildingType>
@@ -19774,7 +19779,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EMPEROR_PENGUIN_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_EMPEROR_PENGUIN_STORIES_EFFECT</BuildingType>
@@ -19918,7 +19923,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ROCKHOPPER_PENGUIN_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_ROCKHOPPER_PENGUIN_STORIES_EFFECT</BuildingType>
@@ -20062,7 +20067,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEALION_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SEALION_STORIES_EFFECT</BuildingType>
@@ -20206,7 +20211,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WALRUS_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_WALRUS_STORIES_EFFECT</BuildingType>
@@ -20352,7 +20357,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GREATWHITE_SHARK_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GREATWHITE_SHARK_STORIES_EFFECT</BuildingType>
@@ -20498,7 +20503,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HAMMERHEAD_SHARK_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_HAMMERHEAD_SHARK_STORIES_EFFECT</BuildingType>
@@ -20644,7 +20649,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_REEF_SHARK_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_REEF_SHARK_STORIES_EFFECT</BuildingType>
@@ -20791,7 +20796,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHARK_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SHARK_STORIES_EFFECT</BuildingType>
@@ -20937,7 +20942,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WHALESHARK_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_WHALESHARK_STORIES_EFFECT</BuildingType>
@@ -21082,7 +21087,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEATURTLE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SEATURTLE_STORIES_EFFECT</BuildingType>
@@ -21227,7 +21232,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DOLPHIN_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_DOLPHIN_STORIES_EFFECT</BuildingType>
@@ -21372,7 +21377,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KRAKEN_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_KRAKEN_STORIES_EFFECT</BuildingType>
@@ -21517,7 +21522,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DUGONG_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_DUGONG_STORIES_EFFECT</BuildingType>
@@ -21663,7 +21668,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORCA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_ORCA_STORIES_EFFECT</BuildingType>
@@ -21809,7 +21814,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINKIE_WHALE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_MINKIE_WHALE_STORIES_EFFECT</BuildingType>
@@ -21953,7 +21958,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEA_OTTER_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SEA_OTTER_STORIES_EFFECT</BuildingType>
@@ -22097,7 +22102,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LOON_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_LOON_STORIES_EFFECT</BuildingType>
@@ -22241,7 +22246,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TOUCAN_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_TOUCAN_STORIES_EFFECT</BuildingType>
@@ -22385,7 +22390,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FLAMINGO_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_FLAMINGO_STORIES_EFFECT</BuildingType>
@@ -22529,7 +22534,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EAGLE_BALD_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_EAGLE_BALD_STORIES_EFFECT</BuildingType>
@@ -22673,7 +22678,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAPUCHIN_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CAPUCHIN_STORIES_EFFECT</BuildingType>
@@ -22817,7 +22822,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAPYBARA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CAPYBARA_STORIES_EFFECT</BuildingType>
@@ -22961,7 +22966,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CHEETAH_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CHEETAH_STORIES_EFFECT</BuildingType>
@@ -23105,7 +23110,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CHIMPANZEE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CHIMPANZEE_STORIES_EFFECT</BuildingType>
@@ -23249,7 +23254,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DESERT_TORTOISE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_DESERT_TORTOISE_STORIES_EFFECT</BuildingType>
@@ -23393,7 +23398,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZEBRA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_ZEBRA_STORIES_EFFECT</BuildingType>
@@ -23512,6 +23517,7 @@
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
@@ -23526,17 +23532,6 @@
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_PALEONTOLOGY</ID>
-						</Has>
-					</Active>
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors>
@@ -23557,10 +23552,11 @@
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_STORIES_EFFECT</BuildingType>
@@ -23592,22 +23588,12 @@
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<iAmountPerTurn>1</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_PALEONTOLOGY</ID>
-						</Has>
-					</Active>
 				</PropertySource>
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
@@ -23941,7 +23927,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANTEATER_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_ANTEATER_STORIES_EFFECT</BuildingType>
@@ -24085,7 +24071,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BADGER_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BADGER_STORIES_EFFECT</BuildingType>
@@ -24229,7 +24215,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BALLPYTHON_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BALLPYTHON_STORIES_EFFECT</BuildingType>
@@ -24373,7 +24359,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BARBARYAPE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BARBARYAPE_STORIES_EFFECT</BuildingType>
@@ -24517,7 +24503,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BEAVER_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BEAVER_STORIES_EFFECT</BuildingType>
@@ -24661,7 +24647,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BENGALTIGER_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BENGALTIGER_STORIES_EFFECT</BuildingType>
@@ -24805,7 +24791,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BISON_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BISON_STORIES_EFFECT</BuildingType>
@@ -24949,7 +24935,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BOAR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BOAR_STORIES_EFFECT</BuildingType>
@@ -25093,7 +25079,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BONGO_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BONGO_STORIES_EFFECT</BuildingType>
@@ -25237,7 +25223,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CROW_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CROW_STORIES_EFFECT</BuildingType>
@@ -25381,7 +25367,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GAZELLE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GAZELLE_STORIES_EFFECT</BuildingType>
@@ -25525,7 +25511,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GELADA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GELADA_STORIES_EFFECT</BuildingType>
@@ -25669,7 +25655,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GEMSBOK_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GEMSBOK_STORIES_EFFECT</BuildingType>
@@ -25813,7 +25799,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GERENUK_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GERENUK_STORIES_EFFECT</BuildingType>
@@ -25957,7 +25943,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GORILLA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GORILLA_STORIES_EFFECT</BuildingType>
@@ -26101,7 +26087,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_KANGAROO_GREY_STORIES_EFFECT</BuildingType>
@@ -26245,7 +26231,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GULL_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GULL_STORIES_EFFECT</BuildingType>
@@ -26389,7 +26375,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYENA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_HYENA_STORIES_EFFECT</BuildingType>
@@ -26533,7 +26519,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_IMPALA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_IMPALA_STORIES_EFFECT</BuildingType>
@@ -26677,7 +26663,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_JAGUAR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_JAGUAR_STORIES_EFFECT</BuildingType>
@@ -26821,7 +26807,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WARTHOG_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_WARTHOG_STORIES_EFFECT</BuildingType>
@@ -26965,7 +26951,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KOALA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_KOALA_STORIES_EFFECT</BuildingType>
@@ -27109,7 +27095,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KOOKABURRA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_KOOKABURRA_STORIES_EFFECT</BuildingType>
@@ -27253,7 +27239,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LION_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_LION_STORIES_EFFECT</BuildingType>
@@ -27397,7 +27383,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_IGUANA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_IGUANA_STORIES_EFFECT</BuildingType>
@@ -27541,7 +27527,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KOMODO_DRAGON_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_KOMODO_DRAGON_STORIES_EFFECT</BuildingType>
@@ -27685,7 +27671,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NILE_MONITOR_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_NILE_MONITOR_STORIES_EFFECT</BuildingType>
@@ -27829,7 +27815,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LLAMA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_LLAMA_STORIES_EFFECT</BuildingType>
@@ -27941,7 +27927,6 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<PrereqTech>TECH_WRITING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NEW_W_MONKEY_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
@@ -27976,10 +27961,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NEW_W_MONKEY_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_NEW_W_MONKEY_STORIES_EFFECT</BuildingType>
@@ -28092,7 +28076,6 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<PrereqTech>TECH_WRITING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OLD_W_MONKEY_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
@@ -28127,10 +28110,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OLD_W_MONKEY_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_OLD_W_MONKEY_STORIES_EFFECT</BuildingType>
@@ -28274,7 +28256,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANDRILL_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_MANDRILL_STORIES_EFFECT</BuildingType>
@@ -28418,7 +28400,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OKAPI_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_OKAPI_STORIES_EFFECT</BuildingType>
@@ -28562,7 +28544,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ORANGUTAN_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_ORANGUTAN_STORIES_EFFECT</BuildingType>
@@ -28706,7 +28688,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OXPECKER_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_OXPECKER_STORIES_EFFECT</BuildingType>
@@ -28850,7 +28832,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PEACOCK_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PEACOCK_STORIES_EFFECT</BuildingType>
@@ -28994,7 +28976,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PROCOPTODON_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PROCOPTODON_STORIES_EFFECT</BuildingType>
@@ -29201,7 +29183,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_QUOLL_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_QUOLL_STORIES_EFFECT</BuildingType>
@@ -29345,7 +29327,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RATEL_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_RATEL_STORIES_EFFECT</BuildingType>
@@ -29489,7 +29471,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_KANGAROO_RED_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_KANGAROO_RED_STORIES_EFFECT</BuildingType>
@@ -29633,7 +29615,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COBRA_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_COBRA_STORIES_EFFECT</BuildingType>
@@ -29777,7 +29759,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PUFFADDER_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PUFFADDER_STORIES_EFFECT</BuildingType>
@@ -29892,7 +29874,6 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<PrereqTech>TECH_WRITING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SNAKES_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
@@ -29927,10 +29908,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SNAKES_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SNAKES_STORIES_EFFECT</BuildingType>
@@ -30074,7 +30054,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VIPER_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_VIPER_STORIES_EFFECT</BuildingType>
@@ -30218,7 +30198,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WALLAROO_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_WALLAROO_STORIES_EFFECT</BuildingType>
@@ -30362,7 +30342,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BUFFALO_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_BUFFALO_STORIES_EFFECT</BuildingType>
@@ -30506,7 +30486,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WILDEBEEST_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_WILDEBEEST_STORIES_EFFECT</BuildingType>
@@ -30650,7 +30630,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORIES_EFFECT</BuildingType>
