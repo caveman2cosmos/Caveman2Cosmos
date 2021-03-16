@@ -1407,6 +1407,7 @@ class CvMainInterface:
 			iCityID = CyCity.getID()
 			if not InCity or iCityID != InCity.iCityID:
 				print "City selected"
+				self.bFreshQueue = False
 				self.cleanPlotList(screen)
 				self.bCityChange = True
 				self.bBuildWorkQueue = True
