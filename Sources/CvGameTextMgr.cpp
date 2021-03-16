@@ -34870,8 +34870,7 @@ void CvGameTextMgr::buildCityBillboardIconString( CvWStringBuffer& szBuffer, CvC
 /*																							  */
 /* adding link to resources in the Pedia														*/
 /************************************************************************************************/
-	szDebugBuffer.Format("=== City %S religion icons ===", pCity->getName().GetCString());
-	gDLL->logMsg("CvGameTextMgr_buildCityBillboardString.log", szDebugBuffer.c_str());
+	logging::logMsg("CvGameTextMgr_buildCityBillboardString.log", "=== City %S religion icons ===", pCity->getName().GetCString());
 /************************************************************************************************/
 /* TGA_INDEXATION						  END												  */
 /************************************************************************************************/
@@ -34890,8 +34889,7 @@ void CvGameTextMgr::buildCityBillboardIconString( CvWStringBuffer& szBuffer, CvC
 				szBuffer.append(CvWString::format(L"%c", GC.getReligionInfo((ReligionTypes) iI).getHolyCityChar()));
 */
 				const CvReligionInfo& pInfo = GC.getReligionInfo((ReligionTypes) iI);
-				szDebugBuffer.Format("Religion %s, TGA index %i.", pInfo.getType(), pInfo.getTGAIndex());
-				gDLL->logMsg("CvGameTextMgr_buildCityBillboardString.log", szDebugBuffer.c_str());
+				logging::logMsg("CvGameTextMgr_buildCityBillboardString.log", "Religion %s, TGA index %i.", pInfo.getType(), pInfo.getTGAIndex());
 				szBuffer.append(CvWString::format(L"%c", pInfo.getHolyCityChar()));
 			}
 			else
@@ -34906,11 +34904,7 @@ void CvGameTextMgr::buildCityBillboardIconString( CvWStringBuffer& szBuffer, CvC
 */
 				const CvReligionInfo& pInfo = GC.getReligionInfo((ReligionTypes) iI);
 				szBuffer.append(CvWString::format(L"%c", pInfo.getChar()));
-				if (GC.isXMLLogging())
-				{
-					szDebugBuffer.Format("Religion %s, TGA index %i.", pInfo.getType(), pInfo.getTGAIndex());
-					gDLL->logMsg("CvGameTextMgr_buildCityBillboardString.log", szDebugBuffer.c_str());
-				}
+				logging::logMsg("CvGameTextMgr_buildCityBillboardString.log", "Religion %s, TGA index %i.", pInfo.getType(), pInfo.getTGAIndex());
 /************************************************************************************************/
 /* TGA_INDEXATION						  END												  */
 /************************************************************************************************/
