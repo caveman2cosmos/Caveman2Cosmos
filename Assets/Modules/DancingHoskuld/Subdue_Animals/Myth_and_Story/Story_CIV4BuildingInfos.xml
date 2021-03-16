@@ -11,6 +11,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -34,18 +35,7 @@
 			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
 			           <iAmountPerTurn>1</iAmountPerTurn>
 			     </PropertySource>
-			     <PropertySource>
-				    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-				    <iAmountPerTurn>-1</iAmountPerTurn>
-				    <Active>
-					<Has>
-			   			<GOMType>GOM_TECH</GOMType>
-			   			<ID>TECH_PALEONTOLOGY</ID>
-					</Has>
-				</Active>
-    			</PropertySource>
-	           </PropertyManipulators>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_BIRD_STORIES</Type>
@@ -57,6 +47,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -64,7 +55,7 @@
 			<FreeBuilding>BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</BuildingType>
@@ -93,6 +84,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -109,18 +101,7 @@
 			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
 			           <iAmountPerTurn>1</iAmountPerTurn>
 			     </PropertySource>
-			     <PropertySource>
-				    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-				    <iAmountPerTurn>-1</iAmountPerTurn>
-				    <Active>
-					<Has>
-			   			<GOMType>GOM_TECH</GOMType>
-			   			<ID>TECH_PALEONTOLOGY</ID>
-					</Has>
-				</Active>
-    			</PropertySource>
-	           </PropertyManipulators>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_CAT_STORY</Type>
@@ -132,6 +113,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -155,18 +137,7 @@
 			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
 			           <iAmountPerTurn>1</iAmountPerTurn>
 			     </PropertySource>
-			     <PropertySource>
-				    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-				    <iAmountPerTurn>-1</iAmountPerTurn>
-				    <Active>
-					<Has>
-			   			<GOMType>GOM_TECH</GOMType>
-			   			<ID>TECH_PALEONTOLOGY</ID>
-					</Has>
-				</Active>
-    			</PropertySource>
-	           </PropertyManipulators>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_CAT_STORIES</Type>
@@ -178,6 +149,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -185,7 +157,7 @@
 			<FreeBuilding>BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</BuildingType>
@@ -214,6 +186,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -230,18 +203,7 @@
 			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
 			           <iAmountPerTurn>1</iAmountPerTurn>
 			     </PropertySource>
-			     <PropertySource>
-				    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-				    <iAmountPerTurn>-1</iAmountPerTurn>
-				    <Active>
-					<Has>
-			   			<GOMType>GOM_TECH</GOMType>
-			   			<ID>TECH_PALEONTOLOGY</ID>
-					</Has>
-				</Active>
-    			</PropertySource>
-	           </PropertyManipulators>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_DOG_STORY</Type>
@@ -287,7 +249,7 @@
 					</Has>
 				</Active>
     			</PropertySource>
-	           </PropertyManipulators>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_DOG_STORIES</Type>
@@ -306,7 +268,7 @@
 			<FreeBuilding>BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</BuildingType>
@@ -360,9 +322,9 @@
 			   			<GOMType>GOM_TECH</GOMType>
 			   			<ID>TECH_PALEONTOLOGY</ID>
 					</Has>
-				</Active>
+					</Active>
     			</PropertySource>
-	           </PropertyManipulators>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</Type>
@@ -371,6 +333,7 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_MARSUPIAL_STORY</ArtDefineTag>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -395,20 +358,9 @@
 			     <PropertySource>
 			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
+			         <iAmountPerTurn>1</iAmountPerTurn>
 			     </PropertySource>
-			     <PropertySource>
-				    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-				    <iAmountPerTurn>-1</iAmountPerTurn>
-				    <Active>
-					<Has>
-			   			<GOMType>GOM_TECH</GOMType>
-			   			<ID>TECH_PALEONTOLOGY</ID>
-					</Has>
-				</Active>
-    			</PropertySource>
-	           </PropertyManipulators>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</Type>
@@ -417,6 +369,7 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</ArtDefineTag>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -427,7 +380,7 @@
 			<FreeBuilding>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</BuildingType>
@@ -453,6 +406,7 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_MARSUPIAL_STORY</ArtDefineTag>
+			<ObsoleteTech>TECH_PALEONTOLOGY</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -470,20 +424,9 @@
 			     <PropertySource>
 			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
+			         <iAmountPerTurn>1</iAmountPerTurn>
 			     </PropertySource>
-			     <PropertySource>
-				    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-				    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-				    <iAmountPerTurn>-1</iAmountPerTurn>
-				    <Active>
-					<Has>
-			   			<GOMType>GOM_TECH</GOMType>
-			   			<ID>TECH_PALEONTOLOGY</ID>
-					</Has>
-				</Active>
-    			</PropertySource>
-	           </PropertyManipulators>
+			</PropertyManipulators>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

@@ -463,11 +463,11 @@
 			<ConstructSound>AS2D_BUILD_WALLS</ConstructSound>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<DomainFreeExperiences>
 				<DomainFreeExperience>
 					<DomainType>DOMAIN_LAND</DomainType>
@@ -881,11 +881,11 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4074,7 +4074,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_LIBRARY_SERVICE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_LIBRARY_SERVICE</MovieDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4881,7 +4880,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_NOBLEGARDEN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NOBLEGARDEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<MovieDefineTag>ART_DEF_MOVIE_NOBLEGARDEN</MovieDefineTag>
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<Bonus>BONUS_ANTI_GRAVITY_FIELD_GENERATORS</Bonus>
 			<bPrereqPower>1</bPrereqPower>
@@ -5661,7 +5659,6 @@
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_AREA51</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SECRET_ARMY_BASE</MovieDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SECRET_ARMY_BASE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6902,7 +6899,6 @@
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>850</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<CommerceChanges>
 				<iCommerce>-2</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7180,15 +7176,14 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2690</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAsset>8</iAsset>
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7257,7 +7252,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2820</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHappiness>2</iHappiness>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>

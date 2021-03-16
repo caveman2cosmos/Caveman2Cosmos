@@ -138,7 +138,6 @@
 			</Flavors>
 			<iConquestProb>80</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<bForceOverwrite>1</bForceOverwrite>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -200,7 +199,6 @@
 			</Flavors>
 			<iConquestProb>80</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<bForceOverwrite>1</bForceOverwrite>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>

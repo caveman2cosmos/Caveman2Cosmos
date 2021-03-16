@@ -533,7 +533,7 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 //------------------------------------------------------------------------------------------------------
 bool CvXMLLoadUtility::SetGlobalTypes()
 {
-	OutputDebugString("Setting Global Types: Start");
+	OutputDebugString("Setting Global Types: Start\n");
 
 	UpdateProgressCB("GlobalTypes");
 
@@ -609,7 +609,7 @@ bool CvXMLLoadUtility::SetGlobalTypes()
 	// delete the pointer to the FXml variable
 	DestroyFXml();
 
-	OutputDebugString("Setting Global Types: End");
+	OutputDebugString("Setting Global Types: End\n");
 
 	return true;
 }
@@ -2243,10 +2243,6 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 		}
 	}
 
-	//if (NULL != pArgFunction)
-	//{
-	//	gDLL->destroyCache(pCache);
-	//}
 /************************************************************************************************/
 /* XML_MODULAR_ART_LOADING                 10/26/07                            MRGENIE          */
 /*                                                                                              */
@@ -2313,21 +2309,6 @@ void CvXMLLoadUtility::LoadGlobalClassInfoModular(std::vector<T*>& aInfos, const
 void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfos, const char* szFileRoot, const char* szFileDirectory, const wchar_t* szXmlPath, bool bUseCaching)
 {
 	bool bLoaded = false;
-
-//	CONVERT TO MANUAL CACHING
-#if 0
-	if (bUseCaching)
-	{
-		pCache = (gDLL->*pArgFunction)(CvString::format("%s.dat", szFileRoot));	// cache file name
-
-		if (gDLL->cacheRead(pCache, CvString::format("xml\\\\%s\\\\%s.xml", szFileDirectory, szFileRoot)))
-		{
-			logging::logMsg("xml.log", "Read %s from cache", szFileDirectory);
-			bLoaded = true;
-			bWriteCache = false;
-		}
-	}
-#endif
 
 	if (!bLoaded)
 	{
@@ -2436,23 +2417,6 @@ void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInf
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
-#if 0
-			if (NULL != pArgFunction && bWriteCache)
-			{
-				// write info to cache
-				bool bOk = gDLL->cacheWrite(pCache);
-				if (!bOk)
-				{
-					char szMessage[1024];
-					sprintf(szMessage, "Failed writing to %s cache. \n Current XML file is: %s", szFileDirectory, GC.getCurrentXMLFile().GetCString());
-					gDLL->MessageBox(szMessage, "XML Caching Error");
-				}
-				if (bOk)
-				{
-					logging::logMsg("xml.log", "Wrote %s to cache", szFileDirectory);
-				}
-			}
-#endif
 		}
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 11/15/07                                MRGENIE      */
@@ -2465,13 +2429,6 @@ void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInf
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
 	}
-
-#if 0
-	if (NULL != pArgFunction)
-	{
-		gDLL->destroyCache(pCache);
-	}
-#endif
 }
 
 //

@@ -9294,12 +9294,9 @@ bool CvUnit::airBomb(int iX, int iY)
 					iCount = 0;
 					for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 					{
-						if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 2)
+						if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 2 && pCity->getNumActiveBuilding((BuildingTypes)iI))
 						{
-							if (pCity->getNumRealBuilding((BuildingTypes)iI))
-							{
-								iCount++;
-							}
+							iCount++;
 						}
 					}
 					iMis2 *= iCount;
@@ -9310,12 +9307,9 @@ bool CvUnit::airBomb(int iX, int iY)
 					iCount = 0;
 					for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 					{
-						if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 3)
+						if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 3 && pCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
 						{
-							if (pCity->getNumRealBuilding((BuildingTypes)iI))
-							{
-								iCount++;
-							}
+							iCount++;
 						}
 					}
 					iMis3 *= (iCount * 2);
@@ -10972,18 +10966,12 @@ bool CvUnit::join(SpecialistTypes eSpecialist)
 
 bool CvUnit::canConstruct(const CvPlot* pPlot, BuildingTypes eBuilding, bool bTestVisible) const
 {
-	CvCity* pCity;
-
-	if (eBuilding == NO_BUILDING)
+	if (eBuilding == NO_BUILDING || !m_pUnitInfo->getHasBuilding(eBuilding))
 	{
 		return false;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/05/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if (isCommander())
+
+	if (isDelayedDeath() || isCommander())
 	{
 		return false;
 	}
@@ -10993,27 +10981,16 @@ bool CvUnit::canConstruct(const CvPlot* pPlot, BuildingTypes eBuilding, bool bTe
 		return false;
 	}
 
-	if (GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce() > NO_RELIGION)
-	{
-		if (GC.getBuildingInfo(eBuilding).getProductionCost() == -1)
-		{
-			if (GC.getGame().getBuildingCreatedCount(eBuilding) > 0)
-			{
-				return false;
-			}
-		}
-	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	pCity = pPlot->getPlotCity();
-
-	if (pCity == NULL)
+	if (GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce() > NO_RELIGION
+	&& GC.getBuildingInfo(eBuilding).getProductionCost() == -1
+	&& GC.getGame().getBuildingCreatedCount(eBuilding) > 0)
 	{
 		return false;
 	}
 
-	if (getTeam() != pCity->getTeam())
+	CvCity* pCity = pPlot->getPlotCity();
+
+	if (pCity == NULL || getTeam() != pCity->getTeam())
 	{
 		return false;
 	}
@@ -11023,17 +11000,7 @@ bool CvUnit::canConstruct(const CvPlot* pPlot, BuildingTypes eBuilding, bool bTe
 		return false;
 	}
 
-	if (!(m_pUnitInfo->getHasBuilding(eBuilding)))
-	{
-		return false;
-	}
-
-	if (!(pCity->canConstruct(eBuilding, false, bTestVisible, true)))
-	{
-		return false;
-	}
-
-	if (isDelayedDeath())
+	if (!pCity->canConstruct(eBuilding, false, bTestVisible, true))
 	{
 		return false;
 	}
@@ -11055,7 +11022,7 @@ bool CvUnit::construct(BuildingTypes eBuilding)
 
 	if (pCity != NULL)
 	{
-		pCity->setNumRealBuilding(eBuilding, pCity->getNumRealBuilding(eBuilding) + 1);
+		pCity->setNumRealBuilding(eBuilding, 1);
 
 		CvEventReporter::getInstance().buildingBuilt(pCity, eBuilding);
 	}
@@ -11934,7 +11901,7 @@ bool CvUnit::testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier)
 	{
 		if (!isEnemy(kTargetPlayer.getTeam()))
 		{
-			GET_PLAYER(eTargetPlayer).AI_changeMemoryCount(getOwner(), MEMORY_SPY_CAUGHT, 1);
+			kTargetPlayer.AI_changeMemoryCount(getOwner(), MEMORY_SPY_CAUGHT, 1);
 		}
 
 		MEMORY_TRACK_EXEMPT();
@@ -15254,7 +15221,7 @@ int CvUnit::buildupLevel() const
 
 int CvUnit::fortifyRepelModifier() const
 {
-	if (!isFortifyable())
+	if (!isFortifyable() || noDefensiveBonus())
 	{
 		return 0;
 	}
@@ -15263,9 +15230,10 @@ int CvUnit::fortifyRepelModifier() const
 }
 //TB Combat Mods end
 
-int CvUnit::experienceNeeded() const
+int CvUnit::experienceNeeded(int iLvlOffset) const
 {
-	int iExperienceNeeded = calcBaseExpNeeded(getLevel(), getOwner());
+	int iLevel = getLevel() + iLvlOffset;
+	int iExperienceNeeded = calcBaseExpNeeded(iLevel, getOwner());
 
 	if (isCommander())
 	{
@@ -15564,17 +15532,13 @@ int CvUnit::evasionProbability(bool bIgnoreCommanders) const
 
 int CvUnit::withdrawalProbability() const
 {
+	const int iProbability = m_pUnitInfo->getWithdrawalProbability() + getExtraWithdrawal() /*+ escapeModifier()*/;
 
-	int iProbability = m_pUnitInfo->getWithdrawalProbability() + getExtraWithdrawal();
-	//iProbability += escapeModifier();
 	if (shouldUseWithdrawalOddsCap())
 	{
 		return std::min(GC.getDefineINT("MAX_WITHDRAWAL_PROBABILITY"), std::max(0, iProbability));
 	}
-	else
-	{
-		return std::max(0, iProbability);
-	}
+	return std::max(0, iProbability);
 }
 //TB Combat Mods Begin
 int CvUnit::attackCombatModifierTotal() const
@@ -15584,6 +15548,11 @@ int CvUnit::attackCombatModifierTotal() const
 
 int CvUnit::defenseCombatModifierTotal() const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
+
 	return (m_pUnitInfo->getDefenseCombatModifier() + getExtraDefenseCombatModifier());
 }
 
@@ -15665,7 +15634,7 @@ int CvUnit::overrunTotal() const
 
 int CvUnit::repelTotal() const
 {
-	if (getDomainType() == DOMAIN_LAND && plot()->isWater())
+	if (noDefensiveBonus() || (getDomainType() == DOMAIN_LAND && plot()->isWater()))
 	{
 		return 0;
 	}
@@ -15674,7 +15643,7 @@ int CvUnit::repelTotal() const
 
 int CvUnit::fortRepelTotal() const
 {
-	if (getDomainType() == DOMAIN_LAND && plot()->isWater())
+	if (noDefensiveBonus() || (getDomainType() == DOMAIN_LAND && plot()->isWater()))
 	{
 		return 0;
 	}
@@ -15683,7 +15652,7 @@ int CvUnit::fortRepelTotal() const
 
 int CvUnit::repelRetriesTotal() const
 {
-	if (getDomainType() == DOMAIN_LAND && plot()->isWater())
+	if (noDefensiveBonus() ||  (getDomainType() == DOMAIN_LAND && plot()->isWater()))
 	{
 		return 0;
 	}
@@ -15796,6 +15765,10 @@ int CvUnit::strAdjperAttTotal() const
 
 int CvUnit::strAdjperDefTotal() const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	return (m_pUnitInfo->getStrAdjperDef() + getExtraStrAdjperDef());
 }
 
@@ -15821,6 +15794,10 @@ int CvUnit::currentStrAdjperAttTotal() const
 
 int CvUnit::currentStrAdjperDefTotal() const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	return strAdjperDefTotal() * getDefenseCount();
 }
 
@@ -16056,11 +16033,19 @@ int CvUnit::cityAttackModifier() const
 
 int CvUnit::cityDefenseModifier() const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	return (m_pUnitInfo->getCityDefenseModifier() + getExtraCityDefensePercent());
 }
 
 int CvUnit::cityDefenseVSOpponent(const CvUnit* pOpponent) const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	const CvCity* pCity = plot()->getPlotCity();
 	int iValue = 0;
 
@@ -16092,6 +16077,10 @@ int CvUnit::hillsAttackModifier() const
 
 int CvUnit::hillsDefenseModifier() const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	return (m_pUnitInfo->getHillsDefenseModifier() + getExtraHillsDefensePercent());
 }
 
@@ -16105,6 +16094,10 @@ int CvUnit::terrainAttackModifier(TerrainTypes eTerrain) const
 
 int CvUnit::terrainDefenseModifier(TerrainTypes eTerrain) const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eTerrain)
 	return (m_pUnitInfo->getTerrainDefenseModifier(eTerrain) + getExtraTerrainDefensePercent(eTerrain));
 }
@@ -16118,6 +16111,10 @@ int CvUnit::featureAttackModifier(FeatureTypes eFeature) const
 
 int CvUnit::featureDefenseModifier(FeatureTypes eFeature) const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eFeature)
 	return (m_pUnitInfo->getFeatureDefenseModifier(eFeature) + getExtraFeatureDefensePercent(eFeature));
 }
@@ -16131,6 +16128,10 @@ int CvUnit::unitAttackModifier(UnitTypes eUnit) const
 
 int CvUnit::unitDefenseModifier(UnitTypes eUnit) const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit)
 	return m_pUnitInfo->getUnitDefenseModifier(eUnit);
 }
@@ -16979,7 +16980,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		}
 
 		//	Koshling - modified a little to merge Super Forts logic
-		ImprovementTypes eImprovement = pNewPlot->getImprovementType();
+		const ImprovementTypes eImprovement = pNewPlot->getImprovementType();
 		if(eImprovement != NO_IMPROVEMENT && GC.getImprovementInfo(eImprovement).isActsAsCity() && !isNoCapture()  && !isBlendIntoCity() && !isHiddenNationality() && GET_PLAYER(getOwner()).isInvasionCapablePlayer() && !isCargo())
 		{
 			PROFILE("CvUnit::setXY.NewPlot2.ActAsCity");
@@ -16992,7 +16993,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 			}
 			else
 			{
-				CvPlayer& pNewPlotOwner = GET_PLAYER(pNewPlot->getOwner());
+				const CvPlayer& pNewPlotOwner = GET_PLAYER(pNewPlot->getOwner());
 				if ((isEnemy(pNewPlotOwner.getTeam()) || !pNewPlotOwner.isAlive())
 					&& !canCoexistWithTeamOnPlot(pNewPlotOwner.getTeam(), *pNewPlot)
 					&& canFight()
@@ -17000,7 +17001,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 				{
 					bDoAcquireFort = true;
 
-					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_CAPTURED_BY", GC.getImprovementInfo(eImprovement).getText(), GET_PLAYER(getOwner()).getCivilizationDescriptionKey());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_CAPTURED_BY", GC.getImprovementInfo(eImprovement).getText(), GET_PLAYER(getOwner()).getCivilizationDescriptionKey());
 					AddDLLMessage(pNewPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYCAPTURED", MESSAGE_TYPE_MAJOR_EVENT, GC.getImprovementInfo(eImprovement).getButton(), GC.getCOLOR_RED(), pNewPlot->getX(), pNewPlot->getY(), true, true);
 				}
 			}
@@ -18725,6 +18726,10 @@ void CvUnit::changeExtraAttackCombatModifier(int iChange)
 
 int CvUnit::getExtraDefenseCombatModifier(bool bIgnoreCommanders) const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	if (!bIgnoreCommanders && !isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
@@ -19001,7 +19006,10 @@ void CvUnit::changeExtraOverrun(int iChange)
 
 int CvUnit::getExtraRepel(bool bIgnoreCommanders) const
 {
-
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	if (!bIgnoreCommanders && !isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
@@ -19021,6 +19029,10 @@ void CvUnit::changeExtraRepel(int iChange)
 
 int CvUnit::getExtraFortRepel(bool bIgnoreCommanders) const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	if (!bIgnoreCommanders && !isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
@@ -19040,6 +19052,10 @@ void CvUnit::changeExtraFortRepel(int iChange)
 
 int CvUnit::getExtraRepelRetries(bool bIgnoreCommanders) const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	if (!bIgnoreCommanders && !isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
@@ -19234,6 +19250,10 @@ void CvUnit::changeExtraStrAdjperAtt(int iChange)
 
 int CvUnit::getExtraStrAdjperDef(bool bIgnoreCommanders) const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	if (!bIgnoreCommanders && !isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
@@ -19865,6 +19885,10 @@ void CvUnit::changeExtraCityAttackPercent(int iChange)
 
 int CvUnit::getExtraCityDefensePercent() const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
@@ -19907,6 +19931,10 @@ void CvUnit::changeExtraHillsAttackPercent(int iChange)
 
 int CvUnit::getExtraHillsDefensePercent() const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
@@ -21118,6 +21146,10 @@ void CvUnit::changeExtraTerrainAttackPercent(TerrainTypes eIndex, int iChange)
 
 int CvUnit::getExtraTerrainDefensePercent(TerrainTypes eIndex) const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), eIndex)
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
@@ -21182,6 +21214,10 @@ void CvUnit::changeExtraFeatureAttackPercent(FeatureTypes eIndex, int iChange)
 
 int CvUnit::getExtraFeatureDefensePercent(FeatureTypes eIndex) const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex)
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
@@ -21783,16 +21819,15 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 	const CvPromotionInfo& promotionInfo = GC.getPromotionInfo(ePromotion);
 
 	// Disable S&D modifying promos if option is not on:
-	if
-	(
-		!GC.getGame().isOption(GAMEOPTION_SAD)
-	&& (
-			promotionInfo.getUnnerveChange()
-		||	promotionInfo.getEncloseChange()
-		||	promotionInfo.getLungeChange()
-		||	promotionInfo.getDynamicDefenseChange()
-		)
-	) return false;
+	if	( !GC.getGame().isOption(GAMEOPTION_SAD)
+		&& (
+				promotionInfo.getUnnerveChange() != 0
+			||	promotionInfo.getEncloseChange() != 0
+			||	promotionInfo.getLungeChange() != 0
+			||	promotionInfo.getDynamicDefenseChange() != 0
+			)
+		) 
+		return false;
 
 	//Disable via NotOnGameOption tag:
 	for (int iI = 0; iI < promotionInfo.getNumNotOnGameOptions(); iI++)
@@ -21915,20 +21950,21 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 	}
 	// ! SUPER_SPIES
 
-	if (
-		noDefensiveBonus()
-	&& (
-			promotionInfo.getDefenseCombatModifierChange()
-		||	promotionInfo.getFortRepelChange()
-		||	promotionInfo.getRepelChange()
-		||	promotionInfo.getRepelRetriesChange()
-		||	promotionInfo.getStrAdjperDefChange()
-		||	promotionInfo.getHillsDefensePercent()
-		||	promotionInfo.isAnyTerrainDefensePercent()
-		||	promotionInfo.isAnyFeatureDefensePercent()
-		||	promotionInfo.getCityDefensePercent()
-		)
-	) return false;
+	//TB Note: changing the rule that completely bans such promotions but adding to these situations an automatic msg
+//	if (noDefensiveBonus() && 
+		//(
+		//		promotionInfo.getDefenseCombatModifierChange() != 0
+		//	||	promotionInfo.getFortRepelChange() != 0
+		//	||	promotionInfo.getRepelChange() != 0
+		//	||	promotionInfo.getRepelRetriesChange() != 0
+		//	||	promotionInfo.getStrAdjperDefChange() != 0
+		//	||	promotionInfo.getHillsDefensePercent() != 0
+		//	||	promotionInfo.isAnyTerrainDefensePercent()
+		//	||	promotionInfo.isAnyFeatureDefensePercent()
+		//	||	promotionInfo.getCityDefensePercent() != 0
+		//	)
+		//)
+		//return false;
 
 // TB Combat Mods
 	// Conditionally disabled the maximum withdrawal cap, only if pursuit is NOT in play
@@ -22094,7 +22130,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck) const
 			return false;
 		}
 
-		if (promotionInfo.getQualityChange() > 0 && getExperience() >= experienceNeeded())
+		if (promotionInfo.getQualityChange() > 0 && getExperience() >= experienceNeeded(1))
 		{
 			return false;
 		}
@@ -26892,7 +26928,7 @@ bool CvUnit::canRangeStrikeAt(const CvPlot* pPlot, int iX, int iY) const
 		return false;
 	}
 
-	CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
+	const CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
 
 	if (NULL == pTargetPlot)
 	{
@@ -26924,7 +26960,7 @@ bool CvUnit::canRangeStrikeAt(const CvPlot* pPlot, int iX, int iY) const
 		return false;
 	}
 
-	CvUnit* pDefender = airStrikeTarget(pTargetPlot);
+	const CvUnit* pDefender = airStrikeTarget(pTargetPlot);
 	if (NULL == pDefender)
 	{
 		return false;
@@ -27396,21 +27432,10 @@ bool CvUnit::isSuicide() const
 
 int CvUnit::getDropRange() const
 {
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 16.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: Implement iExtraDropRange                                                        **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************
-	return (m_pUnitInfo->getDropRange());*/
 	return (m_pUnitInfo->getDropRange() + getExtraDropRange());
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
 }
 
-void CvUnit::getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower, int& iTheirOdds, int& iTheirStrength, int& iOurDamage, int& iTheirDamage, CombatDetails* pTheirDetails, CvUnit* pDefender, bool bSamePlot) const
+void CvUnit::getDefenderCombatValues(const CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower, int& iTheirOdds, int& iTheirStrength, int& iOurDamage, int& iTheirDamage, CombatDetails* pTheirDetails, const CvUnit* pDefender, bool bSamePlot) const
 {
 	//TB Combat Mod begin
 	iTheirStrength = std::max(1,kDefender.currCombatStr(pPlot, this, pTheirDetails));
@@ -28150,7 +28175,7 @@ bool CvUnit::airBomb2(int iX, int iY)
 		{
 			iI = GC.getGame().getSorenRandNum(buildingList.getLength(), "Airbomb building");
 			build = buildingList.nodeNum(iI)->m_data;
-			if (pCity->getNumRealBuilding((BuildingTypes)build) > 0)
+			if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0)
 			{
 				bNoTarget = false;
 			}
@@ -28170,13 +28195,13 @@ bool CvUnit::airBomb2(int iX, int iY)
 					iAttempts++;
 					iI = GC.getGame().getSorenRandNum(buildingList.getLength(), "Airbomb building");
 					build = buildingList.nodeNum(iI)->m_data;
-					if (pCity->getNumRealBuilding((BuildingTypes)build) > 0 || iAttempts > iMaxAttempts)
+					if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0 || iAttempts > iMaxAttempts)
 					{
 						bNoTarget = false;
 					}
 				}
 			}
-			if (pCity->getNumRealBuilding((BuildingTypes)build) > 0)
+			if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0)
 			{
 				bNoTarget = false;
 				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), maxXPValue(NULL, pCity->isHominid()), true, pCity->getOwner() == getOwner());
@@ -28389,7 +28414,7 @@ bool CvUnit::airBomb3(int iX, int iY)
 		{
 			iI = GC.getGame().getSorenRandNum(buildingList.getLength(), "Airbomb building");
 			build = buildingList.nodeNum(iI)->m_data;
-			if (pCity->getNumRealBuilding((BuildingTypes)build) > 0)
+			if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0)
 			{
 				bNoTarget = false;
 			}
@@ -28409,13 +28434,13 @@ bool CvUnit::airBomb3(int iX, int iY)
 					iAttempts++;
 					iI = GC.getGame().getSorenRandNum(buildingList.getLength(), "Airbomb building");
 					build = buildingList.nodeNum(iI)->m_data;
-					if (pCity->getNumRealBuilding((BuildingTypes)build) > 0 || iAttempts > iMaxAttempts)
+					if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0 || iAttempts > iMaxAttempts)
 					{
 						bNoTarget = false;
 					}
 				}
 			}
-			if (pCity->getNumRealBuilding((BuildingTypes)build) > 0)
+			if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0)
 			{
 				pCity->setNumRealBuilding((BuildingTypes)build, 0);
 
@@ -29942,7 +29967,7 @@ bool CvUnit::performInquisition()
 
 		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
-			CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
+			const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 			if (kLoopPlayer.isAlive()
 			&& (pPlot->isVisible(kLoopPlayer.getTeam(), true) || pPlot->isRevealed(kLoopPlayer.getTeam(), true)))
 			{
@@ -31009,6 +31034,7 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 		return;
 	}
 
+	bool bNoDefBon = noDefensiveBonus();
 	std::vector<PromotionTypes> aAttackerAvailablePromotions;
 	std::vector<PromotionTypes> aDefenderAvailablePromotions;
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
@@ -31022,6 +31048,7 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 		{
 			continue;
 		}
+
 		//TB Combat Mods Begin
 		if (pDefender->isDead() || m_combatResult.bDefenderKnockedBack)
 		{
@@ -31044,9 +31071,12 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 				aAttackerAvailablePromotions.push_back(promotionType);
 			}
 			//* attacker was unyielding against a Repel
-			if (m_combatResult.bAttackerRefusedtoYield && kPromotion.getUnyieldingChange() > 0)
+			if (!bNoDefBon)
 			{
-				aAttackerAvailablePromotions.push_back(promotionType);
+				if (m_combatResult.bAttackerRefusedtoYield && kPromotion.getUnyieldingChange() > 0)
+				{
+					aAttackerAvailablePromotions.push_back(promotionType);
+				}
 			}
 			//* attacker Knocked back defender
 			if (m_combatResult.bDefenderKnockedBack && kPromotion.getKnockbackChange() > 0)
@@ -31189,14 +31219,17 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 				aDefenderAvailablePromotions.push_back(promotionType);
 			}
 			//* Defender Repelled Attacker
-			if (m_combatResult.bAttackerRepelled && kPromotion.getRepelChange() > 0)
+			if (!bNoDefBon)
 			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			//* Defender Repelled Attacker while Fortified
-			if (m_combatResult.bAttackerRepelled && cdDefenderDetails.iFortifyModifier > 0 && kPromotion.getFortRepelChange() > 0)
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
+				if (m_combatResult.bAttackerRepelled && kPromotion.getRepelChange() > 0)
+				{
+					aDefenderAvailablePromotions.push_back(promotionType);
+				}
+				//* Defender Repelled Attacker while Fortified
+				if (m_combatResult.bAttackerRepelled && cdDefenderDetails.iFortifyModifier > 0 && kPromotion.getFortRepelChange() > 0)
+				{
+					aDefenderAvailablePromotions.push_back(promotionType);
+				}
 			}
 			//* Defender Refused to be Knocked Back
 			if (m_combatResult.bDefenderRefusedtoYield && kPromotion.getUnyieldingChange() > 0)
@@ -31218,23 +31251,23 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 			}
 			//TB Combat Mods End
 			//* defend terrain
-			if (kPromotion.getTerrainDefensePercent((int)pPlot->getTerrainType()) > 0)
+			if (!noDefensiveBonus() && (kPromotion.getTerrainDefensePercent((int)pPlot->getTerrainType()) > 0))
 			{
 				aDefenderAvailablePromotions.push_back(promotionType);
 			}
 			//* defend feature
-			if (pPlot->getFeatureType() != NO_FEATURE &&
-				kPromotion.getFeatureDefensePercent((int)pPlot->getFeatureType()) > 0)
+			if (!noDefensiveBonus() && (pPlot->getFeatureType() != NO_FEATURE &&
+				kPromotion.getFeatureDefensePercent((int)pPlot->getFeatureType()) > 0))
 			{
 				aDefenderAvailablePromotions.push_back(promotionType);
 			}
 			//* defend hills
-			if (kPromotion.getHillsDefensePercent() > 0 && pPlot->isHills())
+			if (!noDefensiveBonus() && (kPromotion.getHillsDefensePercent() > 0 && pPlot->isHills()))
 			{
 				aDefenderAvailablePromotions.push_back(promotionType);
 			}
 			//* defend city
-			if (kPromotion.getCityDefensePercent() > 0 && pPlot->isCity(true))	//count forts too
+			if (!noDefensiveBonus() && kPromotion.getCityDefensePercent() > 0 && pPlot->isCity(true))	//count forts too
 			{
 				aDefenderAvailablePromotions.push_back(promotionType);
 			}
@@ -31256,7 +31289,7 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 				aDefenderAvailablePromotions.push_back(promotionType);
 			}
 
-			if (kPromotion.getDefenseCombatModifierChange() > 0)
+			if (!noDefensiveBonus() && kPromotion.getDefenseCombatModifierChange() > 0)
 			{
 				aDefenderAvailablePromotions.push_back(promotionType);
 			}
@@ -31961,17 +31994,15 @@ int CvUnit::getCityCommunicability(PromotionLineTypes eAfflictionLine) const
 	CvCity* pCity = pPlot->getPlotCity();
 	int iCommunicability = 0;
 
-	if (pCity != NULL)
+	if (pCity != NULL && pCity->hasAfflictionType(eAfflictionLine)
+	&& !GC.getPromotionLineInfo(eAfflictionLine).isNoSpreadCitytoUnit())
 	{
-		if (pCity->hasAfflictionType(eAfflictionLine) && !GC.getPromotionLineInfo(eAfflictionLine).isNoSpreadCitytoUnit())
+		for (int iI = 0; iI < GC.getPromotionLineInfo(eAfflictionLine).getNumBuildings(); iI++)
 		{
-			for (int iI = 0; iI < GC.getPromotionLineInfo(eAfflictionLine).getNumBuildings(); iI++)
+			BuildingTypes eAfflictionBuilding = (BuildingTypes)GC.getPromotionLineInfo(eAfflictionLine).getBuilding(iI);
+			if (pCity->getNumActiveBuilding(eAfflictionBuilding) > 0)
 			{
-				BuildingTypes eAfflictionBuilding = (BuildingTypes)GC.getPromotionLineInfo(eAfflictionLine).getBuilding(iI);
-				if (pCity->getNumRealBuilding(eAfflictionBuilding) > 0)
-				{
-					iCommunicability += GC.getBuildingInfo(eAfflictionBuilding).getTradeCommunicability();
-				}
+				iCommunicability += GC.getBuildingInfo(eAfflictionBuilding).getTradeCommunicability();
 			}
 		}
 	}
@@ -32376,6 +32407,10 @@ void CvUnit::setFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineTyp
 
 int CvUnit::getCityRepel() const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	PROFILE_FUNC();
 
 	UnitCombatTypes eUnitCombat;
@@ -34229,6 +34264,10 @@ void CvUnit::changeCombatKnockbacks(int iChange)
 
 int CvUnit::getCombatRepels() const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	return m_iCombatRepels;
 }
 
@@ -35767,6 +35806,10 @@ bool CvUnit::hasExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex) const
 
 int CvUnit::repelVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	int iAmount = m_pUnitInfo->getRepelVSUnitCombatType(eCombatType);
 
 	iAmount += getExtraRepelVSUnitCombatType(eCombatType);
@@ -35776,6 +35819,10 @@ int CvUnit::repelVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 
 int CvUnit::getExtraRepelVSUnitCombatType(UnitCombatTypes eIndex) const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex)
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
@@ -35806,6 +35853,10 @@ void CvUnit::changeExtraRepelVSUnitCombatType(UnitCombatTypes eIndex, int iChang
 
 bool CvUnit::hasExtraRepelVSUnitCombatType(UnitCombatTypes eIndex) const
 {
+	if (noDefensiveBonus())
+	{
+		return false;
+	}
 	return (getExtraRepelVSUnitCombatType(eIndex) != 0);
 }
 
@@ -36302,6 +36353,10 @@ int CvUnit::pursuitVSOpponentProbTotal(const CvUnit* pOpponent) const
 
 int CvUnit::repelVSOpponentProbTotal(const CvUnit* pOpponent) const
 {
+	if (noDefensiveBonus())
+	{
+		return 0;
+	}
 	const CvCity* pCity = plot()->getPlotCity();
 
 	int iBase = repelTotal();
@@ -37109,7 +37164,7 @@ void CvUnit::doSetUnitCombats()
 void CvUnit::setFreePromotion(PromotionTypes ePromotion, bool bAdding, TraitTypes eTrait)
 {
 	const int numTraitInfos = GC.getNumTraitInfos();
-	CvPlayer& pPlayer = GET_PLAYER(getOwner());
+	const CvPlayer& pPlayer = GET_PLAYER(getOwner());
 
 	if (bAdding && !isHasPromotion(ePromotion))
 	{

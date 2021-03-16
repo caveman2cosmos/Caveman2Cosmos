@@ -27,7 +27,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6480</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -49,7 +48,6 @@
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirlift>2</iAirlift>
 			<iAirUnitCapacity>6</iAirUnitCapacity>
 			<HealUnitCombatTypes>
@@ -98,7 +96,6 @@
 			</MapCategoryTypes>
 			<iCost>1230</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirlift>4</iAirlift>
 			<iAirUnitCapacity>9</iAirUnitCapacity>
 			<HealUnitCombatTypes>
@@ -146,7 +143,6 @@
 			</TechTypes>
 			<iCost>1130</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -183,7 +179,6 @@
 			<Bonus>BONUS_DIESELPUNK</Bonus>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
@@ -214,7 +209,6 @@
 			<Bonus>BONUS_DIESELPUNK</Bonus>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -247,7 +241,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>

@@ -264,9 +264,6 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ARTILLERY</PrereqTech>
-			</TechTypes>
 			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESELPUNK</BonusType>
@@ -382,9 +379,6 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_ARTILLERY</PrereqTech>
-			</TechTypes>
 			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESELPUNK</BonusType>

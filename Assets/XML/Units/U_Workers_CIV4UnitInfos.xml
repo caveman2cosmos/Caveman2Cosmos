@@ -696,10 +696,6 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -1050,10 +1046,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1419,10 +1411,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1792,10 +1780,6 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -2148,10 +2132,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2520,10 +2500,6 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -2813,10 +2789,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3266,10 +3238,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4201,6 +4169,16 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_BEACON_REEF</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
+				<!-- Obsolete in: C2C_ERA_FUTURE -->
+				<Build>
+					<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->

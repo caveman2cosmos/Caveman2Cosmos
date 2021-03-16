@@ -9649,14 +9649,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -10431,14 +10423,6 @@
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FACTORY</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -23832,14 +23816,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -24066,10 +24042,6 @@
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
-					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -24165,10 +24137,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -25396,14 +25364,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -25506,10 +25466,6 @@
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
-					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_WINDMILL</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -25549,10 +25505,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -26319,14 +26271,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -26553,10 +26497,6 @@
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
-					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -26652,10 +26592,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -27878,14 +27814,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -27988,10 +27916,6 @@
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_FACTORY_COLD_CLIMATE</ImprovementType>
-					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_WINDMILL</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -28031,10 +27955,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FACTORY</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
