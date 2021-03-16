@@ -268,9 +268,9 @@ public:
 	int AI_areaMissionAIs(const CvArea* pArea, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
 	int AI_plotTargetMissionAIsInternal(const CvPlot* pPlot, MissionAITypes eMissionAI, int iRange = 0, int* piClosest = NULL) const;
 	int AI_plotTargetMissionAIsInternalinCargoVolume(const CvPlot* pPlot, MissionAITypes eMissionAI, int iRange = 0, int* piClosest = NULL) const;
-	int AI_plotTargetMissionAIs(const CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const;
+	int AI_plotTargetMissionAIs(CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const;
 	int AI_plotTargetMissionAIsinCargoVolume(CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const;
-	void AI_noteMissionAITargetCountChange(MissionAITypes eMissionAI, const CvPlot* pPlot, int iChange, const CvPlot* pUnitPlot, int iVolume);
+	void AI_noteMissionAITargetCountChange(MissionAITypes eMissionAI, CvPlot* pPlot, int iChange, const CvPlot* pUnitPlot, int iVolume);
 	int AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
 	int AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes* aeMissionAI, int iMissionAICount, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
 	int AI_enemyTargetMissionAIs(MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
@@ -481,13 +481,13 @@ public:
 	int AI_workerTradeVal(const CvUnit* pUnit) const;
 	int AI_militaryUnitTradeVal(const CvUnit* pUnit) const;
 	int AI_corporationTradeVal(CorporationTypes eCorporation, PlayerTypes ePlayer) const;
-	int AI_pledgeVoteTradeVal(const VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const;
+	int AI_pledgeVoteTradeVal(VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const;
 	int AI_secretaryGeneralTradeVal(VoteSourceTypes eVoteSource, PlayerTypes ePlayer) const;
 
 	int AI_getEmbassyAttitude(PlayerTypes ePlayer) const;
-	TeamTypes AI_bestJoinWarTeam(PlayerTypes ePlayer) const;
-	TeamTypes AI_bestMakePeaceTeam(PlayerTypes ePlayer) const;
-	TeamTypes AI_bestStopTradeTeam(PlayerTypes ePlayer) const;
+	TeamTypes AI_bestJoinWarTeam(PlayerTypes ePlayer);
+	TeamTypes AI_bestMakePeaceTeam(PlayerTypes ePlayer);
+	TeamTypes AI_bestStopTradeTeam(PlayerTypes ePlayer);
 	int AI_militaryBonusVal(BonusTypes eBonus);
 	int AI_getCivicShareAttitude(PlayerTypes ePlayer) const;
 	int AI_getCivicAttitudeChange(PlayerTypes ePlayer) const;
@@ -653,7 +653,7 @@ private:
 	int m_iCivicSwitchMinDeltaThreshold;
 	bool bUnitRecalcNeeded;
 
-	typedef stdext::hash_map<const CvPlot*, MissionTargetInfo> PlotMissionTargetMap;
+	typedef stdext::hash_map<CvPlot*, MissionTargetInfo> PlotMissionTargetMap;
 	typedef stdext::hash_map<MissionAITypes, PlotMissionTargetMap> MissionPlotTargetMap;
 	mutable MissionPlotTargetMap m_missionTargetCache;
 };
