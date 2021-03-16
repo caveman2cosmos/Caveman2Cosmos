@@ -35,8 +35,8 @@ public:
 	GameObjectTypes getTargetObjectType() const;
 	void setTargetObjectType(GameObjectTypes eObjectType);
 
-	bool isActive(CvGameObject* pObject) const;
-	void getTargetObjects(CvGameObject* pObject, std::vector<CvGameObject*>& apGameObjects);
+	bool isActive(const CvGameObject* pObject) const;
+	void getTargetObjects(const CvGameObject* pObject, std::vector<const CvGameObject*>& apGameObjects);
 
 	virtual PropertyPropagatorTypes getType() const = 0;
 
@@ -48,7 +48,7 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertyPropagator* pProp, CvXMLLoadUtility* pXML );
 
-	virtual void getCheckSum(unsigned int& iSum) const;
+	virtual void getCheckSum(uint32_t& iSum) const;
 protected:
 	PropertyTypes m_eProperty;
 	GameObjectTypes m_eObjectType;
@@ -83,7 +83,7 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertyPropagator* pProp, CvXMLLoadUtility* pXML );
 
-	virtual void getCheckSum(unsigned int& iSum) const;
+	virtual void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	int m_iPercent;
@@ -108,7 +108,7 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertyPropagator* pProp, CvXMLLoadUtility* pXML );
 
-	virtual void getCheckSum(unsigned int& iSum) const;
+	virtual void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	int m_iAmountPerTurn;
@@ -135,7 +135,7 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	virtual void copyNonDefaults(CvPropertyPropagator* pProp, CvXMLLoadUtility* pXML );
 
-	virtual void getCheckSum(unsigned int& iSum) const;
+	virtual void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	int m_iPercent;
