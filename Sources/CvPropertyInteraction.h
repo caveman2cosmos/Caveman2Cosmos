@@ -44,7 +44,7 @@ public:
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertyInteraction* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertyInteraction* pProp);
 
 	virtual void getCheckSum(unsigned int& iSum) const;
 protected:
@@ -74,7 +74,7 @@ public:
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 	
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertyInteraction* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertyInteraction* pProp);
 
 	virtual void getCheckSum(unsigned int& iSum) const;
 
@@ -101,7 +101,7 @@ public:
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertyInteraction* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertyInteraction* pProp);
 
 	virtual void getCheckSum(unsigned int& iSum) const;
 
@@ -129,7 +129,7 @@ public:
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	virtual bool read(CvXMLLoadUtility* pXML);
-	virtual void copyNonDefaults(CvPropertyInteraction* pProp, CvXMLLoadUtility* pXML );
+	virtual void copyNonDefaults(CvPropertyInteraction* pProp);
 
 	virtual void getCheckSum(unsigned int& iSum) const;
 

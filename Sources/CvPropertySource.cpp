@@ -114,7 +114,7 @@ bool CvPropertySource::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertySource::copyNonDefaults(CvPropertySource *pProp, CvXMLLoadUtility *pXML)
+void CvPropertySource::copyNonDefaults(CvPropertySource* pProp)
 {
 	//if (m_eProperty == NO_PROPERTY)
 	//	m_eProperty = pProp->getProperty();
@@ -223,12 +223,12 @@ bool CvPropertySourceConstant::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertySourceConstant::copyNonDefaults(CvPropertySource *pProp, CvXMLLoadUtility *pXML)
+void CvPropertySourceConstant::copyNonDefaults(CvPropertySource* pProp)
 {
-	CvPropertySource::copyNonDefaults(pProp, pXML);
-	CvPropertySourceConstant* pOther = static_cast<CvPropertySourceConstant*>(pProp);
+	CvPropertySource::copyNonDefaults(pProp);
 	if (m_pAmountPerTurn == NULL)
 	{
+		CvPropertySourceConstant* pOther = static_cast<CvPropertySourceConstant*>(pProp);
 		m_pAmountPerTurn = pOther->m_pAmountPerTurn;
 		pOther->m_pAmountPerTurn = NULL;
 	}
@@ -303,9 +303,9 @@ bool CvPropertySourceConstantLimited::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertySourceConstantLimited::copyNonDefaults(CvPropertySource *pProp, CvXMLLoadUtility *pXML)
+void CvPropertySourceConstantLimited::copyNonDefaults(CvPropertySource* pProp)
 {
-	CvPropertySource::copyNonDefaults(pProp, pXML);
+	CvPropertySource::copyNonDefaults(pProp);
 	const CvPropertySourceConstantLimited* pOther = static_cast<const CvPropertySourceConstantLimited*>(pProp);
 	if (m_iAmountPerTurn == 0)
 		m_iAmountPerTurn = pOther->getAmountPerTurn();
@@ -414,9 +414,9 @@ bool CvPropertySourceDecay::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertySourceDecay::copyNonDefaults(CvPropertySource *pProp, CvXMLLoadUtility *pXML)
+void CvPropertySourceDecay::copyNonDefaults(CvPropertySource* pProp)
 {
-	CvPropertySource::copyNonDefaults(pProp, pXML);
+	CvPropertySource::copyNonDefaults(pProp);
 	const CvPropertySourceDecay* pOther = static_cast<const CvPropertySourceDecay*>(pProp);
 	if (m_iPercent == 0)
 		m_iPercent = pOther->getPercent();
@@ -482,9 +482,9 @@ bool CvPropertySourceAttributeConstant::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertySourceAttributeConstant::copyNonDefaults(CvPropertySource *pProp, CvXMLLoadUtility *pXML)
+void CvPropertySourceAttributeConstant::copyNonDefaults(CvPropertySource* pProp)
 {
-	CvPropertySource::copyNonDefaults(pProp, pXML);
+	CvPropertySource::copyNonDefaults(pProp);
 	const CvPropertySourceAttributeConstant* pOther = static_cast<const CvPropertySourceAttributeConstant*>(pProp);
 	if (m_eAttribute == NO_ATTRIBUTE)
 		m_eAttribute = pOther->getAttribute();
