@@ -1641,7 +1641,7 @@ Only affects SmartMap if terrain options is:
 		<Italian>Advanced Routes</Italian>
 		<Spanish>Advanced Routes</Spanish>
 		<Polish>Advanced Routes</Polish>
-		<Russian>Advanced Routes</Russian>
+		<Russian>Улучшенные маршруты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES_HELP</Tag>
@@ -1651,6 +1651,6 @@ Only affects SmartMap if terrain options is:
 		<Italian>Requires more technology than the minimum normal route qualifying techs to construct routes on more difficult terrain/feature plots.  Intended to give a more realistic feel to tougher terrains throughout the game.</Italian>
 		<Spanish>Requires more technology than the minimum normal route qualifying techs to construct routes on more difficult terrain/feature plots.  Intended to give a more realistic feel to tougher terrains throughout the game.</Spanish>
 		<Polish>Requires more technology than the minimum normal route qualifying techs to construct routes on more difficult terrain/feature plots.  Intended to give a more realistic feel to tougher terrains throughout the game.</Polish>
-		<Russian>Requires more technology than the minimum normal route qualifying techs to construct routes on more difficult terrain/feature plots.  Intended to give a more realistic feel to tougher terrains throughout the game.</Russian>
+		<Russian>Требуется больше технологий, для создания обычных дорог, а также дополнительные науки, позволяющие прокладывать дороги на сложной пересеченной местности. Основной замысел состоит в том, чтобы дать более реалистичное ощущение передвижения на более сложном рельефе местности на протяжении всей игры.</Russian>
 	</TEXT>
 </Civ4GameText>
