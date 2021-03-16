@@ -37,10 +37,6 @@
 		<DefineTextVal>COLOR_RED</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>BUG_CITY_WORKING_IMPROVABLE_BONUS_PLOT_ALPHA</DefineName>
-		<fDefineFloatVal>1.0</fDefineFloatVal>
-	</Define>
-	<Define>
 		<DefineName>BUG_CITY_WORKING_UNIMPROVABLE_PLOT_COLOR</DefineName>
 		<DefineTextVal>COLOR_YELLOW</DefineTextVal>
 	</Define>

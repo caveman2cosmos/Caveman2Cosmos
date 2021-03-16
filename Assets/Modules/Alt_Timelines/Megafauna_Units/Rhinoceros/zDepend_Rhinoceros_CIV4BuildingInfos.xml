@@ -9,7 +9,7 @@
 				<BuildingType>BUILDING_INDIAN_RHINO_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_JAVA_RHINO_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_WHITE_RHINO_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_ELASMOTHERIUM_MYTH</BuildingType>
+				<BuildingType>BUILDING_ELASMOTHERIUM_MYTH_EFFECT</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 	</BuildingInfos>

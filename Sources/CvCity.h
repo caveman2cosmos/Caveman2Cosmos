@@ -381,7 +381,7 @@ public:
 	int getBonusYieldRateModifier(YieldTypes eIndex, BonusTypes eBonus) const;
 	void processBonus(BonusTypes eBonus, int iChange);
 
-	void processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolete = false, bool bReplacingNow = false, bool bReligiouslyDisabling = false);
+	void processBuilding(const BuildingTypes eBuilding, const int iChange, const bool bReligiously = false, const bool bAlphaOmega = false);
 	void processProcess(ProcessTypes eProcess, int iChange);
 	void processSpecialist(SpecialistTypes eSpecialist, int iChange);
 
@@ -471,7 +471,6 @@ public:
 	int getGlobalSourcedProperty(PropertyTypes eProperty) const;
 	int getTotalBuildingSourcedProperty(PropertyTypes eProperty) const;
 	int getTotalUnitSourcedProperty(PropertyTypes eProperty) const;
-	int getNumBuilding(BuildingTypes eIndex) const;
 	int getNumActiveBuilding(BuildingTypes eIndex) const;
 	bool hasActiveWorldWonder() const;
 
@@ -844,6 +843,8 @@ public:
 
 	int getExtraTradeRoutes() const;
 	void changeExtraTradeRoutes(int iChange);
+
+	int getMaxTradeRoutes() const;
 
 	int getTradeRouteModifier() const;
 	void changeTradeRouteModifier(int iChange);
@@ -1221,9 +1222,12 @@ public:
 	void alterWorkingPlot(int iIndex);
 	void processWorkingPlot(int iPlot, int iChange, bool yieldsOnly = false);
 
-	int getNumRealBuilding(BuildingTypes eIndex) const;
-	void setNumRealBuilding(BuildingTypes eIndex, int iNewValue);
-	void setNumRealBuildingTimed(BuildingTypes eIndex, int iNewValue, bool bFirst, PlayerTypes eOriginalOwner, int iOriginalTime);
+	bool hasFullyActiveBuilding(const BuildingTypes eIndex) const;
+	int getNumRealBuilding(const BuildingTypes eIndex) const;
+	void setNumRealBuilding(const BuildingTypes eIndex, const int iNewValue);
+	void setNumRealBuildingTimed(const BuildingTypes eBuilding, const bool bNewValue, const PlayerTypes eOriginalOwner, const int iOriginalTime, const bool bFirst = true);
+	void setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes eBuilding, const bool bNewValue, const bool bFirst);
+	void handleBuildingCounts(const BuildingTypes eBuilding, const int iChange, const bool bWonder);
 
 	bool isValidBuildingLocation(BuildingTypes eIndex) const;
 
@@ -1402,7 +1406,7 @@ public:
 	bool hasVicinityBonus(BonusTypes eBonus) const;
 	void clearRawVicinityBonusCache(BonusTypes eBonus);
 	bool hasRawVicinityBonus(BonusTypes eBonus) const;
-	void checkBuildings(bool bBonus = true, bool bCivics = true, bool bWar = true, bool bPower = true, bool bPopulation = true, bool bAlertOwner = true);
+	void checkBuildings(bool bAlertOwner = true);
 	void doVicinityBonus();
 	bool isDevelopingCity() const;
 
@@ -1420,11 +1424,11 @@ public:
 
 	void doInvasion();
 
-	void setDisabledBuilding(const BuildingTypes eIndex, const bool bNewValue);
+	void setDisabledBuilding(const BuildingTypes eIndex, const bool bNewValue, const bool bProcess = true);
 	bool isDisabledBuilding(const short iIndex) const;
 
-	void setReligiouslyDisabledBuilding(BuildingTypes eIndex, bool bNewValue);
-	bool isReligiouslyDisabledBuilding(BuildingTypes eIndex) const;
+	void setReligiouslyLimitedBuilding(BuildingTypes eIndex, bool bNewValue);
+	bool isReligiouslyLimitedBuilding(BuildingTypes eIndex) const;
 
 	bool isZoneOfControl() const;
 
@@ -1549,11 +1553,11 @@ public:
 			averageScore = 0;
 			minScore = MAX_INT;
 			maxScore = -MAX_INT;
-			for (std::vector<ScoredBuilding>::const_iterator itr = scores.begin(); itr != scores.end(); ++itr)
+			foreach_(const ScoredBuilding& itr, scores)
 			{
-				averageScore = averageScore + itr->score / scores.size();
-				minScore = std::min(minScore, itr->score);
-				maxScore = std::max(maxScore, itr->score);
+				averageScore = averageScore + itr.score / scores.size();
+				minScore = std::min(minScore, itr.score);
+				maxScore = std::max(maxScore, itr.score);
 			}
 		}
 	};
@@ -1754,7 +1758,6 @@ protected:
 	int m_iGoldFromLostProduction;
 	int m_iCiv;
 	float m_fPopulationgrowthratepercentageLog;
-#define INVALID_GROWTH_PERCENT_LOG ((float)-10000.0)	//	Used to detect old format saves when loading
 
 	bool m_bBuiltFoodProducedUnit;
 	bool m_bResetTechs;
@@ -1975,8 +1978,6 @@ protected:
 	int* m_paiUnitCombatFreeExperience;
 	int* m_paiFreePromotionCount;
 	int* m_paiNumRealBuilding;
-	mutable int* m_paiBuildingReplaced;
-	mutable bool m_bHasCalculatedBuildingReplacement;
 
 	bool* m_pabWorkingPlot;
 	bool* m_pabHasReligion;
@@ -2046,8 +2047,6 @@ protected:
 	void recalculatePopulationgrowthratepercentage();
 	virtual bool AI_addBestCitizen(bool bWorkers, bool bSpecialists, int* piBestPlot = NULL, SpecialistTypes* peBestSpecialist = NULL) = 0;
 	virtual bool AI_removeWorstCitizen(SpecialistTypes eIgnoreSpecialist = NO_SPECIALIST) = 0;
-	void calculateBuildingReplacements() const;
-	void changeBuildingReplacementCount(BuildingTypes eBuilding, bool bAdd);
 
 	//TB Building tags
 	void setExtraLocalCaptureProbabilityModifier(int iValue);
@@ -2197,7 +2196,6 @@ private:
 	mutable bool m_canTrainCachePopulated;
 	mutable bool m_canTrainCacheDirty;
 	mutable int m_cachedBuildingYieldModifers[NUM_YIELD_TYPES];
-	int m_recalcBuilding;
 	bool m_bPlotWorkingMasked;
 	mutable int m_totalCommerceRateModifier[NUM_COMMERCE_TYPES];
 
@@ -2295,14 +2293,13 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, const CvArea*, area);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, const CvPlot*, plot);
 
-		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isReligiouslyDisabledBuilding, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, hasFullyActiveBuilding, BuildingTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, canConstruct, BuildingTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, canTrain, UnitTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isHasReligion, ReligionTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isHasCorporation, CorporationTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, hasBonus, BonusTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isCoastal, int);
-		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getNumBuilding, BuildingTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getNumRealBuilding, BuildingTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getNumActiveBuilding, BuildingTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getCommerceRateTimes100, CommerceTypes);

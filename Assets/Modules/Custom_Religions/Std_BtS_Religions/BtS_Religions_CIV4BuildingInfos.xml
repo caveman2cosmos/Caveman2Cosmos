@@ -21,23 +21,22 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CAVES</MovieDefineTag>
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
 			<StateReligion>RELIGION_BUDDHISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -102,7 +101,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_NARA</MovieDefineTag>
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
 			<StateReligion>RELIGION_BUDDHISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<Bonus>BONUS_SCULPTURES</Bonus>
@@ -110,18 +109,17 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1104</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAnarchyModifier>-50</iAnarchyModifier>
 			<iGoldenAgeModifier>20</iGoldenAgeModifier>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -172,10 +170,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<MovieDefineTag>ART_DEF_MOVIE_SAN_MARCOS_CATHEDRAL</MovieDefineTag>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
 			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -184,7 +181,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1920</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
@@ -197,11 +193,11 @@
 				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</SeaPlotYieldChanges>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -272,7 +268,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_VATICAN_LIBRARY</MovieDefineTag>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
 			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
@@ -280,17 +276,16 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1800</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -356,7 +351,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CONFUCIO</MovieDefineTag>
 			<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
 			<StateReligion>RELIGION_CONFUCIANISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_CONFUCIANISM</PrereqReligion>
 			<PrereqBonuses>
 				<Bonus>BONUS_BOOKS</Bonus>
@@ -368,18 +363,17 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1512</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
 			<iStateReligionHappiness>3</iStateReligionHappiness>
 			<iGlobalPopulationChange>1</iGlobalPopulationChange>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -458,7 +452,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SOLOMON</MovieDefineTag>
 			<ReligionType>RELIGION_JUDAISM</ReligionType>
 			<StateReligion>RELIGION_JUDAISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_JUDAISM</PrereqReligion>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
@@ -466,17 +460,16 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1404</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -540,7 +533,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_AKSHARDHAM</MovieDefineTag>
 			<ReligionType>RELIGION_HINDUISM</ReligionType>
 			<StateReligion>RELIGION_HINDUISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
@@ -552,18 +545,17 @@
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
 			<iHappiness>3</iHappiness>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -626,7 +618,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MEENAKSHI</MovieDefineTag>
 			<ReligionType>RELIGION_HINDUISM</ReligionType>
 			<StateReligion>RELIGION_HINDUISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
@@ -638,18 +630,17 @@
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>50</iGreatPeopleRateModifier>
 			<iHappiness>3</iHappiness>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -718,24 +709,23 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ESTAMBUL</MovieDefineTag>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>2208</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>4</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -792,28 +782,26 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<MovieDefineTag>ART_DEF_MOVIE_DESERT</MovieDefineTag>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>2640</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -879,14 +867,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_KHARJITE</MovieDefineTag>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>2208</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
 			<iHappiness>1</iHappiness>
@@ -895,11 +882,11 @@
 			<iTradeRouteModifier>25</iTradeRouteModifier>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>4</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -960,7 +947,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_QUANZHEN</MovieDefineTag>
 			<ReligionType>RELIGION_TAOISM</ReligionType>
 			<StateReligion>RELIGION_TAOISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_TAOISM</PrereqReligion>
 			<PrereqBonuses>
 				<Bonus>BONUS_BOOKS</Bonus>
@@ -970,17 +957,16 @@
 			</PrereqBonuses>
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGlobalHealth>1</iGlobalHealth>
 			<iStateReligionHappiness>3</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1057,22 +1043,21 @@
 			<MovieDefineTag>ART_DEF_MOVIE_WUDANG</MovieDefineTag>
 			<ReligionType>RELIGION_TAOISM</ReligionType>
 			<StateReligion>RELIGION_TAOISM</StateReligion>
-			<bStateReligion>1</bStateReligion>
+			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_TAOISM</PrereqReligion>
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGlobalHealth>1</iGlobalHealth>
 			<iStateReligionHappiness>3</iStateReligionHappiness>
 			<iAllCityDefense>10</iAllCityDefense>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>

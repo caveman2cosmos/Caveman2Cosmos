@@ -1,7 +1,6 @@
 from CvPythonExtensions import *
 import HandleInputUtil
 import cPickle
-import PythonToolTip as pyTT
 
 # globals
 GC = CyGlobalContext()
@@ -330,12 +329,11 @@ class CvDomesticAdvisor:
 		self.CyPlayer = CyPlayer = GC.getActivePlayer()
 		import InputData
 		self.InputData = InputData.instance
-		self.TXT_NAME = TRNSLTR.getText("TXT_WORD_NAME", ())
-		# Tool Tip
-		self.szTextTT = ""
-		self.iOffsetTT = []
-		self.bLockedTT = False
 
+		import PythonToolTip
+		self.tooltip = PythonToolTip.PythonToolTip()
+
+		self.TXT_NAME = TRNSLTR.getText("TXT_WORD_NAME", ())
 
 		# Determine our size/positions.
 		import ScreenResolution as SR
@@ -507,7 +505,7 @@ class CvDomesticAdvisor:
 		# add National Wonders
 		for i in xrange(GC.getNumBuildingInfos()):
 			info = GC.getBuildingInfo(i)
-			if info.getMaxGlobalInstances() == -1 and info.getMaxPlayerInstances() == 1 and CyCity.getNumBuilding(i) > 0 and not info.isCapital():
+			if info.getMaxGlobalInstances() == -1 and info.getMaxPlayerInstances() == 1 and CyCity.getNumRealBuilding(i) > 0 and not info.isCapital():
 				# Use bullets as markers for National Wonders
 				szReturn += unichr(8854)
 
@@ -566,7 +564,7 @@ class CvDomesticAdvisor:
 		nTotalTradeProfit = 0
 
 		# For each trade route possible
-		for nTradeRoute in xrange(GC.getDefineINT("MAX_TRADE_ROUTES")):
+		for nTradeRoute in xrange(CyCity.getMaxTradeRoutes()):
 			# Get the next trade city
 			pTradeCity = CyCity.getTradeCity(nTradeRoute)
 			# Not quite sure what this does but it's in the MainInterface
@@ -588,7 +586,7 @@ class CvDomesticAdvisor:
 		nRoutes = 0
 
 		# For each trade route possible
-		for nTradeRoute in range (GC.getDefineINT("MAX_TRADE_ROUTES")):
+		for nTradeRoute in xrange(city.getMaxTradeRoutes()):
 			# Get the next trade city
 			pTradeCity = city.getTradeCity(nTradeRoute)
 			# Not quite sure what this does but it's in the MainInterface
@@ -859,10 +857,8 @@ class CvDomesticAdvisor:
 
 	def getBuildingState(self, CyCity, szKey, arg):
 
-		if CyCity.getNumBuilding(arg) > 0:
-			if CyCity.getNumActiveBuilding(arg) > 0:
-				return self.objectHave
-			return "x"
+		if CyCity.getNumRealBuilding(arg) > 0:
+			return self.objectHave
 		elif CyCity.getFirstBuildingOrder(arg) != -1:
 			return self.objectUnderConstruction
 		elif CyCity.canConstruct(arg, False, False, False):
@@ -1006,22 +1002,12 @@ class CvDomesticAdvisor:
 
 
 	def canAdviseToConstruct(self, CyCity, i):
+		if not CyCity.canConstruct(i, True, False, False):
+			return False
 		info = GC.getBuildingInfo(i)
 		if info.isGovernmentCenter() or info.isCapital():
 			return False
-		if not CyCity.canConstruct(i, True, False, False):
-			return False
-		CyTeam = GC.getTeam(CyGame().getActiveTeam())
-		iTech = info.getObsoleteTech()
-		if iTech > -1 and CyTeam.isHasTech(iTech):
-			return False
 
-		# Special building obsolete check
-		info = GC.getSpecialBuildingInfo(info.getSpecialBuildingType())
-		if info:
-			iTech = info.getObsoleteTech()
-			if iTech > -1 and CyTeam.isHasTech(iTech):
-				return False
 		return True
 
 	def advise(self, CyCity, szKey, type):
@@ -1577,37 +1563,12 @@ class CvDomesticAdvisor:
 			self.CyPlayer.getCity(userData[2]).setName(newName, False)
 			screen.setTableText(self.currentPage, 1, userData[3], newName, "", WidgetTypes.WIDGET_GENERAL, 1, 1, 1<<0)
 
-	# Tooltip
-	def updateTooltip(self, screen, szText, xPos = -1, yPos = -1, uFont = ""):
-		if not szText:
-			return
-		if szText != self.szTextTT:
-			self.szTextTT = szText
-			if not uFont:
-				uFont = self.aFontList[6]
-			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
-			POINT = Win32.getCursorPos()
-			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
-		else:
-			if xPos == yPos == -1:
-				POINT = Win32.getCursorPos()
-				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
-			screen.moveToFront("Tooltip")
-			screen.show("Tooltip")
-		if xPos == yPos == -1:
-			self.bLockedTT = True
-
 	#--------------------------#
 	# Base operation functions #
 	#||||||||||||||||||||||||||#
 	def update(self, fDelta):
-		if self.bLockedTT:
-			POINT = Win32.getCursorPos()
-			iX = POINT.x + self.iOffsetTT[0]
-			iY = POINT.y + self.iOffsetTT[1]
-			if iX < 0: iX = 0
-			if iY < 0: iY = 0
-			self.getScreen().moveItem("Tooltip", iX, iY, 0)
+		if self.tooltip.bLockedTT:
+			self.tooltip.handle(self.getScreen())
 
 	def handleInput(self, inputClass):
 		screen = self.getScreen()
@@ -1634,16 +1595,15 @@ class CvDomesticAdvisor:
 					szText = TRNSLTR.getText("TXT_KEY_CDA_STOP_EDITING", ())
 				else:
 					szText = TRNSLTR.getText("TXT_KEY_CDA_START_EDITING", ())
-				self.updateTooltip(screen, szText)
+				self.tooltip.handle(screen, szText)
 
 			elif NAME == "CityNameWidth":
 				szText = "Left click to increase by 1.\nRight click to decrease by 1.\n\nHold shift to modify by 10, ctrl to modify by 5 or both to modify by 20."
-				self.updateTooltip(screen, szText)
+				self.tooltip.handle(screen, szText)
 
 			return
 
-		screen.hide("Tooltip")
-		self.bLockedTT = False
+		self.tooltip.reset(screen)
 
 		if iCode == NotifyCode.NOTIFY_LISTBOX_ITEM_SELECTED:
 
@@ -1916,8 +1876,5 @@ class CvDomesticAdvisor:
 				screen.hideScreen()
 
 	def onClose(self):
-		del self.eventManager.OverrideEventApply[5000], self.eventManager
-		del self.CyPlayer, self.iPlayer, self.cityList
-		del self.InputData, self.szTextTT, self.iOffsetTT, self.bLockedTT
-		del self.xRes, self.yRes, self.aFontList, self.hTable1, self.hTable2, self.xTable2, self.wTable2
-		del self.TXT_NAME
+		del self.eventManager.OverrideEventApply[5000], self.eventManager, self.InputData, self.CyPlayer, self.iPlayer, self.cityList, \
+			self.TXT_NAME, self.xRes, self.yRes, self.aFontList, self.hTable1, self.hTable2, self.xTable2, self.wTable2

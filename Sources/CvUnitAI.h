@@ -162,7 +162,7 @@ protected:
 	void AI_networkAutomated();
 	void AI_cityAutomated();
 
-	int AI_promotionValue(PromotionTypes ePromotion);
+	int AI_promotionValue(PromotionTypes ePromotion) const;
 
 	bool AI_shadow(UnitAITypes eUnitAI, int iMax = -1, int iMaxRatio = -1, bool bWithCargoOnly = true, bool bOutsideCityOnly = false, int iMaxPath = MAX_INT);
 
@@ -287,9 +287,9 @@ protected:
 	bool AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh = true);
 
 	CvCity* AI_pickTargetCity(int iFlags = 0, int iMaxPath = MAX_INT, bool bHuntBarbs = false);
-	bool AI_goToTargetCity(int iFlags = 0, int iMaxPath = MAX_INT, CvCity* pTargetCity = NULL);
+	bool AI_goToTargetCity(int iFlags = 0, int iMaxPath = MAX_INT, const CvCity* pTargetCity = NULL);
 	bool AI_goToTargetBarbCity(int iMaxPath = 10);
-	bool AI_pillageAroundCity(CvCity* pTargetCity, int iBonusValueThreshold = 0, int iMaxPathTurns = MAX_INT);
+	bool AI_pillageAroundCity(const CvCity* pTargetCity, int iBonusValueThreshold = 0, int iMaxPathTurns = MAX_INT);
 	bool AI_bombardCity();
 	bool AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow = false);
 	bool AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack = 0, bool bAllowCities = true, bool bFollow = false);
@@ -298,7 +298,7 @@ protected:
 // Dale - RB: Field Bombard
 	bool AI_RbombardPlot(int iRange, int iBonusValueThreshold); // RevolutionDCM
 	bool AI_RbombardUnit(int iRange, int iHighestOddsThreshold, int iMinStack, int iSeigeDiff, int iPowerThreshold, bool bCity = false);
-	bool AI_RbombardCity(CvCity* pCity);
+	bool AI_RbombardCity(const CvCity* pCity);
 	bool AI_RbombardNaval();
 // Dale - FE: Fighters
 	bool AI_FEngage();
@@ -307,7 +307,7 @@ protected:
 	bool AI_rangeAttack(int iRange);
 	bool AI_leaveAttack(int iRange, int iThreshold, int iStrengthThreshold);
 	bool AI_blockade();
-	int  AI_blockadeValue(CvPlot* pLoopPlot, const CvCity* pCity, CvPlot*& endTurnPlot) const;
+	int  AI_blockadeValue(const CvPlot* pLoopPlot, const CvCity* pCity, CvPlot*& endTurnPlot) const;
 	bool AI_pirateBlockade();
 	bool AI_seaBombardRange(int iMaxRange);
 	bool AI_pillage(int iBonusValueThreshold = 0);
@@ -325,14 +325,14 @@ protected:
 	bool AI_carrierSeaTransport();
 	bool AI_connectPlot(CvPlot* pPlot, int iRange = 0);
 	bool AI_improveCity(CvCity* pCity);
-	bool AI_improveLocalPlot(int iRange, CvCity* pIgnoreCity);
+	bool AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity);
 	bool AI_nextCityToImprove(CvCity* pCity);
 	bool AI_nextCityToImproveAirlift();
 	bool AI_irrigateTerritory();
 	bool AI_fortTerritory(bool bCanal, bool bAirbase);
 	bool AI_improveBonus(int iMinValue = 0, CvPlot** ppBestPlot = NULL, BuildTypes* peBestBuild = NULL, int* piBestValue = NULL);
 	bool AI_improvePlot(CvPlot* pPlot, BuildTypes eBuild);
-	BuildTypes AI_betterPlotBuild(CvPlot* pPlot, BuildTypes eBuild);
+	BuildTypes AI_betterPlotBuild(const CvPlot* pPlot, BuildTypes eBuild) const;
 	bool AI_connectBonus(bool bTestTrade = true);
 	bool AI_connectCity();
 	bool AI_routeCity();
@@ -349,7 +349,7 @@ protected:
 	bool AI_missileLoad(UnitAITypes eTargetUnitAI, int iMaxOwnUnitAI = -1, bool bStealthOnly = false);
 	bool AI_airStrike();
 
-	int AI_airOffenseBaseValue( CvPlot* pPlot );
+	int AI_airOffenseBaseValue(const CvPlot* pPlot) const;
 	bool AI_defensiveAirStrike();
 	bool AI_defendBaseAirStrike();
 
@@ -401,23 +401,22 @@ protected:
 
 	bool AI_choke(int iRange = 1, bool bDefensive = false);
 
-	bool AI_solveBlockageProblem(CvPlot* pDestPlot, bool bDeclareWar);
+	bool AI_solveBlockageProblem(const CvPlot* pDestPlot, bool bDeclareWar);
 
-	int AI_calculatePlotWorkersNeeded(CvPlot* pPlot, BuildTypes eBuild);
+	int AI_calculatePlotWorkersNeeded(const CvPlot* pPlot, BuildTypes eBuild) const;
 
-	int AI_getEspionageTargetValue(CvPlot* pPlot, int iMaxPath, int iMinUsefulValue);
+	int AI_getEspionageTargetValue(const CvPlot* pPlot, int iMaxPath, int iMinUsefulValue) const;
 
 	bool AI_canGroupWithAIType(UnitAITypes eUnitAI) const;
 	bool AI_allowGroup(const CvUnit* pUnit, UnitAITypes eUnitAI) const;
 
-	bool AI_workerNeedsDefender(CvPlot* pPlot) const;
+	bool AI_workerNeedsDefender(const CvPlot* pPlot) const;
 	bool AI_workerReleaseDefenderIfNotNeeded() const;
 	bool processContracts(int iMinPriority = 0);
 	void contractFulfilled();
 
-
-	bool AI_approximatePath(CvPlot* pToPlot, int iFlags, int* piPathTurns) const;
-	CvUnitAI* AI_cityConstructionTargeted(const CvCity* pCity, BuildingTypes eBuilding, const CvSelectionGroup* omitGroup) const;
+	//bool AI_approximatePath(CvPlot* pToPlot, int iFlags, int* piPathTurns) const;
+	//CvUnitAI* AI_cityConstructionTargeted(const CvCity* pCity, BuildingTypes eBuilding, const CvSelectionGroup* omitGroup) const;
 
 	// added so under cheat mode we can call protected functions for testing
 	friend class CvGameTextMgr;
@@ -440,11 +439,11 @@ public:
 	void AI_AutomatedpillageMove();
 	void AI_autoAirStrike();
 	bool AI_airBombCities();
-	bool AI_moveToTarget(CvUnit* pTarget);
+	bool AI_moveToTarget(const CvUnit* pTarget);
 	void AI_shadowMove();
 	bool AI_protectTarget(const CvUnit* pTarget);
 	bool AI_joinMilitaryCity(bool bNaval = false);
-	bool AI_isPlotWellDefended(CvPlot* pPlot, bool bIncludeAdjacent, int iOddsOfDefeat);
+	bool AI_isPlotWellDefended(const CvPlot* pPlot, bool bIncludeAdjacent, int iOddsOfDefeat) const;
 
 	int	AI_genericUnitValueTimes100(UnitValueFlags eFlags) const;
 	void AI_flushValueCache();
@@ -455,7 +454,7 @@ public:
 	virtual int AI_getPredictedHitPoints() const;
 	virtual void AI_setPredictedHitPoints(int iPredictedHitPoints);
 	virtual bool AI_getHasAttacked() const;
-	virtual int AI_beneficialPropertyValueToCity(CvCity* pCity, PropertyTypes eProperty) const;
+	virtual int AI_beneficialPropertyValueToCity(const CvCity* pCity, PropertyTypes eProperty) const;
 
 	//	KOSHLING - inform the AI of unit losses so that it can adjust internal counts
 	virtual void AI_killed();
@@ -484,7 +483,7 @@ public:
 	bool generateSafePathforVulnerable(const CvPlot* pToPlot, int* piPathTurns = NULL) const;
 
 	void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd);
-	bool isWaitingOnUnitAI(int iIndex);
+	bool isWaitingOnUnitAI(int iIndex) const;
 	bool isWaitingOnUnitAIAny() const;
 	void setWaitingOnUnitAIAny();
 	bool AI_isNegativePropertyUnit() const;

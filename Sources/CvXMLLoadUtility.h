@@ -688,11 +688,12 @@ public:
 	template<class T>
 	static void CopyNonDefaultsFromVector(std::vector<T>& target, const std::vector<T>& source)
 	{
-		for (typename std::vector<T>::const_iterator it = source.begin(), end = source.end(); it != end; ++it)
+		foreach_(const T& it, source)
+		//for (typename std::vector<T>::const_iterator it = source.begin(), end = source.end(); it != end; ++it)
 		{
-			if ((*it) > -1 && find(target.begin(), target.end(), *it) == target.end())
+			if (it > -1 && !std::contains(target, it))
 			{
-				target.push_back(*it);
+				target.push_back(it);
 			}
 		}
 

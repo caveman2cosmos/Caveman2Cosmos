@@ -3980,12 +3980,12 @@ CvTaggedSaveFormatWrapper::close()
 {
 	if ( m_inUse )
 	{
-		for( std::vector<CvWString>::iterator itr = m_warnings.begin(); itr != m_warnings.end(); ++itr )
+		foreach_(const CvWString& it, m_warnings)
 		{
 			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_SAVE_INFO_LOST);
 			if (NULL != pInfo)
 			{
-				pInfo->setText((*itr).c_str());
+				pInfo->setText(it.c_str());
 				gDLL->getInterfaceIFace()->addPopup(pInfo);
 			}
 		}

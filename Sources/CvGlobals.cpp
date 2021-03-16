@@ -465,9 +465,9 @@ void cvInternalGlobals::uninit()
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	for (std::vector<CvMap*>::iterator it = m_maps.begin(); it != m_maps.end(); ++it)
+	foreach_(const CvMap* map, m_maps)
 	{
-		SAFE_DELETE(*it);
+		SAFE_DELETE(map);
 	}
 	m_maps.clear();
 /*******************************/
@@ -2799,7 +2799,7 @@ int cvInternalGlobals::getInfoTypeForString(const char* szType, bool hideAssert)
 		szError.Format("info type '%s' not found, Current XML file is: %s", szType, GC.getCurrentXMLFile().GetCString());
 		FAssertMsg(stricmp(szType, "NONE") == 0 || strcmp(szType, "") == 0, szError.c_str());
 
-		gDLL->logMsg("Xml_MissingTypes.log", szError);
+		logging::logMsg("Xml_MissingTypes.log", szError.c_str());
 	}
 	return -1;
 }
@@ -2848,9 +2848,7 @@ void cvInternalGlobals::logInfoTypeMap(const char* tagMsg)
 {
 	if (GC.isXMLLogging())
 	{
-		CvString szDebugBuffer;
-		szDebugBuffer.Format(" === Info Type Map Dump BEGIN: %s ===", tagMsg);
-		gDLL->logMsg("cvInternalGlobals_logInfoTypeMap.log", szDebugBuffer.c_str());
+		logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " === Info Type Map Dump BEGIN: %s ===", tagMsg);
 
 		int iCnt = 0;
 		std::vector<std::string> vInfoMapKeys;
@@ -2862,19 +2860,14 @@ void cvInternalGlobals::logInfoTypeMap(const char* tagMsg)
 
 		std::sort(vInfoMapKeys.begin(), vInfoMapKeys.end());
 
-		for (std::vector<std::string>::const_iterator it = vInfoMapKeys.begin(); it != vInfoMapKeys.end(); ++it)
+		foreach_(const std::string& sKey, vInfoMapKeys)
 		{
-			std::string sKey = *it;
-			int iVal = m_infosMap[sKey.c_str()];
-			szDebugBuffer.Format(" * %i --  %s: %i", iCnt, sKey.c_str(), iVal);
-			gDLL->logMsg("cvInternalGlobals_logInfoTypeMap.log", szDebugBuffer.c_str());
+			logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " * %i --  %s: %i", iCnt, sKey.c_str(), m_infosMap[sKey.c_str()]);
 			iCnt++;
 		}
 
-		szDebugBuffer.Format("Entries in total: %i", iCnt);
-		gDLL->logMsg("cvInternalGlobals_logInfoTypeMap.log", szDebugBuffer.c_str());
-		szDebugBuffer.Format(" === Info Type Map Dump END: %s ===", tagMsg);
-		gDLL->logMsg("cvInternalGlobals_logInfoTypeMap.log", szDebugBuffer.c_str());
+		logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", "Entries in total: %i", iCnt);
+		logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " === Info Type Map Dump END: %s ===", tagMsg);
 	}
 }
 /************************************************************************************************/
@@ -3063,7 +3056,7 @@ int cvInternalGlobals::getNumMissionInfos() const
 	return (int) m_paMissionInfo.size();
 }
 
-inline CvMap& cvInternalGlobals::getMap() const
+CvMap& cvInternalGlobals::getMap() const
 {
 	return *m_maps[GC.getGame().getCurrentMap()];
 }
@@ -3159,15 +3152,13 @@ bool cvInternalGlobals::isXMLLogging() const
 // calculate asset checksum
 uint32_t cvInternalGlobals::getAssetCheckSum() const
 {
-	CvString szLog;
 	uint32_t iSum = 0;
 	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
 	{
 		foreach_(const CvInfoBase* info, *infoVector)
 		{
 			info->getCheckSum(iSum);
-			szLog.Format("%s : %u", info->getType(), iSum);
-			gDLL->logMsg("Checksum.log", szLog.c_str());
+			logging::logMsg("Checksum.log", "%s : %u", info->getType(), iSum);
 		}
 	}
 	return iSum;

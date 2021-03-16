@@ -91,14 +91,17 @@ namespace logging
 
 	void log_json_event(const char* type, const JsonValues& values);
 
+	void logMsg(const char* file, const char* msg, ...);
+	void logMsgW(const char* file, const wchar_t* msg, ...);
+
+	void createLogsFolder();
+	void deleteLogs();
+}
+
 #ifdef _DEBUG
 #define DEBUG_LOG logging::logMsg
 #else
-#define DEBUG_LOG logging::skipLog
-	void skipLog(const char* file, char* msg, ...);
+#define DEBUG_LOG ;
 #endif
-	void logMsg(const char* file, char* msg, ...);
-	void logMsgW(const char* file, wchar_t* msg, ...);
-}
 
 #endif // logging_h__

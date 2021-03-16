@@ -4574,9 +4574,8 @@ void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit, CvSelectionGroup
 
 		// setTransportUnit removes the unit from the current group so we copy the unit list from the group first (group being modified while being iterated can cause problems).
 		std::vector<CvUnit*> units(beginUnits(), endUnits());
-		for(std::vector<CvUnit*>::iterator itr = units.begin(); itr != units.end(); ++itr)
+		foreach_(CvUnit* pLoopUnit, units)
 		{
-			CvUnit* pLoopUnit = *itr;
 			// just in case implementation of setTransportUnit changes, check to make sure this unit is not already loaded
 			FAssertMsg(pLoopUnit->getTransportUnit() != pTransportUnit, "Unit is already changed");
 
@@ -4609,10 +4608,10 @@ void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit, CvSelectionGroup
 	{
 		// loop over all the units, unloading them
 		std::vector<CvUnit*> units(beginUnits(), endUnits());
-		for (std::vector<CvUnit*>::iterator itr = units.begin(); itr != units.end(); ++itr)
+		foreach_(CvUnit* unit, units)
 		{
 			// unload unit
-			(*itr)->setTransportUnit(NULL);
+			unit->setTransportUnit(NULL);
 		}
 	}
 }

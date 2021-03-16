@@ -132,7 +132,6 @@ bool CvXMLLoadUtilityModTools::isDuplicate(int iNumValueNew, CvWString *ppiListN
 	return false;
 }
 
-
 bool CvXMLLoadUtilityModTools::isModularArt(const char* szLocationName)
 {
 /************************************************************************************************/

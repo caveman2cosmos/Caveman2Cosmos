@@ -217,6 +217,7 @@
 		<English>[COLOR_TECH_TEXT]Clockpunk[COLOR_REVERT] is a subgenre of speculative fiction which is similar to steampunk. It portrays advanced technologies based on springs and clockwork, instead of current technologies, despite keeping a pre-modern design. Clockpunk is based very intensively on the works of Leonardo da Vinci and, as such, it is typically set during the Renaissance or in a Renaissance-like era.</English>
 		<French>Le [COLOR_TECH_TEXT]Clockpunk[COLOR_REVERT] est un sous-genre de fiction spéculative similaire au steampunk. Il décrit des technologies avancées basées sur des ressorts et des horloges, au lieu des technologies actuelles, tout en conservant un design pré-moderne. Clockpunk est très intensément basé sur les œuvres de Léonard de Vinci et, en tant que tel, il se déroule généralement à la Renaissance ou à une époque similaire à la Renaissance.</French>
 		<Italian>Il [COLOR_TECH_TEXT]Clockpunk[COLOR_REVERT] è un sottogenere della letteratura fantascientifica simile allo steampunk. Ritrae tecnologie avanzate basate su molle e orologi, al contrario dei meccanismi attuali, pur mantenendo un design pre-moderno. Il Clockpunk si basa ampiamente sulle opere di Leonardo da Vinci e, pertanto, è tipicamente ambientato durante il Rinascimento o in uno scenario simile all'epoca rinascimentale.</Italian>
+		<Russian>[COLOR_TECH_TEXT]Клокпанк[COLOR_REVERT] - это жанр спекулятивной фантастики, который похож на стимпанк, но отличается по своей технологии. Как и в случае с стимпанком, в нем представлены передовые технологии, основанные на модернистских моделях, а не на паровой энергии промышленной эпохи, и используемая в жанре технология основана на пружинах, часовом механизме и тому подобном. Клокпанк как правило основан на работах Леонардо да Винчи и, как таковой, он обычно устанавливается во времена Ренессанса. Идея довольно новая, однако в этом жанре создано очень мало работ. Среди произведений клокпанка можно упомянуть «Ангел Паскуале» Пола Дж. Маколи, Джек Фауст Майкла Свонвика, а также грядущий роман «Главный источник» Джея Лейка. Также есть элементы клокпанка в серии комиксов Marvel 1602 и ее продолжениях, а также в романах Терри Пратчетта Discworld, прежде всего космический челнок да Винчи в «Последнем герое». Приключенческая игра Benot Sokal Syberia также может считаться клокпанком, поскольку в ней представлены пружинные машины и часовые автоматы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLOCKPUNK_QUOTE</Tag>
@@ -224,12 +225,14 @@
 		<French>« Un cœur d'horlogerie ne peut pas remplacer la chose réelle. » - Dru Pagliassotti, Le Cœur d'Horlogerie</French>
 		<Italian>«Un cuore meccanico non può sostituirne uno vero.» - Dru Pagliassotti, Clockwork Heart</Italian>
 		<Polish>«Mechaniczne serce może zastąpić rzeczywiste.» - Dru Pagliassotti, Clockwork Heart</Polish>
+		<Russian>«Механическое сердце не способно заменить настоящее и живое». - Дрю Паглиассотти, Заводное Сердце</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLOCKPUNK_STRATEGY</Tag>
 		<English>Research [COLOR_TECH_TEXT]Clockpunk[COLOR_REVERT] to gain access to unique buildings and units.</English>
 		<French>Rechercher [COLOR_TECH_TEXT]Clockpunk[COLOR_REVERT] permet d'accéder à des bâtiments et unités uniques.</French>
 		<Italian>Ricerca [COLOR_TECH_TEXT]Clockpunk[COLOR_REVERT] per poter costruire edifici e unità uniche.</Italian>
+		<Russian>[COLOR_TECH_TEXT]Клокпанк[COLOR_REVERT] делает доступными уникальные здания и юниты.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLOCKWORK_GOLEM</Tag>

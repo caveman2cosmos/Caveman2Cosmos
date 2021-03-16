@@ -47,8 +47,6 @@
 	<ElementType name="iAIWeight" content="textOnly" dt:type="int"/>
 	<ElementType name="iAITradeModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iCost" content="textOnly" dt:type="int"/>
-	<ElementType name="iAdvancedStartCost" content="textOnly" dt:type="int"/>
-	<ElementType name="iAdvancedStartCostIncrease" content="textOnly" dt:type="int"/>
 	<ElementType name="Era" content="textOnly"/>
 	<ElementType name="FirstFreeUnit" content="textOnly"/>
 	<ElementType name="FirstFreeProphet" content="textOnly"/>
@@ -166,8 +164,6 @@
 		<element type="iAIWeight" minOccurs="0"/>
 		<element type="iAITradeModifier" minOccurs="0"/>
 		<element type="iCost" minOccurs="0"/>
-		<element type="iAdvancedStartCost" minOccurs="0"/>
-		<element type="iAdvancedStartCostIncrease" minOccurs="0"/>
 		<element type="Era" minOccurs="0"/>
 		<element type="FirstFreeUnit" minOccurs="0"/>
 		<element type="FirstFreeProphet" minOccurs="0"/>

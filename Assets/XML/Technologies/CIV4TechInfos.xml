@@ -568,8 +568,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_DECEPTION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_GATHERING</PrereqTech>
 				<PrereqTech>TECH_LANGUAGE</PrereqTech>
+				<PrereqTech>TECH_GATHERING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_COOPERATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_COOPERATION</Sound>
@@ -1210,8 +1210,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_RITUALISM</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_GROUND_STONE</PrereqTech>
 				<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
+				<PrereqTech>TECH_GROUND_STONE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_NATURAL_PIGMENTS_QUOTE</Quote>
 			<Sound>AS2D_TECH_NATURAL_PIGMENTS</Sound>
@@ -1846,8 +1846,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_BONE_WORKING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_SEWING</PrereqTech>
 				<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
+				<PrereqTech>TECH_SEWING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_PERSONAL_ADORNMENTS_QUOTE</Quote>
 			<Sound>AS2D_TECH_PERSONAL_ADORNMENT</Sound>
@@ -1883,8 +1883,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_BONE_WORKING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ADHESIVES</PrereqTech>
 				<PrereqTech>TECH_BINDING</PrereqTech>
+				<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_COMPOSITE_TOOLS_QUOTE</Quote>
 			<Sound>AS2D_TECH_COMPOSITE_TOOLS</Sound>
@@ -2534,8 +2534,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_FIRE_MAKING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_DRYING</PrereqTech>
 				<PrereqTech>TECH_SKINNING</PrereqTech>
+				<PrereqTech>TECH_DRYING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_TANNING_QUOTE</Quote>
 			<Sound>AS2D_TECH_TANNING</Sound>
@@ -2876,8 +2876,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_HEAT_TREATMENT</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_AXE_MAKING</PrereqTech>
 				<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
+				<PrereqTech>TECH_AXE_MAKING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_OBSIDIAN_WEAPONS_QUOTE</Quote>
 			<Sound>AS2D_TECH_OBSIDIAN_WEAPONS</Sound>
@@ -2951,8 +2951,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_BARTER</PrereqTech>
 				<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
+				<PrereqTech>TECH_BARTER</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_TRIBALISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_TRIBALISM</Sound>
@@ -2982,9 +2982,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ATLATL_MAKING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
-				<PrereqTech>TECH_TANNING</PrereqTech>
 				<PrereqTech>TECH_TRACKING</PrereqTech>
+				<PrereqTech>TECH_TANNING</PrereqTech>
+				<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_HUNTING_QUOTE</Quote>
 			<Sound>AS2D_TECH_HUNTING</Sound>
@@ -3022,8 +3022,8 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_FIRE_MAKING</PrereqTech>
-				<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
 				<PrereqTech>TECH_TATTOOS</PrereqTech>
+				<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ANIMISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_ANIMISM</Sound>
@@ -3230,8 +3230,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_CHIEFDOM</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
 				<PrereqTech>TECH_THEFT</PrereqTech>
+				<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_WARFARE_QUOTE</Quote>
 			<Sound>AS2D_TECH_WARFARE</Sound>
@@ -3642,9 +3642,9 @@ Current techs which are not in this file:-
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
+				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 				<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 				<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
-				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_ANIMAL_RIDING_QUOTE</Quote>
 			<Sound>AS2D_TECH_ANIMAL_RIDING</Sound>
@@ -3754,9 +3754,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
+				<PrereqTech>TECH_STONE_BUILDING</PrereqTech>
 				<PrereqTech>TECH_ARITHMETIC</PrereqTech>
 				<PrereqTech>TECH_SLAVERY</PrereqTech>
-				<PrereqTech>TECH_STONE_BUILDING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MEGALITH_CONSTRUCTION_QUOTE</Quote>
 			<Sound>AS2D_TECH_MEGALITH_CONSTRUCTION</Sound>
@@ -3799,10 +3799,10 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
+				<PrereqTech>TECH_WARFARE</PrereqTech>
 				<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 				<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 				<PrereqTech>TECH_MYSTICISM</PrereqTech>
-				<PrereqTech>TECH_WARFARE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_SEDENTARY_LIFESTYLE_QUOTE</Quote>
 			<Sound>AS2D_TECH_SEDENTARY_LIFESTYLE</Sound>
@@ -4837,8 +4837,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ORCHARDS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
 				<PrereqTech>TECH_BREAD_MAKING</PrereqTech>
+				<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_FERMENTATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_FERMENTATION</Sound>
@@ -5150,8 +5150,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_STANDARDIZATION</PrereqTech>
 				<PrereqTech>TECH_CONSCIOUSNESS</PrereqTech>
+				<PrereqTech>TECH_STANDARDIZATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_FOLK_MEDICINE_QUOTE</Quote>
 			<Sound>AS2D_TECH_FOLK_MEDICINE</Sound>
@@ -5781,8 +5781,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_SCULPTURE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_TEXTILE_LOOM</PrereqTech>
 				<PrereqTech>TECH_OIL_LAMPS</PrereqTech>
+				<PrereqTech>TECH_TEXTILE_LOOM</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_LEISURE_QUOTE</Quote>
 			<Sound>AS2D_TECH_LEISURE</Sound>
@@ -5929,8 +5929,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 				<PrereqTech>TECH_CONSCIOUSNESS</PrereqTech>
+				<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_DIVINATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_DIVINATION</Sound>
@@ -6474,8 +6474,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_WRITING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_GARDENING</PrereqTech>
 				<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
+				<PrereqTech>TECH_GARDENING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_VETERINARY_MEDICINE_QUOTE</Quote>
 			<Sound>AS2D_TECH_VETERINARY_MEDICINE</Sound>
@@ -6543,9 +6543,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_RESURRECTION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_FOLK_MEDICINE</PrereqTech>
-				<PrereqTech>TECH_FOLK_DANCE</PrereqTech>
 				<PrereqTech>TECH_FOLK_MUSIC</PrereqTech>
+				<PrereqTech>TECH_FOLK_DANCE</PrereqTech>
+				<PrereqTech>TECH_FOLK_MEDICINE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MAGIC_QUOTE</Quote>
 			<Sound>AS2D_TECH_MAGIC</Sound>
@@ -6582,8 +6582,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_RESURRECTION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_DUALISM</PrereqTech>
 				<PrereqTech>TECH_SCULPTURE</PrereqTech>
+				<PrereqTech>TECH_DUALISM</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_POLYTHEISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_POLYTHEISM</Sound>
@@ -6819,7 +6819,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>309</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<iGridX>30</iGridX>
@@ -6889,8 +6888,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_MAGIC</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 				<PrereqTech>TECH_HERITAGE</PrereqTech>
+				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_KARMA_QUOTE</Quote>
 			<Sound>AS2D_TECH_KARMA</Sound>
@@ -6906,7 +6905,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>309</iCost>
 			<bGlobal>1</bGlobal>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<iGridX>30</iGridX>
@@ -6929,9 +6927,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
+				<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
 				<PrereqTech>TECH_MUMMIFICATION</PrereqTech>
 				<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
-				<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_KEMETISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_KEMETISM</Sound>
@@ -7046,7 +7044,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>348</iCost>
 			<bGlobal>1</bGlobal>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<iGridX>31</iGridX>
@@ -7085,7 +7082,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>348</iCost>
 			<bGlobal>1</bGlobal>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<iGridX>31</iGridX>
@@ -7233,9 +7229,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_MONARCHY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_LINGUISTICS</PrereqTech>
 				<PrereqTech>TECH_CUISINE</PrereqTech>
 				<PrereqTech>TECH_CENTRAL_HEATING</PrereqTech>
+				<PrereqTech>TECH_LINGUISTICS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CLASSICAL_LIFESTYLE_QUOTE</Quote>
 			<Sound>AS2D_TECH_CLASSICAL_LIFESTYLE</Sound>
@@ -7940,7 +7936,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>499</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_CLASSICAL</Era>
 			<iAsset>8</iAsset>
 			<iGridX>34</iGridX>
@@ -8090,7 +8085,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>554</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_CLASSICAL</Era>
 			<iAsset>8</iAsset>
 			<iGridX>35</iGridX>
@@ -8259,8 +8253,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 				<PrereqTech>TECH_HYDRAULIC_MINING</PrereqTech>
+				<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CONSTRUCTION_QUOTE</Quote>
 			<Sound>AS2D_TECH_CONSTRUCTION</Sound>
@@ -8392,7 +8386,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>614</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_CLASSICAL</Era>
 			<iAsset>8</iAsset>
 			<iGridX>36</iGridX>
@@ -8546,8 +8539,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_CALENDAR</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_LITERATURE</PrereqTech>
 				<PrereqTech>TECH_ARISTOCRACY</PrereqTech>
+				<PrereqTech>TECH_LITERATURE</PrereqTech>
 				<PrereqTech>TECH_DIPLOMACY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CALLIGRAPHY_QUOTE</Quote>
@@ -8723,9 +8716,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_DEMOCRACY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_LAW_ENFORCEMENT</PrereqTech>
-				<PrereqTech>TECH_LITERATURE</PrereqTech>
 				<PrereqTech>TECH_REINCARNATION</PrereqTech>
+				<PrereqTech>TECH_LITERATURE</PrereqTech>
+				<PrereqTech>TECH_LAW_ENFORCEMENT</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MERITOCRACY_QUOTE</Quote>
 			<Sound>AS2D_TECH_MERITOCRACY</Sound>
@@ -8849,8 +8842,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 				<PrereqTech>TECH_CHARIOTRY</PrereqTech>
+				<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_SIEGE_WARFARE_QUOTE</Quote>
 			<Sound>AS2D_TECH_SIEGE_WARFARE</Sound>
@@ -8951,7 +8944,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>679</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_CLASSICAL</Era>
 			<iAsset>8</iAsset>
 			<iGridX>37</iGridX>
@@ -9066,7 +9058,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>749</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_CLASSICAL</Era>
 			<iAsset>8</iAsset>
 			<iGridX>38</iGridX>
@@ -9135,8 +9126,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_COMBAT_SPORTS</PrereqTech>
 				<PrereqTech>TECH_FOLK_DANCE</PrereqTech>
+				<PrereqTech>TECH_COMBAT_SPORTS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_DRAMA_QUOTE</Quote>
 			<Sound>AS2D_TECH_DRAMA</Sound>
@@ -9455,8 +9446,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_MOSAIC_WORKING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_MACHINERY</PrereqTech>
 				<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
+				<PrereqTech>TECH_MACHINERY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_PAVED_ROADS_QUOTE</Quote>
 			<Sound>AS2D_TECH_PAVED_ROADS</Sound>
@@ -9550,8 +9541,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_WEATHER_LORE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_MACHINERY</PrereqTech>
 				<PrereqTech>TECH_ASTROLOGY</PrereqTech>
+				<PrereqTech>TECH_MACHINERY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_GEOCENTRISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_GEOCENTRISM</Sound>
@@ -9957,7 +9948,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>1230</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_MEDIEVAL</Era>
 			<iAsset>8</iAsset>
 			<iGridX>43</iGridX>
@@ -10165,7 +10155,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>1334</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_MEDIEVAL</Era>
 			<iAsset>8</iAsset>
 			<iGridX>44</iGridX>
@@ -10221,8 +10210,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_DRUG_TRADE</PrereqTech>
 				<PrereqTech>TECH_CANDLE_MAKING</PrereqTech>
+				<PrereqTech>TECH_DRUG_TRADE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ALCHEMY_QUOTE</Quote>
 			<Sound>AS2D_TECH_ALCHEMYASTROLOGY</Sound>
@@ -10555,8 +10544,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_FEUDALISM</PrereqTech>
 				<PrereqTech>TECH_INSURANCE</PrereqTech>
+				<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_GUILDS_QUOTE</Quote>
 			<Sound>AS2D_TECH_GUILDS</Sound>
@@ -10708,8 +10697,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_RAT_CATCHING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_GUILDS</PrereqTech>
 				<PrereqTech>TECH_THEOLOGY</PrereqTech>
+				<PrereqTech>TECH_GUILDS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_PLAGUE_MEDICINE_QUOTE</Quote>
 			<Sound>AS2D_TECH_PLAGUE_MEDICINE</Sound>
@@ -10999,9 +10988,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_INVENTION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 				<PrereqTech>TECH_STIRRUP</PrereqTech>
+				<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ARMORED_CAVALRY_QUOTE</Quote>
 			<Sound>AS2D_TECH_ARMORED_CAVALRY</Sound>
@@ -11238,9 +11227,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
+				<PrereqTech>TECH_ALCHEMY</PrereqTech>
 				<PrereqTech>TECH_GUILDS</PrereqTech>
 				<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
-				<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CRUCIBLE_STEEL_QUOTE</Quote>
 			<Sound>AS2D_TECH_CRUCIBLESTEEL</Sound>
@@ -11605,8 +11594,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_EDUCATION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_CLOCKWORKS</PrereqTech>
 				<PrereqTech>TECH_RUDDER</PrereqTech>
+				<PrereqTech>TECH_CLOCKWORKS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_COMPASS_QUOTE</Quote>
 			<Sound>AS2D_TECH_COMPASS</Sound>
@@ -11753,9 +11742,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ANATOMY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ALGEBRA</PrereqTech>
 				<PrereqTech>TECH_TOURNAMENTS</PrereqTech>
 				<PrereqTech>TECH_COMPASS</PrereqTech>
+				<PrereqTech>TECH_ALGEBRA</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_RENAISSANCE_LIFESTYLE_QUOTE</Quote>
 			<Sound>AS2D_TECH_RENAISSANCE_LIFESTYLE</Sound>
@@ -12118,8 +12107,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_HUMANISM</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_BANKING</PrereqTech>
 				<PrereqTech>TECH_PARLIAMENTS</PrereqTech>
+				<PrereqTech>TECH_BANKING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_POLITICAL_PHILOSOPHY_QUOTE</Quote>
 			<Sound>AS2D_TECH_POLITICAL_PHILOSOPHY</Sound>
@@ -12199,8 +12188,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_OIL_PAINTING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_HUMANISM</PrereqTech>
 				<PrereqTech>TECH_ACOUSTICS</PrereqTech>
+				<PrereqTech>TECH_HUMANISM</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_FREE_ARTISTRY_QUOTE</Quote>
 			<Sound>AS2D_TECH_FREE_ARTISTRY</Sound>
@@ -12752,8 +12741,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 				<PrereqTech>TECH_CRYPTOGRAPHY</PrereqTech>
+				<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CRITICAL_THOUGHT_QUOTE</Quote>
 			<Sound>AS2D_TECH_CRITICALTHOUGHT</Sound>
@@ -12925,8 +12914,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 				<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
+				<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CAVALRY_TACTICS_QUOTE</Quote>
 			<Sound>AS2D_TECH_CAVALRYTACTICS</Sound>
@@ -12966,8 +12955,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_NAVIGATION</PrereqTech>
 				<PrereqTech>TECH_NAVAL_CANNON</PrereqTech>
+				<PrereqTech>TECH_NAVIGATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_NAVAL_TACTICS_QUOTE</Quote>
 			<Sound>AS2D_TECH_NAVAL_TACTICS</Sound>
@@ -13758,8 +13747,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_GEOLOGY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_BIOLOGY</PrereqTech>
 				<PrereqTech>TECH_MUMMIFICATION</PrereqTech>
+				<PrereqTech>TECH_BIOLOGY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ARCHEOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_ARCHEOLOGY</Sound>
@@ -13844,8 +13833,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_PHYSICS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_NAVAL_TACTICS</PrereqTech>
 				<PrereqTech>TECH_WEATHER_FORECASTING</PrereqTech>
+				<PrereqTech>TECH_NAVAL_TACTICS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_SEXTANT_QUOTE</Quote>
 			<Sound>AS2D_TECH_SEXTANT</Sound>
@@ -13975,8 +13964,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_RIFLING</PrereqTech>
 				<PrereqTech>TECH_ECONOMICS</PrereqTech>
+				<PrereqTech>TECH_RIFLING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_NATIONALISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_NATIONALISM</Sound>
@@ -14179,8 +14168,8 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_REPLACEABLE_PARTS</PrereqTech>
-				<PrereqTech>TECH_GRAND_WAR</PrereqTech>
 				<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
+				<PrereqTech>TECH_GRAND_WAR</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_INDUSTRIAL_LIFESTYLE_QUOTE</Quote>
 			<Sound>AS2D_TECH_INDUSTRIAL_LIFESTYLE</Sound>
@@ -14263,8 +14252,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ZOOLOGY</PrereqTech>
 				<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
+				<PrereqTech>TECH_ZOOLOGY</PrereqTech>
 				<PrereqTech>TECH_BOTANY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MARINE_BIOLOGY_QUOTE</Quote>
@@ -14787,8 +14776,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_CHEMISTRY</PrereqTech>
 				<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
+				<PrereqTech>TECH_CHEMISTRY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_GAS_LIGHTING_QUOTE</Quote>
 			<Sound>AS2D_TECH_GAS_LIGHTING</Sound>
@@ -15318,8 +15307,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_REFINING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_THERMODYNAMICS</PrereqTech>
 				<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
+				<PrereqTech>TECH_THERMODYNAMICS</PrereqTech>
 				<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_COMBUSTION_QUOTE</Quote>
@@ -16018,8 +16007,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_RAILROAD</PrereqTech>
 				<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
+				<PrereqTech>TECH_RAILROAD</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_IMPERIALISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_IMPERIALISM</Sound>
@@ -16135,8 +16124,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 				<PrereqTech>TECH_ARCHEOLOGY</PrereqTech>
+				<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_PSYCHOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_PSYCHOLOGY</Sound>
@@ -16779,10 +16768,10 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_ANTIBIOTICS</PrereqTech>
-				<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
 				<PrereqTech>TECH_REFRIGERATION</PrereqTech>
-				<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 				<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
+				<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
+				<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ATOMIC_LIFESTYLE_QUOTE</Quote>
 			<Sound>AS2D_TECH_ATOMIC_LIFESTYLE</Sound>
@@ -16922,9 +16911,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ARTILLERY</PrereqTech>
 				<PrereqTech>TECH_MINE_WARFARE</PrereqTech>
 				<PrereqTech>TECH_BARBED_WIRE</PrereqTech>
+				<PrereqTech>TECH_ARTILLERY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_TRENCH_WARFARE_QUOTE</Quote>
 			<Sound>AS2D_TECH_TRENCH_WARFARE</Sound>
@@ -17610,8 +17599,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_FASCISM</PrereqTech>
 				<PrereqTech>TECH_COMMUNISM</PrereqTech>
+				<PrereqTech>TECH_FASCISM</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_GUERRILLA_WARFARE_QUOTE</Quote>
 			<Sound>AS2D_TECH_GUERRILLA_WARFARE</Sound>
@@ -17642,8 +17631,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_NAVAL_FLIGHT</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ADVANCED_METALLURGY</PrereqTech>
 				<PrereqTech>TECH_GYROCOMPASS</PrereqTech>
+				<PrereqTech>TECH_ADVANCED_METALLURGY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_SUBMARINE_WARFARE_QUOTE</Quote>
 			<Sound>AS2D_TECH_SUBMARINE_WARFARE</Sound>
@@ -17773,8 +17762,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_CONSUMERISM</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_EXPRESSIONISM</PrereqTech>
 				<PrereqTech>TECH_CUBISM</PrereqTech>
+				<PrereqTech>TECH_EXPRESSIONISM</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MODERN_ART_QUOTE</Quote>
 			<Sound>AS2D_TECH_FINEARTS</Sound>
@@ -18769,8 +18758,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_FRANCHISES</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 				<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
+				<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CONGLOMERATES_QUOTE</Quote>
 			<Sound>AS2D_TECH_CONGLOMERATES</Sound>
@@ -18809,8 +18798,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_RADAR</PrereqTech>
 				<PrereqTech>TECH_MODERN_PHYSICS</PrereqTech>
+				<PrereqTech>TECH_RADAR</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ADVANCED_AVIATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_ADVANCED_AVIATION</Sound>
@@ -18851,8 +18840,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_MODERN_ART</PrereqTech>
 				<PrereqTech>TECH_ANIMATION</PrereqTech>
+				<PrereqTech>TECH_MODERN_ART</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_POP_ART_QUOTE</Quote>
 			<Sound>AS2D_TECH_POP_ART</Sound>
@@ -19243,8 +19232,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_COMPUTER_SCIENCE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 				<PrereqTech>TECH_MODERN_PHYSICS</PrereqTech>
+				<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_SEMICONDUCTORS_QUOTE</Quote>
 			<Sound>AS2D_TECH_TRANSISTORS</Sound>
@@ -19367,7 +19356,7 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_TOURISM</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
+				<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ECOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_ECOLOGY</Sound>
@@ -19925,9 +19914,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_SUPERSONIC_FLIGHT</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
+				<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 				<PrereqTech>TECH_AMPHIBIOUS_WARFARE</PrereqTech>
 				<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
-				<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MODERN_WARFARE_QUOTE</Quote>
 			<Sound>AS2D_TECH_MODERN_WARFARE</Sound>
@@ -20291,8 +20280,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_LONG_RANGE_FORECASTING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_SATELLITES</PrereqTech>
 				<PrereqTech>TECH_ECOLOGY</PrereqTech>
+				<PrereqTech>TECH_SATELLITES</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CLIMATE_MODELS_QUOTE</Quote>
 			<Sound>AS2D_TECH_CLIMATE_MODELS</Sound>
@@ -20334,8 +20323,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_COUNTERCULTURE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_MOTORSPORTS</PrereqTech>
 				<PrereqTech>TECH_WATER_SPORTS</PrereqTech>
+				<PrereqTech>TECH_MOTORSPORTS</PrereqTech>
 				<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_EXTREME_SPORTS_QUOTE</Quote>
@@ -20781,8 +20770,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
 				<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
+				<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
 				<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
 				<PrereqTech>TECH_ROBOTICS</PrereqTech>
 			</AndPreReqs>
@@ -22142,8 +22131,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
 				<PrereqTech>TECH_UNMANNED_AIR_VEHICLES</PrereqTech>
+				<PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_SPACE_TOURISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_SPACE_TOURISM</Sound>
@@ -22473,8 +22462,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_DIGITIZATION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
 				<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
+				<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MEDIA_PSYCHOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_MEDIA_PSYCHOLOGY</Sound>
@@ -22590,8 +22579,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_IMAGINARY_PHYSICS</PrereqTech>
 			</OrPreReqs>
             <AndPreReqs>
-				<PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
 				<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
+				<PrereqTech>TECH_MAGNETIC_LEVITATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CONTROLLED_PLASMA_QUOTE</Quote>
 			<Sound>AS2D_TECH_CONTROLLED_PLASMA</Sound>
@@ -22679,8 +22668,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_3D_PRINTING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_WEARABLE_COMPUTERS</PrereqTech>
 				<PrereqTech>TECH_NEURAL_NETWORKS</PrereqTech>
+				<PrereqTech>TECH_WEARABLE_COMPUTERS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_RAPID_PROTOTYPING_QUOTE</Quote>
 			<Sound>AS2D_TECH_RAPID_PROTOTYPING</Sound>
@@ -22889,8 +22878,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_COMMERCIAL_SPACEFLIGHT</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 				<PrereqTech>TECH_AQUACULTURE</PrereqTech>
+				<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_LUNAR_BASES_QUOTE</Quote>
 			<Sound>AS2D_TECH_LUNAR_BASES</Sound>
@@ -23085,8 +23074,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ORGANIC_PHOTONICS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_GENETIC_BIOCHEMISTRY</PrereqTech>
 				<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
+				<PrereqTech>TECH_GENETIC_BIOCHEMISTRY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_BIOMECHANICAL_HARVESTING_QUOTE</Quote>
 			<Sound>AS2D_TECH_BIOMECHANICAL_HARVESTING</Sound>
@@ -23131,9 +23120,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_VIRTUAL_SOCIETY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ORGANIC_PHOTONICS</PrereqTech>
-				<PrereqTech>TECH_DIRECT_MERCHANDISING</PrereqTech>
 				<PrereqTech>TECH_NEURAL_NETWORKS</PrereqTech>
+				<PrereqTech>TECH_DIRECT_MERCHANDISING</PrereqTech>
+				<PrereqTech>TECH_ORGANIC_PHOTONICS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_AUGUMENTEDREALITY_QUOTE</Quote>
 			<Sound>AS2D_TECH_AUGUMENTEDREALITY</Sound>
@@ -23178,9 +23167,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_BIOMATHMATICS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_METAMATERIALS</PrereqTech>
 				<PrereqTech>TECH_GENOMIC_ENCYCLOPEDIA</PrereqTech>
 				<PrereqTech>TECH_DIRECT_MERCHANDISING</PrereqTech>
+				<PrereqTech>TECH_METAMATERIALS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_PERSONALIZED_HEALTH_QUOTE</Quote>
 			<Sound>AS2D_TECH_PERSONALIZED_HEALTH</Sound>
@@ -23307,8 +23296,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_AUTONOMOUS_VEHICLES</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_COMPUTATIONAL_SOCIOLOGY</PrereqTech>
 				<PrereqTech>TECH_BIOMATHMATICS</PrereqTech>
+				<PrereqTech>TECH_COMPUTATIONAL_SOCIOLOGY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_AFFECTIVE_ALGORITHMS_QUOTE</Quote>
 			<Sound>AS2D_TECH_AFFECTIVE_ALGORITHMS</Sound>
@@ -23913,8 +23902,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_AFFECTIVE_ALGORITHMS</PrereqTech>
 				<PrereqTech>TECH_MEGACITIES</PrereqTech>
+				<PrereqTech>TECH_AFFECTIVE_ALGORITHMS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_DISASTER_ROBOTS_QUOTE</Quote>
 			<Sound>AS2D_TECH_DISASTER_ROBOTS</Sound>
@@ -24009,9 +23998,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_BRAIN_MACHINE_INTERFACE</PrereqTech>
-				<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 				<PrereqTech>TECH_REPLACEMENT_ORGANS</PrereqTech>
+				<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
+				<PrereqTech>TECH_BRAIN_MACHINE_INTERFACE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_NANOTECH_LIFESTYLE_QUOTE</Quote>
 			<Sound>AS2D_TECH_NANOTECH_LIFESTYLE</Sound>
@@ -24229,8 +24218,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_GRAPHENE_ALLOYS</PrereqTech>
 				<PrereqTech>TECH_GENESIS_BIOLOGY</PrereqTech>
+				<PrereqTech>TECH_GRAPHENE_ALLOYS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_LIQUID_METALS_QUOTE</Quote>
 			<Sound>AS2D_TECH_LIQUID_METALS</Sound>
@@ -24269,8 +24258,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_GRAPHENE_ALLOYS</PrereqTech>
 				<PrereqTech>TECH_CONTROLLED_PLASMA</PrereqTech>
+				<PrereqTech>TECH_GRAPHENE_ALLOYS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_FUSION_QUOTE</Quote>
 			<Sound>AS2D_TECH_FUSION</Sound>
@@ -24305,8 +24294,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_GRAPHENE_ALLOYS</PrereqTech>
 				<PrereqTech>TECH_QUANTUM_TELEPORTATION</PrereqTech>
+				<PrereqTech>TECH_GRAPHENE_ALLOYS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_INVISIBILITY_QUOTE</Quote>
 			<Sound>AS2D_TECH_INVISIBILITY</Sound>
@@ -24528,8 +24517,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_BIOMETRIC_WARFARE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_UBIQUITOUS_COMPUTING</PrereqTech>
 				<PrereqTech>TECH_THOUGHT_SCANNING</PrereqTech>
+				<PrereqTech>TECH_UBIQUITOUS_COMPUTING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MASS_SURVEILLANCE_QUOTE</Quote>
 			<Sound>AS2D_TECH_MASS_SURVEILLANCE</Sound>
@@ -24943,8 +24932,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_MESH_NETWORKS</PrereqTech>
 				<PrereqTech>TECH_INVISIBILITY</PrereqTech>
+				<PrereqTech>TECH_MESH_NETWORKS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_HOLOGRAPHICS_QUOTE</Quote>
 			<Sound>AS2D_TECH_HOLOGRAPHICS</Sound>
@@ -25286,8 +25275,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_HOLOGRAPHICS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_MEGACORPORATIONS</PrereqTech>
 				<PrereqTech>TECH_MASS_SURVEILLANCE</PrereqTech>
+				<PrereqTech>TECH_MEGACORPORATIONS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MEDIA_HIVEMIND_QUOTE</Quote>
 			<Sound>AS2D_TECH_MEDIA_HIVEMIND</Sound>
@@ -26155,10 +26144,10 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_WIRELESS_ELECTRICITY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
+				<PrereqTech>TECH_INTERNAL_SHOCKWAVE_ENGINE</PrereqTech>
+				<PrereqTech>TECH_NOVUS_CHEMISTRY</PrereqTech>
 				<PrereqTech>TECH_NANOROBOTICS</PrereqTech>
 				<PrereqTech>TECH_ADVANCED_COMPUTERS</PrereqTech>
-				<PrereqTech>TECH_NOVUS_CHEMISTRY</PrereqTech>
-				<PrereqTech>TECH_INTERNAL_SHOCKWAVE_ENGINE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_PHOTON_THERMODYNAMICS_QUOTE</Quote>
 			<Sound>AS2D_TECH_PHOTON_THERMODYNAMICS</Sound>
@@ -26245,8 +26234,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_WIRELESS_ELECTRICITY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
 				<PrereqTech>TECH_NOVUS_CHEMISTRY</PrereqTech>
+				<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ACCELERATED_GERMINATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_ACCELERATED_GERMINATION</Sound>
@@ -26335,8 +26324,8 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_NOVUS_CHEMISTRY</PrereqTech>
-				<PrereqTech>TECH_ADVANCED_COMPUTERS</PrereqTech>
 				<PrereqTech>TECH_WIRELESS_ELECTRICITY</PrereqTech>
+				<PrereqTech>TECH_ADVANCED_COMPUTERS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_AMPLIFIED_WAVELENGTHS_QUOTE</Quote>
 			<Sound>AS2D_TECH_AMPLIFIED_WAVELENGTHS</Sound>
@@ -26374,8 +26363,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ADVANCED_COMPUTERS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_BIONICS</PrereqTech>
 				<PrereqTech>TECH_BIOMIMETICS</PrereqTech>
+				<PrereqTech>TECH_BIONICS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_DROIDS_QUOTE</Quote>
 			<Sound>AS2D_TECH_DROIDS</Sound>
@@ -26497,9 +26486,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_BIONICS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
+				<PrereqTech>TECH_SYNTHETIC_SENTIENCE</PrereqTech>
 				<PrereqTech>TECH_NOVUS_CHEMISTRY</PrereqTech>
 				<PrereqTech>TECH_WIRELESS_ELECTRICITY</PrereqTech>
-				<PrereqTech>TECH_SYNTHETIC_SENTIENCE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_EXOCORTEX_NETWORKS_QUOTE</Quote>
 			<Sound>AS2D_TECH_EXOCORTEX_NETWORKS</Sound>
@@ -26651,8 +26640,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_DROIDS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_INTERACTIVE_GLASS</PrereqTech>
 				<PrereqTech>TECH_WARMACHINES</PrereqTech>
+				<PrereqTech>TECH_INTERACTIVE_GLASS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ANDROIDS_QUOTE</Quote>
 			<Sound>AS2D_TECH_ANDROIDS</Sound>
@@ -26690,9 +26679,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_AMPLIFIED_WAVELENGTHS</PrereqTech>
-				<PrereqTech>TECH_PHOTON_THERMODYNAMICS</PrereqTech>
 				<PrereqTech>TECH_WARMACHINES</PrereqTech>
+				<PrereqTech>TECH_PHOTON_THERMODYNAMICS</PrereqTech>
+				<PrereqTech>TECH_AMPLIFIED_WAVELENGTHS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ION_BEAMS_QUOTE</Quote>
 			<Sound>AS2D_TECH_ION_BEAMS</Sound>
@@ -26987,8 +26976,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_QUANTUM_COMPUTING</PrereqTech>
 				<PrereqTech>TECH_ENVIRONMENTAL_ECONOMICS</PrereqTech>
+				<PrereqTech>TECH_QUANTUM_COMPUTING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ELECTROMAGNETIC_VOLTAGE_QUOTE</Quote>
 			<Sound>AS2D_TECH_ELECTROMAGNETIC_VOLTAGE</Sound>
@@ -27327,8 +27316,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_DNA_COMPUTING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_CYBERIMMUNOLOGY</PrereqTech>
 				<PrereqTech>TECH_ACCELERATED_GERMINATION</PrereqTech>
+				<PrereqTech>TECH_CYBERIMMUNOLOGY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_DESIGNER_MICROBIOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_DESIGNER_MICROBIOLOGY</Sound>
@@ -27421,8 +27410,8 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
-				<PrereqTech>TECH_CYBERIMMUNOLOGY</PrereqTech>
 				<PrereqTech>TECH_ELECTROMAGNETIC_VOLTAGE</PrereqTech>
+				<PrereqTech>TECH_CYBERIMMUNOLOGY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_DYSTOPIA_PATHOGENS_QUOTE</Quote>
 			<Sound>AS2D_TECH_DYSTOPIA_PATHOGENS</Sound>
@@ -27505,12 +27494,12 @@ Current techs which are not in this file:-
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_PERSONAL_ROBOTS</PrereqTech>
 				<PrereqTech>TECH_CLOAKING</PrereqTech>
-				<PrereqTech>TECH_HYPOTHETICAL_BIOCHEMISTRY</PrereqTech>
+				<PrereqTech>TECH_PERSONAL_ROBOTS</PrereqTech>
+				<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 				<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
 				<PrereqTech>TECH_DESIGNER_MICROBIOLOGY</PrereqTech>
-				<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
+				<PrereqTech>TECH_HYPOTHETICAL_BIOCHEMISTRY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_CYBERSOCIAL_INTEGRATION</PrereqTech>
@@ -27551,8 +27540,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 				<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
+				<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_DEEP_SPACE_COLONIES_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -27598,9 +27587,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_HYPOTHETICAL_BIOCHEMISTRY</PrereqTech>
-				<PrereqTech>TECH_DESIGNER_MICROBIOLOGY</PrereqTech>
 				<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
+				<PrereqTech>TECH_DESIGNER_MICROBIOLOGY</PrereqTech>
+				<PrereqTech>TECH_HYPOTHETICAL_BIOCHEMISTRY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ARTIFICIAL_PHOTOSYNTHESIS_QUOTE</Quote>
 			<Sound>AS2D_TECH_ARTIFICIAL_PHOTOSYNTHESIS</Sound>
@@ -27646,8 +27635,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_CLOAKING</PrereqTech>
 				<PrereqTech>TECH_LEVITATION</PrereqTech>
+				<PrereqTech>TECH_CLOAKING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_UNIFICATION_PHYSICS_QUOTE</Quote>
 			<Sound>AS2D_TECH_UNIFICATION_PHYSICS</Sound>
@@ -27693,8 +27682,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_PERSONAL_ROBOTS</PrereqTech>
 				<PrereqTech>TECH_BATTLEFIELD_SPORTS</PrereqTech>
+				<PrereqTech>TECH_PERSONAL_ROBOTS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_BINARY_LEGISLATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_BINARY_LEGISLATION</Sound>
@@ -27740,8 +27729,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_HYPOTHETICAL_BIOCHEMISTRY</PrereqTech>
 				<PrereqTech>TECH_DESIGNER_MICROBIOLOGY</PrereqTech>
+				<PrereqTech>TECH_HYPOTHETICAL_BIOCHEMISTRY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_SYNTHETIC_SYNESTHESIA_QUOTE</Quote>
 			<Sound>AS2D_TECH_SYNTHETIC_SYNESTHESIA</Sound>
@@ -27787,9 +27776,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_HYPOTHETICAL_BIOCHEMISTRY</PrereqTech>
-				<PrereqTech>TECH_DESIGNER_MICROBIOLOGY</PrereqTech>
 				<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
+				<PrereqTech>TECH_DESIGNER_MICROBIOLOGY</PrereqTech>
+				<PrereqTech>TECH_HYPOTHETICAL_BIOCHEMISTRY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_NEURON_ENGINEERING_QUOTE</Quote>
 			<Sound>AS2D_TECH_NEURON_ENGINEERING</Sound>
@@ -27920,8 +27909,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_DEEP_SPACE_COLONIES</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_UNIFICATION_PHYSICS</PrereqTech>
 				<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+				<PrereqTech>TECH_UNIFICATION_PHYSICS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_KUIPER_BELT_EXPLORATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_KUIPER_BELT_EXPLORATION</Sound>
@@ -28014,9 +28003,9 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
+				<PrereqTech>TECH_BINARY_LEGISLATION</PrereqTech>
 				<PrereqTech>TECH_SYNTHETIC_SYNESTHESIA</PrereqTech>
 				<PrereqTech>TECH_NEURON_ENGINEERING</PrereqTech>
-				<PrereqTech>TECH_BINARY_LEGISLATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_SIMULATED_REALITY_QUOTE</Quote>
 			<Sound>AS2D_TECH_SIMULATED_REALITY</Sound>
@@ -28093,9 +28082,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_BINARY_LEGISLATION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_NEURON_ENGINEERING</PrereqTech>
-				<PrereqTech>TECH_SYNTHETIC_SYNESTHESIA</PrereqTech>
 				<PrereqTech>TECH_UNIFICATION_PHYSICS</PrereqTech>
+				<PrereqTech>TECH_SYNTHETIC_SYNESTHESIA</PrereqTech>
+				<PrereqTech>TECH_NEURON_ENGINEERING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_BINARY_SUBCONSCIOUSNESS_QUOTE</Quote>
 			<Sound>AS2D_TECH_BINARY_SUBCONSCIOUSNESS</Sound>
@@ -28143,8 +28132,8 @@ Current techs which are not in this file:-
 			<AndPreReqs>
 				<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
 				<PrereqTech>TECH_UNIFICATION_PHYSICS</PrereqTech>
-				<PrereqTech>TECH_SPECIES_UPLIFTING</PrereqTech>
 				<PrereqTech>TECH_NEURON_ENGINEERING</PrereqTech>
+				<PrereqTech>TECH_SPECIES_UPLIFTING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_UTOPIA_DESTINY_QUOTE</Quote>
 			<Sound>AS2D_TECH_UTOPIA_DESTINY</Sound>
@@ -28575,8 +28564,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_NOVO_PALEONTOLOGY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_QUADRUPLE_HELIX</PrereqTech>
 				<PrereqTech>TECH_UTOPIA_DESTINY</PrereqTech>
+				<PrereqTech>TECH_QUADRUPLE_HELIX</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ARTIFICIAL_EVOLUTION_QUOTE</Quote>
 			<Sound>AS2D_TECH_ARTIFICIAL_EVOLUTION</Sound>
@@ -28615,8 +28604,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_HOMO_SUPERIOR</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_FROST_BEAMS</PrereqTech>
 				<PrereqTech>TECH_HYPERMAGNETICS</PrereqTech>
+				<PrereqTech>TECH_FROST_BEAMS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CRYONICS_QUOTE</Quote>
 			<Sound>AS2D_TECH_CRYONICS</Sound>
@@ -28708,10 +28697,10 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_WEIGHTLESS_FLIGHT</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
-				<PrereqTech>TECH_SOCIAL_CALCULUS</PrereqTech>
-				<PrereqTech>TECH_SYNERGETICS</PrereqTech>
 				<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
+				<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
+				<PrereqTech>TECH_SYNERGETICS</PrereqTech>
+				<PrereqTech>TECH_SOCIAL_CALCULUS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ASTROGATION_CONSTELLATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_ASTROGATION_CONSTELLATION</Sound>
@@ -28876,8 +28865,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_SMART_DUST</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ARTIFICIAL_EVOLUTION</PrereqTech>
 				<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
+				<PrereqTech>TECH_ARTIFICIAL_EVOLUTION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_EVOLVED_CONSTRUCTION_QUOTE</Quote>
 			<Sound>AS2D_TECH_EVOLVED_CONSTRUCTION</Sound>
@@ -29015,8 +29004,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ARTIFICIAL_EVOLUTION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_BINARY_SEMIOTICS</PrereqTech>
 				<PrereqTech>TECH_SOCIAL_CALCULUS</PrereqTech>
+				<PrereqTech>TECH_BINARY_SEMIOTICS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_WHOLE_BRAIN_EMULATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_WHOLE_BRAIN_EMULATION</Sound>
@@ -29157,8 +29146,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_MIND_UPLOADING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_EVOLVED_CONSTRUCTION</PrereqTech>
 				<PrereqTech>TECH_OPTRONICS</PrereqTech>
+				<PrereqTech>TECH_EVOLVED_CONSTRUCTION</PrereqTech>
 				<PrereqTech>TECH_WHOLE_BRAIN_EMULATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_TECHNOLOGICAL_SINGULARITY_QUOTE</Quote>
@@ -29210,8 +29199,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_EVOLVED_CONSTRUCTION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_NUTRACEUTICAL_ANIMALS</PrereqTech>
 				<PrereqTech>TECH_BOTANICAL_ALCHEMY</PrereqTech>
+				<PrereqTech>TECH_NUTRACEUTICAL_ANIMALS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ORGANIC_CITIES_QUOTE</Quote>
 			<Sound>AS2D_TECH_ORGANIC_CITIES</Sound>
@@ -29387,8 +29376,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_WHOLE_BRAIN_EMULATION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_EVOLVED_CONSTRUCTION</PrereqTech>
 				<PrereqTech>TECH_MIND_UPLOADING</PrereqTech>
+				<PrereqTech>TECH_EVOLVED_CONSTRUCTION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_COMPREHENSIVE_CYBERNETICS_QUOTE</Quote>
 			<Sound>AS2D_TECH_COMPREHENSIVE_CYBERNETICS</Sound>
@@ -29472,8 +29461,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_TECHNOLOGICAL_SINGULARITY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
 				<PrereqTech>TECH_NANOMINING</PrereqTech>
+				<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ANIMAMATERIALS_QUOTE</Quote>
 			<Sound>AS2D_TECH_ANIMAMATERIALS</Sound>
@@ -29519,8 +29508,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_TECHNOLOGICAL_SINGULARITY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>
 				<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
+				<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_TRANSHUMANISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_TRANSHUMANISM</Sound>
@@ -29660,9 +29649,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_NANOMINING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
 				<PrereqTech>TECH_ORGANIC_CITIES</PrereqTech>
 				<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
+				<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_GAIA_ECOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_GAIA_ECOLOGY</Sound>
@@ -29755,8 +29744,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>
 				<PrereqTech>TECH_ORGANIC_CITIES</PrereqTech>
+				<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_SPECULATIVE_PHYSIOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_SPECULATIVE_PHYSIOLOGY</Sound>
@@ -29802,9 +29791,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>
-				<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
 				<PrereqTech>TECH_ORGANIC_CITIES</PrereqTech>
+				<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
+				<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MYTHOLOCIAL_BEASTIARY_QUOTE</Quote>
 			<Sound>AS2D_TECH_MYTHOLOCIAL_BEASTIARY</Sound>
@@ -30078,9 +30067,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_SAPIENTROIDS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
-				<PrereqTech>TECH_ANIMAMATERIALS</PrereqTech>
 				<PrereqTech>TECH_ANTI_GRAVITY_FIELDS</PrereqTech>
+				<PrereqTech>TECH_ANIMAMATERIALS</PrereqTech>
+				<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_BINARY_PSYCHOKINESIS_QUOTE</Quote>
 			<Sound>AS2D_TECH_BINARY_PSYCHOKINESIS</Sound>
@@ -30242,8 +30231,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_FRICTIONLESS_FLIGHT</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_NANOMINING</PrereqTech>
 				<PrereqTech>TECH_ORBITAL_MEGASTRUCTURES</PrereqTech>
+				<PrereqTech>TECH_NANOMINING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ASTEROID_EXTRACTION_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -30286,8 +30275,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ADVANCED_WARMACHINES</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_PHOTONIC_SATELLITES</PrereqTech>
 				<PrereqTech>TECH_FRICTIONLESS_FLIGHT</PrereqTech>
+				<PrereqTech>TECH_PHOTONIC_SATELLITES</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_PLANETARY_DEFENSES_QUOTE</Quote>
 			<Sound>AS2D_TECH_PLANETARY_DEFENSES</Sound>
@@ -30367,8 +30356,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_TERRA_COMPUTER</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_HUMAN_TRANSMUTATION</PrereqTech>
 				<PrereqTech>TECH_BINARY_PSYCHOKINESIS</PrereqTech>
+				<PrereqTech>TECH_HUMAN_TRANSMUTATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_SENTIENT_EARTH_QUOTE</Quote>
 			<Sound>AS2D_TECH_SENTIENT_EARTH</Sound>
@@ -30534,8 +30523,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_SENTIENT_EARTH</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_NANOMORPHICS</PrereqTech>
 				<PrereqTech>TECH_PHOTONIC_SATELLITES</PrereqTech>
+				<PrereqTech>TECH_NANOMORPHICS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MOLECULAR_SCANNING_QUOTE</Quote>
 			<Sound>AS2D_TECH_MOLECULAR_SCANNING</Sound>
@@ -30786,8 +30775,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_MOLECULAR_SCANNING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 				<PrereqTech>TECH_APOCALYPTIC_PATHOGENS</PrereqTech>
+				<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_EXTRATERRESTRIAL_AGRICULTURE_QUOTE</Quote>
 			<Sound>AS2D_TECH_EXTRATERRESTRIAL_AGRICULTURE</Sound>
@@ -30835,12 +30824,12 @@ Current techs which are not in this file:-
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_NANOTROIDS</PrereqTech>
 				<PrereqTech>TECH_NUCLEAR_PULSE_PROPULSION</PrereqTech>
+				<PrereqTech>TECH_NANOTROIDS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_EXTRATERRESTRIAL_AGRICULTURE</PrereqTech>
 				<PrereqTech>TECH_PLANETARY_MEGASTRUCTURES</PrereqTech>
+				<PrereqTech>TECH_EXTRATERRESTRIAL_AGRICULTURE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_GALACTIC_LIFESTYLE_QUOTE</Quote>
 			<Sound>AS2D_TECH_GALACTIC_LIFESTYLE</Sound>
@@ -31059,8 +31048,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_NANOTROIDS</PrereqTech>
 				<PrereqTech>TECH_SUBTERRANEAN_EXPLORATION</PrereqTech>
+				<PrereqTech>TECH_NANOTROIDS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_GEOSCULPTING_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -31223,8 +31212,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_LAUNCH_ARCOLOGY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_PLANETARY_TERRAFORMING</PrereqTech>
 				<PrereqTech>TECH_ANTIMATTER_PRODUCTION</PrereqTech>
+				<PrereqTech>TECH_PLANETARY_TERRAFORMING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ATOMIC_SCALE_ENGINEERING_QUOTE</Quote>
 			<Sound>AS2D_TECH_ATOMIC_SCALE_ENGINEERING</Sound>
@@ -31741,12 +31730,12 @@ Current techs which are not in this file:-
 					<iFlavor>8</iFlavor>
 				</Flavor>
 			</Flavors>
-			<AndPreReqs>
-				<PrereqTech>TECH_COLONY_GOVERNANCE</PrereqTech>
-			</AndPreReqs>
 			<OrPreReqs>
 				<PrereqTech>TECH_COSMIC_PERSPECTIVE</PrereqTech>
 			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_COLONY_GOVERNANCE</PrereqTech>
+			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_INTERSTELLAR_COLONIZATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_INTERSTELLAR_COLONIZATION</Sound>
 			<SoundMP>AS2D_TECH_INTERSTELLAR_COLONIZATION</SoundMP>
@@ -31867,8 +31856,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_INTERSTELLAR_COLONIZATION</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_WEAPONIZED_DISINTEGRATION</PrereqTech>
 				<PrereqTech>TECH_NANOMORPHIC_TROIDS</PrereqTech>
+				<PrereqTech>TECH_WEAPONIZED_DISINTEGRATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_PLANET_CRACKING_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -32016,9 +32005,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_XENODIPLOMACY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_PLANET_SCOUTING</PrereqTech>
-				<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
 				<PrereqTech>TECH_MOLECULAR_ASSEMBLY</PrereqTech>
+				<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
+				<PrereqTech>TECH_PLANET_SCOUTING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ADAPTIVE_ARCHITECTURE_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -32051,8 +32040,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_INTERSTELLAR_TRADE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
 				<PrereqTech>TECH_MOLECULAR_ASSEMBLY</PrereqTech>
+				<PrereqTech>TECH_PLANET_CRACKING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_FORGE_WORLDS_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -32359,8 +32348,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_GRAVITY_CONTROL</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_FORGE_WORLDS</PrereqTech>
 				<PrereqTech>TECH_ADAPTIVE_ARCHITECTURE</PrereqTech>
+				<PrereqTech>TECH_FORGE_WORLDS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_PLANET_ENGINEERING_QUOTE</Quote>
 			<Sound>AS2D_TECH_PLANET_ENGINEERING</Sound>
@@ -32554,8 +32543,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ECOSYNTHESIS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ASTROANTHROPOLOGY</PrereqTech>
 				<PrereqTech>TECH_ADVANCED_SEEDSHIPS</PrereqTech>
+				<PrereqTech>TECH_ASTROANTHROPOLOGY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ASTROIMPERIALISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -32636,8 +32625,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_PLANET_ENGINEERING</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_PLANET_SCANNING</PrereqTech>
 				<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
+				<PrereqTech>TECH_PLANET_SCANNING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ARTIFICIAL_PLANETS_QUOTE</Quote>
 			<Sound>AS2D_TECH_ARTIFICIAL_PLANETS</Sound>
@@ -33018,8 +33007,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ARTIFICIAL_STARS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_PICOTECHNOLOGY</PrereqTech>
 				<PrereqTech>TECH_ORBITAL_ENGINEERING</PrereqTech>
+				<PrereqTech>TECH_PICOTECHNOLOGY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_STELLAR_ENGINE_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -33173,8 +33162,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_STELLAR_ENGINE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_WORMHOLE_TRAVERSAL</PrereqTech>
 				<PrereqTech>TECH_STELLAR_COMPUTING</PrereqTech>
+				<PrereqTech>TECH_WORMHOLE_TRAVERSAL</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_NEUTRINO_COMMUNICATIONS_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -33299,12 +33288,12 @@ Current techs which are not in this file:-
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
 				<PrereqTech>TECH_NEUTRINO_COMMUNICATIONS</PrereqTech>
+				<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_SPECIES_AMALGAMATION</PrereqTech>
 				<PrereqTech>TECH_ORBITAL_ENGINEERING</PrereqTech>
+				<PrereqTech>TECH_SPECIES_AMALGAMATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_COSMIC_LIFESTYLE_QUOTE</Quote>
 			<Sound>AS2D_TECH_COSMIC_LIFESTYLE</Sound>
@@ -33337,8 +33326,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_COSMIC_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_PHASING</PrereqTech>
 				<PrereqTech>TECH_PICOTECHNOLOGY</PrereqTech>
+				<PrereqTech>TECH_PHASING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_FEMTOTECHNOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -33382,8 +33371,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_COSMIC_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
 				<PrereqTech>TECH_PHASING</PrereqTech>
+				<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_TIME_TRAVEL_QUOTE</Quote>
 			<Sound>AS2D_TECH_TIME_TRAVEL</Sound>
@@ -33416,8 +33405,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_COSMIC_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
 				<PrereqTech>TECH_PHASING</PrereqTech>
+				<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_APPLIED_RELATIVITY_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -33867,8 +33856,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ULTIMA_ARCHITECTURE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
 				<PrereqTech>TECH_GRAVITRONICS</PrereqTech>
+				<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_WORMHOLE_HIVEMIND_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -33909,8 +33898,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_EXTREME_ENERGY_WEAPONS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
 				<PrereqTech>TECH_PARTICLE_GENETICS</PrereqTech>
+				<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_EXOTIC_STARS_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -33943,8 +33932,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_GALACTIC_ECOLOGY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_CULTURAL_LONGEVITY</PrereqTech>
 				<PrereqTech>TECH_GRAVITRONICS</PrereqTech>
+				<PrereqTech>TECH_CULTURAL_LONGEVITY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_IMMORTALITY_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -34081,8 +34070,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_IMMORTALITY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_GALACTIC_ENGINEERING</PrereqTech>
 				<PrereqTech>TECH_EXTREME_ENERGY_WEAPONS</PrereqTech>
+				<PrereqTech>TECH_GALACTIC_ENGINEERING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_INTERGALACTIC_EMPIRE_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -34725,8 +34714,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_INTERCLUSTER_TRAVEL</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_DARK_MATTER_ENGINEERING</PrereqTech>
 				<PrereqTech>TECH_ZERO_POINT_ENERGY</PrereqTech>
+				<PrereqTech>TECH_DARK_MATTER_ENGINEERING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_DARK_ENERGY_HARVESTING_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -35074,16 +35063,16 @@ Current techs which are not in this file:-
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_TACHYON_COMMUNICATIONS</PrereqTech>
-				<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
 				<PrereqTech>TECH_MENSIOKINESIS</PrereqTech>
 				<PrereqTech>TECH_FANTASY_MATERIALS</PrereqTech>
-				<PrereqTech>TECH_STABLE_TIME_LOOPS</PrereqTech>
 				<PrereqTech>TECH_GRAND_UNIFICATION_BIOLOGY</PrereqTech>
+				<PrereqTech>TECH_STABLE_TIME_LOOPS</PrereqTech>
+				<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
+				<PrereqTech>TECH_TACHYON_COMMUNICATIONS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_LUMINAL_BEINGS</PrereqTech>
 				<PrereqTech>TECH_PURE_INFORMATION_SOCIETY</PrereqTech>
+				<PrereqTech>TECH_LUMINAL_BEINGS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_TRANSCENDENT_LIFESTYLE_QUOTE</Quote>
 			<Sound>AS2D_TECH_TRANSCENDENT_LIFESTYLE</Sound>
@@ -35152,8 +35141,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_TRANSCENDENT_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
 				<PrereqTech>TECH_STABLE_TIME_LOOPS</PrereqTech>
+				<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_DUALFLUX_QUANTUM_TEMPORAL_RIFT_QUOTE</Quote>
 			<Sound>AS2D_TECH_DUALFLUX_QUANTUM_TEMPORAL_RIFT</Sound>
@@ -35190,9 +35179,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_TRANSCENDENT_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
+				<PrereqTech>TECH_QUANTUM_RAMJET</PrereqTech>
 				<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
 				<PrereqTech>TECH_TACHYON_COMMUNICATIONS</PrereqTech>
-				<PrereqTech>TECH_QUANTUM_RAMJET</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_HORIZON_BREAKING_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -35225,9 +35214,9 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_TRANSCENDENT_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
+				<PrereqTech>TECH_MENSIOKINESIS</PrereqTech>
 				<PrereqTech>TECH_STABLE_TIME_LOOPS</PrereqTech>
 				<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
-				<PrereqTech>TECH_MENSIOKINESIS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_STRING_MANIPULATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -35300,8 +35289,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_DUALFLUX_QUANTUM_TEMPORAL_RIFT</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_TACHYON_COMMUNICATIONS</PrereqTech>
 				<PrereqTech>TECH_FANTASY_MATERIALS</PrereqTech>
+				<PrereqTech>TECH_TACHYON_COMMUNICATIONS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_TRANSDIMENSIONAL_COMMERCE_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -35397,8 +35386,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_METAVERSE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_GRAND_UNIFICATION_BIOLOGY</PrereqTech>
 				<PrereqTech>TECH_MENSIOKINESIS</PrereqTech>
+				<PrereqTech>TECH_GRAND_UNIFICATION_BIOLOGY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_PANPSYCHISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -35689,8 +35678,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_CONTROLLED_VACUUM_COLLAPSE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_ENDLESS_EXPLORATION</PrereqTech>
 				<PrereqTech>TECH_HYPERSTRUCTURE_ENGINEERING</PrereqTech>
+				<PrereqTech>TECH_ENDLESS_EXPLORATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_EXPERIMENTAL_COSMOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -35831,8 +35820,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_PANPSYCHISM</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_MATERIALIZATION</PrereqTech>
 				<PrereqTech>TECH_HYPERSTRUCTURE_ENGINEERING</PrereqTech>
+				<PrereqTech>TECH_MATERIALIZATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_HYPERINTELLIGENCE_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -36337,8 +36326,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_BRANE_CROSSOVER</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_SPATIAL_TRANSCENDENCE</PrereqTech>
 				<PrereqTech>TECH_PARAMETER_TUNING</PrereqTech>
+				<PrereqTech>TECH_SPATIAL_TRANSCENDENCE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MANIFOLD_COLONIZATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>

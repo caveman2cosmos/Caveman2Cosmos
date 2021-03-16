@@ -90,7 +90,7 @@ void CvPropertyInteraction::setRelationData(int iRelationData)
 	m_iRelationData = iRelationData;
 }
 
-bool CvPropertyInteraction::isActive(CvGameObject *pObject) const
+bool CvPropertyInteraction::isActive(const CvGameObject *pObject) const
 {
 	if ((m_eObjectType == NO_GAMEOBJECT) || (m_eObjectType == pObject->getGameObjectType()))
 	{
@@ -129,7 +129,7 @@ bool CvPropertyInteraction::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyInteraction::copyNonDefaults(CvPropertyInteraction *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyInteraction::copyNonDefaults(CvPropertyInteraction* pProp)
 {
 //	if (m_eSourceProperty == NO_PROPERTY)
 //		m_eSourceProperty = pProp->getSourceProperty();
@@ -227,9 +227,9 @@ bool CvPropertyInteractionConvertConstant::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyInteractionConvertConstant::copyNonDefaults(CvPropertyInteraction *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyInteractionConvertConstant::copyNonDefaults(CvPropertyInteraction* pProp)
 {
-	CvPropertyInteraction::copyNonDefaults(pProp, pXML);
+	CvPropertyInteraction::copyNonDefaults(pProp);
 	const CvPropertyInteractionConvertConstant* pOther = static_cast<const CvPropertyInteractionConvertConstant*>(pProp);
 	if (m_iAmountPerTurn == 0)
 		m_iAmountPerTurn = pOther->getAmountPerTurn();
@@ -302,9 +302,9 @@ bool CvPropertyInteractionInhibitedGrowth::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyInteractionInhibitedGrowth::copyNonDefaults(CvPropertyInteraction *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyInteractionInhibitedGrowth::copyNonDefaults(CvPropertyInteraction* pProp)
 {
-	CvPropertyInteraction::copyNonDefaults(pProp, pXML);
+	CvPropertyInteraction::copyNonDefaults(pProp);
 	const CvPropertyInteractionInhibitedGrowth* pOther = static_cast<const CvPropertyInteractionInhibitedGrowth*>(pProp);
 	if (m_iGrowthPercent == 0)
 		m_iGrowthPercent = pOther->getGrowthPercent();
@@ -379,9 +379,9 @@ bool CvPropertyInteractionConvertPercent::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyInteractionConvertPercent::copyNonDefaults(CvPropertyInteraction *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyInteractionConvertPercent::copyNonDefaults(CvPropertyInteraction* pProp)
 {
-	CvPropertyInteraction::copyNonDefaults(pProp, pXML);
+	CvPropertyInteraction::copyNonDefaults(pProp);
 	const CvPropertyInteractionConvertPercent* pOther = static_cast<const CvPropertyInteractionConvertPercent*>(pProp);
 	if (m_iPercent == 0)
 		m_iPercent = pOther->getPercent();

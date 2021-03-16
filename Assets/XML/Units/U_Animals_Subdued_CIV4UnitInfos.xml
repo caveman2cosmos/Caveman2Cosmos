@@ -269,6 +269,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
 				<BuildingType>BUILDING_WOLF_MYTH</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORY</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORIES</BuildingType>
 				<BuildingType>BUILDING_ARCTICFOX_MYTH</BuildingType>
 				<BuildingType>BUILDING_ARCTICFOX_STORY</BuildingType>
 				<BuildingType>BUILDING_ARCTICFOX_STORIES</BuildingType>
@@ -971,6 +973,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_WORKERS</BuildingType>
 				<BuildingType>BUILDING_RODENT_MYTH</BuildingType>
+				<BuildingType>BUILDING_RODENT_STORY</BuildingType>
+				<BuildingType>BUILDING_RODENT_STORIES</BuildingType>
 				<BuildingType>BUILDING_BEAVER_TRAPS</BuildingType>
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1761,6 +1765,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_CROCODILE_MYTH</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORY</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORIES</BuildingType>
 				<BuildingType>BUILDING_REPTILE_MYTH</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 				<BuildingType>BUILDING_CAIMAN_MYTH</BuildingType>
@@ -2006,6 +2012,8 @@
 				<BuildingType>BUILDING_CAPYBARA_STORY</BuildingType>
 				<BuildingType>BUILDING_CAPYBARA_STORIES</BuildingType>
 				<BuildingType>BUILDING_RODENT_MYTH</BuildingType>
+				<BuildingType>BUILDING_RODENT_STORY</BuildingType>
+				<BuildingType>BUILDING_RODENT_STORIES</BuildingType>
 				<BuildingType>BUILDING_BEAVER_TRAPS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -3142,6 +3150,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
 				<BuildingType>BUILDING_WOLF_MYTH</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORY</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORIES</BuildingType>
 				<BuildingType>BUILDING_DHOLE_MYTH</BuildingType>
 				<BuildingType>BUILDING_DHOLE_STORY</BuildingType>
 				<BuildingType>BUILDING_DHOLE_STORIES</BuildingType>
@@ -3204,6 +3214,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
 				<BuildingType>BUILDING_WOLF_MYTH</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORY</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORIES</BuildingType>
 				<BuildingType>BUILDING_DINGO_MYTH</BuildingType>
 				<BuildingType>BUILDING_DINGO_STORY</BuildingType>
 				<BuildingType>BUILDING_DINGO_STORIES</BuildingType>
@@ -3269,6 +3281,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WOLF_MYTH</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORY</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORIES</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_DOG_MYTH</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES</BuildingType>
@@ -4052,6 +4066,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
 				<BuildingType>BUILDING_WOLF_MYTH</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORY</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORIES</BuildingType>
 				<BuildingType>BUILDING_EWOLF_MYTH</BuildingType>
 				<BuildingType>BUILDING_EWOLF_STORY</BuildingType>
 				<BuildingType>BUILDING_EWOLF_STORIES</BuildingType>
@@ -4424,6 +4440,8 @@
 				<BuildingType>BUILDING_REPTILE_MYTH</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 				<BuildingType>BUILDING_CROCODILE_MYTH</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORY</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORIES</BuildingType>
 				<BuildingType>BUILDING_GATOR_MYTH</BuildingType>
 				<BuildingType>BUILDING_GATOR_STORY</BuildingType>
 				<BuildingType>BUILDING_GATOR_STORIES</BuildingType>
@@ -4523,6 +4541,8 @@
 				<BuildingType>BUILDING_GATOR_ASIAN_STORIES</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 				<BuildingType>BUILDING_CROCODILE_MYTH</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORY</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORIES</BuildingType>
 				<BuildingType>BUILDING_DRAGON_MYTH</BuildingType>
 				<BuildingType>BUILDING_BAD_BOY_CAGE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -4916,6 +4936,8 @@
 				<BuildingType>BUILDING_DRAGON_MYTH</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 				<BuildingType>BUILDING_CROCODILE_MYTH</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORY</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORIES</BuildingType>
 				<BuildingType>BUILDING_GHARIAL_MYTH</BuildingType>
 				<BuildingType>BUILDING_GHARIAL_STORY</BuildingType>
 				<BuildingType>BUILDING_GHARIAL_STORIES</BuildingType>
@@ -7983,6 +8005,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
 				<BuildingType>BUILDING_WOLF_MYTH</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORY</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORIES</BuildingType>
 				<BuildingType>BUILDING_MANEDWOLF_MYTH</BuildingType>
 				<BuildingType>BUILDING_MANEDWOLF_STORY</BuildingType>
 				<BuildingType>BUILDING_MANEDWOLF_STORIES</BuildingType>
@@ -8896,6 +8920,8 @@
 				<BuildingType>BUILDING_REPTILE_MYTH</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 				<BuildingType>BUILDING_CROCODILE_MYTH</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORY</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORIES</BuildingType>
 				<BuildingType>BUILDING_NILECROC_MYTH</BuildingType>
 				<BuildingType>BUILDING_NILECROC_STORY</BuildingType>
 				<BuildingType>BUILDING_NILECROC_STORIES</BuildingType>
@@ -10552,6 +10578,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
 				<BuildingType>BUILDING_WOLF_MYTH</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORY</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORIES</BuildingType>
 				<BuildingType>BUILDING_REDFOX_MYTH</BuildingType>
 				<BuildingType>BUILDING_REDFOX_STORY</BuildingType>
 				<BuildingType>BUILDING_REDFOX_STORIES</BuildingType>
@@ -10805,6 +10833,8 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
 				<BuildingType>BUILDING_WOLF_MYTH</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORY</BuildingType>
+				<BuildingType>BUILDING_WOLF_STORIES</BuildingType>
 				<BuildingType>BUILDING_GREY_WOLF_MYTH</BuildingType>
 				<BuildingType>BUILDING_GREY_WOLF_STORY</BuildingType>
 				<BuildingType>BUILDING_GREY_WOLF_STORIES</BuildingType>
@@ -11327,6 +11357,8 @@
 				<BuildingType>BUILDING_REPTILE_MYTH</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 				<BuildingType>BUILDING_CROCODILE_MYTH</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORY</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORIES</BuildingType>
 				<BuildingType>BUILDING_RIVER_CROC_MYTH</BuildingType>
 				<BuildingType>BUILDING_RIVER_CROC_STORY</BuildingType>
 				<BuildingType>BUILDING_RIVER_CROC_STORIES</BuildingType>
@@ -11422,6 +11454,8 @@
 				<BuildingType>BUILDING_REPTILE_MYTH</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 				<BuildingType>BUILDING_CROCODILE_MYTH</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORY</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORIES</BuildingType>
 				<BuildingType>BUILDING_RIVER_CROC_MYTH</BuildingType>
 				<BuildingType>BUILDING_RIVER_CROC_STORY</BuildingType>
 				<BuildingType>BUILDING_RIVER_CROC_STORIES</BuildingType>
@@ -11770,6 +11804,8 @@
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_CROCODILE_MYTH</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORY</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORIES</BuildingType>
 				<BuildingType>BUILDING_SALTWATER_CROC_MYTH</BuildingType>
 				<BuildingType>BUILDING_SALTWATER_CROC_STORY</BuildingType>
 				<BuildingType>BUILDING_SALTWATER_CROC_STORIES</BuildingType>
@@ -11867,6 +11903,8 @@
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_CROCODILE_MYTH</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORY</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORIES</BuildingType>
 				<BuildingType>BUILDING_SALTWATER_CROC_MYTH</BuildingType>
 				<BuildingType>BUILDING_SALTWATER_CROC_STORY</BuildingType>
 				<BuildingType>BUILDING_SALTWATER_CROC_STORIES</BuildingType>
@@ -14831,6 +14869,8 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_CROCODILE_MYTH</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORY</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEA_MYTH</BuildingType>
 				<BuildingType>BUILDING_SALTWATER_CROC_MYTH</BuildingType>
 				<BuildingType>BUILDING_SALTWATER_CROC_STORY</BuildingType>
@@ -14872,6 +14912,8 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_CROCODILE_MYTH</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORY</BuildingType>
+				<BuildingType>BUILDING_CROCODILE_STORIES</BuildingType>
 				<BuildingType>BUILDING_SEA_MYTH</BuildingType>
 				<BuildingType>BUILDING_SALTWATER_CROC_MYTH</BuildingType>
 				<BuildingType>BUILDING_SALTWATER_CROC_STORY</BuildingType>

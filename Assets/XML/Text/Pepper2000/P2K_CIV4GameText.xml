@@ -64,7 +64,7 @@
 		<Tag>TXT_KEY_BUILD_CISLUNAR_EXPANSION_MODULE</Tag>
 		<English>Build [LINK=IMPROVEMENT_CISLUNAR_EXPANSION_MODULE]Cislunar Expansion Module[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_CISLUNAR_EXPANSION_MODULE]Module d'Expansion Cislunaire[\LINK]</French>
-		<Russian>Ñòîèòü [LINK=IMPROVEMENT_CISLUNAR_EXPANSION_MODULE]Îêîëîëóííûé ìîäóëü[\LINK]</Russian>
+		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_CISLUNAR_EXPANSION_MODULE]Îêîëîëóííûé ìîäóëü[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COMPACT_WORMHOLE</Tag>
@@ -298,7 +298,7 @@
 		<Tag>TXT_KEY_BUILD_SATELLITE_STATION</Tag>
 		<English>Build [LINK=IMPROVEMENT_SATELLITE_STATION]Satellite Station[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_SATELLITE_STATION]Station Satellite[\LINK]</French>
-		<Russian>Ñòîèòü îðá. ñòàíöèþ</Russian>
+		<Russian>Ñòðîèòü îðá. ñòàíöèþ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SOLAR_SYSTEM_BASE</Tag>
@@ -3715,5 +3715,25 @@
 		<English>[ICON_BULLET]Can build cities in the Transtellar space and Star terrains</English>
 		<French>[ICON_BULLET]Peut construire les Villes dans le nuage d'Oort, et l'espace transtellaire</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà â Îáëàêå Îîðòà è ìåæçâåçäíîì ïðîñòðàíñòâå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_LUNAR_PATH</Tag>
+		<English>Build [LINK=ROUTE_LUNAR_PATH]Lunar Path[\LINK]</English>
+		<Russian>Ïðîëîæèòü [LINK=ROUTE_LUNAR_PATH]Ëóí. òðàññó[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_PLANETARY_MAGLEV</Tag>
+		<English>Build [LINK=ROUTE_PLANETARY_MAGLEV]Planetary Maglev[\LINK]</English>
+		<Russian>Ñòðîèòü [LINK=ROUTE_PLANETARY_MAGLEV]Ìîíîðåëüñ[\LINK]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ROUTE_LUNAR_PATH</Tag>
+		<English>Lunar Path</English>
+		<Russian>Лунная дорога</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ROUTE_PLANETARY_MAGLEV</Tag>
+		<English>Planetary Maglev</English>
+		<Russian>Планетарный маглев</Russian>
 	</TEXT>
 </Civ4GameText>
