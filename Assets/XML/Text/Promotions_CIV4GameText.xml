@@ -19144,4 +19144,9 @@
 		<English>Zen</English>
 		<Russian>Äçýí</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DEF_WARN_TEXT</Tag>
+		<English>[COLOR_WARNING_TEXT]If the unit with this promotion cannot gain Defensive Bonuses, they will not gain inapplicable promotion benefits.[COLOR_REVERT]</English>
+		<Russian>[COLOR_WARNING_TEXT]Если отряд с этой квалификацией не имеет защитных бонусов, он не получает от них несовместимые преимущества.[COLOR_REVERT]</Russian>
+	</TEXT>
 </Civ4GameText>

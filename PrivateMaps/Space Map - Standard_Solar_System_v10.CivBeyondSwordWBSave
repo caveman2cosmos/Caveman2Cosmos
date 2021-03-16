@@ -12,6 +12,7 @@ BeginMap
 	world size=WORLDSIZE_STANDARD
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
+	Randomize Resources=1
 EndMap
 BeginPlayer
 	LeaderType=LEADER_HIAWATHA

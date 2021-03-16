@@ -2826,7 +2826,7 @@ int cvInternalGlobals::getInfoTypeForString(const char* szType, bool hideAssert)
 		szError.Format("info type '%s' not found, Current XML file is: %s", szType, GC.getCurrentXMLFile().GetCString());
 		FAssertMsg(stricmp(szType, "NONE") == 0 || strcmp(szType, "") == 0, szError.c_str());
 
-		gDLL->logMsg("Xml_MissingTypes.log", szError);
+		logging::logMsg("Xml_MissingTypes.log", szError.c_str());
 	}
 	return -1;
 }
@@ -2875,9 +2875,7 @@ void cvInternalGlobals::logInfoTypeMap(const char* tagMsg)
 {
 	if (GC.isXMLLogging())
 	{
-		CvString szDebugBuffer;
-		szDebugBuffer.Format(" === Info Type Map Dump BEGIN: %s ===", tagMsg);
-		gDLL->logMsg("cvInternalGlobals_logInfoTypeMap.log", szDebugBuffer.c_str());
+		logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " === Info Type Map Dump BEGIN: %s ===", tagMsg);
 
 		int iCnt = 0;
 		std::vector<std::string> vInfoMapKeys;
@@ -2891,16 +2889,12 @@ void cvInternalGlobals::logInfoTypeMap(const char* tagMsg)
 
 		foreach_(const std::string& sKey, vInfoMapKeys)
 		{
-			const int iVal = m_infosMap[sKey.c_str()];
-			szDebugBuffer.Format(" * %i --  %s: %i", iCnt, sKey.c_str(), iVal);
-			gDLL->logMsg("cvInternalGlobals_logInfoTypeMap.log", szDebugBuffer.c_str());
+			logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " * %i --  %s: %i", iCnt, sKey.c_str(), m_infosMap[sKey.c_str()]);
 			iCnt++;
 		}
 
-		szDebugBuffer.Format("Entries in total: %i", iCnt);
-		gDLL->logMsg("cvInternalGlobals_logInfoTypeMap.log", szDebugBuffer.c_str());
-		szDebugBuffer.Format(" === Info Type Map Dump END: %s ===", tagMsg);
-		gDLL->logMsg("cvInternalGlobals_logInfoTypeMap.log", szDebugBuffer.c_str());
+		logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", "Entries in total: %i", iCnt);
+		logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " === Info Type Map Dump END: %s ===", tagMsg);
 	}
 }
 /************************************************************************************************/
@@ -3185,15 +3179,13 @@ bool cvInternalGlobals::isXMLLogging() const
 // calculate asset checksum
 uint32_t cvInternalGlobals::getAssetCheckSum() const
 {
-	CvString szLog;
 	uint32_t iSum = 0;
 	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
 	{
 		foreach_(const CvInfoBase* info, *infoVector)
 		{
 			info->getCheckSum(iSum);
-			szLog.Format("%s : %u", info->getType(), iSum);
-			gDLL->logMsg("Checksum.log", szLog.c_str());
+			logging::logMsg("Checksum.log", "%s : %u", info->getType(), iSum);
 		}
 	}
 	return iSum;

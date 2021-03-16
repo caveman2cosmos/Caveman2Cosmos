@@ -148,7 +148,6 @@
 			</MapCategoryTypes>
 			<iCost>800</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAsset>2</iAsset>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>

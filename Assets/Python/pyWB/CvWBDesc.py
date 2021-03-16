@@ -1933,7 +1933,7 @@ Randomize Resources=0\nEndMap\n"
 				if pWBPlayer.iStartingX > -1 and pWBPlayer.iStartingY > -1:
 					pPlayer.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
 
-		GAME.assignScenarioStartingPlots()
+		GAME.assignStartingPlots(True, False)
 
 		self.clearCache()
 		return 0 # ok
@@ -2016,7 +2016,7 @@ Randomize Resources=0\nEndMap\n"
 			if not pWBPlayer.bRandomStartLocation:
 				player.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
 
-		GAME.assignScenarioStartingPlots()
+		GAME.assignStartingPlots(True, False)
 
 		# Apply city data
 		for item in self.plotDesc:

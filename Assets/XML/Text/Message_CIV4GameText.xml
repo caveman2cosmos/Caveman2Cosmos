@@ -178,7 +178,7 @@
 		<French>Les Astres ont favorisé l'unité produite à %s1!</French>
 		<Spanish>¡Parece que los astros han favorecido a una unidad entrenada en %s1!</Spanish>
 		<Polish>Gwiazdy sprzyjają zwerbowanej jednostce w %s1!</Polish>
-		<Russian> Только что обученный отряд в городе %s1 родился под счастливой звездой!</Russian>
+		<Russian>Только что обученный отряд в городе %s1 родился под счастливой звездой!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_STARSIGN_CREATE</Tag>

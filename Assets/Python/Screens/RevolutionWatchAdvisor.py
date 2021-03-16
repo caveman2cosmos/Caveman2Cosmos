@@ -1149,7 +1149,7 @@ class RevolutionWatchAdvisor:
 		# add National Wonders
 		for i in range(gc.getNumBuildingInfos()):
 			info = gc.getBuildingInfo(i)
-			if info.getMaxGlobalInstances() == -1 and info.getMaxPlayerInstances() == 1 and city.getNumBuilding(i) > 0 and not info.isCapital():
+			if info.getMaxGlobalInstances() == -1 and info.getMaxPlayerInstances() == 1 and city.getNumRealBuilding(i) > 0 and not info.isCapital():
 				# Use bullets as markers for National Wonders
 				szReturn += self.bulletIcon
 
@@ -1232,7 +1232,7 @@ class RevolutionWatchAdvisor:
 		nTotalTradeProfit = 0
 
 		# For each trade route possible
-		for nTradeRoute in range (gc.getDefineINT("MAX_TRADE_ROUTES")):
+		for nTradeRoute in xrange(city.getMaxTradeRoutes()):
 			# Get the next trade city
 			pTradeCity = city.getTradeCity(nTradeRoute)
 			# Not quite sure what this does but it's in the MainInterface
@@ -1254,7 +1254,7 @@ class RevolutionWatchAdvisor:
 		nRoutes = 0
 
 		# For each trade route possible
-		for nTradeRoute in range (gc.getDefineINT("MAX_TRADE_ROUTES")):
+		for nTradeRoute in xrange(city.getMaxTradeRoutes()):
 			# Get the next trade city
 			pTradeCity = city.getTradeCity(nTradeRoute)
 			# Not quite sure what this does but it's in the MainInterface
@@ -1519,7 +1519,7 @@ class RevolutionWatchAdvisor:
 				if city.getProductionName() == self.HEADER_DICT[szKey]: # In production
 					szReturn = "(" + szReturn + ")"
 
-			elif city.getNumBuilding(self.BUILDING_DICT[szKey]) > 0: # Obsolete buildings
+			elif city.getNumBuilding(self.BUILDING_DICT[szKey]) > 0: # Disabled buildings
 				if self.BUILDING_ICONS_DICT[szKey].find(self.cultureIcon):
 					szReturn = self.stripStr(szReturn, self.cultureIcon)
 					szReturn += self.cultureIcon
@@ -1674,20 +1674,10 @@ class RevolutionWatchAdvisor:
 
 
 	def canAdviseToConstruct(self, city, i):
-
-		info = gc.getBuildingInfo(i)
 		if not city.canConstruct(i, True, False, False):
 			return False
+		info = gc.getBuildingInfo(i)
 		if info.isGovernmentCenter() or info.isCapital():
-			return False
-
-		team = gc.getTeam(gc.getGame().getActiveTeam())
-		if info.getObsoleteTech() != TechTypes.NO_TECH and team.isHasTech(info.getObsoleteTech()):
-			return False
-
-		sinfo = gc.getSpecialBuildingInfo(info.getSpecialBuildingType())
-
-		if sinfo and sinfo.getObsoleteTech() != TechTypes.NO_TECH and team.isHasTech(sinfo.getObsoleteTech()):
 			return False
 
 		return True
