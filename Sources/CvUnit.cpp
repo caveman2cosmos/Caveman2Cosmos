@@ -6660,36 +6660,21 @@ void CvUnit::move(CvPlot* pPlot, bool bShow, bool bFree)
 }
 
 // false if unit is killed
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 bool CvUnit::jumpToNearestValidPlot(bool bKill)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 {
-	CvCity* pNearestCity;
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
-	int iValue;
-	int iBestValue;
-	int iI;
-
 	FAssertMsg(!isAttacking(), "isAttacking did not return false as expected");
 	FAssertMsg(!isFighting(), "isFighting did not return false as expected");
 
 	//	If the jump is due to being in an incorrect doamin it implies there WILL be an area change, so the relevant nearest
 	//	city cannot possibly be in the same area, hence we need to search all
-	pNearestCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, plot()->isValidDomainForAction(*this));
+	CvCity* pNearestCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, plot()->isValidDomainForAction(*this));
 
-	iBestValue = MAX_INT;
-	pBestPlot = NULL;
+	int iBestValue = MAX_INT;
+	CvPlot* pBestPlot = NULL;
 
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		pLoopPlot = GC.getMap().plotByIndex(iI);
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
 		if (pLoopPlot->isValidDomainForLocation(*this))
 		{
@@ -6703,7 +6688,7 @@ bool CvUnit::jumpToNearestValidPlot(bool bKill)
 					{
 						if (pLoopPlot->isRevealed(getTeam(), false))
 						{
-							iValue = (plotDistance(getX(), getY(), pLoopPlot->getX(), pLoopPlot->getY()) * 2);
+							int iValue = (plotDistance(getX(), getY(), pLoopPlot->getX(), pLoopPlot->getY()) * 2);
 
 							if (pNearestCity != NULL)
 							{
@@ -6730,15 +6715,7 @@ bool CvUnit::jumpToNearestValidPlot(bool bKill)
 									iValue *= 3;
 								}
 							}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/20/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 							iValue *= std::max(1, ((pLoopPlot->getTotalTurnDamage(this)) / 2));
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 							if (iValue < iBestValue)
 							{
@@ -6758,31 +6735,15 @@ bool CvUnit::jumpToNearestValidPlot(bool bKill)
 		//GC.getGame().logOOSSpecial(17, getID(), pBestPlot->getX(), pBestPlot->getY());
 		setXY(pBestPlot->getX(), pBestPlot->getY());
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	else if (bKill)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	{
 		kill(false);
 		bValid = false;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/13/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	else
 	{
 		bValid = false;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	return bValid;
 }
@@ -23653,9 +23614,9 @@ bool CvUnit::applyUnitPromotions(const std::vector<CvUnit*>& units, int number, 
 		PromotionTypes foundPromo = GC.findPromotion(promotionPredicateFn);
 		if (foundPromo == NO_PROMOTION)
 			break;
-		for (std::vector<CvUnit*>::const_iterator itr = units.begin(); itr != units.end(); ++itr)
+		foreach_(CvUnit* unit, units)
 		{
-			(*itr)->setHasPromotion(foundPromo, true, PromotionApply::Free);
+			unit->setHasPromotion(foundPromo, true, PromotionApply::Free);
 		}
 		number--;
 	}
@@ -29264,27 +29225,7 @@ bool CvUnit::isRbombardable(int iMinStack) const
 
 int CvUnit::getRbombardSeigeCount(const CvPlot* pPlot) const
 {
-	CvUnit* nextUnit = NULL;
-	int seigeCount = 0;
-
-	if (pPlot == NULL)
-	{
-		return 0;
-	}
-
-	int unitCount = pPlot->getNumUnits();
-	for (int i = 0; i < unitCount; i++)
-	{
-		nextUnit = pPlot->getUnitByIndex(i);
-		if (nextUnit != NULL)
-		{
-			if (nextUnit->canRBombard())
-			{
-				seigeCount++;
-			}
-		}
-	}
-	return seigeCount;
+	return pPlot ? algo::count_if(pPlot->units(), CvUnit::fn::canRBombard()) : 0;
 }
 
 void CvUnit::doOpportunityFire()
@@ -38279,10 +38220,8 @@ void CvUnit::doSplit()
 			pUnit1->setLeaderUnitType(pUnit0->getLeaderUnitType());
 		}
 
-		for (std::vector<CvUnit*>::iterator itr = newUnits.begin(); itr != newUnits.end(); ++itr)
+		foreach_(CvUnit* unit, newUnits)
 		{
-			CvUnit* unit = *itr;
-
 			unit->setInhibitMerge(true);
 			//Set New Experience
 			unit->setExperience100(pUnit0->getExperience100());

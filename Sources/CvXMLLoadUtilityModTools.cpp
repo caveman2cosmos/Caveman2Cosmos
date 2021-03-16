@@ -312,9 +312,9 @@ bool CvXMLLoadUtilityModTools::isCommaFile(CvString *pszTextVal, const char* szD
 
 		szDebugBuffer.Format(" Total number of ',' in pszTextVal: %i", iCountComma);
 		gDLL->logMsg("CvXMLLoadUtilityModTools_isCommaFile.log", szDebugBuffer.c_str());
-		for (std::vector<CvString>::iterator it = asTagParts.begin(); it != asTagParts.end(); it++)
+		foreach_(const CvString& it, asTagParts)
 		{
-			szDebugBuffer.Format("  - Token %s", (*it).c_str());
+			szDebugBuffer.Format("  - Token %s", it.c_str());
 			gDLL->logMsg("CvXMLLoadUtilityModTools_isCommaFile.log", szDebugBuffer.c_str());
 		}
 #else
@@ -332,16 +332,16 @@ bool CvXMLLoadUtilityModTools::isCommaFile(CvString *pszTextVal, const char* szD
 
 #if (DEBUG_IS_MODULAR_ART == 1)
 		CvString szButtonsString;
-		for (std::vector<CvString>::iterator it = asTagParts.begin(); it != asTagParts.end(); it++)
+		foreach_(const CvString& it, asTagParts)
 		{
 			bool bDigitsOnly = true;
-			for (int i = 0; i < (*it).GetLength(); i++)
+			for (int i = 0; i < it.GetLength(); i++)
 			{
-				if (!isdigit((*it)[i]))
+				if (!isdigit(it[i]))
 					bDigitsOnly = false;
 			}
 			if (!bDigitsOnly)
-				szButtonsString += ((*it) + ",");
+				szButtonsString += (it + ",");
 		}
 		// Eliminate comma at end of string, if there is one
 		if (szButtonsString.GetLength() > 0 && szButtonsString[szButtonsString.GetLength()] == ',')

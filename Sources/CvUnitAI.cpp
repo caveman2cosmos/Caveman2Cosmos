@@ -30834,10 +30834,8 @@ namespace {
 		int maxScore = 0;
 
 		// loop through property types and get the difference between the target the AI wants the city to be at vs where it currently is
-		for (std::vector<PropertyAmount>::const_iterator propItr = propertyScores.begin(); propItr != propertyScores.end(); ++propItr)
+		foreach_(const PropertyAmount& propertyAmount, propertyScores)
 		{
-			const PropertyAmount& propertyAmount = *propItr;
-
 			//int iCurrentValue = pLoopCity->getPropertiesConst()->getValueByProperty(eProperty);
 			int iValue = city->getPropertyNeed(propertyAmount.prop);
 			if (iValue < 0 && !unit->atPlot(city->plot()))

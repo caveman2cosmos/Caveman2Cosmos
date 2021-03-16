@@ -475,9 +475,9 @@ void cvInternalGlobals::uninit()
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	for (std::vector<CvMap*>::iterator it = m_maps.begin(); it != m_maps.end(); ++it)
+	foreach_(const CvMap* map, m_maps)
 	{
-		SAFE_DELETE(*it);
+		SAFE_DELETE(map);
 	}
 	m_maps.clear();
 /*******************************/
@@ -2887,9 +2887,8 @@ void cvInternalGlobals::logInfoTypeMap(const char* tagMsg)
 
 		std::sort(vInfoMapKeys.begin(), vInfoMapKeys.end());
 
-		for (std::vector<std::string>::const_iterator it = vInfoMapKeys.begin(); it != vInfoMapKeys.end(); ++it)
+		foreach_(const std::string& sKey, vInfoMapKeys)
 		{
-			std::string sKey = *it;
 			logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " * %i --  %s: %i", iCnt, sKey.c_str(), m_infosMap[sKey.c_str()]);
 			iCnt++;
 		}
@@ -3084,7 +3083,7 @@ int cvInternalGlobals::getNumMissionInfos() const
 	return (int) m_paMissionInfo.size();
 }
 
-inline CvMap& cvInternalGlobals::getMap() const
+CvMap& cvInternalGlobals::getMap() const
 {
 	return *m_maps[GC.getGame().getCurrentMap()];
 }

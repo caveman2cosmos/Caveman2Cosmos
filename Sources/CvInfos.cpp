@@ -11237,9 +11237,9 @@ CvDiplomacyInfo::~CvDiplomacyInfo()
 // note - Response member vars allocated by CvXmlLoadUtility
 void CvDiplomacyInfo::uninit()
 {
-	for (std::vector<CvDiplomacyResponse*>::iterator it = m_pResponses.begin(); it != m_pResponses.end(); ++it)
+	foreach_(const CvDiplomacyResponse* it, m_pResponses)
 	{
-		SAFE_DELETE(*it);
+		SAFE_DELETE(it);
 	}
 	m_pResponses.clear();
 }
@@ -33869,11 +33869,11 @@ int CvEventInfo::getNumWorldNews() const
 
 int CvEventInfo::getBuildingYieldChange(int iBuilding, int iYield) const
 {
-	for (std::vector<BuildingYieldChange>::const_iterator it = m_aBuildingYieldChanges.begin(); it != m_aBuildingYieldChanges.end(); ++it)
+	foreach_(const BuildingYieldChange& it, m_aBuildingYieldChanges)
 	{
-		if ((*it).eBuilding == (BuildingTypes)iBuilding && (*it).eYield == (YieldTypes)iYield)
+		if (it.eBuilding == (BuildingTypes)iBuilding && it.eYield == (YieldTypes)iYield)
 		{
-			return (*it).iChange;
+			return it.iChange;
 		}
 	}
 
@@ -33887,11 +33887,11 @@ int CvEventInfo::getNumBuildingYieldChanges() const
 
 int CvEventInfo::getBuildingCommerceChange(int iBuilding, int iCommerce) const
 {
-	for (std::vector<BuildingCommerceChange>::const_iterator it = m_aBuildingCommerceChanges.begin(); it != m_aBuildingCommerceChanges.end(); ++it)
+	foreach_(const BuildingCommerceChange& it, m_aBuildingCommerceChanges)
 	{
-		if ((*it).eBuilding == (BuildingTypes)iBuilding && (*it).eCommerce == (CommerceTypes)iCommerce)
+		if (it.eBuilding == (BuildingTypes)iBuilding && it.eCommerce == (CommerceTypes)iCommerce)
 		{
-			return (*it).iChange;
+			return it.iChange;
 		}
 	}
 
@@ -33905,11 +33905,11 @@ int CvEventInfo::getNumBuildingCommerceChanges() const
 
 int CvEventInfo::getBuildingCommerceModifier(int iBuilding, int iCommerce) const
 {
-	for (std::vector<BuildingCommerceChange>::const_iterator it = m_aBuildingCommerceModifiers.begin(); it != m_aBuildingCommerceModifiers.end(); ++it)
+	foreach_(const BuildingCommerceChange& it, m_aBuildingCommerceModifiers)
 	{
-		if ((*it).eBuilding == (BuildingTypes)iBuilding && (*it).eCommerce == (CommerceTypes)iCommerce)
+		if (it.eBuilding == (BuildingTypes)iBuilding && it.eCommerce == (CommerceTypes)iCommerce)
 		{
-			return (*it).iChange;
+			return it.iChange;
 		}
 	}
 
@@ -34095,25 +34095,25 @@ void CvEventInfo::getCheckSum(unsigned int& iSum) const
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_piUnitCombatPromotions);
 	CheckSumI(iSum, GC.getNumUnitInfos(), m_piUnitPromotions);
 
-	for (std::vector<BuildingYieldChange>::const_iterator it = m_aBuildingYieldChanges.begin(); it != m_aBuildingYieldChanges.end(); ++it)
+	foreach_(const BuildingYieldChange& it, m_aBuildingYieldChanges)
 	{
-		CheckSum(iSum, (*it).eBuilding);
-		CheckSum(iSum, (*it).eYield);
-		CheckSum(iSum, (*it).iChange);
+		CheckSum(iSum, it.eBuilding);
+		CheckSum(iSum, it.eYield);
+		CheckSum(iSum, it.iChange);
 	}
 
-	for (std::vector<BuildingCommerceChange>::const_iterator it = m_aBuildingCommerceChanges.begin(); it != m_aBuildingCommerceChanges.end(); ++it)
+	foreach_(const BuildingCommerceChange& it, m_aBuildingCommerceChanges)
 	{
-		CheckSum(iSum, (*it).eBuilding);
-		CheckSum(iSum, (*it).eCommerce);
-		CheckSum(iSum, (*it).iChange);
+		CheckSum(iSum, it.eBuilding);
+		CheckSum(iSum, it.eCommerce);
+		CheckSum(iSum, it.iChange);
 	}
 
-	for (std::vector<BuildingCommerceChange>::const_iterator it = m_aBuildingCommerceModifiers.begin(); it != m_aBuildingCommerceModifiers.end(); ++it)
+	foreach_(const BuildingCommerceChange& it, m_aBuildingCommerceModifiers)
 	{
-		CheckSum(iSum, (*it).eBuilding);
-		CheckSum(iSum, (*it).eCommerce);
-		CheckSum(iSum, (*it).iChange);
+		CheckSum(iSum, it.eBuilding);
+		CheckSum(iSum, it.eCommerce);
+		CheckSum(iSum, it.iChange);
 	}
 
 	CheckSumC(iSum, m_aBuildingHappyChanges);
@@ -34749,9 +34749,9 @@ void CvEventInfo::copyNonDefaults(const CvEventInfo* pClassInfo)
 	bool bNoDuplicate = true;
 	for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); iBuilding++)
 	{
-		for (std::vector<BuildingYieldChange>::const_iterator it = m_aBuildingYieldChanges.begin(); it != m_aBuildingYieldChanges.end(); ++it)
+		foreach_(const BuildingYieldChange& it, m_aBuildingYieldChanges)
 		{
-			if ((*it).eBuilding == (BuildingTypes)iBuilding)
+			if (it.eBuilding == (BuildingTypes)iBuilding)
 			{
 				//obviously some modder already set this Building to some value
 				//we don't want to overwrite his settings with the older(assuming he added
@@ -34779,9 +34779,9 @@ void CvEventInfo::copyNonDefaults(const CvEventInfo* pClassInfo)
 	bNoDuplicate = true;
 	for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); iBuilding++)
 	{
-		for (std::vector<BuildingCommerceChange>::const_iterator it = m_aBuildingCommerceChanges.begin(); it != m_aBuildingCommerceChanges.end(); ++it)
+		foreach_(const BuildingCommerceChange& it, m_aBuildingCommerceChanges)
 		{
-			if ((*it).eBuilding == (BuildingTypes)iBuilding)
+			if (it.eBuilding == (BuildingTypes)iBuilding)
 			{
 				//obviously some modder already set this Building to some value
 				//we don't want to overwrite his settings with the older(assuming he added
@@ -34809,9 +34809,9 @@ void CvEventInfo::copyNonDefaults(const CvEventInfo* pClassInfo)
 	bNoDuplicate = true;
 	for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); iBuilding++)
 	{
-		for (std::vector<BuildingCommerceChange>::const_iterator it = m_aBuildingCommerceModifiers.begin(); it != m_aBuildingCommerceModifiers.end(); ++it)
+		foreach_(const BuildingCommerceChange& it, m_aBuildingCommerceModifiers)
 		{
-			if ((*it).eBuilding == (BuildingTypes)iBuilding)
+			if (it.eBuilding == (BuildingTypes)iBuilding)
 			{
 				//obviously some modder already set this Building to some value
 				//we don't want to overwrite his settings with the older(assuming he added
@@ -35369,11 +35369,11 @@ const TCHAR* CvUnitArtStyleTypeInfo::getEarlyArtDefineTag(int /*Mesh Index*/ i, 
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
 
-	for (ArtDefineArray::const_iterator it = m_azEarlyArtDefineTags.begin(); it != m_azEarlyArtDefineTags.end(); ++it)
+	foreach_(const ArtDefneTag& it, m_azEarlyArtDefineTags)
 	{
-		if ((*it).iMeshIndex == i && (*it).iUnitType == j)
+		if (it.iMeshIndex == i && it.iUnitType == j)
 		{
-			return (*it).szTag;
+			return it.szTag;
 		}
 	}
 
@@ -35385,11 +35385,11 @@ void CvUnitArtStyleTypeInfo::setEarlyArtDefineTag(int /*Mesh Index*/ i, int /*Un
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
 
-	for (ArtDefineArray::iterator it = m_azEarlyArtDefineTags.begin(); it != m_azEarlyArtDefineTags.end(); ++it)
+	foreach_(ArtDefneTag& it, m_azEarlyArtDefineTags)
 	{
-		if ((*it).iMeshIndex == i && (*it).iUnitType == j)
+		if (it.iMeshIndex == i && it.iUnitType == j)
 		{
-			(*it).szTag = szVal;
+			it.szTag = szVal;
 			return;
 		}
 	}
@@ -35406,11 +35406,11 @@ const TCHAR* CvUnitArtStyleTypeInfo::getLateArtDefineTag(int /*Mesh Index*/ i, i
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
 
-	for (ArtDefineArray::const_iterator it = m_azLateArtDefineTags.begin(); it != m_azLateArtDefineTags.end(); ++it)
+	foreach_(const ArtDefneTag& it, m_azLateArtDefineTags)
 	{
-		if ((*it).iMeshIndex == i && (*it).iUnitType == j)
+		if (it.iMeshIndex == i && it.iUnitType == j)
 		{
-			return (*it).szTag;
+			return it.szTag;
 		}
 	}
 
@@ -35422,11 +35422,11 @@ void CvUnitArtStyleTypeInfo::setLateArtDefineTag(int /*Mesh Index*/ i, int /*Uni
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
 
-	for (ArtDefineArray::iterator it = m_azLateArtDefineTags.begin(); it != m_azLateArtDefineTags.end(); ++it)
+	foreach_(ArtDefneTag& it, m_azLateArtDefineTags)
 	{
-		if ((*it).iMeshIndex == i && (*it).iUnitType == j)
+		if (it.iMeshIndex == i && it.iUnitType == j)
 		{
-			(*it).szTag = szVal;
+			it.szTag = szVal;
 			return;
 		}
 	}
@@ -35443,11 +35443,11 @@ const TCHAR* CvUnitArtStyleTypeInfo::getMiddleArtDefineTag(int /*Mesh Index*/ i,
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
 
-	for (ArtDefineArray::const_iterator it = m_azMiddleArtDefineTags.begin(); it != m_azMiddleArtDefineTags.end(); ++it)
+	foreach_(const ArtDefneTag& it, m_azMiddleArtDefineTags)
 	{
-		if ((*it).iMeshIndex == i && (*it).iUnitType == j)
+		if (it.iMeshIndex == i && it.iUnitType == j)
 		{
-			return (*it).szTag;
+			return it.szTag;
 		}
 	}
 
@@ -35459,11 +35459,11 @@ void CvUnitArtStyleTypeInfo::setMiddleArtDefineTag(int /*Mesh Index*/ i, int /*U
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
 
-	for (ArtDefineArray::iterator it = m_azMiddleArtDefineTags.begin(); it != m_azMiddleArtDefineTags.end(); ++it)
+	foreach_(ArtDefneTag& it, m_azMiddleArtDefineTags)
 	{
-		if ((*it).iMeshIndex == i && (*it).iUnitType == j)
+		if (it.iMeshIndex == i && it.iUnitType == j)
 		{
-			(*it).szTag = szVal;
+			it.szTag = szVal;
 			return;
 		}
 	}
@@ -35481,11 +35481,11 @@ const TCHAR* CvUnitArtStyleTypeInfo::getClassicalArtDefineTag(int /*Mesh Index*/
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
 
-	for (ArtDefineArray::const_iterator it = m_azClassicalArtDefineTags.begin(); it != m_azClassicalArtDefineTags.end(); ++it)
+	foreach_(const ArtDefneTag& it, m_azClassicalArtDefineTags)
 	{
-		if ((*it).iMeshIndex == i && (*it).iUnitType == j)
+		if (it.iMeshIndex == i && it.iUnitType == j)
 		{
-			return (*it).szTag;
+			return it.szTag;
 		}
 	}
 
@@ -35497,11 +35497,11 @@ void CvUnitArtStyleTypeInfo::setClassicalArtDefineTag(int /*Mesh Index*/ i, int 
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
 
-	for (ArtDefineArray::iterator it = m_azClassicalArtDefineTags.begin(); it != m_azClassicalArtDefineTags.end(); ++it)
+	foreach_(ArtDefneTag& it, m_azClassicalArtDefineTags)
 	{
-		if ((*it).iMeshIndex == i && (*it).iUnitType == j)
+		if (it.iMeshIndex == i && it.iUnitType == j)
 		{
-			(*it).szTag = szVal;
+			it.szTag = szVal;
 			return;
 		}
 	}
@@ -35518,11 +35518,11 @@ const TCHAR* CvUnitArtStyleTypeInfo::getRennArtDefineTag(int /*Mesh Index*/ i, i
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
 
-	for (ArtDefineArray::const_iterator it = m_azRennArtDefineTags.begin(); it != m_azRennArtDefineTags.end(); ++it)
+	foreach_(const ArtDefneTag& it, m_azRennArtDefineTags)
 	{
-		if ((*it).iMeshIndex == i && (*it).iUnitType == j)
+		if (it.iMeshIndex == i && it.iUnitType == j)
 		{
-			return (*it).szTag;
+			return it.szTag;
 		}
 	}
 
@@ -35534,11 +35534,11 @@ void CvUnitArtStyleTypeInfo::setRennArtDefineTag(int /*Mesh Index*/ i, int /*Uni
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
 
-	for (ArtDefineArray::iterator it = m_azRennArtDefineTags.begin(); it != m_azRennArtDefineTags.end(); ++it)
+	foreach_(ArtDefneTag& it, m_azRennArtDefineTags)
 	{
-		if ((*it).iMeshIndex == i && (*it).iUnitType == j)
+		if (it.iMeshIndex == i && it.iUnitType == j)
 		{
-			(*it).szTag = szVal;
+			it.szTag = szVal;
 			return;
 		}
 	}
@@ -35555,11 +35555,11 @@ const TCHAR* CvUnitArtStyleTypeInfo::getIndustrialArtDefineTag(int /*Mesh Index*
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
 
-	for (ArtDefineArray::const_iterator it = m_azIndustrialArtDefineTags.begin(); it != m_azIndustrialArtDefineTags.end(); ++it)
+	foreach_(const ArtDefneTag& it, m_azIndustrialArtDefineTags)
 	{
-		if ((*it).iMeshIndex == i && (*it).iUnitType == j)
+		if (it.iMeshIndex == i && it.iUnitType == j)
 		{
-			return (*it).szTag;
+			return it.szTag;
 		}
 	}
 
@@ -35571,11 +35571,11 @@ void CvUnitArtStyleTypeInfo::setIndustrialArtDefineTag(int /*Mesh Index*/ i, int
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
 
-	for (ArtDefineArray::iterator it = m_azIndustrialArtDefineTags.begin(); it != m_azIndustrialArtDefineTags.end(); ++it)
+	foreach_(ArtDefneTag& it, m_azIndustrialArtDefineTags)
 	{
-		if ((*it).iMeshIndex == i && (*it).iUnitType == j)
+		if (it.iMeshIndex == i && it.iUnitType == j)
 		{
-			(*it).szTag = szVal;
+			it.szTag = szVal;
 			return;
 		}
 	}
@@ -35592,11 +35592,11 @@ const TCHAR* CvUnitArtStyleTypeInfo::getFutureArtDefineTag(int /*Mesh Index*/ i,
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
 
-	for (ArtDefineArray::const_iterator it = m_azFutureArtDefineTags.begin(); it != m_azFutureArtDefineTags.end(); ++it)
+	foreach_(const ArtDefneTag& it, m_azFutureArtDefineTags)
 	{
-		if ((*it).iMeshIndex == i && (*it).iUnitType == j)
+		if (it.iMeshIndex == i && it.iUnitType == j)
 		{
-			return (*it).szTag;
+			return it.szTag;
 		}
 	}
 
@@ -35608,11 +35608,11 @@ void CvUnitArtStyleTypeInfo::setFutureArtDefineTag(int /*Mesh Index*/ i, int /*U
 	FASSERT_BOUNDS(0, GC.getUnitInfo((UnitTypes)j).getGroupDefinitions(), i)
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), j)
 
-	for (ArtDefineArray::iterator it = m_azFutureArtDefineTags.begin(); it != m_azFutureArtDefineTags.end(); ++it)
+	foreach_(ArtDefneTag& it, m_azFutureArtDefineTags)
 	{
-		if ((*it).iMeshIndex == i && (*it).iUnitType == j)
+		if (it.iMeshIndex == i && it.iUnitType == j)
 		{
-			(*it).szTag = szVal;
+			it.szTag = szVal;
 			return;
 		}
 	}

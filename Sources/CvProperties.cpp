@@ -105,21 +105,21 @@ int CvProperties::getValueByProperty(PropertyTypes eProp) const
 
 int CvProperties::getChangeByProperty(PropertyTypes eProp) const
 {
-	for (prop_value_const_iterator it = m_aiPropertyChange.begin();it!=m_aiPropertyChange.end(); ++it)
+	foreach_(const PropertyValue& it, m_aiPropertyChange)
 	{
-		if (it->prop == eProp)
-			return it->value;
+		if (it.prop == eProp)
+			return it.value;
 	}
 	return 0;
 }
 
 void CvProperties::setChangeByProperty(PropertyTypes eProp, int iVal)
 {
-	for (std::vector<PropertyValue >::iterator it = m_aiPropertyChange.begin(); it != m_aiPropertyChange.end(); ++it)
+	foreach_(PropertyValue& it, m_aiPropertyChange)
 	{
-		if (it->prop == eProp)
+		if (it.prop == eProp)
 		{
-			it->value = iVal;
+			it.value = iVal;
 			return;
 		}
 	}
@@ -128,11 +128,11 @@ void CvProperties::setChangeByProperty(PropertyTypes eProp, int iVal)
 
 void CvProperties::changeChangeByProperty(PropertyTypes eProp, int iChange)
 {
-	for (std::vector<PropertyValue >::iterator it = m_aiPropertyChange.begin();it!=m_aiPropertyChange.end(); ++it)
+	foreach_(PropertyValue& it, m_aiPropertyChange)
 	{
-		if (it->prop == eProp)
+		if (it.prop == eProp)
 		{
-			it->value += iChange;
+			it.value += iChange;
 			return;
 		}
 	}
