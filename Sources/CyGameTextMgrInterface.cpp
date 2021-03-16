@@ -10,14 +10,10 @@ void CyGameTextMgrInterface()
 	OutputDebugString("Python Extension Module - CyTextMgr\n");
 
 	python::class_<CyGameTextMgr>("CyGameTextMgr")
-		.def("isNone", &CyGameTextMgr::isNone, "bool () - Checks to see if pointer points to a real object")
-
 		.def("Reset", &CyGameTextMgr::Reset, "void ()")
 		.def("getTimeStr", &CyGameTextMgr::getTimeStr, "wstring (int iGameTurn, bool bSave)")
 		.def("getDateStr", &CyGameTextMgr::getDateStr, "wstring (int iGameTurn, bool bSave, int /*CalendarTypes*/ eCalendar, int iStartYear, int /*GameSpeedTypes*/ eSpeed)")
 		.def("getInterfaceTimeStr", &CyGameTextMgr::getInterfaceTimeStr, "wstring (int /*PlayerTypes*/ iPlayer)")
-		.def("getGoldStr", &CyGameTextMgr::getGoldStr, "wstring (int /*PlayerTypes*/ iPlayer)")
-		.def("getResearchStr", &CyGameTextMgr::getResearchStr, "wstring (int /*PlayerTypes*/ iPlayer)")
 		.def("getOOSSeeds", &CyGameTextMgr::getOOSSeeds, "wstring (int /*PlayerTypes*/ iPlayer)")
 		.def("getNetStats", &CyGameTextMgr::getNetStats, "wstring (int /*PlayerTypes*/ iPlayer)")
 		.def("getTechHelp", &CyGameTextMgr::getTechHelp, "wstring (int iTech, bool bCivilopediaText, bool bPlayerContext, bool bStrategyText, bool bTreeInfo, int iFromTech)")
