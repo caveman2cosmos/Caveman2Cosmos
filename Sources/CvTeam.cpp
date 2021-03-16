@@ -6513,7 +6513,7 @@ int CvTeam::countNumHumanGameTurnActive() const
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
+		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 
 		if (kLoopPlayer.isHuman() && kLoopPlayer.getTeam() == getID())
 		{

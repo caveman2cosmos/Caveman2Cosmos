@@ -8,6 +8,8 @@ static CRITICAL_SECTION g_cPythonSection;
 static CRITICAL_SECTION cSampleSection;
 #endif
 
+std::string modDir;
+
 // BUG - EXE/DLL Paths - start
 HANDLE dllModule = NULL;
 
@@ -63,6 +65,7 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		GetModuleFileNameA((HMODULE)dllModule, pathBuffer, sizeof(pathBuffer));
 		std::string dllPath = pathBuffer;
 		std::string dllDir = dllPath.substr(0, dllPath.length() - strlen("CvGameCoreDLL.dll"));
+		modDir = dllDir;
 		std::string tokenFile = dllDir + "\\..\\git_directory.txt";
 		std::ifstream stream(tokenFile.c_str());
 		// If we loaded the directory token file we are in a dev environment and should run FPKLive, and check for DLL changes
@@ -70,6 +73,7 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		{
 			std::string git_dir;
 			std::getline(stream, git_dir);
+			modDir = git_dir;
 
 			if(!runProcess(git_dir + "\\Tools\\FPKLive.exe", git_dir + "\\Tools"))
 			{
@@ -87,6 +91,8 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 				}
 			}
 		}
+		logging::createLogsFolder();
+		logging::deleteLogs();
 		}
 		break;
 	case DLL_THREAD_ATTACH:
