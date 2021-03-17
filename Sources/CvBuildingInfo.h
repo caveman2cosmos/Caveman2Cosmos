@@ -525,9 +525,9 @@ public:
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	bool isNewCityFree(const CvGameObject* pObject) const;
+	bool isNewCityFree(CvGameObject* pObject);
 
-	const BoolExpr* getConstructCondition() const;
+	BoolExpr* getConstructCondition() const;
 
 	int getVictoryThreshold(int i) const;
 
