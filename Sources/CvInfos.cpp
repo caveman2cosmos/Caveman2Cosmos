@@ -163,38 +163,16 @@ const wchar_t* CvInfoBase::getStrategy() const
 
 //
 // read from XML
-// TYPE, DESC, BUTTON
 //
 bool CvInfoBase::read(CvXMLLoadUtility* pXML)
 {
-	CvString szTextVal;
-
-	// GRAPHICAL ONLY
 	pXML->GetOptionalChildXmlValByName(&m_bGraphicalOnly, L"bGraphicalOnly");
-
-	// TYPE
 	pXML->GetOptionalChildXmlValByName(m_szType, L"Type");
-
-	// DESCRIPTION
 	pXML->GetOptionalChildXmlValByName(m_szTextKey, L"Description");
-
-	// CIVILOPEDIA
 	pXML->GetOptionalChildXmlValByName(m_szCivilopediaKey, L"Civilopedia");
-
-	// HELP
 	pXML->GetOptionalChildXmlValByName(m_szHelpKey, L"Help");
-
-	// STRATEGY
 	pXML->GetOptionalChildXmlValByName(m_szStrategyKey, L"Strategy");
-
-	// BUTTON
 	pXML->GetOptionalChildXmlValByName(m_szButton, L"Button");
-
-
-	// XML_MODULAR_ART_LOADING - 10/26/07 - MRGENIE
-	CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-	p_szDirName->setLocationName( &m_szButton, (GC.getModDir()).c_str());
-	SAFE_DELETE(p_szDirName);
 
 	return true;
 }
@@ -909,25 +887,10 @@ bool CvSpecialistInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"Texture");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 10/26/07							MRGENIE		  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-	p_szDirName->setLocationName( &szTextVal, (GC.getModDir()).c_str());
-	SAFE_DELETE(p_szDirName);
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
-	m_szTexture = szTextVal;
-
+	pXML->GetOptionalChildXmlValByName(m_szTexture, L"Texture");
 	pXML->GetOptionalChildXmlValByName(&m_bVisible, L"bVisible");
-
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"GreatPeopleUnitType");
 	GC.addDelayedResolution((int*)&m_iGreatPeopleUnitType, szTextVal);
-
 	pXML->GetOptionalChildXmlValByName(&m_iGreatPeopleRateChange, L"iGreatPeopleRateChange");
 
 	if (pXML->TryMoveToXmlFirstChild(L"Yields"))
@@ -11933,35 +11896,10 @@ bool CvRouteModelInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 
-	pXML->GetChildXmlValByName(szTextVal, L"ModelFile");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 11/02/07								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-	p_szDirName->setLocationName( &szTextVal, (GC.getModDir()).c_str());
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
-	m_szModelFile = szTextVal;
-	pXML->GetChildXmlValByName(szTextVal, L"LateModelFile");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 11/02/07								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	p_szDirName->setLocationName( &szTextVal, (GC.getModDir()).c_str());
-	SAFE_DELETE(p_szDirName);
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
-	m_szLateModelFile = szTextVal;
-	pXML->GetChildXmlValByName(szTextVal, L"ModelFileKey");
-	m_szModelFileKey = szTextVal;
-
+	pXML->GetChildXmlValByName(m_szModelFile, L"ModelFile");
+	pXML->GetChildXmlValByName(m_szLateModelFile, L"LateModelFile");
+	pXML->GetChildXmlValByName(m_szModelFileKey, L"ModelFileKey");
 	pXML->GetChildXmlValByName(&m_bAnimated, L"Animated");
-
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"RouteType");
 	m_eRouteType = (RouteTypes)(pXML->GetInfoClass(szTextVal));
 	pXML->GetOptionalChildXmlValByName(m_szConnectString, L"Connections");
@@ -21943,44 +21881,9 @@ bool CvReligionInfo::read(CvXMLLoadUtility* pXML)
 	else
 		SAFE_DELETE_ARRAY(m_paiStateReligionCommerce);
 
-	pXML->GetChildXmlValByName(szTextVal, L"TechButton");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 01/16/08								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-	p_szDirName->setLocationName( &szTextVal, (GC.getModDir()).c_str());
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
-	m_szTechButton = szTextVal;
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"GenericTechButton");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 01/16/08								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	p_szDirName->setLocationName( &szTextVal, (GC.getModDir()).c_str());
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
-	m_szGenericTechButton = szTextVal;
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"MovieFile");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 01/16/08								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	p_szDirName->setLocationName( &szTextVal, (GC.getModDir()).c_str());
-	SAFE_DELETE(p_szDirName);
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
-	m_szMovieFile = szTextVal;
-
+	pXML->GetChildXmlValByName(m_szTechButton, L"TechButton");
+	pXML->GetOptionalChildXmlValByName(m_szGenericTechButton, L"GenericTechButton");
+	pXML->GetOptionalChildXmlValByName(m_szMovieFile, L"MovieFile");
 	pXML->GetOptionalChildXmlValByName(m_szMovieSound, L"MovieSound");
 	pXML->GetOptionalChildXmlValByName(m_szSound, L"Sound");
 
@@ -29006,17 +28909,6 @@ bool CvAssetInfoBase::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Path");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 10/26/07							MRGENIE		  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	CvXMLLoadUtilityModTools* p_aszDirName = new CvXMLLoadUtilityModTools;
-	p_aszDirName->setLocationName( &szTextVal, GC.getModDir().c_str());
-	SAFE_DELETE(p_aszDirName);
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
 	setPath(szTextVal);
 
 	return true;
@@ -29055,29 +28947,9 @@ bool CvArtInfoAsset::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"NIF"); // TO DO : maybe we should do something different if there is no NIF tag?
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 10/26/07							MRGENIE		  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-	p_szDirName->setLocationName( &szTextVal, (GC.getModDir()).c_str());
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
 	setNIF(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"KFM");// TO DO : maybe we should do something different if there is no KFM tag?
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 10/26/07							MRGENIE		  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	p_szDirName->setLocationName( &szTextVal, (GC.getModDir()).c_str());
-	SAFE_DELETE(p_szDirName);
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
 	setKFM(szTextVal);
 
 
@@ -29119,19 +28991,6 @@ bool CvArtInfoBonus::read(CvXMLLoadUtility* pXML)
 
 	CvString szTextVal;
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"SHADERNIF");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 10/26/07							MRGENIE		  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-	p_szDirName->setLocationName( &szTextVal, (GC.getModDir()).c_str());
-	SAFE_DELETE(p_szDirName);
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
-
-	OutputDebugString("ArtInfoBonus Nif Reading");
 	setShaderNIF(szTextVal);
 
 	pXML->GetChildXmlValByName(&m_iFontButtonIndex, L"FontButtonIndex");
@@ -29347,40 +29206,12 @@ bool CvArtInfoUnit::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_fBankRate,	   L"fBankRate");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"SHADERNIF");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 10/26/07							MRGENIE		  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-	p_szDirName->setLocationName( &szTextVal, (GC.getModDir()).c_str());
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
 	setShaderNIF(szTextVal);
 
 	if ( pXML->TryMoveToXmlFirstChild(L"ShadowDef" ))
 	{
 		pXML->GetOptionalChildXmlValByName( m_szShadowAttach, L"ShadowAttachNode" );
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 10/26/07							MRGENIE		  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-		p_szDirName->setLocationName( &m_szShadowAttach, (GC.getModDir()).c_str());
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
 		pXML->GetOptionalChildXmlValByName(m_szShadowNIF, L"ShadowNIF");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 10/26/07							MRGENIE		  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-		p_szDirName->setLocationName( &m_szShadowNIF, (GC.getModDir()).c_str());
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
 		pXML->GetOptionalChildXmlValByName(&m_fShadowScale, L"fShadowScale");
 		pXML->MoveToXmlParent();
 	}
@@ -29393,15 +29224,6 @@ bool CvArtInfoUnit::read(CvXMLLoadUtility* pXML)
 	if (pXML->TryMoveToXmlFirstChild(L"TrailDefinition"))
 	{
 		pXML->GetChildXmlValByName(m_szTrailTexture, L"Texture" );
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 10/26/07							MRGENIE		  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-		p_szDirName->setLocationName( &m_szTrailTexture, (GC.getModDir()).c_str());
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
 		pXML->GetOptionalChildXmlValByName(&m_fTrailWidth,  L"fWidth", -1.0f);
 		pXML->GetOptionalChildXmlValByName(&m_fTrailLength, L"fLength" );
 		pXML->GetOptionalChildXmlValByName(&m_fTrailTaper,  L"fTaper" );
@@ -29418,7 +29240,7 @@ bool CvArtInfoUnit::read(CvXMLLoadUtility* pXML)
 		m_iRunEndSoundTag = GC.getFootstepAudioTypeByTag(szTextVal);
 		pXML->MoveToXmlParent();
 	}
-	SAFE_DELETE(p_szDirName);
+
 	return true;
 }
 
@@ -29573,16 +29395,10 @@ bool CvArtInfoLeaderhead::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"NoShaderNIF");
-
-	CvXMLLoadUtilityModTools aszDirName;
-	aszDirName.setLocationName( &szTextVal, (GC.getModDir()).c_str());
-
 	setNoShaderNIF(szTextVal);
 
 	if (pXML->GetOptionalChildXmlValByName(szTextVal, L"BackgroundKFM"))
 	{
-		// AIAndy: This used a deleted pointer, changed
-		aszDirName.setLocationName( &szTextVal, (GC.getModDir()).c_str());
 		setBackgroundKFM(szTextVal);
 	}
 	else
@@ -29644,17 +29460,6 @@ bool CvArtInfoImprovement::read(CvXMLLoadUtility* pXML)
 
 	CvString szTextVal;
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"SHADERNIF", "");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 10/26/07							MRGENIE		  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-	p_szDirName->setLocationName( &szTextVal, (GC.getModDir()).c_str());
-	SAFE_DELETE(p_szDirName);
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
 	setShaderNIF(szTextVal);
 
 	return true;
@@ -29753,18 +29558,9 @@ bool CvArtInfoTerrain::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->GetChildXmlValByName(szTextVal, L"Grid");
-
-	// AIAndy: No need to do heap allocation for this
-	CvXMLLoadUtilityModTools aszDirName;
-	aszDirName.setLocationName( &szTextVal, (GC.getModDir()).c_str());
-
 	setGridTexture(szTextVal);
 
 	pXML->GetChildXmlValByName(szTextVal, L"Detail");
-
-	// AIAndy: This used a deleted pointer. As the ModTools class does not have any data members or virtual methods, it will likely still work, but it might still cause trouble.
-	aszDirName.setLocationName( &szTextVal, (GC.getModDir()).c_str());
-
 	setDetailTexture(szTextVal);
 
 	pXML->GetChildXmlValByName(&m_iLayerOrder, L"LayerOrder");
@@ -29776,8 +29572,6 @@ bool CvArtInfoTerrain::read(CvXMLLoadUtility* pXML)
 	{
 		swprintf(xmlName + (wcslen(xmlName) - 2), L"%02d", i);
 		pXML->GetChildXmlValByName(szTextVal, xmlName);
-
-		aszDirName.setLocationName(&szTextVal, (GC.getModDir()).c_str());
 
 		m_pSlotNames[i] = szTextVal;
 		BuildSlotList(m_pTextureSlots[i], szTextVal);
@@ -29899,17 +29693,7 @@ bool CvArtInfoFeature::read(CvXMLLoadUtility* pXML)
 							do
 							{
 								pXML->GetXmlVal(szTemp);
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 04/01/08								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-								CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-								p_szDirName->setLocationName( &szTemp, (GC.getModDir()).c_str());
-								SAFE_DELETE(p_szDirName);
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
+
 								if(!bGenerateRotations)
 								{
 									FeatureArtPiece &featureArtPiece = featureVariety.createFeatureArtPieceFromConnectionMask(connectionMask);
@@ -29963,18 +29747,6 @@ bool CvArtInfoFeature::read(CvXMLLoadUtility* pXML)
 
 			//variety button
 			pXML->GetChildXmlValByName(featureVariety.m_szVarietyButton, L"VarietyButton");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 04/01/08								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-			CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-			p_szDirName->setLocationName(&featureVariety.m_szVarietyButton, (GC.getModDir()).c_str());
-			SAFE_DELETE(p_szDirName);
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
-
 		} while(pXML->TryMoveToXmlNextSibling(L"FeatureVariety"));
 
 		pXML->MoveToXmlParent();
@@ -31497,17 +31269,6 @@ bool CvEffectInfo::read(CvXMLLoadUtility* pXML)
 	CvScalableInfo::read(pXML);
 
 	pXML->GetChildXmlValByName(szTextVal, L"Path");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 10/27/07								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	CvXMLLoadUtilityModTools* p_aszDirName = new CvXMLLoadUtilityModTools;
-	p_aszDirName->setLocationName( &szTextVal, (GC.getModDir()).c_str());
-	SAFE_DELETE(p_aszDirName);
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
 	setPath(szTextVal);
 
 	pXML->GetChildXmlValByName(&m_fUpdateRate, L"fUpdateRate" );
@@ -31571,21 +31332,11 @@ bool CvAttachableInfo::read(CvXMLLoadUtility* pXML)
 	CvScalableInfo::read(pXML);
 
 	pXML->GetChildXmlValByName(szTextVal, L"Path");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 10/26/07							MRGENIE		  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	CvXMLLoadUtilityModTools* p_szDirName = new CvXMLLoadUtilityModTools;
-	p_szDirName->setLocationName( &szTextVal, (GC.getModDir()).c_str());
-	SAFE_DELETE(p_szDirName);
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
 	setPath(szTextVal);
 
 	return true;
 }
+
 void CvAttachableInfo::copyNonDefaults(const CvAttachableInfo* pClassInfo)
 {
 	const CvString cDefault = CvString::format("").GetCString();
