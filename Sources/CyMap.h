@@ -93,6 +93,7 @@ public:
 	int getNumAreas();
 	int getNumLandAreas();
 	CyArea* getArea(int iID);
+	python::list areas() const;
 	void recalculateAreas();
 	void resetPathDistance();
 

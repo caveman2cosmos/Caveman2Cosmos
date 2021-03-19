@@ -456,11 +456,9 @@ def assignStartingPlots():
 
 	# Find the oceans. We want all civs to start along the coast of a salt water body.
 	oceans = []
-	for i in range(map.getIndexAfterLastArea()):
-		area = map.getArea(i)
-		if not area.isNone():
-			if area.isWater() and not area.isLake():
-				oceans.append(area)
+	for area in map.areas():
+		if area.isWater() and not area.isLake():
+			oceans.append(area)
 	#print("Oceans: ", oceans)
 
 	# Now assign the start plots!
@@ -576,7 +574,7 @@ def findStartingPlot(argsList):
 	map = CyMap()
 	iBestValue = 0
 	iBestArea = -1
-	areas = CvMapGeneratorUtil.getAreas()
+	areas = map.areas()
 
 	for area in areas:
 		if area.isWater(): continue # Don't want to start "in the drink"!

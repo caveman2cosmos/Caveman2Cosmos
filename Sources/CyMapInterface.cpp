@@ -89,6 +89,7 @@ void CyMapPythonInterface()
 		.def("getNumAreas", &CyMap::getNumAreas, "int () - total areas")
 		.def("getNumLandAreas", &CyMap::getNumLandAreas, "int () - total land areas")
 		.def("getArea", &CyMap::getArea, python::return_value_policy<python::manage_new_object>(), "CyArea (iID) - get CyArea at iID")
+		.def("areas", &CyMap::areas)
 		.def("recalculateAreas", &CyMap::recalculateAreas, "void () - Recalculates the areaID for each plot. Should be preceded by CyMap.setPlotTypes(...)")
 		.def("resetPathDistance", &CyMap::resetPathDistance, "void ()")
 

@@ -41,9 +41,8 @@ def canTriggerBlessedSea(argsList):
 		return False
 
 	iOurLandmasses = 0
-	for i in xrange(MAP.getIndexAfterLastArea()):
-		area = MAP.getArea(i)
-		if not area.isNone() and not area.isWater() and area.getCitiesPerPlayer(kTriggeredData.ePlayer) > 0:
+	for area in MAP.areas():
+		if not area.isWater() and area.getCitiesPerPlayer(kTriggeredData.ePlayer) > 0:
 			iOurLandmasses += 1
 
 	if (iOurLandmasses > iOurMaxLandmass):
@@ -66,9 +65,8 @@ def canTriggerBlessedSea2(argsList):
   iOurMinLandmass = (3 * GC.getWorldInfo(map.getWorldSize()).getDefaultPlayers()) / 2
 
   iOurLandmasses = 0
-  for i in xrange(map.getIndexAfterLastArea()):
-    area = map.getArea(i)
-    if not area.isNone() and not area.isWater() and area.getCitiesPerPlayer(kTriggeredData.ePlayer) > 0:
+  for area in map.areas():
+    if not area.isWater() and area.getCitiesPerPlayer(kTriggeredData.ePlayer) > 0:
       iOurLandmasses += 1
 
   if (iOurLandmasses < iOurMinLandmass):
@@ -6631,8 +6629,6 @@ def canTriggerUnlimitedPower2(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
   eventCity = player.getCity(kTriggeredData.iCityId)
 
-  if (eventCity.area().isNone()):
-    return False
   if (eventCity.area().isCleanPower(player.getTeam())):
     return False
   if (player.getGold() < (eventCity.area().getNumCities() * 100)):

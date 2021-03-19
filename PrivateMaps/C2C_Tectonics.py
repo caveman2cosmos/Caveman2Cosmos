@@ -2067,7 +2067,7 @@ def findStartingPlot(argsList):
 	allOnBest = userInputLandmass == 7 # "Terra"
 	isolatedStarts = userInputLandmass == 4 # "Islands"
 
-	areas = CvMapGeneratorUtil.getAreas()
+	areas = MAP.areas()
 	areaValue = {}
 	for area in areas:
 		if area.isWater(): continue

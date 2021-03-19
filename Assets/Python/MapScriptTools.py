@@ -1105,7 +1105,7 @@ def getContinentDistance(areaID, otherAreaID=None):
 def getBigAreas( iTop, bCoord=True, noGoAreaPlots=None, iMinPlots=30 ):
 	CyMap().recalculateAreas()
 	continentArea = []
-	areas = CvMapGeneratorUtil.getAreas()
+	areas = GC.getMap().areas()
 	if not (noGoAreaPlots == None):
 		if len( noGoAreaPlots ) == 0:
 			noGoAreaPlotList = []
@@ -2112,7 +2112,7 @@ class MapRegions:
 
 		# get continents and islands
 		MAP.recalculateAreas()
-		areaList = CvMapGeneratorUtil.getAreas()
+		areaList = GC.getMap().areas()
 		isleList = []
 
 		# make Lost Isle
@@ -3499,7 +3499,7 @@ class BonusBalancer:
 		# make lists of relevant areas
 		minContinentPlots = 12
 		MAP.recalculateAreas()
-		self.areas = CvMapGeneratorUtil.getAreas()
+		self.areas = GC.getMap().areas()
 		self.continentArea = []
 		self.startArea = []
 		for area in self.areas:
@@ -4228,7 +4228,7 @@ class RiverMaker:
 		print "[MST] ===== RiverMaker:islandRivers()"
 		sprint = ""
 		chNoHills = 66
-		areas = CvMapGeneratorUtil.getAreas()
+		areas = GC.getMap().areas()
 		cnt = 0
 		for area in areas:
 			if areaID != None:
@@ -4302,7 +4302,7 @@ class RiverMaker:
 			print "[MST] ===== RiverMaker:buildRiversFromLake()"
 			# build rivers from all lakes
 			MAP.recalculateAreas()
-			areas = CvMapGeneratorUtil.getAreas()
+			areas = GC.getMap().areas()
 			for area in areas:
 				if area.isLake():
 					iAreaID = area.getID()
@@ -5253,7 +5253,7 @@ class MapPrint:
 		self.__mapRegion = [x0, x1, y0, y1]
 
 		# get all areas
-		areaList = CvMapGeneratorUtil.getAreas()
+		areaList = GC.getMap().areas()
 		aList = [ (area.getNumTiles(), area.getID(), area.isWater()) for area in areaList ]
 		aList.sort()
 		aList.reverse()
@@ -5972,7 +5972,7 @@ class MapStats:
 			sprint += "[MST] ####################################################################### MapScriptTools:MapStats ### \n\n"
 		elif txt	!= "":
 			sprint += "[MST] " + txt + "\n\n"
-		areas = CvMapGeneratorUtil.getAreas()
+		areas = GC.getMap().areas()
 		areaValue = {}
 		sprint += "[MST] Continent Areas \n"
 		sprint += "[MST] --------------- \n"

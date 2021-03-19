@@ -3979,8 +3979,8 @@ class BonusPlacer:
 
 	def AssignBonusAreas(self):
 		gc = CyGlobalContext()
-		self.areas = CvMapGeneratorUtil.getAreas()
 		gameMap = CyMap()
+		self.areas = gameMap.areas()
 		self.bonusList = list()
 
 		#Create and shuffle the bonus list and keep tally on
@@ -4284,7 +4284,7 @@ class StartingPlotFinder:
 			gameMap = CyMap()
 			iPlayers = gc.getGame().countCivPlayersEverAlive()
 			gameMap.recalculateAreas()
-			areas = CvMapGeneratorUtil.getAreas()
+			areas = gameMap.areas()
 			#get old/new world status
 			areaOldWorld = self.setupOldWorldAreaList()
 			print "len(areaOldWorld) = %d" % len(areaOldWorld)
@@ -4406,7 +4406,7 @@ class StartingPlotFinder:
 		gameMap = CyMap()
 		#get official areas and make corresponding lists that determines old
 		#world vs. new and also the pre-settled value.
-		areas = CvMapGeneratorUtil.getAreas()
+		areas = gameMap.areas()
 		areaOldWorld = list()
 		for i in range(len(areas)):
 			for pI in range(mc.width*mc.height):

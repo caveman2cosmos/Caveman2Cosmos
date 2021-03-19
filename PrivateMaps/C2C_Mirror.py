@@ -586,7 +586,7 @@ def assignStartingPlots():
 	# For Lakes and Continents settings, ensure that starts are all placed on the biggest landmass on each side.
 	global biggest_areas
 	biggest_areas = []
-	areas = CvMapGeneratorUtil.getAreas()
+	areas = gc.getMap().areas()
 	area_sizes = [(area.getNumTiles(), area.getID()) for area in areas if not area.isWater()]
 	area_sizes.sort() # sort by size -- biggest areas last.
 

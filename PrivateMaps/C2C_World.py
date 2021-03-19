@@ -3175,12 +3175,7 @@ class BonusPlacer:
 	def AssignBonusAreas(self, numBonuses, bonusListLoc):
 		GC = CyGlobalContext()
 		MAP = GC.getMap()
-		# Build area list
-		self.areas = areas = []
-		for i in xrange(MAP.getIndexAfterLastArea()):
-			area = MAP.getArea(i)
-			if not area.isNone():
-				areas.append(area)
+		self.areas = areas = MAP.areas()
 
 		bonusDictLoc = self.bonusDict
 		for i in xrange(numBonuses):
@@ -3427,11 +3422,7 @@ class StartingPlotFinder:
 		shuffle(player_list)
 		print "Number of players: %d" % iNumPlayers
 		# Build area list
-		areas = []
-		for i in xrange(MAP.getIndexAfterLastArea()):
-			area = MAP.getArea(i)
-			if not area.isNone():
-				areas.append(area)
+		areas = MAP.areas()
 		# old/new world status
 		# Get official areas and make corresponding lists that determines
 		# old world vs. new world and also the pre-settled value.
