@@ -3865,7 +3865,7 @@ class StartPlot:
 
 	def isCoast(self):
 		waterArea = CyMap().plot(self.x, self.y).waterArea()
-		return not waterArea.isNone() and not waterArea.isLake()
+		return waterArea is not None and not waterArea.isLake()
 
 	def isRiverSide(self):
 		return CyMap().plot(self.x, self.y).isRiverSide()

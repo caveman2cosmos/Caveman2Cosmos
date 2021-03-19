@@ -593,11 +593,9 @@ def findStartingPlot(argsList):
 		global iBestArea
 		pPlot = CyMap().plot(x, y)
 		if pPlot.getArea() != iBestArea:
-			return false
+			return False
 		pWaterArea = pPlot.waterArea()
-		if (pWaterArea.isNone()):
-			return false
-		return not pWaterArea.isLake()
+		return pWaterArea is not None and not pWaterArea.isLake()
 
 	return CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
 
