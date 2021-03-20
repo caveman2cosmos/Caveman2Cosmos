@@ -104,7 +104,7 @@ class CityOptions:
 			if NAME == "ExitCO":
 				self.exit(screen, mainInterface)
 
-			elif NAME == "IconSizeCO":
+			elif NAME == "CO_IconSize":
 				popup = CyPopup(4999, EventContextTypes.EVENTCONTEXT_SELF, True)
 				popup.setPosition(self.xRes/3, self.yRes/3)
 				popup.createSpinBox(0, "", mainInterface.CityOpt.getBuildIconSize(), 4, 128, 32)

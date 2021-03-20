@@ -236,7 +236,7 @@ bool CvOutcomeMission::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvOutcomeMission::copyNonDefaults(CvOutcomeMission* pOutcomeMission, CvXMLLoadUtility* pXML)
+void CvOutcomeMission::copyNonDefaults(CvOutcomeMission* pOutcomeMission)
 {
 	GC.copyNonDefaultDelayedResolution((int*)&m_eMission, (int*)&(pOutcomeMission->m_eMission));
 	//if (m_eMission == NO_MISSION)
@@ -254,8 +254,8 @@ void CvOutcomeMission::copyNonDefaults(CvOutcomeMission* pOutcomeMission, CvXMLL
 		m_ePayerType = pOutcomeMission->getPayerType();
 	}
 
-	m_PropertyCost.copyNonDefaults(pOutcomeMission->getPropertyCost(), pXML);
-	m_OutcomeList.copyNonDefaults(&pOutcomeMission->m_OutcomeList, pXML);
+	m_PropertyCost.copyNonDefaults(pOutcomeMission->getPropertyCost());
+	m_OutcomeList.copyNonDefaults(&pOutcomeMission->m_OutcomeList);
 	if (!m_pPlotCondition)
 	{
 		m_pPlotCondition = pOutcomeMission->m_pPlotCondition;

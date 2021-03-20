@@ -338,51 +338,6 @@ void CvGameTextMgr::setInterfaceTime(CvWString& szString, PlayerTypes ePlayer)
 }
 
 
-void CvGameTextMgr::setGoldStr(CvWString& szString, PlayerTypes ePlayer)
-{
-	if (GET_PLAYER(ePlayer).getGold() < 0)
-	{
-		szString.Format(L"%c: " SETCOLR L"%d" SETCOLR, GC.getCommerceInfo(COMMERCE_GOLD).getChar(), TEXT_COLOR("COLOR_NEGATIVE_TEXT"), GET_PLAYER(ePlayer).getGold());
-	}
-	else
-	{
-		szString.Format(L"%c: %d", GC.getCommerceInfo(COMMERCE_GOLD).getChar(), GET_PLAYER(ePlayer).getGold());
-	}
-
-	const int iGoldRate = GET_PLAYER(ePlayer).calculateGoldRate();
-	if (iGoldRate < 0)
-	{
-		szString += gDLL->getText("TXT_KEY_MISC_NEG_GOLD_PER_TURN", iGoldRate);
-	}
-	else if (iGoldRate > 0)
-	{
-		szString += gDLL->getText("TXT_KEY_MISC_POS_GOLD_PER_TURN", iGoldRate);
-	}
-
-	if (GET_PLAYER(ePlayer).isStrike())
-	{
-		szString += gDLL->getText("TXT_KEY_MISC_STRIKE");
-	}
-}
-
-
-void CvGameTextMgr::setResearchStr(CvWString& szString, PlayerTypes ePlayer)
-{
-	CvWString szTempBuffer;
-
-	szString = gDLL->getText("TXT_KEY_MISC_RESEARCH_STRING", GC.getTechInfo(GET_PLAYER(ePlayer).getCurrentResearch()).getTextKeyWide());
-
-	if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getTechCount(GET_PLAYER(ePlayer).getCurrentResearch()) > 0)
-	{
-		szTempBuffer.Format(L" %d", (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getTechCount(GET_PLAYER(ePlayer).getCurrentResearch()) + 1));
-		szString+=szTempBuffer;
-	}
-
-	szTempBuffer.Format(L" (%d)", GET_PLAYER(ePlayer).getResearchTurnsLeft(GET_PLAYER(ePlayer).getCurrentResearch(), true));
-	szString+=szTempBuffer;
-}
-
-
 void CvGameTextMgr::setOOSSeeds(CvWString& szString, PlayerTypes ePlayer)
 {
 	if (GET_PLAYER(ePlayer).isHuman())
@@ -23519,9 +23474,9 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GLOBAL_BUILDINGCOST_MOD", it->first));
 
 				int iI = 0;
-				for (std::vector<int>::const_iterator itr = it->second.begin(); itr != it->second.end(); ++itr)
+				foreach_(const int& itr, it->second)
 				{
-					const BuildingTypes eBuildingX = static_cast<BuildingTypes>(*itr);
+					const BuildingTypes eBuildingX = static_cast<BuildingTypes>(itr);
 
 					if (iI++ % 3 == 0)
 					{
@@ -34870,8 +34825,7 @@ void CvGameTextMgr::buildCityBillboardIconString( CvWStringBuffer& szBuffer, CvC
 /*																							  */
 /* adding link to resources in the Pedia														*/
 /************************************************************************************************/
-	szDebugBuffer.Format("=== City %S religion icons ===", pCity->getName().GetCString());
-	gDLL->logMsg("CvGameTextMgr_buildCityBillboardString.log", szDebugBuffer.c_str());
+	logging::logMsg("CvGameTextMgr_buildCityBillboardString.log", "=== City %S religion icons ===", pCity->getName().GetCString());
 /************************************************************************************************/
 /* TGA_INDEXATION						  END												  */
 /************************************************************************************************/
@@ -34890,8 +34844,7 @@ void CvGameTextMgr::buildCityBillboardIconString( CvWStringBuffer& szBuffer, CvC
 				szBuffer.append(CvWString::format(L"%c", GC.getReligionInfo((ReligionTypes) iI).getHolyCityChar()));
 */
 				const CvReligionInfo& pInfo = GC.getReligionInfo((ReligionTypes) iI);
-				szDebugBuffer.Format("Religion %s, TGA index %i.", pInfo.getType(), pInfo.getTGAIndex());
-				gDLL->logMsg("CvGameTextMgr_buildCityBillboardString.log", szDebugBuffer.c_str());
+				logging::logMsg("CvGameTextMgr_buildCityBillboardString.log", "Religion %s, TGA index %i.", pInfo.getType(), pInfo.getTGAIndex());
 				szBuffer.append(CvWString::format(L"%c", pInfo.getHolyCityChar()));
 			}
 			else
@@ -34906,11 +34859,7 @@ void CvGameTextMgr::buildCityBillboardIconString( CvWStringBuffer& szBuffer, CvC
 */
 				const CvReligionInfo& pInfo = GC.getReligionInfo((ReligionTypes) iI);
 				szBuffer.append(CvWString::format(L"%c", pInfo.getChar()));
-				if (GC.isXMLLogging())
-				{
-					szDebugBuffer.Format("Religion %s, TGA index %i.", pInfo.getType(), pInfo.getTGAIndex());
-					gDLL->logMsg("CvGameTextMgr_buildCityBillboardString.log", szDebugBuffer.c_str());
-				}
+				logging::logMsg("CvGameTextMgr_buildCityBillboardString.log", "Religion %s, TGA index %i.", pInfo.getType(), pInfo.getTGAIndex());
 /************************************************************************************************/
 /* TGA_INDEXATION						  END												  */
 /************************************************************************************************/

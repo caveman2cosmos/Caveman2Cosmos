@@ -18,6 +18,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORAL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Coral Reef</English>
+		<Russian>Ïåñíÿ î êîðàë. ðèôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FALL_MYTH</Tag>
@@ -29,6 +30,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FALL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Stone from the Sky</English>
+		<Russian>Ïåñíÿ î íåáåñíîì êàìíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NATURAL_WONDER_AUYANTEPUI</Tag>
@@ -523,6 +525,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OASIS_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Oasis</English>
+		<Russian>Ïåñíÿ îá îàçèñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OUTCROP_MYTH</Tag>
@@ -534,6 +537,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OUTCROP_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Landform</English>
+		<Russian>Ïåñíÿ î ôîðìå Çåìëè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_MYTH</Tag>
@@ -545,6 +549,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REEF_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Reef</English>
+		<Russian>Ïåñíÿ î ðèôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VOLCANO_MYTH</Tag>
@@ -556,6 +561,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VOLCANO_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Volcano</English>
+		<Russian>Ïåñíÿ î âóëêàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BEACON_GREAT_BARRIER_REEF</Tag>

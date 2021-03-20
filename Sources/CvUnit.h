@@ -3217,6 +3217,7 @@ public:
 		DECLARE_MAP_FUNCTOR_2(CvUnit, void, doSetFreePromotions, bool, TraitTypes);
 		DECLARE_MAP_FUNCTOR_2(CvUnit, void, updatePlunder, int, bool);
 
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canRBombard);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isNukeImmune);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isGroupHead);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isUsingDummyEntities);

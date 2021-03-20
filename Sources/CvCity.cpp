@@ -1183,11 +1183,9 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
-			for (int iJ = 0; iJ < GET_PLAYER((PlayerTypes)iI).getNumUnits(); iJ++)
+			foreach_(CvUnit* unitX, GET_PLAYER((PlayerTypes)iI).units())
 			{
-				CvUnit* unitX = GET_PLAYER((PlayerTypes)iI).getUnit(iJ);
-
-				if (unitX != NULL && unitX->getUnitInfo().getUnitAIType(UNITAI_ICBM) && unitX->isMADEnabled()
+				if (unitX->getUnitInfo().getUnitAIType(UNITAI_ICBM) && unitX->isMADEnabled()
 				&& at(unitX->getMADTargetPlotX(), unitX->getMADTargetPlotY())
 				&& (unitX->getX() != INVALID_PLOT_COORD || unitX->getY() != INVALID_PLOT_COORD))
 				{
@@ -13584,9 +13582,9 @@ void CvCity::updateEspionageVisibility(bool bUpdatePlotGroups)
 
 				if (playerY.isAliveAndTeam(eTeamX))
 				{
-					for (std::vector<EspionageMissionTypes>::iterator it = aMission.begin(); it != aMission.end(); ++it)
+					foreach_(const EspionageMissionTypes& it, aMission)
 					{
-						if (playerY.canDoEspionageMission(*it, getOwner(), plot(), -1, NULL))
+						if (playerY.canDoEspionageMission(it, getOwner(), plot(), -1, NULL))
 						{
 							bVisibility = true;
 							break;
@@ -19065,15 +19063,7 @@ void CvCity::applyEvent(EventTypes eEvent, const EventTriggeredData* pTriggeredD
 
 bool CvCity::isEventOccured(EventTypes eEvent) const
 {
-	for (std::vector<EventTypes>::const_iterator it = m_aEventsOccured.begin(); it != m_aEventsOccured.end(); ++it)
-	{
-		if (*it == eEvent)
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return std::contains(m_aEventsOccured, eEvent);
 }
 
 void CvCity::setEventOccured(EventTypes eEvent, bool bOccured)
@@ -19168,11 +19158,11 @@ void CvCity::invalidateCommerceRankCache(CommerceTypes eCommerce)
 
 int CvCity::getBuildingYieldChange(BuildingTypes eBuilding, YieldTypes eYield) const
 {
-	for (std::vector<BuildingYieldChange>::const_iterator it = m_aBuildingYieldChange.begin(); it != m_aBuildingYieldChange.end(); ++it)
+	foreach_(const BuildingYieldChange& it, m_aBuildingYieldChange)
 	{
-		if ((*it).eBuilding == eBuilding && (*it).eYield == eYield)
+		if (it.eBuilding == eBuilding && it.eYield == eYield)
 		{
-			return (*it).iChange;
+			return it.iChange;
 		}
 	}
 
@@ -19228,11 +19218,11 @@ void CvCity::changeBuildingYieldChange(BuildingTypes eBuilding, YieldTypes eYiel
 
 int CvCity::getBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCommerce) const
 {
-	for (std::vector<BuildingCommerceChange>::const_iterator it = m_aBuildingCommerceChange.begin(); it != m_aBuildingCommerceChange.end(); ++it)
+	foreach_(const BuildingCommerceChange& it, m_aBuildingCommerceChange)
 	{
-		if ((*it).eBuilding == eBuilding && (*it).eCommerce == eCommerce)
+		if (it.eBuilding == eBuilding && it.eCommerce == eCommerce)
 		{
-			return (*it).iChange;
+			return it.iChange;
 		}
 	}
 
@@ -19884,11 +19874,11 @@ void CvCity::updateMaxSpecialistCount(BuildingTypes eBuilding, SpecialistTypes e
 
 int CvCity::getBuildingCommerceModifier(BuildingTypes eBuilding, CommerceTypes eCommerce) const
 {
-	for (std::vector<BuildingCommerceModifier>::const_iterator it = m_aBuildingCommerceModifier.begin(); it != m_aBuildingCommerceModifier.end(); ++it)
+	foreach_(const BuildingCommerceModifier& it, m_aBuildingCommerceModifier)
 	{
-		if ((*it).eBuilding == eBuilding && (*it).eCommerce == eCommerce)
+		if (it.eBuilding == eBuilding && it.eCommerce == eCommerce)
 		{
-			return (*it).iChange;
+			return it.iChange;
 		}
 	}
 	return 0;
@@ -20021,11 +20011,11 @@ int CvCity::getBuildingYieldModifier(BuildingTypes eBuilding, YieldTypes eYield)
 {
 	PROFILE_FUNC();
 
-	for (std::vector<BuildingYieldModifier>::const_iterator it = m_aBuildingYieldModifier.begin(); it != m_aBuildingYieldModifier.end(); ++it)
+	foreach_(const BuildingYieldModifier& it, m_aBuildingYieldModifier)
 	{
-		if ((*it).eBuilding == eBuilding && (*it).eYield == eYield)
+		if (it.eBuilding == eBuilding && it.eYield == eYield)
 		{
-			return (*it).iChange;
+			return it.iChange;
 		}
 	}
 	return 0;
@@ -20033,13 +20023,11 @@ int CvCity::getBuildingYieldModifier(BuildingTypes eBuilding, YieldTypes eYield)
 
 void CvCity::updateYieldModifierByBuilding(BuildingTypes eBuilding, YieldTypes eYield, int iChange)
 {
-	for (std::vector<BuildingYieldModifier>::iterator it = m_aBuildingYieldModifier.begin(); it != m_aBuildingYieldModifier.end(); ++it)
+	foreach_(BuildingYieldModifier& yieldModifier, m_aBuildingYieldModifier)
 	{
-		BuildingYieldModifier& yieldModifier = *it;
-
 		if (yieldModifier.eBuilding == eBuilding && yieldModifier.eYield == eYield)
 		{
-			int iOldChange = yieldModifier.iChange;
+			const int iOldChange = yieldModifier.iChange;
 			if (iOldChange != iChange)
 			{
 				//	Clear cached yield modifier
@@ -20048,11 +20036,11 @@ void CvCity::updateYieldModifierByBuilding(BuildingTypes eBuilding, YieldTypes e
 				if (iChange == 0)
 				{
 					// Don't worry, we are exiting the function at this point, not continuing the loop
-					m_aBuildingYieldModifier.erase(it);
+					m_aBuildingYieldModifier.erase(&yieldModifier);
 				}
 				else
 				{
-					(*it).iChange = iChange;
+					yieldModifier.iChange = iChange;
 				}
 			}
 			GET_PLAYER(getOwner()).invalidateYieldRankCache();
@@ -24887,22 +24875,22 @@ void CvCity::changePropertySpawn(int iChange, PropertyTypes eProperty, UnitTypes
 	else
 	{
 		std::vector<PropertySpawns> m_aTempPropertySpawns;
-		for (std::vector<PropertySpawns>::iterator it = m_aPropertySpawns.begin(); it != m_aPropertySpawns.end(); ++it)
+		foreach_(const PropertySpawns& it, m_aPropertySpawns)
 		{
-			if ((*it).eProperty != eProperty || (*it).eUnit != eUnit)
+			if (it.eProperty != eProperty || it.eUnit != eUnit)
 			{
 				PropertySpawns kChange;
-				kChange.eProperty = (*it).eProperty;
-				kChange.eUnit = (*it).eUnit;
+				kChange.eProperty = it.eProperty;
+				kChange.eUnit = it.eUnit;
 				m_aTempPropertySpawns.push_back(kChange);
 			}
 		}
 		m_aPropertySpawns.clear();
-		for (std::vector<PropertySpawns>::iterator it = m_aTempPropertySpawns.begin(); it != m_aTempPropertySpawns.end(); ++it)
+		foreach_(const PropertySpawns& it, m_aTempPropertySpawns)
 		{
 			PropertySpawns kChange;
-			kChange.eProperty = (*it).eProperty;
-			kChange.eUnit = (*it).eUnit;
+			kChange.eProperty = it.eProperty;
+			kChange.eUnit = it.eUnit;
 			m_aPropertySpawns.push_back(kChange);
 		}
 		m_aTempPropertySpawns.clear();
@@ -24911,14 +24899,14 @@ void CvCity::changePropertySpawn(int iChange, PropertyTypes eProperty, UnitTypes
 
 void CvCity::doPropertyUnitSpawn()
 {
-	int	iNumCriminals = plot()->getNumCriminals();
-	int iMaximum = getPopulation() / 2;
+	const int iNumCriminals = plot()->getNumCriminals();
+	const int iMaximum = getPopulation() / 2;
 	if (iNumCriminals < iMaximum)
 	{
 		for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
 		{
-			PropertyTypes eProperty = (PropertyTypes)iI;
-			bool bPositiveProperty = (GC.getPropertyInfo(eProperty).getAIWeight() >= 0);
+			const PropertyTypes eProperty = (PropertyTypes)iI;
+			const bool bPositiveProperty = (GC.getPropertyInfo(eProperty).getAIWeight() >= 0);
 			int iCurrentValue = std::max(0, getPropertiesConst()->getValueByProperty(eProperty));
 			if (eProperty == 0) //SHOULD be crime but this is subject to flaw if the first property type ever changes.  There's a faster way than getvisual but it takes some setup.  if this becomes necessary to move off of hard coding, use the examples for peaks and hills.
 			{
@@ -24931,12 +24919,12 @@ void CvCity::doPropertyUnitSpawn()
 			{
 				eSpawnOwner = (PlayerTypes)BARBARIAN_PLAYER;
 			}
-			for (std::vector<PropertySpawns>::iterator it = m_aPropertySpawns.begin(); it != m_aPropertySpawns.end(); ++it)
+			foreach_(const PropertySpawns& it, m_aPropertySpawns)
 			{
-				if ((*it).eProperty == eProperty
+				if (it.eProperty == eProperty
 				&& GC.getGame().getSorenRandNum(10000, "Property Unit Spawn Check") < iCurrentValue)
 				{
-					UnitTypes eUnit = (*it).eUnit;
+					const UnitTypes eUnit = it.eUnit;
 					if (!GET_PLAYER(getOwner()).canTrain(eUnit, false, false, true, true))
 					{
 						continue;
