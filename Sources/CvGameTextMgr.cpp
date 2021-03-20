@@ -12905,7 +12905,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	{
 		return;
 	}
-	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
+	CvPromotionInfo &kPromotion = GC.getPromotionInfo(ePromotion);
 
 	//for (iI = 0; iI < kPromotion.getNumAIWeightbyUnitCombatTypes(); iI++)
 	//{
