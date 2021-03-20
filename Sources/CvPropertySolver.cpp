@@ -426,9 +426,9 @@ void CvMainPropertySolver::addGlobalManipulators(const CvPropertyManipulators *p
 void CvMainPropertySolver::gatherGlobalManipulators()
 {
 	// Global manipulators first
-	foreach_(const CvPropertyInfo* info, GC.getPropertyInfos())
+	for (int i=0; i<GC.getNumPropertyInfos(); i++)
 	{
-		addGlobalManipulators(info->getPropertyManipulators());
+		addGlobalManipulators(GC.getPropertyInfo((PropertyTypes)i).getPropertyManipulators());
 	}
 }
 
