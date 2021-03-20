@@ -5476,7 +5476,7 @@ bool CvBuildingInfo::isNewCityFree(CvGameObject* pObject)
 	return m_pExprNewCityFree && m_pExprNewCityFree->evaluate(pObject);
 }
 
-const BoolExpr* CvBuildingInfo::getConstructCondition() const
+BoolExpr* CvBuildingInfo::getConstructCondition() const
 {
 	return m_pExprConstructCondition;
 }

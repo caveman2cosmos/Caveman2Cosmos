@@ -2203,9 +2203,12 @@ bool CvCity::isPlotTrainable(UnitTypes eUnit, bool bContinue, bool bTestVisible)
 			if (!bFound) return false;
 		}
 
-		if (kUnit.getTrainCondition() && !kUnit.getTrainCondition()->evaluate(getGameObject()))
+		if (kUnit.getTrainCondition())
 		{
-			return false;
+			if (!kUnit.getTrainCondition()->evaluate(const_cast<CvGameObjectCity*>(getGameObject())))
+			{
+				return false;
+			}
 		}
 	}
 	return true;
@@ -3304,7 +3307,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 				queries.push_back(query);
 			}
 
-			const BoolExprChange result = kBuilding.getConstructCondition()->evaluateChange(pObject, &(*queries.begin()), &(*queries.end()));
+			BoolExprChange result = kBuilding.getConstructCondition()->evaluateChange(pObject, &(*queries.begin()), &(*queries.end()));
 			if ((result == BOOLEXPR_CHANGE_REMAINS_FALSE) || (result == BOOLEXPR_CHANGE_BECOMES_FALSE))
 			{
 				return false;
@@ -23348,7 +23351,7 @@ int CvCity::getGlobalSourcedProperty(PropertyTypes eProperty) const
 	int iSum = 0;
 	foreach_(const CvPropertySource* pSource, GC.getPropertyInfo(eProperty).getPropertyManipulators()->getSources())
 	{
-		if (pSource->isActive(getGameObject()))
+		if (pSource->isActive(const_cast<CvGameObjectCity*>(getGameObject())))
 		{
 			iSum += pSource->getSourcePredict(getGameObject(), getPropertiesConst()->getValueByProperty(eProperty));
 		}
@@ -24019,7 +24022,7 @@ void CvCity::assignPromotionsFromBuildingChecked(const CvBuildingInfo& building,
 				unit->canAcquirePromotion(freePromoType.ePromotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)))
 		{
 			if (!freePromoType.m_pExprFreePromotionCondition ||
-				freePromoType.m_pExprFreePromotionCondition->evaluate(unit->getGameObject()))
+				freePromoType.m_pExprFreePromotionCondition->evaluate(const_cast<CvGameObjectUnit*>(unit->getGameObject())))
 			{
 				unit->setHasPromotion(freePromoType.ePromotion, true);
 			}

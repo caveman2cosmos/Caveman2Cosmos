@@ -58,7 +58,7 @@ class BoolExpr
 public:
 	virtual ~BoolExpr();
 	virtual bool evaluate(const CvGameObject* pObject) const = 0;
-	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd) const = 0;
+	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd) = 0;
 	virtual bool getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd) = 0;
 	static BoolExpr* read(CvXMLLoadUtility* pXML);
 	virtual void getCheckSum(uint32_t& iSum) const = 0;
@@ -71,7 +71,7 @@ class BoolExprConstant : public BoolExpr
 public:
 	BoolExprConstant(bool bValue = false) : m_bValue(bValue) {}
 	virtual bool evaluate(const CvGameObject* pObject) const;
-	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd) const;
+	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd);
 	virtual bool getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd);
 	void readConstant(CvXMLLoadUtility* pXML);
 	virtual void getCheckSum(uint32_t& iSum) const;
@@ -87,7 +87,7 @@ public:
 	BoolExprHas(GOMTypes eGOM = NO_GOM, int iID = -1) : m_eGOM(eGOM), m_iID(iID) {}
 	virtual ~BoolExprHas();
 	virtual bool evaluate(const CvGameObject* pObject) const;
-	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd) const;
+	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd);
 	virtual bool getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd);
 	void readContent(CvXMLLoadUtility* pXML);
 	virtual void getCheckSum(uint32_t& iSum) const;
@@ -103,7 +103,7 @@ class BoolExprIs : public BoolExpr
 public:
 	BoolExprIs(TagTypes eTag = NO_TAG) : m_eTag(eTag) {}
 	virtual bool evaluate(const CvGameObject* pObject) const;
-	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd) const;
+	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd);
 	virtual bool getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd);
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
@@ -118,7 +118,7 @@ public:
 	BoolExprNot(BoolExpr* pExpr = NULL) : m_pExpr(pExpr) {}
 	virtual ~BoolExprNot();
 	virtual bool evaluate(const CvGameObject* pObject) const;
-	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd) const;
+	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd);
 	virtual bool getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd);
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
@@ -133,7 +133,7 @@ public:
 	BoolExprAnd(BoolExpr* pExpr1 = NULL, BoolExpr* pExpr2 = NULL) : m_pExpr1(pExpr1), m_pExpr2(pExpr2) {}
 	virtual ~BoolExprAnd();
 	virtual bool evaluate(const CvGameObject* pObject) const;
-	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd) const;
+	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd);
 	virtual bool getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd);
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
@@ -149,7 +149,7 @@ public:
 	BoolExprOr(BoolExpr* pExpr1 = NULL, BoolExpr* pExpr2 = NULL) : m_pExpr1(pExpr1), m_pExpr2(pExpr2) {}
 	virtual ~BoolExprOr();
 	virtual bool evaluate(const CvGameObject* pObject) const;
-	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd) const;
+	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd);
 	virtual bool getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd);
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
@@ -165,7 +165,7 @@ public:
 	BoolExprBEqual(BoolExpr* pExpr1 = NULL, BoolExpr* pExpr2 = NULL) : m_pExpr1(pExpr1), m_pExpr2(pExpr2) {}
 	virtual ~BoolExprBEqual();
 	virtual bool evaluate(const CvGameObject* pObject) const;
-	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd) const;
+	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd);
 	virtual bool getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd);
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
@@ -181,7 +181,7 @@ public:
 	BoolExprIf(BoolExpr* pExprIf = NULL, BoolExpr* pExprThen = NULL, BoolExpr* pExprElse = NULL) : m_pExprIf(pExprIf), m_pExprThen(pExprThen), m_pExprElse(pExprElse) {}
 	virtual ~BoolExprIf();
 	virtual bool evaluate(const CvGameObject* pObject) const;
-	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd) const;
+	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd);
 	virtual bool getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd);
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
@@ -198,7 +198,7 @@ public:
 	BoolExprIntegrateOr(BoolExpr* pExpr = NULL, RelationTypes eRelation = NO_RELATION, int iData = -1, GameObjectTypes eType = NO_GAMEOBJECT) : m_pExpr(pExpr), m_eRelation(eRelation), m_iData(iData), m_eType(eType) {}
 	virtual ~BoolExprIntegrateOr();
 	virtual bool evaluate(const CvGameObject* pObject) const;
-	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd) const;
+	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd);
 	virtual bool getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd);
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;
@@ -215,7 +215,7 @@ class BoolExprComp : public BoolExpr
 public:
 	BoolExprComp(IntExpr* pExpr1 = NULL, IntExpr* pExpr2 = NULL) : m_pExpr1(pExpr1), m_pExpr2(pExpr2) {}
 	virtual ~BoolExprComp();
-	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd) const;
+	virtual BoolExprChange evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd);
 	virtual bool getInvolvesGOM(GOMQuery* pBegin, GOMQuery* pEnd);
 	virtual void getCheckSum(uint32_t& iSum) const;
 	virtual void buildDisplayString(CvWStringBuffer& szBuffer) const;

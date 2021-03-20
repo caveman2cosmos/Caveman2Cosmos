@@ -166,7 +166,7 @@ void CvGameObjectGame::foreach(GameObjectTypes eType, bst::function<void (const 
 		case GAMEOBJECT_PLAYER:
 			for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
 			{
-				const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+				CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 				if (kLoopPlayer.isAlive())
 				{
 					func(kLoopPlayer.getGameObject());
@@ -224,7 +224,7 @@ void CvGameObjectTeam::foreach(GameObjectTypes eType, bst::function<void (const 
 		case GAMEOBJECT_PLOT:
 			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 				if (pLoopPlot->getTeam() == m_pTeam->getID())
 				{
 					func(pLoopPlot->getGameObject());
@@ -267,7 +267,7 @@ void CvGameObjectPlayer::foreach(GameObjectTypes eType, bst::function<void (cons
 		case GAMEOBJECT_PLOT:
 			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 				if (pLoopPlot->getOwner() == m_pPlayer->getID())
 				{
 					func(pLoopPlot->getGameObject());
@@ -473,14 +473,14 @@ CvGameObjectPlot* CvGameObjectPlot::getPlot() const
 
 void CvGameObject::foreachOn(GameObjectTypes eType, bst::function<void(const CvGameObject*)> func) const
 {
-	const CvGameObjectPlot* pPlot = getPlot();
+	CvGameObjectPlot* pPlot = getPlot();
 	if (pPlot)
 		pPlot->foreachOn(eType, func);
 }
 
 void CvGameObject::foreachNear(GameObjectTypes eType, bst::function<void(const CvGameObject*)> func, int iDistance) const
 {
-	const CvGameObjectPlot* pPlot = getPlot();
+	CvGameObjectPlot* pPlot = getPlot();
 	if (pPlot)
 		pPlot->foreachNear(eType, func, iDistance);
 }
@@ -572,7 +572,7 @@ void CvGameObjectPlot::foreachNear(GameObjectTypes eType, bst::function<void(con
 	{
 		for (int iY=iPlotY - iDistance; iY <= iPlotY + iDistance; iY++)
 		{
-			const CvPlot* pPlot = GC.getMap().plot(iX, iY);
+			CvPlot* pPlot = GC.getMap().plot(iX, iY);
 			if (pPlot)
 				pPlot->getGameObject()->foreachOn(eType, func);
 		}
@@ -588,7 +588,7 @@ void CvGameObjectCity::foreachRelated(GameObjectTypes eType, RelationTypes eRela
 			const int iRoutes = m_pCity->getTradeRoutes();
 			for (int i=0; i<iRoutes; i++)
 			{
-				const CvCity* pTradeCity = m_pCity->getTradeCity(i);
+				CvCity* pTradeCity = m_pCity->getTradeCity(i);
 				if (pTradeCity)
 				{
 					func(pTradeCity->getGameObject());
@@ -602,7 +602,7 @@ void CvGameObjectCity::foreachRelated(GameObjectTypes eType, RelationTypes eRela
 		{
 			for (int iI = 0; iI < m_pCity->getNumCityPlots(); iI++)
 			{
-				const CvPlot* pLoopPlot = plotCity(m_pCity->getX(), m_pCity->getY(), iI);
+				CvPlot* pLoopPlot = plotCity(m_pCity->getX(), m_pCity->getY(), iI);
 				if (pLoopPlot)
 				{
 					if (pLoopPlot->getWorkingCity() == m_pCity)
