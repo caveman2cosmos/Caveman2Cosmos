@@ -61,6 +61,11 @@
 					type="boolean" default="False" get="isProductionPopupTrainCivilianUnitsForever"/>
 			<option id="ProductionPopupTrainMilitaryUnitsForever" key="Production Popup Train Military Units Forever"
 					type="boolean" default="False" get="isProductionPopupTrainMilitaryUnitsForever"/>
+
+			<!-- City option screen -->
+			<option id="BuildIconSize" key="Build Icon Size" type="int" default="64" get="getBuildIconSize" set="setBuildIconSize"/>
+			<option id="HideUnconstructableBuildings" key="HideUnconstructableBuildings" type="boolean" default="True" get="isHideUnconstructableBuildings" set="setHideUnconstructableBuildings"/>
+			<option id="HideUntrainableUnits" key="HideUntrainableUnits" type="boolean" default="True" get="isHideUntrainableUnits" set="setHideUntrainableUnits"/>
 		</section>
 	</options>
 </mod>

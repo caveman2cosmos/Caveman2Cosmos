@@ -424,7 +424,6 @@
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<iCost>100</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -457,7 +456,6 @@
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<iCost>15</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<iMilitaryProductionModifier>-200</iMilitaryProductionModifier>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -498,7 +496,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>100</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<iMilitaryProductionModifier>-300</iMilitaryProductionModifier>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -545,7 +542,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>160</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
@@ -573,7 +569,6 @@
 			<Bonus>BONUS_GLASSWARE</Bonus>
 			<iCost>160</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
@@ -620,7 +615,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>225</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<iHealth>1</iHealth>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -673,7 +667,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<iHealth>1</iHealth>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -712,7 +705,6 @@
 			<Bonus>BONUS_CEMENT</Bonus>
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
@@ -754,7 +746,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>225</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
@@ -809,7 +800,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>225</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
@@ -861,7 +851,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>225</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
@@ -912,7 +901,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>225</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
@@ -963,7 +951,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>225</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
@@ -1036,7 +1023,6 @@
 			</ExtraFreeBonuses>
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
@@ -1088,7 +1074,6 @@
 			</PrereqBonuses>
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
@@ -1211,7 +1196,6 @@
 			</PrereqBonuses>
 			<iCost>1950</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
@@ -1264,7 +1248,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldModifiers>
@@ -1353,7 +1336,6 @@
 			</PrereqBonuses>
 			<iCost>1300</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<iTradeRoutes>5</iTradeRoutes>
 			<iTradeRouteModifier>100</iTradeRouteModifier>
@@ -1392,7 +1374,6 @@
 			<Bonus>BONUS_CEMENT</Bonus>
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
@@ -1431,7 +1412,6 @@
 			</ConstructCondition>
 			<iCost>1300</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldModifiers>
@@ -1485,7 +1465,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>1300</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
@@ -1553,7 +1532,6 @@
 			</ConstructCondition>
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
@@ -1637,7 +1615,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>1300</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldModifiers>
@@ -1693,7 +1670,6 @@
 			<bPower>1</bPower>
 			<iCost>19500</iCost>
 			<iHurryCostModifier>1000000</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -1721,7 +1697,6 @@
 			<Bonus>BONUS_GLASSWARE</Bonus>
 			<iCost>2500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<iHealth>5</iHealth>
 			<iHappiness>2</iHappiness>
@@ -1773,7 +1748,6 @@
 			</PrereqBonuses>
 			<iCost>2500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
@@ -1814,7 +1788,6 @@
 			</PrereqBonuses>
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
@@ -1868,7 +1841,6 @@
 			</PrereqOrFeature>
 			<iCost>1300</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
@@ -1906,7 +1878,6 @@
 			<FreeBonus>BONUS_CHEMICALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
@@ -1928,7 +1899,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
@@ -1952,7 +1922,6 @@
 			<FreeBonus>BONUS_FERTILIZERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<iHealth>-1</iHealth>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -1976,7 +1945,6 @@
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<bPower>1</bPower>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
@@ -2006,7 +1974,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<iHealth>1</iHealth>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -2055,7 +2022,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>800</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -2099,7 +2065,6 @@
 			</ExtraFreeBonuses>
 			<iCost>1300</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
@@ -2146,7 +2111,6 @@
 			<bPower>1</bPower>
 			<iCost>450</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>

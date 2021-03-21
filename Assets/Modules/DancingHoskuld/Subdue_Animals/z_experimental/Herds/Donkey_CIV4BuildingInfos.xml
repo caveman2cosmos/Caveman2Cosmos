@@ -46,7 +46,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_DONKEY_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_DONKEY_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DONKEY_MYTH</ArtDefineTag>
@@ -109,7 +109,7 @@
 			<FreeBuilding>BUILDING_DONKEY_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DONKEY_STORY</BuildingType>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORIES_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_DONKEY_STORIES_EFFECT</BuildingType>

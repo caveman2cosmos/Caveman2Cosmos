@@ -217,8 +217,6 @@ void CvPlot::uninit()
 // Initializes data members that are serialized.
 void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 {
-	int iI;
-
 	//--------------------------------
 	// Uninit class
 	uninit();
@@ -286,7 +284,7 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_workingCity.reset();
 	m_workingCityOverride.reset();
 
-	for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
+	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 	{
 		m_aiYield[iI] = 0;
 	}
@@ -294,7 +292,7 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_bIsActivePlayerNoDangerCache = false;
 	m_bIsActivePlayerHasDangerCache = false;
 
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		m_abIsTeamBorderCache[iI] = false;
 	}
@@ -1274,12 +1272,8 @@ void CvPlot::verifyUnitValidPlot()
 	PROFILE_FUNC();
 
 	bool bAnyMoved = false;
-	std::vector<CvUnit*> aUnits;
 
-	foreach_(CvUnit* pLoopUnit, units())
-	{
-		aUnits.push_back(pLoopUnit);
-	}
+	std::vector<CvUnit*> aUnits(beginUnits(), endUnits());
 
 	for (std::vector<CvUnit*>::iterator it = aUnits.begin(); it != aUnits.end(); )
 	{
@@ -1364,9 +1358,8 @@ void CvPlot::verifyUnitValidPlot()
 	//	having been moved
 	if ( bAnyMoved )
 	{
-		for (std::vector<CvUnit*>::iterator it = aUnits.begin(); it != aUnits.end(); ++it)
+		foreach_(CvUnit* pLoopUnit, aUnits)
 		{
-			CvUnit* pLoopUnit = *it;
 			CvSelectionGroup* pGroup = pLoopUnit->getGroup();
 
 			if ( pGroup != NULL && !pGroup->isMidMove() )
@@ -1464,15 +1457,10 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 		{
 			for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 			{
-				if (pLoopCity->getNumRealBuilding((BuildingTypes)iI) > 0)
+				if (pLoopCity->getNumRealBuilding((BuildingTypes)iI) > 0 && !GC.getBuildingInfo((BuildingTypes)iI).isNukeImmune()
+				&& GC.getGame().getSorenRandNum(100, "Building Nuked") < GC.getDefineINT("NUKE_BUILDING_DESTRUCTION_PROB"))
 				{
-					if (!(GC.getBuildingInfo((BuildingTypes) iI).isNukeImmune()))
-					{
-						if (GC.getGame().getSorenRandNum(100, "Building Nuked") < GC.getDefineINT("NUKE_BUILDING_DESTRUCTION_PROB"))
-						{
-							pLoopCity->setNumRealBuilding(((BuildingTypes)iI), pLoopCity->getNumRealBuilding((BuildingTypes)iI) - 1);
-						}
-					}
+					pLoopCity->setNumRealBuilding((BuildingTypes) iI, 0);
 				}
 			}
 
@@ -10879,47 +10867,49 @@ void CvPlot::processArea(CvArea* pArea, int iChange)
 
 	if (pCity != NULL)
 	{
+		const PlayerTypes eOwner = pCity->getOwner();
 		// XXX make sure all of this (esp. the changePower()) syncs up...
-		pArea->changePower(pCity->getOwner(), iChange * pCity->getPopulation());
+		pArea->changePower(eOwner, iChange * pCity->getPopulation());
 
-		pArea->changeCitiesPerPlayer(pCity->getOwner(), iChange);
-		pArea->changePopulationPerPlayer(pCity->getOwner(), (pCity->getPopulation() * iChange));
+		pArea->changeCitiesPerPlayer(eOwner, iChange);
+		pArea->changePopulationPerPlayer(eOwner, (pCity->getPopulation() * iChange));
 
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+		const int iNumBuildingInfos = GC.getNumBuildingInfos();
+
+		for (int iI = 0; iI < iNumBuildingInfos; ++iI)
 		{
-			if (pCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
+			const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iI);
+			if (pCity->getNumActiveBuilding(eBuildingX) > 0)
 			{
-				const CvBuildingInfo& building = GC.getBuildingInfo((BuildingTypes)iI);
+				const CvBuildingInfo& building = GC.getBuildingInfo(eBuildingX);
 
-				pArea->changePower(pCity->getOwner(), building.getPowerValue() * iChange * pCity->getNumActiveBuilding((BuildingTypes)iI));
+				pArea->changePower(eOwner, building.getPowerValue() * iChange);
 
-				if (!pCity->isReligiouslyDisabledBuilding((BuildingTypes)iI))
+				if (!pCity->isReligiouslyLimitedBuilding(eBuildingX))
 				{
 					if (building.getAreaHealth() > 0)
 					{
-						pArea->changeBuildingGoodHealth(pCity->getOwner(), building.getAreaHealth() * iChange * pCity->getNumActiveBuilding((BuildingTypes)iI));
+						pArea->changeBuildingGoodHealth(eOwner, building.getAreaHealth() * iChange * pCity->getNumActiveBuilding(eBuildingX));
 					}
-					else pArea->changeBuildingBadHealth(pCity->getOwner(), building.getAreaHealth() * iChange * pCity->getNumActiveBuilding((BuildingTypes)iI));
+					else pArea->changeBuildingBadHealth(eOwner, building.getAreaHealth() * iChange * pCity->getNumActiveBuilding(eBuildingX));
 
-					pArea->changeBuildingHappiness(pCity->getOwner(), building.getAreaHappiness() * iChange * pCity->getNumActiveBuilding((BuildingTypes)iI));
-					pArea->changeFreeSpecialist(pCity->getOwner(), building.getAreaFreeSpecialist() * iChange * pCity->getNumActiveBuilding((BuildingTypes)iI));
-				}
-				pArea->changeCleanPowerCount(pCity->getTeam(), building.isAreaCleanPower() ? iChange * pCity->getNumActiveBuilding((BuildingTypes)iI) : 0);
-				pArea->changeBorderObstacleCount(pCity->getTeam(), building.isAreaBorderObstacle() ? iChange * pCity->getNumActiveBuilding((BuildingTypes)iI) : 0);
+					pArea->changeBuildingHappiness(eOwner, building.getAreaHappiness() * iChange * pCity->getNumActiveBuilding(eBuildingX));
+					pArea->changeFreeSpecialist(eOwner, building.getAreaFreeSpecialist() * iChange * pCity->getNumActiveBuilding(eBuildingX));
 
-				for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
-				{
-					if (!pCity->isReligiouslyDisabledBuilding((BuildingTypes)iI))
+					for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 					{
-						pArea->changeYieldRateModifier(pCity->getOwner(), (YieldTypes)iJ, building.getAreaYieldModifier(iJ) * iChange * pCity->getNumActiveBuilding((BuildingTypes)iI));
+						pArea->changeYieldRateModifier(eOwner, (YieldTypes)iJ, building.getAreaYieldModifier(iJ) * iChange);
 					}
 				}
+				pArea->changeCleanPowerCount(pCity->getTeam(), building.isAreaCleanPower() ? iChange * pCity->getNumActiveBuilding(eBuildingX) : 0);
+				pArea->changeBorderObstacleCount(pCity->getTeam(), building.isAreaBorderObstacle() ? iChange * pCity->getNumActiveBuilding(eBuildingX) : 0);
+
 			}
 		}
 
 		for (int iI = 0; iI < NUM_UNITAI_TYPES; ++iI)
 		{
-			pArea->changeNumTrainAIUnits(pCity->getOwner(), ((UnitAITypes)iI), (pCity->getNumTrainUnitAI((UnitAITypes)iI) * iChange));
+			pArea->changeNumTrainAIUnits(eOwner, (UnitAITypes)iI, pCity->getNumTrainUnitAI((UnitAITypes)iI) * iChange);
 		}
 
 		for (int iI = 0; iI < MAX_PLAYERS; ++iI)
@@ -12871,11 +12861,6 @@ void CvPlot::doPreAttackTraps(CvUnit* pAttacker)
 }
 // /UncutDragon
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/20/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 
 PlayerTypes CvPlot::getClaimingOwner() const
 {
@@ -13332,20 +13317,20 @@ int CvPlot::getEnemyBorderPlotCount(PlayerTypes ePlayer) const
 	int iCount = 0;
 	foreach_(const CvPlot* pAdjacentPlot, adjacent())
 	{
-		if (pAdjacentPlot->getOwner() != NO_PLAYER)
+		const PlayerTypes ePlayerX = pAdjacentPlot->getOwner();
+		if (ePlayerX != NO_PLAYER && ePlayerX != ePlayer)
 		{
-			if (GET_PLAYER(pAdjacentPlot->getOwner()).AI_getAttitude(ePlayer) >= ATTITUDE_ANNOYED)
+			const AttitudeTypes eAttitude = GET_PLAYER(ePlayerX).AI_getAttitude(ePlayer);
+
+			if (eAttitude < ATTITUDE_CAUTIOUS)
 			{
-				iCount++;
+				iCount += 1 + (eAttitude < ATTITUDE_ANNOYED);
 			}
 		}
 	}
 	return iCount;
 }
 
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 CvProperties* CvPlot::getProperties()
 {
