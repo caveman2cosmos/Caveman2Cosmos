@@ -299,7 +299,7 @@
 		<Tag>TXT_ACO_PRESSSHIFT</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Press SHIFT for more detail[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Appuyez sur MAJ pour plus de détails[COLOR_REVERT]</French>
-		<German>[COLOR_HIGHLIGHT_TEXT][UMSCHALTEN] drücken für mehr Einzelheiten[COLOR_REVERT]</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]&lt;UMSCHALT&gt;[COLOR_REVERT] für mehr Einzelheiten</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Tieni premuto SHIFT per maggiori dettagli[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Pulse SHIFT para más detalles[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Naciśnij SHIFT po więcej informacji[COLOR_REVERT]</Polish>
@@ -2699,9 +2699,8 @@
 		<Polish>%s1 w mieście %s2 uniemożliwił dostęp do świeżej wody.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_REMOVED_MAX_CULTURE</Tag>
-		<English>The %s1 in the City of %s2 has shut down to the local culture level being too high.</English>
-		<French>Le bâtiment %s1 de la ville de %s2 a été désactivé, car le niveau culturel est trop haut.</French>
+		<Tag>TXT_KEY_CITY_REMOVED_MAX_POPULATION</Tag>
+		<English>The %s1 in the City of %s2 has shut down due to the population level being too high.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_REPEL</Tag>
@@ -3803,7 +3802,7 @@ Time Frame: 2300 AD - 3000 AD</English>
 		<French>L'ère galactique représente un moment où une civilisation se développe plus rapidement que le voyage de la lumière, permettant l'exploration et la colonisation des systèmes solaires proches et de plus en plus, la galaxie. De nouvelles améliorations dans la terraformation d'une technologie permettent aux planètes hostiles d'être transformées en mondes semblables à la terre, augmentant considérablement les endroits où l'humanité peut s'installer. La guerre interplanétaire est également affinée et toutes les nations de l'espace humain ne sont pas des démocraties amies. Certains se transforment en empires spatiaux mortels.
 
 Calendrier: 2300 AD - 3000 AD</French>
-		<Russian>Галактическая[NEWLINE]2300 - 3000 гг.</Russian>
+		<Russian>Галактическая эпоха представляет время, когда цивилизация развивается, используя технологии сверхсветовых путешествий, позволяющие осуществлять разведку и колонизацию близлежащих звездных систем и всей галактики в целом. Дальнейший прогресс технологий терраформирования позволяют преобразовать враждебные планеты в землеподобные миры, значительно увеличивающие пригодные места для расселения человечества, сохраняющие связь с материнской системой. Межпланетная война становится более высокотехнологичной, и далеко не все колонии человечества являются дружественными демократиями. Некоторые из них развиваются в грозные космические империи.[NEWLINE]2300 - 3000 гг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INDUSTRIAL</Tag>
@@ -3839,7 +3838,7 @@ Time Frame: 1750 AD - 1900 AD</English>
 		<French>L'ère Industrielle commence avec l'invention de la vapeur et se poursuit avec le développement des usines. De plus en plus, la guerre se mécanise, avec l'avènement des armes automatiques. De nouvelles idées sur l'économie et la société commencent à ébranler l'ancien ordre, avec le capitalisme et les idées communistes, entre autres, commencent à s'établir, en contradiction avec les idées traditionnelles de la religion et du gouvernement. Le vol devient possible pour la première fois, et la guerre en général subit d'énormes changements, une guerre de formation et des uniformes colorés cédant la place à des uniformes ternes et finalement au camouflage.
 
 Calendrier: 1750 AD - 1900 AD</French>
-		<Russian>Новое время[NEWLINE]1750 - 1900 гг.</Russian>
+		<Russian>Промышленная эпоха начинается с овладением энергией пара и продолжается с развитием фабрик. Война постепенно приобретает механизированный характер с появлением автоматического оружия. Новые идеи охватывают экономику и общество, встряхивая старый жизненный уклад, при этом капитализм и социалистические идеи среди прочих начинают утверждаться в массах и сталкиваются с традиционными религиями и консервативными идеями. В эту эпоху человечество впервые обретает возможность к полетам, а война в целом кардинально меняет свой облик, приобретая к концу эпохи тотальный характер.[NEWLINE]1750 - 1900 гг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INFORMATION</Tag>
@@ -3859,7 +3858,7 @@ Time Frame: 1990 AD - 2050 AD</English>
 		<French>L'ère de l'information représente à peu près le temps après la guerre froide dans notre monde sur le plan technologique. Les ordinateurs deviennent personnels, Internet apparaît et de nouvelles formes de divertissement telles que les jeux informatiques et les consoles marquent le début de cette période. Plus tard, avec l'avènement de l'Internet haut débit, du cloud computing et des appareils mobiles tels que les téléphones intelligents, la société subit un grand changement à mesure que les entreprises physiques commencent à être remplacées par des entreprises numériques, et que la propriété privée de choses telles que les films, la musique s'installe de plus en plus aux mains de la distribution d'entreprise avec le streaming une technologie. Finalement, l'intelligence artificielle évolue au point de permettre les premiers drones automatisés et les voitures sans conducteur, de nombreux emplois disparaissant en raison de machines plus avancées. L'argent physique disparaît, toutes les transactions se faisant numériquement.
 
 Calendrier: 1990 AD - 2050 AD</French>
-		<Russian>Информационная эра[NEWLINE]1990 - 2050 гг.</Russian>
+		<Russian>Информационная эра начинается приблизительно после завершения после холодной войны в нашем мире. Появляются персональные компьютеры вместе с интернетом, а новые формы развлечений, таких как компьютерные и консольные игры, отмечают собой начальную часть этого периода. Позже, с появлением высокоскоростного интернета, облачных вычислений и мобильных устройств, таких как смартфоны, общество претерпевает большое изменение, поскольку физические предприятия начинают заменять цифровые предприятия, и все более частное владение вещами, такими как фильмы, музыка переходить под управление корпоративного распределения с потоковыми технологиями. В конечном итоге искусственный интеллект развивается до того, что сначала создает возможность использования автоматизированных беспилотников и автомобилей без водителей, а многие профессии постепенно исчезают из-за появления более продвинутых машин и автоматики. Наличные деньги со временем исчезают из оборота, а многие финансовые операции отныне выполняются в цифровом виде.[NEWLINE]1990 - 2050 гг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MEDIEVAL</Tag>
@@ -3895,7 +3894,7 @@ Time Frame: 450 AD - 1400 AD</English>
 		<French>Une société du Moyen-Âge est une société qui a atteint des niveaux de raffinement supplémentaires dans la culture et une technologie par rapport à l'époque Classique. Des techniques de forge plus fortes permettent des armures plus lourdes, faisant de la cavalerie lourde et d'autres forces l'arme de choix sur le champ de bataille ainsi que des armes de siège de plus en plus puissantes. Les fortifications s'améliorent, créant des forteresses capables de soutenir un siège pendant des mois si nécessaire en raison non seulement d'une construction robuste, mais aussi du stockage de la nourriture et des fournitures. De nouvelles structures comme le vent et les moulins à eau apparaissent avec l'avènement des premiers engrenages. Les armes à poudre commencent à être raffinées vers la fin de cette période, préfigurant le deuxième grand changement dans la guerre depuis les temps anciens.
 
 Calendrier: 450 AD - 1400 AD</French>
-		<Russian>Средневековье[NEWLINE]450 - 1400 гг.</Russian>
+		<Russian>Средневековое общество характеризуется тем, что на позднем этапе оно достигло дополнительных высот утонченности в культуре и технологиях по сравнению с античными временами. Прогрессивные методы ковки приводят к появлению полных доспехов, тяжелой кавалерии и другие видов оружия, родов войск на поле битвы вместе с все более мощным осадным оружием. Прогресс в фортификации, в строительстве крепостей, способных выдержать осаду в течение нескольких месяцев, если потребуется, а также запасать продукты питания и снабжения. Новые структуры, такие как ветряные и водяные мельницы, появляются с изобретением зубчатой передачи. Изобретение пороха к концу этого периода приводит к новому прорыву в военном деле, предвещая вторую крупнейшую революцию в вооружениях с древнейших времен.[NEWLINE]450 - 1400 гг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_NANOTECH</Tag>
@@ -3915,7 +3914,7 @@ Time Frame: 2050 AD - 2150 AD</English>
 		<French>L'ère Nanotech est une évolution logique de l'ère de l'information précédente. Les ordinateurs deviennent sensibles et les robots sensibles commencent à apparaître. Les nanites sont capables de fournir une capacité de construction presque illimitée, et les petites nano-usines trouvent leur place d'abord dans les foyers des pays développés, puis dans les pays en développement. La pauvreté telle que nous la connaissons commence à disparaître et les systèmes de gouvernement et de société existants sont ébranlés. Le capitalisme commence à céder la place à une économie post-pénurie. Cependant tout n'est pas tout apporter. La nanotechnologie et la robotique sont également utilisées comme armes mortelles. Des guerres féroces sont menées alors que les gouvernements totalitaires traditionnels se battent pour maintenir le contrôle sur des populations soudainement capables de produire presque tout. La destruction MAD ou mutuellement assurée est rendue obsolète en raison des nanotechnologies. Avec la suppression de la dissuasion nucléaire, de nombreux pays puissants se tournent à nouveau vers la conquête, mais le spectre sombre des nanotechnologies plane sur le monde, car le potentiel de la fin du monde est bien plus grand que l'ère des échanges nucléaires. Les gouvernements de machines deviennent possibles, et de nombreuses IA sophistiquées tentent de dominer afin de protéger l'humanité d'elle-même.
 
 Calendrier: 2050 AD - 2150 AD</French>
-		<Russian>Нанотех[NEWLINE]2050 - 2150 гг.</Russian>
+		<Russian>Нанотехнологическая эра - это логическое продолжение предыдущей информационной эпохи. Компьютеры становятся подобны живым организмам и впервые появляются познающие роботы. Наниты могут обеспечить почти безграничную емкость для строительства, а небольшие нано-фабрики находят место впервые в домах  жителей развитых стран, а затем и в развивающихся странах. Бедность, какую мы знаем, начинает постепенно исчезать, как и существующие системы правительства и общества. Капитализм начинает уходить в прошлое, уступая дорогу бездефицитной экономике. Однако новые технологии вместе с благами таят в себе большие угрозы. Нанотех и робототехника также становятся смертоносным оружием. Все активнее внедряется генетическое оружие и наноботы, как средство и орудие ведения войны и контроля численности населения. Тоталитарные правительства и мощные международные синдикаты ведут яростную борьбу за передел сфер влияния, прибегая к технологиям тотального контроля. С приходом Нанотеха исчезают прежние механизмы сдерживания. Устаревают прежние гарантии взаимного уничтожения. С ослаблением ядерного сдерживания многие мощные державы снова обращаются к завоеваниям, но темный призрак нанотеха нависает над всем миром, поскольку потенциал для совета директоров мегакорпораций возрос по сравнению с Ядерной эрой. Становится реальностью участие ИИ в управлении, как и многие изысканные попытки ИИ на доминирование, чтобы защитить человечество от самого себя.[NEWLINE]2050 - 2150 гг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_PREHISTORIC</Tag>
@@ -3974,7 +3973,7 @@ Time Frame: 1400 AD - 1750 AD</English>
 		<French>La Renaissance commence avec l'avènement de l'imprimerie, de nouveaux perfectionnements dans l'armement à la poudre à canon et l'avènement de navires capables de traverser le monde. De nouvelles réflexions sur le gouvernement et la religion, tout comme l'ère Classique, façonnent également cette période. De nombreuses religions sont schistes alors que les enseignements traditionnels sont à nouveau mis en lumière. La science en tant que discipline sérieuse émerge pour la première fois, et les progrès de la médecine et de l'astronomie améliorent la connaissance du monde physique. Les explications religieuses de l'existence et de l'origine de l'univers sont remises en cause, et de graves schismes entre science et religion se produisent dans certains cas, mais pas tous. Vers la fin de cette période, des empires océaniques massifs apparaissent, colonisant des terres lointaines et commercialisant et dominant des peuples lointains. De nombreux peuples autochtones sont déplacés ou réduits en esclavage.
 
 Calendrier: 1400 AD - 1750 AD</French>
-		<Russian>Возрождение[NEWLINE]1400 - 1750 гг.</Russian>
+		<Russian>Эпоха Возрождения начинается с изобретения печатного станка, дальнейшего прогресса в пороховом вооружении, а появление кораблей, способных совершить кругосветное путешествие. Новая политическая и религиозная мысль охватывает многие умы в этот период, как и когда-то в Античности. Многие религии и традиционные учения в эту пору медленно клонятся к упадку и расколам, уступая место светскому обществу. Впервые утверждается наука как серьезная дисциплина, а ее методы продвигаются в медицине и астрономии, улучшая знания о физическом мире. На смену прежним религиозным догмам о сотворении мира приходят новые естественнонаучные теории о формировании Земли и происхождении жизни. В некоторых случаях возникают серьезные споры между наукой и религией, но в эту пору они еще не обретают столь антагонистичный характер, как позже. К концу этого периода появляются огромные морские империи, колонизующие далекие земли и доминирующие на торговых путях. Многие аборигенные народы были истреблены или порабощены в этот период колониальными державами.[NEWLINE]1400 - 1750 гг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSCENDENT</Tag>
@@ -3995,7 +3994,7 @@ Time Frame: 4000 AD - 6000 AD</English>
 		<French>L'ère transcendantale est une période lointaine. L'humanité a la capacité de voyager dans le temps, des dimensions parallèles, de s'installer dans les parties connues et de plus en plus inconnues de l'univers.
 
 Calendrier: 4000 AD - 6000 AD</French>
-		<Russian>Эра Трансцендентности[NEWLINE]4000 - 6000 гг.</Russian>
+		<Russian>Трансцендентная эра - это период в далеком будущем. Человечество обладает способностью путешествовать во времени и в параллельные реальности, управлять различными измерениями и частями вселенной.[NEWLINE]4000 - 6000 гг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSHUMAN</Tag>
@@ -4019,7 +4018,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<French>L'ère transhumaine représente une période qui suit l'ère nanotechnologique. À l'ère transhumaine, afin de lutter contre l'hostilité accrue entre la machine et la vie humaine, ainsi que de s'améliorer, et pour certains, d'atteindre une sorte d'immortalité, une partie de l'humanité fusionne avec une technologie. Le mouvement transhumain a réellement commencé à l'ère de l'information, mais n'est devenu possible qu'avec les technologies avancées de la fin de la période nanotechnologique. Alors que certains humains choisissent d'embrasser le transhumanisme, un contre-mouvement ou un nouveau mouvement humaniste apparaît également, qui est diversifié, y compris des religieux de toutes les allégeances, certains scientifiques avertissant des ramifications négatives possibles du transhumanisme, et d'autres simplement horrifiés ou opposés à l'idée . Certains des Transhumains tentent de forcer les humains à se convertir. La frontière entre la machine et l'homme commence à s'estomper, alors que la vie de la machine devient plus humaine avec des émotions, beaucoup développant des idées concurrentes, conduisant à de nouveaux conflits. Les transhumains, les factions Machine et les humains normaux continuent de lutter, certains les uns contre les autres et certains alliés. L'humanité commence également à coloniser le système solaire à cette période, beaucoup échappant à la guerre sur terre pour chercher une vie meilleure. La terraformation primitive permet à Mars de devenir habitable, et finalement une technologie s'améliore pour permettre la construction de colonies spatiales artificielles massives. La guerre spatiale apparaît, d'abord avec des chasseurs spatiaux, développés à partir de navettes, puis avec des navires plus grands ainsi que des robots spatiaux de taille massive, certains pilotés par des humains. Finalement, la guerre interplanétaire devient possible lorsque les navires ne mettent plus énormément de temps à traverser l'espace. Certaines de ces guerres sont des guerres de conquête traditionnelles sur les ressources, d'autres sur l'idéologie, car les factions humanistes / transhumanistes et diverses machines se battent dans l'espace.
 
 Calendrier: 2150 AD - 2300 AD</French>
-		<Russian>Трансгуманизм[NEWLINE]2150 - 2300 гг.</Russian>
+		<Russian>Эра трансчеловека исходит из предыдущей эры нанотехнологий. В эпоху Трансгуманизма многие представители человеческой расы модифицируют свое тело с помощью прогрессивных методов биотехнологии и киберимплантатов с целью самосовершенствования, а также для успешного конкурирования с все более совершенными машинами. Трансгуманистическое движение на самом деле берет начало еще в Информационную эпоху, но лишь с передовыми технологиями позднего нанотеха оно стало возможным. Если часть людей приветствовала приход новой эры с ее технологиями, то остальные придерживались противоположной точки зрения. Скептики, гуманисты старой закалки, некоторые ученые и религиозные консерваторы предостерегали общество о возможных негативных последствиях трансгуманизма, а другие просто в ужасе от мысли слияния человека и машины, пропагандируя идеи луддизма. Некоторые из трансгуманистов пытаются принудить людей к такому объединению. Грань между машиной и человеком начинает размываться, поскольку и сами машины становится ближе к человеку, обретая способность к эмоциям, многие развивают конкурирующие идеи, приводящие к дальнейшему конфликту. Транслюди, машинные фракции и обычные люди продолжают бороться, некоторые друг против друга или как союзники. Человечество также начинает в этот период колонизировать Солнечную систему, многие эмигрируют с Земли в поисках лучшей жизни или спасаясь от войн. Примитивные технологии терраформирования позволяет сделать Марс обитаемым, и в конечном итоге технологии постепенно совершенствуются, чтобы обеспечить строительство гигантских космических колоний. Война плавно переносится на просторы космоса, сначала посредством штурмовиков, разработанными на базе шаттлов, затем с помощью крупных кораблей, а также космическими роботами массивных размеров, некоторые пилотируемыми людьми. В конце концов, это приводит к возникновению межпланетных войн, когда звездолетам больше не требуется огромного количества времени, чтобы пересечь пространство между планетами. Некоторые из этих войн являются традиционными войнами для завоевания ресурсов, другие же порождены идеологическим противостоянием старых гуманистом и трансгуманистов, а также различные фракций машин, сражающихся в космосе.[NEWLINE]2150 - 2300 гг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXCILE_TEXT</Tag>
@@ -4117,6 +4116,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English> Or </English>
 		<French> ou </French>
 		<German> oder </German>
+		<Russian> или </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXPR_THEN</Tag>
@@ -4150,10 +4150,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_0</Tag>
 		<English>[NEWLINE]Total costs before inflation = %d1[ICON_GOLD][NEWLINE]</English>
+		<Russian>[NEWLINE]Общие затраты до инфляции = %d1[ICON_GOLD][NEWLINE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_1</Tag>
 		<English>[NEWLINE]Inflation rate = %d1.%d2%%[NEWLINE][NEWLINE]Cost due to Inflation = %d3[ICON_GOLD]</English>
+		<Russian>[NEWLINE]Уровень инфляции = %d1.%d2%%[NEWLINE][NEWLINE]Стоимость из-за инфляции = %d3[ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_SOURCES_OF_INFLATION</Tag>
@@ -4199,39 +4201,47 @@ Calendrier: 2150 AD - 2300 AD</French>
 		[NEWLINE][ICON_BULLET]z budynków = %d3%
 		[NEWLINE][ICON_BULLET]z projektów = %d4%
 		[NEWLINE][ICON_BULLET]z przyśpieszania produkcji = %d5%</Polish>
-		<Russian>[NEWLINE]Èñòî÷íèêè Èíôëÿöèè[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Ïàðàäèãì = %d1%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Òåõíîëîãèé = %d2%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ èç Çäàíèé = %d3%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ èç Ïðîåêòîâ = %d4%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Ñïåøêè Ïðîèçâîäñòâà = %d5%</Russian>
+		<Russian>[NEWLINE]Èñòî÷íèêè Èíôëÿöèè[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Ïàðàäèãì = %d1%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Òåõíîëîãèé = %d2%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ èç Çäàíèé = %d3%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ èç Ïðîåêòîâ = %d4%[NEWLINE][ICON_BULLET]Èíôëÿöèÿ îò Óñêîð. Ïðîèçâîäñòâà = %d5%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_CIVILIAN</Tag>
 		<English>[SPACE]Civilian Unit upkeep:[NEWLINE][SPACE][SPACE] * Upkeep: %s1 [ICON_GOLD]</English>
+		<Russian>[SPACE]Содержание гражд. юнитов:[NEWLINE][SPACE][SPACE] * Содержание: %s1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MILITARY</Tag>
 		<English>[SPACE]Military Unit upkeep:[NEWLINE][SPACE][SPACE] * Upkeep: %s1 [ICON_GOLD]</English>
+		<Russian>[SPACE]Содержание отрядов:[NEWLINE][SPACE][SPACE] * Содержание: %s1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_CIVIC</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Civic change: %s1 [ICON_GOLD]</English>
+		<Russian>[NEWLINE][SPACE][SPACE] * Смена парадигм: %s1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_MOD_TRAIT</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Trait change: %s1 [ICON_GOLD]</English>
+		<Russian>[NEWLINE][SPACE][SPACE] * Смена черт лидера: %s1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_FREE</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Free: %d1 [ICON_GOLD]</English>
+		<Russian>[NEWLINE][SPACE][SPACE] * Бесплатно: %d1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_HANDICAP_ADJUSTMENT</Tag>
 		<English>[NEWLINE][ICON_BULLET]Handicap adjustment: %d1 [ICON_GOLD][NEWLINE]</English>
+		<Russian>[NEWLINE][ICON_BULLET]Отладка убытков: %d1 [ICON_GOLD][NEWLINE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_1</Tag>
 		<English>[NEWLINE][SPACE][SPACE] * Total: %d1 [ICON_GOLD][NEWLINE]</English>
+		<Russian>[NEWLINE][SPACE][SPACE] * Итого: %d1 [ICON_GOLD][NEWLINE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_UPKEEP_TOTAL_2</Tag>
 		<English>[NEWLINE]--------------------------------[NEWLINE] Total unit upkeep: %d1 [ICON_GOLD]</English>
+		<Russian>[NEWLINE]--------------------------------[NEWLINE] Общее содержание войск: %d1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FIRST_FLANK_SUPPORT</Tag>
@@ -5032,13 +5042,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Spanish>[ICON_BULLET]Acelerar la producción aumenta la inflación un %d1</Spanish>
 		<Polish>[ICON_BULLET]Przyspieszenie produkcji spowoduje o %d1 większą inflacje</Polish>
 		<Russian>[ICON_BULLET]Óñêîðåíèå ïðîèçâîäñòâà âûçûâàåò %d1 áîëüøå èíôëÿöèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ICON_SIZE</Tag>
-		<English>Icon Size:</English>
-		<French>Taille d'Icones:</French>
-		<German>Symbolgröße:</German>
-		<Russian>Размер изображения:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INCREASE_LOCAL_REBELS</Tag>
@@ -8977,18 +8980,21 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>Comme les pré-requis sont devenus incompatibles avec votre unité, Votre %s1_Unit a perdu sa promotion %s2_Promotion.</French>
 		<Italian>Avendo perso una delle promozioni prerequisito, la tua unità %s1_Unit ha perso la promozione %s2_Promotion.</Italian>
 		<Polish>Straciłeś jedną z wytycznych potrzebnych do promocji więc, Twoja jednostka: %s1_Unit traci: %s2_Promotion</Polish>
+		<Russian>Потеряв одну из базовых квалификаций, ваш %s1_Unit утратил свою квалификацию %s2_Promotion.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_CAN_RETRAIN</Tag>
 		<English>Since your unit is inapable of Ranged Assault Attacks, your %s1_Unit has lost its %s2_Promotion promotion and may now select a new promotion.</English>
 		<French>Comme votre unité est inapte à mener des Attaques à distance, Votre %s1_Unit a perdu sa promotion %s2_Promotion et peut à présent choisir une nouvelle promotion.</French>
 		<Polish>Ponieważ Twoja jednostka jest niezdolna do ataków dystansowych, Twój %s1_Unit stracił swoją %s2_Promotion promocję i teraz może wybrać inną.</Polish>
+		<Russian>Поскольку ваш отряд не способен к дальнобойным атакам, ваш %s1_Unit утратил свою квалификацию %s2_Promotion и теперь может выбрать другой навык.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_RBOMBARD_NO_RETRAIN</Tag>
 		<English>Since your unit is inapable of Ranged Assault Attacks, your %s1_Unit has lost its %s2_Promotion promotion.</English>
 		<French>Comme votre unité est inapte à mener des Attaques à distance, Votre %s1_Unit a perdu sa promotion %s2_Promotion.</French>
 		<Polish>Ponieważ Twoja jednostka jest niezdolna do ataków dystansowych, Twój %s1_Unit stracił swoją %s2_Promotion promocję.</Polish>
+		<Russian>Поскольку ваш отряд не способен к дальнобойным атакам, ваш %s1_Unit утратил свою квалификацию %s2_Promotion.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OBSOLETED_PROMOTION_TECH_CAN_RETRAIN</Tag>
@@ -9442,7 +9448,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_SHIFT_ALT_PREPARE_WAR</Tag>
 		<English>(&lt;SHIFT+ALT&gt; to Prepare for War)</English>
 		<French>(&lt;SHIFT+ALT&gt; pour Préparer la Guerre)</French>
-		<German>(&lt;SHIFT+ALT&gt; zur Kriegsvorbereitung)</German>
+		<German>(&lt;UMSCHALT+ALT&gt; zur Kriegsvorbereitung)</German>
 		<Italian>(&lt;SHIFT+ALT&gt; per prepararti alla guerra)</Italian>
 		<Spanish>(&lt;SHIFT+ALT&gt; para preparar la guerra)</Spanish>
 		<Polish>(SHIFT+ALT) aby Wypowiedzieć Wojnę)</Polish>
@@ -9701,7 +9707,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_TRAIT_CYCLING_HELP</Tag>
 		<English>Hold down shift and mouseover again to open up the next trait's full display.</English>
 		<French>Maintenez la touche MAJ enfoncée et placer la souris pour afficher l'ensemble des informations concernant le prochain trait.</French>
-		<German>Drücken Sie [SHIFT] beim Aufrufen dieser Daten, um ausführliche Informationen über die nächste Eigenschaft dieses Oberhaupts zu erhalten.</German>
+		<German>Drücken Sie &lt;UMSCHALT&gt; beim Aufrufen dieser Daten, um ausführliche Informationen über die nächste Eigenschaft dieses Oberhaupts zu erhalten.</German>
 		<Italian>Tieni premuto SHIFT e sposta sopra il cursore del mouse per vedere le caratteristiche approfondite del prossimo tratto.</Italian>
 		<Polish>Przytrzymaj wciśnięty SHIFT i najedź myszką by otworzyć pełne okno następnej cechy.</Polish>
 		<Russian>Удерживайте Shift и наведите курсор мыши еще раз, чтобы открыть полный экран с характеристиками черт.</Russian>
@@ -13859,18 +13865,18 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES</Tag>
-		<English>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Requires[SPACE]</English>
-		<French>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
-		<German>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
-		<Russian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Òðåáóåòñÿ:[SPACE]</Russian>
+		<English>[NEWLINE][COLOR_WARNING_TEXT]Requires[SPACE]</English>
+		<French>[NEWLINE][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
+		<German>[NEWLINE][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
+		<Italian>[NEWLINE][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
+		<Spanish>[NEWLINE][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
+		<Polish>[NEWLINE][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
+		<Russian>[NEWLINE][COLOR_WARNING_TEXT]Òðåáóåòñÿ:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_IN_CITY_VICINITY</Tag>
-		<English>[COLOR_WARNING_TEXT]Bonus required in city and in city vicinity, or manufactured locally:</English>
-		<French>[COLOR_WARNING_TEXT]Bonus requis dans la ville et ses environs, ou fabriqué localement:</French>
+		<English>[COLOR_WARNING_TEXT]Bonus required in city and in city vicinity, or manufactured locally:[SPACE]</English>
+		<French>[COLOR_WARNING_TEXT]Bonus requis dans la ville et ses environs, ou fabriqué localement:[SPACE]</French>
 		<Russian>[COLOR_WARNING_TEXT]Íåîáõîäèì îõâàò ãîðîäñêîé ãðàíèöåé:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
@@ -13885,9 +13891,9 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_RAW_IN_CITY_VICINITY</Tag>
-		<English>[COLOR_WARNING_TEXT]Bonus required in city vicinity, or manufactured locally (No need for improvement):</English>
-		<French>[COLOR_WARNING_TEXT]Bonus requis dans les environs de la ville ou fabriqué localement (pas besoin d'amélioration):</French>
-		<Russian>[COLOR_WARNING_TEXT]Бонус, расположенный в окрестностях города или произведенный на месте (не требует улучшения): </Russian>
+		<English>[COLOR_WARNING_TEXT]Bonus required in city vicinity, or manufactured locally (No need for improvement):[SPACE]</English>
+		<French>[COLOR_WARNING_TEXT]Bonus requis dans les environs de la ville ou fabriqué localement (pas besoin d'amélioration):[SPACE]</French>
+		<Russian>[COLOR_WARNING_TEXT]Бонус, расположенный в окрестностях города или произведенный на месте (не требует улучшения):[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_RAW_VICINITY_BONUS</Tag>
@@ -21281,6 +21287,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_TB_PRESSALT_STR</Tag>
 		<English>Press ALT to view all Strength In Numbers Modifiers</English>
 		<French>Appuyer sur 'ALT' pour voir tous les modificateurs du Combat</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]&lt;ALT&gt;[COLOR_REVERT] für Gemeinsam-sind-wir-stark-Modifikatoren[COLOR_REVERT]</German>	
 		<Italian>Premi ALT per vedere tutti i modificatori riguardanti La forza nei numeri</Italian>
 		<Polish>Naciśnij ALT aby zobaczyć Modyfikatory Siły-w-Grupie</Polish>
 		<Russian>Нажмите ALT, чтобы просмотреть все модификаторы Силы в числах</Russian>
@@ -21289,6 +21296,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_TB_PRESSCTRL</Tag>
 		<English>[ICON_BULLET]Press CTRL for Advanced Combat calculations.</English>
 		<French>[ICON_BULLET]Appuyer sur [BOLD]CTRL[\BOLD] pour les calculs du Combat Avancé.</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]&lt;STRG&gt;[COLOR_REVERT] für Berechnung erweiterter Siegchancen[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Premi [BOLD]CTRL[\BOLD] per i calcoli di Combattimento avanzato.</Italian>
 		<Polish>[ICON_BULLET]Naciśnij [BOLD]CTRL[\BOLD] dla Zaawansowanych Obliczeń Walki.</Polish>
 		<Russian>[ICON_BULLET]Нажмите CTRL для расширенных расчетов боя.</Russian>
@@ -21316,5 +21324,20 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;UMSCHALT&gt;[COLOR_REVERT] für Anzeige der Kategorien</German>
 		<Polish>Naciśnij SHIFT aby zobaczyć Klasy Bojowe</Polish>
 		<Russian>Íàæìèòå SHIFT äëÿ ïðîñìîòðà áîåâûõ êëàññîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_REQUIRES_STRING</Tag>
+		<!-- %s1_Text = can be any building, bonus, civic etc -->
+		<English>[COLOR_WARNING_TEXT]Requires %s1_Text[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert : %s1_Text[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Erfordert: %s1_Text[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede %s1_Text[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Text[COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]Требует %s1_Text[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ENEMY_TROOPS_SPOTTED</Tag>
+		<English>The enemy has been spotted near %s1_CityName!</English>
+		<Russian>Враг был замечен рядом с %s1_CityName!</Russian>
 	</TEXT>
 </Civ4GameText>

@@ -6327,22 +6327,6 @@
 		<Russian>Âèä îáîðîíèòåëüíîãî ñîþçà:</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__CHOOSE_RELIGION_HOVER</Tag>
-		<English>Works the same as the game option version, except that you not only choose your own founding faith, but also the AI's</English>
-		<French>Cette Option fonctionne de la même manière que l'option originale du Jeu, mais permet également de choisir les Religions qui sont découvertes par l'IA</French>
-		<German>Funktioniert wie die normale Spieloption, außer dass man nicht nur den selbst erforschten Glauben, sondern auch den der KIs auswählen kann</German>
-		<Spanish>Funciona igual que la opción de juego original, excepto que no solo escoges tu religión, sino también la de la IA.</Spanish>
-		<Russian>Ýòà îïöèÿ óñòàíàâëèâàåò îãðàíè÷åíèÿ íà êîíêðåòíûå ðåëèãèè, êîòîðûå ìîæåò îñíîâàòü èãðîê, ëèáî ÈÈ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__CHOOSE_RELIGION_TEXT</Tag>
-		<English>Choose Religions</English>
-		<French>Choix des Religions</French>
-		<German>Religion auswählen</German>
-		<Spanish>Elegir religión</Spanish>
-		<Russian>Âûáîð ðåëèãèé</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_ACTIVE_DEFENSE_HOVER</Tag>
 		<English>Allows patrolling fighters to actively engage enemy units</English>
 		<French>Autorise les avions de Chasse en patrouille d'engager automatiquement les unités ennemies</French>
@@ -7766,24 +7750,6 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<Russian>Ïðèðîñò ñëîæíîñòè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEOBSOLETEBUILDINGS_HOVER</Tag>
-		<English>Hides Obsolete Buildings from the main city screen.</English>
-		<French>Masque les Bâtiments Obsolètes de l'Ecran principal de la ville.</French>
-		<German>Blendet veraltete Gebäude in der Stadtansicht aus.</German>
-		<Italian>Nasconde gli edifici obsoleti dallo schermo principale della città.</Italian>
-		<Spanish>Oculta los edificios obsoletos de la vista principal de la ciudad.</Spanish>
-		<Russian>Óñòàðåâøèå ïîñòðîéêè íà ãëàâíîì ýêðàíå ãîðîäà áóäóò ñêðûòû.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEOBSOLETEBUILDINGS_TEXT</Tag>
-		<English>Hide Obsolete Buildings</English>
-		<French>Masquer les Bâtiments Obsolètes</French>
-		<German>Veraltete Gebäude ausblenden</German>
-		<Italian>Nascondi edifici obsoleti</Italian>
-		<Spanish>Ocultar edificios obsoletos</Spanish>
-		<Russian>Ñêðûòü óñòàðåâø. çäàíèÿ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEREPLACEDBUILDINGS_HOVER</Tag>
 		<English>Hides any buildings from the city contruct queue if their upgraded form can be built immediately. (e.g The harbor will be hidden if the Port is available).</English>
 		<French>Masque tous les bâtiments de la liste de production si la version améliorée de ces bâtiments est déjà disponible (example: sera masqué si le Port est disponible).</French>
@@ -7818,42 +7784,6 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<Italian>Nascondi azioni dei lavoratori non disponibili</Italian>
 		<Spanish>Ocultar acciones de trabajadores no disponibles</Spanish>
 		<Russian>Ñêðûòü íåäîñòóïíûå çàäàíèÿ </Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEUNCONSTRUCTABLEBUILDINGS_HOVER</Tag>
-		<English>Hides all buildings from the city queue that cannot be constructed. Change takes effect after loading any save or staring a new game.</English>
-		<French>Masque tous les bâtiments qui ne peuvent pas être construits de la liste de production.</French>
-		<German>Blendet alle Gebäude in der Produktionsliste der Stadt aus, die momentan nicht errichtet werden können.</German>
-		<Italian>Nasconde dalla coda di produzione della città tutti gli edifici che non possono essere costruiti.</Italian>
-		<Spanish>Oculta todos los edificios de la cola de producción de la ciudad que no pueden ser construidos.</Spanish>
-		<Russian>Ñêðûâàåò âñå çäàíèÿ èç ãîðîäñêîé î÷åðåäè, êîòîðûå íå ìîãóò áûòü ïîñòðîåíû â äàííûé ìîìåíò.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEUNCONSTRUCTABLEBUILDINGS_TEXT</Tag>
-		<English>Hide Unconstructable Buildings</English>
-		<French>Masquer les Bâtiments non-Constructibles</French>
-		<German>Nur aktuell baubare Gebäude anzeigen</German>
-		<Italian>Nascondi edifici non costruibili</Italian>
-		<Spanish>Ocultar edificios no construibles</Spanish>
-		<Russian>Ñêðûòü íåäîñòóï. ïîñòðîéêè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEUNTRAINABLEUNITS_HOVER</Tag>
-		<English>Hides all units from the city queue that cannot be constructed. Change takes effect after loading any save or staring a new game.</English>
-		<French>Masque toutes les unités qui ne peuvent pas être construites de la liste de production.</French>
-		<German>Blendet alle Einheiten in der Produktionsliste der Stadt aus, die momentan nicht ausgebildet werden können.</German>
-		<Italian>Nasconde dalla coda di produzione della città tutte le unità che non possono essere costruite.</Italian>
-		<Spanish>Oculta todas las unidades de la cola de producción de la ciudad que no pueden ser entrenadas.</Spanish>
-		<Russian>Èñêëþ÷àåò èç ãîðîäñêîé î÷åðåäè ëþáûå îòðÿäû, êîòîðûå íå ìîãóò áûòü ïîñòðîåíû â äàííûé ìîìåíò.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEUNTRAINABLEUNITS_TEXT</Tag>
-		<English>Hide Untrainable Units</English>
-		<French>Masquer les Unités non-Constructibles</French>
-		<German>Nur aktuell trainierbare Einheiten anzeigen</German>
-		<Italian>Nascondi unità non costruibili</Italian>
-		<Spanish>Ocultar unidades no entrenables</Spanish>
-		<Russian>Ñêðûòü íåäîñò. þíèòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IGNOREDISABLEDBUILDINGALERTS_HOVER</Tag>
@@ -8231,24 +8161,6 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<Italian>Mostra tratti delle civiltà</Italian>
 		<Spanish>Mostrar rasgos de civilización</Spanish>
 		<Russian>Ïîêàç ÷åðò öèâèëèçàöèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__SHOWCOASTALBUILDINGS_HOVER</Tag>
-		<English>Shows coastal buildings in the city queue when they are hidden because of coastal or river prerequisites</English>
-		<French>Affiche les Bâtiments côtiers dans la Liste de production lorsqu'il sont cachés en raison des pré-requis (côtes ou rivière)</French>
-		<German>Mit dieser Option werden Gebäude in der Liste der Stadtansicht angezeigt, die normalerweise ausgeblendet werden, da sie Küsten- oder Flusslage erfordern.</German>
-		<Italian>Mostra gli edifici costieri nella coda di produzione della città quando sono bloccati da prerequisiti di costa o fiume</Italian>
-		<Spanish>Muestra los edificios costeros en la cola de producción aunque estén ocultos por los requisitos de costa o río alrededor.</Spanish>
-		<Russian>Ïîêàçûâàåò ïðèáðåæíûå çäàíèÿ â ãîðîäñêîé î÷åðåäè, êîãäà îíè ñêðûòû èç-çà íåâûïîëíåííûõ óñëîâèé äëÿ ñòðîèòåëüñòâà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__SHOWCOASTALBUILDINGS_TEXT</Tag>
-		<English>Show Coastal Buildings</English>
-		<French>Voir les Bâtiments Côtiers</French>
-		<German>Küstengebäude zeigen</German>
-		<Italian>Mostra edifici costieri</Italian>
-		<Spanish>Mostrar edificios costeros</Spanish>
-		<Russian>Ïîêàç ïðèáðåæí. ñòðîåíèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__SHOWREVCIVICS_HOVER</Tag>

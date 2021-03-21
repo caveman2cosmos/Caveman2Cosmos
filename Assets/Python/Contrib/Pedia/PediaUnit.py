@@ -395,7 +395,7 @@ class PediaUnit:
 		# Special
 		szSpecial = ""
 		if CvTheUnitInfo.isIgnoreBuildingDefense():
-			szSpecial += TRNSLTR.getText("TXT_KEY_PEDIA_UNIT_IGNORES_BUILDING_DEFENSE", ())
+			szSpecial += TRNSLTR.getText("TXT_KEY_PEDIA_UNIT_IGNORES_BUILDING_DEFENSE", ()) + "\n"
 		if CvTheUnitInfo.getConscriptionValue() > 0:
 			szSpecial += TRNSLTR.getText("TXT_KEY_PEDIA_UNIT_DRAFTABLE", ()) + "\n"
 		if CvTheUnitInfo.getUnitCaptureType() > 0:

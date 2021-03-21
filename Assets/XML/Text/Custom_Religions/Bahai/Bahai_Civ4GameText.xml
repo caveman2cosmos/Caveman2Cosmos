@@ -150,12 +150,14 @@
 		<French>"Oh mon dieu! Accorde ta faveur, et donner ta bénédiction. Accorde ta grâce, et de donner une partie de ta générosité? Envoyer bas ta pluie céleste, et de fournir la multitude et l'abondance." - Abdul-Bahá</French>
 		<Spanish>"¡Oh Dios! Dame tu favor, y otórgame tu bendición. Concédeme tu gracia, y entrégame una porción de tu belleza. Envíame hacia aquí tu lluvia celestial, y proporcióname tu abundancia y plenitud." - Abdul-Bahá</Spanish>
 		<Polish>"Boże! Ześlij na mnie łaskę i pobłogosław mnie. Ześlij na mnie łaskę, pobłogosław deszczem i obfitościom i dostatkiem." - ‘Abdu'l-Baha</Polish>
+		<Russian>«О Боже! Даруй Твою благосклонность и даруй благословение Твое. Сподоби милость Твою и дай часть щедрости Твоей. Пошли Свой небесный дождь и дай Твое изобилие и благодать». - Абдул-Баха</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BAHAI_STRATEGY</Tag>
 		<English>Research Baha'i to found a Religion</English>
 		<French>Recherchez Baha'i pour fonder une religion</French>
 		<Spanish>Investiga el Bahaísmo para fundar una religión.</Spanish>
+		<Russian>Изучите [COLOR_HIGHLIGHT_TEXT]Бахаи[COLOR_REVERT], чтобы основать одноименную религию.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_BAHAI</Tag>

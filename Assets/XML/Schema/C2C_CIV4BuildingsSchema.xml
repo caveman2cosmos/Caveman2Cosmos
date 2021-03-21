@@ -341,7 +341,7 @@
 	<ElementType name="HolyCity" content="textOnly"/>
 	<ElementType name="ReligionType" content="textOnly"/>
 	<ElementType name="StateReligion" content="textOnly"/>
-	<ElementType name="bStateReligion" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNeedStateReligionInCity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="PrereqReligion" content="textOnly"/>
 	<ElementType name="PrereqCorporation" content="textOnly"/>
 	<ElementType name="FoundsCorporation" content="textOnly"/>
@@ -396,8 +396,6 @@
 	<ElementType name="iAIWeight" content="textOnly" dt:type="int"/>
 	<ElementType name="iCost" content="textOnly" dt:type="int"/>
 	<ElementType name="iHurryCostModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iAdvancedStartCost" content="textOnly" dt:type="int"/>
-	<ElementType name="iAdvancedStartCostIncrease" content="textOnly" dt:type="int"/>
 	<ElementType name="iMinAreaSize" content="textOnly" dt:type="int"/>
 	<ElementType name="iConquestProb" content="textOnly" dt:type="int"/>
 	<ElementType name="iCitiesPrereq" content="textOnly" dt:type="int"/>
@@ -499,6 +497,7 @@
 	<ElementType name="iNumUnitFullHeal" content="textOnly" dt:type="int"/>
 	<ElementType name="iOccupationTimeModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="ExtendsBuilding" content="textOnly"/>
+	<ElementType name="ObsoletesToBuilding" content="textOnly"/>
 	<ElementType name="iNumPopulationEmployed" content="textOnly" dt:type="int"/>
 	<ElementType name="iHealthPercentPerPopulation" content="textOnly" dt:type="int"/>
 	<ElementType name="iHappinessPercentPerPopulation" content="textOnly" dt:type="int"/>
@@ -543,9 +542,6 @@
 		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="CommercePerPopChanges" content="eltOnly">
-		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="ObsoleteSafeCommerceChanges" content="eltOnly">
 		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="CommerceChangeDoubleTimes" content="eltOnly">
@@ -777,7 +773,7 @@
 		<element type="HolyCity" minOccurs="0"/>
 		<element type="ReligionType" minOccurs="0"/>
 		<element type="StateReligion" minOccurs="0"/>
-		<element type="bStateReligion" minOccurs="0"/>
+		<element type="bNeedStateReligionInCity" minOccurs="0"/>
 		<element type="PrereqReligion" minOccurs="0"/>
 		<element type="PrereqCorporation" minOccurs="0"/>
 		<element type="FoundsCorporation" minOccurs="0"/>
@@ -839,8 +835,6 @@
 		<element type="iAIWeight" minOccurs="0"/>
 		<element type="iCost" minOccurs="0"/>
 		<element type="iHurryCostModifier" minOccurs="0"/>
-		<element type="iAdvancedStartCost" minOccurs="0"/>
-		<element type="iAdvancedStartCostIncrease" minOccurs="0"/>
 		<element type="iMinAreaSize" minOccurs="0"/>
 		<element type="iConquestProb" minOccurs="0"/>
 		<element type="iCitiesPrereq" minOccurs="0"/>
@@ -948,6 +942,7 @@
 		<element type="CommerceAttacks" minOccurs="0"/>
 		<element type="UnitCombatExtraStrengths" minOccurs="0"/>
 		<element type="ExtendsBuilding" minOccurs="0"/>
+		<element type="ObsoletesToBuilding" minOccurs="0"/>
 		<element type="iNumPopulationEmployed" minOccurs="0"/>
 		<element type="iHealthPercentPerPopulation" minOccurs="0"/>
 		<element type="iHappinessPercentPerPopulation" minOccurs="0"/>
@@ -965,7 +960,6 @@
 		<element type="GlobalYieldModifiers" minOccurs="0"/>
 		<element type="CommerceChanges" minOccurs="0"/>
 		<element type="CommercePerPopChanges" minOccurs="0"/>
-		<element type="ObsoleteSafeCommerceChanges" minOccurs="0"/>
 		<element type="CommerceChangeDoubleTimes" minOccurs="0"/>
 		<element type="CommerceModifiers" minOccurs="0"/>
 		<element type="GlobalCommerceModifiers" minOccurs="0"/>

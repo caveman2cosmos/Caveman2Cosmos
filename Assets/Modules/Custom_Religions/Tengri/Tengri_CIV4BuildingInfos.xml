@@ -22,17 +22,16 @@
 			<FreePromotion>PROMOTION_WIND_HORSE</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>104</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iHealth>1</iHealth>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>6</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -88,18 +87,17 @@
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>104</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iHealth>1</iHealth>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iMilitaryProductionModifier>15</iMilitaryProductionModifier>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -142,16 +140,15 @@
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>135</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>6</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -198,15 +195,14 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -242,17 +238,16 @@
 			<FreePromotion>PROMOTION_WIND_HORSE2</FreePromotion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>104</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>
 			<iHealth>1</iHealth>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>6</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>

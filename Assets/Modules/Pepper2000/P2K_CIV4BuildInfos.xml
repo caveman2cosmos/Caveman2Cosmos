@@ -7,10 +7,36 @@
 	<!-- Build Infos -->
 <Civ4BuildInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<BuildInfos>
+		<BuildInfo>
+			<Type>BUILD_LUNAR_PATH</Type>
+			<Description>TXT_KEY_BUILD_LUNAR_PATH</Description>
+			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<iTime>600</iTime>
+			<iCost>25</iCost>
+			<bKill>0</bKill>
+			<RouteType>ROUTE_LUNAR_PATH</RouteType>
+			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
+			<HotKey>KB_R</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/Builds/buildlunarpath.dds</Button>
+		</BuildInfo>
+		<BuildInfo>
+			<Type>BUILD_PLANETARY_MAGLEV</Type>
+			<Description>TXT_KEY_BUILD_PLANETARY_MAGLEV</Description>
+			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
+			<iTime>600</iTime>
+			<iCost>50</iCost>
+			<bKill>0</bKill>
+			<RouteType>ROUTE_PLANETARY_MAGLEV</RouteType>
+			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
+			<HotKey>KB_R</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/Builds/buildplanetarymaglev.dds</Button>
+		</BuildInfo>
         <BuildInfo>
 			<Type>BUILD_ORBITAL_TRAJECTORY</Type>
 			<Description>TXT_KEY_BUILD_ORBITAL_TRAJECTORY</Description>
-			<PrereqTech>TECH_COILGUN</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iTime>600</iTime>
 			<iCost>100</iCost>
 			<bKill>0</bKill>

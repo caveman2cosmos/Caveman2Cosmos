@@ -538,7 +538,7 @@ void CvMap::updateMinOriginalStartDist(const CvArea* pArea)
 					{
 					    //int iCrowDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
 					    //iDist = std::min(iDist,  iCrowDistance * 2);
-						if ((pLoopPlot->getMinOriginalStartDist() == -1) || (iDist < pLoopPlot->getMinOriginalStartDist()))
+						if (pLoopPlot->getMinOriginalStartDist() == -1 || iDist < pLoopPlot->getMinOriginalStartDist())
 						{
 							pLoopPlot->setMinOriginalStartDist(iDist);
 						}
@@ -931,7 +931,7 @@ int CvMap::getLandPlots() const
 void CvMap::changeLandPlots(int iChange)
 {
 	m_iLandPlots += iChange;
-	FAssert(getLandPlots() >= 0);
+	FASSERT_NOT_NEGATIVE(getLandPlots())
 }
 
 
@@ -944,7 +944,7 @@ int CvMap::getOwnedPlots() const
 void CvMap::changeOwnedPlots(int iChange)
 {
 	m_iOwnedPlots += iChange;
-	FAssert(getOwnedPlots() >= 0);
+	FASSERT_NOT_NEGATIVE(getOwnedPlots())
 }
 
 
@@ -1013,7 +1013,7 @@ void CvMap::changeNumBonuses(BonusTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	m_paiNumBonus[eIndex] += iChange;
-	FAssertMsg(m_paiNumBonus[eIndex] >= 0, "Negative bonus occurance on the map!");
+	FASSERT_NOT_NEGATIVE(m_paiNumBonus[eIndex])
 }
 
 
@@ -1028,7 +1028,7 @@ void CvMap::changeNumBonusesOnLand(BonusTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex)
 	m_paiNumBonusOnLand[eIndex] += iChange;
-	FAssert(getNumBonusesOnLand(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getNumBonusesOnLand(eIndex))
 }
 
 
@@ -1692,11 +1692,6 @@ void CvMap::toggleUnitsDisplay()
 						{
 							paiBuiltNum[iI][7]++;
 						}
-
-						//if (pCity->getBuildingOriginalTime((BuildingTypes)iI) > 1000)
-						//{
-						//	pCity->setNumRealBuilding((BuildingTypes)iI, 0);
-						//}
 					}
 				}
 			}

@@ -685,25 +685,11 @@ enum WorldSizeTypes
 	NUM_WORLDSIZE_TYPES
 };
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-
 enum MapTypes
 {
 	NO_MAP = -1,
 	MAP_INITIAL,
-	MAX_MAPS = 10,
 };
-
-enum MapSwitchTypes
-{
-	NO_MAPSWITCH = -1,
-};
-
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 // This is our current relationship with each
 // one of our connected network peers
@@ -875,7 +861,8 @@ enum GameOptionTypes
 	GAMEOPTION_ONE_CITY_CHALLENGE,
 	GAMEOPTION_CHALLENGE_CUT_LOSERS,
 	GAMEOPTION_CHALLENGE_HIGH_TO_LOW,
-	GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY
+	GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY,
+	GAMEOPTION_ADVANCED_ROUTES
 };
 
 #define NUM_GAMEOPTION_TYPES GC.getNumGameOptionInfos()
@@ -1407,15 +1394,10 @@ enum UnitCombatTypes
 {
 	NO_UNITCOMBAT = -1,
 };
-//TB Promotion Line Mod begin
+
 enum PromotionLineTypes
 {
 	NO_PROMOTIONLINE = -1,
-};
-
-enum MapCategoryTypes
-{
-	NO_MAPCATEGORY = -1,
 };
 
 enum IdeaClassTypes
@@ -3193,12 +3175,9 @@ enum ModderOptionTypes
 	NO_MODDEROPTION = -1,
 
 	MODDEROPTION_FLEXIBLE_DIFFICULTY,
-	MODDEROPTION_SHOW_COASTAL_BUILDINGS,
-	MODDEROPTION_HIDE_OBSOLETE_BUILDINGS,
 	MODDEROPTION_HIDE_REPLACED_BUILDINGS,
 	MODDEROPTION_NO_FRIENDLY_PILLAGING,
 	MODDEROPTION_HIDE_UNAVAILBLE_BUILDS,
-	MODDEROPTION_HIDE_OBSOLETE_BUILDS,
 	MODDEROPTION_SHOW_REV_EFFECTS,
 	MODDEROPTION_USE_LANDMARK_NAMES,
 	MODDEROPTION_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS,

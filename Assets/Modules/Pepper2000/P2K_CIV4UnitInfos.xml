@@ -2367,7 +2367,7 @@
 			</UnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_MAGLEV</BuildType>
+					<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2469,7 +2469,7 @@
 			</UnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_MAGLEV</BuildType>
+					<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2551,7 +2551,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_COILGUN</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>1000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -3445,6 +3445,10 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_DISTANT_RESEARCH_BASE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_PLACE_GALAXY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
@@ -9883,7 +9887,7 @@
 			</UnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
+					<BuildType>BUILD_LUNAR_PATH</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -9954,11 +9958,11 @@
 			</UnitAIs>
 			<Builds>
 				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
+					<BuildType>BUILD_LUNAR_PATH</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MAGLEV</BuildType>
+					<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
