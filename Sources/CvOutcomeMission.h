@@ -34,7 +34,7 @@ public:
 	void execute(CvUnit* pUnit);
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvOutcomeMission* pOutcomeMission, CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvOutcomeMission* pOutcomeMission);
 
 	void getCheckSum(unsigned int& iSum) const;
 

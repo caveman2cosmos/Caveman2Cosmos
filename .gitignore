@@ -60,3 +60,6 @@ Sources/profile.json
 *.bak
 
 FPKTemp/
+
+*.log
+Logs

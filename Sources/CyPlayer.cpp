@@ -286,6 +286,11 @@ int CyPlayer::countNumBuildings(int /*BuildingTypes*/ eBuilding) const
 	return m_pPlayer->countNumBuildings((BuildingTypes) eBuilding);
 }
 
+bool CyPlayer::hasBuilding(int /*BuildingTypes*/ eBuilding) const
+{
+	return m_pPlayer->hasBuilding((BuildingTypes) eBuilding);
+}
+
 int CyPlayer::countNumCitiesConnectedToCapital() const
 {
 	return m_pPlayer->countNumCitiesConnectedToCapital();

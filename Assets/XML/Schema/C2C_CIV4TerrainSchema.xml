@@ -659,7 +659,6 @@
 	<ElementType name="bOutsideBorders" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iAdvancedStartCost" content="textOnly" dt:type="int"/>
 	<ElementType name="iAdvancedStartRemoveCost" content="textOnly" dt:type="int"/>
-	<ElementType name="iAdvancedStartCostIncrease" content="textOnly" dt:type="int"/>
 	<ElementType name="iTilesPerGoody" content="textOnly" dt:type="int"/>
 	<ElementType name="iUpgradeTime" content="textOnly" dt:type="int"/>
 	<ElementType name="bMakesValid" content="textOnly" dt:type="boolean"/>
@@ -728,7 +727,6 @@
 		<element type="bPermanent" minOccurs="0"/>
 		<element type="bUseLSystem" minOccurs="0"/>
 		<element type="iAdvancedStartCost" minOccurs="0"/>
-		<element type="iAdvancedStartCostIncrease" minOccurs="0"/>
 		<element type="iTilesPerGoody" minOccurs="0"/>
 		<element type="iGoodyRange" minOccurs="0"/>
 		<element type="iFeatureGrowth" minOccurs="0"/>

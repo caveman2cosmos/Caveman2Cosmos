@@ -179,7 +179,7 @@ bool CvPropertyPropagator::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyPropagator::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyPropagator::copyNonDefaults(CvPropertyPropagator* pProp)
 {
 //	if (m_eProperty == NO_PROPERTY)
 //		m_eProperty = pProp->getProperty();
@@ -326,9 +326,9 @@ bool CvPropertyPropagatorSpread::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyPropagatorSpread::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyPropagatorSpread::copyNonDefaults(CvPropertyPropagator* pProp)
 {
-	CvPropertyPropagator::copyNonDefaults(pProp, pXML);
+	CvPropertyPropagator::copyNonDefaults(pProp);
 	const CvPropertyPropagatorSpread* pOther = static_cast<const CvPropertyPropagatorSpread*>(pProp);
 	if (m_iPercent == 0)
 		m_iPercent = pOther->getPercent();
@@ -427,9 +427,9 @@ bool CvPropertyPropagatorGather::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyPropagatorGather::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyPropagatorGather::copyNonDefaults(CvPropertyPropagator* pProp)
 {
-	CvPropertyPropagator::copyNonDefaults(pProp, pXML);
+	CvPropertyPropagator::copyNonDefaults(pProp);
 	const CvPropertyPropagatorGather* pOther = static_cast<const CvPropertyPropagatorGather*>(pProp);
 	if (m_iAmountPerTurn == 0)
 		m_iAmountPerTurn = pOther->getAmountPerTurn();
@@ -572,9 +572,9 @@ bool CvPropertyPropagatorDiffuse::read(CvXMLLoadUtility *pXML)
 	return true;
 }
 
-void CvPropertyPropagatorDiffuse::copyNonDefaults(CvPropertyPropagator *pProp, CvXMLLoadUtility *pXML)
+void CvPropertyPropagatorDiffuse::copyNonDefaults(CvPropertyPropagator* pProp)
 {
-	CvPropertyPropagator::copyNonDefaults(pProp, pXML);
+	CvPropertyPropagator::copyNonDefaults(pProp);
 	const CvPropertyPropagatorDiffuse* pOther = static_cast<const CvPropertyPropagatorDiffuse*>(pProp);
 	if (m_iPercent == 0)
 		m_iPercent = pOther->getPercent();

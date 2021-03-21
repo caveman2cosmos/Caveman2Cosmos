@@ -12,6 +12,7 @@ BeginMap
 	world size=WORLDSIZE_DUEL
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_LOW
+	Randomize Resources=1
 EndMap
 BeginPlayer
 	StartingX=55, StartingY=27

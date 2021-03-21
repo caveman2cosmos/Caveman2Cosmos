@@ -223,7 +223,7 @@ class CvTechSplashScreen:
 				if self.iTech == GC.getTechInfo(j).getPrereqAndTechs(k):
 					screen.attachImageButton(panelName4, "", GC.getTechInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_DERIVED_TECH, j, self.iTech, False)
 
-#---Eingefügt ENDE ------------------------------------------------
+#---EingefÃ¼gt ENDE ------------------------------------------------
 		# Allows
 		# szAllowsTitleDesc = "<font=3b>" + TRNSLTR.getText("TXT_KEY_PEDIA_ALLOWS", ()) + ":"
 		# screen.setText("AllowsTitle", "", szAllowsTitleDesc, 1<<0, self.X_ALLOWS_PANEL+self.iMarginSpace, self.Y_ALLOWS_PANEL - 20, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -258,7 +258,7 @@ class CvTechSplashScreen:
 			if GC.getPromotionInfo(j).getTechPrereq() == self.iTech:
 				screen.attachImageButton(panelName3, "", GC.getPromotionInfo(j).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, j, 1, False)
 
-#---Eingefügt START - kann komplett gelöscht werden --------------
+#---EingefÃ¼gt START - kann komplett gelÃ¶scht werden --------------
 
 		# Improvements
 		for j in range(GC.getNumBuildInfos()):
