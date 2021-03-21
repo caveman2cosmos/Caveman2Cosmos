@@ -889,9 +889,10 @@ public:
 	int getNumNoAutoEquiptoCombatClassTypes() const;
 	bool isNoAutoEquiptoCombatClassType(int i) const;
 
-	int getMapCategoryType(int i) const;
-	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i) const;
+	int getMapType(int i) const;
+	int getNumMapTypes() const;
+	bool isMapType(int i) const;
+	const std::vector<int>& getMapTypes() const { return m_aiMapTypes; }
 
 	// bool vector with delayed resolution
 	int getCureAfflictionChangeType(int i) const;
@@ -1371,7 +1372,7 @@ protected:
 	std::vector<int> m_aiNotOnUnitCombatTypes;
 	std::vector<int> m_aiNotOnDomainTypes;
 	std::vector<int> m_aiNoAutoEquiptoCombatClassTypes;
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int> m_aiMapTypes;
 	// bool vector with delayed resolution
 	std::vector<int> m_aiCureAfflictionChangeTypes;
 	std::vector<int> m_aiPrereqBonusTypes;
@@ -1961,9 +1962,10 @@ public:
 	int getNumFeatureImpassableTypes() const;
 	bool isFeatureImpassableType(int i) const;
 
-	int getMapCategoryType(int i) const;
-	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i) const;
+	int getMapType(int i) const;
+	int getNumMapTypes() const;
+	bool isMapType(int i) const;
+	const std::vector<int>& getMapTypes() const { return m_aiMapTypes; }
 
 	int getTrapSetWithPromotionType(int i) const;
 	int getNumTrapSetWithPromotionTypes() const;
@@ -2622,7 +2624,7 @@ protected:
 	std::vector<int> m_aiHealAsTypes;
 	std::vector<int> m_aiTerrainImpassableTypes;
 	std::vector<int> m_aiFeatureImpassableTypes;
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int> m_aiMapTypes;
 	std::vector<int> m_aiTrapSetWithPromotionTypes;
 	std::vector<int> m_aiTrapImmunityUnitCombatTypes;
 	// int vectors utilizing struct with delayed resolution
@@ -3991,9 +3993,10 @@ public:
 	int getNumPrereqBonusTypes() const;
 	bool isPrereqBonusType(int i) const;
 
-	int getMapCategoryType(int i) const;
-	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i) const;
+	int getMapType(int i) const;
+	int getNumMapTypes() const;
+	bool isMapType(int i) const;
+	const std::vector<int>& getMapTypes() const { return m_aiMapTypes; }
 
 	//Struct Vector with delayed resolution
 	int getNumTerrainStructs() const;
@@ -4045,7 +4048,7 @@ protected:
 	bool* m_pabFeatureRemove;
 
 	std::vector<int> m_aiPrereqBonusTypes;
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int> m_aiMapTypes;
 
 	std::vector<TerrainStructs> m_aTerrainStructs;
 	std::vector<PlaceBonusTypes> m_aPlaceBonusTypes;
@@ -4088,10 +4091,10 @@ public:
 	bool isBad() const;
 	bool isNaval() const;
 
-	//Vectors
-	int getMapCategoryType(int i) const;
-	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i) const;
+	int getMapType(int i) const;
+	int getNumMapTypes() const;
+	bool isMapType(int i) const;
+	const std::vector<int>& getMapTypes() const { return m_aiMapTypes; }
 
 	const TCHAR* getSound() const;
 
@@ -4124,7 +4127,7 @@ protected:
 	bool m_bBad;
 	bool m_bNaval;
 
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int> m_aiMapTypes;
 
 	CvString m_szSound;
 
@@ -4331,10 +4334,10 @@ public:
 	bool isImprovementBonusTrade(int i) const;
 	int getImprovementBonusDiscoverRand(int i) const;
 
-	// Other
-	int getMapCategoryType(int i) const;
-	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i) const;
+	int getMapType(int i) const;
+	int getNumMapTypes() const;
+	bool isMapType(int i) const;
+	const std::vector<int>& getMapTypes() const { return m_aiMapTypes; }
 
 	const TCHAR* getButton() const;
 	DllExport const CvArtInfoImprovement* getArtInfo() const;
@@ -4376,7 +4379,7 @@ protected:
 	int m_iPrereqTech;
 	//int** m_ppiTraitYieldChanges;
 
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int> m_aiMapTypes;
 public:
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
@@ -4560,11 +4563,10 @@ public:
 	bool isFeature(int i) const;
 	bool isFeatureTerrain(int i) const;
 
-	//Vectors
-	int getMapCategoryType(int i) const;
-	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i) const;
-
+	int getMapType(int i) const;
+	int getNumMapTypes() const;
+	bool isMapType(int i) const;
+	const std::vector<int>& getMapTypes() const { return m_aiMapTypes; }
 
 	int getNumAfflictionCommunicabilityTypes() const;
 	PromotionLineAfflictionModifier getAfflictionCommunicabilityType(int iPromotionLine, bool bWorkedTile = false, bool bVicinity = false, bool bAccessVolume = false);
@@ -4629,7 +4631,7 @@ protected:
 	bool* m_pbFeature;
 	bool* m_pbFeatureTerrain;
 
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int> m_aiMapTypes;
 
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
 
@@ -4701,10 +4703,10 @@ public:
 
 	bool canBeSecondary() const;
 
-	// Other
-	int getMapCategoryType(int i) const;
-	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i) const;
+	int getMapType(int i) const;
+	int getNumMapTypes() const;
+	bool isMapType(int i) const;
+	const std::vector<int>& getMapTypes() const { return m_aiMapTypes; }
 
 	int getNumAfflictionCommunicabilityTypes() const;
 	PromotionLineAfflictionModifier getAfflictionCommunicabilityType(int iPromotionLine, bool bWorkedTile = false, bool bVicinity = false, bool bAccessVolume = false);
@@ -4726,7 +4728,7 @@ protected:
 	bool m_bIgnoreTerrainCulture;
 	bool m_bCanGrowAnywhere;
 
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int> m_aiMapTypes;
 public:
 
 	void copyNonDefaults(const CvFeatureInfo* pClassInfo);
@@ -4931,10 +4933,10 @@ public:
 	int getHillsYieldChange(int i) const;
 	int get3DAudioScriptFootstepIndex(int i) const;
 
-	// Other
-	int getMapCategoryType(int i) const;
-	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i) const;
+	int getMapType(int i) const;
+	int getNumMapTypes() const;
+	bool isMapType(int i) const;
+	const std::vector<int>& getMapTypes() const { return m_aiMapTypes; }
 
 	int getNumAfflictionCommunicabilityTypes() const;
 	PromotionLineAfflictionModifier getAfflictionCommunicabilityType(int iPromotionLine, bool bWorkedTile = false, bool bVicinity = false, bool bAccessVolume = false);
@@ -4989,7 +4991,7 @@ protected:
 	int* m_piHillsYieldChange;
 	int* m_pi3DAudioScriptFootstepIndex;
 
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int> m_aiMapTypes;
 
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
 };
@@ -5413,17 +5415,14 @@ public:
 
 	int getGridWidth() const;
 	int getGridHeight() const;
+
 	int getWrapX() const;
 	int getWrapY() const;
+
 	const CvString getInitialWBMap() const;
 	const CvString getMapScript() const;
-	/*bool isTechShareMap(MapTypes eMap) const;*/
-	const TCHAR* getStartingEvent() const;
-	int getSwitchType() const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-	bool readPass3();
 
 protected:
 	int m_iGridWidth;
@@ -5432,27 +5431,6 @@ protected:
 	int m_iWrapY;
 	CvString m_szInitialWBMap;
 	CvString m_szMapScript;
-	/*bool* m_pabTechShareMaps;*/
-	CvString m_szStartingEvent;
-	int m_iSwitchType;
-};
-
-class CvMapSwitchInfo : public CvInfoBase
-{
-public:
-	CvMapSwitchInfo();
-	virtual ~CvMapSwitchInfo();
-
-	int getMap() const;
-	const TCHAR* getEvent() const;
-	bool isManual() const;
-
-	bool read(CvXMLLoadUtility* pXML);
-
-protected:
-	int m_iMap;
-	CvString m_szEvent;
-	bool m_bManual;
 };
 
 /*******************************/
@@ -5462,7 +5440,7 @@ protected:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //  class : CvClimateInfo
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvClimateInfo :	public CvInfoBase
+class CvClimateInfo : public CvInfoBase
 {
 public:
 
@@ -5674,10 +5652,10 @@ public:
 	int getVictoryMinThreshold(int i) const;
 	int getProjectsNeeded(int i) const;
 
-	// Vectors
-	int getMapCategoryType(int i) const;
-	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i) const;
+	int getMapType(int i) const;
+	int getNumMapTypes() const;
+	bool isMapType(int i) const;
+	const std::vector<int>& getMapTypes() const { return m_aiMapTypes; }
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvProjectInfo* pClassInfo);
@@ -5742,7 +5720,7 @@ protected:
 	int* m_piProjectsNeeded;
 
 	// Vectors
-	std::vector<int> m_aiMapCategoryTypes;
+	std::vector<int> m_aiMapTypes;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -9686,36 +9664,6 @@ protected:
 	std::vector<InvisibleImprovementChanges> m_aVisibleImprovementRangeChanges;
 	std::vector<AfflictionLineChanges> m_aDistanceAttackCommunicabilityTypeChanges;
 	std::vector<InvisibleTerrainChanges> m_aVisibleTerrainRangeChanges;
-};
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-//  class : CvMapCategoryInfo
-//
-//  DESC:   Contains info about Map Category Types
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvMapCategoryInfo :
-	public CvInfoBase
-{
-public:
-
-	CvMapCategoryInfo();
-	virtual ~CvMapCategoryInfo();
-
-	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
-
-	void copyNonDefaults(const CvMapCategoryInfo* pClassInfo);
-
-	void getCheckSum(unsigned int& iSum) const;
-
-	//bools
-	bool isInitialized();
-
-protected:
-	//bools
-	bool m_bInitialized;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
