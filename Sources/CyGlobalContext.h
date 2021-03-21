@@ -77,10 +77,7 @@ public:
 	CvAutomateInfo* getAutomateInfo(int i) const;
 	CvActionInfo* getActionInfo(int i) const;
 	CvInfoBase* getUnitCombatInfo(int i) const;
-	//TB Promotion Line Mod begin
 	CvPromotionLineInfo* getPromotionLineInfo(int i) const;
-	//TB Promotion Line Mod end
-	CvMapCategoryInfo* getMapCategoryInfo(int i) const;
 	CvIdeaClassInfo* getIdeaClassInfo(int i) const;
 	CvIdeaInfo* getIdeaInfo(int i) const;
 	//CvTraitOptionEditsInfo* getTraitOptionEditsInfo(int i) const;
@@ -196,10 +193,7 @@ public:
 	int getNumTurnTimerInfos() const { return GC.getNumTurnTimerInfos(); }
 	int getNumBuildingInfos() const { return GC.getNumBuildingInfos(); }
 	int getNumUnitCombatInfos() const { return GC.getNumUnitCombatInfos(); }
-	//TB Promotion Line Mod begin
 	int getNumPromotionLineInfos() const { return GC.getNumPromotionLineInfos(); }
-	//TB Promotion Line Mod end
-	int getNumMapCategoryInfos() const { return GC.getNumMapCategoryInfos(); }
 	int getNumIdeaClassInfos() const { return GC.getNumIdeaClassInfos(); }
 	int getNumIdeaInfos() const { return GC.getNumIdeaInfos(); }
 	//int getNumTraitOptionEditsInfos() const { return GC.getNumTraitOptionEditsInfos(); }

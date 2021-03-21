@@ -3342,11 +3342,11 @@ bool CvCity::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible)
 		return false;
 	}
 
-	int iCount = GC.getProjectInfo(eProject).getNumMapCategoryTypes();
+	int iCount = GC.getProjectInfo(eProject).getNumMapTypes();
 	bool bFound = (iCount < 1);
 	for (int iI = 0; iI < iCount; iI++)
 	{
-		if (plot()->isMapCategoryType((MapCategoryTypes)GC.getProjectInfo(eProject).getMapCategoryType(iI)))
+		if (plot()->isMapType((MapTypes)GC.getProjectInfo(eProject).getMapType(iI)))
 		{
 			bFound = true;
 			break;
@@ -18570,11 +18570,11 @@ bool CvCity::isValidBuildingLocation(BuildingTypes eBuilding) const
 		return false;
 	}
 
-	const int iCount = kBuilding.getNumMapCategoryTypes();
+	const int iCount = kBuilding.getNumMapTypes();
 	bool bFound = (iCount < 1);
 	for (int iI = 0; iI < iCount; iI++)
 	{
-		if (plot()->isMapCategoryType((MapCategoryTypes)kBuilding.getMapCategoryType(iI)))
+		if (plot()->isMapType((MapTypes)kBuilding.getMapType(iI)))
 		{
 			bFound = true;
 			break;
@@ -19062,7 +19062,7 @@ void CvCity::applyEvent(EventTypes eEvent, const EventTriggeredData* pTriggeredD
 
 bool CvCity::isEventOccured(EventTypes eEvent) const
 {
-	return std::contains(m_aEventsOccured, eEvent);
+	return algo::contains(m_aEventsOccured, eEvent);
 }
 
 void CvCity::setEventOccured(EventTypes eEvent, bool bOccured)

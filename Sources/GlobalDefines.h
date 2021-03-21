@@ -334,7 +334,7 @@
 	DO(FeatureTypes, FEATURE_JUNGLE) \
 	DO(ImprovementTypes, IMPROVEMENT_CITY) \
 	DO(ImprovementTypes, IMPROVEMENT_CITY_RUINS) \
-	DO(MapCategoryTypes, MAPCATEGORY_EARTH) \
+	DO(MapTypes, MAPCATEGORY_EARTH) \
 	DO(PromotionTypes, PROMOTION_ANIMAL_HUNTER) \
 	DO(PromotionTypes, PROMOTION_BARBARIAN_HUNTER) \
 	DO(PromotionLineTypes, PROMOTIONLINE_STANDOUT) \
