@@ -685,25 +685,11 @@ enum WorldSizeTypes
 	NUM_WORLDSIZE_TYPES
 };
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-
 enum MapTypes
 {
 	NO_MAP = -1,
 	MAP_INITIAL,
-	MAX_MAPS = 10,
 };
-
-enum MapSwitchTypes
-{
-	NO_MAPSWITCH = -1,
-};
-
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 // This is our current relationship with each
 // one of our connected network peers
@@ -1408,15 +1394,10 @@ enum UnitCombatTypes
 {
 	NO_UNITCOMBAT = -1,
 };
-//TB Promotion Line Mod begin
+
 enum PromotionLineTypes
 {
 	NO_PROMOTIONLINE = -1,
-};
-
-enum MapCategoryTypes
-{
-	NO_MAPCATEGORY = -1,
 };
 
 enum IdeaClassTypes

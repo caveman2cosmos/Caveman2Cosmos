@@ -1129,7 +1129,7 @@ public:
 
 	void unitGameStateCorrections();
 
-	bool isMapCategoryType(MapCategoryTypes eIndex) const;
+	bool isMapType(MapTypes eIndex) const;
 
 	int countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible) const;
 

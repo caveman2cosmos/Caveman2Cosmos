@@ -31739,7 +31739,7 @@ void CvUnitAI::setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd)
 
 bool CvUnitAI::isWaitingOnUnitAI(int iIndex) const
 {
-	return !isHuman() && std::contains(m_aiWaitingOnUnitAITypes, iIndex);
+	return !isHuman() && algo::contains(m_aiWaitingOnUnitAITypes, iIndex);
 }
 
 bool CvUnitAI::isWaitingOnUnitAIAny() const

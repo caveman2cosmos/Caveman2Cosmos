@@ -120,10 +120,7 @@ class CvMainMenuInfo;
 class CvPropertyInfo;
 class CvOutcomeInfo;
 class CvUnitCombatInfo;
-//TB Promotion Line Mod begin
 class CvPromotionLineInfo;
-//TB Promotion Line Mod end
-class CvMapCategoryInfo;
 class CvIdeaClassInfo;
 class CvIdeaInfo;
 class CvInvisibleInfo;
@@ -138,15 +135,7 @@ class CvModLoadControlInfo;
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
-
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 class CvMapInfo;
-class CvMapSwitchInfo;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 #include "CvInfoReplacements.h"
 #include "GlobalDefines.h"
@@ -203,9 +192,7 @@ public:
 	bool viewportsEnabled() const;
 	bool getReprocessGreatWallDynamically() const;
 	int getNumMapInfos() const;
-	int getNumMapSwitchInfos() const;
 	CvMapInfo& getMapInfo(MapTypes eMap) const;
-	CvMapSwitchInfo& getMapSwitchInfo(MapSwitchTypes eMapSwitch) const;
 
 	void switchMap(MapTypes eMap);
 	CvMap& getMapByIndex(MapTypes eIndex) const;
@@ -493,13 +480,8 @@ public:
 
 	CvInfoBase& getDomainInfo(DomainTypes e) const;
 
-	//TB Promotion Line Mod begin
 	int getNumPromotionLineInfos() const;
 	CvPromotionLineInfo& getPromotionLineInfo(PromotionLineTypes e) const;
-	//TB Promotion Line Mod end
-
-	int getNumMapCategoryInfos() const;
-	CvMapCategoryInfo& getMapCategoryInfo(MapCategoryTypes e) const;
 
 	int getNumIdeaClassInfos() const;
 	CvIdeaClassInfo& getIdeaClassInfo(IdeaClassTypes e) const;
@@ -1013,10 +995,7 @@ protected:
 	std::vector<CvInvisibleInfo*> m_paInvisibleInfo;
 	std::vector<CvVoteSourceInfo*> m_paVoteSourceInfo;
 	std::vector<CvUnitCombatInfo*> m_paUnitCombatInfo;
-	//TB Promotion Line Mod begin
 	std::vector<CvPromotionLineInfo*> m_paPromotionLineInfo;
-	//TB Promotion Line Mod end
-	std::vector<CvMapCategoryInfo*> m_paMapCategoryInfo;
 	std::vector<CvIdeaClassInfo*> m_paIdeaClassInfo;
 	std::vector<CvIdeaInfo*> m_paIdeaInfo;
 	std::vector<CvInfoBase*> m_paDomainInfo;
@@ -1077,15 +1056,7 @@ protected:
 	std::vector<CvUnitArtStyleTypeInfo*> m_paUnitArtStyleTypeInfo;
 	std::vector<CvPropertyInfo*> m_paPropertyInfo;
 	std::vector<CvOutcomeInfo*> m_paOutcomeInfo;
-
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
 	std::vector<CvMapInfo*> m_paMapInfo;
-	std::vector<CvMapSwitchInfo*> m_paMapSwitchInfo;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 	//////////////////////////////////////////////////////////////////////////
 	// GLOBAL TYPES

@@ -1530,24 +1530,20 @@ bool CvBuildingInfo::isMayDamageAttackingUnitCombatType(int i) const
 	return true;
 }
 
-int CvBuildingInfo::getMapCategoryType(int i) const
+int CvBuildingInfo::getMapType(int i) const
 {
-	return m_aiMapCategoryTypes[i];
+	return m_aiMapTypes[i];
 }
 
-int CvBuildingInfo::getNumMapCategoryTypes() const
+int CvBuildingInfo::getNumMapTypes() const
 {
-	return (int)m_aiMapCategoryTypes.size();
+	return m_aiMapTypes.size();
 }
 
-bool CvBuildingInfo::isMapCategoryType(int i) const
+bool CvBuildingInfo::isMapType(int i) const
 {
-	FAssert (i > -1 && i < GC.getNumMapCategoryInfos()); // do not include this line if for delayed resolution
-	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
-	{
-		return false;
-	}
-	return true;
+	FASSERT_BOUNDS(0, GC.getNumMapInfos(), i)
+	return algo::contains(m_aiMapTypes, i);
 }
 
 // int vector utilizing pairing without delayed resolution
@@ -2296,7 +2292,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum) const
 	// Vectors
 	CheckSumC(iSum, m_aiUnitCombatRetrainTypes);
 	CheckSumC(iSum, m_aiMayDamageAttackingUnitCombatTypes);
-	CheckSumC(iSum, m_aiMapCategoryTypes);
+	CheckSumC(iSum, m_aiMapTypes);
 	CheckSumC(iSum, m_aUnitCombatRepelModifiers);
 	CheckSumC(iSum, m_aUnitCombatRepelAgainstModifiers);
 	CheckSumC(iSum, m_aUnitCombatDefenseAgainstModifiers);
@@ -3848,9 +3844,9 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	pXML->SetOptionalIntVector(&m_aiUnitCombatRetrainTypes, L"UnitCombatRetrainTypes");
-	pXML->SetOptionalIntVector(&m_aiMayDamageAttackingUnitCombatTypes, L"MayDamageAttackingUnitCombatTypes");
-	pXML->SetOptionalIntVector(&m_aiMapCategoryTypes, L"MapCategoryTypes");
+	pXML->SetOptionalVector(&m_aiUnitCombatRetrainTypes, L"UnitCombatRetrainTypes");
+	pXML->SetOptionalVector(&m_aiMayDamageAttackingUnitCombatTypes, L"MayDamageAttackingUnitCombatTypes");
+	pXML->SetOptionalVector(&m_aiMapTypes, L"MapCategoryTypes");
 
 	// int vector utilizing pairing without delayed resolution
 	pXML->SetOptionalPairVector<UnitCombatModifierArray, UnitCombatTypes, int>(&m_aUnitCombatRepelModifiers, L"UnitCombatRepelModifiers");
@@ -5179,7 +5175,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 		}
 	}
 
-	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiMapCategoryTypes, pClassInfo->m_aiMapCategoryTypes);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiMapTypes, pClassInfo->m_aiMapTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiUnitCombatRetrainTypes, pClassInfo->m_aiUnitCombatRetrainTypes);
 
 	if (getNumMayDamageAttackingUnitCombatTypes() == 0)
