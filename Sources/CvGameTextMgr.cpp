@@ -13572,10 +13572,12 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		iKnockbackRetriesChange += promo.getKnockbackRetriesChange();
 		iRoundStunProbChange += promo.getRoundStunProbChange();
 		iPoisonProbabilityModifierChange += promo.getPoisonProbabilityModifierChange();
+#ifdef BATTLEWORN
 		iStrAdjperRndChange += promo.getStrAdjperRndChange();
 		iStrAdjperAttChange += promo.getStrAdjperAttChange();
 		iStrAdjperDefChange += promo.getStrAdjperDefChange();
 		iWithdrawAdjperAttChange += promo.getWithdrawAdjperAttChange();
+#endif
 		if (GC.getGame().isOption(GAMEOPTION_SAD))
 		{
 			iUnnerveChange += promo.getUnnerveChange();
@@ -18441,7 +18443,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_EARLY_WITHDRAW", kUnit.getEarlyWithdraw()));
 		}
-
+#ifdef BATTLEWORN
 		if (kUnit.getWithdrawAdjperAtt() > 0)
 		{
 			szBuffer.append(NEWLINE);
@@ -18453,7 +18455,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_FRAYS", kUnit.getWithdrawAdjperAtt()));
 		}
-
+#endif // BATTLEWORN
 		//Pursuit
 		if (kUnit.getPursuit() != 0)
 		{
@@ -19008,7 +19010,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_DEALS_COLD_DAMAGE"));
 		}
-
+#ifdef BATTLEWORN
 		//Str Per
 		if (kUnit.getStrAdjperRnd() > 0)
 		{
@@ -19045,6 +19047,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_DEMORALIZATION", kUnit.getStrAdjperDef()));
 		}
+#endif // BATTLEWORN
 	}
 
 	//bTBUnitView2 = (Civil)
@@ -29630,7 +29633,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_KNOCKBACK_RETRIES_TEXT", info.getKnockbackRetriesChange()));
 	}
-
+#ifdef BATTLEWORN
 	if (info.getStrAdjperAttChange() > 0)
 	{
 		if (bFirstDisplay)
@@ -29702,6 +29705,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_FRAYS_TEXT", info.getWithdrawAdjperAttChange()));
 	}
+#endif // BATTLEWORN
 
 	if (info.getUnnerveChange() != 0)
 	{
