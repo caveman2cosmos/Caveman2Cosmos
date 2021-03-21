@@ -3168,7 +3168,7 @@ int CvTeam::getNumMembers() const
 void CvTeam::changeNumMembers(int iChange)
 {
 	m_iNumMembers += iChange;
-	FAssert(getNumMembers() >= 0);
+	FASSERT_NOT_NEGATIVE(getNumMembers())
 }
 
 
@@ -3187,7 +3187,7 @@ int CvTeam::isAlive() const
 void CvTeam::changeAliveCount(int iChange)
 {
 	m_iAliveCount += iChange;
-	FAssert(getAliveCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getAliveCount())
 
 	// free vassals
 	if (0 == m_iAliveCount)
@@ -3222,7 +3222,7 @@ int CvTeam::isEverAlive() const
 void CvTeam::changeEverAliveCount(int iChange)
 {
 	m_iEverAliveCount += iChange;
-	FAssert(getEverAliveCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getEverAliveCount())
 }
 
 
@@ -3235,7 +3235,7 @@ int CvTeam::getNumCities() const
 void CvTeam::changeNumCities(int iChange)
 {
 	m_iNumCities += iChange;
-	FAssert(getNumCities() >= 0);
+	FASSERT_NOT_NEGATIVE(getNumCities())
 }
 
 
@@ -3270,7 +3270,7 @@ int CvTeam::getTotalPopulation(bool bCheckVassals) const
 void CvTeam::changeTotalPopulation(int iChange)
 {
 	m_iTotalPopulation += iChange;
-	FAssert(getTotalPopulation() >= 0);
+	FASSERT_NOT_NEGATIVE(getTotalPopulation())
 }
 
 
@@ -3305,7 +3305,7 @@ int CvTeam::getTotalLand(bool bCheckVassals) const
 void CvTeam::changeTotalLand(int iChange)
 {
 	m_iTotalLand += iChange;
-	FAssert(getTotalLand() >= 0);
+	FASSERT_NOT_NEGATIVE(getTotalLand())
 }
 
 
@@ -3318,7 +3318,7 @@ int CvTeam::getNukeInterception() const
 void CvTeam::changeNukeInterception(int iChange)
 {
 	m_iNukeInterception += iChange;
-	FAssert(getNukeInterception() >= 0);
+	FASSERT_NOT_NEGATIVE(getNukeInterception())
 }
 
 
@@ -3337,7 +3337,7 @@ bool CvTeam::isForceTeamVoteEligible(VoteSourceTypes eVoteSource) const
 void CvTeam::changeForceTeamVoteEligibilityCount(VoteSourceTypes eVoteSource, int iChange)
 {
 	m_aiForceTeamVoteEligibilityCount[eVoteSource] += iChange;
-	FAssert(getForceTeamVoteEligibilityCount(eVoteSource) >= 0);
+	FASSERT_NOT_NEGATIVE(getForceTeamVoteEligibilityCount(eVoteSource))
 }
 
 
@@ -3360,7 +3360,7 @@ void CvTeam::changeExtraWaterSeeFromCount(int iChange)
 		GC.getMap().updateSight(false);
 
 		m_iExtraWaterSeeFromCount += iChange;
-		FAssert(getExtraWaterSeeFromCount() >= 0);
+		FASSERT_NOT_NEGATIVE(getExtraWaterSeeFromCount())
 
 		GC.getMap().updateSight(true);
 	}
@@ -3382,7 +3382,7 @@ bool CvTeam::isMapTrading()	const
 void CvTeam::changeMapTradingCount(int iChange)
 {
 	m_iMapTradingCount += iChange;
-	FAssert(getMapTradingCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getMapTradingCount())
 }
 
 
@@ -3401,7 +3401,7 @@ bool CvTeam::isTechTrading() const
 void CvTeam::changeTechTradingCount(int iChange)
 {
 	m_iTechTradingCount += iChange;
-	FAssert(getTechTradingCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getTechTradingCount())
 }
 
 
@@ -3420,7 +3420,7 @@ bool CvTeam::isGoldTrading() const
 void CvTeam::changeGoldTradingCount(int iChange)
 {
 	m_iGoldTradingCount += iChange;
-	FAssert(getGoldTradingCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getGoldTradingCount())
 }
 
 
@@ -3439,7 +3439,7 @@ bool CvTeam::isOpenBordersTrading() const
 void CvTeam::changeOpenBordersTradingCount(int iChange)
 {
 	m_iOpenBordersTradingCount += iChange;
-	FAssert(getOpenBordersTradingCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getOpenBordersTradingCount())
 }
 
 int CvTeam::getDefensivePactTradingCount() const
@@ -3457,7 +3457,7 @@ bool CvTeam::isDefensivePactTrading() const
 void CvTeam::changeDefensivePactTradingCount(int iChange)
 {
 	m_iDefensivePactTradingCount += iChange;
-	FAssert(getDefensivePactTradingCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getDefensivePactTradingCount())
 }
 
 
@@ -3476,7 +3476,7 @@ bool CvTeam::isPermanentAllianceTrading() const
 void CvTeam::changePermanentAllianceTradingCount(int iChange)
 {
 	m_iPermanentAllianceTradingCount += iChange;
-	FAssert(getPermanentAllianceTradingCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getPermanentAllianceTradingCount())
 }
 
 
@@ -3495,7 +3495,7 @@ bool CvTeam::isVassalStateTrading() const
 void CvTeam::changeVassalTradingCount(int iChange)
 {
 	m_iVassalTradingCount += iChange;
-	FAssert(getVassalTradingCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getVassalTradingCount())
 }
 
 
@@ -3516,7 +3516,7 @@ void CvTeam::changeBridgeBuildingCount(int iChange)
 	if (iChange != 0)
 	{
 		m_iBridgeBuildingCount += iChange;
-		FAssert(getBridgeBuildingCount() >= 0);
+		FASSERT_NOT_NEGATIVE(getBridgeBuildingCount())
 
 		if (GC.IsGraphicsInitialized())
 		{
@@ -3543,7 +3543,7 @@ void CvTeam::changeIrrigationCount(int iChange)
 	if (iChange != 0)
 	{
 		m_iIrrigationCount += iChange;
-		FAssert(getIrrigationCount() >= 0);
+		FASSERT_NOT_NEGATIVE(getIrrigationCount())
 
 		GC.getMap().updateIrrigated();
 	}
@@ -3565,7 +3565,7 @@ bool CvTeam::isIgnoreIrrigation() const
 void CvTeam::changeIgnoreIrrigationCount(int iChange)
 {
 	m_iIgnoreIrrigationCount += iChange;
-	FAssert(getIgnoreIrrigationCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getIgnoreIrrigationCount())
 }
 
 
@@ -3586,7 +3586,7 @@ void CvTeam::changeWaterWorkCount(int iChange)
 	if (iChange != 0)
 	{
 		m_iWaterWorkCount += iChange;
-		FAssert(getWaterWorkCount() >= 0);
+		FASSERT_NOT_NEGATIVE(getWaterWorkCount())
 
 		AI_makeAssignWorkDirty();
 	}
@@ -3681,7 +3681,7 @@ void CvTeam::setStolenVisibilityTimer(TeamTypes eIndex, int iNewValue)
 		const bool bOldStolenVisibility = isStolenVisibility(eIndex);
 
 		m_aiStolenVisibilityTimer[eIndex] = iNewValue;
-		FAssert(getStolenVisibilityTimer(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getStolenVisibilityTimer(eIndex))
 
 		if (bOldStolenVisibility != isStolenVisibility(eIndex))
 		{
@@ -3790,7 +3790,7 @@ void CvTeam::changeTechShareCount(int iIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiTechShareCount[iIndex] += iChange;
-		FAssert(getTechShareCount(iIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getTechShareCount(iIndex))
 
 		if (isTechShare(iIndex))
 		{
@@ -3820,7 +3820,7 @@ void CvTeam::changeCommerceFlexibleCount(CommerceTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiCommerceFlexibleCount[eIndex] += iChange;
-		FAssert(getCommerceFlexibleCount(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getCommerceFlexibleCount(eIndex))
 
 		if (getID() == GC.getGame().getActiveTeam())
 		{
@@ -3842,7 +3842,7 @@ void CvTeam::changeExtraMoves(DomainTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex)
 	m_aiExtraMoves[eIndex] += iChange;
-	FAssert(getExtraMoves(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getExtraMoves(eIndex))
 }
 
 
@@ -4662,7 +4662,7 @@ void CvTeam::changeProjectCount(ProjectTypes eIndex, int iChange)
 
 		const int iOldProjectCount = getProjectCount(eIndex);
 		m_paiProjectCount[eIndex] += iChange;
-		FAssert(getProjectCount(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getProjectCount(eIndex))
 
 		//adjust default art types
 		if(iChange >= 0)
@@ -4789,7 +4789,7 @@ void CvTeam::changeProjectMaking(ProjectTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumProjectInfos(), eIndex)
 	m_paiProjectMaking[eIndex] += iChange;
-	FAssert(getProjectMaking(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getProjectMaking(eIndex))
 }
 
 bool CvTeam::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
@@ -4878,7 +4878,7 @@ void CvTeam::changeBuildingCount(BuildingTypes eIndex, int iChange)
 		iValue = 0;
 	}
 	m_paiBuildingCount[eIndex] = iValue;
-	FAssert(getBuildingCount(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getBuildingCount(eIndex))
 }
 
 
@@ -4904,7 +4904,7 @@ void CvTeam::changeObsoleteBuildingCount(BuildingTypes eIndex, int iChange)
 		const bool bWasObsolete = m_paiObsoleteBuildingCount[eIndex] > 0;
 
 		m_paiObsoleteBuildingCount[eIndex] += iChange;
-		FAssert(getObsoleteBuildingCount(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getObsoleteBuildingCount(eIndex))
 
 		if (!bWasObsolete && iChange > 0)
 		{
@@ -4950,7 +4950,7 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 	if (getResearchProgress(eIndex) != iNewValue)
 	{
 		m_paiResearchProgress[eIndex] = iNewValue;
-		FAssert(getResearchProgress(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getResearchProgress(eIndex))
 
 		if (getID() == GC.getGame().getActiveTeam())
 		{
@@ -5055,7 +5055,7 @@ void CvTeam::changeTerrainTradeCount(TerrainTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_paiTerrainTradeCount[eIndex] += iChange;
-		FAssert(getTerrainTradeCount(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getTerrainTradeCount(eIndex))
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
@@ -5085,7 +5085,7 @@ void CvTeam::changeRiverTradeCount(int iChange)
 	if (iChange != 0)
 	{
 		m_iRiverTradeCount += iChange;
-		FAssert(getRiverTradeCount() >= 0);
+		FASSERT_NOT_NEGATIVE(getRiverTradeCount())
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
@@ -5118,7 +5118,7 @@ void CvTeam::changeVictoryCountdown(VictoryTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiVictoryCountdown[eIndex] += iChange;
-		FAssert(m_aiVictoryCountdown[eIndex] >= 0);
+		FASSERT_NOT_NEGATIVE(m_aiVictoryCountdown[eIndex])
 	}
 }
 
@@ -5232,7 +5232,7 @@ void CvTeam::resetVictoryProgress()
 
 bool CvTeam::isParent(TeamTypes eTeam) const
 {
-	FAssert(eTeam != NO_TEAM);
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 
 	if (GET_TEAM(eTeam).isVassal(getID()))
 	{
@@ -5697,7 +5697,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 				{
 					if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 					{
-						FAssert(ePlayer != NO_PLAYER);
+						FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
 						if (GET_PLAYER(ePlayer).isResearch() && (GET_PLAYER(ePlayer).getCurrentResearch() == NO_TECH))
 						{
 							if (ePlayer == GC.getGame().getActivePlayer())
@@ -5765,8 +5765,8 @@ void CvTeam::changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes e
 	if (iChange != 0)
 	{
 		m_ppaaiImprovementYieldChange[eIndex1][eIndex2] += iChange;
-		FAssert(eIndex1 >= 0);
-		FAssert(eIndex2 >= 0);
+		FASSERT_NOT_NEGATIVE(eIndex1)
+		FASSERT_NOT_NEGATIVE(eIndex2)
 
 		updateYield();
 	}
@@ -7002,7 +7002,7 @@ int CvTeam::getCanPassPeaksCount() const
 void CvTeam::changeCanPassPeaksCount(int iChange)
 {
 	m_iCanPassPeaksCount += iChange;
-	FAssert(getCanPassPeaksCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getCanPassPeaksCount())
 }
 
 bool CvTeam::isMoveFastPeaks() const
@@ -7018,7 +7018,7 @@ int CvTeam::getMoveFastPeaksCount() const
 void CvTeam::changeMoveFastPeaksCount(int iChange)
 {
 	m_iMoveFastPeaksCount += iChange;
-	FAssert(getMoveFastPeaksCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getMoveFastPeaksCount())
 }
 
 bool CvTeam::isCanFoundOnPeaks() const
@@ -7034,7 +7034,7 @@ int CvTeam::getCanFoundOnPeaksCount() const
 void CvTeam::changeCanFoundOnPeaksCount(int iChange)
 {
 	m_iCanFoundOnPeaksCount += iChange;
-	FAssert(getCanFoundOnPeaksCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getCanFoundOnPeaksCount())
 }
 
 int CvTeam::getRebaseAnywhereCount() const
@@ -7208,7 +7208,7 @@ bool CvTeam::isCanFarmDesert() const
 void CvTeam::changeCanFarmDesertCount(int iChange)
 {
 	m_iCanFarmDesertCount += iChange;
-	FAssert(getCanFarmDesertCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getCanFarmDesertCount())
 }
 
 int CvTeam::getLimitedBordersTradingCount() const
@@ -7224,7 +7224,7 @@ bool CvTeam::isLimitedBordersTrading() const
 void CvTeam::changeLimitedBordersTradingCount(int iChange)
 {
 	m_iLimitedBordersTradingCount += iChange;
-	FAssert(getLimitedBordersTradingCount() >= 0);
+	FASSERT_NOT_NEGATIVE(getLimitedBordersTradingCount())
 }
 
 void CvTeam::signLimitedBorders(TeamTypes eTeam)
@@ -7233,7 +7233,7 @@ void CvTeam::signLimitedBorders(TeamTypes eTeam)
 	CLinkList<TradeData> theirList;
 	TradeData item;
 
-	FAssert(eTeam != NO_TEAM);
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 	FAssert(eTeam != getID());
 
 	if (!isAtWar(eTeam) && (getID() != eTeam) && (!isOpenBorders(eTeam)))
@@ -7268,7 +7268,7 @@ void CvTeam::sendAmbassador(TeamTypes eTeam)
 	CLinkList<TradeData> theirList;
 	TradeData item;
 
-	FAssert(eTeam != NO_TEAM);
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 	FAssert(eTeam != getID());
 
 	if (!isAtWar(eTeam) && (getID() != eTeam))
@@ -7885,7 +7885,7 @@ void CvTeam::setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue)
 	if (iOldValue != iNewValue)
 	{
 		m_paiFreeSpecialistCount[eIndex] = iNewValue;
-		FAssert(getFreeSpecialistCount(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getFreeSpecialistCount(eIndex))
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{

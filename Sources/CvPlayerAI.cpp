@@ -13639,7 +13639,7 @@ int CvPlayerAI::AI_plotTargetMissionAIs(const CvPlot* pPlot, MissionAITypes eMis
 		iCount -= pSkipSelectionGroup->getNumUnits();
 	}
 
-	FAssert(iCount >= 0);
+	FASSERT_NOT_NEGATIVE(iCount)
 	return iCount;
 }
 
@@ -17347,7 +17347,7 @@ int CvPlayerAI::AI_getCivicTimer() const
 void CvPlayerAI::AI_setCivicTimer(int iNewValue)
 {
 	m_iCivicTimer = iNewValue;
-	FAssert(AI_getCivicTimer() >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getCivicTimer())
 }
 
 
@@ -17366,7 +17366,7 @@ int CvPlayerAI::AI_getReligionTimer() const
 void CvPlayerAI::AI_setReligionTimer(int iNewValue)
 {
 	m_iReligionTimer = iNewValue;
-	FAssert(AI_getReligionTimer() >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getReligionTimer())
 }
 
 
@@ -17396,7 +17396,7 @@ void CvPlayerAI::AI_changeNumTrainAIUnits(UnitAITypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eIndex)
 	m_aiNumTrainAIUnits[eIndex] += iChange;
-	FAssert(AI_getNumTrainAIUnits(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getNumTrainAIUnits(eIndex))
 }
 
 
@@ -17411,7 +17411,7 @@ void CvPlayerAI::AI_changeNumAIUnits(UnitAITypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eIndex)
 	m_aiNumAIUnits[eIndex] += iChange;
-	FAssert(AI_getNumAIUnits(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getNumAIUnits(eIndex))
 }
 
 
@@ -17426,7 +17426,7 @@ void CvPlayerAI::AI_changeSameReligionCounter(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	m_aiSameReligionCounter[eIndex] += iChange;
-	FAssert(AI_getSameReligionCounter(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getSameReligionCounter(eIndex))
 }
 
 
@@ -17441,7 +17441,7 @@ void CvPlayerAI::AI_changeDifferentReligionCounter(PlayerTypes eIndex, int iChan
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	m_aiDifferentReligionCounter[eIndex] += iChange;
-	FAssert(AI_getDifferentReligionCounter(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getDifferentReligionCounter(eIndex))
 }
 
 
@@ -17456,7 +17456,7 @@ void CvPlayerAI::AI_changeFavoriteCivicCounter(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	m_aiFavoriteCivicCounter[eIndex] += iChange;
-	FAssert(AI_getFavoriteCivicCounter(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getFavoriteCivicCounter(eIndex))
 }
 
 
@@ -17471,7 +17471,7 @@ void CvPlayerAI::AI_changeBonusTradeCounter(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	m_aiBonusTradeCounter[eIndex] += iChange;
-	FAssert(AI_getBonusTradeCounter(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getBonusTradeCounter(eIndex))
 }
 
 
@@ -17492,8 +17492,8 @@ void CvPlayerAI::AI_changePeacetimeTradeValue(PlayerTypes eIndex, int iChange)
 		AI_invalidateAttitudeCache(eIndex);
 		GET_PLAYER(eIndex).AI_invalidateAttitudeCache(getID());
 
-		m_aiPeacetimeTradeValue[eIndex] = (m_aiPeacetimeTradeValue[eIndex] + iChange);
-		FAssert(AI_getPeacetimeTradeValue(eIndex) >= 0);
+		m_aiPeacetimeTradeValue[eIndex] += iChange;
+		FASSERT_NOT_NEGATIVE(AI_getPeacetimeTradeValue(eIndex))
 
 		if (iChange < 0)
 		{
@@ -17538,7 +17538,7 @@ void CvPlayerAI::AI_changePeacetimeGrantValue(PlayerTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiPeacetimeGrantValue[eIndex] += iChange;
-		FAssert(AI_getPeacetimeGrantValue(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(AI_getPeacetimeGrantValue(eIndex))
 
 		if (iChange < 0)
 		{
@@ -17579,7 +17579,7 @@ void CvPlayerAI::AI_changeGoldTradedTo(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	m_aiGoldTradedTo[eIndex] += iChange;
-	FAssert(AI_getGoldTradedTo(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getGoldTradedTo(eIndex))
 }
 
 
@@ -17644,7 +17644,7 @@ void CvPlayerAI::AI_changeContactTimer(PlayerTypes eIndex1, ContactTypes eIndex2
 	{
 		m_aaiContactTimer[eIndex1][eIndex2] = (AI_getContactTimer(eIndex1, eIndex2) + iChange);
 	}
-	FAssert(AI_getContactTimer(eIndex1, eIndex2) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getContactTimer(eIndex1, eIndex2))
 }
 
 
@@ -17668,7 +17668,7 @@ void CvPlayerAI::AI_changeMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2, 
 		// BUG - Update Attitude Icons
 		gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 	}
-	FAssert(AI_getMemoryCount(eIndex1, eIndex2) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getMemoryCount(eIndex1, eIndex2))
 }
 
 int CvPlayerAI::AI_calculateGoldenAgeValue() const

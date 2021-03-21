@@ -7317,7 +7317,7 @@ void CvCity::setGameTurnFounded(int iNewValue)
 	if (getGameTurnFounded() != iNewValue)
 	{
 		m_iGameTurnFounded = iNewValue;
-		FAssert(getGameTurnFounded() >= 0);
+		FASSERT_NOT_NEGATIVE(getGameTurnFounded())
 
 		GC.getMap().updateWorkingCity();
 	}
@@ -7333,7 +7333,7 @@ int CvCity::getGameTurnAcquired() const
 void CvCity::setGameTurnAcquired(int iNewValue)
 {
 	m_iGameTurnAcquired = iNewValue;
-	FAssert(getGameTurnAcquired() >= 0);
+	FASSERT_NOT_NEGATIVE(getGameTurnAcquired())
 }
 
 
@@ -7351,7 +7351,7 @@ void CvCity::setPopulation(int iNewValue)
 	{
 		m_iPopulation = iNewValue;
 
-		FAssert(iNewValue >= 0);
+		FASSERT_NOT_NEGATIVE(iNewValue)
 
 		GET_PLAYER(getOwner()).invalidatePopulationRankCache();
 
@@ -7546,7 +7546,7 @@ int CvCity::getHighestPopulation() const
 void CvCity::setHighestPopulation(int iNewValue)
 {
 	m_iHighestPopulation = iNewValue;
-	FAssert(getHighestPopulation() >= 0);
+	FASSERT_NOT_NEGATIVE(getHighestPopulation())
 }
 
 
@@ -7559,7 +7559,7 @@ int CvCity::getWorkingPopulation() const
 void CvCity::changeWorkingPopulation(int iChange)
 {
 	m_iWorkingPopulation += iChange;
-	FAssert(m_iWorkingPopulation >= 0);
+	FASSERT_NOT_NEGATIVE(m_iWorkingPopulation)
 }
 
 
@@ -7574,7 +7574,7 @@ void CvCity::changeSpecialistPopulation(int iChange)
 	if (iChange != 0)
 	{
 		m_iSpecialistPopulation += iChange;
-		FAssert(m_iSpecialistPopulation >= 0);
+		FASSERT_NOT_NEGATIVE(m_iSpecialistPopulation)
 
 		GET_PLAYER(getOwner()).invalidateYieldRankCache();
 
@@ -7594,7 +7594,7 @@ void CvCity::changeNumGreatPeople(int iChange)
 	if (iChange != 0)
 	{
 		m_iNumGreatPeople += iChange;
-		FAssert(m_iNumGreatPeople >= 0);
+		FASSERT_NOT_NEGATIVE(m_iNumGreatPeople)
 
 		setCommerceDirty(NO_COMMERCE);
 	}
@@ -7651,7 +7651,7 @@ int CvCity::getGreatPeopleRateModifier() const
 
 void CvCity::changeGreatPeopleRateModifier(int iChange)
 {
-	m_iGreatPeopleRateModifier = (m_iGreatPeopleRateModifier + iChange);
+	m_iGreatPeopleRateModifier += iChange;
 }
 
 
@@ -7663,7 +7663,7 @@ int CvCity::getGreatPeopleProgress() const
 
 void CvCity::changeGreatPeopleProgress(int iChange)
 {
-	m_iGreatPeopleProgress = (m_iGreatPeopleProgress + iChange);
+	m_iGreatPeopleProgress += iChange;
 	FAssertMsg(getGreatPeopleProgress() >= 0, CvString::format("City %S m_iGreatPeopleProgress is %d", m_szName.c_str(), m_iGreatPeopleProgress).c_str());
 }
 
@@ -7811,7 +7811,7 @@ int CvCity::getNumWorldWonders() const
 void CvCity::changeNumWorldWonders(int iChange)
 {
 	m_iNumWorldWonders += iChange;
-	FAssert(getNumWorldWonders() >= 0);
+	FASSERT_NOT_NEGATIVE(getNumWorldWonders())
 }
 
 
@@ -7824,7 +7824,7 @@ int CvCity::getNumTeamWonders() const
 void CvCity::changeNumTeamWonders(int iChange)
 {
 	m_iNumTeamWonders += iChange;
-	FAssert(getNumTeamWonders() >= 0);
+	FASSERT_NOT_NEGATIVE(getNumTeamWonders())
 }
 
 
@@ -7837,7 +7837,7 @@ int CvCity::getNumNationalWonders() const
 void CvCity::changeNumNationalWonders(int iChange)
 {
 	m_iNumNationalWonders += iChange;
-	FAssert(getNumNationalWonders() >= 0);
+	FASSERT_NOT_NEGATIVE(getNumNationalWonders())
 }
 
 
@@ -7850,7 +7850,7 @@ int CvCity::getNumBuildings() const
 void CvCity::changeNumBuildings(int iChange)
 {
 	m_iNumBuildings += iChange;
-	FAssert(getNumBuildings() >= 0);
+	FASSERT_NOT_NEGATIVE(getNumBuildings())
 }
 
 
@@ -7870,8 +7870,8 @@ void CvCity::changeGovernmentCenterCount(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iGovernmentCenterCount = (m_iGovernmentCenterCount + iChange);
-		FAssert(getGovernmentCenterCount() >= 0);
+		m_iGovernmentCenterCount += iChange;
+		FASSERT_NOT_NEGATIVE(getGovernmentCenterCount())
 
 		setMaintenanceDirty(true);
 	}
@@ -8081,7 +8081,7 @@ void CvCity::updateMaintenance() const
 
 	if (getMaintenanceTimes100() != iNewMaintenance)
 	{
-		FAssert(iNewMaintenance >= 0);
+		FASSERT_NOT_NEGATIVE(iNewMaintenance)
 
 		m_iMaintenance = std::max(0, iNewMaintenance);
 	}
@@ -8192,7 +8192,7 @@ Large maps have a discount on distance maintenance, that is adequate, this doesn
 
 	// Toffer - ToDo: Max value should perhaps be a global define.
 	iNumCitiesMaint = std::min(iNumCitiesMaint, 2000000);
-	FAssert(iNumCitiesMaint >= 0);
+	FASSERT_NOT_NEGATIVE(iNumCitiesMaint)
 
 	return iNumCitiesMaint;
 }
@@ -8233,7 +8233,7 @@ int CvCity::calculateColonyMaintenanceTimes100() const
 
 	iMaintenance = std::min(iMaintenance, (GC.getHandicapInfo(getHandicapType()).getMaxColonyMaintenance() * calculateDistanceMaintenanceTimes100()) / 100);
 
-	FAssert(iMaintenance >= 0);
+	FASSERT_NOT_NEGATIVE(iMaintenance)
 
 	return iMaintenance;
 }
@@ -8315,7 +8315,7 @@ int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporatio
 	iMaintenance *= 100 + GET_TEAM(getTeam()).getCorporationMaintenanceModifier();
 	iMaintenance /= 100;
 
-	FAssert(iMaintenance >= 0);
+	FASSERT_NOT_NEGATIVE(iMaintenance)
 
 	return iMaintenance;
 }
@@ -8424,8 +8424,8 @@ int CvCity::getHealRate() const
 
 void CvCity::changeHealRate(int iChange)
 {
-	m_iHealRate = (m_iHealRate + iChange);
-	FAssert(getHealRate() >= 0);
+	m_iHealRate += iChange;
+	FASSERT_NOT_NEGATIVE(getHealRate())
 }
 
 int CvCity::getHealUnitCombatTypeTotal(UnitCombatTypes eUnitCombat) const
@@ -8489,7 +8489,7 @@ void CvCity::updateFreshWaterHealth()
 	if (getFreshWaterGoodHealth() != iNewGoodHealth)
 	{
 		m_iFreshWaterGoodHealth = iNewGoodHealth;
-		FAssert(getFreshWaterGoodHealth() >= 0);
+		FASSERT_NOT_NEGATIVE(getFreshWaterGoodHealth())
 
 		AI_setAssignWorkDirty(true);
 
@@ -8792,7 +8792,7 @@ void CvCity::changeBuildingGoodHealth(int iChange)
 	if (iChange != 0)
 	{
 		m_iBuildingGoodHealth += iChange;
-		FAssert(getBuildingGoodHealth() >= 0);
+		FASSERT_NOT_NEGATIVE(getBuildingGoodHealth())
 
 		AI_setAssignWorkDirty(true);
 
@@ -8939,8 +8939,8 @@ void CvCity::changeMilitaryHappinessUnits(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iMilitaryHappinessUnits = (m_iMilitaryHappinessUnits + iChange);
-		FAssert(getMilitaryHappinessUnits() >= 0);
+		m_iMilitaryHappinessUnits += iChange;
+		FASSERT_NOT_NEGATIVE(getMilitaryHappinessUnits())
 
 		AI_setAssignWorkDirty(true);
 	}
@@ -8993,8 +8993,8 @@ void CvCity::changeBuildingGoodHappiness(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iBuildingGoodHappiness = (m_iBuildingGoodHappiness + iChange);
-		FAssert(getBuildingGoodHappiness() >= 0);
+		m_iBuildingGoodHappiness += iChange;
+		FASSERT_NOT_NEGATIVE(getBuildingGoodHappiness())
 
 		AI_setAssignWorkDirty(true);
 	}
@@ -9054,7 +9054,7 @@ void CvCity::updateExtraBuildingHappiness(bool bLimited)
 	if (getExtraBuildingGoodHappiness() != iNewExtraBuildingGoodHappiness)
 	{
 		m_iExtraBuildingGoodHappiness = iNewExtraBuildingGoodHappiness;
-		FAssert(getExtraBuildingGoodHappiness() >= 0);
+		FASSERT_NOT_NEGATIVE(getExtraBuildingGoodHappiness())
 
 		if (!bLimited)
 		{
@@ -9820,7 +9820,7 @@ void CvCity::updateExtraBuildingHealth(bool bLimited)
 	if (getExtraBuildingGoodHealth() != iNewExtraBuildingGoodHealth)
 	{
 		m_iExtraBuildingGoodHealth = iNewExtraBuildingGoodHealth;
-		FAssert(getExtraBuildingGoodHealth() >= 0);
+		FASSERT_NOT_NEGATIVE(getExtraBuildingGoodHealth())
 
 		if (!bLimited)
 		{
@@ -9909,7 +9909,7 @@ void CvCity::updateFeatureHappiness(bool bLimited)
 	if (getFeatureGoodHappiness() != iNewFeatureGoodHappiness)
 	{
 		m_iFeatureGoodHappiness = iNewFeatureGoodHappiness;
-		FAssert(getFeatureGoodHappiness() >= 0);
+		FASSERT_NOT_NEGATIVE(getFeatureGoodHappiness())
 
 		if (!bLimited)
 		{
@@ -10014,7 +10014,7 @@ void CvCity::updateReligionHappiness(bool bLimited)
 	if (getReligionGoodHappiness() != iNewReligionGoodHappiness)
 	{
 		m_iReligionGoodHappiness = iNewReligionGoodHappiness;
-		FAssert(getReligionGoodHappiness() >= 0);
+		FASSERT_NOT_NEGATIVE(getReligionGoodHappiness())
 
 		if (!bLimited)
 		{
@@ -10082,8 +10082,8 @@ void CvCity::changeHurryAngerTimer(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iHurryAngerTimer = (m_iHurryAngerTimer + iChange);
-		FAssert(getHurryAngerTimer() >= 0);
+		m_iHurryAngerTimer += iChange;
+		FASSERT_NOT_NEGATIVE(getHurryAngerTimer())
 
 		AI_setAssignWorkDirty(true);
 	}
@@ -10099,8 +10099,8 @@ void CvCity::changeRevRequestAngerTimer(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iRevRequestAngerTimer = (m_iRevRequestAngerTimer + iChange);
-		FAssert(getRevRequestAngerTimer() >= 0);
+		m_iRevRequestAngerTimer += iChange;
+		FASSERT_NOT_NEGATIVE(getRevRequestAngerTimer())
 
 		AI_setAssignWorkDirty(true);
 	}
@@ -10115,8 +10115,8 @@ void CvCity::changeRevSuccessTimer(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iRevSuccessTimer = (m_iRevSuccessTimer + iChange);
-		FAssert(getRevSuccessTimer() >= 0);
+		m_iRevSuccessTimer += iChange;
+		FASSERT_NOT_NEGATIVE(getRevSuccessTimer())
 
 		AI_setAssignWorkDirty(true);
 	}
@@ -10133,8 +10133,8 @@ void CvCity::changeConscriptAngerTimer(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iConscriptAngerTimer = (m_iConscriptAngerTimer + iChange);
-		FAssert(getConscriptAngerTimer() >= 0);
+		m_iConscriptAngerTimer += iChange;
+		FASSERT_NOT_NEGATIVE(getConscriptAngerTimer())
 
 		AI_setAssignWorkDirty(true);
 	}
@@ -10151,7 +10151,7 @@ void CvCity::changeDefyResolutionAngerTimer(int iChange)
 	if (iChange != 0)
 	{
 		m_iDefyResolutionAngerTimer += iChange;
-		FAssert(getDefyResolutionAngerTimer() >= 0);
+		FASSERT_NOT_NEGATIVE(getDefyResolutionAngerTimer())
 
 		AI_setAssignWorkDirty(true);
 	}
@@ -10179,7 +10179,7 @@ void CvCity::changeHappinessTimer(int iChange)
 	if (iChange != 0)
 	{
 		m_iHappinessTimer += iChange;
-		FAssert(getHappinessTimer() >= 0);
+		FASSERT_NOT_NEGATIVE(getHappinessTimer())
 
 		AI_setAssignWorkDirty(true);
 	}
@@ -10202,8 +10202,8 @@ void CvCity::changeNoUnhappinessCount(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iNoUnhappinessCount = (m_iNoUnhappinessCount + iChange);
-		FAssert(getNoUnhappinessCount() >= 0);
+		m_iNoUnhappinessCount += iChange;
+		FASSERT_NOT_NEGATIVE(getNoUnhappinessCount())
 
 		AI_setAssignWorkDirty(true);
 	}
@@ -10231,8 +10231,8 @@ void CvCity::changeNoUnhealthyPopulationCount(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iNoUnhealthyPopulationCount = (m_iNoUnhealthyPopulationCount + iChange);
-		FAssert(getNoUnhealthyPopulationCount() >= 0);
+		m_iNoUnhealthyPopulationCount += iChange;
+		FASSERT_NOT_NEGATIVE(getNoUnhealthyPopulationCount())
 
 		AI_setAssignWorkDirty(true);
 	}
@@ -10260,8 +10260,8 @@ void CvCity::changeBuildingOnlyHealthyCount(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iBuildingOnlyHealthyCount = (m_iBuildingOnlyHealthyCount + iChange);
-		FAssert(getBuildingOnlyHealthyCount() >= 0);
+		m_iBuildingOnlyHealthyCount += iChange;
+		FASSERT_NOT_NEGATIVE(getBuildingOnlyHealthyCount())
 
 		AI_setAssignWorkDirty(true);
 	}
@@ -10354,7 +10354,7 @@ int CvCity::getMaxFoodKeptPercent() const
 
 void CvCity::changeMaxFoodKeptPercent(int iChange, bool bAdd)
 {
-	FAssert(iChange >= 0);
+	FASSERT_NOT_NEGATIVE(iChange)
 
 	if (m_fMaxFoodKeptMultiplierLog == INVALID_STORED_FOOD_PERCENT_LOG)
 	{
@@ -10376,7 +10376,7 @@ int CvCity::getOverflowProduction() const
 void CvCity::setOverflowProduction(int iNewValue)
 {
 	m_iOverflowProduction = iNewValue;
-	FAssert(getOverflowProduction() >= 0);
+	FASSERT_NOT_NEGATIVE(getOverflowProduction())
 }
 
 
@@ -10397,7 +10397,7 @@ int CvCity::getFeatureProduction() const
 void CvCity::setFeatureProduction(int iNewValue)
 {
 	m_iFeatureProduction = iNewValue;
-	FAssert(getFeatureProduction() >= 0);
+	FASSERT_NOT_NEGATIVE(getFeatureProduction())
 }
 
 
@@ -10519,7 +10519,7 @@ void CvCity::changeBuildingBombardDefense(int iChange)
 	if (iChange != 0)
 	{
 		m_iBuildingBombardDefense += iChange;
-		FAssert(getBuildingBombardDefense() >= 0);
+		FASSERT_NOT_NEGATIVE(getBuildingBombardDefense())
 	}
 }
 
@@ -10545,7 +10545,7 @@ int CvCity::getFreeExperience() const
 void CvCity::changeFreeExperience(int iChange)
 {
 	m_iFreeExperience += iChange;
-	FAssert(getFreeExperience() >= 0);
+	FASSERT_NOT_NEGATIVE(getFreeExperience())
 }
 
 
@@ -10558,7 +10558,7 @@ int CvCity::getCurrAirlift() const
 void CvCity::setCurrAirlift(int iNewValue)
 {
 	m_iCurrAirlift = iNewValue;
-	FAssert(getCurrAirlift() >= 0);
+	FASSERT_NOT_NEGATIVE(getCurrAirlift())
 }
 
 
@@ -10576,8 +10576,8 @@ int CvCity::getMaxAirlift() const
 
 void CvCity::changeMaxAirlift(int iChange)
 {
-	m_iMaxAirlift = (m_iMaxAirlift + iChange);
-	FAssert(getMaxAirlift() >= 0);
+	m_iMaxAirlift += iChange;
+	FASSERT_NOT_NEGATIVE(getMaxAirlift())
 }
 
 int CvCity::getAirModifier() const
@@ -10608,7 +10608,7 @@ int CvCity::getAirUnitCapacity(TeamTypes eTeam) const
 void CvCity::changeAirUnitCapacity(int iChange)
 {
 	m_iAirUnitCapacity += iChange;
-	FAssert(getAirUnitCapacity(getTeam()) >= 0);
+	FASSERT_NOT_NEGATIVE(getAirUnitCapacity(getTeam()))
 }
 
 int CvCity::getNukeModifier() const
@@ -10681,15 +10681,15 @@ void CvCity::changePowerCount(int iChange, bool bDirty)
 {
 	if (iChange != 0)
 	{
-		bool wasPower = isPower();
-		bool wasDirtyPower = isDirtyPower();
+		const bool wasPower = isPower();
+		const bool wasDirtyPower = isDirtyPower();
 
-		m_iPowerCount = (m_iPowerCount + iChange);
-		FAssert(getPowerCount() >= 0);
+		m_iPowerCount += iChange;
+		FASSERT_NOT_NEGATIVE(getPowerCount())
 		if (bDirty)
 		{
 			m_iDirtyPowerCount += iChange;
-			FAssert(getDirtyPowerCount() >= 0);
+			FASSERT_NOT_NEGATIVE(getDirtyPowerCount())
 		}
 		// cppcheck-suppress knownConditionTrueFalse
 		if (wasPower != isPower())
@@ -10819,7 +10819,7 @@ void CvCity::setOccupationTimer(int iNewValue)
 		bool wasOccupation = isOccupation();
 
 		m_iOccupationTimer = iNewValue;
-		FAssert(getOccupationTimer() >= 0);
+		FASSERT_NOT_NEGATIVE(getOccupationTimer())
 		// cppcheck-suppress knownConditionTrueFalse
 		if (wasOccupation != isOccupation())
 		{
@@ -10852,7 +10852,7 @@ int CvCity::getCultureUpdateTimer() const
 void CvCity::setCultureUpdateTimer(int iNewValue)
 {
 	m_iCultureUpdateTimer = iNewValue;
-	FAssert(getOccupationTimer() >= 0);
+	FASSERT_NOT_NEGATIVE(getOccupationTimer())
 }
 
 
@@ -11366,8 +11366,8 @@ void CvCity::changeSeaPlotYield(YieldTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		m_aiSeaPlotYield[eIndex] = (m_aiSeaPlotYield[eIndex] + iChange);
-		FAssert(getSeaPlotYield(eIndex) >= 0);
+		m_aiSeaPlotYield[eIndex] += iChange;
+		FASSERT_NOT_NEGATIVE(getSeaPlotYield(eIndex))
 
 		updateYield();
 	}
@@ -11712,7 +11712,7 @@ void CvCity::setBaseYieldRate(YieldTypes eIndex, int iNewValue)
 	if (m_aiBaseYieldRate[eIndex] != iNewValue)
 	{
 		m_aiBaseYieldRate[eIndex] = iNewValue;
-		FAssert(eIndex >= 0);
+
 #ifdef YIELD_VALUE_CACHING
 		ClearYieldValueCache();
 #endif
@@ -11757,7 +11757,7 @@ void CvCity::setBaseYieldPerPopRate(YieldTypes eIndex, int iNewValue)
 	if (m_aiBaseYieldPerPopRate[eIndex] != iNewValue)
 	{
 		m_aiBaseYieldPerPopRate[eIndex] = iNewValue;
-		FAssert(eIndex >= 0);
+
 #ifdef YIELD_VALUE_CACHING
 		ClearYieldValueCache();
 #endif
@@ -11797,7 +11797,6 @@ void CvCity::changeYieldRateModifier(YieldTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiYieldRateModifier[eIndex] += iChange;
-		FAssert(eIndex >= 0);
 
 		GET_PLAYER(getOwner()).invalidateYieldRankCache(eIndex);
 
@@ -11830,7 +11829,7 @@ void CvCity::changePowerYieldRateModifier(YieldTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiPowerYieldRateModifier[eIndex] += iChange;
-		FAssert(getYieldRate(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getYieldRate(eIndex))
 
 		GET_PLAYER(getOwner()).invalidateYieldRankCache(eIndex);
 
@@ -11863,7 +11862,7 @@ void CvCity::changeBonusYieldRateModifier(YieldTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiBonusYieldRateModifier[eIndex] += iChange;
-		FAssert(getYieldRate(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getYieldRate(eIndex))
 
 		GET_PLAYER(getOwner()).invalidateYieldRankCache(eIndex);
 
@@ -11938,7 +11937,7 @@ int CvCity::getPopulationTradeModifier() const
 
 int CvCity::getPeaceTradeModifier(TeamTypes eTeam) const
 {
-	FAssert(NO_TEAM != eTeam);
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam)
 	FAssert(eTeam != getTeam());
 
 	if (atWar(eTeam, getTeam()))
@@ -12128,7 +12127,7 @@ void CvCity::setTradeYield(YieldTypes eIndex, int iNewValue)
 	if (iOldValue != iNewValue)
 	{
 		m_aiTradeYield[eIndex] = iNewValue;
-		FAssert(getTradeYield(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getTradeYield(eIndex))
 
 		changeBaseYieldRate(eIndex, iNewValue - iOldValue);
 	}
@@ -12964,7 +12963,7 @@ void CvCity::updateReligionCommerce(CommerceTypes eIndex)
 	if (getReligionCommerce(eIndex) != iNewReligionCommerce)
 	{
 		m_aiReligionCommerce[eIndex] = iNewReligionCommerce;
-		FAssert(getReligionCommerce(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getReligionCommerce(eIndex))
 
 		setCommerceDirty(eIndex);
 	}
@@ -12995,7 +12994,7 @@ void CvCity::setCorporationYield(YieldTypes eIndex, int iNewValue)
 	if (iOldValue != iNewValue)
 	{
 		m_aiCorporationYield[eIndex] = iNewValue;
-		FAssert(getCorporationYield(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getCorporationYield(eIndex))
 
 		changeBaseYieldRate(eIndex, (iNewValue - iOldValue));
 	}
@@ -13069,7 +13068,7 @@ void CvCity::updateCorporationCommerce(CommerceTypes eIndex)
 	if (getCorporationCommerce(eIndex) != iNewCommerce)
 	{
 		m_aiCorporationCommerce[eIndex] = iNewCommerce;
-		FAssert(getCorporationCommerce(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getCorporationCommerce(eIndex))
 
 		setCommerceDirty(eIndex);
 	}
@@ -13088,7 +13087,7 @@ void CvCity::updateCorporationYield(YieldTypes eIndex)
 	if (iOldYield != iNewYield)
 	{
 		m_aiCorporationYield[eIndex] = iNewYield;
-		FAssert(getCorporationYield(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getCorporationYield(eIndex))
 
 		changeBaseYieldRate(eIndex, (iNewYield - iOldYield));
 	}
@@ -13258,7 +13257,7 @@ void CvCity::changeCommerceHappinessPer(CommerceTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiCommerceHappinessPer[eIndex] += iChange;
-		FAssert(getCommerceHappinessPer(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getCommerceHappinessPer(eIndex))
 
 		AI_setAssignWorkDirty(true);
 	}
@@ -13279,7 +13278,7 @@ void CvCity::changeDomainFreeExperience(DomainTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, NUM_DOMAIN_TYPES, eIndex)
 	m_aiDomainFreeExperience[eIndex] += iChange;
-	FAssert(getDomainFreeExperience(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getDomainFreeExperience(eIndex))
 }
 
 
@@ -13395,7 +13394,7 @@ void CvCity::setCultureTimes100(PlayerTypes eIndex, int iNewValue, bool bPlots, 
 	if (iOldCulture != iNewValue)
 	{
 		m_aiCulture[eIndex] = iNewValue;
-		FAssert(getCultureTimes100(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getCultureTimes100(eIndex))
 
 		updateCultureLevel(bUpdatePlotGroups);
 
@@ -13465,7 +13464,7 @@ void CvCity::changeNumRevolts(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex)
 	m_aiNumRevolts[eIndex] += iChange;
-	FAssert(getNumRevolts(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getNumRevolts(eIndex))
 }
 
 bool CvCity::isEverOwned(PlayerTypes eIndex) const
@@ -13683,7 +13682,7 @@ void CvCity::changeNoBonusCount(BonusTypes eIndex, int iChange)
 		}
 
 		m_paiNoBonus[eIndex] += iChange;
-		FAssert(getNoBonusCount(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getNoBonusCount(eIndex))
 
 		if (getNumBonuses(eIndex) > 0)
 		{
@@ -13716,7 +13715,7 @@ void CvCity::changeFreeBonus(BonusTypes eIndex, int iChange)
 
 		plot()->updatePlotGroupBonus(false);
 		m_paiFreeBonus[eIndex] += iChange;
-		FAssert(getFreeBonus(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getFreeBonus(eIndex))
 		plot()->updatePlotGroupBonus(true);
 
 		GET_PLAYER(getOwner()).endDeferredPlotGroupBonusCalculation();
@@ -13924,7 +13923,7 @@ void CvCity::setBuildingProduction(BuildingTypes eIndex, int iNewValue)
 	if (getBuildingProduction(eIndex) != iNewValue)
 	{
 		m_paiBuildingProduction[eIndex] = iNewValue;
-		FAssert(getBuildingProduction(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getBuildingProduction(eIndex))
 
 		if (getTeam() == GC.getGame().getActiveTeam())
 		{
@@ -13957,7 +13956,7 @@ void CvCity::setBuildingProductionTime(BuildingTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex)
 	m_paiBuildingProductionTime[eIndex] = iNewValue;
-	FAssert(getBuildingProductionTime(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getBuildingProductionTime(eIndex))
 }
 
 
@@ -14014,7 +14013,7 @@ void CvCity::setProjectProduction(ProjectTypes eIndex, int iNewValue)
 	if (getProjectProduction(eIndex) != iNewValue)
 	{
 		m_paiProjectProduction[eIndex] = iNewValue;
-		FAssert(getProjectProduction(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getProjectProduction(eIndex))
 
 		if (getTeam() == GC.getGame().getActiveTeam())
 		{
@@ -14070,7 +14069,7 @@ void CvCity::setUnitProduction(UnitTypes eIndex, int iNewValue)
 	if (getUnitProduction(eIndex) != iNewValue)
 	{
 		m_paiUnitProduction[eIndex] = iNewValue;
-		FAssert(getUnitProduction(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getUnitProduction(eIndex))
 
 		if (getTeam() == GC.getGame().getActiveTeam())
 		{
@@ -14102,7 +14101,7 @@ void CvCity::setUnitProductionTime(UnitTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	m_paiUnitProductionTime[eIndex] = iNewValue;
-	FAssert(getUnitProductionTime(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getUnitProductionTime(eIndex))
 }
 
 
@@ -14179,7 +14178,7 @@ void CvCity::setGreatPeopleUnitProgress(UnitTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex)
 	m_paiGreatPeopleUnitProgress[eIndex] = iNewValue;
-	FAssert(getGreatPeopleUnitProgress(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(getGreatPeopleUnitProgress(eIndex))
 }
 
 
@@ -14205,7 +14204,7 @@ void CvCity::setSpecialistCount(SpecialistTypes eIndex, int iNewValue)
 	if (iOldValue != iNewValue)
 	{
 		m_paiSpecialistCount[eIndex] = iNewValue;
-		FAssert(getSpecialistCount(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getSpecialistCount(eIndex))
 
 		changeSpecialistPopulation(iNewValue - iOldValue);
 		processSpecialist(eIndex, (iNewValue - iOldValue));
@@ -14403,7 +14402,7 @@ void CvCity::setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue)
 	if (iOldValue != iNewValue)
 	{
 		m_paiFreeSpecialistCount[eIndex] = iNewValue;
-		FAssert(m_paiFreeSpecialistCount[eIndex] >= 0);
+		FASSERT_NOT_NEGATIVE(m_paiFreeSpecialistCount[eIndex])
 
 		changeNumGreatPeople(iNewValue - iOldValue);
 		processSpecialist(eIndex, (iNewValue - iOldValue));
@@ -14518,7 +14517,7 @@ void CvCity::changeFreePromotionCount(PromotionTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), eIndex)
 	m_paiFreePromotionCount[eIndex] += iChange;
-	FAssert(m_paiFreePromotionCount[eIndex] >= 0);
+	FASSERT_NOT_NEGATIVE(m_paiFreePromotionCount[eIndex])
 }
 
 
@@ -14531,7 +14530,7 @@ int CvCity::getSpecialistFreeExperience() const
 void CvCity::changeSpecialistFreeExperience(int iChange)
 {
 	m_iSpecialistFreeExperience += iChange;
-	FAssert(m_iSpecialistFreeExperience >= 0);
+	FASSERT_NOT_NEGATIVE(m_iSpecialistFreeExperience)
 }
 
 
@@ -20327,7 +20326,7 @@ void CvCity::changeBonusCommerceRateModifier(CommerceTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiBonusCommerceRateModifier[eIndex] += iChange;
-		FAssert(getCommerceRate(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getCommerceRate(eIndex))
 
 		GET_PLAYER(getOwner()).invalidateCommerceRankCache(eIndex);
 
@@ -20367,7 +20366,7 @@ void CvCity::changeBonusCommercePercentChanges(CommerceTypes eIndex, int iChange
 	if (iChange != 0)
 	{
 		m_aiBonusCommercePercentChanges[eIndex] += iChange;
-		FAssert(getCommerceRate(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getCommerceRate(eIndex))
 
 		GET_PLAYER(getOwner()).invalidateCommerceRankCache(eIndex);
 
@@ -20426,7 +20425,7 @@ void CvCity::changeCommerceAttacks(CommerceTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiCommerceAttacks[eIndex] += iChange;
-		FAssert(getCommerceRate(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(getCommerceRate(eIndex))
 
 		GET_PLAYER(getOwner()).invalidateCommerceRankCache(eIndex);
 
@@ -21729,7 +21728,7 @@ void CvCity::setReligiouslyLimitedBuilding(BuildingTypes eIndex, bool bNewValue)
 	{
 		eReligion = (ReligionTypes)GC.getBuildingInfo(eIndex).getPrereqReligion();
 	}
-	FAssert(eReligion != NO_RELIGION);
+	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eReligion)
 
 	if (bOldValue != bNewValue)
 	{
@@ -22305,7 +22304,7 @@ void CvCity::changeEventAnger(int iChange)
 	if (iChange != 0)
 	{
 		m_iEventAnger += iChange;
-		FAssert(getEventAnger() >= 0);
+		FASSERT_NOT_NEGATIVE(getEventAnger())
 
 		AI_setAssignWorkDirty(true);
 
@@ -22443,7 +22442,7 @@ void CvCity::setNumPopulationEmployed(int iNewValue)
 void CvCity::changeNumPopulationEmployed(int iChange)
 {
 	setNumPopulationEmployed(iChange + getNumPopulationEmployed());
-	FAssert(getNumPopulationEmployed() >= 0);
+	FASSERT_NOT_NEGATIVE(getNumPopulationEmployed())
 }
 
 void CvCity::removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeopleRate, int& iHappiness, int& iHealthiness, int*& aiYields, int*& aiCommerces)
@@ -23875,7 +23874,7 @@ int CvCity::getTotalFrontSupportPercentModifier() const
 void CvCity::changeTotalFrontSupportPercentModifier(int iChange)
 {
 	m_iTotalFrontSupportPercentModifier += iChange;
-	FAssert(getTotalFrontSupportPercentModifier() >= 0);
+	FASSERT_NOT_NEGATIVE(getTotalFrontSupportPercentModifier())
 }
 
 int CvCity::getTotalShortRangeSupportPercentModifier() const
@@ -23886,7 +23885,7 @@ int CvCity::getTotalShortRangeSupportPercentModifier() const
 void CvCity::changeTotalShortRangeSupportPercentModifier(int iChange)
 {
 	m_iTotalShortRangeSupportPercentModifier += iChange;
-	FAssert(getTotalShortRangeSupportPercentModifier() >= 0);
+	FASSERT_NOT_NEGATIVE(getTotalShortRangeSupportPercentModifier())
 }
 
 int CvCity::getTotalMediumRangeSupportPercentModifier() const
@@ -23897,7 +23896,7 @@ int CvCity::getTotalMediumRangeSupportPercentModifier() const
 void CvCity::changeTotalMediumRangeSupportPercentModifier(int iChange)
 {
 	m_iTotalMediumRangeSupportPercentModifier += iChange;
-	FAssert(getTotalMediumRangeSupportPercentModifier() >= 0);
+	FASSERT_NOT_NEGATIVE(getTotalMediumRangeSupportPercentModifier())
 }
 
 int CvCity::getTotalLongRangeSupportPercentModifier() const
@@ -23908,7 +23907,7 @@ int CvCity::getTotalLongRangeSupportPercentModifier() const
 void CvCity::changeTotalLongRangeSupportPercentModifier(int iChange)
 {
 	m_iTotalLongRangeSupportPercentModifier += iChange;
-	FAssert(getTotalLongRangeSupportPercentModifier() >= 0);
+	FASSERT_NOT_NEGATIVE(getTotalLongRangeSupportPercentModifier())
 }
 
 int CvCity::getTotalFlankSupportPercentModifier() const
@@ -23919,7 +23918,7 @@ int CvCity::getTotalFlankSupportPercentModifier() const
 void CvCity::changeTotalFlankSupportPercentModifier(int iChange)
 {
 	m_iTotalFlankSupportPercentModifier += iChange;
-	FAssert(getTotalFlankSupportPercentModifier() >= 0);
+	FASSERT_NOT_NEGATIVE(getTotalFlankSupportPercentModifier())
 }
 #endif
 
@@ -24789,7 +24788,7 @@ int CvCity::getSpecialistInsidiousness() const
 void CvCity::changeSpecialistInsidiousness(int iChange)
 {
 	m_iSpecialistInsidiousness += iChange;
-	FAssert(m_iSpecialistInsidiousness >= 0);
+	FASSERT_NOT_NEGATIVE(m_iSpecialistInsidiousness)
 }
 
 int CvCity::getSpecialistInvestigation() const
@@ -24799,7 +24798,7 @@ int CvCity::getSpecialistInvestigation() const
 void CvCity::changeSpecialistInvestigation(int iChange)
 {
 	m_iSpecialistInvestigation += iChange;
-	FAssert(m_iSpecialistInvestigation >= 0);
+	FASSERT_NOT_NEGATIVE(m_iSpecialistInvestigation)
 }
 
 int CvCity::getPropertyNeed(PropertyTypes eProperty) const

@@ -138,7 +138,7 @@ bool atWar(TeamTypes eTeamA, TeamTypes eTeamB)
 
 bool isNonAlly(TeamTypes eOurTeam, TeamTypes eTheirTeam)
 {
-	FAssert(eOurTeam != NO_TEAM);
+	FASSERT_BOUNDS(0, MAX_TEAMS, eOurTeam)
 
 	if (eTheirTeam == NO_TEAM)
 	{
@@ -150,7 +150,7 @@ bool isNonAlly(TeamTypes eOurTeam, TeamTypes eTheirTeam)
 
 bool isPotentialEnemy(TeamTypes eOurTeam, TeamTypes eTheirTeam)
 {
-	FAssert(eOurTeam != NO_TEAM);
+	FASSERT_BOUNDS(0, MAX_TEAMS, eOurTeam)
 
 	if (eTheirTeam == NO_TEAM)
 	{
@@ -404,7 +404,7 @@ int getWonderScore(BuildingTypes eWonder)
 
 ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCount)
 {
-	FAssertMsg(eImprovement != NO_IMPROVEMENT, "Improvement is not assigned a valid value");
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eImprovement)
 
 	if (iCount > GC.getNumImprovementInfos())
 	{
@@ -1597,33 +1597,33 @@ bool PUF_isGroupHead(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* 
 
 bool PUF_isPlayer(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
 	return (pUnit->getOwner() == iData1);
 }
 
 bool PUF_isTeam(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
 	return (pUnit->getTeam() == iData1);
 }
 
 bool PUF_isCombatTeam(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
+	FASSERT_NOT_NEGATIVE(iData2)
 
 	return (GET_PLAYER(pUnit->getCombatOwner((TeamTypes)iData2, pUnit->plot())).getTeam() == iData1 && !pUnit->isInvisible((TeamTypes)iData2, false, false));
 }
 
 bool PUF_isOtherPlayer(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
 	return (pUnit->getOwner() != iData1);
 }
 
 bool PUF_isOtherTeam(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
 	const TeamTypes eTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 	if (pUnit->canCoexistWithTeamOnPlot(eTeam, *pUnit->plot()))
 	{
@@ -1635,8 +1635,8 @@ bool PUF_isOtherTeam(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* 
 
 bool PUF_isEnemy(const CvUnit* pUnit, int otherPlayer, int otherUnitAlwaysHostile, const CvUnit* otherUnit)
 {
-	FAssertMsg(otherPlayer != -1, "Invalid data argument, should be >= 0");
-	FAssertMsg(otherUnitAlwaysHostile != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(otherPlayer)
+	FASSERT_NOT_NEGATIVE(otherUnitAlwaysHostile)
 
 	const TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)otherPlayer).getTeam();
 
@@ -1652,8 +1652,8 @@ bool PUF_isEnemy(const CvUnit* pUnit, int otherPlayer, int otherUnitAlwaysHostil
 
 bool PUF_isEnemyTarget(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
+	FASSERT_NOT_NEGATIVE(iData2)
 
 	const TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 
@@ -1678,8 +1678,8 @@ bool PUF_isParadrop(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* p
 
 bool PUF_isNonAlly(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
+	FASSERT_NOT_NEGATIVE(iData2)
 
 	const TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 
@@ -1695,26 +1695,26 @@ bool PUF_isNonAlly(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pT
 
 bool PUF_isVisible(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
 	return !(pUnit->isInvisible(GET_PLAYER((PlayerTypes)iData1).getTeam(), false));
 }
 
 bool PUF_isVisibleDebug(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
 	return !(pUnit->isInvisible(GET_PLAYER((PlayerTypes)iData1).getTeam(), true));
 }
 
 bool PUF_canSiege(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
 	return (pUnit->canSiege(GET_PLAYER((PlayerTypes)iData1).getTeam()));
 }
 
 bool PUF_isPotentialEnemy(const CvUnit* pDefender, int pAttackerTeam, int pAttackerAlwaysHostile, const CvUnit* pAttacker)
 {
-	FAssertMsg(pAttackerTeam != -1, "Invalid data argument, should be >= 0");
-	FAssertMsg(pAttackerAlwaysHostile != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(pAttackerTeam)
+	FASSERT_NOT_NEGATIVE(pAttackerAlwaysHostile)
 
 	const bool bAssassinate = ((pDefender->isAssassin() || pAttacker->isAssassin()) && (pDefender->plot() == pAttacker->plot()));
 
@@ -1729,8 +1729,8 @@ bool PUF_isPotentialEnemy(const CvUnit* pDefender, int pAttackerTeam, int pAttac
 
 bool PUF_canDeclareWar( const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
+	FASSERT_NOT_NEGATIVE(iData2)
 
 	const TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 
@@ -1797,27 +1797,27 @@ bool PUF_canDefendGroupHead(const CvUnit* pUnit, int iData1, int iData2, const C
 
 bool PUF_canDefendEnemyNoAnimal(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
+	FASSERT_NOT_NEGATIVE(iData2)
 	return (!pUnit->isAnimal() && PUF_canDefend(pUnit, iData1, iData2) && PUF_isEnemy(pUnit, iData1, iData2));
 }
 
 bool PUF_canDefendEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
+	FASSERT_NOT_NEGATIVE(iData2)
 	return (PUF_canDefend(pUnit, iData1, iData2) && PUF_isEnemy(pUnit, iData1, iData2));
 }
 
 bool PUF_canDefendPotentialEnemyAgainst(const CvUnit* pUnit, int otherTeam, int otherAlwaysHostile, const CvUnit* otherUnit)
 {
-	FAssertMsg(otherTeam != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(otherTeam)
 	return (PUF_canDefend(pUnit) && PUF_isPotentialEnemy(pUnit, otherTeam, otherAlwaysHostile, otherUnit));
 }
 
 bool PUF_canDefenselessPotentialEnemyAgainst(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
 	return ((!PUF_canDefend(pUnit, iData1, iData2)) && PUF_isPotentialEnemy(pUnit, iData1, iData2, pThis));
 }
 
@@ -1863,19 +1863,19 @@ bool PUF_isSpy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 
 bool PUF_isDomainType(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
 	return (pUnit->getDomainType() == iData1);
 }
 
 bool PUF_isUnitType(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
 	return (pUnit->getUnitType() == iData1);
 }
 
 bool PUF_isHealUnitCombatType(const CvUnit* pUnit, /*UnitCombatType*/int iData1, /*DomainType*/int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
 	return ((pUnit->isHasUnitCombat((UnitCombatTypes)iData1)) && (iData2 == NO_DOMAIN ? true : (pUnit->getDomainType() == (DomainTypes)iData2)));
 }
 
@@ -1886,13 +1886,13 @@ bool PUF_isMountainLeader(const CvUnit* pUnit, /*Null*/int iData1, /*Null*/int i
 
 bool PUF_isInjuredUnitCombatType(const CvUnit* pUnit, /*UnitCombatType*/int iData1, /*DomainType*/int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
 	return ((pUnit->isHasUnitCombat((UnitCombatTypes)iData1) && pUnit->getDamage() > 0) && (iData2 == NO_DOMAIN ? true : (pUnit->getDomainType() == (DomainTypes)iData2)));
 }
 
 bool PUF_isUnitAIType(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
 	return (pUnit->AI_getUnitAIType() == iData1);
 }
 
@@ -1994,8 +1994,8 @@ bool PUF_isAfflicted(const CvUnit* pUnit, int /*PromotionLineTypes*/ iData1, int
 
 bool PUF_isTunneledEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
+	FASSERT_NOT_NEGATIVE(iData2)
 
 	const TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 	const TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
@@ -2014,8 +2014,8 @@ bool PUF_isTunneledEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUn
 
 bool PUF_isNonTunneledEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	FAssertMsg(iData1 != -1, "Invalid data argument, should be >= 0");
-	FAssertMsg(iData2 != -1, "Invalid data argument, should be >= 0");
+	FASSERT_NOT_NEGATIVE(iData1)
+	FASSERT_NOT_NEGATIVE(iData2)
 
 	const TeamTypes eOtherTeam = GET_PLAYER((PlayerTypes)iData1).getTeam();
 	const TeamTypes eOurTeam = GET_PLAYER(pUnit->getCombatOwner(eOtherTeam, pUnit->plot())).getTeam();
@@ -2307,7 +2307,7 @@ int pathAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer,
 #endif
 	}
 
-	FAssertMsg(iMoves >= 0, "iMoves is expected to be non-negative (invalid Index)");
+	FASSERT_NOT_NEGATIVE(iMoves)
 
 	node->m_iData1 = iMoves;
 	node->m_iData2 = iTurns;
@@ -4088,7 +4088,7 @@ int stepAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer,
 		node->m_iData1 = (parent->m_iData1 + 1);
 	}
 
-	FAssertMsg(node->m_iData1 >= 0, "node->m_iData1 is expected to be non-negative (invalid Index)");
+	FASSERT_NOT_NEGATIVE(node->m_iData1)
 
 	return 1;
 }
