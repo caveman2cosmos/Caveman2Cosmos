@@ -25117,7 +25117,7 @@ int CvTraitInfo::getNumImprovementUpgradeModifierTypes() const
 	return (int)m_aImprovementUpgradeModifierTypes.size();
 }
 
-ImprovementModifier CvTraitInfo::getImprovementUpgradeModifier(int iImprovement)
+ImprovementModifier CvTraitInfo::getImprovementUpgradeModifier(int iImprovement) const
 {
 	FASSERT_BOUNDS(0, getNumImprovementUpgradeModifierTypes(), iImprovement)
 
@@ -25143,7 +25143,7 @@ int CvTraitInfo::getNumBuildWorkerSpeedModifierTypes() const
 	return (int)m_aBuildWorkerSpeedModifierTypes.size();
 }
 
-BuildModifier CvTraitInfo::getBuildWorkerSpeedModifier(int iBuild)
+BuildModifier CvTraitInfo::getBuildWorkerSpeedModifier(int iBuild) const
 {
 	FASSERT_BOUNDS(0, getNumBuildWorkerSpeedModifierTypes(), iBuild)
 
@@ -25168,7 +25168,7 @@ int CvTraitInfo::getNumDisallowedTraitTypes() const
 	return (int)m_aDisallowedTraitTypes.size();
 }
 
-DisallowedTraitType CvTraitInfo::isDisallowedTraitType(int iTrait)
+DisallowedTraitType CvTraitInfo::isDisallowedTraitType(int iTrait) const
 {
 	FASSERT_BOUNDS(0, getNumDisallowedTraitTypes(), iTrait)
 
@@ -25180,7 +25180,7 @@ int CvTraitInfo::getNumDomainFreeExperiences() const
 	return (int)m_aDomainFreeExperiences.size();
 }
 
-DomainModifier CvTraitInfo::getDomainFreeExperience(int iDomain)
+DomainModifier CvTraitInfo::getDomainFreeExperience(int iDomain) const
 {
 	FASSERT_BOUNDS(0, getNumDomainFreeExperiences(), iDomain)
 
@@ -25205,7 +25205,7 @@ int CvTraitInfo::getNumDomainProductionModifiers() const
 	return (int)m_aDomainProductionModifiers.size();
 }
 
-DomainModifier CvTraitInfo::getDomainProductionModifier(int iDomain)
+DomainModifier CvTraitInfo::getDomainProductionModifier(int iDomain) const
 {
 	FASSERT_BOUNDS(0, getNumDomainProductionModifiers(), iDomain)
 
@@ -25230,7 +25230,7 @@ int CvTraitInfo::getNumTechResearchModifiers() const
 	return (int)m_aTechResearchModifiers.size();
 }
 
-TechModifier CvTraitInfo::getTechResearchModifier(int iTech)
+TechModifier CvTraitInfo::getTechResearchModifier(int iTech) const
 {
 	FASSERT_BOUNDS(0, getNumTechResearchModifiers(), iTech)
 
@@ -25255,7 +25255,7 @@ int CvTraitInfo::getNumBuildingProductionModifiers() const
 	return (int)m_aBuildingProductionModifiers.size();
 }
 
-BuildingModifier CvTraitInfo::getBuildingProductionModifier(int iBuilding)
+BuildingModifier CvTraitInfo::getBuildingProductionModifier(int iBuilding) const
 {
 	FASSERT_BOUNDS(0, getNumBuildingProductionModifiers(), iBuilding)
 
@@ -25280,7 +25280,7 @@ int CvTraitInfo::getNumSpecialBuildingProductionModifiers() const
 	return (int)m_aSpecialBuildingProductionModifiers.size();
 }
 
-SpecialBuildingModifier CvTraitInfo::getSpecialBuildingProductionModifier(int iSpecialBuilding)
+SpecialBuildingModifier CvTraitInfo::getSpecialBuildingProductionModifier(int iSpecialBuilding) const
 {
 	FASSERT_BOUNDS(0, getNumSpecialBuildingProductionModifiers(), iSpecialBuilding)
 
@@ -25305,7 +25305,7 @@ int CvTraitInfo::getNumBuildingHappinessModifiers() const
 	return (int)m_aBuildingHappinessModifiers.size();
 }
 
-BuildingModifier CvTraitInfo::getBuildingHappinessModifier(int iBuilding)
+BuildingModifier CvTraitInfo::getBuildingHappinessModifier(int iBuilding) const
 {
 	FASSERT_BOUNDS(0, getNumBuildingHappinessModifiers(), iBuilding)
 
@@ -25330,7 +25330,7 @@ int CvTraitInfo::getNumUnitProductionModifiers() const
 	return (int)m_aUnitProductionModifiers.size();
 }
 
-UnitModifier CvTraitInfo::getUnitProductionModifier(int iUnit)
+UnitModifier CvTraitInfo::getUnitProductionModifier(int iUnit) const
 {
 	FASSERT_BOUNDS(0, getNumUnitProductionModifiers(), iUnit)
 
@@ -25355,7 +25355,7 @@ int CvTraitInfo::getNumSpecialUnitProductionModifiers() const
 	return (int)m_aSpecialUnitProductionModifiers.size();
 }
 
-SpecialUnitModifier CvTraitInfo::getSpecialUnitProductionModifier(int iSpecialUnit)
+SpecialUnitModifier CvTraitInfo::getSpecialUnitProductionModifier(int iSpecialUnit) const
 {
 	FASSERT_BOUNDS(0, getNumSpecialUnitProductionModifiers(), iSpecialUnit)
 
@@ -25380,7 +25380,7 @@ int CvTraitInfo::getNumCivicOptionNoUpkeepTypes() const
 	return (int)m_aCivicOptionNoUpkeepTypes.size();
 }
 
-CivicOptionTypeBool CvTraitInfo::isCivicOptionNoUpkeepType(int iCivicOption)
+CivicOptionTypeBool CvTraitInfo::isCivicOptionNoUpkeepType(int iCivicOption) const
 {
 	FASSERT_BOUNDS(0, getNumCivicOptionNoUpkeepTypes(), iCivicOption)
 
@@ -25406,7 +25406,7 @@ int CvTraitInfo::getNumUnitCombatFreeExperiences() const
 	return (int)m_aUnitCombatFreeExperiences.size();
 }
 
-UnitCombatModifier CvTraitInfo::getUnitCombatFreeExperience(int iUnitCombat)
+UnitCombatModifier CvTraitInfo::getUnitCombatFreeExperience(int iUnitCombat) const
 {
 	FASSERT_BOUNDS(0, getNumUnitCombatFreeExperiences(), iUnitCombat)
 
@@ -25431,7 +25431,7 @@ int CvTraitInfo::getNumUnitCombatProductionModifiers() const
 	return (int)m_aUnitCombatProductionModifiers.size();
 }
 
-UnitCombatModifier CvTraitInfo::getUnitCombatProductionModifier(int iUnitCombat)
+UnitCombatModifier CvTraitInfo::getUnitCombatProductionModifier(int iUnitCombat) const
 {
 	FASSERT_BOUNDS(0, getNumUnitCombatProductionModifiers(), iUnitCombat)
 
@@ -25456,7 +25456,7 @@ int CvTraitInfo::getNumBonusHappinessChanges() const
 	return (int)m_aBonusHappinessChanges.size();
 }
 
-BonusModifier CvTraitInfo::getBonusHappinessChange(int iBonus)
+BonusModifier CvTraitInfo::getBonusHappinessChange(int iBonus) const
 {
 	FASSERT_BOUNDS(0, getNumBonusHappinessChanges(), iBonus)
 

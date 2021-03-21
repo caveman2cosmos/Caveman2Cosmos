@@ -115,7 +115,7 @@ void CvPropertyPropagator::setTargetObjectType(GameObjectTypes eObjectType)
 	m_eTargetObjectType = eObjectType;
 }
 
-bool CvPropertyPropagator::isActive(CvGameObject *pObject) const
+bool CvPropertyPropagator::isActive(const CvGameObject* pObject) const
 {
 	if ((m_eObjectType == NO_GAMEOBJECT) || (m_eObjectType == pObject->getGameObjectType()))
 	{
@@ -131,7 +131,7 @@ bool CvPropertyPropagator::isActive(CvGameObject *pObject) const
 	return false;
 }
 
-void CvPropertyPropagator::getTargetObjects(CvGameObject* pObject, std::vector<CvGameObject*>& apGameObjects)
+void CvPropertyPropagator::getTargetObjects(const CvGameObject* pObject, std::vector<const CvGameObject*>& apGameObjects)
 {
 	apGameObjects.push_back(pObject);
 	if (m_eTargetObjectType != NO_GAMEOBJECT)
@@ -228,7 +228,7 @@ void CvPropertyPropagator::buildDisplayString(CvWStringBuffer &szBuffer) const
 	}
 }
 
-void CvPropertyPropagator::getCheckSum(unsigned int &iSum) const
+void CvPropertyPropagator::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eProperty);
 }
@@ -334,7 +334,7 @@ void CvPropertyPropagatorSpread::copyNonDefaults(CvPropertyPropagator* pProp)
 		m_iPercent = pOther->getPercent();
 }
 
-void CvPropertyPropagatorSpread::getCheckSum(unsigned int &iSum) const
+void CvPropertyPropagatorSpread::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertyPropagator::getCheckSum(iSum);
 	CheckSum(iSum, m_iPercent);
@@ -435,7 +435,7 @@ void CvPropertyPropagatorGather::copyNonDefaults(CvPropertyPropagator* pProp)
 		m_iAmountPerTurn = pOther->getAmountPerTurn();
 }
 
-void CvPropertyPropagatorGather::getCheckSum(unsigned int &iSum) const
+void CvPropertyPropagatorGather::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertyPropagator::getCheckSum(iSum);
 	CheckSum(iSum, m_iAmountPerTurn);
@@ -580,7 +580,7 @@ void CvPropertyPropagatorDiffuse::copyNonDefaults(CvPropertyPropagator* pProp)
 		m_iPercent = pOther->getPercent();
 }
 
-void CvPropertyPropagatorDiffuse::getCheckSum(unsigned int &iSum) const
+void CvPropertyPropagatorDiffuse::getCheckSum(uint32_t& iSum) const
 {
 	CvPropertyPropagator::getCheckSum(iSum);
 	CheckSum(iSum, m_iPercent);
