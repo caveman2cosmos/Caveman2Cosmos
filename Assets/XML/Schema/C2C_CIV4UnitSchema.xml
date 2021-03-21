@@ -1259,7 +1259,6 @@
 	<ElementType name="bOffensiveVictoryMove" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bOneUp" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPillageResearch" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bPillageCulture" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPillageEspionage" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPillageMarauder" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPillageOnMove" content="textOnly" dt:type="boolean"/>
@@ -1477,7 +1476,6 @@
 	<ElementType name="iCost"/>
 	<ElementType name="iHurryCostModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iAdvancedStartCost" content="textOnly" dt:type="int"/>
-	<ElementType name="iAdvancedStartCostIncrease" content="textOnly" dt:type="int"/>
 	<ElementType name="iMinAreaSize" content="textOnly" dt:type="int"/>
 	<ElementType name="iMoves" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoRevealMap" content="textOnly" dt:type="boolean"/>
@@ -1960,7 +1958,6 @@
 		<element type="iCost" minOccurs="0"/>
 		<element type="iHurryCostModifier" minOccurs="0"/>
 		<element type="iAdvancedStartCost" minOccurs="0"/>
-		<element type="iAdvancedStartCostIncrease" minOccurs="0"/>
 		<element type="iMinAreaSize" minOccurs="0"/>
 		<element type="iMoves" minOccurs="0"/>
 		<element type="bNoRevealMap" minOccurs="0"/>
@@ -2561,7 +2558,6 @@
 		<element type="bOffensiveVictoryMove" minOccurs="0"/>
 		<element type="bOneUp" minOccurs="0"/>
 		<element type="bPillageResearch" minOccurs="0"/>
-		<element type="bPillageCulture" minOccurs="0"/>
 		<element type="bPillageEspionage" minOccurs="0"/>
 		<element type="bPillageMarauder" minOccurs="0"/>
 		<element type="bPillageOnMove" minOccurs="0"/>
@@ -3080,7 +3076,6 @@
 		<element type="bFreeDrop" minOccurs="0"/>
 		<element type="bOffensiveVictoryMove" minOccurs="0"/>
 		<element type="bOneUp" minOccurs="0"/>
-		<element type="bPillageCulture" minOccurs="0"/>
 		<element type="bPillageEspionage" minOccurs="0"/>
 		<element type="bPillageMarauder" minOccurs="0"/>
 		<element type="bPillageOnMove" minOccurs="0"/>

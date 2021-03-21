@@ -33,7 +33,6 @@ class CvGameUtils:
 
 		self.iNationalMint = GC.getInfoTypeForString("BUILDING_NATIONAL_MINT")
 		self.iHimejiCastle = GC.getInfoTypeForString("BUILDING_HIMEJI_CASTLE")
-		self.iHimejiCastleObsoleteTech = GC.getBuildingInfo(self.iHimejiCastle).getObsoleteTech()
 
 		self.iReplicators = GC.getInfoTypeForString("BONUS_REPLICATORS")
 		self.iRapidPrototyping = GC.getInfoTypeForString("TECH_RAPID_PROTOTYPING")
@@ -190,13 +189,6 @@ class CvGameUtils:
 		bIgnoreCost = argsList[4]
 		return False
 
-	def cannotCreate(self, argsList):
-		pCity = argsList[0]
-		eProject = argsList[1]
-		bContinue = argsList[2]
-		bTestVisible = argsList[3]
-		return False
-
 	def cannotMaintain(self, argsList):
 		CyCity, iProcess, bContinue, = argsList
 		if not CyCity:
@@ -335,10 +327,6 @@ class CvGameUtils:
 	def doHolyCity(self):
 		return False
 
-	def doGold(self, argsList):
-		#ePlayer = argsList[0]
-		return False
-
 	def doResearch(self, argsList):
 		#ePlayer = argsList[0]
 		return False
@@ -387,13 +375,9 @@ class CvGameUtils:
 	def doPillageGold(self, argsList):
 		CyPlot, CyUnit, = argsList
 
-		obsoleteTech = self.iHimejiCastleObsoleteTech
-
 		iPlayer = CyPlot.getOwner()
-		if iPlayer > -1:
-			CyPlayer = GC.getPlayer(iPlayer)
-			if obsoleteTech == -1 or not GC.getTeam(CyPlayer.getTeam()).isHasTech(obsoleteTech) and CyPlayer.countNumBuildings(self.iHimejiCastle):
-				return 0
+		if iPlayer > -1 and GC.getPlayer(iPlayer).hasBuilding(self.iHimejiCastle):
+			return 0
 
 		iTemp = GC.getImprovementInfo(CyPlot.getImprovementType()).getPillageGold()
 		gold = GAME.getSorenRandNum(iTemp, "Pillage Gold 1")
@@ -401,8 +385,7 @@ class CvGameUtils:
 
 		gold += CyUnit.getPillageChange() * gold / 100.0
 
-		CyPlayer = GC.getPlayer(CyUnit.getOwner())
-		if obsoleteTech == -1 or not GC.getTeam(CyPlayer.getTeam()).isHasTech(obsoleteTech) and CyPlayer.countNumBuildings(self.iHimejiCastle):
+		if GC.getPlayer(CyUnit.getOwner()).hasBuilding(self.iHimejiCastle):
 			gold *= 2
 
 		return int(gold)
@@ -411,9 +394,7 @@ class CvGameUtils:
 	def doCityCaptureGold(self, argsList):
 		CyCity, iOwnerNew, = argsList
 
-		ownerOld = GC.getPlayer(CyCity.getOwner())
-		obsoleteTech = self.iHimejiCastleObsoleteTech
-		if obsoleteTech == -1 or not GC.getTeam(ownerOld.getTeam()).isHasTech(obsoleteTech) and ownerOld.countNumBuildings(self.iHimejiCastle):
+		if GC.getPlayer(CyCity.getOwner()).hasBuilding(self.iHimejiCastle):
 			return 0
 
 		gold = self.BASE_CAPTURE_GOLD
@@ -553,7 +534,7 @@ class CvGameUtils:
 				elif iData2 == 21:
 					return CyTranslator().getText("TXT_KEY_CONCEPT_CORPORATIONS",())
 				elif iData2 == 22:
-					return CyTranslator().getText("TXT_KEY_ESPIONAGE_CULTURE",())
+					return CyTranslator().getText("TXT_WORD_ESPIONAGE",())
 				elif iData2 == 23:
 					return CyTranslator().getText("TXT_KEY_PITBOSS_GAME_OPTIONS",())
 				elif iData2 == 24:
@@ -674,7 +655,7 @@ class CvGameUtils:
 					lBuildings = []
 					lWonders = []
 					for i in xrange(GC.getNumBuildingInfos()):
-						if pCity.getNumBuilding(i):
+						if pCity.getNumRealBuilding(i):
 							if isLimitedWonder(i):
 								lWonders.append(GC.getBuildingInfo(i).getDescription())
 							else:
@@ -702,7 +683,7 @@ class CvGameUtils:
 				return CyGameTextMgr().parseReligionInfo(iData2, False)
 ## Building Widget Text##
 			elif iData1 == 7870:
-				return CyGameTextMgr().getBuildingHelp(iData2, False, False, False, None)
+				return CyGameTextMgr().getBuildingHelp(iData2, False, None, False, False, False)
 ## Tech Widget Text##
 			elif iData1 == 7871:
 				if iData2 == -1:
@@ -763,7 +744,7 @@ class CvGameUtils:
 				pUnit = GC.getPlayer(iPlayer).getUnit(iData2)
 				sText = CyGameTextMgr().getSpecificUnitHelp(pUnit, True, False)
 				if GAME.GetWorldBuilderMode():
-					sText += "\n" + CyTranslator().getText("TXT_KEY_WB_UNIT", ()) + " ID: " + str(iData2)
+					sText += "\n" + CyTranslator().getText("TXT_WORD_UNIT", ()) + " ID: " + str(iData2)
 					sText += "\n" + CyTranslator().getText("TXT_KEY_WB_GROUP", ()) + " ID: " + str(pUnit.getGroupID())
 					sText += "\n" + "X: " + str(pUnit.getX()) + ", Y: " + str(pUnit.getY())
 					sText += "\n" + CyTranslator().getText("TXT_KEY_WB_AREA_ID", ()) + ": "  + str(pUnit.plot().getArea())

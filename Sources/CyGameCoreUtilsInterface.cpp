@@ -64,11 +64,6 @@ void CyGameCoreUtilsPythonInterface()
 
 	python::def("isCardinalDirection", isCardinalDirection,"bool (DirectionTypes eDirection)");
 
-	python::def("getPopulationAsset", getPopulationAsset, "int (int iPopulation)");
-	python::def("getLandPlotsAsset", getLandPlotsAsset, "int (int iLandPlots)");
-	python::def("getPopulationPower", getPopulationPower, "int (int iPopulation)");
-	python::def("getPopulationScore", getPopulationScore, "int (int iPopulation)");
-	python::def("getLandPlotsScore", getLandPlotsScore, "int (int iPopulation)");
 	python::def("getTechScore", getTechScore, "int (int /*TechTypes*/ eTech)");
 	python::def("getWonderScore", getWonderScore, "int (int /*BuildingTypes*/ eWonder)");
 

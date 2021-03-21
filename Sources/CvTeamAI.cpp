@@ -1,9 +1,16 @@
 // teamAI.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvCity.h"
+#include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvMap.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvPython.h"
 #include "CvTeamAI.h"
 
 // statics
@@ -3073,7 +3080,7 @@ void CvTeamAI::AI_setWarPlanStateCounter(TeamTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiWarPlanStateCounter[eIndex] = iNewValue;
-	FAssert(AI_getWarPlanStateCounter(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getWarPlanStateCounter(eIndex))
 }
 
 
@@ -3099,7 +3106,7 @@ void CvTeamAI::AI_setAtWarCounter(TeamTypes eIndex, int iNewValue)
 	if ( iNewValue == 0 || eIndex != getID() )
 	{
 		m_aiAtWarCounter[eIndex] = iNewValue;
-		FAssert(AI_getAtWarCounter(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(AI_getAtWarCounter(eIndex))
 	}
 	else
 	{
@@ -3125,7 +3132,7 @@ void CvTeamAI::AI_setAtPeaceCounter(TeamTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiAtPeaceCounter[eIndex] = iNewValue;
-	FAssert(AI_getAtPeaceCounter(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getAtPeaceCounter(eIndex))
 }
 
 
@@ -3146,7 +3153,7 @@ void CvTeamAI::AI_setHasMetCounter(TeamTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiHasMetCounter[eIndex] = iNewValue;
-	FAssert(AI_getHasMetCounter(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getHasMetCounter(eIndex))
 }
 
 
@@ -3167,7 +3174,7 @@ void CvTeamAI::AI_setOpenBordersCounter(TeamTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiOpenBordersCounter[eIndex] = iNewValue;
-	FAssert(AI_getOpenBordersCounter(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getOpenBordersCounter(eIndex))
 }
 
 
@@ -3188,7 +3195,7 @@ void CvTeamAI::AI_setDefensivePactCounter(TeamTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiDefensivePactCounter[eIndex] = iNewValue;
-	FAssert(AI_getDefensivePactCounter(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getDefensivePactCounter(eIndex))
 }
 
 
@@ -3209,7 +3216,7 @@ void CvTeamAI::AI_setShareWarCounter(TeamTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiShareWarCounter[eIndex] = iNewValue;
-	FAssert(AI_getShareWarCounter(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getShareWarCounter(eIndex))
 }
 
 
@@ -3251,7 +3258,7 @@ void CvTeamAI::AI_setWarSuccess(TeamTypes eIndex, int iNewValue)
 			}
 		}
 		m_aiWarSuccess[eIndex] = iNewValue;
-		FAssert(AI_getWarSuccess(eIndex) >= 0);
+		FASSERT_NOT_NEGATIVE(AI_getWarSuccess(eIndex))
 	}
 }
 
@@ -3289,7 +3296,7 @@ void CvTeamAI::AI_setEnemyPeacetimeTradeValue(TeamTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiEnemyPeacetimeTradeValue[eIndex] = iNewValue;
-	FAssert(AI_getEnemyPeacetimeTradeValue(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getEnemyPeacetimeTradeValue(eIndex))
 }
 
 
@@ -3310,7 +3317,7 @@ void CvTeamAI::AI_setEnemyPeacetimeGrantValue(TeamTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
 	m_aiEnemyPeacetimeGrantValue[eIndex] = iNewValue;
-	FAssert(AI_getEnemyPeacetimeGrantValue(eIndex) >= 0);
+	FASSERT_NOT_NEGATIVE(AI_getEnemyPeacetimeGrantValue(eIndex))
 }
 
 
@@ -3993,7 +4000,7 @@ void CvTeamAI::AI_doWar()
 
 					iTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
 					iTimeModifier /= 150;
-					FAssert(iTimeModifier >= 0);
+					FASSERT_NOT_NEGATIVE(iTimeModifier)
 				}
 
 				int iAbandonTimeModifier = 100;
@@ -4001,8 +4008,8 @@ void CvTeamAI::AI_doWar()
 				iAbandonTimeModifier /= 150;
 
 				//Afforess - abandon plans more quickly in financial distress
-				int iFundedPercent = GET_PLAYER(getLeaderID()).AI_costAsPercentIncome(iExtraWarExpenses);
-				int iSafePercent = GET_PLAYER(getLeaderID()).AI_safeCostAsPercentIncome();
+				int iFundedPercent = GET_PLAYER(getLeaderID()).AI_profitMargin(iExtraWarExpenses);
+				int iSafePercent = GET_PLAYER(getLeaderID()).AI_safeProfitMargin();
 
 				if (iSafePercent > iFundedPercent)
 				{
@@ -4357,8 +4364,8 @@ void CvTeamAI::AI_doWar()
 		//Base financial stats off team lead player, likely other team members (vassals) are not doing "better" than the leader.
 		CvPlayerAI &kTeamLeader = GET_PLAYER(getLeaderID());
 
-		int iFundedPercent = kTeamLeader.AI_costAsPercentIncome(iExtraWarExpenses);
-		int iSafePercent = kTeamLeader.AI_safeCostAsPercentIncome();
+		int iFundedPercent = kTeamLeader.AI_profitMargin(iExtraWarExpenses);
+		int iSafePercent = kTeamLeader.AI_safeProfitMargin();
 		if (gTeamLogLevel >= 1)
 		{
 			logBBAI("  Team %d (%S) estimating warplan financial costs, iExtraWarExpenses: %d, iFundedPercent: %d, iSafePercent: %d", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0), iExtraWarExpenses, iFundedPercent, iSafePercent);
@@ -4377,14 +4384,14 @@ void CvTeamAI::AI_doWar()
 		{
 			// Afforess - It is possible a more limited war could be cheaper
 			// Account for that here
-			int iLimitedWarFundedPercent = kTeamLeader.AI_costAsPercentIncome(iExtraWarExpenses / 2);
+			int iLimitedWarFundedPercent = kTeamLeader.AI_profitMargin(iExtraWarExpenses / 2);
 			if (gTeamLogLevel >= 1)
 			{
 				logBBAI("  Team %d (%S) estimating LIMITED warplan financial costs, iExtraWarExpenses: %d, iLimitedWarFundedPercent: %d, iSafePercent: %d", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0), iExtraWarExpenses / 2, iLimitedWarFundedPercent, iSafePercent);
 			}
 			bFinancesProLimitedWar = iLimitedWarFundedPercent > iSafePercent;
 
-			int iDogPileFundedPercent = kTeamLeader.AI_costAsPercentIncome(iExtraWarExpenses / 3);
+			int iDogPileFundedPercent = kTeamLeader.AI_profitMargin(iExtraWarExpenses / 3);
 			if (gTeamLogLevel >= 1)
 			{
 				logBBAI("  Team %d (%S) estimating DOGPILE warplan financial costs, iExtraWarExpenses: %d, iDogPileFundedPercent: %d, iSafePercent: %d", getID(), GET_PLAYER(getLeaderID()).getCivilizationDescription(0), iExtraWarExpenses / 3, iDogPileFundedPercent, iSafePercent);

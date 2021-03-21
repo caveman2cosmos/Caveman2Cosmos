@@ -15,10 +15,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 	// set the docstring of the current module scope 
 	python::scope().attr("__doc__") = "Civilization IV Player Class";
 	x
-		.def("isNone", &CyPlayer::isNone, "checks for a null player")
-
-		.def("changeLeader", &CyPlayer::changeLeader, "void (int /*LeaderHeadTypes*/ eNewLeader ) - change leader of player")
-		.def("changeCiv", &CyPlayer::changeCiv, "void (int /*CivilizationTypes*/ eNewCiv ) - change civilization of player")
+		.def("changeLeader", &CyPlayer::changeLeader, "void (int /*LeaderHeadTypes*/ eNewLeader) - change leader of player")
+		.def("changeCiv", &CyPlayer::changeCiv, "void (int /*CivilizationTypes*/ eNewCiv) - change civilization of player")
 		.def("setIsHuman", &CyPlayer::setIsHuman, "void (bool bNewValue) - set whether player is human")
 		.def("setIsRebel", &CyPlayer::setIsRebel, "void (bool bNewValue) - set whether the player is considered a rebel")
 		.def("isRebel", &CyPlayer::isRebel, "bool () - true if player is a rebel")
@@ -70,6 +68,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 
 		.def("countOwnedBonuses", &CyPlayer::countOwnedBonuses, "int (int (BonusTypes) eBonus) ")
 		.def("countNumBuildings", &CyPlayer::countNumBuildings, "int (int /*BuildingTypes*/ eBuilding) - Returns the number of buildings")
+		.def("hasBuilding", &CyPlayer::hasBuilding, "bool (int /*BuildingTypes*/ eBuilding)")
 
 		.def("canContact", &CyPlayer::canContact, "bool (int ePlayer)")
 		.def("contact", &CyPlayer::contact, "void (int ePlayer)")

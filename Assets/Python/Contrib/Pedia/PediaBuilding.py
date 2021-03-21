@@ -142,7 +142,7 @@ class PediaBuilding:
 			szText2 = ""
 		for k in range(CommerceTypes.NUM_COMMERCE_TYPES):
 			char = unichr(8500 + k)
-			iTemp = CvTheBuildingInfo.getObsoleteSafeCommerceChange(k) + CvTheBuildingInfo.getCommerceChange(k)
+			iTemp = CvTheBuildingInfo.getCommerceChange(k)
 			if iTemp:
 				if iTemp < 0:
 					szValue = " <color=255,0,0,255>"
@@ -246,12 +246,12 @@ class PediaBuilding:
 		aList2 = []
 		aList3 = []
 		if bNotCulture:
-			for i in range(GC.getNumBuildingInfos()):
-				CvBuildingInfo = GC.getBuildingInfo(i)
-				if CvBuildingInfo.isReplaceBuilding(iTheBuilding):
-					aList1.append((CvBuildingInfo, i))
-				elif CvTheBuildingInfo.isReplaceBuilding(i):
-					aList2.append((CvBuildingInfo, i))
+			for i in xrange(CvTheBuildingInfo.getNumReplacedBuilding()):
+				iReplaced = CvTheBuildingInfo.getReplacedBuilding(i)
+				aList1.append((GC.getBuildingInfo(iReplaced), iReplaced))
+			for i in xrange(CvTheBuildingInfo.getNumReplacementBuilding()):
+				iReplacement = CvTheBuildingInfo.getReplacementBuilding(i)
+				aList2.append((GC.getBuildingInfo(iReplacement), iReplacement))
 			if aList1 or aList2:
 				if aList1 and aList2:
 					W_REP_1 = W_REP_2 = W_COL_3
@@ -397,12 +397,13 @@ class PediaBuilding:
 				aList1.append(j)
 				if iPrereqNumOfBuilding > 1:
 					aList3.append((j, iPrereqNumOfBuilding))
-			elif CvTheBuildingInfo.isPrereqOrBuilding(j):
-				aList2.append(j)
-				if iPrereqNumOfBuilding > 0:
-					aList3.append((j, iPrereqNumOfBuilding))
 			elif iPrereqNumOfBuilding > 0:
 				aList3.append((j, iPrereqNumOfBuilding))
+
+		# Or building requirements
+		for j in xrange(CvTheBuildingInfo.getNumPrereqOrBuilding()):
+			aList2.append(CvTheBuildingInfo.getPrereqOrBuilding(j))
+
 		if aList1 or aList2 or aList3:
 			if bPlus:
 				screen.attachLabel(panelName, "", szAnd)
@@ -542,7 +543,7 @@ class PediaBuilding:
 			H_ROW_2 += H_BOT_ROW
 		# Special Abilities
 		screen.addPanel(aName(), "", "", True, False, X_COL_1, Y_TOP_ROW_2, W_COL_3, H_ROW_2, ePanelBlue50)
-		szSpecialText = szfont3 + CyGameTextMgr().getBuildingHelp(iTheBuilding, True, False, False, None, False)[1:]
+		szSpecialText = szfont3 + CyGameTextMgr().getBuildingHelp(iTheBuilding, False, None, True, False, False)[1:]
 		screen.addMultilineText(aName(), szSpecialText, X_COL_1 + 4, Y_TOP_ROW_2 + 12, W_COL_3 - 8, H_ROW_2 - 20, eWidGen, 0, 0, 1<<0)
 		# History
 		szHistory = TRNSLTR.getText("TXT_KEY_PEDIA_HISTORY", ())

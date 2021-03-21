@@ -14,17 +14,20 @@
 			<Plural>0:1</Plural>
 		</Italian>
 		<Polish>Miejski Kusznik</Polish>
+		<Russian>Áîåö ñ ñàìîñòðåëîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_APOCALYPSE_URBAN_CROSSBOWMAN_PEDIA</Tag>
 		<English>In the years following the Great War, the United States devolved into a post-apocalyptic environment commonly dubbed "the Wasteland". The War and subsequent nuclear Armageddon has severely depopulated the country, leaving large expanses of property decaying from neglect. In addition, virtually all food and water is irradiated and radiation exposure, combined with a mutagenic bioweapon that was accidentally released into the atmosphere during the War, have caused mutation in nearly all forms of life. With a large portion of the country's infrastructure in ruins, basic necessities are scarce. Barter is the common method of exchange, with bottlecaps providing a more conventional form of currency. Most cities and towns are empty, having been looted and deserted in favor of smaller, makeshift communities scattered around the Wasteland.</English>
 		<Italian>Il [COLOR_UNIT_TEXT]balestriere urbano[COLOR_REVERT] è un'unità post-apocalittica.</Italian>
 		<Polish>Fantastyka postapokaliptyczna - wizja, konwencja traktująca o wydarzeniach bezpośrednio po kataklizmie, apokalipsie. W książkach lub filmach fabuła rozgrywa się zazwyczaj po wojnie jądrowej, pandemii lub katastrofie ekologicznej. Ziemia staje się wówczas areną dla ludzi czerpiących z resztek zniszczonej cywilizacji, starających się przetrwać i przystosować do niesprzyjających warunków.</Polish>
+		<Russian>[TAB]Â ãîäû ïîñëå Âåëèêîé âîéíû Ñîåäèíåííûå Øòàòû ïðåâðàòèëèñü â ïîñòàïîêàëèïòè÷åñêóþ òåððèòîðèþ, íàçâàííóþ "ïóñòîøüþ". Âîéíû è ïîñëåäîâàâøèé çà íèìè ÿäåðíûé Àðìàãåääîí, ñèëüíî ñîêðàòèëè íàñåëåíèå, îñòàâèâ ãîðîäñêóþ èíôðàñòðóêòóðó ðàçðóøàòüñÿ â çàïóñòåíèè. Êðîìå òîãî, ïðàêòè÷åñêè âñå ïðîäîâîëüñòâèå è âîäà ïîäâåðãëèñü ðàäèàöèîííîìó îáëó÷åíèþ. Â ñî÷åòàíèè ñ ìóòàãåííûì äåéñòâèåì áèîëîãè÷åñêîãî îðóæèÿ, ñëó÷àéíî ïîïàâøåãî â àòìîñôåðó âî âðåìÿ âîéíû, ýòî âûçâàëî ìóòàöèè ïðàêòè÷åñêè âñåõ ôîðì æèçíè. Áîëüøàÿ ÷àñòü ñòðàíû ïðåâðàùåíà â ðóèíû, â äåôèöèòå âñå ñàìîå íåîáõîäèìîå. Ðàñïðîñòðàíåí ñïîñîá îáìåíà ñ ïðîáêàìè âìåñòî îáû÷íûõ äåíåã. Áîëüøèíñòâî ãîðîäîâ áåçëþäíû è ðàçãðàáëåíû. Èõ çàìåíèëè íåáîëüøèå, èìïðîâèçèðîâàííûå îáùèíû, ðàçáðîñàííûå ïî ïóñòîøè.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_APOCALYPSE_URBAN_CROSSBOWMAN_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Urban Crossbowman[COLOR_REVERT] is an alt-timeline post-apocalypse unit. You shouldn't be able to build it, unless you have been nuked and you can build nothing else.</English>
 		<Italian>Il [COLOR_UNIT_TEXT]balestriere urbano[COLOR_REVERT] è un'unità post-apocalittica. Non dovresti essere in grado di costruirlo, a meno che non ti abbiano bombardato con un'atomica.</Italian>
+		<Russian>Áîåö ñ ñàìîñòðåëîì - ýòî àëüòåðíàòèâíûé þíèò ïîñòàïîêàëèïñèñà. Îí ìîæåò áûòü ïîñòðîåí â òîì ñëó÷àå, åñëè ïî âàøåé òåððèòîðèè íàíåñëè ÿäåðíûé óäàð è âû íå ìîæåòå ïîñòðîèòü íè÷åãî äðóãîãî.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CROWBAR_GUARD</Tag>
@@ -40,11 +43,13 @@
 			<Plural>0:1</Plural>
 		</Italian>
 		<Polish>Strażnik z łomem</Polish>
+		<Russian>Áîåö ñ ãâîçäîäåðîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CROWBAR_GUARD_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Crowbar Guard[COLOR_REVERT] is an alt-timeline post-apocalypse unit. You shouldn't be able to build it, unless you have been nuked and you can build nothing else.</English>
 		<Italian>La [COLOR_UNIT_TEXT]guardia con piede di porco[COLOR_REVERT] è un'unità post-apocalittica. Non dovresti essere in grado di costruirlo, a meno che non ti abbiano bombardato con un'atomica.</Italian>
+		<Russian>Áîåö ñ ãâîçäîäåðîì - ýòî àëüòåðíàòèâíûé þíèò ïîñòàïîêàëèïñèñà. Îí ìîæåò áûòü ïîñòðîåí â òîì ñëó÷àå, åñëè ïî âàøåé òåððèòîðèè íàíåñëè ÿäåðíûé óäàð è âû íå ìîæåòå ïîñòðîèòü íè÷åãî äðóãîãî.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HATCHET_MAN</Tag>
@@ -60,11 +65,13 @@
 			<Plural>0:1</Plural>
 		</Italian>
 		<Polish>Wojownik z siekierą</Polish>
+		<Russian>Áîåö ñ òåñàêîì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HATCHET_MAN_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Hatchet Warrior[COLOR_REVERT] is an alt-timeline post-apocalypse unit. You shouldn't be able to build it, unless you have been nuked and you can build nothing else.</English>
 		<Italian>Il [COLOR_UNIT_TEXT]guerriero con accetta[COLOR_REVERT] è un'unità post-apocalittica. Non dovresti essere in grado di costruirlo, a meno che non ti abbiano bombardato con un'atomica.</Italian>
+		<Russian>Áîåö ñ òåñàêîì - ýòî àëüòåðíàòèâíûé þíèò ïîñòàïîêàëèïñèñà. Îí ìîæåò áûòü ïîñòðîåí â òîì ñëó÷àå, åñëè ïî âàøåé òåððèòîðèè íàíåñëè ÿäåðíûé óäàð è âû íå ìîæåòå ïîñòðîèòü íè÷åãî äðóãîãî.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MACHETE_WARRIOR</Tag>
@@ -80,17 +87,19 @@
 			<Plural>0:1</Plural>
 		</Italian>
 		<Polish>Wojownik z maczetą</Polish>
+		<Russian>Áîåö ñ ìà÷åòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MACHETE_WARRIOR_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Machete Warrior[COLOR_REVERT] is an alt-timeline post-apocalypse unit. You shouldn't be able to build it, unless you have been nuked and you can build nothing else.</English>
 		<Italian>Il [COLOR_UNIT_TEXT]guerriero con machete[COLOR_REVERT] è un'unità post-apocalittica. Non dovresti essere in grado di costruirlo, a meno che non ti abbiano bombardato con un'atomica.</Italian>
+		<Russian>Áîåö ñ ìà÷åòå - ýòî àëüòåðíàòèâíûé þíèò ïîñòàïîêàëèïñèñà. Îí ìîæåò áûòü ïîñòðîåí â òîì ñëó÷àå, åñëè ïî âàøåé òåððèòîðèè íàíåñëè ÿäåðíûé óäàð è âû íå ìîæåòå ïîñòðîèòü íè÷åãî äðóãîãî.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POST_APOCALYPTIC_GRENADIER</Tag>
 		<English>Molotov Cocktail Thrower</English>
 		<French>
-			<Text>Lanceur de coktail molotov</Text>
+			<Text>Lanceur de cocktail molotov</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -99,12 +108,14 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Italian>
-		<Polish>Miotacz Koktaili Mołotowa</Polish>
+		<Polish>Miotacz koktajli Mołotowa</Polish>
+		<Russian>Ïèðîìàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POST_APOCALYPTIC_GRENADIER_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Molotov Cocktail Thrower[COLOR_REVERT] can easily take the wreckage of buildings and cities from enemy forces by burning them out. Be careful with flammables, though: you only have so many resources.</English>
 		<Italian>Il [COLOR_UNIT_TEXT]lanciatore di cocktail molotov[COLOR_REVERT] può facilmente conquistare i resti di edifici e città dalle forze nemiche, semplicemente bruciandole. Fai tuttavia attenzione con gli infiammabili: non hai così tante risorse.</Italian>
+		<Russian>Ïèðîìàí ëåãêî ìîæåò îñâîáîäèòü îáúåêòû è ãîðîäà îò ñèë ïðîòèâíèêà, ïóòåì èõ ñæèãàíèÿ. Áóäüòå îñòîðîæíû ñ îãíåîïàñíûìè âåùåñòâàìè, ó âàñ íå òàê ìíîãî ðåñóðñîâ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WRENCH_WARRIOR</Tag>
@@ -120,10 +131,12 @@
 			<Plural>0:1</Plural>
 		</Italian>
 		<Polish>Wojownik z kluczem fr.</Polish>
+		<Russian>Ñëåñàðü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WRENCH_WARRIOR_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Wrench Warrior[COLOR_REVERT] is an alt-timeline post-apocalypse unit. You shouldn't be able to build it, unless you have been nuked and you can build nothing else.</English>
 		<Italian>Il [COLOR_UNIT_TEXT]guerriero con chiave inglese[COLOR_REVERT] è un'unità post-apocalittica. Non dovresti essere in grado di costruirlo, a meno che non ti abbiano bombardato con un'atomica.</Italian>
+		<Russian>Ñëåñàðü - ýòî àëüòåðíàòèâíûé þíèò ïîñòàïîêàëèïñèñà. Îí ìîæåò áûòü ïîñòðîåí â òîì ñëó÷àå, åñëè ïî âàøåé òåððèòîðèè íàíåñëè ÿäåðíûé óäàð è âû íå ìîæåòå ïîñòðîèòü íè÷åãî äðóãîãî.</Russian>
 	</TEXT>
 </Civ4GameText>

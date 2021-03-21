@@ -6,18 +6,29 @@
 #define CIV4_PLAYER_H
 
 #include "CvCityAI.h"
-#include "CvUnitAI.h"
-#include "CvSelectionGroupAI.h"
 #include "CvPlotGroup.h"
 #include "LinkedList.h"
-#include "CvTalkingHeadMessage.h"
 #include "CvContractBroker.h"
 #include "CvGameObject.h"
 #include "CvBuildLists.h"
+#include "CvUnitList.h"
+#include "CvUnitAI.h"
 
+class CvArea;
+class CvBuildLists;
+class CvCity;
+class CvCityAI;
+//class CvContractBroker;
 class CvDiploParameters;
-class CvPopupInfo;
 class CvEventTriggerInfo;
+class CvPlot;
+class CvPlotGroup;
+class CvPopupInfo;
+class CvSelectionGroupAI;
+class CvTalkingHeadMessage;
+class CvUnitAI;
+class CvUnitSelectionCriteria;
+class CvUpgradeCache;
 
 #define	UNIT_BIRTHMARK_TEMP_UNIT	20000
 
@@ -38,10 +49,6 @@ typedef stdext::hash_map<EventTypes, EventTriggeredData> CvEventMap;
 typedef std::vector< std::pair<UnitCombatTypes, PromotionTypes> > UnitCombatPromotionArray;
 typedef std::vector< std::pair<UnitTypes, PromotionTypes> > UnitPromotionArray;
 typedef std::vector< std::pair<CivilizationTypes, LeaderHeadTypes> > CivLeaderArray;
-
-//	Forward declaration
-class CvUpgradeCache;
-
 typedef std::vector<TechTypes> techPath;
 
 class CvPlayer
@@ -87,7 +94,6 @@ public:
 
 	void resetPlotAndCityData();
 
-	void logMsg(char* format, ...);
 	void changePersonalityType();
 	void resetCivTypeEffects();
 	void changeLeader(LeaderHeadTypes eNewLeader);
@@ -219,7 +225,8 @@ public:
 	DllExport bool hasBusyUnit() const;
 
 	bool isChoosingFreeTech() const;
-	void setChoosingFreeTech(bool bValue);
+	void startChoosingFreeTech();
+	void endChoosingFreeTech();
 	void chooseTech(int iDiscover = 0, CvWString szText = CvWString(), bool bFront = false);
 
 	int calculateScore(bool bFinal = false, bool bVictory = false) const;
@@ -240,6 +247,7 @@ public:
 	int countUnimprovedBonuses(const CvArea* pArea, const CvPlot* pFromPlot = NULL) const;
 	int countCityFeatures(FeatureTypes eFeature) const;
 	int countNumBuildings(BuildingTypes eBuilding) const;
+	bool hasBuilding(const BuildingTypes eBuilding) const;
 	int countNumCitiesConnectedToCapital() const;
 	int countPotentialForeignTradeCities(const CvArea* pIgnoreArea = NULL) const;
 	int countPotentialForeignTradeCitiesConnected() const;
@@ -376,7 +384,7 @@ public:
 	int specialistCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const;
 
 	CvPlot* getStartingPlot() const;
-	void setStartingPlot(const CvPlot* pNewValue, bool bUpdateStartDist);
+	void setStartingPlot(CvPlot* pNewValue, const bool bUpdateStartDist);
 
 	int getTotalPopulation() const;
 	int getAveragePopulation() const;
@@ -1152,7 +1160,7 @@ public:
 	EventTriggeredData* addEventTriggered();
 	void deleteEventTriggered(int iID);
 	EventTriggeredData* initTriggeredData(EventTriggerTypes eEventTrigger, bool bFire = false, int iCityId = -1, int iPlotX = INVALID_PLOT_COORD, int iPlotY = INVALID_PLOT_COORD, PlayerTypes eOtherPlayer = NO_PLAYER, int iOtherPlayerCityId = -1, ReligionTypes eReligion = NO_RELIGION, CorporationTypes eCorporation = NO_CORPORATION, int iUnitId = -1, BuildingTypes eBuilding = NO_BUILDING);
-	int getEventTriggerWeight(EventTriggerTypes eTrigger) const; // Exposed to python
+	int getEventTriggerWeight(EventTriggerTypes eTrigger) const;
 	bool isEventTriggerPossible(EventTriggerTypes eTrigger, bool bIgnoreActive = false) const;
 
 	DllExport void addMessage(const CvTalkingHeadMessage& message);
@@ -1191,7 +1199,7 @@ public:
 	DllExport const CvString getSmtpHost() const;
 	void setSmtpHost(const char* szHost);
 
-	const EventTriggeredData* getEventOccured(EventTypes eEvent, bool bIncludeExpiredEvents = false) const; // Exposed to python
+	const EventTriggeredData* getEventOccured(EventTypes eEvent, bool bIncludeExpiredEvents = false) const;
 	bool isTriggerFired(EventTriggerTypes eEventTrigger) const;
 	void setEventOccured(EventTypes eEvent, const EventTriggeredData& kEventTriggered, bool bOthers = true);
 	void resetEventOccured(EventTypes eEvent, bool bAnnounce = true);
@@ -1245,7 +1253,7 @@ public:
 	PlayerTypes pickConqueredCityOwner(const CvCity& kCity) const;
 	bool canHaveTradeRoutesWith(PlayerTypes ePlayer) const;
 
-	void forcePeace(PlayerTypes ePlayer); // exposed to Python
+	void forcePeace(PlayerTypes ePlayer);
 
 	bool canSpiesEnterBorders(PlayerTypes ePlayer) const;
 	int getNewCityProductionValue() const;
@@ -1693,7 +1701,7 @@ public:
 	virtual int AI_totalUnitAIs(UnitAITypes eUnitAI) const = 0;
 	virtual int AI_totalAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const = 0;
 	virtual int AI_totalWaterAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const = 0;
-	virtual int AI_plotTargetMissionAIs(CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const = 0;
+	virtual int AI_plotTargetMissionAIs(const CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const = 0;
 	virtual int AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const = 0;
 
 	virtual int AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum = false, CivicTypes* paeSelectedCivics = NULL) const = 0;
@@ -1767,7 +1775,7 @@ protected:
 	float m_fRevIdxBadReligionMod;
 	float m_fRevIdxGoodReligionMod;
 	bool m_bInquisitionConditions;
-	bool m_bPopBad;
+
 	int m_iUnitUpgradePriceModifier;
 	int m_iNationalGreatPeopleRate;
 
@@ -1887,7 +1895,7 @@ protected:
 
 	int m_bDoNotBotherStatus;
 
-	bool m_bChoosingFreeTech;
+	int m_iChoosingFreeTech;
 
 	PlayerTypes m_eID;
 	LeaderHeadTypes m_ePersonalityType;
@@ -2020,7 +2028,9 @@ protected:
 	bool isValidEventTech(TechTypes eTech, EventTypes eEvent, PlayerTypes eOtherPlayer) const;
 	void recalculatePopulationgrowthratepercentage();
 
+	int CvPlayer::calculatePlotRouteYieldDifference(const CvPlot* pPlot, const RouteTypes eRoute, YieldTypes eYield) const;
 	RouteTypes getBestRouteInternal(const CvPlot* pPlot, bool bConnect, const CvUnit* pBuilder, BuildTypes* eBestRouteBuild = NULL) const;
+	bool CvPlayer::canBuildPlotTechPrereq(const CvPlot* pPlot, BuildTypes eRouteBuild, bool bTestEra = false, bool bTestVisible = false) const;
 	bool isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvPlot* pPlot, const CvUnit* pBuilder) const;
 
 	void verifyGoldCommercePercent();
@@ -2233,7 +2243,6 @@ public:
 
 	void updateTechHappinessandHealth();
 	void checkReligiousDisablingAllBuildings();
-	bool isBuildingtoDisplayReligiouslyDisabled(BuildingTypes eBuilding) const;
 
 	void doGoldenAgebyPercentage(int iPercent);
 	//TB Traits end

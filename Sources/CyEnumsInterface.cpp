@@ -1,5 +1,10 @@
 #include "CvGameCoreDLL.h"
-
+#include "CvBuildingFilters.h"
+#include "CvBuildingGrouping.h"
+#include "CvBuildingSort.h"
+#include "CvUnitFilters.h"
+#include "CvUnitGrouping.h"
+#include "CvUnitSort.h"
 #include "CvGameCoreDLLUnDefNew.h"
 #include "CvGameCoreDLLDefNew.h"
 
@@ -335,7 +340,7 @@ void CyEnumsPythonInterface()
 		.value("WIDGET_HELP_RELIGION_CITY", WIDGET_HELP_RELIGION_CITY)
 		.value("WIDGET_HELP_CORPORATION_CITY", WIDGET_HELP_CORPORATION_CITY)
 		.value("WIDGET_HELP_NATIONALITY", WIDGET_HELP_NATIONALITY)
-		.value("WIDGET_HELP_DEFENSE", WIDGET_HELP_DEFENSE)
+		.value("WIDGET_UNUSED_40", WIDGET_UNUSED_40)
 		.value("WIDGET_HELP_HEALTH", WIDGET_HELP_HEALTH)
 		.value("WIDGET_HELP_HAPPINESS", WIDGET_HELP_HAPPINESS)
 		.value("WIDGET_HELP_POPULATION", WIDGET_HELP_POPULATION)
@@ -386,7 +391,7 @@ void CyEnumsPythonInterface()
 		.value("WIDGET_HELP_FOUND_RELIGION", WIDGET_HELP_FOUND_RELIGION)
 		.value("WIDGET_HELP_FOUND_CORPORATION", WIDGET_HELP_FOUND_CORPORATION)
 		.value("WIDGET_HELP_FINANCE_NUM_UNITS", WIDGET_HELP_FINANCE_NUM_UNITS)
-		.value("WIDGET_UNUSED_50", WIDGET_UNUSED_50)
+		.value("WIDGET_HELP_IMPROVEMENT_ACTUAL", WIDGET_HELP_IMPROVEMENT_ACTUAL)
 		.value("WIDGET_HELP_FINANCE_AWAY_SUPPLY", WIDGET_HELP_FINANCE_AWAY_SUPPLY)
 		.value("WIDGET_HELP_FINANCE_CITY_MAINT", WIDGET_HELP_FINANCE_CITY_MAINT)
 		.value("WIDGET_HELP_FINANCE_CIVIC_UPKEEP", WIDGET_HELP_FINANCE_CIVIC_UPKEEP)
@@ -418,12 +423,12 @@ void CyEnumsPythonInterface()
 		.value("WIDGET_PEDIA_JUMP_TO_FEATURE", WIDGET_PEDIA_JUMP_TO_FEATURE)
 		.value("WIDGET_TURN_EVENT", WIDGET_TURN_EVENT)
 		.value("WIDGET_FOREIGN_ADVISOR", WIDGET_FOREIGN_ADVISOR)
-		.value("WIDGET_REVOLUTION", WIDGET_REVOLUTION)
+		.value("WIDGET_HELP_BUILDUP", WIDGET_HELP_BUILDUP)
 		.value("WIDGET_PEDIA_DESCRIPTION", WIDGET_PEDIA_DESCRIPTION)
 		.value("WIDGET_PEDIA_DESCRIPTION_NO_HELP", WIDGET_PEDIA_DESCRIPTION_NO_HELP)
 		.value("WIDGET_DEAL_KILL", WIDGET_DEAL_KILL)
 		.value("WIDGET_MINIMAP_HIGHLIGHT", WIDGET_MINIMAP_HIGHLIGHT)
-		.value("WIDGET_PRODUCTION_MOD_HELP", WIDGET_PRODUCTION_MOD_HELP)
+		.value("WIDGET_PEDIA_JUMP_TO_ROUTE", WIDGET_PEDIA_JUMP_TO_ROUTE)
 		.value("WIDGET_LEADERHEAD", WIDGET_LEADERHEAD)
 		.value("WIDGET_LEADER_LINE", WIDGET_LEADER_LINE)
 		.value("WIDGET_COMMERCE_MOD_HELP", WIDGET_COMMERCE_MOD_HELP)
@@ -460,9 +465,6 @@ void CyEnumsPythonInterface()
 		.value("WIDGET_HELP_TRAIT", WIDGET_HELP_TRAIT)
 		.value("WIDGET_PEDIA_JUMP_TO_TRAIT", WIDGET_PEDIA_JUMP_TO_TRAIT)
 		.value("WIDGET_CITY_GOTO", WIDGET_CITY_GOTO)
-		.value("WIDGET_PEDIA_JUMP_TO_ROUTE", WIDGET_PEDIA_JUMP_TO_ROUTE)
-		.value("WIDGET_HELP_IMPROVEMENT_ACTUAL", WIDGET_HELP_IMPROVEMENT_ACTUAL)
-		.value("WIDGET_HELP_BUILDUP", WIDGET_HELP_BUILDUP)
 
 		.value("NUM_WIDGET_TYPES", NUM_WIDGET_TYPES)
 		;
@@ -668,6 +670,7 @@ void CyEnumsPythonInterface()
 		.value("GAMEOPTION_CHALLENGE_CUT_LOSERS", GAMEOPTION_CHALLENGE_CUT_LOSERS)
 		.value("GAMEOPTION_CHALLENGE_HIGH_TO_LOW", GAMEOPTION_CHALLENGE_HIGH_TO_LOW)
 		.value("GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY", GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY)
+		.value("GAMEOPTION_ADVANCED_ROUTES", GAMEOPTION_ADVANCED_ROUTES)
 		;
 
 	python::enum_<MultiplayerOptionTypes>("MultiplayerOptionTypes")
@@ -1641,11 +1644,6 @@ void CyEnumsPythonInterface()
 		.value("CONTACT_TRADE_TECH", CONTACT_TRADE_TECH)
 		.value("CONTACT_TRADE_BONUS", CONTACT_TRADE_BONUS)
 		.value("CONTACT_TRADE_MAP", CONTACT_TRADE_MAP)
-/************************************************************************************************/
-/* Afforess	                  Start		 08/01/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
 		.value("CONTACT_PEACE_PRESSURE", CONTACT_PEACE_PRESSURE)
 		.value("CONTACT_EMBASSY", CONTACT_EMBASSY)
 		.value("CONTACT_TRADE_STOP_TRADING", CONTACT_TRADE_STOP_TRADING)
@@ -1656,9 +1654,7 @@ void CyEnumsPythonInterface()
 		.value("CONTACT_TRADE_CONTACTS", CONTACT_TRADE_CONTACTS)
 		.value("CONTACT_TRADE_CORPORATION", CONTACT_TRADE_CORPORATION)
 		.value("CONTACT_TRADE_BUY_WAR", CONTACT_TRADE_BUY_WAR)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		.value("NUM_CONTACT_TYPES", NUM_CONTACT_TYPES)
 		;
 
@@ -1696,20 +1692,13 @@ void CyEnumsPythonInterface()
 		.value("MEMORY_EVENT_GOOD_TO_US", MEMORY_EVENT_GOOD_TO_US)
 		.value("MEMORY_EVENT_BAD_TO_US", MEMORY_EVENT_BAD_TO_US)
 		.value("MEMORY_LIBERATED_CITIES", MEMORY_LIBERATED_CITIES)
-/************************************************************************************************/
-/* Afforess	                  Start		 02/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		.value("MEMORY_RECALLED_AMBASSADOR", MEMORY_RECALLED_AMBASSADOR)
 		.value("MEMORY_WARMONGER", MEMORY_WARMONGER)
 		.value("MEMORY_MADE_PEACE", MEMORY_MADE_PEACE)
 		.value("MEMORY_INQUISITION", MEMORY_INQUISITION)
 		.value("MEMORY_SACKED_CITY", MEMORY_SACKED_CITY)
 		.value("MEMORY_SACKED_HOLY_CITY", MEMORY_SACKED_HOLY_CITY)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		.value("NUM_MEMORY_TYPES", NUM_MEMORY_TYPES)
 		;
 
@@ -2254,17 +2243,11 @@ void CyEnumsPythonInterface()
 		.value("ADVANCEDSTARTACTION_AUTOMATE", ADVANCEDSTARTACTION_AUTOMATE)
 		;
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	python::enum_<ModderOptionTypes>("ModderOptionTypes")
 		.value("NO_MODDEROPTION", NO_MODDEROPTION)
 
 		.value("MODDEROPTION_FLEXIBLE_DIFFICULTY", MODDEROPTION_FLEXIBLE_DIFFICULTY)
-		.value("MODDEROPTION_SHOW_COASTAL_BUILDINGS", MODDEROPTION_SHOW_COASTAL_BUILDINGS)
-		.value("MODDEROPTION_HIDE_OBSOLETE_BUILDINGS", MODDEROPTION_HIDE_OBSOLETE_BUILDINGS)
 		.value("MODDEROPTION_HIDE_REPLACED_BUILDINGS", MODDEROPTION_HIDE_REPLACED_BUILDINGS)
 		.value("MODDEROPTION_NO_FRIENDLY_PILLAGING", MODDEROPTION_NO_FRIENDLY_PILLAGING)
 		.value("MODDEROPTION_HIDE_UNAVAILBLE_BUILDS", MODDEROPTION_HIDE_UNAVAILBLE_BUILDS)
@@ -2338,9 +2321,6 @@ void CyEnumsPythonInterface()
 
 		.value("NUM_MODDERGAMEOPTION_TYPES", NUM_MODDERGAMEOPTION_TYPES)
 	;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	//AIAndy: Expose the PathGenerator flags to Python
 	python::enum_<int>("PathingFlags")

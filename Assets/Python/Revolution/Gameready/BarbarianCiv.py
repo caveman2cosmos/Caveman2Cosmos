@@ -72,8 +72,7 @@ class BarbarianCiv:
 		iMinPop = self.RevOpt.getMinPopulation() + iEra
 
 		bNoGo = True
-		CyCity, i = CyPlayerBarb.firstCity(False)
-		while CyCity:
+		for CyCity in CyPlayerBarb.cities():
 			iPop = CyCity.getPopulation()
 			if iPop >= iMinPop:
 
@@ -109,7 +108,6 @@ class BarbarianCiv:
 				if GAME.getSorenRandNum(int(iRange+fOdds), 'Barbarian city evolve') < fOdds:
 					bNoGo = False
 					break
-			CyCity, i = CyPlayerBarb.nextCity(i, False)
 
 		if bNoGo: return
 		'''
@@ -140,9 +138,15 @@ class BarbarianCiv:
 				# Empty slot
 				iPlayer = iPlayerX
 				CyPlayer = CyPlayerX
+		iNumTechs = GC.getNumTechInfos()
+		techsOwned = []
 		if aList:
 			iPlayer, CyPlayer = aList
 			iCivType = CyPlayer.getCivilizationType()
+			if not bNewWorld:
+				for iTech in xrange(iNumTechs):
+					if CyTeam.isHasTech(iTech):
+						techsOwned.append(iTech)
 			print "[INFO] Reincarnating dead player" + POST_FIX
 
 		elif iPlayer is None:
@@ -212,14 +216,15 @@ class BarbarianCiv:
 		szCityName = CyCity.getName()
 
 		# Add player to game
-		GAME.addPlayer(iPlayer, iLeader, iCivType, False)
+		GAME.addPlayer(iPlayer, iLeader, iCivType, False) # This resets player data.
 
 		CyTeam = GC.getTeam(CyPlayer.getTeam())
 
 		CyPlayer.setNewPlayerAlive(True)
 
 		civName = CyPlayer.getCivilizationDescription(0)
-		print "[INFO] %s has emerged in %s" %(civName, szCityName)
+		print "[BarbCiv] %s has emerged in %s" %(civName, szCityName)
+		print "[BarbCiv] bNewWorld = " + str(bNewWorld)
 
 		# Add replay message
 		mess = TRNSLTR.getText("TXT_KEY_BARBCIV_FORM_MINOR", ()) %(civName, szCityName)
@@ -227,6 +232,8 @@ class BarbarianCiv:
 		GAME.addReplayMessage(ReplayMessageTypes.REPLAY_MESSAGE_MAJOR_EVENT, iPlayer, mess, iX, iY, GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"))
 
 		# Using following method to acquire city produces 'revolted and joined' replay messages
+		if CyCity.getOriginalOwner() == iPlayerBarb:
+			CyCity.setOriginalOwner(iPlayer)
 		CyPlot.setOwner(iPlayer)
 
 		# Note: city acquisition may invalidate previous city pointer, so have to create new list of cities
@@ -241,34 +248,33 @@ class BarbarianCiv:
 		# Give techs to new player, with variables for extra techs for builders.
 		if bNewWorld:
 			iMinEra = iEra - self.RevOpt.getNewWorldErasBehind()
-			if iMinEra < 0:
-				iMinEra = 0
-			for iTech in xrange(GC.getNumTechInfos()):
-				if CyTeam.isHasTech(iTech) or not CyPlayer.canEverResearch(iTech): continue
-				if GC.getTechInfo(iTech).getEra() <= iMinEra:
-					CyTeam.setHasTech(iTech, True, iPlayer, False, False)
+			if iMinEra > -1:
+				for iTech in xrange(iNumTechs):
+					if CyPlayer.canEverResearch(iTech) and GC.getTechInfo(iTech).getEra() <= iMinEra:
+						CyTeam.setHasTech(iTech, True, iPlayer, False, False)
 		else:
-			fNumTeams = GAME.countCivTeamsAlive() * 1.0
-			fTechFrac = self.RevOpt.getBarbTechFrac()
-			#print "Free Starting techs:"
-			for iTech in xrange(GC.getNumTechInfos()):
-				if CyTeam.isHasTech(iTech) or not CyPlayer.canEverResearch(iTech): continue
-
-				fKnownRatio = GAME.countKnownTechNumTeams(iTech) / fNumTeams
-				if fKnownRatio < 1 and closeTeams:
-					iCount = 0
-					iTemp = 0
+			iNumTeams = GAME.countCivTeamsAlive()
+			iTechFrac = self.RevOpt.getBarbTechPercent()
+			for iTech in xrange(iNumTechs):
+				if iTech in techsOwned:
+					CyTeam.setHasTech(iTech, True, iPlayer, False, False)
+					continue
+				if not CyPlayer.canEverResearch(iTech):
+					continue
+				iKnownRatio = 100 * GAME.countKnownTechNumTeams(iTech) / iNumTeams
+				if iKnownRatio < 100 and closeTeams:
+					iTeams = 0
+					iKnown = 0
 					for iTeamX in closeTeams:
-						iCount += 1
+						iTeams += 1
 						CyTeamX = GC.getTeam(iTeamX)
 						if CyTeamX.isHasTech(iTech):
-							iTemp += 1
+							iKnown += 1
 
-					fKnownRatio = fKnownRatio/2 + iTemp/(2.0*iCount)
+					iKnownRatio = (iKnownRatio + 100*iKnown/iTeams) / 2
 
-				if fKnownRatio >= fTechFrac:
+				if iKnownRatio >= iTechFrac:
 					CyTeam.setHasTech(iTech, True, iPlayer, False, False)
-					#print "\t " + GC.getTechInfo(iTech).getDescription()
 
 		CyTeam.setIsMinorCiv(True, False)
 
@@ -537,8 +543,7 @@ class BarbarianCiv:
 				CyPlotX.changeCulture(iPlayerBarb, -iCult, False)
 				CyPlotX.setCulture(iPlayer, iCult, True)
 			# Units
-			for i in xrange(CyPlotX.getNumUnits()):
-				CyUnit = CyPlotX.getUnit(i)
+			for CyUnit in CyPlotX.units():
 				if CyUnit.getOwner() == iPlayerBarb:
 					if iRadius and GAME.getSorenRandNum(iRadius + 1, 'Convert Barbarian'): continue
 					iUnit = CyUnit.getUnitType()
@@ -637,24 +642,24 @@ class BarbarianCiv:
 			iMaxDistance = (5 + 3*bNewWorld) * GC.getWorldInfo(MAP.getWorldSize()).getDefaultPlayers()
 			CyPlayerBarb = GC.getPlayer(iPlayerBarb)
 			aList = ()
-			CyCityX, i = CyPlayerBarb.firstCity(False)
-			while CyCityX:
-				CyPlotX = CyCityX.plot()
-				if CyPlotX.getArea() == iAreaID or CyPlotX.isAdjacentRevealed(iTeam):
-					x = CyCityX.getX()
-					y = CyCityX.getY()
+			for cityX in CyPlayerBarb.cities():
+				plotX = cityX.plot()
+				if plotX.getArea() == iAreaID or plotX.isAdjacentRevealed(iTeam):
+					x = cityX.getX()
+					y = cityX.getY()
 					iDist = plotDistance(iX, iY, x, y)
 
 					if iDist <= iMaxDistance and GAME.getSorenRandNum(2, "fifty fifty"):
 						iCities += 1
-						aList += ((CyPlotX, x, y),) # No point in including the CyCityX pointer...
-				CyCityX, i = CyPlayerBarb.nextCity(i, False)
+						if cityX.getOriginalOwner() == iPlayerBarb:
+							cityX.setOriginalOwner(iPlayer)
+						aList += ((plotX, x, y),) # No point in including the cityX pointer...
 
-			for CyPlotX, x, y in aList:
-				CyPlotX.setOwner(iPlayer) # ...because this invalidates the CyCityX pointer.
-				CyCityX = CyPlotX.getPlotCity()
-				self.setupFormerBarbCity(CyCityX, iPlayer, iDefender, int(iNumBarbDefenders*fMilitaryMod + 1))
-				CyCityX.changePopulation(1)
+			for plotX, x, y in aList:
+				plotX.setOwner(iPlayer) # ...because this invalidates the cityX pointer.
+				cityX = plotX.getPlotCity()
+				self.setupFormerBarbCity(cityX, iPlayer, iDefender, int(iNumBarbDefenders*fMilitaryMod + 1))
+				cityX.changePopulation(1)
 				if iWorker > -1:
 					CyPlayer.initUnit(iWorker, x, y, UnitAITypes.UNITAI_WORKER, DirectionTypes.DIRECTION_SOUTH)
 				if iExplorer > -1:

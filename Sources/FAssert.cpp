@@ -2,6 +2,7 @@
 
 #if (defined(FASSERT_ENABLE) || !defined(_DEBUG)) && defined(WIN32)
 
+#include "CvPython.h"
 #include "FDialogTemplate.h"
 #include "StackWalker.h"
 #include <sstream>
@@ -246,14 +247,14 @@ bool FAssertDlg( const char* szExpr, const char* szMsg, const char* szFile, unsi
 	std::string dllTrace = detail::getDLLTrace();
 
 #ifdef FASSERT_LOGGING
-	gDLL->logMsg("Asserts.log", CvString::format("%s %s (%d): %s,  %s\n%s\n%s", 
+	logging::logMsg("Asserts.log", "%s %s (%d): %s,  %s\n%s\n%s", 
 		szFile ? szFile : "", 
 		szFunction ? szFunction : "",
 		line, 
 		szExpr ? szExpr : "", 
 		szMsg ? szMsg : "", 
 		pyTrace.c_str(), 
-		dllTrace.c_str()).c_str()
+		dllTrace.c_str()
 	);
 
 	picojson::value::object obj;
@@ -273,7 +274,7 @@ bool FAssertDlg( const char* szExpr, const char* szMsg, const char* szFile, unsi
 		szExpr ? szExpr : "noexpr"
 	).c_str());
 	obj["callstack_key"] = picojson::value(CvString::format("%u", stdext::hash_value(pyTrace + dllTrace)).c_str());
-	gDLL->logMsg("AssertsJson.log", picojson::value(obj).serialize().c_str());
+	logging::logMsg("AssertsJson.log", picojson::value(obj).serialize().c_str());
 
 	return false;
 #else

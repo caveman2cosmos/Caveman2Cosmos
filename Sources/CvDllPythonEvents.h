@@ -5,6 +5,9 @@
 
 #include "CvPython.h"
 
+class CvCity;
+class CvPlot;
+class CvUnit;
 class CyArgsList;
 class CvSelectionGroup;
 

@@ -3,8 +3,6 @@
 #ifndef logging_h__
 #define logging_h__
 
-#include "CvGameCoreDLL.h"
-
 namespace logging
 {
 	//template <class Ty_> struct JsonConvert
@@ -92,6 +90,18 @@ namespace logging
 	};
 
 	void log_json_event(const char* type, const JsonValues& values);
+
+	void logMsg(const char* file, const char* msg, ...);
+	void logMsgW(const char* file, const wchar_t* msg, ...);
+
+	void createLogsFolder();
+	void deleteLogs();
 }
+
+#ifdef _DEBUG
+#define DEBUG_LOG logging::logMsg
+#else
+#define DEBUG_LOG ;
+#endif
 
 #endif // logging_h__

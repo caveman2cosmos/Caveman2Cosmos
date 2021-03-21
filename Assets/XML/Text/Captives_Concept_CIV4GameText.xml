@@ -8,6 +8,7 @@
 		<German>Während eines Kampfes können einige Gegner gefangen werden. Die Chance hängt von den jeweiligen Statsformen und [LINK=CONCEPT_WORLD_VIEW]Weltansichten[\LINK]beider Seiten ab. Diese Einheiten werden [LINK=UNIT_CAPTIVE_MILITARY]Kriegsgefangene[\LINK] oder [LINK=UNIT_CAPTIVE_NEANDERTHAL]Gefangene - Neanderthal[\LINK].Wenn du eine Stadt nieder brennst, kannst du zusätzlich [LINK=UNIT_CAPTIVE_CIVILIAN]Gefangene - Zivilisten[\LINK] und [LINK=UNIT_FREED_SLAVE]Gefangene - Befreite Sklaven[\LINK] erhalten.[PARAGRAPH:2]Was man mit diesen Einheiten machen kann hängt von der vorherschenden Weltanschauung ab. Wenn Sklaverei vorherrscht, können die Gefangenen als Sklaven verkauft werden oder der Stadt als [LINK=SPECIALIST_SETTLED_SLAVE]ansessiger Sklave[\LINK]zugewiesen werden. Wenn Kanibalismus vorherrscht können sie geschlachtet werden. Wenn Menschenopfer durchgeführt werden, können sie für Kultur und Zufriedenheit geopfert werden.</German>
 		<Polish>W rezultacie zwycięskiej walki masz szansę pojmać wrogą jednostkę. Szansa na to zależy od wielu czynników, w tym od aktywnego ustroju w Twoim i przeciwnika imperium oraz od
 		The chance of this depends on both your and their civics and [LINK=CONCEPT_WORLD_VIEW]Swiatopoglądu[\LINK]. Te jednostki będą [LINK=UNIT_CAPTIVE_MILITARY]Jeńcamy Wojennymi[\LINK] lub [LINK=UNIT_CAPTIVE_NEANDERTHAL]Jeńcami - Neandertylczykami[\LINK]. Jeśli zajmiesz lub zniszczysz miasto masz także szansę na [LINK=UNIT_CAPTIVE_CIVILIAN]Jeńców - Cywili[\LINK] i [LINK=UNIT_FREED_SLAVE]Wyzwolonych Niewolników[\LINK].[PARAGRAPH:2]To co zrobisz z pojmanymi jednostkami zależy od aktywnego Swiatopoglądu jaki posiada Twoje imperium. Jeśli akceptujesz Niewolnictwo możesz sprzedać Jeńców, lub dołączyć do ludności miasta jako [LINK=SPECIALIST_SETTLED_SLAVE]Osiadli Niewolnicy[\LINK]. Jeśli Twoi ludzi akceptują kanibalizm możesz przeznaczyć jeńców na pożywienie, a jeśli składasz ofiary z ludzi to możesz ofiarować jeńców na ołatarzu co dodaje troche kultury i szczęścia.</Polish>
+		<Russian>По итогам боя вы иногда можете захватить один или несколько вражеских отрядов. Вероятность этого зависит как от вас, так и от принятых вами Парадигм и [LINK=CONCEPT_WORLD_VIEW]Мировоззрений[\LINK]. Эти отряды могут быть [LINK=UNIT_CAPTIVE_MILITARY]Военнопленными[\LINK]  или [LINK=UNIT_CAPTIVE_NEANDERTHAL]Пленн. неандертальцами[\LINK]. При разрушении и разграблении вражеского города, вы также можете получить [LINK=UNIT_CAPTIVE_CIVILIAN]Пленника[\LINK] и [LINK=UNIT_FREED_SLAVE]Вольноотпущенника[\LINK].[PARAGRAPH:2]То, что вы можете сделать с этими отрядами, зависит от того, какие мировоззрения вы в данный момент используете. Если у вашей цивилизации разрешено Рабовладение, то можете продать пленных как рабов или заставить их поселиться в вашем городу в качестве [LINK=SPECIALIST_SETTLED_SLAVE]Оседлых рабов[\LINK]. Если в вашей цивилизации разрешен Каннибализм, вы можете убить их ради пищи и молотков. Если в вашей цивилизации практикуются Человеческие жертвоприношения, вы можете пожертвовать ими ради культуры или счастья.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_CAPTIVES_TEXT</Tag>
@@ -15,6 +16,7 @@
 		<French>Prisonniers et esclaves</French>
 		<Italian>Prigionieri e schiavi</Italian>
 		<Polish>Jeńcy, więźniowie i niewolnicy</Polish>
+		<Russian>Ïëåííûå, Âîåíîïëåííûå è Ðàáû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_WORLD_VIEW_PEDIA</Tag>
@@ -23,6 +25,7 @@
 		<Italian>Le concezioni del mondo sono come forme di governo, e come tali possono essere attive o no. Sono ancora in fase sperimentale e sono state introdotte come edifici dato che sono poche in confronto alle forme di governo. Le attuali concezioni sono:[NEWLINE][NEWLINE][ICON_BULLET][BOLD]Cannibalismo[\BOLD] - permette di uccidere e macellare i prigionieri coome gli animali.[NEWLINE][NEWLINE][ICON_BULLET][BOLD]Sacrifici umani[\BOLD] - permette di sacrificare i prigionieri.[NEWLINE][NEWLINE][ICON_BULLET][BOLD]Schiavismo[\BOLD] - permette di vendere o utilizzare i prigionieri come schiavi.</Italian>
 		<German>Weltanschauung sind wie Gesellschaftsformen, außer das es nur zwei Zustände gibt, aktiv und inaktiv. Diese sind ein Experiment und eher als Gebäude umgesetzt statt als Gesellschaftsformen aufgrund der Anzahl welche wir erwarten. Aktuelle Weltanschauungen sind:[NEWLINE][NEWLINE][ICON_BULLET][BOLD]Kannibalismus[\BOLD] - Erlaubt das Schlachten von Gefangenen wie Tiere.[NEWLINE][NEWLINE][ICON_BULLET][BOLD]Menschenopfer[\BOLD] - Erlaubt das Opfern von Gefangenen.[NEWLINE][NEWLINE][ICON_BULLET][BOLD]Sklaverei[\BOLD] - Erlaubt das Verkaufen oder Ansiedeln von Gefangenen als Sklaven.</German>
 		<Polish>Swiatopogląd jest podobny do ustroju. Obecnie istnieją 3 światopoglądy w grze: Kanibalizm, Ofiary z ludzi oraz Niewolnictwo.</Polish>
+		<Russian>Мировоззрения в чем-то похожи на Парадигмы, но в них только два состояния - принятие или запрет. Они являются экспериментом и реализованы в виде зданий, а не Парадигм, из-за количественных ограничений. Ниже приведены текущие мировоззрения:[NEWLINE][NEWLINE][TAB][ICON_BULLET][BOLD]Каннибализм[\BOLD] - позволяет убивать пленных как животных.[NEWLINE][NEWLINE][TAB][ICON_BULLET][BOLD]Человеческие жертвоприношения[\BOLD] - позволяет приносить пленников в жертву богам и духам в обмен на прирост культуры и счастливые лица.[NEWLINE][NEWLINE][TAB][ICON_BULLET][BOLD]Рабовладение[\BOLD] - позволяет захватывать, продавать или заселять пленных как рабов.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_WORLD_VIEW_TEXT</Tag>
@@ -31,5 +34,6 @@
 		<Italian>Concezioni del mondo</Italian>
 		<German>Weltanschauung</German>
 		<Polish>Swiatopogląd</Polish>
+		<Russian>Ìèðîâîççðåíèÿ</Russian>
 	</TEXT>
 </Civ4GameText>

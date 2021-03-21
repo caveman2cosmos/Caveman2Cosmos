@@ -1,8 +1,14 @@
 // unitAI.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvCity.h"
 #include "CvGlobals.h"
+#include "CvMap.h"
+#include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
+#include "CvPlot.h"
+#include "CvSelectionGroup.h"
+#include "CvUnit.h"
 
 CvContractBroker::CvContractBroker() : m_eOwner(NO_PLAYER)
 {
@@ -337,7 +343,7 @@ void CvContractBroker::finalizeTenderContracts()
 								tenderAllocations[iTenderAllocationKey] = 0;
 							}
 
-							FAssert(iTendersAlreadyInProcess >= 0);
+							FASSERT_NOT_NEGATIVE(iTendersAlreadyInProcess)
 
 							if ( iTendersAlreadyInProcess <= 0 )
 							{

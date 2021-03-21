@@ -11,12 +11,13 @@
 #ifndef CV_OUTCOME_H
 #define CV_OUTCOME_H
 
-class CvProperties;
 class CvPlayerAI;
+class CvPlot;
+class CvProperties;
 class CvUnit;
-class IntExpr;
+class CvXMLLoadUtility;
 class BoolExpr;
-class CvXMLLoadUtilityModTools;
+class IntExpr;
 
 class CvOutcome
 {
@@ -53,7 +54,7 @@ public:
 	void buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& kUnit) const;
 
 	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvOutcome* pOutcome, CvXMLLoadUtility* pXML);
+	void copyNonDefaults(CvOutcome* pOutcome);
 
 	void getCheckSum(unsigned int& iSum) const;
 protected:

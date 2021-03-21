@@ -30,8 +30,8 @@
 
 #define BUILDINGFOCUS_CONSIDER_ANY			(1 << 20)
 
-//	KOSHLING Mod - pre-calculate and cache building values for all focuses
-class	BuildingValueCache;
+class BuildingValueCache; // KOSHLING Mod - pre-calculate and cache building values for all focuses
+class CvArea;
 
 //	Koshling - add caching to yield calculations
 #ifdef YIELD_VALUE_CACHING
@@ -350,7 +350,7 @@ protected:
 	int AI_getPlotMagicValue(const CvPlot* pPlot, bool bHealthy, bool bWorkerOptimization = false) const;
 	int AI_countGoodTiles(bool bHealthy, bool bUnworkedOnly, int iThreshold = 50, bool bWorkerOptimization = false) const;
 	int AI_countGoodSpecialists(bool bHealthy) const;
-	int AI_calculateTargetCulturePerTurn() const;
+	//int AI_calculateTargetCulturePerTurn() const;
 
 	void AI_stealPlots();
 

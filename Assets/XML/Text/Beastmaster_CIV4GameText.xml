@@ -5,6 +5,7 @@
 		<English>Animal Tamer Complex</English>
 		<French>Centre de Dressage d'animaux</French>
 		<Polish>Kompleks Tresury Zwierząt</Polish>
+		<Russian>Äðåññ. êîìïëåêñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TAMER_COMPLEX_STRATEGY</Tag>
@@ -40,6 +41,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Treser Bestii</Polish>
+		<Russian>Äðåññèðîâùèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEASTMASTER_PEDIA</Tag>
@@ -55,18 +57,18 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Oswojony Mrówkojad</Polish>
+		<Russian>Òðóáêîçóá (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Tag>
-		<English>Tamed animals are similar to subdued animals except they can fight and reveal the map. Their primary use it to spread animal buildings to all of your cities.[PARAGRAPH:2]Some can place resources on the map depending on your tech level, the terrain and the animal.[PARAGRAPH:2]The tamed animal units by [COLOR_HIGHLIGHT_TEXT]saibotlieh[COLOR_REVERT] were just too cool not to be used in a game. If you can think of other uses we should make of them tell us and we wil see what we can do.</English>
-		<Italian>Gli animali ammaestrati di [COLOR_HIGHLIGHT_TEXT]saibotlieh[COLOR_REVERT] erano troppo fighi per non essere usati in un gioco. Se conosci un altro uso che potremmo farne, diccelo e vedremo ciò che possiamo fare.</Italian>
-		<Polish>Oswojone zwierzęta mogą być tresowane i wykorzystywane w walce.</Polish>
+		<English>Tamed animals are similar to subdued animals except they can fight and reveal the map. Their primary use it to spread animal buildings to all of your cities.[PARAGRAPH:2]Some can place resources on the map depending on your tech level, the terrain and the animal.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_ANIMAL_STRATEGY</Tag>
 		<English>Use tamed animals in combat or use them to build extensions to the Zoo or Carnival (ie cage buildings).</English>
 		<French>Les animaux domptés peuvent être utilisé au combat, ou pour construire des extensions pour le Zoo ou le Carnaval (ie Construction de cages).</French>
 		<Italian>Usa gli animali ammaestrati in combattimento, oppure utilizzali per espandere il tuo Zoo o il tuo Carnivale, costruendo le gabbie.</Italian>
+		<Russian>Èñïîëüçóéòå ïðèðó÷åííûõ æèâîòíûõ â áîþ èëè äëÿ ðàñøèðåíèÿ Çîîïàðêà è Êàðíàâàëà.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_BISON</Tag>
@@ -77,6 +79,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Oswojony Bizon</Polish>
+		<Russian>Áèçîí (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_BOAR</Tag>
@@ -87,6 +90,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Oswojony Dzik</Polish>
+		<Russian>Êàáàí (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_BUFFALO</Tag>
@@ -97,6 +101,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Oswojony Żubr</Polish>
+		<Russian>Áóéâîë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_CAMEL</Tag>
@@ -107,6 +112,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Oswojony Wielbłąd</Polish>
+		<Russian>Âåðáëþä (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_CATTLE</Tag>
@@ -117,6 +123,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Oswojony Tur</Polish>
+		<Russian>Êîðîâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_DONKEY</Tag>
@@ -127,16 +134,18 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Oswojony Osioł</Polish>
+		<Russian>Îñåë (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_ELEPHANT</Tag>
 		<English>Tamed Elephant</English>
 		<French>
-			<Text>Eléphant (dompté)</Text>
+			<Text>Éléphant (dompté)</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
 		<Polish>Oswojony Słoń</Polish>
+		<Russian>Ñëîí (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_HIPPO</Tag>
@@ -147,6 +156,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Oswojony Hipopotam</Polish>
+		<Russian>Áåãåìîò (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_HORSE</Tag>
@@ -157,6 +167,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Oswojony Koń</Polish>
+		<Russian>Ëîøàäü (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_LION</Tag>
@@ -167,8 +178,8 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Gezaehmter Loewe:Gezaehmter Loewe:Gezaehmter Loewe:Gezaehmter Loewe:Gezaehmte Loewen:Gezaehmte Loewen:Gezaehmte Loewen:Gezaehmte Loewen</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Text>Gezähmter Löwe:Gezähmten Löwen:Gezähmten Löwen:Gezähmten Löwen:Gezähmte Löwen:Gezähmten Löwen:Gezähmten Löwen:Gezähmten Löwen</Text>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -182,6 +193,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Oswojony Lew</Polish>
+		<Russian>Ëåâ (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_LLAMA</Tag>
@@ -192,6 +204,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Oswojona Llama</Polish>
+		<Russian>Ëàìà (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_MAMMOTH</Tag>
@@ -202,6 +215,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Oswojony Mamut</Polish>
+		<Russian>Ìàìîíò (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_MUSKOX</Tag>
@@ -212,6 +226,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Oswojony Wół Piżmowy</Polish>
+		<Russian>Îâöåáûê (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_PANTHER</Tag>
@@ -222,8 +237,8 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Gezaehmter Panther:Gezaehmter Panther:Gezaehmter Panther:Gezaehmter Panther:Gezaehmte Panther:Gezaehmte Panther:Gezaehmte Panther:Gezaehmte Panther</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Text>Gezähmter Panther:Gezähmten Panthers:Gezähmten Panther:Gezähmten Panther:Gezähmte Panther:Gezähmten Panther:Gezähmten Panthern:Gezähmten Panther</Text>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -237,6 +252,7 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Oswojona Pantera</Polish>
+		<Russian>Ïàíòåðà (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_WOLF</Tag>
@@ -247,8 +263,8 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Gezaehmter Wolf:Gezaehmter Wolf:Gezaehmter Wolf:Gezaehmter Wolf:Gezaehmte Woelfe:Gezaehmte Woelfe:Gezaehmte Woelfe:Gezaehmte Woelfe</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Text>Gezähmter Wolf:Gezähmten Wolfes:Gezähmten Wolf:Gezähmten Wolf:Gezähmte Wölfe:Gezähmten Wölfe:Gezähmten Wölfen:Gezähmten Wölfe</Text>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -262,5 +278,6 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Oswojony Wilk</Polish>
+		<Russian>Âîëê (äîì.)</Russian>
 	</TEXT>
 </Civ4GameText>

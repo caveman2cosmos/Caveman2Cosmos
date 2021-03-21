@@ -27,7 +27,6 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6480</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -49,7 +48,6 @@
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirlift>2</iAirlift>
 			<iAirUnitCapacity>6</iAirUnitCapacity>
 			<HealUnitCombatTypes>
@@ -65,21 +63,12 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_AIRPORT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_AIRPORT</BuildingType>
+				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
 			</PrereqOrBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_GRAND_AERODROME</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_GRAND_AERODROME</BuildingType>
+			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -107,7 +96,6 @@
 			</MapCategoryTypes>
 			<iCost>1230</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAirlift>4</iAirlift>
 			<iAirUnitCapacity>9</iAirUnitCapacity>
 			<HealUnitCombatTypes>
@@ -123,14 +111,8 @@
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_AIRPORT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_AIRPORT</BuildingType>
+				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
 			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -161,7 +143,6 @@
 			</TechTypes>
 			<iCost>1130</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -198,7 +179,6 @@
 			<Bonus>BONUS_DIESELPUNK</Bonus>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
@@ -207,14 +187,8 @@
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_EMPIRE_STATE_BUILDING</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
+				<BuildingType>BUILDING_EMPIRE_STATE_BUILDING</BuildingType>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
@@ -235,7 +209,6 @@
 			<Bonus>BONUS_DIESELPUNK</Bonus>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -268,7 +241,6 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -342,14 +314,8 @@
 		<BuildingInfo>
 			<Type>BUILDING_FLIGHT_SCHOOL</Type>
 			<PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_AERODROME</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GRAND_AERODROME</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
+				<BuildingType>BUILDING_AERODROME</BuildingType>
+				<BuildingType>BUILDING_GRAND_AERODROME</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>

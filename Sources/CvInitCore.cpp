@@ -4,6 +4,9 @@
 #include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CvPlayerAI.h"
+#include "CvPopupInfo.h"
+#include "CvPython.h"
+#include "CvSelectionGroup.h"
 #include "CvXMLLoadUtility.h"
 
 // BUG - EXE/DLL Paths - start
@@ -24,7 +27,7 @@ bool CvInitCore::bPathsSet;
 
 CvInitCore::CvInitCore()
 {
-	OutputDebugString("Calling constructor for InitCore: Start");
+	OutputDebugString("Calling constructor for InitCore: Start\n");
 
 	// Moved to Init as the number is no more predetermined
 	//m_abOptions = new bool[NUM_GAMEOPTION_TYPES];
@@ -78,7 +81,7 @@ CvInitCore::CvInitCore()
 
 	reset(NO_GAMEMODE);
 
-	OutputDebugString("Calling constructor for InitCore: End");
+	OutputDebugString("Calling constructor for InitCore: End\n");
 }
 
 
@@ -116,7 +119,7 @@ CvInitCore::~CvInitCore()
 
 void CvInitCore::init(GameMode eMode)
 {
-	OutputDebugString("Initialize InitCore: Start");
+	OutputDebugString("Initialize InitCore: Start\n");
 
 	if (m_abOptions == NULL)
 		m_abOptions = new bool[NUM_GAMEOPTION_TYPES];
@@ -124,7 +127,7 @@ void CvInitCore::init(GameMode eMode)
 	// Init saved data
 	reset(eMode);
 
-	OutputDebugString("Initialize InitCore: Start");
+	OutputDebugString("Initialize InitCore: Start\n");
 }
 
 void CvInitCore::uninit()
@@ -138,7 +141,7 @@ void CvInitCore::uninit()
 // Initializes data members that are serialized.
 void CvInitCore::reset(GameMode eMode)
 {
-	OutputDebugString("Reseting InitCore: Start");
+	OutputDebugString("Reseting InitCore: Start\n");
 
 	//--------------------------------
 	// Uninit class
@@ -154,7 +157,7 @@ void CvInitCore::reset(GameMode eMode)
 		setDefaults();
 	}
 	CvXMLLoadUtility::RemoveTGAFiller();
-	OutputDebugString("Reseting InitCore: End");
+	OutputDebugString("Reseting InitCore: End\n");
 }
 
 void CvInitCore::setDefaults()
@@ -2243,23 +2246,20 @@ void CvInitCore::checkVersions()
 {
 	if (!m_bRecalcRequestProcessed && !getNewGame())
 	{
-		bool bAssetsChanged = m_uiSavegameAssetCheckSum != GC.getInitCore().getAssetCheckSum();
-		if (bAssetsChanged)
+		// If assets changed
+		if (m_uiSavegameAssetCheckSum != GC.getInitCore().getAssetCheckSum())
 		{
+			const PlayerTypes ePlayer = GC.getGame().getActivePlayer();
 			// DLL or assets changed, recommend modifier reloading
-			if ( NO_PLAYER != GC.getGame().getActivePlayer() )
+			if (NO_PLAYER != ePlayer && GET_PLAYER(ePlayer).isAlive() && GET_PLAYER(ePlayer).isHuman())
 			{
-				const CvPlayer& kPlayer = GET_PLAYER(GC.getGame().getActivePlayer());
-				if (kPlayer.isAlive() && kPlayer.isHuman())
+				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_MODIFIER_RECALCULATION);
+				if (NULL != pInfo)
 				{
-					CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_MODIFIER_RECALCULATION);
-					if (NULL != pInfo)
-					{
-						gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGame().getActivePlayer(), true, true);
-					}
-					m_uiSavegameAssetCheckSum = GC.getInitCore().getAssetCheckSum();
-					m_bRecalcRequestProcessed = true;
+					gDLL->getInterfaceIFace()->addPopup(pInfo, ePlayer, true, true);
 				}
+				m_uiSavegameAssetCheckSum = GC.getInitCore().getAssetCheckSum();
+				m_bRecalcRequestProcessed = true;
 			}
 		}
 	}

@@ -10,7 +10,6 @@
 void CyCityPythonInterface1(python::class_<CyCity>& x)
 {
 	OutputDebugString("Python Extension Module - CyCityPythonInterface1\n");
-
 	x
 		.def("kill", &CyCity::kill, "void () - kill the city")
 
@@ -58,7 +57,6 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("getProductionModifier", &CyCity::getProductionModifier, "int () - multiplier (if any) for item being produced")
 		.def("getCurrentProductionDifference", &CyCity::getCurrentProductionDifference, "int (bool bIgnoreFood, bool bOverflow)")
 
-
 		.def("canHurry", &CyCity::canHurry, "bool (HurryTypes eHurry, bool bTestVisible = 0) - can player eHurry in this city?")
 		.def("getConscriptUnit", &CyCity::getConscriptUnit, "UnitID () - UnitID for the best unit the city can conscript")
 		.def("flatConscriptAngerLength", &CyCity::flatConscriptAngerLength, "int ()")
@@ -103,8 +101,7 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("hurryProduction", &CyCity::hurryProduction, "int (HurryID)")
 		.def("flatHurryAngerLength", &CyCity::flatHurryAngerLength, "int ()")
 
-		.def("getNumBuilding", &CyCity::getNumBuilding, "int - (BuildingID) - How many BuildingID does this city have (real or free)?")
-		.def("getNumActiveBuilding", &CyCity::getNumActiveBuilding, "bool (BuildingID) - is BuildingID active in the city (present & not obsolete)?")
+		.def("getNumActiveBuilding", &CyCity::getNumActiveBuilding, "bool (BuildingID) - is BuildingID active in the city (not disabled)?")
 		.def("isFreeBuilding", &CyCity::isFreeBuilding, "bool (BuildingID)")
 		.def("getID", &CyCity::getID, "int () - index ID # for the city - use with pPlayer.getCity(ID) to obtain city instance")
 		.def("getX", &CyCity::getX, "int () - X coordinate for the cities plot")
@@ -186,6 +183,7 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("getMilitaryProductionModifier", &CyCity::getMilitaryProductionModifier, "int () - value of adjustments to military production")
 		.def("getSpaceProductionModifier", &CyCity::getSpaceProductionModifier, "int ()")
 		.def("getExtraTradeRoutes", &CyCity::getExtraTradeRoutes, "int () - returns the number of extra trade routes this city has")
+		.def("getMaxTradeRoutes", &CyCity::getMaxTradeRoutes, "int () - returns the number of extra trade routes this city has")
 		.def("changeExtraTradeRoutes", &CyCity::changeExtraTradeRoutes, "void (iChange) - Change the number of trade routes this city has")
 		.def("getTradeRouteModifier", &CyCity::getTradeRouteModifier, "int ()")
 		.def("getForeignTradeRouteModifier", &CyCity::getForeignTradeRouteModifier, "int ()")
@@ -230,6 +228,7 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("getTeam", &CyCity::getTeam, "int /*TeamTypes*/ ()")
 		.def("getPreviousOwner", &CyCity::getPreviousOwner, "int /*PlayerTypes*/ ()")
 		.def("getOriginalOwner", &CyCity::getOriginalOwner, "int /*PlayerTypes*/ ()")
+		.def("setOriginalOwner", &CyCity::setOriginalOwner, "void (int /*PlayerTypes*/)")
 		.def("getCultureLevel", &CyCity::getCultureLevel, "int /*CultureLevelTypes*/ ()")
 		.def("getCultureThreshold", &CyCity::getCultureThreshold)
 

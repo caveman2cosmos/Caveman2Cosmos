@@ -3,6 +3,14 @@ BeginMeta
 	Description=NARNIA - by strategyonly
 	ModPath=Mods\Caveman2Cosmos
 EndMeta
+BeginMap
+	grid width=69
+	grid height=59
+	world size=WORLDSIZE_TINY
+	climate=CLIMATE_TEMPERATE
+	sealevel=SEALEVEL_MEDIUM
+	Randomize Resources=1
+EndMap
 BeginPlayer
 	StartingX=61, StartingY=56
 EndPlayer
@@ -54,13 +62,6 @@ EndPlayer
 BeginPlayer
 	StartingX=23, StartingY=17
 EndPlayer
-BeginMap
-	grid width=69
-	grid height=59
-	world size=WORLDSIZE_TINY
-	climate=CLIMATE_TEMPERATE
-	sealevel=SEALEVEL_MEDIUM
-EndMap
 BeginPlot
 	x=0,y=0
 	isNOfRiver

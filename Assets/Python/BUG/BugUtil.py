@@ -149,12 +149,13 @@ def getText(key, values=(), default=None, replaceFontTags=True):
 	text = CyTranslator().getText(key, values)
 	if text not in ("", key):
 		return text
-	else:
-		if default is None:
-			debug("BugUtil.getText - XML key %s not found", key)
-			return "XML key %s not found" % key
-		else:
-			return default
+
+	if default is None:
+		debug("BugUtil.getText - XML key %s not found", key)
+		return "XML key %s not found" % key
+
+	return default
+
 
 def colorText(text, color):
 	"""
