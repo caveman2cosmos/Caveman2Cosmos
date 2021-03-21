@@ -431,12 +431,12 @@ BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 	}
 }
 
-bool BoolExprConstant::evaluate(CvGameObject *pObject)
+bool BoolExprConstant::evaluate(const CvGameObject* pObject) const
 {
 	return m_bValue;
 }
 
-BoolExprChange BoolExprConstant::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+BoolExprChange BoolExprConstant::evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
 {
 	return m_bValue ? BOOLEXPR_CHANGE_REMAINS_TRUE : BOOLEXPR_CHANGE_REMAINS_FALSE;
 }
@@ -468,7 +468,7 @@ int BoolExprConstant::getBindingStrength() const
 	return 100;
 }
 
-void BoolExprConstant::getCheckSum(unsigned int &iSum) const
+void BoolExprConstant::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_bValue);
 }
@@ -480,12 +480,12 @@ BoolExprHas::~BoolExprHas()
 	GC.removeDelayedResolution(&m_iID);
 }
 
-bool BoolExprHas::evaluate(CvGameObject *pObject)
+bool BoolExprHas::evaluate(const CvGameObject* pObject) const
 {
 	return pObject->hasGOM(m_eGOM, m_iID);
 }
 
-BoolExprChange BoolExprHas::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+BoolExprChange BoolExprHas::evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
 {
 	const bool result = pObject->hasGOM(m_eGOM, m_iID);
 	for (GOMOverride* it = pBegin; it != pEnd; ++it)
@@ -586,19 +586,19 @@ int BoolExprHas::getBindingStrength() const
 	return 100;
 }
 
-void BoolExprHas::getCheckSum(unsigned int &iSum) const
+void BoolExprHas::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, (int)m_eGOM);
 	CheckSum(iSum, m_iID);
 }
 
 
-bool BoolExprIs::evaluate(CvGameObject *pObject)
+bool BoolExprIs::evaluate(const CvGameObject* pObject) const
 {
 	return pObject->isTag(m_eTag);
 }
 
-BoolExprChange BoolExprIs::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+BoolExprChange BoolExprIs::evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
 {
 	return pObject->isTag(m_eTag) ? BOOLEXPR_CHANGE_REMAINS_TRUE : BOOLEXPR_CHANGE_REMAINS_FALSE;
 }
@@ -648,7 +648,7 @@ int BoolExprIs::getBindingStrength() const
 	return 100;
 }
 
-void BoolExprIs::getCheckSum(unsigned int &iSum) const
+void BoolExprIs::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, (int)m_eTag);
 }
@@ -660,12 +660,12 @@ BoolExprNot::~BoolExprNot()
 	SAFE_DELETE(m_pExpr);
 }
 
-bool BoolExprNot::evaluate(CvGameObject *pObject)
+bool BoolExprNot::evaluate(const CvGameObject* pObject) const
 {
 	return !m_pExpr->evaluate(pObject);
 }
 
-BoolExprChange BoolExprNot::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+BoolExprChange BoolExprNot::evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
 {
 	BoolExprChange result = m_pExpr->evaluateChange(pObject, pBegin, pEnd);
 	switch (result)
@@ -702,7 +702,7 @@ int BoolExprNot::getBindingStrength() const
 	return 40;
 }
 
-void BoolExprNot::getCheckSum(unsigned int &iSum) const
+void BoolExprNot::getCheckSum(uint32_t& iSum) const
 {
 	m_pExpr->getCheckSum(iSum);
 }
@@ -714,12 +714,12 @@ BoolExprAnd::~BoolExprAnd()
 	SAFE_DELETE(m_pExpr2);
 }
 
-bool BoolExprAnd::evaluate(CvGameObject *pObject)
+bool BoolExprAnd::evaluate(const CvGameObject* pObject) const
 {
 	return m_pExpr1->evaluate(pObject) && m_pExpr2->evaluate(pObject);
 }
 
-BoolExprChange BoolExprAnd::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+BoolExprChange BoolExprAnd::evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
 {
 	BoolExprChange result1 = m_pExpr1->evaluateChange(pObject, pBegin, pEnd);
 	if (result1 == BOOLEXPR_CHANGE_REMAINS_FALSE)
@@ -772,7 +772,7 @@ int BoolExprAnd::getBindingStrength() const
 	return 20;
 }
 
-void BoolExprAnd::getCheckSum(unsigned int &iSum) const
+void BoolExprAnd::getCheckSum(uint32_t& iSum) const
 {
 	m_pExpr1->getCheckSum(iSum);
 	m_pExpr2->getCheckSum(iSum);
@@ -786,12 +786,12 @@ BoolExprOr::~BoolExprOr()
 	SAFE_DELETE(m_pExpr2);
 }
 
-bool BoolExprOr::evaluate(CvGameObject *pObject)
+bool BoolExprOr::evaluate(const CvGameObject* pObject) const
 {
 	return m_pExpr1->evaluate(pObject) || m_pExpr2->evaluate(pObject);
 }
 
-BoolExprChange BoolExprOr::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+BoolExprChange BoolExprOr::evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
 {
 	BoolExprChange result1 = m_pExpr1->evaluateChange(pObject, pBegin, pEnd);
 	if (result1 == BOOLEXPR_CHANGE_REMAINS_TRUE)
@@ -857,12 +857,12 @@ BoolExprBEqual::~BoolExprBEqual()
 	SAFE_DELETE(m_pExpr2);
 }
 
-bool BoolExprBEqual::evaluate(CvGameObject *pObject)
+bool BoolExprBEqual::evaluate(const CvGameObject* pObject) const
 {
 	return m_pExpr1->evaluate(pObject) == m_pExpr2->evaluate(pObject);
 }
 
-BoolExprChange BoolExprBEqual::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+BoolExprChange BoolExprBEqual::evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
 {
 	BoolExprChange result1 = m_pExpr1->evaluateChange(pObject, pBegin, pEnd);
 	BoolExprChange result2 = m_pExpr2->evaluateChange(pObject, pBegin, pEnd);
@@ -915,7 +915,7 @@ int BoolExprBEqual::getBindingStrength() const
 	return 30;
 }
 
-void BoolExprBEqual::getCheckSum(unsigned int &iSum) const
+void BoolExprBEqual::getCheckSum(uint32_t& iSum) const
 {
 	m_pExpr1->getCheckSum(iSum);
 	m_pExpr2->getCheckSum(iSum);
@@ -929,12 +929,12 @@ BoolExprIf::~BoolExprIf()
 	SAFE_DELETE(m_pExprElse);
 }
 
-bool BoolExprIf::evaluate(CvGameObject *pObject)
+bool BoolExprIf::evaluate(const CvGameObject* pObject) const
 {
 	return m_pExprIf->evaluate(pObject) ? m_pExprThen->evaluate(pObject) : m_pExprElse->evaluate(pObject);
 }
 
-BoolExprChange BoolExprIf::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+BoolExprChange BoolExprIf::evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
 {
 	BoolExprChange resultif = m_pExprIf->evaluateChange(pObject, pBegin, pEnd);
 	BoolExprChange resultthen = m_pExprThen->evaluateChange(pObject, pBegin, pEnd);
@@ -977,7 +977,7 @@ int BoolExprIf::getBindingStrength() const
 	return 25;
 }
 
-void BoolExprIf::getCheckSum(unsigned int &iSum) const
+void BoolExprIf::getCheckSum(uint32_t& iSum) const
 {
 	m_pExprIf->getCheckSum(iSum);
 	m_pExprThen->getCheckSum(iSum);
@@ -985,7 +985,7 @@ void BoolExprIf::getCheckSum(unsigned int &iSum) const
 }
 
 
-void evalExprIntegrateOr(CvGameObject* pObject, BoolExpr* pExpr, bool* bAcc)
+void evalExprIntegrateOr(const CvGameObject* pObject, BoolExpr* pExpr, bool* bAcc)
 {
 	*bAcc = *bAcc || pExpr->evaluate(pObject);
 }
@@ -995,14 +995,14 @@ BoolExprIntegrateOr::~BoolExprIntegrateOr()
 	SAFE_DELETE(m_pExpr);
 }
 
-bool BoolExprIntegrateOr::evaluate(CvGameObject *pObject)
+bool BoolExprIntegrateOr::evaluate(const CvGameObject* pObject) const
 {
 	bool bAcc = false;
 	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(evalExprIntegrateOr, _1, m_pExpr, &bAcc));
 	return bAcc;
 }
 
-void evalExprChangeIntegrateOr(CvGameObject* pObject, BoolExpr* pExpr, BoolExprChange* bAcc, GOMOverride* pBegin, GOMOverride* pEnd)
+void evalExprChangeIntegrateOr(const CvGameObject* pObject, BoolExpr* pExpr, BoolExprChange* bAcc, GOMOverride* pBegin, GOMOverride* pEnd)
 {
 	if (*bAcc == BOOLEXPR_CHANGE_REMAINS_TRUE)
 	{
@@ -1028,7 +1028,7 @@ void evalExprChangeIntegrateOr(CvGameObject* pObject, BoolExpr* pExpr, BoolExprC
 	}
 }
 
-BoolExprChange BoolExprIntegrateOr::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+BoolExprChange BoolExprIntegrateOr::evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
 {
 	BoolExprChange bAcc = BOOLEXPR_CHANGE_REMAINS_FALSE;
 	pObject->foreachRelated(m_eType, m_eRelation, bst::bind(evalExprChangeIntegrateOr, _1, m_pExpr, &bAcc, pBegin, pEnd));
@@ -1052,7 +1052,7 @@ int BoolExprIntegrateOr::getBindingStrength() const
 	return m_pExpr->getBindingStrength();
 }
 
-void BoolExprIntegrateOr::getCheckSum(unsigned int &iSum) const
+void BoolExprIntegrateOr::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, (int)m_eRelation);
 	CheckSum(iSum, m_iData);
@@ -1067,7 +1067,7 @@ BoolExprComp::~BoolExprComp()
 	SAFE_DELETE(m_pExpr2);
 }
 
-BoolExprChange BoolExprComp::evaluateChange(CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
+BoolExprChange BoolExprComp::evaluateChange(const CvGameObject* pObject, GOMOverride* pBegin, GOMOverride* pEnd)
 {
 	// we do not currently trace changes indirectly over int expressions
 	// so just use the normal evaluation and assume remains
@@ -1100,7 +1100,7 @@ int BoolExprComp::getBindingStrength() const
 	return 5;
 }
 
-void BoolExprComp::getCheckSum(unsigned int &iSum) const
+void BoolExprComp::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, (int)getType());
 	m_pExpr1->getCheckSum(iSum);
@@ -1108,7 +1108,7 @@ void BoolExprComp::getCheckSum(unsigned int &iSum) const
 }
 
 
-bool BoolExprGreater::evaluate(CvGameObject *pObject)
+bool BoolExprGreater::evaluate(const CvGameObject* pObject) const
 {
 	return m_pExpr1->evaluate(pObject) > m_pExpr2->evaluate(pObject);
 }
@@ -1124,7 +1124,7 @@ void BoolExprGreater::buildOpNameString(CvWStringBuffer &szBuffer) const
 }
 
 
-bool BoolExprGreaterEqual::evaluate(CvGameObject *pObject)
+bool BoolExprGreaterEqual::evaluate(const CvGameObject* pObject) const
 {
 	return m_pExpr1->evaluate(pObject) >= m_pExpr2->evaluate(pObject);
 }
@@ -1140,7 +1140,7 @@ void BoolExprGreaterEqual::buildOpNameString(CvWStringBuffer &szBuffer) const
 }
 
 
-bool BoolExprEqual::evaluate(CvGameObject *pObject)
+bool BoolExprEqual::evaluate(const CvGameObject* pObject) const
 {
 	return m_pExpr1->evaluate(pObject) == m_pExpr2->evaluate(pObject);
 }
