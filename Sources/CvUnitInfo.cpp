@@ -235,10 +235,12 @@ m_iRepelRetries(0),
 m_iUnyielding(0),
 m_iKnockback(0),
 m_iKnockbackRetries(0),
+#ifdef BATTLEWORN
 m_iStrAdjperRnd(0),
 m_iStrAdjperAtt(0),
 m_iStrAdjperDef(0),
 m_iWithdrawAdjperAtt(0),
+#endif // BATTLEWORN
 m_iUnnerve(0),
 m_iEnclose(0),
 m_iLunge(0),
@@ -2151,6 +2153,7 @@ int CvUnitInfo::getKnockbackRetries() const
 	return m_iKnockbackRetries;
 }
 
+#ifdef BATTLEWORN
 int CvUnitInfo::getStrAdjperRnd() const
 {
 	if (!GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
@@ -2186,6 +2189,7 @@ int CvUnitInfo::getWithdrawAdjperAtt() const
 	}
 	return m_iWithdrawAdjperAtt;
 }
+#endif // BATTLEWORN
 
 int CvUnitInfo::getUnnerve() const
 {
@@ -3976,10 +3980,12 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iUnyielding);
 	CheckSum(iSum, m_iKnockback);
 	CheckSum(iSum, m_iKnockbackRetries);
+#ifdef BATTLEWORN
 	CheckSum(iSum, m_iStrAdjperRnd);
 	CheckSum(iSum, m_iStrAdjperAtt);
 	CheckSum(iSum, m_iStrAdjperDef);
 	CheckSum(iSum, m_iWithdrawAdjperAtt);
+#endif // BATTLEWORN
 	CheckSum(iSum, m_iUnnerve);
 	CheckSum(iSum, m_iEnclose);
 	CheckSum(iSum, m_iLunge);
@@ -4760,10 +4766,12 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iUnyielding, L"iUnyielding");
 	pXML->GetOptionalChildXmlValByName(&m_iKnockback, L"iKnockback");
 	pXML->GetOptionalChildXmlValByName(&m_iKnockbackRetries, L"iKnockbackRetries");
+#ifdef BATTLEWORN
 	pXML->GetOptionalChildXmlValByName(&m_iStrAdjperRnd, L"iStrAdjperRnd");
 	pXML->GetOptionalChildXmlValByName(&m_iStrAdjperAtt, L"iStrAdjperAtt");
 	pXML->GetOptionalChildXmlValByName(&m_iStrAdjperDef, L"iStrAdjperDef");
 	pXML->GetOptionalChildXmlValByName(&m_iWithdrawAdjperAtt, L"iWithdrawAdjperAtt");
+#endif // BATTLEWORN
 	pXML->GetOptionalChildXmlValByName(&m_iUnnerve, L"iUnnerve");
 	pXML->GetOptionalChildXmlValByName(&m_iEnclose, L"iEnclose");
 	pXML->GetOptionalChildXmlValByName(&m_iLunge, L"iLunge");
@@ -5814,10 +5822,12 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_iUnyielding == iDefault ) m_iUnyielding = pClassInfo->m_iUnyielding;
 	if ( m_iKnockback == iDefault ) m_iKnockback = pClassInfo->m_iKnockback;
 	if ( m_iKnockbackRetries == iDefault ) m_iKnockbackRetries = pClassInfo->m_iKnockbackRetries;
+#ifdef BATTLEWORN
 	if ( m_iStrAdjperRnd == iDefault ) m_iStrAdjperRnd = pClassInfo->m_iStrAdjperRnd;
 	if ( m_iStrAdjperAtt == iDefault ) m_iStrAdjperAtt = pClassInfo->m_iStrAdjperAtt;
 	if ( m_iStrAdjperDef == iDefault ) m_iStrAdjperDef = pClassInfo->m_iStrAdjperDef;
 	if ( m_iWithdrawAdjperAtt == iDefault ) m_iWithdrawAdjperAtt = pClassInfo->m_iWithdrawAdjperAtt;
+#endif // BATTLEWORN
 	if ( m_iUnnerve == iDefault ) m_iUnnerve = pClassInfo->m_iUnnerve;
 	if ( m_iEnclose == iDefault ) m_iEnclose = pClassInfo->m_iEnclose;
 	if ( m_iLunge == iDefault ) m_iLunge = pClassInfo->m_iLunge;

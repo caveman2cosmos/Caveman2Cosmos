@@ -2380,10 +2380,12 @@ m_iRepelRetriesChange(0),
 m_iUnyieldingChange(0),
 m_iKnockbackChange(0),
 m_iKnockbackRetriesChange(0),
+#ifdef BATTLEWORN
 m_iStrAdjperRndChange(0),
 m_iStrAdjperAttChange(0),
 m_iStrAdjperDefChange(0),
 m_iWithdrawAdjperAttChange(0),
+#endif // BATTLEWORN
 m_iUnnerveChange(0),
 m_iEncloseChange(0),
 m_iLungeChange(0),
@@ -3258,7 +3260,8 @@ int CvPromotionInfo::getKnockbackRetriesChange() const
 	}
 	return m_iKnockbackRetriesChange;
 }
-//
+
+#ifdef BATTLEWORN
 //Battleworn
 int CvPromotionInfo::getStrAdjperRndChange() const
 {
@@ -3295,7 +3298,8 @@ int CvPromotionInfo::getWithdrawAdjperAttChange() const
 	}
 	return m_iWithdrawAdjperAttChange;
 }
-//
+#endif // BATTLEWORN
+
 //S&D extended
 int CvPromotionInfo::getUnnerveChange() const
 {
@@ -5406,10 +5410,12 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iUnyieldingChange, L"iUnyieldingChange");
 	pXML->GetOptionalChildXmlValByName(&m_iKnockbackChange, L"iKnockbackChange");
 	pXML->GetOptionalChildXmlValByName(&m_iKnockbackRetriesChange, L"iKnockbackRetriesChange");
+#ifdef BATTLEWORN
 	pXML->GetOptionalChildXmlValByName(&m_iStrAdjperRndChange, L"iStrAdjperRndChange");
 	pXML->GetOptionalChildXmlValByName(&m_iStrAdjperAttChange, L"iStrAdjperAttChange");
 	pXML->GetOptionalChildXmlValByName(&m_iStrAdjperDefChange, L"iStrAdjperDefChange");
 	pXML->GetOptionalChildXmlValByName(&m_iWithdrawAdjperAttChange, L"iWithdrawAdjperAttChange");
+#endif // BATTLEWORN
 	pXML->GetOptionalChildXmlValByName(&m_iUnnerveChange, L"iUnnerveChange");
 	pXML->GetOptionalChildXmlValByName(&m_iEncloseChange, L"iEncloseChange");
 	pXML->GetOptionalChildXmlValByName(&m_iLungeChange, L"iLungeChange");
@@ -6214,10 +6220,12 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 	if (m_iUnyieldingChange == iDefault) m_iUnyieldingChange = pClassInfo->m_iUnyieldingChange;
 	if (m_iKnockbackChange == iDefault) m_iKnockbackChange = pClassInfo->m_iKnockbackChange;
 	if (m_iKnockbackRetriesChange == iDefault) m_iKnockbackRetriesChange = pClassInfo->m_iKnockbackRetriesChange;
+#ifdef BATTLEWORN
 	if (m_iStrAdjperRndChange == iDefault) m_iStrAdjperRndChange = pClassInfo->m_iStrAdjperRndChange;
 	if (m_iStrAdjperAttChange == iDefault) m_iStrAdjperAttChange = pClassInfo->m_iStrAdjperAttChange;
 	if (m_iStrAdjperDefChange == iDefault) m_iStrAdjperDefChange = pClassInfo->m_iStrAdjperDefChange;
 	if (m_iWithdrawAdjperAttChange == iDefault) m_iWithdrawAdjperAttChange = pClassInfo->m_iWithdrawAdjperAttChange;
+#endif // BATTLEWORN
 	if (m_iUnnerveChange == iDefault) m_iUnnerveChange = pClassInfo->m_iUnnerveChange;
 	if (m_iEncloseChange == iDefault) m_iEncloseChange = pClassInfo->m_iEncloseChange;
 	if (m_iLungeChange == iDefault) m_iLungeChange = pClassInfo->m_iLungeChange;
@@ -7005,10 +7013,12 @@ void CvPromotionInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_iUnyieldingChange);
 	CheckSum(iSum, m_iKnockbackChange);
 	CheckSum(iSum, m_iKnockbackRetriesChange);
+#ifdef BATTLEWORN
 	CheckSum(iSum, m_iStrAdjperRndChange);
 	CheckSum(iSum, m_iStrAdjperAttChange);
 	CheckSum(iSum, m_iStrAdjperDefChange);
 	CheckSum(iSum, m_iWithdrawAdjperAttChange);
+#endif // BATTLEWORN
 	CheckSum(iSum, m_iUnnerveChange);
 	CheckSum(iSum, m_iEncloseChange);
 	CheckSum(iSum, m_iLungeChange);
@@ -37137,9 +37147,11 @@ CvUnitCombatInfo::CvUnitCombatInfo()
 	, m_iUnyieldingChange(0)
 	, m_iKnockbackChange(0)
 	, m_iKnockbackRetriesChange(0)
+#ifdef BATTLEWORN
 	, m_iStrAdjperAttChange(0)
 	, m_iStrAdjperDefChange(0)
 	, m_iWithdrawAdjperAttChange(0)
+#endif // BATTLEWORN
 	, m_iUnnerveChange(0)
 	, m_iEncloseChange(0)
 	, m_iLungeChange(0)
@@ -37709,6 +37721,7 @@ int CvUnitCombatInfo::getKnockbackRetriesChange() const
 	return m_iKnockbackRetriesChange;
 }
 
+#ifdef BATTLEWORN
 int CvUnitCombatInfo::getStrAdjperAttChange() const
 {
 	if (!GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
@@ -37735,6 +37748,7 @@ int CvUnitCombatInfo::getWithdrawAdjperAttChange() const
 	}
 	return m_iWithdrawAdjperAttChange;
 }
+#endif
 
 int CvUnitCombatInfo::getUnnerveChange() const
 {
@@ -39178,9 +39192,11 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iUnyieldingChange, L"iUnyieldingChange");
 	pXML->GetOptionalChildXmlValByName(&m_iKnockbackChange, L"iKnockbackChange");
 	pXML->GetOptionalChildXmlValByName(&m_iKnockbackRetriesChange, L"iKnockbackRetriesChange");
+#ifdef BATTLEWORN
 	pXML->GetOptionalChildXmlValByName(&m_iStrAdjperAttChange, L"iStrAdjperAttChange");
 	pXML->GetOptionalChildXmlValByName(&m_iStrAdjperDefChange, L"iStrAdjperDefChange");
 	pXML->GetOptionalChildXmlValByName(&m_iWithdrawAdjperAttChange, L"iWithdrawAdjperAttChange");
+#endif
 	pXML->GetOptionalChildXmlValByName(&m_iUnnerveChange, L"iUnnerveChange");
 	pXML->GetOptionalChildXmlValByName(&m_iEncloseChange, L"iEncloseChange");
 	pXML->GetOptionalChildXmlValByName(&m_iLungeChange, L"iLungeChange");
@@ -40393,9 +40409,11 @@ void CvUnitCombatInfo::copyNonDefaults(CvUnitCombatInfo* pClassInfo)
 	if (m_iUnyieldingChange == iDefault) m_iUnyieldingChange = pClassInfo->m_iUnyieldingChange;
 	if (m_iKnockbackChange == iDefault) m_iKnockbackChange = pClassInfo->m_iKnockbackChange;
 	if (m_iKnockbackRetriesChange == iDefault) m_iKnockbackRetriesChange = pClassInfo->m_iKnockbackRetriesChange;
+#ifdef BATTLEWORN
 	if (m_iStrAdjperAttChange == iDefault) m_iStrAdjperAttChange = pClassInfo->m_iStrAdjperAttChange;
 	if (m_iStrAdjperDefChange == iDefault) m_iStrAdjperDefChange = pClassInfo->m_iStrAdjperDefChange;
 	if (m_iWithdrawAdjperAttChange == iDefault) m_iWithdrawAdjperAttChange = pClassInfo->m_iWithdrawAdjperAttChange;
+#endif // BATTLEWORN
 	if (m_iUnnerveChange == iDefault) m_iUnnerveChange = pClassInfo->m_iUnnerveChange;
 	if (m_iEncloseChange == iDefault) m_iEncloseChange = pClassInfo->m_iEncloseChange;
 	if (m_iLungeChange == iDefault) m_iLungeChange = pClassInfo->m_iLungeChange;
@@ -41007,9 +41025,11 @@ void CvUnitCombatInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iUnyieldingChange);
 	CheckSum(iSum, m_iKnockbackChange);
 	CheckSum(iSum, m_iKnockbackRetriesChange);
+#ifdef BATTLEWORN
 	CheckSum(iSum, m_iStrAdjperAttChange);
 	CheckSum(iSum, m_iStrAdjperDefChange);
 	CheckSum(iSum, m_iWithdrawAdjperAttChange);
+#endif // BATTLEWORN
 	CheckSum(iSum, m_iUnnerveChange);
 	CheckSum(iSum, m_iEncloseChange);
 	CheckSum(iSum, m_iLungeChange);
