@@ -22962,7 +22962,7 @@ void CvCity::recalculateModifiers()
 
 			// Toffer - Xml changes may have invalidated a building the city have; hence bValid.
 
-			const bool bObsolete = GET_TEAM(getTeam()).isHasTech((TechTypes)info.getObsoleteTech());
+			const bool bObsolete = info.getObsoleteTech() < 0 ? false : GET_TEAM(getTeam()).isHasTech((TechTypes)info.getObsoleteTech());
 			bool bValid = 
 			(
 				!bObsolete
