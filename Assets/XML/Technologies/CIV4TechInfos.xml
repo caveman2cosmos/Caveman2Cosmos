@@ -6819,7 +6819,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>309</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<iGridX>30</iGridX>
@@ -6906,7 +6905,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>309</iCost>
 			<bGlobal>1</bGlobal>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<iGridX>30</iGridX>
@@ -7046,7 +7044,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>348</iCost>
 			<bGlobal>1</bGlobal>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<iGridX>31</iGridX>
@@ -7085,7 +7082,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>348</iCost>
 			<bGlobal>1</bGlobal>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
 			<iGridX>31</iGridX>
@@ -7940,7 +7936,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>499</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_CLASSICAL</Era>
 			<iAsset>8</iAsset>
 			<iGridX>34</iGridX>
@@ -8090,7 +8085,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>554</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_CLASSICAL</Era>
 			<iAsset>8</iAsset>
 			<iGridX>35</iGridX>
@@ -8392,7 +8386,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>614</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_CLASSICAL</Era>
 			<iAsset>8</iAsset>
 			<iGridX>36</iGridX>
@@ -8951,7 +8944,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>679</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_CLASSICAL</Era>
 			<iAsset>8</iAsset>
 			<iGridX>37</iGridX>
@@ -9066,7 +9058,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>749</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_CLASSICAL</Era>
 			<iAsset>8</iAsset>
 			<iGridX>38</iGridX>
@@ -9957,7 +9948,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>1230</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_MEDIEVAL</Era>
 			<iAsset>8</iAsset>
 			<iGridX>43</iGridX>
@@ -10165,7 +10155,6 @@ Current techs which are not in this file:-
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
 			<iCost>1334</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<Era>C2C_ERA_MEDIEVAL</Era>
 			<iAsset>8</iAsset>
 			<iGridX>44</iGridX>

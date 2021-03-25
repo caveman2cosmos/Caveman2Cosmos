@@ -161,19 +161,11 @@ bool CvWaterPlaneInfo::read(CvXMLLoadUtility* pXML)
 	pXML->MoveToXmlParent();
 	return true;
 }
-/************************************************************************************************/
-/* XMLCOPY                                 11/20/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-void CvWaterPlaneInfo::copyNonDefaults(CvWaterPlaneInfo* pClassInfo, CvXMLLoadUtility* pXML)
+
+void CvWaterPlaneInfo::copyNonDefaults(CvWaterPlaneInfo* pClassInfo)
 {
 	// This is a bogus CopyNonDefault. Modders/Users should set the XML completely with all tags
 }
-/************************************************************************************************/
-/* XMLCOPY                                 END                                                  */
-/************************************************************************************************/
-//------------------------------------------------------------------------------------------------------
 
 //======================================================================================================
 //					CvTerrainPlaneInfo
@@ -302,12 +294,8 @@ bool CvTerrainPlaneInfo::read(CvXMLLoadUtility* pXML)
 
 	return true;
 }
-/************************************************************************************************/
-/* XMLCOPY                                 11/20/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-void CvTerrainPlaneInfo::copyNonDefaults(CvTerrainPlaneInfo* pClassInfo, CvXMLLoadUtility* pXML)
+
+void CvTerrainPlaneInfo::copyNonDefaults(CvTerrainPlaneInfo* pClassInfo)
 {
 	bool bDefault = false;
 	int iDefault = 0;
@@ -317,7 +305,7 @@ void CvTerrainPlaneInfo::copyNonDefaults(CvTerrainPlaneInfo* pClassInfo, CvXMLLo
 	CvString cDefault = CvString::format("").GetCString();
 	CvWString wDefault = CvWString::format(L"").GetCString();
 
-	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
+	CvInfoBase::copyNonDefaults(pClassInfo);
 
 	if (isVisible() == bDefault) m_bVisible = pClassInfo->isVisible();
 	if (isGroundPlane() == bDefault) m_bGroundPlane = pClassInfo->isGroundPlane();
@@ -337,10 +325,6 @@ void CvTerrainPlaneInfo::copyNonDefaults(CvTerrainPlaneInfo* pClassInfo, CvXMLLo
 		m_eFogType = pClassInfo->getFogType();
 	}
 }
-/************************************************************************************************/
-/* XMLCOPY                                 END                                                  */
-/************************************************************************************************/
-//------------------------------------------------------------------------------------------------------
 
 //======================================================================================================
 //					CvCameraOverlayInfo
@@ -409,12 +393,8 @@ bool CvCameraOverlayInfo::read(CvXMLLoadUtility* pXML)
 
 	return true;
 }
-/************************************************************************************************/
-/* XMLCOPY                                 11/20/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-void CvCameraOverlayInfo::copyNonDefaults(CvCameraOverlayInfo* pClassInfo, CvXMLLoadUtility* pXML)
+
+void CvCameraOverlayInfo::copyNonDefaults(CvCameraOverlayInfo* pClassInfo)
 {
 	bool bDefault = false;
 	int iDefault = 0;
@@ -424,7 +404,7 @@ void CvCameraOverlayInfo::copyNonDefaults(CvCameraOverlayInfo* pClassInfo, CvXML
 	CvString cDefault = CvString::format("").GetCString();
 	CvWString wDefault = CvWString::format(L"").GetCString();
 
-	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
+	CvInfoBase::copyNonDefaults(pClassInfo);
 
 	if (isVisible() == bDefault) m_bVisible = pClassInfo->isVisible();
 	if (getBaseTexture() == cDefault) m_szBaseTexture = pClassInfo->getBaseTexture();
@@ -434,7 +414,3 @@ void CvCameraOverlayInfo::copyNonDefaults(CvCameraOverlayInfo* pClassInfo, CvXML
 		m_eCameraOverlayType = pClassInfo->getCameraOverlayType();
 	}	
 }
-/************************************************************************************************/
-/* XMLCOPY                                 END                                                  */
-/************************************************************************************************/
-//------------------------------------------------------------------------------------------------------

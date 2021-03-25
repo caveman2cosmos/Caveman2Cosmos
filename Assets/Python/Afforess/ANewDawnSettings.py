@@ -151,14 +151,6 @@ def changedFlexibleDifficultyMaxRank(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_RANK, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_RANK), int(value), 0)
 
-def changedShowCoastalBuildings(option, value):
-	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_SHOW_COASTAL_BUILDINGS, value)
-	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_SHOW_COASTAL_BUILDINGS), int(value), 0)
-
-def changedHideObsoleteBuildings(option, value):
-	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_HIDE_OBSOLETE_BUILDINGS, value)
-	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_HIDE_OBSOLETE_BUILDINGS), int(value), 0)
-
 def changedDepletionMod(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_RESOURCE_DEPLETION, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_RESOURCE_DEPLETION), int(value), 0)
@@ -290,8 +282,6 @@ def setXMLOptionsfromIniFile():
 	changedFlexibleDifficultyMaximumDiff(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMaximumDiff() - 1)
 	changedFlexibleDifficultyMinRank(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMinRank())
 	changedFlexibleDifficultyMaxRank(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMaxRank())
-	changedShowCoastalBuildings(ANewDawnOpt, ANewDawnOpt.isShowCoastalBuildings())
-	changedHideObsoleteBuildings(ANewDawnOpt, ANewDawnOpt.isHideObsoleteBuildings())
 	changedDepletionMod(ANewDawnOpt, ANewDawnOpt.isDepletionMod())
 	changedBetterAirInterception(ANewDawnOpt, ANewDawnOpt.isBetterAirInterception())
 	changedMaxRebaseRange(ANewDawnOpt, ANewDawnOpt.getMaxRebaseRange())

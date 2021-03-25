@@ -78,11 +78,13 @@
 		<English>Free building provided as the effect of another.</English>
 		<French>Bâtiment gratuit obtenu comme effet d'un autre</French>
 		<Polish>Darmowy budynek dostarczany jako efekt innego budynku.</Polish>
+		<Russian>Бесплатная постройка, предусмотренная в качестве эффекта от другого здания или Чуда Света.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Tag>
 		<English>Animal Stories buildings represents educational boost from animals after invention of [LINK=TECH_LITERATURE]Literature[\LINK] - needs [LINK=BUILDING_LIBRARY]Library[\LINK] to create [LINK=BUILDING_ANIMAL_STORIES_REQUIRE]Animal Stories Requirement[\LINK].[NEWLINE]This is done to declutter Library building.</English>
 		<French>Les bâtiments des histoires animales représentent un coup de pouce éducatif provenant des animaux, après l'invention de la [LINK=TECH_LITERATURE]Littérature[\LINK] - nécessite une [LINK=BUILDING_LIBRARY]Bibliothèque[\LINK]</French>
+		<Russian>«Сказки о животных» представляют собой образовательное улучшение от прирученных животных после изучения [LINK=TECH_LITERATURE]Литературы[\LINK] - требуются [LINK=BUILDING_LIBRARY]Библиотеки[\LINK] для создания [LINK=BUILDING_ANIMAL_STORIES_REQUIRE]Сказки о животном[\LINK].[NEWLINE]Это реализовано, как дополнение к библиотекам.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Tag>
@@ -95,6 +97,7 @@
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Tag>
 		<English>Animal Story buildings represent cultural and educational inspiration from animals after invention of [LINK=TECH_WRITING]Writing[\LINK].</English>
 		<French>Les bâtiments d'Histoire(s) d'animaux représentent une inspiration culturelle et éducative des animaux avant l'invention de [LINK=TECH_WRITING]l'Ecriture[\LINK].</French>
+		<Russian>Псевдопостройка «Сказка о животном» представляет собой культурное и образовательное улучшение от прирученных животных после изобретения [LINK=TECH_WRITING]Письменности[\LINK].</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORY_REQUIRE</Tag>
@@ -106,6 +109,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_REQUIRE</Tag>
 		<English>Autobuild - Animal Stories Requirement</English>
+		<Russian>Сказка о животном</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Tag>

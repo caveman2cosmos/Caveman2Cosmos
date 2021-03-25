@@ -30,7 +30,7 @@ public:
 				if (pXML->TryMoveToXmlFirstChild())
 				{
 					pXML->GetXmlVal(szTextVal);
-					int iID = GC.getOrCreateInfoTypeForString(szTextVal);
+					const int iID = GC.getOrCreateInfoTypeForString(szTextVal);
 					ValueType val = defaultValue;
 					pXML->GetNextXmlVal(&val);
 					setValue(iID, val);
@@ -42,12 +42,12 @@ public:
 		}
 	}
 
-	void copyNonDefaults(IDValueMap<ValueType, defaultValue>* pMap, CvXMLLoadUtility* pXML)
+	void copyNonDefaults(const IDValueMap<ValueType, defaultValue>* pMap)
 	{
 		for (unsigned int i = 0; i < pMap->m_map.size(); i++)
 		{
 			bool bNotFound = true;
-			int iID = pMap->m_map[i].first;
+			const int iID = pMap->m_map[i].first;
 			for (unsigned int j = 0; j < m_map.size(); j++)
 			{
 				if (iID == m_map[j].first)

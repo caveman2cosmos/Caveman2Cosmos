@@ -30,7 +30,7 @@
 	<!-- Start paging out if memory exceeds this amount (in KB) -->
 	<Define>
 		<DefineName>MAX_DESIRED_MEMORY_USED</DefineName>
-		<iDefineIntVal>1700000</iDefineIntVal>
+		<iDefineIntVal>2000000</iDefineIntVal>
 	</Define>
 
 	<!-- If specified, instead of MAX_DESIRED_MEMORY_USED, a set of test 
@@ -48,15 +48,16 @@
 
 	<!-- Maximum amount of time in a frame that can be spent on paging operations.
 		Higher values mean faster paging in at the expense of more stuttering.
+		Currently this define is unused
 	 -->
 	<Define>
-		<DefineName>PAGING_FRAME_TIME_MS</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
+		<DefineName>MAX_PAGING_FRAME_TIME_MS</DefineName>
+		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
 	<!-- Distance in tiles at which to page in different components -->
 	 <Define>
 		<DefineName>PAGE_IN_DIST_SYMBOLS</DefineName>
-		<iDefineIntVal>15</iDefineIntVal>
+		<iDefineIntVal>999</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>PAGE_IN_DIST_FEATURES</DefineName>
@@ -64,19 +65,19 @@
 	</Define>
 	<Define>
 		<DefineName>PAGE_IN_DIST_RIVER</DefineName>
-		<iDefineIntVal>15</iDefineIntVal>
+		<iDefineIntVal>999</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>PAGE_IN_DIST_ROUTE</DefineName>
-		<iDefineIntVal>15</iDefineIntVal>
+		<iDefineIntVal>999</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>PAGE_IN_DIST_UNIT</DefineName>
-		<iDefineIntVal>15</iDefineIntVal>
+		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>PAGE_IN_DIST_CITY</DefineName>
-		<iDefineIntVal>15</iDefineIntVal>
+		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	
 	<!-- GRAPHICS PAGING OPTIONS END -->
@@ -1592,10 +1593,6 @@
 	<Define>
 		<DefineName>LAND_UNITS_CAN_ATTACK_WATER_CITIES</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>CITY_MAX_NUM_BUILDINGS</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>RANGED_ATTACKS_USE_MOVES</DefineName>

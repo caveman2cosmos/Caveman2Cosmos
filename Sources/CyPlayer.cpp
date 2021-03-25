@@ -286,6 +286,11 @@ int CyPlayer::countNumBuildings(int /*BuildingTypes*/ eBuilding) const
 	return m_pPlayer->countNumBuildings((BuildingTypes) eBuilding);
 }
 
+bool CyPlayer::hasBuilding(int /*BuildingTypes*/ eBuilding) const
+{
+	return m_pPlayer->hasBuilding((BuildingTypes) eBuilding);
+}
+
 int CyPlayer::countNumCitiesConnectedToCapital() const
 {
 	return m_pPlayer->countNumCitiesConnectedToCapital();
@@ -1403,9 +1408,10 @@ std::wstring CyPlayer::getCityName(int iIndex) const
 python::list CyPlayer::cities() const
 {
 	python::list list = python::list();
+
 	foreach_(CvCity* city, m_pPlayer->cities())
 	{
-		list.append(new CyCity(city));
+		list.append(CyCity(city));
 	}
 	return list;
 }
@@ -1444,9 +1450,10 @@ CyCity* CyPlayer::getCity(int iID) const
 python::list CyPlayer::units() const
 {
 	python::list list = python::list();
+
 	foreach_(CvUnit* unit, m_pPlayer->units())
 	{
-		list.append(new CyUnit(unit));
+		list.append(CyUnit(unit));
 	}
 	return list;
 }
@@ -1485,9 +1492,10 @@ CyUnit* CyPlayer::getUnit(int iID) const
 python::list CyPlayer::groups() const
 {
 	python::list list = python::list();
+
 	foreach_(CvSelectionGroup* group, m_pPlayer->groups())
 	{
-		list.append(new CySelectionGroup(group));
+		list.append(CySelectionGroup(group));
 	}
 	return list;
 }

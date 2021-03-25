@@ -27,8 +27,7 @@ void CvXMLLoadUtility::showXMLError(const char* const format, ...)
 
 	_vsnprintf(buf, kBufSize - 1, format, args);
 
-	OutputDebugString(buf);
-	gDLL->logMsg("xml.log", buf);
+	logging::logMsg("xml.log", buf);
 
 	gDLL->MessageBox(buf, "XML Error");
 }

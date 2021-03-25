@@ -259,7 +259,7 @@ void CvPlotPaging::UpdatePaging()
 			win32::Stopwatch pageTimer;
 			pageTimer.Start();
 
-			const CvMap& map = GC.getMap();
+			//const CvMap& map = GC.getMap();
 			
 			bool timedout = false;
 			for (std::vector<PlotDist>::iterator itr = plots.begin(); !timedout && itr != plots.end(); ++itr)
