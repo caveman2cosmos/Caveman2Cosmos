@@ -13925,7 +13925,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VALLEY_KINGS</Type>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -13948,6 +13948,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<ObsoleteTech>TECH_ARCHITECTURE</ObsoleteTech>
 			<iHealth>4</iHealth>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
