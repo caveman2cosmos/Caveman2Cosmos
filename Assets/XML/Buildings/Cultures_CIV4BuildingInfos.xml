@@ -1590,6 +1590,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_CORN</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -1756,6 +1757,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
@@ -2004,6 +2006,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SPICES</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -2385,6 +2388,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -2503,6 +2507,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_MUSHROOMS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -2535,6 +2540,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_MUREX</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -2663,6 +2669,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_TEA</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -2969,6 +2976,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FINE_CLAY</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -3175,6 +3183,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_TOBACCO</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -3207,6 +3216,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_CLAM</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -3466,6 +3476,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_APPLE</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -3635,6 +3646,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
@@ -4111,6 +4123,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_WHALE</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -4149,6 +4162,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COLONIALISM</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SUGAR</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -4214,6 +4228,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_COCONUT</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -4540,6 +4555,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_WHALE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -4756,6 +4772,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ENLIGHTENMENT</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_POTATOES</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -4909,6 +4926,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COLONIALISM</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_HEMP</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -4943,6 +4961,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FISH</RawVicinityBonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -5044,6 +5063,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_CRAB</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -5636,6 +5656,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TATTOOS</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -5818,6 +5839,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_RICE</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -5894,6 +5916,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_COW</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -5994,6 +6017,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_TURQUOISE</RawVicinityBonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -6352,6 +6376,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NAVIGATION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -6765,6 +6790,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_MUREX</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -7057,6 +7083,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -7358,6 +7385,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
@@ -7760,6 +7788,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_HEMP</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -8158,6 +8187,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
@@ -8191,6 +8221,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PAPAYA</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -8260,6 +8291,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_TIN_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -8528,6 +8560,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PEARLS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -8757,6 +8790,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
@@ -9013,6 +9047,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
@@ -9046,6 +9081,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SHRIMP</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -9257,6 +9293,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FIG</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -9289,6 +9326,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FIG</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -9321,6 +9359,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -9353,6 +9392,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPICE_TRADE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_INDIGO</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -9385,6 +9425,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEDITATION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_TEA</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -9417,6 +9458,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -9449,6 +9491,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEDITATION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_AMBER</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -9481,6 +9524,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_CLAM</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -9513,6 +9557,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PARROTS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -9545,6 +9590,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_MUREX</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -9577,6 +9623,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -9609,6 +9656,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -9641,6 +9689,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_RABBIT</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -9673,6 +9722,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_MUREX</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -9705,6 +9755,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_MARBLE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -9737,6 +9788,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SAPPHIRES</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -9769,6 +9821,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -9801,6 +9854,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SALT</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -9833,6 +9887,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LINGUISTICS</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_HENNA</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -9865,6 +9920,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DEMOCRACY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FLAX</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -9897,6 +9953,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SPICES</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -9929,6 +9986,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PIG</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -9961,6 +10019,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_DEER</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -9993,6 +10052,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FOLK_MUSIC</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_DEER</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -10025,6 +10085,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -10057,6 +10118,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_DONKEY</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -10089,6 +10151,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -10121,6 +10184,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_BARLEY</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -10153,6 +10217,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_COFFEE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -10185,6 +10250,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PISTACHIO</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -10217,6 +10283,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PEYOTE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -10249,6 +10316,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_BANANA</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -10281,6 +10349,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_GRAPES</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -10313,6 +10382,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -10345,6 +10415,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_VANILLA</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -10377,6 +10448,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_DEER</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -10409,6 +10481,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COLONIALISM</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_RESIN</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -10441,6 +10514,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COLONIALISM</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_TOBACCO</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -10473,6 +10547,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_CRAB</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -10505,6 +10580,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SILK</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -10537,6 +10613,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -10569,6 +10646,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -10601,6 +10679,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_ELEPHANTS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -10633,6 +10712,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PEARLS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -10665,6 +10745,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -10697,6 +10778,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SHRIMP</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -10729,6 +10811,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SPICES</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -10761,6 +10844,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_OPIUM</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -10793,6 +10877,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -10825,6 +10910,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -10857,6 +10943,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FISH</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -10889,6 +10976,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_GRAPES</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -10921,6 +11009,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -10953,6 +11042,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_MARBLE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -10985,6 +11075,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_RUBIES</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -11017,6 +11108,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -11049,6 +11141,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FINE_CLAY</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -11081,6 +11174,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_KAVA</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -11113,6 +11207,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -11145,6 +11240,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_USURY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PAPAYA</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -11177,6 +11273,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_HEMP</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -11209,6 +11306,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_INDIGO</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -11241,6 +11339,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_BISON</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -11273,6 +11372,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_RICE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -11305,6 +11405,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_INCENSE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -11337,6 +11438,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NAVIGATION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_TEA</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -11369,6 +11471,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -11401,6 +11504,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -11433,6 +11537,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -11465,6 +11570,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_LEAD_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -11497,6 +11603,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPASS</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_INDIGO</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -11529,6 +11636,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PIG</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -11561,6 +11669,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SULPHUR</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -11593,6 +11702,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_OLIVES</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -11625,6 +11735,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SUGAR</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -11657,6 +11768,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_DIAMOND</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -11689,6 +11801,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -11721,6 +11834,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_MELONS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -11753,6 +11867,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_OLIVES</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -11785,6 +11900,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -11817,6 +11933,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -11849,6 +11966,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -11881,6 +11999,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_LLAMA</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -11913,6 +12032,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_MUSHROOMS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -11945,6 +12065,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_CAMEL</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -11977,6 +12098,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_CAMEL</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -12009,6 +12131,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_REFINING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_TURQUOISE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -12041,6 +12164,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FINE_CLAY</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -12073,6 +12197,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FINE_CLAY</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -12105,6 +12230,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -12137,6 +12263,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_RUBIES</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -12169,6 +12296,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_RESIN</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -12201,6 +12329,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_GRAPES</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -12233,6 +12362,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_TOBACCO</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -12265,6 +12395,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_TEA</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -12297,6 +12428,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -12329,6 +12461,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -12361,6 +12494,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_COTTON</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -12393,6 +12527,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FOLK_MEDICINE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SPICES</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -12425,6 +12560,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_JADE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -12457,6 +12593,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_OBSIDIAN</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -12489,6 +12626,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -12521,6 +12659,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_MARBLE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -12553,6 +12692,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FOLK_MUSIC</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_APPLE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -12585,6 +12725,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FOLK_MUSIC</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_APPLE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -12617,6 +12758,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FLAX</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -12649,6 +12791,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PRICKLY_PEAR</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -12681,6 +12824,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_MUSHROOMS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -12713,6 +12857,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_RABBIT</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -12745,6 +12890,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_LOBSTER</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -12777,6 +12923,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -12809,6 +12956,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPICE_TRADE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_DEER</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -12841,6 +12989,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FINE_CLAY</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -12873,6 +13022,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -12905,6 +13055,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_CAMEL</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -12937,6 +13088,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_TOBACCO</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -12969,6 +13121,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PIRACY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PARROTS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -13001,6 +13154,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_ELEPHANTS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -13033,6 +13187,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_YEOMANRY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -13065,6 +13220,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PEYOTE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -13097,6 +13253,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_ALMONDS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -13129,6 +13286,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_COCA</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -13161,6 +13319,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PISTACHIO</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -13193,6 +13352,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_AMBER</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -13225,6 +13385,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_MARBLE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -13257,6 +13418,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -13289,6 +13451,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_CRAB</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -13321,6 +13484,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FISH</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -13353,6 +13517,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -13385,6 +13550,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -13417,6 +13583,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_WHALE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -13449,6 +13616,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_WHALE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -13481,6 +13649,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_LEAD_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -13513,6 +13682,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_COW</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -13545,6 +13715,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_GRAPES</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -13577,6 +13748,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_WALRUS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -13609,6 +13781,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FOLK_MUSIC</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PEARLS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -13641,6 +13814,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PUMPKIN</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
@@ -13673,6 +13847,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_HENNA</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -13705,6 +13880,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_POMEGRANATE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -13737,6 +13913,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LINGUISTICS</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -13769,6 +13946,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_OBSIDIAN</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -13801,6 +13979,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEDITATION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_STONE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -13833,6 +14012,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_TEA</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -13865,6 +14045,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PIG</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -13897,6 +14078,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FOLK_MUSIC</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_COW</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -13929,6 +14111,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_WHEAT</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -13961,6 +14144,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SHEEP</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -13993,6 +14177,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_INCENSE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -14025,6 +14210,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FIG</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -14057,6 +14243,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PRIME_TIMBER</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -14089,6 +14276,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_CRAB</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -14121,6 +14309,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_OPIUM</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -14153,6 +14342,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SHRIMP</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -14185,6 +14375,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PRICKLY_PEAR</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -14217,6 +14408,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FISH</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -14249,6 +14441,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NAVIGATION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PAPAYA</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -14281,6 +14474,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEDITATION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_BANANA</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -14313,6 +14507,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_OLIVES</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -14345,6 +14540,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FLAX</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -14377,6 +14573,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PIG</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -14409,6 +14606,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_AMBER</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -14441,6 +14639,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FLAX</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -14473,6 +14672,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -14505,6 +14705,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -14537,6 +14738,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -14569,6 +14771,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_CLAM</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -14601,6 +14804,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SALT</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -14633,6 +14837,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_PUMPKIN</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -14665,6 +14870,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_BEAVERS</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -14697,6 +14903,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_MUREX</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -14729,6 +14936,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_DIAMOND</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -14761,6 +14969,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_BISON</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -14793,6 +15002,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_COW</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -14825,6 +15035,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_COW</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -14857,6 +15068,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SEA_LION_AND_SEAL</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -14889,6 +15101,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SEA_LION_AND_SEAL</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -14921,6 +15134,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_TURQUOISE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -14953,6 +15167,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_COAL</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
@@ -14985,6 +15200,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_FIG</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
@@ -15017,6 +15233,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_TOBACCO</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -15049,6 +15266,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -15081,6 +15299,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -15113,6 +15332,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_BARLEY</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -15145,6 +15365,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_INCENSE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
@@ -15177,6 +15398,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_AMBER</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -15209,6 +15431,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_AMBER</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
@@ -15241,6 +15464,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ASTROLABE</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_DATES</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
@@ -15273,6 +15497,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_SQUASH</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
@@ -15305,6 +15530,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<RawVicinityBonus>BONUS_WHALE</RawVicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>

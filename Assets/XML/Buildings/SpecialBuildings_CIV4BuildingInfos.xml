@@ -341,6 +341,7 @@
 			<Strategy>TXT_KEY_BUILDING_SEAFARING_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<GlobalSeaPlotYieldChanges>
 				<iYield>1</iYield>
@@ -10231,6 +10232,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_STILT_HUT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_STILT_HUT_STRATEGY</Strategy>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_BAMBOO</Bonus>
@@ -11628,6 +11630,7 @@
 			<iPrereqPopulation>14</iPrereqPopulation>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RAW_FISH</VicinityBonus>
 				<VicinityBonus>BONUS_SHELLFISH</VicinityBonus>
@@ -11889,6 +11892,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WATER_POLLUTION_STRATEGY</Strategy>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<iHealth>-4</iHealth>
 			<iHappiness>-5</iHappiness>
 			<SeaPlotYieldChanges>
@@ -12046,6 +12050,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WATER_POLLUTION_STRATEGY</Strategy>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
 			<SeaPlotYieldChanges>
@@ -12201,6 +12206,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WATER_POLLUTION_STRATEGY</Strategy>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<iHealth>-2</iHealth>
 			<iHappiness>-2</iHappiness>
 			<SeaPlotYieldChanges>
@@ -12387,6 +12393,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WATER_POLLUTION_STRATEGY</Strategy>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<iHappiness>-3</iHappiness>
 			<iHealth>-2</iHealth>
 			<SeaPlotYieldChanges>
@@ -15128,6 +15135,7 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
