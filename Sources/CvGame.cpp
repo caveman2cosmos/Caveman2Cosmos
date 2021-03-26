@@ -33,11 +33,10 @@
 
 #pragma warning( disable : 4355 )
 CvGame::CvGame()
-: m_GameObject()
-, m_Properties(this)
-, m_iChokePointCalculationVersion(0)
-, m_eCurrentMap(MAP_INITIAL)
-
+	: m_GameObject()
+	, m_Properties(this)
+	, m_iChokePointCalculationVersion(0)
+	, m_eCurrentMap(MAP_EARTH)
 {
 	m_aiRankPlayer = new int[MAX_PLAYERS];        // Ordered by rank...
 	m_aiPlayerRank = new int[MAX_PLAYERS];        // Ordered by player ID...
@@ -7439,7 +7438,7 @@ void CvGame::testAlive()
 {
 	PROFILE_FUNC();
 
-	if (m_eCurrentMap != MAP_INITIAL)	// XXX - Currently players are killed after switching to a new map.
+	if (m_eCurrentMap != MAP_EARTH)	// XXX - Currently players are killed after switching to a new map.
 		return;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -11884,13 +11883,13 @@ const CvProperties* CvGame::getPropertiesConst() const
 
 MapTypes CvGame::getCurrentMap() const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), m_eCurrentMap)
+	FASSERT_BOUNDS(0, NUM_MAPS, m_eCurrentMap)
 	return m_eCurrentMap;
 }
 
 void CvGame::setCurrentMap(MapTypes eNewMap)
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eNewMap)
+	FASSERT_BOUNDS(0, NUM_MAPS, eNewMap)
 	m_eCurrentMap = eNewMap;
 }
 
