@@ -338,7 +338,7 @@ void CvPlayer::init(PlayerTypes eID)
 	reset(eID);
 	//--------------------------------
 	// Init containers
-	initContainersForMap(MAP_INITIAL);
+	initContainersForMap(MAP_EARTH);
 	m_eventsTriggered.init();
 	//--------------------------------
 	// Init non-saved data
