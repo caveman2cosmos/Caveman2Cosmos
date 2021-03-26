@@ -15041,7 +15041,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<bWater>1</bWater>
-			<iMinAreaSize>10</iMinAreaSize>
 			<bRiver>1</bRiver>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
