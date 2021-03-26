@@ -2712,13 +2712,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_RESTORED_BUILDINGS</Tag>
-		<English>The City of %s1 has had its %s2 restored and the %s3 is in working condition again.</English>
-		<French>Le bâtiment [COLOR_BUILDING_TEXT]%s3[COLOR_REVERT] de %s1 est à nouveau fonctionnel.</French>
-		<German>Das Gebäude %s3 in %s1 ist wieder betriebsbereit, da die Versorgung mit %s2 wieder aufgenommen wurde.</German>
-		<Italian>La città di %s1 ha ripristinato %s2 e l'edificio %s3 è di nuovo in funzione.</Italian>
-		<Spanish>La ciudad de %s1 ha reabierto [NUM2:su:su:sus:sus] %s2 y [NUM3:el:la:los:las] %s3 [NUM3:funciona:funciona:funcionan:funcionan] de nuevo.</Spanish>
-		<Polish>Miasto %s1 przywróciło %s3 do pracy.</Polish>
-		<Russian>Ãîðîäó %s1 âîññòàíîâèëè åãî %s2, è %s3 â èñïðàâíîì ñîñòîÿíèè ñíîâà.</Russian>
+		<English>The City of %s1 has had its [COLOR_BUILDING_TEXT]%s2[COLOR_REVERT] restored and in working condition again.</English>
+		<French>Le bâtiment [COLOR_BUILDING_TEXT]%s2[COLOR_REVERT] de %s1 est à nouveau fonctionnel.</French>
+		<Polish>Miasto %s1 przywróciło %s2 do pracy.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_SCREEN_CONCEPTUAL</Tag>

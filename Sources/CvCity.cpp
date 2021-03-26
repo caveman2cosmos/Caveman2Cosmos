@@ -2757,7 +2757,7 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 	{
 		return false;
 	}
-	else if (!bContinue && !bTestVisible && !bIgnoreCost && !bIgnoreAmount && !bIgnoreBuildings && eIgnoreTechReq == NO_TECH && probabilityEverConstructable == NULL && !bAffliction && !bExposed)
+	if (!bContinue && !bTestVisible && !bIgnoreCost && !bIgnoreAmount && !bIgnoreBuildings && eIgnoreTechReq == NO_TECH && probabilityEverConstructable == NULL && !bAffliction && !bExposed)
 	{
 		bool bResult;
 		bool bHaveCachedResult;
@@ -2766,7 +2766,7 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 		{
 			MEMORY_TRACK_EXEMPT()
 
-				m_bCanConstruct = new std::map<int, bool>();
+			m_bCanConstruct = new std::map<int, bool>();
 			bHaveCachedResult = false;
 		}
 		else
@@ -2795,24 +2795,21 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 		{
 			bResult = canConstructInternal(eBuilding, bContinue, bTestVisible, bIgnoreCost, bIgnoreAmount, NO_BUILDING, bIgnoreBuildings, eIgnoreTechReq, NULL, bAffliction, bExposed);
 			{
-				MEMORY_TRACK_EXEMPT()
+				MEMORY_TRACK_EXEMPT() // Toffer - why are all these MEMORY_TRACK_EXEMPT in this function?
 
-					if (m_bCanConstruct == NULL)
-					{
-						MEMORY_TRACK_EXEMPT()
+				if (m_bCanConstruct == NULL)
+				{
+					MEMORY_TRACK_EXEMPT()
 
-							m_bCanConstruct = new std::map<int, bool>();
-					}
+					m_bCanConstruct = new std::map<int, bool>();
+				}
 				(*m_bCanConstruct)[eBuilding] = bResult;
 			}
 		}
 
 		return bResult;
 	}
-	else
-	{
-		return canConstructInternal(eBuilding, bContinue, bTestVisible, bIgnoreCost, bIgnoreAmount, NO_BUILDING, bIgnoreBuildings, eIgnoreTechReq, probabilityEverConstructable, bAffliction, bExposed);
-	}
+	return canConstructInternal(eBuilding, bContinue, bTestVisible, bIgnoreCost, bIgnoreAmount, NO_BUILDING, bIgnoreBuildings, eIgnoreTechReq, probabilityEverConstructable, bAffliction, bExposed);
 }
 //	KOSHLING - Can construct cache end
 
@@ -2864,7 +2861,13 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	) return true;
 
 	//ls612: No Holy City Tag
-	if (!bExposed && GC.getBuildingInfo(eBuilding).isNoHolyCity() && isHolyCity())
+	if (!bExposed && kBuilding.isNoHolyCity() && isHolyCity())
+	{
+		return false;
+	}
+
+	// Toffer - An extension can't exist without that which it extends.
+	if (kBuilding.getExtendsBuilding() > -1 && getNumRealBuilding((BuildingTypes)kBuilding.getExtendsBuilding()) < 1)
 	{
 		return false;
 	}
@@ -3073,7 +3076,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 				1 + getNumPopulationEmployed() + kBuilding.getNumPopulationEmployed()
 			)
 		);
-		if (iPrereqPopulation > 0 && getPopulation() < iPrereqPopulation)
+		if (iPrereqPopulation > 1 && getPopulation() < iPrereqPopulation)
 		{
 			if (probabilityEverConstructable != NULL)
 			{
@@ -21102,13 +21105,20 @@ void CvCity::checkBuildings(bool bAlertOwner)
 					break;
 				}
 
-				/* Check The Employed Population */
-				if (kBuilding.getNumPopulationEmployed() > 0
-				&& visiblePopulation() - kBuilding.getNumPopulationEmployed() < 0)
 				{
-					bDisableBuilding = true;
-					bRequiresPopulation = true;
-					break;
+					/* Check The Employed Population */
+					const int iPrereqPopulation = (
+						std::max(
+							kBuilding.getPrereqPopulation(),
+							1 + getNumPopulationEmployed() + kBuilding.getNumPopulationEmployed()
+						)
+					);
+					if (iPrereqPopulation > 1 && getPopulation() < iPrereqPopulation)
+					{
+						bDisableBuilding = true;
+						bRequiresPopulation = true;
+						break;
+					}
 				}
 
 				/* Check max population requirement */
