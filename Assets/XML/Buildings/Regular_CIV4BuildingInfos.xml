@@ -6448,7 +6448,6 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ExtendsBuilding>BUILDING_CASTLE</ExtendsBuilding>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<iCost>320</iCost>
 			<UnitCombatExtraStrengths>
@@ -6546,7 +6545,6 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ExtendsBuilding>BUILDING_CASTLE</ExtendsBuilding>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CANNON_TURRET</BuildingType>
@@ -16024,7 +16022,6 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ExtendsBuilding>BUILDING_CASTLE</ExtendsBuilding>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<iCost>300</iCost>
 			<iNoEntryDefenseLevel>30</iNoEntryDefenseLevel>
@@ -16062,7 +16059,6 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ExtendsBuilding>BUILDING_CASTLE</ExtendsBuilding>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<iCost>310</iCost>
 			<CommerceChanges>
@@ -16160,7 +16156,6 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ExtendsBuilding>BUILDING_CASTLE</ExtendsBuilding>
 			<iCost>300</iCost>
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
@@ -27062,7 +27057,6 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ExtendsBuilding>BUILDING_CASTLE</ExtendsBuilding>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<iCost>178</iCost>
 			<CommerceAttacks>
@@ -53906,7 +53900,6 @@
 				<BuildingType>BUILDING_CASTLE</BuildingType>
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 			</PrereqOrBuildings>
-			<ExtendsBuilding>BUILDING_CASTLE</ExtendsBuilding>
 			<PrereqGameOption>GAMEOPTION_ZONE_OF_CONTROL</PrereqGameOption>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<iCost>300</iCost>
@@ -89622,9 +89615,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_DUNGEON</BuildingType>
-			</PrereqOrBuildings>
 			<ExtendsBuilding>BUILDING_DUNGEON</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
 			<iCost>89</iCost>
@@ -89663,9 +89653,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TORTURE_CHAMBER</BuildingType>
-			</PrereqOrBuildings>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
 			<iCost>44</iCost>
@@ -89704,9 +89691,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TORTURE_CHAMBER</BuildingType>
-			</PrereqOrBuildings>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
 			<iCost>44</iCost>
@@ -89745,9 +89729,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TORTURE_CHAMBER</BuildingType>
-			</PrereqOrBuildings>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
 			<iCost>44</iCost>
@@ -89792,9 +89773,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TORTURE_CHAMBER</BuildingType>
-			</PrereqOrBuildings>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
 			<iCost>44</iCost>
@@ -89833,9 +89811,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TORTURE_CHAMBER</BuildingType>
-			</PrereqOrBuildings>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
 			<iCost>44</iCost>
@@ -89874,9 +89849,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TORTURE_CHAMBER</BuildingType>
-			</PrereqOrBuildings>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
 			<iCost>44</iCost>
@@ -89915,9 +89887,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TORTURE</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TORTURE_CHAMBER</BuildingType>
-			</PrereqOrBuildings>
 			<ExtendsBuilding>BUILDING_TORTURE_CHAMBER</ExtendsBuilding>
 			<ObsoleteTech>TECH_EMANCIPATION</ObsoleteTech>
 			<iCost>44</iCost>
