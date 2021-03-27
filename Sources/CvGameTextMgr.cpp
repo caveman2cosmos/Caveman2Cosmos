@@ -9746,7 +9746,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 
 	pPlot->getProperties()->buildDisplayString(szString);
 
-	for (int iI = 0; iI < GC.getNumMapInfos(); iI++)
+	for (int iI = 0; iI < NUM_MAPS; iI++)
 	{
 		if (pPlot->isMapType((MapTypes)iI))
 		{

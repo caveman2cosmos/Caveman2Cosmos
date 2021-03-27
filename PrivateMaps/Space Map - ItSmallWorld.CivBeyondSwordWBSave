@@ -10,7 +10,7 @@ BeginMap
 	world size=WORLDSIZE_DUEL
 	climate=CLIMATE_TEMPERATE
 	sealevel=SEALEVEL_MEDIUM
-	Randomize Resources=1
+	Randomize Resources=0
 EndMap
 BeginPlayer
 	LeaderType=LEADER_WASHINGTON

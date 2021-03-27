@@ -416,7 +416,7 @@ void cvInternalGlobals::init()
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	m_maps.push_back(new CvMap(MAP_INITIAL));
+	m_maps.push_back(new CvMap(MAP_EARTH));
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
@@ -624,7 +624,7 @@ int cvInternalGlobals::getNumMapInfos() const
 
 CvMapInfo& cvInternalGlobals::getMapInfo(MapTypes eMap) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eMap)
+	FASSERT_BOUNDS(0, NUM_MAPS, eMap)
 	return *(m_paMapInfo[eMap]);
 }
 
@@ -2886,7 +2886,7 @@ void cvInternalGlobals::cacheInfoTypes()
 
 void cvInternalGlobals::switchMap(MapTypes eMap)
 {	
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eMap);
+	FASSERT_BOUNDS(0, NUM_MAPS, eMap);
 	FAssert(eMap != CURRENT_MAP);
 
 	GC.getMap().beforeSwitch();
@@ -2931,7 +2931,7 @@ CvMapExternal& cvInternalGlobals::getMapExternal() const
 
 CvMap& cvInternalGlobals::getMapByIndex(MapTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), eIndex)
+	FASSERT_BOUNDS(0, NUM_MAPS, eIndex)
 	return *m_maps[eIndex];
 }
 

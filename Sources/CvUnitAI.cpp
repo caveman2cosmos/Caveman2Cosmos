@@ -11109,7 +11109,10 @@ void CvUnitAI::AI_InfiltratorMove()
 			iTargetGroupSize = std::max(1, iTargetGroupSize / 10);
 		}//get a number from 1-9.
 
-		if (getGroup()->getNumUnits() < iTargetGroupSize)
+		int iGroupSize = getGroup()->getNumUnits();
+		int iMaxInfiltrationForceSize = 4 * (1 + (int)GET_PLAYER(getOwner()).getCurrentEra());
+		int iExistingInfiltrationForceSize = GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_INFILTRATOR);
+		if ( iGroupSize < iTargetGroupSize && iExistingInfiltrationForceSize <= iMaxInfiltrationForceSize)
 		{
 			GET_PLAYER(getOwner()).getContractBroker().advertiseWork
 			(

@@ -1303,6 +1303,7 @@
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_DUTCH</Bonus>
 			<PrereqBonuses>
@@ -7173,6 +7174,7 @@
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bWater>1</bWater>
+			<iMinAreaSize>10</iMinAreaSize>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2690</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>

@@ -1542,7 +1542,7 @@ int CvBuildingInfo::getNumMapTypes() const
 
 bool CvBuildingInfo::isMapType(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumMapInfos(), i)
+	FASSERT_BOUNDS(0, NUM_MAPS, i)
 	return algo::contains(m_aiMapTypes, i);
 }
 

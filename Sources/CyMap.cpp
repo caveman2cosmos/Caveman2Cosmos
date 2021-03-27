@@ -268,9 +268,10 @@ int CyMap::getNumBonusesOnLand(int /* BonusTypes */ eIndex)
 python::list CyMap::plots() const
 {
 	python::list list = python::list();
+
 	for (int i = 0, numPlots = m_pMap->numPlots(); i < numPlots; i++)
 	{
-		list.append(new CyPlot(m_pMap->plotByIndex(i)));
+		list.append(CyPlot(m_pMap->plotByIndex(i)));
 	}
 	return list;
 }
